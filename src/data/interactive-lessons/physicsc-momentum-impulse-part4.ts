@@ -14,8 +14,8 @@ export const physCMomentumPart4Data = {
 
 Momentum is conserved independently in each direction:
 
-$$\\text{x-direction:} \quad m_1 v_{1xi} + m_2 v_{2xi} = m_1 v_{1xf} + m_2 v_{2xf}$$
-$$\\text{y-direction:} \quad m_1 v_{1yi} + m_2 v_{2yi} = m_1 v_{1yf} + m_2 v_{2yf}$$
+$$\\text{x-direction:} \\quad m_1 v_{1xi} + m_2 v_{2xi} = m_1 v_{1xf} + m_2 v_{2xf}$$
+$$\\text{y-direction:} \\quad m_1 v_{1yi} + m_2 v_{2yi} = m_1 v_{1yf} + m_2 v_{2yf}$$
 
 ---
 

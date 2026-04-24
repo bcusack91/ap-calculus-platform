@@ -10,11 +10,11 @@ export const physCRotationPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- Angular kinematics: $\omega = \omega_0 + \alpha t$
-- Moment of inertia: $I = \sum mr^2$
-- Torque: $\\tau = rF\sin\\theta = I\alpha$
-- Angular momentum: $L = I\omega$
-- Rolling: $v = R\omega$, $KE = \\frac{1}{2}mv^2 + \\frac{1}{2}I\omega^2$
+- Angular kinematics: $\\omega = \omega_0 + \\alpha t$
+- Moment of inertia: $I = \\sum mr^2$
+- Torque: $\\tau = rF\\sin\\theta = I\\alpha$
+- Angular momentum: $L = I\\omega$
+- Rolling: $v = R\\omega$, $KE = \\frac{1}{2}mv^2 + \\frac{1}{2}I\\omega^2$
     
     `
     },
@@ -24,11 +24,11 @@ export const physCRotationPart7Data = {
       content: `
 ## Worked Example
 
-**A merry-go-round ($I = 500$ kg·m²) spins at 2 rad/s. A 50 kg child jumps on at $r = 2$ m. Find the new $\omega$.**
+**A merry-go-round ($I = 500$ kg·m²) spins at 2 rad/s. A 50 kg child jumps on at $r = 2$ m. Find the new $\\omega$.**
 
 $I_f = 500 + 50(4) = 700$ kg·m²
 
-$\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \approx 1.43$ rad/s ✅
+$\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
     
     `
     },
@@ -62,9 +62,9 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \approx 1.43$ rad/s ✅
 
 1) A disk ($I = \\frac{1}{2}mr^2$, $m = 4$ kg, $r = 1$ m). What is $I$ (kg·m²)?
 
-2) $\alpha = \\tau / I = 10 / 2 = ?$ rad/s²
+2) $\\alpha = \\tau / I = 10 / 2 = ?$ rad/s²
 
-3) A wheel at 10 rad/s has zero net torque. What is $\omega$ (rad/s) after 100 s?
+3) A wheel at 10 rad/s has zero net torque. What is $\\omega$ (rad/s) after 100 s?
     
     `,
       exercise: {
@@ -98,8 +98,8 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \approx 1.43$ rad/s ✅
 
 | # | Topic | Key Relationship |
 |---|-------|------------------|
-| 1 | Angular kinematics | $\omega, \alpha, \\theta$ |
-| 2 | Torque & equilibrium | $\sum \\tau = 0$ |
+| 1 | Angular kinematics | $\\omega, \\alpha, \\theta$ |
+| 2 | Torque & equilibrium | $\\sum \\tau = 0$ |
 | 3 | Conservation of $L$ | $I_i\omega_i = I_f\omega_f$ |
     
     `

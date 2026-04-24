@@ -112,7 +112,7 @@ A fire hose (diameter 6.0 cm) is connected to a hydrant at ground level with pre
         hint1: '$v_2/v_1 = A_1/A_2 = (d_1/d_2)^2 = (6/2)^2$.',
         hint2: '$P_1 + \\frac{1}{2}\\rho v_1^2 = P_2 + \\frac{1}{2}\\rho(9v_1)^2 + \\rho g h$. $400000 + \\frac{1}{2}(1000)v_1^2 = 100000 + \\frac{1}{2}(1000)(81v_1^2) + 100000$.',
         hint3: '$v_2 = 9 v_1$.',
-        explanation: 'Ratio = 9. Bernoulli: $400000 + 500v_1^2 = 100000 + 40500v_1^2 + 100000$. $200000 = 40000 v_1^2$. $v_1^2 = 5$. $v_1 = \sqrt{5} = 2.24$ m/s. $v_2 = 9(2.24) \approx 20$ m/s.'
+        explanation: 'Ratio = 9. Bernoulli: $400000 + 500v_1^2 = 100000 + 40500v_1^2 + 100000$. $200000 = 40000 v_1^2$. $v_1^2 = 5$. $v_1 = \\sqrt{5} = 2.24$ m/s. $v_2 = 9(2.24) \\approx 20$ m/s.'
       }
     },
     {

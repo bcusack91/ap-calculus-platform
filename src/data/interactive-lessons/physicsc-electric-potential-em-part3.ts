@@ -12,7 +12,7 @@ export const physCEMPotentialPart3Data = {
 
 ### Finding E from V
 
-$$E_x = -\\frac{\\partial V}{\\partial x}, \quad E_y = -\\frac{\\partial V}{\\partial y}, \quad E_z = -\\frac{\\partial V}{\\partial z}$$
+$$E_x = -\\frac{\\partial V}{\\partial x}, \\quad E_y = -\\frac{\\partial V}{\\partial y}, \\quad E_z = -\\frac{\\partial V}{\\partial z}$$
 
 $$\\vec{E} = -\\nabla V$$
 

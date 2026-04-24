@@ -11,9 +11,9 @@ export const physCEMCoulombPart7Data = {
 
 ### Key Formulas
 - $F = kq_1q_2/r^2$ (Coulomb's Law)
-- $\\vec{E} = k q/r^2 \hat{r}$ (Electric field)
+- $\\vec{E} = k q/r^2 \\hat{r}$ (Electric field)
 - $\\vec{F} = q\\vec{E}$ (Force on charge in field)
-- Superposition: $\\vec{F}_{net} = \sum \\vec{F}_i$
+- Superposition: $\\vec{F}_{net} = \\sum \\vec{F}_i$
 - $e = 1.6 \\times 10^{-19}$ C, $k = 9 \\times 10^9$ N·m²/C²
     
     `
@@ -28,7 +28,7 @@ export const physCEMCoulombPart7Data = {
 
 $F = eE = (1.6 \\times 10^{-19})(100) = 1.6 \\times 10^{-17}$ N
 
-$a = F/m = 1.6 \\times 10^{-17} / 9.1 \\times 10^{-31} \approx 1.76 \\times 10^{13}$ m/s² ✅
+$a = F/m = 1.6 \\times 10^{-17} / 9.1 \\times 10^{-31} \\approx 1.76 \\times 10^{13}$ m/s² ✅
     
     `
     },
@@ -64,7 +64,7 @@ $a = F/m = 1.6 \\times 10^{-17} / 9.1 \\times 10^{-31} \approx 1.76 \\times 10^{
 
 2) A charge of 2 C in a field of 5 N/C. Force (N)?
 
-3) $k \approx$ ___ $\\times 10^9$ N·m²/C²
+3) $k \\approx$ ___ $\\times 10^9$ N·m²/C²
     
     `,
       exercise: {

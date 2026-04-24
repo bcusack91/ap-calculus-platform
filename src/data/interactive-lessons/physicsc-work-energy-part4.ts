@@ -28,7 +28,7 @@ $KE_i + U_i + W_{nc} = KE_f + U_f$
 
 **A ball is dropped from 20 m. Find its speed at the ground. ($g = 10$ m/s²)**
 
-$mgh = \\frac{1}{2}mv^2 \implies v = \sqrt{2gh} = \sqrt{2(10)(20)} = 20$ m/s ✅
+$mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s ✅
     
     `
     },

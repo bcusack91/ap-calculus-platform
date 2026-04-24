@@ -9,7 +9,7 @@ export const physCRotationPart2Data = {
 
 **Part 2 of 7 — Moment of Inertia**
 
-$I = \sum m_i r_i^2 = \int r^2\,dm$
+$I = \\sum m_i r_i^2 = \\int r^2\,dm$
 
 Common moments of inertia:
 - Point mass: $I = mr^2$

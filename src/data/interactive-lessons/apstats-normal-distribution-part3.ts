@@ -13,13 +13,13 @@ export const apStatsNormalDistPart3Data = {
 ### Forward Problems: X → Z → Probability
 
 **Given a value $x$, find the probability:**
-1. Compute $z = \frac{x - \mu}{\sigma}$
-2. Look up $P(Z \leq z)$ in the z-table
+1. Compute $z = \\frac{x - \\mu}{\\sigma}$
+2. Look up $P(Z \\leq z)$ in the z-table
 3. Adjust for the direction (left tail, right tail, between)
 
-**Example:** Scores $\sim N(500, 100)$. Find $P(X > 650)$.
-- $z = \frac{650 - 500}{100} = 1.5$
-- $P(Z \leq 1.5) = 0.9332$
+**Example:** Scores $\\sim N(500, 100)$. Find $P(X > 650)$.
+- $z = \\frac{650 - 500}{100} = 1.5$
+- $P(Z \\leq 1.5) = 0.9332$
 - $P(X > 650) = 1 - 0.9332 = 0.0668 = 6.68\%$
 
 ---
@@ -28,10 +28,10 @@ export const apStatsNormalDistPart3Data = {
 
 **Given a percentile, find the value:**
 1. Find the z-score from the table that matches the given probability
-2. Solve for $x = \mu + z\sigma$
+2. Solve for $x = \\mu + z\\sigma$
 
-**Example:** What score is at the 90th percentile if $\mu = 500, \sigma = 100$?
-- 90th percentile → $z = 1.28$ (from table: $P(Z \leq 1.28) = 0.8997 \approx 0.90$)
+**Example:** What score is at the 90th percentile if $\\mu = 500, \\sigma = 100$?
+- 90th percentile → $z = 1.28$ (from table: $P(Z \\leq 1.28) = 0.8997 \\approx 0.90$)
 - $x = 500 + 1.28(100) = 628$
 
 > 🔑 "Top 10%" = 90th percentile. "Bottom 25%" = 25th percentile.`
@@ -69,15 +69,15 @@ Baby weights at birth follow $N(7.5, 1.2)$ lbs.
 
 **1)** What z-score corresponds to a baby weighing 9.9 lbs?
 
-**2)** Using $P(Z \leq 2) = 0.9772$, what percent of babies weigh less than 9.9 lbs? (Express as a number, e.g., 97.72)
+**2)** Using $P(Z \\leq 2) = 0.9772$, what percent of babies weigh less than 9.9 lbs? (Express as a number, e.g., 97.72)
 
-**3)** The 84th percentile has $z \approx 1$. What is the 84th percentile weight? (in lbs, one decimal)
+**3)** The 84th percentile has $z \\approx 1$. What is the 84th percentile weight? (in lbs, one decimal)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['2', '97.72', '8.7'],
         hint1: '$z = (9.9 - 7.5)/1.2 = 2.4/1.2 = 2$.',
-        hint2: '$P(Z \leq 2) = 0.9772 = 97.72\%$.',
+        hint2: '$P(Z \\leq 2) = 0.9772 = 97.72\%$.',
         hint3: '$x = 7.5 + 1(1.2) = 8.7$ lbs.',
         explanation: '1) $z = 2$. 2) 97.72%. 3) 8.7 lbs.'
       }

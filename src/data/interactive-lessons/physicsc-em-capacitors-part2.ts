@@ -13,7 +13,7 @@ $C = \\frac{\epsilon_0 A}{d}$
 
 where $A$ = plate area, $d$ = plate separation.
 
-- Electric field between plates: $E = V/d = \sigma/\epsilon_0$
+- Electric field between plates: $E = V/d = \\sigma/\epsilon_0$
 - Field is uniform between the plates
 - Increasing $A$ or decreasing $d$ increases $C$
     

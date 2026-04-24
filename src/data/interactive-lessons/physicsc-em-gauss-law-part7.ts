@@ -14,8 +14,8 @@ export const physCEMGaussPart7Data = {
 |----------|--------------|-----|
 | Spherical | Point/$Q$ outside | $kQ/r^2$ |
 | Spherical | Inside conductor | $0$ |
-| Cylindrical | Line charge | $2k\lambda/r$ |
-| Planar | Infinite sheet | $\sigma/(2\epsilon_0)$ |
+| Cylindrical | Line charge | $2k\\lambda/r$ |
+| Planar | Infinite sheet | $\\sigma/(2\epsilon_0)$ |
     
     `
     },
@@ -25,11 +25,11 @@ export const physCEMGaussPart7Data = {
       content: `
 ## Worked Example
 
-**Compare $E$ at $r = 1$ m from: (a) point charge $Q = 10^{-6}$ C, (b) line charge $\lambda = 10^{-6}$ C/m.**
+**Compare $E$ at $r = 1$ m from: (a) point charge $Q = 10^{-6}$ C, (b) line charge $\\lambda = 10^{-6}$ C/m.**
 
 (a) $E = kQ/r^2 = 9 \\times 10^3$ N/C
 
-(b) $E = 2k\lambda/r = 18 \\times 10^3$ N/C
+(b) $E = 2k\\lambda/r = 18 \\times 10^3$ N/C
 
 The line charge field is stronger at this distance because it falls off as $1/r$ instead of $1/r^2$. ✅
     
@@ -102,8 +102,8 @@ The line charge field is stronger at this distance because it falls off as $1/r$
 | # | Topic | Formula |
 |---|-------|---------|
 | 1 | Point charge | $E = kQ/r^2$ |
-| 2 | Line charge | $E = 2k\lambda/r$ |
-| 3 | Sheet charge | $E = \sigma/(2\epsilon_0)$ |
+| 2 | Line charge | $E = 2k\\lambda/r$ |
+| 3 | Sheet charge | $E = \\sigma/(2\epsilon_0)$ |
     
     `
     },

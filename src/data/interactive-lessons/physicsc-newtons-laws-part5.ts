@@ -11,11 +11,11 @@ export const physCNewtonPart5Data = {
 
 For uniform circular motion:
 
-$a_c = \\frac{v^2}{r} = \omega^2 r$
+$a_c = \\frac{v^2}{r} = \\omega^2 r$
 
 $F_c = \\frac{mv^2}{r}$
 
-where $\omega = 2\pi f = \\frac{2\pi}{T}$ is the angular velocity.
+where $\\omega = 2\\pi f = \\frac{2\\pi}{T}$ is the angular velocity.
 
 Centripetal force is not a new force — it is the net inward force (tension, gravity, friction, normal force, etc.).
     
@@ -101,7 +101,7 @@ $F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
 |---|---------|---------|
 | 1 | Centripetal acceleration | $a_c = v^2/r$ |
 | 2 | Centripetal force | $F_c = mv^2/r$ |
-| 3 | Period and frequency | $T = 2\pi r / v$ |
+| 3 | Period and frequency | $T = 2\\pi r / v$ |
     
     `
     },

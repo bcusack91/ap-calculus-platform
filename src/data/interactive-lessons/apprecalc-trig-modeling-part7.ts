@@ -10,9 +10,9 @@ export const apPrecalcTrigModelPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- $y = A\sin(B(x-h)) + D$
+- $y = A\\sin(B(x-h)) + D$
 - Amplitude = $|A|$
-- Period = $2\pi / |B|$
+- Period = $2\\pi / |B|$
 - Phase shift = $h$
 - Midline = $D$
 - Amplitude = (max−min)/2
@@ -26,7 +26,7 @@ export const apPrecalcTrigModelPart7Data = {
       content: `
 ## Worked Example
 
-**$y = 3\sin(2x) + 1$**
+**$y = 3\\sin(2x) + 1$**
 
 A=3, B=2, D=1. Amplitude=3, Period=π, Midline: y=1 ✅
     
@@ -60,11 +60,11 @@ A=3, B=2, D=1. Amplitude=3, Period=π, Midline: y=1 ✅
       content: `
 **Review** 🧮
 
-1) Amplitude of $4\cos(x)$?
+1) Amplitude of $4\\cos(x)$?
 
-2) $\sin^{-1}(1)$ in degrees?
+2) $\\sin^{-1}(1)$ in degrees?
 
-3) Midline of $\sin(x) + 1$?
+3) Midline of $\\sin(x) + 1$?
     
     `,
       exercise: {
@@ -98,8 +98,8 @@ A=3, B=2, D=1. Amplitude=3, Period=π, Midline: y=1 ✅
 
 | # | Topic | Problem |
 |---|-------|---------|
-| 1 | Amplitude | $y = 4\cos(x)$ |
-| 2 | Period of $\sin(3x)$ | 2π/3 |
+| 1 | Amplitude | $y = 4\\cos(x)$ |
+| 2 | Period of $\\sin(3x)$ | 2π/3 |
 | 3 | arcsin(1) | 90° |
     
     `

@@ -27,7 +27,7 @@ When force varies with time or position, use calculus:
 
 $a(t) = \\frac{F}{m} = \\frac{6t}{2} = 3t$
 
-$v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s ✅
+$v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s ✅
     
     `
     },
@@ -98,8 +98,8 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s �
 | # | Concept | Formula |
 |---|---------|---------|
 | 1 | $F = ma$ | Constant force |
-| 2 | $v = \int a\,dt$ | Variable force |
-| 3 | $x = \int v\,dt$ | Position from velocity |
+| 2 | $v = \\int a\,dt$ | Variable force |
+| 3 | $x = \\int v\,dt$ | Position from velocity |
     
     `
     },

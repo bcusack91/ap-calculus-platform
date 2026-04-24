@@ -9,9 +9,9 @@ export const physCEMCapacitorsPart3Data = {
 
 **Part 3 of 7 — Series & Parallel Combinations**
 
-**Parallel:** $C_{eq} = C_1 + C_2 + \cdots$ (same voltage)
+**Parallel:** $C_{eq} = C_1 + C_2 + \\cdots$ (same voltage)
 
-**Series:** $\\frac{1}{C_{eq}} = \\frac{1}{C_1} + \\frac{1}{C_2} + \cdots$ (same charge)
+**Series:** $\\frac{1}{C_{eq}} = \\frac{1}{C_1} + \\frac{1}{C_2} + \\cdots$ (same charge)
 
 Note: opposite of resistors! Parallel adds, series uses reciprocals.
     

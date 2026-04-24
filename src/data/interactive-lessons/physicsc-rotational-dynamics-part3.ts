@@ -9,9 +9,9 @@ export const physCRotationPart3Data = {
 
 **Part 3 of 7 — Torque**
 
-$\\tau = rF\sin\\theta = r_{\perp}F$
+$\\tau = rF\\sin\\theta = r_{\\perp}F$
 
-$\sum \\tau = I\alpha$
+$\\sum \\tau = I\\alpha$
 
 This is the rotational analog of $F = ma$.
 
@@ -27,7 +27,7 @@ Torque is positive for counterclockwise rotation and negative for clockwise.
 
 **A 10 N force is applied at the end of a 0.5 m wrench perpendicular to it. Find the torque.**
 
-$\\tau = rF\sin 90° = 0.5(10)(1) = 5$ N·m ✅
+$\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
     
     `
     },
@@ -98,8 +98,8 @@ $\\tau = rF\sin 90° = 0.5(10)(1) = 5$ N·m ✅
 | # | Scenario | Formula |
 |---|----------|---------|
 | 1 | Perpendicular force | $\\tau = rF$ |
-| 2 | Angled force | $\\tau = rF\sin\\theta$ |
-| 3 | Net torque & acceleration | $\\tau_{net} = I\alpha$ |
+| 2 | Angled force | $\\tau = rF\\sin\\theta$ |
+| 3 | Net torque & acceleration | $\\tau_{net} = I\\alpha$ |
     
     `
     },

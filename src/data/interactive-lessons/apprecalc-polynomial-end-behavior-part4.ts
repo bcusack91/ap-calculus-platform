@@ -14,7 +14,7 @@ A degree-$n$ polynomial has **at most** $n-1$ turning points.
 - **Local max**: graph goes from increasing to decreasing
 - **Local min**: graph goes from decreasing to increasing
 
-The number of turning points is always $\leq n - 1$.
+The number of turning points is always $\\leq n - 1$.
     
     `
     },

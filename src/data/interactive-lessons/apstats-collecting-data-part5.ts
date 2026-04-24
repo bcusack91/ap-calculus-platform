@@ -30,13 +30,13 @@ A table showing all values and their probabilities:
 | $P(X=x)$ | 0.1 | 0.3 | 0.4 | 0.2 |
 
 **Requirements:** All probabilities are between 0 and 1, and they sum to 1:
-$$\sum P(X = x) = 1$$
+$$\\sum P(X = x) = 1$$
 
 ---
 
 ### Expected Value (Mean)
 
-$$E(X) = \mu_X = \sum x_i \cdot P(X = x_i)$$
+$$E(X) = \mu_X = \\sum x_i \\cdot P(X = x_i)$$
 
 **Example:** $E(X) = 0(0.1) + 1(0.3) + 2(0.4) + 3(0.2) = 0 + 0.3 + 0.8 + 0.6 = 1.7$
 
@@ -46,9 +46,9 @@ $$E(X) = \mu_X = \sum x_i \cdot P(X = x_i)$$
 
 ### Variance and Standard Deviation
 
-$$\text{Var}(X) = \sigma_X^2 = \sum (x_i - \mu_X)^2 \cdot P(X = x_i)$$
+$$\\text{Var}(X) = \sigma_X^2 = \\sum (x_i - \mu_X)^2 \\cdot P(X = x_i)$$
 
-$$\sigma_X = \sqrt{\text{Var}(X)}$$`
+$$\sigma_X = \\sqrt{\\text{Var}(X)}$$`
     },
     {
       id: 'apstats-collectingdata-p5-mcq1',
@@ -87,7 +87,7 @@ $$\sigma_X = \sqrt{\text{Var}(X)}$$`
 
 A game costs \$5 to play. You roll a die: if you get a 6, you win \$20; otherwise you win nothing.
 
-**1)** What is $P(\text{win})$? Express as a decimal (round to 2 places).
+**1)** What is $P(\\text{win})$? Express as a decimal (round to 2 places).
 
 **2)** What is the expected payout (not profit)? Round to nearest cent.
 
@@ -96,10 +96,10 @@ A game costs \$5 to play. You roll a die: if you get a 6, you win \$20; otherwis
       exercise: {
         boxes: 3,
         correctAnswers: ['0.17', '3.33', '-1.67'],
-        hint1: '$P(6) = 1/6 \approx 0.17$.',
-        hint2: '$E = (1/6)(20) + (5/6)(0) = 20/6 \approx 3.33$.',
+        hint1: '$P(6) = 1/6 \\approx 0.17$.',
+        hint2: '$E = (1/6)(20) + (5/6)(0) = 20/6 \\approx 3.33$.',
         hint3: '$3.33 - 5 = -1.67$. The game has negative expected profit.',
-        explanation: '1) $1/6 \approx 0.17$. 2) $\$3.33$. 3) $-\$1.67$ — unfavorable game.'
+        explanation: '1) $1/6 \\approx 0.17$. 2) $\$3.33$. 3) $-\$1.67$ — unfavorable game.'
       }
     }
   ]

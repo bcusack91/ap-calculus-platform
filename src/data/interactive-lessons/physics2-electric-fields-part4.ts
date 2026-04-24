@@ -208,7 +208,7 @@ But consider **two equal positive charges** $+Q$ at $x = -d/2$ and $x = +d/2$:
               'Stays the same'
             ],
             correctAnswer: 0,
-            explanation: '$\Delta V = -100 - (-300) = +200$ V. The electron moves toward higher potential, which is its natural direction. $\Delta U = q\Delta V = (-e)(+200) = -200$ eV (PE decreases). By energy conservation, $\Delta KE = -\Delta U = +200$ eV. The electron gains 200 eV of kinetic energy.'
+            explanation: '$\\Delta V = -100 - (-300) = +200$ V. The electron moves toward higher potential, which is its natural direction. $\\Delta U = q\\Delta V = (-e)(+200) = -200$ eV (PE decreases). By energy conservation, $\\Delta KE = -\\Delta U = +200$ eV. The electron gains 200 eV of kinetic energy.'
           }
         ]
       }

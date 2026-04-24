@@ -9,7 +9,7 @@ export const physCEMGaussPart2Data = {
 
 **Part 2 of 7 — Gauss's Law Statement**
 
-$\oint \\vec{E} \cdot d\\vec{A} = \\frac{Q_{enc}}{\epsilon_0}$
+$\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\epsilon_0}$
 
 The total electric flux through any closed surface equals the enclosed charge divided by $\epsilon_0$.
 
@@ -27,7 +27,7 @@ The total electric flux through any closed surface equals the enclosed charge di
 
 **A Gaussian surface encloses $Q = 5 \\times 10^{-9}$ C. Find the total flux.**
 
-$\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \approx 565$ N·m²/C ✅
+$\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ N·m²/C ✅
     
     `
     },
@@ -61,7 +61,7 @@ $\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \approx 565$ N�
 
 1) A Gaussian surface encloses no charge. Net flux (N·m²/C)?
 
-2) A Gaussian surface encloses $Q = 5$ nC. $\Phi \approx ?$ N·m²/C. (Use $\epsilon_0 \approx 8.85 \\times 10^{-12}$. Round to nearest integer.)
+2) A Gaussian surface encloses $Q = 5$ nC. $\\Phi \\approx ?$ N·m²/C. (Use $\epsilon_0 \\approx 8.85 \\times 10^{-12}$. Round to nearest integer.)
 
 3) Charges of $+3q$ and $-q$ are inside a Gaussian surface. The net enclosed charge is ___ $q$.
     
@@ -97,8 +97,8 @@ $\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \approx 565$ N�
 
 | # | Concept | Key Fact |
 |---|---------|----------|
-| 1 | Gauss's law | $\Phi = Q_{enc}/\epsilon_0$ |
-| 2 | No enclosed charge | $\Phi = 0$ |
+| 1 | Gauss's law | $\\Phi = Q_{enc}/\epsilon_0$ |
+| 2 | No enclosed charge | $\\Phi = 0$ |
 | 3 | Symmetry types | Spherical, cylindrical, planar |
     
     `

@@ -13,7 +13,7 @@ export const physCEMGaussPart6Data = {
 1. Identify the symmetry (spherical, cylindrical, planar)
 2. Choose a Gaussian surface matching the symmetry
 3. Determine $Q_{enc}$ inside the surface
-4. Evaluate $\oint \\vec{E} \cdot d\\vec{A}$ using symmetry
+4. Evaluate $\\oint \\vec{E} \\cdot d\\vec{A}$ using symmetry
 5. Solve for $E$
     
     `
@@ -26,11 +26,11 @@ export const physCEMGaussPart6Data = {
 
 **A uniformly charged sphere ($\\rho = 2 \\times 10^{-6}$ C/m³, $R = 0.1$ m). Find $E$ at $r = 0.05$ m.**
 
-$Q_{enc} = \\rho \cdot \\frac{4}{3}\pi r^3 = 2 \\times 10^{-6} \cdot \\frac{4}{3}\pi(0.05)^3$
+$Q_{enc} = \\rho \\cdot \\frac{4}{3}\\pi r^3 = 2 \\times 10^{-6} \\cdot \\frac{4}{3}\\pi(0.05)^3$
 
-$E(4\pi r^2) = Q_{enc}/\epsilon_0$
+$E(4\\pi r^2) = Q_{enc}/\epsilon_0$
 
-$E = \\rho r/(3\epsilon_0) = (2 \\times 10^{-6})(0.05)/(3 \\times 8.85 \\times 10^{-12}) \approx 3770$ N/C ✅
+$E = \\rho r/(3\epsilon_0) = (2 \\times 10^{-6})(0.05)/(3 \\times 8.85 \\times 10^{-12}) \\approx 3770$ N/C ✅
     
     `
     },

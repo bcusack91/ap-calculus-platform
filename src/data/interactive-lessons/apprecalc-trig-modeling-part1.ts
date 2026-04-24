@@ -9,10 +9,10 @@ export const apPrecalcTrigModelPart1Data = {
 
 **Part 1 of 7 — Sine & Cosine Graphs**
 
-$y = A\sin(Bx + C) + D$
+$y = A\\sin(Bx + C) + D$
 
 - **A**: amplitude (vertical stretch)
-- **B**: affects period ($T = \\frac{2\pi}{|B|}$)
+- **B**: affects period ($T = \\frac{2\\pi}{|B|}$)
 - **C**: phase shift
 - **D**: vertical shift (midline)
 
@@ -26,7 +26,7 @@ Sine starts at midline; cosine starts at maximum.
       content: `
 ## Worked Example
 
-**$y = \sin(x)$. Key features?**
+**$y = \\sin(x)$. Key features?**
 
 Amplitude = 1, Period = 2π, Midline: y = 0 ✅
     
@@ -60,11 +60,11 @@ Amplitude = 1, Period = 2π, Midline: y = 0 ✅
       content: `
 **Amplitude** 🧮
 
-1) Amplitude of $\sin(x)$?
+1) Amplitude of $\\sin(x)$?
 
-2) Amplitude of $\cos(x)$?
+2) Amplitude of $\\cos(x)$?
 
-3) Amplitude of $2\sin(x)$?
+3) Amplitude of $2\\sin(x)$?
     
     `,
       exercise: {

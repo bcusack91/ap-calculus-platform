@@ -142,9 +142,9 @@ For $r = 6$ and $\\theta = \\frac{\\pi}{4}$: $A = \\frac{1}{2}(36)\\left(\\frac{
         boxes: 3,
         correctAnswers: ['7/4', '4', '4'],
         hint1: '$315/180 = 7/4$.',
-        hint2: '$s = r\theta = 12 \cdot \frac{\pi}{3} = 4\pi$.',
-        hint3: '$A = \frac{1}{2}r^2\theta = \frac{1}{2}(16)(\frac{\pi}{2}) = \frac{16\pi}{4} = 4\pi$.',
-        explanation: '1) $315/180 = 7/4$, so $315° = \frac{7\pi}{4}$. 2) $s = 12 \cdot \frac{\pi}{3} = 4\pi$, coefficient is $4$. 3) $A = \frac{1}{2}(4^2)(\frac{\pi}{2}) = \frac{1}{2}(16)(\frac{\pi}{2}) = \frac{16\pi}{4} = 4\pi$, coefficient is $4$.'
+        hint2: '$s = r\\theta = 12 \\cdot \\frac{\\pi}{3} = 4\\pi$.',
+        hint3: '$A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(16)(\\frac{\\pi}{2}) = \\frac{16\\pi}{4} = 4\\pi$.',
+        explanation: '1) $315/180 = 7/4$, so $315° = \\frac{7\\pi}{4}$. 2) $s = 12 \\cdot \\frac{\\pi}{3} = 4\\pi$, coefficient is $4$. 3) $A = \\frac{1}{2}(4^2)(\\frac{\\pi}{2}) = \\frac{1}{2}(16)(\\frac{\\pi}{2}) = \\frac{16\\pi}{4} = 4\\pi$, coefficient is $4$.'
       }
     },
     {
@@ -203,8 +203,8 @@ For $r = 6$ and $\\theta = \\frac{\\pi}{4}$: $A = \\frac{1}{2}(36)\\left(\\frac{
             options: [
               '$9\\pi$ sq in',
               '$\\frac{9\\pi}{2}$ sq in',
-              '$18\pi$ sq in',
-              '$\frac{81}{2}$ sq in'
+              '$18\\pi$ sq in',
+              '$\\frac{81}{2}$ sq in'
             ],
             correctAnswer: 0,
             explanation: 'Convert: $40° = \\frac{2\\pi}{9}$. Area $= \\frac{1}{2}r^2\\theta = \\frac{1}{2}(81)(\\frac{2\\pi}{9}) = \\frac{162\\pi}{18} = 9\\pi$ sq in.'

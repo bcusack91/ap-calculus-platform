@@ -11,14 +11,14 @@ export const physCEMCapacitorsPart5Data = {
 
 Inserting a dielectric (insulating material) between plates:
 
-$C = \kappa C_0 = \\frac{\kappa \epsilon_0 A}{d}$
+$C = \\kappa C_0 = \\frac{\\kappa \epsilon_0 A}{d}$
 
-where $\kappa$ (kappa) is the **dielectric constant** ($\kappa > 1$).
+where $\\kappa$ (kappa) is the **dielectric constant** ($\\kappa > 1$).
 
 Effects of a dielectric (battery disconnected):
-- $C$ increases by factor $\kappa$
-- $V$ decreases by factor $\kappa$
-- $E$ decreases by factor $\kappa$
+- $C$ increases by factor $\\kappa$
+- $V$ decreases by factor $\\kappa$
+- $E$ decreases by factor $\\kappa$
 - $Q$ stays the same
     
     `
@@ -29,9 +29,9 @@ Effects of a dielectric (battery disconnected):
       content: `
 ## Worked Example
 
-**A 5 μF capacitor has a dielectric with $\kappa = 3$ inserted. New capacitance?**
+**A 5 μF capacitor has a dielectric with $\\kappa = 3$ inserted. New capacitance?**
 
-$C = \kappa C_0 = 3 \\times 5 = 15$ μF ✅
+$C = \\kappa C_0 = 3 \\times 5 = 15$ μF ✅
     
     `
     },
@@ -63,11 +63,11 @@ $C = \kappa C_0 = 3 \\times 5 = 15$ μF ✅
       content: `
 **Dielectrics** 🧮
 
-1) $C_0 = 5$ μF, $\kappa = 3$. New $C$ (μF)?
+1) $C_0 = 5$ μF, $\\kappa = 3$. New $C$ (μF)?
 
-2) A dielectric triples the capacitance. What is $\kappa$?
+2) A dielectric triples the capacitance. What is $\\kappa$?
 
-3) $C_0 = 10$ μF. A dielectric with $\kappa = 2$ is inserted. Capacitor is charged to $Q = 100$ μC (battery disconnected). $V = Q/C$ (V)?
+3) $C_0 = 10$ μF. A dielectric with $\\kappa = 2$ is inserted. Capacitor is charged to $Q = 100$ μC (battery disconnected). $V = Q/C$ (V)?
     
     `,
       exercise: {

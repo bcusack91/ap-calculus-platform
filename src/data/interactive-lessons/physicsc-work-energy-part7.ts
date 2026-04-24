@@ -10,8 +10,8 @@ export const physCWorkEnergyPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Summary
-- $W = \int F\,dx$, $W = Fd\cos\\theta$
-- Work-KE Theorem: $W_{net} = \Delta KE$
+- $W = \\int F\,dx$, $W = Fd\\cos\\theta$
+- Work-KE Theorem: $W_{net} = \\Delta KE$
 - $F = -dU/dx$ for conservative forces
 - Conservation: $E_i = E_f$ (no friction)
 - Power: $P = dW/dt = Fv$
@@ -28,7 +28,7 @@ export const physCWorkEnergyPart7Data = {
 
 $\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$
 
-$v = x\sqrt{k/m} = 2\sqrt{50/2} = 2(5) = 10$ m/s ✅
+$v = x\\sqrt{k/m} = 2\\sqrt{50/2} = 2(5) = 10$ m/s ✅
     
     `
     },
@@ -98,7 +98,7 @@ $v = x\sqrt{k/m} = 2\sqrt{50/2} = 2(5) = 10$ m/s ✅
 
 | # | Topic | Key Formula |
 |---|-------|-------------|
-| 1 | Work integral | $W = \int F\,dx$ |
+| 1 | Work integral | $W = \\int F\,dx$ |
 | 2 | Energy conservation | $KE_i + PE_i = KE_f + PE_f$ |
 | 3 | Power | $P = Fv$ |
     

@@ -137,7 +137,7 @@ Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
         hint1: '$A = \\pi r^2 = \\pi (0.02)^2$.',
         hint2: '$Q = Av = (1.26 \\times 10^{-3})(3.0)$.',
         hint3: '$t = V/Q = 0.050/Q$.',
-        explanation: '$A = \pi(0.02)^2 = 1.26 \\times 10^{-3}$ m². $Q = 1.26 \\times 10^{-3} \\times 3.0 = 3.77 \\times 10^{-3}$ m³/s. $t = 0.050/(3.77 \\times 10^{-3}) = 13.3$ s.'
+        explanation: '$A = \\pi(0.02)^2 = 1.26 \\times 10^{-3}$ m². $Q = 1.26 \\times 10^{-3} \\times 3.0 = 3.77 \\times 10^{-3}$ m³/s. $t = 0.050/(3.77 \\times 10^{-3}) = 13.3$ s.'
       }
     },
     {

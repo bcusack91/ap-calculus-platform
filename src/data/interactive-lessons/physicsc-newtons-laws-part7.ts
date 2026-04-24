@@ -10,8 +10,8 @@ export const physCNewtonPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- $\sum F = ma = m\\frac{dv}{dt}$
-- $f_s \leq \mu_s N$, $f_k = \mu_k N$
+- $\\sum F = ma = m\\frac{dv}{dt}$
+- $f_s \\leq \mu_s N$, $f_k = \mu_k N$
 - $F_c = mv^2/r$
 - Action-reaction: $F_{AB} = -F_{BA}$
     
@@ -96,7 +96,7 @@ $a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 
 | # | Topic | Key Formula |
 |---|-------|-------------|
 | 1 | Newton's Laws overview | $F = ma$ |
-| 2 | Friction | $f = \mu N$ |
+| 2 | Friction | $f = \\mu N$ |
 | 3 | Circular motion | $F_c = mv^2/r$ |
     
     `

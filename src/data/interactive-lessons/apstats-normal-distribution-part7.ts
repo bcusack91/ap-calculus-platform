@@ -14,11 +14,11 @@ export const apStatsNormalDistPart7Data = {
 
 | Formula | When to Use |
 |---------|-------------|
-| $z = \frac{x - \mu}{\sigma}$ | Convert any value to standard normal |
-| $x = \mu + z\sigma$ | Convert from z-score back to original units |
-| $P(a \leq Z \leq b) = P(Z \leq b) - P(Z \leq a)$ | Find probability between two values |
-| $Y = a + bX \Rightarrow N(a+b\mu, |b|\sigma)$ | Linear transformation |
-| $X + Y \Rightarrow N(\mu_X + \mu_Y, \sqrt{\sigma_X^2+\sigma_Y^2})$ | Sum of independent normals |
+| $z = \\frac{x - \\mu}{\\sigma}$ | Convert any value to standard normal |
+| $x = \\mu + z\\sigma$ | Convert from z-score back to original units |
+| $P(a \\leq Z \\leq b) = P(Z \\leq b) - P(Z \\leq a)$ | Find probability between two values |
+| $Y = a + bX \\Rightarrow N(a+b\\mu, |b|\\sigma)$ | Linear transformation |
+| $X + Y \\Rightarrow N(\mu_X + \mu_Y, \\sqrt{\sigma_X^2+\sigma_Y^2})$ | Sum of independent normals |
 
 ---
 
@@ -39,10 +39,10 @@ export const apStatsNormalDistPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'If $\sigma$ doubles but $\mu$ stays the same, the normal curve becomes:',
+            question: 'If $\\sigma$ doubles but $\\mu$ stays the same, the normal curve becomes:',
             options: ['Taller and narrower', 'Shorter and wider', 'Shifted right', 'Unchanged'],
             correctAnswer: 1,
-            explanation: 'Larger $\sigma$ means more spread, so the curve is shorter (to maintain total area = 1) and wider.'
+            explanation: 'Larger $\\sigma$ means more spread, so the curve is shorter (to maintain total area = 1) and wider.'
           },
           {
             question: 'To find the top 5% of a distribution, you need the z-score for:',

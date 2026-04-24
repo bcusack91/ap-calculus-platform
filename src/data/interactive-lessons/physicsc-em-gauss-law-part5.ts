@@ -9,13 +9,13 @@ export const physCEMGaussPart5Data = {
 
 **Part 5 of 7 — Planar Symmetry**
 
-For an infinite plane of surface charge density $\sigma$ (C/m²):
+For an infinite plane of surface charge density $\\sigma$ (C/m²):
 
-$E = \\frac{\sigma}{2\epsilon_0}$
+$E = \\frac{\\sigma}{2\epsilon_0}$
 
 - The field is **uniform** (independent of distance!)
 - Points away from a positive sheet on both sides
-- For a conductor's surface: $E = \sigma/\epsilon_0$ (charge on one side only)
+- For a conductor's surface: $E = \\sigma/\epsilon_0$ (charge on one side only)
     
     `
     },
@@ -25,9 +25,9 @@ $E = \\frac{\sigma}{2\epsilon_0}$
       content: `
 ## Worked Example
 
-**An infinite sheet has $\sigma = 4 \\times 10^{-9}$ C/m². Find $E$.**
+**An infinite sheet has $\\sigma = 4 \\times 10^{-9}$ C/m². Find $E$.**
 
-$E = \sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) \approx 226$ N/C ✅
+$E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) \\approx 226$ N/C ✅
     
     `
     },
@@ -59,11 +59,11 @@ $E = \sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) 
       content: `
 **Planar Symmetry** 🧮
 
-1) $\sigma = 4 \\times 10^{-9}$ C/m². $E$ (N/C)? (round to nearest integer, $\epsilon_0 \approx 8.85 \\times 10^{-12}$)
+1) $\\sigma = 4 \\times 10^{-9}$ C/m². $E$ (N/C)? (round to nearest integer, $\epsilon_0 \\approx 8.85 \\times 10^{-12}$)
 
-2) A conducting surface has $E = \sigma/\epsilon_0$. This is ___ times the field of a single sheet. (Give as integer.)
+2) A conducting surface has $E = \\sigma/\epsilon_0$. This is ___ times the field of a single sheet. (Give as integer.)
 
-3) Two infinite sheets $+\sigma$ and $-\sigma$: field outside (N/C)?
+3) Two infinite sheets $+\\sigma$ and $-\\sigma$: field outside (N/C)?
     
     `,
       exercise: {
@@ -97,8 +97,8 @@ $E = \sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) 
 
 | # | Configuration | Field |
 |---|--------------|-------|
-| 1 | Single infinite sheet | $\sigma/(2\epsilon_0)$ |
-| 2 | Conducting surface | $\sigma/\epsilon_0$ |
+| 1 | Single infinite sheet | $\\sigma/(2\epsilon_0)$ |
+| 2 | Conducting surface | $\\sigma/\epsilon_0$ |
 | 3 | Two parallel sheets | Superposition |
     
     `

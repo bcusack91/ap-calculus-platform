@@ -13,7 +13,7 @@ export const physCEMCapacitorsPart6Data = {
 1. Identify the capacitor configuration (series, parallel, or single)
 2. Determine if a battery is connected or disconnected
 3. Apply $Q = CV$ and energy formulas
-4. For dielectrics, multiply $C$ by $\kappa$
+4. For dielectrics, multiply $C$ by $\\kappa$
 5. Use energy density $u = \\frac{1}{2}\epsilon_0 E^2$ for field energy problems
     
     `
@@ -101,7 +101,7 @@ $Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
 | # | Configuration | Key Step |
 |---|--------------|----------|
 | 1 | Series-parallel | Simplify step by step |
-| 2 | With dielectric | Multiply $C$ by $\kappa$ |
+| 2 | With dielectric | Multiply $C$ by $\\kappa$ |
 | 3 | Energy sharing | Two capacitors connected |
     
     `

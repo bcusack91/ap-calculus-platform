@@ -69,7 +69,7 @@ Blood slows down dramatically in capillaries because the total cross-sectional a
               '1800 cm/s'
             ],
             correctAnswer: 0,
-            explanation: '$Q = 5$ L/min = $8.33 \\times 10^{-5}$ m³/s. $A = \pi(0.012)^2 = 4.52 \\times 10^{-4}$ m². $v = Q/A = 0.184$ m/s ≈ 18 cm/s. (This is the average resting value; speed is higher during exercise.)'
+            explanation: '$Q = 5$ L/min = $8.33 \\times 10^{-5}$ m³/s. $A = \\pi(0.012)^2 = 4.52 \\times 10^{-4}$ m². $v = Q/A = 0.184$ m/s ≈ 18 cm/s. (This is the average resting value; speed is higher during exercise.)'
           }
         ]
       }

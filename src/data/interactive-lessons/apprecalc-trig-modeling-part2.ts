@@ -10,9 +10,9 @@ export const apPrecalcTrigModelPart2Data = {
 **Part 2 of 7 — Amplitude & Period**
 
 - **Amplitude** = $|A|$ (distance from midline to max/min)
-- **Period** = $\\frac{2\pi}{|B|}$ (one full cycle length)
+- **Period** = $\\frac{2\\pi}{|B|}$ (one full cycle length)
 
-For $y = 3\sin(2x)$: amplitude = 3, period = $\\frac{2\pi}{2} = \pi$
+For $y = 3\\sin(2x)$: amplitude = 3, period = $\\frac{2\\pi}{2} = \\pi$
     
     `
     },
@@ -22,9 +22,9 @@ For $y = 3\sin(2x)$: amplitude = 3, period = $\\frac{2\pi}{2} = \pi$
       content: `
 ## Worked Example
 
-**$y = 4\cos(3x)$. Amplitude? Period?**
+**$y = 4\\cos(3x)$. Amplitude? Period?**
 
-Amplitude = 4, Period = $\\frac{2\pi}{3} \approx 2.09$ ✅
+Amplitude = 4, Period = $\\frac{2\\pi}{3} \\approx 2.09$ ✅
     
     `
     },
@@ -56,11 +56,11 @@ Amplitude = 4, Period = $\\frac{2\pi}{3} \approx 2.09$ ✅
       content: `
 **Find Amplitude** 🧮
 
-1) $3\sin(2x)$: Amplitude?
+1) $3\\sin(2x)$: Amplitude?
 
-2) $5\cos(x)$: Amplitude?
+2) $5\\cos(x)$: Amplitude?
 
-3) $\sin(4x)$: Amplitude?
+3) $\\sin(4x)$: Amplitude?
     
     `,
       exercise: {
@@ -94,9 +94,9 @@ Amplitude = 4, Period = $\\frac{2\pi}{3} \approx 2.09$ ✅
 
 | # | Function | Amplitude | Period |
 |---|---------|-----------|--------|
-| 1 | $3\sin(2x)$ | 3 | π |
-| 2 | $5\cos(x)$ | 5 | 2π |
-| 3 | $\sin(4x)$ | 1 | π/2 |
+| 1 | $3\\sin(2x)$ | 3 | π |
+| 2 | $5\\cos(x)$ | 5 | 2π |
+| 3 | $\\sin(4x)$ | 1 | π/2 |
     
     `
     },

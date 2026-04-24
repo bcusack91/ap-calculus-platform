@@ -9,9 +9,9 @@ export const physCEMGaussPart4Data = {
 
 **Part 4 of 7 — Cylindrical Symmetry**
 
-For an infinite line charge with linear charge density $\lambda$ (C/m):
+For an infinite line charge with linear charge density $\\lambda$ (C/m):
 
-$E = \\frac{\lambda}{2\pi\epsilon_0 r} = \\frac{2k\lambda}{r}$
+$E = \\frac{\\lambda}{2\\pi\epsilon_0 r} = \\frac{2k\\lambda}{r}$
 
 Use a cylindrical Gaussian surface coaxial with the charge distribution.
 
@@ -25,9 +25,9 @@ The flux through the end caps is zero (field is radial).
       content: `
 ## Worked Example
 
-**An infinite wire has $\lambda = 5 \\times 10^{-9}$ C/m. Find $E$ at $r = 0.1$ m.**
+**An infinite wire has $\\lambda = 5 \\times 10^{-9}$ C/m. Find $E$ at $r = 0.1$ m.**
 
-$E = 2k\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
+$E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
     
     `
     },
@@ -59,7 +59,7 @@ $E = 2k\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
       content: `
 **Cylindrical Symmetry** 🧮
 
-1) Line charge: $\lambda = 5$ nC/m, $r = 0.1$ m. $E$ (N/C)?
+1) Line charge: $\\lambda = 5$ nC/m, $r = 0.1$ m. $E$ (N/C)?
 
 2) Same wire at $r = 0.2$ m. $E$ (N/C)?
 
@@ -97,7 +97,7 @@ $E = 2k\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
 
 | # | Configuration | Field |
 |---|--------------|-------|
-| 1 | Infinite line | $E = 2k\lambda/r$ |
+| 1 | Infinite line | $E = 2k\\lambda/r$ |
 | 2 | Infinite cylinder (outside) | Same as line |
 | 3 | Infinite cylinder (inside) | Depends on charge distribution |
     

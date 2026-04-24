@@ -9,7 +9,7 @@ export const apPrecalcTrigModelPart3Data = {
 
 **Part 3 of 7 — Phase Shift**
 
-$y = A\sin(B(x - h)) + D$
+$y = A\\sin(B(x - h)) + D$
 
 **Phase shift** = $h = -\\frac{C}{B}$ (horizontal shift)
 
@@ -26,9 +26,9 @@ $y = A\sin(B(x - h)) + D$
       content: `
 ## Worked Example
 
-**$y = \sin(x - \\frac{\pi}{4})$. Phase shift?**
+**$y = \\sin(x - \\frac{\\pi}{4})$. Phase shift?**
 
-Shift right by $\\frac{\pi}{4}$ ✅
+Shift right by $\\frac{\\pi}{4}$ ✅
     
     `
     },
@@ -60,11 +60,11 @@ Shift right by $\\frac{\pi}{4}$ ✅
       content: `
 **Shifts** 🧮
 
-1) $\sin(x) + 3$. Midline at $y = $ ?
+1) $\\sin(x) + 3$. Midline at $y = $ ?
 
-2) $\sin(x - \pi)$. Midline at $y = $ ?
+2) $\\sin(x - \\pi)$. Midline at $y = $ ?
 
-3) $\cos(x) + 2$. Midline at $y = $ ?
+3) $\\cos(x) + 2$. Midline at $y = $ ?
     
     `,
       exercise: {
@@ -98,9 +98,9 @@ Shift right by $\\frac{\pi}{4}$ ✅
 
 | # | Function | Phase Shift |
 |---|---------|----------|
-| 1 | $\sin(x - \pi)$ | Right π |
-| 2 | $\cos(x + \\frac{\pi}{2})$ | Left π/2 |
-| 3 | $\sin(x) + 3$ | No phase shift, up 3 |
+| 1 | $\\sin(x - \\pi)$ | Right π |
+| 2 | $\\cos(x + \\frac{\\pi}{2})$ | Left π/2 |
+| 3 | $\\sin(x) + 3$ | No phase shift, up 3 |
     
     `
     },

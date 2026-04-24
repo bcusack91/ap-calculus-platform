@@ -11,9 +11,9 @@ export const physCWorkEnergyPart5Data = {
 
 Power is the rate of doing work:
 
-$P = \\frac{dW}{dt} = \\vec{F} \cdot \\vec{v}$
+$P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v}$
 
-$P_{avg} = \\frac{W}{\Delta t} = \\frac{\Delta E}{\Delta t}$
+$P_{avg} = \\frac{W}{\\Delta t} = \\frac{\\Delta E}{\\Delta t}$
 
 Unit: **Watt** (W) = J/s = kg·m²/s³
     

@@ -9,14 +9,14 @@ export const physCNewtonPart4Data = {
 
 **Part 4 of 7 — Friction Forces**
 
-- **Static friction:** $f_s \leq \mu_s N$ (prevents motion)
+- **Static friction:** $f_s \\leq \mu_s N$ (prevents motion)
 - **Kinetic friction:** $f_k = \mu_k N$ (opposes sliding motion)
 
-Where $N$ is the normal force and $\mu$ is the coefficient of friction.
+Where $N$ is the normal force and $\\mu$ is the coefficient of friction.
 
 For an object on an incline at angle $\\theta$:
-- $N = mg\cos\\theta$
-- Friction along the incline: $f = \mu mg\cos\\theta$
+- $N = mg\\cos\\theta$
+- Friction along the incline: $f = \\mu mg\\cos\\theta$
     
     `
     },
@@ -100,8 +100,8 @@ $f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
 
 | # | Scenario | Key Formula |
 |---|----------|-------------|
-| 1 | Flat surface | $f = \mu mg$ |
-| 2 | Inclined plane | $f = \mu mg\cos\\theta$ |
+| 1 | Flat surface | $f = \\mu mg$ |
+| 2 | Inclined plane | $f = \\mu mg\\cos\\theta$ |
 | 3 | Threshold of sliding | $f_s = \mu_s N$ |
     
     `

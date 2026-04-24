@@ -10,14 +10,14 @@ export const physCRotationPart1Data = {
 **Part 1 of 7 — Angular Kinematics**
 
 Rotational analogs of linear kinematics:
-- $\\theta \leftrightarrow x$, $\omega \leftrightarrow v$, $\alpha \leftrightarrow a$
+- $\\theta \\leftrightarrow x$, $\\omega \\leftrightarrow v$, $\\alpha \\leftrightarrow a$
 
-$\omega = \\frac{d\\theta}{dt}, \quad \alpha = \\frac{d\omega}{dt}$
+$\\omega = \\frac{d\\theta}{dt}, \\quad \\alpha = \\frac{d\\omega}{dt}$
 
-For constant $\alpha$:
-- $\omega = \omega_0 + \alpha t$
-- $\\theta = \omega_0 t + \\frac{1}{2}\alpha t^2$
-- $\omega^2 = \omega_0^2 + 2\alpha\\theta$
+For constant $\\alpha$:
+- $\\omega = \omega_0 + \\alpha t$
+- $\\theta = \omega_0 t + \\frac{1}{2}\\alpha t^2$
+- $\\omega^2 = \omega_0^2 + 2\\alpha\\theta$
     
     `
     },
@@ -27,9 +27,9 @@ For constant $\alpha$:
       content: `
 ## Worked Example
 
-**A wheel accelerates from rest at $\alpha = 4$ rad/s². Find $\omega$ at $t = 3$ s.**
+**A wheel accelerates from rest at $\\alpha = 4$ rad/s². Find $\\omega$ at $t = 3$ s.**
 
-$\omega = \omega_0 + \alpha t = 0 + 4(3) = 12$ rad/s ✅
+$\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
     
     `
     },
@@ -61,11 +61,11 @@ $\omega = \omega_0 + \alpha t = 0 + 4(3) = 12$ rad/s ✅
       content: `
 **Angular Kinematics** 🧮
 
-1) A wheel starts from rest with $\alpha = 4$ rad/s². Angular velocity (rad/s) at $t = 3$ s?
+1) A wheel starts from rest with $\\alpha = 4$ rad/s². Angular velocity (rad/s) at $t = 3$ s?
 
 2) Same wheel: angular displacement (rad) in 3 s?
 
-3) A wheel has $\omega_0 = 2$ rad/s, $\alpha = 4$ rad/s². Find $\omega$ (rad/s) at $t = 2$ s.
+3) A wheel has $\omega_0 = 2$ rad/s, $\\alpha = 4$ rad/s². Find $\\omega$ (rad/s) at $t = 2$ s.
     
     `,
       exercise: {
@@ -99,9 +99,9 @@ $\omega = \omega_0 + \alpha t = 0 + 4(3) = 12$ rad/s ✅
 
 | # | Quantity | Formula |
 |---|---------|---------|
-| 1 | Angular velocity | $\omega = \omega_0 + \alpha t$ |
-| 2 | Angular displacement | $\\theta = \omega_0 t + \\frac{1}{2}\alpha t^2$ |
-| 3 | Without time | $\omega^2 = \omega_0^2 + 2\alpha\\theta$ |
+| 1 | Angular velocity | $\\omega = \omega_0 + \\alpha t$ |
+| 2 | Angular displacement | $\\theta = \omega_0 t + \\frac{1}{2}\\alpha t^2$ |
+| 3 | Without time | $\\omega^2 = \omega_0^2 + 2\\alpha\\theta$ |
     
     `
     },

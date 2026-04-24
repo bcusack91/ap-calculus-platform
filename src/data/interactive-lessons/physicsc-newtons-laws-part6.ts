@@ -12,7 +12,7 @@ export const physCNewtonPart6Data = {
 ### Strategy for Newton's Law Problems
 1. Draw a **free-body diagram** (FBD)
 2. Choose coordinate axes (often along incline)
-3. Write $\sum F_x = ma_x$ and $\sum F_y = ma_y$
+3. Write $\\sum F_x = ma_x$ and $\\sum F_y = ma_y$
 4. Solve the system of equations
 5. Check units and reasonableness
     
@@ -28,7 +28,7 @@ export const physCNewtonPart6Data = {
 
 $N = mg = 50$ N, $f_k = 0.2 \\times 50 = 10$ N
 
-$\sum F = 40 - 10 = 30$ N
+$\\sum F = 40 - 10 = 30$ N
 
 $a = 30/5 = 6$ m/s² ✅
     

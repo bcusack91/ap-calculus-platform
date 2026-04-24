@@ -13,7 +13,7 @@ A **vertical asymptote** occurs at $x = a$ when:
 - The denominator equals zero at $x = a$
 - The factor does NOT cancel with the numerator
 
-The graph approaches $\pm\infty$ near a vertical asymptote.
+The graph approaches $\\pm\\infty$ near a vertical asymptote.
     
     `
     },

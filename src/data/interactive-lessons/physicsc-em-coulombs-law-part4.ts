@@ -9,7 +9,7 @@ export const physCEMCoulombPart4Data = {
 
 **Part 4 of 7 — Electric Field**
 
-$\\vec{E} = \\frac{\\vec{F}}{q_0} = k\\frac{q}{r^2}\hat{r}$
+$\\vec{E} = \\frac{\\vec{F}}{q_0} = k\\frac{q}{r^2}\\hat{r}$
 
 - $E$ points away from positive charges, toward negative charges
 - SI unit: N/C = V/m
@@ -97,7 +97,7 @@ $E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
 |---|---------|---------|
 | 1 | Point charge field | $E = kq/r^2$ |
 | 2 | Force on a charge | $F = qE$ |
-| 3 | Superposition of fields | $\\vec{E}_{net} = \sum \\vec{E}_i$ |
+| 3 | Superposition of fields | $\\vec{E}_{net} = \\sum \\vec{E}_i$ |
     
     `
     },

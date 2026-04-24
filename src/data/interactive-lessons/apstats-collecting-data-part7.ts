@@ -22,7 +22,7 @@ export const apStatsCollectingDataPart7Data = {
 | **Confounding** | Third variable explains apparent relationship |
 | **Random assignment** | Reduces confounding in experiments |
 | **Blocking** | Control for known sources of variation |
-| **Expected value** | $E(X) = \sum x_i P(x_i)$ — long-run average |`
+| **Expected value** | $E(X) = \\sum x_i P(x_i)$ — long-run average |`
     },
     {
       id: 'apstats-collectingdata-p7-mcq1',
@@ -63,7 +63,7 @@ export const apStatsCollectingDataPart7Data = {
         dropdowns: [
           { label: 'Causation requires:', options: ['Large sample', 'Randomized experiment', 'Observational study', 'Correlation'] },
           { label: 'Bias is reduced by:', options: ['Larger samples', 'Better sampling methods', 'More questions', 'Longer studies'] },
-          { label: '$E(X+Y) =$', options: ['$E(X) \cdot E(Y)$', '$E(X) + E(Y)$', '$E(X) - E(Y)$', 'Cannot be determined'] }
+          { label: '$E(X+Y) =$', options: ['$E(X) \\cdot E(Y)$', '$E(X) + E(Y)$', '$E(X) - E(Y)$', 'Cannot be determined'] }
         ],
         correctAnswers: ['Randomized experiment', 'Better sampling methods', '$E(X) + E(Y)$'],
         hint1: 'Only experiments with random assignment.',

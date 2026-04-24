@@ -100,7 +100,7 @@ Or equivalently: 1 mmHg ≈ 133.3 Pa.
               'Cannot determine without knowing the liquid'
             ],
             correctAnswer: 1,
-            explanation: 'Gas side higher means the gas pressure is weaker than atmospheric — the atmosphere pushes mercury down on the open side, raising it on the gas side. The gas pressure is *less* than atmospheric by $\\rho g \Delta h$.'
+            explanation: 'Gas side higher means the gas pressure is weaker than atmospheric — the atmosphere pushes mercury down on the open side, raising it on the gas side. The gas pressure is *less* than atmospheric by $\\rho g \\Delta h$.'
           },
           {
             question: 'Why can\'t you use a water manometer to measure pressures much above 1 atm?',

@@ -24,7 +24,7 @@ $$T = 2\\pi\\sqrt{LC}$$
 
 ### Energy Exchange
 
-$$U_C = \\frac{q^2}{2C}, \quad U_L = \\frac{1}{2}LI^2$$
+$$U_C = \\frac{q^2}{2C}, \\quad U_L = \\frac{1}{2}LI^2$$
 
 $$U_{\\text{total}} = \\frac{Q_0^2}{2C} = \\text{constant}$$
 

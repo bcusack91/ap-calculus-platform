@@ -19,7 +19,7 @@ export const physCEMPotentialPart6Data = {
 
 ### Key Relationships
 
-$$W = q\\Delta V \quad | \quad KE = q(V_i - V_f) \quad | \quad E = -dV/dr$$`
+$$W = q\\Delta V \\quad | \\quad KE = q(V_i - V_f) \\quad | \\quad E = -dV/dr$$`
     },
     {
       id: 'physicsc-electric-potential-em-p6-mcq1',

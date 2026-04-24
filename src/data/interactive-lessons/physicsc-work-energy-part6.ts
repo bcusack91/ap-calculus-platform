@@ -12,7 +12,7 @@ export const physCWorkEnergyPart6Data = {
 ### Energy Problem-Solving Strategy
 1. Identify the system and its initial/final states
 2. Determine if mechanical energy is conserved
-3. If friction exists, use $W_{nc} = \Delta KE + \Delta PE$
+3. If friction exists, use $W_{nc} = \\Delta KE + \\Delta PE$
 4. Choose appropriate energy types (KE, gravitational PE, elastic PE)
 5. Solve algebraically before substituting numbers
     
@@ -26,9 +26,9 @@ export const physCWorkEnergyPart6Data = {
 
 **A 2 kg block slides down a 5 m frictionless ramp (30° incline) starting from rest. Find the speed at the bottom.**
 
-Height: $h = 5\sin 30° = 2.5$ m
+Height: $h = 5\\sin 30° = 2.5$ m
 
-$mgh = \\frac{1}{2}mv^2 \implies v = \sqrt{2(10)(2.5)} = \sqrt{50} \approx 7.07$ m/s ✅
+$mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2(10)(2.5)} = \\sqrt{50} \\approx 7.07$ m/s ✅
     
     `
     },
