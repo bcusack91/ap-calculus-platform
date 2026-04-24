@@ -1,8 +1,50 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { getDiagnosticLabel, getDiagnosticRoute } from '@/lib/diagnostic-challenge-utils'
+
+export async function generateMetadata({ params }: { params: Promise<{ token: string }> }): Promise<Metadata> {
+  const { token } = await params
+  const challenge = await prisma.diagnosticChallenge.findUnique({
+    where: { token },
+    select: {
+      diagnosticCategory: true,
+      creatorScore: true,
+      creatorCorrect: true,
+      creatorTotal: true,
+      creatorName: true,
+    },
+  })
+
+  if (!challenge) {
+    return {
+      title: 'Diagnostic Challenge — Study Mondo',
+      description: 'Take a head-to-head diagnostic challenge on Study Mondo.',
+    }
+  }
+
+  const subject = getDiagnosticLabel(challenge.diagnosticCategory)
+  const title = `${challenge.creatorName} challenged you to ${subject}!`
+  const description = `${challenge.creatorName} scored ${challenge.creatorScore}% (${challenge.creatorCorrect}/${challenge.creatorTotal}) on the ${subject} diagnostic. Can you beat them? Take the same test and find out.`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      siteName: 'Study Mondo',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
+}
 
 export default async function ChallengePage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params
