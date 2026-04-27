@@ -5017,6 +5017,18 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'AP Review', loader: () => import('./hg-industrialization-part7').then(m => m.hgIndustrializationPart7Data) }
     ],
   },
+  'hg-industrialization-development': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./hg-industrialization-part1').then(m => m.hgIndustrializationPart1Data) },
+      { title: 'Key Processes', loader: () => import('./hg-industrialization-part2').then(m => m.hgIndustrializationPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./hg-industrialization-part3').then(m => m.hgIndustrializationPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./hg-industrialization-part4').then(m => m.hgIndustrializationPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./hg-industrialization-part5').then(m => m.hgIndustrializationPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./hg-industrialization-part6').then(m => m.hgIndustrializationPart6Data) },
+      { title: 'AP Review', loader: () => import('./hg-industrialization-part7').then(m => m.hgIndustrializationPart7Data) }
+    ],
+  },
   'hg-globalization-trade': {
     completionDestination: 'complete',
     parts: [
