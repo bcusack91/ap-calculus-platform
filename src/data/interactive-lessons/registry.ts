@@ -394,6 +394,70 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Synthesis & AP Review', loader: () => import('./chemistry-moles-molar-mass-part7').then(m => m.chemMolesMolarMassPart7Data) },
     ],
   },
+  'atomic-spectra': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Light, Photons & Energy', loader: () => import('./chemistry-atomic-spectra-part1').then(m => m.chemAtomicSpectraPart1Data) },
+      { title: 'Atomic Emission & Absorption Spectra', loader: () => import('./chemistry-atomic-spectra-part2').then(m => m.chemAtomicSpectraPart2Data) },
+      { title: 'The Bohr Model & Quantized Levels', loader: () => import('./chemistry-atomic-spectra-part3').then(m => m.chemAtomicSpectraPart3Data) },
+      { title: 'The Hydrogen Spectrum & Rydberg Formula', loader: () => import('./chemistry-atomic-spectra-part4').then(m => m.chemAtomicSpectraPart4Data) },
+      { title: 'Beyond Hydrogen — Multi-Electron Atoms & PES', loader: () => import('./chemistry-atomic-spectra-part5').then(m => m.chemAtomicSpectraPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-atomic-spectra-part6').then(m => m.chemAtomicSpectraPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./chemistry-atomic-spectra-part7').then(m => m.chemAtomicSpectraPart7Data) },
+    ],
+  },
+  // Topic alias: reuses the solubility-ksp lesson suite (same equilibrium content; AP CED lists both slugs)
+  'solubility-equilibrium': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Solubility Product (Ksp)', loader: () => import('./chemistry-solubility-ksp-part1').then(m => m.chemSolubilityKspPart1Data) },
+      { title: 'Molar Solubility from Ksp', loader: () => import('./chemistry-solubility-ksp-part2').then(m => m.chemSolubilityKspPart2Data) },
+      { title: 'Common Ion Effect', loader: () => import('./chemistry-solubility-ksp-part3').then(m => m.chemSolubilityKspPart3Data) },
+      { title: 'Predicting Precipitation (Q vs Ksp)', loader: () => import('./chemistry-solubility-ksp-part4').then(m => m.chemSolubilityKspPart4Data) },
+      { title: 'Selective Precipitation', loader: () => import('./chemistry-solubility-ksp-part5').then(m => m.chemSolubilityKspPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-solubility-ksp-part6').then(m => m.chemSolubilityKspPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./chemistry-solubility-ksp-part7').then(m => m.chemSolubilityKspPart7Data) },
+    ],
+  },
+  // Topic alias: reuses the galvanic-cells-potentials lesson suite (covers thermo applications in part 5)
+  'galvanic-cells-thermo-applications': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Galvanic Cells', loader: () => import('./chemistry-galvanic-cells-potentials-part1').then(m => m.chemGalvanicCellsPotentialsPart1Data) },
+      { title: 'Cell Notation & Diagrams', loader: () => import('./chemistry-galvanic-cells-potentials-part2').then(m => m.chemGalvanicCellsPotentialsPart2Data) },
+      { title: 'Standard Reduction Potentials', loader: () => import('./chemistry-galvanic-cells-potentials-part3').then(m => m.chemGalvanicCellsPotentialsPart3Data) },
+      { title: 'Calculating E°cell', loader: () => import('./chemistry-galvanic-cells-potentials-part4').then(m => m.chemGalvanicCellsPotentialsPart4Data) },
+      { title: 'Spontaneity & ΔG°', loader: () => import('./chemistry-galvanic-cells-potentials-part5').then(m => m.chemGalvanicCellsPotentialsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-galvanic-cells-potentials-part6').then(m => m.chemGalvanicCellsPotentialsPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./chemistry-galvanic-cells-potentials-part7').then(m => m.chemGalvanicCellsPotentialsPart7Data) },
+    ],
+  },
+  // Topic alias: reuses the gibbs-free-energy lesson suite
+  'spontaneity-free-energy-applications': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Gibbs Free Energy', loader: () => import('./chemistry-gibbs-free-energy-part1').then(m => m.chemGibbsFreeEnergyPart1Data) },
+      { title: 'ΔG = ΔH − TΔS', loader: () => import('./chemistry-gibbs-free-energy-part2').then(m => m.chemGibbsFreeEnergyPart2Data) },
+      { title: 'Spontaneity & Temperature', loader: () => import('./chemistry-gibbs-free-energy-part3').then(m => m.chemGibbsFreeEnergyPart3Data) },
+      { title: 'Standard Free Energy of Formation', loader: () => import('./chemistry-gibbs-free-energy-part4').then(m => m.chemGibbsFreeEnergyPart4Data) },
+      { title: 'ΔG and Equilibrium', loader: () => import('./chemistry-gibbs-free-energy-part5').then(m => m.chemGibbsFreeEnergyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-gibbs-free-energy-part6').then(m => m.chemGibbsFreeEnergyPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./chemistry-gibbs-free-energy-part7').then(m => m.chemGibbsFreeEnergyPart7Data) },
+    ],
+  },
+  // Topic alias: reuses the reaction-quotient-le-chatelier lesson suite
+  'le-chatelier-equilibrium-shifts': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Reaction Quotient (Q)', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part1').then(m => m.chemReactionQuotientLeChatPart1Data) },
+      { title: 'Comparing Q and K', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part2').then(m => m.chemReactionQuotientLeChatPart2Data) },
+      { title: 'Le Chatelier\'s Principle', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part3').then(m => m.chemReactionQuotientLeChatPart3Data) },
+      { title: 'Changes in Concentration', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part4').then(m => m.chemReactionQuotientLeChatPart4Data) },
+      { title: 'Changes in Temperature & Pressure', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part5').then(m => m.chemReactionQuotientLeChatPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part6').then(m => m.chemReactionQuotientLeChatPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part7').then(m => m.chemReactionQuotientLeChatPart7Data) },
+    ],
+  },
   'electron-configuration': {
     completionDestination: 'competitive',
     parts: [
