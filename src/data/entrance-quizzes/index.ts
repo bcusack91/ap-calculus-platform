@@ -123,6 +123,12 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'tables-data-calcab': () => import('./tables-data-calcab'),
   'free-response-strategies-calcab': () => import('./free-response-strategies-calcab'),
   'ap-exam-review-calcab': () => import('./ap-exam-review-calcab'),
+  'continuity-ivt-calcab': () => import('./continuity-ivt-calcab'),
+  'concavity-inflection-points-calcab': () => import('./concavity-inflection-points-calcab'),
+  'derivatives-exp-log-calcab': () => import('./derivatives-exp-log-calcab'),
+  'implicit-differentiation-calcab': () => import('./implicit-differentiation-calcab'),
+  'limits-at-infinity-calcab': () => import('./limits-at-infinity-calcab'),
+  'related-rates-calcab': () => import('./related-rates-calcab'),
 
   // AP Calculus BC
   'integration-by-parts-calcbc': () => import('./integration-by-parts-calcbc'),
