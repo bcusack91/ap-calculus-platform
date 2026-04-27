@@ -5149,6 +5149,19 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'AP Review', loader: () => import('./gov-ideologies-part7').then(m => m.govIdeologiesPart7Data) }
     ],
   },
+  // Alias: DB topic uses slug 'gov-political-ideology' but content is the same as 'gov-ideologies'.
+  'gov-political-ideology': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./gov-ideologies-part1').then(m => m.govIdeologiesPart1Data) },
+      { title: 'Key Processes', loader: () => import('./gov-ideologies-part2').then(m => m.govIdeologiesPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./gov-ideologies-part3').then(m => m.govIdeologiesPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./gov-ideologies-part4').then(m => m.govIdeologiesPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./gov-ideologies-part5').then(m => m.govIdeologiesPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./gov-ideologies-part6').then(m => m.govIdeologiesPart6Data) },
+      { title: 'AP Review', loader: () => import('./gov-ideologies-part7').then(m => m.govIdeologiesPart7Data) }
+    ],
+  },
   'gov-public-opinion': {
     completionDestination: 'complete',
     parts: [
