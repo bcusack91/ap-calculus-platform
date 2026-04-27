@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import AsyncChallengeButton from '@/components/AsyncChallengeButton'
 
 /* ================================================================== */
 /*  Types                                                              */
@@ -381,6 +382,12 @@ export default function APChemCompetitivePage() {
                         <button onClick={() => startAIPractice('hard')} className="px-5 py-2.5 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all text-sm">Hard</button>
                       </div>
                     )}
+                  </div>
+                  <div className="mt-5 pt-5 border-t border-gray-200 dark:border-gray-700">
+                    <AsyncChallengeButton
+                      topicSlug={selectedTopic}
+                      helperText="Play 10 questions now, then share a link — friends beat your score on their own time. Great when no one's online to match."
+                    />
                   </div>
                 </>
               ) : (

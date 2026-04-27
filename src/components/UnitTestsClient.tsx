@@ -14,8 +14,21 @@ import {
   type UnitTestResults,
 } from '@/lib/unit-tests/engine'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { renderRichText } from '@/lib/render-rich-text'
+import { preloadKatex } from '@/lib/katex-lazy'
 
 type Phase = 'menu' | 'testing' | 'results'
+
+// Render rich-text (LaTeX with $...$ delimiters, markdown tables, etc.) safely.
+// Question/option/explanation strings are author-controlled content from src/data — not user input.
+function RichText({ text, className }: { text: string; className?: string }) {
+  return (
+    <span
+      className={className}
+      dangerouslySetInnerHTML={{ __html: renderRichText(text || '') }}
+    />
+  )
+}
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -68,6 +81,9 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [reviewing, setReviewing] = useState(false)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  // Pre-load KaTeX so the first math-bearing question doesn't render briefly as raw $...$.
+  useEffect(() => { void preloadKatex() }, [])
 
   useEffect(() => {
     if (phase !== 'testing') {
@@ -248,9 +264,10 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-5 text-base font-medium text-gray-900 sm:text-lg dark:text-white">
-                {q.question}
-              </p>
+              <RichText
+                text={q.question}
+                className="mb-5 block text-base font-medium text-gray-900 sm:text-lg dark:text-white"
+              />
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const selected = answers[currentIndex] === i
@@ -271,7 +288,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
                       <span className="mr-2 inline-block w-5 font-bold text-gray-500 dark:text-gray-400">
                         {String.fromCharCode(65 + i)}.
                       </span>
-                      {opt}
+                      <RichText text={opt} />
                     </button>
                   )
                 })}
@@ -428,7 +445,10 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
                       <p className="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">
                         Question {i + 1} {correct ? '· Correct' : '· Incorrect'}
                       </p>
-                      <p className="mb-3 font-medium text-gray-900 dark:text-white">{q.question}</p>
+                      <RichText
+                        text={q.question}
+                        className="mb-3 block font-medium text-gray-900 dark:text-white"
+                      />
                       <ul className="mb-3 space-y-1 text-sm">
                         {q.options.map((opt, j) => {
                           const isCorrect = j === q.correctAnswer
@@ -445,7 +465,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
                               }`}
                             >
                               <span className="mr-2 font-bold">{String.fromCharCode(65 + j)}.</span>
-                              {opt}
+                              <RichText text={opt} />
                               {isCorrect && <span className="ml-2 text-xs font-bold">(correct)</span>}
                               {isUser && !isCorrect && (
                                 <span className="ml-2 text-xs font-bold">(your answer)</span>
@@ -455,7 +475,8 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
                         })}
                       </ul>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
-                        <span className="font-semibold">Explanation:</span> {q.explanation}
+                        <span className="font-semibold">Explanation:</span>{' '}
+                        <RichText text={q.explanation} />
                       </p>
                     </div>
                   )

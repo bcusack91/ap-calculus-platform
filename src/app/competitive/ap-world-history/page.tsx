@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import AsyncChallengeButton from '@/components/AsyncChallengeButton'
 
 interface TopicInfo { id: string; slug: string; title: string; completed: boolean; masteryLevel: number; status: string }
 interface UnitInfo { unitNumber: number; name: string; slug: string; topics: TopicInfo[] }
@@ -156,6 +157,12 @@ export default function ApWorldHistoryCompetitivePage() {
                   <div className="mt-5 pt-5 border-t border-gray-200 dark:border-gray-700">
                     <button onClick={() => setShowAIOptions(!showAIOptions)} className="px-6 py-2.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-semibold rounded-lg transition-all text-sm">🤖 Practice vs AI</button>
                     {showAIOptions && (<div className="mt-4 flex justify-center gap-3"><button onClick={() => startAIPractice('easy')} className="px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg text-sm">Easy</button><button onClick={() => startAIPractice('medium')} className="px-5 py-2.5 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg text-sm">Medium</button><button onClick={() => startAIPractice('hard')} className="px-5 py-2.5 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg text-sm">Hard</button></div>)}
+                  </div>
+                  <div className="mt-5 pt-5 border-t border-gray-200 dark:border-gray-700">
+                    <AsyncChallengeButton
+                      topicSlug={selectedTopic}
+                      helperText="Play 10 questions now, then share a link — friends beat your score on their own time. Great when no one's online to match."
+                    />
                   </div>
                 </>
               ) : (
