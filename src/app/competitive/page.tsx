@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 import { PowerUpShop } from '@/components/PowerUps'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 
@@ -14,14 +15,6 @@ interface CompetitiveProfile {
   totalMatches: number
   winStreak: number
   averageAccuracy: number
-}
-
-interface QueueStatus {
-  status: string
-  matchId?: string
-  position?: number
-  estimatedWait?: number
-  [key: string]: unknown
 }
 
 interface UnlockRequirements {
@@ -53,253 +46,115 @@ interface AsyncChallengeSummary {
   recipient?: { id: string; name: string | null; image: string | null } | null
 }
 
+/* ================================================================== */
+/*  Course Catalog                                                     */
+/* ================================================================== */
+
+interface CourseCard {
+  /** Slug used in /competitive/{slug} route. */
+  slug: string
+  /** Category key for unlock-check membership (matches API). */
+  categoryKey: string
+  emoji: string
+  name: string
+  desc: string
+  /** Tailwind gradient classes used for the accent ring/header. */
+  gradient: string
+}
+
+interface CourseCategory {
+  id: string
+  label: string
+  icon: string
+  courses: CourseCard[]
+}
+
+const COURSE_CATEGORIES: CourseCategory[] = [
+  {
+    id: 'math',
+    label: 'Math',
+    icon: '📐',
+    courses: [
+      { slug: 'ap-calculus-ab', categoryKey: 'ap-calculus-ab', emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals', gradient: 'from-indigo-500 to-purple-500' },
+      { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-purple-500 to-pink-500' },
+      { slug: 'ap-precalculus', categoryKey: 'ap-precalculus', emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling', gradient: 'from-blue-500 to-indigo-500' },
+    ],
+  },
+  {
+    id: 'science',
+    label: 'Science',
+    icon: '🔬',
+    courses: [
+      { slug: 'ap-biology', categoryKey: 'ap-biology', emoji: '🧬', name: 'AP Biology', desc: 'Cells, Genetics & Evolution', gradient: 'from-green-500 to-emerald-500' },
+      { slug: 'ap-chemistry', categoryKey: 'ap-chemistry', emoji: '⚗️', name: 'AP Chemistry', desc: 'Reactions, Bonding & Equilibrium', gradient: 'from-teal-500 to-cyan-500' },
+      { slug: 'ap-physics1', categoryKey: 'ap-physics1', emoji: '🚀', name: 'AP Physics 1', desc: 'Kinematics, Forces & Energy', gradient: 'from-orange-500 to-red-500' },
+      { slug: 'ap-physics2', categoryKey: 'ap-physics2', emoji: '⚡', name: 'AP Physics 2', desc: 'Electricity, Magnetism & Optics', gradient: 'from-yellow-500 to-orange-500' },
+      { slug: 'ap-physics-c-mechanics', categoryKey: 'ap-physics-c-mech', emoji: '🔧', name: 'AP Physics C: Mech', desc: 'Calculus-Based Mechanics', gradient: 'from-amber-500 to-orange-500' },
+      { slug: 'ap-physics-c-em', categoryKey: 'ap-physics-c-em', emoji: '🧲', name: 'AP Physics C: E&M', desc: 'Calculus-Based E&M', gradient: 'from-amber-500 to-yellow-500' },
+      { slug: 'ap-enviro', categoryKey: 'ap-enviro', emoji: '🌱', name: 'AP Environmental Science', desc: 'Ecosystems, Climate & Sustainability', gradient: 'from-lime-500 to-green-500' },
+    ],
+  },
+  {
+    id: 'history',
+    label: 'History & Social Science',
+    icon: '🏛️',
+    courses: [
+      { slug: 'ap-world-history', categoryKey: 'ap-world-history', emoji: '🌐', name: 'AP World History', desc: 'Civilizations, Trade & Conflict', gradient: 'from-rose-500 to-red-500' },
+      { slug: 'ap-us-history', categoryKey: 'ap-us-history', emoji: '🇺🇸', name: 'AP US History', desc: 'Colonial Era to Modern America', gradient: 'from-red-500 to-blue-600' },
+      { slug: 'ap-african-american-studies', categoryKey: 'ap-african-american-studies', emoji: '✊', name: 'AP African American Studies', desc: 'Culture, Identity & Resistance', gradient: 'from-amber-600 to-yellow-600' },
+      { slug: 'ap-human-geo', categoryKey: 'ap-human-geo', emoji: '🌍', name: 'AP Human Geography', desc: 'Population, Culture & Urbanization', gradient: 'from-emerald-500 to-teal-500' },
+      { slug: 'ap-us-gov', categoryKey: 'ap-us-gov', emoji: '🏛️', name: 'AP US Government', desc: 'Constitution, Federalism & Elections', gradient: 'from-blue-600 to-indigo-600' },
+      { slug: 'ap-macro', categoryKey: 'ap-macro', emoji: '📈', name: 'AP Macroeconomics', desc: 'GDP, Fiscal & Monetary Policy', gradient: 'from-emerald-600 to-green-600' },
+      { slug: 'ap-micro', categoryKey: 'ap-micro', emoji: '💰', name: 'AP Microeconomics', desc: 'Supply, Demand & Markets', gradient: 'from-green-600 to-lime-600' },
+    ],
+  },
+  {
+    id: 'english',
+    label: 'English',
+    icon: '📚',
+    courses: [
+      { slug: 'ap-english-lit', categoryKey: 'ap-english-lit', emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis', gradient: 'from-purple-600 to-fuchsia-600' },
+      { slug: 'ap-english-lang', categoryKey: 'ap-english-lang', emoji: '✍️', name: 'AP English Language', desc: 'Rhetoric, Argument & Synthesis', gradient: 'from-fuchsia-500 to-pink-500' },
+    ],
+  },
+  {
+    id: 'cs',
+    label: 'Computer Science',
+    icon: '💻',
+    courses: [
+      { slug: 'ap-csa', categoryKey: 'ap-csa', emoji: '☕', name: 'AP Computer Science A', desc: 'Java OOP, Arrays & Algorithms', gradient: 'from-slate-600 to-gray-700' },
+      { slug: 'ap-csp', categoryKey: 'ap-csp', emoji: '🖥️', name: 'AP CS Principles', desc: 'Data, Internet & Cybersecurity', gradient: 'from-cyan-500 to-blue-500' },
+    ],
+  },
+]
+
 export default function CompetitivePage() {
   const router = useRouter()
   const { data: session, status } = useSession()
   const [loading, setLoading] = useState(true)
   const [unlocked, setUnlocked] = useState(false)
   const [profile, setProfile] = useState<CompetitiveProfile | null>(null)
-  const [inQueue, setInQueue] = useState(false)
-  const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
-  const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'ap-biology' | 'ap-chemistry' | 'ap-psychology' | 'ap-statistics' | 'ap-physics1' | 'ap-physics2' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-physics-c-mech' | 'ap-physics-c-em' | 'ap-precalculus' | 'sat-math' | 'sat-reading' | 'act-math' | 'act-science' | 'ochem' | 'precalc' | 'geometry' | 'ap-human-geo' | 'ap-us-gov' | 'ap-world-history' | 'ap-us-history' | 'ap-macro' | 'ap-micro' | 'ap-african-american-studies' | 'ap-english-lit' | 'ap-english-lang' | 'ap-enviro' | 'ap-csa' | 'ap-csp' | 'cumulative'>('the-unit-circle')
-  const [, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
-  const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
   const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)
-  const [showAIOptions, setShowAIOptions] = useState(false)
-  const [activeGroup, setActiveGroup] = useState<string>('all')
   const [asyncChallenges, setAsyncChallenges] = useState<{ sent: AsyncChallengeSummary[]; received: AsyncChallengeSummary[] }>({ sent: [], received: [] })
-  const [creatingAsync, setCreatingAsync] = useState(false)
 
-  // Topic groups for organized navigation
-  const topicGroups = [
-    {
-      id: 'calculus',
-      label: 'Calculus',
-      icon: '∫',
-      topics: [
-        { id: 'ap-calculus-ab' as const, emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals' },
-        { id: 'ap-calculus-bc' as const, emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar' },
-        { id: 'derivatives' as const, emoji: '📐', name: 'Derivatives', desc: 'Power, Chain, Product Rules' },
-        { id: 'limits' as const, emoji: '♾️', name: 'Limits', desc: "L'Hôpital, Squeeze Theorem" },
-        { id: 'integrals' as const, emoji: '∫', name: 'Integrals', desc: 'Antiderivatives & FTC' },
-        { id: 'the-unit-circle' as const, emoji: '🔵', name: 'Unit Circle', desc: 'Angles & Coordinates' },
-      ]
-    },
-    {
-      id: 'math-foundations',
-      label: 'Math Foundations',
-      icon: '🔢',
-      topics: [
-        { id: 'algebra' as const, emoji: '🔢', name: 'Algebra 1', desc: 'Equations & Functions' },
-        { id: 'algebra2' as const, emoji: '📊', name: 'Algebra 2', desc: 'Polynomials, Rationals & Logs' },
-        { id: 'geometry' as const, emoji: '📐', name: 'Geometry', desc: 'Proofs, Triangles & Circles' },
-        { id: 'precalc' as const, emoji: '📈', name: 'Pre-Calculus', desc: 'Functions, Series & Trig' },
-        { id: 'ap-precalculus' as const, emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling' },
-      ]
-    },
-    {
-      id: 'science',
-      label: 'AP Science',
-      icon: '🔬',
-      topics: [
-        { id: 'ap-biology' as const, emoji: '🧬', name: 'AP Biology', desc: 'Cells, Genetics & Evolution' },
-        { id: 'ap-chemistry' as const, emoji: '⚗️', name: 'AP Chemistry', desc: 'Reactions, Bonding & Equilibrium' },
-        { id: 'ap-physics1' as const, emoji: '🚀', name: 'AP Physics 1', desc: 'Kinematics, Forces & Energy' },
-        { id: 'ap-physics2' as const, emoji: '⚡', name: 'AP Physics 2', desc: 'Electricity, Magnetism & Optics' },
-        { id: 'ap-physics-c-mech' as const, emoji: '🔧', name: 'AP Physics C: Mech', desc: 'Calculus-Based Mechanics' },
-        { id: 'ap-physics-c-em' as const, emoji: '🧲', name: 'AP Physics C: E&M', desc: 'Calculus-Based E&M' },
-      ]
-    },
-    {
-      id: 'humanities',
-      label: 'Humanities & Social Science',
-      icon: '🧠',
-      topics: [
-        { id: 'ap-psychology' as const, emoji: '🧠', name: 'AP Psychology', desc: 'Brain, Behavior & Cognition' },
-        { id: 'ap-statistics' as const, emoji: '📊', name: 'AP Statistics', desc: 'Probability & Inference' },
-        { id: 'ap-human-geo' as const, emoji: '🌍', name: 'AP Human Geography', desc: 'Population, Culture & Urbanization' },
-        { id: 'ap-us-gov' as const, emoji: '🏛️', name: 'AP US Government', desc: 'Constitution, Federalism & Elections' },
-        { id: 'ap-macro' as const, emoji: '📈', name: 'AP Macroeconomics', desc: 'GDP, Fiscal & Monetary Policy' },
-        { id: 'ap-micro' as const, emoji: '💰', name: 'AP Microeconomics', desc: 'Supply, Demand & Markets' },
-        { id: 'ap-enviro' as const, emoji: '🌱', name: 'AP Environmental Science', desc: 'Ecosystems, Climate & Sustainability' },
-      ]
-    },
-    {
-      id: 'history-english',
-      label: 'History & English',
-      icon: '📚',
-      topics: [
-        { id: 'ap-world-history' as const, emoji: '🌐', name: 'AP World History', desc: 'Civilizations, Trade & Conflict' },
-        { id: 'ap-us-history' as const, emoji: '🇺🇸', name: 'AP US History', desc: 'Colonial Era to Modern America' },
-        { id: 'ap-african-american-studies' as const, emoji: '✊', name: 'AP African American Studies', desc: 'Culture, Identity & Resistance' },
-        { id: 'ap-english-lit' as const, emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis' },
-        { id: 'ap-english-lang' as const, emoji: '✍️', name: 'AP English Language', desc: 'Rhetoric, Argument & Synthesis' },
-      ]
-    },
-    {
-      id: 'computer-science',
-      label: 'Computer Science',
-      icon: '💻',
-      topics: [
-        { id: 'ap-csa' as const, emoji: '☕', name: 'AP Computer Science A', desc: 'Java OOP, Arrays & Algorithms' },
-        { id: 'ap-csp' as const, emoji: '🖥️', name: 'AP CS Principles', desc: 'Data, Internet & Cybersecurity' },
-      ]
-    },
-    {
-      id: 'test-prep',
-      label: 'Test Prep',
-      icon: '📝',
-      topics: [
-        { id: 'sat-math' as const, emoji: '📐', name: 'SAT Math', desc: 'Algebra, Geometry & Data' },
-        { id: 'sat-reading' as const, emoji: '📖', name: 'SAT Reading', desc: 'Comprehension & Evidence' },
-        { id: 'sat-punctuation' as const, emoji: '📝', name: 'SAT Punctuation', desc: 'All Punctuation Rules' },
-        { id: 'sat-punctuation-commas-semicolons' as const, emoji: '✏️', name: 'Commas & Semicolons', desc: 'SAT Punctuation Focus' },
-        { id: 'act-math' as const, emoji: '🔢', name: 'ACT Math', desc: 'Pre-Algebra through Trig' },
-        { id: 'act-science' as const, emoji: '🔬', name: 'ACT Science', desc: 'Data Interpretation & Research' },
-      ]
-    },
-    {
-      id: 'advanced',
-      label: 'Advanced Topics',
-      icon: '🧪',
-      topics: [
-        { id: 'ochem' as const, emoji: '🧪', name: 'Organic Chemistry', desc: 'Reactions & Mechanisms' },
-        { id: 'parametric-equations' as const, emoji: '📈', name: 'Parametric Equations', desc: 'Curves & Eliminating Parameters' },
-        { id: 'vectors' as const, emoji: '➡️', name: 'Vectors', desc: 'Magnitude, Dot Product & More' },
-        { id: 'polar-coordinates' as const, emoji: '🌀', name: 'Polar Coordinates', desc: 'Polar Curves & Conversions' },
-        { id: 'reflection-refraction' as const, emoji: '🌈', name: 'Reflection & Refraction', desc: 'Optics & Light' },
-      ]
-    },
-  ]
-
-  async function checkUnlock() {
+  const checkUnlock = useCallback(async () => {
     try {
       const res = await fetch('/api/competitive/unlock-check')
       const data: UnlockCheckResponse = await res.json()
-      
       setUnlocked(data.unlocked)
       setProfile(data.profile)
       setRequirements(data.requirements)
-      setCompletedTopics(data.completedTopics || [])
       setCompetitiveCategories(data.competitiveCategories || {})
-      setAlgebra2SubtopicDetails(data.algebra2SubtopicDetails || [])
       setLoading(false)
-
       if (data.justUnlocked) {
-        // Show celebration
         alert('🎉 Competitive Mode Unlocked!')
       }
     } catch (error) {
       console.error('Error checking unlock:', error)
       setLoading(false)
     }
-  }
-
-  const joinQueue = async () => {
-    try {
-      // Team Battle uses separate queue endpoint and match page
-      if (selectedMode === 'TEAM_BATTLE') {
-        const res = await fetch('/api/competitive/team-queue', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ topicSlug: selectedTopic })
-        })
-        const data: QueueStatus = await res.json()
-        if (data.status === 'matched') {
-          router.push(`/competitive/team-match/${data.matchId}`)
-        } else {
-          setInQueue(true)
-          setQueueStatus(data)
-        }
-        return
-      }
-
-      const res = await fetch('/api/competitive/queue', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topicSlug: selectedTopic,
-          gameMode: selectedMode
-        })
-      })
-      
-      const data: QueueStatus = await res.json()
-
-      if (data.status === 'matched') {
-        router.push(`/competitive/match/${data.matchId}`)
-      } else {
-        setInQueue(true)
-        setQueueStatus(data)
-      }
-    } catch (error) {
-      console.error('Error joining queue:', error)
-    }
-  }
-
-  const leaveQueue = async () => {
-    try {
-      if (selectedMode === 'TEAM_BATTLE') {
-        await fetch('/api/competitive/team-queue', { method: 'DELETE' })
-      } else {
-        await fetch('/api/competitive/queue', { method: 'DELETE' })
-      }
-      setInQueue(false)
-      setQueueStatus(null)
-    } catch (error) {
-      console.error('Error leaving queue:', error)
-    }
-  }
-
-  const startAIPractice = async (difficulty: 'easy' | 'medium' | 'hard') => {
-    try {
-      const res = await fetch('/api/competitive/practice-ai', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topicSlug: selectedTopic,
-          gameMode: selectedMode,
-          aiDifficulty: difficulty
-        })
-      })
-      
-      const data = await res.json()
-      
-      if (data.matchId) {
-        if (data.isTeamMatch) {
-          router.push(`/competitive/team-match/${data.matchId}`)
-        } else {
-          router.push(`/competitive/match/${data.matchId}`)
-        }
-      }
-    } catch (error) {
-      console.error('Error starting AI practice:', error)
-    }
-  }
-
-  const checkQueue = useCallback(async () => {
-    try {
-      const endpoint = selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue'
-      const res = await fetch(endpoint)
-      const data: QueueStatus = await res.json()
-
-      if (data.status === 'not_in_queue') {
-        setInQueue(false)
-        setQueueStatus(null)
-      } else if (data.status === 'matched') {
-        setInQueue(false)
-        const matchUrl = selectedMode === 'TEAM_BATTLE'
-          ? `/competitive/team-match/${data.matchId}`
-          : `/competitive/match/${data.matchId}`
-        router.push(matchUrl)
-      } else {
-        setQueueStatus(data)
-      }
-    } catch (error) {
-      console.error('Error checking queue:', error)
-    }
-  }, [router, selectedMode])
+  }, [])
 
   const fetchAsyncChallenges = useCallback(async () => {
     try {
@@ -313,30 +168,6 @@ export default function CompetitivePage() {
     }
   }, [])
 
-  const createAsyncChallenge = async () => {
-    setCreatingAsync(true)
-    try {
-      const res = await fetch('/api/competitive/async-challenge', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topicSlug: selectedTopic,
-          questionCount: 10,
-          timeLimit: 300,
-        }),
-      })
-      const data = await res.json()
-      if (data.challengeId) {
-        router.push(`/competitive/async/${data.challengeId}`)
-      }
-    } catch (e) {
-      console.error('Error creating async challenge:', e)
-    } finally {
-      setCreatingAsync(false)
-    }
-  }
-
-  // Redirect to signin if not authenticated
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/competitive')
@@ -345,20 +176,10 @@ export default function CompetitivePage() {
 
   useEffect(() => {
     if (session) {
-      const timeoutId = setTimeout(() => {
-        void checkUnlock()
-        void fetchAsyncChallenges()
-      }, 0)
-      return () => clearTimeout(timeoutId)
+      void checkUnlock()
+      void fetchAsyncChallenges()
     }
-  }, [session, fetchAsyncChallenges])
-
-  useEffect(() => {
-    if (inQueue) {
-      const interval = setInterval(checkQueue, 2000)
-      return () => clearInterval(interval)
-    }
-  }, [inQueue, checkQueue])
+  }, [session, checkUnlock, fetchAsyncChallenges])
 
   if (status === 'loading' || loading) {
     return (
@@ -368,15 +189,13 @@ export default function CompetitivePage() {
     )
   }
 
-  if (!session) {
-    return null // Will redirect in useEffect
-  }
+  if (!session) return null
 
+  /* ---- Locked state (kept for parity with old page) ---- */
   if (!unlocked) {
     const masteryPercent = Math.round((requirements?.masteryLevel || 0) * 100)
     const currentTopic = requirements?.currentTopic || ''
     const topicTitle = requirements?.currentTopicTitle || 'a topic'
-    
     return (
       <div className="min-h-screen flex items-center justify-center p-6">
         <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8">
@@ -386,8 +205,6 @@ export default function CompetitivePage() {
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
               Unlock competitive challenges by doing any ONE of the following:
             </p>
-            
-            {/* Progress Display */}
             <div className="mb-8">
               {currentTopic && (
                 <>
@@ -398,15 +215,13 @@ export default function CompetitivePage() {
                     <span className="text-sm font-semibold text-purple-600">{masteryPercent}%</span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6">
-                    <div 
+                    <div
                       className="bg-gradient-to-r from-purple-500 to-blue-500 h-4 rounded-full transition-all duration-500"
                       style={{ width: `${masteryPercent}%` }}
-                    ></div>
+                    />
                   </div>
                 </>
               )}
-
-              {/* Requirements */}
               <div className="text-left bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6">
                 <h3 className="text-lg font-bold mb-4 text-center">Unlock Requirements (any one)</h3>
                 <div className="space-y-4">
@@ -416,63 +231,40 @@ export default function CompetitivePage() {
                     </div>
                     <div>
                       <p className="font-medium">Complete any interactive lesson (60%+ mastery)</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Your best progress: {masteryPercent}%
-                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Your best progress: {masteryPercent}%</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
-                      ○
-                    </div>
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
                     <div>
                       <p className="font-medium">Score 70%+ on any entrance quiz</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Take an entrance quiz from any course
-                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Take an entrance quiz from any course</p>
                     </div>
                   </div>
-
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
-                      ○
-                    </div>
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
                     <div>
                       <p className="font-medium">Score 60%+ on any diagnostic test</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Take a diagnostic test from any course
-                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Take a diagnostic test from any course</p>
                     </div>
                   </div>
-
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
-                      ○
-                    </div>
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
                     <div>
                       <p className="font-medium">Accept a challenge from a friend</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Have a friend send you a challenge link!
-                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Have a friend send you a challenge link!</p>
                     </div>
                   </div>
-
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
-                      ○
-                    </div>
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">○</div>
                     <div>
                       <p className="font-medium">Ask your teacher for access</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Teachers can grant competitive mode access
-                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Teachers can grant competitive mode access</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
             {currentTopic ? (
               <button
                 onClick={() => router.push(`/topics/${currentTopic}/interactive`)}
@@ -494,25 +286,35 @@ export default function CompetitivePage() {
     )
   }
 
+  /* ---- Unlocked: course-selection landing ---- */
+  const totalAvailable = COURSE_CATEGORIES.reduce(
+    (sum, cat) => sum + cat.courses.filter(c => competitiveCategories[c.categoryKey]).length,
+    0
+  )
+  const totalCourses = COURSE_CATEGORIES.reduce((sum, cat) => sum + cat.courses.length, 0)
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-6 sm:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4 py-6 sm:p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mb-4">
-            <div className="hidden sm:block" /> {/* Spacer for centering */}
+            <div className="hidden sm:block w-40" />
             <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Competitive Mode
             </h1>
             <button
               onClick={() => router.push('/profile')}
-              className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors text-sm font-semibold"
+              className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors text-sm font-semibold w-40"
             >
               ✏️ Customize Avatar
             </button>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
-            Challenge other students and climb the ranks!
+            Pick your course, then choose a topic, mode, and opponent.
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+            {totalAvailable} of {totalCourses} courses unlocked · finish any lesson to unlock more
           </p>
         </div>
 
@@ -531,297 +333,94 @@ export default function CompetitivePage() {
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">MMR Rating</p>
               </div>
               <div>
-                <div className="text-xl sm:text-3xl font-bold text-green-600">
-                  {profile.wins}W
-                </div>
-                <div className="text-xl sm:text-3xl font-bold text-red-600">
-                  {profile.losses}L
-                </div>
+                <div className="text-xl sm:text-3xl font-bold text-green-600">{profile.wins}W</div>
+                <div className="text-xl sm:text-3xl font-bold text-red-600">{profile.losses}L</div>
               </div>
             </div>
           </div>
         )}
 
-        {/* Topic Selection */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Select Topic</h2>
-          
-          {/* Category Tabs */}
-          <div className="flex flex-wrap gap-2 mb-6 justify-center">
-            <button
-              onClick={() => setActiveGroup('all')}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                activeGroup === 'all'
-                  ? 'bg-purple-600 text-white shadow-lg'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
-              }`}
-            >
-              All Topics
-            </button>
-            {topicGroups.map(group => {
-              const availableCount = group.topics.filter(t => competitiveCategories[t.id]).length
-              return (
-                <button
-                  key={group.id}
-                  onClick={() => setActiveGroup(group.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                    activeGroup === group.id
-                      ? 'bg-purple-600 text-white shadow-lg'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
-                  }`}
-                >
-                  <span>{group.icon}</span>
-                  <span>{group.label}</span>
-                  {availableCount > 0 && (
-                    <span className={`ml-1 w-5 h-5 rounded-full text-xs flex items-center justify-center ${
-                      activeGroup === group.id
-                        ? 'bg-white/20 text-white'
-                        : 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                    }`}>
-                      {availableCount}
-                    </span>
-                  )}
-                </button>
-              )
-            })}
-          </div>
-
-          {/* Topic Cards by Group */}
-          <div className="space-y-6">
-            {topicGroups
-              .filter(group => activeGroup === 'all' || activeGroup === group.id)
-              .map(group => (
-                <div key={group.id}>
-                  {activeGroup === 'all' && (
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xl">{group.icon}</span>
-                      <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">{group.label}</h3>
-                      <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700 ml-2" />
+        {/* Course Selection — categorized cards */}
+        <div className="space-y-8 mb-10">
+          {COURSE_CATEGORIES.map(category => (
+            <section key={category.id}>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">{category.icon}</span>
+                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">{category.label}</h2>
+                <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700 ml-2" />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {category.courses.map(course => {
+                  const isUnlocked = !!competitiveCategories[course.categoryKey]
+                  const cardBody = (
+                    <div
+                      className={`relative h-full p-5 rounded-2xl border transition-all overflow-hidden ${
+                        isUnlocked
+                          ? 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-xl hover:-translate-y-0.5 cursor-pointer'
+                          : 'bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 opacity-60 cursor-not-allowed'
+                      }`}
+                    >
+                      {/* Top accent gradient bar */}
+                      <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${course.gradient}`} />
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-start gap-3">
+                          <span className="text-3xl flex-shrink-0">{course.emoji}</span>
+                          <div>
+                            <h3 className="font-bold text-base text-gray-900 dark:text-white leading-tight">
+                              {course.name}
+                            </h3>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-snug">
+                              {course.desc}
+                            </p>
+                          </div>
+                        </div>
+                        {isUnlocked ? (
+                          <span className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-green-500 mt-1.5" title="Unlocked" />
+                        ) : (
+                          <span className="flex-shrink-0 text-gray-400 text-xs mt-1">🔒</span>
+                        )}
+                      </div>
+                      <div className="mt-4 flex items-center justify-between">
+                        {isUnlocked ? (
+                          <span className={`text-xs font-bold bg-gradient-to-r ${course.gradient} bg-clip-text text-transparent`}>
+                            Compete →
+                          </span>
+                        ) : (
+                          <span className="text-[11px] text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20 px-2 py-0.5 rounded-full font-medium">
+                            Complete a lesson to unlock
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  )}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                    {group.topics.map(topic => {
-                      const isAvailable = !!competitiveCategories[topic.id]
-                      const isSelected = selectedTopic === topic.id
-                      return (
-                        <button
-                          key={topic.id}
-                          onClick={() => isAvailable && setSelectedTopic(topic.id)}
-                          disabled={!isAvailable}
-                          className={`relative p-4 rounded-xl transition-all text-left ${
-                            isSelected
-                              ? 'ring-3 ring-purple-500 bg-purple-50 dark:bg-purple-900/30 shadow-xl scale-[1.02]'
-                              : isAvailable
-                                ? 'bg-white dark:bg-gray-800 shadow-md hover:shadow-lg hover:scale-[1.01]'
-                                : 'bg-gray-100 dark:bg-gray-800/50 opacity-50 cursor-not-allowed'
-                          }`}
-                        >
-                          {isAvailable && (
-                            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-green-500" />
-                          )}
-                          <div className="text-2xl mb-1.5">{topic.emoji}</div>
-                          <h4 className="text-sm font-bold mb-0.5 leading-tight">{topic.name}</h4>
-                          <p className="text-xs text-gray-500 dark:text-gray-400 leading-tight">
-                            {topic.id === 'algebra2' && isAvailable && algebra2SubtopicDetails.length > 0
-                              ? algebra2SubtopicDetails.map(s => s.label).join(', ')
-                              : topic.desc
-                            }
-                          </p>
-                          {!isAvailable && (
-                            <span className="inline-block mt-1.5 text-[10px] text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20 px-1.5 py-0.5 rounded-full font-medium">
-                              🔒 Locked
-                            </span>
-                          )}
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-
-          {/* Cumulative Mode */}
-          <div className="mt-4">
-            <button
-              onClick={() => setSelectedTopic('cumulative')}
-              disabled={Object.values(competitiveCategories).filter(Boolean).length < 1}
-              className={`w-full p-5 rounded-xl transition-all ${
-                selectedTopic === 'cumulative'
-                  ? 'ring-3 ring-purple-500 bg-gradient-to-br from-purple-600 to-blue-600 text-white shadow-xl'
-                  : 'bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-lg hover:shadow-xl hover:from-purple-600 hover:to-blue-600'
-              } ${
-                Object.values(competitiveCategories).filter(Boolean).length < 1
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-3xl">🎯</span>
-                <div>
-                  <h3 className="text-lg font-bold">Cumulative Mode</h3>
-                  <p className="text-sm text-white/80">Mixed questions from all your unlocked topics</p>
-                </div>
+                  )
+                  return isUnlocked ? (
+                    <Link key={course.slug} href={`/competitive/${course.slug}`} className="block h-full">
+                      {cardBody}
+                    </Link>
+                  ) : (
+                    <div key={course.slug} className="h-full">
+                      {cardBody}
+                    </div>
+                  )
+                })}
               </div>
-            </button>
-          </div>
-        </div>
-
-        {/* Game Modes */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div 
-            onClick={() => setSelectedMode('SPEED_RACE')}
-            className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
-              selectedMode === 'SPEED_RACE' ? 'ring-4 ring-purple-500' : ''
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-2">⚡ Speed Race</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              First to complete 10 problems correctly wins!
-            </p>
-          </div>
-
-          <div 
-            onClick={() => setSelectedMode('ACCURACY_CHALLENGE')}
-            className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
-              selectedMode === 'ACCURACY_CHALLENGE' ? 'ring-4 ring-purple-500' : ''
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-2">🎯 Accuracy Challenge</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Highest accuracy on 20 problems wins!
-            </p>
-          </div>
-
-          <div 
-            onClick={() => setSelectedMode('TEAM_BATTLE')}
-            className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
-              selectedMode === 'TEAM_BATTLE' ? 'ring-4 ring-orange-500' : ''
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-2">👥 Team Battle 2v2</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Team up! First team to 15 combined points wins!
-            </p>
-          </div>
-
-          <div 
-            onClick={() => setSelectedMode('ASYNC_CHALLENGE')}
-            className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
-              selectedMode === 'ASYNC_CHALLENGE' ? 'ring-4 ring-emerald-500' : ''
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-2">📬 Async Challenge</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Play now, share the link — your friend plays later!
-            </p>
-          </div>
-        </div>
-
-        {/* Queue Section */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
-          {selectedMode === 'ASYNC_CHALLENGE' ? (
-            <div className="text-center">
-              <button
-                onClick={createAsyncChallenge}
-                disabled={creatingAsync}
-                className="px-12 py-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-lg text-2xl transition-all shadow-lg hover:shadow-xl mb-4 disabled:opacity-50"
-              >
-                {creatingAsync ? 'Creating...' : '📬 Create Async Challenge'}
-              </button>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
-                You&apos;ll answer 10 questions, then share a link for your friend to beat your score anytime.
-              </p>
-            </div>
-          ) : !inQueue ? (
-            <div className="text-center">
-              <button
-                onClick={joinQueue}
-                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg text-2xl transition-all shadow-lg hover:shadow-xl mb-4"
-              >
-                Find Match
-              </button>
-              
-              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-                <button
-                  onClick={() => setShowAIOptions(!showAIOptions)}
-                  className="px-8 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-semibold rounded-lg transition-all"
-                >
-                  🤖 Practice vs AI
-                </button>
-                
-                {showAIOptions && (
-                  <div className="mt-4 flex justify-center gap-4">
-                    <button
-                      onClick={() => startAIPractice('easy')}
-                      className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all"
-                    >
-                      Easy Bot
-                    </button>
-                    <button
-                      onClick={() => startAIPractice('medium')}
-                      className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-all"
-                    >
-                      Medium Bot
-                    </button>
-                    <button
-                      onClick={() => startAIPractice('hard')}
-                      className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all"
-                    >
-                      Hard Bot
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-          ) : (
-            <div className="text-center">
-              <div className="text-4xl mb-4">{selectedMode === 'TEAM_BATTLE' ? '👥' : '🔍'}</div>
-              <h3 className="text-2xl font-bold mb-4">
-                {selectedMode === 'TEAM_BATTLE'
-                  ? `Finding teammates... (${queueStatus?.playersInQueue || 1}/4 players)`
-                  : 'Searching for opponent...'}
-              </h3>
-              <div className="text-gray-600 dark:text-gray-400 mb-6">
-                {selectedMode === 'TEAM_BATTLE' ? (
-                  <>Need {4 - (Number(queueStatus?.playersInQueue) || 1)} more players</>
-                ) : (
-                  <>
-                    Queue Position: {queueStatus?.position || '...'}
-                    <br />
-                    Estimated Wait: ~{queueStatus?.estimatedWait || '...'}s
-                  </>
-                )}
-              </div>
-              <button
-                onClick={leaveQueue}
-                className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-all"
-              >
-                Cancel Search
-              </button>
-            </div>
-          )}
+            </section>
+          ))}
         </div>
 
         {/* Stats */}
         {profile && (
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
-              <div className="text-3xl font-bold text-purple-600">
-                {profile.totalMatches}
-              </div>
+              <div className="text-3xl font-bold text-purple-600">{profile.totalMatches}</div>
               <p className="text-gray-600 dark:text-gray-400">Total Matches</p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600">
-                {profile.winStreak}
-              </div>
+              <div className="text-3xl font-bold text-blue-600">{profile.winStreak}</div>
               <p className="text-gray-600 dark:text-gray-400">Win Streak</p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
-              <div className="text-3xl font-bold text-green-600">
-                {Math.round(profile.averageAccuracy * 100)}%
-              </div>
+              <div className="text-3xl font-bold text-green-600">{Math.round(profile.averageAccuracy * 100)}%</div>
               <p className="text-gray-600 dark:text-gray-400">Avg Accuracy</p>
             </div>
           </div>
@@ -940,7 +539,7 @@ export default function CompetitivePage() {
                 })
                 if (!res.ok) throw new Error('Purchase failed')
               } catch {
-                // Silently handle — PowerUpShop shows its own feedback
+                // PowerUpShop shows its own feedback
               }
             }} />
           </div>
