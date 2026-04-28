@@ -2453,6 +2453,33 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Limits That Do Not Exist', loader: () => import('./calcab-what-is-a-limit-part4').then(m => m.calcabWhatIsALimitPart4Data) },
     ],
   },
+  'estimating-limits-tables': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Use a Numerical Table?', loader: () => import('./calcab-estimating-limits-tables-part1').then(m => m.calcabEstimatingLimitsTablesPart1Data) },
+      { title: 'Building a Two-Sided Table', loader: () => import('./calcab-estimating-limits-tables-part2').then(m => m.calcabEstimatingLimitsTablesPart2Data) },
+      { title: 'Recognizing DNE from a Table', loader: () => import('./calcab-estimating-limits-tables-part3').then(m => m.calcabEstimatingLimitsTablesPart3Data) },
+      { title: 'Common Pitfalls', loader: () => import('./calcab-estimating-limits-tables-part4').then(m => m.calcabEstimatingLimitsTablesPart4Data) },
+    ],
+  },
+  'estimating-limits-graphs': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Reading $\\lim$ Off a Graph', loader: () => import('./calcab-estimating-limits-graphs-part1').then(m => m.calcabEstimatingLimitsGraphsPart1Data) },
+      { title: 'One-Sided Limits Visually', loader: () => import('./calcab-estimating-limits-graphs-part2').then(m => m.calcabEstimatingLimitsGraphsPart2Data) },
+      { title: 'Visual Signatures of DNE', loader: () => import('./calcab-estimating-limits-graphs-part3').then(m => m.calcabEstimatingLimitsGraphsPart3Data) },
+      { title: 'Open/Closed Dots vs Limit vs Value', loader: () => import('./calcab-estimating-limits-graphs-part4').then(m => m.calcabEstimatingLimitsGraphsPart4Data) },
+    ],
+  },
+  'one-sided-limits': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Notation and Idea', loader: () => import('./calcab-one-sided-limits-part1').then(m => m.calcabOneSidedLimitsPart1Data) },
+      { title: 'Computing One-Sided Limits', loader: () => import('./calcab-one-sided-limits-part2').then(m => m.calcabOneSidedLimitsPart2Data) },
+      { title: 'The Existence Theorem', loader: () => import('./calcab-one-sided-limits-part3').then(m => m.calcabOneSidedLimitsPart3Data) },
+      { title: 'When Only One Side Exists', loader: () => import('./calcab-one-sided-limits-part4').then(m => m.calcabOneSidedLimitsPart4Data) },
+    ],
+  },
   'definition-of-derivative-calcab': {
     completionDestination: 'competitive',
     parts: [

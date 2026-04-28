@@ -3227,6 +3227,228 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     formSet: 'both',
   },
 
+  // ══════════════════════════════════════════════════════════════════
+  //  ESTIMATING LIMITS FROM TABLES — 10 questions
+  // ══════════════════════════════════════════════════════════════════
+  {
+    question: 'Which set of $x$-values is BEST for numerically estimating $\\lim_{x \\to 4} f(x)$?',
+    options: ['$\\{0, 1, 2, 3\\}$', '$\\{3.9, 3.99, 3.999, 4.001, 4.01, 4.1\\}$', '$\\{4, 4, 4, 4\\}$', '$\\{3, 5, 6, 8\\}$'],
+    correctAnswer: 1,
+    explanation: 'Approach 4 from both sides with values getting closer (powers of 10), and never include $x = 4$ itself.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A numerical table is MOST useful for estimating a limit when:',
+    options: ['Direct substitution gives a clean number', 'Direct substitution gives an indeterminate form like $0/0$', 'The function is a polynomial', 'The function is constant'],
+    correctAnswer: 1,
+    explanation: 'Tables shine on indeterminate forms, where substitution alone fails.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A table shows $f(0.99)=2.99$, $f(0.999)=2.999$, $f(1.001)=3.001$, $f(1.01)=3.01$. Best estimate for $\\lim_{x\\to 1} f(x)$:',
+    options: ['$1$', '$3$', '$2.999$', 'DNE'],
+    correctAnswer: 1,
+    explanation: 'Both sides converge cleanly on 3.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A table shows outputs $0.7071, 0.70711, 0.707106, 0.7071068$. The limit is best read as:',
+    options: ['$0.7$', '$\\sqrt{2}/2 \\approx 0.7071$', '$1$', 'DNE'],
+    correctAnswer: 1,
+    explanation: 'Recognize the famous decimal: $\\sqrt{2}/2 \\approx 0.70710678$. AP problems reward identifying these constants.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A table shows $f(-0.001) = -2$, $f(-0.0001) = -2$, $f(0.0001) = 5$, $f(0.001) = 5$. Conclusion?',
+    options: ['Limit equals $1.5$ (average)', 'Limit DNE — jump from $-2$ to $5$', 'Limit equals $-2$', 'Limit blows up'],
+    correctAnswer: 1,
+    explanation: 'Two finite, disagreeing one-sided limits — classic jump.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A table shows $f(0.1)=100$, $f(0.01)=10000$, $f(-0.01)=10000$, $f(-0.1)=100$. The limit:',
+    options: ['Equals 100', 'Equals 10000', 'DNE — both sides blow up to $+\\infty$', 'Oscillates'],
+    correctAnswer: 2,
+    explanation: 'Magnitudes grow by factor 100 as $|x|$ shrinks by 10; both sides go to $+\\infty$.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A table for $\\sin(\\pi/x)$ shows $f(0.1)=0.74$, $f(0.01)=-0.51$, $f(0.001)=0.83$, $f(0.0001)=-0.31$. Conclusion?',
+    options: ['$L \\approx 0$', 'Jump', 'Blow-up', 'Oscillation — values won\'t settle'],
+    correctAnswer: 3,
+    explanation: 'No convergence pattern — the function oscillates infinitely fast.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A student computes $\\dfrac{1 - \\cos(10^{-10})}{(10^{-10})^2}$ and gets 0 on a calculator. The most likely explanation:',
+    options: ['The true limit is 0', 'Calculator precision broke down (catastrophic cancellation); true limit is $1/2$', 'The function blows up', 'The function oscillates'],
+    correctAnswer: 1,
+    explanation: 'For tiny $x$, $1 - \\cos x$ rounds to 0 in finite precision. True limit is $1/2$ from the Taylor expansion.',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'On the AP exam, a numerical table alone is generally sufficient to:',
+    options: ['Prove a limit equals an exact value', 'Estimate a limit and provide numerical evidence', 'Replace algebraic justification on FRQ "find" prompts', 'Show continuity rigorously'],
+    correctAnswer: 1,
+    explanation: 'Tables give estimates and evidence. For "find" or "justify," pair with algebra or theorems.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+  {
+    question: 'A table shows the LEFT side approaching 4 cleanly, but the RIGHT side\'s outputs (4, 9, 6, 12) won\'t settle. The two-sided limit:',
+    options: ['Equals 4', 'Equals the average', 'DNE — right side fails to converge', 'Equals 12'],
+    correctAnswer: 2,
+    explanation: 'Existence requires BOTH one-sided limits to converge. Only one converging is not enough.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+  },
+
+  // ══════════════════════════════════════════════════════════════════
+  //  ESTIMATING LIMITS FROM GRAPHS — 10 questions
+  // ══════════════════════════════════════════════════════════════════
+  {
+    question: 'When estimating $\\lim_{x \\to a} f(x)$ from a graph, you focus on:',
+    options: ['The dot AT $x = a$', 'Where the curve is heading from each side, ignoring any dot at $a$', 'The slope at $a$', 'The $x$-intercept'],
+    correctAnswer: 1,
+    explanation: 'Limit = where the curve is aiming; the dot at $a$ shows $f(a)$ which is independent.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'A graph shows both arms of $f$ approaching $y = 7$ as $x \\to 2$, and an OPEN circle at $(2, 7)$. What is $\\lim_{x \\to 2} f(x)$?',
+    options: ['$7$', 'undefined', 'DNE', '$0$'],
+    correctAnswer: 0,
+    explanation: 'Both arms aim at 7 → limit is 7. Open circle just says $f(2)$ is undefined.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'A graph shows the LEFT arm aiming at $y = 1$ and the RIGHT arm aiming at $y = 8$ as $x \\to 5$. What is $\\lim_{x \\to 5^+} f(x)$?',
+    options: ['$1$', '$8$', '$4.5$', 'DNE'],
+    correctAnswer: 1,
+    explanation: '$\\lim_{x\\to 5^+}$ means trace from the right; the right arm aims at 8.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'Same graph as above: $\\lim_{x \\to 5} f(x) = ?$',
+    options: ['$1$', '$8$', '$4.5$', 'DNE'],
+    correctAnswer: 3,
+    explanation: 'One-sided limits disagree (1 vs 8) → two-sided DNE (jump).',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'A graph shows the curve diving to $-\\infty$ on the left of $x = 3$ and shooting to $+\\infty$ on the right. The limit at 3 fails because of:',
+    options: ['A jump', 'A vertical asymptote (blow-up)', 'Oscillation', 'A removable hole'],
+    correctAnswer: 1,
+    explanation: 'Curve heading to $\\pm\\infty$ along a vertical line is the asymptote / blow-up signature.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'A graph shows a fuzzy band oscillating between $y = -1$ and $y = +1$ as $x \\to 0$. The limit:',
+    options: ['Equals 0', 'DNE — oscillation', 'Equals 1', 'Equals $-1$'],
+    correctAnswer: 1,
+    explanation: 'Fuzzy/wiggly band that won\'t settle is the visual signature of oscillation.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'At $x = 1$ a graph has both arms aiming at $y = 5$, an open circle at $(1, 5)$, AND a closed dot at $(1, -3)$. What is $\\lim_{x \\to 1} f(x)$?',
+    options: ['$5$', '$-3$', '$1$', 'DNE'],
+    correctAnswer: 0,
+    explanation: 'Limit = where the arms aim = 5. Closed dot tells us $f(1) = -3$ — irrelevant to the limit.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'For the same graph: $f(1) = ?$',
+    options: ['$5$', '$-3$', 'undefined', '$1$'],
+    correctAnswer: 1,
+    explanation: 'Closed dot at $(1, -3)$ defines $f(1) = -3$. The open circle at $(1, 5)$ tells us the function is NOT 5 there.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'A graph shows a clean step at $x = 2$: left arm at $y = -1$, right arm at $y = 3$, closed dot at $(2, -1)$. What is $\\lim_{x \\to 2^-} f(x)$?',
+    options: ['$-1$', '$3$', '$1$', 'DNE'],
+    correctAnswer: 0,
+    explanation: 'Trace from the left → $y$ aims at $-1$.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+  {
+    question: 'A graph shows both arms of $f$ meeting at $y = 4$ at $x = 3$, with a closed dot at $(3, 4)$. Which BEST describes the function at $x = 3$?',
+    options: ['Limit DNE', 'Limit equals 4 AND $f$ is continuous at 3', 'Has a removable hole', 'Has a jump'],
+    correctAnswer: 1,
+    explanation: 'Limit = value = 4 → continuous at 3 (the nicest case).',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+  },
+
+  // ══════════════════════════════════════════════════════════════════
+  //  ONE-SIDED LIMITS — 10 questions
+  // ══════════════════════════════════════════════════════════════════
+  {
+    question: 'In $\\lim_{x \\to 6^-} f(x)$, the "$-$" superscript means:',
+    options: ['$x$ is negative', '$x$ approaches 6 from values LESS than 6 (left)', 'Subtract from $f$', '$f(x)$ becomes negative'],
+    correctAnswer: 1,
+    explanation: '"$-$" = "from the left." Has nothing to do with sign.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'For $f(x) = \\dfrac{|x - 2|}{x - 2}$: $\\lim_{x \\to 2^+} f(x) = ?$',
+    options: ['$-1$', '$0$', '$1$', 'DNE'],
+    correctAnswer: 2,
+    explanation: 'For $x > 2$, $|x - 2| = x - 2$, so the ratio is $+1$.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'For the same $f$: $\\lim_{x \\to 2^-} f(x) = ?$',
+    options: ['$-1$', '$0$', '$1$', 'DNE'],
+    correctAnswer: 0,
+    explanation: 'For $x < 2$, $|x - 2| = -(x - 2)$, so the ratio is $-1$.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'For $f(x) = \\begin{cases} 3x - 1 & x < 2 \\\\ x^2 + 4 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^-} f(x)$.',
+    options: ['$5$', '$8$', '$0$', 'DNE'],
+    correctAnswer: 0,
+    explanation: 'Approach from the left → use $3x - 1$, plug in 2 → 5.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'Same piecewise $f$: $\\lim_{x \\to 2^+} f(x) = ?$',
+    options: ['$5$', '$8$', '$3$', 'DNE'],
+    correctAnswer: 1,
+    explanation: 'Approach from the right → use $x^2 + 4$, plug in 2 → 8.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'Same piecewise $f$: $\\lim_{x \\to 2} f(x) = ?$',
+    options: ['$5$', '$8$', '$6.5$', 'DNE — sides disagree (5 vs 8)'],
+    correctAnswer: 3,
+    explanation: 'Existence theorem: one-sided limits 5 and 8 disagree → two-sided DNE.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'Existence theorem: $\\lim_{x \\to a} f(x)$ exists if and only if:',
+    options: ['$f(a)$ is defined', 'Both one-sided limits exist and are equal', '$f$ is continuous on an interval', '$f$ has a derivative at $a$'],
+    correctAnswer: 1,
+    explanation: 'The defining theorem; $f(a)$ does not enter.',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'You compute $\\lim_{x \\to 4^-} f = 9$ and $\\lim_{x \\to 4^+} f = 9$, and $f(4) = 100$. What is $\\lim_{x \\to 4} f(x)$?',
+    options: ['$9$', '$100$', '$54.5$', 'DNE'],
+    correctAnswer: 0,
+    explanation: 'Both one-sided limits agree on 9 → two-sided is 9. The value $f(4) = 100$ is irrelevant.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'For $f(x) = \\sqrt{x - 3}$: $\\lim_{x \\to 3^+} f(x) = ?$',
+    options: ['$0$', '$3$', 'DNE', '$\\sqrt{3}$'],
+    correctAnswer: 0,
+    explanation: 'For $x > 3$, $\\sqrt{x - 3}$ is defined and approaches $\\sqrt{0} = 0$.',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+  {
+    question: 'For $f(x) = \\sqrt{x - 3}$: why does $\\lim_{x \\to 3^-} f(x)$ fail to exist?',
+    options: ['$\\sqrt{0} = 0$', '$\\sqrt{x - 3}$ requires $x \\ge 3$ — for $x < 3$ it isn\'t a real number', 'Oscillation', 'Blow-up'],
+    correctAnswer: 1,
+    explanation: 'Domain restriction. The function isn\'t defined to the left of 3, so the left-hand approach has no values.',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+  },
+
 ]
 
 /** Generate an exit quiz for a specific AB topic (used by exit quiz system) */

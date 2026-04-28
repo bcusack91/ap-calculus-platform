@@ -106,6 +106,9 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   // AP Calculus AB
   'limits-continuity-calcab': () => import('./limits-continuity-calcab'),
   'what-is-a-limit': () => import('./what-is-a-limit'),
+  'estimating-limits-tables': () => import('./estimating-limits-tables'),
+  'estimating-limits-graphs': () => import('./estimating-limits-graphs'),
+  'one-sided-limits': () => import('./one-sided-limits'),
   'definition-of-derivative-calcab': () => import('./definition-of-derivative-calcab'),
   'basic-differentiation-rules-calcab': () => import('./basic-differentiation-rules-calcab'),
   'chain-rule-calcab': () => import('./chain-rule-calcab'),
