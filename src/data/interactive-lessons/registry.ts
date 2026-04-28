@@ -2480,6 +2480,42 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'When Only One Side Exists', loader: () => import('./calcab-one-sided-limits-part4').then(m => m.calcabOneSidedLimitsPart4Data) },
     ],
   },
+  'direct-substitution-method': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Idea of Direct Substitution', loader: () => import('./calcab-direct-substitution-method-part1').then(m => m.calcabDirectSubstitutionPart1Data) },
+      { title: 'When Direct Substitution Works', loader: () => import('./calcab-direct-substitution-method-part2').then(m => m.calcabDirectSubstitutionPart2Data) },
+      { title: 'Limit Laws', loader: () => import('./calcab-direct-substitution-method-part3').then(m => m.calcabDirectSubstitutionPart3Data) },
+      { title: 'When Direct Substitution Fails', loader: () => import('./calcab-direct-substitution-method-part4').then(m => m.calcabDirectSubstitutionPart4Data) },
+    ],
+  },
+  'factoring-method-limits': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The 0/0 Trigger', loader: () => import('./calcab-factoring-method-limits-part1').then(m => m.calcabFactoringMethodPart1Data) },
+      { title: 'The Factoring Toolbox', loader: () => import('./calcab-factoring-method-limits-part2').then(m => m.calcabFactoringMethodPart2Data) },
+      { title: 'Worked Examples — Workflow', loader: () => import('./calcab-factoring-method-limits-part3').then(m => m.calcabFactoringMethodPart3Data) },
+      { title: 'Beyond Quadratics', loader: () => import('./calcab-factoring-method-limits-part4').then(m => m.calcabFactoringMethodPart4Data) },
+    ],
+  },
+  'rationalizing-technique-limits': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'When to Use the Conjugate', loader: () => import('./calcab-rationalizing-technique-limits-part1').then(m => m.calcabRationalizingPart1Data) },
+      { title: 'Multiplying by the Conjugate', loader: () => import('./calcab-rationalizing-technique-limits-part2').then(m => m.calcabRationalizingPart2Data) },
+      { title: 'Worked Examples', loader: () => import('./calcab-rationalizing-technique-limits-part3').then(m => m.calcabRationalizingPart3Data) },
+      { title: 'Conjugates in the Denominator', loader: () => import('./calcab-rationalizing-technique-limits-part4').then(m => m.calcabRationalizingPart4Data) },
+    ],
+  },
+  'limits-at-infinity': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Limits at Infinity & Horizontal Asymptotes', loader: () => import('./calcab-limits-at-infinity-part1').then(m => m.calcabLimitsAtInfinityPart1Data) },
+      { title: 'Rational Functions Compare Degrees', loader: () => import('./calcab-limits-at-infinity-part2').then(m => m.calcabLimitsAtInfinityPart2Data) },
+      { title: 'Radicals at Infinity', loader: () => import('./calcab-limits-at-infinity-part3').then(m => m.calcabLimitsAtInfinityPart3Data) },
+      { title: 'Exponentials, Logs, and DNE Cases', loader: () => import('./calcab-limits-at-infinity-part4').then(m => m.calcabLimitsAtInfinityPart4Data) },
+    ],
+  },
   'definition-of-derivative-calcab': {
     completionDestination: 'competitive',
     parts: [
