@@ -2275,6 +2275,127 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
     topicSlug: 'physics-c-power-circuits',
     formSet: 'B',
   },
+
+  // ─── physics-c-coulomb-law top-up ───
+  {
+    question: 'Two point charges $+q$ separated by distance $r$ exert force on each other of magnitude:',
+    options: ['$kq^2/r$', '$kq^2/r^2$', '$kq/r^2$', '$kq^2 r$'],
+    correctAnswer: 1,
+    explanation: 'Coulomb\'s law: $F = kq_1 q_2 / r^2$.',
+    difficulty: 'easy', domain: 'electrostatics', topicSlug: 'physics-c-coulomb-law', formSet: 'both',
+  },
+  {
+    question: 'If the distance between two charges is doubled, the Coulomb force becomes:',
+    options: ['$2\\times$ stronger', '$4\\times$ stronger', '$\\tfrac{1}{2}\\times$', '$\\tfrac{1}{4}\\times$'],
+    correctAnswer: 3,
+    explanation: 'Inverse-square law: $r \\to 2r$ ⇒ $F \\to F/4$.',
+    difficulty: 'easy', domain: 'electrostatics', topicSlug: 'physics-c-coulomb-law', formSet: 'both',
+  },
+  {
+    question: 'Three equal positive charges are placed at the vertices of an equilateral triangle. The net force on each is directed:',
+    options: ['Toward the centroid', 'Away from the centroid', 'Tangent to the triangle\'s side', 'Zero'],
+    correctAnswer: 1,
+    explanation: 'By symmetry, each charge is repelled outward (away from the centroid).',
+    difficulty: 'medium', domain: 'electrostatics', topicSlug: 'physics-c-coulomb-law', formSet: 'both',
+  },
+
+  // ─── physics-c-energy-density top-up ───
+  {
+    question: 'The energy density of an electric field $E$ in vacuum is:',
+    options: ['$u_E = \\tfrac{1}{2}\\varepsilon_0 E^2$', '$u_E = \\varepsilon_0 E$', '$u_E = E^2/(2\\varepsilon_0)$', '$u_E = \\varepsilon_0 E^2$'],
+    correctAnswer: 0,
+    explanation: 'Standard electric energy density formula.',
+    difficulty: 'easy', domain: 'capacitors-dielectrics', topicSlug: 'physics-c-energy-density', formSet: 'both',
+  },
+  {
+    question: 'The energy density of a magnetic field $B$ in vacuum is:',
+    options: ['$u_B = B^2/(2\\mu_0)$', '$u_B = \\tfrac{1}{2}\\mu_0 B^2$', '$u_B = \\mu_0 B$', '$u_B = B/\\mu_0$'],
+    correctAnswer: 0,
+    explanation: 'Magnetic energy density: $u_B = B^2/(2\\mu_0)$.',
+    difficulty: 'medium', domain: 'capacitors-dielectrics', topicSlug: 'physics-c-energy-density', formSet: 'both',
+  },
+  {
+    question: 'A parallel-plate capacitor stores energy $U = \\tfrac{1}{2} C V^2$. If the plate separation is doubled (with $V$ held fixed), the stored energy:',
+    options: ['Doubles', 'Halves', 'Quadruples', 'Quarters'],
+    correctAnswer: 1,
+    explanation: '$C \\propto 1/d$, so doubling $d$ halves $C$, hence halves $U$ (at fixed $V$).',
+    difficulty: 'hard', domain: 'capacitors-dielectrics', topicSlug: 'physics-c-energy-density', formSet: 'both',
+  },
+
+  // ─── physics-c-conductors-equilibrium top-up ───
+  {
+    question: 'Inside a conductor in electrostatic equilibrium, the electric field is:',
+    options: ['Equal to the surface field', 'Zero', 'Directed radially', 'Equal to $\\sigma/\\varepsilon_0$'],
+    correctAnswer: 1,
+    explanation: 'Free charges rearrange until interior $E = 0$.',
+    difficulty: 'easy', domain: 'electrostatics', topicSlug: 'physics-c-conductors-equilibrium', formSet: 'both',
+  },
+  {
+    question: 'Just outside the surface of a charged conductor, the electric field is:',
+    options: ['$E = \\sigma/(2\\varepsilon_0)$', '$E = \\sigma/\\varepsilon_0$', '$E = \\sigma\\varepsilon_0$', '$E = 0$'],
+    correctAnswer: 1,
+    explanation: 'Boundary condition: $E_\\perp = \\sigma/\\varepsilon_0$ for a conductor.',
+    difficulty: 'medium', domain: 'electrostatics', topicSlug: 'physics-c-conductors-equilibrium', formSet: 'both',
+  },
+
+  // ─── physics-c-dielectrics top-up ───
+  {
+    question: 'Inserting a dielectric of constant $\\kappa > 1$ between capacitor plates changes the capacitance to:',
+    options: ['$C/\\kappa$', '$\\kappa C$', '$C - \\kappa$', '$C + \\kappa$'],
+    correctAnswer: 1,
+    explanation: 'Capacitance scales by $\\kappa$.',
+    difficulty: 'easy', domain: 'capacitors-dielectrics', topicSlug: 'physics-c-dielectrics', formSet: 'both',
+  },
+  {
+    question: 'A dielectric ($\\kappa$) inserted into a capacitor connected to a battery (constant $V$) results in the stored charge:',
+    options: ['Decreasing by $\\kappa$', 'Increasing by $\\kappa$', 'Unchanged', 'Going to zero'],
+    correctAnswer: 1,
+    explanation: '$Q = CV$. With $V$ fixed, $C \\to \\kappa C$ ⇒ $Q \\to \\kappa Q$.',
+    difficulty: 'medium', domain: 'capacitors-dielectrics', topicSlug: 'physics-c-dielectrics', formSet: 'both',
+  },
+
+  // ─── physics-c-power-circuits top-up ───
+  {
+    question: 'The power dissipated by a resistor $R$ carrying current $I$ is:',
+    options: ['$P = IR$', '$P = I^2 R$', '$P = I/R$', '$P = R/I^2$'],
+    correctAnswer: 1,
+    explanation: '$P = I^2 R = V^2/R = IV$.',
+    difficulty: 'easy', domain: 'circuits', topicSlug: 'physics-c-power-circuits', formSet: 'both',
+  },
+  {
+    question: 'A $60\\text{ W}$ bulb operating on $120\\text{ V}$ draws current:',
+    options: ['$0.5\\text{ A}$', '$1\\text{ A}$', '$2\\text{ A}$', '$60\\text{ A}$'],
+    correctAnswer: 0,
+    explanation: '$I = P/V = 60/120 = 0.5\\text{ A}$.',
+    difficulty: 'medium', domain: 'circuits', topicSlug: 'physics-c-power-circuits', formSet: 'both',
+  },
+
+  // ─── physics-c-magnetic-forces top-up ───
+  {
+    question: 'A charged particle moving parallel to a magnetic field experiences:',
+    options: ['Maximum magnetic force', 'No magnetic force', 'A force perpendicular to $\\vec B$', 'A force along $\\vec B$'],
+    correctAnswer: 1,
+    explanation: '$\\vec F = q\\vec v \\times \\vec B$; if $\\vec v \\parallel \\vec B$, the cross product is zero.',
+    difficulty: 'easy', domain: 'magnetism-em-induction', topicSlug: 'physics-c-magnetic-forces', formSet: 'both',
+  },
+
+  // ─── physics-c-maxwell-equations top-up ───
+  {
+    question: 'Which Maxwell equation states that magnetic monopoles do not exist?',
+    options: ['$\\oint \\vec E \\cdot d\\vec A = Q_{enc}/\\varepsilon_0$', '$\\oint \\vec B \\cdot d\\vec A = 0$', '$\\oint \\vec E \\cdot d\\vec\\ell = -d\\Phi_B/dt$', '$\\oint \\vec B \\cdot d\\vec\\ell = \\mu_0 I + \\mu_0 \\varepsilon_0 d\\Phi_E/dt$'],
+    correctAnswer: 1,
+    explanation: 'Gauss\'s law for magnetism: net magnetic flux through any closed surface is zero (no monopoles).',
+    difficulty: 'medium', domain: 'magnetism-em-induction', topicSlug: 'physics-c-maxwell-equations', formSet: 'both',
+  },
+
+  // ─── physics-c-potential-energy top-up ───
+  {
+    question: 'The electric potential energy of two point charges $q_1$ and $q_2$ separated by $r$ is:',
+    options: ['$U = kq_1 q_2 / r^2$', '$U = kq_1 q_2 / r$', '$U = kq_1 q_2 r$', '$U = kq_1 + q_2$'],
+    correctAnswer: 1,
+    explanation: 'PE between point charges: $U = kq_1 q_2 / r$ (signed).',
+    difficulty: 'easy', domain: 'electric-potential', topicSlug: 'physics-c-potential-energy', formSet: 'both',
+  },
 ]
 
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug: string }[] {

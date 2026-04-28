@@ -1876,6 +1876,65 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     topicSlug: 'physics-c-friction-inclines',
     formSet: 'A',
   },
+
+  // ─── physics-c-center-of-mass top-up ───
+  {
+    question: 'Two point masses, $m_1 = 2\\text{ kg}$ at $x = 0$ and $m_2 = 6\\text{ kg}$ at $x = 4\\text{ m}$, have center of mass at:',
+    options: ['$x = 1\\text{ m}$', '$x = 2\\text{ m}$', '$x = 3\\text{ m}$', '$x = 4\\text{ m}$'],
+    correctAnswer: 2,
+    explanation: '$x_{cm} = (2 \\cdot 0 + 6 \\cdot 4)/(2 + 6) = 24/8 = 3$ m.',
+    difficulty: 'easy', domain: 'momentum', topicSlug: 'physics-c-center-of-mass', formSet: 'both',
+  },
+  {
+    question: 'For a continuous mass distribution, the center of mass is:',
+    options: ['$x_{cm} = \\dfrac{1}{M}\\int x \\, dm$', '$x_{cm} = \\int x \\, dx$', '$x_{cm} = M \\int x \\, dm$', '$x_{cm} = \\sum x_i$'],
+    correctAnswer: 0,
+    explanation: 'Continuous analog of weighted average.',
+    difficulty: 'medium', domain: 'momentum', topicSlug: 'physics-c-center-of-mass', formSet: 'both',
+  },
+
+  // ─── physics-c-circular-motion top-up ───
+  {
+    question: 'A car rounds a flat curve of radius $50\\text{ m}$ at $20\\text{ m/s}$. Minimum coefficient of static friction needed: ($g = 10\\text{ m/s}^2$)',
+    options: ['$0.4$', '$0.6$', '$0.8$', '$1.0$'],
+    correctAnswer: 2,
+    explanation: '$\\mu g = v^2 / r \\Rightarrow \\mu = 400/(50 \\cdot 10) = 0.8$.',
+    difficulty: 'medium', domain: 'newtons-laws', topicSlug: 'physics-c-circular-motion', formSet: 'both',
+  },
+  {
+    question: 'For a conical pendulum (string angle $\\theta$, length $L$), the period is:',
+    options: ['$T = 2\\pi\\sqrt{L/g}$', '$T = 2\\pi\\sqrt{L\\cos\\theta/g}$', '$T = 2\\pi\\sqrt{L\\sin\\theta/g}$', '$T = 2\\pi L/g$'],
+    correctAnswer: 1,
+    explanation: 'Vertical: $T\\cos\\theta = mg$. Horizontal: $T\\sin\\theta = m\\omega^2 L\\sin\\theta$. Solving gives $\\omega^2 = g/(L\\cos\\theta)$.',
+    difficulty: 'hard', domain: 'newtons-laws', topicSlug: 'physics-c-circular-motion', formSet: 'both',
+  },
+
+  // ─── physics-c-2d-kinematics top-up ───
+  {
+    question: 'A projectile launched at $45°$ with initial speed $v_0$ has horizontal range:',
+    options: ['$v_0^2/g$', '$v_0^2/(2g)$', '$2v_0^2/g$', '$v_0^2 \\sin(2\\theta)/g = v_0^2/g$'],
+    correctAnswer: 0,
+    explanation: 'Range $R = v_0^2 \\sin(2\\theta)/g$; at $\\theta = 45°$, $\\sin 90° = 1$, so $R = v_0^2/g$.',
+    difficulty: 'medium', domain: 'kinematics', topicSlug: 'physics-c-2d-kinematics', formSet: 'both',
+  },
+
+  // ─── physics-c-friction-inclines top-up ───
+  {
+    question: 'A block on a $30°$ incline has $\\mu_k = 0.2$. Its acceleration down the incline is: ($g = 10\\text{ m/s}^2$)',
+    options: ['$1.27\\text{ m/s}^2$', '$3.27\\text{ m/s}^2$', '$5.0\\text{ m/s}^2$', '$2.5\\text{ m/s}^2$'],
+    correctAnswer: 1,
+    explanation: '$a = g(\\sin\\theta - \\mu_k \\cos\\theta) = 10(0.5 - 0.2 \\cdot 0.866) \\approx 3.27\\text{ m/s}^2$.',
+    difficulty: 'medium', domain: 'newtons-laws', topicSlug: 'physics-c-friction-inclines', formSet: 'both',
+  },
+
+  // ─── physics-c-variable-mass top-up ───
+  {
+    question: 'The Tsiolkovsky rocket equation gives the change in velocity as:',
+    options: ['$\\Delta v = v_e \\ln(m_0/m_f)$', '$\\Delta v = v_e (m_0 - m_f)$', '$\\Delta v = v_e \\, m_0/m_f$', '$\\Delta v = m_0 g$'],
+    correctAnswer: 0,
+    explanation: 'Standard rocket equation: $\\Delta v = v_e \\ln(m_{initial}/m_{final})$ where $v_e$ is exhaust speed.',
+    difficulty: 'hard', domain: 'momentum', topicSlug: 'physics-c-variable-mass', formSet: 'both',
+  },
 ]
 
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug: string }[] {
