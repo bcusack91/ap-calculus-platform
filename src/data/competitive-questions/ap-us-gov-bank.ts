@@ -51,6 +51,13 @@ const allQuestions: ApUsGovQuestion[] = [
   { id: 38, question: 'Baker v. Carr (1962) established the principle of:', options: ['Executive privilege', 'One person, one vote in legislative apportionment', 'Judicial restraint', 'State sovereignty'], correctAnswer: 1, explanation: 'Baker v. Carr held that redistricting is a justiciable issue, leading to the one person, one vote standard.', difficulty: 'hard', topicSlug: 'voting-elections' },
   { id: 39, question: 'Linkage institutions connect people to government and include:', options: ['Only Congress', 'Political parties, interest groups, media, and elections', 'Only the courts', 'Only the executive branch'], correctAnswer: 1, explanation: 'Linkage institutions channel citizen preferences to policymakers through parties, media, interest groups, and elections.', difficulty: 'easy', topicSlug: 'voting-elections' },
   { id: 40, question: 'The impeachment process begins in:', options: ['The Senate', 'The House of Representatives', 'The Supreme Court', 'The executive branch'], correctAnswer: 1, explanation: 'The House impeaches (charges) an official; the Senate holds the trial.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
+
+  // ============ TOP-UP: bring under-10 sub-topics to >=10 questions ============
+  // federalism (6 → 10)
+  { id: 41, question: 'Dual federalism ("layer cake") describes:', options: ['Clear separation of state and federal powers', 'Cooperation in policy areas', 'Federal supremacy in all areas', 'State nullification'], correctAnswer: 0, explanation: '19th-century model: distinct spheres.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 42, question: 'Cooperative federalism ("marble cake") describes:', options: ['Federal and state governments sharing policy responsibilities', 'Total state autonomy', 'Federal monopoly', 'Confederation'], correctAnswer: 0, explanation: 'Common since the New Deal.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 43, question: 'A categorical grant is:', options: ['Federal funding for a specific purpose with conditions', 'Unrestricted state funding', 'A loan to states', 'A tax credit'], correctAnswer: 0, explanation: 'Strings-attached grants.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 44, question: 'The Tenth Amendment reserves powers to:', options: ['The states and the people', 'Congress only', 'The President', 'Federal courts'], correctAnswer: 0, explanation: 'Bedrock of state sovereignty.', difficulty: 'easy', topicSlug: 'federalism' },
 ]
 
 export function getApUSGovQuestions(count: number = 10, topicSlug?: string): ApUsGovQuestion[] {

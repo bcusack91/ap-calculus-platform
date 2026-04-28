@@ -86,6 +86,14 @@ const allQuestions: ApHumanGeoQuestion[] = [
   { id: 73, question: 'Autonomous regions differ from independent states because they:', options: ['Have no government', 'Have self-governance but remain under a larger state\'s sovereignty', 'Are always islands', 'Only exist in Europe'], correctAnswer: 1, explanation: 'Autonomous regions (like Catalonia in Spain) have degrees of self-governance but are not fully independent.', difficulty: 'medium', topicSlug: 'political-geography' },
   { id: 74, question: 'Fair trade practices aim to:', options: ['Maximize profits for corporations', 'Ensure producers in developing countries receive equitable compensation', 'Eliminate all trade', 'Impose tariffs'], correctAnswer: 1, explanation: 'Fair trade certification ensures producers receive fair prices, decent working conditions, and sustainability.', difficulty: 'easy', topicSlug: 'urbanization' },
   { id: 75, question: 'Demographic momentum occurs because:', options: ['Birth rates instantly drop', 'A large proportion of young people means continued growth even as fertility declines', 'Death rates increase', 'Immigration stops'], correctAnswer: 1, explanation: 'Even when fertility falls to replacement level, a large youth cohort means continued growth as they enter childbearing age.', difficulty: 'hard', topicSlug: 'population-distribution' },
+
+  // ============ TOP-UP: bring under-10 sub-topics to >=10 questions ============
+  // migration (7 → 10)
+  { id: 76, question: 'A push factor for migration is:', options: ['War or political persecution', 'Job opportunities', 'Family reunification', 'Better climate'], correctAnswer: 0, explanation: 'Push factors drive people away from a place.', difficulty: 'easy', topicSlug: 'migration' },
+  { id: 77, question: 'Internally displaced persons (IDPs) differ from refugees because they:', options: ['Have not crossed an international border', 'Are economic migrants', 'Are voluntary migrants', 'Are seasonal workers'], correctAnswer: 0, explanation: 'IDPs remain within their own country.', difficulty: 'medium', topicSlug: 'migration' },
+  { id: 78, question: 'Step migration refers to:', options: ['Moving in stages of progressively longer distances', 'Daily commuting', 'Forced relocation', 'Return migration only'], correctAnswer: 0, explanation: 'Often rural → small town → city.', difficulty: 'medium', topicSlug: 'migration' },
+  // population-distribution (9 → 10)
+  { id: 79, question: 'Arithmetic population density is calculated as:', options: ['Total population / total land area', 'Population / arable land', 'Births per 1,000 / deaths per 1,000', 'Urban population / rural population'], correctAnswer: 0, explanation: 'Standard density measure.', difficulty: 'easy', topicSlug: 'population-distribution' },
 ]
 
 export function getApHumanGeoQuestions(count: number = 10, topicSlug?: string): ApHumanGeoQuestion[] {

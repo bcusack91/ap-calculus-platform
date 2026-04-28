@@ -41,6 +41,10 @@ const allQuestions: ApEnglishLangQuestion[] = [
   { id: 28, question: 'Asyndeton is the deliberate omission of:', options: ['Verbs', 'Conjunctions between related clauses for speed and emphasis', 'Nouns', 'Adjectives'], correctAnswer: 1, explanation: '"I came, I saw, I conquered" uses asyndeton to create pace and power.', difficulty: 'hard', topicSlug: 'style-syntax' },
   { id: 29, question: 'Polysyndeton uses:', options: ['No conjunctions', 'Multiple conjunctions to slow pace and add emphasis', 'Only commas', 'Short sentences'], correctAnswer: 1, explanation: '"And the rain came and the wind blew and the river rose" uses polysyndeton for cumulative effect.', difficulty: 'hard', topicSlug: 'style-syntax' },
   { id: 30, question: 'An analogy in argumentation:', options: ['Is always a fallacy', 'Compares two different things to clarify or persuade by showing similarity', 'Uses only statistics', 'Is the same as a metaphor'], correctAnswer: 1, explanation: 'Analogies help make complex or abstract arguments accessible by comparing to familiar situations.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
+
+  // ============ TOP-UP: bring under-10 sub-topics to >=10 questions ============
+  // style-syntax (9 → 10)
+  { id: 31, question: 'Polysyndeton is the use of:', options: ['Many conjunctions in close succession', 'No conjunctions', 'Repeated initial words', 'Inverted word order'], correctAnswer: 0, explanation: '"He ran and jumped and laughed and sang."', difficulty: 'medium', topicSlug: 'style-syntax' },
 ]
 
 export function getApEngLangQuestions(count: number = 10, topicSlug?: string): ApEnglishLangQuestion[] {

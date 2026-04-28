@@ -51,6 +51,11 @@ const allQuestions: ApMacroQuestion[] = [
   { id: 38, question: 'Net exports equal:', options: ['Imports minus exports', 'Exports minus imports', 'Total trade volume', 'GDP minus consumption'], correctAnswer: 1, explanation: 'Net exports (NX) = Exports - Imports. A positive NX means trade surplus; negative means deficit.', difficulty: 'easy', topicSlug: 'fiscal-policy' },
   { id: 39, question: 'The GDP equation is:', options: ['GDP = C + I + G + NX', 'GDP = C × I × G × NX', 'GDP = C + I - G', 'GDP = only consumption'], correctAnswer: 0, explanation: 'GDP = Consumption + Investment + Government Spending + Net Exports.', difficulty: 'easy', topicSlug: 'gdp-growth' },
   { id: 40, question: 'Okun\'s Law describes the relationship between:', options: ['Inflation and unemployment', 'Unemployment and GDP (each 1% above natural rate = ~2% GDP loss)', 'Interest rates and investment', 'Money supply and prices'], correctAnswer: 1, explanation: 'Okun\'s Law estimates that each percentage point of unemployment above natural rate costs ~2% of real GDP.', difficulty: 'hard', topicSlug: 'gdp-growth' },
+
+  // ============ TOP-UP: bring under-10 sub-topics to >=10 questions ============
+  // ad-as (8 → 10)
+  { id: 41, question: 'A leftward shift of aggregate demand causes:', options: ['Lower output and lower price level (recession)', 'Higher output and higher prices', 'Stagflation', 'No effect'], correctAnswer: 0, explanation: 'Demand-side recession in AD-AS model.', difficulty: 'medium', topicSlug: 'ad-as' },
+  { id: 42, question: 'A negative supply shock (e.g., oil price spike) causes:', options: ['Higher prices and lower output (stagflation)', 'Lower prices and higher output', 'No change', 'Falling unemployment only'], correctAnswer: 0, explanation: 'SRAS shifts left.', difficulty: 'medium', topicSlug: 'ad-as' },
 ]
 
 export function getApMacroQuestions(count: number = 10, topicSlug?: string): ApMacroQuestion[] {
