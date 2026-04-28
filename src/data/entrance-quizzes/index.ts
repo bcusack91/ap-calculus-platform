@@ -42,6 +42,9 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'reaction-quotient-le-chatelier': () => import('./reaction-quotient-le-chatelier'),
   'ice-tables-calculations': () => import('./ice-tables-calculations'),
   'solubility-ksp': () => import('./solubility-ksp'),
+  // Alias: solubility-equilibrium topic reuses the solubility-ksp lesson suite
+  'solubility-equilibrium': () => import('./solubility-ksp'),
+  'atomic-spectra': () => import('./atomic-spectra'),
   'acid-base-theories-ph': () => import('./acid-base-theories-ph'),
   'weak-acids-bases-ka-kb': () => import('./weak-acids-bases-ka-kb'),
   'buffer-solutions-henderson-hasselbalch': () => import('./buffer-solutions-henderson-hasselbalch'),
