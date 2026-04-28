@@ -4313,6 +4313,212 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
   },
 
+  // ─────────────── definition-of-derivative-calcab (top-up) ───────────────
+  {
+    question: 'The limit definition of $f\'(a)$ is:',
+    options: ['$\\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}$', '$\\lim_{h \\to 0} \\dfrac{f(a) - f(a - h)}{h}$ only', '$\\dfrac{f(b) - f(a)}{b - a}$', '$\\lim_{x \\to a} f(x)$'],
+    correctAnswer: 0,
+    explanation: 'Standard form (forward difference quotient).',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: 'An equivalent limit definition of $f\'(a)$ is:',
+    options: ['$\\lim_{x \\to a} \\dfrac{f(x) - f(a)}{x - a}$', '$f(a)$', '$\\lim_{x \\to a} f\'(x)$', '$\\int_a^x f\'(t) dt$'],
+    correctAnswer: 0,
+    explanation: 'Equivalent (point-form) definition.',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: 'Use the limit definition to find $f\'(x)$ for $f(x) = 3x + 1$.',
+    options: ['$3$', '$1$', '$3x$', '$0$'],
+    correctAnswer: 0,
+    explanation: '$\\lim_{h\\to 0} \\dfrac{[3(x+h) + 1] - [3x + 1]}{h} = \\lim 3 = 3$.',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: 'Use the limit definition to find $f\'(x)$ for $f(x) = x^2$.',
+    options: ['$2x$', '$x$', '$2$', '$x^2$'],
+    correctAnswer: 0,
+    explanation: '$\\dfrac{(x+h)^2 - x^2}{h} = 2x + h \\to 2x$.',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: 'Use the limit definition to find $f\'(x)$ for $f(x) = x^2 - 4x$.',
+    options: ['$2x - 4$', '$2x$', '$x - 4$', '$2x + 4$'],
+    correctAnswer: 0,
+    explanation: '$\\dfrac{(x+h)^2 - 4(x+h) - (x^2 - 4x)}{h} = 2x + h - 4 \\to 2x - 4$.',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: 'Use the limit definition to find $f\'(x)$ for $f(x) = 1/x$.',
+    options: ['$1/x^2$', '$-1/x^2$', '$-1/x$', '$\\ln x$'],
+    correctAnswer: 1,
+    explanation: '$\\dfrac{1/(x+h) - 1/x}{h} = \\dfrac{-1}{x(x+h)} \\to -1/x^2$.',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: '$\\lim_{h \\to 0} \\dfrac{(2 + h)^3 - 8}{h} = $',
+    options: ['$3$', '$8$', '$12$', '$24$'],
+    correctAnswer: 2,
+    explanation: 'Recognize as $f\'(2)$ for $f(x) = x^3$. $f\'(x) = 3x^2 \\Rightarrow f\'(2) = 12$.',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: '$\\lim_{x \\to \\pi} \\dfrac{\\sin x - 0}{x - \\pi} = $',
+    options: ['$0$', '$1$', '$-1$', 'DNE'],
+    correctAnswer: 2,
+    explanation: 'This is $f\'(\\pi)$ for $f(x) = \\sin x$. $\\cos \\pi = -1$.',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+  {
+    question: 'If $f$ is differentiable at $a$, which limit MUST equal $f\'(a)$?',
+    options: ['$\\lim_{h \\to 0} \\dfrac{f(a + 2h) - f(a)}{h}$', '$\\lim_{h \\to 0} \\dfrac{f(a + h) - f(a - h)}{2h}$', '$\\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{2h}$', '$\\lim_{h \\to 0} (f(a + h) - f(a))$'],
+    correctAnswer: 1,
+    explanation: 'Symmetric difference quotient equals $f\'(a)$ when $f\'(a)$ exists.',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+  },
+
+  // ─────────────── linearization-differentials-calcab (top-up) ───────────────
+  {
+    question: 'The linearization of $f$ at $x = a$ is:',
+    options: ['$L(x) = f(a) + f\'(a)(x - a)$', '$L(x) = f\'(a) x$', '$L(x) = f(a)(x - a)$', '$L(x) = f(a) + f(x)$'],
+    correctAnswer: 0,
+    explanation: 'Tangent line at $a$.',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+  },
+  {
+    question: 'The differential $dy$ is given by:',
+    options: ['$dy = y\'$', '$dy = f\'(x) \\, dx$', '$dy = \\Delta y$ exactly', '$dy = f(x) \\, dx$'],
+    correctAnswer: 1,
+    explanation: 'Definition of the differential.',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+  },
+  {
+    question: 'Linearize $f(x) = \\sqrt{x}$ at $a = 25$. $L(x) = $',
+    options: ['$5 + \\tfrac{1}{10}(x - 25)$', '$5 + (x - 25)$', '$25 + \\tfrac{1}{2\\sqrt{x}}(x - 25)$', '$\\tfrac{1}{10}(x - 25)$'],
+    correctAnswer: 0,
+    explanation: '$f(25) = 5$, $f\'(25) = 1/(2\\sqrt{25}) = 1/10$.',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+  },
+  {
+    question: 'Use linearization at $a = 25$ to estimate $\\sqrt{26}$.',
+    options: ['$5.0$', '$5.1$', '$5.2$', '$5.5$'],
+    correctAnswer: 1,
+    explanation: '$L(26) = 5 + (1/10)(1) = 5.1$.',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+  },
+  {
+    question: 'A linear approximation overestimates $f$ when $f$ is:',
+    options: ['Concave up', 'Concave down', 'Linear', 'Constant'],
+    correctAnswer: 1,
+    explanation: 'Tangent lies above a concave-down graph.',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+  },
+  {
+    question: 'For $y = x^3$, find $dy$ when $x = 2$ and $dx = 0.1$.',
+    options: ['$0.6$', '$1.2$', '$1.8$', '$2.4$'],
+    correctAnswer: 1,
+    explanation: '$dy = 3x^2 \\, dx = 12(0.1) = 1.2$.',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+  },
+
+  // ─────────────── theorem-applications-calcab (top-up) ───────────────
+  {
+    question: 'Mean Value Theorem requires $f$ to be:',
+    options: ['Continuous on $[a,b]$ and differentiable on $(a,b)$', 'Differentiable everywhere on $\\mathbb{R}$', 'Continuous on $(a,b)$', 'Polynomial'],
+    correctAnswer: 0,
+    explanation: 'MVT hypothesis: continuous on closed interval, differentiable on open interval.',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+  },
+  {
+    question: 'MVT conclusion: there exists $c \\in (a, b)$ such that:',
+    options: ['$f(c) = 0$', '$f\'(c) = \\dfrac{f(b) - f(a)}{b - a}$', '$f\'(c) = 0$', '$f(c) = \\dfrac{f(a) + f(b)}{2}$'],
+    correctAnswer: 1,
+    explanation: 'Some tangent has slope equal to the secant slope.',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+  },
+  {
+    question: 'Rolle\'s Theorem additionally requires:',
+    options: ['$f(a) = f(b)$', '$f$ increasing', '$f$ positive', '$f\'$ continuous'],
+    correctAnswer: 0,
+    explanation: 'Rolle: continuous on $[a,b]$, differentiable on $(a,b)$, AND $f(a) = f(b)$.',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+  },
+  {
+    question: 'For $f(x) = x^2$ on $[0, 4]$, find the $c$ guaranteed by MVT.',
+    options: ['$c = 1$', '$c = 2$', '$c = 3$', '$c = 4$'],
+    correctAnswer: 1,
+    explanation: 'Secant slope: $(16 - 0)/4 = 4$. Set $f\'(c) = 2c = 4 \\Rightarrow c = 2$.',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+  },
+  {
+    question: 'For $f(x) = x^3 - x$ on $[-1, 1]$, $f(-1) = f(1) = 0$. Rolle\'s gives $c$ with $f\'(c) = 0$. Solutions are:',
+    options: ['$c = 0$ only', '$c = \\pm 1/\\sqrt{3}$', '$c = \\pm 1$', '$c = 1/2$'],
+    correctAnswer: 1,
+    explanation: '$f\'(x) = 3x^2 - 1 = 0 \\Rightarrow x = \\pm 1/\\sqrt{3}$ (both inside $(-1,1)$).',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+  },
+
+  // ─────────────── optimization-calcab (top-up) ───────────────
+  {
+    question: 'In an optimization problem, after writing the objective function, you typically:',
+    options: ['Take its derivative and set it to $0$', 'Integrate it', 'Plug in any value', 'Take its second derivative only'],
+    correctAnswer: 0,
+    explanation: 'Critical points come from $f\' = 0$ (or undefined).',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+  },
+  {
+    question: 'A rectangle has perimeter $20$. Maximize area. The maximum occurs when the rectangle is:',
+    options: ['A long thin strip', 'A square (sides $5$)', 'Sides $1$ and $9$', 'Sides $4$ and $6$'],
+    correctAnswer: 1,
+    explanation: 'For fixed perimeter, the square maximizes area.',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+  },
+  {
+    question: 'Find two positive numbers whose sum is $20$ and whose product is maximum.',
+    options: ['$10$ and $10$', '$1$ and $19$', '$5$ and $15$', '$8$ and $12$'],
+    correctAnswer: 0,
+    explanation: '$P(x) = x(20 - x)$. $P\'(x) = 20 - 2x = 0 \\Rightarrow x = 10$.',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+  },
+  {
+    question: 'A box with square base and open top has volume $32$ ft³. Minimize surface area $S = x^2 + 4xh$. Optimal $x = $',
+    options: ['$2$', '$4$', '$\\sqrt[3]{32}$', '$8$'],
+    correctAnswer: 1,
+    explanation: '$h = 32/x^2$. $S(x) = x^2 + 128/x$. $S\'(x) = 2x - 128/x^2 = 0 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$.',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+  },
+
+  // ─────────────── inverse-functions-derivatives-calcab (top-up) ───────────────
+  {
+    question: 'If $f$ is one-to-one and differentiable with inverse $g$, then:',
+    options: ['$g\'(x) = 1/f\'(x)$', '$g\'(x) = \\dfrac{1}{f\'(g(x))}$', '$g\'(x) = -f\'(x)$', '$g\'(x) = f\'(x)$'],
+    correctAnswer: 1,
+    explanation: 'Inverse function derivative formula.',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
+  },
+  {
+    question: '$\\dfrac{d}{dx}[\\arcsin x] = $',
+    options: ['$\\dfrac{1}{\\sqrt{1 - x^2}}$', '$\\dfrac{-1}{\\sqrt{1 - x^2}}$', '$\\dfrac{1}{1 + x^2}$', '$\\dfrac{1}{x}$'],
+    correctAnswer: 0,
+    explanation: 'Standard derivative of arcsine.',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
+  },
+  {
+    question: '$\\dfrac{d}{dx}[\\arctan x] = $',
+    options: ['$\\dfrac{1}{1 + x^2}$', '$\\dfrac{1}{1 - x^2}$', '$\\sec^2 x$', '$\\dfrac{1}{\\sqrt{1 - x^2}}$'],
+    correctAnswer: 0,
+    explanation: 'Standard derivative of arctangent.',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
+  },
+  {
+    question: 'If $f(2) = 5$ and $f\'(2) = 3$, then $(f^{-1})\'(5) = $',
+    options: ['$3$', '$1/3$', '$-3$', '$5$'],
+    correctAnswer: 1,
+    explanation: '$(f^{-1})\'(b) = 1/f\'(a)$ where $f(a) = b$.',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
+  },
+
 ]
 
 /** Generate an exit quiz for a specific AB topic (used by exit quiz system) */
