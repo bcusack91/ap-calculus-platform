@@ -2516,6 +2516,33 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Exponentials, Logs, and DNE Cases', loader: () => import('./calcab-limits-at-infinity-part4').then(m => m.calcabLimitsAtInfinityPart4Data) },
     ],
   },
+  'infinite-limits-vertical-asymptotes': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Notation and Meaning', loader: () => import('./calcab-infinite-limits-vertical-asymptotes-part1').then(m => m.calcabInfiniteLimitsPart1Data) },
+      { title: 'Diagnosing Infinite Limits', loader: () => import('./calcab-infinite-limits-vertical-asymptotes-part2').then(m => m.calcabInfiniteLimitsPart2Data) },
+      { title: 'Vertical Asymptotes', loader: () => import('./calcab-infinite-limits-vertical-asymptotes-part3').then(m => m.calcabInfiniteLimitsPart3Data) },
+      { title: 'Asymptotes Beyond Rationals', loader: () => import('./calcab-infinite-limits-vertical-asymptotes-part4').then(m => m.calcabInfiniteLimitsPart4Data) },
+    ],
+  },
+  'continuity-introduction': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Continuity Definition', loader: () => import('./calcab-continuity-introduction-part1').then(m => m.calcabContinuityIntroPart1Data) },
+      { title: 'Continuity Catalog', loader: () => import('./calcab-continuity-introduction-part2').then(m => m.calcabContinuityIntroPart2Data) },
+      { title: 'Piecewise Continuity', loader: () => import('./calcab-continuity-introduction-part3').then(m => m.calcabContinuityIntroPart3Data) },
+      { title: 'Continuity on Intervals & IVT', loader: () => import('./calcab-continuity-introduction-part4').then(m => m.calcabContinuityIntroPart4Data) },
+    ],
+  },
+  'types-of-discontinuity': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Removable Discontinuities', loader: () => import('./calcab-types-of-discontinuity-part1').then(m => m.calcabTypesDiscontinuityPart1Data) },
+      { title: 'Jump Discontinuities', loader: () => import('./calcab-types-of-discontinuity-part2').then(m => m.calcabTypesDiscontinuityPart2Data) },
+      { title: 'Infinite Discontinuities', loader: () => import('./calcab-types-of-discontinuity-part3').then(m => m.calcabTypesDiscontinuityPart3Data) },
+      { title: 'Mixed Practice', loader: () => import('./calcab-types-of-discontinuity-part4').then(m => m.calcabTypesDiscontinuityPart4Data) },
+    ],
+  },
   'definition-of-derivative-calcab': {
     completionDestination: 'competitive',
     parts: [
