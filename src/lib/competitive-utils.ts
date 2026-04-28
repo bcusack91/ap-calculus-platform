@@ -140,7 +140,118 @@ function formatCoordinate(x: number, y: number): string {
  * Generate 10 random questions for a match
  * Ensures variety by mixing angle and coordinate questions
  */
+/**
+ * Map curriculum lesson slugs (as stored in the Topic table and used by the
+ * per-course competitive pages) onto the corresponding competitive bank
+ * topicSlug. When a 1-to-1 mapping doesn't exist (e.g. a lesson that spans
+ * several bank topics), use COURSE_GROUPING_LESSONS instead.
+ */
+const LESSON_TO_BANK_TOPIC: Record<string, string> = {
+  // ---- AP Calculus AB (lesson slug → bank topic slug in ap-calculus-bank.ts)
+  'accumulation-functions-calcab': 'accumulation-functions',
+  'antiderivatives-indefinite-integrals-calcab': 'antiderivatives-indefinite-integrals',
+  'area-between-curves-calcab': 'area-between-curves',
+  'basic-differentiation-rules-calcab': 'basic-differentiation-rules',
+  'chain-rule-calcab': 'chain-rule',
+  'constant-multiple-sum-rules': 'basic-differentiation-rules',
+  'definite-integrals-calcab': 'fundamental-theorem-of-calculus',
+  'definition-of-derivative-calcab': 'definition-of-derivative',
+  'derivative-as-rate-of-change': 'definition-of-derivative',
+  'derivative-as-slope': 'definition-of-derivative',
+  'derivative-notation': 'definition-of-derivative',
+  'derivatives-of-exponential-functions': 'basic-differentiation-rules',
+  'derivatives-of-logarithmic-functions': 'basic-differentiation-rules',
+  'derivatives-of-trig-functions': 'basic-differentiation-rules',
+  'differential-equations-calcab': 'differential-equations-slope-fields',
+  'evaluating-limits-algebraically': 'limits-algebraically',
+  'evaluating-limits-graphically': 'limits-graphically',
+  'exponential-models-calcab': 'differential-equations-slope-fields',
+  'higher-order-derivatives': 'basic-differentiation-rules',
+  'indeterminate-forms-factoring': 'limits-algebraically',
+  'introduction-to-limits': 'limits-graphically',
+  'inverse-functions-derivatives-calcab': 'implicit-differentiation',
+  'limits-continuity-calcab': 'continuity-and-ivt',
+  'linearization-differentials-calcab': 'linearization-differentials',
+  'logarithmic-differentiation-technique': 'implicit-differentiation',
+  'one-sided-limits': 'limits-graphically',
+  'optimization-calcab': 'optimization',
+  'particle-motion-calcab': 'particle-motion',
+  'power-rule-basics': 'basic-differentiation-rules',
+  'product-rule': 'product-quotient-rules',
+  'quotient-rule': 'product-quotient-rules',
+  'rationalizing-techniques': 'limits-algebraically',
+  'tables-data-calcab': 'riemann-sums',
+  'theorem-applications-calcab': 'mean-value-theorem',
+  'u-substitution-calcab': 'integration-by-substitution',
+  'volumes-of-revolution-calcab': 'volumes-of-revolution',
+  'what-is-a-derivative': 'definition-of-derivative',
+}
+
+/**
+ * Lesson slugs that are course/unit "buckets" rather than a single sub-topic.
+ * For these, we sample from the entire course bank instead of strict
+ * topic-equality filtering. The value is the course bank key.
+ */
+const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc'> = {
+  // ---- AP Calculus AB unit & exam-prep buckets
+  'ap-exam-review-calcab': 'ap-calculus-ab',
+  'applications-of-derivatives-calcab': 'ap-calculus-ab',
+  'calcab-applications-derivatives': 'ap-calculus-ab',
+  'calcab-differential-equations': 'ap-calculus-ab',
+  'calcab-differentiation-fundamentals': 'ap-calculus-ab',
+  'calcab-exam-prep': 'ap-calculus-ab',
+  'calcab-integration-applications': 'ap-calculus-ab',
+  'calcab-integration': 'ap-calculus-ab',
+  'calcab-limits-continuity': 'ap-calculus-ab',
+  'derivatives': 'ap-calculus-ab',
+  'free-response-strategies-calcab': 'ap-calculus-ab',
+  'integration-applications-calcab': 'ap-calculus-ab',
+  'limits': 'ap-calculus-ab',
+  // ---- AP Calculus BC unit & exam-prep buckets
+  'calcbc-advanced-de': 'ap-calculus-bc',
+  'calcbc-advanced-integration': 'ap-calculus-bc',
+  'calcbc-exam-prep': 'ap-calculus-bc',
+  'calcbc-parametric-polar-vector': 'ap-calculus-bc',
+  'calcbc-power-taylor': 'ap-calculus-bc',
+  'calcbc-sequences-series': 'ap-calculus-bc',
+}
+
 export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): MatchQuestion[] {
+  // Resolve a possibly-aliased lesson slug into an actual bank topic slug.
+  // Lesson slugs (from the curriculum DB) often differ from competitive bank
+  // topic slugs (e.g. lesson `linearization-differentials-calcab` → bank
+  // topic `linearization-differentials`). Without aliasing, those slugs would
+  // miss every routing branch and historically fell through to a unit-circle
+  // click-the-angle drill (the source of irrelevant unit-circle questions in
+  // AP Calc competitive mode).
+  const resolvedTopicSlug = topicSlug ? (LESSON_TO_BANK_TOPIC[topicSlug] ?? topicSlug) : topicSlug
+  // Course-grouping lesson slugs (units/exam-prep buckets) should sample
+  // randomly from the entire course bank instead of strict-filtering.
+  const groupingCourseKey = topicSlug ? COURSE_GROUPING_LESSONS[topicSlug] : undefined
+
+  // Course-grouping lessons (e.g. an AP Calc AB unit page or exam-prep
+  // bucket): pull a random mix from that course's bank.
+  if (groupingCourseKey) {
+    const groupBank = groupingCourseKey === 'ap-calculus-ab'
+      ? getApCalculusQuestions
+      : getApCalculusBCQuestions
+    const groupQuestions = groupBank(totalQuestions)
+    if (groupQuestions.length > 0) {
+      return (groupQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
   // If topic is reflection-refraction, use that question bank
   if (topicSlug === 'reflection-refraction') {
     const questions = getQuestionSet(totalQuestions)
@@ -242,9 +353,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Calculus AB sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-calculus-ab') {
-    const apCalcTopicQuestions = getApCalculusQuestions(totalQuestions, topicSlug)
-    if (apCalcTopicQuestions.length > 0 && apCalcTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-calculus-ab') {
+    const apCalcTopicQuestions = getApCalculusQuestions(totalQuestions, resolvedTopicSlug)
+    if (apCalcTopicQuestions.length > 0 && apCalcTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apCalcTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -322,9 +433,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Calculus BC sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-calculus-bc') {
-    const apCalcBCTopicQuestions = getApCalculusBCQuestions(totalQuestions, topicSlug)
-    if (apCalcBCTopicQuestions.length > 0 && apCalcBCTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-calculus-bc') {
+    const apCalcBCTopicQuestions = getApCalculusBCQuestions(totalQuestions, resolvedTopicSlug)
+    if (apCalcBCTopicQuestions.length > 0 && apCalcBCTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apCalcBCTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -462,8 +573,16 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   if (topicSlug === 'cumulative') {
     return generateCumulativeQuestions(totalQuestions, completedTopics)
   }
-  
-  // Default: unit circle questions
+
+  // If a topicSlug was provided but matched none of the routes/banks above,
+  // fall back to cumulative MCQs rather than silently returning unit-circle
+  // click-the-angle drills (which leaked unit-circle questions into AP Calc
+  // and other courses whose lesson slugs don't match bank topic slugs).
+  if (topicSlug && topicSlug !== 'unit-circle') {
+    return generateCumulativeQuestions(totalQuestions, completedTopics)
+  }
+
+  // Default (no topicSlug, or explicit 'unit-circle'): unit circle questions
   const questions: Question[] = [];
   const usedIndices = new Set<number>();
 

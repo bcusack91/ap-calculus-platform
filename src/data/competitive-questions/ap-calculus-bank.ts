@@ -358,6 +358,40 @@ const allQuestions: ApCalculusQuestion[] = [
   { id: 251, question: 'Displacement from $t = a$ to $t = b$ equals:', options: ['$\\int_a^b v(t)\\,dt = s(b) - s(a)$', '$\\int_a^b |v(t)|\\,dt$', '$v(b) - v(a)$', '$s(a) + s(b)$'], correctAnswer: 0, explanation: 'Displacement is the net change in position, which is the integral of velocity.', difficulty: 'medium', topicSlug: 'particle-motion' },
   { id: 252, question: 'If $v(t) = t^2 - 4$ and $s(0) = 5$, find $s(t)$.', options: ['$\\frac{t^3}{3} - 4t + 5$', '$\\frac{t^3}{3} - 4t$', '$2t + 5$', '$t^3 - 4t + 5$'], correctAnswer: 0, explanation: '$s(t) = \\int v(t)\\,dt = \\frac{t^3}{3} - 4t + C$; $s(0) = 5$ gives $C = 5$.', difficulty: 'medium', topicSlug: 'particle-motion' },
   { id: 253, question: 'For $s(t) = t^3 - 6t^2 + 9t$, the particle changes direction at:', options: ['$t = 1$ and $t = 3$', '$t = 2$ only', '$t = 0$ only', '$t = 3$ only'], correctAnswer: 0, explanation: '$v(t) = 3t^2 - 12t + 9 = 3(t-1)(t-3) = 0$ at $t = 1, 3$; velocity changes sign at both.', difficulty: 'hard', topicSlug: 'particle-motion' },
+
+  // ============ TOP-UP: bring under-10 sub-topics to >=10 questions for competitive 10-Q matches ============
+  // accumulation-functions (was 6 → 10)
+  { id: 254, question: 'If $g(x) = \\int_0^x f(t)\\,dt$ and $f(t) = 2t$, then $g(x) = $?', options: ['$x^2$', '$2x$', '$2$', '$\\frac{x^2}{2}$'], correctAnswer: 0, explanation: '$g(x) = \\int_0^x 2t\\,dt = [t^2]_0^x = x^2$.', difficulty: 'easy', topicSlug: 'accumulation-functions' },
+  { id: 255, question: 'If $g(x) = \\int_1^x \\frac{1}{t}\\,dt$, then $g\'(x) = $?', options: ['$\\frac{1}{x}$', '$\\ln x$', '$-\\frac{1}{x^2}$', '$x$'], correctAnswer: 0, explanation: 'By FTC Part 1, $g\'(x) = f(x) = 1/x$.', difficulty: 'easy', topicSlug: 'accumulation-functions' },
+  { id: 256, question: 'If $g(x) = \\int_0^{x^2} \\sin t\\,dt$, then $g\'(x) = $?', options: ['$2x\\sin(x^2)$', '$\\sin(x^2)$', '$\\cos(x^2)$', '$2x\\cos(x^2)$'], correctAnswer: 0, explanation: 'FTC + chain rule: $g\'(x) = \\sin(x^2)\\cdot(x^2)\' = 2x\\sin(x^2)$.', difficulty: 'hard', topicSlug: 'accumulation-functions' },
+  { id: 257, question: 'For $g(x) = \\int_0^x f(t)\\,dt$, $g$ is decreasing on intervals where:', options: ['$f(t) < 0$', '$f(t) > 0$', '$f\'(t) < 0$', '$f\'(t) > 0$'], correctAnswer: 0, explanation: '$g\'(x) = f(x)$; $g$ decreases when $g\' < 0$, i.e., when $f < 0$.', difficulty: 'medium', topicSlug: 'accumulation-functions' },
+
+  // l-hopitals-rule (was 8 → 10)
+  { id: 258, question: '$\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} = $?', options: ['$\\frac{1}{2}$', '$0$', '$1$', '$\\infty$'], correctAnswer: 0, explanation: '$0/0$ form; differentiate: $\\frac{\\sin x}{2x} \\to \\frac{\\cos x}{2} \\to \\frac{1}{2}$.', difficulty: 'medium', topicSlug: 'l-hopitals-rule' },
+  { id: 259, question: '$\\lim_{x \\to \\infty} \\frac{\\ln x}{x} = $?', options: ['$0$', '$1$', '$\\infty$', '$-\\infty$'], correctAnswer: 0, explanation: '$\\infty/\\infty$; L\'Hôpital: $\\frac{1/x}{1} = \\frac{1}{x} \\to 0$.', difficulty: 'easy', topicSlug: 'l-hopitals-rule' },
+
+  // particle-motion (was 8 → 10)
+  { id: 260, question: 'If $v(t) = 2t - 6$, the particle is at rest at $t = $?', options: ['$3$', '$0$', '$6$', '$2$'], correctAnswer: 0, explanation: 'Set $v(t) = 0$: $2t - 6 = 0 \\Rightarrow t = 3$.', difficulty: 'easy', topicSlug: 'particle-motion' },
+  { id: 261, question: 'If $v(t) = 3t^2 - 12$, the acceleration $a(t) = $?', options: ['$6t$', '$3t^2$', '$t^3 - 12t$', '$12$'], correctAnswer: 0, explanation: '$a(t) = v\'(t) = 6t$.', difficulty: 'easy', topicSlug: 'particle-motion' },
+
+  // squeeze-theorem (was 8 → 10)
+  { id: 262, question: 'If $-x^2 \\le f(x) \\le x^2$ for all $x$, then $\\lim_{x \\to 0} f(x) = $?', options: ['$0$', '$1$', 'Does not exist', '$-1$'], correctAnswer: 0, explanation: 'Both bounds approach $0$ as $x \\to 0$, so by Squeeze, $f(x) \\to 0$.', difficulty: 'easy', topicSlug: 'squeeze-theorem' },
+  { id: 263, question: '$\\lim_{x \\to 0} x^2 \\sin\\left(\\frac{1}{x}\\right) = $?', options: ['$0$', '$1$', 'Does not exist', '$\\infty$'], correctAnswer: 0, explanation: 'Since $-x^2 \\le x^2 \\sin(1/x) \\le x^2$ and both bounds $\\to 0$, the limit is $0$ by Squeeze.', difficulty: 'medium', topicSlug: 'squeeze-theorem' },
+
+  // area-between-curves (was 9 → 10)
+  { id: 264, question: 'The area between $y = x$ and $y = x^2$ on $[0, 1]$ is:', options: ['$\\frac{1}{6}$', '$\\frac{1}{3}$', '$\\frac{1}{2}$', '$1$'], correctAnswer: 0, explanation: '$\\int_0^1 (x - x^2)\\,dx = [x^2/2 - x^3/3]_0^1 = 1/2 - 1/3 = 1/6$.', difficulty: 'medium', topicSlug: 'area-between-curves' },
+
+  // implicit-differentiation (was 9 → 10)
+  { id: 265, question: 'If $x^2 + y^2 = 25$, then $\\frac{dy}{dx} = $?', options: ['$-\\frac{x}{y}$', '$\\frac{x}{y}$', '$-\\frac{y}{x}$', '$\\frac{y}{x}$'], correctAnswer: 0, explanation: 'Differentiate: $2x + 2y\\,y\' = 0 \\Rightarrow y\' = -x/y$.', difficulty: 'easy', topicSlug: 'implicit-differentiation' },
+
+  // linearization-differentials (was 9 → 10)
+  { id: 266, question: 'Use linearization at $x = 0$ to approximate $\\sqrt{1 + 0.04}$.', options: ['$1.02$', '$1.04$', '$1.002$', '$1.2$'], correctAnswer: 0, explanation: '$L(x) = 1 + x/2$ near $0$; $L(0.04) = 1 + 0.02 = 1.02$.', difficulty: 'medium', topicSlug: 'linearization-differentials' },
+
+  // mean-value-theorem (was 9 → 10)
+  { id: 267, question: 'For $f(x) = x^2$ on $[0, 4]$, the value of $c$ guaranteed by MVT is:', options: ['$2$', '$1$', '$3$', '$4$'], correctAnswer: 0, explanation: 'Slope $= (16-0)/(4-0) = 4$; need $f\'(c) = 2c = 4 \\Rightarrow c = 2$.', difficulty: 'medium', topicSlug: 'mean-value-theorem' },
+
+  // optimization (was 9 → 10)
+  { id: 268, question: 'Among rectangles with perimeter 20, the one with maximum area has dimensions:', options: ['$5 \\times 5$', '$4 \\times 6$', '$2 \\times 8$', '$1 \\times 9$'], correctAnswer: 0, explanation: 'For fixed perimeter, area is maximized by a square. Side = 20/4 = 5.', difficulty: 'easy', topicSlug: 'optimization' },
 ]
 
 export function getApCalculusQuestions(count: number = 10, topicSlug?: string): ApCalculusQuestion[] {
