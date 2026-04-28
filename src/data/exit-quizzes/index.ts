@@ -321,6 +321,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   // ═══════════════════════════════════════════════════
   'ap-calculus-ab': () => import('./ap-calculus-ab'),
   'limits-continuity-calcab': () => import('./ap-calculus-ab'),
+  'what-is-a-limit': () => import('./ap-calculus-ab'),
   'definition-of-derivative-calcab': () => import('./ap-calculus-ab'),
   'basic-differentiation-rules-calcab': () => import('./ap-calculus-ab'),
   'chain-rule-calcab': () => import('./ap-calculus-ab'),
