@@ -105,6 +105,7 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
 
   // AP Calculus AB
   'limits-continuity-calcab': () => import('./limits-continuity-calcab'),
+  'what-is-a-limit': () => import('./what-is-a-limit'),
   'definition-of-derivative-calcab': () => import('./definition-of-derivative-calcab'),
   'basic-differentiation-rules-calcab': () => import('./basic-differentiation-rules-calcab'),
   'chain-rule-calcab': () => import('./chain-rule-calcab'),

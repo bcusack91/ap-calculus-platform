@@ -2444,6 +2444,18 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Putting It All Together', loader: () => import('./calcab-limits-continuity-calcab-part7').then(m => m.calcabLimitsPart7Data) },
     ],
   },
+  'what-is-a-limit': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Intuitive Idea of a Limit', loader: () => import('./calcab-what-is-a-limit-part1').then(m => m.calcabWhatIsALimitPart1Data) },
+      { title: 'Limit Notation', loader: () => import('./calcab-what-is-a-limit-part2').then(m => m.calcabWhatIsALimitPart2Data) },
+      { title: 'When Does a Limit Exist?', loader: () => import('./calcab-what-is-a-limit-part3').then(m => m.calcabWhatIsALimitPart3Data) },
+      { title: 'Limits That Do Not Exist', loader: () => import('./calcab-what-is-a-limit-part4').then(m => m.calcabWhatIsALimitPart4Data) },
+      { title: 'Reading Limits From a Graph', loader: () => import('./calcab-what-is-a-limit-part5').then(m => m.calcabWhatIsALimitPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./calcab-what-is-a-limit-part6').then(m => m.calcabWhatIsALimitPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./calcab-what-is-a-limit-part7').then(m => m.calcabWhatIsALimitPart7Data) },
+    ],
+  },
   'definition-of-derivative-calcab': {
     completionDestination: 'competitive',
     parts: [
