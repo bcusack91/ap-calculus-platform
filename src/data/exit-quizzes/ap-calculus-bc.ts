@@ -3798,6 +3798,52 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     difficulty: 'hard', domain: 'advanced-diffeq', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
 
+  // ─────────────── alternating-series-calcbc (top-up) ───────────────
+  {
+    question: 'The Alternating Series Test (Leibniz) requires the series $\\sum (-1)^n b_n$ to have:',
+    options: ['$b_n > 0$, $b_n$ eventually decreasing, and $b_n \\to 0$', '$b_n \\to \\infty$', '$b_n$ constant', '$\\sum b_n$ convergent'],
+    correctAnswer: 0,
+    explanation: 'Three Leibniz hypotheses.',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
+  },
+  {
+    question: 'The Alternating Series Estimation Theorem says $|S - S_n| \\le$:',
+    options: ['$|b_{n+1}|$ (the first omitted term)', '$|b_n|$', '$\\sum_{k=n}^\\infty b_k$', '$1/n$'],
+    correctAnswer: 0,
+    explanation: 'Error bound = absolute value of the next term.',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
+  },
+  {
+    question: '$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n^2}$ is:',
+    options: ['Absolutely convergent (since $\\sum 1/n^2$ converges)', 'Conditionally convergent only', 'Divergent', 'Cannot determine'],
+    correctAnswer: 0,
+    explanation: '$\\sum |a_n| = \\sum 1/n^2$ converges by p-series ($p = 2$).',
+    difficulty: 'hard', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
+  },
+
+  // ─────────────── arc-length-surface-area-calcbc (top-up) ───────────────
+  {
+    question: 'Arc length of $y = f(x)$ from $a$ to $b$:',
+    options: ['$\\int_a^b \\sqrt{1 + (f\'(x))^2} dx$', '$\\int_a^b \\sqrt{1 + f(x)^2} dx$', '$\\int_a^b f\'(x) dx$', '$f(b) - f(a)$'],
+    correctAnswer: 0,
+    explanation: 'Standard arc length formula.',
+    difficulty: 'easy', domain: 'advanced-integration', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both',
+  },
+  {
+    question: 'For a parametric curve $(x(t), y(t))$ on $[\\alpha, \\beta]$, arc length is:',
+    options: ['$\\int_\\alpha^\\beta \\sqrt{(x\'(t))^2 + (y\'(t))^2} dt$', '$\\int_\\alpha^\\beta (x\'(t) + y\'(t)) dt$', '$\\int_\\alpha^\\beta x\'(t) y\'(t) dt$', '$\\sqrt{(\\Delta x)^2 + (\\Delta y)^2}$'],
+    correctAnswer: 0,
+    explanation: 'Parametric arc length.',
+    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both',
+  },
+  {
+    question: 'For polar $r = f(\\theta)$, arc length on $[\\alpha, \\beta]$ is:',
+    options: ['$\\int_\\alpha^\\beta \\sqrt{r^2 + (dr/d\\theta)^2} \\, d\\theta$', '$\\int_\\alpha^\\beta r \\, d\\theta$', '$\\int_\\alpha^\\beta r^2 \\, d\\theta$', '$2\\pi r$'],
+    correctAnswer: 0,
+    explanation: 'Polar arc length formula.',
+    difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both',
+  },
+
 ]
 
 /** Generate an exit quiz for a specific BC topic (used by exit quiz system) */
