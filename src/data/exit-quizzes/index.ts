@@ -358,6 +358,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'tables-data-calcab': () => import('./ap-calculus-ab'),
   'free-response-strategies-calcab': () => import('./ap-calculus-ab'),
   'ap-exam-review-calcab': () => import('./ap-calculus-ab'),
+  'limits-at-infinity-calcab': () => import('./ap-calculus-ab'),
 
   // ═══════════════════════════════════════════════════
   // AP Calculus BC Exit Quizzes
