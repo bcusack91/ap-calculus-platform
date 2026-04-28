@@ -112,21 +112,20 @@ const nextConfig: NextConfig = {
     // interactive lesson and entrance quiz (AP Chemistry standard).
     const microLessonRedirects: Record<string, string> = {
       // AB: Limits & Continuity
-      'what-is-a-limit': 'limits-continuity-calcab',
+      // The 11 canonical Limits topics (what-is-a-limit, estimating-limits-tables,
+      // estimating-limits-graphs, one-sided-limits, direct-substitution-method,
+      // factoring-method-limits, rationalizing-technique-limits, limits-at-infinity,
+      // infinite-limits-vertical-asymptotes, continuity-introduction,
+      // types-of-discontinuity) live as standalone topics with their own
+      // interactive lessons + entrance quizzes — DO NOT redirect them.
+      // Only the 7 deleted-duplicate slugs forward to the hub.
       'limit-notation-terminology': 'limits-continuity-calcab',
-      'estimating-limits-tables': 'limits-continuity-calcab',
       'one-sided-limits-in-detail': 'limits-continuity-calcab',
-      'one-sided-limits': 'limits-continuity-calcab',
-      'direct-substitution-method': 'limits-continuity-calcab',
-      'factoring-method-limits': 'limits-continuity-calcab',
-      'rationalizing-technique-limits': 'limits-continuity-calcab',
-      'infinite-limits-vertical-asymptotes': 'limits-continuity-calcab',
-      'continuity-introduction': 'continuity-ivt-calcab',
-      'types-of-discontinuity': 'continuity-ivt-calcab',
-      'limits-at-infinity': 'limits-at-infinity-calcab',
       'introduction-to-limits': 'limits-continuity-calcab',
       'evaluating-limits-graphically': 'limits-continuity-calcab',
       'evaluating-limits-algebraically': 'limits-continuity-calcab',
+      'indeterminate-forms-factoring': 'limits-continuity-calcab',
+      'rationalizing-techniques': 'limits-continuity-calcab',
       // AB: Derivatives
       'what-is-a-derivative': 'definition-of-derivative-calcab',
       'derivative-notation': 'definition-of-derivative-calcab',
