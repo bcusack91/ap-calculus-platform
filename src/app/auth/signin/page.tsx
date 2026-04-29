@@ -1,16 +1,26 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-export default function SignInPage() {
+function SignInForm() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+
+  // Honor `callbackUrl` so users following shared links (e.g.
+  // /competitive/async/<id>) return to where they started after sign-in.
+  // Only allow same-origin internal paths to avoid open-redirects.
+  const rawCallback = searchParams?.get('callbackUrl') ?? ''
+  const safeCallback =
+    rawCallback.startsWith('/') && !rawCallback.startsWith('//')
+      ? rawCallback
+      : '/'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,8 +46,8 @@ export default function SignInPage() {
         return
       }
 
-      // Redirect to homepage on successful login
-      router.push('/')
+      // Redirect back to the page the user originally tried to access.
+      router.push(safeCallback)
       router.refresh()
     } catch {
       setError('An error occurred during sign in')
@@ -60,7 +70,7 @@ export default function SignInPage() {
         {/* Google Sign-In */}
         <button
           type="button"
-          onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+          onClick={() => signIn('google', { callbackUrl: safeCallback })}
           className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium text-gray-700 dark:text-gray-200"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -140,7 +150,14 @@ export default function SignInPage() {
           <div className="text-center">
             <p className="text-gray-600 dark:text-gray-400">
               Don&apos;t have an account?{' '}
-              <Link href="/auth/signup" className="text-purple-600 hover:text-purple-700 font-semibold">
+              <Link
+                href={
+                  safeCallback && safeCallback !== '/'
+                    ? `/auth/signup?callbackUrl=${encodeURIComponent(safeCallback)}`
+                    : '/auth/signup'
+                }
+                className="text-purple-600 hover:text-purple-700 font-semibold"
+              >
                 Sign up
               </Link>
             </p>
@@ -148,5 +165,13 @@ export default function SignInPage() {
         </form>
       </div>
     </div>
+  )
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <SignInForm />
+    </Suspense>
   )
 }

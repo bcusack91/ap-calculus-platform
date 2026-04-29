@@ -75,6 +75,35 @@ interface AnalyticsData {
   }
 }
 
+interface RetentionSnapshot {
+  windowDays: number
+  cohortSize: number
+  returnEligible: number
+  noActivityCount: number
+  noActivityPct: number
+  activeOnSignupCount: number
+  activeOnSignupPct: number
+  returnedLaterCount: number
+  returnedLaterPct: number
+  d1Eligible: number
+  d1Count: number
+  d1Pct: number
+  d7Eligible: number
+  d7Count: number
+  d7Pct: number
+  d30Eligible: number
+  d30Count: number
+  d30Pct: number
+  medianDaysToFirstReturn: number | null
+}
+
+interface RetentionData {
+  generatedAt: string
+  excludedEmailDomains: string[]
+  snapshots: RetentionSnapshot[]
+  latest: RetentionSnapshot
+}
+
 interface AlertNotification {
   id: number
   alertKey: string
@@ -131,6 +160,8 @@ export default function AdminPanel() {
   const [tab, setTab] = useState<'analytics' | 'users'>('analytics')
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
   const [analyticsLoading, setAnalyticsLoading] = useState(true)
+  const [retention, setRetention] = useState<RetentionData | null>(null)
+  const [retentionLoading, setRetentionLoading] = useState(true)
   const [alertNotifications, setAlertNotifications] = useState<AlertNotification[]>([])
   const [alertsLoading, setAlertsLoading] = useState(true)
   const [monthlyDigest, setMonthlyDigest] = useState<MonthlyOpsDigest | null>(null)
@@ -174,6 +205,19 @@ export default function AdminPanel() {
     }
   }
 
+  const loadRetention = async () => {
+    setRetentionLoading(true)
+    try {
+      const res = await fetch('/api/admin/retention')
+      setRetention(res.ok ? await res.json() : null)
+    } catch (error) {
+      console.error(error)
+      setRetention(null)
+    } finally {
+      setRetentionLoading(false)
+    }
+  }
+
   const loadMonthlyDigest = async () => {
     setMonthlyDigestLoading(true)
     try {
@@ -194,7 +238,7 @@ export default function AdminPanel() {
   }, [status, router])
 
   useEffect(() => {
-    void Promise.all([loadAnalytics(), loadAlertNotifications(), loadMonthlyDigest()])
+    void Promise.all([loadAnalytics(), loadRetention(), loadAlertNotifications(), loadMonthlyDigest()])
   }, [])
 
   // Load recent users when switching to users tab
@@ -368,6 +412,80 @@ export default function AdminPanel() {
                   <MetricCard label="Teachers" value={analytics.users.teachers} color="blue" />
                   <MetricCard label="Sessions Today" value={analytics.activity.sessionsToday} color="green" />
                   <MetricCard label="Quizzes Today" value={analytics.activity.quizAttemptsToday} />
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Student Retention</h3>
+                  {retentionLoading ? (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Loading retention analytics...</p>
+                  ) : retention ? (
+                    <>
+                      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4 text-sm">
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">Cohort Size (90d)</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{retention.latest.cohortSize.toLocaleString()}</p>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">Returned Later</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{retention.latest.returnedLaterPct}%</p>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">D1 Retention</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{retention.latest.d1Pct}%</p>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">D7 Retention</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{retention.latest.d7Pct}%</p>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">D30 Retention</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{retention.latest.d30Pct}%</p>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm mb-4">
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">No Measurable Activity</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">
+                            {retention.latest.noActivityPct}% ({retention.latest.noActivityCount})
+                          </p>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">Active on Signup Day</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">
+                            {retention.latest.activeOnSignupPct}% ({retention.latest.activeOnSignupCount})
+                          </p>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                          <p className="text-gray-500 dark:text-gray-400">Median Days to First Return</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">
+                            {retention.latest.medianDaysToFirstReturn ?? 'n/a'}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                        <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Cohort Trend (14d / 30d / 90d)</p>
+                        <div className="space-y-2 text-sm">
+                          {retention.snapshots.map((snap) => (
+                            <div key={snap.windowDays} className="grid grid-cols-2 md:grid-cols-6 gap-2 rounded border border-gray-200 dark:border-gray-600 px-3 py-2">
+                              <span className="font-semibold text-gray-700 dark:text-gray-200">{snap.windowDays}d cohort</span>
+                              <span className="text-gray-600 dark:text-gray-300">Size: {snap.cohortSize}</span>
+                              <span className="text-gray-600 dark:text-gray-300">Return: {snap.returnedLaterPct}%</span>
+                              <span className="text-gray-600 dark:text-gray-300">D1: {snap.d1Pct}%</span>
+                              <span className="text-gray-600 dark:text-gray-300">D7: {snap.d7Pct}%</span>
+                              <span className="text-gray-600 dark:text-gray-300">D30: {snap.d30Pct}%</span>
+                            </div>
+                          ))}
+                        </div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
+                          Excluding internal domains: {retention.excludedEmailDomains.join(', ')} | Generated: {new Date(retention.generatedAt).toLocaleString()}
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Retention analytics unavailable.</p>
+                  )}
                 </div>
 
                 {/* Content stats */}

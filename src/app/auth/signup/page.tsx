@@ -1,14 +1,20 @@
 'use client'
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { Suspense, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { PRESET_AVATARS, AvatarData } from '@/types/avatar'
 
-export default function SignUpPage() {
+function SignUpForm() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const rawCallback = searchParams?.get('callbackUrl') ?? ''
+  const safeCallback =
+    rawCallback.startsWith('/') && !rawCallback.startsWith('//')
+      ? rawCallback
+      : '/'
   const [step, setStep] = useState(1) // 1: account details, 2: avatar selection
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -106,8 +112,8 @@ export default function SignUpPage() {
         return
       }
 
-      // Redirect to homepage
-      router.push('/')
+      // Redirect back to the page the user originally tried to access.
+      router.push(safeCallback)
       router.refresh()
     } catch {
       setError('An error occurred during sign up')
@@ -282,7 +288,7 @@ export default function SignUpPage() {
               </div>
               <button
                 type="button"
-                onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+                onClick={() => signIn('google', { callbackUrl: safeCallback })}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all font-medium text-gray-700 dark:text-gray-300"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24">
@@ -295,7 +301,14 @@ export default function SignUpPage() {
               </button>
               <p className="text-gray-600 dark:text-gray-400">
                 Already have an account?{' '}
-                <Link href="/auth/signin" className="text-purple-600 hover:text-purple-700 font-semibold">
+                <Link
+                  href={
+                    safeCallback && safeCallback !== '/'
+                      ? `/auth/signin?callbackUrl=${encodeURIComponent(safeCallback)}`
+                      : '/auth/signin'
+                  }
+                  className="text-purple-600 hover:text-purple-700 font-semibold"
+                >
                   Sign in
                 </Link>
               </p>
@@ -304,5 +317,13 @@ export default function SignUpPage() {
         </form>
       </div>
     </div>
+  )
+}
+
+export default function SignUpPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <SignUpForm />
+    </Suspense>
   )
 }

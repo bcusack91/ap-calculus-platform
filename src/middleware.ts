@@ -108,6 +108,15 @@ export async function middleware(request: NextRequest) {
 
   // ── Page Route Auth Protection ──
 
+  // Async challenge pages are publicly reachable so that link unfurlers
+  // (iMessage, Twitter, Facebook, Slack, Discord, etc.) can fetch the
+  // generated `opengraph-image` / `twitter-image` routes to show a rich
+  // preview. The page itself client-side redirects unauthenticated visitors
+  // to /auth/signin with a `callbackUrl` so humans still have to sign in.
+  if (nextUrl.pathname.startsWith('/competitive/async/')) {
+    return NextResponse.next()
+  }
+
   // NextAuth v5 uses 'authjs.session-token' (HTTP) or '__Secure-authjs.session-token' (HTTPS)
   const secureCookie = nextUrl.protocol === 'https:'
   const cookieName = secureCookie

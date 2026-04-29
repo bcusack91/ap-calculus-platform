@@ -34,9 +34,10 @@ function topicLabel(slug: string): string {
   return TOPIC_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
-export default async function Image({ params }: { params: { id: string } }) {
+export default async function Image({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
   const challenge = await prisma.asyncChallenge.findUnique({
-    where: { id: params.id },
+    where: { id },
     select: {
       topicSlug: true,
       questionCount: true,
