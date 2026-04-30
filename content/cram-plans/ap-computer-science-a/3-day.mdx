@@ -1,0 +1,107 @@
+---
+title: "AP Computer Science A 3-Day Cram Plan"
+description: "A focused 72-hour AP CS A rescue plan: core Java syntax, object-oriented patterns, array traversal, and FRQ templates to maximize your score before exam day."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Primitive Types & Variables
+  - Objects & Classes
+  - Arrays & ArrayLists
+  - Iteration & Traversal
+  - Inheritance & Polymorphism
+---
+
+You have **three days** until the AP Computer Science A exam. This is not the time to learn recursion from scratch — it's time to drill the **highest-frequency Java patterns** and lock in the **FRQ templates** the College Board reuses every year.
+
+This plan assumes ~4 focused hours per day. Skip nothing on the checklist; if you're short on time, **shorten the practice sets, not the topic coverage.**
+
+## Day 1: Primitives, Objects, and Classes (4 hrs)
+
+The first ~20 multiple-choice questions lean on **understanding variables, objects, and how to write methods**.
+
+### What to review (90 min)
+
+- **Primitive types:** `int`, `double`, `boolean` — declaration, initialization, assignment.
+- **Integer division and modulo:** `7 / 2 = 3`, `7 % 2 = 1`. This trap appears on almost every exam.
+- **String methods:** `.length()`, `.substring()`, `.indexOf()`, `.compareTo()`, `.equals()` vs `==`.
+- **Math class:** `Math.abs()`, `Math.max()`, `Math.min()`, `Math.pow()`, `Math.random()`.
+- **Writing a class:** constructor, instance variables, `this` keyword, instance methods, static variables.
+- **Scope and visibility:** `public`, `private`, local variables inside methods.
+
+### What to practice (2.5 hrs)
+
+- Write 3 simple methods: one that uses integer division, one that manipulates a String, one that uses `Math.random()`.
+- Write 1 complete class with a constructor and 2 instance methods.
+- 15 multiple-choice on primitives and object instantiation.
+
+> **💡 Highest leverage:** Integer division mistakes appear on **every** exam. Drill 5 problems where you compute `a / b` and `a % b` together.
+
+## Day 2: Arrays, ArrayLists, and Traversal (4 hrs)
+
+These two structures account for nearly **half** of all AP CS A points. You must know both forwards and backwards.
+
+### What to review (90 min)
+
+- **1D Arrays:** declaration (`int[] arr = new int[10]`), access, traversal with for-loops.
+- **Common array algorithms:** find max/min, sum all elements, count matches, swap, reverse.
+- **ArrayList basics:** add, remove, get, set, size — and that **ArrayList uses generics** (`ArrayList<Integer>` not `ArrayList`).
+- **Traversal patterns:** enhanced for-loop vs index-based for-loop vs while-loop.
+- **The remove trap:** removing during iteration can skip elements; use `remove(index)` carefully.
+- **2D arrays:** row-major order, nested for-loops, accessing `arr[row][col]`.
+
+### What to practice (2.5 hrs)
+
+- 1 FRQ-style problem: write a method that takes an array and returns the index of the max element.
+- 1 FRQ-style problem: write a method that takes an ArrayList, removes all even numbers, and returns the size.
+- 1 2D array problem: write a method that sums all elements in a 2D array.
+- 20 multiple-choice on arrays and ArrayLists.
+
+> **⚠️ FRQ trap:** When removing from an ArrayList during iteration, your index will skip elements. Either iterate backwards, use an iterator, or build a new ArrayList instead.
+
+## Day 3: Inheritance, Recursion, and Full FRQ Timed Practice (4 hrs)
+
+### What to review (90 min)
+
+- **Inheritance:** `extends` keyword, `super()` call in constructor, method overriding.
+- **Polymorphism:** a subclass object in a superclass variable, calling overridden methods.
+- **The Object class:** `.equals()`, `.toString()`, `.hashCode()` — know what you're overriding.
+- **Recursion basics:** base case, recursive case, the call stack, tracing a recursive method by hand.
+- **Common recursive patterns:** factorial, sum of array, binary search.
+
+### What to practice (2.5 hrs — full timed set)
+
+- Trace 2 recursive methods by hand (write out 5-7 steps of the call stack).
+- Write 1 recursive method (e.g., sum of an array, or count a character in a string).
+- 1 full FRQ timed (methods and control structures, 10 min).
+- 1 full FRQ timed (class design with inheritance, 10 min).
+- 25 mixed multiple-choice (high-frequency topics), strictly timed.
+
+> **💡 Recursion on Day 3:** If you're weak on recursion, spend 30 min here and accept you may lose 2-3 points. Don't sacrifice array mastery to learn recursion from scratch.
+
+## The night before
+
+Skim our [last-minute review checklist](/courses/ap-computer-science-a/cram/last-minute-review). Get **8 hours of sleep** — tomorrow your brain must parse Java syntax cleanly, and fatigue turns `==` into `.equals()` blindness.
+
+## Common point-leaks (prevent these)
+
+- Using `==` to compare Strings instead of `.equals()`.
+- Integer division instead of casting to `double` before division.
+- Forgetting to return from a method.
+- ArrayList remove during a forward iteration (skip next element).
+- Off-by-one errors in array loops and substring calls.
+- Null pointer exceptions from accessing uninitialized objects.
+
+## What this 3-day plan deliberately skips
+
+You will *not* fully master advanced recursion patterns or deep inheritance hierarchies in 3 days. If you're shaky there: do 2 worked examples, trace 1 complex recursive call, and accept you may lose a few points. Spend the saved time mastering array traversal and basic class design instead.
+
+## Ready to start?
+
+[Open the AP Computer Science A topic library →](/courses/ap-computer-science-a) and start with Day 1 if you're weak on classes, or Day 2 if you're weak on arrays. Mix in 2-3 FRQ practice problems. You've got this.
+
+---
+
+**Related guides:**
+- [7-day study plan](/courses/ap-computer-science-a/cram/7-day)
+- [FRQ practice guide](/courses/ap-computer-science-a/cram/frq-practice)
+- [Last-minute review](/courses/ap-computer-science-a/cram/last-minute-review)

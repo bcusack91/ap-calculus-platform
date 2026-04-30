@@ -1,0 +1,213 @@
+---
+title: "AP Computer Science A FRQ Practice Guide"
+description: "Master the four FRQ archetypes: methods, class design, array/ArrayList, and 2D arrays. Common Java pitfalls, worked examples, and scoring strategies."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - FRQ Patterns
+  - Common Pitfalls
+  - Worked Examples
+  - Scoring Rubrics
+---
+
+FRQs make up **50% of your AP CS A score** (36 out of 108 points). The four FRQs follow predictable patterns. Learn them, and you'll know exactly what to do on exam day.
+
+You have **90 minutes total for 4 FRQs** — roughly **22 minutes per problem**. Don't spend 40 min perfecting one; get partial credit on all four instead.
+
+## The Four FRQ Archetypes
+
+### FRQ 1: Methods and Control Structures (~9 pts, 20 min)
+
+**What it asks:** Write a single method (no class design) that uses loops and conditionals.
+
+**Typical scenario:**
+- Parse a String or array.
+- Return a count, sum, index, or boolean.
+- Use `.substring()`, `.indexOf()`, modulo, or array access.
+
+**Example prompt:** "Write a method `countVowels(String s)` that returns the number of vowels in the string. Vowels are a, e, i, o, u (both cases)."
+
+**Rubric focus:**
+- Method signature correct (parameter type, return type).
+- Logic correct (handles all cases).
+- Syntax correct (no compilation errors).
+
+**High-yield mistakes to avoid:**
+- Forgetting `return` statement.
+- Using `==` to compare Strings.
+- Off-by-one in loop bounds.
+- Integer division when you meant floating-point.
+
+### FRQ 2: Class Design (~9 pts, 20 min)
+
+**What it asks:** Write a complete class with constructor, instance variables, and 2-3 methods.
+
+**Typical scenario:**
+- You're given a description (e.g., "A student has a name, GPA, and major").
+- Write the constructor to initialize all fields.
+- Write getter/setter methods or action methods (e.g., `addCourse()`, `updateGPA()`).
+- Often includes inheritance (subclass of a given superclass).
+
+**Example prompt:** "Write a class `Student` with fields `name`, `gpa`, and `courses` (an ArrayList). Include a constructor and a method `addCourse(String courseName)` that adds to the list. Also write a method `isHonors()` that returns true if GPA >= 3.5."
+
+**Rubric focus:**
+- Constructor initializes all fields.
+- Instance variables declared correctly (right types).
+- Methods have correct signature and logic.
+- No stray syntax errors.
+
+**High-yield mistakes to avoid:**
+- Forgetting `this` keyword in constructor when assigning parameters to fields.
+- Wrong return type (e.g., returning `void` when you should return a value).
+- ArrayList without generics: `ArrayList` instead of `ArrayList<String>`.
+
+### FRQ 3: Array/ArrayList Manipulation (~9 pts, 20 min)
+
+**What it asks:** Write one or two methods that traverse and manipulate an array or ArrayList.
+
+**Typical scenario:**
+- Remove all elements matching a condition.
+- Shift or rearrange elements.
+- Count, sum, or find based on a criterion.
+
+**Example prompt:** "Write a method `removeNegatives(ArrayList<Integer> numbers)` that removes all negative numbers from the list. This method has no return value (void)."
+
+**Rubric focus:**
+- Correct traversal (index vs enhanced for-loop chosen wisely).
+- Correct remove/modify logic.
+- No skipped elements (if removing, iterate backwards or use a new list).
+
+**High-yield mistakes to avoid:**
+- Removing during forward iteration (skips next element).
+- Using `.get(i)` on an ArrayList after `.remove()` without updating the index.
+- Forgetting `.size()` is dynamic (recalculate each loop iteration if you use it).
+
+### FRQ 4: 2D Array Traversal (~9 pts, 20 min)
+
+**What it asks:** Write one or two methods that traverse a 2D array using nested loops.
+
+**Typical scenario:**
+- Sum/find max in all elements, or per row/column.
+- Find a specific position or pattern.
+- Check if all rows satisfy a condition.
+
+**Example prompt:** "Write a method `rowSum(int[][] matrix, int row)` that returns the sum of all elements in the specified row. Also write a method `findValue(int[][] matrix, int target)` that returns the position `[row][col]` of target, or null if not found."
+
+**Rubric focus:**
+- Nested loop structure (outer = row, inner = column).
+- Correct array access `[row][col]`.
+- Correct logic (sum, search, or whatever is asked).
+
+**High-yield mistakes to avoid:**
+- Swapped row/col indices (accessing `[col][row]` instead of `[row][col]`).
+- Incorrect loop bounds (forgetting `matrix.length` vs `matrix[0].length`).
+- Off-by-one in nested loop iteration.
+
+---
+
+## Common Java Pitfalls (Scoring Table)
+
+| Pitfall | Example | Fix | Points Lost |
+|---|---|---|---|
+| **Using == on Strings** | `if (s == "hello")` | Use `.equals(s, "hello")` or `s.equals("hello")` | 1-2 pts |
+| **Integer division instead of cast** | `double avg = total / count;` | `double avg = (double) total / count;` | 1-2 pts |
+| **Forgetting `return` statement** | Method ends with `}` but no return | Add `return value;` before final `}` | 2-3 pts |
+| **Off-by-one in loop** | `for (int i = 0; i <= arr.length; i++)` | Use `i < arr.length` (or `i < size` for ArrayList) | 1-2 pts |
+| **ArrayList remove during iteration** | Loop forward, remove, skip next | Loop backwards or use separate list | 2-3 pts |
+| **Wrong array access** | `arr[col][row]` in 2D array | Should be `arr[row][col]` | 1-2 pts |
+| **Null pointer exception** | Call method on uninitialized object | Check for `null` or initialize before use | 1-3 pts |
+| **ArrayList without generics** | `ArrayList list = new ArrayList();` | Use `ArrayList<Integer>` or `ArrayList<String>` | 0-1 pts (warning only) |
+| **Missing `.substring()` bounds** | `s.substring(0, s.length() + 1)` | Bounds are `[0, s.length())` (end exclusive) | 1 pt |
+| **Constructor doesn't initialize fields** | Constructor empty; fields are null | Call `this.field = param;` in constructor | 2-3 pts |
+
+---
+
+## Worked Example 1: Class Design (FRQ 2 Pattern)
+
+**Prompt:** "Write a class `Course` that stores a course name and enrollment list (ArrayList of student names). Include a constructor that takes a course name, a method `enrollStudent(String name)` that adds a student, and a method `getEnrollment()` that returns the number of students."
+
+**Solution:**
+
+    public class Course {
+        private String courseName;
+        private ArrayList<String> students;
+        
+        public Course(String name) {
+            this.courseName = name;
+            this.students = new ArrayList<String>();
+        }
+        
+        public void enrollStudent(String name) {
+            students.add(name);
+        }
+        
+        public int getEnrollment() {
+            return students.size();
+        }
+    }
+
+**Scoring checklist:**
+- ✅ Fields declared with correct types and access modifier (`private`).
+- ✅ Constructor initializes both fields.
+- ✅ `enrollStudent()` uses `.add()` correctly.
+- ✅ `getEnrollment()` returns an int (`.size()`).
+- ✅ No syntax errors, no `null` pointer risks.
+
+---
+
+## Worked Example 2: Array Algorithm (FRQ 3 Pattern)
+
+**Prompt:** "Write a method `removeDuplicates(ArrayList<Integer> numbers)` that removes all duplicate values, keeping only the first occurrence. The method has no return value."
+
+**Solution:**
+
+    public void removeDuplicates(ArrayList<Integer> numbers) {
+        int i = 0;
+        while (i < numbers.size()) {
+            Integer current = numbers.get(i);
+            int j = i + 1;
+            while (j < numbers.size()) {
+                if (numbers.get(j).equals(current)) {
+                    numbers.remove(j);
+                } else {
+                    j++;
+                }
+            }
+            i++;
+        }
+    }
+
+**Scoring checklist:**
+- ✅ Nested loop structure (outer advances, inner removes).
+- ✅ Removal handled correctly (inner loop does not increment `j` on remove).
+- ✅ Uses `.equals()` to compare Integers (not `==`).
+- ✅ `.size()` recalculated each iteration (necessary for shrinking list).
+- ✅ No syntax errors.
+
+> **💡 Alternative:** Build a new ArrayList with only first occurrences, then call `numbers.clear()` and `addAll()` — simpler and avoids the loop pitfall.
+
+---
+
+## FRQ Day-Of Strategy
+
+1. **Scan all 4 FRQs in the first 3 minutes.** Identify which looks easiest.
+2. **Start with your easiest FRQ.** Psychological boost; you're working for 5+ minutes before risking a blank answer.
+3. **Allocate ~22 min per FRQ.** After 22 min, move on even if incomplete.
+4. **Write pseudocode first for hard FRQs.** 1 min of pseudocode saves 5 min of coding errors.
+5. **Do not obsess over one line.** Get partial credit on all four rather than perfect on two.
+
+---
+
+## Scoring Rules You Should Know
+
+- **Partial credit is real:** A method with correct logic but a missing semicolon can score 7-8 out of 9 points.
+- **Syntax errors are forgiving:** As long as the intent is clear, minor typos don't tank you.
+- **Off-by-one in one place:** If your loop is `i <= arr.length` (one too many), you'll lose 1-2 points, not 9.
+- **Wrong return type:** Returning `void` when you should return `int` is a big error (-3 pts), but everything else might be fine.
+
+---
+
+**Related guides:**
+- [3-day cram plan](/courses/ap-computer-science-a/cram/3-day)
+- [7-day study plan](/courses/ap-computer-science-a/cram/7-day)
+- [Last-minute review](/courses/ap-computer-science-a/cram/last-minute-review)

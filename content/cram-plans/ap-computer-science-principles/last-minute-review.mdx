@@ -1,0 +1,159 @@
+---
+title: "AP Computer Science Principles Last-Minute Review (Night Before)"
+description: "45-minute night-before recap: pseudocode reference card, Big Ideas summary, must-know vocab, common traps, score boundaries, and morning-of checklist."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Pseudocode Reference
+  - Big Ideas Summary
+  - Vocabulary Cheat Sheet
+  - Common Traps
+---
+
+The exam is **tomorrow**. This is not the time to learn new content — it's time to skim this reference card, reset, and sleep. Spend 30–45 minutes here, then put your notes away.
+
+## AP Pseudocode Reference Card
+
+| Construct | Syntax | Example | Notes |
+|---|---|---|---|
+| **Assignment** | `var ← value` | `x ← 5` or `name ← INPUT()` | Assigns right side to left side |
+| **Display** | `DISPLAY(value)` | `DISPLAY("Hello")` | Prints to screen |
+| **Input** | `value ← INPUT()` | `age ← INPUT()` | Reads user input |
+| **IF/ELSE** | `IF (condition) { ... } ELSE { ... }` | `IF (x > 5) { DISPLAY("big") } ELSE { DISPLAY("small") }` | Only one branch executes |
+| **REPEAT n TIMES** | `REPEAT n TIMES { ... }` | `REPEAT 3 TIMES { x ← x + 1 }` | Fixed count loop; 1-indexed |
+| **REPEAT UNTIL** | `REPEAT UNTIL (condition) { ... }` | `REPEAT UNTIL (x = 10) { x ← x + 1 }` | Loop until true |
+| **FOR EACH** | `FOR EACH item IN list { ... }` | `FOR EACH num IN scores { sum ← sum + num }` | Iterate without index |
+| **Procedure** | `PROCEDURE name(p1, p2) { ... RETURN value }` | `PROCEDURE add(a, b) { RETURN a + b }` | Takes params, returns value |
+| **List create** | `list ← [1, 2, 3]` | `scores ← [90, 85, 95]` | 1-indexed (first = index 1) |
+| **List index** | `list[i]` | `list[1]` is first item | **1-indexed**, not 0-indexed |
+| **INSERT** | `INSERT(list, i, val)` | `INSERT(scores, 2, 100)` | Insert val at index i; shift right |
+| **APPEND** | `APPEND(list, val)` | `APPEND(scores, 100)` | Add val to end |
+| **REMOVE** | `REMOVE(list, i)` | `REMOVE(scores, 1)` | Delete index i; shift left |
+| **LENGTH** | `LENGTH(list)` | `n ← LENGTH(scores)` | Number of items |
+
+## The 5 Big Ideas at a Glance
+
+| Big Idea | Focus | Key Concepts |
+|---|---|---|
+| **1. Creative Development** | How programs are designed, built, debugged | Purpose vs function; iterative design; debugging; collaboration |
+| **2. Data** | How data is represented, stored, compressed | Binary (bits/bytes); lossy vs lossless; metadata; data abstraction; encryption |
+| **3. Algorithms & Programming** | How programs make decisions, loop, call procedures | Variables; lists; conditionals; loops; procedures; sequencing; undecidable problems; efficiency |
+| **4. Computer Systems & Networks** | How the Internet works; reliability | Packets; routing; protocols; redundancy; scalability; fault tolerance; bandwidth; latency |
+| **5. Impact of Computing** | How computing affects society | Digital divide; PII; security; phishing; malware; bias; crowdsourcing; ethics |
+
+## Must-Know Vocabulary
+
+**Data:**
+- **Bit** = 1 or 0; smallest unit
+- **Byte** = 8 bits; 256 values (0–255)
+- **Lossy compression** = data is lost (JPEG, MP3); smaller file, cannot fully recover
+- **Lossless compression** = all data preserved (PNG, ZIP); larger file, fully reversible
+- **Metadata** = data *about* data (file size, creation date, photo location)
+
+**Algorithms:**
+- **Sequencing** = order of instructions matters
+- **Selection** = IF/ELSE (different paths based on condition)
+- **Iteration** = loops (repeat until done)
+- **Procedural abstraction** = reusable procedure that hides implementation details
+- **Sequential computing** = one task after another; slower
+- **Parallel computing** = multiple tasks at once; faster, more complex
+- **Undecidable problem** = no algorithm solves it for *all* inputs (e.g., halting problem)
+
+**Networks:**
+- **Packet** = data + header (source, destination, protocol info)
+- **Protocol** = agreed-upon rules for communication (TCP/IP, HTTP, DNS)
+- **Router** = device that reads packet header, forwards to next hop
+- **Redundancy** = multiple paths; if one fails, reroute
+- **Scalability** = system grows without major redesign
+- **Fault tolerance** = system continues if part fails
+- **Bandwidth** = data capacity per unit time (Mbps, Gbps)
+- **Latency** = delay before data arrives
+
+**Security:**
+- **PII** = Personally Identifiable Information (name, SSN, email, location)
+- **Symmetric encryption** = same key for encode/decode (fast, less secure for public)
+- **Asymmetric encryption** = public key to encode, private key to decode (slower, for authentication)
+- **Phishing** = fake email/website to steal credentials
+- **Malware** = software designed to harm (virus, worm, ransomware)
+- **Multi-factor authentication** = 2+ forms of proof (password + phone code)
+
+**Impact:**
+- **Digital divide** = gap in access to computing (low-income, rural, elderly)
+- **Crowdsourcing** = many people contribute (Wikipedia, citizen science)
+- **Computing bias** = algorithms trained on biased data → biased output
+- **Intellectual property** = copyright (creative work), patent (invention), DMCA (anti-circumvention)
+
+## Top 10 Traps That Cost Real Points
+
+| Trap | Wrong | Right |
+|---|---|---|
+| **List indexing** | AP Pseudocode lists are 0-indexed | **1-indexed** — `list[1]` is first item |
+| **Lossy vs lossless** | JPEG is lossless; PNG is lossy | JPEG = **lossy** (loses data); PNG = **lossless** (preserves) |
+| **Symmetric vs asymmetric** | Asymmetric uses same key | Symmetric = same key (fast). Asymmetric = public/private (authentication) |
+| **Parallel vs sequential** | Parallel uses one processor | Sequential = one task. Parallel = many tasks **at once** (faster) |
+| **IF/ELSE execution** | Both branches can run | Only **one** branch executes |
+| **Loop increment** | Forgetting to update counter | Write variable state **after each iteration** |
+| **Procedure scope** | Variables inside a procedure are global | Variables inside = **local** (exist only in that procedure) |
+| **Redundancy purpose** | Redundancy = same data twice | Redundancy = **multiple paths**; if one fails, reroute |
+| **Undecidable definition** | Undecidable = difficult | Undecidable = **no algorithm solves it for all inputs** |
+| **Data abstraction** | A single variable is a data abstraction | **Lists or collections** = data abstraction, not single variables |
+
+## Pseudocode Tracing Quick Drill
+
+**Trace this 5-line block. What does it output?**
+
+    num ← 0
+    REPEAT 4 TIMES
+    {
+        num ← num + 2
+    }
+    DISPLAY(num)
+
+**Answer:** 8 (0 → 2 → 4 → 6 → 8 after 4 iterations)
+
+If you got that right: you're ready.
+
+## Score Boundaries
+
+Approximate ranges (out of 70 MCQ):
+- **5:** ~50–70 (71–100%)
+- **4:** ~40–49 (57–70%)
+- **3:** ~28–39 (40–56%)
+- **2:** ~20–27 (29–39%)
+- **1:** below ~20 (below 29%)
+
+Plus 30% from your Create Performance Task (already submitted).
+
+**You need ~50 correct on the MCQ to score a 5.** You can leave 20 questions blank and still achieve the top score.
+
+## Morning-of Checklist
+
+- ☐ 8 hours of sleep.
+- ☐ Real breakfast (protein + slow carbs, not just sugar).
+- ☐ Two sharpened #2 pencils, blue/black pen.
+- ☐ Approved calculator (if school allows; not all schools do).
+- ☐ Photo ID + AP ID label sheet.
+- ☐ Water bottle, snack for the break.
+- ☐ Watch (without alarm) if your room doesn't have a clock.
+- ☐ Arrive 30 minutes early.
+
+## During the Exam
+
+1. **MCQ section (2 hours):** Mark and skip anything taking >2 min. Come back.
+2. **Trace pseudocode:** Write down variable values after each line. Use a table if helpful.
+3. **Read every answer choice** before selecting; eliminate wrong answers first.
+4. **Flag to return:** If unsure, flag and come back in the last 15 min.
+5. **Don't leave blanks.** Guess if you have to — no penalty for wrong answers.
+6. **Last 5 minutes:** Scan for bubbled blanks; fill anything left.
+
+## One Last Thing
+
+Your CPT is submitted. Your studying is done. The work is complete.
+
+Show up rested, breathe between questions, and remember that this is a test of *reading and reasoning about code*, not writing code from scratch. You've prepared. Trust it.
+
+Good luck. You've got this. 🎯
+
+---
+
+**Need a deeper prep?** Check [3-Day cram plan →](/courses/ap-computer-science-principles/cram/3-day), [1-Month plan →](/courses/ap-computer-science-principles/cram/1-month), or the [MCQ pseudocode guide →](/courses/ap-computer-science-principles/cram/frq-practice).

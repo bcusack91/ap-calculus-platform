@@ -1,0 +1,163 @@
+---
+title: "AP Computer Science A 7-Day Cram Plan"
+description: "A structured week of AP CS A review: one unit per day, daily FRQ drills, mock exam, and practice timing to build confidence before exam week."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - All 10 CED Units
+  - FRQ Patterns
+  - Timed Practice
+---
+
+You have **one week** to lock in AP Computer Science A. This plan dedicates one day to most units, with focused FRQ practice and a full mock on the weekend.
+
+Commit **5 focused hours per day**. Use the Java Quick Reference (provided on exam day) even during practice — you won't have it memorized, and that's okay.
+
+## Study Schedule
+
+| Day | Focus | Time | Key Topics |
+|---|---|---|---|
+| **Mon** | Primitives & Wrapper Classes | 5 hrs | `int`, `double`, `boolean`, casting, `Math` class, autoboxing, type conversion |
+| **Tue** | Using Objects & String | 5 hrs | String methods (`.substring()`, `.indexOf()`, `.length()`), comparison operators, immutability |
+| **Wed** | Boolean Expressions & Conditionals | 5 hrs | `if`/`else`, compound conditions, De Morgan's Laws, short-circuit evaluation, nested conditionals |
+| **Thu** | Iteration & Writing Classes | 5 hrs | `for`, `while`, nested loops; constructors, instance variables, `this`, scope, static vs instance |
+| **Fri** | Arrays & ArrayList | 5 hrs | 1D arrays, traversal, ArrayList add/remove/get/set, common algorithms (max, min, search) |
+| **Sat** | 2D Arrays & Inheritance | 5 hrs | Row-major traversal, nested loops, `extends`, `super`, method overriding, polymorphism |
+| **Sun** | Recursion + Mock Exam | 5 hrs | Base/recursive cases, tracing calls, recursive helper methods, then **full 3-hour timed mock** |
+
+## Monday: Primitives & Wrapper Classes
+
+### Review checklist (90 min)
+- Primitive variable declaration and initialization.
+- Integer division: `7 / 2 = 3` (not 3.5).
+- Modulo: `7 % 2 = 1`.
+- `Math.abs()`, `Math.max()`, `Math.min()`, `Math.pow()`.
+- `Math.random()` returns a double in `[0, 1)`; multiply and cast to get an int range.
+- Wrapper classes: `Integer`, `Double`, `Boolean`.
+- Autoboxing: `Integer x = 5;` (wraps automatically).
+- Unboxing: `int y = x;` (unwraps automatically).
+
+### Practice (3 hrs)
+- Write a method that generates a random int between 1 and 100 (inclusive).
+- Write a method that takes two ints and returns the max.
+- 10 multiple-choice on primitives and integer division.
+- 1 FRQ-style: write a method using `Math.random()` and modulo.
+
+> **💡 Exam trick:** On the calculator section, you can use `Math.random()` in code; on non-calculator, interpret it conceptually.
+
+## Tuesday: Using Objects & String Methods
+
+### Review checklist (90 min)
+- String declaration: `String s = "hello";`
+- `.length()`, `.substring(start, end)` (end is **exclusive**), `.charAt(index)`.
+- `.indexOf(substring)` returns the index, or -1 if not found.
+- `.compareTo(other)` returns negative, zero, or positive (lexicographic order).
+- `.equals(other)` and `.equalsIgnoreCase(other)` for comparison.
+- **Never use `==` on Strings** — it compares object references, not contents.
+- String immutability: `s.substring()` does not modify `s`.
+
+### Practice (3 hrs)
+- Write a method that counts how many times a character appears in a String.
+- Write a method that reverses a String.
+- 10 multiple-choice on String methods.
+- 1 FRQ-style: parse a CSV line by finding `.indexOf(',')` and using `.substring()`.
+
+> **⚠️ Trap:** `.substring(0, 3)` on "hello" returns "hel", **not "hell"**. The end index is exclusive.
+
+## Wednesday: Boolean Expressions & Conditionals
+
+### Review checklist (90 min)
+- `if`, `else if`, `else` structure.
+- Relational operators: `<`, `>`, `<=`, `>=`, `==`, `!=`.
+- Logical operators: `&&` (AND), `||` (OR), `!` (NOT).
+- **Short-circuit evaluation:** `a && b` stops at `a` if `a` is false; `a || b` stops at `a` if `a` is true.
+- De Morgan's Laws: `!(a && b)` is `(!a || !b)`.
+- Nested conditionals and if-else chains.
+
+### Practice (3 hrs)
+- Write a method that determines if a number is even, odd, or prime (for small numbers).
+- Write a method that grades based on a score (90-100 = A, etc.).
+- 10 multiple-choice on conditionals and short-circuit evaluation.
+- 1 FRQ-style: write a method with compound conditions.
+
+## Thursday: Iteration & Writing Classes
+
+### Review checklist (90 min)
+- `for` loop structure: `for (int i = 0; i < 10; i++)`.
+- `while` loop: condition checked before each iteration.
+- Nested loops and loop control (break, continue — though continue is rare on exam).
+- Enhanced for-loop: `for (int x : array)` iterates over each element.
+- Writing a class: fields, constructor, instance methods, `this` keyword.
+- Instance variables vs local variables; scope.
+- Static variables (shared across all instances).
+
+### Practice (3 hrs)
+- Write a complete class `Student` with a constructor, a name field, a grade field, and a method to update grade.
+- Write a method with a nested loop (e.g., print a multiplication table).
+- 10 multiple-choice on iteration and class design.
+- 1 FRQ-style: design a simple class (Part A).
+
+> **💡 High yield:** FRQ Part 1 often asks you to write a single method; Part 2 asks you to write a complete class. Know the exact structure.
+
+## Friday: Arrays & ArrayList
+
+### Review checklist (90 min)
+- Array declaration: `int[] arr = new int[10];`
+- Access: `arr[i]` (0-indexed).
+- Common algorithms: find max, find min, sum, count matches, search, reverse, swap.
+- ArrayList: `ArrayList<Integer> list = new ArrayList<>();`
+- `.add(element)`, `.remove(index)`, `.get(index)`, `.set(index, element)`, `.size()`.
+- Enhanced for-loop with ArrayList: `for (Integer x : list)`.
+- **Remove during iteration pitfall:** always remove from the end backwards, or use a separate list.
+
+### Practice (3 hrs)
+- Write a method that finds the index of the maximum element in an array.
+- Write a method that removes all multiples of 3 from an ArrayList.
+- Write a method that reverses an array in-place.
+- 10 multiple-choice on arrays and ArrayList.
+- 1 FRQ-style: array/ArrayList traversal problem (Part 2 or 3).
+
+## Saturday: 2D Arrays & Inheritance
+
+### Review checklist (90 min)
+- 2D array declaration: `int[][] grid = new int[rows][cols];`
+- Access: `grid[row][col]`.
+- Row-major traversal: loop rows (outer), then columns (inner).
+- Inheritance: `class Dog extends Animal { }` — Dog inherits fields and methods from Animal.
+- Constructor: `super()` call to initialize parent fields.
+- Method overriding: same signature, different implementation in subclass.
+- Polymorphism: `Animal dog = new Dog();` — dog is an Animal, but overridden methods use Dog's version.
+- The Object class: every class implicitly extends Object.
+
+### Practice (3 hrs)
+- Write a method that sums all elements in a 2D array.
+- Write a method that finds the max in a 2D array.
+- Design a class hierarchy: `Animal` (superclass), `Dog` and `Cat` (subclasses) with overridden methods.
+- 10 multiple-choice on 2D arrays and inheritance.
+- 1 FRQ-style: inheritance and polymorphism.
+
+## Sunday: Recursion + Full Mock Exam
+
+### Review checklist (60 min)
+- Base case and recursive case.
+- Recursive helper methods: pass an additional parameter (e.g., index or accumulator).
+- Common patterns: factorial, Fibonacci, sum of array, count occurrences, binary search.
+- Tracing a recursive call: write out the call stack by hand.
+
+### Practice (4.5 hrs)
+- Trace 3 recursive methods by hand (5-10 steps each).
+- Write 2 recursive methods from scratch.
+- **Full 3-hour timed mock exam:** mix of multiple-choice and FRQs.
+
+> **🎯 Mock exam mindset:** Treat this as the real thing. Use only your calculator, no notes, strict timing.
+
+## Post-exam tonight
+
+Review your mock: which topics cost the most points? Which FRQ patterns did you struggle with? Spend 30 min on your weakest topic before bed.
+
+---
+
+**Related guides:**
+- [3-day cram plan](/courses/ap-computer-science-a/cram/3-day)
+- [FRQ practice guide](/courses/ap-computer-science-a/cram/frq-practice)
+- [Last-minute review](/courses/ap-computer-science-a/cram/last-minute-review)

@@ -1,0 +1,232 @@
+---
+title: "AP Computer Science A Last-Minute Review (Night Before)"
+description: "The night-before AP CS A checklist: Java syntax, common traps, quick reference, calculator tips, and morning-of advice. Skim in 45 minutes."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Java Quick Reference
+  - Syntax Checklist
+  - Common Traps
+  - Exam Strategy
+---
+
+The exam is **tomorrow**. This is not the time to learn recursion — it's the time to skim, reset, and sleep. Spend 30-45 minutes on this page, then put your notes away.
+
+## Primitive Types & Variables
+
+| Type | Range | Default | Notes |
+|---|---|---|---|
+| `int` | -2^31 to 2^31-1 | 0 | **Integer division truncates:** `7 / 2 = 3`. |
+| `double` | ~±1.8 × 10^308 | 0.0 | Use for all division unless you want truncation. |
+| `boolean` | `true` or `false` | `false` | Use `&&`, `||`, `!` for logic. |
+| `char` | Unicode character | N/A | Rarely tested, but know `'a'` vs `"a"` (char vs String). |
+
+**Casting:** `(double) x / 2` forces floating-point division. `(int) 3.7` truncates to 3.
+
+**Math methods:** `Math.abs()`, `Math.max()`, `Math.min()`, `Math.pow(base, exp)`, `Math.sqrt()`, `Math.random()`.
+
+---
+
+## Essential String Methods
+
+| Method | Returns | Example | Notes |
+|---|---|---|---|
+| `.length()` | int | `"hello".length()` = 5 | No parentheses on length property? No — always `.length()`. |
+| `.substring(i, j)` | String | `"hello".substring(1, 4)` = "ell" | End index is **exclusive**. Bounds: [0, length()). |
+| `.charAt(i)` | char | `"hello".charAt(0)` = 'h' | Zero-indexed. Throws exception if out of bounds. |
+| `.indexOf(s)` | int | `"hello".indexOf("ll")` = 2 | Returns -1 if not found. |
+| `.compareTo(s)` | int | `"apple".compareTo("banana")` < 0 | Negative if this < s (lexicographically). |
+| `.equals(s)` | boolean | `"hello".equals("hello")` = true | **Use this, never `==`**. |
+| `.toUpperCase()` / `.toLowerCase()` | String | `"Hello".toUpperCase()` = "HELLO" | Returns new String; original unchanged. |
+
+**Immutability:** Strings are immutable. `s.substring()` creates a new String; `s` is unchanged.
+
+---
+
+## Array & ArrayList Quick Reference
+
+### Arrays
+
+    int[] arr = new int[10];           // Length 10, all zeros
+    arr[0] = 5;                        // Access element
+    for (int i = 0; i < arr.length; i++) { }  // Traversal
+
+**Common algorithms:**
+- **Max:** loop through, keep track of max so far, compare each new element.
+- **Sum:** loop through, add to accumulator.
+- **Search:** loop through, return index if found, else return -1.
+- **Reverse:** swap arr[i] with arr[arr.length - 1 - i] for i < arr.length / 2.
+
+### ArrayList
+
+    ArrayList<Integer> list = new ArrayList<>();
+    list.add(5);                       // Add to end
+    list.remove(0);                    // Remove at index 0
+    list.get(i);                       // Access element
+    list.set(i, value);                // Replace element
+    list.size();                       // Current size
+    for (int x : list) { }             // Enhanced for-loop
+
+**Critical trap:** If you remove during a forward loop, your index will skip the next element. Solution: loop backwards, or use a separate list.
+
+---
+
+## Class Structure Template
+
+    public class MyClass {
+        private int field1;            // Instance variable
+        private String field2;
+        
+        public MyClass(int f1, String f2) {  // Constructor
+            this.field1 = f1;
+            this.field2 = f2;
+        }
+        
+        public void myMethod() {       // Instance method
+            // use this.field1, this.field2
+        }
+        
+        public static void main(String[] args) {
+            MyClass obj = new MyClass(10, "test");
+            obj.myMethod();
+        }
+    }
+
+**Key points:**
+- Constructor name matches class name, no return type.
+- Use `this.field` to refer to instance variables inside methods.
+- `public` methods can be called from outside; `private` are internal only.
+- Static variables are shared across all instances; instance variables are per-object.
+
+---
+
+## Inheritance & Polymorphism
+
+    public class Animal {
+        public void makeSound() { System.out.println("Generic sound"); }
+    }
+    
+    public class Dog extends Animal {
+        @Override
+        public void makeSound() { System.out.println("Woof"); }
+    }
+
+**Key points:**
+- `Dog` inherits all methods and fields from `Animal`.
+- `@Override` marks a method that replaces a superclass method.
+- A `Dog` object can be stored in an `Animal` variable: `Animal dog = new Dog();`
+- When you call `dog.makeSound()`, it calls `Dog`'s version (polymorphism).
+- Call parent constructor with `super();` in your constructor.
+
+---
+
+## Recursion Template
+
+    public static int factorial(int n) {
+        if (n <= 1) return 1;          // Base case
+        return n * factorial(n - 1);   // Recursive case
+    }
+
+**Key points:**
+- Base case stops recursion (e.g., n ≤ 1).
+- Recursive case calls itself with a simpler argument.
+- Each call uses stack memory; too deep causes `StackOverflowError`.
+- Tracing: write out 5-7 nested calls on paper to verify logic.
+
+---
+
+## Control Structures
+
+### If/Else
+
+    if (condition) {
+        // code
+    } else if (other) {
+        // code
+    } else {
+        // code
+    }
+
+### Loops
+
+    for (int i = 0; i < 10; i++) { }           // Index-based
+    for (int x : arr) { }                      // Enhanced (no index)
+    while (condition) { }                      // Condition checked first
+    
+    do { } while (condition);                  // Condition checked after
+
+---
+
+## Top 10 Traps (Prevent These)
+
+1. **`==` on Strings:** Always use `.equals()`. `"hello" == "hello"` may be false.
+2. **Integer division:** `7 / 2 = 3`, not 3.5. Cast to `double` if you need decimals.
+3. **Array index out of bounds:** Loop must be `i < arr.length`, not `i <= arr.length`.
+4. **ArrayList remove during forward iteration:** Skips next element. Loop backwards instead.
+5. **Forgetting `return` statement:** Method doesn't return a value even though return type is non-void.
+6. **`.substring()` end index is exclusive:** `"hello".substring(0, 2)` = "he", not "hel".
+7. **Null pointer exception:** Call method on uninitialized object. Always initialize or check for `null`.
+8. **Off-by-one in 2D arrays:** `grid[row][col]`, not `grid[col][row]`.
+9. **Modifying ArrayList while iterating forward:** Add/remove changes indices. Use a separate list or iterate backwards.
+10. **Swapped parentheses or braces:** `if (x > 5)` (condition in parentheses) followed by `{ code }` (body in braces).
+
+---
+
+## Syntax Checklist (Do These Right)
+
+- ✅ All opening braces `{` have a closing brace `}`.
+- ✅ All semicolons `;` end statements (not after class/method definitions).
+- ✅ Strings use double quotes: `"hello"`. Single quotes are for chars: `'a'`.
+- ✅ Array declaration: `int[] arr`, not `int arr[]` (both work, but first is style).
+- ✅ ArrayList uses angle brackets: `ArrayList<Integer>`, not `ArrayList(Integer)`.
+- ✅ Method calls include parentheses: `.length()` for Strings, `.size()` for ArrayList.
+- ✅ Comparison uses `==` for primitives, `.equals()` for objects.
+- ✅ Assignment in conditions: `if ((x = 5) > 3)` works, but don't confuse `=` (assign) with `==` (compare).
+
+---
+
+## Morning-Of Checklist
+
+- ✅ Get 8 hours of sleep tonight. A tired brain will confuse `==` and `.equals()`.
+- ✅ Eat a good breakfast. Low blood sugar kills your second hour.
+- ✅ Bring two calculators (or two batteries). One dies, you're not stuck.
+- ✅ Bring an extra pencil and eraser. FRQs require scratch work.
+- ✅ Arrive 15 min early. Calm your brain, review your notes one last time.
+- ✅ On exam day: scan all 4 FRQs in the first 3 min. Identify the easiest, start there.
+- ✅ Allocate ~22 min per FRQ. Do not overspend on one problem.
+- ✅ If stuck, skip and come back. Partial credit on all four beats perfection on two.
+
+---
+
+## Score Boundaries (Recent Years)
+
+Out of **108 total points** (40 MCQ + 4 FRQs):
+- **5:** ~71-108 points (~66%+)
+- **4:** ~57-70 points (~53-65%)
+- **3:** ~43-56 points (~40-52%)
+- **2:** ~33-42 points (~31-39%)
+- **1:** Below ~33 points
+
+**You only need ~66% correct to earn a 5.** You can leave questions blank and still win. Don't panic if the exam feels hard — everyone feels that way.
+
+---
+
+## Final Reminders
+
+- Arrays are 0-indexed. The last element is at `length - 1`.
+- ArrayList is 0-indexed too. The last element is at `size() - 1`.
+- `String.substring(0, 3)` on "hello" returns "hel" (index 3 is excluded).
+- `String.indexOf(s)` returns -1 if not found; always check before using the result.
+- Use `.equals()` on Strings; `==` compares object references, not contents.
+- Integer division truncates: `7 / 2 = 3`. Cast to `double` if you need 3.5.
+- ArrayList can't use primitive types directly: use `ArrayList<Integer>`, not `ArrayList<int>`.
+
+Good luck tomorrow. You've got this.
+
+---
+
+**Related guides:**
+- [3-day cram plan](/courses/ap-computer-science-a/cram/3-day)
+- [7-day study plan](/courses/ap-computer-science-a/cram/7-day)
+- [1-month study plan](/courses/ap-computer-science-a/cram/1-month)
+- [FRQ practice guide](/courses/ap-computer-science-a/cram/frq-practice)

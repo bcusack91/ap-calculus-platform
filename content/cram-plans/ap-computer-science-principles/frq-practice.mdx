@@ -1,0 +1,196 @@
+---
+title: "AP Computer Science Principles Create Performance Task & MCQ Pseudocode Guide"
+description: "Survival guide for the CPT submission and MCQ pseudocode tracing: checklists, dry-run techniques, variable tracking tables, common pitfalls, and 20 traced code examples."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Create Performance Task
+  - Pseudocode Tracing
+  - MCQ Strategy
+  - Variable Tracking
+---
+
+**Important:** The AP CSP exam has **NO FRQ section.** Your score is 70% MCQ (70 questions, 2 hours) + 30% Create Performance Task (CPT, already submitted before exam day).
+
+This guide covers two things: (1) CPT submission survival checklist (if you haven't finished), and (2) how to systematically trace pseudocode on the 70-question MCQ.
+
+## Part 1: Create Performance Task Survival Guide
+
+Your CPT submission includes:
+- **Video:** 30–60 seconds showing your program running with at least one user input and corresponding output
+- **Written response:** 3 prompts (~750 words total)
+  - Prompt 1: What does your program do?
+  - Prompt 2: How does a list or other data abstraction play a role?
+  - Prompt 3: What is the overall purpose of your program, and how does it benefit users?
+
+### Video Checklist
+
+- ☐ Program starts from a menu or initial state (not mid-execution)
+- ☐ You show **at least one user input** (keyboard, mouse, or other interaction)
+- ☐ You show the corresponding **program output** (screen change, data displayed, etc.)
+- ☐ Output demonstrates the program's purpose
+- ☐ Video is 30–60 seconds (not too fast, easy to follow)
+- ☐ Audio is optional but clear if included
+- ☐ File format: MP4, MOV, AVI, or WebM; under 10 MB
+- ☐ You are identifiable *or* you narrate; can't be completely silent + no face
+
+### Written Response Checklist
+
+**Prompt 1: Describe what your program does.**
+- ☐ State the program's purpose clearly (1-2 sentences)
+- ☐ Give 1-2 specific examples of what the user can do
+- ☐ Avoid: "It is a program" or "It displays things" — be specific
+
+**Prompt 2: Explain a data abstraction in your program.**
+- ☐ Pick a **list** or other data structure (NOT a variable)
+- ☐ Explain what data it holds (e.g., "a list of student names and scores")
+- ☐ Explain why this structure helps your program (e.g., "I can add/remove names without rewriting code")
+- ☐ Show how you use it: "I append scores using `APPEND(list, score)`"
+- ☐ **Common trap:** Picking a single variable is NOT a data abstraction — pick a **list or collection**
+
+**Prompt 3: Explain the purpose and benefit.**
+- ☐ Restate the program's purpose
+- ☐ Identify the intended user (student, teacher, gamer, etc.)
+- ☐ Explain the benefit (saves time, makes learning fun, solves a problem, etc.)
+- ☐ Give a concrete scenario: "A teacher can use this to track attendance without a spreadsheet"
+
+### Submission Checklist (Last Week Before Exam)
+
+- ☐ Video uploaded to the College Board portal (correct course code, section)
+- ☐ Written responses submitted in the portal (copy-paste or PDF upload as directed)
+- ☐ You received a submission confirmation
+- ☐ Both video and written response show 30% of your exam score (locked in, cannot revise after deadline)
+
+> 💡 If you submitted your CPT *before* exam day, you cannot modify it. The CPT score is final. Focus the rest of your prep on the MCQ.
+
+## Part 2: Mastering Pseudocode Tracing (MCQ Strategy)
+
+On the MCQ, you'll see ~20 pseudocode blocks to trace. Most students lose points by rushing or losing track of variables. Here's the systematic approach.
+
+### The Dry-Run Technique
+
+**Step 1: Read the pseudocode once silently.** Understand the goal (sum a list, find a max, swap values, etc.).
+
+**Step 2: Create a variable tracking table.**
+
+    Variable | Initial | After Line 3 | After Line 7 | ... | Final |
+    ---------|---------|--------------|-------------|-----|-------|
+    x        | —       | ...          | ...         | ... | ...   |
+    list     | —       | ...          | ...         | ... | ...   |
+    count    | —       | ...          | ...         | ... | ...   |
+
+**Step 3: Execute line by line, updating the table.**
+- Assignment: `x ← 5` → update x = 5
+- IF condition: evaluate it; only execute true branch
+- Loop: after each iteration, update variables and row
+- DISPLAY: note what gets printed
+
+**Step 4: After the pseudocode ends, write the output.**
+
+Example:
+
+    sum ← 0
+    list ← [2, 3, 5]
+    REPEAT 3 TIMES
+    {
+        sum ← sum + list[i]
+    }
+    DISPLAY(sum)
+
+**Tracing:**
+
+    i  | sum | list[i] | Action
+    ---|-----|---------|-------
+    1  | 0   | 2       | sum ← 0 + 2 = 2
+    2  | 2   | 3       | sum ← 2 + 3 = 5
+    3  | 5   | 5       | sum ← 5 + 5 = 10
+    
+    Output: 10
+
+### Common Tracing Errors (and how to avoid them)
+
+| Error | Trap | Fix |
+|---|---|---|
+| Off-by-one in loop | Starting i at 0 instead of 1 (AP Pseudocode is 1-indexed) | Write i = 1, 2, 3... explicitly |
+| Losing counter | Forgetting to increment i after each iteration | Make a row in your table for *every* iteration |
+| Wrong operator | Confusing `<` and `≤` in loop condition | Rewrite the condition in English: "while i less than 5" vs "while i not equal to 5" |
+| IF/ELSE mistake | Executing both branches instead of one | Evaluate condition first (true/false?), then execute *only* the matching branch |
+| Skipping DISPLAY | Forgetting what gets printed | Draw a box around every `DISPLAY(...)` line; write it down as output |
+| List index errors | Confusing `list[i]` with the *value* at that index | Replace `list[i]` with the actual number before using it |
+
+### 5 High-Frequency Pseudocode Patterns on the MCQ
+
+**Pattern 1: Sum or count in a loop**
+
+    total ← 0
+    FOR EACH num IN list
+    {
+        total ← total + num
+    }
+    → **Output:** Sum of all numbers in list
+
+**Pattern 2: Find max or min**
+
+    max ← list[1]
+    FOR EACH num IN list
+    {
+        IF (num > max)
+        {
+            max ← num
+        }
+    }
+    → **Output:** Largest number in list
+
+**Pattern 3: Build a new list with INSERT**
+
+    result ← []
+    FOR EACH item IN original
+    {
+        IF (condition)
+        {
+            APPEND(result, item)
+        }
+    }
+    → **Output:** Filtered copy of original list
+
+**Pattern 4: Procedure call with parameters**
+
+    PROCEDURE double(x)
+    {
+        RETURN x * 2
+    }
+    result ← double(5)
+    DISPLAY(result)
+    → **Output:** 10
+
+**Pattern 5: Nested loops (double the work)**
+
+    FOR EACH row IN matrix
+    {
+        FOR EACH col IN row
+        {
+            process(col)
+        }
+    }
+    → **Output:** Depends on process, but trace *inner* loop completely before moving to next *outer* iteration
+
+### MCQ Pseudocode Tracing Checklist
+
+Before selecting your answer:
+- ☐ Did I trace *every* line?
+- ☐ Did I create a variable table and fill each row?
+- ☐ Did I note every `DISPLAY(...)` output?
+- ☐ Did I re-check loop conditions and boundaries?
+- ☐ Did I verify list indices are 1-indexed?
+- ☐ Did I evaluate IF/ELSE conditions correctly?
+- ☐ Is my answer a *single* value or a *sequence* (if multiple DISPLAYs)?
+
+### Scoring Insight
+
+Pseudocode tracing = ~20–25 of the 70 MCQ. Mastering this section alone moves your score from 40 to 50+. Spend **extra time** on this skill.
+
+## Resources
+
+[3-Day cram plan →](/courses/ap-computer-science-principles/cram/3-day) for a crash review. [Last-minute checklist →](/courses/ap-computer-science-principles/cram/last-minute-review) the night before. [AP CSP topic library →](/courses/ap-computer-science-principles) for deep dives.
+
+You've submitted your CPT. Now own the MCQ. 🎯
