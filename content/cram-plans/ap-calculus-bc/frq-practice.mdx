@@ -1,0 +1,170 @@
+---
+title: "AP Calculus BC FRQ Practice Guide"
+description: "Master the 6 FRQ archetypes: rate-in/rate-out, particle motion, polar/parametric, area/volume, series, and differential equations. Includes templates and worked examples."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - FRQ Archetypes
+  - Worked Examples
+  - Scoring Rubrics
+---
+
+The AP Exam gives you **6 free-response questions.** Each tests predictable patterns the College Board has reused for 20+ years. Master these templates, and you'll know exactly what to write when you see an FRQ on exam day.
+
+## The 6 FRQ archetypes
+
+### Archetype 1: Rate In / Rate Out (AB-shared)
+
+**Pattern:** Water flows into/out of a tank or container. You're given a rate function and asked to find accumulated water, average rate, or when the container overflows.
+
+**Template:**
+1. Set up accumulation integral: $\text{amount} = \int_a^b (\text{rate in} - \text{rate out}) \, dt$.
+2. Evaluate the integral.
+3. Interpret units (gallons, liters, cubic feet).
+
+**Worked Example:**
+> Water flows into a tank at a rate of $(20 + t)$ gallons/hour, and drains at $15$ gallons/hour, for $0 \leq t \leq 10$. The tank initially holds $50$ gallons.
+> 
+> **(a)** Find the amount of water in the tank at $t = 10$.
+> 
+> **Solution:**
+> $$\text{Amount} = 50 + \int_0^{10} [(20 + t) - 15] \, dt = 50 + \int_0^{10} (5 + t) \, dt$$
+> $$= 50 + \left[ 5t + \frac{t^2}{2} \right]_0^{10} = 50 + (50 + 50) = 150 \text{ gallons}$$
+>
+> **(b)** Find the average rate of water flow (net) over $[0, 10]$.
+>
+> **Solution:**
+> $$\text{Average rate} = \frac{1}{10} \int_0^{10} (5 + t) \, dt = \frac{100}{10} = 10 \text{ gallons/hour}$$
+
+---
+
+### Archetype 2: Particle Motion (AB-shared + BC parametric/vector)
+
+**Pattern:** A particle moves along a curve. Given position, velocity, or parametric equations, find speed, direction, arc length, or displacement.
+
+**Template:**
+- **Speed:** $\sqrt{(dx/dt)^2 + (dy/dt)^2}$.
+- **Arc length:** $\int_a^b \sqrt{(dx/dt)^2 + (dy/dt)^2} \, dt$.
+- **Displacement:** $\int_a^b v(t) \, dt$ (can be negative).
+- **Distance traveled:** $\int_a^b |v(t)| \, dt$ (always positive).
+
+**Worked Example (BC):**
+> A particle moves along a curve with $x(t) = t^2$, $y(t) = t^3$, for $0 \leq t \leq 2$.
+>
+> **(a)** Find the speed of the particle at $t = 1$.
+>
+> **Solution:**
+> $$\frac{dx}{dt} = 2t, \quad \frac{dy}{dt} = 3t^2$$
+> $$\text{Speed} = \sqrt{(2 \cdot 1)^2 + (3 \cdot 1^2)^2} = \sqrt{4 + 9} = \sqrt{13}$$
+>
+> **(b)** Find the arc length of the curve from $t = 0$ to $t = 2$.
+>
+> **Solution:**
+> $$L = \int_0^2 \sqrt{(2t)^2 + (3t^2)^2} \, dt = \int_0^2 \sqrt{4t^2 + 9t^4} \, dt = \int_0^2 t\sqrt{4 + 9t^2} \, dt$$
+> Using $u = 4 + 9t^2$, $du = 18t \, dt$:
+> $$L = \frac{1}{18} \int_4^{40} \sqrt{u} \, du = \frac{1}{18} \cdot \frac{2}{3} u^{3/2} \big|_4^{40} = \frac{1}{27} [40^{3/2} - 8] \approx 9.07$$
+
+---
+
+### Archetype 3: Polar Curves (BC-only)
+
+**Pattern:** A curve is defined in polar form $r = f(\theta)$. Find area enclosed, area between curves, or arc length.
+
+**Template:**
+- **Area:** $A = \frac{1}{2} \int_{\alpha}^{\beta} r^2 \, d\theta$.
+- **Area between:** $A = \frac{1}{2} \int_{\alpha}^{\beta} (r_{\text{outer}}^2 - r_{\text{inner}}^2) \, d\theta$.
+
+**Worked Example:**
+> Find the area enclosed by $r = 2 + 2\cos \theta$.
+>
+> **Solution:**
+> The curve is a cardioid. By symmetry, it completes one loop for $0 \leq \theta \leq 2\pi$.
+> $$A = \frac{1}{2} \int_0^{2\pi} (2 + 2\cos \theta)^2 \, d\theta = \frac{1}{2} \int_0^{2\pi} (4 + 8\cos \theta + 4\cos^2 \theta) \, d\theta$$
+> Using $\cos^2 \theta = \frac{1 + \cos 2\theta}{2}$:
+> $$A = \frac{1}{2} \left[ 4\theta + 8\sin \theta + 2(\theta + \frac{\sin 2\theta}{2}) \right]_0^{2\pi} = \frac{1}{2} \cdot 12\pi = 6\pi$$
+
+---
+
+### Archetype 4: Area and Volume (AB-shared)
+
+**Pattern:** Find area between curves or volume by rotating about an axis.
+
+**Template:**
+- **Area between:** $\int_a^b (\text{top} - \text{bottom}) \, dx$ or $\int_c^d (\text{right} - \text{left}) \, dy$.
+- **Volume (disk):** $V = \pi \int_a^b [R(x)]^2 \, dx$.
+- **Volume (washer):** $V = \pi \int_a^b ([R(x)]^2 - [r(x)]^2) \, dx$.
+
+> **💡 Tip:** Always identify the axis of rotation. If rotating about $y = k$ (not the $x$-axis), adjust the radius: $R = |f(x) - k|$.
+
+---
+
+### Archetype 5: Series and Convergence (BC-only)
+
+**Pattern:** Determine if a series converges, find its sum, estimate error, or find the interval of convergence for a power series.
+
+**Template for convergence:**
+1. **Geometric:** Does it have the form $\sum ar^n$? If $|r| < 1$, it converges to $\frac{a}{1-r}$.
+2. **$p$-series:** Does it have the form $\sum \frac{1}{n^p}$? Converges iff $p > 1$.
+3. **Ratio test:** Compute $L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|$. If $L < 1$, converges; $L > 1$, diverges; $L = 1$, test inconclusive.
+4. **Alternating:** If $(-1)^n a_n$ where $a_n$ is decreasing and $\lim a_n = 0$, then converges (but may not converge absolutely).
+
+**Template for Lagrange error:**
+$$|R_n(x)| \leq \frac{M |x - a|^{n+1}}{(n+1)!}$$
+where $M = \max |f^{(n+1)}(t)|$ on the interval.
+
+**Worked Example:**
+> **(a)** Determine if $\sum_{n=1}^{\infty} \frac{n}{2^n}$ converges. If so, justify your test.
+>
+> **Solution:** Use the ratio test.
+> $$\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \lim_{n \to \infty} \frac{(n+1)/2^{n+1}}{n/2^n} = \lim_{n \to \infty} \frac{n+1}{2n} = \frac{1}{2} < 1$$
+> By the Ratio Test, the series **converges**.
+>
+> **(b)** Find the interval of convergence for $\sum_{n=0}^{\infty} \frac{(x-2)^n}{n+1}$.
+>
+> **Solution:** Use the ratio test on $(x - 2)^n$.
+> $$\lim_{n \to \infty} \left| \frac{(x-2)^{n+1}}{n+2} \cdot \frac{n+1}{(x-2)^n} \right| = |x - 2| \lim_{n \to \infty} \frac{n+1}{n+2} = |x - 2|$$
+> Converges when $|x - 2| < 1$, so $1 < x < 3$ (open interval).
+> 
+> **Test $x = 1$:** $\sum \frac{(-1)^n}{n+1}$ — alternating series, decreasing to 0, **converges**.
+> 
+> **Test $x = 3$:** $\sum \frac{1}{n+1} = \sum \frac{1}{n}$ (harmonic) — **diverges**.
+> 
+> **IOC:** $[1, 3)$.
+
+---
+
+### Archetype 6: Taylor Polynomials and Power Series (BC-only)
+
+**Pattern:** Write a Taylor polynomial about $x = a$, find Lagrange error bound, or use a known series to approximate a value.
+
+**Template:**
+$$P_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!} (x - a)^k$$
+
+**Worked Example:**
+> Write the 4th-degree Taylor polynomial for $f(x) = e^x$ centered at $x = 0$. Use it to approximate $e^{0.1}$ and find a bound on the error.
+>
+> **Solution:**
+> All derivatives of $e^x$ are $e^x$, so $f^{(k)}(0) = 1$ for all $k$.
+> $$P_4(x) = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24}$$
+> $$P_4(0.1) = 1 + 0.1 + 0.005 + 0.000167 + 0.0000042 \approx 1.1052$$
+> 
+> **Error bound:** $|R_4(0.1)| \leq \frac{M(0.1)^5}{5!}$ where $M = \max |e^t|$ on $[0, 0.1]$.
+> Since $e^t \leq e^{0.1} < 1.11$ on $[0, 0.1]$:
+> $$|R_4(0.1)| < \frac{1.11 \cdot (0.1)^5}{120} \approx 0.000000925$$
+
+> **⚠️ FRQ trap:** Always compute the **maximum** of the derivative explicitly. Use calculus or endpoint analysis; don't just guess a bound.
+
+---
+
+## Scoring rubric checklist
+
+Every FRQ rubric demands:
+1. **Setup:** Clearly state the integral, differential equation, or formula you're using.
+2. **Execution:** Show all algebraic steps; don't jump to the answer.
+3. **Justification:** If asked to justify, cite the theorem by name (MVT, IVT, First Derivative Test, Ratio Test, etc.).
+4. **Units:** Always include them on applied problems.
+5. **Answer:** Box your final answer or clearly state it in a sentence.
+
+---
+
+**Ready to drill?** Pick one archetype, solve 2-3 problems, then move to the next. [Browse more FRQ examples →](/courses/ap-calculus-bc). You've got the patterns — now execute. 🎯

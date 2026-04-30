@@ -1,0 +1,109 @@
+---
+title: "AP Physics C: Electricity and Magnetism 3-Day Cram Plan"
+description: "A focused 72-hour rescue plan for AP Physics C E&M: highest-yield topics, Gauss's law, circuits, magnetism, FRQ templates, and the drills that move your score before exam day."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Electrostatics & Gauss's Law
+  - Conductors & Capacitors
+  - Electric Circuits
+  - Magnetic Fields & Forces
+  - Electromagnetic Induction
+---
+
+You have **three days** until the AP Physics C: Electricity and Magnetism exam. This is calculus-based — skip the algebra shortcuts and drill the *integral setup*, **symmetry arguments**, and **Lenz's law reasoning** that scorers actually want.
+
+This plan assumes ~4 focused hours per day. Each day ends with a full FRQ-style practice problem.
+
+## Day 1: Electrostatics & Gauss's Law (4 hrs)
+
+Gauss's law appears on nearly every exam. The FRQ rubric demands that you *choose the right surface*, *cite symmetry*, and *write the integral*.
+
+### What to review (90 min)
+
+- **Coulomb's law:** $\vec F = k \frac{q_1 q_2}{r^2} \hat r$ and the electric field $E = k \frac{q}{r^2}$ from a point charge.
+- **Electric field from continuous charge distributions** via $dE = k \frac{dq}{r^2}$. Set up the integral for a ring, then a disk.
+- **Electric potential:** $V = -\int \vec E \cdot d\vec\ell$ from a path integral. Know that $E = -\frac{dV}{dx}$ (the derivative relationship).
+- **Gauss's law:** $\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$ — **this is the entire unit.**
+  - **Spherical symmetry** (point charge, uniformly charged sphere)
+  - **Cylindrical symmetry** (infinite line charge, charged cylinder)
+  - **Planar symmetry** (infinite sheet, parallel plates)
+- Choose the Gaussian surface; apply $E \perp A$ to simplify the dot product; solve for $E$.
+
+### What to practice (2.5 hrs)
+
+- **20 multiple-choice** on $E$ from point/continuous distributions.
+- **1 full FRQ:** Gauss's law for a uniformly charged spherical shell — find $E$ inside and outside, then relate to potential.
+
+> **💡 Highest leverage:** Gauss's law symmetry choice decides your entire FRQ setup. Spend 10 min tonight drawing spheres, cylinders, and sheets. Know *when each one applies*.
+
+> **⚠️ Trap:** $\epsilon_0$ in SI units, not $k$. On the exam, always use $\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$, not $\frac{4\pi k Q_{enc}}{...}$.
+
+## Day 2: Conductors, Capacitors, Circuits (4 hrs)
+
+Circuit problems and capacitor FRQs mix RC transient decay with steady-state reasoning. Master the $\tau = RC$ formula and the exponential curves.
+
+### What to review (90 min)
+
+- **Conductors in equilibrium:** $E = 0$ inside, charge on surface, perpendicular field just outside.
+- **Capacitor basics:** $C = \frac{Q}{V}$, parallel-plate $C = \epsilon_0 \frac{A}{d}$, energy $U = \frac{1}{2}CV^2 = \frac{1}{2}\frac{Q^2}{C}$.
+- **Series vs parallel reduction** — capacitor math is *opposite* to resistor math.
+- **RC circuits:** time constant $\tau = RC$; charging $Q(t) = Q_0(1 - e^{-t/\tau})$; discharging $Q(t) = Q_0 e^{-t/\tau}$.
+- **Kirchhoff's junction rule** (current in = current out) and **loop rule** ($\sum V = 0$ around a closed loop, including resistive drops).
+- **Resistivity:** $R = \rho \frac{L}{A}$ and its temperature dependence.
+
+### What to practice (2.5 hrs)
+
+- **1 RC charging FRQ:** initial condition ($Q = 0$), time constant, current as a function of time, energy in the capacitor.
+- **1 circuit FRQ:** multiloop with Kirchhoff's laws and a capacitor in steady state (current = 0 through the capacitor).
+- **15 no-calculator MCQ** on capacitor combinations and RC transient reasoning.
+
+> **⚠️ Trap:** In steady state (long time), current *stops* at a capacitor. $\frac{dQ}{dt} = 0$. Don't keep current flowing through a capacitor after $t \to \infty$.
+
+> **⚠️ Trap:** Charging curve is $1 - e^{-t/\tau}$ (approaches 1). Discharging is $e^{-t/\tau}$ (approaches 0). Memorize both.
+
+## Day 3: Magnetism, Induction, Full FRQ Practice (4 hrs)
+
+Lorentz force, Ampère's law, and Faraday's law are *three separate tools*. Know which applies when.
+
+### What to review (90 min)
+
+- **Lorentz force on a charge:** $\vec F = q \vec v \times \vec B$. Direction via right-hand rule (fingers from $\vec v$ to $\vec B$, thumb = force).
+- **Force on a current-carrying wire:** $\vec F = I \vec L \times \vec B$, where $\vec L$ points in direction of current.
+- **Magnetic field from a current:**
+  - **Biot-Savart law:** $d\vec B = \frac{\mu_0 I}{4\pi} \frac{d\vec\ell \times \hat r}{r^2}$ — tough integral, but *know the setup*.
+  - **Ampère's law:** $\oint \vec B \cdot d\vec\ell = \mu_0 I_{enc}$ for symmetry (infinite wire, solenoid, toroid).
+- **Magnetic flux:** $\Phi_B = \int \vec B \cdot d\vec A$ (units: Tesla·m²).
+- **Faraday's law:** $\varepsilon = -\frac{d\Phi_B}{dt}$ — the induced EMF opposes the change (Lenz's law).
+- **Motional EMF:** $\varepsilon = BLv$ when a conductor slides through a perpendicular field.
+- **Inductors:** $\varepsilon = -L \frac{dI}{dt}$; energy $U = \frac{1}{2}LI^2$; time constant $\tau = \frac{L}{R}$ for RL circuits.
+
+### What to practice (2.5 hrs — full timed set)
+
+- **1 full FRQ on Ampère's law:** find $B$ inside a cylindrical wire or solenoid using symmetry.
+- **1 full FRQ on Faraday's law:** changing magnetic flux through a loop, find induced EMF and current direction via Lenz's law.
+- **25 mixed multiple-choice** (think through each right-hand-rule choice; don't rush).
+
+> **💡 Highest leverage:** Lenz's law direction is *not optional* on FRQs. Always state: "By Lenz's law, the induced current flows [clockwise/counterclockwise] to oppose the [increasing/decreasing] flux."
+
+> **⚠️ Sign trap:** In Faraday's law $\varepsilon = -\frac{d\Phi_B}{dt}$, the *negative sign is Lenz's law*. If $\frac{d\Phi_B}{dt} > 0$ (flux increasing), then $\varepsilon < 0$ (EMF opposes the change). Don't forget the negative.
+
+## The night before
+
+Skim our [last-minute review checklist](/courses/ap-physics-c-em/cram/last-minute-review). Print the **Gauss's law symmetry table** and **RC/RL transient template**. Get **8 hours of sleep** — your brain needs to lock in the right-hand-rule muscle memory.
+
+## Three key equations to internalize by muscle memory
+
+$$\text{Gauss's law:} \quad \oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$$
+
+$$\text{Faraday's law:} \quad \varepsilon = -\frac{d\Phi_B}{dt}$$
+
+$$\text{RC time constant:} \quad \tau = RC, \quad Q(t) = Q_0 e^{-t/\tau}$$
+
+## What this plan skips
+
+You will *not* fully master the Biot-Savart integral or advanced dielectric properties in 3 days. If asked on the exam: cite Ampère's law instead (or Biot-Savart by name without deriving). Accept 2–4 lost points and move on. Your time is better spent mastering Gauss's law and Faraday's law.
+
+## Ready to start?
+
+[Open the AP Physics C: E&M topic library →](/courses/ap-physics-c-em) and begin Day 1 with whichever symmetry case (sphere, cylinder, sheet) feels rustiest. Work 3–5 example problems per topic from the reference solutions. You've got this.

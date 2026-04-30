@@ -1,0 +1,151 @@
+---
+title: "AP Precalculus FRQ Practice Guide"
+description: "Master the 4 FRQ archetypes: function concepts, non-periodic modeling, sinusoidal modeling, and symbolic manipulation. Worked examples + templates for exam day."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - FRQ Archetypes
+  - Sinusoidal Modeling
+  - Exponential & Log Modeling
+  - Symbolic Manipulation
+---
+
+AP Precalculus has **4 Free Response Questions**, each testing a different skill. Knowing the archetype saves time and prevents careless errors.
+
+## FRQ Archetype 1: Function Concepts
+
+**What it asks:** Analyze a polynomial, rational, exponential, or log function. Usually: find domain, zeros, asymptotes, increasing/decreasing intervals, or end behavior. May include graph sketching or interpretation from a graph.
+
+**Red flags in the prompt:** "justify," "explain," "verify," "support your answer."
+
+### Template response
+
+1. **Set up:** State what you're finding. "To find vertical asymptotes, I set the denominator equal to zero: $x^2 - 4 = 0 \Rightarrow x = \pm 2$."
+2. **Check numerator:** "At $x = 2$, the numerator is $8 - 6 = 2 \neq 0$, so $x = 2$ is a vertical asymptote."
+3. **Interpret:** "As $x \to 2^-$, the numerator approaches a positive value and the denominator approaches zero from below, so $f(x) \to -\infty$."
+4. **Conclude:** "Therefore, $f$ has a vertical asymptote at $x = 2$."
+
+### Worked example
+
+**Problem:** For $f(x) = \frac{2x^2 - 8}{x^2 - 4}$, identify all vertical asymptotes and any holes.
+
+**Solution:**
+- Factor: $f(x) = \frac{2(x^2-4)}{x^2-4} = \frac{2(x-2)(x+2)}{(x-2)(x+2)}$.
+- Cancel common factors: $x = 2$ and $x = -2$ are removable (holes, not asymptotes).
+- After canceling: $f(x) = 2$ for $x \neq \pm 2$.
+- **Conclusion:** No vertical asymptotes; holes at $(\pm 2, 2)$.
+
+> **⚠️ Trap:** Many students forget to check if numerator and denominator share a factor. Always factor completely before setting denominator = 0.
+
+## FRQ Archetype 2: Non-Periodic Modeling (Exponential or Logarithmic)
+
+**What it asks:** A real-world context (population, investment, half-life, pH, decibels). Write the model, interpret parameters, make predictions, or solve for unknown time/quantity.
+
+**Red flags:** "write an equation," "predict," "how long," "when will."
+
+### Template response
+
+1. **Identify the model form:** Is this exponential growth/decay ($A = a \cdot b^t$) or logarithmic ($y = a\log_b(x) + c$)?
+2. **Define variables:** "Let $t$ = years since 2020, and $P(t)$ = population in thousands."
+3. **Find parameters:** "Initial population: $P(0) = 500$ (given). Growth rate: 3% per year means $b = 1.03$."
+4. **Write the model:** $P(t) = 500 \cdot 1.03^t$.
+5. **Make prediction:** "In 2030 ($t = 10$), $P(10) = 500 \cdot 1.03^{10} \approx 671.96$ thousand."
+6. **Interpret in context:** "The population is predicted to be approximately 672,000 in 2030."
+
+### Worked example
+
+**Problem:** A radioactive sample has an initial mass of 100 grams. After 5 years, 60 grams remain. Write an exponential decay model and predict the mass after 12 years.
+
+**Solution:**
+- Form: $M(t) = a \cdot b^t$ (or $M(t) = a e^{kt}$).
+- Initial condition: $M(0) = 100 \Rightarrow a = 100$.
+- Use second data point: $M(5) = 60 \Rightarrow 100 b^5 = 60 \Rightarrow b^5 = 0.6 \Rightarrow b = 0.6^{1/5} \approx 0.8943$.
+- Model: $M(t) = 100 \cdot (0.8943)^t$.
+- After 12 years: $M(12) = 100 \cdot (0.8943)^{12} \approx 27.99 \approx 28$ grams.
+
+## FRQ Archetype 3: Sinusoidal Modeling (Periodic Context)
+
+**What it asks:** Real-world periodic data (temperature cycles, tides, electrical current, seasonal sales). Write $f(t) = a\sin(b(t-c)) + d$ with correct amplitude, period, midline, and phase shift.
+
+**Key skill:** Extracting parameters from context, *not* from a table.
+
+### Template response
+
+1. **Midline $d$:** Average of max and min values. "High temp: 85°F, low temp: 55°F. Midline: $\frac{85+55}{2} = 70$°F."
+2. **Amplitude $a$:** Half the range. "$a = \frac{85-55}{2} = 15$."
+3. **Period & frequency $b$:** "The cycle repeats every 12 months, so period = 12. Thus $b = \frac{2\pi}{12} = \frac{\pi}{6}$."
+4. **Phase shift $c$:** "The maximum occurs in July (month 7). For $\sin$, max occurs when $b(t-c) = \pi/2$. So $\frac{\pi}{6}(7-c) = \frac{\pi}{2} \Rightarrow c = 7 - 3 = 4$. Thus the shift is 4 months."
+5. **Write model:** $T(t) = 15\sin\left(\frac{\pi}{6}(t-4)\right) + 70$, where $t$ is months since January.
+
+### Worked example
+
+**Problem:** Ocean tides at a beach vary from a low of 2 feet to a high of 8 feet. High tide occurs at noon. The cycle repeats every 12.4 hours. Write a sinusoidal model for the water height $h(t)$, where $t$ is hours after midnight.
+
+**Solution:**
+- Midline: $d = \frac{8+2}{2} = 5$ feet.
+- Amplitude: $a = \frac{8-2}{2} = 3$ feet.
+- Period: 12.4 hours, so $b = \frac{2\pi}{12.4} = \frac{5\pi}{31}$.
+- Phase shift: High tide (max) at noon ($t = 12$). For $\sin$, max is at $b(t-c) = \pi/2$, so $\frac{5\pi}{31}(12-c) = \frac{\pi}{2}$. Solve: $12 - c = \frac{\pi/2 \cdot 31}{5\pi} = \frac{31}{10} = 3.1 \Rightarrow c = 8.9$.
+- Model: $h(t) = 3\sin\left(\frac{5\pi}{31}(t - 8.9)\right) + 5$.
+
+> **💡 Key habit:** Always *check* your model at the known max/min. If high tide is at $t = 12$, verify $h(12) = 8$.
+
+## FRQ Archetype 4: Symbolic Manipulation
+
+**What it asks:** Solve for a variable, prove an identity, verify a property, or simplify an expression. Often: solve $\log$ or exponential equations, trig identities, parametric/polar conversions, or matrix systems.
+
+**Red flags:** "Solve for," "prove," "verify," "show that."
+
+### Template response
+
+1. **Show your steps:** Write every algebraic move.
+2. **State properties used:** "By the power rule of logarithms," "using the Pythagorean identity," etc.
+3. **Conclude clearly:** Box the final answer or state "Therefore, $x = \ldots$."
+
+### Worked example
+
+**Problem:** Solve $\ln(x+3) - \ln(x-1) = 2$ for $x$.
+
+**Solution:**
+- By the quotient rule for logarithms: $\ln\left(\frac{x+3}{x-1}\right) = 2$.
+- Exponentiate both sides: $\frac{x+3}{x-1} = e^2$.
+- Cross-multiply: $x + 3 = e^2(x-1)$.
+- Expand: $x + 3 = e^2 x - e^2$.
+- Rearrange: $3 + e^2 = e^2 x - x = x(e^2 - 1)$.
+- Solve: $x = \frac{3 + e^2}{e^2 - 1} \approx \frac{3 + 7.389}{7.389 - 1} \approx \frac{10.389}{6.389} \approx 1.626$.
+- **Check domain:** $x > 1$ (so $\ln(x-1)$ is defined) and $x > -3$ (so $\ln(x+3)$ is defined). $x \approx 1.626$ satisfies both. ✓
+
+## High-yield formulas to memorize for FRQs
+
+| Type | Formula | Usage |
+|---|---|---|
+| Sinusoidal form | $f(t) = a\sin(b(t-c)) + d$ | Periodic modeling |
+| Period | $T = \frac{2\pi}{b}$ | Extract $b$ from period |
+| Log properties | $\log(xy) = \log(x) + \log(y)$; $\log(x^n) = n\log(x)$ | Solve log equations |
+| Change of base | $\log_b(x) = \frac{\ln(x)}{\ln(b)}$ | Convert between log bases |
+| Exponential forms | $A = ae^{kt}$ and $A = ab^t$ are equivalent if $b = e^k$ | Model growth/decay |
+
+## Common FRQ mistakes
+
+> **⚠️ Mistake 1:** Forgetting the phase shift is *outside* the sine argument. $\sin(2(t-3))$ has phase shift 3 to the right, not $\sin(2t - 3)$.
+
+> **⚠️ Mistake 2:** Forgetting to state your model or define variables. Even if your math is right, if you don't write "Let $P(t) =$ population at time $t$," you lose communication points.
+
+> **⚠️ Mistake 3:** Confusing $\cos^{-1}$ with $1/\cos$. Inverse trig is *not* a reciprocal.
+
+> **⚠️ Mistake 4:** Forgetting domain restrictions when solving trig or log equations. $\ln(x)$ is only defined for $x > 0$; $\sin^{-1}(x)$ is only defined for $-1 \leq x \leq 1$.
+
+## Practice strategy
+
+- **Day 1:** Solve one full FRQ from each archetype (untimed, use notes).
+- **Day 2:** Solve one FRQ from the archetype where you scored lowest (timed, 15–20 min per FRQ).
+- **Day 3:** Timed full set: all 4 FRQs in 90 minutes.
+- **Day 4:** Review errors; re-solve problems you missed.
+
+## Ready to practice?
+
+[Jump to the 1-Month Study Plan](/courses/ap-precalculus/cram/1-month) for a full FRQ practice calendar, or start with the [3-Day Cram](/courses/ap-precalculus/cram/3-day) if exam day is near. 🎯
+
+---
+
+**Next:** After mastering all 4 archetypes, review the [Last-Minute Review](/courses/ap-precalculus/cram/last-minute-review) for final formulas and common traps.

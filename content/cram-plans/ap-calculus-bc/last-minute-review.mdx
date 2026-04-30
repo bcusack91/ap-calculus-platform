@@ -1,0 +1,171 @@
+---
+title: "AP Calculus BC Last-Minute Review (Night Before)"
+description: "The night-before AP Calculus BC checklist: must-know formulas, Maclaurin series, convergence tests, common traps, calculator tips, and morning advice. Skim in 45 minutes."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Formula Reference
+  - Convergence Tests
+  - Common Traps
+  - Exam Day Tips
+---
+
+The exam is **tomorrow**. Do not open new material. Spend 30-45 minutes skimming this page, then close your notes and sleep.
+
+## AB essentials: derivatives
+
+| Function | Derivative |
+|---|---|
+| $x^n$ | $n x^{n-1}$ |
+| $e^x$ | $e^x$ |
+| $\ln x$ | $1/x$ |
+| $\sin x$ | $\cos x$ |
+| $\cos x$ | $-\sin x$ |
+| $\tan x$ | $\sec^2 x$ |
+| $\sec x$ | $\sec x \tan x$ |
+| $\arcsin x$ | $\frac{1}{\sqrt{1-x^2}}$ |
+| $\arctan x$ | $\frac{1}{1+x^2}$ |
+| $a^x$ | $a^x \ln a$ |
+
+**Chain rule:** $(f(g(x)))' = f'(g(x)) \cdot g'(x)$.
+**Product rule:** $(uv)' = u'v + uv'$.
+**Quotient rule:** $(u/v)' = \frac{u'v - uv'}{v^2}$.
+
+## AB essentials: integrals
+
+| Function | Antiderivative |
+|---|---|
+| $x^n$ ($n \neq -1$) | $\frac{x^{n+1}}{n+1} + C$ |
+| $1/x$ | $\ln \|x\| + C$ |
+| $e^x$ | $e^x + C$ |
+| $\sin x$ | $-\cos x + C$ |
+| $\cos x$ | $\sin x + C$ |
+| $\sec^2 x$ | $\tan x + C$ |
+| $\sec x \tan x$ | $\sec x + C$ |
+| $1/(1+x^2)$ | $\arctan x + C$ |
+| $1/\sqrt{1-x^2}$ | $\arcsin x + C$ |
+
+## BC essentials: parametric & polar
+
+| Concept | Formula |
+|---|---|
+| Parametric $\frac{dy}{dx}$ | $\frac{dy/dt}{dx/dt}$ |
+| Parametric speed | $\sqrt{(dx/dt)^2 + (dy/dt)^2}$ |
+| Parametric arc length | $\int_a^b \sqrt{(dx/dt)^2 + (dy/dt)^2} \, dt$ |
+| Polar area | $A = \frac{1}{2} \int_{\alpha}^{\beta} r^2 \, d\theta$ |
+| Polar area (between curves) | $\frac{1}{2} \int (r_{\text{out}}^2 - r_{\text{in}}^2) \, d\theta$ |
+
+## BC essentials: Maclaurin series (MEMORIZE)
+
+| Series | Interval |
+|---|---|
+| $e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}$ | All $x$ |
+| $\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}$ | All $x$ |
+| $\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$ | All $x$ |
+| $\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$ | $\|x\| < 1$ |
+| $\ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n}$ | $-1 < x \leq 1$ |
+
+## BC essentials: convergence tests
+
+**When you see $\sum a_n$, ask:**
+
+| Test | When to use | Condition | Result |
+|---|---|---|---|
+| **Geometric** | Form is $\sum ar^n$ | $\|r\| < 1$ | Converges to $\frac{a}{1-r}$ |
+| **$p$-series** | Form is $\sum \frac{1}{n^p}$ | $p > 1$ | Converges; $p \leq 1$ diverges |
+| **Ratio test** | Factorials, exponentials, powers | $L = \lim \left\|\frac{a_{n+1}}{a_n}\right\|$ | $L < 1$ ⟹ converge; $L > 1$ ⟹ diverge |
+| **Alternating** | $\sum (-1)^n a_n$, $a_n$ decreasing | $\lim a_n = 0$ | Converges (but test convergence of $\|a_n\|$ separately) |
+| **Integral test** | $a_n = f(n)$, $f$ decreasing | $\int_1^{\infty} f(x) \, dx$ converges | Series converges |
+| **Comparison** | Compare to known series | $0 \leq a_n \leq b_n$ | If $\sum b_n$ converges, so does $\sum a_n$ |
+
+> **💡 IOC Strategy:** Use ratio test to find radius; then test endpoints *separately* (plug in, use alternating or $p$-test).
+
+## Top 12 exam traps
+
+1. **Polar area:** Write $\frac{1}{2} \int r^2 \, d\theta$, not $\int r^2 \, d\theta$.
+2. **Parametric speed:** $\sqrt{(dx/dt)^2 + (dy/dt)^2}$, never $(dx/dt + dy/dt)$ or $|(dx/dt) + (dy/dt)|$.
+3. **Parametric $dy/dx$:** $\frac{dy/dt}{dx/dt}$, not $\frac{dy}{dx}$ (which is what you're trying to find).
+4. **IOC endpoints:** **Test them separately.** Endpoint convergence can differ from interior convergence.
+5. **Ratio test $L = 1$:** Inconclusive — you must use another test.
+6. **Lagrange error:** Find $M = \max |f^{(n+1)}|$ on the interval; don't guess a bound.
+7. **Chain rule with FTC:** $\frac{d}{dx} \int_a^{g(x)} f(t) \, dt = f(g(x)) \cdot g'(x)$ — don't drop $g'(x)$.
+8. **Implicit differentiation:** Every $y$ becomes $\frac{dy}{dx}$ via chain rule; don't forget this step.
+9. **Distance vs displacement:** Distance uses $|v(t)|$; displacement is $\int v(t) \, dt$ (can be negative).
+10. **MVT hypotheses:** *Continuous on $[a,b]$* AND *differentiable on $(a,b)$* — must state both.
+11. **Integration by parts:** Use LIATE priority when choosing $u$. Often $u = \text{polynomial}$ or $u = \ln x$.
+12. **Series notation:** Write limits and indices clearly; e.g., $\sum_{n=1}^{\infty}$, not just $\sum$.
+
+## Integration by parts: LIATE
+
+Priority for choosing $u$ (so $dv$ is what remains):
+1. **L**ogarithm ($\ln x$)
+2. **I**nverse trig ($\arcsin x$, $\arctan x$)
+3. **A**lgebraic ($x^2$, $x$)
+4. **T**rigonometric ($\sin x$, $\cos x$)
+5. **E**xponential ($e^x$)
+
+Example: $\int x \sin x \, dx$. Choose $u = x$ (Algebraic) and $dv = \sin x \, dx$.
+
+## Theorems you may cite
+
+- **IVT:** $f$ continuous on $[a,b]$, $k$ between $f(a), f(b)$ ⟹ ∃ $c$ with $f(c) = k$.
+- **MVT:** $f$ continuous on $[a,b]$, differentiable on $(a,b)$ ⟹ ∃ $c$ with $f'(c) = \frac{f(b)-f(a)}{b-a}$.
+- **EVT:** $f$ continuous on $[a,b]$ ⟹ $f$ has absolute max and min.
+- **FTC Part 1:** $\frac{d}{dx} \int_a^x f(t) \, dt = f(x)$.
+- **FTC Part 2:** $\int_a^b f'(x) \, dx = f(b) - f(a)$.
+
+## Calculator essentials (check batteries tonight!)
+
+- **Numerical derivative:** `nDeriv(f(x), x, value)`
+- **Definite integral:** `fnInt(f(x), x, a, b)`
+- **Find intersection:** Graph both functions, `2nd → CALC → intersect`.
+- **Find zero:** Graph, `2nd → CALC → zero`.
+- **Solve $f(x) = k$:** Use `nSolve(f(x) - k, x, guess)` or graph and intersect.
+
+## Score boundaries
+
+Approximate ranges out of 108 total:
+- **5:** ~70+ points
+- **4:** ~58–69 points
+- **3:** ~42–57 points
+- **2:** ~30–41 points
+- **1:** below ~30 points
+
+You need **~65% to score a 5**. Leave some questions blank and still earn the top score.
+
+## Morning-of checklist
+
+- ☐ **8 hours of sleep** (tonight and last night).
+- ☐ Real breakfast (protein + slow carbs; no sugar crash).
+- ☐ 2 sharpened #2 pencils, blue/black pens.
+- ☐ Approved calculator **+ spare batteries** (replace them now).
+- ☐ Photo ID + AP exam ID label.
+- ☐ Water bottle, snack for the break.
+- ☐ Watch (no alarm) if the room lacks a clock.
+- ☐ Arrive 30 minutes early.
+
+## During the exam: strategies
+
+**MCQ section:**
+- Mark any question that takes >90 seconds; come back to it.
+- Use process of elimination aggressively; wrong answers often have sign errors or computation mistakes.
+- Skim all questions first; build confidence with the easy ones.
+
+**FRQ section:**
+- Read all 6 questions before writing anything.
+- Start with the FRQ you're most confident on.
+- **Always** write the integral or derivative setup before the final answer.
+- **Never** leave an FRQ blank. Partial credit on setup + work > zero points.
+- Box your final answer or circle it clearly.
+
+## One final thought
+
+You've done the work. The preparation is complete. Your job tomorrow is to **show what you know** — write clearly, cite theorems by name, and trust the process.
+
+Take a deep breath. You've got this. 🎯
+
+---
+
+**Final resource:** Need a quick review of a specific topic? Browse [AP Calculus BC topics →](/courses/ap-calculus-bc). Or revisit [FRQ patterns →](/courses/ap-calculus-bc/cram/frq-practice).
+
+Good luck tomorrow. See you on the other side. ✓

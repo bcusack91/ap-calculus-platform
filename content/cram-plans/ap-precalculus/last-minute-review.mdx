@@ -1,0 +1,158 @@
+---
+title: "AP Precalculus Last-Minute Review (Night Before)"
+description: "The night-before AP Precalculus checklist: must-know formulas, trig identities, log properties, common traps, parametric conversions, and morning-of strategy."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Formula Sheet
+  - Common Traps
+  - Calculator Tips
+---
+
+The exam is **tomorrow**. This is not the time to learn new content — it's time to skim formulas, reset your mind, and sleep. Spend 40–50 minutes on this page, then close your notes.
+
+## Polynomial & Rational Functions Quick Reference
+
+| Concept | Formula / Rule |
+|---|---|
+| Polynomial end behavior | Leading term dominates: $-3x^4 + \ldots \to -\infty$ as $x \to \infty$ |
+| Zeros & factors | If $r$ is a zero, $(x-r)$ is a factor; multiplicity $n$ means graph touches (even $n$) or crosses (odd $n$) |
+| Vertical asymptote | Set denominator = 0, check numerator ≠ 0 |
+| Horizontal asymptote | Compare degrees: if $\deg(\text{num}) < \deg(\text{denom})$, then $y = 0$; if equal, $y = \frac{a_{\text{lead}}}{b_{\text{lead}}}$ |
+| Slant asymptote | If $\deg(\text{num}) = \deg(\text{denom}) + 1$, use polynomial long division |
+| Average rate of change | $\frac{f(b)-f(a)}{b-a}$ |
+
+## Exponential & Logarithmic Functions
+
+| Type | Formula | Example |
+|---|---|---|
+| Exponential form 1 | $A(t) = a \cdot b^t$ | $A(t) = 1000 \cdot 1.05^t$ (5% growth per unit $t$) |
+| Exponential form 2 | $A(t) = a e^{kt}$ | $A(t) = 1000 e^{0.049t}$ (equivalent to $b = 1.05$ if $e^k = 1.05$) |
+| Relationship | $b = e^k$, so $k = \ln(b)$ | If $b = 1.05$, then $k = \ln(1.05) \approx 0.0488$ |
+| Log properties | $\log(xy) = \log(x) + \log(y)$; $\log(x^n) = n\log(x)$; $\log(1/x) = -\log(x)$ | $\log_2(8 \cdot 4) = \log_2(8) + \log_2(4) = 3 + 2 = 5$ |
+| Change of base | $\log_b(x) = \frac{\ln(x)}{\ln(b)} = \frac{\log(x)}{\log(b)}$ | $\log_3(9) = \frac{\ln(9)}{\ln(3)} = \frac{2\ln(3)}{\ln(3)} = 2$ |
+
+## Trigonometric Functions & Unit Circle
+
+| Angle | $\sin(\theta)$ | $\cos(\theta)$ | $\tan(\theta)$ |
+|---|---|---|---|
+| $0$ | $0$ | $1$ | $0$ |
+| $\pi/6$ | $1/2$ | $\sqrt{3}/2$ | $1/\sqrt{3}$ |
+| $\pi/4$ | $\sqrt{2}/2$ | $\sqrt{2}/2$ | $1$ |
+| $\pi/3$ | $\sqrt{3}/2$ | $1/2$ | $\sqrt{3}$ |
+| $\pi/2$ | $1$ | $0$ | undefined |
+
+**Pythagorean identity:** $\sin^2(\theta) + \cos^2(\theta) = 1$.
+
+**Cofunction identities:** $\sin(\pi/2 - \theta) = \cos(\theta)$; $\cos(\pi/2 - \theta) = \sin(\theta)$.
+
+## Sinusoidal Function Template
+
+$$f(t) = a\sin(b(t-c)) + d$$
+
+| Parameter | Meaning | How to find from context |
+|---|---|---|
+| $a$ | Amplitude (vertical stretch) | $a = \frac{\text{max} - \text{min}}{2}$ |
+| $b$ | Frequency (period = $2\pi / b$) | Period $T$ → $b = 2\pi / T$ |
+| $c$ | Phase shift (horizontal, to the *right*) | When does max or min occur? Set $b(t-c) = \pi/2$ for max |
+| $d$ | Midline (vertical shift) | $d = \frac{\text{max} + \text{min}}{2}$ |
+
+> **⚠️ CRITICAL TRAP:** The phase shift is $c$, and it shifts the input *to the right*. Do NOT write $a\sin(bt - c) + d$ — always keep the form $a\sin(b(t-c)) + d$.
+
+## Inverse Trigonometric Functions
+
+| Function | Domain | Range |
+|---|---|---|
+| $\sin^{-1}(x)$ | $[-1, 1]$ | $[-\pi/2, \pi/2]$ |
+| $\cos^{-1}(x)$ | $[-1, 1]$ | $[0, \pi]$ |
+| $\tan^{-1}(x)$ | $\mathbb{R}$ | $(-\pi/2, \pi/2)$ |
+
+**Do not confuse $\sin^{-1}(x)$ with $\frac{1}{\sin(x)} = \csc(x)$.**
+
+## Parametric & Polar Conversions
+
+| Type | Formula |
+|---|---|
+| Parametric → Cartesian | Eliminate $t$: if $x = t^2$ and $y = 2t+1$, solve for $t = (y-1)/2$, then $x = ((y-1)/2)^2 = (y-1)^2/4$ |
+| Polar → Cartesian | $x = r\cos(\theta)$; $y = r\sin(\theta)$; $r^2 = x^2 + y^2$; $\tan(\theta) = y/x$ |
+| Cartesian → Polar | From $x^2 + y^2 = r^2$ and $x = r\cos(\theta)$ |
+| Example: $r = 4\cos(\theta)$ | Multiply both sides by $r$: $r^2 = 4r\cos(\theta) \Rightarrow x^2 + y^2 = 4x \Rightarrow (x-2)^2 + y^2 = 4$ (circle) |
+
+## Matrix Operations (Quickest Review)
+
+**2×2 matrix inverse:**
+$$\begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
+
+**Solve $A{\bf x} = {\bf b}$:** ${\bf x} = A^{-1}{\bf b}$ (if $A$ is invertible).
+
+**Determinant:** $\det\begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc$.
+
+## Top 10 Traps That Cost Real Points
+
+1. **Phase shift sign error:** $(x - c)$ shifts *right*. Writing $\sin(bx - c)$ is wrong form.
+2. **Inverse trig vs reciprocal:** $\sin^{-1}(x) \neq 1/\sin(x)$.
+3. **Domain restrictions:** $\ln(x)$ only for $x > 0$; $\sin^{-1}(x)$ only for $-1 \leq x \leq 1$.
+4. **Log properties apply only to positive arguments:** $\ln(x^2) = 2\ln|x|$, not $2\ln(x)$ if $x < 0$.
+5. **Asymptotes vs holes:** A hole is removable (common factor); an asymptote is non-removable.
+6. **Forgetting the initial parameter:** In $A(t) = a \cdot b^t$, don't skip finding $a$ (initial value).
+7. **Period vs frequency confusion:** If period is 12, then $b = 2\pi/12 = \pi/6$, not $b = 12$.
+8. **Parametric domain:** $t \in [0, 2\pi]$ typically traces a complete curve; check your domain.
+9. **Polar angle quadrants:** When converting $r = -3$, the point is in the *opposite* direction (flip 180°).
+10. **Forgetting to simplify matrix inverse:** Always check that $ad - bc \neq 0$ before inverting.
+
+## Calculator Must-Do Practice (Tonight)
+
+1. **Graph a sinusoidal:** Plot $y = 3\sin(2(x-\pi/4)) - 1$ and verify amplitude, period, phase shift visually.
+2. **Solve numerically:** Use solver to find $2^x = 50$ to 3 decimal places.
+3. **Matrix operations:** Enter a 2×2 matrix and compute its inverse using calc menus.
+4. **Intersections:** Graph $y = 2\sin(x)$ and $y = 0.5x$ and find intersections with calc.
+
+**Battery check:** Replace batteries NOW if your calc has been used heavily. Bring spares.
+
+## Score Boundaries (Recent Years)
+
+Approximate score ranges out of 120 total points:
+- **5:** ~84+
+- **4:** ~70–83
+- **3:** ~56–69
+- **2:** ~42–55
+- **1:** below ~42
+
+**You only need ~70% to score a 4, and ~84% for a 5.** You can miss several questions and still earn a top score. Don't panic.
+
+## Morning-of Checklist
+
+- ☐ 8–9 hours of sleep.
+- ☐ Real breakfast (protein + slow carbs, not just sugar).
+- ☐ 2 sharpened #2 pencils, blue/black pen.
+- ☐ Graphing calculator + fresh batteries + backup batteries.
+- ☐ Photo ID + AP registration label.
+- ☐ Water bottle, snack for break.
+- ☐ Arrive **30 minutes early**.
+
+## Exam Day Strategy
+
+**Multiple Choice (55 min, no calculator for first 25 min):**
+- Mark and skip anything taking >90 seconds. Return to it.
+- Use process of elimination aggressively; wrong answers often have sign errors.
+
+**Multiple Choice (50 min, calculator allowed):**
+- Use graphs and solver to verify algebraic work.
+- Check at least one boundary value in real-world contexts.
+
+**Free Response (90 min for 4 FRQs):**
+- Read all 4 FRQs first. Start with the one you're most confident on.
+- Write the *expression* before plugging in numbers (e.g., write the integral, then evaluate).
+- Always define variables: "Let $t$ = years since 2020."
+- Never leave a question blank. Partial credit adds up — even setting up the right equation earns points.
+- If stuck, move on; you can return in the last 10 minutes.
+
+## One Last Thing
+
+You've prepared. The knowledge is there. Trust your work. Show up rested, read carefully, and remember: the rubric *wants* to give you points—your job is to write clearly enough that it can.
+
+You've got this. 🎯
+
+---
+
+**Need more unit review?** Browse the [AP Precalculus topic library →](/courses/ap-precalculus) or return to [FRQ practice guide →](/courses/ap-precalculus/cram/frq-practice).

@@ -1,0 +1,260 @@
+---
+title: "AP Physics 2 FRQ Practice Guide"
+description: "Master FRQ scoring: claim-evidence-reasoning template, circuit diagrams, ray diagrams, worked examples, and common rubric traps on AP Physics 2."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - FRQ patterns
+  - Claim-Evidence-Reasoning
+  - Circuit Diagrams
+  - Ray Diagrams
+  - Worked Examples
+---
+
+FRQs are **50% of your score** (90 points out of 180 FRQ points). The rubrics reward *clarity* and *justification*—not depth. You have six FRQs, 15 minutes each: be strategic and systematic.
+
+## The six FRQ archetypes
+
+Every year, College Board recycles these patterns:
+
+1. **Experimental design**: Design a lab to find an unknown (e.g., density via buoyancy). Must include controlled variables and measurement method.
+2. **Multi-step calculation**: 3–4 part problem (e.g., circuit analysis, then power dissipation, then energy).
+3. **Conceptual explanation**: "Explain why…" or "Describe how…" Requires claim + evidence + reasoning.
+4. **Diagram interpretation**: Read a PV diagram, circuit, free body diagram, or ray diagram; extract data.
+5. **Phenomena analysis**: Describe motion or behavior using physics principles (e.g., loop-the-loop, magnetic deflection).
+6. **Design & justification**: "Propose a method to [measure/calculate/demonstrate]…" then justify why it works.
+
+---
+
+## Claim-Evidence-Reasoning (CER) template
+
+When asked to explain or justify:
+
+**Claim:** State the answer in 1 sentence.
+> The object floats because the buoyant force equals its weight.
+
+**Evidence:** Cite the equation, principle, or data.
+> $F_b = \rho_{\text{liquid}} V_{\text{displaced}} g$ and $F_g = mg$. If $\rho_{\text{liquid}} = 1000 \, \text{kg/m}^3$, $V_{\text{displaced}} = 0.01 \, \text{m}^3$, then $F_b = 100 \, \text{N}$. For equilibrium, $m = 10 \, \text{kg}$.
+
+**Reasoning:** Connect evidence back to the claim.
+> Since the upward buoyant force equals the downward weight, the net force is zero and the object is in equilibrium—neither sinking nor rising.
+
+**Rubric breakdown:** Often 1 pt claim, 1 pt equation, 1 pt calculation, 1 pt reasoning. Miss reasoning? Lose 1 point. Skip equation? Lose 1–2 points.
+
+---
+
+## Circuit diagram rules
+
+**Always include:**
+1. **Nodes** (dots or circles at junctions).
+2. **Battery polarity** (long line = $+$, short line = $-$).
+3. **Current direction** arrows on each branch (conventional current, out of $+$ terminal).
+4. **Resistor labels** ($R_1$, $R_2$, etc.) with values.
+5. **Simplified equivalent** if combining series/parallel.
+
+**Avoid:**
+- Unmarked junctions (ambiguous series vs parallel).
+- Ambiguous battery placement.
+- Forgetting total equivalent resistance label.
+
+**Example:**
+```
+[Battery 12V] ─────┬─── [R₁ 6Ω] ───┬───[Ground]
+                   │               │
+                   └─── [R₂ 6Ω] ───┘
+                   (parallel, total 3Ω)
+```
+
+Then label: $R_{23} = 3\Omega$, $I_{\text{total}} = 4 \, \text{A}$, $I_{R_1} = 2 \, \text{A}$ (half the total, by current divider).
+
+---
+
+## Ray diagram rules (lenses)
+
+**3-ray method:**
+
+1. **Ray 1**: Parallel to axis → refracts through focal point $F$.
+2. **Ray 2**: Through lens center → passes straight.
+3. **Ray 3**: Through $F$ → refracts parallel.
+
+**Where 3 rays meet = image location.**
+
+| Object distance | Image type | Real/Virtual | Upright? |
+|---|---|---|---|
+| $d_o > 2f$ (converging) | Reduced | Real | Inverted |
+| $d_o = 2f$ | Same size | Real | Inverted |
+| $f < d_o < 2f$ | Enlarged | Real | Inverted |
+| $d_o = f$ | ∞ | — | — |
+| $d_o < f$ | Enlarged | Virtual | Upright |
+
+**Diverging lens**: all images are virtual, upright, reduced.
+
+**Checklist:**
+- ☐ Horizontal optical axis.
+- ☐ Focal points on both sides, distance $f$ from lens.
+- ☐ Object (arrow) on left, image on right (real) or left (virtual).
+- ☐ All 3 rays drawn, converging/diverging at image.
+- ☐ Image height estimated from diagram.
+
+---
+
+## Worked Example 1: Circuits (Kirchhoff's Laws)
+
+**Prompt:** A two-loop circuit has battery 12V and resistors 4Ω, 6Ω in loop 1; battery 8V and resistor 3Ω in loop 2. Loops share a common node. Find current through the 6Ω resistor.
+
+**Solution:**
+
+**Step 1: Draw circuit & label nodes, currents.**
+```
+Loop 1:     Loop 2:
+[12V]—[4Ω]  [8V]—[3Ω]
+   |         |
+   |    [6Ω] |
+   └────●────┘
+      Node X
+```
+- $I_1$ = current loop 1 (through 4Ω, 6Ω).
+- $I_2$ = current loop 2 (through 3Ω).
+- $I_3 = I_1 + I_2$ = total current through 6Ω (by KCL at node X).
+
+**Step 2: Apply KVL to each loop.**
+
+Loop 1 (clockwise):
+$$12 - 4I_1 - 6(I_1 + I_2) = 0$$
+$$12 = 10I_1 + 6I_2 \quad \text{...(1)}$$
+
+Loop 2 (clockwise):
+$$8 - 3I_2 - 6(I_1 + I_2) = 0$$
+$$8 = 6I_1 + 9I_2 \quad \text{...(2)}$$
+
+**Step 3: Solve simultaneously.**
+
+From (1): $I_1 = \frac{12 - 6I_2}{10}$
+
+Substitute into (2):
+$$8 = 6 \left(\frac{12 - 6I_2}{10}\right) + 9I_2$$
+$$80 = 6(12 - 6I_2) + 90I_2$$
+$$80 = 72 - 36I_2 + 90I_2$$
+$$8 = 54I_2$$
+$$I_2 = 0.148 \, \text{A}$$
+
+Back-substitute:
+$$I_1 = \frac{12 - 6(0.148)}{10} = 1.11 \, \text{A}$$
+
+**Current through 6Ω:**
+$$I_3 = I_1 + I_2 = 1.11 + 0.148 = 1.26 \, \text{A}$$
+
+**Rubric (4 points):**
+- 1 pt: correct circuit / node labels.
+- 1 pt: KVL equations correct.
+- 1 pt: correct algebra.
+- 1 pt: final answer with units.
+
+---
+
+## Worked Example 2: Optics (Lens Equation & Ray Diagram)
+
+**Prompt:** A converging lens ($f = 20 \, \text{cm}$) has an object at $d_o = 30 \, \text{cm}$. (a) Find image distance. (b) Draw ray diagram. (c) Describe the image.
+
+**Solution:**
+
+**(a) Lens equation:**
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+$$\frac{1}{20} = \frac{1}{30} + \frac{1}{d_i}$$
+$$\frac{1}{d_i} = \frac{1}{20} - \frac{1}{30} = \frac{3 - 2}{60} = \frac{1}{60}$$
+$$d_i = 60 \, \text{cm}$$
+
+Image is **60 cm from lens, on opposite side** (real image).
+
+**(b) Ray diagram:**
+- Object: arrow at 30 cm, height 5 mm.
+- Ray 1 (parallel): refracts through $F$ at 20 cm.
+- Ray 2 (center): straight through lens.
+- Ray 3 (focal): enters through $F$, exits parallel.
+- **All 3 converge at 60 cm.**
+
+**(c) Image description:**
+
+**Magnification:** $m = -\frac{d_i}{d_o} = -\frac{60}{30} = -2$
+
+- **Type**: Real (can project).
+- **Size**: 2× object height (magnified).
+- **Orientation**: Inverted (negative $m$).
+- **Location**: 60 cm from lens, opposite side.
+
+**Rubric (4 points):**
+- 1 pt: lens equation setup & algebra.
+- 1 pt: $d_i = 60 \, \text{cm}$ correct.
+- 1 pt: ray diagram (3 rays meet at image, labeled).
+- 1 pt: description (real, inverted, 2× magnified).
+
+---
+
+## Worked Example 3: Thermodynamics (PV Diagram & First Law)
+
+**Prompt:** A gas undergoes: A→B isobaric (2 atm, 1 L → 2 L), then B→C isochoric (to 1 atm). Find $W$, $Q$, $\Delta U$ for each. ($n = 0.05 \, \text{mol}$, diatomic gas $C_V = \frac{5}{2}R$).
+
+**Solution:**
+
+**A→B (isobaric, $P = 2 \, \text{atm} = 202650 \, \text{Pa}$):**
+
+Work by gas:
+$$W = P \Delta V = 202650 \times (0.002 - 0.001) = 202.65 \, \text{J}$$
+
+Temperature change (from $PV = nRT$):
+$$T_A = \frac{PV_A}{nR} = \frac{202650 \times 0.001}{0.05 \times 8.31} = 488 \, \text{K}$$
+$$T_B = \frac{202650 \times 0.002}{0.05 \times 8.31} = 976 \, \text{K}$$
+$$\Delta T = 488 \, \text{K}$$
+
+Internal energy change:
+$$\Delta U = nC_V \Delta T = 0.05 \times \frac{5}{2} \times 8.31 \times 488 = 1012 \, \text{J}$$
+
+First Law:
+$$Q = \Delta U + W = 1012 + 203 = 1215 \, \text{J}$$
+
+**B→C (isochoric):**
+
+Work: $W = 0$ (no volume change).
+
+Temperature at C: $T_C = \frac{101325 \times 0.002}{0.05 \times 8.31} = 488 \, \text{K}$ (back to $T_A$).
+
+$$\Delta U = nC_V \Delta T = 0.05 \times \frac{5}{2} \times 8.31 \times (488 - 976) = -1012 \, \text{J}$$
+
+$$Q = \Delta U + W = -1012 + 0 = -1012 \, \text{J}$$
+
+**Summary:**
+
+| Leg | $W$ (J) | $Q$ (J) | $\Delta U$ (J) |
+|---|---|---|---|
+| A→B | +203 | +1215 | +1012 |
+| B→C | 0 | -1012 | -1012 |
+| **Total** | **+203** | **+203** | **0** |
+
+**Rubric (4 points):**
+- 1 pt: process type, correct work formula.
+- 1 pt: $\Delta U$ using $nC_V \Delta T$.
+- 1 pt: First Law to find $Q$.
+- 1 pt: both legs or correct total.
+
+---
+
+## Common FRQ point-leaks
+
+1. **Forgetting to draw / label diagrams.** Rubrics award points for the diagram itself.
+2. **Skipping intermediate steps.** Graders give partial credit only if logic is shown.
+3. **Work sign errors.** Isobaric expansion: $W > 0$. Compression: $W < 0$.
+4. **Units missing** on final answers.
+5. **Misinterpreting the prompt.** "Find and explain" = calculation + justification, not just answer.
+6. **Rounding too early.** Keep 3–4 sig figs through calculation.
+
+---
+
+## FRQ prep schedule
+
+- **Weeks 1–3:** 1–2 FRQs per week, timed.
+- **Week 4:** Full set (all 6) under exam conditions (90 min).
+- **Night before:** Review 1 sample FRQ in each of your 3 weakest units.
+
+---
+
+[Revisit the 3-day or 7-day cram plan →](/courses/ap-physics-2/cram/3-day) if you need a quick unit refresher before tackling these FRQs.

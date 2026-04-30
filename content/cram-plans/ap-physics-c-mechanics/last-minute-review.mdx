@@ -1,0 +1,204 @@
+---
+title: "AP Physics C: Mechanics Last-Minute Review (Night Before)"
+description: "The night-before AP Physics C: Mechanics checklist: must-know formulas, conservation laws, moment of inertia table, common traps, and exam-day tips."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Formula Sheet
+  - Conservation Laws
+  - Common Traps
+  - Exam Strategy
+---
+
+The exam is **tomorrow**. This is **not** the time to learn the parallel-axis theorem — it's time to skim, organize, sleep, and calm your nerves. Spend 45 minutes on this page, then put notes away.
+
+## Core Kinematic and Dynamics Equations
+
+| Quantity | Formula | Notes |
+|---|---|---|
+| Velocity from acceleration | $v = v_0 + \\int a \\, dt$ | Integrate; if $a$ is constant, $v = v_0 + at$ |
+| Position from velocity | $x = x_0 + \\int v \\, dt$ | Integrate; if $v$ is constant, $x = x_0 + vt$ |
+| Newton's second law | $\\Sigma F = ma$ | Always resolve into components ($x$, $y$) |
+| Friction (kinetic) | $f_k = \\mu_k N$ | Opposes motion; maximum static is $f_s \\leq \\mu_s N$ |
+| Weight | $W = mg$ | Near Earth, $g \\approx 10 \\, \\text{m/s}^2$ |
+
+## Work, Energy, and Power
+
+| Quantity | Formula | Notes |
+|---|---|---|
+| Work by constant force | $W = F\\cos\\theta \\cdot d$ | Can also be $W = \\vec F \\cdot \\vec d$ |
+| Work by variable force | $W = \\int \\vec F \\cdot d\\vec r$ | Integrate along the path |
+| Kinetic energy | $KE = \\frac{1}{2}mv^2$ | Always positive |
+| Gravitational PE (near Earth) | $U_g = mgh$ | Relative; choose $h = 0$ arbitrarily |
+| Elastic PE (spring) | $U_s = \\frac{1}{2}kx^2$ | $x$ is stretch from equilibrium |
+| Force from PE | $F = -\\frac{dU}{dx}$ | Differentiate potential to find force |
+| Power | $P = \\frac{dE}{dt} = \\vec F \\cdot \\vec v$ | Rate of energy transfer |
+
+## Momentum and Impulse
+
+| Quantity | Formula | Notes |
+|---|---|---|
+| Linear momentum | $p = mv$ | Vector; units: kg·m/s |
+| Impulse | $J = \\int F \\, dt = \\Delta p$ | Area under force-time curve |
+| Collision (elastic) | $v_1' = \\frac{(m_1 - m_2)v_1 + 2m_2 v_2}{m_1 + m_2}$ | Both $KE$ and $p$ conserved |
+| Collision (perfectly inelastic) | $v' = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}$ | Objects stick; only $p$ conserved |
+
+## Rotation
+
+| Quantity | Formula | Notes |
+|---|---|---|
+| Angular velocity | $\\omega = \\frac{d\\theta}{dt}$ | Radians per second |
+| Angular acceleration | $\\alpha = \\frac{d\\omega}{dt}$ | Radians per second squared |
+| Moment of inertia (definition) | $I = \\int r^2 \\, dm$ | Compute via integration or use standard values below |
+| Torque | $\\tau = r F \\sin\\theta = I\\alpha$ | Angular version of $F = ma$ |
+| Angular momentum | $L = I\\omega$ | Conserved if net torque is zero |
+| Rotational kinetic energy | $KE_{rot} = \\frac{1}{2}I\\omega^2$ | Add to translational $KE$ for rolling |
+| Rolling without slipping | $v = R\\omega$ and $a = R\\alpha$ | Constraint between linear and angular motion |
+
+## Moments of Inertia (Standard Shapes)
+
+| Shape | Axis | Moment of Inertia |
+|---|---|---|
+| Thin rod of length $L$, mass $M$ | Through center, perpendicular to rod | $I = \\frac{1}{12}ML^2$ |
+| Thin rod of length $L$, mass $M$ | Through one end, perpendicular to rod | $I = \\frac{1}{3}ML^2$ |
+| Disk or cylinder, mass $M$, radius $R$ | Through center, along axis | $I = \\frac{1}{2}MR^2$ |
+| Solid sphere, mass $M$, radius $R$ | Through center | $I = \\frac{2}{5}MR^2$ |
+| Thin spherical shell, mass $M$, radius $R$ | Through center | $I = \\frac{2}{3}MR^2$ |
+| Hoop or hollow cylinder, mass $M$, radius $R$ | Through center, along axis | $I = MR^2$ |
+| Parallel-axis theorem | Object at distance $d$ from center | $I = I_{cm} + Md^2$ |
+
+**Parallel-axis trap:** $d$ is the distance from the center of mass to the **new** axis, not from the original axis. Draw a diagram.
+
+## Simple Harmonic Motion
+
+| Quantity | Formula | Notes |
+|---|---|---|
+| SHM differential equation | $\\ddot{x} + \\omega^2 x = 0$ | General solution: $x(t) = A\\cos(\\omega t + \\phi)$ |
+| Angular frequency | $\\omega = \\sqrt{\\frac{k}{m}}$ (spring), $\\omega = \\sqrt{\\frac{g}{L}}$ (pendulum) | Radians per second |
+| Period | $T = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{m}{k}}$ (spring), $T = 2\\pi\\sqrt{\\frac{L}{g}}$ (small-angle pendulum) | Seconds |
+| Total energy in SHM | $E = \\frac{1}{2}kA^2 = \\text{const}$ | At maximum displacement, all PE; at equilibrium, all KE |
+
+## Gravitation
+
+| Quantity | Formula | Notes |
+|---|---|---|
+| Newton's law of gravitation | $F = \\frac{Gm_1 m_2}{r^2}$ | $G = 6.67 \\times 10^{-11} \\, \\text{N·m}^2/\\text{kg}^2$ |
+| Gravitational PE | $U_g = -\\frac{GMm}{r}$ | Negative; zero at infinity; more negative closer to Earth |
+| Gravitational field | $g = \\frac{GM}{r^2}$ | Acceleration due to gravity at radius $r$ |
+| Escape velocity | $v_{esc} = \\sqrt{\\frac{2GM}{R}}$ | Minimum speed to escape to infinity |
+| Orbital speed | $v_{orbit} = \\sqrt{\\frac{GM}{r}}$ | Gravitational force provides centripetal acceleration |
+| Orbital period | $T = 2\\pi\\sqrt{\\frac{r^3}{GM}}$ | From Kepler's third law: $T^2 \\propto r^3$ (or $T^2 \\propto a^3$) |
+
+## The Three Great Conservation Laws
+
+### 1. Conservation of Mechanical Energy
+
+$$E = KE + U = \\text{constant}$$
+
+**Conditions:** Only conservative forces (gravity, springs) do work, **or** non-conservative work is accounted for:
+$$E_i + W_{\\text{non-conservative}} = E_f$$
+
+**On the exam:** Always state these conditions. Examiners are strict.
+
+### 2. Conservation of Linear Momentum
+
+$$p_i = p_f \\quad \\text{(or } \\Sigma p_x = \\text{const}, \\Sigma p_y = \\text{const} \\text{)}$$
+
+**Conditions:** No net **external** force acts on the system. Collisions between two objects satisfy this **automatically** (internal forces cancel).
+
+**Trap:** If there's friction with the ground or an external applied force, momentum is **not** conserved for a single object. It IS conserved for two objects colliding if we ignore air resistance.
+
+### 3. Conservation of Angular Momentum
+
+$$L_i = L_f \\quad \\text{(or } L = I\\omega = \\text{constant)}$$
+
+**Conditions:** No net **external** torque acts on the system about the chosen axis.
+
+---
+
+## Top 10 Point-Losing Traps
+
+1. **Forgetting units.** "5 m/s" not just "5". "12 joules", not "12".
+2. **Confusing $v$ and $|v|$ (speed).** In SHM, $v$ changes sign; speed doesn't.
+3. **Forgetting the negative sign on gravitational PE.** $U = -GMm/r$ (negative!).
+4. **Parallel-axis theorem misapplied.** $I = I_{cm} + Md^2$, where $d$ is distance from the center of mass to the **new** axis.
+5. **Not citing conservation law conditions.** "Mechanical energy is conserved" is incomplete. Say: "Mechanical energy is conserved because only gravity acts; air resistance is negligible."
+6. **Energy conservation with friction.** Don't forget $W_{friction} = E_i - E_f$. Friction removes energy.
+7. **Angular momentum: wrong axis.** $L = I\\omega$ only if $I$ is about the axis you're summing torques around. If the axis changes, angular momentum is not conserved.
+8. **Moment of inertia for the wrong shape.** Know your $I$ table cold. A disk is $\\frac{1}{2}MR^2$, a sphere is $\\frac{2}{5}MR^2$.
+9. **Collision: forgetting that kinetic energy is **not** conserved** (unless the problem says "elastic"). In inelastic collisions, $KE_i > KE_f$.
+10. **Escape velocity vs. orbital speed.** Escape is $\\sqrt{2GM/R}$; orbit is $\\sqrt{GM/r}$. Escape is $\\sqrt{2}$ times faster than an orbit at the surface.
+
+---
+
+## Exam Strategy
+
+### Multiple Choice (45 min for 35 questions)
+
+- **Mark and skip** anything that takes > 90 seconds. Rough order: 1.3 min per question on average.
+- **Read the question twice.** Misreading is the #1 error. "How much time" vs. "at what time"?
+- **Eliminate obviously wrong answers first.** If the answer has the wrong units or absurd magnitude, cross it out.
+- **If stuck, guess** — there's no penalty for a blank. (Actually there is: zero points. A 25% guess is better.)
+
+### Free Response (45 min for 3 FRQs)
+
+1. **Read all three FRQs first.** Start with the one you're most confident on.
+2. **Draw a free body diagram** before you write a force equation. Even if it's quick, do it.
+3. **Show the integral or derivative.** Write $v = \\int a \\, dt$ **before** plugging in numbers. Graders give partial credit for the setup.
+4. **State your conservation law.** Don't just say "energy is conserved." Say: "Mechanical energy is conserved because only gravity acts."
+5. **Don't leave anything blank.** A half-finished FRQ earns partial credit. A blank earns zero.
+
+### Timing
+
+- Spend **45 min on MCQ**, leaving 0 min buffer (move steadily; don't panic).
+- Spend **15 min per FRQ**. If you're over, switch to the next one and come back if time remains.
+
+---
+
+## Score Boundaries (Recent Years)
+
+Approximate out of ~75 raw points:
+
+| Score | Raw Points (approx) | Percentage |
+|---|---|---|
+| **5** | 50–75 | 67–100% |
+| **4** | 40–49 | 53–66% |
+| **3** | 30–39 | 40–52% |
+| **2** | 20–29 | 27–39% |
+| **1** | below 20 | below 27% |
+
+**Physics C is curved generously.** You can score a **5 with just 50%** correct. You do not need to be perfect.
+
+---
+
+## Morning-of Checklist
+
+- ☐ **8+ hours of sleep.** Non-negotiable. A tired brain misreads $F = ma$ as $F = m/a$.
+- ☐ **Real breakfast:** protein + complex carbs. Eggs and oatmeal, not just sugar.
+- ☐ **2 sharpened #2 pencils**, eraser, **black or blue pen** for FRQs.
+- ☐ **Approved calculator** (graphing OK; CAS typically not OK — check your school). **Spare batteries.**
+- ☐ **Photo ID + AP ID label** (if provided).
+- ☐ **Water, snack** for the break. Banana, nuts, etc.
+- ☐ **Arrive 30 min early.** Rushing introduces careless errors.
+
+---
+
+## During the Exam
+
+- **Breathe.** Seriously. When you feel stuck, take 3 deep breaths. Panic kills problem-solving.
+- **Check your algebra.** Before you finalize an answer, plug numbers back in to verify.
+- **Don't second-guess yourself.** If you're confident in an answer, move on. Overthinking costs time.
+- **Mark tough questions.** On MCQ, mark with a checkmark and come back if there's time after you finish.
+- **Write neatly on FRQs.** Graders can only score what they can read. Illegible = no points.
+
+---
+
+## One Last Thing
+
+You've prepared. The work is done. Trust yourself. Show up rested, **read each question carefully**, cite your conservation laws, and **don't panic if something looks unfamiliar** — the exam is designed to include some novel setups. Your job is to recognize the **underlying physics** (Newton's second law, energy, momentum, angular momentum) and apply it.
+
+Good luck. You've got this. 🎯
+
+---
+
+**Need more focused review?** Revisit the [3-day cram plan →](/courses/ap-physics-c-mechanics/cram/3-day), [FRQ practice guide →](/courses/ap-physics-c-mechanics/cram/frq-practice), or [topic library →](/courses/ap-physics-c-mechanics).

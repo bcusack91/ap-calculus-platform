@@ -1,0 +1,148 @@
+---
+title: "AP Physics C: Electricity and Magnetism 7-Day Study Plan"
+description: "A week-long AP Physics C E&M plan covering all 5 CED units: daily breakdown of topics, drill counts, and 2 days of full FRQ practice with score targets."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Electrostatics & Gauss's Law
+  - Conductors & Capacitors
+  - Electric Circuits
+  - Magnetic Fields & Ampère's Law
+  - Electromagnetic Induction & RL Circuits
+---
+
+You have **seven days** to solidify all five units of AP Physics C: E&M. This plan spreads the five units across Days 1–5, then devotes Days 6–7 to full FRQ practice and a mock exam review.
+
+Each day requires **3–4 hours** of focused work. Do not skip review blocks; the derivative and integral setups are where most rubric points live.
+
+## Daily breakdown
+
+| Day | Unit(s) | Focus | Drills | FRQ |
+|---|---|---|---|---|
+| **1** | Electrostatics & Gauss's Law | Coulomb's law, continuous charge, Gauss's law symmetry (sphere, cylinder, sheet) | 25 MCQ (point/continuous $E$) | None (formula intensive) |
+| **2** | Gauss's law (continued) + Electric potential | Gauss's law applications (inside/outside distributions), $V = -\int E \cdot d\ell$, relating $E$ and $V$ | 20 MCQ (Gauss, potential), 5 short FRQ sketches | 1 full Gauss's law FRQ |
+| **3** | Conductors, Capacitors, Dielectrics | Conductors in equilibrium, $C = Q/V$, parallel-plate capacitor, energy, series/parallel combinations, dielectric constant | 20 MCQ (capacitors), 10 circuit reduction exercises | None (primarily conceptual) |
+| **4** | Electric Circuits (resistivity, Kirchhoff's, RC) | Resistivity $\rho L/A$, Kirchhoff's junction & loop rules, multiloop circuits, RC transient charge/discharge curves, steady state | 20 MCQ (circuits), 8 multiloop Kirchhoff problems | 1 RC circuit FRQ (charging + steady state) |
+| **5** | Magnetic fields, Ampère's law, Biot-Savart | Lorentz force $\vec F = q\vec v \times \vec B$, force on current $\vec F = I\vec L \times \vec B$, Ampère's law $\oint B \cdot d\ell = \mu_0 I_{enc}$, Biot-Savart setup | 25 MCQ (force, Ampère, Biot-Savart), 5 right-hand-rule drills | 1 Ampère's law FRQ (solenoid or cylinder) |
+| **6** | Electromagnetic Induction (Faraday, Lenz, motional EMF, inductors) | Magnetic flux $\Phi_B = \int B \cdot dA$, Faraday's law $\varepsilon = -d\Phi_B/dt$, Lenz's law, motional EMF $BLv$, inductors $U = \frac{1}{2}LI^2$, RL transient $\tau = L/R$ | 20 MCQ (induction, RL circuits), 6 Lenz's law direction problems | 1 Faraday's law FRQ (changing flux + induced current direction) |
+| **7** | Mock exam + score review | Mixed all 5 units; full-length (35 MCQ + 3 FRQs, 90 min timed) | 35 MCQ mixed + 3 FRQs | Full mock exam |
+
+## Day-by-day detail
+
+### Day 1: Electrostatics foundations (3.5 hrs)
+
+**Review (60 min):**
+- Coulomb's law: $\vec F = k \frac{q_1 q_2}{r^2} \hat r$, electric field $E = k \frac{q}{r^2}$.
+- Continuous distributions: $dE = k \frac{dq}{r^2}$. Drill the ring and disk setups (integrate along axis).
+- Superposition and vector addition of $\vec E$ fields.
+
+**Practice (2.5 hrs):**
+- 25 MCQ on Coulomb's law, point charges, and field lines.
+- 3 worked problems: ring of charge, uniformly charged rod, disk of charge (find $E$ at center and on axis).
+
+> **💡 Key insight:** For continuous distributions, always set up the integral; don't memorize results.
+
+---
+
+### Day 2: Gauss's law deep dive + Potential (4 hrs)
+
+**Review (90 min):**
+- **Gauss's law:** $\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$. Recognize when symmetry lets you pull $E$ out of the integral.
+- **Three symmetry cases:**
+  - **Spherical:** $E \cdot 4\pi r^2 = \frac{Q_{enc}}{\epsilon_0}$ → $E(r) = \frac{kQ_{enc}}{r^2}$ or $\frac{Q_{enc}}{4\pi\epsilon_0 r^2}$.
+  - **Cylindrical:** $E \cdot 2\pi r L = \frac{\lambda L}{\epsilon_0}$ → $E(r) = \frac{\lambda}{2\pi\epsilon_0 r}$.
+  - **Planar:** $E \cdot 2A = \frac{\sigma A}{\epsilon_0}$ → $E = \frac{\sigma}{2\epsilon_0}$.
+- **Electric potential:** $V(r) = k \frac{q}{r}$ for a point charge; $E = -\frac{dV}{dr}$ (1D) or $\vec E = -\nabla V$ (3D).
+- Relating potential to Gauss's law via $V = -\int E \, dr$ along a path.
+
+**Practice (2.5 hrs):**
+- 20 MCQ on Gauss's law and potential.
+- 5 short-answer sketches: draw the Gaussian surface, write the law, solve for $E$.
+- **1 full FRQ:** "A conducting sphere of radius $R$ holds total charge $Q$. Using Gauss's law, find the electric field $E(r)$ for $r < R$ and $r > R$. Relate to electric potential. If an electron is placed at the surface, what is the potential energy?"
+
+---
+
+### Day 3: Capacitors & Conductors (3.5 hrs)
+
+**Review (90 min):**
+- Conductors in electrostatic equilibrium: $E = 0$ inside, charge on surface, $\vec E \perp$ surface.
+- Capacitance: $C = \frac{Q}{V}$ (definition), parallel-plate $C = \epsilon_0 \frac{A}{d}$, cylindrical, spherical.
+- Energy stored: $U = \frac{1}{2}CV^2 = \frac{1}{2}\frac{Q^2}{C} = \frac{1}{2}QV$.
+- Series capacitors: $\frac{1}{C_{tot}} = \frac{1}{C_1} + \frac{1}{C_2} + \ldots$ (reciprocal sum).
+- Parallel capacitors: $C_{tot} = C_1 + C_2 + \ldots$ (direct sum).
+- Dielectrics: $C = \kappa \epsilon_0 \frac{A}{d}$ (dielectric constant $\kappa$), reduced $E$ inside.
+
+**Practice (2.5 hrs):**
+- 20 MCQ on capacitors, combinations, energy.
+- 10 circuit reduction problems (mix series, parallel, and series-parallel).
+
+> **⚠️ Trap:** Capacitors in series have the *same* charge $Q$ on each plate, but *different* voltages. Don't confuse with resistors (which split current, not charge).
+
+---
+
+### Day 4: Circuits & RC Dynamics (4 hrs)
+
+**Review (90 min):**
+- Resistivity: $R = \rho \frac{L}{A}$.
+- Kirchhoff's junction rule: $\sum I_{in} = \sum I_{out}$.
+- Kirchhoff's loop rule: $\sum V = 0$ around any closed loop (including resistive drops $V = -IR$).
+- RC charging: $Q(t) = Q_0(1 - e^{-t/\tau})$, $I(t) = \frac{Q_0}{\tau} e^{-t/\tau}$, $\tau = RC$.
+- RC discharging: $Q(t) = Q_0 e^{-t/\tau}$, $I(t) = -\frac{Q_0}{\tau} e^{-t/\tau}$.
+- Steady state: current through a capacitor $= 0$ (open circuit).
+
+**Practice (2.5 hrs):**
+- 20 MCQ on Kirchhoff's laws and circuit analysis.
+- 8 multiloop problems (use Kirchhoff to set up the system).
+- **1 full FRQ:** "A capacitor of $C = 100 \, \mu F$ is charged through a resistor $R = 5000 \, \Omega$. (a) Find the time constant. (b) Write $Q(t)$ during charging. (c) Find the current at $t = 0$ and $t = \tau$. (d) In steady state (long time), what is the energy stored in the capacitor?"
+
+---
+
+### Day 5: Magnetism & Ampère's Law (4 hrs)
+
+**Review (90 min):**
+- **Lorentz force:** $\vec F = q \vec v \times \vec B$ (direction: right-hand rule, fingers from $\vec v$ to $\vec B$, thumb = $\vec F$).
+- **Force on a current:** $\vec F = I \vec L \times \vec B$ (where $\vec L$ = length vector in direction of current).
+- **Biot-Savart law:** $d\vec B = \frac{\mu_0 I}{4\pi} \frac{d\vec\ell \times \hat r}{r^2}$ — setup, not always full integration.
+- **Ampère's law:** $\oint \vec B \cdot d\vec\ell = \mu_0 I_{enc}$ for symmetric geometries.
+  - Infinite wire: $B = \frac{\mu_0 I}{2\pi r}$.
+  - Solenoid: $B = \mu_0 n I$ (uniform inside, zero outside).
+  - Toroid: $B = \frac{\mu_0 I N}{2\pi r}$ (varies with $r$).
+
+**Practice (2.5 hrs):**
+- 25 MCQ on Lorentz force, Ampère's law, Biot-Savart.
+- 5 right-hand-rule problems (confirm force & field directions).
+- **1 full FRQ:** "A long solenoid with $n = 1000$ turns per meter carries current $I = 2 \, A$. Using Ampère's law, find the magnetic field magnitude inside. If a proton enters perpendicular to $\vec B$ with speed $v = 10^5 \, m/s$, find the Lorentz force magnitude and the radius of its circular path."
+
+---
+
+### Day 6: Electromagnetic Induction & RL Circuits (4 hrs)
+
+**Review (90 min):**
+- **Magnetic flux:** $\Phi_B = \int \vec B \cdot d\vec A = BA\cos\theta$ (for uniform $B$).
+- **Faraday's law:** $\varepsilon = -\frac{d\Phi_B}{dt}$ (the negative sign is Lenz's law).
+- **Lenz's law:** Induced current opposes the change in flux (either magnitude or direction).
+- **Motional EMF:** $\varepsilon = BLv$ when a rod slides perpendicular through $\vec B$.
+- **Inductors:** $\varepsilon = -L \frac{dI}{dt}$, energy $U = \frac{1}{2}LI^2$, time constant $\tau = \frac{L}{R}$.
+- **RL charging:** $I(t) = I_0(1 - e^{-t/\tau})$. **RL discharging:** $I(t) = I_0 e^{-t/\tau}$.
+
+**Practice (2.5 hrs):**
+- 20 MCQ on Faraday's law, RL circuits, motional EMF.
+- 6 Lenz's law direction problems (state whether induced current is clockwise or counterclockwise, and why).
+- **1 full FRQ:** "A rectangular loop of area $A = 0.1 \, m^2$ is placed in a uniform magnetic field $B = 2 \, T$ perpendicular to the loop. The field decreases linearly to zero over time $\Delta t = 0.5 \, s$. (a) Find the induced EMF. (b) If the loop has resistance $R = 10 \, \Omega$, find the induced current. (c) By Lenz's law, state the direction of the induced current."
+
+---
+
+### Day 7: Full Mock Exam (90 min timed)
+
+Administer **35 multiple-choice questions + 3 free-response questions** in **90 minutes** (realistic exam conditions).
+
+**After the mock, review:**
+- Tally your score (108 points total). See the [last-minute review](/courses/ap-physics-c-em/cram/last-minute-review) for score boundaries.
+- Identify which unit(s) you scored lowest on. Revisit one worked example per weak unit.
+- Sleep 8 hours before exam day.
+
+## Need help drilling a specific topic?
+
+Browse our [AP Physics C: E&M topic library →](/courses/ap-physics-c-em) for deeper explanations, derivations, and additional worked examples.
+
+**FRQ practice guide?** See the [3 FRQ archetypes →](/courses/ap-physics-c-em/cram/frq-practice) with fully worked solutions.

@@ -1,0 +1,193 @@
+---
+title: "AP Physics C: Mechanics FRQ Practice Guide"
+description: "Master the 3 FRQ archetypes: mechanics with calculus, rotation with conservation, gravitation with orbits. Includes integration cheat-sheet and worked examples."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - FRQ Patterns
+  - Integration Techniques
+  - Worked Examples
+  - Claim-Evidence-Reasoning
+---
+
+The AP Physics C: Mechanics exam has **3 free response questions**, each worth 15% of your total score. Every FRQ follows one of three archetypes:
+
+1. **Mechanics with calculus** — kinematics, dynamics, or energy (integrate $a$ to get $v$ and $x$, or differentiate energy to find force).
+2. **Rotation or angular momentum** — compute moment of inertia via integration, apply $\\tau = I\\alpha$, or conserve $L$.
+3. **Gravitation or orbital mechanics** — escape velocity, orbital speed, or Kepler's laws.
+
+This guide walks through each archetype with a worked example, then gives you the integration and differentiation cheat-sheet you'll need.
+
+## Archetype 1: Mechanics with Calculus
+
+**Setup:** You're given acceleration (or force) as a function of time or position. You must integrate to find velocity and position, or differentiate position to find velocity and acceleration.
+
+### Worked Example 1A: Particle Motion from Variable Acceleration
+
+**Problem:** A particle starts at $x = 0$ with $v_0 = 0$. It experiences acceleration $a(t) = 4t \\, \\text{m/s}^2$ for $0 \\leq t \\leq 3$ seconds, then $a = 0$ for $t > 3$. 
+
+(a) Find $v(t)$ for all $t$.
+(b) Find $x(3)$ and the maximum position.
+(c) Sketch $x(t)$, $v(t)$, $a(t)$.
+
+### Solution
+
+**(a) Velocity $v(t)$:**
+
+For $0 \\leq t \\leq 3$:
+$$v(t) = v_0 + \\int_0^t a(\\tau) \\, d\\tau = 0 + \\int_0^t 4\\tau \\, d\\tau = 2t^2$$
+
+At $t = 3$: $v(3) = 2(9) = 18 \\, \\text{m/s}$.
+
+For $t > 3$: $a = 0$, so $v = 18 \\, \\text{m/s}$ (constant).
+
+**(b) Position $x(t)$ and maximum:**
+
+For $0 \\leq t \\leq 3$:
+$$x(t) = 0 + \\int_0^t v(\\tau) \\, d\\tau = \\int_0^t 2\\tau^2 \\, d\\tau = \\frac{2t^3}{3}$$
+
+At $t = 3$: $x(3) = \\frac{2 \\cdot 27}{3} = 18 \\, \\text{m}$.
+
+For $t > 3$: $x(t) = 18 + 18(t - 3)$. Position increases without bound. There is no maximum (the particle moves at constant velocity forever).
+
+> **💡 Note:** The graph of $x(t)$ is **concave up** for $t \\leq 3$ (because $a > 0$), then **linear** for $t > 3$.
+
+---
+
+### Worked Example 1B: Work and Force from Potential Energy
+
+**Problem:** A conservative force acts on a 2 kg mass. The potential energy is $U(x) = 3x^2 - 2x$ (in joules, for $x$ in meters). 
+
+(a) Find the force $F(x)$.
+(b) If the mass starts at $x = 0$ with $v = 0$, what is its speed at $x = 2 \\, \\text{m}$?
+
+### Solution
+
+**(a) Force from potential:**
+
+$$F(x) = -\\frac{dU}{dx} = -\\frac{d}{dx}(3x^2 - 2x) = -(6x - 2) = 2 - 6x$$
+
+**(b) Speed at $x = 2$:**
+
+Use energy conservation: $E = KE + U = $ constant.
+
+At $x = 0$: $E = \\frac{1}{2}(2)(0)^2 + 3(0)^2 - 2(0) = 0$.
+
+At $x = 2$: $0 = \\frac{1}{2}(2)v^2 + 3(4) - 2(2)$, so $0 = v^2 + 12 - 4 = v^2 + 8$. 
+
+This gives $v^2 = -8$, which is **impossible**. The mass cannot reach $x = 2$ starting from rest at $x = 0$ with this potential — the potential energy barrier is too high.
+
+> **⚠️ Trap:** Always check that energy conservation makes sense. If $v^2 < 0$, the particle is trapped in a potential well.
+
+---
+
+## Archetype 2: Rotation and Angular Momentum
+
+**Setup:** Compute moment of inertia via integration, apply $\\tau = I\\alpha$, or conserve angular momentum.
+
+### Worked Example 2: Moment of Inertia from Integration
+
+**Problem:** A uniform thin rod of mass $M$ and length $L$ is rotated about an axis perpendicular to the rod and passing through one end. 
+
+(a) Derive the moment of inertia $I$.
+(b) The rod is attached to a motor that applies a constant torque $\\tau_0$. Find the angular acceleration $\\alpha$.
+
+### Solution
+
+**(a) Moment of inertia:**
+
+Set up a coordinate $x$ along the rod, with $x = 0$ at the pivot (the end). A small segment $dx$ has mass $dm = \\frac{M}{L} dx$ (linear mass density $\\lambda = M/L$).
+
+$$I = \\int r^2 \\, dm = \\int_0^L x^2 \\cdot \\frac{M}{L} \\, dx = \\frac{M}{L} \\int_0^L x^2 \\, dx = \\frac{M}{L} \\cdot \\frac{L^3}{3} = \\frac{ML^2}{3}$$
+
+**(b) Angular acceleration:**
+
+From $\\tau = I\\alpha$:
+$$\\alpha = \\frac{\\tau_0}{I} = \\frac{\\tau_0}{\\frac{ML^2}{3}} = \\frac{3\\tau_0}{ML^2}$$
+
+---
+
+## Archetype 3: Gravitation and Orbital Mechanics
+
+**Setup:** Apply Newton's gravitational law, energy conservation with gravitational PE, or orbital kinematics ($a = v^2/r$).
+
+### Worked Example 3: Escape Velocity and Orbital Speed
+
+**Problem:** Earth has mass $M = 6 \\times 10^{24} \\, \\text{kg}$ and radius $R = 6.4 \\times 10^6 \\, \\text{m}$.
+
+(a) Derive the escape velocity from Earth's surface.
+(b) A satellite orbits at height $h = 3.6 \\times 10^6 \\, \\text{m}$ above the surface. Find its orbital speed.
+
+### Solution
+
+**(a) Escape velocity:**
+
+Energy conservation: at the surface, $KE_i + U_i = KE_f + U_f$. Take $U_f = 0$ at infinity.
+
+$$\\frac{1}{2}mv_{esc}^2 - \\frac{GMm}{R} = 0$$
+
+$$v_{esc} = \\sqrt{\\frac{2GM}{R}} = \\sqrt{\\frac{2 \\times 6.67 \\times 10^{-11} \\times 6 \\times 10^{24}}{6.4 \\times 10^6}} \\approx 11.2 \\, \\text{km/s}$$
+
+**(b) Orbital speed at height $h$:**
+
+At orbital radius $r = R + h = 6.4 \\times 10^6 + 3.6 \\times 10^6 = 10^7 \\, \\text{m}$, gravity provides centripetal force:
+
+$$\\frac{GMm}{r^2} = \\frac{mv^2}{r}$$
+
+$$v = \\sqrt{\\frac{GM}{r}} = \\sqrt{\\frac{6.67 \\times 10^{-11} \\times 6 \\times 10^{24}}{10^7}} \\approx 6.3 \\, \\text{km/s}$$
+
+---
+
+## Integration Cheat-Sheet
+
+| Integral | Result | Common Physics Use |
+|---|---|---|
+| $\\int t \\, dt$ | $\\frac{t^2}{2} + C$ | Velocity from constant acceleration |
+| $\\int t^2 \\, dt$ | $\\frac{t^3}{3} + C$ | Position from $a(t) = kt$ |
+| $\\int e^{-kt} \\, dt$ | $-\\frac{1}{k}e^{-kt} + C$ | Drag force decay |
+| $\\int r \\, dr$ | $\\frac{r^2}{2} + C$ | Moment of inertia (cylindrical shell) |
+| $\\int r^2 \\, dr$ | $\\frac{r^3}{3} + C$ | Moment of inertia (thin spherical shell) |
+| $\\int \\frac{dr}{r^2}$ | $-\\frac{1}{r} + C$ | Gravitational potential energy (leading to $-GMm/r$) |
+
+## Differentiation Cheat-Sheet
+
+| Function | Derivative | Common Physics Use |
+|---|---|---|
+| $x(t) = A\\cos(\\omega t + \\phi)$ | $v = -A\\omega\\sin(\\omega t + \\phi)$ | SHM velocity |
+| $U(x)$ | $F = -\\frac{dU}{dx}$ | Force from potential energy |
+| $p(t)$ | $F = \\frac{dp}{dt}$ | Force from momentum |
+| $E(t) = \\frac{1}{2}mv^2 + U(x)$ | $\\frac{dE}{dt} = F_x v_x + F_y v_y$ | Power (rate of energy change) |
+
+## FRQ Scoring: Claim–Evidence–Reasoning
+
+College Board rubrics follow a **CER** structure:
+
+- **Claim:** State what you are finding (e.g., "The final velocity is $v_f = 5 \\, \\text{m/s}$").
+- **Evidence:** Show your work — the integral, the conservation law you cited, the calculation.
+- **Reasoning:** Explain **why** your approach is correct (e.g., "Mechanical energy is conserved because only the conservative gravitational force does work").
+
+**Example FRQ response structure:**
+
+> **Claim:** The speed of the particle at $x = 2$ is $v = 3 \\, \\text{m/s}$.
+>
+> **Evidence:** Using energy conservation, $KE_i + U_i = KE_f + U_f$:
+> $$0 + 0 = \\frac{1}{2}(2)v^2 + 3$$
+> $$v = \\sqrt{3} \\approx 1.73 \\, \\text{m/s}$$
+>
+> **Reasoning:** Mechanical energy is conserved because gravity is a conservative force and no friction acts.
+
+---
+
+## Practice Routine
+
+1. **Pick one archetype per day.** Solve the worked example from memory (no looking).
+2. **Solve the problem yourself**, then check the solution.
+3. **Identify the integral or conservation law.** What made this problem tick?
+4. **Write a brief CER response.** 2–3 sentences on why your approach is correct.
+5. **Repeat with a different problem in the same archetype** until you feel confident.
+
+After practicing all three archetypes, mix them: on a single mock exam, you'll see one of each, randomly ordered.
+
+---
+
+**Ready to practice?** [Return to the 3-day cram →](/courses/ap-physics-c-mechanics/cram/3-day) or [check the last-minute formulas →](/courses/ap-physics-c-mechanics/cram/last-minute-review).

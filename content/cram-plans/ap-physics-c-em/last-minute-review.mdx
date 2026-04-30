@@ -1,0 +1,210 @@
+---
+title: "AP Physics C: Electricity and Magnetism Last-Minute Review (Night Before)"
+description: "The night-before AP Physics C E&M checklist: must-know formulas, Gauss/Ampère/Faraday laws, symmetry tables, transient curves, common traps, and morning-of advice."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Formula Sheet
+  - Theorems & Laws
+  - Common Traps
+  - Score Boundaries
+---
+
+The exam is **tomorrow**. This page is 30–45 minutes of skim, not a crash course. Put your notes away after this review. Sleep is more important than reviewing a fourth time.
+
+## Essential formulas by unit
+
+### Unit 1: Electrostatics
+
+| Concept | Formula | Notes |
+|---|---|---|
+| **Coulomb's law** | $\vec F = k \frac{q_1 q_2}{r^2} \hat r$ | $k = 8.99 \times 10^9 \, N \cdot m^2 / C^2$ |
+| **Electric field** | $\vec E = k \frac{q}{r^2}$ (point); $dE = k \frac{dq}{r^2}$ (continuous) | Always set up integral; don't just memorize results |
+| **Electric potential** | $V = k \frac{q}{r}$ (point); $V = -\int E \, dr$ (from field) | $E = -\frac{dV}{dr}$ (1D derivative relation) |
+| **Gauss's law** | $\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$ | $\epsilon_0 = 8.85 \times 10^{-12} \, C^2 / (N \cdot m^2)$ |
+
+**Gauss's law results (memorize)**
+- **Spherical:** $E = \frac{kQ}{r^2}$ (outside); $E = \frac{kQr}{R^3}$ (inside sphere of radius $R$)
+- **Cylindrical:** $E = \frac{\lambda}{2\pi\epsilon_0 r}$ (line charge $\lambda$)
+- **Planar:** $E = \frac{\sigma}{2\epsilon_0}$ (sheet with surface density $\sigma$)
+
+---
+
+### Unit 2: Conductors, Capacitors, Dielectrics
+
+| Concept | Formula | Notes |
+|---|---|---|
+| **Capacitance** | $C = \frac{Q}{V}$ (definition) | Farad = Coulomb/Volt |
+| **Parallel-plate** | $C = \epsilon_0 \frac{A}{d}$ | $\epsilon_0$ inside; dielectric constant $\kappa$ modifies to $C = \kappa \epsilon_0 \frac{A}{d}$ |
+| **Energy** | $U = \frac{1}{2}CV^2 = \frac{1}{2}\frac{Q^2}{C} = \frac{1}{2}QV$ | All three forms are equivalent |
+| **Series caps** | $\frac{1}{C_{tot}} = \frac{1}{C_1} + \frac{1}{C_2} + \ldots$ | *Opposite* of resistors |
+| **Parallel caps** | $C_{tot} = C_1 + C_2 + \ldots$ | *Same* as resistors |
+| **Resistivity** | $R = \rho \frac{L}{A}$ | Temperature dependence: $R(T) = R_0 [1 + \alpha(T - T_0)]$ (often not tested) |
+
+---
+
+### Unit 3: Electric Circuits
+
+| Concept | Formula | Notes |
+|---|---|---|
+| **Ohm's law** | $V = IR$ | Voltage drop across resistor |
+| **Kirchhoff's junction rule** | $\sum I_{in} = \sum I_{out}$ | Current conservation |
+| **Kirchhoff's loop rule** | $\sum V = 0$ (around closed loop) | Include battery EMF, resistive drops, capacitor voltage |
+| **RC time constant** | $\tau = RC$ | Seconds |
+| **Charging** | $Q(t) = Q_0(1 - e^{-t/\tau})$ | Charge grows toward $Q_0 = CV_{battery}$ |
+| **Discharging** | $Q(t) = Q_0 e^{-t/\tau}$ | Charge decays to zero |
+| **Current (charging)** | $I(t) = I_0 e^{-t/\tau}$ where $I_0 = \frac{Q_0}{\tau} = \frac{V_{battery}}{R}$ | Starts at $I_0$, decays |
+| **Steady state** | $I_{cap} = 0$ (after $t \gg \tau$) | Capacitor acts as open circuit |
+
+---
+
+### Unit 4: Magnetic Fields
+
+| Concept | Formula | Notes |
+|---|---|---|
+| **Lorentz force** | $\vec F = q \vec v \times \vec B$ | Perpendicular to both $\vec v$ and $\vec B$; direction via right-hand rule |
+| **Force on current** | $\vec F = I \vec L \times \vec B$ | $\vec L$ points in direction of current |
+| **Circular motion** | $qvB = \frac{mv^2}{r}$ → $r = \frac{mv}{qB}$ | Charged particle in perpendicular $B$ field |
+| **Biot-Savart** | $d\vec B = \frac{\mu_0 I}{4\pi} \frac{d\vec\ell \times \hat r}{r^2}$ | Setup; full integration rarely asked |
+| **Ampère's law** | $\oint \vec B \cdot d\vec\ell = \mu_0 I_{enc}$ | $\mu_0 = 4\pi \times 10^{-7} \, T \cdot m / A$ |
+
+**Ampère's law results (memorize)**
+- **Infinite wire:** $B = \frac{\mu_0 I}{2\pi r}$
+- **Solenoid:** $B = \mu_0 n I$ (uniform inside, $n$ = turns/meter)
+- **Toroid:** $B(r) = \frac{\mu_0 I N}{2\pi r}$ (varies with $r$, $N$ = total turns)
+
+---
+
+### Unit 5: Electromagnetic Induction
+
+| Concept | Formula | Notes |
+|---|---|---|
+| **Magnetic flux** | $\Phi_B = \int \vec B \cdot d\vec A = BA\cos\theta$ (uniform $B$) | Tesla·m² |
+| **Faraday's law** | $\varepsilon = -\frac{d\Phi_B}{dt}$ | **Negative sign is Lenz's law.** Always cite Lenz for direction. |
+| **Motional EMF** | $\varepsilon = BLv$ | Rod of length $L$ sliding perpendicular to $B$ at velocity $v$ |
+| **Induced current** | $I = \frac{\|\varepsilon\|}{R}$ | Use magnitude; direction from Lenz's law |
+| **Inductor** | $\varepsilon = -L \frac{dI}{dt}$ | $L$ in Henries (H) |
+| **Inductor energy** | $U = \frac{1}{2}LI^2$ | Magnetic energy stored |
+| **RL time constant** | $\tau = \frac{L}{R}$ | *Different from RC* ($\tau = RC$ for RC) |
+| **RL charging** | $I(t) = I_0(1 - e^{-t/\tau})$ | Current grows toward $I_0 = \mathcal{E}/R$ |
+| **RL discharging** | $I(t) = I_0 e^{-t/\tau}$ | Current decays to zero |
+
+---
+
+## Theorems & laws (memorize the wording for FRQs)
+
+| Law | Statement | When it applies |
+|---|---|---|
+| **Gauss's law for $E$** | $\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$ | Always true; use when charge symmetry allows simplification |
+| **Lenz's law** | Induced current opposes the change in magnetic flux | Part of Faraday's law; always cite when asked for current direction |
+| **Ampère's law** | $\oint \vec B \cdot d\vec\ell = \mu_0 I_{enc}$ | Use for symmetric current distributions (wire, solenoid, toroid) |
+
+---
+
+## Symmetry summary for Gauss's law & Ampère's law
+
+**You must state which symmetry you're using.** The rubric wants to see: "By *spherical* symmetry, the electric field is radial and constant on a sphere of radius $r$."
+
+| Symmetry | Gaussian/Amperian shape | Why it works | When to use |
+|---|---|---|---|
+| **Spherical** | Sphere | Charge/current at center; all directions equivalent | Point charge, uniformly charged sphere, center of symmetric sphere |
+| **Cylindrical** | Cylinder (axis aligned with wire/field direction) | Charge/current along infinite line; direction and distance from axis matter | Infinite wire, uniformly charged cylinder, coaxial cable |
+| **Planar** | Pillbox (two parallel faces perpendicular to plane) | Infinite sheet of charge; field perpendicular to sheet on both sides | Infinite sheet, parallel-plate capacitor |
+
+---
+
+## RC & RL transient curves (skim these tonight)
+
+**RC charging:** $Q(t) = Q_0(1 - e^{-t/\tau})$, $I(t) = I_0 e^{-t/\tau}$
+- $Q$ starts at 0, approaches $Q_0$ asymptotically.
+- $I$ starts at $I_0 = V/R$, decays to 0.
+- After $t = 5\tau$, capacitor is >99% charged.
+
+**RC discharging:** $Q(t) = Q_0 e^{-t/\tau}$, $I(t) = -I_0 e^{-t/\tau}$
+- $Q$ starts at $Q_0$, approaches 0.
+- $I$ starts at $-I_0$ (reverse direction), approaches 0.
+
+**RL charging:** $I(t) = I_0(1 - e^{-t/\tau})$, $\tau = L/R$
+- $I$ starts at 0, approaches $I_0 = \mathcal{E}/R$.
+- Voltage across inductor: $V_L = -L\frac{dI}{dt}$, large at $t=0$, approaches 0.
+
+**RL discharging:** $I(t) = I_0 e^{-t/\tau}$
+- $I$ starts at $I_0$, decays to 0.
+- Inductor opposes sudden current change; releases energy.
+
+---
+
+## Top 10 exam traps
+
+1. **Gauss's law symmetry:** You *must* state which surface (spherical, cylindrical, planar). Rubric demands it.
+2. **Capacitors in series:** They have *same* charge, *different* voltage. Use $\frac{1}{C} = \sum \frac{1}{C_i}$. (Not like resistors!)
+3. **Steady state:** In a DC circuit with a capacitor after $t \gg \tau$, the current through the capacitor is $0$, not the voltage across.
+4. **RC vs RL:** $\tau = RC$ (charge decay), $\tau = L/R$ (current decay). Don't mix.
+5. **Lenz's law direction:** The *negative sign* in $\varepsilon = -\frac{d\Phi_B}{dt}$ **is** Lenz. Always cite: "By Lenz's law, the induced current is [clockwise/counterclockwise] to oppose the [increasing/decreasing] flux."
+6. **Right-hand rule:** For Lorentz force $\vec F = q\vec v \times \vec B$: fingers point from $\vec v$ to $\vec B$, thumb points in direction of $\vec F$ (for positive $q$). For negative charge, reverse.
+7. **Ampère's law for non-symmetric geometries:** Don't use Ampère's law if $B$ varies over your loop. Use Biot-Savart instead (or just accept you can't solve it easily).
+8. **Units:** Always check units at the end. Volts, Amperes, Tesla, Coulombs, Farad, Henry — if your answer has wrong units, recalculate.
+9. **Charge on parallel plates:** On a parallel-plate capacitor, the charge distributes *only on the inner surfaces* (those facing each other), not the outer surfaces. If a question asks for $E$ between plates, use $E = \frac{\sigma}{\epsilon_0}$ where $\sigma$ is *that* surface charge density.
+10. **Forgetting negative on Faraday:** $\varepsilon = -\frac{d\Phi_B}{dt}$, not $+\frac{d\Phi_B}{dt}$. The minus sign is critical for phase and direction.
+
+---
+
+## Score boundaries (recent years)
+
+Out of **108 total points** (35 MCQ at ~1.5 pts each + 3 FRQs at 15 pts each):
+
+| Score | Range | Comment |
+|---|---|---|
+| **5** | ~75–108 | You can get ~70% and still earn a 5. |
+| **4** | ~60–74 | Solid understanding of 3–4 units. |
+| **3** | ~45–59 | Concepts clear; execution inconsistent. |
+| **2** | ~30–44 | Some unit mastery; major gaps elsewhere. |
+| **1** | <30 | Minimal understanding. |
+
+**Key insight:** You do *not* need a perfect score. If you can reliably solve 1 full Gauss's law FRQ, 1 circuit FRQ, and 1 Faraday FRQ (that's ~45 pts), plus 20–25 MCQs, you're at a **3 or 4 already**.
+
+---
+
+## Morning-of checklist
+
+- ☐ 8 hours of sleep (not optional; REM sleep consolidates the right-hand-rule).
+- ☐ Breakfast with protein + slow carbs (eggs & oatmeal, not just sugar).
+- ☐ 2 sharpened #2 pencils + blue/black pens.
+- ☐ Approved calculator + **spare batteries** (seriously, test them).
+- ☐ Photo ID + AP ID label sheet.
+- ☐ Water bottle, light snack for the break.
+- ☐ Watch (if the exam room doesn't have a visible clock).
+- ☐ Arrive 20–30 minutes early to settle nerves.
+
+---
+
+## During the exam
+
+**MCQ section (55 min for 35 questions):**
+1. Read each question fully. Underline numbers and what you're solving for.
+2. If it takes >90 sec, mark and skip. You have time to come back.
+3. Cross out obviously wrong answers. Process of elimination is your friend.
+4. For calculator section: use `nDeriv()` for derivatives, `fnInt()` for integrals, and graph + intersect for complex equations.
+
+**FRQ section (45 min for 3 questions):**
+1. Read all 3 before starting.
+2. Start with whichever you're most confident on (build momentum).
+3. **Always write the law or integral setup**, even if you don't complete it. Partial credit is real.
+4. **State your symmetry choice** (Gauss, Ampère).
+5. **Cite Lenz's law** if the question asks for direction.
+6. **Check units** on every numerical answer.
+7. If you finish a part, move on. Don't redo algebra. The rubric will see your work.
+
+---
+
+## One final thought
+
+You've prepared. You know Gauss's law. You know Lenz's law. You can set up an integral. The exam is just the same stuff, repeated three times (MCQ + 3 FRQs).
+
+Show up rested, breathe between sections, and trust your preparation.
+
+**You've got this. 🎯**
+
+---
+
+**Need one more drill?** Browse the [7-day study plan →](/courses/ap-physics-c-em/cram/7-day) or revisit the [FRQ practice guide →](/courses/ap-physics-c-em/cram/frq-practice).

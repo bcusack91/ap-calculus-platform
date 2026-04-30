@@ -1,0 +1,228 @@
+---
+title: "AP Physics C: Electricity and Magnetism FRQ Practice Guide"
+description: "Mastering the 3 FRQ archetypes: Gauss's law, Ampère's law, Faraday's law. Includes symmetry tables, circuit templates, and fully worked examples with rubric scores."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Gauss's Law FRQ
+  - Ampère's Law FRQ
+  - Faraday's Law & Induction FRQ
+  - Worked Examples
+  - Rubric Scoring
+---
+
+The AP Physics C: E&M exam has **3 free-response questions** in 45 minutes. Nearly every FRQ falls into one of **three archetypes**. Master these setups, and you'll know exactly what the rubric demands.
+
+## Archetype 1: Gauss's Law
+
+**Setup:** "A uniformly charged [sphere/cylinder/sheet] has [charge/charge density]. Using Gauss's law, find the electric field $E(r)$."
+
+**Rubric demands:**
+1. State Gauss's law: $\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$.
+2. Choose a Gaussian surface (sphere, cylinder, or pillbox) and justify symmetry.
+3. Explain why $E$ is perpendicular (or parallel) to $d\vec A$ at your surface.
+4. Evaluate the dot product; simplify to $E \cdot A = \frac{Q_{enc}}{\epsilon_0}$.
+5. Solve for $E(r)$. Give separate answers inside and outside the charge distribution.
+6. Often: relate to potential $V(r) = -\int E(r) \, dr$ or calculate field energy.
+
+**Symmetry table (memorize)**
+
+| Charge distribution | Gaussian surface | $Q_{enc}$ | Dot product | Result |
+|---|---|---|---|---|
+| **Point charge $q$** | Sphere, radius $r$ | $q$ | $E \cdot 4\pi r^2$ | $E = \frac{kq}{r^2}$ or $\frac{q}{4\pi\epsilon_0 r^2}$ |
+| **Uniformly charged sphere, radius $R$, total charge $Q$** | Sphere $r < R$ | $Q \frac{r^3}{R^3}$ (volume ratio) | $E \cdot 4\pi r^2$ | $E = \frac{kQr}{R^3}$ (linear in $r$) |
+| **Uniformly charged sphere, radius $R$, total charge $Q$** | Sphere $r > R$ | $Q$ | $E \cdot 4\pi r^2$ | $E = \frac{kQ}{r^2}$ (like point charge) |
+| **Infinite line charge, $\lambda$ C/m** | Cylinder, radius $r$, length $L$ | $\lambda L$ | $E \cdot 2\pi r L$ | $E = \frac{\lambda}{2\pi\epsilon_0 r}$ or $\frac{kλ}{r}$ (using $k = 1/(4\pi\epsilon_0)$, adjust) |
+| **Infinite sheet, charge density $\sigma$** | Pillbox (cylinder, both caps at area $A$) | $\sigma A$ | $E \cdot 2A$ (two caps) | $E = \frac{\sigma}{2\epsilon_0}$ (uniform, independent of distance) |
+| **Parallel-plate capacitor, surface charge $+\sigma$ and $-\sigma$** | Pillbox straddling one plate | $\sigma A_{cap}$ (one side) | $E \cdot A_{cap}$ (one cap inside, one outside) | $E = \frac{\sigma}{\epsilon_0}$ (between plates) |
+
+**Why symmetry matters:** Gauss's law is always true, but *only* when symmetry lets you pull $E$ out of the dot product integral do you avoid integration. If you don't cite symmetry, the rubric won't give you full credit for "directly" applying the law.
+
+---
+
+## Archetype 2: Ampère's Law & Magnetic Circuits
+
+**Setup:** "A long wire (or solenoid) carries current $I$. Using Ampère's law, find the magnetic field $B(r)$."
+
+**Rubric demands:**
+1. State Ampère's law: $\oint \vec B \cdot d\vec\ell = \mu_0 I_{enc}$.
+2. Choose an Amperian loop (circle for wire, rectangle for solenoid) and justify symmetry.
+3. Argue that $\vec B$ is parallel (or perpendicular) to $d\vec\ell$ over your loop.
+4. Evaluate the line integral; simplify to $B \cdot (\text{perimeter}) = \mu_0 I_{enc}$.
+5. Solve for $B(r)$. Clearly state inside vs outside (or note if $B = 0$ outside).
+6. Often: calculate the force on a charge moving through the field, or the energy per unit length in an inductor.
+
+**Amperian loop table**
+
+| Geometry | Loop | Symmetry | $B \cdot \ell$ | Result |
+|---|---|---|---|---|
+| **Infinite wire, current $I$ at center** | Circle, radius $r$, parallel to page | $\vec B$ tangent; perpendicular to radius | $B \cdot 2\pi r$ | $B = \frac{\mu_0 I}{2\pi r}$ |
+| **Long solenoid, $n$ turns/meter, current $I$** | Rectangle inside (width $w$, height inside) | $\vec B$ parallel to axis inside; $B = 0$ outside | $B \cdot w$ (one side) | $B = \mu_0 n I$ (uniform inside) |
+| **Toroid, $N$ total turns, current $I$, inner radius $r_1$, outer $r_2$** | Circle, radius $r$, $r_1 < r < r_2$ | $\vec B$ tangent, varies with $r$ | $B(r) \cdot 2\pi r$ | $B(r) = \frac{\mu_0 I N}{2\pi r}$ |
+| **Thick conducting cylinder, radius $R$, uniform current density, $I$ total** | Circle inside ($r < R$) | $\vec B$ tangent, proportional to enclosed current | $B \cdot 2\pi r$ | $B(r) = \frac{\mu_0 I r}{2\pi R^2}$ (linear in $r$) |
+| **Thick conducting cylinder, uniform $I$, $r > R$ outside** | Circle outside ($r > R$) | $\vec B$ tangent; all current is enclosed | $B \cdot 2\pi r$ | $B(r) = \frac{\mu_0 I}{2\pi r}$ (like thin wire) |
+
+> **💡 Key insight:** Ampère's law replaces integration when your *loop* has symmetry. Choose your loop so that $\vec B$ is either parallel or perpendicular to $d\vec\ell$ everywhere on the loop.
+
+---
+
+## Archetype 3: Faraday's Law & Electromagnetic Induction
+
+**Setup:** "A magnetic field through a loop changes. Find the induced EMF and current, and state the current direction by Lenz's law."
+
+**Rubric demands:**
+1. State Faraday's law: $\varepsilon = -\frac{d\Phi_B}{dt}$ (the negative sign is Lenz's law).
+2. Define the magnetic flux: $\Phi_B = \int \vec B \cdot d\vec A$ (or $BA\cos\theta$ if $\vec B$ is uniform).
+3. Calculate $\frac{d\Phi_B}{dt}$ (is $B$ changing? Is the area changing? Is the angle changing?).
+4. Write the induced EMF: $\varepsilon = -\frac{d\Phi_B}{dt}$ (with the sign).
+5. **State Lenz's law:** "The induced current flows [direction] to oppose the [increasing/decreasing] flux through the loop."
+6. Calculate induced current if resistance is given: $I = \frac{|\varepsilon|}{R}$.
+
+**Flux scenarios & derivatives**
+
+| Scenario | $\Phi_B$ | $\frac{d\Phi_B}{dt}$ | $\varepsilon$ |
+|---|---|---|---|
+| **Uniform $\vec B$ perpendicular to area, $A$ is constant, $B$ decreases linearly over time $\Delta t$** | $BA$ | $A \frac{dB}{dt} = A \frac{\Delta B}{\Delta t}$ | $\varepsilon = -A \frac{\Delta B}{\Delta t}$ |
+| **Conducting rod of length $L$ slides perpendicular to $\vec B$ at velocity $v$** | $B \cdot x(t)$ (where $x = vt$) | $Bv$ (motional EMF) | $\varepsilon = BLv$ |
+| **Loop area changes at rate $\frac{dA}{dt}$; $\vec B$ is constant** | $B A(t)$ | $B \frac{dA}{dt}$ | $\varepsilon = -B \frac{dA}{dt}$ |
+| **Loop rotates through $\vec B$ at angular velocity $\omega$, $\vec B \perp$ loop normal at $t=0$** | $BA\cos(\omega t)$ | $-BA\omega \sin(\omega t)$ | $\varepsilon = BA\omega \sin(\omega t)$ (AC generator) |
+
+> **⚠️ Critical:** The *negative* sign in $\varepsilon = -\frac{d\Phi_B}{dt}$ is **not** just a math sign; it *embodies Lenz's law*. Always cite Lenz when answering the direction question.
+
+---
+
+## Worked Example 1: Gauss's Law for a Uniformly Charged Sphere
+
+**Problem:** A uniformly charged insulating sphere has radius $R = 0.10 \, m$ and total charge $Q = 1.0 \times 10^{-6} \, C$. Using Gauss's law, find the electric field (a) inside at $r = 0.05 \, m$, and (b) outside at $r = 0.20 \, m$. (c) Calculate the electric potential at $r = 0.20 \, m$ using $V = -\int_\infty^r E \, dr$ (for $r > R$).
+
+**Solution:**
+
+**(a) Inside the sphere ($r < R$):**
+
+By symmetry, the charge is distributed uniformly in the volume. Use a Gaussian sphere of radius $r = 0.05 \, m$.
+
+$$Q_{enc} = Q \frac{r^3}{R^3} = 1.0 \times 10^{-6} \frac{(0.05)^3}{(0.10)^3} = 1.0 \times 10^{-6} \times \frac{1}{8} = 1.25 \times 10^{-7} \, C$$
+
+Apply Gauss's law:
+$$\oint \vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0}$$
+
+By spherical symmetry, $\vec E$ is radial and constant on the sphere surface:
+$$E \cdot 4\pi r^2 = \frac{Q_{enc}}{\epsilon_0}$$
+
+$$E = \frac{Q_{enc}}{4\pi\epsilon_0 r^2} = \frac{1.25 \times 10^{-7}}{4\pi \times 8.85 \times 10^{-12} \times (0.05)^2}$$
+
+$$E = \frac{1.25 \times 10^{-7}}{2.78 \times 10^{-14}} \approx 4500 \, N/C$$
+
+Or in the form $E = \frac{kQr}{R^3}$ with $k = 8.99 \times 10^9$:
+
+$$E = \frac{8.99 \times 10^9 \times 1.0 \times 10^{-6} \times 0.05}{(0.10)^3} \approx 4500 \, N/C$$
+
+**(b) Outside the sphere ($r > R$):**
+
+Use a Gaussian sphere of radius $r = 0.20 \, m$. All charge is enclosed:
+$$Q_{enc} = Q = 1.0 \times 10^{-6} \, C$$
+
+$$E = \frac{Q}{4\pi\epsilon_0 r^2} = \frac{1.0 \times 10^{-6}}{4\pi \times 8.85 \times 10^{-12} \times (0.20)^2} \approx 225,000 \, N/C$$
+
+Or: $E = \frac{kQ}{r^2} = \frac{8.99 \times 10^9 \times 1.0 \times 10^{-6}}{(0.20)^2} \approx 225,000 \, N/C$
+
+**(c) Electric potential at $r = 0.20 \, m$:**
+
+For $r > R$, the field is that of a point charge:
+$$V(r) = -\int_\infty^r E \, dr = -\int_\infty^r \frac{kQ}{r'^2} \, dr' = \frac{kQ}{r}$$
+
+$$V = \frac{8.99 \times 10^9 \times 1.0 \times 10^{-6}}{0.20} = 4.5 \times 10^4 \, V$$
+
+**Rubric scoring:**
+- ✓ Named and applied Gauss's law
+- ✓ Chose Gaussian surface (sphere) and justified by symmetry
+- ✓ Calculated $Q_{enc}$ correctly (inside used volume ratio)
+- ✓ Evaluated dot product ($E$ perpendicular to $d\vec A$; pulled out of integral)
+- ✓ Solved for $E$ inside and outside separately
+- ✓ Linked to potential via integration
+- **Score: 9/9 points**
+
+---
+
+## Worked Example 2: RC Circuit with Capacitor Charging
+
+**Problem:** A capacitor $C = 100 \, \mu F$ is charged through a resistor $R = 5000 \, \Omega$ connected to a battery of EMF $\mathcal{E} = 12 \, V$. (a) Find the time constant $\tau$. (b) Write the charge on the capacitor as a function of time $Q(t)$ during charging. (c) Find the current $I(t)$ and evaluate at $t = 0$ and $t = \tau$. (d) Calculate the energy stored in the capacitor after 5 time constants.
+
+**Solution:**
+
+**(a) Time constant:**
+
+$$\tau = RC = 5000 \times 100 \times 10^{-6} = 0.5 \, s$$
+
+**(b) Charging equation:**
+
+The capacitor charges from $Q = 0$ toward $Q_0 = C\mathcal{E}$:
+
+$$Q_0 = CV = 100 \times 10^{-6} \times 12 = 1.2 \times 10^{-3} \, C$$
+
+$$Q(t) = Q_0(1 - e^{-t/\tau}) = 1.2 \times 10^{-3} (1 - e^{-t/0.5})$$
+
+**(c) Current:**
+
+$$I(t) = \frac{dQ}{dt} = \frac{Q_0}{\tau} e^{-t/\tau} = \frac{1.2 \times 10^{-3}}{0.5} e^{-t/0.5} = 2.4 \times 10^{-3} e^{-t/0.5} \, A$$
+
+At $t = 0$:
+$$I(0) = 2.4 \times 10^{-3} \, A = 2.4 \, mA$$
+
+At $t = \tau = 0.5 \, s$:
+$$I(\tau) = 2.4 \times 10^{-3} e^{-1} \approx 0.88 \times 10^{-3} \, A \approx 0.88 \, mA$$
+
+**(d) Energy after 5 time constants:**
+
+After $t = 5\tau$, the charge is:
+$$Q(5\tau) = Q_0(1 - e^{-5}) \approx Q_0(1 - 0.0067) \approx 0.993 Q_0 \approx Q_0$$
+
+The capacitor is nearly fully charged. The energy is:
+
+$$U = \frac{1}{2}CV^2 = \frac{1}{2} \times 100 \times 10^{-6} \times (12)^2 = 7.2 \times 10^{-4} \, J = 0.72 \, mJ$$
+
+Or equivalently: $U = \frac{Q_0^2}{2C} = \frac{(1.2 \times 10^{-3})^2}{2 \times 100 \times 10^{-6}} = 7.2 \times 10^{-4} \, J$
+
+**Rubric scoring:**
+- ✓ Calculated time constant correctly
+- ✓ Wrote charging equation with $Q_0 = CV$ and exponential decay
+- ✓ Found current as derivative; evaluated at specific times
+- ✓ Recognized steady state (nearly full charge) and energy calculation
+- **Score: 8/8 points**
+
+---
+
+## FRQ pacing & strategy
+
+**For each FRQ (15 min per question):**
+1. **Read carefully (2 min):** Underline what you're asked to find. Is it asking for setup *or* numerical answer *or* direction (Lenz)?
+2. **State the law (1 min):** Write Gauss, Ampère, or Faraday. This is free points if correct.
+3. **Choose your geometry (2 min):** Gaussian surface, Amperian loop, or coordinate system.
+4. **Set up the integral or derivative (3 min):** Don't solve yet; make sure the rubric sees your expression.
+5. **Solve (5 min):** Algebra. If you get stuck, leave the expression and move to the next part.
+6. **Check units (1 min):** Coulombs, Tesla, Volts, Amperes — do your final answers have the right units?
+
+> **💡 Pro tip:** If you finish a part quickly and move to the next, *write a sentence explaining your reasoning* (e.g., "By Lenz's law, the induced current is clockwise"). Partial credit rubrics reward explicit reasoning even if the numerical answer is wrong.
+
+---
+
+## Common FRQ errors & recovery
+
+| Error | How it costs points | Recovery |
+|---|---|---|
+| "Used Gauss's law but didn't justify symmetry" | −2 points (rubric expects "By spherical symmetry..." or "The Gaussian surface is a cylinder...") | Always name the surface & say why symmetry holds |
+| "Calculated Faraday's law but forgot the negative sign" | −1 point (sign error); −1 more if no Lenz's law cited | Always write $\varepsilon = -\frac{d\Phi_B}{dt}$, then cite Lenz for direction |
+| "RC circuit: solved for $Q(t)$ but used discharging formula by mistake" | −2 points (wrong curve entirely) | Check initial condition: charging starts at $Q=0$ with $(1 - e^{...})$; discharging is $e^{-...}$ |
+| "Ampère's law: pulled $B$ out of integral but $B(r)$ varies with $r$" | −1–2 points (invalid simplification) | Use Ampère's law *only* for symmetric geometries where $B$ is constant on your chosen loop |
+| "No units on final answer" | −1 point each (exam asks for numerical + unit) | Before moving to next part, write units on every answer |
+
+---
+
+## Before exam day
+
+- Print the [last-minute formula sheet →](/courses/ap-physics-c-em/cram/last-minute-review) and keep it with you.
+- Redo 1 Gauss, 1 Ampère, 1 Faraday FRQ every 3 days until exam.
+- Time yourself: 15 min per FRQ is non-negotiable.
+- Review the [3-day cram plan →](/courses/ap-physics-c-em/cram/3-day) the night before.
+
+You've got this. 🎯

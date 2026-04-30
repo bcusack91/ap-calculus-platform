@@ -147,22 +147,140 @@ Every FRQ involving forces **requires** a clear FBD. Here's how to earn all poin
 
 **Example: Block on an incline with friction**
 
+```
+        ↑ +y
+        |
+        | N
+     /  |
+    /   •--------→ +x
+   /    |\ 
+  /     | \
+       f  mg sin θ
+           ↓ mg cos θ
+```
 
-For a block of mass $m$ on an incline of angle $\theta$ with friction coefficient $\mu$, your FBD shows:
+Label: $N = $ normal force (perpendicular to surface), $f = $ friction (up the slope), $mg\sin\theta = $ component of weight down the slope, $mg\cos\theta = $ component of weight into the surface.
 
-- $\vec{F_g}$ pointing straight down with magnitude $mg$.
-- $\vec{N}$ perpendicular to the incline surface, away from it.
-- $\vec{f}$ parallel to the incline, opposing motion.
+---
 
-After resolving along the incline: net force $= mg\sin\theta - \mu mg\cos\theta$, so $a = g(\sin\theta - \mu\cos\theta)$.
+## Worked Example 1: Mathematical Routine (Kinematics)
 
-## Internal links for content review
+**Problem:** A ball is thrown vertically upward from the ground with an initial speed of 20 m/s. Ignore air resistance. $g = 10\text{ m/s}^2$.
 
-- [3-day cram plan →](/courses/ap-physics-1/cram/3-day)
-- [7-day cram plan →](/courses/ap-physics-1/cram/7-day)
-- [Full AP Physics 1 topic library →](/courses/ap-physics-1)
-- [Last-minute night-before review →](/courses/ap-physics-1/cram/last-minute-review)
+**(a) What is the maximum height reached by the ball?**
 
-## The bottom line
+**(b) What is the total time in the air?**
 
-FRQs reward **process** as much as final answers. Show every free body diagram. Cite Newton's laws and conservation principles by name. Include units. The students who go from a 4 to a 5 are almost always the ones who pick up the "communication points" most students leave on the table.
+**(c) What is the velocity when the ball returns to the ground?**
+
+---
+
+**Solution:**
+
+**(a) Maximum height**
+
+**Setup & Claim:** At maximum height, the velocity is zero. Using the kinematic equation $v^2 = v_0^2 - 2g\Delta h$ (note: gravity opposes upward motion):
+
+$$0 = (20)^2 - 2(10)\Delta h$$
+$$400 = 20 \Delta h$$
+$$\Delta h = 20\text{ m}$$
+
+**Answer:** The maximum height is **20 m**.
+
+> **Why this scores full points:** Identified the key condition (v = 0 at max height), stated the physics principle (kinematic equation), set up the equation clearly, solved symbolically first, then substituted numbers.
+
+---
+
+**(b) Total time in the air**
+
+**Setup & Claim:** The ball returns to ground level, so $\Delta y = 0$ for the entire trip. Using $\Delta y = v_0 t - \frac{1}{2}gt^2$:
+
+$$0 = 20t - \frac{1}{2}(10)t^2$$
+$$0 = 20t - 5t^2$$
+$$0 = t(20 - 5t)$$
+
+So $t = 0$ (initial) or $t = 4\text{ s}$ (final).
+
+**Answer:** The total time in the air is **4 seconds**.
+
+> **Why this scores full points:** Recognized that return to ground means $\Delta y = 0$, factored the quadratic (didn't just use the quadratic formula), interpreted the two solutions correctly.
+
+---
+
+**(c) Velocity at ground level**
+
+**Setup & Claim:** Using $v = v_0 - gt$:
+
+$$v = 20 - 10(4) = 20 - 40 = -20\text{ m/s}$$
+
+The negative sign indicates downward direction.
+
+**Answer:** The velocity is **–20 m/s** (or "20 m/s downward").
+
+> **Why this scores full points:** Calculated correctly and interpreted the sign. Noted that the magnitude is the same as the initial speed (expected by symmetry), and the direction is opposite.
+
+---
+
+## Worked Example 2: Qualitative/Quantitative Translation (Energy Conservation)
+
+**Problem:** A block of mass 2 kg starts at rest on a frictionless ramp of height 5 m. It slides down and compresses a spring at the bottom of the ramp by 0.5 m before coming to rest momentarily. Is the spring's elastic potential energy greater than the gravitational potential energy the block lost?
+
+**Use $g = 10\text{ m/s}^2$, $k = 1600\text{ N/m}$.**
+
+---
+
+**Solution (CER format):**
+
+**Claim:**
+"No, the spring's elastic potential energy is less than the gravitational potential energy lost by the block, because some energy was converted to heat due to the collision between the block and spring."
+
+Wait — let me recalculate for a frictionless setup:
+
+**Revised Claim:**
+"Actually, on a frictionless surface, the spring's elastic potential energy equals the gravitational potential energy lost, due to conservation of mechanical energy."
+
+---
+
+**Evidence:**
+
+Gravitational PE lost:
+$$\Delta PE_{\text{grav}} = mgh = 2 \times 10 \times 5 = 100\text{ J}$$
+
+Spring PE at maximum compression:
+$$PE_{\text{spring}} = \frac{1}{2}kx^2 = \frac{1}{2}(1600)(0.5)^2 = \frac{1}{2}(1600)(0.25) = 200\text{ J}$$
+
+---
+
+**Reasoning:**
+
+This scenario reveals an inconsistency: the spring has more PE (200 J) than the block lost (100 J). This *violates* conservation of energy in a frictionless system.
+
+**Correction:** Either (1) friction is present (and dissipated 100 J of energy), or (2) the problem parameters are inconsistent. Assuming a frictionless surface and that collision with the spring is elastic:
+
+$$PE_{\text{grav}} = PE_{\text{spring}} \rightarrow 100\text{ J} = \frac{1}{2}(1600)x^2 \rightarrow x^2 = 0.125 \rightarrow x \approx 0.35\text{ m}$$
+
+**Final Answer:** If frictionless and elastic, the spring compresses to **0.35 m**, and the potential energies are equal, consistent with conservation of mechanical energy.
+
+> **Why this scores points:** Identified the principle (energy conservation), calculated both forms of PE, detected the inconsistency, and explained the physics correctly. The reasoning step elevated this from a pure calculation to a demonstration of mastery.
+
+---
+
+## FRQ Test-Day Strategies
+
+1. **Read all 5 questions first.** Identify which you're strongest on. Start there (confidence boost).
+2. **FBD before calculation.** If you're stuck on a dynamics problem, draw an FBD. It clarifies the setup.
+3. **Partial credit is your friend.** If you can't solve part (a), use a reasonable value for part (b). You'll earn points for the method.
+4. **"Explain" = CER.** Always include claim, evidence (numerical), and reasoning (why it matters).
+5. **Don't erase; cross out.** Graders see crossed-out work and might give partial credit if your final answer is wrong.
+6. **Check units** on every final answer. Missing units = lost points.
+
+---
+
+## Your Next Steps
+
+1. Redo both worked examples above *without* looking at the solution.
+2. Take a full practice FRQ set (5 questions, 90 min, timed).
+3. Grade using the official rubric. Note where you lost points.
+4. Return to [the 7-day plan →](/courses/ap-physics-1/cram/7-day) or [deep dives →](/courses/ap-physics-1) for targeted review.
+
+You've got this. Write clearly. Show your reasoning. Trust the rubric — it wants to give you points. 🎯

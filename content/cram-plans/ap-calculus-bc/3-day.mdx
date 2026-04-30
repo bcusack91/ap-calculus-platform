@@ -1,0 +1,107 @@
+---
+title: "AP Calculus BC 3-Day Cram Plan"
+description: "Rescue your BC exam in 72 hours: AB fundamentals, parametric/polar, series convergence, FRQ patterns, and calculator tricks. Highest-yield topics only."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Integration Techniques
+  - Parametric & Polar
+  - Series & Convergence
+  - FRQ Patterns
+---
+
+You have **three days** until the AP Calculus BC exam. This is your moment to drill the **highest-frequency topics** and lock in the **BC-specific patterns** that appear in nearly every exam: series convergence, parametric motion, and polar integration.
+
+This plan assumes ~4 focused hours per day. **Do not skip topics; shorten the practice sets instead.** BC has 45 MCQs (60% AB, 40% BC-only) and 6 FRQs (at least 2 are BC-heavy). You need both foundations *and* BC mastery.
+
+## Day 1: AB Review + Integration Techniques (4 hrs)
+
+Start with the fundamentals that underpin everything in BC.
+
+### What to review (90 min)
+- **Limits & derivatives**: limits at infinity, product/quotient/chain rules, implicit differentiation, derivatives of $e^x$, $\ln x$, inverse trig.
+- **Critical points & concavity**: sign charts, first/second derivative tests, MVT hypotheses.
+- **Riemann sums & FTC**: $\frac{d}{dx} \int_a^{g(x)} f(t) \, dt = f(g(x)) \cdot g'(x)$ (don't forget the chain rule).
+- **Integration by parts:** $\int u \, dv = uv - \int v \, du$. Memorize the LIATE priority.
+- **Partial fractions**: decompose $\frac{P(x)}{(x-a)(x-b)}$ and integrate term-by-term.
+- **Improper integrals**: $\int_a^{\infty} f(x) \, dx = \lim_{t \to \infty} \int_a^t f(x) \, dx$. Know when they converge.
+
+### What to practice (2.5 hrs)
+- 15 mixed MCQs on derivatives and AB-level integrals.
+- 5 integration-by-parts problems (at least 2 with trigonometric products).
+- 3 partial fractions decompositions.
+
+> **💡 Highest leverage:** Integration by parts is tested almost every year in at least one FRQ. Drill $\int x e^x \, dx$ and $\int x \sin x \, dx$ until your hands do it automatically.
+
+## Day 2: Parametric, Polar, and Vector Functions (4 hrs)
+
+These two areas account for ~30% of all BC MCQs and guarantee at least one FRQ.
+
+### What to review (90 min)
+- **Parametric functions**: $x = f(t)$, $y = g(t)$. Key formulas:
+  - $\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$
+  - Speed: $\sqrt{(dx/dt)^2 + (dy/dt)^2}$
+  - Arc length: $\int_a^b \sqrt{(dx/dt)^2 + (dy/dt)^2} \, dt$
+- **Polar curves** $r = f(\theta)$:
+  - Area in polar: $A = \frac{1}{2} \int_{\alpha}^{\beta} r^2 \, d\theta$
+  - Arc length: $L = \int_{\alpha}^{\beta} \sqrt{r^2 + (dr/d\theta)^2} \, d\theta$
+- **Vector functions**: $\vec{r}(t) = \langle x(t), y(t) \rangle$. Speed, acceleration, velocity analysis.
+- **Particle motion in 2D**: position from velocity, velocity from acceleration, displacement vs distance.
+
+### What to practice (2.5 hrs)
+- 1 parametric FRQ (find $dy/dx$ at a point, then speed or arc length).
+- 1 polar FRQ (find area enclosed by a curve or between two curves).
+- 20 mixed MCQs on parametric/polar/vector topics (calculator allowed).
+
+> **⚠️ FRQ trap:** When asked for speed, *never* write $\sqrt{v_x + v_y}$. Write $\sqrt{(dx/dt)^2 + (dy/dt)^2}$ explicitly. Show the components.
+
+## Day 3: Series, Convergence Tests, and Full FRQ Drills (4 hrs)
+
+Series convergence is the **most heavily tested BC-only topic** on both MCQ and FRQ.
+
+### What to review (90 min)
+- **Convergence tests** (know the names and when to use):
+  - **Geometric series:** $\sum ar^n$ converges iff $|r| < 1$ to $\frac{a}{1-r}$.
+  - **p-series:** $\sum \frac{1}{n^p}$ converges iff $p > 1$.
+  - **Integral test:** $\sum a_n$ and $\int a_x \, dx$ converge/diverge together.
+  - **Comparison & limit comparison tests:** compare to known series.
+  - **Ratio test:** $\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|$. Converges if $L < 1$, diverges if $L > 1$.
+  - **Alternating series test:** if $a_n$ decreasing and $\lim a_n = 0$, then $\sum (-1)^n a_n$ converges.
+- **Taylor/Maclaurin series**: $f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n$.
+  - Memorize: $e^x = \sum \frac{x^n}{n!}$, $\sin x = \sum \frac{(-1)^n x^{2n+1}}{(2n+1)!}$, $\cos x = \sum \frac{(-1)^n x^{2n}}{(2n)!}$, $\frac{1}{1-x} = \sum x^n$.
+- **Lagrange error bound:** $|R_n(x)| \leq \frac{M |x-a|^{n+1}}{(n+1)!}$ where $M = \max |f^{(n+1)}|$ on the interval.
+- **Interval of convergence**: find where series converges; test endpoints separately.
+
+### What to practice (2.5 hrs — full timed set)
+- 1 full FRQ on Taylor polynomial and Lagrange error.
+- 1 full FRQ on interval of convergence with endpoint testing.
+- 25 mixed MCQs (calculator + non-calculator), strictly timed.
+
+## The night before
+
+Skim our [last-minute review checklist](/courses/ap-calculus-bc/cram/last-minute-review). Get **8 hours of sleep** — your brain consolidates short-term memory overnight, and fatigue kills accuracy on series tests.
+
+## Calculator must-knows
+
+On the calculator section, these functions earn easy points:
+1. `nDeriv(f(x), x, a)` — numerical derivative (useful for rate of change in parametric problems).
+2. `fnInt(f(x), x, a, b)` — definite integral (for arc length, polar area, series approximations).
+3. **Graph + intersect** — find where curves meet (polar/parametric intersection problems).
+4. **Solve $f(x) = 0$** — find bounds for area integrals.
+
+## Common point-leaks
+
+- Forgetting the "$\frac{1}{2}$" in polar area formula: $A = \frac{1}{2} \int r^2 \, d\theta$, not $\int r^2 \, d\theta$.
+- Writing $\sqrt{v_x + v_y}$ instead of $\sqrt{v_x^2 + v_y^2}$ for speed.
+- Missing "test endpoints" when finding interval of convergence (IOC must include endpoint analysis).
+- Confusing the ratio test: $L < 1$ ⟹ converge; $L > 1$ ⟹ diverge; $L = 1$ ⟹ inconclusive.
+- Forgetting the $\frac{1}{n!}$ in Taylor series or dropping the alternating sign.
+- Not citing which convergence test you used (College Board demands it on FRQs).
+
+## What this 3-day plan deliberately skips
+
+Euler's method, logistic differential equations, and some advanced integration techniques (like reduction formulas) will not receive full coverage. If tested: accept 2-3 lost points and focus on series + parametric instead.
+
+## Ready to start?
+
+[Open the AP Calculus BC topic library →](/courses/ap-calculus-bc) and attack Day 1 topic by topic. Mix in 3-5 worked examples per topic. You've prepared for this — now lock it in. 🎯

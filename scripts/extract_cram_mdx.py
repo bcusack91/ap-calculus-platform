@@ -15,18 +15,43 @@ import re
 import sys
 from pathlib import Path
 
-PATTERN = re.compile(
-    r"##\s+\*{0,2}File\s+\d+:?\s*\*{0,2}\s*`?([0-9a-z\-]+\.mdx)`?\*{0,2}\s*\n+"  # header
-    r"```(?:markdown|mdx)?\s*\n"  # opening fence
-    r"(.*?)"                      # content
-    r"\n```",                     # closing fence
-    re.DOTALL,
+HEADER = re.compile(
+    r"##\s+\*{0,2}File\s+\d+:?\s*\*{0,2}\s*`?([0-9a-z\-]+\.mdx)`?\*{0,2}",
+    re.IGNORECASE,
 )
+OPEN_FENCE = re.compile(r"^```(?:markdown|mdx)\s*$", re.MULTILINE)
 
 
 def extract(content: str) -> list[tuple[str, str]]:
-    matches = PATTERN.findall(content)
-    return [(name.strip(), body) for name, body in matches]
+    # Find all file-header positions
+    headers = [(m.start(), m.group(1).strip()) for m in HEADER.finditer(content)]
+    if not headers:
+        return []
+    # Append sentinel so each section has a clear boundary
+    headers.append((len(content), None))
+    results: list[tuple[str, str]] = []
+    for i in range(len(headers) - 1):
+        start, name = headers[i]
+        section_end = headers[i + 1][0]
+        section = content[start:section_end]
+        # Locate the FIRST opening fence (```mdx or ```markdown) inside the section
+        m_open = OPEN_FENCE.search(section)
+        if not m_open:
+            continue
+        body_start = m_open.end() + 1  # skip the newline after the fence
+        # Find the LAST closing fence ``` in the section (matches greedily within section)
+        # Closing fence is a line that is exactly ```
+        body_region = section[body_start:]
+        # Find every standalone ``` line; the matching close is the LAST one before section_end
+        close_positions = [
+            mm.start()
+            for mm in re.finditer(r"^```\s*$", body_region, re.MULTILINE)
+        ]
+        if not close_positions:
+            continue
+        body = body_region[: close_positions[-1]].rstrip("\n")
+        results.append((name, body))
+    return results
 
 
 def main() -> int:
