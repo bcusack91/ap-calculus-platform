@@ -619,6 +619,50 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'csp-impact-of-computing': () => import('./csp-impact-of-computing'),
   'csp-safe-computing': () => import('./csp-safe-computing'),
   'csp-social-ethical-impacts': () => import('./csp-social-ethical-impacts'),
+
+  // ===== AP Biology DB-slug aliases (DB topic slug -> existing entrance-quiz file) =====
+  'water-properties': () => import('./water-properties-biochemistry'),
+  'cell-organelles': () => import('./cell-structure-organelles'),
+  'cell-membrane-transport': () => import('./membrane-transport'),
+  'cell-signaling': () => import('./cell-communication-signaling'),
+  'meiosis': () => import('./meiosis-genetic-diversity'),
+  'natural-selection': () => import('./natural-selection-adaptation'),
+  'speciation': () => import('./speciation-macroevolution'),
+  'enzymes-metabolism': () => import('./enzyme-structure-function'),
+  'community-ecology': () => import('./population-community-ecology'),
+  'population-ecology': () => import('./population-community-ecology'),
+  'biology-ecology': () => import('./ecology-ecosystems'),
+  'ecosystems-energy': () => import('./energy-flow-nutrient-cycling'),
+  'transcription-rna-processing': () => import('./transcription-translation'),
+  'translation': () => import('./transcription-translation'),
+
+  // ===== AP Biology NEW per-topic entrance quizzes =====
+  'nucleic-acids': () => import('./nucleic-acids'),
+  'lipids': () => import('./lipids'),
+  'proteins': () => import('./proteins'),
+  'carbohydrates': () => import('./carbohydrates'),
+  'enzyme-kinetics': () => import('./enzyme-kinetics'),
+  'prokaryotic-eukaryotic-cells': () => import('./prokaryotic-eukaryotic-cells'),
+  'chromosomal-inheritance': () => import('./chromosomal-inheritance'),
+  'phylogeny-classification': () => import('./phylogeny-classification'),
+  'population-dynamics': () => import('./population-dynamics'),
+
+  // ===== AP Statistics DB-slug aliases =====
+  'scatterplots-correlation-stats': () => import('./scatterplots-correlation'),
+  'tests-means-stats': () => import('./tests-means'),
+  'measures-of-center-stats': () => import('./measures-of-center'),
+  'measures-of-spread-stats': () => import('./measures-of-spread'),
+  'sampling-methods-stats': () => import('./sampling-methods'),
+  'binomial-distribution-stats': () => import('./binomial-distribution'),
+  'conditional-probability-stats': () => import('./conditional-probability'),
+  'independence-stats': () => import('./independence'),
+  'sampling-distributions-unit': () => import('./sampling-distributions'),
+
+  // ===== AP Statistics NEW per-topic entrance quizzes =====
+  // (tests-proportions and residuals-residual-plots already registered above)
+  'two-variable-data': () => import('./two-variable-data'),
+  'inference-chi-square': () => import('./inference-chi-square'),
+  'sampling-experimentation': () => import('./sampling-experimentation'),
 }
 
 /**
