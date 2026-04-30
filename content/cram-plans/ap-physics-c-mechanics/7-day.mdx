@@ -22,11 +22,11 @@ Total: ~2.75 hours per day. If you have more time, repeat practice sets; if less
 | Day | Unit | Focus | Review Time | Practice |
 |---|---|---|---|---|
 | **1** | Kinematics | $v = dx/dt$, $a = dv/dt$, integration to find $v(t)$ and $x(t)$ from $a(t)$ | 30 min | 15 MCQs, 1 kinematics FRQ (projectile motion) |
-| **2** | Newton's Laws | Free body diagrams, $\\Sigma F = ma$ in components, friction, constraint forces | 30 min | 15 MCQs, 1 dynamics FRQ (inclined plane with friction) |
-| **3** | Work and Energy | $W = \\int F \\, dx$, $F = -dU/dx$, work-energy theorem, mechanical energy conservation | 30 min | 15 MCQs, 1 energy FRQ (with friction or at two heights) |
-| **4** | Momentum and Impulse | $p = mv$, $J = \\Delta p = \\int F \\, dt$, conservation in collisions (elastic and inelastic) | 30 min | 15 MCQs, 1 momentum FRQ (collision or explosion) |
-| **5** | Rotation | $I = \\int r^2 \\, dm$, parallel-axis theorem, $\\tau = I\\alpha$, $L = I\\omega$, conservation of angular momentum | 30 min | 15 MCQs, 1 rotation FRQ (moment of inertia or angular momentum) |
-| **6** | Oscillations and Gravitation | SHM: $\\ddot{x} + \\omega^2 x = 0$, $T = 2\\pi\\sqrt{m/k}$; Gravitation: $F = GMm/r^2$, escape velocity, orbits | 60 min | 20 MCQs (10 oscillation, 10 gravitation), 1–2 worked examples |
+| **2** | Newton's Laws | Free body diagrams, $\Sigma F = ma$ in components, friction, constraint forces | 30 min | 15 MCQs, 1 dynamics FRQ (inclined plane with friction) |
+| **3** | Work and Energy | $W = \int F \, dx$, $F = -dU/dx$, work-energy theorem, mechanical energy conservation | 30 min | 15 MCQs, 1 energy FRQ (with friction or at two heights) |
+| **4** | Momentum and Impulse | $p = mv$, $J = \Delta p = \int F \, dt$, conservation in collisions (elastic and inelastic) | 30 min | 15 MCQs, 1 momentum FRQ (collision or explosion) |
+| **5** | Rotation | $I = \int r^2 \, dm$, parallel-axis theorem, $\tau = I\alpha$, $L = I\omega$, conservation of angular momentum | 30 min | 15 MCQs, 1 rotation FRQ (moment of inertia or angular momentum) |
+| **6** | Oscillations and Gravitation | SHM: $\ddot{x} + \omega^2 x = 0$, $T = 2\pi\sqrt{m/k}$; Gravitation: $F = GMm/r^2$, escape velocity, orbits | 60 min | 20 MCQs (10 oscillation, 10 gravitation), 1–2 worked examples |
 | **7** | Mock Exam | Full-length: 35 MCQ (timed, 45 min) + 3 FRQ (timed, 45 min) | — | Timed exam, then review |
 
 ## Daily Structure Example (Day 1: Kinematics)
@@ -36,26 +36,26 @@ Total: ~2.75 hours per day. If you have more time, repeat practice sets; if less
 Read or skim:
 - Definition: $v = dx/dt$ means velocity is the **rate of change of position** with respect to time.
 - Definition: $a = dv/dt$ means acceleration is the **rate of change of velocity**.
-- **To find $v(t)$ from $a(t)$:** integrate: $v(t) = v_0 + \\int_0^t a(\\tau) \\, d\\tau$.
-- **To find $x(t)$ from $v(t)$:** integrate: $x(t) = x_0 + \\int_0^t v(\\tau) \\, d\\tau$.
-- Example: if $a(t) = 10 \\, \\text{m/s}^2$ (constant), then $v(t) = v_0 + 10t$ and $x(t) = x_0 + v_0 t + 5t^2$.
+- **To find $v(t)$ from $a(t)$:** integrate: $v(t) = v_0 + \int_0^t a(\tau) \, d\tau$.
+- **To find $x(t)$ from $v(t)$:** integrate: $x(t) = x_0 + \int_0^t v(\tau) \, d\tau$.
+- Example: if $a(t) = 10 \, \text{m/s}^2$ (constant), then $v(t) = v_0 + 10t$ and $x(t) = x_0 + v_0 t + 5t^2$.
 
 > **💡 Tip:** The exam will give you $a(t)$ (as a function or a graph) and ask you to find $v$ at some time, or $x$ at some time, or when the object returns to the origin. Every time, integrate.
 
 ### Worked Examples (45 min)
 
-**Example 1:** A car starts from rest with $a(t) = 2 \\, \\text{m/s}^2$ for $t \\in [0, 5]$ seconds, then $a(t) = 0$ for $t > 5$. Find $v(5)$, $x(5)$, and $x(10)$.
+**Example 1:** A car starts from rest with $a(t) = 2 \, \text{m/s}^2$ for $t \in [0, 5]$ seconds, then $a(t) = 0$ for $t > 5$. Find $v(5)$, $x(5)$, and $x(10)$.
 
 **Solution:**
-- $v(5) = 0 + \\int_0^5 2 \\, dt = 10 \\, \\text{m/s}$.
-- $x(5) = 0 + \\int_0^5 v(t) \\, dt = \\int_0^5 2t \\, dt = [t^2]_0^5 = 25 \\, \\text{m}$.
-- From $t = 5$ to $t = 10$: $v = 10$ (constant), so $x(10) = 25 + 10 \\cdot 5 = 75 \\, \\text{m}$.
+- $v(5) = 0 + \int_0^5 2 \, dt = 10 \, \text{m/s}$.
+- $x(5) = 0 + \int_0^5 v(t) \, dt = \int_0^5 2t \, dt = [t^2]_0^5 = 25 \, \text{m}$.
+- From $t = 5$ to $t = 10$: $v = 10$ (constant), so $x(10) = 25 + 10 \cdot 5 = 75 \, \text{m}$.
 
-**Example 2:** A ball is thrown straight up with $v_0 = 20 \\, \\text{m/s}$. Taking $a(t) = -10 \\, \\text{m/s}^2$ (gravity), find when $v = 0$ (peak), and the height at peak.
+**Example 2:** A ball is thrown straight up with $v_0 = 20 \, \text{m/s}$. Taking $a(t) = -10 \, \text{m/s}^2$ (gravity), find when $v = 0$ (peak), and the height at peak.
 
 **Solution:**
-- $v(t) = 20 - 10t$. Set $v = 0$: $t = 2 \\, \\text{s}$.
-- $x(t) = 20t - 5t^2$. At $t = 2$: $x(2) = 40 - 20 = 20 \\, \\text{m}$.
+- $v(t) = 20 - 10t$. Set $v = 0$: $t = 2 \, \text{s}$.
+- $x(t) = 20t - 5t^2$. At $t = 2$: $x(2) = 40 - 20 = 20 \, \text{m}$.
 
 ### Independent Practice (90 min)
 
@@ -94,12 +94,12 @@ Set a timer. Do **not** stop or peek at solutions mid-exam.
 
 | Unit | Must-Know | Tricky Part | Exam Frequency |
 |---|---|---|---|
-| Kinematics | Integration: $a(t) \\to v(t) \\to x(t)$ | Sign of acceleration; graphing | 2–3 MCQs, 1 FRQ |
-| Newton's Laws | FBD + components, $\\Sigma F = ma$ | Normal force direction; friction | 3–4 MCQs, 1 FRQ |
-| Energy | $W = \\int F \\, dx$, conservation with friction | Negative work; energy diagrams | 3–4 MCQs, 1–2 FRQs |
+| Kinematics | Integration: $a(t) \to v(t) \to x(t)$ | Sign of acceleration; graphing | 2–3 MCQs, 1 FRQ |
+| Newton's Laws | FBD + components, $\Sigma F = ma$ | Normal force direction; friction | 3–4 MCQs, 1 FRQ |
+| Energy | $W = \int F \, dx$, conservation with friction | Negative work; energy diagrams | 3–4 MCQs, 1–2 FRQs |
 | Momentum | $p = mv$, impulse-momentum, collisions | Distinguishing elastic vs. inelastic | 3–4 MCQs, 1 FRQ |
-| Rotation | $I = \\int r^2 \\, dm$, parallel axis, $L = I\\omega$ | Choosing the right pivot; rolling vs. spinning | 3–4 MCQs, 1 FRQ |
-| Oscillation | $T = 2\\pi\\sqrt{m/k}$, SHM from $\\ddot{x} = -\\omega^2 x$ | Energy in SHM; phase and amplitude | 2–3 MCQs, 0–1 FRQ |
+| Rotation | $I = \int r^2 \, dm$, parallel axis, $L = I\omega$ | Choosing the right pivot; rolling vs. spinning | 3–4 MCQs, 1 FRQ |
+| Oscillation | $T = 2\pi\sqrt{m/k}$, SHM from $\ddot{x} = -\omega^2 x$ | Energy in SHM; phase and amplitude | 2–3 MCQs, 0–1 FRQ |
 | Gravitation | Escape velocity, orbital mechanics, Kepler | Sign of potential energy; orbits vs. escape | 2–3 MCQs, 0–1 FRQ |
 
 ## Study tips for the week

@@ -22,8 +22,8 @@ If you only have 3 days, jump to our [3-day cram plan](/courses/ap-statistics/cr
 | Block | Focus | Time |
 |---|---|---|
 | Review | Univariate displays (boxplots, histograms, dotplots), shape/center/spread/outliers (SOCS) | 45 min |
-| Review | 5-number summary, IQR, $1.5 \\times \\text{IQR}$ outlier rule, mean vs median resistance | 30 min |
-| Review | Scatterplots, $r$ (correlation), LSRL ($\\hat y = a + bx$), residuals, $r^2$, influential points | 45 min |
+| Review | 5-number summary, IQR, $1.5 \times \text{IQR}$ outlier rule, mean vs median resistance | 30 min |
+| Review | Scatterplots, $r$ (correlation), LSRL ($\hat y = a + bx$), residuals, $r^2$, influential points | 45 min |
 | Practice | 20 MCQs from Units 1 and 2 | 60 min |
 
 **Why it matters:** ~15% of exam points come from data exploration alone, and *every* inference question begins with describing the data.
@@ -42,9 +42,9 @@ If you only have 3 days, jump to our [3-day cram plan](/courses/ap-statistics/cr
 ## Day 3: Probability + Random Variables (3 hrs)
 
 - Probability rules: addition, multiplication, conditional, complement.
-- Independence: $P(A \\cap B) = P(A) \\cdot P(B)$ if and only if independent.
-- Discrete random variables: $E(X)$, $\\text{Var}(X)$, combining via $E(X \\pm Y) = E(X) \\pm E(Y)$ and (if independent) $\\text{Var}(X \\pm Y) = \\text{Var}(X) + \\text{Var}(Y)$.
-- Binomial: $X \\sim B(n, p)$, mean $np$, sd $\\sqrt{np(1-p)}$.
+- Independence: $P(A \cap B) = P(A) \cdot P(B)$ if and only if independent.
+- Discrete random variables: $E(X)$, $\text{Var}(X)$, combining via $E(X \pm Y) = E(X) \pm E(Y)$ and (if independent) $\text{Var}(X \pm Y) = \text{Var}(X) + \text{Var}(Y)$.
+- Binomial: $X \sim B(n, p)$, mean $np$, sd $\sqrt{np(1-p)}$.
 - Geometric: $P(X = k) = (1-p)^{k-1} p$, mean $1/p$.
 - Normal: $z$-scores, `normalcdf`, `invNorm`.
 
@@ -52,33 +52,33 @@ If you only have 3 days, jump to our [3-day cram plan](/courses/ap-statistics/cr
 
 ## Day 4: Sampling Distributions (3 hrs)
 
-The conceptual heart of inference. Many students lose points here because they confuse $\\sigma$ with $\\sigma_{\\hat p}$ or $\\sigma_{\\bar x}$.
+The conceptual heart of inference. Many students lose points here because they confuse $\sigma$ with $\sigma_{\hat p}$ or $\sigma_{\bar x}$.
 
-- $\\hat p$: mean $= p$, $\\sigma_{\\hat p} = \\sqrt{\\frac{p(1-p)}{n}}$.
-- $\\bar x$: mean $= \\mu$, $\\sigma_{\\bar x} = \\frac{\\sigma}{\\sqrt{n}}$.
-- Central Limit Theorem: $\\bar x$ is approximately normal when $n \\geq 30$ (or population is already normal).
-- **Use the sampling distribution to find probabilities** about $\\hat p$ or $\\bar x$ — this is a common MCQ trap.
+- $\hat p$: mean $= p$, $\sigma_{\hat p} = \sqrt{\frac{p(1-p)}{n}}$.
+- $\bar x$: mean $= \mu$, $\sigma_{\bar x} = \frac{\sigma}{\sqrt{n}}$.
+- Central Limit Theorem: $\bar x$ is approximately normal when $n \geq 30$ (or population is already normal).
+- **Use the sampling distribution to find probabilities** about $\hat p$ or $\bar x$ — this is a common MCQ trap.
 
-**Practice:** 15 MCQs + 1 problem walking through "what's the probability that $\\bar x$ exceeds $X$?"
+**Practice:** 15 MCQs + 1 problem walking through "what's the probability that $\bar x$ exceeds $X$?"
 
 ## Day 5: Confidence Intervals (3 hrs)
 
-- General form: statistic $\\pm$ (critical value)(standard error).
-- 1-prop $z$: $\\hat p \\pm z^* \\sqrt{\\hat p (1 - \\hat p)/n}$.
-- 1-sample $t$: $\\bar x \\pm t^* \\frac{s}{\\sqrt{n}}$, $df = n - 1$.
+- General form: statistic $\pm$ (critical value)(standard error).
+- 1-prop $z$: $\hat p \pm z^* \sqrt{\hat p (1 - \hat p)/n}$.
+- 1-sample $t$: $\bar x \pm t^* \frac{s}{\sqrt{n}}$, $df = n - 1$.
 - 2-prop $z$, 2-sample $t$, paired $t$.
-- LinReg $t$: $b \\pm t^* \\cdot SE_b$.
+- LinReg $t$: $b \pm t^* \cdot SE_b$.
 - **Interpretation in context**: "We are 95% confident that the true mean weight of cereal boxes is between 15.7 and 16.3 oz."
 - **Confidence level interpretation**: about repeated samples, NOT this specific interval.
-- **Conditions for $t$-procedures**: random, 10%, normal (or $n \\geq 30$, OR check graph for skewness/outliers if $n < 30$).
+- **Conditions for $t$-procedures**: random, 10%, normal (or $n \geq 30$, OR check graph for skewness/outliers if $n < 30$).
 
 **Practice:** 1 CI FRQ (use full state-plan-do-conclude framework) + 15 MCQs.
 
 ## Day 6: Significance Tests + Chi-Square (4 hrs)
 
-- 4-step framework: **State** (hypotheses + parameter in context), **Plan** (name procedure + check conditions in context), **Do** (test statistic + p-value), **Conclude** (compare to $\\alpha$, reject/fail to reject in context).
+- 4-step framework: **State** (hypotheses + parameter in context), **Plan** (name procedure + check conditions in context), **Do** (test statistic + p-value), **Conclude** (compare to $\alpha$, reject/fail to reject in context).
 - Tests to drill: 1-prop $z$-test, 2-prop $z$-test, 1-sample $t$-test, 2-sample $t$-test, paired $t$-test.
-- Chi-square: $\\chi^2 = \\sum \\frac{(O-E)^2}{E}$, with three flavors:
+- Chi-square: $\chi^2 = \sum \frac{(O-E)^2}{E}$, with three flavors:
   - **Goodness-of-fit**: tests one categorical variable against a claimed distribution.
   - **Test for independence**: tests two categorical variables from one sample.
   - **Test for homogeneity**: tests one categorical variable across multiple populations.
@@ -88,7 +88,7 @@ The conceptual heart of inference. Many students lose points here because they c
 
 ## Day 7: Linear Regression Inference + Full Mock (3-4 hrs)
 
-- Inference for slope: $\\hat \\beta_1 \\pm t^* \\cdot SE_{b}$ (CI), and $t = \\frac{b}{SE_b}$ (test).
+- Inference for slope: $\hat \beta_1 \pm t^* \cdot SE_{b}$ (CI), and $t = \frac{b}{SE_b}$ (test).
 - Conditions: linear, independent, normal residuals, equal variance (Linear, Independent, Normal, Equal SD — sometimes called LINER without "R").
 - Read computer output (Minitab, JMP-style): identify $b$, $SE_b$, $t$, $p$, $s$, $r^2$.
 

@@ -26,7 +26,7 @@ Two kinds of points:
 You will lose points for:
 - Skipping the conditions check.
 - Conclusions that aren't tied to the original context (no parameter in plain language).
-- Ambiguous notation ($x$ vs $\\bar x$ vs $\\mu$).
+- Ambiguous notation ($x$ vs $\bar x$ vs $\mu$).
 - Saying "$p$-value is the probability $H_0$ is true."
 - "We accept $H_0$" — never say this. Only "fail to reject $H_0$."
 
@@ -35,7 +35,7 @@ You will lose points for:
 Every AP Statistics exam pulls from this playbook:
 
 1. **Data exploration / graph reading.** Compare two distributions; describe shape, center, spread, outliers; identify any unusual features.
-2. **Probability + random variables.** Calculate $E(X)$, $\\text{Var}(X)$, or apply binomial / geometric / normal.
+2. **Probability + random variables.** Calculate $E(X)$, $\text{Var}(X)$, or apply binomial / geometric / normal.
 3. **Sampling and experimental design.** Identify bias, propose a better design, explain why random assignment matters.
 4. **Confidence interval.** Build, interpret, and (sometimes) compare two intervals.
 5. **Significance test.** Use the 4-step framework. Often a $t$-test or $z$-test; sometimes chi-square.
@@ -48,22 +48,22 @@ If you've drilled one of each archetype, you've seen 90% of what could appear.
 Every confidence interval and significance test on the FRQ section uses this structure:
 
 ### Step 1: STATE
-- Define your **parameter** in context: *"Let $\\mu$ = the true mean cholesterol level for adults taking the new drug."*
-- Write your **hypotheses** (for tests): $H_0: \\mu = 200$, $H_a: \\mu < 200$.
+- Define your **parameter** in context: *"Let $\mu$ = the true mean cholesterol level for adults taking the new drug."*
+- Write your **hypotheses** (for tests): $H_0: \mu = 200$, $H_a: \mu < 200$.
 
 ### Step 2: PLAN
-- Name the **procedure**: *"We will perform a one-sample $t$-test for $\\mu$."*
+- Name the **procedure**: *"We will perform a one-sample $t$-test for $\mu$."*
 - Check **all conditions in context**:
   - **Random**: *"The problem states the patients were randomly selected, so we have a random sample."*
-  - **10% / Independent**: *"$50 < 10\\%$ of all adults taking the drug, so we can treat observations as independent."*
-  - **Normal / Large Counts / $n \\geq 30$**: *"Since $n = 50 \\geq 30$, the CLT ensures the sampling distribution of $\\bar x$ is approximately normal."*
+  - **10% / Independent**: *"$50 < 10\%$ of all adults taking the drug, so we can treat observations as independent."*
+  - **Normal / Large Counts / $n \geq 30$**: *"Since $n = 50 \geq 30$, the CLT ensures the sampling distribution of $\bar x$ is approximately normal."*
 
 ### Step 3: DO
 - Write the **test statistic and $p$-value** (with calculator notation): *"$t = -2.34$, $p = 0.012$, $df = 49$."*
 
 ### Step 4: CONCLUDE
-- Compare $p$ to $\\alpha$ and write a **conclusion in context**:
-  - *"Since $p = 0.012 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidence that the true mean cholesterol level for adults taking the new drug is less than 200 mg/dL."*
+- Compare $p$ to $\alpha$ and write a **conclusion in context**:
+  - *"Since $p = 0.012 < \alpha = 0.05$, we reject $H_0$. There is convincing evidence that the true mean cholesterol level for adults taking the new drug is less than 200 mg/dL."*
 
 > **⚠️ The single most-missed point:** the conclusion in context. Generic "we reject $H_0$" without restating the original claim costs students 1-2 points per FRQ.
 
@@ -79,10 +79,10 @@ Every confidence interval and significance test on the FRQ section uses this str
 > "Assuming $H_0$ is true (that [restate $H_0$ in context]), the probability of obtaining a sample statistic as extreme as or more extreme than the one we observed is $p$."
 
 ### Conclusion in context (reject)
-> "Since $p < \\alpha$, we reject $H_0$. There is convincing evidence that [$H_a$ in context]."
+> "Since $p < \alpha$, we reject $H_0$. There is convincing evidence that [$H_a$ in context]."
 
 ### Conclusion in context (fail to reject)
-> "Since $p > \\alpha$, we fail to reject $H_0$. There is not convincing evidence that [$H_a$ in context]."
+> "Since $p > \alpha$, we fail to reject $H_0$. There is not convincing evidence that [$H_a$ in context]."
 
 ### Type I and II errors
 > "A Type I error would be concluding [$H_a$] when in fact [$H_0$] is true. The consequence would be [real-world cost]."
@@ -91,47 +91,47 @@ Every confidence interval and significance test on the FRQ section uses this str
 
 | Procedure | Conditions |
 |---|---|
-| 1-prop $z$ | Random; 10%; Large Counts ($n\\hat p \\geq 10$ AND $n(1-\\hat p) \\geq 10$) |
-| 2-prop $z$ | Random (both); 10% (both); Large Counts (all 4 expected counts $\\geq 10$) |
-| 1-sample $t$ | Random; 10%; Normal ($n \\geq 30$, OR population stated normal, OR no skew/outliers in graph) |
+| 1-prop $z$ | Random; 10%; Large Counts ($n\hat p \geq 10$ AND $n(1-\hat p) \geq 10$) |
+| 2-prop $z$ | Random (both); 10% (both); Large Counts (all 4 expected counts $\geq 10$) |
+| 1-sample $t$ | Random; 10%; Normal ($n \geq 30$, OR population stated normal, OR no skew/outliers in graph) |
 | 2-sample $t$ | Same as 1-sample, applied to BOTH groups |
 | Paired $t$ | Random; 10%; Normal applied to the *differences* |
-| $\\chi^2$ | Random; 10%; All expected counts $\\geq 5$ |
+| $\chi^2$ | Random; 10%; All expected counts $\geq 5$ |
 | LinReg $t$ | Linear, Independent, Normal residuals, Equal SD (LINE) |
 
 ## Worked example: 1-sample $t$-test
 
-> A nutritionist claims the mean sodium content of a brand of soup is less than 800 mg. She randomly samples 30 cans, finds $\\bar x = 785$, $s = 30$. Test the claim at $\\alpha = 0.05$.
+> A nutritionist claims the mean sodium content of a brand of soup is less than 800 mg. She randomly samples 30 cans, finds $\bar x = 785$, $s = 30$. Test the claim at $\alpha = 0.05$.
 
-**State:** Let $\\mu$ = true mean sodium per can. $H_0: \\mu = 800$, $H_a: \\mu < 800$.
+**State:** Let $\mu$ = true mean sodium per can. $H_0: \mu = 800$, $H_a: \mu < 800$.
 
 **Plan:** One-sample $t$-test.
 - Random: stated.
-- 10%: $30 < 10\\%$ of all cans of this brand. ✓
-- Normal: $n = 30 \\geq 30$, so CLT applies. ✓
+- 10%: $30 < 10\%$ of all cans of this brand. ✓
+- Normal: $n = 30 \geq 30$, so CLT applies. ✓
 
-**Do:** $t = \\frac{785 - 800}{30/\\sqrt{30}} = \\frac{-15}{5.477} \\approx -2.74$, $df = 29$, $p \\approx 0.005$.
+**Do:** $t = \frac{785 - 800}{30/\sqrt{30}} = \frac{-15}{5.477} \approx -2.74$, $df = 29$, $p \approx 0.005$.
 
-**Conclude:** Since $p = 0.005 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidence that the true mean sodium content per can is less than 800 mg.
+**Conclude:** Since $p = 0.005 < \alpha = 0.05$, we reject $H_0$. There is convincing evidence that the true mean sodium content per can is less than 800 mg.
 
 ## Worked example: chi-square goodness-of-fit
 
-> A die is rolled 60 times with results: 1: 5, 2: 8, 3: 9, 4: 11, 5: 14, 6: 13. Test at $\\alpha = 0.05$ whether the die is fair.
+> A die is rolled 60 times with results: 1: 5, 2: 8, 3: 9, 4: 11, 5: 14, 6: 13. Test at $\alpha = 0.05$ whether the die is fair.
 
 **State:** $H_0$: the die is fair (each face has probability $1/6$). $H_a$: at least one face has a different probability.
 
 **Plan:** Chi-square goodness-of-fit test.
 - Random: assume the rolls are random.
 - 10%: not applicable (rolls aren't from a finite population).
-- Expected counts: each face expected $60/6 = 10 \\geq 5$. ✓
+- Expected counts: each face expected $60/6 = 10 \geq 5$. ✓
 
 **Do:**
 $$
-\\chi^2 = \\sum \\frac{(O-E)^2}{E} = \\frac{(5-10)^2 + (8-10)^2 + (9-10)^2 + (11-10)^2 + (14-10)^2 + (13-10)^2}{10}
+\chi^2 = \sum \frac{(O-E)^2}{E} = \frac{(5-10)^2 + (8-10)^2 + (9-10)^2 + (11-10)^2 + (14-10)^2 + (13-10)^2}{10}
 $$
-$\\chi^2 = (25 + 4 + 1 + 1 + 16 + 9)/10 = 5.6$, $df = 5$, $p \\approx 0.347$.
+$\chi^2 = (25 + 4 + 1 + 1 + 16 + 9)/10 = 5.6$, $df = 5$, $p \approx 0.347$.
 
-**Conclude:** Since $p = 0.347 > \\alpha = 0.05$, we fail to reject $H_0$. There is not convincing evidence that the die is unfair.
+**Conclude:** Since $p = 0.347 > \alpha = 0.05$, we fail to reject $H_0$. There is not convincing evidence that the die is unfair.
 
 ## FRQ practice plan
 

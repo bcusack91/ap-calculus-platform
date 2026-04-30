@@ -15,17 +15,17 @@ The exam is **tomorrow**. This is not the time to learn new content — it's the
 
 | Quantity | Formula |
 |---|---|
-| $z$-score | $z = \\frac{x - \\mu}{\\sigma}$ |
-| Sample mean SE | $\\frac{\\sigma}{\\sqrt{n}}$ (or $\\frac{s}{\\sqrt{n}}$ for $t$) |
-| Sample proportion SE | $\\sqrt{\\frac{p(1-p)}{n}}$ (or $\\sqrt{\\frac{\\hat p (1 - \\hat p)}{n}}$) |
-| 1-prop $z$ test stat | $z = \\frac{\\hat p - p_0}{\\sqrt{p_0(1-p_0)/n}}$ |
-| 1-sample $t$ test stat | $t = \\frac{\\bar x - \\mu_0}{s/\\sqrt{n}}$, $df = n - 1$ |
-| 2-sample $t$ test stat | $t = \\frac{\\bar x_1 - \\bar x_2}{\\sqrt{s_1^2/n_1 + s_2^2/n_2}}$ |
-| Chi-square stat | $\\chi^2 = \\sum \\frac{(O - E)^2}{E}$ |
-| Binomial mean / sd | $\\mu = np$, $\\sigma = \\sqrt{np(1-p)}$ |
-| Geometric mean | $\\mu = 1/p$ |
-| LSRL slope | $b = r \\cdot \\frac{s_y}{s_x}$ |
-| Linear combinations | $E(aX + bY) = aE(X) + bE(Y)$; if independent, $\\text{Var}(aX + bY) = a^2 \\text{Var}(X) + b^2 \\text{Var}(Y)$ |
+| $z$-score | $z = \frac{x - \mu}{\sigma}$ |
+| Sample mean SE | $\frac{\sigma}{\sqrt{n}}$ (or $\frac{s}{\sqrt{n}}$ for $t$) |
+| Sample proportion SE | $\sqrt{\frac{p(1-p)}{n}}$ (or $\sqrt{\frac{\hat p (1 - \hat p)}{n}}$) |
+| 1-prop $z$ test stat | $z = \frac{\hat p - p_0}{\sqrt{p_0(1-p_0)/n}}$ |
+| 1-sample $t$ test stat | $t = \frac{\bar x - \mu_0}{s/\sqrt{n}}$, $df = n - 1$ |
+| 2-sample $t$ test stat | $t = \frac{\bar x_1 - \bar x_2}{\sqrt{s_1^2/n_1 + s_2^2/n_2}}$ |
+| Chi-square stat | $\chi^2 = \sum \frac{(O - E)^2}{E}$ |
+| Binomial mean / sd | $\mu = np$, $\sigma = \sqrt{np(1-p)}$ |
+| Geometric mean | $\mu = 1/p$ |
+| LSRL slope | $b = r \cdot \frac{s_y}{s_x}$ |
+| Linear combinations | $E(aX + bY) = aE(X) + bE(Y)$; if independent, $\text{Var}(aX + bY) = a^2 \text{Var}(X) + b^2 \text{Var}(Y)$ |
 
 These (and more) are on the formula sheet provided with the exam — but knowing them cold saves time.
 
@@ -33,12 +33,12 @@ These (and more) are on the formula sheet provided with the exam — but knowing
 
 | Procedure | Conditions |
 |---|---|
-| 1-prop $z$ | Random; $10\\%$; Large Counts ($n\\hat p, n(1-\\hat p) \\geq 10$) |
-| 2-prop $z$ | Random (both); $10\\%$ (both); Large Counts (all 4 expected $\\geq 10$) |
-| 1-sample $t$ | Random; $10\\%$; Normal ($n \\geq 30$, OR pop stated normal, OR no skew/outliers in graph) |
+| 1-prop $z$ | Random; $10\%$; Large Counts ($n\hat p, n(1-\hat p) \geq 10$) |
+| 2-prop $z$ | Random (both); $10\%$ (both); Large Counts (all 4 expected $\geq 10$) |
+| 1-sample $t$ | Random; $10\%$; Normal ($n \geq 30$, OR pop stated normal, OR no skew/outliers in graph) |
 | 2-sample $t$ | Same as 1-sample, applied to both groups |
-| Paired $t$ | Random; $10\\%$; Normal applied to the differences |
-| Chi-square | Random; $10\\%$; All expected counts $\\geq 5$ |
+| Paired $t$ | Random; $10\%$; Normal applied to the differences |
+| Chi-square | Random; $10\%$; All expected counts $\geq 5$ |
 | LinReg $t$ | LINE: Linear, Independent residuals, Normal residuals, Equal SD |
 
 ## The 4-step framework (every CI and test)
@@ -46,7 +46,7 @@ These (and more) are on the formula sheet provided with the exam — but knowing
 1. **State** — parameter in context + hypotheses (for tests).
 2. **Plan** — name the procedure + check all conditions in context.
 3. **Do** — test statistic + $p$-value (or CI bounds).
-4. **Conclude** — compare $p$ to $\\alpha$, restate decision in context. *Never say "accept $H_0$."*
+4. **Conclude** — compare $p$ to $\alpha$, restate decision in context. *Never say "accept $H_0$."*
 
 ## Top 10 traps that cost real points
 
@@ -54,18 +54,18 @@ These (and more) are on the formula sheet provided with the exam — but knowing
 2. **"95% probability the true mean is in this interval."** WRONG. The 95% refers to the *procedure*.
 3. **"Accept $H_0$"** — say "fail to reject $H_0$" instead.
 4. **Skipping conditions** — even if obvious, write them out for full points.
-5. **Random selection vs random assignment** — random selection $\\to$ generalizable; random assignment $\\to$ causal.
-6. **Mixing up $\\sigma$ and $\\sigma_{\\bar x}$** — sampling distribution SD shrinks by $\\sqrt{n}$.
+5. **Random selection vs random assignment** — random selection $\to$ generalizable; random assignment $\to$ causal.
+6. **Mixing up $\sigma$ and $\sigma_{\bar x}$** — sampling distribution SD shrinks by $\sqrt{n}$.
 7. **Forgetting $r^2$ interpretation in context** — "$r^2 = 0.83$ means 83% of the variation in $y$ is explained by the linear model with $x$."
 8. **Wrong test choice** — paired $t$ when data are matched, not 2-sample $t$.
-9. **Conditions on chi-square** — must check ALL expected counts $\\geq 5$, not just observed.
+9. **Conditions on chi-square** — must check ALL expected counts $\geq 5$, not just observed.
 10. **Conclusions out of context** — always restate in the language of the problem.
 
 ## Calculator quick reference
 
 - **`normalcdf(lower, upper, μ, σ)`**: probability for normal distribution.
 - **`invNorm(area, μ, σ)`**: find the $x$ value with given left-tail area.
-- **`binomcdf(n, p, k)`**: $P(X \\leq k)$ for binomial.
+- **`binomcdf(n, p, k)`**: $P(X \leq k)$ for binomial.
 - **`binompdf(n, p, k)`**: $P(X = k)$ exactly.
 - **`geomcdf(p, k)` / `geompdf(p, k)`**: geometric.
 - **Tests: `1-PropZTest`, `2-PropZTest`, `T-Test`, `2-SampTTest`, `χ²-Test`, `χ²GOF-Test`, `LinRegTTest`.**
