@@ -16,6 +16,7 @@ import {
   courseScorePredictorMap,
   courseStudyPlanMap,
 } from '@/data/course-feature-config'
+import { CRAM_PLANS, isCramPlanCourse } from '@/data/cram-plans'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -363,6 +364,50 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
         {/* Ad placement after course overview */}
         <InArticleAd />
+
+        {/* Cram Plans & Study Guides — links to /courses/[slug]/cram/[plan] pages */}
+        {isCramPlanCourse(slug) && (
+          <section className="mt-8 mb-12 rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-8 shadow-sm dark:border-indigo-800 dark:from-indigo-950/40 dark:via-gray-900 dark:to-purple-950/40">
+            <div className="mb-5 flex items-start justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                  📚 Study Plans &amp; Cram Guides
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Pick the plan that matches your timeline — from a 1-month build-up to a night-before review.
+                </p>
+              </div>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {CRAM_PLANS.map((plan) => (
+                <TrackedLink
+                  key={plan.slug}
+                  href={`/courses/${slug}/cram/${plan.slug}`}
+                  eventName="course_cta_click"
+                  eventParams={{
+                    course_slug: slug,
+                    course_name: course.name,
+                    page_template: 'course_page',
+                    cta_type: 'cram_plan',
+                    plan_slug: plan.slug,
+                    destination: `/courses/${slug}/cram/${plan.slug}`,
+                    location: 'course_study_plans_box',
+                  }}
+                  className="group flex flex-col gap-1 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-indigo-400 hover:shadow-md dark:border-gray-700 dark:bg-gray-900 dark:hover:border-indigo-500"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{plan.icon}</span>
+                    <span className="font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                      {plan.titleSuffix}
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">{plan.tagline}</p>
+                  <p className="mt-1 text-xs font-medium text-indigo-600 dark:text-indigo-400">{plan.estimate}</p>
+                </TrackedLink>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Related-topic discovery cards */}
         {featuredTopics.length > 0 && (

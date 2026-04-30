@@ -445,7 +445,7 @@ Note: $P(A|B) \\neq P(B|A)$
 ## Tree Diagrams
 
 **For sequential events:**
-```
+\`\`\`
 Start
 ├─ A (prob=0.4)
 │  ├─ C (prob=0.7)
@@ -453,7 +453,7 @@ Start
 └─ B (prob=0.6)
    ├─ C (prob=0.2)
    └─ D (prob=0.8)
-```
+\`\`\`
 
 **Path probabilities:** Multiply along branches
 - $P(A \\text{ and } C) = 0.4 × 0.7 = 0.28$
@@ -749,4 +749,4 @@ Always state BINS conditions explicitly: "This is binomial because..." Common ca
 main().catch((e) => {
   console.error(e)
   process.exit(1)
-}).finally(() => prisma.\$disconnect())
+}).finally(() => prisma.$disconnect())

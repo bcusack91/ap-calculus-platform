@@ -156,19 +156,19 @@ Common error: assuming \\\\(\bar{x}\\\\) = μ just because you have a large samp
 - Leaves ordered left-to-right
 
 **Example:** Dataset 12, 15, 18, 21, 23, 25
-```
+\`\`\`
 1 | 2 5 8
 2 | 1 3 5
-```
+\`\`\`
 
 Interpreting: stem = 1, leaf = 2 means 12
 
 **Back-to-back stemplot:** compare two distributions
-```
+\`\`\`
 Group A | stem | Group B
   8 5 2 |  1   | 3 4 7
     1 0 |  2   | 2 5 8
-```
+\`\`\`
 
 ## Histogram
 
@@ -214,12 +214,12 @@ Group A | stem | Group B
 **Data:** Test scores for 20 students: 62, 68, 71, 74, 74, 75, 77, 78, 80, 81, 82, 83, 85, 86, 87, 88, 90, 92, 94, 98
 
 **Stemplot:**
-```
+\`\`\`
 6 | 2 8
 7 | 1 4 4 5 7 8
 8 | 0 1 2 3 5 6 7 8
 9 | 0 2 4 8
-```
+\`\`\`
 
 **Histogram (bins 60-70, 70-80, 80-90, 90-100):**
 - [60, 70): 2 students
