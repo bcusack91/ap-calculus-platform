@@ -640,6 +640,14 @@ const quizLoaders: Record<string, QuizLoader> = {
   'coefficient-determination': () => import('./ap-statistics'),
   'transformations-linearity': () => import('./ap-statistics'),
   'inference-regression': () => import('./ap-statistics'),
+  // CED-aligned topics added in Phase 3
+  'mean-sd-random-variables': () => import('./ap-statistics'),
+  'combining-random-variables': () => import('./ap-statistics'),
+  'sampling-distribution-sample-mean': () => import('./ap-statistics'),
+  'sampling-distribution-sample-proportion': () => import('./ap-statistics'),
+  'two-sample-proportions': () => import('./ap-statistics'),
+  'two-sample-means': () => import('./ap-statistics'),
+  'chi-square-independence-homogeneity': () => import('./ap-statistics'),
 
   // ═══════════════════════════════════════════════════
   // ACT Exit Quizzes
