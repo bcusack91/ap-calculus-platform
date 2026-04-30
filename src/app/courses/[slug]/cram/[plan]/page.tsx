@@ -15,6 +15,7 @@ import {
 } from '@/data/cram-plans'
 import { getCourseMetadata } from '@/data/course-metadata'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
+import 'katex/dist/katex.min.css'
 
 const planDir = path.join(process.cwd(), 'content/cram-plans')
 

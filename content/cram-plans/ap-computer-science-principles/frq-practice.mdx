@@ -73,11 +73,13 @@ On the MCQ, you'll see ~20 pseudocode blocks to trace. Most students lose points
 
 **Step 2: Create a variable tracking table.**
 
-    Variable | Initial | After Line 3 | After Line 7 | ... | Final |
-    ---------|---------|--------------|-------------|-----|-------|
-    x        | —       | ...          | ...         | ... | ...   |
-    list     | —       | ...          | ...         | ... | ...   |
-    count    | —       | ...          | ...         | ... | ...   |
+```text
+Variable | Initial | After Line 3 | After Line 7 | ... | Final |
+---------|---------|--------------|-------------|-----|-------|
+x        | —       | ...          | ...         | ... | ...   |
+list     | —       | ...          | ...         | ... | ...   |
+count    | —       | ...          | ...         | ... | ...   |
+```
 
 **Step 3: Execute line by line, updating the table.**
 - Assignment: `x ← 5` → update x = 5
@@ -89,23 +91,27 @@ On the MCQ, you'll see ~20 pseudocode blocks to trace. Most students lose points
 
 Example:
 
-    sum ← 0
-    list ← [2, 3, 5]
-    REPEAT 3 TIMES
-    {
-        sum ← sum + list[i]
-    }
-    DISPLAY(sum)
+```text
+sum ← 0
+list ← [2, 3, 5]
+REPEAT 3 TIMES
+{
+    sum ← sum + list[i]
+}
+DISPLAY(sum)
+```
 
 **Tracing:**
 
-    i  | sum | list[i] | Action
-    ---|-----|---------|-------
-    1  | 0   | 2       | sum ← 0 + 2 = 2
-    2  | 2   | 3       | sum ← 2 + 3 = 5
-    3  | 5   | 5       | sum ← 5 + 5 = 10
-    
-    Output: 10
+```text
+i  | sum | list[i] | Action
+---|-----|---------|-------
+1  | 0   | 2       | sum ← 0 + 2 = 2
+2  | 2   | 3       | sum ← 2 + 3 = 5
+3  | 5   | 5       | sum ← 5 + 5 = 10
+
+Output: 10
+```
 
 ### Common Tracing Errors (and how to avoid them)
 
@@ -122,57 +128,67 @@ Example:
 
 **Pattern 1: Sum or count in a loop**
 
-    total ← 0
-    FOR EACH num IN list
-    {
-        total ← total + num
-    }
-    → **Output:** Sum of all numbers in list
+```text
+total ← 0
+FOR EACH num IN list
+{
+    total ← total + num
+}
+→ **Output:** Sum of all numbers in list
+```
 
 **Pattern 2: Find max or min**
 
-    max ← list[1]
-    FOR EACH num IN list
+```text
+max ← list[1]
+FOR EACH num IN list
+{
+    IF (num > max)
     {
-        IF (num > max)
-        {
-            max ← num
-        }
+        max ← num
     }
-    → **Output:** Largest number in list
+}
+→ **Output:** Largest number in list
+```
 
 **Pattern 3: Build a new list with INSERT**
 
-    result ← []
-    FOR EACH item IN original
+```text
+result ← []
+FOR EACH item IN original
+{
+    IF (condition)
     {
-        IF (condition)
-        {
-            APPEND(result, item)
-        }
+        APPEND(result, item)
     }
-    → **Output:** Filtered copy of original list
+}
+→ **Output:** Filtered copy of original list
+```
 
 **Pattern 4: Procedure call with parameters**
 
-    PROCEDURE double(x)
-    {
-        RETURN x * 2
-    }
-    result ← double(5)
-    DISPLAY(result)
-    → **Output:** 10
+```text
+PROCEDURE double(x)
+{
+    RETURN x * 2
+}
+result ← double(5)
+DISPLAY(result)
+→ **Output:** 10
+```
 
 **Pattern 5: Nested loops (double the work)**
 
-    FOR EACH row IN matrix
+```text
+FOR EACH row IN matrix
+{
+    FOR EACH col IN row
     {
-        FOR EACH col IN row
-        {
-            process(col)
-        }
+        process(col)
     }
-    → **Output:** Depends on process, but trace *inner* loop completely before moving to next *outer* iteration
+}
+→ **Output:** Depends on process, but trace *inner* loop completely before moving to next *outer* iteration
+```
 
 ### MCQ Pseudocode Tracing Checklist
 

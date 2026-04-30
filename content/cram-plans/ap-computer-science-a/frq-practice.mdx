@@ -128,23 +128,25 @@ You have **90 minutes total for 4 FRQs** — roughly **22 minutes per problem**.
 
 **Solution:**
 
-    public class Course {
-        private String courseName;
-        private ArrayList<String> students;
-        
-        public Course(String name) {
-            this.courseName = name;
-            this.students = new ArrayList<String>();
-        }
-        
-        public void enrollStudent(String name) {
-            students.add(name);
-        }
-        
-        public int getEnrollment() {
-            return students.size();
-        }
+```text
+public class Course {
+    private String courseName;
+    private ArrayList<String> students;
+    
+    public Course(String name) {
+        this.courseName = name;
+        this.students = new ArrayList<String>();
     }
+    
+    public void enrollStudent(String name) {
+        students.add(name);
+    }
+    
+    public int getEnrollment() {
+        return students.size();
+    }
+}
+```
 
 **Scoring checklist:**
 - ✅ Fields declared with correct types and access modifier (`private`).
@@ -161,21 +163,23 @@ You have **90 minutes total for 4 FRQs** — roughly **22 minutes per problem**.
 
 **Solution:**
 
-    public void removeDuplicates(ArrayList<Integer> numbers) {
-        int i = 0;
-        while (i < numbers.size()) {
-            Integer current = numbers.get(i);
-            int j = i + 1;
-            while (j < numbers.size()) {
-                if (numbers.get(j).equals(current)) {
-                    numbers.remove(j);
-                } else {
-                    j++;
-                }
+```text
+public void removeDuplicates(ArrayList<Integer> numbers) {
+    int i = 0;
+    while (i &lt; numbers.size()) {
+        Integer current = numbers.get(i);
+        int j = i + 1;
+        while (j &lt; numbers.size()) {
+            if (numbers.get(j).equals(current)) {
+                numbers.remove(j);
+            } else {
+                j++;
             }
-            i++;
         }
+        i++;
     }
+}
+```
 
 **Scoring checklist:**
 - ✅ Nested loop structure (outer advances, inner removes).

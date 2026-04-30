@@ -35,7 +35,7 @@ The exam is **tomorrow**. This is not the time to learn recursion — it's the t
 | `.substring(i, j)` | String | `"hello".substring(1, 4)` = "ell" | End index is **exclusive**. Bounds: [0, length()). |
 | `.charAt(i)` | char | `"hello".charAt(0)` = 'h' | Zero-indexed. Throws exception if out of bounds. |
 | `.indexOf(s)` | int | `"hello".indexOf("ll")` = 2 | Returns -1 if not found. |
-| `.compareTo(s)` | int | `"apple".compareTo("banana")` < 0 | Negative if this < s (lexicographically). |
+| `.compareTo(s)` | int | `"apple".compareTo("banana")` &lt; 0 | Negative if this &lt; s (lexicographically). |
 | `.equals(s)` | boolean | `"hello".equals("hello")` = true | **Use this, never `==`**. |
 | `.toUpperCase()` / `.toLowerCase()` | String | `"Hello".toUpperCase()` = "HELLO" | Returns new String; original unchanged. |
 
@@ -47,25 +47,29 @@ The exam is **tomorrow**. This is not the time to learn recursion — it's the t
 
 ### Arrays
 
-    int[] arr = new int[10];           // Length 10, all zeros
-    arr[0] = 5;                        // Access element
-    for (int i = 0; i < arr.length; i++) { }  // Traversal
+```text
+int[] arr = new int[10];           // Length 10, all zeros
+arr[0] = 5;                        // Access element
+for (int i = 0; i &lt; arr.length; i++) { }  // Traversal
+```
 
 **Common algorithms:**
 - **Max:** loop through, keep track of max so far, compare each new element.
 - **Sum:** loop through, add to accumulator.
 - **Search:** loop through, return index if found, else return -1.
-- **Reverse:** swap arr[i] with arr[arr.length - 1 - i] for i < arr.length / 2.
+- **Reverse:** swap arr[i] with arr[arr.length - 1 - i] for i &lt; arr.length / 2.
 
 ### ArrayList
 
-    ArrayList<Integer> list = new ArrayList<>();
-    list.add(5);                       // Add to end
-    list.remove(0);                    // Remove at index 0
-    list.get(i);                       // Access element
-    list.set(i, value);                // Replace element
-    list.size();                       // Current size
-    for (int x : list) { }             // Enhanced for-loop
+```text
+ArrayList<Integer> list = new ArrayList&lt;>();
+list.add(5);                       // Add to end
+list.remove(0);                    // Remove at index 0
+list.get(i);                       // Access element
+list.set(i, value);                // Replace element
+list.size();                       // Current size
+for (int x : list) { }             // Enhanced for-loop
+```
 
 **Critical trap:** If you remove during a forward loop, your index will skip the next element. Solution: loop backwards, or use a separate list.
 
@@ -73,24 +77,26 @@ The exam is **tomorrow**. This is not the time to learn recursion — it's the t
 
 ## Class Structure Template
 
-    public class MyClass {
-        private int field1;            // Instance variable
-        private String field2;
-        
-        public MyClass(int f1, String f2) {  // Constructor
-            this.field1 = f1;
-            this.field2 = f2;
-        }
-        
-        public void myMethod() {       // Instance method
-            // use this.field1, this.field2
-        }
-        
-        public static void main(String[] args) {
-            MyClass obj = new MyClass(10, "test");
-            obj.myMethod();
-        }
+```text
+public class MyClass {
+    private int field1;            // Instance variable
+    private String field2;
+    
+    public MyClass(int f1, String f2) {  // Constructor
+        this.field1 = f1;
+        this.field2 = f2;
     }
+    
+    public void myMethod() {       // Instance method
+        // use this.field1, this.field2
+    }
+    
+    public static void main(String[] args) {
+        MyClass obj = new MyClass(10, "test");
+        obj.myMethod();
+    }
+}
+```
 
 **Key points:**
 - Constructor name matches class name, no return type.
@@ -102,14 +108,16 @@ The exam is **tomorrow**. This is not the time to learn recursion — it's the t
 
 ## Inheritance & Polymorphism
 
-    public class Animal {
-        public void makeSound() { System.out.println("Generic sound"); }
-    }
-    
-    public class Dog extends Animal {
-        @Override
-        public void makeSound() { System.out.println("Woof"); }
-    }
+```text
+public class Animal {
+    public void makeSound() { System.out.println("Generic sound"); }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() { System.out.println("Woof"); }
+}
+```
 
 **Key points:**
 - `Dog` inherits all methods and fields from `Animal`.
@@ -122,10 +130,12 @@ The exam is **tomorrow**. This is not the time to learn recursion — it's the t
 
 ## Recursion Template
 
-    public static int factorial(int n) {
-        if (n <= 1) return 1;          // Base case
-        return n * factorial(n - 1);   // Recursive case
-    }
+```text
+public static int factorial(int n) {
+    if (n &lt;= 1) return 1;          // Base case
+    return n * factorial(n - 1);   // Recursive case
+}
+```
 
 **Key points:**
 - Base case stops recursion (e.g., n ≤ 1).
@@ -139,21 +149,25 @@ The exam is **tomorrow**. This is not the time to learn recursion — it's the t
 
 ### If/Else
 
-    if (condition) {
-        // code
-    } else if (other) {
-        // code
-    } else {
-        // code
-    }
+```text
+if (condition) {
+    // code
+} else if (other) {
+    // code
+} else {
+    // code
+}
+```
 
 ### Loops
 
-    for (int i = 0; i < 10; i++) { }           // Index-based
-    for (int x : arr) { }                      // Enhanced (no index)
-    while (condition) { }                      // Condition checked first
-    
-    do { } while (condition);                  // Condition checked after
+```text
+for (int i = 0; i &lt; 10; i++) { }           // Index-based
+for (int x : arr) { }                      // Enhanced (no index)
+while (condition) { }                      // Condition checked first
+
+do { } while (condition);                  // Condition checked after
+```
 
 ---
 

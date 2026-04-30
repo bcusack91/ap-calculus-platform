@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 const analyzeBundles = withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
@@ -200,6 +202,10 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
 });
 
 const baseConfig = analyzeBundles(withMDX(nextConfig))
