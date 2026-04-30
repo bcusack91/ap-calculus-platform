@@ -1,0 +1,151 @@
+---
+title: "AP Statistics FRQ Practice Guide"
+description: "Free-response strategy for AP Statistics: scoring patterns, the 4-step framework, conditions checklist, template phrasings, and worked examples for CIs, tests, and chi-square."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Free Response Questions
+  - 4-Step Framework
+  - Conditions for Inference
+---
+
+The AP Statistics free-response section is **half your exam score**, and it is the most *predictable* half. The College Board reuses the same FRQ archetypes year after year. Learn the patterns and the scoring language, and you can pick up easy partial credit even on questions you don't fully solve.
+
+## How AP Stats FRQ scoring works
+
+There are **6 free-response questions** in 90 minutes:
+- **5 short FRQs** (worth ~12.5% each).
+- **1 investigative task** (worth ~25% — longer, novel scenario).
+
+Each FRQ is scored as **E (essentially correct), P (partially correct), or I (incorrect)** on each part, then converted to a 0-4 score. **Never skip a part because the previous one stumped you.** Each part is scored independently.
+
+Two kinds of points:
+- **Mechanical points** — correct setup, calculator work, the right test.
+- **Communication points** — naming the procedure, checking conditions in context, and writing conclusions in context.
+
+You will lose points for:
+- Skipping the conditions check.
+- Conclusions that aren't tied to the original context (no parameter in plain language).
+- Ambiguous notation ($x$ vs $\\bar x$ vs $\\mu$).
+- Saying "$p$-value is the probability $H_0$ is true."
+- "We accept $H_0$" — never say this. Only "fail to reject $H_0$."
+
+## The 6 FRQ archetypes
+
+Every AP Statistics exam pulls from this playbook:
+
+1. **Data exploration / graph reading.** Compare two distributions; describe shape, center, spread, outliers; identify any unusual features.
+2. **Probability + random variables.** Calculate $E(X)$, $\\text{Var}(X)$, or apply binomial / geometric / normal.
+3. **Sampling and experimental design.** Identify bias, propose a better design, explain why random assignment matters.
+4. **Confidence interval.** Build, interpret, and (sometimes) compare two intervals.
+5. **Significance test.** Use the 4-step framework. Often a $t$-test or $z$-test; sometimes chi-square.
+6. **Investigative task.** A novel scenario combining 2-3 concepts. Students who score top marks here read the prompt carefully and don't panic.
+
+If you've drilled one of each archetype, you've seen 90% of what could appear.
+
+## The 4-step framework (memorize this)
+
+Every confidence interval and significance test on the FRQ section uses this structure:
+
+### Step 1: STATE
+- Define your **parameter** in context: *"Let $\\mu$ = the true mean cholesterol level for adults taking the new drug."*
+- Write your **hypotheses** (for tests): $H_0: \\mu = 200$, $H_a: \\mu < 200$.
+
+### Step 2: PLAN
+- Name the **procedure**: *"We will perform a one-sample $t$-test for $\\mu$."*
+- Check **all conditions in context**:
+  - **Random**: *"The problem states the patients were randomly selected, so we have a random sample."*
+  - **10% / Independent**: *"$50 < 10\\%$ of all adults taking the drug, so we can treat observations as independent."*
+  - **Normal / Large Counts / $n \\geq 30$**: *"Since $n = 50 \\geq 30$, the CLT ensures the sampling distribution of $\\bar x$ is approximately normal."*
+
+### Step 3: DO
+- Write the **test statistic and $p$-value** (with calculator notation): *"$t = -2.34$, $p = 0.012$, $df = 49$."*
+
+### Step 4: CONCLUDE
+- Compare $p$ to $\\alpha$ and write a **conclusion in context**:
+  - *"Since $p = 0.012 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidence that the true mean cholesterol level for adults taking the new drug is less than 200 mg/dL."*
+
+> **⚠️ The single most-missed point:** the conclusion in context. Generic "we reject $H_0$" without restating the original claim costs students 1-2 points per FRQ.
+
+## Template phrasings that earn points
+
+### Confidence interval interpretation
+> "We are 95% confident that the true [parameter, in context with units] is between [lower] and [upper]."
+
+### Confidence level interpretation (different!)
+> "If we repeated this sampling procedure many times, about 95% of the resulting intervals would contain the true [parameter]."
+
+### $p$-value interpretation
+> "Assuming $H_0$ is true (that [restate $H_0$ in context]), the probability of obtaining a sample statistic as extreme as or more extreme than the one we observed is $p$."
+
+### Conclusion in context (reject)
+> "Since $p < \\alpha$, we reject $H_0$. There is convincing evidence that [$H_a$ in context]."
+
+### Conclusion in context (fail to reject)
+> "Since $p > \\alpha$, we fail to reject $H_0$. There is not convincing evidence that [$H_a$ in context]."
+
+### Type I and II errors
+> "A Type I error would be concluding [$H_a$] when in fact [$H_0$] is true. The consequence would be [real-world cost]."
+
+## Conditions checklist (memorize)
+
+| Procedure | Conditions |
+|---|---|
+| 1-prop $z$ | Random; 10%; Large Counts ($n\\hat p \\geq 10$ AND $n(1-\\hat p) \\geq 10$) |
+| 2-prop $z$ | Random (both); 10% (both); Large Counts (all 4 expected counts $\\geq 10$) |
+| 1-sample $t$ | Random; 10%; Normal ($n \\geq 30$, OR population stated normal, OR no skew/outliers in graph) |
+| 2-sample $t$ | Same as 1-sample, applied to BOTH groups |
+| Paired $t$ | Random; 10%; Normal applied to the *differences* |
+| $\\chi^2$ | Random; 10%; All expected counts $\\geq 5$ |
+| LinReg $t$ | Linear, Independent, Normal residuals, Equal SD (LINE) |
+
+## Worked example: 1-sample $t$-test
+
+> A nutritionist claims the mean sodium content of a brand of soup is less than 800 mg. She randomly samples 30 cans, finds $\\bar x = 785$, $s = 30$. Test the claim at $\\alpha = 0.05$.
+
+**State:** Let $\\mu$ = true mean sodium per can. $H_0: \\mu = 800$, $H_a: \\mu < 800$.
+
+**Plan:** One-sample $t$-test.
+- Random: stated.
+- 10%: $30 < 10\\%$ of all cans of this brand. ✓
+- Normal: $n = 30 \\geq 30$, so CLT applies. ✓
+
+**Do:** $t = \\frac{785 - 800}{30/\\sqrt{30}} = \\frac{-15}{5.477} \\approx -2.74$, $df = 29$, $p \\approx 0.005$.
+
+**Conclude:** Since $p = 0.005 < \\alpha = 0.05$, we reject $H_0$. There is convincing evidence that the true mean sodium content per can is less than 800 mg.
+
+## Worked example: chi-square goodness-of-fit
+
+> A die is rolled 60 times with results: 1: 5, 2: 8, 3: 9, 4: 11, 5: 14, 6: 13. Test at $\\alpha = 0.05$ whether the die is fair.
+
+**State:** $H_0$: the die is fair (each face has probability $1/6$). $H_a$: at least one face has a different probability.
+
+**Plan:** Chi-square goodness-of-fit test.
+- Random: assume the rolls are random.
+- 10%: not applicable (rolls aren't from a finite population).
+- Expected counts: each face expected $60/6 = 10 \\geq 5$. ✓
+
+**Do:**
+$$
+\\chi^2 = \\sum \\frac{(O-E)^2}{E} = \\frac{(5-10)^2 + (8-10)^2 + (9-10)^2 + (11-10)^2 + (14-10)^2 + (13-10)^2}{10}
+$$
+$\\chi^2 = (25 + 4 + 1 + 1 + 16 + 9)/10 = 5.6$, $df = 5$, $p \\approx 0.347$.
+
+**Conclude:** Since $p = 0.347 > \\alpha = 0.05$, we fail to reject $H_0$. There is not convincing evidence that the die is unfair.
+
+## FRQ practice plan
+
+- Do **at least 4-6 full FRQs** in the 2 weeks before the exam, timed.
+- Score them with the [official College Board scoring guidelines](https://apcentral.collegeboard.org/courses/ap-statistics/exam).
+- After each one, write down 1 thing you missed because of *technique* (vs. content).
+
+## Internal links for content review
+
+- [3-day cram plan →](/courses/ap-statistics/cram/3-day)
+- [7-day cram plan →](/courses/ap-statistics/cram/7-day)
+- [Full topic library →](/courses/ap-statistics)
+- [Last-minute night-before review →](/courses/ap-statistics/cram/last-minute-review)
+
+## The bottom line
+
+FRQs reward **process** and **communication** as much as answers. Name every procedure. Check every condition in context. Always interpret in the original units and context. Use the 4-step framework even when you're not sure of the answer — half the points are mechanical, half are communication. The students who go from a 4 to a 5 are almost always the ones who pick up the 4-5 communication points others leave on the table.

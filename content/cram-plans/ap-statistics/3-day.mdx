@@ -1,0 +1,99 @@
+---
+title: "AP Statistics 3-Day Cram Plan"
+description: "A focused 72-hour AP Statistics rescue plan: highest-yield inference procedures, conditions checklist, FRQ templates, and the practice that moves your score before exam day."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Sampling Distributions
+  - Confidence Intervals
+  - Significance Tests
+  - Chi-Square
+  - Linear Regression
+---
+
+You have **three days** until the AP Statistics exam. This is not the time to relearn boxplots — it's time to drill the **inference procedures** that account for nearly half the exam and lock in the **FRQ "state-plan-do-conclude" framework** the College Board grades on every single test.
+
+This plan assumes ~4 focused hours per day. If you're short on time, **shorten the practice sets, not the topic coverage.**
+
+## Day 1: Sampling, Study Design, and Probability Foundations (4 hrs)
+
+These topics show up in MCQs, the FRQ on study design (always present), and as setup for every inference question.
+
+### What to review (90 min)
+- **Sampling methods**: SRS, stratified, cluster, systematic, convenience. Know the difference, and know **why** SRS is gold-standard.
+- **Bias**: undercoverage, nonresponse, response bias, voluntary response. Be able to name the *type* on an FRQ.
+- **Experiments vs observational studies**: confounding, lurking variables, blocking, matched pairs, blinding, placebo.
+- **Random variables**: $E(X) = \\sum x \\cdot P(x)$, $\\text{Var}(X) = \\sum (x - \\mu)^2 P(x)$. Combinations: $E(X \\pm Y) = E(X) \\pm E(Y)$ always; $\\text{Var}(X \\pm Y) = \\text{Var}(X) + \\text{Var}(Y)$ only if independent.
+- **Normal distribution**: $z = \\frac{x - \\mu}{\\sigma}$. Use `normalcdf` and `invNorm` on the calculator.
+
+### What to practice (2.5 hrs)
+- 20 mixed MCQs covering Units 1, 3, 4 (no inference yet).
+- 1 full FRQ on study design — read it carefully. The rubric demands you address randomness AND control.
+
+> **💡 Highest leverage:** The study design FRQ is worth ~9 points and uses the same vocabulary every year. If you can describe random assignment, control of confounding variables, and replication clearly, you bank 6-8 points easily.
+
+## Day 2: Sampling Distributions + Confidence Intervals (4 hrs)
+
+Sampling distributions are the conceptual bridge to inference. CIs make up roughly **15-20%** of the exam.
+
+### What to review (90 min)
+- **Sampling distribution of $\\hat p$**: mean $= p$, $\\sigma_{\\hat p} = \\sqrt{\\frac{p(1-p)}{n}}$. Conditions: random, 10% (independence), Large Counts ($np \\geq 10$ AND $n(1-p) \\geq 10$).
+- **Sampling distribution of $\\bar x$**: mean $= \\mu$, $\\sigma_{\\bar x} = \\frac{\\sigma}{\\sqrt{n}}$. Central Limit Theorem (CLT) — sample size $n \\geq 30$ for non-normal populations.
+- **CI structure**: $\\text{statistic} \\pm \\text{(critical value)} \\times \\text{(standard error)}$.
+- **CI types**: 1-prop $z$, 2-prop $z$, 1-sample $t$, 2-sample $t$, paired $t$, LinReg $t$.
+- **Interpretation**: *"We are 95% confident that the true [parameter in context] is between [lower] and [upper] [units]."* Memorize this.
+- **Confidence level interpretation** (different!): *"If we repeated this sampling procedure many times, about 95% of the resulting intervals would capture the true [parameter]."*
+
+### What to practice (2.5 hrs)
+- 15 MCQs on sampling distributions and CIs.
+- 1 full FRQ that requires building a CI: state procedure name, check all 3 conditions in context, give calculator output, interpret in context.
+
+> **⚠️ Don't say "the probability is 95% that the true mean is in this interval."** That earns ZERO points. The interval either does or does not contain the parameter. The 95% refers to the *procedure*, not this specific interval.
+
+## Day 3: Significance Tests, Chi-Square, and Mock FRQs (4 hrs)
+
+Significance tests are ~30% of the exam.
+
+### What to review (90 min)
+- **4-step framework**: State (hypotheses + parameter), Plan (procedure name + conditions in context), Do (test statistic + p-value), Conclude (compare to $\\alpha$, reject/fail to reject in context).
+- **Tests to know**: 1-prop $z$-test, 2-prop $z$-test, 1-sample $t$-test, 2-sample $t$-test, paired $t$-test, $\\chi^2$ goodness-of-fit, $\\chi^2$ test for independence/homogeneity, LinReg $t$-test for slope.
+- **Hypotheses**: $H_0$: parameter = value (no effect). $H_a$: parameter $\\neq$, $<$, or $>$ value.
+- **Test statistic forms**: $z = \\frac{\\hat p - p_0}{\\sqrt{p_0(1-p_0)/n}}$ (1-prop), $t = \\frac{\\bar x - \\mu_0}{s/\\sqrt{n}}$ (1-sample $t$), $\\chi^2 = \\sum \\frac{(O-E)^2}{E}$.
+- **p-value interpretation**: *"Assuming $H_0$ is true, the probability of getting a sample statistic as extreme as or more extreme than ours is $p$."*
+- **Type I error**: reject true $H_0$. **Type II error**: fail to reject false $H_0$. **Power**: $1 - P(\\text{Type II})$.
+
+### What to practice (2.5 hrs — full timed set)
+- 1 full FRQ on a $t$-test or $z$-test (use the 4-step framework — write the words "State", "Plan", "Do", "Conclude" if it helps).
+- 1 full FRQ on $\\chi^2$.
+- 25 mixed MCQs (calculator + non-calculator), strictly timed.
+
+## The night before
+
+Skim our [last-minute review checklist](/courses/ap-statistics/cram/last-minute-review). Sleep 8 hours.
+
+## Calculator must-knows
+
+Practice these on YOUR specific calculator (TI-84, TI-Nspire, etc.) tonight:
+
+1. `1-PropZInt`, `1-PropZTest` (and 2-Prop versions).
+2. `TInterval`, `T-Test` (and 2-SampTTest).
+3. `χ²-Test` (chi-square for two-way tables) and `χ²GOF-Test`.
+4. `LinRegTTest` for inference on slope.
+5. `normalcdf(lower, upper, μ, σ)` and `invNorm(area, μ, σ)`.
+6. **Stat → Edit** to enter data into L1, L2; then `1-Var Stats L1` to get summary statistics.
+
+## Common point-leaks
+
+- Skipping the 3 conditions check (Random / Independent / Normal — which means Large Counts for proportions, sample size $\\geq 30$ for means, OR a stated normal population).
+- Saying "$p$-value is the probability $H_0$ is true." It is **not.** $p$-value is conditional on $H_0$ being true.
+- Forgetting "in context" — "we conclude the mean weight differs" instead of "we conclude the mean weight of cereal boxes differs from 16 oz."
+- On CIs: rounding intermediate values too aggressively. Carry 3-4 decimals through, round only at the end.
+- Picking the wrong inference procedure (e.g., 2-sample $t$ when it should be paired $t$).
+
+## What this 3-day plan deliberately skips
+
+You will NOT relearn probability rules from scratch (geometric, binomial distributions). If you've forgotten them: skim the formulas, do 3 problems, and accept you may lose 4-6 points there. Spend the saved time on inference instead.
+
+## Ready to start?
+
+[Open the AP Statistics topic library →](/courses/ap-statistics) and start with whichever Day 1 topic you're weakest on. Mix in 3-5 worked examples per topic. Good luck — you've got this.
