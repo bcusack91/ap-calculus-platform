@@ -229,9 +229,14 @@ const quizLoaders: Record<string, QuizLoader> = {
   'torque-and-equilibrium': () => import('./ap-physics-1'),
   'rotational-kinematics': () => import('./ap-physics-1'),
   'angular-momentum': () => import('./ap-physics-1'),
-  // Simple Harmonic Motion
+  // Simple Harmonic Motion (a.k.a. Oscillations in 2024-25 CED)
   'introduction-to-shm': () => import('./ap-physics-1'),
   'energy-in-shm': () => import('./ap-physics-1'),
+  // Fluids (Unit 8 — added in 2024-25 CED)
+  'fluids-density-and-pressure': () => import('./ap-physics-1'),
+  'fluids-buoyancy': () => import('./ap-physics-1'),
+  'fluids-continuity': () => import('./ap-physics-1'),
+  'fluids-bernoulli': () => import('./ap-physics-1'),
 
   // ═══════════════════════════════════════════════════
   // AP Physics 2 Exit Quizzes
