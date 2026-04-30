@@ -5,6 +5,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { topicHubs } from '@/data/topic-hubs'
+import { CRAM_PLANS, CRAM_PLAN_COURSE_SLUGS } from '@/data/cram-plans'
 
 export const revalidate = 3600 // Revalidate every hour
 
@@ -350,5 +351,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ]
   }
 
-  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...topicHubPages, ...categoryPages, ...flashcardPages, ...leaderboardPage, ...blogPages]
+  // Cram plan landing pages (only include those with an MDX file present)
+  const cramPlanDir = path.join(process.cwd(), 'content/cram-plans')
+  const cramPlanPages: MetadataRoute.Sitemap = []
+  if (fs.existsSync(cramPlanDir)) {
+    for (const courseSlug of CRAM_PLAN_COURSE_SLUGS) {
+      for (const plan of CRAM_PLANS) {
+        const filePath = path.join(cramPlanDir, courseSlug, `${plan.slug}.mdx`)
+        if (fs.existsSync(filePath)) {
+          cramPlanPages.push({
+            url: `${baseUrl}/courses/${courseSlug}/cram/${plan.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.75,
+          })
+        }
+      }
+    }
+  }
+
+  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...topicHubPages, ...categoryPages, ...flashcardPages, ...leaderboardPage, ...blogPages, ...cramPlanPages]
 }

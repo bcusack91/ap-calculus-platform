@@ -1,0 +1,136 @@
+---
+title: "AP Calculus AB FRQ Practice Guide"
+description: "Free-response strategy for AP Calculus AB: scoring patterns, template phrasings, calculator-section tips, and worked examples that mirror real released FRQs."
+date: "2026-01-15"
+examDate: "May AP Exam"
+topics:
+  - Free Response Questions
+  - FRQ Strategy
+  - Justification Language
+---
+
+The AP Calculus AB free-response section is **half your exam score**, and it is the most *predictable* half. The College Board reuses the same FRQ archetypes year after year. Learn the patterns and the scoring language, and you can pick up easy partial credit even on questions you don't fully solve.
+
+## How FRQ scoring actually works
+
+Each FRQ is worth **9 points**, broken into sub-parts (a), (b), (c), and sometimes (d). Each sub-part has its own rubric — you can lose part (a) entirely and still earn 6/9 on the question. **Never skip a part because the previous one stumped you.**
+
+Two kinds of points:
+- **Answer points** — getting the right number with correct units.
+- **Communication points** — using correct notation, citing theorems by name, and writing setup work clearly.
+
+You will lose points for:
+- Missing units on a real-world quantity.
+- Writing $\\int$ without limits when limits are needed.
+- Saying "max" without justifying *why* it's a max.
+- Decimal answers rounded incorrectly (the rule: **3 decimal places** on the calculator section, unless told otherwise).
+
+## The 6 FRQ archetypes (memorize these)
+
+Every AP Calc AB exam pulls from the same playbook:
+
+1. **Rate in / rate out (accumulation).** A function gives the rate something flows in; another gives the rate it flows out. Find total amount, max value, when it's increasing, etc.
+2. **Particle motion.** Given $v(t)$, find position, displacement, distance traveled, when speed is increasing, etc.
+3. **Function defined by an integral.** $g(x) = \\int_a^x f(t) \\, dt$ — find $g$, $g'$, $g''$ at given points; identify extrema and inflection points.
+4. **Area / volume.** Set up integrals for area between two curves and volume of a solid of revolution or with known cross sections.
+5. **Differential equation + slope field.** Sketch the slope field, solve by separation of variables, find a particular solution.
+6. **Analyzing $f$, $f'$, or $f''$ from a graph or table.** Often paired with MVT, IVT, or critical-point justification.
+
+If you've drilled one of each archetype, you've seen 90% of what could appear.
+
+## Template phrasings that earn points
+
+Memorize these word-for-word. Plug in the specifics on exam day.
+
+### Justifying a relative max
+> "$f$ has a relative maximum at $x = c$ because $f'$ changes from positive to negative at $x = c$."
+
+### Justifying an absolute max on $[a, b]$ (Closed Interval Method)
+> "We compare $f(a)$, $f(b)$, and $f$ at all critical points in $(a, b)$. Since $f(c) = M$ is the largest, the absolute max of $f$ on $[a, b]$ is $M$, occurring at $x = c$."
+
+### Citing IVT
+> "Because $f$ is continuous on $[a, b]$ and $f(a) < k < f(b)$, by the Intermediate Value Theorem there exists $c$ in $(a, b)$ such that $f(c) = k$."
+
+### Citing MVT
+> "Because $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, by the Mean Value Theorem there exists $c$ in $(a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$."
+
+### Particle motion: when is the particle speeding up?
+> "The particle is speeding up when $v(t)$ and $a(t)$ have the same sign."
+
+### Distance traveled
+> "Distance traveled $= \\int_a^b |v(t)| \\, dt$."
+
+### Justifying max of an accumulation function
+> "$g'(x) = f(x)$ changes from positive to negative at $x = c$, so $g$ has a relative maximum at $x = c$."
+
+## Calculator-section discipline
+
+For the 2 calculator FRQs, the rubric **expects** specific notation:
+
+- Write the **integral or derivative expression first**, then the numerical answer.
+  - ✅ $\\int_0^4 v(t) \\, dt = 12.345$
+  - ❌ Just writing $12.345$.
+- Round to **at least 3 decimal places** unless told otherwise.
+- Don't simplify a calculator-evaluated answer. Leave it.
+- Store messy intermediate values to memory (`STO`) — don't retype them.
+
+## Worked example: rate in / rate out
+
+> Water flows into a tank at $f(t) = 5\\sqrt{t}$ liters/min and out at $g(t) = 0.4t^2$ liters/min for $0 \\le t \\le 8$. The tank starts with 100 L.
+>
+> **(a)** Find the volume at $t = 8$.
+
+The amount of water in the tank is:
+$$
+V(t) = 100 + \\int_0^t (f(s) - g(s)) \\, ds
+$$
+At $t = 8$ (calculator-allowed):
+$$
+V(8) = 100 + \\int_0^8 (5\\sqrt{s} - 0.4 s^2) \\, ds = 100 + 25.179 = 125.179 \\text{ L}
+$$
+**Communication points** earned: writing the integral expression first, including units.
+
+> **(b)** Is the volume increasing or decreasing at $t = 4$? Justify.
+
+Compute net rate at $t = 4$:
+$$
+f(4) - g(4) = 5(2) - 0.4(16) = 10 - 6.4 = 3.6 > 0
+$$
+**Answer:** The volume is *increasing* at $t = 4$ because the rate in exceeds the rate out (net rate $= 3.6 > 0$).
+
+## Worked example: particle motion
+
+> A particle moves along the x-axis with velocity $v(t) = t^2 - 4t + 3$ for $0 \\le t \\le 5$. The particle starts at $x(0) = 2$.
+>
+> **(a)** Find the displacement of the particle on $[0, 5]$.
+
+$$
+\\Delta x = \\int_0^5 (t^2 - 4t + 3) \\, dt = \\left[\\frac{t^3}{3} - 2t^2 + 3t\\right]_0^5 = \\frac{125}{3} - 50 + 15 = \\frac{20}{3}
+$$
+
+> **(b)** Find the total distance traveled.
+
+Find where $v(t) = 0$: $(t-1)(t-3) = 0 \\Rightarrow t = 1, 3$.
+
+$$
+\\text{Distance} = \\int_0^1 |v| \\, dt + \\int_1^3 |v| \\, dt + \\int_3^5 |v| \\, dt
+$$
+
+This is the classic trap — **don't just integrate $v(t)$.** Splitting at sign changes is what earns the points.
+
+## FRQ practice plan
+
+- Do **at least 4-6 full FRQs** in the 2 weeks before the exam, timed.
+- Score them with the [official College Board scoring guidelines](https://apcentral.collegeboard.org/courses/ap-calculus-ab/exam).
+- After each one, write down 1 thing you missed because of *technique* (vs. content).
+
+## Internal links for content review
+
+- [3-day cram plan →](/courses/ap-calculus-ab/cram/3-day)
+- [7-day cram plan →](/courses/ap-calculus-ab/cram/7-day)
+- [Full topic library →](/courses/ap-calculus-ab)
+- [Last-minute night-before review →](/courses/ap-calculus-ab/cram/last-minute-review)
+
+## The bottom line
+
+FRQs reward **process**, not just answers. Show every integral setup. State every theorem by name. Include units. Justify with the templates above. The students who go from 4 to 5 are almost always the ones who pick up 4-5 extra "communication points" they used to leave on the table.
