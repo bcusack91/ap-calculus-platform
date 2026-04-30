@@ -7273,6 +7273,57 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
 // under a slightly different slug naming convention.
 // ---------------------------------------------------------------------------
 const slugAliases: Record<string, string> = {
+  // AP Statistics — wire CED-aligned topic slugs to existing interactive lessons
+  // Unit 1: Exploring One-Variable Data
+  'types-data-sampling': 'exploratory-data-apstats',
+  'displaying-distributions-graphs': 'exploratory-data-apstats',
+  'describing-distributions': 'describing-distributions-apstats',
+  'measures-of-center': 'exploratory-data-apstats',
+  'measures-of-spread': 'exploratory-data-apstats',
+  'normal-distributions': 'normal-distribution-apstats',
+  // Unit 2: Exploring Two-Variable Data
+  'scatterplots-correlation': 'linear-regression-apstats',
+  'least-squares-regression': 'linear-regression-apstats',
+  'residuals-residual-plots': 'linear-regression-apstats',
+  'coefficient-determination': 'linear-regression-apstats',
+  'transformations-linearity': 'linear-regression-apstats',
+  // Unit 3: Collecting Data
+  'sampling-methods': 'collecting-data-apstats',
+  'observational-vs-experiments': 'experimental-design-apstats',
+  'experimental-design': 'experimental-design-apstats',
+  'bias-sampling-surveys': 'collecting-data-apstats',
+  // Unit 4: Probability, Random Variables & Distributions
+  'basic-probability-rules': 'probability-rules-apstats',
+  'conditional-probability': 'probability-rules-apstats',
+  'independence': 'probability-rules-apstats',
+  'discrete-random-variables': 'discrete-random-variables-apstats',
+  'mean-sd-random-variables': 'discrete-random-variables-apstats',
+  'combining-random-variables': 'discrete-random-variables-apstats',
+  'binomial-distribution': 'binomial-geometric-apstats',
+  'geometric-distribution': 'binomial-geometric-apstats',
+  'continuous-random-variables': 'probability-distributions-apstats',
+  // Unit 5: Sampling Distributions
+  'sampling-distributions': 'sampling-distributions-apstats',
+  'central-limit-theorem': 'sampling-distributions-apstats',
+  'sampling-distribution-sample-mean': 'sampling-distributions-apstats',
+  'sampling-distribution-sample-proportion': 'sampling-distributions-apstats',
+  // Unit 6: Inference for Categorical Data — Proportions
+  'ci-proportions': 'proportions-inference-apstats',
+  'tests-proportions': 'proportions-inference-apstats',
+  'two-sample-proportions': 'comparing-populations-apstats',
+  // Unit 7: Inference for Quantitative Data — Means
+  'hypothesis-testing-framework': 'hypothesis-testing-apstats',
+  'type-errors': 'type-errors-power-apstats',
+  'ci-means': 'means-inference-apstats',
+  'interpreting-ci': 'confidence-intervals-apstats',
+  'tests-means': 'means-inference-apstats',
+  'paired-data': 'comparing-populations-apstats',
+  'two-sample-means': 'comparing-populations-apstats',
+  // Unit 8: Inference for Categorical Data — Chi-Square
+  'chi-square-tests': 'chi-square-tests-apstats',
+  'chi-square-independence-homogeneity': 'chi-square-tests-apstats',
+  // Unit 9: Inference for Quantitative Data — Slopes
+  'inference-regression': 'inference-regression-apstats',
   // AP Biology
   'cell-organelles': 'cell-structure-organelles',
   'cell-membrane-transport': 'membrane-transport',
