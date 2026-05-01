@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
@@ -151,6 +152,7 @@ export default function APStatisticsHub() {
         slug: 'ap-statistics',
       })) }}
     />
+      <CourseUniqueIntro slug="ap-statistics" />
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">

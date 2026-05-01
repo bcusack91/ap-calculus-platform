@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
@@ -153,6 +154,7 @@ export default function ApCsPrinciplesHub() {
       })) }}
     />
       {/* Hero */}
+      <CourseUniqueIntro slug="ap-cs-principles" />
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">

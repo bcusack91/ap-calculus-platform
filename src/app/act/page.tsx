@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -144,6 +145,7 @@ export default function ACTLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       {/* Hero */}
+      <CourseUniqueIntro slug="act" />
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-4 py-1.5 text-sm font-semibold text-red-700 dark:bg-red-900/40 dark:text-red-300">

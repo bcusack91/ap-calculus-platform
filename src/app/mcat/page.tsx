@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import type { Metadata } from 'next'
 import MCATRecommendedModules from '@/components/MCATRecommendedModules'
 import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
@@ -161,6 +162,7 @@ export default function MCATLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       {/* Hero */}
+      <CourseUniqueIntro slug="mcat" />
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">

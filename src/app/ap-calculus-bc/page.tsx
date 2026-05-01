@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
@@ -127,6 +128,7 @@ export default function APCalculusBCHub() {
         slug: 'ap-calculus-bc',
       })) }}
     />
+      <CourseUniqueIntro slug="ap-calculus-bc" />
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">

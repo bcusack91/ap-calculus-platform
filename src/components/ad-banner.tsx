@@ -13,15 +13,17 @@ interface AdBannerProps {
 export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerProps) {
   const { data: session } = useSession()
   const { advertising: consentGiven } = useConsent()
-  
+
   // Don't show ads to premium users
   const isPremium = session?.user?.role === 'PREMIUM'
-  
+
   // Skip ads in development to avoid initialization errors
   const isDevelopment = process.env.NODE_ENV === 'development'
 
+  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
+
   useEffect(() => {
-    if (isPremium || isDevelopment || !consentGiven) return
+    if (isPremium || isDevelopment || !adsenseClientId) return
 
     // Guard against pushing to an already-filled ad slot on client-side navigation
     const adEl = document.querySelector(`ins.adsbygoogle[data-ad-slot="${slot}"]`)
@@ -33,12 +35,12 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
     } catch (err) {
       console.error('AdSense error:', err)
     }
-  }, [isPremium, isDevelopment, consentGiven, slot])
+  }, [isPremium, isDevelopment, adsenseClientId, slot, consentGiven])
 
   if (isPremium) {
     return null
   }
-  
+
   // Show placeholder in development
   if (isDevelopment) {
     return (
@@ -52,13 +54,6 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
       </div>
     )
   }
-
-  // Don't load ads until user has consented to advertising cookies
-  if (!consentGiven) {
-    return null
-  }
-
-  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
 
   // Show placeholder if AdSense not configured yet
   if (!adsenseClientId) {
@@ -74,9 +69,14 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
     )
   }
 
-  // Real AdSense code
+  // Always render the <ins> tag so the AdSense crawler / reviewer can see
+  // the ad code, even when the visitor hasn't consented to advertising
+  // cookies. Personalization is gated separately in AdSenseScript via
+  // `requestNonPersonalizedAds`. Without consent, Google will still serve a
+  // non-personalized ad (or nothing for that visitor) but the markup is
+  // discoverable at review time.
   return (
-    <div className="my-4">
+    <div className="my-4" aria-label="Advertisement" role="complementary">
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
@@ -84,6 +84,7 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive={responsive.toString()}
+        data-npa-on-unknown-consent={consentGiven ? '0' : '1'}
       />
     </div>
   )

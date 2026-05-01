@@ -62,17 +62,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // Competitive sub-pages
-    ...['ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history', 'ap-macro', 'ap-micro',
-      'ap-african-american-studies', 'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'ap-biology', 'ap-chemistry', 'ap-physics1', 'ap-physics2', 'ap-physics-c-mechanics', 'ap-physics-c-em',
-      'ap-calculus-ab', 'ap-calculus-bc', 'ap-precalculus'
-    ].map(slug => ({
-      url: `${baseUrl}/competitive/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.65,
-    })),
+    // NOTE: /competitive/* sub-pages are auth-walled by middleware. Submitting
+    // them in the sitemap causes Google to crawl the signin redirect, which
+    // generates many "discovered/excluded by noindex" entries. Keep them out.
     {
       url: `${baseUrl}/flashcards`,
       lastModified: new Date(),
@@ -93,35 +85,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     // Additional pages
-    {
-      url: `${baseUrl}/dashboard`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/onboarding`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/join-class`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
+    // NOTE: /dashboard, /onboarding, /join-class, /teacher are auth-walled by
+    // middleware and noindexed via their layout. Submitting them creates a
+    // sitemap-wide "excluded by noindex" warning in Search Console.
     {
       url: `${baseUrl}/topics`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/teacher`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
     },
     {
       url: `${baseUrl}/premium`,
@@ -291,7 +262,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
-  // Interactive lesson pages (server-rendered with full SEO content)
+  // Interactive lesson pages (server-rendered with full SEO content).
+  // The interactive route applies `robots: { index: false }` for any topic
+  // that has neither a registered interactive lesson nor dynamic textContent
+  // (see src/app/topics/[slug]/interactive/page.tsx), so we only include the
+  // slugs that actually have content.
   const interactiveSlugs = getAllInteractiveSlugs()
   const interactivePages: MetadataRoute.Sitemap = interactiveSlugs.map((slug) => ({
     url: `${baseUrl}/topics/${slug}/interactive`,
@@ -307,13 +282,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.78,
   }))
 
-  // Flashcard pages (one per topic)
-  const flashcardPages: MetadataRoute.Sitemap = topics.map((topic) => ({
-    url: `${baseUrl}/flashcards/${topic.slug}`,
-    lastModified: topic.updatedAt,
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  }))
+  // Flashcard study pages (/flashcards/[slug]) are noindexed via
+  // src/app/flashcards/[slug]/layout.tsx (canonical points back to the topic
+  // page). Submitting them in the sitemap would create one
+  // "submitted but excluded by noindex" warning per topic.
+  const flashcardPages: MetadataRoute.Sitemap = []
 
   // Leaderboard page
   const leaderboardPage: MetadataRoute.Sitemap = [

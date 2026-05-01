@@ -97,6 +97,23 @@ export default function PrivacyPage() {
             <li>Google Ad Manager</li>
             <li>Other display advertising networks</li>
           </ul>
+          <p className="mt-4">
+            <strong>Google AdSense and the DART Cookie:</strong> Google, as a third-party vendor, uses cookies to serve ads on our Service.
+            Google&apos;s use of the DART cookie enables it and its partners to serve ads to our users based on their visit to our Service
+            and other sites on the Internet. Users may opt out of the use of the DART cookie by visiting the
+            {" "}
+            <a href="https://policies.google.com/technologies/ads" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              Google ad and content network privacy policy
+            </a>.
+            We may also use third-party advertising companies that use cookies, web beacons, and other tracking technologies to gather
+            information about your visits to our Service and other websites in order to provide advertisements about goods and services
+            of interest to you.
+          </p>
+          <p className="mt-4">
+            <strong>Consent and Non-Personalized Ads:</strong> If you have not consented to advertising cookies (or if your jurisdiction
+            requires opt-in consent), we instruct Google AdSense to serve <em>non-personalized</em> ads only. Non-personalized ads are
+            not based on your past behavior; they are targeted using contextual information about the page you are viewing.
+          </p>
 
           <h3 className="text-xl font-semibold mt-6 mb-3">3.2 Analytics Services</h3>
           <p>

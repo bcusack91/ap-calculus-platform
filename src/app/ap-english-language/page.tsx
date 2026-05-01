@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
@@ -199,6 +200,7 @@ export default function ApEnglishLanguageHub() {
       })) }}
     />
       {/* Hero */}
+      <CourseUniqueIntro slug="ap-english-language" />
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-cyan-100 px-4 py-1.5 text-sm font-semibold text-cyan-700 dark:bg-cyan-900/40 dark:text-cyan-300">
