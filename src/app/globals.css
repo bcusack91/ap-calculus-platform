@@ -1,7 +1,23 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Enable class-based dark mode for manual toggle */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== Container: re-add v3-style centering + horizontal padding =====
+   In Tailwind v4 the `container` utility no longer auto-centers or pads by
+   default. Without this, every `<div className="container">` on the site
+   would hug the left edge with no gutter (left-anchored layout). */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (min-width: 640px) {
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 2rem;
+  }
+}
 
 /* ===== Register accent colors as Tailwind utilities ===== */
 @theme {
