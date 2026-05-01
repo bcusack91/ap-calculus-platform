@@ -196,6 +196,44 @@ const nextConfig: NextConfig = {
         { source: `/topics/${micro}/interactive`, destination: `/topics/${parent}/interactive`, permanent: true },
       )
     }
+
+    // Search Console 404 cleanup (May 2026): legacy topic slugs that were
+    // deleted or renamed. Targets verified to exist in the database.
+    const renamedTopicRedirects: Record<string, string> = {
+      'subject-verb-agreement': 'sat-subject-verb-agreement',
+      'conditional-probability-stats': 'conditional-probability',
+      'measures-of-center-stats': 'measures-of-center',
+      'function-notation-transformations': 'transformations-functions-precalc',
+      'pronoun-usage': 'sat-pronoun-agreement',
+      'analyzing-arguments': 'englang-argument-structure',
+      'data-representation-science': 'act-data-representation',
+      'sentence-structure-formation': 'sat-sentence-structure',
+      'statistical-claims-studies': 'bias-sampling-surveys',
+    }
+    for (const [from, to] of Object.entries(renamedTopicRedirects)) {
+      redirects.push(
+        { source: `/topics/${from}`, destination: `/topics/${to}`, permanent: true },
+        { source: `/topics/${from}/interactive`, destination: `/topics/${to}/interactive`, permanent: true },
+      )
+    }
+
+    // Topics with no 1:1 replacement -> closest live category page.
+    redirects.push(
+      { source: '/topics/act-modeling-problem-solving', destination: '/categories/act-math', permanent: true },
+      { source: '/topics/act-modeling-problem-solving/interactive', destination: '/categories/act-math', permanent: true },
+    )
+
+    // Deleted category slugs.
+    redirects.push(
+      { source: '/categories/probability-stats', destination: '/categories/intro-statistics', permanent: true },
+      { source: '/categories/linear-equations', destination: '/categories/algebra1-quadratics', permanent: true },
+    )
+
+    // Deleted course slug (legacy combined AB/BC landing).
+    redirects.push(
+      { source: '/courses/ap-calculus-ab-bc', destination: '/ap-calculus-ab', permanent: true },
+    )
+
     return redirects
   },
 };
