@@ -24,6 +24,7 @@ interface Question {
 interface ChallengeData {
   id: string
   topicSlug: string
+  courseSlug: string | null
   questionCount: number
   timeLimit: number
   status: string
@@ -39,6 +40,7 @@ interface ChallengeData {
   isChallenger: boolean
   isRecipient: boolean
   canPlay: boolean
+  isOpenInvite?: boolean
   questions?: Question[]
   challengerAnswers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean; timeMs?: number }>
   recipientAnswers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean; timeMs?: number }>
@@ -379,15 +381,14 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
             >
               Back to Competitive
             </button>
-            {isCompleted && (
-              <button
-                onClick={() => router.push(`/competitive?mode=async&topic=${challenge.topicSlug}`)}
-                className="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 font-medium"
-              >
-                Rematch
-              </button>
-            )}
           </div>
+
+          {isCompleted && (
+            <RematchPanel
+              challenge={challenge}
+              currentUserId={challenge.isChallenger ? challenge.challenger.id : (challenge.recipient?.id ?? '')}
+            />
+          )}
         </div>
       </div>
     )
@@ -540,6 +541,148 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500 mx-auto mb-4" />
         <p className="text-gray-400">Submitting your answers...</p>
       </div>
+    </div>
+  )
+}
+
+// === Rematch Panel ===
+interface RematchTopic { slug: string; title: string; completed: boolean; masteryLevel: number }
+interface RematchUnit { name: string; slug: string; topics: RematchTopic[] }
+interface RematchTopicsResponse { courseSlug: string; courseName: string; units: RematchUnit[] }
+
+function RematchPanel({
+  challenge,
+  currentUserId,
+}: {
+  challenge: ChallengeData
+  currentUserId: string
+}) {
+  const router = useRouter()
+  const opponent = challenge.isChallenger ? challenge.recipient : challenge.challenger
+  const opponentId = opponent?.id
+  const [open, setOpen] = useState(false)
+  const [topicsData, setTopicsData] = useState<RematchTopicsResponse | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [selected, setSelected] = useState<string | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  if (!opponent || !opponentId || opponentId === currentUserId) return null
+
+  const courseSlug = challenge.courseSlug
+
+  const handleOpen = async () => {
+    setOpen(true)
+    if (!courseSlug) {
+      setError('Could not determine the course for this challenge — pick a topic from the competitive hub instead.')
+      return
+    }
+    if (topicsData) return
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch(`/api/competitive/course-topics?course=${encodeURIComponent(courseSlug)}`)
+      if (!res.ok) throw new Error('Failed to load topics')
+      const data: RematchTopicsResponse = await res.json()
+      setTopicsData(data)
+    } catch {
+      setError('Could not load topics. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSend = async () => {
+    if (!selected || submitting) return
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/competitive/async-challenge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topicSlug: selected, recipientId: opponentId }),
+      })
+      const data = await res.json()
+      if (!res.ok || !data.challengeId) throw new Error(data.error || 'Failed to create rematch')
+      router.push(`/competitive/async/${data.challengeId}`)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create rematch')
+      setSubmitting(false)
+    }
+  }
+
+  return (
+    <div className="mt-6 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/30 rounded-2xl p-6">
+      {!open ? (
+        <div className="text-center">
+          <h3 className="text-lg font-bold text-white mb-1">Get them back?</h3>
+          <p className="text-sm text-gray-300 mb-4">
+            Send <span className="font-semibold text-white">{opponent.name || 'your opponent'}</span> another challenge on a topic you choose.
+          </p>
+          <button
+            onClick={handleOpen}
+            className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold rounded-xl text-lg shadow-lg transition-all"
+          >
+            🔁 Rematch {opponent.name?.split(' ')[0] || 'them'}
+          </button>
+        </div>
+      ) : (
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-bold text-white">Pick a topic for {opponent.name?.split(' ')[0] || 'them'}</h3>
+            <button onClick={() => setOpen(false)} className="text-gray-400 hover:text-gray-200 text-sm">Cancel</button>
+          </div>
+
+          {loading && (
+            <div className="text-center py-6 text-gray-400 text-sm">Loading topics…</div>
+          )}
+
+          {error && (
+            <div className="mb-3 p-3 rounded-lg bg-red-900/30 border border-red-500/40 text-red-200 text-sm">{error}</div>
+          )}
+
+          {topicsData && (
+            <div className="space-y-4 max-h-72 overflow-y-auto pr-1">
+              {topicsData.units.map(unit => {
+                const completedTopics = unit.topics.filter(t => t.completed)
+                if (completedTopics.length === 0) return null
+                return (
+                  <div key={unit.slug}>
+                    <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">{unit.name}</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {completedTopics.map(topic => {
+                        const isSel = selected === topic.slug
+                        return (
+                          <button
+                            key={topic.slug}
+                            onClick={() => setSelected(topic.slug)}
+                            className={`text-left text-sm px-3 py-2 rounded-lg border transition-all ${isSel ? 'border-indigo-400 bg-indigo-500/20 text-white' : 'border-gray-600 bg-gray-800/40 text-gray-300 hover:border-indigo-500/50'}`}
+                          >
+                            {topic.title}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )
+              })}
+              {topicsData.units.every(u => u.topics.every(t => !t.completed)) && (
+                <p className="text-sm text-gray-400 text-center py-4">
+                  Complete more lessons in this course to unlock topics for a rematch.
+                </p>
+              )}
+            </div>
+          )}
+
+          <button
+            onClick={handleSend}
+            disabled={!selected || submitting}
+            className="mt-5 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          >
+            {submitting ? 'Creating rematch…' : selected ? 'Send Rematch →' : 'Pick a topic'}
+          </button>
+        </div>
+      )}
     </div>
   )
 }

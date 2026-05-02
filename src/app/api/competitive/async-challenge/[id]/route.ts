@@ -33,6 +33,9 @@ export async function GET(
     const userId = session.user.id
     const isChallenger = challenge.challengerId === userId
     const isRecipient = challenge.recipientId === userId
+    // If a recipient was pre-targeted (e.g. by a Rematch), only that user may accept.
+    const isOpenInvite = challenge.recipientId === null
+    const recipientAllowed = isRecipient || isOpenInvite
 
     // Check if expired
     if (challenge.status !== 'COMPLETED' && challenge.status !== 'EXPIRED' && new Date() > challenge.expiresAt) {
@@ -49,15 +52,30 @@ export async function GET(
       })
     }
 
-    // Anyone can view via shared link — if not yet a participant, they can join as recipient
+    // Anyone can view; only the (designated) recipient can play. Open links allow anyone to join.
     const canPlay =
       (isChallenger && challenge.status === 'CHALLENGER_PLAYING') ||
-      (!isChallenger && (challenge.status === 'WAITING_FOR_OPPONENT' || (isRecipient && challenge.status === 'RECIPIENT_PLAYING')))
+      (!isChallenger && recipientAllowed && (challenge.status === 'WAITING_FOR_OPPONENT' || (isRecipient && challenge.status === 'RECIPIENT_PLAYING')))
+
+    // Derive course slug from topic for client-side rematch picker
+    let courseSlug: string | null = null
+    const topic = await prisma.topic.findUnique({
+      where: { slug: challenge.topicSlug },
+      select: { category: { select: { course: { select: { slug: true } } } } },
+    })
+    if (topic?.category?.course?.slug) {
+      courseSlug = topic.category.course.slug
+    } else {
+      // topicSlug may itself be a course slug (e.g. when no specific topic was picked)
+      const course = await prisma.course.findUnique({ where: { slug: challenge.topicSlug }, select: { slug: true } })
+      if (course) courseSlug = course.slug
+    }
 
     // Build response — only show questions when it's their turn
     const response: Record<string, unknown> = {
       id: challenge.id,
       topicSlug: challenge.topicSlug,
+      courseSlug,
       questionCount: challenge.questionCount,
       timeLimit: challenge.timeLimit,
       status: challenge.status,
@@ -74,6 +92,7 @@ export async function GET(
       isChallenger,
       isRecipient,
       canPlay,
+      isOpenInvite,
     }
 
     // Show questions only when it's the user's turn to play
@@ -168,6 +187,10 @@ export async function POST(
     }
 
     if (!isChallenger && (challenge.status === 'WAITING_FOR_OPPONENT' || challenge.status === 'RECIPIENT_PLAYING')) {
+      // If a recipient was pre-designated (rematch), only that user may submit
+      if (challenge.recipientId && challenge.recipientId !== userId) {
+        return NextResponse.json({ error: 'This challenge is reserved for another player' }, { status: 403 })
+      }
       // Recipient submitting their answers — determine winner
       const challengerScore = challenge.challengerScore
       let winnerId: string | null = null

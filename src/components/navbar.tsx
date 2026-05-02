@@ -7,6 +7,7 @@ import ThemeToggle from './ThemeToggle'
 import { AvatarData } from '@/types/avatar'
 import { NavMobileMenu } from './NavMobileMenu'
 import { NavUserMenu } from './NavUserMenu'
+import { NotificationBell } from './NotificationBell'
 
 import { courseMeta, sectionOrder, getCourseHref } from '@/data/course-metadata'
 
@@ -297,7 +298,9 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-3">
             {session ? (
               /* User Menu Dropdown */
-              <NavUserMenu
+              <>
+                <NotificationBell />
+                <NavUserMenu
                 session={session}
                 avatarData={avatarData}
                 isPremium={isPremium}
@@ -307,6 +310,7 @@ export function Navbar() {
                 onToggle={() => { setUserMenuOpen(!userMenuOpen); setCoursesOpen(false); setExpandedSection(null); setMoreOpen(false) }}
                 onClose={() => setUserMenuOpen(false)}
               />
+              </>
             ) : (
               <div className="flex items-center space-x-2">
                 <Link

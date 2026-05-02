@@ -16,10 +16,17 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { topicSlug, questionCount = 10, timeLimit = 300 } = body
+    const { topicSlug, questionCount = 10, timeLimit = 300, recipientId } = body
 
     if (!topicSlug || typeof topicSlug !== 'string') {
       return NextResponse.json({ error: 'topicSlug is required' }, { status: 400 })
+    }
+
+    // Optional pre-targeted recipient (used by Rematch). Must be a different user.
+    let targetRecipientId: string | null = null
+    if (recipientId && typeof recipientId === 'string' && recipientId !== session.user.id) {
+      const exists = await prisma.user.findUnique({ where: { id: recipientId }, select: { id: true } })
+      if (exists) targetRecipientId = exists.id
     }
 
     const safeQuestionCount = Math.min(Math.max(Number(questionCount) || 10, 5), 20)
@@ -35,6 +42,7 @@ export async function POST(request: NextRequest) {
     const challenge = await prisma.asyncChallenge.create({
       data: {
         challengerId: session.user.id,
+        recipientId: targetRecipientId,
         topicSlug,
         questionCount: safeQuestionCount,
         timeLimit: safeTimeLimit,

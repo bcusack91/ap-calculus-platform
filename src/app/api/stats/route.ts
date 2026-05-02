@@ -11,6 +11,7 @@ const getCachedStats = unstable_cache(
       totalTopicProgress,
       totalFlashcardReviews,
       totalMatches,
+      totalAsyncCompleted,
       totalCourses,
       totalTopics,
     ] = await Promise.all([
@@ -18,6 +19,8 @@ const getCachedStats = unstable_cache(
       prisma.topicProgress.count(),
       prisma.flashcardProgress.count(),
       prisma.competitiveMatch.count(),
+      // Async challenges only count once both players have finished (status = COMPLETED)
+      prisma.asyncChallenge.count({ where: { status: 'COMPLETED' } }),
       prisma.course.count(),
       prisma.topic.count(),
     ])
@@ -26,7 +29,7 @@ const getCachedStats = unstable_cache(
       students: totalUsers,
       lessonsStudied: totalTopicProgress,
       flashcardsReviewed: totalFlashcardReviews,
-      matchesPlayed: totalMatches,
+      matchesPlayed: totalMatches + totalAsyncCompleted,
       courses: totalCourses,
       topics: totalTopics,
     }

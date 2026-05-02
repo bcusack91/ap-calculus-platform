@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { CookieConsent } from "@/components/cookie-consent";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AdSenseScript from "@/components/AdSenseScript";
+import MicrosoftClarity from "@/components/MicrosoftClarity";
 import { Footer } from "@/components/footer";
 import { WebVitals } from "@/components/web-vitals";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
@@ -77,6 +78,7 @@ export default function RootLayout({
 }>) {
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID
   const isProd = process.env.NODE_ENV === 'production'
 
   return (
@@ -138,8 +140,7 @@ export default function RootLayout({
         <WebVitals />
         <Providers>
           {isProd && gaId && <GoogleAnalytics measurementId={gaId} />}
-          {isProd && adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
-          <div className="flex min-h-screen flex-col">
+          {isProd && adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}            {isProd && clarityProjectId && <MicrosoftClarity projectId={clarityProjectId} />}          <div className="flex min-h-screen flex-col">
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus:rounded"

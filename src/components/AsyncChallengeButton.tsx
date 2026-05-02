@@ -58,10 +58,16 @@ export default function AsyncChallengeButton({
   }
 
   const defaultClass =
-    'px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold rounded-lg transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed text-sm'
+    'w-full px-10 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold rounded-xl text-xl transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed'
 
   return (
     <div>
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full bg-amber-400 text-amber-900">
+          ⭐ Recommended
+        </span>
+        <span className="text-xs text-gray-500 dark:text-gray-400">Best for low-traffic times</span>
+      </div>
       <button
         type="button"
         onClick={handleClick}
