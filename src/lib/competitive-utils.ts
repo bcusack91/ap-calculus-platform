@@ -185,7 +185,530 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
   'u-substitution-calcab': 'integration-by-substitution',
   'volumes-of-revolution-calcab': 'volumes-of-revolution',
   'what-is-a-derivative': 'definition-of-derivative',
+  // ---- AP Calculus AB additional lesson slugs (limits unit + extras)
+  'what-is-a-limit': 'limits-graphically',
+  'estimating-limits-tables': 'limits-graphically',
+  'estimating-limits-graphs': 'limits-graphically',
+  'direct-substitution-method': 'limits-algebraically',
+  'factoring-method-limits': 'limits-algebraically',
+  'rationalizing-technique-limits': 'limits-algebraically',
+  'limits-at-infinity': 'limits-algebraically',
+  'infinite-limits-vertical-asymptotes': 'limits-algebraically',
+  'continuity-introduction': 'continuity-and-ivt',
+  'types-of-discontinuity': 'continuity-and-ivt',
+  'continuity-ivt-calcab': 'continuity-and-ivt',
+  'derivatives-exp-log-calcab': 'basic-differentiation-rules',
+  'implicit-differentiation-calcab': 'implicit-differentiation',
+  'concavity-inflection-points-calcab': 'curve-sketching',
+  'related-rates-calcab': 'related-rates',
+  'limits-at-infinity-calcab': 'limits-algebraically',
+
+  // ---- AP Physics C: Mechanics
+  'physics-c-1d-kinematics': 'physics-c-position-velocity-acceleration',
+  'physics-c-2d-kinematics': 'physics-c-position-velocity-acceleration',
+  'physics-c-potential-energy-curves': 'physics-c-conservative-forces',
+  'physics-c-variable-mass': 'physics-c-momentum-collisions',
+
+  // ---- AP Physics C: E&M
+  'physics-c-coulomb-law': 'physics-c-electric-field-coulomb',
+  'physics-c-electric-fields': 'physics-c-electric-field-coulomb',
+  'physics-c-conductors-equilibrium': 'physics-c-gauss-law',
+  'physics-c-potential-energy': 'physics-c-electric-potential',
+  'physics-c-capacitors': 'physics-c-capacitors-dielectrics',
+  'physics-c-dielectrics': 'physics-c-capacitors-dielectrics',
+  'physics-c-energy-density': 'physics-c-capacitors-dielectrics',
+  'physics-c-power-circuits': 'physics-c-dc-circuits',
+  'physics-c-faraday-induction': 'physics-c-faraday-lenz',
+  'physics-c-inductance-rl': 'physics-c-inductance-rl-circuits',
+
+  // ---- AP Biology (lesson slug → bank topic in ap-biology-bank.ts)
+  'ap-bio-chemistry-of-life': 'water-biological-macromolecules',
+  'ap-bio-cell-structure-function': 'cell-structure-organelles',
+  'ap-bio-membrane-transport': 'cell-membrane-transport',
+  'ap-bio-cell-cycle-mitosis': 'cell-cycle-mitosis',
+  'ap-bio-cell-communication': 'signal-transduction',
+  'ap-bio-cellular-energetics': 'cellular-respiration',
+  'ap-bio-photosynthesis': 'photosynthesis',
+  'ap-bio-meiosis': 'meiosis-genetic-diversity',
+  'ap-bio-mendelian-genetics': 'mendelian-genetics',
+  'ap-bio-molecular-genetics': 'dna-structure-replication',
+  'ap-bio-gene-regulation': 'gene-regulation',
+  'ap-bio-natural-selection': 'natural-selection-evolution',
+  'ap-bio-ecology-energy-flow': 'ecology-ecosystems',
+  'ap-bio-population-ecology': 'ecology-ecosystems',
+  'ap-bio-immune-system': 'signal-transduction',
+  'ap-bio-biotechnology': 'biotechnology',
+  'ap-bio-experimental-design': 'biotechnology',
+  'ap-bio-evolution-evidence': 'natural-selection-evolution',
+  'ap-bio-ecology-interactions': 'ecology-ecosystems',
+  'ap-bio-hardy-weinberg': 'hardy-weinberg-population-genetics',
+  'ap-bio-phylogenetics': 'speciation',
+  'ap-bio-dna-technology': 'biotechnology',
+  'ap-bio-viral-biology': 'dna-structure-replication',
+  'ap-bio-nervous-system': 'signal-transduction',
+  'ap-bio-endocrine-system': 'signal-transduction',
+  'ap-bio-animal-behavior': 'ecology-ecosystems',
+  'ap-bio-chromosomal-inheritance': 'mendelian-genetics',
+  'ap-bio-origins-of-life': 'natural-selection-evolution',
+  'ap-bio-biodiversity': 'ecology-ecosystems',
+  'ap-bio-biogeochemical-cycles': 'ecology-ecosystems',
+  'ap-bio-plant-structure': 'ecology-ecosystems',
+
+  // ---- AP US History (lesson slug → bank era)
+  'apush-native-societies-exploration': 'colonial-america',
+  'apush-colonial-america': 'colonial-america',
+  'apush-colonial-society-conflicts': 'colonial-america',
+  'apush-revolution-independence': 'revolution-independence',
+  'apush-constitution-early-republic': 'revolution-independence',
+  'apush-democracy-expansion': 'civil-war',
+  'apush-reform-movements': 'civil-war',
+  'apush-civil-war': 'civil-war',
+  'apush-reconstruction': 'reconstruction',
+  'apush-gilded-age': 'reconstruction',
+  'apush-progressivism-wwi': 'reconstruction',
+  'apush-depression-wwii': 'reconstruction',
+
+  // ---- AP US Government
+  'gov-constitutional-foundations': 'constitutional-foundations',
+  'gov-federalism': 'federalism',
+  'gov-separation-of-powers': 'constitutional-foundations',
+  'gov-congress': 'constitutional-foundations',
+  'gov-presidency': 'constitutional-foundations',
+  'gov-judiciary': 'constitutional-foundations',
+  'gov-bureaucracy': 'federalism',
+  'gov-civil-liberties': 'civil-liberties',
+  'gov-civil-rights': 'civil-liberties',
+  'gov-ideologies': 'voting-elections',
+  'gov-public-opinion': 'voting-elections',
+  'gov-voting-elections': 'voting-elections',
+  'gov-parties-interest-groups': 'voting-elections',
+  'gov-media-technology': 'voting-elections',
+
+  // ---- AP World History (lesson slug → bank category)
+  'wh-global-tapestry': 'global-tapestry',
+  'wh-dar-al-islam': 'global-tapestry',
+  'wh-silk-roads-mongols': 'silk-roads-mongols',
+  'wh-indian-ocean-trade': 'silk-roads-mongols',
+  'wh-americas-africa-1200': 'global-tapestry',
+  'wh-land-based-empires': 'silk-roads-mongols',
+  'wh-islamic-empires': 'silk-roads-mongols',
+  'wh-east-asian-empires': 'silk-roads-mongols',
+  'wh-exploration-columbian-exchange': 'exploration-columbian-exchange',
+  'wh-maritime-empires-labor': 'exploration-columbian-exchange',
+  'wh-transoceanic': 'exploration-columbian-exchange',
+  'wh-enlightenment-political-revolutions': 'industrial-revolution',
+  'wh-revolutions': 'industrial-revolution',
+  'wh-industrial-revolution': 'industrial-revolution',
+  'wh-imperialism': 'industrial-revolution',
+  'wh-consequences-industrialization': 'industrial-revolution',
+  'wh-reform-migration': 'industrial-revolution',
+
+  // ---- AP Human Geography
+  'hg-intro-geography': 'intro-geography',
+  'hg-spatial-concepts': 'intro-geography',
+  'hg-population-growth': 'population-distribution',
+  'hg-migration': 'migration',
+  'hg-population-distribution': 'population-distribution',
+  'hg-culture-diffusion': 'culture-diffusion',
+  'hg-language-religion': 'culture-diffusion',
+  'hg-ethnicity-identity': 'culture-diffusion',
+  'hg-political-geography': 'political-geography',
+  'hg-political-power': 'political-geography',
+  'hg-agricultural-origins': 'urbanization',
+  'hg-agricultural-practices': 'urbanization',
+  'hg-urbanization': 'urbanization',
+  'hg-urban-challenges': 'urbanization',
+  'hg-globalization-trade': 'urbanization',
+  'hg-industrialization': 'urbanization',
+
+  // ---- AP Environmental Science
+  'enviro-earth-systems': 'ecosystems',
+  'enviro-plate-tectonics': 'ecosystems',
+  'enviro-rock-cycle': 'ecosystems',
+  'enviro-soil': 'ecosystems',
+  'enviro-atmosphere': 'climate-change',
+  'enviro-biodiversity': 'ecosystems',
+  'enviro-ecosystem-ecology': 'ecosystems',
+  'enviro-island-biogeography': 'ecosystems',
+  'enviro-biodiversity-loss': 'sustainability',
+  'enviro-invasive-species': 'sustainability',
+  'enviro-population-ecology': 'ecosystems',
+  'enviro-population-dynamics': 'ecosystems',
+  'enviro-human-population': 'sustainability',
+  'enviro-agriculture': 'sustainability',
+  'enviro-forestry': 'sustainability',
+  'enviro-water-resources': 'sustainability',
+  'enviro-water-pollution': 'pollution',
+  'enviro-fossil-fuels': 'energy',
+  'enviro-nuclear-energy': 'energy',
+  'enviro-renewable-energy': 'energy',
+  'enviro-energy-conservation': 'energy',
+  'enviro-climate-change': 'climate-change',
+  'enviro-ozone-depletion': 'pollution',
+  'enviro-toxicology': 'pollution',
+  'enviro-environmental-law': 'sustainability',
+
+  // ---- AP English Language
+  'englang-intro-rhetoric': 'rhetorical-analysis',
+  'englang-rhetorical-situation': 'rhetorical-analysis',
+  'englang-rhetorical-situation-writing': 'rhetorical-analysis',
+  'englang-claims-evidence': 'argument-writing',
+  'englang-claims-evidence-reading': 'rhetorical-analysis',
+  'englang-claims-evidence-writing': 'argument-writing',
+  'englang-reasoning-org-reading': 'rhetorical-analysis',
+  'englang-reasoning-org-writing': 'argument-writing',
+  'englang-argument-structure': 'argument-writing',
+  'englang-diction-syntax': 'style-syntax',
+  'englang-style-reading': 'style-syntax',
+  'englang-style-writing': 'style-syntax',
+  'englang-tone-voice-analysis': 'style-syntax',
+  'englang-ethos-pathos-logos': 'rhetorical-analysis',
+  'englang-logical-fallacies': 'argument-writing',
+  'englang-synthesis': 'argument-writing',
+  'englang-synthesis-essay': 'argument-writing',
+  'englang-developing-arguments': 'argument-writing',
+  'englang-writing-for-audience': 'argument-writing',
+
+  // ---- AP English Literature
+  'englit-short-fiction-1': 'narrative-technique',
+  'englit-short-fiction-2': 'narrative-technique',
+  'englit-short-fiction-3': 'narrative-technique',
+  'englit-poetry-1': 'poetry-analysis',
+  'englit-poetic-structure-form': 'poetry-analysis',
+  'englit-sound-devices': 'poetry-analysis',
+  'englit-poetry-2': 'poetry-analysis',
+  'englit-longer-fiction': 'narrative-technique',
+  'englit-dramatic-structure': 'narrative-technique',
+  'englit-longer-fiction-2': 'narrative-technique',
+  'englit-character-setting': 'character-analysis',
+  'englit-narration-pov': 'narrative-technique',
+  'englit-narrative-complexity': 'narrative-technique',
+  'englit-narrative-perspective': 'narrative-technique',
+  'englit-figurative-language': 'figurative-language',
+  'englit-tone-speaker': 'figurative-language',
+  'englit-symbol-motif-fiction': 'figurative-language',
+  'englit-plot-conflict-theme': 'character-analysis',
+  'englit-social-commentary-drama': 'character-analysis',
+
+  // ---- AP Microeconomics
+  'micro-scarcity-marginal-analysis': 'basic-concepts',
+  'micro-supply-demand': 'supply-demand',
+  'micro-demand-supply-equilibrium': 'supply-demand',
+  'micro-elasticity': 'elasticity',
+  'micro-government-intervention': 'market-failure',
+  'micro-production-costs': 'market-structures',
+  'micro-perfect-competition': 'market-structures',
+  'micro-monopoly': 'market-structures',
+  'micro-monopolistic-oligopoly': 'market-structures',
+  'micro-labor-markets': 'factor-markets',
+  'micro-factor-markets': 'factor-markets',
+  'micro-externalities-public-goods': 'market-failure',
+  'micro-market-failure': 'market-failure',
+
+  // ---- AP Macroeconomics
+  'macro-scarcity-opportunity-cost': 'gdp-growth',
+  'macro-comparative-advantage': 'gdp-growth',
+  'macro-gdp-growth': 'gdp-growth',
+  'macro-unemployment-inflation': 'gdp-growth',
+  'macro-ad-as': 'ad-as',
+  'macro-multiplier-effect': 'fiscal-policy',
+  'macro-phillips-curve': 'ad-as',
+  'macro-money-banking': 'monetary-policy',
+  'macro-monetary-policy': 'monetary-policy',
+  'macro-fiscal-policy': 'fiscal-policy',
+  'macro-fiscal-policy-tools': 'fiscal-policy',
+  'macro-open-economy': 'monetary-policy',
+  'macro-international-trade-finance': 'monetary-policy',
+
+  // ---- AP African American Studies
+  'aas-african-kingdoms': 'origins-diaspora',
+  'aas-transatlantic-slave-trade': 'origins-diaspora',
+  'aas-slavery-in-america': 'resistance-abolition',
+  'aas-resistance-abolition': 'resistance-abolition',
+  'aas-reconstruction-jim-crow': 'resistance-abolition',
+  'aas-great-migration-harlem': 'community-society',
+  'aas-wwi-wwii-era': 'community-society',
+  'aas-civil-rights-movement': 'political-struggles',
+  'aas-black-power-beyond': 'political-struggles',
+  'aas-contemporary-issues': 'culture-identity',
 }
+
+/**
+ * Lesson slug → course bank dispatch key. Used by the generic per-course
+ * sub-topic router so any lesson slug for a covered course is routed to
+ * its bank function (with the bank-topic alias from LESSON_TO_BANK_TOPIC).
+ */
+const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
+  // Physics C
+  'physics-c-1d-kinematics': 'ap-physics-c-mech',
+  'physics-c-2d-kinematics': 'ap-physics-c-mech',
+  'physics-c-potential-energy-curves': 'ap-physics-c-mech',
+  'physics-c-variable-mass': 'ap-physics-c-mech',
+  'physics-c-coulomb-law': 'ap-physics-c-em',
+  'physics-c-electric-fields': 'ap-physics-c-em',
+  'physics-c-conductors-equilibrium': 'ap-physics-c-em',
+  'physics-c-potential-energy': 'ap-physics-c-em',
+  'physics-c-capacitors': 'ap-physics-c-em',
+  'physics-c-dielectrics': 'ap-physics-c-em',
+  'physics-c-energy-density': 'ap-physics-c-em',
+  'physics-c-power-circuits': 'ap-physics-c-em',
+  'physics-c-faraday-induction': 'ap-physics-c-em',
+  'physics-c-inductance-rl': 'ap-physics-c-em',
+  // AP Bio
+  'ap-bio-chemistry-of-life': 'ap-biology',
+  'ap-bio-cell-structure-function': 'ap-biology',
+  'ap-bio-membrane-transport': 'ap-biology',
+  'ap-bio-cell-cycle-mitosis': 'ap-biology',
+  'ap-bio-cell-communication': 'ap-biology',
+  'ap-bio-cellular-energetics': 'ap-biology',
+  'ap-bio-photosynthesis': 'ap-biology',
+  'ap-bio-meiosis': 'ap-biology',
+  'ap-bio-mendelian-genetics': 'ap-biology',
+  'ap-bio-molecular-genetics': 'ap-biology',
+  'ap-bio-gene-regulation': 'ap-biology',
+  'ap-bio-natural-selection': 'ap-biology',
+  'ap-bio-ecology-energy-flow': 'ap-biology',
+  'ap-bio-population-ecology': 'ap-biology',
+  'ap-bio-immune-system': 'ap-biology',
+  'ap-bio-biotechnology': 'ap-biology',
+  'ap-bio-experimental-design': 'ap-biology',
+  'ap-bio-evolution-evidence': 'ap-biology',
+  'ap-bio-ecology-interactions': 'ap-biology',
+  'ap-bio-hardy-weinberg': 'ap-biology',
+  'ap-bio-phylogenetics': 'ap-biology',
+  'ap-bio-dna-technology': 'ap-biology',
+  'ap-bio-viral-biology': 'ap-biology',
+  'ap-bio-nervous-system': 'ap-biology',
+  'ap-bio-endocrine-system': 'ap-biology',
+  'ap-bio-animal-behavior': 'ap-biology',
+  'ap-bio-chromosomal-inheritance': 'ap-biology',
+  'ap-bio-origins-of-life': 'ap-biology',
+  'ap-bio-biodiversity': 'ap-biology',
+  'ap-bio-biogeochemical-cycles': 'ap-biology',
+  'ap-bio-plant-structure': 'ap-biology',
+  // AP US History
+  'apush-native-societies-exploration': 'ap-us-history',
+  'apush-colonial-america': 'ap-us-history',
+  'apush-colonial-society-conflicts': 'ap-us-history',
+  'apush-revolution-independence': 'ap-us-history',
+  'apush-constitution-early-republic': 'ap-us-history',
+  'apush-democracy-expansion': 'ap-us-history',
+  'apush-reform-movements': 'ap-us-history',
+  'apush-civil-war': 'ap-us-history',
+  'apush-reconstruction': 'ap-us-history',
+  'apush-gilded-age': 'ap-us-history',
+  'apush-progressivism-wwi': 'ap-us-history',
+  'apush-depression-wwii': 'ap-us-history',
+  // AP US Gov
+  'gov-constitutional-foundations': 'ap-us-gov',
+  'gov-federalism': 'ap-us-gov',
+  'gov-separation-of-powers': 'ap-us-gov',
+  'gov-congress': 'ap-us-gov',
+  'gov-presidency': 'ap-us-gov',
+  'gov-judiciary': 'ap-us-gov',
+  'gov-bureaucracy': 'ap-us-gov',
+  'gov-civil-liberties': 'ap-us-gov',
+  'gov-civil-rights': 'ap-us-gov',
+  'gov-ideologies': 'ap-us-gov',
+  'gov-public-opinion': 'ap-us-gov',
+  'gov-voting-elections': 'ap-us-gov',
+  'gov-parties-interest-groups': 'ap-us-gov',
+  'gov-media-technology': 'ap-us-gov',
+  // AP World History
+  'wh-global-tapestry': 'ap-world-history',
+  'wh-dar-al-islam': 'ap-world-history',
+  'wh-silk-roads-mongols': 'ap-world-history',
+  'wh-indian-ocean-trade': 'ap-world-history',
+  'wh-americas-africa-1200': 'ap-world-history',
+  'wh-land-based-empires': 'ap-world-history',
+  'wh-islamic-empires': 'ap-world-history',
+  'wh-east-asian-empires': 'ap-world-history',
+  'wh-exploration-columbian-exchange': 'ap-world-history',
+  'wh-maritime-empires-labor': 'ap-world-history',
+  'wh-transoceanic': 'ap-world-history',
+  'wh-enlightenment-political-revolutions': 'ap-world-history',
+  'wh-revolutions': 'ap-world-history',
+  'wh-industrial-revolution': 'ap-world-history',
+  'wh-imperialism': 'ap-world-history',
+  'wh-consequences-industrialization': 'ap-world-history',
+  'wh-reform-migration': 'ap-world-history',
+  // AP Human Geo
+  'hg-intro-geography': 'ap-human-geo',
+  'hg-spatial-concepts': 'ap-human-geo',
+  'hg-population-growth': 'ap-human-geo',
+  'hg-migration': 'ap-human-geo',
+  'hg-population-distribution': 'ap-human-geo',
+  'hg-culture-diffusion': 'ap-human-geo',
+  'hg-language-religion': 'ap-human-geo',
+  'hg-ethnicity-identity': 'ap-human-geo',
+  'hg-political-geography': 'ap-human-geo',
+  'hg-political-power': 'ap-human-geo',
+  'hg-agricultural-origins': 'ap-human-geo',
+  'hg-agricultural-practices': 'ap-human-geo',
+  'hg-urbanization': 'ap-human-geo',
+  'hg-urban-challenges': 'ap-human-geo',
+  'hg-globalization-trade': 'ap-human-geo',
+  'hg-industrialization': 'ap-human-geo',
+  // AP Enviro
+  'enviro-earth-systems': 'ap-enviro',
+  'enviro-plate-tectonics': 'ap-enviro',
+  'enviro-rock-cycle': 'ap-enviro',
+  'enviro-soil': 'ap-enviro',
+  'enviro-atmosphere': 'ap-enviro',
+  'enviro-biodiversity': 'ap-enviro',
+  'enviro-ecosystem-ecology': 'ap-enviro',
+  'enviro-island-biogeography': 'ap-enviro',
+  'enviro-biodiversity-loss': 'ap-enviro',
+  'enviro-invasive-species': 'ap-enviro',
+  'enviro-population-ecology': 'ap-enviro',
+  'enviro-population-dynamics': 'ap-enviro',
+  'enviro-human-population': 'ap-enviro',
+  'enviro-agriculture': 'ap-enviro',
+  'enviro-forestry': 'ap-enviro',
+  'enviro-water-resources': 'ap-enviro',
+  'enviro-water-pollution': 'ap-enviro',
+  'enviro-fossil-fuels': 'ap-enviro',
+  'enviro-nuclear-energy': 'ap-enviro',
+  'enviro-renewable-energy': 'ap-enviro',
+  'enviro-energy-conservation': 'ap-enviro',
+  'enviro-climate-change': 'ap-enviro',
+  'enviro-ozone-depletion': 'ap-enviro',
+  'enviro-toxicology': 'ap-enviro',
+  'enviro-environmental-law': 'ap-enviro',
+  // AP English Lang
+  'englang-intro-rhetoric': 'ap-english-lang',
+  'englang-rhetorical-situation': 'ap-english-lang',
+  'englang-rhetorical-situation-writing': 'ap-english-lang',
+  'englang-claims-evidence': 'ap-english-lang',
+  'englang-claims-evidence-reading': 'ap-english-lang',
+  'englang-claims-evidence-writing': 'ap-english-lang',
+  'englang-reasoning-org-reading': 'ap-english-lang',
+  'englang-reasoning-org-writing': 'ap-english-lang',
+  'englang-argument-structure': 'ap-english-lang',
+  'englang-diction-syntax': 'ap-english-lang',
+  'englang-style-reading': 'ap-english-lang',
+  'englang-style-writing': 'ap-english-lang',
+  'englang-tone-voice-analysis': 'ap-english-lang',
+  'englang-ethos-pathos-logos': 'ap-english-lang',
+  'englang-logical-fallacies': 'ap-english-lang',
+  'englang-synthesis': 'ap-english-lang',
+  'englang-synthesis-essay': 'ap-english-lang',
+  'englang-developing-arguments': 'ap-english-lang',
+  'englang-writing-for-audience': 'ap-english-lang',
+  // AP English Lit
+  'englit-short-fiction-1': 'ap-english-lit',
+  'englit-short-fiction-2': 'ap-english-lit',
+  'englit-short-fiction-3': 'ap-english-lit',
+  'englit-poetry-1': 'ap-english-lit',
+  'englit-poetic-structure-form': 'ap-english-lit',
+  'englit-sound-devices': 'ap-english-lit',
+  'englit-poetry-2': 'ap-english-lit',
+  'englit-longer-fiction': 'ap-english-lit',
+  'englit-dramatic-structure': 'ap-english-lit',
+  'englit-longer-fiction-2': 'ap-english-lit',
+  'englit-character-setting': 'ap-english-lit',
+  'englit-narration-pov': 'ap-english-lit',
+  'englit-narrative-complexity': 'ap-english-lit',
+  'englit-narrative-perspective': 'ap-english-lit',
+  'englit-figurative-language': 'ap-english-lit',
+  'englit-tone-speaker': 'ap-english-lit',
+  'englit-symbol-motif-fiction': 'ap-english-lit',
+  'englit-plot-conflict-theme': 'ap-english-lit',
+  'englit-social-commentary-drama': 'ap-english-lit',
+  // AP Micro
+  'micro-scarcity-marginal-analysis': 'ap-micro',
+  'micro-supply-demand': 'ap-micro',
+  'micro-demand-supply-equilibrium': 'ap-micro',
+  'micro-elasticity': 'ap-micro',
+  'micro-government-intervention': 'ap-micro',
+  'micro-production-costs': 'ap-micro',
+  'micro-perfect-competition': 'ap-micro',
+  'micro-monopoly': 'ap-micro',
+  'micro-monopolistic-oligopoly': 'ap-micro',
+  'micro-labor-markets': 'ap-micro',
+  'micro-factor-markets': 'ap-micro',
+  'micro-externalities-public-goods': 'ap-micro',
+  'micro-market-failure': 'ap-micro',
+  // AP Macro
+  'macro-scarcity-opportunity-cost': 'ap-macro',
+  'macro-comparative-advantage': 'ap-macro',
+  'macro-gdp-growth': 'ap-macro',
+  'macro-unemployment-inflation': 'ap-macro',
+  'macro-ad-as': 'ap-macro',
+  'macro-multiplier-effect': 'ap-macro',
+  'macro-phillips-curve': 'ap-macro',
+  'macro-money-banking': 'ap-macro',
+  'macro-monetary-policy': 'ap-macro',
+  'macro-fiscal-policy': 'ap-macro',
+  'macro-fiscal-policy-tools': 'ap-macro',
+  'macro-open-economy': 'ap-macro',
+  'macro-international-trade-finance': 'ap-macro',
+  // AAS
+  'aas-african-kingdoms': 'ap-african-american-studies',
+  'aas-transatlantic-slave-trade': 'ap-african-american-studies',
+  'aas-slavery-in-america': 'ap-african-american-studies',
+  'aas-resistance-abolition': 'ap-african-american-studies',
+  'aas-reconstruction-jim-crow': 'ap-african-american-studies',
+  'aas-great-migration-harlem': 'ap-african-american-studies',
+  'aas-wwi-wwii-era': 'ap-african-american-studies',
+  'aas-civil-rights-movement': 'ap-african-american-studies',
+  'aas-black-power-beyond': 'ap-african-american-studies',
+  'aas-contemporary-issues': 'ap-african-american-studies',
+}
+
+/**
+ * Course bank functions used by the generic sub-topic dispatcher. Each takes
+ * (count, topicSlug?) and returns questions optionally filtered by topicSlug.
+ */
+const COURSE_SUB_TOPIC_BANKS: Record<string, (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>> = {
+  'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-us-history': getApUSHistoryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-us-gov': getApUSGovQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-world-history': getApWorldHistoryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-human-geo': getApHumanGeoQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-enviro': getApAPESQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-english-lang': getApEngLangQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-english-lit': getApEngLitQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-micro': getApMicroQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-macro': getApMacroQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-african-american-studies': getApAASQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+}
+
+/**
+ * Lesson slug → bankless-topic course getter. For courses where the bank has
+ * NO per-question topicSlug field (psychology, statistics), the lesson slug
+ * routes to the whole-bank random-sample getter.
+ */
+const LESSON_TO_FULL_COURSE_BANK: Record<string, (count?: number) => OptionQuestion[]> = {}
+const PSYCHOLOGY_LESSON_SLUGS = [
+  'history-approaches-psychology', 'biological-bases-brain', 'genetics-behavior',
+  'sensation-sensory-processing', 'perception-attention', 'classical-conditioning',
+  'operant-conditioning', 'observational-learning-cognition', 'memory-encoding-storage',
+  'retrieval-forgetting', 'thinking-problem-solving', 'language-intelligence',
+  'prenatal-childhood-development', 'adolescence-adulthood', 'motivation-theories',
+  'emotion-stress', 'personality-theories', 'psychological-disorders-overview',
+  'mood-psychotic-disorders', 'treatment-therapy', 'social-influence-conformity',
+  'attitudes-persuasion', 'group-behavior-prejudice',
+]
+const STATISTICS_LESSON_SLUGS = [
+  'types-data-sampling', 'displaying-distributions-graphs', 'describing-distributions',
+  'measures-of-spread', 'measures-of-center', 'normal-distributions', 'sampling-methods',
+  'observational-vs-experiments', 'experimental-design', 'bias-sampling-surveys',
+  'basic-probability-rules', 'conditional-probability', 'independence',
+  'discrete-random-variables', 'binomial-distribution', 'geometric-distribution',
+  'continuous-random-variables', 'sampling-distributions', 'central-limit-theorem',
+  'interpreting-ci', 'ci-proportions', 'ci-means', 'hypothesis-testing-framework',
+  'type-errors', 'tests-proportions', 'tests-means', 'paired-data', 'chi-square-tests',
+  'scatterplots-correlation', 'least-squares-regression', 'residuals-residual-plots',
+  'coefficient-determination', 'transformations-linearity', 'inference-regression',
+  'mean-sd-random-variables', 'combining-random-variables',
+  'sampling-distribution-sample-mean', 'sampling-distribution-sample-proportion',
+  'two-sample-proportions', 'two-sample-means', 'chi-square-independence-homogeneity',
+]
+for (const s of PSYCHOLOGY_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApPsychologyQuestions as unknown as (count?: number) => OptionQuestion[]
+for (const s of STATISTICS_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApStatisticsQuestions as unknown as (count?: number) => OptionQuestion[]
 
 /**
  * Lesson slugs that are course/unit "buckets" rather than a single sub-topic.
@@ -228,6 +751,59 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   // Course-grouping lesson slugs (units/exam-prep buckets) should sample
   // randomly from the entire course bank instead of strict-filtering.
   const groupingCourseKey = topicSlug ? COURSE_GROUPING_LESSONS[topicSlug] : undefined
+
+  // Generic per-course sub-topic dispatch: if the lesson slug is registered
+  // in LESSON_TO_COURSE_BANK_KEY, route it to that course's bank function with
+  // the (aliased) bank-topic slug. This covers all courses whose banks have
+  // per-question topicSlug fields. Avoids the strict every() check used by
+  // the older per-course branches.
+  if (topicSlug && LESSON_TO_COURSE_BANK_KEY[topicSlug]) {
+    const courseKey = LESSON_TO_COURSE_BANK_KEY[topicSlug]
+    const bankFn = COURSE_SUB_TOPIC_BANKS[courseKey]
+    if (bankFn) {
+      const bankSlug = LESSON_TO_BANK_TOPIC[topicSlug] ?? topicSlug
+      const filtered = bankFn(totalQuestions, bankSlug)
+      if (filtered.length > 0) {
+        return (filtered as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+          const shuffled = shuffleOptions(q)
+          return {
+            id: i,
+            question: q.question as string,
+            options: shuffled.options,
+            correctAnswer: shuffled.correctAnswer,
+            answerIndex: shuffled.answerIndex,
+            explanation: q.explanation as string,
+            difficulty: q.difficulty,
+            type: 'multiple-choice'
+          } as MatchQuestion
+        })
+      }
+    }
+  }
+
+  // Bankless-topic course dispatch: psychology and statistics banks have no
+  // per-question topicSlug, so any lesson slug for these courses pulls a
+  // random sample from the whole course bank.
+  if (topicSlug && LESSON_TO_FULL_COURSE_BANK[topicSlug]) {
+    const bankFn = LESSON_TO_FULL_COURSE_BANK[topicSlug]
+    const qs = bankFn(totalQuestions)
+    if (qs.length > 0) {
+      return qs.map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
 
   // Course-grouping lessons (e.g. an AP Calc AB unit page or exam-prep
   // bucket): pull a random mix from that course's bank.
