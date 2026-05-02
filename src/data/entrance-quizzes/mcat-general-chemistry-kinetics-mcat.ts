@@ -1,25 +1,30 @@
 /**
- * Entrance Quiz — Chemical Kinetics (MCAT)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — Kinetics (MCAT)
+ * 10 questions · 5 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'mgki-ent-1a', question: 'The rate of a chemical reaction is generally expressed as:', options: ['The change in temperature per unit time', 'The change in concentration of a reactant or product per unit time', 'The change in pressure times volume', 'The activation energy divided by temperature'], correctIndex: 1, explanation: 'Reaction rate = Δ[concentration]/Δtime. It can be expressed as the decrease in reactant concentration or increase in product concentration per unit time.', partNumber: 1, partTitle: 'Reaction Rates' },
-  { id: 'mgki-ent-1b', question: 'Increasing the temperature of a reaction generally:', options: ['Decreases the reaction rate', 'Has no effect on reaction rate', 'Increases the reaction rate', 'Only affects equilibrium, not rate'], correctIndex: 2, explanation: 'Higher temperature gives molecules more kinetic energy, increasing the frequency and energy of collisions, thus increasing the reaction rate.', partNumber: 1, partTitle: 'Reaction Rates' },
-  { id: 'mgki-ent-2a', question: 'For the rate law $rate = k[A]^2[B]$, what happens to the rate when [A] is doubled (all else constant)?', options: ['Rate doubles', 'Rate triples', 'Rate quadruples', 'Rate increases 8-fold'], correctIndex: 2, explanation: 'The reaction is second-order in A. Doubling [A] increases rate by $2^2 = 4$-fold.', partNumber: 2, partTitle: 'Rate Laws' },
-  { id: 'mgki-ent-2b', question: 'The rate constant k in a rate law depends on:', options: ['Reactant concentrations', 'Product concentrations', 'Temperature and activation energy', 'The equilibrium constant K'], correctIndex: 2, explanation: 'k is independent of concentration but depends on temperature (via the Arrhenius equation: $k = Ae^{-E_a/RT}$) and activation energy.', partNumber: 2, partTitle: 'Rate Laws' },
-  { id: 'mgki-ent-3a', question: 'A first-order reaction has a half-life of 20 minutes. After 60 minutes, what fraction of the original reactant remains?', options: ['1/2', '1/4', '1/8', '1/16'], correctIndex: 2, explanation: '60 min / 20 min = 3 half-lives. Remaining = $(1/2)^3 = 1/8$ of the original.', partNumber: 3, partTitle: 'Order of Reactions' },
-  { id: 'mgki-ent-3b', question: 'For a zero-order reaction, the rate:', options: ['Depends on the square of the concentration', 'Depends linearly on concentration', 'Is independent of concentration', 'Depends on the product of two concentrations'], correctIndex: 2, explanation: 'Zero-order: rate = k. The rate is constant and does not change with reactant concentration, common in enzyme-saturated reactions.', partNumber: 3, partTitle: 'Order of Reactions' },
-  { id: 'mgki-ent-4a', question: 'Activation energy ($E_a$) is best defined as:', options: ['The energy released during a reaction', 'The minimum energy required for reactants to convert to products', 'The difference between reactant and product energies', 'The energy of the most stable intermediate'], correctIndex: 1, explanation: '$E_a$ is the minimum kinetic energy that colliding molecules must have to overcome the energy barrier and form products.', partNumber: 4, partTitle: 'Activation Energy' },
-  { id: 'mgki-ent-4b', question: 'The Arrhenius equation $k = Ae^{-E_a/RT}$ predicts that as $E_a$ increases:', options: ['k increases exponentially', 'k decreases (reaction becomes slower)', 'k is unaffected', 'k becomes negative'], correctIndex: 1, explanation: 'A larger $E_a$ means fewer molecules have enough energy to react. The negative exponent $-E_a/RT$ becomes more negative, decreasing k.', partNumber: 4, partTitle: 'Activation Energy' },
-  { id: 'mgki-ent-5a', question: 'A catalyst increases reaction rate by:', options: ['Increasing the temperature', 'Providing an alternative pathway with lower activation energy', 'Shifting the equilibrium to the right', 'Increasing the concentration of reactants'], correctIndex: 1, explanation: 'Catalysts lower $E_a$ by providing an alternative mechanism. They are not consumed and do not change ΔG or equilibrium position.', partNumber: 5, partTitle: 'Catalysis' },
-  { id: 'mgki-ent-5b', question: 'Enzymes are biological catalysts that are highly specific due to their:', options: ['High temperature tolerance', 'Active site complementary to substrate shape and chemistry', 'Ability to increase substrate concentration', 'Large molecular weight'], correctIndex: 1, explanation: 'Enzyme active sites have a specific 3D shape and chemical environment that selectively binds substrates (lock-and-key or induced fit model).', partNumber: 5, partTitle: 'Catalysis' },
-  { id: 'mgki-ent-6a', question: 'The rate-determining step in a multi-step reaction mechanism is the:', options: ['First step always', 'Last step always', 'Slowest step, which limits the overall rate', 'Step with the lowest activation energy'], correctIndex: 2, explanation: 'The slowest step has the highest activation energy and determines the overall rate. The rate law reflects the species in this step.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'mgki-ent-6b', question: 'A reaction is experimentally found to be first-order in [A] and first-order in [B]. The overall order is:', options: ['First order', 'Second order', 'Third order', 'Zero order'], correctIndex: 1, explanation: 'Overall order = sum of individual orders = 1 + 1 = 2 (second order). Rate = k[A][B].', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'mgki-ent-7a', question: 'An energy diagram for a reaction shows the transition state at the peak. The activation energy for the reverse reaction equals:', options: ['The same as the forward $E_a$', 'Forward $E_a$ minus ΔH', 'Forward $E_a$ plus ΔH (for exothermic) or minus ΔH (for endothermic)', 'Zero if the reaction is spontaneous'], correctIndex: 2, explanation: 'For an exothermic reaction: $E_{a,reverse} = E_{a,forward} + |\\Delta H|$. The reverse reaction must also pass through the transition state.', partNumber: 7, partTitle: 'Review & Applications' },
-  { id: 'mgki-ent-7b', question: 'Collision theory states that reactions occur when molecules collide with sufficient energy AND:', options: ['At any angle', 'In the proper orientation', 'At high pressure only', 'Without any activation energy'], correctIndex: 1, explanation: 'Collision theory requires both sufficient energy (≥ $E_a$) AND proper orientation. Most collisions fail due to incorrect geometry.', partNumber: 7, partTitle: 'Review & Applications' },
+  // Part 1 — Rate Laws & Reaction Order
+  { id: 'mgkn-ent-1a', question: 'For the rate law $rate = k[A]^2[B]$, the overall reaction order is:', options: ['1', '2', '3', '4'], correctIndex: 2, explanation: 'Overall order = sum of exponents = 2 + 1 = 3.', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
+  { id: 'mgkn-ent-1b', question: 'When [A] doubles and the rate quadruples (with all other concentrations fixed), the order in A is:', options: ['0', '1', '2', '3'], correctIndex: 2, explanation: 'rate ∝ [A]^n. If [A] doubles and rate × 4 = 2^n → n = 2 (second order in A).', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
+
+  // Part 2 — Integrated Rate Laws & Half-Life
+  { id: 'mgkn-ent-2a', question: 'For a first-order reaction with k = 0.10 s⁻¹, the half-life is approximately:', options: ['0.10 s', '6.93 s', '10 s', '693 s'], correctIndex: 1, explanation: 't₁/₂ = ln 2 / k = 0.693 / 0.10 ≈ 6.93 s.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
+  { id: 'mgkn-ent-2b', question: 'The integrated rate law for a first-order reaction A → products is:', options: ['$[A] = [A]_0 - kt$', '$\\ln[A] = \\ln[A]_0 - kt$', '$1/[A] = 1/[A]_0 + kt$', '$[A]^2 = [A]_0^2 - kt$'], correctIndex: 1, explanation: 'A plot of ln[A] vs. t is linear (slope = −k) for a first-order reaction.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
+
+  // Part 3 — Activation Energy & Arrhenius Equation
+  { id: 'mgkn-ent-3a', question: 'Increasing temperature speeds up most reactions primarily because:', options: ['Activation energy decreases at higher T', 'A larger fraction of molecules has energy ≥ Ea', 'The reaction becomes more exothermic', 'Equilibrium constant always increases'], correctIndex: 1, explanation: 'Per the Maxwell-Boltzmann distribution, higher T means more molecules have enough energy to surmount Ea — so k (rate constant) increases.', partNumber: 3, partTitle: 'Activation Energy & Arrhenius Equation' },
+  { id: 'mgkn-ent-3b', question: 'The Arrhenius equation $k = A e^{-E_a/RT}$ predicts that, for fixed A and Ea, k:', options: ['Decreases as T increases', 'Increases as T increases', 'Is independent of T', 'Depends only on the catalyst'], correctIndex: 1, explanation: 'As T increases, the exponent −Ea/RT becomes less negative, so $e^{-E_a/RT}$ grows — k increases.', partNumber: 3, partTitle: 'Activation Energy & Arrhenius Equation' },
+
+  // Part 4 — Mechanisms, RDS & Catalysis
+  { id: 'mgkn-ent-4a', question: 'In a multi-step reaction mechanism, the overall rate is determined by:', options: ['The fastest elementary step', 'The slowest elementary step (rate-determining step)', 'The step with the highest yield', 'The number of intermediates formed'], correctIndex: 1, explanation: 'The slowest step is the bottleneck — the rate-determining step (RDS) — and the rate law typically reflects it.', partNumber: 4, partTitle: 'Mechanisms, RDS & Catalysis' },
+  { id: 'mgkn-ent-4b', question: 'A catalyst increases reaction rate by:', options: ['Increasing the activation energy', 'Lowering the activation energy via an alternative pathway', 'Shifting equilibrium to favor products', 'Increasing the temperature of the system'], correctIndex: 1, explanation: 'A catalyst provides a different pathway with lower Ea. It is not consumed and does not shift equilibrium — it speeds both forward and reverse equally.', partNumber: 4, partTitle: 'Mechanisms, RDS & Catalysis' },
+
+  // Part 5 — Mixed MCAT Review
+  { id: 'mgkn-ent-5a', question: 'Doubling the temperature of a reaction (in K) typically:', options: ['Has no effect on rate', 'Doubles the rate', 'Increases rate by a factor of roughly 2–4 per 10 K rise', 'Decreases the rate by half'], correctIndex: 2, explanation: 'A common rule of thumb: rate roughly doubles for every ~10 K rise (the actual factor depends on Ea via Arrhenius).', partNumber: 5, partTitle: 'Mixed MCAT Review' },
+  { id: 'mgkn-ent-5b', question: 'A zero-order reaction A → products has a rate that is:', options: ['Proportional to [A]', 'Proportional to [A]²', 'Independent of [A]', 'Inversely proportional to [A]'], correctIndex: 2, explanation: 'rate = k[A]⁰ = k. Common for surface-catalyzed or enzyme-saturated reactions where [A] doesn\'t matter at high concentrations.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -28,12 +33,10 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Reaction Rates' },
-    { partNumber: 2, partTitle: 'Rate Laws' },
-    { partNumber: 3, partTitle: 'Order of Reactions' },
-    { partNumber: 4, partTitle: 'Activation Energy' },
-    { partNumber: 5, partTitle: 'Catalysis' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
+    { partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
+    { partNumber: 3, partTitle: 'Activation Energy & Arrhenius Equation' },
+    { partNumber: 4, partTitle: 'Mechanisms, RDS & Catalysis' },
+    { partNumber: 5, partTitle: 'Mixed MCAT Review' },
   ]
 }

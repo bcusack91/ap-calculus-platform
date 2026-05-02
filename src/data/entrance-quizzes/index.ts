@@ -350,24 +350,9 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
 
   // Algebra 1
   'algebra-1': () => import('./algebra-1-intro'),
-  'algebraic-expressions': () => import('./algebra-1-intro'),
-  'one-step-equations': () => import('./algebra-1-intro'),
-  'multi-step-equations': () => import('./algebra-1-intro'),
-  'slope-intercept-form': () => import('./algebra-1-intro'),
-  'graphing-linear-equations': () => import('./algebra-1-intro'),
-  'substitution-method': () => import('./algebra-1-intro'),
-  'elimination-method': () => import('./algebra-1-intro'),
-  'linear-inequalities': () => import('./algebra-1-intro'),
-  'polynomial-operations': () => import('./algebra-1-intro'),
-  'factoring-trinomials': () => import('./algebra-1-intro'),
-  'exponent-rules': () => import('./algebra-1-intro'),
-  'solving-linear-equations-algebra1': () => import('./algebra-1-intro'),
-  'graphing-linear-equations-algebra1': () => import('./algebra-1-intro'),
-  'linear-inequalities-algebra1': () => import('./algebra-1-intro'),
-  'solving-systems-algebra1': () => import('./algebra-1-intro'),
-  'factoring-algebra1': () => import('./algebra-1-intro'),
-  'solving-quadratics-algebra1': () => import('./algebra-1-intro'),
-  'functions-basics-algebra1': () => import('./algebra-1-intro'),
+  // Algebra 1 topic-specific entrance quizzes (lessons exist)
+  'solving-linear-equations-algebra1': () => import('./solving-linear-equations-algebra1'),
+  'factoring-algebra1': () => import('./factoring-algebra1'),
 
   // Algebra 2
   'algebra-2': () => import('./algebra-2-intro'),

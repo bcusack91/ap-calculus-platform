@@ -1,25 +1,30 @@
 /**
  * Entrance Quiz — Acid-Base Equilibrium (MCAT)
- * 14 questions · 7 parts (2 per part)
+ * 10 questions · 5 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'mgab-ent-1a', question: 'A Lewis acid is defined as a species that:', options: ['Donates a proton', 'Accepts a proton', 'Donates an electron pair', 'Accepts an electron pair'], correctIndex: 3, explanation: 'Lewis acids are electron pair acceptors. This definition is broader than Brønsted-Lowry and includes species like $BF_3$ and $Al^{3+}$.', partNumber: 1, partTitle: 'Acids & Bases Basics' },
-  { id: 'mgab-ent-1b', question: 'Which of the following is a weak acid?', options: ['$HCl$', '$HNO_3$', '$H_2SO_4$', '$CH_3COOH$ (acetic acid)'], correctIndex: 3, explanation: 'Acetic acid ($pK_a \\approx 4.75$) is a weak acid — it only partially dissociates. HCl, HNO₃, and H₂SO₄ are strong acids.', partNumber: 1, partTitle: 'Acids & Bases Basics' },
-  { id: 'mgab-ent-2a', question: 'If $[H^+] = 1 \\times 10^{-9}$ M, the pH of the solution is:', options: ['9', '5', '−9', '4'], correctIndex: 0, explanation: '$pH = -\\log[H^+] = -\\log(10^{-9}) = 9$. This is a basic solution (pH > 7).', partNumber: 2, partTitle: 'pH & pOH' },
-  { id: 'mgab-ent-2b', question: 'A solution has pH = 11. What is the pOH?', options: ['11', '3', '7', '1'], correctIndex: 1, explanation: 'At 25°C, pH + pOH = 14. So pOH = 14 − 11 = 3. This solution is strongly basic.', partNumber: 2, partTitle: 'pH & pOH' },
-  { id: 'mgab-ent-3a', question: 'The $K_a$ expression for the dissociation of acetic acid ($CH_3COOH \\rightleftharpoons CH_3COO^- + H^+$) is:', options: ['$K_a = \\frac{[CH_3COOH]}{[CH_3COO^-][H^+]}$', '$K_a = \\frac{[CH_3COO^-][H^+]}{[CH_3COOH]}$', '$K_a = [CH_3COO^-][H^+]$', '$K_a = [CH_3COOH]$'], correctIndex: 1, explanation: 'For an acid dissociation: $K_a = \\frac{[\\text{products}]}{[\\text{reactants}]} = \\frac{[CH_3COO^-][H^+]}{[CH_3COOH]}$.', partNumber: 3, partTitle: 'Ka & Kb' },
-  { id: 'mgab-ent-3b', question: 'The relationship between $K_a$ and $K_b$ for a conjugate acid-base pair at 25°C is:', options: ['$K_a + K_b = 14$', '$K_a \\times K_b = K_w = 10^{-14}$', '$K_a = K_b$', '$K_a / K_b = K_w$'], correctIndex: 1, explanation: 'For a conjugate pair: $K_a \\times K_b = K_w = 1.0 \\times 10^{-14}$ at 25°C. A stronger acid has a weaker conjugate base.', partNumber: 3, partTitle: 'Ka & Kb' },
-  { id: 'mgab-ent-4a', question: 'A buffer solution resists changes in pH by containing:', options: ['Only a strong acid and water', 'A weak acid and its conjugate base (or weak base and conjugate acid)', 'Only a strong base', 'A strong acid and a strong base in equal amounts'], correctIndex: 1, explanation: 'Buffers consist of a weak acid and its conjugate base (e.g., $CH_3COOH/CH_3COO^-$) that neutralize added acid or base.', partNumber: 4, partTitle: 'Buffers' },
-  { id: 'mgab-ent-4b', question: "The Henderson-Hasselbalch equation is $pH = pK_a + \\log([A^-]/[HA])$. A buffer has equal concentrations of acid and conjugate base. Its pH equals:", options: ['0', '$pK_a - 1$', '$pK_a$', '$pK_a + 1$'], correctIndex: 2, explanation: 'When $[A^-] = [HA]$, $\\log(1) = 0$, so $pH = pK_a$. This is the optimal buffering point.', partNumber: 4, partTitle: 'Buffers' },
-  { id: 'mgab-ent-5a', question: 'At the equivalence point of a strong acid–strong base titration:', options: ['pH = 7 always', 'The solution is acidic', 'The solution is basic', 'pH equals the pKa of the acid'], correctIndex: 0, explanation: 'Strong acid + strong base → salt + water. The salt does not hydrolyze, so pH = 7 at the equivalence point at 25°C.', partNumber: 5, partTitle: 'Titration Concepts' },
-  { id: 'mgab-ent-5b', question: 'During the titration of a weak acid with a strong base, the pH at the half-equivalence point equals:', options: ['7.0', 'pKb of the base', 'pKa of the weak acid', '14 − pKb'], correctIndex: 2, explanation: 'At the half-equivalence point, [HA] = [A⁻], so Henderson-Hasselbalch gives pH = pKa. This is used experimentally to determine pKa.', partNumber: 5, partTitle: 'Titration Concepts' },
-  { id: 'mgab-ent-6a', question: 'What is the pH of a 0.10 M solution of HCl (strong acid)?', options: ['0', '1', '2', '7'], correctIndex: 1, explanation: 'HCl fully dissociates: $[H^+] = 0.10 = 10^{-1}$ M. $pH = -\\log(10^{-1}) = 1$.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'mgab-ent-6b', question: 'A buffer is made with 0.1 mol $NH_3$ and 0.1 mol $NH_4^+$ ($pK_a$ of $NH_4^+$ = 9.25). What is the pH?', options: ['4.75', '7.0', '9.25', '11.0'], correctIndex: 2, explanation: 'By Henderson-Hasselbalch: $pH = pK_a + \\log([NH_3]/[NH_4^+]) = 9.25 + \\log(1) = 9.25$.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'mgab-ent-7a', question: 'Which indicator would be most appropriate for a strong acid–strong base titration (equivalence point at pH ≈ 7)?', options: ['Methyl orange (range pH 3.1–4.4)', 'Bromothymol blue (range pH 6.0–7.6)', 'Phenolphthalein (range pH 8.2–10.0)', 'Litmus (range pH 5–8)'], correctIndex: 1, explanation: 'Bromothymol blue changes color near pH 7, making it ideal for strong acid–strong base titrations where the equivalence point is neutral.', partNumber: 7, partTitle: 'Review & Applications' },
-  { id: 'mgab-ent-7b', question: 'Polyprotic acids like $H_3PO_4$ have multiple $K_a$ values. Which is always true?', options: ['$K_{a1} < K_{a2} < K_{a3}$', '$K_{a1} > K_{a2} > K_{a3}$', 'All $K_a$ values are equal', '$K_{a2}$ is always greater than $K_{a1}$'], correctIndex: 1, explanation: 'Each successive proton is removed from an increasingly negative ion, requiring more energy. Thus $K_{a1} > K_{a2} > K_{a3}$.', partNumber: 7, partTitle: 'Review & Applications' },
+  // Part 1 — pH, pOH & Strong vs. Weak Acids
+  { id: 'mgab-ent-1a', question: 'A solution has [H⁺] = 1 × 10⁻⁴ M. What is its pH?', options: ['2', '4', '7', '10'], correctIndex: 1, explanation: 'pH = −log[H⁺] = −log(10⁻⁴) = 4.', partNumber: 1, partTitle: 'pH, pOH & Strong vs. Weak Acids' },
+  { id: 'mgab-ent-1b', question: 'Which is a strong acid in water?', options: ['HF', 'HCN', 'HCl', 'CH₃COOH'], correctIndex: 2, explanation: 'HCl dissociates ~100% in water. HF, HCN, and acetic acid are weak (only partial dissociation).', partNumber: 1, partTitle: 'pH, pOH & Strong vs. Weak Acids' },
+
+  // Part 2 — Ka, Kb & Henderson-Hasselbalch
+  { id: 'mgab-ent-2a', question: 'For a weak acid HA with $K_a = 1.0 \\times 10^{-5}$, what is its $pK_a$?', options: ['1', '5', '9', '14'], correctIndex: 1, explanation: '$pK_a = -\\log K_a = -\\log(10^{-5}) = 5$.', partNumber: 2, partTitle: 'Ka, Kb & Henderson-Hasselbalch' },
+  { id: 'mgab-ent-2b', question: 'Henderson-Hasselbalch: a buffer with [A⁻]/[HA] = 1 has a pH equal to:', options: ['$pK_a - 1$', '$pK_a$', '$pK_a + 1$', '7.00 always'], correctIndex: 1, explanation: '$pH = pK_a + \\log([A^-]/[HA])$. When the ratio is 1, log(1) = 0 → pH = pKa.', partNumber: 2, partTitle: 'Ka, Kb & Henderson-Hasselbalch' },
+
+  // Part 3 — Buffers & Physiological Chemistry
+  { id: 'mgab-ent-3a', question: 'A buffer is most effective at pH:', options: ['Equal to its $pK_a$', 'Equal to 7.0 only', 'More than 2 units away from $pK_a$', 'At the equivalence point of titration'], correctIndex: 0, explanation: 'Buffers have maximum capacity within ±1 pH unit of their pKa, where [A⁻] ≈ [HA] and the buffer can absorb added acid or base.', partNumber: 3, partTitle: 'Buffers & Physiological Chemistry' },
+  { id: 'mgab-ent-3b', question: 'The primary buffer system in human blood plasma is:', options: ['Phosphate (H₂PO₄⁻ / HPO₄²⁻)', 'Carbonic acid / bicarbonate (H₂CO₃ / HCO₃⁻)', 'Ammonia / ammonium', 'Acetic acid / acetate'], correctIndex: 1, explanation: 'Blood pH (~7.4) is maintained by the carbonic acid/bicarbonate system, regulated by the lungs (CO₂) and kidneys (HCO₃⁻).', partNumber: 3, partTitle: 'Buffers & Physiological Chemistry' },
+
+  // Part 4 — Titrations & Indicators
+  { id: 'mgab-ent-4a', question: 'In a strong acid–strong base titration, the pH at the equivalence point is:', options: ['Less than 7', 'Exactly 7', 'Greater than 7', 'Equal to the $pK_a$ of the acid'], correctIndex: 1, explanation: 'Both ions in solution at equivalence are spectator ions (Na⁺, Cl⁻ etc.) — neither hydrolyzes, so pH = 7.', partNumber: 4, partTitle: 'Titrations & Indicators' },
+  { id: 'mgab-ent-4b', question: 'A weak acid is titrated with a strong base. The half-equivalence point is significant because at it:', options: ['The solution is most acidic', 'pH = pKa of the weak acid', 'The indicator first changes color', 'All the acid has been neutralized'], correctIndex: 1, explanation: 'At half-equivalence, [HA] = [A⁻], so the Henderson-Hasselbalch equation gives pH = pKa. This is how pKa values are commonly measured.', partNumber: 4, partTitle: 'Titrations & Indicators' },
+
+  // Part 5 — Equilibrium, Ksp & Le Chatelier's Principle
+  { id: 'mgab-ent-5a', question: 'For AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq), if Ksp = 1.8 × 10⁻¹⁰, what is the molar solubility of AgCl in pure water?', options: ['1.8 × 10⁻¹⁰ M', '1.3 × 10⁻⁵ M', '9.0 × 10⁻⁶ M', '1.0 × 10⁻⁵ M'], correctIndex: 1, explanation: 'Let s = solubility. Ksp = s² = 1.8 × 10⁻¹⁰ → s ≈ √(1.8 × 10⁻¹⁰) ≈ 1.3 × 10⁻⁵ M.', partNumber: 5, partTitle: "Equilibrium, Ksp & Le Chatelier's Principle" },
+  { id: 'mgab-ent-5b', question: 'For N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g), ΔH < 0. Increasing temperature will:', options: ['Shift equilibrium right (more NH₃)', 'Shift equilibrium left (less NH₃)', 'Have no effect on the position of equilibrium', 'Increase Kp without shifting'], correctIndex: 1, explanation: "For an exothermic reaction, heat is a 'product.' Adding heat (raising T) shifts equilibrium toward reactants — Le Châtelier.", partNumber: 5, partTitle: "Equilibrium, Ksp & Le Chatelier's Principle" },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -28,12 +33,10 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Acids & Bases Basics' },
-    { partNumber: 2, partTitle: 'pH & pOH' },
-    { partNumber: 3, partTitle: 'Ka & Kb' },
-    { partNumber: 4, partTitle: 'Buffers' },
-    { partNumber: 5, partTitle: 'Titration Concepts' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 1, partTitle: 'pH, pOH & Strong vs. Weak Acids' },
+    { partNumber: 2, partTitle: 'Ka, Kb & Henderson-Hasselbalch' },
+    { partNumber: 3, partTitle: 'Buffers & Physiological Chemistry' },
+    { partNumber: 4, partTitle: 'Titrations & Indicators' },
+    { partNumber: 5, partTitle: "Equilibrium, Ksp & Le Chatelier's Principle" },
   ]
 }

@@ -1,25 +1,30 @@
 /**
  * Entrance Quiz — Thermodynamics (MCAT)
- * 14 questions · 7 parts (2 per part)
+ * 10 questions · 5 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'mgth-ent-1a', question: "Hess's Law allows calculation of ΔH for a reaction by:", options: ['Measuring temperature change directly', 'Adding ΔH values of steps that sum to the overall reaction', 'Dividing the bond energies by temperature', 'Multiplying equilibrium constants'], correctIndex: 1, explanation: "Hess's Law: ΔH is a state function, so the total ΔH for any pathway equals the sum of ΔH values for each step, regardless of the route.", partNumber: 1, partTitle: "Enthalpy & Hess's Law" },
-  { id: 'mgth-ent-1b', question: 'The standard enthalpy of formation ($\\Delta H^\\circ_f$) of an element in its standard state is:', options: ['Positive', 'Negative', 'Zero', 'Equal to its bond energy'], correctIndex: 2, explanation: 'By definition, $\\Delta H^\\circ_f = 0$ for any element in its standard state (e.g., $O_2(g)$, $C_{graphite}$, $Na(s)$).', partNumber: 1, partTitle: "Enthalpy & Hess's Law" },
-  { id: 'mgth-ent-2a', question: 'Entropy (S) is a thermodynamic measure of:', options: ['The total energy of a system', 'The degree of randomness or disorder of a system', 'The heat released at constant pressure', 'The free energy available to do work'], correctIndex: 1, explanation: 'Entropy measures the number of microstates (disorder) in a system. The Second Law states entropy of the universe always increases.', partNumber: 2, partTitle: 'Entropy' },
-  { id: 'mgth-ent-2b', question: 'Which process results in an increase in entropy?', options: ['$N_2(g) + 3H_2(g) \\to 2NH_3(g)$', 'Freezing liquid water', 'Dissolving $NaCl$ in water', 'Condensing steam to liquid water'], correctIndex: 2, explanation: 'Dissolving NaCl disperses ions into solution, greatly increasing the number of microstates (ΔS > 0). The others all decrease entropy.', partNumber: 2, partTitle: 'Entropy' },
-  { id: 'mgth-ent-3a', question: 'The Gibbs free energy equation is $\\Delta G = \\Delta H - T\\Delta S$. A reaction is spontaneous when:', options: ['$\\Delta G > 0$', '$\\Delta G = 0$', '$\\Delta G < 0$', '$\\Delta H > 0$ and $\\Delta S > 0$'], correctIndex: 2, explanation: 'Spontaneous processes have $\\Delta G < 0$. At equilibrium $\\Delta G = 0$. Non-spontaneous processes have $\\Delta G > 0$.', partNumber: 3, partTitle: 'Gibbs Free Energy' },
-  { id: 'mgth-ent-3b', question: 'Under what conditions is a reaction always non-spontaneous regardless of temperature?', options: ['$\\Delta H < 0$ and $\\Delta S > 0$', '$\\Delta H > 0$ and $\\Delta S < 0$', '$\\Delta H < 0$ and $\\Delta S < 0$', '$\\Delta H > 0$ and $\\Delta S > 0$'], correctIndex: 1, explanation: 'If $\\Delta H > 0$ (endothermic) and $\\Delta S < 0$ (entropy decreasing), then $\\Delta G = \\Delta H - T\\Delta S > 0$ at all temperatures.', partNumber: 3, partTitle: 'Gibbs Free Energy' },
-  { id: 'mgth-ent-4a', question: 'A reaction has $\\Delta H = -100$ kJ and $\\Delta S = -200$ J/K. At what temperature does it become non-spontaneous?', options: ['Above 200 K', 'Above 500 K', 'Above 1000 K', 'It is always spontaneous'], correctIndex: 1, explanation: '$\\Delta G = 0$ when $T = \\Delta H / \\Delta S = (-100{,}000 \\text{ J}) / (-200 \\text{ J/K}) = 500$ K. Above 500 K, $\\Delta G > 0$ (non-spontaneous).', partNumber: 4, partTitle: 'Spontaneity' },
-  { id: 'mgth-ent-4b', question: 'The Second Law of Thermodynamics states that in any spontaneous process, the entropy of the:', options: ['System increases', 'Surroundings increases', 'Universe increases', 'System decreases'], correctIndex: 2, explanation: 'The entropy of the universe ($\\Delta S_{univ} = \\Delta S_{sys} + \\Delta S_{surr}$) increases for all spontaneous processes. The system itself may decrease in entropy.', partNumber: 4, partTitle: 'Spontaneity' },
-  { id: 'mgth-ent-5a', question: 'For the equilibrium $aA + bB \\rightleftharpoons cC + dD$, the equilibrium constant $K_{eq}$ is:', options: ['$K_{eq} = \\frac{[A]^a[B]^b}{[C]^c[D]^d}$', '$K_{eq} = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$', '$K_{eq} = [C]^c[D]^d - [A]^a[B]^b$', '$K_{eq} = \\frac{a+b}{c+d}$'], correctIndex: 1, explanation: '$K_{eq}$ is the ratio of product concentrations to reactant concentrations, each raised to their stoichiometric coefficients.', partNumber: 5, partTitle: 'Equilibrium Constants' },
-  { id: 'mgth-ent-5b', question: 'The relationship between Gibbs free energy and the equilibrium constant at standard conditions is:', options: ['$\\Delta G^\\circ = RT \\ln K$', '$\\Delta G^\\circ = -RT \\ln K$', '$\\Delta G^\\circ = K/RT$', '$\\Delta G^\\circ = RT/K$'], correctIndex: 1, explanation: '$\\Delta G^\\circ = -RT \\ln K$. If $K > 1$, $\\ln K > 0$, so $\\Delta G^\\circ < 0$ (spontaneous). Large K = favorable thermodynamics.', partNumber: 5, partTitle: 'Equilibrium Constants' },
-  { id: 'mgth-ent-6a', question: 'Given: $C(s) + O_2(g) \\to CO_2(g)$, $\\Delta H = -393$ kJ, and $CO(g) + \\frac{1}{2}O_2(g) \\to CO_2(g)$, $\\Delta H = -283$ kJ; what is $\\Delta H$ for $C(s) + \\frac{1}{2}O_2(g) \\to CO(g)$?', options: ['$-676$ kJ', '$-110$ kJ', '$+110$ kJ', '$+676$ kJ'], correctIndex: 1, explanation: "Subtract reaction 2 from reaction 1: $\\Delta H = -393 - (-283) = -110$ kJ. This is Hess's Law applied.", partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'mgth-ent-6b', question: 'ATP hydrolysis ($ATP + H_2O \\to ADP + P_i$) has $\\Delta G^\\circ = -30.5$ kJ/mol. This means:', options: ['The reaction is endothermic', 'The reaction is non-spontaneous', 'The reaction is thermodynamically favorable', 'K < 1'], correctIndex: 2, explanation: '$\\Delta G^\\circ < 0$ means the reaction is thermodynamically favorable (spontaneous under standard conditions). Cells use this energy to drive unfavorable reactions.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'mgth-ent-7a', question: 'The First Law of Thermodynamics (conservation of energy) is expressed as:', options: ['$\\Delta U = q - w$', '$\\Delta G = \\Delta H - T\\Delta S$', '$\\Delta S_{univ} > 0$', '$\\Delta H = \\Delta U + P\\Delta V$'], correctIndex: 0, explanation: '$\\Delta U = q - w$: change in internal energy equals heat added to the system minus work done by the system. Energy is conserved.', partNumber: 7, partTitle: 'Review & Applications' },
-  { id: 'mgth-ent-7b', question: 'A reaction with a large positive $K_{eq}$ has a $\\Delta G^\\circ$ that is:', options: ['Large and positive', 'Large and negative', 'Zero', 'Equal to $\\Delta H$'], correctIndex: 1, explanation: '$\\Delta G^\\circ = -RT \\ln K$. If $K \\gg 1$, then $\\ln K \\gg 0$, making $\\Delta G^\\circ \\ll 0$ (large negative). Products are strongly favored.', partNumber: 7, partTitle: 'Review & Applications' },
+  // Part 1 — Enthalpy & Hess's Law
+  { id: 'mgth-ent-1a', question: 'A reaction with $\\Delta H < 0$ is:', options: ['Endothermic and absorbs heat', 'Exothermic and releases heat', 'Always spontaneous regardless of T', 'At equilibrium'], correctIndex: 1, explanation: 'Negative ΔH means the system releases heat to its surroundings — exothermic.', partNumber: 1, partTitle: "Enthalpy & Hess's Law" },
+  { id: 'mgth-ent-1b', question: "Hess's Law lets you calculate ΔH for a reaction by:", options: ['Measuring temperature change directly', 'Adding ΔH values of intermediate steps that sum to the target reaction', 'Using activation energy alone', 'Multiplying ΔS by T'], correctIndex: 1, explanation: 'Because enthalpy is a state function, ΔH is path-independent. Sum the ΔH of any series of steps that yields the overall reaction.', partNumber: 1, partTitle: "Enthalpy & Hess's Law" },
+
+  // Part 2 — Entropy & Laws of Thermodynamics
+  { id: 'mgth-ent-2a', question: 'Which process has $\\Delta S_{system} > 0$?', options: ['Water vapor condensing to liquid', 'NaCl dissolving in water', '2 N(g) → N₂(g)', 'Freezing of liquid water'], correctIndex: 1, explanation: 'Dissolving disperses ions among water molecules — entropy increases. The other options reduce the number of microstates / disorder.', partNumber: 2, partTitle: 'Entropy & Laws of Thermodynamics' },
+  { id: 'mgth-ent-2b', question: 'The Second Law of Thermodynamics states that:', options: ['Energy cannot be created or destroyed', 'Total entropy of the universe always increases for spontaneous processes', 'Entropy approaches zero as T → 0 K', 'Heat flows from cold to hot spontaneously'], correctIndex: 1, explanation: 'For any spontaneous (irreversible) process, $\\Delta S_{universe} = \\Delta S_{sys} + \\Delta S_{surr} > 0$.', partNumber: 2, partTitle: 'Entropy & Laws of Thermodynamics' },
+
+  // Part 3 — Gibbs Free Energy, Keq & Cell Potential
+  { id: 'mgth-ent-3a', question: 'A reaction is spontaneous (under standard conditions) when:', options: ['$\\Delta G° > 0$', '$\\Delta G° < 0$', '$\\Delta H° < 0$ only', '$\\Delta S° < 0$ only'], correctIndex: 1, explanation: 'ΔG = ΔH − TΔS. Negative ΔG (especially ΔG°) indicates a spontaneous process at the given T.', partNumber: 3, partTitle: 'Gibbs Free Energy, Keq & Cell Potential' },
+  { id: 'mgth-ent-3b', question: 'The relation $\\Delta G° = -RT\\ln K_{eq}$ implies that for $K_{eq} > 1$:', options: ['ΔG° = 0', 'ΔG° > 0', 'ΔG° < 0', 'K depends only on T, not ΔG'], correctIndex: 2, explanation: 'If K > 1, ln K > 0, so −RT ln K < 0 → ΔG° < 0. Reaction favors products at standard state.', partNumber: 3, partTitle: 'Gibbs Free Energy, Keq & Cell Potential' },
+
+  // Part 4 — Phase Changes & Heating Curves
+  { id: 'mgth-ent-4a', question: 'On a heating curve (T vs. heat added) for water, the flat plateaus represent:', options: ['Heating of liquid water', 'Phase transitions at constant temperature', 'Endothermic decomposition', 'Heat loss to surroundings'], correctIndex: 1, explanation: 'During melting and boiling, added heat goes into breaking intermolecular forces (latent heat) — temperature stays constant.', partNumber: 4, partTitle: 'Phase Changes & Heating Curves' },
+  { id: 'mgth-ent-4b', question: 'Which equation gives the heat needed to raise the temperature of a substance (no phase change)?', options: ['$q = mL$', '$q = mc\\Delta T$', '$q = nRT$', '$q = -w$'], correctIndex: 1, explanation: 'q = m·c·ΔT, where c is specific heat capacity. For phase changes (no ΔT), use q = mL with the latent heat.', partNumber: 4, partTitle: 'Phase Changes & Heating Curves' },
+
+  // Part 5 — Mixed MCAT Review
+  { id: 'mgth-ent-5a', question: 'A reaction has $\\Delta H > 0$ and $\\Delta S > 0$. It is spontaneous:', options: ['At all temperatures', 'At no temperature', 'Only at high temperatures', 'Only at low temperatures'], correctIndex: 2, explanation: 'ΔG = ΔH − TΔS. Both positive: ΔG < 0 only when T is large enough that TΔS > ΔH.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
+  { id: 'mgth-ent-5b', question: 'How much heat is required to warm 50 g of water from 20 °C to 30 °C? (c = 4.18 J/g·°C)', options: ['209 J', '418 J', '2090 J', '4180 J'], correctIndex: 2, explanation: 'q = mcΔT = 50 × 4.18 × 10 = 2090 J.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -29,11 +34,9 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: "Enthalpy & Hess's Law" },
-    { partNumber: 2, partTitle: 'Entropy' },
-    { partNumber: 3, partTitle: 'Gibbs Free Energy' },
-    { partNumber: 4, partTitle: 'Spontaneity' },
-    { partNumber: 5, partTitle: 'Equilibrium Constants' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
+    { partNumber: 2, partTitle: 'Entropy & Laws of Thermodynamics' },
+    { partNumber: 3, partTitle: 'Gibbs Free Energy, Keq & Cell Potential' },
+    { partNumber: 4, partTitle: 'Phase Changes & Heating Curves' },
+    { partNumber: 5, partTitle: 'Mixed MCAT Review' },
   ]
 }
