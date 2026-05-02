@@ -235,7 +235,7 @@ A fast, head-to-head way to drill AP topics in 60-second matches against friends
 How to use it well as a study tool:
 1. Pick the topic you're weakest on (not the strongest). Losing a few rounds is the fastest way to figure out what to re-read.
 2. Run a 5-match warm-up before each study session — it's a sneaky-good diagnostic.
-3. Challenge a friend on the same unit. Use the "Challenge a Friend" button to send a private link; whoever loses owes a 10-minute review.
+3. Challenge a friend on the same unit. Use the "Challenge a Friend" button and pick the ASYNC option — your friend can accept and play the same questions on their own time, no need to be online together. Whoever loses owes a 10-minute review.
 4. Review every wrong answer. Each match shows the correct answer + explanation — that's where the real studying happens.
 5. After 1-2 weeks of matches, take the entrance/exit quiz on that topic to confirm the gain.
 
@@ -263,7 +263,7 @@ Good luck on May exams.
       <ol style="color: #4b5563; font-size: 15px; line-height: 1.7; padding-left: 20px; margin-bottom: 24px;">
         <li><strong>Pick your weakest topic, not your strongest.</strong> Losing a few rounds is the fastest way to find what you need to re-read.</li>
         <li><strong>Run a 5-match warm-up</strong> before each study session — it's a sneaky-good diagnostic of what stuck from yesterday.</li>
-        <li><strong>Challenge a friend on the same unit.</strong> Use the &ldquo;Challenge a Friend&rdquo; button for a private link. Loser owes a 10-minute review of the unit.</li>
+        <li><strong>Challenge a friend on the same unit.</strong> Use the &ldquo;Challenge a Friend&rdquo; button and pick the <strong>async</strong> option &mdash; your friend can accept and play the same questions on their own time, no need to coordinate schedules. Loser owes a 10-minute review of the unit.</li>
         <li><strong>Review every wrong answer.</strong> Each match shows the correct answer + explanation — that&rsquo;s where the real studying happens.</li>
         <li><strong>Confirm the gain.</strong> After 1&ndash;2 weeks of matches on a topic, take the entrance/exit quiz to verify the bump.</li>
       </ol>
