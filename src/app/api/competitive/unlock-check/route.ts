@@ -1,7 +1,13 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS } from '@/data/competitive-questions/algebra2-bank'
+import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS, type Algebra2Subtopic } from '@/data/competitive-questions/algebra2-bank'
+
+/**
+ * Admin accounts get every competitive category and subtopic unlocked
+ * automatically. Students must still earn unlocks normally.
+ */
+const ADMIN_FULL_UNLOCK_EMAILS = new Set<string>(['brendan@cusackprep.com'])
 
 /**
  * Check if user has unlocked competitive mode
@@ -19,6 +25,8 @@ export async function GET() {
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+
+    const isAdminFullUnlock = ADMIN_FULL_UNLOCK_EMAILS.has(session.user.email.toLowerCase())
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
@@ -121,7 +129,7 @@ export async function GET() {
     const hasTeacherGrant = teacherGrants.length > 0
     // Collect all teacher-granted category slugs (null categories = all)
     const grantedCategories: Set<string> = new Set()
-    let grantAllCategories = false
+    let grantAllCategories = isAdminFullUnlock
     for (const grant of teacherGrants) {
       if (!grant.categories) {
         grantAllCategories = true
@@ -266,7 +274,9 @@ export async function GET() {
     }
 
     // Compute which specific Algebra 2 subtopics are unlocked
-    const unlockedAlgebra2Subtopics = getUnlockedAlgebra2Subtopics(allProgressSlugs)
+    const unlockedAlgebra2Subtopics = isAdminFullUnlock
+      ? (Object.keys(ALGEBRA2_SUBTOPIC_LABELS) as Algebra2Subtopic[])
+      : getUnlockedAlgebra2Subtopics(allProgressSlugs)
     const algebra2SubtopicDetails = unlockedAlgebra2Subtopics.map(st => ({
       key: st,
       label: ALGEBRA2_SUBTOPIC_LABELS[st]
@@ -284,7 +294,7 @@ export async function GET() {
       })
     }
 
-    const shouldUnlock = hasAnyProgress || hasTeacherGrant
+    const shouldUnlock = hasAnyProgress || hasTeacherGrant || isAdminFullUnlock
 
     // Auto-unlock if user has any topic progress OR has a teacher grant
     if (shouldUnlock && !user.competitiveProfile) {
