@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { isAdminFullUnlockEmail } from "@/lib/admin-unlock"
+import { isCompetitiveFullUnlock } from "@/lib/admin-unlock"
 
 /**
  * Returns all AP Chemistry topics grouped by category (unit),
@@ -14,7 +14,7 @@ export async function GET() {
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
-    const isAdmin = isAdminFullUnlockEmail(session.user.email)
+    const isAdmin = isCompetitiveFullUnlock(session.user.email)
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },

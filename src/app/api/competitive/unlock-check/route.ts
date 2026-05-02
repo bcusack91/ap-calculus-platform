@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS, type Algebra2Subtopic } from '@/data/competitive-questions/algebra2-bank'
-import { isAdminFullUnlockEmail } from '@/lib/admin-unlock'
+import { isCompetitiveFullUnlock } from '@/lib/admin-unlock'
 
 /**
  * Check if user has unlocked competitive mode
@@ -21,7 +21,7 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const isAdminFullUnlock = isAdminFullUnlockEmail(session.user.email)
+    const isAdminFullUnlock = isCompetitiveFullUnlock(session.user.email)
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },

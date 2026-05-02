@@ -216,6 +216,71 @@ export async function sendStreakReminder(email: string, name: string | null, cur
 }
 
 /**
+ * Announcement: Competitive Mode is fully unlocked for AP exam season.
+ */
+export async function sendCompetitiveModeAnnouncementEmail(email: string, name: string | null) {
+  const transporter = getTransporter()
+  const greeting = name ? `Hi ${name},` : 'Hi there,'
+  await transporter.sendMail({
+    from: FROM_ADDRESS,
+    to: email,
+    subject: '⚔️ Competitive Mode is unlocked for everyone — for AP exam season',
+    text: `${greeting}
+
+Good news: Competitive Mode is now fully unlocked for every Study Mondo student through AP exam season — no lessons or quizzes required to access it.
+
+What is Competitive Mode?
+A fast, head-to-head way to drill AP topics in 60-second matches against friends, classmates, or matched opponents. Every course is open: Calculus AB/BC, Bio, Chem, Physics 1/2/C, Psych, Stats, US/World History, Gov, Macro/Micro, English Lang/Lit, Enviro, CSA/CSP, and more.
+
+How to use it well as a study tool:
+1. Pick the topic you're weakest on (not the strongest). Losing a few rounds is the fastest way to figure out what to re-read.
+2. Run a 5-match warm-up before each study session — it's a sneaky-good diagnostic.
+3. Challenge a friend on the same unit. Use the "Challenge a Friend" button to send a private link; whoever loses owes a 10-minute review.
+4. Review every wrong answer. Each match shows the correct answer + explanation — that's where the real studying happens.
+5. After 1-2 weeks of matches, take the entrance/exit quiz on that topic to confirm the gain.
+
+Jump in: ${APP_URL}/competitive
+
+Good luck on May exams.
+— Brendan @ Study Mondo`,
+    html: emailLayout(`
+      <h1 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #111827;">
+        ⚔️ Competitive Mode — Unlocked for Everyone
+      </h1>
+      <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 16px;">
+        ${greeting}
+      </p>
+      <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 16px;">
+        Good news: <strong>Competitive Mode is now fully unlocked</strong> for every Study Mondo student through AP exam season — no lessons or quizzes required to access it.
+      </p>
+      <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 8px;">
+        Every course is open: Calculus AB/BC, Bio, Chem, Physics 1/2/C, Psych, Stats, US/World History, Gov, Macro/Micro, English Lang/Lit, Enviro, CSA/CSP, and more.
+      </p>
+
+      <h2 style="font-size: 18px; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #111827;">
+        How to use it as a real study tool
+      </h2>
+      <ol style="color: #4b5563; font-size: 15px; line-height: 1.7; padding-left: 20px; margin-bottom: 24px;">
+        <li><strong>Pick your weakest topic, not your strongest.</strong> Losing a few rounds is the fastest way to find what you need to re-read.</li>
+        <li><strong>Run a 5-match warm-up</strong> before each study session — it's a sneaky-good diagnostic of what stuck from yesterday.</li>
+        <li><strong>Challenge a friend on the same unit.</strong> Use the &ldquo;Challenge a Friend&rdquo; button for a private link. Loser owes a 10-minute review of the unit.</li>
+        <li><strong>Review every wrong answer.</strong> Each match shows the correct answer + explanation — that&rsquo;s where the real studying happens.</li>
+        <li><strong>Confirm the gain.</strong> After 1&ndash;2 weeks of matches on a topic, take the entrance/exit quiz to verify the bump.</li>
+      </ol>
+
+      <a href="${APP_URL}/competitive" style="display: inline-block; background-color: #7c3aed; color: #ffffff; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none;">
+        Open Competitive Mode
+      </a>
+
+      <p style="color: #4b5563; font-size: 15px; line-height: 1.6; margin-top: 28px;">
+        Good luck on May exams.<br>
+        &mdash; Brendan @ Study Mondo
+      </p>
+    `, email),
+  })
+}
+
+/**
  * Send an internal admin alert email for critical funnel regressions.
  */
 export async function sendAdminAlertEmail(params: {

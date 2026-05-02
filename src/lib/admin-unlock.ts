@@ -1,13 +1,27 @@
 /**
  * Admin emails that get every Competitive section/topic auto-unlocked.
- * Students must still earn unlocks normally (lesson mastery, entrance/exit
- * quiz pass, diagnostic pass, teacher grant, friend challenge).
  */
 export const ADMIN_FULL_UNLOCK_EMAILS = new Set<string>([
   'brendan@cusackprep.com',
 ])
 
+/**
+ * When true, EVERY signed-in user has Competitive Mode fully unlocked
+ * (every course, every topic) regardless of lesson/quiz progress.
+ * Set to false to revert to the earned-unlock flow for students.
+ */
+export const COMPETITIVE_UNLOCKED_FOR_ALL = true
+
 export function isAdminFullUnlockEmail(email: string | null | undefined): boolean {
   if (!email) return false
   return ADMIN_FULL_UNLOCK_EMAILS.has(email.toLowerCase())
+}
+
+/**
+ * Returns true if Competitive Mode should be fully unlocked for the given
+ * user (admin allowlist OR the global "unlocked for all" flag).
+ */
+export function isCompetitiveFullUnlock(email: string | null | undefined): boolean {
+  if (COMPETITIVE_UNLOCKED_FOR_ALL) return true
+  return isAdminFullUnlockEmail(email)
 }
