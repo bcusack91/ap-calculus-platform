@@ -1174,6 +1174,54 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Synthesis & AP Review', loader: () => import('./physics1-energy-in-shm-part7').then(m => m.physics1EnergyInShmPart7Data) },
     ],
   },
+  'fluids-density-and-pressure': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Density: Definition & Units', loader: () => import('./physics1-fluids-density-and-pressure-part1').then(m => m.physics1FluidsDensityPressurePart1Data) },
+      { title: 'Pressure: Definition & Units', loader: () => import('./physics1-fluids-density-and-pressure-part2').then(m => m.physics1FluidsDensityPressurePart2Data) },
+      { title: 'Hydrostatic Pressure', loader: () => import('./physics1-fluids-density-and-pressure-part3').then(m => m.physics1FluidsDensityPressurePart3Data) },
+      { title: 'Absolute vs Gauge Pressure', loader: () => import('./physics1-fluids-density-and-pressure-part4').then(m => m.physics1FluidsDensityPressurePart4Data) },
+      { title: "Pascal's Principle & Hydraulics", loader: () => import('./physics1-fluids-density-and-pressure-part5').then(m => m.physics1FluidsDensityPressurePart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physics1-fluids-density-and-pressure-part6').then(m => m.physics1FluidsDensityPressurePart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./physics1-fluids-density-and-pressure-part7').then(m => m.physics1FluidsDensityPressurePart7Data) },
+    ],
+  },
+  'fluids-buoyancy': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What is Buoyancy?', loader: () => import('./physics1-fluids-buoyancy-part1').then(m => m.physics1FluidsBuoyancyPart1Data) },
+      { title: "Archimedes' Principle", loader: () => import('./physics1-fluids-buoyancy-part2').then(m => m.physics1FluidsBuoyancyPart2Data) },
+      { title: 'Floating vs Sinking', loader: () => import('./physics1-fluids-buoyancy-part3').then(m => m.physics1FluidsBuoyancyPart3Data) },
+      { title: 'Submerged Object Calculations', loader: () => import('./physics1-fluids-buoyancy-part4').then(m => m.physics1FluidsBuoyancyPart4Data) },
+      { title: 'Floating Object Calculations', loader: () => import('./physics1-fluids-buoyancy-part5').then(m => m.physics1FluidsBuoyancyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physics1-fluids-buoyancy-part6').then(m => m.physics1FluidsBuoyancyPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./physics1-fluids-buoyancy-part7').then(m => m.physics1FluidsBuoyancyPart7Data) },
+    ],
+  },
+  'fluids-continuity': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Volume Flow Rate', loader: () => import('./physics1-fluids-continuity-part1').then(m => m.physics1FluidsContinuityPart1Data) },
+      { title: 'Continuity for Incompressible Flow', loader: () => import('./physics1-fluids-continuity-part2').then(m => m.physics1FluidsContinuityPart2Data) },
+      { title: 'Pipe Narrowing & Speed', loader: () => import('./physics1-fluids-continuity-part3').then(m => m.physics1FluidsContinuityPart3Data) },
+      { title: 'Branching & Merging Pipes', loader: () => import('./physics1-fluids-continuity-part4').then(m => m.physics1FluidsContinuityPart4Data) },
+      { title: 'Mass Flow Rate', loader: () => import('./physics1-fluids-continuity-part5').then(m => m.physics1FluidsContinuityPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physics1-fluids-continuity-part6').then(m => m.physics1FluidsContinuityPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./physics1-fluids-continuity-part7').then(m => m.physics1FluidsContinuityPart7Data) },
+    ],
+  },
+  'fluids-bernoulli': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: "Bernoulli's Equation Setup", loader: () => import('./physics1-fluids-bernoulli-part1').then(m => m.physics1FluidsBernoulliPart1Data) },
+      { title: 'Conservation of Energy in Fluids', loader: () => import('./physics1-fluids-bernoulli-part2').then(m => m.physics1FluidsBernoulliPart2Data) },
+      { title: 'Pressure-Speed Trade-off', loader: () => import('./physics1-fluids-bernoulli-part3').then(m => m.physics1FluidsBernoulliPart3Data) },
+      { title: "Torricelli's Theorem", loader: () => import('./physics1-fluids-bernoulli-part4').then(m => m.physics1FluidsBernoulliPart4Data) },
+      { title: 'Real-World Applications', loader: () => import('./physics1-fluids-bernoulli-part5').then(m => m.physics1FluidsBernoulliPart5Data) },
+      { title: 'Combined Continuity + Bernoulli', loader: () => import('./physics1-fluids-bernoulli-part6').then(m => m.physics1FluidsBernoulliPart6Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./physics1-fluids-bernoulli-part7').then(m => m.physics1FluidsBernoulliPart7Data) },
+    ],
+  },
 
   // ===== AP Biology (25 topics) =====
   'water-properties-biochemistry': {

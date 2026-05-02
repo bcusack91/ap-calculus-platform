@@ -81,6 +81,11 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'angular-momentum': () => import('./angular-momentum'),
   'introduction-to-shm': () => import('./introduction-to-shm'),
   'energy-in-shm': () => import('./energy-in-shm'),
+  // AP Physics 1 — Fluids
+  'fluids-density-and-pressure': () => import('./fluids-density-and-pressure'),
+  'fluids-buoyancy': () => import('./fluids-buoyancy'),
+  'fluids-continuity': () => import('./fluids-continuity'),
+  'fluids-bernoulli': () => import('./fluids-bernoulli'),
 
   // AP Physics 2
   'fluid-pressure': () => import('./fluid-pressure'),
