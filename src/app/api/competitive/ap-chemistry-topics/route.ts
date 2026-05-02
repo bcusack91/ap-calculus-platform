@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isAdminFullUnlockEmail } from "@/lib/admin-unlock"
 
 /**
  * Returns all AP Chemistry topics grouped by category (unit),
@@ -13,6 +14,7 @@ export async function GET() {
     if (!session?.user?.email) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    const isAdmin = isAdminFullUnlockEmail(session.user.email)
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
@@ -91,7 +93,7 @@ export async function GET() {
           id: t.id,
           slug: t.slug,
           title: t.title,
-          completed: completedViaProgress || completedViaQuiz,
+          completed: isAdmin || completedViaProgress || completedViaQuiz,
           masteryLevel: tp?.masteryLevel ?? 0,
           status: tp?.status ?? 'NOT_STARTED',
         }
@@ -108,7 +110,7 @@ export async function GET() {
       units,
       totalTopics,
       completedCount,
-      hasAnyCompleted: completedCount > 0,
+      hasAnyCompleted: isAdmin || completedCount > 0,
     })
   } catch (error) {
     console.error('Error fetching AP Chemistry topics:', error)

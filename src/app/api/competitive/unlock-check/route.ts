@@ -2,12 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS, type Algebra2Subtopic } from '@/data/competitive-questions/algebra2-bank'
-
-/**
- * Admin accounts get every competitive category and subtopic unlocked
- * automatically. Students must still earn unlocks normally.
- */
-const ADMIN_FULL_UNLOCK_EMAILS = new Set<string>(['brendan@cusackprep.com'])
+import { isAdminFullUnlockEmail } from '@/lib/admin-unlock'
 
 /**
  * Check if user has unlocked competitive mode
@@ -26,7 +21,7 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const isAdminFullUnlock = ADMIN_FULL_UNLOCK_EMAILS.has(session.user.email.toLowerCase())
+    const isAdminFullUnlock = isAdminFullUnlockEmail(session.user.email)
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },

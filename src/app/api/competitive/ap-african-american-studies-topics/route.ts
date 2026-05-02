@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isAdminFullUnlockEmail } from "@/lib/admin-unlock"
 
 export async function GET() {
   try {
     const session = await auth()
     if (!session?.user?.email) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const isAdmin = isAdminFullUnlockEmail(session.user.email)
 
     const user = await prisma.user.findUnique({ where: { email: session.user.email }, select: { id: true } })
     if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 })
@@ -36,14 +38,14 @@ export async function GET() {
         const tp = progressMap.get(t.id)
         const completedViaProgress = (tp?.status === 'COMPLETED' || tp?.status === 'MASTERED') && (tp?.masteryLevel ?? 0) >= 0.8
         const completedViaQuiz = passedQuizSlugs.has(t.slug)
-        return { id: t.id, slug: t.slug, title: t.title, completed: completedViaProgress || completedViaQuiz, masteryLevel: tp?.masteryLevel ?? 0, status: tp?.status ?? 'NOT_STARTED' }
+        return { id: t.id, slug: t.slug, title: t.title, completed: isAdmin || completedViaProgress || completedViaQuiz, masteryLevel: tp?.masteryLevel ?? 0, status: tp?.status ?? 'NOT_STARTED' }
       }),
     }))
 
     const totalTopics = units.reduce((s, u) => s + u.topics.length, 0)
     const completedCount = units.reduce((s, u) => s + u.topics.filter(t => t.completed).length, 0)
 
-    return NextResponse.json({ units, totalTopics, completedCount, hasAnyCompleted: completedCount > 0 })
+    return NextResponse.json({ units, totalTopics, completedCount, hasAnyCompleted: isAdmin || completedCount > 0 })
   } catch (error) {
     console.error('Error fetching AP African American Studies topics:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
