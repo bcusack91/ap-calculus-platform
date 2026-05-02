@@ -77,6 +77,9 @@ STRIPE_PREMIUM_PRICE_ID="your-stripe-price-id"
 # Google AdSense
 NEXT_PUBLIC_ADSENSE_CLIENT_ID="your-adsense-client-id"
 
+# Microsoft Clarity (Optional)
+NEXT_PUBLIC_CLARITY_PROJECT_ID="your-clarity-project-id"
+
 # App Configuration
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
