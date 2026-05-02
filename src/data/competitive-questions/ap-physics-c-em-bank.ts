@@ -205,10 +205,25 @@ const allQuestions: ApPhysicsCEMQuestion[] = [
   { id: 140, question: 'Doubling the amplitude of an EM wave changes its intensity by factor:', options: ['4', '2', '½', '1'], correctAnswer: 0, explanation: 'I ∝ E₀² ⇒ amplitude × 2 → intensity × 4.', difficulty: 'medium', topicSlug: 'physics-c-electromagnetic-waves' },
 ]
 
+// Lesson-slug → bank-slug alias map (granular lesson slugs → coarse bank slugs).
+const topicSlugAliases: Record<string, string[]> = {
+  'physics-c-coulomb-law': ['physics-c-electric-field-coulomb'],
+  'physics-c-electric-fields': ['physics-c-electric-field-coulomb', 'physics-c-gauss-law'],
+  'physics-c-conductors-equilibrium': ['physics-c-gauss-law', 'physics-c-electric-field-coulomb'],
+  'physics-c-potential-energy': ['physics-c-electric-potential'],
+  'physics-c-capacitors': ['physics-c-capacitors-dielectrics'],
+  'physics-c-dielectrics': ['physics-c-capacitors-dielectrics'],
+  'physics-c-energy-density': ['physics-c-capacitors-dielectrics'],
+  'physics-c-power-circuits': ['physics-c-dc-circuits'],
+  'physics-c-faraday-induction': ['physics-c-faraday-lenz'],
+  'physics-c-inductance-rl': ['physics-c-inductance-rl-circuits'],
+}
+
 export function getApPhysicsCEMQuestions(count: number = 10, topicSlug?: string): ApPhysicsCEMQuestion[] {
   let pool = allQuestions
   if (topicSlug) {
-    const filtered = allQuestions.filter(q => q.topicSlug === topicSlug)
+    const targets = topicSlugAliases[topicSlug] ?? [topicSlug]
+    const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
     if (filtered.length > 0) pool = filtered
   }
   const shuffled = [...pool].sort(() => Math.random() - 0.5)

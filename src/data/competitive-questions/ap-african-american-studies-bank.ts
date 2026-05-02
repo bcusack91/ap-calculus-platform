@@ -70,8 +70,29 @@ const allQuestions: ApAfricanAmericanStudiesQuestion[] = [
   { id: 50, question: 'The Underground Railroad was:', options: ['A network of secret routes and safe houses helping enslaved people escape to freedom', 'A literal railroad', 'A government program', 'A militia'], correctAnswer: 0, explanation: 'Operated by abolitionists like Harriet Tubman.', difficulty: 'easy', topicSlug: 'resistance-abolition' },
 ]
 
+// Lesson-slug → bank-slug alias map. Lesson registry uses granular `aas-*` slugs;
+// existing bank uses 5 coarse category slugs. Map each lesson slug to the closest
+// matching category so competitive topic-filtered queries return relevant questions.
+const topicSlugAliases: Record<string, string[]> = {
+  'aas-african-kingdoms': ['origins-diaspora'],
+  'aas-transatlantic-slave-trade': ['origins-diaspora'],
+  'aas-slavery-in-america': ['origins-diaspora', 'resistance-abolition'],
+  'aas-resistance-abolition': ['resistance-abolition'],
+  'aas-reconstruction-jim-crow': ['resistance-abolition', 'community-society'],
+  'aas-great-migration-harlem': ['community-society', 'culture-identity'],
+  'aas-wwi-wwii-era': ['community-society', 'political-struggles'],
+  'aas-civil-rights-movement': ['political-struggles'],
+  'aas-black-power-beyond': ['political-struggles', 'culture-identity'],
+  'aas-contemporary-issues': ['political-struggles', 'culture-identity', 'community-society'],
+}
+
 export function getApAASQuestions(count: number = 10, topicSlug?: string): ApAfricanAmericanStudiesQuestion[] {
-  const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  let pool = allQuestions
+  if (topicSlug) {
+    const targets = topicSlugAliases[topicSlug] ?? [topicSlug]
+    const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
+    if (filtered.length > 0) pool = filtered
+  }
   const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

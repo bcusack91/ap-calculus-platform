@@ -69,8 +69,30 @@ const allQuestions: ApUsHistoryQuestion[] = [
   { id: 51, question: 'The Emancipation Proclamation (1863) freed enslaved people in:', options: ['States in active rebellion against the Union', 'All US states immediately', 'Border states only', 'Only Washington DC'], correctAnswer: 0, explanation: 'Did not apply to loyal slaveholding border states.', difficulty: 'medium', topicSlug: 'civil-war' },
 ]
 
+// Lesson-slug → bank-slug alias map. Lesson registry uses granular `apush-*` slugs;
+// existing bank uses 4 coarse era slugs. Map lesson slugs to nearest era category.
+const topicSlugAliases: Record<string, string[]> = {
+  'apush-native-societies-exploration': ['colonial-america'],
+  'apush-colonial-america': ['colonial-america'],
+  'apush-colonial-society-conflicts': ['colonial-america', 'revolution-independence'],
+  'apush-revolution-independence': ['revolution-independence'],
+  'apush-constitution-early-republic': ['revolution-independence'],
+  'apush-democracy-expansion': ['revolution-independence', 'civil-war'],
+  'apush-reform-movements': ['civil-war', 'revolution-independence'],
+  'apush-civil-war': ['civil-war'],
+  'apush-reconstruction': ['reconstruction'],
+  'apush-gilded-age': ['reconstruction'],
+  'apush-progressivism-wwi': ['reconstruction'],
+  'apush-depression-wwii': ['reconstruction'],
+}
+
 export function getApUSHistoryQuestions(count: number = 10, topicSlug?: string): ApUsHistoryQuestion[] {
-  const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  let pool = allQuestions
+  if (topicSlug) {
+    const targets = topicSlugAliases[topicSlug] ?? [topicSlug]
+    const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
+    if (filtered.length > 0) pool = filtered
+  }
   const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

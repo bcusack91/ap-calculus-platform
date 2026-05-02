@@ -58,8 +58,31 @@ const allQuestions: ApMacroQuestion[] = [
   { id: 42, question: 'A negative supply shock (e.g., oil price spike) causes:', options: ['Higher prices and lower output (stagflation)', 'Lower prices and higher output', 'No change', 'Falling unemployment only'], correctAnswer: 0, explanation: 'SRAS shifts left.', difficulty: 'medium', topicSlug: 'ad-as' },
 ]
 
+// Lesson-slug → bank-slug alias map. Lesson registry uses granular `macro-*` slugs;
+// existing bank uses 4 coarse category slugs.
+const topicSlugAliases: Record<string, string[]> = {
+  'macro-scarcity-opportunity-cost': ['gdp-growth'],
+  'macro-comparative-advantage': ['gdp-growth'],
+  'macro-gdp-growth': ['gdp-growth'],
+  'macro-unemployment-inflation': ['gdp-growth'],
+  'macro-ad-as': ['ad-as'],
+  'macro-multiplier-effect': ['ad-as', 'fiscal-policy'],
+  'macro-phillips-curve': ['ad-as'],
+  'macro-money-banking': ['monetary-policy'],
+  'macro-monetary-policy': ['monetary-policy'],
+  'macro-fiscal-policy': ['fiscal-policy'],
+  'macro-fiscal-policy-tools': ['fiscal-policy'],
+  'macro-open-economy': ['monetary-policy', 'gdp-growth'],
+  'macro-international-trade-finance': ['monetary-policy', 'gdp-growth'],
+}
+
 export function getApMacroQuestions(count: number = 10, topicSlug?: string): ApMacroQuestion[] {
-  const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  let pool = allQuestions
+  if (topicSlug) {
+    const targets = topicSlugAliases[topicSlug] ?? [topicSlug]
+    const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
+    if (filtered.length > 0) pool = filtered
+  }
   const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

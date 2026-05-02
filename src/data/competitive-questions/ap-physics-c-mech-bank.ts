@@ -235,10 +235,21 @@ const allQuestions: ApPhysicsCMechQuestion[] = [
   { id: 160, question: 'At Earth\'s surface, g equals:', options: ['GM/R²', 'GM/R', 'GMm/R²', 'M/R²'], correctAnswer: 0, explanation: 'g = GM_E/R_E² ≈ 9.8 m/s².', difficulty: 'easy', topicSlug: 'physics-c-universal-gravitation' },
 ]
 
+// Lesson-slug → bank-slug alias map. Lesson registry uses granular slugs;
+// the bank uses coarser category slugs. This routes lesson slugs to the most
+// closely related bank category so competitive mode returns relevant questions.
+const topicSlugAliases: Record<string, string[]> = {
+  'physics-c-1d-kinematics': ['physics-c-position-velocity-acceleration', 'physics-c-variable-acceleration'],
+  'physics-c-2d-kinematics': ['physics-c-position-velocity-acceleration', 'physics-c-circular-motion'],
+  'physics-c-potential-energy-curves': ['physics-c-conservative-forces', 'physics-c-work-power'],
+  'physics-c-variable-mass': ['physics-c-momentum-collisions', 'physics-c-center-of-mass'],
+}
+
 export function getApPhysicsCMechQuestions(count: number = 10, topicSlug?: string): ApPhysicsCMechQuestion[] {
   let pool = allQuestions
   if (topicSlug) {
-    const filtered = allQuestions.filter(q => q.topicSlug === topicSlug)
+    const targets = topicSlugAliases[topicSlug] ?? [topicSlug]
+    const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
     if (filtered.length > 0) pool = filtered
   }
   const shuffled = [...pool].sort(() => Math.random() - 0.5)

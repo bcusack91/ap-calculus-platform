@@ -82,8 +82,31 @@ const allQuestions: ApMicroQuestion[] = [
   { id: 62, question: 'Public goods are characterized by:', options: ['Non-rivalry and non-excludability', 'Excludability and rivalry', 'Privately produced only', 'Always congested'], correctAnswer: 0, explanation: 'Free-rider problem leads to underprovision.', difficulty: 'medium', topicSlug: 'market-failure' },
 ]
 
+// Lesson-slug → bank-slug alias map. Lesson registry uses granular `micro-*` slugs;
+// existing bank uses 6 coarse category slugs.
+const topicSlugAliases: Record<string, string[]> = {
+  'micro-scarcity-marginal-analysis': ['basic-concepts'],
+  'micro-supply-demand': ['supply-demand'],
+  'micro-demand-supply-equilibrium': ['supply-demand'],
+  'micro-elasticity': ['elasticity'],
+  'micro-government-intervention': ['supply-demand', 'market-failure'],
+  'micro-production-costs': ['market-structures'],
+  'micro-perfect-competition': ['market-structures'],
+  'micro-monopoly': ['market-structures'],
+  'micro-monopolistic-oligopoly': ['market-structures'],
+  'micro-labor-markets': ['factor-markets'],
+  'micro-factor-markets': ['factor-markets'],
+  'micro-externalities-public-goods': ['market-failure'],
+  'micro-market-failure': ['market-failure'],
+}
+
 export function getApMicroQuestions(count: number = 10, topicSlug?: string): ApMicroQuestion[] {
-  const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  let pool = allQuestions
+  if (topicSlug) {
+    const targets = topicSlugAliases[topicSlug] ?? [topicSlug]
+    const filtered = allQuestions.filter(q => targets.includes(q.topicSlug))
+    if (filtered.length > 0) pool = filtered
+  }
   const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
