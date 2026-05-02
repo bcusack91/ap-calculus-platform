@@ -81,13 +81,25 @@ export default function TopicEntranceQuiz({
 
   const masteredParts = useMemo(() => {
     const mastered = new Set<number>()
+    let coveredCorrect = 0
+    let coveredTotal = 0
     partResults.forEach((result, partNum) => {
+      coveredTotal += result.total
+      coveredCorrect += result.correct
       if (result.total > 0 && result.correct === result.total) {
         mastered.add(partNum)
       }
     })
+    // If the entrance quiz pool doesn't have a question for every part
+    // (e.g. an 8-question quiz across a 7-part lesson), a perfect score
+    // on the covered parts should mark the uncovered parts as mastered
+    // too — otherwise students who ace the quiz still get sent to parts
+    // they were never tested on.
+    if (coveredTotal > 0 && coveredCorrect === coveredTotal) {
+      partTitles.forEach(pt => mastered.add(pt.partNumber))
+    }
     return mastered
-  }, [partResults])
+  }, [partResults, partTitles])
 
   const handleConfirm = useCallback(() => {
     if (selectedAnswer === null) return

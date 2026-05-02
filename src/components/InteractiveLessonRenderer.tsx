@@ -762,11 +762,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                   timeSpent: 0,
                 }),
               })
+              // Trigger competitive mode unlock check so the profile is ready
+              fetch('/api/competitive/unlock-check').catch(() => {})
             } catch (error) {
               console.error('Failed to save final progress:', error)
             }
           }
-          router.push('/competitive')
+          // Route to course-specific competitive mode with the topic
+          // pre-selected (matches the exit-quiz completion handler).
+          const competitiveUrl = courseSlug
+            ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
+            : '/competitive'
+          router.push(competitiveUrl)
         }
         finalSave()
       } else {

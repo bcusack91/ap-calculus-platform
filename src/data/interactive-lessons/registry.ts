@@ -1200,6 +1200,45 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'AP Review', loader: () => import('./bio-biological-macromolecules-part7').then(m => m.bioMacromoleculesPart7Data) },
     ],
   },
+  // Dedicated 4-part lessons for each macromolecule (split out from the
+  // shared 7-part biological-macromolecules survey above so each topic can
+  // surface its own focused entrance/exit quiz).
+  'carbohydrates': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Carbohydrates', loader: () => import('./bio-carbohydrates-part1').then(m => m.bioCarbohydratesPart1Data) },
+      { title: 'Structure: Mono → Poly', loader: () => import('./bio-biological-macromolecules-part2').then(m => m.bioMacromoleculesPart2Data) },
+      { title: 'Function & Biological Significance', loader: () => import('./bio-carbohydrates-part3').then(m => m.bioCarbohydratesPart3Data) },
+      { title: 'AP Review', loader: () => import('./bio-carbohydrates-part4').then(m => m.bioCarbohydratesPart4Data) },
+    ],
+  },
+  'lipids': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Lipids', loader: () => import('./bio-lipids-part1').then(m => m.bioLipidsPart1Data) },
+      { title: 'Structure: TGs, Phospholipids, Steroids', loader: () => import('./bio-biological-macromolecules-part3').then(m => m.bioMacromoleculesPart3Data) },
+      { title: 'Function & Membranes', loader: () => import('./bio-lipids-part3').then(m => m.bioLipidsPart3Data) },
+      { title: 'AP Review', loader: () => import('./bio-lipids-part4').then(m => m.bioLipidsPart4Data) },
+    ],
+  },
+  'proteins': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Proteins', loader: () => import('./bio-proteins-part1').then(m => m.bioProteinsPart1Data) },
+      { title: 'Structure: Four Levels', loader: () => import('./bio-biological-macromolecules-part4').then(m => m.bioMacromoleculesPart4Data) },
+      { title: 'Function & Enzymes', loader: () => import('./bio-proteins-part3').then(m => m.bioProteinsPart3Data) },
+      { title: 'AP Review', loader: () => import('./bio-proteins-part4').then(m => m.bioProteinsPart4Data) },
+    ],
+  },
+  'nucleic-acids': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Nucleic Acids', loader: () => import('./bio-nucleic-acids-part1').then(m => m.bioNucleicAcidsPart1Data) },
+      { title: 'Structure: Nucleotides & Helix', loader: () => import('./bio-biological-macromolecules-part5').then(m => m.bioMacromoleculesPart5Data) },
+      { title: 'Function & Central Dogma', loader: () => import('./bio-nucleic-acids-part3').then(m => m.bioNucleicAcidsPart3Data) },
+      { title: 'AP Review', loader: () => import('./bio-nucleic-acids-part4').then(m => m.bioNucleicAcidsPart4Data) },
+    ],
+  },
   'enzyme-structure-function': {
     completionDestination: 'competitive',
     parts: [
@@ -7334,11 +7373,6 @@ const slugAliases: Record<string, string> = {
   'natural-selection': 'natural-selection-adaptation',
   'community-ecology': 'population-community-ecology',
   'water-properties': 'water-properties-biochemistry',
-  // Subtopics of biological-macromolecules — share the parent 7-part lesson
-  'carbohydrates': 'biological-macromolecules',
-  'lipids': 'biological-macromolecules',
-  'proteins': 'biological-macromolecules',
-  'nucleic-acids': 'biological-macromolecules',
   // Other AP Bio aliases pointing to existing hand-crafted lessons
   'enzymes-metabolism': 'enzyme-structure-function',
   'enzyme-kinetics': 'enzyme-structure-function',
