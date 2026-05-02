@@ -243,6 +243,8 @@ async function main() {
   }
 
   const transporter = buildTransporter()
+  let sent = 0
+  let failed = 0
   let consecutiveFails = 0
   const failedList: string[] = []
 
@@ -262,8 +264,6 @@ async function main() {
         console.error(`\nAborting: ${consecutiveFails} consecutive failures. Re-run later — sent.log is up to date.`)
         break
       }
-      failedList.push(r.email)
-      console.error(`FAIL ${r.email}:`, err instanceof Error ? err.message.split('\n')[0] : err)
     }
     await sleep(SEND_DELAY_MS)
   }
