@@ -1,6 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils'
 
 /**
  * GET  — Get async challenge details (questions visible only when it's your turn)
@@ -217,6 +218,117 @@ export async function POST(
           completedAt: new Date(),
         },
       })
+
+      // === MMR / win-loss update for both players ===
+      // Async challenges count toward the same competitive ladder as live matches.
+      // Ties result in 0 MMR change for both players.
+      try {
+        const [challengerProfile, recipientProfile] = await Promise.all([
+          prisma.competitiveProfile.findUnique({ where: { userId: challenge.challengerId } }),
+          prisma.competitiveProfile.findUnique({ where: { userId } }),
+        ])
+
+        // Auto-create a profile if missing so brand-new accounts still get rated.
+        const ensuredChallenger = challengerProfile ?? await prisma.competitiveProfile.create({
+          data: { userId: challenge.challengerId, competitiveModeUnlocked: true },
+        })
+        const ensuredRecipient = recipientProfile ?? await prisma.competitiveProfile.create({
+          data: { userId, competitiveModeUnlocked: true },
+        })
+
+        const challengerMMR = ensuredChallenger.overallMMR
+        const recipientMMR = ensuredRecipient.overallMMR
+        const challengerWon = winnerId === challenge.challengerId
+        const recipientWon = winnerId === userId
+        const isTie = winnerId === null
+
+        const challengerMMRChange = isTie
+          ? 0
+          : calculateMMRChange(challengerMMR, recipientMMR, challengerWon, ensuredChallenger.totalMatches)
+        const recipientMMRChange = isTie
+          ? 0
+          : calculateMMRChange(recipientMMR, challengerMMR, recipientWon, ensuredRecipient.totalMatches)
+        const challengerMMRAfter = challengerMMR + challengerMMRChange
+        const recipientMMRAfter = recipientMMR + recipientMMRChange
+
+        const challengerAccuracy = challenge.questionCount > 0
+          ? challenge.challengerScore / challenge.questionCount
+          : 0
+        const recipientAccuracy = challenge.questionCount > 0
+          ? score / challenge.questionCount
+          : 0
+
+        await Promise.all([
+          prisma.competitiveProfile.update({
+            where: { userId: challenge.challengerId },
+            data: {
+              overallMMR: challengerMMRAfter,
+              totalMatches: { increment: 1 },
+              wins: challengerWon ? { increment: 1 } : undefined,
+              losses: recipientWon ? { increment: 1 } : undefined,
+              winStreak: challengerWon ? { increment: 1 } : (isTie ? undefined : 0),
+              bestWinStreak: challengerWon
+                ? Math.max(ensuredChallenger.winStreak + 1, ensuredChallenger.bestWinStreak)
+                : undefined,
+              rank: getRankFromMMR(challengerMMRAfter),
+              lastMatchAt: new Date(),
+            },
+          }),
+          prisma.competitiveProfile.update({
+            where: { userId },
+            data: {
+              overallMMR: recipientMMRAfter,
+              totalMatches: { increment: 1 },
+              wins: recipientWon ? { increment: 1 } : undefined,
+              losses: challengerWon ? { increment: 1 } : undefined,
+              winStreak: recipientWon ? { increment: 1 } : (isTie ? undefined : 0),
+              bestWinStreak: recipientWon
+                ? Math.max(ensuredRecipient.winStreak + 1, ensuredRecipient.bestWinStreak)
+                : undefined,
+              rank: getRankFromMMR(recipientMMRAfter),
+              lastMatchAt: new Date(),
+            },
+          }),
+          prisma.mMRHistory.create({
+            data: {
+              userId: challenge.challengerId,
+              topicSlug: challenge.topicSlug,
+              mmrBefore: challengerMMR,
+              mmrAfter: challengerMMRAfter,
+              mmrChange: challengerMMRChange,
+              gameMode: 'ACCURACY_CHALLENGE',
+              performance: JSON.stringify({
+                async: true,
+                score: challenge.challengerScore,
+                total: challenge.questionCount,
+                accuracy: challengerAccuracy,
+                timeMs: challenge.challengerTime,
+              }),
+            },
+          }),
+          prisma.mMRHistory.create({
+            data: {
+              userId,
+              topicSlug: challenge.topicSlug,
+              mmrBefore: recipientMMR,
+              mmrAfter: recipientMMRAfter,
+              mmrChange: recipientMMRChange,
+              gameMode: 'ACCURACY_CHALLENGE',
+              performance: JSON.stringify({
+                async: true,
+                score,
+                total: challenge.questionCount,
+                accuracy: recipientAccuracy,
+                timeMs: safeTime,
+              }),
+            },
+          }),
+        ])
+      } catch (mmrErr) {
+        // Don't fail the submission if MMR bookkeeping has an issue — the challenge
+        // result is still recorded; ratings can be reconciled later.
+        console.error('Async challenge MMR update failed:', mmrErr)
+      }
 
       return NextResponse.json({
         score,

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { prisma } from '@/lib/prisma'
+import { publicDisplayName } from '@/lib/display-name'
 
 const TOPIC_LABELS: Record<string, string> = {
   'the-unit-circle': 'Unit Circle',
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     }
   }
 
-  const challengerName = challenge.challenger?.name ?? 'A friend'
+  const challengerName = publicDisplayName(challenge.challenger?.name, 'A friend')
   const subject = topicLabel(challenge.topicSlug)
   const title = `${challengerName} challenged you to ${subject}!`
   const description = `${challengerName} scored ${challenge.challengerScore}/${challenge.questionCount} on a ${subject} async quiz. Take the same questions head-to-head and see if you can beat them.`

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState, useCallback } from 'react'
 import AvatarDisplay from './AvatarDisplay'
 import type { AvatarData } from '@/types/avatar'
+import { publicDisplayName } from '@/lib/display-name'
 
 interface UserLite {
   id: string
@@ -191,7 +192,7 @@ export function NotificationBell() {
                         {avatarFor(item.from)}
                         <div className="flex-1 min-w-0">
                           <p className="text-sm text-gray-900 dark:text-white">
-                            <span className="font-semibold">{item.from?.name || 'Someone'}</span> challenged you
+                            <span className="font-semibold">{publicDisplayName(item.from?.name, 'Someone')}</span> challenged you
                           </p>
                           <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                             {item.topicSlug} · {relativeTime(item.timestamp)}
@@ -220,7 +221,7 @@ export function NotificationBell() {
                       {avatarFor(item.opponent)}
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-gray-900 dark:text-white">
-                          <span className="font-semibold">{item.opponent?.name || 'Opponent'}</span> finished your challenge
+                          <span className="font-semibold">{publicDisplayName(item.opponent?.name, 'Opponent')}</span> finished your challenge
                         </p>
                         <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                           {item.myScore}–{item.opponentScore} · {item.topicSlug} · {relativeTime(item.timestamp)}

@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
+import { publicDisplayName } from '@/lib/display-name'
 
 export const revalidate = 3600 // 1 hour
 
@@ -30,7 +31,7 @@ export async function GET() {
 
   const leaderboard = profiles.map((p, i) => ({
     position: i + 1,
-    name: p.user.name || 'Anonymous',
+    name: publicDisplayName(p.user.name),
     avatarData: p.user.avatarData,
     mmr: p.overallMMR,
     rank: p.rank,

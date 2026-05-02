@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { prisma } from '@/lib/prisma'
+import { publicDisplayName } from '@/lib/display-name'
 
 export const runtime = 'nodejs'
 export const alt = 'You have been challenged on Study Mondo!'
@@ -47,7 +48,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
     },
   })
 
-  const challengerName = challenge?.challenger?.name ?? 'A friend'
+  const challengerName = publicDisplayName(challenge?.challenger?.name, 'A friend')
   const subject = challenge ? topicLabel(challenge.topicSlug) : 'a quick quiz'
   const score = challenge?.challengerScore ?? null
   const total = challenge?.questionCount ?? null

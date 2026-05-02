@@ -8,6 +8,7 @@ import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
+import { publicDisplayName } from '@/lib/display-name'
 import 'katex/dist/katex.min.css'
 
 interface Question {
@@ -303,7 +304,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                     </div>
                   )}
                 </div>
-                <p className="text-white font-semibold text-sm mb-1">{challenge.challenger.name || 'Challenger'}</p>
+                <p className="text-white font-semibold text-sm mb-1">{publicDisplayName(challenge.challenger.name, 'Challenger')}</p>
                 <p className="text-3xl font-bold text-white">{challenge.challengerScore}/{challenge.questionCount}</p>
                 {challenge.challengerTime != null && (
                   <p className="text-gray-400 text-xs mt-1">{(challenge.challengerTime / 1000).toFixed(1)}s</p>
@@ -326,7 +327,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                     <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-gray-400 text-lg">?</div>
                   )}
                 </div>
-                <p className="text-white font-semibold text-sm mb-1">{challenge.recipient?.name || 'Waiting...'}</p>
+                <p className="text-white font-semibold text-sm mb-1">{challenge.recipient ? publicDisplayName(challenge.recipient.name, 'Opponent') : 'Waiting...'}</p>
                 {challenge.recipientScore != null ? (
                   <p className="text-3xl font-bold text-white">{challenge.recipientScore}/{challenge.questionCount}</p>
                 ) : (
@@ -429,7 +430,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                       {(challenge.challenger.name || '?')[0]}
                     </div>
                   )}
-                  <span className="text-white font-semibold">{challenge.challenger.name || 'Someone'}</span>
+                  <span className="text-white font-semibold">{publicDisplayName(challenge.challenger.name, 'Someone')}</span>
                   <span className="text-gray-400">challenged you!</span>
                 </div>
                 <p className="text-gray-300 text-sm mb-6">Answer the same {challenge.questionCount} questions and see who scores higher. You have {Math.floor(challenge.timeLimit / 60)} minutes.</p>
@@ -617,19 +618,19 @@ function RematchPanel({
         <div className="text-center">
           <h3 className="text-lg font-bold text-white mb-1">Get them back?</h3>
           <p className="text-sm text-gray-300 mb-4">
-            Send <span className="font-semibold text-white">{opponent.name || 'your opponent'}</span> another challenge on a topic you choose.
+            Send <span className="font-semibold text-white">{publicDisplayName(opponent.name, 'your opponent')}</span> another challenge on a topic you choose.
           </p>
           <button
             onClick={handleOpen}
             className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold rounded-xl text-lg shadow-lg transition-all"
           >
-            🔁 Rematch {opponent.name?.split(' ')[0] || 'them'}
+            🔁 Rematch {publicDisplayName(opponent.name, 'them').split(' ')[0]}
           </button>
         </div>
       ) : (
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-white">Pick a topic for {opponent.name?.split(' ')[0] || 'them'}</h3>
+            <h3 className="text-lg font-bold text-white">Pick a topic for {publicDisplayName(opponent.name, 'them').split(' ')[0]}</h3>
             <button onClick={() => setOpen(false)} className="text-gray-400 hover:text-gray-200 text-sm">Cancel</button>
           </div>
 

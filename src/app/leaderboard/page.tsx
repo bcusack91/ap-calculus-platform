@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
+import { publicDisplayName } from '@/lib/display-name'
 
 export const revalidate = 3600 // 1 hour ISR
 
@@ -61,7 +62,7 @@ export default async function LeaderboardPage() {
 
   const entries = profiles.map((p, i) => ({
     position: i + 1,
-    name: p.user.name || 'Anonymous',
+    name: publicDisplayName(p.user.name),
     mmr: p.overallMMR,
     rank: p.rank,
     totalMatches: p.totalMatches,
