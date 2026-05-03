@@ -38,6 +38,8 @@ const nextConfig: NextConfig = {
       'https://ep2.adtrafficquality.google',
       'https://va.vercel-scripts.com',
       'https://cdn.jsdelivr.net',
+      'https://www.clarity.ms',
+      'https://*.clarity.ms',
     ]
       .filter(Boolean)
       .join(' ')
@@ -78,7 +80,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
-              "connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io",
+              "connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms",
               "frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://tpc.googlesyndication.com https://ep2.adtrafficquality.google",
               "object-src 'none'",
               "base-uri 'self'",
