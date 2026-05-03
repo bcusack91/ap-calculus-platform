@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-enviro-unit-tests', label: 'Unit Tests' },
     { href: '/ap-enviro-daily-question', label: 'Daily Question' },
   ],
-  accent: 'lime',
+  accent: 'green',
   totalTimeMinutes: 160, // 90 + 70
   sections: [
     {

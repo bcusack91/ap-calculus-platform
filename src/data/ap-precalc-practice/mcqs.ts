@@ -15,6 +15,7 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
 export const MCQS: MCQItem[] = [
   /* ============== UNIT 1: Polynomial & Rational Functions ============== */
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'The polynomial $p(x) = 2x^3 - 5x^2 + x - 3$ has what end behavior?',
     options: [
@@ -27,6 +28,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Odd-degree polynomial with positive leading coefficient: opposite end behaviors, rising on the right and falling on the left.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'A polynomial $p(x)$ has zeros at $x = -2$ (multiplicity 2), $x = 0$ (multiplicity 1), and $x = 3$ (multiplicity 1). Which is true at $x = -2$?',
     options: [
@@ -39,6 +41,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Even multiplicity ⇒ the graph touches the x-axis but does not cross. Odd multiplicity ⇒ crossing.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'What is the average rate of change of $f(x) = x^3 - 2x$ on $[1, 3]$?',
     options: ['10', '11', '12', '13'],
@@ -46,6 +49,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'AROC $= \\dfrac{f(3) - f(1)}{3 - 1} = \\dfrac{(27 - 6) - (1 - 2)}{2} = \\dfrac{21 - (-1)}{2} = \\dfrac{22}{2} = 11$.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'The function $f(x) = \\dfrac{2x^2 - 8}{x^2 - x - 6}$ has which features?',
     options: [
@@ -58,6 +62,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Factor: $\\dfrac{2(x-2)(x+2)}{(x-3)(x+2)}$. The $(x+2)$ cancels ⇒ hole at $x=-2$. VA at $x=3$. Same degree top and bottom ⇒ HA at the ratio of leading coefficients $= 2/1 = 2$.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'For the rational function $r(x) = \\dfrac{x^2 + 1}{x - 2}$, what is the slant asymptote?',
     options: ['$y = x$', '$y = x + 2$', '$y = x - 2$', '$y = 2x$'],
@@ -65,6 +70,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Long division: $\\dfrac{x^2+1}{x-2} = x + 2 + \\dfrac{5}{x-2}$. The slant asymptote is $y = x + 2$.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'Solve: $\\dfrac{x - 1}{x + 3} \\geq 0$.',
     options: [
@@ -77,6 +83,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Critical values: $x = 1$ (zero) and $x = -3$ (undefined). Sign chart: + on $(-\\infty,-3)$, − on $(-3,1)$, + on $(1,\\infty)$. Inequality is ≥ 0, so include the zero $x=1$ but exclude $x=-3$ where the function is undefined.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'A polynomial of degree 4 has at most how many turning points (relative extrema)?',
     options: ['2', '3', '4', '5'],
@@ -84,6 +91,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A polynomial of degree $n$ has at most $n - 1$ turning points. Degree 4 ⇒ at most 3.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'If $f(x) = x^2 - 4x + 1$, what is $f(x + 2) - f(x)$?',
     options: ['$2x$', '$4x - 4$', '$2x - 4$', '$2x + 2$'],
@@ -91,6 +99,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$f(x+2) = (x+2)^2 - 4(x+2) + 1 = x^2 + 4x + 4 - 4x - 8 + 1 = x^2 - 3$. So $f(x+2) - f(x) = (x^2 - 3) - (x^2 - 4x + 1) = 4x - 4$.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'The function $f$ is increasing on $(-\\infty, 1)$ and decreasing on $(1, \\infty)$. Which statement must be true about the rate of change of $f$ at $x = 1$?',
     options: [
@@ -103,6 +112,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Increasing means positive rate of change; decreasing means negative. Switching at $x = 1$ requires the rate to transition from positive through (probably) zero to negative.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'A cubic polynomial $p$ has a double root at $x = 4$ and another root at $x = -1$. Which is a possible expression for $p(x)$?',
     options: [
@@ -115,6 +125,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Double root at $x = 4$ ⇒ factor $(x - 4)^2$. Root at $x = -1$ ⇒ factor $(x + 1)$. (Sign of leading coefficient is unconstrained, but option A has the right factor structure.)',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'Let $f(x) = \\dfrac{1}{x-2}$. As $x$ approaches 2 from the right, $f(x)$ approaches',
     options: ['0', '$+\\infty$', '$-\\infty$', '1'],
@@ -122,6 +133,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'For $x$ slightly greater than 2, $x - 2$ is a small positive number, so $1/(x-2) \\to +\\infty$.',
   },
   {
+    type: 'mcq',
     topic: 'polynomial-rational-functions',
     question: 'A polynomial $f$ satisfies $f(2) = 0$ and $f(-3) = 0$. By the Factor Theorem, $f(x)$ is divisible by',
     options: ['$x^2 - 5x + 6$', '$x^2 - x - 6$', '$x^2 + x - 6$', '$(x - 2)(x + 3)$ both expressions are equivalent.'],
@@ -131,6 +143,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 2: Exponential & Logarithmic ============== */
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'Solve: $3^{2x-1} = 27$.',
     options: ['$x = 1$', '$x = 2$', '$x = 3$', '$x = 4$'],
@@ -138,6 +151,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$27 = 3^3$, so $2x - 1 = 3$ ⇒ $2x = 4$ ⇒ $x = 2$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'Solve: $\\log_2(x) + \\log_2(x-2) = 3$.',
     options: ['$x = 4$ only', '$x = -2$ only', '$x = 4$ or $x = -2$', 'No solution.'],
@@ -145,6 +159,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Combine: $\\log_2[x(x-2)] = 3$ ⇒ $x(x-2) = 8$ ⇒ $x^2 - 2x - 8 = 0$ ⇒ $(x-4)(x+2) = 0$ ⇒ $x = 4$ or $x = -2$. Check domain: $\\log_2(x)$ requires $x > 0$, so $x = -2$ is rejected.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'If $\\ln(a) = 3$ and $\\ln(b) = 5$, then $\\ln(a^2 b)$ equals',
     options: ['8', '11', '13', '15'],
@@ -152,6 +167,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$\\ln(a^2 b) = 2\\ln(a) + \\ln(b) = 2(3) + 5 = 11$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'A bacterial culture grows according to $P(t) = 200 \\cdot 2^{t/3}$, where $t$ is hours. After how many hours will the population reach 1600?',
     options: ['6', '9', '12', '15'],
@@ -159,6 +175,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$200 \\cdot 2^{t/3} = 1600$ ⇒ $2^{t/3} = 8 = 2^3$ ⇒ $t/3 = 3$ ⇒ $t = 9$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'The function $f(x) = e^{-x}$ is',
     options: [
@@ -171,6 +188,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$e^{-x} = (1/e)^x$ where the base $1/e < 1$, so the function is decreasing. The HA is $y = 0$ as $x \\to +\\infty$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'If $\\log_b(8) = 3$, what is $b$?',
     options: ['2', '4', '8', '24'],
@@ -178,6 +196,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'By definition: $b^3 = 8$ ⇒ $b = 2$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'Express $\\log_2(80) - \\log_2(5)$ as a single logarithm and evaluate.',
     options: ['$\\log_2(85) = $ approximately 6.4', '$\\log_2(16) = 4$', '$\\log_2(75) = $ approximately 6.2', '$\\log_2(400) = $ approximately 8.6'],
@@ -185,6 +204,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$\\log_2(80/5) = \\log_2(16) = 4$ since $2^4 = 16$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'A radioactive substance decays by 25% every 10 years. The remaining mass after $t$ years can be modeled by',
     options: [
@@ -197,6 +217,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"Decays by 25% every 10 years" ⇒ retains 75% every 10 years. Use $0.75$ as the base and exponent $t/10$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'The graph of $y = \\log_3(x - 2)$ has a vertical asymptote at',
     options: ['$x = 0$', '$x = 2$', '$x = 3$', '$y = 2$'],
@@ -204,6 +225,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The argument of the log must be positive: $x - 2 > 0$. The boundary $x - 2 = 0$ is the vertical asymptote: $x = 2$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'Which expression is equivalent to $\\dfrac{1}{2}\\log(x) + 3\\log(y) - \\log(z)$?',
     options: [
@@ -216,6 +238,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Coefficients become exponents: $\\log(x^{1/2}) + \\log(y^3) - \\log(z) = \\log\\left(\\dfrac{x^{1/2} y^3}{z}\\right)$.',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'The exponential function $f(x) = a \\cdot b^x$ passes through $(0, 5)$ and $(2, 45)$. What is $b$?',
     options: ['2', '3', '5', '9'],
@@ -223,6 +246,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'From $(0,5)$: $a = 5$. From $(2,45)$: $5 b^2 = 45$ ⇒ $b^2 = 9$ ⇒ $b = 3$ (positive base).',
   },
   {
+    type: 'mcq',
     topic: 'exponential-logarithmic',
     question: 'Solve: $e^{2x} - 5e^x + 6 = 0$.',
     options: [
@@ -237,6 +261,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 3: Trigonometric & Polar ============== */
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'What is the exact value of $\\sin\\left(\\dfrac{7\\pi}{6}\\right)$?',
     options: ['$\\dfrac{1}{2}$', '$-\\dfrac{1}{2}$', '$\\dfrac{\\sqrt{3}}{2}$', '$-\\dfrac{\\sqrt{3}}{2}$'],
@@ -244,6 +269,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$7\\pi/6$ is in QIII (reference angle $\\pi/6$). Sine is negative in QIII. $\\sin(\\pi/6) = 1/2$, so $\\sin(7\\pi/6) = -1/2$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'The function $f(x) = 3\\sin(2x - \\pi) + 1$ has',
     options: [
@@ -256,6 +282,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Amplitude $= |3| = 3$. Period $= 2\\pi/|2| = \\pi$. Phase shift: $2x - \\pi = 2(x - \\pi/2)$, so shift is $\\pi/2$ to the right. Midline $y = 1$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'If $\\cos\\theta = -\\dfrac{3}{5}$ and $\\theta$ is in QII, what is $\\sin\\theta$?',
     options: ['$\\dfrac{4}{5}$', '$-\\dfrac{4}{5}$', '$\\dfrac{3}{5}$', '$-\\dfrac{3}{5}$'],
@@ -263,6 +290,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Pythagorean identity: $\\sin^2\\theta = 1 - 9/25 = 16/25$ ⇒ $\\sin\\theta = \\pm 4/5$. In QII, sine is positive ⇒ $4/5$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'Simplify: $\\dfrac{\\sin^2 x}{1 - \\cos x}$.',
     options: ['$1 + \\cos x$', '$1 - \\cos x$', '$\\sin x$', '$\\cos x$'],
@@ -270,6 +298,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$\\sin^2 x = 1 - \\cos^2 x = (1-\\cos x)(1+\\cos x)$. Cancel $(1-\\cos x)$ ⇒ $1 + \\cos x$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'Solve $2\\sin x = 1$ on $[0, 2\\pi)$.',
     options: [
@@ -282,6 +311,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$\\sin x = 1/2$. In $[0, 2\\pi)$, sine equals $1/2$ at $x = \\pi/6$ (QI) and $x = \\pi - \\pi/6 = 5\\pi/6$ (QII).',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'If $\\tan\\theta = \\dfrac{5}{12}$ and $\\theta$ is in QI, what is $\\sec\\theta$?',
     options: ['$\\dfrac{13}{12}$', '$\\dfrac{12}{13}$', '$\\dfrac{13}{5}$', '$\\dfrac{5}{13}$'],
@@ -289,6 +319,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Right triangle: opposite 5, adjacent 12, hypotenuse $\\sqrt{25+144}=13$. $\\sec\\theta = $ hyp/adj $= 13/12$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'What is the range of $\\arcsin(x)$?',
     options: ['$[0, \\pi]$', '$[-\\pi/2, \\pi/2]$', '$(-\\pi/2, \\pi/2)$', '$[-\\pi, \\pi]$'],
@@ -296,6 +327,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'By convention, $\\arcsin$ returns angles in $[-\\pi/2, \\pi/2]$. (Endpoints included because $\\sin(\\pm\\pi/2) = \\pm 1$ are in the domain $[-1,1]$.)',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'Convert the polar point $(r, \\theta) = (4, 2\\pi/3)$ to rectangular form.',
     options: [
@@ -308,6 +340,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$x = r\\cos\\theta = 4\\cos(2\\pi/3) = 4 \\cdot (-1/2) = -2$. $y = r\\sin\\theta = 4\\sin(2\\pi/3) = 4 \\cdot (\\sqrt{3}/2) = 2\\sqrt{3}$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'The polar equation $r = 2\\cos\\theta$ describes',
     options: [
@@ -320,6 +353,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Multiply by $r$: $r^2 = 2r\\cos\\theta$ ⇒ $x^2 + y^2 = 2x$ ⇒ $(x-1)^2 + y^2 = 1$. Circle of radius 1 centered at $(1,0)$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'Use the double-angle identity to evaluate $2\\sin(15°)\\cos(15°)$.',
     options: ['$\\sin(30°) = 1/2$', '$\\cos(30°) = \\sqrt{3}/2$', '$\\sin(15°) = $ approximately 0.259', '$\\sin(45°) = \\sqrt{2}/2$'],
@@ -327,6 +361,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Double-angle: $2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$. Here $2(15°) = 30°$, so the value is $\\sin(30°) = 1/2$.',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'A Ferris wheel has radius 20 m and its center is 22 m above the ground. It completes one revolution every 60 s. If a rider starts at the lowest point at $t = 0$, which sinusoidal function gives the rider\'s height $h(t)$ in meters?',
     options: [
@@ -339,6 +374,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Midline (center height) $= 22$. Amplitude $= 20$. Period $= 60$ s ⇒ $b = 2\\pi/60 = \\pi/30$. Starts at the bottom ⇒ use $-\\cos$ (since $-\\cos(0) = -1$, giving $h(0) = 22 - 20 = 2$, the bottom).',
   },
   {
+    type: 'mcq',
     topic: 'trigonometric-functions',
     question: 'Which value of $\\theta$ in $[0, 2\\pi)$ is NOT in the domain of $\\tan\\theta$?',
     options: ['$\\theta = 0$', '$\\theta = \\pi/4$', '$\\theta = \\pi/2$', '$\\theta = \\pi$'],
@@ -348,6 +384,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 4: Functions / Sequences / Vectors / Matrices ============== */
   {
+    type: 'mcq',
     topic: 'functions-sequences',
     question: 'A sequence is defined recursively by $a_1 = 3$, $a_{n+1} = 2a_n - 1$. What is $a_4$?',
     options: ['11', '15', '17', '23'],
@@ -355,6 +392,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$a_2 = 2(3) - 1 = 5$. $a_3 = 2(5) - 1 = 9$. $a_4 = 2(9) - 1 = 17$.',
   },
   {
+    type: 'mcq',
     topic: 'functions-sequences',
     question: 'For functions $f(x) = 2x + 1$ and $g(x) = x^2$, what is $(f \\circ g)(3)$?',
     options: ['19', '49', '37', '13'],
@@ -362,6 +400,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$g(3) = 9$. $f(9) = 2(9) + 1 = 19$.',
   },
   {
+    type: 'mcq',
     topic: 'vectors-matrices',
     question: 'Vectors $\\mathbf{u} = \\langle 3, -1 \\rangle$ and $\\mathbf{v} = \\langle 2, 4 \\rangle$. What is $2\\mathbf{u} - \\mathbf{v}$?',
     options: ['$\\langle 4, -6 \\rangle$', '$\\langle 8, 2 \\rangle$', '$\\langle 1, -5 \\rangle$', '$\\langle 4, 2 \\rangle$'],
@@ -369,6 +408,7 @@ export const MCQS: MCQItem[] = [
     explanation: '$2\\mathbf{u} = \\langle 6, -2 \\rangle$. $2\\mathbf{u} - \\mathbf{v} = \\langle 6 - 2, -2 - 4 \\rangle = \\langle 4, -6 \\rangle$.',
   },
   {
+    type: 'mcq',
     topic: 'vectors-matrices',
     question: 'The 2×2 matrix $\\begin{bmatrix} 2 & 1 \\\\ 4 & 3 \\end{bmatrix}$ has determinant',
     options: ['2', '5', '6', '10'],

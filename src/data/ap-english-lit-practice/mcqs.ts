@@ -108,6 +108,7 @@ const DRAMA_1 = `**Passage 5 — From a contemporary one-act play. The scene is 
 export const MCQS: MCQItem[] = [
   /* ---------------- POEM 1 (Q1–Q11) ---------------- */
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The kettle\'s song is described in line 2 as "a thin domestic music," a phrase that primarily characterizes the music as',
@@ -121,6 +122,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"Thin" suggests slightness, "domestic" places the music firmly in the home. Together they characterize the kettle\'s sound as small, ordinary, and bound to the household.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The juxtaposition of "complaint" and "hymn" in lines 2–3 functions to',
@@ -134,6 +136,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The kettle is "half complaint, / half something like a hymn." The pairing acknowledges both the petulant whistle and the soothing ritual; it is descriptive rather than doctrinal.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'In stanza 2 (lines 5–8), the contrast between "outside" and "inside" primarily serves to',
@@ -147,6 +150,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Outside: cold snow, departed birds, a bare wire. Inside: a fire, a sleeping cat, a singing kettle. The contrast establishes the room as a small island of warmth, a recurring motif in domestic poems of seasonal change.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The phrase "the line birds left / an hour or so ago" (lines 6–7) primarily contributes which effect?',
@@ -160,6 +164,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The detail is narrowly observational ("an hour or so ago") and adds the idea of a recently emptied space — birds gone, mother gone. The small absence prepares the larger one.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'In stanza 3 (lines 9–12), the speaker characterizes her mother\'s preparation of the kettle as',
@@ -173,6 +178,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"With the same small motion every year… as though she did / some sacred thing the world need not know here." The diction "sacred" and "every year" elevates a domestic act into a private rite.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The phrase "the world need not know here" (line 12) suggests that the mother\'s ritual is',
@@ -186,6 +192,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The ritual is sacred to the woman and her household; its meaning does not require an audience. The line valorizes the small private act over the visible public one.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The transition signaled by "I do it now, alone" (line 13) primarily achieves which effect?',
@@ -199,6 +206,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The first three stanzas describe a remembered scene; line 13 brings the speaker into the present, performing the ritual herself. The transition is the structural pivot.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The paradox in lines 13–14 ("how much, in losing her, I haven\'t lost") is best understood as the speaker\'s recognition that',
@@ -212,6 +220,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The speaker has lost her mother (line 9) but still has the kettle, the pouring, the seasonal change at the window. Inheritance is partial recovery: what is gone has also remained.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The last word of the poem, "the cost" (line 16), introduces a tonal turn that suggests',
@@ -225,6 +234,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The dash before "and the cost" pulls the catalog up short. After enumerating what has been kept, the poem admits, finally, what was paid for it. The grief had been suspended; the last word releases it.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The poem\'s rhyme scheme (ABAB throughout) most strongly contributes to which effect?',
@@ -238,6 +248,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The poem\'s subject is recurrence — the same kettle, the same gesture, every year. A regular ABAB scheme makes the form mimic the content: ritual itself.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_1,
     question: 'The poem as a whole is best characterized as',
@@ -253,6 +264,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- PROSE 1: Mrs. Hadley (Q12–Q22) ---------------- */
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The opening detail that Mrs. Hadley arrived "at six minutes past seven, which was, by the standards of the Ladies\' Aid, a small scandal" (sentence 1) primarily serves to',
@@ -266,6 +278,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A six-minute lateness as "a small scandal" relies on the wry distance between the narrator and the world she describes. The phrase "by the standards of the Ladies\' Aid" is the clue: the standards are local and disproportionately strict.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The lengthy second sentence, in which Mrs. Hadley pauses on the sidewalk, primarily characterizes her as',
@@ -279,6 +292,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The simile is precise: "like a child who has been sent on an errand and forgotten what for." The narrator is not diagnosing dementia; she is reporting an emotional residue — the small disorientation of a long life.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The phrase "a sky the color of weak tea" (sentence 2) is best described as',
@@ -292,6 +306,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The story\'s social world is one of women, china cups, parish meetings. To describe a sky as "weak tea" is to render even the cosmos in domestic terms — a quiet but consistent narrative choice.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The arrangement of the women in sentence 3 ("their hats in their laps, their hands folded over their hats") functions primarily to',
@@ -305,6 +320,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The phrase is structural — three repeated possessives, two parallel small actions. The women have arranged themselves in identical ways: the meeting is a small choreography of order.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'Margaret Atwell\'s remark "We had begun to wonder, Edith" (sentence 4) is most accurately characterized as',
@@ -318,6 +334,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The narrator immediately glosses the remark: "She did not say it unkindly… as one says a small barometric reading." The form is courteous; the content registers a small public censure that the room understands.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The image of the room\'s temperature adjusting "by perhaps half a degree" (sentence 6) primarily serves to',
@@ -331,6 +348,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The narrator borrows the language of measurement (half a degree, barometric reading) to convey a social atmosphere so subtle no one in the room would name it — but Mrs. Hadley feels it precisely.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The brief sentence "She did not say it unkindly" (sentence 5) is most important to the passage because it',
@@ -344,6 +362,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The sentence holds two truths in tension: the form is not unkind; the effect is nonetheless cold. That tension — civility without warmth — is the social texture the whole passage is mapping.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'Mrs. Hadley\'s statement "I missed the seven o\'clock" (sentence 7), explicitly noted by the narrator as "not quite true," primarily reveals that',
@@ -357,6 +376,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The real reason — pausing on a sidewalk to look at a tea-colored sky — is too private and too strange to offer. A small acceptable lie is the price of staying inside the social compact.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The narrator\'s perspective in this passage is best described as',
@@ -370,6 +390,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The narrator reports both the public exchange and Mrs. Hadley\'s private feelings (the simile of the child on an errand, the felt half-degree drop), while also stepping back to gloss the social meaning of Margaret\'s remark — the stance is third-person omniscient with shifting focalization.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'The passage\'s final action — Margaret turning back to "the minutes of the previous meeting" (sentence 8) — primarily contributes which effect?',
@@ -383,6 +404,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The closure is procedural. The minutes of the previous meeting are exactly what one returns to in order to indicate that the present interruption is over and need not be recorded.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_1,
     question: 'Which best describes a central concern of the passage as a whole?',
@@ -398,6 +420,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- POEM 2 (Q23–Q33) ---------------- */
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The father\'s observation in lines 3–4 ("a man could spend his life / on twenty acres and not learn the half of it") establishes which central idea?',
@@ -411,6 +434,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The father\'s remark is the poem\'s thematic spine. A lifetime is not enough to know twenty acres — the field exceeds knowing. The rest of the poem fills out what he meant.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The repeated phrase "He meant" (lines 5, 11, 13) primarily functions to',
@@ -424,6 +448,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The anaphora ("He meant") gathers details — the lightning-struck oak, the pines, the water, the rocks, the deer — into a slow inventory. The speaker is, in effect, decoding a remark he heard once into the world it referred to.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The image of the oak that "had been struck by lightning twice / and split, and gone on living" (lines 6–7) functions primarily as',
@@ -437,6 +462,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The oak is split but living. In a poem about the persistence of land beyond human time, the image carries an obvious second meaning: things break and continue. The poem invites, without insisting on, the resonance.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The repetition "someone\'s / father, someone\'s / father had set out in 1910 perhaps" (lines 8–9) achieves which effect?',
@@ -450,6 +476,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The stutter — "someone\'s / father, someone\'s / father" — pulls the reader back through generations the speaker cannot name. The repetition does what the speaker cannot: it counts the distance.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The triplet of motives "for windbreak, for the future, for the sound" (line 10) is best described as',
@@ -463,6 +490,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The list moves outward: windbreak (immediate utility), the future (long-term), the sound (an almost gratuitous, sensory good). The progression is the poem\'s view of why anyone tends to land — for use, for descendants, and finally for its sheer being.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The chiasmus in lines 11–13 ("the way the field ran down to water, / and how the water… ran back into the field") primarily emphasizes',
@@ -476,6 +504,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The mirrored structure (field-to-water, water-to-field) enacts a process that has no fixed direction. The land is not static; it gives and receives. Ownership is a flat term for a thing that moves.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The deer "that crossed it, morning and at fall of light, / without consulting any of the deeds" (lines 16–17) function primarily to',
@@ -489,6 +518,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The deer have not consulted the deeds — a phrase whose dry humor punctures the centrality of legal ownership. The land has its own residents who do not need permission.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The lines "the rocks, / which had been there, of course, before the field, / and would be there, of course, after" (lines 13–15) primarily contribute',
@@ -502,6 +532,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The repeated "of course" is offhand: the rocks predate and will outlast the field. The poem widens its temporal frame to a scale on which "twenty acres" and even ownership become very small things.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'The shift in the final stanza from "He meant" to "He did not mean — he never said —" (lines 18) primarily achieves which effect?',
@@ -515,6 +546,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The structural turn moves from what the father meant (which the speaker has been reconstructing) to what he did not say. The unsaid thing — "the price / we paid… and a lifetime of not learning" — is the speaker\'s gift to a man who would not have spoken it.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'In lines 19–20, the recurrence of the father\'s opening line ("twenty acres / and a lifetime of not learning the half of it") functions to',
@@ -528,6 +560,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A throwaway sentence at the start of the poem returns at the end as the poem\'s central claim: a lifetime is not enough. What was offhand becomes elegy.',
   },
   {
+    type: 'mcq',
     topic: 'poetry-analysis',
     stimulus: POEM_2,
     question: 'Which best describes the poem\'s central concern?',
@@ -543,6 +576,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- PROSE 2: Mr. Pemberton (Q34–Q44) ---------------- */
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The catalog of Mr. Pemberton\'s habits in sentence 2 (the fountain pen, the blotter, the brown ceramic cup) primarily characterizes him as',
@@ -556,6 +590,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Each item has a precise temporal regimen — the first Monday of the month, the first Monday of January, since 1898. These are not ordinary habits; they are observances. They take forty-one years to acquire.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The detail that the cup is "brought from home in 1898, which the office boy was instructed to wash but never to dry" (sentence 2) achieves which effect?',
@@ -569,6 +604,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The instruction is small, idiosyncratic, and deeply Pembertonian. The reader is invited to see, in this one detail, the entire shape of the man\'s domain.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The phrase "quietly held, never quite spoken" (sentence 3) primarily characterizes Mr. Pemberton\'s conviction as',
@@ -582,6 +618,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The conviction is internal and unspoken. Because it has never been tested by absence, it has been free to grow without challenge — which sets up the painful test in sentences 4–6.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'Mr. Pemberton\'s belief that "should he be absent for so much as a single morning, the partners would feel it as one feels a cold draft from a door left slightly ajar" (sentence 3) is best described as an example of',
@@ -595,6 +632,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The simile is grand and almost meteorological. The story\'s next four sentences will demonstrate, with cool precision, that no draft is felt — not even slightly. The metaphor exists in order to be undone.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The transition "On a Tuesday in November of 1928, Mr. Pemberton was absent." (sentence 4) achieves its effect primarily through',
@@ -608,6 +646,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'After the looping, qualifying sentences of paragraph 1, the bare statement lands like a switch flipping. The narrator becomes briefly factual; the action of the story has begun.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The detail of "three telegrams, the last of which informed Mr. Greaves the younger of the necessity" (sentence 5) primarily contributes',
@@ -621,6 +660,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Three telegrams for an ordinary cold is funny — the sister\'s anxiety, perhaps, or the household\'s self-importance. The detail also licenses Greaves\'s eventual mild and indifferent response: the world had been made aware.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The slowed, pausing pace of "The morning passed, and then the afternoon" (sentence 6) primarily contributes',
@@ -634,6 +674,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The two clauses move time forward without incident. The very ordinariness of that movement — morning, afternoon, half past four — is the cruelty: nothing in the firm has registered Mr. Pemberton\'s absence.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'Mr. Greaves the younger\'s noticing that "the empty desk in the back office looked very tidy, very tidy indeed" (sentence 6) primarily achieves which effect?',
@@ -647,6 +688,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The repetition "very tidy, very tidy indeed" hovers around an unsayable thing. Greaves does not say "Pemberton is gone, what a relief"; he says, "how clean the room is." That displacement is the heart of the irony.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The phrase "thought, but did not quite say" (sentence 6) reveals that Mr. Greaves',
@@ -660,6 +702,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The qualification is precise: he thinks the thought; he does not quite say it. Greaves preserves his decency by leaving the pleasure unspoken — a small act of restraint that nonetheless does not contradict the pleasure itself.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The structural relationship between the first paragraph (Mr. Pemberton\'s self-conception) and the second (his actual absence) is best described as',
@@ -673,6 +716,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Paragraph 1: Pemberton believes the firm cannot function without him. Paragraph 2: the firm functions, and his absence is mistaken for a clean room. The structure is the irony.',
   },
   {
+    type: 'mcq',
     topic: 'prose-analysis',
     stimulus: PROSE_2,
     question: 'The narrator\'s tone toward Mr. Pemberton can best be described as',
@@ -688,6 +732,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- DRAMA: Ella & Martin (Q45–Q55) ---------------- */
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'The opening stage direction that Martin sits "with the lights off and a cup of cold tea in front of him" primarily characterizes him as',
@@ -701,6 +746,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The lights are off, the tea has gone cold — both details register duration and a kind of static patience. Martin has been there for a while, and the stillness is loaded.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Ella\'s choice to switch on "the lamp; not the overhead" (line 2) functions primarily to',
@@ -714,6 +760,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The choice is a small act of staging. A lamp is intimate; an overhead is interrogative. Ella is not yet ready for the harder light.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Martin\'s remark "Your mother used to wait up" (line 3) most strongly suggests',
@@ -727,6 +774,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The wife is gone (the past-tense "used to"). Martin is, in some sense, taking up her vigil — and the line is his quiet way of admitting both her absence and his own inheritance of the wait.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'The stage direction in line 5 — Ella putting down her bag "very carefully, as though the bag contained something breakable" — primarily contributes which effect?',
@@ -740,6 +788,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The bag is a stand-in for what Ella is about to say. The careful gesture is a piece of physical preparation: she is bracing herself, and the action lets the audience see the bracing before she speaks.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Martin\'s offer of cold tea and his refusal of fresh tea (lines 6–10) primarily characterize him as',
@@ -753,6 +802,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'He made tea hours ago; he will not let her make more, because he\'d "only forget about it." The exchange is small, sad, and quietly self-defeating — a portrait of withdrawal.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Ella\'s decision to sit down "across from him" while not removing her coat (line 11) primarily suggests',
@@ -766,6 +816,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The coat is a stage signal. Removing it would mean settling in; keeping it on means the encounter is provisional. Ella is half-committed — already braced for retreat.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Ella\'s announcement "I\'ve sold the restaurant" (line 14) functions in the scene primarily as',
@@ -779,6 +830,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Every preceding gesture — the bag, the coat, the request to make new tea — has been preparation for one piece of news. The line is the scene\'s structural pivot.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Martin\'s small action in line 15 — picking up the cold tea and "set[ting] it down again, in a very slightly different place on the table" — primarily achieves which effect?',
@@ -792,6 +844,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The gesture is exact: not drunk, not pushed away, just moved a fraction. It is the body refusing to be still and refusing, also, to declare anything. Stagecraft of suppressed feeling at its most precise.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Martin\'s reply "Well. That\'s a piece of news." (line 16) is best characterized as',
@@ -805,6 +858,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The phrase "a piece of news" is one of the language\'s most neutral receptacles. It refuses to register either pleasure or pain. That refusal is itself the character.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Ella\'s accusation in line 19 ("you decided years ago that the less you knew, the less you\'d have to disapprove of") and Martin\'s reply in line 20 ("Or the less I\'d have to lose") together reveal that',
@@ -818,6 +872,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Ella reads silence as judgment. Martin reads silence as protection — he kept distance to keep her. The exchange does not resolve which reading is correct; it suggests both can be true at once, which is why the scene ends where it does.',
   },
   {
+    type: 'mcq',
     topic: 'drama-analysis',
     stimulus: DRAMA_1,
     question: 'Which best describes a central concern of the scene as a whole?',

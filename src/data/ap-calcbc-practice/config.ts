@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-calcbc-unit-tests', label: 'Unit Tests' },
     { href: '/ap-calcbc-daily-question', label: 'Daily Question' },
   ],
-  accent: 'purple',
+  accent: 'violet',
   totalTimeMinutes: 195,
   sections: [
     {

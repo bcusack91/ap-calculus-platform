@@ -31,6 +31,7 @@ const PASSAGE_5 = `**Passage 5 — Student draft on screen time and adolescent s
 export const MCQS: MCQItem[] = [
   /* ---------------- PASSAGE 1: Commencement address (Q1–Q9) ---------------- */
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The speaker characterizes the diploma primarily as',
@@ -44,6 +45,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sentence 2 explicitly reframes the diploma as "a permission slip — a small paper assurance that you may now begin the longer education." The metaphor establishes the diploma as a beginning, not an ending.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The contrast drawn between the "classroom" (sentence 3) and "the world" (sentences 4–5) primarily functions to',
@@ -57,6 +59,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The classroom offers comfort, syllabi, and predictable exits; the world offers no such kindness, no chapter assignments, and no marked tests. The contrast highlights the unstructured difficulty ahead.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The single-word sentence "Resist." (sentence 7) achieves which rhetorical effect?',
@@ -70,6 +73,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A bare imperative isolated as a one-word sentence creates emphasis through brevity. It punctuates the warning in sentence 6 with a direct command.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'In sentence 8, the speaker draws a contrast in order to argue that',
@@ -83,6 +87,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The "person who knows nothing" at least knows he does not know; the truly dangerous one is the dogmatist with "complete and unshakeable conviction." Acknowledged ignorance is preferable to false certainty.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The phrase "loud opinions of strangers" (sentence 6) primarily appeals to',
@@ -96,6 +101,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The diction "loud" and "strangers" carries connotations of unwelcome, noisy intrusion. It primes the audience to view such opinions skeptically as a temptation to be resisted.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The metaphor of a "permission slip" (sentence 2) characterizes the diploma as',
@@ -109,6 +115,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A permission slip is a humble, almost childlike document. The metaphor diminishes the diploma\'s grandeur and emphasizes that its value lies in what it permits — further learning — not in itself.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The speaker\'s overall tone in the passage is best described as',
@@ -122,6 +129,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The speaker warns the graduates ("admonitory") about temptations and dangers ahead, but the warning is offered in service of their growth — the speech opens with congratulation and frames its caution as guidance.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'Which rhetorical device is most prominent in sentences 3–5?',
@@ -135,6 +143,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The classroom is described as "kind," offering "comfort"; the world will not be kind nor will it "tell you which chapter to read." Both abstractions are given human attributes — personification.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_1,
     question: 'The speaker\'s primary rhetorical purpose in this passage is to',
@@ -150,6 +159,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- PASSAGE 2: Urban design essay (Q10–Q18) ---------------- */
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The author\'s opening strategy in sentences 1–2 primarily functions to',
@@ -163,6 +173,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A reader expects an answer about width, materials, or lighting. The author defers and answers, "people." The reversal is a deliberate rhetorical move that reframes the entire essay around human use.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The series of images in sentence 3 ("a vendor unfolding her cart … a teenager pretending not to notice…") primarily serves to',
@@ -176,6 +187,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Each image is a small, mundane action ("unfolding," "steering," "pretending not to notice") of an ordinary person. The catalog enacts the very "small motions of ordinary life" the sentence names.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The allusion to Jane Jacobs in sentence 4 primarily functions to',
@@ -189,6 +201,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Jacobs is a canonical voice in urban-planning discourse. Quoting her phrase "ballet of the good city sidewalk" borrows her authority and signals the author\'s position is rooted in established thinking.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The metaphor "ballet of the good city sidewalk" (sentence 4) most directly characterizes pedestrian life as',
@@ -202,6 +215,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A ballet implies pattern and grace; the immediately following sentence calls the dance "improvised, repetitive, and yet never quite the same." The metaphor captures both order and spontaneity.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The phrase "a kind of small bereavement" (sentence 6) functions primarily to',
@@ -215,6 +229,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"Bereavement" is the loss of a loved person; applied to a silent sidewalk, the diction borrows the emotional weight of mourning to dramatize what an empty street represents.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The personification of storefronts that "grow shy" (sentence 8) reinforces which idea?',
@@ -228,6 +243,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The shy storefronts, faster cars, and quicker pedestrians together describe a positive feedback loop: emptiness produces more emptiness. The personification dramatizes how absence breeds further absence.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The example of replacing "a bench with a bollard" (sentence 5) is offered as evidence of',
@@ -241,6 +257,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The detail "because someone, somewhere, complained" trivializes the cause and emphasizes the disproportionate effect: a small administrative gesture that nonetheless removes a place to sit and thereby silences the sidewalk.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'Across the passage, the author\'s argument depends most heavily on which type of evidence?',
@@ -254,6 +271,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'There is no statistical evidence; the persuasive force comes from vivid sensory imagery (the parent and stroller, the shy storefronts) reinforced by Jacobs\'s authority. The combination is characteristic of the literary essay form.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_2,
     question: 'The author\'s overall purpose in the passage is best described as',
@@ -269,6 +287,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- PASSAGE 3: Geneva letter (Q19–Q27) ---------------- */
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The detail that the hotel room "smells faintly of pipe tobacco and disappointment" (sentence 1) primarily serves to',
@@ -282,6 +301,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Pairing a real smell ("pipe tobacco") with an abstract one ("disappointment") is a small synesthetic flourish that establishes mood. The room itself reflects the writer\'s state of mind about the conference.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The two-word sentence "I cannot." (sentence 2) achieves which effect?',
@@ -295,6 +315,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'After the conventional opening of sentence 1 ("I want very much to tell you that…"), the bare "I cannot." breaks the politeness pattern. The brevity signals that what follows will be honest rather than diplomatic.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The writer\'s description of diplomatic speech as "careful, weightless" (sentence 3) functions primarily as',
@@ -308,6 +329,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"Careful" and "weightless" pull in opposite directions: language so guarded against future quotation that it ends up saying nothing. The juxtaposition is the criticism.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The parenthetical "I timed him" (sentence 4) primarily contributes which effect?',
@@ -321,6 +343,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The aside is unnecessary for the argument but adds a deadpan note: the writer was so unimpressed she literally clocked the speech. The detail is comic and devastating.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The remark "I do not know who applauds a comma, but apparently it is the custom here" (sentence 6) achieves its effect through',
@@ -334,6 +357,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The writer affects polite bemusement ("I do not know," "apparently it is the custom"). The flat tone makes the absurdity of applauding a punctuation mark plain without raising the writer\'s voice — classic understatement.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The image of "our father at the kitchen table, settling our disputes with three sentences and a piece of pie" (sentence 7) functions to',
@@ -347,6 +371,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The father resolves disputes with three sentences; the delegate spent forty-three minutes on a comma. The juxtaposition is the rhetorical engine: a small domestic image that makes the great hall look ridiculous by contrast.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The closing assertion that "the great powers… do not possess our father, and the world is the worse for it" (sentence 8) is best described as',
@@ -360,6 +385,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The father is being used metonymically: he stands for the qualities of plain speech and moral seriousness that the conference lacks. The writer is mourning the absence of those qualities, not the man himself.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The intimate epistolary form ("Ruth, I am writing this…") shapes the passage\'s rhetoric by',
@@ -373,6 +399,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A letter to a sister is a private register. It licenses asides ("I timed him"), domestic comparisons (the father), and frank judgments that a wire-service dispatch would have to suppress.',
   },
   {
+    type: 'mcq',
     topic: 'rhetorical-analysis',
     stimulus: PASSAGE_3,
     question: 'The writer\'s overall purpose in the passage is best described as',
@@ -388,6 +415,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- PASSAGE 4: Community gardens draft (Q28–Q36) ---------------- */
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'The writer wants to combine sentences 2 and 3 to eliminate redundancy. Which of the following is the best revision?',
@@ -401,6 +429,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Option B is the most concise: it eliminates the repetitive "These are" and the wordy "members of a neighborhood" and the dangling "in them." A is wordier; C uses vague pronouns; D introduces awkward phrasing.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'In sentence 1, the writer wants to replace "have become very popular in recent years" with a more precise phrase. Which revision provides the most useful specificity?',
@@ -414,6 +443,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'AP Lang composition questions reward concrete, quantifiable evidence. B replaces the vague intensifier "very popular" with specific figures and a date range, sharpening the claim.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'The writer wants to add a transition word at the beginning of sentence 6 to clarify its relationship to sentence 5. Which is most appropriate?',
@@ -427,6 +457,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sentence 5 covers nutrition (food); sentence 6 introduces a separate, social benefit (community). "Beyond the obvious nutritional benefits" signals the move from one type of benefit to another. "However" and "In contrast" wrongly imply opposition; "For example" wrongly implies illustration.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'In sentence 9, the phrase "most of them are not being used for housing anyway" weakens the writer\'s argument. Which revision strengthens it most?',
@@ -440,6 +471,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The original is a vague, unsupported assertion. Option A supplies concrete reasons (decade-long vacancy, unsuitable lot dimensions) that explain WHY the lots are not housing-suitable, converting an opinion into a defensible claim.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'Sentence 10 ends with the phrase "because they are good." The writer revises it to provide a more substantive conclusion. Which revision is best?',
@@ -453,6 +485,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A conclusion should crystallize the essay\'s claims. C synthesizes all three of the writer\'s earlier points (food, community, vacant land) into a single, specific final sentence; the others restate "good" in equally vague language.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'The writer is considering adding the following sentence after sentence 4: "A 2019 USDA survey identified more than 29,000 community gardens in the 100 largest U.S. cities alone." Should the writer add this sentence?',
@@ -466,6 +499,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Citing a federal agency by year and figure adds concrete authority to a paragraph that is otherwise heavy on vague generalization. AP Lang revision questions consistently favor adding such evidence early.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'Which revision of sentence 5 best maintains a formal, academic register?',
@@ -479,6 +513,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'B uses precise diction ("Residents," "fresh produce," "low-income neighborhoods") and adds a specific qualifier. The others are conversational ("get to," "folks," "stuff") or imprecise ("more healthy").',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'In sentence 8, the writer wants to acknowledge the critics\' concern more substantively before refuting it. Which revision is most effective?',
@@ -492,6 +527,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'C concedes ("understandable," with a specific reason) before pivoting to refute. This pattern — concede, then qualify — is the rhetorical move AP Lang rewards. A and D dismiss without engaging; B is overtly hostile.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_4,
     question: 'Which of the following best describes the primary weakness of the draft as a whole?',
@@ -507,6 +543,7 @@ export const MCQS: MCQItem[] = [
 
   /* ---------------- PASSAGE 5: Adolescent sleep draft (Q37–Q45) ---------------- */
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'In sentence 1, the writer is considering revising "Many studies have shown that adolescents in the United States are not getting enough sleep" to be more direct. Which revision is best?',
@@ -520,6 +557,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'B replaces the verbose, hedged construction with a direct claim that names the subject ("American adolescents") and the condition ("chronically sleep-deprived"). The other options add wordiness or hedging.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'The writer wants to add a citation to sentence 2 to strengthen the credibility of the survey data. Which addition is most effective?',
@@ -533,6 +571,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'B names the agency, year, instrument, and sample size — the four marks of a credible citation. AP Lang revision rewards converting vague references ("a survey") into specific, verifiable ones.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'In sentence 4, the writer wants to clarify the technical claim for a general audience. Which revision is best?',
@@ -546,6 +585,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A (the original) already strikes the right balance: technical enough to be credible (melatonin, blue wavelengths), accessible enough for a general reader. B is over-jargoned; C and D underspecify.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'The writer is considering deleting sentence 7 ("These critics have a point."). Should the writer keep it?',
@@ -559,6 +599,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A short concession ("These critics have a point") followed by "Nevertheless" is a textbook rhetorical move: it demonstrates fairness, then pivots back to the writer\'s position. Removing it makes the writer seem dismissive.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'In sentence 5, the writer wants to make the description of phone use more vivid and specific. Which revision is best?',
@@ -572,6 +613,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The original (A) is already the most vivid: the dash-set list ("text messages, notifications, the constant pull of social media") supplies specific examples. The alternatives strip away the imagery.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'The writer wants to add a transition between sentence 5 and sentence 6 that signals a turn to opposing viewpoints. Which is most effective?',
@@ -585,6 +627,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sentence 6 introduces critics. "Of course, the picture is not so simple" anticipates and invites the counter-position, modeling intellectual honesty. The other options either reinforce ("Furthermore"), conclude, or illustrate — none introduce opposition.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'Which revision of sentence 8 most effectively closes the paragraph by translating the argument into a recommendation?',
@@ -598,6 +641,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'C builds on the original\'s argument and converts it into a concrete, actionable recommendation while preserving the qualifying clause that prevents overclaim. A is the unchanged original; B retreats into vagueness; D oversimplifies.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'Which of the following best describes the writer\'s overall rhetorical strategy in this paragraph?',
@@ -611,6 +655,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The structure is: (1) establish the problem with data (sentences 1–2), (2) name a cause (3–5), (3) concede (6–7), (4) recommend with qualification (8). This is the canonical AP Lang argumentative paragraph shape.',
   },
   {
+    type: 'mcq',
     topic: 'composition-revision',
     stimulus: PASSAGE_5,
     question: 'The writer wants to add a sentence after sentence 4 that helps a general reader understand the consequence of suppressed melatonin. Which addition is best?',

@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-chem-labs', label: 'Virtual Labs' },
     { href: '/periodic-table', label: 'Periodic Table' },
   ],
-  accent: 'teal',
+  accent: 'cyan',
   totalTimeMinutes: 195, // 90 + 105
   sections: [
     {

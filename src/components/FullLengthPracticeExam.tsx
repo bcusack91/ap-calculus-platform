@@ -26,10 +26,27 @@ export interface RubricPoint {
 
 export interface SAQItem {
   type: 'saq'
-  prompt: string                                  // shared stimulus + framing
-  parts: { letter: string; question: string; rubric: RubricPoint[] }[]
+  prompt?: string                                 // shared stimulus + framing (preferred)
+  stimulus?: string                               // legacy alias for prompt
+  parts: {
+    letter?: string                               // optional; auto 'a','b','c'... when omitted
+    question?: string                             // preferred field for the part question
+    prompt?: string                               // legacy alias for question
+    rubric: string | RubricPoint[]                // string = single self-grade summary; array = itemized rubric
+  }[]
   topic: string
   sampleResponse?: string
+}
+
+/** Helpers for tolerating both data shapes in SAQ items. */
+function saqPrompt(item: SAQItem): string {
+  return item.prompt ?? item.stimulus ?? ''
+}
+function partLetter(part: SAQItem['parts'][number], pi: number): string {
+  return part.letter ?? String.fromCharCode(97 + pi) // 'a', 'b', 'c', ...
+}
+function partQuestion(part: SAQItem['parts'][number]): string {
+  return part.question ?? part.prompt ?? ''
 }
 
 export interface DBQItem {
@@ -135,7 +152,8 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
   // Auto-advance when timer hits zero
   useEffect(() => {
     if (phase === 'section' && time === 0 && currentSection) {
-      setPhase('section-complete')
+      const id = setTimeout(() => setPhase('section-complete'), 0)
+      return () => clearTimeout(id)
     }
   }, [time, phase, currentSection])
 
@@ -182,11 +200,17 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           possible += 1
           if (a.type === 'mcq' && a.selected === item.correctAnswer) earned += 1
         } else if (item.type === 'saq' && a.type === 'saq') {
-          item.parts.forEach(p => {
-            p.rubric.forEach(rp => {
+          item.parts.forEach((p, pi) => {
+            const letter = partLetter(p, pi)
+            if (Array.isArray(p.rubric)) {
+              p.rubric.forEach(rp => {
+                possible += 1
+                if (a.checked[`${iIdx}-${letter}-${rp.id}`]) earned += 1
+              })
+            } else {
               possible += 1
-              if (a.checked[`${iIdx}-${p.letter}-${rp.id}`]) earned += 1
-            })
+              if (a.checked[`${iIdx}-${letter}-self`]) earned += 1
+            }
           })
         } else if (item.type === 'dbq' && a.type === 'dbq') {
           item.rubric.forEach(rp => {
@@ -328,7 +352,7 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
             </div>
           </div>
 
-          <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">Free-response scores reflect your self-graded rubric checks. Be honest with yourself — that's where the learning happens.</p>
+          <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">Free-response scores reflect your self-graded rubric checks. Be honest with yourself &mdash; that&apos;s where the learning happens.</p>
 
           <div className="flex gap-3">
             <Link href={backLink.href} className={`flex-1 rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-center font-semibold text-white shadow transition hover:shadow-lg`}>Back to {backLink.label}</Link>
@@ -425,11 +449,13 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">Short-Answer Question {itemIdx + 1}</h3>
-            <p className="whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">{item.prompt}</p>
+            <p className="whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">{saqPrompt(item)}</p>
           </div>
-          {item.parts.map((part, pi) => (
-            <div key={part.letter} className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">({part.letter}) {part.question}</p>
+          {item.parts.map((part, pi) => {
+            const letter = partLetter(part, pi)
+            return (
+            <div key={letter} className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+              <p className="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">({letter}) {partQuestion(part)}</p>
               <textarea
                 value={ans.responses[pi]}
                 onChange={e => {
@@ -444,19 +470,28 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
               {ans.submitted && (
                 <div className="mt-3 rounded-lg bg-amber-50 p-3 dark:bg-amber-900/20">
                   <p className="mb-2 text-xs font-semibold text-amber-900 dark:text-amber-200">Self-grade — check each rubric point your response earned:</p>
-                  {part.rubric.map(rp => {
-                    const key = `${itemIdx}-${part.letter}-${rp.id}`
+                  {Array.isArray(part.rubric) ? part.rubric.map(rp => {
+                    const key = `${itemIdx}-${letter}-${rp.id}`
                     return (
                       <label key={rp.id} className="mb-2 flex cursor-pointer items-start gap-2 text-xs text-gray-800 dark:text-gray-200">
                         <input type="checkbox" checked={!!ans.checked[key]} onChange={e => updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [key]: e.target.checked } } : a)} className="mt-0.5 cursor-pointer" />
                         <span><strong>{rp.label}:</strong> {rp.description}</span>
                       </label>
                     )
-                  })}
+                  }) : (
+                    <>
+                      <p className="mb-2 whitespace-pre-line text-xs text-gray-800 dark:text-gray-200">{part.rubric}</p>
+                      <label className="flex cursor-pointer items-start gap-2 text-xs text-gray-800 dark:text-gray-200">
+                        <input type="checkbox" checked={!!ans.checked[`${itemIdx}-${letter}-self`]} onChange={e => updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [`${itemIdx}-${letter}-self`]: e.target.checked } } : a)} className="mt-0.5 cursor-pointer" />
+                        <span>I earned credit for this part.</span>
+                      </label>
+                    </>
+                  )}
                 </div>
               )}
             </div>
-          ))}
+            )
+          })}
           {!ans.submitted && (
             <button onClick={() => updateAnswer(a => a.type === 'saq' ? { ...a, submitted: true } : a)}
               className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>

@@ -17,6 +17,7 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
 export const MCQS: MCQItem[] = [
   /* ============== BIG IDEA 1: Creative Development (Q1–Q5) ============== */
   {
+    type: 'mcq',
     topic: 'creative-development',
     question: 'A student writes a program with another student. One student types while the other reviews each line as it is written and suggests improvements. This collaborative practice is most commonly known as',
     options: ['agile sprinting', 'pair programming', 'rubber-duck debugging', 'incremental compilation'],
@@ -24,6 +25,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Pair programming: two developers, one keyboard. The "driver" writes; the "navigator" reviews. It is widely used in industry and explicitly cited in the AP CSP CED.',
   },
   {
+    type: 'mcq',
     topic: 'creative-development',
     question: 'A program reads a list of numbers and is supposed to output the maximum. The programmer notices that on certain inputs the program outputs a value smaller than at least one input. What kind of error is this?',
     options: ['Syntax error', 'Logic error', 'Run-time error', 'Compile-time error'],
@@ -31,6 +33,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A logic error: the program runs to completion and produces output, but the output is incorrect. Syntax errors prevent compilation; run-time errors crash the program.',
   },
   {
+    type: 'mcq',
     topic: 'creative-development',
     question: 'Which of the following best describes an "iterative" approach to program development?',
     options: [
@@ -43,6 +46,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Iterative development emphasizes short cycles of design → code → test → refine. The CED contrasts it with a single waterfall write-and-debug pass.',
   },
   {
+    type: 'mcq',
     topic: 'creative-development',
     question: 'Which of the following is a way to incorporate user input early in the development of a program?',
     options: [
@@ -55,6 +59,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Prototyping with a sketch or wireframe lets the development team gather feedback cheaply. This practice is explicit in the CED\'s "Program Design and Development" subtopic.',
   },
   {
+    type: 'mcq',
     topic: 'creative-development',
     question: 'Two students collaborate on a program using a shared online repository. Which advantage of online collaboration is best illustrated?',
     options: [
@@ -69,6 +74,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== BIG IDEA 2: Data (Q6–Q20) ============== */
   {
+    type: 'mcq',
     topic: 'data',
     question: 'What is the decimal value of the binary number 10110?',
     options: ['18', '20', '22', '26'],
@@ -76,6 +82,7 @@ export const MCQS: MCQItem[] = [
     explanation: '10110₂ = 1·16 + 0·8 + 1·4 + 1·2 + 0·1 = 16 + 4 + 2 = 22.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'Convert the decimal number 45 to binary.',
     options: ['101100', '101101', '110100', '110101'],
@@ -83,6 +90,7 @@ export const MCQS: MCQItem[] = [
     explanation: '45 = 32 + 8 + 4 + 1 = 2⁵ + 2³ + 2² + 2⁰ = 101101₂.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'How many distinct values can be represented in 8 bits?',
     options: ['8', '16', '128', '256'],
@@ -90,6 +98,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'n bits represent 2ⁿ distinct values; 2⁸ = 256.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A pixel\'s color is stored using 24 bits (8 bits each for R, G, B). What is the total number of distinct colors that can be represented?',
     options: ['256', '65,536', '16,777,216', '4,294,967,296'],
@@ -97,6 +106,7 @@ export const MCQS: MCQItem[] = [
     explanation: '2²⁴ = 16,777,216 distinct colors. (8 bits per channel × 3 channels = 24 bits total.)',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'Which of the following is true about LOSSLESS data compression?',
     options: [
@@ -109,6 +119,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Lossless compression (e.g., ZIP, PNG, FLAC) preserves all information; the original is recoverable. Lossy compression (e.g., JPEG, MP3) discards data and trades fidelity for size.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A photo file is shared online. The website displays it at a much smaller size than the original. Which of the following is the most likely reason to use lossy compression for the displayed version?',
     options: [
@@ -121,6 +132,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Lossy compression trades fidelity for file size. For thumbnail and web display, the file-size savings are dramatic and the loss is visually negligible.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'Which of the following is an example of METADATA, not the data itself?',
     options: [
@@ -133,6 +145,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Metadata is "data about data." A photo\'s timestamp, GPS location, and camera model are metadata stored alongside the pixel data.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A research team analyzes a large data set of city traffic patterns to identify intersections where accidents are most likely. This is an example of',
     options: [
@@ -145,6 +158,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Identifying patterns/trends in large data sets is the canonical "information from data" use case described in CED 2.3.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A "data set" used to train a machine-learning model contains very few examples of one category. Which of the following is the most likely consequence?',
     options: [
@@ -157,6 +171,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Models learn from the distribution they see. Underrepresentation in training data ⇒ degraded performance on those examples ⇒ a documented source of algorithmic bias.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'Which type of data CANNOT be stored using only binary digits?',
     options: ['Text', 'Images', 'Sound', 'All forms of data can be represented in binary.'],
@@ -164,6 +179,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'All digital information — text, images, sound, video — is ultimately represented in binary. This is a foundational claim of the CED.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A file is 8 MB before compression and 2 MB afterward, with no loss of information. The compression ratio is approximately',
     options: ['1:1', '2:1', '4:1', '8:1'],
@@ -171,6 +187,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Compression ratio = original size / compressed size = 8/2 = 4. Expressed as 4:1.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'When converting an analog signal (such as a continuous sound wave) to digital form, sampling at a HIGHER rate generally produces',
     options: [
@@ -183,6 +200,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Higher sampling rate captures more samples per second ⇒ greater fidelity but more data ⇒ larger file. (E.g., 44.1 kHz CD audio vs. 8 kHz telephone.)',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'Which of the following best describes why text must be encoded (e.g., ASCII or Unicode) in a computer?',
     options: [
@@ -195,6 +213,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Computers store everything as binary numbers. Text encodings (ASCII, UTF-8) define a mapping from characters to numeric codes.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'The string "A" is encoded in ASCII as the decimal number 65. What is "A" in 8-bit binary?',
     options: ['01000001', '01000101', '11000001', '01100001'],
@@ -202,6 +221,7 @@ export const MCQS: MCQItem[] = [
     explanation: '65 = 64 + 1 = 2⁶ + 2⁰ = 01000001₂.',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A program collects user data and shares it with a third party without the user\'s knowledge. This practice raises a concern primarily about',
     options: ['data compression.', 'privacy and informed consent.', 'sampling rate.', 'lossless encoding.'],
@@ -209,6 +229,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sharing personal data without informed consent is the canonical privacy issue covered in BI 5 (and assessed in BI 2 contexts as well).',
   },
   {
+    type: 'mcq',
     topic: 'data',
     question: 'A hospital wishes to share patient data with researchers without revealing individual identities. Which technique most directly addresses this need?',
     options: [
@@ -223,6 +244,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== BIG IDEA 3: Algorithms & Programming (Q21–Q60) ============== */
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'In CSP pseudocode, what is the value of `result` after the following executes?\n```\nx ← 5\ny ← 3\nresult ← x MOD y\n```',
     options: ['0', '1', '2', '5'],
@@ -230,6 +252,7 @@ export const MCQS: MCQItem[] = [
     explanation: '5 MOD 3 = 2 (the remainder of integer division of 5 by 3).',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'What does this code segment display?\n```\na ← 10\nb ← a\na ← a + 5\nDISPLAY(a, b)\n```',
     options: ['15 15', '15 10', '10 15', '10 10'],
@@ -237,6 +260,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'b ← a captures the current value of a (10). When a is later updated to 15, b is unaffected. So a = 15, b = 10.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Consider:\n```\nIF (x > 0)\n  IF (x < 10)\n    DISPLAY("A")\n  ELSE\n    DISPLAY("B")\nELSE\n  DISPLAY("C")\n```\nWhat is displayed for x = 12?',
     options: ['A', 'B', 'C', 'nothing'],
@@ -244,6 +268,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'x > 0 is true, so we enter the outer IF. Inside: x < 10 is false (12 ≥ 10), so the inner ELSE runs ⇒ "B".',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'How many times is "X" displayed?\n```\nREPEAT 4 TIMES {\n  REPEAT 3 TIMES {\n    DISPLAY("X")\n  }\n}\n```',
     options: ['4', '7', '12', '24'],
@@ -251,6 +276,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Outer loop runs 4 times; for each, inner loop runs 3 times. Total = 4 × 3 = 12.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'What is the value of `count` after this code?\n```\ncount ← 0\nFOR EACH item IN [3, 7, 1, 8, 4]\n  IF (item > 3)\n    count ← count + 1\n```',
     options: ['1', '2', '3', '4'],
@@ -258,6 +284,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Counts items strictly greater than 3: 7, 8, 4 → 3 items.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'In CSP pseudocode, RANDOM(1, 6) returns a random integer between 1 and 6, inclusive. Which expression simulates the sum of two six-sided dice?',
     options: [
@@ -270,6 +297,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Two independent dice ⇒ two independent calls to RANDOM(1,6). Option A would give a uniform distribution over 2..12, which is NOT the correct distribution for a sum of two dice (the correct distribution is triangular, peaking at 7).',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Consider the procedure below. What does `mystery(48, 18)` return?\n```\nPROCEDURE mystery(a, b) {\n  REPEAT UNTIL (b = 0) {\n    temp ← b\n    b ← a MOD b\n    a ← temp\n  }\n  RETURN a\n}\n```',
     options: ['1', '6', '9', '18'],
@@ -277,6 +305,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Euclidean algorithm. gcd(48, 18) = gcd(18, 12) = gcd(12, 6) = gcd(6, 0) = 6.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'The list `nums` contains [4, 8, 2, 9, 1]. After this code runs, what is `nums[3]`?\n```\nnums[3] ← nums[3] + nums[2]\n```\n(In CSP pseudocode, lists are 1-indexed.)',
     options: ['2', '4', '10', '11'],
@@ -284,6 +313,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'CSP lists are 1-indexed: nums[1]=4, nums[2]=8, nums[3]=2, nums[4]=9, nums[5]=1. After the assignment: nums[3] = 2 + 8 = 10.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following best describes a PROCEDURE (sometimes called a function or method)?',
     options: [
@@ -296,6 +326,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A procedure abstracts a reusable computation behind a name and a parameter list. It may or may not return a value.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Why is procedural ABSTRACTION valuable in program design?',
     options: [
@@ -308,6 +339,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Abstraction: the user of a procedure interacts only with the interface (name, parameters, return type). The internal implementation can be ignored, improved, or replaced without disturbing callers.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Consider the procedure:\n```\nPROCEDURE compute(x, y) {\n  RETURN (x + y) * (x - y)\n}\n```\nWhat does `compute(7, 3)` return?',
     options: ['10', '21', '40', '49'],
@@ -315,6 +347,7 @@ export const MCQS: MCQItem[] = [
     explanation: '(7 + 3) × (7 − 3) = 10 × 4 = 40.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A linear search and a binary search are applied to the same SORTED list of 1,000,000 elements to find a target. In the worst case, approximately how many comparisons does each perform?',
     options: [
@@ -327,6 +360,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Linear search: O(n) = up to n comparisons. Binary search: O(log₂ n) ≈ log₂(10⁶) ≈ 20 comparisons. The dramatic difference is the canonical CSP example of algorithmic efficiency.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Binary search REQUIRES that',
     options: [
@@ -339,6 +373,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Binary search relies on dividing a sorted range in half. Without sortedness, halving a range tells you nothing about which half to search.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'The list `scores` contains [82, 76, 91, 65, 88]. What is displayed?\n```\nFOR EACH s IN scores {\n  IF (s ≥ 80) {\n    DISPLAY("PASS")\n  }\n}\n```',
     options: ['Nothing', 'PASS PASS', 'PASS PASS PASS', 'PASS PASS PASS PASS PASS'],
@@ -346,6 +381,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Scores ≥ 80: 82, 91, 88 → three PASS messages.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A robot in a 5×5 grid faces north. The procedure `MOVE_FORWARD` moves it one square in the direction it is facing; `ROTATE_LEFT` turns it 90° counterclockwise. After the following code, in which direction does the robot face?\n```\nROTATE_LEFT()\nROTATE_LEFT()\nROTATE_LEFT()\n```',
     options: ['North', 'East', 'South', 'West'],
@@ -353,6 +389,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Three left turns from north: N → W → S → E. Equivalently, three left turns equals one right turn, which from north is East.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following is an example of an UNDECIDABLE problem?',
     options: [
@@ -365,6 +402,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The Halting Problem is the canonical example of an undecidable problem: no algorithm can solve it for all possible programs and inputs. The CED requires students to recognize undecidability.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A REASONABLE algorithm runs in polynomial time relative to its input size. Which of the following is generally NOT considered reasonable for large inputs?',
     options: [
@@ -377,6 +415,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Polynomial-time algorithms (O(n), O(n log n), O(n²), O(n³)) are considered "reasonable." Exponential or factorial growth is not reasonable for large inputs even on fast hardware.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A HEURISTIC algorithm is one that',
     options: [
@@ -389,6 +428,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Heuristics trade optimality for efficiency. They are commonly used when an exact solution is intractable (e.g., greedy approximations to NP-hard problems).',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program contains the segment:\n```\nIF (a > b AND a > c) {\n  DISPLAY("a is largest")\n}\n```\nFor the values a = 5, b = 7, c = 3, what is displayed?',
     options: ['"a is largest"', 'Nothing', 'Both "a is largest" and an error', '5'],
@@ -396,6 +436,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'a > b is 5 > 7 = false. The AND short-circuits and the condition is false. Nothing is displayed.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following is true about parallel computing?',
     options: [
@@ -408,6 +449,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Parallel computing performs subtasks simultaneously on multiple processors. The achievable speedup is bounded by the fraction of work that can actually be parallelized (Amdahl\'s law); option A is false.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'What is the value of `total` after the following code?\n```\ntotal ← 0\nFOR i FROM 1 TO 5 {\n  IF (i MOD 2 = 0) {\n    total ← total + i\n  }\n}\n```',
     options: ['6', '9', '15', '25'],
@@ -415,6 +457,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Adds even values from 1..5: 2 + 4 = 6.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program has been written to compute the average of a list. On a list of 10 numbers it produces a value 1 too high. Which is most likely the bug?',
     options: [
@@ -427,6 +470,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Off-by-one bugs (sum or count) are among the most common sources of small numerical errors in averaging code. Either the sum or the count being slightly off can produce a small, plausible-looking error.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'In which scenario is SIMULATION the most appropriate use of computing?',
     options: [
@@ -439,6 +483,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Simulations are valuable for studying complex systems (weather, epidemic spread, planetary motion) whose interactions resist exact analytical solution.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program has the following procedure. What is the value returned by `mystery(4)`?\n```\nPROCEDURE mystery(n) {\n  IF (n ≤ 1) {\n    RETURN 1\n  }\n  RETURN n * mystery(n - 1)\n}\n```',
     options: ['4', '12', '16', '24'],
@@ -446,6 +491,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Standard recursive factorial: 4! = 4 × 3 × 2 × 1 = 24.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following best describes the purpose of using a list (array) data structure?',
     options: [
@@ -458,6 +504,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A list is an ordered, indexable collection. The CED treats lists as the principal compound-data abstraction in CSP.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program assigns:\n```\na ← 4\nb ← 7\ntemp ← a\na ← b\nb ← temp\n```\nWhat are a and b after this code runs?',
     options: ['a = 4, b = 7', 'a = 7, b = 4', 'a = 7, b = 7', 'a = 4, b = 4'],
@@ -465,6 +512,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Standard swap idiom using a temporary variable. a and b are exchanged: a = 7, b = 4.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which Boolean expression is true if `x` is in the half-open range [10, 20) — i.e., 10 ≤ x < 20?',
     options: ['x ≥ 10 OR x < 20', 'x ≥ 10 AND x < 20', 'x > 10 AND x ≤ 20', 'NOT (x < 10 OR x > 20)'],
@@ -472,6 +520,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'AND requires both bounds. Option A is always true (every value satisfies one of the disjuncts). Option C excludes 10 and includes 20. Option D includes 20.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A list `colors` is ["red", "blue", "green", "yellow"]. After:\n```\nINSERT(colors, 2, "purple")\n```\nthe list is ["red", "purple", "blue", "green", "yellow"] — INSERT puts the new value at the given 1-indexed position. After this insertion, what is `colors[4]`?',
     options: ['"blue"', '"green"', '"yellow"', '"purple"'],
@@ -479,6 +528,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'After insertion, the list is ["red", "purple", "blue", "green", "yellow"]. With 1-indexed access: index 1 = "red", 2 = "purple", 3 = "blue", 4 = "green".',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program must determine whether at least one of three Boolean variables `a`, `b`, `c` is true. Which expression accomplishes this?',
     options: ['a AND b AND c', 'a OR b OR c', 'NOT (a AND b AND c)', 'a OR (NOT b) OR c'],
@@ -486,6 +536,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'OR is true when at least one operand is true. Option A requires all three to be true.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following is an example of an iterative algorithm?',
     options: [
@@ -498,6 +549,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Iteration uses loops to repeat a step until a condition is met. Option A is recursion; C is closed form; D is straight-line code.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A segment of code repeatedly calls `RANDOM(1, 100)` and increments a counter when the result is ≤ 25. After 10,000 calls, the counter is approximately',
     options: ['100', '500', '2,500', '7,500'],
@@ -505,6 +557,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'P(RANDOM(1,100) ≤ 25) = 25/100 = 1/4. Expected count over 10,000 trials ≈ 2,500. (This is the principle behind Monte Carlo simulation.)',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'The procedure `swap(list, i, j)` exchanges the elements at positions i and j. Which call sorts the list [3, 1, 2] into [1, 2, 3] in a single step?',
     options: [
@@ -517,6 +570,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Start [3,1,2]. swap(1,2) ⇒ [1,3,2]. swap(2,3) ⇒ [1,2,3]. A single swap of two elements cannot sort a 3-element list whose minimum is in position 1 only after another move.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following best describes a PARAMETER in a procedure definition?',
     options: [
@@ -529,6 +583,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Parameters are placeholders in the procedure definition; the values supplied at the call site are arguments. (The CED uses both terms; the placeholder is the parameter.)',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Why might a programmer convert a long block of in-line code into a procedure?',
     options: [
@@ -541,6 +596,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Procedural abstraction reduces duplication. Logic is written once and called from many sites; bug-fixing happens in one place.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A function call `square(square(3))` is evaluated. Which is the correct order of evaluation?',
     options: [
@@ -553,6 +609,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Arguments are evaluated before the call. square(3) → 9; then square(9) → 81.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Consider:\n```\ni ← 1\nREPEAT UNTIL (i > 100) {\n  i ← i * 2\n}\n```\nHow many iterations does the loop body perform?',
     options: ['6', '7', '50', '100'],
@@ -560,6 +617,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'i takes 1, 2, 4, 8, 16, 32, 64, 128 — body runs 7 times (1→2, 2→4, 4→8, 8→16, 16→32, 32→64, 64→128), and after the 7th iteration i = 128 > 100 stops the loop.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program manipulates a list named `data`. Which operation on `data` is most likely O(n) in the worst case?',
     options: [
@@ -572,6 +630,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Indexed access and length are typically O(1). Linear search must scan all n elements in the worst case ⇒ O(n).',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program uses a variable `name`. After `name ← "ALICE"`, the statement `DISPLAY(LENGTH(name))` displays',
     options: ['"5"', '5', '"ALICE"', '1'],
@@ -579,6 +638,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'LENGTH returns an integer; DISPLAY of an integer shows the number, not a string in quotes. "ALICE" has 5 characters.',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program processes a list of 1,000 student records. The runtime is 0.5 seconds. If the input is doubled to 2,000 records and the runtime increases to 2.0 seconds, the algorithm most plausibly has time complexity',
     options: ['O(1)', 'O(n)', 'O(n²)', 'O(2ⁿ)'],
@@ -586,6 +646,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Doubling the input quadrupled the runtime. That is the signature of O(n²): time scales with the square of input size. (For O(n), time would have doubled to 1.0 s.)',
   },
   {
+    type: 'mcq',
     topic: 'algorithms-programming',
     question: 'Which of the following is true about random-number generation in CSP pseudocode?',
     options: [
@@ -600,6 +661,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== BIG IDEA 4: Computing Systems & Networks (Q61–Q65) ============== */
   {
+    type: 'mcq',
     topic: 'computing-systems-networks',
     question: 'Why is data sent across the Internet broken into PACKETS rather than transmitted as one continuous stream?',
     options: [
@@ -612,6 +674,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Packet switching enables independent routing of small units, robustness to link failure, and shared use of network capacity. Encryption and compression are separate concerns.',
   },
   {
+    type: 'mcq',
     topic: 'computing-systems-networks',
     question: 'Which protocol is responsible for assigning a unique address to each device on the Internet so packets can be routed to it?',
     options: ['HTTP', 'IP', 'DNS', 'SMTP'],
@@ -619,6 +682,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'IP (Internet Protocol) defines and uses unique addresses to route packets. HTTP is the application-layer protocol for the web; DNS resolves domain names; SMTP delivers email.',
   },
   {
+    type: 'mcq',
     topic: 'computing-systems-networks',
     question: 'The Internet exhibits FAULT TOLERANCE primarily because',
     options: [
@@ -631,6 +695,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Redundant paths and decentralized routing allow data to flow even when individual components fail. This was a deliberate design goal of the early Internet.',
   },
   {
+    type: 'mcq',
     topic: 'computing-systems-networks',
     question: 'BANDWIDTH refers to',
     options: [
@@ -643,6 +708,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Bandwidth is a rate (bits per second). Higher bandwidth ⇒ more data per unit time. Latency, by contrast, measures delay.',
   },
   {
+    type: 'mcq',
     topic: 'computing-systems-networks',
     question: 'When you type a domain name like "college.edu" into a browser, which system translates it into the numeric IP address required for routing?',
     options: ['HTTP', 'DNS', 'TCP', 'SSL/TLS'],
@@ -652,6 +718,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== BIG IDEA 5: Impact of Computing (Q66–Q70) ============== */
   {
+    type: 'mcq',
     topic: 'impact-of-computing',
     question: 'A facial-recognition system was found to identify members of one demographic group correctly more often than another. This is an example of',
     options: [
@@ -664,6 +731,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Algorithmic bias commonly arises when training data underrepresents some groups. The CED requires students to recognize sources and consequences of bias in computational systems.',
   },
   {
+    type: 'mcq',
     topic: 'impact-of-computing',
     question: 'The "DIGITAL DIVIDE" refers to',
     options: [
@@ -676,6 +744,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Digital divide = unequal access to (and the ability to effectively use) digital tools across socioeconomic, geographic, and demographic lines. The CED treats it as a central social impact.',
   },
   {
+    type: 'mcq',
     topic: 'impact-of-computing',
     question: 'A scientist makes the source code and data for a published study freely available online. This practice supports',
     options: [
@@ -688,6 +757,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sharing code and data lets others verify, reuse, and build on the work. Open-access publication of software is a major recent norm in computational science.',
   },
   {
+    type: 'mcq',
     topic: 'impact-of-computing',
     question: 'CITIZEN SCIENCE projects often invite ordinary people to contribute observations or computing time. Which is an example?',
     options: [
@@ -700,6 +770,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Citizen-science projects (e.g., Zooniverse galaxy classification, Folding@home) leverage broad public participation. The CED highlights such projects as social goods enabled by computing.',
   },
   {
+    type: 'mcq',
     topic: 'impact-of-computing',
     question: 'Multi-factor authentication (MFA) improves account security primarily because',
     options: [

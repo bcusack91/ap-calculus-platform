@@ -9,6 +9,7 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
 export const MCQS: MCQItem[] = [
   /* ===== UNIT 1: Origins of the African Diaspora (Q1–Q10) ===== */
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'The Kingdom of Mali reached its peak under the rule of Mansa Musa, whose 1324 hajj is best remembered for',
     options: [
@@ -21,6 +22,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Mansa Musa\'s pilgrimage made the wealth of West Africa visible to the wider Islamic world. His extensive gold distributions in Cairo are reported to have devalued gold there for years and prompted increased European interest in West African trade.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'Timbuktu, in the Mali and later Songhai empires, is best known as a center of',
     options: [
@@ -33,6 +35,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Timbuktu housed the Sankoré and Djinguereber complexes — major centers of Islamic learning — and sat at a crossroads of trans-Saharan trade routes.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'The transatlantic slave trade, beginning in the late 15th century, primarily served to',
     options: [
@@ -45,6 +48,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'European colonists in the Americas turned to enslaved African labor as the demand for plantation crops — sugar earliest and most consequentially — outstripped the supply of indentured European labor and decimated Indigenous populations.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'The Middle Passage refers to',
     options: [
@@ -57,6 +61,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The Middle Passage is the second leg of the triangular trade — the brutal transatlantic crossing in which an estimated 10–12 million enslaved Africans were shipped to the Americas; mortality regularly exceeded 15%.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'Which of the following best characterizes African societies BEFORE the height of the transatlantic slave trade?',
     options: [
@@ -69,6 +74,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A central CED theme is the diversity and complexity of pre-contact African societies — directly countering older stereotypes that erased their political, intellectual, and economic achievements.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'The Door of No Return monuments at sites like Gorée Island (Senegal) and Cape Coast Castle (Ghana) function today primarily as',
     options: [
@@ -81,6 +87,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'These coastal castles served as departure points during the slave trade and have since become commemorative sites where descendants of enslaved Africans engage with the history of the diaspora.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'African religious practices that survived the Middle Passage and influenced the Americas include',
     options: [
@@ -93,6 +100,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Enslaved Africans preserved religious knowledge by syncretizing Yoruba, Kongo, Fon, and other traditions with imposed Christianity, producing distinct diasporic religions. The CED emphasizes African continuities in the Americas.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'Olaudah Equiano\'s 1789 narrative is significant primarily as',
     options: [
@@ -105,6 +113,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Equiano\'s "Interesting Narrative" gave abolitionists a vivid first-person account of the horrors of the slave trade and remains a foundational diasporic text.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'Which TWO West African ethnic/cultural groups had especially heavy representation among Africans forcibly transported to the Americas?',
     options: [
@@ -117,6 +126,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Igbo (modern southeastern Nigeria) and Yoruba (modern southwestern Nigeria) populations were heavily represented in the transatlantic trade and shaped diasporic cultures across the Americas. The other groups are South or Northeast African and were not central to the transatlantic trade.',
   },
   {
+    type: 'mcq',
     topic: 'unit-1',
     question: 'The "Atlantic Creole" generation refers to',
     options: [
@@ -131,6 +141,7 @@ export const MCQS: MCQItem[] = [
 
   /* ===== UNIT 2: Freedom, Enslavement & Resistance (Q11–Q20) ===== */
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'Stono Rebellion (1739) in colonial South Carolina was significant because it',
     options: [
@@ -143,6 +154,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Stono — about 60–100 enslaved people armed and marched south toward Spanish Florida — was crushed; the colonial response (1740 Negro Act) restricted enslaved people\'s mobility, education, and assembly.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'The Haitian Revolution (1791–1804) is significant in African American history because it',
     options: [
@@ -155,6 +167,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The Haitian Revolution defeated French (and Spanish, British) forces, establishing Haiti as the first Black-led independent nation in the Americas. It contributed to U.S. fear of slave revolts and spurred restrictive legislation, while also inspiring abolitionist hopes.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'Nat Turner\'s 1831 rebellion in Virginia was significant because it',
     options: [
@@ -167,6 +180,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Turner\'s revolt killed about 60 white people, was crushed within days, and prompted Virginia and other Southern states to pass laws restricting enslaved people\'s literacy, religion, and assembly — and to militarize white patrols.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'Frederick Douglass\'s 1845 "Narrative of the Life of Frederick Douglass, an American Slave" was published primarily to',
     options: [
@@ -179,6 +193,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Douglass\'s autobiography was a powerful abolitionist text — a literate, articulate enslaved man\'s testimony directly refuted pro-slavery claims about Black inferiority and the supposed mildness of slavery.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'The Underground Railroad was',
     options: [
@@ -191,6 +206,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The Underground Railroad operated through both Black and white abolitionists. Harriet Tubman, escaping slavery herself, returned approximately 13 times and led roughly 70 people to freedom.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'The 13th Amendment (1865) to the U.S. Constitution',
     options: [
@@ -203,6 +219,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The 13th Amendment\'s "punishment clause" exception became the legal basis for convict leasing and modern critiques of mass incarceration. The 14th Amendment provides equal protection; the 15th covers voting rights.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'During Reconstruction (1865–1877), African Americans achieved which of the following?',
     options: [
@@ -215,6 +232,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Reconstruction produced significant African American political participation and the establishment of HBCUs and public schooling. These gains were largely reversed after the Compromise of 1877 ushered in Redemption.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'The Compromise of 1877',
     options: [
@@ -227,6 +245,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The withdrawal of federal troops cleared the way for Southern "Redemption" governments to dismantle Reconstruction-era gains and impose Jim Crow.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'The Freedmen\'s Bureau (1865–1872) was established to',
     options: [
@@ -239,6 +258,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The Bureau\'s educational work was particularly consequential, founding schools and helping establish the foundation for institutions that became HBCUs.',
   },
   {
+    type: 'mcq',
     topic: 'unit-2',
     question: 'Sojourner Truth\'s 1851 speech, often titled "Ain\'t I a Woman?", is significant for',
     options: [
@@ -253,6 +273,7 @@ export const MCQS: MCQItem[] = [
 
   /* ===== UNIT 3: The Practice of Freedom (Q21–Q30) ===== */
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'Plessy v. Ferguson (1896) established the legal doctrine of',
     options: [
@@ -265,6 +286,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"Separate but equal" provided the constitutional cover for Jim Crow segregation across the South until Brown v. Board of Education overturned it in 1954.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'Booker T. Washington\'s "Atlanta Compromise" (1895) and W.E.B. Du Bois\'s critique of it represented a debate over',
     options: [
@@ -277,6 +299,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'This Washington–Du Bois debate is one of the central intellectual disputes of post-Reconstruction Black political thought.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'Ida B. Wells-Barnett is best known for',
     options: [
@@ -289,6 +312,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Wells\'s pamphlets — including "Southern Horrors" — used statistical analysis to expose lynching as racial terror, not as response to crime as white Southern apologists claimed.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'The Great Migration (c. 1910–1970) refers to',
     options: [
@@ -301,6 +325,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Push factors (Jim Crow violence, sharecropping, boll weevil) and pull factors (industrial wartime jobs, urban Black communities) drove the Great Migration, transforming American cities and culture.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'The Harlem Renaissance (1920s–early 1930s) was',
     options: [
@@ -313,6 +338,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Figures like Langston Hughes, Zora Neale Hurston, Claude McKay, Aaron Douglas, Duke Ellington, and Bessie Smith produced work that asserted Black creative and intellectual modernity. The "New Negro" framing repositioned Black identity in the public sphere.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'Marcus Garvey\'s Universal Negro Improvement Association (UNIA) is best characterized by its emphasis on',
     options: [
@@ -325,6 +351,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'UNIA, founded in Jamaica in 1914 and based in Harlem from 1916, became a mass movement (peak claimed millions of members) emphasizing Black-owned enterprise, self-defense, and African heritage.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'Zora Neale Hurston\'s 1937 novel "Their Eyes Were Watching God" is significant in African American literature for',
     options: [
@@ -337,6 +364,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Hurston\'s novel — initially criticized by some contemporaries for its focus on individual fulfillment over racial protest — was reclaimed by Black women writers in the 1970s (notably Alice Walker) as a foundational text.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'During World War II, the "Double V" campaign called for',
     options: [
@@ -349,6 +377,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Launched by the Pittsburgh Courier in 1942, the Double V campaign linked African American military service to demands for civil rights at home, contributing to postwar civil rights momentum.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'A. Philip Randolph\'s threatened 1941 March on Washington pressured President Franklin D. Roosevelt to issue Executive Order 8802, which',
     options: [
@@ -361,6 +390,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Randolph\'s use of mass mobilization to win EO 8802 (a defense-industry desegregation order, not an armed forces desegregation order — that came in 1948 under Truman) is a major precursor to civil rights movement tactics.',
   },
   {
+    type: 'mcq',
     topic: 'unit-3',
     question: 'Negro Leagues baseball (peaking 1920–1947) is significant in African American history because it',
     options: [
@@ -375,6 +405,7 @@ export const MCQS: MCQItem[] = [
 
   /* ===== UNIT 4: Movements & Debates (Q31–Q40) ===== */
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'Brown v. Board of Education (1954) is significant because the U.S. Supreme Court ruled that',
     options: [
@@ -387,6 +418,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Brown overturned Plessy v. Ferguson and provided the legal foundation for the dismantling of de jure segregation, although enforcement (especially after Brown II\'s "all deliberate speed" language) was slow and contested.',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'The Montgomery Bus Boycott (1955–1956) is significant for',
     options: [
@@ -399,6 +431,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sparked by Rosa Parks\' arrest, the 13-month boycott — sustained by carpools and walking — ended after the Supreme Court ruled bus segregation unconstitutional. King became the first president of the Montgomery Improvement Association during this campaign.',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'The Voting Rights Act of 1965',
     options: [
@@ -411,6 +444,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The VRA was the most consequential piece of voting-rights legislation since Reconstruction. Its preclearance provision (Section 5) was effectively suspended by the Supreme Court in Shelby County v. Holder (2013).',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'Martin Luther King Jr.\'s 1963 "Letter from Birmingham Jail" responds primarily to',
     options: [
@@ -423,6 +457,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'King\'s letter targets white moderates who professed support for civil rights goals while opposing the disruption of nonviolent direct action — arguing that "wait" has almost always meant "never."',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'Malcolm X\'s political evolution included',
     options: [
@@ -435,6 +470,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Malcolm\'s post-1964 thought — articulated through the Organization of Afro-American Unity — emphasized Pan-Africanism and connecting Black American struggles to global anticolonial movements. He was assassinated in 1965.',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'The Black Power movement (mid-1960s onward), associated with figures like Stokely Carmichael (Kwame Ture) and Huey P. Newton, emphasized',
     options: [
@@ -447,6 +483,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Black Power emerged partly out of frustration with the slow pace of integrationist civil rights gains. The Panthers\' Free Breakfast for Children Program at one point fed tens of thousands of Black children daily.',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'Kimberlé Crenshaw\'s concept of intersectionality (1989) refers to',
     options: [
@@ -459,6 +496,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Crenshaw introduced "intersectionality" to describe how Black women\'s experiences could not be captured by anti-discrimination law that treated race and gender separately. The framework has become foundational in critical theory and Black feminist thought.',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'The Black Lives Matter movement (founded 2013 by Alicia Garza, Patrisse Cullors, and Opal Tometi) responded primarily to',
     options: [
@@ -471,6 +509,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'BLM emerged on social media after the Zimmerman acquittal and grew into a global movement after the killings of Michael Brown (2014), Eric Garner (2014), and George Floyd (2020).',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'Hip-hop, emerging in the 1970s in the South Bronx, is best characterized as',
     options: [
@@ -483,6 +522,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Hip-hop\'s pioneers (DJ Kool Herc, Afrika Bambaataa, Grandmaster Flash) emerged from cross-cultural Black and Latino youth communities. The CED treats hip-hop as both a cultural form and an arena of political expression.',
   },
   {
+    type: 'mcq',
     topic: 'unit-4',
     question: 'Afrofuturism, exemplified by writers like Octavia Butler and films like Black Panther (2018), is best described as',
     options: [

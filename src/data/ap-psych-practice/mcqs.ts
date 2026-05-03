@@ -15,6 +15,7 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
 export const MCQS: MCQItem[] = [
   /* ============== UNIT 1: Biological Bases of Behavior (Q1–Q15) ============== */
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'Which neurotransmitter is most directly associated with reward, motivation, and the experience of pleasure, and is implicated in addiction?',
     options: ['Acetylcholine', 'Dopamine', 'GABA', 'Serotonin'],
@@ -22,6 +23,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Dopamine is the central neurotransmitter of the brain\'s reward circuitry (mesolimbic pathway). Most addictive drugs increase dopamine signaling. GABA is the principal inhibitory neurotransmitter; serotonin regulates mood; acetylcholine acts at neuromuscular junctions.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'A patient suffers damage to Broca\'s area. The most likely consequence is',
     options: [
@@ -34,6 +36,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Broca\'s aphasia: nonfluent, effortful speech production; comprehension is largely preserved. Wernicke\'s aphasia (option A) is fluent but meaningless speech with impaired comprehension.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'The "all-or-none" principle of neural firing means',
     options: [
@@ -46,6 +49,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Once a neuron reaches threshold, the action potential proceeds at a constant amplitude. Stronger stimuli produce more frequent firing, not bigger spikes.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'The sympathetic nervous system\'s activation produces all of the following EXCEPT',
     options: ['increased heart rate', 'pupil dilation', 'increased digestion', 'release of glucose for energy'],
@@ -53,6 +57,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sympathetic activation is the "fight-or-flight" response, which INHIBITS digestion to redirect resources. Parasympathetic activation promotes digestion (the "rest and digest" system).',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'A researcher uses an EEG to study patterns during sleep. EEG primarily measures',
     options: [
@@ -65,6 +70,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'EEG records voltage fluctuations from electrodes on the scalp — summed activity of cortical neurons. Excellent temporal but poor spatial resolution. (fMRI measures blood flow; PET measures metabolism; MEG measures magnetic fields.)',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'During REM sleep, which is most likely to occur?',
     options: [
@@ -77,6 +83,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'REM ("paradoxical sleep") features brain activity similar to waking, vivid narrative dreams, and atonia of voluntary muscles. Night terrors typically occur in deep NREM sleep.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'The hippocampus is most critical for',
     options: [
@@ -89,6 +96,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Bilateral damage to the hippocampus (e.g., the famous patient H.M.) produces anterograde amnesia — inability to form new conscious memories — while leaving older memories and procedural learning intact.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'Twin studies that compare correlations between identical (monozygotic) and fraternal (dizygotic) twins are used primarily to estimate',
     options: [
@@ -101,6 +109,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'When MZ twins are more similar than DZ twins on a trait, it suggests heritable (genetic) influence — the central logic of twin study heritability estimates.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'A drug that blocks the reuptake of serotonin in synapses would be expected to',
     options: [
@@ -113,6 +122,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Reuptake removes neurotransmitter from the synaptic cleft. Blocking it prolongs serotonin\'s presence and action — the mechanism of SSRIs used to treat depression.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'The cerebellum is primarily responsible for',
     options: [
@@ -125,6 +135,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The cerebellum (the "little brain") fine-tunes movement, posture, balance, and is increasingly recognized for procedural learning. Damage produces ataxia.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'Genes contribute to behavior by',
     options: [
@@ -137,6 +148,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Genes do not specify behaviors directly. They specify proteins; those proteins shape neural circuits, which interact with experience to produce behavior. The CED emphasizes the gene–environment interaction.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'A researcher records the response of a single neuron in a cat\'s visual cortex as bars of light at different orientations are shown. This research methodology — recording from a single cell — was pioneered by',
     options: ['Wundt and Titchener', 'Hubel and Wiesel', 'Sperry and Gazzaniga', 'Maslow and Rogers'],
@@ -144,6 +156,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Hubel and Wiesel\'s single-cell recordings demonstrated orientation-selective neurons in the visual cortex (Nobel, 1981). Sperry and Gazzaniga did the split-brain studies.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'The endocrine system differs from the nervous system in that it',
     options: [
@@ -156,6 +169,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Endocrine glands (e.g., thyroid, adrenals, pituitary) release hormones into the blood. Effects are slower in onset but typically more sustained than neural signaling. The systems do interact (e.g., pituitary–hypothalamus axis).',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'In a split-brain patient (corpus callosum severed), an image flashed only to the right visual field is processed by',
     options: [
@@ -168,6 +182,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The right visual field projects to the left hemisphere. Language production (Broca\'s area) is typically in the left hemisphere, so the patient can name the object.',
   },
   {
+    type: 'mcq',
     topic: 'biological-bases',
     question: 'Which structure is most directly involved in regulating the body\'s circadian rhythm?',
     options: ['Pineal gland (via melatonin)', 'Adrenal medulla', 'Cerebellum', 'Pituitary gland'],
@@ -177,6 +192,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 2: Cognition (Q16–Q30) ============== */
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'According to the multi-store (Atkinson-Shiffrin) model, information passes from sensory memory to short-term memory through the process of',
     options: ['encoding', 'attention', 'retrieval', 'rehearsal'],
@@ -184,6 +200,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sensory memory holds raw input briefly; only attended information is transferred to short-term/working memory. Rehearsal then helps move it to long-term memory.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'A teacher tells students that the best way to remember vocabulary words for a test is to relate each word to a personally meaningful example. This advice reflects which encoding strategy?',
     options: ['Maintenance rehearsal', 'Visual encoding', 'Elaborative (deep) processing', 'Chunking'],
@@ -191,6 +208,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Relating new information to existing meaningful knowledge is elaborative or "deep" processing (Craik & Lockhart\'s levels-of-processing framework), which produces more durable memory traces than shallow rehearsal.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'George Miller\'s research on short-term memory capacity proposed the famous "magic number" of',
     options: ['3 ± 1', '5 ± 2', '7 ± 2', '10 ± 3'],
@@ -198,6 +216,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Miller (1956) summarized that short-term memory holds about 7 ± 2 items. More recent research (Cowan) suggests the working capacity is closer to 4 chunks.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Which is an example of a HEURISTIC (rather than an algorithm)?',
     options: [
@@ -210,6 +229,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A heuristic is a quick, approximate decision-rule. Algorithms (A, B, D) guarantee correctness but may be slow.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'A subject overestimates the frequency of plane crashes after seeing a recent news report. This best illustrates',
     options: ['the availability heuristic', 'confirmation bias', 'the framing effect', 'belief perseverance'],
@@ -217,6 +237,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The availability heuristic: events that are easily called to mind feel more frequent. Vivid news coverage makes plane crashes mentally available, inflating perceived risk.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'A child solving a problem persists in trying the same unsuccessful strategy even when other strategies would work. This best illustrates',
     options: ['mental set', 'functional fixedness', 'divergent thinking', 'representativeness'],
@@ -224,6 +245,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Mental set: the tendency to persist with strategies that worked previously. Functional fixedness specifically refers to inability to use objects in new ways.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Procedural memory (e.g., riding a bike) is considered a form of',
     options: ['explicit memory', 'implicit (non-declarative) memory', 'sensory memory', 'short-term memory'],
@@ -231,6 +253,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Procedural memory is implicit — it operates without conscious recall and depends on the cerebellum and basal ganglia rather than the hippocampus.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Which of the following is consistent with Whorfian (linguistic relativity) hypothesis?',
     options: [
@@ -243,6 +266,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Linguistic relativity (Whorf) holds that language influences (in modern weaker forms, "shapes") cognitive habits. The strong form ("language determines thought") is largely rejected.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Loftus and Palmer (1974) showed participants a film of a car accident. Those asked how fast the cars were going when they "smashed" into each other reported higher speeds and were more likely to "remember" broken glass than those asked when the cars "hit." This illustrates',
     options: [
@@ -255,6 +279,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The wording of subsequent questions altered participants\' memory of the event. This canonical study established the misinformation effect, with major implications for eyewitness testimony.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Which of the following best illustrates the SERIAL POSITION effect?',
     options: [
@@ -267,6 +292,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The serial position curve has primacy (early items moved to long-term memory) and recency (late items still in short-term memory) advantages, with worse recall for middle items.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Encoding specificity / context-dependent memory predicts that',
     options: [
@@ -279,6 +305,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Tulving\'s encoding specificity principle: shared cues between encoding and retrieval boost recall. Famous demonstration: divers recall words better in the environment (underwater vs. dry) where they learned them.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Which is an example of a PROTOTYPE in concept formation?',
     options: [
@@ -291,6 +318,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A prototype is a mental model of the typical exemplar (e.g., a robin is a prototypical bird; a penguin is not). New items are compared to the prototype.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'When a real-estate agent mentions a high asking price first, even a much lower counteroffer feels reasonable to the buyer. This illustrates',
     options: ['the anchoring heuristic', 'the framing effect', 'the availability heuristic', 'belief perseverance'],
@@ -298,6 +326,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Anchoring: an initial value disproportionately influences subsequent judgments. The high anchor makes lower numbers seem like good deals.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'On a recall test, students must produce information from memory; on a recognition test, they must select correct items from choices. Generally, recall is HARDER than recognition because',
     options: [
@@ -310,6 +339,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Recognition supplies the items as cues; recall requires generating the items without those cues. Hence recognition tests typically yield higher accuracy.',
   },
   {
+    type: 'mcq',
     topic: 'cognition',
     question: 'Studies of bilingual speakers have shown that bilinguals tend to outperform monolinguals on',
     options: [
@@ -324,6 +354,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 3: Development & Learning (Q31–Q45) ============== */
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'In Piaget\'s theory, an infant who searches for a hidden toy demonstrates',
     options: ['object permanence', 'conservation', 'theory of mind', 'centration'],
@@ -331,6 +362,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Object permanence — knowing objects continue to exist when out of sight — emerges in the sensorimotor stage (around 8 months in Piaget\'s account, earlier per modern research).',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'A child correctly understands that the amount of clay does not change when it is rolled from a ball into a snake. This illustrates',
     options: ['object permanence', 'conservation', 'egocentrism', 'animism'],
@@ -338,6 +370,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Conservation — understanding that quantity is independent of shape — is a hallmark of Piaget\'s concrete operational stage.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'Pavlov\'s dog experiments demonstrated',
     options: ['classical conditioning', 'operant conditioning', 'observational learning', 'latent learning'],
@@ -345,6 +378,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Pavlov paired a tone (neutral stimulus) with food (UCS) until the tone alone elicited salivation (CR). This is the foundational study of classical (Pavlovian) conditioning.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'In B.F. Skinner\'s terms, a positive reinforcer is something that, when',
     options: [
@@ -357,6 +391,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Reinforcers (positive or negative) INCREASE behavior. "Positive" means adding a stimulus; "negative" means removing one. Punishers decrease behavior.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'A rat earns a food pellet for every 10th lever press. This is a',
     options: ['fixed-ratio schedule', 'variable-ratio schedule', 'fixed-interval schedule', 'variable-interval schedule'],
@@ -364,6 +399,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Fixed-ratio: reinforcement after a set number of responses. Slot machines use variable-ratio (most resistant to extinction). Interval schedules are time-based.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'Bandura\'s Bobo doll experiments primarily demonstrated',
     options: [
@@ -376,6 +412,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Children who watched an adult model aggression toward a Bobo doll later imitated the same behaviors. This established observational (social) learning.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'According to Erikson, the central conflict during adolescence is',
     options: ['trust vs. mistrust', 'industry vs. inferiority', 'identity vs. role confusion', 'intimacy vs. isolation'],
@@ -383,6 +420,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Erikson\'s adolescent stage: the developmental task is forming a coherent personal identity. Failure leads to role confusion.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'Mary Ainsworth\'s "Strange Situation" assessed',
     options: [
@@ -395,6 +433,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Ainsworth identified secure, avoidant, anxious-ambivalent, and (later) disorganized attachment based on infant responses to brief separations from the caregiver.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'Harlow\'s monkey experiments with wire and cloth "mothers" demonstrated that',
     options: [
@@ -407,6 +446,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Infant monkeys spent most time clinging to the soft cloth "mother" even when food came from the wire one. This contradicted the prevailing view that attachment was a learned association with feeding.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'A child who has previously been bitten by a dog now becomes afraid of all furry four-legged animals. This is an example of',
     options: ['stimulus generalization', 'stimulus discrimination', 'spontaneous recovery', 'extinction'],
@@ -414,6 +454,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Generalization: a CR transfers to stimuli similar to the original CS. Discrimination is the opposite (responding only to specific stimuli).',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'In Kohlberg\'s theory, a person who reasons that "stealing is wrong because there is a law against it" is operating at the',
     options: ['preconventional level', 'conventional level', 'postconventional level', 'transcendental level'],
@@ -421,6 +462,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Conventional reasoning emphasizes social rules, laws, and approval. Preconventional focuses on punishment/reward; postconventional appeals to abstract principles like justice.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'Vygotsky\'s "zone of proximal development" refers to',
     options: [
@@ -433,6 +475,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Vygotsky emphasized scaffolded learning in collaboration with more knowledgeable others within a learner\'s ZPD — too easy = no growth; too hard = no progress.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'The phenomenon in which an animal learns a connection between an environment and reward without showing it until reinforcement is offered is called',
     options: ['latent learning', 'insight learning', 'imprinting', 'shaping'],
@@ -440,6 +483,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Tolman\'s rats demonstrated latent learning: the rats had learned a maze even without explicit reward, evident only once reward was introduced. This challenged strict behaviorism.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'A teacher gradually rewards successive approximations of the desired behavior — first sitting, then sitting and looking forward, then sitting quietly. This is',
     options: ['shaping', 'extinction', 'classical conditioning', 'spontaneous recovery'],
@@ -447,6 +491,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Shaping is the operant technique of reinforcing incremental approximations toward a target behavior. Widely used in animal training and behavior modification.',
   },
   {
+    type: 'mcq',
     topic: 'development-learning',
     question: 'A teratogen is best defined as',
     options: [
@@ -461,6 +506,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 4: Social Psychology & Personality (Q46–Q60) ============== */
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'Stanley Milgram\'s obedience experiments primarily demonstrated that',
     options: [
@@ -473,6 +519,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'About 65% of Milgram\'s subjects delivered the maximum 450-volt shock. The studies highlighted the power of perceived legitimate authority and situational forces.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'Solomon Asch\'s line-judgment experiments demonstrated',
     options: [
@@ -485,6 +532,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Subjects conformed to a unanimously wrong group answer about 1/3 of the time, even when the correct response was visually obvious — a classic demonstration of normative conformity.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'The "fundamental attribution error" refers to the tendency to',
     options: [
@@ -497,6 +545,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Observers attribute others\' behavior to who they "are" (personality) rather than to the situation. Self-serving bias (option A) is a related but distinct bias about one\'s own behavior.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'Festinger\'s theory of cognitive dissonance predicts that when a person\'s actions conflict with their attitudes, they will',
     options: [
@@ -509,6 +558,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Dissonance produces psychological discomfort that motivates change — typically attitude change, especially when the behavior cannot easily be undone.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'The presence of others tends to enhance well-learned or simple performance and impair complex or new performance. This phenomenon is',
     options: ['social loafing', 'social facilitation', 'deindividuation', 'group polarization'],
@@ -516,6 +566,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Social facilitation: arousal from being observed enhances dominant responses. The dominant response is correct for easy tasks (helping performance) and often incorrect for difficult tasks (hurting it).',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'In a group project, individuals exert less effort than they would alone. This is',
     options: ['social facilitation', 'social loafing', 'group polarization', 'groupthink'],
@@ -523,6 +574,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Social loafing: diffusion of responsibility in collective tasks reduces individual effort, especially when contributions are not individually identifiable.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'Groupthink is most likely to occur when',
     options: [
@@ -535,6 +587,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Janis identified groupthink in policy disasters (Bay of Pigs, Challenger). Cohesion + insulation + directive leadership + suppressed dissent ⇒ poor decisions.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'Maslow\'s hierarchy of needs places which need at the highest level?',
     options: ['Safety', 'Love and belonging', 'Esteem', 'Self-actualization'],
@@ -542,6 +595,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Maslow\'s pyramid (bottom to top): physiological → safety → love/belonging → esteem → self-actualization. (Some later versions add self-transcendence above self-actualization.)',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'The "Big Five" personality traits are',
     options: [
@@ -554,6 +608,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'OCEAN: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism. The dominant modern trait taxonomy with strong cross-cultural support.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'A psychodynamic theorist would most likely attribute neurotic anxiety to',
     options: [
@@ -566,6 +621,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Freud\'s framework attributes anxiety to intrapsychic conflict among id (impulses), ego (reality), and superego (morality). Cognitive (B), biological (C), and behavioral (D) approaches give different accounts.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'A humanistic psychologist (Rogers, Maslow) would emphasize',
     options: [
@@ -578,6 +634,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Humanistic psychology focuses on the inherent drive toward growth, self-actualization, and the importance of unconditional positive regard. It emerged as a "third force" against psychoanalysis and behaviorism.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'Sherif\'s Robbers Cave study demonstrated that',
     options: [
@@ -590,6 +647,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'In the boys\' summer camp study, intergroup competition produced hostility; assigning superordinate (shared) goals that required cooperation reduced it. Foundational evidence on intergroup conflict.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'The bystander effect is best explained by',
     options: [
@@ -602,6 +660,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Latané and Darley showed that the more onlookers present, the LESS likely any one will help — responsibility is diffused, and others\' inaction is taken as a sign that no help is needed.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'According to social identity theory, people derive a portion of their self-concept from',
     options: [
@@ -614,6 +673,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Tajfel\'s social identity theory: even arbitrary group membership produces in-group favoritism. This contributes to prejudice and intergroup conflict.',
   },
   {
+    type: 'mcq',
     topic: 'social-personality',
     question: 'A personality test asks the same question several different ways and produces consistent answers across multiple administrations. This suggests the test has high',
     options: ['validity', 'reliability', 'standardization', 'objectivity'],
@@ -623,6 +683,7 @@ export const MCQS: MCQItem[] = [
 
   /* ============== UNIT 5: Mental & Physical Health (Q61–Q75) ============== */
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Which of the following is a positive symptom of schizophrenia?',
     options: [
@@ -635,6 +696,7 @@ export const MCQS: MCQItem[] = [
     explanation: '"Positive" = additions to normal experience (hallucinations, delusions, disorganized speech). "Negative" = deficits (flat affect, avolition, alogia).',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A person experiences persistent, excessive worry about many areas of life for at least six months, accompanied by restlessness, fatigue, and muscle tension. This best fits',
     options: [
@@ -647,6 +709,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'GAD criteria (DSM-5-TR): chronic, free-floating worry across multiple domains for ≥ 6 months, plus somatic symptoms. Panic disorder involves discrete panic attacks; phobias are stimulus-specific.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Major depressive disorder differs from a typical period of sadness in that it',
     options: [
@@ -659,6 +722,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'DSM-5-TR criteria require ≥ 2 weeks of persistent depressed mood OR anhedonia, plus a constellation of additional symptoms causing clinically significant impairment.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A person alternates between elevated, expansive mood with decreased need for sleep (mania) and major depressive episodes. This pattern best fits',
     options: ['major depressive disorder', 'dysthymia (persistent depressive disorder)', 'bipolar I disorder', 'cyclothymia'],
@@ -666,6 +730,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Bipolar I requires at least one manic episode (often alternating with depressive episodes). Bipolar II involves hypomania (less severe). Cyclothymia: chronic milder mood swings.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Cognitive-behavioral therapy (CBT) for depression typically emphasizes',
     options: [
@@ -678,6 +743,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'CBT (Beck) targets cognitive distortions (e.g., all-or-nothing thinking, catastrophizing) and behavioral activation. Empirically the best-supported psychotherapy for depression.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'SSRIs (selective serotonin reuptake inhibitors) treat depression by',
     options: [
@@ -690,6 +756,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'SSRIs (fluoxetine, sertraline, etc.) block presynaptic reuptake transporters, increasing synaptic serotonin. Therapeutic effect typically takes 2–6 weeks.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Selye\'s General Adaptation Syndrome describes the body\'s response to prolonged stress in the order',
     options: [
@@ -702,6 +769,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Selye\'s three-stage model: alarm (sympathetic activation), resistance (sustained coping), and exhaustion (depletion of resources, susceptibility to disease).',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A person experiences recurrent intrusive memories of a traumatic event, hyperarousal, and avoidance of trauma reminders for more than a month. This best fits',
     options: ['acute stress disorder', 'post-traumatic stress disorder (PTSD)', 'generalized anxiety disorder', 'dissociative identity disorder'],
@@ -709,6 +777,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'PTSD requires symptoms persisting more than 1 month after a traumatic event, including intrusion (flashbacks/nightmares), avoidance, negative cognitions, and hyperarousal. ASD is for symptoms 3 days–1 month.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A defining feature of OCD is',
     options: [
@@ -721,6 +790,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'OCD: ego-dystonic obsessions trigger anxiety; compulsive rituals temporarily reduce it, reinforcing the cycle. Treated with exposure and response prevention (ERP) and SSRIs.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Which of the following is the BEST definition of "validity" in psychological testing?',
     options: [
@@ -733,6 +803,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Validity = does the test measure the construct it claims to measure? Subtypes include content, construct, and criterion (predictive/concurrent) validity.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A double-blind procedure is used to control for which threat to validity?',
     options: [
@@ -745,6 +816,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Neither participants nor researchers in direct contact with them know who is in which condition, blocking placebo effects and unconscious experimenter cues.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Which is an EGO DEFENSE MECHANISM in psychoanalytic theory in which unacceptable impulses are channeled into socially acceptable activities?',
     options: ['Repression', 'Projection', 'Sublimation', 'Reaction formation'],
@@ -752,6 +824,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Sublimation transforms an impulse into a socially valued outlet (e.g., aggression → competitive sport). Repression buries the impulse; projection attributes it to others; reaction formation expresses the opposite.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A correlation coefficient of $r = -0.85$ indicates',
     options: [
@@ -764,6 +837,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Magnitude (|r|) close to 1 indicates a strong relationship; sign indicates direction. $|-0.85| = 0.85$ ⇒ strong; negative sign ⇒ inverse.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'A research study finds that ice-cream sales and drowning rates both increase in summer. The most likely explanation is',
     options: [
@@ -776,6 +850,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'A confounding variable can produce a non-causal correlation. Always remember: correlation does not imply causation. A randomized experiment is required to establish causation.',
   },
   {
+    type: 'mcq',
     topic: 'mental-physical-health',
     question: 'Which of the following is required for a study to be classified as a TRUE EXPERIMENT?',
     options: [
