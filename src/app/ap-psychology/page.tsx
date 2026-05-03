@@ -101,6 +101,18 @@ const features = [
     stats: '33% of AP score · Timed mode',
   },
   {
+    title: 'Full-Length Practice Exam',
+    description: 'Take a complete, timed AP Psychology practice exam modeled on the revised 2024–25 format: 75 MCQs (90 min) plus 2 FRQs — one Article Analysis Question (AAQ) and one Evidence-Based Question (EBQ) (70 min).',
+    href: '/ap-psych-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    ),
+    color: 'from-rose-500 to-fuchsia-500',
+    stats: '75 MCQ + 2 FRQ · 2h 40m · Timed',
+  },
+  {
     title: 'Exit Quizzes',
     description: 'Short assessments after each lesson to confirm understanding before moving on.',
     href: '/courses/ap-psychology',

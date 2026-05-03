@@ -114,6 +114,18 @@ const features = [
     ),
     color: 'from-indigo-500 to-violet-500',
     stats: 'FRQs · Auto-graded · Timed',
+  },
+  {
+    title: 'Full-Length Practice Exam',
+    description: 'Complete AP English Literature exam simulation: 55 MCQ (60 min) across 5 passages + 3 essays (Poetry Analysis, Prose Fiction Analysis, Literary Argument; 120 min).',
+    href: '/ap-english-lit-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    color: 'from-rose-500 to-pink-500',
+    stats: '55 MCQ + 3 Essays · 3 hours · Timed',
   },]
 
 const units = [

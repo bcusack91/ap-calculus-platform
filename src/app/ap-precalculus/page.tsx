@@ -79,6 +79,14 @@ const features: HubFeature[] = [
     stats: '4 FRQs · Auto-graded · Timed',
   },
   {
+    title: 'Full-Length Practice Exam',
+    description: 'Take a complete, timed AP Precalculus practice exam: 40 MCQs (Section I, 120 min) plus 4 FRQs (Section II, 60 min) modeled on the official exam.',
+    href: '/ap-precalc-practice',
+    icon: 'fullExam',
+    color: 'from-blue-500 to-indigo-500',
+    stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
+  },
+  {
     title: 'Study Plans',
     description: 'Multi-week guided plans that pace lessons, quizzes, and FRQ practice up to exam day.',
     href: '/ap-precalc-study-plans',

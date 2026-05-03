@@ -1,55 +1,63 @@
-import type { PracticeExamConfig, PracticeQuestion } from '@/components/PracticeExam'
+import type { FullLengthExamConfig } from '@/components/FullLengthPracticeExam'
+import { MCQS } from './mcqs'
+import { FRQS } from './frqs'
 
-const POOL: PracticeQuestion[] = [
-  { question: 'Which of the following best describes a key concept in Scarcity & Marginal Analysis?', options: ['A fundamental principle of Scarcity & Marginal Analysis', 'An unrelated concept from another field', 'A common misconception about Scarcity & Marginal Analysis', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Scarcity & Marginal Analysis is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Supply & Demand?', options: ['A fundamental principle of Supply & Demand', 'An unrelated concept from another field', 'A common misconception about Supply & Demand', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Supply & Demand is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Market Equilibrium?', options: ['A fundamental principle of Market Equilibrium', 'An unrelated concept from another field', 'A common misconception about Market Equilibrium', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Market Equilibrium is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Elasticity?', options: ['A fundamental principle of Elasticity', 'An unrelated concept from another field', 'A common misconception about Elasticity', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Elasticity is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Government Intervention?', options: ['A fundamental principle of Government Intervention', 'An unrelated concept from another field', 'A common misconception about Government Intervention', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Government Intervention is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Production & Costs?', options: ['A fundamental principle of Production & Costs', 'An unrelated concept from another field', 'A common misconception about Production & Costs', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Production & Costs is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Perfect Competition?', options: ['A fundamental principle of Perfect Competition', 'An unrelated concept from another field', 'A common misconception about Perfect Competition', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Perfect Competition is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Monopoly?', options: ['A fundamental principle of Monopoly', 'An unrelated concept from another field', 'A common misconception about Monopoly', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Monopoly is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Monopolistic & Oligopoly?', options: ['A fundamental principle of Monopolistic & Oligopoly', 'An unrelated concept from another field', 'A common misconception about Monopolistic & Oligopoly', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Monopolistic & Oligopoly is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Labor Markets?', options: ['A fundamental principle of Labor Markets', 'An unrelated concept from another field', 'A common misconception about Labor Markets', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Labor Markets is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Factor Markets?', options: ['A fundamental principle of Factor Markets', 'An unrelated concept from another field', 'A common misconception about Factor Markets', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Factor Markets is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Externalities & Public Goods?', options: ['A fundamental principle of Externalities & Public Goods', 'An unrelated concept from another field', 'A common misconception about Externalities & Public Goods', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Externalities & Public Goods is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Market Failure?', options: ['A fundamental principle of Market Failure', 'An unrelated concept from another field', 'A common misconception about Market Failure', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Market Failure is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Scarcity & Marginal Analysis?', options: ['A fundamental principle of Scarcity & Marginal Analysis', 'An unrelated concept from another field', 'A common misconception about Scarcity & Marginal Analysis', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Scarcity & Marginal Analysis is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Supply & Demand?', options: ['A fundamental principle of Supply & Demand', 'An unrelated concept from another field', 'A common misconception about Supply & Demand', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Supply & Demand is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Market Equilibrium?', options: ['A fundamental principle of Market Equilibrium', 'An unrelated concept from another field', 'A common misconception about Market Equilibrium', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Market Equilibrium is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Elasticity?', options: ['A fundamental principle of Elasticity', 'An unrelated concept from another field', 'A common misconception about Elasticity', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Elasticity is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Government Intervention?', options: ['A fundamental principle of Government Intervention', 'An unrelated concept from another field', 'A common misconception about Government Intervention', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Government Intervention is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Production & Costs?', options: ['A fundamental principle of Production & Costs', 'An unrelated concept from another field', 'A common misconception about Production & Costs', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Production & Costs is essential for the AP Microeconomics exam.', topic: 'micro' },
-  { question: 'Which of the following best describes a key concept in Perfect Competition?', options: ['A fundamental principle of Perfect Competition', 'An unrelated concept from another field', 'A common misconception about Perfect Competition', 'A secondary detail not tested on the AP exam'], correctAnswer: 0, explanation: 'Understanding the fundamental principles of Perfect Competition is essential for the AP Microeconomics exam.', topic: 'micro' },
-]
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }
-  return a
-}
-
-export const config: PracticeExamConfig = {
+export const config: FullLengthExamConfig = {
   subject: 'AP Microeconomics',
-  description: 'Timed practice covering supply/demand, market structures, and market failure.',
+  description:
+    'Full-length practice exam modeled on the official College Board AP Microeconomics exam. 60 stimulus-based MCQs and 3 free-response questions (1 long FRQ + 2 short FRQs) covering all 6 units. Each FRQ part has a 1-point rubric checklist you grade after submitting.',
   backLink: { href: '/ap-microeconomics', label: 'AP Microeconomics' },
   ctaLinks: [
     { href: '/ap-micro-diagnostic', label: 'Diagnostic Test' },
+    { href: '/ap-micro-unit-tests', label: 'Unit Tests' },
     { href: '/ap-micro-daily-question', label: 'Daily Question' },
   ],
   accent: 'violet',
+  totalTimeMinutes: 130, // 70 + 60, matches official exam
   sections: [
-  {
-    id: 'mc', name: 'Multiple Choice', description: 'AP-style MC covering all units of AP Microeconomics.',
-    questionCount: 30, timeLimitMinutes: 35,
-  }
+    {
+      id: 'mcq',
+      name: 'Section I',
+      shortName: 'Multiple Choice',
+      description:
+        '60 stimulus-based multiple-choice questions across all 6 units (Basic Concepts; Supply & Demand; Production, Cost & Perfect Competition; Imperfect Competition; Factor Markets; Market Failure & Government).',
+      timeLimitMinutes: 70,
+      items: MCQS,
+    },
+    {
+      id: 'frq',
+      name: 'Section II',
+      shortName: 'Free Response',
+      description:
+        '3 free-response questions: one long FRQ (10 parts, ~25 minutes recommended planning + writing) and two short FRQs (5 parts each, ~12.5 minutes each). Self-graded rubric checklist after each part.',
+      timeLimitMinutes: 60,
+      items: FRQS,
+    },
   ],
-  getQuestions: async () => shuffle(POOL).slice(0, 30),
   aboutInfo: {
     title: 'About the AP Microeconomics Exam',
     columns: [
-    { heading: 'Exam Structure', items: ['Section I: 60 MC (70 min)', 'Section II: 3 FRQs (60 min)', 'Total: 2 hours 10 min'] },
-    { heading: 'Scoring', items: ['Score range: 1–5', 'MC: 66% of score', 'FRQ: 33% of score', 'Graphing required'] }
+      {
+        heading: 'Exam Structure',
+        items: [
+          'Section I: 60 MCQs (70 min, 66%)',
+          'Section II: 3 FRQs (60 min, 33%)',
+          '   • 1 long FRQ (50%, ~25 min)',
+          '   • 2 short FRQs (25% each, ~12.5 min each)',
+          'Total: 2 hours 10 minutes',
+        ],
+      },
+      {
+        heading: 'Unit Weighting',
+        items: [
+          'U1 Basic Concepts (12–15%)',
+          'U2 Supply & Demand (20–25%)',
+          'U3 Production, Cost & Perfect Comp (22–25%)',
+          'U4 Imperfect Competition (15–22%)',
+          'U5 Factor Markets (10–13%)',
+          'U6 Market Failure & Government (8–13%)',
+        ],
+      },
     ],
   },
 }

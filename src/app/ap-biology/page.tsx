@@ -115,6 +115,18 @@ const features = [
     color: 'from-indigo-500 to-violet-500',
     stats: '7 FRQs · Auto-graded · Timed',
   },
+  {
+    title: 'Practice Exam',
+    description: 'Full-length practice exam modeled on the official College Board AP Biology exam — 60 stimulus-based MCQs and 6 FRQs (2 long + 4 short) with self-grading rubrics.',
+    href: '/ap-bio-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    color: 'from-green-500 to-emerald-500',
+    stats: '60 MCQ · 6 FRQs',
+  },
 ]
 
 const units = [

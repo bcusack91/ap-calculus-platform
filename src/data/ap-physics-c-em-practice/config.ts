@@ -1,67 +1,64 @@
-import type { PracticeExamConfig, PracticeQuestion } from '@/components/PracticeExam'
+import type { FullLengthExamConfig } from '@/components/FullLengthPracticeExam'
+import { MCQS } from './mcqs'
+import { FRQS } from './frqs'
 
-const POOL: PracticeQuestion[] = [
-  { question: 'A point charge $+Q$ is placed at the center of a conducting spherical shell. The electric field inside the shell (between the charge and the inner surface) is:', options: ['Zero', '$kQ/r^2$ radially outward', 'Uniform', '$kQ/r$ radially outward'], correctAnswer: 1, explanation: 'Inside the shell but outside the point charge, Gauss\'s law gives E = kQ/r² radially outward, just as if the shell were absent.', topic: 'gauss-law' },
-  { question: 'The electric flux through a closed surface enclosing a net charge $Q$ is given by:', options: ['$Q/\\varepsilon_0$', '$Q\\varepsilon_0$', '$Q/(4\\pi\\varepsilon_0)$', '$4\\pi Q/\\varepsilon_0$'], correctAnswer: 0, explanation: 'Gauss\'s law: Φ = ∮E·dA = Q_enc/ε₀.', topic: 'gauss-law' },
-  { question: 'Two parallel plates with area $A$ separated by distance $d$ have capacitance:', options: ['$\\varepsilon_0 A/d$', '$\\varepsilon_0 d/A$', '$\\varepsilon_0 A d$', '$A/(\\varepsilon_0 d)$'], correctAnswer: 0, explanation: 'C = ε₀A/d for a parallel-plate capacitor. Inserting a dielectric: C = κε₀A/d.', topic: 'capacitors' },
-  { question: 'The energy stored in a capacitor with charge $Q$ and capacitance $C$ is:', options: ['$QC$', '$Q^2/(2C)$', '$QC/2$', '$Q/(2C)$'], correctAnswer: 1, explanation: 'U = Q²/(2C) = ½CV² = ½QV. All three forms are equivalent.', topic: 'capacitors' },
-  { question: 'In an RC circuit, the time constant $\\tau$ equals:', options: ['$R/C$', '$RC$', '$R+C$', '$C/R$'], correctAnswer: 1, explanation: 'τ = RC. After one time constant, the charge reaches about 63% of its final value (charging) or drops to about 37% (discharging).', topic: 'rc-circuits' },
-  { question: 'The charge on a discharging capacitor as a function of time is:', options: ['$Q_0 e^{t/RC}$', '$Q_0(1 - e^{-t/RC})$', '$Q_0 e^{-t/RC}$', '$Q_0 t/RC$'], correctAnswer: 2, explanation: 'Q(t) = Q₀e^(-t/RC). The charge decays exponentially with time constant τ = RC.', topic: 'rc-circuits' },
-  { question: 'The force on a charge $q$ moving with velocity $v$ in a magnetic field $B$ is:', options: ['$qvB$', '$q\\vec{v} \\times \\vec{B}$', '$q\\vec{v} \\cdot \\vec{B}$', '$qvB\\cos\\theta$'], correctAnswer: 1, explanation: 'F = qv×B (cross product). Magnitude: F = qvB sinθ. The force is always perpendicular to both v and B.', topic: 'magnetic-forces' },
-  { question: 'The magnetic field at distance $r$ from a long straight wire carrying current $I$ is:', options: ['$\\mu_0 I/(2\\pi r)$', '$\\mu_0 I r / 2$', '$\\mu_0 I/(4\\pi r^2)$', '$\\mu_0 I/r$'], correctAnswer: 0, explanation: 'By Ampère\'s law: B = μ₀I/(2πr). The field circles the wire (right-hand rule).', topic: 'magnetic-sources' },
-  { question: 'Faraday\'s law states that the induced EMF equals:', options: ['$-d\\Phi_B/dt$', '$\\Phi_B/t$', '$-B \\cdot dA/dt$', '$\\mu_0 I$'], correctAnswer: 0, explanation: 'ε = -dΦ_B/dt. The negative sign reflects Lenz\'s law — the induced EMF opposes the change in flux.', topic: 'faraday-lenz' },
-  { question: 'A rectangular loop of width $w$ moves with velocity $v$ into a region of uniform magnetic field $B$. The induced EMF while entering is:', options: ['$Bwv$', '$Bw/v$', '$Bv/w$', '$B^2wv$'], correctAnswer: 0, explanation: 'ε = BLv where L is the length of the conductor cutting through field lines. Here L = w, so ε = Bwv.', topic: 'faraday-lenz' },
-  { question: 'The self-inductance of a solenoid with $N$ turns, length $\\ell$, and cross-section $A$ is:', options: ['$\\mu_0 N A/\\ell$', '$\\mu_0 N^2 A/\\ell$', '$\\mu_0 N^2 \\ell/A$', '$\\mu_0 N A / \\ell^2$'], correctAnswer: 1, explanation: 'L = μ₀N²A/ℓ = μ₀n²Aℓ where n = N/ℓ is the turn density.', topic: 'inductance' },
-  { question: 'The energy stored in an inductor carrying current $I$ is:', options: ['$LI$', '$LI^2$', '$\\frac{1}{2}LI^2$', '$\\frac{1}{2}L/I^2$'], correctAnswer: 2, explanation: 'U = ½LI². Analogous to ½CV² for a capacitor. The energy is stored in the magnetic field.', topic: 'inductance' },
-  { question: 'In an RL circuit connected to a battery, the current at time $t$ is:', options: ['$\\frac{V}{R}(1 - e^{-Rt/L})$', '$\\frac{V}{R}e^{-Rt/L}$', '$\\frac{V}{L}(1 - e^{-Lt/R})$', '$\\frac{V}{R}(1 - e^{-Lt/R})$'], correctAnswer: 0, explanation: 'I(t) = (V/R)(1 − e^(-Rt/L)). Time constant τ = L/R. Current grows exponentially to its max value V/R.', topic: 'inductance' },
-  { question: 'The electric potential at distance $r$ from a point charge $q$ is:', options: ['$kq/r^2$', '$kq/r$', '$kqr$', '$kq^2/r$'], correctAnswer: 1, explanation: 'V = kq/r = q/(4πε₀r). Note: this is a scalar, not a vector. It can be positive or negative depending on sign of q.', topic: 'electric-potential' },
-  { question: 'The relationship between electric field and potential is:', options: ['$\\vec{E} = \\nabla V$', '$\\vec{E} = -\\nabla V$', '$\\vec{E} = -dV/dt$', '$V = -\\int E \\, dt$'], correctAnswer: 1, explanation: 'E = −∇V (gradient). In one dimension: E = −dV/dx. The field points from high to low potential.', topic: 'electric-potential' },
-  { question: 'A dielectric with constant $\\kappa$ is inserted into a charged, isolated capacitor. The voltage across the capacitor:', options: ['Increases by factor $\\kappa$', 'Decreases by factor $\\kappa$', 'Stays the same', 'Becomes zero'], correctAnswer: 1, explanation: 'For an isolated capacitor, Q stays constant. C increases to κC. Since V = Q/C, voltage decreases by factor κ.', topic: 'capacitors' },
-  { question: 'Kirchhoff\'s loop rule is a consequence of:', options: ['Conservation of charge', 'Conservation of energy', 'Conservation of momentum', 'Gauss\'s law'], correctAnswer: 1, explanation: 'The loop rule (∑ΔV = 0 around any loop) follows from energy conservation — the total work done by the electric field around a closed loop in a conservative field is zero.', topic: 'dc-circuits' },
-  { question: 'The drift velocity of electrons in a wire carrying current $I$ with cross-section $A$ and electron density $n$ is:', options: ['$I/(nAe)$', '$nAeI$', '$InAe$', '$I/ne$'], correctAnswer: 0, explanation: 'I = nAev_d → v_d = I/(nAe). Drift velocity is typically very small (~mm/s), even though the electric signal propagates at near light speed.', topic: 'dc-circuits' },
-  { question: 'Two capacitors $C_1$ and $C_2$ in series have equivalent capacitance:', options: ['$C_1 + C_2$', '$C_1 C_2/(C_1+C_2)$', '$(C_1+C_2)/(C_1 C_2)$', '$\\sqrt{C_1 C_2}$'], correctAnswer: 1, explanation: '1/C_eq = 1/C₁ + 1/C₂ → C_eq = C₁C₂/(C₁+C₂). Series capacitance is always less than the smallest capacitor.', topic: 'capacitors' },
-  { question: 'The magnetic flux through a surface is defined as:', options: ['$BA$', '$\\vec{B} \\times \\vec{A}$', '$\\int \\vec{B} \\cdot d\\vec{A}$', '$B/A$'], correctAnswer: 2, explanation: 'Φ_B = ∫B·dA. For a uniform field: Φ = BA cosθ, where θ is the angle between B and the area normal.', topic: 'faraday-lenz' },
-  { question: 'A conducting loop lies in a plane perpendicular to a uniform magnetic field that is increasing at rate $dB/dt$. The induced electric field inside the loop:', options: ['Is zero', 'Is uniform', 'Forms closed circular loops', 'Points radially outward'], correctAnswer: 2, explanation: 'By Faraday\'s law in differential form: ∮E·dl = −dΦ/dt. The induced E field forms closed loops (it is non-conservative).', topic: 'faraday-lenz' },
-  { question: 'Maxwell\'s addition to Ampère\'s law is the:', options: ['Magnetic monopole term', 'Displacement current $\\varepsilon_0 d\\Phi_E/dt$', 'Induced EMF term', 'Polarization current'], correctAnswer: 1, explanation: 'Maxwell added the displacement current ε₀dΦ_E/dt to Ampère\'s law: ∮B·dl = μ₀(I + ε₀dΦ_E/dt). This allows EM waves.', topic: 'maxwell-equations' },
-  { question: 'The speed of electromagnetic waves in vacuum is:', options: ['$\\sqrt{\\mu_0/\\varepsilon_0}$', '$1/\\sqrt{\\mu_0\\varepsilon_0}$', '$\\mu_0\\varepsilon_0$', '$\\sqrt{\\mu_0\\varepsilon_0}$'], correctAnswer: 1, explanation: 'c = 1/√(μ₀ε₀) ≈ 3×10⁸ m/s. This remarkable result connects electricity and magnetism to optics.', topic: 'em-waves' },
-  { question: 'The electric field between the plates of a parallel-plate capacitor with charge density $\\sigma$ is:', options: ['$\\sigma/(2\\varepsilon_0)$', '$\\sigma/\\varepsilon_0$', '$2\\sigma/\\varepsilon_0$', '$\\sigma\\varepsilon_0$'], correctAnswer: 1, explanation: 'E = σ/ε₀ between the plates. Each plate contributes σ/(2ε₀) and they add constructively between the plates.', topic: 'gauss-law' },
-  { question: 'A circular loop of radius $R$ carries current $I$. The magnetic field at its center is:', options: ['$\\mu_0 I / R$', '$\\mu_0 I / (2R)$', '$\\mu_0 I / (2\\pi R)$', '$\\mu_0 I R / 2$'], correctAnswer: 1, explanation: 'B = μ₀I/(2R) at the center of a circular loop. This follows from the Biot-Savart law.', topic: 'magnetic-sources' },
-  { question: 'An LC circuit oscillates with frequency:', options: ['$1/(2\\pi LC)$', '$1/(2\\pi\\sqrt{LC})$', '$\\sqrt{LC}/(2\\pi)$', '$2\\pi\\sqrt{LC}$'], correctAnswer: 1, explanation: 'f = 1/(2π√LC), or ω = 1/√(LC). Energy oscillates between the capacitor (electric) and inductor (magnetic).', topic: 'inductance' },
-  { question: 'The force per unit length between two parallel wires carrying currents $I_1$ and $I_2$ separated by distance $d$ is:', options: ['$\\mu_0 I_1 I_2 / (2\\pi d)$', '$\\mu_0 I_1 I_2 / (4\\pi d)$', '$\\mu_0 I_1 I_2 d / (2\\pi)$', '$\\mu_0 I_1 I_2 / d$'], correctAnswer: 0, explanation: 'F/L = μ₀I₁I₂/(2πd). Parallel currents (same direction) attract; anti-parallel repel.', topic: 'magnetic-sources' },
-  { question: 'The electric potential inside a uniformly charged conducting sphere of total charge $Q$ and radius $R$ is:', options: ['Zero', '$kQ/R$ (constant)', '$kQ/r$ (varies with $r$)', '$kQr/R^2$'], correctAnswer: 1, explanation: 'Inside a conductor in equilibrium, E = 0, so V is constant and equals the surface potential V = kQ/R.', topic: 'electric-potential' },
-  { question: 'Lenz\'s law is a consequence of:', options: ['Conservation of charge', 'Conservation of angular momentum', 'Conservation of energy', 'Gauss\'s law'], correctAnswer: 2, explanation: 'Lenz\'s law (induced current opposes the change causing it) is required by conservation of energy. Otherwise, you could create energy from nothing.', topic: 'faraday-lenz' },
-  { question: 'The energy density of an electric field is:', options: ['$\\varepsilon_0 E$', '$\\frac{1}{2}\\varepsilon_0 E^2$', '$\\varepsilon_0 E^2$', '$E^2/(2\\varepsilon_0)$'], correctAnswer: 1, explanation: 'u_E = ½ε₀E² (energy per unit volume). Similarly, u_B = B²/(2μ₀). In an EM wave, u_E = u_B.', topic: 'capacitors' },
-  { question: 'A charged particle enters a region with both $\\vec{E}$ and $\\vec{B}$ fields perpendicular to each other. The particle goes straight if:', options: ['$E = B$', '$v = E \\times B$', '$v = E/B$', '$v = B/E$'], correctAnswer: 2, explanation: 'For straight-line motion, electric and magnetic forces must balance: qE = qvB → v = E/B. This is a velocity selector.', topic: 'magnetic-forces' },
-  { question: 'The magnetic dipole moment of a current loop of area $A$ carrying current $I$ is:', options: ['$IA$', '$I/A$', '$IA^2$', '$I^2A$'], correctAnswer: 0, explanation: 'μ = NIA for N turns. For a single loop: μ = IA. The torque on a dipole in a field is τ = μ×B.', topic: 'magnetic-forces' },
-  { question: 'Gauss\'s law for magnetism ($\\nabla \\cdot \\vec{B} = 0$) implies:', options: ['Magnetic charges exist', 'Magnetic field lines form closed loops (no monopoles)', 'B is always zero', 'Magnetic flux is always positive'], correctAnswer: 1, explanation: '∇·B = 0 (or ∮B·dA = 0) means the net magnetic flux through any closed surface is zero — there are no magnetic monopoles. Field lines always form closed loops.', topic: 'maxwell-equations' },
-  { question: 'The Biot-Savart law gives the magnetic field $d\\vec{B}$ due to a current element $Id\\vec{l}$ as:', options: ['$\\frac{\\mu_0}{4\\pi}\\frac{Id\\vec{l} \\times \\hat{r}}{r^2}$', '$\\frac{\\mu_0}{4\\pi}\\frac{Id\\vec{l} \\cdot \\hat{r}}{r^2}$', '$\\frac{\\mu_0 I d\\vec{l}}{r}$', '$\\mu_0 I d\\vec{l} / (2\\pi r^2)$'], correctAnswer: 0, explanation: 'dB = (μ₀/4π)(Idl × r̂)/r². The cross product means B is perpendicular to both dl and r̂.', topic: 'magnetic-sources' },
-]
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }
-  return a
-}
-
-export const config: PracticeExamConfig = {
-  subject: 'AP Physics C: Electricity & Magnetism',
-  description: 'Timed practice exam covering electrostatics, conductors, capacitors, circuits, magnetic fields, electromagnetic induction, and Maxwell\'s equations.',
+export const config: FullLengthExamConfig = {
+  subject: 'AP Physics C: E&M',
+  description:
+    'Full-length practice exam modeled on the official College Board AP Physics C: Electricity & Magnetism exam (2025+ CED). 40 calculus-based multiple-choice questions across all units, plus 4 free-response questions covering mathematical routines, translation between representations, experimental design, and qualitative/quantitative translation. Calculator allowed throughout.',
   backLink: { href: '/ap-physics-c-em', label: 'AP Physics C: E&M' },
   ctaLinks: [
     { href: '/ap-physics-c-em-diagnostic', label: 'Diagnostic Test' },
+    { href: '/ap-physics-c-em-frq', label: 'FRQ Practice' },
     { href: '/ap-physics-c-em-daily-question', label: 'Daily Question' },
   ],
-  accent: 'violet',
-  sections: [{
-    id: 'mc', name: 'Multiple Choice', description: 'AP-style MC covering all Physics C: E&M topics with calculus-based problems.',
-    questionCount: 30, timeLimitMinutes: 45,
-  }],
-  getQuestions: async () => shuffle(POOL).slice(0, 30),
+  accent: 'amber',
+  totalTimeMinutes: 180, // 80 + 100
+  sections: [
+    {
+      id: 'mcq',
+      name: 'Section I',
+      shortName: 'Multiple Choice',
+      description:
+        '40 calculus-based MCQs covering electrostatics (Coulomb, Gauss\'s law), conductors and capacitors, electric circuits (RC, Kirchhoff), magnetic fields and forces (Biot-Savart, Ampère\'s law), and electromagnetic induction (Faraday, inductors). Calculator allowed.',
+      timeLimitMinutes: 80,
+      items: MCQS,
+    },
+    {
+      id: 'frq',
+      name: 'Section II',
+      shortName: 'Free Response',
+      description:
+        '4 calculus-based FRQs: Q1 Mathematical Routines, Q2 Translation Between Representations, Q3 Experimental Design, Q4 Qualitative/Quantitative Translation. Self-graded rubric checklist.',
+      timeLimitMinutes: 100,
+      items: FRQS,
+    },
+  ],
   aboutInfo: {
     title: 'About the AP Physics C: E&M Exam',
     columns: [
-      { heading: 'Exam Structure', items: ['Section I: 35 MC questions (45 min)', 'Section II: 3 Free Response (45 min)', 'Total: 1.5 hours'] },
-      { heading: 'Scoring', items: ['Score range: 1–5', 'MC: 50% of score', 'FRQ: 50% of score', 'Calculus-based physics'] },
+      {
+        heading: 'Exam Structure (2025+)',
+        items: [
+          'Section I: 40 MCQs (80 min, 50%)',
+          'Section II: 4 FRQs (100 min, 50%)',
+          '   • Q1 Mathematical Routines',
+          '   • Q2 Translation Between Representations',
+          '   • Q3 Experimental Design & Analysis',
+          '   • Q4 Qualitative/Quantitative Translation',
+          'Total: 3 hours · Calculus-based · Calculator throughout',
+        ],
+      },
+      {
+        heading: 'Topic Weighting',
+        items: [
+          'Electrostatics (Coulomb, fields, Gauss) (~26–34%)',
+          'Conductors, Capacitors, Dielectrics (~14–17%)',
+          'Electric Circuits (~14–17%)',
+          'Magnetic Fields & Forces (~17–23%)',
+          'Electromagnetic Induction (~17–23%)',
+        ],
+      },
     ],
   },
 }

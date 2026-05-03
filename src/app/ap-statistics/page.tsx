@@ -124,6 +124,18 @@ const features = [
     color: 'from-indigo-500 to-violet-500',
     stats: '9 FRQs · Auto-graded · Timed',
   },
+  {
+    title: 'Full-Length Practice Exam',
+    description: 'Complete AP Statistics exam simulation: 40 MCQ (90 min) + 6 FRQ (90 min, includes Investigative Task) with timed sections and self-graded rubrics.',
+    href: '/ap-stats-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    color: 'from-amber-500 to-orange-500',
+    stats: '40 MCQ + 6 FRQ · 3 hours · Timed',
+  },
 ]
 
 const units = [

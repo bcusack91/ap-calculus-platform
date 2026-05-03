@@ -125,6 +125,18 @@ const features = [
     stats: '3hr 15min · Full exam · AP score',
   },
   {
+    title: 'Full-Length Practice Exam (CB Format)',
+    description: 'Alternate full exam in unified CB format: 45 MCQ (90 min) + 7 FRQ (105 min, 3 long + 4 short) with timed sections and self-graded rubrics.',
+    href: '/ap-chem-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    color: 'from-teal-500 to-emerald-500',
+    stats: '45 MCQ + 7 FRQ · 3hr 15min · Timed',
+  },
+  {
     title: 'Virtual Labs',
     description: 'Interactive simulations for titration curves and calorimetry experiments with real-time data.',
     href: '/ap-chem-labs',

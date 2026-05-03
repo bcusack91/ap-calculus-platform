@@ -383,7 +383,7 @@ export default function PracticeExam(config: PracticeExamConfig) {
                   <div className="p-5">
                     <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">{sec.description}</p>
                     <button onClick={() => startTest(sec.id)}
-                      className={`w-full rounded-xl bg-gradient-to-r ${t.gradient} px-4 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>
+                      className={`w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-4 py-2.5 text-sm font-semibold text-white shadow transition hover:scale-[1.02] hover:shadow-lg active:scale-[0.99]`}>
                       Start Section
                     </button>
                   </div>

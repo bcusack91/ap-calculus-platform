@@ -114,6 +114,18 @@ const features = [
     ),
     color: 'from-indigo-500 to-violet-500',
     stats: 'FRQs · Auto-graded · Timed',
+  },
+  {
+    title: 'Practice Exam',
+    description: 'Full-length, timed simulation: 40 Java MCQs (90 min) + 4 FRQs (90 min) modeled on the official AP CSA exam.',
+    href: '/ap-csa-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
+    color: 'from-blue-500 to-indigo-500',
+    stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
   },]
 
 const units = [

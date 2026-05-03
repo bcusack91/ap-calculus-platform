@@ -1,52 +1,69 @@
-import { generateExitQuiz } from '../exit-quizzes'
-import type { PracticeExamConfig, PracticeQuestion } from '@/components/PracticeExam'
+import type { FullLengthExamConfig } from '@/components/FullLengthPracticeExam'
+import { MCQS } from './mcqs'
+import { FRQS } from './frqs'
 
-const TOPIC_SLUGS = [
-  'integration-by-parts-calcbc', 'parametric-equations-calcbc', 'polar-curves-calcbc',
-  'series-convergence-calcbc', 'taylor-series-calcbc', 'maclaurin-series-calcbc',
-  'power-series-calcbc', 'ratio-root-test-calcbc', 'arc-length-calcbc',
-  'improper-integrals-calcbc', 'logistic-growth-calcbc', 'euler-method-calcbc',
-  'partial-fractions-calcbc', 'vector-valued-functions-calcbc',
-  'comparison-test-calcbc', 'alternating-series-calcbc',
-  'lagrange-error-calcbc', 'sequences-calcbc',
-]
-
-async function getQuestions(): Promise<PracticeQuestion[]> {
-  const all: PracticeQuestion[] = []
-  for (const slug of TOPIC_SLUGS) {
-    try {
-      const pool = await generateExitQuiz(slug, 3)
-      all.push(...pool.map(q => ({
-        question: q.question,
-        options: q.options,
-        correctAnswer: q.correctIndex ?? 0,
-        explanation: q.explanation,
-        topic: slug,
-      })))
-    } catch { /* skip unavailable */ }
-  }
-  return all.sort(() => Math.random() - 0.5).slice(0, 30)
-}
-
-export const config: PracticeExamConfig = {
+export const config: FullLengthExamConfig = {
   subject: 'AP Calculus BC',
-  description: 'Timed practice exam covering all BC-specific topics including series, parametric/polar, and advanced integration.',
+  description:
+    'Full-length practice exam modeled on the official College Board AP Calculus BC exam. 45 multiple-choice questions and 6 free-response questions across all 10 units (including parametric/polar/vector and infinite series). Section I Part A is no-calculator; Part B allows graphing calculator. Section II Part A allows calculator; Part B is no-calculator.',
   backLink: { href: '/ap-calculus-bc', label: 'AP Calculus BC' },
   ctaLinks: [
     { href: '/calcbc-diagnostic', label: 'Diagnostic Test' },
+    { href: '/ap-calcbc-unit-tests', label: 'Unit Tests' },
     { href: '/ap-calcbc-daily-question', label: 'Daily Question' },
   ],
-  accent: 'indigo',
-  sections: [{
-    id: 'mc', name: 'Multiple Choice', description: 'AP-style MC covering series, parametric/polar, integration techniques, and more.',
-    questionCount: 30, timeLimitMinutes: 60,
-  }],
-  getQuestions: () => getQuestions(),
+  accent: 'purple',
+  totalTimeMinutes: 195,
+  sections: [
+    {
+      id: 'mcq',
+      name: 'Section I',
+      shortName: 'Multiple Choice',
+      description:
+        '45 multiple-choice questions across all 10 units. Part A (Q1–Q30): NO calculator (60 min). Part B (Q31–Q45): graphing calculator allowed/required (45 min). Equal weight per question.',
+      timeLimitMinutes: 105,
+      items: MCQS,
+    },
+    {
+      id: 'frq',
+      name: 'Section II',
+      shortName: 'Free Response',
+      description:
+        '6 free-response questions. Part A (Q1, Q2): graphing calculator REQUIRED (~30 min). Part B (Q3–Q6): NO calculator (~60 min). 9 points each. Self-graded rubric checklist after each part.',
+      timeLimitMinutes: 90,
+      items: FRQS,
+    },
+  ],
   aboutInfo: {
     title: 'About the AP Calculus BC Exam',
     columns: [
-      { heading: 'Exam Structure', items: ['Section I: 45 MC questions (105 min)', 'Section II: 6 Free Response (90 min)', 'Includes all AB topics + BC-only'] },
-      { heading: 'Scoring', items: ['Score range: 1–5', 'AB sub-score also reported', 'College credit: Usually 3+', 'Covers Calc I + II equivalent'] },
+      {
+        heading: 'Exam Structure',
+        items: [
+          'Section I: 45 MCQs (105 min, 50%)',
+          '   • Part A: 30 questions, no calculator (60 min)',
+          '   • Part B: 15 questions, calculator (45 min)',
+          'Section II: 6 FRQs (90 min, 50%)',
+          '   • Part A: 2 questions, calculator (30 min)',
+          '   • Part B: 4 questions, no calculator (60 min)',
+          'Total: 3 hours 15 minutes',
+        ],
+      },
+      {
+        heading: 'Unit Weighting (BC adds Units 9 & 10)',
+        items: [
+          'U1 Limits & Continuity (4–7%)',
+          'U2 Differentiation: Definition & Properties (4–7%)',
+          'U3 Differentiation: Composite/Implicit/Inverse (4–7%)',
+          'U4 Contextual Apps of Differentiation (6–9%)',
+          'U5 Analytical Apps of Differentiation (8–11%)',
+          'U6 Integration & Accumulation (17–20%)',
+          'U7 Differential Equations (6–9%)',
+          'U8 Applications of Integration (6–9%)',
+          'U9 Parametric, Polar, Vector-Valued (11–12%)',
+          'U10 Infinite Sequences & Series (17–18%)',
+        ],
+      },
     ],
   },
 }

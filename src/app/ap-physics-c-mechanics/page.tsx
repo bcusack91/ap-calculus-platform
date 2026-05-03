@@ -17,6 +17,18 @@ export const metadata: Metadata = {
 
 const features = [
   {
+    title: 'Interactive Lessons',
+    description: 'Step-by-step lessons covering kinematics, Newton\'s laws, work & energy, momentum, rotation, oscillations, and gravitation — with calculus-based practice problems.',
+    href: '/courses/ap-physics-c-mechanics',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+    color: 'from-orange-500 to-amber-500',
+    stats: '12+ lessons · All units',
+  },
+  {
     title: 'Diagnostic Test',
     description: 'Quick assessment across all AP Physics C: Mechanics units to identify your strengths and weak areas with a personalized study plan.',
     href: '/ap-physics-c-mech-diagnostic',
@@ -39,6 +51,18 @@ const features = [
     ),
     color: 'from-indigo-500 to-violet-500',
     stats: '14 FRQs · Auto-graded · Timed',
+  },
+  {
+    title: 'Full-Length Practice Exam',
+    description: 'Complete AP Physics C: Mechanics exam simulation: 40 MCQ (80 min) + 4 FRQ (100 min) with timed sections and self-graded rubrics.',
+    href: '/ap-physics-c-mech-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    color: 'from-blue-500 to-indigo-500',
+    stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
   },
   {
     title: 'Competitive Mode',

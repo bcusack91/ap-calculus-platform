@@ -100,6 +100,18 @@ const features = [
     color: 'from-cyan-500 to-blue-500',
     stats: 'Per-topic · Instant feedback',
   },
+  {
+    title: 'Full-Length Practice Exam',
+    description: '45 MCQs + 6 FRQs across all 10 units (including parametric/polar and series). Calculator + no-calculator sections, timed, with self-graded rubrics.',
+    href: '/ap-calcbc-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    color: 'from-purple-500 to-indigo-500',
+    stats: '45 MCQ + 6 FRQ · 3h 15m · Timed',
+  },
 ]
 
 const units = [

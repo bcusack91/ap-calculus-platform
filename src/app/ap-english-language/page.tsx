@@ -114,6 +114,18 @@ const features = [
     ),
     color: 'from-indigo-500 to-violet-500',
     stats: 'FRQs · Auto-graded · Timed',
+  },
+  {
+    title: 'Full-Length Practice Exam',
+    description: 'Complete AP English Language exam simulation: 45 MCQ (60 min) across 5 passages + 3 essays (Synthesis, Rhetorical Analysis, Argument; 135 min).',
+    href: '/ap-english-lang-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    color: 'from-amber-500 to-orange-500',
+    stats: '45 MCQ + 3 Essays · 3 hr 15 min · Timed',
   },]
 
 const units = [
