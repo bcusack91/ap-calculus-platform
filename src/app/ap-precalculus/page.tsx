@@ -71,6 +71,22 @@ const features: HubFeature[] = [
     stats: 'Mixed topics · Timed',
   },
   {
+    title: 'Unit Tests',
+    description: 'Drill a single AP Precalc unit at a time. 4 units · 4 different variations each — perfect for end-of-unit review.',
+    href: '/ap-precalc-unit-tests',
+    icon: 'chart',
+    color: 'from-emerald-500 to-teal-500',
+    stats: '4 units · 4 variations',
+  },
+  {
+    title: 'Exit Quizzes',
+    description: 'Short assessments after each lesson to confirm understanding before moving on.',
+    href: '/courses/ap-precalculus?exitQuiz=true',
+    icon: 'exitQuiz',
+    color: 'from-cyan-500 to-blue-500',
+    stats: 'Per-topic · Instant feedback',
+  },
+  {
     title: 'FRQ Practice',
     description: 'Practice free-response questions with auto-grading, rubrics, and timed exam simulation. ~38% of the AP exam.',
     href: '/ap-precalc-frq',

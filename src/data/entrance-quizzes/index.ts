@@ -416,7 +416,32 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'arithmetic-sequences': () => import('./pre-calculus-intro'),
   'geometric-sequences': () => import('./pre-calculus-intro'),
   'polar-coordinates': () => import('./pre-calculus-intro'),
-  'polynomial-functions-precalc': () => import('./pre-calculus-intro'),
+
+  // AP Precalculus — CED-aligned per-topic entrance quizzes
+  // Unit 1: Polynomial & Rational Functions
+  'polynomial-functions-precalc': () => import('./precalc-unit-1-polynomial-rational'),
+  'rational-functions-precalc': () => import('./precalc-unit-1-polynomial-rational'),
+  'function-composition-inverses-precalc': () => import('./precalc-unit-1-polynomial-rational'),
+  'transformations-precalc': () => import('./precalc-unit-1-polynomial-rational'),
+  'sequences-series-precalc': () => import('./precalc-unit-1-polynomial-rational'),
+  'systems-of-equations-precalc': () => import('./precalc-unit-1-polynomial-rational'),
+  // Unit 2: Exponential & Logarithmic Functions
+  'exponential-functions-precalc': () => import('./precalc-unit-2-exponential-logarithmic'),
+  'logarithmic-functions-precalc': () => import('./precalc-unit-2-exponential-logarithmic'),
+  // Unit 3: Trigonometric & Polar Functions
+  'trigonometric-functions-precalc': () => import('./precalc-unit-3-trig-polar'),
+  'trigonometric-identities-precalc': () => import('./precalc-unit-3-trig-polar'),
+  'inverse-trig-functions-precalc': () => import('./precalc-unit-3-trig-polar'),
+  'law-of-sines-cosines-precalc': () => import('./precalc-unit-3-trig-polar'),
+  'polar-coordinates-precalc': () => import('./precalc-unit-3-trig-polar'),
+  'conic-sections-precalc': () => import('./precalc-unit-3-trig-polar'),
+  // Unit 4: Parametric, Vectors, Matrices & Calculus On-Ramp
+  'parametric-equations-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
+  'vectors-two-dimensions-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
+  'matrices-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
+  'limits-introduction-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
+  'continuity-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
+  'rates-of-change-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
   'hg-intro-geography': () => import('./hg-intro-geography'),
   'hg-spatial-concepts': () => import('./hg-spatial-concepts'),
   'hg-population-distribution': () => import('./hg-population-distribution'),
