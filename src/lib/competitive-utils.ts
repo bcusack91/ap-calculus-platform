@@ -202,6 +202,30 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
   'concavity-inflection-points-calcab': 'curve-sketching',
   'related-rates-calcab': 'related-rates',
   'limits-at-infinity-calcab': 'limits-algebraically',
+  // Legacy "Calculus" course lesson slugs (pre-AP Calc AB course rebrand)
+  'power-rule': 'basic-differentiation-rules',
+
+  // ---- AP Precalculus (lesson slug → bank topic slug in precalc-bank.ts)
+  'polynomial-functions-precalc': 'polynomial-functions-end-behavior',
+  'rational-functions-precalc': 'rational-functions-asymptotes',
+  'exponential-functions-precalc': 'exponential-functions-growth-decay',
+  'logarithmic-functions-precalc': 'logarithmic-functions-properties',
+  'function-composition-inverses-precalc': 'composite-functions',
+  'transformations-precalc': 'transformations-of-functions',
+  'trigonometric-functions-precalc': 'trigonometric-ratios-unit-circle',
+  'trigonometric-identities-precalc': 'trig-identities-pythagorean',
+  'inverse-trig-functions-precalc': 'inverse-trig-functions',
+  'law-of-sines-cosines-precalc': 'law-of-sines-and-cosines',
+  'polar-coordinates-precalc': 'polar-coordinates-graphs',
+  'vectors-two-dimensions-precalc': 'vectors-in-two-dimensions',
+  'matrices-precalc': 'matrices-and-determinants',
+  'sequences-series-precalc': 'sequences-and-series',
+  'parametric-equations-precalc': 'parametric-equations-motion',
+  // Precalc lessons without an exact 1-to-1 bank topic — route to closest
+  // related bank topic so questions stay on-subject.
+  'conic-sections-precalc': 'polynomial-functions-end-behavior',
+  'limits-introduction-precalc': 'rates-of-change',
+  'continuity-precalc': 'rates-of-change',
 
   // ---- AP Physics C: Mechanics
   'physics-c-1d-kinematics': 'physics-c-position-velocity-acceleration',
@@ -848,10 +872,10 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Chemistry sub-topic routing: filter questions to specific topic
-  if (topicSlug && topicSlug !== 'ap-chemistry') {
-    const apChemTopicQuestions = getApChemistryQuestions(totalQuestions, topicSlug)
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-chemistry') {
+    const apChemTopicQuestions = getApChemistryQuestions(totalQuestions, resolvedTopicSlug)
     // Only use filtered results if the bank actually has questions for this topic
-    if (apChemTopicQuestions.length > 0 && apChemTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+    if (apChemTopicQuestions.length > 0 && apChemTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apChemTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -869,9 +893,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Physics 1 sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-physics1') {
-    const apPhysicsTopicQuestions = getApPhysics1Questions(totalQuestions, topicSlug)
-    if (apPhysicsTopicQuestions.length > 0 && apPhysicsTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics1') {
+    const apPhysicsTopicQuestions = getApPhysics1Questions(totalQuestions, resolvedTopicSlug)
+    if (apPhysicsTopicQuestions.length > 0 && apPhysicsTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysicsTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -889,9 +913,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Biology sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-biology') {
-    const apBioTopicQuestions = getApBiologyQuestions(totalQuestions, topicSlug)
-    if (apBioTopicQuestions.length > 0 && apBioTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-biology') {
+    const apBioTopicQuestions = getApBiologyQuestions(totalQuestions, resolvedTopicSlug)
+    if (apBioTopicQuestions.length > 0 && apBioTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apBioTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -909,9 +933,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Precalculus sub-topic routing
-  if (topicSlug && topicSlug !== 'precalc') {
-    const precalcTopicQuestions = getPreCalcQuestions(totalQuestions, topicSlug)
-    if (precalcTopicQuestions.length > 0 && precalcTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'precalc' && resolvedTopicSlug !== 'ap-precalculus') {
+    const precalcTopicQuestions = getPreCalcQuestions(totalQuestions, resolvedTopicSlug)
+    if (precalcTopicQuestions.length > 0 && precalcTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (precalcTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -949,9 +973,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Physics 2 sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-physics2') {
-    const apPhysics2TopicQuestions = getApPhysics2Questions(totalQuestions, topicSlug)
-    if (apPhysics2TopicQuestions.length > 0 && apPhysics2TopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics2') {
+    const apPhysics2TopicQuestions = getApPhysics2Questions(totalQuestions, resolvedTopicSlug)
+    if (apPhysics2TopicQuestions.length > 0 && apPhysics2TopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysics2TopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -969,9 +993,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Physics C: Mechanics sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-physics-c-mech') {
-    const apPhysicsCMechTopicQuestions = getApPhysicsCMechQuestions(totalQuestions, topicSlug)
-    if (apPhysicsCMechTopicQuestions.length > 0 && apPhysicsCMechTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics-c-mech') {
+    const apPhysicsCMechTopicQuestions = getApPhysicsCMechQuestions(totalQuestions, resolvedTopicSlug)
+    if (apPhysicsCMechTopicQuestions.length > 0 && apPhysicsCMechTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysicsCMechTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
@@ -989,9 +1013,9 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // AP Physics C: E&M sub-topic routing
-  if (topicSlug && topicSlug !== 'ap-physics-c-em') {
-    const apPhysicsCEMTopicQuestions = getApPhysicsCEMQuestions(totalQuestions, topicSlug)
-    if (apPhysicsCEMTopicQuestions.length > 0 && apPhysicsCEMTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics-c-em') {
+    const apPhysicsCEMTopicQuestions = getApPhysicsCEMQuestions(totalQuestions, resolvedTopicSlug)
+    if (apPhysicsCEMTopicQuestions.length > 0 && apPhysicsCEMTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysicsCEMTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
         return {
