@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 import { sendPasswordResetEmail } from '@/lib/email'
+import { getPublicAppUrl } from '@/lib/public-url'
 
 // Rate limit: 3 password reset requests per IP per 15 minutes
 const RESET_RATE_LIMIT = { maxRequests: 3, windowMs: 15 * 60 * 1000 }
@@ -47,7 +48,7 @@ export async function POST(req: Request) {
       data: { email, token, expires },
     })
 
-    const resetUrl = `${process.env.NEXTAUTH_URL || 'https://www.studymondo.com'}/auth/reset-password?token=${token}`
+    const resetUrl = `${getPublicAppUrl()}/auth/reset-password?token=${token}`
 
     await sendPasswordResetEmail(email, resetUrl)
 

@@ -1,7 +1,8 @@
 import nodemailer from 'nodemailer'
+import { getPublicAppUrl } from '@/lib/public-url'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://www.studymondo.com'
+const APP_URL = getPublicAppUrl()
 
 function getTransporter() {
   if (!process.env.SMTP_HOST) {

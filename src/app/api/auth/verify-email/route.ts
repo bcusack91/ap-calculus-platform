@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { sendVerificationEmail } from '@/lib/email'
+import { getPublicAppUrl } from '@/lib/public-url'
 
 // Rate limit: 3 verification emails per user per hour
 const VERIFY_RATE_LIMIT = { maxRequests: 3, windowMs: 60 * 60 * 1000 }
@@ -44,7 +45,7 @@ export async function POST() {
       data: { email, token, expires },
     })
 
-    const verifyUrl = `${process.env.NEXTAUTH_URL || 'https://www.studymondo.com'}/auth/verify-email?token=${token}`
+    const verifyUrl = `${getPublicAppUrl()}/auth/verify-email?token=${token}`
 
     await sendVerificationEmail(email, verifyUrl)
 

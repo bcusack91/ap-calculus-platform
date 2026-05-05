@@ -18,6 +18,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import nodemailer from 'nodemailer'
 import { PrismaClient } from '@prisma/client'
+import { getPublicAppUrl } from '../src/lib/public-url'
 
 const prisma = new PrismaClient()
 
@@ -27,7 +28,7 @@ const SEND = args.has('--send')
 const PREVIEW_TO = 'brendan@cusackprep.com'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://www.studymondo.com'
+const APP_URL = getPublicAppUrl()
 
 const SENT_LOG = path.join(process.cwd(), 'reports', 'competitive-announcement-sent.log')
 const SEND_DELAY_MS = 1500   // ~40 emails/min, well under Gmail Workspace 2000/day & per-minute caps
