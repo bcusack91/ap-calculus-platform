@@ -563,3 +563,36 @@ blockquote h2 {
 .dark .inline-table th {
   background-color: #374151;
 }
+
+/* ===== Global mobile overflow safeguards =====
+   Long math expressions, code blocks, and wide tables are the #1 source of
+   horizontal overflow on small screens. Make them scroll within their container
+   instead of pushing the page wider than the viewport. */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.25rem 0;
+}
+
+/* Inline KaTeX should also stay inside its parent */
+.katex {
+  max-width: 100%;
+}
+
+/* Code blocks: scroll horizontally on mobile rather than overflow */
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Belt-and-suspenders: prevent long URLs / tokens from forcing horizontal scroll
+   inside quiz / lesson copy. Components opt-in via `break-words` on the parent. */
+@media (max-width: 640px) {
+  .inline-table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}

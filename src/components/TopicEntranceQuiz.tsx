@@ -198,8 +198,8 @@ export default function TopicEntranceQuiz({
     const optionLetters = ['A', 'B', 'C', 'D']
 
     return (
-      <div className="max-w-2xl mx-auto py-8 px-4">
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+      <div className="max-w-2xl mx-auto py-6 sm:py-8 px-3 sm:px-4">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 sm:p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -241,7 +241,7 @@ export default function TopicEntranceQuiz({
 
           {/* Question */}
           <div
-            className="text-lg font-semibold text-gray-900 dark:text-white mb-6 leading-relaxed"
+            className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-6 leading-relaxed break-words overflow-x-auto"
             dangerouslySetInnerHTML={{ __html: renderedQuestion }}
           />
 
@@ -273,12 +273,12 @@ export default function TopicEntranceQuiz({
                   <button
                     onClick={() => !showExplanation && !isEliminated && setSelectedAnswer(idx)}
                     disabled={showExplanation || isEliminated}
-                    className={`w-full text-left p-4 rounded-xl border-2 transition-all ${borderColor} ${bgColor} ${textColor} ${
+                    className={`w-full text-left p-3 sm:p-4 pr-10 rounded-xl border-2 transition-all break-words ${borderColor} ${bgColor} ${textColor} ${
                       !showExplanation && !isEliminated ? 'hover:border-purple-400 cursor-pointer' : 'cursor-default'
                     } ${isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
                   >
                     <span className="font-semibold mr-2">{optionLetters[idx]}.</span>
-                    <span dangerouslySetInnerHTML={{ __html: optionHtml }} />
+                    <span className="break-words" dangerouslySetInnerHTML={{ __html: optionHtml }} />
                   </button>
                   {/* Eliminate / restore button */}
                   {!showExplanation && (

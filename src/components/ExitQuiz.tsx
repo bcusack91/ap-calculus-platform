@@ -334,22 +334,22 @@ export default function ExitQuiz({
 
   // ===== QUESTION SCREEN =====
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+    <div className="max-w-2xl mx-auto p-3 sm:p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-4 sm:p-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+        <div className="flex items-start justify-between gap-3 mb-6">
+          <div className="min-w-0">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white break-words">
               Exit Quiz — {topicTitle}
             </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               {previousAttempts > 0 && `Attempt #${previousAttempts + 1} • `}
               Score {passThreshold}/{totalQuestions} to unlock competitive mode
             </p>
           </div>
           <button
             onClick={onCancel}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm"
+            className="shrink-0 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-sm"
           >
             ✕ Cancel
           </button>
@@ -394,7 +394,7 @@ export default function ExitQuiz({
 
         {/* Question */}
         <div
-          className="text-lg font-medium text-gray-900 dark:text-white mb-6 leading-relaxed"
+          className="text-base sm:text-lg font-medium text-gray-900 dark:text-white mb-6 leading-relaxed break-words overflow-x-auto"
           dangerouslySetInnerHTML={{ __html: renderedQuestion }}
         />
 
@@ -423,11 +423,11 @@ export default function ExitQuiz({
                 <button
                   onClick={() => handleSelectAnswer(i)}
                   disabled={showExplanation || isEliminated}
-                  className={`w-full text-left p-4 rounded-xl border-2 transition-all ${style} ${
+                  className={`w-full text-left p-3 sm:p-4 pr-10 rounded-xl border-2 transition-all ${style} ${
                     isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500 cursor-default' : ''
                   }`}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-start gap-3 min-w-0">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
                       showExplanation && isCorrect ? 'bg-green-500 text-white' :
                       showExplanation && isSelected && !isCorrect ? 'bg-red-500 text-white' :
@@ -437,7 +437,7 @@ export default function ExitQuiz({
                       {String.fromCharCode(65 + i)}
                     </div>
                     <span
-                      className="text-gray-900 dark:text-white"
+                      className="text-gray-900 dark:text-white min-w-0 flex-1 break-words overflow-x-auto"
                       dangerouslySetInnerHTML={{ __html: renderedOptions[i] }}
                     />
                   </div>
@@ -479,19 +479,19 @@ export default function ExitQuiz({
         )}
 
         {/* Action buttons */}
-        <div className="flex justify-end gap-3">
+        <div className="flex flex-col-reverse sm:flex-row sm:justify-end gap-3">
           {!showExplanation ? (
             <>
               <button
                 onClick={handleGuessing}
-                className="px-6 py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               >
                 I Would Be Guessing
               </button>
               <button
                 onClick={handleConfirm}
                 disabled={selectedAnswer === null}
-                className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
+                className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
               >
                 Confirm Answer
               </button>
@@ -499,7 +499,7 @@ export default function ExitQuiz({
           ) : (
             <button
               onClick={handleNext}
-              className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
+              className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
             >
               {currentQuestion < totalQuestions - 1 ? 'Next Question →' : 'See Results'}
             </button>

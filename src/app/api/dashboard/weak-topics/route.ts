@@ -57,13 +57,19 @@ export async function GET() {
       }
     }
 
-    const topics = weakProgress.map(p => ({
-      slug: p.topic.slug,
-      title: p.topic.title,
-      courseName: p.topic.category?.course?.name ?? 'Unknown',
-      masteryLevel: p.masteryLevel ?? 0,
-      quizAvgScore: quizAvgMap[p.topic.slug] ?? 0,
-    }))
+    const topics = weakProgress.map(p => {
+      // masteryLevel may be stored as either a 0-1 fraction or a 0-100 percent
+      // depending on the data source. Normalize to a rounded 0-100 integer.
+      const rawMastery = p.masteryLevel ?? 0
+      const masteryPct = rawMastery <= 1 ? rawMastery * 100 : rawMastery
+      return {
+        slug: p.topic.slug,
+        title: p.topic.title,
+        courseName: p.topic.category?.course?.name ?? 'Unknown',
+        masteryLevel: Math.round(masteryPct),
+        quizAvgScore: quizAvgMap[p.topic.slug] ?? 0,
+      }
+    })
 
     return NextResponse.json({ topics })
   } catch (error) {

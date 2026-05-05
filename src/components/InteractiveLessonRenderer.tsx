@@ -1294,25 +1294,26 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-between items-center pt-4">
+      <div className="flex justify-between items-center gap-2 pt-4">
         <button
           onClick={handlePrevious}
           disabled={currentSectionIndex === 0}
-          className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-lg disabled:hover:shadow-none disabled:hover:bg-white dark:disabled:hover:bg-gray-800"
+          aria-label="Previous section"
+          className="group shrink-0 px-3 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-lg disabled:hover:shadow-none disabled:hover:bg-white dark:disabled:hover:bg-gray-800"
         >
           <span className="flex items-center gap-2">
             <span className="transform transition-transform group-hover:-translate-x-1">←</span>
-            <span>Previous</span>
+            <span className="hidden sm:inline">Previous</span>
           </span>
         </button>
 
-        <div className="flex gap-2">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 min-w-0">
           {sections.map((_, index) => (
             <div
               key={index}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 index === currentSectionIndex 
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 w-10 shadow-md' 
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 w-8 sm:w-10 shadow-md' 
                   : completedSections.has(index)
                   ? 'bg-green-500 w-2.5 shadow-sm'
                   : 'bg-gray-300 dark:bg-gray-600 w-2.5'
@@ -1324,12 +1325,12 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         <button
           onClick={handleNext}
           disabled={!canProceedToNext}
-          className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl disabled:hover:shadow-lg border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
+          className="group shrink-0 px-3 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl disabled:hover:shadow-lg border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
         >
           {currentSectionIndex !== sections.length - 1
-            ? 'Next →'
+            ? (<><span className="hidden sm:inline">Next </span><span>→</span></>)
             : topicSlug === 'the-unit-circle' && lessonPart === 2
-            ? '🎯 Practice Independently →'
+            ? (<><span className="sm:hidden">🎯 Practice →</span><span className="hidden sm:inline">🎯 Practice Independently →</span></>)
             : (() => {
                 // Check if there are remaining unmastered parts after this one
                 let hasMoreUnmastered = false
@@ -1337,13 +1338,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                   if (!entranceQuizMasteredParts.has(i)) { hasMoreUnmastered = true; break }
                 }
                 if (hasMoreUnmastered) {
-                  return lessonPart === 1 && topicSlug === 'the-unit-circle'
-                    ? 'On to Part 2 →'
-                    : 'Continue to Next Part →'
+                  if (lessonPart === 1 && topicSlug === 'the-unit-circle') {
+                    return (<><span className="sm:hidden">Part 2 →</span><span className="hidden sm:inline">On to Part 2 →</span></>)
+                  }
+                  return (<><span className="sm:hidden">Next Part →</span><span className="hidden sm:inline">Continue to Next Part →</span></>)
                 }
-                if (topicHasExitQuiz && !exitQuizStatus.hasPassed) return '📝 Take Exit Quiz →'
-                if (entersCompetitiveModeOnComplete) return '🎮 Enter Competitive Mode →'
-                return '✅ Lesson Complete!'
+                if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
+                  return (<><span className="sm:hidden">📝 Quiz →</span><span className="hidden sm:inline">📝 Take Exit Quiz →</span></>)
+                }
+                if (entersCompetitiveModeOnComplete) {
+                  return (<><span className="sm:hidden">🎮 Compete →</span><span className="hidden sm:inline">🎮 Enter Competitive Mode →</span></>)
+                }
+                return (<><span className="sm:hidden">✅ Done!</span><span className="hidden sm:inline">✅ Lesson Complete!</span></>)
               })()}
         </button>
       </div>
