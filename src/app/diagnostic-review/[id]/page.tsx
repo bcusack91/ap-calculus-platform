@@ -91,7 +91,7 @@ export default function DiagnosticAttemptReviewPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container py-12">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 text-center shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h1 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">Couldn&apos;t load this attempt</h1>
             <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">{error ?? 'This diagnostic attempt does not exist or no longer exists.'}</p>
             <Link href="/dashboard" className="inline-block rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-purple-700">Back to Dashboard</Link>

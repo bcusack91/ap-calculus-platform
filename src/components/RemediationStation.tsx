@@ -387,7 +387,7 @@ function MiniQuizStep({ step, onComplete }: { step: RemediationStep; onComplete:
         {score === null ? (
           <button
             onClick={() => handleQuizComplete(0.8)} // Simulated score
-            className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-colors"
+            className="px-4 sm:px-8 py-3 sm:py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-colors"
           >
             Start Quiz
           </button>

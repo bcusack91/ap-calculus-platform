@@ -179,8 +179,8 @@ export default function APStatisticsHub() {
             Interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ap-stats-diagnostic" className="rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/courses/ap-statistics" className="rounded-xl border-2 border-indigo-300 px-8 py-3.5 text-lg font-semibold text-indigo-700 transition hover:bg-indigo-50 dark:border-indigo-600 dark:text-indigo-400 dark:hover:bg-indigo-900/20">Browse Lessons</Link>
+            <Link href="/ap-stats-diagnostic" className="rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
+            <Link href="/courses/ap-statistics" className="rounded-xl border-2 border-indigo-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-indigo-700 transition hover:bg-indigo-50 dark:border-indigo-600 dark:text-indigo-400 dark:hover:bg-indigo-900/20">Browse Lessons</Link>
           </div>
         </div>
       </section>
@@ -222,7 +222,7 @@ export default function APStatisticsHub() {
       </section>
 
       <section className="container pb-16">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">About the AP Statistics Exam</h2>
           <div className="grid gap-6 text-sm text-gray-600 sm:grid-cols-2 dark:text-gray-400">
             <div>

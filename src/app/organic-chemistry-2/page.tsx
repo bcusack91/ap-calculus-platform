@@ -67,9 +67,9 @@ export default function OrganicChemistry2Hub() {
             <strong> 1–5 AP-equivalent score predictor</strong>.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ochem-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/ochem2-score-predictor" className="rounded-xl border-2 border-teal-300 px-8 py-3.5 text-lg font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-600 dark:text-teal-400 dark:hover:bg-teal-900/20">View 1–5 Score Predictor</Link>
-            <Link href="/courses/organic-chemistry-2" className="rounded-xl border-2 border-emerald-300 px-8 py-3.5 text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
+            <Link href="/ochem-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
+            <Link href="/ochem2-score-predictor" className="rounded-xl border-2 border-teal-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-600 dark:text-teal-400 dark:hover:bg-teal-900/20">View 1–5 Score Predictor</Link>
+            <Link href="/courses/organic-chemistry-2" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
           </div>
           <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
             Need to review fundamentals? <Link href="/organic-chemistry-1" className="font-semibold text-lime-600 underline hover:text-lime-700 dark:text-lime-400">← Back to Organic Chemistry 1</Link>
@@ -115,7 +115,7 @@ export default function OrganicChemistry2Hub() {
       </section>
 
       <section className="container pb-16">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">About the AP-Equivalent Score (1–5)</h2>
           <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
             Organic Chemistry 2 is taught at AP-equivalent depth. The score predictor blends <strong>70% quiz performance</strong> and

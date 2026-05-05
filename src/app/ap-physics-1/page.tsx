@@ -185,8 +185,8 @@ export default function APPhysics1Hub() {
             161+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ap-physics1-diagnostic" className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/courses/ap-physics-1" className="rounded-xl border-2 border-blue-300 px-8 py-3.5 text-lg font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-600 dark:text-blue-400 dark:hover:bg-blue-900/20">Browse Lessons</Link>
+            <Link href="/ap-physics1-diagnostic" className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
+            <Link href="/courses/ap-physics-1" className="rounded-xl border-2 border-blue-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-600 dark:text-blue-400 dark:hover:bg-blue-900/20">Browse Lessons</Link>
           </div>
         </div>
       </section>
@@ -230,7 +230,7 @@ export default function APPhysics1Hub() {
       </section>
 
       <section className="container pb-16">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">About the AP Physics 1 Exam</h2>
           <div className="grid gap-6 text-sm text-gray-600 sm:grid-cols-2 dark:text-gray-400">
             <div>

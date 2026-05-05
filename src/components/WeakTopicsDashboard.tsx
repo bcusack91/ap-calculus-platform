@@ -31,7 +31,7 @@ export default function WeakTopicsDashboard() {
 
   if (loading) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm animate-pulse">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm animate-pulse">
         <div className="h-6 w-40 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
         <div className="space-y-3">
           {[1, 2, 3].map(i => <div key={i} className="h-12 bg-gray-100 dark:bg-gray-700 rounded" />)}
@@ -43,7 +43,7 @@ export default function WeakTopicsDashboard() {
   if (weakTopics.length === 0) return null
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
       <h3 className="font-bold text-gray-900 dark:text-white mb-1 flex items-center gap-2">
         ⚠️ Topics Needing Review
       </h3>

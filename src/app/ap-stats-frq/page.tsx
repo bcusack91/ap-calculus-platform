@@ -334,7 +334,7 @@ export default function APStatsFRQPage() {
             FRQ Results
           </h1>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 text-center mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 text-center mb-6 sm:mb-8">
             <div className="text-6xl font-black mb-2">
               <span
                 className={

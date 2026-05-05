@@ -301,10 +301,10 @@ export default function DashboardPage() {
               </div>
             ))}
           </div>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             <div className="lg:col-span-2 space-y-8">
               {[1, 2].map((i) => (
-                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
                   <div className="w-40 h-6 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
                   <div className="space-y-3">
                     {[1, 2, 3].map((j) => (
@@ -316,7 +316,7 @@ export default function DashboardPage() {
             </div>
             <div className="space-y-6">
               {[1, 2].map((i) => (
-                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
                   <div className="w-32 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
                   <div className="space-y-3">
                     {[1, 2].map((j) => (
@@ -489,7 +489,7 @@ export default function DashboardPage() {
           </Link>
         )}
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
             {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length) ? (
@@ -600,7 +600,7 @@ export default function DashboardPage() {
 
             {/* Course Progress */}
             {courseProgress.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📚 Course Progress</h2>
                 <div className="space-y-4">
                   {courseProgress.map((course) => {
@@ -624,7 +624,7 @@ export default function DashboardPage() {
             )}
 
             {/* Achievements */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">🏆 Achievements</h2>
                 <div className="flex items-center gap-3">
@@ -653,7 +653,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Recent Activity */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🕐 Recent Activity</h2>
               {recentActivity.length === 0 ? (
                 <div className="text-center py-8">
@@ -691,7 +691,7 @@ export default function DashboardPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
               <div className="space-y-3">
                 <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 hover:border-purple-300 transition-colors group">
@@ -728,7 +728,7 @@ export default function DashboardPage() {
             <WeakTopicsDashboard />
 
             {/* Streak Card */}
-            <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 text-white shadow-sm">
+            <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 sm:p-6 text-white shadow-sm">
               <h3 className="font-bold mb-2">🔥 Study Streak</h3>
               <div className="flex items-end gap-6">
                 <div>
@@ -746,7 +746,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Study Stats */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <h3 className="font-bold text-gray-900 dark:text-white mb-4">📊 Study Stats</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
@@ -778,7 +778,7 @@ export default function DashboardPage() {
 
             {/* Bookmarks (server-synced) */}
             {bookmarks.length > 0 && (
-              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-4">🔖 Saved Lessons</h3>
                 <div className="space-y-2">
                   {bookmarks.slice(0, 5).map((bookmark) => (

@@ -228,15 +228,15 @@ export default function PracticeExam(config: PracticeExamConfig) {
         <div className="container"><div className="mx-auto max-w-3xl">
           <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{activeSection?.name} — Results</h2>
           <div className="mb-8 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
+            <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 text-center dark:border-gray-700 dark:bg-gray-800">
               <p className="text-sm text-gray-500 dark:text-gray-400">Score</p>
               <p className={`text-4xl font-black ${t.text}`}>{r.pct}%</p>
             </div>
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
+            <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 text-center dark:border-gray-700 dark:bg-gray-800">
               <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
               <p className="text-4xl font-black text-teal-600 dark:text-teal-400">{r.correct}/{r.total}</p>
             </div>
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
+            <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 text-center dark:border-gray-700 dark:bg-gray-800">
               <p className="text-sm text-gray-500 dark:text-gray-400">Performance</p>
               <p className="text-4xl font-black">{r.pct >= 80 ? '🎉' : r.pct >= 60 ? '👍' : '📚'}</p>
               <p className="text-xs text-gray-500 dark:text-gray-400">{r.pct >= 80 ? 'Excellent' : r.pct >= 60 ? 'Good' : 'Needs Review'}</p>
@@ -245,7 +245,7 @@ export default function PracticeExam(config: PracticeExamConfig) {
 
           {/* Topic breakdown */}
           {r.byTopic.length > 1 && (
-            <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+            <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
               <h3 className="mb-3 text-lg font-semibold text-gray-800 dark:text-gray-200">Topic Breakdown</h3>
               <div className="space-y-2">
                 {r.byTopic.sort((a, b) => (a.total > 0 ? a.correct / a.total : 0) - (b.total > 0 ? b.correct / b.total : 0)).map(tp => {
@@ -262,7 +262,7 @@ export default function PracticeExam(config: PracticeExamConfig) {
           )}
 
           {/* Question review */}
-          <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+          <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">Question Review</h3>
             <div className="space-y-3">
               {questions.map((q, i) => {
@@ -314,14 +314,14 @@ export default function PracticeExam(config: PracticeExamConfig) {
           <div className="mb-4"><span className={`rounded-full px-3 py-1 text-xs font-semibold ${t.badge}`}>{activeSection?.name}</span></div>
 
           {/* Question card */}
-          <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question}</p>
             <div className="space-y-2">
               {q.options.map((opt, i) => {
                 const isSel = answers[idx] === i
                 return (
                   <button key={i} onClick={() => { const u = [...answers]; u[idx] = i; setAnswers(u) }}
-                    className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${isSel ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
+                    className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition break-words ${isSel ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
                     <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
                   </button>
                 )
@@ -405,7 +405,7 @@ export default function PracticeExam(config: PracticeExamConfig) {
         )}
 
         {aboutInfo && (
-          <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+          <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-3 text-lg font-semibold text-gray-800 dark:text-gray-200">{aboutInfo.title}</h3>
             <div className="grid gap-4 text-sm text-gray-600 sm:grid-cols-2 dark:text-gray-400">
               {aboutInfo.columns.map(col => (

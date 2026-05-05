@@ -57,7 +57,7 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
 
   if (!isOpen) {
     return (
-      <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+      <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">📝 Review Your Test</h3>
@@ -80,7 +80,7 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
   }
 
   return (
-    <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+    <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">📝 Test Review</h3>
         <button

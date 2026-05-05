@@ -155,7 +155,7 @@ export default function ScorePredictor(config: ScorePredictorConfig) {
         <div className="container py-12">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">{subject} Score Predictor</h1>
-            <div className="rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
               <p className="mb-4 text-gray-600 dark:text-gray-400">
                 We need more data to predict your score. Complete some quizzes or a practice test first!
               </p>
@@ -234,7 +234,7 @@ export default function ScorePredictor(config: ScorePredictorConfig) {
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">{description}</p>
 
           {/* Main Score Card */}
-          <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+          <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
             <div className="mb-6 text-center">
               <p className="text-sm font-medium text-gray-500 uppercase dark:text-gray-400">Predicted Score</p>
               <p className={`text-7xl font-black ${scoreColor(prediction.primaryScore, prediction.maxScore)}`}>

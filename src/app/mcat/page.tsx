@@ -184,13 +184,13 @@ export default function MCATLandingPage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/mcat-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
+              className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
               Start with Diagnostic
             </Link>
             <Link
               href="/mcat-practice"
-              className="rounded-xl border-2 border-emerald-300 px-8 py-3.5 text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
+              className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
             >
               Practice Questions
             </Link>
@@ -281,7 +281,7 @@ export default function MCATLandingPage() {
 
       {/* MCAT Info */}
       <section className="container pb-16">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
             About the MCAT
           </h2>

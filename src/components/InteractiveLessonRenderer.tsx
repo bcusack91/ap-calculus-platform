@@ -1642,8 +1642,8 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border-2 border-green-500">
         <div className="text-center">
-          <div className="text-6xl mb-4">🎉</div>
-          <h3 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
+          <div className="text-4xl sm:text-6xl mb-4">🎉</div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
             Perfect! 5 Correct in a Row!
           </h3>
           <p className="text-xl text-gray-700 dark:text-gray-300">
@@ -1658,7 +1658,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     <div className="space-y-6">
       <FadeInText content={section.content} onComplete={() => {}} />
       
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 border-2 border-purple-300 dark:border-purple-700">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-8 border-2 border-purple-300 dark:border-purple-700">
         {/* Progress */}
         <div className="mb-6 text-center">
           <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-3">
@@ -1673,7 +1673,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
           <p className="text-xl mb-4 text-gray-700 dark:text-gray-300">
             What is the reference angle for:
           </p>
-          <div className="text-6xl font-bold text-purple-700 dark:text-purple-400 mb-6">
+          <div className="text-4xl sm:text-6xl font-bold text-purple-700 dark:text-purple-400 mb-6">
             {currentAngle}°
           </div>
 
@@ -1695,7 +1695,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
           <button
             onClick={handleSubmit}
             disabled={feedbackType === 'correct' || showingAnswer}
-            className="px-8 py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
+            className="px-4 sm:px-8 py-3 sm:py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
           >
             Check Answer
           </button>
@@ -1841,7 +1841,7 @@ function CosineTable() {
 function UnitCircleDiagram() {
   return (
     <div className="my-8 flex justify-center">
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 border-2 border-purple-200 dark:border-purple-700">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 sm:p-8 border-2 border-purple-200 dark:border-purple-700">
         <svg width="500" height="500" viewBox="-260 -260 520 520" className="max-w-full h-auto">
           {/* Grid lines */}
           <g stroke="#e5e7eb" strokeWidth="1" opacity="0.3">
@@ -2134,7 +2134,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
   return (
     <div className="my-8 flex justify-center">
-      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-2xl p-8 border-2 border-indigo-300 dark:border-indigo-700 max-w-5xl w-full">
+      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-2xl p-4 sm:p-8 border-2 border-indigo-300 dark:border-indigo-700 max-w-5xl w-full">
         <h3 className="text-2xl font-bold text-center mb-4 text-indigo-900 dark:text-indigo-200">
           🎮 Fill in the First Quadrant!
         </h3>
@@ -3005,7 +3005,7 @@ function MultipleChoiceQuiz({
           ? 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-300'
           : 'bg-gradient-to-br from-amber-50 to-orange-50 border-amber-300'
       }`}>
-        <div className="text-6xl mb-4">{isPerfect ? '🎉' : isGood ? '👍' : '📚'}</div>
+        <div className="text-4xl sm:text-6xl mb-4">{isPerfect ? '🎉' : isGood ? '👍' : '📚'}</div>
         <h3 className="text-2xl font-bold text-gray-800 mb-2">Quiz Complete!</h3>
         <p className="text-lg text-gray-700 mb-4">
           You scored {score} out of {questions.length}
@@ -3038,8 +3038,8 @@ function MultipleChoiceQuiz({
       </div>
 
       {/* Current Question */}
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">
+      <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-4 break-words overflow-x-auto">
           <InlineLatex text={currentQuestion.question || currentQuestion.text || ''} />
         </h3>
 
@@ -3050,7 +3050,7 @@ function MultipleChoiceQuiz({
             const showingFeedback = showFeedback[currentQuestionIndex]
             const isEliminated = eliminatedOptions[currentQuestionIndex]?.has(optionIndex) ?? false
 
-            let buttonStyle = "w-full text-left p-4 rounded-lg border-2 transition-all "
+            let buttonStyle = "w-full text-left p-3 sm:p-4 rounded-lg border-2 transition-all "
             
             if (!showingFeedback) {
               buttonStyle += isSelected 
@@ -3073,11 +3073,11 @@ function MultipleChoiceQuiz({
                 disabled={showingFeedback}
                 className={buttonStyle}
               >
-                <div className="flex items-center justify-between">
-                  <span className={`text-gray-800 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                <div className="flex items-start justify-between gap-2 min-w-0">
+                  <span className={`text-gray-800 min-w-0 flex-1 break-words ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
                     <InlineLatex text={option} />
                   </span>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 shrink-0">
                     {!showingFeedback && (
                       <span
                         role="button"
@@ -3336,7 +3336,7 @@ function MiniBossBattle({
           <div className={`text-9xl mb-8 transition-all duration-1000 ${entranceAnimComplete ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
             ⚔️
           </div>
-          <h1 className={`text-6xl font-bold text-red-500 mb-4 transition-all duration-1000 delay-500 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <h1 className={`text-4xl sm:text-6xl font-bold text-red-500 mb-4 transition-all duration-1000 delay-500 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             MINI-BOSS CHALLENGE
           </h1>
           <h2 className={`text-4xl font-bold text-yellow-400 mb-8 transition-all duration-1000 delay-700 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -3375,7 +3375,7 @@ function MiniBossBattle({
             <>
               <p className="text-2xl text-yellow-200 mb-4">🎉 You&apos;ve mastered factoring! 🎉</p>
               <p className="text-xl text-yellow-100 mb-8">✨ Competitive Mode Unlocked! ✨</p>
-              <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
+              <div className="text-4xl sm:text-6xl mb-8">⭐ ⭐ ⭐</div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
                   onClick={() => onComplete()}
@@ -3400,7 +3400,7 @@ function MiniBossBattle({
           ) : (
             <>
               <p className="text-2xl text-yellow-200 mb-8">Next Part Unlocked!</p>
-              <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
+              <div className="text-4xl sm:text-6xl mb-8">⭐ ⭐ ⭐</div>
               <button
                 onClick={() => onComplete()}
                 className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
@@ -3420,7 +3420,7 @@ function MiniBossBattle({
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 via-gray-900 to-black">
         <div className="text-center">
           <div className="text-9xl mb-8">💀</div>
-          <h1 className="text-6xl font-bold text-red-500 mb-6">
+          <h1 className="text-4xl sm:text-6xl font-bold text-red-500 mb-6">
             DEFEATED...
           </h1>
           <p className="text-3xl text-gray-300 mb-8">{config.bossName} wins!</p>
@@ -3740,8 +3740,8 @@ function FactoringPractice({
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-8 border-2 border-green-500">
         <div className="text-center">
-          <div className="text-6xl mb-4">🎉</div>
-          <h3 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
+          <div className="text-4xl sm:text-6xl mb-4">🎉</div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-green-700 dark:text-green-400 mb-4">
             Excellent! {requiredStreak} Correct in a Row!
           </h3>
           <p className="text-xl text-gray-700 dark:text-gray-300">
@@ -3756,7 +3756,7 @@ function FactoringPractice({
     <div className="space-y-6">
       <FadeInText content={section.content} onComplete={() => {}} />
       
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 border-2 border-purple-300 dark:border-purple-700">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-8 border-2 border-purple-300 dark:border-purple-700">
         {/* Progress */}
         <div className="mb-6 text-center">
           <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-3">
@@ -4911,7 +4911,7 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
         {/* Completion Message */}
         {step4Complete && (
           <div className="text-center p-12 bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 rounded-xl border-2 border-green-500">
-            <div className="text-6xl mb-4">🎉</div>
+            <div className="text-4xl sm:text-6xl mb-4">🎉</div>
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
               Perfect! You&apos;ve mastered it!
             </h2>
@@ -4921,14 +4921,14 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
             <div className="flex gap-4 justify-center">
               <button
                 onClick={onBack}
-                className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+                className="px-4 sm:px-8 py-3 sm:py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
               >
                 Return to Lesson
               </button>
               {onComplete && (
                 <button
                   onClick={onComplete}
-                  className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+                  className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
                 >
                   Continue to Part 2 →
                 </button>
@@ -5083,7 +5083,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
 
   return (
     <div className="max-w-5xl mx-auto p-6">
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 sm:p-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
             Complete the Unit Circle Table
@@ -5292,7 +5292,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
               ? 'bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 border-orange-500'
               : 'bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 border-green-500'
           }`}>
-            <div className="text-6xl mb-4">{errorMade ? '📝' : '🎉'}</div>
+            <div className="text-4xl sm:text-6xl mb-4">{errorMade ? '📝' : '🎉'}</div>
             <h2 className={`text-4xl font-bold mb-4 bg-gradient-to-r ${
               errorMade 
                 ? 'from-orange-600 to-red-600'
@@ -5309,20 +5309,20 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
             <div className="flex gap-4 justify-center flex-wrap">
               <button
                 onClick={resetPractice}
-                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+                className="px-4 sm:px-8 py-3 sm:py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
               >
                 🔄 Try Again
               </button>
               <button
                 onClick={onBack}
-                className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+                className="px-4 sm:px-8 py-3 sm:py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
               >
                 Return to Lesson
               </button>
               {onComplete && !errorMade && (
                 <button
                   onClick={onComplete}
-                  className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+                  className="px-4 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
                 >
                   Continue to Part 3 →
                 </button>

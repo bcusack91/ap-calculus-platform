@@ -179,19 +179,19 @@ export default function ACTLandingPage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/act-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-red-600 to-orange-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
+              className="rounded-xl bg-gradient-to-r from-red-600 to-orange-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
               Start with Diagnostic
             </Link>
             <Link
               href="/courses/act-prep"
-              className="rounded-xl border-2 border-red-300 px-8 py-3.5 text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
+              className="rounded-xl border-2 border-red-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
             >
               Browse Lessons
             </Link>
             <Link
               href="/competitive"
-              className="rounded-xl border-2 border-red-300 px-8 py-3.5 text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
+              className="rounded-xl border-2 border-red-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
             >
               Competitive Mode
             </Link>
@@ -260,7 +260,7 @@ export default function ACTLandingPage() {
 
       {/* ACT Info */}
       <section className="container pb-16">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
             About the ACT
           </h2>

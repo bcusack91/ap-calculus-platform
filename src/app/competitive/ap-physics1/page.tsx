@@ -284,7 +284,7 @@ export default function APPhysics1CompetitivePage() {
         )}
 
         {!anyCompleted && (
-          <div className="text-center bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
+          <div className="text-center bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8">
             <div className="text-5xl mb-4">🔒</div>
             <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Complete a Lesson to Unlock</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">Finish any AP Physics 1 interactive lesson with 80%+ mastery to start competing.</p>

@@ -263,7 +263,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
               />
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
               <RichText
                 text={q.question}
                 className="mb-5 block text-base font-medium text-gray-900 sm:text-lg dark:text-white"
@@ -367,7 +367,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
       <div className={`min-h-screen ${bgGradient}`}>
         <section className="container py-12">
           <div className="mx-auto max-w-3xl">
-            <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="rounded-3xl border border-gray-200 bg-white p-5 sm:p-8 shadow-sm dark:border-gray-700 dark:bg-gray-800">
               <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
                 {activeUnit.icon} {activeUnit.name} · Variation {activeVariant}
               </div>

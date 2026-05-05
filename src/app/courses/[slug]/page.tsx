@@ -219,7 +219,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
         <DiagnosticStudyPlanBanner courseSlug={slug} />
 
         {/* Course Overview */}
-        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-12 shadow-sm">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 mb-12 shadow-sm">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Course Overview</h2>
           <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
             <p>
@@ -474,7 +474,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                   <div className="flex-1 h-px bg-purple-200 dark:bg-purple-800" />
                 </div>
                 {abCategories.map((category) => (
-                  <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm ring-1 ring-purple-100 dark:ring-purple-900/50">
+                  <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm ring-1 ring-purple-100 dark:ring-purple-900/50">
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-3">
                         {category.icon && (
@@ -545,7 +545,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
             )}
 
             {course.categories.map((category) => (
-              <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm">
+              <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
                     {category.icon && (

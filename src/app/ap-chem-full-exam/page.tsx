@@ -374,7 +374,7 @@ export default function APChemFullExamPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 flex items-center justify-center">
         <div className="max-w-lg mx-auto px-4 text-center">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8">
             <div className="text-5xl mb-4">☕</div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Section I Complete!</h2>
             <p className="text-gray-500 dark:text-gray-400 mb-4">
@@ -530,7 +530,7 @@ export default function APChemFullExamPage() {
         </h1>
 
         {/* Score Circle */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 text-center mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 text-center mb-6 sm:mb-8">
           <div className="text-6xl font-black mb-2">
             <span className={estimatedScore >= 4 ? 'text-green-600' : estimatedScore >= 3 ? 'text-yellow-600' : 'text-red-600'}>
               {estimatedScore}

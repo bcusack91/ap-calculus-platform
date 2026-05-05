@@ -198,13 +198,13 @@ export default function ApAfricanAmericanStudiesHub() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/ap-african-american-studies-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
+              className="rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
               Start with Diagnostic
             </Link>
             <Link
               href="/courses/ap-african-american-studies"
-              className="rounded-xl border-2 border-amber-300 px-8 py-3.5 text-lg font-semibold text-amber-700 transition hover:bg-amber-50 dark:border-amber-600 dark:text-amber-400 dark:hover:bg-amber-900/20"
+              className="rounded-xl border-2 border-amber-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-amber-700 transition hover:bg-amber-50 dark:border-amber-600 dark:text-amber-400 dark:hover:bg-amber-900/20"
             >
               Browse Lessons
             </Link>
@@ -266,7 +266,7 @@ export default function ApAfricanAmericanStudiesHub() {
 
       {/* Exam Info */}
       <section className="container pb-16">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
             About the AP African American Studies Exam
           </h2>
