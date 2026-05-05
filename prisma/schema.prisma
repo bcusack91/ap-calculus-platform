@@ -44,24 +44,26 @@ model User {
   learningInsights       LearningInsights[]
 
   // Teacher dashboard relations
-  ownedClassrooms           Classroom[]              @relation("ClassroomTeacher")
-  classroomMemberships      ClassroomMember[]
-  assignmentSubmissions     AssignmentSubmission[]
-  createdAssignments        Assignment[]             @relation("AssignmentCreator")
-  competitionParticipations CompetitionParticipant[]
-  competitiveGrantsReceived CompetitiveGrant[]       @relation("CompetitiveGrantStudent")
-  competitiveGrantsGiven    CompetitiveGrant[]       @relation("CompetitiveGrantTeacher")
-  exitQuizAttempts          ExitQuizAttempt[]
-  userAchievements          UserAchievement[]
-  bookmarks                 Bookmark[]
-  announcements             Announcement[]           @relation("AnnouncementAuthor")
-  notes                     StudentNote[]
-  studyPlans                StudyPlan[]
-  challengeParticipations   ChallengeParticipant[]
-  asyncChallengesSent       AsyncChallenge[]              @relation("AsyncChallengeSender")
-  asyncChallengesReceived   AsyncChallenge[]              @relation("AsyncChallengeRecipient")
-  satTestAttempts           SatTestAttempt[]
-  mcatTestAttempts          McatTestAttempt[]
+  ownedClassrooms            Classroom[]                @relation("ClassroomTeacher")
+  classroomMemberships       ClassroomMember[]
+  assignmentSubmissions      AssignmentSubmission[]
+  createdAssignments         Assignment[]               @relation("AssignmentCreator")
+  competitionParticipations  CompetitionParticipant[]
+  competitiveGrantsReceived  CompetitiveGrant[]         @relation("CompetitiveGrantStudent")
+  competitiveGrantsGiven     CompetitiveGrant[]         @relation("CompetitiveGrantTeacher")
+  exitQuizAttempts           ExitQuizAttempt[]
+  userAchievements           UserAchievement[]
+  bookmarks                  Bookmark[]
+  announcements              Announcement[]             @relation("AnnouncementAuthor")
+  notes                      StudentNote[]
+  studyPlans                 StudyPlan[]
+  challengeParticipations    ChallengeParticipant[]
+  asyncChallengesSent        AsyncChallenge[]           @relation("AsyncChallengeSender")
+  asyncChallengesReceived    AsyncChallenge[]           @relation("AsyncChallengeRecipient")
+  hostedLobbies              CompetitiveLobby[]         @relation("LobbyHost")
+  joinedLobbies              CompetitiveLobby[]         @relation("LobbyGuest")
+  satTestAttempts            SatTestAttempt[]
+  mcatTestAttempts           McatTestAttempt[]
   diagnosticChallenges       DiagnosticChallenge[]
   diagnosticChallengeEntries DiagnosticChallengeEntry[]
 }
@@ -345,7 +347,7 @@ model TopicProgress {
   lastAccessed    DateTime       @default(now())
   completedAt     DateTime?
   variant         Int            @default(1) // Which content variant (1-3)
-  failedExitParts Json?          // Part numbers to redo after exit quiz failure, e.g. [2, 5, 7]
+  failedExitParts Json? // Part numbers to redo after exit quiz failure, e.g. [2, 5, 7]
   topic           Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
   user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -586,29 +588,29 @@ model CompetitiveMatch {
 
 // Async (turn-based) challenges — challenger plays first, then shares link for opponent to play later
 model AsyncChallenge {
-  id               String              @id @default(cuid())
-  challengerId     String
-  recipientId      String?             // null until recipient accepts
-  topicSlug        String
-  questionCount    Int                 @default(10)
-  timeLimit        Int                 @default(300) // seconds per player
-  questions        Json                // pre-generated questions array
-  challengerScore  Int                 @default(0)
-  challengerTime   Int?                // milliseconds to complete
-  challengerAnswers Json?              // array of { questionIndex, answerIndex, correct, timeMs }
-  recipientScore   Int?
-  recipientTime    Int?
-  recipientAnswers Json?
-  winnerId         String?
-  status           AsyncChallengeStatus @default(CHALLENGER_PLAYING)
-  expiresAt        DateTime            // challenge expires if not accepted
+  id                 String               @id @default(cuid())
+  challengerId       String
+  recipientId        String? // null until recipient accepts
+  topicSlug          String
+  questionCount      Int                  @default(10)
+  timeLimit          Int                  @default(300) // seconds per player
+  questions          Json // pre-generated questions array
+  challengerScore    Int                  @default(0)
+  challengerTime     Int? // milliseconds to complete
+  challengerAnswers  Json? // array of { questionIndex, answerIndex, correct, timeMs }
+  recipientScore     Int?
+  recipientTime      Int?
+  recipientAnswers   Json?
+  winnerId           String?
+  status             AsyncChallengeStatus @default(CHALLENGER_PLAYING)
+  expiresAt          DateTime // challenge expires if not accepted
   challengerPlayedAt DateTime?
   recipientPlayedAt  DateTime?
-  completedAt      DateTime?
-  createdAt        DateTime            @default(now())
-  updatedAt        DateTime            @updatedAt
-  challenger       User                @relation("AsyncChallengeSender", fields: [challengerId], references: [id], onDelete: Cascade)
-  recipient        User?               @relation("AsyncChallengeRecipient", fields: [recipientId], references: [id], onDelete: SetNull)
+  completedAt        DateTime?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  challenger         User                 @relation("AsyncChallengeSender", fields: [challengerId], references: [id], onDelete: Cascade)
+  recipient          User?                @relation("AsyncChallengeRecipient", fields: [recipientId], references: [id], onDelete: SetNull)
 
   @@index([challengerId])
   @@index([recipientId])
@@ -617,11 +619,37 @@ model AsyncChallenge {
 }
 
 enum AsyncChallengeStatus {
-  CHALLENGER_PLAYING  // challenger is still answering
+  CHALLENGER_PLAYING // challenger is still answering
   WAITING_FOR_OPPONENT // challenger done, waiting for recipient
-  RECIPIENT_PLAYING    // recipient is answering
-  COMPLETED            // both done
-  EXPIRED              // not accepted before deadline
+  RECIPIENT_PLAYING // recipient is answering
+  COMPLETED // both done
+  EXPIRED // not accepted before deadline
+}
+
+// Private head-to-head lobbies — host creates a code, guest joins, both can play multiple matches
+model CompetitiveLobby {
+  id             String      @id @default(cuid())
+  code           String      @unique
+  hostId         String
+  guestId        String?
+  status         LobbyStatus @default(WAITING)
+  currentMatchId String?
+  lastMatchId    String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  closedAt       DateTime?
+  host           User        @relation("LobbyHost", fields: [hostId], references: [id], onDelete: Cascade)
+  guest          User?       @relation("LobbyGuest", fields: [guestId], references: [id], onDelete: SetNull)
+
+  @@index([hostId])
+  @@index([guestId])
+  @@index([status])
+}
+
+enum LobbyStatus {
+  WAITING // host alone, or host + guest, picking next challenge
+  IN_MATCH // a match is currently in progress
+  CLOSED // lobby closed by host or both left
 }
 
 model MMRHistory {
@@ -794,27 +822,27 @@ model Classroom {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  teacher      User                   @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
-  school       School?                @relation(fields: [schoolId], references: [id])
+  teacher           User                   @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
+  school            School?                @relation(fields: [schoolId], references: [id])
   members           ClassroomMember[]
   assignments       Assignment[]
   competitions      ScheduledCompetition[]
   competitiveGrants CompetitiveGrant[]
   announcements     Announcement[]
 
+  curriculumPlans CurriculumPlan[]
+
   @@index([teacherId])
   @@index([joinCode])
-
-  curriculumPlans CurriculumPlan[]
 }
 
 model CompetitiveGrant {
-  id          String    @id @default(cuid())
+  id          String   @id @default(cuid())
   studentId   String
-  grantedById String    // teacher who granted access
-  classroomId String?   // optional classroom context
-  categories  Json?     // JSON array of category slugs, null = all categories
-  createdAt   DateTime  @default(now())
+  grantedById String // teacher who granted access
+  classroomId String? // optional classroom context
+  categories  Json? // JSON array of category slugs, null = all categories
+  createdAt   DateTime @default(now())
 
   student   User       @relation("CompetitiveGrantStudent", fields: [studentId], references: [id], onDelete: Cascade)
   grantedBy User       @relation("CompetitiveGrantTeacher", fields: [grantedById], references: [id], onDelete: Cascade)
@@ -825,18 +853,18 @@ model CompetitiveGrant {
 }
 
 model ExitQuizAttempt {
-  id          String   @id @default(cuid())
-  userId      String
-  topicSlug   String   // e.g., 'sat-linear-equations-inequalities'
-  score       Int      // number correct (out of 10)
-  totalQuestions Int   @default(10)
-  passed      Boolean  @default(false) // true if score >= 7
-  mustRedoUnit Boolean @default(false) // true if score < 5
-  variant     Int      @default(1) // Which content variant this attempt was for
-  answers     Json     // array of { questionId, selectedAnswer, correct }
-  startedAt   DateTime @default(now())
-  completedAt DateTime @default(now())
-  timeSpent   Int      @default(0) // seconds
+  id             String   @id @default(cuid())
+  userId         String
+  topicSlug      String // e.g., 'sat-linear-equations-inequalities'
+  score          Int // number correct (out of 10)
+  totalQuestions Int      @default(10)
+  passed         Boolean  @default(false) // true if score >= 7
+  mustRedoUnit   Boolean  @default(false) // true if score < 5
+  variant        Int      @default(1) // Which content variant this attempt was for
+  answers        Json // array of { questionId, selectedAnswer, correct }
+  startedAt      DateTime @default(now())
+  completedAt    DateTime @default(now())
+  timeSpent      Int      @default(0) // seconds
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -998,33 +1026,33 @@ model StudentNote {
 
 // ─── Study Planner ───────────────────────────────────────────────────
 model StudyPlan {
-  id          String   @id @default(cuid())
+  id          String      @id @default(cuid())
   userId      String
   title       String
   examDate    DateTime?
-  goalType    String   @default("AP_EXAM") // AP_EXAM, UNIT_TEST, FINAL, CUSTOM
+  goalType    String      @default("AP_EXAM") // AP_EXAM, UNIT_TEST, FINAL, CUSTOM
   courseSlug  String?
-  targetScore Int?     // Target AP score (1-5) or percentage
-  isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  targetScore Int? // Target AP score (1-5) or percentage
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   tasks       StudyTask[]
 
   @@index([userId, isActive])
 }
 
 model StudyTask {
-  id         String    @id @default(cuid())
-  planId     String
-  topicSlug  String?
-  title      String
-  type       String    @default("LESSON") // LESSON, FLASHCARD, QUIZ, PRACTICE, CUSTOM
-  dueDate    DateTime?
-  completed  Boolean   @default(false)
+  id          String    @id @default(cuid())
+  planId      String
+  topicSlug   String?
+  title       String
+  type        String    @default("LESSON") // LESSON, FLASHCARD, QUIZ, PRACTICE, CUSTOM
+  dueDate     DateTime?
+  completed   Boolean   @default(false)
   completedAt DateTime?
-  sortOrder  Int       @default(0)
-  plan       StudyPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  sortOrder   Int       @default(0)
+  plan        StudyPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
 
   @@index([planId, completed])
   @@index([dueDate])
@@ -1035,9 +1063,9 @@ model Challenge {
   id          String   @id @default(cuid())
   title       String
   description String
-  type        String   // DAILY, WEEKLY
-  category    String   // FLASHCARD, LESSON, QUIZ, COMPETITIVE, STREAK
-  requirement Int      // e.g. "5" flashcard reviews
+  type        String // DAILY, WEEKLY
+  category    String // FLASHCARD, LESSON, QUIZ, COMPETITIVE, STREAK
+  requirement Int // e.g. "5" flashcard reviews
   xpReward    Int      @default(50)
   icon        String   @default("🎯")
   startsAt    DateTime
@@ -1068,39 +1096,39 @@ model ChallengeParticipant {
 
 // ─── Curriculum Planner (Teacher) ────────────────────────────────────
 model CurriculumPlan {
-  id          String   @id @default(cuid())
+  id          String           @id @default(cuid())
   classroomId String
   title       String
   description String?
   startDate   DateTime?
   endDate     DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  classroom   Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  classroom   Classroom        @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   weeks       CurriculumWeek[]
 
   @@index([classroomId])
 }
 
 model CurriculumWeek {
-  id       String   @id @default(cuid())
-  planId   String
-  weekNum  Int
-  title    String?
-  notes    String?  @db.Text
-  items    CurriculumItem[]
-  plan     CurriculumPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  id      String           @id @default(cuid())
+  planId  String
+  weekNum Int
+  title   String?
+  notes   String?          @db.Text
+  items   CurriculumItem[]
+  plan    CurriculumPlan   @relation(fields: [planId], references: [id], onDelete: Cascade)
 
   @@unique([planId, weekNum])
 }
 
 model CurriculumItem {
-  id        String @id @default(cuid())
+  id        String         @id @default(cuid())
   weekId    String
   topicSlug String?
   title     String
-  type      String @default("LESSON") // LESSON, ASSIGNMENT, QUIZ, ACTIVITY
-  sortOrder Int    @default(0)
+  type      String         @default("LESSON") // LESSON, ASSIGNMENT, QUIZ, ACTIVITY
+  sortOrder Int            @default(0)
   notes     String?
   week      CurriculumWeek @relation(fields: [weekId], references: [id], onDelete: Cascade)
 
@@ -1110,18 +1138,18 @@ model CurriculumItem {
 model SatTestAttempt {
   id          String   @id @default(cuid())
   userId      String
-  testNumber  Int      // which practice test (1, 2, 3...)
-  rwScore     Int      // Reading & Writing scaled score (200-800)
-  mathScore   Int      // Math scaled score (200-800)
-  totalScore  Int      // Combined score (400-1600)
-  rwCorrect   Int      // Number of R&W questions correct
-  rwTotal     Int      // Total R&W questions
-  mathCorrect Int      // Number of math questions correct
-  mathTotal   Int      // Total math questions
+  testNumber  Int // which practice test (1, 2, 3...)
+  rwScore     Int // Reading & Writing scaled score (200-800)
+  mathScore   Int // Math scaled score (200-800)
+  totalScore  Int // Combined score (400-1600)
+  rwCorrect   Int // Number of R&W questions correct
+  rwTotal     Int // Total R&W questions
+  mathCorrect Int // Number of math questions correct
+  mathTotal   Int // Total math questions
   timeSpent   Int      @default(0) // Total time in seconds
-  answers     Json     // Full answer data per section
-  weakAreas   Json?    // Array of weak topic areas
-  strengths   Json?    // Array of strong topic areas
+  answers     Json // Full answer data per section
+  weakAreas   Json? // Array of weak topic areas
+  strengths   Json? // Array of strong topic areas
   completed   Boolean  @default(true)
   startedAt   DateTime @default(now())
   completedAt DateTime @default(now())
@@ -1135,15 +1163,15 @@ model SatTestAttempt {
 model McatTestAttempt {
   id          String   @id @default(cuid())
   userId      String
-  sectionId   String   // e.g. 'chem-phys', 'cars', 'bio-biochem', 'psych-soc'
-  sectionName String   // Display name of the section
-  score       Int      // Scaled section score (118-132)
+  sectionId   String // e.g. 'chem-phys', 'cars', 'bio-biochem', 'psych-soc'
+  sectionName String // Display name of the section
+  score       Int // Scaled section score (118-132)
   maxScore    Int      @default(132)
-  percentage  Int      // Percentage correct
-  correct     Int      // Number correct
-  total       Int      // Total questions
+  percentage  Int // Percentage correct
+  correct     Int // Number correct
+  total       Int // Total questions
   timeSpent   Int      @default(0) // Total time in seconds
-  answers     Json     // Full answer data
+  answers     Json // Full answer data
   completed   Boolean  @default(true)
   startedAt   DateTime @default(now())
   completedAt DateTime @default(now())
@@ -1155,14 +1183,14 @@ model McatTestAttempt {
 }
 
 model EmailSubscriber {
-  id          String   @id @default(cuid())
-  email       String   @unique
-  source      String   @default("website") // e.g. "sat-results", "topic-sidebar", "footer"
-  interests   String[] @default([])        // e.g. ["sat", "ap-calculus"]
-  verified    Boolean  @default(false)
-  unsubscribed Boolean @default(false)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id           String   @id @default(cuid())
+  email        String   @unique
+  source       String   @default("website") // e.g. "sat-results", "topic-sidebar", "footer"
+  interests    String[] @default([]) // e.g. ["sat", "ap-calculus"]
+  verified     Boolean  @default(false)
+  unsubscribed Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   @@index([email])
   @@index([source])

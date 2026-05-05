@@ -426,6 +426,24 @@ export default function CompetitivePage() {
           </div>
         )}
 
+        {/* Private Lobby — play head-to-head with a friend */}
+        <div className="mt-8 rounded-2xl border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-blue-50 p-5 sm:p-6 shadow-xl dark:border-purple-800 dark:from-purple-900/20 dark:to-blue-900/20">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">🎮 Private Lobby</h3>
+              <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                Create a code, invite a friend, and play multiple challenges back-to-back.
+              </p>
+            </div>
+            <Link
+              href="/competitive/lobby"
+              className="shrink-0 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
+            >
+              Open Lobby →
+            </Link>
+          </div>
+        </div>
+
         {/* Async Challenges Inbox */}
         {profile && (asyncChallenges.sent.length > 0 || asyncChallenges.received.length > 0) && (
           <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6">

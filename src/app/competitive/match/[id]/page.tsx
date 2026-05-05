@@ -64,6 +64,7 @@ interface MatchState {
     player2AnsweredCurrent?: boolean;
     player1Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
     player2Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
+    lobbyCode?: string;
     [key: string]: unknown;
   };
   status: 'IN_PROGRESS' | 'COMPLETED' | 'PENDING';
@@ -615,12 +616,21 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               >
                 Back to Competitive
               </button>
-              <button
-                onClick={() => router.push(lobbyPath)}
-                className="px-8 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold"
-              >
-                Find New Match
-              </button>
+              {matchState.gameData?.lobbyCode ? (
+                <button
+                  onClick={() => router.push(`/competitive/lobby/${matchState.gameData?.lobbyCode}`)}
+                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 font-semibold"
+                >
+                  Return to Lobby →
+                </button>
+              ) : (
+                <button
+                  onClick={() => router.push(lobbyPath)}
+                  className="px-8 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold"
+                >
+                  Find New Match
+                </button>
+              )}
             </div>
           </div>
 
