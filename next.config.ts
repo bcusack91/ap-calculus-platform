@@ -236,6 +236,13 @@ const nextConfig: NextConfig = {
       { source: '/courses/ap-calculus-ab-bc', destination: '/ap-calculus-ab', permanent: true },
     )
 
+    // AP CS Principles: hub route uses /ap-cs-principles but DB course slug is
+    // ap-computer-science-principles. Redirect any external/cached links.
+    redirects.push(
+      { source: '/courses/ap-cs-principles', destination: '/courses/ap-computer-science-principles', permanent: true },
+      { source: '/courses/ap-csp', destination: '/courses/ap-computer-science-principles', permanent: true },
+    )
+
     return redirects
   },
 };

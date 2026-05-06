@@ -47,19 +47,9 @@ async function main() {
     },
   })
 
-  await prisma.topic.upsert({
-    where: { slug: 'csp-create-performance-task' },
-    update: {},
-    create: {
-      slug: 'csp-create-performance-task',
-      title: 'Create Performance Task',
-      description: 'Program design, written response, and Create Task requirements',
-      order: 2,
-      categoryId: bi1.id,
-      isPremium: false,
-      textContent: `# 🎨 Create Performance Task\n\nPrepare for the Create Performance Task: developing a program with a purpose, implementing algorithms with sequencing/selection/iteration, using abstractions (procedures with parameters), managing complexity through procedural abstraction and lists, writing clear written responses explaining your program's purpose, function, and algorithm.`,
-    },
-  })
+  // NOTE: The "Create Performance Task" topic was removed because it is a
+  // College Board project deliverable, not a study topic. Students should
+  // refer to College Board's official Create Task scoring guidelines.
 
   // ─── Big Idea 2: Data ───
   const bi2 = await prisma.category.upsert({
