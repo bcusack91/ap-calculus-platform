@@ -1,175 +1,189 @@
 export const cspDataPart5Data = {
-  topicSlug: 'csp-data',
+  topicSlug: "csp-data",
   sections: [
     {
-      id: 'cspdata5-intro',
+      id: "cspdata5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
 **Part 5 of 7 — Change Over Time**
 
-Data & Information has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Data Practices Have Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Data & Information that have remained stable over time |
-| **Change** | How Data & Information has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Data & Information over time |
+| Era | Defining shift |
+|-----|----------------|
+| 1980s | Relational databases (SQL); structured tables. |
+| 2000s | "Big data" — terabytes routine. |
+| 2010s | NoSQL, cloud data warehouses, real-time streams. |
+| 2020s | ML-ready datasets, vector databases, AI training corpora. |
       `
     },
     {
-      id: 'cspdata5-quiz1',
+      id: "cspdata5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Data & Information helps:',
+            question: "\"Big data\" most commonly refers to datasets that ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "fit easily on a single floppy disk and can be processed by one program.",
+              "are too large or too fast for traditional single-machine processing.",
+              "are encrypted with strong cryptography before they touch persistent storage.",
+              "are written in pure binary rather than human-readable structured text."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Big data = scale exceeds single-machine capability."
           },
           {
-            question: 'Continuity in Data & Information means:',
+            question: "A vector database is most associated with ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "storing user passwords for the application's authentication system.",
+              "storing embeddings used by ML/AI for similarity search.",
+              "compressing video streams before they are sent over the network.",
+              "routing IPv6 packets between nearby autonomous systems on the internet."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Vector DBs power similarity search for AI/ML."
           }
         ]
       }
     },
     {
-      id: 'cspdata5-content',
+      id: "cspdata5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Storage Cost Collapse
 
-### Continuity
-Aspects of Data & Information that have remained stable over time. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+| Year | $ / GB |
+|------|--------|
+| 1990 | ~$10,000 |
+| 2000 | ~$10 |
+| 2010 | ~$0.10 |
+| 2020 | ~$0.02 |
 
-### Change
-How Data & Information has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+This collapse changed what's feasible. "Just keep everything" became cheap. That has both research benefits and surveillance risks.
 
-### Trend
-The direction of change in Data & Information over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Real-Time Streams
+
+Many systems no longer batch-process daily logs; they consume data continuously:
+
+- Financial trading.
+- Fraud detection.
+- Live dashboards.
+- IoT sensor pipelines.
+
+Streaming systems (Kafka, Flink, Spark Streaming) became standard.
+
+## ML-Era Datasets
+
+Modern AI training requires massive curated datasets. New questions:
+
+- **Provenance**: where did the data come from?
+- **Consent**: did sources agree to this use?
+- **Bias**: who is represented, and who isn't?
+- **Quality**: is the labeling reliable?
+
+The dataset is now part of the AI system's ethical surface.
       `
     },
     {
-      id: 'cspdata5-input',
+      id: "cspdata5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Data & Information that have remained stable over time?
+1) Datasets too large for a single machine are commonly called _______ data.
 
-2) What concept describes how Data & Information has transformed due to new forces and conditions?
+2) A database optimized for similarity search of AI embeddings is a _______ database.
 
-3) Name the term for the direction of change in Data & Information over time.
-
-Use the exact term from this part.
+3) Documenting where data came from is called data _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Data & Information that have remained stable over time), Change (How Data & Information has transformed due to new forces and conditions), and Trend (The direction of change in Data & Information over time).'
+        correctAnswers: ["big", "vector", "provenance"],
+        hint1: "Term of art.",
+        hint2: "Similarity search.",
+        hint3: "Origin story.",
+        explanation: "Big data = beyond single-machine. Vector DB = embeddings. Provenance = origin."
       }
     },
     {
-      id: 'cspdata5-dropdown',
+      id: "cspdata5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Data & Information that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Cheap storage means ___",
+            options: ["\"keep everything\" is feasible — and risky for privacy", "data must always be deleted", "no concern about retention", "compression is unnecessary"]
           },
           {
-            label: 'How Data & Information has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "A real-time streaming system processes events ___",
+            options: ["as they arrive, with low latency", "only once per year", "only after compression", "only on weekends"]
           },
           {
-            label: 'The direction of change in Data & Information over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "A model trained on a biased dataset will ___",
+            options: ["likely produce biased outputs", "magically fix the bias", "always be perfectly fair", "have no measurable effect"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Data & Information that have remained stable over time. Change — How Data & Information has transformed due to new forces and conditions. Trend — The direction of change in Data & Information over time.'
+        correctAnswers: ["\"keep everything\" is feasible — and risky for privacy", "as they arrive, with low latency", "likely produce biased outputs"],
+        hint1: "Cheap storage = retention temptation.",
+        hint2: "Low latency.",
+        hint3: "Garbage in = garbage out.",
+        explanation: "Cheap storage tempts over-retention. Streaming = low-latency. Biased data → biased model."
       }
     },
     {
-      id: 'cspdata5-strategy',
+      id: "cspdata5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Data Evolution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Data & Information.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Know "big data" means scale beyond single machines.
+- Cheap storage doesn't mean unlimited retention should be policy.
+- Modern AI raises new dataset-ethics questions.
       `
     },
     {
-      id: 'cspdata5-applied',
+      id: "cspdata5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Data & Information has changed in the last 50 years. A strong answer would:',
+            question: "A research team scrapes millions of web pages for AI training without considering authors' consent. The most CSP-aligned critique is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "publicly reachable web pages can be used freely for any downstream purpose.",
+              "data provenance and consent matter; using sources without acknowledgment raises ethical concerns.",
+              "the resulting model will simply turn out to be too small to perform usefully.",
+              "transport-layer protocols make the question of consent essentially irrelevant."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Provenance + consent are core dataset-ethics issues."
           },
           {
-            question: 'A trend in Data & Information shows acceleration in recent decades. The most likely explanation is:',
+            question: "A retailer stores every transaction back to 2005. A breach exposes 20 years of purchase history. The most appropriate long-term mitigation is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "ignore the breach, since transactions over five years old can no longer cause harm.",
+              "adopt data minimization, retention limits, and encryption-at-rest going forward.",
+              "continue keeping every transaction forever and rely on stronger access policies.",
+              "switch the retailer's transport protocol from TCP to UDP for transaction logging."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Combine minimization + sunsets + encryption."
           }
         ]
       }
     }
   ]
-}
+};

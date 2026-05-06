@@ -1,175 +1,181 @@
 export const cspDataCompressionAnalysisPart2Data = {
-  topicSlug: 'csp-data-compression-analysis',
+  topicSlug: "csp-data-compression-analysis",
   sections: [
     {
-      id: 'cspdatac2-intro',
+      id: "cspdca2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data Compression & Analysis
+# 🗜️ Data Compression & Analysis
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Data Compression & Analysis helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## Compression: Same Information, Fewer Bits
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Data Compression & Analysis |
-| **Process 2** | A secondary process that shapes outcomes in Data Compression & Analysis |
-| **Cause and effect** | The relationship between actions and outcomes in Data Compression & Analysis |
+Compression takes a sequence of bits and produces a shorter sequence that decodes back to the original (lossless) or to an approximation of it (lossy).
+
+| Type | Round-trip property | Examples |
+|------|---------------------|----------|
+| **Lossless** | Decoded = original, bit-for-bit | ZIP, PNG, FLAC |
+| **Lossy** | Decoded ≈ original | JPEG, MP3, MP4 |
       `
     },
     {
-      id: 'cspdatac2-quiz1',
+      id: "cspdca2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Data Compression & Analysis?',
+            question: "A medical X-ray must be compressed for storage AND must remain diagnostically accurate. Which type fits?",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "Lossless compression that preserves every original pixel exactly.",
+              "Lossy compression at a high ratio that discards fine detail.",
+              "No compression of any kind, leaving the file at full original size.",
+              "Encryption of the original file without changing its underlying size."
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: "Lossless preserves every detail."
           },
           {
-            question: 'Understanding cause and effect in Data Compression & Analysis helps students:',
+            question: "A vacation photo for casual social media is most often stored as ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "Lossless TIFF that preserves every original pixel of the photo.",
+              "Lossy JPEG that is much smaller but visually almost identical.",
+              "Plain text that lists the RGB value of every pixel one per line.",
+              "Encrypted ZIP archive of the raw camera capture for sharing."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "JPEG's lossy compression trades trivial fidelity for big size savings."
           }
         ]
       }
     },
     {
-      id: 'cspdatac2-content',
+      id: "cspdca2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Why Lossless Has A Limit
 
-### Process 1
-The primary mechanism that drives patterns in Data Compression & Analysis. Understanding this concept is essential for mastering Data Compression & Analysis in AP CS Principles.
+There's an information-theoretic minimum (entropy) for lossless compression. A truly random file cannot be losslessly compressed below its original size.
 
-### Process 2
-A secondary process that shapes outcomes in Data Compression & Analysis. This builds on the previous concept and connects to broader themes in the course.
+A simple example: a 100-character string of alternating "AB" patterns can be encoded as "AB × 50" — far smaller. A 100-character string of random characters has no pattern to exploit.
 
-### Cause and effect
-The relationship between actions and outcomes in Data Compression & Analysis. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Why Lossy Can Go Further
+
+Lossy compression exploits **human perception**:
+
+- **Audio**: humans don't hear above ~20 kHz; some bands can be discarded.
+- **Image**: small color shifts in textures are imperceptible.
+- **Video**: most pixels barely change between frames; encode the difference.
+
+## A Tiny Lossless Example: Run-Length Encoding
+
+| Original | Encoded |
+|----------|---------|
+| AAAABBBCCD | 4A3B2C1D |
+| AAAAAAAAAA | 10A |
+| ABCDEF | 1A1B1C1D1E1F (worse!) |
+
+RLE wins on data with long runs and loses on data without them. Compression is **data-dependent**.
       `
     },
     {
-      id: 'cspdatac2-input',
+      id: "cspdca2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Data Compression & Analysis?
+1) Compression that perfectly preserves the original data is called _______.
 
-2) What concept describes a secondary process that shapes outcomes in Data Compression & Analysis?
+2) Compression that drops some information to save space is called _______.
 
-3) Name the term for the relationship between actions and outcomes in Data Compression & Analysis.
-
-Use the exact term from this part.
+3) The information-theoretic minimum size for lossless compression is set by _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Data Compression & Analysis), Process 2 (A secondary process that shapes outcomes in Data Compression & Analysis), and Cause and effect (The relationship between actions and outcomes in Data Compression & Analysis).'
+        correctAnswers: ["lossless", "lossy", "entropy"],
+        hint1: "No information lost.",
+        hint2: "Some information lost.",
+        hint3: "Information theory.",
+        explanation: "Lossless = perfect; lossy = approximate; entropy = lower bound."
       }
     },
     {
-      id: 'cspdatac2-dropdown',
+      id: "cspdca2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Data Compression & Analysis is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "Run-length encoding compresses well when data has ___",
+            options: ["many long runs of repeated values", "random values", "encrypted values", "short text"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Data Compression & Analysis describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "JPEG compression discards ___",
+            options: ["color and frequency detail humans rarely notice", "all blue pixels", "every other pixel", "nothing"]
           },
           {
-            label: 'The relationship between actions and outcomes in Data Compression & Analysis is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "A file that has been losslessly compressed and then losslessly decompressed ___",
+            options: ["is bit-for-bit identical to the original", "is approximately the original", "is encrypted", "cannot be opened"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Data Compression & Analysis. Process 2 — A secondary process that shapes outcomes in Data Compression & Analysis. Cause and effect — The relationship between actions and outcomes in Data Compression & Analysis.'
+        correctAnswers: ["many long runs of repeated values", "color and frequency detail humans rarely notice", "is bit-for-bit identical to the original"],
+        hint1: "RLE pattern.",
+        hint2: "Perceptual coding.",
+        hint3: "Round-trip = identity.",
+        explanation: "RLE wins on runs. JPEG drops imperceptible detail. Lossless round-trip = identity."
       }
     },
     {
-      id: 'cspdatac2-strategy',
+      id: "cspdca2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Compression Basics
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Data Compression & Analysis.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- "Must be perfect" → lossless.
+- "Need much smaller, perceptual loss OK" → lossy.
+- Lossless can't shrink random data below its entropy.
+- Compression effectiveness is data-dependent.
       `
     },
     {
-      id: 'cspdatac2-applied',
+      id: "cspdca2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A 100 MB log file made of repetitive event lines compresses with ZIP to 5 MB. A 100 MB encrypted random file barely compresses. The most accurate explanation is ___",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "ZIP only works on text files and refuses to operate on binary data.",
+              "lossless compression exploits patterns; encrypted data has none to exploit.",
+              "the encryption algorithm is broken and is producing fully predictable output.",
+              "the random file is corrupted and the compressor refused to process it."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Encryption ≈ random; no exploitable patterns."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A web service stores user-uploaded photos. Storage costs are large. The most reasonable design choice is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "store the originals with no compression so quality is always at its maximum.",
+              "store the upload AND a JPEG-compressed thumbnail; deliver per use case.",
+              "silently delete all photos after a fixed number of days to free up disk space.",
+              "switch the upload protocol from TCP to UDP to reduce server storage cost."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Multiple resolutions / qualities — common modern design."
           }
         ]
       }
     }
   ]
-}
+};

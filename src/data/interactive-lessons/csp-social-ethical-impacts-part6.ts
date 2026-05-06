@@ -1,175 +1,176 @@
 export const cspSocialEthicalImpactsPart6Data = {
-  topicSlug: 'csp-social-ethical-impacts',
+  topicSlug: "csp-social-ethical-impacts",
   sections: [
     {
-      id: 'cspsocia6-intro',
+      id: "cspsei6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Social & Ethical Impacts
+# ⚖️ Social & Ethical Impacts
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Social & Ethical Impacts concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Social & Ethical Impacts |
-| **Argumentation** | Making evidence-based claims about Social & Ethical Impacts |
-| **Spatial reasoning** | Using geographic thinking to analyze Social & Ethical Impacts |
+## Social & Ethical Impact Workshop
       `
     },
     {
-      id: 'cspsocia6-quiz1',
+      id: "cspsei6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Social & Ethical Impacts, the first step is:',
+            question: "A new app helps the deaf community communicate AND collects voice samples for training. The most CSP-aligned framing is ___",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Social & Ethical Impacts requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "only the benefit to deaf users, with no further consideration of how voice samples are reused.",
+              "evaluate stakeholders: benefits to direct users PLUS privacy / consent for voice samples and downstream use.",
+              "only the implementation cost of building the underlying voice-sample collection and training pipeline.",
+              "only the transport-layer security between the app and the server that receives the voice samples."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "Stakeholder + privacy + consent analysis."
+          },
+          {
+            question: "A \"neutral\" app exposes a digital divide because some students lack home internet. The most CSP-aligned response is ___",
+            options: [
+              "ignore the divide on the grounds that home connectivity is the family's responsibility, not the school's.",
+              "provide alternative access (devices, hotspots, library hours) AND evaluate whether the design degrades gracefully.",
+              "upgrade the school's outbound transport-layer security to a newer version on every classroom workstation.",
+              "compress the app's assets more aggressively so the existing connections will load slightly faster."
+            ],
+            correctAnswer: 1,
+            explanation: "Alternative access + design-time consideration."
           }
         ]
       }
     },
     {
-      id: 'cspsocia6-content',
+      id: "cspsei6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: Stakeholder Analysis Of A New Tool
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Social & Ethical Impacts. Understanding this concept is essential for mastering Social & Ethical Impacts in AP CS Principles.
+| Stakeholder | Benefit | Risk |
+|------------|---------|------|
+| End users | Faster task completion | Data collected |
+| Workers | New roles | Displacement of older roles |
+| Vulnerable groups | Possibly better access | Possibly worse if poorly designed |
+| Society | Productivity gains | Concentration of power |
 
-### Argumentation
-Making evidence-based claims about Social & Ethical Impacts. This builds on the previous concept and connects to broader themes in the course.
+## Worked: Bias Audit Sketch
 
-### Spatial reasoning
-Using geographic thinking to analyze Social & Ethical Impacts. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+1. Define metric (accuracy, error rate, false-positive rate).
+2. Compute the metric across demographic groups.
+3. Investigate and report disparities.
+4. Iterate design / data; re-test.
+5. Document the audit process.
+
+## Worked: Responsible AI Use
+
+| Question | Why it matters |
+|---------|----------------|
+| Where did training data come from? | Provenance & consent. |
+| Who is over / under represented? | Bias risk. |
+| What can go wrong if the model is wrong? | Stakes. |
+| Is there human review? | Accountability. |
+| Is there recourse for affected users? | Justice. |
       `
     },
     {
-      id: 'cspsocia6-input',
+      id: "cspsei6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Social & Ethical Impacts?
+1) A formal exercise to measure bias across demographic groups is called a bias _______.
 
-2) What concept describes making evidence-based claims about Social & Ethical Impacts?
+2) Identifying everyone who might be affected by a system is called a _______ analysis.
 
-3) Name the term for using geographic thinking to analyze Social & Ethical Impacts.
-
-Use the exact term from this part.
+3) A way for affected users to appeal a system's decision is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Social & Ethical Impacts), Argumentation (Making evidence-based claims about Social & Ethical Impacts), and Spatial reasoning (Using geographic thinking to analyze Social & Ethical Impacts).'
+        correctAnswers: ["audit", "stakeholder", "recourse"],
+        hint1: "Measure + report.",
+        hint2: "Affected parties.",
+        hint3: "Appeal mechanism.",
+        explanation: "Bias audit, stakeholder analysis, recourse."
       }
     },
     {
-      id: 'cspsocia6-dropdown',
+      id: "cspsei6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Social & Ethical Impacts is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A school deploying an automated scheduling tool should also ___",
+            options: ["offer humans a way to override and appeal", "lock decisions in permanently", "forbid all overrides", "compress logs"]
           },
           {
-            label: 'Making evidence-based claims about Social & Ethical Impacts describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "A bias audit reports ___",
+            options: ["error rates broken down by relevant groups", "compression ratio", "TLS handshake time", "IPv6 latency"]
           },
           {
-            label: 'Using geographic thinking to analyze Social & Ethical Impacts is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "Stakeholder analysis explicitly includes ___",
+            options: ["vulnerable populations who may be hardest hit", "only paying customers", "only developers", "only managers"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Social & Ethical Impacts. Argumentation — Making evidence-based claims about Social & Ethical Impacts. Spatial reasoning — Using geographic thinking to analyze Social & Ethical Impacts.'
+        correctAnswers: ["offer humans a way to override and appeal", "error rates broken down by relevant groups", "vulnerable populations who may be hardest hit"],
+        hint1: "Recourse.",
+        hint2: "Disaggregated metrics.",
+        hint3: "Inclusive list.",
+        explanation: "Override + recourse, group-level metrics, inclusive stakeholder lists."
       }
     },
     {
-      id: 'cspsocia6-strategy',
+      id: "cspsei6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Social & Ethical Impacts.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- Always do stakeholder analysis (including vulnerable populations).
+- Bias audits: report metrics by group, not just overall.
+- Build in human override + recourse for high-stakes decisions.
       `
     },
     {
-      id: 'cspsocia6-applied',
+      id: "cspsei6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Social & Ethical Impacts and asked to identify a trend. You should:',
+            question: "A team launches a hiring screener. The most CSP-aligned ethical guard is ___",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "no formal guard at all, on the grounds that the screener's training data is statistically representative.",
+              "audit pass-rates by demographic group, document criteria, allow human review, and let candidates appeal.",
+              "compress incoming resumes more aggressively so the screener's decisions execute faster on each application.",
+              "switch the screener's outbound traffic from TCP to UDP so that pass-rate decisions arrive sooner downstream."
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "Audit + transparency + review + appeal."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Social & Ethical Impacts. The best approach is:',
+            question: "A volunteer crowdsources a community map. The most CSP-aligned guardrail against vandalism is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "no guardrail at all, on the grounds that volunteer contributors will self-police one another's edits.",
+              "governance: clear contribution policy, trusted moderators, change history, and well-defined escalation paths.",
+              "transport-layer security on every contributor's connection, with no other defenses against vandalism added.",
+              "aggressive compression of every map tile, with no other defenses against contributor-introduced vandalism."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "Crowdsourcing + governance."
           }
         ]
       }
     }
   ]
-}
+};

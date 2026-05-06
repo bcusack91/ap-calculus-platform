@@ -1,175 +1,182 @@
 export const cspCreativeDevelopmentPart3Data = {
-  topicSlug: 'csp-creative-development',
+  topicSlug: "csp-creative-development",
   sections: [
     {
-      id: 'cspcreat3-intro',
+      id: "cspcd3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 🎨 Creative Development
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Creative Development. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Common Patterns In Program Design
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Creative Development |
-| **Case study** | A specific real-world example that illustrates Creative Development |
-| **Comparison** | Analyzing similarities and differences across examples of Creative Development |
+| Pattern | Use case |
+|---------|---------|
+| **Sequential** | Steps run in order. |
+| **Selection** | An IF chooses among paths. |
+| **Iteration** | A loop repeats steps. |
+| **Procedure** | Bundle reusable steps. |
+| **Event-driven** | Code runs in response to a user action. |
       `
     },
     {
-      id: 'cspcreat3-quiz1',
+      id: "cspcd3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A button-click handler that runs only when a user clicks is an example of ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "sequential code that runs top-to-bottom on launch",
+              "event-driven code triggered by a user action",
+              "iterative code that loops a fixed number of times",
+              "recursive code that calls itself for each event"
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Event-driven code responds to events."
           },
           {
-            question: 'Comparing examples of Creative Development across regions helps:',
+            question: "Which pattern most directly reduces code duplication?",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "Writing the same block of statements at each call site.",
+              "Defining a procedure once and calling it from many places.",
+              "Replacing functions with a long chain of IF statements.",
+              "Using hardcoded literal values inline at each call site."
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Procedures let you write logic once and reuse it."
           }
         ]
       }
     },
     {
-      id: 'cspcreat3-content',
+      id: "cspcd3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Decomposition
 
-### Spatial pattern
-The geographic distribution related to Creative Development. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+Break a big problem into smaller subproblems. A quiz app might decompose into: **loadQuestions**, **showQuestion**, **gradeAnswer**, **showResults**. Each piece can be built and tested separately.
 
-### Case study
-A specific real-world example that illustrates Creative Development. This builds on the previous concept and connects to broader themes in the course.
+## Abstraction
 
-### Comparison
-Analyzing similarities and differences across examples of Creative Development. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Hide details behind a simple interface. Once **gradeAnswer(userAnswer, key)** works, callers don't need to know HOW.
+
+| Layer | Hides… |
+|-------|--------|
+| Procedure | Implementation steps. |
+| Library | Internal data structures. |
+| OS | Hardware details. |
+| Browser | Network and rendering details. |
+
+## Event-Driven Programming
+
+Modern UIs wait for events:
+
+    ON CLICK button1:
+      DISPLAY("You clicked!")
+
+The program responds to events instead of running top-to-bottom and exiting.
       `
     },
     {
-      id: 'cspcreat3-input',
+      id: "cspcd3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Creative Development?
+1) Breaking a big problem into smaller subproblems is called _______.
 
-2) What concept describes a specific real-world example that illustrates Creative Development?
+2) Hiding implementation details behind a simple interface is called _______.
 
-3) Name the term for analyzing similarities and differences across examples of Creative Development.
-
-Use the exact term from this part.
+3) Code that runs in response to user actions like clicks is called _______-driven.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Creative Development), Case study (A specific real-world example that illustrates Creative Development), and Comparison (Analyzing similarities and differences across examples of Creative Development).'
+        correctAnswers: ["decomposition", "abstraction", "event"],
+        hint1: "Divide the problem.",
+        hint2: "Hide complexity.",
+        hint3: "Triggered, not sequenced.",
+        explanation: "Decomposition splits problems; abstraction hides details; event-driven code responds to triggers."
       }
     },
     {
-      id: 'cspcreat3-dropdown',
+      id: "cspcd3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Creative Development is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A procedure that turns a list of strings into a comma-separated string is most useful as ___",
+            options: ["a reusable abstraction called from many places", "a one-line script never reused", "malware", "a hardware driver"]
           },
           {
-            label: 'A specific real-world example that illustrates Creative Development describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "Pseudocode like ON CLICK followed by a block is ___",
+            options: ["event-driven", "recursive", "sequential-only", "binary"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Creative Development is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "Decomposition primarily makes a program easier to ___",
+            options: ["understand, test, and maintain", "compress", "encrypt", "route"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Creative Development. Case study — A specific real-world example that illustrates Creative Development. Comparison — Analyzing similarities and differences across examples of Creative Development.'
+        correctAnswers: ["a reusable abstraction called from many places", "event-driven", "understand, test, and maintain"],
+        hint1: "Bundling logic for reuse.",
+        hint2: "Triggered by an event.",
+        hint3: "Cognitive load drops.",
+        explanation: "Reusable procedures = abstraction. ON CLICK = event-driven. Decomposition aids comprehension."
       }
     },
     {
-      id: 'cspcreat3-strategy',
+      id: "cspcd3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Design Patterns
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Creative Development.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- "Reduce duplication" → procedures.
+- "Run when user does X" → event-driven.
+- "Make this easier to test in isolation" → decompose into procedures.
+- "Hide complexity from the caller" → abstraction.
       `
     },
     {
-      id: 'cspcreat3-applied',
+      id: "cspcd3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Creative Development. The strongest response would:',
+            question: "A program has the same 8-line block of code copied in 5 places. What is the best refactor?",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "Add a comment above each copy explaining what the block does.",
+              "Extract the block into a procedure called from each location.",
+              "Reformat the 5 copies onto single lines to make them shorter.",
+              "Delete 4 of the copies and let the remaining one run 5 times."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Extracting into a procedure removes duplication."
           },
           {
-            question: 'A pattern observed in Creative Development is consistent across multiple world regions. This suggests:',
+            question: "You're building a drawing app. Which pattern best fits responding to mouse drags?",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "One sequential script that runs top-to-bottom and then exits.",
+              "Event-driven handlers for mousedown, mousemove, and mouseup events.",
+              "A single while-true loop that polls the mouse on every iteration.",
+              "A recursive function that calls itself for every pixel of movement."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "UI interactions are naturally modeled as event handlers."
           }
         ]
       }
     }
   ]
-}
+};

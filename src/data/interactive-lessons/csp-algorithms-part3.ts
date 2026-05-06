@@ -1,175 +1,188 @@
 export const cspAlgorithmsPart3Data = {
-  topicSlug: 'csp-algorithms',
+  topicSlug: "csp-algorithms",
   sections: [
     {
-      id: 'cspalgor3-intro',
+      id: "cspalg3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms
+# ⚙️ Algorithms
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Algorithms. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Common Algorithmic Patterns
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Algorithms |
-| **Case study** | A specific real-world example that illustrates Algorithms |
-| **Comparison** | Analyzing similarities and differences across examples of Algorithms |
+You will see the same building blocks again and again. Recognize them and tracing becomes pattern-matching.
+
+| Pattern | Shape |
+|---------|-------|
+| **Accumulator** | Start sum/product at identity, update each pass. |
+| **Counter** | Increment when a condition holds. |
+| **Min/Max** | Track best-so-far, compare each new element. |
+| **Filter** | Build a new list of elements meeting a condition. |
+| **Map (transform)** | Replace each element with f(element). |
       `
     },
     {
-      id: 'cspalgor3-quiz1',
+      id: "cspalg3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "Trace:\n\nlist ← [4, 1, 7, 3, 9, 2]\nbest ← list[1]\nFOR EACH x IN list { IF (x > best) { best ← x } }\nDISPLAY(best)",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "4",
+              "7",
+              "9",
+              "26"
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 2,
+            explanation: "Classic max pattern. best becomes 4, then 7, then 9. Final element 2 doesn’t exceed 9."
           },
           {
-            question: 'Comparing examples of Algorithms across regions helps:',
+            question: "You want the COUNT of even numbers in a list. Which line belongs inside the loop?",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "IF (x MOD 2 = 0) { count ← count + 1 }",
+              "count ← count + x",
+              "count ← x MOD 2",
+              "IF (count MOD 2 = 0) { x ← x + 1 }"
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: "A counter increments by 1 only when the condition holds. x MOD 2 = 0 tests even."
           }
         ]
       }
     },
     {
-      id: 'cspalgor3-content',
+      id: "cspalg3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Worked Example: Filter + Count
 
-### Spatial pattern
-The geographic distribution related to Algorithms. Understanding this concept is essential for mastering Algorithms in AP CS Principles.
+Goal: from prices, count how many are above 50 AND build a list of those prices.
 
-### Case study
-A specific real-world example that illustrates Algorithms. This builds on the previous concept and connects to broader themes in the course.
+    prices ← [42, 73, 51, 18, 99, 50]
+    count ← 0
+    expensive ← []
+    FOR EACH p IN prices {
+      IF (p > 50) {
+        count ← count + 1
+        APPEND(expensive, p)
+      }
+    }
 
-### Comparison
-Analyzing similarities and differences across examples of Algorithms. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+**Trace:** 73 ✓, 51 ✓, 99 ✓. (50 fails because the test is strict >.) Output: **3** and **[73, 51, 99]**.
+
+## Worked Example: Min Index, Not Just Min
+
+Tracking the *position* of the minimum, not just the value.
+
+    nums ← [8, 3, 6, 1, 9, 4]
+    minIdx ← 1
+    FOR i ← 2 TO LENGTH(nums) {
+      IF (nums[i] < nums[minIdx]) { minIdx ← i }
+    }
+
+**minIdx** evolves: 1 → 2 (3 < 8) → 4 (1 < 3). Output: **4** (1-indexed position of the smallest value).
       `
     },
     {
-      id: 'cspalgor3-input',
+      id: "cspalg3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Algorithms?
+1) A variable that builds up a running total is called an _______.
 
-2) What concept describes a specific real-world example that illustrates Algorithms?
+2) To pick out elements meeting a condition into a new list, use the _______ pattern.
 
-3) Name the term for analyzing similarities and differences across examples of Algorithms.
-
-Use the exact term from this part.
+3) To replace every element with f(element) without filtering, use the _______ pattern.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Algorithms), Case study (A specific real-world example that illustrates Algorithms), and Comparison (Analyzing similarities and differences across examples of Algorithms).'
+        correctAnswers: ["accumulator", "filter", "map"],
+        hint1: "It accumulates a result.",
+        hint2: "Like a sieve.",
+        hint3: "Like a one-to-one transformation.",
+        explanation: "Accumulator builds totals. Filter selects. Map transforms element-by-element."
       }
     },
     {
-      id: 'cspalgor3-dropdown',
+      id: "cspalg3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Algorithms is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "For an empty list, the standard \"sum\" accumulator should start at ___",
+            options: ["0", "1", "list[1]", "undefined"]
           },
           {
-            label: 'A specific real-world example that illustrates Algorithms describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "For a \"product\" accumulator, the identity starting value is ___",
+            options: ["1", "0", "list[1]", "−1"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Algorithms is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "When tracking max, initializing best to list[1] instead of a tiny constant is safer because ___",
+            options: ["it guarantees best is a real list value", "it uses less memory", "it is faster", "it allows nesting"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Algorithms. Case study — A specific real-world example that illustrates Algorithms. Comparison — Analyzing similarities and differences across examples of Algorithms.'
+        correctAnswers: ["0", "1", "it guarantees best is a real list value"],
+        hint1: "Adding 0 changes nothing.",
+        hint2: "Multiplying by 1 changes nothing.",
+        hint3: "A magic constant might not be smaller than every legal element.",
+        explanation: "Identity values keep accumulators correct. Initializing max from list[1] handles negative-only lists where a constant like 0 would be wrong."
       }
     },
     {
-      id: 'cspalgor3-strategy',
+      id: "cspalg3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Pattern Recognition
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Algorithms.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Skim pseudocode for the **shape**: is there a counter? An accumulator? A min/max comparison?
+- Watch for **strict vs. non-strict** comparisons (> vs ≥). They change boundary results.
+- Watch the **starting value** of an accumulator — wrong identity is a frequent FRQ deduction.
+- For "first occurrence" patterns, remember to **break/exit** or guard with a flag so you don't overwrite a found index later.
       `
     },
     {
-      id: 'cspalgor3-applied',
+      id: "cspalg3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Algorithms. The strongest response would:',
+            question: "A program is supposed to find the FIRST element greater than 100 in a list. The student writes:\n\nresult ← −1\nFOR EACH x IN list { IF (x > 100) { result ← x } }\n\nWhat is wrong?",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "Nothing is wrong; the code is correct.",
+              "The loop overwrites result every time a match is found, so it returns the LAST match, not the first.",
+              "The variable result should start at 0, not −1.",
+              "FOR EACH cannot be used with a numeric list."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Without an early exit (or a flag like IF (result = -1)), every match overwrites the previous one."
           },
           {
-            question: 'A pattern observed in Algorithms is consistent across multiple world regions. This suggests:',
+            question: "Code:\n\nlist ← [5, 5, 5, 5]\ncount ← 0\nFOR EACH x IN list { count ← count + 1 }\n\nIf the list is replaced with [ ] (empty), what does count equal after the loop?",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "0",
+              "1",
+              "undefined / error",
+              "4"
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: "FOR EACH on an empty list executes the body zero times. The accumulator stays at its initial value 0."
           }
         ]
       }
     }
   ]
-}
+};

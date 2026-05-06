@@ -1,175 +1,187 @@
 export const cspDataCompressionAnalysisPart4Data = {
-  topicSlug: 'csp-data-compression-analysis',
+  topicSlug: "csp-data-compression-analysis",
   sections: [
     {
-      id: 'cspdatac4-intro',
+      id: "cspdca4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data Compression & Analysis
+# 🗜️ Data Compression & Analysis
 
 **Part 4 of 7 — Connections & Interactions**
 
-Data Compression & Analysis connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Compression Connects To Other Topics
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Data Compression & Analysis links to other course topics |
-| **Scale interaction** | How Data Compression & Analysis operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Data Compression & Analysis can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Compression ↔ Internet | Smaller files = faster downloads. |
+| Compression ↔ Algorithms | Each codec is an algorithm. |
+| Compression ↔ Data | Compression decisions affect what analysis is possible. |
+| Compression ↔ Impact | Compression enables global media — and surveillance archives. |
       `
     },
     {
-      id: 'cspdatac4-quiz1',
+      id: "cspdca4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Data Compression & Analysis connects to other course topics through:',
+            question: "Why does loading an image-heavy webpage feel faster on modern sites than 10 years ago?",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "Modern client CPUs are slower, which somehow speeds up the perceived load time.",
+              "Better lossy codecs (WebP, AVIF) deliver smaller files at the same visual quality, often via CDNs.",
+              "Modern image files are stored as plain-text RGB tables that browsers render directly.",
+              "Browsers stopped using TCP for images and now fetch them over a faster ad-hoc protocol."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Better codecs + CDN delivery = faster perceived loads."
           },
           {
-            question: 'A feedback loop in Data Compression & Analysis means:',
+            question: "A program needs to compute the average over a 10 GB JSON log. The most appropriate algorithmic approach is ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "load the entire 10 GB file into memory and then iterate over it twice in place.",
+              "stream and compute the average in a single pass — O(n) time, O(1) extra space.",
+              "sort the file in place first and then compute the average from the sorted output.",
+              "encrypt the file first so the streaming average pass becomes safer to execute."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Streaming aggregation handles large data in constant memory."
           }
         ]
       }
     },
     {
-      id: 'cspdatac4-content',
+      id: "cspdca4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Big Files Demand Streaming Algorithms
 
-### Interconnection
-How Data Compression & Analysis links to other course topics. Understanding this concept is essential for mastering Data Compression & Analysis in AP CS Principles.
+When a file doesn't fit in memory, you need algorithms that process data in **a single pass** with constant or sub-linear memory:
 
-### Scale interaction
-How Data Compression & Analysis operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Task | Streaming approach |
+|------|-------------------|
+| Sum / mean | Running total; divide at the end. |
+| Min / max | Compare each value to running extreme. |
+| Count distinct (approximate) | HyperLogLog. |
+| Top-K | Heap of size K. |
 
-### Feedback loop
-How outcomes of Data Compression & Analysis can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+This connects compression-era data sizes to algorithm design.
+
+## Compression And The Internet
+
+| Layer | Compression role |
+|-------|-----------------|
+| Image | JPEG / WebP / AVIF. |
+| Video | H.264 / H.265 / AV1. |
+| Web responses | gzip / Brotli on text (HTML, JS, CSS, JSON). |
+| Streaming | Adaptive bitrate (multiple quality levels). |
+
+A modern webpage may be 10× larger uncompressed.
+
+## Compression-Aware Privacy
+
+Two warnings:
+
+1. Compression timing/size attacks (CRIME / BREACH) leaked info from HTTPS responses; mitigation involves disabling certain compressions over TLS.
+2. "Anonymized" datasets that are then compressed don't become more anonymous — compression doesn't help privacy.
       `
     },
     {
-      id: 'cspdatac4-input',
+      id: "cspdca4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Data Compression & Analysis links to other course topics?
+1) An algorithm that processes data in a single pass without loading it all is called a _______ algorithm.
 
-2) What concept describes how Data Compression & Analysis operates differently at local, national, and global scales?
+2) Modern web responses commonly compress text with _______ or Brotli.
 
-3) Name the term for how outcomes of Data Compression & Analysis can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) Modern still-image formats designed to beat JPEG include WebP and _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Data Compression & Analysis links to other course topics), Scale interaction (How Data Compression & Analysis operates differently at local, national, and global scales), and Feedback loop (How outcomes of Data Compression & Analysis can reinforce or modify the original process).'
+        correctAnswers: ["streaming", "gzip", "AVIF"],
+        hint1: "One-pass.",
+        hint2: "Common HTTP compression.",
+        hint3: "AV1 image format.",
+        explanation: "Streaming algorithms handle huge data. gzip / Brotli compress web text. WebP / AVIF outperform JPEG."
       }
     },
     {
-      id: 'cspdatac4-dropdown',
+      id: "cspdca4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Data Compression & Analysis links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A 10 GB log requires ___",
+            options: ["a streaming algorithm with O(1) extra memory", "loading the whole file in memory", "no algorithm", "a different network protocol only"]
           },
           {
-            label: 'How Data Compression & Analysis operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Web servers commonly compress responses with ___",
+            options: ["gzip / Brotli", "JPEG", "TLS only", "IPv6"]
           },
           {
-            label: 'How outcomes of Data Compression & Analysis can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "Compression and encryption ___",
+            options: ["serve different goals; both can be applied (compress THEN encrypt)", "are the same thing", "cannot be combined", "are interchangeable"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Data Compression & Analysis links to other course topics. Scale interaction — How Data Compression & Analysis operates differently at local, national, and global scales. Feedback loop — How outcomes of Data Compression & Analysis can reinforce or modify the original process.'
+        correctAnswers: ["a streaming algorithm with O(1) extra memory", "gzip / Brotli", "serve different goals; both can be applied (compress THEN encrypt)"],
+        hint1: "Memory budget matters.",
+        hint2: "HTTP-layer compression.",
+        hint3: "Different concerns.",
+        explanation: "Streaming = constant memory. gzip / Brotli on web. Compress then encrypt."
       }
     },
     {
-      id: 'cspdatac4-strategy',
+      id: "cspdca4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Compression
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Data Compression & Analysis.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "File too big for memory" → streaming algorithm.
+- "Why is web fast now?" → better codecs + CDNs.
+- "Order of compress / encrypt" → compress, then encrypt.
       `
     },
     {
-      id: 'cspdatac4-applied',
+      id: "cspdca4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Data Compression & Analysis and other units earns higher scores because:',
+            question: "A streaming service uses adaptive bitrate so users with slow connections get a lower-quality version of the same video. The technique that makes this practical is ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "lossless compression of every video, served at the same quality to every viewer.",
+              "precomputing multiple lossy-encoded renditions at different bitrates and serving the best fit.",
+              "serving the original raw uncompressed video stream to every viewer regardless of bandwidth.",
+              "switching the network layer from IPv4 to IPv6 so packets can self-prioritize the right quality."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Adaptive bitrate streaming serves multiple lossy renditions."
           },
           {
-            question: 'If Data Compression & Analysis produces outcomes that further intensify the original process, this is:',
+            question: "A team plans to encrypt every log line BEFORE shipping it to a server, then ZIP the resulting archive nightly. The compressed nightly archive is barely smaller than the raw daily lines. The most direct fix is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "ignore the issue and accept the larger archive size as an unavoidable cost.",
+              "reverse the order: compress the logs first, then encrypt the compressed output.",
+              "switch the log shipping protocol from TCP to UDP for faster nightly transfers.",
+              "switch the archival format from ZIP to a lossy video codec like H.265 instead."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Compress before encrypt; encrypted output has no patterns."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,177 @@
 export const cspAlgorithmsPart7Data = {
-  topicSlug: 'csp-algorithms',
+  topicSlug: "csp-algorithms",
   sections: [
     {
-      id: 'cspalgor7-intro',
+      id: "cspalg7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms
+# ⚙️ Algorithms
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Algorithms for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Algorithms
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Algorithms |
-| **Common question types** | The most frequent ways Algorithms is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Algorithms questions effectively |
+Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and the most common bug.
       `
     },
     {
-      id: 'cspalgor7-quiz1',
+      id: "cspalg7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Algorithms is:',
+            question: "On the AP CSP exam, lists in pseudocode are indexed starting at ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "0",
+              "1",
+              "−1",
+              "It depends on the problem."
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "AP pseudocode lists are 1-indexed. list[1] is the first element."
           },
           {
-            question: 'AP multiple-choice questions about Algorithms often test:',
+            question: "Which expression is TRUE only when x is between 1 and 10 inclusive?",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "x > 1 AND x < 10",
+              "x ≥ 1 OR x ≤ 10",
+              "x ≥ 1 AND x ≤ 10",
+              "NOT (x = 1 OR x = 10)"
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 2,
+            explanation: "Inclusive needs ≥ and ≤. AND ensures both bounds."
           }
         ]
       }
     },
     {
-      id: 'cspalgor7-content',
+      id: "cspalg7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Quick-Reference: Constructs and Pitfalls
 
-### Key vocabulary
-Essential terms and definitions for Algorithms. Understanding this concept is essential for mastering Algorithms in AP CS Principles.
+| Construct | Looks like | Common bug |
+|-----------|-----------|------------|
+| Sequence | a; b; c | None — just trace top-down. |
+| IF/ELSE | IF (c) {…} ELSE {…} | Wrong comparison (> vs ≥). |
+| REPEAT N TIMES | block runs exactly N times | Modifying N inside changes nothing. |
+| REPEAT UNTIL | runs at least once, exits when cond true | Forgetting it’s post-test (off by one). |
+| FOR EACH x IN list | iterates over elements | Treating x as the index. |
+| FOR i ← a TO b | iterates i = a, a+1, …, b | Off-by-one if pairing list[i+1]. |
 
-### Common question types
-The most frequent ways Algorithms is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Quick-Reference: Boolean Logic
 
-### Exam strategy
-Approaches for answering Algorithms questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- A AND B → both true.
+- A OR B → at least one true.
+- NOT (A AND B) = (NOT A) OR (NOT B) (DeMorgan).
+- NOT (A OR B) = (NOT A) AND (NOT B).
+
+## Quick-Reference: Efficiency
+
+- Polynomial = reasonable. Exponential = unreasonable.
+- Linear search: O(n). Binary search (sorted): O(log n).
+- Doubling input on O(n²) → 4×; on O(log n) → +1 step.
       `
     },
     {
-      id: 'cspalgor7-input',
+      id: "cspalg7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Algorithms?
+1) AP pseudocode lists are _______-indexed.
 
-2) What concept describes the most frequent ways Algorithms is tested on the AP exam?
+2) A REPEAT UNTIL loop runs the block at least _______ time(s) before checking the condition.
 
-3) Name the term for approaches for answering Algorithms questions effectively.
-
-Use the exact term from this part.
+3) log₂(1,048,576) equals approximately _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Algorithms), Common question types (The most frequent ways Algorithms is tested on the AP exam), and Exam strategy (Approaches for answering Algorithms questions effectively).'
+        correctAnswers: ["1", "1", "20"],
+        hint1: "First element is list[1].",
+        hint2: "Post-test loop.",
+        hint3: "2¹⁰ ≈ 1024, 2²⁰ ≈ 1M.",
+        explanation: "1-indexed lists. REPEAT UNTIL is post-test (≥ 1 execution). 2²⁰ = 1,048,576."
       }
     },
     {
-      id: 'cspalgor7-dropdown',
+      id: "cspalg7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Algorithms is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "Sorted list + need-to-find-one-value → use ___",
+            options: ["binary search", "linear search", "sort first", "random guess"]
           },
           {
-            label: 'The most frequent ways Algorithms is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "Two algorithms with identical output but different running times — choose the ___ one",
+            options: ["faster (lower growth rate)", "slower", "shorter source code", "one with more comments"]
           },
           {
-            label: 'Approaches for answering Algorithms questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "A heuristic is appropriate when ___",
+            options: ["the exact algorithm is unreasonable", "we need a guaranteed optimum", "the input is tiny", "the data is sorted"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Algorithms. Common question types — The most frequent ways Algorithms is tested on the AP exam. Exam strategy — Approaches for answering Algorithms questions effectively.'
+        correctAnswers: ["binary search", "faster (lower growth rate)", "the exact algorithm is unreasonable"],
+        hint1: "Halving the search space.",
+        hint2: "Correctness is equal; choose efficiency.",
+        hint3: "Heuristics trade optimality for speed.",
+        explanation: "Sortedness enables binary search. With equal correctness, prefer lower growth rate. Heuristics rescue intractable exact problems."
       }
     },
     {
-      id: 'cspalgor7-strategy',
+      id: "cspalg7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Algorithms.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Always **trace** loops with a table; don’t eyeball them.
+- Watch the boundaries: > vs ≥, list[1] vs list[0], REPEAT UNTIL post-test.
+- Distinguish **correctness** (does it produce the right output?) from **efficiency** (how fast / how much memory?).
+- For pseudocode FRQs, write at least one example trace in your scratch space.
+- "Most appropriate" usually means efficient AND correct AND simplest — eliminate options that fail any one.
       `
     },
     {
-      id: 'cspalgor7-applied',
+      id: "cspalg7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Algorithms. You should:',
+            question: "A learning app records millions of student responses and must repeatedly answer \"how many responses contain word W?\". Which design improves both correctness and efficiency?",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "Linearly scan every recorded student response from start to finish on every individual incoming query.",
+              "Precompute, then maintain, a frequency map updated when responses arrive; queries become a single lookup.",
+              "Sort all of the recorded student responses alphabetically and then run a binary search on every query.",
+              "Compress the entire response dataset on disk and decompress the whole archive on every individual query."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "A maintained index turns each query into O(1)."
           },
           {
-            question: 'For free-response questions on Algorithms, the most common mistake is:',
+            question: "A class debates which algorithm is \"best\". A is correct and runs in O(n²). B is faster (O(n log n)) but produces wrong results on lists with duplicates. The dataset has many duplicates. Which choice is best supported?",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "Always choose B because it is faster.",
+              "Choose A because correctness is a precondition for considering efficiency.",
+              "Choose B and ignore the duplicate cases.",
+              "Neither — the problem is undecidable."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Correctness comes first; efficiency is the tiebreaker among correct algorithms."
           }
         ]
       }
     }
   ]
-}
+};

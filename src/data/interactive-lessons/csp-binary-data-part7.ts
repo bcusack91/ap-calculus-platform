@@ -1,175 +1,178 @@
 export const cspBinaryDataPart7Data = {
-  topicSlug: 'csp-binary-data',
+  topicSlug: "csp-binary-data",
   sections: [
     {
-      id: 'cspbinar7-intro',
+      id: "cspbd7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Binary & Data Representation
+# 🔢 Binary & Data Representation
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Binary & Data Representation for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Binary & Data
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Binary & Data Representation |
-| **Common question types** | The most frequent ways Binary & Data Representation is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Binary & Data Representation questions effectively |
+Final cheat sheet of the binary and data-representation facts most tested on the AP exam.
       `
     },
     {
-      id: 'cspbinar7-quiz1',
+      id: "cspbd7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Binary & Data Representation is:',
+            question: "The smallest unit of digital information is the ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "byte",
+              "bit",
+              "pixel",
+              "sample"
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "A bit is one binary digit (0 or 1). A byte = 8 bits."
           },
           {
-            question: 'AP multiple-choice questions about Binary & Data Representation often test:',
+            question: "To represent each of 1,000 distinct values, the minimum number of bits required is ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "8",
+              "9",
+              "10",
+              "12"
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 2,
+            explanation: "2⁹ = 512 < 1000; 2¹⁰ = 1024 ≥ 1000."
           }
         ]
       }
     },
     {
-      id: 'cspbinar7-content',
+      id: "cspbd7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Quick-Reference Table
 
-### Key vocabulary
-Essential terms and definitions for Binary & Data Representation. Understanding this concept is essential for mastering Binary & Data Representation in AP CS Principles.
+| Memorize | Value |
+|----------|-------|
+| 1 byte | 8 bits |
+| 2⁸ | 256 |
+| 2¹⁰ | 1,024 (≈ 1 KB) |
+| 2¹⁶ | 65,536 |
+| 2²⁰ | ≈ 1 million (≈ 1 MB) |
+| 2³² | ≈ 4.3 billion (≈ 4 GB) |
 
-### Common question types
-The most frequent ways Binary & Data Representation is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Misconceptions to Avoid
 
-### Exam strategy
-Approaches for answering Binary & Data Representation questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- "Binary uses 0 and 1 because computers think in numbers." (No — because hardware reliably represents two voltage levels.)
+- "Lossy compression destroys the file." (No — it produces a smaller approximation; original can be saved separately.)
+- "More bits is always better." (No — wasted bits = wasted storage / bandwidth. Use the minimum sufficient.)
+- "Encryption shrinks data." (No — it transforms data; size stays roughly the same.)
+
+## Common Calculations
+
+- Min bits for N values: ⌈log₂ N⌉.
+- Image bytes: W × H × bytesPerPixel.
+- Audio bytes/sec: sampleRate × bytesPerSample × channels.
+- Total storage of M items × k bytes each: M·k.
       `
     },
     {
-      id: 'cspbinar7-input',
+      id: "cspbd7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Binary & Data Representation?
+1) 8 bits = 1 _______.
 
-2) What concept describes the most frequent ways Binary & Data Representation is tested on the AP exam?
+2) The binary number 10000000 in decimal equals _______.
 
-3) Name the term for approaches for answering Binary & Data Representation questions effectively.
-
-Use the exact term from this part.
+3) For 1,000,000 distinct IDs, the minimum number of bits required is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Binary & Data Representation), Common question types (The most frequent ways Binary & Data Representation is tested on the AP exam), and Exam strategy (Approaches for answering Binary & Data Representation questions effectively).'
+        correctAnswers: ["byte", "128", "20"],
+        hint1: "Standard grouping unit.",
+        hint2: "Place value 128.",
+        hint3: "2²⁰ ≈ 1,048,576.",
+        explanation: "8 bits = 1 byte. 10000000₂ = 128. 20 bits cover 1M values."
       }
     },
     {
-      id: 'cspbinar7-dropdown',
+      id: "cspbd7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Binary & Data Representation is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "PNG is a ___ image format",
+            options: ["lossless", "lossy", "audio-only", "video"]
           },
           {
-            label: 'The most frequent ways Binary & Data Representation is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "JPEG is a ___ image format",
+            options: ["lossy", "lossless", "text", "audio"]
           },
           {
-            label: 'Approaches for answering Binary & Data Representation questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "Encrypting a file changes its ___",
+            options: ["interpretation, not size (roughly)", "size dramatically", "magic bytes only", "pixel count"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Binary & Data Representation. Common question types — The most frequent ways Binary & Data Representation is tested on the AP exam. Exam strategy — Approaches for answering Binary & Data Representation questions effectively.'
+        correctAnswers: ["lossless", "lossy", "interpretation, not size (roughly)"],
+        hint1: "PNG round-trips perfectly.",
+        hint2: "JPEG sacrifices fidelity for size.",
+        hint3: "Same byte count, different meaning.",
+        explanation: "PNG = lossless, JPEG = lossy. Encryption preserves roughly the same byte count."
       }
     },
     {
-      id: 'cspbinar7-strategy',
+      id: "cspbd7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Binary & Data Representation.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- "Smallest number of bits to represent N values" → ⌈log₂ N⌉. Always.
+- Distinguish lossless (perfectly reversible) from lossy (approximate).
+- Encryption ≠ compression: encryption preserves size, compression shrinks it.
+- Different file types are just different conventions for interpreting the SAME underlying bits.
+- For storage estimates, multiply: items × bytes-per-item.
       `
     },
     {
-      id: 'cspbinar7-applied',
+      id: "cspbd7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Binary & Data Representation. You should:',
+            question: "A government agency must archive scanned legal documents and ensure they can be read decades from now. The most appropriate format choice is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "A widely supported lossless archival format such as PDF/A or TIFF with lossless compression for the scans.",
+              "A high-compression lossy JPEG format optimized for the smallest file size that the human eye still tolerates.",
+              "A proprietary single-vendor format whose specification is not publicly documented or supported by other tools.",
+              "A plain ASCII text representation of each document, with no embedded image data preserved from the original scan."
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: "Lossless + open/standardized formats best support long-term archival fidelity."
           },
           {
-            question: 'For free-response questions on Binary & Data Representation, the most common mistake is:',
+            question: "A research dataset with 4 billion records needs a unique integer ID per record. Which integer width is most appropriate?",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "8-bit unsigned integers, which allow up to 256 distinct values per record across the entire dataset.",
+              "16-bit unsigned integers, which allow up to 65,536 distinct values per record across the entire dataset.",
+              "32-bit unsigned integers, which allow up to about 4.3 billion distinct values across the entire dataset.",
+              "64-bit unsigned integers as the only sufficient option, since smaller widths cannot represent the dataset."
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 2,
+            explanation: "2³² ≈ 4.29 billion ≥ 4 billion. 32-bit is the smallest sufficient size."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,180 @@
 export const cspFaultToleranceSecurityPart4Data = {
-  topicSlug: 'csp-fault-tolerance-security',
+  topicSlug: "csp-fault-tolerance-security",
   sections: [
     {
-      id: 'cspfault4-intro',
+      id: "cspfts4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Fault Tolerance & Security
+# 🛡️ Fault Tolerance & Security
 
 **Part 4 of 7 — Connections & Interactions**
 
-Fault Tolerance & Security connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Security & Fault Tolerance Connect Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Fault Tolerance & Security links to other course topics |
-| **Scale interaction** | How Fault Tolerance & Security operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Fault Tolerance & Security can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Security ↔ Networks | Most attacks come over the network. |
+| Fault tolerance ↔ Systems | Systems fail; designs must adapt. |
+| Security ↔ Data | Data must be protected throughout its lifecycle. |
+| Security ↔ Impact | Breaches have human consequences. |
       `
     },
     {
-      id: 'cspfault4-quiz1',
+      id: "cspfts4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Fault Tolerance & Security connects to other course topics through:',
+            question: "A breach exposing children's data has primarily ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "no impact, since children's data is automatically anonymized by data-protection laws.",
+              "serious privacy and safety consequences for vulnerable users and their families.",
+              "transport-layer-security implications only, with no human-level harm involved.",
+              "compression-related issues only, because the breached files happened to be small."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Breaches harm real people."
           },
           {
-            question: 'A feedback loop in Fault Tolerance & Security means:',
+            question: "A system that crashes whenever any single component fails is the OPPOSITE of ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "encrypted — protecting data confidentiality through cryptographic algorithms",
+              "fault-tolerant — continuing to operate even when some components fail",
+              "compressed — storing the same content in fewer bits than its raw form",
+              "routed — forwarded between systems by intermediate network devices"
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Fault tolerance = survives failures."
           }
         ]
       }
     },
     {
-      id: 'cspfault4-content',
+      id: "cspfts4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Defense In Depth
 
-### Interconnection
-How Fault Tolerance & Security links to other course topics. Understanding this concept is essential for mastering Fault Tolerance & Security in AP CS Principles.
+No single defense is enough. Layer them:
 
-### Scale interaction
-How Fault Tolerance & Security operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Layer | Defense |
+|-------|---------|
+| Perimeter | Firewall, DDoS scrubbing. |
+| Network | TLS, segmentation. |
+| Host | Patching, hardening. |
+| App | Input validation, least privilege. |
+| Data | Encryption-at-rest, backups. |
+| Identity | MFA, strong auth. |
+| Process | Code review, secure SDLC. |
 
-### Feedback loop
-How outcomes of Fault Tolerance & Security can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+If one layer fails, others still hold.
+
+## Threat Modeling
+
+Ask: who would attack this, why, and how? Common categories: nation-states, organized crime, opportunistic attackers, disgruntled insiders, accidental damage.
+
+## Security Is A Process, Not A Product
+
+Tools alone don't make a system secure. Patching, monitoring, and incident response matter as much as initial design.
       `
     },
     {
-      id: 'cspfault4-input',
+      id: "cspfts4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Fault Tolerance & Security links to other course topics?
+1) Layering multiple security defenses is called defense in _______.
 
-2) What concept describes how Fault Tolerance & Security operates differently at local, national, and global scales?
+2) A formal exercise to ask "who would attack this and how" is called _______ modeling.
 
-3) Name the term for how outcomes of Fault Tolerance & Security can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) A system's ability to keep responding during partial failure is _______ tolerance.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Fault Tolerance & Security links to other course topics), Scale interaction (How Fault Tolerance & Security operates differently at local, national, and global scales), and Feedback loop (How outcomes of Fault Tolerance & Security can reinforce or modify the original process).'
+        correctAnswers: ["depth", "threat", "fault"],
+        hint1: "Layered defenses.",
+        hint2: "Adversary thinking.",
+        hint3: "Survival.",
+        explanation: "Depth, threat modeling, fault tolerance."
       }
     },
     {
-      id: 'cspfault4-dropdown',
+      id: "cspfts4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Fault Tolerance & Security links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "Security is best treated as ___",
+            options: ["an ongoing process: patch, monitor, respond", "a one-time install", "a feature toggle", "a compression setting"]
           },
           {
-            label: 'How Fault Tolerance & Security operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Defense in depth means ___",
+            options: ["layering multiple defenses so a single failure does not breach the system", "one strong wall and nothing else", "no defenses at all", "TLS only"]
           },
           {
-            label: 'How outcomes of Fault Tolerance & Security can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A breach plan that includes detection + response is part of ___",
+            options: ["incident-response readiness", "compression", "IPv6 routing", "lossy encoding"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Fault Tolerance & Security links to other course topics. Scale interaction — How Fault Tolerance & Security operates differently at local, national, and global scales. Feedback loop — How outcomes of Fault Tolerance & Security can reinforce or modify the original process.'
+        correctAnswers: ["an ongoing process: patch, monitor, respond", "layering multiple defenses so a single failure does not breach the system", "incident-response readiness"],
+        hint1: "Process, not product.",
+        hint2: "Layered defense.",
+        hint3: "Detection + response.",
+        explanation: "Process / depth / response are core."
       }
     },
     {
-      id: 'cspfault4-strategy',
+      id: "cspfts4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Security
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Fault Tolerance & Security.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- Defense in depth — layered defenses.
+- Threat modeling identifies WHO and HOW.
+- Backups + replication + monitoring + response = comprehensive resilience.
       `
     },
     {
-      id: 'cspfault4-applied',
+      id: "cspfts4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Fault Tolerance & Security and other units earns higher scores because:',
+            question: "A startup fixes a critical bug but never deploys patches automatically. Six months later, an unpatched server is breached. The most CSP-aligned lesson is ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "patches are optional once the original code has been initially reviewed and tested.",
+              "security is an ongoing process; automated patching and monitoring are part of the posture.",
+              "transport-layer security on inbound traffic would have made the unpatched bug irrelevant.",
+              "compressing the server's log files more aggressively would have prevented the breach."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Process matters more than one-time fixes."
           },
           {
-            question: 'If Fault Tolerance & Security produces outcomes that further intensify the original process, this is:',
+            question: "A health app that stores patient records would benefit MOST from ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "just transport-layer security on incoming requests and nothing else added on top.",
+              "defense in depth: TLS, encryption at rest, MFA, audit logs, regular pen-tests, breach plan.",
+              "just multi-factor authentication on user logins, with no other defenses added.",
+              "just nightly backups, with no other defenses added on top of the backup process."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Sensitive data needs layered defenses."
           }
         ]
       }
     }
   ]
-}
+};

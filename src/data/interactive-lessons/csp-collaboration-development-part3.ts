@@ -1,175 +1,173 @@
 export const cspCollaborationDevelopmentPart3Data = {
-  topicSlug: 'csp-collaboration-development',
+  topicSlug: "csp-collaboration-development",
   sections: [
     {
-      id: 'cspcolla3-intro',
+      id: "cspcoll3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Collaboration in Development
+# 🤝 Collaboration in Development
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Collaboration in Development. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Common Collaboration Patterns
 
-| Concept | Description |
+| Pattern | Description |
 |---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Collaboration in Development |
-| **Case study** | A specific real-world example that illustrates Collaboration in Development |
-| **Comparison** | Analyzing similarities and differences across examples of Collaboration in Development |
+| **Pair programming** | Two devs at one keyboard. |
+| **Code review** | Async review before merge. |
+| **Mob / ensemble** | Whole team works on one problem. |
+| **Open source** | Public project; anyone can contribute. |
+| **Crowdsourcing** | Many small contributors → big shared output. |
       `
     },
     {
-      id: 'cspcolla3-quiz1',
+      id: "cspcoll3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "In pair programming, the \"navigator\" usually ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "types code in a second editor at the same time as the driver.",
+              "thinks about higher-level design and reviews while the driver types.",
+              "works on a separate unrelated program to maximize parallelism.",
+              "monitors network traffic to make sure the driver stays online."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Driver types tactical code; navigator thinks strategically."
           },
           {
-            question: 'Comparing examples of Collaboration in Development across regions helps:',
+            question: "Wikipedia is most accurately described as ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "a centralized corporate product written by a small editorial staff.",
+              "a crowdsourced encyclopedia built by millions of volunteer contributors.",
+              "a peer-to-peer file-sharing system for distributing reference works.",
+              "a closed-source proprietary program licensed to participating schools."
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Wikipedia is the canonical crowdsourcing example."
           }
         ]
       }
     },
     {
-      id: 'cspcolla3-content',
+      id: "cspcoll3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Pair Programming
 
-### Spatial pattern
-The geographic distribution related to Collaboration in Development. Understanding this concept is essential for mastering Collaboration in Development in AP CS Principles.
+Two developers, one workstation: **driver** writes, **navigator** reviews live, they swap roles regularly. Catches errors instantly, transfers skills, decisions get challenged in real time.
 
-### Case study
-A specific real-world example that illustrates Collaboration in Development. This builds on the previous concept and connects to broader themes in the course.
+## Code Review
 
-### Comparison
-Analyzing similarities and differences across examples of Collaboration in Development. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+The dominant collaboration pattern in modern teams. A developer opens a **pull request**; teammates review the diff, leave inline comments, approve or request changes. Good review checks: correctness, tests, readability, edge cases, security/privacy.
+
+## Open Source And Crowdsourcing
+
+- **Open source**: source is public; anyone can fork and propose changes.
+- **Crowdsourcing**: many people contribute small pieces (Wikipedia, OpenStreetMap).
+
+Both rely on **clear contribution guidelines** and **maintainers** who curate quality.
       `
     },
     {
-      id: 'cspcolla3-input',
+      id: "cspcoll3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Collaboration in Development?
+1) In pair programming, the person typing is called the _______.
 
-2) What concept describes a specific real-world example that illustrates Collaboration in Development?
+2) A proposed change submitted for review is often packaged as a _______ request.
 
-3) Name the term for analyzing similarities and differences across examples of Collaboration in Development.
-
-Use the exact term from this part.
+3) A project whose source code is publicly readable is called _______ source.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Collaboration in Development), Case study (A specific real-world example that illustrates Collaboration in Development), and Comparison (Analyzing similarities and differences across examples of Collaboration in Development).'
+        correctAnswers: ["driver", "pull", "open"],
+        hint1: "Tactical role.",
+        hint2: "Common Git term.",
+        hint3: "Public + readable.",
+        explanation: "Driver/navigator pair pattern. Pull request opens review. Open source = public."
       }
     },
     {
-      id: 'cspcolla3-dropdown',
+      id: "cspcoll3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Collaboration in Development is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "Code review is most useful for ___",
+            options: ["catching issues early and sharing knowledge across the team", "slowing the team down for no benefit", "preventing all bugs forever", "compressing files"]
           },
           {
-            label: 'A specific real-world example that illustrates Collaboration in Development describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "Crowdsourcing relies on ___",
+            options: ["clear guidelines and maintainers to curate quality", "no rules at all", "a single contributor", "closed-source software"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Collaboration in Development is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "A pair programming pair should ___",
+            options: ["swap driver / navigator roles regularly", "never swap roles", "work in different rooms", "each write a separate program"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Collaboration in Development. Case study — A specific real-world example that illustrates Collaboration in Development. Comparison — Analyzing similarities and differences across examples of Collaboration in Development.'
+        correctAnswers: ["catching issues early and sharing knowledge across the team", "clear guidelines and maintainers to curate quality", "swap driver / navigator roles regularly"],
+        hint1: "Two birds, one stone.",
+        hint2: "Open ≠ unmoderated.",
+        hint3: "Avoid one-sided fatigue.",
+        explanation: "Code review = catch + learn. Crowdsourcing needs governance. Pair programming swaps roles."
       }
     },
     {
-      id: 'cspcolla3-strategy',
+      id: "cspcoll3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Collaboration Patterns
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Collaboration in Development.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Pair / mob = synchronous, intense, fast feedback.
+- Code review = async, scalable, durable record.
+- Open source = public participation; needs maintainers.
+- Crowdsourcing = many small contributions; needs quality controls.
       `
     },
     {
-      id: 'cspcolla3-applied',
+      id: "cspcoll3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Collaboration in Development. The strongest response would:',
+            question: "A team adds 5 new developers in one month. Knowledge transfer becomes painful. The most appropriate practice to add is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "silent solo work so each new developer learns by doing alone.",
+              "pair programming and code review so knowledge spreads as work happens.",
+              "longer one-shot onboarding lectures from senior staff at month's end.",
+              "larger less-frequent commits so reviewers see fewer separate changes."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Pair programming and code review spread knowledge organically."
           },
           {
-            question: 'A pattern observed in Collaboration in Development is consistent across multiple world regions. This suggests:',
+            question: "An open-source project receives a wave of low-quality PRs. The most CSP-aligned response is ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "close the project to outside contributions and keep it strictly internal.",
+              "add clearer contribution guidelines, automated checks, and active maintainer review.",
+              "merge every incoming pull request to encourage broader community participation.",
+              "reject all pull requests for the next 90 days regardless of their quality."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "Crowdsourcing scales only with governance."
           }
         ]
       }
     }
   ]
-}
+};

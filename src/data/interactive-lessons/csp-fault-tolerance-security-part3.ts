@@ -1,175 +1,188 @@
 export const cspFaultToleranceSecurityPart3Data = {
-  topicSlug: 'csp-fault-tolerance-security',
+  topicSlug: "csp-fault-tolerance-security",
   sections: [
     {
-      id: 'cspfault3-intro',
+      id: "cspfts3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Fault Tolerance & Security
+# 🛡️ Fault Tolerance & Security
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Fault Tolerance & Security. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Security Has Three Goals: CIA
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Fault Tolerance & Security |
-| **Case study** | A specific real-world example that illustrates Fault Tolerance & Security |
-| **Comparison** | Analyzing similarities and differences across examples of Fault Tolerance & Security |
+| Goal | Meaning |
+|------|---------|
+| **Confidentiality** | Only authorized parties can read. |
+| **Integrity** | Data isn't altered without detection. |
+| **Availability** | The service keeps responding. |
+
+Different threats target different goals; defenses are different for each.
       `
     },
     {
-      id: 'cspfault3-quiz1',
+      id: "cspfts3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A man-in-the-middle eavesdropping on traffic primarily threatens ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "confidentiality, since the attacker can read messages they were never authorized to see",
+              "integrity only, leaving the secrecy of the conversation entirely undisturbed",
+              "availability only, by preventing the legitimate parties from communicating",
+              "compression efficiency, by injecting noise that defeats lossless coders downstream"
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: "Eavesdropping = confidentiality breach."
           },
           {
-            question: 'Comparing examples of Fault Tolerance & Security across regions helps:',
+            question: "A DDoS attack primarily threatens ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "confidentiality, by exposing private user data stored on the targeted service",
+              "integrity, by silently rewriting the data the targeted service stores on disk",
+              "availability, by overwhelming the service so legitimate users cannot reach it",
+              "compression efficiency, by stuffing data with patterns that codecs cannot exploit"
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 2,
+            explanation: "DDoS overwhelms a service → availability loss."
           }
         ]
       }
     },
     {
-      id: 'cspfault3-content',
+      id: "cspfts3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Common Threats And Defenses
 
-### Spatial pattern
-The geographic distribution related to Fault Tolerance & Security. Understanding this concept is essential for mastering Fault Tolerance & Security in AP CS Principles.
+| Threat | Defense |
+|--------|---------|
+| Eavesdropping | TLS / encryption in transit. |
+| Tampering | Digital signatures, message-authentication codes (MAC). |
+| Phishing | User awareness, MFA, anti-phishing tools. |
+| Malware | Updates, sandboxing, antivirus, code signing. |
+| DDoS | Rate limiting, CDNs, scrubbing. |
+| SQL injection | Parameterized queries, input validation. |
+| Credential theft | MFA, password managers, breached-password checks. |
 
-### Case study
-A specific real-world example that illustrates Fault Tolerance & Security. This builds on the previous concept and connects to broader themes in the course.
+## Symmetric vs. Asymmetric Encryption
 
-### Comparison
-Analyzing similarities and differences across examples of Fault Tolerance & Security. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Style | Key |
+|-------|-----|
+| **Symmetric** | Same key encrypts and decrypts (AES). |
+| **Asymmetric** | Public key encrypts; private key decrypts (RSA, ECC). |
+
+Real systems use both: asymmetric to safely exchange a symmetric key, then symmetric for bulk traffic.
+
+## Hashing Vs Encryption
+
+| Property | Hash | Encryption |
+|----------|------|-----------|
+| Reversible? | No | Yes (with key) |
+| Use | Verify integrity, store password hashes | Confidentiality |
+
+A password should be **hashed** (with salt + slow algorithm), not encrypted.
       `
     },
     {
-      id: 'cspfault3-input',
+      id: "cspfts3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Fault Tolerance & Security?
+1) The "C" in CIA stands for _______.
 
-2) What concept describes a specific real-world example that illustrates Fault Tolerance & Security?
+2) Encryption that uses one shared key is called _______.
 
-3) Name the term for analyzing similarities and differences across examples of Fault Tolerance & Security.
-
-Use the exact term from this part.
+3) A one-way function that produces a fixed-size digest is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Fault Tolerance & Security), Case study (A specific real-world example that illustrates Fault Tolerance & Security), and Comparison (Analyzing similarities and differences across examples of Fault Tolerance & Security).'
+        correctAnswers: ["confidentiality", "symmetric", "hash"],
+        hint1: "Privacy.",
+        hint2: "One key both ways.",
+        hint3: "Digest function.",
+        explanation: "Confidentiality, symmetric, hash."
       }
     },
     {
-      id: 'cspfault3-dropdown',
+      id: "cspfts3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Fault Tolerance & Security is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "TLS / HTTPS protects ___",
+            options: ["data confidentiality + integrity in transit", "data on disk", "against compression", "against phishing alone"]
           },
           {
-            label: 'A specific real-world example that illustrates Fault Tolerance & Security describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A password database should store ___",
+            options: ["salted hashes (e.g., bcrypt / Argon2), not plaintext or reversible encryption", "plaintext for fast retrieval", "simple MD5 hashes only", "encrypted strings only"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Fault Tolerance & Security is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "Multi-factor authentication (MFA) defends against ___",
+            options: ["stolen passwords being enough to log in alone", "all malware", "all DDoS", "all phishing forever"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Fault Tolerance & Security. Case study — A specific real-world example that illustrates Fault Tolerance & Security. Comparison — Analyzing similarities and differences across examples of Fault Tolerance & Security.'
+        correctAnswers: ["data confidentiality + integrity in transit", "salted hashes (e.g., bcrypt / Argon2), not plaintext or reversible encryption", "stolen passwords being enough to log in alone"],
+        hint1: "HTTPS in transit.",
+        hint2: "Slow salted hashes.",
+        hint3: "Two factors.",
+        explanation: "TLS = transit; salted hashes for passwords; MFA blocks credential reuse."
       }
     },
     {
-      id: 'cspfault3-strategy',
+      id: "cspfts3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Security Basics
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Fault Tolerance & Security.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- CIA: confidentiality / integrity / availability.
+- Match defense to threat.
+- Hashes ≠ encryption — passwords get hashed.
+- Real systems use symmetric + asymmetric together.
       `
     },
     {
-      id: 'cspfault3-applied',
+      id: "cspfts3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Fault Tolerance & Security. The strongest response would:',
+            question: "A site stores user passwords as plaintext \"for support to look up if needed\". The most accurate critique is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "no concern — storing plaintext passwords is acceptable as long as the database is private.",
+              "a single breach exposes every user's password instantly; passwords should be salted-hashed.",
+              "compression of the password column would resolve the underlying security problem here.",
+              "transport-layer security on incoming login requests fully replaces the need for hashing."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Plaintext password storage is a fundamental security failure."
           },
           {
-            question: 'A pattern observed in Fault Tolerance & Security is consistent across multiple world regions. This suggests:',
+            question: "A user enables MFA. An attacker who steals their password ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "logs in immediately, since the password alone is sufficient credential material.",
+              "still cannot log in without producing the second factor required by MFA.",
+              "is unaffected by MFA, which only protects against unrelated phishing attacks.",
+              "logs in only over a transport-layer-secured connection but otherwise succeeds."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "MFA breaks the \"password alone is enough\" assumption."
           }
         ]
       }
     }
   ]
-}
+};

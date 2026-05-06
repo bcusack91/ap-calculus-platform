@@ -1,175 +1,177 @@
 export const cspCreativeDevelopmentPart7Data = {
-  topicSlug: 'csp-creative-development',
+  topicSlug: "csp-creative-development",
   sections: [
     {
-      id: 'cspcreat7-intro',
+      id: "cspcd7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 🎨 Creative Development
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Creative Development for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Creative Development
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Creative Development |
-| **Common question types** | The most frequent ways Creative Development is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Creative Development questions effectively |
+Final review of dev-process vocabulary.
       `
     },
     {
-      id: 'cspcreat7-quiz1',
+      id: "cspcd7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Creative Development is:',
+            question: "AP CSP frames the development process as ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "linear and one-shot.",
+              "iterative — investigate, design, prototype, test, refine, repeat.",
+              "random.",
+              "optional."
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "The exam emphasizes iterative dev."
           },
           {
-            question: 'AP multiple-choice questions about Creative Development often test:',
+            question: "A logic error means the program ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "fails to parse.",
+              "crashes immediately.",
+              "runs but produces an incorrect result.",
+              "is encrypted."
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 2,
+            explanation: "Logic errors run but give wrong output."
           }
         ]
       }
     },
     {
-      id: 'cspcreat7-content',
+      id: "cspcd7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Creative Development. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Iterative development | Build-test-refine cycles. |
+| Prototype | Small testable slice. |
+| Decomposition | Splitting a problem. |
+| Abstraction | Hiding details behind an interface. |
+| Procedure | Reusable, named block of code. |
+| Event-driven | Code runs in response to events. |
+| Syntax error | Caught at parse time. |
+| Runtime error | Caught while running. |
+| Logic error | Wrong output, no crash. |
+| Version control | Tracks every change. |
+| CI / CD | Automatic integration / deployment. |
+| Code review | Other devs inspect changes. |
 
-### Common question types
-The most frequent ways Creative Development is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Creative Development questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Treating dev as one-shot rather than iterative.
+- Skipping testing after manual checks.
+- Over-collecting user data without thinking about privacy.
+- Trusting AI-generated code without review.
+- Ignoring user feedback because "the code is fine".
       `
     },
     {
-      id: 'cspcreat7-input',
+      id: "cspcd7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Creative Development?
+1) The development cycle the AP exam emphasizes is _______.
 
-2) What concept describes the most frequent ways Creative Development is tested on the AP exam?
+2) A program that produces the wrong output without crashing has a _______ error.
 
-3) Name the term for approaches for answering Creative Development questions effectively.
-
-Use the exact term from this part.
+3) A process where teammates inspect proposed changes before merging is called code _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Creative Development), Common question types (The most frequent ways Creative Development is tested on the AP exam), and Exam strategy (Approaches for answering Creative Development questions effectively).'
+        correctAnswers: ["iterative", "logic", "review"],
+        hint1: "Repeated cycles.",
+        hint2: "Wrong answer, no crash.",
+        hint3: "Sanity check.",
+        explanation: "Iterative dev, logic errors, and code review are core CSP concepts."
       }
     },
     {
-      id: 'cspcreat7-dropdown',
+      id: "cspcd7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Creative Development is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "A team that releases small changes daily with automated tests is using ___",
+            options: ["CI / CD", "waterfall", "no version control", "manual deployment only"]
           },
           {
-            label: 'The most frequent ways Creative Development is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "A feature documented for users in a \"how to\" guide is part of ___",
+            options: ["user-facing documentation", "malware", "compression", "encryption"]
           },
           {
-            label: 'Approaches for answering Creative Development questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "When designing for a target audience, the best validation is ___",
+            options: ["testing with real users from that audience", "testing only with developers", "reading the spec aloud", "checking the file size"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Creative Development. Common question types — The most frequent ways Creative Development is tested on the AP exam. Exam strategy — Approaches for answering Creative Development questions effectively.'
+        correctAnswers: ["CI / CD", "user-facing documentation", "testing with real users from that audience"],
+        hint1: "Continuous integration / deployment.",
+        hint2: "Help users.",
+        hint3: "Real users surface real issues.",
+        explanation: "Daily releases + tests = CI/CD. User guides = documentation. Real users validate design."
       }
     },
     {
-      id: 'cspcreat7-strategy',
+      id: "cspcd7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Creative Development.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- The AP exam loves "what would the team do NEXT?" — answer with iterate, test, gather feedback, document.
+- Distinguish syntax / runtime / logic errors with a one-sentence example each.
+- Code review and version control are foundational.
+- Frame development decisions as having technical AND user/ethical impact.
       `
     },
     {
-      id: 'cspcreat7-applied',
+      id: "cspcd7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Creative Development. You should:',
+            question: "A startup releases an MVP, gets feedback, and rebuilds key features based on user behavior. Which model best describes this?",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "Iterative / agile development.",
+              "Pure waterfall.",
+              "No development model at all.",
+              "Encrypted development."
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: "Releasing, gathering feedback, rebuilding = iterative."
           },
           {
-            question: 'For free-response questions on Creative Development, the most common mistake is:',
+            question: "You inherit code with no comments, no tests, no commit history. The most appropriate FIRST step is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "rewrite the entire codebase from scratch in a modern style.",
+              "add tests around current behavior and identify the most critical functions before changing anything.",
+              "start refactoring immediately so the code matches your preferred style.",
+              "delete any code whose purpose you cannot quickly understand at a glance."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Stabilize understanding before changing — characterize current behavior with tests first."
           }
         ]
       }
     }
   ]
-}
+};

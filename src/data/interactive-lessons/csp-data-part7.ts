@@ -1,175 +1,174 @@
 export const cspDataPart7Data = {
-  topicSlug: 'csp-data',
+  topicSlug: "csp-data",
   sections: [
     {
-      id: 'cspdata7-intro',
+      id: "cspdata7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Data & Information for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Data
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Data & Information |
-| **Common question types** | The most frequent ways Data & Information is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Data & Information questions effectively |
+Core data concepts the AP exam tests.
       `
     },
     {
-      id: 'cspdata7-quiz1',
+      id: "cspdata7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Data & Information is:',
+            question: "Data ABOUT data is called ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "scalar data, meaning a single value held in one cell of a spreadsheet",
+              "metadata, meaning information that describes other information",
+              "compressed data, meaning a re-encoded version that fits in fewer bits",
+              "lossy data, meaning a copy from which some original detail is missing"
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "Metadata = data about data."
           },
           {
-            question: 'AP multiple-choice questions about Data & Information often test:',
+            question: "A correlation between two variables ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "proves that the first variable directly causes changes in the second variable.",
+              "does NOT necessarily prove one variable causes the other to change.",
+              "is mathematically the same statistical concept as a causal relationship.",
+              "is impossible to interpret unless the dataset is encrypted before analysis."
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: "Correlation ≠ causation."
           }
         ]
       }
     },
     {
-      id: 'cspdata7-content',
+      id: "cspdata7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Data & Information. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Data | Computer-storable representation of information. |
+| Metadata | Data about data. |
+| Cleaning | Removing duplicates, fixing missing or invalid values. |
+| Aggregation | Combining many values (sum, mean, count). |
+| Filtering | Keeping rows that match a condition. |
+| Join | Combining datasets on a shared key. |
+| Quasi-identifier | A field (or combination) that can identify an individual. |
+| Data minimization | Collect only what you need. |
+| Encryption at rest / in transit | Protect data on disk / on the network. |
 
-### Common question types
-The most frequent ways Data & Information is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Data & Information questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Treating correlation as causation.
+- Choosing the wrong chart type.
+- Forgetting metadata is also data.
+- Indefinite retention without sunset clauses.
+- Publishing "anonymized" data without auditing for re-identification.
       `
     },
     {
-      id: 'cspdata7-input',
+      id: "cspdata7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Data & Information?
+1) Combining many values into one summary (sum, mean, count) is called _______.
 
-2) What concept describes the most frequent ways Data & Information is tested on the AP exam?
+2) A field (or combination) that can identify a person is called a _______-identifier.
 
-3) Name the term for approaches for answering Data & Information questions effectively.
-
-Use the exact term from this part.
+3) Collecting only the data actually needed is called data _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Data & Information), Common question types (The most frequent ways Data & Information is tested on the AP exam), and Exam strategy (Approaches for answering Data & Information questions effectively).'
+        correctAnswers: ["aggregation", "quasi", "minimization"],
+        hint1: "Roll-up.",
+        hint2: "Almost-identifier.",
+        hint3: "Less = safer.",
+        explanation: "Aggregation = roll-up. Quasi-identifiers can re-identify. Data minimization = collect less."
       }
     },
     {
-      id: 'cspdata7-dropdown',
+      id: "cspdata7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Data & Information is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "\"Garbage in, garbage out\" emphasizes ___",
+            options: ["data quality before analysis", "compression", "TLS", "IPv6"]
           },
           {
-            label: 'The most frequent ways Data & Information is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "A bar chart vs. line chart distinction matters because ___",
+            options: ["the choice should match the question being asked", "they look the same", "one is encrypted", "one is faster on the wire"]
           },
           {
-            label: 'Approaches for answering Data & Information questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "A \"right to be forgotten\" policy implements ___",
+            options: ["data deletion at user request", "data duplication", "data encryption", "data aggregation"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Data & Information. Common question types — The most frequent ways Data & Information is tested on the AP exam. Exam strategy — Approaches for answering Data & Information questions effectively.'
+        correctAnswers: ["data quality before analysis", "the choice should match the question being asked", "data deletion at user request"],
+        hint1: "Quality matters.",
+        hint2: "Question-driven.",
+        hint3: "User control.",
+        explanation: "Garbage in = garbage out. Charts should match questions. Right-to-be-forgotten = deletion."
       }
     },
     {
-      id: 'cspdata7-strategy',
+      id: "cspdata7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Data & Information.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Know the data lifecycle: collect → process → store → share → archive → DELETE.
+- Match chart to question.
+- Watch for correlation/causation traps.
+- Privacy framing: minimization + sunset + at-rest/in-transit encryption.
       `
     },
     {
-      id: 'cspdata7-applied',
+      id: "cspdata7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Data & Information. You should:',
+            question: "A spreadsheet of student grades is shared via email attachment. The most CSP-aligned critique is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "email attachments are inherently safe for any kind of educational data.",
+              "sensitive data sent unencrypted with weak access controls risks unauthorized disclosure.",
+              "the spreadsheet should simply be saved in a different file format before sending.",
+              "the school should switch its mail transport from TCP to UDP for performance."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "Sensitive data needs access control + encryption-in-transit."
           },
           {
-            question: 'For free-response questions on Data & Information, the most common mistake is:',
+            question: "A research team plans to publish a dataset with ages and ZIP codes \"for transparency\". The most appropriate concern is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "publishing aggregate ages and ZIP codes raises no meaningful re-identification risk.",
+              "these quasi-identifiers can re-identify many people; aggregate or coarsen before publishing.",
+              "the resulting dataset file will be too small for collaborators to download easily.",
+              "the resulting dataset file will be too large for collaborators to host inexpensively."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Quasi-identifiers + public release = re-identification risk."
           }
         ]
       }
     }
   ]
-}
+};

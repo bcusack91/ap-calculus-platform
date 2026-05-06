@@ -1,175 +1,188 @@
 export const cspDataPart4Data = {
-  topicSlug: 'csp-data',
+  topicSlug: "csp-data",
   sections: [
     {
-      id: 'cspdata4-intro',
+      id: "cspdata4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
 **Part 4 of 7 — Connections & Interactions**
 
-Data & Information connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Data Connects Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Data & Information links to other course topics |
-| **Scale interaction** | How Data & Information operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Data & Information can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Data ↔ Algorithms | Algorithms operate on data. |
+| Data ↔ Internet | Data flows over networks. |
+| Data ↔ Security | Data must be protected at rest and in transit. |
+| Data ↔ Impact | Decisions about data collection affect privacy, fairness, and trust. |
       `
     },
     {
-      id: 'cspdata4-quiz1',
+      id: "cspdata4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Data & Information connects to other course topics through:',
+            question: "Choosing between a list and a hash table for a lookup task is primarily an ___ decision.",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "encryption decision driven by the data's sensitivity",
+              "algorithm and data-structure decision driven by performance",
+              "network decision driven by the link's bandwidth limits",
+              "compression decision driven by available storage budget"
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Data structure choice impacts algorithm performance."
           },
           {
-            question: 'A feedback loop in Data & Information means:',
+            question: "A medical study collects identifying data; a researcher loses a laptop with the dataset. The most accurate framing is ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "no concern, since the laptop will probably never be powered on again.",
+              "a privacy/security incident; mitigated by encryption-at-rest and minimal collection.",
+              "a hardware concern only — the data on the device is irrelevant to the analysis.",
+              "a routing problem caused by the laptop disconnecting from the school network."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Lost device with sensitive data is a privacy/security incident."
           }
         ]
       }
     },
     {
-      id: 'cspdata4-content',
+      id: "cspdata4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Data Structures Affect Algorithms
 
-### Interconnection
-How Data & Information links to other course topics. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+| Task | Bad choice | Better choice |
+|------|-----------|---------------|
+| Look up by ID | Linear scan of a list | Hash table (O(1) avg) |
+| Sorted access | Unsorted list | Sorted array / balanced tree |
+| "Top K" repeatedly | Resort each time | Heap |
+| Network of relations | Pairs of IDs in a list | Graph |
 
-### Scale interaction
-How Data & Information operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+## Encryption At Rest vs. In Transit
 
-### Feedback loop
-How outcomes of Data & Information can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Phase | Protection |
+|-------|-----------|
+| **At rest** (storage) | Disk-level or field-level encryption. |
+| **In transit** (network) | TLS / HTTPS. |
+| **In use** (memory) | Hardest; emerging tech (TEE, FHE). |
+
+A complete data-protection plan addresses all three.
+
+## Data Lifecycles
+
+Real datasets have a lifecycle: collect → process → store → share → archive → **delete**. The "delete" stage is often skipped — and that's a security/privacy failure waiting to happen.
+
+| Lifecycle stage | Question |
+|----------------|----------|
+| Collect | Do we really need this? |
+| Store | Encrypted? Minimal access? |
+| Share | With whom, under what terms? |
+| Archive | How long? Why? |
+| Delete | When does this go away? |
       `
     },
     {
-      id: 'cspdata4-input',
+      id: "cspdata4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Data & Information links to other course topics?
+1) Encrypting files on a hard drive is "encryption at _______".
 
-2) What concept describes how Data & Information operates differently at local, national, and global scales?
+2) TLS / HTTPS provides encryption "in _______".
 
-3) Name the term for how outcomes of Data & Information can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) A complete data lifecycle ends with a _______ stage.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Data & Information links to other course topics), Scale interaction (How Data & Information operates differently at local, national, and global scales), and Feedback loop (How outcomes of Data & Information can reinforce or modify the original process).'
+        correctAnswers: ["rest", "transit", "delete"],
+        hint1: "Static storage.",
+        hint2: "Moving over network.",
+        hint3: "Lifecycle endpoint.",
+        explanation: "At rest = stored; in transit = on the wire; deletion ends the lifecycle."
       }
     },
     {
-      id: 'cspdata4-dropdown',
+      id: "cspdata4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Data & Information links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A program that needs O(1) average lookup by ID should use ___",
+            options: ["a hash table", "a linear list", "no data structure", "a sorted array"]
           },
           {
-            label: 'How Data & Information operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Encryption-in-transit is provided by ___",
+            options: ["TLS / HTTPS", "a USB cable", "a printer", "a hard drive"]
           },
           {
-            label: 'How outcomes of Data & Information can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A \"data minimization\" principle says ___",
+            options: ["collect only the data actually needed", "collect everything possible", "never store metadata", "always use lossy compression"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Data & Information links to other course topics. Scale interaction — How Data & Information operates differently at local, national, and global scales. Feedback loop — How outcomes of Data & Information can reinforce or modify the original process.'
+        correctAnswers: ["a hash table", "TLS / HTTPS", "collect only the data actually needed"],
+        hint1: "Hash = constant time.",
+        hint2: "Network encryption.",
+        hint3: "Less = safer.",
+        explanation: "Hash tables = O(1) avg lookups. TLS = transit encryption. Data minimization = collect less."
       }
     },
     {
-      id: 'cspdata4-strategy',
+      id: "cspdata4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Data
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Data & Information.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- Match data structure to algorithm need.
+- Cite both at-rest and in-transit encryption for full protection.
+- "Data minimization" is the big-picture privacy principle.
+- Always include "delete" in the lifecycle.
       `
     },
     {
-      id: 'cspdata4-applied',
+      id: "cspdata4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Data & Information and other units earns higher scores because:',
+            question: "A streaming service stores 10 years of every user's every click. The most CSP-aligned critique is ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "storage is cheap, so indefinite retention of click logs raises no real concern.",
+              "data minimization: long-retained behavioral data is a privacy and breach risk.",
+              "encryption-at-rest alone fully neutralizes the risk of long-retained click logs.",
+              "switching the streaming protocol to UDP would address the underlying concern."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Indefinite retention multiplies risk; minimization + sunset is the answer."
           },
           {
-            question: 'If Data & Information produces outcomes that further intensify the original process, this is:',
+            question: "A program needs to repeatedly find \"the highest priority task\" from a large set. The most appropriate data structure is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "a heap (priority queue) supporting efficient extract-max operations",
+              "a singly linked list scanned linearly on each priority request",
+              "a binary file written sequentially with no in-memory index built",
+              "a hash table keyed by task ID with no ordering by priority"
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 0,
+            explanation: "Heaps support efficient repeated extraction of max/min."
           }
         ]
       }
     }
   ]
-}
+};

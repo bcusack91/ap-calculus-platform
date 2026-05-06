@@ -1,175 +1,199 @@
 export const cspBinaryDataPart2Data = {
-  topicSlug: 'csp-binary-data',
+  topicSlug: "csp-binary-data",
   sections: [
     {
-      id: 'cspbinar2-intro',
+      id: "cspbd2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Binary & Data Representation
+# 🔢 Binary & Data Representation
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Binary & Data Representation helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## How Computers Encode Everything in Binary
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Binary & Data Representation |
-| **Process 2** | A secondary process that shapes outcomes in Binary & Data Representation |
-| **Cause and effect** | The relationship between actions and outcomes in Binary & Data Representation |
+A computer represents every kind of data — numbers, text, images, sound — using only two digits: **0 and 1**. The trick is **agreement**: a sender and receiver agree on a code, then the same bit pattern can mean a number, a letter, or a pixel color.
+
+| Data type | Encoding scheme |
+|-----------|-----------------|
+| Whole number | Place values 1, 2, 4, 8, 16, … (binary) |
+| Text | A code mapping bit pattern → character (e.g., ASCII) |
+| Color (pixel) | Three numbers: R, G, B — each 8 bits |
+| Sound | Repeated samples of air-pressure amplitude |
       `
     },
     {
-      id: 'cspbinar2-quiz1',
+      id: "cspbd2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Binary & Data Representation?',
+            question: "A sequence of 8 bits (1 byte) can represent how many distinct values?",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "8",
+              "16",
+              "128",
+              "256"
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 3,
+            explanation: "2⁸ = 256."
           },
           {
-            question: 'Understanding cause and effect in Binary & Data Representation helps students:',
+            question: "What is the decimal value of the 8-bit binary number 00010110?",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "11",
+              "22",
+              "24",
+              "44"
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "Place values 16 + 4 + 2 = 22."
           }
         ]
       }
     },
     {
-      id: 'cspbinar2-content',
+      id: "cspbd2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Reading Binary Like a Pro
 
-### Process 1
-The primary mechanism that drives patterns in Binary & Data Representation. Understanding this concept is essential for mastering Binary & Data Representation in AP CS Principles.
+To convert binary to decimal, line up the bits with their place values from the right and add the place values where the bit is 1.
 
-### Process 2
-A secondary process that shapes outcomes in Binary & Data Representation. This builds on the previous concept and connects to broader themes in the course.
+| Place value | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-------------|-----|----|----|----|---|---|---|---|
+| Bit | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 1 |
 
-### Cause and effect
-The relationship between actions and outcomes in Binary & Data Representation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Sum the places where the bit is 1: 64 + 16 + 8 + 1 = **89**.
+
+## Going The Other Way
+
+To convert decimal → binary, repeatedly subtract the largest power of 2 that fits.
+
+Convert **45**:
+
+- 32 fits → bit on; remainder 13.
+- 16 doesn't fit; bit off.
+- 8 fits → bit on; remainder 5.
+- 4 fits → bit on; remainder 1.
+- 2 doesn't fit; bit off.
+- 1 fits → bit on; remainder 0.
+
+Result: **00101101** (8 bits).
+
+## Why "n bits = 2ⁿ values"
+
+Each new bit doubles the patterns:
+
+| Bits | Patterns |
+|------|---------|
+| 1 | 2 |
+| 2 | 4 |
+| 4 | 16 |
+| 8 | 256 |
+| 16 | 65,536 |
+| 32 | ~4.3 billion |
+
+Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exam.
       `
     },
     {
-      id: 'cspbinar2-input',
+      id: "cspbd2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Binary & Data Representation?
+1) A single binary digit (0 or 1) is called a _______.
 
-2) What concept describes a secondary process that shapes outcomes in Binary & Data Representation?
+2) The number of distinct values that can be represented with n bits is 2 to the _______ power.
 
-3) Name the term for the relationship between actions and outcomes in Binary & Data Representation.
-
-Use the exact term from this part.
+3) The decimal number 5 in 4-bit binary is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Binary & Data Representation), Process 2 (A secondary process that shapes outcomes in Binary & Data Representation), and Cause and effect (The relationship between actions and outcomes in Binary & Data Representation).'
+        correctAnswers: ["bit", "n", "0101"],
+        hint1: "Short for \"binary digit\".",
+        hint2: "The exponent equals the number of bits.",
+        hint3: "4 + 1 with place values 8, 4, 2, 1.",
+        explanation: "Bit = binary digit. n bits → 2ⁿ patterns. 5 = 4 + 1 = 0101."
       }
     },
     {
-      id: 'cspbinar2-dropdown',
+      id: "cspbd2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Binary & Data Representation is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "Binary 11000000 in decimal is ___",
+            options: ["96", "128", "192", "224"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Binary & Data Representation describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "2¹⁰ equals ___",
+            options: ["100", "256", "1024", "2048"]
           },
           {
-            label: 'The relationship between actions and outcomes in Binary & Data Representation is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "A 4-bit number can store ___ distinct values",
+            options: ["4", "8", "16", "32"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Binary & Data Representation. Process 2 — A secondary process that shapes outcomes in Binary & Data Representation. Cause and effect — The relationship between actions and outcomes in Binary & Data Representation.'
+        correctAnswers: ["192", "1024", "16"],
+        hint1: "128 + 64.",
+        hint2: "About 1000 — the \"kilo\" of computing.",
+        hint3: "2⁴.",
+        explanation: "11000000 = 128 + 64 = 192. 2¹⁰ = 1024 (the \"k\" in KiB). 2⁴ = 16."
       }
     },
     {
-      id: 'cspbinar2-strategy',
+      id: "cspbd2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Binary Conversions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Binary & Data Representation.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Write the place-value row first; then plug in the bits.
+- Memorize: 2⁰=1, 2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2⁶=64, 2⁷=128, 2⁸=256, 2¹⁰=1024.
+- Decimal → binary: greedy subtraction by largest power of 2.
+- For "how many bits do I need to represent N values?" use ⌈log₂ N⌉.
       `
     },
     {
-      id: 'cspbinar2-applied',
+      id: "cspbd2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A school ID system needs to give each of 600 students a unique binary code. What is the minimum number of bits required?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "8",
+              "9",
+              "10",
+              "12"
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 2,
+            explanation: "2⁹ = 512 < 600; 2¹⁰ = 1024 ≥ 600. So 10 bits."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A device samples sensor values from 0 to 7 and stores each in the smallest number of bits possible. After 1,000,000 samples, total storage is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "1,000,000 bytes",
+              "375,000 bytes",
+              "8,000,000 bytes",
+              "125,000 bytes"
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "8 values need 3 bits; 1,000,000 × 3 / 8 = 375,000 bytes."
           }
         ]
       }
     }
   ]
-}
+};

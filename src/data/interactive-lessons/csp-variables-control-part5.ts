@@ -1,175 +1,180 @@
 export const cspVariablesControlPart5Data = {
-  topicSlug: 'csp-variables-control',
+  topicSlug: "csp-variables-control",
   sections: [
     {
-      id: 'cspvaria5-intro',
+      id: "cspvc5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Variables & Control Structures
+# 🔀 Variables & Control Flow
 
 **Part 5 of 7 — Change Over Time**
 
-Variables & Control Structures has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Programming Languages Handle Variables Has Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Variables & Control Structures that have remained stable over time |
-| **Change** | How Variables & Control Structures has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Variables & Control Structures over time |
+| Era | Trend |
+|-----|-------|
+| 1970s | Static typing (C, Pascal); declare type up front. |
+| 1990s | Dynamic typing (Python, JavaScript); flexibility. |
+| 2010s | Type inference + optional types (TypeScript, Rust). |
+| 2020s | Stronger compile-time guarantees, immutability by default in many new languages. |
       `
     },
     {
-      id: 'cspvaria5-quiz1',
+      id: "cspvc5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Variables & Control Structures helps:',
+            question: "TypeScript adds ___ to JavaScript.",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "noticeably faster runtime execution of the same JavaScript program",
+              "optional static types caught at compile time before the program runs",
+              "transport-layer encryption of every value the JavaScript program produces",
+              "automatic source-code compression so the resulting bundle is smaller"
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "TypeScript = JS + static types."
           },
           {
-            question: 'Continuity in Variables & Control Structures means:',
+            question: "Why are modern languages trending toward immutability by default?",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "Mutable data is universally faster, so immutability avoids that performance cost.",
+              "Immutable data simplifies reasoning, especially in concurrent or parallel code.",
+              "Mutability adds new bugs to data-compression algorithms operating on lists.",
+              "Mutability requires every variable to be encrypted before assignment is allowed."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Immutability simplifies concurrency and reasoning."
           }
         ]
       }
     },
     {
-      id: 'cspvaria5-content',
+      id: "cspvc5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Static vs. Dynamic Typing
 
-### Continuity
-Aspects of Variables & Control Structures that have remained stable over time. Understanding this concept is essential for mastering Variables & Control Structures in AP CS Principles.
+| Style | When type is checked |
+|-------|---------------------|
+| Static | Compile time (C, Java, Rust). |
+| Dynamic | Run time (Python, JS). |
+| Gradual | Optional annotations (TypeScript, mypy). |
 
-### Change
-How Variables & Control Structures has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+Static = catch errors earlier; Dynamic = faster prototyping; Gradual = mix-and-match.
 
-### Trend
-The direction of change in Variables & Control Structures over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Concurrency Pressure On Variables
+
+Modern multi-core hardware made shared mutable state risky. New languages (Rust, Go, modern Java) provide tools to make concurrent variable access safer.
+
+## AP CSP Pseudocode Style
+
+The AP exam uses simple pseudocode similar to Python in spirit:
+
+    count ← 0
+    FOR EACH item IN list:
+      IF item > 0 THEN count ← count + 1
+
+You won't need to worry about types or memory management on the exam.
       `
     },
     {
-      id: 'cspvaria5-input',
+      id: "cspvc5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Variables & Control Structures that have remained stable over time?
+1) A language that checks types at compile time is _______-typed.
 
-2) What concept describes how Variables & Control Structures has transformed due to new forces and conditions?
+2) A language like Python that checks types at run time is _______-typed.
 
-3) Name the term for the direction of change in Variables & Control Structures over time.
-
-Use the exact term from this part.
+3) A philosophy where variables don't change after creation is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Variables & Control Structures that have remained stable over time), Change (How Variables & Control Structures has transformed due to new forces and conditions), and Trend (The direction of change in Variables & Control Structures over time).'
+        correctAnswers: ["statically", "dynamically", "immutability"],
+        hint1: "Compile-time check.",
+        hint2: "Run-time check.",
+        hint3: "Unchangeable.",
+        explanation: "Static / dynamic typing; immutability."
       }
     },
     {
-      id: 'cspvaria5-dropdown',
+      id: "cspvc5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Variables & Control Structures that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Compile-time type checking helps catch ___",
+            options: ["certain errors before the program runs", "all bugs forever", "TLS errors", "compression bugs"]
           },
           {
-            label: 'How Variables & Control Structures has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Immutability helps with ___",
+            options: ["easier reasoning, especially in concurrent code", "compression ratio", "TLS handshakes", "IPv6 routing"]
           },
           {
-            label: 'The direction of change in Variables & Control Structures over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "AP CSP pseudocode is closest in style to ___",
+            options: ["Python-like, with words like FOR EACH and IF / THEN", "low-level assembly", "binary directly", "machine code"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Variables & Control Structures that have remained stable over time. Change — How Variables & Control Structures has transformed due to new forces and conditions. Trend — The direction of change in Variables & Control Structures over time.'
+        correctAnswers: ["certain errors before the program runs", "easier reasoning, especially in concurrent code", "Python-like, with words like FOR EACH and IF / THEN"],
+        hint1: "Pre-runtime safety.",
+        hint2: "Concurrency.",
+        hint3: "High-level pseudocode.",
+        explanation: "Static types catch errors early. Immutability eases concurrency. AP pseudocode is high-level."
       }
     },
     {
-      id: 'cspvaria5-strategy',
+      id: "cspvc5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Language Evolution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Variables & Control Structures.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Static vs. dynamic typing tradeoffs.
+- Immutability + scope tightening = modern best practices.
+- AP pseudocode is high-level, English-like.
       `
     },
     {
-      id: 'cspvaria5-applied',
+      id: "cspvc5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Variables & Control Structures has changed in the last 50 years. A strong answer would:',
+            question: "A team migrates a large JavaScript codebase to TypeScript. The most direct benefit is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "noticeably faster runtime since the TypeScript compiler optimizes the JS output.",
+              "catching many type errors at compile time, before the code reaches deployment.",
+              "producing smaller bundle files because TypeScript syntax is more compact than JS.",
+              "stronger transport-layer encryption of values that flow between TS modules at runtime."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "TypeScript catches type errors before runtime."
           },
           {
-            question: 'A trend in Variables & Control Structures shows acceleration in recent decades. The most likely explanation is:',
+            question: "A concurrent program where two threads update the same shared counter without coordination most often suffers from ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "no issue — concurrent updates to a single shared counter are safe by default.",
+              "race conditions producing wrong counts; needs locking, atomic ops, or immutability.",
+              "compression artifacts in the counter that cause it to shrink between updates.",
+              "transport-layer handshake errors that prevent the counter from being readable."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Unsynchronized shared mutable state = race conditions."
           }
         ]
       }
     }
   ]
-}
+};

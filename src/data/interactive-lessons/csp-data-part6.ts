@@ -1,175 +1,187 @@
 export const cspDataPart6Data = {
-  topicSlug: 'csp-data',
+  topicSlug: "csp-data",
   sections: [
     {
-      id: 'cspdata6-intro',
+      id: "cspdata6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Data & Information concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+## Data Workshop
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Data & Information |
-| **Argumentation** | Making evidence-based claims about Data & Information |
-| **Spatial reasoning** | Using geographic thinking to analyze Data & Information |
+Apply data vocabulary to AP-style scenarios.
       `
     },
     {
-      id: 'cspdata6-quiz1',
+      id: "cspdata6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Data & Information, the first step is:',
+            question: "A spreadsheet has 1000 rows. 50 are duplicates. The right first step is ___",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              "merge duplicates by primary key, deciding how to combine fields.",
+              "delete the spreadsheet entirely and ask for a fresh export from the source.",
+              "compress the spreadsheet so duplicate rows take up less disk space overall.",
+              "encrypt the spreadsheet so the duplicate rows can no longer be read directly."
             ],
             correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            explanation: "Deduplication is part of data cleaning."
           },
           {
-            question: 'An evidence-based argument about Data & Information requires:',
+            question: "A team finds that two students share the exact same name in different rows. The right way to distinguish them is ___",
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "guess which row is which based on the order they appear in the file.",
+              "use a unique ID column (such as student ID), not the name field.",
+              "silently delete one of the two rows so the duplicate apparent name disappears.",
+              "encrypt the name field so the records appear different to downstream code."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "Unique IDs are the standard way to distinguish records."
           }
         ]
       }
     },
     {
-      id: 'cspdata6-content',
+      id: "cspdata6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: Cleaning A Survey
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Data & Information. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+100 responses, but:
 
-### Argumentation
-Making evidence-based claims about Data & Information. This builds on the previous concept and connects to broader themes in the course.
+- 5 entries are blank for "age".
+- 2 entries say "fish" for "age".
+- 8 emails appear twice.
 
-### Spatial reasoning
-Using geographic thinking to analyze Data & Information. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Steps:
+
+1. Dedupe on email.
+2. Coerce age to integer; drop or flag invalid.
+3. Decide how to handle missing ages (drop / impute / flag).
+4. Document each choice in a notes file.
+
+## Worked: Choosing A Chart
+
+| Question | Chart |
+|----------|-------|
+| How did sales trend in 2025? | Line. |
+| Which product sold most? | Bar. |
+| What's the age distribution of customers? | Histogram. |
+| Do age and spending correlate? | Scatter. |
+
+## Worked: Aggregation
+
+To find average grade per period:
+
+1. Group by class period.
+2. Sum grades within each group.
+3. Count students within each group.
+4. Divide.
+
+This is the standard "group by + aggregate" pattern of data analysis.
       `
     },
     {
-      id: 'cspdata6-input',
+      id: "cspdata6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Data & Information?
+1) Removing exact-duplicate rows from a dataset is called _______.
 
-2) What concept describes making evidence-based claims about Data & Information?
+2) Replacing missing values with a calculated estimate is called _______.
 
-3) Name the term for using geographic thinking to analyze Data & Information.
-
-Use the exact term from this part.
+3) A "group by + aggregate" pattern is the basis of most _______ analyses.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Data & Information), Argumentation (Making evidence-based claims about Data & Information), and Spatial reasoning (Using geographic thinking to analyze Data & Information).'
+        correctAnswers: ["deduplication", "imputation", "data"],
+        hint1: "No duplicates.",
+        hint2: "Filling gaps.",
+        hint3: "Common analysis pattern.",
+        explanation: "Deduplication, imputation, and group-by aggregation are core data techniques."
       }
     },
     {
-      id: 'cspdata6-dropdown',
+      id: "cspdata6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Data & Information is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A histogram is best for ___",
+            options: ["showing the distribution of one numeric variable", "comparing categorical sales", "time-series trends", "pie share"]
           },
           {
-            label: 'Making evidence-based claims about Data & Information describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "When you need to combine \"students\" and \"grades\" tables, you ___",
+            options: ["join on student ID", "concatenate file contents", "compress both", "encrypt both"]
           },
           {
-            label: 'Using geographic thinking to analyze Data & Information is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "Documenting cleaning decisions matters because ___",
+            options: ["it makes the analysis reproducible", "it makes files smaller", "it encrypts data", "it routes packets faster"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Data & Information. Argumentation — Making evidence-based claims about Data & Information. Spatial reasoning — Using geographic thinking to analyze Data & Information.'
+        correctAnswers: ["showing the distribution of one numeric variable", "join on student ID", "it makes the analysis reproducible"],
+        hint1: "One variable, distribution.",
+        hint2: "Join key.",
+        hint3: "Reproducibility.",
+        explanation: "Histograms = distribution of one variable. Joins use shared keys. Documentation enables reproducibility."
       }
     },
     {
-      id: 'cspdata6-strategy',
+      id: "cspdata6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Data & Information.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- Match the chart to the question.
+- Always document cleaning choices.
+- "Group by then aggregate" is the most common analysis pattern.
+- Use IDs, not names, to distinguish records.
       `
     },
     {
-      id: 'cspdata6-applied',
+      id: "cspdata6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Data & Information and asked to identify a trend. You should:',
+            question: "A team analyzes survey data and discovers responses from one school count 10x compared to others. The most appropriate response is ___",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "ignore the imbalance and report the raw aggregate as if sampling were uniform.",
+              "either weight the responses or note the imbalance — uneven sampling distorts conclusions.",
+              "silently delete the other schools' data so the dataset matches the dominant school.",
+              "encrypt the survey responses so the imbalance cannot be measured downstream."
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "Uneven samples distort conclusions; weighting or noting the imbalance is standard."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Data & Information. The best approach is:',
+            question: "A health app combines step counts with sleep data and shares \"anonymized\" exports for research. A CSP-aligned concern is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "stripping account names removes essentially all re-identification risk from the dataset.",
+              "the combined behavioral pattern (steps + sleep) may uniquely identify individuals.",
+              "the app is now using too little memory because the export reduced what it stored.",
+              "the app should switch from TCP to UDP for transmitting the export to researchers."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "Combined behavioral patterns are powerful quasi-identifiers."
           }
         ]
       }
     }
   ]
-}
+};

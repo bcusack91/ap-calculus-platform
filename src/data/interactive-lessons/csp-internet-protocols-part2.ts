@@ -1,175 +1,182 @@
 export const cspInternetProtocolsPart2Data = {
-  topicSlug: 'csp-internet-protocols',
+  topicSlug: "csp-internet-protocols",
   sections: [
     {
-      id: 'cspinter2-intro',
+      id: "cspip2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ The Internet & Protocols
+# 🌐 The Internet & Protocols
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to The Internet & Protocols helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## How Information Travels The Internet
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in The Internet & Protocols |
-| **Process 2** | A secondary process that shapes outcomes in The Internet & Protocols |
-| **Cause and effect** | The relationship between actions and outcomes in The Internet & Protocols |
+Two devices talk by following a stack of **protocols** — agreed rules at each layer. Each layer hides the layer below it.
+
+| Layer | Job | Example protocol |
+|-------|-----|------------------|
+| **Application** | What the data MEANS to the app. | HTTP, SMTP, DNS |
+| **Transport** | Reliable (or fast-but-lossy) delivery between two endpoints. | TCP, UDP |
+| **Internet** | Routing packets across networks; addressing. | IP |
+| **Link** | Physical signaling on a single hop (Wi-Fi, Ethernet). | 802.11, Ethernet |
       `
     },
     {
-      id: 'cspinter2-quiz1',
+      id: "cspip2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in The Internet & Protocols?',
+            question: "When you type a URL in a browser, the very first step usually involves which protocol?",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "SMTP",
+              "DNS",
+              "FTP",
+              "SSH"
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "DNS resolves the human-readable name to an IP address before the browser can connect."
           },
           {
-            question: 'Understanding cause and effect in The Internet & Protocols helps students:',
+            question: "Data that crosses the Internet is broken into ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "files",
+              "streams",
+              "packets",
+              "channels"
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 2,
+            explanation: "IP networks are packet-switched; everything is divided into discrete packets."
           }
         ]
       }
     },
     {
-      id: 'cspinter2-content',
+      id: "cspip2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## A Single Web Request, Layer By Layer
 
-### Process 1
-The primary mechanism that drives patterns in The Internet & Protocols. Understanding this concept is essential for mastering The Internet & Protocols in AP CS Principles.
+You click a link to **example.com/page**:
 
-### Process 2
-A secondary process that shapes outcomes in The Internet & Protocols. This builds on the previous concept and connects to broader themes in the course.
+1. **DNS** (application layer): browser asks a DNS server, "What's the IP for example.com?" → gets back, e.g., 93.184.216.34.
+2. **TCP** (transport layer): browser opens a reliable connection to 93.184.216.34 on port 80 (or 443 for HTTPS).
+3. **HTTP** (application layer): browser sends "GET /page HTTP/1.1".
+4. **IP + link** layers: each TCP segment is wrapped in an IP packet and sent hop-by-hop across routers.
+5. Server replies with the page; browser reassembles packets in order; renders HTML.
 
-### Cause and effect
-The relationship between actions and outcomes in The Internet & Protocols. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Why Layered Protocols?
+
+- **Independence:** the link layer can change (Wi-Fi → 5G) without breaking the higher layers.
+- **Interoperability:** any device that speaks the standard layers can join.
+- **Scalability:** changes at one layer don't cascade.
+
+This is **abstraction at scale** — the central design idea of the Internet.
+
+## Packets, Routers, And Best-Effort
+
+A router's job is simple: read the destination IP in each packet's header and forward it toward the next hop. There's no guaranteed path; consecutive packets might take different routes. The Internet provides **best-effort** delivery — TCP layers reliability on top.
       `
     },
     {
-      id: 'cspinter2-input',
+      id: "cspip2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in The Internet & Protocols?
+1) A set of agreed rules for how computers communicate is called a _______.
 
-2) What concept describes a secondary process that shapes outcomes in The Internet & Protocols?
+2) The system that translates domain names like example.com into IP addresses is called _______.
 
-3) Name the term for the relationship between actions and outcomes in The Internet & Protocols.
-
-Use the exact term from this part.
+3) The basic unit of data that travels across the Internet is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in The Internet & Protocols), Process 2 (A secondary process that shapes outcomes in The Internet & Protocols), and Cause and effect (The relationship between actions and outcomes in The Internet & Protocols).'
+        correctAnswers: ["protocol", "DNS", "packet"],
+        hint1: "Greek for \"first\" + \"agreement\".",
+        hint2: "Domain Name System.",
+        hint3: "Small chunks with headers.",
+        explanation: "A protocol is an agreed rule. DNS resolves names → IPs. Data crosses the Internet as packets."
       }
     },
     {
-      id: 'cspinter2-dropdown',
+      id: "cspip2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in The Internet & Protocols is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "TCP guarantees ___",
+            options: ["ordered, reliable delivery", "fastest possible delivery", "encryption", "compression"]
           },
           {
-            label: 'A secondary process that shapes outcomes in The Internet & Protocols describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "IP's primary job is ___",
+            options: ["routing packets to the destination address", "rendering web pages", "compressing data", "encrypting data"]
           },
           {
-            label: 'The relationship between actions and outcomes in The Internet & Protocols is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "A web page that fails to load might be a problem at the ___ layer",
+            options: ["any layer of the stack", "physical only", "DNS only", "browser only"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in The Internet & Protocols. Process 2 — A secondary process that shapes outcomes in The Internet & Protocols. Cause and effect — The relationship between actions and outcomes in The Internet & Protocols.'
+        correctAnswers: ["ordered, reliable delivery", "routing packets to the destination address", "any layer of the stack"],
+        hint1: "That's TCP's defining feature.",
+        hint2: "IP = Internet Protocol = routing.",
+        hint3: "Every layer can fail.",
+        explanation: "TCP = ordered & reliable. IP = routing. A failed page load can come from any layer."
       }
     },
     {
-      id: 'cspinter2-strategy',
+      id: "cspip2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: The Stack
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of The Internet & Protocols.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- The exam will name a protocol and ask its **layer / job**. Memorize: DNS = naming, HTTP = web, SMTP = email, TCP = reliable transport, UDP = fast/unreliable transport, IP = routing.
+- "Reliable + ordered" → TCP.
+- "Fast, real-time, can drop packets" (e.g., voice/video) → UDP.
+- "Best-effort" describes IP's lack of delivery guarantees.
+- A change at one layer (new physical medium, new app) doesn't require changes elsewhere — that's the whole point of the layered design.
       `
     },
     {
-      id: 'cspinter2-applied',
+      id: "cspip2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "You're streaming a live video call. Some packets arrive out of order or are dropped. The call still works. Which transport-layer protocol is most likely in use?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "TCP, because reliability is the most important property of any real-time video-call session.",
+              "UDP, because real-time apps prefer low latency over the cost of waiting for retransmission.",
+              "IP, because the Internet Protocol itself provides the reliability guarantees a video call needs.",
+              "DNS, because the Domain Name System efficiently streams call audio and video as needed."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Real-time A/V uses UDP; a slightly garbled frame is preferable to waiting for retransmits."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A new wireless standard (Wi-Fi 7) is rolled out. Existing web browsers continue to work without modification. Why?",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "Wi-Fi 7 fundamentally does not carry IP packets the way previous Wi-Fi standards historically did.",
+              "The layered protocol design isolates link-layer changes from the higher application-layer software.",
+              "Browser developers worldwide pushed an emergency overnight update to support the new wireless standard.",
+              "Wi-Fi 7 only carries the TCP transport-layer protocol and not application-layer protocols like HTTP."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Layering means the application layer doesn't need to know which physical medium carries its packets."
           }
         ]
       }
     }
   ]
-}
+};

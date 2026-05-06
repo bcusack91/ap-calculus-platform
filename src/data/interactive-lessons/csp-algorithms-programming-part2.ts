@@ -1,175 +1,191 @@
 export const cspAlgorithmsProgrammingPart2Data = {
-  topicSlug: 'csp-algorithms-programming',
+  topicSlug: "csp-algorithms-programming",
   sections: [
     {
-      id: 'cspalgor2-intro',
+      id: "cspap2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms & Programming
+# 💻 Algorithms & Programming
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Algorithms & Programming helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## From Algorithm to Program
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Algorithms & Programming |
-| **Process 2** | A secondary process that shapes outcomes in Algorithms & Programming |
-| **Cause and effect** | The relationship between actions and outcomes in Algorithms & Programming |
+An **algorithm** is a step-by-step plan; a **program** is that plan written in a language a machine can run. The bridge between them is **expressing** sequence, selection, and iteration with the precise vocabulary the language demands.
+
+| Concept | Algorithm version | Program version |
+|---------|-------------------|-----------------|
+| Storage | "remember the value" | declare a **variable**, assign with ← |
+| Choice | "if … otherwise …" | **IF** / **ELSE** with a Boolean expression |
+| Repetition | "do this n times" | **REPEAT N TIMES** or **REPEAT UNTIL** |
+| Reuse | "do step X again here" | call a **procedure** |
       `
     },
     {
-      id: 'cspalgor2-quiz1',
+      id: "cspap2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Algorithms & Programming?',
+            question: "Which is the most precise distinction between an algorithm and a program?",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "Algorithms are written only in plain English; programs must always be written in compiled code.",
+              "Algorithms are conceptual sequences of steps; programs are algorithms expressed in a runnable language.",
+              "Algorithms always run faster than programs because algorithms skip the language-translation step.",
+              "Programs always contain loops; algorithms by definition never contain any kind of repetition step."
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "An algorithm is the *idea*; a program is its concrete expression in a runnable language."
           },
           {
-            question: 'Understanding cause and effect in Algorithms & Programming helps students:',
+            question: "You have a working pseudocode algorithm but no program. Which step is the most likely next move?",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "Run the pseudocode algorithm directly on the computer without any translation step in between.",
+              "Translate the pseudocode into a programming language and test it on small sample inputs first.",
+              "Add explanatory comments to the pseudocode itself before writing any actual program code at all.",
+              "Replace the working pseudocode algorithm with a simpler one before writing any program code at all."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "Pseudocode itself does not run; you implement it in a language and verify with tests."
           }
         ]
       }
     },
     {
-      id: 'cspalgor2-content',
+      id: "cspap2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Worked Translation: Pseudocode → Program
 
-### Process 1
-The primary mechanism that drives patterns in Algorithms & Programming. Understanding this concept is essential for mastering Algorithms & Programming in AP CS Principles.
+**Pseudocode**
 
-### Process 2
-A secondary process that shapes outcomes in Algorithms & Programming. This builds on the previous concept and connects to broader themes in the course.
+    PROCEDURE areaOfRect(w, h) {
+      RETURN w * h
+    }
 
-### Cause and effect
-The relationship between actions and outcomes in Algorithms & Programming. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+**Equivalent ideas in any language**
+
+- A function/method called areaOfRect.
+- Two parameters w and h (numbers).
+- Returns a number.
+
+**Calling it**
+
+    a ← areaOfRect(3, 4)
+    DISPLAY(a)
+
+The call evaluates each argument **before** entering the procedure. Inside the procedure, the parameters are local — assigning to w would not affect the caller.
+
+## Common Statement Types
+
+| Statement | Pseudocode shape | Effect |
+|-----------|------------------|--------|
+| Assignment | x ← expr | Compute right side, store in x. |
+| Conditional | IF (cond) {…} ELSE {…} | Pick one branch. |
+| Loop | REPEAT N TIMES {…} | Run block N times (N captured at start). |
+| Procedure call | name(args) | Pause caller, run procedure, return value. |
+| Output | DISPLAY(value) | Show value to user. |
+| Input | INPUT() | Get a value from the user. |
       `
     },
     {
-      id: 'cspalgor2-input',
+      id: "cspap2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Algorithms & Programming?
+1) A reusable named block of code is called a _______.
 
-2) What concept describes a secondary process that shapes outcomes in Algorithms & Programming?
+2) In w ← w + 1, the operator ← means _______.
 
-3) Name the term for the relationship between actions and outcomes in Algorithms & Programming.
-
-Use the exact term from this part.
+3) Values that are given to a procedure when it is called are called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Algorithms & Programming), Process 2 (A secondary process that shapes outcomes in Algorithms & Programming), and Cause and effect (The relationship between actions and outcomes in Algorithms & Programming).'
+        correctAnswers: ["procedure", "assignment", "arguments"],
+        hint1: "AP CSP word for function.",
+        hint2: "It is not equality.",
+        hint3: "Caller-side word; \"parameters\" is the procedure-side word.",
+        explanation: "Procedures package reusable steps. ← assigns a value. Caller passes arguments; procedure receives them as parameters."
       }
     },
     {
-      id: 'cspalgor2-dropdown',
+      id: "cspap2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Algorithms & Programming is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "In areaOfRect(3, 4), the values 3 and 4 are ___",
+            options: ["arguments", "parameters", "returns", "variables"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Algorithms & Programming describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "In PROCEDURE areaOfRect(w, h), the names w and h are ___",
+            options: ["parameters", "arguments", "returns", "globals"]
           },
           {
-            label: 'The relationship between actions and outcomes in Algorithms & Programming is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "After RETURN x, the procedure ___",
+            options: ["exits immediately and sends x back", "continues executing the next line", "sets a global named x", "discards x"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Algorithms & Programming. Process 2 — A secondary process that shapes outcomes in Algorithms & Programming. Cause and effect — The relationship between actions and outcomes in Algorithms & Programming.'
+        correctAnswers: ["arguments", "parameters", "exits immediately and sends x back"],
+        hint1: "Caller side.",
+        hint2: "Procedure header side.",
+        hint3: "RETURN ends execution of the procedure.",
+        explanation: "Arguments are values supplied; parameters are the names that bind them inside the procedure. RETURN ends the procedure and yields the value."
       }
     },
     {
-      id: 'cspalgor2-strategy',
+      id: "cspap2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Translation
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Algorithms & Programming.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- The exam will give you BOTH a block-style and a text-style version of pseudocode. They mean the same thing — pick whichever you read faster.
+- A procedure CALL replaces the call site with the procedure's RETURN value.
+- Parameters are **local**: changing a parameter inside doesn't change the caller's variable.
+- Watch the difference: DISPLAY(x) shows x but doesn't return it; RETURN x yields a value but doesn't print.
       `
     },
     {
-      id: 'cspalgor2-applied',
+      id: "cspap2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A program defines:\n\nPROCEDURE bump(n) { n ← n + 1 }\nx ← 5\nbump(x)\nDISPLAY(x)\n\nWhat does it display?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "5",
+              "6",
+              "0",
+              "undefined"
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 0,
+            explanation: "n is a local parameter. bump(x) gives n the value 5 and increments n locally; the caller's x is unchanged."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A team must convert a working algorithm into a runnable program. Which sequence is most appropriate?",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "Write the program, ship it, then write the algorithm.",
+              "Translate pseudocode → run on small test inputs → fix bugs → run on representative inputs.",
+              "Translate pseudocode → ship → wait for users to report bugs.",
+              "Skip pseudocode and write directly in production."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Iterative testing on small inputs first catches translation errors cheaply."
           }
         ]
       }
     }
   ]
-}
+};

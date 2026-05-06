@@ -1,175 +1,174 @@
 export const cspComputingSystemsNetworksPart5Data = {
-  topicSlug: 'csp-computing-systems-networks',
+  topicSlug: "csp-computing-systems-networks",
   sections: [
     {
-      id: 'cspcompu5-intro',
+      id: "cspcsn5-intro",
       type: 'text' as const,
       content: `
 # 🖥️ Computing Systems & Networks
 
 **Part 5 of 7 — Change Over Time**
 
-Computing Systems & Networks has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Systems & Networks Have Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Computing Systems & Networks that have remained stable over time |
-| **Change** | How Computing Systems & Networks has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Computing Systems & Networks over time |
+| Era | Defining shift |
+|-----|----------------|
+| 1960s | Mainframes; time-sharing. |
+| 1980s | Personal computers. |
+| 1990s | Public Internet; World Wide Web. |
+| 2000s | Cloud + mobile. |
+| 2010s | Smartphones everywhere; IoT. |
+| 2020s | Edge computing; 5G; specialized AI hardware. |
       `
     },
     {
-      id: 'cspcompu5-quiz1',
+      id: "cspcsn5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Computing Systems & Networks helps:',
+            question: "\"Cloud\" computing primarily means ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "weather-dependent computing whose performance varies with atmospheric conditions.",
+              "on-demand access to remote computing resources delivered over networks.",
+              "computing in which all programs run only on each user's local laptop.",
+              "computing that runs without any networks between client and any server."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Cloud = on-demand remote resources."
           },
           {
-            question: 'Continuity in Computing Systems & Networks means:',
+            question: "Edge computing pushes processing ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "toward central data centers only, far from any device that produces the data.",
+              "closer to the data source (sensors, devices) to reduce latency and bandwidth.",
+              "into orbital satellites that handle every workload regardless of physical location.",
+              "into the operating-system kernel only, refusing to run user-space code at all."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Edge = nearer data source."
           }
         ]
       }
     },
     {
-      id: 'cspcompu5-content',
+      id: "cspcsn5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Cloud Service Models
 
-### Continuity
-Aspects of Computing Systems & Networks that have remained stable over time. Understanding this concept is essential for mastering Computing Systems & Networks in AP CS Principles.
+| Model | What you manage |
+|-------|----------------|
+| **IaaS** | Virtual machines and storage. |
+| **PaaS** | Your application code. |
+| **SaaS** | Just the user interface (provider runs everything). |
 
-### Change
-How Computing Systems & Networks has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+## 5G And Edge
 
-### Trend
-The direction of change in Computing Systems & Networks over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+5G enables higher mobile bandwidth and lower latency. Edge computing puts compute near users (e.g., a CDN edge node) so latency-sensitive apps work even with intermittent core connectivity.
+
+## Specialized Hardware
+
+Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specialization keeps reshaping what kinds of programs are feasible.
       `
     },
     {
-      id: 'cspcompu5-input',
+      id: "cspcsn5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Computing Systems & Networks that have remained stable over time?
+1) On-demand access to remote computing resources is called the _______.
 
-2) What concept describes how Computing Systems & Networks has transformed due to new forces and conditions?
+2) Pushing computation closer to the data source is called _______ computing.
 
-3) Name the term for the direction of change in Computing Systems & Networks over time.
-
-Use the exact term from this part.
+3) A model where the provider runs everything and you only use a UI is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Computing Systems & Networks that have remained stable over time), Change (How Computing Systems & Networks has transformed due to new forces and conditions), and Trend (The direction of change in Computing Systems & Networks over time).'
+        correctAnswers: ["cloud", "edge", "SaaS"],
+        hint1: "Symbolic.",
+        hint2: "Boundary location.",
+        hint3: "Software as a Service.",
+        explanation: "Cloud / edge / SaaS."
       }
     },
     {
-      id: 'cspcompu5-dropdown',
+      id: "cspcsn5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Computing Systems & Networks that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "A real-time video filter on a phone is best run ___",
+            options: ["on the device or at the network edge — local for low latency", "at a distant central data center only", "on a satellite only", "on a router only"]
           },
           {
-            label: 'How Computing Systems & Networks has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "5G primarily improves ___",
+            options: ["mobile bandwidth and latency", "lossless ratio", "AES key length", "TCP overhead"]
           },
           {
-            label: 'The direction of change in Computing Systems & Networks over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "GPUs / TPUs are specialized for ___",
+            options: ["parallel matrix / tensor math used by AI workloads", "web browsing only", "hard-drive control", "firmware"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Computing Systems & Networks that have remained stable over time. Change — How Computing Systems & Networks has transformed due to new forces and conditions. Trend — The direction of change in Computing Systems & Networks over time.'
+        correctAnswers: ["on the device or at the network edge — local for low latency", "mobile bandwidth and latency", "parallel matrix / tensor math used by AI workloads"],
+        hint1: "Latency wins on edge.",
+        hint2: "5G specs.",
+        hint3: "AI math.",
+        explanation: "Edge for latency; 5G for mobile speed; GPUs/TPUs for AI."
       }
     },
     {
-      id: 'cspcompu5-strategy',
+      id: "cspcsn5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Systems Evolution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Computing Systems & Networks.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Cloud + mobile reshaped where computation happens.
+- Edge brings compute near users — lower latency, less core network usage.
+- Specialized hardware enables new classes of applications.
       `
     },
     {
-      id: 'cspcompu5-applied',
+      id: "cspcsn5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Computing Systems & Networks has changed in the last 50 years. A strong answer would:',
+            question: "A startup wants its app to load fast for users worldwide. The most CSP-aligned strategy is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "one origin server in one country, serving every user worldwide directly from there.",
+              "a CDN with edge nodes globally so static content is served close to each user.",
+              "no caching anywhere; rely on the user's browser to fetch every byte every time.",
+              "transport-layer encryption of every static asset before any user can fetch it."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "CDN edges minimize latency."
           },
           {
-            question: 'A trend in Computing Systems & Networks shows acceleration in recent decades. The most likely explanation is:',
+            question: "A medical-imaging team trains AI models on tens of thousands of scans. The most appropriate hardware is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "general-purpose CPUs only, without specialized parallel-math accelerators added.",
+              "GPUs or TPUs designed for the parallel tensor math that AI training requires.",
+              "a single laptop running a desktop operating system and consumer-grade hardware.",
+              "no special hardware — the team can train the models with pencil and paper instead."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "AI training requires specialized parallel hardware."
           }
         ]
       }
     }
   ]
-}
+};

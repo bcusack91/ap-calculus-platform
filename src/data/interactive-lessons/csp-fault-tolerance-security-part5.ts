@@ -1,175 +1,170 @@
 export const cspFaultToleranceSecurityPart5Data = {
-  topicSlug: 'csp-fault-tolerance-security',
+  topicSlug: "csp-fault-tolerance-security",
   sections: [
     {
-      id: 'cspfault5-intro',
+      id: "cspfts5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Fault Tolerance & Security
+# 🛡️ Fault Tolerance & Security
 
 **Part 5 of 7 — Change Over Time**
 
-Fault Tolerance & Security has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Security & Fault Tolerance Have Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Fault Tolerance & Security that have remained stable over time |
-| **Change** | How Fault Tolerance & Security has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Fault Tolerance & Security over time |
+| Era | Defining shift |
+|-----|----------------|
+| 1990s | Anti-virus, basic firewalls. |
+| 2000s | TLS adoption; widespread cyberattacks. |
+| 2010s | Cloud-scale DDoS, ransomware, MFA mainstream. |
+| 2020s | Supply-chain attacks, AI-assisted phishing, post-quantum prep. |
       `
     },
     {
-      id: 'cspfault5-quiz1',
+      id: "cspfts5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Fault Tolerance & Security helps:',
+            question: "A \"supply-chain attack\" compromises ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "only individual end users' phones, with no impact on the broader software ecosystem.",
+              "a tool or library many systems depend on, multiplying the impact across all users.",
+              "only firewalls at the network perimeter, leaving applications inside untouched.",
+              "only the compression algorithm used by the build pipeline of the affected project."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Supply chain = trusted dependency compromise."
           },
           {
-            question: 'Continuity in Fault Tolerance & Security means:',
+            question: "Post-quantum cryptography research aims to ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "speed up classical encryption algorithms by using more efficient mathematical primitives.",
+              "design algorithms that resist attacks from sufficiently powerful future quantum computers.",
+              "eliminate the need for transport-layer security by relying on physical isolation alone.",
+              "compress encrypted data so that ciphertext takes less storage than the original plaintext."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Post-quantum = quantum-resistant designs."
           }
         ]
       }
     },
     {
-      id: 'cspfault5-content',
+      id: "cspfts5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Notable Modern Shifts
 
-### Continuity
-Aspects of Fault Tolerance & Security that have remained stable over time. Understanding this concept is essential for mastering Fault Tolerance & Security in AP CS Principles.
+| Shift | Effect |
+|-------|--------|
+| Cloud everywhere | Big providers handle base infra; devs share responsibility. |
+| Zero trust | Don't trust any network; verify every request. |
+| Ransomware | Backups + segmentation + plan = recoverability. |
+| AI-assisted attacks | Phishing/spam quality is rising. |
+| Open-source dependencies | Strong upside; supply-chain risk. |
 
-### Change
-How Fault Tolerance & Security has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+## "Security Through Obscurity" Doesn't Work
 
-### Trend
-The direction of change in Fault Tolerance & Security over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Hiding the algorithm isn't a substitute for sound design. Strong cryptography is **public** — its security depends on the key, not the secrecy of the method.
       `
     },
     {
-      id: 'cspfault5-input',
+      id: "cspfts5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Fault Tolerance & Security that have remained stable over time?
+1) A model that does NOT trust any network and verifies every request is called _______ trust.
 
-2) What concept describes how Fault Tolerance & Security has transformed due to new forces and conditions?
+2) An attack on a popular library to compromise its many downstream users is a _______-chain attack.
 
-3) Name the term for the direction of change in Fault Tolerance & Security over time.
-
-Use the exact term from this part.
+3) Cryptography designed to resist future quantum-computer attacks is called _______-quantum.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Fault Tolerance & Security that have remained stable over time), Change (How Fault Tolerance & Security has transformed due to new forces and conditions), and Trend (The direction of change in Fault Tolerance & Security over time).'
+        correctAnswers: ["zero", "supply", "post"],
+        hint1: "Trust nothing.",
+        hint2: "Dependency-chain.",
+        hint3: "After-quantum.",
+        explanation: "Zero trust / supply chain / post-quantum."
       }
     },
     {
-      id: 'cspfault5-dropdown',
+      id: "cspfts5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Fault Tolerance & Security that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "\"Security through obscurity\" alone ___",
+            options: ["is widely considered insufficient — open-design + strong keys is preferred", "is the strongest defense", "replaces TLS", "eliminates phishing"]
           },
           {
-            label: 'How Fault Tolerance & Security has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Ransomware's greatest defense is ___",
+            options: ["regular tested backups + network segmentation + a plan", "a single antivirus tool", "TLS only", "compression"]
           },
           {
-            label: 'The direction of change in Fault Tolerance & Security over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "AI-assisted phishing is harder to detect because ___",
+            options: ["it produces grammatically clean, personalized messages at scale", "it slows down emails", "it removes encryption", "it shrinks attachments"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Fault Tolerance & Security that have remained stable over time. Change — How Fault Tolerance & Security has transformed due to new forces and conditions. Trend — The direction of change in Fault Tolerance & Security over time.'
+        correctAnswers: ["is widely considered insufficient — open-design + strong keys is preferred", "regular tested backups + network segmentation + a plan", "it produces grammatically clean, personalized messages at scale"],
+        hint1: "Open + strong > obscure.",
+        hint2: "Recoverability.",
+        hint3: "Quality boost.",
+        explanation: "Open design + strong keys; backups + segmentation; AI-quality phishing."
       }
     },
     {
-      id: 'cspfault5-strategy',
+      id: "cspfts5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Security Evolution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Fault Tolerance & Security.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Modern attackers exploit supply chain, not always users directly.
+- Zero trust is the dominant new architecture.
+- AI changes the threat landscape (phishing quality up).
       `
     },
     {
-      id: 'cspfault5-applied',
+      id: "cspfts5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Fault Tolerance & Security has changed in the last 50 years. A strong answer would:',
+            question: "A company's build pipeline is compromised — every customer download contains malware. The most accurate framing is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "phishing of individual customers via emails sent from the compromised build server.",
+              "a supply-chain attack: a trusted artifact source was compromised, multiplying impact.",
+              "a compression error in which the build output happened to corrupt some downloads.",
+              "a transport-layer-security misconfiguration on the customer-facing download server."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Build pipeline compromise = canonical supply-chain attack."
           },
           {
-            question: 'A trend in Fault Tolerance & Security shows acceleration in recent decades. The most likely explanation is:',
+            question: "A school is hit by ransomware. The single most useful preparation BEFORE the attack would have been ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "no preparation — ransomware response is purely reactive once the attack begins.",
+              "tested offline backups, network segmentation, and a written incident-response plan.",
+              "transport-layer security on every external link the school operates with the internet.",
+              "aggressive compression of the school's data so the encrypted blobs would be smaller."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Backups + segmentation + plan = ransomware resilience."
           }
         ]
       }
     }
   ]
-}
+};

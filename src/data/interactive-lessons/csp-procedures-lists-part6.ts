@@ -1,175 +1,180 @@
 export const cspProceduresListsPart6Data = {
-  topicSlug: 'csp-procedures-lists',
+  topicSlug: "csp-procedures-lists",
   sections: [
     {
-      id: 'cspproce6-intro',
+      id: "csppl6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Procedures & Lists
+# 📋 Procedures & Lists
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Procedures & Lists concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Procedures & Lists |
-| **Argumentation** | Making evidence-based claims about Procedures & Lists |
-| **Spatial reasoning** | Using geographic thinking to analyze Procedures & Lists |
+## Procedures & Lists Workshop
       `
     },
     {
-      id: 'cspproce6-quiz1',
+      id: "csppl6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Procedures & Lists, the first step is:',
+            question: "In **PROCEDURE add(a, b) RETURN a + b**, calling **add(2, 3)** returns ___",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Procedures & Lists requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "2",
+              "5",
+              "23",
+              "undefined"
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "Substitute a=2, b=3 → 5."
+          },
+          {
+            question: "**APPEND(list, x)** then **LENGTH(list)** vs original LENGTH ___",
+            options: [
+              "decreases by 1.",
+              "increases by 1.",
+              "stays the same.",
+              "is undefined."
+            ],
+            correctAnswer: 1,
+            explanation: "APPEND adds one element."
           }
         ]
       }
     },
     {
-      id: 'cspproce6-content',
+      id: "csppl6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: Build A "Top K" Procedure
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Procedures & Lists. Understanding this concept is essential for mastering Procedures & Lists in AP CS Principles.
+    PROCEDURE topK(scores, k)
+      sorted ← SORT(scores, descending)
+      result ← []
+      FOR i FROM 1 TO k:
+        APPEND(result, sorted[i])
+      RETURN result
 
-### Argumentation
-Making evidence-based claims about Procedures & Lists. This builds on the previous concept and connects to broader themes in the course.
+Now any caller can ask for the top 3, top 10, etc.
 
-### Spatial reasoning
-Using geographic thinking to analyze Procedures & Lists. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Worked: Compose Map + Filter + Reduce
+
+Sum the squares of even numbers in **nums**:
+
+    total ← 0
+    FOR EACH n IN nums:
+      IF n MOD 2 = 0 THEN
+        total ← total + n * n
+
+Conceptually: filter (even) → map (square) → reduce (sum).
+
+## Worked: 2D Sum
+
+    PROCEDURE gridSum(grid)
+      total ← 0
+      FOR EACH row IN grid:
+        FOR EACH cell IN row:
+          total ← total + cell
+      RETURN total
       `
     },
     {
-      id: 'cspproce6-input',
+      id: "csppl6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Procedures & Lists?
+1) A "top K" procedure usually first _______ the list, then takes the first k elements.
 
-2) What concept describes making evidence-based claims about Procedures & Lists?
+2) Filter then map then reduce is a common functional _______.
 
-3) Name the term for using geographic thinking to analyze Procedures & Lists.
-
-Use the exact term from this part.
+3) Touching every cell in a 2D list requires _______ loops.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Procedures & Lists), Argumentation (Making evidence-based claims about Procedures & Lists), and Spatial reasoning (Using geographic thinking to analyze Procedures & Lists).'
+        correctAnswers: ["sorts", "pipeline", "nested"],
+        hint1: "Order first.",
+        hint2: "Composition.",
+        hint3: "One inside another.",
+        explanation: "Sort → take. Pipeline of patterns. Nested loops for 2D."
       }
     },
     {
-      id: 'cspproce6-dropdown',
+      id: "csppl6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Procedures & Lists is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A procedure that takes a list and returns its sum is most accurately a ___",
+            options: ["reduce-pattern procedure", "filter-pattern procedure", "map-pattern procedure", "sort-pattern procedure"]
           },
           {
-            label: 'Making evidence-based claims about Procedures & Lists describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "A procedure that takes a list and returns a new list of squared values is a ___",
+            options: ["map-pattern procedure", "reduce-pattern procedure", "filter-pattern procedure", "sort-pattern procedure"]
           },
           {
-            label: 'Using geographic thinking to analyze Procedures & Lists is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "A procedure that takes a list and returns only positive numbers is a ___",
+            options: ["filter-pattern procedure", "map-pattern procedure", "reduce-pattern procedure", "sort-pattern procedure"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Procedures & Lists. Argumentation — Making evidence-based claims about Procedures & Lists. Spatial reasoning — Using geographic thinking to analyze Procedures & Lists.'
+        correctAnswers: ["reduce-pattern procedure", "map-pattern procedure", "filter-pattern procedure"],
+        hint1: "Roll up.",
+        hint2: "Transform each.",
+        hint3: "Subset.",
+        explanation: "Sum = reduce. Squaring each = map. Positives only = filter."
       }
     },
     {
-      id: 'cspproce6-strategy',
+      id: "csppl6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Procedures & Lists.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- Recognize map / filter / reduce shape from the loop body.
+- Top-K = sort + take.
+- 2D traversal = nested loops.
       `
     },
     {
-      id: 'cspproce6-applied',
+      id: "csppl6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Procedures & Lists and asked to identify a trend. You should:',
+            question: "A program processes a 1000×1000 grid. A nested loop runs how many iterations?",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "2,000",
+              "1,000,000",
+              "1000",
+              "0"
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "1000 × 1000 = 1,000,000 iterations."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Procedures & Lists. The best approach is:',
+            question: "A team needs the average of the top 10 scores in a list of 1,000. The most reasonable approach is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "no procedure — just inline the sort, slice, and average code at the call site directly.",
+              "topTen ← topK(scores, 10); average ← AVG(topTen) — compose existing procedures.",
+              "compress the list of 1,000 scores first and then average the compressed bytes directly.",
+              "encrypt the list before averaging so the top-K values cannot be observed by other code."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "Compose existing procedures."
           }
         ]
       }
     }
   ]
-}
+};

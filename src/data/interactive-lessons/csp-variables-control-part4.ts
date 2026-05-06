@@ -1,175 +1,183 @@
 export const cspVariablesControlPart4Data = {
-  topicSlug: 'csp-variables-control',
+  topicSlug: "csp-variables-control",
   sections: [
     {
-      id: 'cspvaria4-intro',
+      id: "cspvc4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Variables & Control Structures
+# 🔀 Variables & Control Flow
 
 **Part 4 of 7 — Connections & Interactions**
 
-Variables & Control Structures connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Variables & Control Connect Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Variables & Control Structures links to other course topics |
-| **Scale interaction** | How Variables & Control Structures operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Variables & Control Structures can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Variables ↔ Data | Variables hold data values. |
+| Control flow ↔ Algorithms | Algorithms ARE control flow over data. |
+| Variables ↔ Procedures | Local variables vs. global state. |
+| Control ↔ Events | Event-driven code is control flow triggered externally. |
       `
     },
     {
-      id: 'cspvaria4-quiz1',
+      id: "cspvc4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Variables & Control Structures connects to other course topics through:',
+            question: "A variable declared inside a procedure that disappears when the procedure returns is called ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "global — visible to every part of the program throughout its run",
+              "local — visible only inside the procedure during a single call",
+              "public — declared visible to other modules that import the procedure",
+              "random — visible at unpredictable points in the program's execution"
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Local variables exist only during the procedure call."
           },
           {
-            question: 'A feedback loop in Variables & Control Structures means:',
+            question: "A button-click handler that updates a counter variable demonstrates ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "only sequencing of statements that all run once on program startup.",
+              "event-driven control flow modifying program state in response to a click.",
+              "unpredictable random behavior unrelated to anything the user does.",
+              "compression of the user's click into a smaller representation in memory."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Events drive control; handlers modify shared state."
           }
         ]
       }
     },
     {
-      id: 'cspvaria4-content',
+      id: "cspvc4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Scope Of A Variable
 
-### Interconnection
-How Variables & Control Structures links to other course topics. Understanding this concept is essential for mastering Variables & Control Structures in AP CS Principles.
+**Scope** = the part of the program where a variable name is visible.
 
-### Scale interaction
-How Variables & Control Structures operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Scope | Lifetime |
+|-------|---------|
+| **Local** | Inside a procedure call only. |
+| **Global** | Whole program; persists. |
+| **Block** | Inside an IF / loop block (some languages). |
 
-### Feedback loop
-How outcomes of Variables & Control Structures can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Why scope matters: tightly scoped variables prevent unrelated code from accidentally reading or modifying them.
+
+## Mutability
+
+Some variables can be reassigned (mutable); some cannot (immutable / constant).
+
+| Style | Example |
+|-------|---------|
+| Mutable | counter ← counter + 1 |
+| Constant | PI ← 3.14159 (never reassigned) |
+
+Constants make intent clear and prevent accidental change.
+
+## Side Effects
+
+A side effect = a change to state outside the local scope (writing a file, modifying a global, printing). Functions with no side effects are easier to test and reason about.
       `
     },
     {
-      id: 'cspvaria4-input',
+      id: "cspvc4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Variables & Control Structures links to other course topics?
+1) The part of a program where a variable name is visible is called its _______.
 
-2) What concept describes how Variables & Control Structures operates differently at local, national, and global scales?
+2) A variable that exists only inside a procedure is called _______.
 
-3) Name the term for how outcomes of Variables & Control Structures can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) A change to state outside the local function is called a _______ effect.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Variables & Control Structures links to other course topics), Scale interaction (How Variables & Control Structures operates differently at local, national, and global scales), and Feedback loop (How outcomes of Variables & Control Structures can reinforce or modify the original process).'
+        correctAnswers: ["scope", "local", "side"],
+        hint1: "Visibility.",
+        hint2: "Procedure-bound.",
+        hint3: "Spillover.",
+        explanation: "Scope, local variables, side effects."
       }
     },
     {
-      id: 'cspvaria4-dropdown',
+      id: "cspvc4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Variables & Control Structures links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A constant should be used when ___",
+            options: ["a value should never change after initialization", "every value can be reassigned", "the value will be deleted", "the value is random"]
           },
           {
-            label: 'How Variables & Control Structures operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Tightly scoped local variables ___",
+            options: ["reduce risk of accidental modification by unrelated code", "increase memory use forever", "cannot be tested", "replace global variables completely"]
           },
           {
-            label: 'How outcomes of Variables & Control Structures can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A pure function (no side effects) is ___",
+            options: ["easier to reason about and test in isolation", "always slower", "always faster", "always compressed"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Variables & Control Structures links to other course topics. Scale interaction — How Variables & Control Structures operates differently at local, national, and global scales. Feedback loop — How outcomes of Variables & Control Structures can reinforce or modify the original process.'
+        correctAnswers: ["a value should never change after initialization", "reduce risk of accidental modification by unrelated code", "easier to reason about and test in isolation"],
+        hint1: "Immutability.",
+        hint2: "Encapsulation.",
+        hint3: "Predictability.",
+        explanation: "Constants for invariants. Local scope reduces accidental coupling. Pure functions are testable."
       }
     },
     {
-      id: 'cspvaria4-strategy',
+      id: "cspvc4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Variables/Control
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Variables & Control Structures.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "Why use a local variable?" → encapsulation; doesn't pollute global state.
+- "Why a constant?" → intent + safety.
+- Event-driven = control flow triggered externally.
       `
     },
     {
-      id: 'cspvaria4-applied',
+      id: "cspvc4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Variables & Control Structures and other units earns higher scores because:',
+            question: "A function is supposed to compute the average of a list, but it also writes to a global log every time it runs. From a CSP design standpoint, this ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "is fine because logging is a useful behavior to keep alongside the computation.",
+              "introduces a side effect that makes the function harder to test and reuse.",
+              "compresses the data so the average can be computed in less memory than before.",
+              "encrypts the data so the global log entries cannot be read by other procedures."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Side effects complicate testing and reuse."
           },
           {
-            question: 'If Variables & Control Structures produces outcomes that further intensify the original process, this is:',
+            question: "Two procedures both modify a global counter without coordination. The most likely problem is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "no problem — simultaneous updates to the same global variable always interleave safely.",
+              "unintended interactions: one procedure's changes affect the other unpredictably.",
+              "compression artifacts in the global counter making it shrink between updates.",
+              "transport-layer issues that prevent the global counter from updating reliably."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Shared global state = source of bugs."
           }
         ]
       }
     }
   ]
-}
+};

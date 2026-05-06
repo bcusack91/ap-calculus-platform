@@ -1,175 +1,173 @@
 export const cspCreativeDevelopmentPart6Data = {
-  topicSlug: 'csp-creative-development',
+  topicSlug: "csp-creative-development",
   sections: [
     {
-      id: 'cspcreat6-intro',
+      id: "cspcd6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 🎨 Creative Development
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Creative Development concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+## Creative Development Workshop
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Creative Development |
-| **Argumentation** | Making evidence-based claims about Creative Development |
-| **Spatial reasoning** | Using geographic thinking to analyze Creative Development |
+Apply dev-process vocabulary to AP-style scenarios.
       `
     },
     {
-      id: 'cspcreat6-quiz1',
+      id: "cspcd6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Creative Development, the first step is:',
+            question: "After two weeks of coding, a team realizes their understanding of the user's problem was wrong. What should they do?",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Creative Development requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "Ship the current code anyway and let users adapt to it.",
+              "Re-investigate the problem with users, then redesign or refactor.",
+              "Continue building the original plan since the team has already started.",
+              "Replace the whole project with a different but vaguely similar one."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "Iterative dev welcomes returning to investigate."
+          },
+          {
+            question: "A program with a missing semicolon ___",
+            options: [
+              "runs but consistently produces a slightly wrong result.",
+              "fails to parse or compile — a syntax error caught before runtime.",
+              "crashes intermittently depending on the input it receives.",
+              "runs faster because the parser has fewer characters to process."
+            ],
+            correctAnswer: 1,
+            explanation: "Syntax errors are caught at parse time."
           }
         ]
       }
     },
     {
-      id: 'cspcreat6-content',
+      id: "cspcd6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked Scenario: Bug Triage
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Creative Development. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+1. **Reproduce** consistently.
+2. **Isolate** the cause.
+3. **Write a failing test**.
+4. **Fix** the code.
+5. **Re-run tests**.
+6. **Document** the change.
 
-### Argumentation
-Making evidence-based claims about Creative Development. This builds on the previous concept and connects to broader themes in the course.
+This pattern (reproduce → isolate → test → fix → verify → document) applies to almost every defect.
 
-### Spatial reasoning
-Using geographic thinking to analyze Creative Development. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Worked Scenario: Feature Decomposition
+
+"Share a study set with a friend" decomposes into:
+
+- **generate a shareable link**.
+- **resolve a token** back to the set.
+- **share button + dialog**.
+- **permission check** (viewer vs co-editor).
+
+Each piece can be built and tested independently.
       `
     },
     {
-      id: 'cspcreat6-input',
+      id: "cspcd6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Creative Development?
+1) The first step in fixing a bug is to _______ it (consistently make it happen).
 
-2) What concept describes making evidence-based claims about Creative Development?
+2) After fixing a bug, you should re-run the _______ to ensure no regression.
 
-3) Name the term for using geographic thinking to analyze Creative Development.
-
-Use the exact term from this part.
+3) Splitting "share a study set" into smaller functions is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Creative Development), Argumentation (Making evidence-based claims about Creative Development), and Spatial reasoning (Using geographic thinking to analyze Creative Development).'
+        correctAnswers: ["reproduce", "tests", "decomposition"],
+        hint1: "Make it happen reliably.",
+        hint2: "Automated checks.",
+        hint3: "Divide-and-conquer.",
+        explanation: "Reproduce, then isolate. Tests catch regressions. Decomposition splits big features."
       }
     },
     {
-      id: 'cspcreat6-dropdown',
+      id: "cspcd6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Creative Development is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A test that fails because of the bug, then passes after the fix, is called a ___",
+            options: ["regression test", "syntax test", "compression test", "speed test"]
           },
           {
-            label: 'Making evidence-based claims about Creative Development describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "When estimating iteration length, the trade-off is between feedback frequency and ___",
+            options: ["ceremony / overhead", "file size", "compression ratio", "TCP throughput"]
           },
           {
-            label: 'Using geographic thinking to analyze Creative Development is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "Documenting the fix in a commit message benefits ___",
+            options: ["anyone debugging similar issues in the future", "only the original author", "only the customer", "only the compiler"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Creative Development. Argumentation — Making evidence-based claims about Creative Development. Spatial reasoning — Using geographic thinking to analyze Creative Development.'
+        correctAnswers: ["regression test", "ceremony / overhead", "anyone debugging similar issues in the future"],
+        hint1: "Prevents recurrence.",
+        hint2: "Cycle cost.",
+        hint3: "Future debuggers.",
+        explanation: "Regression tests guard against recurrence. Iteration length balances feedback vs overhead. Commit messages aid debuggers."
       }
     },
     {
-      id: 'cspcreat6-strategy',
+      id: "cspcd6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop Style
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Creative Development.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- "What should the team do next?" answers usually involve **investigate, test, refine, document** — never "ship blindly" or "quit".
+- "Decompose this feature" → list 3-5 named procedures.
+- "How can we tell if our fix worked?" → automated tests + reproduce the original case.
       `
     },
     {
-      id: 'cspcreat6-applied',
+      id: "cspcd6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Creative Development and asked to identify a trend. You should:',
+            question: "A team plans a single 6-month \"big bang\" release with no intermediate testing. The most CSP-aligned critique is ___",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "a six-month release window is too short to fit useful work.",
+              "long cycles with no intermediate feedback hide problems until they are expensive to fix.",
+              "the team just needs to write more in-line code comments to stay on track.",
+              "big single-shot releases are the safest way to ship complex software."
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "Long feedback loops hide problems."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Creative Development. The best approach is:',
+            question: "A function consistently fails on input value 0 only. The next best step is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "ignore the failing case since users rarely pass exactly 0.",
+              "add a focused test for 0 and adjacent edge cases like -1 and 1, then fix the function.",
+              "rewrite the entire program in a different language to bypass the bug.",
+              "wrap every call to the function in a try/except that silently swallows errors."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "Pin the failure with a test, then fix."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,193 @@
 export const cspBinaryDataPart3Data = {
-  topicSlug: 'csp-binary-data',
+  topicSlug: "csp-binary-data",
   sections: [
     {
-      id: 'cspbinar3-intro',
+      id: "cspbd3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Binary & Data Representation
+# 🔢 Binary & Data Representation
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Binary & Data Representation. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Patterns of Encoding
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Binary & Data Representation |
-| **Case study** | A specific real-world example that illustrates Binary & Data Representation |
-| **Comparison** | Analyzing similarities and differences across examples of Binary & Data Representation |
+Computers use **conventions** to encode data types. Understanding the convention is half the work.
+
+| Convention | Pattern |
+|-----------|---------|
+| **Unsigned integer** | Plain place-value binary. |
+| **Signed integer** | Reserves one bit for sign (e.g., two's complement). |
+| **Text (ASCII)** | 7-bit code; "A" = 65, "a" = 97. |
+| **Text (Unicode)** | Variable-length; supports every script. |
+| **RGB color** | Three 8-bit channels: 0–255 red, green, blue. |
+| **Sample (audio)** | Integer amplitude, repeated at sample rate. |
       `
     },
     {
-      id: 'cspbinar3-quiz1',
+      id: "cspbd3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "In ASCII the letter \"A\" is 65. The letter \"B\" is ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "64",
+              "65",
+              "66",
+              "97"
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 2,
+            explanation: "ASCII assigns consecutive code points to letters in order."
           },
           {
-            question: 'Comparing examples of Binary & Data Representation across regions helps:',
+            question: "A pure red pixel in 24-bit RGB has the byte values ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "(0, 0, 0)",
+              "(255, 0, 0)",
+              "(255, 255, 0)",
+              "(255, 255, 255)"
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Maximum red, no green or blue."
           }
         ]
       }
     },
     {
-      id: 'cspbinar3-content',
+      id: "cspbd3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Worked Example: Decoding Text
 
-### Spatial pattern
-The geographic distribution related to Binary & Data Representation. Understanding this concept is essential for mastering Binary & Data Representation in AP CS Principles.
+Bytes: 72, 73, 33
 
-### Case study
-A specific real-world example that illustrates Binary & Data Representation. This builds on the previous concept and connects to broader themes in the course.
+- 72 = "H"
+- 73 = "I"
+- 33 = "!"
 
-### Comparison
-Analyzing similarities and differences across examples of Binary & Data Representation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Output: **HI!** Since text is just numbers under an agreed mapping, *any* file is bytes — the difference is only how the program *interprets* them.
+
+## Worked Example: Building a Color
+
+A pixel is three bytes. To make a strong purple:
+
+| Channel | Value (0–255) |
+|---------|---------------|
+| R | 128 |
+| G | 0 |
+| B | 128 |
+
+In hex (the form you see in CSS): **#800080**. Each pair of hex digits = one byte (0x80 = 128).
+
+## Worked Example: Interpreting Audio
+
+A WAV-style audio file stores **samples** of air-pressure amplitude:
+
+- **Sample rate**: how many samples per second (e.g., 44,100 Hz for CD quality).
+- **Bit depth**: bits per sample (e.g., 16 bits → 65,536 possible amplitudes).
+- **Channels**: 1 (mono) or 2 (stereo).
+
+A 60-second 16-bit stereo CD-quality clip = 60 × 44,100 × 2 (bytes/sample) × 2 (channels) = **10.6 MB**.
       `
     },
     {
-      id: 'cspbinar3-input',
+      id: "cspbd3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Binary & Data Representation?
+1) In ASCII the letters A and a have code points 65 and _______.
 
-2) What concept describes a specific real-world example that illustrates Binary & Data Representation?
+2) A 24-bit RGB pixel uses _______ bytes.
 
-3) Name the term for analyzing similarities and differences across examples of Binary & Data Representation.
-
-Use the exact term from this part.
+3) A digital audio file is built from repeated _______ of amplitude.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Binary & Data Representation), Case study (A specific real-world example that illustrates Binary & Data Representation), and Comparison (Analyzing similarities and differences across examples of Binary & Data Representation).'
+        correctAnswers: ["97", "3", "samples"],
+        hint1: "Lowercase is 32 above uppercase.",
+        hint2: "One per channel.",
+        hint3: "Discrete time slices.",
+        explanation: "ASCII a = 97 (A + 32). 24 bits = 3 bytes. Audio = sequence of amplitude samples."
       }
     },
     {
-      id: 'cspbinar3-dropdown',
+      id: "cspbd3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Binary & Data Representation is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A pixel with R=255, G=255, B=255 appears ___",
+            options: ["black", "white", "red", "blue"]
           },
           {
-            label: 'A specific real-world example that illustrates Binary & Data Representation describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A pixel with R=0, G=0, B=0 appears ___",
+            options: ["white", "gray", "black", "transparent"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Binary & Data Representation is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "Doubling the sample rate of a digital audio file ___ the file size",
+            options: ["halves", "leaves unchanged", "doubles", "quadruples"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Binary & Data Representation. Case study — A specific real-world example that illustrates Binary & Data Representation. Comparison — Analyzing similarities and differences across examples of Binary & Data Representation.'
+        correctAnswers: ["white", "black", "doubles"],
+        hint1: "All channels max.",
+        hint2: "All channels off.",
+        hint3: "Twice as many samples per second.",
+        explanation: "255 across all channels is white; 0 across all is black. Doubling the sample rate doubles the bytes-per-second."
       }
     },
     {
-      id: 'cspbinar3-strategy',
+      id: "cspbd3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Encoding Conventions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Binary & Data Representation.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- "How many bytes for a pixel?" → 3 bytes for 24-bit RGB; 4 bytes if there's an alpha channel.
+- "How many bytes per second of audio?" → sampleRate × bytesPerSample × channels.
+- ASCII letter math: subtract 65 to get the alphabetical position of an uppercase letter.
+- Hex pairs = bytes. #FF0000 = 255-0-0 = bright red.
       `
     },
     {
-      id: 'cspbinar3-applied',
+      id: "cspbd3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Binary & Data Representation. The strongest response would:',
+            question: "A 1024 × 768 image is stored uncompressed as 24-bit RGB. Approximate file size?",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "100 KB",
+              "786 KB",
+              "2.4 MB",
+              "24 MB"
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 2,
+            explanation: "1024 × 768 × 3 bytes ≈ 2.4 MB."
           },
           {
-            question: 'A pattern observed in Binary & Data Representation is consistent across multiple world regions. This suggests:',
+            question: "A 5-minute song is stored at 44,100 Hz, 16-bit, stereo (uncompressed). Closest size?",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "5 MB",
+              "25 MB",
+              "50 MB",
+              "500 MB"
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 2,
+            explanation: "300 s × 44,100 × 2 × 2 ≈ 53 MB."
           }
         ]
       }
     }
   ]
-}
+};

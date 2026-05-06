@@ -1,175 +1,196 @@
 export const cspAlgorithmsProgrammingPart3Data = {
-  topicSlug: 'csp-algorithms-programming',
+  topicSlug: "csp-algorithms-programming",
   sections: [
     {
-      id: 'cspalgor3-intro',
+      id: "cspap3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms & Programming
+# 💻 Algorithms & Programming
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Algorithms & Programming. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Programming Patterns You Will See Again and Again
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Algorithms & Programming |
-| **Case study** | A specific real-world example that illustrates Algorithms & Programming |
-| **Comparison** | Analyzing similarities and differences across examples of Algorithms & Programming |
+Once you can translate algorithms into programs, you'll notice the same shapes recur. The AP exam tests these patterns directly.
+
+| Pattern | Purpose |
+|---------|---------|
+| **Guard clause** | Return early on bad input so the main logic stays clean. |
+| **Loop with accumulator** | Build a sum, product, count, or list. |
+| **Helper procedure** | Hide a sub-task behind a name. |
+| **Boolean flag** | Track "did this happen?" across iterations. |
       `
     },
     {
-      id: 'cspalgor3-quiz1',
+      id: "cspap3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A procedure should return 0 immediately if its input list is empty. Which structure is best?",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "A guard clause: IF (LENGTH(list) = 0) { RETURN 0 } at the very top of the procedure body.",
+              "A nested loop placed at the bottom of the procedure that handles the empty case after the work.",
+              "Skip the empty-list check entirely and let the main loop body crash on the empty input naturally.",
+              "Refuse to handle empty lists in this procedure and require every caller to filter them out first."
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: "Guard clauses near the top reject bad inputs early so the main code can assume valid data."
           },
           {
-            question: 'Comparing examples of Algorithms & Programming across regions helps:',
+            question: "A loop should set a flag found ← TRUE the first time list[i] = target. Which approach guarantees correctness AND avoids unnecessary work?",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "Set found ← TRUE inside the IF and continue iterating through the rest of the list anyway.",
+              "Set found ← TRUE inside the IF and RETURN immediately (or break) once the first match is found.",
+              "Initialize found ← TRUE before the loop even starts and let the loop body verify each element.",
+              "Set found ← list[i] when found, so the variable holds the matching value rather than a Boolean."
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Returning on first match is both correct and efficient (best case O(1))."
           }
         ]
       }
     },
     {
-      id: 'cspalgor3-content',
+      id: "cspap3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Worked Pattern: Boolean Flag
 
-### Spatial pattern
-The geographic distribution related to Algorithms & Programming. Understanding this concept is essential for mastering Algorithms & Programming in AP CS Principles.
+    PROCEDURE allPositive(nums) {
+      FOR EACH n IN nums {
+        IF (n ≤ 0) { RETURN FALSE }
+      }
+      RETURN TRUE
+    }
 
-### Case study
-A specific real-world example that illustrates Algorithms & Programming. This builds on the previous concept and connects to broader themes in the course.
+**Trick:** instead of a Boolean variable, the procedure RETURNs early on the first counter-example. RETURN TRUE at the end runs only when no counter-example was found. This is the cleanest "for-all" pattern.
 
-### Comparison
-Analyzing similarities and differences across examples of Algorithms & Programming. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Worked Pattern: Helper Procedure
+
+A complicated task becomes readable when split:
+
+    PROCEDURE isWeekend(day) {
+      RETURN day = "Sat" OR day = "Sun"
+    }
+    PROCEDURE shouldOpenStore(day, isHoliday) {
+      IF (isHoliday) { RETURN FALSE }
+      RETURN NOT isWeekend(day)
+    }
+
+The shouldOpenStore reader doesn't have to think about what "weekend" means — it's been **abstracted** behind a name.
+
+## Worked Pattern: Accumulator With Filter
+
+    PROCEDURE sumPositive(nums) {
+      total ← 0
+      FOR EACH n IN nums {
+        IF (n > 0) { total ← total + n }
+      }
+      RETURN total
+    }
+
+The IF inside the loop is the **filter**; total is the **accumulator**. Together they implement "sum of positive elements".
       `
     },
     {
-      id: 'cspalgor3-input',
+      id: "cspap3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Algorithms & Programming?
+1) An IF check at the start of a procedure that exits early on bad input is called a _______ clause.
 
-2) What concept describes a specific real-world example that illustrates Algorithms & Programming?
+2) A small named procedure that does one sub-task and is called by other procedures is called a _______.
 
-3) Name the term for analyzing similarities and differences across examples of Algorithms & Programming.
-
-Use the exact term from this part.
+3) A "for-all" check is implemented by RETURNing FALSE on the first _______-example.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Algorithms & Programming), Case study (A specific real-world example that illustrates Algorithms & Programming), and Comparison (Analyzing similarities and differences across examples of Algorithms & Programming).'
+        correctAnswers: ["guard", "helper", "counter"],
+        hint1: "It \"guards\" the main logic.",
+        hint2: "Such procedures abstract details.",
+        hint3: "A single counter-example disproves a universal claim.",
+        explanation: "Guard clauses, helpers, and early-exit on counter-examples are core programming patterns."
       }
     },
     {
-      id: 'cspalgor3-dropdown',
+      id: "cspap3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Algorithms & Programming is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A \"there exists\" check is implemented by RETURNing TRUE on the first ___",
+            options: ["match", "counter-example", "iteration", "parameter"]
           },
           {
-            label: 'A specific real-world example that illustrates Algorithms & Programming describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "When a helper is reused 5 times across a program, the main benefit is ___",
+            options: ["readability and single-point-of-fix", "speed", "memory savings", "shorter file size"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Algorithms & Programming is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "The accumulator pattern initializes the accumulator with the operation's ___ value",
+            options: ["identity", "maximum", "random", "last"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Algorithms & Programming. Case study — A specific real-world example that illustrates Algorithms & Programming. Comparison — Analyzing similarities and differences across examples of Algorithms & Programming.'
+        correctAnswers: ["match", "readability and single-point-of-fix", "identity"],
+        hint1: "One match proves existence.",
+        hint2: "Helpers centralize behavior.",
+        hint3: "Adding 0, multiplying by 1.",
+        explanation: "Existence: first match. Helpers create a single fix-point. Accumulators start at the operation identity (0 for sum, 1 for product, [] for list)."
       }
     },
     {
-      id: 'cspalgor3-strategy',
+      id: "cspap3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Recognizing Patterns
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Algorithms & Programming.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- "Returns TRUE if every X is Y" → for-all → early RETURN FALSE on counter-example.
+- "Returns TRUE if some X is Y" → exists → early RETURN TRUE on first match.
+- "Returns the count / sum / product / list of Y" → accumulator with appropriate identity.
+- Spotting the pattern in the first 5 seconds saves all the time you'd waste line-tracing a 20-line procedure.
       `
     },
     {
-      id: 'cspalgor3-applied',
+      id: "cspap3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Algorithms & Programming. The strongest response would:',
+            question: "A procedure should return TRUE if any element of list is negative. The student writes:\n\nresult ← FALSE\nFOR EACH x IN list { IF (x < 0) { result ← TRUE } ELSE { result ← FALSE } }\nRETURN result\n\nWhat is the bug?",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "Nothing is wrong.",
+              "The ELSE branch resets result to FALSE, so only the LAST element decides the answer.",
+              "result should be a list, not a Boolean.",
+              "FOR EACH cannot be used on a list."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "The ELSE clobbers prior matches. Either remove the ELSE, or RETURN TRUE on first match."
           },
           {
-            question: 'A pattern observed in Algorithms & Programming is consistent across multiple world regions. This suggests:',
+            question: "A team has six places in their codebase that compute \"is this a weekend day?\". Each implements the check inline. They later need to add Friday to the weekend (cultural calendar). Which design choice would have prevented the multi-place fix?",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "Inlining the check is fine; just edit all six places.",
+              "Extracting an isWeekend(day) helper procedure so all callers update from one fix.",
+              "Renaming the variables.",
+              "Adding more comments to each call site."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "Helper procedures create a single point of change — the central abstraction win."
           }
         ]
       }
     }
   ]
-}
+};

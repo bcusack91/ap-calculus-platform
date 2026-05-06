@@ -1,175 +1,184 @@
 export const cspSafeComputingPart3Data = {
-  topicSlug: 'csp-safe-computing',
+  topicSlug: "csp-safe-computing",
   sections: [
     {
-      id: 'cspsafec3-intro',
+      id: "cspsc3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔐 Safe Computing
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Safe Computing Practices. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Patterns Of Personal Data Risk
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Safe Computing Practices |
-| **Case study** | A specific real-world example that illustrates Safe Computing Practices |
-| **Comparison** | Analyzing similarities and differences across examples of Safe Computing Practices |
+| Pattern | Why it's risky |
+|---------|----------------|
+| **Oversharing** | Public posts reveal patterns / locations. |
+| **Old accounts** | Forgotten accounts may be breached. |
+| **Default passwords** | IoT devices shipped with "admin/admin". |
+| **Public Wi-Fi without HTTPS** | Eavesdropping risk. |
+| **Browser auto-fill on shared devices** | Credentials leak to whoever uses next. |
       `
     },
     {
-      id: 'cspsafec3-quiz1',
+      id: "cspsc3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A new IoT camera is installed with default credentials \"admin/admin\". The most direct risk is ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "no measurable risk, since attackers cannot easily find new IoT devices on the internet.",
+              "attackers can access the camera (and possibly the home network) using widely known defaults.",
+              "the camera's built-in compression algorithm becomes less efficient than recently shipped models.",
+              "the camera's transport-layer security handshake slows down measurably under default credentials."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Default creds are scanned and exploited at scale."
           },
           {
-            question: 'Comparing examples of Safe Computing Practices across regions helps:',
+            question: "Posting daily location-tagged stories during a vacation publicly ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "has no measurable impact on the safety of the home left empty during the vacation period.",
+              "tells anyone watching the public posts that your home is currently unoccupied for days.",
+              "compresses your stored vacation photos to a smaller size than untagged photos would be.",
+              "speeds up your residential internet connection slightly while you are away from home."
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Location patterns enable physical-world risks."
           }
         ]
       }
     },
     {
-      id: 'cspsafec3-content',
+      id: "cspsc3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Privacy Settings Are Defaults Worth Reviewing
 
-### Spatial pattern
-The geographic distribution related to Safe Computing Practices. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+Defaults often favor sharing. Periodically review:
 
-### Case study
-A specific real-world example that illustrates Safe Computing Practices. This builds on the previous concept and connects to broader themes in the course.
+- Who can see your posts / location / photos.
+- What apps have what permissions.
+- What third-party logins are connected.
+- Which devices are signed in to your accounts.
 
-### Comparison
-Analyzing similarities and differences across examples of Safe Computing Practices. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Public Wi-Fi Caveats
+
+Modern HTTPS protects most traffic on public Wi-Fi. But:
+
+- Some apps still use unencrypted endpoints.
+- A malicious access point can present invalid certificates (don't bypass).
+- Using a trusted VPN adds an extra layer for higher-risk activities.
+
+## Account-Takeover Recovery Plan
+
+| Step | Why |
+|------|-----|
+| Sign out everywhere | Force attackers off if you re-secure. |
+| Reset password + MFA | Lock attackers out. |
+| Check connected apps | Revoke anything suspicious. |
+| Check recovery email + phone | Attackers often change these. |
+| Notify contacts if needed | They may receive impostor messages. |
       `
     },
     {
-      id: 'cspsafec3-input',
+      id: "cspsc3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Safe Computing Practices?
+1) A device shipped with "admin/admin" credentials uses a _______ password.
 
-2) What concept describes a specific real-world example that illustrates Safe Computing Practices?
+2) Public Wi-Fi is much safer when sites use _______ rather than HTTP.
 
-3) Name the term for analyzing similarities and differences across examples of Safe Computing Practices.
-
-Use the exact term from this part.
+3) After an account compromise, you should also check connected apps and the recovery _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Safe Computing Practices), Case study (A specific real-world example that illustrates Safe Computing Practices), and Comparison (Analyzing similarities and differences across examples of Safe Computing Practices).'
+        correctAnswers: ["default", "HTTPS", "email"],
+        hint1: "Out of the box.",
+        hint2: "Encrypted web.",
+        hint3: "Recovery channel.",
+        explanation: "Default passwords, HTTPS, recovery email."
       }
     },
     {
-      id: 'cspsafec3-dropdown',
+      id: "cspsc3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Safe Computing Practices is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "Default credentials should be ___",
+            options: ["changed immediately on setup", "left as-is", "shared with neighbors", "compressed"]
           },
           {
-            label: 'A specific real-world example that illustrates Safe Computing Practices describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A browser warning \"your connection is not private\" should ___",
+            options: ["be taken seriously, especially on public Wi-Fi", "always be ignored", "be compressed", "be encrypted further"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Safe Computing Practices is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "After an account takeover, you should also ___",
+            options: ["check (and reset) recovery email, phone, and connected apps", "tell no one and continue normally", "compress logs", "switch to UDP"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Safe Computing Practices. Case study — A specific real-world example that illustrates Safe Computing Practices. Comparison — Analyzing similarities and differences across examples of Safe Computing Practices.'
+        correctAnswers: ["changed immediately on setup", "be taken seriously, especially on public Wi-Fi", "check (and reset) recovery email, phone, and connected apps"],
+        hint1: "Setup hardening.",
+        hint2: "TLS warnings.",
+        hint3: "Recovery surface.",
+        explanation: "Change defaults; respect TLS warnings; reset recovery surface after compromise."
       }
     },
     {
-      id: 'cspsafec3-strategy',
+      id: "cspsc3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Personal Data Risks
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Safe Computing Practices.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Defaults favor sharing; review privacy settings.
+- Default device passwords are widely known and scanned.
+- Don't bypass TLS warnings.
       `
     },
     {
-      id: 'cspsafec3-applied',
+      id: "cspsc3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Safe Computing Practices. The strongest response would:',
+            question: "A friend's social account starts sending suspicious links to everyone. The most CSP-aligned response from the friend is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "ignore the situation entirely and continue using the account normally without any changes.",
+              "sign out everywhere, reset password + MFA, audit recovery email/phone and connected apps.",
+              "reply to the contacts with the requested credentials so the friend can confirm the activity.",
+              "switch to a brand new account immediately with no warning to existing contacts at all."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Standard account-recovery checklist."
           },
           {
-            question: 'A pattern observed in Safe Computing Practices is consistent across multiple world regions. This suggests:',
+            question: "A school deploys 200 IoT thermostats with default passwords. The biggest CSP-aligned concern is ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "no measurable concern, since the thermostats only control room temperatures within the school.",
+              "200 devices easily found and exploited via default-credential scans, possibly pivoting onward.",
+              "each thermostat's built-in compression algorithm becomes slightly less efficient than newer models.",
+              "each thermostat's transport-layer security handshake will slow down by a small amount over time."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "Default creds at scale = mass exploitation surface."
           }
         ]
       }
     }
   ]
-}
+};

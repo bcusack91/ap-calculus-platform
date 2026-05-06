@@ -1,175 +1,172 @@
 export const cspComputingSystemsNetworksPart7Data = {
-  topicSlug: 'csp-computing-systems-networks',
+  topicSlug: "csp-computing-systems-networks",
   sections: [
     {
-      id: 'cspcompu7-intro',
+      id: "cspcsn7-intro",
       type: 'text' as const,
       content: `
 # 🖥️ Computing Systems & Networks
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Computing Systems & Networks for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Computing Systems & Networks |
-| **Common question types** | The most frequent ways Computing Systems & Networks is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Computing Systems & Networks questions effectively |
+## AP Exam Recap — Computing Systems & Networks
       `
     },
     {
-      id: 'cspcompu7-quiz1',
+      id: "cspcsn7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Computing Systems & Networks is:',
+            question: "A \"system\" in CSP is ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "only software.",
+              "a collection of components that interact to provide some function.",
+              "only hardware.",
+              "only networks."
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "System = interacting components."
           },
           {
-            question: 'AP multiple-choice questions about Computing Systems & Networks often test:',
+            question: "A protocol is ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "random behavior.",
+              "an agreed set of rules for how parties communicate.",
+              "a hardware feature only.",
+              "only encryption."
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: "Protocols = agreed rules."
           }
         ]
       }
     },
     {
-      id: 'cspcompu7-content',
+      id: "cspcsn7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Computing Systems & Networks. Understanding this concept is essential for mastering Computing Systems & Networks in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| System | Interacting components. |
+| Network | A system where components communicate. |
+| Bandwidth / throughput / latency | Capacity / actual / delay. |
+| Client-server / P2P | Two architecture models. |
+| Packet switching | Independent packet routing. |
+| TCP / UDP | Reliable / unreliable transport. |
+| DNS | Name → address. |
+| Cloud / edge | Remote / nearby compute. |
+| Digital divide | Unequal connectivity → unequal opportunity. |
 
-### Common question types
-The most frequent ways Computing Systems & Networks is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Computing Systems & Networks questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Confusing bandwidth and latency.
+- Assuming all packets take the same path.
+- Forgetting DNS exists until it breaks.
+- Treating IoT devices as patched.
+- Ignoring connectivity inequality.
       `
     },
     {
-      id: 'cspcompu7-input',
+      id: "cspcsn7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Computing Systems & Networks?
+1) A reliable, in-order transport protocol is _______.
 
-2) What concept describes the most frequent ways Computing Systems & Networks is tested on the AP exam?
+2) Translating example.com to an IP is the job of _______.
 
-3) Name the term for approaches for answering Computing Systems & Networks questions effectively.
-
-Use the exact term from this part.
+3) Unequal access to computing and connectivity is called the digital _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Computing Systems & Networks), Common question types (The most frequent ways Computing Systems & Networks is tested on the AP exam), and Exam strategy (Approaches for answering Computing Systems & Networks questions effectively).'
+        correctAnswers: ["TCP", "DNS", "divide"],
+        hint1: "Reliable transport.",
+        hint2: "Name resolver.",
+        hint3: "Equity gap.",
+        explanation: "TCP / DNS / digital divide."
       }
     },
     {
-      id: 'cspcompu7-dropdown',
+      id: "cspcsn7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Computing Systems & Networks is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "High bandwidth ___",
+            options: ["does NOT guarantee low latency", "always means low latency", "is the same as latency", "eliminates congestion"]
           },
           {
-            label: 'The most frequent ways Computing Systems & Networks is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "A CDN reduces ___",
+            options: ["latency for users far from origin servers", "all server costs to zero", "bandwidth at the origin to zero", "all bugs"]
           },
           {
-            label: 'Approaches for answering Computing Systems & Networks questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "A protocol like HTTP is ___",
+            options: ["an agreed set of rules for client / server communication", "a hardware device", "random data", "a DNS record"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Computing Systems & Networks. Common question types — The most frequent ways Computing Systems & Networks is tested on the AP exam. Exam strategy — Approaches for answering Computing Systems & Networks questions effectively.'
+        correctAnswers: ["does NOT guarantee low latency", "latency for users far from origin servers", "an agreed set of rules for client / server communication"],
+        hint1: "Bandwidth ≠ latency.",
+        hint2: "Edge proximity.",
+        hint3: "Rules of communication.",
+        explanation: "Bandwidth ≠ latency; CDN cuts latency; protocols = rules."
       }
     },
     {
-      id: 'cspcompu7-strategy',
+      id: "cspcsn7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Computing Systems & Networks.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Distinguish bandwidth, throughput, latency.
+- Packet switching, TCP/UDP, DNS, CDNs.
+- Digital divide framing for access questions.
+- Layered systems = abstraction at every layer.
       `
     },
     {
-      id: 'cspcompu7-applied',
+      id: "cspcsn7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Computing Systems & Networks. You should:',
+            question: "A library wants to serve students in a low-bandwidth area with educational videos. The most CSP-aligned strategy is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "stream original-quality 4K video to every student regardless of their connection.",
+              "pre-download or cache lower-resolution lossy versions and serve from a community device.",
+              "serve only fully lossless video files so quality is preserved no matter the bandwidth.",
+              "serve videos with no compression at all and rely on the underlying network capacity."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "Local caching + appropriate bitrate is the standard equity-aware design."
           },
           {
-            question: 'For free-response questions on Computing Systems & Networks, the most common mistake is:',
+            question: "A team builds an API used by partners worldwide. The single most impactful step to reduce global latency is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "add a global CDN or geographically distributed edge points-of-presence.",
+              "switch every API endpoint from TCP to UDP and accept whatever packet loss results.",
+              "remove transport-layer security and serve every API response over plain HTTP.",
+              "serve all responses with lossless compression only and never use lossy formats."
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: "CDNs / edge POPs are the standard latency mitigation for global APIs."
           }
         ]
       }
     }
   ]
-}
+};

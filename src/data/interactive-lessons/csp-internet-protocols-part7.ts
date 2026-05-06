@@ -1,175 +1,177 @@
 export const cspInternetProtocolsPart7Data = {
-  topicSlug: 'csp-internet-protocols',
+  topicSlug: "csp-internet-protocols",
   sections: [
     {
-      id: 'cspinter7-intro',
+      id: "cspip7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ The Internet & Protocols
+# 🌐 The Internet & Protocols
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of The Internet & Protocols for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Internet & Protocols
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for The Internet & Protocols |
-| **Common question types** | The most frequent ways The Internet & Protocols is tested on the AP exam |
-| **Exam strategy** | Approaches for answering The Internet & Protocols questions effectively |
+The protocol facts and architectural ideas most likely to appear on the exam.
       `
     },
     {
-      id: 'cspinter7-quiz1',
+      id: "cspip7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for The Internet & Protocols is:',
+            question: "The Internet uses ___-switched delivery, not circuit-switched.",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "packet",
+              "circuit",
+              "wave",
+              "message"
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: "Packet switching is foundational to the Internet (vs. dedicated circuits in old phone systems)."
           },
           {
-            question: 'AP multiple-choice questions about The Internet & Protocols often test:',
+            question: "A protocol that provides reliable, ordered, error-checked delivery between two endpoints is ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "UDP",
+              "IP",
+              "TCP",
+              "DNS"
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 2,
+            explanation: "TCP's defining job."
           }
         ]
       }
     },
     {
-      id: 'cspinter7-content',
+      id: "cspip7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## One-Line Definitions
 
-### Key vocabulary
-Essential terms and definitions for The Internet & Protocols. Understanding this concept is essential for mastering The Internet & Protocols in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Protocol | An agreed set of rules for communication. |
+| Packet | A unit of data with headers (source, destination, etc.) plus payload. |
+| IP | Routes packets to destination addresses (best-effort). |
+| TCP | Adds reliable, ordered, error-checked delivery on top of IP. |
+| UDP | Connectionless, faster, no delivery guarantee. |
+| HTTP | Application-layer request/response for the web. |
+| HTTPS | HTTP over TLS — encrypted and authenticated. |
+| DNS | Domain → IP resolution. |
+| TLS | Encrypts a TCP connection; authenticates server via certificate. |
+| Router | A device that forwards packets toward their destination. |
+| CDN | Geographically distributed caching of content. |
+| IPv6 | Successor to IPv4 with 128-bit addresses. |
 
-### Common question types
-The most frequent ways The Internet & Protocols is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Exam Pitfalls
 
-### Exam strategy
-Approaches for answering The Internet & Protocols questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- "TCP and IP are the same protocol." (No — TCP is transport, IP is routing.)
+- "UDP is unreliable, so it's bad." (No — it's a deliberate trade-off for low latency.)
+- "HTTPS protects me from any threat." (No — it protects in transit, not from phishing or compromised servers.)
+- "DNS encrypts traffic." (No — DNS resolves names; encryption is TLS's job.)
       `
     },
     {
-      id: 'cspinter7-input',
+      id: "cspip7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for The Internet & Protocols?
+1) The protocol that resolves human names to IP addresses is _______.
 
-2) What concept describes the most frequent ways The Internet & Protocols is tested on the AP exam?
+2) The transport protocol that guarantees ordered, reliable delivery is _______.
 
-3) Name the term for approaches for answering The Internet & Protocols questions effectively.
-
-Use the exact term from this part.
+3) The transport protocol used for real-time apps that prefer low latency over retransmission is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for The Internet & Protocols), Common question types (The most frequent ways The Internet & Protocols is tested on the AP exam), and Exam strategy (Approaches for answering The Internet & Protocols questions effectively).'
+        correctAnswers: ["DNS", "TCP", "UDP"],
+        hint1: "Domain Name System.",
+        hint2: "Three-letter, starts with T.",
+        hint3: "Three-letter, starts with U.",
+        explanation: "DNS for naming, TCP for reliability, UDP for speed."
       }
     },
     {
-      id: 'cspinter7-dropdown',
+      id: "cspip7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for The Internet & Protocols is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "The padlock icon in a browser indicates ___",
+            options: ["HTTPS / TLS is in use", "the site is owned by a bank", "the page cannot be hacked", "no cookies are stored"]
           },
           {
-            label: 'The most frequent ways The Internet & Protocols is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "A 404 status means ___",
+            options: ["the requested resource was not found", "the server is down", "the user is unauthorized", "success"]
           },
           {
-            label: 'Approaches for answering The Internet & Protocols questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "Routing decisions on the Internet are made by ___",
+            options: ["routers running routing algorithms", "the application layer", "browsers", "DNS servers"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for The Internet & Protocols. Common question types — The most frequent ways The Internet & Protocols is tested on the AP exam. Exam strategy — Approaches for answering The Internet & Protocols questions effectively.'
+        correctAnswers: ["HTTPS / TLS is in use", "the requested resource was not found", "routers running routing algorithms"],
+        hint1: "Lock = encryption.",
+        hint2: "404 is the famous code.",
+        hint3: "Routers route.",
+        explanation: "Padlock = TLS. 404 = not found. Routers handle routing."
       }
     },
     {
-      id: 'cspinter7-strategy',
+      id: "cspip7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of The Internet & Protocols.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Be ready to identify: TCP vs UDP, IP vs HTTP, HTTPS vs HTTP, DNS's job.
+- Know the layered model: change at one layer doesn't require changes at others.
+- Know that the Internet provides best-effort packet delivery; reliability is added by TCP on top.
+- Recognize architecture trade-offs: client/server vs P2P, centralized vs distributed.
+- HTTPS protects in transit; it does not solve phishing, social engineering, or server-side breaches.
       `
     },
     {
-      id: 'cspinter7-applied',
+      id: "cspip7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about The Internet & Protocols. You should:',
+            question: "You receive an email asking you to log in to your bank \"to verify your account\". The link begins with https:// and shows a padlock. The most appropriate response is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "log in to the bank immediately through the link, because the HTTPS padlock guarantees the destination is safe.",
+              "do NOT log in via the link; navigate to the bank manually because HTTPS does not authenticate the email's sender.",
+              "reply to the email message with your username and password so the bank's support team can verify your account.",
+              "forward the email to several friends so they can also verify their accounts through the same convenient link."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "HTTPS confirms the connection to whatever URL the link points to — but the URL itself may be a lookalike. Phishing defeats blind reliance on the padlock."
           },
           {
-            question: 'For free-response questions on The Internet & Protocols, the most common mistake is:',
+            question: "An online classroom needs both real-time voice (with low latency) and reliable file uploads. The most appropriate design uses ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "only the TCP transport-layer protocol for both the real-time voice stream and the reliable file uploads alike.",
+              "only the UDP transport-layer protocol for both the real-time voice stream and the reliable file uploads alike.",
+              "UDP (or its cousin RTP) for the real-time voice stream and TCP/HTTPS for the reliable file upload requests.",
+              "no transport-layer protocol at all; both the real-time voice stream and the file uploads ride on raw IP packets."
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 2,
+            explanation: "Match the protocol to the requirement: UDP-style for real-time voice, TCP for reliable file transfer."
           }
         ]
       }
     }
   ]
-}
+};

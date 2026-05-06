@@ -1,175 +1,180 @@
 export const cspDataCompressionAnalysisPart5Data = {
-  topicSlug: 'csp-data-compression-analysis',
+  topicSlug: "csp-data-compression-analysis",
   sections: [
     {
-      id: 'cspdatac5-intro',
+      id: "cspdca5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data Compression & Analysis
+# 🗜️ Data Compression & Analysis
 
 **Part 5 of 7 — Change Over Time**
 
-Data Compression & Analysis has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Compression Has Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Data Compression & Analysis that have remained stable over time |
-| **Change** | How Data Compression & Analysis has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Data Compression & Analysis over time |
+| Era | Defining codec |
+|-----|---------------|
+| 1980s | RLE, LZW (used in GIF). |
+| 1990s | JPEG for images, MP3 for audio, MPEG-2 for video. |
+| 2000s | H.264 (ubiquitous video), AAC (audio). |
+| 2010s | WebP, HEVC (H.265). |
+| 2020s | AV1, AVIF — open, royalty-free, even better quality-per-bit. |
       `
     },
     {
-      id: 'cspdatac5-quiz1',
+      id: "cspdca5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Data Compression & Analysis helps:',
+            question: "AV1 / AVIF are notable for being ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "proprietary closed standards licensed only to large corporate vendors.",
+              "open and royalty-free, with high compression efficiency per bit.",
+              "lossless-only formats, always preserving every original input pixel.",
+              "audio-only codecs designed primarily to compete with MP3 in music apps."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "AV1/AVIF emphasize openness and efficiency."
           },
           {
-            question: 'Continuity in Data Compression & Analysis means:',
+            question: "Modern video calls use codecs that perform best when ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "the camera moves rapidly and the frame content changes constantly between frames.",
+              "the camera is mostly still — most pixels barely change, so differential encoding wins.",
+              "all incoming frames consist of pure random noise rather than recognizable scene content.",
+              "the network connection is encrypted by TLS rather than running in plaintext."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Static scenes maximize inter-frame compression efficiency."
           }
         ]
       }
     },
     {
-      id: 'cspdatac5-content',
+      id: "cspdca5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Codec Generations Roughly Halve File Sizes
 
-### Continuity
-Aspects of Data Compression & Analysis that have remained stable over time. Understanding this concept is essential for mastering Data Compression & Analysis in AP CS Principles.
+| Codec | Era | Relative size for same quality |
+|-------|-----|-------------------------------|
+| MPEG-2 | 1990s | 1× |
+| H.264 | 2000s | ~0.5× |
+| H.265 | 2010s | ~0.3× |
+| AV1 | 2020s | ~0.2× |
 
-### Change
-How Data Compression & Analysis has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+This is why streaming 4K to a phone became feasible.
 
-### Trend
-The direction of change in Data Compression & Analysis over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Open vs. Proprietary Codecs
+
+Many great codecs (H.264, H.265) are encumbered by patents — companies pay licensing fees. AV1 / Opus / AVIF emerged as open alternatives, accepted by major browsers and platforms.
+
+## ML-Era Compression
+
+Modern research uses neural networks to learn compression strategies for specific domains (medical imaging, faces, speech). These can sometimes outperform hand-designed codecs but raise new questions about model bias and reproducibility.
+
+## Compression And Storage Cost
+
+Even as storage gets cheaper, compression remains crucial because **bandwidth** scales differently. A user's phone might have 1 TB of storage but only a few hundred MB of monthly mobile data.
       `
     },
     {
-      id: 'cspdatac5-input',
+      id: "cspdca5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Data Compression & Analysis that have remained stable over time?
+1) An open, royalty-free modern video codec is _______.
 
-2) What concept describes how Data Compression & Analysis has transformed due to new forces and conditions?
+2) A modern still-image format derived from AV1 is _______.
 
-3) Name the term for the direction of change in Data Compression & Analysis over time.
-
-Use the exact term from this part.
+3) Compression matters most when _______ is constrained, even if storage is cheap.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Data Compression & Analysis that have remained stable over time), Change (How Data Compression & Analysis has transformed due to new forces and conditions), and Trend (The direction of change in Data Compression & Analysis over time).'
+        correctAnswers: ["AV1", "AVIF", "bandwidth"],
+        hint1: "Three letters.",
+        hint2: "AV1 + image.",
+        hint3: "Network capacity.",
+        explanation: "AV1 = video codec. AVIF = AV1-derived image format. Bandwidth, not storage, often constrains."
       }
     },
     {
-      id: 'cspdatac5-dropdown',
+      id: "cspdca5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Data Compression & Analysis that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Each generation of video codec has roughly ___ size for the same visual quality",
+            options: ["halved", "doubled", "tripled", "kept identical"]
           },
           {
-            label: 'How Data Compression & Analysis has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Open-codec adoption matters because ___",
+            options: ["it avoids licensing fees and locks-in", "it makes compression worse", "it requires payment", "it removes encryption"]
           },
           {
-            label: 'The direction of change in Data Compression & Analysis over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "A neural-net learned codec for medical images may ___",
+            options: ["outperform general-purpose codecs but raises bias / reproducibility questions", "always work for every domain", "replace lossless completely", "be the same as MP3"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Data Compression & Analysis that have remained stable over time. Change — How Data Compression & Analysis has transformed due to new forces and conditions. Trend — The direction of change in Data Compression & Analysis over time.'
+        correctAnswers: ["halved", "it avoids licensing fees and locks-in", "outperform general-purpose codecs but raises bias / reproducibility questions"],
+        hint1: "~2× efficiency per generation.",
+        hint2: "Open = no fees.",
+        hint3: "Domain-specific gains.",
+        explanation: "Codecs roughly halve sizes per generation. Open codecs avoid lock-in. ML codecs can win — with caveats."
       }
     },
     {
-      id: 'cspdatac5-strategy',
+      id: "cspdca5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Compression Evolution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Data Compression & Analysis.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- "Why is streaming HD over a phone feasible?" → modern lossy codecs + CDNs + adaptive bitrate.
+- "Open vs. proprietary codec" → openness avoids licensing and lock-in.
+- ML compression is real but raises bias / reproducibility concerns.
       `
     },
     {
-      id: 'cspdatac5-applied',
+      id: "cspdca5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Data Compression & Analysis has changed in the last 50 years. A strong answer would:',
+            question: "A video platform must serve the same movie to a 4G phone and a 4K TV. The most appropriate strategy is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "serve only one fixed quality level to every viewer regardless of device or network.",
+              "precompute multiple bitrates and resolutions and use adaptive streaming for the best fit.",
+              "serve a lossless original to every viewer and let each device discard what it cannot use.",
+              "switch the streaming pipeline to use no compression at all and rely on raw bandwidth."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Adaptive bitrate is the modern delivery standard."
           },
           {
-            question: 'A trend in Data Compression & Analysis shows acceleration in recent decades. The most likely explanation is:',
+            question: "A research team uses an ML model to compress chest X-rays. The most appropriate validation is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "ship the model with no validation since the compression ratio is the only metric.",
+              "compare diagnostic accuracy on decompressed images vs. originals across diverse demographics.",
+              "check only the resulting file size and treat any reduction as an acceptable result.",
+              "check only that the encrypted output of the model is roughly the same length each time."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Domain-specific compression must be validated for the domain's outcomes — and across demographics."
           }
         ]
       }
     }
   ]
-}
+};

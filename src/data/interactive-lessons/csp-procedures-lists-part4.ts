@@ -1,175 +1,180 @@
 export const cspProceduresListsPart4Data = {
-  topicSlug: 'csp-procedures-lists',
+  topicSlug: "csp-procedures-lists",
   sections: [
     {
-      id: 'cspproce4-intro',
+      id: "csppl4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Procedures & Lists
+# 📋 Procedures & Lists
 
 **Part 4 of 7 — Connections & Interactions**
 
-Procedures & Lists connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Procedures & Lists Connect Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Procedures & Lists links to other course topics |
-| **Scale interaction** | How Procedures & Lists operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Procedures & Lists can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Procedures ↔ Algorithms | Algorithms are usually packaged as procedures. |
+| Lists ↔ Data | Lists are the simplest structured data. |
+| Procedures ↔ Collaboration | Reusable named procedures help teams divide work. |
+| Procedures ↔ Testing | Procedures are testable units. |
       `
     },
     {
-      id: 'cspproce4-quiz1',
+      id: "csppl4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Procedures & Lists connects to other course topics through:',
+            question: "A unit test typically tests ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "the entire program end-to-end with a single integration scenario.",
+              "a single procedure with known inputs and the corresponding expected outputs.",
+              "the network layer's ability to deliver packets reliably under load.",
+              "the encryption module's ability to round-trip arbitrary plaintext blobs."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Unit tests target single procedures."
           },
           {
-            question: 'A feedback loop in Procedures & Lists means:',
+            question: "Two teammates can build different features in parallel most easily when ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "everyone shares one giant function and edits the same lines simultaneously.",
+              "features are split into well-defined procedures with clear inputs and outputs.",
+              "no procedures exist and every feature is one continuous top-to-bottom script.",
+              "transport-layer encryption is required between every two teammate's commits."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Procedures are the unit of parallel work."
           }
         ]
       }
     },
     {
-      id: 'cspproce4-content',
+      id: "csppl4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Lists Are Often Procedure Inputs / Outputs
 
-### Interconnection
-How Procedures & Lists links to other course topics. Understanding this concept is essential for mastering Procedures & Lists in AP CS Principles.
+Most non-trivial procedures take or return lists:
 
-### Scale interaction
-How Procedures & Lists operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+    PROCEDURE topThree(scores)
+      sorted ← SORT(scores, descending)
+      RETURN [sorted[1], sorted[2], sorted[3]]
 
-### Feedback loop
-How outcomes of Procedures & Lists can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Mutability Caution
+
+When a procedure receives a list, modifying it may modify the caller's list (depending on language). To stay safe, document whether your procedure mutates inputs or returns a fresh list.
+
+## Pure Functions Are Easier To Test
+
+A pure function (no side effects, output depends only on inputs) can be tested with simple input → expected-output pairs:
+
+| Input | Expected output |
+|-------|----------------|
+| [3, 1, 2] | 2.0 |
+| [10, 10, 10] | 10.0 |
+| [] | 0.0 (or special handling) |
+
+This is why pure functions are encouraged in modern code.
       `
     },
     {
-      id: 'cspproce4-input',
+      id: "csppl4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Procedures & Lists links to other course topics?
+1) A function whose output depends only on its inputs (and has no side effects) is called _______.
 
-2) What concept describes how Procedures & Lists operates differently at local, national, and global scales?
+2) A test that verifies a single procedure's behavior is called a _______ test.
 
-3) Name the term for how outcomes of Procedures & Lists can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) When a procedure changes the caller's list, we say it _______ the input.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Procedures & Lists links to other course topics), Scale interaction (How Procedures & Lists operates differently at local, national, and global scales), and Feedback loop (How outcomes of Procedures & Lists can reinforce or modify the original process).'
+        correctAnswers: ["pure", "unit", "mutates"],
+        hint1: "No side effects.",
+        hint2: "Smallest test.",
+        hint3: "Modifies in place.",
+        explanation: "Pure / unit test / mutates are core vocabulary."
       }
     },
     {
-      id: 'cspproce4-dropdown',
+      id: "csppl4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Procedures & Lists links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A pure function is easier to ___",
+            options: ["test and reason about because outputs depend only on inputs", "compress", "encrypt", "route"]
           },
           {
-            label: 'How Procedures & Lists operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "A procedure that returns a NEW list (without modifying the input) is ___",
+            options: ["safer to compose with other procedures", "always slower", "always larger", "always encrypted"]
           },
           {
-            label: 'How outcomes of Procedures & Lists can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "Splitting a feature into 4 named procedures helps ___",
+            options: ["teammates work in parallel and test each piece in isolation", "compression", "TLS", "IPv6"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Procedures & Lists links to other course topics. Scale interaction — How Procedures & Lists operates differently at local, national, and global scales. Feedback loop — How outcomes of Procedures & Lists can reinforce or modify the original process.'
+        correctAnswers: ["test and reason about because outputs depend only on inputs", "safer to compose with other procedures", "teammates work in parallel and test each piece in isolation"],
+        hint1: "Predictable.",
+        hint2: "No surprises.",
+        hint3: "Parallel work.",
+        explanation: "Pure → testable; non-mutating → composable; small procedures → parallel teamwork."
       }
     },
     {
-      id: 'cspproce4-strategy',
+      id: "csppl4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Procedures/Lists
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Procedures & Lists.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- Procedures = the unit of reuse, abstraction, testing, and team-coordination.
+- Lists = the most common structured data passed between procedures.
+- Pure functions are easier to test, parallelize, and reason about.
       `
     },
     {
-      id: 'cspproce4-applied',
+      id: "csppl4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Procedures & Lists and other units earns higher scores because:',
+            question: "A team has one 500-line function. Refactoring it into 6 named procedures most directly improves ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "the compression ratio of the source-code file when it is later archived.",
+              "readability, testability, and the ability for teammates to work in parallel.",
+              "the speed of the TLS handshake the program performs at startup time.",
+              "the routing efficiency of IPv6 packets the program sends across the network."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Decomposition into procedures is one of the most universally beneficial refactors."
           },
           {
-            question: 'If Procedures & Lists produces outcomes that further intensify the original process, this is:',
+            question: "A procedure **shuffleInPlace(list)** reorders the caller's list. The most CSP-aligned best practice is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "leave it; the caller will eventually figure out that the list has been modified.",
+              "document clearly that the input is mutated, OR return a NEW shuffled list instead.",
+              "compress the list before shuffling so the in-place modification fits in less memory.",
+              "encrypt the list before shuffling so the in-place modification cannot be observed."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Make mutation explicit; or return a fresh value."
           }
         ]
       }
     }
   ]
-}
+};

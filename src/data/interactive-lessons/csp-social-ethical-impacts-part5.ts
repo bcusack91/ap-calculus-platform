@@ -1,175 +1,175 @@
 export const cspSocialEthicalImpactsPart5Data = {
-  topicSlug: 'csp-social-ethical-impacts',
+  topicSlug: "csp-social-ethical-impacts",
   sections: [
     {
-      id: 'cspsocia5-intro',
+      id: "cspsei5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Social & Ethical Impacts
+# ⚖️ Social & Ethical Impacts
 
 **Part 5 of 7 — Change Over Time**
 
-Social & Ethical Impacts has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Computing's Impact Has Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Social & Ethical Impacts that have remained stable over time |
-| **Change** | How Social & Ethical Impacts has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Social & Ethical Impacts over time |
+| Era | Defining shift |
+|-----|----------------|
+| 1990s | Email + web democratize publishing. |
+| 2000s | Social media; Wikipedia; smartphones. |
+| 2010s | Algorithmic feeds; gig economy; ML decisions. |
+| 2020s | Generative AI; deepfakes; LLM-mediated information. |
       `
     },
     {
-      id: 'cspsocia5-quiz1',
+      id: "cspsei5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Social & Ethical Impacts helps:',
+            question: "Generative AI most directly raises new questions about ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "compression ratio of the model's output relative to its training set on a per-token basis",
+              "authorship, attribution, training-data consent, misinformation, and creative-labor displacement",
+              "the transport-layer security handshake speed between the AI client and the model's server",
+              "the IPv6 routing of packets between the AI client and the model's underlying inference server"
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Generative AI surfaces all of these social concerns."
           },
           {
-            question: 'Continuity in Social & Ethical Impacts means:',
+            question: "A deepfake video of a politician saying things they never said most directly threatens ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "compression efficiency of video streams during the broadcast of the synthesized speech",
+              "public trust in media and elections — an information-integrity concern at societal scale",
+              "transport-layer security between the viewer's browser and the originating broadcast server",
+              "IPv6 routing of the synthesized video between the original publisher and downstream viewers"
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Deepfakes erode trust in media."
           }
         ]
       }
     },
     {
-      id: 'cspsocia5-content',
+      id: "cspsei5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Generative AI Stakes
 
-### Continuity
-Aspects of Social & Ethical Impacts that have remained stable over time. Understanding this concept is essential for mastering Social & Ethical Impacts in AP CS Principles.
+| Concern | Example |
+|---------|---------|
+| Authorship | Whose work is in the training data? |
+| Consent | Did sources agree? |
+| Bias | What populations are over / under represented? |
+| Hallucination | Confident but wrong outputs. |
+| Labor | Displacement of certain creative / knowledge work. |
+| Energy | Training large models is energy-intensive. |
 
-### Change
-How Social & Ethical Impacts has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+## Platform Power And Regulation
 
-### Trend
-The direction of change in Social & Ethical Impacts over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+A handful of platforms now mediate much of public discourse, commerce, and labor. Regulators worldwide are responding (data-protection laws, antitrust, age-verification debates). CSP framing: **technology design embeds policy**, so policy must engage with design.
+
+## Long-Term Sustainability
+
+Compute uses electricity, water (cooling), rare materials. Decisions about which problems are worth computing on (and at what scale) have environmental impact.
       `
     },
     {
-      id: 'cspsocia5-input',
+      id: "cspsei5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Social & Ethical Impacts that have remained stable over time?
+1) Confident but factually wrong AI outputs are called _______.
 
-2) What concept describes how Social & Ethical Impacts has transformed due to new forces and conditions?
+2) AI-generated synthetic videos of real people are called _______.
 
-3) Name the term for the direction of change in Social & Ethical Impacts over time.
-
-Use the exact term from this part.
+3) Computing's electricity, water, and materials use raises questions about its environmental _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Social & Ethical Impacts that have remained stable over time), Change (How Social & Ethical Impacts has transformed due to new forces and conditions), and Trend (The direction of change in Social & Ethical Impacts over time).'
+        correctAnswers: ["hallucinations", "deepfakes", "sustainability"],
+        hint1: "\"Made-up\" outputs.",
+        hint2: "Synthetic video.",
+        hint3: "Environmental footprint.",
+        explanation: "Hallucinations / deepfakes / sustainability."
       }
     },
     {
-      id: 'cspsocia5-dropdown',
+      id: "cspsei5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Social & Ethical Impacts that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "AI training raises ___ concerns about sources of training data",
+            options: ["consent and attribution", "compression", "TLS", "IPv6"]
           },
           {
-            label: 'How Social & Ethical Impacts has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Energy use of large model training is ___",
+            options: ["significant and a growing sustainability concern", "negligible always", "unrelated to the environment", "a TLS issue"]
           },
           {
-            label: 'The direction of change in Social & Ethical Impacts over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "A small handful of platforms mediating public discourse raises ___",
+            options: ["questions about platform power, governance, and accountability", "TLS issues only", "compression issues only", "IPv6 routing"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Social & Ethical Impacts that have remained stable over time. Change — How Social & Ethical Impacts has transformed due to new forces and conditions. Trend — The direction of change in Social & Ethical Impacts over time.'
+        correctAnswers: ["consent and attribution", "significant and a growing sustainability concern", "questions about platform power, governance, and accountability"],
+        hint1: "Source ethics.",
+        hint2: "Real footprint.",
+        hint3: "Concentrated influence.",
+        explanation: "AI ethics / sustainability / platform power."
       }
     },
     {
-      id: 'cspsocia5-strategy',
+      id: "cspsei5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Modern Impact
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Social & Ethical Impacts.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Generative AI raises authorship, consent, bias, hallucination, labor, and energy concerns.
+- Platforms shape public life; their design choices are policy.
+- Sustainability matters as compute scales.
       `
     },
     {
-      id: 'cspsocia5-applied',
+      id: "cspsei5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Social & Ethical Impacts has changed in the last 50 years. A strong answer would:',
+            question: "A user submits a school essay generated by an LLM as their own work. The most CSP-aligned framing is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "no measurable concern, since the LLM's output is technically the property of whoever prompted it.",
+              "an academic-integrity concern that also raises authorship and attribution questions; norms must be explicit.",
+              "a transport-layer-security concern between the user's browser and the underlying language-model server.",
+              "a compression concern, since the model's output happens to compress more efficiently than human writing."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Academic integrity + clear AI-use norms."
           },
           {
-            question: 'A trend in Social & Ethical Impacts shows acceleration in recent decades. The most likely explanation is:',
+            question: "An AI chatbot confidently states a wrong historical fact a student then cites. The CSP-aligned response is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "always trust the AI chatbot's output, on the grounds that confident answers are usually correct.",
+              "verify factual claims against authoritative sources; AI hallucinations are common and confidence ≠ correctness.",
+              "compress the chatbot's response before citing it, so that any factual error becomes harder to detect later.",
+              "switch the chatbot's underlying transport from TCP to UDP so that future hallucinations stop occurring."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "AI hallucinations require verification."
           }
         ]
       }
     }
   ]
-}
+};

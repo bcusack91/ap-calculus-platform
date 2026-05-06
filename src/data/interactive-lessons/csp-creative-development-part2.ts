@@ -1,175 +1,184 @@
 export const cspCreativeDevelopmentPart2Data = {
-  topicSlug: 'csp-creative-development',
+  topicSlug: "csp-creative-development",
   sections: [
     {
-      id: 'cspcreat2-intro',
+      id: "cspcd2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 🎨 Creative Development
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Creative Development helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## The Development Process
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Creative Development |
-| **Process 2** | A secondary process that shapes outcomes in Creative Development |
-| **Cause and effect** | The relationship between actions and outcomes in Creative Development |
+AP CSP frames program creation as an iterative cycle, not a straight line.
+
+| Phase | What you do |
+|-------|-------------|
+| **Investigate** | Understand the user need; gather requirements. |
+| **Design** | Plan algorithms, data, UI; sketch / pseudocode. |
+| **Prototype** | Build a small testable slice. |
+| **Test** | Run with real data; gather feedback. |
+| **Refine** | Iterate based on test results and user feedback. |
+
+You revisit any phase at any time — that's what makes it iterative.
       `
     },
     {
-      id: 'cspcreat2-quiz1',
+      id: "cspcd2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Creative Development?',
+            question: "A team finishes a \"final\" version of a program, then a user reports it crashes on empty input. What development phase should follow?",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "Ship as-is — the user input was invalid anyway.",
+              "Refine: fix the bug, then re-test the program.",
+              "Skip ahead to the next planned feature first.",
+              "Discard the program and rebuild it from scratch."
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "Iterative development means refining based on real-world feedback, then re-testing."
           },
           {
-            question: 'Understanding cause and effect in Creative Development helps students:',
+            question: "Why do programmers prototype before writing a polished version?",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "Prototypes always perform faster than the final code.",
+              "A small testable slice exposes design problems early, when changes are cheap.",
+              "Prototypes guarantee the program will be free of bugs.",
+              "Prototypes can be shipped directly without further work."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "Early prototypes surface design issues before significant work is invested."
           }
         ]
       }
     },
     {
-      id: 'cspcreat2-content',
+      id: "cspcd2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Why Iteration Beats "Big Design Up Front"
 
-### Process 1
-The primary mechanism that drives patterns in Creative Development. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+A waterfall approach (design everything, then build, then test) fails when:
 
-### Process 2
-A secondary process that shapes outcomes in Creative Development. This builds on the previous concept and connects to broader themes in the course.
+- Requirements are unclear or change.
+- Users discover what they want only after seeing something.
+- Technical risks aren't obvious until prototypes hit reality.
 
-### Cause and effect
-The relationship between actions and outcomes in Creative Development. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Iterative development reduces risk by **shortening feedback loops**.
+
+## Documentation Is Part Of Development
+
+| Documentation | Purpose |
+|---------------|---------|
+| **Comments** in code | Explain WHY (not just what). |
+| **README** | Describe purpose, setup, usage. |
+| **Change log** | Record what changed, when, why. |
+| **User guide** | Help end users accomplish tasks. |
+
+## User-Centered Design
+
+Programs are for **users**, not coders. Identify the user, their goal, and test with the real target population — not just yourself.
       `
     },
     {
-      id: 'cspcreat2-input',
+      id: "cspcd2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Creative Development?
+1) A development approach where you build, test, and refine in repeated cycles is called _______ development.
 
-2) What concept describes a secondary process that shapes outcomes in Creative Development?
+2) A small, working version used to test a design idea is called a _______.
 
-3) Name the term for the relationship between actions and outcomes in Creative Development.
-
-Use the exact term from this part.
+3) Code _______ explain WHY a section exists, not just what it does.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Creative Development), Process 2 (A secondary process that shapes outcomes in Creative Development), and Cause and effect (The relationship between actions and outcomes in Creative Development).'
+        correctAnswers: ["iterative", "prototype", "comments"],
+        hint1: "Repeated cycles.",
+        hint2: "Test slice.",
+        hint3: "Lines starting with // or #.",
+        explanation: "Iterative dev = repeated build-test-refine. Prototype = testable slice. Comments document intent."
       }
     },
     {
-      id: 'cspcreat2-dropdown',
+      id: "cspcd2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Creative Development is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "A README primarily exists to ___",
+            options: ["help others (or future you) understand and use the program", "pass the AP exam", "increase file size", "replace all comments"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Creative Development describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "Testing with real users primarily helps ___",
+            options: ["reveal usability issues the developer never noticed", "guarantee zero bugs", "reduce file size", "eliminate iteration"]
           },
           {
-            label: 'The relationship between actions and outcomes in Creative Development is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "Iterative development reduces risk by ___",
+            options: ["shortening feedback loops between assumption and reality", "avoiding all testing", "writing all code first", "never refactoring"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Creative Development. Process 2 — A secondary process that shapes outcomes in Creative Development. Cause and effect — The relationship between actions and outcomes in Creative Development.'
+        correctAnswers: ["help others (or future you) understand and use the program", "reveal usability issues the developer never noticed", "shortening feedback loops between assumption and reality"],
+        hint1: "Onboarding doc.",
+        hint2: "Users surface what creators miss.",
+        hint3: "Frequent feedback = lower risk.",
+        explanation: "READMEs help collaborators. User testing exposes blind spots. Short feedback loops lower risk."
       }
     },
     {
-      id: 'cspcreat2-strategy',
+      id: "cspcd2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Development Process
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Creative Development.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- "What should the team do next?" usually = test, gather feedback, refine, document — not "ship blindly".
+- "Iterative" is often the right adjective for a sound process.
+- "User-centered" beats "based on what we wanted to build".
       `
     },
     {
-      id: 'cspcreat2-applied',
+      id: "cspcd2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A team builds an app for elderly users but never tests with elderly users. After release, complaints flood in about tiny text. What lesson best captures this?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "Picking a bigger default font would have solved every UI complaint.",
+              "User-centered testing with the actual target population would have surfaced this earlier.",
+              "In-house testing by the developers should have been enough to catch the issue.",
+              "Adding more code comments would have prevented the usability complaint."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Testing with the real target population catches issues developers miss."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A startup spends 18 months perfecting an unreleased product, then learns users wanted something different. The most CSP-aligned diagnosis is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "the product was technically fine and just needed a stronger marketing campaign.",
+              "iterative releases would have surfaced the user-need mismatch sooner and at lower cost.",
+              "long single-shot waterfall releases are still the most reliable way to ship software.",
+              "collecting user feedback this late is normal and was unlikely to change the outcome."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Iterative releases shorten the loop between assumption and reality."
           }
         ]
       }
     }
   ]
-}
+};

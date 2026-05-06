@@ -1,175 +1,175 @@
 export const cspSafeComputingPart5Data = {
-  topicSlug: 'csp-safe-computing',
+  topicSlug: "csp-safe-computing",
   sections: [
     {
-      id: 'cspsafec5-intro',
+      id: "cspsc5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔐 Safe Computing
 
 **Part 5 of 7 — Change Over Time**
 
-Safe Computing Practices has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Safe Computing Has Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Safe Computing Practices that have remained stable over time |
-| **Change** | How Safe Computing Practices has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Safe Computing Practices over time |
+| Era | Defining shift |
+|-----|----------------|
+| 1990s | Antivirus + "don't open weird attachments". |
+| 2000s | Spyware, popups, browser hardening. |
+| 2010s | Mobile phishing; MFA mainstream. |
+| 2020s | Passkeys, AI-assisted phishing, cloud account takeovers. |
       `
     },
     {
-      id: 'cspsafec5-quiz1',
+      id: "cspsc5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Safe Computing Practices helps:',
+            question: "Passkeys (FIDO2) primarily replace ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "encryption of stored data with a fundamentally different cryptographic primitive",
+              "passwords with cryptographic device-bound credentials that resist phishing",
+              "compression of the user's authentication request before it reaches the server",
+              "IPv6 addressing of authentication endpoints with a more compact alternative"
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Passkeys replace passwords with phishing-resistant cryptography."
           },
           {
-            question: 'Continuity in Safe Computing Practices means:',
+            question: "AI-assisted phishing is concerning because ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "it produces grammatically clean, personalized lures at scale.",
+              "it makes passwords weaker.",
+              "it removes TLS.",
+              "it shrinks attachments."
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 0,
+            explanation: "Personalized, fluent lures are harder to spot."
           }
         ]
       }
     },
     {
-      id: 'cspsafec5-content',
+      id: "cspsc5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Passwordless Future
 
-### Continuity
-Aspects of Safe Computing Practices that have remained stable over time. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+Industry is moving toward **passkeys** (FIDO2 / WebAuthn): the user's device holds a private key; the site only ever sees a public key + signed challenge. This is phishing-resistant by design.
 
-### Change
-How Safe Computing Practices has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+## Cloud Account Takeover
 
-### Trend
-The direction of change in Safe Computing Practices over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Modern attackers target the **cloud account** itself (email, identity provider) because that often unlocks dozens of services. Defenses:
+
+- MFA on the identity provider.
+- Audit which services are connected.
+- Review session activity.
+
+## What Hasn't Changed
+
+- Patches still matter.
+- Phishing still works.
+- Backups still save you.
+- Healthy skepticism still beats most attacks.
       `
     },
     {
-      id: 'cspsafec5-input',
+      id: "cspsc5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Safe Computing Practices that have remained stable over time?
+1) A modern phishing-resistant alternative to passwords is called a _______.
 
-2) What concept describes how Safe Computing Practices has transformed due to new forces and conditions?
+2) A single account that grants access to many services is often the user's _______ provider.
 
-3) Name the term for the direction of change in Safe Computing Practices over time.
-
-Use the exact term from this part.
+3) Despite new attacks, _______ patches remain essential.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Safe Computing Practices that have remained stable over time), Change (How Safe Computing Practices has transformed due to new forces and conditions), and Trend (The direction of change in Safe Computing Practices over time).'
+        correctAnswers: ["passkey", "identity", "software"],
+        hint1: "FIDO2.",
+        hint2: "IdP.",
+        hint3: "Patch hygiene.",
+        explanation: "Passkeys / identity provider / software patches."
       }
     },
     {
-      id: 'cspsafec5-dropdown',
+      id: "cspsc5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Safe Computing Practices that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Passkeys are phishing-resistant because ___",
+            options: ["the private key never leaves the device and the signature is bound to the real site", "they use longer passwords", "they use TLS only", "they compress data"]
           },
           {
-            label: 'How Safe Computing Practices has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Compromise of the user's primary email account often ___",
+            options: ["enables password resets and account takeovers across many other services", "has no other consequences", "speeds up TLS", "compresses data"]
           },
           {
-            label: 'The direction of change in Safe Computing Practices over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "AI-generated phishing emails ___",
+            options: ["are typically more polished and personalized than older phishing", "are easier to spot", "remove TLS", "compress data"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Safe Computing Practices that have remained stable over time. Change — How Safe Computing Practices has transformed due to new forces and conditions. Trend — The direction of change in Safe Computing Practices over time.'
+        correctAnswers: ["the private key never leaves the device and the signature is bound to the real site", "enables password resets and account takeovers across many other services", "are typically more polished and personalized than older phishing"],
+        hint1: "Origin-bound crypto.",
+        hint2: "Email = master key.",
+        hint3: "Quality boost.",
+        explanation: "Passkeys are origin-bound; email is high-value; AI improves phishing quality."
       }
     },
     {
-      id: 'cspsafec5-strategy',
+      id: "cspsc5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Modern Safe Computing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Safe Computing Practices.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Passkeys are the modern direction.
+- Identity providers are high-value targets — protect them.
+- AI raises the floor of phishing quality.
       `
     },
     {
-      id: 'cspsafec5-applied',
+      id: "cspsc5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Safe Computing Practices has changed in the last 50 years. A strong answer would:',
+            question: "A user's personal email is compromised. Within hours, attackers reset passwords on 12 other services. The most accurate framing is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "unrelated — the email compromise has no causal connection to the other twelve service resets.",
+              "email is the recovery channel for those services; protecting it (MFA / passkey) protects them all.",
+              "transport-layer security on the email account would have slowed but not blocked the takeovers.",
+              "compressing the user's mailbox would have prevented the attackers from acting on the breach."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Email is the master account."
           },
           {
-            question: 'A trend in Safe Computing Practices shows acceleration in recent decades. The most likely explanation is:',
+            question: "A site offers passkeys instead of passwords. The most CSP-aligned reason to enable them is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "no compelling reason, since passwords with MFA are equivalent to passkeys in every way.",
+              "they resist phishing because the credential is bound to the real site's origin and stays on device.",
+              "they compress the user's authentication request to a smaller size than passwords would do.",
+              "they shorten the URL the browser uses when sending the user's authentication challenge."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Passkeys = phishing-resistant by construction."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,184 @@
 export const cspAlgorithmsPart5Data = {
-  topicSlug: 'csp-algorithms',
+  topicSlug: "csp-algorithms",
   sections: [
     {
-      id: 'cspalgor5-intro',
+      id: "cspalg5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms
+# ⚙️ Algorithms
 
 **Part 5 of 7 — Change Over Time**
 
-Algorithms has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Algorithms Scale
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Algorithms that have remained stable over time |
-| **Change** | How Algorithms has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Algorithms over time |
+A "fast enough" algorithm at n = 100 may be unusable at n = 10,000,000. The AP exam tests whether you understand **how running time grows** with input size.
+
+| Class | Doubling input multiplies time by | Practical feel |
+|-------|----------------------------------|----------------|
+| Constant | 1× | Instant regardless of size. |
+| Logarithmic | adds a constant | Scales beautifully. |
+| Linear | 2× | Reasonable. |
+| Quadratic | 4× | Painful past ~10⁴. |
+| Exponential | huge multiplier | Infeasible past tiny inputs. |
       `
     },
     {
-      id: 'cspalgor5-quiz1',
+      id: "cspalg5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Algorithms helps:',
+            question: "An algorithm takes 1 second on 1,000 inputs and is **linear-time**. Roughly how long does it take on 10,000 inputs?",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "1 second",
+              "10 seconds",
+              "100 seconds",
+              "1,000 seconds"
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Linear: 10× input → 10× time."
           },
           {
-            question: 'Continuity in Algorithms means:',
+            question: "An algorithm takes 1 second on 1,000 inputs and is **quadratic-time**. Roughly how long does it take on 10,000 inputs?",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "1 second",
+              "10 seconds",
+              "100 seconds",
+              "10,000 seconds"
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 2,
+            explanation: "Quadratic: 10× input → 100× time."
           }
         ]
       }
     },
     {
-      id: 'cspalgor5-content',
+      id: "cspalg5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Reasonable vs. Unreasonable Algorithms
 
-### Continuity
-Aspects of Algorithms that have remained stable over time. Understanding this concept is essential for mastering Algorithms in AP CS Principles.
+The CED uses two key terms:
 
-### Change
-How Algorithms has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+- **Reasonable**: time grows polynomially (constant, log, linear, n², n³, …).
+- **Unreasonable**: time grows exponentially (2ⁿ, n!, …) — quickly impossible to run.
 
-### Trend
-The direction of change in Algorithms over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+A 30-element problem that needs to try every subset (2³⁰ ≈ 1 billion) is borderline. At 50 elements (2⁵⁰ ≈ 10¹⁵), no realistic computer finishes in your lifetime.
+
+## Heuristics: When Exact Is Too Slow
+
+When an exact algorithm is unreasonable, we often use a **heuristic** — an approach that finds a *good enough* answer quickly without guaranteeing optimality.
+
+| Problem | Exact (unreasonable) | Heuristic (reasonable) |
+|---------|----------------------|----------------------|
+| Traveling Salesperson | Try all routes | "Always go to nearest unvisited city." |
+| Schedule fitting | Try all schedules | Greedy first-fit. |
+
+**Trade-off:** speed vs. guaranteed optimality.
+
+## Decidable vs. Undecidable
+
+Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Halting Problem). These are **undecidable**. Most exam-relevant problems are decidable; the question is whether they're tractable in reasonable time.
       `
     },
     {
-      id: 'cspalgor5-input',
+      id: "cspalg5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Algorithms that have remained stable over time?
+1) An algorithm whose running time grows polynomially is called _______.
 
-2) What concept describes how Algorithms has transformed due to new forces and conditions?
+2) An algorithm that finds a good but not necessarily optimal solution faster is called a _______.
 
-3) Name the term for the direction of change in Algorithms over time.
-
-Use the exact term from this part.
+3) A problem that no algorithm can solve for all inputs is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Algorithms that have remained stable over time), Change (How Algorithms has transformed due to new forces and conditions), and Trend (The direction of change in Algorithms over time).'
+        correctAnswers: ["reasonable", "heuristic", "undecidable"],
+        hint1: "CED vocabulary for tractable.",
+        hint2: "Greek root meaning \"to find\".",
+        hint3: "Opposite of decidable.",
+        explanation: "Reasonable = polynomial time. Heuristics trade optimality for speed. Undecidable problems have no general algorithm."
       }
     },
     {
-      id: 'cspalgor5-dropdown',
+      id: "cspalg5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Algorithms that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "A 2ⁿ algorithm on n = 60 is best described as ___",
+            options: ["Reasonable", "Unreasonable", "Linear", "Logarithmic"]
           },
           {
-            label: 'How Algorithms has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "A heuristic guarantees ___",
+            options: ["the optimal answer", "a good answer in less time", "no answer", "exponential time"]
           },
           {
-            label: 'The direction of change in Algorithms over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "Doubling the input of an O(n²) algorithm makes it ___ as long",
+            options: ["twice", "four times", "the same length of", "half"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Algorithms that have remained stable over time. Change — How Algorithms has transformed due to new forces and conditions. Trend — The direction of change in Algorithms over time.'
+        correctAnswers: ["Unreasonable", "a good answer in less time", "four times"],
+        hint1: "2⁶⁰ is astronomical.",
+        hint2: "It is a speed/optimality trade.",
+        hint3: "(2n)² = 4n².",
+        explanation: "Exponential time is unreasonable. Heuristics trade optimality for speed. Quadratic scaling is 4× per input doubling."
       }
     },
     {
-      id: 'cspalgor5-strategy',
+      id: "cspalg5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Scaling Questions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Algorithms.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- For "how long does it take on 10× input?" multiply by the growth factor: linear → 10×, n² → 100×, log → tiny constant change.
+- "Reasonable" = polynomial. "Unreasonable" = exponential.
+- A heuristic ≠ a guarantee. If the answer must be optimal, a heuristic alone can't promise it.
+- The Halting Problem is the canonical undecidable problem the exam might mention.
       `
     },
     {
-      id: 'cspalgor5-applied',
+      id: "cspalg5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Algorithms has changed in the last 50 years. A strong answer would:',
+            question: "A genetics lab has an exact algorithm that finds the best protein folding for n amino acids in time proportional to 2ⁿ. For n = 50 the run is estimated at 35 years. Which is the best practical response?",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "Wait the projected 35 years for the exact algorithm to terminate and report the optimal protein folding.",
+              "Run the same exponential algorithm on a slightly faster computer in the hope that it finishes much sooner.",
+              "Use a heuristic that returns a near-optimal protein folding in a matter of seconds for any input size n.",
+              "Conclude that the protein folding problem is undecidable and that no algorithm can ever produce a folding."
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 2,
+            explanation: "Exponential growth is unreasonable; doubling CPU speed buys one extra n. A heuristic returns a usable answer quickly."
           },
           {
-            question: 'A trend in Algorithms shows acceleration in recent decades. The most likely explanation is:',
+            question: "A search algorithm runs in O(log n). On 1,000 items it does about 10 comparisons. On 1,000,000 items it does about how many?",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "1,000",
+              "10,000,000",
+              "20",
+              "100"
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 2,
+            explanation: "log₂(10⁶) ≈ 20."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,190 @@
 export const cspFaultToleranceSecurityPart2Data = {
-  topicSlug: 'csp-fault-tolerance-security',
+  topicSlug: "csp-fault-tolerance-security",
   sections: [
     {
-      id: 'cspfault2-intro',
+      id: "cspfts2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Fault Tolerance & Security
+# 🛡️ Fault Tolerance & Security
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Fault Tolerance & Security helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## Fault Tolerance: Working Despite Failures
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Fault Tolerance & Security |
-| **Process 2** | A secondary process that shapes outcomes in Fault Tolerance & Security |
-| **Cause and effect** | The relationship between actions and outcomes in Fault Tolerance & Security |
+A **fault-tolerant** system continues operating correctly when a component fails. The key idea: **redundancy** plus a way to detect and recover from failures.
+
+| Technique | How it tolerates faults |
+|-----------|------------------------|
+| **Redundancy** | Multiple copies of data or compute. |
+| **Replication** | Same data in many locations. |
+| **Failover** | Automatic switch to a backup. |
+| **Retries** | Try again when a request fails. |
+| **Graceful degradation** | Reduce functionality instead of crashing. |
       `
     },
     {
-      id: 'cspfault2-quiz1',
+      id: "cspfts2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Fault Tolerance & Security?',
+            question: "A web service runs on 3 servers behind a load balancer. One server crashes; users keep working. This demonstrates ___",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "compression of failed requests so they take less storage on the surviving servers",
+              "fault tolerance via redundancy and automatic failover to healthy servers",
+              "transport-layer security replacing the failed server's role for waiting clients",
+              "a routing-table update on the load balancer with no underlying redundancy at all"
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "Redundancy + failover = classic fault tolerance."
           },
           {
-            question: 'Understanding cause and effect in Fault Tolerance & Security helps students:',
+            question: "When a sensor returns an obviously wrong value, the most defensive approach is ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "use the obviously wrong value anyway and propagate it into downstream calculations.",
+              "detect the anomaly, ignore or flag the bad reading, and continue with valid data.",
+              "crash the entire program so that no further sensor reading can ever be processed.",
+              "shut off all sensors connected to the program until a human operator intervenes."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "Defensive handling of bad inputs."
           }
         ]
       }
     },
     {
-      id: 'cspfault2-content',
+      id: "cspfts2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Why The Internet Survives Failures
 
-### Process 1
-The primary mechanism that drives patterns in Fault Tolerance & Security. Understanding this concept is essential for mastering Fault Tolerance & Security in AP CS Principles.
+The original Internet design (1960s ARPANET) assumed parts of the network would fail. Packet switching + dynamic routing means traffic can flow around broken links automatically.
 
-### Process 2
-A secondary process that shapes outcomes in Fault Tolerance & Security. This builds on the previous concept and connects to broader themes in the course.
+| Failure | Mitigation |
+|---------|-----------|
+| Cable cut | Routers find alternate paths. |
+| Server crash | Load balancer routes to a healthy peer. |
+| Region outage | Multi-region deployment. |
+| Disk failure | RAID + offsite backup. |
 
-### Cause and effect
-The relationship between actions and outcomes in Fault Tolerance & Security. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Backups Are Different From Replication
+
+| Concept | Purpose |
+|---------|---------|
+| **Replication** | Live copies for high availability. |
+| **Backup** | Snapshot in time for recovery from corruption / mistake. |
+
+If a bug DELETES data and replicates the deletion to all replicas, only a backup saves you.
+
+## A Tiny Example: Retries With Backoff
+
+    attempt ← 1
+    REPEAT WHILE attempt ≤ 5:
+      result ← TRY_REQUEST()
+      IF result.success THEN STOP
+      WAIT(2 ^ attempt seconds)   // exponential backoff
+      attempt ← attempt + 1
+
+Exponential backoff prevents retry storms from overwhelming a recovering service.
       `
     },
     {
-      id: 'cspfault2-input',
+      id: "cspfts2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Fault Tolerance & Security?
+1) Tolerating component failure typically requires _______ — extra capacity / copies.
 
-2) What concept describes a secondary process that shapes outcomes in Fault Tolerance & Security?
+2) A system that reduces functionality instead of crashing during partial failure is showing _______ degradation.
 
-3) Name the term for the relationship between actions and outcomes in Fault Tolerance & Security.
-
-Use the exact term from this part.
+3) A disk-failure-resistant arrangement of multiple disks is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Fault Tolerance & Security), Process 2 (A secondary process that shapes outcomes in Fault Tolerance & Security), and Cause and effect (The relationship between actions and outcomes in Fault Tolerance & Security).'
+        correctAnswers: ["redundancy", "graceful", "RAID"],
+        hint1: "Backup parts.",
+        hint2: "Soft fail.",
+        hint3: "Disk redundancy acronym.",
+        explanation: "Redundancy / graceful degradation / RAID."
       }
     },
     {
-      id: 'cspfault2-dropdown',
+      id: "cspfts2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Fault Tolerance & Security is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "Replication alone does NOT protect against ___",
+            options: ["a buggy delete that propagates to every replica", "a single disk failure", "a single server failure", "a network blip"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Fault Tolerance & Security describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "Exponential backoff exists to ___",
+            options: ["avoid hammering a recovering service with retry storms", "compress data", "encrypt data", "route packets"]
           },
           {
-            label: 'The relationship between actions and outcomes in Fault Tolerance & Security is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "A multi-region deployment protects against ___",
+            options: ["region-level outages and natural disasters", "all bugs", "compression failure", "TLS failure"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Fault Tolerance & Security. Process 2 — A secondary process that shapes outcomes in Fault Tolerance & Security. Cause and effect — The relationship between actions and outcomes in Fault Tolerance & Security.'
+        correctAnswers: ["a buggy delete that propagates to every replica", "avoid hammering a recovering service with retry storms", "region-level outages and natural disasters"],
+        hint1: "Replication ≠ backup.",
+        hint2: "Backoff = patience.",
+        hint3: "Region resilience.",
+        explanation: "Replication doesn't cover deletes; backoff prevents storms; multi-region survives outages."
       }
     },
     {
-      id: 'cspfault2-strategy',
+      id: "cspfts2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Fault Tolerance
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Fault Tolerance & Security.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Redundancy + failover = canonical fault-tolerance answer.
+- Distinguish replication (live) from backups (point-in-time).
+- The Internet itself is a giant fault-tolerant system.
       `
     },
     {
-      id: 'cspfault2-applied',
+      id: "cspfts2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A team replicates their database across 3 servers but takes no backups. A bug deletes a critical table. The most accurate framing is ___",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "replication is enough — having three live copies guarantees the table can be restored.",
+              "replication propagates the deletion to all servers; only a backup could recover the data.",
+              "transport-layer security would have prevented the buggy delete from reaching any replica.",
+              "compression of the database file would have made the deletion easier to undo afterward."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Replication ≠ backup."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A flaky network causes occasional request failures. The most CSP-aligned client behavior is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "immediately retry forever, as fast as the client can produce new outbound requests.",
+              "retry a small bounded number of times with exponential backoff, then surface a clear error.",
+              "crash the application immediately on the first failure and require a manual restart.",
+              "silently ignore the failure and proceed as if the request had completed successfully."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Bounded retries with backoff is the standard pattern."
           }
         ]
       }
     }
   ]
-}
+};

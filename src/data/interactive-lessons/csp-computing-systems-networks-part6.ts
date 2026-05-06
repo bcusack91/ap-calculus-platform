@@ -1,175 +1,172 @@
 export const cspComputingSystemsNetworksPart6Data = {
-  topicSlug: 'csp-computing-systems-networks',
+  topicSlug: "csp-computing-systems-networks",
   sections: [
     {
-      id: 'cspcompu6-intro',
+      id: "cspcsn6-intro",
       type: 'text' as const,
       content: `
 # 🖥️ Computing Systems & Networks
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Computing Systems & Networks concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Computing Systems & Networks |
-| **Argumentation** | Making evidence-based claims about Computing Systems & Networks |
-| **Spatial reasoning** | Using geographic thinking to analyze Computing Systems & Networks |
+## Systems & Networks Workshop
       `
     },
     {
-      id: 'cspcompu6-quiz1',
+      id: "cspcsn6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Computing Systems & Networks, the first step is:',
+            question: "Two computers in the same room transfer a 10 GB file at 100 Mbps. Approximate transfer time?",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              "8 minutes",
+              "8 seconds",
+              "8 hours",
+              "8 days"
             ],
             correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            explanation: "10 GB ≈ 80,000 Mb / 100 Mbps = 800 s ≈ 13 min (8–13 min range)."
           },
           {
-            question: 'An evidence-based argument about Computing Systems & Networks requires:',
+            question: "A user from New York pings a server in Tokyo and gets ~150 ms RTT. The dominant factor is ___",
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "CPU speed.",
+              "distance / speed of light + intermediate routers.",
+              "TLS handshake only.",
+              "compression."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "Long-distance latency is dominated by physical distance + hops."
           }
         ]
       }
     },
     {
-      id: 'cspcompu6-content',
+      id: "cspcsn6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: Estimate A Transfer
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Computing Systems & Networks. Understanding this concept is essential for mastering Computing Systems & Networks in AP CS Principles.
+1 byte = 8 bits. 1 GB = 8 Gb. At 100 Mbps you transfer 100 Mb / second = ~12.5 MB / second. So 10 GB ≈ 800 seconds.
 
-### Argumentation
-Making evidence-based claims about Computing Systems & Networks. This builds on the previous concept and connects to broader themes in the course.
+## Worked: Choose An Architecture
 
-### Spatial reasoning
-Using geographic thinking to analyze Computing Systems & Networks. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Use case | Best fit |
+|---------|---------|
+| News article serving | CDN + caching |
+| Multiplayer game | Game servers + UDP |
+| Banking transactions | Strong consistency + TCP + TLS |
+| Sensor telemetry | Edge aggregation + bursty upstream |
+
+## Worked: Diagnose A Slow App
+
+| Symptom | Likely cause |
+|---------|-------------|
+| Spinner forever | DNS / TCP / firewall |
+| Loads then stalls | Backend slow query |
+| Slow on first visit | No caching, large bundle |
+| Slow only on Wi-Fi | Local interference / bandwidth |
+| Slow worldwide except home country | No CDN |
       `
     },
     {
-      id: 'cspcompu6-input',
+      id: "cspcsn6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Computing Systems & Networks?
+1) Transferring 1 GB at 100 Mbps takes about _______ seconds.
 
-2) What concept describes making evidence-based claims about Computing Systems & Networks?
+2) A "spinner forever" symptom often points to a _______ failure.
 
-3) Name the term for using geographic thinking to analyze Computing Systems & Networks.
-
-Use the exact term from this part.
+3) Slow app worldwide except home country suggests no _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Computing Systems & Networks), Argumentation (Making evidence-based claims about Computing Systems & Networks), and Spatial reasoning (Using geographic thinking to analyze Computing Systems & Networks).'
+        correctAnswers: ["80", "DNS", "CDN"],
+        hint1: "8 Gb / 100 Mb/s.",
+        hint2: "Name resolution.",
+        hint3: "Edge delivery.",
+        explanation: "Bandwidth math; DNS; CDN."
       }
     },
     {
-      id: 'cspcompu6-dropdown',
+      id: "cspcsn6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Computing Systems & Networks is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A satellite link with 100 Mbps and 600 ms RTT is best for ___",
+            options: ["large bulk transfers", "real-time first-person shooters", "live debate", "video calls"]
           },
           {
-            label: 'Making evidence-based claims about Computing Systems & Networks describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "A region without a nearby CDN node experiences ___",
+            options: ["higher latency to fetch the same content", "free service", "better DNS", "lower TLS overhead"]
           },
           {
-            label: 'Using geographic thinking to analyze Computing Systems & Networks is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "A multi-tenant cloud server's shared CPU may cause ___",
+            options: ["\"noisy neighbor\" performance variance", "lossy compression", "TLS failure", "IPv6 collapse"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Computing Systems & Networks. Argumentation — Making evidence-based claims about Computing Systems & Networks. Spatial reasoning — Using geographic thinking to analyze Computing Systems & Networks.'
+        correctAnswers: ["large bulk transfers", "higher latency to fetch the same content", "\"noisy neighbor\" performance variance"],
+        hint1: "Bandwidth ≠ latency.",
+        hint2: "No nearby cache.",
+        hint3: "Shared resources.",
+        explanation: "Sat for bulk; no CDN = high latency; cloud noisy neighbors are real."
       }
     },
     {
-      id: 'cspcompu6-strategy',
+      id: "cspcsn6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Computing Systems & Networks.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- Practice bandwidth × time math for file transfers.
+- Match symptoms to causes (DNS / TCP / CDN / backend / bandwidth).
+- Real-time vs. bulk drives architecture.
       `
     },
     {
-      id: 'cspcompu6-applied',
+      id: "cspcsn6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Computing Systems & Networks and asked to identify a trend. You should:',
+            question: "A team's app feels fast in the US but slow in Asia. The single most useful change is ___",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "no architectural change — the user-perceived gap will resolve as users adapt over time.",
+              "add a CDN with Asian edge nodes so static content is served closer to users there.",
+              "switch the entire site from TLS 1.3 down to the older TLS 1.0 protocol everywhere.",
+              "switch every endpoint from TCP to UDP and accept whatever packet loss results."
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "Geographic CDN reduces transcontinental latency."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Computing Systems & Networks. The best approach is:',
+            question: "A user complains about laggy video calls on a Wi-Fi connection with 200 Mbps download. The most likely culprit is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "raw bandwidth — 200 Mbps is simply not enough capacity to make video calls usable.",
+              "latency, jitter, or packet loss on Wi-Fi or upstream — bandwidth alone isn't enough.",
+              "transport-layer security overhead on every packet exchanged with the call server.",
+              "lossy compression artifacts in the video stream that the call client can't decode."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "Real-time depends on latency / jitter / packet loss, not just bandwidth."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,174 @@
 export const cspCollaborationDevelopmentPart4Data = {
-  topicSlug: 'csp-collaboration-development',
+  topicSlug: "csp-collaboration-development",
   sections: [
     {
-      id: 'cspcolla4-intro',
+      id: "cspcoll4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Collaboration in Development
+# 🤝 Collaboration in Development
 
 **Part 4 of 7 — Connections & Interactions**
 
-Collaboration in Development connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Collaboration Connects Across The Course
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Collaboration in Development links to other course topics |
-| **Scale interaction** | How Collaboration in Development operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Collaboration in Development can reinforce or modify the original process |
+| Cross-link | Why |
+|-----------|-----|
+| Collab ↔ Internet | Tools enable global teams. |
+| Collab ↔ Algorithms | Diff / merge algorithms power version control. |
+| Collab ↔ Security | Credential management and access control. |
+| Collab ↔ Impact | Diverse teams build more inclusive products. |
       `
     },
     {
-      id: 'cspcolla4-quiz1',
+      id: "cspcoll4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Collaboration in Development connects to other course topics through:',
+            question: "Two developers in different countries co-edit the same file. The technology that prevents their changes from clobbering each other is ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "faster local hardware so each save completes before the other starts.",
+              "a version-control system with merging (for example, Git).",
+              "a real-time chat app that notifies each developer when the file is touched.",
+              "a network protocol upgrade such as IPv6 that orders concurrent writes."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Version control merges changes; without it concurrent edits would overwrite."
           },
           {
-            question: 'A feedback loop in Collaboration in Development means:',
+            question: "When new contributors join a project, the most efficient way for them to get up to speed is usually ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "start coding immediately and figure things out by trial and error.",
+              "read documentation, study recent PRs, then make a small contribution under review.",
+              "rewrite the whole codebase in their own style to learn how it works.",
+              "avoid asking the rest of the team any questions during onboarding."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Docs + PR history + small reviewed contribution."
           }
         ]
       }
     },
     {
-      id: 'cspcolla4-content',
+      id: "cspcoll4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Tools That Make Collaboration Possible
 
-### Interconnection
-How Collaboration in Development links to other course topics. Understanding this concept is essential for mastering Collaboration in Development in AP CS Principles.
+| Tool | Purpose |
+|------|---------|
+| Git / GitHub | Version control + PRs + issue tracking. |
+| Chat (Slack, Discord) | Async + real-time team communication. |
+| Video conferencing | Sync conversation, demos, pair programming. |
+| Docs (wikis, Notion) | Long-lived shared knowledge. |
+| Issue trackers | Plan and triage work. |
 
-### Scale interaction
-How Collaboration in Development operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+## Permissions And Access
 
-### Feedback loop
-How outcomes of Collaboration in Development can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Collaboration introduces access decisions:
+
+- Who can read / write / merge / deploy / delete?
+
+Principle: grant the **least privilege** needed. Review access regularly. Revoke when teammates leave.
       `
     },
     {
-      id: 'cspcolla4-input',
+      id: "cspcoll4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Collaboration in Development links to other course topics?
+1) A version-control system that powers most modern open-source collaboration is _______.
 
-2) What concept describes how Collaboration in Development operates differently at local, national, and global scales?
+2) The principle of granting only the access a teammate actually needs is called _______ privilege.
 
-3) Name the term for how outcomes of Collaboration in Development can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) A real-time document editor that merges concurrent edits enables _______ editing.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Collaboration in Development links to other course topics), Scale interaction (How Collaboration in Development operates differently at local, national, and global scales), and Feedback loop (How outcomes of Collaboration in Development can reinforce or modify the original process).'
+        correctAnswers: ["Git", "least", "concurrent"],
+        hint1: "Three letters.",
+        hint2: "Minimum access.",
+        hint3: "Many at once.",
+        explanation: "Git = dominant VCS. Least privilege = security best practice. Concurrent editing supports many simultaneously."
       }
     },
     {
-      id: 'cspcolla4-dropdown',
+      id: "cspcoll4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Collaboration in Development links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "When a teammate leaves the team, their access should be ___",
+            options: ["revoked immediately", "left in place forever", "expanded", "shared with strangers"]
           },
           {
-            label: 'How Collaboration in Development operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "A version-control merge conflict happens when ___",
+            options: ["two people edited the same lines in different ways", "the network is down", "a file was renamed", "the program won't compile"]
           },
           {
-            label: 'How outcomes of Collaboration in Development can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A team that loses internet access ___",
+            options: ["can still work locally with Git, then sync later", "cannot do any work at all", "must use only encryption", "must use only UDP"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Collaboration in Development links to other course topics. Scale interaction — How Collaboration in Development operates differently at local, national, and global scales. Feedback loop — How outcomes of Collaboration in Development can reinforce or modify the original process.'
+        correctAnswers: ["revoked immediately", "two people edited the same lines in different ways", "can still work locally with Git, then sync later"],
+        hint1: "Stale access = risk.",
+        hint2: "Same lines, different edits.",
+        hint3: "Git is distributed.",
+        explanation: "Revoke departing teammates' access. Conflicts = same lines edited. Git allows offline work."
       }
     },
     {
-      id: 'cspcolla4-strategy',
+      id: "cspcoll4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Collaboration Tools
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Collaboration in Development.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "Two people edit the same file" → version control with merging.
+- "Teammate leaves" → revoke access, rotate credentials.
+- "Distributed team" → async written communication + version control + occasional sync calls.
       `
     },
     {
-      id: 'cspcolla4-applied',
+      id: "cspcoll4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Collaboration in Development and other units earns higher scores because:',
+            question: "A team uses a shared admin account where everyone knows the password. The biggest CSP-aligned concerns are ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "shared admin accounts are convenient and have no real downside.",
+              "no audit trail of who did what and revocation requires resetting the password for everyone.",
+              "the password is too long for everyone on the team to remember accurately.",
+              "shared accounts force the team to use slower transport-layer protocols."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Shared accounts break least privilege and audit trails."
           },
           {
-            question: 'If Collaboration in Development produces outcomes that further intensify the original process, this is:',
+            question: "A junior developer makes their first PR with a small bug. A healthy team response is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "publicly call out the developer in chat so others avoid the same mistake.",
+              "leave constructive review comments, suggest a fix, and approve once corrected.",
+              "silently revert the commits without explaining what was wrong with them.",
+              "block the developer from submitting any further pull requests this quarter."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Constructive code review centers the work."
           }
         ]
       }
     }
   ]
-}
+};

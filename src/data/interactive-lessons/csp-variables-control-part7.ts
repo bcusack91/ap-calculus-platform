@@ -1,175 +1,176 @@
 export const cspVariablesControlPart7Data = {
-  topicSlug: 'csp-variables-control',
+  topicSlug: "csp-variables-control",
   sections: [
     {
-      id: 'cspvaria7-intro',
+      id: "cspvc7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Variables & Control Structures
+# 🔀 Variables & Control Flow
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Variables & Control Structures for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Variables & Control Flow
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Variables & Control Structures |
-| **Common question types** | The most frequent ways Variables & Control Structures is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Variables & Control Structures questions effectively |
+Final review.
       `
     },
     {
-      id: 'cspvaria7-quiz1',
+      id: "cspvc7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Variables & Control Structures is:',
+            question: "Assignment **x ← y** ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "tests if x equals y.",
+              "copies y's value into x.",
+              "swaps x and y.",
+              "deletes y."
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "Assignment = copy right into left."
           },
           {
-            question: 'AP multiple-choice questions about Variables & Control Structures often test:',
+            question: "A REPEAT UNTIL loop stops when its condition ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "becomes true.",
+              "becomes false.",
+              "is initialized.",
+              "is encrypted."
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: "REPEAT UNTIL exits when the condition becomes true."
           }
         ]
       }
     },
     {
-      id: 'cspvaria7-content',
+      id: "cspvc7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Variables & Control Structures. Understanding this concept is essential for mastering Variables & Control Structures in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Variable | Named container for a value. |
+| Assignment | Set a variable's value. |
+| Boolean | True / false. |
+| Sequencing | Steps in order. |
+| Selection | IF / ELSE. |
+| Iteration | Loop. |
+| Scope | Where a variable is visible. |
+| Local / global | Inside a procedure / whole program. |
+| Constant | Variable that never changes. |
+| Off-by-one | A common bug at loop boundaries. |
+| Side effect | Change to state outside the local scope. |
 
-### Common question types
-The most frequent ways Variables & Control Structures is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Variables & Control Structures questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Reading **=** as equality when it's assignment (or vice versa).
+- Off-by-one errors in loops.
+- Infinite loops (condition never becomes the exit condition).
+- Modifying global state from many places, creating bugs.
+- Forgetting that AP pseudocode is 1-indexed.
       `
     },
     {
-      id: 'cspvaria7-input',
+      id: "cspvc7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Variables & Control Structures?
+1) AP CSP pseudocode lists are _______-indexed.
 
-2) What concept describes the most frequent ways Variables & Control Structures is tested on the AP exam?
+2) A loop whose exit condition is never satisfied is called an _______ loop.
 
-3) Name the term for approaches for answering Variables & Control Structures questions effectively.
-
-Use the exact term from this part.
+3) A bug where a loop runs one too many or one too few times is an _______-by-one error.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Variables & Control Structures), Common question types (The most frequent ways Variables & Control Structures is tested on the AP exam), and Exam strategy (Approaches for answering Variables & Control Structures questions effectively).'
+        correctAnswers: ["1", "infinite", "off"],
+        hint1: "1-indexed.",
+        hint2: "Never stops.",
+        hint3: "Common boundary bug.",
+        explanation: "1-indexed pseudocode, infinite loops, off-by-one errors."
       }
     },
     {
-      id: 'cspvaria7-dropdown',
+      id: "cspvc7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Variables & Control Structures is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "IF / ELSE IF / ELSE chains are best when ___",
+            options: ["cases partition into ranked conditions", "a loop is needed", "no decision is needed", "compression is needed"]
           },
           {
-            label: 'The most frequent ways Variables & Control Structures is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "Tracing through code with a small variable table is ___",
+            options: ["the standard technique for predicting program output", "illegal", "optional only", "a compression technique"]
           },
           {
-            label: 'Approaches for answering Variables & Control Structures questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "A pure function without side effects is ___",
+            options: ["easier to test and reason about", "always slower", "cannot be reused", "always encrypted"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Variables & Control Structures. Common question types — The most frequent ways Variables & Control Structures is tested on the AP exam. Exam strategy — Approaches for answering Variables & Control Structures questions effectively.'
+        correctAnswers: ["cases partition into ranked conditions", "the standard technique for predicting program output", "easier to test and reason about"],
+        hint1: "Multi-way.",
+        hint2: "Trace tables.",
+        hint3: "Predictability.",
+        explanation: "Else-if for ranked cases. Tracing predicts output. Pure functions are testable."
       }
     },
     {
-      id: 'cspvaria7-strategy',
+      id: "cspvc7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Variables & Control Structures.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Trace tables are your friend.
+- Distinguish counter / accumulator / search / filter / max patterns.
+- Watch for off-by-one and infinite loops.
+- Local + constant + pure = modern good practice.
       `
     },
     {
-      id: 'cspvaria7-applied',
+      id: "cspvc7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Variables & Control Structures. You should:',
+            question: "A program needs to find the SECOND-largest value in a list. The most straightforward approach is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "no loop needed — the second-largest value can be read off any single element.",
+              "two \"best so far\" trackers (largest and secondLargest) updated together as you scan.",
+              "random selection of one element and returning it as the second-largest candidate.",
+              "sort the list ascending and then take its first element as the second-largest value."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "Single-pass with two trackers — also acceptable: sort then take element 2 from end."
           },
           {
-            question: 'For free-response questions on Variables & Control Structures, the most common mistake is:',
+            question: "A counter variable is incremented from event handlers AND from a timer. Without coordination, the count is sometimes wrong. The most accurate diagnosis is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "no issue — concurrent increments to the same counter always interleave safely by default.",
+              "a race condition on shared mutable state; needs synchronization or a different design.",
+              "a compression issue that causes the counter to shrink occasionally between updates.",
+              "a transport-layer issue that prevents the counter from updating across the network."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Concurrent updates to shared state cause race conditions."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,182 @@
 export const cspSafeComputingPart6Data = {
-  topicSlug: 'csp-safe-computing',
+  topicSlug: "csp-safe-computing",
   sections: [
     {
-      id: 'cspsafec6-intro',
+      id: "cspsc6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔐 Safe Computing
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Safe Computing Practices concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Safe Computing Practices |
-| **Argumentation** | Making evidence-based claims about Safe Computing Practices |
-| **Spatial reasoning** | Using geographic thinking to analyze Safe Computing Practices |
+## Safe Computing Workshop
       `
     },
     {
-      id: 'cspsafec6-quiz1',
+      id: "cspsc6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Safe Computing Practices, the first step is:',
+            question: "A user asks if MFA via SMS is enough for an admin account. The most accurate answer is ___",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Safe Computing Practices requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "SMS MFA is the strongest possible second factor available for any sensitive admin account.",
+              "SMS MFA helps but is vulnerable to SIM-swap; use an authenticator app or hardware key instead.",
+              "No multi-factor authentication is needed at all on a properly configured admin account.",
+              "Transport-layer security on the admin login fully covers everything multi-factor would add."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "SMS > nothing, but app/hardware factor is stronger."
+          },
+          {
+            question: "Using a unique random password per site requires ___",
+            options: [
+              "memorizing each random password yourself, as humans can reliably recall hundreds of strings.",
+              "a password manager — humans cannot reliably memorize hundreds of unique random passwords.",
+              "no tool whatsoever, since browsers will autofill any random password without storing it.",
+              "transport-layer security on the login form to make each random password short enough."
+            ],
+            correctAnswer: 1,
+            explanation: "Password managers enable real uniqueness."
           }
         ]
       }
     },
     {
-      id: 'cspsafec6-content',
+      id: "cspsc6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: A Personal Security Checkup
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Safe Computing Practices. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+| Area | Action |
+|------|--------|
+| Passwords | Move to manager + unique per site. |
+| MFA | Enable on email, banking, social. |
+| Email | Audit forwarding rules and recovery info. |
+| Devices | Enable OS encryption; auto-update; lock screen. |
+| Backups | Off-device backups; test restore. |
+| Browser | Review extensions and permissions. |
+| Apps | Audit installed apps and permissions. |
 
-### Argumentation
-Making evidence-based claims about Safe Computing Practices. This builds on the previous concept and connects to broader themes in the course.
+## Worked: A Phishing Smell-Test
 
-### Spatial reasoning
-Using geographic thinking to analyze Safe Computing Practices. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+If a message:
+
+1. Pressures urgency, OR
+2. Asks for credentials / MFA codes / money, OR
+3. Has a mismatched sender / domain, OR
+4. Has a link whose actual destination differs from its text,
+
+…treat as phishing until proven otherwise. Verify out-of-band.
+
+## Worked: Recovering A Compromised Account
+
+1. Sign out from all sessions.
+2. Change password (long, unique, manager-stored).
+3. Reset MFA; remove old factors.
+4. Audit recovery email + phone — change if compromised.
+5. Audit connected apps and revoke unknown ones.
+6. Notify contacts.
+7. Run an antivirus / malware scan if you suspect device compromise.
       `
     },
     {
-      id: 'cspsafec6-input',
+      id: "cspsc6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Safe Computing Practices?
+1) After a compromise, after changing the password you should reset _______.
 
-2) What concept describes making evidence-based claims about Safe Computing Practices?
+2) You should audit connected _______ to revoke anything unfamiliar.
 
-3) Name the term for using geographic thinking to analyze Safe Computing Practices.
-
-Use the exact term from this part.
+3) If you suspect device-level compromise, run an _______ scan.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Safe Computing Practices), Argumentation (Making evidence-based claims about Safe Computing Practices), and Spatial reasoning (Using geographic thinking to analyze Safe Computing Practices).'
+        correctAnswers: ["MFA", "apps", "antivirus"],
+        hint1: "Reset second factor.",
+        hint2: "Third-party access.",
+        hint3: "Malware scan.",
+        explanation: "MFA reset / connected apps audit / antivirus scan."
       }
     },
     {
-      id: 'cspsafec6-dropdown',
+      id: "cspsc6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Safe Computing Practices is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A password manager primarily makes ___ practical",
+            options: ["unique strong passwords for every site", "memorizing one password for all sites", "no passwords at all", "compression of passwords"]
           },
           {
-            label: 'Making evidence-based claims about Safe Computing Practices describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "A long passphrase like \"correct-horse-battery-staple\" is ___",
+            options: ["stronger than a short complex password and easier to remember", "weaker than \"P@ss1\"", "always invalid", "always rejected"]
           },
           {
-            label: 'Using geographic thinking to analyze Safe Computing Practices is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "Reviewing privacy settings periodically is ___",
+            options: ["important because defaults and policies change over time", "unnecessary", "a TLS feature", "a compression feature"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Safe Computing Practices. Argumentation — Making evidence-based claims about Safe Computing Practices. Spatial reasoning — Using geographic thinking to analyze Safe Computing Practices.'
+        correctAnswers: ["unique strong passwords for every site", "stronger than a short complex password and easier to remember", "important because defaults and policies change over time"],
+        hint1: "Manager solves uniqueness.",
+        hint2: "Length wins.",
+        hint3: "Settings drift.",
+        explanation: "Manager + uniqueness; long passphrases; review settings periodically."
       }
     },
     {
-      id: 'cspsafec6-strategy',
+      id: "cspsc6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Safe Computing Practices.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- Personal security checkup as a habit, not a one-time event.
+- Phishing smell-test = urgency + creds/codes/money + mismatched sender + suspicious link.
+- Account recovery = sign out + reset password + reset MFA + audit recovery channels + audit connected apps.
       `
     },
     {
-      id: 'cspsafec6-applied',
+      id: "cspsc6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Safe Computing Practices and asked to identify a trend. You should:',
+            question: "A user gets an authenticator-app push they did NOT initiate. The most appropriate response is ___",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "approve the push so the notification disappears and the user can return to what they were doing.",
+              "deny the push, then change the password and review account activity — someone has the password.",
+              "turn off multi-factor authentication on the account so future spurious pushes will not appear.",
+              "compress the authenticator app's notification log so the spurious push will be hidden inside."
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "\"MFA bombing\" deny + investigate is the right answer."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Safe Computing Practices. The best approach is:',
+            question: "A teacher wants to recommend ONE upgrade to student safety. The single highest-impact change is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "use shorter passwords so students will reliably memorize them across every account they own.",
+              "enable MFA on the student email account, since it's the recovery channel for everything else.",
+              "disable transport-layer security on the student's outbound browser traffic to simplify access.",
+              "install a wide variety of unfamiliar browser extensions to extend the student's capabilities."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "MFA on email is highest-leverage."
           }
         ]
       }
     }
   ]
-}
+};

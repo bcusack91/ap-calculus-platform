@@ -1,175 +1,186 @@
 export const cspSafeComputingPart2Data = {
-  topicSlug: 'csp-safe-computing',
+  topicSlug: "csp-safe-computing",
   sections: [
     {
-      id: 'cspsafec2-intro',
+      id: "cspsc2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔐 Safe Computing
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Safe Computing Practices helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## Safe Computing Is About Personal Practice
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Safe Computing Practices |
-| **Process 2** | A secondary process that shapes outcomes in Safe Computing Practices |
-| **Cause and effect** | The relationship between actions and outcomes in Safe Computing Practices |
+CSP's "safe computing" topic focuses on what individuals and organizations DO to protect themselves: choices, habits, and configuration — not just the underlying tech.
+
+| Practice | What it does |
+|----------|-------------|
+| **Strong unique passwords** | Limits damage of any one breach. |
+| **Multi-factor authentication** | Makes a stolen password insufficient. |
+| **Software updates** | Closes known vulnerabilities. |
+| **Backups** | Recover from ransomware / mistakes. |
+| **Awareness of phishing** | Block attacks that exploit users, not code. |
       `
     },
     {
-      id: 'cspsafec2-quiz1',
+      id: "cspsc2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Safe Computing Practices?',
+            question: "A breach exposes the password \"qwerty123\" used at 14 different sites by the same person. The biggest direct consequence is ___",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "no measurable impact, since each site stores its own independent password copy.",
+              "attackers can try the same password on the user's other sites — credential stuffing.",
+              "the user's connection to those sites runs slightly slower because of the breach.",
+              "the user's browser refuses to compress requests sent to any of the breached sites."
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "Password reuse + breach = credential stuffing."
           },
           {
-            question: 'Understanding cause and effect in Safe Computing Practices helps students:',
+            question: "A user delays installing OS updates for 6 months. The biggest practical risk is ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "no risk at all, since the operating system already shipped with security defaults.",
+              "known vulnerabilities patched in those updates remain exploitable on this device.",
+              "the device's file compression algorithm becomes slightly slower than freshly patched ones.",
+              "the device removes its support for transport-layer security on outbound connections."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "Patches close known vulnerabilities."
           }
         ]
       }
     },
     {
-      id: 'cspsafec2-content',
+      id: "cspsc2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Password Hygiene
 
-### Process 1
-The primary mechanism that drives patterns in Safe Computing Practices. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+| Anti-pattern | Better practice |
+|-------------|----------------|
+| Same password everywhere | Use a password manager + unique passwords. |
+| Short / common passwords | Long passphrases or generated random strings. |
+| Sharing passwords | Use account delegation features. |
+| Writing them on a sticky note | Encrypted vault. |
 
-### Process 2
-A secondary process that shapes outcomes in Safe Computing Practices. This builds on the previous concept and connects to broader themes in the course.
+## Phishing And Social Engineering
 
-### Cause and effect
-The relationship between actions and outcomes in Safe Computing Practices. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Most modern breaches start with a person, not a zero-day. Recognize warning signs:
+
+- Urgency / threats ("Your account will be locked in 24 hours").
+- Mismatched sender / domain.
+- Generic greetings.
+- Asking for credentials, MFA codes, or money.
+- Links that don't match where they claim to go.
+
+## Personal Data Footprint
+
+Every account is a target. Reduce risk by:
+
+- Closing unused accounts.
+- Limiting what each app can access (permissions).
+- Reviewing privacy settings periodically.
       `
     },
     {
-      id: 'cspsafec2-input',
+      id: "cspsc2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Safe Computing Practices?
+1) Reusing the same password across sites is risky because of the _______ stuffing attack.
 
-2) What concept describes a secondary process that shapes outcomes in Safe Computing Practices?
+2) A separate device or app providing a one-time code is the second _______ in MFA.
 
-3) Name the term for the relationship between actions and outcomes in Safe Computing Practices.
-
-Use the exact term from this part.
+3) A common starting point of attacks targets users via _______ (deceptive emails, texts, or calls).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Safe Computing Practices), Process 2 (A secondary process that shapes outcomes in Safe Computing Practices), and Cause and effect (The relationship between actions and outcomes in Safe Computing Practices).'
+        correctAnswers: ["credential", "factor", "phishing"],
+        hint1: "Reuse attack name.",
+        hint2: "MFA term.",
+        hint3: "Social engineering.",
+        explanation: "Credential stuffing, second factor, phishing."
       }
     },
     {
-      id: 'cspsafec2-dropdown',
+      id: "cspsc2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Safe Computing Practices is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "A password manager primarily helps by ___",
+            options: ["enabling unique strong passwords for every site without memorizing them", "shortening passwords", "compressing data", "replacing TLS"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Safe Computing Practices describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "An email asking for an MFA code \"to verify your account\" is most likely ___",
+            options: ["phishing — never share MFA codes", "a legitimate request", "a CDN issue", "a TLS handshake"]
           },
           {
-            label: 'The relationship between actions and outcomes in Safe Computing Practices is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "Limiting an app's permissions reduces ___",
+            options: ["the data it can access if compromised", "compression ratio", "TLS overhead", "IPv6 routing"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Safe Computing Practices. Process 2 — A secondary process that shapes outcomes in Safe Computing Practices. Cause and effect — The relationship between actions and outcomes in Safe Computing Practices.'
+        correctAnswers: ["enabling unique strong passwords for every site without memorizing them", "phishing — never share MFA codes", "the data it can access if compromised"],
+        hint1: "Manager solves reuse.",
+        hint2: "Codes are private.",
+        hint3: "Least privilege.",
+        explanation: "Password managers, never-share-codes, least privilege."
       }
     },
     {
-      id: 'cspsafec2-strategy',
+      id: "cspsc2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Safe Computing Basics
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Safe Computing Practices.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Unique strong passwords + password manager + MFA = the modern baseline.
+- Don't share MFA codes; legitimate services never ask.
+- Patch promptly; phishing is the most common entry point.
       `
     },
     {
-      id: 'cspsafec2-applied',
+      id: "cspsc2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A user gets a text \"From [bank]: confirm transfer with code 482911\". They didn't initiate a transfer. The most appropriate response is ___",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "reply to the text with the code so the bank can finalize the transfer for them.",
+              "don't share the code; contact the bank directly using a known channel — likely phishing.",
+              "click any link in the text to investigate the source of the unexpected transfer.",
+              "reset every personal password without first contacting the bank to verify the text."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Never share codes; verify out-of-band."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A school encourages students to use the same password on every system \"for convenience\". The most CSP-aligned critique is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "no critique — password reuse is a reasonable trade-off for student convenience here.",
+              "a single breach exposes every system; teach unique passwords + a manager + MFA instead.",
+              "transport-layer security on each login form fully replaces the need for unique passwords.",
+              "compressing each password before storage would resolve the underlying reuse problem here."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Reuse compounds breach impact."
           }
         ]
       }
     }
   ]
-}
+};

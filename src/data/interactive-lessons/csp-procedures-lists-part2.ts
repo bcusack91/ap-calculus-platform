@@ -1,175 +1,200 @@
 export const cspProceduresListsPart2Data = {
-  topicSlug: 'csp-procedures-lists',
+  topicSlug: "csp-procedures-lists",
   sections: [
     {
-      id: 'cspproce2-intro',
+      id: "csppl2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Procedures & Lists
+# 📋 Procedures & Lists
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Procedures & Lists helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## Procedures Bundle Reusable Logic
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Procedures & Lists |
-| **Process 2** | A secondary process that shapes outcomes in Procedures & Lists |
-| **Cause and effect** | The relationship between actions and outcomes in Procedures & Lists |
+A **procedure** (a.k.a. function or method) is a named, reusable block of instructions. Define once, call many times.
+
+    PROCEDURE greet(name)
+      DISPLAY("Hello, " + name)
+
+Calling **greet("Alex")** runs the body with name = "Alex".
+
+| Concept | Meaning |
+|---------|---------|
+| **Parameter** | Variable in the procedure's definition. |
+| **Argument** | Value passed in when calling. |
+| **Return value** | What the procedure produces. |
+| **Call** | The act of running the procedure. |
       `
     },
     {
-      id: 'cspproce2-quiz1',
+      id: "csppl2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Procedures & Lists?',
+            question: "In **greet(\"Alex\")**, \"Alex\" is the ___",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "parameter — the variable named in the procedure's definition",
+              "argument — the value supplied at the call site of the procedure",
+              "return value — what the procedure produces back to its caller",
+              "definition — the syntactic header that names the procedure"
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "The value passed at the call site is the argument."
           },
           {
-            question: 'Understanding cause and effect in Procedures & Lists helps students:',
+            question: "In **PROCEDURE greet(name)**, **name** is the ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "argument — the value supplied at the call site of the procedure",
+              "parameter — the variable named in the procedure's definition",
+              "return value — what the procedure produces back to its caller",
+              "global variable — a value visible from every part of the program"
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "The variable in the definition is the parameter."
           }
         ]
       }
     },
     {
-      id: 'cspproce2-content',
+      id: "csppl2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Why Procedures Matter
 
-### Process 1
-The primary mechanism that drives patterns in Procedures & Lists. Understanding this concept is essential for mastering Procedures & Lists in AP CS Principles.
+| Benefit | Explanation |
+|---------|-------------|
+| **Reuse** | Write logic once, call from many places. |
+| **Abstraction** | Caller doesn't need to know HOW it works. |
+| **Testability** | Test the procedure in isolation. |
+| **Readability** | A well-named procedure documents intent. |
 
-### Process 2
-A secondary process that shapes outcomes in Procedures & Lists. This builds on the previous concept and connects to broader themes in the course.
+## Lists Hold Many Values
 
-### Cause and effect
-The relationship between actions and outcomes in Procedures & Lists. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+A **list** is an ordered collection of values, accessed by index.
+
+    grades ← [85, 92, 78, 90]
+    grades[1] = 85   (in 1-indexed AP pseudocode)
+    LENGTH(grades) = 4
+
+Common list operations:
+
+| Operation | Effect |
+|-----------|--------|
+| **APPEND(list, x)** | Add x at the end. |
+| **INSERT(list, i, x)** | Insert x at index i. |
+| **REMOVE(list, i)** | Remove element at index i. |
+| **list[i]** | Read / write element i. |
+| **LENGTH(list)** | Number of elements. |
+
+## Mini-walkthrough
+
+    PROCEDURE average(scores)
+      total ← 0
+      FOR EACH s IN scores:
+        total ← total + s
+      RETURN total / LENGTH(scores)
+
+Now anywhere we need an average, we call **average(myList)**.
       `
     },
     {
-      id: 'cspproce2-input',
+      id: "csppl2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Procedures & Lists?
+1) A named, reusable block of instructions is called a _______.
 
-2) What concept describes a secondary process that shapes outcomes in Procedures & Lists?
+2) The variable in a procedure's definition that receives a value is called a _______.
 
-3) Name the term for the relationship between actions and outcomes in Procedures & Lists.
-
-Use the exact term from this part.
+3) In AP CSP pseudocode, the first element of a list is at index _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Procedures & Lists), Process 2 (A secondary process that shapes outcomes in Procedures & Lists), and Cause and effect (The relationship between actions and outcomes in Procedures & Lists).'
+        correctAnswers: ["procedure", "parameter", "1"],
+        hint1: "Function-like.",
+        hint2: "Definition-side.",
+        hint3: "1-indexed.",
+        explanation: "Procedure, parameter, 1-indexed lists."
       }
     },
     {
-      id: 'cspproce2-dropdown',
+      id: "csppl2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Procedures & Lists is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "**APPEND(list, x)** ___",
+            options: ["adds x to the end of list, increasing its length by 1", "removes x from list", "sorts list", "replaces list with x"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Procedures & Lists describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "A procedure with a RETURN value is meant to be ___",
+            options: ["used as an expression whose value is the returned value", "called only as a statement", "never called", "called recursively only"]
           },
           {
-            label: 'The relationship between actions and outcomes in Procedures & Lists is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "Calling **LENGTH([4, 8, 15])** returns ___",
+            options: ["3", "15", "27", "0"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Procedures & Lists. Process 2 — A secondary process that shapes outcomes in Procedures & Lists. Cause and effect — The relationship between actions and outcomes in Procedures & Lists.'
+        correctAnswers: ["adds x to the end of list, increasing its length by 1", "used as an expression whose value is the returned value", "3"],
+        hint1: "Append = end.",
+        hint2: "Returns are expressions.",
+        hint3: "Count of elements.",
+        explanation: "APPEND adds at end. RETURN procedures = expressions. LENGTH = element count."
       }
     },
     {
-      id: 'cspproce2-strategy',
+      id: "csppl2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Procedures & Lists
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Procedures & Lists.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Know the parameter / argument distinction.
+- Be careful with 1-based indexing in AP pseudocode.
+- LENGTH, APPEND, INSERT, REMOVE are the core list ops.
       `
     },
     {
-      id: 'cspproce2-applied',
+      id: "csppl2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A program calls **maxOf(grades)** in three different places. The most direct benefit of using a procedure is ___",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "no benefit — inlining the same code in three places would be equally maintainable.",
+              "a single source of truth for \"find max\" — fix bugs once, change once, test once.",
+              "compression of the program because the procedure header is shorter than the body.",
+              "transport-layer speedups for whatever the program does after computing the max."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Procedures consolidate logic."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A list **prices** has 5 elements. After **APPEND(prices, 9.99)**, LENGTH(prices) is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "4",
+              "5",
+              "6",
+              "0"
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 2,
+            explanation: "APPEND adds one element."
           }
         ]
       }
     }
   ]
-}
+};

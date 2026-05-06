@@ -1,175 +1,202 @@
 export const cspImpactOfComputingPart3Data = {
-  topicSlug: 'csp-impact-of-computing',
+  topicSlug: "csp-impact-of-computing",
   sections: [
     {
-      id: 'cspimpac3-intro',
+      id: "cspic3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Impact of Computing
+# 🌍 Impact of Computing
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Impact of Computing. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Patterns Of Impact
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Impact of Computing |
-| **Case study** | A specific real-world example that illustrates Impact of Computing |
-| **Comparison** | Analyzing similarities and differences across examples of Impact of Computing |
+Recurring categories of impact you'll be asked to recognize.
+
+| Category | Examples |
+|---------|---------|
+| **Privacy** | Personal data collected, sold, leaked. |
+| **Security** | Phishing, malware, breaches. |
+| **Bias / Fairness** | ML systems trained on biased data. |
+| **Intellectual property** | Copying, remixing, attribution. |
+| **Crowdsourcing** | Wikipedia, citizen science, open-source. |
+| **Automation / labor** | Job displacement, task augmentation. |
       `
     },
     {
-      id: 'cspimpac3-quiz1',
+      id: "cspic3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A face-recognition system is significantly less accurate on people of color than on white faces. The most accurate diagnosis is ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "the underlying recognition algorithm itself is intrinsically unfair regardless of which training images were used to fit it.",
+              "the training image dataset was likely not representative of the target population, leading to biased recognition outcomes.",
+              "pixel data fundamentally encodes a bias against certain skin tones at the level of the file format the camera produced.",
+              "modern digital camera sensors have been shown to systematically dislike certain skin tones during the recognition process."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Algorithmic bias most often stems from non-representative training data; the model learns the gaps in its input."
           },
           {
-            question: 'Comparing examples of Impact of Computing across regions helps:',
+            question: "Wikipedia is most clearly an example of ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "a strict client-server architecture in which one central authoritative server publishes all article content to passive readers.",
+              "crowdsourcing — many distributed contributors collectively producing and editing a shared body of encyclopedic knowledge.",
+              "a peer-to-peer file-sharing network in which each reader directly distributes article files to other readers nearby.",
+              "a machine-learning system that automatically generates new encyclopedia articles from raw web-scraped training data."
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Wikipedia is a textbook example of crowdsourcing."
           }
         ]
       }
     },
     {
-      id: 'cspimpac3-content',
+      id: "cspic3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Privacy: What Counts as PII?
 
-### Spatial pattern
-The geographic distribution related to Impact of Computing. Understanding this concept is essential for mastering Impact of Computing in AP CS Principles.
+**Personally Identifiable Information (PII)** = any data that can identify a specific person on its own or combined with other data.
 
-### Case study
-A specific real-world example that illustrates Impact of Computing. This builds on the previous concept and connects to broader themes in the course.
+| Direct PII | Indirect / quasi PII |
+|-----------|---------------------|
+| Name, SSN, email | ZIP + birth date + gender (often unique!) |
+| Home address | Browsing history |
+| Phone number | Geolocation traces |
 
-### Comparison
-Analyzing similarities and differences across examples of Impact of Computing. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+A surprising number of "anonymous" datasets can be **re-identified** by linking quasi-identifiers across sources.
+
+## Algorithmic Bias
+
+A model that learns from biased data reproduces that bias. Common cases:
+
+- Hiring tools trained on past hires perpetuate past hiring biases.
+- Risk-assessment scores trained on biased policing data target the same neighborhoods.
+- Speech recognition trained mostly on certain accents performs worse on others.
+
+The fix is multi-layered: representative data, fairness audits, human oversight, transparency.
+
+## Crowdsourcing
+
+Crowdsourcing harnesses many people's small contributions:
+
+- **Wikipedia**: knowledge.
+- **OpenStreetMap**: maps.
+- **Galaxy Zoo**: classifying galaxies.
+- **Open-source software**: code.
+
+Pros: scale, diversity, cost. Cons: quality control, vandalism, governance.
+
+## Intellectual Property In A Digital World
+
+A digital file is trivially copyable. This collides with traditional IP law (copyright, patents). Modern responses include:
+
+- **Open licenses**: Creative Commons, MIT, GPL — explicit grants of permission.
+- **DRM** (Digital Rights Management): technical restrictions on copying.
+- **Attribution**: even open work usually requires credit.
       `
     },
     {
-      id: 'cspimpac3-input',
+      id: "cspic3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Impact of Computing?
+1) Data that can identify a specific person is called _______.
 
-2) What concept describes a specific real-world example that illustrates Impact of Computing?
+2) When an algorithm produces unfair outcomes due to its training data, this is called algorithmic _______.
 
-3) Name the term for analyzing similarities and differences across examples of Impact of Computing.
-
-Use the exact term from this part.
+3) A project where many people contribute small pieces toward a shared product is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Impact of Computing), Case study (A specific real-world example that illustrates Impact of Computing), and Comparison (Analyzing similarities and differences across examples of Impact of Computing).'
+        correctAnswers: ["PII", "bias", "crowdsourcing"],
+        hint1: "Personally Identifiable Information.",
+        hint2: "A systematic skew.",
+        hint3: "Wikipedia is the canonical example.",
+        explanation: "PII = identifying data. Algorithmic bias usually traces to data. Crowdsourcing = many small contributions."
       }
     },
     {
-      id: 'cspimpac3-dropdown',
+      id: "cspic3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Impact of Computing is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A \"Creative Commons BY-SA\" license requires ___",
+            options: ["attribution and that derivatives use the same license", "paying a fee", "no use whatsoever", "destroying the original"]
           },
           {
-            label: 'A specific real-world example that illustrates Impact of Computing describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "An \"anonymized\" dataset of medical records combined with public voter rolls might allow ___",
+            options: ["re-identification of specific individuals", "no privacy concerns", "TLS encryption", "longer battery life"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Impact of Computing is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "Open-source software is most clearly an example of ___",
+            options: ["crowdsourcing applied to code", "centralized corporate development", "a P2P file system", "compression"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Impact of Computing. Case study — A specific real-world example that illustrates Impact of Computing. Comparison — Analyzing similarities and differences across examples of Impact of Computing.'
+        correctAnswers: ["attribution and that derivatives use the same license", "re-identification of specific individuals", "crowdsourcing applied to code"],
+        hint1: "BY=attribution, SA=share alike.",
+        hint2: "Cross-linked datasets defeat anonymization.",
+        hint3: "Many contributors, shared code.",
+        explanation: "CC BY-SA = attribution + share alike. Linkage attacks defeat naive anonymization. Open source = crowdsourced code."
       }
     },
     {
-      id: 'cspimpac3-strategy',
+      id: "cspic3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Impact Categories
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Impact of Computing.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- For privacy questions, identify what data is collected and what could go wrong if it leaks or is combined.
+- For bias questions, look at the training data, not just the model.
+- For IP questions, think about copying, remixing, and attribution.
+- For crowdsourcing, weigh scale benefits against quality / vandalism risks.
       `
     },
     {
-      id: 'cspimpac3-applied',
+      id: "cspic3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Impact of Computing. The strongest response would:',
+            question: "A hiring tool is trained on resumes from the past 10 years of a company that historically hired mostly men. The most likely outcome is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "the hiring tool will be perfectly fair across genders because algorithms automatically remove human bias from the hiring process.",
+              "the hiring tool will likely reproduce the historical hiring bias, systematically disadvantaging qualified women applying for the same roles.",
+              "the hiring tool will simply fail to read resume files because resumes contain too many free-form text fields for it to parse.",
+              "the hiring tool will overcorrect and end up hiring only women, even when the male candidates are clearly better qualified."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "ML systems learn historical patterns; biased input data → biased predictions."
           },
           {
-            question: 'A pattern observed in Impact of Computing is consistent across multiple world regions. This suggests:',
+            question: "A free photo-storage service offers unlimited storage in exchange for permission to scan photos for advertising data. Which is the most accurate framing?",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "The user pays nothing of value for the storage service and faces no other costs in return for the unlimited storage offer.",
+              "The user pays with personal data; the economic value of that data may exceed the storage cost the company would otherwise charge.",
+              "There are no privacy implications because photos uploaded to the service are scanned only by automated software and not by humans.",
+              "Photos cannot reliably be stored in digital form on a remote service like this one without significantly degrading their quality."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "When the product is free, you are often the product — the data has economic value."
           }
         ]
       }
     }
   ]
-}
+};

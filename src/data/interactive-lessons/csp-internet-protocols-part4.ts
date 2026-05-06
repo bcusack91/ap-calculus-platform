@@ -1,175 +1,192 @@
 export const cspInternetProtocolsPart4Data = {
-  topicSlug: 'csp-internet-protocols',
+  topicSlug: "csp-internet-protocols",
   sections: [
     {
-      id: 'cspinter4-intro',
+      id: "cspip4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ The Internet & Protocols
+# 🌐 The Internet & Protocols
 
 **Part 4 of 7 — Connections & Interactions**
 
-The Internet & Protocols connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Internet Connections Across the Course
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How The Internet & Protocols links to other course topics |
-| **Scale interaction** | How The Internet & Protocols operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of The Internet & Protocols can reinforce or modify the original process |
+The Internet is the substrate everything else runs on.
+
+| Connection | Why it matters |
+|-----------|---------------|
+| Internet ↔ Binary (BI 2) | All packets are bit sequences. |
+| Internet ↔ Algorithms (BI 3) | Routing IS an algorithm; so is congestion control. |
+| Internet ↔ Security (BI 4) | TLS encrypts traffic; certificates establish trust. |
+| Internet ↔ Impact (BI 5) | Global reach amplifies both benefit and harm. |
       `
     },
     {
-      id: 'cspinter4-quiz1',
+      id: "cspip4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The Internet & Protocols connects to other course topics through:',
+            question: "Which property of the Internet most directly enables global, low-cost communication?",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "Centralized control by a single company.",
+              "Open, standardized protocols any device can implement.",
+              "Mandatory encryption at every layer.",
+              "Government-issued IP addresses."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Open standards + interoperability = anyone can join, anyone can build."
           },
           {
-            question: 'A feedback loop in The Internet & Protocols means:',
+            question: "HTTPS adds which property over HTTP?",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "Faster page loads in all cases.",
+              "Encryption (and authenticated identity of the server) via TLS.",
+              "Compression of every page.",
+              "Lower bandwidth use."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "HTTPS = HTTP over TLS, which encrypts traffic and authenticates the server's certificate."
           }
         ]
       }
     },
     {
-      id: 'cspinter4-content',
+      id: "cspip4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Open Standards As The Internet's Superpower
 
-### Interconnection
-How The Internet & Protocols links to other course topics. Understanding this concept is essential for mastering The Internet & Protocols in AP CS Principles.
+Anyone can implement TCP/IP. Any vendor's router can interoperate with any other's. This **open standardization** is why the Internet scaled to billions of devices in 30 years.
 
-### Scale interaction
-How The Internet & Protocols operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+## Routing As An Algorithm
 
-### Feedback loop
-How outcomes of The Internet & Protocols can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Routers run algorithms (e.g., BGP) to decide where to forward each packet. These algorithms must adapt to:
+
+- New networks coming online.
+- Failed links being removed.
+- Congestion shifting traffic to alternate paths.
+
+The result is a network that **self-heals** as conditions change.
+
+## Encryption On The Internet
+
+TLS (Transport Layer Security) wraps TCP connections to provide:
+
+- **Confidentiality**: an eavesdropper sees ciphertext only.
+- **Integrity**: tampering is detected.
+- **Authentication**: the server's certificate proves it's really who it claims to be.
+
+Modern web traffic is overwhelmingly HTTPS. The padlock icon in your browser indicates TLS is active.
+
+## Global Reach And Impact
+
+A single webpage can reach billions instantly. This is the Internet's greatest gift and gravest danger:
+
+- **Beneficial**: open access to knowledge, global collaboration.
+- **Harmful**: misinformation spreads at the same global speed.
+
+Big Idea 5 examines these consequences.
       `
     },
     {
-      id: 'cspinter4-input',
+      id: "cspip4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how The Internet & Protocols links to other course topics?
+1) The "S" in HTTPS stands for _______ (the protocol that adds encryption).
 
-2) What concept describes how The Internet & Protocols operates differently at local, national, and global scales?
+2) An open _______ enables any device to join the Internet.
 
-3) Name the term for how outcomes of The Internet & Protocols can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) When a network self-adapts after a router fails, this is enabled by _______ algorithms.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How The Internet & Protocols links to other course topics), Scale interaction (How The Internet & Protocols operates differently at local, national, and global scales), and Feedback loop (How outcomes of The Internet & Protocols can reinforce or modify the original process).'
+        correctAnswers: ["secure", "standard", "routing"],
+        hint1: "HTTP + secure = HTTPS.",
+        hint2: "Like TCP/IP standards.",
+        hint3: "They adjust paths.",
+        explanation: "HTTPS = HTTP over TLS (S for secure). Open standards enable joining. Routing algorithms enable resilience."
       }
     },
     {
-      id: 'cspinter4-dropdown',
+      id: "cspip4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How The Internet & Protocols links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "Inside HTTPS, the encryption itself happens at the ___ layer",
+            options: ["TLS (between transport and application)", "physical", "IP", "DNS"]
           },
           {
-            label: 'How The Internet & Protocols operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "A \"self-healing\" property of the Internet means ___",
+            options: ["traffic re-routes around failed links", "broken cables fix themselves", "malware is auto-removed", "all packets are encrypted"]
           },
           {
-            label: 'How outcomes of The Internet & Protocols can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "Open standards make the Internet ___",
+            options: ["interoperable across vendors", "controlled by a single company", "slower", "unencrypted"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How The Internet & Protocols links to other course topics. Scale interaction — How The Internet & Protocols operates differently at local, national, and global scales. Feedback loop — How outcomes of The Internet & Protocols can reinforce or modify the original process.'
+        correctAnswers: ["TLS (between transport and application)", "traffic re-routes around failed links", "interoperable across vendors"],
+        hint1: "TLS sits above TCP.",
+        hint2: "Routing protocols adjust.",
+        hint3: "Anyone can implement the standards.",
+        explanation: "TLS sits above TCP; routing self-heals around failures; open standards enable interoperability."
       }
     },
     {
-      id: 'cspinter4-strategy',
+      id: "cspip4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Internet Questions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of The Internet & Protocols.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "Open standards" + "interoperability" + "scalability" = Internet design wins.
+- HTTPS = HTTP + TLS. Provides confidentiality, integrity, authentication.
+- Self-healing routing = a built-in algorithmic property of the Internet.
+- A question about "single point of failure" is asking about redundancy / distributed design.
       `
     },
     {
-      id: 'cspinter4-applied',
+      id: "cspip4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between The Internet & Protocols and other units earns higher scores because:',
+            question: "A user visits a banking site. The browser shows a padlock and the URL begins with https://. Which guarantees does this primarily provide?",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "The site has been verified safe by every government.",
+              "Traffic is encrypted in transit AND the server's certificate has been validated.",
+              "The user's account cannot be hacked.",
+              "The page loads faster than HTTP."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "HTTPS provides encryption and server authentication; it does NOT promise safety of the site's practices or the user's account."
           },
           {
-            question: 'If The Internet & Protocols produces outcomes that further intensify the original process, this is:',
+            question: "A regional Internet outage causes a major undersea cable to fail. Many websites still load, possibly slower. The most accurate explanation is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "websites cached themselves locally.",
+              "routing algorithms automatically forward traffic over alternate paths.",
+              "each website has its own private fiber.",
+              "TCP retransmits the cable."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Routing protocols redirect packets via remaining paths — the network's self-healing property."
           }
         ]
       }
     }
   ]
-}
+};

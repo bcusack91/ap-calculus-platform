@@ -1,175 +1,174 @@
 export const cspFaultToleranceSecurityPart7Data = {
-  topicSlug: 'csp-fault-tolerance-security',
+  topicSlug: "csp-fault-tolerance-security",
   sections: [
     {
-      id: 'cspfault7-intro',
+      id: "cspfts7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Fault Tolerance & Security
+# 🛡️ Fault Tolerance & Security
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Fault Tolerance & Security for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Fault Tolerance & Security |
-| **Common question types** | The most frequent ways Fault Tolerance & Security is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Fault Tolerance & Security questions effectively |
+## AP Exam Recap — Fault Tolerance & Security
       `
     },
     {
-      id: 'cspfault7-quiz1',
+      id: "cspfts7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Fault Tolerance & Security is:',
+            question: "CIA in security stands for ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "Confidentiality, Integrity, Availability",
+              "Compression, Internet, Authentication",
+              "Cryptography, Internet, Auth",
+              "Confidentiality, Internet, Algorithms"
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: "CIA = Confidentiality, Integrity, Availability."
           },
           {
-            question: 'AP multiple-choice questions about Fault Tolerance & Security often test:',
+            question: "A system that keeps serving users when one server crashes is ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "encrypted",
+              "fault-tolerant",
+              "compressed",
+              "optional"
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: "Fault tolerance = continued operation despite failures."
           }
         ]
       }
     },
     {
-      id: 'cspfault7-content',
+      id: "cspfts7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Fault Tolerance & Security. Understanding this concept is essential for mastering Fault Tolerance & Security in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Fault tolerance | Continues operating during failures. |
+| Redundancy / replication / failover | Mechanisms enabling fault tolerance. |
+| Backup | Point-in-time data snapshot. |
+| CIA | Confidentiality, Integrity, Availability. |
+| Symmetric / asymmetric encryption | One key vs. key pair. |
+| Hash | One-way digest. |
+| MFA | Multi-factor authentication. |
+| Phishing / DDoS / ransomware | Common threats. |
+| Defense in depth | Layered defenses. |
+| Zero trust | Verify every request. |
+| Supply-chain attack | Compromise a trusted dependency. |
 
-### Common question types
-The most frequent ways Fault Tolerance & Security is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Fault Tolerance & Security questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Confusing replication and backup.
+- Storing passwords in plaintext or reversible encryption.
+- Treating security as a one-time install.
+- No incident plan / runbooks / drills.
+- Trusting the network instead of verifying each request.
       `
     },
     {
-      id: 'cspfault7-input',
+      id: "cspfts7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Fault Tolerance & Security?
+1) The "I" in CIA stands for _______.
 
-2) What concept describes the most frequent ways Fault Tolerance & Security is tested on the AP exam?
+2) An attack that overwhelms a service to deny availability is a _______ attack.
 
-3) Name the term for approaches for answering Fault Tolerance & Security questions effectively.
-
-Use the exact term from this part.
+3) A second proof of identity beyond the password is the second _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Fault Tolerance & Security), Common question types (The most frequent ways Fault Tolerance & Security is tested on the AP exam), and Exam strategy (Approaches for answering Fault Tolerance & Security questions effectively).'
+        correctAnswers: ["integrity", "DDoS", "factor"],
+        hint1: "Unaltered data.",
+        hint2: "Distributed denial.",
+        hint3: "MFA.",
+        explanation: "Integrity / DDoS / second factor."
       }
     },
     {
-      id: 'cspfault7-dropdown',
+      id: "cspfts7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Fault Tolerance & Security is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "A password should be ___",
+            options: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "stored in plaintext for support", "simple MD5 hashed", "encrypted reversibly"]
           },
           {
-            label: 'The most frequent ways Fault Tolerance & Security is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "TLS protects ___",
+            options: ["confidentiality and integrity in transit", "data at rest only", "against phishing alone", "against compression"]
           },
           {
-            label: 'Approaches for answering Fault Tolerance & Security questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "A blameless post-mortem focuses on ___",
+            options: ["systemic causes and improvements, not individual blame", "finding someone to fire", "compressing logs", "TLS upgrades only"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Fault Tolerance & Security. Common question types — The most frequent ways Fault Tolerance & Security is tested on the AP exam. Exam strategy — Approaches for answering Fault Tolerance & Security questions effectively.'
+        correctAnswers: ["salted-hashed using a slow KDF (bcrypt / Argon2 / scrypt)", "confidentiality and integrity in transit", "systemic causes and improvements, not individual blame"],
+        hint1: "Slow + salted hash.",
+        hint2: "In-transit protection.",
+        hint3: "Systemic > blame.",
+        explanation: "Slow hashed passwords; TLS in transit; blameless post-mortems improve systems."
       }
     },
     {
-      id: 'cspfault7-strategy',
+      id: "cspfts7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Fault Tolerance & Security.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- CIA framing for security questions.
+- Replication ≠ backup.
+- Defense in depth, MFA, TLS, hashed passwords.
+- Process matters: patches, monitoring, drills, post-mortems.
       `
     },
     {
-      id: 'cspfault7-applied',
+      id: "cspfts7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Fault Tolerance & Security. You should:',
+            question: "A school upgrades to MFA for student accounts. The most accurate framing is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "no measurable improvement to the security posture of any student account at the school.",
+              "reduces the risk that a stolen or phished password alone gives an attacker access — a major win.",
+              "simply compresses each student's authentication request before sending it to the server.",
+              "replaces transport-layer security on the login form with a different cryptographic primitive."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "MFA dramatically reduces credential-based account takeover."
           },
           {
-            question: 'For free-response questions on Fault Tolerance & Security, the most common mistake is:',
+            question: "A team's backup strategy is \"the database has 3 replicas.\" The most CSP-aligned critique is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "the strategy is perfect because three live replicas are equivalent to three independent backups.",
+              "replicas don't protect against accidental or malicious deletes; add point-in-time backups stored offline.",
+              "transport-layer security on the database's replication links would replace the need for any backups.",
+              "compressing the database files would have made the replication strategy a complete backup solution."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Replicas ≠ backups; need separate offline / immutable backups."
           }
         ]
       }
     }
   ]
-}
+};

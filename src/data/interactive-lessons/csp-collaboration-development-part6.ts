@@ -1,175 +1,166 @@
 export const cspCollaborationDevelopmentPart6Data = {
-  topicSlug: 'csp-collaboration-development',
+  topicSlug: "csp-collaboration-development",
   sections: [
     {
-      id: 'cspcolla6-intro',
+      id: "cspcoll6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Collaboration in Development
+# 🤝 Collaboration in Development
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Collaboration in Development concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+## Collaboration Workshop
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Collaboration in Development |
-| **Argumentation** | Making evidence-based claims about Collaboration in Development |
-| **Spatial reasoning** | Using geographic thinking to analyze Collaboration in Development |
+Apply collaboration vocabulary to scenarios.
       `
     },
     {
-      id: 'cspcolla6-quiz1',
+      id: "cspcoll6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Collaboration in Development, the first step is:',
+            question: "A team has weekly meetings where one person dominates. The most appropriate adjustment is ___",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Collaboration in Development requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "cancel all team meetings and rely entirely on private messaging instead.",
+              "use facilitated turn-taking, written agendas, and silent brainstorming to elevate quieter voices.",
+              "remove the dominant person from the team to restore balance in discussions.",
+              "reduce meeting time so the dominant person has less opportunity to speak."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "Facilitation + async patterns elevate quieter voices."
+          },
+          {
+            question: "A code review is taking 2 weeks because the PR is huge. The best fix is ___",
+            options: [
+              "skip the review entirely so the team can move on to the next change.",
+              "split the PR into smaller focused changes that can each be reviewed quickly.",
+              "approve the PR with a quick \"looks good\" without reading the diff carefully.",
+              "rewrite the PR in a different programming language to make it shorter."
+            ],
+            correctAnswer: 1,
+            explanation: "Small PRs get fast, useful review."
           }
         ]
       }
     },
     {
-      id: 'cspcolla6-content',
+      id: "cspcoll6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: Sizing A Pull Request
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Collaboration in Development. Understanding this concept is essential for mastering Collaboration in Development in AP CS Principles.
+| PR size | Likely review experience |
+|---------|-------------------------|
+| < 50 lines | Reviewed in minutes. Specific feedback. |
+| 200 lines | Manageable. Some context-loading. |
+| 1000+ lines | "LGTM" with little real review. |
+| 10,000 lines | Effectively unreviewable. |
 
-### Argumentation
-Making evidence-based claims about Collaboration in Development. This builds on the previous concept and connects to broader themes in the course.
+## Worked: Onboarding A New Teammate
 
-### Spatial reasoning
-Using geographic thinking to analyze Collaboration in Development. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Day 1: setup environment, read README + contribution guide.
+Week 1: shadow a teammate; review small PRs.
+Week 2: pick a "first issue"; pair with mentor; submit a tiny PR.
+Month 1: handle a small feature end-to-end with code review.
       `
     },
     {
-      id: 'cspcolla6-input',
+      id: "cspcoll6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Collaboration in Development?
+1) Sharing the agenda before a meeting helps people _______ in advance.
 
-2) What concept describes making evidence-based claims about Collaboration in Development?
+2) A pull request with a small number of changed lines tends to receive _______ review feedback.
 
-3) Name the term for using geographic thinking to analyze Collaboration in Development.
-
-Use the exact term from this part.
+3) A new teammate's first task should be _______ in scope, not a major feature.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Collaboration in Development), Argumentation (Making evidence-based claims about Collaboration in Development), and Spatial reasoning (Using geographic thinking to analyze Collaboration in Development).'
+        correctAnswers: ["prepare", "better", "small"],
+        hint1: "Reading time.",
+        hint2: "Quality of feedback.",
+        hint3: "Build confidence.",
+        explanation: "Pre-shared agendas help preparation. Small PRs get better review. Small first tasks build confidence."
       }
     },
     {
-      id: 'cspcolla6-dropdown',
+      id: "cspcoll6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Collaboration in Development is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "A \"first issue\" labeled in a project is for ___",
+            options: ["new contributors to find an approachable starting task", "closing the project", "archiving old code", "compressing data"]
           },
           {
-            label: 'Making evidence-based claims about Collaboration in Development describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "Silent brainstorming primarily helps ___",
+            options: ["quieter teammates contribute on equal footing with louder ones", "remove all discussion", "accelerate typing speed", "compress files"]
           },
           {
-            label: 'Using geographic thinking to analyze Collaboration in Development is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "A 5,000-line PR most likely gets ___",
+            options: ["superficial review", "rigorous line-by-line review", "no review at all", "rejected for size only"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Collaboration in Development. Argumentation — Making evidence-based claims about Collaboration in Development. Spatial reasoning — Using geographic thinking to analyze Collaboration in Development.'
+        correctAnswers: ["new contributors to find an approachable starting task", "quieter teammates contribute on equal footing with louder ones", "superficial review"],
+        hint1: "Onboarding-friendly.",
+        hint2: "Equalizes voices.",
+        hint3: "Too big = skim.",
+        explanation: "\"First issue\" = friendly starter. Silent brainstorm = inclusion. Huge PRs = surface-level review."
       }
     },
     {
-      id: 'cspcolla6-strategy',
+      id: "cspcoll6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Workshop Style
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Collaboration in Development.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- "Inclusive collaboration" = facilitation + async records + small PRs + onboarding paths.
+- "What should the team change?" → smaller PRs, written records, more inclusive meeting practices.
       `
     },
     {
-      id: 'cspcolla6-applied',
+      id: "cspcoll6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Collaboration in Development and asked to identify a trend. You should:',
+            question: "A team merges all changes directly to main with no review. They suffer frequent regressions. The single highest-leverage change is ___",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "stop writing automated tests so the team can move faster overall.",
+              "require pull-request review on every change before it is merged to main.",
+              "remove the staging environment and ship directly to production every time.",
+              "merge changes only on Fridays so all regressions surface on the same day."
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: "Mandatory code review catches regressions."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Collaboration in Development. The best approach is:',
+            question: "A class project group has skills imbalances: one student knows the language, three are beginners. The most CSP-aligned approach is ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "have the experienced student write all the code while the others observe.",
+              "use pair programming and code review so beginners learn while contributing real code.",
+              "restrict the beginners to writing only documentation and never any code.",
+              "have the beginners hand-copy code that the experienced student wrote first."
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: "Pair + review spreads skill while everyone contributes."
           }
         ]
       }
     }
   ]
-}
+};

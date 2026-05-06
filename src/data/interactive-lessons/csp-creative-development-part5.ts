@@ -1,175 +1,175 @@
 export const cspCreativeDevelopmentPart5Data = {
-  topicSlug: 'csp-creative-development',
+  topicSlug: "csp-creative-development",
   sections: [
     {
-      id: 'cspcreat5-intro',
+      id: "cspcd5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 🎨 Creative Development
 
 **Part 5 of 7 — Change Over Time**
 
-Creative Development has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Development Practices Have Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Creative Development that have remained stable over time |
-| **Change** | How Creative Development has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Creative Development over time |
+| Era | Dominant practice |
+|-----|------------------|
+| 1970s | Waterfall: design, build, ship. |
+| 1990s | Object-oriented + early agile. |
+| 2000s | Agile / Scrum: short iterations, frequent releases. |
+| 2010s | Continuous integration / continuous deployment (CI/CD). |
+| 2020s | AI-assisted coding; LLM prototyping. |
       `
     },
     {
-      id: 'cspcreat5-quiz1',
+      id: "cspcd5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Creative Development helps:',
+            question: "CI/CD primarily aims to ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "archive old commits so the repository stays small.",
+              "integrate code changes frequently and deploy them quickly with automated tests.",
+              "eliminate the need for human developers on the team.",
+              "compress source files in the repository to save disk space."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "CI/CD shortens the loop from change to production with automation."
           },
           {
-            question: 'Continuity in Creative Development means:',
+            question: "AI coding assistants change the developer's role mostly by ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "automating typing and boilerplate while shifting human attention to design and review.",
+              "writing perfect bug-free code automatically.",
+              "eliminating the need for testing.",
+              "replacing all developers next year."
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 0,
+            explanation: "AI accelerates routine tasks; humans still design, judge, and review."
           }
         ]
       }
     },
     {
-      id: 'cspcreat5-content',
+      id: "cspcd5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Modern Tooling
 
-### Continuity
-Aspects of Creative Development that have remained stable over time. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+| Tool | Job |
+|------|-----|
+| **Version control** (Git) | Track changes; collaborate. |
+| **CI / CD** | Auto-test and auto-deploy. |
+| **Issue tracker** | Coordinate work and bugs. |
+| **Code review** | Inspect each other's work. |
+| **AI assistants** | Suggest code, explain code, draft tests. |
 
-### Change
-How Creative Development has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+## Generative AI Cautions
 
-### Trend
-The direction of change in Creative Development over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- AI-generated code may be subtly wrong.
+- Pasting proprietary code into public AI tools may leak it.
+- Generated code may resemble licensed training data.
+- Skill atrophy if used as a crutch instead of a tutor.
       `
     },
     {
-      id: 'cspcreat5-input',
+      id: "cspcd5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Creative Development that have remained stable over time?
+1) A short development cycle of plan-build-test-review-release is called a _______.
 
-2) What concept describes how Creative Development has transformed due to new forces and conditions?
+2) A practice of automatically running tests on every code change is part of CI / _______ delivery / deployment.
 
-3) Name the term for the direction of change in Creative Development over time.
-
-Use the exact term from this part.
+3) A tool that tracks every change and supports many contributors is called _______ control.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Creative Development that have remained stable over time), Change (How Creative Development has transformed due to new forces and conditions), and Trend (The direction of change in Creative Development over time).'
+        correctAnswers: ["sprint", "continuous", "version"],
+        hint1: "Agile term.",
+        hint2: "CI / CD.",
+        hint3: "Git is one.",
+        explanation: "Sprints are agile units. CI/CD = continuous. Git = version control."
       }
     },
     {
-      id: 'cspcreat5-dropdown',
+      id: "cspcd5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Creative Development that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "AI-generated code should be ___ before being trusted",
+            options: ["reviewed and tested", "pushed directly to production", "deleted", "ignored"]
           },
           {
-            label: 'How Creative Development has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "A pull request enables ___",
+            options: ["code review by other team members before changes are merged", "pulling files off a server", "instant deployment", "compression"]
           },
           {
-            label: 'The direction of change in Creative Development over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "CI / CD's main benefit is ___",
+            options: ["rapid, low-risk deployment of small changes", "eliminating the need for testing", "reducing the developer headcount", "larger releases"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Creative Development that have remained stable over time. Change — How Creative Development has transformed due to new forces and conditions. Trend — The direction of change in Creative Development over time.'
+        correctAnswers: ["reviewed and tested", "code review by other team members before changes are merged", "rapid, low-risk deployment of small changes"],
+        hint1: "Trust but verify.",
+        hint2: "Code review is the point.",
+        hint3: "Small + frequent = lower risk.",
+        explanation: "AI output needs review. PRs enable review. CI/CD trades big releases for small frequent ones."
       }
     },
     {
-      id: 'cspcreat5-strategy',
+      id: "cspcd5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Modern Development
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Creative Development.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- "Frequent small releases with automated tests" = CI/CD.
+- "Track every change, multiple contributors" = version control.
+- AI assistants: helpful but require review and care about privacy/licensing.
+- Agile = short iterative cycles, not "no planning".
       `
     },
     {
-      id: 'cspcreat5-applied',
+      id: "cspcd5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Creative Development has changed in the last 50 years. A strong answer would:',
+            question: "A 100-developer team needs to coordinate changes to one codebase without overwriting each other's work. The most appropriate tool category is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "emailing patched files around as attachments after each edit.",
+              "a version-control system (e.g., Git) with branches, merges, and pull requests.",
+              "a shared network drive where everyone edits the same files in place.",
+              "a spreadsheet that tracks who is allowed to touch each file today."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Git enables parallel work with explicit merge points."
           },
           {
-            question: 'A trend in Creative Development shows acceleration in recent decades. The most likely explanation is:',
+            question: "A developer pastes the company's internal authentication code into a public AI assistant for help. The most relevant CSP concern is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "the AI tool may rewrite the code in a less efficient style.",
+              "proprietary or sensitive code may be retained or exposed by the third-party service.",
+              "the AI tool may flag the code as unreadable and refuse to respond.",
+              "public AI tools always strip code formatting before processing it."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Pasting sensitive code into public AI tools risks confidentiality breaches."
           }
         ]
       }
     }
   ]
-}
+};

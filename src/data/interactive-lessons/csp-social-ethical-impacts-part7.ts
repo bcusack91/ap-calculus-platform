@@ -1,175 +1,175 @@
 export const cspSocialEthicalImpactsPart7Data = {
-  topicSlug: 'csp-social-ethical-impacts',
+  topicSlug: "csp-social-ethical-impacts",
   sections: [
     {
-      id: 'cspsocia7-intro',
+      id: "cspsei7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Social & Ethical Impacts
+# ⚖️ Social & Ethical Impacts
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Social & Ethical Impacts for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Social & Ethical Impacts |
-| **Common question types** | The most frequent ways Social & Ethical Impacts is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Social & Ethical Impacts questions effectively |
+## AP Exam Recap — Social & Ethical Impacts
       `
     },
     {
-      id: 'cspsocia7-quiz1',
+      id: "cspsei7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Social & Ethical Impacts is:',
+            question: "Computing innovations typically have ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "only positive effects on every population they reach across society as a whole.",
+              "both positive AND negative effects, often unevenly distributed across stakeholder groups.",
+              "only negative effects on every population that they reach in any direct or indirect way.",
+              "no measurable effects at all on the populations they reach in any direct or indirect way."
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "Dual-use is the rule."
           },
           {
-            question: 'AP multiple-choice questions about Social & Ethical Impacts often test:',
+            question: "A \"digital divide\" refers to ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "differences between popular file-compression formats used by different operating systems",
+              "unequal access to computing and connectivity, which leads to unequal opportunity in society",
+              "transport-layer-security version mismatches between web browsers and the servers they call",
+              "differences between IPv4 and IPv6 addressing across consumer-grade home internet connections"
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: "Digital divide = unequal access."
           }
         ]
       }
     },
     {
-      id: 'cspsocia7-content',
+      id: "cspsei7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Social & Ethical Impacts. Understanding this concept is essential for mastering Social & Ethical Impacts in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Beneficial / harmful effects | Both come with most innovations. |
+| Stakeholders | Anyone affected, directly or indirectly. |
+| Bias | Systematic outcome disparities. |
+| Mis / dis / mal information | False or misleading information by intent. |
+| Network effects | Value scales with users. |
+| Algorithmic amplification | Optimizers boost what gets engagement. |
+| Digital divide | Unequal access to computing. |
+| Transparency / accountability / recourse | Three ethical-design properties. |
+| Contextual integrity | Data should flow as the original context expected. |
+| Open vs. closed | Modify-friendly vs. controlled platforms. |
 
-### Common question types
-The most frequent ways Social & Ethical Impacts is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Social & Ethical Impacts questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Listing only benefits or only harms.
+- Forgetting indirect stakeholders.
+- "It wasn't intentional" treated as exoneration.
+- Treating algorithm output as objective truth.
+- Ignoring environmental and labor impacts.
+- Over-trusting AI / hallucinations.
       `
     },
     {
-      id: 'cspsocia7-input',
+      id: "cspsei7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Social & Ethical Impacts?
+1) Inequality of access to computing and connectivity is called the digital _______.
 
-2) What concept describes the most frequent ways Social & Ethical Impacts is tested on the AP exam?
+2) The principle that data should flow consistently with original-context norms is called contextual _______.
 
-3) Name the term for approaches for answering Social & Ethical Impacts questions effectively.
-
-Use the exact term from this part.
+3) AI outputs that are confident but factually wrong are called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Social & Ethical Impacts), Common question types (The most frequent ways Social & Ethical Impacts is tested on the AP exam), and Exam strategy (Approaches for answering Social & Ethical Impacts questions effectively).'
+        correctAnswers: ["divide", "integrity", "hallucinations"],
+        hint1: "Access gap.",
+        hint2: "Norm-respecting flow.",
+        hint3: "Confident-wrong AI.",
+        explanation: "Digital divide / contextual integrity / hallucinations."
       }
     },
     {
-      id: 'cspsocia7-dropdown',
+      id: "cspsei7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Social & Ethical Impacts is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "A high-stakes algorithmic decision should provide ___",
+            options: ["transparency, accountability, and recourse", "only the result", "no documentation", "no appeal"]
           },
           {
-            label: 'The most frequent ways Social & Ethical Impacts is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "AI training-data ethics centers on ___",
+            options: ["provenance, consent, attribution, and bias", "compression ratio", "TLS handshake", "IPv6 routing"]
           },
           {
-            label: 'Approaches for answering Social & Ethical Impacts questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "Computing innovations' impacts are typically ___",
+            options: ["unevenly distributed across groups", "identical for everyone", "always negligible", "always positive"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Social & Ethical Impacts. Common question types — The most frequent ways Social & Ethical Impacts is tested on the AP exam. Exam strategy — Approaches for answering Social & Ethical Impacts questions effectively.'
+        correctAnswers: ["transparency, accountability, and recourse", "provenance, consent, attribution, and bias", "unevenly distributed across groups"],
+        hint1: "Three properties.",
+        hint2: "AI ethics.",
+        hint3: "Equity matters.",
+        explanation: "Three ethical properties, AI training ethics, unequal impact."
       }
     },
     {
-      id: 'cspsocia7-strategy',
+      id: "cspsei7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Social & Ethical Impacts.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Stakeholder + benefit + harm framing for every impact question.
+- Bias is real; audit and address.
+- Algorithm choices are policy choices; design transparency, accountability, and recourse in.
+- Digital divide framing for access questions.
+- AI raises new authorship, consent, and accuracy concerns.
       `
     },
     {
-      id: 'cspsocia7-applied',
+      id: "cspsei7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Social & Ethical Impacts. You should:',
+            question: "A new translation app makes communication easier across languages but reinforces stereotypes through gendered defaults. The most CSP-aligned response is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "ignore the stereotypes on the grounds that the underlying translation accuracy is statistically high overall.",
+              "audit outputs across demographic groups, document the issue, fix gendered defaults, and offer overrides.",
+              "remove the translation app entirely from circulation rather than attempt to fix the underlying defaults.",
+              "compress the app's training data more aggressively so the gendered defaults will be harder to surface."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "Audit + fix + user agency."
           },
           {
-            question: 'For free-response questions on Social & Ethical Impacts, the most common mistake is:',
+            question: "A school district deploys an algorithm to allocate counseling resources. The MOST important guardrails are ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "no specific guardrails, on the grounds that any algorithm that ships in production has already been reviewed.",
+              "transparent criteria, human review of high-stakes decisions, bias audits across student groups, and an appeal path.",
+              "transport-layer security on the algorithm's outbound traffic, with no other guardrails on its decision process.",
+              "aggressive compression of the algorithm's training data, with no other guardrails on its decision process at all."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Full ethical-design framing for high-stakes algorithms."
           }
         ]
       }
     }
   ]
-}
+};

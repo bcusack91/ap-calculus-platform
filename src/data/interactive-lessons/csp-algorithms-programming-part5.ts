@@ -1,175 +1,186 @@
 export const cspAlgorithmsProgrammingPart5Data = {
-  topicSlug: 'csp-algorithms-programming',
+  topicSlug: "csp-algorithms-programming",
   sections: [
     {
-      id: 'cspalgor5-intro',
+      id: "cspap5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms & Programming
+# 💻 Algorithms & Programming
 
 **Part 5 of 7 — Change Over Time**
 
-Algorithms & Programming has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Programming Has Changed Over Time
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Algorithms & Programming that have remained stable over time |
-| **Change** | How Algorithms & Programming has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Algorithms & Programming over time |
+Programming evolved from machine code → assembly → high-level languages → today's mix of cloud, AI-assisted, and visual block-based environments. Each shift trades a different concern.
+
+| Era | Trade |
+|-----|-------|
+| Machine code (1950s) | Total control, zero portability. |
+| High-level languages (1960s+) | Portability, readability — at the cost of some control. |
+| Object-oriented (1980s+) | Manageable scale via abstraction. |
+| Open source / libraries (2000s+) | Don't reinvent — reuse. |
+| AI-assisted (2020s+) | Faster generation, new questions about authorship and safety. |
       `
     },
     {
-      id: 'cspalgor5-quiz1',
+      id: "cspap5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Algorithms & Programming helps:',
+            question: "A modern programmer who needs a date-formatting function will most often ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "write the date-formatting function from scratch in machine code on every new project they start.",
+              "use a well-tested standard-library or built-in date-formatting function instead of writing one.",
+              "avoid date formatting entirely in their programs by always asking the user to format dates first.",
+              "design and ship a brand new programming language whose built-in primitives include date formatting."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Reuse over reinvention is the modern norm; libraries are tested and documented."
           },
           {
-            question: 'Continuity in Algorithms & Programming means:',
+            question: "When AI-assisted code completion is used, who is ultimately responsible for verifying the code is correct?",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "The AI tool itself is solely responsible for the correctness of every suggestion the tool generates.",
+              "The programmer (and the team) who accepts the suggestion and deploys it remain responsible for it.",
+              "The end user of the running program is solely responsible for verifying the code that produced it.",
+              "Nobody actually needs to verify AI-suggested code, since the AI has already statistically validated it."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Accepted code becomes the developer's code; correctness, security, and ethical review remain a human responsibility."
           }
         ]
       }
     },
     {
-      id: 'cspalgor5-content',
+      id: "cspap5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Reuse Over Reinvention
 
-### Continuity
-Aspects of Algorithms & Programming that have remained stable over time. Understanding this concept is essential for mastering Algorithms & Programming in AP CS Principles.
+Modern languages ship with **libraries**: large collections of well-tested procedures.
 
-### Change
-How Algorithms & Programming has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+| Need | Modern approach |
+|------|-----------------|
+| Sort a list | Call the language's built-in sort. |
+| Make a network request | Call a library function with the URL. |
+| Display a chart | Use a charting library. |
 
-### Trend
-The direction of change in Algorithms & Programming over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Re-implementing these by hand introduces bugs and wastes time. The CSP CED explicitly values **using existing code** as a development practice.
+
+## Programs Have Become More Collaborative
+
+Most non-trivial software today is built by **teams**:
+
+- Version control (e.g., Git) tracks every change.
+- Code review catches bugs before deployment.
+- Continuous integration runs tests automatically.
+
+This connects directly to Big Idea 1 (Creative & Collaborative Development).
+
+## AI in the Loop
+
+AI-assisted programming (autocomplete, chat-based coding) accelerates writing code but requires the same verification habits: read every suggested line, test on edge cases, and check for security/privacy implications. Tools speed you up; they do not absolve you of correctness.
       `
     },
     {
-      id: 'cspalgor5-input',
+      id: "cspap5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Algorithms & Programming that have remained stable over time?
+1) A pre-built collection of reusable procedures is called a _______.
 
-2) What concept describes how Algorithms & Programming has transformed due to new forces and conditions?
+2) A system that records every change to a codebase is called _______ control.
 
-3) Name the term for the direction of change in Algorithms & Programming over time.
-
-Use the exact term from this part.
+3) When AI autocompletes code, the human who accepts the suggestion remains responsible for its _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Algorithms & Programming that have remained stable over time), Change (How Algorithms & Programming has transformed due to new forces and conditions), and Trend (The direction of change in Algorithms & Programming over time).'
+        correctAnswers: ["library", "version", "correctness"],
+        hint1: "Programmers IMPORT or include them.",
+        hint2: "Tools include Git.",
+        hint3: "Human review is non-negotiable.",
+        explanation: "Libraries reuse code. Version control preserves history. Humans verify AI output."
       }
     },
     {
-      id: 'cspalgor5-dropdown',
+      id: "cspap5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Algorithms & Programming that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Using a well-tested library instead of writing the same code yourself usually ___",
+            options: ["reduces bugs and saves time", "always slows the program", "avoids any need for testing", "is discouraged in modern teams"]
           },
           {
-            label: 'How Algorithms & Programming has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Code review primarily improves ___",
+            options: ["quality and shared understanding", "compile time", "screen brightness", "memory size"]
           },
           {
-            label: 'The direction of change in Algorithms & Programming over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "AI-generated code that introduces a security flaw is the responsibility of ___",
+            options: ["the developer who accepts and deploys it", "no one", "only the AI vendor", "only the end user"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Algorithms & Programming that have remained stable over time. Change — How Algorithms & Programming has transformed due to new forces and conditions. Trend — The direction of change in Algorithms & Programming over time.'
+        correctAnswers: ["reduces bugs and saves time", "quality and shared understanding", "the developer who accepts and deploys it"],
+        hint1: "Libraries are battle-tested.",
+        hint2: "Reviewers spread knowledge.",
+        hint3: "Acceptance = ownership.",
+        explanation: "Libraries beat reinvention. Code review spreads knowledge. Whoever ships the code owns the consequences."
       }
     },
     {
-      id: 'cspalgor5-strategy',
+      id: "cspap5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: "Change Over Time" Questions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Algorithms & Programming.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- "Modern programmers often…" → reach for reuse, abstraction, libraries, version control, collaboration.
+- "Trade-off" questions almost always have a "more X but less Y" structure (faster but less control, easier but less customizable, etc.).
+- AI-related questions: the human team retains responsibility.
+- Look for the word "appropriate" — the right answer balances efficiency, correctness, ethics, AND maintainability.
       `
     },
     {
-      id: 'cspalgor5-applied',
+      id: "cspap5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Algorithms & Programming has changed in the last 50 years. A strong answer would:',
+            question: "A startup must ship a calendar app in 4 weeks. Which approach is most appropriate?",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "Write a new programming language for the calendar.",
+              "Use existing libraries for date math, UI, and storage; write only the app-specific glue code.",
+              "Implement everything in machine code for speed.",
+              "Skip testing to ship faster."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Composing libraries is the standard modern path; bespoke implementations of well-solved problems waste time."
           },
           {
-            question: 'A trend in Algorithms & Programming shows acceleration in recent decades. The most likely explanation is:',
+            question: "A developer accepts AI-suggested code that constructs a database query by string concatenation with user input. The code passes a quick visual review and ships. A month later, a security incident traces to SQL injection in this code. What is the best characterization?",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "The AI is solely responsible.",
+              "The developer/team is responsible — accepted code is the team's code, and security review is part of acceptance.",
+              "The user who exploited the flaw is solely responsible.",
+              "Such incidents cannot be prevented."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Accepting AI output without security review does not transfer responsibility; the team owns deployed code."
           }
         ]
       }
     }
   ]
-}
+};

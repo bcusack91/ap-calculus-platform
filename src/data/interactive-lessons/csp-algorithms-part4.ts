@@ -1,175 +1,181 @@
 export const cspAlgorithmsPart4Data = {
-  topicSlug: 'csp-algorithms',
+  topicSlug: "csp-algorithms",
   sections: [
     {
-      id: 'cspalgor4-intro',
+      id: "cspalg4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms
+# ⚙️ Algorithms
 
 **Part 4 of 7 — Connections & Interactions**
 
-Algorithms connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## How Algorithms Connect to Other CSP Topics
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Algorithms links to other course topics |
-| **Scale interaction** | How Algorithms operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Algorithms can reinforce or modify the original process |
+Algorithms don’t live in isolation. An efficient sort matters because of **data** size. A good search matters because the **internet** delivers gigabytes of records. The AP exam loves cross-topic questions.
+
+| Connection | Why it matters |
+|-----------|----------------|
+| **Algorithms ↔ Data** | Choice of data structure (list vs. set) changes the algorithm’s running time. |
+| **Algorithms ↔ Abstraction** | Procedures hide algorithmic detail behind a name. |
+| **Algorithms ↔ Computing Systems** | Faster CPUs help, but a bad algorithm wastes any hardware budget. |
+| **Algorithms ↔ Impact** | A biased ranking algorithm can amplify inequity at scale. |
       `
     },
     {
-      id: 'cspalgor4-quiz1',
+      id: "cspalg4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Algorithms connects to other course topics through:',
+            question: "Which pair of changes is most likely to make a slow program faster?",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "Switching from a quadratic-time algorithm to a linear-time algorithm.",
+              "Renaming variables for readability.",
+              "Adding more comments.",
+              "Splitting one procedure into two equivalent procedures."
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: "Asymptotic improvement (n² → n) dominates micro-optimizations."
           },
           {
-            question: 'A feedback loop in Algorithms means:',
+            question: "A search algorithm runs over a sorted list. Which fact most clearly enables a faster (logarithmic) search?",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "The list is short.",
+              "The list is sorted, so binary search is possible.",
+              "The list contains only integers.",
+              "The list has no duplicates."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Binary search requires a sorted ordering. Sortedness is the structural property that lets the algorithm halve the search space each step."
           }
         ]
       }
     },
     {
-      id: 'cspalgor4-content',
+      id: "cspalg4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Linear vs. Binary Search
 
-### Interconnection
-How Algorithms links to other course topics. Understanding this concept is essential for mastering Algorithms in AP CS Principles.
+| Algorithm | Requires | Time on n items |
+|-----------|----------|----------------|
+| **Linear** | Nothing | up to n comparisons |
+| **Binary** | Sorted list | about log₂(n) comparisons |
 
-### Scale interaction
-How Algorithms operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+For 1,000,000 items, linear can need a million comparisons; binary needs about 20. The connection: **data structure** (sortedness) directly determines which **algorithm** you can use.
 
-### Feedback loop
-How outcomes of Algorithms can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Procedures Hide Algorithms
+
+    PROCEDURE find(list, target) {
+      // body could be linear or binary search;
+      // callers don't need to know.
+    }
+
+This is **abstraction**: callers call **find** without caring which algorithm runs inside. You can swap the implementation later for a faster one without changing any caller.
+
+## Algorithms and Impact
+
+A recommendation algorithm that always returns the most-clicked content reinforces popularity bias — small differences compound into large gaps over millions of users. Algorithm choice has social consequences.
       `
     },
     {
-      id: 'cspalgor4-input',
+      id: "cspalg4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Algorithms links to other course topics?
+1) Binary search requires the input list to be _______.
 
-2) What concept describes how Algorithms operates differently at local, national, and global scales?
+2) Hiding the implementation of an algorithm behind a procedure name is an example of _______.
 
-3) Name the term for how outcomes of Algorithms can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) Switching from an n² algorithm to an n algorithm is an example of an _______ improvement.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Algorithms links to other course topics), Scale interaction (How Algorithms operates differently at local, national, and global scales), and Feedback loop (How outcomes of Algorithms can reinforce or modify the original process).'
+        correctAnswers: ["sorted", "abstraction", "efficiency"],
+        hint1: "Binary search halves the range using ordering.",
+        hint2: "Procedures hide details.",
+        hint3: "It changes how running time scales with input size.",
+        explanation: "Sortedness enables binary search. Procedures abstract over algorithms. Reducing growth rate is an efficiency improvement."
       }
     },
     {
-      id: 'cspalgor4-dropdown',
+      id: "cspalg4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Algorithms links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "Linear search on n items needs at most ___ comparisons",
+            options: ["n", "log₂(n)", "n²", "1"]
           },
           {
-            label: 'How Algorithms operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Binary search on n items needs about ___ comparisons",
+            options: ["log₂(n)", "n", "√n", "2n"]
           },
           {
-            label: 'How outcomes of Algorithms can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "For n = 1,048,576 (≈ 1 million), binary search uses about ___ comparisons",
+            options: ["20", "1000", "1", "500,000"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Algorithms links to other course topics. Scale interaction — How Algorithms operates differently at local, national, and global scales. Feedback loop — How outcomes of Algorithms can reinforce or modify the original process.'
+        correctAnswers: ["n", "log₂(n)", "20"],
+        hint1: "Worst case checks every element.",
+        hint2: "Each step halves the remaining range.",
+        hint3: "log₂(2²⁰) = 20.",
+        explanation: "Linear is O(n); binary is O(log n). 2²⁰ ≈ 1.05 million, so log₂(1M) ≈ 20."
       }
     },
     {
-      id: 'cspalgor4-strategy',
+      id: "cspalg4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Reasoning
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Algorithms.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "Most efficient" almost always means lowest growth rate (n vs n² vs log n).
+- If the question mentions a sorted list, **binary search** is on the table.
+- If two algorithms produce identical output, the question is about **efficiency**, not correctness.
+- Watch for cross-topic framing: "the algorithm runs on a server" hints at scalability; "the algorithm assigns loans" hints at bias/impact.
       `
     },
     {
-      id: 'cspalgor4-applied',
+      id: "cspalg4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Algorithms and other units earns higher scores because:',
+            question: "A library catalog of 4,000,000 books is sorted by title. Roughly how many comparisons does binary search need in the worst case?",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "About 22",
+              "About 2,000",
+              "About 4,000,000",
+              "Exactly 1"
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            correctAnswer: 0,
+            explanation: "2²² ≈ 4.2M, so log₂(4M) ≈ 22."
           },
           {
-            question: 'If Algorithms produces outcomes that further intensify the original process, this is:',
+            question: "A school adopts an automated scheduling algorithm that consistently assigns students with last names early in the alphabet to better elective slots. Which CSP cross-topic concern is most directly raised?",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "The algorithm has the wrong running time.",
+              "The algorithm uses too much memory.",
+              "The algorithm produces a biased outcome that disproportionately affects a group.",
+              "The algorithm cannot be expressed as pseudocode."
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 2,
+            explanation: "Systematic outcome differences across groups are an algorithmic-bias / impact-of-computing concern."
           }
         ]
       }
     }
   ]
-}
+};

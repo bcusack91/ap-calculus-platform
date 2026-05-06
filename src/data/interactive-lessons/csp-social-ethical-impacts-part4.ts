@@ -1,175 +1,179 @@
 export const cspSocialEthicalImpactsPart4Data = {
-  topicSlug: 'csp-social-ethical-impacts',
+  topicSlug: "csp-social-ethical-impacts",
   sections: [
     {
-      id: 'cspsocia4-intro',
+      id: "cspsei4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Social & Ethical Impacts
+# ⚖️ Social & Ethical Impacts
 
 **Part 4 of 7 — Connections & Interactions**
 
-Social & Ethical Impacts connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Social & Ethical Impact Connects Everywhere
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Social & Ethical Impacts links to other course topics |
-| **Scale interaction** | How Social & Ethical Impacts operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Social & Ethical Impacts can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Impact ↔ Data | What data we collect shapes what we can do. |
+| Impact ↔ Algorithms | Algorithm choices encode policy. |
+| Impact ↔ Networks | Connectivity drives access (and divide). |
+| Impact ↔ Security | Breaches = real human harm. |
       `
     },
     {
-      id: 'cspsocia4-quiz1',
+      id: "cspsei4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Social & Ethical Impacts connects to other course topics through:',
+            question: "A predictive-policing model trained on historic arrest data may ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "perfectly predict every future criminal incident across every neighborhood it is deployed in.",
+              "reproduce historical biases in policing patterns, harming the same communities again — bias laundering.",
+              "eliminate every form of bias automatically by virtue of being a statistical machine-learning model.",
+              "compress the historic arrest dataset to a smaller form than any human analyst could produce."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "\"Bias laundering\" — historical patterns replicated as objective predictions."
           },
           {
-            question: 'A feedback loop in Social & Ethical Impacts means:',
+            question: "A region without high-speed Internet ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "has no measurable impact on the residents' daily access to opportunities and public services.",
+              "faces limited access to telehealth, online education, and modern jobs — the digital divide is real.",
+              "has lower transport-layer-security overhead than connected regions on the same continental backbone.",
+              "has consistently better data compression than connected regions because of reduced background traffic."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Connectivity = access to opportunity."
           }
         ]
       }
     },
     {
-      id: 'cspsocia4-content',
+      id: "cspsei4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Algorithm Choices Are Policy Choices
 
-### Interconnection
-How Social & Ethical Impacts links to other course topics. Understanding this concept is essential for mastering Social & Ethical Impacts in AP CS Principles.
+When a credit-score, hiring, or healthcare-triage algorithm is deployed, its rules become policy. CSP frames this as a design and accountability concern:
 
-### Scale interaction
-How Social & Ethical Impacts operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+- **Transparency**: can outsiders audit the system?
+- **Accountability**: who is responsible for harms?
+- **Recourse**: can affected people appeal?
 
-### Feedback loop
-How outcomes of Social & Ethical Impacts can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Intellectual Property And Creative Commons
+
+| License | Effect |
+|---------|--------|
+| Public domain | No restrictions. |
+| Creative Commons (CC-BY) | Reuse with attribution. |
+| Open source (MIT, GPL) | Reuse under license terms. |
+| Proprietary | All rights reserved. |
+
+CSP-aligned thinking: respect creators' intent, give credit, understand what AI training and remix imply.
+
+## Privacy Expectations
+
+Different cultures, populations, and contexts have different expectations. A "public" post in a small-town context becomes very different when amplified globally. **Contextual integrity** is the CSP framing: data should flow in ways consistent with the original context's norms.
       `
     },
     {
-      id: 'cspsocia4-input',
+      id: "cspsei4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Social & Ethical Impacts links to other course topics?
+1) A property of a system that lets outsiders examine how it works is called _______.
 
-2) What concept describes how Social & Ethical Impacts operates differently at local, national, and global scales?
+2) A property that allows affected users to appeal a decision is called _______.
 
-3) Name the term for how outcomes of Social & Ethical Impacts can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) A privacy framework that asks whether data flows match the original context's norms is called contextual _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Social & Ethical Impacts links to other course topics), Scale interaction (How Social & Ethical Impacts operates differently at local, national, and global scales), and Feedback loop (How outcomes of Social & Ethical Impacts can reinforce or modify the original process).'
+        correctAnswers: ["transparency", "recourse", "integrity"],
+        hint1: "Visibility.",
+        hint2: "Appeal mechanism.",
+        hint3: "Context-aware.",
+        explanation: "Transparency / recourse / contextual integrity."
       }
     },
     {
-      id: 'cspsocia4-dropdown',
+      id: "cspsei4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Social & Ethical Impacts links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A hiring algorithm that disproportionately rejects qualified candidates from a group is ___",
+            options: ["exhibiting bias that needs investigation, regardless of intent", "unbiased", "a TLS issue", "a compression issue"]
           },
           {
-            label: 'How Social & Ethical Impacts operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Reusing a CC-BY image requires ___",
+            options: ["attribution to the creator under the license terms", "no acknowledgment", "payment to the creator", "TLS only"]
           },
           {
-            label: 'How outcomes of Social & Ethical Impacts can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "Privacy expectations vary by ___",
+            options: ["context, culture, and population", "never — they're universal", "only file size", "only TLS version"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Social & Ethical Impacts links to other course topics. Scale interaction — How Social & Ethical Impacts operates differently at local, national, and global scales. Feedback loop — How outcomes of Social & Ethical Impacts can reinforce or modify the original process.'
+        correctAnswers: ["exhibiting bias that needs investigation, regardless of intent", "attribution to the creator under the license terms", "context, culture, and population"],
+        hint1: "Outcome bias.",
+        hint2: "Attribution.",
+        hint3: "Context matters.",
+        explanation: "Outcome bias matters; attribution required; context-dependent privacy."
       }
     },
     {
-      id: 'cspsocia4-strategy',
+      id: "cspsei4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Impact
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Social & Ethical Impacts.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- Algorithm + data choices encode policy.
+- Transparency, accountability, recourse for high-stakes systems.
+- Respect creator licenses and contextual privacy norms.
       `
     },
     {
-      id: 'cspsocia4-applied',
+      id: "cspsei4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Social & Ethical Impacts and other units earns higher scores because:',
+            question: "A school deploys a predictive model to flag \"at-risk\" students. The most CSP-aligned design includes ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "fully automated decisions with no human review of any individual flag the model produces during use.",
+              "human review of every flag, transparency about the criteria, audited bias across demographics, and appeals.",
+              "no documentation of how the model works, on the grounds that disclosure would let students game it.",
+              "no review process at all, on the grounds that the model's training data is statistically representative."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Transparency + accountability + recourse + bias audits = ethical deployment."
           },
           {
-            question: 'If Social & Ethical Impacts produces outcomes that further intensify the original process, this is:',
+            question: "A user remixes a CC-BY song without attribution and posts it. The most CSP-aligned framing is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "no measurable concern, since the user has remixed the song into something that sounds different.",
+              "CC-BY requires attribution; using without it violates the license and disrespects the creator's terms.",
+              "transport-layer security on the upload of the remix would have prevented the licensing issue here.",
+              "compressing the remix more aggressively before upload would have prevented the licensing issue here."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "CC-BY = attribution required."
           }
         ]
       }
     }
   ]
-}
+};

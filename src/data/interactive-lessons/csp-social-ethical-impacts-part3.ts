@@ -1,175 +1,181 @@
 export const cspSocialEthicalImpactsPart3Data = {
-  topicSlug: 'csp-social-ethical-impacts',
+  topicSlug: "csp-social-ethical-impacts",
   sections: [
     {
-      id: 'cspsocia3-intro',
+      id: "cspsei3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Social & Ethical Impacts
+# ⚖️ Social & Ethical Impacts
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Social & Ethical Impacts. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Common Patterns Of Impact
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Social & Ethical Impacts |
-| **Case study** | A specific real-world example that illustrates Social & Ethical Impacts |
-| **Comparison** | Analyzing similarities and differences across examples of Social & Ethical Impacts |
+| Pattern | Example |
+|---------|---------|
+| **Disintermediation** | Direct seller-to-buyer; cuts middlemen. |
+| **Network effects** | Each user adds value for others (and lock-in). |
+| **Algorithmic amplification** | Engagement-driven feeds boost extreme content. |
+| **Surveillance creep** | Data collection grows past stated purpose. |
+| **Automation shift** | Tasks shift from people to machines. |
       `
     },
     {
-      id: 'cspsocia3-quiz1',
+      id: "cspsei3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A social platform's engagement-optimizing feed surfaces sensational content because ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "users explicitly request sensational content through clearly labeled platform settings each session.",
+              "sensational content reliably drives more clicks and time-on-platform; the optimizer rewards it.",
+              "transport-layer security on the user's connection automatically rewards more sensational posts.",
+              "compression algorithms favor sensational text content because it shrinks more efficiently than calm text."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Optimizing engagement amplifies what gets engagement."
           },
           {
-            question: 'Comparing examples of Social & Ethical Impacts across regions helps:',
+            question: "A platform whose value rises with each new user has ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "network effects — each additional user makes the platform more valuable to existing users",
+              "compression — each additional user makes the platform store less data per active interaction",
+              "transport-layer security — each additional user strengthens the platform's cryptography",
+              "a content-delivery network — each additional user routes other users' traffic geographically"
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: "Network effects = value scales with users."
           }
         ]
       }
     },
     {
-      id: 'cspsocia3-content',
+      id: "cspsei3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Misinformation And Disinformation
 
-### Spatial pattern
-The geographic distribution related to Social & Ethical Impacts. Understanding this concept is essential for mastering Social & Ethical Impacts in AP CS Principles.
+| Term | Meaning |
+|------|---------|
+| **Misinformation** | False information shared without intent to mislead. |
+| **Disinformation** | False information shared deliberately to mislead. |
+| **Malinformation** | True information shared with malicious intent (out of context). |
 
-### Case study
-A specific real-world example that illustrates Social & Ethical Impacts. This builds on the previous concept and connects to broader themes in the course.
+Computing speeds the spread of all three. Algorithmic feeds, generative AI, and synthetic media (deepfakes) raise the stakes.
 
-### Comparison
-Analyzing similarities and differences across examples of Social & Ethical Impacts. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Open Vs. Closed Platforms
+
+| | Open | Closed |
+|---|------|--------|
+| Modify | Yes | No |
+| Vendor lock-in | Low | High |
+| Examples | Linux, Wikipedia | iOS app store, proprietary services |
+
+Open systems enable wider participation; closed systems may offer easier UX or stronger curation.
+
+## Crowdsourcing's Double Edge
+
+Wikipedia harnesses thousands of editors. Same model can be exploited (vandalism, brigading). Governance matters.
       `
     },
     {
-      id: 'cspsocia3-input',
+      id: "cspsei3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Social & Ethical Impacts?
+1) False information spread WITHOUT intent to mislead is called _______.
 
-2) What concept describes a specific real-world example that illustrates Social & Ethical Impacts?
+2) A system whose value rises as more users join exhibits _______ effects.
 
-3) Name the term for analyzing similarities and differences across examples of Social & Ethical Impacts.
-
-Use the exact term from this part.
+3) AI-generated synthetic videos of real people are called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Social & Ethical Impacts), Case study (A specific real-world example that illustrates Social & Ethical Impacts), and Comparison (Analyzing similarities and differences across examples of Social & Ethical Impacts).'
+        correctAnswers: ["misinformation", "network", "deepfakes"],
+        hint1: "Unintentional.",
+        hint2: "Scaling with users.",
+        hint3: "Synthetic video.",
+        explanation: "Misinformation / network effects / deepfakes."
       }
     },
     {
-      id: 'cspsocia3-dropdown',
+      id: "cspsei3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Social & Ethical Impacts is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "An algorithmically-curated feed optimized for engagement tends to ___",
+            options: ["amplify content that drives engagement, not necessarily content that is accurate or beneficial", "show only government news", "remove all content", "compress content"]
           },
           {
-            label: 'A specific real-world example that illustrates Social & Ethical Impacts describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A vendor-locked platform makes it ___",
+            options: ["hard for users to switch to a competitor", "easy to switch competitors", "free to use forever", "compressible"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Social & Ethical Impacts is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "A crowdsourced project benefits from ___",
+            options: ["governance: clear contribution rules and trusted maintainers", "no rules", "a single contributor", "only experts"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Social & Ethical Impacts. Case study — A specific real-world example that illustrates Social & Ethical Impacts. Comparison — Analyzing similarities and differences across examples of Social & Ethical Impacts.'
+        correctAnswers: ["amplify content that drives engagement, not necessarily content that is accurate or beneficial", "hard for users to switch to a competitor", "governance: clear contribution rules and trusted maintainers"],
+        hint1: "Optimizer follows clicks.",
+        hint2: "Lock-in.",
+        hint3: "Crowdsourcing needs governance.",
+        explanation: "Engagement amplification; lock-in; crowdsourcing governance."
       }
     },
     {
-      id: 'cspsocia3-strategy',
+      id: "cspsei3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Impact Patterns
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Social & Ethical Impacts.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Distinguish mis / dis / mal information.
+- Algorithmic amplification is a structural force, not just an editorial choice.
+- Open vs. closed has real trade-offs.
       `
     },
     {
-      id: 'cspsocia3-applied',
+      id: "cspsei3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Social & Ethical Impacts. The strongest response would:',
+            question: "A new social app personalizes feeds with no \"show me the opposite view\" option. A long-term concern is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "no measurable concern, since users naturally seek out diverse opinions on their own anyway.",
+              "filter bubbles + echo chambers can narrow user perspectives and amplify polarization over time.",
+              "transport-layer security on each user's connection becomes slower as the personalization improves.",
+              "compression of personalized feeds becomes less efficient than compression of unpersonalized feeds."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Personalization without diversity = echo chamber."
           },
           {
-            question: 'A pattern observed in Social & Ethical Impacts is consistent across multiple world regions. This suggests:',
+            question: "A community Wikipedia for a small topic faces vandalism. The most CSP-aligned response is ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "close the wiki entirely so that no further vandalism can be added by anonymous contributors.",
+              "add governance: clear policies, trusted editors, version history, and rate limits on edits per hour.",
+              "switch the wiki's underlying transport from TCP to UDP to discourage repeat vandalism attempts.",
+              "compress every page on the wiki more aggressively to make vandalized content harder to read."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "Crowdsourcing scales only with governance."
           }
         ]
       }
     }
   ]
-}
+};

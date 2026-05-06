@@ -1,175 +1,179 @@
 export const cspCollaborationDevelopmentPart5Data = {
-  topicSlug: 'csp-collaboration-development',
+  topicSlug: "csp-collaboration-development",
   sections: [
     {
-      id: 'cspcolla5-intro',
+      id: "cspcoll5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Collaboration in Development
+# 🤝 Collaboration in Development
 
 **Part 5 of 7 — Change Over Time**
 
-Collaboration in Development has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Collaboration Has Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Collaboration in Development that have remained stable over time |
-| **Change** | How Collaboration in Development has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Collaboration in Development over time |
+| Era | Dominant collab pattern |
+|-----|------------------------|
+| 1970s | Co-located teams; manual change tracking. |
+| 1990s | First distributed VCS (CVS, Subversion). |
+| 2000s | Git, GitHub; rise of open source. |
+| 2010s | Distributed teams; Slack-style chat. |
+| 2020s | Remote-first; AI assistants; async-first culture. |
       `
     },
     {
-      id: 'cspcolla5-quiz1',
+      id: "cspcoll5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Collaboration in Development helps:',
+            question: "GitHub (and similar platforms) most fundamentally changed software collaboration by ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "making the underlying compilers and runtimes significantly faster.",
+              "making it easy for strangers to collaborate on code with reviews and issue tracking.",
+              "eliminating common categories of programming bugs at the language level.",
+              "replacing the need for human developers with automated platform tooling."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "GitHub-style platforms standardized PR-based collaboration."
           },
           {
-            question: 'Continuity in Collaboration in Development means:',
+            question: "A \"remote-first\" team optimizes ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "for in-office synchronous meetings during traditional business hours.",
+              "for async written communication so different time zones can contribute equally.",
+              "for never collaborating, since each engineer is supposed to work alone.",
+              "for short messaging URLs that fit easily on small mobile-phone screens."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Remote-first means async-first written communication."
           }
         ]
       }
     },
     {
-      id: 'cspcolla5-content',
+      id: "cspcoll5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## The Open-Source Revolution
 
-### Continuity
-Aspects of Collaboration in Development that have remained stable over time. Understanding this concept is essential for mastering Collaboration in Development in AP CS Principles.
+Most modern software builds on open-source libraries. This means:
 
-### Change
-How Collaboration in Development has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+- Companies depend on volunteer maintainers.
+- Bugs and security flaws ripple across the ecosystem.
+- Contributions can shape software billions use.
 
-### Trend
-The direction of change in Collaboration in Development over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Remote / Distributed Teams
+
+Practices that make this work:
+
+- Documented decisions.
+- Async-first communication.
+- Overlap windows.
+- Inclusive scheduling — no time zone always wins.
+
+## AI Assistants As Collaborators
+
+Treat AI output like a junior dev's — review before trusting. Don't paste sensitive code into public AI tools. AI doesn't understand long-term context the way a teammate does.
       `
     },
     {
-      id: 'cspcolla5-input',
+      id: "cspcoll5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Collaboration in Development that have remained stable over time?
+1) A team that prioritizes written communication so global teammates can contribute is _______-first.
 
-2) What concept describes how Collaboration in Development has transformed due to new forces and conditions?
+2) Modern software is built on top of many _______-source libraries.
 
-3) Name the term for the direction of change in Collaboration in Development over time.
-
-Use the exact term from this part.
+3) AI coding assistants should be treated like a _______ developer — useful but reviewed.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Collaboration in Development that have remained stable over time), Change (How Collaboration in Development has transformed due to new forces and conditions), and Trend (The direction of change in Collaboration in Development over time).'
+        correctAnswers: ["remote", "open", "junior"],
+        hint1: "Distributed by default.",
+        hint2: "Public source code.",
+        hint3: "Less experienced.",
+        explanation: "Remote-first = async-default. Open-source libraries underpin most software. AI ≈ junior dev."
       }
     },
     {
-      id: 'cspcolla5-dropdown',
+      id: "cspcoll5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Collaboration in Development that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Documenting key decisions in writing helps remote teams by ___",
+            options: ["making knowledge available across time zones", "forcing everyone to be online at once", "replacing video calls entirely", "compressing files"]
           },
           {
-            label: 'How Collaboration in Development has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "A bug in a popular open-source library may affect ___",
+            options: ["millions of dependent applications worldwide", "only that library's author", "no one", "only government apps"]
           },
           {
-            label: 'The direction of change in Collaboration in Development over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "AI-suggested code in a PR should be ___",
+            options: ["reviewed by a human just like any other code", "merged automatically without review", "always rejected", "encrypted before merging"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Collaboration in Development that have remained stable over time. Change — How Collaboration in Development has transformed due to new forces and conditions. Trend — The direction of change in Collaboration in Development over time.'
+        correctAnswers: ["making knowledge available across time zones", "millions of dependent applications worldwide", "reviewed by a human just like any other code"],
+        hint1: "Async > sync for global teams.",
+        hint2: "Dependency cascade.",
+        hint3: "AI = collaborator, not authority.",
+        explanation: "Written decisions cross time zones. Open-source bugs cascade. AI output needs human review."
       }
     },
     {
-      id: 'cspcolla5-strategy',
+      id: "cspcoll5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Modern Collaboration
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Collaboration in Development.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Remote-first teams require async-first communication.
+- Open-source dependencies mean shared risks AND shared maintenance burden.
+- AI assistants accelerate routine work but require review.
+- Tooling shapes team norms — choose tools deliberately.
       `
     },
     {
-      id: 'cspcolla5-applied',
+      id: "cspcoll5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Collaboration in Development has changed in the last 50 years. A strong answer would:',
+            question: "A startup uses 200 open-source libraries. A critical bug is found in one of them. The most CSP-aligned response is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "ignore the bug since the library is maintained by someone else.",
+              "audit which apps depend on it, update to the patched version, and report upstream.",
+              "immediately rewrite the entire library in-house to avoid depending on it.",
+              "pin every dependency permanently and never accept any future updates."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "Dependency hygiene + responsible upstream contribution."
           },
           {
-            question: 'A trend in Collaboration in Development shows acceleration in recent decades. The most likely explanation is:',
+            question: "A globally distributed team is consistently leaving Asia-Pacific teammates out of decisions because all calls happen during US hours. The most CSP-aligned fix is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "ignore the issue and rely on the AP teammates to read meeting notes later.",
+              "shift to async-first written decisions and rotate sync meeting times across regions.",
+              "remove the AP teammates from decision-making projects to avoid the conflict.",
+              "require the AP teammates to permanently shift their working hours to US time."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Async-first + rotating sync times = standard remote-team equity practice."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,191 @@
 export const cspInternetProtocolsPart3Data = {
-  topicSlug: 'csp-internet-protocols',
+  topicSlug: "csp-internet-protocols",
   sections: [
     {
-      id: 'cspinter3-intro',
+      id: "cspip3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ The Internet & Protocols
+# 🌐 The Internet & Protocols
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to The Internet & Protocols. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Common Internet Patterns
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to The Internet & Protocols |
-| **Case study** | A specific real-world example that illustrates The Internet & Protocols |
-| **Comparison** | Analyzing similarities and differences across examples of The Internet & Protocols |
+The same shapes recur across services.
+
+| Pattern | Example |
+|---------|---------|
+| **Client / server** | Browser ↔ web server. |
+| **Peer-to-peer (P2P)** | BitTorrent file sharing; some video calls. |
+| **Request / response** | HTTP GET → 200 OK. |
+| **Streaming** | Video and audio data delivered as a continuous flow. |
+| **Publish / subscribe** | Notifications, social feeds. |
       `
     },
     {
-      id: 'cspinter3-quiz1',
+      id: "cspip3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "In a client/server architecture, the role of the server is to ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "initiate connections to clients.",
+              "wait for client requests and respond.",
+              "route packets between clients.",
+              "compress all data."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Servers wait; clients initiate."
           },
           {
-            question: 'Comparing examples of The Internet & Protocols across regions helps:',
+            question: "Which service most clearly fits the peer-to-peer pattern?",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "Email between two users via Gmail.",
+              "A web search.",
+              "BitTorrent file distribution where each downloader also uploads.",
+              "A bank login page."
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 2,
+            explanation: "BitTorrent peers exchange data with each other directly, not through a central server."
           }
         ]
       }
     },
     {
-      id: 'cspinter3-content',
+      id: "cspip3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Client / Server vs. Peer-to-Peer
 
-### Spatial pattern
-The geographic distribution related to The Internet & Protocols. Understanding this concept is essential for mastering The Internet & Protocols in AP CS Principles.
+| Aspect | Client / Server | Peer-to-Peer |
+|--------|-----------------|--------------|
+| Initiator | Client. | Any peer. |
+| Coordination | Centralized server. | Distributed among peers. |
+| Failure | Server outage = service down. | Some peers can vanish; service continues. |
+| Examples | Web, email. | BitTorrent, some video calls. |
 
-### Case study
-A specific real-world example that illustrates The Internet & Protocols. This builds on the previous concept and connects to broader themes in the course.
+## Request / Response Anatomy
 
-### Comparison
-Analyzing similarities and differences across examples of The Internet & Protocols. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+An HTTP request:
+
+    GET /api/student/42 HTTP/1.1
+    Host: example.com
+    Authorization: Bearer eyJ…
+
+An HTTP response:
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    Content-Length: 142
+    
+    {"id": 42, "name": "Alex", …}
+
+Status codes: **2xx** = OK, **3xx** = redirect, **4xx** = client error (e.g., 404 not found), **5xx** = server error.
+
+## Streaming As A Pattern
+
+Video streams break the file into small chunks; the player buffers a few seconds ahead. If the network slows, the player switches to a lower-bitrate version (adaptive bitrate). The connection remains open while the stream plays.
       `
     },
     {
-      id: 'cspinter3-input',
+      id: "cspip3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to The Internet & Protocols?
+1) In client/server, the _______ initiates the connection.
 
-2) What concept describes a specific real-world example that illustrates The Internet & Protocols?
+2) In a P2P network, peers can both _______ and serve data.
 
-3) Name the term for analyzing similarities and differences across examples of The Internet & Protocols.
-
-Use the exact term from this part.
+3) An HTTP status of 404 means the requested resource was not _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to The Internet & Protocols), Case study (A specific real-world example that illustrates The Internet & Protocols), and Comparison (Analyzing similarities and differences across examples of The Internet & Protocols).'
+        correctAnswers: ["client", "request", "found"],
+        hint1: "Browser, app, etc.",
+        hint2: "Two roles in one node.",
+        hint3: "The \"Not Found\" code.",
+        explanation: "Clients initiate. P2P peers both consume and serve. 404 = Not Found."
       }
     },
     {
-      id: 'cspinter3-dropdown',
+      id: "cspip3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to The Internet & Protocols is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A 500-series HTTP status indicates ___",
+            options: ["a server-side error", "a client-side error", "a redirect", "success"]
           },
           {
-            label: 'A specific real-world example that illustrates The Internet & Protocols describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A push-notification service most closely resembles the ___ pattern",
+            options: ["publish / subscribe", "request / response", "P2P file sharing", "streaming"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of The Internet & Protocols is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "For a service that must remain available if any single server fails, a ___ design helps",
+            options: ["distributed / redundant", "single-server", "client-only", "P2P-only"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to The Internet & Protocols. Case study — A specific real-world example that illustrates The Internet & Protocols. Comparison — Analyzing similarities and differences across examples of The Internet & Protocols.'
+        correctAnswers: ["a server-side error", "publish / subscribe", "distributed / redundant"],
+        hint1: "5xx is server's fault.",
+        hint2: "Subscribers receive when publishers post.",
+        hint3: "Redundancy beats single point of failure.",
+        explanation: "5xx = server error. Pub/sub fits notifications. Distributed/redundant designs survive single-server failures."
       }
     },
     {
-      id: 'cspinter3-strategy',
+      id: "cspip3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Architecture Questions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of The Internet & Protocols.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- "Single point of failure" almost always means client/server with no redundancy.
+- "Some peers can drop without taking the system down" → P2P or distributed.
+- "Long-lived connection delivering continuous data" → streaming.
+- HTTP status codes: 200 OK, 301/302 redirect, 404 not found, 500 server error. Recognize these on sight.
       `
     },
     {
-      id: 'cspinter3-applied',
+      id: "cspip3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of The Internet & Protocols. The strongest response would:',
+            question: "A school deploys a single attendance server. When that server is down, no one can mark attendance. Which design change most directly addresses this?",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "Use redundant servers behind a load balancer so any one server can fail without service interruption.",
+              "Add explanatory comments throughout the existing single attendance server's codebase to document what fails.",
+              "Switch all attendance traffic from TCP to UDP so requests will arrive faster than they currently do.",
+              "Change the school's Wi-Fi network password to a stronger value to prevent future server outage events."
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 0,
+            explanation: "Redundancy + load balancing eliminates the single point of failure."
           },
           {
-            question: 'A pattern observed in The Internet & Protocols is consistent across multiple world regions. This suggests:',
+            question: "A music service is redesigning to allow listeners to share locally-cached songs with nearby listeners on the same Wi-Fi network. Which architecture is most appropriate?",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "Peer-to-peer between nearby listeners on the same Wi-Fi, with a central server for catalog metadata.",
+              "Strict client/server only, in which every song must be re-downloaded from a central server every time.",
+              "Email-based file delivery, where each listener emails the song file to nearby listeners on demand.",
+              "DNS-based file lookup, where each listener resolves song names through the Domain Name System."
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: "Hybrid: P2P for the bulk data, centralized server for coordination/metadata."
           }
         ]
       }
     }
   ]
-}
+};

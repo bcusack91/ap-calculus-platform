@@ -1,175 +1,184 @@
 export const cspVariablesControlPart3Data = {
-  topicSlug: 'csp-variables-control',
+  topicSlug: "csp-variables-control",
   sections: [
     {
-      id: 'cspvaria3-intro',
+      id: "cspvc3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Variables & Control Structures
+# 🔀 Variables & Control Flow
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Variables & Control Structures. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Common Control-Flow Patterns
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Variables & Control Structures |
-| **Case study** | A specific real-world example that illustrates Variables & Control Structures |
-| **Comparison** | Analyzing similarities and differences across examples of Variables & Control Structures |
+| Pattern | Skeleton |
+|---------|---------|
+| **Counter** | i ← 0; REPEAT n TIMES: i ← i + 1 |
+| **Accumulator** | total ← 0; FOR EACH x: total ← total + x |
+| **Search** | found ← false; FOR EACH x: IF x = target THEN found ← true |
+| **Filter** | result ← []; FOR EACH x: IF condition(x) THEN APPEND(result, x) |
+| **Max / min** | best ← list[0]; FOR EACH x: IF x > best THEN best ← x |
       `
     },
     {
-      id: 'cspvaria3-quiz1',
+      id: "cspvc3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "Which pattern is **total ← total + grade** part of?",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "Counter — incrementing a tally by exactly one each iteration.",
+              "Accumulator — building up a running total from each value.",
+              "Search — walking the list looking for a target value.",
+              "Filter — selecting matching values into a new list."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Building up a sum is the accumulator pattern."
           },
           {
-            question: 'Comparing examples of Variables & Control Structures across regions helps:',
+            question: "Which pattern produces a NEW list of items meeting a condition?",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "Search — walking the list to find any single matching item.",
+              "Counter — tallying how many items meet a condition.",
+              "Filter — producing a new list of items meeting a condition.",
+              "Accumulator — collapsing a list into a single summary value."
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 2,
+            explanation: "Filter selects items into a new list."
           }
         ]
       }
     },
     {
-      id: 'cspvaria3-content',
+      id: "cspvc3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Selection Patterns
 
-### Spatial pattern
-The geographic distribution related to Variables & Control Structures. Understanding this concept is essential for mastering Variables & Control Structures in AP CS Principles.
+| Pattern | When |
+|---------|------|
+| **IF / ELSE** | Two branches. |
+| **IF / ELSE IF / ELSE** | Multiple ranked conditions. |
+| **Guard** | Early return on edge case. |
+| **Lookup** | Map a value to an action via a table. |
 
-### Case study
-A specific real-world example that illustrates Variables & Control Structures. This builds on the previous concept and connects to broader themes in the course.
+## Iteration Patterns
 
-### Comparison
-Analyzing similarities and differences across examples of Variables & Control Structures. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Pattern | Use |
+|---------|-----|
+| **Counted loop** | Known number of iterations. |
+| **Conditional loop** | Stop when a condition becomes true / false. |
+| **List traversal** | Process each item. |
+| **Nested loop** | Process pairs (or grid). |
+
+## Mini-walkthrough: Find Maximum
+
+    best ← scoreList[0]
+    FOR EACH score IN scoreList:
+      IF score > best THEN
+        best ← score
+
+Initialize, then update on each item — the canonical pattern for "best so far".
       `
     },
     {
-      id: 'cspvaria3-input',
+      id: "cspvc3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Variables & Control Structures?
+1) The pattern **total ← total + x** inside a loop is called the _______ pattern.
 
-2) What concept describes a specific real-world example that illustrates Variables & Control Structures?
+2) A pattern that produces a NEW list of items meeting a condition is called _______.
 
-3) Name the term for analyzing similarities and differences across examples of Variables & Control Structures.
-
-Use the exact term from this part.
+3) A pattern that finds the largest value in a list is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Variables & Control Structures), Case study (A specific real-world example that illustrates Variables & Control Structures), and Comparison (Analyzing similarities and differences across examples of Variables & Control Structures).'
+        correctAnswers: ["accumulator", "filter", "maximum"],
+        hint1: "Build up a sum.",
+        hint2: "Subset.",
+        hint3: "\"Best so far\".",
+        explanation: "Accumulator, filter, max — three of the most common loop patterns."
       }
     },
     {
-      id: 'cspvaria3-dropdown',
+      id: "cspvc3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Variables & Control Structures is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A loop that visits every (i, j) pair in a grid uses ___",
+            options: ["nested loops", "a single loop", "no loop", "recursion only"]
           },
           {
-            label: 'A specific real-world example that illustrates Variables & Control Structures describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "IF / ELSE IF / ELSE is most appropriate when ___",
+            options: ["multiple ranked conditions partition the cases", "there are exactly two branches", "no condition is needed", "a loop is needed"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Variables & Control Structures is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "A \"guard clause\" pattern handles ___",
+            options: ["edge cases early so the main logic stays clean", "arithmetic only", "list traversal", "compression"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Variables & Control Structures. Case study — A specific real-world example that illustrates Variables & Control Structures. Comparison — Analyzing similarities and differences across examples of Variables & Control Structures.'
+        correctAnswers: ["nested loops", "multiple ranked conditions partition the cases", "edge cases early so the main logic stays clean"],
+        hint1: "Pairs / grid.",
+        hint2: "Multi-way branching.",
+        hint3: "Early exit.",
+        explanation: "Nested loops = pairs. Else-if chain = multi-way. Guards handle edges first."
       }
     },
     {
-      id: 'cspvaria3-strategy',
+      id: "cspvc3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Patterns
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Variables & Control Structures.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Recognize the loop pattern from the body: total += → accumulator; result.APPEND → filter; if x > best → max.
+- Match selection style to # of branches.
+- Nested loops handle 2D / pairs.
       `
     },
     {
-      id: 'cspvaria3-applied',
+      id: "cspvc3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Variables & Control Structures. The strongest response would:',
+            question: "A program counts how many items in a list are negative. The right pattern is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "accumulator with a condition (count ← 0; FOR EACH x: IF x < 0 THEN count ← count + 1).",
+              "no loop — the count of negatives can be read directly off any list value.",
+              "sort the list first, then read the count of negatives from the sorted output.",
+              "compress the list first, then count negative tokens in the compressed bytes."
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 0,
+            explanation: "Conditional accumulator (counter)."
           },
           {
-            question: 'A pattern observed in Variables & Control Structures is consistent across multiple world regions. This suggests:',
+            question: "A program finds the longest string in a list. The right pattern is ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "\"best so far\" with comparison on LENGTH(string) on each list element.",
+              "no loop — the longest string can be inferred from the first element directly.",
+              "random selection of one element and returning it as the longest candidate.",
+              "encryption of every string and returning the one with the longest ciphertext."
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: "\"Best so far\" pattern, comparing by length."
           }
         ]
       }
     }
   ]
-}
+};

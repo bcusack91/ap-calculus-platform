@@ -1,175 +1,179 @@
 export const cspComputingSystemsNetworksPart4Data = {
-  topicSlug: 'csp-computing-systems-networks',
+  topicSlug: "csp-computing-systems-networks",
   sections: [
     {
-      id: 'cspcompu4-intro',
+      id: "cspcsn4-intro",
       type: 'text' as const,
       content: `
 # 🖥️ Computing Systems & Networks
 
 **Part 4 of 7 — Connections & Interactions**
 
-Computing Systems & Networks connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Systems & Networks Connect Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Computing Systems & Networks links to other course topics |
-| **Scale interaction** | How Computing Systems & Networks operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Computing Systems & Networks can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Systems ↔ Algorithms | OS schedulers, routing all use algorithms. |
+| Networks ↔ Internet | The Internet is the largest network. |
+| Systems ↔ Security | Each layer is a potential attack surface. |
+| Networks ↔ Impact | Connectivity (or lack of) shapes equality of access. |
       `
     },
     {
-      id: 'cspcompu4-quiz1',
+      id: "cspcsn4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Computing Systems & Networks connects to other course topics through:',
+            question: "An OS scheduler that decides which process runs next is fundamentally implementing an ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "algorithm that ranks ready processes by some scheduling policy",
+              "compression scheme applied to ready processes before they execute",
+              "TLS handshake between the kernel and each ready user process",
+              "router whose forwarding table maps process IDs to CPU cores"
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: "Schedulers are algorithms."
           },
           {
-            question: 'A feedback loop in Computing Systems & Networks means:',
+            question: "A region with no broadband access faces ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "no impact at all on its residents' day-to-day activities or opportunities.",
+              "a digital divide — limited access to education, jobs, and online services.",
+              "consistently lower latency than well-connected urban regions on the same continent.",
+              "consistently better TLS handshake performance because of reduced background traffic."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Digital-divide framing."
           }
         ]
       }
     },
     {
-      id: 'cspcompu4-content',
+      id: "cspcsn4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Each System Layer Adds Trust Decisions
 
-### Interconnection
-How Computing Systems & Networks links to other course topics. Understanding this concept is essential for mastering Computing Systems & Networks in AP CS Principles.
+| Layer | Trust questions |
+|-------|----------------|
+| Hardware | Is firmware genuine? |
+| OS | Are processes isolated? |
+| App | Does the user trust this code? |
+| Network | Is this connection encrypted? |
+| Cloud | Do we trust the provider? |
 
-### Scale interaction
-How Computing Systems & Networks operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+A vulnerability at any layer can compromise the whole stack.
 
-### Feedback loop
-How outcomes of Computing Systems & Networks can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Mobile And IoT Are Networks Too
+
+| Device | Network role |
+|--------|-------------|
+| Smartphone | Multi-radio (cellular + Wi-Fi + Bluetooth). |
+| Smart speaker | Always-listening client of cloud APIs. |
+| Sensor | Often constrained — low power, tiny memory. |
+| Smart car | Edge-to-cloud telemetry. |
+
+These add scale and security challenges (lots of devices, many never patched).
       `
     },
     {
-      id: 'cspcompu4-input',
+      id: "cspcsn4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Computing Systems & Networks links to other course topics?
+1) A vulnerability at any layer of a system can compromise the _______ stack.
 
-2) What concept describes how Computing Systems & Networks operates differently at local, national, and global scales?
+2) Lack of broadband access in some regions is part of the digital _______.
 
-3) Name the term for how outcomes of Computing Systems & Networks can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) Tiny low-power sensors are typical of the _______ category of devices.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Computing Systems & Networks links to other course topics), Scale interaction (How Computing Systems & Networks operates differently at local, national, and global scales), and Feedback loop (How outcomes of Computing Systems & Networks can reinforce or modify the original process).'
+        correctAnswers: ["whole", "divide", "IoT"],
+        hint1: "Layers stack.",
+        hint2: "Equity issue.",
+        hint3: "Internet of Things.",
+        explanation: "Layered trust; digital divide; IoT."
       }
     },
     {
-      id: 'cspcompu4-dropdown',
+      id: "cspcsn4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Computing Systems & Networks links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A trusted hardware module that protects keys even from the OS is part of ___",
+            options: ["layered system trust", "compression", "a routing table", "a DNS resolver"]
           },
           {
-            label: 'How Computing Systems & Networks operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "IoT devices that ship without security updates create ___",
+            options: ["large attack surfaces over time", "better latency", "compression gains", "TLS speedups"]
           },
           {
-            label: 'How outcomes of Computing Systems & Networks can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A school in an area with poor connectivity faces ___",
+            options: ["educational disadvantages tied to the digital divide", "no impact", "lower TLS overhead", "cleaner DNS"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Computing Systems & Networks links to other course topics. Scale interaction — How Computing Systems & Networks operates differently at local, national, and global scales. Feedback loop — How outcomes of Computing Systems & Networks can reinforce or modify the original process.'
+        correctAnswers: ["layered system trust", "large attack surfaces over time", "educational disadvantages tied to the digital divide"],
+        hint1: "Hardware roots of trust.",
+        hint2: "Unpatched IoT.",
+        hint3: "Equity gap.",
+        explanation: "Trust per layer, unpatched IoT risk, digital divide impact."
       }
     },
     {
-      id: 'cspcompu4-strategy',
+      id: "cspcsn4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Systems
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Computing Systems & Networks.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "Why does my browser work on different network cards?" → OS abstraction.
+- "Lack of broadband impact?" → digital divide.
+- "Why is this IoT device dangerous?" → never patched, large attack surface.
       `
     },
     {
-      id: 'cspcompu4-applied',
+      id: "cspcsn4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Computing Systems & Networks and other units earns higher scores because:',
+            question: "A smart-home device hasn't received updates in 5 years. The most accurate concern is ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "no concern — unpatched IoT devices on a home network are essentially harmless.",
+              "known vulnerabilities accumulate; the device may become a vector for botnets.",
+              "the device's TLS handshake will simply run more slowly than freshly patched devices.",
+              "the device will compress its traffic less efficiently than recently updated devices do."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Unpatched IoT = compounding risk."
           },
           {
-            question: 'If Computing Systems & Networks produces outcomes that further intensify the original process, this is:',
+            question: "A community center in a low-connectivity area provides public Wi-Fi for students. The most CSP-aligned framing is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "unnecessary spending of community funds on a service students don't really need.",
+              "addressing the digital divide so students can access learning resources online.",
+              "wasted electricity that could have been used for other community programs instead.",
+              "extra TLS overhead on the broader internet that slows down other users' traffic."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Public Wi-Fi as a digital-divide intervention."
           }
         ]
       }
     }
   ]
-}
+};

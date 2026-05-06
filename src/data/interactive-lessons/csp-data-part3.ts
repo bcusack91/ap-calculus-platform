@@ -1,175 +1,180 @@
 export const cspDataPart3Data = {
-  topicSlug: 'csp-data',
+  topicSlug: "csp-data",
   sections: [
     {
-      id: 'cspdata3-intro',
+      id: "cspdata3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Data & Information. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Patterns Of Data Use
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Data & Information |
-| **Case study** | A specific real-world example that illustrates Data & Information |
-| **Comparison** | Analyzing similarities and differences across examples of Data & Information |
+| Pattern | Example |
+|---------|---------|
+| **Lookup** | Find a record by ID. |
+| **Aggregation** | Sum, mean, count over a group. |
+| **Filtering** | Keep only rows that match a condition. |
+| **Sorting** | Order by a field. |
+| **Joining** | Combine two related datasets. |
+| **Visualization** | Bar charts, line graphs, maps. |
       `
     },
     {
-      id: 'cspdata3-quiz1',
+      id: "cspdata3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A school registrar wants the number of students per grade. This is most directly an example of ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "encrypting student records before any other process can read them",
+              "aggregation — counting records grouped by a shared attribute",
+              "compressing the underlying student-record file to save disk space",
+              "routing each student record to the correct downstream system"
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Counting by group = aggregation."
           },
           {
-            question: 'Comparing examples of Data & Information across regions helps:',
+            question: "A scatter plot is most useful for ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "showing two variables' relationship across many records.",
+              "compressing data so a long file consumes less disk space.",
+              "routing packets between two endpoints across the network.",
+              "encrypting messages so only the intended recipient can read them."
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: "Scatter plots reveal correlations between two numeric variables."
           }
         ]
       }
     },
     {
-      id: 'cspdata3-content',
+      id: "cspdata3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Visualization Choices
 
-### Spatial pattern
-The geographic distribution related to Data & Information. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+| Question | Best chart |
+|----------|-----------|
+| How does X change over time? | Line chart. |
+| How does each category compare? | Bar chart. |
+| What's the distribution of values? | Histogram. |
+| What's the relationship between X and Y? | Scatter plot. |
+| What share does each part take? | Pie / donut chart (sparingly). |
 
-### Case study
-A specific real-world example that illustrates Data & Information. This builds on the previous concept and connects to broader themes in the course.
+Bad chart choice can mislead — exam answers reward picking the chart that matches the question.
 
-### Comparison
-Analyzing similarities and differences across examples of Data & Information. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Joining Two Datasets
+
+You have a list of student IDs and a list of (ID, grade). To produce a joined view (name, grade), you **join** on ID. The result has both pieces of information per student.
+
+Joins enable powerful analysis (linking voter rolls + medical records + purchase history) — and powerful re-identification.
+
+## Insights vs. Causation
+
+A correlation in data ≠ causation. Ice-cream sales and drowning correlate (both peak in summer); ice cream doesn't cause drowning. AP-aligned answer: data shows patterns; explaining WHY requires more than the data.
       `
     },
     {
-      id: 'cspdata3-input',
+      id: "cspdata3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Data & Information?
+1) A chart that best shows two variables' relationship is a _______ plot.
 
-2) What concept describes a specific real-world example that illustrates Data & Information?
+2) Combining two datasets on a shared key (e.g., student ID) is called a _______.
 
-3) Name the term for analyzing similarities and differences across examples of Data & Information.
-
-Use the exact term from this part.
+3) A correlation in data does not necessarily mean _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Data & Information), Case study (A specific real-world example that illustrates Data & Information), and Comparison (Analyzing similarities and differences across examples of Data & Information).'
+        correctAnswers: ["scatter", "join", "causation"],
+        hint1: "Dots, two axes.",
+        hint2: "SQL term.",
+        hint3: "Cause vs correlation.",
+        explanation: "Scatter plots show pair relationships. Joins combine datasets. Correlation ≠ causation."
       }
     },
     {
-      id: 'cspdata3-dropdown',
+      id: "cspdata3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Data & Information is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A line chart is best for ___",
+            options: ["change over time", "comparing 3 categories", "a single value", "compressing data"]
           },
           {
-            label: 'A specific real-world example that illustrates Data & Information describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A bar chart is best for ___",
+            options: ["comparing categories", "change over time at high resolution", "showing causation", "encrypting data"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Data & Information is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "Linking medical records to voter rolls on (ZIP, birth date, gender) demonstrates ___",
+            options: ["re-identification via quasi-identifiers", "random matching", "compression", "TLS"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Data & Information. Case study — A specific real-world example that illustrates Data & Information. Comparison — Analyzing similarities and differences across examples of Data & Information.'
+        correctAnswers: ["change over time", "comparing categories", "re-identification via quasi-identifiers"],
+        hint1: "Time series.",
+        hint2: "Bars compare.",
+        hint3: "Linkage attack.",
+        explanation: "Lines = trends. Bars = categories. Linkage on quasi-IDs = re-identification."
       }
     },
     {
-      id: 'cspdata3-strategy',
+      id: "cspdata3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Patterns Of Data Use
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Data & Information.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Match chart to question: line/time, bar/category, scatter/relationship, histogram/distribution.
+- Joins are powerful — and the seed of many privacy concerns.
+- Correlation ≠ causation. Always.
       `
     },
     {
-      id: 'cspdata3-applied',
+      id: "cspdata3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Data & Information. The strongest response would:',
+            question: "A school year-over-year enrollment dataset is best displayed as ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "a pie chart showing the share each grade level took in the most recent year.",
+              "a line chart showing each year's total enrollment over time.",
+              "a histogram of grade levels grouped into uniform-width buckets.",
+              "a scatter plot whose x-axis is student name and y-axis is grade level."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Time-series → line chart."
           },
           {
-            question: 'A pattern observed in Data & Information is consistent across multiple world regions. This suggests:',
+            question: "An analyst notices that students who attend tutoring score higher on the SAT and concludes \"tutoring causes higher scores.\" The strongest critique is ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "the analysis is sound and the causal claim is well supported by the data.",
+              "students who choose tutoring may differ in motivation or prior achievement — confounders.",
+              "the sample is too large for any conclusion to be drawn from it confidently.",
+              "the analysis ignored the network protocol used to transmit the SAT scores."
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: "Confounders threaten causal claims from observational data."
           }
         ]
       }
     }
   ]
-}
+};

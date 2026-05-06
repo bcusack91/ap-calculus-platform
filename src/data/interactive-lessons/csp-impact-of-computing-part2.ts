@@ -1,175 +1,192 @@
 export const cspImpactOfComputingPart2Data = {
-  topicSlug: 'csp-impact-of-computing',
+  topicSlug: "csp-impact-of-computing",
   sections: [
     {
-      id: 'cspimpac2-intro',
+      id: "cspic2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Impact of Computing
+# 🌍 Impact of Computing
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Impact of Computing helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## Computing Reshapes Society
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Impact of Computing |
-| **Process 2** | A secondary process that shapes outcomes in Impact of Computing |
-| **Cause and effect** | The relationship between actions and outcomes in Impact of Computing |
+Every powerful technology produces both **beneficial** and **harmful** effects, often in the same product. AP CSP wants you to identify both — not just one.
+
+| Domain | Beneficial | Harmful |
+|--------|-----------|---------|
+| Communication | Global reach, free messaging | Misinformation spreads at the same speed |
+| Health | Telemedicine, AI diagnostic tools | Sensitive data exposure |
+| Education | Free open courses worldwide | Digital divide for those without access |
+| Commerce | Convenient shopping, cheaper goods | Job displacement, market concentration |
       `
     },
     {
-      id: 'cspimpac2-quiz1',
+      id: "cspic2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Impact of Computing?',
+            question: "A new app helps farmers in remote areas check crop prices on a basic phone. The most likely UNINTENDED consequence is ___",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "farmers across the entire region will permanently abandon their basic phones in favor of in-person market visits.",
+              "farmers without phones may be at a disadvantage relative to those with phones who can check crop prices instantly.",
+              "the basic phones used to check crop prices will gradually become more weather-resistant in remote farming areas.",
+              "crop prices set at central markets will become entirely irrelevant for the farmers using the price-checking app."
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "Even helpful technology can deepen the gap for those who don't have access (a digital-divide effect)."
           },
           {
-            question: 'Understanding cause and effect in Impact of Computing helps students:',
+            question: "Computing technologies generally have ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "only beneficial effects on the people and groups who choose to use them or are affected by their deployment.",
+              "only harmful effects on the people and groups who choose to use them or are affected by their deployment.",
+              "both beneficial and harmful effects on the people and groups affected, often in the same product simultaneously.",
+              "no significant effects on the people and groups affected that are worth analyzing under the AP CSP framework."
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 2,
+            explanation: "AP CSP frames technologies as having dual effects — both must be considered."
           }
         ]
       }
     },
     {
-      id: 'cspimpac2-content',
+      id: "cspic2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Beneficial vs. Harmful Effects
 
-### Process 1
-The primary mechanism that drives patterns in Impact of Computing. Understanding this concept is essential for mastering Impact of Computing in AP CS Principles.
+When evaluating a technology, ask:
 
-### Process 2
-A secondary process that shapes outcomes in Impact of Computing. This builds on the previous concept and connects to broader themes in the course.
+- Who **benefits** from it? In what way?
+- Who is **harmed** or excluded? In what way?
+- Was the harm **intended** or **unintended**?
+- What are **secondary** effects (e.g., changes to industries, public discourse)?
 
-### Cause and effect
-The relationship between actions and outcomes in Impact of Computing. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+These questions structure the AP exam's "impact of computing" prompts.
+
+## Intended vs. Unintended Consequences
+
+| Type | Example |
+|------|---------|
+| **Intended beneficial** | Email lets you send messages instantly. |
+| **Unintended beneficial** | Email infrastructure also enabled mailing lists, calendars, threaded discussions. |
+| **Intended harmful** | Spam, intentional malware. |
+| **Unintended harmful** | Email phishing exploiting trust in messages; "always-on" worker burnout. |
+
+Most exam scenarios focus on **unintended** consequences — second-order effects nobody planned but everyone now lives with.
+
+## The Digital Divide
+
+The **digital divide** is the gap between those who have meaningful access to digital technology (devices, bandwidth, skills) and those who don't. It maps onto:
+
+- **Geography**: rural vs urban broadband.
+- **Income**: cost of devices and service.
+- **Age**: comfort with new technology.
+- **Disability**: whether software is accessible.
+
+A "best in class" web service is meaningless to users who can't afford service or use it.
       `
     },
     {
-      id: 'cspimpac2-input',
+      id: "cspic2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Impact of Computing?
+1) The gap between those with and without meaningful access to digital tech is the digital _______.
 
-2) What concept describes a secondary process that shapes outcomes in Impact of Computing?
+2) A consequence that designers did not plan for is called a(n) _______ consequence.
 
-3) Name the term for the relationship between actions and outcomes in Impact of Computing.
-
-Use the exact term from this part.
+3) Identifying both who benefits and who is _______ is part of evaluating computing's impact.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Impact of Computing), Process 2 (A secondary process that shapes outcomes in Impact of Computing), and Cause and effect (The relationship between actions and outcomes in Impact of Computing).'
+        correctAnswers: ["divide", "unintended", "harmed"],
+        hint1: "Gap, split.",
+        hint2: "Opposite of planned.",
+        hint3: "Negative side.",
+        explanation: "Digital divide = access gap. Unintended consequences are unplanned. Always weigh harms alongside benefits."
       }
     },
     {
-      id: 'cspimpac2-dropdown',
+      id: "cspic2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Impact of Computing is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "Telemedicine that requires high-speed Internet may worsen ___",
+            options: ["the digital divide for rural patients", "doctor handwriting", "paper consumption", "patient height"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Impact of Computing describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "A platform that goes viral globally affects ___",
+            options: ["far more people than its designers may have anticipated", "only its designers", "only one country", "only Wi-Fi networks"]
           },
           {
-            label: 'The relationship between actions and outcomes in Impact of Computing is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "A \"dual use\" technology is one that ___",
+            options: ["can be used for both beneficial and harmful purposes", "requires two users", "has two pricing tiers", "doubles the bandwidth"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Impact of Computing. Process 2 — A secondary process that shapes outcomes in Impact of Computing. Cause and effect — The relationship between actions and outcomes in Impact of Computing.'
+        correctAnswers: ["the digital divide for rural patients", "far more people than its designers may have anticipated", "can be used for both beneficial and harmful purposes"],
+        hint1: "Connectivity gap matters.",
+        hint2: "Internet scale = global effects.",
+        hint3: "Same tool, different uses.",
+        explanation: "Telemedicine relies on bandwidth. Internet-scale tech affects everyone. Dual-use describes most computing."
       }
     },
     {
-      id: 'cspimpac2-strategy',
+      id: "cspic2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Impact Analysis
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Impact of Computing.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Always answer with **both** a benefit and a harm — the rubric usually demands both.
+- Look for **second-order** effects (e.g., displaced jobs, behavioral changes).
+- Mention specific affected populations (rural users, low-income users, users with disabilities, minors, etc.).
+- Don't just say "good" or "bad" — explain WHO is affected and HOW.
       `
     },
     {
-      id: 'cspimpac2-applied',
+      id: "cspic2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A school replaces paper textbooks with tablets to save money. What is a likely UNINTENDED harmful effect?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "Books delivered to students at the start of the year will no longer be printed with paper pages bound together.",
+              "Students without home Wi-Fi may struggle to do homework that requires the new tablet to access digital textbook content.",
+              "The new tablets distributed to students will be noticeably heavier in their backpacks than the old paper textbooks were.",
+              "Teachers across the entire district will collectively refuse to teach any further classes if textbooks are replaced."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "A digital-divide effect — students without home connectivity may be disadvantaged."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A facial-recognition system is deployed in a city to find missing children (intended beneficial use). What is a plausible UNINTENDED harmful use?",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "It will reliably help locate every missing child reported in the city without ever producing a false positive identification.",
+              "The same camera-and-recognition infrastructure can later be repurposed to track political protesters or other lawful demonstrators.",
+              "It runs on the standard TCP/IP networking protocols used elsewhere on the internet for routine application-layer traffic.",
+              "It will gradually increase broadband demand on the city's residential ISPs as more cameras are added to the facial system."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Surveillance infrastructure built for one purpose is easily redeployed for others — a classic dual-use concern."
           }
         ]
       }
     }
   ]
-}
+};

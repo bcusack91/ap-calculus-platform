@@ -1,175 +1,174 @@
 export const cspSafeComputingPart7Data = {
-  topicSlug: 'csp-safe-computing',
+  topicSlug: "csp-safe-computing",
   sections: [
     {
-      id: 'cspsafec7-intro',
+      id: "cspsc7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔐 Safe Computing
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Safe Computing Practices for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Safe Computing Practices |
-| **Common question types** | The most frequent ways Safe Computing Practices is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Safe Computing Practices questions effectively |
+## AP Exam Recap — Safe Computing
       `
     },
     {
-      id: 'cspsafec7-quiz1',
+      id: "cspsc7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Safe Computing Practices is:',
+            question: "Which is most clearly NOT safe-computing best practice?",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "Unique strong passwords per site.",
+              "MFA on important accounts.",
+              "Sharing the same password everywhere \"for convenience\".",
+              "Patching software promptly."
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: "Password reuse is the antithesis of safe computing."
           },
           {
-            question: 'AP multiple-choice questions about Safe Computing Practices often test:',
+            question: "A \"passkey\" is ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "a physical key only.",
+              "a phishing-resistant credential bound to a device and the real site origin.",
+              "a compression algorithm.",
+              "a CDN feature."
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: "Passkeys = origin-bound device credential."
           }
         ]
       }
     },
     {
-      id: 'cspsafec7-content',
+      id: "cspsc7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Safe Computing Practices. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Password manager | Stores unique strong passwords. |
+| MFA | Multi-factor authentication. |
+| Phishing | Social-engineering attack. |
+| Default credentials | Out-of-box passwords. |
+| Patch | Software security update. |
+| Backups | Off-device data copies. |
+| Threat modeling | Identifying realistic adversaries. |
+| Passkey | Phishing-resistant device credential. |
+| Identity provider | Account that unlocks many services. |
 
-### Common question types
-The most frequent ways Safe Computing Practices is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Safe Computing Practices questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Reusing passwords across sites.
+- Skipping MFA on email.
+- Sharing MFA codes.
+- Ignoring TLS warnings.
+- Leaving default device credentials.
+- No off-device backups.
+- Treating safe computing as one-time, not ongoing.
       `
     },
     {
-      id: 'cspsafec7-input',
+      id: "cspsc7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Safe Computing Practices?
+1) Sharing the same password across sites enables _______ stuffing.
 
-2) What concept describes the most frequent ways Safe Computing Practices is tested on the AP exam?
+2) A modern alternative to passwords that resists phishing is the _______.
 
-3) Name the term for approaches for answering Safe Computing Practices questions effectively.
-
-Use the exact term from this part.
+3) Backups stored off the device protect against device loss, theft, and _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Safe Computing Practices), Common question types (The most frequent ways Safe Computing Practices is tested on the AP exam), and Exam strategy (Approaches for answering Safe Computing Practices questions effectively).'
+        correctAnswers: ["credential", "passkey", "ransomware"],
+        hint1: "Reuse attack.",
+        hint2: "FIDO2.",
+        hint3: "Encrypted-extortion attack.",
+        explanation: "Credential stuffing / passkeys / ransomware."
       }
     },
     {
-      id: 'cspsafec7-dropdown',
+      id: "cspsc7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Safe Computing Practices is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "A password should be ___",
+            options: ["unique per site, generated by a password manager", "identical across all sites", "shared with friends", "compressed"]
           },
           {
-            label: 'The most frequent ways Safe Computing Practices is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "A \"click any link to verify\" email is ___",
+            options: ["highly suspicious — verify out-of-band first", "always safe", "always compressed", "always TLS-protected"]
           },
           {
-            label: 'Approaches for answering Safe Computing Practices questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "Email + MFA is the foundation of personal safe computing because ___",
+            options: ["email is the recovery channel for almost every other account", "email is the smallest file", "TLS routes through email", "compression depends on it"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Safe Computing Practices. Common question types — The most frequent ways Safe Computing Practices is tested on the AP exam. Exam strategy — Approaches for answering Safe Computing Practices questions effectively.'
+        correctAnswers: ["unique per site, generated by a password manager", "highly suspicious — verify out-of-band first", "email is the recovery channel for almost every other account"],
+        hint1: "Uniqueness.",
+        hint2: "Verify first.",
+        hint3: "Master account.",
+        explanation: "Unique passwords; verify before clicking; protect email = protect everything."
       }
     },
     {
-      id: 'cspsafec7-strategy',
+      id: "cspsc7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Safe Computing Practices.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Personal safe computing = unique passwords + MFA + patches + backups + skepticism.
+- Email is the master account — protect it first.
+- Passkeys are the future of authentication.
+- Safe computing affects others connected to you.
       `
     },
     {
-      id: 'cspsafec7-applied',
+      id: "cspsc7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Safe Computing Practices. You should:',
+            question: "A grandparent forwards \"click here to claim a prize\" emails. The CSP-aligned response is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "mock them for falling for an obvious scam and refuse to discuss safer practices with them.",
+              "gently educate: explain phishing patterns, set up MFA on important accounts, install browser protection.",
+              "recommend that the grandparent upgrade to the latest transport-layer security version on all devices.",
+              "recommend that the grandparent compress every forwarded email before resending it to other relatives."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "Education + MFA + browser protection = inclusive safe computing."
           },
           {
-            question: 'For free-response questions on Safe Computing Practices, the most common mistake is:',
+            question: "A school deploys 1,000 student laptops. The single most impactful safe-computing default is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "no special default — each student should configure their own laptop without any baseline policy.",
+              "enforce MFA on student accounts, OS auto-updates, full-disk encryption, and unique passwords.",
+              "configure a single shared admin account on every laptop so technicians can support them faster.",
+              "disable operating-system updates on every laptop so students are not interrupted by restarts."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: "Defaults that favor security at fleet scale."
           }
         ]
       }
     }
   ]
-}
+};

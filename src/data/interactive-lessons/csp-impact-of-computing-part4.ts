@@ -1,175 +1,197 @@
 export const cspImpactOfComputingPart4Data = {
-  topicSlug: 'csp-impact-of-computing',
+  topicSlug: "csp-impact-of-computing",
   sections: [
     {
-      id: 'cspimpac4-intro',
+      id: "cspic4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Impact of Computing
+# 🌍 Impact of Computing
 
 **Part 4 of 7 — Connections & Interactions**
 
-Impact of Computing connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Cross-Course Connections
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Impact of Computing links to other course topics |
-| **Scale interaction** | How Impact of Computing operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Impact of Computing can reinforce or modify the original process |
+Impact of computing ties everything together.
+
+| Cross-link | Why |
+|-----------|-----|
+| Impact ↔ Internet (BI 4) | Global reach amplifies both benefit and harm. |
+| Impact ↔ Algorithms (BI 3) | Algorithms make consequential decisions about humans. |
+| Impact ↔ Data (BI 2) | Massive data collection enables both useful and invasive systems. |
+| Impact ↔ Security (BI 4) | Breaches turn collected data into harm. |
       `
     },
     {
-      id: 'cspimpac4-quiz1',
+      id: "cspic4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Impact of Computing connects to other course topics through:',
+            question: "Two services collect overlapping personal data. Combining them via a data-broker poses risks beyond either alone because ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "data records about individuals visibly shrink in total size when two overlapping personal-data sources are combined.",
+              "cross-linking quasi-identifiers across the two sets can re-identify people who appear anonymous in either set alone.",
+              "the TCP transport protocol fundamentally cannot carry the combined output of two overlapping personal-data sources.",
+              "combining the records on disk routinely corrupts the underlying data files and renders the merged dataset unreadable."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Linkage attacks defeat naive anonymization — a core privacy theme."
           },
           {
-            question: 'A feedback loop in Impact of Computing means:',
+            question: "A government deploys an automated system that decides who is eligible for benefits. The most CSP-aligned concern is ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "the deployed eligibility system will run too quickly to give human caseworkers enough processing time per applicant.",
+              "the system's decisions affect lives, so its accuracy, fairness, and explainability all matter to people denied benefits.",
+              "the deployed eligibility system will require an upgrade to IPv6 networking before it can process new benefit applicants.",
+              "the deployed eligibility system will only run reliably on government servers during normal weekday business hours."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "High-stakes algorithmic decisions demand fairness, accuracy, and transparency."
           }
         ]
       }
     },
     {
-      id: 'cspimpac4-content',
+      id: "cspic4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## When Algorithms Decide About People
 
-### Interconnection
-How Impact of Computing links to other course topics. Understanding this concept is essential for mastering Impact of Computing in AP CS Principles.
+Examples:
 
-### Scale interaction
-How Impact of Computing operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+- **Loan approval** — denied a mortgage by a model.
+- **Sentencing risk scores** — courts using algorithmic risk assessments.
+- **Content moderation** — auto-removing posts.
+- **Hiring screeners** — filtering resumes.
 
-### Feedback loop
-How outcomes of Impact of Computing can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+CSP-aligned concerns:
+
+- **Accuracy**: how often is the model wrong?
+- **Fairness**: are errors distributed evenly across groups?
+- **Transparency**: can affected people understand why?
+- **Recourse**: can decisions be appealed?
+
+## Surveillance vs. Convenience
+
+Many features blur the line:
+
+| Feature | Convenience | Surveillance side |
+|---------|-------------|------------------|
+| Smart speaker | Voice control | Always listening |
+| Location services | Useful maps / weather | Continuous location log |
+| Loyalty cards | Discounts | Fine-grained purchase history |
+
+The more we trade for convenience, the more we should ask **who else gets the data**.
+
+## Misinformation At Scale
+
+The Internet allows false information to spread as quickly as true information. Recommendation algorithms can amplify what generates engagement, which is not always what is true. CSP-relevant ideas:
+
+- **Filter bubbles**: algorithmically narrowed views.
+- **Bots**: automated accounts inflating engagement.
+- **Deepfakes**: synthetic media indistinguishable from real.
+
+These are not "future" issues — they are present.
       `
     },
     {
-      id: 'cspimpac4-input',
+      id: "cspic4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Impact of Computing links to other course topics?
+1) Combining datasets to identify "anonymous" individuals is called a _______ attack.
 
-2) What concept describes how Impact of Computing operates differently at local, national, and global scales?
+2) When algorithms make high-stakes decisions about people, an important property is _______ — being able to explain why.
 
-3) Name the term for how outcomes of Impact of Computing can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) Synthetic media generated by AI to imitate real people is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Impact of Computing links to other course topics), Scale interaction (How Impact of Computing operates differently at local, national, and global scales), and Feedback loop (How outcomes of Impact of Computing can reinforce or modify the original process).'
+        correctAnswers: ["linkage", "transparency", "deepfake"],
+        hint1: "Combining links → identification.",
+        hint2: "Open about how it decides.",
+        hint3: "Deep + fake.",
+        explanation: "Linkage attacks re-identify; transparency helps accountability; deepfakes pose new misinformation risks."
       }
     },
     {
-      id: 'cspimpac4-dropdown',
+      id: "cspic4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Impact of Computing links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A \"filter bubble\" describes ___",
+            options: ["being shown only viewpoints similar to one's past clicks", "a Wi-Fi router protector", "an audio compression", "an HTTPS layer"]
           },
           {
-            label: 'How Impact of Computing operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "A bot army inflating likes affects ___",
+            options: ["perceived popularity, distorting public discourse", "TCP retransmission", "IPv6 adoption", "pixel resolution"]
           },
           {
-            label: 'How outcomes of Impact of Computing can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "High-stakes algorithmic decisions especially benefit from ___",
+            options: ["human oversight and appeal mechanisms", "no review at all", "random outputs", "closed-source designs"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Impact of Computing links to other course topics. Scale interaction — How Impact of Computing operates differently at local, national, and global scales. Feedback loop — How outcomes of Impact of Computing can reinforce or modify the original process.'
+        correctAnswers: ["being shown only viewpoints similar to one's past clicks", "perceived popularity, distorting public discourse", "human oversight and appeal mechanisms"],
+        hint1: "Algorithmic narrowing of feed.",
+        hint2: "Fake amplification.",
+        hint3: "Humans in the loop.",
+        explanation: "Filter bubbles narrow exposure. Bots distort signals. Human oversight checks algorithmic harm."
       }
     },
     {
-      id: 'cspimpac4-strategy',
+      id: "cspic4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Impact
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Impact of Computing.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- A scenario about combining datasets often points to a privacy/linkage answer.
+- A scenario about a model deciding about people → fairness, transparency, recourse.
+- A scenario about viral content → misinformation, filter bubbles, bots.
+- Always tie the harm back to a CSP-relevant mechanism (data, algorithm, network reach).
       `
     },
     {
-      id: 'cspimpac4-applied',
+      id: "cspic4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Impact of Computing and other units earns higher scores because:',
+            question: "A health app sells \"anonymized\" exercise data. A researcher links the data to public running club rosters and identifies many users. Which CSP concept is illustrated?",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "Lossless data compression of the exercise dataset before publication for sale to outside researchers and partners.",
+              "A linkage attack defeating naive anonymization by joining quasi-identifiers across the dataset and a public roster.",
+              "A best-effort packet-routing decision made by the internet routers between the app's server and the researcher.",
+              "A TCP transport-layer retransmission of dropped exercise-data packets between the app's server and the researcher."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Quasi-identifiers (location, time, route) link \"anonymous\" records back to people."
           },
           {
-            question: 'If Impact of Computing produces outcomes that further intensify the original process, this is:',
+            question: "A social platform's recommendation algorithm boosts engagement. Over time it shows users increasingly extreme content. What CSP-aligned framing best fits?",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "The recommendation algorithm has developed something like a personality and is independently choosing the extreme content.",
+              "Optimizing for user engagement is not the same as optimizing for truth or wellbeing — an unintended harmful consequence.",
+              "The internet itself is fundamentally broken in a way that causes any deployed recommendation system to surface extreme content.",
+              "The internet routers carrying the recommendations have a built-in bias that pushes increasingly extreme content to viewers."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Optimization targets shape outcomes; engagement-maximization can produce harmful content as a side effect."
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,175 +1,199 @@
 export const cspAlgorithmsProgrammingPart6Data = {
-  topicSlug: 'csp-algorithms-programming',
+  topicSlug: "csp-algorithms-programming",
   sections: [
     {
-      id: 'cspalgor6-intro',
+      id: "cspap6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms & Programming
+# 💻 Algorithms & Programming
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Algorithms & Programming concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+## Programming Workshop
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Algorithms & Programming |
-| **Argumentation** | Making evidence-based claims about Algorithms & Programming |
-| **Spatial reasoning** | Using geographic thinking to analyze Algorithms & Programming |
+End-to-end FRQ-style problems combining variables, conditionals, loops, lists, and procedures.
       `
     },
     {
-      id: 'cspalgor6-quiz1',
+      id: "cspap6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Algorithms & Programming, the first step is:',
+            question: "You are asked to \"return the index of the first element in list that is greater than threshold, or -1 if none exists\". Which structure is correct?",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              "Loop with early RETURN i on the first match; RETURN -1 after the loop completes with no match.",
+              "Loop that overwrites a result variable on every iteration; RETURN that variable after the loop ends.",
+              "Sort the list in ascending order, then return list[1] as the first element greater than threshold.",
+              "Compute LENGTH(list) and divide by threshold to obtain the index of the first matching element."
             ],
             correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            explanation: "First-match patterns demand early RETURN. The post-loop RETURN -1 handles \"none exists\"."
           },
           {
-            question: 'An evidence-based argument about Algorithms & Programming requires:',
+            question: "You need to compute the median of a list of test scores. Which two-step plan is most appropriate?",
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "Sort the list, then return the middle element (or the average of the two middles for an even-length list).",
+              "Return list[1] directly, since the first element of a sorted-by-entry list is treated as the median value.",
+              "Sum every element of the list and divide the sum by the length to obtain the median test-score value.",
+              "Return the most common (modal) value in the list, since the modal score serves as the median in practice."
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: "Median = middle of sorted data. (Sum/length is mean, not median.)"
           }
         ]
       }
     },
     {
-      id: 'cspalgor6-content',
+      id: "cspap6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked Problem 1: First Index Greater Than Threshold
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Algorithms & Programming. Understanding this concept is essential for mastering Algorithms & Programming in AP CS Principles.
+    PROCEDURE firstGreater(list, threshold) {
+      FOR i ← 1 TO LENGTH(list) {
+        IF (list[i] > threshold) { RETURN i }
+      }
+      RETURN −1
+    }
 
-### Argumentation
-Making evidence-based claims about Algorithms & Programming. This builds on the previous concept and connects to broader themes in the course.
+**Trace [10, 25, 18, 30] with threshold 20:**
 
-### Spatial reasoning
-Using geographic thinking to analyze Algorithms & Programming. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| i | list[i] | > 20? | Action |
+|---|---------|-------|--------|
+| 1 | 10 | no | continue |
+| 2 | 25 | yes | RETURN 2 |
+
+## Worked Problem 2: Average Of Top-N
+
+Goal: average the largest n values in list.
+
+    PROCEDURE avgTopN(list, n) {
+      sorted ← descendingSort(list)
+      total ← 0
+      FOR i ← 1 TO n { total ← total + sorted[i] }
+      RETURN total / n
+    }
+
+**Edge cases to ask about on the exam:**
+
+- What if n > LENGTH(list)? (Should clamp n.)
+- What if n = 0? (Divide-by-zero — guard.)
+- What if list contains non-numbers? (Type check.)
+
+## Worked Problem 3: Detect Duplicates
+
+    PROCEDURE hasDuplicate(list) {
+      FOR i ← 1 TO LENGTH(list) − 1 {
+        FOR j ← i + 1 TO LENGTH(list) {
+          IF (list[i] = list[j]) { RETURN TRUE }
+        }
+      }
+      RETURN FALSE
+    }
+
+**Efficiency note:** this is O(n²). With a hash/dictionary it can become O(n) — a common AP exam upgrade question.
       `
     },
     {
-      id: 'cspalgor6-input',
+      id: "cspap6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Algorithms & Programming?
+1) For "first occurrence" problems, the loop body should _______ on first match.
 
-2) What concept describes making evidence-based claims about Algorithms & Programming?
+2) For O(n²) duplicate detection, an upgrade to O(n) uses a _______ to remember seen values.
 
-3) Name the term for using geographic thinking to analyze Algorithms & Programming.
-
-Use the exact term from this part.
+3) When dividing by n, you must guard against n equal to _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Algorithms & Programming), Argumentation (Making evidence-based claims about Algorithms & Programming), and Spatial reasoning (Using geographic thinking to analyze Algorithms & Programming).'
+        correctAnswers: ["return", "dictionary", "0"],
+        hint1: "Exit immediately.",
+        hint2: "Hash map / set.",
+        hint3: "Divide-by-this is undefined.",
+        explanation: "Early return for first-match. Use a set/dictionary for O(n) duplicate detection. Always guard divisor."
       }
     },
     {
-      id: 'cspalgor6-dropdown',
+      id: "cspap6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Algorithms & Programming is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "firstGreater on [10,25,18,30] with threshold = 30 returns ___",
+            options: ["−1", "4", "0", "30"]
           },
           {
-            label: 'Making evidence-based claims about Algorithms & Programming describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "firstGreater on [10,25,18,30] with threshold = 5 returns ___",
+            options: ["1", "4", "0", "−1"]
           },
           {
-            label: 'Using geographic thinking to analyze Algorithms & Programming is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "avgTopN([100, 50, 80, 90], 2) returns ___",
+            options: ["95", "80", "50", "90"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Algorithms & Programming. Argumentation — Making evidence-based claims about Algorithms & Programming. Spatial reasoning — Using geographic thinking to analyze Algorithms & Programming.'
+        correctAnswers: ["−1", "1", "95"],
+        hint1: "Strict >; 30 > 30 is false.",
+        hint2: "First element already passes.",
+        hint3: "(100 + 90) / 2.",
+        explanation: "Strict comparisons exclude equality. The first match in [10,…] when threshold = 5 is index 1. Top 2 of {100,50,80,90} are 100 and 90."
       }
     },
     {
-      id: 'cspalgor6-strategy',
+      id: "cspap6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: FRQ Problem-Solving
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Algorithms & Programming.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+1. Read the problem twice; underline what is RETURNED.
+2. Identify the **pattern** (first-match? for-all? accumulator? sort-then-pick?).
+3. Sketch a 4-row trace table on the smallest example.
+4. Write the procedure header first; the body fills in around RETURN.
+5. Check at least one **edge case** before finalizing.
       `
     },
     {
-      id: 'cspalgor6-applied',
+      id: "cspap6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Algorithms & Programming and asked to identify a trend. You should:',
+            question: "Procedure twoSum(list, target) should return TRUE if any two distinct elements sum to target. Which structure is most appropriate AND most efficient?",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "For each element x, check if (target − x) is in a set of already-seen values; record x in the set; return TRUE on hit.",
+              "Sort the list in ascending order and then check whether each adjacent pair of elements sums to target.",
+              "Use a triple-nested loop over every possible 3-tuple of list elements and check sums of every triple.",
+              "Use a single loop that adds each pair of consecutive elements and returns TRUE on the first matching sum."
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: "The hash-set approach is O(n) and correct for distinct-pair sum."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Algorithms & Programming. The best approach is:',
+            question: "A procedure mostFrequent(list) returns the element that appears most often. The student writes a doubly-nested loop that for every element counts its occurrences, tracking the max. This is O(n²). For n = 100,000 it times out. The most appropriate fix is to ___",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "replace the nested loop with a single pass that builds a frequency dictionary, then a single pass over the dictionary to find the max.",
+              "switch to a faster computer with a higher clock speed and rerun the same doubly-nested loop on the larger input list.",
+              "sort the list in ascending order and then guess the most frequent element from the sorted output of the data.",
+              "remove half the data from the input list before the doubly-nested loop runs, then rerun on the reduced list."
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: "Two linear passes (build map, scan map) is O(n) — the canonical algorithmic upgrade."
           }
         ]
       }
     }
   ]
-}
+};

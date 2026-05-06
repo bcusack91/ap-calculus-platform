@@ -1,175 +1,198 @@
 export const cspImpactOfComputingPart5Data = {
-  topicSlug: 'csp-impact-of-computing',
+  topicSlug: "csp-impact-of-computing",
   sections: [
     {
-      id: 'cspimpac5-intro',
+      id: "cspic5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Impact of Computing
+# 🌍 Impact of Computing
 
 **Part 5 of 7 — Change Over Time**
 
-Impact of Computing has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Computing Impact Has Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Impact of Computing that have remained stable over time |
-| **Change** | How Impact of Computing has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Impact of Computing over time |
+Themes to recognize across decades.
+
+| Decade | Defining impact theme |
+|--------|----------------------|
+| 1990s | Web makes information widely accessible. |
+| 2000s | Social media reshapes communication. |
+| 2010s | Smartphones move computing into pockets; data collection becomes ambient. |
+| 2020s | AI / ML produce decisions and content at scale; new IP and labor questions. |
       `
     },
     {
-      id: 'cspimpac5-quiz1',
+      id: "cspic5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Impact of Computing helps:',
+            question: "Which trend most directly enabled \"always-on\" personal data collection?",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "The original ARPANET research program in the 1960s that demonstrated long-distance packet-switched networking between universities.",
+              "Mass adoption of smartphones with GPS, microphones, cameras, and continuous network connectivity carried by users at all times.",
+              "The rise of removable floppy disks in the 1980s as the dominant low-cost medium for transferring personal files between computers.",
+              "The exhaustion of available IPv4 address blocks during the 2010s and the resulting need for ISPs to deploy network address translation."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Smartphones turned every person into a continuous source of fine-grained data."
           },
           {
-            question: 'Continuity in Impact of Computing means:',
+            question: "Generative AI most clearly raises new questions about ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "the deployment of IPv6 addressing across consumer ISPs and the corresponding upgrades required in residential home networking equipment.",
+              "authorship, attribution, and the line between human and machine creation when training data may include copyrighted human work.",
+              "the behavior of the TCP transport-layer protocol when retransmitting dropped packets across high-latency wireless cellular links.",
+              "the typical refresh rates of computer monitors used to display generative AI output and the associated power-consumption concerns."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Synthetic content blurs traditional IP and authorship norms."
           }
         ]
       }
     },
     {
-      id: 'cspimpac5-content',
+      id: "cspic5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Smartphones Changed Data Collection
 
-### Continuity
-Aspects of Impact of Computing that have remained stable over time. Understanding this concept is essential for mastering Impact of Computing in AP CS Principles.
+A 2005 person used the Internet from a desktop, intermittently. A 2025 person carries a sensor-rich device 24/7 that continuously emits:
 
-### Change
-How Impact of Computing has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+- Location.
+- App usage.
+- Social interactions.
+- Biometrics (steps, heart rate, sleep).
 
-### Trend
-The direction of change in Impact of Computing over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Data is no longer a snapshot — it's a stream. Aggregated, it forms a near-complete behavioral record.
+
+## AI / ML At Scale
+
+Generative AI now produces text, images, audio, and video at near-human quality. New questions:
+
+- Who **owns** the output of a model trained on others' work?
+- What **labor disruption** comes from automating creative tasks?
+- How do we **detect** synthetic content?
+- What are the **environmental** costs (training large models requires massive energy)?
+
+## Labor Effects
+
+Automation changes the job mix:
+
+- **Routine tasks** (data entry, simple translation, basic image editing) — increasingly automated.
+- **Complex judgment / interpersonal work** — augmented by computing, less easily automated.
+- **New roles** — data engineers, ML practitioners, AI ethicists — created by computing itself.
+
+The net effect is rarely "no jobs" but rather "different jobs, different distributions of pay and power."
+
+## Open Questions Of The 2020s
+
+- Should AI-generated content be labeled?
+- Who is liable when an autonomous system makes a harmful decision?
+- How should training data be licensed?
+- How do we preserve democratic discourse against automated influence?
+
+These are exactly the kinds of "evaluate the impact" prompts the AP exam loves.
       `
     },
     {
-      id: 'cspimpac5-input',
+      id: "cspic5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Impact of Computing that have remained stable over time?
+1) Always-on devices like smartphones enabled _______ data collection.
 
-2) What concept describes how Impact of Computing has transformed due to new forces and conditions?
+2) AI systems that produce text, images, or media are called _______ AI.
 
-3) Name the term for the direction of change in Impact of Computing over time.
-
-Use the exact term from this part.
+3) Automation tends to displace _______ tasks faster than complex-judgment ones.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Impact of Computing that have remained stable over time), Change (How Impact of Computing has transformed due to new forces and conditions), and Trend (The direction of change in Impact of Computing over time).'
+        correctAnswers: ["continuous", "generative", "routine"],
+        hint1: "Not occasional.",
+        hint2: "They generate new outputs.",
+        hint3: "Repetitive tasks.",
+        explanation: "Continuous data, generative AI, and routine-task automation are the dominant 2020s themes."
       }
     },
     {
-      id: 'cspimpac5-dropdown',
+      id: "cspic5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Impact of Computing that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "Training a large generative model requires ___",
+            options: ["significant energy and computation", "no resources", "one floppy disk", "no data"]
           },
           {
-            label: 'How Impact of Computing has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Automation usually changes ___",
+            options: ["the mix and distribution of jobs, not their total elimination", "nothing", "only one industry", "only Wi-Fi networks"]
           },
           {
-            label: 'The direction of change in Impact of Computing over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "Synthetic media that imitates a real person's likeness or voice is called ___",
+            options: ["a deepfake", "a CDN", "a packet", "a router"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Impact of Computing that have remained stable over time. Change — How Impact of Computing has transformed due to new forces and conditions. Trend — The direction of change in Impact of Computing over time.'
+        correctAnswers: ["significant energy and computation", "the mix and distribution of jobs, not their total elimination", "a deepfake"],
+        hint1: "Data centers, GPUs, electricity.",
+        hint2: "Net effects, not \"no jobs\".",
+        hint3: "Deep learning + fake.",
+        explanation: "Large models = big energy. Automation = job-mix shifts. Deepfakes = synthetic likeness/voice."
       }
     },
     {
-      id: 'cspimpac5-strategy',
+      id: "cspic5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Modern Impact Questions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Impact of Computing.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- "Always-on devices" → continuous data + privacy concerns.
+- "AI-generated content" → IP, labor, misinformation framing.
+- "Automation" → distribution of work, not pure replacement.
+- Cite a SPECIFIC affected group when describing harm.
       `
     },
     {
-      id: 'cspimpac5-applied',
+      id: "cspic5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Impact of Computing has changed in the last 50 years. A strong answer would:',
+            question: "An AI image generator produces a poster style indistinguishable from a living human artist's work, without that artist's consent. What CSP-aligned concern is most accurate?",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "No CSP-aligned concern arises here at all because at the lowest level digital images are simply patterns of bits on disk.",
+              "Training data plus IP rights plus attribution plus livelihood: the artist's prior work was used as training data without consent or compensation.",
+              "A TCP transport-layer retransmission concern arises when the AI-generated poster image is delivered to the requesting client over a slow link.",
+              "An IPv6 deployment concern arises when the AI-generated poster image is delivered through residential ISPs that have not yet adopted IPv6."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "AI-generated content raises consent, attribution, and livelihood questions for the source artists."
           },
           {
-            question: 'A trend in Impact of Computing shows acceleration in recent decades. The most likely explanation is:',
+            question: "A delivery company replaces local dispatchers with an algorithm. Which framing best matches the AP rubric?",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "Beneficial: the algorithm produces more efficient routing for the company. Harmful: dispatcher job loss plus a new dependence on the routing algorithm working correctly.",
+              "Purely beneficial for everyone affected, since the new algorithm will reliably produce better routing decisions than the local dispatchers it replaced ever could.",
+              "Purely harmful for everyone affected, since automated dispatch is fundamentally less reliable than the local human dispatchers it replaces in every measurable way.",
+              "No effect on anyone, since dispatcher work is essentially invisible to the customers who place the orders and the drivers who ultimately deliver them."
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 0,
+            explanation: "AP impact answers should name BOTH benefits and harms with affected parties."
           }
         ]
       }
     }
   ]
-}
+};

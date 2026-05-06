@@ -1,175 +1,194 @@
 export const cspAlgorithmsPart2Data = {
-  topicSlug: 'csp-algorithms',
+  topicSlug: "csp-algorithms",
   sections: [
     {
-      id: 'cspalgor2-intro',
+      id: "cspalg2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms
+# ⚙️ Algorithms
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Algorithms helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## How Algorithms Execute Step by Step
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Algorithms |
-| **Process 2** | A secondary process that shapes outcomes in Algorithms |
-| **Cause and effect** | The relationship between actions and outcomes in Algorithms |
+An **algorithm** is a finite, ordered sequence of unambiguous steps. On the AP CSP exam you will trace pseudocode by hand. Master three control flows and you can trace anything.
+
+| Construct | What it does |
+|-----------|--------------|
+| **Sequence** | Statements run top to bottom, exactly once. |
+| **Selection** | **IF / ELSE** chooses between branches. |
+| **Iteration** | **REPEAT N TIMES** or **REPEAT UNTIL** runs a block multiple times. |
+
+**AP pseudocode rule:** assignment uses **a ← 5**. Comparison uses **=**. Lists are 1-indexed.
       `
     },
     {
-      id: 'cspalgor2-quiz1',
+      id: "cspalg2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Algorithms?',
+            question: "After this code, what is x?\n\nx ← 2\nREPEAT 3 TIMES { x ← x + x }",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "6",
+              "8",
+              "16",
+              "12"
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 2,
+            explanation: "x doubles each pass: 2 → 4 → 8 → 16. Three doublings of 2 give 2·2³ = 16."
           },
           {
-            question: 'Understanding cause and effect in Algorithms helps students:',
+            question: "Which best describes when REPEAT UNTIL (n = 0) stops executing its block?",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "After exactly n iterations.",
+              "When n equals 0 at the top of an iteration.",
+              "When n equals 0 at the bottom of an iteration, after the block runs.",
+              "When n becomes negative."
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 2,
+            explanation: "REPEAT UNTIL is a post-test loop in AP pseudocode: the block runs, then the condition is checked. The loop exits the next time the condition is true."
           }
         ]
       }
     },
     {
-      id: 'cspalgor2-content',
+      id: "cspalg2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Tracing a Loop by Hand
 
-### Process 1
-The primary mechanism that drives patterns in Algorithms. Understanding this concept is essential for mastering Algorithms in AP CS Principles.
+    n ← 4
+    total ← 0
+    REPEAT n TIMES {
+      total ← total + n
+      n ← n − 1
+    }
+    DISPLAY(total)
 
-### Process 2
-A secondary process that shapes outcomes in Algorithms. This builds on the previous concept and connects to broader themes in the course.
+**Key trick:** the loop count for **REPEAT n TIMES** is fixed when the loop *starts* (n = 4), even if n changes inside.
 
-### Cause and effect
-The relationship between actions and outcomes in Algorithms. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Iteration | total before | n before | total after | n after |
+|-----------|--------------|----------|-------------|---------|
+| 1 | 0 | 4 | 4 | 3 |
+| 2 | 4 | 3 | 7 | 2 |
+| 3 | 7 | 2 | 9 | 1 |
+| 4 | 9 | 1 | 10 | 0 |
+
+DISPLAY shows **10**.
+
+## Selection With Compound Conditions
+
+    IF (score ≥ 90 AND attendance ≥ 0.8) {
+      grade ← "A"
+    } ELSE IF (score ≥ 80 OR bonus = true) {
+      grade ← "B"
+    } ELSE {
+      grade ← "C"
+    }
+
+**AND** requires both; **OR** requires at least one. **NOT** flips a Boolean.
       `
     },
     {
-      id: 'cspalgor2-input',
+      id: "cspalg2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Algorithms?
+1) The three core control structures are sequence, selection, and _______.
 
-2) What concept describes a secondary process that shapes outcomes in Algorithms?
+2) AP pseudocode assignment uses the symbol _______ (write the name).
 
-3) Name the term for the relationship between actions and outcomes in Algorithms.
-
-Use the exact term from this part.
+3) In REPEAT n TIMES, n is evaluated _______ times during the loop.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Algorithms), Process 2 (A secondary process that shapes outcomes in Algorithms), and Cause and effect (The relationship between actions and outcomes in Algorithms).'
+        correctAnswers: ["iteration", "arrow", "1"],
+        hint1: "It means \"repetition\".",
+        hint2: "A leftward-pointing symbol like ←.",
+        hint3: "It is set when the loop begins.",
+        explanation: "Iteration is the third primitive control structure. The arrow ← assigns. The repeat count is captured once when the loop starts."
       }
     },
     {
-      id: 'cspalgor2-dropdown',
+      id: "cspalg2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Algorithms is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "After a ← 3, b ← a, a ← 7, the value of b is ___",
+            options: ["3", "7", "10", "undefined"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Algorithms describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "A pre-test loop checks the condition ___ each iteration body",
+            options: ["before", "after", "in the middle of", "twice during"]
           },
           {
-            label: 'The relationship between actions and outcomes in Algorithms is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "The expression (NOT (x > 5)) AND (x ≠ 0) is true when x equals ___",
+            options: ["3", "6", "0", "7"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Algorithms. Process 2 — A secondary process that shapes outcomes in Algorithms. Cause and effect — The relationship between actions and outcomes in Algorithms.'
+        correctAnswers: ["3", "before", "3"],
+        hint1: "b is a snapshot, not a reference.",
+        hint2: "REPEAT UNTIL is post-test; many other loops are pre-test.",
+        hint3: "NOT (x > 5) means x ≤ 5; combined with x ≠ 0.",
+        explanation: "Assignments copy values. Pre-test loops evaluate first. For x = 3: NOT (3 > 5) is true, AND (3 ≠ 0) is true."
       }
     },
     {
-      id: 'cspalgor2-strategy',
+      id: "cspalg2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Reading Algorithms
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Algorithms.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Trace with a **table**: one column per variable, one row per iteration. This catches off-by-one errors.
+- For **REPEAT N TIMES** the count is **fixed at the start**; modifying the counter inside doesn't change how many times the block runs.
+- For **REPEAT UNTIL (cond)** the block runs **at least once** and exits when cond becomes true *after* a pass.
+- DeMorgan: NOT (A AND B) = (NOT A) OR (NOT B). The exam tests this.
+- When in doubt, plug in **boundary values** (0, 1, n−1, n) — they are where bugs live.
       `
     },
     {
-      id: 'cspalgor2-applied',
+      id: "cspalg2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A loop counts how many list elements equal a target. After tracing, the counter is 0 but you can see the target appears in the list. Which bug is most likely?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "The loop iterates through the list correctly but compares index to target instead of element to target.",
+              "Lists are 0-indexed in AP pseudocode and the loop starts at 1.",
+              "REPEAT UNTIL was used instead of REPEAT N TIMES.",
+              "The DISPLAY statement is missing."
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 0,
+            explanation: "The classic mistake is comparing the index variable to the target instead of list[i]. AP pseudocode lists are 1-indexed, ruling out option B."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "Two algorithms produce the same output for every input. Algorithm A uses one loop and runs in time proportional to n. Algorithm B uses two nested loops and runs in time proportional to n². For n = 1000, which statement is best supported?",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "Algorithm B is preferred because nested loops are more reliable.",
+              "Algorithm A is more efficient; both are correct, so A should be used.",
+              "Algorithm A is incorrect because it doesn’t use nesting.",
+              "Both have identical efficiency since they produce the same output."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "Correctness is equal; efficiency is not. Same output + lower running time means the linear algorithm is preferred."
           }
         ]
       }
     }
   ]
-}
+};

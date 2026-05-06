@@ -1,175 +1,196 @@
 export const cspProceduresListsPart3Data = {
-  topicSlug: 'csp-procedures-lists',
+  topicSlug: "csp-procedures-lists",
   sections: [
     {
-      id: 'cspproce3-intro',
+      id: "csppl3-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Procedures & Lists
+# 📋 Procedures & Lists
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Procedures & Lists. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## Procedure Patterns
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Procedures & Lists |
-| **Case study** | A specific real-world example that illustrates Procedures & Lists |
-| **Comparison** | Analyzing similarities and differences across examples of Procedures & Lists |
+| Pattern | Use |
+|---------|-----|
+| **Pure function** | Inputs → output, no side effects. |
+| **Predicate** | Returns true / false. |
+| **Constructor** | Builds a structured value. |
+| **Action** | Performs a side effect (print, save). |
+| **Higher-order** | Takes another procedure as a parameter. |
+
+## List Patterns
+
+| Pattern | Skeleton |
+|---------|---------|
+| **Map** | new = []; FOR EACH x IN list: APPEND(new, f(x)) |
+| **Filter** | new = []; FOR EACH x IN list: IF p(x) THEN APPEND(new, x) |
+| **Reduce / fold** | acc = init; FOR EACH x IN list: acc = combine(acc, x) |
       `
     },
     {
-      id: 'cspproce3-quiz1',
+      id: "csppl3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "A procedure **isEven(n)** that returns true / false is a ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "constructor — a procedure that builds and returns a structured value",
+              "action — a procedure whose primary purpose is producing a side effect",
+              "predicate — a procedure that returns a boolean true / false answer",
+              "reducer — a procedure that collapses a list into a single summary"
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 2,
+            explanation: "A boolean-returning procedure is a predicate."
           },
           {
-            question: 'Comparing examples of Procedures & Lists across regions helps:',
+            question: "Building a new list where each element is **f(originalElement)** is the ___ pattern.",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "filter — keeping only the elements that satisfy a predicate",
+              "map — applying a transformation to each element of the list",
+              "reduce — collapsing the entire list into a single summary value",
+              "sort — rearranging the elements into ascending or descending order"
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Map applies f to each element."
           }
         ]
       }
     },
     {
-      id: 'cspproce3-content',
+      id: "csppl3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Map / Filter / Reduce In Pseudocode
 
-### Spatial pattern
-The geographic distribution related to Procedures & Lists. Understanding this concept is essential for mastering Procedures & Lists in AP CS Principles.
+    doubled ← []                 // map
+    FOR EACH n IN nums:
+      APPEND(doubled, n * 2)
 
-### Case study
-A specific real-world example that illustrates Procedures & Lists. This builds on the previous concept and connects to broader themes in the course.
+    evens ← []                   // filter
+    FOR EACH n IN nums:
+      IF n MOD 2 = 0 THEN APPEND(evens, n)
 
-### Comparison
-Analyzing similarities and differences across examples of Procedures & Lists. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    total ← 0                    // reduce (sum)
+    FOR EACH n IN nums:
+      total ← total + n
+
+These three patterns underlie almost all list processing.
+
+## 2D Lists (Lists Of Lists)
+
+    grid ← [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+    grid[2][3] = 6   (row 2, column 3 — 1-indexed)
+
+To process every cell:
+
+    FOR EACH row IN grid:
+      FOR EACH cell IN row:
+        PROCESS(cell)
+
+This is a **nested loop**.
       `
     },
     {
-      id: 'cspproce3-input',
+      id: "csppl3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Procedures & Lists?
+1) A pattern that produces a NEW list where each element is f(x) is called _______.
 
-2) What concept describes a specific real-world example that illustrates Procedures & Lists?
+2) A pattern that combines all elements into a single value is called _______.
 
-3) Name the term for analyzing similarities and differences across examples of Procedures & Lists.
-
-Use the exact term from this part.
+3) A list of lists, like a grid, is a _______-dimensional list.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Procedures & Lists), Case study (A specific real-world example that illustrates Procedures & Lists), and Comparison (Analyzing similarities and differences across examples of Procedures & Lists).'
+        correctAnswers: ["map", "reduce", "two"],
+        hint1: "Transform each.",
+        hint2: "Roll-up.",
+        hint3: "2D.",
+        explanation: "Map / reduce / filter; 2D lists are lists of lists."
       }
     },
     {
-      id: 'cspproce3-dropdown',
+      id: "csppl3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Procedures & Lists is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "A predicate function returns ___",
+            options: ["true or false", "a number", "a list", "a string"]
           },
           {
-            label: 'A specific real-world example that illustrates Procedures & Lists describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "A higher-order procedure takes ___",
+            options: ["another procedure as a parameter", "no parameters", "only numeric parameters", "only strings"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Procedures & Lists is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "To touch every cell in a 2D list, you typically use ___",
+            options: ["a nested loop", "a single loop", "no loop", "recursion only"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Procedures & Lists. Case study — A specific real-world example that illustrates Procedures & Lists. Comparison — Analyzing similarities and differences across examples of Procedures & Lists.'
+        correctAnswers: ["true or false", "another procedure as a parameter", "a nested loop"],
+        hint1: "Boolean.",
+        hint2: "Procedure as data.",
+        hint3: "Loops within loops.",
+        explanation: "Predicates return booleans. HOFs take procedures. Nested loops traverse 2D."
       }
     },
     {
-      id: 'cspproce3-strategy',
+      id: "csppl3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Procedures & List Patterns
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Procedures & Lists.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Map / filter / reduce: recognize the pattern → name it.
+- 2D lists need nested loops.
+- Predicates return true / false; pair them with filter.
       `
     },
     {
-      id: 'cspproce3-applied',
+      id: "csppl3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Procedures & Lists. The strongest response would:',
+            question: "A program needs squares of all numbers in a list. The pattern is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "filter — selecting only some of the numbers from the original list",
+              "map — transforming each number to its square in a new list",
+              "reduce — collapsing the entire list into one summary value",
+              "sort — rearranging the original numbers in ascending order"
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Map transforms each element."
           },
           {
-            question: 'A pattern observed in Procedures & Lists is consistent across multiple world regions. This suggests:',
+            question: "A program needs the sum of squares of even numbers in a list. The most natural composition is ___",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "filter (even) → map (square) → reduce (sum) composed in that order.",
+              "compression of the list followed by encryption of the compressed bytes.",
+              "no operation — the answer can be read directly off any single element.",
+              "sort the list and then reverse it before computing any per-element value."
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: "Filter → map → reduce is the canonical pipeline."
           }
         ]
       }
     }
   ]
-}
+};

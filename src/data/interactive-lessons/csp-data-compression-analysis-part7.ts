@@ -1,175 +1,175 @@
 export const cspDataCompressionAnalysisPart7Data = {
-  topicSlug: 'csp-data-compression-analysis',
+  topicSlug: "csp-data-compression-analysis",
   sections: [
     {
-      id: 'cspdatac7-intro',
+      id: "cspdca7-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data Compression & Analysis
+# 🗜️ Data Compression & Analysis
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of Data Compression & Analysis for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+## AP Exam Recap — Compression & Analysis
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Data Compression & Analysis |
-| **Common question types** | The most frequent ways Data Compression & Analysis is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Data Compression & Analysis questions effectively |
+Final review.
       `
     },
     {
-      id: 'cspdatac7-quiz1',
+      id: "cspdca7-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Data Compression & Analysis is:',
+            question: "A photograph stored as a JPEG, then decoded back ___",
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              "equals the original bit-for-bit because JPEG is a lossless format like PNG.",
+              "is approximately the original — JPEG is a lossy format that discards perceptual detail.",
+              "becomes plain text consisting of the RGB value of every pixel in the image.",
+              "is encrypted with a symmetric cipher whose key is embedded in the file header."
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: "JPEG is lossy."
           },
           {
-            question: 'AP multiple-choice questions about Data Compression & Analysis often test:',
+            question: "A 100 KB plaintext file losslessly compressed to a 30 KB ZIP and decompressed ___",
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              "equals the original 100 KB plaintext bit-for-bit because ZIP is a lossless format.",
+              "is approximately the original because ZIP discards detail to save space.",
+              "is encrypted with a symmetric cipher whose key is embedded in the ZIP header.",
+              "is corrupted because losslessly compressing plaintext can never round-trip cleanly."
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: "Lossless round-trip = identity."
           }
         ]
       }
     },
     {
-      id: 'cspdatac7-content',
+      id: "cspdca7-content",
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Final Vocab
 
-### Key vocabulary
-Essential terms and definitions for Data Compression & Analysis. Understanding this concept is essential for mastering Data Compression & Analysis in AP CS Principles.
+| Term | Definition |
+|------|-----------|
+| Lossless | Decoded data = original. |
+| Lossy | Decoded ≈ original. |
+| Entropy | Information-theoretic minimum size for lossless coding. |
+| RLE | Run-length encoding. |
+| Dictionary coding | LZ-family; replace repeated substrings with references. |
+| Huffman coding | Common symbols → short codes. |
+| DCT | Discrete cosine transform; basis of JPEG / MP3. |
+| Differential encoding | Encode deltas (used in video). |
+| Adaptive bitrate | Multiple quality levels for streaming. |
 
-### Common question types
-The most frequent ways Data Compression & Analysis is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Common Pitfalls
 
-### Exam strategy
-Approaches for answering Data Compression & Analysis questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Saying "compression makes data smaller" without distinguishing lossless vs lossy.
+- Encrypting before compressing.
+- Treating storage as the only constraint (bandwidth often matters more).
+- Using lossy formats for archival or medical records.
+- Ignoring openness / licensing of codecs.
       `
     },
     {
-      id: 'cspdatac7-input',
+      id: "cspdca7-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to essential terms and definitions for Data Compression & Analysis?
+1) JPEG is _______ compression.
 
-2) What concept describes the most frequent ways Data Compression & Analysis is tested on the AP exam?
+2) PNG is _______ compression.
 
-3) Name the term for approaches for answering Data Compression & Analysis questions effectively.
-
-Use the exact term from this part.
+3) Encrypting before compressing usually makes the result _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Data Compression & Analysis), Common question types (The most frequent ways Data Compression & Analysis is tested on the AP exam), and Exam strategy (Approaches for answering Data Compression & Analysis questions effectively).'
+        correctAnswers: ["lossy", "lossless", "larger"],
+        hint1: "Photos.",
+        hint2: "Web graphics.",
+        hint3: "No patterns to exploit.",
+        explanation: "JPEG = lossy, PNG = lossless. Encrypted data has no compressible patterns."
       }
     },
     {
-      id: 'cspdatac7-dropdown',
+      id: "cspdca7-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Data Compression & Analysis is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: "A 10× size reduction with imperceptible quality loss describes ___",
+            options: ["typical JPEG vs raw RGB", "lossless ZIP on random data", "TLS encryption", "IPv6 routing"]
           },
           {
-            label: 'The most frequent ways Data Compression & Analysis is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: "Adaptive bitrate streaming relies on ___",
+            options: ["precomputing multiple lossy renditions and serving the best fit per viewer", "lossless only", "no compression", "one fixed quality"]
           },
           {
-            label: 'Approaches for answering Data Compression & Analysis questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: "A truly random file ___",
+            options: ["cannot be losslessly compressed below its entropy bound", "always compresses 10×", "compresses to zero bytes", "cannot be encrypted"]
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Data Compression & Analysis. Common question types — The most frequent ways Data Compression & Analysis is tested on the AP exam. Exam strategy — Approaches for answering Data Compression & Analysis questions effectively.'
+        correctAnswers: ["typical JPEG vs raw RGB", "precomputing multiple lossy renditions and serving the best fit per viewer", "cannot be losslessly compressed below its entropy bound"],
+        hint1: "Photo savings.",
+        hint2: "Multiple bitrates.",
+        hint3: "Entropy bound.",
+        explanation: "JPEG ≈ 10× over raw. Adaptive streaming = many bitrates. Random data resists lossless compression."
       }
     },
     {
-      id: 'cspdatac7-strategy',
+      id: "cspdca7-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Exam Tips
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Data Compression & Analysis.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP CS Principles for higher scores.
+- Lossless vs lossy is the #1 distinction.
+- Compress THEN encrypt.
+- Different uses → different formats. Memorize: PNG/ZIP/FLAC = lossless; JPEG/MP3/MP4 = lossy.
+- Adaptive bitrate is the answer to "how does streaming work for everyone".
       `
     },
     {
-      id: 'cspdatac7-applied',
+      id: "cspdca7-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Data Compression & Analysis. You should:',
+            question: "A user worries that JPEG-saving a photo, opening it, and re-saving it causes \"generation loss\". The most accurate explanation is ___",
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              "no — JPEG is a lossless format and round-tripping always preserves the original.",
+              "yes — each lossy re-encode discards more detail; edit lossless and export to JPEG once.",
+              "yes — JPEG actually adds random visual noise on purpose every time the file is saved.",
+              "no — file extensions are immutable so the data inside the JPEG never changes either."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: "Repeated lossy re-encoding accumulates artifacts; edit lossless, export lossy."
           },
           {
-            question: 'For free-response questions on Data Compression & Analysis, the most common mistake is:',
+            question: "A team needs to send 10 TB of mostly-text logs from a remote site to a data center. The most reasonable plan is ___",
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              "ship the logs as-is over the network and accept the multi-day transfer time required.",
+              "compress with gzip / zstd before transfer; ship over a reliable channel; verify checksums.",
+              "encrypt the logs first and then compress, accepting that the compressed output is barely smaller.",
+              "switch the transport from TCP to UDP without compression to use less server-side memory."
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
-          }
+            explanation: "Compress text first, ship reliably, verify integrity."
+          },
+
         ]
       }
     }
   ]
-}
+};

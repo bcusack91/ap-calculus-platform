@@ -1,175 +1,185 @@
 export const cspAlgorithmsPart6Data = {
-  topicSlug: 'csp-algorithms',
+  topicSlug: "csp-algorithms",
   sections: [
     {
-      id: 'cspalgor6-intro',
+      id: "cspalg6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms
+# ⚙️ Algorithms
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Algorithms concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+## Algorithms Workshop
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Algorithms |
-| **Argumentation** | Making evidence-based claims about Algorithms |
-| **Spatial reasoning** | Using geographic thinking to analyze Algorithms |
+Walk through end-to-end problems that combine sequence, selection, iteration, lists, and procedures — exactly the style of CED FRQs.
       `
     },
     {
-      id: 'cspalgor6-quiz1',
+      id: "cspalg6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Algorithms, the first step is:',
+            question: "You need to compute the average of a list of test scores, ignoring zeros. Which two patterns must you combine?",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              "Filter (skip zeros) and accumulator (sum + count).",
+              "Map and binary search.",
+              "Two min trackers.",
+              "Sort and count."
             ],
             correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            explanation: "Skip zeros = filter. Sum + count = accumulator. Average = sum / count."
           },
           {
-            question: 'An evidence-based argument about Algorithms requires:',
+            question: "When dividing the running sum by the count, what edge case must you guard against?",
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "The list being sorted.",
+              "The count being 0 (avoid divide-by-zero).",
+              "The sum being negative.",
+              "The list having duplicates."
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "If every score was zero (or the list was empty), count = 0 and division explodes. Always guard with IF count > 0."
           }
         ]
       }
     },
     {
-      id: 'cspalgor6-content',
+      id: "cspalg6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked Problem: Average Skipping Zeros
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Algorithms. Understanding this concept is essential for mastering Algorithms in AP CS Principles.
+    PROCEDURE averageNonzero(scores) {
+      total ← 0
+      count ← 0
+      FOR EACH s IN scores {
+        IF (s ≠ 0) { total ← total + s; count ← count + 1 }
+      }
+      IF (count = 0) { RETURN 0 }
+      RETURN total / count
+    }
 
-### Argumentation
-Making evidence-based claims about Algorithms. This builds on the previous concept and connects to broader themes in the course.
+**Test traces:**
 
-### Spatial reasoning
-Using geographic thinking to analyze Algorithms. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Input | total | count | Result |
+|-------|-------|-------|--------|
+| [80, 0, 90, 100] | 270 | 3 | 90 |
+| [0, 0] | 0 | 0 | 0 (guard) |
+| [50] | 50 | 1 | 50 |
+
+## Worked Problem: Detecting a Pattern
+
+Goal: return TRUE if a list contains two consecutive equal elements.
+
+    PROCEDURE hasRun(list) {
+      FOR i ← 2 TO LENGTH(list) {
+        IF (list[i] = list[i − 1]) { RETURN TRUE }
+      }
+      RETURN FALSE
+    }
+
+**Why start at 2?** list[i − 1] would be list[0] when i = 1, which doesn’t exist in 1-indexed pseudocode.
       `
     },
     {
-      id: 'cspalgor6-input',
+      id: "cspalg6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Algorithms?
+1) When dividing two integers, you must guard against the divisor being _______.
 
-2) What concept describes making evidence-based claims about Algorithms?
+2) When indexing list[i − 1] in a loop, the loop should start at _______ to avoid an out-of-range index in 1-indexed pseudocode.
 
-3) Name the term for using geographic thinking to analyze Algorithms.
-
-Use the exact term from this part.
+3) A procedure that returns a Boolean usually starts with the verb _______ or "has".
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Algorithms), Argumentation (Making evidence-based claims about Algorithms), and Spatial reasoning (Using geographic thinking to analyze Algorithms).'
+        correctAnswers: ["0", "2", "is"],
+        hint1: "Division by this is undefined.",
+        hint2: "The smallest i such that i − 1 ≥ 1.",
+        hint3: "A common naming convention.",
+        explanation: "Always check denominator ≠ 0. Pair-comparison loops start at 2 with 1-indexed lists. Naming Boolean procedures is.../has... makes call sites readable."
       }
     },
     {
-      id: 'cspalgor6-dropdown',
+      id: "cspalg6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Algorithms is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "In RETURN total / count, the most common bug is when ___",
+            options: ["count is 0", "total is 0", "list is sorted", "list is short"]
           },
           {
-            label: 'Making evidence-based claims about Algorithms describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "A loop comparing list[i] to list[i+1] should iterate i from 1 to ___",
+            options: ["LENGTH(list) − 1", "LENGTH(list)", "LENGTH(list) + 1", "0"]
           },
           {
-            label: 'Using geographic thinking to analyze Algorithms is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "To return early from the first match in a procedure, use ___",
+            options: ["RETURN", "DISPLAY", "CONTINUE", "BREAK"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Algorithms. Argumentation — Making evidence-based claims about Algorithms. Spatial reasoning — Using geographic thinking to analyze Algorithms.'
+        correctAnswers: ["count is 0", "LENGTH(list) − 1", "RETURN"],
+        hint1: "Divide-by-zero.",
+        hint2: "list[i+1] must be valid.",
+        hint3: "AP pseudocode RETURN immediately exits the procedure.",
+        explanation: "Guard count > 0. Pair loops must end one early. RETURN exits the procedure (and the loop) immediately."
       }
     },
     {
-      id: 'cspalgor6-strategy',
+      id: "cspalg6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: FRQ-Style Tracing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Algorithms.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- Build a **trace table** with one column per variable and one row per iteration before answering anything.
+- Identify the **pattern** (accumulator? counter? min/max?) before chasing line-by-line logic.
+- Always check **edge cases**: empty list, single element, all-the-same, all-zeros, negatives.
+- For procedures that return a value, note whether RETURN exits early — this changes the trace.
       `
     },
     {
-      id: 'cspalgor6-applied',
+      id: "cspalg6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Algorithms and asked to identify a trend. You should:',
+            question: "A function mode(list) returns the most common value. A student writes a doubly-nested loop that for each element counts how many times it appears, tracking the best count. For n = 100,000 inputs the program is far too slow. Which change is most appropriate?",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "Replace the nested loops with a single loop that uses a frequency map / dictionary keyed by element value.",
+              "Add explanatory comments throughout the inner loop describing the comparison logic in clearer English.",
+              "Switch the entire program to a different programming language with the same nested-loop structure preserved.",
+              "Run the same nested-loop code on more powerful server hardware with faster CPU clock speeds and more RAM."
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: "Algorithmic fix: O(n²) → O(n) by counting frequencies in one pass."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Algorithms. The best approach is:',
+            question: "A procedure should return TRUE if at least one element of list is greater than every element of other. Which structure is most efficient and correct?",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "Compute max(other) once, then a single loop over list checking x > maxOther.",
+              "Nested loop comparing every list element to every other element.",
+              "Sort both lists, then compare.",
+              "Pick a random element and compare."
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: "Precomputing the max once is O(n + m); nested comparison is O(n·m)."
           }
         ]
       }
     }
   ]
-}
+};

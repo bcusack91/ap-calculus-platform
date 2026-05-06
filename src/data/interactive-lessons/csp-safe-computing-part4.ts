@@ -1,175 +1,177 @@
 export const cspSafeComputingPart4Data = {
-  topicSlug: 'csp-safe-computing',
+  topicSlug: "csp-safe-computing",
   sections: [
     {
-      id: 'cspsafec4-intro',
+      id: "cspsc4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔐 Safe Computing
 
 **Part 4 of 7 — Connections & Interactions**
 
-Safe Computing Practices connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## Safe Computing Connects Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Safe Computing Practices links to other course topics |
-| **Scale interaction** | How Safe Computing Practices operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Safe Computing Practices can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Safe computing ↔ Security | Personal practice is part of defense in depth. |
+| Safe computing ↔ Networks | Most attacks reach you over a network. |
+| Safe computing ↔ Data | Your data is what attackers want. |
+| Safe computing ↔ Impact | Bad practice harms others (forwarded malware, stolen contacts). |
       `
     },
     {
-      id: 'cspsafec4-quiz1',
+      id: "cspsc4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Safe Computing Practices connects to other course topics through:',
+            question: "A compromised personal account that automatically forwarded contacts' info caused phishing attacks against them. The most accurate framing is ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "no measurable impact on others, since the original compromise affected only one user account.",
+              "the user's safe-computing posture has effects on people connected to them — a network effect.",
+              "each affected contact's transport-layer security handshake will slow down for several days.",
+              "the affected contacts' inboxes will simply compress less efficiently for several weeks afterward."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "One person's lapse can harm many."
           },
           {
-            question: 'A feedback loop in Safe Computing Practices means:',
+            question: "A user installs random browser extensions for novelty. The most direct risk is ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "no risk, since browser extensions run inside a fully isolated sandbox by default everywhere.",
+              "extensions can read browsing data, inject scripts, and exfiltrate credentials — vet permissions.",
+              "each installed extension speeds up the browser's transport-layer security handshake noticeably.",
+              "each installed extension forces the browser to abandon its built-in compression of cached data."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Browser extensions are powerful and abusable."
           }
         ]
       }
     },
     {
-      id: 'cspsafec4-content',
+      id: "cspsc4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Defense In Depth For Individuals
 
-### Interconnection
-How Safe Computing Practices links to other course topics. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+| Layer | Personal practice |
+|-------|------------------|
+| Identity | Unique passwords + MFA. |
+| Devices | Updates + lock screens + encryption-at-rest (FileVault / BitLocker). |
+| Apps | Install from trusted stores; review permissions. |
+| Network | Trusted networks; HTTPS; trusted VPN when needed. |
+| Backups | Off-device backups (cloud or external drive). |
+| Awareness | Recognize phishing; healthy skepticism. |
 
-### Scale interaction
-How Safe Computing Practices operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+## Threat Modeling For Yourself
 
-### Feedback loop
-How outcomes of Safe Computing Practices can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Different people face different threats:
+
+- **General public**: opportunistic phishing, scams.
+- **High-profile**: targeted phishing, account takeover.
+- **Activists / journalists**: state-level adversaries; need stronger ops.
+
+Match your defenses to your realistic threat model.
       `
     },
     {
-      id: 'cspsafec4-input',
+      id: "cspsc4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Safe Computing Practices links to other course topics?
+1) Personal full-disk encryption on macOS / Windows is provided by _______ / BitLocker.
 
-2) What concept describes how Safe Computing Practices operates differently at local, national, and global scales?
+2) A useful exercise to identify YOUR specific risks is personal _______ modeling.
 
-3) Name the term for how outcomes of Safe Computing Practices can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) Restoring a lost laptop's data depends on having _______ off the device.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Safe Computing Practices links to other course topics), Scale interaction (How Safe Computing Practices operates differently at local, national, and global scales), and Feedback loop (How outcomes of Safe Computing Practices can reinforce or modify the original process).'
+        correctAnswers: ["FileVault", "threat", "backups"],
+        hint1: "Apple disk encryption.",
+        hint2: "Adversary thinking.",
+        hint3: "Off-device.",
+        explanation: "FileVault / BitLocker, threat modeling, backups."
       }
     },
     {
-      id: 'cspsafec4-dropdown',
+      id: "cspsc4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Safe Computing Practices links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "Locking your screen when leaving a device ___",
+            options: ["blocks casual physical access to your accounts", "has no benefit", "speeds up TLS", "compresses data"]
           },
           {
-            label: 'How Safe Computing Practices operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "A backup that lives only on the same device ___",
+            options: ["does not protect against device loss / theft / ransomware", "is the safest possible setup", "replaces encryption", "eliminates phishing risk"]
           },
           {
-            label: 'How outcomes of Safe Computing Practices can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "Trusted browser extensions should be ___",
+            options: ["installed only from reputable stores with reviewed permissions", "installed from any random site", "never reviewed", "always silent"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Safe Computing Practices links to other course topics. Scale interaction — How Safe Computing Practices operates differently at local, national, and global scales. Feedback loop — How outcomes of Safe Computing Practices can reinforce or modify the original process.'
+        correctAnswers: ["blocks casual physical access to your accounts", "does not protect against device loss / theft / ransomware", "installed only from reputable stores with reviewed permissions"],
+        hint1: "Lock screens block casual access.",
+        hint2: "Off-device matters.",
+        hint3: "Permissions review.",
+        explanation: "Lock screens, off-device backups, vet extensions."
       }
     },
     {
-      id: 'cspsafec4-strategy',
+      id: "cspsc4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Personal Defense In Depth
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Safe Computing Practices.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- Layer defenses: identity + device + app + network + backups + awareness.
+- Match defenses to your real threat model.
+- Personal lapses can harm your network of contacts.
       `
     },
     {
-      id: 'cspsafec4-applied',
+      id: "cspsc4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Safe Computing Practices and other units earns higher scores because:',
+            question: "A high-profile journalist's threat model includes targeted state-level adversaries. The most appropriate baseline is ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "just a strong password and nothing else added on top of it for the journalist's accounts.",
+              "hardware-key MFA, full-disk encryption, vetted device + app sources, OPSEC training, and a plan.",
+              "just multi-factor authentication via SMS text messages and no other defenses for the accounts.",
+              "just transport-layer security on the journalist's outbound traffic and no other defenses at all."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "High-risk targets need stronger defenses, including hardware MFA."
           },
           {
-            question: 'If Safe Computing Practices produces outcomes that further intensify the original process, this is:',
+            question: "A teenager streams video games and shares their schedule publicly. The most accurate concern is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "no measurable concern, since publicly shared streaming schedules are normal among gamers.",
+              "predictable presence + visible patterns may enable harassment, swatting, or physical-world risks.",
+              "the streamer's transport-layer security handshake will slow down because of the public schedule.",
+              "the streamer's upload connection will simply compress less efficiently while a stream is live."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Public exposure of patterns enables real-world risks."
           }
         ]
       }
     }
   ]
-}
+};

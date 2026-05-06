@@ -1,175 +1,187 @@
 export const cspBinaryDataPart6Data = {
-  topicSlug: 'csp-binary-data',
+  topicSlug: "csp-binary-data",
   sections: [
     {
-      id: 'cspbinar6-intro',
+      id: "cspbd6-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Binary & Data Representation
+# 🔢 Binary & Data Representation
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply Binary & Data Representation concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+## Binary & Data Workshop
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Binary & Data Representation |
-| **Argumentation** | Making evidence-based claims about Binary & Data Representation |
-| **Spatial reasoning** | Using geographic thinking to analyze Binary & Data Representation |
+Practice the calculations and design choices the AP exam asks under a time crunch.
       `
     },
     {
-      id: 'cspbinar6-quiz1',
+      id: "cspbd6-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Binary & Data Representation, the first step is:',
+            question: "A system needs to assign a unique binary code to each of 50 students. The minimum number of bits required is ___",
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about Binary & Data Representation requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              "5",
+              "6",
+              "7",
+              "8"
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: "2⁵ = 32 < 50; 2⁶ = 64 ≥ 50."
+          },
+          {
+            question: "Convert binary 10110010 to decimal.",
+            options: [
+              "170",
+              "178",
+              "180",
+              "210"
+            ],
+            correctAnswer: 1,
+            explanation: "128 + 32 + 16 + 2 = 178."
           }
         ]
       }
     },
     {
-      id: 'cspbinar6-content',
+      id: "cspbd6-content",
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Worked: Bit-Width Sizing
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Binary & Data Representation. Understanding this concept is essential for mastering Binary & Data Representation in AP CS Principles.
+**Question:** "We have 5 different statuses to encode in each record. Minimum bits per record?"
 
-### Argumentation
-Making evidence-based claims about Binary & Data Representation. This builds on the previous concept and connects to broader themes in the course.
+- 2² = 4 (too small).
+- 2³ = 8 ≥ 5 ✓.
+- Use **3 bits**.
 
-### Spatial reasoning
-Using geographic thinking to analyze Binary & Data Representation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+**Question:** "We have 1,000,000 user IDs. Minimum bits per ID?"
+
+- 2¹⁹ = 524,288 (too small).
+- 2²⁰ = 1,048,576 ≥ 1M ✓.
+- Use **20 bits**.
+
+## Worked: Storage Estimation
+
+**Question:** "Estimate the storage for 10,000 1024×1024 RGB photos, uncompressed."
+
+- One photo: 1024 × 1024 × 3 ≈ 3 MB.
+- 10,000 photos: ~30 GB.
+
+**With JPEG (~10×):** ~3 GB.
+
+## Worked: Conversions Both Ways
+
+| Decimal | Binary (8-bit) |
+|---------|---------------|
+| 5 | 00000101 |
+| 17 | 00010001 |
+| 64 | 01000000 |
+| 100 | 01100100 |
+| 200 | 11001000 |
+| 255 | 11111111 |
       `
     },
     {
-      id: 'cspbinar6-input',
+      id: "cspbd6-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Binary & Data Representation?
+1) For 100 students, the minimum bits required for unique IDs is _______.
 
-2) What concept describes making evidence-based claims about Binary & Data Representation?
+2) A 32-bit number can store roughly _______ billion distinct values.
 
-3) Name the term for using geographic thinking to analyze Binary & Data Representation.
-
-Use the exact term from this part.
+3) Binary 11111111 in decimal is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Binary & Data Representation), Argumentation (Making evidence-based claims about Binary & Data Representation), and Spatial reasoning (Using geographic thinking to analyze Binary & Data Representation).'
+        correctAnswers: ["7", "4", "255"],
+        hint1: "2⁶ = 64 < 100; 2⁷ = 128 ≥ 100.",
+        hint2: "2³² ≈ 4.3 × 10⁹.",
+        hint3: "Sum 1+2+4+…+128.",
+        explanation: "7 bits suffice. 2³² ≈ 4 billion. 11111111 = 255."
       }
     },
     {
-      id: 'cspbinar6-dropdown',
+      id: "cspbd6-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Binary & Data Representation is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "Decimal 100 in 8-bit binary is ___",
+            options: ["01100100", "01100110", "10100100", "01101000"]
           },
           {
-            label: 'Making evidence-based claims about Binary & Data Representation describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "A 24-bit RGB pixel can show ___ distinct colors",
+            options: ["~16 million", "~256", "~65,000", "~4 billion"]
           },
           {
-            label: 'Using geographic thinking to analyze Binary & Data Representation is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "For uncompressed CD-quality audio, 1 second of stereo is about ___",
+            options: ["176 KB", "44 KB", "1.4 MB", "11 MB"]
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Binary & Data Representation. Argumentation — Making evidence-based claims about Binary & Data Representation. Spatial reasoning — Using geographic thinking to analyze Binary & Data Representation.'
+        correctAnswers: ["01100100", "~16 million", "176 KB"],
+        hint1: "64 + 32 + 4.",
+        hint2: "2²⁴ = 16,777,216.",
+        hint3: "44,100 × 2 bytes × 2 channels = 176,400 bytes.",
+        explanation: "100 = 64 + 32 + 4. 2²⁴ ≈ 16 million colors. CD audio ≈ 176 KB/s stereo."
       }
     },
     {
-      id: 'cspbinar6-strategy',
+      id: "cspbd6-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Quick Calculations
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Binary & Data Representation.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP CS Principles for higher scores.
+- For "minimum bits for N values" → smallest n where 2ⁿ ≥ N.
+- For "storage of M items, each k bits" → M·k / 8 bytes.
+- For audio: bytes/sec = sampleRate × bytesPerSample × channels.
+- For images: bytes = width × height × bytesPerPixel.
+- Don't worry about hex on the AP — it's rarely tested. Decimal/binary conversions and 2ⁿ values are the core.
       `
     },
     {
-      id: 'cspbinar6-applied',
+      id: "cspbd6-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Binary & Data Representation and asked to identify a trend. You should:',
+            question: "A weather station records temperature once per minute as an 8-bit value. How much storage for one year?",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "~525 KB",
+              "~525 KB but compressed",
+              "~525 bytes",
+              "~525 GB"
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: "60·24·365 = 525,600 samples × 1 byte ≈ 525 KB."
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Binary & Data Representation. The best approach is:',
+            question: "A school stores 24-bit RGB profile photos for 50,000 students at 200 × 200 pixels each, uncompressed. Total storage?",
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              "~6 GB",
+              "~600 MB",
+              "~60 MB",
+              "~6 MB"
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: "One photo: 200·200·3 = 120,000 bytes ≈ 120 KB. ×50,000 ≈ 6 GB."
           }
         ]
       }
     }
   ]
-}
+};

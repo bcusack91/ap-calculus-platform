@@ -1,175 +1,182 @@
 export const cspComputingSystemsNetworksPart3Data = {
-  topicSlug: 'csp-computing-systems-networks',
+  topicSlug: "csp-computing-systems-networks",
   sections: [
     {
-      id: 'cspcompu3-intro',
+      id: "cspcsn3-intro",
       type: 'text' as const,
       content: `
 # 🖥️ Computing Systems & Networks
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to Computing Systems & Networks. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+## How The Internet Routes Data
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Computing Systems & Networks |
-| **Case study** | A specific real-world example that illustrates Computing Systems & Networks |
-| **Comparison** | Analyzing similarities and differences across examples of Computing Systems & Networks |
+The Internet is a **packet-switched** network: data is split into packets, each of which finds its own way through routers to the destination.
+
+| Concept | Effect |
+|---------|--------|
+| **Packet** | A chunk of data with source + destination addresses. |
+| **Router** | Forwards packets toward their destination. |
+| **Path** | Packets may take different routes to the same destination. |
+| **Protocol** | Rules for how packets are formatted and exchanged. |
       `
     },
     {
-      id: 'cspcompu3-quiz1',
+      id: "cspcsn3-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: "Two packets in the same conversation may take ___",
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              "identical paths every single time, in the order the sender originally produced them.",
+              "different paths through the network and arrive in a different order than sent.",
+              "no path at all, since packet switching does not actually move packets through routers.",
+              "only fully encrypted paths reserved for that single conversation by upstream routers."
             ],
             correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            explanation: "Packet switching allows independent routing."
           },
           {
-            question: 'Comparing examples of Computing Systems & Networks across regions helps:',
+            question: "A router decides where to forward a packet based on ___",
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              "the packet's payload content, by inspecting the application-layer body in detail.",
+              "the destination address combined with the router's current routing table.",
+              "the original sender's preference about which neighboring router to forward through.",
+              "the compression ratio achievable on the packet's payload by a downstream router."
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: "Routers use destination addresses + routing tables."
           }
         ]
       }
     },
     {
-      id: 'cspcompu3-content',
+      id: "cspcsn3-content",
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Layered Network Stack
 
-### Spatial pattern
-The geographic distribution related to Computing Systems & Networks. Understanding this concept is essential for mastering Computing Systems & Networks in AP CS Principles.
+| Layer | Role | Example |
+|-------|------|---------|
+| Application | What the program means | HTTP, DNS, SMTP |
+| Transport | Reliable / unreliable streams between processes | TCP, UDP |
+| Network | Routing between hosts | IP |
+| Link | One hop between physical devices | Ethernet, Wi-Fi |
 
-### Case study
-A specific real-world example that illustrates Computing Systems & Networks. This builds on the previous concept and connects to broader themes in the course.
+Each layer offers a service to the layer above and consumes services from the layer below.
 
-### Comparison
-Analyzing similarities and differences across examples of Computing Systems & Networks. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## TCP vs UDP
+
+| Feature | TCP | UDP |
+|---------|-----|-----|
+| Reliable? | Yes (retransmits lost) | No |
+| In-order? | Yes | No |
+| Overhead | Higher | Lower |
+| Use case | Web, email, files | Video calls, games, DNS |
+
+## DNS Translates Names To Addresses
+
+When you type **example.com**, DNS resolves the name to an IP address. DNS is itself a globally distributed system; failures cascade visibly when it breaks.
       `
     },
     {
-      id: 'cspcompu3-input',
+      id: "cspcsn3-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the geographic distribution related to Computing Systems & Networks?
+1) The Internet is a _______-switched network.
 
-2) What concept describes a specific real-world example that illustrates Computing Systems & Networks?
+2) A reliable, in-order transport protocol is _______.
 
-3) Name the term for analyzing similarities and differences across examples of Computing Systems & Networks.
-
-Use the exact term from this part.
+3) Translating "example.com" to an IP address is the job of _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Computing Systems & Networks), Case study (A specific real-world example that illustrates Computing Systems & Networks), and Comparison (Analyzing similarities and differences across examples of Computing Systems & Networks).'
+        correctAnswers: ["packet", "TCP", "DNS"],
+        hint1: "Independently routed chunks.",
+        hint2: "Reliable transport.",
+        hint3: "Domain Name System.",
+        explanation: "Packet switching, TCP, DNS."
       }
     },
     {
-      id: 'cspcompu3-dropdown',
+      id: "cspcsn3-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Computing Systems & Networks is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: "For a video call where occasional dropped frames are tolerable, the right protocol is ___",
+            options: ["UDP-based (low latency, no retransmission)", "TCP only", "no protocol", "TLS only"]
           },
           {
-            label: 'A specific real-world example that illustrates Computing Systems & Networks describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: "For downloading a software update, the right protocol is ___",
+            options: ["TCP (reliable, in-order)", "UDP only", "no protocol", "no transport"]
           },
           {
-            label: 'Analyzing similarities and differences across examples of Computing Systems & Networks is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: "When DNS fails for a site, users see ___",
+            options: ["the site appears unreachable, even though servers are healthy", "no effect", "TLS errors only", "better routing"]
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Computing Systems & Networks. Case study — A specific real-world example that illustrates Computing Systems & Networks. Comparison — Analyzing similarities and differences across examples of Computing Systems & Networks.'
+        correctAnswers: ["UDP-based (low latency, no retransmission)", "TCP (reliable, in-order)", "the site appears unreachable, even though servers are healthy"],
+        hint1: "Real-time → UDP.",
+        hint2: "Reliability → TCP.",
+        hint3: "Name resolution failure.",
+        explanation: "UDP for real-time; TCP for reliability; DNS failure makes sites unreachable."
       }
     },
     {
-      id: 'cspcompu3-strategy',
+      id: "cspcsn3-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Internet Routing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Computing Systems & Networks.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP CS Principles for higher scores.
+- Packets travel independently and may reorder.
+- TCP = reliable + ordered; UDP = unreliable + low-overhead.
+- DNS = name → address translation.
       `
     },
     {
-      id: 'cspcompu3-applied',
+      id: "cspcsn3-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Computing Systems & Networks. The strongest response would:',
+            question: "A user notices \"ERR_NAME_NOT_RESOLVED\" when visiting a site. The most likely root cause is ___",
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              "the site's origin server has crashed and is no longer responding to TCP connections.",
+              "DNS lookup failed; the browser couldn't translate the domain into an IP address.",
+              "the user has no electricity supply, so the browser cannot send any packets at all.",
+              "the site's TLS certificate is misconfigured and the browser is refusing to connect."
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: "Name-not-resolved = DNS failure."
           },
           {
-            question: 'A pattern observed in Computing Systems & Networks is consistent across multiple world regions. This suggests:',
+            question: "A real-time multiplayer game uses ___ for game-state updates and ___ for chat history.",
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              "UDP for state updates because lossy is fine; TCP for chat because reliability matters.",
+              "TCP for state updates because reliability matters; UDP for chat because lossy is fine.",
+              "No transport protocols at all; both kinds of traffic skip the transport layer entirely.",
+              "Only the TLS handshake protocol; both state updates and chat history piggyback on it."
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: "Game state = low-latency UDP; chat history = reliable TCP."
           }
         ]
       }
     }
   ]
-}
+};

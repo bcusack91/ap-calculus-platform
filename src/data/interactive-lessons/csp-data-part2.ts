@@ -1,175 +1,191 @@
 export const cspDataPart2Data = {
-  topicSlug: 'csp-data',
+  topicSlug: "csp-data",
   sections: [
     {
-      id: 'cspdata2-intro',
+      id: "cspdata2-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Data & Information helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## What "Data" Means In Computing
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Data & Information |
-| **Process 2** | A secondary process that shapes outcomes in Data & Information |
-| **Cause and effect** | The relationship between actions and outcomes in Data & Information |
+Data is **information represented in a form a computer can store and process**. The same real-world fact (a temperature, a heartbeat, a customer review) becomes data only after it's been encoded into bits.
+
+| Step | Example |
+|------|---------|
+| **Collect** | Sensor reads air temperature 22.4°C. |
+| **Store** | Save as a 16-bit integer (×10) → 224. |
+| **Process** | Average across 60 readings. |
+| **Visualize / report** | Plot a chart, send an alert. |
       `
     },
     {
-      id: 'cspdata2-quiz1',
+      id: "cspdata2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Data & Information?',
+            question: "A spreadsheet of student grades stored on a school server is best described as ___",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "a hardware design that physically wires up the storage devices.",
+              "a structured dataset of values that programs can process.",
+              "an algorithm that the spreadsheet program executes on the user's data.",
+              "a network protocol used for transferring rows between school servers."
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "A spreadsheet IS data — values organized in rows and columns."
           },
           {
-            question: 'Understanding cause and effect in Data & Information helps students:',
+            question: "Which step usually comes FIRST in the data pipeline?",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "Visualizing the results in a chart for the audience to interpret.",
+              "Collecting raw data from a source such as a sensor or survey.",
+              "Compressing the file so it fits within the available storage budget.",
+              "Encrypting the data at rest so unauthorized users cannot read it."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "You can't process data you haven't collected."
           }
         ]
       }
     },
     {
-      id: 'cspdata2-content',
+      id: "cspdata2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Data Has Structure
 
-### Process 1
-The primary mechanism that drives patterns in Data & Information. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+| Structure | Example |
+|-----------|---------|
+| **Scalar** | A single value: 7, "Alex". |
+| **List / array** | Ordered values: [3, 1, 4, 1, 5]. |
+| **Table** (rows × columns) | A spreadsheet. |
+| **Tree** | A folder with subfolders. |
+| **Graph** | A social network. |
 
-### Process 2
-A secondary process that shapes outcomes in Data & Information. This builds on the previous concept and connects to broader themes in the course.
+Choosing the right structure makes algorithms simpler and faster.
 
-### Cause and effect
-The relationship between actions and outcomes in Data & Information. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Metadata Is Data About Data
+
+| Datum | Metadata |
+|-------|----------|
+| A photo | Date taken, GPS, camera model. |
+| An email | Sender, recipient, subject, time. |
+| A file | Size, owner, last-modified time. |
+
+Metadata can be **as revealing** as the underlying data — sometimes more so.
+
+## Cleaning And Validation
+
+Real-world data is messy: typos, duplicates, missing values. Cleaning steps:
+
+- **Remove duplicates**.
+- **Handle missing values** (drop, fill with default, flag).
+- **Validate ranges** (heart rate of 500 bpm is suspect).
+- **Normalize formats** ("2026-05-06" vs "5/6/26").
+
+A useful analysis depends on clean input. Garbage in → garbage out.
       `
     },
     {
-      id: 'cspdata2-input',
+      id: "cspdata2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Data & Information?
+1) Information represented in a form a computer can store is called _______.
 
-2) What concept describes a secondary process that shapes outcomes in Data & Information?
+2) Data ABOUT data (e.g., a photo's GPS coordinates) is called _______.
 
-3) Name the term for the relationship between actions and outcomes in Data & Information.
-
-Use the exact term from this part.
+3) Removing typos, duplicates, and bad values from a dataset is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Data & Information), Process 2 (A secondary process that shapes outcomes in Data & Information), and Cause and effect (The relationship between actions and outcomes in Data & Information).'
+        correctAnswers: ["data", "metadata", "cleaning"],
+        hint1: "The whole topic.",
+        hint2: "Meta + data.",
+        hint3: "Quality step.",
+        explanation: "Data = computer-storable info. Metadata = data about data. Cleaning preps data for use."
       }
     },
     {
-      id: 'cspdata2-dropdown',
+      id: "cspdata2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Data & Information is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "A spreadsheet with rows = people and columns = attributes is a ___",
+            options: ["table / structured dataset", "graph", "tree", "binary file"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Data & Information describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "Heart rate of 500 bpm in a dataset is most likely ___",
+            options: ["an outlier or data-quality issue", "a real reading", "a feature, not a bug", "an algorithm"]
           },
           {
-            label: 'The relationship between actions and outcomes in Data & Information is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "Photo metadata that includes GPS coordinates ___",
+            options: ["can identify where a person was, even if the photo is anonymized", "has no privacy implications", "cannot be removed", "replaces the photo"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Data & Information. Process 2 — A secondary process that shapes outcomes in Data & Information. Cause and effect — The relationship between actions and outcomes in Data & Information.'
+        correctAnswers: ["table / structured dataset", "an outlier or data-quality issue", "can identify where a person was, even if the photo is anonymized"],
+        hint1: "Rows × columns.",
+        hint2: "Out-of-range value.",
+        hint3: "Metadata leaks location.",
+        explanation: "Tables are structured datasets. 500 bpm = outlier. GPS metadata leaks location."
       }
     },
     {
-      id: 'cspdata2-strategy',
+      id: "cspdata2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Data Basics
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Data & Information.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- "What kind of data is this?" — answer in terms of structure: scalar, list, table, tree, graph.
+- "Garbage in, garbage out" — emphasize cleaning before analysis.
+- Metadata can be as revealing as the data itself — mention this for privacy questions.
       `
     },
     {
-      id: 'cspdata2-applied',
+      id: "cspdata2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A class collects screen-time data from 30 students. Five entries are blank. What's the most defensible analysis choice?",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "Silently treat each blank entry as a value of zero hours.",
+              "Decide explicitly: drop those rows OR fill with the mean, and document the choice.",
+              "Ignore the issue and run the analysis on whatever the spreadsheet returns.",
+              "Discard the entire dataset and ask the class to fill out the survey again."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Missing-value handling must be deliberate and documented."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A fitness app shares \"anonymized\" exercise data including GPS routes. The most accurate privacy framing is ___",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "stripping names from a dataset is enough to make any later use safe.",
+              "GPS routes can re-identify users by linking patterns back to home or work.",
+              "no metadata is actually being collected by the fitness app in this scenario.",
+              "transport-layer encryption automatically protects metadata once it has shipped."
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: "GPS routes are powerful quasi-identifiers — anonymity is fragile."
           }
         ]
       }
     }
   ]
-}
+};

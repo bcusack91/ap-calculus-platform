@@ -1,175 +1,182 @@
 export const cspProceduresListsPart5Data = {
-  topicSlug: 'csp-procedures-lists',
+  topicSlug: "csp-procedures-lists",
   sections: [
     {
-      id: 'cspproce5-intro',
+      id: "csppl5-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Procedures & Lists
+# 📋 Procedures & Lists
 
 **Part 5 of 7 — Change Over Time**
 
-Procedures & Lists has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+## How Procedures & Lists Have Evolved
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Procedures & Lists that have remained stable over time |
-| **Change** | How Procedures & Lists has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Procedures & Lists over time |
+| Era | Trend |
+|-----|-------|
+| 1970s | Procedural programming (subroutines). |
+| 1990s | Object-oriented (methods on objects). |
+| 2000s | Functional resurgence (map/filter/reduce in mainstream langs). |
+| 2010s | Lambdas / arrow functions everywhere. |
+| 2020s | Pattern matching, immutable collections by default in many new langs. |
       `
     },
     {
-      id: 'cspproce5-quiz1',
+      id: "csppl5-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Procedures & Lists helps:',
+            question: "Modern languages widely adopt **map / filter / reduce** because ___",
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              "they consistently make the resulting source code longer than equivalent loops.",
+              "they express common patterns concisely and enable parallel implementations.",
+              "they replace ordered indexed lists entirely with unordered set collections.",
+              "they automatically encrypt the elements of the list as they are processed."
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: "Functional patterns express intent and parallelize well."
           },
           {
-            question: 'Continuity in Procedures & Lists means:',
+            question: "A \"lambda\" or \"arrow function\" is ___",
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              "a hardware feature built into modern multi-core processors for fast execution.",
+              "an unnamed inline procedure typically passed to a higher-order function as data.",
+              "a network protocol used to transmit anonymous code between distributed services.",
+              "a compression algorithm that shortens function bodies by removing whitespace."
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: "Lambdas = anonymous procedures."
           }
         ]
       }
     },
     {
-      id: 'cspproce5-content',
+      id: "csppl5-content",
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Lists Got A Cousin: Other Collections
 
-### Continuity
-Aspects of Procedures & Lists that have remained stable over time. Understanding this concept is essential for mastering Procedures & Lists in AP CS Principles.
+| Collection | Property |
+|-----------|----------|
+| List / array | Ordered, indexed. |
+| Set | Unordered, no duplicates. |
+| Map / dictionary | Key → value. |
+| Tuple | Fixed-size ordered group. |
+| Stream | Lazy, possibly infinite sequence. |
 
-### Change
-How Procedures & Lists has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+AP CSP focuses on lists, but real software uses all of these.
 
-### Trend
-The direction of change in Procedures & Lists over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Procedures As Values
+
+Modern languages let you store procedures in variables, pass them as arguments, and return them from other procedures. This makes patterns like map and filter natural.
+
+    doubled ← MAP(nums, lambda x: x * 2)
+    evens ← FILTER(nums, lambda x: x MOD 2 = 0)
+
+The AP exam emphasizes the conceptual underpinnings even if it uses simpler pseudocode.
+
+## Immutability Pressure
+
+Many modern languages favor **persistent / immutable** lists. Operations return new lists instead of mutating the original. This eliminates whole classes of bugs but requires more memory (mitigated by structural sharing).
       `
     },
     {
-      id: 'cspproce5-input',
+      id: "csppl5-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to aspects of Procedures & Lists that have remained stable over time?
+1) An unordered collection of unique values is called a _______.
 
-2) What concept describes how Procedures & Lists has transformed due to new forces and conditions?
+2) A collection mapping keys to values is called a _______ or dictionary.
 
-3) Name the term for the direction of change in Procedures & Lists over time.
-
-Use the exact term from this part.
+3) An anonymous inline procedure is often called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Procedures & Lists that have remained stable over time), Change (How Procedures & Lists has transformed due to new forces and conditions), and Trend (The direction of change in Procedures & Lists over time).'
+        correctAnswers: ["set", "map", "lambda"],
+        hint1: "No duplicates.",
+        hint2: "Key → value.",
+        hint3: "Greek letter.",
+        explanation: "Set, map / dictionary, lambda — modern collection vocabulary."
       }
     },
     {
-      id: 'cspproce5-dropdown',
+      id: "csppl5-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Procedures & Lists that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: "A higher-order function takes a procedure as ___",
+            options: ["an argument (or returns one)", "a network address", "a file", "an encrypted message"]
           },
           {
-            label: 'How Procedures & Lists has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: "Immutable lists ___",
+            options: ["return new lists from operations instead of modifying the original", "cannot store data", "compress automatically", "encrypt automatically"]
           },
           {
-            label: 'The direction of change in Procedures & Lists over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: "\"Procedures as values\" enables ___",
+            options: ["patterns like map / filter where you parameterize the operation", "compression", "TLS", "IPv6"]
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Procedures & Lists that have remained stable over time. Change — How Procedures & Lists has transformed due to new forces and conditions. Trend — The direction of change in Procedures & Lists over time.'
+        correctAnswers: ["an argument (or returns one)", "return new lists from operations instead of modifying the original", "patterns like map / filter where you parameterize the operation"],
+        hint1: "HOF behavior.",
+        hint2: "Functional collections.",
+        hint3: "Parameterized ops.",
+        explanation: "HOF = procedure as argument/return. Immutable ops return new. Procedures-as-values enable map/filter."
       }
     },
     {
-      id: 'cspproce5-strategy',
+      id: "csppl5-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Modern Procedures/Lists
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of Procedures & Lists.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP CS Principles for higher scores.
+- Functional patterns (map / filter / reduce) are everywhere.
+- Procedures can be values (lambdas, callbacks).
+- Immutability is increasingly the default in new languages.
       `
     },
     {
-      id: 'cspproce5-applied',
+      id: "csppl5-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Procedures & Lists has changed in the last 50 years. A strong answer would:',
+            question: "A team writes the same \"loop and accumulate\" code in 8 places. The single best refactor (using modern patterns) is ___",
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              "leave the duplication and rely on careful copy-paste discipline going forward.",
+              "extract a higher-order REDUCE helper that takes the per-element combiner as a parameter.",
+              "compress the source file so the eight duplicated blocks take less disk space overall.",
+              "encrypt the eight loops so future maintainers cannot accidentally edit one of them."
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: "A higher-order reducer eliminates the duplication."
           },
           {
-            question: 'A trend in Procedures & Lists shows acceleration in recent decades. The most likely explanation is:',
+            question: "A program needs to test \"is each name in this list unique?\". The most direct collection to use is ___",
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              "a list, scanning every prior name linearly each time a new name is examined.",
+              "a set — insert each name; if the set's size grows each time, names are unique.",
+              "a tuple of fixed length holding the names that have already been examined.",
+              "an encrypted blob whose ciphertext length is compared after each insertion."
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: "Sets natively encode uniqueness; building one tells you instantly."
           }
         ]
       }
     }
   ]
-}
+};

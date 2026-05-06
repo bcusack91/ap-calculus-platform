@@ -1,175 +1,195 @@
 export const cspComputingSystemsNetworksPart2Data = {
-  topicSlug: 'csp-computing-systems-networks',
+  topicSlug: "csp-computing-systems-networks",
   sections: [
     {
-      id: 'cspcompu2-intro',
+      id: "cspcsn2-intro",
       type: 'text' as const,
       content: `
 # 🖥️ Computing Systems & Networks
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to Computing Systems & Networks helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+## A Computing System Is A Stack Of Layers
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Computing Systems & Networks |
-| **Process 2** | A secondary process that shapes outcomes in Computing Systems & Networks |
-| **Cause and effect** | The relationship between actions and outcomes in Computing Systems & Networks |
+Every modern device — phone, laptop, server, smart thermostat — is built from layered components, each abstracting the one below.
+
+| Layer | Examples |
+|-------|---------|
+| **Hardware** | CPU, RAM, storage, network card. |
+| **Firmware** | BIOS / UEFI, embedded controllers. |
+| **OS kernel** | Memory + process + I/O management. |
+| **System libraries** | Standard runtimes, drivers. |
+| **Applications** | Browsers, games, your code. |
+
+Each layer **abstracts** the messy details below, letting the next layer up be simpler.
       `
     },
     {
-      id: 'cspcompu2-quiz1',
+      id: "cspcsn2-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Computing Systems & Networks?',
+            question: "A web browser does NOT need to know which brand of network card the device uses. The mechanism that hides this detail is ___",
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              "encryption applied between the browser and the network card before any send",
+              "abstraction provided by the operating system and its installed device drivers",
+              "compression of the network-card identifier so the browser can't read it",
+              "lossy encoding of card-specific bytes before they reach the application layer"
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: "OS + drivers abstract hardware specifics."
           },
           {
-            question: 'Understanding cause and effect in Computing Systems & Networks helps students:',
+            question: "A \"system\" in CSP terminology means ___",
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              "only the central processing unit — the chip that runs instructions.",
+              "a collection of components that interact to provide some function.",
+              "only software applications running on top of the operating system.",
+              "only physical hardware components inside the device's case."
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: "A system = interacting components, hardware + software."
           }
         ]
       }
     },
     {
-      id: 'cspcompu2-content',
+      id: "cspcsn2-content",
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## A Network Is A System Of Systems
 
-### Process 1
-The primary mechanism that drives patterns in Computing Systems & Networks. Understanding this concept is essential for mastering Computing Systems & Networks in AP CS Principles.
+A **network** is itself a computing system whose components are other computing systems plus the links between them. Each device:
 
-### Process 2
-A secondary process that shapes outcomes in Computing Systems & Networks. This builds on the previous concept and connects to broader themes in the course.
+- Has an address.
+- Sends and receives data via a protocol.
+- Cooperates with neighbors to forward traffic.
 
-### Cause and effect
-The relationship between actions and outcomes in Computing Systems & Networks. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Network type | Scale |
+|-------------|-------|
+| **PAN** (personal) | Bluetooth around one user. |
+| **LAN** (local) | Home / classroom network. |
+| **WAN** (wide) | Across cities / countries. |
+| **Internet** | Network of networks. |
+
+## Client-Server Vs. Peer-To-Peer
+
+| Model | Behavior |
+|-------|----------|
+| **Client-server** | One central server; many clients request from it (web browsing, email). |
+| **Peer-to-peer** | Each node is both client and server (BitTorrent, some video calls). |
+
+Client-server is easier to administer; P2P is more fault-tolerant and scales differently.
+
+## Throughput, Latency, Bandwidth
+
+| Term | Meaning | Analogy |
+|------|---------|---------|
+| **Bandwidth** | Capacity (bits / second). | Width of a pipe. |
+| **Throughput** | Actual rate achieved. | Water flowing right now. |
+| **Latency** | Time for one packet round trip. | Time for first drop to arrive. |
+
+A high-bandwidth, high-latency link (satellite) can move lots of data — slowly.
       `
     },
     {
-      id: 'cspcompu2-input',
+      id: "cspcsn2-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Computing Systems & Networks?
+1) A network spanning a single building or home is called a _______.
 
-2) What concept describes a secondary process that shapes outcomes in Computing Systems & Networks?
+2) A model where each node acts as both client and server is called _______-to-_______.
 
-3) Name the term for the relationship between actions and outcomes in Computing Systems & Networks.
-
-Use the exact term from this part.
+3) The time for a single packet to make a round trip is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Computing Systems & Networks), Process 2 (A secondary process that shapes outcomes in Computing Systems & Networks), and Cause and effect (The relationship between actions and outcomes in Computing Systems & Networks).'
+        correctAnswers: ["LAN", "peer/peer", "latency"],
+        hint1: "Local area.",
+        hint2: "P2P.",
+        hint3: "Round-trip time.",
+        explanation: "LAN; peer-to-peer; latency."
       }
     },
     {
-      id: 'cspcompu2-dropdown',
+      id: "cspcsn2-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Computing Systems & Networks is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: "A satellite link with high bandwidth but high latency is best for ___",
+            options: ["bulk file transfers, NOT real-time interactive use", "real-time gaming", "video calls", "live debate"]
           },
           {
-            label: 'A secondary process that shapes outcomes in Computing Systems & Networks describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: "A client-server architecture centralizes ___",
+            options: ["control and data on the server", "storage on each peer", "all decisions on clients", "compression on the network"]
           },
           {
-            label: 'The relationship between actions and outcomes in Computing Systems & Networks is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: "A P2P system continues working when ___",
+            options: ["individual nodes leave or join, since no single point is required", "the central server fails (there is none)", "TLS fails", "IPv6 fails"]
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Computing Systems & Networks. Process 2 — A secondary process that shapes outcomes in Computing Systems & Networks. Cause and effect — The relationship between actions and outcomes in Computing Systems & Networks.'
+        correctAnswers: ["bulk file transfers, NOT real-time interactive use", "control and data on the server", "individual nodes leave or join, since no single point is required"],
+        hint1: "Bandwidth ≠ low latency.",
+        hint2: "Server-centric.",
+        hint3: "No central node.",
+        explanation: "Sat = bulk; client-server centralizes; P2P resists individual failures."
       }
     },
     {
-      id: 'cspcompu2-strategy',
+      id: "cspcsn2-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Systems & Networks
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Computing Systems & Networks.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP CS Principles for higher scores.
+- Distinguish bandwidth, throughput, and latency.
+- Client-server vs. P2P trade-offs.
+- A "system" is interacting components — abstraction is the unifying idea.
       `
     },
     {
-      id: 'cspcompu2-applied',
+      id: "cspcsn2-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: "A school provides a Wi-Fi network with 1 Gbps total bandwidth shared among 500 simultaneous users. Per-user effective throughput depends on ___",
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              "only the underlying link's rated bandwidth, regardless of how busy it currently is.",
+              "how many users are active and how the bandwidth is allocated; congestion lowers each share.",
+              "only the transport-layer security protocol the users' applications happen to be using.",
+              "only whether the network has switched from IPv4 to IPv6 for client addressing."
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: "Shared bandwidth = per-user throughput depends on contention."
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: "A live online game cares more about ___ than bulk download speed.",
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              "low latency between every player and the central game server",
+              "high bandwidth on the link from the central server out to each player",
+              "compression ratio of the game's installer downloaded once at the start",
+              "lossless coding of every texture file shipped inside the game's install bundle"
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 0,
+            explanation: "Real-time interactive needs low latency."
           }
         ]
       }
     }
   ]
-}
+};

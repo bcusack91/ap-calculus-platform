@@ -1,175 +1,179 @@
 export const cspCreativeDevelopmentPart4Data = {
-  topicSlug: 'csp-creative-development',
+  topicSlug: "csp-creative-development",
   sections: [
     {
-      id: 'cspcreat4-intro',
+      id: "cspcd4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 🎨 Creative Development
 
 **Part 4 of 7 — Connections & Interactions**
 
-Creative Development connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## How Creative Development Connects Across CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Creative Development links to other course topics |
-| **Scale interaction** | How Creative Development operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Creative Development can reinforce or modify the original process |
+| Connection | Why |
+|-----------|-----|
+| Development ↔ Algorithms | Programs implement algorithms. |
+| Development ↔ Data | Programs operate on data. |
+| Development ↔ Internet | Many programs are networked apps. |
+| Development ↔ Impact | Programs affect users — design choices have consequences. |
       `
     },
     {
-      id: 'cspcreat4-quiz1',
+      id: "cspcd4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Creative Development connects to other course topics through:',
+            question: "A development team realizes their algorithm is too slow for the dataset size. The most appropriate response is ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "ship the slow version since the algorithm is technically correct.",
+              "investigate a more efficient algorithm or restructure the data behind it.",
+              "switch to a different operating system to gain implicit speedups.",
+              "rewrite the same algorithm in a faster language without changing it."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Algorithm + data structure choices are core development decisions."
           },
           {
-            question: 'A feedback loop in Creative Development means:',
+            question: "When a developer chooses what data to collect, this decision ___",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "affects only storage costs and has no real impact on users.",
+              "has direct privacy implications that must be considered carefully.",
+              "is a purely technical decision unrelated to ethical questions.",
+              "is fully dictated by what the database happens to support."
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: "Data collection is also a privacy decision."
           }
         ]
       }
     },
     {
-      id: 'cspcreat4-content',
+      id: "cspcd4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Programs Are Built On Algorithms And Data
 
-### Interconnection
-How Creative Development links to other course topics. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+Every program embodies algorithm + data choices. Choosing well saves rework.
 
-### Scale interaction
-How Creative Development operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Choice | Question |
+|--------|----------|
+| Data structure | Will I append, search, sort, or update most? |
+| Algorithm | Is the input small or huge? |
+| Storage | Memory only? Disk? Cloud? |
+| Network | Online-only? Offline-capable? Real-time? |
 
-### Feedback loop
-How outcomes of Creative Development can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Errors And Debugging
+
+| Error | Example | Detection |
+|-------|---------|-----------|
+| **Syntax** | Missing parenthesis. | At parse / compile time. |
+| **Runtime** | Divide by zero. | At execution. |
+| **Logic** | Returns wrong answer. | Only via testing. |
+| **Overflow** | Number too large for storage. | Sometimes silent. |
+
+Logic errors are most insidious — the program runs but produces wrong output.
       `
     },
     {
-      id: 'cspcreat4-input',
+      id: "cspcd4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Creative Development links to other course topics?
+1) A program crash from dividing by zero is a _______ error.
 
-2) What concept describes how Creative Development operates differently at local, national, and global scales?
+2) A program that runs but produces the wrong answer has a _______ error.
 
-3) Name the term for how outcomes of Creative Development can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) Catching errors before users do requires _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Creative Development links to other course topics), Scale interaction (How Creative Development operates differently at local, national, and global scales), and Feedback loop (How outcomes of Creative Development can reinforce or modify the original process).'
+        correctAnswers: ["runtime", "logic", "testing"],
+        hint1: "Caught at execution.",
+        hint2: "Bad answer, no crash.",
+        hint3: "Run with sample inputs.",
+        explanation: "Runtime = caught when running. Logic = wrong output. Testing surfaces them."
       }
     },
     {
-      id: 'cspcreat4-dropdown',
+      id: "cspcd4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Creative Development links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A logic error is best detected by ___",
+            options: ["running tests with known correct outputs", "reading the code aloud", "changing the file extension", "compressing the file"]
           },
           {
-            label: 'How Creative Development operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "A syntax error is caught ___",
+            options: ["at parse / compile time, before the program runs", "only after release", "never", "only by users"]
           },
           {
-            label: 'How outcomes of Creative Development can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A program's data-collection choice is ___",
+            options: ["both a technical and a privacy/ethics decision", "purely technical", "purely legal", "irrelevant"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Creative Development links to other course topics. Scale interaction — How Creative Development operates differently at local, national, and global scales. Feedback loop — How outcomes of Creative Development can reinforce or modify the original process.'
+        correctAnswers: ["running tests with known correct outputs", "at parse / compile time, before the program runs", "both a technical and a privacy/ethics decision"],
+        hint1: "Compare actual to expected.",
+        hint2: "Compiler/parser flags.",
+        hint3: "Privacy is design.",
+        explanation: "Logic errors need test cases. Syntax errors caught early. Data collection is technical AND ethical."
       }
     },
     {
-      id: 'cspcreat4-strategy',
+      id: "cspcd4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Development
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Creative Development.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- "Wrong answer, no crash" = logic error → fix via testing.
+- "Crash" = runtime error → check inputs, add validation.
+- "Won't even run" = syntax error.
+- Development decisions have technical AND user impact.
       `
     },
     {
-      id: 'cspcreat4-applied',
+      id: "cspcd4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Creative Development and other units earns higher scores because:',
+            question: "A function returns the average of a list. It returns the right value for non-empty lists but throws an error for empty lists. The most direct fix is ___",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "ignore the bug since real users rarely send an empty list.",
+              "add a check for empty input that returns 0 or signals an error explicitly.",
+              "remove every call site of the function and inline the math at each one.",
+              "switch the implementation to a different language and recompile."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Boundary input handling."
           },
           {
-            question: 'If Creative Development produces outcomes that further intensify the original process, this is:',
+            question: "A team logs every keystroke users type \"for analytics\". The CSP-aligned concern is ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "logging is purely a performance issue and not a privacy issue.",
+              "capturing every keystroke includes passwords and private content — a privacy and security risk.",
+              "as long as the logs stay on the company's own servers there is no real risk.",
+              "analytics keystroke logs are protected by HTTPS and so cannot be misused."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Over-collection is a privacy and security risk."
           }
         ]
       }
     }
   ]
-}
+};

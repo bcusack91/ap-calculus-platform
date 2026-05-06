@@ -1,175 +1,183 @@
 export const cspAlgorithmsProgrammingPart4Data = {
-  topicSlug: 'csp-algorithms-programming',
+  topicSlug: "csp-algorithms-programming",
   sections: [
     {
-      id: 'cspalgor4-intro',
+      id: "cspap4-intro",
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms & Programming
+# 💻 Algorithms & Programming
 
 **Part 4 of 7 — Connections & Interactions**
 
-Algorithms & Programming connects to other topics in AP CS Principles. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+## How Code Connects Across the Course
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Algorithms & Programming links to other course topics |
-| **Scale interaction** | How Algorithms & Programming operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Algorithms & Programming can reinforce or modify the original process |
+Programming sits at the center of CSP. Procedures connect to **abstraction** (Big Idea 1), accumulators to **data** (BI 2), client/server programs to **internet** (BI 4), and design choices to **impact** (BI 5).
+
+| Connection | Example |
+|-----------|---------|
+| Procedures ↔ Abstraction | A name hides an implementation. |
+| Lists ↔ Data | Programs read, transform, and write data structures. |
+| Conditionals ↔ Logic | Boolean expressions encode rules. |
+| Programs ↔ Impact | Whose voice is in the data the program acts on? |
       `
     },
     {
-      id: 'cspalgor4-quiz1',
+      id: "cspap4-quiz1",
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Concept Check 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'Algorithms & Programming connects to other course topics through:',
+            question: "Wrapping a 30-line algorithm inside a named PROCEDURE primarily helps because it ___",
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              "runs faster.",
+              "lets the caller use the algorithm without understanding its internal steps.",
+              "compresses memory.",
+              "guarantees correctness."
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP CS Principles are interconnected through shared processes, causes, and outcomes.'
+            explanation: "Procedures are the canonical abstraction tool — separating \"what\" from \"how\"."
           },
           {
-            question: 'A feedback loop in Algorithms & Programming means:',
+            question: "A program reads users' birthdates and computes their ages. Which CSP cross-topic concern is most directly raised when the program rejects 4-digit birth years before 1925?",
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              "Big Idea 5: such hard cuts can introduce age-based bias against older users.",
+              "The program is too short.",
+              "The program uses too many procedures.",
+              "The program needs to be sorted."
             ],
-            correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            correctAnswer: 0,
+            explanation: "Boundary choices in code become real-world inclusions/exclusions — an impact-of-computing concern."
           }
         ]
       }
     },
     {
-      id: 'cspalgor4-content',
+      id: "cspap4-content",
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Procedures as Abstraction
 
-### Interconnection
-How Algorithms & Programming links to other course topics. Understanding this concept is essential for mastering Algorithms & Programming in AP CS Principles.
+A procedure header **isWeekend(day)** is a contract:
 
-### Scale interaction
-How Algorithms & Programming operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+- Inputs: a day (string).
+- Output: a Boolean.
+- Side effects: none.
 
-### Feedback loop
-How outcomes of Algorithms & Programming can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Callers can rely on this contract without reading the body. If you later switch the implementation (e.g., add Friday), you change one place and all callers update.
+
+## Lists as the Data Bridge
+
+Programs almost always operate on **lists** (BI 2 calls them collections). The connection:
+
+- INPUT brings raw values in.
+- A loop transforms or filters the list.
+- DISPLAY or a RETURN sends results back out.
+
+This pipeline is the shape of nearly every real program.
+
+## Programs and Impact
+
+A scheduling program that uses ZIP code as a tiebreaker for hospital appointment priority will systematically affect outcomes by neighborhood. The choice happens at one IF statement, but its effect is at the **scale** of the user base. Programmers carry responsibility for these design choices.
       `
     },
     {
-      id: 'cspalgor4-input',
+      id: "cspap4-input",
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to how Algorithms & Programming links to other course topics?
+1) Hiding implementation details behind a procedure name is called _______.
 
-2) What concept describes how Algorithms & Programming operates differently at local, national, and global scales?
+2) A series of input → transform → output stages on data is called a _______.
 
-3) Name the term for how outcomes of Algorithms & Programming can reinforce or modify the original process.
-
-Use the exact term from this part.
+3) When a program's design decision affects a group of users systematically, this raises a question of algorithmic _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Algorithms & Programming links to other course topics), Scale interaction (How Algorithms & Programming operates differently at local, national, and global scales), and Feedback loop (How outcomes of Algorithms & Programming can reinforce or modify the original process).'
+        correctAnswers: ["abstraction", "pipeline", "bias"],
+        hint1: "CED Big Idea 1 vocabulary.",
+        hint2: "Like an assembly line.",
+        hint3: "Systematic skew in outcomes.",
+        explanation: "Abstraction names ideas. Pipelines move data. Bias arises when design choices affect groups unevenly."
       }
     },
     {
-      id: 'cspalgor4-dropdown',
+      id: "cspap4-dropdown",
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Targeted Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Algorithms & Programming links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: "A procedure that does one well-defined thing is best described as having ___",
+            options: ["high cohesion", "low cohesion", "no parameters", "global scope"]
           },
           {
-            label: 'How Algorithms & Programming operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: "Two procedures that share no state and could be developed independently are ___",
+            options: ["loosely coupled", "tightly coupled", "recursive", "concurrent"]
           },
           {
-            label: 'How outcomes of Algorithms & Programming can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: "A program whose decisions affect millions of users should be evaluated for ___",
+            options: ["unintended impact on subgroups", "shorter line count", "fewer comments", "more loops"]
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Algorithms & Programming links to other course topics. Scale interaction — How Algorithms & Programming operates differently at local, national, and global scales. Feedback loop — How outcomes of Algorithms & Programming can reinforce or modify the original process.'
+        correctAnswers: ["high cohesion", "loosely coupled", "unintended impact on subgroups"],
+        hint1: "Single, focused purpose.",
+        hint2: "Few shared dependencies.",
+        hint3: "Scale amplifies design choices.",
+        explanation: "Good design favors high-cohesion, loose-coupling procedures. At scale, programmers must consider subgroup impact."
       }
     },
     {
-      id: 'cspalgor4-strategy',
+      id: "cspap4-strategy",
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cross-Topic Code Questions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Algorithms & Programming.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP CS Principles for higher scores.
+- If the prompt frames a code change as "easier maintenance" or "single source of truth", the answer is usually about extracting a procedure (abstraction).
+- If a question describes outcomes that "differ by group", suspect Big Idea 5 (impact / bias).
+- Look for the word "scale": at scale, small biases become large harms.
+- Don't confuse efficiency (time/space) with maintainability (procedures, naming) — distractors mix these.
       `
     },
     {
-      id: 'cspalgor4-applied',
+      id: "cspap4-applied",
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application 🎯**
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Algorithms & Programming and other units earns higher scores because:',
+            question: "A team rewrites three nested IF statements as one procedure call categoryFor(score). Which improvement does this primarily realize?",
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              "Improved running-time efficiency.",
+              "Improved readability and a single point of update if the categories ever change.",
+              "Reduced data-storage requirements.",
+              "Faster Internet response times."
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: "Extracting a procedure does not change time complexity; it improves readability and centralizes the rule."
           },
           {
-            question: 'If Algorithms & Programming produces outcomes that further intensify the original process, this is:',
+            question: "A loan-decision program denies applicants whose monthly income is below a threshold. After deployment, the team discovers the threshold disproportionately denies applicants from a specific region with lower median wages but equal repayment history. The most defensible response is to ___",
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              "leave the threshold; the program ran exactly as designed.",
+              "review the criterion in light of the disparate impact and consult stakeholders before redeploying.",
+              "lower the threshold for that region only without other review.",
+              "remove the income field entirely."
             ],
             correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            explanation: "Disparate impact requires review and stakeholder input — neither blind acceptance nor an ad hoc patch."
           }
         ]
       }
     }
   ]
-}
+};
