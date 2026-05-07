@@ -455,6 +455,27 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
   'aas-civil-rights-movement': 'political-struggles',
   'aas-black-power-beyond': 'political-struggles',
   'aas-contemporary-issues': 'culture-identity',
+
+  // ---- AP Computer Science Principles (course topic slug → generic bank topic slug)
+  // The ap-csp-bank uses 6 broad topicSlugs (algorithms, cybersecurity,
+  // digital-information, impact, internet, programming) while the curriculum
+  // exposes 15 fine-grained topics. Map each fine-grained topic to the most
+  // relevant bank slug so competitive mode returns questions instead of empty.
+  'csp-creative-development': 'programming',
+  'csp-collaboration-development': 'programming',
+  'csp-data': 'digital-information',
+  'csp-binary-data': 'digital-information',
+  'csp-data-compression-analysis': 'digital-information',
+  'csp-algorithms': 'algorithms',
+  'csp-algorithms-programming': 'algorithms',
+  'csp-procedures-lists': 'programming',
+  'csp-variables-control': 'programming',
+  'csp-computing-systems-networks': 'internet',
+  'csp-internet-protocols': 'internet',
+  'csp-fault-tolerance-security': 'cybersecurity',
+  'csp-safe-computing': 'cybersecurity',
+  'csp-impact-of-computing': 'impact',
+  'csp-social-ethical-impacts': 'impact',
 }
 
 /**
@@ -678,6 +699,22 @@ const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
   'aas-civil-rights-movement': 'ap-african-american-studies',
   'aas-black-power-beyond': 'ap-african-american-studies',
   'aas-contemporary-issues': 'ap-african-american-studies',
+  // AP Computer Science Principles
+  'csp-creative-development': 'ap-csp',
+  'csp-collaboration-development': 'ap-csp',
+  'csp-data': 'ap-csp',
+  'csp-binary-data': 'ap-csp',
+  'csp-data-compression-analysis': 'ap-csp',
+  'csp-algorithms': 'ap-csp',
+  'csp-algorithms-programming': 'ap-csp',
+  'csp-procedures-lists': 'ap-csp',
+  'csp-variables-control': 'ap-csp',
+  'csp-computing-systems-networks': 'ap-csp',
+  'csp-internet-protocols': 'ap-csp',
+  'csp-fault-tolerance-security': 'ap-csp',
+  'csp-safe-computing': 'ap-csp',
+  'csp-impact-of-computing': 'ap-csp',
+  'csp-social-ethical-impacts': 'ap-csp',
 }
 
 /**
@@ -698,6 +735,7 @@ const COURSE_SUB_TOPIC_BANKS: Record<string, (count: number, topicSlug?: string)
   'ap-micro': getApMicroQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
   'ap-macro': getApMacroQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
   'ap-african-american-studies': getApAASQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+  'ap-csp': getApCSPQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
 }
 
 /**
