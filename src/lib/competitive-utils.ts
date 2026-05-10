@@ -200,6 +200,8 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
   'derivatives-exp-log-calcab': 'basic-differentiation-rules',
   'implicit-differentiation-calcab': 'implicit-differentiation',
   'concavity-inflection-points-calcab': 'curve-sketching',
+  'second-derivative-test': 'curve-sketching',
+  'second-derivative-test-calcab': 'curve-sketching',
   'related-rates-calcab': 'related-rates',
   'limits-at-infinity-calcab': 'limits-algebraically',
   // Legacy "Calculus" course lesson slugs (pre-AP Calc AB course rebrand)
@@ -484,6 +486,9 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
  * its bank function (with the bank-topic alias from LESSON_TO_BANK_TOPIC).
  */
 const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
+  // AP Calc AB lesson aliases that need explicit course routing
+  'second-derivative-test': 'ap-calculus-ab',
+  'second-derivative-test-calcab': 'ap-calculus-ab',
   // Physics C
   'physics-c-1d-kinematics': 'ap-physics-c-mech',
   'physics-c-2d-kinematics': 'ap-physics-c-mech',
