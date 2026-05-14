@@ -24,7 +24,7 @@ export default function TeacherLobbiesPage() {
   const [lobbies, setLobbies] = useState<LobbySummary[]>([])
   const [loading, setLoading] = useState(true)
   const [showCreate, setShowCreate] = useState(false)
-  const [newLobby, setNewLobby] = useState({ name: '', topicSlug: '', numTeams: 2 })
+  const [newLobby, setNewLobby] = useState({ name: '', numTeams: 2 })
   const [creating, setCreating] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -63,14 +63,13 @@ export default function TeacherLobbiesPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: newLobby.name || 'Class Match',
-          topicSlug: newLobby.topicSlug || null,
           numTeams: newLobby.numTeams,
         }),
       })
       const json = await res.json()
       if (!res.ok) throw new Error(json.error || 'Failed to create lobby')
       setShowCreate(false)
-      setNewLobby({ name: '', topicSlug: '', numTeams: 2 })
+      setNewLobby({ name: '', numTeams: 2 })
       router.push(`/teacher/lobby/${json.lobby.id}`)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed')
@@ -105,7 +104,7 @@ export default function TeacherLobbiesPage() {
           <div className="mb-6 rounded-lg border border-indigo-200 bg-white p-5 shadow-sm">
             <h2 className="text-lg font-semibold mb-3">Create lobby</h2>
             {error && <p className="text-red-600 text-sm mb-2">{error}</p>}
-            <div className="grid sm:grid-cols-3 gap-3">
+            <div className="grid sm:grid-cols-2 gap-3">
               <label className="text-sm">
                 <span className="block text-gray-600 mb-1">Name</span>
                 <input
@@ -113,15 +112,6 @@ export default function TeacherLobbiesPage() {
                   value={newLobby.name}
                   onChange={e => setNewLobby({ ...newLobby, name: e.target.value })}
                   placeholder="Period 4 Calculus"
-                />
-              </label>
-              <label className="text-sm">
-                <span className="block text-gray-600 mb-1">Topic slug (optional)</span>
-                <input
-                  className="w-full rounded border-gray-300"
-                  value={newLobby.topicSlug}
-                  onChange={e => setNewLobby({ ...newLobby, topicSlug: e.target.value })}
-                  placeholder="e.g., pythagorean-theorem"
                 />
               </label>
               <label className="text-sm">
@@ -136,6 +126,7 @@ export default function TeacherLobbiesPage() {
                 />
               </label>
             </div>
+            <p className="mt-3 text-xs text-gray-500">You'll pick the course, topics, and timer on the next screen.</p>
             <div className="mt-4 flex gap-2">
               <button
                 onClick={createLobby}

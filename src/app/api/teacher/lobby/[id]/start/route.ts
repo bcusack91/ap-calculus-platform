@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireTeacher } from '@/lib/teacher-auth'
+import { buildQuestionPool, getCourseEntry } from '@/lib/teacher-lobby-courses'
 
 interface Ctx { params: Promise<{ id: string }> }
 
-// POST /api/teacher/lobby/[id]/start — mark lobby IN_PROGRESS (teams must be assigned)
+// POST /api/teacher/lobby/[id]/start — build question pool, set endsAt, mark IN_PROGRESS
 export async function POST(_req: NextRequest, { params }: Ctx) {
   const { id } = await params
   const result = await requireTeacher()
@@ -21,6 +22,15 @@ export async function POST(_req: NextRequest, { params }: Ctx) {
   if (lobby.status !== 'OPEN') {
     return NextResponse.json({ error: 'Lobby already started' }, { status: 400 })
   }
+  if (!lobby.courseSlug) {
+    return NextResponse.json(
+      { error: 'Choose a course before starting the match.' },
+      { status: 400 },
+    )
+  }
+  if (!getCourseEntry(lobby.courseSlug)) {
+    return NextResponse.json({ error: `Unsupported course: ${lobby.courseSlug}` }, { status: 400 })
+  }
 
   const unassigned = lobby.participants.filter(p => p.team === null)
   if (unassigned.length > 0) {
@@ -29,10 +39,37 @@ export async function POST(_req: NextRequest, { params }: Ctx) {
       { status: 400 },
     )
   }
+  if (lobby.participants.length === 0) {
+    return NextResponse.json({ error: 'No participants in lobby.' }, { status: 400 })
+  }
+
+  const topicSlugs = Array.isArray(lobby.topicSlugs) ? (lobby.topicSlugs as string[]) : []
+  const pool = buildQuestionPool(lobby.courseSlug, topicSlugs, 200)
+  if (pool.length === 0) {
+    return NextResponse.json(
+      { error: 'No questions found for the chosen course/topics.' },
+      { status: 400 },
+    )
+  }
+
+  const startedAt = new Date()
+  const endsAt = new Date(startedAt.getTime() + lobby.durationSec * 1000)
+
+  await prisma.teacherLobbyParticipant.updateMany({
+    where: { lobbyId: id },
+    data: { score: 0, questionsAnswered: 0, questionsCorrect: 0, lastQuestionIndex: 0 },
+  })
 
   const updated = await prisma.teacherLobby.update({
     where: { id },
-    data: { status: 'IN_PROGRESS', startedAt: new Date() },
+    data: {
+      status: 'IN_PROGRESS',
+      startedAt,
+      endsAt,
+      questionPool: pool as object,
+    },
   })
-  return NextResponse.json({ lobby: updated })
+  return NextResponse.json({
+    lobby: { id: updated.id, status: updated.status, endsAt: updated.endsAt },
+  })
 }

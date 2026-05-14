@@ -141,10 +141,10 @@ export async function middleware(request: NextRequest) {
 
   // Role-based protection for teacher routes
   if (nextUrl.pathname.startsWith('/teacher')) {
-    // Exception: /teacher/lobby/<id> is also viewable by student participants.
-    // The page + API already enforce per-user access (teacher owner OR lobby participant).
-    const isTeacherLobbyDetail = /^\/teacher\/lobby\/[^/]+\/?$/.test(nextUrl.pathname)
-    if (!isTeacherLobbyDetail && role !== 'TEACHER' && role !== 'ADMIN') {
+    // Exception: /teacher/lobby/<id> and /teacher/lobby/<id>/play are also viewable
+    // by student participants. Per-user access is enforced inside the page + APIs.
+    const isTeacherLobbyShared = /^\/teacher\/lobby\/[^/]+(\/play)?\/?$/.test(nextUrl.pathname)
+    if (!isTeacherLobbyShared && role !== 'TEACHER' && role !== 'ADMIN') {
       return NextResponse.redirect(new URL('/dashboard', nextUrl.origin))
     }
   }

@@ -30,7 +30,11 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
 
-  return NextResponse.json({ lobby, isTeacher })
+  // Never leak questionPool (contains correctAnswer indices) over this endpoint —
+  // students fetch the safe version from /play.
+  const { questionPool: _omit, ...safeLobby } = lobby
+  void _omit
+  return NextResponse.json({ lobby: safeLobby, isTeacher })
 }
 
 // PATCH — teacher updates name/topic/numTeams (while OPEN)
@@ -51,10 +55,20 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
   const body = await req.json().catch(() => ({}))
   const data: Record<string, unknown> = {}
   if (typeof body.name === 'string') data.name = body.name.trim() || lobby.name
-  if (typeof body.topicSlug === 'string') data.topicSlug = body.topicSlug || null
   if (typeof body.gameMode === 'string') data.gameMode = body.gameMode
   if (typeof body.numTeams === 'number') {
     data.numTeams = Math.max(2, Math.min(8, Math.floor(body.numTeams)))
+  }
+  if (typeof body.courseSlug === 'string' || body.courseSlug === null) {
+    data.courseSlug = body.courseSlug || null
+  }
+  if (Array.isArray(body.topicSlugs)) {
+    data.topicSlugs = (body.topicSlugs as unknown[]).filter(
+      (x): x is string => typeof x === 'string' && x.length > 0,
+    )
+  }
+  if (typeof body.durationSec === 'number') {
+    data.durationSec = Math.max(60, Math.min(60 * 60, Math.floor(body.durationSec)))
   }
 
   const updated = await prisma.teacherLobby.update({ where: { id }, data })

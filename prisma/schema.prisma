@@ -662,6 +662,11 @@ model TeacherLobby {
   classroomId String?
   name        String
   topicSlug   String?
+  courseSlug   String?
+  topicSlugs   Json     @default("[]")
+  durationSec  Int      @default(600)
+  endsAt       DateTime?
+  questionPool Json?
   gameMode    String              @default("competitive")
   numTeams    Int                 @default(2)
   status      TeacherLobbyStatus  @default(OPEN)
@@ -686,6 +691,10 @@ model TeacherLobbyParticipant {
   team      Int? // 0..numTeams-1, null until balanced
   mmrAtJoin Int      @default(1000)
   joinedAt  DateTime @default(now())
+  score             Int @default(0)
+  questionsAnswered Int @default(0)
+  questionsCorrect  Int @default(0)
+  lastQuestionIndex Int @default(0)
 
   lobby TeacherLobby @relation(fields: [lobbyId], references: [id], onDelete: Cascade)
   user  User         @relation("TeacherLobbyParticipantUser", fields: [userId], references: [id], onDelete: Cascade)
