@@ -105,7 +105,7 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
       void load()
       const t = setInterval(() => {
         void load()
-      }, 3000)
+      }, 1500)
       return () => clearInterval(t)
     }
   }, [status, load])
@@ -113,7 +113,7 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
   // Redirect non-teacher participants into the play view once the match starts
   useEffect(() => {
     if (lobby?.status === 'IN_PROGRESS' && !isTeacher) {
-      router.push(`/teacher/lobby/${id}/play`)
+      router.replace(`/teacher/lobby/${id}/play`)
     }
   }, [lobby?.status, isTeacher, router, id])
 
@@ -441,7 +441,7 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
                 {String(remainingMin).padStart(2, '0')}:{String(remainingS).padStart(2, '0')}
               </div>
             </div>
-            {isTeacher && (
+            {isTeacher ? (
               <button
                 onClick={close}
                 disabled={busy}
@@ -449,6 +449,13 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
               >
                 End match now
               </button>
+            ) : (
+              <a
+                href={`/teacher/lobby/${id}/play`}
+                className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+              >
+                Enter match →
+              </a>
             )}
           </div>
         )}
