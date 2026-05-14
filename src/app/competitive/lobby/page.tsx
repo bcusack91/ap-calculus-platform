@@ -17,8 +17,10 @@ export default function LobbyHomePage() {
     setBusy(true)
     try {
       const res = await fetch('/api/competitive/lobby', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data?.error || 'Could not create lobby')
+      const text = await res.text()
+      const data = text ? (() => { try { return JSON.parse(text) } catch { return null } })() : null
+      if (!res.ok) throw new Error(data?.error || `Server error (${res.status})`)
+      if (!data?.code) throw new Error('Server returned no lobby code')
       router.push(`/competitive/lobby/${data.code}`)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed to create lobby')
@@ -33,14 +35,35 @@ export default function LobbyHomePage() {
     if (!trimmed) return
     setBusy(true)
     try {
+      // 1) Try private 1v1 lobby
       const res = await fetch('/api/competitive/lobby', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code: trimmed }),
       })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data?.error || 'Could not join lobby')
-      router.push(`/competitive/lobby/${data.code}`)
+      const text = await res.text()
+      const data = text ? (() => { try { return JSON.parse(text) } catch { return null } })() : null
+      if (res.ok && data?.code) {
+        router.push(`/competitive/lobby/${data.code}`)
+        return
+      }
+
+      // 2) Fall back to teacher class lobby (different code namespace)
+      if (res.status === 404) {
+        const teacherRes = await fetch('/api/teacher/lobby/join', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: trimmed }),
+        })
+        const teacherData = await teacherRes.json().catch(() => null)
+        if (teacherRes.ok && teacherData?.lobbyId) {
+          router.push(`/teacher/lobby/${teacherData.lobbyId}`)
+          return
+        }
+        throw new Error(teacherData?.error || data?.error || 'Lobby not found')
+      }
+
+      throw new Error(data?.error || `Server error (${res.status})`)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed to join lobby')
       setBusy(false)
@@ -90,7 +113,10 @@ export default function LobbyHomePage() {
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
-          <h2 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">Join a Lobby</h2>
+          <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">Join a Lobby</h2>
+          <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+            Enter a friend&apos;s 1v1 code <em>or</em> a teacher&apos;s 6-character class lobby code.
+          </p>
           <form onSubmit={join} className="space-y-3">
             <input
               type="text"

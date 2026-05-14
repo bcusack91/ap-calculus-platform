@@ -446,6 +446,24 @@ export default function CompetitivePage() {
           </div>
         </div>
 
+        {/* Class Lobby — student joins their teacher's MMR-balanced lobby */}
+        <div className="mt-4 rounded-2xl border-2 border-indigo-200 bg-gradient-to-r from-indigo-50 to-emerald-50 p-5 sm:p-6 shadow-xl dark:border-indigo-800 dark:from-indigo-900/20 dark:to-emerald-900/20">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">⚔️ Class Lobby (Teacher Code)</h3>
+              <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                Got a 6-character code from your teacher? Enter it here to join the class lobby and get auto-assigned to a balanced team.
+              </p>
+            </div>
+            <Link
+              href="/competitive/join"
+              className="shrink-0 rounded-xl bg-gradient-to-r from-indigo-600 to-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
+            >
+              Join Class Lobby →
+            </Link>
+          </div>
+        </div>
+
         {/* Async Challenges Inbox */}
         {profile && (asyncChallenges.sent.length > 0 || asyncChallenges.received.length > 0) && (
           <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6">
