@@ -40,7 +40,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   const [katexReady, setKatexReady] = useState(false)
   const [questionIndex, setQuestionIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
-  const [feedback, setFeedback] = useState<{ correct: boolean; correctAnswer: number } | null>(null)
+  const [feedback, setFeedback] = useState<{ correct: boolean; correctAnswer: number; scoreDelta?: number } | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [score, setScore] = useState(0)
   const [questionsCorrect, setQuestionsCorrect] = useState(0)
@@ -143,7 +143,11 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
         }
         throw new Error(json.error || 'Submission failed')
       }
-      setFeedback({ correct: !!json.correct, correctAnswer: Number(json.correctAnswer) })
+      setFeedback({
+        correct: !!json.correct,
+        correctAnswer: Number(json.correctAnswer),
+        scoreDelta: typeof json.scoreDelta === 'number' ? json.scoreDelta : (json.correct ? 100 : -50),
+      })
       setScore(json.score)
       setQuestionsAnswered(json.questionsAnswered)
       setQuestionsCorrect(json.questionsCorrect)
@@ -262,7 +266,19 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
             </p>
           </div>
         ) : (
-          <div className="rounded-lg bg-white p-5 sm:p-7 shadow">
+          <div className="rounded-lg bg-white p-5 sm:p-7 shadow relative">
+            {feedback && typeof feedback.scoreDelta === 'number' && (
+              <div
+                className={
+                  'absolute top-3 right-3 rounded-full px-3 py-1 text-sm font-bold ' +
+                  (feedback.scoreDelta >= 0
+                    ? 'bg-emerald-100 text-emerald-700'
+                    : 'bg-rose-100 text-rose-700')
+                }
+              >
+                {feedback.scoreDelta >= 0 ? `+${feedback.scoreDelta}` : feedback.scoreDelta}
+              </div>
+            )}
             <div
               className="text-lg sm:text-xl text-gray-900 mb-5"
               dangerouslySetInnerHTML={{
@@ -303,8 +319,9 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
         )}
 
         <div className="mt-3 text-xs text-gray-500 text-center">
-          Questions are continuously fed until the timer runs out. Choose carefully — wrong answers
-          score 0.
+          Questions are continuously fed until the timer runs out.
+          <span className="text-emerald-700 font-medium"> +100</span> for correct,
+          <span className="text-rose-700 font-medium"> −50</span> for wrong — don&apos;t guess.
         </div>
       </div>
     </div>

@@ -65,12 +65,14 @@ export async function POST(req: NextRequest, { params }: Ctx) {
   }
 
   const correct = selectedIndex === q.correctAnswer
+  // +100 for correct, -50 for wrong (discourages random guessing).
+  const scoreDelta = correct ? 100 : -50
   const updated = await prisma.teacherLobbyParticipant.update({
     where: { id: participant.id },
     data: {
       questionsAnswered: { increment: 1 },
       questionsCorrect: correct ? { increment: 1 } : undefined,
-      score: correct ? { increment: 100 } : undefined,
+      score: { increment: scoreDelta },
       lastQuestionIndex: questionIndex + 1,
     },
   })
@@ -81,5 +83,6 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     score: updated.score,
     questionsAnswered: updated.questionsAnswered,
     questionsCorrect: updated.questionsCorrect,
+    scoreDelta,
   })
 }
