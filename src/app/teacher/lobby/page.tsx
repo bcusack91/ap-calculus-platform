@@ -126,7 +126,7 @@ export default function TeacherLobbiesPage() {
                 />
               </label>
             </div>
-            <p className="mt-3 text-xs text-gray-500">You'll pick the course, topics, and timer on the next screen.</p>
+            <p className="mt-3 text-xs text-gray-500">You&apos;ll pick the course, topics, and timer on the next screen.</p>
             <div className="mt-4 flex gap-2">
               <button
                 onClick={createLobby}
