@@ -78,6 +78,7 @@ const COURSE_CATEGORIES: CourseCategory[] = [
       { slug: 'ap-calculus-ab', categoryKey: 'ap-calculus-ab', emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals', gradient: 'from-indigo-500 to-purple-500' },
       { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-purple-500 to-pink-500' },
       { slug: 'ap-precalculus', categoryKey: 'ap-precalculus', emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling', gradient: 'from-blue-500 to-indigo-500' },
+      { slug: 'algebra-1', categoryKey: 'algebra', emoji: '🧮', name: 'Algebra 1', desc: 'Equations, Functions & Polynomials', gradient: 'from-blue-500 to-cyan-500' },
     ],
   },
   {

@@ -5,6 +5,7 @@ import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives
 import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
 import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
 import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
+import { getAlgebra1Questions } from '@/data/competitive-questions/algebra1-bank'
 import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/competitive-questions/algebra2-bank'
 import { getNegativeNumbersQuestions } from '@/data/competitive-questions/negative-numbers-bank'
 import { getSatPunctuationQuestions } from '@/data/competitive-questions/sat-punctuation-bank'
@@ -486,6 +487,17 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
  * its bank function (with the bank-topic alias from LESSON_TO_BANK_TOPIC).
  */
 const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
+  // Algebra 1 topic slugs
+  'solving-linear-equations-algebra1': 'algebra-1',
+  'graphing-linear-equations-algebra1': 'algebra-1',
+  'linear-inequalities-algebra1': 'algebra-1',
+  'solving-systems-algebra1': 'algebra-1',
+  'exponent-rules-algebra1': 'algebra-1',
+  'factoring-algebra1': 'algebra-1',
+  'multiplying-polynomials-algebra1': 'algebra-1',
+  'solving-quadratics-algebra1': 'algebra-1',
+  'functions-basics-algebra1': 'algebra-1',
+  'slope-intercept-form-algebra1': 'algebra-1',
   // AP Calc AB lesson aliases that need explicit course routing
   'second-derivative-test': 'ap-calculus-ab',
   'second-derivative-test-calcab': 'ap-calculus-ab',
@@ -975,6 +987,26 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     }
   }
 
+  // Algebra 1 sub-topic routing
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'algebra-1' && resolvedTopicSlug !== 'algebra1') {
+    const algebra1TopicQuestions = getAlgebra1Questions(totalQuestions, resolvedTopicSlug)
+    if (algebra1TopicQuestions.length > 0 && algebra1TopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
+      return (algebra1TopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
   // AP Precalculus sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'precalc' && resolvedTopicSlug !== 'ap-precalculus') {
     const precalcTopicQuestions = getPreCalcQuestions(totalQuestions, resolvedTopicSlug)
@@ -1101,6 +1133,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'limits': getLimitQuestions as unknown as (count?: number) => OptionQuestion[],
     'integrals': getIntegralQuestions as unknown as (count?: number) => OptionQuestion[],
     'algebra': getAlgebraQuestions as unknown as (count?: number) => OptionQuestion[],
+    'algebra-1': getAlgebra1Questions as unknown as (count?: number) => OptionQuestion[],
     'negative-numbers-grade6': getNegativeNumbersQuestions as unknown as (count?: number) => OptionQuestion[],
     'sat-punctuation-commas-semicolons': getSatPunctuationQuestions as unknown as (count?: number) => OptionQuestion[],
     'sat-punctuation': getSatPunctuationGeneralQuestions as unknown as (count?: number) => OptionQuestion[],
@@ -1150,6 +1183,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
     'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
     'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'algebra-1': getAlgebra1Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
   }
 
   if (topicSlug && topicSlug in courseTopicBanks && completedTopics && completedTopics.length > 0) {
