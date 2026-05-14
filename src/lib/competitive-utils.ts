@@ -521,6 +521,17 @@ const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
   'mean-median-mode-algebra1': 'algebra-1',
   'box-plots': 'algebra-1',
   'outliers-in-data': 'algebra-1',
+  // Geometry topic slugs
+  'angle-relationships-geometry': 'geometry',
+  'parallel-lines-transversals': 'geometry',
+  'triangle-angle-sum': 'geometry',
+  'pythagorean-theorem': 'geometry',
+  'similar-triangles-geometry': 'geometry',
+  'special-right-triangles': 'geometry',
+  'properties-quadrilaterals': 'geometry',
+  'polygon-angle-sums': 'geometry',
+  'circle-basics-geometry': 'geometry',
+  'trigonometric-ratios-geo': 'geometry',
   // AP Calc AB lesson aliases that need explicit course routing
   'second-derivative-test': 'ap-calculus-ab',
   'second-derivative-test-calcab': 'ap-calculus-ab',
@@ -1150,6 +1161,26 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     }
   }
 
+  // Geometry sub-topic routing
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'geometry') {
+    const geometryTopicQuestions = getGeometryQuestions(totalQuestions, resolvedTopicSlug)
+    if (geometryTopicQuestions.length > 0 && geometryTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
+      return (geometryTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
   // Multiple-choice question bank topics
   const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
     'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
@@ -1207,6 +1238,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
     'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
     'algebra-1': getAlgebra1Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'geometry': getGeometryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
   }
 
   if (topicSlug && topicSlug in courseTopicBanks && completedTopics && completedTopics.length > 0) {

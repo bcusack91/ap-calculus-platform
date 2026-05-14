@@ -79,6 +79,7 @@ const COURSE_CATEGORIES: CourseCategory[] = [
       { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-purple-500 to-pink-500' },
       { slug: 'ap-precalculus', categoryKey: 'ap-precalculus', emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling', gradient: 'from-blue-500 to-indigo-500' },
       { slug: 'algebra-1', categoryKey: 'algebra', emoji: '🧮', name: 'Algebra 1', desc: 'Equations, Functions & Polynomials', gradient: 'from-blue-500 to-cyan-500' },
+      { slug: 'geometry', categoryKey: 'geometry', emoji: '📐', name: 'Geometry', desc: 'Angles, Triangles, Circles & Proofs', gradient: 'from-emerald-500 to-teal-500' },
     ],
   },
   {
