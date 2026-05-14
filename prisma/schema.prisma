@@ -62,6 +62,8 @@ model User {
   asyncChallengesReceived    AsyncChallenge[]           @relation("AsyncChallengeRecipient")
   hostedLobbies              CompetitiveLobby[]         @relation("LobbyHost")
   joinedLobbies              CompetitiveLobby[]         @relation("LobbyGuest")
+  teacherLobbies             TeacherLobby[]             @relation("TeacherLobbyTeacher")
+  teacherLobbyParticipations TeacherLobbyParticipant[]  @relation("TeacherLobbyParticipantUser")
   satTestAttempts            SatTestAttempt[]
   mcatTestAttempts           McatTestAttempt[]
   diagnosticChallenges       DiagnosticChallenge[]
@@ -652,6 +654,53 @@ enum LobbyStatus {
   CLOSED // lobby closed by host or both left
 }
 
+// Teacher-created multi-student lobby with MMR-balanced team formation
+model TeacherLobby {
+  id          String              @id @default(cuid())
+  joinCode    String              @unique
+  teacherId   String
+  classroomId String?
+  name        String
+  topicSlug   String?
+  gameMode    String              @default("competitive")
+  numTeams    Int                 @default(2)
+  status      TeacherLobbyStatus  @default(OPEN)
+  createdAt   DateTime            @default(now())
+  startedAt   DateTime?
+  closedAt    DateTime?
+
+  teacher      User                      @relation("TeacherLobbyTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
+  classroom    Classroom?                @relation("TeacherLobbyClassroom", fields: [classroomId], references: [id], onDelete: SetNull)
+  participants TeacherLobbyParticipant[]
+
+  @@index([teacherId])
+  @@index([classroomId])
+  @@index([joinCode])
+  @@index([status])
+}
+
+model TeacherLobbyParticipant {
+  id        String   @id @default(cuid())
+  lobbyId   String
+  userId    String
+  team      Int? // 0..numTeams-1, null until balanced
+  mmrAtJoin Int      @default(1000)
+  joinedAt  DateTime @default(now())
+
+  lobby TeacherLobby @relation(fields: [lobbyId], references: [id], onDelete: Cascade)
+  user  User         @relation("TeacherLobbyParticipantUser", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([lobbyId, userId])
+  @@index([lobbyId])
+  @@index([userId])
+}
+
+enum TeacherLobbyStatus {
+  OPEN // accepting joiners
+  IN_PROGRESS // teams assigned, match running
+  CLOSED // ended
+}
+
 model MMRHistory {
   id          String          @id @default(cuid())
   userId      String
@@ -829,6 +878,7 @@ model Classroom {
   competitions      ScheduledCompetition[]
   competitiveGrants CompetitiveGrant[]
   announcements     Announcement[]
+  teacherLobbies    TeacherLobby[]         @relation("TeacherLobbyClassroom")
 
   curriculumPlans CurriculumPlan[]
 

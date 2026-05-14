@@ -314,6 +314,7 @@ export default function TeacherDashboard() {
               { icon: '🃏', label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
               { icon: '📊', label: 'Analytics', href: '/teacher/tools?tab=analytics' },
               { icon: '👥', label: 'Groups', href: '/teacher/tools?tab=grouping' },
+              { icon: '⚔️', label: 'Class Lobby', href: '/teacher/lobby' },
               { icon: '📢', label: 'Announcements', href: '/teacher/tools?tab=announcements' },
               { icon: '🗺️', label: 'Curriculum Map', href: '/teacher/tools?tab=curriculum' },
               { icon: '👨‍👩‍👧', label: 'Parent View', href: '/teacher/tools?tab=parent-view' },
