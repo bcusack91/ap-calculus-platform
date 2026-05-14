@@ -15,6 +15,17 @@ const SUPPORTED_TOPIC_SLUGS = new Set<string>([
   'solving-quadratics-algebra1',
   'functions-basics-algebra1',
   'slope-intercept-form-algebra1',
+  // Batch 2
+  'absolute-value-algebra1',
+  'word-problems-linear-algebra1',
+  'compound-absolute-value-inequalities-alg1',
+  'graphing-systems-algebra1',
+  'exponential-growth-decay-alg1',
+  'polynomial-operations-algebra1',
+  'simplifying-radicals-alg1',
+  'quadratic-formula-detailed-algebra1',
+  'completing-the-square',
+  'graphing-quadratics-algebra1',
 ])
 
 export async function GET() {

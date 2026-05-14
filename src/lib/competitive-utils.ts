@@ -498,6 +498,17 @@ const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
   'solving-quadratics-algebra1': 'algebra-1',
   'functions-basics-algebra1': 'algebra-1',
   'slope-intercept-form-algebra1': 'algebra-1',
+  // Algebra 1 topic slugs (batch 2)
+  'absolute-value-algebra1': 'algebra-1',
+  'word-problems-linear-algebra1': 'algebra-1',
+  'compound-absolute-value-inequalities-alg1': 'algebra-1',
+  'graphing-systems-algebra1': 'algebra-1',
+  'exponential-growth-decay-alg1': 'algebra-1',
+  'polynomial-operations-algebra1': 'algebra-1',
+  'simplifying-radicals-alg1': 'algebra-1',
+  'quadratic-formula-detailed-algebra1': 'algebra-1',
+  'completing-the-square': 'algebra-1',
+  'graphing-quadratics-algebra1': 'algebra-1',
   // AP Calc AB lesson aliases that need explicit course routing
   'second-derivative-test': 'ap-calculus-ab',
   'second-derivative-test-calcab': 'ap-calculus-ab',
