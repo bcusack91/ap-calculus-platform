@@ -26,6 +26,19 @@ const SUPPORTED_TOPIC_SLUGS = new Set<string>([
   'quadratic-formula-detailed-algebra1',
   'completing-the-square',
   'graphing-quadratics-algebra1',
+  // Batch 3
+  'domain-range-algebra1',
+  'domain-and-range',
+  'arithmetic-geometric-sequences-alg1',
+  'ratios-rates-algebra1',
+  'proportions-algebra1',
+  'percent-problems-algebra1',
+  'radical-operations-algebra1',
+  'simplifying-radicals-algebra1',
+  'linear-regression-correlation-alg1',
+  'mean-median-mode-algebra1',
+  'box-plots',
+  'outliers-in-data',
 ])
 
 export async function GET() {
