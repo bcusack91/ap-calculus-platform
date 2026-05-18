@@ -205,6 +205,34 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
   'second-derivative-test-calcab': 'curve-sketching',
   'related-rates-calcab': 'related-rates',
   'limits-at-infinity-calcab': 'limits-algebraically',
+  // ---- AP Calculus AB DB topic slugs (Applications of Derivatives unit)
+  // These curriculum slugs don't match any bank topicSlug verbatim, so without
+  // aliasing they fall through every router and hit the cumulative-MCQ bucket
+  // (which mixes physics, algebra 2, parametric, polar, etc. — totally
+  // off-topic). Map each to the closest AP Calc AB bank topic.
+  'critical-points-and-extrema': 'extreme-value-theorem',
+  'absolute-extrema': 'extreme-value-theorem',
+  'first-derivative-test': 'curve-sketching',
+  'optimization-problems': 'optimization',
+  'linear-approximation': 'linearization-differentials',
+  'newtons-method': 'linearization-differentials',
+  'lhopitals-rule': 'l-hopitals-rule',
+  // ---- AP Calculus AB DB topic slugs (Integration unit)
+  'antiderivatives-intro': 'antiderivatives-indefinite-integrals',
+  'indefinite-integrals': 'antiderivatives-indefinite-integrals',
+  'definite-integrals': 'fundamental-theorem-of-calculus',
+  'u-substitution': 'integration-by-substitution',
+  'volumes-disk-method': 'volumes-of-revolution',
+  'volumes-washer-method': 'volumes-of-revolution',
+  'volumes-shell-method': 'volumes-of-revolution',
+  // BC-flavored integration techniques that may appear in AB content trees;
+  // route to the closest AB-scope bank topic so questions stay relevant.
+  'integration-by-parts': 'antiderivatives-indefinite-integrals',
+  'partial-fractions': 'antiderivatives-indefinite-integrals',
+  'trig-substitution': 'integration-by-substitution',
+  // ---- AP Calculus AB DB topic slugs (Limits unit, additional)
+  'limit-notation-terminology': 'limits-graphically',
+  'one-sided-limits-in-detail': 'limits-graphically',
   // Legacy "Calculus" course lesson slugs (pre-AP Calc AB course rebrand)
   'power-rule': 'basic-differentiation-rules',
 
