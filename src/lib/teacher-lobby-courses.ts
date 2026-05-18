@@ -4,6 +4,7 @@
 
 import { getAlgebra1Questions } from '@/data/competitive-questions/algebra1-bank'
 import { getGeometryQuestions } from '@/data/competitive-questions/geometry-bank'
+import { getApCalculusQuestions } from '@/data/competitive-questions/ap-calculus-bank'
 
 export interface TeacherLobbyQuestion {
   id: number | string
@@ -32,6 +33,11 @@ const COURSES: CourseRegistryEntry[] = [
     slug: 'geometry',
     name: 'Geometry',
     getQuestions: (count, topic) => getGeometryQuestions(count, topic) as TeacherLobbyQuestion[],
+  },
+  {
+    slug: 'ap-calculus-ab',
+    name: 'AP Calculus AB',
+    getQuestions: (count, topic) => getApCalculusQuestions(count, topic) as TeacherLobbyQuestion[],
   },
 ]
 
