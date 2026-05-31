@@ -39,7 +39,7 @@ const longFRQs: MacroFRQ[] = [
     type: 'long' as const,
     unit: 3,
     title: "Recession, AD-AS, and Discretionary Fiscal Policy",
-    prompt: "The economy of Atlantia is producing at $18 trillion in real GDP, while full-employment real GDP is $20 trillion. The unemployment rate is 8.5% and the natural rate is 4.5%. Inflation is 1%. The marginal propensity to consume (MPC) is 0.8.",
+    prompt: "The economy of Atlantia is producing at \\$18 trillion in real GDP, while full-employment real GDP is \\$20 trillion. The unemployment rate is 8.5% and the natural rate is 4.5%. Inflation is 1%. The marginal propensity to consume (MPC) is 0.8.",
     parts: [
       {
         label: "(a)",
@@ -50,7 +50,7 @@ const longFRQs: MacroFRQ[] = [
           { points: 1, description: "Shows short-run equilibrium where AD intersects SRAS at $18T, to the LEFT of LRAS at $20T", keywords: ["equilibrium", "intersection", "left of LRAS", "below full employment", "$18", "$20"] },
           { points: 1, description: "Identifies the gap as a RECESSIONARY (or contractionary) gap of $2 trillion", keywords: ["recessionary gap", "contractionary gap", "$2 trillion", "below potential", "negative"] }
         ],
-        sampleAnswer: "On the graph, AD intersects SRAS at Y=$18T < Y_f=$20T (LRAS), creating a recessionary gap of $2T. Cyclical unemployment is 8.5% − 4.5% = 4 percentage points above the natural rate.",
+        sampleAnswer: "On the graph, AD intersects SRAS at Y=\\$18T < Y_f=\\$20T (LRAS), creating a recessionary gap of \\$2T. Cyclical unemployment is 8.5% − 4.5% = 4 percentage points above the natural rate.",
       },
       {
         label: "(b)",
@@ -60,7 +60,7 @@ const longFRQs: MacroFRQ[] = [
           { points: 1, description: "Correctly calculates spending multiplier = 1 / (1 − MPC) = 1 / (1 − 0.8) = 5", keywords: ["multiplier", "1/(1-MPC)", "1/0.2", "= 5", "spending multiplier"] },
           { points: 1, description: "Calculates ΔG = Gap / Multiplier = $2T / 5 = $400 billion", keywords: ["$400 billion", "$0.4 trillion", "gap divided", "ΔG", "minimum"] }
         ],
-        sampleAnswer: "Spending multiplier = 1/(1−MPC) = 1/(1−0.8) = 1/0.2 = 5. Minimum ΔG = $2T / 5 = $400 billion.",
+        sampleAnswer: "Spending multiplier = 1/(1−MPC) = 1/(1−0.8) = 1/0.2 = 5. Minimum ΔG = \\$2T / 5 = \\$400 billion.",
       },
       {
         label: "(c)",
@@ -70,7 +70,7 @@ const longFRQs: MacroFRQ[] = [
           { points: 1, description: "States the tax cut must be LARGER because the tax multiplier (-MPC/(1-MPC) = -4) is smaller in absolute value than the spending multiplier", keywords: ["larger", "tax multiplier", "MPC/(1-MPC)", "4", "smaller multiplier", "savings leakage", "first round"] },
           { points: 1, description: "Calculates: ΔT = -$2T / 4 = -$500 billion (a $500B tax CUT)", keywords: ["$500 billion", "$0.5 trillion", "tax cut"] }
         ],
-        sampleAnswer: "The tax cut must be LARGER because part of the first-round tax cut is saved (1−MPC=0.2), so only MPC × ΔT = 0.8 × ΔT enters spending. Tax multiplier = MPC/(1−MPC) = 0.8/0.2 = 4 in absolute value, so required tax cut = $2T/4 = $500 billion.",
+        sampleAnswer: "The tax cut must be LARGER because part of the first-round tax cut is saved (1−MPC=0.2), so only MPC × ΔT = 0.8 × ΔT enters spending. Tax multiplier = MPC/(1−MPC) = 0.8/0.2 = 4 in absolute value, so required tax cut = \\$2T/4 = \\$500 billion.",
       },
       {
         label: "(d)",
@@ -79,7 +79,7 @@ const longFRQs: MacroFRQ[] = [
         rubric: [
           { points: 1, description: "Shifts AD rightward to AD2 to intersect SRAS at Y_f=$20T, with a HIGHER price level than the original equilibrium", keywords: ["AD shifts right", "AD2", "intersect at Y_f", "$20T", "higher price level", "PL2"] }
         ],
-        sampleAnswer: "AD shifts rightward by $2T to AD2, restoring equilibrium at Y_f = $20T with a higher price level (PL2 > PL1) due to the upward-sloping SRAS.",
+        sampleAnswer: "AD shifts rightward by \\$2T to AD2, restoring equilibrium at Y_f = \\$20T with a higher price level (PL2 > PL1) due to the upward-sloping SRAS.",
       },
       {
         label: "(e)",
@@ -163,7 +163,7 @@ const longFRQs: MacroFRQ[] = [
     type: 'long' as const,
     unit: 5,
     title: "Long-Run Growth, Loanable Funds, and the Phillips Curve",
-    prompt: "Country Bondoria has been at long-run equilibrium with output Y_f = $10 trillion, inflation 2%, and unemployment at the natural rate of 5%. The government enacts a permanent increase in infrastructure spending of $200 billion per year, financed entirely by issuing new government bonds.",
+    prompt: "Country Bondoria has been at long-run equilibrium with output Y_f = \\$10 trillion, inflation 2%, and unemployment at the natural rate of 5%. The government enacts a permanent increase in infrastructure spending of \\$200 billion per year, financed entirely by issuing new government bonds.",
     parts: [
       {
         label: "(a)",
@@ -235,7 +235,7 @@ const longFRQs: MacroFRQ[] = [
           { points: 1, description: "Correctly labels axes (MXN/USD on Y-axis, Quantity of USD on X-axis) with downward-sloping demand for USD (D_$) and upward-sloping supply of USD (S_$)", keywords: ["MXN/USD", "quantity of dollars", "demand for dollars", "supply of dollars", "downward", "upward"] },
           { points: 1, description: "Shows initial equilibrium exchange rate E_1 at intersection", keywords: ["equilibrium", "E_1", "intersection"] }
         ],
-        sampleAnswer: "FX market for USD: Y-axis = MXN per USD (price of dollars in pesos), X-axis = quantity of USD. D_$ slopes down, S_$ slopes up. Equilibrium exchange rate E_1 at intersection.",
+        sampleAnswer: "FX market for USD: Y-axis = MXN per USD (price of dollars in pesos), X-axis = quantity of USD. D_\\$ slopes down, S_\\$ slopes up. Equilibrium exchange rate E_1 at intersection.",
       },
       {
         label: "(b)",
@@ -245,7 +245,7 @@ const longFRQs: MacroFRQ[] = [
           { points: 1, description: "Shows D_$ shifting RIGHT (Mexican investors demand more dollars to buy higher-yielding U.S. financial assets)", keywords: ["demand for dollars", "shifts right", "D_$ increases", "financial account", "Mexican investors"] },
           { points: 1, description: "Identifies dollar APPRECIATION (E_2 > E_1, more pesos per dollar)", keywords: ["appreciation", "appreciate", "E_2 > E_1", "more pesos per dollar", "stronger dollar"] }
         ],
-        sampleAnswer: "Higher U.S. real interest rates make U.S. financial assets more attractive to Mexican investors. They demand more USD on the FX market, shifting D_$ right. The dollar appreciates from E_1 to E_2 (more pesos per dollar).",
+        sampleAnswer: "Higher U.S. real interest rates make U.S. financial assets more attractive to Mexican investors. They demand more USD on the FX market, shifting D_\\$ right. The dollar appreciates from E_1 to E_2 (more pesos per dollar).",
       },
       {
         label: "(c)",
@@ -290,7 +290,7 @@ const shortFRQs: MacroFRQ[] = [
     type: 'short' as const,
     unit: 4,
     title: "Money Multiplier and Bank Balance Sheet",
-    prompt: "A central bank requires commercial banks to hold reserves equal to 10% of deposits. Bank A receives a new deposit of $5,000.",
+    prompt: "A central bank requires commercial banks to hold reserves equal to 10% of deposits. Bank A receives a new deposit of \\$5,000.",
     parts: [
       {
         label: "(a)",
@@ -299,7 +299,7 @@ const shortFRQs: MacroFRQ[] = [
         rubric: [
           { points: 1, description: "$4,500 (= $5,000 × 0.90, since 10% must be held as required reserves)", keywords: ["$4,500", "4500", "0.90", "0.9", "$5,000 × 0.9", "excess reserves"] }
         ],
-        sampleAnswer: "Required reserves = 10% × $5,000 = $500. Excess reserves available to lend = $5,000 − $500 = $4,500.",
+        sampleAnswer: "Required reserves = 10% × \\$5,000 = \\$500. Excess reserves available to lend = \\$5,000 − \\$500 = \\$4,500.",
       },
       {
         label: "(b)",
@@ -309,7 +309,7 @@ const shortFRQs: MacroFRQ[] = [
           { points: 1, description: "Money multiplier = 1 / required reserve ratio = 1 / 0.10 = 10", keywords: ["money multiplier", "1/RR", "1/0.10", "= 10", "ten"] },
           { points: 1, description: "Maximum change in money supply = $5,000 × 10 = $50,000 (or, more precisely, change in loans × multiplier = $4,500 × 10 = $45,000 with original deposit already counted)", keywords: ["$50,000", "$45,000", "money supply", "total change"] }
         ],
-        sampleAnswer: "Money multiplier = 1/RR = 1/0.10 = 10. Maximum change in money supply from a $5,000 deposit cascade = $5,000 × 10 = $50,000 (or $4,500 × 10 = $45,000 in newly created loans plus the original $5,000 deposit = $50,000).",
+        sampleAnswer: "Money multiplier = 1/RR = 1/0.10 = 10. Maximum change in money supply from a \\$5,000 deposit cascade = \\$5,000 × 10 = \\$50,000 (or \\$4,500 × 10 = \\$45,000 in newly created loans plus the original \\$5,000 deposit = \\$50,000).",
       },
       {
         label: "(c)",
@@ -318,7 +318,7 @@ const shortFRQs: MacroFRQ[] = [
         rubric: [
           { points: 1, description: "INCREASES; new multiplier = 1/0.05 = 20", keywords: ["increases", "1/0.05", "= 20", "twenty", "larger multiplier"] }
         ],
-        sampleAnswer: "A lower reserve requirement increases the multiplier: 1/0.05 = 20. Each dollar of new reserves now supports up to $20 of new money.",
+        sampleAnswer: "A lower reserve requirement increases the multiplier: 1/0.05 = 20. Each dollar of new reserves now supports up to \\$20 of new money.",
       },
       {
         label: "(d)",
@@ -437,7 +437,7 @@ const shortFRQs: MacroFRQ[] = [
     type: 'short' as const,
     unit: 2,
     title: "Real vs. Nominal GDP and the GDP Deflator",
-    prompt: "Country Lumosa produces only two goods: bread and books. Use the data below to answer the prompt.\n\n| Year | Bread Q | Bread P | Books Q | Books P |\n|------|---------|---------|---------|---------|\n| 2024 (base) | 100 | $2 | 50 | $10 |\n| 2025        | 110 | $3 | 55 | $12 |",
+    prompt: "Country Lumosa produces only two goods: bread and books. Use the data below to answer the prompt.\n\n| Year | Bread Q | Bread P | Books Q | Books P |\n|------|---------|---------|---------|---------|\n| 2024 (base) | 100 | \\$2 | 50 | \\$10 |\n| 2025        | 110 | \\$3 | 55 | \\$12 |",
     parts: [
       {
         label: "(a)",
@@ -446,7 +446,7 @@ const shortFRQs: MacroFRQ[] = [
         rubric: [
           { points: 1, description: "2024 nominal GDP = (100×$2) + (50×$10) = $200 + $500 = $700; 2025 nominal GDP = (110×$3) + (55×$12) = $330 + $660 = $990", keywords: ["$700", "$990", "100 × 2", "50 × 10", "110 × 3", "55 × 12", "200 + 500", "330 + 660"] }
         ],
-        sampleAnswer: "2024 nominal GDP = (100 × $2) + (50 × $10) = $200 + $500 = $700. 2025 nominal GDP = (110 × $3) + (55 × $12) = $330 + $660 = $990.",
+        sampleAnswer: "2024 nominal GDP = (100 × \\$2) + (50 × \\$10) = \\$200 + \\$500 = \\$700. 2025 nominal GDP = (110 × \\$3) + (55 × \\$12) = \\$330 + \\$660 = \\$990.",
       },
       {
         label: "(b)",
@@ -456,7 +456,7 @@ const shortFRQs: MacroFRQ[] = [
           { points: 1, description: "Real GDP 2025 = (110×$2) + (55×$10) = $220 + $550 = $770", keywords: ["$770", "real GDP", "110 × 2", "55 × 10", "220 + 550", "base year prices"] },
           { points: 1, description: "Real growth = ($770 − $700) / $700 = 10%", keywords: ["10%", "0.10", "real growth", "($770 - $700)/$700", "70/700"] }
         ],
-        sampleAnswer: "Real GDP 2025 (in 2024 prices) = (110 × $2) + (55 × $10) = $220 + $550 = $770. Real growth = ($770 − $700)/$700 = $70/$700 = 10%.",
+        sampleAnswer: "Real GDP 2025 (in 2024 prices) = (110 × \\$2) + (55 × \\$10) = \\$220 + \\$550 = \\$770. Real growth = (\\$770 − \\$700)/\\$700 = \\$70/\\$700 = 10%.",
       },
       {
         label: "(c)",
@@ -465,7 +465,7 @@ const shortFRQs: MacroFRQ[] = [
         rubric: [
           { points: 1, description: "GDP deflator 2025 = (Nominal/Real) × 100 = ($990/$770) × 100 ≈ 128.6; inflation = (128.6 − 100)/100 = 28.6%", keywords: ["128.6", "($990/$770)", "deflator", "28.6%", "inflation", "100"] }
         ],
-        sampleAnswer: "GDP deflator 2025 = ($990/$770) × 100 ≈ 128.6. Inflation rate = (128.6 − 100)/100 ≈ 28.6%.",
+        sampleAnswer: "GDP deflator 2025 = (\\$990/\\$770) × 100 ≈ 128.6. Inflation rate = (128.6 − 100)/100 ≈ 28.6%.",
       },
       {
         label: "(d)",

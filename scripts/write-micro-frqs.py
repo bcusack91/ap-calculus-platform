@@ -4,13 +4,25 @@ Rewrite src/data/ap-micro-frq/questions.ts with substantive AP-style prompts.
 4 long FRQs + 4 short FRQs covering all 6 AP Microeconomics units.
 """
 from __future__ import annotations
-import os, json
+import os, json, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT  = os.path.join(ROOT, "src", "data", "ap-micro-frq", "questions.ts")
 
+# The `prompt` and `sampleAnswer` fields are rendered with ReactMarkdown +
+# remark-math, where an unescaped "$" opens inline math. Two currency amounts
+# (e.g. "$20 ... $14") therefore collide as $...$ delimiters and swallow the
+# prose between them. These fields contain ONLY literal dollar signs (currency
+# and FX symbols like D_$), never real math, so escape every unescaped "$" as a
+# markdown character escape "\$" (renders a literal "$"). `description`,
+# `title`, and `keywords` are plain text / answer-matching and are left as-is.
+_DOLLAR = re.compile(r'(?<!\\)\$')
+
 
 def js(s): return json.dumps(s, ensure_ascii=False)
+
+
+def jsm(s): return json.dumps(_DOLLAR.sub(r'\\$', s), ensure_ascii=False)
 
 
 def part(label, prompt, max_pts, rubric_items, sample):
@@ -21,10 +33,10 @@ def part(label, prompt, max_pts, rubric_items, sample):
     return (
         f"      {{\n"
         f"        label: {js(label)},\n"
-        f"        prompt: {js(prompt)},\n"
+        f"        prompt: {jsm(prompt)},\n"
         f"        maxPoints: {max_pts},\n"
         f"        rubric: [\n          {rubric_lines}\n        ],\n"
-        f"        sampleAnswer: {js(sample)},\n"
+        f"        sampleAnswer: {jsm(sample)},\n"
         f"      }}"
     )
 
@@ -37,7 +49,7 @@ def frq(id_, type_, unit, title, prompt, parts, total, time, calc=False):
         f"    type: '{type_}' as const,\n"
         f"    unit: {unit},\n"
         f"    title: {js(title)},\n"
-        f"    prompt: {js(prompt)},\n"
+        f"    prompt: {jsm(prompt)},\n"
         f"    parts: [\n{parts_str}\n    ],\n"
         f"    totalPoints: {total},\n"
         f"    timeRecommendation: {js(time)},\n"

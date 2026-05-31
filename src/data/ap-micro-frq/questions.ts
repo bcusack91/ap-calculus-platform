@@ -39,7 +39,7 @@ const longFRQs: MicroFRQ[] = [
     type: 'long' as const,
     unit: 3,
     title: "Perfect Competition: Short-Run Profit and Long-Run Equilibrium",
-    prompt: "Sunshine Strawberries operates in a perfectly competitive market. The current market price for a flat of strawberries is $20. Sunshine's marginal cost (MC) at the profit-maximizing quantity is $20, average total cost (ATC) is $14, and average variable cost (AVC) is $9. The firm produces 500 flats per week.",
+    prompt: "Sunshine Strawberries operates in a perfectly competitive market. The current market price for a flat of strawberries is \\$20. Sunshine's marginal cost (MC) at the profit-maximizing quantity is \\$20, average total cost (ATC) is \\$14, and average variable cost (AVC) is \\$9. The firm produces 500 flats per week.",
     parts: [
       {
         label: "(a)",
@@ -50,7 +50,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Firm: U-shaped ATC and AVC, upward-sloping MC through the minimums of ATC and AVC", keywords: ["ATC", "AVC", "MC", "U-shaped", "MC through minimum", "marginal cost"] },
           { points: 1, description: "Firm shows a horizontal D = MR = P = $20 line (perfectly elastic firm demand)", keywords: ["D = MR = P", "$20", "horizontal", "perfectly elastic", "price taker"] }
         ],
-        sampleAnswer: "Industry graph: market S and D intersect at P = $20. Firm graph: U-shaped ATC and AVC with MC cutting through their minimums; horizontal demand line at $20 represents the firm's perfectly elastic demand (D = MR = P = AR).",
+        sampleAnswer: "Industry graph: market S and D intersect at P = \\$20. Firm graph: U-shaped ATC and AVC with MC cutting through their minimums; horizontal demand line at \\$20 represents the firm's perfectly elastic demand (D = MR = P = AR).",
       },
       {
         label: "(b)",
@@ -60,7 +60,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Profit per unit = P − ATC = $20 − $14 = $6", keywords: ["P - ATC", "$6", "$20 - $14", "profit per unit"] },
           { points: 1, description: "Total economic profit = ($6)(500) = $3,000 per week; rectangle from Q=0 to 500, height $14 to $20", keywords: ["$3,000", "$3000", "(P-ATC)Q", "rectangle", "$6 × 500"] }
         ],
-        sampleAnswer: "Profit per unit = P − ATC = $20 − $14 = $6. Total profit = ($6)(500 flats) = $3,000/week. Profit rectangle on firm graph: width = 500, height = $20 − $14 = $6.",
+        sampleAnswer: "Profit per unit = P − ATC = \\$20 − \\$14 = \\$6. Total profit = (\\$6)(500 flats) = \\$3,000/week. Profit rectangle on firm graph: width = 500, height = \\$20 − \\$14 = \\$6.",
       },
       {
         label: "(c)",
@@ -69,7 +69,7 @@ const longFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "YES: P ($20) > AVC ($9), so the firm covers all variable costs and contributes to fixed costs", keywords: ["P > AVC", "$20 > $9", "shutdown rule", "covers variable cost", "continue producing"] }
         ],
-        sampleAnswer: "Yes — the shutdown rule says produce when P ≥ AVC. Here P = $20 > AVC = $9, so revenue covers all variable costs and contributes $11/unit toward fixed costs.",
+        sampleAnswer: "Yes — the shutdown rule says produce when P ≥ AVC. Here P = \\$20 > AVC = \\$9, so revenue covers all variable costs and contributes \\$11/unit toward fixed costs.",
       },
       {
         label: "(d)",
@@ -101,7 +101,7 @@ const longFRQs: MicroFRQ[] = [
     type: 'long' as const,
     unit: 4,
     title: "Single-Price Monopoly vs. Price Discrimination",
-    prompt: "MetroCable is the only broadband internet provider in a small town. Its constant marginal cost (MC) is $10 per subscriber. Market demand is P = 100 − Q (so MR = 100 − 2Q where Q is in thousands of subscribers).",
+    prompt: "MetroCable is the only broadband internet provider in a small town. Its constant marginal cost (MC) is \\$10 per subscriber. Market demand is P = 100 − Q (so MR = 100 − 2Q where Q is in thousands of subscribers).",
     parts: [
       {
         label: "(a)",
@@ -112,7 +112,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Price: P = 100 − 45 = $55", keywords: ["P = $55", "100 - 45", "$55"] },
           { points: 1, description: "Profit = (P − MC)Q = ($55 − $10)(45) = $2,025 (thousand) = $2,025,000", keywords: ["$2,025", "$2,025,000", "(P-MC)Q", "$45 × 45"] }
         ],
-        sampleAnswer: "Profit-maximization: MR = MC → 100 − 2Q = 10 → Q* = 45. Price: P* = 100 − 45 = $55. Profit = (55 − 10)(45) = $2,025 (thousand) = $2.025M (assuming zero fixed cost).",
+        sampleAnswer: "Profit-maximization: MR = MC → 100 − 2Q = 10 → Q* = 45. Price: P* = 100 − 45 = \\$55. Profit = (55 − 10)(45) = \\$2,025 (thousand) = \\$2.025M (assuming zero fixed cost).",
       },
       {
         label: "(b)",
@@ -123,7 +123,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Identifies Q_m = 45 where MR = MC; P_m = $55 read off demand curve", keywords: ["Q_m = 45", "P_m = $55", "MR = MC", "price from demand"] },
           { points: 1, description: "Shades DWL triangle (between Q_m=45 and Q_eff=90 where D = MC) and CS triangle (above $55, below D)", keywords: ["DWL", "deadweight loss", "triangle", "Q = 90", "CS", "consumer surplus", "above price"] }
         ],
-        sampleAnswer: "Graph: D from $100 to $0 at Q=100; MR from $100 to $0 at Q=50 (twice as steep). MC=ATC horizontal at $10. Q_m=45 (MR=MC). P_m=$55. Allocative efficient Q_eff=90 (D=MC). DWL triangle: vertices (45,$10), (45,$55), (90,$10). Area = ½(90−45)($55−$10) = $1,012.50 (thousand). CS triangle above $55.",
+        sampleAnswer: "Graph: D from \\$100 to \\$0 at Q=100; MR from \\$100 to \\$0 at Q=50 (twice as steep). MC=ATC horizontal at \\$10. Q_m=45 (MR=MC). P_m=\\$55. Allocative efficient Q_eff=90 (D=MC). DWL triangle: vertices (45,\\$10), (45,\\$55), (90,\\$10). Area = ½(90−45)(\\$55−\\$10) = \\$1,012.50 (thousand). CS triangle above \\$55.",
       },
       {
         label: "(c)",
@@ -133,7 +133,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Q rises to allocatively efficient level Q = 90 (where P = MC)", keywords: ["Q = 90", "P = MC", "allocatively efficient", "perfect price discrimination"] },
           { points: 1, description: "Total profit = entire area between D and MC from 0 to 90 = ½(90)($90) = $4,050 (thousand) — captures all surplus", keywords: ["$4,050", "$4,050,000", "captures all surplus", "no consumer surplus", "triangle area"] }
         ],
-        sampleAnswer: "Perfect price discrimination: charge each consumer their willingness to pay. MR = D, so produce until P = MC at Q = 90. Profit = entire triangle between D ($100−Q) and MC ($10) from Q=0 to Q=90 = ½(90)(90) = $4,050 (thousand) = $4.05M. CS = 0; producer captures all surplus. No DWL.",
+        sampleAnswer: "Perfect price discrimination: charge each consumer their willingness to pay. MR = D, so produce until P = MC at Q = 90. Profit = entire triangle between D (\\$100−Q) and MC (\\$10) from Q=0 to Q=90 = ½(90)(90) = \\$4,050 (thousand) = \\$4.05M. CS = 0; producer captures all surplus. No DWL.",
       },
       {
         label: "(d)",
@@ -155,7 +155,7 @@ const longFRQs: MicroFRQ[] = [
     type: 'long' as const,
     unit: 6,
     title: "Externalities: Negative Production Externality and Pigouvian Tax",
-    prompt: "A coal-fired power plant near Pittsburgh produces electricity that imposes a NEGATIVE externality on nearby residents (respiratory illness, acid rain). The marginal private cost (MPC) of producing electricity is $40/MWh. The marginal external cost (MEC) imposed on residents is $25/MWh. The market demand for electricity (= marginal social benefit, MSB) is given.",
+    prompt: "A coal-fired power plant near Pittsburgh produces electricity that imposes a NEGATIVE externality on nearby residents (respiratory illness, acid rain). The marginal private cost (MPC) of producing electricity is \\$40/MWh. The marginal external cost (MEC) imposed on residents is \\$25/MWh. The market demand for electricity (= marginal social benefit, MSB) is given.",
     parts: [
       {
         label: "(a)",
@@ -166,7 +166,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Shows Q_M where MPB = MPC (free-market equilibrium)", keywords: ["Q_M", "private equilibrium", "MPB = MPC", "free market"] },
           { points: 1, description: "Shows Q_S where MSB = MSC (socially optimal), with Q_S < Q_M", keywords: ["Q_S", "socially optimal", "MSB = MSC", "Q_S < Q_M", "less than market"] }
         ],
-        sampleAnswer: "Market graph: P on Y, MWh on X. MSB=MPB slopes down. MPC slopes up. MSC = MPC + MEC, parallel and $25 above MPC. Free-market equilibrium Q_M at MPB ∩ MPC. Socially optimal Q_S at MSB ∩ MSC. Q_S < Q_M because the market overproduces when external costs are ignored.",
+        sampleAnswer: "Market graph: P on Y, MWh on X. MSB=MPB slopes down. MPC slopes up. MSC = MPC + MEC, parallel and \\$25 above MPC. Free-market equilibrium Q_M at MPB ∩ MPC. Socially optimal Q_S at MSB ∩ MSC. Q_S < Q_M because the market overproduces when external costs are ignored.",
       },
       {
         label: "(b)",
@@ -176,17 +176,17 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Shades the DWL triangle between Q_S and Q_M, bounded above by MSC and below by MSB", keywords: ["DWL triangle", "between Q_S and Q_M", "MSC and MSB", "shade"] },
           { points: 1, description: "Explains: for units between Q_S and Q_M, MSC > MSB, so producing them creates net social loss (society values them less than they cost)", keywords: ["MSC > MSB", "net loss", "overproduction", "social cost exceeds benefit"] }
         ],
-        sampleAnswer: "DWL triangle: between Q_S and Q_M, bounded above by MSC and below by MSB. For each unit in this range, MSC > MSB → net social loss. The market overproduces because firms ignore the $25 external cost imposed on residents.",
+        sampleAnswer: "DWL triangle: between Q_S and Q_M, bounded above by MSC and below by MSB. For each unit in this range, MSC > MSB → net social loss. The market overproduces because firms ignore the \\$25 external cost imposed on residents.",
       },
       {
         label: "(c)",
-        prompt: "Explain how a per-unit PIGOUVIAN TAX of $25/MWh imposed on the producer would correct the externality.",
+        prompt: "Explain how a per-unit PIGOUVIAN TAX of \\$25/MWh imposed on the producer would correct the externality.",
         maxPoints: 2,
         rubric: [
           { points: 1, description: "Tax shifts MPC up by $25, making it coincide with MSC (firms now internalize the external cost)", keywords: ["MPC shifts up $25", "internalize", "private cost = social cost", "MPC = MSC after tax"] },
           { points: 1, description: "New private equilibrium occurs at Q_S where MPB = MPC + tax = MSC; DWL eliminated", keywords: ["new equilibrium at Q_S", "DWL eliminated", "socially optimal", "Pigouvian"] }
         ],
-        sampleAnswer: "A $25 per-MWh Pigouvian tax shifts MPC upward by exactly $25 to coincide with MSC. The new private equilibrium is at Q_S (MPB = MPC + tax). Firms now internalize the external cost; DWL is eliminated.",
+        sampleAnswer: "A \\$25 per-MWh Pigouvian tax shifts MPC upward by exactly \\$25 to coincide with MSC. The new private equilibrium is at Q_S (MPB = MPC + tax). Firms now internalize the external cost; DWL is eliminated.",
       },
       {
         label: "(d)",
@@ -195,7 +195,7 @@ const longFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "Provides a real example (federal cigarette excise tax $1.01/pack since 2009; British Columbia carbon tax C$50/tonne since 2022; EU ETS carbon allowances; congestion charging in London 2003+; Manhattan congestion pricing 2025)", keywords: ["cigarette tax", "carbon tax", "British Columbia", "EU ETS", "congestion charge", "London", "Manhattan", "2025", "alcohol tax", "gasoline excise"] }
         ],
-        sampleAnswer: "British Columbia introduced a carbon tax in 2008 starting at C$10/tonne, rising to C$80/tonne by 2024 — the first revenue-neutral carbon tax in North America. The U.S. federal cigarette excise tax has been $1.01/pack since 2009 to internalize public-health costs.",
+        sampleAnswer: "British Columbia introduced a carbon tax in 2008 starting at C\\$10/tonne, rising to C\\$80/tonne by 2024 — the first revenue-neutral carbon tax in North America. The U.S. federal cigarette excise tax has been \\$1.01/pack since 2009 to internalize public-health costs.",
       },
       {
         label: "(e)",
@@ -238,7 +238,7 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Sets MFC = MRP: 8 + 0.10L = 30 − 0.10L → 0.20L = 22 → L_M = 110", keywords: ["MFC = MRP", "8 + 0.10L = 30 - 0.10L", "L = 110", "0.20L = 22"] },
           { points: 1, description: "W_M = 8 + 0.05(110) = $13.50 per hour", keywords: ["W = 8 + 0.05L", "$13.50", "13.50", "0.05 × 110"] }
         ],
-        sampleAnswer: "MFC = MRP: 8 + 0.10L = 30 − 0.10L → 0.20L = 22 → L_M = 110 workers. W_M from S_L: W = 8 + 0.05(110) = 8 + 5.50 = $13.50/hr.",
+        sampleAnswer: "MFC = MRP: 8 + 0.10L = 30 − 0.10L → 0.20L = 22 → L_M = 110 workers. W_M from S_L: W = 8 + 0.05(110) = 8 + 5.50 = \\$13.50/hr.",
       },
       {
         label: "(c)",
@@ -248,17 +248,17 @@ const longFRQs: MicroFRQ[] = [
           { points: 1, description: "Sets S_L = MRP: 8 + 0.05L = 30 − 0.10L → 0.15L = 22 → L_C ≈ 146.67", keywords: ["S_L = MRP", "0.15L = 22", "L_C ≈ 147", "146.67"] },
           { points: 1, description: "W_C = 8 + 0.05(146.67) ≈ $15.33; both L and W higher than monopsony", keywords: ["W_C ≈ $15.33", "$15.33", "higher wage", "more workers", "competitive higher"] }
         ],
-        sampleAnswer: "Competitive: S_L = MRP → 8 + 0.05L = 30 − 0.10L → 0.15L = 22 → L_C ≈ 146.67. W_C = 8 + 0.05(146.67) ≈ $15.33/hr. Compared to monopsony (L=110, W=$13.50), competition yields more workers AND a higher wage.",
+        sampleAnswer: "Competitive: S_L = MRP → 8 + 0.05L = 30 − 0.10L → 0.15L = 22 → L_C ≈ 146.67. W_C = 8 + 0.05(146.67) ≈ \\$15.33/hr. Compared to monopsony (L=110, W=\\$13.50), competition yields more workers AND a higher wage.",
       },
       {
         label: "(d)",
-        prompt: "Suppose the government imposes a MINIMUM WAGE of $15.50/hr. Explain how this affects employment in the monopsony market.",
+        prompt: "Suppose the government imposes a MINIMUM WAGE of \\$15.50/hr. Explain how this affects employment in the monopsony market.",
         maxPoints: 2,
         rubric: [
           { points: 1, description: "Min wage between W_M ($13.50) and approximately W_C ($15.33) creates horizontal effective MFC at $15.50", keywords: ["horizontal MFC", "effective MFC = $15.50", "min wage", "binding"] },
           { points: 1, description: "Identifies that a properly set minimum wage in monopsony can INCREASE both wage and employment (unlike in a competitive market)", keywords: ["increases employment", "raises wage", "monopsony minimum wage", "L rises"] }
         ],
-        sampleAnswer: "A minimum wage at $15.50 makes the firm's effective MFC horizontal at $15.50 up to the supply curve, then jumps to the original MFC. The firm now hires until MRP = $15.50: 30 − 0.10L = 15.50 → L = 145. So L rises from 110 to 145 AND wage rises from $13.50 to $15.50 — a key Card-Krueger (1994) result for monopsonistic labor markets.",
+        sampleAnswer: "A minimum wage at \\$15.50 makes the firm's effective MFC horizontal at \\$15.50 up to the supply curve, then jumps to the original MFC. The firm now hires until MRP = \\$15.50: 30 − 0.10L = 15.50 → L = 145. So L rises from 110 to 145 AND wage rises from \\$13.50 to \\$15.50 — a key Card-Krueger (1994) result for monopsonistic labor markets.",
       },
       {
         label: "(e)",
@@ -282,7 +282,7 @@ const shortFRQs: MicroFRQ[] = [
     type: 'short' as const,
     unit: 2,
     title: "Price Elasticity of Demand and Total Revenue",
-    prompt: "When the price of a movie streaming subscription rises from $10 to $14, the quantity demanded falls from 5 million to 4 million subscribers per month.",
+    prompt: "When the price of a movie streaming subscription rises from \\$10 to \\$14, the quantity demanded falls from 5 million to 4 million subscribers per month.",
     parts: [
       {
         label: "(a)",
@@ -310,7 +310,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "TR_before = $10 × 5M = $50M; TR_after = $14 × 4M = $56M → TR ROSE; consistent because raising price in inelastic range increases TR", keywords: ["$50M", "$56M", "TR rose", "$50 million", "$56 million", "inelastic", "raise price"] }
         ],
-        sampleAnswer: "TR_before = $10 × 5M = $50M. TR_after = $14 × 4M = $56M → TR rose by $6M. Consistent: when demand is inelastic, raising P increases TR (the price hike outweighs the quantity loss).",
+        sampleAnswer: "TR_before = \\$10 × 5M = \\$50M. TR_after = \\$14 × 4M = \\$56M → TR rose by \\$6M. Consistent: when demand is inelastic, raising P increases TR (the price hike outweighs the quantity loss).",
       },
       {
         label: "(d)",
@@ -331,7 +331,7 @@ const shortFRQs: MicroFRQ[] = [
     type: 'short' as const,
     unit: 2,
     title: "Tax Incidence and Deadweight Loss",
-    prompt: "The market for sugary soda is in equilibrium at P = $2 and Q = 100 million bottles. The government imposes a $0.50 per-bottle excise tax on producers. After the tax, the price consumers pay rises to $2.40 and quantity falls to 80 million bottles.",
+    prompt: "The market for sugary soda is in equilibrium at P = \\$2 and Q = 100 million bottles. The government imposes a \\$0.50 per-bottle excise tax on producers. After the tax, the price consumers pay rises to \\$2.40 and quantity falls to 80 million bottles.",
     parts: [
       {
         label: "(a)",
@@ -341,7 +341,7 @@ const shortFRQs: MicroFRQ[] = [
           { points: 1, description: "Producers receive $2.40 − $0.50 = $1.90 per bottle", keywords: ["$1.90", "P - tax", "$2.40 - $0.50"] },
           { points: 1, description: "Consumer incidence = $0.40 ($2.40 − $2.00); producer incidence = $0.10 ($2.00 − $1.90)", keywords: ["consumer incidence", "$0.40", "producer incidence", "$0.10"] }
         ],
-        sampleAnswer: "Producers receive net price = $2.40 − $0.50 = $1.90. Consumer incidence = $2.40 − $2.00 = $0.40 (80% of tax). Producer incidence = $2.00 − $1.90 = $0.10 (20% of tax).",
+        sampleAnswer: "Producers receive net price = \\$2.40 − \\$0.50 = \\$1.90. Consumer incidence = \\$2.40 − \\$2.00 = \\$0.40 (80% of tax). Producer incidence = \\$2.00 − \\$1.90 = \\$0.10 (20% of tax).",
       },
       {
         label: "(b)",
@@ -359,7 +359,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "Revenue = $0.50 × 80M = $40M; DWL = ½($0.50)(100M − 80M) = ½($0.50)(20M) = $5M", keywords: ["$40M", "$40 million", "DWL = $5M", "$5 million", "½ × tax × ΔQ"] }
         ],
-        sampleAnswer: "Tax revenue = $0.50 × 80M bottles = $40M. DWL = ½(tax wedge)(ΔQ) = ½($0.50)(20M) = $5M — the value of mutually beneficial trades destroyed by the tax.",
+        sampleAnswer: "Tax revenue = \\$0.50 × 80M bottles = \\$40M. DWL = ½(tax wedge)(ΔQ) = ½(\\$0.50)(20M) = \\$5M — the value of mutually beneficial trades destroyed by the tax.",
       },
       {
         label: "(d)",
@@ -380,7 +380,7 @@ const shortFRQs: MicroFRQ[] = [
     type: 'short' as const,
     unit: 6,
     title: "Public Goods and Free-Rider Problem",
-    prompt: "A small town is considering installing streetlights — a public good. Three residents (A, B, C) value an additional streetlight at $40, $30, and $20 respectively. The marginal cost of installing one streetlight is $75.",
+    prompt: "A small town is considering installing streetlights — a public good. Three residents (A, B, C) value an additional streetlight at \\$40, \\$30, and \\$20 respectively. The marginal cost of installing one streetlight is \\$75.",
     parts: [
       {
         label: "(a)",
@@ -399,7 +399,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "MSB = $40+$30+$20 = $90 (vertical summation for public goods); MSC = $75. Since MSB > MSC, install — net benefit $15", keywords: ["MSB = $90", "vertical sum", "MSC = $75", "MSB > MSC", "install", "net benefit $15"] }
         ],
-        sampleAnswer: "For public goods, MSB = VERTICAL sum of individual MBs (since all consume the same unit) = $40+$30+$20 = $90. MSC = $75. MSB > MSC → install (net social gain $15).",
+        sampleAnswer: "For public goods, MSB = VERTICAL sum of individual MBs (since all consume the same unit) = \\$40+\\$30+\\$20 = \\$90. MSC = \\$75. MSB > MSC → install (net social gain \\$15).",
       },
       {
         label: "(c)",
@@ -417,7 +417,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "Provides a valid example (national defense — funded by federal taxes; flood-control levees — federal/state; basic scientific research — NSF/NIH grants; broadcast TV — public funding/PBS; lighthouses — historically tolls or government)", keywords: ["national defense", "federal taxes", "flood control", "NSF", "NIH", "research", "lighthouse", "PBS", "broadcast"] }
         ],
-        sampleAnswer: "U.S. national defense is the canonical public good — funded through federal income taxes (~$886B in FY2024) precisely because free-rider problems prevent private provision. Basic scientific research is similarly funded by NSF and NIH grants.",
+        sampleAnswer: "U.S. national defense is the canonical public good — funded through federal income taxes (~\\$886B in FY2024) precisely because free-rider problems prevent private provision. Basic scientific research is similarly funded by NSF and NIH grants.",
       }
     ],
     totalPoints: 5,
@@ -429,7 +429,7 @@ const shortFRQs: MicroFRQ[] = [
     type: 'short' as const,
     unit: 4,
     title: "Oligopoly and the Prisoner's Dilemma (Game Theory)",
-    prompt: "Two airlines, Skyway and Highflyer, share a single route. Each can choose a HIGH price ($400) or a LOW price ($300). The payoff matrix (annual profits in $ millions) is:\n\n|  | Highflyer HIGH | Highflyer LOW |\n|--|---|---|\n| Skyway HIGH | (50, 50) | (10, 70) |\n| Skyway LOW  | (70, 10) | (30, 30) |\n\n(Skyway's payoff listed first.)",
+    prompt: "Two airlines, Skyway and Highflyer, share a single route. Each can choose a HIGH price (\\$400) or a LOW price (\\$300). The payoff matrix (annual profits in \\$ millions) is:\n\n|  | Highflyer HIGH | Highflyer LOW |\n|--|---|---|\n| Skyway HIGH | (50, 50) | (10, 70) |\n| Skyway LOW  | (70, 10) | (30, 30) |\n\n(Skyway's payoff listed first.)",
     parts: [
       {
         label: "(a)",
@@ -447,7 +447,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "(LOW, LOW) with payoffs ($30M, $30M) — both firms playing their dominant strategy", keywords: ["LOW, LOW", "Nash equilibrium", "(30, 30)", "$30M each", "dominant strategy equilibrium"] }
         ],
-        sampleAnswer: "Nash equilibrium = (LOW, LOW) with payoffs ($30M, $30M). Both firms play their dominant LOW strategy; neither can improve by unilaterally switching.",
+        sampleAnswer: "Nash equilibrium = (LOW, LOW) with payoffs (\\$30M, \\$30M). Both firms play their dominant LOW strategy; neither can improve by unilaterally switching.",
       },
       {
         label: "(c)",
@@ -456,7 +456,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "Both firms would be better off COOPERATING at (HIGH, HIGH) = ($50M, $50M), but rational individual choice traps them at the inferior ($30M, $30M)", keywords: ["both better off", "(HIGH, HIGH)", "$50M each", "rational individual", "trap", "inferior outcome", "prisoner's dilemma"] }
         ],
-        sampleAnswer: "Prisoner's dilemma: cooperation at (HIGH, HIGH) yields $50M each — Pareto superior to ($30M, $30M). But each firm has an individual incentive to defect (LOW), so the dominant-strategy equilibrium is inferior to the cooperative outcome.",
+        sampleAnswer: "Prisoner's dilemma: cooperation at (HIGH, HIGH) yields \\$50M each — Pareto superior to (\\$30M, \\$30M). But each firm has an individual incentive to defect (LOW), so the dominant-strategy equilibrium is inferior to the cooperative outcome.",
       },
       {
         label: "(d)",
@@ -465,7 +465,7 @@ const shortFRQs: MicroFRQ[] = [
         rubric: [
           { points: 1, description: "Provides a real example (OPEC quota cheating since 1973; 2008-2014 LIBOR-rigging banks fined $9B+; 2024 generic-drug price-fixing settlements; airline fuel-surcharge collusion 2007 fines exceeded $1.7B; vitamins cartel Hoffmann-La Roche fined $500M in 1999)", keywords: ["OPEC", "cheating", "LIBOR", "$9B", "generic drug", "airline collusion", "fuel surcharge", "$1.7B", "vitamins cartel", "Hoffmann-La Roche", "$500M"] }
         ],
-        sampleAnswer: "OPEC members regularly cheat on production quotas (the dominant individual strategy) even after agreeing collectively to restrict output — the classic real-world prisoner's dilemma. The 1996-99 vitamins cartel (Hoffmann-La Roche, BASF) collapsed and Hoffmann-La Roche paid a $500M U.S. fine in 1999 — the largest antitrust criminal fine at the time.",
+        sampleAnswer: "OPEC members regularly cheat on production quotas (the dominant individual strategy) even after agreeing collectively to restrict output — the classic real-world prisoner's dilemma. The 1996-99 vitamins cartel (Hoffmann-La Roche, BASF) collapsed and Hoffmann-La Roche paid a \\$500M U.S. fine in 1999 — the largest antitrust criminal fine at the time.",
       }
     ],
     totalPoints: 5,
