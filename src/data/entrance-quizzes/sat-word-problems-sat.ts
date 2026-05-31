@@ -10,7 +10,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'swp-ent-1a',
     question:
-      'A parking garage charges $3.00 for the first hour and $1.50 for each additional hour. If a customer pays $10.50 total, which equation represents this situation, where h is the total number of hours parked?',
+      'A parking garage charges $\\$3.00$ for the first hour and $\\$1.50$ for each additional hour. If a customer pays $\\$10.50$ total, which equation represents this situation, where h is the total number of hours parked?',
     options: [
       '3h + 1.50 = 10.50',
       '3 + 1.50(h − 1) = 10.50',
@@ -19,14 +19,14 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'The first hour costs $3.00, and each additional hour (h − 1 more hours) costs $1.50. The equation is 3 + 1.50(h − 1) = 10.50. Solving: 1.50(h − 1) = 7.50 → h − 1 = 5 → h = 6 hours.',
+      'The first hour costs $\\$3.00$, and each additional hour (h − 1 more hours) costs $\\$1.50$. The equation is 3 + 1.50(h − 1) = 10.50. Solving: 1.50(h − 1) = 7.50 → h − 1 = 5 → h = 6 hours.',
     partNumber: 1,
     partTitle: 'Setting Up Equations',
   },
   {
     id: 'swp-ent-1b',
     question:
-      'A store sells small and large candles. Small candles cost $4 each and large candles cost $7 each. A customer buys a total of 10 candles and spends $55. Which system of equations represents this situation?',
+      'A store sells small and large candles. Small candles cost $\\$4$ each and large candles cost $\\$7$ each. A customer buys a total of 10 candles and spends $\\$55$. Which system of equations represents this situation?',
     options: [
       's + l = 55 and 4s + 7l = 10',
       's + l = 10 and 4s + 7l = 55',
@@ -94,7 +94,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'swp-ent-3b',
     question:
-      'A barista mixes coffee worth $8 per pound with coffee worth $12 per pound to make a 20-pound blend that sells for $9.50 per pound. How many pounds of the $8 coffee does she use?',
+      'A barista mixes coffee worth $\\$8$ per pound with coffee worth $\\$12$ per pound to make a 20-pound blend that sells for $\\$9.50$ per pound. How many pounds of the $\\$8$ coffee does she use?',
     options: [
       '5 pounds',
       '10 pounds',
@@ -103,7 +103,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'Let x = pounds of $8 coffee; (20 − x) = pounds of $12 coffee. 8x + 12(20 − x) = 9.50 × 20 → 8x + 240 − 12x = 190 → −4x = −50 → x = 12.5 pounds.',
+      'Let x = pounds of $\\$8$ coffee; (20 − x) = pounds of $\\$12$ coffee. 8x + 12(20 − x) = 9.50 × 20 → 8x + 240 − 12x = 190 → −4x = −50 → x = 12.5 pounds.',
     partNumber: 3,
     partTitle: 'Mixture Problems',
   },
@@ -146,7 +146,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'swp-ent-5a',
     question:
-      'A store sells mugs for $6 each and plates for $9 each. Kenji buys some mugs and 4 plates, then uses a $5.00 off coupon. His final total is $61.00. How many mugs did Kenji buy?',
+      'A store sells mugs for $\\$6$ each and plates for $\\$9$ each. Kenji buys some mugs and 4 plates, then uses a $\\$5.00$ off coupon. His final total is $\\$61.00$. How many mugs did Kenji buy?',
     options: [
       '4 mugs',
       '5 mugs',
@@ -155,7 +155,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Add back the coupon: $61 + $5 = $66 (pre-coupon total). Cost of 4 plates: 4 × $9 = $36. Cost of mugs: $66 − $36 = $30. Number of mugs: $30 ÷ $6 = 5 mugs.',
+      'Add back the coupon: $\\$61$ + $\\$5$ = $\\$66$ (pre-coupon total). Cost of 4 plates: 4 × $\\$9$ = $\\$36$. Cost of mugs: $\\$66$ − $\\$36$ = $\\$30$. Number of mugs: $\\$30$ ÷ $\\$6$ = 5 mugs.',
     partNumber: 5,
     partTitle: 'Multi-Step Problems',
   },
@@ -171,7 +171,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Start with $100. After 20% increase: $100 × 1.20 = $120. After 15% decrease: $120 × 0.85 = $102. Net change = ($102 − $100)/$100 = 2%. The answer is +2%. Note: percentage changes are not simply additive—a 20% increase followed by a 15% decrease does not equal a 5% net increase.',
+      'Start with $\\$100$. After 20% increase: $\\$100$ × 1.20 = $\\$120$. After 15% decrease: $\\$120$ × 0.85 = $\\$102$. Net change = ($\\$102$ − $\\$100$)/$\\$100$ = 2%. The answer is +2%. Note: percentage changes are not simply additive—a 20% increase followed by a 15% decrease does not equal a 5% net increase.',
     partNumber: 5,
     partTitle: 'Multi-Step Problems',
   },

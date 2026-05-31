@@ -23,7 +23,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'sleq-ent-4b', question: 'Solve: 4x + 5 = 4x − 2', options: ['x = −7/8', 'x = 3/4', 'No solution', 'Infinitely many solutions'], correctIndex: 2, explanation: 'Subtract 4x: 5 = −2, which is false. The equation has no solution.', partNumber: 4, partTitle: 'Special Cases' },
 
   // Part 5 — Mastery
-  { id: 'sleq-ent-5a', question: 'A taxi charges $3 base plus $0.50 per mile. If the total cost is $9, how many miles were driven?', options: ['6 miles', '12 miles', '18 miles', '24 miles'], correctIndex: 1, explanation: '3 + 0.5m = 9 → 0.5m = 6 → m = 12 miles.', partNumber: 5, partTitle: 'Mastery' },
+  { id: 'sleq-ent-5a', question: 'A taxi charges $\\$3$ base plus $\\$0.50$ per mile. If the total cost is $\\$9$, how many miles were driven?', options: ['6 miles', '12 miles', '18 miles', '24 miles'], correctIndex: 1, explanation: '3 + 0.5m = 9 → 0.5m = 6 → m = 12 miles.', partNumber: 5, partTitle: 'Mastery' },
   { id: 'sleq-ent-5b', question: 'Solve for x: $\\frac{2x + 1}{3} = 5$', options: ['x = 2', 'x = 5', 'x = 7', 'x = 8'], correctIndex: 2, explanation: 'Multiply both sides by 3: 2x + 1 = 15. Subtract 1: 2x = 14. Divide: x = 7.', partNumber: 5, partTitle: 'Mastery' },
 ]
 

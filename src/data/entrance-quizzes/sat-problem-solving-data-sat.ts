@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'After first markdown: $80 × 0.75 = $60. After second markdown: $60 × 0.90 = $54. Note that a 25% + 10% discount does NOT equal a 35% discount—each percentage is applied to the running total.',
+      'After first markdown: $\\$80$ × 0.75 = $\\$60$. After second markdown: $\\$60$ × 0.90 = $\\$54$. Note that a 25% + 10% discount does NOT equal a 35% discount—each percentage is applied to the running total.',
     partNumber: 2,
     partTitle: 'Percentages & Change',
   },
@@ -137,7 +137,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'The y-intercept (10) is the value of y when x = 0. Since x = 0 corresponds to 2010, the y-intercept represents sales of 10 (thousands) = $10,000 in 2010. The slope (2.5) represents the annual increase of $2,500.',
+      'The y-intercept (10) is the value of y when x = 0. Since x = 0 corresponds to 2010, the y-intercept represents sales of 10 (thousands) = $\\$10{,}000$ in 2010. The slope (2.5) represents the annual increase of $\\$2{,}500$.',
     partNumber: 4,
     partTitle: 'Graphs & Models',
   },
@@ -196,7 +196,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'spsd-ent-6b',
     question:
-      'The prices of 5 houses in a neighborhood are: $200K, $210K, $220K, $215K, and $1,200K. Which measure of center best represents the typical home price?',
+      'The prices of 5 houses in a neighborhood are: $\\$200$K, $\\$210$K, $\\$220$K, $\\$215$K, and $\\$1{,}200$K. Which measure of center best represents the typical home price?',
     options: [
       'Mean, because it uses all data points.',
       'Mode, because it is the most common value.',
@@ -205,7 +205,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'The $1,200K outlier dramatically inflates the mean (≈$409K), making it unrepresentative of the typical home. The median ($215K) is resistant to outliers and better represents the center of this skewed data set. Range is a measure of spread, not center.',
+      'The $\\$1{,}200$K outlier dramatically inflates the mean (≈$\\$409$K), making it unrepresentative of the typical home. The median ($\\$215$K) is resistant to outliers and better represents the center of this skewed data set. Range is a measure of spread, not center.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
