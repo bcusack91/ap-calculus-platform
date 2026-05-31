@@ -444,7 +444,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       const n2 = 1.0
       const thetaC = Number((Math.asin(n2 / n1) * 180 / Math.PI).toFixed(1))
       
-      const wrong1 = Number((Math.asin(n1 / n2) * 180 / Math.PI).toFixed(1)) // Inverted
+      const wrong1 = Number((Math.atan(n2 / n1) * 180 / Math.PI).toFixed(1)) // Used tan instead of sin
       const wrong2 = Number((90 - thetaC).toFixed(1)) // Complementary
       const wrong3 = Number((thetaC / 2).toFixed(1)) // Forgot asin
       

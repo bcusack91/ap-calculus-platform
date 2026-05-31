@@ -31,7 +31,7 @@ export default function MCATStudyPlansPage() {
 
   async function adoptPlan(templateId: string) {
     if (status !== 'authenticated') {
-      router.push('/login')
+      router.push('/auth/signin')
       return
     }
     setAdopting(templateId)

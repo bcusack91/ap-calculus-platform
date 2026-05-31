@@ -115,7 +115,7 @@ export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
   const [success, setSuccess] = useState(false)
 
   async function adoptPlan(templateId: string) {
-    if (status !== 'authenticated') { router.push('/login'); return }
+    if (status !== 'authenticated') { router.push('/auth/signin'); return }
     setAdopting(templateId)
     try {
       const res = await fetch(apiEndpoint, {

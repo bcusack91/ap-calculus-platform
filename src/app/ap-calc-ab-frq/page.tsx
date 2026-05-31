@@ -150,7 +150,7 @@ export default function APCalcABFRQPage() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <Link
-            href="/ap-calculus"
+            href="/ap-calculus-ab"
             className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline mb-6"
           >
             ← Back to AP Calculus AB
@@ -393,7 +393,7 @@ export default function APCalcABFRQPage() {
               Practice More
             </button>
             <Link
-              href="/ap-calculus"
+              href="/ap-calculus-ab"
               className="px-6 py-3 rounded-xl border-2 border-blue-300 dark:border-blue-600 text-blue-700 dark:text-blue-400 font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition"
             >
               Back to AP Calculus AB

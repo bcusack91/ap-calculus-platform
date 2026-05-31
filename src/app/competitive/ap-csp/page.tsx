@@ -92,14 +92,14 @@ export default function ApCspCompetitivePage() {
 
   if (status === 'loading' || loading) return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"><div className="animate-pulse text-xl text-gray-500">Loading AP CS Principles Competitive Mode…</div></div>)
   if (!session) return null
-  if (!topicsData) return (<div className="min-h-screen flex items-center justify-center px-4"><div className="text-center"><p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Could not load AP CS Principles topics.</p><button onClick={() => router.push('/ap-computer-science-principles')} className="text-sky-600 hover:underline">← Back to AP CS Principles</button></div></div>)
+  if (!topicsData) return (<div className="min-h-screen flex items-center justify-center px-4"><div className="text-center"><p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Could not load AP CS Principles topics.</p><button onClick={() => router.push('/ap-cs-principles')} className="text-sky-600 hover:underline">← Back to AP CS Principles</button></div></div>)
 
   const anyCompleted = topicsData.hasAnyCompleted
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="max-w-5xl mx-auto px-4 py-8">
-        <button onClick={() => router.push('/ap-computer-science-principles')} className="inline-flex items-center gap-1 text-sm text-sky-600 dark:text-sky-400 hover:underline mb-6">← Back to AP CS Principles</button>
+        <button onClick={() => router.push('/ap-cs-principles')} className="inline-flex items-center gap-1 text-sm text-sky-600 dark:text-sky-400 hover:underline mb-6">← Back to AP CS Principles</button>
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900 dark:text-white mb-2">AP CS Principles{' '}<span className="bg-gradient-to-r from-sky-500 to-blue-500 bg-clip-text text-transparent">Competitive Mode</span></h1>
           <p className="text-gray-600 dark:text-gray-400">Select a topic you&apos;ve completed, choose your game mode, and challenge other students!</p>
@@ -177,7 +177,7 @@ export default function ApCspCompetitivePage() {
             <div className="text-5xl mb-4">🔒</div>
             <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Complete a Lesson to Unlock</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">Finish any AP CS Principles interactive lesson with 80%+ mastery to start competing.</p>
-            <button onClick={() => router.push('/ap-computer-science-principles')} className="px-8 py-3 bg-gradient-to-r from-sky-600 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all">Browse AP CS Principles Lessons</button>
+            <button onClick={() => router.push('/ap-cs-principles')} className="px-8 py-3 bg-gradient-to-r from-sky-600 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all">Browse AP CS Principles Lessons</button>
           </div>
         )}
       </div>
