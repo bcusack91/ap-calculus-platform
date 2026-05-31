@@ -678,6 +678,55 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'two-variable-data': () => import('./two-variable-data'),
   'inference-chi-square': () => import('./inference-chi-square'),
   'sampling-experimentation': () => import('./sampling-experimentation'),
+
+  // ===== SAT Prep DB-slug aliases (DB topic slug -> canonical -sat entrance quiz) =====
+  // The SAT course topics use browse slugs that differ from the canonical
+  // entrance-quiz slugs above. Map each DB topic to the most relevant quiz so
+  // every SAT topic surfaces an entrance quiz (mirrors interactive-lessons slugAliases).
+  // Heart of Algebra
+  'sat-linear-equations-inequalities': () => import('./sat-linear-equations-sat'),
+  'sat-systems-linear-equations': () => import('./sat-linear-equations-sat'),
+  'sat-systems-equations': () => import('./sat-linear-equations-sat'),
+  'sat-linear-inequalities-graphs': () => import('./sat-linear-equations-sat'),
+  'sat-functions': () => import('./sat-functions-graphs-sat'),
+  // Problem Solving and Data Analysis
+  'sat-statistics-data-interpretation': () => import('./sat-data-statistics-sat'),
+  'sat-ratios-proportions-percents': () => import('./sat-ratios-proportions-sat'),
+  'sat-probability-two-way-tables': () => import('./sat-problem-solving-data-sat'),
+  'sat-scatterplots-line-fit': () => import('./sat-data-statistics-sat'),
+  'sat-data-statistics': () => import('./sat-data-statistics-sat'),
+  // Passport to Advanced Math
+  'sat-quadratic-equations': () => import('./sat-quadratic-equations-sat'),
+  'sat-exponents-radicals': () => import('./sat-exponents-radicals-sat'),
+  'sat-exponential-functions': () => import('./sat-exponential-functions-sat'),
+  'sat-polynomials-factoring': () => import('./sat-polynomials-factoring-sat'),
+  'sat-polynomial-rational-expressions': () => import('./sat-polynomials-factoring-sat'),
+  'sat-nonlinear-equations-functions': () => import('./sat-passport-advanced-math-sat'),
+  // Additional Topics in Math
+  'sat-geometry-trigonometry': () => import('./sat-geometry-angles-sat'),
+  'sat-geometry-basics': () => import('./sat-geometry-angles-sat'),
+  'sat-complex-numbers': () => import('./sat-complex-numbers-sat'),
+  'sat-circles': () => import('./sat-circles-trig-sat'),
+  // Reading & Writing
+  'sat-reading-comprehension': () => import('./sat-reading-evidence-sat'),
+  'sat-grammar-conventions': () => import('./sat-grammar-conventions-sat'),
+  'sat-punctuation': () => import('./sat-punctuation-sat'),
+  'sat-punctuation-commas-semicolons': () => import('./sat-punctuation-commas-semicolons-sat'),
+  'sat-finding-textual-evidence': () => import('./sat-reading-evidence-sat'),
+  'sat-command-evidence': () => import('./sat-reading-evidence-sat'),
+  'sat-central-ideas-details': () => import('./sat-reading-evidence-sat'),
+  'sat-vocabulary-context': () => import('./sat-reading-evidence-sat'),
+  'sat-subject-verb-agreement': () => import('./sat-grammar-conventions-sat'),
+  'sat-grammar-usage': () => import('./sat-grammar-conventions-sat'),
+  'sat-sentence-structure': () => import('./sat-grammar-conventions-sat'),
+  'sat-pronoun-agreement': () => import('./sat-grammar-conventions-sat'),
+  'sat-effective-language-use': () => import('./sat-expression-ideas-sat'),
+  'sat-transitions-organization': () => import('./sat-expression-ideas-sat'),
+  'sat-conciseness-redundancy': () => import('./sat-expression-ideas-sat'),
+  // Test-Taking Strategies
+  'calculator-strategies': () => import('./sat-calculator-strategy-sat'),
+  'sat-time-management': () => import('./sat-test-day-strategy-sat'),
+  'process-of-elimination': () => import('./sat-test-day-strategy-sat'),
 }
 
 /**
