@@ -15,6 +15,7 @@ import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import { getInteractiveLessonSEOContent } from '@/data/interactive-lessons/seo-content-loader'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 
 type MarkdownChildrenProps = {
   children?: React.ReactNode
@@ -114,7 +115,7 @@ export default async function InteractiveLessonSEO({ topicSlug, topicTitle }: In
                   rehypePlugins={[rehypeKatex]}
                   components={SEOMarkdownComponents}
                 >
-                  {section.content}
+                  {escapeCurrencyMath(section.content)}
                 </ReactMarkdown>
               </div>
             ))}

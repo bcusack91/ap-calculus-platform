@@ -10,6 +10,7 @@ import rehypeRaw from 'rehype-raw'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { renderRichText } from '@/lib/render-rich-text'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -721,7 +722,7 @@ export default function DynamicInteractiveLessonRenderer({
             rehypePlugins={[rehypeKatex, rehypeRaw]}
             components={markdownComponents}
           >
-            {currentSection.content}
+            {escapeCurrencyMath(currentSection.content)}
           </ReactMarkdown>
 
           {/* Inline understanding check */}

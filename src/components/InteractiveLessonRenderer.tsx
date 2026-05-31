@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import type { PreloadedLessonPart } from '@/data/interactive-lessons/server-loader'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
@@ -2728,6 +2729,9 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
 // Fade-in Text Component with LaTeX support
 function FadeInText({ content, onComplete }: { content: string; onComplete?: () => void }) {
+  // Escape currency dollar amounts ($5 ... $10) so remark-math does not treat
+  // them as inline-math delimiters and swallow the prose between them.
+  content = escapeCurrencyMath(content)
   const hasLatex = content.includes('$') || content.includes('\\(') || content.includes('\\[')
   const hasSineTable = content.includes('[SINE_TABLE]')
   const hasCosineTable = content.includes('[COSINE_TABLE]')
