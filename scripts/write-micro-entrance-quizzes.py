@@ -4,7 +4,20 @@ Rebuild all 13 AP Microeconomics entrance quizzes with topic-specific content.
 Replaces boilerplate with real micro content (graphs, formulas, named cases).
 """
 from __future__ import annotations
-import os, json
+import os, json, re
+
+# These generators contain ONLY currency dollar signs (all math is written as
+# plain text). A quiz field with >= 2 currency tokens would otherwise collide
+# as KaTeX $...$ inline-math delimiters and swallow the prose between them, so
+# escape each amount as $\$N$ (KaTeX renders a literal "$N"). Single-token
+# fields render fine as plain text and are left untouched to minimize churn.
+_MONEY = re.compile(r'(?<!\\)\$((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?)([A-Za-z]*)')
+
+
+def esc_money(s: str) -> str:
+    if len(_MONEY.findall(s)) < 2:
+        return s
+    return _MONEY.sub(lambda m: '$\\$' + m.group(1).replace(',', '{,}') + '$' + m.group(2), s)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(ROOT, "src", "data", "entrance-quizzes")
@@ -1177,6 +1190,9 @@ def render(slug: str, data: dict) -> str:
         part_num = (idx // 2) + 1
         sub = "a" if idx % 2 == 0 else "b"
         qid = f"micr-ent-{part_num}{sub}"
+        q = esc_money(q)
+        opts = [esc_money(o) for o in opts]
+        expl = esc_money(expl)
         opts_js = json.dumps(opts, ensure_ascii=False)
         lines.append(
             f"  {{ id: {json.dumps(qid)}, question: {json.dumps(q, ensure_ascii=False)}, "
