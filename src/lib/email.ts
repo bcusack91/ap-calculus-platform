@@ -1,23 +1,8 @@
-import nodemailer from 'nodemailer'
 import { getPublicAppUrl } from '@/lib/public-url'
+import { sendEmail } from '@/lib/email-provider'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
 const APP_URL = getPublicAppUrl()
-
-function getTransporter() {
-  if (!process.env.SMTP_HOST) {
-    throw new Error('SMTP_HOST is not configured — email sending is disabled')
-  }
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === 'true',
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  })
-}
 
 function emailLayout(content: string, recipientEmail?: string) {
   const unsubscribeUrl = recipientEmail
@@ -44,8 +29,7 @@ function emailLayout(content: string, recipientEmail?: string) {
  * Send a verification email with a clickable link.
  */
 export async function sendVerificationEmail(email: string, verifyUrl: string) {
-  const transporter = getTransporter()
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
     to: email,
     subject: 'Verify your Study Mondo email',
@@ -71,8 +55,7 @@ export async function sendVerificationEmail(email: string, verifyUrl: string) {
  * Send a password-reset email with a clickable link.
  */
 export async function sendPasswordResetEmail(email: string, resetUrl: string) {
-  const transporter = getTransporter()
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
     to: email,
     subject: 'Reset your Study Mondo password',
@@ -98,9 +81,8 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string) {
  * Send a welcome email to new users.
  */
 export async function sendWelcomeEmail(email: string, name: string | null) {
-  const transporter = getTransporter()
   const greeting = name ? `Hi ${name}!` : 'Welcome!'
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
     to: email,
     subject: 'Welcome to Study Mondo! 🎓',
@@ -143,9 +125,8 @@ export async function sendWeeklyDigest(
     minutesStudied: number
   }
 ) {
-  const transporter = getTransporter()
   const greeting = name ? `Hi ${name},` : 'Hi there,'
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
     to: email,
     subject: `Your Study Mondo Week: ${stats.lessonsCompleted} lessons, ${stats.streak} day streak 📊`,
@@ -192,9 +173,8 @@ export async function sendWeeklyDigest(
  * Send a streak reminder to keep the user motivated.
  */
 export async function sendStreakReminder(email: string, name: string | null, currentStreak: number) {
-  const transporter = getTransporter()
   const greeting = name || 'there'
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
     to: email,
     subject: `Don't lose your ${currentStreak}-day streak! 🔥`,
@@ -220,9 +200,8 @@ export async function sendStreakReminder(email: string, name: string | null, cur
  * Announcement: Competitive Mode is fully unlocked for AP exam season.
  */
 export async function sendCompetitiveModeAnnouncementEmail(email: string, name: string | null) {
-  const transporter = getTransporter()
   const greeting = name ? `Hi ${name},` : 'Hi there,'
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
     to: email,
     subject: '⚔️ Competitive Mode is unlocked for everyone — for AP exam season',
@@ -293,10 +272,9 @@ export async function sendAdminAlertEmail(params: {
   const { to, subject, text, html } = params
   if (to.length === 0) return
 
-  const transporter = getTransporter()
-  await transporter.sendMail({
+  await sendEmail({
     from: FROM_ADDRESS,
-    to: to.join(', '),
+    to,
     subject,
     text,
     html,

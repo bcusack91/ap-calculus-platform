@@ -104,21 +104,23 @@ export default function APChemCompetitivePage() {
   // Queue polling
   const checkQueue = useCallback(async () => {
     try {
-      const res = await fetch('/api/competitive/queue')
+      const queueEndpoint = selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue'
+      const res = await fetch(queueEndpoint)
       const data: QueueStatus = await res.json()
       if (data.status === 'not_in_queue') {
         setInQueue(false)
         setQueueStatus(null)
       } else if (data.status === 'matched') {
         setInQueue(false)
-        router.push(`/competitive/match/${data.matchId}?from=ap-chemistry`)
+        const matchPath = selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'
+        router.push(`/competitive/${matchPath}/${data.matchId}?from=ap-chemistry`)
       } else {
         setQueueStatus(data)
       }
     } catch (err) {
       console.error('Error checking queue:', err)
     }
-  }, [router])
+  }, [router, selectedMode])
 
   useEffect(() => {
     if (inQueue) {
@@ -142,14 +144,16 @@ export default function APChemCompetitivePage() {
 
   const joinQueue = async () => {
     try {
-      const res = await fetch('/api/competitive/queue', {
+      const queueEndpoint = selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue'
+      const res = await fetch(queueEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topicSlug: selectedTopic || 'ap-chemistry', gameMode: selectedMode }),
       })
       const data: QueueStatus = await res.json()
       if (data.status === 'matched') {
-        router.push(`/competitive/match/${data.matchId}?from=ap-chemistry`)
+        const matchPath = selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'
+        router.push(`/competitive/${matchPath}/${data.matchId}?from=ap-chemistry`)
       } else {
         setInQueue(true)
         setQueueStatus(data)
@@ -178,7 +182,8 @@ export default function APChemCompetitivePage() {
       })
       const data = await res.json()
       if (data.matchId) {
-        router.push(`/competitive/match/${data.matchId}?from=ap-chemistry`)
+        const matchPath = data.isTeamMatch ? 'team-match' : 'match'
+        router.push(`/competitive/${matchPath}/${data.matchId}?from=ap-chemistry`)
       }
     } catch (err) {
       console.error('Error starting AI practice:', err)

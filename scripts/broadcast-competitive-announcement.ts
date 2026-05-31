@@ -16,9 +16,9 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
-import nodemailer from 'nodemailer'
 import { PrismaClient } from '@prisma/client'
 import { getPublicAppUrl } from '../src/lib/public-url'
+import { sendEmail } from '../src/lib/email-provider'
 
 const prisma = new PrismaClient()
 
@@ -50,23 +50,6 @@ function loadAlreadySent(): Set<string> {
 function appendSent(email: string) {
   fs.mkdirSync(path.dirname(SENT_LOG), { recursive: true })
   fs.appendFileSync(SENT_LOG, email.toLowerCase() + '\n')
-}
-
-function buildTransporter() {
-  if (!process.env.SMTP_HOST) {
-    throw new Error('SMTP_HOST is not configured — email sending is disabled')
-  }
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === 'true',
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    pool: true,
-    maxConnections: 1,
-    maxMessages: 100,
-    rateDelta: 60_000,
-    rateLimit: 30, // 30 messages/min ceiling (matches our SEND_DELAY_MS)
-  })
 }
 
 function emailLayout(content: string, recipientEmail: string) {
@@ -152,12 +135,12 @@ async function sleep(ms: number) {
   return new Promise(r => setTimeout(r, ms))
 }
 
-async function sendOne(transporter: nodemailer.Transporter, email: string, name: string | null) {
+async function sendOne(email: string, name: string | null) {
   const msg = buildEmail(email, name)
   let lastErr: unknown
   for (let attempt = 1; attempt <= MAX_RETRIES + 1; attempt++) {
     try {
-      await transporter.sendMail(msg)
+      await sendEmail(msg)
       return
     } catch (err) {
       lastErr = err
@@ -197,10 +180,8 @@ async function main() {
       console.error(`Preview recipient ${PREVIEW_TO} not found.`)
       process.exit(1)
     }
-    const transporter = buildTransporter()
     console.log(`Sending preview to ${user.email}...`)
-    await sendOne(transporter, user.email, user.name)
-    transporter.close()
+    await sendOne(user.email, user.name)
     console.log('Preview sent.')
     return
   }
@@ -243,7 +224,6 @@ async function main() {
     return
   }
 
-  const transporter = buildTransporter()
   let sent = 0
   let failed = 0
   let consecutiveFails = 0
@@ -251,7 +231,7 @@ async function main() {
 
   for (const r of remaining) {
     try {
-      await sendOne(transporter, r.email, r.name)
+      await sendOne(r.email, r.name)
       appendSent(r.email)
       sent++
       consecutiveFails = 0
@@ -269,7 +249,6 @@ async function main() {
     await sleep(SEND_DELAY_MS)
   }
 
-  transporter.close()
   console.log(`\nDone. sent=${sent} failed=${failed} remaining=${remaining.length}`)
   if (failedList.length) {
     console.log('Failed recipients (rerun the script to retry — they are not in sent.log):')

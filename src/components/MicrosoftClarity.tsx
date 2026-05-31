@@ -1,9 +1,18 @@
 'use client'
 
+import { useEffect } from 'react'
 import Script from 'next/script'
+import { usePathname } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 
 interface MicrosoftClarityProps {
   projectId: string
+}
+
+declare global {
+  interface Window {
+    clarity?: (...args: unknown[]) => void
+  }
 }
 
 /**
@@ -13,6 +22,17 @@ interface MicrosoftClarityProps {
  * Docs: https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup
  */
 export default function MicrosoftClarity({ projectId }: MicrosoftClarityProps) {
+  const pathname = usePathname()
+  const { data: session, status } = useSession()
+
+  useEffect(() => {
+    if (status !== 'authenticated' || !session?.user?.id || typeof window.clarity !== 'function') return
+
+    window.clarity('identify', session.user.id, undefined, pathname)
+    window.clarity('set', 'app_user_id', session.user.id)
+    window.clarity('set', 'app_user_role', session.user.role)
+  }, [pathname, session?.user?.id, session?.user?.role, status])
+
   if (!projectId) return null
   return (
     <Script

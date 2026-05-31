@@ -4157,6 +4157,30 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./geometry-coordinate-proofs-part7').then(m => m.geoCoordProofsPart7Data) },
     ]
   },
+  'rigid-transformations-geo': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'What Makes a Transformation Rigid?', loader: () => import('./geometry-rigid-transformations-part1').then(m => m.geoRigidTransformationsPart1Data) },
+    ]
+  },
+  'translation-geo': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Translation', loader: () => import('./geometry-rigid-transformations-part2').then(m => m.geoRigidTransformationsPart2Data) },
+    ]
+  },
+  'reflection-geo': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Reflection', loader: () => import('./geometry-rigid-transformations-part3').then(m => m.geoRigidTransformationsPart3Data) },
+    ]
+  },
+  'rotation-geo': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Rotation', loader: () => import('./geometry-rigid-transformations-part4').then(m => m.geoRigidTransformationsPart4Data) },
+    ]
+  },
   'describing-distributions-apstats': {
     completionDestination: 'competitive',
     parts: [

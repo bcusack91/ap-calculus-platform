@@ -256,6 +256,8 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {
   // related bank topic so questions stay on-subject.
   'conic-sections-precalc': 'polynomial-functions-end-behavior',
   'limits-introduction-precalc': 'rates-of-change',
+  'rates-of-change-precalc': 'rates-of-change',
+  'systems-of-equations-precalc': 'systems-of-equations-matrices',
   'continuity-precalc': 'rates-of-change',
 
   // ---- AP Physics C: Mechanics

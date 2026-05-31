@@ -1,14 +1,4 @@
-import nodemailer from 'nodemailer'
-
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-})
+import { sendEmail } from '@/lib/email-provider'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
 
@@ -56,13 +46,13 @@ export async function sendAssignmentNotification(params: {
 
   // Send to all students (BCC for privacy)
   try {
-    await transporter.sendMail({
+    await Promise.all(studentEmails.map(studentEmail => sendEmail({
       from: FROM_ADDRESS,
-      bcc: studentEmails,
+      to: studentEmail,
       subject: `New Assignment: ${assignmentTitle} — ${classroomName}`,
       text: `You have a new assignment: ${assignmentTitle} in ${classroomName}.${dueDate ? ` Due: ${new Date(dueDate).toLocaleDateString()}` : ''}\n\nView it at: ${process.env.NEXT_PUBLIC_APP_URL || 'https://www.studymondo.com'}/assignments`,
       html,
-    })
+    })))
   } catch (error) {
     console.error('Failed to send assignment notification:', error)
   }
@@ -80,7 +70,7 @@ export async function sendAssignmentReminder(params: {
   const { studentEmail, assignmentTitle, classroomName, dueDate } = params
 
   try {
-    await transporter.sendMail({
+    await sendEmail({
       from: FROM_ADDRESS,
       to: studentEmail,
       subject: `Reminder: "${assignmentTitle}" due soon — ${classroomName}`,
