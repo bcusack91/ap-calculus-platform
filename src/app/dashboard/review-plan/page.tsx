@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -42,24 +42,28 @@ export default function ReviewPlanPage() {
   const [topics, setTopics] = useState<WeakTopic[]>([])
   const [loading, setLoading] = useState(true)
 
-  const loadTopics = useCallback(async () => {
-    try {
-      const res = await fetch('/api/dashboard/weak-topics')
-      if (res.ok) {
-        const data = await res.json()
-        setTopics(data.topics ?? [])
-      }
-    } catch { /* silent */ }
-    setLoading(false)
-  }, [])
-
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/dashboard/review-plan')
       return
     }
-    if (status === 'authenticated') loadTopics()
-  }, [status, router, loadTopics])
+    if (status !== 'authenticated') return
+
+    let cancelled = false
+    async function loadTopics() {
+      try {
+        const res = await fetch('/api/dashboard/weak-topics')
+        if (res.ok) {
+          const data = await res.json()
+          if (!cancelled) setTopics(data.topics ?? [])
+        }
+      } catch { /* silent */ }
+      if (!cancelled) setLoading(false)
+    }
+    loadTopics()
+
+    return () => { cancelled = true }
+  }, [status, router])
 
   const plan = buildPlan(topics)
   const days = Array.from({ length: PLAN_DAYS }, (_, i) => i + 1).filter(d => plan.some(p => p.day === d))
