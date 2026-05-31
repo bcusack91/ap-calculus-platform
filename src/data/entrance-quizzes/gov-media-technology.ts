@@ -43,7 +43,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
       "$1.5 billion"
     ],
     correctIndex: 2,
-    explanation: "DOMINION v. FOX NEWS settled for $787.5 MILLION on April 18, 2023 — largest known defamation settlement in US media history. Fox knowingly broadcast false claims about Dominion voting machines manipulating 2020 election. Applied NYT v. Sullivan 1964 actual malice standard. Internal Fox communications showed hosts/executives knew claims were false but aired anyway for ratings. Smartmatic separate $2.7B suit pending."
+    explanation: "DOMINION v. FOX NEWS settled for $\\$787.5$ MILLION on April 18, 2023 — largest known defamation settlement in US media history. Fox knowingly broadcast false claims about Dominion voting machines manipulating 2020 election. Applied NYT v. Sullivan 1964 actual malice standard. Internal Fox communications showed hosts/executives knew claims were false but aired anyway for ratings. Smartmatic separate $\\$2.7$B suit pending."
   },
   {
     id: 'govmedia-ent-4',

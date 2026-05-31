@@ -3331,7 +3331,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
     formSet: 'both',
   },
   {
-    question: 'If a $1 lottery ticket has expected payout $0.65, the expected NET gain per ticket is:',
+    question: 'If a $\\$1$ lottery ticket has expected payout $\\$0.65$, the expected NET gain per ticket is:',
     options: ['$0.65', '−$0.35', '$1.65', '$0'],
     correctAnswer: 1,
     explanation: 'Net gain = payout − cost = 0.65 − 1.00 = −$0.35. On average you lose 35¢ per ticket.',
@@ -3393,7 +3393,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'Daily revenue (mean $500, sd $80) is independent across 5 days. What is the standard deviation of total weekly revenue?',
+    question: 'Daily revenue (mean $\\$500$, sd $\\$80$) is independent across 5 days. What is the standard deviation of total weekly revenue?',
     options: ['$80', '$179', '$400', '$2500'],
     correctAnswer: 1,
     explanation: 'σ_total = √(5 · 80²) = √32000 ≈ $179. Variances add across independent days.',
