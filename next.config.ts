@@ -3,6 +3,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
 import remarkMath from "remark-math";
+import remarkFrontmatter from "remark-frontmatter";
 import rehypeKatex from "rehype-katex";
 
 const analyzeBundles = withBundleAnalyzer({
@@ -261,7 +262,9 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkMath],
+    // remarkFrontmatter must run first so the YAML frontmatter block is parsed
+    // and removed from the rendered output (otherwise it shows up as body text).
+    remarkPlugins: [remarkFrontmatter, remarkMath],
     rehypePlugins: [rehypeKatex],
   },
 });
