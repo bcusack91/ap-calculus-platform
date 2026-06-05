@@ -80,6 +80,17 @@ export async function generateMetadata(props: CoursePageProps): Promise<Metadata
   }
 }
 
+// Renders a colored icon tile for a category. Uses the category emoji when
+// present, otherwise falls back to the first letter so icon-less categories
+// (e.g. SAT) still get a polished, on-theme glyph.
+function CategoryGlyph({ icon, name, gradient }: { icon: string | null; name: string; gradient: string }) {
+  return (
+    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${gradient} text-2xl font-bold text-white shadow-sm`}>
+      {icon || name.charAt(0).toUpperCase()}
+    </div>
+  )
+}
+
 export default async function CoursePage({ params, searchParams: searchParamsPromise }: CoursePageProps) {
   const { slug } = await params
   const searchParams = await searchParamsPromise
@@ -190,25 +201,32 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
       <div className="mx-auto max-w-6xl">
         {/* Course Header */}
-        <div className={`rounded-3xl bg-gradient-to-br ${colors.bg} p-12 mb-12`}>
-          <div className="flex items-start gap-6">
-            <div className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${colors.gradient} text-white text-5xl font-bold shadow-lg`}>
+        <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${colors.bg} p-8 sm:p-12 mb-12 ring-1 ring-black/5 dark:ring-white/10`}>
+          <div className={`pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gradient-to-br ${colors.gradient} opacity-10 blur-3xl`} aria-hidden="true" />
+          <div className="relative flex flex-col sm:flex-row sm:items-center gap-6">
+            <div className={`flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${colors.gradient} text-white text-5xl font-bold shadow-lg`}>
               {course.icon || '📚'}
             </div>
             <div className="flex-1">
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{course.name}</h1>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">{course.description}</p>
-              <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
-                <div>
-                  <span className="font-semibold">{allCategories.length}</span> Categories
-                </div>
-                <div>
-                  <span className="font-semibold">{totalTopics}</span> Topics
-                </div>
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">{course.name}</h1>
+              <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">{course.description}</p>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 dark:bg-gray-900/50 px-4 py-1.5 text-sm backdrop-blur ring-1 ring-black/5 dark:ring-white/10">
+                  <span className="font-bold text-gray-900 dark:text-white">{allCategories.length}</span>
+                  <span className="text-gray-600 dark:text-gray-400">Categories</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 dark:bg-gray-900/50 px-4 py-1.5 text-sm backdrop-blur ring-1 ring-black/5 dark:ring-white/10">
+                  <span className="font-bold text-gray-900 dark:text-white">{totalTopics}</span>
+                  <span className="text-gray-600 dark:text-gray-400">Topics</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 dark:bg-gray-900/50 px-4 py-1.5 text-sm backdrop-blur ring-1 ring-black/5 dark:ring-white/10">
+                  <span className="font-bold text-gray-900 dark:text-white">100%</span>
+                  <span className="text-gray-600 dark:text-gray-400">Free</span>
+                </span>
                 {abCategories.length > 0 && (
-                  <div className="text-violet-600 dark:text-violet-400 font-medium">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-600/10 px-4 py-1.5 text-sm font-medium text-violet-700 dark:text-violet-300 ring-1 ring-violet-600/20">
                     Includes all AB + BC content
-                  </div>
+                  </span>
                 )}
               </div>
             </div>
@@ -234,18 +252,26 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
               </p>
             )}
             {allCategories.length > 0 && (
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">What You&apos;ll Learn</h3>
-                <ul className="list-disc pl-6 space-y-1">
+              <div className="not-prose mt-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">What You&apos;ll Learn</h3>
+                <div className="grid gap-3 sm:grid-cols-2">
                   {allCategories.slice(0, 12).map((cat) => (
-                    <li key={cat.id}>
-                      <strong>{cat.name}</strong>{cat.description ? ` — ${cat.description}` : ''} ({cat.topics.length} {cat.topics.length === 1 ? 'topic' : 'topics'})
-                    </li>
+                    <div key={cat.id} className="flex gap-3 rounded-xl border border-gray-100 bg-gray-50/70 p-3 dark:border-gray-800 dark:bg-gray-800/40">
+                      <span className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${colors.gradient} text-sm font-bold text-white`}>
+                        {cat.icon || cat.name.charAt(0).toUpperCase()}
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-gray-900 dark:text-white">{cat.name}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
+                          {cat.description || `${cat.topics.length} ${cat.topics.length === 1 ? 'topic' : 'topics'}`}
+                        </p>
+                      </div>
+                    </div>
                   ))}
-                  {allCategories.length > 12 && (
-                    <li>...and {allCategories.length - 12} more categories</li>
-                  )}
-                </ul>
+                </div>
+                {allCategories.length > 12 && (
+                  <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">…and {allCategories.length - 12} more categories below.</p>
+                )}
               </div>
             )}
             <p className="mt-4">
@@ -475,32 +501,30 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                 </div>
                 {abCategories.map((category) => (
                   <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm ring-1 ring-purple-100 dark:ring-purple-900/50">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-3">
-                        {category.icon && (
-                          <span className="text-3xl">{category.icon}</span>
-                        )}
-                        <div>
-                          <Link 
-                            href={`/categories/${category.slug}`}
-                            className="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                          >
-                            {category.name}
-                          </Link>
+                    <div className="flex items-center justify-between gap-4 mb-6">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <CategoryGlyph icon={category.icon} name={category.name} gradient={colors.gradient} />
+                        <div className="min-w-0">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <Link
+                              href={`/categories/${category.slug}`}
+                              className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                            >
+                              {category.name}
+                            </Link>
+                            <span className="shrink-0 rounded-full bg-purple-50 dark:bg-purple-900/30 px-2 py-0.5 text-xs font-medium text-purple-600 dark:text-purple-400">AB</span>
+                          </div>
                           {category.description && (
-                            <p className="text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
+                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
                           )}
                         </div>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs font-medium text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-full">AB</span>
-                        <Link
-                          href={`/categories/${category.slug}`}
-                          className="text-sm text-purple-600 hover:text-purple-700 font-medium whitespace-nowrap"
-                        >
-                          View All →
-                        </Link>
-                      </div>
+                      <Link
+                        href={`/categories/${category.slug}`}
+                        className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-purple-600 transition hover:border-purple-300 hover:bg-purple-50 dark:border-gray-700 dark:text-purple-400 dark:hover:bg-purple-900/20"
+                      >
+                        View All →
+                      </Link>
                     </div>
 
                     {category.topics.length > 0 ? (
@@ -509,16 +533,19 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                           <Link
                             key={topic.id}
                             href={`/topics/${topic.slug}`}
-                            className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
+                            className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-purple-600"
                           >
-                            <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
-                              {topic.title}
-                            </h3>
+                            <div className="flex items-start justify-between gap-2 mb-2">
+                              <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                {topic.title}
+                              </h3>
+                              <span aria-hidden="true" className="shrink-0 text-purple-400 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
+                            </div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                               {topic.description}
                             </p>
                             {'_count' in topic && (topic as typeof topic & { _count: { subtopics: number } })._count.subtopics > 0 && (
-                              <span className="inline-block mt-2 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
+                              <span className="inline-block mt-3 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
                                 {(topic as typeof topic & { _count: { subtopics: number } })._count.subtopics} subtopics
                               </span>
                             )}
@@ -546,26 +573,29 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
             {course.categories.map((category) => (
               <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    {category.icon && (
-                      <span className="text-3xl">{category.icon}</span>
-                    )}
-                    <div>
-                      <Link 
-                        href={`/categories/${category.slug}`}
-                        className="text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                      >
-                        {category.name}
-                      </Link>
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <CategoryGlyph icon={category.icon} name={category.name} gradient={colors.gradient} />
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Link
+                          href={`/categories/${category.slug}`}
+                          className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                        >
+                          {category.name}
+                        </Link>
+                        <span className="shrink-0 rounded-full bg-gray-100 dark:bg-gray-800 px-2 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-400">
+                          {category.topics.length} {category.topics.length === 1 ? 'topic' : 'topics'}
+                        </span>
+                      </div>
                       {category.description && (
-                        <p className="text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
+                        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
                       )}
                     </div>
                   </div>
                   <Link
                     href={`/categories/${category.slug}`}
-                    className="text-sm text-purple-600 hover:text-purple-700 font-medium whitespace-nowrap ml-4"
+                    className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-purple-600 transition hover:border-purple-300 hover:bg-purple-50 dark:border-gray-700 dark:text-purple-400 dark:hover:bg-purple-900/20"
                   >
                     View All →
                   </Link>
@@ -577,16 +607,19 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                       <Link
                         key={topic.id}
                         href={`/topics/${topic.slug}`}
-                        className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
+                        className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-purple-600"
                       >
-                        <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
-                          {topic.title}
-                        </h3>
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                            {topic.title}
+                          </h3>
+                          <span aria-hidden="true" className="shrink-0 text-purple-400 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
+                        </div>
                         <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                           {topic.description}
                         </p>
                         {'_count' in topic && (topic as typeof topic & { _count: { subtopics: number } })._count.subtopics > 0 && (
-                          <span className="inline-block mt-2 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
+                          <span className="inline-block mt-3 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
                             {(topic as typeof topic & { _count: { subtopics: number } })._count.subtopics} subtopics
                           </span>
                         )}
