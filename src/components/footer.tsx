@@ -24,6 +24,7 @@ const footerLinks = {
   ],
   'Company': [
     { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
     { name: 'Editorial Standards', href: '/editorial-standards' },
     { name: 'Terms of Service', href: '/terms' },
