@@ -11,6 +11,7 @@ import rehypeRaw from 'rehype-raw'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
@@ -39,9 +40,35 @@ import ScratchPad from '@/components/ScratchPad'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
+// Detects a markdown pipe-table (a row containing "|" immediately followed by a
+// separator line like "| --- | --- |"). Used to route table-bearing text to the
+// rich-text pipeline, since the inline LaTeX splitter can't handle tables.
+function containsMarkdownTable(text: string): boolean {
+  if (!text.includes('|')) return false
+  const lines = text.split('\n')
+  for (let i = 0; i + 1 < lines.length; i++) {
+    if (lines[i].includes('|') && /^\s*\|?\s*[-:]+[-:|  ]+\s*$/.test(lines[i + 1])) {
+      return true
+    }
+  }
+  return false
+}
+
 // Helper component to render inline LaTeX within text strings
 // Parses $...$ and $$...$$ delimiters and renders via KaTeX
 function InlineLatex({ text, className }: { text: string; className?: string }) {
+  // Markdown pipe-tables can't be tokenized by the inline LaTeX splitter below,
+  // so delegate table-containing text to the shared rich-text pipeline (which
+  // handles markdown tables + $...$ math) and render the resulting HTML.
+  if (text && containsMarkdownTable(text)) {
+    return (
+      <span
+        className={className}
+        dangerouslySetInnerHTML={{ __html: renderRichText(text) }}
+      />
+    )
+  }
+
   if (!text || (!text.includes('$') && !text.includes('\\('))) {
     return <span className={className}>{text}</span>
   }

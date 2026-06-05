@@ -59,7 +59,7 @@ When given a table, calculate slope: $m = \\frac{\\Delta y}{\\Delta x}$ using an
             explanation: '$500 - 20t = 200$ → $20t = 300$ → $t = 15$ minutes.'
           },
           {
-            question: 'The table shows: when $x = 2$, $y = 11$; when $x = 5$, $y = 20$. What is $y$ when $x = 0$?',
+            question: 'The table shows values of a linear function. What is $y$ when $x = 0$?\n\n| x | y |\n| --- | --- |\n| 2 | 11 |\n| 5 | 20 |',
             options: ['$5$', '$3$', '$7$', '$1$'],
             correctAnswer: 0,
             explanation: 'Slope $= (20 - 11)/(5 - 2) = 9/3 = 3$. Using $(2, 11)$: $11 = 3(2) + b$ → $b = 5$. So $y = 3x + 5$ and $y(0) = 5$.'

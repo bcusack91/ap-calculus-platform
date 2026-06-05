@@ -392,7 +392,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(20, 50); const b = randInt(10, 40); const c = randInt(15, 45); const d = randInt(10, 35)
       const total = a + b + c + d
       const correct = `${a}/${total}`
-      return { id: this.id, category: this.category, question: `Two-way table: Group A Yes=${a}, No=${b}. Group B Yes=${c}, No=${d}. P(Group A and Yes) = ?`, ...makeStringOptions(correct, [`${a + c}/${total}`, `${a}/${a + b}`, `${a}/${a + c}`]), explanation: `Joint probability: ${a} out of total ${total} = ${a}/${total}.` }
+      return { id: this.id, category: this.category, question: `What is P(Group A and Yes)?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group A | ${a} | ${b} |\n| Group B | ${c} | ${d} |`, ...makeStringOptions(correct, [`${a + c}/${total}`, `${a}/${a + b}`, `${a}/${a + c}`]), explanation: `Joint probability: ${a} out of total ${total} = ${a}/${total}.` }
     }
   },
   {

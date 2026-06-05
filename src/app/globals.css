@@ -550,6 +550,10 @@ blockquote h2 {
   text-align: center;
 }
 
+.inline-table td {
+  font-weight: 400;
+}
+
 .inline-table th {
   background-color: #f3f4f6;
   font-weight: 600;

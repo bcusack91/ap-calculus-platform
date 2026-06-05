@@ -283,7 +283,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(total, 10)
       return {
         id: this.id, category: this.category,
-        question: `In a two-way table: Yes/Male=$${a}$, Yes/Female=$${b}$, No/Male=$${c}$, No/Female=$${d}$. Total surveyed?`,
+        question: `What is the total number of people surveyed in this two-way table?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Male | ${a} | ${c} |\n| Female | ${b} | ${d} |`,
         options, correctIndex,
         explanation: `$${a} + ${b} + ${c} + ${d} = ${total}$.`
       }
@@ -788,7 +788,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(conditionalPct, 5)
       return {
         id: this.id, category: this.category,
-        question: `In a table, Group 1: Yes=$${a}$, No=$${c}$. What percent of Group 1 said Yes?`,
+        question: `What percent of Group 1 said Yes?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group 1 | ${a} | ${c} |`,
         options, correctIndex,
         explanation: `$\\frac{${a}}{${a} + ${c}} = \\frac{${a}}{${colTotal}} \\approx ${conditionalPct}\\%$.`
       }

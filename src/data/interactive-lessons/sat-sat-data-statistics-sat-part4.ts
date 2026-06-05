@@ -64,11 +64,11 @@ In this example they happen to give the same answer because both totals are 70, 
     {
       id: 'ds4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Two-Way Tables** 🎯',
+      content: '**Two-Way Tables** 🎯\n\n|  | Cat | Dog |\n| --- | --- | --- |\n| Male | 30 | 50 |\n| Female | 40 | 30 |',
       exercise: {
         questions: [
           {
-            question: 'Using the table (Male/Cat=30, Male/Dog=50, Female/Cat=40, Female/Dog=30): What percentage of males prefer cats?',
+            question: 'Using the table above, what percentage of males prefer cats?',
             options: ['$37.5\\%$', '$42.9\\%$', '$20\\%$', '$30\\%$'],
             correctAnswer: 0,
             explanation: 'Of males (total 80), 30 prefer cats: $30/80 = 37.5\\%$. The denominator is the male row total.'
@@ -123,13 +123,13 @@ Convert a two-way table to relative frequencies (divide everything by grand tota
       exercise: {
         questions: [
           {
-            question: 'In a survey, 200 students were asked about music preference. 60 males like rock, 40 males like pop, 30 females like rock, 70 females like pop. What fraction of pop fans are male?',
+            question: 'In a survey, 200 students were asked about music preference. What fraction of pop fans are male?\n\n|  | Rock | Pop |\n| --- | --- | --- |\n| Male | 60 | 40 |\n| Female | 30 | 70 |',
             options: ['$4/11$', '$40/200$', '$40/100$', '$4/20$'],
             correctAnswer: 0,
             explanation: 'Total pop fans = $40 + 70 = 110$. Males who like pop = 40. Fraction = $40/110 = 4/11$.'
           },
           {
-            question: 'Using the sports/club table (30 both, 25 sports-only, 50 club-only, 15 neither): What percentage of non-athletes are in a club?',
+            question: 'Using the sports/club table below, what percentage of non-athletes are in a club?\n\n|  | Club | No Club |\n| --- | --- | --- |\n| Sports | 30 | 25 |\n| No Sports | 50 | 15 |',
             options: ['$76.9\\%$', '$62.5\\%$', '$41.7\\%$', '$50\\%$'],
             correctAnswer: 0,
             explanation: 'Non-athletes: $65$ total. In club: $50$. $50/65 ≈ 76.9\\%$.'
