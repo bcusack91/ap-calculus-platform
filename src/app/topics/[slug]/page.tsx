@@ -20,6 +20,7 @@ import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
 import { SocialShare } from '@/components/SocialShare'
+import { ArticleByline } from '@/components/ArticleByline'
 import { TopicContentTools } from '@/components/TopicContentTools'
 import TrackedLink from '@/components/TrackedLink'
 import { getTopicAdVariant } from '@/lib/experiments'
@@ -38,7 +39,13 @@ export async function generateMetadata(props: TopicPageProps): Promise<Metadata>
   const params = await props.params
   const topic = await prisma.topic.findUnique({
     where: { slug: params.slug },
-    select: { title: true, description: true, slug: true }
+    select: {
+      title: true,
+      description: true,
+      slug: true,
+      textContent: true,
+      _count: { select: { exampleProblems: true, subtopics: true } },
+    }
   })
 
   if (!topic) {
@@ -47,12 +54,22 @@ export async function generateMetadata(props: TopicPageProps): Promise<Metadata>
 
   const canonicalUrl = `https://www.studymondo.com/topics/${topic.slug}`
 
+  // Noindex genuinely thin pages: very little written content AND no practice
+  // problems AND no subtopics. Keeps low-value pages out of the index so the
+  // site is judged on its substantial content.
+  const contentLength = (topic.textContent || '').trim().length
+  const isThin =
+    contentLength < 600 &&
+    topic._count.exampleProblems === 0 &&
+    topic._count.subtopics === 0
+
   return {
     title: `${topic.title} | Study Mondo`,
     description: topic.description,
     alternates: {
       canonical: canonicalUrl,
     },
+    ...(isThin ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: topic.title,
       description: topic.description,
@@ -251,6 +268,17 @@ export default async function TopicPage(props: TopicPageProps) {
             name: topic.title,
             description: topic.description,
             url: `https://www.studymondo.com/topics/${topic.slug}`,
+            dateModified: topic.updatedAt,
+            datePublished: topic.createdAt,
+            author: {
+              '@type': 'Person',
+              name: 'Brendan Cusack',
+              url: 'https://www.studymondo.com/about',
+            },
+            reviewedBy: {
+              '@type': 'Person',
+              name: 'Brendan Cusack',
+            },
             provider: {
               '@type': 'Organization',
               name: 'Study Mondo',
@@ -316,6 +344,9 @@ export default async function TopicPage(props: TopicPageProps) {
               )}
               */}
             </div>
+
+            {/* Editorial byline — author/reviewer + last-updated (E-E-A-T) */}
+            <ArticleByline updatedAt={topic.updatedAt} className="mb-6" />
 
             {/* Social sharing */}
             <div className="mb-6 social-share">

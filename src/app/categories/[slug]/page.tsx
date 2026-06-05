@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
+import { ArticleByline } from '@/components/ArticleByline'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -219,6 +220,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {/* Category Overview */}
         {category.topics.length > 0 && (
           <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 mb-12 shadow-sm">
+            <ArticleByline updatedAt={category.updatedAt} className="mb-5" />
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">What You&apos;ll Learn in {category.name}</h2>
             <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
               {category.description && <p>{category.description}</p>}

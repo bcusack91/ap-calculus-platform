@@ -7,6 +7,7 @@ import { breadcrumbJsonLd } from '@/lib/jsonld'
 import CourseEntranceQuiz from '@/components/CourseEntranceQuiz'
 import DiagnosticStudyPlanBanner from '@/components/DiagnosticStudyPlanBanner'
 import TrackedLink from '@/components/TrackedLink'
+import { ArticleByline } from '@/components/ArticleByline'
 import {
   courseDailyQuestionMap,
   courseDiagnosticMap,
@@ -238,6 +239,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
         {/* Course Overview */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 mb-12 shadow-sm">
+          <ArticleByline updatedAt={course.updatedAt} className="mb-5" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Course Overview</h2>
           <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
             <p>

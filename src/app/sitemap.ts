@@ -33,6 +33,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/editorial-standards`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/privacy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -232,19 +238,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Topic pages (all 534 topics)
   const topics = await prisma.topic.findMany({
-    select: { slug: true, updatedAt: true },
+    select: {
+      slug: true,
+      updatedAt: true,
+      textContent: true,
+      _count: { select: { exampleProblems: true, subtopics: true } },
+    },
     orderBy: { order: 'asc' },
   }).catch((error) => {
     console.warn('Sitemap: topics unavailable, continuing with static pages only.', error)
     return []
   })
 
-  const topicPages: MetadataRoute.Sitemap = topics.map((topic) => ({
-    url: `${baseUrl}/topics/${topic.slug}`,
-    lastModified: topic.updatedAt,
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }))
+  const topicPages: MetadataRoute.Sitemap = topics
+    // Exclude genuinely thin topics — these are noindexed in the page metadata,
+    // so submitting them would create "submitted but excluded by noindex"
+    // warnings. Keep this rule in sync with generateMetadata in
+    // src/app/topics/[slug]/page.tsx.
+    .filter((topic) => {
+      const contentLength = (topic.textContent || '').trim().length
+      const isThin =
+        contentLength < 600 &&
+        topic._count.exampleProblems === 0 &&
+        topic._count.subtopics === 0
+      return !isThin
+    })
+    .map((topic) => ({
+      url: `${baseUrl}/topics/${topic.slug}`,
+      lastModified: topic.updatedAt,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    }))
 
   // Category pages
   const categories = await prisma.category.findMany({
