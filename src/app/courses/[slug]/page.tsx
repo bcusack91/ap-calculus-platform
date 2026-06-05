@@ -419,13 +419,16 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                     destination: `/courses/${slug}/cram/${plan.slug}`,
                     location: 'course_study_plans_box',
                   }}
-                  className="group flex flex-col gap-1 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-indigo-400 hover:shadow-md dark:border-gray-700 dark:bg-gray-900 dark:hover:border-indigo-500"
+                  className="group flex flex-col gap-1 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-indigo-400 hover:shadow-md hover:-translate-y-0.5 dark:border-gray-700 dark:bg-gray-900 dark:hover:border-indigo-500"
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">{plan.icon}</span>
-                    <span className="font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
-                      {plan.titleSuffix}
-                    </span>
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-xl">{plan.icon}</span>
+                      <span className="font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                        {plan.titleSuffix}
+                      </span>
+                    </div>
+                    <span aria-hidden="true" className="shrink-0 text-indigo-400 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
                   </div>
                   <p className="text-xs text-gray-600 dark:text-gray-400">{plan.tagline}</p>
                   <p className="mt-1 text-xs font-medium text-indigo-600 dark:text-indigo-400">{plan.estimate}</p>
@@ -455,9 +458,10 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                     cta_type: 'related_topic_card',
                     location: 'course_featured_topics',
                   }}
-                  className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-indigo-400 hover:bg-indigo-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/20"
+                  className="group flex items-center justify-between gap-2 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-indigo-400 hover:bg-indigo-50 hover:shadow-md hover:-translate-y-0.5 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/20"
                 >
-                  {topic.title}
+                  <span className="min-w-0 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">{topic.title}</span>
+                  <span aria-hidden="true" className="shrink-0 text-indigo-400 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
                 </TrackedLink>
               ))}
             </div>
