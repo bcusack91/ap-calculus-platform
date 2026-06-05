@@ -3,6 +3,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
 import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
 import remarkFrontmatter from "remark-frontmatter";
 import rehypeKatex from "rehype-katex";
 
@@ -264,7 +265,8 @@ const withMDX = createMDX({
   options: {
     // remarkFrontmatter must run first so the YAML frontmatter block is parsed
     // and removed from the rendered output (otherwise it shows up as body text).
-    remarkPlugins: [remarkFrontmatter, remarkMath],
+    // remarkGfm enables GitHub-flavored markdown (tables, strikethrough, etc.).
+    remarkPlugins: [remarkFrontmatter, remarkGfm, remarkMath],
     rehypePlugins: [rehypeKatex],
   },
 });
