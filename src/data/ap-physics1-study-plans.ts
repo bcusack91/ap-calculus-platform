@@ -85,6 +85,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule covering kinematics, forces, energy, waves, and circuits — automatically scheduled for you.',
   backLink: { href: '/ap-physics-1', label: 'AP Physics 1' },
   apiEndpoint: '/api/ap-physics1-study-plans',
+  diagnosticPrefix: 'ap-physics1-diagnostic',
   accent: 'cyan',
   examLabel: 'AP Exam Date',
   plans: AP_PHYSICS1_PLANS,

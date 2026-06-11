@@ -9,8 +9,6 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import {
   getPrecalcFRQs,
-  getLongFRQs,
-  getShortFRQs,
   generateFullExamFRQs,
   type PrecalcFRQ,
   type FRQRubricItem,
@@ -47,6 +45,8 @@ export default function APPrecalcFRQPage() {
   const [mode, setMode] = useState<Mode>('menu')
   const [filter, setFilter] = useState<Filter>('all')
   const [frqs, setFrqs] = useState<PrecalcFRQ[]>([])
+  // FRQ pool from the content store (DB) with a static fallback (#10). Practice uses DB; timed exam stays static.
+  const [allFrqs, setAllFrqs] = useState<PrecalcFRQ[]>(() => getPrecalcFRQs())
   const [currentIdx, setCurrentIdx] = useState(0)
   const [responses, setResponses] = useState<Record<string, string>>({})
   const [results, setResults] = useState<Record<string, ReturnType<typeof gradeResponse>>>({})
@@ -60,6 +60,15 @@ export default function APPrecalcFRQPage() {
       router.push('/auth/signin?callbackUrl=/ap-precalc-frq')
     }
   }, [status, router])
+
+  useEffect(() => {
+    let active = true
+    fetch('/api/frq/ap-precalc')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [])
 
   useEffect(() => {
     if (mode !== 'timed' || timeRemaining <= 0) return
@@ -79,7 +88,7 @@ export default function APPrecalcFRQPage() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? getLongFRQs() : f === 'short' ? getShortFRQs() : getPrecalcFRQs()
+    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -87,7 +96,7 @@ export default function APPrecalcFRQPage() {
     setShowSample({})
     setShowRubric({})
     setMode('practice')
-  }, [])
+  }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
     const { long, short } = generateFullExamFRQs()
@@ -256,7 +265,7 @@ export default function APPrecalcFRQPage() {
                     All FRQs
                   </h3>
                   <p className="text-xs text-gray-500">
-                    {getPrecalcFRQs().length} questions · Untimed
+                    {allFrqs.length} questions · Untimed
                   </p>
                 </div>
               </div>

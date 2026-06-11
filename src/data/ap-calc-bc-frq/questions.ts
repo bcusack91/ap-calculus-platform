@@ -475,7 +475,7 @@ export function getShortFRQs(): CalcBCFRQ[] {
   return shortFRQs
 }
 
-export function generateFullExamFRQs(): {
+export function generateFullExamFRQs(pool: CalcBCFRQ[] = apCalcBCFRQs): {
   long: CalcBCFRQ[]
   short: CalcBCFRQ[]
   totalPoints: number
@@ -490,8 +490,8 @@ export function generateFullExamFRQs(): {
     return copy
   }
 
-  const selectedLong = shuffle(longFRQs).slice(0, 2)
-  const selectedShort = shuffle(shortFRQs).slice(0, 4)
+  const selectedLong = shuffle(pool.filter((f) => f.type === 'long')).slice(0, 2)
+  const selectedShort = shuffle(pool.filter((f) => f.type === 'short')).slice(0, 4)
 
   const totalPoints =
     selectedLong.reduce((s, q) => s + q.totalPoints, 0) +

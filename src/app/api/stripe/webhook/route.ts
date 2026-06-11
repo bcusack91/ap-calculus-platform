@@ -31,6 +31,31 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
+  // ── Idempotency guard ──
+  // Stripe retries deliveries (network blips, non-2xx responses), so the same
+  // event can arrive more than once. Claim the event id atomically: if the
+  // INSERT succeeds we're the first to see it; if it hits the unique PK, this
+  // is a duplicate and we acknowledge without re-processing — preventing
+  // double upgrades/downgrades.
+  try {
+    await prisma.processedWebhookEvent.create({
+      data: { id: event.id, type: event.type },
+    })
+  } catch (err) {
+    // P2002 = unique constraint violation → already processed this event.
+    if (
+      typeof err === 'object' &&
+      err !== null &&
+      'code' in err &&
+      (err as { code?: string }).code === 'P2002'
+    ) {
+      return NextResponse.json({ received: true, duplicate: true })
+    }
+    // Any other DB error: don't acknowledge, let Stripe retry later.
+    console.error('Webhook idempotency check failed:', err)
+    return NextResponse.json({ error: 'Idempotency check failed' }, { status: 500 })
+  }
+
   try {
     switch (event.type) {
       case 'checkout.session.completed': {
@@ -92,6 +117,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ received: true })
   } catch (error) {
     console.error('Webhook handler error:', error)
+    // Release the idempotency claim so Stripe's retry can re-process this event
+    // (we only want to suppress duplicates of *successfully* handled events).
+    await prisma.processedWebhookEvent
+      .delete({ where: { id: event.id } })
+      .catch((delErr) => console.error('Failed to release webhook claim:', delErr))
     return NextResponse.json(
       { error: 'Webhook handler failed' },
       { status: 500 }

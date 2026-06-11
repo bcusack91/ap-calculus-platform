@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import UnitTestsClient from '@/components/UnitTestsClient'
+import { getUnitTestUnits } from '@/lib/content-store'
 import { AP_WORLD_HISTORY_UNIT_TESTS_CONFIG } from '@/data/unit-tests/ap-world-history'
 
 export const metadata: Metadata = {
@@ -13,10 +14,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function APWorldHistoryUnitTestsPage() {
+// ISR: cache the rendered page but pick up content-store edits within the window (#10).
+export const revalidate = 300
+
+export default async function APWorldHistoryUnitTestsPage() {
+  const units = await getUnitTestUnits(AP_WORLD_HISTORY_UNIT_TESTS_CONFIG.courseSlug, AP_WORLD_HISTORY_UNIT_TESTS_CONFIG.units)
   return (
     <UnitTestsClient
-      config={AP_WORLD_HISTORY_UNIT_TESTS_CONFIG}
+      config={{ ...AP_WORLD_HISTORY_UNIT_TESTS_CONFIG, units }}
       theme={{
         bgGradient: 'bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
         badgeClass: 'bg-amber-100 px-4 py-1.5 text-sm font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',

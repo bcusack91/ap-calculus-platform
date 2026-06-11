@@ -136,6 +136,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-biology', label: 'AP Biology' },
   apiEndpoint: '/api/ap-bio-study-plans',
+  diagnosticPrefix: 'ap-bio-diagnostic',
   accent: 'green',
   examLabel: 'AP Exam Date',
   plans: AP_BIO_PLANS,

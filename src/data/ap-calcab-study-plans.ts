@@ -232,6 +232,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-calculus-ab', label: 'AP Calculus AB' },
   apiEndpoint: '/api/ap-calcab-study-plans',
+  diagnosticPrefix: 'calcab-diagnostic',
   accent: 'blue',
   examLabel: 'AP Exam Date',
   plans: AP_CALCAB_PLANS,

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { MCAT_STUDY_PLANS, resolveMCATTemplateTasks } from '@/data/mcat-study-plans'
+import { applyAdaptivePriority } from '@/lib/adaptive-study-plan'
 
 export async function POST(request: Request) {
   const session = await auth()
@@ -24,6 +25,9 @@ export async function POST(request: Request) {
   const start = startDate ? new Date(startDate) : new Date()
   const resolvedTasks = resolveMCATTemplateTasks(template, start)
 
+  // Adaptive (#4): front-load weak areas from the latest MCAT diagnostic; no-op if none.
+  const { tasks } = await applyAdaptivePriority(session.user.id, 'mcat-full-diagnostic', resolvedTasks, start)
+
   // Compute default exam date if not provided (start + duration weeks)
   const defaultExamDate = new Date(start)
   defaultExamDate.setDate(defaultExamDate.getDate() + template.durationWeeks * 7)
@@ -37,7 +41,7 @@ export async function POST(request: Request) {
       examDate: examDate ? new Date(examDate) : defaultExamDate,
       isActive: true,
       tasks: {
-        create: resolvedTasks,
+        create: tasks,
       },
     },
     include: { tasks: { orderBy: { sortOrder: 'asc' } } },

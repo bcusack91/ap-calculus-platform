@@ -79,6 +79,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan covers key psychology units with lessons, term drills, and practice exams.',
   backLink: { href: '/ap-psychology', label: 'AP Psychology' },
   apiEndpoint: '/api/ap-psych-study-plans',
+  diagnosticPrefix: 'ap-psych-diagnostic',
   accent: 'rose',
   examLabel: 'AP Exam Date',
   plans: AP_PSYCH_PLANS,

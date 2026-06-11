@@ -132,6 +132,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-us-history', label: 'AP US History' },
   apiEndpoint: '/api/ap-us-history-study-plans',
+  diagnosticPrefix: 'ap-us-history-diagnostic',
   accent: 'red',
   examLabel: 'AP Exam Date',
   plans: AP_US_HISTORY_PLANS,

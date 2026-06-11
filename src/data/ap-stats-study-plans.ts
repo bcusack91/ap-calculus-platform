@@ -82,4 +82,5 @@ export const config: StudyPlanSelectorConfig = {
   accent: 'amber',
   examLabel: 'AP Exam Date',
   plans: AP_STATS_PLANS,
+  diagnosticPrefix: 'ap-stats-diagnostic',
 }

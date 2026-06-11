@@ -132,6 +132,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-cs-principles', label: 'AP CS Principles' },
   apiEndpoint: '/api/ap-csp-study-plans',
+  diagnosticPrefix: 'ap-csp-diagnostic',
   accent: 'blue',
   examLabel: 'AP Exam Date',
   plans: AP_CSP_PLANS,

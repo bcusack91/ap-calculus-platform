@@ -49,6 +49,11 @@ export async function cached<T>(key: string, ttl: number, fn: () => Promise<T>):
   }
 }
 
+/** Canonical cache key for a user's assembled dashboard payload. */
+export function dashboardCacheKey(userId: string): string {
+  return `dashboard:v1:${userId}`
+}
+
 /**
  * Invalidate a cached key.
  */

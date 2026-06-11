@@ -228,6 +228,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-chemistry', label: 'AP Chemistry' },
   apiEndpoint: '/api/ap-chem-study-plans',
+  diagnosticPrefix: 'ap-chem-diagnostic',
   accent: 'emerald',
   examLabel: 'AP Exam Date',
   plans: AP_CHEM_PLANS,

@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { MCAT_STUDY_PLANS } from '@/data/mcat-study-plans'
+import DiagnosticFocusBanner from '@/components/DiagnosticFocusBanner'
 
 const difficultyColors: Record<string, string> = {
   Beginner:
@@ -84,6 +85,9 @@ export default function MCATStudyPlansPage() {
             <p className="font-semibold">Plan adopted! Redirecting to your dashboard…</p>
           </div>
         )}
+
+        {/* Personalized from the student's MCAT diagnostic (#4) */}
+        <DiagnosticFocusBanner prefix="mcat-full-diagnostic" />
 
         {/* Plans Grid */}
         <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">

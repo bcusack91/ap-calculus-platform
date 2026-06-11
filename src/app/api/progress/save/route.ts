@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { progressSaveSchema, parseBody } from '@/lib/validations'
+import { invalidateCache, dashboardCacheKey } from '@/lib/redis'
 
 export async function POST(request: Request) {
   try {
@@ -284,10 +285,11 @@ export async function POST(request: Request) {
       }
     }
 
-    // Store lesson part and completed sections in a separate storage
-    // (Could add a JSON field to TopicProgress or use localStorage as cache)
-    
-    return NextResponse.json({ 
+    // Progress changed — drop the user's cached dashboard so their next
+    // dashboard load reflects this update immediately rather than after the TTL.
+    await invalidateCache(dashboardCacheKey(session.user.id))
+
+    return NextResponse.json({
       success: true,
       progress: {
         status: progress.status,

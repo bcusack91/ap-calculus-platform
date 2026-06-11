@@ -127,6 +127,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-african-american-studies', label: 'AP African American Studies' },
   apiEndpoint: '/api/ap-african-american-studies-study-plans',
+  diagnosticPrefix: 'ap-aas-diagnostic',
   accent: 'amber',
   examLabel: 'AP Exam Date',
   plans: AP_AAS_PLANS,

@@ -218,6 +218,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule covering fluids, thermodynamics, electricity and magnetism, optics, and modern physics — automatically scheduled for you.',
   backLink: { href: '/ap-physics-2', label: 'AP Physics 2' },
   apiEndpoint: '/api/ap-physics2-study-plans',
+  diagnosticPrefix: 'ap-physics2-diagnostic',
   accent: 'cyan',
   examLabel: 'AP Exam Date',
   plans: AP_PHYSICS2_PLANS,

@@ -77,6 +77,13 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
   // discoverable at review time.
   return (
     <div className="my-4" aria-label="Advertisement" role="complementary">
+      {/* Visible label: AdSense policy best practice — clearly demarcating the
+          ad from surrounding content reduces accidental clicks and the
+          "ads confused with content" policy risk, especially on mobile where an
+          ad embedded in reading flow can be mistaken for site content. */}
+      <p className="text-[11px] uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-1 text-center select-none">
+        Advertisement
+      </p>
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}

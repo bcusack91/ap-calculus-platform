@@ -498,7 +498,7 @@ export function getShortFRQs(): MacroFRQ[] {
   return shortFRQs
 }
 
-export function generateFullExamFRQs(): {
+export function generateFullExamFRQs(pool: MacroFRQ[] = apMacroFRQs): {
   long: MacroFRQ[]
   short: MacroFRQ[]
   totalPoints: number
@@ -513,8 +513,10 @@ export function generateFullExamFRQs(): {
     return copy
   }
 
-  const selectedLong = shuffle(longFRQs).slice(0, 1)
-  const selectedShort = shuffle(shortFRQs).slice(0, 2)
+  // Selects from the provided pool (defaults to the static set) so callers can
+  // pass DB-backed FRQs and keep exam mode consistent with edits.
+  const selectedLong = shuffle(pool.filter((f) => f.type === 'long')).slice(0, 1)
+  const selectedShort = shuffle(pool.filter((f) => f.type === 'short')).slice(0, 2)
   const totalPoints = [...selectedLong, ...selectedShort].reduce((s, f) => s + f.totalPoints, 0)
 
   return {

@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import type { StudyPlanTemplate } from '@/lib/study-plan-utils'
+import DiagnosticFocusBanner from '@/components/DiagnosticFocusBanner'
 
 /* ------------------------------------------------------------------ */
 /*  Accent colour map — every class literal for Tailwind detection     */
@@ -98,6 +99,12 @@ export interface StudyPlanSelectorConfig {
   accent: AccentColor
   examLabel?: string
   plans: StudyPlanTemplate[]
+  /**
+   * Diagnostic category prefix for this course (e.g. "ap-stats-diagnostic").
+   * When set, the page personalizes from the student's latest diagnostic:
+   * a focus banner here, and weak-area tasks front-loaded at adopt time.
+   */
+  diagnosticPrefix?: string
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,7 +112,7 @@ export interface StudyPlanSelectorConfig {
 /* ------------------------------------------------------------------ */
 
 export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
-  const { subject, description, backLink, apiEndpoint, accent, examLabel, plans } = config
+  const { subject, description, backLink, apiEndpoint, accent, examLabel, plans, diagnosticPrefix } = config
   const t = A[accent]
   const { status } = useSession()
   const router = useRouter()
@@ -151,6 +158,10 @@ export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
             <p className="font-semibold">Plan adopted! Redirecting to your dashboard…</p>
           </div>
         )}
+
+        {/* Personalized focus banner — shown when the student has a diagnostic
+            on record. Any plan they adopt will front-load these areas. */}
+        {diagnosticPrefix && <DiagnosticFocusBanner prefix={diagnosticPrefix} />}
 
         {/* Plans Grid */}
         <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">

@@ -9,8 +9,6 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import {
   getAllFRQs,
-  getLongFRQs,
-  getShortFRQs,
   generateFullExamFRQs,
   type ChemFRQ,
   type FRQRubricItem,
@@ -59,6 +57,8 @@ export default function APChemFRQPage() {
   const [mode, setMode] = useState<Mode>('menu')
   const [filter, setFilter] = useState<Filter>('all')
   const [frqs, setFrqs] = useState<ChemFRQ[]>([])
+  // FRQ pool from the content store (DB) with a static fallback (#10). Practice uses DB; timed exam stays static.
+  const [allFrqs, setAllFrqs] = useState<ChemFRQ[]>(() => getAllFRQs())
   const [currentIdx, setCurrentIdx] = useState(0)
   const [responses, setResponses] = useState<Record<string, string>>({})
   const [results, setResults] = useState<Record<string, ReturnType<typeof gradeResponse>>>({})
@@ -72,6 +72,15 @@ export default function APChemFRQPage() {
       router.push('/auth/signin?callbackUrl=/ap-chem-frq')
     }
   }, [status, router])
+
+  useEffect(() => {
+    let active = true
+    fetch('/api/frq/ap-chem')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [])
 
   // Timer for timed mode
   useEffect(() => {
@@ -92,7 +101,7 @@ export default function APChemFRQPage() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? getLongFRQs() : f === 'short' ? getShortFRQs() : getAllFRQs()
+    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -100,7 +109,7 @@ export default function APChemFRQPage() {
     setShowSample({})
     setShowRubric({})
     setMode('practice')
-  }, [])
+  }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
     const { long, short } = generateFullExamFRQs()
@@ -268,7 +277,7 @@ export default function APChemFRQPage() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">
                     All FRQs
                   </h3>
-                  <p className="text-xs text-gray-500">{getAllFRQs().length} questions · Untimed</p>
+                  <p className="text-xs text-gray-500">{allFrqs.length} questions · Untimed</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">

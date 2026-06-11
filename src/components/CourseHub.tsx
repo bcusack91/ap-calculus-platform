@@ -389,10 +389,37 @@ function HubIcon({ name }: { name: HubIconName }) {
   )
 }
 
+/**
+ * Derive a guided "Start Here" path from the hub's own features. Each step
+ * reuses a real feature's href, so links are always valid; steps whose feature
+ * is absent are simply skipped. Order: assess → learn → practice.
+ */
+function deriveStartHereSteps(features: HubFeature[]) {
+  const byIcon = (icon: HubIconName) => features.find(f => f.icon === icon)
+  const firstOf = (...icons: HubIconName[]) => {
+    for (const i of icons) {
+      const f = byIcon(i)
+      if (f) return f
+    }
+    return undefined
+  }
+
+  const assess = firstOf('diagnostic')
+  const learn = firstOf('lessons', 'studyPlan')
+  const practice = firstOf('practice', 'frq', 'exitQuiz', 'daily', 'fullExam')
+
+  const steps: Array<{ label: string; sub: string; href: string }> = []
+  if (assess) steps.push({ label: 'Take the diagnostic', sub: 'Find your starting point', href: assess.href })
+  if (learn) steps.push({ label: 'Learn the material', sub: 'Work through the lessons', href: learn.href })
+  if (practice) steps.push({ label: 'Practice & test yourself', sub: 'Lock in what you learned', href: practice.href })
+  return steps
+}
+
 export function CourseHub(props: CourseHubProps) {
   const a = ACCENTS[props.accent]
   const finalCtaHref = props.finalCtaHref ?? props.primaryCta.href
   const finalCtaLabel = props.finalCtaLabel ?? 'Get Started Free'
+  const startHereSteps = deriveStartHereSteps(props.features)
 
   return (
     <div className={`min-h-screen ${a.pageBg}`}>
@@ -440,8 +467,43 @@ export function CourseHub(props: CourseHubProps) {
         </div>
       </section>
 
+      {/* Guided "Start Here" path — gives a new student an obvious first move
+          instead of a wall of feature cards. Only shown when we can resolve at
+          least two ordered steps from the hub's features. */}
+      {startHereSteps.length >= 2 && (
+        <section className="container pb-4">
+          <div className="mx-auto max-w-5xl">
+            <div className={`rounded-2xl border ${a.ctaSecondaryBorder} bg-white/60 p-6 dark:bg-gray-800/40`}>
+              <div className="mb-5 flex items-center gap-2">
+                <span className="text-xl">🧭</span>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">New here? Start in {startHereSteps.length} steps</h2>
+              </div>
+              <ol className="grid gap-4 sm:grid-cols-3">
+                {startHereSteps.map((step, i) => (
+                  <li key={step.href}>
+                    <Link
+                      href={step.href}
+                      className="group flex h-full items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 transition hover:shadow-md dark:border-gray-700 dark:bg-gray-900"
+                    >
+                      <span className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${a.ctaGradient}`}>
+                        {i + 1}
+                      </span>
+                      <span>
+                        <span className={`block font-semibold text-gray-900 dark:text-white ${a.cardHover}`}>{step.label}</span>
+                        <span className="block text-sm text-gray-600 dark:text-gray-400">{step.sub}</span>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl">
+          <h2 className="sr-only">All {props.courseName} features</h2>
           <div className="grid gap-6 sm:grid-cols-2">
             {props.features.map(f => (
               <Link

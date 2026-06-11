@@ -3,6 +3,10 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { AP_STATS_PLANS } from '@/data/ap-stats-study-plans'
 import { resolveStudyPlanTasks } from '@/lib/study-plan-utils'
+import { applyAdaptivePriority } from '@/lib/adaptive-study-plan'
+import { getContentItem, getContentItems, CONTENT_TYPES } from '@/lib/content-store'
+
+const COURSE_SLUG = 'ap-statistics'
 
 export async function POST(request: Request) {
   const session = await auth()
@@ -17,13 +21,30 @@ export async function POST(request: Request) {
     examDate?: string
   }
 
-  const template = AP_STATS_PLANS.find(t => t.id === templateId)
+  // Read the template from the content store (DB), falling back to the static
+  // source when it hasn't been imported / DB is unavailable (#10).
+  const template = await getContentItem(
+    CONTENT_TYPES.studyPlanTemplate,
+    COURSE_SLUG,
+    templateId,
+    AP_STATS_PLANS,
+    t => t.id,
+  )
   if (!template) {
     return NextResponse.json({ error: 'Template not found' }, { status: 404 })
   }
 
   const start = startDate ? new Date(startDate) : new Date()
   const resolvedTasks = resolveStudyPlanTasks(template, start)
+
+  // Adaptive (#4): front-load the student's weak areas from their latest
+  // AP Statistics diagnostic. No diagnostic → tasks are unchanged.
+  const { tasks } = await applyAdaptivePriority(
+    session.user.id,
+    'ap-stats-diagnostic',
+    resolvedTasks,
+    start,
+  )
 
   const defaultExamDate = new Date(start)
   defaultExamDate.setDate(defaultExamDate.getDate() + template.durationWeeks * 7)
@@ -36,7 +57,7 @@ export async function POST(request: Request) {
       courseSlug: 'ap-statistics',
       examDate: examDate ? new Date(examDate) : defaultExamDate,
       isActive: true,
-      tasks: { create: resolvedTasks },
+      tasks: { create: tasks },
     },
     include: { tasks: { orderBy: { sortOrder: 'asc' } } },
   })
@@ -45,7 +66,8 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
-  const templates = AP_STATS_PLANS.map(t => ({
+  const plans = await getContentItems(CONTENT_TYPES.studyPlanTemplate, COURSE_SLUG, AP_STATS_PLANS)
+  const templates = plans.map(t => ({
     id: t.id, title: t.title, description: t.description,
     durationWeeks: t.durationWeeks, targetImprovement: t.targetImprovement,
     weeklyHours: t.weeklyHours, difficulty: t.difficulty, taskCount: t.tasks.length,

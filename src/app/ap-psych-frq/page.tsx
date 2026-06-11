@@ -9,8 +9,6 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import {
   getApPsychFRQs,
-  getConceptApplicationFRQs,
-  getResearchDesignFRQs,
   generateFullExamFRQs,
   type PsychFRQ,
   type FRQRubricItem,
@@ -47,6 +45,8 @@ export default function APPsychFRQPage() {
   const [mode, setMode] = useState<Mode>('menu')
   const [filter, setFilter] = useState<Filter>('all')
   const [frqs, setFrqs] = useState<PsychFRQ[]>([])
+  // FRQ pool from content store (DB) w/ static fallback (#10). Practice uses DB; timed exam stays static.
+  const [allFrqs, setAllFrqs] = useState<PsychFRQ[]>(() => getApPsychFRQs())
   const [currentIdx, setCurrentIdx] = useState(0)
   const [responses, setResponses] = useState<Record<string, string>>({})
   const [results, setResults] = useState<Record<string, ReturnType<typeof gradeResponse>>>({})
@@ -60,6 +60,15 @@ export default function APPsychFRQPage() {
       router.push('/auth/signin?callbackUrl=/ap-psych-frq')
     }
   }, [status, router])
+
+  useEffect(() => {
+    let active = true
+    fetch('/api/frq/ap-psych')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [])
 
   useEffect(() => {
     if (mode !== 'timed' || timeRemaining <= 0) return
@@ -81,10 +90,10 @@ export default function APPsychFRQPage() {
     setFilter(f)
     const pool =
       f === 'concept-application'
-        ? getConceptApplicationFRQs()
+        ? allFrqs.filter(q => q.type === 'concept-application')
         : f === 'research-design'
-          ? getResearchDesignFRQs()
-          : getApPsychFRQs()
+          ? allFrqs.filter(q => q.type === 'research-design')
+          : allFrqs
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -92,7 +101,7 @@ export default function APPsychFRQPage() {
     setShowSample({})
     setShowRubric({})
     setMode('practice')
-  }, [])
+  }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
     const { conceptApplication, researchDesign } = generateFullExamFRQs()
@@ -263,7 +272,7 @@ export default function APPsychFRQPage() {
                     All FRQs
                   </h3>
                   <p className="text-xs text-gray-500">
-                    {getApPsychFRQs().length} questions · Untimed
+                    {allFrqs.length} questions · Untimed
                   </p>
                 </div>
               </div>

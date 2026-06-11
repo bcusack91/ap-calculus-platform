@@ -3,6 +3,8 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { AP_BIO_PLANS } from '@/data/ap-bio-study-plans'
 import { resolveStudyPlanTasks } from '@/lib/study-plan-utils'
+import { applyAdaptivePriority } from '@/lib/adaptive-study-plan'
+import { getContentItem, CONTENT_TYPES } from '@/lib/content-store'
 
 export async function POST(request: Request) {
   const session = await auth()
@@ -17,13 +19,15 @@ export async function POST(request: Request) {
     examDate?: string
   }
 
-  const template = AP_BIO_PLANS.find(t => t.id === templateId)
+  const template = await getContentItem(CONTENT_TYPES.studyPlanTemplate, 'ap-biology', templateId, AP_BIO_PLANS, t => t.id)
   if (!template) {
     return NextResponse.json({ error: 'Template not found' }, { status: 404 })
   }
 
   const start = startDate ? new Date(startDate) : new Date()
   const resolvedTasks = resolveStudyPlanTasks(template, start)
+  // Adaptive (#4): front-load weak areas from the latest diagnostic; no-op if none.
+  const { tasks: adaptiveTasks } = await applyAdaptivePriority(session.user.id, 'ap-bio-diagnostic', resolvedTasks, start)
 
   const defaultExamDate = new Date(start)
   defaultExamDate.setDate(defaultExamDate.getDate() + template.durationWeeks * 7)
@@ -36,7 +40,7 @@ export async function POST(request: Request) {
       courseSlug: 'ap-biology',
       examDate: examDate ? new Date(examDate) : defaultExamDate,
       isActive: true,
-      tasks: { create: resolvedTasks },
+      tasks: { create: adaptiveTasks },
     },
     include: { tasks: { orderBy: { sortOrder: 'asc' } } },
   })

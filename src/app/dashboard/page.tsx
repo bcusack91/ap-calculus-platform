@@ -803,26 +803,40 @@ export default function DashboardPage() {
               </div>
             )}
 
-            {/* Season Rankings */}
-            <SeasonRankings currentUserId={session?.user?.id} />
-
-            {/* Challenge a Friend */}
-            <ChallengeAFriend />
-
-            {/* Seasonal Events */}
-            <SeasonalEvents />
-
-            {/* Battle Pass */}
-            <BattlePass />
-
-            {/* Study Heatmap */}
-            <StudyHeatmap />
-
-            {/* Pomodoro Timer (#130) */}
-            <PomodoroTimer />
-
             {/* Quick Flashcard Review */}
             <FlashcardStudySession />
+
+            {/* Progressive disclosure (#6): the gamification / social extras are
+                grouped under a collapsed section so the dashboard leads with the
+                study-critical widgets above instead of a long scroll of cards.
+                Everything stays one click away. */}
+            <details className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+              <summary className="flex cursor-pointer items-center justify-between p-4 font-bold text-gray-900 dark:text-white select-none">
+                <span>✨ More tools &amp; extras</span>
+                <svg className="h-5 w-5 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="space-y-6 p-4 pt-0">
+                {/* Season Rankings */}
+                <SeasonRankings currentUserId={session?.user?.id} />
+
+                {/* Challenge a Friend */}
+                <ChallengeAFriend />
+
+                {/* Seasonal Events */}
+                <SeasonalEvents />
+
+                {/* Battle Pass */}
+                <BattlePass />
+
+                {/* Study Heatmap */}
+                <StudyHeatmap />
+
+                {/* Pomodoro Timer (#130) */}
+                <PomodoroTimer />
+              </div>
+            </details>
           </div>
         </div>
       </div>

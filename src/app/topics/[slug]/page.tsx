@@ -4,6 +4,7 @@ import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
 import { EmailCapture } from '@/components/email-capture'
 import { generateTopicFaqs } from '@/lib/topic-faqs'
 import { faqJsonLd } from '@/lib/jsonld'
+import { MarkdownCallout } from '@/components/MarkdownCallout'
 
 function TopicBottomAd() {
   const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
@@ -112,9 +113,15 @@ const MarkdownComponents = {
     <li className="text-gray-700 dark:text-gray-300">{children}</li>
   ),
   blockquote: ({ children }: MarkdownChildrenProps) => (
-    <blockquote className="!border-l-4 !border-purple-500 dark:!border-purple-400 !bg-gradient-to-r !from-purple-50 !to-transparent dark:!from-purple-900/20 dark:!to-transparent !pl-4 !py-3 !mb-4 italic !rounded-r !shadow-none">
+    <MarkdownCallout
+      fallback={(c) => (
+        <blockquote className="!border-l-4 !border-purple-500 dark:!border-purple-400 !bg-gradient-to-r !from-purple-50 !to-transparent dark:!from-purple-900/20 dark:!to-transparent !pl-4 !py-3 !mb-4 italic !rounded-r !shadow-none">
+          {c}
+        </blockquote>
+      )}
+    >
       {children}
-    </blockquote>
+    </MarkdownCallout>
   ),
   code: ({ inline, children }: MarkdownCodeProps) => 
     inline ? (

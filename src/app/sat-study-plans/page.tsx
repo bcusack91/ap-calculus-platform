@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import DiagnosticFocusBanner from '@/components/DiagnosticFocusBanner'
 
 interface PlanTemplate {
   id: string
@@ -130,6 +131,9 @@ export default function SATStudyPlansPage() {
             <p className="font-semibold">Plan adopted! Redirecting to your dashboard…</p>
           </div>
         )}
+
+        {/* Personalized from the student's SAT diagnostic (#4) */}
+        <DiagnosticFocusBanner prefix="sat-full-diagnostic" />
 
         {/* Plans Grid */}
         <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">

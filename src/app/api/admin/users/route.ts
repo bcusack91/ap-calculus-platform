@@ -58,11 +58,38 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Cannot change your own role' }, { status: 400 })
     }
 
+    // Capture the prior role so the audit trail records a before/after.
+    const previous = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { id: true, email: true, role: true },
+    })
+    if (!previous) {
+      return NextResponse.json({ error: 'User not found' }, { status: 404 })
+    }
+
     const user = await prisma.user.update({
       where: { id: userId },
       data: { role },
       select: { id: true, name: true, email: true, role: true },
     })
+
+    // Append an immutable audit record of the role change. Best-effort: a
+    // logging failure must not block the (already-applied) role change, but it
+    // is surfaced in logs.
+    if (previous.role !== role) {
+      await prisma.adminAuditLog
+        .create({
+          data: {
+            action: 'user.role.update',
+            actorId: currentUser.id,
+            actorEmail: currentUser.email ?? null,
+            targetId: user.id,
+            targetEmail: user.email ?? null,
+            details: { from: previous.role, to: role },
+          },
+        })
+        .catch((logErr) => console.error('[audit] failed to record role change:', logErr))
+    }
 
     return NextResponse.json(user)
   } catch (error) {

@@ -137,6 +137,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-english-language', label: 'AP English Language' },
   apiEndpoint: '/api/ap-english-lang-study-plans',
+  diagnosticPrefix: 'ap-english-lang-diagnostic',
   accent: 'cyan',
   examLabel: 'AP Exam Date',
   plans: AP_ENG_LANG_PLANS,

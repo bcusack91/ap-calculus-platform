@@ -449,7 +449,7 @@ export function getShortFRQs(): AASFRQ[] {
   return shortFRQs
 }
 
-export function generateFullExamFRQs(): {
+export function generateFullExamFRQs(pool: AASFRQ[] = apAASFRQs): {
   long: AASFRQ[]
   short: AASFRQ[]
   totalPoints: number
@@ -464,8 +464,8 @@ export function generateFullExamFRQs(): {
     return copy
   }
 
-  const selectedLong = shuffle(longFRQs).slice(0, 2)
-  const selectedShort = shuffle(shortFRQs).slice(0, 2)
+  const selectedLong = shuffle(pool.filter((f) => f.type === 'long')).slice(0, 2)
+  const selectedShort = shuffle(pool.filter((f) => f.type === 'short')).slice(0, 2)
   const totalPoints = [...selectedLong, ...selectedShort].reduce((s, f) => s + f.totalPoints, 0)
 
   return {

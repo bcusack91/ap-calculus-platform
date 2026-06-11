@@ -70,6 +70,127 @@ model User {
   diagnosticChallengeEntries DiagnosticChallengeEntry[]
 }
 
+/// Idempotency ledger for incoming Stripe webhooks. The Stripe event id is the
+/// natural dedupe key — if Stripe retries a delivery, we detect the existing
+/// row and skip re-processing so a user can't be double-upgraded/downgraded.
+model ProcessedWebhookEvent {
+  id          String   @id // Stripe event id (e.g. evt_...)
+  type        String
+  processedAt DateTime @default(now())
+
+  @@index([processedAt])
+}
+
+/// Lightweight analytics event log. Historically created lazily via raw SQL
+/// (see src/app/api/analytics/events/route.ts) and queried with $queryRaw, so it
+/// lived OUTSIDE this schema — which meant `prisma db push` saw it as unknown and
+/// tried to DROP it. Declared here so Prisma is aware of it (db push and the
+/// migration baseline now treat it correctly). Structure mirrors the lazy
+/// CREATE TABLE exactly; that IF-NOT-EXISTS create stays as a harmless safety net.
+model AnalyticsEvent {
+  id           BigInt   @id @default(autoincrement())
+  eventName    String
+  pageTemplate String?
+  ctaType      String?
+  location     String?
+  destination  String?
+  courseSlug   String?
+  topicSlug    String?
+  metadata     Json?
+  createdAt    DateTime @default(now()) @db.Timestamptz(6)
+
+  @@index([createdAt])
+  @@index([eventName])
+  @@index([pageTemplate])
+  @@index([ctaType])
+}
+
+/// Admin alerting tables — like AnalyticsEvent, these were created lazily via
+/// raw SQL (see src/lib/admin-alert-notifications.ts) and were therefore unknown
+/// to Prisma (db push wanted to drop them). Declared here to match production
+/// exactly; the lazy IF-NOT-EXISTS creates remain as harmless safety nets.
+/// Index names are mapped to the existing production names.
+model AdminAlertNotification {
+  id             BigInt    @id @default(autoincrement())
+  alertKey       String
+  metric         String
+  severity       String
+  windowStart    DateTime  @db.Date
+  windowEnd      DateTime  @db.Date
+  message        String?
+  channels       Json?
+  notifiedAt     DateTime  @default(now()) @db.Timestamptz(6)
+  acknowledgedAt DateTime? @db.Timestamptz(6)
+  acknowledgedBy String?
+  resolvedAt     DateTime? @db.Timestamptz(6)
+
+  @@unique([alertKey, windowStart, windowEnd], map: "AdminAlertNotification_key_window_unique")
+  @@index([alertKey, notifiedAt(sort: Desc)], map: "AdminAlertNotification_key_time_idx")
+}
+
+model AdminAlertPreference {
+  alertKey     String    @id
+  snoozedUntil DateTime? @db.Timestamptz(6)
+  snoozedBy    String?
+  updatedAt    DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@index([snoozedUntil])
+}
+
+model AdminAlertTicket {
+  id          BigInt   @id @default(autoincrement())
+  alertKey    String
+  windowStart DateTime @db.Date
+  windowEnd   DateTime @db.Date
+  provider    String?
+  externalId  String?
+  ticketUrl   String?
+  status      String?
+  payload     Json?
+  createdAt   DateTime @default(now()) @db.Timestamptz(6)
+
+  @@unique([alertKey, windowStart, windowEnd], map: "AdminAlertTicket_key_window_unique")
+}
+
+/// Generic editable-content store (#10). Lets structured content that currently
+/// lives in `src/data/*` move into the database so it can be edited without a
+/// deploy, versioned, and A/B-tested. Consumers read by (type, courseSlug) and
+/// fall back to the static `src/data` source when no rows exist, so migration is
+/// incremental and reversible. First adopter: study-plan templates.
+model ContentItem {
+  id         String   @id @default(cuid())
+  type       String // content family, e.g. "study-plan-template"
+  courseSlug String // e.g. "ap-statistics"
+  key        String // stable id within (type, courseSlug), e.g. the template id
+  payload    Json // the content blob (shape depends on `type`)
+  status     String   @default("PUBLISHED") // PUBLISHED | DRAFT | ARCHIVED
+  version    Int      @default(1)
+  updatedBy  String? // admin user id who last edited (no FK — audit-style)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([type, courseSlug, key])
+  @@index([type, courseSlug, status])
+}
+
+/// Append-only audit trail for sensitive admin actions (e.g. changing a user's
+/// role). Intentionally has NO foreign keys: audit records must survive deletion
+/// of the actor/target, and email snapshots keep them readable afterward.
+model AdminAuditLog {
+  id          String   @id @default(cuid())
+  action      String // e.g. "user.role.update"
+  actorId     String // admin who performed the action
+  actorEmail  String? // snapshot for readability if the actor is later removed
+  targetId    String? // affected entity (e.g. the user whose role changed)
+  targetEmail String? // snapshot
+  details     Json? // arbitrary structured context (before/after, etc.)
+  createdAt   DateTime @default(now())
+
+  @@index([actorId, createdAt])
+  @@index([targetId, createdAt])
+  @@index([action, createdAt])
+}
+
 model DiagnosticChallenge {
   id                 String                     @id @default(cuid())
   token              String                     @unique @default(cuid())

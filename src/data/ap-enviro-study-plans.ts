@@ -136,6 +136,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-environmental-science', label: 'AP Environmental Science' },
   apiEndpoint: '/api/ap-enviro-study-plans',
+  diagnosticPrefix: 'ap-enviro-diagnostic',
   accent: 'green',
   examLabel: 'AP Exam Date',
   plans: AP_ENVIRO_PLANS,

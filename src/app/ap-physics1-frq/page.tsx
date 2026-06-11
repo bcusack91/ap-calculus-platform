@@ -9,8 +9,6 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import {
   getPhysics1FRQs,
-  getLongFRQs,
-  getShortFRQs,
   generateFullExamFRQs,
   type Physics1FRQ,
   type FRQRubricItem,
@@ -47,6 +45,8 @@ export default function APPhysics1FRQPage() {
   const [mode, setMode] = useState<Mode>('menu')
   const [filter, setFilter] = useState<Filter>('all')
   const [frqs, setFrqs] = useState<Physics1FRQ[]>([])
+  // FRQ pool from content store (DB) w/ static fallback (#10). Practice uses DB; timed exam stays static.
+  const [allFrqs, setAllFrqs] = useState<Physics1FRQ[]>(() => getPhysics1FRQs())
   const [currentIdx, setCurrentIdx] = useState(0)
   const [responses, setResponses] = useState<Record<string, string>>({})
   const [results, setResults] = useState<Record<string, ReturnType<typeof gradeResponse>>>({})
@@ -60,6 +60,15 @@ export default function APPhysics1FRQPage() {
       router.push('/auth/signin?callbackUrl=/ap-physics1-frq')
     }
   }, [status, router])
+
+  useEffect(() => {
+    let active = true
+    fetch('/api/frq/ap-physics-1')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [])
 
   useEffect(() => {
     if (mode !== 'timed' || timeRemaining <= 0) return
@@ -79,7 +88,7 @@ export default function APPhysics1FRQPage() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? getLongFRQs() : f === 'short' ? getShortFRQs() : getPhysics1FRQs()
+    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -87,7 +96,7 @@ export default function APPhysics1FRQPage() {
     setShowSample({})
     setShowRubric({})
     setMode('practice')
-  }, [])
+  }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
     const { long, short } = generateFullExamFRQs()
@@ -256,7 +265,7 @@ export default function APPhysics1FRQPage() {
                     All FRQs
                   </h3>
                   <p className="text-xs text-gray-500">
-                    {getPhysics1FRQs().length} questions · Untimed
+                    {allFrqs.length} questions · Untimed
                   </p>
                 </div>
               </div>

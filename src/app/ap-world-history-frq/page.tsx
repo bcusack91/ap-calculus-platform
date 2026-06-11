@@ -9,8 +9,6 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import {
   getApWorldHistoryFRQs,
-  getLongFRQs,
-  getShortFRQs,
   generateFullExamFRQs,
   type WorldHistoryFRQ,
   type FRQRubricItem,
@@ -47,6 +45,8 @@ export default function APWorldHistoryFRQPage() {
   const [mode, setMode] = useState<Mode>('menu')
   const [filter, setFilter] = useState<Filter>('all')
   const [frqs, setFrqs] = useState<WorldHistoryFRQ[]>([])
+  // FRQ pool from the content store (DB) with a static fallback (#10).
+  const [allFrqs, setAllFrqs] = useState<WorldHistoryFRQ[]>(() => getApWorldHistoryFRQs())
   const [currentIdx, setCurrentIdx] = useState(0)
   const [responses, setResponses] = useState<Record<string, string>>({})
   const [results, setResults] = useState<Record<string, ReturnType<typeof gradeResponse>>>({})
@@ -60,6 +60,15 @@ export default function APWorldHistoryFRQPage() {
       router.push('/auth/signin?callbackUrl=/ap-world-history-frq')
     }
   }, [status, router])
+
+  useEffect(() => {
+    let active = true
+    fetch('/api/frq/ap-world-history')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .catch(() => {})
+    return () => { active = false }
+  }, [])
 
   useEffect(() => {
     if (mode !== 'timed' || timeRemaining <= 0) return
@@ -79,7 +88,7 @@ export default function APWorldHistoryFRQPage() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? getLongFRQs() : f === 'short' ? getShortFRQs() : getApWorldHistoryFRQs()
+    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -87,10 +96,10 @@ export default function APWorldHistoryFRQPage() {
     setShowSample({})
     setShowRubric({})
     setMode('practice')
-  }, [])
+  }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs()
+    const { long, short } = generateFullExamFRQs(allFrqs)
     setFrqs([...long, ...short])
     setCurrentIdx(0)
     setResponses({})
@@ -99,7 +108,7 @@ export default function APWorldHistoryFRQPage() {
     setShowRubric({})
     setTimeRemaining(100 * 60)
     setMode('timed')
-  }, [])
+  }, [allFrqs])
 
   const handleGrade = (frqId: string, partLabel: string, rubric: FRQRubricItem[]) => {
     const key = `${frqId}-${partLabel}`
@@ -223,7 +232,7 @@ export default function APWorldHistoryFRQPage() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xl">📚</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">All FRQs</h3>
-                  <p className="text-xs text-gray-500">{getApWorldHistoryFRQs().length} questions · Untimed</p>
+                  <p className="text-xs text-gray-500">{allFrqs.length} questions · Untimed</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Browse and practice all available FRQ questions at your own pace.</p>

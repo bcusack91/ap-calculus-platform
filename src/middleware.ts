@@ -28,7 +28,21 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     prefix: 'rl:auth',
     analytics: true,
   })
+} else if (process.env.NODE_ENV === 'production') {
+  // Fail loudly: a production deploy with no Upstash config silently has NO
+  // API rate limiting. Surface it in logs so a misconfiguration is visible
+  // rather than discovered during an incident.
+  console.error(
+    '[middleware] WARNING: UPSTASH_REDIS_REST_URL/TOKEN are not set in production — ' +
+      'API rate limiting is DISABLED. Configure Upstash to restore protection.'
+  )
 }
+
+// Mutating endpoints that are intentionally called without a browser Origin
+// (webhooks, cron) and authenticate via signature / Bearer secret instead of
+// session cookies — so they are inherently immune to CSRF and exempt from the
+// Origin check below.
+const CSRF_EXEMPT_PREFIXES = ['/api/stripe/webhook', '/api/cron/', '/api/email/']
 
 function getClientIp(request: NextRequest): string {
   return (
@@ -43,11 +57,15 @@ export async function middleware(request: NextRequest) {
 
   // ── CSRF Origin Check for mutating API requests ──
   if (nextUrl.pathname.startsWith('/api/') && ['POST', 'PUT', 'PATCH', 'DELETE'].includes(request.method)) {
-    const origin = request.headers.get('origin')
-    const host = request.headers.get('host')
-    if (origin && host) {
-      const originHost = new URL(origin).host
-      if (originHost !== host) {
+    const isCsrfExempt = CSRF_EXEMPT_PREFIXES.some((p) => nextUrl.pathname.startsWith(p))
+    if (!isCsrfExempt) {
+      const origin = request.headers.get('origin')
+      const host = request.headers.get('host')
+      // Browsers always send an Origin header on mutating (POST/PUT/PATCH/DELETE)
+      // cross-origin AND same-origin requests, so a missing Origin on a
+      // non-exempt mutating request is treated as a failed CSRF check rather
+      // than silently allowed.
+      if (!origin || !host || new URL(origin).host !== host) {
         return NextResponse.json(
           { error: 'Invalid origin' },
           { status: 403 }
@@ -97,8 +115,10 @@ export async function middleware(request: NextRequest) {
         response.headers.set('X-RateLimit-Remaining', remaining.toString())
         response.headers.set('X-RateLimit-Reset', reset.toString())
         return response
-      } catch {
-        // If rate limiting fails, allow the request through
+      } catch (err) {
+        // Fail open for availability (a Redis blip shouldn't take down the API),
+        // but log it so transient rate-limiter failures are visible rather than silent.
+        console.error('[middleware] rate limiter error (failing open):', err)
         return NextResponse.next()
       }
     }

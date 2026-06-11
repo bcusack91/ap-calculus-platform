@@ -34,8 +34,6 @@ export async function POST(
     const { questionIndex, answerIndex, isSecondAttempt: _isSecondAttempt, playerId } = parsed.data;
     void _isSecondAttempt;
 
-    const actualPlayerId = playerId || session.user.id;
-
     // Use a transaction with row-level lock to prevent concurrent answer
     // submissions (user + AI) from overwriting each other's gameData changes
     const result = await prisma.$transaction(async (tx) => {
@@ -63,6 +61,18 @@ export async function POST(
         return { error: 'Match not found', status: 404 };
       }
 
+      // Resolve which player this submission is for. A client-supplied
+      // `playerId` is ONLY honored in AI practice matches (so the client can
+      // submit the bot's moves). In real matches we always bind to the
+      // authenticated user — otherwise anyone with a match ID could submit
+      // answers as their opponent.
+      const matchGameData = (match.gameData && typeof match.gameData === 'object'
+        ? match.gameData
+        : {}) as MatchGameData;
+      const actualPlayerId = (playerId && matchGameData.isPracticeMatch)
+        ? playerId
+        : session.user.id;
+
       // Verify user is a participant
       const isPlayer1 = match.player1Id === actualPlayerId;
       const isPlayer2 = match.player2Id === actualPlayerId;
@@ -76,11 +86,20 @@ export async function POST(
       return { error: 'Match is not in progress', status: 400 };
     }
 
-    // Parse current game data
-    const gameData = (match.gameData && typeof match.gameData === 'object'
-      ? match.gameData
-      : {}) as MatchGameData;
+    // Parse current game data (already validated above as matchGameData)
+    const gameData = matchGameData;
     const questions = gameData?.questions || [];
+
+    // ---- Server-side deadline enforcement (ACCURACY_CHALLENGE) ----
+    // The match has a hard 5-minute wall clock enforced on the server, not
+    // trusted to the client. An answer that arrives after the deadline is NOT
+    // counted toward the score — but we still fall through to the completion
+    // logic below so the match gets finalized rather than left hanging.
+    const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000;
+    const deadlinePassed =
+      match.gameMode === 'ACCURACY_CHALLENGE' &&
+      !!match.startedAt &&
+      Date.now() - new Date(match.startedAt).getTime() >= ACCURACY_TIME_LIMIT_MS;
     let player1QuestionIndex = gameData?.player1QuestionIndex ?? 0;
     let player2QuestionIndex = gameData?.player2QuestionIndex ?? 0;
     let player1Score = match.player1Score;
@@ -89,50 +108,60 @@ export async function POST(
     // Get the current question index for this player
     const playerQuestionIndex = isPlayer1 ? player1QuestionIndex : player2QuestionIndex;
 
-    // Check if question index matches this player's current question
-    if (questionIndex !== playerQuestionIndex) {
+    // Check if question index matches this player's current question.
+    // (Once the deadline has passed we no longer validate the index — the
+    // answer won't be counted anyway, and we want the request to fall through
+    // and finalize the match.)
+    if (!deadlinePassed && questionIndex !== playerQuestionIndex) {
       return { error: 'Invalid question index', status: 400 };
     }
 
-    // Check answer
+    // Check answer (currentQuestion may be undefined if the index check was
+    // bypassed after the deadline — treat that as an uncounted, incorrect answer)
     const currentQuestion = questions[questionIndex];
-    const isCorrect = answerIndex === currentQuestion.answerIndex;
+    const isCorrect = !!currentQuestion && answerIndex === currentQuestion.answerIndex;
 
-    // Track this answer in the player's answer history
-    const answerRecord = { questionIndex, answerIndex, correct: isCorrect };
-    if (isPlayer1) {
-      if (!gameData.player1Answers) gameData.player1Answers = [];
-      gameData.player1Answers.push(answerRecord);
-    } else {
-      if (!gameData.player2Answers) gameData.player2Answers = [];
-      gameData.player2Answers.push(answerRecord);
+    // Track this answer in the player's answer history. A submission that
+    // arrives after the server-side deadline is dropped (not recorded and not
+    // scored); execution still falls through to the completion logic so the
+    // match is finalized from the state captured before the deadline.
+    if (!deadlinePassed) {
+      const answerRecord = { questionIndex, answerIndex, correct: isCorrect };
+      if (isPlayer1) {
+        if (!gameData.player1Answers) gameData.player1Answers = [];
+        gameData.player1Answers.push(answerRecord);
+      } else {
+        if (!gameData.player2Answers) gameData.player2Answers = [];
+        gameData.player2Answers.push(answerRecord);
+      }
     }
 
     // ---- ACCURACY_CHALLENGE mode: scored by accuracy, 5-min timer ----
+    // (ACCURACY_TIME_LIMIT_MS is declared above for deadline enforcement.)
     const isAccuracyMode = match.gameMode === 'ACCURACY_CHALLENGE';
     const ACCURACY_TOTAL_QUESTIONS = questions.length;
-    const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000;
 
     if (isAccuracyMode) {
-      if (isCorrect) {
-        if (isPlayer1) player1Score += 1;
-        else player2Score += 1;
-      }
+      // Skip scoring/advancing when the deadline has passed — the late answer
+      // was already dropped above; we only proceed to finalize the match.
+      if (!deadlinePassed) {
+        if (isCorrect) {
+          if (isPlayer1) player1Score += 1;
+          else player2Score += 1;
+        }
 
-      if (isPlayer1) {
-        player1QuestionIndex = player1QuestionIndex + 1;
-      } else {
-        player2QuestionIndex = player2QuestionIndex + 1;
+        if (isPlayer1) {
+          player1QuestionIndex = player1QuestionIndex + 1;
+        } else {
+          player2QuestionIndex = player2QuestionIndex + 1;
+        }
       }
 
       const p1Answered = gameData.player1Answers?.length || 0;
       const p2Answered = gameData.player2Answers?.length || 0;
       const bothDone = p1Answered >= ACCURACY_TOTAL_QUESTIONS && p2Answered >= ACCURACY_TOTAL_QUESTIONS;
 
-      const elapsed = match.startedAt ? Date.now() - new Date(match.startedAt).getTime() : 0;
-      const timerExpired = elapsed >= ACCURACY_TIME_LIMIT_MS;
-
-      const matchComplete = bothDone || timerExpired;
+      const matchComplete = bothDone || deadlinePassed;
 
       if (matchComplete) {
         const p1Accuracy = p1Answered > 0 ? player1Score / p1Answered : 0;

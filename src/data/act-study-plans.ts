@@ -79,6 +79,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built ACT study schedule covering English, Math, Reading, and Science with timed drills and full-length practice tests.',
   backLink: { href: '/act', label: 'ACT Prep' },
   apiEndpoint: '/api/act-study-plans',
+  diagnosticPrefix: 'act-diagnostic',
   accent: 'red',
   examLabel: 'ACT Test Date',
   plans: ACT_PLANS,

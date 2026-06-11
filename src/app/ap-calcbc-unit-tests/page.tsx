@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import UnitTestsClient from '@/components/UnitTestsClient'
+import { getUnitTestUnits } from '@/lib/content-store'
 import { AP_CALCULUS_BC_UNIT_TESTS_CONFIG } from '@/data/unit-tests/ap-calculus-bc'
 
 export const metadata: Metadata = {
@@ -13,10 +14,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function APCalcBCUnitTestsPage() {
+// ISR: cache the rendered page but pick up content-store edits within the window (#10).
+export const revalidate = 300
+
+export default async function APCalcBCUnitTestsPage() {
+  const units = await getUnitTestUnits(AP_CALCULUS_BC_UNIT_TESTS_CONFIG.courseSlug, AP_CALCULUS_BC_UNIT_TESTS_CONFIG.units)
   return (
     <UnitTestsClient
-      config={AP_CALCULUS_BC_UNIT_TESTS_CONFIG}
+      config={{ ...AP_CALCULUS_BC_UNIT_TESTS_CONFIG, units }}
       theme={{
         bgGradient: 'bg-gradient-to-br from-fuchsia-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
         badgeClass: 'bg-fuchsia-100 px-4 py-1.5 text-sm font-semibold text-fuchsia-700 dark:bg-fuchsia-900/40 dark:text-fuchsia-300',

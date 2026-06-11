@@ -137,6 +137,7 @@ export const config: StudyPlanSelectorConfig = {
   description: 'Choose a pre-built study schedule that fits your timeline. Each plan includes lessons, quizzes, practice, and review tasks — automatically scheduled for you.',
   backLink: { href: '/ap-human-geography', label: 'AP Human Geography' },
   apiEndpoint: '/api/ap-human-geo-study-plans',
+  diagnosticPrefix: 'ap-human-geo-diagnostic',
   accent: 'blue',
   examLabel: 'AP Exam Date',
   plans: AP_HUMAN_GEO_PLANS,

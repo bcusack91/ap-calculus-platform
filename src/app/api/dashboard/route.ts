@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { cached, dashboardCacheKey } from '@/lib/redis'
 
 export async function GET() {
   try {
@@ -11,6 +12,24 @@ export async function GET() {
 
     const userId = session.user.id
 
+    // Cache the assembled dashboard payload per user for a short window. This
+    // absorbs rapid re-navigations / refreshes (and traffic spikes) without
+    // re-running ~6 queries each time. Kept short, and invalidated on progress
+    // save (see /api/progress/save), so completed work shows up promptly.
+    const payload = await cached(dashboardCacheKey(userId), 30, () =>
+      buildDashboard(userId)
+    )
+    return NextResponse.json(payload)
+  } catch (error) {
+    console.error('Dashboard API error:', error)
+    return NextResponse.json(
+      { error: 'Failed to load dashboard data' },
+      { status: 500 }
+    )
+  }
+}
+
+async function buildDashboard(userId: string) {
     // Fetch all user data in parallel
     const [
       topicProgress,
@@ -131,7 +150,7 @@ export async function GET() {
       0
     )
 
-    return NextResponse.json({
+    return {
       overview: {
         topicsStarted: topicProgress.length,
         topicsCompleted,
@@ -157,12 +176,5 @@ export async function GET() {
         masteryLevel: a.masteryLevel,
         lastAccessed: a.lastAccessed,
       })),
-    })
-  } catch (error) {
-    console.error('Dashboard API error:', error)
-    return NextResponse.json(
-      { error: 'Failed to load dashboard data' },
-      { status: 500 }
-    )
-  }
+    }
 }
