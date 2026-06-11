@@ -19,8 +19,6 @@ import WeakTopicsDashboard from '@/components/WeakTopicsDashboard'
 import ProgressComparison from '@/components/ProgressComparison'
 import DashboardTutorial from '@/components/DashboardTutorial'
 import RandomPracticeButton from '@/components/RandomPracticeButton'
-import { XPDisplay } from '@/components/XPSystem'
-import { LevelBadge } from '@/components/LevelSystem'
 import { DailyChallenge } from '@/components/DailyChallenge'
 import { SeasonalEvents } from '@/components/SeasonalEvents'
 import { BattlePass } from '@/components/BattlePass'
@@ -98,6 +96,7 @@ export default function DashboardPage() {
   const router = useRouter()
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [tab, setTab] = useState<'overview' | 'progress' | 'practice' | 'extras'>('overview')
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
   const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
   const [verificationSent, setVerificationSent] = useState(false)
@@ -394,10 +393,6 @@ export default function DashboardPage() {
               </h1>
               <p className="text-gray-600 dark:text-gray-400">Here&apos;s your learning progress</p>
             </div>
-            <div className="hidden sm:flex items-center gap-3 ml-auto mr-4">
-              <XPDisplay totalXP={0} todayXP={0} />
-              <LevelBadge totalXP={0} />
-            </div>
           </div>
           <div className="flex flex-wrap gap-3">
             <Link href="/join-class" className="px-4 py-2 text-sm font-medium rounded-lg border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors text-purple-700 dark:text-purple-300">
@@ -489,6 +484,21 @@ export default function DashboardPage() {
           </Link>
         )}
 
+        {/* Tabs — keep the default view focused; everything else is one click away (#6) */}
+        <div className="mb-6 flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
+          {([['overview', '📋 Overview'], ['progress', '📈 Progress'], ['practice', '🎯 Practice'], ['extras', '✨ Extras']] as const).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setTab(key)}
+              className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold transition-colors ${tab === key ? 'border-purple-600 text-purple-700 dark:text-purple-400' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {/* ============ OVERVIEW: what to study now ============ */}
+        {tab === 'overview' && (
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
@@ -623,6 +633,52 @@ export default function DashboardPage() {
               </div>
             )}
 
+          </div>
+          {/* Overview sidebar — quick actions + what's weak */}
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
+              <div className="space-y-3">
+                <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 hover:border-purple-300 transition-colors group">
+                  <span className="text-2xl">🎴</span>
+                  <div>
+                    <p className="font-medium text-purple-900 dark:text-purple-200">Review Flashcards</p>
+                    <p className="text-xs text-purple-600 dark:text-purple-400">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
+                  </div>
+                </Link>
+                <Link href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
+                  <span className="text-2xl">🎮</span>
+                  <div>
+                    <p className="font-medium text-green-900 dark:text-green-200">Competitive Mode</p>
+                    <p className="text-xs text-green-600 dark:text-green-400">Challenge AI or other students</p>
+                  </div>
+                </Link>
+                <Link href="/topics" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-700 hover:border-amber-300 transition-colors group">
+                  <span className="text-2xl">📖</span>
+                  <div>
+                    <p className="font-medium text-amber-900 dark:text-amber-200">Browse Topics</p>
+                    <p className="text-xs text-amber-600 dark:text-amber-400">Explore all study materials</p>
+                  </div>
+                </Link>
+                <div className="p-3">
+                  <RandomPracticeButton />
+                </div>
+              </div>
+            </div>
+
+            {/* Weak Topics (#133) */}
+            <WeakTopicsDashboard />
+          </div>
+        </div>
+        )}
+
+        {/* ============ PROGRESS: how you're doing ============ */}
+        {tab === 'progress' && (
+        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="lg:col-span-2 space-y-8">
+            {/* Progress Charts */}
+            <ProgressCharts />
+
             {/* Achievements */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
@@ -678,72 +734,10 @@ export default function DashboardPage() {
                 </div>
               )}
             </div>
-
-            {/* Progress Charts */}
-            <ProgressCharts />
-
-            {/* Study Planner */}
-            <StudyPlanner />
-
-            {/* Weekly Challenges */}
-            <ChallengesWidget />
           </div>
-
-          {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
-              <div className="space-y-3">
-                <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 hover:border-purple-300 transition-colors group">
-                  <span className="text-2xl">🎴</span>
-                  <div>
-                    <p className="font-medium text-purple-900 dark:text-purple-200">Review Flashcards</p>
-                    <p className="text-xs text-purple-600 dark:text-purple-400">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
-                  </div>
-                </Link>
-                <Link href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
-                  <span className="text-2xl">🎮</span>
-                  <div>
-                    <p className="font-medium text-green-900 dark:text-green-200">Competitive Mode</p>
-                    <p className="text-xs text-green-600 dark:text-green-400">Challenge AI or other students</p>
-                  </div>
-                </Link>
-                <Link href="/topics" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-700 hover:border-amber-300 transition-colors group">
-                  <span className="text-2xl">📖</span>
-                  <div>
-                    <p className="font-medium text-amber-900 dark:text-amber-200">Browse Topics</p>
-                    <p className="text-xs text-amber-600 dark:text-amber-400">Explore all study materials</p>
-                  </div>
-                </Link>
-                <div className="p-3">
-                  <RandomPracticeButton />
-                </div>
-              </div>
-            </div>
-
             {/* Progress Comparison (#153) */}
             <ProgressComparison />
-
-            {/* Weak Topics (#133) */}
-            <WeakTopicsDashboard />
-
-            {/* Streak Card */}
-            <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 sm:p-6 text-white shadow-sm">
-              <h3 className="font-bold mb-2">🔥 Study Streak</h3>
-              <div className="flex items-end gap-6">
-                <div>
-                  <div className="text-4xl font-bold">{streak?.current ?? 0}</div>
-                  <div className="text-sm text-orange-100">Current Streak</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold">{streak?.longest ?? 0}</div>
-                  <div className="text-sm text-orange-100">Best Streak</div>
-                </div>
-              </div>
-              {(streak?.current ?? 0) > 0 && (
-                <p className="mt-3 text-sm text-orange-100">Keep it going! Study today to maintain your streak.</p>
-              )}
-            </div>
 
             {/* Study Stats */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
@@ -775,6 +769,23 @@ export default function DashboardPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        )}
+
+        {/* ============ PRACTICE: tools to drill ============ */}
+        {tab === 'practice' && (
+        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="lg:col-span-2 space-y-8">
+            {/* Study Planner */}
+            <StudyPlanner />
+
+            {/* Weekly Challenges */}
+            <ChallengesWidget />
+          </div>
+          <div className="space-y-6">
+            {/* Quick Flashcard Review */}
+            <FlashcardStudySession />
 
             {/* Bookmarks (server-synced) */}
             {bookmarks.length > 0 && (
@@ -802,43 +813,27 @@ export default function DashboardPage() {
                 </div>
               </div>
             )}
-
-            {/* Quick Flashcard Review */}
-            <FlashcardStudySession />
-
-            {/* Progressive disclosure (#6): the gamification / social extras are
-                grouped under a collapsed section so the dashboard leads with the
-                study-critical widgets above instead of a long scroll of cards.
-                Everything stays one click away. */}
-            <details className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
-              <summary className="flex cursor-pointer items-center justify-between p-4 font-bold text-gray-900 dark:text-white select-none">
-                <span>✨ More tools &amp; extras</span>
-                <svg className="h-5 w-5 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </summary>
-              <div className="space-y-6 p-4 pt-0">
-                {/* Season Rankings */}
-                <SeasonRankings currentUserId={session?.user?.id} />
-
-                {/* Challenge a Friend */}
-                <ChallengeAFriend />
-
-                {/* Seasonal Events */}
-                <SeasonalEvents />
-
-                {/* Battle Pass */}
-                <BattlePass />
-
-                {/* Study Heatmap */}
-                <StudyHeatmap />
-
-                {/* Pomodoro Timer (#130) */}
-                <PomodoroTimer />
-              </div>
-            </details>
           </div>
         </div>
+        )}
+
+        {/* ============ EXTRAS: gamification & social ============ */}
+        {tab === 'extras' && (
+        <div className="grid gap-6 sm:grid-cols-2">
+          {/* Season Rankings */}
+          <SeasonRankings currentUserId={session?.user?.id} />
+          {/* Challenge a Friend */}
+          <ChallengeAFriend />
+          {/* Seasonal Events */}
+          <SeasonalEvents />
+          {/* Battle Pass */}
+          <BattlePass />
+          {/* Study Heatmap */}
+          <StudyHeatmap />
+          {/* Pomodoro Timer (#130) */}
+          <PomodoroTimer />
+        </div>
+        )}
       </div>
 
       {/* Dashboard Tutorial (#151) */}
