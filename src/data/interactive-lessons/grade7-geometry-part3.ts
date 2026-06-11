@@ -9,10 +9,10 @@ export const g7GeometryPart3Data = {
 
 **Part 3 of 7 — Circumference & Area of Circles**
 
-- **Circumference**: $C = 2\pi r = \pi d$
-- **Area**: $A = \pi r^2$
+- **Circumference**: $C = 2\\pi r = \\pi d$
+- **Area**: $A = \\pi r^2$
 
-$\pi \approx 3.14$
+$\\pi \\approx 3.14$
     
     `
     },
@@ -24,8 +24,8 @@ $\pi \approx 3.14$
 
 **Circle with radius 5 cm.**
 
-$C = 2\pi(5) = 10\pi \approx 31.4$ cm
-$A = \pi(5)^2 = 25\pi \approx 78.5$ cm² ✅
+$C = 2\\pi(5) = 10\\pi \\approx 31.4$ cm
+$A = \\pi(5)^2 = 25\\pi \\approx 78.5$ cm² ✅
     
     `
     },

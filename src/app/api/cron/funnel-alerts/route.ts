@@ -1,16 +1,15 @@
 import { NextResponse } from 'next/server'
 import { calculateWeeklyFunnelAlertSnapshot } from '@/lib/funnel-alerts'
 import { notifyCriticalFunnelAlerts } from '@/lib/admin-alert-notifications'
+import { requireCronSecret } from '@/lib/cron-auth'
 
 /**
  * Funnel alert cron job — call every 6 hours via Vercel Cron.
  * Evaluates weekly conversion drops and sends critical notifications.
  */
 export async function GET(request: Request) {
-  const authHeader = request.headers.get('authorization')
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+  const unauthorized = requireCronSecret(request)
+  if (unauthorized) return unauthorized
 
   try {
     const snapshot = await calculateWeeklyFunnelAlertSnapshot()

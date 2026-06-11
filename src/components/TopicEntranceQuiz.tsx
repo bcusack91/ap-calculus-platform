@@ -6,6 +6,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { ENTRANCE_QUIZ_SKIP_FRACTION } from '@/lib/mastery'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
@@ -82,7 +83,8 @@ export default function TopicEntranceQuiz({
   const masteredParts = useMemo(() => {
     const mastered = new Set<number>()
     partResults.forEach((result, partNum) => {
-      if (result.total > 0 && result.correct === result.total) {
+      // ENTRANCE_QUIZ_SKIP_FRACTION = 1.0 → perfect score required (current rule)
+      if (result.total > 0 && result.correct >= result.total * ENTRANCE_QUIZ_SKIP_FRACTION) {
         mastered.add(partNum)
       }
     })

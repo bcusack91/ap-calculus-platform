@@ -39,7 +39,7 @@ where:
 
 ### Units Check
 
-$$\\text{N·s} = \\text{(kg·m/s²)·s} = \\text{kg·m/s}$$
+$$\\text{N}\\cdot\\text{s} = \\text{(kg}\\cdot\\text{m/s²)}\\cdot\\text{s} = \\text{kg}\\cdot\\text{m/s}$$
 
 The units of impulse are identical to the units of momentum — this is not a coincidence!
       `
@@ -70,7 +70,7 @@ $$\\vec{F}\\Delta t = m\\Delta\\vec{v} = \\Delta\\vec{p}$$
 
 A 0.40 kg ball moving at +30 m/s is hit by a bat and reverses to −40 m/s:
 
-$$\\Delta p = m(v_f - v_i) = (0.40)(-40 - 30) = (0.40)(-70) = -28 \\text{ kg·m/s}$$
+$$\\Delta p = m(v_f - v_i) = (0.40)(-40 - 30) = (0.40)(-70) = -28 \\text{ kg}\\cdot\\text{m/s}$$
 
 The impulse delivered by the bat is $-28$ kg·m/s (in the negative direction).
       `

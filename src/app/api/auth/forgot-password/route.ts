@@ -1,18 +1,19 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
-import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
+import { rateLimit, getClientIp } from '@/lib/rate-limit'
 import { sendPasswordResetEmail } from '@/lib/email'
 import { getPublicAppUrl } from '@/lib/public-url'
 
 // Rate limit: 3 password reset requests per IP per 15 minutes
-const RESET_RATE_LIMIT = { maxRequests: 3, windowMs: 15 * 60 * 1000 }
+// (Redis-backed distributed limiter — falls back to in-memory when Redis is unconfigured)
+const resetLimiter = rateLimit({ maxRequests: 3, windowMs: 15 * 60 * 1000, prefix: 'forgot_password' })
 
 export async function POST(req: Request) {
   try {
     // Rate limit by IP to prevent abuse
     const ip = getClientIp(req)
-    const rateLimitResult = checkRateLimit(`forgot-password:${ip}`, RESET_RATE_LIMIT)
+    const rateLimitResult = await resetLimiter.check(ip)
     if (!rateLimitResult.success) {
       // Still return the generic success message to prevent enumeration
       return NextResponse.json({
@@ -40,12 +41,14 @@ export async function POST(req: Request) {
     // Delete any existing reset tokens for this email
     await prisma.passwordResetToken.deleteMany({ where: { email } })
 
-    // Generate a secure token
+    // Generate a secure token. Only the SHA-256 hash is stored at rest so a
+    // database leak cannot be replayed; the raw token is emailed to the user.
     const token = crypto.randomBytes(32).toString('hex')
+    const tokenHash = crypto.createHash('sha256').update(token).digest('hex')
     const expires = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
 
     await prisma.passwordResetToken.create({
-      data: { email, token, expires },
+      data: { email, token: tokenHash, expires },
     })
 
     const resetUrl = `${getPublicAppUrl()}/auth/reset-password?token=${token}`

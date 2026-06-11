@@ -31,9 +31,9 @@ Where:
 
 ### Units
 
-$$[\\tau] = \\text{m} \\cdot \\text{N} = \\text{N·m}$$
+$$[\\tau] = \\text{m} \\cdot \\text{N} = \\text{N}\\cdot\\text{m}$$
 
-**Important:** N·m for torque is NOT the same as a joule (J), even though $1\\,\\text{J} = 1\\,\\text{N·m}$. Torque and energy are fundamentally different quantities.
+**Important:** N·m for torque is NOT the same as a joule (J), even though $1\\,\\text{J} = 1\\,\\text{N}\\cdot\\text{m}$. Torque and energy are fundamentally different quantities.
 
 ### Maximum Torque
 
@@ -63,7 +63,7 @@ This follows the right-hand rule: curl the fingers of your right hand in the dir
 
 A 50 N force is applied perpendicularly at a distance of 0.3 m from the pivot, causing clockwise rotation.
 
-$$\\tau = -(0.3)(50)\\sin 90° = -15 \\text{ N·m}$$
+$$\\tau = -(0.3)(50)\\sin 90° = -15 \\text{ N}\\cdot\\text{m}$$
 
 The negative sign indicates **clockwise** rotation.
       `

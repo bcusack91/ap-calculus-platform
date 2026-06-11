@@ -11,9 +11,9 @@ export const g8PythagoreanPart7Data = {
 
 ### Key Formulas
 - $a^2 + b^2 = c^2$
-- Leg: $a = \sqrt{c^2 - b^2}$
-- Distance: $d = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
-- 3D diagonal: $d = \sqrt{l^2+w^2+h^2}$
+- Leg: $a = \\sqrt{c^2 - b^2}$
+- Distance: $d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
+- 3D diagonal: $d = \\sqrt{l^2+w^2+h^2}$
 - Converse: classify triangle by comparing $a^2+b^2$ to $c^2$
     
     `
@@ -25,7 +25,7 @@ export const g8PythagoreanPart7Data = {
 ## Worked Example
 
 **Legs 8 and 15. Hypotenuse?**
-$c = \sqrt{64+225} = \sqrt{289} = 17$ ✅
+$c = \\sqrt{64+225} = \\sqrt{289} = 17$ ✅
     
     `
     },

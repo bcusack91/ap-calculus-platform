@@ -1,10 +1,28 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { verifyUnsubscribeToken } from '@/lib/unsubscribe-token'
+
+function htmlPage(title: string, body: string, status: number) {
+  return new NextResponse(
+    `<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>${title} — Study Mondo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#f9fafb}
+.card{text-align:center;max-width:400px;padding:2rem}h1{color:#7c3aed;font-size:1.5rem}p{color:#4b5563;line-height:1.6}
+a{color:#7c3aed;text-decoration:none;font-weight:600}</style></head>
+<body><div class="card"><h1>${title}</h1>
+${body}
+<p><a href="https://www.studymondo.com">Return to Study Mondo</a></p></div></body></html>`,
+    { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+  )
+}
 
 /**
- * GET /api/unsubscribe?token=<email-base64>
- * Marks the subscriber as unsubscribed. The token is a simple base64-encoded email.
- * A real production system should use a signed JWT — this is a pragmatic v1.
+ * GET /api/unsubscribe?token=<base64url(email)>.<hmac-sha256-signature>
+ * Marks the subscriber as unsubscribed. The token is signed (HMAC-SHA256 with
+ * AUTH_SECRET) so only links we generated can unsubscribe an address.
+ * Legacy unsigned base64(email) tokens are rejected with a friendly message.
  */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -14,13 +32,19 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Missing token' }, { status: 400 })
   }
 
-  let email: string
-  try {
-    email = Buffer.from(token, 'base64').toString('utf-8')
-    if (!email.includes('@')) throw new Error('Invalid email')
-  } catch {
+  const verified = verifyUnsubscribeToken(token)
+  if (!verified.ok) {
+    if (verified.reason === 'legacy') {
+      return htmlPage(
+        'This unsubscribe link has expired',
+        `<p>This unsubscribe link has expired &mdash; reply to any email or <a href="https://www.studymondo.com/contact">contact us</a> and we&rsquo;ll take care of it.</p>`,
+        400
+      )
+    }
     return NextResponse.json({ error: 'Invalid token' }, { status: 400 })
   }
+
+  const email = verified.email
 
   try {
     await prisma.emailSubscriber.updateMany({

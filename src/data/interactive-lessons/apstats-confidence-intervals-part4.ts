@@ -157,7 +157,7 @@ $$\\boxed{n = 62}$$`
           },
           {
             id: 'ci4-dd3',
-            label: 'After computing $n = 96.01$, you should report $n = ___$',
+            label: 'After computing $n = 96.01$, you should report $n = \\rule{2em}{0.4pt}$',
             options: ['96', '97', '96.01', '100'],
             correctIndex: 1,
             explanation: 'Always round up to the next whole number to ensure the ME does not exceed the target.'

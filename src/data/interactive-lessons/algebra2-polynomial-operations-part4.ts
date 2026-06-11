@@ -21,7 +21,7 @@ $\\frac{x^2 + 3x + 2}{x + 1} = x + 2$
       content: `
 ## Worked Example
 
-$(x^2 + 5x + 6) \div (x + 2)$
+$(x^2 + 5x + 6) \\div (x + 2)$
 
 $= x + 3$ (since $(x+2)(x+3) = x^2+5x+6$) ✅
     

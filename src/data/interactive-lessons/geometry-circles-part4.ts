@@ -25,7 +25,7 @@ If tangent meets radius at point P: angle = 90°.
 
 **Radius = 5, tangent segment = 12. Distance from center to external point?**
 
-Forms a right triangle: $d = \sqrt{5^2 + 12^2} = \sqrt{25+144} = \sqrt{169} = 13$ ✅
+Forms a right triangle: $d = \\sqrt{5^2 + 12^2} = \\sqrt{25+144} = \\sqrt{169} = 13$ ✅
     
     `
     },

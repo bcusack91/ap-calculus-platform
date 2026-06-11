@@ -48,7 +48,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
     })
 
   return (
-    <div className="md:hidden border-t" role="menu" aria-label="Mobile navigation">
+    <div className="md:hidden border-t">
       <div className="space-y-1 px-4 pb-3 pt-2">
         <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           Topics

@@ -164,6 +164,43 @@ git push
 
 ---
 
+## 💾 Backup & Recovery
+
+Production data lives in Neon PostgreSQL. Know these before you need them:
+
+### What Neon gives you
+- **Point-in-time recovery (PITR)**: Neon retains a restore window based on your plan
+  (Free: 24 hours of history; paid plans: up to 7–30 days). Check **Neon Console →
+  Project → Settings → Storage** for your current retention.
+- **Restore procedure**: Neon Console → **Branches** → "Restore" (or create a branch
+  from a past timestamp). Restoring creates a branch at that point in time — you then
+  swap the connection string (Vercel env `DATABASE_URL`/`DIRECT_URL`) to the restored
+  branch and redeploy. *No SQL dump needed for routine recovery.*
+
+### What the repo can rebuild (and what it can't)
+- **Rebuildable from code**: study-plan templates, FRQs, practice-exam configs, and
+  unit-test definitions live in `src/data/**` and can be re-imported with the four
+  idempotent importers (`prisma/import-*.ts`).
+- **NOT rebuildable from code**: user accounts, progress, quiz attempts, diagnostics,
+  flashcards, subscriptions — and the **Topic/Category/Problem content** seeded over
+  time by the ~500 one-off scripts in `prisma/` (there is no single replayable seed).
+  The production database is effectively the only authoritative copy of that content.
+
+### Recommended habits
+1. **Quarterly restore drill**: create a Neon branch from a 1-day-old timestamp,
+   point a local env at it, run `npx prisma db pull` + a smoke query. Verify it works
+   *before* you need it.
+2. **Occasional content export** (belt-and-suspenders beyond PITR):
+   ```bash
+   pg_dump "$DIRECT_URL" --table='"Topic"' --table='"Category"' --table='"Problem"' \
+     --table='"ContentItem"' --data-only > content-backup-$(date +%F).sql
+   ```
+3. **Destructive-command guard**: `prisma migrate reset` / `db push` refuse to run
+   against non-local databases unless `ALLOW_PROD=1` is set (see `prisma.config.ts`).
+   Standalone scripts load `.env.local` first via `src/lib/load-env.ts`.
+
+---
+
 ## 🆘 Troubleshooting
 
 **Issue**: Database connection failed

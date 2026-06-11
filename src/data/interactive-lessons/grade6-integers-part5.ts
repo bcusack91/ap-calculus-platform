@@ -29,7 +29,7 @@ Same signs → positive. Different signs → negative.
 
 $(-4) \\times (-6) = +24$ (same signs) ✅
 
-$(-15) \div 3 = -5$ (different signs) ✅
+$(-15) \\div 3 = -5$ (different signs) ✅
     
     `
     },
@@ -65,7 +65,7 @@ $(-15) \div 3 = -5$ (different signs) ✅
 
 2) $(-8)(-5) = ?$
 
-3) $(-24) \div (-6) = ?$
+3) $(-24) \\div (-6) = ?$
     
     `,
       exercise: {
@@ -101,7 +101,7 @@ $(-15) \div 3 = -5$ (different signs) ✅
 |---|---------|-----------|
 | 1 | $(-3)(7)$ | Different signs |
 | 2 | $(-8)(-5)$ | Same signs |
-| 3 | $(-24) \div (-6)$ | Same signs |
+| 3 | $(-24) \\div (-6)$ | Same signs |
     
     `
     },

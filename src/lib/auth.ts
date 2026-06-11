@@ -5,6 +5,11 @@ import Credentials from "next-auth/providers/credentials"
 import { prisma } from "@/lib/prisma"
 import type { UserRole } from "@prisma/client"
 import bcrypt from "bcryptjs"
+import {
+  isCredentialsLocked,
+  recordCredentialsFailure,
+  clearCredentialsFailures,
+} from "@/lib/credentials-rate-limit"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma) as never,  // Type assertion: adapter is functionally compatible across auth versions
@@ -29,24 +34,40 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (!credentials?.email || !credentials?.password) {
           return null
         }
-        
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email as string }
-        })
-        
-        if (!user || !user.password) {
+
+        const email = credentials.email as string
+
+        // Per-email sliding-window brute-force limiter (5 failures / 15 min).
+        // Returning null yields the same generic invalid-credentials error as
+        // a wrong password, so the limiter is not an oracle. Fails open (with
+        // a loud log) when Redis is unconfigured.
+        if (await isCredentialsLocked(email)) {
           return null
         }
-        
+
+        const user = await prisma.user.findUnique({
+          where: { email }
+        })
+
+        if (!user || !user.password) {
+          // Count unknown-email attempts too — same failure budget, no oracle.
+          await recordCredentialsFailure(email)
+          return null
+        }
+
         const isPasswordValid = await bcrypt.compare(
           credentials.password as string,
           user.password
         )
-        
+
         if (!isPasswordValid) {
+          await recordCredentialsFailure(email)
           return null
         }
-        
+
+        // Successful sign-in resets the failure counter.
+        await clearCredentialsFailures(email)
+
         return {
           id: user.id,
           email: user.email,

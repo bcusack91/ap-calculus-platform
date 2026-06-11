@@ -11,7 +11,7 @@ export const g7GeometryPart5Data = {
 
 - **Prism**: $V = Bh$ (B = base area)
 - **Rectangular prism**: $V = lwh$
-- **Cylinder**: $V = \pi r^2 h$
+- **Cylinder**: $V = \\pi r^2 h$
     
     `
     },
@@ -23,7 +23,7 @@ export const g7GeometryPart5Data = {
 
 **Cylinder: r = 3 cm, h = 10 cm.**
 
-$V = \pi(3)^2(10) = 90\pi \approx 282.6$ cm³ ✅
+$V = \\pi(3)^2(10) = 90\\pi \\approx 282.6$ cm³ ✅
     
     `
     },

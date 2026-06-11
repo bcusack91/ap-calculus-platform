@@ -27,7 +27,7 @@ export const apStatsNormalDistPart6Data = {
 **Solution:**
 1. $z = (360 - 368)/4 = -8/4 = -2$
 2. $P(Z \\leq -2) = 0.0228$
-3. About $2.28\%$ of boxes are underfilled.
+3. About $2.28\\%$ of boxes are underfilled.
 
 **Follow-up:** What weight is exceeded by 90% of boxes?
 1. "Exceeded by 90%" means 10th percentile (10% are below)
@@ -46,7 +46,7 @@ export const apStatsNormalDistPart6Data = {
             question: 'Battery life $\\sim N(500, 40)$ hours. What proportion lasts between 460 and 540 hours?',
             options: ['50%', '68%', '95%', '99.7%'],
             correctAnswer: 1,
-            explanation: '$460 = 500 - 40$ and $540 = 500 + 40$. This is $\\mu \\pm 1\\sigma \\approx 68\%$.'
+            explanation: '$460 = 500 - 40$ and $540 = 500 + 40$. This is $\\mu \\pm 1\\sigma \\approx 68\\%$.'
           },
           {
             question: 'The 95th percentile of $N(0,1)$ is approximately:',

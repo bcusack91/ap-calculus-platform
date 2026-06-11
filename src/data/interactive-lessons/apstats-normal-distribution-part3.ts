@@ -20,7 +20,7 @@ export const apStatsNormalDistPart3Data = {
 **Example:** Scores $\\sim N(500, 100)$. Find $P(X > 650)$.
 - $z = \\frac{650 - 500}{100} = 1.5$
 - $P(Z \\leq 1.5) = 0.9332$
-- $P(X > 650) = 1 - 0.9332 = 0.0668 = 6.68\%$
+- $P(X > 650) = 1 - 0.9332 = 0.0668 = 6.68\\%$
 
 ---
 
@@ -77,7 +77,7 @@ Baby weights at birth follow $N(7.5, 1.2)$ lbs.
         boxes: 3,
         correctAnswers: ['2', '97.72', '8.7'],
         hint1: '$z = (9.9 - 7.5)/1.2 = 2.4/1.2 = 2$.',
-        hint2: '$P(Z \\leq 2) = 0.9772 = 97.72\%$.',
+        hint2: '$P(Z \\leq 2) = 0.9772 = 97.72\\%$.',
         hint3: '$x = 7.5 + 1(1.2) = 8.7$ lbs.',
         explanation: '1) $z = 2$. 2) 97.72%. 3) 8.7 lbs.'
       }

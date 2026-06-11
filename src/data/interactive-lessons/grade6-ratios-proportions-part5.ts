@@ -9,10 +9,10 @@ export const g6RatiosPart5Data = {
 
 **Part 5 of 7 — Percent Problems**
 
-**Percent** means "per hundred." $25\% = \\frac{25}{100} = 0.25$
+**Percent** means "per hundred." $25\\% = \\frac{25}{100} = 0.25$
 
 ### Three Types
-1. Find the part: $20\%$ of $50 = 0.20 \\times 50 = 10$
+1. Find the part: $20\\%$ of $50 = 0.20 \\times 50 = 10$
 2. Find the percent: $\\frac{\\text{part}}{\\text{whole}} \\times 100$
 3. Find the whole: $\\frac{\\text{part}}{\\text{percent}} \\times 100$
     

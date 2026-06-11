@@ -11,7 +11,7 @@ export const g8PythagoreanPart3Data = {
 
 The **distance formula** comes from the Pythagorean theorem:
 
-$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
+$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
 
 The horizontal and vertical differences form the legs of a right triangle.
     
@@ -25,7 +25,7 @@ The horizontal and vertical differences form the legs of a right triangle.
 
 **Distance between (1, 2) and (4, 6).**
 
-$d = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9+16} = \sqrt{25} = 5$ ✅
+$d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$ ✅
     
     `
     },

@@ -98,7 +98,7 @@ $$P(\\text{at least one 6}) = 1 - P(\\text{no 6s}) = 1 - \\left(\\frac{5}{6}\\ri
             explanation: 'Without replacement, the deck composition changes after each draw → dependent.'
           },
           {
-            question: 'The multiplication rule finds $P(A \\text{ ___ } B)$:',
+            question: 'The multiplication rule finds $P(A \\;\\rule{1.5em}{0.4pt}\\; B)$:',
             options: ['or', 'and', 'given', 'not'],
             correctAnswer: 1,
             explanation: 'Multiplication rule: $P(A \\text{ AND } B) = P(A \\cap B)$.'

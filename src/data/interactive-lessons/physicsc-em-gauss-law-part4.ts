@@ -11,7 +11,7 @@ export const physCEMGaussPart4Data = {
 
 For an infinite line charge with linear charge density $\\lambda$ (C/m):
 
-$E = \\frac{\\lambda}{2\\pi\epsilon_0 r} = \\frac{2k\\lambda}{r}$
+$E = \\frac{\\lambda}{2\\pi\\epsilon_0 r} = \\frac{2k\\lambda}{r}$
 
 Use a cylindrical Gaussian surface coaxial with the charge distribution.
 

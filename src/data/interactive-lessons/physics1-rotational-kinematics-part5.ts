@@ -26,7 +26,7 @@ Where $r_i$ is the distance of each mass from the axis of rotation.
 
 ### Key Features
 
-- Units: $\\text{kg·m}^2$
+- Units: $\\text{kg}\\cdot\\text{m}^2$
 - $I$ depends on **mass** AND **how that mass is distributed** relative to the axis
 - Moving mass farther from the axis **increases** $I$
 - $I$ depends on the **choice of axis**
@@ -35,7 +35,7 @@ Where $r_i$ is the distance of each mass from the axis of rotation.
 
 Two 3 kg masses sit on a light rod, one at 0.5 m and one at 1.0 m from the axis.
 
-$$I = (3)(0.5)^2 + (3)(1.0)^2 = 0.75 + 3.0 = 3.75 \\text{ kg·m}^2$$
+$$I = (3)(0.5)^2 + (3)(1.0)^2 = 0.75 + 3.0 = 3.75 \\text{ kg}\\cdot\\text{m}^2$$
       `
     },
     {

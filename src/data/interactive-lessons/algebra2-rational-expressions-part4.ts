@@ -11,7 +11,7 @@ export const alg2RationalPart4Data = {
 
 A **complex fraction** has fractions in the numerator, denominator, or both.
 
-$\\frac{\\frac{a}{b}}{\\frac{c}{d}} = \\frac{a}{b} \cdot \\frac{d}{c} = \\frac{ad}{bc}$
+$\\frac{\\frac{a}{b}}{\\frac{c}{d}} = \\frac{a}{b} \\cdot \\frac{d}{c} = \\frac{ad}{bc}$
 
 Alternatively: multiply top and bottom by the LCD.
     

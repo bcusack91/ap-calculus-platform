@@ -18,16 +18,16 @@ $$A = A_0(1 + r)^t$$
 $$A = A_0(1 - r)^t$$
 
 ### Compound Interest
-$$A = P\left(1 + \\frac{r}{n}\\right)^{nt}$$
+$$A = P\\left(1 + \\frac{r}{n}\\right)^{nt}$$
 - $P$ = principal, $r$ = annual rate, $n$ = compounds per year, $t$ = years
 
 ### Population Growth
 "A town of 5,000 grows 3% per year. Population after 10 years?"
-$$A = 5000(1.03)^{10} \approx 6,720$$
+$$A = 5000(1.03)^{10} \\approx 6{,}720$$
 
 ### Depreciation
-"A car worth \$25,000 loses 15% of its value each year. Value after 4 years?"
-$$V = 25000(0.85)^4 \approx \$13,050$$
+"A car worth \\$25,000 loses 15% of its value each year. Value after 4 years?"
+$$V = 25000(0.85)^4 \\approx \\$13{,}050$$
 
 ### Half-Life
 "A substance has a half-life of 6 hours. Starting with 200g, how much remains after 18 hours?"

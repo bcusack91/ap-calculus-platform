@@ -55,8 +55,8 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
 
 ### Quick Sanity Check (Units)
 
-- $[P] = \\text{Pa} = \\text{N/m}^2 = \\text{N·m/m}^3 = \\text{J/m}^3$
-- $[\\tfrac{1}{2}\\rho v^2] = (\\text{kg/m}^3)(\\text{m/s})^2 = \\text{kg·m}^{-1}\\text{s}^{-2} = \\text{J/m}^3 ✓$
+- $[P] = \\text{Pa} = \\text{N/m}^2 = \\text{N}\\cdot\\text{m/m}^3 = \\text{J/m}^3$
+- $[\\tfrac{1}{2}\\rho v^2] = (\\text{kg/m}^3)(\\text{m/s})^2 = \\text{kg}\\cdot\\text{m}^{-1}\\text{s}^{-2} = \\text{J/m}^3 ✓$
 - $[\\rho g y] = (\\text{kg/m}^3)(\\text{m/s}^2)(\\text{m}) = \\text{J/m}^3 ✓$
       `
     },

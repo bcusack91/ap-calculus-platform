@@ -42,11 +42,11 @@ where:
 
 A 0.145 kg baseball moving at 40 m/s:
 
-$$p = (0.145)(40) = 5.8 \\text{ kg·m/s}$$
+$$p = (0.145)(40) = 5.8 \\text{ kg}\\cdot\\text{m/s}$$
 
 A 1200 kg car moving at 0.005 m/s:
 
-$$p = (1200)(0.005) = 6.0 \\text{ kg·m/s}$$
+$$p = (1200)(0.005) = 6.0 \\text{ kg}\\cdot\\text{m/s}$$
 
 The slow-moving car has *more* momentum than the fast baseball!
       `
@@ -72,7 +72,7 @@ $$\\vec{p}_{\\text{total}} = \\vec{p}_1 + \\vec{p}_2 + \\cdots = m_1\\vec{v}_1 +
 
 Object A (2 kg) moves right at +3 m/s; Object B (4 kg) moves left at −1 m/s:
 
-$$p_{\\text{total}} = (2)(+3) + (4)(-1) = 6 - 4 = +2 \\text{ kg·m/s (to the right)}$$
+$$p_{\\text{total}} = (2)(+3) + (4)(-1) = 6 - 4 = +2 \\text{ kg}\\cdot\\text{m/s (to the right)}$$
       `
     },
     {

@@ -10,10 +10,10 @@ export const geoCoordProofsPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- Distance: $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
-- Midpoint: $\left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
+- Distance: $\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
+- Midpoint: $\\left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
 - Slope: $\\frac{y_2-y_1}{x_2-x_1}$
-- Parallel: $m_1 = m_2$; Perpendicular: $m_1 \cdot m_2 = -1$
+- Parallel: $m_1 = m_2$; Perpendicular: $m_1 \\cdot m_2 = -1$
     
     `
     },
@@ -24,7 +24,7 @@ export const geoCoordProofsPart7Data = {
 ## Worked Example
 
 **Distance (1,1) to (4,5):**
-$d = \sqrt{9+16} = 5$ ✅
+$d = \\sqrt{9+16} = 5$ ✅
     
     `
     },

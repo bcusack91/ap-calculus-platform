@@ -50,13 +50,13 @@ For any $F$-vs-$t$ graph:
 
 A constant force of $F = 500$ N acts on a ball for $\\Delta t = 0.01$ s:
 
-$$J = F \\times \\Delta t = (500)(0.01) = 5 \\text{ N·s}$$
+$$J = F \\times \\Delta t = (500)(0.01) = 5 \\text{ N}\\cdot\\text{s}$$
 
 ## Example: Triangular Force Pulse
 
 A force increases linearly from 0 to $F_{\\text{max}} = 1000$ N over 0.01 s:
 
-$$J = \\frac{1}{2} F_{\\text{max}} \\times \\Delta t = \\frac{1}{2}(1000)(0.01) = 5 \\text{ N·s}$$
+$$J = \\frac{1}{2} F_{\\text{max}} \\times \\Delta t = \\frac{1}{2}(1000)(0.01) = 5 \\text{ N}\\cdot\\text{s}$$
 
 ### Key Insight
 

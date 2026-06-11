@@ -33,7 +33,7 @@ export const mcatGeneticsPart5Data = {
 
 ### Fitness
 
-$$\\text{Fitness} = \\text{Reproductive success (# of viable offspring)}$$
+$$\\text{Fitness} = \\text{Reproductive success (\\# of viable offspring)}$$
 
 It's NOT about being strongest — it's about who reproduces most successfully.`
     },

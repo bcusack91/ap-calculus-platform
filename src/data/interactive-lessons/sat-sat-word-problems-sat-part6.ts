@@ -16,11 +16,11 @@ export const satWordProblemsPart6Data = {
 - Width = 7 ft, Length = 17 ft
 
 ### Volume Problems
-**Cylinder:** $V = \pi r^2 h$
+**Cylinder:** $V = \\pi r^2 h$
 **Box:** $V = lwh$
 
 "A cylindrical tank with radius 4 feet is being filled at 2 cubic feet per minute. How long to fill it to a height of 10 feet?"
-- Volume = $\pi(4)^2(10) = 160\pi \approx 502.7$ cubic feet
+- Volume = $\\pi(4)^2(10) = 160\\pi \\approx 502.7$ cubic feet
 - Time = $502.7 / 2 ≈ 251$ minutes
 
 ### Similar Figures

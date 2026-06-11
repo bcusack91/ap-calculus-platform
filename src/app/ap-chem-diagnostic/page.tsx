@@ -441,9 +441,12 @@ export default function APChemDiagnosticPage() {
 
             {/* Domain Breakdown */}
             <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
-              <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="mb-1 text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Unit Breakdown
               </h3>
+              <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">
+                Each area estimate is based on only a few questions — treat these as starting points and confirm with the topic quizzes.
+              </p>
               <div className="space-y-3">
                 {results.domains.map(d => (
                   <div key={d.domainId}>

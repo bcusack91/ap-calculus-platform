@@ -9,7 +9,7 @@ export const alg2ExponentialPart2Data = {
 
 **Part 2 of 7 — Exponential Decay**
 
-$y = a \cdot b^x \quad (0 < b < 1)$
+$y = a \\cdot b^x \quad (0 < b < 1)$
 
 Decay factor: $b = 1 - r$ (where $r$ is the decay rate)
 

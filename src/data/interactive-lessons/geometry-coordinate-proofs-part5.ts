@@ -24,7 +24,7 @@ Use coordinates to prove:
 
 **A(0,0), B(4,0), C(2,3). Isosceles?**
 
-$AB = 4$, $AC = \sqrt{4+9} = \sqrt{13}$, $BC = \sqrt{4+9} = \sqrt{13}$
+$AB = 4$, $AC = \\sqrt{4+9} = \\sqrt{13}$, $BC = \\sqrt{4+9} = \\sqrt{13}$
 
 AC = BC → **Isosceles** ✅
     

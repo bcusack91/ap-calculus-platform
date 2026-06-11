@@ -43,7 +43,7 @@ Like torque, angular momentum follows a sign convention:
 
 ### Units
 
-$$[L] = \\text{kg·m}^2\\text{/s}$$
+$$[L] = \\text{kg}\\cdot\\text{m}^2\\text{/s}$$
       `
     },
     {

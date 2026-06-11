@@ -71,7 +71,7 @@ export const bioWaterPropertiesPart7Data = {
 | **Hydrophilic** | Water-attracting (polar/charged) |
 | **Hydrophobic** | Water-repelling (nonpolar) |
 | **Buffer** | Substance that resists pH changes |
-| **pH** | $-\log[H^+]$; measure of acidity |
+| **pH** | $-\\log[H^+]$; measure of acidity |
       `
     },
     {

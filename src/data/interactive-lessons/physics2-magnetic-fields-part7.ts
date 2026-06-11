@@ -53,7 +53,7 @@ You've learned the core of magnetism: fields from sources, forces on charges and
 
 ### Constants
 
-$$\\mu_0 = 4\\pi \\times 10^{-7} \\text{ T·m/A}$$
+$$\\mu_0 = 4\\pi \\times 10^{-7} \\text{ T}\\cdot\\text{m/A}$$
 $$e = 1.6 \\times 10^{-19} \\text{ C}$$
 $$m_p = 1.67 \\times 10^{-27} \\text{ kg}$$
 $$m_e = 9.11 \\times 10^{-31} \\text{ kg}$$

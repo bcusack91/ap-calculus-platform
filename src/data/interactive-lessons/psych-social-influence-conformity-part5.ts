@@ -55,7 +55,7 @@ How do people change others' attitudes? The Elaboration Likelihood Model explain
             explanation: 'This is textbook central route: the consumer has HIGH motivation (expensive purchase, important decision) and HIGH ability (reading reviews, comparing specs). They\'re evaluating the QUALITY of arguments, not relying on superficial cues like brand name or celebrity endorsement. Attitude change via central route is more lasting — this consumer will likely stick with their choice even if a celebrity later endorses a competitor.'
           },
           {
-            question: 'A charity volunteer first asks if you would sign a petition supporting clean water (most people say yes), and the next week asks if you would donate $50 to the cause. This is an example of:',
+            question: 'A charity volunteer first asks if you would sign a petition supporting clean water (most people say yes), and the next week asks if you would donate \\$50 to the cause. This is an example of:',
             options: [
               'Door-in-the-face — starting with an unreasonably large request',
               'Central route persuasion — evaluating argument quality',
@@ -63,7 +63,7 @@ How do people change others' attitudes? The Elaboration Likelihood Model explain
               'Peripheral route persuasion — using emotional appeals'
             ],
             correctAnswer: 2,
-            explanation: 'Classic foot-in-the-door technique: a small initial request (signing a petition — easy, free) creates a commitment. When the larger request comes (donating $50), the person is more likely to comply because: (1) they want to be CONSISTENT with their earlier action ("I already showed I care about clean water"), and (2) they\'ve developed a self-image as someone who supports this cause. The principle is CONSISTENCY — people want their actions to align.'
+            explanation: 'Classic foot-in-the-door technique: a small initial request (signing a petition — easy, free) creates a commitment. When the larger request comes (donating \\$50), the person is more likely to comply because: (1) they want to be CONSISTENT with their earlier action ("I already showed I care about clean water"), and (2) they\'ve developed a self-image as someone who supports this cause. The principle is CONSISTENCY — people want their actions to align.'
           }
         ]
       }
@@ -79,7 +79,7 @@ How do people change others' attitudes? The Elaboration Likelihood Model explain
 | **Foot-in-the-door** | Small request → Large request | Consistency | "Can you watch my bag?" → later → "Can you give me a ride to the airport?" |
 | **Door-in-the-face** | Large request → Small request | Reciprocity + Contrast | "Can you volunteer 10 hours/week?" → "No" → "How about just 2 hours?" |
 | **Lowball** | Agree to attractive offer → terms change → person still complies | Commitment | Car dealer quotes low price → adds fees after you've committed |
-| **That's-not-all** | Initial offer → sweeten the deal before response | Reciprocity | "This blender is $100 — but wait, I'll throw in free shipping AND a recipe book!" |
+| **That's-not-all** | Initial offer → sweeten the deal before response | Reciprocity | "This blender is \\$100 — but wait, I'll throw in free shipping AND a recipe book!" |
 
 ### Cognitive Dissonance (Festinger, 1957)
 
@@ -94,14 +94,14 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
 | **Add new cognition** | "I exercise, so it balances out" |
 | **Trivialize** | "Everyone dies of something" |
 
-### Festinger & Carlsmith (1959) — The $1/$20 Study
+### Festinger & Carlsmith (1959) — The \\$1/\\$20 Study
 
 | Element | Detail |
 |---------|--------|
 | **Task** | Participants did an extremely boring task (turning pegs for an hour) |
-| **Manipulation** | Paid $1 or $20 to tell the next participant the task was enjoyable |
-| **Result** | $1 group rated the task as MORE enjoyable than $20 group |
-| **Why?** | $1 = insufficient justification → dissonance ("I lied for only $1") → changed attitude to reduce dissonance. $20 = sufficient justification ("I lied because of the money") → no need to change attitude |
+| **Manipulation** | Paid \\$1 or \\$20 to tell the next participant the task was enjoyable |
+| **Result** | \\$1 group rated the task as MORE enjoyable than \\$20 group |
+| **Why?** | \\$1 = insufficient justification → dissonance ("I lied for only \\$1") → changed attitude to reduce dissonance. \\$20 = sufficient justification ("I lied because of the money") → no need to change attitude |
 
 > **AP Connection:** Insufficient justification = MORE attitude change. This is counterintuitive and frequently tested. The LESS external reward, the MORE people internalize the attitude change.
 
@@ -138,7 +138,7 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
       exercise: {
         dropdowns: [
           { label: 'A teenager buys expensive sneakers because their favorite athlete wears them, without researching quality', options: ['Peripheral route', 'Central route', 'Foot-in-the-door', 'Cognitive dissonance'] },
-          { label: 'A car dealer quotes $20,000, then adds $3,000 in fees after you\'ve already committed to buying', options: ['Lowball technique', 'Door-in-the-face', 'Foot-in-the-door', 'Central route'] },
+          { label: 'A car dealer quotes \\$20,000, then adds \\$3,000 in fees after you\'ve already committed to buying', options: ['Lowball technique', 'Door-in-the-face', 'Foot-in-the-door', 'Central route'] },
           { label: 'A person who eats meat tells themselves "Humans are designed to eat meat" after watching a documentary about animal cruelty', options: ['Cognitive dissonance reduction', 'Peripheral route', 'Door-in-the-face', 'Foot-in-the-door'] }
         ],
         correctAnswers: ['Peripheral route', 'Lowball technique', 'Cognitive dissonance reduction'],
@@ -171,7 +171,7 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
 - Low price then hidden costs → **Lowball**
 - Behavior contradicts beliefs, person feels uncomfortable → **Cognitive dissonance**
 
-> **AP Tip:** The $1/$20 study is a TOP AP exam topic. Remember: $1 = MORE attitude change. The key term is "insufficient justification" — when external justification is weak, people must justify internally by changing their attitude.
+> **AP Tip:** The \\$1/\\$20 study is a TOP AP exam topic. Remember: \\$1 = MORE attitude change. The key term is "insufficient justification" — when external justification is weak, people must justify internally by changing their attitude.
       `
     },
     {

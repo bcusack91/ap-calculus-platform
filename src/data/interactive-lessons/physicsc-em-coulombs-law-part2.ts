@@ -11,7 +11,7 @@ export const physCEMCoulombPart2Data = {
 
 $F = k\\frac{|q_1||q_2|}{r^2}$
 
-where $k = 8.99 \\times 10^9$ N·m²/C² $= \\frac{1}{4\\pi\epsilon_0}$
+where $k = 8.99 \\times 10^9$ N·m²/C² $= \\frac{1}{4\\pi\\epsilon_0}$
 
 - Force is along the line connecting the charges
 - Attractive for opposite charges, repulsive for like charges

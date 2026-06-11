@@ -52,7 +52,7 @@ $$v_x = v\\cos\\theta, \\quad v_y = v\\sin\\theta$$
 A 2 kg ball moving at 5 m/s in the $+x$ direction collides with a 3 kg ball at rest. After the collision, the 2 kg ball moves at 3 m/s at 30° above the $x$-axis. Find the velocity of the 3 kg ball.
 
 **x-components:**
-$$p_{ix} = (2)(5) + (3)(0) = 10 \\text{ kg·m/s}$$
+$$p_{ix} = (2)(5) + (3)(0) = 10 \\text{ kg}\\cdot\\text{m/s}$$
 $$p_{fx} = (2)(3\\cos 30°) + (3)(v_{2x})$$
 $$10 = (2)(2.598) + 3v_{2x}$$
 $$10 = 5.196 + 3v_{2x}$$

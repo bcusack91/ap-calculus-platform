@@ -87,7 +87,7 @@ export const govBureaucracyPart7Data = {
 | 2021 | Schedule F rescinded (Biden Jan) | Reversed Trump EO |
 | 2021 | *Collins v. Yellen* | Further limited for-cause removal |
 | 2022 | *WEST VIRGINIA v. EPA* | Codified MAJOR QUESTIONS DOCTRINE |
-| 2023 | *Biden v. Nebraska* | Struck $430B student loan forgiveness |
+| 2023 | *Biden v. Nebraska* | Struck \\$430B student loan forgiveness |
 | 2024 | *LOPER BRIGHT v. RAIMONDO* | OVERRULED CHEVRON DEFERENCE |
 | 2024 | *Jarkesy v. SEC* | Limited SEC ALJ use for civil money penalties |
 | 2024 | *Corner Post v. Federal Reserve* | APA SOL runs from injury (not promulgation) |

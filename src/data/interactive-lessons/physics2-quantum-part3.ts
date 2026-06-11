@@ -66,7 +66,7 @@ To *localize* the particle, you must superpose many wavelengths to create a wave
 
 An atom's nucleus has radius $r \\sim 10^{-15}$ m. If an electron were confined there:
 
-$$\\Delta p \\geq \\frac{\\hbar}{2\\Delta x} = \\frac{1.055 \\times 10^{-34}}{2 \\times 10^{-15}} \\approx 5 \\times 10^{-20} \\text{ kg·m/s}$$
+$$\\Delta p \\geq \\frac{\\hbar}{2\\Delta x} = \\frac{1.055 \\times 10^{-34}}{2 \\times 10^{-15}} \\approx 5 \\times 10^{-20} \\text{ kg}\\cdot\\text{m/s}$$
 
 The corresponding kinetic energy:
 

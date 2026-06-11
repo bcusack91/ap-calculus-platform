@@ -15,7 +15,7 @@ $\log_b(x) = y \iff b^y = x$
 
 $\\log_2(8) = 3$ because $2^3 = 8$
 
-**Common log**: $\log(x) = \log_{10}(x)$
+**Common log**: $\\log(x) = \log_{10}(x)$
 **Natural log**: $\ln(x) = \log_e(x)$
     
     `

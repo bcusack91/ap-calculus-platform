@@ -80,7 +80,7 @@ export const whEastAsianEmpiresPart5Data = {
     Use turning points to explain "before vs after":
 
     $$
-    	ext{Before: outward maritime projection} \rightarrow \text{Decision point} \rightarrow \text{After: inward strategic emphasis}
+    	ext{Before: outward maritime projection} \\rightarrow \\text{Decision point} \\rightarrow \\text{After: inward strategic emphasis}
     $$
 
     AP tip: naming a turning point is not enough; explain why it changed later outcomes.

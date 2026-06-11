@@ -1,7 +1,34 @@
 import { NextResponse } from 'next/server'
+import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { touchDailyStreak } from '@/lib/streak'
+import { MASTERY_LEVEL_ON_EXIT_PASS } from '@/lib/mastery'
+
+// Bounded payload: quizzes are 10 questions (score = number correct), but allow
+// headroom up to 100. answers mirrors the client shape
+// { questionId, selectedAnswer, correct } (extra small fields tolerated).
+const submitSchema = z.object({
+  topicSlug: z.string().min(1).max(200),
+  score: z.number().int().min(0).max(100),
+  totalQuestions: z.number().int().min(1).max(100),
+  passed: z.boolean().optional().default(false),
+  mustRedoUnit: z.boolean().optional().default(false),
+  variant: z.number().int().min(1).max(10).optional(),
+  timeSpent: z.number().int().min(0).max(36000).optional().default(0),
+  answers: z
+    .array(
+      z.object({
+        questionId: z.union([z.string().max(200), z.number()]).optional(),
+        selectedAnswer: z.union([z.number(), z.string().max(500)]).optional(),
+        correct: z.boolean().optional(),
+      })
+    )
+    .max(100)
+    .optional()
+    .default([]),
+})
 
 /**
  * POST /api/exit-quiz/submit
@@ -14,163 +41,164 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const body = await request.json()
-    const { topicSlug, score, totalQuestions, passed, mustRedoUnit, answers, timeSpent, variant } = body
-
-    if (!topicSlug || score === undefined || !totalQuestions) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    const parsed = submitSchema.safeParse(await request.json())
+    if (!parsed.success) {
+      const message = parsed.error.issues
+        .map((i) => `${i.path.join('.')}: ${i.message}`)
+        .join('; ')
+      return NextResponse.json({ error: message }, { status: 400 })
     }
+    const { topicSlug, score, totalQuestions, passed, mustRedoUnit, answers, timeSpent, variant } = parsed.data
+    const userId = session.user.id
 
-    // Save the attempt
-    const attempt = await prisma.exitQuizAttempt.create({
-      data: {
-        userId: session.user.id,
-        topicSlug,
-        score,
-        totalQuestions,
-        passed: !!passed,
-        mustRedoUnit: !!mustRedoUnit,
-        variant: typeof variant === 'number' ? variant : 1,
-        answers: answers || [],
-        timeSpent: timeSpent || 0,
-      }
-    })
-
-    // If passed, unlock competitive mode for the relevant category
-    if (passed) {
-      // Map topic slugs to competitive category slugs
-      const topicToCategoryMap: Record<string, string[]> = {
-        'sat-linear-equations-inequalities': ['algebra'],
-        'sat-quadratic-equations': ['algebra'],
-        'sat-functions': ['advanced-math'],
-        'sat-exponents-radicals': ['advanced-math'],
-        'sat-ratios-proportions-percents': ['problem-solving'],
-        'sat-statistics-data-interpretation': ['problem-solving'],
-        'sat-exponential-functions': ['advanced-math'],
-        'sat-circles': ['additional-topics'],
-        'sat-complex-numbers': ['advanced-math'],
-      }
-
-      const categories = topicToCategoryMap[topicSlug] || []
-
-      // Ensure user has a CompetitiveProfile
-      await prisma.competitiveProfile.upsert({
-        where: { userId: session.user.id },
-        update: { competitiveModeUnlocked: true },
-        create: {
-          userId: session.user.id,
-          competitiveModeUnlocked: true,
-          unitCircleMMR: 1000,
-          overallMMR: 1000,
+    // All writes (attempt + streak + unlock/progress or flashcards) commit or
+    // roll back together so a partial failure can't leave inconsistent state.
+    const result = await prisma.$transaction(async (tx) => {
+      // Save the attempt
+      const attempt = await tx.exitQuizAttempt.create({
+        data: {
+          userId,
+          topicSlug,
+          score,
+          totalQuestions,
+          passed: !!passed,
+          mustRedoUnit: !!mustRedoUnit,
+          variant: typeof variant === 'number' ? variant : 1,
+          answers: answers || [],
+          timeSpent: timeSpent || 0,
         }
       })
 
-      // Also update topic progress to COMPLETED/MASTERED
-      const topic = await prisma.topic.findUnique({
-        where: { slug: topicSlug },
-        select: { id: true }
-      })
+      // Submitting an exit quiz is study activity — advance the daily streak
+      await touchDailyStreak(tx, userId)
 
-      if (topic) {
-        await prisma.topicProgress.upsert({
-          where: {
-            userId_topicId: {
-              userId: session.user.id,
-              topicId: topic.id,
-            }
-          },
-          update: {
-            status: 'MASTERED',
-            masteryLevel: 1.0,
-            completedAt: new Date(),
-          },
+      // If passed, unlock competitive mode for the relevant category
+      if (passed) {
+        // Map topic slugs to competitive category slugs
+        const topicToCategoryMap: Record<string, string[]> = {
+          'sat-linear-equations-inequalities': ['algebra'],
+          'sat-quadratic-equations': ['algebra'],
+          'sat-functions': ['advanced-math'],
+          'sat-exponents-radicals': ['advanced-math'],
+          'sat-ratios-proportions-percents': ['problem-solving'],
+          'sat-statistics-data-interpretation': ['problem-solving'],
+          'sat-exponential-functions': ['advanced-math'],
+          'sat-circles': ['additional-topics'],
+          'sat-complex-numbers': ['advanced-math'],
+        }
+
+        const categories = topicToCategoryMap[topicSlug] || []
+
+        // Ensure user has a CompetitiveProfile
+        await tx.competitiveProfile.upsert({
+          where: { userId },
+          update: { competitiveModeUnlocked: true },
           create: {
-            userId: session.user.id,
-            topicId: topic.id,
-            status: 'MASTERED',
-            masteryLevel: 1.0,
-            completedAt: new Date(),
+            userId,
+            competitiveModeUnlocked: true,
+            unitCircleMMR: 1000,
+            overallMMR: 1000,
           }
         })
-      }
 
-      return NextResponse.json({
-        attempt,
-        passed: true,
-        unlockedCategories: categories,
-        message: 'Competitive mode unlocked!'
-      })
-    }
-
-    // Add flashcards when quiz is not passed
-    if (!passed) {
-      try {
-        const topic = await prisma.topic.findUnique({
+        // Also update topic progress to COMPLETED/MASTERED
+        const topic = await tx.topic.findUnique({
           where: { slug: topicSlug },
-          include: { flashcards: true, exampleProblems: true },
+          select: { id: true }
         })
 
         if (topic) {
-          // Auto-generate flashcards if none exist
-          if (topic.flashcards.length === 0) {
-            const candidates = generateFlashcardsFromContent(topic.textContent)
-            const problemText = topic.exampleProblems
-              .map(p => `${p.question}\n${p.solution}`)
-              .join('\n\n')
-            if (problemText) {
-              candidates.push(...generateFlashcardsFromContent(problemText))
+          await tx.topicProgress.upsert({
+            where: {
+              userId_topicId: {
+                userId,
+                topicId: topic.id,
+              }
+            },
+            update: {
+              status: 'MASTERED',
+              masteryLevel: MASTERY_LEVEL_ON_EXIT_PASS,
+              completedAt: new Date(),
+            },
+            create: {
+              userId,
+              topicId: topic.id,
+              status: 'MASTERED',
+              masteryLevel: MASTERY_LEVEL_ON_EXIT_PASS,
+              completedAt: new Date(),
             }
-            const topFlashcards = getTopFlashcards(candidates, 8)
-            for (const card of topFlashcards) {
-              const fc = await prisma.flashcard.create({
-                data: {
-                  topicId: topic.id,
-                  front: card.front,
-                  back: card.back,
-                  hint: card.hint,
-                  isPremium: false,
-                },
-              })
-              topic.flashcards.push(fc as typeof topic.flashcards[number])
-            }
-          }
+          })
+        }
 
-          // Add FlashcardProgress entries for the user
-          for (const flashcard of topic.flashcards) {
-            await prisma.flashcardProgress.upsert({
-              where: {
-                userId_flashcardId: {
-                  userId: session.user.id,
-                  flashcardId: flashcard.id,
-                },
-              },
-              update: {},
-              create: {
-                userId: session.user.id,
-                flashcardId: flashcard.id,
-                easeFactor: 2.5,
-                interval: 0,
-                repetitions: 0,
-                nextReview: new Date(),
-                lastReviewed: new Date(),
-                reviewCount: 0,
+        return {
+          attempt,
+          passed: true as const,
+          unlockedCategories: categories,
+          message: 'Competitive mode unlocked!'
+        }
+      }
+
+      // Not passed — seed flashcards for review
+      const topic = await tx.topic.findUnique({
+        where: { slug: topicSlug },
+        include: { flashcards: true, exampleProblems: true },
+      })
+
+      if (topic) {
+        // Auto-generate flashcards if none exist
+        if (topic.flashcards.length === 0) {
+          const candidates = generateFlashcardsFromContent(topic.textContent)
+          const problemText = topic.exampleProblems
+            .map(p => `${p.question}\n${p.solution}`)
+            .join('\n\n')
+          if (problemText) {
+            candidates.push(...generateFlashcardsFromContent(problemText))
+          }
+          const topFlashcards = getTopFlashcards(candidates, 8)
+          for (const card of topFlashcards) {
+            const fc = await tx.flashcard.create({
+              data: {
+                topicId: topic.id,
+                front: card.front,
+                back: card.back,
+                hint: card.hint,
+                isPremium: false,
               },
             })
+            topic.flashcards.push(fc as typeof topic.flashcards[number])
           }
         }
-      } catch (e) {
-        console.error('Error adding flashcards from exit quiz:', e)
-      }
-    }
 
-    return NextResponse.json({
-      attempt,
-      passed: false,
-      mustRedoUnit: !!mustRedoUnit,
-      message: mustRedoUnit
-        ? 'Score below 5/10. You must redo the unit before retaking the quiz.'
-        : 'Score 5-6/10. You can retake the quiz immediately.'
+        // Add FlashcardProgress entries for the user (skipDuplicates keeps the
+        // old upsert-with-empty-update semantics: existing rows are untouched)
+        if (topic.flashcards.length > 0) {
+          await tx.flashcardProgress.createMany({
+            data: topic.flashcards.map((flashcard) => ({
+              userId,
+              flashcardId: flashcard.id,
+              easeFactor: 2.5,
+              interval: 0,
+              repetitions: 0,
+              nextReview: new Date(),
+              lastReviewed: new Date(),
+              reviewCount: 0,
+            })),
+            skipDuplicates: true,
+          })
+        }
+      }
+
+      return {
+        attempt,
+        passed: false as const,
+        mustRedoUnit: !!mustRedoUnit,
+        message: mustRedoUnit
+          ? 'Score below 5/10. You must redo the unit before retaking the quiz.'
+          : 'Score 5-6/10. You can retake the quiz immediately.'
+      }
     })
+
+    return NextResponse.json(result)
 
   } catch (error) {
     console.error('Error submitting exit quiz:', error)

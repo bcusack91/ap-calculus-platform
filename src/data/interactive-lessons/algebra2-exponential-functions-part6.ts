@@ -24,7 +24,7 @@ Apply exponential and logarithmic skills:
 
 **$1000 at 8% annual. When does it double? (Rule of 72)**
 
-$72 \div 8 = 9$ years (approximately) ✅
+$72 \\div 8 = 9$ years (approximately) ✅
     
     `
     },

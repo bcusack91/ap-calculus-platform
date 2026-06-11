@@ -57,7 +57,7 @@ Hydrophobic molecules are excluded from the aqueous environment, which is critic
 
 ### The pH Scale
 
-$$pH = -\log[H^+]$$
+$$pH = -\\log[H^+]$$
 
 | pH | $[H^+]$ (M) | Classification |
 |----|-------------|----------------|

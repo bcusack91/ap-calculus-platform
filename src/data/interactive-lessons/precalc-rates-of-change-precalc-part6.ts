@@ -73,7 +73,7 @@ Rate units = $\\frac{\\text{output units}}{\\text{input units}}$
 | If $f$ measures... | And input is... | Rate units are... |
 |:-------------------|:---------------|:-----------------|
 | Meters | Seconds | m/s |
-| Dollars | Items | $/item |
+| Dollars | Items | \\$/item |
 | Bacteria | Hours | bacteria/hr |
 | Gallons | Minutes | gal/min |
 

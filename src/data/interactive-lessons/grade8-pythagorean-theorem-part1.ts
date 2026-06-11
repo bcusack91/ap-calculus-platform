@@ -26,7 +26,7 @@ The **hypotenuse** is always the longest side, opposite the right angle.
 **Legs: 3 and 4. Find hypotenuse.**
 
 $3^2 + 4^2 = 9 + 16 = 25$
-$c = \sqrt{25} = 5$ ✅
+$c = \\sqrt{25} = 5$ ✅
     
     `
     },

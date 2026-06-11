@@ -14,7 +14,7 @@ export const alg2PolynomialsPart7Data = {
 - Multiply: FOIL or distribute
 - Factor: GCF, trinomial, difference of squares
 - Divide: long or synthetic division
-- Remainder theorem: $p(c)$ = remainder when $\div (x-c)$
+- Remainder theorem: $p(c)$ = remainder when $\\div (x-c)$
     
     `
     },

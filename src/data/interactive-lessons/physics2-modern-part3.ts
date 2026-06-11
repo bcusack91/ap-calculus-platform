@@ -73,7 +73,7 @@ For a transition between levels $n_i$ and $n_f$:
 
 $$\\Delta E = 13.6 \\left(\\frac{1}{n_f^2} - \\frac{1}{n_i^2}\\right) \\text{ eV}$$
 
-$$\\lambda = \\frac{hc}{\\Delta E} = \\frac{1240 \\text{ eV·nm}}{\\Delta E \\text{ (eV)}}$$
+$$\\lambda = \\frac{hc}{\\Delta E} = \\frac{1240 \\text{ eV}\\cdot\\text{nm}}{\\Delta E \\text{ (eV)}}$$
       `
     },
     {

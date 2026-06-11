@@ -89,7 +89,7 @@ $$\\boxed{E_{\\text{photon}} = h\\nu = \\frac{hc}{\\lambda}}$$
 
 where **Planck's constant** is:
 
-$$h = 6.626 \\times 10^{-34} \\; \\text{J·s}$$
+$$h = 6.626 \\times 10^{-34} \\; \\text{J}\\cdot\\text{s}$$
 
 ---
 

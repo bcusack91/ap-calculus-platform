@@ -114,7 +114,7 @@ $$c_{\\text{metal}} = \\frac{-(0.400)(4{,}186)(25 - 22)}{(0.200)(25 - 150)}$$
 
 $$c_{\\text{metal}} = \\frac{-(0.400)(4{,}186)(3)}{(0.200)(-125)}$$
 
-$$c_{\\text{metal}} = \\frac{-5{,}023.2}{-25} = 201 \\text{ J/(kg·°C)}$$
+$$c_{\\text{metal}} = \\frac{-5{,}023.2}{-25} = 201 \\text{ J/(kg}\\cdot\\text{°C)}$$
 
 This is close to the specific heat of tin (210 J/(kg·°C)), so the metal is likely tin.
       `

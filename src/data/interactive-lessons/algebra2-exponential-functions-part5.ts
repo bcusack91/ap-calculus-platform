@@ -11,8 +11,8 @@ export const alg2ExponentialPart5Data = {
 
 ### Key Properties
 1. **Product**: $\log_b(MN) = \log_b(M) + \log_b(N)$
-2. **Quotient**: $\log_b\left(\\frac{M}{N}\\right) = \log_b(M) - \log_b(N)$
-3. **Power**: $\log_b(M^p) = p \cdot \log_b(M)$
+2. **Quotient**: $\log_b\\left(\\frac{M}{N}\\right) = \log_b(M) - \log_b(N)$
+3. **Power**: $\log_b(M^p) = p \\cdot \log_b(M)$
     
     `
     },
@@ -22,7 +22,7 @@ export const alg2ExponentialPart5Data = {
       content: `
 ## Worked Example
 
-$\log_2(4 \cdot 8) = \log_2(4) + \log_2(8) = 2 + 3 = 5$ ✅
+$\log_2(4 \\cdot 8) = \log_2(4) + \log_2(8) = 2 + 3 = 5$ ✅
 
 Check: $4 \\times 8 = 32 = 2^5$ ✅
     
@@ -94,9 +94,9 @@ Check: $4 \\times 8 = 32 = 2^5$ ✅
 
 | # | Property | Example |
 |---|---------|--------|
-| 1 | Product | $\log(2)+\log(5) = \log(10) = 1$ |
-| 2 | Quotient | $\log(100)-\log(10) = \log(10) = 1$ |
-| 3 | Power | $\log(10^3) = 3$ |
+| 1 | Product | $\\log(2)+\\log(5) = \\log(10) = 1$ |
+| 2 | Quotient | $\\log(100)-\\log(10) = \\log(10) = 1$ |
+| 3 | Power | $\\log(10^3) = 3$ |
     
     `
     },

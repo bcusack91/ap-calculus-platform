@@ -340,7 +340,7 @@ const shortFRQ1: Physics2FRQ = {
     {
       label: '(a)',
       prompt:
-        'Calculate the magnitude and direction of the net electric field at the point $P$ located at $x = 0.10\\,\\text{m}$. Use $k = 9.0 \\times 10^9\\,\\text{N·m}^2/\\text{C}^2$.',
+        'Calculate the magnitude and direction of the net electric field at the point $P$ located at $x = 0.10\\,\\text{m}$. Use $k = 9.0 \\times 10^9\\,\\text{N}\\cdot\\text{m}^2/\\text{C}^2$.',
       maxPoints: 2,
       rubric: [
         {
@@ -596,7 +596,7 @@ const shortFRQ4: Physics2FRQ = {
     {
       label: '(b)',
       prompt:
-        'The work function of the metal is $\\phi = 4.14\\,\\text{eV}$. Light of frequency $f = 1.5 \\times 10^{15}\\,\\text{Hz}$ strikes the surface. Calculate the maximum kinetic energy of the ejected photoelectrons. Use $h = 4.14 \\times 10^{-15}\\,\\text{eV·s}$.',
+        'The work function of the metal is $\\phi = 4.14\\,\\text{eV}$. Light of frequency $f = 1.5 \\times 10^{15}\\,\\text{Hz}$ strikes the surface. Calculate the maximum kinetic energy of the ejected photoelectrons. Use $h = 4.14 \\times 10^{-15}\\,\\text{eV}\\cdot\\text{s}$.',
       maxPoints: 2,
       rubric: [
         {
@@ -613,7 +613,7 @@ const shortFRQ4: Physics2FRQ = {
         },
       ],
       sampleAnswer:
-        '$K_{\\max} = hf - \\phi = (4.14 \\times 10^{-15}\\,\\text{eV·s})(1.5 \\times 10^{15}\\,\\text{Hz}) - 4.14\\,\\text{eV} = 6.21\\,\\text{eV} - 4.14\\,\\text{eV} = 2.07\\,\\text{eV}$.',
+        '$K_{\\max} = hf - \\phi = (4.14 \\times 10^{-15}\\,\\text{eV}\\cdot\\text{s})(1.5 \\times 10^{15}\\,\\text{Hz}) - 4.14\\,\\text{eV} = 6.21\\,\\text{eV} - 4.14\\,\\text{eV} = 2.07\\,\\text{eV}$.',
     },
   ],
 }

@@ -107,7 +107,7 @@ A toy top exhibits precession while spinning fast. As $\\omega$ decreases due to
 
 A disk of $M = 0.5$ kg, $R = 0.1$ m spins at $\\omega = 100$ rad/s. It's mounted $r = 0.15$ m from the pivot.
 
-$$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(0.5)(0.01) = 0.0025 \\text{ kg·m}^2$$
+$$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(0.5)(0.01) = 0.0025 \\text{ kg}\\cdot\\text{m}^2$$
 
 $$\\Omega = \\frac{(0.5)(9.8)(0.15)}{0.0025 \\times 100} = \\frac{0.735}{0.25} = 2.94 \\text{ rad/s}$$`
     },

@@ -138,7 +138,7 @@ Quantum phenomena don't exist in isolation — they connect to nearly every othe
       exercise: {
         boxes: 4,
         correctAnswers: ['24.8', '5.5', 'electron', '3'],
-        hint1: '$\\lambda_{min} = 1240 \\text{ eV·nm}/50000 \\text{ eV}$, convert nm to pm',
+        hint1: '$\\lambda_{min} = 1240 \\text{ eV}\\cdot\\text{nm}/50000 \\text{ eV}$, convert nm to pm',
         hint2: '$\\lambda = 1.226/\\sqrt{50000}$ nm, convert to pm',
         hint3: 'Compare 24.8 pm to 5.5 pm',
         hint4: 'State $n$ has $n - 1$ nodes inside the box',

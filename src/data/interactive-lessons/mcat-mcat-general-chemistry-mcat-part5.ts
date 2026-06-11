@@ -105,7 +105,7 @@ When $Q = K$: $\\Delta G = 0$ (equilibrium)
               `Never spontaneous`
             ],
             correctAnswer: 0,
-            explanation: `$\\Delta G = 0$ at $T = \\Delta H / \\Delta S = 30{,}000 \\text{ J/mol} / 100 \\text{ J/(mol·K)} = 300$ K. Above 300 K, $T\\Delta S > \\Delta H$, so $\\Delta G < 0$ (spontaneous). Watch units: convert kJ to J!`
+            explanation: `$\\Delta G = 0$ at $T = \\Delta H / \\Delta S = 30{,}000 \\text{ J/mol} / 100 \\text{ J/(mol}\\cdot\\text{K)} = 300$ K. Above 300 K, $T\\Delta S > \\Delta H$, so $\\Delta G < 0$ (spontaneous). Watch units: convert kJ to J!`
           },
           {
             question: `If $K_{eq} > 1$ at standard conditions, then $\\Delta G°$ is:`,

@@ -37,7 +37,7 @@ export const mcatGeneticsPart1Data = {
 ### MCAT Punnett Square Strategy
 
 Always set up the cross systematically. For dihybrid crosses (AaBb $\\times$ AaBb), use the 4$\\times$4 Punnett square or the shortcut:
-$$\\text{9 A_B_} : \\text{3 A_bb} : \\text{3 aaB_} : \\text{1 aabb}$$`
+$$\\text{9 A\\_B\\_} : \\text{3 A\\_bb} : \\text{3 aaB\\_} : \\text{1 aabb}$$`
     },
     {
       id: 'ge1-quiz1',

@@ -9,7 +9,7 @@ export const alg2ExponentialPart1Data = {
 
 **Part 1 of 7 — Exponential Growth**
 
-$y = a \cdot b^x \quad (b > 1)$
+$y = a \\cdot b^x \quad (b > 1)$
 
 - $a$ = initial value
 - $b$ = growth factor

@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import AvatarDisplay from '@/components/AvatarDisplay'
@@ -91,12 +91,80 @@ interface DashboardData {
   }[]
 }
 
-export default function DashboardPage() {
+const DASHBOARD_TABS = [
+  ['overview', '📋 Overview'],
+  ['progress', '📈 Progress'],
+  ['practice', '🎯 Practice'],
+  ['extras', '✨ Extras'],
+] as const
+
+type DashboardTab = (typeof DASHBOARD_TABS)[number][0]
+
+function isDashboardTab(value: string | null): value is DashboardTab {
+  return DASHBOARD_TABS.some(([key]) => key === value)
+}
+
+/** Skeleton shown while session/dashboard data load (also used as the Suspense fallback). */
+function DashboardSkeleton() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="container py-8 sm:py-12">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
+          <div className="space-y-2">
+            <div className="w-48 h-7 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+            <div className="w-32 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+          </div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
+              <div className="w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2" />
+              <div className="w-24 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+            </div>
+          ))}
+        </div>
+        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="lg:col-span-2 space-y-8">
+            {[1, 2].map((i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
+                <div className="w-40 h-6 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
+                <div className="space-y-3">
+                  {[1, 2, 3].map((j) => (
+                    <div key={j} className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="space-y-6">
+            {[1, 2].map((i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
+                <div className="w-32 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
+                <div className="space-y-3">
+                  {[1, 2].map((j) => (
+                    <div key={j} className="w-full h-14 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function DashboardContent() {
   const { data: session, status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
-  const [tab, setTab] = useState<'overview' | 'progress' | 'practice' | 'extras'>('overview')
+  const [fetchError, setFetchError] = useState(false)
+  const initialTabParam = searchParams.get('tab')
+  const [tab, setTab] = useState<DashboardTab>(isDashboardTab(initialTabParam) ? initialTabParam : 'overview')
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
   const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
   const [verificationSent, setVerificationSent] = useState(false)
@@ -161,6 +229,31 @@ export default function DashboardPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status])
 
+  // Keep the active tab in sync with the URL (?tab=...), e.g. on back/forward or in-app links
+  useEffect(() => {
+    const urlTab = searchParams.get('tab')
+    const next: DashboardTab = isDashboardTab(urlTab) ? urlTab : 'overview'
+    setTab((prev) => (prev === next ? prev : next))
+  }, [searchParams])
+
+  const selectTab = (key: DashboardTab) => {
+    setTab(key)
+    router.replace(key === 'overview' ? '/dashboard' : `/dashboard?tab=${key}`, { scroll: false })
+  }
+
+  // WAI-ARIA tabs pattern: Left/Right arrows (wrapping) + Home/End move focus and selection
+  const handleTabKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let next: number
+    if (e.key === 'ArrowRight') next = (index + 1) % DASHBOARD_TABS.length
+    else if (e.key === 'ArrowLeft') next = (index - 1 + DASHBOARD_TABS.length) % DASHBOARD_TABS.length
+    else if (e.key === 'Home') next = 0
+    else if (e.key === 'End') next = DASHBOARD_TABS.length - 1
+    else return
+    e.preventDefault()
+    selectTab(DASHBOARD_TABS[next][0])
+    tabRefs.current[next]?.focus()
+  }
+
   const fetchAll = async () => {
     const [dashRes, avatarRes, assignRes, bookmarkRes, achieveRes, onboardRes] = await Promise.allSettled([
       fetch('/api/dashboard'),
@@ -172,7 +265,14 @@ export default function DashboardPage() {
     ])
 
     if (dashRes.status === 'fulfilled' && dashRes.value.ok) {
-      setData(await dashRes.value.json())
+      try {
+        setData(await dashRes.value.json())
+        setFetchError(false)
+      } catch {
+        setFetchError(true)
+      }
+    } else {
+      setFetchError(true)
     }
     if (avatarRes.status === 'fulfilled' && avatarRes.value.ok) {
       const d = await avatarRes.value.json()
@@ -280,55 +380,15 @@ export default function DashboardPage() {
     } catch { /* silent */ }
   }
 
+  const retryFetch = () => {
+    setFetchError(false)
+    setLoading(true)
+    fetchAll()
+  }
+
   // Skeleton loading
   if (status === 'loading' || loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container py-8 sm:py-12">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
-            <div className="space-y-2">
-              <div className="w-48 h-7 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-              <div className="w-32 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-            </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
-                <div className="w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2" />
-                <div className="w-24 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-              </div>
-            ))}
-          </div>
-          <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            <div className="lg:col-span-2 space-y-8">
-              {[1, 2].map((i) => (
-                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
-                  <div className="w-40 h-6 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
-                  <div className="space-y-3">
-                    {[1, 2, 3].map((j) => (
-                      <div key={j} className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {[1, 2].map((i) => (
-                <div key={i} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
-                  <div className="w-32 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4" />
-                  <div className="space-y-3">
-                    {[1, 2].map((j) => (
-                      <div key={j} className="w-full h-14 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+    return <DashboardSkeleton />
   }
 
   if (!session) return null
@@ -444,6 +504,23 @@ export default function DashboardPage() {
         {/* Streak Notification (#122) */}
         <StreakNotification />
 
+        {fetchError ? (
+        /* Dashboard payload failed — show an inline error instead of zeroed stats */
+        <div role="alert" className="bg-white dark:bg-gray-800 rounded-xl border border-red-200 dark:border-red-800 p-8 text-center shadow-sm">
+          <div className="text-4xl mb-3" aria-hidden="true">⚠️</div>
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Couldn&apos;t load your progress</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-5 max-w-md mx-auto">
+            Something went wrong while loading your dashboard data. Check your connection and try again.
+          </p>
+          <button
+            onClick={retryFetch}
+            className="px-5 py-2.5 text-sm font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
+          >
+            Retry
+          </button>
+        </div>
+        ) : (
+        <>
         {/* Stats Grid with Progress Rings */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 shadow-sm flex items-center gap-3">
@@ -485,11 +562,18 @@ export default function DashboardPage() {
         )}
 
         {/* Tabs — keep the default view focused; everything else is one click away (#6) */}
-        <div className="mb-6 flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
-          {([['overview', '📋 Overview'], ['progress', '📈 Progress'], ['practice', '🎯 Practice'], ['extras', '✨ Extras']] as const).map(([key, label]) => (
+        <div role="tablist" aria-label="Dashboard sections" className="mb-6 flex flex-wrap gap-1 border-b border-gray-200 dark:border-gray-700">
+          {DASHBOARD_TABS.map(([key, label], index) => (
             <button
               key={key}
-              onClick={() => setTab(key)}
+              ref={(el) => { tabRefs.current[index] = el }}
+              role="tab"
+              id={`dashboard-tab-${key}`}
+              aria-selected={tab === key}
+              aria-controls={`dashboard-tabpanel-${key}`}
+              tabIndex={tab === key ? 0 : -1}
+              onClick={() => selectTab(key)}
+              onKeyDown={(e) => handleTabKeyDown(e, index)}
               className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold transition-colors ${tab === key ? 'border-purple-600 text-purple-700 dark:text-purple-400' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
             >
               {label}
@@ -499,7 +583,7 @@ export default function DashboardPage() {
 
         {/* ============ OVERVIEW: what to study now ============ */}
         {tab === 'overview' && (
-        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div role="tabpanel" id="dashboard-tabpanel-overview" aria-labelledby="dashboard-tab-overview" className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
             {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length) ? (
@@ -674,7 +758,7 @@ export default function DashboardPage() {
 
         {/* ============ PROGRESS: how you're doing ============ */}
         {tab === 'progress' && (
-        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div role="tabpanel" id="dashboard-tabpanel-progress" aria-labelledby="dashboard-tab-progress" className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Progress Charts */}
             <ProgressCharts />
@@ -696,12 +780,14 @@ export default function DashboardPage() {
                     <div
                       key={a.id}
                       title={`${a.name}: ${a.description}${a.unlocked ? '' : ' (Locked)'}`}
+                      aria-label={`${a.name}: ${a.description}${a.unlocked ? '' : ' (locked)'}`}
                       className={`flex flex-col items-center p-2 rounded-lg transition-all ${
                         a.unlocked ? 'bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700' : 'opacity-40 grayscale'
                       }`}
                     >
-                      <span className="text-2xl">{a.icon}</span>
+                      <span className="text-2xl" aria-hidden="true">{a.icon}</span>
                       <span className="text-[10px] text-center text-gray-600 dark:text-gray-400 mt-1 leading-tight">{a.name}</span>
+                      {!a.unlocked && <span className="sr-only">(locked)</span>}
                     </div>
                   ))}
                 </div>
@@ -775,7 +861,7 @@ export default function DashboardPage() {
 
         {/* ============ PRACTICE: tools to drill ============ */}
         {tab === 'practice' && (
-        <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div role="tabpanel" id="dashboard-tabpanel-practice" aria-labelledby="dashboard-tab-practice" className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Study Planner */}
             <StudyPlanner />
@@ -819,7 +905,7 @@ export default function DashboardPage() {
 
         {/* ============ EXTRAS: gamification & social ============ */}
         {tab === 'extras' && (
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div role="tabpanel" id="dashboard-tabpanel-extras" aria-labelledby="dashboard-tab-extras" className="grid gap-6 sm:grid-cols-2">
           {/* Season Rankings */}
           <SeasonRankings currentUserId={session?.user?.id} />
           {/* Challenge a Friend */}
@@ -834,10 +920,21 @@ export default function DashboardPage() {
           <PomodoroTimer />
         </div>
         )}
+        </>
+        )}
       </div>
 
       {/* Dashboard Tutorial (#151) */}
       <DashboardTutorial />
     </div>
+  )
+}
+
+export default function DashboardPage() {
+  // useSearchParams() in a client page must be rendered below a Suspense boundary (Next 15)
+  return (
+    <Suspense fallback={<DashboardSkeleton />}>
+      <DashboardContent />
+    </Suspense>
   )
 }

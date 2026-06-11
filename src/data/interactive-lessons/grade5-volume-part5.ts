@@ -28,7 +28,7 @@ Volume is used everywhere:
 
 $V = 40 \\times 20 \\times 30 = 24{,}000$ cm³
 
-$24{,}000 \div 1{,}000 = 24$ liters ✅
+$24{,}000 \\div 1{,}000 = 24$ liters ✅
     
     `
     },

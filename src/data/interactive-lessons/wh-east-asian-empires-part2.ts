@@ -87,7 +87,7 @@ This part focuses on the mechanisms that shaped East Asia from c. 1200-1750: sta
     Cause-effect pattern to remember:
 
     $$
-    	ext{Political insecurity} \rightarrow \text{regulated contact} \rightarrow \text{stability (short term)} \rightarrow \text{reduced global leverage (long term)}
+    	ext{Political insecurity} \\rightarrow \\text{regulated contact} \\rightarrow \\text{stability (short term)} \\rightarrow \\text{reduced global leverage (long term)}
     $$
       `
     },

@@ -1,6 +1,7 @@
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
+import crypto from 'crypto'
 
 /**
  * Verify the current user is a TEACHER or ADMIN.
@@ -57,7 +58,8 @@ export function generateJoinCode(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789' // no 0/O/1/I
   let code = ''
   for (let i = 0; i < 6; i++) {
-    code += chars[Math.floor(Math.random() * chars.length)]
+    // crypto.randomInt: CSPRNG, unbiased — join codes are bearer credentials
+    code += chars[crypto.randomInt(chars.length)]
   }
   return code
 }

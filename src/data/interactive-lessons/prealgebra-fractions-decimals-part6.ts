@@ -23,7 +23,7 @@ Solve problems involving fractions, decimals, and percents:
 
 **Shirt: \\$40, 25% off. Sale price?**
 
-Discount: $0.25 \\times 40 = 10$. Sale price: $40 - 10 = \\$30$ ✅
+Discount: \\$0.25 \\times 40 = 10$. Sale price: \\$40 - 10 = \\$30$ ✅
     
     `
     },
@@ -36,15 +36,15 @@ Discount: $0.25 \\times 40 = 10$. Sale price: $40 - 10 = \\$30$ ✅
       exercise: {
         questions: [
           {
-                    "question": "$60 shirt, 20% off. Sale price?",
+                    "question": "\\$60 shirt, 20% off. Sale price?",
                     "options": [
-                              "$48",
-                              "$40",
-                              "$12",
-                              "$80"
+                              "\\$48",
+                              "\\$40",
+                              "\\$12",
+                              "\\$80"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "0.20 × 60 = 12. 60 − 12 = $48."
+                    "explanation": "0.20 × 60 = 12. 60 − 12 = \\$48."
           }
 ]
       }
@@ -108,15 +108,15 @@ Discount: $0.25 \\times 40 = 10$. Sale price: $40 - 10 = \\$30$ ✅
       exercise: {
         questions: [
           {
-                    "question": "15% tip on $80?",
+                    "question": "15% tip on \\$80?",
                     "options": [
-                              "$12",
-                              "$15",
-                              "$80",
-                              "$95"
+                              "\\$12",
+                              "\\$15",
+                              "\\$80",
+                              "\\$95"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "0.15 × 80 = $12."
+                    "explanation": "0.15 × 80 = \\$12."
           }
 ]
       }

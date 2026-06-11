@@ -486,7 +486,7 @@ const physics1FRQs: Physics1FRQ[] = [
     unit: 3,
     title: 'Circular Motion and Gravitation: Satellite Orbit',
     prompt:
-      'A satellite of mass $m = 500\\text{ kg}$ orbits Earth at an altitude of $h = 2.0 \\times 10^6\\text{ m}$ above the surface. The mass of Earth is $M_E = 5.97 \\times 10^{24}\\text{ kg}$ and the radius of Earth is $R_E = 6.37 \\times 10^6\\text{ m}$. $G = 6.674 \\times 10^{-11}\\text{ N·m}^2/\\text{kg}^2$.',
+      'A satellite of mass $m = 500\\text{ kg}$ orbits Earth at an altitude of $h = 2.0 \\times 10^6\\text{ m}$ above the surface. The mass of Earth is $M_E = 5.97 \\times 10^{24}\\text{ kg}$ and the radius of Earth is $R_E = 6.37 \\times 10^6\\text{ m}$. $G = 6.674 \\times 10^{-11}\\text{ N}\\cdot\\text{m}^2/\\text{kg}^2$.',
     totalPoints: 5,
     timeRecommendation: '~15 minutes',
     calculatorAllowed: true,

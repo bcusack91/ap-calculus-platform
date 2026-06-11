@@ -70,11 +70,11 @@ $$\\frac{Q}{t} = \\frac{A \\Delta T_{\\text{total}}}{R_{\\text{total}}}$$
 
 A double-pane window has two glass panes ($k = 0.84$, $L = 4$ mm each) with an air gap ($k = 0.024$, $L = 10$ mm) between them.
 
-$$R_{\\text{glass}} = \\frac{0.004}{0.84} = 0.00476 \\text{ m}^2\\text{·K/W each}$$
+$$R_{\\text{glass}} = \\frac{0.004}{0.84} = 0.00476 \\text{ m}^2\\text{}\\cdot\\text{K/W each}$$
 
-$$R_{\\text{air}} = \\frac{0.010}{0.024} = 0.417 \\text{ m}^2\\text{·K/W}$$
+$$R_{\\text{air}} = \\frac{0.010}{0.024} = 0.417 \\text{ m}^2\\text{}\\cdot\\text{K/W}$$
 
-$$R_{\\text{total}} = 0.00476 + 0.417 + 0.00476 = 0.426 \\text{ m}^2\\text{·K/W}$$
+$$R_{\\text{total}} = 0.00476 + 0.417 + 0.00476 = 0.426 \\text{ m}^2\\text{}\\cdot\\text{K/W}$$
 
 The air gap provides about **98%** of the total thermal resistance, despite being only slightly thicker than the glass! This demonstrates why trapped air is such an effective insulator.
       `

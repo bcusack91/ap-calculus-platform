@@ -9,7 +9,7 @@ export const geoTriCongruencePart2Data = {
 
 **Part 2 of 7 — Triangle Sum Theorem**
 
-$\angle A + \angle B + \angle C = 180°$
+$\\angle A + \\angle B + \\angle C = 180°$
 
 The **exterior angle theorem**: an exterior angle equals the sum of the two remote interior angles.
     

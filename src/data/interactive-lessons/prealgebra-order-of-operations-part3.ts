@@ -11,7 +11,7 @@ export const preAlgOrderOpsPart3Data = {
 
 After parentheses and exponents: **multiply and divide left to right**.
 
-$24 \div 6 \\times 2 = 4 \\times 2 = 8$ (left to right, NOT $24 \div 12$)
+$24 \\div 6 \\times 2 = 4 \\times 2 = 8$ (left to right, NOT $24 \\div 12$)
     
     `
     },
@@ -21,7 +21,7 @@ $24 \div 6 \\times 2 = 4 \\times 2 = 8$ (left to right, NOT $24 \div 12$)
       content: `
 ## Worked Example
 
-$12 \div 3 \\times 4 = 4 \\times 4 = 16$ ✅
+$12 \\div 3 \\times 4 = 4 \\times 4 = 16$ ✅
     
     `
     },
@@ -53,11 +53,11 @@ $12 \div 3 \\times 4 = 4 \\times 4 = 16$ ✅
       content: `
 **Multiply & Divide Left to Right** 🧮
 
-1) $20 \div 4 \\times 3 = ?$
+1) $20 \\div 4 \\times 3 = ?$
 
-2) $2 \\times 6 \div 3 = ?$
+2) $2 \\times 6 \\div 3 = ?$
 
-3) $18 \div 2 \div 3 = ?$
+3) $18 \\div 2 \\div 3 = ?$
     
     `,
       exercise: {

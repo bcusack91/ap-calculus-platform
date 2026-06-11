@@ -13,8 +13,8 @@ Same sign rules as multiplication:
 - Same signs → **positive**
 - Different signs → **negative**
 
-$(-12) \div 4 = -3$
-$(-15) \div (-3) = 5$
+$(-12) \\div 4 = -3$
+$(-15) \\div (-3) = 5$
     
     `
     },
@@ -24,7 +24,7 @@ $(-15) \div (-3) = 5$
       content: `
 ## Worked Example
 
-$(-8.4) \div (-2.1) = 4$ (same signs → positive) ✅
+$(-8.4) \\div (-2.1) = 4$ (same signs → positive) ✅
     
     `
     },
@@ -56,11 +56,11 @@ $(-8.4) \div (-2.1) = 4$ (same signs → positive) ✅
       content: `
 **Divide Rationals** 🧮
 
-1) $(-24) \div 6 = ?$
+1) $(-24) \\div 6 = ?$
 
-2) $(-36) \div (-9) = ?$
+2) $(-36) \\div (-9) = ?$
 
-3) $4.5 \div (-1.5) = ?$
+3) $4.5 \\div (-1.5) = ?$
     
     `,
       exercise: {
@@ -94,9 +94,9 @@ $(-8.4) \div (-2.1) = 4$ (same signs → positive) ✅
 
 | # | Problem | Sign |
 |---|---------|------|
-| 1 | $(-24) \div 6$ | Negative |
-| 2 | $(-36) \div (-9)$ | Positive |
-| 3 | $4.5 \div (-1.5)$ | Negative |
+| 1 | $(-24) \\div 6$ | Negative |
+| 2 | $(-36) \\div (-9)$ | Positive |
+| 3 | $4.5 \\div (-1.5)$ | Negative |
     
     `
     },

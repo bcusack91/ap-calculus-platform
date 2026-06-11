@@ -15,7 +15,7 @@ Divide normally; bring up the decimal point.
 ### Dividing by a decimal
 Multiply both divisor and dividend by 10 (or 100) to make the divisor a whole number.
 
-$3.6 \div 0.4 = 36 \div 4 = 9$
+$3.6 \\div 0.4 = 36 \\div 4 = 9$
     
     `
     },
@@ -25,11 +25,11 @@ $3.6 \div 0.4 = 36 \div 4 = 9$
       content: `
 ## Worked Example
 
-$4.8 \div 0.6 = ?$
+$4.8 \\div 0.6 = ?$
 
-Multiply both by 10: $48 \div 6 = 8$ ✅
+Multiply both by 10: $48 \\div 6 = 8$ ✅
 
-$7.5 \div 3 = 2.5$ ✅
+$7.5 \\div 3 = 2.5$ ✅
     
     `
     },
@@ -61,11 +61,11 @@ $7.5 \div 3 = 2.5$ ✅
       content: `
 **Divide Decimals** 🧮
 
-1) $9.6 \div 4 = ?$
+1) $9.6 \\div 4 = ?$
 
-2) $2.4 \div 0.8 = ?$
+2) $2.4 \\div 0.8 = ?$
 
-3) $0.35 \div 0.07 = ?$
+3) $0.35 \\div 0.07 = ?$
     
     `,
       exercise: {
@@ -99,9 +99,9 @@ $7.5 \div 3 = 2.5$ ✅
 
 | # | Problem | Strategy |
 |---|---------|----------|
-| 1 | $9.6 \div 4$ | Direct division |
-| 2 | $2.4 \div 0.8$ | Multiply both by 10 |
-| 3 | $0.35 \div 0.07$ | Multiply both by 100 |
+| 1 | $9.6 \\div 4$ | Direct division |
+| 2 | $2.4 \\div 0.8$ | Multiply both by 10 |
+| 3 | $0.35 \\div 0.07$ | Multiply both by 100 |
     
     `
     },

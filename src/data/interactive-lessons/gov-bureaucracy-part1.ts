@@ -33,7 +33,7 @@ The federal bureaucracy = the entire EXECUTIVE BRANCH workforce that IMPLEMENTS 
 | Feature | Detail |
 |---|---|
 | **Size** | ~2.1 million civilian federal employees + ~1.3 million active-duty military |
-| **Spending** | Federal civilian discretionary spending ~$1.7 trillion/year |
+| **Spending** | Federal civilian discretionary spending ~\\$1.7 trillion/year |
 | **Constitutional basis** | Art II § 2 cl. 1 ('principal Officer in each of the executive Departments'); Art II § 2 cl. 2 ('Officers of the United States') |
 | **Statutory basis** | Each department + agency created by ACT OF CONGRESS |
 

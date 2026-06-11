@@ -16,7 +16,7 @@ $$\\Delta S^\\circ_{\\text{rxn}} = \\sum n \\cdot S^\\circ(\\text{products}) - \
 **Speed tips:**
 1. Write products first, then subtract reactants
 2. Don't forget coefficients—they multiply $S^\\circ$ values
-3. Keep track of units: $\\text{J/(mol·K)}$
+3. Keep track of units: $\\text{J/(mol}\\cdot\\text{K)}$
 
 **Reference values for this workshop:**
 

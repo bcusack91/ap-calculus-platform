@@ -49,7 +49,7 @@ $$E_{\\text{eV}} = \\frac{E_{\\text{J}}}{1.60 \\times 10^{-19}}$$
 
 A useful shortcut:
 
-$$E = \\frac{hc}{\\lambda} = \\frac{1240 \\text{ eV·nm}}{\\lambda \\text{ (nm)}}$$
+$$E = \\frac{hc}{\\lambda} = \\frac{1240 \\text{ eV}\\cdot\\text{nm}}{\\lambda \\text{ (nm)}}$$
       `
     },
     {
@@ -207,7 +207,7 @@ A sodium surface has work function $\\phi = 2.28$ eV. Ultraviolet light of wavel
               '4.97 eV'
             ],
             correctAnswer: 0,
-            explanation: '$E = 1240/500 = 2.48$ eV. (Using the shortcut $E = 1240 \\text{ eV·nm}/\\lambda$.)'
+            explanation: '$E = 1240/500 = 2.48$ eV. (Using the shortcut $E = 1240 \\text{ eV}\\cdot\\text{nm}/\\lambda$.)'
           },
           {
             question: 'In the photoelectric effect, which graph correctly shows $KE_{\\max}$ vs. frequency $f$?',

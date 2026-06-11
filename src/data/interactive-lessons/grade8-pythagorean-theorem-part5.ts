@@ -11,7 +11,7 @@ export const g8PythagoreanPart5Data = {
 
 The Pythagorean theorem extends to 3D:
 
-$d = \sqrt{l^2 + w^2 + h^2}$
+$d = \\sqrt{l^2 + w^2 + h^2}$
 
 **Space diagonal of a box**: finds the longest line from corner to opposite corner.
     
@@ -25,7 +25,7 @@ $d = \sqrt{l^2 + w^2 + h^2}$
 
 **Box 3×4×12. Space diagonal?**
 
-$d = \sqrt{3^2+4^2+12^2} = \sqrt{9+16+144} = \sqrt{169} = 13$ ✅
+$d = \\sqrt{3^2+4^2+12^2} = \\sqrt{9+16+144} = \\sqrt{169} = 13$ ✅
     
     `
     },

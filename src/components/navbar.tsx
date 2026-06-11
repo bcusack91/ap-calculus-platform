@@ -17,6 +17,58 @@ interface CourseLink {
   icon: string | null
 }
 
+/**
+ * Static course list — mirrors the seeded DB courses (slug → display name) so the
+ * Courses dropdown renders instantly and keeps working even if JS fetches fail.
+ * Icons and sections come from the shared course metadata.
+ */
+const STATIC_COURSE_NAMES: Record<string, string> = {
+  'grade-4-math': 'Grade 4 Math',
+  'grade-5-math': 'Grade 5 Math',
+  'grade-6-math': 'Grade 6 Math',
+  'grade-7-math': 'Grade 7 Math',
+  'grade-8-math': 'Grade 8 Math',
+  'pre-algebra': 'Pre-Algebra',
+  'algebra-1': 'Algebra 1',
+  'geometry': 'Geometry',
+  'algebra-2': 'Algebra 2',
+  'ap-precalculus': 'AP Precalculus',
+  'ap-calculus-ab': 'AP Calculus AB',
+  'ap-calculus-bc': 'AP Calculus BC',
+  'ap-statistics': 'AP Statistics',
+  'ap-physics-1': 'AP Physics 1',
+  'ap-physics-2': 'AP Physics 2',
+  'ap-physics-c-mechanics': 'AP Physics C: Mechanics',
+  'ap-physics-c-em': 'AP Physics C: Electricity & Magnetism',
+  'ap-chemistry': 'AP Chemistry',
+  'ap-biology': 'AP Biology',
+  'ap-psychology': 'AP Psychology',
+  'organic-chemistry': 'Organic Chemistry',
+  'organic-chemistry-1': 'Organic Chemistry 1',
+  'organic-chemistry-2': 'Organic Chemistry 2',
+  'ap-environmental-science': 'AP Environmental Science',
+  'ap-human-geography': 'AP Human Geography',
+  'ap-us-government': 'AP United States Government and Politics',
+  'ap-world-history': 'AP World History: Modern',
+  'ap-us-history': 'AP United States History',
+  'ap-macroeconomics': 'AP Macroeconomics',
+  'ap-microeconomics': 'AP Microeconomics',
+  'ap-african-american-studies': 'AP African American Studies',
+  'ap-english-literature': 'AP English Literature and Composition',
+  'ap-english-language': 'AP English Language and Composition',
+  'ap-computer-science-a': 'AP Computer Science A',
+  'ap-computer-science-principles': 'AP Computer Science Principles',
+  'sat-prep': 'SAT Prep',
+  'act-prep': 'ACT Prep',
+  'mcat-prep': 'MCAT Prep',
+}
+
+const STATIC_COURSES: CourseLink[] = Object.entries(STATIC_COURSE_NAMES).map(([slug, name]) => ({
+  slug,
+  name,
+  icon: courseMeta[slug]?.icon ?? null,
+}))
+
 /** Arrow-key navigation inside dropdown menus */
 function useDropdownKeyNav(containerRef: React.RefObject<HTMLDivElement | null>, isOpen: boolean) {
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -52,7 +104,6 @@ export function Navbar() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [moreOpen, setMoreOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
-  const [courses, setCourses] = useState<CourseLink[]>([])
   const coursesRef = useRef<HTMLDivElement>(null)
   const moreRef = useRef<HTMLDivElement>(null)
 
@@ -63,20 +114,22 @@ export function Navbar() {
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
   const isAdmin = session?.user?.role === 'ADMIN'
 
-  // Fetch navbar data (courses + avatar) in a single request, cached in sessionStorage with TTL
+  // Courses render synchronously from static metadata — only the avatar is dynamic.
+  // Fetch it for signed-in users, cached in sessionStorage with TTL.
   useEffect(() => {
-    const cacheKey = session ? 'navData-auth' : 'navData-anon'
+    if (!session) return
+    const cacheKey = 'navData-auth'
     const cached = sessionStorage.getItem(cacheKey)
     if (cached) {
       try {
         const parsed = JSON.parse(cached)
         // Use cached data if under 30 minutes old
         if (parsed._ts && Date.now() - parsed._ts < 30 * 60 * 1000) {
-          const timeoutId = setTimeout(() => {
-            setCourses(parsed.courses ?? [])
-            if (parsed.avatarData) setAvatarData(parsed.avatarData)
-          }, 0)
-          return () => clearTimeout(timeoutId)
+          if (parsed.avatarData) {
+            const timeoutId = setTimeout(() => setAvatarData(parsed.avatarData), 0)
+            return () => clearTimeout(timeoutId)
+          }
+          return
         }
       } catch { /* fetch fresh */ }
     }
@@ -84,9 +137,8 @@ export function Navbar() {
     fetch('/api/navbar')
       .then(res => res.json())
       .then(data => {
-        setCourses(data.courses ?? [])
         if (data.avatarData) setAvatarData(data.avatarData)
-        sessionStorage.setItem(cacheKey, JSON.stringify({ ...data, _ts: Date.now() }))
+        sessionStorage.setItem(cacheKey, JSON.stringify({ avatarData: data.avatarData ?? null, _ts: Date.now() }))
       })
       .catch(err => console.error('Error fetching navbar data:', err))
   }, [session])
@@ -152,7 +204,7 @@ export function Navbar() {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-5 text-sm font-medium" role="menubar">
+          <div className="hidden md:flex items-center space-x-5 text-sm font-medium">
             <Link href="/topics" className="transition-colors hover:text-foreground/80">
               Topics
             </Link>
@@ -169,11 +221,11 @@ export function Navbar() {
                 {chevronSvg(coursesOpen)}
               </button>
               {coursesOpen && (
-                <div role="menu" className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50 max-h-[70vh] overflow-y-auto">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50 max-h-[70vh] overflow-y-auto">
                   {(() => {
                     // Group courses by section from courseMeta
                     const grouped: Record<string, CourseLink[]> = {}
-                    for (const course of courses) {
+                    for (const course of STATIC_COURSES) {
                       const meta = courseMeta[course.slug]
                       const section = meta?.section ?? 'Other'
                       if (!grouped[section]) grouped[section] = []
@@ -203,7 +255,6 @@ export function Navbar() {
                               <Link
                                 key={course.slug}
                                 href={getCourseHref(course.slug)}
-                                role="menuitem"
                                 className="flex items-center gap-2 px-2 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
                                 onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
                               >
@@ -232,7 +283,6 @@ export function Navbar() {
                                 <Link
                                   key={course.slug}
                                   href={getCourseHref(course.slug)}
-                                  role="menuitem"
                                   className="flex items-center gap-2 pl-6 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
                                   onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
                                 >
@@ -245,9 +295,6 @@ export function Navbar() {
                       </>
                     )
                   })()}
-                  {courses.length === 0 && (
-                    <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">Loading...</div>
-                  )}
                 </div>
               )}
             </div>
@@ -270,14 +317,14 @@ export function Navbar() {
                 {chevronSvg(moreOpen)}
               </button>
               {moreOpen && (
-                <div role="menu" className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
-                  <Link href="/leaderboard" role="menuitem" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
+                  <Link href="/leaderboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     🏆 Leaderboard
                   </Link>
-                  <Link href="/about" role="menuitem" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ℹ️ About
                   </Link>
-                  <Link href="/contact" role="menuitem" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/contact" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ✉️ Contact
                   </Link>
                 </div>
@@ -347,7 +394,7 @@ export function Navbar() {
       {mobileMenuOpen && (
         <NavMobileMenu
           session={session}
-          courses={courses}
+          courses={STATIC_COURSES}
           avatarData={avatarData}
           isTeacher={isTeacher}
           isAdmin={isAdmin}

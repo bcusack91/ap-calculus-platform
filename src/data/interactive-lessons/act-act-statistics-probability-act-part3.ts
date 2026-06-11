@@ -57,7 +57,7 @@ A class survey result:
 - 7 take both
 
 Probability a random student takes art or music:
-\(P(A \cup M) = (18 + 15 - 7)/40 = 26/40 = 0.65\)
+\(P(A \\cup M) = (18 + 15 - 7)/40 = 26/40 = 0.65\)
 
 Subtracting overlap once is the key move. ACT often tests this exact trap.\n        `
       },

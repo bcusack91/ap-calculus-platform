@@ -25,7 +25,7 @@ export const macroFiscalPolicyToolsPart1Data = {
 | Tax Type | Description | Example | Progressive/Regressive? |
 |---|---|---|---|
 | **Progressive** | Higher income → higher tax rate | Federal income tax (10%–37% brackets) | Progressive |
-| **Regressive** | Takes a larger % of income from low earners | Sales tax, payroll tax (Social Security capped at $168,600 in 2024) | Regressive |
+| **Regressive** | Takes a larger % of income from low earners | Sales tax, payroll tax (Social Security capped at \\$168,600 in 2024) | Regressive |
 | **Proportional (flat)** | Same rate for all income levels | Some state income taxes; proposed "flat tax" | Proportional |
 
 ### Tax Cuts vs. Spending Increases
@@ -33,23 +33,23 @@ Both are expansionary, but they affect AD differently:
 
 | Policy | Initial Impact | Multiplier Effect |
 |---|---|---|
-| **↑ Government spending by $100B** | Directly adds $100B to AD | Full spending multiplier applies (larger impact) |
-| **↓ Taxes by $100B** | Consumers get $100B more income but don't spend all of it (they save some based on MPS) | Tax multiplier applies (smaller impact than equal spending increase) |
+| **↑ Government spending by \\$100B** | Directly adds \\$100B to AD | Full spending multiplier applies (larger impact) |
+| **↓ Taxes by \\$100B** | Consumers get \\$100B more income but don't spend all of it (they save some based on MPS) | Tax multiplier applies (smaller impact than equal spending increase) |
 
 **Why spending is more powerful dollar-for-dollar:**
-- A $100B spending increase is 100% injected into the economy immediately
-- A $100B tax cut → consumers save some (based on MPS) and spend the rest → first-round spending is less than $100B
+- A \\$100B spending increase is 100% injected into the economy immediately
+- A \\$100B tax cut → consumers save some (based on MPS) and spend the rest → first-round spending is less than \\$100B
 
 ### Balanced-Budget Multiplier
 - If the government increases BOTH spending and taxes by the same amount, GDP still increases
 - The **balanced-budget multiplier = 1** (GDP rises by exactly the amount of the spending/tax increase)
 - This works because the spending multiplier is larger than the tax multiplier
 
-> 🔑 **AP Connection:** A common AP question: "Is a $100B tax cut or a $100B spending increase more effective at increasing GDP?" Answer: Spending increase — because 100% enters the spending stream immediately, while some of the tax cut is saved rather than spent.
+> 🔑 **AP Connection:** A common AP question: "Is a \\$100B tax cut or a \\$100B spending increase more effective at increasing GDP?" Answer: Spending increase — because 100% enters the spending stream immediately, while some of the tax cut is saved rather than spent.
 `},
     {id:'macrofist1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
-      {question:'Why does a $100 billion increase in government spending have a larger effect on GDP than a $100 billion tax cut?',options:['Tax cuts only benefit wealthy individuals who don\'t spend their additional income on any goods or services','Government spending enters the spending stream immediately and in full, while consumers save a portion of a tax cut (based on MPS) rather than spending all of it','Tax cuts reduce government revenue and therefore decrease GDP, while government spending has no effect on the budget','Government spending is not subject to the multiplier effect, while tax cuts multiply through the economy faster'],correctAnswer:1,explanation:'When the government spends $100B on infrastructure, that entire $100B is immediately injected into the economy (workers are hired, materials purchased). When consumers receive a $100B tax cut, they save a portion (determined by the marginal propensity to save, MPS) and spend only the remainder. If MPS = 0.2, only $80B of the tax cut enters the spending stream initially. This is why the spending multiplier > tax multiplier.'},
-      {question:'The Social Security payroll tax is considered regressive because:',options:['It charges a higher tax rate to individuals who earn more money each year','It is capped at $168,600 (2024), so individuals earning above that amount pay a smaller percentage of their total income','It only applies to people over 65 years old who are already receiving Social Security benefits','It taxes all income at a flat rate with no cap, making everyone pay the same dollar amount'],correctAnswer:1,explanation:'The Social Security payroll tax (6.2% for employees) applies only to income up to $168,600 (2024 cap). Someone earning $168,600 pays 6.2% of their entire income. But someone earning $500,000 pays the same dollar amount of Social Security tax — which is only about 2.1% of their income. The effective rate decreases as income rises above the cap, making it regressive.'}
+      {question:'Why does a \\$100 billion increase in government spending have a larger effect on GDP than a \\$100 billion tax cut?',options:['Tax cuts only benefit wealthy individuals who don\'t spend their additional income on any goods or services','Government spending enters the spending stream immediately and in full, while consumers save a portion of a tax cut (based on MPS) rather than spending all of it','Tax cuts reduce government revenue and therefore decrease GDP, while government spending has no effect on the budget','Government spending is not subject to the multiplier effect, while tax cuts multiply through the economy faster'],correctAnswer:1,explanation:'When the government spends \\$100B on infrastructure, that entire \\$100B is immediately injected into the economy (workers are hired, materials purchased). When consumers receive a \\$100B tax cut, they save a portion (determined by the marginal propensity to save, MPS) and spend only the remainder. If MPS = 0.2, only \\$80B of the tax cut enters the spending stream initially. This is why the spending multiplier > tax multiplier.'},
+      {question:'The Social Security payroll tax is considered regressive because:',options:['It charges a higher tax rate to individuals who earn more money each year','It is capped at \\$168,600 (2024), so individuals earning above that amount pay a smaller percentage of their total income','It only applies to people over 65 years old who are already receiving Social Security benefits','It taxes all income at a flat rate with no cap, making everyone pay the same dollar amount'],correctAnswer:1,explanation:'The Social Security payroll tax (6.2% for employees) applies only to income up to \\$168,600 (2024 cap). Someone earning \\$168,600 pays 6.2% of their entire income. But someone earning \\$500,000 pays the same dollar amount of Social Security tax — which is only about 2.1% of their income. The effective rate decreases as income rises above the cap, making it regressive.'}
     ]}},
     {id:'macrofist1-supply',type:'text' as const,content:`
 ## 📖 Supply-Side Economics
@@ -70,8 +70,8 @@ Both are expansionary, but they affect AD differently:
 
 ### The Laffer Curve
 - Shows the relationship between **tax rates** and **tax revenue**
-- At 0% tax rate → $0 revenue
-- At 100% tax rate → $0 revenue (nobody works if all income is taxed)
+- At 0% tax rate → \\$0 revenue
+- At 100% tax rate → \\$0 revenue (nobody works if all income is taxed)
 - Revenue is maximized at some rate between 0% and 100%
 - **Supply-side argument:** If current tax rates are above the revenue-maximizing rate, cutting taxes will actually INCREASE revenue (more economic activity)
 

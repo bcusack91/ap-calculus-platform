@@ -156,13 +156,13 @@ CLINTON "THIRD WAY" CENTRIST:
 - BUSH TAX CUTS 2001 + 2003 (supply-side, sunset 2010, mostly extended Obama-era)
 - MEDICARE PART D 2003 (prescription drug benefit; conservative entitlement expansion)
 - HURRICANE KATRINA 2005 (FEMA failures; tarnished Bush)
-- 2008 FINANCIAL CRISIS + GREAT RECESSION → TARP $700B Oct 2008 (bipartisan); McCain lost to Obama Nov 2008
+- 2008 FINANCIAL CRISIS + GREAT RECESSION → TARP \\$700B Oct 2008 (bipartisan); McCain lost to Obama Nov 2008
 
 ## Era 8: Polarization Era (2009-Present)
 
 ### Obama 2009-2017
 
-- ARRA $787B stimulus 2009 (Keynesian); TARP continuation; auto bailouts (saved GM + Chrysler)
+- ARRA \\$787B stimulus 2009 (Keynesian); TARP continuation; auto bailouts (saved GM + Chrysler)
 - ACA 2010 ("OBAMACARE") — largest health reform since Medicare; passed without single Republican vote; survived NFIB v. Sebelius 2012 + King v. Burwell 2015
 - DODD-FRANK 2010 (financial regulation; CFPB created)
 - TEA PARTY 2009-2016 — right-wing populist + anti-Obama; took House 2010 (60-seat GOP gain); FREEDOM CAUCUS; ousted Boehner 2015
@@ -179,14 +179,14 @@ CLINTON "THIRD WAY" CENTRIST:
 - IMMIGRATION CRACKDOWN — Muslim ban 2017 (upheld Trump v. Hawaii 2018); child separation 2018; border wall construction; rescinded DACA (Reversed by DHS v. Regents 2020)
 - FAILED ACA REPEAL July 2017 (McCain thumbs-down)
 - 2 IMPEACHMENTS — Ukraine 2019 (acquitted) + Jan 6 incitement Jan 13 2021 (acquitted)
-- COVID-19 pandemic 2020 + delayed federal response; CARES Act $2.2T March 2020
+- COVID-19 pandemic 2020 + delayed federal response; CARES Act \\$2.2T March 2020
 - 2020 ELECTION LOSS to Biden (popular vote +7M; Electoral 306-232) → "STOP THE STEAL" + JANUARY 6 2021 CAPITOL ATTACK
 
 ### Biden 2021-2025
 
-- AMERICAN RESCUE PLAN 2021 ($1.9T COVID + economic stimulus)
-- BIPARTISAN INFRASTRUCTURE LAW Nov 2021 ($1.2T physical infrastructure)
-- INFLATION REDUCTION ACT Aug 2022 (largest climate legislation US history; ~$370B clean energy + Medicare drug price negotiation)
+- AMERICAN RESCUE PLAN 2021 (\\$1.9T COVID + economic stimulus)
+- BIPARTISAN INFRASTRUCTURE LAW Nov 2021 (\\$1.2T physical infrastructure)
+- INFLATION REDUCTION ACT Aug 2022 (largest climate legislation US history; ~\\$370B clean energy + Medicare drug price negotiation)
 - CHIPS + SCIENCE ACT Aug 2022 (semiconductor manufacturing); RESPECT FOR MARRIAGE ACT Dec 2022 (federal SS marriage protection)
 - KETANJI BROWN JACKSON SCOTUS 2022 (1st Black woman Justice)
 - DEMOCRATS LOST HOUSE Nov 2022 narrow margin → multiple Speaker votes (15 ballots McCarthy Jan 2023; ousted Oct 2023; Mike Johnson elected)

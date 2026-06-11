@@ -232,7 +232,7 @@ const longFRQs: MacroFRQ[] = [
         prompt: "Draw a correctly labeled FX market graph for the U.S. dollar (price = MXN per USD on Y-axis, quantity of dollars on X-axis). Show the initial equilibrium exchange rate.",
         maxPoints: 2,
         rubric: [
-          { points: 1, description: "Correctly labels axes (MXN/USD on Y-axis, Quantity of USD on X-axis) with downward-sloping demand for USD (D_$) and upward-sloping supply of USD (S_$)", keywords: ["MXN/USD", "quantity of dollars", "demand for dollars", "supply of dollars", "downward", "upward"] },
+          { points: 1, description: "Correctly labels axes (MXN/USD on Y-axis, Quantity of USD on X-axis) with downward-sloping demand for USD ($D_{\\$}$) and upward-sloping supply of USD ($S_{\\$}$)", keywords: ["MXN/USD", "quantity of dollars", "demand for dollars", "supply of dollars", "downward", "upward"] },
           { points: 1, description: "Shows initial equilibrium exchange rate E_1 at intersection", keywords: ["equilibrium", "E_1", "intersection"] }
         ],
         sampleAnswer: "FX market for USD: Y-axis = MXN per USD (price of dollars in pesos), X-axis = quantity of USD. D_\\$ slopes down, S_\\$ slopes up. Equilibrium exchange rate E_1 at intersection.",
@@ -242,7 +242,7 @@ const longFRQs: MacroFRQ[] = [
         prompt: "Show on your graph the effect of higher U.S. real interest rates on the FX market for the dollar.",
         maxPoints: 2,
         rubric: [
-          { points: 1, description: "Shows D_$ shifting RIGHT (Mexican investors demand more dollars to buy higher-yielding U.S. financial assets)", keywords: ["demand for dollars", "shifts right", "D_$ increases", "financial account", "Mexican investors"] },
+          { points: 1, description: "Shows $D_{\\$}$ shifting RIGHT (Mexican investors demand more dollars to buy higher-yielding U.S. financial assets)", keywords: ["demand for dollars", "shifts right", "D_$ increases", "financial account", "Mexican investors"] },
           { points: 1, description: "Identifies dollar APPRECIATION (E_2 > E_1, more pesos per dollar)", keywords: ["appreciation", "appreciate", "E_2 > E_1", "more pesos per dollar", "stronger dollar"] }
         ],
         sampleAnswer: "Higher U.S. real interest rates make U.S. financial assets more attractive to Mexican investors. They demand more USD on the FX market, shifting D_\\$ right. The dollar appreciates from E_1 to E_2 (more pesos per dollar).",

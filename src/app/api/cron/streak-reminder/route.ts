@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { sendStreakReminder } from '@/lib/email'
+import { requireCronSecret } from '@/lib/cron-auth'
 
 /**
  * Streak reminder cron job — call daily at 6 PM via Vercel Cron.
@@ -10,10 +11,8 @@ import { sendStreakReminder } from '@/lib/email'
  *   { "path": "/api/cron/streak-reminder", "schedule": "0 18 * * *" }
  */
 export async function GET(request: Request) {
-  const authHeader = request.headers.get('authorization')
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+  const unauthorized = requireCronSecret(request)
+  if (unauthorized) return unauthorized
 
   try {
     const todayStart = new Date()

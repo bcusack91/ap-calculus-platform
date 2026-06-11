@@ -12,8 +12,8 @@ export const geoCirclesPart7Data = {
 ### Key Formulas
 - $d = 2r$
 - Inscribed angle = ½ arc
-- Arc length = $(\\theta/360)(2\pi r)$
-- Sector area = $(\\theta/360)(\pi r^2)$
+- Arc length = $(\\theta/360)(2\\pi r)$
+- Sector area = $(\\theta/360)(\\pi r^2)$
 - Tangent ⊥ radius
 - Intersecting chords: $ab = cd$
     

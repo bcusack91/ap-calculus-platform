@@ -1,15 +1,13 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { requireCronSecret } from '@/lib/cron-auth'
 
 // Cron-triggered weekly digest email endpoint
 // Secured by CRON_SECRET header (Vercel Cron or similar)
 export async function POST(request: Request) {
   try {
-    const authHeader = request.headers.get('authorization')
-    const cronSecret = process.env.CRON_SECRET
-    if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
+    const unauthorized = requireCronSecret(request)
+    if (unauthorized) return unauthorized
 
     // Find users who opted in to weekly digest
     const users = await prisma.user.findMany({

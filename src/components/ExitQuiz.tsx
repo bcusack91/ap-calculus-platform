@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import { EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
@@ -146,8 +147,8 @@ export default function ExitQuiz({
   }
 
   const score = useMemo(() => answers.filter(a => a.correct).length, [answers])
-  const passThreshold = Math.ceil(totalQuestions * 0.7)
-  const redoThreshold = Math.ceil(totalQuestions * 0.5)
+  const passThreshold = Math.ceil(totalQuestions * EXIT_QUIZ_PASS_FRACTION)
+  const redoThreshold = Math.ceil(totalQuestions * EXIT_QUIZ_REDO_FRACTION)
   const passed = score >= passThreshold
   const quizMustRedoUnit = score < redoThreshold
 

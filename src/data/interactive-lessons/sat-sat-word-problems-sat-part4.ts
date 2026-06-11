@@ -30,7 +30,7 @@ $$\\text{amount₁ × concentration₁} + \\text{amount₂ × concentration₂} 
 - $4a = 400 → a = 100$ adults, $c = 100$ children
 
 ### Weighted Average
-$$\\text{Weighted avg} = \\frac{\sum (\\text{value × weight})}{\sum \\text{weights}}$$`
+$$\\text{Weighted avg} = \\frac{\\sum (\\text{value × weight})}{\\sum \\text{weights}}$$`
     },
     {
       id: 'wp4-q1',

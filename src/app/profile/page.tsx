@@ -8,9 +8,8 @@ import ColorSchemeSelector from '@/components/ColorSchemeSelector';
 import { AvatarData } from '@/types/avatar';
 import { StudyHeatmap } from '@/components/StudyHeatmap';
 import { MilestonesList } from '@/components/MilestoneCelebrations';
-import { XPDisplay } from '@/components/XPSystem';
-import { LevelBadge } from '@/components/LevelSystem';
 import NightModeScheduler from '@/components/NightModeScheduler';
+import DeleteAccountDialog from '@/components/DeleteAccountDialog';
 
 export default function ProfilePage() {
   const { data: session, status } = useSession();
@@ -18,6 +17,7 @@ export default function ProfilePage() {
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null);
   const [loading, setLoading] = useState(true);
   const [saveMessage, setSaveMessage] = useState('');
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -126,15 +126,6 @@ export default function ProfilePage() {
         {/* Avatar Builder */}
         <AvatarBuilder initialAvatar={avatarData} onSave={handleSaveAvatar} />
 
-        {/* XP & Level */}
-        <div className="max-w-md mx-auto mt-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
-          <h2 className="font-semibold text-gray-900 dark:text-white mb-3">⚡ XP & Level</h2>
-          <div className="flex items-center gap-4">
-            <XPDisplay totalXP={0} todayXP={0} />
-            <LevelBadge totalXP={0} />
-          </div>
-        </div>
-
         {/* Study Heatmap */}
         <div className="max-w-4xl mx-auto mt-8">
           <StudyHeatmap />
@@ -144,6 +135,26 @@ export default function ProfilePage() {
         <div className="max-w-4xl mx-auto mt-8">
           <MilestonesList />
         </div>
+
+        {/* Danger Zone */}
+        <div className="max-w-md mx-auto mt-8 bg-white dark:bg-gray-800 rounded-xl border border-red-300 dark:border-red-800 p-6 shadow-sm">
+          <h2 className="font-semibold text-red-600 dark:text-red-400 mb-2">Danger zone</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Permanently delete your account, all learning data, and cancel any active
+            subscription. This cannot be undone.
+          </p>
+          <button
+            onClick={() => setDeleteDialogOpen(true)}
+            className="px-4 py-2 rounded-lg border border-red-600 text-red-600 dark:text-red-400 dark:border-red-500 font-medium hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-colors"
+          >
+            Delete account
+          </button>
+        </div>
+
+        <DeleteAccountDialog
+          open={deleteDialogOpen}
+          onClose={() => setDeleteDialogOpen(false)}
+        />
 
         {/* Back Button */}
         <div className="text-center mt-8">

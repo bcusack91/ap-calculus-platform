@@ -152,7 +152,7 @@ export const govPublicOpinionPart3Data = {
 - REP = lower across board (TCJA 2017 lowered + want extension; cut corporate)
 - 60%+ support raising taxes on wealthy; 60%+ support raising corporate tax
 - TCJA 2017 unpopular when passed but TRump made tax cuts central GOP brand
-- 2024 Harris proposed taxes on $400K+; Trump proposed extending TCJA + new tax cuts
+- 2024 Harris proposed taxes on \\$400K+; Trump proposed extending TCJA + new tax cuts
 
 ### Healthcare
 

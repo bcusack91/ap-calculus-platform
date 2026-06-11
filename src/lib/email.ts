@@ -1,12 +1,16 @@
 import { getPublicAppUrl } from '@/lib/public-url'
 import { sendEmail } from '@/lib/email-provider'
+import { makeUnsubscribeToken } from '@/lib/unsubscribe-token'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
 const APP_URL = getPublicAppUrl()
 
 function emailLayout(content: string, recipientEmail?: string) {
-  const unsubscribeUrl = recipientEmail
-    ? `${APP_URL}/api/unsubscribe?token=${Buffer.from(recipientEmail).toString('base64')}`
+  // Signed (HMAC) unsubscribe token — makeUnsubscribeToken returns null if no
+  // signing secret is configured, in which case the link is simply omitted.
+  const unsubscribeToken = recipientEmail ? makeUnsubscribeToken(recipientEmail) : null
+  const unsubscribeUrl = unsubscribeToken
+    ? `${APP_URL}/api/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`
     : null
   return `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 32px 24px; background-color: #ffffff;">

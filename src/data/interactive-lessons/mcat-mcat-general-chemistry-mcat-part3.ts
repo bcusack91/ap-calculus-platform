@@ -169,13 +169,13 @@ $$i = \\text{van't Hoff factor (particles per formula unit in solution)}$$
 $$\\Delta T_f = K_f \\cdot m \\cdot i \\qquad (\\text{solution freezes } \\Delta T_f \\text{ lower than pure solvent})$$
 $$\\Delta T_b = K_b \\cdot m \\cdot i \\qquad (\\text{solution boils } \\Delta T_b \\text{ higher than pure solvent})$$
 
-For water: $K_f = 1.86\\;°\\text{C·kg/mol}$, $K_b = 0.512\\;°\\text{C·kg/mol}$
+For water: $K_f = 1.86\\;°\\text{C}\\cdot\\text{kg/mol}$, $K_b = 0.512\\;°\\text{C}\\cdot\\text{kg/mol}$
 
 ### Osmotic Pressure
 
 $$\\Pi = iMRT$$
 
-where $M$ = molarity, $R = 0.0821\\;\\text{L·atm/(mol·K)}$, $T$ = temperature in K
+where $M$ = molarity, $R = 0.0821\\;\\text{L}\\cdot\\text{atm/(mol}\\cdot\\text{K)}$, $T$ = temperature in K
 
 **MCAT Connection:** Osmosis is critical in biology (cells shrink in hypertonic solution, swell in hypotonic). Dissolving more particles = higher osmolarity = more osmotic pressure.
 
@@ -204,7 +204,7 @@ Adding a nonvolatile solute always **lowers** vapor pressure.
             explanation: `$\\Delta T_f = K_f \\cdot m \\cdot i$. At the same molality, the compound with the highest $i$ causes the greatest freezing point depression. $\\text{CaCl}_2$ ($i=3$) > NaCl/KBr ($i=2$) > glucose ($i=1$).`
           },
           {
-            question: `A 0.50 m solution of NaCl in water ($K_f = 1.86\\;°\\text{C·kg/mol}$) has a freezing point depression of:`,
+            question: `A 0.50 m solution of NaCl in water ($K_f = 1.86\\;°\\text{C}\\cdot\\text{kg/mol}$) has a freezing point depression of:`,
             options: [
               `0.93°C`,
               `1.86°C`,

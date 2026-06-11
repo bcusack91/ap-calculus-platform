@@ -9,7 +9,7 @@ export const g8PythagoreanPart2Data = {
 
 **Part 2 of 7 — Finding Missing Sides**
 
-To find a **leg**: $a = \sqrt{c^2 - b^2}$
+To find a **leg**: $a = \\sqrt{c^2 - b^2}$
 
 Always identify: which side is the hypotenuse?
     
@@ -23,7 +23,7 @@ Always identify: which side is the hypotenuse?
 
 **Hypotenuse 10, one leg 6. Find the other leg.**
 
-$a = \sqrt{10^2 - 6^2} = \sqrt{100 - 36} = \sqrt{64} = 8$ ✅
+$a = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$ ✅
     
     `
     },

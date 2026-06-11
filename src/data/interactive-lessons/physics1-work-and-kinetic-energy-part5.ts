@@ -29,7 +29,7 @@ where:
 
 ### Units
 
-$$1 \\text{ Watt} = 1 \\text{ J/s} = 1 \\text{ kg·m}^2/\\text{s}^3$$
+$$1 \\text{ Watt} = 1 \\text{ J/s} = 1 \\text{ kg}\\cdot\\text{m}^2/\\text{s}^3$$
 
 ### Common Units
 

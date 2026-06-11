@@ -9,7 +9,7 @@ export const g8LinearPart2Data = {
 
 **Part 2 of 7 — Slope from Tables & Graphs**
 
-$\\text{slope} = m = \\frac{\Delta y}{\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}$
+$\\text{slope} = m = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}$
 
 - Positive slope: rises left to right
 - Negative slope: falls left to right

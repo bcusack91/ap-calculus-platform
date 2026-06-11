@@ -177,7 +177,7 @@ Identify the inhibitor types.
 
 **Solution:**
 
-1. **Lineweaver-Burk equation**: $\\frac{1}{v} = \\frac{K_m}{V_{max}} \cdot \\frac{1}{[S]} + \\frac{1}{V_{max}}$
+1. **Lineweaver-Burk equation**: $\\frac{1}{v} = \\frac{K_m}{V_{max}} \\cdot \\frac{1}{[S]} + \\frac{1}{V_{max}}$
    - Slope = $K_m/V_{max}$
    - y-intercept = $1/V_{max}$
    - x-intercept = $-1/K_m$

@@ -425,6 +425,10 @@ model QuizQuestion {
   updatedAt      DateTime     @updatedAt
   answers        QuizAnswer[]
   quiz           Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  // Postgres doesn't auto-index FKs: relation loads and Quiz cascade deletes
+  // were sequential-scanning this table.
+  @@index([quizId])
 }
 
 model QuizAttempt {
@@ -499,6 +503,10 @@ model DiagnosticTest {
   strengths String?
   createdAt DateTime @default(now())
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Hot path: every diagnostic history/latest-attempt lookup filters on
+  // (userId, category) ordered by createdAt desc.
+  @@index([userId, category, createdAt])
 }
 
 model DailyStreak {

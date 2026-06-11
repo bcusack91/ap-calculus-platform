@@ -24,7 +24,7 @@ Real-world Pythagorean theorem:
 
 **Ladder: 10 ft long, base 6 ft from wall. How high does it reach?**
 
-$h = \sqrt{10^2 - 6^2} = \sqrt{100-36} = \sqrt{64} = 8$ ft ✅
+$h = \\sqrt{10^2 - 6^2} = \\sqrt{100-36} = \\sqrt{64} = 8$ ft ✅
     
     `
     },

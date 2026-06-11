@@ -94,7 +94,7 @@ Americans acquire political ideology through **POLITICAL SOCIALIZATION** — the
 |---|---|---|---|---|
 | **TAXES** | Higher on wealthy + corporations | Lower across the board | Eliminate or minimize | Wealth tax + much higher on top earners |
 | **HEALTHCARE** | Public option / regulated private | Market-based | Eliminate Medicare/Medicaid | Medicare for All single-payer |
-| **MINIMUM WAGE** | Raise federally | State decision / oppose increase | Eliminate | $15+ federal minimum |
+| **MINIMUM WAGE** | Raise federally | State decision / oppose increase | Eliminate | \\$15+ federal minimum |
 | **REGULATION** | More EPA, SEC, CFPB | Deregulate | Eliminate most | Aggressive antitrust + climate regulation |
 | **ABORTION** | Codify Roe protections | Restrict (post-Dobbs) | State decision (varies) | Codify + expand access |
 | **GUNS** | Universal background checks + assault weapon restrictions | Protect 2nd Am robustly | Oppose all federal regulation | Comprehensive gun control |

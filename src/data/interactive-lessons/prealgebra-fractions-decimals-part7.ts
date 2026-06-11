@@ -25,7 +25,7 @@ export const preAlgFractionsPart7Data = {
       content: `
 ## Worked Example
 
-$\\frac{5}{8} = 0.625 = 62.5\%$ ✅
+$\\frac{5}{8} = 0.625 = 62.5\\%$ ✅
     
     `
     },

@@ -20,7 +20,7 @@ Unlike enthalpy where we only measure **changes** ($\\Delta H$), entropy has **a
 
 > A perfect crystal at absolute zero (0 K) has an entropy of exactly zero.
 
-$$S_{\\text{perfect crystal at 0 K}} = 0 \\text{ J/(mol·K)}$$
+$$S_{\\text{perfect crystal at 0 K}} = 0 \\text{ J/(mol}\\cdot\\text{K)}$$
 
 This gives us a **starting point** for measuring entropy — unlike enthalpy, where we can only measure differences.
 
@@ -96,7 +96,7 @@ $$\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°_{\\text{products}} - \\sum n \\
 **Solution:**
 
 $$\\Delta S° = 2(188.7) - [2(130.6) + 205.0]$$
-$$= 377.4 - 466.2 = -88.8 \\text{ J/(mol·K)}$$
+$$= 377.4 - 466.2 = -88.8 \\text{ J/(mol}\\cdot\\text{K)}$$
 
 **Negative** because 3 mol of gas → 2 mol of gas (fewer molecules of gas = less entropy).
       `

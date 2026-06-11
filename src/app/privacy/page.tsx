@@ -354,6 +354,11 @@ export default function PrivacyPage() {
             </a>
           </p>
           <p className="mt-4">
+            You can also delete your account and its associated data yourself at any time from your{' '}
+            <a href="/profile" className="text-blue-600 hover:underline">Profile page</a>{' '}
+            (Danger zone &rarr; Delete account).
+          </p>
+          <p className="mt-4">
             For specific privacy requests (access, deletion, opt-out), please include:
           </p>
           <ul className="list-disc pl-6 mt-2">

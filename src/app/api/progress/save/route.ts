@@ -4,11 +4,12 @@ import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { progressSaveSchema, parseBody } from '@/lib/validations'
 import { invalidateCache, dashboardCacheKey } from '@/lib/redis'
+import { touchDailyStreak } from '@/lib/streak'
 
 export async function POST(request: Request) {
   try {
     const session = await auth()
-    
+
     if (!session?.user?.id) {
       return NextResponse.json(
         { error: 'Unauthorized' },
@@ -25,7 +26,7 @@ export async function POST(request: Request) {
       )
     }
     const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion, variant, failedExitParts } = parsed.data
-    
+
     if (!topicSlug && !topicId) {
       return NextResponse.json(
         { error: 'Topic slug or ID is required' },
@@ -59,7 +60,7 @@ export async function POST(request: Request) {
 
     // Calculate status based on progress
     let status: 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED' | 'MASTERED' = 'IN_PROGRESS'
-    
+
     if (masteryLevel >= 0.9) {
       status = 'MASTERED'
     } else if (masteryLevel >= 0.6) {
@@ -70,77 +71,93 @@ export async function POST(request: Request) {
       status = 'NOT_STARTED'
     }
 
-    // Never downgrade mastery or status — fetch existing record first
-    const existing = await prisma.topicProgress.findUnique({
-      where: {
-        userId_topicId: {
-          userId: session.user.id,
-          topicId: topic.id,
+    const topicDbId = topic.id
+    const userId = session.user.id
+
+    // All progress + flashcard writes commit or roll back together. The
+    // never-downgrade resolution happens INSIDE the transaction behind a row
+    // lock, so two concurrent saves can't both read stale state and clobber
+    // each other's status/mastery.
+    const txResult = await prisma.$transaction(async (tx) => {
+      // Lock the existing progress row (if any) so concurrent saves serialize.
+      // If no row exists yet, the unique (userId, topicId) constraint makes the
+      // racing upserts safe at the DB level.
+      await tx.$queryRaw`SELECT id FROM "TopicProgress" WHERE "userId" = ${userId} AND "topicId" = ${topicDbId} FOR UPDATE`
+
+      // Never downgrade mastery or status — resolve against the locked row
+      const existing = await tx.topicProgress.findUnique({
+        where: {
+          userId_topicId: {
+            userId,
+            topicId: topicDbId,
+          }
+        },
+        select: { masteryLevel: true, status: true }
+      })
+
+      const statusRank = { NOT_STARTED: 0, IN_PROGRESS: 1, COMPLETED: 2, MASTERED: 3 } as const
+      const effectiveMastery = existing
+        ? Math.max(masteryLevel || 0, existing.masteryLevel || 0)
+        : (masteryLevel || 0)
+      const effectiveStatus = existing && statusRank[existing.status as keyof typeof statusRank] > statusRank[status]
+        ? existing.status as typeof status
+        : status
+
+      // Upsert topic progress. timeSpent is a CUMULATIVE total (the dashboard
+      // sums it across topics) — increment it rather than overwriting it with
+      // just this session's delta.
+      const progress = await tx.topicProgress.upsert({
+        where: {
+          userId_topicId: {
+            userId,
+            topicId: topicDbId,
+          }
+        },
+        update: {
+          masteryLevel: effectiveMastery,
+          status: effectiveStatus,
+          lastAccessed: new Date(),
+          timeSpent: { increment: timeSpent || 0 },
+          completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
+          ...(variant !== undefined && { variant }),
+          ...(failedExitParts !== undefined && { failedExitParts }),
+        },
+        create: {
+          userId,
+          topicId: topicDbId,
+          masteryLevel: effectiveMastery,
+          status: effectiveStatus,
+          timeSpent: timeSpent || 0,
+          completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
+          ...(variant !== undefined && { variant }),
+          ...(failedExitParts !== undefined && { failedExitParts }),
         }
-      },
-      select: { masteryLevel: true, status: true }
-    })
+      })
 
-    const statusRank = { NOT_STARTED: 0, IN_PROGRESS: 1, COMPLETED: 2, MASTERED: 3 } as const
-    const effectiveMastery = existing
-      ? Math.max(masteryLevel || 0, existing.masteryLevel || 0)
-      : (masteryLevel || 0)
-    const effectiveStatus = existing && statusRank[existing.status as keyof typeof statusRank] > statusRank[status]
-      ? existing.status as typeof status
-      : status
+      // Saving progress is study activity — advance the daily streak
+      await touchDailyStreak(tx, userId)
 
-    // Upsert topic progress
-    const progress = await prisma.topicProgress.upsert({
-      where: {
-        userId_topicId: {
-          userId: session.user.id,
-          topicId: topic.id,
-        }
-      },
-      update: {
-        masteryLevel: effectiveMastery,
-        status: effectiveStatus,
-        lastAccessed: new Date(),
-        timeSpent: timeSpent || 0,
-        completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
-        ...(variant !== undefined && { variant }),
-        ...(failedExitParts !== undefined && { failedExitParts }),
-      },
-      create: {
-        userId: session.user.id,
-        topicId: topic.id,
-        masteryLevel: effectiveMastery,
-        status: effectiveStatus,
-        timeSpent: timeSpent || 0,
-        completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
-        ...(variant !== undefined && { variant }),
-        ...(failedExitParts !== undefined && { failedExitParts }),
-      }
-    })
+      // 🎴 AUTO-GENERATE/INITIALIZE FLASHCARDS as user progresses through topic
+      let flashcardsCreated = false
+      let flashcardCount = 0
+      let flashcardTopicTitle = ''
+      let totalActiveFlashcards = 0
+      let totalFlashcards = 0
 
-    // 🎴 AUTO-GENERATE/INITIALIZE FLASHCARDS as user progresses through topic
-    let flashcardsCreated = false
-    let flashcardCount = 0
-    let flashcardTopicTitle = ''
-    let totalActiveFlashcards = 0
-    let totalFlashcards = 0
-    
-    // Initialize flashcards ONLY when completing a part, not during progress checkpoints
-    // This prevents flashcards from appearing when navigating between sections
-    const shouldInitializeFlashcards = (
-      isPartCompletion && (
-        status === 'COMPLETED' || 
-        status === 'MASTERED' || 
-        (status === 'IN_PROGRESS' && lessonPart && lessonPart >= 1)
+      // Initialize flashcards ONLY when completing a part, not during progress checkpoints
+      // This prevents flashcards from appearing when navigating between sections
+      const shouldInitializeFlashcards = (
+        isPartCompletion && (
+          status === 'COMPLETED' ||
+          status === 'MASTERED' ||
+          (status === 'IN_PROGRESS' && lessonPart && lessonPart >= 1)
+        )
       )
-    )
-    
-    if (shouldInitializeFlashcards) {
-      try {
-        
+
+      if (shouldInitializeFlashcards) {
         // Get the full topic with content
-        const fullTopic = await prisma.topic.findUnique({
-          where: { id: topic.id },
+        const fullTopic = await tx.topic.findUnique({
+          where: { id: topicDbId },
           select: {
             id: true,
             title: true,
@@ -157,12 +174,12 @@ export async function POST(request: Request) {
         if (fullTopic && fullTopic.flashcards.length === 0) {
           // Generate flashcards from content
           const candidates = generateFlashcardsFromContent(fullTopic.textContent)
-          
+
           // Also analyze example problems
           const problemText = fullTopic.exampleProblems
             .map(p => `${p.question}\n${p.solution}`)
             .join('\n\n')
-          
+
           if (problemText) {
             const problemCandidates = generateFlashcardsFromContent(problemText)
             candidates.push(...problemCandidates)
@@ -172,25 +189,25 @@ export async function POST(request: Request) {
           const topFlashcards = getTopFlashcards(candidates, 8)
 
           if (topFlashcards.length > 0) {
-            // Create flashcards in a single batch, then initialize progress in a batch
-            const createdFlashcards = await prisma.$transaction(
-              topFlashcards.map((card) =>
-                prisma.flashcard.create({
-                  data: {
-                    topicId: fullTopic.id,
-                    front: card.front,
-                    back: card.back,
-                    hint: card.hint,
-                    isPremium: false,
-                  },
-                  select: { id: true },
-                })
-              )
-            )
+            // Create flashcards, then initialize progress in a batch
+            const createdFlashcards: { id: string }[] = []
+            for (const card of topFlashcards) {
+              const fc = await tx.flashcard.create({
+                data: {
+                  topicId: fullTopic.id,
+                  front: card.front,
+                  back: card.back,
+                  hint: card.hint,
+                  isPremium: false,
+                },
+                select: { id: true },
+              })
+              createdFlashcards.push(fc)
+            }
 
-            await prisma.flashcardProgress.createMany({
+            await tx.flashcardProgress.createMany({
               data: createdFlashcards.map((fc) => ({
-                userId: session.user.id,
+                userId,
                 flashcardId: fc.id,
                 easeFactor: 2.5,
                 interval: 0,
@@ -209,10 +226,9 @@ export async function POST(request: Request) {
           // LESSON PART-BASED INITIALIZATION: Only initialize flashcards tagged for completed parts
           // This ensures flashcards match the actual content covered
 
-          
           // Determine which flashcards to initialize based on lesson part and MASTERED/COMPLETED status
           let flashcardsToConsider: typeof fullTopic.flashcards = []
-          
+
           if (status === 'MASTERED' || status === 'COMPLETED') {
             // When topic is completed/mastered, initialize ALL flashcards (regardless of lessonPart tag)
             flashcardsToConsider = fullTopic.flashcards
@@ -220,7 +236,7 @@ export async function POST(request: Request) {
           } else if (lessonPart) {
             // During progress: ONLY initialize flashcards tagged for completed parts
             // Cards without lessonPart tags will NOT be initialized during progress
-            flashcardsToConsider = fullTopic.flashcards.filter(fc => 
+            flashcardsToConsider = fullTopic.flashcards.filter(fc =>
               fc.lessonPart !== null && fc.lessonPart !== undefined && fc.lessonPart <= lessonPart
             )
 
@@ -228,11 +244,11 @@ export async function POST(request: Request) {
             // No lesson part specified, use all flashcards
             flashcardsToConsider = fullTopic.flashcards
           }
-          
+
           // Check how many are already initialized
-          const existingProgress = await prisma.flashcardProgress.findMany({
+          const existingProgress = await tx.flashcardProgress.findMany({
             where: {
-              userId: session.user.id,
+              userId,
               flashcard: {
                 topicId: fullTopic.id
               }
@@ -241,21 +257,21 @@ export async function POST(request: Request) {
               flashcardId: true
             }
           })
-          
+
           const initializedIds = new Set(existingProgress.map(p => p.flashcardId))
-          
+
           // Find flashcards that should be active but aren't yet initialized
           const uninitializedCards = flashcardsToConsider.filter(fc => !initializedIds.has(fc.id))
-          
+
           // Store total counts for notification
           totalActiveFlashcards = initializedIds.size
           totalFlashcards = fullTopic.flashcards.length
-          
+
           if (uninitializedCards.length > 0) {
             // Initialize all cards in a single batch query
-            await prisma.flashcardProgress.createMany({
+            await tx.flashcardProgress.createMany({
               data: uninitializedCards.map((flashcard) => ({
-                userId: session.user.id,
+                userId,
                 flashcardId: flashcard.id,
                 easeFactor: 2.5,
                 interval: 0,
@@ -264,8 +280,9 @@ export async function POST(request: Request) {
                 lastReviewed: new Date(),
                 reviewCount: 0,
               })),
+              skipDuplicates: true,
             })
-            
+
             flashcardsCreated = true
             flashcardCount = uninitializedCards.length
             flashcardTopicTitle = fullTopic.title
@@ -279,11 +296,19 @@ export async function POST(request: Request) {
 
           }
         }
-      } catch (error) {
-        // Don't fail the whole request if flashcard generation fails
-        console.error('Failed to auto-generate flashcards:', error)
       }
-    }
+
+      return {
+        progress,
+        flashcardsCreated,
+        flashcardCount,
+        flashcardTopicTitle,
+        totalActiveFlashcards,
+        totalFlashcards,
+      }
+    })
+
+    const { progress, flashcardsCreated, flashcardCount, flashcardTopicTitle, totalActiveFlashcards, totalFlashcards } = txResult
 
     // Progress changed — drop the user's cached dashboard so their next
     // dashboard load reflects this update immediately rather than after the TTL.

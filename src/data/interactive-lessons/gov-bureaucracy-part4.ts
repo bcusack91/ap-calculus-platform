@@ -50,7 +50,7 @@ Congress's relationships with agencies:
 |---|---|
 | **APPOINTMENT + REMOVAL** | President nominates ~1,200 PAS positions; appoints another ~3,000-4,000 political officials; can remove most political appointees AT WILL |
 | **EXECUTIVE ORDERS + MEMORANDA** | Direct agencies on policy (within statutory limits); president can REVERSE prior EOs (Biden Day 1 = 17 EOs reversing Trump policies; Trump Day 1 2025 = 26+ EOs reversing Biden) |
-| **OMB CONTROL** | Office of Management and Budget reviews agency budgets + 'significant' regulations through OIRA (EO 12866 Clinton 1993); $200M+ rules require OIRA review |
+| **OMB CONTROL** | Office of Management and Budget reviews agency budgets + 'significant' regulations through OIRA (EO 12866 Clinton 1993); \\$200M+ rules require OIRA review |
 | **AGENDA SETTING** | President prioritizes administration goals + signals to agencies through speeches, memoranda, executive actions |
 | **REORGANIZATION** | Limited authority to reorganize (Reorganization Act expired 1984); Trump Executive Reorganization (2017-2020) reduced regulations + restructured |
 | **PARDON POWER** | Can pardon individuals subject to agency criminal referrals (e.g., Trump pardons of immigration officials) |

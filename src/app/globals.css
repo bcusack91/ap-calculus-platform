@@ -487,6 +487,17 @@ blockquote h2 {
   }
 }
 
+/* Global reduced-motion safety net: collapse all animations/transitions to near-instant */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Print-friendly styles — hide chrome, ads, and non-essential UI */
 @media print {
   nav,

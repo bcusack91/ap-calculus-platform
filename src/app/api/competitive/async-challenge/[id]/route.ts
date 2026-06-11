@@ -205,61 +205,78 @@ export async function POST(
         // else true tie — winnerId stays null
       }
 
-      const updated = await prisma.asyncChallenge.update({
-        where: { id },
-        data: {
-          recipientId: userId,
-          recipientScore: score,
-          recipientTime: safeTime,
-          recipientAnswers: JSON.parse(JSON.stringify(scoredAnswers)),
-          recipientPlayedAt: new Date(),
-          status: 'COMPLETED',
-          winnerId,
-          completedAt: new Date(),
-        },
-      })
-
-      // === MMR / win-loss update for both players ===
+      // === Atomic completion: challenge result + MMR / win-loss for both players ===
       // Async challenges count toward the same competitive ladder as live matches.
       // Ties result in 0 MMR change for both players.
+      //
+      // Everything happens in ONE transaction: if any MMR bookkeeping fails, the
+      // challenge completion rolls back too, so the challenge stays in its
+      // pre-submit state and the recipient can simply retry. (Previously the
+      // challenge was marked COMPLETED first and MMR errors were swallowed,
+      // which could permanently desync ratings from results.)
+      let updated
       try {
-        const [challengerProfile, recipientProfile] = await Promise.all([
-          prisma.competitiveProfile.findUnique({ where: { userId: challenge.challengerId } }),
-          prisma.competitiveProfile.findUnique({ where: { userId } }),
-        ])
+        updated = await prisma.$transaction(async (tx) => {
+          // Lock the challenge row so concurrent submissions can't both complete it
+          await tx.$queryRaw`SELECT id FROM "AsyncChallenge" WHERE id = ${id} FOR UPDATE`
+          const current = await tx.asyncChallenge.findUnique({
+            where: { id },
+            select: { status: true },
+          })
+          if (!current || (current.status !== 'WAITING_FOR_OPPONENT' && current.status !== 'RECIPIENT_PLAYING')) {
+            throw Object.assign(new Error('Challenge already completed'), { code: 'ALREADY_COMPLETED' })
+          }
 
-        // Auto-create a profile if missing so brand-new accounts still get rated.
-        const ensuredChallenger = challengerProfile ?? await prisma.competitiveProfile.create({
-          data: { userId: challenge.challengerId, competitiveModeUnlocked: true },
-        })
-        const ensuredRecipient = recipientProfile ?? await prisma.competitiveProfile.create({
-          data: { userId, competitiveModeUnlocked: true },
-        })
+          const completedChallenge = await tx.asyncChallenge.update({
+            where: { id },
+            data: {
+              recipientId: userId,
+              recipientScore: score,
+              recipientTime: safeTime,
+              recipientAnswers: JSON.parse(JSON.stringify(scoredAnswers)),
+              recipientPlayedAt: new Date(),
+              status: 'COMPLETED',
+              winnerId,
+              completedAt: new Date(),
+            },
+          })
 
-        const challengerMMR = ensuredChallenger.overallMMR
-        const recipientMMR = ensuredRecipient.overallMMR
-        const challengerWon = winnerId === challenge.challengerId
-        const recipientWon = winnerId === userId
-        const isTie = winnerId === null
+          const [challengerProfile, recipientProfile] = await Promise.all([
+            tx.competitiveProfile.findUnique({ where: { userId: challenge.challengerId } }),
+            tx.competitiveProfile.findUnique({ where: { userId } }),
+          ])
 
-        const challengerMMRChange = isTie
-          ? 0
-          : calculateMMRChange(challengerMMR, recipientMMR, challengerWon, ensuredChallenger.totalMatches)
-        const recipientMMRChange = isTie
-          ? 0
-          : calculateMMRChange(recipientMMR, challengerMMR, recipientWon, ensuredRecipient.totalMatches)
-        const challengerMMRAfter = challengerMMR + challengerMMRChange
-        const recipientMMRAfter = recipientMMR + recipientMMRChange
+          // Auto-create a profile if missing so brand-new accounts still get rated.
+          const ensuredChallenger = challengerProfile ?? await tx.competitiveProfile.create({
+            data: { userId: challenge.challengerId, competitiveModeUnlocked: true },
+          })
+          const ensuredRecipient = recipientProfile ?? await tx.competitiveProfile.create({
+            data: { userId, competitiveModeUnlocked: true },
+          })
 
-        const challengerAccuracy = challenge.questionCount > 0
-          ? challenge.challengerScore / challenge.questionCount
-          : 0
-        const recipientAccuracy = challenge.questionCount > 0
-          ? score / challenge.questionCount
-          : 0
+          const challengerMMR = ensuredChallenger.overallMMR
+          const recipientMMR = ensuredRecipient.overallMMR
+          const challengerWon = winnerId === challenge.challengerId
+          const recipientWon = winnerId === userId
+          const isTie = winnerId === null
 
-        await Promise.all([
-          prisma.competitiveProfile.update({
+          const challengerMMRChange = isTie
+            ? 0
+            : calculateMMRChange(challengerMMR, recipientMMR, challengerWon, ensuredChallenger.totalMatches)
+          const recipientMMRChange = isTie
+            ? 0
+            : calculateMMRChange(recipientMMR, challengerMMR, recipientWon, ensuredRecipient.totalMatches)
+          const challengerMMRAfter = challengerMMR + challengerMMRChange
+          const recipientMMRAfter = recipientMMR + recipientMMRChange
+
+          const challengerAccuracy = challenge.questionCount > 0
+            ? challenge.challengerScore / challenge.questionCount
+            : 0
+          const recipientAccuracy = challenge.questionCount > 0
+            ? score / challenge.questionCount
+            : 0
+
+          await tx.competitiveProfile.update({
             where: { userId: challenge.challengerId },
             data: {
               overallMMR: challengerMMRAfter,
@@ -273,8 +290,8 @@ export async function POST(
               rank: getRankFromMMR(challengerMMRAfter),
               lastMatchAt: new Date(),
             },
-          }),
-          prisma.competitiveProfile.update({
+          })
+          await tx.competitiveProfile.update({
             where: { userId },
             data: {
               overallMMR: recipientMMRAfter,
@@ -288,8 +305,8 @@ export async function POST(
               rank: getRankFromMMR(recipientMMRAfter),
               lastMatchAt: new Date(),
             },
-          }),
-          prisma.mMRHistory.create({
+          })
+          await tx.mMRHistory.create({
             data: {
               userId: challenge.challengerId,
               topicSlug: challenge.topicSlug,
@@ -305,8 +322,8 @@ export async function POST(
                 timeMs: challenge.challengerTime,
               }),
             },
-          }),
-          prisma.mMRHistory.create({
+          })
+          await tx.mMRHistory.create({
             data: {
               userId,
               topicSlug: challenge.topicSlug,
@@ -322,12 +339,21 @@ export async function POST(
                 timeMs: safeTime,
               }),
             },
-          }),
-        ])
-      } catch (mmrErr) {
-        // Don't fail the submission if MMR bookkeeping has an issue — the challenge
-        // result is still recorded; ratings can be reconciled later.
-        console.error('Async challenge MMR update failed:', mmrErr)
+          })
+
+          return completedChallenge
+        })
+      } catch (completionErr) {
+        if ((completionErr as { code?: string })?.code === 'ALREADY_COMPLETED') {
+          return NextResponse.json({ error: 'Cannot submit answers in current state' }, { status: 409 })
+        }
+        // The transaction rolled back — challenge is still open, so the client
+        // can retry the submission safely.
+        console.error('Async challenge completion failed (rolled back, retriable):', completionErr)
+        return NextResponse.json(
+          { error: 'Failed to record challenge result. Please try submitting again.' },
+          { status: 500 }
+        )
       }
 
       return NextResponse.json({

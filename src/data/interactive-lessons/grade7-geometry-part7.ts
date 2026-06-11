@@ -12,9 +12,9 @@ export const g7GeometryPart7Data = {
 ### Key Formulas
 - Complement: $90° - x$, Supplement: $180° - x$
 - Triangle: $A = \\frac{1}{2}bh$
-- Circle: $C = 2\pi r$, $A = \pi r^2$
+- Circle: $C = 2\\pi r$, $A = \\pi r^2$
 - SA prism: $2(lw+lh+wh)$
-- V prism: $lwh$, V cylinder: $\pi r^2 h$
+- V prism: $lwh$, V cylinder: $\\pi r^2 h$
     
     `
     },
@@ -25,7 +25,7 @@ export const g7GeometryPart7Data = {
 ## Worked Example
 
 **Cylinder: r = 4, h = 10. Volume?**
-$V = \pi(16)(10) = 160\pi \approx 502.4$ ✅
+$V = \\pi(16)(10) = 160\\pi \\approx 502.4$ ✅
     
     `
     },

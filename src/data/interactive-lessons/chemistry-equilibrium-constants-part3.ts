@@ -66,7 +66,7 @@ The relationship between $K_p$ and $K_c$ is:
 $$\\boxed{K_p = K_c(RT)^{\\Delta n}}$$
 
 where:
-- $R = 0.08206\\;\\text{L·atm·mol}^{-1}\\text{·K}^{-1}$
+- $R = 0.08206\\;\\text{L}\\cdot\\text{atm}\\cdot\\text{mol}^{-1}\\text{}\\cdot\\text{K}^{-1}$
 - $T$ = temperature in **Kelvin**
 - $\\Delta n$ = (moles of gaseous products) − (moles of gaseous reactants)
 

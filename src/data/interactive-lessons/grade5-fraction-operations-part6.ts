@@ -25,7 +25,7 @@ Combine all fraction operations:
 
 **Tom has $2\\frac{1}{2}$ lbs of sugar. He uses $\\frac{3}{4}$ lb per batch. How many batches?**
 
-$2\\frac{1}{2} \div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{20}{6} = 3\\frac{1}{3}$ → **3 full batches** ✅
+$2\\frac{1}{2} \\div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{20}{6} = 3\\frac{1}{3}$ → **3 full batches** ✅
     
     `
     },
@@ -61,7 +61,7 @@ $2\\frac{1}{2} \div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{20
 
 2) $3\\frac{1}{4} - 1\\frac{2}{3} = \\frac{?}{12}$ — Numerator?
 
-3) $\\frac{2}{3} \\times \\frac{3}{4} \div \\frac{1}{2} = ?$ (simplify)
+3) $\\frac{2}{3} \\times \\frac{3}{4} \\div \\frac{1}{2} = ?$ (simplify)
     
     `,
       exercise: {
@@ -97,7 +97,7 @@ $2\\frac{1}{2} \div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{20
 |---|---------|-------|
 | 1 | $\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6}$ | LCD = 6 |
 | 2 | $3\\frac{1}{4} - 1\\frac{2}{3}$ | LCD = 12, borrow |
-| 3 | $\\frac{2}{3} \\times \\frac{3}{4} \div \\frac{1}{2}$ | Left to right |
+| 3 | $\\frac{2}{3} \\times \\frac{3}{4} \\div \\frac{1}{2}$ | Left to right |
     
     `
     },

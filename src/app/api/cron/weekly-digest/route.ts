@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { sendWeeklyDigest } from '@/lib/email'
+import { requireCronSecret } from '@/lib/cron-auth'
 
 /**
  * Weekly digest cron job — call every Sunday via Vercel Cron.
@@ -11,10 +12,8 @@ import { sendWeeklyDigest } from '@/lib/email'
  */
 export async function GET(request: Request) {
   // Verify cron secret to prevent unauthorized calls
-  const authHeader = request.headers.get('authorization')
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+  const unauthorized = requireCronSecret(request)
+  if (unauthorized) return unauthorized
 
   try {
     const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)

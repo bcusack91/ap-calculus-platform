@@ -2,12 +2,13 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
-import { checkRateLimit } from '@/lib/rate-limit'
+import { rateLimit } from '@/lib/rate-limit'
 import { sendVerificationEmail } from '@/lib/email'
 import { getPublicAppUrl } from '@/lib/public-url'
 
 // Rate limit: 3 verification emails per user per hour
-const VERIFY_RATE_LIMIT = { maxRequests: 3, windowMs: 60 * 60 * 1000 }
+// (Redis-backed distributed limiter — falls back to in-memory when Redis is unconfigured)
+const verifyLimiter = rateLimit({ maxRequests: 3, windowMs: 60 * 60 * 1000, prefix: 'verify_email' })
 
 // POST: Send verification email
 export async function POST() {
@@ -18,7 +19,7 @@ export async function POST() {
     }
 
     // Rate limit by user ID to prevent spam
-    const rateLimitResult = checkRateLimit(`verify-email:${session.user.id}`, VERIFY_RATE_LIMIT)
+    const rateLimitResult = await verifyLimiter.check(session.user.id)
     if (!rateLimitResult.success) {
       return NextResponse.json(
         { error: 'Too many verification requests. Please try again later.' },
@@ -37,12 +38,14 @@ export async function POST() {
     // Delete any existing tokens for this email
     await prisma.emailVerificationToken.deleteMany({ where: { email } })
 
-    // Generate a secure token
+    // Generate a secure token. Only the SHA-256 hash is stored at rest so a
+    // database leak cannot be replayed; the raw token is emailed to the user.
     const token = crypto.randomBytes(32).toString('hex')
+    const tokenHash = crypto.createHash('sha256').update(token).digest('hex')
     const expires = new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
 
     await prisma.emailVerificationToken.create({
-      data: { email, token, expires },
+      data: { email, token: tokenHash, expires },
     })
 
     const verifyUrl = `${getPublicAppUrl()}/auth/verify-email?token=${token}`
@@ -66,8 +69,11 @@ export async function GET(req: Request) {
       return NextResponse.json({ error: 'Token is required' }, { status: 400 })
     }
 
+    // Tokens are stored as SHA-256 hashes at rest — hash the incoming raw
+    // token before lookup.
+    const tokenHash = crypto.createHash('sha256').update(token).digest('hex')
     const verificationToken = await prisma.emailVerificationToken.findUnique({
-      where: { token },
+      where: { token: tokenHash },
     })
 
     if (!verificationToken) {

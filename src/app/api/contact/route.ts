@@ -1,15 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
+import { z } from "zod";
 
 // Rate limit: 5 contact submissions per IP per hour
-const CONTACT_RATE_LIMIT = { maxRequests: 5, windowMs: 60 * 60 * 1000 };
+// (Redis-backed distributed limiter — falls back to in-memory when Redis is unconfigured)
+const contactFormLimiter = rateLimit({ maxRequests: 5, windowMs: 60 * 60 * 1000, prefix: "contact_form" });
+
+// Input bounds — mirrors the categories offered in src/components/contact-form.tsx
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be 100 characters or fewer"),
+  email: z
+    .string()
+    .trim()
+    .max(254, "Email must be 254 characters or fewer")
+    .email("Invalid email format"),
+  subject: z.string().trim().min(1, "Subject is required").max(200, "Subject must be 200 characters or fewer"),
+  category: z.enum(["general", "bug", "content", "feature", "feedback", "other"], {
+    message: "Invalid category",
+  }),
+  message: z.string().trim().min(1, "Message is required").max(5000, "Message must be 5000 characters or fewer"),
+});
 
 export async function POST(request: NextRequest) {
   try {
     // Rate limit by IP address (not by submitted email, which is spoofable)
     const ip = getClientIp(request);
-    const rateLimitResult = checkRateLimit(`contact:${ip}`, CONTACT_RATE_LIMIT);
+    const rateLimitResult = await contactFormLimiter.check(ip);
     if (!rateLimitResult.success) {
       return NextResponse.json(
         { error: "Too many submissions. Please try again later." },
@@ -23,24 +40,17 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, email, subject, category, message } = body;
 
-    // Validate required fields
-    if (!name || !email || !subject || !category || !message) {
+    const parsed = contactSchema.safeParse(body);
+    if (!parsed.success) {
+      const firstIssue = parsed.error.issues[0];
       return NextResponse.json(
-        { error: "All fields are required" },
+        { error: firstIssue?.message || "Invalid submission" },
         { status: 400 }
       );
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 }
-      );
-    }
+    const { name, email, subject, category, message } = parsed.data;
 
     // Rate limiting: max 3 submissions per email per hour
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);

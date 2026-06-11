@@ -144,7 +144,7 @@ $$P(M \\cup F) = P(M) + P(F) - P(M \\cap F) = \\frac{80}{200} + \\frac{110}{200}
         dropdowns: [
           {
             id: 'pr2-dd1',
-            label: 'The addition rule finds $P(A \\text{ ___ } B)$:',
+            label: 'The addition rule finds $P(A \\;\\rule{1.5em}{0.4pt}\\; B)$:',
             options: ['and', 'or', 'given', 'not'],
             correctIndex: 1,
             explanation: 'The addition rule calculates $P(A \\text{ OR } B) = P(A \\cup B)$.'

@@ -25,8 +25,8 @@ Coordinate proof strategy:
 
 **Prove the diagonals of rectangle (0,0),(6,0),(6,4),(0,4) are equal.**
 
-$d_1 = \sqrt{6^2+4^2} = \sqrt{52}$
-$d_2 = \sqrt{(-6)^2+4^2} = \sqrt{52}$
+$d_1 = \\sqrt{6^2+4^2} = \\sqrt{52}$
+$d_2 = \\sqrt{(-6)^2+4^2} = \\sqrt{52}$
 
 Equal! ✅
     

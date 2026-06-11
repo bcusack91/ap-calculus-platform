@@ -78,13 +78,13 @@ At $t = 2$: $\\frac{d^2y}{dx^2} = \\frac{15}{32}$ (concave up since positive).`
       content: `### Tangent Lines
 
 The tangent line at $t = t_0$:
-$$y - y(t_0) = \\frac{dy/dx}\\bigg|_{t=t_0} \\cdot (x - x(t_0))$$
+$$y - y(t_0) = \\frac{dy}{dx}\\bigg|_{t=t_0} \\cdot (x - x(t_0))$$
 
 ### Example: $x = t + \\sin t$, $y = t - \\cos t$ at $t = 0$
 
 Point: $(0 + 0, 0 - 1) = (0, -1)$
 
-Slope: $\\frac{dy/dx} = \\frac{1 + \\sin t}{1 + \\cos t}\\bigg|_{t=0} = \\frac{1}{2}$
+Slope: $\\frac{dy}{dx} = \\frac{1 + \\sin t}{1 + \\cos t}\\bigg|_{t=0} = \\frac{1}{2}$
 
 $$\\boxed{y + 1 = \\frac{1}{2}(x - 0) \\implies y = \\frac{x}{2} - 1}$$
 

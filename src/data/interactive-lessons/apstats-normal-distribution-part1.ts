@@ -60,7 +60,7 @@ For any normal distribution:
             question: 'About what percentage of data in a normal distribution falls more than 2 standard deviations from the mean?',
             options: ['2.5%', '5%', '10%', '32%'],
             correctAnswer: 1,
-            explanation: '95% falls within $\\mu \\pm 2\\sigma$, so $100\% - 95\% = 5\%$ falls outside (both tails combined).'
+            explanation: '95% falls within $\\mu \\pm 2\\sigma$, so $100\\% - 95\\% = 5\\%$ falls outside (both tails combined).'
           }
         ]
       }

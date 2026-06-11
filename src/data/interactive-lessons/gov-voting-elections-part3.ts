@@ -154,9 +154,9 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
 - West: Mixed (CA Dem + Mountain West mixed; AZ + NV competitive; AK Trump)
 
 ### Income
-- Less than $30K: Harris narrowly
-- $30-100K: Trump narrowly (this is REVERSE of historical pattern!)
-- $100K+: Mixed; college-educated white-collar leaned Harris
+- Less than \\$30K: Harris narrowly
+- \\$30-100K: Trump narrowly (this is REVERSE of historical pattern!)
+- \\$100K+: Mixed; college-educated white-collar leaned Harris
 
 ### Marital Status
 - Married men: Trump ~+25

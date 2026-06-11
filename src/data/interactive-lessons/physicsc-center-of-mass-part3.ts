@@ -47,7 +47,7 @@ A 10 kg projectile moving at $20$ m/s horizontally explodes into two pieces. A 4
 
 **Solution:**
 
-$$p_{\\text{before}} = 10 \\times 20 = 200 \\text{ kg·m/s}$$
+$$p_{\\text{before}} = 10 \\times 20 = 200 \\text{ kg}\\cdot\\text{m/s}$$
 
 $$p_{\\text{after}} = 4(0) + 6v_2 = 200$$
 

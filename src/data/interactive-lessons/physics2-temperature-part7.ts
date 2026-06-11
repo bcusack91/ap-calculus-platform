@@ -79,7 +79,7 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
               'Both have the same rms speed'
             ],
             correctAnswer: 2,
-            explanation: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT$ depends only on temperature, so both gases have the same average KE. Since helium is lighter ($M = 4$ vs $M = 32$), it must move faster to have the same KE: $v_{\\text{He}}/v_{\\text{O_2}} = \\sqrt{32/4} = 2\\sqrt{2} \\approx 2.83$.'
+            explanation: '$KE_{\\text{avg}} = \\frac{3}{2}k_BT$ depends only on temperature, so both gases have the same average KE. Since helium is lighter ($M = 4$ vs $M = 32$), it must move faster to have the same KE: $v_{\\text{He}}/v_{\\text{O}_2} = \\sqrt{32/4} = 2\\sqrt{2} \\approx 2.83$.'
           },
           {
             question: 'A mercury thermometer is placed in warm water. As the thermometer first enters the water, the mercury level briefly dips before rising. This is because:',

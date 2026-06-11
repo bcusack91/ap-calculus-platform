@@ -47,7 +47,7 @@ The first 10 amendments were ratified December 15, 1791 to address Anti-Federali
 | **4th** | No unreasonable searches and seizures; warrant requirement | Mapp v. Ohio 1961 (exclusionary rule incorporated), Terry v. Ohio 1968 (stop-and-frisk), Carpenter v. US 2018 (cell phone location) |
 | **5th** | Grand jury indictment, no double jeopardy, no self-incrimination, due process, takings (eminent domain with just compensation) | Miranda v. Arizona 1966, Kelo v. City of New London 2005 |
 | **6th** | Speedy + public + jury trial in criminal cases; counsel; confrontation; subpoena | Gideon v. Wainwright 1963 (right to counsel), Crawford v. Washington 2004 |
-| **7th** | Jury trial in civil cases >$20 (federal) | SEC v. Jarkesy 2024 (limited agency adjudication of civil money penalties) |
+| **7th** | Jury trial in civil cases >\\$20 (federal) | SEC v. Jarkesy 2024 (limited agency adjudication of civil money penalties) |
 | **8th** | No excessive bail, no excessive fines, no cruel and unusual punishment | Furman v. Georgia 1972, Gregg v. Georgia 1976, Roper v. Simmons 2005, Timbs v. Indiana 2019 |
 | **9th** | Enumeration not denial of unenumerated rights | Griswold v. Connecticut 1965 (penumbral right to privacy), Roe v. Wade 1973 (overruled by Dobbs 2022) |
 | **10th** | Powers not delegated to federal government reserved to states + people | Murphy v. NCAA 2018 (anti-commandeering) |

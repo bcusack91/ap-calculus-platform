@@ -119,7 +119,7 @@ A student performs a calorimetry experiment. She heats a 0.150 kg metal cylinder
 $$c_{\\text{metal}} = \\frac{-m_w c_w (T_f - T_{w,i})}{m_{\\text{metal}}(T_f - T_{\\text{metal},i})}$$
 $$= \\frac{-(0.250)(4{,}186)(25.2 - 22.0)}{(0.150)(25.2 - 100.0)}$$
 $$= \\frac{-(0.250)(4{,}186)(3.2)}{(0.150)(-74.8)}$$
-$$= \\frac{-3{,}348.8}{-11.22} = 298 \\text{ J/(kg·°C)}$$
+$$= \\frac{-3{,}348.8}{-11.22} = 298 \\text{ J/(kg}\\cdot\\text{°C)}$$
 
 **(c)** The student suspects some heat was lost to the environment. If this occurred, would the calculated specific heat be too high or too low? Explain. *(2 pts)*
 

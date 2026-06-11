@@ -12,8 +12,8 @@ export const g6ExpressionsPart5Data = {
 An **inequality** compares two expressions:
 - $x > 5$: x is greater than 5
 - $x < 3$: x is less than 3
-- $x \geq 7$: x is greater than or equal to 7
-- $x \leq 2$: x is less than or equal to 2
+- $x \\geq 7$: x is greater than or equal to 7
+- $x \\leq 2$: x is less than or equal to 2
 
 Graph on a number line: **open circle** (strict) or **closed circle** (includes endpoint).
     
@@ -63,7 +63,7 @@ Graph: Open circle at 6, arrow to the right. ✅
 
 1) $x - 3 > 5$: $x > $ ?
 
-2) $2x \leq 14$: $x \leq $ ?
+2) $2x \\leq 14$: $x \\leq $ ?
 
 3) $x + 1 < 6$: $x < $ ?
     
@@ -100,7 +100,7 @@ Graph: Open circle at 6, arrow to the right. ✅
 | # | Inequality | Solution |
 |---|-----------|----------|
 | 1 | $x - 3 > 5$ | $x > 8$ |
-| 2 | $2x \leq 14$ | $x \leq 7$ |
+| 2 | $2x \\leq 14$ | $x \\leq 7$ |
 | 3 | $x + 1 < 6$ | $x < 5$ |
     
     `

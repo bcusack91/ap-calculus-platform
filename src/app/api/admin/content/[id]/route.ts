@@ -1,10 +1,65 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { requireAdmin } from '@/lib/auth-guard'
 import { parseBody } from '@/lib/validations'
 
 const STATUSES = ['PUBLISHED', 'DRAFT', 'ARCHIVED'] as const
+
+// --- ISR revalidation for admin content writes -----------------------------
+// (Kept in sync with src/app/api/admin/content/route.ts — route files can only
+// export HTTP handlers/config, so the helper is duplicated rather than shared.)
+// Public route suffix per ContentItem.type. courseSlug conventions per type
+// come from the importers (prisma/import-practice.ts, import-frq.ts,
+// import-study-plan-templates.ts, import-unit-tests.ts).
+const TYPE_ROUTE_SUFFIX: Record<string, string> = {
+  'practice-exam': '-practice', // courseSlug = practice dir prefix (ap-bio, act, psat, …)
+  'study-plan-template': '-study-plans', // courseSlug = full course slug (ap-biology, …)
+  frq: '-frq', // courseSlug = FRQ dir prefix (ap-calc-ab, ap-macro, …)
+  'unit-test-units': '-unit-tests', // courseSlug = full course slug (ap-biology, …)
+}
+
+// study-plan-template and unit-test-units store the FULL course slug while the
+// public routes use short prefixes (e.g. courseSlug 'ap-biology' →
+// /ap-bio-study-plans, /ap-bio-unit-tests). Map long slugs to route prefixes.
+const COURSE_SLUG_ROUTE_PREFIXES: Record<string, string[]> = {
+  'act-prep': ['act'],
+  'ap-african-american-studies': ['ap-aas'], // unit tests live at /ap-aas-unit-tests
+  'ap-biology': ['ap-bio'],
+  'ap-calculus-ab': ['ap-calcab'],
+  'ap-calculus-bc': ['ap-calcbc'],
+  'ap-chemistry': ['ap-chem'],
+  'ap-computer-science-a': ['ap-csa'],
+  'ap-computer-science-principles': ['ap-csp'],
+  'ap-cs-principles': ['ap-csp'],
+  'ap-english-language': ['ap-english-lang'],
+  'ap-english-literature': ['ap-english-lit'],
+  'ap-environmental-science': ['ap-enviro'],
+  'ap-human-geography': ['ap-human-geo'],
+  'ap-macroeconomics': ['ap-macro'],
+  'ap-microeconomics': ['ap-micro'],
+  'ap-physics-1': ['ap-physics1'],
+  'ap-physics-2': ['ap-physics2'],
+  'ap-precalculus': ['ap-precalc'],
+  'ap-psychology': ['ap-psych'],
+  'ap-statistics': ['ap-stats'],
+  'ap-us-government': ['ap-us-gov'],
+}
+
+/**
+ * Revalidate the public page(s) backed by a ContentItem so admin edits are
+ * visible without waiting out ISR. We revalidate both the raw courseSlug and
+ * any short route alias; revalidatePath() on a path that doesn't exist as a
+ * route is a harmless no-op, so no existence check is needed.
+ */
+function revalidateContentPages(type: string, courseSlug: string) {
+  const suffix = TYPE_ROUTE_SUFFIX[type]
+  if (!suffix) return
+  const prefixes = new Set([courseSlug, ...(COURSE_SLUG_ROUTE_PREFIXES[courseSlug] ?? [])])
+  for (const prefix of prefixes) revalidatePath(`/${prefix}${suffix}`)
+}
+// ---------------------------------------------------------------------------
 
 const updateSchema = z
   .object({
@@ -52,6 +107,9 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     },
   })
 
+  // Surface the edit on the public page without waiting out ISR.
+  revalidateContentPages(item.type, item.courseSlug)
+
   await prisma.adminAuditLog
     .create({
       data: {
@@ -87,6 +145,10 @@ export async function DELETE(_req: NextRequest, { params }: { params: Promise<{ 
   if (!existing) return NextResponse.json({ error: 'Not found' }, { status: 404 })
 
   await prisma.contentItem.delete({ where: { id } })
+
+  // The public page falls back to static content once the row is gone —
+  // revalidate so the deletion takes effect immediately.
+  revalidateContentPages(existing.type, existing.courseSlug)
 
   await prisma.adminAuditLog
     .create({

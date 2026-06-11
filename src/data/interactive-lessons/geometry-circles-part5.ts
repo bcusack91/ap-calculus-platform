@@ -10,7 +10,7 @@ export const geoCirclesPart5Data = {
 **Part 5 of 7 — Chords & Secants**
 
 ### Key Theorems
-- **Intersecting chords**: $a \cdot b = c \cdot d$ (pieces of each chord)
+- **Intersecting chords**: $a \\cdot b = c \\cdot d$ (pieces of each chord)
 - **Equal chords** are equidistant from center
 - **Perpendicular from center** bisects a chord
     
@@ -56,7 +56,7 @@ $3 \\times 8 = 4 \\times x \\Rightarrow 24 = 4x \\Rightarrow x = 6$ ✅
       content: `
 **Intersecting Chords** 🧮
 
-$a \cdot b = c \cdot d$
+$a \\cdot b = c \\cdot d$
 
 1) 3 × 8 = 4 × ?
 

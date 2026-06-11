@@ -90,6 +90,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/sat-reading-practice`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    // PSAT landing page
+    {
+      url: `${baseUrl}/psat`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // Chemistry tools
+    {
+      url: `${baseUrl}/periodic-table`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-chem-full-exam`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ap-chem-labs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
     // Additional pages
     // NOTE: /dashboard, /onboarding, /join-class, /teacher are auth-walled by
     // middleware and noindexed via their layout. Submitting them creates a
@@ -169,7 +201,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'sat', 'mcat', 'algebra1', 'algebra2', 'geometry',
+      'sat', 'act', 'mcat', 'algebra1', 'algebra2', 'geometry',
       'grade8-math', 'prealgebra', 'precalc', 'ochem',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-score-predictor`,
@@ -217,6 +249,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.85,
+    })),
+    // Unit test pages (every *-unit-tests route dir under src/app)
+    ...([
+      'ap-aas', 'ap-bio', 'ap-calcab', 'ap-calcbc', 'ap-chem', 'ap-csa', 'ap-csp',
+      'ap-english-lang', 'ap-english-lit', 'ap-enviro', 'ap-human-geo',
+      'ap-macro', 'ap-micro', 'ap-physics1', 'ap-physics2', 'ap-precalc',
+      'ap-psych', 'ap-stats', 'ap-us-gov', 'ap-us-history', 'ap-world-history',
+    ] as const).map(slug => ({
+      url: `${baseUrl}/${slug}-unit-tests`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    })),
+    // Grade-level / foundational math hub pages
+    ...([
+      'grade-4-math', 'grade-5-math', 'grade-6-math', 'grade-7-math', 'grade-8-math',
+      'pre-algebra', 'geometry', 'algebra-1', 'algebra-2',
+    ] as const).map(slug => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     })),
   ]
 

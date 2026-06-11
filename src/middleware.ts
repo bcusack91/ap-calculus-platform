@@ -85,9 +85,14 @@ export async function middleware(request: NextRequest) {
 
     // Use stricter limiter for auth endpoints, but exclude NextAuth
     // internal routes (callback, session, csrf, providers) since OAuth
-    // flows involve multiple rapid internal round-trips
+    // flows involve multiple rapid internal round-trips.
+    // Exception: the credentials callback is the password sign-in endpoint
+    // (a brute-force target), so it stays on the strict auth limiter.
     const isAuthEndpoint = nextUrl.pathname.startsWith('/api/auth/')
-    const isNextAuthInternal = /^\/api\/auth\/(callback|session|csrf|providers)/.test(nextUrl.pathname)
+    const isCredentialsCallback = nextUrl.pathname.startsWith('/api/auth/callback/credentials')
+    const isNextAuthInternal =
+      !isCredentialsCallback &&
+      /^\/api\/auth\/(callback|session|csrf|providers)/.test(nextUrl.pathname)
     const limiter = (isAuthEndpoint && !isNextAuthInternal) ? authRatelimit : apiRatelimit
 
     if (limiter) {

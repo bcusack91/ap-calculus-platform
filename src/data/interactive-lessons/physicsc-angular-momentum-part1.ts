@@ -55,7 +55,7 @@ This is because $r\\sin\\theta = d$ remains constant as the particle moves.
 
 A 0.5 kg ball moves at $10$ m/s along a line that passes $3$ m from the origin.
 
-$$L = mvd = 0.5 \\times 10 \\times 3 = 15 \\text{ kg·m}^2/\\text{s}$$
+$$L = mvd = 0.5 \\times 10 \\times 3 = 15 \\text{ kg}\\cdot\\text{m}^2/\\text{s}$$
 
 This remains constant because $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$ (no force acts).`
     },
@@ -104,7 +104,7 @@ This is the $z$-component: $L_z = m(xv_y - yv_x)$.`
       question: 'The SI units of angular momentum are:',
       options: ['kg·m²/s', 'kg·m/s²', 'N·m', 'J·s'],
       correctAnswer: 0,
-      explanation: '$[L] = [r][p] = \\text{m} \\cdot \\text{kg·m/s} = \\text{kg·m}^2/\\text{s}$. Note that J·s (joule-seconds) has the same dimensions — this is why Planck\'s constant $\\hbar$ has units of angular momentum.'
+      explanation: '$[L] = [r][p] = \\text{m} \\cdot \\text{kg}\\cdot\\text{m/s} = \\text{kg}\\cdot\\text{m}^2/\\text{s}$. Note that J·s (joule-seconds) has the same dimensions — this is why Planck\'s constant $\\hbar$ has units of angular momentum.'
     },
     {
       id: 'am1-summary',

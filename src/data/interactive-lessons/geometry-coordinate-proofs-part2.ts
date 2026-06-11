@@ -12,7 +12,7 @@ export const geoCoordProofsPart2Data = {
 $m = \\frac{y_2-y_1}{x_2-x_1}$
 
 - **Parallel lines**: same slope ($m_1 = m_2$)
-- **Perpendicular lines**: negative reciprocal slopes ($m_1 \cdot m_2 = -1$)
+- **Perpendicular lines**: negative reciprocal slopes ($m_1 \\cdot m_2 = -1$)
     
     `
     },

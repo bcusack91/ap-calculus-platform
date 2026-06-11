@@ -25,6 +25,11 @@ export default function ConfettiCelebration({ trigger, onComplete }: ConfettiCel
   const [pieces, setPieces] = useState<ConfettiPiece[]>([])
 
   const launch = useCallback(() => {
+    // Respect prefers-reduced-motion: skip the animation entirely
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      onComplete?.()
+      return
+    }
     const newPieces: ConfettiPiece[] = Array.from({ length: 50 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,

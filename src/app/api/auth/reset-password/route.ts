@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
+import crypto from 'crypto'
 
 export async function POST(req: Request) {
   try {
@@ -14,8 +15,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Password must be at least 8 characters' }, { status: 400 })
     }
 
+    // Tokens are stored as SHA-256 hashes at rest — hash the incoming raw
+    // token before lookup.
+    const tokenHash = crypto.createHash('sha256').update(String(token)).digest('hex')
     const resetToken = await prisma.passwordResetToken.findUnique({
-      where: { token },
+      where: { token: tokenHash },
     })
 
     if (!resetToken) {

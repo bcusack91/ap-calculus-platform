@@ -9,9 +9,9 @@ export const geoCoordProofsPart1Data = {
 
 **Part 1 of 7 — Distance & Midpoint**
 
-$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
+$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
 
-$M = \left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
+$M = \\left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
     
     `
     },
@@ -23,7 +23,7 @@ $M = \left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
 
 **(2, 3) and (8, 11).**
 
-$d = \sqrt{36+64} = \sqrt{100} = 10$
+$d = \\sqrt{36+64} = \\sqrt{100} = 10$
 $M = (5, 7)$ ✅
     
     `
