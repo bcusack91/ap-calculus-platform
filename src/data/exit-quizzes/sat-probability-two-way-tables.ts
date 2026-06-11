@@ -7,7 +7,7 @@ export interface ExitQuizQuestion { id: string; question: string; options: strin
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
 function randInt(a: number, b: number) { return Math.floor(Math.random() * (b - a + 1)) + a }
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('None of the above'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
+function makeStringOptions(c: string, o: string[]) { const u = [...new Set(o)].filter(x => x !== c).slice(0, 3); const fillers = ['None of the above', 'Cannot be determined', 'None of these']; for (const f of fillers) { if (u.length >= 3) break; if (f !== c && !u.includes(f)) u.push(f) } const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
 function makeFracOptions(n: number, d: number) { const correct = `$\\frac{${n}}{${d}}$`; const others: string[] = []; const used = new Set([correct]); while (others.length < 3) { const nn = n + randInt(-2, 2); const dd = d + randInt(-2, 2); if (dd <= 0 || nn < 0) continue; const s = `$\\frac{${nn}}{${dd}}$`; if (!used.has(s)) { used.add(s); others.push(s) } }; const all = shuffle([correct, ...others]); return { options: all, correctIndex: all.indexOf(correct) } }
 
 const questionPool: QuestionTemplate[] = [

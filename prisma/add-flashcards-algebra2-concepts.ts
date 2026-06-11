@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Algebra 2 — Flashcard seed
  * ~40 cards across key topics: linear systems, quadratics, polynomials,

@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Grade 8 Math — Flashcard seed
  * ~35 cards across key topics: the number system, expressions & equations,

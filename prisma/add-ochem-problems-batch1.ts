@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Adds rigorous, AP-equivalent example problems for the new Organic Chemistry 2
  * advanced topics introduced by `seed-organic-chemistry-split.ts`, plus a few

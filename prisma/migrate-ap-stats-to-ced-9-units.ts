@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Migration: AP Statistics → 9-unit CED-aligned structure.
  *

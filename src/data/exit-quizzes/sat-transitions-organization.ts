@@ -5,7 +5,7 @@
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
+function makeStringOptions(c: string, o: string[]) { const u = [...new Set(o)].filter(x => x !== c).slice(0, 3); const fillers = ['No change', 'Cannot be determined', 'None of these']; for (const f of fillers) { if (u.length >= 3) break; if (f !== c && !u.includes(f)) u.push(f) } const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
 function pick<T>(arr: T[]): T { return arr[Math.floor(Math.random() * arr.length)] }
 
 const questionPool: QuestionTemplate[] = [

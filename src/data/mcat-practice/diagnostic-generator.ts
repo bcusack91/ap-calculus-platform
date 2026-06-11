@@ -1872,6 +1872,22 @@ export function scoreMCATDiagnostic(
 
   // Prioritize by exam weight (questionCount) so highest-impact topics surface first.
   const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(dom => dom.id === id)?.questionCount ?? 0
+  // Domain slugs are category-level labels, not real Topic records — map them to
+  // the canonical `-mcat` topic slugs so recommendation links resolve to live
+  // lesson pages (same pattern as the SAT diagnostic's CANONICAL_SLUG_MAP).
+  const CANONICAL_TOPIC_MAP: Record<string, string> = {
+    'mcat-general-chemistry': 'mcat-general-chemistry-mcat',
+    'mcat-organic-chemistry': 'mcat-organic-chemistry-mcat',
+    'mcat-physics-mechanics': 'mcat-physics-mechanics-mcat',
+    'mcat-physics-electricity': 'mcat-physics-electricity-mcat',
+    'mcat-biochemistry': 'mcat-biochemistry-foundations-mcat',
+    'mcat-cars': 'mcat-cars-strategy-mcat',
+    'mcat-biology': 'mcat-cell-biology-mcat',
+    'mcat-organ-systems': 'mcat-organ-systems-mcat',
+    'mcat-genetics-evolution': 'mcat-genetics-evolution-mcat',
+    'mcat-psychology-sociology': 'mcat-psychology-behavior-mcat',
+  }
+  const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
   const recommendedTopics = domainResults
     .filter(d => d.level === 'weak' || d.level === 'moderate')
     .sort((a, b) => {
@@ -1881,11 +1897,13 @@ export function scoreMCATDiagnostic(
     .flatMap(d => {
       const domain = DIAGNOSTIC_DOMAINS.find(dom => dom.id === d.domainId)
       return (domain?.slugs ?? []).map(slug => ({
-        slug,
+        slug: canonicalizeTopicSlug(slug),
         name: d.domainName,
         priority: d.level === 'weak' ? 'high' as const : 'medium' as const,
       }))
     })
+    // Dedupe: multiple legacy slugs can canonicalize to the same topic.
+    .filter((t, i, arr) => arr.findIndex(x => x.slug === t.slug) === i)
 
   const feedbackLoopQuestions = questions
     .map((q, i) => ({ q, i }))

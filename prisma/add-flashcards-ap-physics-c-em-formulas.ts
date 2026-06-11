@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * AP Physics C: Electricity & Magnetism — Flashcard seed
  * ~40 cards across key topics: electrostatics, Gauss's law, potential,

@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Phase 2/3 content fill for AP US Government — Part 2
  * Covers the remaining 7 topics: civil liberties, civil rights, political ideology,

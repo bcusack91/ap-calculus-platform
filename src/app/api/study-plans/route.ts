@@ -18,7 +18,23 @@ export async function GET() {
     orderBy: { createdAt: 'desc' },
   })
 
-  return NextResponse.json({ plans })
+  // Enrich tasks with a VERIFIED topic link. Task topicSlugs come from templates
+  // (and older adopted plans carry legacy slugs), so only link slugs that exist
+  // as real Topic records — a dead checkbox beats a dead link.
+  const slugs = [...new Set(plans.flatMap(p => p.tasks.map(t => t.topicSlug)).filter((s): s is string => !!s))]
+  const existing = slugs.length
+    ? await prisma.topic.findMany({ where: { slug: { in: slugs } }, select: { slug: true } })
+    : []
+  const valid = new Set(existing.map(t => t.slug))
+  const enriched = plans.map(p => ({
+    ...p,
+    tasks: p.tasks.map(t => ({
+      ...t,
+      topicPath: t.topicSlug && valid.has(t.topicSlug) ? `/topics/${t.topicSlug}` : null,
+    })),
+  }))
+
+  return NextResponse.json({ plans: enriched })
 }
 
 // POST /api/study-plans — create a new study plan

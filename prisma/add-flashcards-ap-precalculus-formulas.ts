@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * AP Precalculus — Flashcard seed
  * ~45 cards across key topics: polynomial/rational functions, exponentials/logs,

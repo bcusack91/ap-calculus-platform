@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 
 interface StudyTask {
   id: string
   title: string
   type: string
   topicSlug?: string | null
+  /** Server-verified link target — set only when topicSlug is a real Topic. */
+  topicPath?: string | null
   dueDate?: string | null
   completed: boolean
   completedAt?: string | null
@@ -315,7 +318,16 @@ export default function StudyPlanner() {
                         : 'text-gray-800 dark:text-gray-200'
                     }`}
                   >
-                    {task.title}
+                    {task.topicPath ? (
+                      <Link
+                        href={task.topicPath}
+                        className="hover:text-purple-600 dark:hover:text-purple-400 hover:underline"
+                      >
+                        {task.title} →
+                      </Link>
+                    ) : (
+                      task.title
+                    )}
                   </span>
                   <span className="text-xs text-gray-400 uppercase">{task.type}</span>
                   <button

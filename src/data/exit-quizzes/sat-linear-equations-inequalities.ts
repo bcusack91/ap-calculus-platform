@@ -492,7 +492,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randNonZero(-5, -2)
       const b = randInt(5, 20)
-      const x = randInt(-4, 4)
+      const x = randNonZero(-4, 4) // x = 0 would make the ± distractors collapse into duplicates of the answer
       const c = a * x + b
       // ax + b < c => ax < c - b => x > (c-b)/a (flip because a is negative)
       const solVal = x
@@ -594,10 +594,12 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review - Slope & Intercept',
     generate() {
       const m = randNonZero(-5, 5)
-      const b = randInt(-10, 10)
+      let b = randInt(-10, 10)
+      while (b === m || b === -m || b === m + 1) b = randInt(-10, 10) // keep distractors distinct from the answer and each other
+      const bTerm = b < 0 ? `- ${Math.abs(b)}` : `+ ${b}`
       return {
         id: this.id, category: this.category,
-        question: `What is the slope of the line $y = ${m}x + ${b}$?`,
+        question: `What is the slope of the line $y = ${m}x ${bTerm}$?`,
         options: [`${m}`, `${b}`, `${-m}`, `${m + 1}`].sort(() => Math.random() - 0.5),
         get correctIndex() { return this.options.indexOf(`${m}`) },
         explanation: `In $y = mx + b$ form, the slope is $m = ${m}$ and the y-intercept is $b = ${b}$.`

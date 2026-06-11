@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// KaTeX stylesheet must be global: FRQ pages, full exams, and the blog render
+// KaTeX HTML via rehype-katex/renderRichText and were unstyled without it.
+import "katex/dist/katex.min.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
 import { CookieConsent } from "@/components/cookie-consent";

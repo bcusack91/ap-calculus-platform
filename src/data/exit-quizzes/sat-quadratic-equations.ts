@@ -50,8 +50,9 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
-  const unique = others.filter(o => o !== correct).slice(0, 3)
-  while (unique.length < 3) unique.push(`None of the above`)
+  const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
+  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
+  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
@@ -475,9 +476,9 @@ const questionPool: QuestionTemplate[] = [
       const g = gcd(Math.abs(axisNum), Math.abs(axisDen))
       const sNum = (axisDen < 0 ? -1 : 1) * axisNum / g
       const sDen = Math.abs(axisDen) / g
-      const correct = sDen === 1 ? `$x = ${sNum}$` : `$x = \\frac{${sNum}}{${sDen}}$`
+      const correct = fmtX(axisNum, axisDen)
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x = ${b}$`, `$x = ${-a}$`, `$x = \\frac{${b}}{${a}}$`
+        `$x = ${b}$`, `$x = ${-a}$`, fmtX(b, a)
       ])
       return {
         id: this.id, category: this.category,
@@ -811,6 +812,14 @@ function gcd(a: number, b: number): number {
   a = Math.abs(a); b = Math.abs(b)
   while (b) { [a, b] = [b, a % b] }
   return a
+}
+
+function fmtX(num: number, den: number): string {
+  if (den === 0) return `$x = ${num}$`
+  const g = gcd(Math.abs(num), Math.abs(den)) || 1
+  let n = num / g, d = den / g
+  if (d < 0) { n = -n; d = -d }
+  return d === 1 ? `$x = ${n}$` : `$x = \\frac{${n}}{${d}}$`
 }
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {

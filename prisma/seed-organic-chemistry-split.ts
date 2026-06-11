@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Splits the legacy `organic-chemistry` course into two college-level
  * organic chemistry courses with AP-equivalent rigor:

@@ -49,7 +49,7 @@ const standard: StudyPlanTemplate = {
       { title: 'AB Foundation Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(1, [
-      { title: 'FTC & U-Substitution Review', type: 'LESSON', topicSlug: 'fundamental-theorem-calculus-calcab', dayOfWeek: 0 },
+      { title: 'FTC & U-Substitution Review', type: 'LESSON', topicSlug: 'definite-integrals-calcab', dayOfWeek: 0 },
       { title: 'Integration by Parts', type: 'LESSON', topicSlug: 'integration-by-parts-calcbc', dayOfWeek: 2 },
       { title: 'Partial Fractions', type: 'LESSON', topicSlug: 'partial-fractions-calcbc', dayOfWeek: 4 },
       { title: 'Advanced Integration Quiz', type: 'QUIZ', topicSlug: 'integration-by-parts-calcbc', dayOfWeek: 5 },
@@ -127,14 +127,14 @@ const comprehensive: StudyPlanTemplate = {
     ...weekTasks(2, [
       { title: 'Applications of Derivatives (MVT, Extrema)', type: 'LESSON', topicSlug: 'applications-of-derivatives-calcab', dayOfWeek: 0 },
       { title: 'Curve Sketching & Optimization', type: 'LESSON', topicSlug: 'optimization-calcab', dayOfWeek: 2 },
-      { title: 'Related Rates', type: 'LESSON', topicSlug: 'related-rates-calcab', dayOfWeek: 4 },
+      { title: 'Related Rates', type: 'LESSON', topicSlug: 'related-rates', dayOfWeek: 4 },
       { title: 'Derivatives Comprehensive Quiz', type: 'QUIZ', topicSlug: 'applications-of-derivatives-calcab', dayOfWeek: 5 },
     ]),
     ...weekTasks(3, [
-      { title: 'Antiderivatives & Indefinite Integrals', type: 'LESSON', topicSlug: 'antiderivatives-calcab', dayOfWeek: 0 },
+      { title: 'Antiderivatives & Indefinite Integrals', type: 'LESSON', topicSlug: 'antiderivatives-indefinite-integrals-calcab', dayOfWeek: 0 },
       { title: 'Definite Integrals & Riemann Sums', type: 'LESSON', topicSlug: 'definite-integrals-calcab', dayOfWeek: 2 },
-      { title: 'Fundamental Theorem of Calculus', type: 'LESSON', topicSlug: 'fundamental-theorem-calculus-calcab', dayOfWeek: 4 },
-      { title: 'FTC & Integration Quiz', type: 'QUIZ', topicSlug: 'fundamental-theorem-calculus-calcab', dayOfWeek: 5 },
+      { title: 'Fundamental Theorem of Calculus', type: 'LESSON', topicSlug: 'definite-integrals-calcab', dayOfWeek: 4 },
+      { title: 'FTC & Integration Quiz', type: 'QUIZ', topicSlug: 'definite-integrals-calcab', dayOfWeek: 5 },
     ]),
     ...weekTasks(4, [
       { title: 'U-Substitution', type: 'LESSON', topicSlug: 'u-substitution-calcab', dayOfWeek: 0 },

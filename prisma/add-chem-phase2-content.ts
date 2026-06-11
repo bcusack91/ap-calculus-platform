@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * Phase 2/3 content fill for AP Chemistry topics that previously had no interactive lesson.
  * Adds ExampleProblems and Flashcards to the 5 underserved topics:

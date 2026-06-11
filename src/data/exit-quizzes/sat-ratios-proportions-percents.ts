@@ -56,8 +56,9 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
-  const unique = others.filter(o => o !== correct).slice(0, 3)
-  while (unique.length < 3) unique.push('None of the above')
+  const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
+  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
+  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }

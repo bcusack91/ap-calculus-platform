@@ -1634,7 +1634,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'A fair die is rolled twice. What is the probability that the sum is 7?',
-    options: ['1/6', '1/12', '6/36', '7/36'],
+    options: ['1/6', '1/12', '5/36', '7/36'],
     correctAnswer: 0,
     explanation: 'There are 6 ways to get a sum of 7 out of 36 equally likely outcomes: 6/36 = 1/6.',
     difficulty: 'easy',
@@ -1704,7 +1704,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'X has mean 10 and standard deviation 3. Y has mean 5 and standard deviation 4. If X and Y are independent, what is the standard deviation of X + Y?',
-    options: ['5', '7', '25', '5'],
+    options: ['5', '7', '25', '1'],
     correctAnswer: 0,
     explanation: 'Var(X+Y) = Var(X) + Var(Y) = 9 + 16 = 25. SD(X+Y) = √25 = 5.',
     difficulty: 'medium',
@@ -1794,9 +1794,9 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'A bag contains 5 red and 3 blue marbles. Two marbles are drawn without replacement. What is P(both red)?',
-    options: ['25/64', '5/14', '20/56', '10/28'],
-    correctAnswer: 2,
-    explanation: 'P(both red) = (5/8)(4/7) = 20/56 = 5/14. Options 2 and 3 are equivalent.',
+    options: ['5/14', '25/64', '15/56', '3/28'],
+    correctAnswer: 0,
+    explanation: 'P(both red) = (5/8)(4/7) = 20/56 = 5/14. (25/64 assumes replacement; 15/56 is P(red then blue); 3/28 is P(both blue).)',
     difficulty: 'medium',
     domain: 'probability',
     topicSlug: 'conditional-probability',
@@ -1974,9 +1974,9 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
   {
     question: 'A standard deck has 52 cards. What is P(drawing a heart OR a king)?',
-    options: ['13/52 + 4/52', '16/52', '17/52', '4/13'],
-    correctAnswer: 1,
-    explanation: 'P(heart or king) = 13/52 + 4/52 − 1/52 = 16/52 = 4/13. There are 16 favorable cards (13 hearts + 3 non-heart kings).',
+    options: ['16/52', '17/52', '13/52', '1/13'],
+    correctAnswer: 0,
+    explanation: 'P(heart or king) = 13/52 + 4/52 − 1/52 = 16/52 = 4/13. There are 16 favorable cards (13 hearts + 3 non-heart kings). 17/52 forgets to subtract the king of hearts overlap.',
     difficulty: 'medium',
     domain: 'probability',
     topicSlug: 'basic-probability-rules',

@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 import { PrismaClient } from '@prisma/client'
 
 // We can't easily import the registry from a standalone script due to

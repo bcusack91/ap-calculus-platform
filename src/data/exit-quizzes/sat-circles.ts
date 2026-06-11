@@ -23,6 +23,15 @@ function randInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+function gcd(a: number, b: number): number { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b] } return a }
+// Render (num/den)·π reduced; coefficient 1 omitted, whole numbers shown without a bar.
+function fmtPi(num: number, den: number): string {
+  const g = gcd(num, den) || 1
+  const n = num / g, d = den / g
+  const co = n === 1 ? '' : `${n}`
+  return d === 1 ? `${co}\\pi` : `\\frac{${co}\\pi}{${d}}`
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -44,8 +53,9 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
-  const unique = others.filter(o => o !== correct).slice(0, 3)
-  while (unique.length < 3) unique.push('None of the above')
+  const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
+  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
+  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
@@ -323,15 +333,15 @@ const questionPool: QuestionTemplate[] = [
       const thetaNum = randInt(1, 3)
       const thetaDen = [2, 3, 4, 6][randInt(0, 3)]
       const s = r * thetaNum / thetaDen
-      const correct = `$\\frac{${r * thetaNum}\\pi}{${thetaDen}}$`
+      const correct = `$${fmtPi(r * thetaNum, thetaDen)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${r}\\pi$`, `$\\frac{${r}\\pi}{${thetaDen + 1}}$`, `$${r * thetaNum}\\pi$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `Arc length on a circle of radius $${r}$, central angle $\\frac{${thetaNum}\\pi}{${thetaDen}}$ radians?`,
+        question: `Arc length on a circle of radius $${r}$, central angle $${fmtPi(thetaNum, thetaDen)}$ radians?`,
         options, correctIndex,
-        explanation: `$s = r\\theta = ${r} \\cdot \\frac{${thetaNum}\\pi}{${thetaDen}} = \\frac{${r * thetaNum}\\pi}{${thetaDen}}$.`
+        explanation: `$s = r\\theta = ${r} \\cdot ${fmtPi(thetaNum, thetaDen)} = ${fmtPi(r * thetaNum, thetaDen)}$.`
       }
     }
   },

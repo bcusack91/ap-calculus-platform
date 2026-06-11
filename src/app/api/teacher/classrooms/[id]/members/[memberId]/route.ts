@@ -14,10 +14,15 @@ export async function DELETE(
     const result = await requireClassroomOwner(id)
     if ('error' in result && result.error) return result.error
 
-  await prisma.classroomMember.update({
-    where: { id: memberId },
+  // Scope the mutation to THIS classroom — keying on memberId alone would let
+  // any classroom owner deactivate members of other teachers' classrooms.
+  const { count } = await prisma.classroomMember.updateMany({
+    where: { id: memberId, classroomId: id },
     data: { isActive: false },
   })
+  if (count === 0) {
+    return NextResponse.json({ error: 'Member not found in this classroom' }, { status: 404 })
+  }
 
   return NextResponse.json({ success: true })
   } catch (error) {

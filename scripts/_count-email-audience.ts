@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 ;(async () => {

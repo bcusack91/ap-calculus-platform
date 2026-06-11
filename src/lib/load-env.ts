@@ -27,4 +27,17 @@ if (process.env.NODE_ENV !== 'production') {
   if (fs.existsSync(localEnvPath)) {
     dotenv.config({ path: localEnvPath, override: true })
   }
+
+  // Loud tripwire: a non-production run that still resolves to a non-local
+  // database (no .env.local, or .env.local itself points remote) is almost
+  // always the historical footgun this module exists to prevent. Warn — don't
+  // throw — so the documented dev-against-Neon workflow keeps working.
+  const url = process.env.DATABASE_URL ?? ''
+  if (url && !/localhost|127\.0\.0\.1/.test(url)) {
+    console.error(
+      '\n⚠️  [load-env] DATABASE_URL points at a NON-LOCAL database in a non-production run.' +
+        '\n   If this is intentional (deliberate prod access), set NODE_ENV=production or ALLOW_PROD=1.' +
+        '\n   Otherwise create .env.local pointing at the local Docker DB (see LOCAL_DB_SETUP.md).\n'
+    )
+  }
 }

@@ -321,6 +321,13 @@ export function scoreAPPhysics1Diagnostic(
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
 
+  // Some legacy domain slugs aren't real Topic records — canonicalize them so
+  // recommendation links resolve to live topic/lesson pages (same pattern as SAT).
+  const CANONICAL_TOPIC_MAP: Record<string, string> = {
+    'fluid-pressure': 'density-and-pressure',
+    'buoyancy': 'buoyancy-archimedes-principle',
+  }
+  const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
   const recommendedTopics: APPhysics1RecommendedTopic[] = []
   // Prioritize by exam weight (questionTarget) so highest-impact topics surface first.
   const examWeight = (id: string) => AP_PHYSICS1_DOMAINS.find(d => d.id === id)?.questionTarget ?? 0
@@ -332,7 +339,7 @@ export function scoreAPPhysics1Diagnostic(
     const missedSlugs = new Set<string>()
     questions.forEach((q, i) => { if (q.domain === wd.domainId && (answers[i] === undefined || answers[i] !== q.correctAnswer)) missedSlugs.add(q.topicSlug) })
     const slugs = missedSlugs.size > 0 ? [...missedSlugs].slice(0, 2) : domainDef.topicSlugs.slice(0, 2)
-    for (const slug of slugs) { if (recommendedTopics.length < 5) recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: wd.domainId, priority: 'high' }) }
+    for (const slug of slugs.map(canonicalizeTopicSlug)) { if (recommendedTopics.length < 5 && !recommendedTopics.some(t => t.slug === slug)) recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: wd.domainId, priority: 'high' }) }
   }
   for (const md of moderateDomainResults) {
     if (recommendedTopics.length >= 5) break
@@ -341,7 +348,7 @@ export function scoreAPPhysics1Diagnostic(
     const missedSlugs = new Set<string>()
     questions.forEach((q, i) => { if (q.domain === md.domainId && (answers[i] === undefined || answers[i] !== q.correctAnswer)) missedSlugs.add(q.topicSlug) })
     const slug = missedSlugs.size > 0 ? [...missedSlugs].values().next().value : domainDef.topicSlugs[0]
-    if (slug) recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: md.domainId, priority: 'medium' })
+    if (slug) { const canonical = canonicalizeTopicSlug(slug); if (!recommendedTopics.some(t => t.slug === canonical)) recommendedTopics.push({ slug: canonical, name: slugToReadableName(canonical), domainId: md.domainId, priority: 'medium' }) }
   }
 
   return { form, totalCorrect, totalQuestions, percentage, estimatedAPScore, domains: domainResults, weakAreas, moderateAreas, strengths, recommendedTopics: recommendedTopics.slice(0, 5) }

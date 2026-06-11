@@ -43,8 +43,9 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
-  const unique = others.filter(o => o !== correct).slice(0, 3)
-  while (unique.length < 3) unique.push('None of the above')
+  const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
+  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
+  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
@@ -240,10 +241,12 @@ const questionPool: QuestionTemplate[] = [
     category: 'Graphing Inequalities',
 
     generate() {
-      const a = randInt(1, 4); const b = randInt(1, 4); const c = randInt(5, 20)
-      const xInt = Math.round(c / a); const yInt = Math.round(c / b)
+      // a !== b and c divisible by both → intercepts are exact and distinct
+      const a = randInt(1, 4); let b = randInt(1, 4); while (b === a) b = randInt(1, 4)
+      const c = a * b * randInt(2, 5)
+      const xInt = c / a; const yInt = c / b
       const correct = `x-intercept: ${xInt}, y-intercept: ${yInt}`
-      return { id: this.id, category: this.category, question: `Find the intercepts of the boundary line ${a}x + ${b}y = ${c}.`, ...makeStringOptions(correct, [`x-int: ${yInt}, y-int: ${xInt}`, `x-int: ${c}, y-int: ${c}`, `x-int: ${a}, y-int: ${b}`]), explanation: `Set y=0: x = ${c}/${a} \≈ ${xInt}. Set x=0: y = ${c}/${b} \≈ ${yInt}.` }
+      return { id: this.id, category: this.category, question: `Find the intercepts of the boundary line ${a}x + ${b}y = ${c}.`, ...makeStringOptions(correct, [`x-intercept: ${yInt}, y-intercept: ${xInt}`, `x-intercept: ${c}, y-intercept: ${c}`, `x-intercept: ${a}, y-intercept: ${b}`]), explanation: `Set y=0: x = ${c}/${a} = ${xInt}. Set x=0: y = ${c}/${b} = ${yInt}.` }
     }
   },
   {

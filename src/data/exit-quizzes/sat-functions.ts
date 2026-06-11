@@ -50,14 +50,25 @@ function makeOptions(correct: number, spread: number = 2): { options: string[]; 
 }
 
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
-  const unique = others.filter(o => o !== correct).slice(0, 3)
-  while (unique.length < 3) unique.push('None of the above')
+  const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
+  const fillers = ['None of the above', 'Cannot be determined', 'None of these']
+  for (const f of fillers) { if (unique.length >= 3) break; if (f !== correct && !unique.includes(f)) unique.push(f) }
   const all = shuffle([correct, ...unique])
   return { options: all, correctIndex: all.indexOf(correct) }
 }
 
 function sign(n: number): string {
   return n >= 0 ? `+ ${n}` : `- ${Math.abs(n)}`
+}
+// Coefficient on x: omit 1, render -1 as "-", everything else literal.
+function coef(m: number): string {
+  if (m === 1) return ''
+  if (m === -1) return '-'
+  return `${m}`
+}
+// "mx + b" with coefficient + sign folding (handles m = ±1 and the constant sign).
+function linear(m: number, b: number): string {
+  return `${coef(m)}x ${sign(b)}`
 }
 
 const questionPool: QuestionTemplate[] = [
@@ -705,17 +716,18 @@ const questionPool: QuestionTemplate[] = [
     id: 'sfg-q35',
     category: 'Piecewise',
     generate() {
-      const h = randInt(-5, 5)
-      const k = randInt(-5, 5)
+      const h = randNonZero(-5, 5)
+      const k = randNonZero(-5, 5)
       const correct = `$(${h}, ${k})$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$(${-h}, ${k})$`, `$(${h}, ${-k})$`, `$(0, ${k + Math.abs(h)})$`
       ])
+      const absExpr = `|x ${sign(-h)}| ${sign(k)}`
       return {
         id: this.id, category: this.category,
-        question: `What is the vertex of $f(x) = |x - ${h}| + ${k}$?`,
+        question: `What is the vertex of $f(x) = ${absExpr}$?`,
         options, correctIndex,
-        explanation: `$f(x) = |x - ${h}| + ${k}$ has vertex at $(${h}, ${k})$.`
+        explanation: `$f(x) = ${absExpr}$ has vertex at $(${h}, ${k})$.`
       }
     }
   },
@@ -766,17 +778,17 @@ const questionPool: QuestionTemplate[] = [
       // g(f(x)): g(ax+b) = c(ax+b)+d = cax + cb + d
       const compM = c * a
       const compB = c * b + d
-      const correct = `$${compM}x ${sign(compB)}$`
+      const correct = `$${linear(compM, compB)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$${a * c}x ${sign(a * d + b)}$`,
-        `$${a + c}x ${sign(b + d)}$`,
-        `$${a}x ${sign(d)}$`
+        `$${linear(a * c, a * d + b)}$`,
+        `$${linear(a + c, b + d)}$`,
+        `$${linear(a, d)}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$ and $g(x) = ${c}x ${sign(d)}$, find $g(f(x))$.`,
+        question: `If $f(x) = ${linear(a, b)}$ and $g(x) = ${linear(c, d)}$, find $g(f(x))$.`,
         options, correctIndex,
-        explanation: `$g(f(x)) = ${c}(${a}x ${sign(b)}) ${sign(d)} = ${compM}x ${sign(c * b)} ${sign(d)} = ${compM}x ${sign(compB)}$.`
+        explanation: `$g(f(x)) = ${c}(${linear(a, b)}) ${sign(d)} = ${linear(compM, c * b)} ${sign(d)} = ${linear(compM, compB)}$.`
       }
     }
   },

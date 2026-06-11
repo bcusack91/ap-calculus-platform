@@ -1,3 +1,4 @@
+import '../src/lib/load-env' // load .env.local first so local runs never hit the prod DB
 /**
  * AP Physics C: Mechanics — Flashcard seed
  * ~40 cards across key topics: kinematics with calculus, Newton's laws,

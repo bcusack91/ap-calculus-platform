@@ -53,7 +53,6 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         correctAnswer: 1,
         explanation: 'In context the wild brambles “reclaimed” the paths by overgrowing them as the garden went untended — a sense of gradual natural takeover, not a legal or restorative one.',
         skill: 'vocabulary-in-context',
-        needsReview: true
       }
     ]
   },
@@ -86,7 +85,6 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         correctAnswer: 1,
         explanation: 'The text says “each time the words settled differently, like sediment” — the simile stresses that the meaning re-settles differently on each reading, not that it clarifies.',
         skill: 'craft-and-structure',
-        needsReview: true
       }
     ]
   },

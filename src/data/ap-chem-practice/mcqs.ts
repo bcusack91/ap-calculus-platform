@@ -28,10 +28,10 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-1-atomic-structure',
-    question: 'A photoelectron spectrum of an element shows peaks at binding energies (in MJ/mol): 11.5 (small), 1.09 (small), 0.80 (small), 0.50 (large). The element is most likely',
+    question: 'A photoelectron spectrum of an element shows four peaks at binding energies (in MJ/mol): 126, 9.07, and 0.74, all of equal height, and 5.31 at three times that height. The element is most likely',
     options: ['Sodium (Na)', 'Magnesium (Mg)', 'Aluminum (Al)', 'Chlorine (Cl)'],
-    correctAnswer: 2,
-    explanation: 'Peaks correspond to 1s, 2s, 2p, 3s/3p subshells. Largest peak (most electrons) at lowest energy is the 3p with 1 electron... actually relative peak heights match 1s²2s²2p⁶3s²3p¹ = Al. (Or the four-peak pattern with progressively decreasing binding energy is consistent with Al.)',
+    correctAnswer: 1,
+    explanation: 'The peaks correspond to 1s (126), 2s (9.07), 2p (5.31), and 3s (0.74). The 2p peak is three times the height of the others, so it holds 6 electrons, and the equal-height 1s, 2s, and 3s peaks hold 2 each: 1s²2s²2p⁶3s² ⇒ Mg.',
   },
   {
     type: 'mcq',
@@ -188,10 +188,15 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-4-chemical-reactions',
-    question: '50.0 mL of 0.20 M HCl is mixed with 50.0 mL of 0.20 M NaOH. The mole ratio of acid:base used is',
-    options: ['1:1', '1:2', '2:1', 'cannot determine'],
+    question: 'Aqueous $\\text{AgNO}_3$ is mixed with aqueous $\\text{NaCl}$, forming a white precipitate. Which is the correct net ionic equation?',
+    options: [
+      '$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\to \\text{AgCl}(s)$',
+      '$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) \\to \\text{AgNO}_3(s)$',
+      '$\\text{Na}^+(aq) + \\text{Cl}^-(aq) \\to \\text{NaCl}(s)$',
+      '$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\to \\text{AgCl}(s) + \\text{NaNO}_3(aq)$',
+    ],
     correctAnswer: 0,
-    explanation: 'Both have equal volume and equal molarity ⇒ equal moles ⇒ 1:1 ratio (also matches reaction stoichiometry).',
+    explanation: 'AgCl is the insoluble product. $\\text{Na}^+$ and $\\text{NO}_3^-$ are spectator ions, so the net ionic equation is $\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\to \\text{AgCl}(s)$. Option 4 is the molecular equation, not the net ionic equation.',
   },
 
   /* ---- U5 Kinetics (5) ---- */

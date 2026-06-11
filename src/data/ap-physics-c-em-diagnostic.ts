@@ -177,6 +177,21 @@ export function scoreAPPhysicsCEM(
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
 
+  // Some legacy domain slugs aren't real Topic records — canonicalize them so
+  // recommendation links resolve to live topic/lesson pages (same pattern as SAT).
+  const CANONICAL_TOPIC_MAP: Record<string, string> = {
+    'physics-c-coulomb-law': 'physics-c-electric-field-coulomb',
+    'physics-c-electric-fields': 'physics-c-electric-field-coulomb',
+    'physics-c-conductors-equilibrium': 'physics-c-gauss-law',
+    'physics-c-potential-energy': 'physics-c-electric-potential',
+    'physics-c-capacitors': 'physics-c-capacitors-dielectrics',
+    'physics-c-dielectrics': 'physics-c-capacitors-dielectrics',
+    'physics-c-energy-density': 'physics-c-capacitors-dielectrics',
+    'physics-c-power-circuits': 'physics-c-dc-circuits',
+    'physics-c-faraday-induction': 'physics-c-faraday-lenz',
+    'physics-c-inductance-rl': 'physics-c-inductance-rl-circuits',
+  }
+  const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
   const recommendedTopics: APPhysicsCEMRecommendedTopic[] = []
 
   // Prioritize by exam weight (questionTarget) so highest-impact topics surface first.
@@ -197,7 +212,9 @@ export function scoreAPPhysicsCEM(
     const slugsToRecommend = missedSlugs.size > 0 ? [...missedSlugs].slice(0, 2) : domainDef.topicSlugs.slice(0, 2)
     for (const slug of slugsToRecommend) {
       if (recommendedTopics.length >= 5) break
-      recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: wd.domainId, priority: 'high' })
+      const canonical = canonicalizeTopicSlug(slug)
+      if (recommendedTopics.some(t => t.slug === canonical)) continue
+      recommendedTopics.push({ slug: canonical, name: slugToReadableName(canonical), domainId: wd.domainId, priority: 'high' })
     }
   }
 
@@ -213,7 +230,10 @@ export function scoreAPPhysicsCEM(
       }
     })
     const slug = missedSlugs.size > 0 ? [...missedSlugs][0] : domainDef.topicSlugs[0]
-    recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: md.domainId, priority: 'medium' })
+    const canonicalMd = canonicalizeTopicSlug(slug)
+    if (!recommendedTopics.some(t => t.slug === canonicalMd)) {
+      recommendedTopics.push({ slug: canonicalMd, name: slugToReadableName(canonicalMd), domainId: md.domainId, priority: 'medium' })
+    }
   }
 
   return {

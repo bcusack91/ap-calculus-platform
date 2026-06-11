@@ -3,6 +3,39 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
+import { renderRichText } from '@/lib/render-rich-text'
+import { preloadKatex } from '@/lib/katex-lazy'
+import 'katex/dist/katex.min.css'
+
+/**
+ * Exam content (questions, options, stimuli, rubrics) is LaTeX- and
+ * markdown-table-bearing across the STEM courses — render it through the same
+ * rich-text pipeline as ExitQuiz instead of as plain text. Re-renders once
+ * KaTeX's lazy chunk arrives.
+ */
+function RichText({
+  text,
+  className,
+  inline = false,
+}: {
+  text: string
+  className?: string
+  inline?: boolean
+}) {
+  const [katexReady, setKatexReady] = useState(false)
+  useEffect(() => {
+    let mounted = true
+    preloadKatex().then(() => { if (mounted) setKatexReady(true) })
+    return () => { mounted = false }
+  }, [])
+  const html = useMemo(
+    () => renderRichText(text),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- katexReady forces re-render once KaTeX loads
+    [text, katexReady],
+  )
+  const Tag = inline ? 'span' : 'div'
+  return <Tag className={className} dangerouslySetInnerHTML={{ __html: html }} />
+}
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -418,18 +451,19 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {header}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             {item.stimulus && (
-              <div className="mb-4 rounded-lg border-l-4 border-gray-300 bg-gray-50 p-4 text-sm italic leading-relaxed text-gray-800 whitespace-pre-line dark:border-gray-600 dark:bg-gray-900/40 dark:text-gray-200">
-                {item.stimulus}
-              </div>
+              <RichText
+                text={item.stimulus}
+                className="mb-4 rounded-lg border-l-4 border-gray-300 bg-gray-50 p-4 text-sm italic leading-relaxed text-gray-800 dark:border-gray-600 dark:bg-gray-900/40 dark:text-gray-200"
+              />
             )}
-            <p className="mb-6 whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">{item.question}</p>
+            <RichText text={item.question} className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
             <div className="space-y-2">
               {item.options.map((opt, i) => {
                 const isSel = ans.selected === i
                 return (
                   <button key={i} onClick={() => updateAnswer(a => a.type === 'mcq' ? { ...a, selected: i } : a)}
                     className={`w-full cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition ${isSel ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
-                    <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                    <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><RichText inline text={opt} />
                   </button>
                 )
               })}
@@ -449,13 +483,13 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">Short-Answer Question {itemIdx + 1}</h3>
-            <p className="whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">{saqPrompt(item)}</p>
+            <RichText text={saqPrompt(item)} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
           </div>
           {item.parts.map((part, pi) => {
             const letter = partLetter(part, pi)
             return (
             <div key={letter} className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">({letter}) {partQuestion(part)}</p>
+              <div className="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">({letter}) <RichText inline text={partQuestion(part)} /></div>
               <textarea
                 value={ans.responses[pi]}
                 onChange={e => {
@@ -475,12 +509,12 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
                     return (
                       <label key={rp.id} className="mb-2 flex cursor-pointer items-start gap-2 text-xs text-gray-800 dark:text-gray-200">
                         <input type="checkbox" checked={!!ans.checked[key]} onChange={e => updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [key]: e.target.checked } } : a)} className="mt-0.5 cursor-pointer" />
-                        <span><strong>{rp.label}:</strong> {rp.description}</span>
+                        <span><strong>{rp.label}:</strong> <RichText inline text={rp.description} /></span>
                       </label>
                     )
                   }) : (
                     <>
-                      <p className="mb-2 whitespace-pre-line text-xs text-gray-800 dark:text-gray-200">{part.rubric}</p>
+                      <RichText text={part.rubric} className="mb-2 text-xs text-gray-800 dark:text-gray-200" />
                       <label className="flex cursor-pointer items-start gap-2 text-xs text-gray-800 dark:text-gray-200">
                         <input type="checkbox" checked={!!ans.checked[`${itemIdx}-${letter}-self`]} onChange={e => updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [`${itemIdx}-${letter}-self`]: e.target.checked } } : a)} className="mt-0.5 cursor-pointer" />
                         <span>I earned credit for this part.</span>
@@ -501,7 +535,7 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {ans.submitted && item.sampleResponse && (
             <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
               <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response</summary>
-              <p className="mt-3 whitespace-pre-line text-sm text-gray-700 dark:text-gray-300">{item.sampleResponse}</p>
+              <RichText text={item.sampleResponse} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
             </details>
           )}
           {navFooter()}
@@ -518,14 +552,14 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">Document-Based Question</h3>
-            <p className="text-sm leading-relaxed text-gray-800 dark:text-gray-200">{item.prompt}</p>
+            <RichText text={item.prompt} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
           </div>
           <div className="mb-4 space-y-3">
             {item.documents.map(doc => (
               <div key={doc.number} className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
                 <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-400">Document {doc.number}</p>
                 <p className="mb-2 text-xs italic text-gray-500 dark:text-gray-400">{doc.source}</p>
-                <p className="whitespace-pre-line text-sm text-gray-800 dark:text-gray-200">{doc.content}</p>
+                <RichText text={doc.content} className="text-sm text-gray-800 dark:text-gray-200" />
               </div>
             ))}
           </div>
@@ -563,7 +597,7 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {ans.submitted && item.sampleResponse && (
             <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
               <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response</summary>
-              <p className="mt-3 whitespace-pre-line text-sm text-gray-700 dark:text-gray-300">{item.sampleResponse}</p>
+              <RichText text={item.sampleResponse} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
             </details>
           )}
           {navFooter()}
@@ -587,7 +621,7 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
                   onClick={() => !ans.submitted && updateAnswer(a => a.type === 'leq' ? { ...a, chosenPromptIndex: i } : a)}
                   disabled={ans.submitted}
                   className={`block w-full cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition disabled:cursor-not-allowed ${ans.chosenPromptIndex === i ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
-                  <span className="mr-2 font-bold">{opt.label}.</span>{opt.prompt}
+                  <span className="mr-2 font-bold">{opt.label}.</span><RichText inline text={opt.prompt} />
                 </button>
               ))}
             </div>
@@ -626,9 +660,10 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
           {ans.submitted && item.sampleResponses && item.sampleResponses.find(s => s.promptLabel === item.promptOptions[ans.chosenPromptIndex].label) && (
             <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
               <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response for Option {item.promptOptions[ans.chosenPromptIndex].label}</summary>
-              <p className="mt-3 whitespace-pre-line text-sm text-gray-700 dark:text-gray-300">
-                {item.sampleResponses.find(s => s.promptLabel === item.promptOptions[ans.chosenPromptIndex].label)!.response}
-              </p>
+              <RichText
+                text={item.sampleResponses.find(s => s.promptLabel === item.promptOptions[ans.chosenPromptIndex].label)!.response}
+                className="mt-3 text-sm text-gray-700 dark:text-gray-300"
+              />
             </details>
           )}
           {navFooter()}

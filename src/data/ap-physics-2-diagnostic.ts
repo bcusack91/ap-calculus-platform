@@ -184,6 +184,28 @@ export function scoreAPPhysics2Diagnostic(
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
 
+  // Some legacy domain slugs aren't real Topic records — canonicalize them so
+  // recommendation links resolve to live topic/lesson pages (same pattern as SAT).
+  const CANONICAL_TOPIC_MAP: Record<string, string> = {
+    'fluid-pressure': 'density-and-pressure',
+    'buoyancy': 'buoyancy-archimedes-principle',
+    'temperature-and-heat': 'heat-specific-heat',
+    'kinetic-theory': 'temperature-thermal-expansion',
+    'thermodynamic-laws': 'laws-of-thermodynamics',
+    'electric-charge-and-force': 'electric-charge-coulombs-law',
+    'electric-fields': 'electric-fields-potential',
+    'electric-potential': 'electric-fields-potential',
+    'capacitance': 'electric-fields-potential',
+    'dc-circuits': 'current-resistance-ohms-law',
+    'rc-circuits': 'kirchhoffs-laws',
+    'magnetic-fields': 'magnetic-fields-forces',
+    'geometric-optics': 'reflection-refraction',
+    'wave-optics': 'interference-diffraction',
+    'atomic-structure': 'photons-atomic-nuclear',
+    'nuclear-physics': 'photons-atomic-nuclear',
+    'quantum-mechanics': 'photons-atomic-nuclear',
+  }
+  const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
   const recommendedTopics: APPhysics2RecommendedTopic[] = []
 
   // Prioritize by exam weight (questionTarget) so highest-impact topics surface first.
@@ -204,7 +226,9 @@ export function scoreAPPhysics2Diagnostic(
     const slugsToRecommend = missedSlugs.size > 0 ? [...missedSlugs].slice(0, 2) : domainDef.topicSlugs.slice(0, 2)
     for (const slug of slugsToRecommend) {
       if (recommendedTopics.length >= 5) break
-      recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: wd.domainId, priority: 'high' })
+      const canonical = canonicalizeTopicSlug(slug)
+      if (recommendedTopics.some(t => t.slug === canonical)) continue
+      recommendedTopics.push({ slug: canonical, name: slugToReadableName(canonical), domainId: wd.domainId, priority: 'high' })
     }
   }
 
@@ -220,7 +244,10 @@ export function scoreAPPhysics2Diagnostic(
       }
     })
     const slug = missedSlugs.size > 0 ? [...missedSlugs][0] : domainDef.topicSlugs[0]
-    recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: md.domainId, priority: 'medium' })
+    const canonicalMd = canonicalizeTopicSlug(slug)
+    if (!recommendedTopics.some(t => t.slug === canonicalMd)) {
+      recommendedTopics.push({ slug: canonicalMd, name: slugToReadableName(canonicalMd), domainId: md.domainId, priority: 'medium' })
+    }
   }
 
   return {
