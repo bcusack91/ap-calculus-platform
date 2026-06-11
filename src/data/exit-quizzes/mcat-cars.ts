@@ -9,9 +9,9 @@ import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 const questionPool: MCATQuizQuestion[] = [
   {
     question: 'A passage argues that modern architecture has abandoned humanistic values in favor of pure functionality. The author\'s main thesis is best described as:',
-    options: ['Modern architecture is more efficient than classical architecture', 'Architectural design should prioritize both aesthetic and human needs', 'Functionalism is the optimal design philosophy', 'Classical architecture should be revived entirely'],
+    options: ['Modern architecture is more efficient than classical architecture', 'Architectural design should balance human values with functionality', 'Functionalism is the optimal design philosophy', 'Classical architecture should be revived entirely'],
     correctAnswer: 1,
-    explanation: 'The author criticizes "abandoning humanistic values" for "pure functionality," implying that both should coexist. This is a balanced thesis, not an extreme position.',
+    explanation: 'The author criticizes "abandoning humanistic values" for "pure functionality," implying the two should coexist — a balanced thesis grounded in the stem, not an extreme position. (The answer stays within the passage\'s terms — human values and functionality — without importing outside concerns.)',
     difficulty: 'medium',
   },
   {
@@ -30,9 +30,9 @@ const questionPool: MCATQuizQuestion[] = [
   },
   {
     question: 'An author describes two conflicting theories and then states "the truth likely lies somewhere between these extremes." This approach is best characterized as:',
-    options: ['Dialectical synthesis', 'Reductio ad absurdum', 'Appeal to tradition', 'Straw man argument'],
+    options: ['Appeal to moderation (the golden mean)', 'Reductio ad absurdum', 'Appeal to tradition', 'Straw man argument'],
     correctAnswer: 0,
-    explanation: 'Dialectical synthesis presents a thesis and antithesis, then proposes a synthesis that incorporates elements of both — "the truth lies between the extremes."',
+    explanation: 'Claiming the truth lies *between* two extremes is the golden mean / appeal to moderation. (It is not dialectical synthesis, which transcends thesis and antithesis with a higher resolution rather than simply averaging them.)',
     difficulty: 'medium',
   },
   {

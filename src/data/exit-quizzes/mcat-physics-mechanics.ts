@@ -129,9 +129,9 @@ const questionPool: MCATQuizQuestion[] = [
   },
   {
     question: 'A 2.0 kg block slides down a 30° incline for 4.0 m with μk = 0.20. What is its speed at the bottom? (g = 9.8 m/s²)',
-    options: ['4.3 m/s', '5.6 m/s', '6.8 m/s', '8.1 m/s'],
+    options: ['4.3 m/s', '5.1 m/s', '6.8 m/s', '8.1 m/s'],
     correctAnswer: 1,
-    explanation: 'Use work-energy: mgh − Wfr = 1/2 mv². h = 4sin30 = 2 m. mgh = 39.2 J. Friction = μk mg cos30 ≈ 3.39 N, work friction ≈ 13.6 J. Net = 25.6 J = 1/2(2)v² => v ≈ 5.1 m/s (closest 5.6 m/s).',
+    explanation: 'Use work-energy: mgh − W_fr = ½mv². h = 4sin30° = 2 m, so mgh = (2.0)(9.8)(2) = 39.2 J. Friction force = μk·mg·cos30° = (0.20)(2.0)(9.8)(0.866) ≈ 3.39 N, so W_fr ≈ 3.39 × 4.0 = 13.6 J. Net KE = 39.2 − 13.6 = 25.6 J = ½(2.0)v² → v = √25.6 ≈ 5.1 m/s.',
     difficulty: 'hard',
     subtopicSlug: 'mcat-physics-mechanics-work-energy-power-mcat',
   },
