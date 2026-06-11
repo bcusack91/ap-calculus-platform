@@ -11,6 +11,8 @@ export interface PassageQuestion {
   correctAnswer: number
   explanation: string
   skill: string
+  /** Authored questions awaiting human review before being treated as canonical. */
+  needsReview?: boolean
 }
 
 export interface ReadingPassage {
@@ -39,6 +41,19 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         correctAnswer: 1,
         explanation: 'The final sentence reveals the wall symbolically contains emotional loss rather than serving a practical barrier function.',
         skill: 'central-ideas'
+      },
+      {
+        question: 'As used in the passage, “reclaimed” (the brambles slowly reclaimed the footpaths) most nearly means',
+        options: [
+          'legally repossessed',
+          'gradually overgrew and covered',
+          'cleaned and restored',
+          'formally demanded the return of'
+        ],
+        correctAnswer: 1,
+        explanation: 'In context the wild brambles “reclaimed” the paths by overgrowing them as the garden went untended — a sense of gradual natural takeover, not a legal or restorative one.',
+        skill: 'vocabulary-in-context',
+        needsReview: true
       }
     ]
   },
@@ -59,6 +74,19 @@ export const SAT_PASSAGES: ReadingPassage[] = [
         correctAnswer: 1,
         explanation: 'James has learned to decode the euphemism, showing resignation rather than confusion or relief.',
         skill: 'inference'
+      },
+      {
+        question: 'The simile comparing the words to “sediment in a glass of water” most directly emphasizes that the letter’s meaning',
+        options: [
+          'becomes clearer and more settled with each rereading',
+          'shifts and resettles differently each time James reads it',
+          'is deliberately obscured by his sister’s word choice',
+          'grows more upsetting the longer James considers it'
+        ],
+        correctAnswer: 1,
+        explanation: 'The text says “each time the words settled differently, like sediment” — the simile stresses that the meaning re-settles differently on each reading, not that it clarifies.',
+        skill: 'craft-and-structure',
+        needsReview: true
       }
     ]
   },

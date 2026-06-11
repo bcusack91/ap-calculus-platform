@@ -41,28 +41,28 @@ const fourWeekTasks: TemplatePlanTask[] = [
   // Week 1 — Foundations
   ...weekTasks(0, [
     { title: 'Take SAT Diagnostic Test', type: 'PRACTICE', topicSlug: undefined, dayOfWeek: 0 },
-    { title: 'Linear Equations Lesson', type: 'LESSON', topicSlug: 'sat-linear-equations', dayOfWeek: 1 },
-    { title: 'Reading Comprehension Lesson', type: 'LESSON', topicSlug: 'sat-reading-comprehension', dayOfWeek: 2 },
-    { title: 'Linear Equations Quiz', type: 'QUIZ', topicSlug: 'sat-linear-equations', dayOfWeek: 3 },
+    { title: 'Linear Equations Lesson', type: 'LESSON', topicSlug: 'sat-linear-equations-inequalities', dayOfWeek: 1 },
+    { title: 'Reading Comprehension Lesson', type: 'LESSON', topicSlug: 'sat-central-ideas-details', dayOfWeek: 2 },
+    { title: 'Linear Equations Quiz', type: 'QUIZ', topicSlug: 'sat-linear-equations-inequalities', dayOfWeek: 3 },
     { title: 'Vocabulary in Context Lesson', type: 'LESSON', topicSlug: 'sat-vocabulary-context', dayOfWeek: 4 },
-    { title: 'Reading Comprehension Quiz', type: 'QUIZ', topicSlug: 'sat-reading-comprehension', dayOfWeek: 5 },
+    { title: 'Reading Comprehension Quiz', type: 'QUIZ', topicSlug: 'sat-central-ideas-details', dayOfWeek: 5 },
   ]),
   // Week 2 — Core Skills
   ...weekTasks(1, [
     { title: 'Systems of Equations Lesson', type: 'LESSON', topicSlug: 'sat-systems-equations', dayOfWeek: 0 },
-    { title: 'Grammar & Conventions Lesson', type: 'LESSON', topicSlug: 'sat-grammar-conventions', dayOfWeek: 1 },
+    { title: 'Grammar & Conventions Lesson', type: 'LESSON', topicSlug: 'sat-grammar-usage', dayOfWeek: 1 },
     { title: 'Systems of Equations Quiz', type: 'QUIZ', topicSlug: 'sat-systems-equations', dayOfWeek: 2 },
     { title: 'Sentence Structure Lesson', type: 'LESSON', topicSlug: 'sat-sentence-structure', dayOfWeek: 3 },
     { title: 'Quadratic Equations Lesson', type: 'LESSON', topicSlug: 'sat-quadratic-equations', dayOfWeek: 4 },
-    { title: 'Grammar Quiz', type: 'QUIZ', topicSlug: 'sat-grammar-conventions', dayOfWeek: 5 },
+    { title: 'Grammar Quiz', type: 'QUIZ', topicSlug: 'sat-grammar-usage', dayOfWeek: 5 },
   ]),
   // Week 3 — Advanced Topics
   ...weekTasks(2, [
-    { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions-graphs', dayOfWeek: 0 },
+    { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions', dayOfWeek: 0 },
     { title: 'Central Ideas & Details Lesson', type: 'LESSON', topicSlug: 'sat-central-ideas-details', dayOfWeek: 1 },
-    { title: 'Statistics & Data Lesson', type: 'LESSON', topicSlug: 'sat-statistics-data', dayOfWeek: 2 },
-    { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions-graphs', dayOfWeek: 3 },
-    { title: 'Geometry & Trigonometry Lesson', type: 'LESSON', topicSlug: 'sat-geometry-trigonometry', dayOfWeek: 4 },
+    { title: 'Statistics & Data Lesson', type: 'LESSON', topicSlug: 'sat-statistics-data-interpretation', dayOfWeek: 2 },
+    { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions', dayOfWeek: 3 },
+    { title: 'Geometry & Trigonometry Lesson', type: 'LESSON', topicSlug: 'sat-geometry-basics', dayOfWeek: 4 },
     { title: 'SAT Mini Practice Test', type: 'PRACTICE', topicSlug: undefined, dayOfWeek: 5 },
   ]),
   // Week 4 — Review & Test
@@ -84,56 +84,56 @@ const eightWeekTasks: TemplatePlanTask[] = [
   ...weekTasks(0, [
     { title: 'Take SAT Diagnostic Test', type: 'PRACTICE', dayOfWeek: 0 },
     { title: 'Review Diagnostic Results & Set Goals', type: 'CUSTOM', dayOfWeek: 1 },
-    { title: 'Linear Equations Lesson', type: 'LESSON', topicSlug: 'sat-linear-equations', dayOfWeek: 2 },
-    { title: 'Inequalities Lesson', type: 'LESSON', topicSlug: 'sat-linear-inequalities', dayOfWeek: 3 },
-    { title: 'Linear Equations Quiz', type: 'QUIZ', topicSlug: 'sat-linear-equations', dayOfWeek: 4 },
+    { title: 'Linear Equations Lesson', type: 'LESSON', topicSlug: 'sat-linear-equations-inequalities', dayOfWeek: 2 },
+    { title: 'Inequalities Lesson', type: 'LESSON', topicSlug: 'sat-linear-inequalities-graphs', dayOfWeek: 3 },
+    { title: 'Linear Equations Quiz', type: 'QUIZ', topicSlug: 'sat-linear-equations-inequalities', dayOfWeek: 4 },
   ]),
   // Week 2 — Reading Foundations
   ...weekTasks(1, [
-    { title: 'Reading Comprehension Lesson', type: 'LESSON', topicSlug: 'sat-reading-comprehension', dayOfWeek: 0 },
+    { title: 'Reading Comprehension Lesson', type: 'LESSON', topicSlug: 'sat-central-ideas-details', dayOfWeek: 0 },
     { title: 'Vocabulary in Context Lesson', type: 'LESSON', topicSlug: 'sat-vocabulary-context', dayOfWeek: 1 },
     { title: 'Finding Textual Evidence Lesson', type: 'LESSON', topicSlug: 'sat-finding-textual-evidence', dayOfWeek: 2 },
-    { title: 'Reading Comprehension Quiz', type: 'QUIZ', topicSlug: 'sat-reading-comprehension', dayOfWeek: 3 },
+    { title: 'Reading Comprehension Quiz', type: 'QUIZ', topicSlug: 'sat-central-ideas-details', dayOfWeek: 3 },
     { title: 'Vocabulary Quiz', type: 'QUIZ', topicSlug: 'sat-vocabulary-context', dayOfWeek: 4 },
   ]),
   // Week 3 — Algebra cont. & Writing
   ...weekTasks(2, [
     { title: 'Systems of Equations Lesson', type: 'LESSON', topicSlug: 'sat-systems-equations', dayOfWeek: 0 },
     { title: 'Quadratic Equations Lesson', type: 'LESSON', topicSlug: 'sat-quadratic-equations', dayOfWeek: 1 },
-    { title: 'Grammar & Conventions Lesson', type: 'LESSON', topicSlug: 'sat-grammar-conventions', dayOfWeek: 2 },
+    { title: 'Grammar & Conventions Lesson', type: 'LESSON', topicSlug: 'sat-grammar-usage', dayOfWeek: 2 },
     { title: 'Systems of Equations Quiz', type: 'QUIZ', topicSlug: 'sat-systems-equations', dayOfWeek: 3 },
     { title: 'Quadratic Equations Quiz', type: 'QUIZ', topicSlug: 'sat-quadratic-equations', dayOfWeek: 4 },
   ]),
   // Week 4 — Writing & Functions
   ...weekTasks(3, [
     { title: 'Sentence Structure Lesson', type: 'LESSON', topicSlug: 'sat-sentence-structure', dayOfWeek: 0 },
-    { title: 'Punctuation Lesson', type: 'LESSON', topicSlug: 'sat-punctuation-commas-semicolons', dayOfWeek: 1 },
-    { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions-graphs', dayOfWeek: 2 },
-    { title: 'Grammar Quiz', type: 'QUIZ', topicSlug: 'sat-grammar-conventions', dayOfWeek: 3 },
+    { title: 'Punctuation Lesson', type: 'LESSON', topicSlug: 'sat-punctuation', dayOfWeek: 1 },
+    { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions', dayOfWeek: 2 },
+    { title: 'Grammar Quiz', type: 'QUIZ', topicSlug: 'sat-grammar-usage', dayOfWeek: 3 },
     { title: 'SAT Mini Practice Test #1', type: 'PRACTICE', dayOfWeek: 5 },
   ]),
   // Week 5 — Advanced Math
   ...weekTasks(4, [
     { title: 'Exponents & Radicals Lesson', type: 'LESSON', topicSlug: 'sat-exponents-radicals', dayOfWeek: 0 },
     { title: 'Polynomials & Factoring Lesson', type: 'LESSON', topicSlug: 'sat-polynomials-factoring', dayOfWeek: 1 },
-    { title: 'Circles & Complex Numbers Lesson', type: 'LESSON', topicSlug: 'sat-circles-complex-numbers', dayOfWeek: 2 },
-    { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions-graphs', dayOfWeek: 3 },
+    { title: 'Circles & Complex Numbers Lesson', type: 'LESSON', topicSlug: 'sat-circles', dayOfWeek: 2 },
+    { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions', dayOfWeek: 3 },
     { title: 'Exponents Quiz', type: 'QUIZ', topicSlug: 'sat-exponents-radicals', dayOfWeek: 4 },
   ]),
   // Week 6 — Data & R&W Strategy
   ...weekTasks(5, [
-    { title: 'Statistics & Data Lesson', type: 'LESSON', topicSlug: 'sat-statistics-data', dayOfWeek: 0 },
+    { title: 'Statistics & Data Lesson', type: 'LESSON', topicSlug: 'sat-statistics-data-interpretation', dayOfWeek: 0 },
     { title: 'Central Ideas & Details Lesson', type: 'LESSON', topicSlug: 'sat-central-ideas-details', dayOfWeek: 1 },
-    { title: 'Command of Evidence Lesson', type: 'LESSON', topicSlug: 'sat-command-evidence', dayOfWeek: 2 },
-    { title: 'Statistics Quiz', type: 'QUIZ', topicSlug: 'sat-statistics-data', dayOfWeek: 3 },
-    { title: 'Evidence Quiz', type: 'QUIZ', topicSlug: 'sat-command-evidence', dayOfWeek: 4 },
+    { title: 'Command of Evidence Lesson', type: 'LESSON', topicSlug: 'sat-finding-textual-evidence', dayOfWeek: 2 },
+    { title: 'Statistics Quiz', type: 'QUIZ', topicSlug: 'sat-statistics-data-interpretation', dayOfWeek: 3 },
+    { title: 'Evidence Quiz', type: 'QUIZ', topicSlug: 'sat-finding-textual-evidence', dayOfWeek: 4 },
   ]),
   // Week 7 — Geometry & Strategy
   ...weekTasks(6, [
-    { title: 'Geometry & Trigonometry Lesson', type: 'LESSON', topicSlug: 'sat-geometry-trigonometry', dayOfWeek: 0 },
-    { title: 'Word Problems Lesson', type: 'LESSON', topicSlug: 'sat-word-problems', dayOfWeek: 1 },
+    { title: 'Geometry & Trigonometry Lesson', type: 'LESSON', topicSlug: 'sat-geometry-basics', dayOfWeek: 0 },
+    { title: 'Word Problems Lesson', type: 'LESSON', topicSlug: 'sat-ratios-proportions-percents', dayOfWeek: 1 },
     { title: 'Time Management Lesson', type: 'LESSON', topicSlug: 'sat-time-management', dayOfWeek: 2 },
-    { title: 'Geometry Quiz', type: 'QUIZ', topicSlug: 'sat-geometry-trigonometry', dayOfWeek: 3 },
+    { title: 'Geometry Quiz', type: 'QUIZ', topicSlug: 'sat-geometry-basics', dayOfWeek: 3 },
     { title: 'SAT Mini Practice Test #2', type: 'PRACTICE', dayOfWeek: 5 },
   ]),
   // Week 8 — Full Review & Practice Test
@@ -155,65 +155,65 @@ const twelveWeekTasks: TemplatePlanTask[] = [
   ...weekTasks(0, [
     { title: 'Take SAT Diagnostic Test', type: 'PRACTICE', dayOfWeek: 0 },
     { title: 'Review Diagnostic + Set 1500+ Goal', type: 'CUSTOM', dayOfWeek: 1 },
-    { title: 'Linear Equations Deep Dive', type: 'LESSON', topicSlug: 'sat-linear-equations', dayOfWeek: 2 },
-    { title: 'Linear Inequalities Deep Dive', type: 'LESSON', topicSlug: 'sat-linear-inequalities', dayOfWeek: 3 },
-    { title: 'Linear Equations Quiz', type: 'QUIZ', topicSlug: 'sat-linear-equations', dayOfWeek: 4 },
-    { title: 'Inequalities Quiz', type: 'QUIZ', topicSlug: 'sat-linear-inequalities', dayOfWeek: 5 },
+    { title: 'Linear Equations Deep Dive', type: 'LESSON', topicSlug: 'sat-linear-equations-inequalities', dayOfWeek: 2 },
+    { title: 'Linear Inequalities Deep Dive', type: 'LESSON', topicSlug: 'sat-linear-inequalities-graphs', dayOfWeek: 3 },
+    { title: 'Linear Equations Quiz', type: 'QUIZ', topicSlug: 'sat-linear-equations-inequalities', dayOfWeek: 4 },
+    { title: 'Inequalities Quiz', type: 'QUIZ', topicSlug: 'sat-linear-inequalities-graphs', dayOfWeek: 5 },
   ]),
   // Week 2 — Reading I
   ...weekTasks(1, [
-    { title: 'Reading Comprehension Lesson', type: 'LESSON', topicSlug: 'sat-reading-comprehension', dayOfWeek: 0 },
+    { title: 'Reading Comprehension Lesson', type: 'LESSON', topicSlug: 'sat-central-ideas-details', dayOfWeek: 0 },
     { title: 'Vocabulary in Context Lesson', type: 'LESSON', topicSlug: 'sat-vocabulary-context', dayOfWeek: 1 },
     { title: 'Flashcard: SAT Vocabulary', type: 'FLASHCARD', topicSlug: 'sat-vocabulary-context', dayOfWeek: 2 },
-    { title: 'Reading Comprehension Quiz', type: 'QUIZ', topicSlug: 'sat-reading-comprehension', dayOfWeek: 3 },
+    { title: 'Reading Comprehension Quiz', type: 'QUIZ', topicSlug: 'sat-central-ideas-details', dayOfWeek: 3 },
     { title: 'Vocabulary Quiz', type: 'QUIZ', topicSlug: 'sat-vocabulary-context', dayOfWeek: 4 },
   ]),
   // Week 3 — Systems & Evidence
   ...weekTasks(2, [
     { title: 'Systems of Equations Lesson', type: 'LESSON', topicSlug: 'sat-systems-equations', dayOfWeek: 0 },
     { title: 'Finding Textual Evidence Lesson', type: 'LESSON', topicSlug: 'sat-finding-textual-evidence', dayOfWeek: 1 },
-    { title: 'Command of Evidence Lesson', type: 'LESSON', topicSlug: 'sat-command-evidence', dayOfWeek: 2 },
+    { title: 'Command of Evidence Lesson', type: 'LESSON', topicSlug: 'sat-finding-textual-evidence', dayOfWeek: 2 },
     { title: 'Systems Quiz', type: 'QUIZ', topicSlug: 'sat-systems-equations', dayOfWeek: 3 },
-    { title: 'Evidence Quiz', type: 'QUIZ', topicSlug: 'sat-command-evidence', dayOfWeek: 4 },
+    { title: 'Evidence Quiz', type: 'QUIZ', topicSlug: 'sat-finding-textual-evidence', dayOfWeek: 4 },
   ]),
   // Week 4 — Quadratics & Grammar
   ...weekTasks(3, [
     { title: 'Quadratic Equations Lesson', type: 'LESSON', topicSlug: 'sat-quadratic-equations', dayOfWeek: 0 },
-    { title: 'Grammar & Conventions Lesson', type: 'LESSON', topicSlug: 'sat-grammar-conventions', dayOfWeek: 1 },
+    { title: 'Grammar & Conventions Lesson', type: 'LESSON', topicSlug: 'sat-grammar-usage', dayOfWeek: 1 },
     { title: 'Sentence Structure Lesson', type: 'LESSON', topicSlug: 'sat-sentence-structure', dayOfWeek: 2 },
     { title: 'Quadratics Quiz', type: 'QUIZ', topicSlug: 'sat-quadratic-equations', dayOfWeek: 3 },
     { title: 'SAT Mini Practice Test #1', type: 'PRACTICE', dayOfWeek: 5 },
   ]),
   // Week 5 — Functions & Writing
   ...weekTasks(4, [
-    { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions-graphs', dayOfWeek: 0 },
-    { title: 'Punctuation Lesson', type: 'LESSON', topicSlug: 'sat-punctuation-commas-semicolons', dayOfWeek: 1 },
-    { title: 'Effective Language Use Lesson', type: 'LESSON', topicSlug: 'sat-effective-language-use', dayOfWeek: 2 },
-    { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions-graphs', dayOfWeek: 3 },
-    { title: 'Punctuation Quiz', type: 'QUIZ', topicSlug: 'sat-punctuation-commas-semicolons', dayOfWeek: 4 },
+    { title: 'Functions & Graphs Lesson', type: 'LESSON', topicSlug: 'sat-functions', dayOfWeek: 0 },
+    { title: 'Punctuation Lesson', type: 'LESSON', topicSlug: 'sat-punctuation', dayOfWeek: 1 },
+    { title: 'Effective Language Use Lesson', type: 'LESSON', topicSlug: 'sat-conciseness-redundancy', dayOfWeek: 2 },
+    { title: 'Functions Quiz', type: 'QUIZ', topicSlug: 'sat-functions', dayOfWeek: 3 },
+    { title: 'Punctuation Quiz', type: 'QUIZ', topicSlug: 'sat-punctuation', dayOfWeek: 4 },
   ]),
   // Week 6 — Exponents & Data
   ...weekTasks(5, [
     { title: 'Exponents & Radicals Lesson', type: 'LESSON', topicSlug: 'sat-exponents-radicals', dayOfWeek: 0 },
-    { title: 'Statistics & Data Lesson', type: 'LESSON', topicSlug: 'sat-statistics-data', dayOfWeek: 1 },
+    { title: 'Statistics & Data Lesson', type: 'LESSON', topicSlug: 'sat-statistics-data-interpretation', dayOfWeek: 1 },
     { title: 'Central Ideas & Details Lesson', type: 'LESSON', topicSlug: 'sat-central-ideas-details', dayOfWeek: 2 },
     { title: 'Exponents Quiz', type: 'QUIZ', topicSlug: 'sat-exponents-radicals', dayOfWeek: 3 },
-    { title: 'Statistics Quiz', type: 'QUIZ', topicSlug: 'sat-statistics-data', dayOfWeek: 4 },
+    { title: 'Statistics Quiz', type: 'QUIZ', topicSlug: 'sat-statistics-data-interpretation', dayOfWeek: 4 },
   ]),
   // Week 7 — Polynomials & Advanced Topics
   ...weekTasks(6, [
     { title: 'Polynomials & Factoring Lesson', type: 'LESSON', topicSlug: 'sat-polynomials-factoring', dayOfWeek: 0 },
-    { title: 'Circles & Complex Numbers Lesson', type: 'LESSON', topicSlug: 'sat-circles-complex-numbers', dayOfWeek: 1 },
-    { title: 'Transitions & Organization Lesson', type: 'LESSON', topicSlug: 'sat-transitions', dayOfWeek: 2 },
+    { title: 'Circles & Complex Numbers Lesson', type: 'LESSON', topicSlug: 'sat-circles', dayOfWeek: 1 },
+    { title: 'Transitions & Organization Lesson', type: 'LESSON', topicSlug: 'sat-transitions-organization', dayOfWeek: 2 },
     { title: 'Polynomials Quiz', type: 'QUIZ', topicSlug: 'sat-polynomials-factoring', dayOfWeek: 3 },
-    { title: 'Circles Quiz', type: 'QUIZ', topicSlug: 'sat-circles-complex-numbers', dayOfWeek: 4 },
+    { title: 'Circles Quiz', type: 'QUIZ', topicSlug: 'sat-circles', dayOfWeek: 4 },
   ]),
   // Week 8 — Geometry & Strategy
   ...weekTasks(7, [
-    { title: 'Geometry & Trigonometry Lesson', type: 'LESSON', topicSlug: 'sat-geometry-trigonometry', dayOfWeek: 0 },
-    { title: 'Word Problems Lesson', type: 'LESSON', topicSlug: 'sat-word-problems', dayOfWeek: 1 },
+    { title: 'Geometry & Trigonometry Lesson', type: 'LESSON', topicSlug: 'sat-geometry-basics', dayOfWeek: 0 },
+    { title: 'Word Problems Lesson', type: 'LESSON', topicSlug: 'sat-ratios-proportions-percents', dayOfWeek: 1 },
     { title: 'Time Management Lesson', type: 'LESSON', topicSlug: 'sat-time-management', dayOfWeek: 2 },
-    { title: 'Geometry Quiz', type: 'QUIZ', topicSlug: 'sat-geometry-trigonometry', dayOfWeek: 3 },
+    { title: 'Geometry Quiz', type: 'QUIZ', topicSlug: 'sat-geometry-basics', dayOfWeek: 3 },
     { title: 'SAT Mini Practice Test #2', type: 'PRACTICE', dayOfWeek: 5 },
   ]),
   // Week 9 — Full Practice Test #1

@@ -7490,6 +7490,26 @@ const slugAliases: Record<string, string> = {
   'polynomial-functions-end-behavior-precalc': 'polynomial-functions-precalc',
   'logarithmic-functions-equations-precalc': 'logarithmic-functions-precalc',
   'trigonometric-identities': 'trigonometric-identities-precalc',
+  // SAT — wire real Topic slugs to their interactive lessons so /topics/<slug>
+  // loads the lesson (the other 11 SAT topics already match a registry key).
+  'sat-central-ideas-details': 'sat-reading-evidence-sat',
+  'sat-vocabulary-context': 'sat-reading-evidence-sat',
+  'sat-finding-textual-evidence': 'sat-reading-evidence-sat',
+  'sat-conciseness-redundancy': 'sat-expression-ideas-sat',
+  'sat-transitions-organization': 'sat-expression-ideas-sat',
+  'sat-grammar-usage': 'sat-grammar-conventions-sat',
+  'sat-sentence-structure': 'sat-grammar-conventions-sat',
+  'sat-pronoun-agreement': 'sat-grammar-conventions-sat',
+  'sat-data-statistics': 'sat-data-statistics-sat',
+  'sat-probability-two-way-tables': 'sat-problem-solving-data-sat',
+  'sat-scatterplots-line-fit': 'sat-problem-solving-data-sat',
+  'sat-geometry-basics': 'sat-geometry-angles-sat',
+  'sat-linear-inequalities-graphs': 'sat-linear-equations-sat',
+  'sat-systems-equations': 'sat-linear-equations-sat',
+  'sat-systems-linear-equations': 'sat-linear-equations-sat',
+  'sat-nonlinear-equations-functions': 'sat-functions-graphs-sat',
+  'sat-polynomial-rational-expressions': 'sat-polynomials-factoring-sat',
+  'sat-time-management': 'sat-test-day-strategy-sat',
 }
 
 function resolveSlug(topicSlug: string): string {
