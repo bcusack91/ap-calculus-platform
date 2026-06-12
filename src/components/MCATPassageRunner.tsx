@@ -14,6 +14,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
+import MCATFigure from '@/components/MCATFigure'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { scoreMCAT, type MCATScoreReport } from '@/lib/mcat-scoring'
@@ -189,6 +190,7 @@ export default function MCATPassageRunner({
                   {' '}({p.questions.filter((q, qi) => answers[key(pi, qi)] === q.correctAnswer).length}/{p.questions.length})
                 </summary>
                 <RichText text={p.passageText} className="prose prose-sm mt-3 max-w-none border-l-2 border-gray-200 pl-3 text-gray-600 dark:prose-invert dark:border-gray-700 dark:text-gray-400" />
+                {p.chart && <div className="mt-3"><MCATFigure spec={p.chart} /></div>}
                 {p.figure && <RichText text={p.figure} className="prose prose-sm mt-2 max-w-none dark:prose-invert" />}
                 {p.questions.map((q, qi) => {
                   const picked = answers[key(pi, qi)]
@@ -259,6 +261,7 @@ export default function MCATPassageRunner({
               <h2 className="mb-1 text-lg font-bold text-gray-900 dark:text-white">{passage.title}</h2>
               <p className="mb-3 text-xs uppercase tracking-wide text-gray-400">{passage.discipline}</p>
               <RichText text={passage.passageText} className="prose prose-sm max-w-none leading-relaxed text-gray-800 dark:prose-invert dark:text-gray-200" />
+              {passage.chart && <div className="mt-4"><MCATFigure spec={passage.chart} /></div>}
               {passage.figure && (
                 <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-3 dark:border-gray-700 dark:bg-gray-900/40">
                   <RichText text={passage.figure} className="prose prose-sm max-w-none dark:prose-invert" />

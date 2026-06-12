@@ -67,10 +67,46 @@ export interface MCATPassage {
    * "Figure 1." described block). Kept separate so the UI can frame it.
    */
   figure?: string
+  /**
+   * Optional STRUCTURED figure rendered as an actual SVG graph (titration curve,
+   * Michaelis-Menten, dose-response, kinetics, bar comparison). Preferred over
+   * a prose `figure` whenever the passage references "Figure 1" with a curve.
+   */
+  chart?: MCATFigureSpec
   /** 4-7 passage-bound questions. */
   questions: MCATPassageQuestion[]
   /** Set when the whole passage (text + keys) is AI-authored and unreviewed. */
   needsReview?: boolean
+}
+
+/** One plotted data series (shares the parent figure's x-axis). */
+export interface MCATFigureSeries {
+  label: string
+  yValues: number[]
+}
+
+/** A structured, renderable scientific figure (graph) for a passage. */
+export interface MCATFigureSpec {
+  /** Caption, e.g. "Figure 1. Titration of 0.10 M acetic acid with NaOH". */
+  title: string
+  /** Plot style. 'line' (default) connects points; 'scatter' shows points only; 'bar' for categorical comparisons. */
+  kind?: 'line' | 'scatter' | 'bar'
+  xLabel: string
+  yLabel: string
+  xUnit?: string
+  yUnit?: string
+  /** X tick labels (numeric or categorical), one per data point. */
+  xValues: (number | string)[]
+  /** Primary series y-values (same length as xValues). */
+  yValues: number[]
+  /** Legend label for the primary series. */
+  seriesLabel: string
+  /** Additional overlaid series (e.g. competitive vs. noncompetitive inhibitor). */
+  comparisonSeries?: MCATFigureSeries[]
+  /** Vertical marker annotations at a given x index (e.g. equivalence point). */
+  annotations?: { xIndex: number; label: string }[]
+  /** Hide the per-point value labels (useful for dense curves like titrations). */
+  hidePointLabels?: boolean
 }
 
 /** A standalone (non-passage) item, used sparingly the way the real exam does. */

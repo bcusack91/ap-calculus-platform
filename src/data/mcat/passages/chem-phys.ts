@@ -92,8 +92,21 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     title: 'Buffering Capacity of an Acetate System',
     passageText:
       'Acetic acid ($\\text{CH}_3\\text{COOH}$, $K_a = 1.8 \\times 10^{-5}$) is a weak monoprotic acid widely used to model physiological buffering. A student prepared a series of acetate buffers and probed their behavior by titration with strong base.\n\nIn the first experiment, the student combined 0.10 mol of acetic acid and 0.10 mol of sodium acetate in 1.0 L of water and recorded the pH. In a second experiment, the ratio of conjugate base to acid was deliberately set to 10:1. The student then titrated a fresh 50.0 mL sample of 0.10 M acetic acid with 0.10 M $\\text{NaOH}$ and monitored the pH with a calibrated electrode, generating the curve sketched in Figure 1. The half-equivalence point and the equivalence point were both identified on the curve.\n\nThe student observed that adding small amounts of strong acid or base near the 1:1 buffer composition changed the pH only slightly, whereas the same additions to pure water caused large pH swings. At the equivalence point of the titration, the solution contained only acetate ion and sodium ion, and the measured pH was above 7. The relationship $\\text{pH} = \\text{p}K_a + \\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$ was used to rationalize the buffer region. Recall that $\\log 2 \\approx 0.3$ and $\\log 5 \\approx 0.7$.',
-    figure:
-      '**Figure 1. Titration of 50.0 mL of 0.10 M acetic acid with 0.10 M NaOH**\n\nThe curve begins near pH 3, rises gradually through a flat buffering plateau, passes an inflection at the half-equivalence point, then climbs steeply through the equivalence point and levels off near the pH of excess NaOH.\n\n- Half-equivalence point: 25.0 mL NaOH added\n- Equivalence point: 50.0 mL NaOH added',
+    chart: {
+      title: 'Figure 1. Titration of 50.0 mL of 0.10 M acetic acid with 0.10 M NaOH',
+      kind: 'line',
+      xLabel: 'Volume of 0.10 M NaOH added',
+      xUnit: 'mL',
+      yLabel: 'pH',
+      seriesLabel: 'pH',
+      hidePointLabels: true,
+      xValues: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 48, 50, 52, 55, 60],
+      yValues: [2.87, 3.79, 4.14, 4.37, 4.56, 4.74, 4.92, 5.11, 5.34, 5.69, 6.12, 8.72, 11.30, 11.68, 11.96],
+      annotations: [
+        { xIndex: 5, label: 'half-eq (pH = pKa)' },
+        { xIndex: 11, label: 'equivalence' },
+      ],
+    },
     questions: [
       {
         question: 'In the first experiment (1:1 acid to conjugate base), the pH is closest to:',
