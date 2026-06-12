@@ -68,6 +68,40 @@ function parsePipeCells(line: string): string[] {
  * Render text with both markdown tables and LaTeX math.
  * Converts markdown tables to HTML, then processes $...$ and $$...$$ as KaTeX.
  */
+/**
+ * Reduce inline LaTeX/markdown to readable plain text for short previews and
+ * excerpts (card snippets, list summaries) where rendering full KaTeX would be
+ * heavy or awkward. NOT a substitute for renderRichText in the main UI.
+ */
+export function plainTextPreview(text: string): string {
+  return text
+    .replace(/\$\$([\s\S]+?)\$\$/g, '$1')
+    .replace(/\$([^$]+?)\$/g, '$1')
+    .replace(/\\text\{([^}]*)\}/g, '$1')
+    .replace(/\\mathrm\{([^}]*)\}/g, '$1')
+    .replace(/\\times/g, '×')
+    .replace(/\\cdot/g, '·')
+    .replace(/\\(?:rightarrow|to|longrightarrow)\b/g, '→')
+    .replace(/\\(?:rightleftharpoons|leftrightarrow)\b/g, '⇌')
+    .replace(/\\pm\b/g, '±')
+    .replace(/\\leq\b/g, '≤')
+    .replace(/\\geq\b/g, '≥')
+    .replace(/\\Delta\b/g, 'Δ')
+    .replace(/\\alpha\b/g, 'α')
+    .replace(/\\beta\b/g, 'β')
+    .replace(/\\mu\b/g, 'μ')
+    .replace(/\\pi\b/g, 'π')
+    .replace(/\^\{([^}]*)\}/g, '^$1') // superscripts keep a caret marker
+    .replace(/_\{([^}]*)\}/g, '$1') // subscripts inline (CH_3 -> CH3)
+    .replace(/_/g, '')
+    .replace(/\\[,;: ]/g, ' ') // LaTeX spacing commands
+    .replace(/\\[a-zA-Z]+\b/g, '') // drop any remaining commands
+    .replace(/[{}]/g, '')
+    .replace(/[#*]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 export function renderRichText(text: string): string {
   // Step 1: Convert markdown tables to HTML
   let result = renderMarkdownTables(text)

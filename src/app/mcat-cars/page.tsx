@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
+import { plainTextPreview } from '@/lib/render-rich-text'
 import { CARS_PASSAGES } from '@/data/mcat/passages'
 import { countQuestions, type MCATPassage } from '@/data/mcat/types'
 
@@ -48,7 +49,7 @@ export default function MCATCarsPage() {
                 {p.discipline}
               </span>
               <h3 className="mb-1 font-bold text-gray-900 group-hover:text-purple-600 dark:text-white">{p.title}</h3>
-              <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-400">{p.passageText.replace(/[#*]/g, '').slice(0, 110)}…</p>
+              <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-400">{plainTextPreview(p.passageText).slice(0, 110)}…</p>
               <p className="mt-2 text-xs font-medium text-gray-400">{p.questions.length} questions</p>
             </button>
           ))}
