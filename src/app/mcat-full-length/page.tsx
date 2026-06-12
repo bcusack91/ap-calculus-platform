@@ -3,18 +3,20 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
-import { FULL_LENGTH_PASSAGES, FULL_LENGTH_QUESTION_COUNT, FULL_LENGTH_MINUTES } from '@/data/mcat/full-length'
+import { FULL_LENGTH_FORMS, FULL_LENGTH_MINUTES } from '@/data/mcat/full-length'
 import { MCAT_SECTION_ORDER, MCAT_SECTION_META } from '@/data/mcat/types'
 
 export default function MCATFullLengthPage() {
   const [started, setStarted] = useState(false)
+  const [form, setForm] = useState<1 | 2>(1)
+  const fl = FULL_LENGTH_FORMS[form - 1]
 
   if (started) {
     return (
       <MCATPassageRunner
-        passages={FULL_LENGTH_PASSAGES}
+        passages={fl.passages}
         mode="exam"
-        title="MCAT Full-Length"
+        title={`MCAT Full-Length · Form ${form}`}
         backHref="/mcat"
         backLabel="MCAT Prep"
         timeLimitMinutes={FULL_LENGTH_MINUTES}
@@ -24,7 +26,7 @@ export default function MCATFullLengthPage() {
 
   const bySection = MCAT_SECTION_ORDER.map((s) => ({
     meta: MCAT_SECTION_META[s],
-    count: FULL_LENGTH_PASSAGES.filter((p) => p.section === s).reduce((n, p) => n + p.questions.length, 0),
+    count: fl.passages.filter((p) => p.section === s).reduce((n, p) => n + p.questions.length, 0),
   }))
 
   return (
@@ -33,8 +35,22 @@ export default function MCATFullLengthPage() {
         <Link href="/mcat" className="text-sm text-blue-600 hover:underline dark:text-blue-400">← MCAT Prep</Link>
         <h1 className="mb-3 mt-4 text-3xl font-black tracking-tight text-gray-900 sm:text-4xl dark:text-white">Full-Length Practice Exam</h1>
         <p className="mb-6 text-gray-600 dark:text-gray-400">
-          A passage-based, four-section simulation scored on the 472–528 scale. {FULL_LENGTH_QUESTION_COUNT} questions across {FULL_LENGTH_PASSAGES.length} passages and discrete sets.
+          A passage-based, four-section simulation scored on the 472–528 scale. {fl.questionCount} questions across {fl.passages.length} passages and discrete sets.
         </p>
+
+        {/* Form selector — two interchangeable full-lengths for retakes */}
+        <div className="mb-5 inline-flex rounded-xl border border-gray-200 bg-white p-1 dark:border-gray-700 dark:bg-gray-800" role="group" aria-label="Choose full-length form">
+          {([1, 2] as const).map((f) => (
+            <button
+              key={f}
+              onClick={() => setForm(f)}
+              aria-pressed={form === f}
+              className={`rounded-lg px-4 py-1.5 text-sm font-semibold transition ${form === f ? 'bg-indigo-600 text-white' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
+            >
+              Form {f}
+            </button>
+          ))}
+        </div>
 
         <div className="mb-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
           {bySection.map(({ meta, count }, i) => (
@@ -58,7 +74,7 @@ export default function MCATFullLengthPage() {
         </div>
 
         <button onClick={() => setStarted(true)} className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-4 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">
-          Start exam
+          Start Form {form}
         </button>
         <p className="mt-3 text-center text-xs text-gray-400">Prefer shorter sets? Try <Link href="/mcat-cars" className="text-blue-600 hover:underline dark:text-blue-400">CARS passage practice</Link> or <Link href="/mcat-practice" className="text-blue-600 hover:underline dark:text-blue-400">single-section drills</Link>.</p>
       </div>

@@ -1,8 +1,25 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { renderRichText } from '@/lib/render-rich-text'
+import { preloadKatex } from '@/lib/katex-lazy'
+import 'katex/dist/katex.min.css'
+
+/** Renders $…$/markdown content as KaTeX/HTML, re-rendering once KaTeX loads. */
+function RichText({ text, className, inline }: { text: string; className?: string; inline?: boolean }) {
+  const [ready, setReady] = useState(false)
+  useEffect(() => {
+    let m = true
+    preloadKatex().then(() => { if (m) setReady(true) })
+    return () => { m = false }
+  }, [])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const html = useMemo(() => renderRichText(text), [text, ready])
+  const Tag = inline ? 'span' : 'div'
+  return <Tag className={className} dangerouslySetInnerHTML={{ __html: html }} />
+}
 
 interface MCATDailyQ {
   section: string
@@ -12,8 +29,9 @@ interface MCATDailyQ {
     options: string[]
     correctAnswer: number
     explanation: string
-    difficulty: string
   }
+  passageTitle?: string
+  passageText?: string
   dayNumber: number
 }
 
@@ -114,16 +132,19 @@ export default function MCATDailyQuestionPage() {
                     <span className="text-sm font-medium opacity-80">
                       Today&apos;s {sectionLabels[sec] ?? sec} Question
                     </span>
-                    <div className="mt-1 text-xs opacity-70">
-                      Difficulty: {q.question.difficulty}
-                    </div>
+                    {q.passageTitle && (
+                      <div className="mt-1 text-xs opacity-70">Passage: {q.passageTitle}</div>
+                    )}
                   </div>
 
                   {/* Question Body */}
                   <div className="p-6">
-                    <p className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
-                      {q.question.question}
-                    </p>
+                    {q.passageText && (
+                      <div className="prose prose-sm mb-4 max-h-72 max-w-none overflow-y-auto rounded-lg border-l-4 border-gray-300 bg-gray-50 p-4 leading-relaxed text-gray-700 dark:prose-invert dark:border-gray-600 dark:bg-gray-900/40 dark:text-gray-300">
+                        <RichText text={q.passageText} />
+                      </div>
+                    )}
+                    <RichText text={q.question.question} className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
 
                     {/* Options */}
                     <div className="mb-5 space-y-2">
@@ -158,7 +179,7 @@ export default function MCATDailyQuestionPage() {
                             <span className="mr-2 font-bold">
                               {String.fromCharCode(65 + i)}.
                             </span>
-                            {opt}
+                            <RichText inline text={opt} />
                           </button>
                         )
                       })}
@@ -178,9 +199,7 @@ export default function MCATDailyQuestionPage() {
                         <div className="mb-1 font-semibold text-gray-900 dark:text-white">
                           {sel === correct ? '✅ Correct!' : '❌ Incorrect'}
                         </div>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {q.question.explanation}
-                        </p>
+                        <RichText text={q.question.explanation} className="text-gray-600 dark:text-gray-400" />
                       </div>
                     )}
                   </div>

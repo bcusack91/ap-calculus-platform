@@ -109,6 +109,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    ...['mcat-chem-phys', 'mcat-bio-biochem', 'mcat-psych-soc', 'mcat-reference'].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    })),
     // PSAT landing page
     {
       url: `${baseUrl}/psat`,

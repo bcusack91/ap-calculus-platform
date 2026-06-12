@@ -503,8 +503,10 @@ export default function MCATDiagnosticPage() {
               </span>
             </div>
 
+            {/* Two-pane on large screens when a passage is present (test-day layout) */}
+            <div className={showPassage && q.passage ? 'lg:grid lg:grid-cols-2 lg:gap-6 lg:items-start' : ''}>
             {showPassage && q.passage && (
-              <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm dark:border-cyan-800 dark:bg-cyan-900/20">
+              <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto dark:border-cyan-800 dark:bg-cyan-900/20">
                 <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">Passage Set</p>
                 <h3 className="mt-1 text-lg font-bold text-gray-900 dark:text-white">{q.passage.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
@@ -593,6 +595,7 @@ export default function MCATDiagnosticPage() {
                   )
                 })}
               </div>
+            </div>
             </div>
 
             {/* Navigation */}

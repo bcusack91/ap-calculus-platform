@@ -40,6 +40,14 @@ interface FlatQuestion {
   section: MCATSection
 }
 
+/** Where to send a student to remediate a weak section after a full-length. */
+const SECTION_PRACTICE: Record<MCATSection, { href: string; label: string }> = {
+  'chem-phys': { href: '/mcat-chem-phys', label: 'Chem/Phys passage practice' },
+  cars: { href: '/mcat-cars', label: 'CARS passage practice' },
+  'bio-biochem': { href: '/mcat-bio-biochem', label: 'Bio/Biochem passage practice' },
+  'psych-soc': { href: '/mcat-psych-soc', label: 'Psych/Soc passage practice' },
+}
+
 export default function MCATPassageRunner({
   passages,
   mode,
@@ -139,6 +147,36 @@ export default function MCATPassageRunner({
                 ))}
               </div>
               <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">Scaled scores are estimates from an unequated curve — use them for relative section feedback, not as an official prediction.</p>
+              {(() => {
+                // Route the weakest section(s) to targeted remediation. Flag any
+                // section within 1 scaled point of the lowest so ties both show.
+                const sorted = [...report.sections].sort((a, b) => a.scaled - b.scaled)
+                const lowest = sorted[0].scaled
+                const weak = sorted.filter((s) => s.scaled <= lowest + 1)
+                return (
+                  <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-900/20">
+                    <p className="mb-3 text-sm font-bold text-amber-900 dark:text-amber-200">🎯 Focus your next study block here</p>
+                    <div className="space-y-2">
+                      {weak.map((s) => (
+                        <Link
+                          key={s.section}
+                          href={SECTION_PRACTICE[s.section].href}
+                          className="flex items-center justify-between rounded-lg border border-amber-300 bg-white px-4 py-2.5 transition hover:border-amber-400 hover:shadow-sm dark:border-amber-700 dark:bg-gray-800"
+                        >
+                          <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                            {s.short} <span className="text-gray-400">· {s.scaled}</span> — {SECTION_PRACTICE[s.section].label}
+                          </span>
+                          <span className="text-amber-600 dark:text-amber-400">→</span>
+                        </Link>
+                      ))}
+                    </div>
+                    <p className="mt-3 text-xs text-amber-700 dark:text-amber-400">
+                      Then review the underlying lessons from your{' '}
+                      <Link href="/mcat-diagnostic" className="underline">diagnostic plan</Link>.
+                    </p>
+                  </div>
+                )
+              })()}
             </>
           )}
           {/* Review */}
@@ -203,7 +241,7 @@ export default function MCATPassageRunner({
           </div>
           <div className="flex items-center gap-3">
             {mode === 'exam' && timeLimitMinutes ? (
-              <span className={`font-mono text-sm font-bold ${secondsLeft < 300 ? 'text-red-600' : 'text-gray-700 dark:text-gray-200'}`}>{mm}:{ss}</span>
+              <span role="timer" aria-label={`Time remaining: ${mm} minutes ${ss} seconds`} className={`font-mono text-sm font-bold ${secondsLeft < 300 ? 'text-red-600' : 'text-gray-700 dark:text-gray-200'}`}>{mm}:{ss}</span>
             ) : null}
             <span className="text-xs text-gray-500 dark:text-gray-400">Passage {active + 1}/{passages.length}</span>
           </div>
@@ -255,12 +293,15 @@ export default function MCATPassageRunner({
                           : 'border-gray-200 hover:border-blue-300 dark:border-gray-700'
                       return (
                         <div key={oi} className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm ${cls}`}>
-                          <button onClick={() => select(qi, oi)} disabled={revealed} className={`flex flex-1 items-start gap-2 text-left ${isStruck ? 'text-gray-400 line-through' : 'text-gray-800 dark:text-gray-200'}`}>
-                            <span className="font-bold">{revealed && isCorrect ? '✓' : revealed && isPicked ? '✗' : String.fromCharCode(65 + oi)}</span>
+                          <button onClick={() => select(qi, oi)} disabled={revealed} aria-pressed={isPicked} className={`flex flex-1 items-start gap-2 text-left ${isStruck ? 'text-gray-400 line-through' : 'text-gray-800 dark:text-gray-200'}`}>
+                            <span className="font-bold" aria-hidden="true">{revealed && isCorrect ? '✓' : revealed && isPicked ? '✗' : String.fromCharCode(65 + oi)}</span>
+                            {revealed && (isCorrect || isPicked) && (
+                              <span className="sr-only">{isCorrect ? 'Correct answer. ' : 'Your answer, incorrect. '}</span>
+                            )}
                             <RichText inline text={opt} />
                           </button>
                           {!revealed && (
-                            <button onClick={() => toggleEliminate(qi, oi)} title="Eliminate" className="shrink-0 text-xs text-gray-400 hover:text-red-500">strike</button>
+                            <button onClick={() => toggleEliminate(qi, oi)} aria-pressed={isStruck} aria-label={`${isStruck ? 'Restore' : 'Eliminate'} option ${String.fromCharCode(65 + oi)}`} className="shrink-0 text-xs text-gray-400 hover:text-red-500">strike</button>
                           )}
                         </div>
                       )
@@ -282,7 +323,7 @@ export default function MCATPassageRunner({
                   className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-5 py-2.5 font-semibold text-white disabled:opacity-50"
                 >Check answers</button>
               )}
-              <button onClick={() => { setFlags((f) => { const n = new Set(f); n.has(active) ? n.delete(active) : n.add(active); return n }) }} className={`rounded-xl border-2 px-4 py-2.5 text-sm font-semibold ${flags.has(active) ? 'border-amber-400 text-amber-600' : 'border-gray-300 text-gray-500 dark:border-gray-600'}`}>
+              <button onClick={() => { setFlags((f) => { const n = new Set(f); n.has(active) ? n.delete(active) : n.add(active); return n }) }} aria-pressed={flags.has(active)} aria-label={flags.has(active) ? 'Unflag this passage for review' : 'Flag this passage for review'} className={`rounded-xl border-2 px-4 py-2.5 text-sm font-semibold ${flags.has(active) ? 'border-amber-400 text-amber-600' : 'border-gray-300 text-gray-500 dark:border-gray-600'}`}>
                 {flags.has(active) ? '★ Flagged' : '☆ Flag'}
               </button>
               <div className="ml-auto flex gap-2">

@@ -10,31 +10,63 @@ export const mcatAnatPhysPart6Data = {
 
 ### Blood Components
 
-| Component | % of Blood | Function |
-|-----------|-----------|----------|
-| Plasma | ~55% | Water, proteins (albumin, fibrinogen, antibodies), electrolytes |
-| RBCs (erythrocytes) | ~45% | O$_2$ transport (hemoglobin) |
-| WBCs (leukocytes) | <1% | Immune defense |
-| Platelets (thrombocytes) | <1% | Clotting |
+| Component | % of Blood | Key facts |
+|-----------|-----------|-----------|
+| Plasma | ~55% | Water, proteins (albumin, fibrinogen, antibodies), electrolytes, hormones |
+| RBCs (erythrocytes) | ~45% | O₂ transport via **hemoglobin**; biconcave, **anucleate**, no mitochondria (glycolysis only) |
+| WBCs (leukocytes) | <1% | Immune defense (neutrophils, lymphocytes, monocytes, eosinophils, basophils) |
+| Platelets (thrombocytes) | <1% | Cell fragments from megakaryocytes; clotting |
 
-### Hemostasis (Blood Clotting)
+- **Serum** = plasma with clotting factors (esp. fibrinogen) removed.
 
-1. **Vascular spasm**: Blood vessel constricts
-2. **Platelet plug**: Platelets adhere to collagen, aggregate
-3. **Coagulation cascade**: Fibrinogen → Fibrin (via thrombin) → stable clot
+### Hemoglobin & the O₂–Dissociation Curve
+
+Hemoglobin (4 subunits, 4 heme groups) binds O₂ **cooperatively** → sigmoidal curve.
+
+| Shift | Cause (mnemonic: "exercising muscle") | Effect on O₂ affinity |
+|-------|----------------------------------------|------------------------|
+| **Right** | ↑ CO₂, ↑ H⁺ (↓ pH), ↑ temperature, ↑ 2,3-BPG | **Lower** affinity → unloads O₂ to tissues |
+| **Left** | ↓ CO₂, ↓ H⁺ (↑ pH), ↓ temp, ↓ 2,3-BPG, **fetal Hb (HbF)** | **Higher** affinity → loads O₂ |
+
+- **Bohr effect:** ↑ CO₂/H⁺ in metabolizing tissue → rightward shift → O₂ delivered where needed.
+- **Fetal hemoglobin (HbF)** binds 2,3-BPG poorly → left-shifted → pulls O₂ from maternal blood across the placenta.
+
+### CO₂ Transport (3 forms)
+
+$$\\text{CO}_2 + \\text{H}_2\\text{O} \\xrightarrow{\\text{carbonic anhydrase}} \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$
+
+- ~70% as **bicarbonate** (in RBCs, then "chloride shift"), ~23% bound to Hb (carbaminohemoglobin), ~7% dissolved.
+
+### Hemostasis (Clotting)
+
+1. **Vascular spasm**: injured vessel constricts.
+2. **Platelet plug**: platelets adhere to exposed collagen (via von Willebrand factor), activate, and aggregate.
+3. **Coagulation cascade**: intrinsic + extrinsic pathways converge → **prothrombin → thrombin → fibrinogen → fibrin** → stable mesh. (Thrombin also activates factor XIII to cross-link fibrin.)
+
+- **Vitamin K** is required to synthesize factors II, VII, IX, X (target of warfarin).
 
 ### Hematocrit
 
-$$\\text{Hematocrit} = \\frac{\\text{Volume of RBCs}}{\\text{Total blood volume}} \\times 100$$
+$$\\text{Hematocrit} = \\frac{\\text{Volume of packed RBCs}}{\\text{Total blood volume}} \\times 100$$
 
-Normal: ~45%. Elevated in dehydration or polycythemia. Decreased in anemia.
+Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in anemia or overhydration.
+
+### ABO & Rh Blood Groups
+
+| Type | Antigen on RBC | Antibody in plasma | Can receive |
+|------|----------------|--------------------|-------------|
+| A | A | anti-B | A, O |
+| B | B | anti-A | B, O |
+| AB | A & B | none | **Universal recipient** |
+| O | none | anti-A & anti-B | O only (**universal donor**) |
+
+- **Rh:** Rh⁻ mother + Rh⁺ fetus → maternal anti-Rh after sensitization → **erythroblastosis fetalis** in a later Rh⁺ pregnancy (prevented by RhoGAM).
 
 ### Lymphatic System
 
-- Returns excess interstitial fluid to blood
-- **Lymph nodes**: Filter lymph, contain B and T cells
-- **Spleen**: Filters blood, removes old RBCs
-- **Thymus**: T cell maturation`
+- Returns excess interstitial (filtered) fluid to blood; without it → **edema**.
+- Absorbs dietary fats as **chylomicrons** via intestinal **lacteals**.
+- **Lymph nodes**: filter lymph; house B and T cells. **Spleen**: filters blood, removes senescent RBCs. **Thymus**: T-cell maturation.`
     },
     {
       id: 'ap6-quiz1',
@@ -43,23 +75,82 @@ Normal: ~45%. Elevated in dehydration or polycythemia. Decreased in anemia.
       exercise: {
         questions: [
           {
-            question: `A patient is severely dehydrated. Their hematocrit would be:`,
-            options: [`Elevated — plasma volume decreases, but RBC count stays the same (relative polycythemia)`, `Decreased`, `Normal`, `Zero`],
+            question: `A physiologist measures the oxygen-hemoglobin dissociation curve of blood sampled from an actively contracting skeletal muscle and compares it to resting arterial blood. Relative to rest, the curve from exercising muscle is shifted, and this shift is adaptive because:`,
+            options: [`Shifted right — higher CO₂, H⁺, and temperature lower Hb affinity, promoting O₂ unloading to the active tissue`, `Shifted left — lower pH raises Hb affinity, helping Hb hold onto O₂`, `Shifted right — higher pH lowers Hb affinity, promoting O₂ loading in the lungs`, `Unchanged — Hb affinity is fixed and independent of local conditions`],
             correctAnswer: 0,
-            explanation: `Dehydration decreases plasma volume. Since hematocrit = RBC volume / total blood volume, the RBC percentage increases (even though absolute RBC count hasn't changed). This is called relative polycythemia.`
+            explanation: `Active muscle produces CO₂, H⁺ (lactic acid), and heat, all of which lower hemoglobin's O₂ affinity — a RIGHTWARD shift (Bohr effect). This makes Hb release more O₂ precisely where metabolic demand is highest. Option B has the right direction confused (low pH shifts RIGHT, not left, and lowers affinity). Option C says higher pH, but exercising tissue is more acidic. Option D ignores the well-established modulation by local chemistry.`
+          },
+          {
+            question: `Compared with adult hemoglobin (HbA), fetal hemoglobin (HbF) binds 2,3-bisphosphoglycerate (2,3-BPG) much more weakly. The functional consequence at the placenta is that HbF:`,
+            options: [`Has a higher O₂ affinity (left-shifted curve), allowing it to pull O₂ from maternal HbA`, `Has a lower O₂ affinity, allowing the fetus to dump O₂ into maternal blood`, `Has the same O₂ affinity as HbA, so transfer depends only on the pressure gradient`, `Cannot bind O₂ until after birth when 2,3-BPG levels fall`],
+            correctAnswer: 0,
+            explanation: `2,3-BPG binds in the central cavity of hemoglobin and STABILIZES the low-affinity (T) state. Because HbF binds 2,3-BPG poorly, it is locked toward the high-affinity (R) state → LEFT-shifted curve → higher O₂ affinity than maternal HbA. This affinity gradient lets the fetus extract O₂ across the placenta. Option B reverses the direction of transfer; option D is false (HbF carries O₂ throughout fetal life).`
+          },
+          {
+            question: `A trauma patient with unknown blood type needs an emergency transfusion before cross-matching can be completed. Which donor red-cell type is safest to give, and why?`,
+            options: [`Type O — its RBCs carry neither A nor B antigen, so recipient anti-A/anti-B antibodies cannot agglutinate them`, `Type AB — it has no plasma antibodies, so it cannot react with the recipient`, `Type A — it is the most common type and least likely to react`, `The patient's own type, which can be inferred from their symptoms`],
+            correctAnswer: 0,
+            explanation: `For packed RED CELLS, the donor's ANTIGENS matter (the relevant antibodies live in the RECIPIENT's plasma). Type O cells display neither A nor B antigen, so they cannot be agglutinated by the recipient's anti-A or anti-B antibodies → O is the universal RBC donor. Option B confuses the universal RECIPIENT rule (AB plasma has no antibodies, relevant for receiving) with donating cells. Blood type cannot be guessed from symptoms (D).`
           }
         ]
       }
+    },
+    {
+      id: 'ap6-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Blood & Lymphatic System
+
+<details>
+<summary><b>Example 1: Predict hematocrit changes</b></summary>
+
+**Question:** A mountaineer spends 3 weeks at 4,000 m altitude. (a) What happens to hematocrit and why? (b) Separately, a different patient is acutely dehydrated — how does THEIR hematocrit change, and is the mechanism the same?
+
+**Solution:**
+1. **Altitude:** low ambient PO₂ → kidney releases **erythropoietin (EPO)** → bone marrow makes MORE RBCs → **absolute** rise in RBC mass → hematocrit ↑ (true/absolute polycythemia). ✓
+2. **Dehydration:** plasma volume FALLS while RBC number is unchanged. Hematocrit = RBC vol / total blood vol, so the ratio rises → hematocrit ↑ — but this is **relative** polycythemia (no new RBCs). ✓
+3. Same direction (↑), different mechanism: one adds cells, the other removes plasma.
+
+**MCAT note:** Always distinguish absolute (cell mass changes) from relative (plasma volume changes) effects on concentration ratios.
+</details>
+
+<details>
+<summary><b>Example 2: Reason through a warfarin question</b></summary>
+
+**Question:** A patient on warfarin (a vitamin K antagonist) has prolonged clotting time. Which step of hemostasis is impaired, and would a platelet count be abnormal?
+
+**Solution:**
+1. Vitamin K is required to synthesize functional clotting factors **II, VII, IX, X**. Warfarin blocks vitamin K recycling → these factors are deficient. ✓
+2. The impaired step is the **coagulation cascade** (fibrin formation), NOT vascular spasm or the platelet plug.
+3. **Platelet count is normal** — warfarin affects the cascade, not platelet number. (Aspirin, by contrast, impairs platelet aggregation.) ✓
+
+**Connection:** Distinguish primary hemostasis (platelets, vessel) from secondary hemostasis (coagulation cascade → fibrin). Different drugs hit different stages.
+</details>
+
+<details>
+<summary><b>Example 3: Track CO₂ in the blood</b></summary>
+
+**Question:** In a systemic capillary, CO₂ produced by tissue enters an RBC. Trace the chemistry and name the ion movement that follows.
+
+**Solution:**
+1. CO₂ diffuses into the RBC; **carbonic anhydrase** catalyzes $\\text{CO}_2 + \\text{H}_2\\text{O} \\to \\text{H}_2\\text{CO}_3$. ✓
+2. $\\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$. The H⁺ binds hemoglobin (buffering; also drives the Bohr right-shift).
+3. $\\text{HCO}_3^-$ exits the RBC in exchange for Cl⁻ entering — the **chloride shift** — so most CO₂ travels as plasma bicarbonate. ✓
+4. In the lungs the whole process reverses, releasing CO₂ for exhalation.
+
+**Key idea:** ~70% of CO₂ is carried as bicarbonate; carbonic anhydrase + the chloride shift make this possible.
+</details>`
     },
     {
       id: 'ap6-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 6
 
-- Blood: 55% plasma + 45% RBCs (hematocrit) + <1% WBCs/platelets
-- Clotting cascade: vascular spasm → platelet plug → fibrin mesh
-- Lymphatic system: returns fluid, filters pathogens, T cell maturation (thymus)
-- Spleen filters blood; lymph nodes filter lymph`
+- Blood: ~55% plasma + ~45% RBCs (hematocrit) + <1% WBCs/platelets.
+- Bohr effect: ↑CO₂/H⁺/temp/2,3-BPG → RIGHT shift → O₂ unloading. HbF is left-shifted.
+- CO₂ travels mostly as bicarbonate (carbonic anhydrase + chloride shift).
+- Clotting: vascular spasm → platelet plug → fibrin (cascade; vitamin K for II, VII, IX, X).
+- Type O = universal RBC donor; type AB = universal recipient.
+- Lymphatics return interstitial fluid, absorb fats (lacteals), and filter pathogens.`
     }
   ]
 };

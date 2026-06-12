@@ -45,6 +45,42 @@ const features = [
     stats: '12 passages · humanities + soc sci',
   },
   {
+    title: 'Chem/Phys Passage Practice',
+    description: 'Experimental, data-table passages across general chemistry, physics, organic, and biochemistry — with full answer explanations.',
+    href: '/mcat-chem-phys',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+      </svg>
+    ),
+    color: 'from-orange-500 to-red-600',
+    stats: 'experimental passages',
+  },
+  {
+    title: 'Bio/Biochem Passage Practice',
+    description: 'Lab-driven passages — gels, enzyme kinetics, ELISA, PCR — across biochemistry, molecular biology, genetics, and physiology.',
+    href: '/mcat-bio-biochem',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 4v16M7 4c2 1.5 8 1.5 10 0M7 12c2 1.5 8 1.5 10 0M7 20c2-1.5 8-1.5 10 0M17 4v16" />
+      </svg>
+    ),
+    color: 'from-emerald-500 to-green-600',
+    stats: 'experimental passages',
+  },
+  {
+    title: 'Psych/Soc Passage Practice',
+    description: 'Research-study passages with results tables across psychology, sociology, and the biological basis of behavior.',
+    href: '/mcat-psych-soc',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z M9.5 9.5a2.5 2.5 0 115 0c0 1.5-1 2-2.5 3M12 16.5h.01" />
+      </svg>
+    ),
+    color: 'from-indigo-500 to-purple-600',
+    stats: 'study-based passages',
+  },
+  {
     title: 'Practice Questions',
     description: 'Section-specific MCAT practice with passage-based and discrete questions across all four sections.',
     href: '/mcat-practice',
@@ -115,6 +151,30 @@ const features = [
     ),
     color: 'from-teal-500 to-emerald-500',
     stats: 'Live estimate · 472-528',
+  },
+  {
+    title: 'Reference Sheets',
+    description: 'High-yield equations, constants, amino acids, hormones, neurotransmitters, and theories worth memorizing cold — organized by section.',
+    href: '/mcat-reference',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 10h16M4 14h10M4 18h10" />
+      </svg>
+    ),
+    color: 'from-cyan-500 to-blue-500',
+    stats: '3 sheets · 200+ facts',
+  },
+  {
+    title: 'Flashcards',
+    description: 'Spaced-repetition decks across every subject — amino acids, enzyme kinetics, organ systems, psych/soc, and more.',
+    href: '/flashcards/review/start',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 4h14a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1zm3 16h8" />
+      </svg>
+    ),
+    color: 'from-fuchsia-500 to-purple-600',
+    stats: 'spaced repetition',
   },
 ]
 
