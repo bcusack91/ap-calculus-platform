@@ -31,12 +31,32 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'The team also noted that AP requires $\\text{Zn}^{2+}$ in its active site. Treatment with the metal chelator ' +
       'EDTA abolished activity, and activity was recovered when excess $\\text{Zn}^{2+}$ was added back after EDTA ' +
       'was dialyzed out.',
-    figure:
-      '| Condition | Apparent $K_m$ (mM) | Apparent $V_{max}$ (µmol/min) |\n' +
-      '| --- | --- | --- |\n' +
-      '| Exp 1: substrate alone | 0.10 | 50 |\n' +
-      '| Exp 2: + inorganic phosphate | 0.40 | 50 |\n' +
-      '| Exp 3: + orthovanadate | 0.10 | 18 |',
+    chart: {
+      title:
+        'Figure 1. Michaelis-Menten kinetics of alkaline phosphatase (control vs. inorganic phosphate vs. orthovanadate)',
+      kind: 'line',
+      xLabel: '[pNPP]',
+      xUnit: 'mM',
+      yLabel: 'Initial velocity (v₀)',
+      yUnit: 'µmol/min',
+      seriesLabel: 'Exp 1: substrate alone (Km 0.10, Vmax 50)',
+      xValues: [0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
+      yValues: [0, 16.7, 25.0, 33.3, 37.5, 41.7, 44.1, 45.5, 46.9, 47.6, 48.4],
+      comparisonSeries: [
+        {
+          label: 'Exp 2: + Pᵢ — competitive (apparent Km 0.40, Vmax 50)',
+          yValues: [0, 5.6, 10.0, 16.7, 21.4, 27.8, 32.6, 35.7, 39.5, 41.7, 44.1],
+        },
+        {
+          label: 'Exp 3: + orthovanadate — noncompetitive (Km 0.10, Vmax 18)',
+          yValues: [0, 6.0, 9.0, 12.0, 13.5, 15.0, 15.9, 16.4, 16.9, 17.1, 17.4],
+        },
+      ],
+      annotations: [
+        { xIndex: 2, label: 'Km = 0.10 mM (v = Vmax/2)' },
+        { xIndex: 10, label: 'approaching Vmax = 50' },
+      ],
+    },
     questions: [
       {
         question:
@@ -221,14 +241,22 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'wortmannin produced uptake similar to basal. Insulin together with cytochalasin B produced uptake far below ' +
       'basal. Replacing extracellular glucose with a non-metabolizable glucose analog still showed insulin-stimulated ' +
       'uptake, indicating transport itself does not require ATP hydrolysis at the transporter.',
-    figure:
-      '| Condition | Glucose uptake (arbitrary units) |\n' +
-      '| --- | --- |\n' +
-      '| Basal (no insulin) | 10 |\n' +
-      '| + Insulin | 42 |\n' +
-      '| + Insulin + wortmannin | 12 |\n' +
-      '| + Insulin + cytochalasin B | 3 |\n' +
-      '| Basal + phloretin | 2 |',
+    chart: {
+      title: 'Figure 1. Radiolabeled glucose uptake in cultured muscle cells across five conditions',
+      kind: 'bar',
+      xLabel: 'Condition',
+      yLabel: 'Glucose uptake',
+      yUnit: 'arbitrary units',
+      seriesLabel: 'Glucose uptake',
+      xValues: [
+        'Basal',
+        '+ Insulin',
+        '+ Insulin + wortmannin',
+        '+ Insulin + cytochalasin B',
+        'Basal + phloretin',
+      ],
+      yValues: [10, 42, 12, 3, 2],
+    },
     questions: [
       {
         question:
@@ -393,14 +421,24 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'appear in the urine. Above that threshold, the reabsorption rate plateaued at a constant value (the $T_m$), ' +
       'and any additional filtered glucose was excreted. The filtration rate of glucose rose linearly with plasma ' +
       'glucose throughout, because filtration is not saturable in this range.',
-    figure:
-      '| Plasma glucose (mg/dL) | Filtered (mg/min) | Reabsorbed (mg/min) | Excreted (mg/min) |\n' +
-      '| --- | --- | --- | --- |\n' +
-      '| 100 | 125 | 125 | 0 |\n' +
-      '| 200 | 250 | 250 | 0 |\n' +
-      '| 300 | 375 | 320 | 55 |\n' +
-      '| 400 | 500 | 320 | 180 |\n' +
-      '| 500 | 625 | 320 | 305 |',
+    chart: {
+      title: 'Figure 1. Renal handling of glucose: filtered, reabsorbed, and excreted vs. plasma glucose',
+      kind: 'line',
+      xLabel: 'Plasma glucose',
+      xUnit: 'mg/dL',
+      yLabel: 'Glucose rate',
+      yUnit: 'mg/min',
+      seriesLabel: 'Filtered',
+      xValues: [100, 200, 300, 400, 500],
+      yValues: [125, 250, 375, 500, 625],
+      comparisonSeries: [
+        { label: 'Reabsorbed', yValues: [125, 250, 320, 320, 320] },
+        { label: 'Excreted', yValues: [0, 0, 55, 180, 305] },
+      ],
+      annotations: [
+        { xIndex: 2, label: 'threshold ≈ 300 mg/dL; Tm = 320 mg/min' },
+      ],
+    },
     questions: [
       {
         question:
@@ -489,14 +527,23 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'not lysed, and when the drug was washed out, growth resumed.\n\n' +
       'A control with no antibiotic confirmed normal growth, and a sterile, uninoculated medium blank showed no ' +
       'increase in $\\text{OD}_{600}$.',
-    figure:
-      '| Time (h) | Control $\\text{OD}_{600}$ | + Antibiotic X | + Antibiotic Y |\n' +
-      '| --- | --- | --- | --- |\n' +
-      '| 0 | 0.05 | 0.05 | 0.05 |\n' +
-      '| 2 | 0.20 | 0.20 | 0.20 |\n' +
-      '| 4 | 0.60 | 0.10 | 0.21 |\n' +
-      '| 6 | 1.10 | 0.04 | 0.21 |\n' +
-      '| 8 | 1.20 | 0.03 | 0.21 |',
+    chart: {
+      title: 'Figure 1. Bacterial growth (OD₆₀₀) over time: untreated control vs. antibiotic X vs. antibiotic Y',
+      kind: 'line',
+      xLabel: 'Time',
+      xUnit: 'h',
+      yLabel: 'Optical density (OD₆₀₀)',
+      seriesLabel: 'Control (untreated)',
+      xValues: [0, 2, 4, 6, 8],
+      yValues: [0.05, 0.2, 0.6, 1.1, 1.2],
+      comparisonSeries: [
+        { label: '+ Antibiotic X (cell-wall inhibitor): lysis', yValues: [0.05, 0.2, 0.1, 0.04, 0.03] },
+        { label: '+ Antibiotic Y (bacteriostatic): growth arrest', yValues: [0.05, 0.2, 0.21, 0.21, 0.21] },
+      ],
+      annotations: [
+        { xIndex: 2, label: 'drugs added in early log phase' },
+      ],
+    },
     questions: [
       {
         question:
@@ -585,13 +632,21 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'speeds up, but this electron flow is no longer coupled to ATP synthesis.\n\n' +
       'Finally, rotenone (a Complex I inhibitor) plus antimycin A (a Complex III inhibitor) were added; OCR fell to ' +
       'near zero because electrons could no longer reach oxygen.',
-    figure:
-      '| Stage | Addition | OCR (relative) |\n' +
-      '| --- | --- | --- |\n' +
-      '| 1 | Substrate + ADP (baseline) | 100 |\n' +
-      '| 2 | + Oligomycin | 25 |\n' +
-      '| 3 | + FCCP (uncoupler) | 165 |\n' +
-      '| 4 | + Rotenone + Antimycin A | 5 |',
+    chart: {
+      title: 'Figure 1. Mitochondrial oxygen consumption rate (OCR) after sequential additions',
+      kind: 'bar',
+      xLabel: 'Stage (sequential addition)',
+      yLabel: 'OCR',
+      yUnit: 'relative',
+      seriesLabel: 'OCR',
+      xValues: [
+        'Substrate + ADP (baseline)',
+        '+ Oligomycin',
+        '+ FCCP (uncoupler)',
+        '+ Rotenone + Antimycin A',
+      ],
+      yValues: [100, 25, 165, 5],
+    },
     questions: [
       {
         question:
@@ -887,14 +942,24 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'IgM increase was comparatively small.\n\n' +
       'A separate control group received an unrelated antigen and showed no rise in titer to the test antigen, ' +
       'confirming the response was antigen-specific.',
-    figure:
-      '| Day | Anti-antigen IgM (titer) | Anti-antigen IgG (titer) |\n' +
-      '| --- | --- | --- |\n' +
-      '| 0 | 0 | 0 |\n' +
-      '| 10 | 800 | 100 |\n' +
-      '| 28 (pre-boost) | 200 | 400 |\n' +
-      '| 35 | 600 | 6,400 |\n' +
-      '| 42 | 300 | 9,600 |',
+    chart: {
+      title: 'Figure 1. Antigen-specific antibody titers by ELISA: primary IgM response and secondary IgG response',
+      kind: 'line',
+      xLabel: 'Day (booster given day 28)',
+      xUnit: 'days',
+      yLabel: 'Antibody titer',
+      seriesLabel: 'Anti-antigen IgM',
+      xValues: [0, 10, 28, 35, 42],
+      yValues: [0, 800, 200, 600, 300],
+      comparisonSeries: [
+        { label: 'Anti-antigen IgG', yValues: [0, 100, 400, 6400, 9600] },
+      ],
+      annotations: [
+        { xIndex: 1, label: 'primary: IgM peaks first' },
+        { xIndex: 2, label: 'booster (day 28)' },
+        { xIndex: 4, label: 'secondary: IgG dominates' },
+      ],
+    },
     questions: [
       {
         question:

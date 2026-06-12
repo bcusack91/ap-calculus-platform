@@ -22,8 +22,18 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Spacing, Testing, and Long-Term Retention',
     passageText:
       'Researchers examined how the scheduling of study influences durable memory for vocabulary. Undergraduates (N = 160) learned 40 foreign-language word pairs across two sessions and were assigned to one of four conditions that crossed two factors: study schedule (massed, in which the two sessions occurred back-to-back, vs. spaced, in which the sessions were separated by 24 hours) and second-session activity (restudy, in which participants reread the pairs, vs. retrieval practice, in which participants attempted to recall each translation before seeing the answer).\n\nAll participants returned one week later for a cued-recall final test in which they were shown each foreign word and asked to produce its English translation. No feedback was given on the final test. The researchers reasoned that retrieval practice should strengthen later recall more than passive restudy (the testing effect), and that distributing study across time should produce better retention than cramming (the spacing effect). They further predicted that the two manipulations would combine additively.\n\nA potential concern was that participants in the retrieval-practice conditions, who experienced the difficulty of effortful recall during learning, might judge their own learning as poorer and therefore disengage. To probe this, immediately after the second session every participant predicted the percentage of items they expected to recall one week later (a judgment of learning, or JOL). The researchers compared these predictions with actual final-test performance.',
-    figure:
-      'Table 1. Final cued-recall performance one week after learning (% of 40 pairs recalled, group means).\n\n| Condition | Predicted recall (JOL) | Actual recall |\n| --- | --- | --- |\n| Massed + restudy | 58 | 31 |\n| Massed + retrieval | 42 | 48 |\n| Spaced + restudy | 55 | 44 |\n| Spaced + retrieval | 47 | 61 |',
+    chart: {
+      title: 'Figure 1. Predicted (JOL) vs. actual cued-recall one week after learning, by condition',
+      kind: 'bar',
+      xLabel: 'Study condition',
+      yLabel: 'Recall (% of 40 pairs)',
+      yUnit: '%',
+      seriesLabel: 'Predicted recall (JOL)',
+      xValues: ['Massed + restudy', 'Massed + retrieval', 'Spaced + restudy', 'Spaced + retrieval'],
+      yValues: [58, 42, 55, 47],
+      comparisonSeries: [{ label: 'Actual recall', yValues: [31, 48, 44, 61] }],
+      annotations: [{ xIndex: 3, label: 'highest actual recall' }],
+    },
     questions: [
       {
         question:
@@ -102,8 +112,17 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Effort Justification and Group Initiation',
     passageText:
       'A classic line of research holds that when people freely choose to undergo an unpleasant experience to obtain a goal, they reduce the resulting discomfort by inflating the value of the goal—an effort-justification prediction derived from cognitive dissonance theory. To test this, investigators recruited volunteers (N = 90) who believed they were joining a discussion group on the psychology of relationships.\n\nTo gain admission, participants completed an "embarrassment screening." In the severe-initiation condition they read aloud sexually explicit material to a male experimenter; in the mild-initiation condition they read mildly suggestive words; in the control condition they were admitted without any screening. All participants were then randomly led to believe admission was earned and were asked to listen to the same recording of an actual group discussion, which had been designed to be dull and banal. Afterward, participants rated how interesting and worthwhile the discussion and its members were on a composite 0–100 attractiveness scale.\n\nThe investigators predicted that participants who suffered most to join would rate the group most favorably, because devaluing the group while acknowledging the suffering would create an uncomfortable inconsistency. Critically, the recording was identical across conditions, so any rating differences could not reflect real differences in the group. The researchers also recorded each participant’s self-reported anxiety during screening to check that the severe condition was in fact more aversive.',
-    figure:
-      'Table 1. Mean rated attractiveness of the group (0–100 scale) and reported screening anxiety, by condition.\n\n| Condition | Group attractiveness | Screening anxiety |\n| --- | --- | --- |\n| Control (no screening) | 81 | 12 |\n| Mild initiation | 80 | 38 |\n| Severe initiation | 95 | 71 |',
+    chart: {
+      title: 'Figure 1. Mean rated group attractiveness and screening anxiety, by initiation condition',
+      kind: 'bar',
+      xLabel: 'Initiation condition',
+      yLabel: 'Rating (0–100 scale)',
+      seriesLabel: 'Group attractiveness',
+      xValues: ['Control (none)', 'Mild', 'Severe'],
+      yValues: [81, 80, 95],
+      comparisonSeries: [{ label: 'Screening anxiety', yValues: [12, 38, 71] }],
+      annotations: [{ xIndex: 2, label: 'value inflation appears only here' }],
+    },
     questions: [
       {
         question:
@@ -187,8 +206,19 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Socioeconomic Gradients in Health',
     passageText:
       'Sociologists studying health disparities document a "social gradient": across many outcomes, health improves at each step up the socioeconomic ladder, not merely between the poorest and everyone else. Researchers analyzed a national cohort, grouping adults into five quintiles by household income and recording self-rated poor health, smoking, and life expectancy at age 25.\n\nTwo competing explanations are debated. The social-causation hypothesis holds that low socioeconomic status (SES) causes poor health through material deprivation, chronic stress, and reduced access to care. The social-selection (or drift) hypothesis holds the reverse: people in poor health drift downward in SES because illness limits earnings and education. The researchers note both processes likely operate, but emphasize that the gradient persists even among adults who were healthy at baseline, and even in countries with universal health coverage—findings that strain a pure access-to-care account and point toward psychosocial pathways such as allostatic load.\n\nThe team also examined whether the gradient reflects absolute deprivation or relative position. Within wealthy nations, where even lower quintiles meet basic material needs, the gradient remained steep, consistent with the relative-income hypothesis that one’s rank in the status hierarchy—and the chronic stress of lower status—affects health independent of absolute resources. The authors situate these findings within the fundamental-cause framework, which argues that SES remains linked to mortality across eras because higher-SES individuals can deploy flexible resources (knowledge, money, power, beneficial social connections) to avoid whatever the current leading risks happen to be.',
-    figure:
-      'Table 1. Health indicators by household income quintile (Q1 = lowest, Q5 = highest).\n\n| Quintile | Self-rated poor health (%) | Current smokers (%) | Life expectancy at 25 (additional years) |\n| --- | --- | --- | --- |\n| Q1 (lowest) | 28 | 33 | 48 |\n| Q2 | 21 | 27 | 51 |\n| Q3 | 15 | 21 | 54 |\n| Q4 | 10 | 16 | 57 |\n| Q5 (highest) | 6 | 9 | 60 |',
+    chart: {
+      title: 'Figure 1. Health indicators by household income quintile (Q1 = lowest, Q5 = highest)',
+      kind: 'line',
+      xLabel: 'Household income quintile',
+      yLabel: 'Indicator value',
+      seriesLabel: 'Self-rated poor health (%)',
+      xValues: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
+      yValues: [28, 21, 15, 10, 6],
+      comparisonSeries: [
+        { label: 'Current smokers (%)', yValues: [33, 27, 21, 16, 9] },
+        { label: 'Life expectancy at 25 (+yr)', yValues: [48, 51, 54, 57, 60] },
+      ],
+    },
     questions: [
       {
         question:
@@ -496,8 +526,16 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Bystander Intervention and Group Size',
     passageText:
       'Researchers tested how the number of bystanders affects helping in an emergency, drawing on the proposed mechanism of diffusion of responsibility: as the number of witnesses grows, each individual feels a smaller share of the obligation to act, so the probability that any one person helps declines.\n\nIn the experiment, a participant sat in a cubicle and communicated over an intercom with what they believed were one, two, or five other participants (in fact prerecorded voices). Early in the discussion, one of the "other participants" appeared to suffer a seizure, calling for help and then falling silent. The dependent measures were whether the real participant left the cubicle to seek help and, if so, how quickly. The experimenters reasoned that because participants in larger groups could not see whether others were responding, any drop in helping would reflect the felt diffusion of responsibility rather than direct observation of others’ inaction.\n\nThe researchers distinguished diffusion of responsibility from a related process, pluralistic ignorance, in which bystanders who CAN see one another each interpret others’ calm as evidence that no real emergency exists. Because participants here were isolated and could not observe the others, the design was intended to isolate diffusion of responsibility as the operative mechanism. After the session, participants who had not helped frequently reported uncertainty and conflict rather than indifference, which the authors took as evidence against a simple "apathy" explanation.',
-    figure:
-      'Table 1. Helping by group size (participant + number of others believed present).\n\n| Number of others believed present | Participants who sought help (%) | Median time to respond (s) |\n| --- | --- | --- |\n| 1 (one other) | 85 | 52 |\n| 2 (two others) | 62 | 93 |\n| 5 (five others) | 31 | 166 |',
+    chart: {
+      title: 'Figure 1. Helping by number of other bystanders believed present',
+      kind: 'line',
+      xLabel: 'Number of others believed present',
+      yLabel: 'Helping measure',
+      seriesLabel: 'Participants who sought help (%)',
+      xValues: [1, 2, 5],
+      yValues: [85, 62, 31],
+      comparisonSeries: [{ label: 'Median time to respond (s)', yValues: [52, 93, 166] }],
+    },
     questions: [
       {
         question:
@@ -575,8 +613,20 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Signal Detection in Radiologists',
     passageText:
       'Signal detection theory (SDT) holds that detecting a faint stimulus is not a simple matter of whether it exceeds a fixed sensory threshold. Instead, performance reflects two separable components: sensitivity (d′), the observer’s ability to discriminate signal-plus-noise from noise alone, and response criterion (β), the willingness to say "yes, signal present," which depends on expectations and on the costs and benefits of each outcome. Every trial yields one of four outcomes: a hit (signal present, "yes"), a miss (signal present, "no"), a false alarm (signal absent, "yes"), or a correct rejection (signal absent, "no").\n\nResearchers had radiologists judge whether a faint nodule was present in a series of chest images, half of which actually contained a nodule. In a baseline block, readers were told nothing about prevalence or stakes. In a second block, readers were warned that missing a nodule could be fatal (raising the cost of a miss); in a third, they were told that unnecessary follow-up scans were extremely costly (raising the cost of a false alarm). The physical images were equally faint across blocks. Investigators predicted that the cost manipulations would shift the response criterion without changing underlying sensitivity, because the visual information in the images was unchanged.\n\nThe researchers stressed that an observer can improve the hit rate simply by saying "yes" more often, but only at the price of more false alarms—so the hit rate alone is an incomplete measure of perceptual skill. A genuine improvement in discrimination would raise hits while holding or lowering false alarms.',
-    figure:
-      'Table 1. Detection outcomes by block (proportions across trials; sensitivity d′ estimated from hit and false-alarm rates).\n\n| Block | Hit rate | False-alarm rate | Estimated d′ |\n| --- | --- | --- | --- |\n| Baseline | 0.72 | 0.20 | 1.43 |\n| Miss is costly | 0.91 | 0.41 | 1.45 |\n| False alarm is costly | 0.55 | 0.07 | 1.42 |',
+    chart: {
+      title: 'Figure 1. Detection outcomes by block (hit rate and false-alarm rate move together while d′ stays constant)',
+      kind: 'bar',
+      xLabel: 'Block',
+      yLabel: 'Rate (proportion) / d′',
+      seriesLabel: 'Hit rate',
+      xValues: ['Baseline', 'Miss costly', 'False alarm costly'],
+      yValues: [0.72, 0.91, 0.55],
+      comparisonSeries: [
+        { label: 'False-alarm rate', yValues: [0.20, 0.41, 0.07] },
+        { label: "Estimated d′", yValues: [1.43, 1.45, 1.42] },
+      ],
+      annotations: [{ xIndex: 0, label: 'd′ ≈ constant across blocks' }],
+    },
     questions: [
       {
         question:
@@ -654,8 +704,19 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Locus of Control, Attribution, and Depression',
     passageText:
       'Personality and clinical researchers have long studied how people explain the events of their lives. Within the social-cognitive tradition, Rotter’s concept of locus of control distinguishes people who attribute outcomes to their own actions (internal locus) from those who attribute outcomes to luck, fate, or powerful others (external locus). A related clinical model, the reformulated learned-helplessness (hopelessness) theory, proposes that vulnerability to depression is heightened in people with a depressive attributional (explanatory) style—those who explain negative events with internal, stable, and global causes ("It’s my fault, it always happens, and it ruins everything").\n\nTo test this, investigators administered an explanatory-style questionnaire to 240 first-year students at the start of the year and measured depressive symptoms then and again after students received a disappointing midterm grade. The team distinguished their account from the trait perspective embodied in the Big Five (openness, conscientiousness, extraversion, agreeableness, neuroticism), noting that neuroticism predicts distress broadly, whereas explanatory style was meant to predict who becomes depressed specifically after a negative event.\n\nThe researchers also contrasted two treatment rationales for depression. A cognitive-behavioral rationale targets the maladaptive thoughts and attributions themselves, training patients to reattribute setbacks to specific, unstable, external causes where appropriate. A biomedical rationale targets monoamine neurotransmission pharmacologically. The investigators predicted that students with a pessimistic explanatory style at baseline would show the largest increase in depressive symptoms after the disappointing grade, and that this interaction—style × negative event—would exceed the effect of either factor alone.',
-    figure:
-      'Table 1. Increase in depressive-symptom score from baseline to post-grade, by baseline explanatory style and grade outcome (group means; higher = more symptoms gained).\n\n| Baseline explanatory style | After good grade | After disappointing grade |\n| --- | --- | --- |\n| Optimistic (external/unstable/specific) | +0.4 | +1.1 |\n| Pessimistic (internal/stable/global) | +0.6 | +5.8 |',
+    chart: {
+      title: 'Figure 1. Increase in depressive-symptom score from baseline to post-grade, by explanatory style × grade outcome',
+      kind: 'bar',
+      xLabel: 'Grade outcome',
+      yLabel: 'Symptom-score increase from baseline',
+      seriesLabel: 'Optimistic style (external/unstable/specific)',
+      xValues: ['After good grade', 'After disappointing grade'],
+      yValues: [0.4, 1.1],
+      comparisonSeries: [
+        { label: 'Pessimistic style (internal/stable/global)', yValues: [0.6, 5.8] },
+      ],
+      annotations: [{ xIndex: 1, label: 'diathesis × stress spike' }],
+    },
     questions: [
       {
         question:
@@ -733,8 +794,18 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
     title: 'Demographic Transition and Intergenerational Mobility',
     passageText:
       'Demographers describe the demographic transition, a model in which societies move from a pre-industrial regime of high birth rates and high death rates, through a transitional phase in which death rates fall first (thanks to sanitation, nutrition, and medicine) while birth rates remain high—producing rapid population growth—and finally to a post-industrial regime of low birth and low death rates and slow or negative growth. The lag between falling mortality and falling fertility is the engine of the population explosion seen in many industrializing societies.\n\nA research team paired demographic indicators with measures of social mobility for several countries at different transition stages. They distinguished intergenerational mobility (change in social position between parents and children) from intragenerational mobility (change within a single person’s lifetime), and structural mobility (movement caused by changes in the occupational structure, such as industrialization creating many new white-collar jobs) from exchange mobility (individuals trading places within a fixed structure). They also tracked the dependency ratio—the ratio of dependents (the young and the elderly) to the working-age population—which they noted is high early in the transition because of many children and high late in the transition because of population aging.\n\nThe investigators argued that much of the upward mobility observed during rapid industrialization is structural rather than exchange mobility: as the economy adds professional and technical positions, children can occupy higher-status jobs than their parents without anyone necessarily moving downward. They cautioned that high observed upward mobility therefore need not indicate an increasingly "open," merit-based society.',
-    figure:
-      'Table 1. Indicators by transition stage (illustrative national means).\n\n| Stage | Birth rate (per 1,000) | Death rate (per 1,000) | Annual population growth | Dependency ratio |\n| --- | --- | --- | --- | --- |\n| Stage 1: pre-industrial | 40 | 38 | Low | High (many children) |\n| Stage 2: early transition | 39 | 18 | Rapid | High (many children) |\n| Stage 3: late transition | 20 | 10 | Moderate | Falling |\n| Stage 4: post-industrial | 11 | 10 | Near zero | Rising (aging) |',
+    chart: {
+      title: 'Figure 1. Birth and death rates across the demographic transition (illustrative national means)',
+      kind: 'line',
+      xLabel: 'Transition stage',
+      yLabel: 'Rate',
+      yUnit: 'per 1,000',
+      seriesLabel: 'Birth rate',
+      xValues: ['Stage 1: pre-industrial', 'Stage 2: early transition', 'Stage 3: late transition', 'Stage 4: post-industrial'],
+      yValues: [40, 39, 20, 11],
+      comparisonSeries: [{ label: 'Death rate', yValues: [38, 18, 10, 10] }],
+      annotations: [{ xIndex: 1, label: 'widest gap → rapid growth' }],
+    },
     questions: [
       {
         question:

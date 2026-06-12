@@ -22,8 +22,31 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     title: 'Inhibition of Alkaline Phosphatase',
     passageText:
       'Alkaline phosphatase (ALP) hydrolyzes phosphate monoesters. To characterize the enzyme, researchers incubated a fixed amount of ALP with the chromogenic substrate p-nitrophenyl phosphate (pNPP) at a range of substrate concentrations and measured the initial reaction velocity ($v_0$) spectrophotometrically by following the appearance of yellow p-nitrophenolate at 405 nm.\n\nThe team first established baseline Michaelis–Menten kinetics (Condition A). They then repeated the assay in the presence of inorganic phosphate, a known product of the reaction (Condition B), and separately in the presence of a small molecule, levamisole (Condition C). For each condition they fit the data to the Michaelis–Menten equation, $v_0 = \\frac{V_{max}[S]}{K_m + [S]}$, and extracted the apparent kinetic parameters shown in Figure 1.\n\nThroughout, the enzyme concentration, temperature (37 °C), and buffer pH (9.8) were held constant. The investigators noted that levamisole bears no structural resemblance to pNPP and that increasing the substrate concentration to very high levels did not overcome its effect. In contrast, the inhibitory effect of inorganic phosphate could be progressively reduced by adding more substrate. All velocities are reported in micromoles of product formed per minute ($\\mu\\text{mol/min}$).',
-    figure:
-      '**Figure 1. Apparent kinetic parameters of ALP under three conditions**\n\n| Condition | Additive | Apparent $K_m$ (mM) | $V_{max}$ ($\\mu\\text{mol/min}$) |\n|-----------|----------|---------------------|----------------------------------|\n| A | None | 0.5 | 100 |\n| B | Inorganic phosphate | 2.0 | 100 |\n| C | Levamisole | 0.5 | 40 |',
+    chart: {
+      title: 'Figure 1. Michaelis–Menten kinetics of ALP under three conditions',
+      kind: 'line',
+      xLabel: 'Substrate concentration [S]',
+      xUnit: 'mM',
+      yLabel: 'Initial velocity v₀',
+      yUnit: 'µmol/min',
+      seriesLabel: 'Condition A (no additive)',
+      xValues: [0, 0.25, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0, 8.0],
+      yValues: [0, 33.3, 50, 66.7, 75, 80, 85.7, 90.9, 94.1],
+      comparisonSeries: [
+        {
+          label: 'Condition B (+phosphate, competitive)',
+          yValues: [0, 11.1, 20, 33.3, 42.9, 50, 60, 71.4, 80],
+        },
+        {
+          label: 'Condition C (+levamisole, noncompetitive)',
+          yValues: [0, 13.3, 20, 26.7, 30, 32, 34.3, 36.4, 37.6],
+        },
+      ],
+      annotations: [
+        { xIndex: 2, label: 'Km(A) = Km(C) = 0.5 mM' },
+        { xIndex: 5, label: 'Km(B) = 2.0 mM' },
+      ],
+    },
     questions: [
       {
         question:
@@ -637,8 +660,21 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     title: 'A Copper Concentration Cell',
     passageText:
       'To probe how ion concentration controls cell voltage, a chemist built a concentration cell from two copper electrodes, each dipped in a $\\text{CuSO}_4$ solution, joined by a salt bridge. Because both electrodes are identical metal in the same ion, the standard cell potential $E^\\circ_{cell}$ is exactly zero; any measured voltage arises solely from the difference in $\\text{Cu}^{2+}$ concentration between the two compartments.\n\nThe spontaneous direction is the one that dilutes the concentrated half-cell and concentrates the dilute one. Reduction ($\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$) occurs in the more concentrated compartment (the cathode), and oxidation ($\\text{Cu} \\rightarrow \\text{Cu}^{2+} + 2e^-$) occurs in the dilute compartment (the anode). The chemist applied the Nernst equation at 25 °C in its base-10 form, $E_{cell} = E^\\circ_{cell} - \\frac{0.0592}{n}\\log Q$, where $n$ is the number of electrons transferred and $Q$ is the reaction quotient.\n\nThe chemist held one half-cell at 1.0 M $\\text{Cu}^{2+}$ and varied the other, recording the open-circuit voltage in Figure 1. As the cell discharged, the two concentrations drifted toward each other, and the voltage fell. The chemist reasoned that once the concentrations became equal, $Q = 1$ and the cell would reach equilibrium. Use $\\log 10 = 1$ and $\\log 100 = 2$.',
-    figure:
-      '**Figure 1. Measured voltage of the Cu concentration cell (one half-cell fixed at 1.0 M)**\n\n| Trial | [Cu²⁺] dilute (M) | [Cu²⁺] concentrated (M) | $E_{cell}$ (V) |\n|-------|-------------------|--------------------------|-----------------|\n| 1 | 0.10 | 1.0 | ? |\n| 2 | 0.010 | 1.0 | ? |\n| 3 | 1.0 | 1.0 | 0.00 |\n\nFor this cell, $n = 2$ and $Q = \\dfrac{[\\text{Cu}^{2+}]_{\\text{dilute (anode)}}}{[\\text{Cu}^{2+}]_{\\text{conc (cathode)}}}$.',
+    chart: {
+      title: 'Figure 1. Cell voltage of the Cu concentration cell vs log Q (n = 2, E° = 0)',
+      kind: 'line',
+      xLabel: 'log Q',
+      yLabel: 'Cell potential E_cell',
+      yUnit: 'V',
+      seriesLabel: 'E_cell = −0.0296 × log Q',
+      xValues: [-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2],
+      yValues: [0.0592, 0.0444, 0.0296, 0.0148, 0, -0.0148, -0.0296, -0.0444, -0.0592],
+      annotations: [
+        { xIndex: 0, label: 'Trial 2: Q = 0.010, E = 0.0592 V' },
+        { xIndex: 2, label: 'Trial 1: Q = 0.10, E = 0.0296 V' },
+        { xIndex: 4, label: 'Q = 1, E = 0 (equilibrium)' },
+      ],
+    },
     questions: [
       {
         question: 'Why is the standard cell potential of this concentration cell exactly zero?',
@@ -717,8 +753,21 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     title: 'Quantifying NADH by Absorption Spectroscopy',
     passageText:
       'The reduced cofactor NADH absorbs ultraviolet light strongly at 340 nm, whereas its oxidized form $\\text{NAD}^+$ does not. Biochemists exploit this to follow dehydrogenase reactions in real time. A student measured NADH concentrations using the Beer–Lambert law, $A = \\varepsilon b c$, where $A$ is the (unitless) absorbance, $\\varepsilon$ is the molar absorptivity, $b$ is the path length, and $c$ is the molar concentration.\n\nFor NADH at 340 nm, $\\varepsilon = 6{,}200\\ \\text{M}^{-1}\\text{cm}^{-1}$. The student used a cuvette with a standard 1.0 cm path length and first confirmed the spectrophotometer was blanked against buffer alone. Absorbance is related to the fraction of light transmitted, $T$, by $A = -\\log_{10} T$; an absorbance of 1.0 therefore means only 10% of the incident light passes through.\n\nThe student prepared a dilution series of pure NADH and recorded the absorbance of each, then used an enzyme assay in which NADH is consumed, watching the 340 nm signal fall over time. The student verified that all samples fell within the linear range of the instrument (absorbance below about 1.0), where absorbance is directly proportional to concentration, before quantifying any unknown.',
-    figure:
-      '**Figure 1. Absorbance of NADH standards (340 nm, 1.0 cm path)**\n\n| Sample | [NADH] (µM) | Absorbance $A$ |\n|--------|-------------|-----------------|\n| 1 | 50 | 0.31 |\n| 2 | 100 | 0.62 |\n| 3 | Unknown | 0.31 |\n\n($\\varepsilon = 6{,}200\\ \\text{M}^{-1}\\text{cm}^{-1}$, $b = 1.0$ cm.)',
+    chart: {
+      title: 'Figure 1. Beer–Lambert calibration of NADH at 340 nm (ε = 6200 M⁻¹cm⁻¹, b = 1.0 cm)',
+      kind: 'line',
+      xLabel: 'NADH concentration',
+      xUnit: 'µM',
+      yLabel: 'Absorbance A',
+      seriesLabel: 'A = εbc',
+      xValues: [0, 25, 50, 100, 150, 161],
+      yValues: [0, 0.155, 0.31, 0.62, 0.93, 1.0],
+      annotations: [
+        { xIndex: 2, label: 'Sample 1 and unknown: A = 0.31, 50 µM' },
+        { xIndex: 3, label: 'Sample 2: A = 0.62, 100 µM' },
+        { xIndex: 5, label: 'Linear-range limit A ≈ 1.0' },
+      ],
+    },
     questions: [
       {
         question:
