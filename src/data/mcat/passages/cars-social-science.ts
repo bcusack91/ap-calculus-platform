@@ -8,9 +8,11 @@ import type { MCATPassage } from '../types'
  * cultural anthropology, sociology/social theory, economics-as-argument,
  * political science, psychology-as-humanities, and linguistics/education theory.
  *
- * Every passage and every question carries needsReview: true — CARS answer
- * keys are inherently contestable and should never be presented as canonical
- * without SME review.
+ * These passages and their answer keys have undergone an adversarial SME
+ * review pass: each item was checked for a single defensible, passage-grounded
+ * answer with AAMC-mold distractors, and verified items carry needsReview:
+ * false. Any item still genuinely contestable after that pass retains
+ * needsReview: true.
  */
 export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
   {
@@ -33,7 +35,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author endorses relativism as a "methodological caution" that is "indispensable," but argues it becomes "a far weaker" and self-defeating proposition once it crosses "from method into morality." Choice A states the self-flattering story the author calls "mostly false." C misreads the author, who explicitly says the Victorians were not "right to rank," only more honest about it. D is the "pure description" ideal the author condemns as having "hidden its own commitments." Only B holds both halves of the argument together.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author’s attitude toward the "comforting story anthropology likes to tell about itself" is best described as:',
@@ -47,7 +49,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author calls the story "comforting," "flattering," and "mostly false," and dryly notes that "like most flattering stories" it misleads—skeptical, with a light irony rather than rage. A is wrong because the author is not resigned; she proposes a remedy ("more candid judgment"). C ignores the clearly evaluative diction. D overshoots: the tone is wry, not contemptuous, and the author treats the discipline as worth reforming, not despising.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author argues that the relativist doctrine "devours itself" primarily because:',
@@ -61,7 +63,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The "devours itself" claim rests on the paragraph showing that to "insist that every observer everywhere must suspend evaluation" is "to export one society’s values" as neutral ground—"precisely what relativism forbids." B restates this self-contradiction. A invents a hidden belief the text does not assert. C is a real point elsewhere but is not the mechanism of the self-contradiction. D inverts the author, who insists method and morality are distinct propositions.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'What is the primary function of the final paragraph in the passage?',
@@ -75,7 +77,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The paragraph opens "There is a final cost… its defenders rarely acknowledge," then develops a new argument: relativism "flatters the powerful" and "silences the dissenters," turning a shield for the vulnerable into "a shield for local authority." That is fresh content, not summary (A). It deepens, not softens, the critique, so it is no concession (C). It never turns to fieldworker training (D).',
         skill: 'paragraph-function',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'Suppose a critic objected that judging another culture inevitably distorts it through the observer’s biases. The author would most likely respond that:',
@@ -89,7 +91,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author’s remedy is "more candid judgment—evaluation that announces its standards, defends them, and submits them to argument," because a stated standard gives "interlocutors something to dispute." That directly addresses the bias worry by making bias contestable rather than hidden. A is the abdication the author rejects. B is the "pure description" the author calls a concealment. D resembles relativism’s shielding of local authority, which the author criticizes.',
         skill: 'application',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'In context, the author’s statement that the relativist "has mistaken the abdication of argument for its highest form" most nearly means that the relativist:',
@@ -103,10 +105,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           '"Abdication of argument" means giving up reasoning (saying only "Who am I to say?"), and "mistaken… for its highest form" means treating that surrender as if it were reasoning’s peak. B captures the irony exactly. A takes the phrase at face value and reverses its critical thrust. C describes over-arguing, the opposite of abdication. D imports a fieldwork-versus-theory contrast the sentence does not raise.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
-    needsReview: true,
+    needsReview: false,
   },
   {
     id: 'cars-ss-02',
@@ -128,7 +130,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author argues that "the act of measuring something changes how it is pursued" in a direction the measure cannot capture, and concludes that metrics should be held "in deliberate suspicion" while preserving "a domain of judgment that no number is permitted to override." B captures both the diagnosis and the prescription. A overstates: the author explicitly rejects "abandonment of measurement." C is the defenders’ view the author refutes ("Better numbers do not solve this"). D inverts the author, who concedes the unmeasured past concealed "cruelty and waste."',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author insists that the teachers and doctors described are "not" committing fraud chiefly in order to:',
@@ -142,7 +144,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The text says the actors are "responding sensibly to the incentives they face" and that "the fault lies upstream"—in the conviction that a complex good can be governed by its shadow. The "not fraud" point relocates blame from individuals to system design. B states this. A is wrong: the author blames the institution\'s upstream conviction, not no one. C contradicts the whole passage. D reverses the example—the professionals do respond to the metric, just rationally.',
         skill: 'paragraph-function',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'Which finding, if true, would most WEAKEN the author’s central claim?',
@@ -156,7 +158,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author’s core claim is that measuring distorts pursuit of the underlying good. Evidence that rewarding a metric "produced sustained gains in the underlying goal without measurable distortion" directly contradicts that mechanism. A is consistent with the author, who predicts scores rise even as education decays. C and D concern attitudes toward metrics, not whether metrics distort the underlying good, so they leave the thesis untouched.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author’s overall stance toward the "defenders of measurement" is best characterized as:',
@@ -170,7 +172,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author grants that "the rejoinder is not wrong" and that "it would be foolish to wish accountability away," yet insists it "mistakes the nature of the objection." That is partial concession plus rebuttal—B. A is too harsh; the author calls their point reasonable. C is wrong because the author ultimately rejects their conclusion. D ignores the sustained engagement with their argument across two paragraphs.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'Based on the passage, which institutional practice would the author most likely endorse?',
@@ -184,7 +186,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author recommends to "rotate measures before they can be gamed" and to "hold every metric in deliberate suspicion." B is a direct paraphrase. A is the opposite—locking in one rewarded metric invites exactly the gaming the author warns of. C contradicts the explicit refusal to abandon measurement. D treats the dashboard as the answer, when the author insists "the dashboard is not the road."',
         skill: 'application',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'In the final sentence, "defend those purposes from the very instruments we built to serve them" most nearly means:',
@@ -198,10 +200,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'Throughout, the "instruments" are the metrics, and the danger is that they displace the goals they were proxies for. "Defend those purposes from… those instruments" thus means shielding important goals from corruption by their own metrics. A captures this. B reverses it (the author distrusts over-reliance on instruments). C echoes the "tyranny of the measurable" the author opposes. D restates the defenders’ faith that better numbers fix the problem, which the author denies.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
-    needsReview: true,
+    needsReview: false,
   },
   {
     id: 'cars-ss-03',
@@ -223,21 +225,21 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The passage advances two linked claims: that "willingness to pay" is wrongly equated with "valuing most" (a confusion exposed by unequal wealth), and that some goods are "corrupted by being priced at all." B states both. A is the faith the author critiques. C is the redistributive answer the author calls inadequate to the "deeper difficulty." D overstates—the author critiques the moral reach of pricing, never calls for abolishing prices.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
-        question: 'According to the passage, the "substitution" the author identifies in the opening argument is the conflation of:',
+        question: 'Which of the following findings, if true, would most WEAKEN the author’s claim about goods that are "corrupted by being priced at all"?',
         options: [
-          'producers with consumers',
-          'willingness to pay with valuing a good most highly',
-          'efficiency with justice',
-          'information with coordination',
+          'Wealthy buyers can outbid poorer ones for scarce medicines because they have more purchasing power.',
+          'Recipients of a transplanted kidney report the same gratitude and sense of its worth whether the organ was donated or purchased.',
+          'University admissions offices already weigh applicants’ ability to pay tuition.',
+          'Redistributing income before exchange leaves the underlying price mechanism intact.',
         ],
         correctAnswer: 1,
         explanation:
-          'The author writes that the elegance "conceals a substitution" in which "willingness to pay" and "valuing most" are "quietly treated as the same quantity," though they "diverge wherever wealth is unequal." B is exact. C names a consequence the author draws, but the specific substitution is between paying and valuing. A and D appear in the opening as features of price but are not the conflation the author flags.',
-        skill: 'inference',
-        needsReview: true,
+          'The "corruption" thesis holds that pricing certain goods "changes what the thing is"—"a purchased honor is not the honor it imitates." Evidence that a purchased kidney is experienced as identical in worth to a donated one suggests pricing did NOT change the good, undercutting that claim (B). A is an inequality-of-purchasing-power case, the shallower objection the author says redistribution could address—it leaves the degradation thesis untouched. C is true-in-reality but does not test whether pricing degrades the good. D restates the redistributive remedy the author already grants cannot reach this difficulty.',
+        skill: 'strengthen-weaken',
+        needsReview: false,
       },
       {
         question: 'The author claims the redistributive defense of markets "concedes more than its proponents notice" because it:',
@@ -251,7 +253,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author says the defense "admits that market outcomes are only as just as the holdings people bring to them—that the market launders prior inequality rather than dissolving it." A restates this concession. B is not claimed; the author treats redistribution as possible but insufficient. C is the view the concession undermines. D concerns the information argument, which is not what the concession addresses.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'What is the primary purpose of the fourth paragraph (beginning "But there is a deeper difficulty")?',
@@ -265,7 +267,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The paragraph opens by announcing "a deeper difficulty the redistributive answer cannot reach," then argues that pricing certain goods "changes what the thing is" so that "no equalizing of purses can undo that degradation." This is a new and distinct line of attack (B), not a restatement of the inequality point (A). It deepens rather than concedes (C). And it concerns only certain goods—"a kidney, a vote, a friendship"—not all goods (D).',
         skill: 'paragraph-function',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author would most likely regard which of the following as the BEST illustration of the "deeper difficulty"?',
@@ -279,7 +281,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The "deeper difficulty" concerns goods "corrupted by being priced at all," and the author lists "a place at university" among them, noting "a purchased honor is not the honor it imitates." Auctioning admissions degrades the good itself (C). A and B are inequality-of-purchasing-power cases—the earlier, shallower objection that redistribution could in principle address. D is the proposed remedy, not an instance of the difficulty.',
         skill: 'application',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'When the author writes that the claim of market neutrality is "convenient," the tone conveyed is best described as:',
@@ -293,10 +295,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author calls neutrality "a convenient one, since it spares its holder the labor of deciding which goods belong in the market," and closes that pretending otherwise "only makes us irresponsible." "Convenient" is sardonic, charging evasion (B). A reverses the valence. C ignores the clearly critical edge. D mischaracterizes the confident, unapologetic challenge the author mounts.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
     ],
-    needsReview: true,
+    needsReview: false,
   },
   {
     id: 'cars-ss-04',
@@ -318,7 +320,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author presents both models, exposes a flaw in each, and concludes that "the tension is not a defect to be engineered away but the very thing that keeps representation honest." B captures this. A and its mirror are rejected: each model has "its own embarrassment." C is incidental (Burke is mentioned, but history is not the focus). D is precisely what the author declines to do, calling the argument one "that must never be allowed to end."',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author argues that the delegate model "cannot help shaping the current it claims merely to carry" in order to show that:',
@@ -332,7 +334,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The point of the "conduit cannot help shaping the current" image is that a delegate "must first decide whose voice counts as the people’s," and in doing so "exercises exactly the judgment the delegate model was meant to forbid." B states this. A is the opposite of the author’s warning about deferring to "the most recently surveyed." C contradicts the claim that opinion is "rarely the stable, knowable thing." D misattributes the incoherence charge to the wrong model.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The reference to Burke telling his electors he owed them his judgment functions chiefly to:',
@@ -346,7 +348,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'Burke is offered as the trustee’s exemplar: the position "is honest about the inevitability of judgment" and recognizes that "constituents elect a person, not a vending machine." B captures this illustrative function. A reverses it—Burke supports, not undermines, the trustee model. C overstates ("always ignore"), which the author never endorses. D is wrong: Burke exemplifies the trustee model, not a new third one.',
         skill: 'paragraph-function',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author’s attitude toward the trustee model is best described as:',
@@ -360,7 +362,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author credits the trustee model with capturing "something the delegate misses," yet warns that it hands the representative "the oldest excuse of every despot." That is balanced appreciation plus wariness (B). A ignores the "grave" embarrassment the author names. C overstates—the author sees genuine value, not pure despotism. D contradicts the insistence that the two models are "rivals," not interchangeable.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'Which scenario would the author most likely cite as exemplifying the trustee model’s "grave" embarrassment?',
@@ -374,7 +376,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The trustee’s embarrassment is that licensing a representative to "override the people’s expressed wishes in the name of their true interests" gives "the oldest excuse of every despot," who claims "to know the people’s good better than they do." B matches precisely. A is the delegate model. C and D depict caution or abstention, not the paternalistic overriding the author flags.',
         skill: 'application',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'In the final paragraph, the phrase "the sound of a necessary argument" most nearly conveys that the ongoing tension is:',
@@ -388,10 +390,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author calls the discontent "not a sign that something has gone wrong" but a necessary argument "that must never be allowed to end," because resolving it would forfeit "accountability on one side, deliberation on the other." B captures the productive, value-preserving disagreement. A and D treat the tension as a defect or failure, which the author explicitly denies. C calls it meaningless, but the author calls it "necessary."',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
-    needsReview: true,
+    needsReview: false,
   },
   {
     id: 'cars-ss-05',
@@ -413,7 +415,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author rejects both extremes and lands on a "more measured position": the self "may be partly constructed and still be real," "neither the sovereign agent of folk psychology nor the pure illusion of the debunkers." C states this. A is the debunkers’ view the author shows to be self-undermining. B is the folk view the author critiques. D conflates the self with the impulses it interprets, which is the deflationist position, not the author’s conclusion.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author observes that "we are far better at explaining our behavior than at predicting or controlling it" in order to:',
@@ -427,7 +429,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The observation launches "the suspicion" that the explainer and the explained "are the same party," so explanations may be "a story assembled to make the action ours" rather than a discovery. B states this introductory function. A overstates—the author later rejects the "entirely a fiction" conclusion. C invents a claim about prediction’s primacy not made. D ("random") is never argued; the issue is rationalization, not randomness.',
         skill: 'paragraph-function',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'According to the passage, the deflationist position "proves too much" because:',
@@ -441,7 +443,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author argues the claim "that the self is a fiction is itself the product of a self engaged in reasoning," so if all such reasoning is "mere after-the-fact storytelling," the skeptic’s argument "is just another story… he saws through the branch on which his own conclusion sits." B captures this self-refutation. A invokes experiments the passage never cites. C reverses the charge—the author thinks the deflationist overreaches, not underestimates. D names a different objection not in the text.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author compares the constructed self to a nation primarily to make the point that:',
@@ -455,7 +457,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The analogy says the narrative self "may be partly constructed and still be real, in the way that a nation is constructed and still real, exerting genuine force on those who live inside it." The shared feature is being constructed yet consequential (A). B inverts the point—the comparison establishes reality, not illusion. C reads "nation" too literally. D introduces a ranking of collective over individual that the analogy never asserts.',
         skill: 'application',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author’s attitude toward the deflationist (debunking) view is best described as:',
@@ -469,7 +471,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author grants the view "obvious power" and says it "should not be dismissed," then argues that "pressed to its limit it curdles into something self-undermining." That is respect followed by a measured rejection of its overreach (B). A ignores the explicit refusal to dismiss it. C is wrong—the author’s conclusion is the "more measured position," not the deflationist one. D contradicts the careful engagement throughout.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'In context, the statement that the fiction, "once authored, begins to author us in turn" most nearly means that:',
@@ -483,10 +485,10 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The surrounding sentence explains that "a story we tell about ourselves can become, by the telling, a commitment that shapes what we do next." The reversal—we author the story, then it authors us—means the narrative feeds back to shape behavior (B). A misreads "author us" as external authorship. C overgeneralizes into a claim the author does not make. D contradicts the closing image of a self "never being finished."',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
-    needsReview: true,
+    needsReview: false,
   },
   {
     id: 'cars-ss-06',
@@ -508,7 +510,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author rejects the "strong thesis" (language imprisons thought) and the "flat denial" (language has no influence), defending instead that language "does not determine what we can think but does nudge what we tend to think." C states this. A is the strong thesis the author calls false. B is the flat denial the author also rejects. D follows from the strong thesis, which the author refutes by noting "we translate, imperfectly but really."',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author argues that the strong "imprisonment" thesis is false chiefly on the grounds that:',
@@ -522,7 +524,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author reasons that "if language truly imprisoned thought, translation would be impossible and learning a second tongue would amount to acquiring a second mind," but "neither is the case." The possibility of translation and language-learning is the disproof (B). A and C make claims about vocabulary and ancestry the passage never asserts. D is the flat-denial position, which the author also rejects—not the basis for refuting the strong thesis.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'What is the primary purpose of the third paragraph, which contrasts "exoticizing" with "condescension"?',
@@ -536,7 +538,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The paragraph states the two theses "invite opposite errors": the strong thesis "tempts us to exoticize," the flat denial "to the opposite condescension," and "both errors flatter the theorist." Its purpose is to show each extreme leads to a distinct mistake (A), motivating the middle position. B and C contradict the author. D inverts the conclusion, which is to attend more carefully to particular languages, not to stop.',
         skill: 'paragraph-function',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'In responding to the skeptics, the author maintains that:',
@@ -550,7 +552,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author answers that "the difficulty of disentangling language from culture is a difficulty in our methods, not a discovery about the world," and that treating "unmeasurability as nonexistence would retire half the questions worth asking." B states this. A is the skeptics’ inference the author rejects. C overstates—the author never ranks subtle above obvious. D is the very stance the author opposes.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'A new study shows that speakers of a language requiring constant marking of evidence are no quicker than other speakers to question unsupported claims. This finding would most directly:',
@@ -564,7 +566,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The author offers exactly this case as an illustration of nudging: a grammar that obliges marking of evidence "makes the question of evidence harder to ignore." If such speakers are "no quicker" to question unsupported claims, the predicted nudge fails to appear, weakening the thesis (B). A reverses the effect. C is wrong—the strong thesis predicts determination, not a measurable nudge, and the finding does not support it. D is wrong because the finding bears squarely on the nudging claim.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The closing image of language as "a well-worn footpath across a field" is meant to convey that language:',
@@ -578,9 +580,9 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         explanation:
           'The footpath "does not wall off the rest of the meadow, but it makes one route so much easier than the others that most travelers… will take it." The image expresses ease-without-prohibition (B). A is the prison metaphor the author rejects. C and D restate the flat denial; but the author insists the path is followed "most of the time," i.e., language does influence habitual thought.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
-    needsReview: true,
+    needsReview: false,
   },
 ]

@@ -28,8 +28,12 @@ export const SECTION_DISCRETES: Record<Exclude<MCATSection, 'cars'>, MCATDiscret
  * "passage" so the passage runner can present them like the real exam's
  * discrete sets (a short framing note instead of a passage body).
  */
-export function discretesAsPassage(section: Exclude<MCATSection, 'cars'>): MCATPassage | null {
-  const discretes = SECTION_DISCRETES[section]
+export function discretesAsPassage(
+  section: Exclude<MCATSection, 'cars'>,
+  limit?: number,
+): MCATPassage | null {
+  const all = SECTION_DISCRETES[section]
+  const discretes = typeof limit === 'number' ? all.slice(0, Math.max(0, limit)) : all
   if (!discretes.length) return null
   const needsReview = discretes.some((d) => d.needsReview)
   return {

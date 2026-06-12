@@ -450,9 +450,9 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'A catalyst speeds the reaction and, here, mechanistically couples the two processes (phosphoryl transfer directly from ATP to glucose) so they proceed as one favorable reaction. The favorability comes from the thermodynamics of coupling (option A/C describe thermodynamics, which the enzyme does not alter), and the free energy comes from ATP, not the enzyme (option D).',
+          'Hexokinase mechanistically couples the two processes by transferring the phosphoryl group directly from ATP to glucose, so the two reactions proceed as a single favorable reaction sharing that common phosphoryl group. An enzyme cannot alter thermodynamics: it does not make an unfavorable reaction favorable (A) or change Keq (C) — those come from the coupling itself. The driving free energy is supplied by ATP, not by the enzyme (D).',
         skill: 'Enzyme thermodynamics',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -529,6 +529,251 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         explanation:
           'At early times, little product has formed, so the reverse reaction and any product inhibition are negligible and the measured rate reflects the forward rate law cleanly. The rate constant k is fixed at constant temperature (ruling out C), and temperature is controlled throughout (ruling out D).',
         skill: 'Experimental design',
+      },
+    ],
+  },
+
+  // ────────────────────────────────────────────────────────────────────────
+  // 8. PHYSICS — Geometric optics (thin lens, magnification, refraction)
+  // ────────────────────────────────────────────────────────────────────────
+  {
+    id: 'cp-physics-optics-01',
+    section: 'chem-phys',
+    discipline: 'physics',
+    title: 'Imaging with a Converging Lens',
+    passageText:
+      'An optics student characterized a thin converging (biconvex) lens on an optical bench. The lens had a focal length of $f = +10\\ \\text{cm}$. A small illuminated object (an arrow) was mounted on the bench, and a white screen was moved until a sharp image formed. The student used the thin-lens equation, $\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$, and the magnification relation, $m = -\\frac{d_i}{d_o}$, with the sign convention that real images and real objects have positive distances.\n\nIn the first trial the object was placed 30 cm from the lens (well outside the focal length) and the screen position was recorded. The student noted that the projected image was inverted relative to the object. In a later trial the object was moved inside the focal length to study the virtual-image regime, where no real image can be projected on a screen.\n\nThe student also examined refraction at a water–air boundary. A laser beam traveled up from water ($n = 1.33$) toward the flat air ($n = 1.00$) surface. Using Snell’s law, $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$, the student found that beyond a certain angle of incidence the beam no longer escaped into the air but was entirely reflected back into the water. The refractive index of air was taken as 1.00 throughout.',
+    figure:
+      '**Figure 1. Lens trial 1 ($f = +10$ cm)**\n\n| Quantity | Value |\n|----------|-------|\n| Object distance $d_o$ | 30 cm |\n| Object height | 2.0 cm |\n| Image orientation | inverted |\n\nFor the refraction study: light travels from water ($n=1.33$) into air ($n=1.00$).',
+    questions: [
+      {
+        question: 'In trial 1, the image distance $d_i$ is:',
+        options: ['+7.5 cm', '+15 cm', '+30 cm', '−15 cm'],
+        correctAnswer: 1,
+        explanation:
+          'From 1/f = 1/do + 1/di: 1/di = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 = 1/15, so di = +15 cm (positive → a real image on the far side). The −15 cm trap flips the sign (virtual); +30 cm wrongly assumes di = do.',
+        skill: 'Thin lens',
+      },
+      {
+        question: 'The magnification of the image in trial 1 is:',
+        options: ['−2.0', '−0.5', '+0.5', '+2.0'],
+        correctAnswer: 1,
+        explanation:
+          'm = −di/do = −(15)/(30) = −0.5. The negative sign indicates an inverted image; the magnitude 0.5 means it is reduced to half size (a 2.0 cm object → 1.0 cm image). The −2.0 trap inverts the ratio (do/di).',
+        skill: 'Magnification',
+      },
+      {
+        question: 'The image formed in trial 1 is best described as:',
+        options: [
+          'Virtual, upright, and enlarged',
+          'Real, inverted, and reduced',
+          'Real, upright, and the same size',
+          'Virtual, inverted, and reduced',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'di > 0 means the image is real (projectable on the screen); m = −0.5 means inverted and reduced. An object outside f for a converging lens always gives a real, inverted image. Virtual images require di < 0, which occurs only when the object is inside the focal length.',
+        skill: 'Image properties',
+      },
+      {
+        question: 'The power of this lens, in diopters, is:',
+        options: ['+0.1 D', '+1.0 D', '+10 D', '+100 D'],
+        correctAnswer: 2,
+        explanation:
+          'Power P = 1/f with f in meters: f = 10 cm = 0.10 m, so P = 1/0.10 = +10 D. The +0.1 D trap leaves f in centimeters (1/10); +100 D squares the error.',
+        skill: 'Lens power',
+      },
+      {
+        question:
+          'For the laser traveling from water into air, the critical angle for total internal reflection satisfies:',
+        options: [
+          '$\\sin\\theta_c = 1.33$',
+          '$\\sin\\theta_c = 1.00/1.33 \\approx 0.75$',
+          '$\\sin\\theta_c = 1.33/1.00 = 1.33$',
+          '$\\sin\\theta_c = 1.00$',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'At the critical angle the refracted ray grazes the surface (θ2 = 90°), so n1 sinθc = n2 sin90° = n2. Thus sinθc = n2/n1 = 1.00/1.33 ≈ 0.75 (θc ≈ 49°). Total internal reflection occurs only going from the denser (water) to the less dense (air) medium, requiring n2 < n1; sinθc = 1.33 is impossible since sine cannot exceed 1.',
+        skill: 'Total internal reflection',
+      },
+      {
+        question:
+          'If the object is instead placed 5 cm from the lens (inside the focal length), the resulting image is:',
+        options: [
+          'Real and inverted, projectable on a screen',
+          'Virtual, upright, and enlarged',
+          'Located at infinity',
+          'Real and the same size as the object',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'With do = 5 cm < f = 10 cm: 1/di = 1/10 − 1/5 = 1/10 − 2/10 = −1/10, so di = −10 cm (virtual, same side as object). m = −di/do = −(−10)/5 = +2.0, i.e. upright and enlarged — the magnifying-glass regime. A real image (options A/D) requires the object outside f; an image at infinity requires the object exactly at f.',
+        skill: 'Thin lens',
+      },
+    ],
+  },
+
+  // ────────────────────────────────────────────────────────────────────────
+  // 9. GENERAL CHEMISTRY — Electrochemistry (Nernst equation, concentration cell)
+  // ────────────────────────────────────────────────────────────────────────
+  {
+    id: 'cp-genchem-nernst-01',
+    section: 'chem-phys',
+    discipline: 'general chemistry',
+    title: 'A Copper Concentration Cell',
+    passageText:
+      'To probe how ion concentration controls cell voltage, a chemist built a concentration cell from two copper electrodes, each dipped in a $\\text{CuSO}_4$ solution, joined by a salt bridge. Because both electrodes are identical metal in the same ion, the standard cell potential $E^\\circ_{cell}$ is exactly zero; any measured voltage arises solely from the difference in $\\text{Cu}^{2+}$ concentration between the two compartments.\n\nThe spontaneous direction is the one that dilutes the concentrated half-cell and concentrates the dilute one. Reduction ($\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$) occurs in the more concentrated compartment (the cathode), and oxidation ($\\text{Cu} \\rightarrow \\text{Cu}^{2+} + 2e^-$) occurs in the dilute compartment (the anode). The chemist applied the Nernst equation at 25 °C in its base-10 form, $E_{cell} = E^\\circ_{cell} - \\frac{0.0592}{n}\\log Q$, where $n$ is the number of electrons transferred and $Q$ is the reaction quotient.\n\nThe chemist held one half-cell at 1.0 M $\\text{Cu}^{2+}$ and varied the other, recording the open-circuit voltage in Figure 1. As the cell discharged, the two concentrations drifted toward each other, and the voltage fell. The chemist reasoned that once the concentrations became equal, $Q = 1$ and the cell would reach equilibrium. Use $\\log 10 = 1$ and $\\log 100 = 2$.',
+    figure:
+      '**Figure 1. Measured voltage of the Cu concentration cell (one half-cell fixed at 1.0 M)**\n\n| Trial | [Cu²⁺] dilute (M) | [Cu²⁺] concentrated (M) | $E_{cell}$ (V) |\n|-------|-------------------|--------------------------|-----------------|\n| 1 | 0.10 | 1.0 | ? |\n| 2 | 0.010 | 1.0 | ? |\n| 3 | 1.0 | 1.0 | 0.00 |\n\nFor this cell, $n = 2$ and $Q = \\dfrac{[\\text{Cu}^{2+}]_{\\text{dilute (anode)}}}{[\\text{Cu}^{2+}]_{\\text{conc (cathode)}}}$.',
+    questions: [
+      {
+        question: 'Why is the standard cell potential of this concentration cell exactly zero?',
+        options: [
+          'Because copper is a noble metal',
+          'Because both half-cells use the same electrode and same redox couple, so the standard reduction potentials cancel',
+          'Because the salt bridge cancels the voltage',
+          'Because Cu²⁺ does not undergo reduction',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'E°cell = E°cathode − E°anode. Both half-cells are Cu²⁺/Cu with the identical standard reduction potential, so the difference is zero. Any voltage then comes only from the concentration term in the Nernst equation. The salt bridge maintains neutrality but does not set E° (option C), and Cu²⁺ is certainly reduced at the cathode (option D).',
+        skill: 'Concentration cells',
+      },
+      {
+        question: 'In trial 1 (dilute = 0.10 M, concentrated = 1.0 M), the cell voltage is closest to:',
+        options: ['0.0148 V', '0.0296 V', '0.0592 V', '0.118 V'],
+        correctAnswer: 1,
+        explanation:
+          'Q = [anode]/[cathode] = 0.10/1.0 = 0.10, so log Q = −1. E = 0 − (0.0592/2)(−1) = +0.0296 V. The 0.0592 trap forgets to divide by n = 2; 0.0148 divides by an extra factor.',
+        skill: 'Nernst equation',
+      },
+      {
+        question: 'In trial 2 (dilute = 0.010 M, concentrated = 1.0 M), the cell voltage is closest to:',
+        options: ['0.0296 V', '0.0592 V', '0.118 V', '0.178 V'],
+        correctAnswer: 1,
+        explanation:
+          'Q = 0.010/1.0 = 0.010, log Q = −2. E = 0 − (0.0592/2)(−2) = (0.0296)(2) = 0.0592 V. A 100-fold concentration ratio gives twice the voltage of the 10-fold ratio in trial 1 — voltage scales with log of the ratio.',
+        skill: 'Nernst equation',
+      },
+      {
+        question: 'As the concentration cell discharges, the measured voltage:',
+        options: [
+          'Increases until the solutions are equal',
+          'Decreases toward zero as the two concentrations converge',
+          'Stays constant until the cell suddenly dies',
+          'Reverses sign immediately',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Discharge dilutes the cathode (concentrated) side and concentrates the anode (dilute) side, driving Q toward 1 and log Q toward 0. So E falls toward zero, reaching equilibrium when the concentrations are equal. The voltage does not rise (A) or hold constant (C); it only reverses if the concentration ratio inverts, which discharge does not do.',
+        skill: 'Concentration cells',
+      },
+      {
+        question: 'Which change would INCREASE the voltage of the cell in trial 1?',
+        options: [
+          'Diluting the dilute (anode) half-cell further',
+          'Adding more CuSO₄ to the dilute (anode) half-cell',
+          'Diluting the concentrated (cathode) half-cell',
+          'Adding water equally to both half-cells',
+        ],
+        correctAnswer: 0,
+        explanation:
+          'Voltage grows as the concentration ratio (cathode/anode) grows, i.e. as Q = anode/cathode shrinks. Diluting the anode side lowers [Cu²⁺]anode, decreasing Q and raising E. Adding CuSO₄ to the anode (B) or diluting the cathode (C) shrinks the ratio and lowers E; adding water equally leaves the ratio unchanged.',
+        skill: 'Nernst equation',
+      },
+      {
+        question:
+          'At equilibrium the cell voltage is zero. This corresponds to a reaction quotient $Q$ of:',
+        options: ['0', '1', '2', '10'],
+        correctAnswer: 1,
+        explanation:
+          'E = 0 requires log Q = 0, i.e. Q = 1, meaning the two Cu²⁺ concentrations are equal. (Equivalently, since E°cell = 0, the equilibrium constant K = 1.) Q = 0 would require zero ion concentration; Q = 10 would give a nonzero voltage.',
+        skill: 'Equilibrium',
+      },
+    ],
+  },
+
+  // ────────────────────────────────────────────────────────────────────────
+  // 10. BIOCHEMISTRY — Spectrophotometry & Beer's law (quantitation of a protein)
+  // ────────────────────────────────────────────────────────────────────────
+  {
+    id: 'cp-biochem-spectro-01',
+    section: 'chem-phys',
+    discipline: 'biochemistry',
+    title: 'Quantifying NADH by Absorption Spectroscopy',
+    passageText:
+      'The reduced cofactor NADH absorbs ultraviolet light strongly at 340 nm, whereas its oxidized form $\\text{NAD}^+$ does not. Biochemists exploit this to follow dehydrogenase reactions in real time. A student measured NADH concentrations using the Beer–Lambert law, $A = \\varepsilon b c$, where $A$ is the (unitless) absorbance, $\\varepsilon$ is the molar absorptivity, $b$ is the path length, and $c$ is the molar concentration.\n\nFor NADH at 340 nm, $\\varepsilon = 6{,}200\\ \\text{M}^{-1}\\text{cm}^{-1}$. The student used a cuvette with a standard 1.0 cm path length and first confirmed the spectrophotometer was blanked against buffer alone. Absorbance is related to the fraction of light transmitted, $T$, by $A = -\\log_{10} T$; an absorbance of 1.0 therefore means only 10% of the incident light passes through.\n\nThe student prepared a dilution series of pure NADH and recorded the absorbance of each, then used an enzyme assay in which NADH is consumed, watching the 340 nm signal fall over time. The student verified that all samples fell within the linear range of the instrument (absorbance below about 1.0), where absorbance is directly proportional to concentration, before quantifying any unknown.',
+    figure:
+      '**Figure 1. Absorbance of NADH standards (340 nm, 1.0 cm path)**\n\n| Sample | [NADH] (µM) | Absorbance $A$ |\n|--------|-------------|-----------------|\n| 1 | 50 | 0.31 |\n| 2 | 100 | 0.62 |\n| 3 | Unknown | 0.31 |\n\n($\\varepsilon = 6{,}200\\ \\text{M}^{-1}\\text{cm}^{-1}$, $b = 1.0$ cm.)',
+    questions: [
+      {
+        question:
+          'Using $A = \\varepsilon b c$, what concentration of NADH gives an absorbance of 0.62 in a 1.0 cm cuvette?',
+        options: ['$1.0 \\times 10^{-5}$ M', '$5.0 \\times 10^{-5}$ M', '$1.0 \\times 10^{-4}$ M', '$6.2 \\times 10^{-4}$ M'],
+        correctAnswer: 2,
+        explanation:
+          'c = A/(εb) = 0.62 / (6200 × 1.0) = 1.0 × 10⁻⁴ M (= 100 µM), matching sample 2. The 5.0 × 10⁻⁵ trap uses A = 0.31; 6.2 × 10⁻⁴ misplaces a factor of ten.',
+        skill: "Beer's law",
+      },
+      {
+        question: 'The unknown (sample 3) has an absorbance of 0.31. Its NADH concentration is:',
+        options: ['25 µM', '50 µM', '100 µM', '150 µM'],
+        correctAnswer: 1,
+        explanation:
+          'Within the linear range, A ∝ c. Sample 1 (50 µM) gave A = 0.31, and the unknown also reads 0.31, so it is 50 µM. Equivalently c = 0.31/(6200 × 1.0) = 5.0 × 10⁻⁵ M = 50 µM.',
+        skill: "Beer's law",
+      },
+      {
+        question:
+          'An absorbance of 1.0 corresponds to what fraction of incident light being transmitted through the sample?',
+        options: ['100%', '50%', '10%', '1%'],
+        correctAnswer: 2,
+        explanation:
+          'A = −log₁₀ T, so T = 10^(−A) = 10^(−1.0) = 0.10, i.e. 10% transmitted (90% absorbed). The 1% answer corresponds to A = 2.0; 50% would be A ≈ 0.30.',
+        skill: 'Absorbance vs transmittance',
+      },
+      {
+        question:
+          'During the enzyme assay, the 340 nm absorbance falls steadily over time. This indicates that:',
+        options: [
+          'NAD⁺ is being converted to NADH',
+          'NADH is being consumed (oxidized to NAD⁺)',
+          'The path length is increasing',
+          'The molar absorptivity is decreasing',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Only NADH absorbs at 340 nm; a falling absorbance means [NADH] is decreasing as it is oxidized to non-absorbing NAD⁺. Producing NADH (option A) would raise absorbance. Path length and ε are fixed properties of the cuvette and molecule, not time-dependent here.',
+        skill: 'Enzyme assays',
+      },
+      {
+        question:
+          'If a sample is too concentrated and reads an absorbance of 2.5, the best way to obtain an accurate concentration is to:',
+        options: [
+          'Report 2.5 directly using Beer’s law',
+          'Dilute the sample so the reading falls within the linear range (A < ~1), then multiply by the dilution factor',
+          'Increase the path length of the cuvette',
+          'Switch to a wavelength where NADH does not absorb',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'At very high absorbance, stray light and detector limits make A no longer linear in c, so direct use of Beer’s law is unreliable. Diluting brings the reading into the linear range; the true concentration is the measured value times the dilution factor. Increasing the path length raises A further (wrong direction), and a non-absorbing wavelength gives no signal at all.',
+        skill: 'Experimental design',
+      },
+      {
+        question:
+          'Two NADH solutions are measured: one in a 1.0 cm cuvette, the other in a 2.0 cm cuvette, both at the same concentration. The 2.0 cm sample’s absorbance is:',
+        options: [
+          'Half that of the 1.0 cm sample',
+          'Equal to the 1.0 cm sample',
+          'Twice that of the 1.0 cm sample',
+          'Four times that of the 1.0 cm sample',
+        ],
+        correctAnswer: 2,
+        explanation:
+          'A = εbc is linear in path length b. Doubling b at fixed c and ε doubles A. The dependence is first power, not squared (ruling out the 4× option), and absorbance certainly changes with path length (ruling out "equal").',
+        skill: "Beer's law",
       },
     ],
   },
@@ -615,5 +860,29 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     explanation:
       'At the pI the net charge is zero, but for an amino acid this is achieved as a zwitterion — a protonated amino group (–NH3+) balancing a deprotonated carboxylate (–COO−). It is not literally uncharged (option D); both charged groups are present, summing to zero net charge.',
     skill: 'Amino acids',
+  },
+  {
+    id: 'cp-disc-07',
+    section: 'chem-phys',
+    discipline: 'general chemistry',
+    question:
+      'Using $PV = nRT$ with $R = 0.0821\\ \\text{L}\\cdot\\text{atm}\\cdot\\text{mol}^{-1}\\cdot\\text{K}^{-1}$, what volume does 1.0 mol of an ideal gas occupy at 1.0 atm and 273 K?',
+    options: ['2.24 L', '11.2 L', '22.4 L', '44.8 L'],
+    correctAnswer: 2,
+    explanation:
+      'V = nRT/P = (1.0)(0.0821)(273)/(1.0) ≈ 22.4 L — the familiar molar volume of an ideal gas at STP. The 11.2 L trap is the half-mole value; 44.8 L doubles it.',
+    skill: 'Ideal gas law',
+  },
+  {
+    id: 'cp-disc-08',
+    section: 'chem-phys',
+    discipline: 'physics',
+    question:
+      'A current of 2.0 A flows through a 3.0 Ω resistor. What is the power dissipated by the resistor?',
+    options: ['1.5 W', '6.0 W', '12 W', '18 W'],
+    correctAnswer: 2,
+    explanation:
+      'Power dissipated in a resistor is P = I²R = (2.0)²(3.0) = (4.0)(3.0) = 12 W. The 6.0 W trap uses P = IR (wrong formula); 1.5 W uses I/R. Equivalently V = IR = 6.0 V and P = IV = 12 W.',
+    skill: 'Electric power',
   },
 ]

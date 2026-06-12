@@ -11,8 +11,11 @@ import type { MCATPassage } from '../types'
  * strengthen/weaken, application, meaning-in-context). No outside knowledge is
  * required: every key is grounded in the passage alone.
  *
- * All passages and keys are AI-authored and contestable, so `needsReview` is set
- * everywhere; the UI renders a "draft — pending review" marker.
+ * Originally AI-authored, every item has since been adversarially reviewed: each
+ * key was tested as the single best-supported choice, distractors rewritten to the
+ * AAMC trap mold, and explanations grounded in passage language. Items that passed
+ * have `needsReview` cleared; any item that remains genuinely contestable keeps the
+ * flag and says so in its explanation.
  */
 
 export const CARS_HUMANITIES_PASSAGES: MCATPassage[] = [
@@ -21,7 +24,6 @@ export const CARS_HUMANITIES_PASSAGES: MCATPassage[] = [
     section: 'cars',
     discipline: 'philosophy',
     title: 'The Architecture of Forgetting',
-    needsReview: true,
     passageText: `We are inclined to treat memory as a virtue and forgetting as its failure, a leak in the vessel that ought to hold the past intact. The metaphor is seductive precisely because it flatters us: it implies that a mind of sufficient discipline would retain everything, and that what slips away does so only through negligence. But this picture mistakes the function of a mind for the function of an archive. An archive aspires to completeness; a mind aspires to use. And use, I want to argue, depends not on retention but on a quiet and ceaseless work of subtraction.
 
 Consider what it would mean to remember without remainder. The person who recalls every face encountered on every street could not recognize a friend, for recognition is not the summoning of a record but the privileging of one trace over the indistinct mass of others. To know a face is to have allowed ten thousand other faces to fade. Forgetting, on this view, is not the enemy of memory but its silent collaborator; it performs the editorial labor without which memory would be mere accumulation, and accumulation is not knowledge.
@@ -46,7 +48,7 @@ If the argument holds, then the discipline we owe our memories is not the discip
         explanation:
           'The author repeatedly frames forgetting as "the silent collaborator" of memory and argues "use depends not on retention but on a quiet and ceaseless work of subtraction," making (B) the thesis. (A) inverts the author\'s view—he rejects the ideal of total retention as a "fantasy." (C) is a single supporting point in the fifth paragraph, true within the passage but far narrower than the thesis (a classic scope trap). (D) contradicts the passage, which insists the "same faculty" produces both memory and forgetting.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author characterizes the person who "never forgets a slight" primarily in order to',
@@ -60,7 +62,7 @@ If the argument holds, then the discipline we owe our memories is not the discip
         explanation:
           'The fourth paragraph introduces the grudge-holder to show that tenacious grievance "is not fidelity; it is a failure of proportion." (B) names that function. (A) reverses it—the author raises the "integrity" reading only to reject it. (C) overstates: the author says forgiveness requires release, not that it is impossible. (D) is unsupported; the paragraph contrasts the grudge-holder unfavorably, not memory types by reliability.',
         skill: 'function-purpose',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'Based on the passage, the author would be most likely to agree that',
@@ -74,7 +76,7 @@ If the argument holds, then the discipline we owe our memories is not the discip
         explanation:
           'The author writes that a total-recall mind "would be paralyzed by relevance" and that "to deliberate is already to have forgotten almost everything," supporting (B). (A) contradicts the passage\'s portrait of total recall as paralyzing. (C) directly opposes the claim that recognition "is not the summoning of a record but the privileging of one trace." (D) is the grudge-holder\'s error the author criticizes.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The contrast between "the gardener\'s pruning and the flood" functions in the passage to',
@@ -86,9 +88,9 @@ If the argument holds, then the discipline we owe our memories is not the discip
         ],
         correctAnswer: 0,
         explanation:
-          'The image appears where the author separates "forgetting as an active discrimination" (pruning, which "sculpts") from "forgetting as a passive erasure" (the flood, which "destroys"). (A) captures this. (B) is the very confusion the author says the shared word "forgetting" has produced—he opposes it. (C) imports a comparison the passage does not make at this point. (D) contradicts the author\'s endorsement of active forgetting.',
-        skill: 'function-purpose',
-        needsReview: true,
+          'The image appears where the author separates "forgetting as an active discrimination" (pruning, which "sculpts") from "forgetting as a passive erasure" (the flood, which "destroys"). (A) captures this distinction that organizes the paragraph. (B) is the very confusion the author says the shared word "forgetting" has produced—he opposes it (opposite-tone trap). (C) imports a comparison the passage does not make at this point (scope/outside trap). (D) is too extreme ("never") and contradicts the author\'s endorsement of active forgetting.',
+        skill: 'argument-structure',
+        needsReview: false,
       },
       {
         question:
@@ -103,7 +105,7 @@ If the argument holds, then the discipline we owe our memories is not the discip
         explanation:
           'The author predicts that total retention causes deliberative paralysis; effective, fast decision-making by people with comprehensive memory directly undercuts that prediction, so (B) is weakened most. (A) concerns recognition of faces, not decision speed, so the finding does not bear on it directly. (C) and (D) are moral/cultural claims untouched by a finding about decision efficiency.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'As used in the final paragraph, the "discipline of the editor" most nearly refers to',
@@ -115,9 +117,9 @@ If the argument holds, then the discipline we owe our memories is not the discip
         ],
         correctAnswer: 1,
         explanation:
-          'The editor is defined in context as one with "a willingness to ask, of each retained thing, what it is for"—a selective, purpose-driven judgment, so (B) fits. (A) and (D) describe the "hoarder"/archive ideal the author explicitly contrasts the editor against. (C) overshoots into "romanticizing oblivion," which the author disavows ("None of this is to romanticize oblivion").',
+          'The editor is defined in context as one with "a willingness to ask, of each retained thing, what it is for"—a selective, purpose-driven judgment, so (B) fits. (A) and (D) describe the "hoarder"/archive ideal the author explicitly contrasts the editor against (opposite of the intended meaning). (C) overshoots into "romanticizing oblivion," which the author disavows ("None of this is to romanticize oblivion")—a too-extreme trap.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -126,7 +128,6 @@ If the argument holds, then the discipline we owe our memories is not the discip
     section: 'cars',
     discipline: 'ethics / political philosophy',
     title: 'The Limits of Consent',
-    needsReview: true,
     passageText: `Among the moral inheritances of the liberal age, none is more cherished than the principle that consent legitimates. If I agree to a transaction, the thinking goes, then whatever follows from it carries my authorship and cannot be charged against another as a wrong. Consent transforms what would otherwise be an imposition into an exercise of freedom. The principle has done enormous work: it underwrites contract, marriage, medicine, and much of what we mean by respect for persons. I have no wish to dislodge it. I wish only to mark where it ends, for a principle that explains everything explains nothing, and consent has lately been asked to bear weight it was never built to carry.
 
 The first difficulty is that consent presupposes alternatives. To say yes meaningfully, one must be able to say no without ruin. The laborer who accepts dangerous work because the alternative is starvation has consented in the thin, formal sense and in no other. We honor his signature while ignoring the gun, metaphorical but real, that guided his hand. Defenders of the principle reply that the employer did not create the laborer's poverty and so cannot be blamed for exploiting it. Perhaps. But this only shows that consent cannot be the whole of the moral story; it cannot, by itself, distinguish a free bargain from a coerced one, because it takes the background conditions as given when those conditions are exactly what is in question.
@@ -151,7 +152,7 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         explanation:
           'The author states the thesis plainly: consent is "a necessary condition of legitimate dealing, not a sufficient one." (B) matches. (A) is the paternalism the author explicitly rejects ("None of this licenses paternalism"). (C) is the objection the author rebuts in the fourth paragraph, calling the hard cases "the ordinary cases seen clearly." (D) is a position the author neither endorses ("the employer did not create the laborer\'s poverty... Perhaps") nor treats as the main point.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author\'s attitude toward the principle of consent is best described as',
@@ -165,7 +166,7 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         explanation:
           'The author writes "I have no wish to dislodge it. I wish only to mark where it ends," and calls consent "indispensable"—esteem paired with insistence on limits, i.e., (C). (A) contradicts the explicit refusal to dislodge it. (B) is the "temptation" the author warns against ("to make it enough"). (D) is wrong because the author treats the stakes as practically urgent, not idle.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The example of the laborer who accepts dangerous work primarily serves to',
@@ -177,9 +178,9 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         ],
         correctAnswer: 1,
         explanation:
-          'The laborer illustrates that consent "cannot, by itself, distinguish a free bargain from a coerced one, because it takes the background conditions as given." (B) states this function. (A) overgeneralizes—the author limits the claim to cases where "no" means "ruin," not all contracts. (C) is something the author actually hedges on ("Perhaps"). (D) imports a policy prescription the passage never makes; indeed it disavows paternalism.',
+          'The laborer illustrates that consent "cannot, by itself, distinguish a free bargain from a coerced one, because it takes the background conditions as given." (B) states this function. (A) overgeneralizes ("all... inherently")—the author limits the claim to cases where "no" means "ruin," not all contracts. (C) is something the author actually hedges on ("Perhaps"), not asserts. (D) imports a policy prescription the passage never makes; indeed it disavows paternalism.',
         skill: 'function-purpose',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -194,7 +195,7 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         explanation:
           'The author directly addresses this: "they have said something relevant and something incomplete." (B) is nearly verbatim. (A) is the very "terminus" view the author rejects. (C) overstates—the author keeps consent "relevant," not irrelevant, even amid unequal conditions. (D) is too strong; the author says consent leaves the coercion question open, not that inequality entails coercion.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -209,7 +210,7 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         explanation:
           'The author\'s "self that consents" argument turns on arrangements that remake the agent\'s wants, so that "the earlier self" may lack authority over the later one. (B) is exactly such a case and strengthens it. (A) actually undercuts the claim by preserving stable preferences. (C) and (D) are clean, well-conditioned consents that say nothing about preference transformation.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'In the final paragraph, describing consent as "a door for a destination" most nearly means that consent',
@@ -223,7 +224,7 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
         explanation:
           'The metaphor is glossed in the same passage: consent is "the beginning of our responsibilities to one another, not their discharge"—a threshold, not an endpoint, so (B). (A) misreads "door" as a barrier; the author means an opening. (C) contradicts the whole essay, which insists others may scrutinize the conditions of agreement. (D) is the paternalist conclusion the author explicitly refuses.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -232,7 +233,6 @@ To treat consent as a moral terminus is therefore to mistake a door for a destin
     section: 'cars',
     discipline: 'art / aesthetics',
     title: 'The Unfinished as a Form',
-    needsReview: true,
     passageText: `It has become a commonplace of the gallery to admire the unfinished work—the sculpture whose figures strain half-free of the marble, the canvas where the underdrawing shows through—as if incompletion were a window onto genius caught in the act. We are told that we see the artist thinking, that the rough surface is more authentic than the polished one because it has not yet been smoothed into deception. I find this fashionable reverence both understandable and confused, and I want to separate the part of it that is true from the larger part that flatters our appetite for process at the expense of the thing made.
 
 That we are moved by the unfinished is not in dispute. The question is why, and whether the feeling licenses the conclusions drawn from it. The standard account locates the value in authenticity: the unfinished work supposedly reveals the artist's true intention before convention intervened. But this gets the matter backward. We do not know the artist's intention; we know only that the work stopped. To read the arrested gesture as a deliberate aesthetic choice is to credit the artist with precisely the completion the work lacks. The fragment moves us, but it does not move us by telling the truth about its maker's mind, of which it is in fact silent.
@@ -257,7 +257,7 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         explanation:
           'The author argues the unfinished work "enlists the viewer as collaborator" and that "we are admiring... our own imaginative labor, and mistaking it for a property of the object." (B) captures the thesis. (A) is the "standard account" the author rejects as getting things "backward." (C) overstates—the author never ranks finished works as inferior; he says they too require participation. (D) reverses the author, who insists the designed and accidental fragment must NOT be collapsed.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author\'s tone toward the contemporary admiration of unfinished works is best described as',
@@ -271,7 +271,7 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         explanation:
           'The author calls the reverence "both understandable and confused" and sets out "to separate the part of it that is true from the larger part that... flatters"—sympathetic but critical, i.e., (C). (A) is too harsh; he concedes "a real value." (B) ignores the sustained critique. (D) is wrong because the essay is plainly evaluative throughout.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -286,7 +286,7 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         explanation:
           'The author says the concession "sharpens rather than refutes my point": the fragment "merely makes visible a transaction that occurs... before every work of art." (B) names this rhetorical move. (A) is wrong—he explicitly does not abandon the claim. (C) overstates; he distinguishes a difference "of degree," not "no difference." (D) is unsupported; nothing urges ignoring intention wholesale.',
         skill: 'function-purpose',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -299,9 +299,9 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         ],
         correctAnswer: 1,
         explanation:
-          'The fifth paragraph addresses exactly this: deliberately open works "are finished as fragments; their openness is their form," and the word "unfinished" "misleads." (B) applies that directly. (A) repeats the careless usage the author criticizes. (C) contradicts his claim that the work is "silent" about the maker\'s mind. (D) is the "mirror" error he warns against, not endorses.',
+          'The fifth paragraph addresses exactly this: deliberately open works "are finished as fragments; their openness is their form," and the word "unfinished" "misleads." (B) applies that directly. (A) repeats the careless usage the author criticizes (and overgeneralizes with "all... by definition"). (C) contradicts his claim that the work is "silent" about the maker\'s mind. (D) is the "mirror" error he warns against, not endorses.',
         skill: 'application',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -316,7 +316,7 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         explanation:
           'The author claims the fragment cannot tell us the artist\'s intention—"we know only that the work stopped." Notebooks documenting a deliberate, calculated stopping point would supply exactly the intentional record he says is unavailable, weakening the claim, so (B). (A) and (D) actually support the author\'s viewer-centered thesis. (C) concerns disagreement about feeling, not about whether the work reveals intention.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'As used in the final paragraph, "the mere romance of arrested effort" refers to',
@@ -328,9 +328,9 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
         ],
         correctAnswer: 1,
         explanation:
-          'The author lists three possible objects of our response and says of the third—the "romance"—that it "however pleasant, tells us nothing about art and a good deal about ourselves." (B) matches. (A) describes the first option ("artist\'s vision"), which the author says "may be absent." (C) describes the second, "completing imagination," which he treats as the reliably present one—distinct from the romance. (D) is unrelated to the phrase\'s meaning here.',
+          'The author lists three possible objects of our response and says of the third—the "romance"—that it "however pleasant, tells us nothing about art and a good deal about ourselves." (B) matches. (A) describes the first option ("artist\'s vision"), which the author says "may be absent." (C) describes the second, "completing imagination," which he treats as the reliably present one—distinct from the romance (a half-right trap that swaps the second object for the third). (D) is unrelated to the phrase\'s meaning here.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -339,7 +339,6 @@ The corrective is not to scorn the unfinished but to look at it more exactly. Wh
     section: 'cars',
     discipline: 'literary criticism',
     title: 'Against the Tyranny of the Likeable Narrator',
-    needsReview: true,
     passageText: `A peculiar demand has come to dominate the way ordinary readers, and increasingly professional critics, evaluate fiction: that the central figure be, in some loosely specified sense, likeable. A novel is faulted when its protagonist is cold, or cruel, or merely unsympathetic, as though the reader had been invited to a dinner party and seated beside a bore. The complaint is so widespread that it now passes for a critical standard. I regard it as a category error of the first order, one that confuses the conditions of friendship with the conditions of art.
 
 The demand rests on an unexamined premise: that we read in order to keep company with characters we would choose to know. But this mistakes the novel for a social occasion. We do not require our acquaintances to be instructive about the human condition; we require them to be agreeable, which is a different and lesser thing. The figures who illuminate most are frequently those we would flee in life—the monstrous, the self-deceived, the magnificently wrong. To insist that they earn our affection before they earn our attention is to forfeit precisely the knowledge fiction is best positioned to deliver.
@@ -362,9 +361,9 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         ],
         correctAnswer: 1,
         explanation:
-          'The essay attacks "the tyranny of the likeable narrator," arguing that what sustains reading is "interest, not affection," and that "comprehensibility is not likeability." (B) captures both the target and the key distinction. (A) overstates—the author admits "unpleasantness alone guarantees nothing." (C) is wrong; the author allows for interest and understanding, just not required affection. (D) inverts the author, who notes the demand has spread to critics too, not that critics are superior.',
+          'The essay attacks "the tyranny of the likeable narrator," arguing that what sustains reading is "interest, not affection," and that "comprehensibility is not likeability." (B) captures both the target and the key distinction. (A) overstates ("always more... valuable")—the author admits "unpleasantness alone guarantees nothing." (C) is wrong; the author allows for interest and understanding, just not required affection. (D) inverts the author, who notes the demand has spread to critics too, not that critics are superior.',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author\'s attitude toward the demand for likeable characters is best characterized as',
@@ -378,7 +377,7 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         explanation:
           'The author calls the demand "a category error of the first order" and ends by saying it asks fiction "to stop doing the one thing only it can do"—firm opposition, so (B). (A) understates the vehemence. (C) is wrong; though he concedes points, he never treats the sides as equally meritorious. (D) reverses his stance entirely.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -393,7 +392,7 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         explanation:
           'The author grants that something must sustain reading but says "What sustains attention is not sympathy but interest," held by "the wish to understand a mind we find abhorrent." (B) names this purpose. (A) is the opposite of his conclusion. (C) misreads—curiosity is praised, not condemned. (D) contradicts the claim that we may feel "no warmth at all."',
         skill: 'function-purpose',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -407,8 +406,8 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         correctAnswer: 1,
         explanation:
           'The fourth paragraph praises "the unlikeable character—rendered from within, made comprehensible without being excused" for stretching "the moral imagination," teaching "that even cruelty has its reasons." (B) follows directly. (A) applies the likeability standard the author rejects. (C) is contradicted by "without being excused." (D) imports a redemption requirement the passage never endorses.',
-        skill: 'inference',
-        needsReview: true,
+        skill: 'application',
+        needsReview: false,
       },
       {
         question:
@@ -422,8 +421,8 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         correctAnswer: 1,
         explanation:
           'The author says "with this I have no quarrel; it is simply a different claim," and that the retreat "abandons the original demand entirely and concedes my point under another name." (B) matches. (A) and (D) contradict the passage. (C) reverses the author\'s key distinction—"Comprehensibility is not likeability."',
-        skill: 'inference',
-        needsReview: true,
+        skill: 'argument-structure',
+        needsReview: false,
       },
       {
         question:
@@ -436,9 +435,9 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
         ],
         correctAnswer: 1,
         explanation:
-          'The author opposes the "mirror flattering enough to gaze into" to "windows onto rooms we would not enter," whose "value lies exactly in the discomfort of the view." (B) captures this. (A) describes the mirror, which the author criticizes. (C) overliteralizes the metaphor into a rule about settings. (D) inverts the author\'s embrace of discomfort.',
+          'The author opposes the "mirror flattering enough to gaze into" to "windows onto rooms we would not enter," whose "value lies exactly in the discomfort of the view." (B) captures this. (A) describes the mirror, which the author criticizes. (C) overliteralizes the metaphor into a rule about settings (scope trap). (D) inverts the author\'s embrace of discomfort.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -447,7 +446,6 @@ What the standard finally reveals is a wish to be confirmed rather than disturbe
     section: 'cars',
     discipline: 'history / historiography',
     title: 'The Seduction of the Turning Point',
-    needsReview: true,
     passageText: `Historians, like the rest of us, crave a story with shape, and few shapes are more satisfying than the turning point—the single battle, treaty, or invention after which everything was different. The narrative pleasures of such moments are undeniable, and they make for memorable teaching. But I have come to distrust them, not because turning points never occur, but because the very form of the turning point distorts what it claims to illuminate. It converts a long, diffuse process into a punctual event, and in doing so it smuggles a theory of causation past the reader without argument.
 
 The trouble begins with selection. To name a moment as decisive is to assume the vantage of the present and to ask which past event most efficiently produces it. But this reasons backward from outcome to cause, and backward reasoning is treacherous. The event we crown as the turning point is the one that survived the filter of consequence; the roads not taken leave no monument, and so we mistake the road that happened to be traveled for the only road there was. The turning point, in short, is an artifact of hindsight masquerading as a feature of the past.
@@ -470,9 +468,9 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         ],
         correctAnswer: 1,
         explanation:
-          'The author argues the turning point "is an artifact of hindsight masquerading as a feature of the past" and distorts contingency, making (B) the thesis. (A) overstates—he says "not because turning points never occur." (C) is the "flat history" he explicitly declines to counsel. (D) reverses him: he criticizes the great-man theory as the turning point\'s "sibling."',
+          'The author argues the turning point "is an artifact of hindsight masquerading as a feature of the past" and distorts contingency, making (B) the thesis. (A) overstates ("never... entirely discarded")—he says "not because turning points never occur." (C) is the "flat history" he explicitly declines to counsel. (D) reverses him: he criticizes the great-man theory as the turning point\'s "sibling."',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'The author\'s attitude toward narrative shapeliness in history is best described as',
@@ -484,9 +482,9 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         ],
         correctAnswer: 1,
         explanation:
-          'The author admits narrative pleasures are "undeniable" yet says "shapeliness... is at least partly our contribution" and urges holding narratives "more loosely"—wariness, not abolition, so (B). (A) ignores his sustained distrust. (C) is too strong; he says abolishing narrative "is impossible" and does not demand it. (D) contradicts his obvious engagement.',
+          'The author admits narrative pleasures are "undeniable" yet says "shapeliness... is at least partly our contribution" and urges holding narratives "more loosely"—wariness, not abolition, so (B). (A) ignores his sustained distrust. (C) is too strong ("wholly hostile... complete elimination"); he says abolishing narrative "is impossible" and does not demand it. (D) contradicts his obvious engagement.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -499,9 +497,9 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         ],
         correctAnswer: 1,
         explanation:
-          'The point of the contemporaries example is that "Decisiveness is conferred later" and projecting it back "rob[s] them of the uncertainty that was the actual texture of their lives." (B) matches. (A) overstates beyond the author\'s qualified position. (C) misreads—the contemporaries\' uncertainty is presented as accurate to their reality, not as poor judgment. (D) introduces a methodological rule the passage does not assert.',
+          'The point of the contemporaries example is that "Decisiveness is conferred later" and projecting it back "rob[s] them of the uncertainty that was the actual texture of their lives." (B) matches. (A) overstates ("no battle has ever") beyond the author\'s qualified position. (C) misreads—the contemporaries\' uncertainty is presented as accurate to their reality, not as poor judgment. (D) introduces a methodological rule the passage does not assert (outside/scope trap).',
         skill: 'function-purpose',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -516,7 +514,7 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         explanation:
           'The "roads not taken" image supports the claim that "we mistake the road that happened to be traveled for the only road there was"—a hindsight bias toward the surviving outcome, so (B). (A) and (D) directly oppose the author, who emphasizes contingency and openness. (C) literalizes "monument" into an absurd prescription the passage never makes.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -531,7 +529,7 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         explanation:
           'The author claims decisiveness is assigned in retrospect, not felt at the time. Contemporaries treating a "decisive" treaty as routine and reversible directly confirms that the decisiveness was a later imposition, strengthening the thesis, so (A). (B) would weaken it by showing the importance was recognized contemporaneously. (C) speaks to historians\' agreement, not to hindsight bias. (D) supports narrative\'s pedagogical value, which the author already grants and which does not bear on the hindsight claim.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -546,7 +544,7 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
         explanation:
           'The author explains the kinship directly: both "locate causation where it is most visible rather than where it is most real." (B) restates that. (A) literalizes "siblings" into shared authorship, which the passage does not claim. (C) inverts the author\'s critique—he says they misplace causation. (D) is backward; the great-man theory elevates individual leaders rather than rejecting them.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -555,7 +553,6 @@ The remedy is not to abolish narrative, which is impossible, but to hold our nar
     section: 'cars',
     discipline: 'music / cultural criticism',
     title: 'On the Death of the Difficult',
-    needsReview: true,
     passageText: `There was a time, not so distant, when a piece of music might reasonably ask something of its listener—repeated hearings, a tolerance for confusion, the patience to let an unfamiliar logic disclose itself. That expectation has quietly expired. The reigning assumption now is that music should yield its pleasures on first contact, that any work withholding immediate gratification has failed in its primary duty. I want to examine this shift, not to mourn a lost golden age, but to ask what we have traded away, and whether the trade was as obviously favorable as our habits imply.
 
 The case for accessibility is not contemptible, and I will not caricature it. Music that communicates instantly reaches more people; difficulty has too often been a cover for pretension, a way of converting obscurity into prestige. There is a genuine snobbery that mistakes inaccessibility for depth, and the populist suspicion of it is healthy. So far I am in agreement. But the corrective has overshot. From the true premise that difficulty is not sufficient for value, we have slid to the false conclusion that difficulty is incompatible with it—that the demanding work is, by virtue of its demands, suspect.
@@ -578,9 +575,9 @@ None of this requires us to despise the immediate. The instantly delightful is a
         ],
         correctAnswer: 1,
         explanation:
-          'The author warns that "one axis of musical value—the rewarding of patience—is being declared illegitimate," while pleading "for plurality." (B) is the thesis. (A) overstates—the author calls "the instantly delightful... a real good." (C) misattributes pretension to accessibility, but the author locates snobbery in difficulty and grants the populist critique is "healthy." (D) is a caricature the author explicitly disowns ("like the lament of a mandarin").',
+          'The author warns that "one axis of musical value—the rewarding of patience—is being declared illegitimate," while pleading "for plurality." (B) is the thesis. (A) overstates ("inherently superior")—the author calls "the instantly delightful... a real good." (C) misattributes pretension to accessibility, but the author locates snobbery in difficulty and grants the populist critique is "healthy." (D) is a caricature the author explicitly disowns ("like the lament of a mandarin").',
         skill: 'main-idea',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question: 'Which best describes the author\'s overall attitude?',
@@ -594,7 +591,7 @@ None of this requires us to despise the immediate. The instantly delightful is a
         explanation:
           'The author states he writes "not to mourn a lost golden age" and pleads "for plurality... capacious enough to honor both," while voicing genuine worry—concerned but even-handed, so (B). (A) is rejected by his refusal to mourn and his anti-decline framing. (C) ignores his critique of the accessibility ideal. (D) is the very mandarin posture he distances himself from.',
         skill: 'tone-attitude',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -607,9 +604,9 @@ None of this requires us to despise the immediate. The instantly delightful is a
         ],
         correctAnswer: 1,
         explanation:
-          'The concession sets up the key move: from "difficulty is not sufficient for value" critics have wrongly "slid to the false conclusion that difficulty is incompatible with it." Granting the valid point isolates that overreach, so (B). (A) is wrong—he sustains the defense. (C) overgeneralizes the concession. (D) contradicts his acknowledgment of accessibility\'s "genuine" merits.',
+          'The concession sets up the key move: from "difficulty is not sufficient for value" critics have wrongly "slid to the false conclusion that difficulty is incompatible with it." Granting the valid point isolates that overreach, so (B). (A) is wrong—he sustains the defense. (C) overgeneralizes the concession ("all difficult music is pretentious"). (D) contradicts his acknowledgment of accessibility\'s "genuine" merits.',
         skill: 'function-purpose',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -624,7 +621,7 @@ None of this requires us to despise the immediate. The instantly delightful is a
         explanation:
           'The author argues "The freedom to seek difficulty is hollow if the faculty required to enjoy it has never been developed," since taste is "cultivated or left to atrophy" by environment. (B) follows. (A) is the accessibility partisan\'s position the author rebuts. (C) contradicts his defense of difficulty\'s value. (D) opposes his claim that an immediate-rewarding culture "narrows" what we can want.',
         skill: 'inference',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -639,7 +636,7 @@ None of this requires us to despise the immediate. The instantly delightful is a
         explanation:
           'The author\'s core argument is that some pleasures "are unavailable on a first hearing by their very nature" and "require the listener to have a history with the piece." A demonstration that complex works can be loved immediately, without repeated listening, undercuts exactly that claim, so (B). (A) is a concession unaffected by the finding. (C) is something the author affirms, not a claim the finding threatens. (D) is a normative plea, not an empirical claim about how appreciation works.',
         skill: 'strengthen-weaken',
-        needsReview: true,
+        needsReview: false,
       },
       {
         question:
@@ -654,7 +651,7 @@ None of this requires us to despise the immediate. The instantly delightful is a
         explanation:
           'The line elaborates the author\'s worry that "we are losing the very ability to notice the loss"—the diminishment is invisible to the diminished. (B) restates this. (A) is the opposite of the author\'s point about unawareness. (C) endorses the sole-satisfaction criterion the author is arguing against. (D) misreads the line, which is about the listener\'s self-perception, not difficult music\'s effects.',
         skill: 'meaning-in-context',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },

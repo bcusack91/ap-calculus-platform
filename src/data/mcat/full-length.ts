@@ -3,30 +3,81 @@
  * banks, in real-exam section order, each science section followed by its
  * discrete (non-passage) questions — mirroring the AAMC format.
  *
- * This is a genuine passage-based full-length (currently ~190 questions vs the
- * official 230, and growing as banks expand). The UI scores it section-aware on
+ * This targets the official 230-question form: Chem/Phys 59, CARS 53,
+ * Bio/Biochem 59, Psych/Soc 59. Each section is packed to its exact AAMC count
+ * — whole passage sets are taken greedily (a set is never split) without
+ * exceeding the target, then science sections are topped up with discrete
+ * questions to land precisely on the count. The UI scores it section-aware on
  * the 472-528 scale.
  */
-import type { MCATPassage } from './types'
+import type { MCATPassage, MCATSection } from './types'
 import { MCAT_SECTION_META } from './types'
 import { CARS_PASSAGES, SECTION_PASSAGES, discretesAsPassage } from './passages'
 import { countQuestions } from './types'
 
-// Use 9 CARS passages in the full-length (~54 Q, ≈ the official 53) — the full
-// 12-passage bank remains available in the dedicated CARS practice library.
-const FULL_LENGTH_CARS = CARS_PASSAGES.slice(0, 9)
+type ScienceSection = Exclude<MCATSection, 'cars'>
+
+/**
+ * Pack a science section to exactly its official question count: include whole
+ * passages greedily up to the target, then append a discretes set sized to fill
+ * the remainder. Falls short only if the banks can't supply enough (reported via
+ * the realized count).
+ */
+function packScienceSection(section: ScienceSection): { passages: MCATPassage[]; count: number } {
+  const target = MCAT_SECTION_META[section].questions
+  const out: MCATPassage[] = []
+  let count = 0
+  for (const p of SECTION_PASSAGES[section]) {
+    if (count + p.questions.length <= target) {
+      out.push(p)
+      count += p.questions.length
+    }
+  }
+  const remainder = target - count
+  if (remainder > 0) {
+    const discretes = discretesAsPassage(section, remainder)
+    if (discretes) {
+      out.push(discretes)
+      count += discretes.questions.length
+    }
+  }
+  return { passages: out, count }
+}
+
+/** CARS has no discretes, so take whole passages until the target is reached. */
+function packCars(): { passages: MCATPassage[]; count: number } {
+  const target = MCAT_SECTION_META.cars.questions
+  const out: MCATPassage[] = []
+  let count = 0
+  for (const p of CARS_PASSAGES) {
+    if (count >= target) break
+    out.push(p)
+    count += p.questions.length
+  }
+  return { passages: out, count }
+}
+
+const cp = packScienceSection('chem-phys')
+const cars = packCars()
+const bb = packScienceSection('bio-biochem')
+const ps = packScienceSection('psych-soc')
 
 export const FULL_LENGTH_PASSAGES: MCATPassage[] = [
-  ...SECTION_PASSAGES['chem-phys'],
-  ...[discretesAsPassage('chem-phys')].filter((p): p is MCATPassage => p !== null),
-  ...FULL_LENGTH_CARS,
-  ...SECTION_PASSAGES['bio-biochem'],
-  ...[discretesAsPassage('bio-biochem')].filter((p): p is MCATPassage => p !== null),
-  ...SECTION_PASSAGES['psych-soc'],
-  ...[discretesAsPassage('psych-soc')].filter((p): p is MCATPassage => p !== null),
+  ...cp.passages,
+  ...cars.passages,
+  ...bb.passages,
+  ...ps.passages,
 ]
 
 export const FULL_LENGTH_QUESTION_COUNT = countQuestions(FULL_LENGTH_PASSAGES)
+
+/** Realized per-section question counts (target: 59 / 53 / 59 / 59). */
+export const FULL_LENGTH_SECTION_COUNTS: Record<MCATSection, number> = {
+  'chem-phys': cp.count,
+  cars: cars.count,
+  'bio-biochem': bb.count,
+  'psych-soc': ps.count,
+}
 
 /** Sum of official per-section limits (Chem/Phys 95 + CARS 90 + Bio 95 + Psych 95). */
 export const FULL_LENGTH_MINUTES =

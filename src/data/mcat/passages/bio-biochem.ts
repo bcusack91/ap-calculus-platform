@@ -562,7 +562,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         explanation:
           'X kills best when cells are actively growing and synthesizing wall. A bacteriostatic drug like Y that halts growth (and thus wall synthesis) can blunt the bactericidal action of a cell-wall inhibitor—a classic antagonism. Y targets the ribosome, not the wall, so they do not both target the wall (B). Each still has activity (C is wrong), and combining them does not simply swap their classifications (D).',
         skill: 'Mechanism application',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -657,6 +657,314 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
         explanation:
           'An uncoupler like FCCP lets the ETC run fast (high OCR) while the energy of the dissipated proton gradient is released as heat rather than captured as ATP—exactly the thermogenic, uncoupled state. Oligomycin (A) slows electron transport. Rotenone (C) and antimycin A (D) halt electron transport, so they cannot keep it running.',
         skill: 'Mechanism application',
+      },
+    ],
+  },
+  {
+    id: 'bb-biochem-02',
+    section: 'bio-biochem',
+    discipline: 'biochemistry',
+    title: 'Characterizing a Protein by Electrophoresis and Chromatography',
+    passageText:
+      'A laboratory purified a soluble enzyme, protein P, and characterized it using gel electrophoresis and size-' +
+      'exclusion chromatography.\n\n' +
+      'In Experiment 1, the team ran SDS-PAGE. SDS coats proteins with a uniform negative charge roughly proportional ' +
+      'to chain length and denatures them, so polypeptides separate essentially by mass, smaller chains migrating ' +
+      'farther toward the anode. Reducing agent ($\\beta$-mercaptoethanol) was included to break disulfide bonds. ' +
+      'Under these reducing, denaturing conditions, protein P resolved into two bands: one at 30 kDa and one at 20 kDa.\n\n' +
+      'In Experiment 2, the team ran native (non-denaturing) size-exclusion chromatography, which separates folded ' +
+      'proteins by size, larger complexes eluting first. Protein P eluted as a single peak with an apparent mass of ' +
+      'about 100 kDa.\n\n' +
+      'In Experiment 3, they performed isoelectric focusing, separating proteins along a pH gradient until each ' +
+      'stops migrating at the pH equal to its isoelectric point (pI), where its net charge is zero. The 30 kDa ' +
+      'subunit focused at pH 5.0 and the 20 kDa subunit at pH 8.5.\n\n' +
+      'Finally, when SDS-PAGE was run WITHOUT reducing agent, protein P migrated as a single 50 kDa band rather than ' +
+      'the two separate bands.',
+    figure:
+      '| Experiment | Method | Result |\n' +
+      '| --- | --- | --- |\n' +
+      '| 1 | Reducing SDS-PAGE | bands at 30 kDa and 20 kDa |\n' +
+      '| 2 | Native size-exclusion | single peak ~100 kDa |\n' +
+      '| 3 | Isoelectric focusing | subunit pI 5.0 and pI 8.5 |\n' +
+      '| 4 | Non-reducing SDS-PAGE | single band at 50 kDa |',
+    questions: [
+      {
+        question:
+          'In SDS-PAGE, proteins separate primarily on the basis of which property?',
+        options: [
+          'Their native charge at neutral pH',
+          'Their mass (polypeptide chain length), because SDS imposes a uniform charge-to-mass ratio',
+          'Their isoelectric point',
+          'Their three-dimensional folded shape',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'SDS denatures proteins and coats them with negative charge in proportion to chain length, giving an approximately constant charge-to-mass ratio so migration depends almost entirely on mass, with smaller chains moving farther. Native charge (A) and pI (C) are what isoelectric focusing exploits, not SDS-PAGE. Folded shape (D) is largely abolished by SDS denaturation.',
+        skill: 'Molecular techniques',
+      },
+      {
+        question:
+          'Reducing SDS-PAGE gave 30 kDa and 20 kDa bands, native chromatography gave ~100 kDa, and non-reducing SDS-PAGE gave a 50 kDa band. The most consistent quaternary structure for protein P is:',
+        options: [
+          'A single 100 kDa polypeptide',
+          'A heterotetramer of two 30 kDa and two 20 kDa subunits, where each 30 kDa and 20 kDa pair is disulfide-linked',
+          'A homodimer of two identical 50 kDa chains',
+          'A monomer of 50 kDa',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Reducing SDS-PAGE shows the smallest covalent units are 30 and 20 kDa. Non-reducing SDS-PAGE shows a 50 kDa species, meaning a 30 kDa and a 20 kDa chain are joined by a disulfide bond (30 + 20 = 50). Native mass ~100 kDa = two such 50 kDa disulfide-linked pairs, i.e., a heterotetramer (2 × 30 + 2 × 20 = 100). A single chain (A) and a 50 kDa monomer (D) cannot give two reduced bands; a homodimer of identical 50 kDa chains (C) would not yield two different reduced subunit sizes.',
+        skill: 'Protein structure',
+      },
+      {
+        question:
+          'Why did protein P migrate as a single 50 kDa band on non-reducing SDS-PAGE but as two bands when reducing agent was added?',
+        options: [
+          'Reducing agent cleaves peptide bonds within each chain',
+          'Reducing agent breaks the disulfide bond holding the 30 kDa and 20 kDa chains together, releasing them as separate bands',
+          'Without reducing agent, SDS cannot bind the protein',
+          'Reducing agent changes the proteins’ isoelectric points',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Disulfide bonds covalently tether the 30 kDa and 20 kDa chains into one 50 kDa unit; reducing agent ($\\beta$-mercaptoethanol) cleaves these S–S bonds, freeing the two chains so they run separately. Reducing agents break disulfides, not peptide bonds (A). SDS still binds either way (C), and reduction does not redefine pI in this context (D).',
+        skill: 'Protein structure',
+      },
+      {
+        question:
+          'At a buffer pH of 7.0, what is the expected net charge of the isolated 30 kDa subunit (pI 5.0) compared with the isolated 20 kDa subunit (pI 8.5)?',
+        options: [
+          'Both are positively charged',
+          'The 30 kDa subunit is negatively charged and the 20 kDa subunit is positively charged',
+          'Both are negatively charged',
+          'The 30 kDa subunit is positively charged and the 20 kDa subunit is negatively charged',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'A protein carries net negative charge when the pH is above its pI and net positive charge when the pH is below its pI. At pH 7.0, the 30 kDa subunit (pI 5.0) is above its pI, so it is negative; the 20 kDa subunit (pI 8.5) is below its pI, so it is positive. The other options misapply the pH-vs-pI rule.',
+        skill: 'Amino acids and proteins',
+      },
+      {
+        question:
+          'Size-exclusion chromatography eluted protein P as a single peak. In this method, which molecules elute from the column first?',
+        options: [
+          'The smallest molecules, because they pass through fastest',
+          'The largest molecules, because they are excluded from the pores and take a shorter path',
+          'The most positively charged molecules',
+          'The molecules with the highest pI',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Size-exclusion (gel-filtration) beads have pores that small molecules enter, lengthening their path and retarding them; large molecules are excluded from the pores and travel the shorter route around the beads, eluting first. Smallest-first (A) is backward. The separation is by size/hydrodynamic radius, not charge or pI (C, D).',
+        skill: 'Molecular techniques',
+      },
+      {
+        question:
+          'Which result most directly establishes that protein P is a multi-subunit (oligomeric) protein rather than a single polypeptide?',
+        options: [
+          'The native mass of ~100 kDa alone',
+          'The appearance of two distinct bands (30 and 20 kDa) on reducing SDS-PAGE',
+          'The single peak in size-exclusion chromatography',
+          'The focusing of a band at pH 5.0',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Reducing SDS-PAGE fully dissociates a protein into its constituent polypeptide chains; two distinct bands prove there are at least two different polypeptides, so P cannot be a single chain. Native mass alone (A) could in principle be one large chain. A single SEC peak (C) shows one complex but not how many chains compose it. A single pI band (D) characterizes one subunit, not the oligomeric state.',
+        skill: 'Experimental reasoning',
+      },
+    ],
+  },
+  {
+    id: 'bb-molbio-02',
+    section: 'bio-biochem',
+    discipline: 'molecular biology',
+    title: 'Detecting a Mutation by PCR and Gel Electrophoresis',
+    passageText:
+      'A clinical laboratory developed a test for a disease allele caused by a single base substitution that creates ' +
+      'a new recognition site for the restriction enzyme HinfI within a gene of interest. The wild-type allele lacks ' +
+      'this site.\n\n' +
+      'The workflow is: (1) amplify a 400 base-pair (bp) region spanning the variant by the polymerase chain reaction ' +
+      '(PCR) using two flanking primers; (2) digest the PCR product with HinfI; and (3) separate the fragments on an ' +
+      'agarose gel, where DNA, being negatively charged, migrates toward the positive electrode and smaller fragments ' +
+      'travel farther.\n\n' +
+      'In the wild-type allele, the 400 bp product has no HinfI site and is not cut, so it stays 400 bp. In the ' +
+      'mutant allele, HinfI cuts the 400 bp product once into a 250 bp and a 150 bp fragment.\n\n' +
+      'The team ran four samples: a homozygous wild-type control, a homozygous mutant control, a known heterozygote, ' +
+      'and a patient of unknown genotype. They also included a lane with a DNA size ladder and a no-template (water) ' +
+      'control for the PCR.',
+    figure:
+      '| Sample | Bands observed after HinfI digestion |\n' +
+      '| --- | --- |\n' +
+      '| Homozygous wild-type | 400 bp only |\n' +
+      '| Homozygous mutant | 250 bp and 150 bp |\n' +
+      '| Heterozygote | 400 bp, 250 bp, and 150 bp |\n' +
+      '| Patient (unknown) | 250 bp and 150 bp only |\n' +
+      '| No-template control | no bands |',
+    questions: [
+      {
+        question:
+          'PCR requires a heat-stable DNA polymerase (e.g., Taq) because each cycle includes a step that would denature an ordinary polymerase. That step is:',
+        options: [
+          'Annealing of primers at ~55 °C',
+          'Denaturation of the template at ~95 °C',
+          'Extension by the polymerase at ~72 °C',
+          'Loading the sample onto the gel',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Each PCR cycle begins by heating to ~95 °C to melt the double-stranded template into single strands; this temperature would denature a typical protein, so a thermostable polymerase such as Taq (from a thermophile) is required. Annealing (A) and extension (C) are at lower temperatures the enzyme tolerates. Gel loading (D) is a downstream analysis step, not part of PCR cycling.',
+        skill: 'Molecular techniques',
+      },
+      {
+        question:
+          'On the agarose gel, which fragment will have migrated the farthest from the wells?',
+        options: ['The 400 bp fragment', 'The 250 bp fragment', 'The 150 bp fragment', 'All migrate equally'],
+        correctAnswer: 2,
+        explanation:
+          'In agarose gel electrophoresis, smaller DNA fragments move through the gel matrix more easily and therefore travel farthest. Of 400, 250, and 150 bp, the 150 bp fragment is smallest and migrates farthest from the well. The 400 bp fragment (A) is largest and moves least; equal migration (D) contradicts size-based separation.',
+        skill: 'Molecular techniques',
+      },
+      {
+        question:
+          'Based on the band pattern, what is the genotype of the patient of unknown status?',
+        options: [
+          'Homozygous wild-type',
+          'Heterozygous',
+          'Homozygous mutant',
+          'Cannot be determined from these data',
+        ],
+        correctAnswer: 2,
+        explanation:
+          'The patient shows only the 250 bp and 150 bp fragments and no uncut 400 bp band, matching the homozygous mutant control: both alleles carry the HinfI site and are fully cut. A heterozygote (B) would show all three bands (one allele cut, one uncut); homozygous wild-type (A) would show only 400 bp. The pattern is unambiguous (so D is wrong).',
+        skill: 'Data interpretation',
+      },
+      {
+        question:
+          'The heterozygote lane shows 400 bp, 250 bp, AND 150 bp bands. Why are all three present?',
+        options: [
+          'The enzyme partially digested every molecule',
+          'One allele lacks the HinfI site (uncut, 400 bp) while the other allele is cut into 250 and 150 bp',
+          'PCR amplified an extra contaminating fragment',
+          'The 400 bp band is the size ladder',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'A heterozygote carries one wild-type allele (no site, stays 400 bp) and one mutant allele (cut to 250 + 150 bp), so all three fragments appear together. This is full digestion of one allele, not partial digestion of all molecules (A). The pattern is expected from the two alleles, not contamination (C), and the 400 bp band is patient DNA, not the ladder (D).',
+        skill: 'Genetics',
+      },
+      {
+        question:
+          'What is the purpose of the no-template (water) control, which showed no bands?',
+        options: [
+          'To estimate fragment sizes',
+          'To detect contamination of PCR reagents with stray DNA, which would produce spurious bands',
+          'To serve as the homozygous wild-type reference',
+          'To measure the efficiency of HinfI digestion',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'A no-template control contains all PCR reagents but no added DNA; if reagents were contaminated with extraneous template, bands would appear. Its blankness confirms the amplified products came from the intended samples, not contamination. Size estimation is the ladder’s job (A). It is not a genotype reference (C) and does not assess enzyme digestion (D).',
+        skill: 'Experimental controls',
+      },
+    ],
+  },
+  {
+    id: 'bb-immuno-01',
+    section: 'bio-biochem',
+    discipline: 'immunology',
+    title: 'Antibody Responses Measured by ELISA',
+    passageText:
+      'The adaptive immune response generates antibodies specific to a pathogen. On first exposure to an antigen, the ' +
+      'primary response is slow and dominated by IgM. On re-exposure, memory B cells drive a faster, larger secondary ' +
+      'response dominated by high-affinity IgG.\n\n' +
+      'Researchers immunized mice with a protein antigen on day 0 and gave a second (booster) dose of the same antigen ' +
+      'on day 28. They measured antigen-specific antibody titers in serum using an enzyme-linked immunosorbent assay ' +
+      '(ELISA). In a direct ELISA, the antigen is immobilized in a well; serum antibodies that bind it are then ' +
+      'detected by an enzyme-linked secondary antibody, and a substrate produces a colored product whose intensity is ' +
+      'proportional to bound antibody.\n\n' +
+      'After the day-0 dose, IgM rose first and peaked around day 10, then declined; IgG rose more slowly to a modest ' +
+      'level. After the day-28 booster, IgG rose rapidly to a much higher peak than the primary response, while the ' +
+      'IgM increase was comparatively small.\n\n' +
+      'A separate control group received an unrelated antigen and showed no rise in titer to the test antigen, ' +
+      'confirming the response was antigen-specific.',
+    figure:
+      '| Day | Anti-antigen IgM (titer) | Anti-antigen IgG (titer) |\n' +
+      '| --- | --- | --- |\n' +
+      '| 0 | 0 | 0 |\n' +
+      '| 10 | 800 | 100 |\n' +
+      '| 28 (pre-boost) | 200 | 400 |\n' +
+      '| 35 | 600 | 6,400 |\n' +
+      '| 42 | 300 | 9,600 |',
+    questions: [
+      {
+        question:
+          'Which antibody isotype dominates the early primary response, and which dominates the secondary (post-booster) response?',
+        options: [
+          'IgG primary; IgM secondary',
+          'IgM primary; IgG secondary',
+          'IgE primary; IgA secondary',
+          'IgA primary; IgM secondary',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'The primary response is dominated by IgM, which appears first; the secondary (memory) response is dominated by high-affinity IgG produced rapidly and to higher titer, as the data show (IgG peaks at 9,600 after the boost). The reversed assignment (A) and the IgE/IgA and IgA/IgM options (C, D) do not match the classic primary-IgM/secondary-IgG pattern.',
+        skill: 'Adaptive immunity',
+      },
+      {
+        question:
+          'The post-booster IgG response was faster and reached a far higher titer than the primary IgG response. This is best explained by:',
+        options: [
+          'The innate immune system remembering the antigen',
+          'Memory B cells generated during the primary response enabling a rapid, robust secondary response',
+          'A reduction in the antigen dose at the booster',
+          'Loss of antigen specificity after the booster',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Immunological memory resides in long-lived memory B (and T) cells produced during the primary response; on re-exposure they proliferate and differentiate quickly into plasma cells, giving the faster, higher-affinity, higher-titer IgG secondary response. The innate system does not generate this classical antigen-specific memory (A). The booster used the same antigen (and specificity is retained, ruling out C and D).',
+        skill: 'Immunological memory',
+      },
+      {
+        question:
+          'In the direct ELISA described, what produces the measurable signal?',
+        options: [
+          'Radioactive decay of a labeled antigen',
+          'An enzyme conjugated to the detection antibody converts a substrate into a colored product',
+          'Agglutination of red blood cells',
+          'Fluorescence of the antigen itself',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'ELISA reads out bound antibody through an enzyme linked to the detection (secondary) antibody; the enzyme converts a substrate into a colored product whose intensity is proportional to the amount of bound antibody. It is enzymatic/colorimetric, not radioactive (A), not hemagglutination (C), and the antigen is not intrinsically fluorescent in this format (D).',
+        skill: 'Molecular techniques',
+      },
+      {
+        question:
+          'What is the purpose of the control group immunized with an unrelated antigen?',
+        options: [
+          'To boost the test antigen response',
+          'To confirm that the measured antibody rise is specific to the test antigen, not a nonspecific reaction',
+          'To measure the enzyme activity of the ELISA substrate',
+          'To provide memory cells to the experimental group',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'A group given an unrelated antigen should not develop antibodies that bind the test antigen; its flat titer confirms that the signal in the experimental group reflects a specific response to the test antigen rather than nonspecific or cross-reactive binding. It does not boost (A), measure substrate kinetics (C), or share cells with the experimental group (D).',
+        skill: 'Experimental controls',
+      },
+      {
+        question:
+          'B cells and T cells both mediate adaptive immunity. Which statement correctly distinguishes a key function?',
+        options: [
+          'B cells secrete antibodies; cytotoxic T cells kill infected host cells',
+          'B cells directly engulf pathogens as professional phagocytes; T cells secrete antibodies',
+          'Both B and T cells secrete antibodies in equal amounts',
+          'T cells provide humoral immunity while B cells provide all cell-mediated immunity',
+        ],
+        correctAnswer: 0,
+        explanation:
+          'B cells (as plasma cells) secrete antibodies, the basis of humoral immunity; cytotoxic (CD8+) T cells recognize and kill virus-infected or abnormal host cells, a core of cell-mediated immunity. T cells do not secrete antibodies (B, C are wrong), and the humoral/cell-mediated assignment in D is reversed.',
+        skill: 'Adaptive immunity',
       },
     ],
   },
@@ -759,5 +1067,56 @@ export const BIO_BIOCHEM_DISCRETES: MCATDiscreteQuestion[] = [
     explanation:
       'Retroviruses carry an RNA genome and the enzyme reverse transcriptase, which copies that RNA into DNA; integrase then inserts the DNA (provirus) into the host genome—the defining feature absent from typical DNA viruses. Translation on host ribosomes (A), membrane assembly (C), and using host RNA polymerase (D) are shared with many viruses and do not uniquely distinguish a retrovirus.',
     skill: 'Virology',
+  },
+  {
+    id: 'bb-disc-07',
+    section: 'bio-biochem',
+    discipline: 'biochemistry',
+    question:
+      'Which set of amino acids is correctly grouped by side-chain property?',
+    options: [
+      'Lysine, arginine, and histidine are basic (positively chargeable) side chains',
+      'Aspartate and glutamate have nonpolar, hydrophobic side chains',
+      'Valine, leucine, and isoleucine carry negative charges at physiological pH',
+      'Serine and threonine are basic amino acids',
+    ],
+    correctAnswer: 0,
+    explanation:
+      'Lysine, arginine, and histidine have basic side chains that can carry a positive charge near physiological pH (histidine’s pKa ~6 makes it partly protonated). Aspartate and glutamate are acidic and negatively charged, not nonpolar (B is wrong). Valine, leucine, and isoleucine are branched, nonpolar/hydrophobic and uncharged (C is wrong). Serine and threonine are polar uncharged (hydroxyl) residues, not basic (D is wrong).',
+    skill: 'Amino acids and proteins',
+  },
+  {
+    id: 'bb-disc-08',
+    section: 'bio-biochem',
+    discipline: 'metabolism',
+    question:
+      'In a well-fed state, high insulin and high glucose promote which metabolic shift in the liver?',
+    options: [
+      'Glycogen breakdown (glycogenolysis) and gluconeogenesis',
+      'Glycogen synthesis and glycolysis, storing and using glucose',
+      'Ketone body production for export to the brain',
+      'Lipolysis in adipose tissue with fatty acid release',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'In the fed state, insulin signals fuel abundance: the liver takes up glucose and favors glycogen synthesis and glycolysis (and lipogenesis), storing and using glucose. Glycogenolysis and gluconeogenesis (A) are fasting-state, glucagon-driven processes that release glucose. Ketogenesis (C) and adipose lipolysis (D) are also fasting/low-insulin responses, opposite to the fed state.',
+    skill: 'Metabolic regulation',
+  },
+  {
+    id: 'bb-disc-09',
+    section: 'bio-biochem',
+    discipline: 'physiology',
+    question:
+      'During the cardiac cycle, the QRS complex of an electrocardiogram corresponds most directly to which electrical event?',
+    options: [
+      'Atrial depolarization',
+      'Ventricular depolarization',
+      'Ventricular repolarization',
+      'Closure of the atrioventricular valves',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'The QRS complex reflects ventricular depolarization, which triggers ventricular contraction; its large amplitude reflects the large ventricular muscle mass. Atrial depolarization is the P wave (A), and ventricular repolarization is the T wave (C). Valve closure is a mechanical event that produces heart sounds, not an ECG deflection (D).',
+    skill: 'Cardiac physiology',
   },
 ]

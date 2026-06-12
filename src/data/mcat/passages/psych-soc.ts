@@ -89,7 +89,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         explanation:
           'A robust finding is that restudy can match or exceed retrieval practice on immediate tests, with retrieval practice’s benefit appearing on delayed tests—the testing effect is largest after a delay. So at 5 minutes the advantage would shrink or reverse. B is wrong because immediate recall is typically high, not poor. D is the opposite of the established time course.',
         skill: 'experimental-reasoning',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -174,7 +174,7 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
         explanation:
           'If post-screening relief produced a general positive glow, a severe group rating an unrelated object should also rate it high; if instead inflation is specific to the joined group, dissonance is supported. This directly tests the relief alternative. A larger N (B) sharpens precision but not specificity. A within-subjects design (C) risks demand and does not isolate relief. Revealing the hypothesis (D) would introduce demand characteristics.',
         skill: 'experimental-reasoning',
-        needsReview: true,
+        needsReview: false,
       },
     ],
   },
@@ -566,6 +566,262 @@ export const PSYCH_SOC_PASSAGES: MCATPassage[] = [
       },
     ],
   },
+
+  // (8) Sensation / perception — signal detection theory study with data
+  {
+    id: 'ps-sensperc-01',
+    section: 'psych-soc',
+    discipline: 'sensation-and-perception',
+    title: 'Signal Detection in Radiologists',
+    passageText:
+      'Signal detection theory (SDT) holds that detecting a faint stimulus is not a simple matter of whether it exceeds a fixed sensory threshold. Instead, performance reflects two separable components: sensitivity (d′), the observer’s ability to discriminate signal-plus-noise from noise alone, and response criterion (β), the willingness to say "yes, signal present," which depends on expectations and on the costs and benefits of each outcome. Every trial yields one of four outcomes: a hit (signal present, "yes"), a miss (signal present, "no"), a false alarm (signal absent, "yes"), or a correct rejection (signal absent, "no").\n\nResearchers had radiologists judge whether a faint nodule was present in a series of chest images, half of which actually contained a nodule. In a baseline block, readers were told nothing about prevalence or stakes. In a second block, readers were warned that missing a nodule could be fatal (raising the cost of a miss); in a third, they were told that unnecessary follow-up scans were extremely costly (raising the cost of a false alarm). The physical images were equally faint across blocks. Investigators predicted that the cost manipulations would shift the response criterion without changing underlying sensitivity, because the visual information in the images was unchanged.\n\nThe researchers stressed that an observer can improve the hit rate simply by saying "yes" more often, but only at the price of more false alarms—so the hit rate alone is an incomplete measure of perceptual skill. A genuine improvement in discrimination would raise hits while holding or lowering false alarms.',
+    figure:
+      'Table 1. Detection outcomes by block (proportions across trials; sensitivity d′ estimated from hit and false-alarm rates).\n\n| Block | Hit rate | False-alarm rate | Estimated d′ |\n| --- | --- | --- | --- |\n| Baseline | 0.72 | 0.20 | 1.43 |\n| Miss is costly | 0.91 | 0.41 | 1.45 |\n| False alarm is costly | 0.55 | 0.07 | 1.42 |',
+    questions: [
+      {
+        question:
+          'Across the three blocks the hit rate and false-alarm rate shift substantially while d′ stays near 1.43. This pattern most directly indicates that the cost manipulations changed the:',
+        options: [
+          'Observer’s sensitivity to the nodule',
+          'Observer’s response criterion (β)',
+          'Absolute threshold for the stimulus',
+          'Physical contrast of the images',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'A nearly constant d′ alongside moving hit and false-alarm rates is the signature of a criterion (β) shift: the observer changes how readily they say "yes," not how well they discriminate signal from noise. If sensitivity had changed (A), d′ would move. The absolute threshold (C) is a classical-psychophysics construct SDT explicitly replaces with sensitivity-plus-criterion. The images were held constant (D).',
+        skill: 'interpret-the-data',
+      },
+      {
+        question:
+          'When told that missing a nodule could be fatal, readers’ hits rose to 0.91 but false alarms also rose to 0.41. This shift is best described as adopting a:',
+        options: [
+          'More conservative (strict) criterion',
+          'More liberal (lenient) criterion',
+          'Higher sensitivity',
+          'Lower sensitivity',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Raising the cost of a miss pushes the observer to say "yes" more often, increasing both hits and false alarms—a liberal/lenient criterion. A conservative criterion (A) would lower both rates, as in the false-alarm-costly block (hits 0.55, false alarms 0.07). Because d′ barely moved, sensitivity did not change (C, D).',
+        skill: 'apply-a-theory',
+      },
+      {
+        question:
+          'A reader in the baseline block correctly reports "no nodule" on an image that in fact contains none. In SDT terms this outcome is a:',
+        options: ['Hit', 'Miss', 'False alarm', 'Correct rejection'],
+        correctAnswer: 3,
+        explanation:
+          'Signal absent and the observer responds "no" → correct rejection. A hit is signal present plus "yes"; a miss is signal present plus "no"; a false alarm is signal absent plus "yes." Saying "no" when nothing is there is the correct rejection.',
+        skill: 'identify-the-concept',
+      },
+      {
+        question:
+          'The passage argues that hit rate alone is an incomplete measure of perceptual skill chiefly because:',
+        options: [
+          'Hits can be inflated by simply responding "yes" more often, at the cost of more false alarms',
+          'Hit rate is unaffected by the stimulus',
+          'Sensitivity cannot be measured',
+          'False alarms are always zero',
+        ],
+        correctAnswer: 0,
+        explanation:
+          'A reader can raise the hit rate just by adopting a more liberal criterion, but this also raises false alarms—so a high hit rate may reflect a lax criterion rather than better discrimination. That is exactly why d′, which combines hits and false alarms, is the proper index. The other options are false: hits do depend on the stimulus, sensitivity is measurable (d′), and false alarms are clearly nonzero in the data.',
+        skill: 'experimental-reasoning',
+      },
+      {
+        question:
+          'Which result, if observed, would constitute a genuine improvement in the radiologists’ discrimination rather than a criterion shift?',
+        options: [
+          'Hits rise from 0.72 to 0.90 while false alarms rise from 0.20 to 0.40',
+          'Hits rise from 0.72 to 0.85 while false alarms fall from 0.20 to 0.12',
+          'Hits fall and false alarms fall by the same amount',
+          'Hits and false alarms both stay exactly the same',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'True gains in sensitivity (higher d′) show up as more hits WITHOUT a corresponding rise in false alarms—ideally hits up and false alarms down, as in option B. Option A raises both, the hallmark of a looser criterion at constant sensitivity. Option C is a stricter criterion, and option D is no change at all.',
+        skill: 'experimental-reasoning',
+      },
+    ],
+  },
+
+  // (9) Personality theories + psychological disorders / treatment
+  {
+    id: 'ps-personality-01',
+    section: 'psych-soc',
+    discipline: 'personality-and-disorders',
+    title: 'Locus of Control, Attribution, and Depression',
+    passageText:
+      'Personality and clinical researchers have long studied how people explain the events of their lives. Within the social-cognitive tradition, Rotter’s concept of locus of control distinguishes people who attribute outcomes to their own actions (internal locus) from those who attribute outcomes to luck, fate, or powerful others (external locus). A related clinical model, the reformulated learned-helplessness (hopelessness) theory, proposes that vulnerability to depression is heightened in people with a depressive attributional (explanatory) style—those who explain negative events with internal, stable, and global causes ("It’s my fault, it always happens, and it ruins everything").\n\nTo test this, investigators administered an explanatory-style questionnaire to 240 first-year students at the start of the year and measured depressive symptoms then and again after students received a disappointing midterm grade. The team distinguished their account from the trait perspective embodied in the Big Five (openness, conscientiousness, extraversion, agreeableness, neuroticism), noting that neuroticism predicts distress broadly, whereas explanatory style was meant to predict who becomes depressed specifically after a negative event.\n\nThe researchers also contrasted two treatment rationales for depression. A cognitive-behavioral rationale targets the maladaptive thoughts and attributions themselves, training patients to reattribute setbacks to specific, unstable, external causes where appropriate. A biomedical rationale targets monoamine neurotransmission pharmacologically. The investigators predicted that students with a pessimistic explanatory style at baseline would show the largest increase in depressive symptoms after the disappointing grade, and that this interaction—style × negative event—would exceed the effect of either factor alone.',
+    figure:
+      'Table 1. Increase in depressive-symptom score from baseline to post-grade, by baseline explanatory style and grade outcome (group means; higher = more symptoms gained).\n\n| Baseline explanatory style | After good grade | After disappointing grade |\n| --- | --- | --- |\n| Optimistic (external/unstable/specific) | +0.4 | +1.1 |\n| Pessimistic (internal/stable/global) | +0.6 | +5.8 |',
+    questions: [
+      {
+        question:
+          'A student who explains a failing grade as "I’m just not smart, I never do well, and this will wreck everything" is displaying the depressive explanatory style’s three dimensions, which are:',
+        options: [
+          'External, unstable, and specific',
+          'Internal, stable, and global',
+          'Internal, unstable, and specific',
+          'External, stable, and global',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'The depressive (pessimistic) attributional style explains negative events with internal ("my fault"), stable ("always"), and global ("affects everything") causes—exactly the quoted statement. The opposite, more adaptive pattern is external, unstable, and specific (option A). The mixed options (C, D) do not match the hopelessness-theory profile.',
+        skill: 'identify-the-concept',
+      },
+      {
+        question:
+          'The largest symptom increase (+5.8) occurs only for pessimistic-style students after a disappointing grade, not for either factor alone. This pattern best supports:',
+        options: [
+          'A main effect of explanatory style only',
+          'A main effect of grade outcome only',
+          'A diathesis–stress (style × event) interaction',
+          'No relationship between style and depression',
+        ],
+        correctAnswer: 2,
+        explanation:
+          'Symptoms spike only when a vulnerability (pessimistic style) meets a stressor (the disappointing grade)—the classic diathesis–stress interaction the researchers predicted. A pure main effect of style (A) would raise symptoms even after a good grade; a pure main effect of grade (B) would affect optimists as much as pessimists. The data clearly show a relationship (not D).',
+        skill: 'interpret-the-data',
+      },
+      {
+        question:
+          'A person who believes that whether they pass exams is mainly a matter of luck and the whims of professors, beyond their own effort, has a(n):',
+        options: ['Internal locus of control', 'External locus of control', 'High self-efficacy', 'Internal attribution for success'],
+        correctAnswer: 1,
+        explanation:
+          'Attributing outcomes to luck, fate, or powerful others rather than one’s own actions defines an external locus of control (Rotter). An internal locus (A) credits one’s own effort. Self-efficacy (C) is Bandura’s belief in one’s capability to execute a behavior—related but distinct, and here the person feels low control. Option D describes the opposite attribution.',
+        skill: 'apply-a-theory',
+      },
+      {
+        question:
+          'The passage distinguishes explanatory style from the Big Five trait neuroticism by claiming that, unlike neuroticism, explanatory style was designed to predict:',
+        options: [
+          'General distress across all situations',
+          'Who becomes depressed specifically after a negative event',
+          'Extraversion in social settings',
+          'Performance on intelligence tests',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'The passage states neuroticism predicts distress broadly, whereas explanatory style was meant to predict who becomes depressed specifically after a negative event—a situation-contingent vulnerability, consistent with the diathesis–stress framing. Option A describes neuroticism, not the contrast intended. Extraversion (C) and intelligence (D) are unrelated to the comparison.',
+        skill: 'identify-the-concept',
+      },
+      {
+        question:
+          'The cognitive-behavioral treatment rationale described in the passage would most directly attempt to:',
+        options: [
+          'Increase synaptic serotonin pharmacologically',
+          'Train patients to reattribute setbacks to specific, unstable, and external causes where appropriate',
+          'Use systematic desensitization to extinguish a phobia',
+          'Strengthen the unconscious transference relationship',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'The cognitive-behavioral rationale here targets maladaptive attributions, retraining the internal/stable/global pattern toward specific/unstable/external explanations—cognitive restructuring. Increasing serotonin (A) is the biomedical rationale the passage contrasts it with. Systematic desensitization (C) is a behavioral technique for phobias, not the attributional retraining described. Transference (D) is a psychodynamic concept, not the cognitive model.',
+        skill: 'apply-a-theory',
+      },
+    ],
+  },
+
+  // (10) Demographics / social institutions / stratification with data
+  {
+    id: 'ps-demog-01',
+    section: 'psych-soc',
+    discipline: 'sociology',
+    title: 'Demographic Transition and Intergenerational Mobility',
+    passageText:
+      'Demographers describe the demographic transition, a model in which societies move from a pre-industrial regime of high birth rates and high death rates, through a transitional phase in which death rates fall first (thanks to sanitation, nutrition, and medicine) while birth rates remain high—producing rapid population growth—and finally to a post-industrial regime of low birth and low death rates and slow or negative growth. The lag between falling mortality and falling fertility is the engine of the population explosion seen in many industrializing societies.\n\nA research team paired demographic indicators with measures of social mobility for several countries at different transition stages. They distinguished intergenerational mobility (change in social position between parents and children) from intragenerational mobility (change within a single person’s lifetime), and structural mobility (movement caused by changes in the occupational structure, such as industrialization creating many new white-collar jobs) from exchange mobility (individuals trading places within a fixed structure). They also tracked the dependency ratio—the ratio of dependents (the young and the elderly) to the working-age population—which they noted is high early in the transition because of many children and high late in the transition because of population aging.\n\nThe investigators argued that much of the upward mobility observed during rapid industrialization is structural rather than exchange mobility: as the economy adds professional and technical positions, children can occupy higher-status jobs than their parents without anyone necessarily moving downward. They cautioned that high observed upward mobility therefore need not indicate an increasingly "open," merit-based society.',
+    figure:
+      'Table 1. Indicators by transition stage (illustrative national means).\n\n| Stage | Birth rate (per 1,000) | Death rate (per 1,000) | Annual population growth | Dependency ratio |\n| --- | --- | --- | --- | --- |\n| Stage 1: pre-industrial | 40 | 38 | Low | High (many children) |\n| Stage 2: early transition | 39 | 18 | Rapid | High (many children) |\n| Stage 3: late transition | 20 | 10 | Moderate | Falling |\n| Stage 4: post-industrial | 11 | 10 | Near zero | Rising (aging) |',
+    questions: [
+      {
+        question:
+          'According to the demographic-transition model, the rapid population growth of Stage 2 results from the fact that:',
+        options: [
+          'Birth rates rise sharply while death rates stay high',
+          'Death rates fall while birth rates remain high',
+          'Both birth and death rates fall together',
+          'Immigration exceeds emigration',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'In the transitional stage, mortality drops first (sanitation, nutrition, medicine) while fertility remains high, so births greatly exceed deaths and the population surges—visible in the table (Stage 2: births 39, deaths 18). Birth rates do not rise (A); the simultaneous fall of both (C) characterizes the later stages with slow growth; the model is about natural increase, not migration (D).',
+        skill: 'interpret-the-data',
+      },
+      {
+        question:
+          'A factory worker’s child becomes a physician, occupying a higher social position than her parents. This is an example of:',
+        options: [
+          'Intragenerational mobility',
+          'Intergenerational mobility',
+          'Horizontal mobility',
+          'Exchange mobility within a fixed structure',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Change in social position BETWEEN parents and children is intergenerational mobility. Intragenerational mobility (A) is change within one person’s own career. Horizontal mobility (C) is movement between positions of similar status, not upward. Exchange mobility (D) describes the mechanism of mobility, not the parent-to-child comparison; the stem is defined by the generational comparison.',
+        skill: 'identify-the-concept',
+      },
+      {
+        question:
+          'The researchers warn that high upward mobility during industrialization may be mostly structural mobility. Structural mobility means movement caused by:',
+        options: [
+          'Individuals trading places within an unchanged occupational structure',
+          'Changes in the occupational structure itself, such as new white-collar jobs being created',
+          'Random measurement error',
+          'Marriage between social classes',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Structural mobility is upward (or downward) movement driven by changes in the occupational structure—e.g., industrialization creating many new professional jobs—so people can rise without others falling. Trading places within a fixed structure (A) is exchange mobility, the contrast the passage draws. It is not error (C) or marital mobility (D).',
+        skill: 'identify-the-concept',
+      },
+      {
+        question:
+          'The passage notes the dependency ratio is high both early and late in the transition, but for different reasons. The Stage 4 (post-industrial) increase in the dependency ratio is driven mainly by:',
+        options: [
+          'A surge in births',
+          'Population aging (a growing elderly share)',
+          'Falling life expectancy',
+          'Rising death rates among children',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Late in the transition, low fertility and long life expectancy raise the elderly share, so the dependency ratio rises because of aging—not because of more children (A), which dominates early. Life expectancy rises, not falls (C), and child mortality is low in post-industrial societies (D).',
+        skill: 'interpret-the-data',
+      },
+      {
+        question:
+          'The investigators’ caution that high observed upward mobility "need not indicate an increasingly open, merit-based society" follows most directly because:',
+        options: [
+          'Structural mobility can lift many children above their parents without genuine openness or competition for fixed slots',
+          'Mobility is impossible to measure',
+          'Intragenerational mobility is always downward',
+          'The dependency ratio determines mobility',
+        ],
+        correctAnswer: 0,
+        explanation:
+          'If industrialization simply creates more high-status slots, children can rise without anyone losing position—so upward movement reflects a changing structure, not necessarily a more meritocratic or fluid contest for limited positions. The other options are unsupported: mobility is measured here (B), intragenerational mobility is not inherently downward (C), and the dependency ratio is a separate demographic measure (D).',
+        skill: 'experimental-reasoning',
+      },
+      {
+        question:
+          'A government wishing to reduce the rapid population growth of Stage 2 would, per the model, most effectively focus on policies that:',
+        options: [
+          'Raise the death rate',
+          'Lower the birth rate (e.g., via education, family planning, women’s economic opportunity)',
+          'Increase the dependency ratio',
+          'Halt all industrialization',
+        ],
+        correctAnswer: 1,
+        explanation:
+          'Stage 2 growth comes from births outpacing the already-fallen death rate, so accelerating the fertility decline—through education, access to family planning, and expanded economic opportunity for women—addresses the cause and moves the society toward Stage 3. Raising the death rate (A) is neither ethical nor the model’s mechanism, manipulating the dependency ratio (C) is not a growth lever, and halting industrialization (D) would not by itself lower fertility.',
+        skill: 'apply-a-theory',
+      },
+    ],
+  },
 ]
 
 export const PSYCH_SOC_DISCRETES: MCATDiscreteQuestion[] = [
@@ -644,6 +900,30 @@ export const PSYCH_SOC_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The availability heuristic judges frequency or probability by how easily examples come to mind; words starting with "K" are easier to retrieve, so people overestimate them (in fact more words have "K" third). The representativeness heuristic judges likelihood by similarity to a prototype. Confirmation bias is seeking information that confirms prior beliefs. Anchoring is over-relying on an initial reference value.',
+    skill: 'identify-the-concept',
+  },
+  {
+    id: 'ps-disc-07',
+    section: 'psych-soc',
+    discipline: 'learning-and-memory',
+    question:
+      'After learning to fear a tone paired with shock, a rat is later given many tone presentations with no shock until the fear response fades. The next day the tone again elicits mild fear. This return of the response illustrates:',
+    options: ['Stimulus generalization', 'Spontaneous recovery', 'Higher-order conditioning', 'Latent inhibition'],
+    correctAnswer: 1,
+    explanation:
+      'Spontaneous recovery is the reappearance of a previously extinguished conditioned response after a rest interval, showing that extinction suppresses rather than erases the original learning. Stimulus generalization is responding to stimuli similar to the conditioned one. Higher-order conditioning uses an established conditioned stimulus to condition a new one. Latent inhibition is slowed conditioning to a familiar, pre-exposed stimulus.',
+    skill: 'identify-the-concept',
+  },
+  {
+    id: 'ps-disc-08',
+    section: 'psych-soc',
+    discipline: 'social-psychology',
+    question:
+      'An interviewer rates a physically attractive candidate as more competent and trustworthy than an equally qualified but plainer candidate, letting one favorable trait color unrelated judgments. This best illustrates:',
+    options: ['The halo effect', 'The just-world hypothesis', 'Stereotype threat', 'The mere-exposure effect'],
+    correctAnswer: 0,
+    explanation:
+      'The halo effect is the tendency for one positive characteristic (e.g., attractiveness or likability) to bias overall judgments of an unrelated trait, such as competence. The just-world hypothesis is the belief that people get the outcomes they deserve. Stereotype threat is underperformance driven by fear of confirming a negative group stereotype. The mere-exposure effect is increased liking from repeated exposure—related to familiarity but not to a single trait coloring global judgment.',
     skill: 'identify-the-concept',
   },
 ]
