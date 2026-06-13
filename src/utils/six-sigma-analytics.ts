@@ -105,7 +105,19 @@ export function calculateControlChart(
   
   // Calculate rolling accuracy
   const rollingAccuracy = calculateRollingAccuracy(data, windowSize)
-  
+
+  // Guard: with fewer points than windowSize, rollingAccuracy is empty — return defined defaults instead of dividing by zero (NaN mean/stdDev)
+  if (rollingAccuracy.length === 0) {
+    return {
+      accuracyMean: 0,
+      accuracyStdDev: 0,
+      upperControlLimit: 1,
+      lowerControlLimit: 0,
+      dataPoints: [],
+      outOfControlPoints: 0
+    }
+  }
+
   // Calculate mean and standard deviation
   const accuracies = rollingAccuracy.map(d => d.accuracy)
   const mean = accuracies.reduce((sum, val) => sum + val, 0) / accuracies.length
@@ -221,10 +233,20 @@ export function calculateProcessCapability(
   const mean = accuracies.reduce((sum: number, val) => sum + val, 0) / accuracies.length
   const variance = accuracies.reduce((sum: number, val) => sum + Math.pow(val - mean, 2), 0) / accuracies.length
   const stdDev = Math.sqrt(variance)
-  
+
+  // Guard: zero variation (all attempts identical) makes Cp/Cpk divide by zero (Infinity) — return defined 0 instead
+  if (stdDev === 0) {
+    return {
+      cp: 0,
+      cpk: 0,
+      interpretation: 'No variation in results — capability undefined',
+      isCapable: false
+    }
+  }
+
   // Cp: Potential capability (assumes process is centered)
   const cp = (upperSpec - lowerSpec) / (6 * stdDev)
-  
+
   // Cpk: Actual capability (accounts for process centering)
   const cpupper = (upperSpec - mean) / (3 * stdDev)
   const cplower = (mean - lowerSpec) / (3 * stdDev)
@@ -358,9 +380,11 @@ export function analyzeByProblemType(
     
     // Determine trend (compare first half vs second half)
     const midpoint = Math.floor(points.length / 2)
-    const firstHalfAccuracy = points.slice(0, midpoint).filter(p => p.isCorrect).length / midpoint
-    const secondHalfAccuracy = points.slice(midpoint).filter(p => p.isCorrect).length / (points.length - midpoint)
-    
+    const secondHalfSize = points.length - midpoint
+    // Guard: a single data point gives midpoint === 0, so each half-accuracy would divide by zero (NaN) — default to 0 when a half is empty
+    const firstHalfAccuracy = midpoint > 0 ? points.slice(0, midpoint).filter(p => p.isCorrect).length / midpoint : 0
+    const secondHalfAccuracy = secondHalfSize > 0 ? points.slice(midpoint).filter(p => p.isCorrect).length / secondHalfSize : 0
+
     let trend: 'improving' | 'stable' | 'declining' = 'stable'
     if (secondHalfAccuracy - firstHalfAccuracy > 0.1) trend = 'improving'
     else if (firstHalfAccuracy - secondHalfAccuracy > 0.1) trend = 'declining'
@@ -475,8 +499,9 @@ function calculateRollingAccuracy(
   for (let i = windowSize - 1; i < data.length; i++) {
     const window = data.slice(i - windowSize + 1, i + 1)
     const correct = window.filter(d => d.isCorrect).length
-    const accuracy = correct / window.length
-    
+    // Guard: avoid divide-by-zero (NaN) if the window is empty (e.g. windowSize <= 0)
+    const accuracy = window.length > 0 ? correct / window.length : 0
+
     result.push({
       timestamp: data[i].timestamp,
       accuracy

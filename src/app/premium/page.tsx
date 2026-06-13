@@ -1,67 +1,74 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { PREMIUM_BENEFITS, PREMIUM_PRICING } from '@/lib/premium'
 
 export const metadata: Metadata = {
-  title: 'All Content Free | Study Mondo',
-  description: 'Study Mondo is committed to keeping all educational content free for every student.',
+  title: 'Study Mondo Premium — Ad-Free, Unlimited AI Tutor & Advanced Analytics',
+  description:
+    'All study content stays free. Upgrade to Premium for an ad-free experience, unlimited AI tutor explanations, advanced performance analytics, and priority support.',
+  alternates: { canonical: 'https://www.studymondo.com/premium' },
 }
+
+const BENEFIT_ICONS = ['🚫', '🤖', '📊', '💬']
 
 export default function PremiumPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="container py-16 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
           {/* Hero */}
-          <div className="text-6xl mb-6">🎉</div>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-1.5 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
+            ⭐ Study Mondo Premium
+          </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
-            Everything Is Free!
+            Go further, distraction-free
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-            We believe every student deserves access to quality study materials.
-            All 24 courses, 700+ topics, flashcards, interactive lessons, and practice
-            problems are completely free — no hidden paywalls.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300">
+            Every course, lesson, diagnostic, and practice problem stays{' '}
+            <span className="font-semibold">100% free</span>. Premium adds the power-ups serious
+            students want — without any ads getting in the way.
           </p>
 
-          {/* Features */}
-          <div className="mt-12 grid sm:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
-            {[
-              { icon: '📚', title: 'All Courses', desc: '24 courses from Grade 4 through AP and test prep' },
-              { icon: '🎯', title: 'Interactive Lessons', desc: 'Step-by-step lessons with built-in exercises' },
-              { icon: '🎴', title: 'Spaced Repetition', desc: 'SM-2 powered flashcards for every topic' },
-              { icon: '📝', title: 'Practice Problems', desc: 'Hundreds of problems with full solutions' },
-              { icon: '🎮', title: 'Competitive Mode', desc: 'Challenge AI opponents or other students' },
-              { icon: '📊', title: 'Progress Tracking', desc: 'Dashboard, streaks, and mastery tracking' },
-            ].map((f) => (
-              <div key={f.title} className="flex gap-4 bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                <span className="text-2xl flex-shrink-0">{f.icon}</span>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{f.title}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{f.desc}</p>
-                </div>
+          {/* Benefits — sourced from src/lib/premium.ts so this matches what's actually gated */}
+          <div className="mx-auto mt-12 grid max-w-2xl gap-6 text-left sm:grid-cols-2">
+            {PREMIUM_BENEFITS.map((benefit, i) => (
+              <div
+                key={benefit}
+                className="flex gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800"
+              >
+                <span className="flex-shrink-0 text-2xl">{BENEFIT_ICONS[i] ?? '⭐'}</span>
+                <p className="text-sm font-medium text-gray-800 dark:text-gray-200">{benefit}</p>
               </div>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/"
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
-            >
-              Start Learning →
-            </Link>
-            <Link
-              href="/about"
-              className="px-8 py-3 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors"
-            >
-              Learn More About Us
-            </Link>
+          {/* Price + CTA */}
+          <div className="mt-12">
+            <p className="text-gray-600 dark:text-gray-400">
+              <span className="text-4xl font-bold text-purple-600">${PREMIUM_PRICING.annual.toFixed(2)}</span>
+              <span className="text-gray-500 dark:text-gray-400">/mo billed annually</span>
+              <span className="ml-2 text-sm text-gray-400">(or ${PREMIUM_PRICING.monthly.toFixed(2)}/mo)</span>
+            </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                href="/pricing"
+                className="rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 font-bold text-white shadow-lg transition-all hover:from-purple-700 hover:to-blue-700"
+              >
+                See Plans & Upgrade →
+              </Link>
+              <Link
+                href="/"
+                className="rounded-lg border border-gray-300 px-8 py-3 font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                Keep Studying Free
+              </Link>
+            </div>
           </div>
 
           {/* Funding note */}
-          <p className="mt-12 text-sm text-gray-500 max-w-lg mx-auto">
-            Study Mondo is supported by non-intrusive advertisements, allowing us to
-            keep all educational content free forever.
+          <p className="mx-auto mt-12 max-w-lg text-sm text-gray-500 dark:text-gray-400">
+            Free accounts are supported by non-intrusive ads, which keeps all educational content
+            free forever. Premium simply removes them and unlocks the extras above. Cancel anytime.
           </p>
         </div>
       </div>

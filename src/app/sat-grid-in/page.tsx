@@ -1,11 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { generateGridInProblems, checkGridInAnswer, type GridInProblem } from '@/data/sat-grid-in'
+import type { GridInProblem } from '@/data/sat-grid-in'
+
+// The grid-in problem generator is a sizeable static data module that is only
+// needed at runtime (to build problem sets and grade answers), never for the
+// initial paint. Load it lazily so it code-splits out of the page bundle.
+// The dynamic import is cached by the bundler, so repeated calls are cheap.
+const loadGridIn = () => import('@/data/sat-grid-in')
 
 export default function SATGridInPage() {
-  const [problems, setProblems] = useState<GridInProblem[]>(() => generateGridInProblems(10))
+  const [problems, setProblems] = useState<GridInProblem[]>([])
   const [currentIdx, setCurrentIdx] = useState(0)
   const [inputValue, setInputValue] = useState('')
   const [result, setResult] = useState<'correct' | 'incorrect' | null>(null)
@@ -14,10 +20,20 @@ export default function SATGridInPage() {
 
   const current = problems[currentIdx]
 
-  function handleSubmit() {
+  // Generate the initial problem set once the generator module has loaded.
+  useEffect(() => {
+    let active = true
+    loadGridIn().then(({ generateGridInProblems }) => {
+      if (active) setProblems(generateGridInProblems(10))
+    })
+    return () => { active = false }
+  }, [])
+
+  async function handleSubmit() {
     if (!current || result) return
     const num = parseFloat(inputValue)
     if (isNaN(num)) return
+    const { checkGridInAnswer } = await loadGridIn()
     const isCorrect = checkGridInAnswer(current, num)
     setResult(isCorrect ? 'correct' : 'incorrect')
     setScore(prev => ({
@@ -36,7 +52,8 @@ export default function SATGridInPage() {
     }
   }
 
-  function handleNewSet() {
+  async function handleNewSet() {
+    const { generateGridInProblems } = await loadGridIn()
     setProblems(generateGridInProblems(10))
     setCurrentIdx(0)
     setInputValue('')

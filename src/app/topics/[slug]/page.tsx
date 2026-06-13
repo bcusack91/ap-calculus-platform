@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
 import { EmailCapture } from '@/components/email-capture'
 import { generateTopicFaqs } from '@/lib/topic-faqs'
-import { faqJsonLd } from '@/lib/jsonld'
+import { faqJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { MarkdownCallout } from '@/components/MarkdownCallout'
 
 function TopicBottomAd() {
@@ -265,6 +265,23 @@ export default async function TopicPage(props: TopicPageProps) {
 
   return (
     <div className="container py-10">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: 'Home', url: '/' },
+              { name: topic.category.course.name, url: `/courses/${topic.category.course.slug}` },
+              { name: topic.category.name, url: `/categories/${topic.category.slug}` },
+              ...(topic.parentTopic
+                ? [{ name: topic.parentTopic.title, url: `/topics/${topic.parentTopic.slug}` }]
+                : []),
+              { name: topic.title, url: `/topics/${topic.slug}` },
+            ])
+          ),
+        }}
+      />
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"

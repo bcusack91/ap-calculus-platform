@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
-import { MCAT_REFERENCE_SHEETS } from '@/data/mcat-reference-sheets'
+import type { MCATReferenceSheet } from '@/data/mcat-reference-sheets'
 import { InArticleAd } from '@/components/ad-banner'
 
 const TABS: { key: string; label: string }[] = [
@@ -31,7 +31,19 @@ function RichItem({ text }: { text: string }) {
 
 export default function MCATReferencePage() {
   const [tab, setTab] = useState('chem-phys')
-  const sheet = MCAT_REFERENCE_SHEETS[tab]
+  // Defer the large reference-sheet data out of the initial bundle — it's only
+  // needed to render the section below, so load it on mount.
+  const [sheets, setSheets] = useState<Record<string, MCATReferenceSheet> | null>(null)
+
+  useEffect(() => {
+    let active = true
+    import('@/data/mcat-reference-sheets').then((m) => {
+      if (active) setSheets(m.MCAT_REFERENCE_SHEETS)
+    })
+    return () => { active = false }
+  }, [])
+
+  const sheet = sheets?.[tab]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -56,21 +68,38 @@ export default function MCATReferencePage() {
           ))}
         </div>
 
-        <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">{sheet.emoji} {sheet.name}</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {sheet.sections.map((section) => (
-            <div key={section.title} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <h3 className="mb-3 font-bold text-gray-900 dark:text-white">{section.title}</h3>
-              <ul className="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
-                {section.items.map((item, i) => (
-                  <li key={i} className="leading-relaxed">
-                    <RichItem text={item} />
-                  </li>
-                ))}
-              </ul>
+        {sheet ? (
+          <>
+            <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">{sheet.emoji} {sheet.name}</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {sheet.sections.map((section) => (
+                <div key={section.title} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                  <h3 className="mb-3 font-bold text-gray-900 dark:text-white">{section.title}</h3>
+                  <ul className="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
+                    {section.items.map((item, i) => (
+                      <li key={i} className="leading-relaxed">
+                        <RichItem text={item} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2" aria-hidden="true">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-40 animate-pulse rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <div className="mb-3 h-4 w-1/2 rounded bg-gray-200 dark:bg-gray-700" />
+                <div className="space-y-2">
+                  <div className="h-3 w-full rounded bg-gray-100 dark:bg-gray-700/60" />
+                  <div className="h-3 w-5/6 rounded bg-gray-100 dark:bg-gray-700/60" />
+                  <div className="h-3 w-4/6 rounded bg-gray-100 dark:bg-gray-700/60" />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="mx-auto mt-10 max-w-2xl">
           <InArticleAd />

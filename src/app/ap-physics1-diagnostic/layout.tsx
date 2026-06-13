@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/ap-physics1-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'AP Physics 1 Diagnostic Test',
+  educationalLevel: 'AP',
+  about: { '@type': 'Thing', name: 'AP Physics 1' },
+  url: 'https://www.studymondo.com/ap-physics1-diagnostic',
+}
+
 export default function APPhysics1DiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

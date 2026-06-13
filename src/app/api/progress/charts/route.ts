@@ -48,11 +48,11 @@ export async function GET() {
     // === Mastery over time (weekly aggregation for last 12 weeks) ===
     const masteryTimeline: { week: string; avgMastery: number; topicsCompleted: number }[] = []
     const now = new Date()
+    const WEEK_MS = 7 * 24 * 60 * 60 * 1000
     for (let i = 11; i >= 0; i--) {
-      const weekStart = new Date(now)
-      weekStart.setDate(weekStart.getDate() - (7 * (i + 1)))
-      const weekEnd = new Date(now)
-      weekEnd.setDate(weekEnd.getDate() - (7 * i))
+      // Use fixed epoch-based offsets so week buckets are DST-safe, contiguous, non-overlapping, and chronologically ordered (setDate could drift across month/DST boundaries)
+      const weekStart = new Date(now.getTime() - WEEK_MS * (i + 1))
+      const weekEnd = new Date(now.getTime() - WEEK_MS * i)
 
       const weekProgress = topicProgress.filter((tp) => {
         const d = new Date(tp.lastAccessed)
@@ -73,10 +73,9 @@ export async function GET() {
     // === Study time per week (last 12 weeks) ===
     const studyTimeline: { week: string; minutes: number }[] = []
     for (let i = 11; i >= 0; i--) {
-      const weekStart = new Date(now)
-      weekStart.setDate(weekStart.getDate() - (7 * (i + 1)))
-      const weekEnd = new Date(now)
-      weekEnd.setDate(weekEnd.getDate() - (7 * i))
+      // Same fixed epoch-based offsets as masteryTimeline for stable, contiguous, chronological week buckets
+      const weekStart = new Date(now.getTime() - WEEK_MS * (i + 1))
+      const weekEnd = new Date(now.getTime() - WEEK_MS * i)
 
       const weekActivities = recentActivity.filter((a) => {
         const d = new Date(a.lastAccessed)

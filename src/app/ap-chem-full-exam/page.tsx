@@ -7,7 +7,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
-import { generateFullExamFRQs, type ChemFRQ, type FRQRubricItem } from '@/data/ap-chem-frq/questions'
+import type { ChemFRQ, FRQRubricItem } from '@/data/ap-chem-frq/questions'
 import { generateExitQuiz } from '@/data/exit-quizzes'
 
 /* ------------------------------------------------------------------ */
@@ -136,6 +136,7 @@ export default function APChemFullExamPage() {
       setMcAnswers(new Array(questions.length).fill(null))
       setMcCurrentIdx(0)
 
+      const { generateFullExamFRQs } = await import('@/data/ap-chem-frq/questions')
       const { long, short } = generateFullExamFRQs()
       setFrqs([...long, ...short])
       setFrqCurrentIdx(0)

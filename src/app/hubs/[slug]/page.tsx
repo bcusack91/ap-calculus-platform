@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import TrackedLink from '@/components/TrackedLink'
 import { topicHubs, topicHubBySlug } from '@/data/topic-hubs'
+import { breadcrumbJsonLd } from '@/lib/jsonld'
 import { notFound } from 'next/navigation'
 
 interface HubPageProps {
@@ -40,6 +41,19 @@ export default async function TopicHubPage({ params }: HubPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-gray-950 dark:to-gray-900">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: 'Home', url: '/' },
+              { name: 'Topic Hubs', url: '/hubs' },
+              { name: hub.title, url: `/hubs/${hub.slug}` },
+            ])
+          ),
+        }}
+      />
       <div className="container max-w-5xl py-12">
         <div className={`rounded-3xl bg-gradient-to-r ${gradient} p-8 text-white shadow-xl`}>
           <p className="text-sm font-semibold uppercase tracking-wide text-white/80">Topic Hub</p>

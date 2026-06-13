@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/geometry-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'Geometry Diagnostic Test',
+  educationalLevel: 'High School',
+  about: { '@type': 'Thing', name: 'Geometry' },
+  url: 'https://www.studymondo.com/geometry-diagnostic',
+}
+
 export default function GeometryDiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

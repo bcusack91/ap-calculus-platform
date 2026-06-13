@@ -1,11 +1,62 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
+import { rateLimit } from '@/lib/rate-limit'
+import { isPremiumRole, FREE_LIMITS } from '@/lib/premium'
+
+// Per-user rate limit: this route calls an LLM, so unmetered access is a
+// direct cost-abuse vector. Key by the authenticated user id (not IP — a
+// single logged-in account behind a shared NAT shouldn't burn everyone's
+// budget, and per-user keying is the thing actually being metered/billed).
+const aiExplainLimiter = rateLimit({ maxRequests: 20, windowMs: 60_000, prefix: 'ai_explain' })
+
+// Premium gate: the AI tutor is a paid feature. Free users get a small DAILY
+// quota; Premium is unlimited (still subject to the per-minute abuse limiter
+// above). This is the value that justifies the subscription — keep it in sync
+// with PREMIUM_BENEFITS in src/lib/premium.ts.
+const aiExplainFreeDailyLimiter = rateLimit({
+  maxRequests: FREE_LIMITS.aiExplanationsPerDay,
+  windowMs: 24 * 60 * 60 * 1000,
+  prefix: 'ai_explain_daily_free',
+})
 
 export async function POST(request: Request) {
   try {
     const session = await auth()
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    // Throttle per user before doing any expensive work (LLM call).
+    const rateLimitResult = await aiExplainLimiter.check(session.user.id)
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(Math.ceil((rateLimitResult.resetTime - Date.now()) / 1000)),
+          },
+        }
+      )
+    }
+
+    // Premium gate: free users get a limited number of AI explanations per day.
+    if (!isPremiumRole(session.user.role)) {
+      const dailyResult = await aiExplainFreeDailyLimiter.check(session.user.id)
+      if (!dailyResult.success) {
+        return NextResponse.json(
+          {
+            error: `You've used your ${FREE_LIMITS.aiExplanationsPerDay} free AI tutor explanations for today. Upgrade to Premium for unlimited explanations.`,
+            upgrade: true,
+          },
+          {
+            status: 429,
+            headers: {
+              'Retry-After': String(Math.ceil((dailyResult.resetTime - Date.now()) / 1000)),
+            },
+          }
+        )
+      }
     }
 
     const { concept, style } = await request.json()

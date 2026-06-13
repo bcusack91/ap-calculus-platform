@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { isAIOpponent } from '@/lib/ai-opponent';
+import { sweepStaleMatchById, STALE_MATCH_MS } from '../../_lib/sweep-stale-matches';
 
 interface MatchGameData {
   player1QuestionIndex?: number;
@@ -41,27 +42,29 @@ export async function GET(
 
     const { id: matchId } = await params;
 
-    // Fetch match with player details
-    const match = await prisma.competitiveMatch.findUnique({
-      where: { id: matchId },
-      include: {
-        player1: {
-          select: {
-            id: true,
-            name: true,
-            email: true,
-            avatarData: true,
-          },
-        },
-        player2: {
-          select: {
-            id: true,
-            name: true,
-            email: true,
-            avatarData: true,
-          },
+    const matchInclude = {
+      player1: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          avatarData: true,
         },
       },
+      player2: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          avatarData: true,
+        },
+      },
+    } as const;
+
+    // Fetch match with player details
+    let match = await prisma.competitiveMatch.findUnique({
+      where: { id: matchId },
+      include: matchInclude,
     });
 
     if (!match) {
@@ -71,6 +74,26 @@ export async function GET(
     // Verify user is a participant
     if (match.player1Id !== session.user.id && match.player2Id !== session.user.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+    }
+
+    // Abandoned-match sweep: if this match has been IN_PROGRESS past the stale
+    // threshold (a player disconnected and never finished it), finalize it here
+    // — COMPLETED, no winner, no MMR — so it doesn't linger and block requeueing.
+    // The sweep is race-safe (locked transaction + re-check); if it actually
+    // transitioned the match, re-read so the response reflects the final state.
+    if (
+      match.status === 'IN_PROGRESS' &&
+      match.startedAt &&
+      Date.now() - new Date(match.startedAt).getTime() >= STALE_MATCH_MS
+    ) {
+      const swept = await sweepStaleMatchById(matchId);
+      if (swept) {
+        const refreshed = await prisma.competitiveMatch.findUnique({
+          where: { id: matchId },
+          include: matchInclude,
+        });
+        if (refreshed) match = refreshed;
+      }
     }
 
     // Parse game data from JSON

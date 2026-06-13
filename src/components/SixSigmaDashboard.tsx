@@ -2,6 +2,9 @@
 
 import { SixSigmaAnalytics } from '@/utils/six-sigma-analytics'
 import { useState, useEffect, useCallback } from 'react'
+import { useSession } from 'next-auth/react'
+import Link from 'next/link'
+import { isPremiumRole } from '@/lib/premium'
 
 interface SixSigmaDashboardProps {
   topicSlug: string
@@ -9,6 +12,8 @@ interface SixSigmaDashboardProps {
 }
 
 export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboardProps) {
+  const { data: session } = useSession()
+  const premium = isPremiumRole(session?.user?.role)
   const [analytics, setAnalytics] = useState<SixSigmaAnalytics | null>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'overview' | 'control-chart' | 'pareto' | 'recommendations'>('overview')
@@ -26,8 +31,29 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
   }, [topicSlug, userId])
 
   useEffect(() => {
-    loadAnalytics()
-  }, [loadAnalytics])
+    if (premium) loadAnalytics()
+    else setLoading(false)
+  }, [loadAnalytics, premium])
+
+  // Premium gate: advanced (Six Sigma) analytics is a paid feature. Free users
+  // see an upgrade prompt instead of the dashboard (the API enforces this too).
+  if (!premium) {
+    return (
+      <div className="rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 p-8 text-center dark:border-purple-800 dark:from-purple-900/20 dark:to-blue-900/20">
+        <span className="text-4xl">📊</span>
+        <h3 className="mt-2 text-xl font-bold text-gray-900 dark:text-white">Advanced Analytics is a Premium feature</h3>
+        <p className="mx-auto mt-2 max-w-md text-sm text-gray-600 dark:text-gray-400">
+          Unlock Six Sigma performance analytics — control charts, DPMO trends, and process-capability scoring — to see exactly where to focus your practice.
+        </p>
+        <Link
+          href="/pricing"
+          className="mt-5 inline-flex rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-2.5 font-semibold text-white transition hover:from-purple-700 hover:to-blue-700"
+        >
+          Upgrade to Premium
+        </Link>
+      </div>
+    )
+  }
 
   if (loading) {
     return (

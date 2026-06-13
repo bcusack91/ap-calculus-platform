@@ -6,12 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/auth/'],
+        disallow: ['/api/', '/auth/', '/competitive/'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/auth/'],
+        disallow: ['/api/', '/auth/', '/competitive/'],
       },
       {
         userAgent: 'AhrefsBot',
@@ -32,7 +32,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/auth/', '/admin/'],
+        disallow: ['/api/', '/auth/', '/admin/', '/competitive/'],
       },
     ],
     sitemap: 'https://www.studymondo.com/sitemap.xml',

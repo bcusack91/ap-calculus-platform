@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isPremiumRole } from '@/lib/premium'
 import { generateSixSigmaAnalytics, PerformanceDataPoint } from '@/utils/six-sigma-analytics'
 
 export async function GET(request: NextRequest) {
@@ -9,6 +10,13 @@ export async function GET(request: NextRequest) {
     const session = await auth()
     if (!session?.user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    // Advanced (Six Sigma) analytics is a Premium feature. Enforce server-side
+    // so the gate can't be bypassed by calling the API directly; the dashboard
+    // UI shows an upgrade prompt to free users.
+    if (!isPremiumRole(session.user.role)) {
+      return NextResponse.json({ error: 'Premium required', upgrade: true }, { status: 403 })
     }
 
     const searchParams = request.nextUrl.searchParams

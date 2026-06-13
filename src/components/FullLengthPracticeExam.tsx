@@ -618,6 +618,9 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
 
   /* ---------- LEQ rendering ---------- */
   if (item.type === 'leq' && ans?.type === 'leq') {
+    // Guard against an out-of-bounds chosenPromptIndex (e.g. restored/corrupted state) so accessing the prompt label never throws; degrade gracefully if no valid prompt exists
+    const chosenPrompt = item.promptOptions[ans.chosenPromptIndex]
+    if (!chosenPrompt) return null
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
@@ -637,7 +640,7 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
             </div>
           </div>
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <p className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">Your essay (Option {item.promptOptions[ans.chosenPromptIndex].label}):</p>
+            <p className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">Your essay (Option {chosenPrompt.label}):</p>
             <textarea
               value={ans.response}
               onChange={e => updateAnswer(a => a.type === 'leq' ? { ...a, response: e.target.value } : a)}
@@ -667,15 +670,20 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
               })}
             </div>
           )}
-          {ans.submitted && item.sampleResponses && item.sampleResponses.find(s => s.promptLabel === item.promptOptions[ans.chosenPromptIndex].label) && (
-            <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-              <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response for Option {item.promptOptions[ans.chosenPromptIndex].label}</summary>
-              <RichText
-                text={item.sampleResponses.find(s => s.promptLabel === item.promptOptions[ans.chosenPromptIndex].label)!.response}
-                className="mt-3 text-sm text-gray-700 dark:text-gray-300"
-              />
-            </details>
-          )}
+          {ans.submitted && (() => {
+            // Look up the sample response once; the prior .find(...)! could mismatch and the ! assertion would crash — bind and existence-check instead
+            const sample = item.sampleResponses?.find(s => s.promptLabel === chosenPrompt.label)
+            if (!sample) return null
+            return (
+              <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+                <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response for Option {chosenPrompt.label}</summary>
+                <RichText
+                  text={sample.response}
+                  className="mt-3 text-sm text-gray-700 dark:text-gray-300"
+                />
+              </details>
+            )
+          })()}
           {navFooter()}
         </div></div>
       </div>

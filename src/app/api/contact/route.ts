@@ -1,11 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
+import { auth } from "@/lib/auth";
 import { z } from "zod";
 
 // Rate limit: 5 contact submissions per IP per hour
 // (Redis-backed distributed limiter — falls back to in-memory when Redis is unconfigured)
 const contactFormLimiter = rateLimit({ maxRequests: 5, windowMs: 60 * 60 * 1000, prefix: "contact_form" });
+
+// Per-account fallback cap: IP-only limiting is trivially bypassed by rotating
+// IPs (botnets, mobile networks, proxies). When the submitter is authenticated
+// we additionally cap by user id, which a distributed attacker cannot rotate
+// without also rotating accounts. Stricter than the IP limit on purpose.
+const contactUserLimiter = rateLimit({ maxRequests: 3, windowMs: 60 * 60 * 1000, prefix: "contact_form_user" });
 
 // Input bounds — mirrors the categories offered in src/components/contact-form.tsx
 const contactSchema = z.object({
@@ -37,6 +44,26 @@ export async function POST(request: NextRequest) {
           },
         }
       );
+    }
+
+    // Stricter fallback for authenticated submitters: cap by user id so a single
+    // account can't fan submissions out across many IPs to dodge the IP limit.
+    // Anonymous submitters are unaffected (still covered by the IP limit above).
+    const session = await auth();
+    const userId = session?.user?.id;
+    if (userId) {
+      const userRateLimit = await contactUserLimiter.check(userId);
+      if (!userRateLimit.success) {
+        return NextResponse.json(
+          { error: "Too many submissions. Please try again later." },
+          {
+            status: 429,
+            headers: {
+              "Retry-After": String(Math.ceil((userRateLimit.resetTime - Date.now()) / 1000)),
+            },
+          }
+        );
+      }
     }
 
     const body = await request.json();

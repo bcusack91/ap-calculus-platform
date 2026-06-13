@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@prisma/client'
 
 function parseMaybeJsonArray(value: unknown): string | number | boolean | object | undefined {
   if (value == null) return undefined
@@ -40,11 +41,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    // Guard JSON.parse so malformed client input returns a clean 400 instead of an unhandled 500 that loses the student's results
+    let parsedResults: Prisma.InputJsonValue
+    try {
+      parsedResults = typeof results === 'string' ? JSON.parse(results) : results
+    } catch {
+      return NextResponse.json({ error: 'Invalid results format' }, { status: 400 })
+    }
+
     const diagnostic = await prisma.diagnosticTest.create({
       data: {
         userId: session.user.id,
         category,
-        results: typeof results === 'string' ? JSON.parse(results) : results,
+        results: parsedResults,
         weakAreas: parseMaybeJsonArray(weakAreas),
         strengths: (() => {
           const parsedStrengths = parseMaybeJsonArray(strengths)

@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions } from '@/lib/competitive-utils'
 import { queueJoinSchema, parseBody } from '@/lib/validations'
+import { sweepStaleMatchesForUser } from '../_lib/sweep-stale-matches'
 import type { Prisma } from '@prisma/client'
 
 /**
@@ -42,6 +43,11 @@ export async function POST(req: NextRequest) {
     if (!user?.competitiveProfile) {
       return NextResponse.json({ error: 'Competitive mode not unlocked' }, { status: 403 })
     }
+
+    // First reap any abandoned (stale IN_PROGRESS) matches this user is in, so a
+    // game they disconnected from doesn't count as a "live match" below and lock
+    // them out of requeueing forever. No-op for genuinely active matches.
+    await sweepStaleMatchesForUser(user.id)
 
     // Reject queueing if the user already has a live match (#5). Otherwise a
     // user could sit in an IN_PROGRESS match and simultaneously queue for / get
@@ -86,52 +92,77 @@ export async function POST(req: NextRequest) {
       where: { joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
     })
 
-    // Try to find an opponent already in the queue
+    // Try to find an opponent already in the queue.
+    //
+    // The selection + match creation MUST be atomic. Previously this read an
+    // opponent with findFirst and then created the match in a separate step, so
+    // two joiners could pick the SAME opponent and either double-book them into
+    // two matches or collide on the queue delete (one of them 500ing). Here we
+    // re-select and CLAIM the opponent inside a transaction: lock the candidate
+    // row FOR UPDATE, confirm it's still queued, then delete-claim it before
+    // creating the match. The row lock serialises competing joiners; the loser
+    // sees the row already gone and falls through to enqueue itself.
     const mmrRange = 50
-    const opponent = await prisma.matchmakingQueue.findFirst({
-      where: {
-        topicSlug,
-        userId: { not: user.id },
-        mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
-      },
-      orderBy: { joinedAt: 'asc' },
-    })
+    const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
+    const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
 
-    if (opponent) {
-      // Found a match — generate questions, create match, remove opponent from queue
-      const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
-      const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
+    const claimed = await prisma.$transaction(async (tx) => {
+      // Find a candidate opponent inside the tx.
+      const candidate = await tx.matchmakingQueue.findFirst({
+        where: {
+          topicSlug,
+          userId: { not: user.id },
+          mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
+        },
+        orderBy: { joinedAt: 'asc' },
+        select: { id: true },
+      })
+      if (!candidate) return null
+
+      // Lock the candidate's queue row, then re-read it under the lock. If a
+      // competing joiner already claimed (deleted) it, FOR UPDATE on a vanished
+      // row returns nothing and we bail — no double-booking.
+      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
+        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
+      `
+      const opponent = locked[0]
+      if (!opponent) return null
+
+      // Atomically claim the opponent: delete their queue entry. (Belt-and-
+      // suspenders: scope the delete by id so it only removes the row we locked.)
+      await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
+
       const questions = generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
+      const competitiveMatch = await tx.competitiveMatch.create({
+        data: {
+          player1Id: opponent.userId,
+          player2Id: user.id,
+          gameMode: gameMode || 'SPEED_RACE',
+          topicSlug,
+          player1MMRBefore: opponent.mmr,
+          player2MMRBefore: mmr,
+          player1MMRAfter: opponent.mmr,
+          player2MMRAfter: mmr,
+          player1Score: 0,
+          player2Score: 0,
+          status: 'IN_PROGRESS',
+          startedAt: new Date(),
+          gameData: {
+            questions,
+            player1QuestionIndex: 0,
+            player2QuestionIndex: 0,
+          } as unknown as Prisma.InputJsonValue,
+        },
+      })
 
-      const [competitiveMatch] = await prisma.$transaction([
-        prisma.competitiveMatch.create({
-          data: {
-            player1Id: opponent.userId,
-            player2Id: user.id,
-            gameMode: gameMode || 'SPEED_RACE',
-            topicSlug,
-            player1MMRBefore: opponent.mmr,
-            player2MMRBefore: mmr,
-            player1MMRAfter: opponent.mmr,
-            player2MMRAfter: mmr,
-            player1Score: 0,
-            player2Score: 0,
-            status: 'IN_PROGRESS',
-            startedAt: new Date(),
-            gameData: {
-              questions,
-              player1QuestionIndex: 0,
-              player2QuestionIndex: 0,
-            } as unknown as Prisma.InputJsonValue,
-          },
-        }),
-        prisma.matchmakingQueue.delete({ where: { id: opponent.id } }),
-      ])
+      return { matchId: competitiveMatch.id, opponentId: opponent.userId }
+    }, { timeout: 15000 })
 
+    if (claimed) {
       return NextResponse.json({
         status: 'matched',
-        matchId: competitiveMatch.id,
-        opponent: { id: opponent.userId },
+        matchId: claimed.matchId,
+        opponent: { id: claimed.opponentId },
       })
     }
 
@@ -220,6 +251,11 @@ export async function GET() {
 
     const entry = user.matchmakingEntry
     if (!entry) {
+      // Before redirecting the user back into a "live" match, finalize any stale
+      // one they abandoned — otherwise the poller would bounce them forever into
+      // a dead game instead of returning not_in_queue.
+      await sweepStaleMatchesForUser(user.id)
+
       // Queue entry may have been deleted by opponent's POST creating a match.
       // Check if the user has an active match they should be redirected to.
       const activeMatch = await prisma.competitiveMatch.findFirst({
@@ -252,50 +288,71 @@ export async function GET() {
             ? 150
             : 250
 
-    // Try to find an opponent with the expanded range
-    const opponent = await prisma.matchmakingQueue.findFirst({
-      where: {
-        topicSlug: entry.topicSlug,
-        userId: { not: user.id },
-        mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
-      },
-      orderBy: { joinedAt: 'asc' },
-    })
+    // Try to find an opponent with the expanded range, and claim them
+    // atomically — same race-safe pattern as the POST handler. Without this,
+    // two pollers (or a poller racing a POST) could select the same opponent
+    // and create duplicate matches / collide on the queue deletes. We lock the
+    // candidate's row, re-check it's still queued, then delete-claim both the
+    // opponent's entry AND our own entry inside one transaction.
+    const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
+    const questionCount = (entry.gameMode as string) === 'ACCURACY_CHALLENGE' ? 20 : 10
 
-    if (opponent) {
-      const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
-      const questionCount = (entry.gameMode as string) === 'ACCURACY_CHALLENGE' ? 20 : 10
+    const claimed = await prisma.$transaction(async (tx) => {
+      const candidate = await tx.matchmakingQueue.findFirst({
+        where: {
+          topicSlug: entry.topicSlug,
+          userId: { not: user.id },
+          mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
+        },
+        orderBy: { joinedAt: 'asc' },
+        select: { id: true },
+      })
+      if (!candidate) return null
+
+      // Lock + re-read the candidate. If a competitor already claimed it, the
+      // locked read returns nothing and we bail (fall through to "still waiting").
+      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
+        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
+      `
+      const opponent = locked[0]
+      if (!opponent) return null
+
+      // Claim the opponent and remove our own queue entry in the same tx.
+      // deleteMany (not delete) for our own entry so a concurrently-consumed
+      // entry is a no-op rather than a P2025 that rolls back the whole pairing.
+      await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
+      await tx.matchmakingQueue.deleteMany({ where: { id: entry.id } })
+
       const questions = generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs)
+      const competitiveMatch = await tx.competitiveMatch.create({
+        data: {
+          player1Id: opponent.userId,
+          player2Id: user.id,
+          gameMode: (entry.gameMode as 'SPEED_RACE') || 'SPEED_RACE',
+          topicSlug: entry.topicSlug,
+          player1MMRBefore: opponent.mmr,
+          player2MMRBefore: entry.mmr,
+          player1MMRAfter: opponent.mmr,
+          player2MMRAfter: entry.mmr,
+          player1Score: 0,
+          player2Score: 0,
+          status: 'IN_PROGRESS',
+          startedAt: new Date(),
+          gameData: {
+            questions,
+            player1QuestionIndex: 0,
+            player2QuestionIndex: 0,
+          } as unknown as Prisma.InputJsonValue,
+        },
+      })
 
-      const [competitiveMatch] = await prisma.$transaction([
-        prisma.competitiveMatch.create({
-          data: {
-            player1Id: opponent.userId,
-            player2Id: user.id,
-            gameMode: (entry.gameMode as 'SPEED_RACE') || 'SPEED_RACE',
-            topicSlug: entry.topicSlug,
-            player1MMRBefore: opponent.mmr,
-            player2MMRBefore: entry.mmr,
-            player1MMRAfter: opponent.mmr,
-            player2MMRAfter: entry.mmr,
-            player1Score: 0,
-            player2Score: 0,
-            status: 'IN_PROGRESS',
-            startedAt: new Date(),
-            gameData: {
-              questions,
-              player1QuestionIndex: 0,
-              player2QuestionIndex: 0,
-            } as unknown as Prisma.InputJsonValue,
-          },
-        }),
-        prisma.matchmakingQueue.delete({ where: { id: opponent.id } }),
-        prisma.matchmakingQueue.delete({ where: { id: entry.id } }),
-      ])
+      return { matchId: competitiveMatch.id }
+    }, { timeout: 15000 })
 
+    if (claimed) {
       return NextResponse.json({
         status: 'matched',
-        matchId: competitiveMatch.id,
+        matchId: claimed.matchId,
       })
     }
 

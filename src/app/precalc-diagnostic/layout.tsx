@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/precalc-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'Pre-Calculus Diagnostic Test',
+  educationalLevel: 'High School',
+  about: { '@type': 'Thing', name: 'Pre-Calculus' },
+  url: 'https://www.studymondo.com/precalc-diagnostic',
+}
+
 export default function PreCalcDiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

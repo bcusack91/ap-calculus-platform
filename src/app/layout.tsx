@@ -59,12 +59,21 @@ export const metadata: Metadata = {
     url: "https://www.studymondo.com",
     siteName: "Study Mondo",
     type: "website",
+    images: [
+      {
+        url: "https://www.studymondo.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Study Mondo — Free AP, SAT & MCAT Study Platform",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
       "Free notes, flashcards, practice problems & interactive lessons — 100% free. Join thousands of students studying smarter.",
+    images: ["https://www.studymondo.com/og-image.png"],
   },
   icons: {
     icon: [

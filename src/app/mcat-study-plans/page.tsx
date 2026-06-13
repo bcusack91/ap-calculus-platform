@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { MCAT_STUDY_PLANS } from '@/data/mcat-study-plans'
+import type { MCATStudyPlanTemplate } from '@/data/mcat-study-plans'
 import DiagnosticFocusBanner from '@/components/DiagnosticFocusBanner'
 
 const difficultyColors: Record<string, string> = {
@@ -29,6 +29,17 @@ export default function MCATStudyPlansPage() {
   const [examDate, setExamDate] = useState('')
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+  // Defer the large study-plan templates module out of the initial bundle —
+  // it's only needed to render the grid below, so load it on mount.
+  const [plans, setPlans] = useState<MCATStudyPlanTemplate[]>([])
+
+  useEffect(() => {
+    let active = true
+    import('@/data/mcat-study-plans').then((m) => {
+      if (active) setPlans(m.MCAT_STUDY_PLANS)
+    })
+    return () => { active = false }
+  }, [])
 
   async function adoptPlan(templateId: string) {
     if (status !== 'authenticated') {
@@ -91,7 +102,21 @@ export default function MCATStudyPlansPage() {
 
         {/* Plans Grid */}
         <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
-          {MCAT_STUDY_PLANS.map(plan => {
+          {plans.length === 0
+            ? Array.from({ length: 3 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="flex h-80 animate-pulse flex-col rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
+                >
+                  <div className="h-28 rounded-t-2xl bg-gray-200 dark:bg-gray-700" />
+                  <div className="flex-1 p-6">
+                    <div className="mb-4 h-4 w-3/4 rounded bg-gray-200 dark:bg-gray-700" />
+                    <div className="mb-2 h-3 w-full rounded bg-gray-100 dark:bg-gray-700/60" />
+                    <div className="h-3 w-5/6 rounded bg-gray-100 dark:bg-gray-700/60" />
+                  </div>
+                </div>
+              ))
+            : plans.map(plan => {
             const isSelected = selectedPlan === plan.id
             return (
               <div

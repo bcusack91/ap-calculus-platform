@@ -4,26 +4,21 @@ import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { trackPremiumUpgradeClick } from '@/lib/analytics'
+import { PREMIUM_BENEFITS, PREMIUM_PRICING, FREE_LIMITS } from '@/lib/premium'
 
+// Free tier — these are genuinely free for everyone (the platform is ad-funded).
 const FREE_FEATURES = [
-  'Access to all text explanations',
+  'All courses, topics, lessons & interactive content',
+  'Diagnostics, practice tests, daily questions & study plans',
   'Example problems & worked solutions',
-  'Basic flashcards',
-  'Community features',
+  'Flashcards, streaks, achievements & progress tracking',
+  `${FREE_LIMITS.aiExplanationsPerDay} AI tutor explanations per day`,
   'Ad-supported experience',
 ]
 
-const PREMIUM_FEATURES = [
-  'Everything in Free',
-  'Ad-free experience',
-  'Spaced-repetition flashcards with progress tracking',
-  'Detailed analytics & progress reports',
-  'Adaptive learning modules',
-  'Diagnostic tests',
-  'Daily streak tracking',
-  'Achievement system',
-  'Priority support',
-]
+// Premium — ONLY what is actually gated. Sourced from src/lib/premium.ts so this
+// list can't drift from the real gates (it previously advertised free features).
+const PREMIUM_FEATURES = ['Everything in Free, plus:', ...PREMIUM_BENEFITS]
 
 export default function PricingPageClient() {
   const { data: session, status } = useSession()
@@ -31,10 +26,10 @@ export default function PricingPageClient() {
   const [billing, setBilling] = useState<'monthly' | 'annual'>('monthly')
   const [loading, setLoading] = useState(false)
 
-  const monthlyPrice = 9.99
-  const annualPrice = 7.99
+  const monthlyPrice = PREMIUM_PRICING.monthly
+  const annualPrice = PREMIUM_PRICING.annual
   const price = billing === 'monthly' ? monthlyPrice : annualPrice
-  const isPremium = session?.user?.role === 'PREMIUM'
+  const isPremium = session?.user?.role === 'PREMIUM' || session?.user?.role === 'ADMIN'
 
   const handleUpgrade = async () => {
     trackPremiumUpgradeClick('pricing_page')

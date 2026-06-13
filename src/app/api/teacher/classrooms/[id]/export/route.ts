@@ -121,10 +121,22 @@ export async function GET(
         `Total Assignments,${assignments.length}`,
       ].join('\n')
 
+      // Build the download filename from the (attacker-controllable) classroom
+      // name. Two forms are emitted per RFC 6266:
+      //  - filename="..."  : ASCII fallback. We collapse every non-alphanumeric
+      //    char to '_', which strips quotes/CR/LF that could otherwise break out
+      //    of the header or smuggle a second header.
+      //  - filename*=UTF-8'': percent-encoded UTF-8 so the real (possibly
+      //    non-ASCII) name survives in modern clients. encodeURIComponent()
+      //    guarantees the value contains only header-safe characters.
+      const datePart = new Date().toISOString().split('T')[0]
+      const asciiName = `${classroom.name.replace(/[^a-z0-9]/gi, '_')}_grades_${datePart}.csv`
+      const utf8Name = encodeURIComponent(`${classroom.name}_grades_${datePart}.csv`)
+
       return new Response(csvContent, {
         headers: {
           'Content-Type': 'text/csv; charset=utf-8',
-          'Content-Disposition': `attachment; filename="${classroom.name.replace(/[^a-z0-9]/gi, '_')}_grades_${new Date().toISOString().split('T')[0]}.csv"`,
+          'Content-Disposition': `attachment; filename="${asciiName}"; filename*=UTF-8''${utf8Name}`,
         },
       })
     }

@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/mcat-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'MCAT Diagnostic Test',
+  educationalLevel: 'MCAT',
+  about: { '@type': 'Thing', name: 'MCAT' },
+  url: 'https://www.studymondo.com/mcat-diagnostic',
+}
+
 export default function MCATDiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

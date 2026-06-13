@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/sat-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'SAT Diagnostic Test',
+  educationalLevel: 'SAT',
+  about: { '@type': 'Thing', name: 'SAT' },
+  url: 'https://www.studymondo.com/sat-diagnostic',
+}
+
 export default function SATDiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

@@ -6,6 +6,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/calcab-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'AP Calculus AB Diagnostic Test',
+  educationalLevel: 'AP',
+  about: { '@type': 'Thing', name: 'AP Calculus AB' },
+  url: 'https://www.studymondo.com/calcab-diagnostic',
+}
+
 export default function CalcABDiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

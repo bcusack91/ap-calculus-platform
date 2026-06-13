@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/ap-psych-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'AP Psychology Diagnostic Test',
+  educationalLevel: 'AP',
+  about: { '@type': 'Thing', name: 'AP Psychology' },
+  url: 'https://www.studymondo.com/ap-psych-diagnostic',
+}
+
 export default function APPsychDiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

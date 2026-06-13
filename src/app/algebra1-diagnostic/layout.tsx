@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.studymondo.com/algebra1-diagnostic' },
 }
 
+const quizJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'Algebra 1 Diagnostic Test',
+  educationalLevel: 'High School',
+  about: { '@type': 'Thing', name: 'Algebra 1' },
+  url: 'https://www.studymondo.com/algebra1-diagnostic',
+}
+
 export default function Algebra1DiagnosticLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }} />
+      {children}
+    </>
+  )
 }

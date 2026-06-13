@@ -4,14 +4,33 @@ import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { generateDiagnosticTest, rebuildRecommendedTopics } from '@/data/sat-practice/diagnostic-generator'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
-import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { InArticleAd } from '@/components/ad-banner'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
+
+// Heavy (~660-line) interactive component — only rendered once the user starts the
+// test or views results, so code-split it out of the initial page bundle.
+const diagnosticSkeleton = (
+  <div className="mx-auto max-w-3xl space-y-6">
+    <div className="h-8 w-48 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700" />
+    <div className="h-64 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" />
+  </div>
+)
+
+const DiagnosticTest = dynamic(() => import('@/components/SATDiagnostic'), {
+  ssr: false,
+  loading: () => diagnosticSkeleton,
+})
+
+const DiagnosticResultsView = dynamic(
+  () => import('@/components/SATDiagnostic').then((m) => m.DiagnosticResultsView),
+  { ssr: false, loading: () => diagnosticSkeleton },
+)
 
 export default function SATDiagnosticPage() {
   const { status } = useSession()

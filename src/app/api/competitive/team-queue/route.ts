@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions } from '@/lib/competitive-utils'
-import type { Prisma } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 
 /**
  * Team Battle 2v2 Queue
@@ -52,20 +52,42 @@ export async function POST(req: NextRequest) {
       where: { joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
     })
 
-    // Look for 3 other players already queued for TEAM_BATTLE on this topic
+    // Look for 3 other players already queued for TEAM_BATTLE on this topic,
+    // then CLAIM them atomically. Same race as the 1v1 queue but worse: four
+    // concurrent joiners could each see the same 3 candidates and spin up
+    // multiple overlapping team matches / collide on the queue deletes. Inside
+    // the transaction we lock the 3 candidate rows FOR UPDATE (ordered by id to
+    // avoid deadlocks between joiners locking the same set), re-confirm all 3 are
+    // still queued, then delete-claim them before creating the match. If any
+    // candidate was already claimed, we bail and the user falls through to wait.
     const mmrRange = 200
-    const candidates = await prisma.matchmakingQueue.findMany({
-      where: {
-        topicSlug,
-        gameMode: 'TEAM_BATTLE',
-        userId: { not: user.id },
-        mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
-      },
-      orderBy: { joinedAt: 'asc' },
-      take: 3,
-    })
+    const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
 
-    if (candidates.length >= 3) {
+    const claimed = await prisma.$transaction(async (tx) => {
+      const found = await tx.matchmakingQueue.findMany({
+        where: {
+          topicSlug,
+          gameMode: 'TEAM_BATTLE',
+          userId: { not: user.id },
+          mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
+        },
+        orderBy: { joinedAt: 'asc' },
+        take: 3,
+        select: { id: true },
+      })
+      if (found.length < 3) return null
+
+      // Lock the candidate rows and re-read them. Ordering by id gives a stable
+      // lock-acquisition order so two joiners contending for the same players
+      // can't deadlock. If fewer than 3 survive the lock, someone else claimed
+      // one first — abort the pairing.
+      const ids = found.map((c) => c.id)
+      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
+        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id IN (${Prisma.join(ids)}) ORDER BY id FOR UPDATE
+      `
+      if (locked.length < 3) return null
+      const candidates = locked.slice(0, 3)
+
       // We have 4 players (3 candidates + current user). Create a team match.
       const allPlayers = [
         { userId: candidates[0].userId, mmr: candidates[0].mmr },
@@ -79,57 +101,57 @@ export async function POST(req: NextRequest) {
       const team1 = [allPlayers[0], allPlayers[3]] // highest + lowest
       const team2 = [allPlayers[1], allPlayers[2]] // 2nd + 3rd
 
-      const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
       const questions = generateMatchQuestions(15, topicSlug, completedTopicSlugs)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
 
-      const [match] = await prisma.$transaction([
-        prisma.competitiveMatch.create({
-          data: {
-            player1Id: team1[0].userId,
-            player2Id: team2[0].userId,
-            gameMode: 'TEAM_BATTLE',
-            topicSlug,
-            player1MMRBefore: team1AvgMMR,
-            player2MMRBefore: team2AvgMMR,
-            player1MMRAfter: team1AvgMMR,
-            player2MMRAfter: team2AvgMMR,
-            player1Score: 0,
-            player2Score: 0,
-            status: 'IN_PROGRESS',
-            startedAt: new Date(),
-            gameData: {
-              isTeamBattle: true,
-              questions,
-              team1: {
-                players: [team1[0].userId, team1[1].userId],
-                score: 0,
-                questionIndices: { [team1[0].userId]: 0, [team1[1].userId]: 0 },
-                answers: { [team1[0].userId]: [], [team1[1].userId]: [] },
-              },
-              team2: {
-                players: [team2[0].userId, team2[1].userId],
-                score: 0,
-                questionIndices: { [team2[0].userId]: 0, [team2[1].userId]: 0 },
-                answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
-              },
-              playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
-              player1QuestionIndex: 0,
-              player2QuestionIndex: 0,
-            } as unknown as Prisma.InputJsonValue,
-          },
-        }),
-        // Remove matched candidates from queue
-        prisma.matchmakingQueue.delete({ where: { id: candidates[0].id } }),
-        prisma.matchmakingQueue.delete({ where: { id: candidates[1].id } }),
-        prisma.matchmakingQueue.delete({ where: { id: candidates[2].id } }),
-      ])
+      // Claim the 3 opponents (scoped to the exact locked rows).
+      await tx.matchmakingQueue.deleteMany({ where: { id: { in: candidates.map((c) => c.id) } } })
 
+      const match = await tx.competitiveMatch.create({
+        data: {
+          player1Id: team1[0].userId,
+          player2Id: team2[0].userId,
+          gameMode: 'TEAM_BATTLE',
+          topicSlug,
+          player1MMRBefore: team1AvgMMR,
+          player2MMRBefore: team2AvgMMR,
+          player1MMRAfter: team1AvgMMR,
+          player2MMRAfter: team2AvgMMR,
+          player1Score: 0,
+          player2Score: 0,
+          status: 'IN_PROGRESS',
+          startedAt: new Date(),
+          gameData: {
+            isTeamBattle: true,
+            questions,
+            team1: {
+              players: [team1[0].userId, team1[1].userId],
+              score: 0,
+              questionIndices: { [team1[0].userId]: 0, [team1[1].userId]: 0 },
+              answers: { [team1[0].userId]: [], [team1[1].userId]: [] },
+            },
+            team2: {
+              players: [team2[0].userId, team2[1].userId],
+              score: 0,
+              questionIndices: { [team2[0].userId]: 0, [team2[1].userId]: 0 },
+              answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
+            },
+            playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
+            player1QuestionIndex: 0,
+            player2QuestionIndex: 0,
+          } as unknown as Prisma.InputJsonValue,
+        },
+      })
+
+      return { matchId: match.id }
+    }, { timeout: 15000 })
+
+    if (claimed) {
       return NextResponse.json({
         status: 'matched',
-        matchId: match.id,
+        matchId: claimed.matchId,
         teamMode: '2v2',
       })
     }
@@ -252,19 +274,33 @@ export async function GET() {
     const waitMs = Date.now() - entry.joinedAt.getTime()
     const mmrRange = waitMs < 10000 ? 200 : waitMs < 30000 ? 400 : 600
 
-    // Try to find 3 opponents
-    const candidates = await prisma.matchmakingQueue.findMany({
-      where: {
-        topicSlug: entry.topicSlug,
-        gameMode: 'TEAM_BATTLE',
-        userId: { not: user.id },
-        mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
-      },
-      orderBy: { joinedAt: 'asc' },
-      take: 3,
-    })
+    // Try to find 3 opponents and claim them atomically (same race-safe pattern
+    // as the POST handler / 1v1 queue): lock the candidate rows FOR UPDATE,
+    // re-confirm all 3 survive, then delete-claim them plus our own entry inside
+    // one transaction. Bail to "still waiting" if any candidate was taken first.
+    const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
 
-    if (candidates.length >= 3) {
+    const claimed = await prisma.$transaction(async (tx) => {
+      const found = await tx.matchmakingQueue.findMany({
+        where: {
+          topicSlug: entry.topicSlug,
+          gameMode: 'TEAM_BATTLE',
+          userId: { not: user.id },
+          mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
+        },
+        orderBy: { joinedAt: 'asc' },
+        take: 3,
+        select: { id: true },
+      })
+      if (found.length < 3) return null
+
+      const ids = found.map((c) => c.id)
+      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
+        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id IN (${Prisma.join(ids)}) ORDER BY id FOR UPDATE
+      `
+      if (locked.length < 3) return null
+      const candidates = locked.slice(0, 3)
+
       const allPlayers = [
         { userId: candidates[0].userId, mmr: candidates[0].mmr },
         { userId: candidates[1].userId, mmr: candidates[1].mmr },
@@ -276,55 +312,56 @@ export async function GET() {
       const team1 = [allPlayers[0], allPlayers[3]]
       const team2 = [allPlayers[1], allPlayers[2]]
 
-      const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
       const questions = generateMatchQuestions(15, entry.topicSlug, completedTopicSlugs)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
 
-      const [match] = await prisma.$transaction([
-        prisma.competitiveMatch.create({
-          data: {
-            player1Id: team1[0].userId,
-            player2Id: team2[0].userId,
-            gameMode: 'TEAM_BATTLE',
-            topicSlug: entry.topicSlug,
-            player1MMRBefore: team1AvgMMR,
-            player2MMRBefore: team2AvgMMR,
-            player1MMRAfter: team1AvgMMR,
-            player2MMRAfter: team2AvgMMR,
-            player1Score: 0,
-            player2Score: 0,
-            status: 'IN_PROGRESS',
-            startedAt: new Date(),
-            gameData: {
-              isTeamBattle: true,
-              questions,
-              team1: {
-                players: [team1[0].userId, team1[1].userId],
-                score: 0,
-                questionIndices: { [team1[0].userId]: 0, [team1[1].userId]: 0 },
-                answers: { [team1[0].userId]: [], [team1[1].userId]: [] },
-              },
-              team2: {
-                players: [team2[0].userId, team2[1].userId],
-                score: 0,
-                questionIndices: { [team2[0].userId]: 0, [team2[1].userId]: 0 },
-                answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
-              },
-              playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
-              player1QuestionIndex: 0,
-              player2QuestionIndex: 0,
-            } as unknown as Prisma.InputJsonValue,
-          },
-        }),
-        prisma.matchmakingQueue.delete({ where: { id: candidates[0].id } }),
-        prisma.matchmakingQueue.delete({ where: { id: candidates[1].id } }),
-        prisma.matchmakingQueue.delete({ where: { id: candidates[2].id } }),
-        prisma.matchmakingQueue.delete({ where: { id: entry.id } }),
-      ])
+      // Claim the 3 opponents and remove our own entry in the same tx.
+      await tx.matchmakingQueue.deleteMany({ where: { id: { in: candidates.map((c) => c.id) } } })
+      await tx.matchmakingQueue.deleteMany({ where: { id: entry.id } })
 
-      return NextResponse.json({ status: 'matched', matchId: match.id })
+      const match = await tx.competitiveMatch.create({
+        data: {
+          player1Id: team1[0].userId,
+          player2Id: team2[0].userId,
+          gameMode: 'TEAM_BATTLE',
+          topicSlug: entry.topicSlug,
+          player1MMRBefore: team1AvgMMR,
+          player2MMRBefore: team2AvgMMR,
+          player1MMRAfter: team1AvgMMR,
+          player2MMRAfter: team2AvgMMR,
+          player1Score: 0,
+          player2Score: 0,
+          status: 'IN_PROGRESS',
+          startedAt: new Date(),
+          gameData: {
+            isTeamBattle: true,
+            questions,
+            team1: {
+              players: [team1[0].userId, team1[1].userId],
+              score: 0,
+              questionIndices: { [team1[0].userId]: 0, [team1[1].userId]: 0 },
+              answers: { [team1[0].userId]: [], [team1[1].userId]: [] },
+            },
+            team2: {
+              players: [team2[0].userId, team2[1].userId],
+              score: 0,
+              questionIndices: { [team2[0].userId]: 0, [team2[1].userId]: 0 },
+              answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
+            },
+            playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
+            player1QuestionIndex: 0,
+            player2QuestionIndex: 0,
+          } as unknown as Prisma.InputJsonValue,
+        },
+      })
+
+      return { matchId: match.id }
+    }, { timeout: 15000 })
+
+    if (claimed) {
+      return NextResponse.json({ status: 'matched', matchId: claimed.matchId })
     }
 
     const queueSize = await prisma.matchmakingQueue.count({
