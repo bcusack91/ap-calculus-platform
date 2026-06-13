@@ -25,6 +25,27 @@ export function isPremiumRole(role?: string | null): boolean {
   return role === 'PREMIUM' || role === 'ADMIN'
 }
 
+/**
+ * Admin "View as…" override. An ADMIN can preview the site as a FREE or PREMIUM
+ * user by setting this cookie (see the profile menu toggle). It is ONLY honored
+ * when the real session role is ADMIN — a forged cookie from any other user is
+ * ignored, on both client and server. The number of diagnostic study plans a
+ * free user gets before Premium is required also lives here.
+ */
+export const VIEW_AS_COOKIE = 'mondo_view_as'
+
+/** Free users get a personalized study plan for this many diagnostics; the next requires Premium. */
+export const FREE_DIAGNOSTIC_PLANS = 1
+
+/**
+ * Resolve the *effective* role: an ADMIN with a valid View-as override sees that
+ * role; everyone else sees their real role. Pure — callable on client or server.
+ */
+export function resolveEffectiveRole(realRole?: string | null, viewAs?: string | null): string {
+  if (realRole === 'ADMIN' && (viewAs === 'FREE' || viewAs === 'PREMIUM')) return viewAs
+  return realRole ?? 'FREE'
+}
+
 /** Free-tier limits enforced by the premium gates. */
 export const FREE_LIMITS = {
   /** AI tutor explanations a FREE user may request per UTC day (premium = unlimited). */

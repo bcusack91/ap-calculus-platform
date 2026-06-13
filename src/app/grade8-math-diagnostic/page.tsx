@@ -1,5 +1,7 @@
 'use client'
 
+import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -32,6 +34,7 @@ interface HistoryEntry {
 }
 
 export default function Grade8MathDiagnosticPage() {
+  const planAccess = useDiagnosticPlanAccess()
   const { status } = useSession()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -288,7 +291,8 @@ export default function Grade8MathDiagnosticPage() {
             />
           )}
 
-          {results.recommendedTopics.length > 0 && (
+          {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
+            {results.recommendedTopics.length > 0 && planAccess.canAccess && (
             <div className="mb-8 rounded-2xl border-2 border-pink-300 bg-pink-50 p-6 dark:border-pink-700 dark:bg-pink-900/20">
               <h3 className="mb-1 text-lg font-bold text-pink-800 dark:text-pink-300">🎯 Your Personalized Study Plan</h3>
               <p className="mb-4 text-sm text-pink-600 dark:text-pink-400">Based on your results, review these {results.recommendedTopics.length} topic{results.recommendedTopics.length > 1 ? 's' : ''}.</p>

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import AvatarDisplay from './AvatarDisplay'
+import { ViewAsToggle } from './ViewAsToggle'
 import type { AvatarData } from '@/types/avatar'
 import type { Session } from 'next-auth'
 import { useRef, useCallback } from 'react'
@@ -79,6 +80,8 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
               🛡️ Admin Panel
             </Link>
           )}
+
+          {isAdmin && <ViewAsToggle />}
 
           <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
 

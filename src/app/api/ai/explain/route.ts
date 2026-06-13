@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { rateLimit } from '@/lib/rate-limit'
-import { isPremiumRole, FREE_LIMITS } from '@/lib/premium'
+import { FREE_LIMITS } from '@/lib/premium'
+import { effectiveIsPremium } from '@/lib/effective-role'
 
 // Per-user rate limit: this route calls an LLM, so unmetered access is a
 // direct cost-abuse vector. Key by the authenticated user id (not IP — a
@@ -41,7 +42,7 @@ export async function POST(request: Request) {
     }
 
     // Premium gate: free users get a limited number of AI explanations per day.
-    if (!isPremiumRole(session.user.role)) {
+    if (!(await effectiveIsPremium(session.user.role))) {
       const dailyResult = await aiExplainFreeDailyLimiter.check(session.user.id)
       if (!dailyResult.success) {
         return NextResponse.json(

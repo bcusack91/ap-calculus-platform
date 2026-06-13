@@ -1,8 +1,8 @@
 'use client'
 
-import { useSession } from 'next-auth/react'
 import { useEffect } from 'react'
 import { useConsent } from '@/components/ConsentProvider'
+import { useEffectiveRole } from '@/lib/use-effective-role'
 
 interface AdBannerProps {
   slot: string
@@ -11,11 +11,9 @@ interface AdBannerProps {
 }
 
 export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerProps) {
-  const { data: session } = useSession()
+  // Don't show ads to premium users (honors an admin "View as…" override).
+  const { isPremium } = useEffectiveRole()
   const { advertising: consentGiven } = useConsent()
-
-  // Don't show ads to premium users
-  const isPremium = session?.user?.role === 'PREMIUM'
 
   // Skip ads in development to avoid initialization errors
   const isDevelopment = process.env.NODE_ENV === 'development'

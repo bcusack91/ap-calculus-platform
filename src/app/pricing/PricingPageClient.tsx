@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { trackPremiumUpgradeClick } from '@/lib/analytics'
 import { PREMIUM_BENEFITS, PREMIUM_PRICING, FREE_LIMITS } from '@/lib/premium'
+import { useEffectiveRole } from '@/lib/use-effective-role'
 
 // Free tier — these are genuinely free for everyone (the platform is ad-funded).
 const FREE_FEATURES = [
@@ -25,11 +26,12 @@ export default function PricingPageClient() {
   const router = useRouter()
   const [billing, setBilling] = useState<'monthly' | 'annual'>('monthly')
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const monthlyPrice = PREMIUM_PRICING.monthly
   const annualPrice = PREMIUM_PRICING.annual
   const price = billing === 'monthly' ? monthlyPrice : annualPrice
-  const isPremium = session?.user?.role === 'PREMIUM' || session?.user?.role === 'ADMIN'
+  const { isPremium } = useEffectiveRole()
 
   const handleUpgrade = async () => {
     trackPremiumUpgradeClick('pricing_page')
@@ -38,18 +40,26 @@ export default function PricingPageClient() {
       return
     }
     setLoading(true)
+    setError('')
     try {
       const res = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ billing }),
       })
-      const data = await res.json()
-      if (data.url) {
+      const data = await res.json().catch(() => ({}))
+      if (res.ok && data.url) {
         window.location.href = data.url
+        return
       }
+      // Don't fail silently — tell the user why nothing happened.
+      setError(
+        res.status === 503
+          ? "Premium checkout isn't switched on yet — payments need to be configured. Please check back soon."
+          : data.error || 'Something went wrong starting checkout. Please try again.',
+      )
     } catch {
-      console.error('Checkout failed')
+      setError("Couldn't reach the checkout service. Please try again in a moment.")
     } finally {
       setLoading(false)
     }
@@ -183,6 +193,9 @@ export default function PricingPageClient() {
               >
                 {loading ? 'Loading...' : 'Upgrade to Premium'}
               </button>
+            )}
+            {error && (
+              <p className="mt-3 text-center text-sm text-red-600 dark:text-red-400" role="alert">{error}</p>
             )}
           </div>
         </div>

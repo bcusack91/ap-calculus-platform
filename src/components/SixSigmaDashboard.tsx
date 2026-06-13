@@ -2,9 +2,8 @@
 
 import { SixSigmaAnalytics } from '@/utils/six-sigma-analytics'
 import { useState, useEffect, useCallback } from 'react'
-import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { isPremiumRole } from '@/lib/premium'
+import { useEffectiveRole } from '@/lib/use-effective-role'
 
 interface SixSigmaDashboardProps {
   topicSlug: string
@@ -12,8 +11,7 @@ interface SixSigmaDashboardProps {
 }
 
 export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboardProps) {
-  const { data: session } = useSession()
-  const premium = isPremiumRole(session?.user?.role)
+  const { isPremium: premium } = useEffectiveRole()
   const [analytics, setAnalytics] = useState<SixSigmaAnalytics | null>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'overview' | 'control-chart' | 'pareto' | 'recommendations'>('overview')

@@ -1,5 +1,6 @@
 'use client'
 
+import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
@@ -486,6 +487,7 @@ export function DiagnosticResultsView({
   onRetake: () => void
   onGoToStudy: () => void
 }) {
+  const planAccess = useDiagnosticPlanAccess()
   const levelColor = (level: string) => {
     if (level === 'strong') return 'text-green-600 dark:text-green-400'
     if (level === 'moderate') return 'text-amber-600 dark:text-amber-400'
@@ -596,7 +598,8 @@ export function DiagnosticResultsView({
         </div>
 
         {/* Recommended Topics */}
-        {results.recommendedTopics.length > 0 && (
+        {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
+        {results.recommendedTopics.length > 0 && planAccess.canAccess && (
           <div className="mb-8">
             <h3 className="mb-3 font-semibold text-gray-800 dark:text-gray-200">
               Recommended Study Topics

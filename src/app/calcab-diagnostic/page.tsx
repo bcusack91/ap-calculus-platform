@@ -1,5 +1,7 @@
 'use client'
 
+import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -50,6 +52,7 @@ interface HistoryEntry {
 }
 
 export default function CalcABDiagnosticPage() {
+  const planAccess = useDiagnosticPlanAccess()
   const { status } = useSession()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -410,7 +413,8 @@ export default function CalcABDiagnosticPage() {
             )}
 
             {/* Recommended Modules */}
-            {results.recommendedTopics.length > 0 && (
+            {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
+            {results.recommendedTopics.length > 0 && planAccess.canAccess && (
               <div className="mb-8 rounded-2xl border-2 border-purple-300 bg-purple-50 p-6 dark:border-purple-700 dark:bg-purple-900/20">
                 <h3 className="mb-1 text-lg font-bold text-purple-800 dark:text-purple-300">🎯 Your Personalized Study Plan</h3>
                 <p className="mb-4 text-sm text-purple-600 dark:text-purple-400">

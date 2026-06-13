@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
+import { useEffectiveRole } from '@/lib/use-effective-role'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
 import { AvatarData } from '@/types/avatar'
@@ -110,7 +111,8 @@ export function Navbar() {
   const coursesKeyNav = useDropdownKeyNav(coursesRef, coursesOpen)
   const moreKeyNav = useDropdownKeyNav(moreRef, moreOpen)
 
-  const isPremium = session?.user?.role === 'PREMIUM'
+  // isPremium honors an admin "View as…" override; teacher/admin stay on the real role.
+  const isPremium = useEffectiveRole().isPremium
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
   const isAdmin = session?.user?.role === 'ADMIN'
 

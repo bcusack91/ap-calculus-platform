@@ -1,5 +1,7 @@
 'use client'
 
+import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -31,6 +33,7 @@ interface HistoryEntry {
 }
 
 export default function APHumanGeoDiagnosticPage() {
+  const planAccess = useDiagnosticPlanAccess()
   const { status } = useSession()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -392,7 +395,8 @@ export default function APHumanGeoDiagnosticPage() {
               />
             )}
 
-            {results.recommendedTopics.length > 0 && (
+            {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
+            {results.recommendedTopics.length > 0 && planAccess.canAccess && (
               <div className="mb-8 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-6 dark:border-emerald-700 dark:bg-emerald-900/20">
                 <h3 className="mb-1 text-lg font-bold text-emerald-800 dark:text-emerald-300">🎯 Your Personalized Study Plan</h3>
                 <p className="mb-4 text-sm text-emerald-600 dark:text-emerald-400">Based on your results, we recommend reviewing these {results.recommendedTopics.length} module{results.recommendedTopics.length > 1 ? 's' : ''}.</p>
