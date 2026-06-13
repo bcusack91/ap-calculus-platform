@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { InArticleAd } from '@/components/ad-banner'
 
 export const metadata: Metadata = {
   title: 'PSAT/NMSQT Prep | Free Practice & Study Tools',
@@ -107,6 +108,11 @@ export default function PsatHubPage() {
               <p className="text-sm text-gray-600 dark:text-gray-400">{f.description}</p>
             </Link>
           ))}
+        </div>
+
+        {/* In-article ad — single, mid-page placement after the feature grid */}
+        <div className="mx-auto mt-10 max-w-5xl">
+          <InArticleAd />
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-indigo-200 bg-indigo-50/60 p-6 text-center dark:border-indigo-800 dark:bg-indigo-900/20">

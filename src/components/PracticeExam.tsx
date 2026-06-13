@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { InArticleAd } from '@/components/ad-banner'
+import ShareScoreCard from '@/components/ShareScoreCard'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -242,6 +244,14 @@ export default function PracticeExam(config: PracticeExamConfig) {
               <p className="text-xs text-gray-500 dark:text-gray-400">{r.pct >= 80 ? 'Excellent' : r.pct >= 60 ? 'Good' : 'Needs Review'}</p>
             </div>
           </div>
+
+          {/* Share your score */}
+          {r.total > 0 && (
+            <ShareScoreCard score={r.correct} total={r.total} subject={`${subject}${activeSection?.name ? ` ${activeSection.name}` : ''}`} type="exam" />
+          )}
+
+          {/* Ad — on the results screen, after the score summary */}
+          <InArticleAd />
 
           {/* Topic breakdown */}
           {r.byTopic.length > 1 && (

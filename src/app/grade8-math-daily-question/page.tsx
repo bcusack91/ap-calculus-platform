@@ -10,6 +10,7 @@ import {
 } from '@/lib/analytics'
 import { getOrAssignPostCompletionCtaVariant, type PostCompletionCtaVariant } from '@/lib/experiments'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { InArticleAd } from '@/components/ad-banner'
 
 interface DailyQ {
   topicSlug: string
@@ -157,6 +158,12 @@ export default function Grade8MathDailyQuestionPage() {
             </div>
           </div>
         ) : null}
+
+        {/* In-article ad — below the question card, above the CTA. Self-manages
+            premium/dev/consent/CLS and renders nothing when no slot is set. */}
+        <div className="mx-auto my-10 max-w-2xl">
+          <InArticleAd />
+        </div>
 
         <div className="mx-auto mt-10 max-w-md text-center">
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more Grade 8 Math practice?</p>

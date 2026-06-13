@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { CourseHub, type HubFeature, type HubUnit } from '@/components/CourseHub'
+import { InArticleAd } from '@/components/ad-banner'
 
 export const metadata: Metadata = {
   title: 'Algebra 2 | Free Algebra 2 Practice & Review',
@@ -89,17 +90,22 @@ const units: HubUnit[] = [
 
 export default function Algebra2Hub() {
   return (
-    <CourseHub
-      courseSlug="algebra-2"
-      courseName="Algebra 2"
-      courseDescription={metadata.description as string}
-      tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace Algebra 2."
-      primaryCta={{ href: '/algebra2-diagnostic', label: 'Start with Diagnostic' }}
-      secondaryCta={{ href: '/courses/algebra-2', label: 'Browse Lessons' }}
-      finalCtaHref="/algebra2-diagnostic"
-      accent="cyan"
-      features={features}
-      units={units}
-    />
+    <>
+      <CourseHub
+        courseSlug="algebra-2"
+        courseName="Algebra 2"
+        courseDescription={metadata.description as string}
+        tagline="Interactive lessons, diagnostic assessments, flashcards, and daily practice — everything you need to ace Algebra 2."
+        primaryCta={{ href: '/algebra2-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/algebra-2', label: 'Browse Lessons' }}
+        finalCtaHref="/algebra2-diagnostic"
+        accent="cyan"
+        features={features}
+        units={units}
+      />
+      {/* In-article ad — single placement; the hub body is owned by the shared
+          <CourseHub/> component (no mid-page slot), so the ad follows it. */}
+      <InArticleAd />
+    </>
   )
 }

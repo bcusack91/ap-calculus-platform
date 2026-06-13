@@ -216,7 +216,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // All score predictor pages
     ...([
       'ap-bio', 'ap-calcab', 'ap-calcbc', 'ap-chem', 'ap-stats', 'ap-psych',
-      'ap-physics1', 'ap-physics2', 'ap-physics-c-mech', 'ap-physics-c-em', 'ap-precalculus',
+      'ap-physics1', 'ap-physics2', 'ap-physics-c-mech', 'ap-physics-c-em', 'ap-precalculus', 'ap-precalc',
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
@@ -309,18 +309,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }))
 
-  // Topic pages (all 534 topics)
-  const topics = await prisma.topic.findMany({
-    select: {
-      slug: true,
-      updatedAt: true,
-      textContent: true,
-      _count: { select: { exampleProblems: true, subtopics: true } },
-    },
-    orderBy: { order: 'asc' },
-  }).catch((error) => {
+  // Topic pages. We only need each topic's textContent LENGTH (not the body) to
+  // apply the thin-content filter, so measure it in SQL rather than streaming
+  // every topic's full text into the sitemap build. Counts mirror the relations
+  // the typed _count used: ExampleProblem rows and child (sub)topics.
+  const topics = await prisma.$queryRaw<
+    Array<{ slug: string; updatedAt: Date; textlen: number; examplecount: number; subtopiccount: number }>
+  >`
+    SELECT t.slug AS slug,
+           t."updatedAt" AS "updatedAt",
+           length(btrim(t."textContent"))::int AS textlen,
+           (SELECT count(*)::int FROM "ExampleProblem" ep WHERE ep."topicId" = t.id) AS examplecount,
+           (SELECT count(*)::int FROM "Topic" st WHERE st."parentTopicId" = t.id) AS subtopiccount
+    FROM "Topic" t
+    ORDER BY t."order" ASC`.catch((error) => {
     console.warn('Sitemap: topics unavailable, continuing with static pages only.', error)
-    return []
+    return [] as Array<{ slug: string; updatedAt: Date; textlen: number; examplecount: number; subtopiccount: number }>
   })
 
   const topicPages: MetadataRoute.Sitemap = topics
@@ -329,11 +333,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // warnings. Keep this rule in sync with generateMetadata in
     // src/app/topics/[slug]/page.tsx.
     .filter((topic) => {
-      const contentLength = (topic.textContent || '').trim().length
       const isThin =
-        contentLength < 600 &&
-        topic._count.exampleProblems === 0 &&
-        topic._count.subtopics === 0
+        topic.textlen < 600 &&
+        topic.examplecount === 0 &&
+        topic.subtopiccount === 0
       return !isThin
     })
     .map((topic) => ({

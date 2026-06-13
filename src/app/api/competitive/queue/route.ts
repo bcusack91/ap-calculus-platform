@@ -43,6 +43,27 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Competitive mode not unlocked' }, { status: 403 })
     }
 
+    // Reject queueing if the user already has a live match (#5). Otherwise a
+    // user could sit in an IN_PROGRESS match and simultaneously queue for / get
+    // pulled into a second one, ending up in two ranked games at once. Send
+    // them back to the existing match instead.
+    const existingMatch = await prisma.competitiveMatch.findFirst({
+      where: {
+        status: 'IN_PROGRESS',
+        OR: [{ player1Id: user.id }, { player2Id: user.id }],
+      },
+      orderBy: { startedAt: 'desc' },
+      select: { id: true },
+    })
+
+    if (existingMatch) {
+      return NextResponse.json({
+        status: 'matched',
+        matchId: existingMatch.id,
+        alreadyInMatch: true,
+      })
+    }
+
     // Get topic-specific MMR
     const mmr =
       topicSlug === 'the-unit-circle'

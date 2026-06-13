@@ -4,6 +4,7 @@ import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { InArticleAd } from '@/components/ad-banner'
 
 /**
  * #196: Auto-Graded AP FRQ with Rubrics
@@ -129,6 +130,9 @@ export function AutoGradedFRQ({ frqs = SAMPLE_FRQS }: { frqs?: FRQ[] }) {
           {frq.prompt}
         </ReactMarkdown>
       </div>
+
+      {/* Ad — after the prompt, before the response/grading area */}
+      <InArticleAd />
 
       <div className="space-y-6">
         {frq.parts.map(part => {

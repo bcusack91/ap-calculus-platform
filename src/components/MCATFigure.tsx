@@ -23,7 +23,9 @@ export default function MCATFigure({ spec }: { spec: MCATFigureSpec }) {
   const rawMin = allY.length ? Math.min(...allY) : 0
   const yPad = Math.max((rawMax - rawMin) * 0.08, 0.5)
   const maxY = rawMax + yPad
-  const minY = rawMin - yPad
+  // Bars must originate from a true zero baseline (or below, if negatives) so
+  // heights are proportional; line/scatter can use a padded min to fill the plot.
+  const minY = kind === 'bar' ? Math.min(0, rawMin) : rawMin - yPad
   const yRange = Math.max(maxY - minY, 1)
 
   // Position numeric x by value; categorical x evenly by index.
@@ -38,6 +40,9 @@ export default function MCATFigure({ spec }: { spec: MCATFigureSpec }) {
   const pw = W - padL - padR, ph = H - padT - padB
   const sx = (i: number) => padL + (numericX ? (xNums[i] - xMin) / xRange : i / lastIdx) * pw
   const sy = (v: number) => padT + ph - ((v - minY) / yRange) * ph
+  // Bars occupy equal cells centered at (i+0.5)/N; line/scatter points sit at sx(i).
+  // x-axis tick labels and annotation markers must follow whichever layout is in use.
+  const xCenter = (i: number) => (kind === 'bar' ? padL + (i + 0.5) * (pw / Math.max(xValues.length, 1)) : sx(i))
 
   const lineColors = ['stroke-cyan-500', 'stroke-amber-500', 'stroke-emerald-500']
   const dotColors = ['fill-cyan-500', 'fill-amber-500', 'fill-emerald-500']
@@ -69,7 +74,7 @@ export default function MCATFigure({ spec }: { spec: MCATFigureSpec }) {
 
           {/* Annotations (vertical markers) */}
           {annotations.map((a, ai) => {
-            const x = sx(Math.min(Math.max(a.xIndex, 0), lastIdx))
+            const x = xCenter(Math.min(Math.max(a.xIndex, 0), lastIdx))
             return (
               <g key={`ann-${ai}`}>
                 <line x1={x} y1={padT} x2={x} y2={padT + ph} className="stroke-rose-400 dark:stroke-rose-500" strokeDasharray="3 3" strokeWidth={1} />
@@ -106,7 +111,7 @@ export default function MCATFigure({ spec }: { spec: MCATFigureSpec }) {
 
           {/* X tick labels */}
           {xValues.map((xv, i) => (i % tickEvery === 0 ? (
-            <text key={`xt-${i}`} x={sx(i)} y={padT + ph + 16} textAnchor="middle" fontSize={10} className="fill-gray-500 dark:fill-gray-400">{xv}</text>
+            <text key={`xt-${i}`} x={xCenter(i)} y={padT + ph + 16} textAnchor="middle" fontSize={10} className="fill-gray-500 dark:fill-gray-400">{xv}</text>
           ) : null))}
 
           {/* Axis titles */}

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
+import { InArticleAd } from '@/components/ad-banner'
 import { FULL_LENGTH_FORMS, FULL_LENGTH_MINUTES } from '@/data/mcat/full-length'
 import { MCAT_SECTION_ORDER, MCAT_SECTION_META } from '@/data/mcat/types'
 
@@ -77,6 +78,10 @@ export default function MCATFullLengthPage() {
           Start Form {form}
         </button>
         <p className="mt-3 text-center text-xs text-gray-400">Prefer shorter sets? Try <Link href="/mcat-cars" className="text-blue-600 hover:underline dark:text-blue-400">CARS passage practice</Link> or <Link href="/mcat-practice" className="text-blue-600 hover:underline dark:text-blue-400">single-section drills</Link>.</p>
+
+        <div className="mt-10">
+          <InArticleAd />
+        </div>
       </div>
     </div>
   )

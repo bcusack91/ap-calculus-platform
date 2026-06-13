@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
+import { InArticleAd } from '@/components/ad-banner'
 import { plainTextPreview } from '@/lib/render-rich-text'
 import { countQuestions, type MCATPassage } from '@/data/mcat/types'
 
@@ -77,6 +78,10 @@ export default function MCATSectionLibrary({
               <p className="mt-2 text-xs font-medium text-gray-400">{p.questions.length} questions</p>
             </button>
           ))}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-2xl">
+          <InArticleAd />
         </div>
       </div>
     </div>

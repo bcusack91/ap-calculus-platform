@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { PRESET_AVATARS, AvatarData } from '@/types/avatar'
+import { trackSignUp } from '@/lib/analytics'
 
 function SignUpForm() {
   const router = useRouter()
@@ -111,6 +112,8 @@ function SignUpForm() {
         setIsLoading(false)
         return
       }
+
+      trackSignUp('credentials')
 
       // Redirect back to the page the user originally tried to access.
       router.push(safeCallback)
@@ -288,7 +291,10 @@ function SignUpForm() {
               </div>
               <button
                 type="button"
-                onClick={() => signIn('google', { callbackUrl: safeCallback })}
+                onClick={() => {
+                  trackSignUp('google')
+                  signIn('google', { callbackUrl: safeCallback })
+                }}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all font-medium text-gray-700 dark:text-gray-300"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24">

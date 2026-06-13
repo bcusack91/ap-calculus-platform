@@ -120,6 +120,11 @@ export async function POST(
     // bypassed after the deadline — treat that as an uncounted, incorrect answer)
     const currentQuestion = questions[questionIndex];
     const isCorrect = !!currentQuestion && answerIndex === currentQuestion.answerIndex;
+    // The correct index for the JUST-answered question is returned to the client
+    // so it can render right/wrong feedback. The GET route no longer ships the
+    // answer up-front for ranked matches (#1), so this is the only channel the
+    // client has — and it's only ever revealed AFTER an answer is submitted.
+    const correctAnswerIndex = currentQuestion?.answerIndex ?? null;
 
     // Track this answer in the player's answer history. A submission that
     // arrives after the server-side deadline is dropped (not recorded and not
@@ -203,70 +208,76 @@ export async function POST(
           },
         });
 
-        if (match.player1.competitiveProfile) {
-          await tx.competitiveProfile.update({
-            where: { userId: match.player1Id },
+        // Practice (vs-AI) matches finalize the RECORD only — they must NOT
+        // touch ranked stats or MMR history, otherwise wins/MMR are farmable
+        // against a bot (#2). Real matches run the full bookkeeping below.
+        if (!gameData.isPracticeMatch) {
+          if (match.player1.competitiveProfile) {
+            await tx.competitiveProfile.update({
+              where: { userId: match.player1Id },
+              data: {
+                unitCircleMMR: player1MMRAfter,
+                overallMMR: player1MMRAfter,
+                totalMatches: { increment: 1 },
+                wins: player1Won ? { increment: 1 } : undefined,
+                losses: player2Won ? { increment: 1 } : undefined,
+                winStreak: player1Won ? { increment: 1 } : 0,
+                bestWinStreak: player1Won
+                  ? Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak)
+                  : undefined,
+                rank: getRankFromMMR(player1MMRAfter),
+              },
+            });
+          }
+
+          if (match.player2.competitiveProfile) {
+            await tx.competitiveProfile.update({
+              where: { userId: match.player2Id },
+              data: {
+                unitCircleMMR: player2MMRAfter,
+                overallMMR: player2MMRAfter,
+                totalMatches: { increment: 1 },
+                wins: player2Won ? { increment: 1 } : undefined,
+                losses: player1Won ? { increment: 1 } : undefined,
+                winStreak: player2Won ? { increment: 1 } : 0,
+                bestWinStreak: player2Won && match.player2.competitiveProfile
+                  ? Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak)
+                  : undefined,
+                rank: getRankFromMMR(player2MMRAfter),
+              },
+            });
+          }
+
+          await tx.mMRHistory.create({
             data: {
-              unitCircleMMR: player1MMRAfter,
-              overallMMR: player1MMRAfter,
-              totalMatches: { increment: 1 },
-              wins: player1Won ? { increment: 1 } : undefined,
-              losses: player2Won ? { increment: 1 } : undefined,
-              winStreak: player1Won ? { increment: 1 } : 0,
-              bestWinStreak: player1Won
-                ? Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak)
-                : undefined,
-              rank: getRankFromMMR(player1MMRAfter),
+              userId: match.player1Id,
+              matchId,
+              topicSlug: match.topicSlug,
+              mmrBefore: player1MMR,
+              mmrAfter: player1MMRAfter,
+              mmrChange: player1MMRChange,
+              gameMode: match.gameMode,
+              performance: JSON.stringify({ score: player1Score, totalAnswered: p1Answered, accuracy: p1Accuracy }),
+            },
+          });
+          await tx.mMRHistory.create({
+            data: {
+              userId: match.player2Id,
+              matchId,
+              topicSlug: match.topicSlug,
+              mmrBefore: player2MMR,
+              mmrAfter: player2MMRAfter,
+              mmrChange: player2MMRChange,
+              gameMode: match.gameMode,
+              performance: JSON.stringify({ score: player2Score, totalAnswered: p2Answered, accuracy: p2Accuracy }),
             },
           });
         }
-
-        if (match.player2.competitiveProfile) {
-          await tx.competitiveProfile.update({
-            where: { userId: match.player2Id },
-            data: {
-              unitCircleMMR: player2MMRAfter,
-              overallMMR: player2MMRAfter,
-              totalMatches: { increment: 1 },
-              wins: player2Won ? { increment: 1 } : undefined,
-              losses: player1Won ? { increment: 1 } : undefined,
-              winStreak: player2Won ? { increment: 1 } : 0,
-              bestWinStreak: player2Won && match.player2.competitiveProfile
-                ? Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak)
-                : undefined,
-              rank: getRankFromMMR(player2MMRAfter),
-            },
-          });
-        }
-
-        await tx.mMRHistory.create({
-          data: {
-            userId: match.player1Id,
-            matchId,
-            topicSlug: match.topicSlug,
-            mmrBefore: player1MMR,
-            mmrAfter: player1MMRAfter,
-            mmrChange: player1MMRChange,
-            gameMode: match.gameMode,
-            performance: JSON.stringify({ score: player1Score, totalAnswered: p1Answered, accuracy: p1Accuracy }),
-          },
-        });
-        await tx.mMRHistory.create({
-          data: {
-            userId: match.player2Id,
-            matchId,
-            topicSlug: match.topicSlug,
-            mmrBefore: player2MMR,
-            mmrAfter: player2MMRAfter,
-            mmrChange: player2MMRChange,
-            gameMode: match.gameMode,
-            performance: JSON.stringify({ score: player2Score, totalAnswered: p2Answered, accuracy: p2Accuracy }),
-          },
-        });
 
         return {
           data: {
             correct: isCorrect,
+            correctAnswerIndex,
             matchComplete: true,
             winnerId,
             finalScores: { player1: player1Score, player2: player2Score },
@@ -300,6 +311,7 @@ export async function POST(
       return {
         data: {
           correct: isCorrect,
+          correctAnswerIndex,
           matchComplete: false,
           currentScore: isPlayer1 ? player1Score : player2Score,
           opponentScore: isPlayer1 ? player2Score : player1Score,
@@ -383,75 +395,82 @@ export async function POST(
         },
       });
 
-      await tx.competitiveProfile.update({
-        where: { userId: match.player1Id },
-        data: {
-          unitCircleMMR: player1MMRAfter,
-          overallMMR: player1MMRAfter,
-          totalMatches: { increment: 1 },
-          wins: player1Won ? { increment: 1 } : undefined,
-          losses: player2Won ? { increment: 1 } : undefined,
-          winStreak: player1Won ? { increment: 1 } : 0,
-          bestWinStreak: player1Won && match.player1.competitiveProfile ? 
-            Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak) : 
-            undefined,
-          rank: getRankFromMMR(player1MMRAfter),
-        },
-      });
+      // Practice (vs-AI) matches finalize the RECORD only — skip all ranked
+      // stat / MMR-history writes so wins/MMR can't be farmed vs a bot (#2).
+      if (!gameData.isPracticeMatch) {
+        await tx.competitiveProfile.update({
+          where: { userId: match.player1Id },
+          data: {
+            unitCircleMMR: player1MMRAfter,
+            overallMMR: player1MMRAfter,
+            totalMatches: { increment: 1 },
+            wins: player1Won ? { increment: 1 } : undefined,
+            losses: player2Won ? { increment: 1 } : undefined,
+            winStreak: player1Won ? { increment: 1 } : 0,
+            bestWinStreak: player1Won && match.player1.competitiveProfile ?
+              Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak) :
+              undefined,
+            rank: getRankFromMMR(player1MMRAfter),
+          },
+        });
 
-      await tx.competitiveProfile.update({
-        where: { userId: match.player2Id },
-        data: {
-          unitCircleMMR: player2MMRAfter,
-          overallMMR: player2MMRAfter,
-          totalMatches: { increment: 1 },
-          wins: player2Won ? { increment: 1 } : undefined,
-          losses: player1Won ? { increment: 1 } : undefined,
-          winStreak: player2Won ? { increment: 1 } : 0,
-          bestWinStreak: player2Won && match.player2.competitiveProfile ? 
-            Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak) : 
-            undefined,
-          rank: getRankFromMMR(player2MMRAfter),
-        },
-      });
+        await tx.competitiveProfile.update({
+          where: { userId: match.player2Id },
+          data: {
+            unitCircleMMR: player2MMRAfter,
+            overallMMR: player2MMRAfter,
+            totalMatches: { increment: 1 },
+            wins: player2Won ? { increment: 1 } : undefined,
+            losses: player1Won ? { increment: 1 } : undefined,
+            winStreak: player2Won ? { increment: 1 } : 0,
+            bestWinStreak: player2Won && match.player2.competitiveProfile ?
+              Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak) :
+              undefined,
+            rank: getRankFromMMR(player2MMRAfter),
+          },
+        });
 
-      await tx.mMRHistory.create({
-        data: {
-          userId: match.player1Id,
-          matchId,
-          topicSlug: 'unit-circle',
-          mmrBefore: player1MMR,
-          mmrAfter: player1MMRAfter,
-          mmrChange: player1MMRChange,
-          gameMode: match.gameMode,
-          performance: JSON.stringify({
-            score: player1Score,
-            totalQuestions: questions.length,
-            accuracy: player1Score / questions.length,
-          }),
-        },
-      });
+        // Use the match's real topic (#7) — previously hardcoded 'unit-circle',
+        // which mislabeled MMR history for non-unit-circle SPEED_RACE matches.
+        await tx.mMRHistory.create({
+          data: {
+            userId: match.player1Id,
+            matchId,
+            topicSlug: match.topicSlug,
+            mmrBefore: player1MMR,
+            mmrAfter: player1MMRAfter,
+            mmrChange: player1MMRChange,
+            gameMode: match.gameMode,
+            performance: JSON.stringify({
+              score: player1Score,
+              totalQuestions: questions.length,
+              accuracy: player1Score / questions.length,
+            }),
+          },
+        });
 
-      await tx.mMRHistory.create({
-        data: {
-          userId: match.player2Id,
-          matchId,
-          topicSlug: 'unit-circle',
-          mmrBefore: player2MMR,
-          mmrAfter: player2MMRAfter,
-          mmrChange: player2MMRChange,
-          gameMode: match.gameMode,
-          performance: JSON.stringify({
-            score: player2Score,
-            totalQuestions: questions.length,
-            accuracy: player2Score / questions.length,
-          }),
-        },
-      });
+        await tx.mMRHistory.create({
+          data: {
+            userId: match.player2Id,
+            matchId,
+            topicSlug: match.topicSlug,
+            mmrBefore: player2MMR,
+            mmrAfter: player2MMRAfter,
+            mmrChange: player2MMRChange,
+            gameMode: match.gameMode,
+            performance: JSON.stringify({
+              score: player2Score,
+              totalQuestions: questions.length,
+              accuracy: player2Score / questions.length,
+            }),
+          },
+        });
+      }
 
       return {
         data: {
           correct: isCorrect,
+          correctAnswerIndex,
           matchComplete: true,
           winnerId,
           finalScores: { player1: player1Score, player2: player2Score },
@@ -482,6 +501,7 @@ export async function POST(
       return {
         data: {
           correct: isCorrect,
+          correctAnswerIndex,
           matchComplete: false,
           currentScore: isPlayer1 ? player1Score : player2Score,
           opponentScore: isPlayer1 ? player2Score : player1Score,

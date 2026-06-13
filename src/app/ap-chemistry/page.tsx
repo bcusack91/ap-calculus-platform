@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CourseUniqueIntro from '@/components/CourseUniqueIntro'
+import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
@@ -225,6 +226,9 @@ export default function APChemistryHub() {
           ))}
         </div></div>
       </section>
+
+      {/* In-article ad — single, mid-page placement between features and "What's Covered" */}
+      <InArticleAd />
 
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl">

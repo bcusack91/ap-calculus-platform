@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import { trackPremiumUpgradeClick } from '@/lib/analytics'
 
 const FREE_FEATURES = [
   'Access to all text explanations',
@@ -36,6 +37,7 @@ export default function PricingPageClient() {
   const isPremium = session?.user?.role === 'PREMIUM'
 
   const handleUpgrade = async () => {
+    trackPremiumUpgradeClick('pricing_page')
     if (status !== 'authenticated') {
       router.push('/auth/signin?callbackUrl=/pricing')
       return

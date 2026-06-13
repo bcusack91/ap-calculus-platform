@@ -26,13 +26,14 @@ export const metadata: Metadata = {
   title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
   description:
     "Free notes, flashcards, practice problems & interactive lessons for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — created by educators to help you ace your exams.",
-  alternates: {
-    canonical: "https://www.studymondo.com",
-    languages: {
-      "en": "https://www.studymondo.com",
-      "x-default": "https://www.studymondo.com",
-    },
-  },
+  // NOTE: deliberately NO root-level `alternates.canonical` here. Setting it in
+  // the root layout propagated a canonical (and hreflang) pointing at the
+  // homepage onto every page that doesn't override it — so ~65 client pages
+  // without their own metadata were telling Google they're duplicates of the
+  // homepage and got dropped from the index. Each page now self-canonicalizes
+  // (no tag = Google uses the page's own URL); pages that need an explicit
+  // canonical set it in their own metadata/layout. The homepage sets its own
+  // canonical in src/app/page.tsx.
   manifest: "/site.webmanifest",
   other: {
     "google-adsense-account": "ca-pub-8403501245603262",

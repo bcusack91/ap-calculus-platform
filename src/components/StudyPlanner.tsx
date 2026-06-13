@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { InArticleAd } from '@/components/ad-banner'
 
 interface StudyTask {
   id: string
@@ -168,6 +169,7 @@ export default function StudyPlanner() {
   }
 
   return (
+    <>
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
       {/* Header */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
@@ -376,5 +378,9 @@ export default function StudyPlanner() {
         </div>
       )}
     </div>
+
+    {/* Ad — after the study plan list */}
+    <InArticleAd />
+    </>
   )
 }

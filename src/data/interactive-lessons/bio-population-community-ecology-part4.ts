@@ -2,192 +2,176 @@ export const bioPopulationPart4Data = {
   topicSlug: 'population-community-ecology',
   sections: [
     {
-      id: 'bio-population-community-ecology-p4-s1-intro',
+      id: 'pcp4-intro',
       type: 'text' as const,
       content: `
-      ## Population and Community Ecology: Community Ecology
-      
-      **Part 4 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through community interaction networks.
-      
-      ### Worked biological example
-      A student team investigates community interaction networks. Their first interpretation step is to identify how **density-dependent factor** and **r-selected strategy** work together in the same pathway.
-      
-      - They classify the primary signal using **density-dependent factor**: factor whose effect changes with population density.
-      - They trace the downstream response using **r-selected strategy**: life-history pattern favoring high reproduction in unstable settings.
-      - They then compare outcomes with **K-selected strategy** and **species richness** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **density-dependent factor**
-      - **r-selected strategy**
-      - **K-selected strategy**
-      - **species richness**
+## Community Ecology
+
+**Part 4 of 7 — Population & Community Ecology**
+
+A **community** is an assemblage of all the populations of different species that live and interact in a particular area. While population ecology tracks one species' numbers, community ecology asks how species **affect one another**. These **interspecific interactions** are classified by their effect on the per-capita growth of each participant, scored with a sign:
+
+- **(+)** the interaction benefits that species (raises its $r$ — more food, protection, etc.).
+- **(−)** the interaction harms that species (lowers its $r$ — death, lost resources).
+- **(0)** the interaction has no significant effect on that species.
+
+Reading interactions as pairs of signs is the fastest way to classify them on the AP exam. The sign convention summarizes whether each partner gains, loses, or is unaffected.
       `
     },
     {
-      id: 'bio-population-community-ecology-p4-s2-mcq-core',
+      id: 'pcp4-signtable',
+      type: 'text' as const,
+      content: `
+### The Interspecific Interaction Sign Table
+
+| Interaction | Sign (Species A / Species B) | Description | Example |
+|---|---|---|---|
+| **Competition** | −/− | Both species use a shared limiting resource; both suffer | Lions and hyenas over prey; two plants for the same light |
+| **Predation** | +/− | One organism (predator) kills and eats another (prey) | Owl eats mouse; lynx eats hare |
+| **Herbivory** | +/− | An animal eats plant tissue (plant usually survives) | Deer browsing shrubs; caterpillar on a leaf |
+| **Parasitism** | +/− | Parasite lives in/on a host, deriving nutrients and harming it | Tapeworm in an intestine; tick on a deer |
+| **Mutualism** | +/+ | Both species benefit | Bee pollinating a flower; mycorrhizae and plant roots |
+| **Commensalism** | +/0 | One benefits; the other is unaffected | Barnacles on a whale; cattle egret following grazers |
+
+> **Sign-convention trap:** predation, herbivory, and parasitism all share the **+/−** signature — they differ in mechanism, not in their effect signs. Do not assume +/− automatically means "predator eats prey"; a parasite or herbivore also fits +/−. Conversely, mutualism (+/+) and commensalism (+/0) are easy to confuse: in commensalism one partner gains while the other gets **nothing** (a true 0), whereas in mutualism **both** gain.
+
+The interactions that involve one partner consuming another (predation, herbivory, parasitism) are sometimes grouped as **exploitation**: +/− interactions in which one organism's gain is the other's loss.
+      `
+    },
+    {
+      id: 'pcp4-competition',
+      type: 'text' as const,
+      content: `
+### Competition, Niches, and Coexistence
+
+#### The ecological niche
+
+A species' **ecological niche** is the sum total of how it uses the biotic and abiotic resources of its environment — its "occupation," not just its "address" (which is the *habitat*). Ecologists distinguish two versions:
+
+- **Fundamental niche** — the full range of conditions and resources a species *could* use in the absence of competitors.
+- **Realized niche** — the portion of that range the species *actually* occupies once competitors and other limiting interactions are present. The realized niche is usually **smaller** than the fundamental niche.
+
+#### The competitive exclusion principle
+
+**Two species cannot coexist indefinitely on exactly the same limiting resource** — if their niches overlap completely, the better competitor drives the other locally extinct. This is the **competitive exclusion principle** (Gause). Coexistence requires that the niches differ in some way.
+
+#### Resource partitioning and character displacement
+
+Species often coexist by **resource partitioning** — dividing a contested resource so their realized niches diverge. Classic example: MacArthur's warblers, which feed in different vertical zones of the same spruce trees, partitioning the canopy rather than competing head-to-head. Over evolutionary time, competition can drive **character displacement**, in which competing species evolve differences (e.g., beak sizes in Galápagos finches) that reduce niche overlap.
+
+> **Niche reasoning worked through:** Suppose two barnacle species both *could* settle across an entire intertidal zone (overlapping fundamental niches). In practice the competitively dominant species monopolizes the lower zone, restricting the weaker species to the upper zone — its **realized** niche. Remove the dominant competitor, and the weaker species expands downward toward its fundamental niche. The shrinkage from fundamental to realized niche is the *signature of competition* (−/−) acting in the community.
+      `
+    },
+    {
+      id: 'pcp4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Interactions & Niches
       `,
       exercise: {
         questions: [
           {
-            question: 'For Community Ecology, what best describes density-dependent factor?',
+            question: 'A tick feeds on a deer\'s blood over several days, weakening the deer but not killing it. Using the sign convention, how should this interaction be classified?',
             options: [
-              'count of different species in a community',
-              'life-history pattern favoring competitive efficiency near carrying capacity',
-              'factor whose effect changes with population density',
-              'life-history pattern favoring high reproduction in unstable settings'
-            ],
-            correctAnswer: 2,
-            explanation: 'density-dependent factor is best matched with: factor whose effect changes with population density.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of r-selected strategy?',
-            options: [
-              'how evenly individuals are distributed among species',
-              'life-history pattern favoring high reproduction in unstable settings',
-              'factor whose effect changes with population density',
-              'life-history pattern favoring competitive efficiency near carrying capacity'
+              'Mutualism (+/+), because both organisms obtain something',
+              'Parasitism (+/−), because the tick benefits while the deer is harmed',
+              'Predation (+/−), because the tick consumes the deer',
+              'Commensalism (+/0), because the deer is barely affected'
             ],
             correctAnswer: 1,
-            explanation: 'r-selected strategy is best matched with: life-history pattern favoring high reproduction in unstable settings.'
+            explanation: 'The tick benefits (+) and the deer is harmed (−), and the parasite lives on a host it does not immediately kill — this is parasitism. The "predation" trap shares the same +/− signs, so it is tempting, but predation involves an organism killing and consuming prey outright; a tick is a parasite. "Commensalism (+/0)" is wrong because the deer IS harmed (loss of blood, disease risk), so its sign is −, not 0.'
+          },
+          {
+            question: 'In a lab, two protist species each grow well alone on the same bacterial food source, but when cultured together one species consistently dies out. This result is the clearest demonstration of:',
+            options: [
+              'Mutualism between the two protists',
+              'The competitive exclusion principle',
+              'Resource partitioning allowing coexistence',
+              'A predator-prey relationship between the protists'
+            ],
+            correctAnswer: 1,
+            explanation: 'Two species using the same limiting resource cannot coexist; the superior competitor eliminates the other — the competitive exclusion principle. The trap "resource partitioning" is the opposite outcome: partitioning is the mechanism that ALLOWS coexistence by dividing the resource. Here no division occurred and one species was excluded, so it demonstrates exclusion, not partitioning.'
+          },
+          {
+            question: 'A plant species can physiologically tolerate soils ranging from very dry to very wet, but in the field it is found only in wet soils because a competitor excludes it from drier sites. The dry-to-wet tolerance range represents its ___, and the wet-only field distribution represents its ___.',
+            options: [
+              'realized niche; fundamental niche',
+              'fundamental niche; realized niche',
+              'habitat; niche',
+              'keystone role; trophic level'
+            ],
+            correctAnswer: 1,
+            explanation: 'The full physiological range it COULD use is the fundamental niche; the narrower range it ACTUALLY occupies under competition is the realized niche. The reversed option is the trap — remember the realized niche is the smaller, real-world subset carved out by interactions, so the broad potential range must be the fundamental niche.'
           }
         ]
       }
     },
     {
-      id: 'bio-population-community-ecology-p4-s3-deep-dive',
+      id: 'pcp4-keystone',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Community Ecology
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → density-dependent factor
-      - **Immediate processing** → r-selected strategy
-      - **System-level consequence** → K-selected strategy
-      - **Measured readout** → species richness
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | density-dependent factor | factor whose effect changes with population density | Early shift in the primary variable |
-      | r-selected strategy | life-history pattern favoring high reproduction in unstable settings | Mid-pathway change in process rate |
-      | K-selected strategy | life-history pattern favoring competitive efficiency near carrying capacity | Downstream phenotype trend |
-      | species richness | count of different species in a community | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Keystone Species and Trophic Cascades
+
+Not every species affects a community equally. A **keystone species** has an impact on community structure far out of proportion to its abundance. Like the keystone of an arch, removing it causes the whole structure to collapse, often triggering a sharp drop in diversity.
+
+- **Pisaster sea stars** (Paine's classic experiment): this predatory sea star preferentially eats mussels. When researchers removed *Pisaster* from rocky intertidal plots, mussels outcompeted everything else and species richness fell from about 15 species to roughly 8. The sea star's predation had been keeping a dominant competitor in check.
+- **Sea otters** control sea urchins; without otters, urchins overgraze and destroy kelp forests.
+
+#### Trophic cascades
+
+A **trophic cascade** is the chain of indirect effects that ripples down through trophic levels when a top consumer is added or removed. The reintroduction of **gray wolves to Yellowstone** is the canonical case:
+
+| Step | Effect |
+|---|---|
+| Wolves return (top predator) | Elk numbers drop and elk avoid open valleys |
+| Reduced elk browsing | Willows and aspen recover along streams |
+| Vegetation rebounds | Beavers, songbirds, and stabilized riverbanks return |
+
+Notice the pattern: the predator's effect "cascades" downward to organisms it never directly touches. A keystone predator can thus **increase** plant abundance two links away by suppressing herbivores — an indirect, top-down effect.
+
+> **Distinguish keystone from dominant.** A *dominant* species exerts its influence through sheer biomass or abundance (e.g., the most common tree in a forest). A *keystone* species is influential despite being relatively rare — its role, not its numbers, makes it pivotal.
       `
     },
     {
-      id: 'bio-population-community-ecology-p4-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **factor whose effect changes with population density**
-
-      2) Term for this definition: **life-history pattern favoring high reproduction in unstable settings**
-
-      3) Term for this definition: **life-history pattern favoring competitive efficiency near carrying capacity**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['density-dependent factor', 'r-selected strategy', 'K-selected strategy'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'factor whose effect changes with population density\'.',
-        hint2: 'Second blank points to r-selected strategy; think about the role \'life-history pattern favoring high reproduction in unstable settings\'.',
-        hint3: 'Third blank is K-selected strategy; connect it to \'life-history pattern favoring competitive efficiency near carrying capacity\'.',
-        explanation: 'Correct set: density-dependent factor, r-selected strategy, K-selected strategy. These three terms define the core mechanism chain for Community Ecology.'
-      }
-    },
-    {
-      id: 'bio-population-community-ecology-p4-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'density-dependent factor',
-            options: ['factor whose effect changes with population density', 'count of different species in a community', 'life-history pattern favoring competitive efficiency near carrying capacity', 'life-history pattern favoring high reproduction in unstable settings']
-          },
-          {
-            label: 'r-selected strategy',
-            options: ['life-history pattern favoring high reproduction in unstable settings', 'how evenly individuals are distributed among species', 'count of different species in a community', 'life-history pattern favoring competitive efficiency near carrying capacity']
-          },
-          {
-            label: 'K-selected strategy',
-            options: ['ability to resist or recover from disturbance', 'life-history pattern favoring competitive efficiency near carrying capacity', 'count of different species in a community', 'how evenly individuals are distributed among species']
-          }
-        ],
-        correctAnswers: ['factor whose effect changes with population density', 'life-history pattern favoring high reproduction in unstable settings', 'life-history pattern favoring competitive efficiency near carrying capacity'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'density-dependent factor, r-selected strategy, and K-selected strategy should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-population-community-ecology-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because density-dependent factor factor whose effect changes with population density, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Population size alone does not capture demographic structure or long-term viability.
-      - r and K strategies are endpoints of a continuum, not strict categories.
-      - High biodiversity does not guarantee immunity from disturbance.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-population-community-ecology-p4-s7-mcq-final',
+      id: 'pcp4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Keystones & Cascades
       `,
       exercise: {
         questions: [
           {
-            question: 'In community interaction networks, the observed pattern is: count of different species in a community. What term should anchor the explanation?',
+            question: 'After sea otters are hunted out of a coastal zone, sea urchin populations explode and graze the kelp forest down to bare rock, eliminating dozens of kelp-dependent species. Which concept set best explains this chain of events?',
             options: [
-              'K-selected strategy',
-              'species richness',
-              'r-selected strategy',
-              'density-dependent factor'
+              'Commensalism between otters and kelp',
+              'Loss of a keystone predator triggering a trophic cascade',
+              'Density-independent regulation of the urchins',
+              'Resource partitioning between urchins and kelp'
             ],
             correctAnswer: 1,
-            explanation: 'Use species richness because it directly maps to the described biological pattern: count of different species in a community.'
+            explanation: 'Otters are a keystone predator; removing them releases urchins (their prey), whose overgrazing cascades down to destroy kelp and its dependents — a textbook trophic cascade. The trap "commensalism between otters and kelp" misclassifies the link: otters help kelp only INDIRECTLY (by eating urchins), and commensalism (+/0) describes a direct interaction, which this is not. The effect is an indirect, top-down cascade, not commensalism.'
           },
           {
-            question: 'In an AP-style free-response about community ecology, the observed pattern is: how evenly individuals are distributed among species. What term should anchor the explanation?',
+            question: 'Two warbler species feed on insects in the SAME spruce trees but one forages mainly in the upper canopy and the other in the lower branches, allowing both to persist. This is the clearest example of:',
             options: [
-              'species evenness',
-              'K-selected strategy',
-              'species richness',
-              'community stability'
+              'Competitive exclusion eliminating one warbler',
+              'Resource partitioning that reduces niche overlap and permits coexistence',
+              'Mutualism between the two warbler species',
+              'A predator-prey relationship between the warblers'
             ],
-            correctAnswer: 0,
-            explanation: 'Use species evenness because it directly maps to the described biological pattern: how evenly individuals are distributed among species.'
+            correctAnswer: 1,
+            explanation: 'Dividing the same resource (insects in the canopy) by foraging in different zones is resource partitioning, which shrinks niche overlap and lets competitors coexist. The trap "competitive exclusion" predicts the OPPOSITE outcome — one species driven out — but here BOTH persist precisely because partitioning prevented exclusion. Coexistence by niche division is the signature of partitioning, not exclusion.'
+          },
+          {
+            question: 'A relatively rare predatory snail strongly controls the abundance of a competitively dominant barnacle on a rocky shore. If the snail were experimentally removed, the most likely outcome is:',
+            options: [
+              'Species richness increases as the barnacle is freed from predation',
+              'Species richness decreases as the dominant barnacle monopolizes space',
+              'No change, because the snail is too rare to matter',
+              'The snail and barnacle were mutualists, so both decline'
+            ],
+            correctAnswer: 1,
+            explanation: 'A keystone predator that suppresses a dominant competitor maintains diversity; removing it lets the barnacle monopolize space and crowd others out, lowering richness. The trap "no change because the snail is too rare" misunderstands the keystone concept — keystone influence comes from ECOLOGICAL ROLE, not abundance, so a rare species can have outsized, community-wide effects.'
           }
         ]
       }

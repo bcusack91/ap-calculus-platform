@@ -6,6 +6,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import { MCAT_REFERENCE_SHEETS } from '@/data/mcat-reference-sheets'
+import { InArticleAd } from '@/components/ad-banner'
 
 const TABS: { key: string; label: string }[] = [
   { key: 'chem-phys', label: 'Chem/Phys' },
@@ -69,6 +70,10 @@ export default function MCATReferencePage() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-2xl">
+          <InArticleAd />
         </div>
       </div>
     </div>

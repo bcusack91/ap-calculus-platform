@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
@@ -85,6 +86,11 @@ export default function OrganicChemistryChooser() {
               Start OChem 2 →
             </span>
           </Link>
+        </div>
+
+        {/* In-article ad — single, mid-page placement after the course-choice cards */}
+        <div className="mx-auto mt-10 max-w-5xl">
+          <InArticleAd />
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 text-sm text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">

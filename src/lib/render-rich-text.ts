@@ -76,7 +76,13 @@ function parsePipeCells(line: string): string[] {
 export function plainTextPreview(text: string): string {
   return text
     .replace(/\$\$([\s\S]+?)\$\$/g, '$1')
-    .replace(/\$([^$]+?)\$/g, '$1')
+    // Inline math: only unwrap when the span actually looks like LaTeX/math.
+    // A naive $...$ strip mangles currency pairs ("$5 to $10" -> "5 to 10"), so
+    // require a math indicator (a LaTeX command, sub/superscript, brace, or '=')
+    // or a short symbol token with no spaces; otherwise leave the literal text.
+    .replace(/\$([^$\n]+?)\$/g, (m, inner) =>
+      /[\\^_{}=]/.test(inner) || (!/\s/.test(inner) && inner.length <= 8) ? inner : m,
+    )
     .replace(/\\text\{([^}]*)\}/g, '$1')
     .replace(/\\mathrm\{([^}]*)\}/g, '$1')
     .replace(/\\times/g, '×')
@@ -92,8 +98,8 @@ export function plainTextPreview(text: string): string {
     .replace(/\\mu\b/g, 'μ')
     .replace(/\\pi\b/g, 'π')
     .replace(/\^\{([^}]*)\}/g, '^$1') // superscripts keep a caret marker
-    .replace(/_\{([^}]*)\}/g, '$1') // subscripts inline (CH_3 -> CH3)
-    .replace(/_/g, '')
+    .replace(/_\{([^}]*)\}/g, '$1') // subscripts inline (CH_{3} -> CH3)
+    .replace(/([A-Za-z])_(\d)/g, '$1$2') // numeric subscripts (CH_3 -> CH3); leave snake_case/prose underscores
     .replace(/\\[,;: ]/g, ' ') // LaTeX spacing commands
     .replace(/\\[a-zA-Z]+\b/g, '') // drop any remaining commands
     .replace(/[{}]/g, '')

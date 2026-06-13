@@ -15,6 +15,23 @@ interface TeamGameData {
   team1: TeamData
   team2: TeamData
   playerMMRs: Record<string, number>
+  isPracticeMatch?: boolean
+}
+
+// Strip answer-revealing fields so a live opponent polling this endpoint can't
+// read the correct answer out of the JSON. Kept for AI practice (client bot
+// needs them) and once the match is COMPLETED (review screen needs them).
+function stripTeamAnswerFields(
+  questions: Array<Record<string, unknown>>
+): Array<Record<string, unknown>> {
+  return questions.map((q) => {
+    if (!q || typeof q !== 'object') return q
+    const { answerIndex: _ai, correctAnswer: _ca, explanation: _ex, ...safe } = q
+    void _ai
+    void _ca
+    void _ex
+    return safe
+  })
 }
 
 export async function GET(
@@ -64,6 +81,13 @@ export async function GET(
     const myTeam = isTeam1 ? gameData.team1 : gameData.team2
     const myQuestionIndex = myTeam.questionIndices[session.user.id] ?? 0
 
+    // Scrub answers for live ranked play; keep them for practice / completed.
+    const isPracticeMatch = (gameData as unknown as Record<string, unknown>).isPracticeMatch === true
+    const matchOver = match.status === 'COMPLETED'
+    const safeQuestions = (isPracticeMatch || matchOver)
+      ? gameData.questions
+      : stripTeamAnswerFields(gameData.questions as Array<Record<string, unknown>>)
+
     return NextResponse.json({
       match: {
         id: match.id,
@@ -88,7 +112,7 @@ export async function GET(
           })),
           score: gameData.team2.score,
         },
-        questions: gameData.questions,
+        questions: safeQuestions,
         myQuestionIndex,
         myTeam: isTeam1 ? 1 : 2,
         player1MMRBefore: match.player1MMRBefore,

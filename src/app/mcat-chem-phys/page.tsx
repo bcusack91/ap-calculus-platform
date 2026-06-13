@@ -1,7 +1,10 @@
 'use client'
 
 import MCATSectionLibrary from '@/components/MCATSectionLibrary'
-import { SECTION_PASSAGES, discretesAsPassage } from '@/data/mcat/passages'
+// Import the section's OWN leaf bank, not the passages barrel — the barrel
+// references every section, which would ship all banks into this client bundle.
+import { CHEM_PHYS_PASSAGES, CHEM_PHYS_DISCRETES } from '@/data/mcat/passages/chem-phys'
+import { buildDiscretesPassage } from '@/data/mcat/passages/discretes-helper'
 
 export default function MCATChemPhysPage() {
   return (
@@ -9,8 +12,8 @@ export default function MCATChemPhysPage() {
       sectionShort="chem-phys"
       sectionName="Chem/Phys"
       title="MCAT Chem/Phys Passage Practice"
-      passages={SECTION_PASSAGES['chem-phys']}
-      discretes={discretesAsPassage('chem-phys')}
+      passages={CHEM_PHYS_PASSAGES}
+      discretes={buildDiscretesPassage('chem-phys', CHEM_PHYS_DISCRETES)}
       accent={{
         from: 'from-orange-500',
         to: 'to-red-600',

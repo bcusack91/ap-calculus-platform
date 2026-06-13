@@ -2,6 +2,21 @@ import { NextRequest, NextResponse } from 'next/server'
 import { requireClassroomOwner } from '@/lib/teacher-auth'
 import { prisma } from '@/lib/prisma'
 
+/**
+ * Serialize a single CSV cell:
+ *  1. Neutralize formula injection — a cell that a spreadsheet would evaluate as
+ *     a formula (leading = + - @, or the Tab/CR control chars some apps treat the
+ *     same) is prefixed with a single quote so it is rendered as literal text.
+ *  2. Quote the value and escape embedded double-quotes per RFC 4180.
+ */
+function csvCell(value: unknown): string {
+  let str = String(value ?? '')
+  if (/^[=+\-@\t\r]/.test(str)) {
+    str = `'${str}`
+  }
+  return `"${str.replace(/"/g, '""')}"`
+}
+
 // GET /api/teacher/classrooms/[id]/export?format=csv
 export async function GET(
   req: NextRequest,
@@ -96,9 +111,9 @@ export async function GET(
         `Grade Report: ${classroom.name}`,
         `Generated: ${new Date().toLocaleDateString()}`,
         '',
-        headers.join(','),
+        headers.map((cell) => csvCell(cell)).join(','),
         ...rows.map((row) =>
-          row.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(',')
+          row.map((cell) => csvCell(cell)).join(',')
         ),
         '',
         'Summary',

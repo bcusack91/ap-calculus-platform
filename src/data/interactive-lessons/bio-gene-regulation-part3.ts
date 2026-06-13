@@ -2,192 +2,189 @@ export const bioGeneRegPart3Data = {
   topicSlug: 'gene-regulation',
   sections: [
     {
-      id: 'bio-gene-regulation-p3-s1-intro',
+      id: 'grp3-intro',
       type: 'text' as const,
       content: `
-      ## Gene Regulation: Eukaryotic Regulation
-      
-      **Part 3 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through enhancer-driven tissue-specific expression.
-      
-      ### Worked biological example
-      A student team investigates enhancer-driven tissue-specific expression. Their first interpretation step is to identify how **repressor** and **enhancer** work together in the same pathway.
-      
-      - They classify the primary signal using **repressor**: regulatory protein reducing transcription when bound.
-      - They trace the downstream response using **enhancer**: DNA element increasing transcription from a distance.
-      - They then compare outcomes with **epigenetic mark** and **DNA methylation** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **repressor**
-      - **enhancer**
-      - **epigenetic mark**
-      - **DNA methylation**
+## Eukaryotic Regulation
+
+**Part 3 of 7**
+
+Eukaryotes face a regulatory challenge bacteria never do: building and maintaining hundreds of distinct cell types from one genome, over an organism's whole lifetime. Their solution is **richer and more layered** than the prokaryotic operon. Two architectural facts shape everything:
+
+1. **Eukaryotic genes are regulated individually, not in operons.** Each gene has its own promoter and its own set of regulatory sequences. Genes in the same pathway are usually scattered across chromosomes and switched on by *shared transcription factors*, not by being strung together on one mRNA.
+2. **DNA is packaged into chromatin.** Before a gene can even be read, its DNA must be made physically accessible. Chromatin state is the first gate.
+
+> **AP trap (carry it forward):** **Operons are prokaryotic.** A eukaryotic question that mentions "the operon for muscle genes" is wrong on its face. Eukaryotic coordination comes from common transcription factors acting on individually promoted genes.
       `
     },
     {
-      id: 'bio-gene-regulation-p3-s2-mcq-core',
+      id: 'grp3-chromatin',
+      type: 'text' as const,
+      content: `
+### Chromatin Structure — The First Gate
+
+Eukaryotic DNA is wound around **histone** proteins to form **nucleosomes**, which fold into higher-order chromatin. How tightly the DNA is packed determines whether transcription machinery can reach it:
+
+| State | Packing | Transcription factor / polymerase access | Gene activity |
+|---|---|---|---|
+| **Euchromatin** | Loose, open | Accessible | Genes can be **expressed** |
+| **Heterochromatin** | Tightly condensed | Blocked | Genes are **silenced** |
+
+A gene buried in heterochromatin is effectively off no matter what activators are floating in the nucleus — the proteins cannot physically dock. Converting between states (via the chromatin-remodeling and histone-modifying enzymes detailed in Part 4) is therefore a master switch. This packaging layer **has no equivalent in the lac operon**, where the DNA is broadly open and regulation happens entirely at the operator/promoter.
+
+> **Mechanistic link:** Because access is gated by chromatin, a eukaryotic gene must be (1) made accessible *and* (2) bound by the right activators to be transcribed. Two conditions, not one — which is why eukaryotic control is described as multilayered.
+      `
+    },
+    {
+      id: 'grp3-enhancers',
+      type: 'text' as const,
+      content: `
+### Enhancers, Silencers, and Combinatorial Control
+
+Once chromatin is open, transcription of a eukaryotic gene depends on proteins binding regulatory DNA — but those sequences can sit far from the gene.
+
+- **Enhancers** are DNA elements (cis) that **increase** transcription, often located thousands of base pairs upstream, downstream, or even within introns. **Activator** proteins (trans) bind enhancers; the DNA loops so the bound activators contact the promoter machinery.
+- **Silencers** are DNA elements (cis) that **decrease** transcription when bound by **repressor** proteins (trans).
+- **General (basal) transcription factors** assemble at the promoter (around the TATA box) and position **RNA polymerase II**; they are required for any transcription but give only a low basal rate.
+- The **Mediator complex** is the physical bridge: it relays signals from distant enhancer-bound activators to the general transcription factors and polymerase at the promoter.
+
+**Combinatorial control** is the key eukaryotic principle: a typical gene is governed not by one switch but by a **combination** of many transcription factors binding many elements. A gene turns on only when the *right set* of activators is present together. This is powerful because a few hundred transcription factors, used in different combinations, can specify thousands of distinct gene-expression patterns — enough to define every cell type from one genome.
+
+Cell-type specificity emerges from this: a liver cell and a neuron differ because each contains a **different combination** of active transcription factors, which switch on different enhancers, which turn on different gene sets.
+
+> **Contrast with operons:** Bacteria coordinate genes by *physical linkage* (one operon, one mRNA). Eukaryotes coordinate genes by *shared trans-factors* — the same activator binds enhancers near many separate genes, switching them on together without ever bundling them into one transcript.
+      `
+    },
+    {
+      id: 'grp3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Chromatin & Combinatorial Control
       `,
       exercise: {
         questions: [
           {
-            question: 'For Eukaryotic Regulation, what best describes repressor?',
+            question: 'A muscle-specific gene is bound by all of its required activator proteins, yet it is not transcribed in a particular cell. Sequencing shows no mutations in the gene or its enhancers. What is the most likely explanation?',
             options: [
-              'heritable chromatin modification not changing DNA sequence',
-              'DNA element increasing transcription from a distance',
-              'chemical tagging often associated with reduced transcription',
-              'regulatory protein reducing transcription when bound'
+              'The gene is part of an operon that is switched off',
+              'The gene is located in tightly packed heterochromatin, so the transcription machinery cannot physically access it',
+              'The activators are cis-regulatory elements that cannot diffuse',
+              'The gene lacks a promoter'
             ],
-            correctAnswer: 3,
-            explanation: 'repressor is best matched with: regulatory protein reducing transcription when bound.'
+            correctAnswer: 1,
+            explanation: 'In eukaryotes, chromatin state is the first gate: even with activators present, a gene in heterochromatin is inaccessible and stays off. Option A is a classic trap — eukaryotic genes are NOT in operons. Option C misdefines activators (they are trans-acting diffusible proteins, not cis elements). Option D is excluded because the gene is described as having intact enhancers and being normally transcribable elsewhere.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of enhancer?',
+            question: 'How can a relatively small number of transcription factors generate thousands of distinct cell-type-specific gene-expression patterns in a human body?',
             options: [
-              'heritable chromatin modification not changing DNA sequence',
-              'regulatory protein reducing transcription when bound',
-              'chromatin modification generally increasing accessibility',
-              'DNA element increasing transcription from a distance'
+              'Each cell type contains a different set of genes',
+              'Through combinatorial control: different COMBINATIONS of the shared transcription factors activate different sets of enhancers and genes',
+              'Each transcription factor controls exactly one gene',
+              'By bundling related genes into operons unique to each cell type'
             ],
-            correctAnswer: 3,
-            explanation: 'enhancer is best matched with: DNA element increasing transcription from a distance.'
+            correctAnswer: 1,
+            explanation: 'Combinatorial control is the answer: a modest toolkit of factors, used in different combinations, specifies an enormous number of expression states. Option A is the differentiation trap — all body cells share the same genes. Option C contradicts combinatorial logic (one factor typically regulates many genes). Option D wrongly invokes operons, which are prokaryotic.'
+          },
+          {
+            question: 'An enhancer for a gene is located 20,000 base pairs upstream of that gene\'s promoter. How does an activator bound at this distant enhancer stimulate transcription at the promoter?',
+            options: [
+              'The activator slides along the DNA until it reaches the promoter',
+              'The DNA loops so that enhancer-bound activators contact the promoter machinery, with the Mediator complex bridging them',
+              'The enhancer is transcribed into an mRNA that activates the gene',
+              'Distant enhancers cannot affect transcription and must be ignored'
+            ],
+            correctAnswer: 1,
+            explanation: 'DNA looping brings the distant enhancer-bound activators into physical contact with the promoter; Mediator relays the signal to RNA polymerase II and the general transcription factors. Option A misdescribes the mechanism (activators do not slide thousands of bp). Option C invents enhancer transcription as the mechanism, and option D contradicts the defining property of enhancers — they act at a distance.'
           }
         ]
       }
     },
     {
-      id: 'bio-gene-regulation-p3-s3-deep-dive',
+      id: 'grp3-post-transcriptional',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Eukaryotic Regulation
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → repressor
-      - **Immediate processing** → enhancer
-      - **System-level consequence** → epigenetic mark
-      - **Measured readout** → DNA methylation
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | repressor | regulatory protein reducing transcription when bound | Early shift in the primary variable |
-      | enhancer | DNA element increasing transcription from a distance | Mid-pathway change in process rate |
-      | epigenetic mark | heritable chromatin modification not changing DNA sequence | Downstream phenotype trend |
-      | DNA methylation | chemical tagging often associated with reduced transcription | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Beyond Transcription — Splicing, Stability, and Localization
+
+Transcription is only the first control point. Eukaryotes regulate the RNA itself, multiplying the output of a single gene.
+
+**Alternative splicing.** A single pre-mRNA can be spliced in different ways, including or excluding particular exons, to produce **multiple distinct proteins from one gene**. This is a major reason humans make far more proteins than they have genes; it is also cell-type-specific, so a gene can yield one protein isoform in the brain and another in muscle.
+
+**mRNA stability.** How long an mRNA survives before being degraded sets how many protein copies can be made from it. Sequences in the **$3'$ UTR** (and miRNA targeting — Part 5) control the rate of degradation. A long-lived mRNA yields far more protein than a short-lived one, even at equal transcription rates.
+
+**mRNA localization.** Cells can transport specific mRNAs to particular regions and translate them only there, concentrating a protein exactly where it is needed (e.g., at one end of a developing embryo). This produces spatial control that transcription alone cannot.
+
+A control-level map for eukaryotic regulation:
+
+| Control level | Representative mechanism | Example outcome |
+|---|---|---|
+| **Chromatin** | Euchromatin vs. heterochromatin | Whole regions silenced in a cell type |
+| **Transcriptional** | Enhancers + combinatorial activators; Mediator | Cell-type-specific gene sets switched on |
+| **RNA processing** | **Alternative splicing** | Multiple protein isoforms from one gene |
+| **mRNA stability** | $3'$ UTR signals; miRNA degradation | More vs. less protein per transcript |
+| **mRNA localization** | Targeted transport of transcripts | Protein concentrated in one cell region |
+| **Translational** | $5'$ UTR structure; initiation control | Fast on/off without changing mRNA level |
+| **Post-translational** | Phosphorylation; ubiquitin → proteasome | Activity/lifetime of finished protein tuned |
+
+> **Big picture:** Where bacteria mostly regulate at transcription, eukaryotes deploy a **stack** of control points — chromatin, transcription, splicing, stability, localization, translation, and protein modification. Each adds a tuning knob, and together they let one genome run an entire multicellular organism.
       `
     },
     {
-      id: 'bio-gene-regulation-p3-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **regulatory protein reducing transcription when bound**
-
-      2) Term for this definition: **DNA element increasing transcription from a distance**
-
-      3) Term for this definition: **heritable chromatin modification not changing DNA sequence**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['repressor', 'enhancer', 'epigenetic mark'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'regulatory protein reducing transcription when bound\'.',
-        hint2: 'Second blank points to enhancer; think about the role \'DNA element increasing transcription from a distance\'.',
-        hint3: 'Third blank is epigenetic mark; connect it to \'heritable chromatin modification not changing DNA sequence\'.',
-        explanation: 'Correct set: repressor, enhancer, epigenetic mark. These three terms define the core mechanism chain for Eukaryotic Regulation.'
-      }
-    },
-    {
-      id: 'bio-gene-regulation-p3-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'repressor',
-            options: ['chemical tagging often associated with reduced transcription', 'regulatory protein reducing transcription when bound', 'heritable chromatin modification not changing DNA sequence', 'DNA element increasing transcription from a distance']
-          },
-          {
-            label: 'enhancer',
-            options: ['chemical tagging often associated with reduced transcription', 'DNA element increasing transcription from a distance', 'heritable chromatin modification not changing DNA sequence', 'chromatin modification generally increasing accessibility']
-          },
-          {
-            label: 'epigenetic mark',
-            options: ['chromatin modification generally increasing accessibility', 'chemical tagging often associated with reduced transcription', 'small RNA that suppresses gene expression post-transcriptionally', 'heritable chromatin modification not changing DNA sequence']
-          }
-        ],
-        correctAnswers: ['regulatory protein reducing transcription when bound', 'DNA element increasing transcription from a distance', 'heritable chromatin modification not changing DNA sequence'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'repressor, enhancer, and epigenetic mark should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-gene-regulation-p3-s6-strategy',
+      id: 'grp3-worked-combinatorial',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because repressor regulatory protein reducing transcription when bound, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Prokaryotic and eukaryotic regulation share principles but differ in architecture.
-      - Post-transcriptional control can strongly influence final protein output.
-      - Gene presence does not imply constant expression.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### Worked Reasoning — How a Gene Reads a Combination of Factors
+
+Combinatorial control is abstract until you trace it through a concrete gene. Consider a hypothetical "liver enzyme" gene whose enhancer has binding sites for **three** transcription factors — call them **A**, **B**, and **R**. A and B are **activators**; R is a **repressor**. The promoter is in open euchromatin in every cell type, so chromatin is *not* the limiting factor here — the deciding variable is *which factors are present*.
+
+The gene fires strongly **only** when **both activators are present and the repressor is absent**. Predict the output across cell types, each defined by the factors it happens to express:
+
+| Cell type | A present? | B present? | R present? | Gene output |
+|---|---|---|---|---|
+| Hepatocyte (liver) | Yes | Yes | No | **HIGH** (both activators, no repressor) |
+| Kidney cell | Yes | No | No | **Low** (missing activator B) |
+| Neuron | No | No | Yes | **OFF** (no activators; repressor bound) |
+| Intestinal cell | Yes | Yes | **Yes** | **Low/OFF** (repressor overrides activators) |
+
+**Read the logic:**
+
+- The gene is not controlled by any single switch. It integrates **three inputs**, and only the hepatocyte's particular combination ($A$ + $B$, no $R$) yields full expression.
+- A few transcription factors, in different combinations, thus generate **distinct outputs in different cells** — the molecular basis of how one genome builds many cell types.
+- This mirrors the lac operon's two-switch logic (Part 2), but eukaryotes scale it up to *many* factors per gene, and the factors are shared across *many* individually promoted genes.
+
+**Connecting to differentiation.** A cell's identity *is* its set of active transcription factors. A "master regulator" factor that switches on a battery of muscle genes can, when introduced into a fibroblast, push it toward a muscle-like state — direct evidence that the combination of factors, not a change in the genome, specifies cell type.
+
+> **Reasoning habit:** For a eukaryotic gene, do not ask "is the switch on?" Ask "**which combination** of activators and repressors is present, and does the chromatin allow access?" Output is the *integration* of all those inputs — high, low, or off.
       `
     },
     {
-      id: 'bio-gene-regulation-p3-s7-mcq-final',
+      id: 'grp3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Exit Ticket — Eukaryotic Layers
       `,
       exercise: {
         questions: [
           {
-            question: 'In enhancer-driven tissue-specific expression, the observed pattern is: chemical tagging often associated with reduced transcription. What term should anchor the explanation?',
+            question: 'The gene for tropomyosin produces different protein versions in skeletal muscle, smooth muscle, and brain tissue, all from the same DNA sequence. Which mechanism best explains this?',
             options: [
-              'epigenetic mark',
-              'enhancer',
-              'DNA methylation',
-              'repressor'
+              'Each tissue has a different copy of the tropomyosin gene',
+              'Alternative splicing includes or excludes different exons in different cell types, yielding distinct protein isoforms from one gene',
+              'The gene is part of a different operon in each tissue',
+              'Point mutations rewrite the gene in each tissue'
             ],
-            correctAnswer: 2,
-            explanation: 'Use DNA methylation because it directly maps to the described biological pattern: chemical tagging often associated with reduced transcription.'
+            correctAnswer: 1,
+            explanation: 'Alternative splicing of one pre-mRNA explains how a single gene yields tissue-specific protein isoforms. Option A is the differentiation trap (all tissues carry the same gene). Option C invokes operons, which are prokaryotic. Option D confuses regulated splicing with mutation — the DNA sequence is unchanged across tissues.'
           },
           {
-            question: 'In an AP-style free-response about eukaryotic regulation, the observed pattern is: chromatin modification generally increasing accessibility. What term should anchor the explanation?',
+            question: 'Two genes are transcribed at exactly the same rate in a cell, yet gene A produces far more protein than gene B. No difference is found in their promoters or splicing. The best explanation is a difference in:',
             options: [
-              'epigenetic mark',
-              'DNA methylation',
-              'miRNA',
-              'histone acetylation'
+              'The number of operators upstream of each gene',
+              'mRNA stability — gene A\'s transcript is degraded more slowly, so it is translated many more times before being broken down',
+              'The number of chromosomes carrying each gene',
+              'cAMP levels in the cell'
             ],
-            correctAnswer: 3,
-            explanation: 'Use histone acetylation because it directly maps to the described biological pattern: chromatin modification generally increasing accessibility.'
+            correctAnswer: 1,
+            explanation: 'Equal transcription but unequal protein output points to post-transcriptional control of mRNA stability: a longer-lived transcript is translated more often. Option A invokes operators/operons (prokaryotic) inappropriately. Option C is irrelevant to per-mRNA output. Option D imports the bacterial cAMP/CAP system, which does not govern eukaryotic mRNA half-life.'
           }
         ]
       }

@@ -35,6 +35,14 @@ import { AP_US_GOV_PLANS } from '../src/data/ap-us-gov-study-plans'
 import { AP_US_HISTORY_PLANS } from '../src/data/ap-us-history-study-plans'
 import { AP_WORLD_HISTORY_PLANS } from '../src/data/ap-world-history-study-plans'
 
+// Math-ladder courses (lessons + diagnostics + flashcards, now with study plans).
+import { ALGEBRA1_PLANS } from '../src/data/algebra1-study-plans'
+import { ALGEBRA2_PLANS } from '../src/data/algebra2-study-plans'
+import { GEOMETRY_PLANS } from '../src/data/geometry-study-plans'
+import { PREALGEBRA_PLANS } from '../src/data/prealgebra-study-plans'
+import { GRADE8_MATH_PLANS } from '../src/data/grade8-math-study-plans'
+import { PRECALCULUS_PLANS } from '../src/data/precalculus-study-plans'
+
 // courseSlug MUST match the adopt route's courseSlug for each course.
 const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
   { courseSlug: 'act-prep', plans: ACT_PLANS },
@@ -58,6 +66,13 @@ const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
   { courseSlug: 'ap-us-government', plans: AP_US_GOV_PLANS },
   { courseSlug: 'ap-us-history', plans: AP_US_HISTORY_PLANS },
   { courseSlug: 'ap-world-history', plans: AP_WORLD_HISTORY_PLANS },
+  // Math-ladder courses (slugs match course-metadata.ts).
+  { courseSlug: 'pre-algebra', plans: PREALGEBRA_PLANS },
+  { courseSlug: 'algebra-1', plans: ALGEBRA1_PLANS },
+  { courseSlug: 'algebra-2', plans: ALGEBRA2_PLANS },
+  { courseSlug: 'geometry', plans: GEOMETRY_PLANS },
+  { courseSlug: 'grade-8-math', plans: GRADE8_MATH_PLANS },
+  { courseSlug: 'precalculus', plans: PRECALCULUS_PLANS },
 ]
 
 async function main() {

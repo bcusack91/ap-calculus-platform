@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Study Mondo — Free Math & Science Study Platform",
   description:
     "Master 24 courses from Grade 4 through AP with free notes, flashcards, interactive lessons, and practice problems. 700+ topics, completely free.",
+  // The homepage's own canonical (the root layout no longer sets one — see the
+  // note there). Relative URL resolves against the root metadataBase.
+  alternates: { canonical: "/" },
 };
 
 const defaultMeta = defaultCourseMeta;

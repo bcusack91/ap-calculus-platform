@@ -16,6 +16,7 @@ import {
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
+import { InArticleAd } from '@/components/ad-banner'
 
 type Phase = 'menu' | 'testing' | 'results'
 
@@ -427,6 +428,9 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
                 </button>
               </div>
             </div>
+
+            {/* Ad — on the results screen, after the score breakdown */}
+            <InArticleAd />
 
             {reviewing && (
               <div className="mt-6 space-y-4">

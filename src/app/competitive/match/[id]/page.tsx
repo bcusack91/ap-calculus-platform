@@ -48,8 +48,8 @@ interface MatchState {
   player2Id: string;
   player1Name: string;
   player2Name: string;
-  player1Email?: string;
-  player2Email?: string;
+  player1IsAI?: boolean;
+  player2IsAI?: boolean;
   player1Avatar?: AvatarData | null;
   player2Avatar?: AvatarData | null;
   player1QuestionIndex: number;
@@ -268,10 +268,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     if (!activeMatch || activeMatch.status !== 'IN_PROGRESS') return;
 
     const isPlayer1 = currentUserId === activeMatch.player1Id;
-    const opponentEmail = isPlayer1 ? activeMatch.player2Email : activeMatch.player1Email;
-    
-    // Check if opponent is AI
-    const isOpponentAI = opponentEmail === 'ai-opponent@studyai.com';
+
+    // Check if opponent is AI (server sends a boolean flag — emails are no
+    // longer exposed to the client; see match GET route #6)
+    const isOpponentAI = isPlayer1 ? activeMatch.player2IsAI : activeMatch.player1IsAI;
     if (!isOpponentAI) return;
 
     const opponentQuestionIndex = isPlayer1 ? activeMatch.player2QuestionIndex : activeMatch.player1QuestionIndex;
@@ -397,20 +397,32 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       const _endTime = Date.now();
 
       const data = await response.json();
-      
+
+      // The correct index for THIS question comes back from the answer POST
+      // (the GET no longer leaks it for ranked matches — see #1). Fall back to
+      // the question's own answerIndex for AI practice matches, where it's still
+      // present client-side.
+      const resolvedCorrectIndex: number | null =
+        typeof data.correctAnswerIndex === 'number'
+          ? data.correctAnswerIndex
+          : (currentQuestion?.answerIndex ?? null);
+
       const isPlayer1 = currentUserId === matchState.player1Id;
-      
+
       if (data.correct) {
         setFeedback('correct');
         setFeedbackQuestionIndex(playerQuestionIndex);
-        
+        // Expose the correct index so multiple-choice can highlight it green
+        // (for ranked matches the question object itself no longer carries it).
+        if (resolvedCorrectIndex !== null) setCorrectAnswerIndex(resolvedCorrectIndex);
+
         // Set happy emotion for the player who answered
         if (isPlayer1) {
           setPlayer1Emotion('happy');
         } else {
           setPlayer2Emotion('happy');
         }
-        
+
         setIsSubmitting(false);
         
         // Wait 1600ms to show feedback, then refresh state for next question
@@ -437,8 +449,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           setPlayer2Emotion('sad');
         }
         
-        // Show correct answer in green for 1600ms
-        setCorrectAnswerIndex(currentQuestion.answerIndex || 0);
+        // Show correct answer in green for 1600ms (from the answer POST response;
+        // the question no longer carries answerIndex for ranked matches — #1)
+        setCorrectAnswerIndex(resolvedCorrectIndex ?? 0);
         setIsSubmitting(false);
         
         // Wait 1600ms to show feedback, then clear and refresh
@@ -888,7 +901,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             <div className="space-y-3 max-w-2xl mx-auto">
               {currentQuestion.options?.map((option, index) => {
                 const isSelected = selectedPosition === index;
-                const isCorrect = index === currentQuestion.answerIndex;
+                // The correct index is learned from the answer POST response
+                // (correctAnswerIndex state) for ranked matches; fall back to the
+                // question's own answerIndex for AI practice. During live play we
+                // only know it AFTER answering, which is exactly when feedback shows.
+                const knownCorrectIndex = correctAnswerIndex ?? currentQuestion.answerIndex;
+                const isCorrect = knownCorrectIndex !== undefined && index === knownCorrectIndex;
                 const showCorrect = isFeedbackCurrent && isCorrect;
                 const showIncorrect = isFeedbackCurrent && isSelected && !isCorrect;
                 

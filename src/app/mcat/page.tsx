@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import type { Metadata } from 'next'
 import MCATRecommendedModules from '@/components/MCATRecommendedModules'
 import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
+import { InArticleAd } from '@/components/ad-banner'
 
 export const metadata: Metadata = {
   title: 'MCAT Prep | Free MCAT Practice & Review',
@@ -313,6 +314,12 @@ export default function MCATLandingPage() {
           </div>
         </div>
       </section>
+
+      <div className="container pb-12">
+        <div className="mx-auto max-w-2xl">
+          <InArticleAd />
+        </div>
+      </div>
 
       {/* What's Covered */}
       <section className="container pb-12">

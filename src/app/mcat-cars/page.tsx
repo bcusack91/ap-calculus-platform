@@ -3,9 +3,15 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
+import { InArticleAd } from '@/components/ad-banner'
 import { plainTextPreview } from '@/lib/render-rich-text'
-import { CARS_PASSAGES } from '@/data/mcat/passages'
+// Leaf imports (not the passages barrel) so the science banks don't ship to this
+// client page — only the CARS passages it actually renders.
+import { CARS_HUMANITIES_PASSAGES } from '@/data/mcat/passages/cars-humanities'
+import { CARS_SOCIAL_SCIENCE_PASSAGES } from '@/data/mcat/passages/cars-social-science'
 import { countQuestions, type MCATPassage } from '@/data/mcat/types'
+
+const CARS_PASSAGES: MCATPassage[] = [...CARS_HUMANITIES_PASSAGES, ...CARS_SOCIAL_SCIENCE_PASSAGES]
 
 export default function MCATCarsPage() {
   // null = library grid; array = practice runner for that selection
@@ -53,6 +59,10 @@ export default function MCATCarsPage() {
               <p className="mt-2 text-xs font-medium text-gray-400">{p.questions.length} questions</p>
             </button>
           ))}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-2xl">
+          <InArticleAd />
         </div>
       </div>
     </div>

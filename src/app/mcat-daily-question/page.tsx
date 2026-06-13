@@ -6,6 +6,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
+import { InArticleAd } from '@/components/ad-banner'
 
 /** Renders $…$/markdown content as KaTeX/HTML, re-rendering once KaTeX loads. */
 function RichText({ text, className, inline }: { text: string; className?: string; inline?: boolean }) {
@@ -206,6 +207,12 @@ export default function MCATDailyQuestionPage() {
                 </div>
               )
             })}
+          </div>
+        )}
+
+        {!loading && questions.length > 0 && (
+          <div className="mx-auto mt-10 max-w-2xl">
+            <InArticleAd />
           </div>
         )}
 

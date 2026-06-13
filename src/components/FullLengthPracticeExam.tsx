@@ -5,6 +5,8 @@ import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
+import { InArticleAd } from '@/components/ad-banner'
+import ShareScoreCard from '@/components/ShareScoreCard'
 import 'katex/dist/katex.min.css'
 
 /**
@@ -372,6 +374,14 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
               <p className="text-4xl font-black">{scoring.pct >= 80 ? '🎉' : scoring.pct >= 60 ? '👍' : '📚'}</p>
             </div>
           </div>
+
+          {/* Share your score */}
+          {scoring.possible > 0 && (
+            <ShareScoreCard score={scoring.earned} total={scoring.possible} subject={subject} type="exam" />
+          )}
+
+          {/* Ad — on the final results screen, after the score summary */}
+          <InArticleAd />
 
           <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-3 text-lg font-semibold text-gray-800 dark:text-gray-200">Section Breakdown</h3>

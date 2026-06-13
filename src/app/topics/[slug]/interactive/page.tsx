@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import ClientLessonRenderer from '@/components/ClientLessonRenderer'
+import { InArticleAd } from '@/components/ad-banner'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
 import 'katex/dist/katex.min.css'
@@ -185,6 +186,9 @@ export default async function InteractivePage(props: InteractivePageProps) {
         {hasHandCraftedLesson && (
           <InteractiveLessonSEO topicSlug={topic.slug} topicTitle={topic.title} />
         )}
+
+        {/* Ad — after the lesson content, before related links */}
+        <InArticleAd />
 
         {/* Link back to standard lesson */}
         <div className="mt-8 text-center">

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef, Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { InArticleAd } from '@/components/ad-banner'
+import { trackSearch } from '@/lib/analytics'
 
 interface SearchResult {
   type: 'course' | 'category' | 'topic'
@@ -61,10 +62,12 @@ function SearchContent() {
     try {
       const res = await fetch(`/api/search?q=${encodeURIComponent(q.trim())}`)
       const data = await res.json()
-      setResults(data.results || [])
+      const searchResults: SearchResult[] = data.results || []
+      setResults(searchResults)
       setSearched(true)
       saveRecentSearch(q.trim())
       setRecentSearches(getRecentSearches())
+      trackSearch(q.trim(), searchResults.length)
     } catch {
       setResults([])
     } finally {

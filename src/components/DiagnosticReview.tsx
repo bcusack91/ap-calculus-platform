@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import { InArticleAd } from '@/components/ad-banner'
 
 function renderLatex(text: string): string {
   return renderRichText(text)
@@ -57,25 +58,30 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
 
   if (!isOpen) {
     return (
-      <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">📝 Review Your Test</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {missedIndices.length > 0
-                ? `You missed ${missedIndices.length} question${missedIndices.length > 1 ? 's' : ''} — review them with explanations`
-                : 'Perfect score! Review all your answers'}
-            </p>
+      <>
+        <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 dark:border-gray-700 dark:bg-gray-800">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">📝 Review Your Test</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {missedIndices.length > 0
+                  ? `You missed ${missedIndices.length} question${missedIndices.length > 1 ? 's' : ''} — review them with explanations`
+                  : 'Perfect score! Review all your answers'}
+              </p>
+            </div>
+            <button
+              onClick={() => setIsOpen(true)}
+              className={`rounded-xl bg-${accentColor}-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-${accentColor}-700`}
+              style={{ backgroundColor: accentColor === 'purple' ? undefined : undefined }}
+            >
+              Review {missedIndices.length > 0 ? `${missedIndices.length} Missed` : 'All'} →
+            </button>
           </div>
-          <button
-            onClick={() => setIsOpen(true)}
-            className={`rounded-xl bg-${accentColor}-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-${accentColor}-700`}
-            style={{ backgroundColor: accentColor === 'purple' ? undefined : undefined }}
-          >
-            Review {missedIndices.length > 0 ? `${missedIndices.length} Missed` : 'All'} →
-          </button>
         </div>
-      </div>
+
+        {/* Ad — after the score breakdown / review summary */}
+        <InArticleAd />
+      </>
     )
   }
 

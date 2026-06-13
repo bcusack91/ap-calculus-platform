@@ -10,6 +10,7 @@ interface MatchGameData {
   player2Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
   player1QuestionIndex?: number;
   player2QuestionIndex?: number;
+  isPracticeMatch?: boolean;
   [key: string]: unknown;
 }
 
@@ -88,80 +89,113 @@ export async function POST(
     const player1MMRAfter = player1MMR + player1MMRChange;
     const player2MMRAfter = player2MMR + player2MMRChange;
 
-    await prisma.competitiveMatch.update({
-      where: { id: matchId },
-      data: {
-        status: 'COMPLETED',
-        winnerId,
-        completedAt: new Date(),
-        player1Score: p1Correct,
-        player2Score: p2Correct,
-        gameData: { ...gameData } as unknown as Prisma.InputJsonValue,
-        player1MMRAfter,
-        player2MMRAfter,
-      },
-    });
+    const isPracticeMatch = gameData.isPracticeMatch === true;
 
-    if (match.player1.competitiveProfile) {
-      await prisma.competitiveProfile.update({
-        where: { userId: match.player1Id },
-        data: {
-          unitCircleMMR: player1MMRAfter,
-          overallMMR: player1MMRAfter,
-          totalMatches: { increment: 1 },
-          wins: player1Won ? { increment: 1 } : undefined,
-          losses: player2Won ? { increment: 1 } : undefined,
-          winStreak: player1Won ? { increment: 1 } : 0,
-          bestWinStreak: player1Won
-            ? Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak)
-            : undefined,
-          rank: getRankFromMMR(player1MMRAfter),
-        },
-      });
+    // All writes happen inside ONE transaction with a row lock + an in-tx
+    // status re-check (#3). Two clients can both fire /complete when the timer
+    // expires; without this each would read status='IN_PROGRESS', then both
+    // would increment wins/losses and create duplicate MMRHistory rows (double
+    // counting). FOR UPDATE serialises them and the re-check makes the second
+    // one a no-op. Mirrors async-challenge/[id] and match/[id]/answer.
+    try {
+      await prisma.$transaction(async (tx) => {
+        await tx.$queryRaw`SELECT id FROM "CompetitiveMatch" WHERE id = ${matchId} FOR UPDATE`;
+
+        const current = await tx.competitiveMatch.findUnique({
+          where: { id: matchId },
+          select: { status: true },
+        });
+        if (!current || current.status === 'COMPLETED') {
+          throw Object.assign(new Error('Match already completed'), { code: 'ALREADY_COMPLETED' });
+        }
+
+        await tx.competitiveMatch.update({
+          where: { id: matchId },
+          data: {
+            status: 'COMPLETED',
+            winnerId,
+            completedAt: new Date(),
+            player1Score: p1Correct,
+            player2Score: p2Correct,
+            gameData: { ...gameData } as unknown as Prisma.InputJsonValue,
+            player1MMRAfter,
+            player2MMRAfter,
+          },
+        });
+
+        // Practice (vs-AI) matches finalize the RECORD only — never touch
+        // ranked stats / MMR history (#2/#3): win-farming guard.
+        if (!isPracticeMatch) {
+          if (match.player1.competitiveProfile) {
+            await tx.competitiveProfile.update({
+              where: { userId: match.player1Id },
+              data: {
+                unitCircleMMR: player1MMRAfter,
+                overallMMR: player1MMRAfter,
+                totalMatches: { increment: 1 },
+                wins: player1Won ? { increment: 1 } : undefined,
+                losses: player2Won ? { increment: 1 } : undefined,
+                winStreak: player1Won ? { increment: 1 } : 0,
+                bestWinStreak: player1Won
+                  ? Math.max(match.player1.competitiveProfile.winStreak + 1, match.player1.competitiveProfile.bestWinStreak)
+                  : undefined,
+                rank: getRankFromMMR(player1MMRAfter),
+              },
+            });
+          }
+
+          if (match.player2.competitiveProfile) {
+            await tx.competitiveProfile.update({
+              where: { userId: match.player2Id },
+              data: {
+                unitCircleMMR: player2MMRAfter,
+                overallMMR: player2MMRAfter,
+                totalMatches: { increment: 1 },
+                wins: player2Won ? { increment: 1 } : undefined,
+                losses: player1Won ? { increment: 1 } : undefined,
+                winStreak: player2Won ? { increment: 1 } : 0,
+                bestWinStreak: player2Won
+                  ? Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak)
+                  : undefined,
+                rank: getRankFromMMR(player2MMRAfter),
+              },
+            });
+          }
+
+          await tx.mMRHistory.create({
+            data: {
+              userId: match.player1Id,
+              matchId,
+              topicSlug: match.topicSlug,
+              mmrBefore: player1MMR,
+              mmrAfter: player1MMRAfter,
+              mmrChange: player1MMRChange,
+              gameMode: match.gameMode,
+              performance: JSON.stringify({ score: p1Correct, totalAnswered: p1Answered, accuracy: p1Accuracy }),
+            },
+          });
+          await tx.mMRHistory.create({
+            data: {
+              userId: match.player2Id,
+              matchId,
+              topicSlug: match.topicSlug,
+              mmrBefore: player2MMR,
+              mmrAfter: player2MMRAfter,
+              mmrChange: player2MMRChange,
+              gameMode: match.gameMode,
+              performance: JSON.stringify({ score: p2Correct, totalAnswered: p2Answered, accuracy: p2Accuracy }),
+            },
+          });
+        }
+      }, { timeout: 15000 });
+    } catch (txError) {
+      // Lost the race — another request already completed this match. Report it
+      // as already-completed rather than 500 (idempotent from the caller's view).
+      if (txError && typeof txError === 'object' && 'code' in txError && txError.code === 'ALREADY_COMPLETED') {
+        return NextResponse.json({ status: 'already_completed' });
+      }
+      throw txError;
     }
-
-    if (match.player2.competitiveProfile) {
-      await prisma.competitiveProfile.update({
-        where: { userId: match.player2Id },
-        data: {
-          unitCircleMMR: player2MMRAfter,
-          overallMMR: player2MMRAfter,
-          totalMatches: { increment: 1 },
-          wins: player2Won ? { increment: 1 } : undefined,
-          losses: player1Won ? { increment: 1 } : undefined,
-          winStreak: player2Won ? { increment: 1 } : 0,
-          bestWinStreak: player2Won
-            ? Math.max(match.player2.competitiveProfile.winStreak + 1, match.player2.competitiveProfile.bestWinStreak)
-            : undefined,
-          rank: getRankFromMMR(player2MMRAfter),
-        },
-      });
-    }
-
-    await prisma.mMRHistory.create({
-      data: {
-        userId: match.player1Id,
-        matchId,
-        topicSlug: match.topicSlug,
-        mmrBefore: player1MMR,
-        mmrAfter: player1MMRAfter,
-        mmrChange: player1MMRChange,
-        gameMode: match.gameMode,
-        performance: JSON.stringify({ score: p1Correct, totalAnswered: p1Answered, accuracy: p1Accuracy }),
-      },
-    });
-    await prisma.mMRHistory.create({
-      data: {
-        userId: match.player2Id,
-        matchId,
-        topicSlug: match.topicSlug,
-        mmrBefore: player2MMR,
-        mmrAfter: player2MMRAfter,
-        mmrChange: player2MMRChange,
-        gameMode: match.gameMode,
-        performance: JSON.stringify({ score: p2Correct, totalAnswered: p2Answered, accuracy: p2Accuracy }),
-      },
-    });
 
     return NextResponse.json({ status: 'completed', winnerId });
   } catch (error) {

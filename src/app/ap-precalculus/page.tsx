@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { CourseHub, type HubFeature, type HubUnit } from '@/components/CourseHub'
+import { InArticleAd } from '@/components/ad-banner'
 
 export const metadata: Metadata = {
   title: 'AP Precalculus | Free AP Precalc Practice & Review',
@@ -137,42 +138,47 @@ const units: HubUnit[] = [
 
 export default function APPrecalculusHub() {
   return (
-    <CourseHub
-      courseSlug="ap-precalculus"
-      courseName="AP Precalculus"
-      courseDescription={metadata.description as string}
-      tagline="Interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5."
-      primaryCta={{ href: '/ap-precalculus-diagnostic', label: 'Start with Diagnostic' }}
-      secondaryCta={{ href: '/courses/ap-precalculus', label: 'Browse Lessons' }}
-      finalCtaHref="/ap-precalculus-diagnostic"
-      accent="blue"
-      features={features}
-      units={units}
-      exam={{
-        title: 'About the AP Precalculus Exam',
-        sections: [
-          {
-            heading: 'Format',
-            bullets: [
-              'Section I: 40 MCQs in 2 hours',
-              'Section II: 4 FRQs in 1 hour',
-              '~62% multiple choice · ~38% free response',
-              'Total exam time: 3 hours',
-              'Graphing calculator allowed throughout',
-            ],
-          },
-          {
-            heading: 'Scoring',
-            bullets: [
-              'Score range: 1–5',
-              '5 = Extremely well qualified',
-              'Earn college credit at most 4-year colleges',
-              'No penalty for guessing',
-              'Most colleges accept 4+',
-            ],
-          },
-        ],
-      }}
-    />
+    <>
+      <CourseHub
+        courseSlug="ap-precalculus"
+        courseName="AP Precalculus"
+        courseDescription={metadata.description as string}
+        tagline="Interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5."
+        primaryCta={{ href: '/ap-precalculus-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/ap-precalculus', label: 'Browse Lessons' }}
+        finalCtaHref="/ap-precalculus-diagnostic"
+        accent="blue"
+        features={features}
+        units={units}
+        exam={{
+          title: 'About the AP Precalculus Exam',
+          sections: [
+            {
+              heading: 'Format',
+              bullets: [
+                'Section I: 40 MCQs in 2 hours',
+                'Section II: 4 FRQs in 1 hour',
+                '~62% multiple choice · ~38% free response',
+                'Total exam time: 3 hours',
+                'Graphing calculator allowed throughout',
+              ],
+            },
+            {
+              heading: 'Scoring',
+              bullets: [
+                'Score range: 1–5',
+                '5 = Extremely well qualified',
+                'Earn college credit at most 4-year colleges',
+                'No penalty for guessing',
+                'Most colleges accept 4+',
+              ],
+            },
+          ],
+        }}
+      />
+      {/* In-article ad — single placement; the hub body is owned by the shared
+          <CourseHub/> component (no mid-page slot), so the ad follows it. */}
+      <InArticleAd />
+    </>
   )
 }

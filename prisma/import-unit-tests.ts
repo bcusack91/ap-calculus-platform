@@ -29,6 +29,8 @@ import { AP_MACRO_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-macroecono
 import { AP_MICRO_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-microeconomics'
 import { AP_PHYSICS1_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-physics-1'
 import { AP_PHYSICS2_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-physics-2'
+import { AP_PHYSICS_C_EM_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-physics-c-em'
+import { AP_PHYSICS_C_MECH_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-physics-c-mechanics'
 import { AP_PRECALCULUS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-precalculus'
 import { AP_PSYCHOLOGY_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-psychology'
 import { AP_STATISTICS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-statistics'
@@ -52,6 +54,8 @@ const CONFIGS = [
   AP_MICRO_UNIT_TESTS_CONFIG,
   AP_PHYSICS1_UNIT_TESTS_CONFIG,
   AP_PHYSICS2_UNIT_TESTS_CONFIG,
+  AP_PHYSICS_C_MECH_UNIT_TESTS_CONFIG,
+  AP_PHYSICS_C_EM_UNIT_TESTS_CONFIG,
   AP_PRECALCULUS_UNIT_TESTS_CONFIG,
   AP_PSYCHOLOGY_UNIT_TESTS_CONFIG,
   AP_STATISTICS_UNIT_TESTS_CONFIG,

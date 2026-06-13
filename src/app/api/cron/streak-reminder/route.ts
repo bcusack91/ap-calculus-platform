@@ -33,11 +33,20 @@ export async function GET(request: Request) {
       },
     })
 
+    // Exclude addresses that have unsubscribed (CAN-SPAM). EmailSubscriber is
+    // keyed by email, so build a Set of opted-out emails and filter recipients.
+    const optedOut = await prisma.emailSubscriber.findMany({
+      where: { unsubscribed: true },
+      select: { email: true },
+    })
+    const optedOutEmails = new Set(optedOut.map((s) => s.email.toLowerCase()))
+
     let sent = 0
     let errors = 0
 
     for (const streak of streaks) {
       if (!streak.user.email) continue
+      if (optedOutEmails.has(streak.user.email.toLowerCase())) continue
 
       try {
         await sendStreakReminder(streak.user.email, streak.user.name, streak.currentStreak)

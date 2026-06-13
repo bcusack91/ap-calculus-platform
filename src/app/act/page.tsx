@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CourseUniqueIntro from '@/components/CourseUniqueIntro'
+import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -226,6 +227,9 @@ export default function ACTLandingPage() {
           </div>
         </div>
       </section>
+
+      {/* In-article ad — single, mid-page placement between features and "What's Covered" */}
+      <InArticleAd />
 
       {/* Sections Covered */}
       <section className="container pb-12">

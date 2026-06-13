@@ -4,6 +4,7 @@ import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { InArticleAd } from '@/components/ad-banner'
 
 interface FRQPart {
   label: string
@@ -87,6 +88,9 @@ export function FRQPractice({
             </ReactMarkdown>
           </div>
         </div>
+
+        {/* Ad — after the prompt/stimulus, before the response areas */}
+        <InArticleAd />
 
         {/* Parts */}
         <div className="space-y-6">

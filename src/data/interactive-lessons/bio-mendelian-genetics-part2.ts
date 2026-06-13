@@ -2,192 +2,202 @@ export const bioMendelianPart2Data = {
   topicSlug: 'mendelian-genetics',
   sections: [
     {
-      id: 'bio-mendelian-genetics-p2-s1-intro',
+      id: 'mgp2-intro',
       type: 'text' as const,
       content: `
-      ## Mendelian Genetics: Monohybrid Crosses
-      
-      **Part 2 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through single-gene dominance interpretation.
-      
-      ### Worked biological example
-      A student team investigates single-gene dominance interpretation. Their first interpretation step is to identify how **law of independent assortment** and **dominant allele** work together in the same pathway.
-      
-      - They classify the primary signal using **law of independent assortment**: different gene pairs assort independently when unlinked.
-      - They trace the downstream response using **dominant allele**: allele expressed in heterozygous genotype.
-      - They then compare outcomes with **recessive allele** and **heterozygous** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **law of independent assortment**
-      - **dominant allele**
-      - **recessive allele**
-      - **heterozygous**
+## Monohybrid Crosses
+
+**Part 2 of 7**
+
+A **monohybrid cross** follows the inheritance of a **single gene** (one trait). It is the foundational skill of Mendelian genetics: once you can set up, solve, and interpret a monohybrid cross fluently, every harder problem in this unit is built from the same moves.
+
+This part walks through a reliable procedure, drills the all-important distinction between **genotypic** and **phenotypic** ratios, and introduces the **test cross** — the experimental trick geneticists use to figure out an unknown genotype.
+
+### A reliable five-step procedure
+
+1. **Assign symbols.** Capital = dominant allele, lowercase = recessive (e.g., *B* = brown, *b* = blue).
+2. **Write the parent genotypes** from the information given.
+3. **Determine each parent's gametes** (apply the law of segregation).
+4. **Fill a Punnett square** — each cell is one equally likely offspring.
+5. **Tally genotypic and phenotypic ratios** separately.
+
+Follow these steps every time. On the AP exam, partial credit is awarded for a correct Punnett square even when the final ratio is miscounted, so always show the grid.
       `
     },
     {
-      id: 'bio-mendelian-genetics-p2-s2-mcq-core',
+      id: 'mgp2-worked-tt',
+      type: 'text' as const,
+      content: `
+### Worked Example 1: A Complete Tt × Tt Cross
+
+**Problem.** In pea plants, tall (*T*) is dominant to short (*t*). Two heterozygous tall plants are crossed. Give the genotypic ratio, the phenotypic ratio, and the probability that a randomly chosen offspring is a true-breeding tall plant.
+
+**Step 1–2 — Symbols and parents.** *T* = tall (dominant), *t* = short (recessive). Both parents are **Tt**.
+
+**Step 3 — Gametes.** Each *Tt* parent produces $\\frac{1}{2}$ *T* and $\\frac{1}{2}$ *t* gametes.
+
+**Step 4 — Punnett square.**
+
+|        | **T** | **t** |
+|--------|-------|-------|
+| **T** | TT | Tt |
+| **t** | Tt | tt |
+
+**Step 5 — Tally the ratios.**
+
+| Genotype | Count | Fraction | Phenotype |
+|----------|-------|----------|-----------|
+| TT | 1 | $\\frac{1}{4}$ | Tall |
+| Tt | 2 | $\\frac{2}{4}$ | Tall |
+| tt | 1 | $\\frac{1}{4}$ | Short |
+
+- **Genotypic ratio = 1 TT : 2 Tt : 1 tt** (i.e., 1 : 2 : 1)
+- **Phenotypic ratio = 3 Tall : 1 Short** (i.e., 3 : 1)
+
+**Answering the final question.** A *true-breeding* tall plant is homozygous dominant (*TT*) — only *TT* breeds true for tall, because *Tt* would yield some short offspring. From the square, exactly one of the four cells is *TT*, so:
+
+$P(\\text{true-breeding tall}) = \\frac{1}{4}$
+
+> **Trap watch:** "Tall" is $\\frac{3}{4}$ of offspring, but "*true-breeding* tall" is only $\\frac{1}{4}$. The word *true-breeding* forces the genotype to be homozygous. Read genotype-vs-phenotype wording carefully.
+      `
+    },
+    {
+      id: 'mgp2-geno-vs-pheno',
+      type: 'text' as const,
+      content: `
+### Genotypic Ratio vs. Phenotypic Ratio
+
+These two ratios describe the *same* offspring but answer *different* questions. Mixing them up is the single most common monohybrid error.
+
+| | Genotypic ratio | Phenotypic ratio |
+|---|----------------|------------------|
+| **Question it answers** | What allele combinations appear? | What traits are visible? |
+| **Tt × Tt result** | 1 : 2 : 1 (TT : Tt : tt) | 3 : 1 (dominant : recessive) |
+| **Why they differ** | Counts all three genotypes | Dominance merges TT and Tt into one visible class |
+
+**A useful sanity check:** the phenotypic ratio is what you get by "collapsing" the genotypic ratio according to dominance. In a simple-dominance monohybrid cross, $1 + 2 = 3$ dominant-phenotype offspring and $1$ recessive — the 1:2:1 *becomes* 3:1. If a question gives you the phenotypic ratio and asks for genotypes, you must "un-collapse" it.
+
+> **Why it matters for AP:** A free-response prompt may ask for "the expected ratio of offspring genotypes" — that is **1:2:1**, not 3:1. Read whether the question says *genotype* or *phenotype* and answer the one asked. Writing 3:1 when genotypes were requested loses the point.
+      `
+    },
+    {
+      id: 'mgp2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Reading the Ratios
       `,
       exercise: {
         questions: [
           {
-            question: 'For Monohybrid Crosses, what best describes law of independent assortment?',
+            question: 'In rabbits, black fur (B) is dominant to brown (b). Two heterozygous black rabbits are crossed and produce a large litter over several seasons. What is the expected ratio of GENOTYPES among the offspring?',
             options: [
-              'allele expressed in heterozygous genotype',
-              'allele expressed when no dominant allele is present',
-              'different gene pairs assort independently when unlinked',
-              'genotype carrying two different alleles'
+              '3 black : 1 brown',
+              '1 BB : 2 Bb : 1 bb',
+              '1 black : 1 brown',
+              'All Bb'
             ],
-            correctAnswer: 2,
-            explanation: 'law of independent assortment is best matched with: different gene pairs assort independently when unlinked.'
+            correctAnswer: 1,
+            explanation: 'A Bb × Bb cross yields genotypes in a 1:2:1 ratio (1 BB : 2 Bb : 1 bb). Option A (3:1) is the trap: that is the PHENOTYPIC ratio (3 black : 1 brown). The question explicitly asks for genotypes, so the three-class 1:2:1 answer is required, not the two-class phenotype ratio.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of dominant allele?',
+            question: 'A monohybrid cross produces offspring in an approximate 1:1 phenotypic ratio (half dominant, half recessive). Which parental cross would produce this result?',
             options: [
-              'different gene pairs assort independently when unlinked',
-              'allele expressed when no dominant allele is present',
-              'genotype carrying two identical alleles',
-              'allele expressed in heterozygous genotype'
+              'TT × tt',
+              'Tt × Tt',
+              'TT × Tt',
+              'Tt × tt'
             ],
             correctAnswer: 3,
-            explanation: 'dominant allele is best matched with: allele expressed in heterozygous genotype.'
+            explanation: 'A 1:1 phenotypic ratio comes from a heterozygote crossed with a homozygous recessive (Tt × tt): the tt parent contributes only t, so offspring are 1/2 Tt (dominant) and 1/2 tt (recessive). Option B (Tt × Tt) gives 3:1, and option A (TT × tt) gives 100% dominant (all Tt) — neither produces the 1:1 split observed.'
           }
         ]
       }
     },
     {
-      id: 'bio-mendelian-genetics-p2-s3-deep-dive',
+      id: 'mgp2-test-cross',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Monohybrid Crosses
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → law of independent assortment
-      - **Immediate processing** → dominant allele
-      - **System-level consequence** → recessive allele
-      - **Measured readout** → heterozygous
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | law of independent assortment | different gene pairs assort independently when unlinked | Early shift in the primary variable |
-      | dominant allele | allele expressed in heterozygous genotype | Mid-pathway change in process rate |
-      | recessive allele | allele expressed when no dominant allele is present | Downstream phenotype trend |
-      | heterozygous | genotype carrying two different alleles | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### The Test Cross: Revealing an Unknown Genotype
+
+Here is the practical problem dominance creates: an organism showing the **dominant phenotype** could be either **homozygous (TT)** or **heterozygous (Tt)**. You cannot tell which just by looking. So how does a breeder find out?
+
+**The solution is a test cross:** cross the mystery individual (dominant phenotype, unknown genotype) with a **homozygous recessive (tt)**. The recessive parent contributes only *t* gametes, so the offspring phenotypes act as a readout of the mystery parent's hidden allele.
+
+**Case A — the unknown is homozygous (TT):**
+
+|        | **T** | **T** |
+|--------|-------|-------|
+| **t** | Tt | Tt |
+| **t** | Tt | Tt |
+
+All offspring are *Tt* → **100% dominant phenotype**. No recessive offspring ever appear.
+
+**Case B — the unknown is heterozygous (Tt):**
+
+|        | **T** | **t** |
+|--------|-------|-------|
+| **t** | Tt | tt |
+| **t** | Tt | tt |
+
+Offspring are $\\frac{1}{2}$ *Tt* and $\\frac{1}{2}$ *tt* → **1 dominant : 1 recessive phenotype**.
+
+**The interpretation rule:**
+- If **any** recessive offspring appear, the unknown parent **must** be heterozygous (*Tt*) — it had to contribute a *t* allele.
+- If **all** offspring show the dominant phenotype (especially over a large number), the unknown is most likely homozygous (*TT*).
+
+### Test cross vs. back-cross
+
+A **back-cross** is any cross of an offspring back to one of its *parents* (or to an individual of the parental genotype). A **test cross** is the specific case where that cross is to a homozygous **recessive** individual in order to deduce a genotype. Every test cross to a recessive parent is a back-cross in form, but not every back-cross is a test cross (e.g., crossing back to a homozygous dominant parent reveals nothing about a hidden recessive allele).
       `
     },
     {
-      id: 'bio-mendelian-genetics-p2-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **different gene pairs assort independently when unlinked**
-
-      2) Term for this definition: **allele expressed in heterozygous genotype**
-
-      3) Term for this definition: **allele expressed when no dominant allele is present**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['law of independent assortment', 'dominant allele', 'recessive allele'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'different gene pairs assort independently when unlinked\'.',
-        hint2: 'Second blank points to dominant allele; think about the role \'allele expressed in heterozygous genotype\'.',
-        hint3: 'Third blank is recessive allele; connect it to \'allele expressed when no dominant allele is present\'.',
-        explanation: 'Correct set: law of independent assortment, dominant allele, recessive allele. These three terms define the core mechanism chain for Monohybrid Crosses.'
-      }
-    },
-    {
-      id: 'bio-mendelian-genetics-p2-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'law of independent assortment',
-            options: ['genotype carrying two different alleles', 'different gene pairs assort independently when unlinked', 'allele expressed in heterozygous genotype', 'allele expressed when no dominant allele is present']
-          },
-          {
-            label: 'dominant allele',
-            options: ['allele expressed when no dominant allele is present', 'allele expressed in heterozygous genotype', 'genotype carrying two different alleles', 'genotype carrying two identical alleles']
-          },
-          {
-            label: 'recessive allele',
-            options: ['genotype carrying two different alleles', 'genotype carrying two identical alleles', 'grid method for predicting genotype combinations', 'allele expressed when no dominant allele is present']
-          }
-        ],
-        correctAnswers: ['different gene pairs assort independently when unlinked', 'allele expressed in heterozygous genotype', 'allele expressed when no dominant allele is present'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'law of independent assortment, dominant allele, and recessive allele should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-mendelian-genetics-p2-s6-strategy',
+      id: 'mgp2-worked-testcross',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because law of independent assortment different gene pairs assort independently when unlinked, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Independent assortment requires genes not tightly linked on the same chromosome.
-      - Phenotype ratios do not directly equal genotype ratios in all models.
-      - Pedigree interpretation must consider sex linkage and incomplete family data.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### Worked Example 2: Solving a Test Cross
+
+**Problem.** A purple-flowered pea plant (*P* dominant to *p*) is test-crossed. Among 80 offspring, 38 are purple and 42 are white. What is the genotype of the purple parent?
+
+**Step 1 — Identify the cross.** A test cross means the other parent is homozygous recessive (*pp*), contributing only *p* gametes.
+
+**Step 2 — Interpret the offspring.** White offspring (*pp*) appeared. For an offspring to be *pp*, it must have received a *p* allele from **each** parent. Since white offspring exist, the purple parent **must carry a p allele** — so it cannot be *PP*.
+
+**Step 3 — Confirm with the expected ratio.** A *Pp* $\\times$ *pp* cross predicts a **1 purple : 1 white** ratio. The observed 38 : 42 is statistically indistinguishable from 40 : 40 (sampling noise around the expected 1:1).
+
+**Conclusion:** The purple parent is **heterozygous (Pp)**.
+
+> **Reasoning shortcut:** The appearance of *even one* recessive offspring in a test cross is decisive proof of heterozygosity — you do not need the full 1:1 ratio to conclude it. The ratio is useful when *zero* recessives appear: the more dominant-only offspring you score, the more confident you are that the parent is homozygous (because the probability of getting all-dominant offspring by chance from a heterozygote shrinks rapidly — Part 4 quantifies this).
       `
     },
     {
-      id: 'bio-mendelian-genetics-p2-s7-mcq-final',
+      id: 'mgp2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Test Cross Reasoning
       `,
       exercise: {
         questions: [
           {
-            question: 'In single-gene dominance interpretation, the observed pattern is: genotype carrying two different alleles. What term should anchor the explanation?',
+            question: 'A farmer has a black bull (black, B, is dominant to red, b) and wants to know if it is homozygous or heterozygous. He crosses it with 25 red (bb) cows. ALL 25 calves are black. What is the most justified conclusion?',
             options: [
-              'recessive allele',
-              'dominant allele',
-              'heterozygous',
-              'law of independent assortment'
-            ],
-            correctAnswer: 2,
-            explanation: 'Use heterozygous because it directly maps to the described biological pattern: genotype carrying two different alleles.'
-          },
-          {
-            question: 'In an AP-style free-response about monohybrid crosses, the observed pattern is: genotype carrying two identical alleles. What term should anchor the explanation?',
-            options: [
-              'Punnett square',
-              'homozygous',
-              'recessive allele',
-              'heterozygous'
+              'The bull is definitely heterozygous (Bb)',
+              'The bull is most likely homozygous (BB), because a heterozygote would be expected to produce roughly half red calves',
+              'The bull must carry a hidden red allele that was destroyed',
+              'No conclusion is possible from a test cross'
             ],
             correctAnswer: 1,
-            explanation: 'Use homozygous because it directly maps to the described biological pattern: genotype carrying two identical alleles.'
+            explanation: 'In a test cross (× bb), a heterozygous Bb bull would be expected to produce about 50% red calves. Getting 25 black calves and zero red is overwhelmingly unlikely if the bull were Bb (it would require the recessive allele to lose the coin-flip 25 times in a row), so the bull is almost certainly homozygous BB. Option A is backwards — heterozygosity is what is ruled OUT by the absence of red calves.'
+          },
+          {
+            question: 'In guinea pigs, short hair (S) is dominant to long hair (s). A short-haired guinea pig is crossed with a long-haired one, producing 6 short-haired and 5 long-haired offspring. Which statement is correct?',
+            options: [
+              'The short-haired parent is homozygous (SS) and this is not a true test cross',
+              'The short-haired parent is heterozygous (Ss), as shown by the appearance of long-haired (ss) offspring',
+              'Both parents must be heterozygous',
+              'Long hair is actually the dominant trait'
+            ],
+            correctAnswer: 1,
+            explanation: 'The long-haired parent is ss, so this IS a test cross. Long-haired (ss) offspring appeared, which means each received an s allele from BOTH parents — so the short-haired parent must carry s and is therefore Ss. The roughly 1:1 ratio (6:5) confirms a Ss × ss cross. Option A is wrong because an SS parent could never produce long-haired offspring in this cross.'
           }
         ]
       }

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { InArticleAd } from '@/components/ad-banner'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -266,6 +267,9 @@ export default function ScorePredictor(config: ScorePredictorConfig) {
               </div>
             )}
           </div>
+
+          {/* Ad — after the score summary, before the detailed breakdown */}
+          <InArticleAd />
 
           {/* Trend chart */}
           {renderTrend()}

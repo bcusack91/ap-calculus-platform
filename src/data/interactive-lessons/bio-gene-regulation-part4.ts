@@ -2,192 +2,179 @@ export const bioGeneRegPart4Data = {
   topicSlug: 'gene-regulation',
   sections: [
     {
-      id: 'bio-gene-regulation-p4-s1-intro',
+      id: 'grp4-intro',
       type: 'text' as const,
       content: `
-      ## Gene Regulation: Epigenetics
-      
-      **Part 4 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through chromatin modifications and transcription access.
-      
-      ### Worked biological example
-      A student team investigates chromatin modifications and transcription access. Their first interpretation step is to identify how **enhancer** and **epigenetic mark** work together in the same pathway.
-      
-      - They classify the primary signal using **enhancer**: DNA element increasing transcription from a distance.
-      - They trace the downstream response using **epigenetic mark**: heritable chromatin modification not changing DNA sequence.
-      - They then compare outcomes with **DNA methylation** and **histone acetylation** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **enhancer**
-      - **epigenetic mark**
-      - **DNA methylation**
-      - **histone acetylation**
+## Epigenetics
+
+**Part 4 of 7**
+
+How does a liver cell, when it divides, give rise to *two liver cells* rather than reverting to some generic state? Its daughters must "remember" which genes were on and off. That memory is **epigenetic**: heritable changes in gene expression that **do not alter the DNA sequence** itself.
+
+The prefix *epi-* means "on top of." Epigenetic marks sit on top of the genome — chemical tags on DNA and on histones — and they are copied along when chromatin is replicated, so a cell's regulatory state persists through mitosis.
+
+> **AP trap (bank it now):** **Epigenetic changes do NOT change the DNA sequence.** If a question describes a heritable expression change with "no change in nucleotide sequence," the answer is epigenetic (methylation, histone modification, chromatin remodeling) — never mutation. A mutation changes the sequence; an epigenetic mark changes how the unchanged sequence is read.
       `
     },
     {
-      id: 'bio-gene-regulation-p4-s2-mcq-core',
+      id: 'grp4-methylation',
+      type: 'text' as const,
+      content: `
+### DNA Methylation — Silencing by a Chemical Tag
+
+The most studied epigenetic mark is **DNA methylation**: the addition of a methyl ($\\text{CH}_3$) group to cytosine bases, carried out by **DNA methyltransferase** enzymes. In animals this happens mainly at **CpG sites** — a cytosine followed by a guanine.
+
+- Clusters of CpG sites, called **CpG islands**, often sit in gene promoters.
+- **Heavy methylation of a promoter's CpG island silences the gene.** The methyl tags both directly impede transcription-factor binding and recruit proteins that compact the surrounding chromatin into heterochromatin.
+- Generally: **more promoter methylation ⇒ less expression**; unmethylated promoters tend to be active.
+
+Because methylation patterns are copied after DNA replication (a "maintenance" methyltransferase re-methylates the new strand to match the old one), the silenced state is **inherited by daughter cells** through mitosis. This is the molecular basis of cellular memory — it is how differentiated cells stay differentiated.
+
+> **Direction matters:** Methylation of a *promoter CpG island* typically **represses**. Do not over-generalize "methylation = silencing" to every context, but for AP purposes, promoter CpG-island methylation → gene OFF is the canonical relationship.
+      `
+    },
+    {
+      id: 'grp4-histones',
+      type: 'text' as const,
+      content: `
+### Histone Modifications and Chromatin Remodeling
+
+DNA is wrapped around histones; chemical tags on the histones' tails change how tightly the DNA is held, opening or closing access. Two of the most important, with **opposite** effects:
+
+- **Histone acetylation** (adding acetyl groups, by **histone acetyltransferases / HATs**) loosens chromatin → **euchromatin** → **activates** transcription. Removing acetyl groups (by **histone deacetylases / HDACs**) tightens chromatin → represses.
+- **Histone methylation** can **either** activate or repress depending on *which* residue is modified. Certain histone methylations (e.g., on specific lysines) recruit compacting proteins and **repress**; others mark active genes. For AP, the safe statement is: *acetylation generally activates; some methylations repress.*
+
+**Chromatin-remodeling complexes** are ATP-driven machines that physically slide, eject, or restructure nucleosomes, exposing or hiding regulatory DNA. They work alongside the chemical marks to set chromatin state.
+
+A "writer → effect" reference table (writers add marks; readers interpret them; erasers remove them):
+
+| Epigenetic mark | Writer enzyme | Effect on chromatin | Effect on expression |
+|---|---|---|---|
+| Promoter CpG methylation | DNA methyltransferase | Compacts (recruits silencers) | **Represses** |
+| Histone **acetylation** | Histone acetyltransferase (HAT) | Loosens (euchromatin) | **Activates** |
+| Histone **deacetylation** | Histone deacetylase (HDAC) | Tightens (heterochromatin) | **Represses** |
+| Certain histone **methylations** | Histone methyltransferase | Recruits compacting proteins | Often **represses** |
+
+> **Key idea:** Acetylation and methylation/deacetylation push chromatin toward opposite poles. The *combination* of marks on a stretch of chromatin — sometimes called the "histone code" — is read out to determine whether the underlying genes are active or silent.
+      `
+    },
+    {
+      id: 'grp4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Marks and Their Effects
       `,
       exercise: {
         questions: [
           {
-            question: 'For Epigenetics, what best describes enhancer?',
+            question: 'A tumor-suppressor gene in a cancer cell is completely silent, yet its DNA sequence is perfectly normal — no mutations anywhere in or around the gene. Its promoter CpG island is heavily methylated. The best description of this gene\'s inactivation is:',
             options: [
-              'heritable chromatin modification not changing DNA sequence',
-              'DNA element increasing transcription from a distance',
-              'chemical tagging often associated with reduced transcription',
-              'chromatin modification generally increasing accessibility'
+              'A point mutation in the promoter',
+              'An epigenetic change: promoter methylation silences the gene without altering the DNA sequence',
+              'A deletion of the gene',
+              'A change in the gene\'s codon reading frame'
             ],
             correctAnswer: 1,
-            explanation: 'enhancer is best matched with: DNA element increasing transcription from a distance.'
+            explanation: 'A heritable expression change with an intact sequence and a hypermethylated promoter is epigenetic silencing. The other three options all describe sequence changes (mutation, deletion, frameshift), which the question explicitly rules out — that is the trap, conflating epigenetic silencing with genetic mutation.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of epigenetic mark?',
+            question: 'A drug inhibits histone deacetylases (HDACs). What is the most likely effect on the chromatin and expression of previously silenced genes?',
             options: [
-              'DNA element increasing transcription from a distance',
-              'chemical tagging often associated with reduced transcription',
-              'small RNA that suppresses gene expression post-transcriptionally',
-              'heritable chromatin modification not changing DNA sequence'
+              'Chromatin condenses further and genes are silenced more strongly',
+              'Histones stay acetylated, chromatin loosens toward euchromatin, and silenced genes tend to be REACTIVATED',
+              'The DNA sequence is mutated to switch genes on',
+              'cAMP rises and CAP activates the genes'
             ],
-            correctAnswer: 3,
-            explanation: 'epigenetic mark is best matched with: heritable chromatin modification not changing DNA sequence.'
+            correctAnswer: 1,
+            explanation: 'HDACs remove activating acetyl marks; inhibiting them leaves histones acetylated, loosening chromatin and reactivating genes. Option A inverts the logic (blocking deacetylation does not condense chromatin). Option C confuses an epigenetic effect with mutation. Option D wrongly imports the bacterial cAMP/CAP system into eukaryotic chromatin regulation.'
+          },
+          {
+            question: 'Why are epigenetic marks described as "heritable through mitosis," and what makes this property biologically important?',
+            options: [
+              'They change the DNA sequence, which is copied during replication',
+              'Patterns such as DNA methylation are re-established on daughter strands after replication, so a cell\'s expression state is passed to its descendants — preserving cell identity',
+              'They are randomly reset every cell division',
+              'They only exist in gametes, not somatic cells'
+            ],
+            correctAnswer: 1,
+            explanation: 'Maintenance methyltransferases copy the methylation pattern onto newly synthesized DNA, so daughter cells inherit the parent\'s expression state — this is how differentiated cells stay differentiated. Option A is the central trap: epigenetic inheritance does NOT involve sequence change. Option C contradicts heritability, and option D is false because somatic cells carry and transmit epigenetic marks during normal tissue maintenance.'
           }
         ]
       }
     },
     {
-      id: 'bio-gene-regulation-p4-s3-deep-dive',
+      id: 'grp4-imprinting-xinact',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Epigenetics
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → enhancer
-      - **Immediate processing** → epigenetic mark
-      - **System-level consequence** → DNA methylation
-      - **Measured readout** → histone acetylation
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | enhancer | DNA element increasing transcription from a distance | Early shift in the primary variable |
-      | epigenetic mark | heritable chromatin modification not changing DNA sequence | Mid-pathway change in process rate |
-      | DNA methylation | chemical tagging often associated with reduced transcription | Downstream phenotype trend |
-      | histone acetylation | chromatin modification generally increasing accessibility | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Genomic Imprinting, X-Inactivation, and the Environment
+
+Two classic phenomena show epigenetics in action — both produce stable expression differences with *no change in DNA sequence*.
+
+**Genomic imprinting.** For a small set of genes, expression depends on the parent of origin: only the maternal *or* only the paternal copy is active, because the other was epigenetically silenced (typically by methylation) in the egg or sperm. Both alleles may be identical in sequence, yet one is "marked" off. The mark is reset and re-applied each generation in the germ line.
+
+**X-chromosome inactivation.** In female mammals, one of the two X chromosomes in each cell is condensed into a transcriptionally silent **Barr body** early in development. This dosage-compensation mechanism is epigenetic: the inactivated X is heavily methylated and packed into heterochromatin. Crucially, the choice is **clonally inherited** — all descendants of a cell keep the same X inactive — producing patches of tissue expressing one X or the other (the basis of calico/tortoiseshell coat patterns).
+
+**Environment–epigenome link.** Epigenetic marks can be influenced by the environment — diet, stress, and chemical exposures can alter methylation and histone modification patterns, changing gene expression without changing the genome. This provides a molecular route by which experience and environment leave lasting, sometimes heritable, marks on gene activity — a frequent context in modern AP free-response prompts.
+
+> **Unifying point:** Imprinting, X-inactivation, and environmental effects are all the *same kind of thing*: stable, heritable changes in which genes are expressed, achieved by chromatin marks rather than by editing the DNA letters.
       `
     },
     {
-      id: 'bio-gene-regulation-p4-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **DNA element increasing transcription from a distance**
-
-      2) Term for this definition: **heritable chromatin modification not changing DNA sequence**
-
-      3) Term for this definition: **chemical tagging often associated with reduced transcription**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['enhancer', 'epigenetic mark', 'DNA methylation'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'DNA element increasing transcription from a distance\'.',
-        hint2: 'Second blank points to epigenetic mark; think about the role \'heritable chromatin modification not changing DNA sequence\'.',
-        hint3: 'Third blank is DNA methylation; connect it to \'chemical tagging often associated with reduced transcription\'.',
-        explanation: 'Correct set: enhancer, epigenetic mark, DNA methylation. These three terms define the core mechanism chain for Epigenetics.'
-      }
-    },
-    {
-      id: 'bio-gene-regulation-p4-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'enhancer',
-            options: ['chemical tagging often associated with reduced transcription', 'DNA element increasing transcription from a distance', 'heritable chromatin modification not changing DNA sequence', 'chromatin modification generally increasing accessibility']
-          },
-          {
-            label: 'epigenetic mark',
-            options: ['chemical tagging often associated with reduced transcription', 'small RNA that suppresses gene expression post-transcriptionally', 'heritable chromatin modification not changing DNA sequence', 'chromatin modification generally increasing accessibility']
-          },
-          {
-            label: 'DNA methylation',
-            options: ['chromatin modification generally increasing accessibility', 'gene-silencing pathway using small RNAs and complementary binding', 'chemical tagging often associated with reduced transcription', 'small RNA that suppresses gene expression post-transcriptionally']
-          }
-        ],
-        correctAnswers: ['DNA element increasing transcription from a distance', 'heritable chromatin modification not changing DNA sequence', 'chemical tagging often associated with reduced transcription'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'enhancer, epigenetic mark, and DNA methylation should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-gene-regulation-p4-s6-strategy',
+      id: 'grp4-epi-vs-mutation',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because enhancer DNA element increasing transcription from a distance, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Post-transcriptional control can strongly influence final protein output.
-      - Gene presence does not imply constant expression.
-      - Epigenetic regulation changes expression patterns without altering nucleotide sequence.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### Epigenetic vs. Genetic Change — The Distinction the Exam Tests
+
+The single most tested idea in this part is the boundary between an **epigenetic** change and a **genetic** (mutational) change. They can produce *the same loss of gene function*, so the exam forces you to tell them apart from the evidence.
+
+| | Epigenetic change | Genetic (mutation) |
+|---|---|---|
+| What changes | Chromatin marks (methylation, histone mods) | The DNA **nucleotide sequence** |
+| Sequence altered? | **No** | **Yes** |
+| Heritable through mitosis? | Yes (marks copied to daughter cells) | Yes (sequence copied) |
+| Reversible? | Often (marks can be added/removed by enzymes) | Generally not, without further mutation |
+| Diagnostic clue in a problem | "no change in sequence," methylated promoter, deacetylated histones | a base substitution, insertion, deletion, frameshift |
+
+**The decisive question:** *Did the nucleotide sequence change?* If the stem says the sequence is intact but expression is heritably altered, the answer is **epigenetic**. If a base is substituted, inserted, or deleted, it is a **mutation**. This one fork resolves the majority of "is it epigenetic or genetic?" items.
+
+**Worked mini-example.** Two patient samples each have a silenced tumor-suppressor gene.
+- *Sample 1:* sequencing finds a premature stop codon in the gene. → **Mutation** (genetic); the protein is truncated/nonfunctional because the *sequence* changed.
+- *Sample 2:* sequencing finds a perfectly normal gene, but the promoter CpG island is hypermethylated and histones are deacetylated. → **Epigenetic silencing**; the sequence is fine, but the gene is locked in heterochromatin and not transcribed.
+
+Both samples lose the protein, yet only Sample 2 is reversible *in principle* — a drug that blocks methylation or inhibits HDACs could re-open the gene (the basis of several real epigenetic therapies). A mutation cannot be "un-read" that way.
+
+> **Bank this phrasing:** *Epigenetic changes alter gene EXPRESSION, not gene SEQUENCE; they are heritable through cell division and are often reversible.* Reproduce that sentence and the epigenetics traps in Parts 4 and 7 become easy points.
       `
     },
     {
-      id: 'bio-gene-regulation-p4-s7-mcq-final',
+      id: 'grp4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Exit Ticket — Epigenetic Inheritance
       `,
       exercise: {
         questions: [
           {
-            question: 'In chromatin modifications and transcription access, the observed pattern is: chromatin modification generally increasing accessibility. What term should anchor the explanation?',
+            question: 'In a female cat heterozygous for an X-linked coat-color gene, the fur shows distinct patches of two different colors. The best explanation is that:',
             options: [
-              'enhancer',
-              'histone acetylation',
-              'epigenetic mark',
-              'DNA methylation'
+              'The two color alleles mutated into each other in different patches',
+              'In each cell early in development one X chromosome was epigenetically inactivated (Barr body), and this choice was inherited by all descendant cells, producing clonal patches',
+              'The cat is a genetic mosaic with different genes in different cells',
+              'The color gene is part of an operon expressed differently in each patch'
             ],
             correctAnswer: 1,
-            explanation: 'Use histone acetylation because it directly maps to the described biological pattern: chromatin modification generally increasing accessibility.'
+            explanation: 'X-inactivation randomly silences one X per cell early on, and the choice is clonally inherited, so the body becomes a patchwork expressing one allele or the other. Option A confuses an epigenetic switch with mutation. Option C is wrong because all cells carry the same genes (the difference is which X is active). Option D wrongly invokes a prokaryotic operon.'
           },
           {
-            question: 'In an AP-style free-response about epigenetics, the observed pattern is: small RNA that suppresses gene expression post-transcriptionally. What term should anchor the explanation?',
+            question: 'Genetically identical mice are fed diets differing only in methyl-donor nutrients. The two groups develop different coat colors and disease risks, with no differences in their DNA sequences. This is best explained by:',
             options: [
-              'miRNA',
-              'DNA methylation',
-              'RNA interference',
-              'histone acetylation'
+              'New mutations caused by the diet',
+              'Diet-induced differences in DNA methylation altering gene expression — an environment-driven epigenetic effect with no sequence change',
+              'Different alleles inherited from the parents',
+              'Changes in chromosome number'
             ],
-            correctAnswer: 0,
-            explanation: 'Use miRNA because it directly maps to the described biological pattern: small RNA that suppresses gene expression post-transcriptionally.'
+            correctAnswer: 1,
+            explanation: 'Methyl-donor availability shifts DNA methylation, changing expression without altering the sequence — a textbook environment–epigenome link. Option A is the trap (an epigenetic effect mistaken for mutation). Options C and D are excluded because the mice are genetically identical with normal karyotypes; only the epigenetic marks differ.'
           }
         ]
       }

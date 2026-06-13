@@ -4,11 +4,14 @@
  * discrete (non-passage) questions — mirroring the AAMC format.
  *
  * This targets the official 230-question form: Chem/Phys 59, CARS 53,
- * Bio/Biochem 59, Psych/Soc 59. Each section is packed to its exact AAMC count
- * — whole passage sets are taken greedily (a set is never split) without
- * exceeding the target, then science sections are topped up with discrete
- * questions to land precisely on the count. The UI scores it section-aware on
- * the 472-528 scale.
+ * Bio/Biochem 59, Psych/Soc 59. Each science section is packed to its exact
+ * AAMC count — whole passage sets are taken greedily (a set is never split)
+ * without exceeding the target, then topped up with discrete questions to land
+ * precisely on the count. CARS has no discretes, so it can only round to the
+ * nearest whole passage: it includes passages until the 53-question target is
+ * met or just passed, which typically overshoots to ~54 and makes the realized
+ * total ~231. The exam UI reports the realized `questionCount` (not a hardcoded
+ * 230) and scores section-aware on the 472-528 scale.
  */
 import type { MCATPassage, MCATSection } from './types'
 import { MCAT_SECTION_META } from './types'
@@ -46,7 +49,8 @@ function packScienceSection(section: ScienceSection, offset: number): { passages
   return { passages: out, count }
 }
 
-/** CARS has no discretes, so take whole passages until the target is reached. */
+/** CARS has no discretes: take whole passages until the target is met or just
+ *  passed (the last passage can push the count slightly over the 53 target). */
 function packCars(offset: number): { passages: MCATPassage[]; count: number } {
   const target = MCAT_SECTION_META.cars.questions
   const out: MCATPassage[] = []
