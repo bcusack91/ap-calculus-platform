@@ -4,7 +4,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { touchDailyStreak } from '@/lib/streak'
-import { MASTERY_LEVEL_ON_EXIT_PASS } from '@/lib/mastery'
+import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 
 // Bounded payload: quizzes are 10 questions (score = number correct), but allow
 // headroom up to 100. answers mirrors the client shape
@@ -28,6 +28,9 @@ const submitSchema = z.object({
     .max(100)
     .optional()
     .default([]),
+}).refine((d) => d.score <= d.totalQuestions, {
+  message: 'score cannot exceed totalQuestions',
+  path: ['score'],
 })
 
 /**
@@ -48,8 +51,21 @@ export async function POST(request: Request) {
         .join('; ')
       return NextResponse.json({ error: message }, { status: 400 })
     }
-    const { topicSlug, score, totalQuestions, passed, mustRedoUnit, answers, timeSpent, variant } = parsed.data
+    const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant } = parsed.data
     const userId = session.user.id
+
+    // Pass/fail and mastery are decided HERE, not by the client. Clamp the score,
+    // then recompute passed/mustRedoUnit from the shared thresholds — the client's
+    // `passed`/`mustRedoUnit` are ignored (they gate MASTERED status + competitive
+    // unlock, so they cannot be trusted). When per-question answers are present,
+    // prefer the server's own correct-count as the authoritative score.
+    const answerCorrect = (answers || []).filter((a) => a.correct === true).length
+    const hasScoredAnswers = (answers || []).some((a) => typeof a.correct === 'boolean')
+    const score = hasScoredAnswers
+      ? Math.min(answerCorrect, totalQuestions)
+      : Math.min(Math.max(0, rawScore), totalQuestions)
+    const passed = score >= Math.ceil(totalQuestions * EXIT_QUIZ_PASS_FRACTION)
+    const mustRedoUnit = score < Math.ceil(totalQuestions * EXIT_QUIZ_REDO_FRACTION)
 
     // All writes (attempt + streak + unlock/progress or flashcards) commit or
     // roll back together so a partial failure can't leave inconsistent state.

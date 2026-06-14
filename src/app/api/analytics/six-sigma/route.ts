@@ -27,9 +27,12 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Topic slug required' }, { status: 400 })
     }
 
-    // Fetch real performance data from database
+    // Fetch real performance data. topicSlug === 'all' aggregates across every
+    // topic (the dashboard's overview); any other value scopes to that single
+    // topic so the analytics genuinely describe the requested topic rather than a
+    // blended figure stamped onto one slug. (problemType stores the topic slug.)
     const performanceRecords = await prisma.factoringPerformanceMetrics.findMany({
-      where: { userId },
+      where: topicSlug === 'all' ? { userId } : { userId, problemType: topicSlug },
       orderBy: { timestamp: 'asc' },
     })
 
