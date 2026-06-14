@@ -8,6 +8,7 @@ import ClientLessonRenderer from '@/components/ClientLessonRenderer'
 import { InArticleAd } from '@/components/ad-banner'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
+import { isPlaceholderContent } from '@/lib/placeholder-content'
 import 'katex/dist/katex.min.css'
 
 // ISR: revalidate every hour
@@ -33,7 +34,7 @@ export async function generateMetadata(props: InteractivePageProps): Promise<Met
 
   // Check if this topic has actual interactive content
   const hasLesson = hasInteractiveLesson(topic.slug)
-  const hasDynamic = !hasLesson && !!topic.textContent?.trim()
+  const hasDynamic = !hasLesson && !!topic.textContent?.trim() && !isPlaceholderContent(topic.textContent)
 
   // Noindex pages with no interactive content
   if (!hasLesson && !hasDynamic) {
@@ -91,8 +92,9 @@ export default async function InteractivePage(props: InteractivePageProps) {
 
   // Check if we have a hand-crafted interactive lesson for this topic
   const hasHandCraftedLesson = hasInteractiveLesson(topic.slug)
-  // If no hand-crafted lesson, we'll use the dynamic renderer with textContent
-  const hasDynamicContent = !hasHandCraftedLesson && !!topic.textContent?.trim()
+  // If no hand-crafted lesson, we'll use the dynamic renderer with textContent —
+  // but never from a placeholder stub (it would render as a broken "lesson").
+  const hasDynamicContent = !hasHandCraftedLesson && !!topic.textContent?.trim() && !isPlaceholderContent(topic.textContent)
 
   // Pre-load lesson parts on the server to avoid client-side dynamic imports
   // (client-side chunks may not deploy to CDN with large numbers of lesson files)

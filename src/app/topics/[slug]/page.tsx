@@ -5,6 +5,7 @@ import { EmailCapture } from '@/components/email-capture'
 import { generateTopicFaqs } from '@/lib/topic-faqs'
 import { faqJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { MarkdownCallout } from '@/components/MarkdownCallout'
+import { isPlaceholderContent } from '@/lib/placeholder-content'
 
 function TopicBottomAd() {
   const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
@@ -218,6 +219,34 @@ export default async function TopicPage(props: TopicPageProps) {
     .filter((t) => t.slug !== topic.slug)
     .slice(0, 6)
   const topicAdVariant = getTopicAdVariant(topic.slug)
+
+  // Some topics were seeded with a placeholder stub ("<Title> content") and have
+  // no problems/flashcards yet. Don't render the stub as a lesson — show a
+  // focused "coming soon" state instead.
+  if (isPlaceholderContent(topic.textContent) && topic.exampleProblems.length === 0) {
+    return (
+      <div className="container py-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-10 shadow-sm">
+            <div className="text-5xl mb-4">📝</div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">{topic.title}</h1>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              We&apos;re still writing this lesson. In the meantime, explore related topics and
+              practice in this subject — full content for this topic is coming soon.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href={`/categories/${topic.category.slug}`} className="inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-3 text-base font-semibold text-white hover:bg-purple-700">
+                Browse {topic.category.name}
+              </Link>
+              <Link href="/topics" className="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-600 px-6 py-3 text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">
+                All topics
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   /* Temporarily hidden for free tier launch - all content is free
   // Check if user has access
