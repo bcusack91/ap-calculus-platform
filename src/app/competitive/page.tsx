@@ -178,8 +178,13 @@ export default function CompetitivePage() {
 
   useEffect(() => {
     if (session) {
+      // Fetch-on-mount: both are async, so every setState runs after `await`,
+      // never synchronously in the effect body. The set-state-in-effect rule
+      // can't see through the async boundary, so scope-disable it here.
+      /* eslint-disable react-hooks/set-state-in-effect */
       void checkUnlock()
       void fetchAsyncChallenges()
+      /* eslint-enable react-hooks/set-state-in-effect */
     }
   }, [session, checkUnlock, fetchAsyncChallenges])
 
