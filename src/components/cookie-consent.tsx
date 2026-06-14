@@ -163,8 +163,8 @@ export function CookieConsent() {
                 (navigation, security, preferences). These cannot be disabled.
               </div>
               <div>
-                <span className="font-semibold text-gray-900 dark:text-white">Analytics Cookies:</span> Help us understand how you use the site 
-                so we can improve your learning experience (Google Analytics, Vercel Analytics).
+                <span className="font-semibold text-gray-900 dark:text-white">Analytics Cookies:</span> Help us understand how you use the site
+                so we can improve your learning experience (Google Analytics, Vercel Analytics, and Microsoft Clarity session replay).
               </div>
               <div>
                 <span className="font-semibold text-gray-900 dark:text-white">Advertising Cookies:</span> Enable us to show relevant ads that support 

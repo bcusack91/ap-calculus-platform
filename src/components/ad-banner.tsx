@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useConsent } from '@/components/ConsentProvider'
 import { useEffectiveRole } from '@/lib/use-effective-role'
+import { isChildClient } from '@/lib/child-safety'
 
 interface AdBannerProps {
   slot: string
@@ -14,6 +15,8 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
   // Don't show ads to premium users (honors an admin "View as…" override).
   const { isPremium } = useEffectiveRole()
   const { advertising: consentGiven } = useConsent()
+  // Under-13 (child-directed) surfaces: force non-personalized + child-directed tag.
+  const child = isChildClient()
 
   // Skip ads in development to avoid initialization errors
   const isDevelopment = process.env.NODE_ENV === 'development'
@@ -99,7 +102,8 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
           data-ad-slot={slot}
           data-ad-format={format}
           data-full-width-responsive={responsive.toString()}
-          data-npa-on-unknown-consent={consentGiven ? '0' : '1'}
+          data-npa-on-unknown-consent={consentGiven && !child ? '0' : '1'}
+          {...(child ? { 'data-tag-for-child-directed-treatment': '1' } : {})}
         />
       </div>
     </div>

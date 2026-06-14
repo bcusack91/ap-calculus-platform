@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getDiagnosticLabel } from '@/lib/diagnostic-challenge-utils'
+import { publicDisplayName } from '@/lib/display-name'
 
 export async function GET(_req: Request, { params }: { params: Promise<{ token: string }> }) {
   try {
@@ -31,7 +32,9 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
 
     const leaderboard = [
       {
-        name: challenge.creatorName,
+        // Public, unauthenticated endpoint — never expose full names / email
+        // local-parts of minors. First-name + last-initial only.
+        name: publicDisplayName(challenge.creatorName, 'Student'),
         score: challenge.creatorScore,
         correct: challenge.creatorCorrect,
         total: challenge.creatorTotal,
@@ -39,7 +42,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
         isCreator: true,
       },
       ...challenge.entries.map((entry) => ({
-        name: entry.displayName,
+        name: publicDisplayName(entry.displayName, 'Student'),
         score: entry.score,
         correct: entry.correct,
         total: entry.total,
@@ -59,7 +62,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
     return NextResponse.json({
       challenge: {
         token: challenge.token,
-        creatorName: challenge.creatorName,
+        creatorName: publicDisplayName(challenge.creatorName, 'Student'),
         diagnosticCategory: challenge.diagnosticCategory,
         diagnosticLabel: getDiagnosticLabel(challenge.diagnosticCategory),
         diagnosticForm: challenge.diagnosticForm,

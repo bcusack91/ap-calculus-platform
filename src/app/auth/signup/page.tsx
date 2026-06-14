@@ -19,6 +19,7 @@ function SignUpForm() {
   const [step, setStep] = useState(1) // 1: account details, 2: avatar selection
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [birthYear, setBirthYear] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [selectedAvatar, setSelectedAvatar] = useState<AvatarData | null>(null)
@@ -42,6 +43,13 @@ function SignUpForm() {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
       if (!emailRegex.test(email)) {
         setError('Please enter a valid email address')
+        return
+      }
+
+      const yr = Number(birthYear)
+      const thisYear = new Date().getFullYear()
+      if (!birthYear || !Number.isFinite(yr) || yr < 1900 || yr > thisYear) {
+        setError('Please enter your birth year')
         return
       }
 
@@ -84,11 +92,12 @@ function SignUpForm() {
       const signupResponse = await fetch('/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          email, 
-          password, 
+        body: JSON.stringify({
+          email,
+          password,
           name,
-          avatarData: selectedAvatar 
+          birthYear,
+          avatarData: selectedAvatar
         }),
       })
 
@@ -98,6 +107,12 @@ function SignUpForm() {
         setError(signupData.error || 'Failed to create account')
         setIsLoading(false)
         return
+      }
+
+      // Apply child-directed treatment immediately (the API also sets this
+      // cookie server-side; setting it here covers the current page session).
+      if (new Date().getFullYear() - Number(birthYear) < 13) {
+        document.cookie = `mondo_u13=1; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`
       }
 
       // Auto-login after signup
@@ -142,7 +157,7 @@ function SignUpForm() {
           </div>
         </div>
 
-        <form noValidate className="mt-8 space-y-6">
+        <form noValidate onSubmit={(e) => { e.preventDefault(); handleContinue() }} className="mt-8 space-y-6">
           {step === 1 ? (
             // Step 1: Account Details
             <div className="space-y-4">
@@ -178,6 +193,28 @@ function SignUpForm() {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="you@example.com"
                 />
+              </div>
+
+              <div>
+                <label htmlFor="birthYear" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Birth Year
+                </label>
+                <input
+                  id="birthYear"
+                  name="birthYear"
+                  type="number"
+                  inputMode="numeric"
+                  min={1900}
+                  max={new Date().getFullYear()}
+                  required
+                  value={birthYear}
+                  onChange={(e) => setBirthYear(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  placeholder="e.g. 2012"
+                />
+                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Helps us keep younger learners safe (limits ads & tracking for under-13s).
+                </p>
               </div>
 
               <div>
@@ -270,8 +307,7 @@ function SignUpForm() {
               </button>
             )}
             <button
-              type="button"
-              onClick={handleContinue}
+              type="submit"
               disabled={isLoading}
               className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >

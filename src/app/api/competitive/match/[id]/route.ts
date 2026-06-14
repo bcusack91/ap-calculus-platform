@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { isAIOpponent } from '@/lib/ai-opponent';
+import { publicDisplayName } from '@/lib/display-name';
 import { sweepStaleMatchById, STALE_MATCH_MS } from '../../_lib/sweep-stale-matches';
 
 interface MatchGameData {
@@ -126,8 +127,10 @@ export async function GET(
         id: match.id,
         player1Id: match.player1Id,
         player2Id: match.player2Id,
-        player1Name: match.player1.name || 'Player 1',
-        player2Name: match.player2.name || 'Player 2',
+        // Stranger matchups: never expose a full real name to a ranked opponent.
+        // First-name + last-initial only (publicDisplayName); emails never leak.
+        player1Name: publicDisplayName(match.player1.name, 'Player 1'),
+        player2Name: publicDisplayName(match.player2.name, 'Player 2'),
         // Booleans instead of raw emails (#6): the client only needs to know
         // whether each side is an AI bot (to drive the local bot simulation).
         // Leaking a stranger's email to their ranked opponent is not acceptable.

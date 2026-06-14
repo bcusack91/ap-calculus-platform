@@ -2,6 +2,7 @@
 
 import Script from 'next/script'
 import { useConsent } from '@/components/ConsentProvider'
+import { isChildClient } from '@/lib/child-safety'
 import { useEffect } from 'react'
 
 /**
@@ -24,10 +25,14 @@ export default function AdSenseScript({ clientId }: { clientId: string }) {
   useEffect(() => {
     if (typeof window === 'undefined') return
     // Initialise the queue and toggle non-personalized ads based on consent.
+    // Under-13 (child-directed) visitors ALWAYS get non-personalized ads and are
+    // tagged for child-directed treatment, regardless of the consent banner.
+    const child = isChildClient()
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const w = window as unknown as { adsbygoogle?: any[] & { requestNonPersonalizedAds?: number } }
+    const w = window as unknown as { adsbygoogle?: any[] & { requestNonPersonalizedAds?: number; tagForChildDirectedTreatment?: number } }
     w.adsbygoogle = w.adsbygoogle || []
-    w.adsbygoogle.requestNonPersonalizedAds = advertising ? 0 : 1
+    w.adsbygoogle.requestNonPersonalizedAds = advertising && !child ? 0 : 1
+    if (child) w.adsbygoogle.tagForChildDirectedTreatment = 1
   }, [advertising])
 
   return (

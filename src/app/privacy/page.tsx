@@ -122,6 +122,7 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 mt-2">
             <li><strong>Google Analytics:</strong> Tracks user behavior, demographics, and interests</li>
             <li><strong>Vercel Analytics:</strong> Monitors Service performance and usage patterns</li>
+            <li><strong>Microsoft Clarity:</strong> Session replay and heatmaps that record how pages are used (clicks, scrolls, navigation). Clarity loads only after you grant analytics consent, and is never enabled for accounts identified as under 13.</li>
           </ul>
           <p className="mt-4">
             These services may collect information such as:
@@ -289,16 +290,22 @@ export default function PrivacyPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">8. Children&apos;s Privacy</h2>
           <p>
-            Our Service is designed for students preparing for AP® exams, which typically includes high school students. 
-            While we do not knowingly collect personal information from children under 13, we recognize that minors may use our Service.
+            Our Service covers a wide range of learners — from elementary and middle-school math (grades 4&ndash;8) through
+            high-school and AP®-level courses. Because some of our content is intended for children under 13, we ask for a
+            birth year at sign-up and apply additional protections to accounts identified as under 13:
           </p>
+          <ul className="list-disc pl-6 mt-2">
+            <li><strong>Non-personalized advertising only</strong>, with ads tagged for child-directed treatment (no
+              interest-based/behavioral ad targeting), regardless of cookie-consent choices.</li>
+            <li><strong>No session-replay analytics</strong> (Microsoft Clarity is never loaded for under-13 accounts).</li>
+            <li>We collect only the information needed to operate the learning features, and a child&apos;s name is shown to
+              other students as a first name and last initial only.</li>
+          </ul>
           <p className="mt-4">
-            If you are under 13 years old, please do not provide any personal information through the Service. 
-            If you are a parent or guardian and believe your child has provided personal information, please contact us.
-          </p>
-          <p className="mt-4">
-            <strong>For Students Under 18:</strong> We encourage parental involvement in your use of educational websites. 
-            Parents should review this Privacy Policy with their children.
+            <strong>Parents and guardians:</strong> we encourage you to be involved in your child&apos;s use of the Service and to
+            review this policy with them. You may contact us at any time to review, correct, or delete your child&apos;s
+            information, or to delete the account entirely. We are continuing to expand our verifiable parental-consent process;
+            if you have questions about how your child&apos;s data is handled, please reach out.
           </p>
         </section>
 
