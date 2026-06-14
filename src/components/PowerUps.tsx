@@ -1,152 +1,139 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 /**
- * #188: Power-Ups in Competitive Mode
- * Consumable power-ups players can use during competitive matches
+ * Competitive cosmetics ("power-ups" — kept that export name for callers).
+ * These are PURELY VISUAL flair: they make you look cooler in competitive mode
+ * but give NO gameplay advantage, so every match stays perfectly fair. Bought
+ * with XP earned from wins; ownership + the equipped pick persist in
+ * localStorage (no server stakes since they're cosmetic).
  */
-
-export interface PowerUp {
+export interface Cosmetic {
   id: string
   name: string
   description: string
   icon: string
-  effect: 'extra_time' | 'fifty_fifty' | 'skip_question' | 'double_points' | 'hint' | 'shield'
-  duration?: number
   rarity: 'common' | 'rare' | 'epic'
-  cost: number // XP cost
+  cost: number
+  /** Tailwind classes applied to the player's nameplate when equipped. */
+  nameplateClass: string
 }
 
-const POWER_UPS: PowerUp[] = [
-  {
-    id: 'extra-time',
-    name: 'Time Freeze',
-    description: 'Add 15 seconds to the current question timer',
-    icon: '⏱️',
-    effect: 'extra_time',
-    duration: 15,
-    rarity: 'common',
-    cost: 50,
-  },
-  {
-    id: 'fifty-fifty',
-    name: '50/50',
-    description: 'Eliminate two wrong answers',
-    icon: '✂️',
-    effect: 'fifty_fifty',
-    rarity: 'common',
-    cost: 75,
-  },
-  {
-    id: 'skip',
-    name: 'Skip',
-    description: 'Skip a question without penalty and get a new one',
-    icon: '⏭️',
-    effect: 'skip_question',
-    rarity: 'rare',
-    cost: 100,
-  },
-  {
-    id: 'double-points',
-    name: 'Double Points',
-    description: 'Next correct answer is worth double points',
-    icon: '✖️2️⃣',
-    effect: 'double_points',
-    rarity: 'rare',
-    cost: 150,
-  },
-  {
-    id: 'hint',
-    name: 'Hint',
-    description: 'Get a helpful hint for the current question',
-    icon: '💡',
-    effect: 'hint',
-    rarity: 'common',
-    cost: 60,
-  },
-  {
-    id: 'shield',
-    name: 'Shield',
-    description: 'Protect your streak — wrong answer won\'t break it',
-    icon: '🛡️',
-    effect: 'shield',
-    rarity: 'epic',
-    cost: 200,
-  },
+export const COSMETICS: Cosmetic[] = [
+  { id: 'neon-trail', name: 'Neon Trail', description: 'A glowing neon outline on your nameplate.', icon: '✨', rarity: 'common', cost: 50,
+    nameplateClass: 'text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.9)]' },
+  { id: 'confetti', name: 'Confetti Burst', description: 'A festive sparkle frames your name.', icon: '🎉', rarity: 'common', cost: 75,
+    nameplateClass: 'text-pink-500' },
+  { id: 'golden-nameplate', name: 'Golden Nameplate', description: 'Your name shines in radiant gold.', icon: '🏷️', rarity: 'rare', cost: 100,
+    nameplateClass: 'bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent font-extrabold' },
+  { id: 'flame-aura', name: 'Flame Aura', description: 'A flickering flame aura around your name.', icon: '🔥', rarity: 'rare', cost: 150,
+    nameplateClass: 'text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.9)]' },
+  { id: 'galaxy', name: 'Galaxy Arena', description: 'A cosmic gradient sweeps across your name.', icon: '🌌', rarity: 'epic', cost: 200,
+    nameplateClass: 'bg-gradient-to-r from-indigo-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent font-extrabold' },
+  { id: 'champion-crown', name: 'Champion Crown', description: 'A crown sits beside your name.', icon: '👑', rarity: 'epic', cost: 300,
+    nameplateClass: 'text-amber-400 font-extrabold' },
 ]
 
-interface PowerUpInventory {
-  [powerUpId: string]: number
+interface CosmeticState { owned: string[]; equipped: string | null; spent: number }
+const STORE_KEY = 'mondo_cosmetics'
+
+function load(): CosmeticState {
+  if (typeof window === 'undefined') return { owned: [], equipped: null, spent: 0 }
+  try {
+    const s = JSON.parse(localStorage.getItem(STORE_KEY) || '{}')
+    return { owned: Array.isArray(s.owned) ? s.owned : [], equipped: s.equipped ?? null, spent: Number(s.spent) || 0 }
+  } catch { return { owned: [], equipped: null, spent: 0 } }
 }
 
-export function usePowerUps() {
-  const [inventory, setInventory] = useState<PowerUpInventory>(() => {
-    if (typeof window === 'undefined') return {}
-    try {
-      const stored = localStorage.getItem('studymondo_powerups')
-      return stored ? JSON.parse(stored) : {}
-    } catch { return {} }
-  })
+export function useCosmetics() {
+  const [state, setState] = useState<CosmeticState>({ owned: [], equipped: null, spent: 0 })
+  useEffect(() => { setState(load()) }, [])
 
-  const [activePowerUp, setActivePowerUp] = useState<PowerUp | null>(null)
-
-  const purchasePowerUp = useCallback((powerUpId: string, currentXP: number): boolean => {
-    const pu = POWER_UPS.find(p => p.id === powerUpId)
-    if (!pu || currentXP < pu.cost) return false
-    setInventory(prev => {
-      const updated = { ...prev, [powerUpId]: (prev[powerUpId] || 0) + 1 }
-      localStorage.setItem('studymondo_powerups', JSON.stringify(updated))
-      return updated
-    })
-    return true
+  const save = useCallback((next: CosmeticState) => {
+    setState(next)
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
   }, [])
 
-  const usePowerUp = useCallback((powerUpId: string): PowerUp | null => {
-    if ((inventory[powerUpId] || 0) <= 0) return null
-    const pu = POWER_UPS.find(p => p.id === powerUpId)
-    if (!pu) return null
-    setInventory(prev => {
-      const updated = { ...prev, [powerUpId]: prev[powerUpId] - 1 }
-      localStorage.setItem('studymondo_powerups', JSON.stringify(updated))
-      return updated
+  const purchase = useCallback((id: string, availableXP: number): boolean => {
+    const c = COSMETICS.find((x) => x.id === id)
+    setState((prev) => {
+      if (!c || prev.owned.includes(id) || availableXP < c.cost) return prev
+      const next = { owned: [...prev.owned, id], equipped: prev.equipped ?? id, spent: prev.spent + c.cost }
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
+      return next
     })
-    setActivePowerUp(pu)
-    return pu
-  }, [inventory])
+    return !!c
+  }, [])
 
-  return { inventory, activePowerUp, purchasePowerUp, usePowerUp, clearActive: () => setActivePowerUp(null), POWER_UPS }
+  const equip = useCallback((id: string | null) => {
+    setState((prev) => {
+      if (id !== null && !prev.owned.includes(id)) return prev
+      const next = { ...prev, equipped: prev.equipped === id ? null : id }
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
+      return next
+    })
+  }, [])
+
+  return { ...state, save, purchase, equip }
 }
 
-export function PowerUpShop({ currentXP, onPurchase }: { currentXP: number; onPurchase: (id: string, cost: number) => void }) {
+const rarityChip: Record<Cosmetic['rarity'], string> = {
+  epic: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
+  rare: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
+  common: 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400',
+}
+
+/**
+ * Cosmetics shop. `currentXP` is the player's earned XP (e.g. wins*10 + streak*5);
+ * available = earned − spent. Self-contained: purchase + equip handled internally.
+ */
+export function PowerUpShop({ currentXP }: { currentXP: number }) {
+  const { owned, equipped, spent, purchase, equip } = useCosmetics()
+  const available = Math.max(0, currentXP - spent)
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">
-      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">🛒 Power-Up Shop</h3>
-      <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Spend XP to buy power-ups for competitive matches</p>
-      <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mb-3">⭐ {currentXP} XP available</p>
+      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">🛍️ Cosmetics Shop</h3>
+      <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Spend XP on visual flair for competitive mode. Cosmetics are looks only — they never affect gameplay, so matches stay fair.</p>
+      <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mb-2">⭐ {available} XP available</p>
+
+      {(() => {
+        const e = COSMETICS.find((c) => c.id === equipped)
+        return e ? (
+          <p className="mb-3 text-xs text-gray-500 dark:text-gray-400">
+            Equipped: <span className={e.nameplateClass}>Your name</span> <span aria-hidden>{e.icon}</span>
+          </p>
+        ) : null
+      })()}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        {POWER_UPS.map(pu => {
-          const canAfford = currentXP >= pu.cost
+        {COSMETICS.map((c) => {
+          const isOwned = owned.includes(c.id)
+          const isEquipped = equipped === c.id
+          const canAfford = available >= c.cost
           return (
-            <div key={pu.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-600 text-center">
-              <div className="text-2xl mb-1">{pu.icon}</div>
-              <h4 className="text-xs font-bold text-gray-900 dark:text-white">{pu.name}</h4>
-              <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-0.5 mb-2">{pu.description}</p>
-              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium capitalize ${
-                pu.rarity === 'epic' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400' :
-                pu.rarity === 'rare' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
-                'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
-              }`}>{pu.rarity}</span>
-              <button
-                onClick={() => canAfford && onPurchase(pu.id, pu.cost)}
-                disabled={!canAfford}
-                className={`mt-2 w-full py-1 text-xs rounded font-medium transition-colors ${
-                  canAfford ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-gray-200 text-gray-400 cursor-not-allowed dark:bg-gray-700 dark:text-gray-500'
-                }`}
-              >
-                {pu.cost} XP
-              </button>
+            <div key={c.id} className={`p-3 rounded-lg border text-center ${isEquipped ? 'border-indigo-500 ring-1 ring-indigo-400' : 'border-gray-200 dark:border-gray-600'}`}>
+              <div className="text-2xl mb-1">{c.icon}</div>
+              <h4 className="text-xs font-bold text-gray-900 dark:text-white">{c.name}</h4>
+              <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-0.5 mb-2">{c.description}</p>
+              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium capitalize ${rarityChip[c.rarity]}`}>{c.rarity}</span>
+              {isOwned ? (
+                <button
+                  onClick={() => equip(c.id)}
+                  className={`mt-2 w-full py-1 text-xs rounded font-medium transition-colors ${isEquipped ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200'}`}
+                >
+                  {isEquipped ? '✓ Equipped' : 'Equip'}
+                </button>
+              ) : (
+                <button
+                  onClick={() => canAfford && purchase(c.id, available)}
+                  disabled={!canAfford}
+                  className={`mt-2 w-full py-1 text-xs rounded font-medium transition-colors ${canAfford ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-gray-200 text-gray-400 cursor-not-allowed dark:bg-gray-700 dark:text-gray-500'}`}
+                >
+                  {c.cost} XP
+                </button>
+              )}
             </div>
           )
         })}
@@ -155,22 +142,18 @@ export function PowerUpShop({ currentXP, onPurchase }: { currentXP: number; onPu
   )
 }
 
-export function PowerUpBar({ inventory, onUse }: { inventory: PowerUpInventory; onUse: (id: string) => void }) {
+/**
+ * Renders the player's name with their equipped cosmetic flair applied. Drop in
+ * wherever the competitive player's name appears (lobby card, match header).
+ */
+export function CosmeticNameplate({ name, className = '' }: { name: string; className?: string }) {
+  const { equipped } = useCosmetics()
+  const cosmetic = COSMETICS.find((c) => c.id === equipped)
+  if (!cosmetic) return <span className={className}>{name}</span>
   return (
-    <div className="flex gap-2">
-      {POWER_UPS.filter(pu => (inventory[pu.id] || 0) > 0).map(pu => (
-        <button
-          key={pu.id}
-          onClick={() => onUse(pu.id)}
-          className="relative flex items-center gap-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors text-sm"
-          title={pu.description}
-        >
-          <span>{pu.icon}</span>
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] rounded-full flex items-center justify-center">
-            {inventory[pu.id]}
-          </span>
-        </button>
-      ))}
-    </div>
+    <span className={`inline-flex items-center gap-1 ${className}`}>
+      <span className={cosmetic.nameplateClass}>{name}</span>
+      <span title={cosmetic.name} aria-hidden>{cosmetic.icon}</span>
+    </span>
   )
 }

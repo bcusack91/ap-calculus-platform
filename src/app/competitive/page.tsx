@@ -565,21 +565,10 @@ export default function CompetitivePage() {
           </div>
         )}
 
-        {/* Power-Up Shop */}
+        {/* Cosmetics Shop */}
         {profile && (
           <div className="mt-8">
-            <PowerUpShop currentXP={profile.wins * 10 + profile.winStreak * 5} onPurchase={async (id, cost) => {
-              try {
-                const res = await fetch('/api/competitive/purchase-powerup', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ powerUpId: id, cost }),
-                })
-                if (!res.ok) throw new Error('Purchase failed')
-              } catch {
-                // PowerUpShop shows its own feedback
-              }
-            }} />
+            <PowerUpShop currentXP={profile.wins * 10 + profile.winStreak * 5} />
           </div>
         )}
       </div>

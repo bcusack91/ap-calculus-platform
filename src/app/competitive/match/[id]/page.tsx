@@ -4,6 +4,7 @@ import { useEffect, useState, use, useCallback, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import AvatarDisplay from '@/components/AvatarDisplay';
+import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
 import 'katex/dist/katex.min.css';
@@ -805,7 +806,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 emotion={player1Emotion}
               />
               <p className="font-bold text-gray-900 dark:text-white mb-1">
-                {matchState.player1Name}
+                {isPlayer1 ? <CosmeticNameplate name={matchState.player1Name} /> : matchState.player1Name}
               </p>
               {isPlayer1 && (
                 <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
@@ -998,7 +999,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 emotion={player2Emotion}
               />
               <p className="font-bold text-gray-900 dark:text-white mb-1">
-                {matchState.player2Name}
+                {!isPlayer1 ? <CosmeticNameplate name={matchState.player2Name} /> : matchState.player2Name}
               </p>
               {!isPlayer1 && (
                 <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
