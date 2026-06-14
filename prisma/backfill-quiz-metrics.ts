@@ -25,31 +25,37 @@ async function main() {
   let rowsWritten = 0
   let attemptsWithData = 0
 
+  // Build all rows in memory, then write in batches. Per-attempt round-trips are
+  // far too slow over a remote (Neon) connection at this scale (17k+ attempts).
+  type Row = { userId: string; sessionId: string; problemType: string; lessonPart: number; isCorrect: boolean; attemptNumber: number; timeToAnswer: number; hintsUsed: number; problemDifficulty: string; problemComplexity: number }
+  const rows: Row[] = []
   for (const a of attempts) {
     const answers: Answer[] = Array.isArray(a.answers) ? (a.answers as unknown as Answer[]) : []
     const scored = answers.filter((x) => x && typeof x.correct === 'boolean')
     if (scored.length === 0) continue
     attemptsWithData++
-
     const perQuestionMs = a.timeSpent && a.timeSpent > 0 ? Math.round((a.timeSpent * 1000) / scored.length) : 0
+    for (const x of scored) {
+      rows.push({
+        userId: a.userId, sessionId: a.id, problemType: a.topicSlug, lessonPart: a.variant ?? 1,
+        isCorrect: x.correct as boolean, attemptNumber: 1, timeToAnswer: perQuestionMs, hintsUsed: 0,
+        problemDifficulty: 'MEDIUM', problemComplexity: 1,
+      })
+    }
+  }
 
-    // Idempotent: clear anything we previously wrote for this attempt, then insert.
-    await prisma.factoringPerformanceMetrics.deleteMany({ where: { userId: a.userId, sessionId: a.id } })
-    await prisma.factoringPerformanceMetrics.createMany({
-      data: scored.map((x) => ({
-        userId: a.userId,
-        sessionId: a.id,
-        problemType: a.topicSlug,
-        lessonPart: a.variant ?? 1,
-        isCorrect: x.correct as boolean,
-        attemptNumber: 1,
-        timeToAnswer: perQuestionMs,
-        hintsUsed: 0,
-        problemDifficulty: 'MEDIUM',
-        problemComplexity: 1,
-      })),
-    })
-    rowsWritten += scored.length
+  // Idempotent: delete previously-written rows for these attempts (batched by
+  // sessionId), then bulk-insert. Chunk sizes keep each round-trip bounded.
+  const attemptIds = attempts.map((a) => a.id)
+  const idChunk = 500
+  for (let i = 0; i < attemptIds.length; i += idChunk) {
+    await prisma.factoringPerformanceMetrics.deleteMany({ where: { sessionId: { in: attemptIds.slice(i, i + idChunk) } } })
+  }
+  const rowChunk = 5000
+  for (let i = 0; i < rows.length; i += rowChunk) {
+    const res = await prisma.factoringPerformanceMetrics.createMany({ data: rows.slice(i, i + rowChunk) })
+    rowsWritten += res.count
+    console.log(`  inserted ${rowsWritten}/${rows.length}…`)
   }
 
   const total = await prisma.factoringPerformanceMetrics.count()
