@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'SAT Diagnostic Test | Study Mondo',
-  description:
-    'Take a free SAT diagnostic test to identify your strengths and weaknesses across all SAT sections.',
-  alternates: { canonical: 'https://www.studymondo.com/sat-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "SAT Diagnostic Test | Study Mondo",
+  description: "Take a free SAT diagnostic test to identify your strengths and weaknesses across all SAT sections.",
+  path: "/sat-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',

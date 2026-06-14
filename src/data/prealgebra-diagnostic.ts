@@ -4,6 +4,8 @@
  * 10 alternate forms (1–10), ~30 questions spanning 6 core domains.
  */
 
+import { mulberry32 } from './_shared/prng'
+
 export const TOTAL_FORMS = 10
 
 export interface PreAlgebraQuestion {
@@ -128,16 +130,6 @@ const questionPool: PoolQuestion[] = [
   { question: 'The mode of: 3, 5, 5, 7, 9 is:', options: ['5', '3', '7', '5.8'], correctAnswer: 0, explanation: '5 appears most often (twice).', domain: 'data-probability', topicSlug: 'mean-median-mode', formSet: 'both' },
   { question: 'The probability of an impossible event is:', options: ['0', '1', '0.5', '−1'], correctAnswer: 0, explanation: 'An impossible event has probability 0.', domain: 'data-probability', topicSlug: 'intro-statistics-prealg', formSet: 'both' },
 ]
-
-function mulberry32(seed: number) {
-  return function () {
-    // eslint-disable-next-line no-param-reassign
-    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
 
 function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]

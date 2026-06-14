@@ -297,7 +297,6 @@ export async function GET() {
         data: {
           userId: user.id,
           competitiveModeUnlocked: true,
-          unitCircleMMR: 1000,
           overallMMR: 1000
         }
       })

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'ACT Diagnostic Test | Study Mondo',
-  description: 'Take the ACT diagnostic to identify strengths and weaknesses across English, Math, Reading, and Science sections.',
-  alternates: { canonical: 'https://www.studymondo.com/act-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "ACT Diagnostic Test | Study Mondo",
+  description: "Take the ACT diagnostic to identify strengths and weaknesses across English, Math, Reading, and Science sections.",
+  path: "/act-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',

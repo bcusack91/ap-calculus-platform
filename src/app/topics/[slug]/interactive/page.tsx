@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import ClientLessonRenderer from '@/components/ClientLessonRenderer'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { InArticleAd } from '@/components/ad-banner'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
@@ -161,7 +162,14 @@ export default async function InteractivePage(props: InteractivePageProps) {
           </div>
         </div>
 
-        {/* Interactive Lesson Renderer (client-side stepper) */}
+        {/* Interactive Lesson Renderer (client-side stepper). Wrapped in an
+            ErrorBoundary so a render crash shows a friendly fallback + the
+            standard lesson link instead of white-screening the page. */}
+        <ErrorBoundary fallback={
+          <div className="text-center text-gray-600 dark:text-gray-400 py-10">
+            This interactive lesson hit an unexpected error. Please refresh the page, or use the standard lesson below.
+          </div>
+        }>
         {hasHandCraftedLesson && lessonConfig && lessonConfig.parts.length > 0 ? (
           <ClientLessonRenderer
             mode="handcrafted"
@@ -181,6 +189,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
             textContent={topic.textContent!}
           />
         )}
+        </ErrorBoundary>
 
         {/* SEO: Server-rendered lesson content for search engine crawling */}
         {/* This renders all lesson text as HTML that Googlebot can index.

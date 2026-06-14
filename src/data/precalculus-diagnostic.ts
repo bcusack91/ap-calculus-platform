@@ -5,6 +5,8 @@
  * Weak areas map to topic slugs for review.
  */
 
+import { mulberry32 } from './_shared/prng'
+
 export const TOTAL_FORMS = 10
 
 export interface PreCalcDiagnosticQuestion {
@@ -142,16 +144,6 @@ const questionPool: PoolQuestion[] = [
   { question: 'What is the common ratio of the geometric sequence 5, 15, 45, 135, …?', options: ['10', '3', '5', '30'], correctAnswer: 1, explanation: 'Common ratio r = 15/5 = 3.', domain: 'sequences-series', topicSlug: 'sequences-arithmetic-geometric', formSet: 'both' },
   { question: 'The sum formula for an arithmetic series is:', options: ['S = n/2 · (a₁ + aₙ)', 'S = a₁(1 − rⁿ)/(1 − r)', 'S = n · a₁', 'S = a₁ · rⁿ'], correctAnswer: 0, explanation: 'For an arithmetic series, S = n/2 · (first + last) = n/2 · (a₁ + aₙ).', domain: 'sequences-series', topicSlug: 'sequences-arithmetic-geometric', formSet: 'both' },
 ]
-
-function mulberry32(seed: number) {
-  return function () {
-    // eslint-disable-next-line no-param-reassign
-    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
 
 function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]

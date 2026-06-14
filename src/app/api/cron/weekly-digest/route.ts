@@ -37,7 +37,9 @@ export async function GET(request: Request) {
           where: { lastReviewed: { gte: oneWeekAgo } },
           select: { id: true },
         },
-        quizAttempts: {
+        // QuizAttempt is a dead table (never written); ExitQuizAttempt is the
+        // only real quiz activity.
+        exitQuizAttempts: {
           where: { completedAt: { gte: oneWeekAgo } },
           select: { id: true },
         },
@@ -65,7 +67,7 @@ export async function GET(request: Request) {
       const stats = {
         lessonsCompleted: user.topicProgress.length,
         flashcardsReviewed: user.flashcardProgress.length,
-        quizzesTaken: user.quizAttempts.length,
+        quizzesTaken: user.exitQuizAttempts.length,
         streak: user.dailyStreak?.currentStreak ?? 0,
         minutesStudied: Math.round(
           user.topicProgress.reduce((sum: number, tp: { timeSpent: number }) => sum + tp.timeSpent, 0) / 60

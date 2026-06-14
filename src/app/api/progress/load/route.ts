@@ -38,6 +38,7 @@ export async function GET(request: Request) {
             completedAt: true,
             variant: true,
             failedExitParts: true,
+            masteredParts: true,
           },
           take: 1,
         },
@@ -72,6 +73,7 @@ export async function GET(request: Request) {
         completedAt: progress.completedAt,
         variant: progress.variant ?? 1,
         failedExitParts: progress.failedExitParts ?? null,
+        masteredParts: progress.masteredParts ?? null,
       }
     })
   } catch (error) {

@@ -177,7 +177,6 @@ export async function POST(
             where: { userId: profile.userId },
             data: {
               overallMMR: newMMR,
-              unitCircleMMR: newMMR,
               totalMatches: { increment: 1 },
               wins: isWinner ? { increment: 1 } : undefined,
               losses: !isWinner ? { increment: 1 } : undefined,

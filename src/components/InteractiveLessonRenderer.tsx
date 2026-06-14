@@ -599,11 +599,16 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             unlocked.add(i as LessonPart)
           }
           
-          // Restore entrance quiz mastered parts from localStorage
+          // Restore entrance-quiz mastered parts. Prefer the server-persisted set
+          // (TopicProgress.masteredParts) so skips sync across devices; fall back
+          // to localStorage for older/offline state. (#29)
           try {
+            const serverParts = Array.isArray(data.progress.masteredParts)
+              ? (data.progress.masteredParts as number[])
+              : null
             const saved = localStorage.getItem(`entranceQuiz_${topicSlug}`)
-            if (saved) {
-              const savedParts: number[] = JSON.parse(saved)
+            {
+              const savedParts: number[] = serverParts ?? (saved ? JSON.parse(saved) : [])
               if (Array.isArray(savedParts) && savedParts.length > 0) {
                 const restored = new Set<number>(savedParts.filter(n => typeof n === 'number' && n >= 1 && n <= totalParts))
                 setEntranceQuizMasteredParts(restored)
@@ -972,6 +977,19 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           JSON.stringify(Array.from(masteredParts))
         )
       } catch {}
+      // Also persist server-side (TopicProgress.masteredParts) so skips sync
+      // across devices (#29). The save route never downgrades mastery/status.
+      if (session?.user) {
+        fetch('/api/progress/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topicId: cachedTopicId,
+            topicSlug: !cachedTopicId ? topicSlug : undefined,
+            masteredParts: Array.from(masteredParts),
+          }),
+        }).catch(() => {})
+      }
     }
 
     // Add flashcards for topics where student didn't master all parts

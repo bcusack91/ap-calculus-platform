@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'Pre-Calculus Diagnostic Test | Study Mondo',
-  description:
-    'Take a free Pre-Calculus diagnostic test to identify your strengths and weaknesses. Get personalized study recommendations across all key domains.',
-  alternates: { canonical: 'https://www.studymondo.com/precalc-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "Pre-Calculus Diagnostic Test | Study Mondo",
+  description: "Take a free Pre-Calculus diagnostic test to identify your strengths and weaknesses. Get personalized study recommendations across all key domains.",
+  path: "/precalc-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',

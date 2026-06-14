@@ -46,10 +46,11 @@ export async function GET(req: NextRequest) {
       include: { topic: { select: { title: true, slug: true, category: { select: { course: { select: { name: true } } } } } } },
       orderBy: { lastAccessed: 'desc' },
     }),
-    // Quiz attempts (last 30)
-    prisma.quizAttempt.findMany({
+    // Quiz attempts (last 30). QuizAttempt is a dead table (never written);
+    // ExitQuizAttempt is the only real quiz activity.
+    prisma.exitQuizAttempt.findMany({
       where: { userId: studentId },
-      include: { quiz: { select: { topic: { select: { title: true, slug: true } } } } },
+      select: { score: true, totalQuestions: true, topicSlug: true, completedAt: true },
       orderBy: { completedAt: 'desc' },
       take: 30,
     }),
@@ -71,11 +72,25 @@ export async function GET(req: NextRequest) {
     prisma.dailyStreak.findUnique({ where: { userId: studentId } }),
   ])
 
+  // Resolve exit-quiz topic slugs to human-readable titles for the trend chart.
+  const quizTopicSlugs = Array.from(new Set(quizAttempts.map((a) => a.topicSlug)))
+  const quizTopics = quizTopicSlugs.length > 0
+    ? await prisma.topic.findMany({
+        where: { slug: { in: quizTopicSlugs } },
+        select: { slug: true, title: true },
+      })
+    : []
+  const quizTopicTitleBySlug = new Map(quizTopics.map((t) => [t.slug, t.title]))
+
+  // ExitQuizAttempt.score is a raw count out of totalQuestions; normalize to a 0-100 percent.
+  const quizScorePct = (a: { score: number; totalQuestions: number }) =>
+    a.totalQuestions > 0 ? Math.round((a.score / a.totalQuestions) * 100) : 0
+
   // Calculate metrics
   const completedLessons = progress.filter((p) => p.status === 'COMPLETED').length
   const totalLessons = progress.length
   const avgQuizScore = quizAttempts.length > 0
-    ? Math.round(quizAttempts.reduce((sum, a) => sum + (a.score ?? 0), 0) / quizAttempts.length)
+    ? Math.round(quizAttempts.reduce((sum, a) => sum + quizScorePct(a), 0) / quizAttempts.length)
     : null
 
   const assignmentAvg = assignments.length > 0
@@ -109,8 +124,8 @@ export async function GET(req: NextRequest) {
     .reverse()
     .map((a) => ({
       date: a.completedAt?.toISOString(),
-      score: a.score,
-      topic: a.quiz?.topic?.title,
+      score: quizScorePct(a),
+      topic: quizTopicTitleBySlug.get(a.topicSlug) ?? a.topicSlug,
     }))
 
   return NextResponse.json({

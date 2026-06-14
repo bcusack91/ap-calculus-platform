@@ -21,6 +21,7 @@ model User {
   stripePriceId          String?
   stripeCurrentPeriodEnd DateTime?
   avatarData             Json? // Custom avatar configuration
+  birthYear              Int? // Self-reported at signup; drives COPPA child-directed treatment for under-13
   createdAt              DateTime                      @default(now())
   updatedAt              DateTime                      @updatedAt
   schoolId               String?
@@ -317,7 +318,7 @@ model Topic {
   exampleProblems ExampleProblem[]
   flashcards      Flashcard[]
   quizzes         Quiz[]
-  category        Category         @relation(fields: [categoryId], references: [id])
+  category        Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   parentTopic     Topic?           @relation("TopicSubtopics", fields: [parentTopicId], references: [id])
   subtopics       Topic[]          @relation("TopicSubtopics")
   topicProgress   TopicProgress[]
@@ -338,7 +339,7 @@ model Category {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   courseId    String
-  course      Course   @relation(fields: [courseId], references: [id])
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
   topics      Topic[]
 
   @@index([courseId])
@@ -475,6 +476,7 @@ model TopicProgress {
   completedAt     DateTime?
   variant         Int            @default(1) // Which content variant (1-3)
   failedExitParts Json? // Part numbers to redo after exit quiz failure, e.g. [2, 5, 7]
+  masteredParts   Json? // Entrance-quiz-skipped part numbers, persisted server-side for cross-device sync
   topic           Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
   user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -655,10 +657,6 @@ model CompetitiveProfile {
   id                      String    @id @default(cuid())
   userId                  String    @unique
   overallMMR              Int       @default(1000)
-  unitCircleMMR           Int       @default(1000)
-  derivativesMMR          Int       @default(1000)
-  integralsMMR            Int       @default(1000)
-  limitsMMR               Int       @default(1000)
   totalMatches            Int       @default(0)
   wins                    Int       @default(0)
   losses                  Int       @default(0)

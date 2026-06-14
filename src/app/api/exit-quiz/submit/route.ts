@@ -112,7 +112,6 @@ export async function POST(request: Request) {
           create: {
             userId,
             competitiveModeUnlocked: true,
-            unitCircleMMR: 1000,
             overallMMR: 1000,
           }
         })

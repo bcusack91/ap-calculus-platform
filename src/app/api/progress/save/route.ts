@@ -25,7 +25,7 @@ export async function POST(request: Request) {
         { status: 400 }
       )
     }
-    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion, variant, failedExitParts } = parsed.data
+    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion, variant, failedExitParts, masteredParts } = parsed.data
 
     if (!topicSlug && !topicId) {
       return NextResponse.json(
@@ -121,6 +121,7 @@ export async function POST(request: Request) {
           completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
           ...(variant !== undefined && { variant }),
           ...(failedExitParts !== undefined && { failedExitParts }),
+          ...(masteredParts !== undefined && { masteredParts }),
         },
         create: {
           userId,
@@ -131,6 +132,7 @@ export async function POST(request: Request) {
           completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
           ...(variant !== undefined && { variant }),
           ...(failedExitParts !== undefined && { failedExitParts }),
+          ...(masteredParts !== undefined && { masteredParts }),
         }
       })
 

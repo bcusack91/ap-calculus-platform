@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
     // Get topic-specific MMR
     const mmr =
       topicSlug === 'the-unit-circle'
-        ? user.competitiveProfile.unitCircleMMR
+        ? user.competitiveProfile.overallMMR
         : user.competitiveProfile.overallMMR
 
     // Check if already in queue

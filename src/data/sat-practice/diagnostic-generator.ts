@@ -7,7 +7,6 @@
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
-import { getBalancedPassages } from '../sat-passages'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -271,7 +270,11 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
     }
   }
 
-  // Add 4 passage-based reading questions for comprehension & evidence domains
+  // Add 4 passage-based reading questions for comprehension & evidence domains.
+  // The passage bank (~80 KB of prose) is dynamically imported here so it is
+  // code-split out of the client bundle for /sat-diagnostic and only fetched
+  // when the diagnostic is actually generated.
+  const { getBalancedPassages } = await import('../sat-passages')
   const passages = getBalancedPassages(4)
   for (const p of passages) {
     for (const q of p.questions) {

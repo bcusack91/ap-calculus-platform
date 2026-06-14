@@ -84,7 +84,6 @@ export async function POST(
     create: {
       userId: studentId,
       competitiveModeUnlocked: true,
-      unitCircleMMR: 1000,
       overallMMR: 1000,
     },
   })

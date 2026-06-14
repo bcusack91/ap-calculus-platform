@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'AP Psychology Diagnostic Test | Study Mondo',
-  description:
-    'Take a free AP Psychology diagnostic test to identify your strengths and weaknesses across all 11 AP Psych units. Get personalized study recommendations.',
-  alternates: { canonical: 'https://www.studymondo.com/ap-psych-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "AP Psychology Diagnostic Test | Study Mondo",
+  description: "Take a free AP Psychology diagnostic test to identify your strengths and weaknesses across all 11 AP Psych units. Get personalized study recommendations.",
+  path: "/ap-psych-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',

@@ -323,6 +323,9 @@ export function Navbar() {
                   <Link href="/leaderboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     🏆 Leaderboard
                   </Link>
+                  <Link href="/study-groups" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                    👥 Study Groups
+                  </Link>
                   <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ℹ️ About
                   </Link>

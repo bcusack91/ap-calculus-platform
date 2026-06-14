@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'Organic Chemistry Diagnostic Test | Study Mondo',
-  description: 'Take the organic chemistry diagnostic to identify strengths and weaknesses across structure & bonding, stereochemistry, reactions, spectroscopy, and more.',
-  alternates: { canonical: 'https://www.studymondo.com/ochem-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "Organic Chemistry Diagnostic Test | Study Mondo",
+  description: "Take the organic chemistry diagnostic to identify strengths and weaknesses across structure & bonding, stereochemistry, reactions, spectroscopy, and more.",
+  path: "/ochem-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',

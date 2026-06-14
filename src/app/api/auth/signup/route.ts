@@ -108,6 +108,9 @@ export async function POST(request: Request) {
         // part (it leaks a real-name-ish identifier onto leaderboards/challenges).
         name: safeName || 'Student',
         role: 'FREE',
+        // Durable age signal for COPPA child-directed treatment (the cookie set
+        // below covers the immediate session; this persists across devices).
+        birthYear: Number.isFinite(yr) && yr > 1900 && yr <= currentYear ? yr : undefined,
         // Omitting the field leaves the column NULL (same effect as the old
         // `avatarData || null`) while satisfying Prisma's Json input types.
         avatarData: validatedAvatarData ?? undefined,

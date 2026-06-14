@@ -178,8 +178,8 @@ export async function POST(
         else if (p1Answered > p2Answered) winnerId = match.player1Id;
         else if (p2Answered > p1Answered) winnerId = match.player2Id;
 
-        const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
-        const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.unitCircleMMR || 1000;
+        const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.overallMMR || 1000;
+        const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.overallMMR || 1000;
         const player1TotalMatches = match.player1.competitiveProfile?.totalMatches || 0;
         const player2TotalMatches = match.player2.competitiveProfile?.totalMatches || 0;
         const player1Won = winnerId === match.player1Id;
@@ -216,7 +216,6 @@ export async function POST(
             await tx.competitiveProfile.update({
               where: { userId: match.player1Id },
               data: {
-                unitCircleMMR: player1MMRAfter,
                 overallMMR: player1MMRAfter,
                 totalMatches: { increment: 1 },
                 wins: player1Won ? { increment: 1 } : undefined,
@@ -234,7 +233,6 @@ export async function POST(
             await tx.competitiveProfile.update({
               where: { userId: match.player2Id },
               data: {
-                unitCircleMMR: player2MMRAfter,
                 overallMMR: player2MMRAfter,
                 totalMatches: { increment: 1 },
                 wins: player2Won ? { increment: 1 } : undefined,
@@ -358,8 +356,8 @@ export async function POST(
         winnerId = match.player2Id;
       }
 
-      const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
-      const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.unitCircleMMR || 1000;
+      const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.overallMMR || 1000;
+      const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.overallMMR || 1000;
 
       const player1TotalMatches = match.player1.competitiveProfile?.totalMatches || 0;
       const player2TotalMatches = match.player2.competitiveProfile?.totalMatches || 0;
@@ -401,7 +399,6 @@ export async function POST(
         await tx.competitiveProfile.update({
           where: { userId: match.player1Id },
           data: {
-            unitCircleMMR: player1MMRAfter,
             overallMMR: player1MMRAfter,
             totalMatches: { increment: 1 },
             wins: player1Won ? { increment: 1 } : undefined,
@@ -417,7 +414,6 @@ export async function POST(
         await tx.competitiveProfile.update({
           where: { userId: match.player2Id },
           data: {
-            unitCircleMMR: player2MMRAfter,
             overallMMR: player2MMRAfter,
             totalMatches: { increment: 1 },
             wins: player2Won ? { increment: 1 } : undefined,

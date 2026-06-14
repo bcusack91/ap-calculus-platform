@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'MCAT Diagnostic Test | Study Mondo',
-  description:
-    'Take a free MCAT diagnostic test to identify your strengths and weaknesses across all four MCAT sections.',
-  alternates: { canonical: 'https://www.studymondo.com/mcat-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "MCAT Diagnostic Test | Study Mondo",
+  description: "Take a free MCAT diagnostic test to identify your strengths and weaknesses across all four MCAT sections.",
+  path: "/mcat-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',

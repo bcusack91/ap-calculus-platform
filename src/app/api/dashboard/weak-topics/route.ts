@@ -36,22 +36,23 @@ export async function GET() {
       },
     })
 
-    // Get quiz scores for these topics via Quiz -> QuizAttempt
-    const topicIds = weakProgress.map(p => p.topicId)
-    const quizAttempts = await prisma.quizAttempt.findMany({
+    // Get quiz scores for these topics. QuizAttempt is a dead table (never written);
+    // ExitQuizAttempt is the only real quiz activity and is keyed by topicSlug.
+    const topicSlugs = weakProgress.map(p => p.topic.slug)
+    const quizAttempts = await prisma.exitQuizAttempt.findMany({
       where: {
         userId: session.user.id,
-        quiz: { topicId: { in: topicIds } },
+        topicSlug: { in: topicSlugs },
       },
-      select: { score: true, maxScore: true, quiz: { select: { topicId: true } } },
+      select: { score: true, totalQuestions: true, topicSlug: true },
     })
 
     const quizAvgMap: Record<string, number> = {}
     for (const p of weakProgress) {
-      const attempts = quizAttempts.filter(a => a.quiz.topicId === p.topicId)
+      const attempts = quizAttempts.filter(a => a.topicSlug === p.topic.slug)
       if (attempts.length > 0) {
         quizAvgMap[p.topic.slug] = Math.round(
-          attempts.reduce((s, a) => s + (a.maxScore > 0 ? (a.score / a.maxScore) * 100 : 0), 0) / attempts.length
+          attempts.reduce((s, a) => s + (a.totalQuestions > 0 ? (a.score / a.totalQuestions) * 100 : 0), 0) / attempts.length
         )
       } else {
         quizAvgMap[p.topic.slug] = 0

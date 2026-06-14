@@ -5,6 +5,8 @@
  * Weak areas map to topic slugs for review.
  */
 
+import { mulberry32 } from './_shared/prng'
+
 export const TOTAL_FORMS = 10
 
 export interface Algebra1DiagnosticQuestion {
@@ -142,16 +144,6 @@ const questionPool: PoolQuestion[] = [
   { question: 'x⁰ = (for x ≠ 0)', options: ['1', '0', 'x', 'Undefined'], correctAnswer: 0, explanation: 'Any non-zero number raised to the 0 power equals 1.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'both' },
   { question: 'Simplify: x⁶/x²', options: ['x⁴', 'x³', 'x⁸', 'x¹²'], correctAnswer: 0, explanation: 'When dividing same base, subtract exponents: x⁶⁻² = x⁴.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'both' },
 ]
-
-function mulberry32(seed: number) {
-  return function () {
-    // eslint-disable-next-line no-param-reassign
-    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
 
 function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]

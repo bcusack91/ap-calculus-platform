@@ -36,13 +36,15 @@ export async function POST(request: Request) {
         dailyStreak: {
           select: { currentStreak: true, longestStreak: true },
         },
-        quizAttempts: {
+        // QuizAttempt is a dead table (never written); ExitQuizAttempt is the
+        // only real quiz activity. score is a raw count out of totalQuestions.
+        exitQuizAttempts: {
           where: {
-            startedAt: {
+            completedAt: {
               gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
             },
           },
-          select: { score: true, maxScore: true },
+          select: { score: true, totalQuestions: true },
         },
       },
     })
@@ -60,16 +62,16 @@ export async function POST(request: Request) {
     for (const user of users) {
       if (!user.email) continue
       if (optedOutEmails.has(user.email.toLowerCase())) continue
-      if (user.topicProgress.length === 0 && user.quizAttempts.length === 0) continue
+      if (user.topicProgress.length === 0 && user.exitQuizAttempts.length === 0) continue
 
       const topicsStudied = user.topicProgress.length
       const topicsCompleted = user.topicProgress.filter(
         (t) => t.status === 'COMPLETED' || t.status === 'MASTERED'
       ).length
-      const quizzesTaken = user.quizAttempts.length
+      const quizzesTaken = user.exitQuizAttempts.length
       const avgScore = quizzesTaken > 0
         ? Math.round(
-            user.quizAttempts.reduce((sum, q) => sum + (q.maxScore > 0 ? (q.score / q.maxScore) * 100 : 0), 0) / quizzesTaken
+            user.exitQuizAttempts.reduce((sum, q) => sum + (q.totalQuestions > 0 ? (q.score / q.totalQuestions) * 100 : 0), 0) / quizzesTaken
           )
         : 0
       const streak = user.dailyStreak?.currentStreak ?? 0

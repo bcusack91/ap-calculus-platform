@@ -46,7 +46,9 @@ export async function calculateWeeklyFunnelAlertSnapshot(): Promise<WeeklyFunnel
   const prevWindowStart = new Date(windowEnd)
   prevWindowStart.setDate(prevWindowStart.getDate() - 14)
 
-  // Use COUNT(DISTINCT) raw SQL instead of findMany + distinct to avoid full table scans
+  // Use COUNT(DISTINCT) raw SQL instead of findMany + distinct to avoid full table scans.
+  // QuizAttempt is a dead table (never written), so the "quiz takers" funnel stage is
+  // sourced from ExitQuizAttempt — the only real quiz attempts.
   const [funnelCounts] = await prisma.$queryRaw<[{
     active_curr: bigint
     quiz_curr: bigint
@@ -59,11 +61,11 @@ export async function calculateWeeklyFunnelAlertSnapshot(): Promise<WeeklyFunnel
   }]>`
     SELECT
       (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${windowStart}) AS active_curr,
-      (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${windowStart}) AS quiz_curr,
+      (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${windowStart}) AS quiz_curr,
       (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${windowStart}) AS diag_curr,
       (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${windowStart}) AS exit_curr,
       (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${prevWindowStart} AND "lastAccessed" < ${windowStart}) AS active_prev,
-      (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${prevWindowStart} AND "startedAt" < ${windowStart}) AS quiz_prev,
+      (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${prevWindowStart} AND "completedAt" < ${windowStart}) AS quiz_prev,
       (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${prevWindowStart} AND "createdAt" < ${windowStart}) AS diag_prev,
       (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${prevWindowStart} AND "completedAt" < ${windowStart}) AS exit_prev
   `

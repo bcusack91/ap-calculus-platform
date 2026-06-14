@@ -54,7 +54,6 @@ export async function POST(req: NextRequest) {
             competitiveProfile: {
               create: {
                 competitiveModeUnlocked: true,
-                unitCircleMMR: 1000,
                 overallMMR: 1000,
               }
             }
@@ -66,7 +65,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Calculate AI MMR based on difficulty
-    const playerMMR = user.competitiveProfile.unitCircleMMR || 1000
+    const playerMMR = user.competitiveProfile.overallMMR || 1000
     let aiMMR = playerMMR
     switch (aiDifficulty) {
       case 'easy':

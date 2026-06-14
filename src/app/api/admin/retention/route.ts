@@ -190,7 +190,6 @@ async function getRetentionData() {
     const [
       topicProgress,
       flashcardProgress,
-      quizAttempts,
       exitQuizAttempts,
       diagnosticTests,
       satAttempts,
@@ -208,10 +207,8 @@ async function getRetentionData() {
         where: { userId: { in: userIds } },
         select: { userId: true, lastReviewed: true },
       }),
-      prisma.quizAttempt.findMany({
-        where: { userId: { in: userIds } },
-        select: { userId: true, startedAt: true },
-      }),
+      // QuizAttempt is a dead table (never written); ExitQuizAttempt is the only
+      // real quiz activity and is already counted below.
       prisma.exitQuizAttempt.findMany({
         where: { userId: { in: userIds } },
         select: { userId: true, startedAt: true, completedAt: true },
@@ -248,7 +245,6 @@ async function getRetentionData() {
 
     for (const row of topicProgress) addActivityDate(activityMap, row.userId, row.lastAccessed)
     for (const row of flashcardProgress) addActivityDate(activityMap, row.userId, row.lastReviewed)
-    for (const row of quizAttempts) addActivityDate(activityMap, row.userId, row.startedAt)
     for (const row of exitQuizAttempts) {
       addActivityDate(activityMap, row.userId, row.startedAt)
       addActivityDate(activityMap, row.userId, row.completedAt)

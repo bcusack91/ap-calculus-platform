@@ -4,6 +4,8 @@
  * 10 alternate forms (1–10), ~30 questions spanning 6 core domains.
  */
 
+import { mulberry32 } from './_shared/prng'
+
 export const TOTAL_FORMS = 10
 
 export interface Algebra2DiagnosticQuestion {
@@ -141,16 +143,6 @@ const questionPool: PoolQuestion[] = [
   { question: 'The common ratio of 2, 6, 18, 54, … is:', options: ['3', '4', '2', '6'], correctAnswer: 0, explanation: 'r = 6/2 = 3.', domain: 'sequences-probability', topicSlug: 'geometric-sequences-algebra2', formSet: 'both' },
   { question: 'C(n, 0) for any n ≥ 0 equals:', options: ['1', '0', 'n', 'n!'], correctAnswer: 0, explanation: 'C(n, 0) = 1 for any n. There is exactly 1 way to choose nothing.', domain: 'sequences-probability', topicSlug: 'series-probability-alg2', formSet: 'both' },
 ]
-
-function mulberry32(seed: number) {
-  return function () {
-    // eslint-disable-next-line no-param-reassign
-    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
 
 function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]

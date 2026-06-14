@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import { toolMetadata } from '@/lib/tool-metadata'
 
-export const metadata: Metadata = {
-  title: 'Algebra 2 Diagnostic Test | Study Mondo',
-  description:
-    'Take a free Algebra 2 diagnostic test to identify your strengths and weaknesses. Get personalized study recommendations across all key domains.',
-  alternates: { canonical: 'https://www.studymondo.com/algebra2-diagnostic' },
-}
+export const metadata: Metadata = toolMetadata({
+  title: "Algebra 2 Diagnostic Test | Study Mondo",
+  description: "Take a free Algebra 2 diagnostic test to identify your strengths and weaknesses. Get personalized study recommendations across all key domains.",
+  path: "/algebra2-diagnostic",
+})
 
 const quizJsonLd = {
   '@context': 'https://schema.org',
