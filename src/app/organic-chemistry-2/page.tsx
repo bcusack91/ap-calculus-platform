@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 }
 
 const features = [
-  { title: 'Interactive Lessons', description: 'Step-by-step coverage of all OChem 2 topics including pericyclic reactions, aldol/Claisen, Michael/Robinson, NAS, phenols, advanced 2D NMR, and retrosynthesis.', href: '/courses/organic-chemistry-2', stats: '6 units · 17 topics', color: 'from-emerald-500 to-teal-500', icon: '📗' },
+  { title: 'Interactive Lessons', description: 'Step-by-step coverage of all OChem 2 topics including pericyclic reactions, aldol/Claisen, Michael/Robinson, NAS, phenols, advanced 2D NMR, and retrosynthesis.', href: '/courses/organic-chemistry', stats: '6 units · 17 topics', color: 'from-emerald-500 to-teal-500', icon: '📗' },
   { title: 'Diagnostic Test', description: 'Benchmark your performance across the OChem 2 curriculum.', href: '/ochem-diagnostic', stats: '~30 questions · 25 min', color: 'from-blue-500 to-indigo-500', icon: '🎯' },
   { title: 'AP-Equivalent Score Predictor', description: 'Convert your performance into an AP-equivalent 1–5 score, the way AP Chemistry students are scored.', href: '/ochem2-score-predictor', stats: '1–5 scale · live updates', color: 'from-teal-500 to-cyan-500', icon: '⭐' },
   { title: 'Flashcards', description: 'Named reactions, mechanisms, and biomolecule structures for OChem 2.', href: '/flashcards?course=organic-chemistry-2', stats: 'Mechanisms · Biomolecules', color: 'from-purple-500 to-pink-500', icon: '🃏' },
   { title: 'Daily Question', description: 'A fresh organic question every day — keep advanced mechanisms sharp.', href: '/ochem-daily-question', stats: 'New daily', color: 'from-rose-500 to-pink-500', icon: '📅' },
-  { title: 'Exit Quizzes', description: 'Per-lesson assessments confirm mastery before you advance.', href: '/courses/organic-chemistry-2', stats: 'Per topic · Instant feedback', color: 'from-cyan-500 to-blue-500', icon: '✅' },
+  { title: 'Exit Quizzes', description: 'Per-lesson assessments confirm mastery before you advance.', href: '/courses/organic-chemistry', stats: 'Per topic · Instant feedback', color: 'from-cyan-500 to-blue-500', icon: '✅' },
 ]
 
 const units = [
@@ -70,7 +70,7 @@ export default function OrganicChemistry2Hub() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/ochem-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
             <Link href="/ochem2-score-predictor" className="rounded-xl border-2 border-teal-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-600 dark:text-teal-400 dark:hover:bg-teal-900/20">View 1–5 Score Predictor</Link>
-            <Link href="/courses/organic-chemistry-2" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
+            <Link href="/courses/organic-chemistry" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
           </div>
           <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
             Need to review fundamentals? <Link href="/organic-chemistry-1" className="font-semibold text-lime-600 underline hover:text-lime-700 dark:text-lime-400">← Back to Organic Chemistry 1</Link>

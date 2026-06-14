@@ -334,7 +334,7 @@ export default function PreCalcDiagnosticPage() {
 
           <div className="grid gap-3 sm:grid-cols-3">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-indigo-500 py-3 font-semibold text-indigo-600 transition hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-900/20">Take Next Diagnostic</button>
-            <Link href="/courses/precalculus" className="flex-1 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse Pre-Calculus Topics</Link>
+            <Link href="/courses/ap-precalculus" className="flex-1 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse Pre-Calculus Topics</Link>
             <Link href="/precalc-score-predictor" className="flex-1 rounded-xl border border-indigo-300 py-3 text-center font-semibold text-indigo-700 transition hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:bg-indigo-900/20">View Score Predictor</Link>
           </div>
         </div></div>
@@ -349,7 +349,7 @@ export default function PreCalcDiagnosticPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12"><div className="mx-auto max-w-2xl">
-        <Link href="/courses/precalculus" className="mb-4 inline-flex items-center gap-1 text-sm text-indigo-600 hover:underline dark:text-indigo-400">
+        <Link href="/courses/ap-precalculus" className="mb-4 inline-flex items-center gap-1 text-sm text-indigo-600 hover:underline dark:text-indigo-400">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>Pre-Calculus
         </Link>
         <h1 className="mb-2 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">📐 Pre-Calculus Diagnostic Test</h1>

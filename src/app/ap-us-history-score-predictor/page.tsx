@@ -11,7 +11,7 @@ export default function Page() {
       maxScore={5}
       scoreLabel="out of 5"
       accent="red"
-      practiceLink={{ href: '/courses/ap-united-states-history', label: 'Browse Topics' }}
+      practiceLink={{ href: '/courses/ap-us-history', label: 'Browse Topics' }}
       diagnosticLink={{ href: '/ap-us-history-diagnostic', label: 'Take Diagnostic' }}
     />
   )

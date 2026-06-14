@@ -11,7 +11,7 @@ interface SixSigmaDashboardProps {
 }
 
 export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboardProps) {
-  const { isPremium: premium } = useEffectiveRole()
+  const { isPaid: premium } = useEffectiveRole()
   const [analytics, setAnalytics] = useState<SixSigmaAnalytics | null>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'overview' | 'control-chart' | 'pareto' | 'recommendations'>('overview')

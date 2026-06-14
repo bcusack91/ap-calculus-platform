@@ -293,7 +293,7 @@ export default function APUsGovDiagnosticPage() {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-blue-500 py-3 font-semibold text-blue-600 transition hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-blue-900/20">Take Next Diagnostic</button>
-            <Link href="/courses/ap-united-states-government" className="flex-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All Modules</Link>
+            <Link href="/courses/ap-us-government" className="flex-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All Modules</Link>
             <Link href="/ap-us-gov-score-predictor" className="flex-1 rounded-xl border border-blue-300 py-3 text-center font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/20">View Score Predictor</Link>
             <Link href="/ap-us-gov-daily-question" className="flex-1 rounded-xl border border-blue-300 py-3 text-center font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/20">Today&apos;s Question</Link>
           </div>
@@ -308,7 +308,7 @@ export default function APUsGovDiagnosticPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12"><div className="mx-auto max-w-2xl">
-        <Link href="/courses/ap-united-states-government" className="mb-4 inline-flex items-center gap-1 text-sm text-blue-600 hover:underline dark:text-blue-400">
+        <Link href="/courses/ap-us-government" className="mb-4 inline-flex items-center gap-1 text-sm text-blue-600 hover:underline dark:text-blue-400">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
           AP US Government
         </Link>

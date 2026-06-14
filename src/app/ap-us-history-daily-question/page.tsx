@@ -36,7 +36,7 @@ export default function APUsHistoryDailyQuestionPage() {
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-12">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <Link href="/courses/ap-united-states-history" className="mb-4 inline-flex items-center gap-1 text-sm text-red-600 hover:underline dark:text-red-400">
+          <Link href="/courses/ap-us-history" className="mb-4 inline-flex items-center gap-1 text-sm text-red-600 hover:underline dark:text-red-400">
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             AP US History
           </Link>
@@ -90,7 +90,7 @@ export default function APUsHistoryDailyQuestionPage() {
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try a full diagnostic or explore all topics.</p>
           <div className="flex justify-center gap-3">
             <Link href="/ap-us-history-diagnostic" className="rounded-lg bg-red-100 px-4 py-2 text-sm font-medium text-red-700 transition hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400">Diagnostic Test</Link>
-            <Link href="/courses/ap-united-states-history" className="rounded-lg bg-red-100 px-4 py-2 text-sm font-medium text-red-700 transition hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400">All Topics</Link>
+            <Link href="/courses/ap-us-history" className="rounded-lg bg-red-100 px-4 py-2 text-sm font-medium text-red-700 transition hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400">All Topics</Link>
           </div>
         </div>
       </div>

@@ -26,6 +26,15 @@ export function isPremiumRole(role?: string | null): boolean {
 }
 
 /**
+ * A *paid* account: premium students OR teachers (plus ADMIN). Use this for
+ * perks meant for anyone on a paid plan — e.g. advanced analytics — where a
+ * teacher should have access even though they aren't on the PREMIUM student plan.
+ */
+export function isPaidRole(role?: string | null): boolean {
+  return role === 'PREMIUM' || role === 'TEACHER' || role === 'ADMIN'
+}
+
+/**
  * Admin "View as…" override. An ADMIN can preview the site as a FREE or PREMIUM
  * user by setting this cookie (see the profile menu toggle). It is ONLY honored
  * when the real session role is ADMIN — a forged cookie from any other user is

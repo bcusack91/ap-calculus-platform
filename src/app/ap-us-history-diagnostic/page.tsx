@@ -293,7 +293,7 @@ export default function APUsHistoryDiagnosticPage() {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-red-500 py-3 font-semibold text-red-600 transition hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20">Take Next Diagnostic</button>
-            <Link href="/courses/ap-united-states-history" className="flex-1 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All Modules</Link>
+            <Link href="/courses/ap-us-history" className="flex-1 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All Modules</Link>
             <Link href="/ap-us-history-score-predictor" className="flex-1 rounded-xl border border-red-300 py-3 text-center font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-700 dark:text-red-300 dark:hover:bg-red-900/20">View Score Predictor</Link>
             <Link href="/ap-us-history-daily-question" className="flex-1 rounded-xl border border-red-300 py-3 text-center font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-700 dark:text-red-300 dark:hover:bg-red-900/20">Today&apos;s Question</Link>
           </div>
@@ -308,7 +308,7 @@ export default function APUsHistoryDiagnosticPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12"><div className="mx-auto max-w-2xl">
-        <Link href="/courses/ap-united-states-history" className="mb-4 inline-flex items-center gap-1 text-sm text-red-600 hover:underline dark:text-red-400">
+        <Link href="/courses/ap-us-history" className="mb-4 inline-flex items-center gap-1 text-sm text-red-600 hover:underline dark:text-red-400">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
           AP US History
         </Link>

@@ -11,7 +11,7 @@ export default function Page() {
       maxScore={5}
       scoreLabel="out of 5"
       accent="blue"
-      practiceLink={{ href: '/courses/ap-united-states-government', label: 'Browse Topics' }}
+      practiceLink={{ href: '/courses/ap-us-government', label: 'Browse Topics' }}
       diagnosticLink={{ href: '/ap-us-gov-diagnostic', label: 'Take Diagnostic' }}
     />
   )

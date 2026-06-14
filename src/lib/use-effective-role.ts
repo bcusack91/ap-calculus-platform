@@ -1,7 +1,7 @@
 'use client'
 
 import { useSession } from 'next-auth/react'
-import { isPremiumRole, resolveEffectiveRole, VIEW_AS_COOKIE } from './premium'
+import { isPaidRole, isPremiumRole, resolveEffectiveRole, VIEW_AS_COOKIE } from './premium'
 
 function readCookie(name: string): string | null {
   if (typeof document === 'undefined') return null
@@ -24,6 +24,7 @@ export function useEffectiveRole() {
     role,
     realRole,
     isPremium: isPremiumRole(role),
+    isPaid: isPaidRole(role),
     isAdmin: realRole === 'ADMIN',
     viewAs: viewAs as 'FREE' | 'PREMIUM' | null,
   }

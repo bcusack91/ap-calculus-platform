@@ -1,5 +1,5 @@
 import { cookies } from 'next/headers'
-import { isPremiumRole, resolveEffectiveRole, VIEW_AS_COOKIE } from './premium'
+import { isPaidRole, isPremiumRole, resolveEffectiveRole, VIEW_AS_COOKIE } from './premium'
 
 /**
  * Server-side effective role: applies the admin "View as…" cookie override
@@ -15,4 +15,9 @@ export async function getEffectiveRole(realRole?: string | null): Promise<string
 /** Convenience: is the *effective* role premium (honoring an admin View-as override)? */
 export async function effectiveIsPremium(realRole?: string | null): Promise<boolean> {
   return isPremiumRole(await getEffectiveRole(realRole))
+}
+
+/** Is the *effective* role a paid account — premium OR teacher (honoring View-as)? */
+export async function effectiveIsPaid(realRole?: string | null): Promise<boolean> {
+  return isPaidRole(await getEffectiveRole(realRole))
 }
