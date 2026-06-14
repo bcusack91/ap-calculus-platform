@@ -60,6 +60,18 @@ export const mcatOrgChemPart2Data = {
             options: [`SN2 only`, `SN1 or E1`, `E2 only`, `No substitution/elimination mechanism`],
             correctAnswer: 1,
             explanation: `SN1 and E1 are unimolecular in the rate-determining step, so their rates depend only on substrate concentration.`
+          },
+          {
+            question: `Switching the solvent for an SN2 reaction from a polar protic solvent (e.g., water) to a polar aprotic solvent (e.g., DMSO) generally:`,
+            options: [`Speeds up the reaction by freeing the nucleophile from a solvation shell`, `Slows the reaction by stabilizing the carbocation`, `Has no effect on SN2 rate`, `Converts the mechanism to SN1`],
+            correctAnswer: 0,
+            explanation: `Polar protic solvents hydrogen-bond to (cage) the nucleophile, lowering its reactivity. Polar aprotic solvents solvate the cation but leave the nucleophile "naked" and far more reactive, accelerating SN2. This is why DMSO, DMF, and acetone favor SN2.`
+          },
+          {
+            question: `For an E2 elimination, the leaving group and the $\\beta$-hydrogen must be:`,
+            options: [`Anti-periplanar (180° dihedral angle) in the transition state`, `Syn (eclipsed) to each other`, `On the same carbon atom`, `Separated by at least three carbons`],
+            correctAnswer: 0,
+            explanation: `E2 is concerted and requires anti-periplanar geometry so the developing $\\pi$ bond's orbitals align as the C-H and C-LG bonds break. In rigid systems (e.g., substituted cyclohexanes) both groups must be axial, which controls which alkene forms.`
           }
         ]
       }

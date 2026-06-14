@@ -10,7 +10,7 @@ export const mcatOrgChemPart4Data = {
 
 ### Reactivity Order (most reactive → least)
 
-$$\\text{Acid halide} > \\text{Anhydride} > \\text{Ester} > \\text{Amide} > \\text{Carboxylate}$$
+$\\text{Acid halide} > \\text{Anhydride} > \\text{Ester} > \\text{Amide} > \\text{Carboxylate}$
 
 ### Why? The better the leaving group, the more reactive.
 
@@ -61,6 +61,24 @@ The best leaving group generally determines the direction and feasibility of int
             options: [`Amide`, `Ester`, `Anhydride`, `Acid chloride`],
             correctAnswer: 3,
             explanation: `Acid chlorides are most reactive because chloride is a very good leaving group and provides less resonance stabilization than amides/esters.`
+          },
+          {
+            question: `Most nucleophilic acyl substitution reactions on carboxylic acid derivatives proceed through which key species?`,
+            options: [`A tetrahedral intermediate that then expels the leaving group`, `A planar carbocation`, `A free radical`, `An aromatic transition state`],
+            correctAnswer: 0,
+            explanation: `The nucleophile adds to the trigonal carbonyl carbon to give an sp³ tetrahedral intermediate; this then collapses, ejecting the leaving group to regenerate the C=O. The quality of that leaving group sets the reactivity order (halide > anhydride > ester > amide).`
+          },
+          {
+            question: `Acetyl-CoA is described as a "high-energy" thioester. Why are thioesters more reactive toward nucleophilic acyl substitution than ordinary oxygen esters?`,
+            options: [`Sulfur's poor orbital overlap with the carbonyl gives less resonance stabilization, so the thioester is more reactive`, `Sulfur is more electronegative than oxygen`, `Thioesters contain a leaving halide`, `Thioesters are aromatic`],
+            correctAnswer: 0,
+            explanation: `In an ordinary ester, the oxygen lone pair donates into the carbonyl, stabilizing it. Sulfur's 3p orbitals overlap poorly with the carbonyl carbon's 2p, so this stabilization is weak. The thioester is therefore "activated" — more electrophilic — which is why acetyl-CoA readily transfers its acetyl group in metabolism.`
+          },
+          {
+            question: `An amide is the least reactive carboxylic acid derivative largely because:`,
+            options: [`The nitrogen lone pair donates strongly into the carbonyl and $\\text{NH}_2^-$ is a very poor leaving group`, `Nitrogen is more electronegative than chlorine`, `Amides are aromatic and inert`, `The carbonyl carbon carries a full negative charge`],
+            correctAnswer: 0,
+            explanation: `Nitrogen donates electron density into the carbonyl by resonance (giving partial C–N double-bond character), reducing electrophilicity, and amide nitrogen would have to leave as the strongly basic $\\text{NH}_2^-$ — a terrible leaving group. Both factors make amides (e.g., peptide bonds) remarkably stable.`
           }
         ]
       }

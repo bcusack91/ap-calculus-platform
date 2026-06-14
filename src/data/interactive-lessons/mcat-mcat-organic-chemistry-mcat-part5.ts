@@ -61,6 +61,24 @@ Must have: planar ring, conjugated $\\pi$ system, $4n + 2$ $\\pi$ electrons ($n 
             options: [`Most polar`, `Least polar`, `Highest molecular weight`, `Most aromatic`],
             correctAnswer: 1,
             explanation: `Silica is polar, so less polar compounds interact less with the stationary phase and move farther with the mobile phase.`
+          },
+          {
+            question: `Benzene satisfies Hückel's rule for aromaticity because it is planar, fully conjugated, and contains:`,
+            options: [`6 $\\pi$ electrons, fitting $4n+2$ with $n=1$`, `8 $\\pi$ electrons`, `4 $\\pi$ electrons`, `12 $\\sigma$ electrons`],
+            correctAnswer: 0,
+            explanation: `Aromaticity requires a planar, cyclic, fully conjugated ring with $4n+2$ $\\pi$ electrons. Benzene has 6 $\\pi$ electrons ($n=1$). Cyclooctatetraene (8 $\\pi$ electrons) would be antiaromatic if planar, so it puckers to become nonaromatic.`
+          },
+          {
+            question: `You need to separate two organic liquids whose boiling points differ by about 40 °C and which do not react. The best technique is:`,
+            options: [`Distillation (separation by boiling point)`, `Acid-base extraction`, `Recrystallization`, `Thin-layer chromatography`],
+            correctAnswer: 0,
+            explanation: `Distillation separates miscible liquids by differences in boiling point; a ~40 °C gap is easily resolved by simple distillation. Extraction exploits solubility/acid-base differences, and recrystallization purifies solids — neither is ideal for separating two liquids.`
+          },
+          {
+            question: `An amino (–NH$_2$) group on benzene is an ortho/para-directing activator. This is because the nitrogen lone pair:`,
+            options: [`Donates electron density into the ring, stabilizing the ortho/para sigma complex`, `Withdraws electron density, deactivating the ring`, `Has no electronic effect`, `Makes the ring antiaromatic`],
+            correctAnswer: 0,
+            explanation: `Lone-pair donors (–NH$_2$, –OH, –OR) push electron density into the ring through resonance, which best stabilizes the cationic intermediate when the electrophile adds ortho or para. This both activates the ring and directs ortho/para. Strong electron-withdrawing groups (–NO$_2$) do the opposite: deactivate and direct meta.`
           }
         ]
       }

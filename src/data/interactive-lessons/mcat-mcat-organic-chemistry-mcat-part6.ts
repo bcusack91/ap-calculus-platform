@@ -70,6 +70,18 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
             options: [`1`, `2`, `3`, `4`],
             correctAnswer: 1,
             explanation: `Triplet means n+1 = 3, so n = 2 equivalent neighboring protons.`
+          },
+          {
+            question: `In $^1$H NMR, the integration (relative area) of a signal is proportional to:`,
+            options: [`The number of equivalent protons giving rise to that signal`, `The number of neighboring protons`, `The chemical shift in ppm`, `The molecular weight of the compound`],
+            correctAnswer: 0,
+            explanation: `Integration measures the relative number of protons in each environment (e.g., a 3:2 ratio suggests CH$_3$ vs CH$_2$). Splitting (the n+1 rule) reports neighbors, and chemical shift reports the electronic environment — three independent pieces of information.`
+          },
+          {
+            question: `Distinguishing a ketone from a carboxylic acid by IR is easiest using which region, since both show a C=O stretch near 1700-1750 cm$^{-1}$?`,
+            options: [`The broad O-H stretch (2500-3300 cm$^{-1}$) present only in the carboxylic acid`, `The C=O stretch position alone`, `The fingerprint region below 600 cm$^{-1}$`, `The absence of any absorption`],
+            correctAnswer: 0,
+            explanation: `Both functional groups have a strong carbonyl band, so the carbonyl alone cannot separate them. The carboxylic acid additionally shows a very broad O-H stretch from ~2500-3300 cm$^{-1}$ (hydrogen-bonded dimer); a ketone has no such band, so its presence or absence is the deciding clue.`
           }
         ]
       }

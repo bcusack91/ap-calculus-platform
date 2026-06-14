@@ -14,7 +14,7 @@ The $C=O$ is polar: carbon is electrophilic (attacked by nucleophiles).
 
 ### Aldol Condensation
 
-$$\\text{Enolate} + \\text{Aldehyde} \\to \\beta\\text{-hydroxy carbonyl} \\xrightarrow{\\text{heat}} \\alpha,\\beta\\text{-unsaturated carbonyl}$$
+$\\text{Enolate} + \\text{Aldehyde} \\to \\beta\\text{-hydroxy carbonyl} \\xrightarrow{\\text{heat}} \\alpha,\\beta\\text{-unsaturated carbonyl}$
 
 ### Key Carbonyl Reactions
 
@@ -68,6 +68,18 @@ Recognizing whether a leaving group is present is often enough to choose the mec
             options: [`Electrophilic aromatic substitution`, `Nucleophilic addition`, `Radical substitution`, `E2 elimination`],
             correctAnswer: 1,
             explanation: `Because ketones lack a leaving group on the carbonyl carbon, the dominant pattern is nucleophilic addition.`
+          },
+          {
+            question: `In an aldol condensation, the nucleophile that attacks a second carbonyl is the:`,
+            options: [`Enolate, formed by removing an $\\alpha$-hydrogen`, `Carbonyl oxygen lone pair`, `A hydride from $\\text{NaBH}_4$`, `A halide ion`],
+            correctAnswer: 0,
+            explanation: `A base removes an acidic $\\alpha$-hydrogen (adjacent to C=O) to generate a resonance-stabilized enolate. The nucleophilic $\\alpha$-carbon then adds to the electrophilic carbonyl carbon of another molecule, forming a $\\beta$-hydroxy carbonyl that can dehydrate to an $\\alpha,\\beta$-unsaturated product.`
+          },
+          {
+            question: `An aldehyde and a ketone of similar size are each attacked by the same nucleophile. The aldehyde generally reacts faster because:`,
+            options: [`It is less sterically hindered and more electrophilic (only one alkyl group donates electron density)`, `It has a leaving group the ketone lacks`, `It is aromatic`, `Its carbonyl carbon is negatively charged`],
+            correctAnswer: 0,
+            explanation: `Aldehydes have one H and one R group on the carbonyl carbon, whereas ketones have two R groups. The extra alkyl group in a ketone both donates electron density (lowering electrophilicity) and adds steric hindrance, so aldehydes undergo nucleophilic addition more readily.`
           }
         ]
       }

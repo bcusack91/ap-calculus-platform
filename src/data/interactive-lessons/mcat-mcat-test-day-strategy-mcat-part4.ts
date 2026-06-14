@@ -36,6 +36,23 @@ When stuck between two choices:
 - When in doubt, go with your first instinct`
     },
     {
+      id: 'td4-worked',
+      type: 'text' as const,
+      content: `### Worked Example — The Math Behind "Always Guess"
+
+The MCAT has **no penalty for wrong answers**, so a blank and a wrong answer score the same: zero. That single fact drives every guessing decision.
+
+**Step 1 — Compute the value of a blind guess.** With 4 choices, a random pick is right $\\frac{1}{4} = 25\\%$ of the time. Over the ~20 hardest questions you might otherwise leave blank, that's about $0.25 \\times 20 = 5$ extra correct answers — for free.
+
+**Step 2 — Compute the value of eliminating one choice.** Knock out one option and a guess among the remaining three is right $\\frac{1}{3} \\approx 33\\%$ of the time. Eliminate two and you're at $\\frac{1}{2} = 50\\%$. Every elimination measurably raises your expected score.
+
+**Step 3 — Apply the rule in real time.** Down to two choices with the clock running? Guessing yields a 50% expected gain on that item versus 0% if you stall and run out of time elsewhere. **Lock in a choice, flag it, move on.**
+
+**Step 4 — Never leave a blank.** In the final 30 seconds of a section, fill in *every* unanswered question with a single "guess letter." Even pure-random fills convert ~25% of those blanks into points at zero risk.
+
+**Takeaway:** Because there's no penalty, the expected value of answering is always positive. Eliminate what you can to push your odds from 25% upward, but **answer everything, every time**.`
+    },
+    {
       id: 'td4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Elimination** 🎯`,
@@ -46,6 +63,45 @@ When stuck between two choices:
             options: [`Re-read the question stem to see which answer actually addresses what was asked`, `Always pick C`, `Choose the longer answer`, `Pick the first one you read`],
             correctAnswer: 0,
             explanation: `Most 50/50 mistakes happen because you're answering the wrong question. Re-reading the question stem often reveals one answer addresses the actual question while the other is a true statement about a different concept.`
+          },
+          {
+            question: `On a four-option question with no penalty for wrong answers, the expected value of a pure blind guess is:`,
+            options: [`About a 25% chance of a point — always better than leaving it blank`, `Zero, the same as a blank`, `Negative, because wrong answers are penalized`, `100%, because something must be right`],
+            correctAnswer: 0,
+            explanation: `With four choices, a random guess is correct ~25% of the time, and there is no penalty, so the expected value is positive. A blank scores zero, so you should never leave a question unanswered.`
+          },
+          {
+            question: `Eliminating two of the four choices before guessing changes your odds of a correct answer to about:`,
+            options: [`50% (a guess between the two remaining choices)`, `25%`, `33%`, `It does not change the odds`],
+            correctAnswer: 0,
+            explanation: `Removing two wrong options leaves two, so a guess is right ~50% of the time. Each elimination raises expected value: one out → ~33%, two out → 50%.`
+          }
+        ]
+      }
+    },
+    {
+      id: 'td4-quiz2',
+      type: 'multiple-choice' as const,
+      content: `**Spotting Trap Answers** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: `An answer reads "This process never occurs in eukaryotic cells." The absolute word "never" most likely signals:`,
+            options: [`An extreme-language trap — biological absolutes are usually wrong`, `A correct answer, because it is precise`, `An out-of-scope statement`, `A too-broad statement that is still correct`],
+            correctAnswer: 0,
+            explanation: `Absolutes like "never," "always," "all," and "none" rarely survive MCAT scrutiny because biology is full of exceptions. Favor qualified, nuanced wording unless the passage explicitly supports the absolute.`
+          },
+          {
+            question: `A choice is factually true but describes a concept the question never asked about. This is the:`,
+            options: [`Out-of-scope trap`, `Opposite trap`, `Extreme-language trap`, `Too-specific trap`],
+            correctAnswer: 0,
+            explanation: `An out-of-scope answer is a true statement that simply does not address the stem or connect to the passage. Matching the answer to exactly what was asked filters these out.`
+          },
+          {
+            question: `Two answer choices state opposite cause-and-effect directions. The best defense against the "opposite" trap is to:`,
+            options: [`Re-check which variable drives which, confirming the direction against the passage or your knowledge`, `Pick whichever is listed first`, `Assume the longer one is right`, `Choose the more extreme wording`],
+            correctAnswer: 0,
+            explanation: `Opposite traps reverse a relationship to catch hasty readers. Verifying the causal direction (which variable is independent, which is dependent) against the source distinguishes the correct statement from its mirror image.`
           }
         ]
       }
@@ -56,9 +112,10 @@ When stuck between two choices:
       content: `### Key Takeaways — Part 4
 
 - Process of Elimination is the #1 MCAT strategy
+- There is NO penalty for guessing — a blind guess is worth ~25%, so never leave blanks
+- Each elimination raises your odds: one out → ~33%, two out → 50%
 - Common traps: too specific, too broad, opposite, out of scope, extreme
-- When stuck 50/50: re-read the question stem
-- Answer EVERY question — there is no penalty for guessing`
+- When stuck 50/50: re-read the question stem and confirm direction`
     }
   ]
 };

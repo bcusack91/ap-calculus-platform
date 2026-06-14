@@ -10,30 +10,49 @@ export const mcatPhysMechPart3Data = {
 
 ### Work-Energy Theorem
 
-$$W_{net} = \\Delta KE = \\frac{1}{2}mv^2 - \\frac{1}{2}mv_0^2$$
+$W_{net} = \\Delta KE = \\tfrac{1}{2}mv^2 - \\tfrac{1}{2}mv_0^2$
 
-$$W = Fd\\cos\\theta$$
+$W = Fd\\cos\\theta$ (only the force component along the displacement does work)
 
 ### Conservation of Energy
 
-$$KE_i + PE_i = KE_f + PE_f \\quad (\\text{if no non-conservative forces})$$
+$KE_i + PE_i = KE_f + PE_f$ (when no non-conservative forces act)
 
-- Kinetic energy: $KE = \\frac{1}{2}mv^2$
+- Kinetic energy: $KE = \\tfrac{1}{2}mv^2$
 - Gravitational PE: $PE = mgh$
-- Spring PE: $PE = \\frac{1}{2}kx^2$
+- Spring PE: $PE = \\tfrac{1}{2}kx^2$
 
 ### Power
 
-$$P = \\frac{W}{t} = Fv$$
+$P = \\frac{W}{t} = Fv$ — measured in watts (W), where $1\\;\\text{W} = 1\\;\\text{J/s}$
 
-Units: Watts (W) = J/s
+### Conservative vs. Non-conservative Forces
 
-### Conservative vs Nonconservative Forces
+- Conservative (gravity, springs): path-independent work; mechanical energy is conserved
+- Non-conservative (friction, drag): convert mechanical energy into thermal/internal energy
 
-- Conservative (gravity, springs): path-independent work; mechanical energy conserved.
-- Nonconservative (friction, drag): convert mechanical energy to thermal/internal energy.
+When friction is present, include the non-conservative work in the energy balance.`
+    },
+    {
+      id: 'pm3-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Speed at the Bottom of a Ramp
 
-When friction is present, include nonconservative work in the energy equation.`
+A $2\\;\\text{kg}$ cart starts from rest at the top of a frictionless ramp $1.8\\;\\text{m}$ tall. Using $g = 10\\;\\text{m/s}^2$, find its speed at the bottom.
+
+**Step 1 — Set up conservation of energy.** All gravitational PE converts to kinetic energy:
+
+$mgh = \\tfrac{1}{2}mv^2$
+
+**Step 2 — Cancel the mass and solve for $v$.**
+
+$v = \\sqrt{2gh} = \\sqrt{2(10)(1.8)} = \\sqrt{36}$
+
+**Step 3 — Evaluate.**
+
+$v = 6\\;\\text{m/s}$
+
+The mass dropped out, which is why $v = \\sqrt{2gh}$ is worth memorizing. If friction did, say, $10\\;\\text{J}$ of negative work, you would instead write $mgh - 10 = \\tfrac{1}{2}mv^2$ and solve for a smaller speed.`
     },
     {
       id: 'pm3-quiz1',
@@ -45,7 +64,7 @@ When friction is present, include nonconservative work in the energy equation.`
             question: `A 2 kg ball is dropped from 5 m. Its speed just before hitting the ground is ($g = 10\\;\\text{m/s}^2$):`,
             options: [`10 m/s`, `5 m/s`, `100 m/s`, `7.07 m/s`],
             correctAnswer: 0,
-            explanation: `Conservation of energy: $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s. Mass cancels!`
+            explanation: `Conservation of energy: $mgh = \\tfrac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s. The mass cancels.`
           },
           {
             question: `A force of 100 N pushes a box 5 m at a 60° angle to the displacement. The work done is:`,
@@ -57,13 +76,25 @@ When friction is present, include nonconservative work in the energy equation.`
             question: `If kinetic friction does -40 J of work on a block, the block's mechanical energy changes by:`,
             options: [`-40 J`, `+40 J`, `0 J`, `Depends only on mass`],
             correctAnswer: 0,
-            explanation: `Negative nonconservative work removes mechanical energy from the system.`
+            explanation: `Negative non-conservative work removes 40 J of mechanical energy from the system (converted to heat).`
           },
           {
-            question: `Power can be written as $P=Fv$ when:`,
+            question: `Power can be written as $P = Fv$ when:`,
             options: [`Force is parallel to velocity`, `Force is perpendicular to velocity`, `Velocity is zero`, `Motion is circular only`],
             correctAnswer: 0,
-            explanation: `Instantaneous power is dot product $P=\\vec{F}\\cdot\\vec{v}=Fv\\cos\\theta$. The scalar form $Fv$ assumes parallel vectors.`
+            explanation: `Instantaneous power is the dot product $P = \\vec{F}\\cdot\\vec{v} = Fv\\cos\\theta$. The simple scalar form $Fv$ assumes the vectors are parallel.`
+          },
+          {
+            question: `A motor lifts a $50\\;\\text{kg}$ load $4\\;\\text{m}$ in $10\\;\\text{s}$ at constant speed ($g = 10\\;\\text{m/s}^2$). Its power output is:`,
+            options: [`200 W`, `2000 W`, `500 W`, `20 W`],
+            correctAnswer: 0,
+            explanation: `Work $= mgh = (50)(10)(4) = 2000\\;\\text{J}$. Power $= W/t = 2000/10 = 200\\;\\text{W}$.`
+          },
+          {
+            question: `Doubling the speed of a moving object changes its kinetic energy by a factor of:`,
+            options: [`4`, `2`, `8`, `$\\sqrt{2}$`],
+            correctAnswer: 0,
+            explanation: `$KE = \\tfrac{1}{2}mv^2 \\propto v^2$. Doubling $v$ multiplies KE by $2^2 = 4$.`
           }
         ]
       }
@@ -73,11 +104,12 @@ When friction is present, include nonconservative work in the energy equation.`
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- $W = Fd\\cos\\theta$: only the component of force parallel to displacement does work
-- Conservation of energy: $KE + PE = \\text{constant}$ (no friction/air resistance)
-- $v = \\sqrt{2gh}$ for an object dropped from height $h$ — memorize this shortcut
-- Power = Work/time = Force $\\times$ velocity
-- Friction does negative work and reduces mechanical energy.`
+- $W = Fd\\cos\\theta$: only the force component parallel to displacement does work
+- Conservation of energy: $KE + PE = \\text{constant}$ when no friction or drag acts
+- $v = \\sqrt{2gh}$ for an object dropped (or sliding) from height $h$ — memorize this shortcut
+- Power = work / time = force $\\times$ velocity
+- $KE \\propto v^2$: doubling speed quadruples kinetic energy
+- Friction does negative work and reduces mechanical energy`
     }
   ]
 };

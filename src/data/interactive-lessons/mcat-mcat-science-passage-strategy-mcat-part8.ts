@@ -29,6 +29,32 @@ Hard MCAT graph questions often combine a passage claim with trend-shape reasoni
 - "Drop intermediate points for cleaner inference"`
     },
     {
+      id: 'mcat-feedback-graph-worked',
+      type: 'text' as const,
+      content: `### Worked Example — First Differences Decide the Shape
+
+A passage claims a hormone triggers a **positive feedback** loop. A figure plots the measured response across five ordered conditions:
+
+| Condition | Response (units) |
+|-----------|------------------|
+| 1 | 10 |
+| 2 | 13 |
+| 3 | 18 |
+| 4 | 26 |
+| 5 | 38 |
+
+**Step 1 — Compute first differences (Δ between adjacent conditions).**
+$13-10 = 3$, $18-13 = 5$, $26-18 = 8$, $38-26 = 12$. The deltas are $3, 5, 8, 12$.
+
+**Step 2 — Read the pattern of the deltas, not just the raw values.** The response rises *and the increments themselves grow*. Increasing first differences = accelerating, amplification-like behavior — consistent with the positive-feedback claim **in the measured range**.
+
+**Step 3 — Contrast with what would refute the claim.** If the deltas *shrank* (e.g., $12, 8, 5, 3$), the curve would be decelerating — a damping signature that would **challenge** positive feedback. Roughly constant deltas ($4, 4, 5$) would be near-linear and would not distinguish positive from negative feedback at all.
+
+**Step 4 — Bound the conclusion.** The graph supports amplification *here*; it does **not** prove universal causality or that the loop operates outside this range. The most defensible MCAT answer is "consistent with positive-feedback-like amplification in the measured range."
+
+**Step 5 — Choose the right follow-up.** To test the *mechanism*, perturb the hypothesized mediator (e.g., block the hormone receptor) while holding inputs fixed, and see whether the accelerating shape disappears as predicted.`
+    },
+    {
       id: 'mcat-feedback-graph-quiz',
       type: 'multiple-choice' as const,
       content: `**Feedback Loop Graph Reasoning Drill**`,
@@ -77,6 +103,28 @@ Hard MCAT graph questions often combine a passage claim with trend-shape reasoni
             ],
             correctAnswer: 2,
             explanation: `Approximately constant deltas imply near-linear behavior in the measured range.`
+          },
+          {
+            question: `In the worked example, the first differences were 3, 5, 8, 12. The single best reason these support the positive-feedback claim is that:`,
+            options: [
+              `The increments themselves are increasing, indicating accelerating (amplifying) change.`,
+              `The raw response values are all above zero.`,
+              `There are exactly five data points.`,
+              `The final value is the largest in the table.`
+            ],
+            correctAnswer: 0,
+            explanation: `Amplification is read from the deltas, not the raw values. Growing first differences (3 → 5 → 8 → 12) signal acceleration, the hallmark of positive-feedback-like behavior in the measured range.`
+          },
+          {
+            question: `A classmate argues a feedback graph "can't be interpreted at all" because it lacks error bars and p-values. The best critique is:`,
+            options: [
+              `Trend-shape reasoning from first differences still yields a bounded, range-limited interpretation, even without inferential statistics.`,
+              `They are correct — no graph means anything without a p-value.`,
+              `Error bars would prove causality on their own.`,
+              `The graph should be discarded and the question skipped.`
+            ],
+            correctAnswer: 0,
+            explanation: `Demanding p-values before any interpretation is a known MCAT trap. You can still describe the shape (accelerating, damping, or roughly linear) and draw a cautious, range-limited conclusion — while acknowledging that significance and causality require more.`
           }
         ]
       }
@@ -87,8 +135,9 @@ Hard MCAT graph questions often combine a passage claim with trend-shape reasoni
       content: `### Key Takeaways
 
 - Use first differences as your core graph test.
-- Increasing deltas suggest amplification; decreasing deltas suggest damping.
+- Increasing deltas suggest amplification; decreasing deltas suggest damping; constant deltas are near-linear.
 - Trend support is not the same as causal proof.
+- You can interpret a trend's shape even without error bars or p-values.
 - Strongest MCAT answers match the graph and respect inference limits.`
     }
   ]

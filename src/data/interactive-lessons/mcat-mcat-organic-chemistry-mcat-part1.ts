@@ -71,6 +71,18 @@ On the MCAT, many questions hide stereochemistry inside a passage about receptor
             options: [`Racemic mixture`, `Meso compound`, `Constitutional isomer`, `Geometric isomer`],
             correctAnswer: 1,
             explanation: `A meso compound has stereocenters but is overall achiral due to an internal symmetry plane.`
+          },
+          {
+            question: `When assigning R/S using Cahn-Ingold-Prelog rules, priority among the four substituents is determined primarily by:`,
+            options: [`Atomic number of the first atom bonded to the stereocenter (higher = higher priority)`, `Alphabetical order of the group names`, `The size (molecular weight) of each entire group`, `The number of hydrogens on each group`],
+            correctAnswer: 0,
+            explanation: `CIP priority is set by atomic number of the directly attached atom; ties are broken at the next point of difference. After orienting the lowest priority away, a clockwise 1→2→3 path is R and counterclockwise is S.`
+          },
+          {
+            question: `A drug is sold as a single enantiomer because only that form fits the target receptor. Compared with its enantiomer, this active form will have:`,
+            options: [`Identical melting point and solubility but opposite optical rotation`, `A completely different molecular formula`, `Different boiling and melting points`, `Different connectivity of atoms`],
+            correctAnswer: 0,
+            explanation: `Enantiomers share all scalar physical properties (melting point, boiling point, solubility) and differ only in the sign of optical rotation and in interactions with other chiral entities, such as receptors and enzymes. This is why one enantiomer can be therapeutic while the other is inactive or harmful.`
           }
         ]
       }
