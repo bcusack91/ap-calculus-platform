@@ -11,5 +11,8 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <PricingPage />
+  // Only offer the annual plan when an annual price actually exists in Stripe,
+  // so the UI can never promise a cadence we don't sell (checkout would otherwise
+  // fall back to the monthly price). Set STRIPE_PREMIUM_ANNUAL_PRICE_ID to enable.
+  return <PricingPage annualEnabled={!!process.env.STRIPE_PREMIUM_ANNUAL_PRICE_ID} />
 }

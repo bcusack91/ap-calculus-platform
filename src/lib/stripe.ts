@@ -16,9 +16,6 @@ export function getStripe(): Stripe {
   return _stripe
 }
 
-/** @deprecated Use getStripe() instead — kept for backward compat */
-export const stripe = null as unknown as Stripe
-
 export const PLANS = {
   FREE: {
     name: 'Free',

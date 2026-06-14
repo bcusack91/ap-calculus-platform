@@ -4,6 +4,23 @@ import { getStripe } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
 import Stripe from 'stripe'
 
+/**
+ * Current period end. As of the pinned API version (2025-09-30.clover) Stripe
+ * moved `current_period_end` off the Subscription and onto each subscription
+ * ITEM, so reading it from the subscription yields undefined → `Invalid Date`.
+ * Read it from the first item; return null if absent (don't persist a bad date).
+ */
+function subscriptionPeriodEnd(sub: Stripe.Subscription): Date | null {
+  const item = sub.items?.data?.[0] as unknown as { current_period_end?: number } | undefined
+  const ts = item?.current_period_end
+  return typeof ts === 'number' && Number.isFinite(ts) ? new Date(ts * 1000) : null
+}
+
+/** Map a Stripe subscription status to our app role. */
+function roleForStatus(status: Stripe.Subscription.Status): 'PREMIUM' | 'FREE' {
+  return status === 'active' || status === 'trialing' ? 'PREMIUM' : 'FREE'
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.text()
   const signature = (await headers()).get('stripe-signature')
@@ -73,7 +90,7 @@ export async function POST(req: NextRequest) {
               role: 'PREMIUM',
               stripeSubscriptionId: subscription.id,
               stripePriceId: subscription.items.data[0].price.id,
-              stripeCurrentPeriodEnd: new Date((subscription as unknown as { current_period_end: number }).current_period_end * 1000),
+              stripeCurrentPeriodEnd: subscriptionPeriodEnd(subscription),
             },
           })
         }
@@ -91,10 +108,36 @@ export async function POST(req: NextRequest) {
             where: { stripeSubscriptionId: subscriptionId },
             data: {
               stripePriceId: subscription.items.data[0].price.id,
-              stripeCurrentPeriodEnd: new Date((subscription as unknown as { current_period_end: number }).current_period_end * 1000),
+              stripeCurrentPeriodEnd: subscriptionPeriodEnd(subscription),
             },
           })
         }
+        break
+      }
+
+      // Subscription state changes mid-lifecycle (renewals, plan changes, and —
+      // crucially — payment failures that flip the status to past_due/unpaid/
+      // canceled). Keep the app role in sync with the authoritative Stripe status.
+      case 'customer.subscription.updated': {
+        const subscription = event.data.object as Stripe.Subscription
+        await prisma.user.updateMany({
+          where: { stripeSubscriptionId: subscription.id },
+          data: {
+            role: roleForStatus(subscription.status),
+            stripePriceId: subscription.items.data[0]?.price.id ?? null,
+            stripeCurrentPeriodEnd: subscriptionPeriodEnd(subscription),
+          },
+        })
+        break
+      }
+
+      // A failed payment doesn't immediately cancel (Stripe retries through the
+      // dunning window); the resulting status change arrives via
+      // customer.subscription.updated above. Log for visibility.
+      case 'invoice.payment_failed': {
+        const invoice = event.data.object as Stripe.Invoice
+        const subId = (invoice as unknown as { subscription?: string }).subscription
+        console.warn(`Stripe invoice.payment_failed for subscription ${subId ?? 'unknown'}`)
         break
       }
 

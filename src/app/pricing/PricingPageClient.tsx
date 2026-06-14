@@ -21,7 +21,7 @@ const FREE_FEATURES = [
 // list can't drift from the real gates (it previously advertised free features).
 const PREMIUM_FEATURES = ['Everything in Free, plus:', ...PREMIUM_BENEFITS]
 
-export default function PricingPageClient() {
+export default function PricingPageClient({ annualEnabled = false }: { annualEnabled?: boolean }) {
   const { data: session, status } = useSession()
   const router = useRouter()
   const [billing, setBilling] = useState<'monthly' | 'annual'>('monthly')
@@ -91,32 +91,34 @@ export default function PricingPageClient() {
             Study Mondo is free forever. Upgrade to Premium for the full experience.
           </p>
 
-          {/* Billing toggle */}
-          <div className="mt-8 inline-flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-            <button
-              onClick={() => setBilling('monthly')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                billing === 'monthly'
-                  ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-                  : 'text-gray-500'
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBilling('annual')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                billing === 'annual'
-                  ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-                  : 'text-gray-500'
-              }`}
-            >
-              Annual
-              <span className="ml-1.5 text-xs bg-green-100 dark:bg-green-900/30 text-green-600 px-1.5 py-0.5 rounded-full">
-                Save 20%
-              </span>
-            </button>
-          </div>
+          {/* Billing toggle — only shown when an annual price is actually sold. */}
+          {annualEnabled && (
+            <div className="mt-8 inline-flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+              <button
+                onClick={() => setBilling('monthly')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  billing === 'monthly'
+                    ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+                    : 'text-gray-500'
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setBilling('annual')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  billing === 'annual'
+                    ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+                    : 'text-gray-500'
+                }`}
+              >
+                Annual
+                <span className="ml-1.5 text-xs bg-green-100 dark:bg-green-900/30 text-green-600 px-1.5 py-0.5 rounded-full">
+                  Save 20%
+                </span>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Plans */}
