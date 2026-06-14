@@ -108,6 +108,22 @@ export function plainTextPreview(text: string): string {
     .trim()
 }
 
+/**
+ * Heuristic: does a `$…$` span look like a currency/prose run rather than math?
+ * Word problems write amounts like "$2 and a notebook costs $5", whose bare
+ * dollar signs the inline-math regex wrongly pairs — rendering the prose between
+ * them as italic math and eating the $ signs. Treat a span as currency (leave it
+ * literal) when it starts with a number, contains no LaTeX command, and has a
+ * word after the number (a space followed by a lowercase letter). Real math
+ * (`$3x+2=11$`, `$5x$`, `$3 \text{m}$`) fails this test and still renders.
+ */
+function looksLikeCurrencyProse(span: string): boolean {
+  // Starts with a number, no math structure (no LaTeX command, no = ^ _ { } < >),
+  // and has a word after the number → currency/prose, not math. This keeps real
+  // math like $3x+2=11$, $1 < x+2 < 6$, $5x$, and $3 \text{m}$ rendering as math.
+  return /^[\d.,]/.test(span) && !/[\\=^_{}<>]/.test(span) && /\s[a-z]/.test(span)
+}
+
 export function renderRichText(text: string): string {
   // Step 1: Convert markdown tables to HTML
   let result = renderMarkdownTables(text)
@@ -120,7 +136,9 @@ export function renderRichText(text: string): string {
     try { return renderKatexSync(latex.trim(), { displayMode: true }) }
     catch { return latex }
   })
-  result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
+  result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (match, latex) => {
+    // Leave currency/prose ("$2 and a notebook costs $5") literal — not math.
+    if (looksLikeCurrencyProse(latex)) return match
     try { return renderKatexSync(latex.trim(), { displayMode: false }) }
     catch { return latex }
   })
