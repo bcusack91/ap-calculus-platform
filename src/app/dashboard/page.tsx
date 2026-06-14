@@ -25,6 +25,7 @@ import { BattlePass } from '@/components/BattlePass'
 import { SeasonRankings } from '@/components/SeasonRankings'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import { StudyHeatmap } from '@/components/StudyHeatmap'
+import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
 
 const FlashcardStudySession = dynamic(
   () => import('@/components/FlashcardStudySession'),
@@ -822,8 +823,10 @@ function DashboardContent() {
             </div>
           </div>
           <div className="space-y-6">
-            {/* Progress Comparison (#153) */}
-            <ProgressComparison />
+            {/* Progress Comparison (#153) — advanced analytics, paid */}
+            <PaidAnalyticsGate label="Peer comparison">
+              <ProgressComparison />
+            </PaidAnalyticsGate>
 
             {/* Study Stats */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
@@ -915,7 +918,9 @@ function DashboardContent() {
           {/* Battle Pass */}
           <BattlePass />
           {/* Study Heatmap */}
-          <StudyHeatmap />
+          <PaidAnalyticsGate label="Study heatmap">
+            <StudyHeatmap />
+          </PaidAnalyticsGate>
           {/* Pomodoro Timer (#130) */}
           <PomodoroTimer />
         </div>
