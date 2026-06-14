@@ -26,6 +26,598 @@ export interface InteractiveTopicConfig {
 }
 
 const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
+  // __GRADE_LESSONS_START__ (generated — do not edit by hand)
+  'adding-fractions-like-denominators': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Adding Fractions with Like Denominators 🍕', loader: () => import('./grades/adding-fractions-like-denominators').then(m => m.parts[0]) },
+      { title: 'Step-by-Step Examples 📝', loader: () => import('./grades/adding-fractions-like-denominators').then(m => m.parts[1]) },
+      { title: 'Guided Practice — Choose the Answer', loader: () => import('./grades/adding-fractions-like-denominators').then(m => m.parts[2]) },
+      { title: 'Fractions in the Real World 🌎', loader: () => import('./grades/adding-fractions-like-denominators').then(m => m.parts[3]) },
+      { title: 'Review: What You Learned 🌟', loader: () => import('./grades/adding-fractions-like-denominators').then(m => m.parts[4]) },
+    ]
+  },
+  'adding-subtracting-decimals-grade5': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🔢 Adding and Subtracting Decimals', loader: () => import('./grades/adding-subtracting-decimals-grade5').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/adding-subtracting-decimals-grade5').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/adding-subtracting-decimals-grade5').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/adding-subtracting-decimals-grade5').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/adding-subtracting-decimals-grade5').then(m => m.parts[4]) },
+    ]
+  },
+  'adding-subtracting-decimals': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Are Decimals? 🔢', loader: () => import('./grades/adding-subtracting-decimals').then(m => m.parts[0]) },
+      { title: 'Adding Decimals: Step by Step ➕', loader: () => import('./grades/adding-subtracting-decimals').then(m => m.parts[1]) },
+      { title: 'Subtracting Decimals ➖', loader: () => import('./grades/adding-subtracting-decimals').then(m => m.parts[2]) },
+      { title: 'Decimals in the Real World 🌎', loader: () => import('./grades/adding-subtracting-decimals').then(m => m.parts[3]) },
+      { title: 'Review: Everything You Learned', loader: () => import('./grades/adding-subtracting-decimals').then(m => m.parts[4]) },
+    ]
+  },
+  'adding-subtracting-fractions-grade4': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '➕ Adding & Subtracting Fractions', loader: () => import('./grades/adding-subtracting-fractions-grade4').then(m => m.parts[0]) },
+      { title: 'Worked Examples', loader: () => import('./grades/adding-subtracting-fractions-grade4').then(m => m.parts[1]) },
+      { title: '🤝 Guided Practice', loader: () => import('./grades/adding-subtracting-fractions-grade4').then(m => m.parts[2]) },
+      { title: '🌍 Fractions in Real Life', loader: () => import('./grades/adding-subtracting-fractions-grade4').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/adding-subtracting-fractions-grade4').then(m => m.parts[4]) },
+    ]
+  },
+  'adding-subtracting-fractions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Adding and Subtracting Fractions 🍰', loader: () => import('./grades/adding-subtracting-fractions').then(m => m.parts[0]) },
+      { title: 'Worked Example: Adding 📝', loader: () => import('./grades/adding-subtracting-fractions').then(m => m.parts[1]) },
+      { title: 'Guided Practice — Choose the Answer', loader: () => import('./grades/adding-subtracting-fractions').then(m => m.parts[2]) },
+      { title: 'Fractions in the Real World 🌎', loader: () => import('./grades/adding-subtracting-fractions').then(m => m.parts[3]) },
+      { title: 'Review: What You Learned 🌟', loader: () => import('./grades/adding-subtracting-fractions').then(m => m.parts[4]) },
+    ]
+  },
+  'angle-relationships': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Angle Relationships', loader: () => import('./grades/angle-relationships').then(m => m.parts[0]) },
+      { title: '✏️ Worked Examples: Finding a Missing Angle', loader: () => import('./grades/angle-relationships').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/angle-relationships').then(m => m.parts[2]) },
+      { title: '🌍 Real-World Angles', loader: () => import('./grades/angle-relationships').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/angle-relationships').then(m => m.parts[4]) },
+    ]
+  },
+  'area-composite-figures': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Composite Figure? 🧩', loader: () => import('./grades/area-composite-figures').then(m => m.parts[0]) },
+      { title: 'Worked Example: A "House" Shape 🏠', loader: () => import('./grades/area-composite-figures').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Answer', loader: () => import('./grades/area-composite-figures').then(m => m.parts[2]) },
+      { title: 'Real-World Composite Figures 🌍', loader: () => import('./grades/area-composite-figures').then(m => m.parts[3]) },
+      { title: 'Summary: Putting It All Together 🎓', loader: () => import('./grades/area-composite-figures').then(m => m.parts[4]) },
+    ]
+  },
+  'classifying-2d-shapes': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🔷 Classifying 2D Shapes', loader: () => import('./grades/classifying-2d-shapes').then(m => m.parts[0]) },
+      { title: 'Worked Examples: Triangles & Quadrilaterals', loader: () => import('./grades/classifying-2d-shapes').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/classifying-2d-shapes').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/classifying-2d-shapes').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/classifying-2d-shapes').then(m => m.parts[4]) },
+    ]
+  },
+  'comparing-fractions-grade4': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Comparing Fractions 🍕', loader: () => import('./grades/comparing-fractions-grade4').then(m => m.parts[0]) },
+      { title: 'Different Denominators: Find a Common Denominator', loader: () => import('./grades/comparing-fractions-grade4').then(m => m.parts[1]) },
+      { title: 'Guided Practice 🧭', loader: () => import('./grades/comparing-fractions-grade4').then(m => m.parts[2]) },
+      { title: 'Fractions in Real Life 🌍', loader: () => import('./grades/comparing-fractions-grade4').then(m => m.parts[3]) },
+      { title: 'Review: All Your Tools 🛠️', loader: () => import('./grades/comparing-fractions-grade4').then(m => m.parts[4]) },
+    ]
+  },
+  'converting-units-measurement': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Do We Convert Units? 📏', loader: () => import('./grades/converting-units-measurement').then(m => m.parts[0]) },
+      { title: 'Worked Examples: Step by Step ✏️', loader: () => import('./grades/converting-units-measurement').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Answer', loader: () => import('./grades/converting-units-measurement').then(m => m.parts[2]) },
+      { title: 'Conversions in Real Life 🍳', loader: () => import('./grades/converting-units-measurement').then(m => m.parts[3]) },
+      { title: 'Review: Everything in One Place 🌟', loader: () => import('./grades/converting-units-measurement').then(m => m.parts[4]) },
+    ]
+  },
+  'coordinate-plane-basics': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '📍 The Coordinate Plane', loader: () => import('./grades/coordinate-plane-basics').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/coordinate-plane-basics').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/coordinate-plane-basics').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/coordinate-plane-basics').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/coordinate-plane-basics').then(m => m.parts[4]) },
+    ]
+  },
+  'decimal-operations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Decimals Are Everywhere 🔢', loader: () => import('./grades/decimal-operations').then(m => m.parts[0]) },
+      { title: 'Worked Example: Adding & Subtracting ➕➖', loader: () => import('./grades/decimal-operations').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Pick the Answer', loader: () => import('./grades/decimal-operations').then(m => m.parts[2]) },
+      { title: 'Decimals in the Real World 🌎', loader: () => import('./grades/decimal-operations').then(m => m.parts[3]) },
+      { title: 'Putting It All Together', loader: () => import('./grades/decimal-operations').then(m => m.parts[4]) },
+    ]
+  },
+  'distance-formula': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '📏 The Distance Formula', loader: () => import('./grades/distance-formula').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/distance-formula').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/distance-formula').then(m => m.parts[2]) },
+      { title: '🗺️ Real-World Applications', loader: () => import('./grades/distance-formula').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/distance-formula').then(m => m.parts[4]) },
+    ]
+  },
+  'dividing-decimals': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Do We Divide Decimals? 🍕', loader: () => import('./grades/dividing-decimals').then(m => m.parts[0]) },
+      { title: 'Worked Example: Dividing by a Decimal', loader: () => import('./grades/dividing-decimals').then(m => m.parts[1]) },
+      { title: 'Multiple Choice', loader: () => import('./grades/dividing-decimals').then(m => m.parts[2]) },
+      { title: 'Dividing Decimals in the Real World 🌎', loader: () => import('./grades/dividing-decimals').then(m => m.parts[3]) },
+      { title: 'Review: Everything You Learned', loader: () => import('./grades/dividing-decimals').then(m => m.parts[4]) },
+    ]
+  },
+  'dividing-fractions-grade5': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Dividing Fractions', loader: () => import('./grades/dividing-fractions-grade5').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/dividing-fractions-grade5').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/dividing-fractions-grade5').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/dividing-fractions-grade5').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/dividing-fractions-grade5').then(m => m.parts[4]) },
+    ]
+  },
+  'division-with-remainders': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🍪 Division with Remainders', loader: () => import('./grades/division-with-remainders').then(m => m.parts[0]) },
+      { title: '✏️ Finding Remainders Step by Step', loader: () => import('./grades/division-with-remainders').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/division-with-remainders').then(m => m.parts[2]) },
+      { title: '🚗 Remainders in the Real World', loader: () => import('./grades/division-with-remainders').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/division-with-remainders').then(m => m.parts[4]) },
+    ]
+  },
+  'equivalent-fractions-grade4': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🍕 Equivalent Fractions', loader: () => import('./grades/equivalent-fractions-grade4').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples: Building Equivalent Fractions', loader: () => import('./grades/equivalent-fractions-grade4').then(m => m.parts[1]) },
+      { title: 'Guided Practice — Choose the Equivalent Fraction', loader: () => import('./grades/equivalent-fractions-grade4').then(m => m.parts[2]) },
+      { title: '🌎 Equivalent Fractions in Real Life', loader: () => import('./grades/equivalent-fractions-grade4').then(m => m.parts[3]) },
+      { title: '📚 Review & Challenge', loader: () => import('./grades/equivalent-fractions-grade4').then(m => m.parts[4]) },
+    ]
+  },
+  'grade6-dividing-fractions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Dividing Fractions', loader: () => import('./grades/grade6-dividing-fractions').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/grade6-dividing-fractions').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/grade6-dividing-fractions').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/grade6-dividing-fractions').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/grade6-dividing-fractions').then(m => m.parts[4]) },
+    ]
+  },
+  'integer-exponents': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '⚡ Integer Exponents', loader: () => import('./grades/integer-exponents').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/integer-exponents').then(m => m.parts[1]) },
+      { title: 'Guided Practice', loader: () => import('./grades/integer-exponents').then(m => m.parts[2]) },
+      { title: '🌍 Where Integer Exponents Show Up', loader: () => import('./grades/integer-exponents').then(m => m.parts[3]) },
+      { title: 'Review & Summary', loader: () => import('./grades/integer-exponents').then(m => m.parts[4]) },
+    ]
+  },
+  'introduction-to-functions-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '⚙️ Introduction to Functions', loader: () => import('./grades/introduction-to-functions-grade8').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/introduction-to-functions-grade8').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/introduction-to-functions-grade8').then(m => m.parts[2]) },
+      { title: '🌎 Functions in the Real World', loader: () => import('./grades/introduction-to-functions-grade8').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/introduction-to-functions-grade8').then(m => m.parts[4]) },
+    ]
+  },
+  'introduction-to-ratios': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🍎 Introduction to Ratios', loader: () => import('./grades/introduction-to-ratios').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/introduction-to-ratios').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/introduction-to-ratios').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/introduction-to-ratios').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/introduction-to-ratios').then(m => m.parts[4]) },
+    ]
+  },
+  'laws-of-exponents-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '⚡ Laws of Exponents', loader: () => import('./grades/laws-of-exponents-grade8').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/laws-of-exponents-grade8').then(m => m.parts[1]) },
+      { title: 'Guided Practice', loader: () => import('./grades/laws-of-exponents-grade8').then(m => m.parts[2]) },
+      { title: '🌍 Two Special Exponents', loader: () => import('./grades/laws-of-exponents-grade8').then(m => m.parts[3]) },
+      { title: 'Review: All Five Laws', loader: () => import('./grades/laws-of-exponents-grade8').then(m => m.parts[4]) },
+    ]
+  },
+  'linear-equations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '⚖️ Linear Equations', loader: () => import('./grades/linear-equations').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/linear-equations').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/linear-equations').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/linear-equations').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/linear-equations').then(m => m.parts[4]) },
+    ]
+  },
+  'long-division-grade4': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Long Division', loader: () => import('./grades/long-division-grade4').then(m => m.parts[0]) },
+      { title: '✏️ Worked Examples', loader: () => import('./grades/long-division-grade4').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/long-division-grade4').then(m => m.parts[2]) },
+      { title: '🌍 Word Problems', loader: () => import('./grades/long-division-grade4').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/long-division-grade4').then(m => m.parts[4]) },
+    ]
+  },
+  'multi-digit-multiplication': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '✖️ Multi-Digit Multiplication', loader: () => import('./grades/multi-digit-multiplication').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/multi-digit-multiplication').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/multi-digit-multiplication').then(m => m.parts[2]) },
+      { title: '🌍 Real-World Multiplication', loader: () => import('./grades/multi-digit-multiplication').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/multi-digit-multiplication').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-decimals': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Do We Multiply Decimals? 🤔', loader: () => import('./grades/multiplying-decimals').then(m => m.parts[0]) },
+      { title: 'Example 1: Decimal × Whole Number ✍️', loader: () => import('./grades/multiplying-decimals').then(m => m.parts[1]) },
+      { title: 'Practice Problems 🧠', loader: () => import('./grades/multiplying-decimals').then(m => m.parts[2]) },
+      { title: 'Decimals in Real Life 🛒', loader: () => import('./grades/multiplying-decimals').then(m => m.parts[3]) },
+      { title: 'Putting It All Together 🎓', loader: () => import('./grades/multiplying-decimals').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-dividing-fractions-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '✖️ Multiplying and Dividing Fractions', loader: () => import('./grades/multiplying-dividing-fractions-grade7').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/multiplying-dividing-fractions-grade7').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/multiplying-dividing-fractions-grade7').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/multiplying-dividing-fractions-grade7').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/multiplying-dividing-fractions-grade7').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-dividing-fractions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '✖️ Multiplying Fractions', loader: () => import('./grades/multiplying-dividing-fractions').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples: Multiplying', loader: () => import('./grades/multiplying-dividing-fractions').then(m => m.parts[1]) },
+      { title: 'Dividing Fractions: Keep, Change, Flip', loader: () => import('./grades/multiplying-dividing-fractions').then(m => m.parts[2]) },
+      { title: '🌍 Fractions in Real Life', loader: () => import('./grades/multiplying-dividing-fractions').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/multiplying-dividing-fractions').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-dividing-integers': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Quick Review: What Are Integers? 🔢', loader: () => import('./grades/multiplying-dividing-integers').then(m => m.parts[0]) },
+      { title: 'Multiplying Step by Step ✖️', loader: () => import('./grades/multiplying-dividing-integers').then(m => m.parts[1]) },
+      { title: 'Dividing Integers', loader: () => import('./grades/multiplying-dividing-integers').then(m => m.parts[2]) },
+      { title: 'Integers in the Real World 🌍', loader: () => import('./grades/multiplying-dividing-integers').then(m => m.parts[3]) },
+      { title: 'Putting It All Together 🧠', loader: () => import('./grades/multiplying-dividing-integers').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-fractions-grade5': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '✖️ Multiplying Fractions', loader: () => import('./grades/multiplying-fractions-grade5').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/multiplying-fractions-grade5').then(m => m.parts[1]) },
+      { title: 'Part 3', loader: () => import('./grades/multiplying-fractions-grade5').then(m => m.parts[2]) },
+      { title: '🌍 Fractions in Real Life', loader: () => import('./grades/multiplying-fractions-grade5').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/multiplying-fractions-grade5').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-fractions-whole-numbers-grade4': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🍕 Multiplying Fractions by Whole Numbers', loader: () => import('./grades/multiplying-fractions-whole-numbers-grade4').then(m => m.parts[0]) },
+      { title: 'Worked Examples', loader: () => import('./grades/multiplying-fractions-whole-numbers-grade4').then(m => m.parts[1]) },
+      { title: '🏋️ Guided Practice', loader: () => import('./grades/multiplying-fractions-whole-numbers-grade4').then(m => m.parts[2]) },
+      { title: '🌎 Word Problems', loader: () => import('./grades/multiplying-fractions-whole-numbers-grade4').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/multiplying-fractions-whole-numbers-grade4').then(m => m.parts[4]) },
+    ]
+  },
+  'multiplying-fractions-whole-numbers': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '✖️ Multiplying Fractions by Whole Numbers', loader: () => import('./grades/multiplying-fractions-whole-numbers').then(m => m.parts[0]) },
+      { title: '🛠️ Worked Examples', loader: () => import('./grades/multiplying-fractions-whole-numbers').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/multiplying-fractions-whole-numbers').then(m => m.parts[2]) },
+      { title: '🌍 Real-World Word Problems', loader: () => import('./grades/multiplying-fractions-whole-numbers').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/multiplying-fractions-whole-numbers').then(m => m.parts[4]) },
+    ]
+  },
+  'operations-scientific-notation': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🚀 Operations with Scientific Notation', loader: () => import('./grades/operations-scientific-notation').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/operations-scientific-notation').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/operations-scientific-notation').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/operations-scientific-notation').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/operations-scientific-notation').then(m => m.parts[4]) },
+    ]
+  },
+  'operations-with-integers-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Numbers Go Both Ways 🔢', loader: () => import('./grades/operations-with-integers-grade7').then(m => m.parts[0]) },
+      { title: 'Worked Examples: Adding ➕', loader: () => import('./grades/operations-with-integers-grade7').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Pick the Answer', loader: () => import('./grades/operations-with-integers-grade7').then(m => m.parts[2]) },
+      { title: 'Integers in the Real World 🌎', loader: () => import('./grades/operations-with-integers-grade7').then(m => m.parts[3]) },
+      { title: 'Putting It All Together', loader: () => import('./grades/operations-with-integers-grade7').then(m => m.parts[4]) },
+    ]
+  },
+  'percent-applications-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🛍️ Percent Applications', loader: () => import('./grades/percent-applications-grade7').then(m => m.parts[0]) },
+      { title: 'Worked Examples', loader: () => import('./grades/percent-applications-grade7').then(m => m.parts[1]) },
+      { title: '🤝 Guided Practice', loader: () => import('./grades/percent-applications-grade7').then(m => m.parts[2]) },
+      { title: '🌎 Application & Word Problems', loader: () => import('./grades/percent-applications-grade7').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/percent-applications-grade7').then(m => m.parts[4]) },
+    ]
+  },
+  'percent-of-change': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '📈 Percent of Change', loader: () => import('./grades/percent-of-change').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/percent-of-change').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/percent-of-change').then(m => m.parts[2]) },
+      { title: '🌎 Application & Word Problems', loader: () => import('./grades/percent-of-change').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/percent-of-change').then(m => m.parts[4]) },
+    ]
+  },
+  'perimeter-and-area-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Perimeter and Area: What\'s the Difference?', loader: () => import('./grades/perimeter-and-area-grade6').then(m => m.parts[0]) },
+      { title: 'Worked Examples: Step by Step ✏️', loader: () => import('./grades/perimeter-and-area-grade6').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Answer', loader: () => import('./grades/perimeter-and-area-grade6').then(m => m.parts[2]) },
+      { title: 'Perimeter and Area in Real Life 🏡', loader: () => import('./grades/perimeter-and-area-grade6').then(m => m.parts[3]) },
+      { title: 'Review: Everything in One Place 🌟', loader: () => import('./grades/perimeter-and-area-grade6').then(m => m.parts[4]) },
+    ]
+  },
+  'place-value-large-numbers': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is Place Value? 🔢', loader: () => import('./grades/place-value-large-numbers').then(m => m.parts[0]) },
+      { title: 'Worked Example: Standard Form → Expanded Form 🛠️', loader: () => import('./grades/place-value-large-numbers').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Best Answer 🧠', loader: () => import('./grades/place-value-large-numbers').then(m => m.parts[2]) },
+      { title: 'Big Numbers in Real Life 🌎', loader: () => import('./grades/place-value-large-numbers').then(m => m.parts[3]) },
+      { title: 'Review: Putting It All Together 🏁', loader: () => import('./grades/place-value-large-numbers').then(m => m.parts[4]) },
+    ]
+  },
+  'prime-factorization': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🔢 Prime Factorization', loader: () => import('./grades/prime-factorization').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/prime-factorization').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/prime-factorization').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/prime-factorization').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/prime-factorization').then(m => m.parts[4]) },
+    ]
+  },
+  'rational-number-operations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🔢 Rational Number Operations', loader: () => import('./grades/rational-number-operations').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/rational-number-operations').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/rational-number-operations').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/rational-number-operations').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/rational-number-operations').then(m => m.parts[4]) },
+    ]
+  },
+  'scientific-notation-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Do We Need Scientific Notation? 🔭', loader: () => import('./grades/scientific-notation-grade8').then(m => m.parts[0]) },
+      { title: 'From Standard Form to Scientific Notation 🔁', loader: () => import('./grades/scientific-notation-grade8').then(m => m.parts[1]) },
+      { title: 'Multiple Choice', loader: () => import('./grades/scientific-notation-grade8').then(m => m.parts[2]) },
+      { title: 'Scientific Notation in the Real World 🌍', loader: () => import('./grades/scientific-notation-grade8').then(m => m.parts[3]) },
+      { title: 'Putting It All Together 🧠', loader: () => import('./grades/scientific-notation-grade8').then(m => m.parts[4]) },
+    ]
+  },
+  'simple-interest': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '💰 Simple Interest', loader: () => import('./grades/simple-interest').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/simple-interest').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/simple-interest').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/simple-interest').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/simple-interest').then(m => m.parts[4]) },
+    ]
+  },
+  'simplifying-expressions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🧹 Simplifying Expressions', loader: () => import('./grades/simplifying-expressions').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples: Grouping Like Terms', loader: () => import('./grades/simplifying-expressions').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Combine Like Terms', loader: () => import('./grades/simplifying-expressions').then(m => m.parts[2]) },
+      { title: '🌍 The Distributive Property in Real Life', loader: () => import('./grades/simplifying-expressions').then(m => m.parts[3]) },
+      { title: 'Review: Simplifying Expressions', loader: () => import('./grades/simplifying-expressions').then(m => m.parts[4]) },
+    ]
+  },
+  'slope-rate-of-change': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is Slope? 📈', loader: () => import('./grades/slope-rate-of-change').then(m => m.parts[0]) },
+      { title: 'Working Through the Formula ✍️', loader: () => import('./grades/slope-rate-of-change').then(m => m.parts[1]) },
+      { title: 'The Four Types of Slope 🛝', loader: () => import('./grades/slope-rate-of-change').then(m => m.parts[2]) },
+      { title: 'Slope as a Rate of Change 🚗', loader: () => import('./grades/slope-rate-of-change').then(m => m.parts[3]) },
+      { title: 'Putting It All Together 🧠', loader: () => import('./grades/slope-rate-of-change').then(m => m.parts[4]) },
+    ]
+  },
+  'solving-inequalities': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is an Inequality? ⚖️', loader: () => import('./grades/solving-inequalities').then(m => m.parts[0]) },
+      { title: 'Worked Example: Add or Subtract ➕➖', loader: () => import('./grades/solving-inequalities').then(m => m.parts[1]) },
+      { title: '⚠️ The Special Rule: Flip for Negatives!', loader: () => import('./grades/solving-inequalities').then(m => m.parts[2]) },
+      { title: 'Inequalities in the Real World 🌎', loader: () => import('./grades/solving-inequalities').then(m => m.parts[3]) },
+      { title: 'Putting It All Together 🧠', loader: () => import('./grades/solving-inequalities').then(m => m.parts[4]) },
+    ]
+  },
+  'solving-multi-step-equations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Leveling Up Your Equation Skills 🚀', loader: () => import('./grades/solving-multi-step-equations').then(m => m.parts[0]) },
+      { title: 'Worked Examples: Two-Step Equations ✍️', loader: () => import('./grades/solving-multi-step-equations').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Answer', loader: () => import('./grades/solving-multi-step-equations').then(m => m.parts[2]) },
+      { title: 'Equations in the Real World 🌎', loader: () => import('./grades/solving-multi-step-equations').then(m => m.parts[3]) },
+      { title: 'Putting It All Together', loader: () => import('./grades/solving-multi-step-equations').then(m => m.parts[4]) },
+    ]
+  },
+  'solving-proportions-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '⚖️ Solving Proportions', loader: () => import('./grades/solving-proportions-grade7').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/solving-proportions-grade7').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/solving-proportions-grade7').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/solving-proportions-grade7').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/solving-proportions-grade7').then(m => m.parts[4]) },
+    ]
+  },
+  'surface-area-volume': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Stepping Into 3D 📦', loader: () => import('./grades/surface-area-volume').then(m => m.parts[0]) },
+      { title: 'Worked Examples: The Rectangular Prism 📦', loader: () => import('./grades/surface-area-volume').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Answer', loader: () => import('./grades/surface-area-volume').then(m => m.parts[2]) },
+      { title: 'Surface Area and Volume in Real Life 🏠', loader: () => import('./grades/surface-area-volume').then(m => m.parts[3]) },
+      { title: 'Review: Everything in One Place 🌟', loader: () => import('./grades/surface-area-volume').then(m => m.parts[4]) },
+    ]
+  },
+  'systems-linear-equations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '📈 Systems of Linear Equations', loader: () => import('./grades/systems-linear-equations').then(m => m.parts[0]) },
+      { title: '🛠️ Worked Example: Solve by Graphing', loader: () => import('./grades/systems-linear-equations').then(m => m.parts[1]) },
+      { title: 'Guided Practice', loader: () => import('./grades/systems-linear-equations').then(m => m.parts[2]) },
+      { title: '🌎 Real-World Systems: Comparing Two Plans', loader: () => import('./grades/systems-linear-equations').then(m => m.parts[3]) },
+      { title: '🧾 Quick Review', loader: () => import('./grades/systems-linear-equations').then(m => m.parts[4]) },
+    ]
+  },
+  'two-step-equations-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Two-Step Equation? 🧩', loader: () => import('./grades/two-step-equations-grade8').then(m => m.parts[0]) },
+      { title: 'Worked Example 1: $3x + 5 = 17$ ✏️', loader: () => import('./grades/two-step-equations-grade8').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Solution', loader: () => import('./grades/two-step-equations-grade8').then(m => m.parts[2]) },
+      { title: 'Two-Step Equations in Real Life 🌎', loader: () => import('./grades/two-step-equations-grade8').then(m => m.parts[3]) },
+      { title: 'Putting It All Together 🏁', loader: () => import('./grades/two-step-equations-grade8').then(m => m.parts[4]) },
+    ]
+  },
+  'understanding-decimals-grade4': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Are Decimals? 🔢', loader: () => import('./grades/understanding-decimals-grade4').then(m => m.parts[0]) },
+      { title: 'Worked Example: Naming Each Digit', loader: () => import('./grades/understanding-decimals-grade4').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Best Answer 🧠', loader: () => import('./grades/understanding-decimals-grade4').then(m => m.parts[2]) },
+      { title: 'Decimals in Real Life: Money 💵', loader: () => import('./grades/understanding-decimals-grade4').then(m => m.parts[3]) },
+      { title: 'Review: Everything You Learned 🌟', loader: () => import('./grades/understanding-decimals-grade4').then(m => m.parts[4]) },
+    ]
+  },
+  'understanding-fractions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🍕 Understanding Fractions', loader: () => import('./grades/understanding-fractions').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples: Reading & Classifying Fractions', loader: () => import('./grades/understanding-fractions').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Compare & Classify', loader: () => import('./grades/understanding-fractions').then(m => m.parts[2]) },
+      { title: '🌍 Fractions in Real Life', loader: () => import('./grades/understanding-fractions').then(m => m.parts[3]) },
+      { title: 'Review: Everything About Fractions', loader: () => import('./grades/understanding-fractions').then(m => m.parts[4]) },
+    ]
+  },
+  'understanding-integers-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🌡️ Understanding Integers', loader: () => import('./grades/understanding-integers-grade6').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/understanding-integers-grade6').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/understanding-integers-grade6').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/understanding-integers-grade6').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/understanding-integers-grade6').then(m => m.parts[4]) },
+    ]
+  },
+  'unit-rates-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '🚗 Unit Rates', loader: () => import('./grades/unit-rates-grade6').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/unit-rates-grade6').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/unit-rates-grade6').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/unit-rates-grade6').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/unit-rates-grade6').then(m => m.parts[4]) },
+    ]
+  },
+  'volume-cylinders-cones-spheres': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is Volume? 🧊', loader: () => import('./grades/volume-cylinders-cones-spheres').then(m => m.parts[0]) },
+      { title: 'Worked Example: A Water Tank 💧', loader: () => import('./grades/volume-cylinders-cones-spheres').then(m => m.parts[1]) },
+      { title: 'Guided Practice: Choose the Answer', loader: () => import('./grades/volume-cylinders-cones-spheres').then(m => m.parts[2]) },
+      { title: 'Volume in the Real World 🌍', loader: () => import('./grades/volume-cylinders-cones-spheres').then(m => m.parts[3]) },
+      { title: 'Summary: All Three Formulas 🎓', loader: () => import('./grades/volume-cylinders-cones-spheres').then(m => m.parts[4]) },
+    ]
+  },
+  'volume-rectangular-prisms-grade5': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '📦 Volume of Rectangular Prisms', loader: () => import('./grades/volume-rectangular-prisms-grade5').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/volume-rectangular-prisms-grade5').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/volume-rectangular-prisms-grade5').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/volume-rectangular-prisms-grade5').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/volume-rectangular-prisms-grade5').then(m => m.parts[4]) },
+    ]
+  },
+  'volume-rectangular-prisms-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '📦 Volume of Rectangular Prisms', loader: () => import('./grades/volume-rectangular-prisms-grade6').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/volume-rectangular-prisms-grade6').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/volume-rectangular-prisms-grade6').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/volume-rectangular-prisms-grade6').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/volume-rectangular-prisms-grade6').then(m => m.parts[4]) },
+    ]
+  },
+  'whole-number-operations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: '➕ Whole Number Operations', loader: () => import('./grades/whole-number-operations').then(m => m.parts[0]) },
+      { title: '📝 Worked Examples', loader: () => import('./grades/whole-number-operations').then(m => m.parts[1]) },
+      { title: '🧭 Guided Practice', loader: () => import('./grades/whole-number-operations').then(m => m.parts[2]) },
+      { title: '🌍 Application & Word Problems', loader: () => import('./grades/whole-number-operations').then(m => m.parts[3]) },
+      { title: 'Review & Challenge', loader: () => import('./grades/whole-number-operations').then(m => m.parts[4]) },
+    ]
+  },
+  'working-with-decimals': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Are Decimals? 🔢', loader: () => import('./grades/working-with-decimals').then(m => m.parts[0]) },
+      { title: 'Adding & Subtracting, Step by Step ➕➖', loader: () => import('./grades/working-with-decimals').then(m => m.parts[1]) },
+      { title: 'Mixed Practice', loader: () => import('./grades/working-with-decimals').then(m => m.parts[2]) },
+      { title: 'Decimals in the Real World 🌎', loader: () => import('./grades/working-with-decimals').then(m => m.parts[3]) },
+      { title: 'Decimal Skills Summary', loader: () => import('./grades/working-with-decimals').then(m => m.parts[4]) },
+    ]
+  },
+  // __GRADE_LESSONS_END__
   'the-unit-circle': {
     completionDestination: 'competitive',
     practiceModeParts: [1, 2],
