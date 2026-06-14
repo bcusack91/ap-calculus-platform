@@ -1,5 +1,11 @@
 # Study Mondo — Manual Review Checklist
 
+> ## ⏳ Revisit this week (raised Jun 14, 2026)
+> **Decide on the two Premium perks that aren't actually deliverable yet** — until then, `/pricing` advertises features that don't fully work:
+> - [ ] **AI tutor** is serving canned template text, *not real AI* (no `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` configured). → Either wire it to **Claude Haiku 4.5** (~$1 per 1,000 explanations — pennies/month at current scale; add `ANTHROPIC_API_KEY` + a daily cap for premium accounts), **or** pull "AI tutor" off the pricing page until it's built.
+> - [ ] **Advanced analytics** (Six Sigma dashboard) isn't mounted on any page. → Either wire it into `/dashboard` (the premium gate is already in place), **or** pull that line off pricing.
+> - Cost to make both real is trivial; the work is just the wiring. Claude is happy to do either on request.
+
 A tick-through guide for spot-checking the site after the recent changes. Work top-to-bottom; you don't need to check every course — **sample by template** (one of each kind covers the rest).
 
 ## How to use this
