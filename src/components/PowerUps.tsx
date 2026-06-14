@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback } from 'react'
 
 /**
  * Competitive cosmetics ("power-ups" — kept that export name for callers).
@@ -47,13 +47,9 @@ function load(): CosmeticState {
 }
 
 export function useCosmetics() {
-  const [state, setState] = useState<CosmeticState>({ owned: [], equipped: null, spent: 0 })
-  useEffect(() => { setState(load()) }, [])
-
-  const save = useCallback((next: CosmeticState) => {
-    setState(next)
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
-  }, [])
+  // Lazy init reads localStorage on the client; SSR-safe (load() returns the
+  // default when window is undefined).
+  const [state, setState] = useState<CosmeticState>(load)
 
   const purchase = useCallback((id: string, availableXP: number): boolean => {
     const c = COSMETICS.find((x) => x.id === id)
@@ -75,7 +71,7 @@ export function useCosmetics() {
     })
   }, [])
 
-  return { ...state, save, purchase, equip }
+  return { ...state, purchase, equip }
 }
 
 const rarityChip: Record<Cosmetic['rarity'], string> = {
