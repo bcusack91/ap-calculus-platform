@@ -36,11 +36,22 @@ export async function GET(request: NextRequest) {
     let dataPoints: PerformanceDataPoint[]
 
     if (performanceRecords.length > 0) {
+      // General quiz metrics store the topic slug in `problemType`; map those to
+      // readable topic titles so the per-type breakdown reads as a per-topic
+      // breakdown. Legacy factoring values (e.g. 'gcf') have no topic and pass
+      // through unchanged.
+      const distinctTypes = Array.from(new Set(performanceRecords.map(r => r.problemType)))
+      const topics = await prisma.topic.findMany({
+        where: { slug: { in: distinctTypes } },
+        select: { slug: true, title: true },
+      })
+      const titleBySlug = new Map(topics.map(t => [t.slug, t.title]))
+
       // Use real data
       dataPoints = performanceRecords.map(record => ({
         timestamp: record.timestamp,
         isCorrect: record.isCorrect,
-        problemType: record.problemType,
+        problemType: titleBySlug.get(record.problemType) || record.problemType,
         timeToAnswer: record.timeToAnswer,
         attemptNumber: record.attemptNumber,
         errorType: record.errorType || undefined,

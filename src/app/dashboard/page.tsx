@@ -26,6 +26,7 @@ import { SeasonRankings } from '@/components/SeasonRankings'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import { StudyHeatmap } from '@/components/StudyHeatmap'
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
+import SixSigmaDashboard from '@/components/SixSigmaDashboard'
 
 const FlashcardStudySession = dynamic(
   () => import('@/components/FlashcardStudySession'),
@@ -827,6 +828,15 @@ function DashboardContent() {
             <PaidAnalyticsGate label="Peer comparison">
               <ProgressComparison />
             </PaidAnalyticsGate>
+
+            {/* Six Sigma performance analytics — advanced, paid (component self-gates).
+                topicSlug="all" aggregates the user's results across every topic. */}
+            {session?.user?.id && (
+              <div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-3">📈 Performance Analytics</h3>
+                <SixSigmaDashboard topicSlug="all" userId={session.user.id} />
+              </div>
+            )}
 
             {/* Study Stats */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">

@@ -198,6 +198,33 @@ export async function POST(request: Request) {
       }
     })
 
+    // Record per-question performance metrics that feed the Six Sigma analytics
+    // dashboard. Best-effort and OUTSIDE the transaction: a metrics failure must
+    // never roll back (or fail) the quiz submission. problemType = topicSlug so the
+    // per-type breakdown reads as a per-topic breakdown in the aggregate view.
+    try {
+      const scored = (answers || []).filter((a) => typeof a.correct === 'boolean')
+      if (scored.length > 0) {
+        const perQuestionMs = timeSpent > 0 ? Math.round((timeSpent * 1000) / scored.length) : 0
+        await prisma.factoringPerformanceMetrics.createMany({
+          data: scored.map((a) => ({
+            userId,
+            sessionId: result.attempt.id,
+            problemType: topicSlug,
+            lessonPart: typeof variant === 'number' ? variant : 1,
+            isCorrect: a.correct as boolean,
+            attemptNumber: 1,
+            timeToAnswer: perQuestionMs,
+            hintsUsed: 0,
+            problemDifficulty: 'MEDIUM',
+            problemComplexity: 1,
+          })),
+        })
+      }
+    } catch (metricsError) {
+      console.error('exit-quiz metrics write failed (non-fatal):', metricsError)
+    }
+
     return NextResponse.json(result)
 
   } catch (error) {
