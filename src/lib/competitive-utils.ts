@@ -1,47 +1,55 @@
 // Utility functions for competitive match gameplay
 
-import { getQuestionSet } from '@/data/competitive-questions/reflection-refraction-bank'
-import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives-bank'
-import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
-import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
-import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
-import { getAlgebra1Questions } from '@/data/competitive-questions/algebra1-bank'
-import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/competitive-questions/algebra2-bank'
-import { getNegativeNumbersQuestions } from '@/data/competitive-questions/negative-numbers-bank'
-import { getSatPunctuationQuestions } from '@/data/competitive-questions/sat-punctuation-bank'
-import { getSatPunctuationGeneralQuestions } from '@/data/competitive-questions/sat-punctuation-general-bank'
-import { getParametricQuestions } from '@/data/competitive-questions/parametric-equations-bank'
-import { getVectorQuestions } from '@/data/competitive-questions/vectors-bank'
-import { getPolarQuestions } from '@/data/competitive-questions/polar-coordinates-bank'
-import { getApBiologyQuestions } from '@/data/competitive-questions/ap-biology-bank'
-import { getApChemistryQuestions } from '@/data/competitive-questions/ap-chemistry-bank'
-import { getApPsychologyQuestions } from '@/data/competitive-questions/ap-psychology-bank'
-import { getApStatisticsQuestions } from '@/data/competitive-questions/ap-statistics-bank'
-import { getApPhysics1Questions } from '@/data/competitive-questions/ap-physics1-bank'
-import { getSatMathQuestions } from '@/data/competitive-questions/sat-math-bank'
-import { getSatReadingQuestions } from '@/data/competitive-questions/sat-reading-bank'
-import { getActMathQuestions } from '@/data/competitive-questions/act-math-bank'
-import { getActScienceQuestions } from '@/data/competitive-questions/act-science-bank'
-import { getOChemQuestions } from '@/data/competitive-questions/ochem-bank'
-import { getPreCalcQuestions } from '@/data/competitive-questions/precalc-bank'
-import { getGeometryQuestions } from '@/data/competitive-questions/geometry-bank'
-import { getApCalculusQuestions } from '@/data/competitive-questions/ap-calculus-bank'
-import { getApPhysics2Questions } from '@/data/competitive-questions/ap-physics2-bank'
-import { getApPhysicsCMechQuestions } from '@/data/competitive-questions/ap-physics-c-mech-bank'
-import { getApPhysicsCEMQuestions } from '@/data/competitive-questions/ap-physics-c-em-bank'
-import { getApCalculusBCQuestions } from '@/data/competitive-questions/ap-calculus-bc-bank'
-import { getApHumanGeoQuestions } from '@/data/competitive-questions/ap-human-geo-bank'
-import { getApUSGovQuestions } from '@/data/competitive-questions/ap-us-gov-bank'
-import { getApWorldHistoryQuestions } from '@/data/competitive-questions/ap-world-history-bank'
-import { getApUSHistoryQuestions } from '@/data/competitive-questions/ap-us-history-bank'
-import { getApMacroQuestions } from '@/data/competitive-questions/ap-macro-bank'
-import { getApMicroQuestions } from '@/data/competitive-questions/ap-micro-bank'
-import { getApAASQuestions } from '@/data/competitive-questions/ap-african-american-studies-bank'
-import { getApEngLitQuestions } from '@/data/competitive-questions/ap-english-lit-bank'
-import { getApEngLangQuestions } from '@/data/competitive-questions/ap-english-lang-bank'
-import { getApAPESQuestions } from '@/data/competitive-questions/ap-enviro-bank'
-import { getApCSAQuestions } from '@/data/competitive-questions/ap-csa-bank'
-import { getApCSPQuestions } from '@/data/competitive-questions/ap-csp-bank'
+// Lazily load each question bank so a given competitive API route only pulls
+// in the ~50KB bank it actually needs at runtime, instead of webpack bundling
+// all ~2.3MB of banks into every route's cold-start graph. Each wrapper keeps
+// the SAME name as the original named export so the dispatch maps and call
+// sites resolve unchanged — callers just `await` the now-async getter.
+type BankQuestion = { topicSlug?: string; [key: string]: unknown }
+type AnyGetter = (...a: unknown[]) => BankQuestion[]
+async function getQuestionSet(...args: unknown[]) { const m = await import('@/data/competitive-questions/reflection-refraction-bank'); return (m.getQuestionSet as unknown as AnyGetter)(...args) }
+async function getDerivativeQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/derivatives-bank'); return (m.getDerivativeQuestions as unknown as AnyGetter)(...args) }
+async function getLimitQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/limits-bank'); return (m.getLimitQuestions as unknown as AnyGetter)(...args) }
+async function getIntegralQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/integrals-bank'); return (m.getIntegralQuestions as unknown as AnyGetter)(...args) }
+async function getAlgebraQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/algebra-bank'); return (m.getAlgebraQuestions as unknown as AnyGetter)(...args) }
+async function getAlgebra1Questions(...args: unknown[]) { const m = await import('@/data/competitive-questions/algebra1-bank'); return (m.getAlgebra1Questions as unknown as AnyGetter)(...args) }
+async function getAlgebra2Questions(...args: unknown[]) { const m = await import('@/data/competitive-questions/algebra2-bank'); return (m.getAlgebra2Questions as unknown as AnyGetter)(...args) }
+async function getUnlockedAlgebra2Subtopics(...args: unknown[]) { const m = await import('@/data/competitive-questions/algebra2-bank'); return (m.getUnlockedAlgebra2Subtopics as unknown as AnyGetter)(...args) }
+async function getNegativeNumbersQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/negative-numbers-bank'); return (m.getNegativeNumbersQuestions as unknown as AnyGetter)(...args) }
+async function getSatPunctuationQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/sat-punctuation-bank'); return (m.getSatPunctuationQuestions as unknown as AnyGetter)(...args) }
+async function getSatPunctuationGeneralQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/sat-punctuation-general-bank'); return (m.getSatPunctuationGeneralQuestions as unknown as AnyGetter)(...args) }
+async function getParametricQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/parametric-equations-bank'); return (m.getParametricQuestions as unknown as AnyGetter)(...args) }
+async function getVectorQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/vectors-bank'); return (m.getVectorQuestions as unknown as AnyGetter)(...args) }
+async function getPolarQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/polar-coordinates-bank'); return (m.getPolarQuestions as unknown as AnyGetter)(...args) }
+async function getApBiologyQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-biology-bank'); return (m.getApBiologyQuestions as unknown as AnyGetter)(...args) }
+async function getApChemistryQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-chemistry-bank'); return (m.getApChemistryQuestions as unknown as AnyGetter)(...args) }
+async function getApPsychologyQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-psychology-bank'); return (m.getApPsychologyQuestions as unknown as AnyGetter)(...args) }
+async function getApStatisticsQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-statistics-bank'); return (m.getApStatisticsQuestions as unknown as AnyGetter)(...args) }
+async function getApPhysics1Questions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-physics1-bank'); return (m.getApPhysics1Questions as unknown as AnyGetter)(...args) }
+async function getSatMathQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/sat-math-bank'); return (m.getSatMathQuestions as unknown as AnyGetter)(...args) }
+async function getSatReadingQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/sat-reading-bank'); return (m.getSatReadingQuestions as unknown as AnyGetter)(...args) }
+async function getActMathQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/act-math-bank'); return (m.getActMathQuestions as unknown as AnyGetter)(...args) }
+async function getActScienceQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/act-science-bank'); return (m.getActScienceQuestions as unknown as AnyGetter)(...args) }
+async function getOChemQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ochem-bank'); return (m.getOChemQuestions as unknown as AnyGetter)(...args) }
+async function getPreCalcQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/precalc-bank'); return (m.getPreCalcQuestions as unknown as AnyGetter)(...args) }
+async function getGeometryQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/geometry-bank'); return (m.getGeometryQuestions as unknown as AnyGetter)(...args) }
+async function getApCalculusQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-calculus-bank'); return (m.getApCalculusQuestions as unknown as AnyGetter)(...args) }
+async function getApPhysics2Questions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-physics2-bank'); return (m.getApPhysics2Questions as unknown as AnyGetter)(...args) }
+async function getApPhysicsCMechQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-physics-c-mech-bank'); return (m.getApPhysicsCMechQuestions as unknown as AnyGetter)(...args) }
+async function getApPhysicsCEMQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-physics-c-em-bank'); return (m.getApPhysicsCEMQuestions as unknown as AnyGetter)(...args) }
+async function getApCalculusBCQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-calculus-bc-bank'); return (m.getApCalculusBCQuestions as unknown as AnyGetter)(...args) }
+async function getApHumanGeoQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-human-geo-bank'); return (m.getApHumanGeoQuestions as unknown as AnyGetter)(...args) }
+async function getApUSGovQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-us-gov-bank'); return (m.getApUSGovQuestions as unknown as AnyGetter)(...args) }
+async function getApWorldHistoryQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-world-history-bank'); return (m.getApWorldHistoryQuestions as unknown as AnyGetter)(...args) }
+async function getApUSHistoryQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-us-history-bank'); return (m.getApUSHistoryQuestions as unknown as AnyGetter)(...args) }
+async function getApMacroQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-macro-bank'); return (m.getApMacroQuestions as unknown as AnyGetter)(...args) }
+async function getApMicroQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-micro-bank'); return (m.getApMicroQuestions as unknown as AnyGetter)(...args) }
+async function getApAASQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-african-american-studies-bank'); return (m.getApAASQuestions as unknown as AnyGetter)(...args) }
+async function getApEngLitQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-english-lit-bank'); return (m.getApEngLitQuestions as unknown as AnyGetter)(...args) }
+async function getApEngLangQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-english-lang-bank'); return (m.getApEngLangQuestions as unknown as AnyGetter)(...args) }
+async function getApAPESQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-enviro-bank'); return (m.getApAPESQuestions as unknown as AnyGetter)(...args) }
+async function getApCSAQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-csa-bank'); return (m.getApCSAQuestions as unknown as AnyGetter)(...args) }
+async function getApCSPQuestions(...args: unknown[]) { const m = await import('@/data/competitive-questions/ap-csp-bank'); return (m.getApCSPQuestions as unknown as AnyGetter)(...args) }
 
 interface UnitCirclePosition {
   angle: number;
@@ -802,21 +810,21 @@ const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
  * Course bank functions used by the generic sub-topic dispatcher. Each takes
  * (count, topicSlug?) and returns questions optionally filtered by topicSlug.
  */
-const COURSE_SUB_TOPIC_BANKS: Record<string, (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>> = {
-  'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-us-history': getApUSHistoryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-us-gov': getApUSGovQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-world-history': getApWorldHistoryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-human-geo': getApHumanGeoQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-enviro': getApAPESQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-english-lang': getApEngLangQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-english-lit': getApEngLitQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-micro': getApMicroQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-macro': getApMacroQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-african-american-studies': getApAASQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
-  'ap-csp': getApCSPQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug?: string } & OptionQuestion>,
+const COURSE_SUB_TOPIC_BANKS: Record<string, (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>> = {
+  'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-us-history': getApUSHistoryQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-us-gov': getApUSGovQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-world-history': getApWorldHistoryQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-human-geo': getApHumanGeoQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-enviro': getApAPESQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-english-lang': getApEngLangQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-english-lit': getApEngLitQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-micro': getApMicroQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-macro': getApMacroQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-african-american-studies': getApAASQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
+  'ap-csp': getApCSPQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>,
 }
 
 /**
@@ -824,7 +832,7 @@ const COURSE_SUB_TOPIC_BANKS: Record<string, (count: number, topicSlug?: string)
  * NO per-question topicSlug field (psychology, statistics), the lesson slug
  * routes to the whole-bank random-sample getter.
  */
-const LESSON_TO_FULL_COURSE_BANK: Record<string, (count?: number) => OptionQuestion[]> = {}
+const LESSON_TO_FULL_COURSE_BANK: Record<string, (count?: number) => Promise<OptionQuestion[]>> = {}
 const PSYCHOLOGY_LESSON_SLUGS = [
   'history-approaches-psychology', 'biological-bases-brain', 'genetics-behavior',
   'sensation-sensory-processing', 'perception-attention', 'classical-conditioning',
@@ -850,8 +858,8 @@ const STATISTICS_LESSON_SLUGS = [
   'sampling-distribution-sample-mean', 'sampling-distribution-sample-proportion',
   'two-sample-proportions', 'two-sample-means', 'chi-square-independence-homogeneity',
 ]
-for (const s of PSYCHOLOGY_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApPsychologyQuestions as unknown as (count?: number) => OptionQuestion[]
-for (const s of STATISTICS_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApStatisticsQuestions as unknown as (count?: number) => OptionQuestion[]
+for (const s of PSYCHOLOGY_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApPsychologyQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>
+for (const s of STATISTICS_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApStatisticsQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>
 
 /**
  * Lesson slugs that are course/unit "buckets" rather than a single sub-topic.
@@ -882,7 +890,7 @@ const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc
   'calcbc-sequences-series': 'ap-calculus-bc',
 }
 
-export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): MatchQuestion[] {
+export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): Promise<MatchQuestion[]> {
   // Resolve a possibly-aliased lesson slug into an actual bank topic slug.
   // Lesson slugs (from the curriculum DB) often differ from competitive bank
   // topic slugs (e.g. lesson `linearization-differentials-calcab` → bank
@@ -905,7 +913,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     const bankFn = COURSE_SUB_TOPIC_BANKS[courseKey]
     if (bankFn) {
       const bankSlug = LESSON_TO_BANK_TOPIC[topicSlug] ?? topicSlug
-      const filtered = bankFn(totalQuestions, bankSlug)
+      const filtered = await bankFn(totalQuestions, bankSlug)
       if (filtered.length > 0) {
         return (filtered as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
           const shuffled = shuffleOptions(q)
@@ -929,7 +937,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   // random sample from the whole course bank.
   if (topicSlug && LESSON_TO_FULL_COURSE_BANK[topicSlug]) {
     const bankFn = LESSON_TO_FULL_COURSE_BANK[topicSlug]
-    const qs = bankFn(totalQuestions)
+    const qs = await bankFn(totalQuestions)
     if (qs.length > 0) {
       return qs.map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -954,7 +962,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     const groupBank = groupingCourseKey === 'ap-calculus-ab'
       ? getApCalculusQuestions
       : getApCalculusBCQuestions
-    const groupQuestions = groupBank(totalQuestions)
+    const groupQuestions = await groupBank(totalQuestions)
     if (groupQuestions.length > 0) {
       return (groupQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -973,12 +981,12 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
   // If topic is reflection-refraction, use that question bank
   if (topicSlug === 'reflection-refraction') {
-    const questions = getQuestionSet(totalQuestions)
+    const questions = await getQuestionSet(totalQuestions)
     return questions.map((q, i) => {
       const serializableQuestion = Object.fromEntries(
         Object.entries(q as unknown as Record<string, unknown>).filter(([key]) => key !== 'generateQuestion')
       ) as { options: string[]; [key: string]: unknown }
-      const shuffled = shuffleOptions({ options: serializableQuestion.options, correctAnswer: q.correctAnswer })
+      const shuffled = shuffleOptions({ options: serializableQuestion.options, correctAnswer: q.correctAnswer as number })
       return {
         ...serializableQuestion,
         id: i,
@@ -992,7 +1000,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Chemistry sub-topic routing: filter questions to specific topic
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-chemistry') {
-    const apChemTopicQuestions = getApChemistryQuestions(totalQuestions, resolvedTopicSlug)
+    const apChemTopicQuestions = await getApChemistryQuestions(totalQuestions, resolvedTopicSlug)
     // Only use filtered results if the bank actually has questions for this topic
     if (apChemTopicQuestions.length > 0 && apChemTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apChemTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
@@ -1013,7 +1021,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Physics 1 sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics1') {
-    const apPhysicsTopicQuestions = getApPhysics1Questions(totalQuestions, resolvedTopicSlug)
+    const apPhysicsTopicQuestions = await getApPhysics1Questions(totalQuestions, resolvedTopicSlug)
     if (apPhysicsTopicQuestions.length > 0 && apPhysicsTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysicsTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1033,7 +1041,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Biology sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-biology') {
-    const apBioTopicQuestions = getApBiologyQuestions(totalQuestions, resolvedTopicSlug)
+    const apBioTopicQuestions = await getApBiologyQuestions(totalQuestions, resolvedTopicSlug)
     if (apBioTopicQuestions.length > 0 && apBioTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apBioTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1053,7 +1061,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // Algebra 1 sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'algebra-1' && resolvedTopicSlug !== 'algebra1') {
-    const algebra1TopicQuestions = getAlgebra1Questions(totalQuestions, resolvedTopicSlug)
+    const algebra1TopicQuestions = await getAlgebra1Questions(totalQuestions, resolvedTopicSlug)
     if (algebra1TopicQuestions.length > 0 && algebra1TopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (algebra1TopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1073,7 +1081,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Precalculus sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'precalc' && resolvedTopicSlug !== 'ap-precalculus') {
-    const precalcTopicQuestions = getPreCalcQuestions(totalQuestions, resolvedTopicSlug)
+    const precalcTopicQuestions = await getPreCalcQuestions(totalQuestions, resolvedTopicSlug)
     if (precalcTopicQuestions.length > 0 && precalcTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (precalcTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1093,7 +1101,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Calculus AB sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-calculus-ab') {
-    const apCalcTopicQuestions = getApCalculusQuestions(totalQuestions, resolvedTopicSlug)
+    const apCalcTopicQuestions = await getApCalculusQuestions(totalQuestions, resolvedTopicSlug)
     if (apCalcTopicQuestions.length > 0 && apCalcTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apCalcTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1113,7 +1121,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Physics 2 sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics2') {
-    const apPhysics2TopicQuestions = getApPhysics2Questions(totalQuestions, resolvedTopicSlug)
+    const apPhysics2TopicQuestions = await getApPhysics2Questions(totalQuestions, resolvedTopicSlug)
     if (apPhysics2TopicQuestions.length > 0 && apPhysics2TopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysics2TopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1133,7 +1141,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Physics C: Mechanics sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics-c-mech') {
-    const apPhysicsCMechTopicQuestions = getApPhysicsCMechQuestions(totalQuestions, resolvedTopicSlug)
+    const apPhysicsCMechTopicQuestions = await getApPhysicsCMechQuestions(totalQuestions, resolvedTopicSlug)
     if (apPhysicsCMechTopicQuestions.length > 0 && apPhysicsCMechTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysicsCMechTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1153,7 +1161,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Physics C: E&M sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-physics-c-em') {
-    const apPhysicsCEMTopicQuestions = getApPhysicsCEMQuestions(totalQuestions, resolvedTopicSlug)
+    const apPhysicsCEMTopicQuestions = await getApPhysicsCEMQuestions(totalQuestions, resolvedTopicSlug)
     if (apPhysicsCEMTopicQuestions.length > 0 && apPhysicsCEMTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apPhysicsCEMTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1173,7 +1181,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // AP Calculus BC sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-calculus-bc') {
-    const apCalcBCTopicQuestions = getApCalculusBCQuestions(totalQuestions, resolvedTopicSlug)
+    const apCalcBCTopicQuestions = await getApCalculusBCQuestions(totalQuestions, resolvedTopicSlug)
     if (apCalcBCTopicQuestions.length > 0 && apCalcBCTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (apCalcBCTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1193,7 +1201,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // Geometry sub-topic routing
   if (resolvedTopicSlug && resolvedTopicSlug !== 'geometry') {
-    const geometryTopicQuestions = getGeometryQuestions(totalQuestions, resolvedTopicSlug)
+    const geometryTopicQuestions = await getGeometryQuestions(totalQuestions, resolvedTopicSlug)
     if (geometryTopicQuestions.length > 0 && geometryTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (geometryTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1212,69 +1220,69 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   // Multiple-choice question bank topics
-  const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
-    'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
-    'limits': getLimitQuestions as unknown as (count?: number) => OptionQuestion[],
-    'integrals': getIntegralQuestions as unknown as (count?: number) => OptionQuestion[],
-    'algebra': getAlgebraQuestions as unknown as (count?: number) => OptionQuestion[],
-    'algebra-1': getAlgebra1Questions as unknown as (count?: number) => OptionQuestion[],
-    'negative-numbers-grade6': getNegativeNumbersQuestions as unknown as (count?: number) => OptionQuestion[],
-    'sat-punctuation-commas-semicolons': getSatPunctuationQuestions as unknown as (count?: number) => OptionQuestion[],
-    'sat-punctuation': getSatPunctuationGeneralQuestions as unknown as (count?: number) => OptionQuestion[],
-    'parametric-equations': getParametricQuestions as unknown as (count?: number) => OptionQuestion[],
-    'vectors': getVectorQuestions as unknown as (count?: number) => OptionQuestion[],
-    'polar-coordinates': getPolarQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-biology': getApBiologyQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-chemistry': getApChemistryQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-psychology': getApPsychologyQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-statistics': getApStatisticsQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-physics1': getApPhysics1Questions as unknown as (count?: number) => OptionQuestion[],
-    'sat-math': getSatMathQuestions as unknown as (count?: number) => OptionQuestion[],
-    'sat-reading': getSatReadingQuestions as unknown as (count?: number) => OptionQuestion[],
-    'act-math': getActMathQuestions as unknown as (count?: number) => OptionQuestion[],
-    'act-science': getActScienceQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ochem': getOChemQuestions as unknown as (count?: number) => OptionQuestion[],
-    'precalc': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
-    'geometry': getGeometryQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-calculus-ab': getApCalculusQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-physics2': getApPhysics2Questions as unknown as (count?: number) => OptionQuestion[],
-    'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-precalculus': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-human-geo': getApHumanGeoQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-us-gov': getApUSGovQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-world-history': getApWorldHistoryQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-us-history': getApUSHistoryQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-macro': getApMacroQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-micro': getApMicroQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-african-american-studies': getApAASQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-english-lit': getApEngLitQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-english-lang': getApEngLangQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-enviro': getApAPESQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-csa': getApCSAQuestions as unknown as (count?: number) => OptionQuestion[],
-    'ap-csp': getApCSPQuestions as unknown as (count?: number) => OptionQuestion[],
+  const mcqBanks: Record<string, (count?: number) => Promise<OptionQuestion[]>> = {
+    'derivatives': getDerivativeQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'limits': getLimitQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'integrals': getIntegralQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'algebra': getAlgebraQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'algebra-1': getAlgebra1Questions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'negative-numbers-grade6': getNegativeNumbersQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'sat-punctuation-commas-semicolons': getSatPunctuationQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'sat-punctuation': getSatPunctuationGeneralQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'parametric-equations': getParametricQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'vectors': getVectorQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'polar-coordinates': getPolarQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-biology': getApBiologyQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-chemistry': getApChemistryQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-psychology': getApPsychologyQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-statistics': getApStatisticsQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-physics1': getApPhysics1Questions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'sat-math': getSatMathQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'sat-reading': getSatReadingQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'act-math': getActMathQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'act-science': getActScienceQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ochem': getOChemQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'precalc': getPreCalcQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'geometry': getGeometryQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-calculus-ab': getApCalculusQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-physics2': getApPhysics2Questions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-precalculus': getPreCalcQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-human-geo': getApHumanGeoQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-us-gov': getApUSGovQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-world-history': getApWorldHistoryQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-us-history': getApUSHistoryQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-macro': getApMacroQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-micro': getApMicroQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-african-american-studies': getApAASQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-english-lit': getApEngLitQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-english-lang': getApEngLangQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-enviro': getApAPESQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-csa': getApCSAQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
+    'ap-csp': getApCSPQuestions as unknown as (count?: number) => Promise<OptionQuestion[]>,
   }
 
   // For course-level topics (standard mode, no sub-topic selected), filter to completed topics only
-  const courseTopicBanks: Record<string, (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>> = {
-    'ap-chemistry': getApChemistryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-physics1': getApPhysics1Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'precalc': getPreCalcQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-calculus-ab': getApCalculusQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-physics2': getApPhysics2Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'algebra-1': getAlgebra1Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
-    'geometry': getGeometryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+  const courseTopicBanks: Record<string, (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>> = {
+    'ap-chemistry': getApChemistryQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-physics1': getApPhysics1Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'precalc': getPreCalcQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-calculus-ab': getApCalculusQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-physics2': getApPhysics2Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'algebra-1': getAlgebra1Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'geometry': getGeometryQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
   }
 
   if (topicSlug && topicSlug in courseTopicBanks && completedTopics && completedTopics.length > 0) {
     // Standard mode: only include questions from topics both students have completed
     const bankFn = courseTopicBanks[topicSlug]
-    const allCourseQuestions = bankFn(999) // get all questions
+    const allCourseQuestions = await bankFn(999) // get all questions
     const filteredQuestions = allCourseQuestions.filter(q => completedTopics.includes(q.topicSlug))
     if (filteredQuestions.length > 0) {
       const shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5)
@@ -1296,7 +1304,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
-    const questions = mcqBanks[topicSlug](totalQuestions)
+    const questions = await mcqBanks[topicSlug](totalQuestions)
     return questions.map((q: OptionQuestion, i: number) => {
       const shuffled = shuffleOptions(q)
       return {
@@ -1314,8 +1322,8 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // Algebra 2: filter questions to only subtopics the student has completed
   if (topicSlug === 'algebra2') {
-    const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
-    const questions = getAlgebra2Questions(totalQuestions, allowedSubtopics)
+    const allowedSubtopics = completedTopics ? await getUnlockedAlgebra2Subtopics(completedTopics) : undefined
+    const questions = await getAlgebra2Questions(totalQuestions, allowedSubtopics)
     return (questions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
       const shuffled = shuffleOptions(q)
       return {
@@ -1333,7 +1341,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 
   // If cumulative, get mixed questions from all available topics
   if (topicSlug === 'cumulative') {
-    return generateCumulativeQuestions(totalQuestions, completedTopics)
+    return await generateCumulativeQuestions(totalQuestions, completedTopics)
   }
 
   // If a topicSlug was provided but matched none of the routes/banks above,
@@ -1341,7 +1349,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   // click-the-angle drills (which leaked unit-circle questions into AP Calc
   // and other courses whose lesson slugs don't match bank topic slugs).
   if (topicSlug && topicSlug !== 'unit-circle') {
-    return generateCumulativeQuestions(totalQuestions, completedTopics)
+    return await generateCumulativeQuestions(totalQuestions, completedTopics)
   }
 
   // Default (no topicSlug, or explicit 'unit-circle'): unit circle questions
@@ -1401,14 +1409,14 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
 /**
  * Generate cumulative questions from multiple topics
  */
-function generateCumulativeQuestions(totalQuestions: number, completedTopics?: string[]): MatchQuestion[] {
+async function generateCumulativeQuestions(totalQuestions: number, completedTopics?: string[]): Promise<MatchQuestion[]> {
   const questions: MatchQuestion[] = []
 
   // Gather questions from all MCQ banks
   const allBankQuestions: MatchQuestion[] = []
 
   // Reflection-refraction questions
-  const rrQuestions = getQuestionSet(2).map((q, i) => {
+  const rrQuestions = ((await getQuestionSet(2)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions({ options: (q as unknown as Record<string, unknown>).options as string[], correctAnswer: q.correctAnswer } as OptionQuestion)
     return {
       id: i,
@@ -1423,50 +1431,50 @@ function generateCumulativeQuestions(totalQuestions: number, completedTopics?: s
   allBankQuestions.push(...rrQuestions)
 
   // Derivatives
-  const dQuestions = getDerivativeQuestions(3).map((q, i) => {
+  const dQuestions = ((await getDerivativeQuestions(3)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...dQuestions)
 
   // Limits
-  const lQuestions = getLimitQuestions(3).map((q, i) => {
+  const lQuestions = ((await getLimitQuestions(3)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...lQuestions)
 
   // Integrals
-  const iQuestions = getIntegralQuestions(1).map((q, i) => {
+  const iQuestions = ((await getIntegralQuestions(1)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...iQuestions)
 
   // Algebra 2 — filtered to completed subtopics only
-  const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
-  const a2Questions = getAlgebra2Questions(1, allowedSubtopics).map((q, i) => {
+  const allowedSubtopics = completedTopics ? await getUnlockedAlgebra2Subtopics(completedTopics) : undefined
+  const a2Questions = ((await getAlgebra2Questions(1, allowedSubtopics)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...a2Questions)
 
   // Parametric equations
-  const paramQuestions = getParametricQuestions(1).map((q, i) => {
+  const paramQuestions = ((await getParametricQuestions(1)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...paramQuestions)
 
   // Vectors
-  const vecQuestions = getVectorQuestions(1).map((q, i) => {
+  const vecQuestions = ((await getVectorQuestions(1)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...vecQuestions)
 
   // Polar coordinates
-  const polarQuestions = getPolarQuestions(1).map((q, i) => {
+  const polarQuestions = ((await getPolarQuestions(1)) as unknown as OptionQuestion[]).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })

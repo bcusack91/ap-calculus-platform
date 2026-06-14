@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     const safeTimeLimit = Math.min(Math.max(Number(timeLimit) || 300, 60), 900)
 
     // Generate questions (same function used for live matches)
-    const questions = generateMatchQuestions(safeQuestionCount, topicSlug, [])
+    const questions = await generateMatchQuestions(safeQuestionCount, topicSlug, [])
 
     // Challenge expires in 7 days
     const expiresAt = new Date()

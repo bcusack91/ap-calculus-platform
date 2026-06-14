@@ -132,7 +132,7 @@ export async function POST(req: NextRequest) {
       // suspenders: scope the delete by id so it only removes the row we locked.)
       await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
 
-      const questions = generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,
@@ -323,7 +323,7 @@ export async function GET() {
       await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
       await tx.matchmakingQueue.deleteMany({ where: { id: entry.id } })
 
-      const questions = generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs)
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,

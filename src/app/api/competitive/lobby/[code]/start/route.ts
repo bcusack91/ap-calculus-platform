@@ -57,7 +57,7 @@ export async function POST(
   const guestMMR = lobby.guest.competitiveProfile?.overallMMR ?? 1000
 
   const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
-  const questions = generateMatchQuestions(questionCount, topicSlug, [])
+  const questions = await generateMatchQuestions(questionCount, topicSlug, [])
 
   const match = await prisma.competitiveMatch.create({
     data: {

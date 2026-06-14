@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
       const team1 = [allPlayers[0], allPlayers[3]] // highest + lowest
       const team2 = [allPlayers[1], allPlayers[2]] // 2nd + 3rd
 
-      const questions = generateMatchQuestions(15, topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
@@ -312,7 +312,7 @@ export async function GET() {
       const team1 = [allPlayers[0], allPlayers[3]]
       const team2 = [allPlayers[1], allPlayers[2]]
 
-      const questions = generateMatchQuestions(15, entry.topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(15, entry.topicSlug, completedTopicSlugs)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
