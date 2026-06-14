@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { renderRichText } from '@/lib/render-rich-text'
 
 interface SessionCard {
   id: string
@@ -225,9 +226,10 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         {card.topicTitle && (
           <p className="text-xs text-purple-600 dark:text-purple-400 mb-3 uppercase tracking-wider">{card.topicTitle}</p>
         )}
-        <p className="text-lg text-center text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap">
-          {flipped ? card.back : card.front}
-        </p>
+        <p
+          className="text-lg text-center text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap"
+          dangerouslySetInnerHTML={{ __html: renderRichText(flipped ? card.back : card.front) }}
+        />
         {!flipped && (
           <p className="text-sm text-gray-400 mt-4">
             Tap to reveal · <kbd className="bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded text-xs">Space</kbd>

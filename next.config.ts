@@ -257,6 +257,21 @@ const nextConfig: NextConfig = {
       { source: '/courses/ap-csp', destination: '/courses/ap-computer-science-principles', permanent: true },
     )
 
+    // Duplicate-content cleanup: the /ap-calc{ab,bc}-diagnostic routes only
+    // re-export the canonical /calc{ab,bc}-diagnostic pages, so collapse the
+    // aliases into the canonical URLs instead of serving identical content twice.
+    redirects.push(
+      { source: '/ap-calcab-diagnostic', destination: '/calcab-diagnostic', permanent: true },
+      { source: '/ap-calcbc-diagnostic', destination: '/calcbc-diagnostic', permanent: true },
+    )
+
+    // Duplicate-content cleanup: /ap-precalc-score-predictor duplicates
+    // /ap-precalculus-score-predictor (with a conflicting score scale). The
+    // -precalculus- route is canonical; redirect the abbreviated alias to it.
+    redirects.push(
+      { source: '/ap-precalc-score-predictor', destination: '/ap-precalculus-score-predictor', permanent: true },
+    )
+
     return redirects
   },
 };

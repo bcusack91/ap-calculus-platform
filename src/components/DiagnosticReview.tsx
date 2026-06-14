@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { InArticleAd } from '@/components/ad-banner'
 

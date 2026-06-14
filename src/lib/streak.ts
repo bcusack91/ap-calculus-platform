@@ -76,3 +76,38 @@ export async function touchDailyStreak(
       "updatedAt" = NOW() AT TIME ZONE 'UTC'
   `
 }
+
+/** Whole-calendar-day difference between two instants, measured in UTC. */
+function utcDayDiff(from: Date, to: Date): number {
+  const fromUtc = Date.UTC(from.getUTCFullYear(), from.getUTCMonth(), from.getUTCDate())
+  const toUtc = Date.UTC(to.getUTCFullYear(), to.getUTCMonth(), to.getUTCDate())
+  return Math.round((toUtc - fromUtc) / 86_400_000)
+}
+
+/**
+ * The streak to *display* for a stored DailyStreak row, given the current time.
+ *
+ * `DailyStreak.currentStreak` is only rewritten when a study activity fires
+ * (see touchDailyStreak). Between sessions the stored number goes stale: a user
+ * who lets a streak lapse keeps seeing the old value until their next session
+ * resets it. Reads must therefore decay it themselves, using the SAME UTC
+ * calendar-day definition and grace window as the write path:
+ *
+ *   - active today or yesterday (diff <= 1)          → still alive, show stored
+ *   - exactly 2 days ago AND stored streak >= 7      → "streak freeze" grace,
+ *                                                       still alive, show stored
+ *   - anything older (or missing lastActiveDate)     → broken, show 0
+ *
+ * @param row An object with the persisted streak fields (or null/undefined).
+ * @param now Reference time; defaults to new Date(). Pass-through aids testing.
+ */
+export function displayStreak(
+  row: { currentStreak: number; lastActiveDate: Date | null } | null | undefined,
+  now: Date = new Date()
+): number {
+  if (!row || row.currentStreak <= 0 || !row.lastActiveDate) return 0
+  const daysSince = utcDayDiff(new Date(row.lastActiveDate), now)
+  if (daysSince <= 1) return row.currentStreak
+  if (daysSince === 2 && row.currentStreak >= 7) return row.currentStreak
+  return 0
+}

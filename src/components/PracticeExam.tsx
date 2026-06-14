@@ -304,6 +304,18 @@ export default function PracticeExam(config: PracticeExamConfig) {
   if (phase === 'test' && questions.length > 0) {
     const q = questions[idx]
     const answered = answers.filter(a => a !== null).length
+    // Time-low state: pair the red color with a non-color (text/icon) cue,
+    // and announce remaining time at coarse intervals for screen readers.
+    const timeLow = time < 300
+    const minutesLeft = Math.ceil(time / 60)
+    // Message only changes at minute boundaries (and at 0), so the live region
+    // re-announces at most once per minute rather than every second.
+    const timeAnnouncement =
+      time <= 0
+        ? "Time's up"
+        : `${minutesLeft} minute${minutesLeft === 1 ? '' : 's'} remaining`
+    // Assertive at the final 5 minutes (and 1 minute), polite otherwise.
+    const timeLiveLevel = timeLow ? 'assertive' : 'polite'
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
@@ -316,7 +328,16 @@ export default function PracticeExam(config: PracticeExamConfig) {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <span className={`text-sm font-mono font-bold ${time < 300 ? 'text-red-500' : 'text-gray-600 dark:text-gray-400'}`}>⏱ {formatTime(time)}</span>
+              <span className={`flex items-center gap-1 text-sm font-mono font-bold ${timeLow ? 'text-red-600 dark:text-red-400' : 'text-gray-600 dark:text-gray-400'}`} aria-hidden="true">
+                <span aria-hidden="true">{timeLow ? '⚠️' : '⏱'}</span>
+                {formatTime(time)}
+                {timeLow && <span className="font-sans font-semibold uppercase tracking-wide text-[10px]">Low</span>}
+              </span>
+              {/* Screen-reader-only live region: announces remaining time at coarse
+                  intervals (polite normally, assertive in the final 5 minutes). */}
+              <span role="timer" aria-live={timeLiveLevel} aria-atomic="true" className="sr-only">
+                {timeAnnouncement}
+              </span>
               <button onClick={handleBack} className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400">Exit</button>
             </div>
           </div>
@@ -326,11 +347,12 @@ export default function PracticeExam(config: PracticeExamConfig) {
           {/* Question card */}
           <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question}</p>
-            <div className="space-y-2">
+            <div className="space-y-2" role="radiogroup" aria-label={`Answer choices for question ${idx + 1}`}>
               {q.options.map((opt, i) => {
                 const isSel = answers[idx] === i
                 return (
                   <button key={i} onClick={() => { const u = [...answers]; u[idx] = i; setAnswers(u) }}
+                    role="radio" aria-checked={isSel}
                     className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition break-words ${isSel ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
                     <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
                   </button>

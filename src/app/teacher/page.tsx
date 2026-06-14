@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { LMSIntegration } from '@/components/LMSIntegration'
+import FocusTrapDialog from '@/components/FocusTrapDialog'
 
 interface ClassroomSummary {
   id: string
@@ -341,80 +342,98 @@ export default function TeacherDashboard() {
       </div>
 
       {/* Create Classroom Modal */}
-      {showCreateModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-lg">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Create New Classroom</h2>
-            <div className="space-y-4">
+      <FocusTrapDialog
+        open={showCreateModal}
+        onClose={() => setShowCreateModal(false)}
+        title="Create New Classroom"
+      >
+        <div className="p-8">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Create New Classroom</h2>
+          <div className="space-y-4">
+            <div>
+              <label
+                htmlFor="new-classroom-name"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Classroom Name *
+              </label>
+              <input
+                id="new-classroom-name"
+                type="text"
+                value={newClass.name}
+                onChange={(e) => setNewClass({ ...newClass, name: e.target.value })}
+                placeholder="e.g., Period 3 AP Calculus"
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                  Classroom Name *
+                <label
+                  htmlFor="new-classroom-subject"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Subject
                 </label>
                 <input
+                  id="new-classroom-subject"
                   type="text"
-                  value={newClass.name}
-                  onChange={(e) => setNewClass({ ...newClass, name: e.target.value })}
-                  placeholder="e.g., Period 3 AP Calculus"
+                  value={newClass.subject}
+                  onChange={(e) => setNewClass({ ...newClass, subject: e.target.value })}
+                  placeholder="e.g., AP Calculus"
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    value={newClass.subject}
-                    onChange={(e) => setNewClass({ ...newClass, subject: e.target.value })}
-                    placeholder="e.g., AP Calculus"
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Grade
-                  </label>
-                  <input
-                    type="text"
-                    value={newClass.grade}
-                    onChange={(e) => setNewClass({ ...newClass, grade: e.target.value })}
-                    placeholder="e.g., 11th"
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-              </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                  Description
+                <label
+                  htmlFor="new-classroom-grade"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Grade
                 </label>
-                <textarea
-                  value={newClass.description}
-                  onChange={(e) => setNewClass({ ...newClass, description: e.target.value })}
-                  placeholder="Optional description..."
-                  rows={3}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white resize-none"
+                <input
+                  id="new-classroom-grade"
+                  type="text"
+                  value={newClass.grade}
+                  onChange={(e) => setNewClass({ ...newClass, grade: e.target.value })}
+                  placeholder="e.g., 11th"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                 />
               </div>
             </div>
-            <div className="flex gap-3 mt-6">
-              <button
-                onClick={() => setShowCreateModal(false)}
-                className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            <div>
+              <label
+                htmlFor="new-classroom-description"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
               >
-                Cancel
-              </button>
-              <button
-                onClick={createClassroom}
-                disabled={!newClass.name.trim() || creating}
-                className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              >
-                {creating ? 'Creating...' : 'Create Classroom'}
-              </button>
+                Description
+              </label>
+              <textarea
+                id="new-classroom-description"
+                value={newClass.description}
+                onChange={(e) => setNewClass({ ...newClass, description: e.target.value })}
+                placeholder="Optional description..."
+                rows={3}
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white resize-none"
+              />
             </div>
           </div>
+          <div className="flex gap-3 mt-6">
+            <button
+              onClick={() => setShowCreateModal(false)}
+              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={createClassroom}
+              disabled={!newClass.name.trim() || creating}
+              className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              {creating ? 'Creating...' : 'Create Classroom'}
+            </button>
+          </div>
         </div>
-      )}
+      </FocusTrapDialog>
     </div>
   )
 }

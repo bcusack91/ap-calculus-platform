@@ -166,6 +166,7 @@ function SearchContent() {
               role="combobox"
               aria-expanded={results.length > 0}
               aria-haspopup="listbox"
+              aria-controls="search-results-listbox"
               aria-activedescendant={highlightIndex >= 0 ? `search-result-${highlightIndex}` : undefined}
               aria-label="Search study materials"
             />
@@ -233,7 +234,7 @@ function SearchContent() {
 
           {/* Results */}
           {searched && !loading && (
-            <div ref={resultsRef} role="listbox" aria-label="Search results">
+            <div ref={resultsRef} id="search-results-listbox" role="listbox" aria-label="Search results">
               {results.length === 0 && (
                 <div className="text-center py-12">
                   <div className="text-4xl mb-3">😕</div>

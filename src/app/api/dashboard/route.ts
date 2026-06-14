@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { cached, dashboardCacheKey } from '@/lib/redis'
+import { displayStreak } from '@/lib/streak'
 
 export async function GET() {
   try {
@@ -162,7 +163,10 @@ async function buildDashboard(userId: string) {
       },
       streak: streakData
         ? {
-            current: streakData.currentStreak,
+            // Decay a lapsed streak at read time — the stored currentStreak is
+            // only rewritten on the next study activity, so without this the
+            // dashboard shows a stale number for users who broke their streak.
+            current: displayStreak(streakData),
             longest: streakData.longestStreak,
             lastActive: streakData.lastActiveDate,
           }

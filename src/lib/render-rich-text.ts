@@ -118,10 +118,14 @@ export function plainTextPreview(text: string): string {
  * (`$3x+2=11$`, `$5x$`, `$3 \text{m}$`) fails this test and still renders.
  */
 function looksLikeCurrencyProse(span: string): boolean {
-  // Starts with a number, no math structure (no LaTeX command, no = ^ _ { } < >),
-  // and has a word after the number → currency/prose, not math. This keeps real
-  // math like $3x+2=11$, $1 < x+2 < 6$, $5x$, and $3 \text{m}$ rendering as math.
-  return /^[\d.,]/.test(span) && !/[\\=^_{}<>]/.test(span) && /\s[a-z]/.test(span)
+  // Starts with a number and has no math structure (no LaTeX command, no = ^ _ { } < >).
+  if (!/^[\d.,]/.test(span) || /[\\=^_{}<>]/.test(span)) return false
+  // Currency/prose when EITHER:
+  //  (a) there's a word after the number — "$5 to $10", "$2 and a notebook" — or
+  //  (b) it's a bare numeric run containing a comma — the "$3, $7, and $12" list
+  //      case, whose captured span (e.g. "3, ") has no trailing word.
+  // Real math like $3x+2=11$, $1 < x+2 < 6$, $5x$, $2 + 3$, $100$ still renders.
+  return /\s[a-z]/.test(span) || (/^[\d.,\s]+$/.test(span) && span.includes(','))
 }
 
 export function renderRichText(text: string): string {

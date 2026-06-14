@@ -4,7 +4,8 @@
  */
 
 const SITE_NAME = 'Study Mondo'
-const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://www.studymondo.com'
+// Hardcoded production origin so structured data matches the site's canonical URLs.
+const SITE_URL = 'https://www.studymondo.com'
 
 /** Organization schema for the site */
 export function organizationJsonLd() {
@@ -13,7 +14,7 @@ export function organizationJsonLd() {
     '@type': 'EducationalOrganization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/icon-512.png`,
+    logo: `${SITE_URL}/android-chrome-512x512.png`,
     sameAs: [],
     description:
       'Free interactive study platform for AP courses, math, science, and more. Features flashcards, quizzes, competitive mode, and progress tracking.',
@@ -158,7 +159,7 @@ export function articleJsonLd(article: {
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/icon-512.png`,
+        url: `${SITE_URL}/android-chrome-512x512.png`,
       },
     },
     mainEntityOfPage: {

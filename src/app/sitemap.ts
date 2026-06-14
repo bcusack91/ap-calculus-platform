@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/prisma'
-import { getAllInteractiveSlugs } from '@/data/interactive-lessons/registry'
+import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -216,7 +216,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // All score predictor pages
     ...([
       'ap-bio', 'ap-calcab', 'ap-calcbc', 'ap-chem', 'ap-stats', 'ap-psych',
-      'ap-physics1', 'ap-physics2', 'ap-physics-c-mech', 'ap-physics-c-em', 'ap-precalculus', 'ap-precalc',
+      'ap-physics1', 'ap-physics2', 'ap-physics-c-mech', 'ap-physics-c-em', 'ap-precalculus',
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
@@ -367,13 +367,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // that has neither a registered interactive lesson nor dynamic textContent
   // (see src/app/topics/[slug]/interactive/page.tsx), so we only include the
   // slugs that actually have content.
-  const interactiveSlugs = getAllInteractiveSlugs()
-  const interactivePages: MetadataRoute.Sitemap = interactiveSlugs.map((slug) => ({
-    url: `${baseUrl}/topics/${slug}/interactive`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.85,
-  }))
+  //
+  // IMPORTANT: source these from real DB Topic slugs (the `topics` query above),
+  // not from the registry keys. Registry keys are internal lesson identifiers
+  // that are not guaranteed to match a Topic.slug, so emitting them directly
+  // produces /topics/<key>/interactive URLs that 404. Filtering DB slugs by
+  // hasInteractiveLesson (which resolveSlug-normalizes) keeps only the ones
+  // that actually resolve to a registered, indexable interactive lesson.
+  const interactivePages: MetadataRoute.Sitemap = topics
+    .filter((topic) => hasInteractiveLesson(topic.slug))
+    .map((topic) => ({
+      url: `${baseUrl}/topics/${topic.slug}/interactive`,
+      lastModified: topic.updatedAt,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    }))
 
   const topicHubPages: MetadataRoute.Sitemap = topicHubs.map((hub) => ({
     url: `${baseUrl}/hubs/${hub.slug}`,

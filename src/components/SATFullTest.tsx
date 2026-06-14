@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion, SATTestSection } from '@/data/sat-practice/test-generator'
 
@@ -289,7 +289,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
   const finishTest = useCallback(
     (allSections: SectionResult[]) => {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { analyzePerformance } = require('@/data/sat-practice/test-generator')
+      const { analyzePerformance, estimateScaledScore } = require('@/data/sat-practice/test-generator')
 
       // Aggregate R&W sections
       const rwSections = allSections.filter(s => s.sectionId.startsWith('rw'))
@@ -300,17 +300,11 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
       const mathCorrect = mathSections.reduce((s, sec) => s + sec.correct, 0)
       const mathTotal = mathSections.reduce((s, sec) => s + sec.total, 0)
 
-      // Average scaled scores if multiple modules per section
-      const rwScore =
-        rwSections.length > 0
-          ? Math.round(rwSections.reduce((s, sec) => s + sec.scaledScore, 0) / rwSections.length)
-          : 200
-      const mathScore =
-        mathSections.length > 0
-          ? Math.round(
-              mathSections.reduce((s, sec) => s + sec.scaledScore, 0) / mathSections.length,
-            )
-          : 200
+      // Scale once on the combined raw per section (matches the digital-SAT model
+      // and the SAT diagnostic, which aggregate raw across modules before scaling
+      // rather than scaling each module and averaging).
+      const rwScore = rwTotal > 0 ? estimateScaledScore(rwCorrect, rwTotal, 'reading-writing') : 200
+      const mathScore = mathTotal > 0 ? estimateScaledScore(mathCorrect, mathTotal, 'math') : 200
 
       // Analyze strengths and weaknesses
       const allAnswers = allSections.flatMap(s => s.answers)

@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { PowerUpShop } from '@/components/PowerUps'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
+import AchievementBanner from '@/components/AchievementBanner'
 
 interface CompetitiveProfile {
   rank: string
@@ -139,6 +140,7 @@ export default function CompetitivePage() {
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)
   const [asyncChallenges, setAsyncChallenges] = useState<{ sent: AsyncChallengeSummary[]; received: AsyncChallengeSummary[] }>({ sent: [], received: [] })
+  const [showUnlockBanner, setShowUnlockBanner] = useState(false)
 
   const checkUnlock = useCallback(async () => {
     try {
@@ -150,7 +152,7 @@ export default function CompetitivePage() {
       setCompetitiveCategories(data.competitiveCategories || {})
       setLoading(false)
       if (data.justUnlocked) {
-        alert('🎉 Competitive Mode Unlocked!')
+        setShowUnlockBanner(true)
       }
     } catch (error) {
       console.error('Error checking unlock:', error)
@@ -302,6 +304,14 @@ export default function CompetitivePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4 py-6 sm:p-6">
+      {showUnlockBanner && (
+        <AchievementBanner
+          name="Competitive Mode Unlocked!"
+          description="You can now challenge other students and climb the ranks."
+          icon="🎉"
+          onDismiss={() => setShowUnlockBanner(false)}
+        />
+      )}
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">

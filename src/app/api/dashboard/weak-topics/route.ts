@@ -14,7 +14,8 @@ export async function GET() {
       where: {
         userId: session.user.id,
         status: { in: ['IN_PROGRESS', 'COMPLETED'] },
-        masteryLevel: { lt: 50 },
+        // masteryLevel is stored on a 0-1 scale (mastered = 1.0), so weak = below 0.5.
+        masteryLevel: { lt: 0.5 },
       },
       orderBy: { masteryLevel: 'asc' },
       take: 10,

@@ -18,6 +18,7 @@ import {
   courseStudyPlanMap,
 } from '@/data/course-feature-config'
 import { CRAM_PLANS, isCramPlanCourse } from '@/data/cram-plans'
+import { courseHubPaths } from '@/data/course-metadata'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -64,7 +65,14 @@ export async function generateMetadata(props: CoursePageProps): Promise<Metadata
     }
   }
 
-  const canonicalUrl = `https://www.studymondo.com/courses/${course.slug}`
+  // ~33 courses also have a dedicated hub page (e.g. /ap-calculus-ab) that
+  // duplicates this /courses/[slug] view. For those, point the canonical at the
+  // hub URL so search engines consolidate on a single surface instead of
+  // treating both as self-canonical duplicates.
+  const hubPath = courseHubPaths[course.slug]
+  const canonicalUrl = hubPath
+    ? `https://www.studymondo.com${hubPath}`
+    : `https://www.studymondo.com/courses/${course.slug}`
 
   return {
     title: `${course.name} | Study Mondo`,

@@ -105,8 +105,10 @@ const getCachedAnalytics = unstable_cache(
     prisma.topicProgress.count({ where: { lastAccessed: { gte: today } } }),
     prisma.topic.count(),
     prisma.flashcard.count(),
-    prisma.quizAttempt.count(),
-    prisma.quizAttempt.count({ where: { startedAt: { gte: today } } }),
+    // QuizAttempt is a dead table (never written). Exit quizzes are the only
+    // real quiz attempts, so report ExitQuizAttempt as the source of truth.
+    prisma.exitQuizAttempt.count(),
+    prisma.exitQuizAttempt.count({ where: { completedAt: { gte: today } } }),
     prisma.user.groupBy({ by: ['role'], _count: { id: true } }),
     // Signups per day for last 30 days
     prisma.$queryRaw<{ date: Date; count: bigint }[]>`
@@ -116,7 +118,9 @@ const getCachedAnalytics = unstable_cache(
       GROUP BY DATE("createdAt")
       ORDER BY date ASC
     `,
-    // Single raw SQL query replaces 8 separate findMany+distinct calls
+    // Single raw SQL query replaces 8 separate findMany+distinct calls.
+    // QuizAttempt is a dead table (never written), so the "quiz takers" funnel
+    // stage is sourced from ExitQuizAttempt — the only real quiz attempts.
     prisma.$queryRaw<[{
       active_curr: bigint
       quiz_curr: bigint
@@ -129,11 +133,11 @@ const getCachedAnalytics = unstable_cache(
     }]>`
       SELECT
         (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${weekAgo}) AS active_curr,
-        (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${weekAgo}) AS quiz_curr,
+        (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${weekAgo}) AS quiz_curr,
         (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${weekAgo}) AS diag_curr,
         (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${weekAgo}) AS exit_curr,
         (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${prevWeekAgo} AND "lastAccessed" < ${weekAgo}) AS active_prev,
-        (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${prevWeekAgo} AND "startedAt" < ${weekAgo}) AS quiz_prev,
+        (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${prevWeekAgo} AND "completedAt" < ${weekAgo}) AS quiz_prev,
         (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${prevWeekAgo} AND "createdAt" < ${weekAgo}) AS diag_prev,
         (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${prevWeekAgo} AND "completedAt" < ${weekAgo}) AS exit_prev
     `,

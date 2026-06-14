@@ -171,6 +171,7 @@ function DashboardContent() {
   const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
   const [verificationSent, setVerificationSent] = useState(false)
   const [sendingVerification, setSendingVerification] = useState(false)
+  const [verificationError, setVerificationError] = useState(false)
   const [pendingAssignments, setPendingAssignments] = useState(0)
   const [achievements, setAchievements] = useState<AchievementData[]>([])
   const [achievementStats, setAchievementStats] = useState({ unlocked: 0, total: 0 })
@@ -482,17 +483,34 @@ function DashboardContent() {
             {verificationSent ? (
               <span className="text-sm font-medium text-green-700 dark:text-green-400">✅ Verification email sent!</span>
             ) : (
-              <button
-                onClick={async () => {
-                  setSendingVerification(true)
-                  try { await fetch('/api/auth/verify-email', { method: 'POST' }); setVerificationSent(true) } catch {}
-                  setSendingVerification(false)
-                }}
-                disabled={sendingVerification}
-                className="px-4 py-2 text-sm font-semibold bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50"
-              >
-                {sendingVerification ? 'Sending...' : 'Send Verification Email'}
-              </button>
+              <div className="flex flex-col items-start gap-1">
+                <button
+                  onClick={async () => {
+                    setSendingVerification(true)
+                    setVerificationError(false)
+                    try {
+                      const res = await fetch('/api/auth/verify-email', { method: 'POST' })
+                      if (res.ok) {
+                        setVerificationSent(true)
+                      } else {
+                        setVerificationError(true)
+                      }
+                    } catch {
+                      setVerificationError(true)
+                    }
+                    setSendingVerification(false)
+                  }}
+                  disabled={sendingVerification}
+                  className="px-4 py-2 text-sm font-semibold bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50"
+                >
+                  {sendingVerification ? 'Sending...' : 'Send Verification Email'}
+                </button>
+                {verificationError && (
+                  <span role="alert" className="text-xs font-medium text-red-700 dark:text-red-400">
+                    Couldn&apos;t send the verification email. Please try again.
+                  </span>
+                )}
+              </div>
             )}
           </div>
         )}

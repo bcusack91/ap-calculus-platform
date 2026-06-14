@@ -2,7 +2,7 @@
 
 import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import type {
   DiagnosticTestData,

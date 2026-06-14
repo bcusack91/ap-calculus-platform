@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 // GET /api/teacher/classrooms/[id]/announcements
@@ -9,7 +10,32 @@ export async function GET(
 ) {
   try {
     const { id: classroomId } = await params
-    // Allow both teacher and members to read
+
+    // Require an authenticated session.
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    // Allow only the classroom's teacher or an active member to read.
+    const classroom = await prisma.classroom.findUnique({
+      where: { id: classroomId },
+      select: { teacherId: true },
+    })
+    if (!classroom) {
+      return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
+    }
+
+    if (classroom.teacherId !== session.user.id) {
+      const membership = await prisma.classroomMember.findUnique({
+        where: { classroomId_userId: { classroomId, userId: session.user.id } },
+        select: { isActive: true },
+      })
+      if (!membership || !membership.isActive) {
+        return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      }
+    }
+
     const announcements = await prisma.announcement.findMany({
       where: { classroomId },
       include: {

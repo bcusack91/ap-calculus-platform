@@ -394,7 +394,48 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const [unlockedParts, setUnlockedParts] = useState<Set<LessonPart>>(new Set([1])) // Part 1 always unlocked
   const [cachedTopicId, setCachedTopicId] = useState<string | null>(null)
   const queryCountRef = useRef(0) // Track API calls
-  
+
+  // Active study-time tracking. `activeSinceRef` marks when the current active
+  // (visible) interval began; `accumulatedMsRef` holds time from prior intervals
+  // that has not yet been flushed to the server. consumeTimeSpentSeconds() folds
+  // the in-progress interval into the accumulator, returns the whole-second delta,
+  // and resets the accumulator so each saved value is a non-overlapping increment.
+  // Initialized in the mount effect below (Date.now() can't be called during render).
+  const activeSinceRef = useRef<number | null>(null)
+  const accumulatedMsRef = useRef<number>(0)
+  const consumeTimeSpentSeconds = useCallback(() => {
+    const now = Date.now()
+    if (activeSinceRef.current != null) {
+      accumulatedMsRef.current += now - activeSinceRef.current
+      activeSinceRef.current = now
+    }
+    const seconds = Math.round(accumulatedMsRef.current / 1000)
+    if (seconds > 0) {
+      accumulatedMsRef.current -= seconds * 1000
+    }
+    return seconds
+  }, [])
+
+  // Pause/resume the active timer when the tab visibility changes so background
+  // time (other tabs, minimized window) isn't counted as study time.
+  useEffect(() => {
+    // Start the active interval on mount (deferred out of render).
+    activeSinceRef.current = Date.now()
+    const handleVisibility = () => {
+      if (document.visibilityState === 'hidden') {
+        if (activeSinceRef.current != null) {
+          accumulatedMsRef.current += Date.now() - activeSinceRef.current
+          activeSinceRef.current = null
+        }
+      } else {
+        activeSinceRef.current = Date.now()
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => document.removeEventListener('visibilitychange', handleVisibility)
+  }, [])
+
+
   // Celebration animation state
   const [showCelebration, setShowCelebration] = useState(false)
   const [celebrationKey, setCelebrationKey] = useState(0)
@@ -475,7 +516,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           lessonPart,
           completedSections: Array.from(completedSections),
           masteryLevel,
-          timeSpent: 0, // Could track actual time if needed
+          timeSpent: consumeTimeSpentSeconds(),
           isPartCompletion, // Flag to indicate this is a part completion, not just progress save
           variant,
         }),
@@ -494,7 +535,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     } catch (error) {
       console.error('Failed to save progress:', error)
     }
-  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData, variant])
+  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData, variant, consumeTimeSpentSeconds])
 
   // Load progress from database on mount
   useEffect(() => {
@@ -647,14 +688,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           lessonPart,
           completedSections: Array.from(completedSections),
           masteryLevel,
-          timeSpent: 0,
+          timeSpent: consumeTimeSpentSeconds(),
         }))
       }
     }
-    
+
     window.addEventListener('beforeunload', handleBeforeUnload)
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)
-  }, [session, completedSections, cachedTopicId, lessonPart, lessonData?.sections?.length, totalParts])
+  }, [session, completedSections, cachedTopicId, lessonPart, lessonData?.sections?.length, totalParts, consumeTimeSpentSeconds])
 
   // Smart batched saves: Save every 3 sections for progress tracking
   useEffect(() => {
@@ -787,7 +828,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                   lessonPart: totalParts,
                   completedSections: Array.from(allSections),
                   masteryLevel: 1.0, // Full mastery
-                  timeSpent: 0,
+                  timeSpent: consumeTimeSpentSeconds(),
                 }),
               })
               // Trigger competitive mode unlock check so the profile is ready
@@ -885,7 +926,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             lessonPart: partsToRedo[0],
             completedSections: [],
             masteryLevel: 0,
-            timeSpent: 0,
+            timeSpent: consumeTimeSpentSeconds(),
             variant: nextVariant,
             failedExitParts: partsToRedo,
           }),
@@ -977,7 +1018,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             lessonPart: totalParts,
             completedSections: [],
             masteryLevel: 1.0,
-            timeSpent: 0,
+            timeSpent: consumeTimeSpentSeconds(),
             isPartCompletion: true,
           }),
         })
@@ -1015,14 +1056,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             lessonPart: targetPart,
             completedSections: [],
             masteryLevel,
-            timeSpent: 0,
+            timeSpent: consumeTimeSpentSeconds(),
             isPartCompletion: true,
           }),
         }).catch(console.error)
       }
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, saveProgress])
+  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, saveProgress, consumeTimeSpentSeconds])
 
   const [retryCounts, setRetryCounts] = useState<Record<number, number>>({})
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
@@ -2071,23 +2112,27 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     return `${baseClasses} border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white`
   }
 
-  // Format display value to show √ instead of sqrt
-  const formatDisplayValue = (value: string) => {
-    if (!value || value.trim() === '') return value
-    
+  // Format display value to show √ instead of sqrt.
+  // Returns a discriminated result so the caller knows definitively whether the
+  // string is trusted KaTeX HTML or raw user text — never the "includes('katex')"
+  // heuristic, which could route raw user input into dangerouslySetInnerHTML.
+  const formatDisplayValue = (value: string): { kind: 'html'; html: string } | { kind: 'text'; text: string } => {
+    if (!value || value.trim() === '') return { kind: 'text', text: value }
+
     // Convert common patterns to LaTeX
     let latex = value
       .replace(/sqrt\((\d+)\)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
       .replace(/sqrt(\d+)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
       .replace(/sqrt\((\d+)\)/gi, '\\sqrt{$1}')
       .replace(/sqrt(\d+)/gi, '\\sqrt{$1}')
-    
+
     // Check if we need to apply fraction formatting (only if not already in a fraction)
     if (!latex.includes('\\frac') && latex.match(/(\d+)\/(\d+)/)) {
       latex = latex.replace(/(\d+)\/(\d+)/g, '\\frac{$1}{$2}')
     }
-    
-    // If it contains LaTeX commands, render with KaTeX
+
+    // If it contains LaTeX commands, render with KaTeX (KaTeX escapes its input,
+    // so the returned HTML is safe to inject).
     if (latex.includes('\\')) {
       try {
         const html = renderKatexSync(latex, {
@@ -2096,24 +2141,27 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
           output: 'html',
           strict: false
         })
-        return html
+        return { kind: 'html', html }
       } catch (e) {
         console.error('KaTeX rendering error:', e)
-        // Fallback to simple replacement
-        return value
-          .replace(/sqrt\((\d+)\)/gi, '√$1')
-          .replace(/sqrt(\d+)/gi, '√$1')
+        // Fallback to simple replacement (plain text, rendered as a React child)
+        return {
+          kind: 'text',
+          text: value
+            .replace(/sqrt\((\d+)\)/gi, '√$1')
+            .replace(/sqrt(\d+)/gi, '√$1'),
+        }
       }
     }
-    
-    return value
+
+    return { kind: 'text', text: value }
   }
 
   // Render input with formatted display
   const renderInput = (key: string, placeholder: string, width: string) => {
     const displayValue = formatDisplayValue(answers[key])
-    const hasLatex = displayValue && displayValue.includes('katex')
-    
+    const hasLatex = displayValue.kind === 'html'
+
     return (
       <div style={{ width, height: '32px', position: 'relative' }}>
         <input
@@ -2149,10 +2197,10 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
               overflow: 'hidden'
             }}
           >
-            {hasLatex ? (
-              <span dangerouslySetInnerHTML={{ __html: displayValue }} />
+            {displayValue.kind === 'html' ? (
+              <span dangerouslySetInnerHTML={{ __html: displayValue.html }} />
             ) : (
-              displayValue
+              displayValue.text
             )}
           </div>
         )}
@@ -2413,13 +2461,21 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     formatted = formatted.replace(/^(\d+)\/(\d+)$/gi, '\\frac{$1}{$2}')
     
     try {
+      // KaTeX escapes its input, so the returned HTML is safe to inject.
       return renderKatexSync(formatted, {
         throwOnError: false,
         displayMode: false,
         output: 'html',
       })
     } catch {
+      // Fallback returns raw user input — HTML-escape it before it reaches
+      // dangerouslySetInnerHTML to avoid self-XSS.
       return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
     }
   }
 
@@ -3098,48 +3154,43 @@ function MultipleChoiceQuiz({
             }
 
             return (
-              <button
-                key={optionIndex}
-                onClick={() => !showingFeedback && handleAnswerSelect(currentQuestionIndex, optionIndex)}
-                disabled={showingFeedback}
-                className={buttonStyle}
-              >
-                <div className="flex items-start justify-between gap-2 min-w-0">
-                  <span className={`text-gray-800 min-w-0 flex-1 break-words ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
-                    <InlineLatex text={option} />
-                  </span>
-                  <div className="flex items-center gap-2 shrink-0">
-                    {!showingFeedback && (
-                      <span
-                        role="button"
-                        tabIndex={0}
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          toggleEliminate(currentQuestionIndex, optionIndex)
-                        }}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            toggleEliminate(currentQuestionIndex, optionIndex)
-                          }
-                        }}
-                        className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${
-                          isEliminated
-                            ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
-                            : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
-                        }`}
-                        title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
-                        aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
-                      >
-                        ✕
-                      </span>
-                    )}
-                    {showingFeedback && isCorrect && <span className="text-green-600">✓</span>}
-                    {showingFeedback && isSelected && !isCorrect && <span className="text-red-600">✗</span>}
+              // The eliminate control is a sibling of the option button (not nested
+              // inside it — that would be invalid nested interactive content) and is
+              // revealed on hover or keyboard focus-within of this group.
+              <div key={optionIndex} className="group relative">
+                <button
+                  onClick={() => !showingFeedback && handleAnswerSelect(currentQuestionIndex, optionIndex)}
+                  disabled={showingFeedback}
+                  className={buttonStyle}
+                >
+                  <div className="flex items-start justify-between gap-2 min-w-0">
+                    <span className={`text-gray-800 min-w-0 flex-1 break-words ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                      <InlineLatex text={option} />
+                    </span>
+                    <div className="flex items-center gap-2 shrink-0">
+                      {/* Spacer reserves room for the absolutely-positioned eliminate control */}
+                      {!showingFeedback && <span className="inline-block h-6 w-6" aria-hidden="true" />}
+                      {showingFeedback && isCorrect && <span className="text-green-600">✓</span>}
+                      {showingFeedback && isSelected && !isCorrect && <span className="text-red-600">✗</span>}
+                    </div>
                   </div>
-                </div>
-              </button>
+                </button>
+                {!showingFeedback && (
+                  <button
+                    type="button"
+                    onClick={() => toggleEliminate(currentQuestionIndex, optionIndex)}
+                    className={`absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition focus:opacity-100 ${
+                      isEliminated
+                        ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 opacity-100'
+                        : 'text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                    }`}
+                    title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                    aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
             )
           })}
         </div>
@@ -3539,68 +3590,63 @@ function MiniBossBattle({
           {/* Multiple Choice Options - More Compact */}
           <div className="grid grid-cols-1 gap-3 mb-4">
             {currentQuestion.options.map((option: MiniBossOption) => (
-              <button
-                key={option.label}
-                onClick={() => handleAnswerSelect(option.label)}
-                disabled={showFeedback}
-                className={`p-4 rounded-lg border-2 text-left transition-all transform hover:scale-102 ${
-                  selectedAnswer === option.label
-                    ? showFeedback
-                      ? option.isCorrect
-                        ? 'border-green-500 bg-green-100 dark:bg-green-900/30'
-                        : 'border-red-500 bg-red-100 dark:bg-red-900/30'
-                      : 'border-purple-500 bg-purple-100 dark:bg-purple-900/30'
-                    : showFeedback && option.isCorrect
-                      ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
-                      : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
-                } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
-                    {option.label}
-                  </span>
-                  <div 
-                    className={`text-xl flex-1 ${eliminatedOptions.has(option.label) ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
-                    dangerouslySetInnerHTML={{
-                      __html: renderKatexSync(option.value, {
-                        throwOnError: false,
-                        displayMode: false
-                      })
-                    }}
-                  />
-                  {!showFeedback && (
-                    <span
-                      role="button"
-                      tabIndex={0}
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        toggleEliminate(option.label)
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault()
-                          e.stopPropagation()
-                          toggleEliminate(option.label)
-                        }
-                      }}
-                      className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${
-                        eliminatedOptions.has(option.label)
-                          ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
-                          : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
-                      }`}
-                      title={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
-                      aria-label={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
-                    >
-                      ✕
+              // The eliminate control is a sibling of the option button (not nested
+              // inside it — that would be invalid nested interactive content) and is
+              // revealed on hover or keyboard focus-within of this group.
+              <div key={option.label} className="group relative">
+                <button
+                  onClick={() => handleAnswerSelect(option.label)}
+                  disabled={showFeedback}
+                  className={`w-full p-4 rounded-lg border-2 text-left transition-all transform hover:scale-102 ${
+                    selectedAnswer === option.label
+                      ? showFeedback
+                        ? option.isCorrect
+                          ? 'border-green-500 bg-green-100 dark:bg-green-900/30'
+                          : 'border-red-500 bg-red-100 dark:bg-red-900/30'
+                        : 'border-purple-500 bg-purple-100 dark:bg-purple-900/30'
+                      : showFeedback && option.isCorrect
+                        ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
+                        : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
+                  } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+                      {option.label}
                     </span>
-                  )}
-                  {showFeedback && selectedAnswer === option.label && !option.isCorrect && option.explanation && (
-                    <span className="text-xs text-red-600 dark:text-red-400 italic">
-                      {option.explanation}
-                    </span>
-                  )}
-                </div>
-              </button>
+                    <div
+                      className={`text-xl flex-1 ${eliminatedOptions.has(option.label) ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
+                      dangerouslySetInnerHTML={{
+                        __html: renderKatexSync(option.value, {
+                          throwOnError: false,
+                          displayMode: false
+                        })
+                      }}
+                    />
+                    {/* Spacer reserves room for the absolutely-positioned eliminate control */}
+                    {!showFeedback && <span className="inline-block h-6 w-6 shrink-0" aria-hidden="true" />}
+                    {showFeedback && selectedAnswer === option.label && !option.isCorrect && option.explanation && (
+                      <span className="text-xs text-red-600 dark:text-red-400 italic">
+                        {option.explanation}
+                      </span>
+                    )}
+                  </div>
+                </button>
+                {!showFeedback && (
+                  <button
+                    type="button"
+                    onClick={() => toggleEliminate(option.label)}
+                    className={`absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition focus:opacity-100 ${
+                      eliminatedOptions.has(option.label)
+                        ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 opacity-100'
+                        : 'text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                    }`}
+                    title={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
+                    aria-label={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
             ))}
           </div>
 

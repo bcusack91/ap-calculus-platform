@@ -85,10 +85,10 @@ export function ContactForm() {
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
             Message Sent Successfully!
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             Thank you for reaching out. We&apos;ll get back to you within 2-3 business days.
           </p>
           <button
@@ -102,7 +102,7 @@ export function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Name <span className="text-red-500">*</span>
             </label>
             <input
@@ -112,7 +112,7 @@ export function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
               placeholder="Your name"
               disabled={status === "submitting"}
             />
@@ -120,7 +120,7 @@ export function ContactForm() {
 
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Email <span className="text-red-500">*</span>
             </label>
             <input
@@ -130,7 +130,7 @@ export function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
               placeholder="your.email@example.com"
               disabled={status === "submitting"}
             />
@@ -138,7 +138,7 @@ export function ContactForm() {
 
           {/* Category Field */}
           <div>
-            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="category" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Category <span className="text-red-500">*</span>
             </label>
             <select
@@ -147,7 +147,7 @@ export function ContactForm() {
               required
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
               disabled={status === "submitting"}
             >
               <option value="general">General Question</option>
@@ -161,7 +161,7 @@ export function ContactForm() {
 
           {/* Subject Field */}
           <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Subject <span className="text-red-500">*</span>
             </label>
             <input
@@ -171,7 +171,7 @@ export function ContactForm() {
               required
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
               placeholder="Brief description of your message"
               disabled={status === "submitting"}
             />
@@ -179,7 +179,7 @@ export function ContactForm() {
 
           {/* Message Field */}
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Message <span className="text-red-500">*</span>
             </label>
             <textarea
@@ -189,7 +189,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               rows={6}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
               placeholder="Please provide as much detail as possible..."
               disabled={status === "submitting"}
             />

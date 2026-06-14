@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 import 'katex/dist/katex.min.css'
@@ -62,7 +62,6 @@ export default function ExitQuiz({
   const [showReference, setShowReference] = useState(false)
   const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>>(new Set())
   const resolvedCourseSlug = courseSlug || getCourseSlugFromTopic(topicSlug)
-  void topicSlug // will be used by the submit API
 
   // Eagerly load KaTeX on mount
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
@@ -400,7 +399,7 @@ export default function ExitQuiz({
         />
 
         {/* Options */}
-        <div className="space-y-3 mb-6">
+        <div className="space-y-3 mb-6" role="radiogroup" aria-label={`Answer choices for question ${currentQuestion + 1}`}>
           {question.options.map((_, i) => {
             const isSelected = selectedAnswer === i
             const isCorrect = i === shuffled.correctIndex
@@ -424,6 +423,9 @@ export default function ExitQuiz({
                 <button
                   onClick={() => handleSelectAnswer(i)}
                   disabled={showExplanation || isEliminated}
+                  role="radio"
+                  aria-checked={isSelected}
+                  aria-disabled={showExplanation || isEliminated}
                   className={`w-full text-left p-3 sm:p-4 pr-10 rounded-xl border-2 transition-all ${style} ${
                     isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500 cursor-default' : ''
                   }`}
@@ -448,10 +450,12 @@ export default function ExitQuiz({
                   <button
                     onClick={(e) => { e.stopPropagation(); toggleEliminate(i) }}
                     title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                    aria-label={isEliminated ? `Restore answer ${String.fromCharCode(65 + i)}` : `Eliminate answer ${String.fromCharCode(65 + i)}`}
+                    aria-pressed={isEliminated}
                     className={`absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex items-center justify-center transition-all text-xs font-bold ${
                       isEliminated
                         ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-400 dark:hover:bg-gray-500'
-                        : 'bg-transparent text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                        : 'bg-transparent text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 focus:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
                     }`}
                   >
                     ✕

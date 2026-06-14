@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     }
     const { flashcardId, rating } = parsed.data
 
-    // Get current progress
+    // Get current progress (may not exist yet for a brand-new card)
     const progress = await prisma.flashcardProgress.findUnique({
       where: {
         userId_flashcardId: {
@@ -40,12 +40,14 @@ export async function POST(req: NextRequest) {
       }
     })
 
-    if (!progress) {
-      return NextResponse.json(
-        { error: 'Flashcard progress not found' },
-        { status: 404 }
-      )
-    }
+    // For a first review there is no progress row yet — treat it as a fresh card
+    // with SM-2 defaults (easeFactor 2.5, interval 0, repetitions 0) and upsert
+    // below, rather than 404ing and blocking the card from ever being reviewed.
+    const easeFactor = progress?.easeFactor ?? 2.5
+    const interval = progress?.interval ?? 0
+    const repetitions = progress?.repetitions ?? 0
+    const isMinuteInterval = progress?.isMinuteInterval ?? false
+    const reviewCount = progress?.reviewCount ?? 0
 
     // Convert button rating to quality score
     const quality = buttonToQuality(rating)
@@ -53,28 +55,39 @@ export async function POST(req: NextRequest) {
     // Calculate next review using SM-2 algorithm
     const result = calculateNextReview(
       quality,
-      progress.easeFactor,
-      progress.interval,
-      progress.repetitions,
-      progress.isMinuteInterval || false
+      easeFactor,
+      interval,
+      repetitions,
+      isMinuteInterval
     )
 
-    // Update progress in database
-    const updatedProgress = await prisma.flashcardProgress.update({
+    // Upsert progress: create the row on a first review, update it otherwise.
+    const updatedProgress = await prisma.flashcardProgress.upsert({
       where: {
         userId_flashcardId: {
           userId: session.user.id,
           flashcardId: flashcardId
         }
       },
-      data: {
+      create: {
+        userId: session.user.id,
+        flashcardId: flashcardId,
         easeFactor: result.easeFactor,
         interval: result.interval,
         isMinuteInterval: result.isMinuteInterval,
         repetitions: result.repetitions,
         nextReview: result.nextReview,
         lastReviewed: new Date(),
-        reviewCount: progress.reviewCount + 1
+        reviewCount: 1
+      },
+      update: {
+        easeFactor: result.easeFactor,
+        interval: result.interval,
+        isMinuteInterval: result.isMinuteInterval,
+        repetitions: result.repetitions,
+        nextReview: result.nextReview,
+        lastReviewed: new Date(),
+        reviewCount: reviewCount + 1
       }
     })
 

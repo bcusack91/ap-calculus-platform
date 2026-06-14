@@ -79,12 +79,54 @@ export async function GET() {
         ? satExitQuizzes.reduce((s, a) => s + a.score / a.totalQuestions, 0) / totalQuizzesAttempted
         : 0
 
-    // RW vs Math breakdown from exit quizzes
-    const rwSlugs = ['reading', 'vocabulary', 'grammar', 'punctuation', 'sentence', 'pronoun', 'effective', 'transitions', 'conciseness', 'subject-verb', 'central', 'command', 'evidence']
-    const mathSlugs = ['linear', 'quadratic', 'functions', 'exponents', 'ratios', 'statistics', 'exponential', 'circles', 'complex', 'systems', 'inequalities', 'probability', 'scatterplots', 'data', 'polynomials', 'polynomial', 'nonlinear', 'geometry']
+    // RW vs Math breakdown from exit quizzes.
+    // Drive attribution from an explicit topic -> section map so every quiz lands
+    // in exactly one bucket. Ambiguous substring keywords previously caused some
+    // slugs to match both lists (e.g. "data" / "systems") or neither. Strategy
+    // topics (e.g. test strategies, time management) belong to no section and are
+    // intentionally excluded from both buckets.
+    const SAT_TOPIC_SECTION: Record<string, 'reading-writing' | 'math'> = {
+      // Reading & Writing
+      'sat-reading-comprehension': 'reading-writing',
+      'sat-vocabulary-context': 'reading-writing',
+      'sat-central-ideas-details': 'reading-writing',
+      'sat-command-evidence': 'reading-writing',
+      'sat-finding-textual-evidence': 'reading-writing',
+      'sat-grammar-usage': 'reading-writing',
+      'sat-grammar-conventions': 'reading-writing',
+      'sat-punctuation': 'reading-writing',
+      'sat-punctuation-commas-semicolons': 'reading-writing',
+      'sat-sentence-structure': 'reading-writing',
+      'sat-pronoun-agreement': 'reading-writing',
+      'sat-effective-language-use': 'reading-writing',
+      'sat-transitions-organization': 'reading-writing',
+      'sat-conciseness-redundancy': 'reading-writing',
+      'sat-subject-verb-agreement': 'reading-writing',
+      // Math
+      'sat-linear-equations-inequalities': 'math',
+      'sat-quadratic-equations': 'math',
+      'sat-functions': 'math',
+      'sat-exponents-radicals': 'math',
+      'sat-ratios-proportions-percents': 'math',
+      'sat-statistics-data-interpretation': 'math',
+      'sat-exponential-functions': 'math',
+      'sat-circles': 'math',
+      'sat-complex-numbers': 'math',
+      'sat-systems-equations': 'math',
+      'sat-systems-linear-equations': 'math',
+      'sat-linear-inequalities-graphs': 'math',
+      'sat-probability-two-way-tables': 'math',
+      'sat-scatterplots-line-fit': 'math',
+      'sat-data-statistics': 'math',
+      'sat-polynomials-factoring': 'math',
+      'sat-polynomial-rational-expressions': 'math',
+      'sat-nonlinear-equations-functions': 'math',
+      'sat-geometry-trigonometry': 'math',
+      'sat-geometry-basics': 'math',
+    }
 
-    const rwQuizzes = satExitQuizzes.filter(a => rwSlugs.some(k => a.topicSlug.includes(k)))
-    const mathQuizzes = satExitQuizzes.filter(a => mathSlugs.some(k => a.topicSlug.includes(k)))
+    const rwQuizzes = satExitQuizzes.filter(a => SAT_TOPIC_SECTION[a.topicSlug] === 'reading-writing')
+    const mathQuizzes = satExitQuizzes.filter(a => SAT_TOPIC_SECTION[a.topicSlug] === 'math')
 
     const rwAvgPct = rwQuizzes.length > 0
       ? rwQuizzes.reduce((s, a) => s + a.score / a.totalQuestions, 0) / rwQuizzes.length

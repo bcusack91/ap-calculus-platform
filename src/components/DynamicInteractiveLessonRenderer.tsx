@@ -469,6 +469,46 @@ export default function DynamicInteractiveLessonRenderer({
   const [lessonComplete, setLessonComplete] = useState(false)
   const queryCountRef = useRef(0)
 
+  // Active study-time tracking. `activeSinceRef` marks when the current active
+  // (visible) interval began; `accumulatedMsRef` holds time from prior intervals
+  // not yet flushed to the server. consumeTimeSpentSeconds() folds the in-progress
+  // interval into the accumulator, returns the whole-second delta, and resets the
+  // accumulator so each saved value is a non-overlapping increment.
+  // Initialized in the mount effect below (Date.now() can't be called during render).
+  const activeSinceRef = useRef<number | null>(null)
+  const accumulatedMsRef = useRef<number>(0)
+  const consumeTimeSpentSeconds = useCallback(() => {
+    const now = Date.now()
+    if (activeSinceRef.current != null) {
+      accumulatedMsRef.current += now - activeSinceRef.current
+      activeSinceRef.current = now
+    }
+    const seconds = Math.round(accumulatedMsRef.current / 1000)
+    if (seconds > 0) {
+      accumulatedMsRef.current -= seconds * 1000
+    }
+    return seconds
+  }, [])
+
+  // Pause/resume the active timer on tab visibility changes so background time
+  // (other tabs, minimized window) isn't counted as study time.
+  useEffect(() => {
+    // Start the active interval on mount (deferred out of render).
+    activeSinceRef.current = Date.now()
+    const handleVisibility = () => {
+      if (document.visibilityState === 'hidden') {
+        if (activeSinceRef.current != null) {
+          accumulatedMsRef.current += Date.now() - activeSinceRef.current
+          activeSinceRef.current = null
+        }
+      } else {
+        activeSinceRef.current = Date.now()
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibility)
+    return () => document.removeEventListener('visibilitychange', handleVisibility)
+  }, [])
+
   const currentSection = sections[currentSectionIndex]
   const currentQuiz = quizzes[currentSectionIndex]
   const progress =
@@ -500,7 +540,7 @@ export default function DynamicInteractiveLessonRenderer({
             lessonPart: 1,
             completedSections: Array.from(completedSections),
             masteryLevel,
-            timeSpent: 0,
+            timeSpent: consumeTimeSpentSeconds(),
             isPartCompletion: isCompletion,
           }),
         })
@@ -508,7 +548,7 @@ export default function DynamicInteractiveLessonRenderer({
         console.error('Failed to save progress:', err)
       }
     },
-    [session, cachedTopicId, topicSlug, completedSections, sections.length],
+    [session, cachedTopicId, topicSlug, completedSections, sections.length, consumeTimeSpentSeconds],
   )
 
   // Load progress on mount
@@ -545,14 +585,14 @@ export default function DynamicInteractiveLessonRenderer({
             lessonPart: 1,
             completedSections: Array.from(completedSections),
             masteryLevel,
-            timeSpent: 0,
+            timeSpent: consumeTimeSpentSeconds(),
           }),
         )
       }
     }
     window.addEventListener('beforeunload', handleBeforeUnload)
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)
-  }, [session, completedSections, cachedTopicId, sections.length])
+  }, [session, completedSections, cachedTopicId, sections.length, consumeTimeSpentSeconds])
 
   // Checkpoint save every 3 sections
   useEffect(() => {

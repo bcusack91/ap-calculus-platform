@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
@@ -248,9 +248,10 @@ export default function TopicEntranceQuiz({
           />
 
           {/* Options */}
-          <div className="space-y-3 mb-6">
+          <div className="space-y-3 mb-6" role="radiogroup" aria-label={`Answer choices for question ${currentQuestion + 1}`}>
             {renderedOptions.map((optionHtml, idx) => {
               const isEliminated = eliminatedOptions.has(idx)
+              const isSelected = idx === selectedAnswer
               let borderColor = 'border-gray-200 dark:border-gray-700'
               let bgColor = 'bg-white dark:bg-gray-800'
               let textColor = 'text-gray-900 dark:text-white'
@@ -265,7 +266,7 @@ export default function TopicEntranceQuiz({
                   bgColor = 'bg-red-50 dark:bg-red-900/20'
                   textColor = 'text-red-800 dark:text-red-200'
                 }
-              } else if (idx === selectedAnswer) {
+              } else if (isSelected) {
                 borderColor = 'border-purple-500'
                 bgColor = 'bg-purple-50 dark:bg-purple-900/20'
               }
@@ -275,6 +276,9 @@ export default function TopicEntranceQuiz({
                   <button
                     onClick={() => !showExplanation && !isEliminated && setSelectedAnswer(idx)}
                     disabled={showExplanation || isEliminated}
+                    role="radio"
+                    aria-checked={isSelected}
+                    aria-disabled={showExplanation || isEliminated}
                     className={`w-full text-left p-3 sm:p-4 pr-10 rounded-xl border-2 transition-all break-words ${borderColor} ${bgColor} ${textColor} ${
                       !showExplanation && !isEliminated ? 'hover:border-purple-400 cursor-pointer' : 'cursor-default'
                     } ${isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
@@ -282,15 +286,17 @@ export default function TopicEntranceQuiz({
                     <span className="font-semibold mr-2">{optionLetters[idx]}.</span>
                     <span className="break-words" dangerouslySetInnerHTML={{ __html: optionHtml }} />
                   </button>
-                  {/* Eliminate / restore button */}
+                  {/* Eliminate / restore button — sibling of the option button, not nested */}
                   {!showExplanation && (
                     <button
                       onClick={(e) => { e.stopPropagation(); toggleEliminate(idx) }}
                       title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      aria-label={isEliminated ? `Restore answer ${optionLetters[idx]}` : `Eliminate answer ${optionLetters[idx]}`}
+                      aria-pressed={isEliminated}
                       className={`absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex items-center justify-center transition-all text-xs font-bold ${
                         isEliminated
                           ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-400 dark:hover:bg-gray-500'
-                          : 'bg-transparent text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                          : 'bg-transparent text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 focus:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
                       }`}
                     >
                       ✕

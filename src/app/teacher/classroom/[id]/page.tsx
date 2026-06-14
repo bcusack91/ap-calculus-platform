@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { StudentGrouping } from '@/components/StudentGrouping'
 import { ClassAnnouncements } from '@/components/ClassAnnouncements'
 import { ClassroomChallenges } from '@/components/ClassroomChallenges'
+import FocusTrapDialog from '@/components/FocusTrapDialog'
 
 interface Member {
   id: string
@@ -924,8 +925,14 @@ export default function ClassroomDetailPage() {
             <h2 className="text-xl font-bold mb-6 text-gray-900 dark:text-white">Classroom Settings</h2>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                <label
+                  htmlFor="settings-name"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Name
+                </label>
                 <input
+                  id="settings-name"
                   type="text"
                   value={editName}
                   onChange={(e) => setEditName(e.target.value)}
@@ -934,8 +941,14 @@ export default function ClassroomDetailPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                  <label
+                    htmlFor="settings-subject"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                  >
+                    Subject
+                  </label>
                   <input
+                    id="settings-subject"
                     type="text"
                     value={editSubject}
                     onChange={(e) => setEditSubject(e.target.value)}
@@ -943,8 +956,14 @@ export default function ClassroomDetailPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Grade</label>
+                  <label
+                    htmlFor="settings-grade"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                  >
+                    Grade
+                  </label>
                   <input
+                    id="settings-grade"
                     type="text"
                     value={editGrade}
                     onChange={(e) => setEditGrade(e.target.value)}
@@ -953,8 +972,14 @@ export default function ClassroomDetailPage() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Description</label>
+                <label
+                  htmlFor="settings-description"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Description
+                </label>
                 <textarea
+                  id="settings-description"
                   value={editDesc}
                   onChange={(e) => setEditDesc(e.target.value)}
                   rows={3}
@@ -974,203 +999,259 @@ export default function ClassroomDetailPage() {
       </div>
 
       {/* Create Assignment Modal */}
-      {showAssignmentModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Create Assignment</h2>
-            <div className="space-y-4">
+      <FocusTrapDialog
+        open={showAssignmentModal}
+        onClose={() => setShowAssignmentModal(false)}
+        title="Create Assignment"
+      >
+        <div className="p-8">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Create Assignment</h2>
+          <div className="space-y-4">
+            <div>
+              <label
+                htmlFor="assignment-title"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Title *
+              </label>
+              <input
+                id="assignment-title"
+                type="text"
+                value={assignmentForm.title}
+                onChange={(e) => setAssignmentForm({ ...assignmentForm, title: e.target.value })}
+                placeholder="e.g., Practice Derivatives"
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="assignment-type"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Type
+              </label>
+              <select
+                id="assignment-type"
+                value={assignmentForm.type}
+                onChange={(e) => setAssignmentForm({ ...assignmentForm, type: e.target.value })}
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              >
+                {assignmentTypes.map((t) => (
+                  <option key={t.value} value={t.value}>{t.label}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label
+                htmlFor="assignment-topic"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Topic
+              </label>
+              <select
+                id="assignment-topic"
+                value={assignmentForm.topicSlug}
+                onChange={(e) => setAssignmentForm({ ...assignmentForm, topicSlug: e.target.value })}
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              >
+                <option value="">Select a topic...</option>
+                {courses.map((c) => (
+                  <optgroup key={c.courseTitle} label={c.courseTitle}>
+                    {c.topics.map((t) => (
+                      <option key={t.slug} value={t.slug}>{t.title}</option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                  Title *
+                <label
+                  htmlFor="assignment-due-date"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Due Date
                 </label>
                 <input
-                  type="text"
-                  value={assignmentForm.title}
-                  onChange={(e) => setAssignmentForm({ ...assignmentForm, title: e.target.value })}
-                  placeholder="e.g., Practice Derivatives"
+                  id="assignment-due-date"
+                  type="datetime-local"
+                  value={assignmentForm.dueDate}
+                  onChange={(e) => setAssignmentForm({ ...assignmentForm, dueDate: e.target.value })}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Type</label>
-                <select
-                  value={assignmentForm.type}
-                  onChange={(e) => setAssignmentForm({ ...assignmentForm, type: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                <label
+                  htmlFor="assignment-required-score"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
                 >
-                  {assignmentTypes.map((t) => (
-                    <option key={t.value} value={t.value}>{t.label}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Topic</label>
-                <select
-                  value={assignmentForm.topicSlug}
-                  onChange={(e) => setAssignmentForm({ ...assignmentForm, topicSlug: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                >
-                  <option value="">Select a topic...</option>
-                  {courses.map((c) => (
-                    <optgroup key={c.courseTitle} label={c.courseTitle}>
-                      {c.topics.map((t) => (
-                        <option key={t.slug} value={t.slug}>{t.title}</option>
-                      ))}
-                    </optgroup>
-                  ))}
-                </select>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Due Date
-                  </label>
-                  <input
-                    type="datetime-local"
-                    value={assignmentForm.dueDate}
-                    onChange={(e) => setAssignmentForm({ ...assignmentForm, dueDate: e.target.value })}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Required Score (%)
-                  </label>
-                  <input
-                    type="number"
-                    value={assignmentForm.requiredScore}
-                    onChange={(e) => setAssignmentForm({ ...assignmentForm, requiredScore: e.target.value })}
-                    min="0"
-                    max="100"
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                  Max Attempts (optional)
+                  Required Score (%)
                 </label>
                 <input
+                  id="assignment-required-score"
                   type="number"
-                  value={assignmentForm.maxAttempts}
-                  onChange={(e) => setAssignmentForm({ ...assignmentForm, maxAttempts: e.target.value })}
-                  min="1"
-                  placeholder="Unlimited"
+                  value={assignmentForm.requiredScore}
+                  onChange={(e) => setAssignmentForm({ ...assignmentForm, requiredScore: e.target.value })}
+                  min="0"
+                  max="100"
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                 />
               </div>
             </div>
-            <div className="flex gap-3 mt-6">
-              <button
-                onClick={() => setShowAssignmentModal(false)}
-                className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            <div>
+              <label
+                htmlFor="assignment-max-attempts"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
               >
-                Cancel
-              </button>
-              <button
-                onClick={createAssignment}
-                disabled={!assignmentForm.title.trim() || creatingAssignment}
-                className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              >
-                {creatingAssignment ? 'Creating...' : 'Create Assignment'}
-              </button>
+                Max Attempts (optional)
+              </label>
+              <input
+                id="assignment-max-attempts"
+                type="number"
+                value={assignmentForm.maxAttempts}
+                onChange={(e) => setAssignmentForm({ ...assignmentForm, maxAttempts: e.target.value })}
+                min="1"
+                placeholder="Unlimited"
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              />
             </div>
           </div>
+          <div className="flex gap-3 mt-6">
+            <button
+              onClick={() => setShowAssignmentModal(false)}
+              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={createAssignment}
+              disabled={!assignmentForm.title.trim() || creatingAssignment}
+              className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              {creatingAssignment ? 'Creating...' : 'Create Assignment'}
+            </button>
+          </div>
         </div>
-      )}
+      </FocusTrapDialog>
 
       {/* Schedule Competition Modal */}
-      {showCompModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-lg">
-            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Schedule Competition</h2>
-            <div className="space-y-4">
+      <FocusTrapDialog
+        open={showCompModal}
+        onClose={() => setShowCompModal(false)}
+        title="Schedule Competition"
+      >
+        <div className="p-8">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Schedule Competition</h2>
+          <div className="space-y-4">
+            <div>
+              <label
+                htmlFor="competition-title"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Title *
+              </label>
+              <input
+                id="competition-title"
+                type="text"
+                value={compForm.title}
+                onChange={(e) => setCompForm({ ...compForm, title: e.target.value })}
+                placeholder="e.g., Friday Speed Challenge"
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="competition-topic"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Topic *
+              </label>
+              <select
+                id="competition-topic"
+                value={compForm.topicSlug}
+                onChange={(e) => setCompForm({ ...compForm, topicSlug: e.target.value })}
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              >
+                <option value="">Select a topic...</option>
+                {courses.map((c) => (
+                  <optgroup key={c.courseTitle} label={c.courseTitle}>
+                    {c.topics.map((t) => (
+                      <option key={t.slug} value={t.slug}>{t.title}</option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label
+                htmlFor="competition-game-mode"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Game Mode
+              </label>
+              <select
+                id="competition-game-mode"
+                value={compForm.gameMode}
+                onChange={(e) => setCompForm({ ...compForm, gameMode: e.target.value })}
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              >
+                {gameModes.map((m) => (
+                  <option key={m.value} value={m.value}>{m.label}</option>
+                ))}
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                  Title *
+                <label
+                  htmlFor="competition-start-time"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Start Time *
                 </label>
                 <input
-                  type="text"
-                  value={compForm.title}
-                  onChange={(e) => setCompForm({ ...compForm, title: e.target.value })}
-                  placeholder="e.g., Friday Speed Challenge"
+                  id="competition-start-time"
+                  type="datetime-local"
+                  value={compForm.scheduledAt}
+                  onChange={(e) => setCompForm({ ...compForm, scheduledAt: e.target.value })}
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Topic *</label>
-                <select
-                  value={compForm.topicSlug}
-                  onChange={(e) => setCompForm({ ...compForm, topicSlug: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                <label
+                  htmlFor="competition-duration"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
                 >
-                  <option value="">Select a topic...</option>
-                  {courses.map((c) => (
-                    <optgroup key={c.courseTitle} label={c.courseTitle}>
-                      {c.topics.map((t) => (
-                        <option key={t.slug} value={t.slug}>{t.title}</option>
-                      ))}
-                    </optgroup>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Game Mode</label>
-                <select
-                  value={compForm.gameMode}
-                  onChange={(e) => setCompForm({ ...compForm, gameMode: e.target.value })}
+                  Duration (min)
+                </label>
+                <input
+                  id="competition-duration"
+                  type="number"
+                  value={compForm.duration}
+                  onChange={(e) => setCompForm({ ...compForm, duration: e.target.value })}
+                  min="5"
+                  max="180"
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                >
-                  {gameModes.map((m) => (
-                    <option key={m.value} value={m.value}>{m.label}</option>
-                  ))}
-                </select>
+                />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Start Time *
-                  </label>
-                  <input
-                    type="datetime-local"
-                    value={compForm.scheduledAt}
-                    onChange={(e) => setCompForm({ ...compForm, scheduledAt: e.target.value })}
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                    Duration (min)
-                  </label>
-                  <input
-                    type="number"
-                    value={compForm.duration}
-                    onChange={(e) => setCompForm({ ...compForm, duration: e.target.value })}
-                    min="5"
-                    max="180"
-                    className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3 mt-6">
-              <button
-                onClick={() => setShowCompModal(false)}
-                className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={createCompetition}
-                disabled={!compForm.title.trim() || !compForm.topicSlug || !compForm.scheduledAt || creatingComp}
-                className="flex-1 px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-              >
-                {creatingComp ? 'Scheduling...' : 'Schedule Competition'}
-              </button>
             </div>
           </div>
+          <div className="flex gap-3 mt-6">
+            <button
+              onClick={() => setShowCompModal(false)}
+              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={createCompetition}
+              disabled={!compForm.title.trim() || !compForm.topicSlug || !compForm.scheduledAt || creatingComp}
+              className="flex-1 px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              {creatingComp ? 'Scheduling...' : 'Schedule Competition'}
+            </button>
+          </div>
         </div>
-      )}
+      </FocusTrapDialog>
     </div>
   )
 }

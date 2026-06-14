@@ -31,6 +31,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Build-excluded scripts (mirrors tsconfig.json "exclude").
+    "scripts/**",
   ]),
 ]);
 
