@@ -5,32 +5,6 @@
 // synthetic 'general' topic so the lobby UI still has at least one selectable
 // option and the API doesn't 404.
 
-import { getAlgebra1Questions } from '@/data/competitive-questions/algebra1-bank'
-import { getGeometryQuestions } from '@/data/competitive-questions/geometry-bank'
-import { getApCalculusQuestions } from '@/data/competitive-questions/ap-calculus-bank'
-import { getApCalculusBCQuestions } from '@/data/competitive-questions/ap-calculus-bc-bank'
-import { getPreCalcQuestions } from '@/data/competitive-questions/precalc-bank'
-import { getAlgebra2Questions } from '@/data/competitive-questions/algebra2-bank'
-import { getApBiologyQuestions } from '@/data/competitive-questions/ap-biology-bank'
-import { getApChemistryQuestions } from '@/data/competitive-questions/ap-chemistry-bank'
-import { getApPhysics1Questions } from '@/data/competitive-questions/ap-physics1-bank'
-import { getApPhysics2Questions } from '@/data/competitive-questions/ap-physics2-bank'
-import { getApPhysicsCMechQuestions } from '@/data/competitive-questions/ap-physics-c-mech-bank'
-import { getApPhysicsCEMQuestions } from '@/data/competitive-questions/ap-physics-c-em-bank'
-import { getApAPESQuestions } from '@/data/competitive-questions/ap-enviro-bank'
-import { getApWorldHistoryQuestions } from '@/data/competitive-questions/ap-world-history-bank'
-import { getApUSHistoryQuestions } from '@/data/competitive-questions/ap-us-history-bank'
-import { getApAASQuestions } from '@/data/competitive-questions/ap-african-american-studies-bank'
-import { getApHumanGeoQuestions } from '@/data/competitive-questions/ap-human-geo-bank'
-import { getApUSGovQuestions } from '@/data/competitive-questions/ap-us-gov-bank'
-import { getApMacroQuestions } from '@/data/competitive-questions/ap-macro-bank'
-import { getApMicroQuestions } from '@/data/competitive-questions/ap-micro-bank'
-import { getApEngLitQuestions } from '@/data/competitive-questions/ap-english-lit-bank'
-import { getApEngLangQuestions } from '@/data/competitive-questions/ap-english-lang-bank'
-import { getApCSAQuestions } from '@/data/competitive-questions/ap-csa-bank'
-import { getApCSPQuestions } from '@/data/competitive-questions/ap-csp-bank'
-import { getApStatisticsQuestions } from '@/data/competitive-questions/ap-statistics-bank'
-import { getApPsychologyQuestions } from '@/data/competitive-questions/ap-psychology-bank'
 
 export interface TeacherLobbyQuestion {
   id: number | string
@@ -46,7 +20,7 @@ interface CourseRegistryEntry {
   slug: string
   name: string
   /** Pull a large list of questions, optionally filtered by topic slug. */
-  getQuestions: (count: number, topicSlug?: string) => TeacherLobbyQuestion[]
+  getQuestions: (count: number, topicSlug?: string) => Promise<TeacherLobbyQuestion[]>
 }
 
 type AnyQuestion = {
@@ -60,12 +34,122 @@ type AnyQuestion = {
   subtopic?: string
 }
 
+// Lazy bank wrappers: each dynamically imports its bank chunk on first use
+// (cached by the module system), keeping ~26 banks out of the teacher-lobby
+// routes' cold-start bundles. Mirrors the competitive-utils lazy pattern.
+
+async function getAlgebra1Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/algebra1-bank')
+  return (m.getAlgebra1Questions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getGeometryQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/geometry-bank')
+  return (m.getGeometryQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApCalculusQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-calculus-bank')
+  return (m.getApCalculusQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApCalculusBCQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-calculus-bc-bank')
+  return (m.getApCalculusBCQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getPreCalcQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/precalc-bank')
+  return (m.getPreCalcQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getAlgebra2Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/algebra2-bank')
+  return (m.getAlgebra2Questions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApBiologyQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-biology-bank')
+  return (m.getApBiologyQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApChemistryQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-chemistry-bank')
+  return (m.getApChemistryQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApPhysics1Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-physics1-bank')
+  return (m.getApPhysics1Questions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApPhysics2Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-physics2-bank')
+  return (m.getApPhysics2Questions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApPhysicsCMechQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-physics-c-mech-bank')
+  return (m.getApPhysicsCMechQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApPhysicsCEMQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-physics-c-em-bank')
+  return (m.getApPhysicsCEMQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApAPESQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-enviro-bank')
+  return (m.getApAPESQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApWorldHistoryQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-world-history-bank')
+  return (m.getApWorldHistoryQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApUSHistoryQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-us-history-bank')
+  return (m.getApUSHistoryQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApAASQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-african-american-studies-bank')
+  return (m.getApAASQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApHumanGeoQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-human-geo-bank')
+  return (m.getApHumanGeoQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApUSGovQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-us-gov-bank')
+  return (m.getApUSGovQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApMacroQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-macro-bank')
+  return (m.getApMacroQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApMicroQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-micro-bank')
+  return (m.getApMicroQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApEngLitQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-english-lit-bank')
+  return (m.getApEngLitQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApEngLangQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-english-lang-bank')
+  return (m.getApEngLangQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApCSAQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-csa-bank')
+  return (m.getApCSAQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApCSPQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-csp-bank')
+  return (m.getApCSPQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApStatisticsQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-statistics-bank')
+  return (m.getApStatisticsQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+async function getApPsychologyQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/ap-psychology-bank')
+  return (m.getApPsychologyQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+
+
 /** Wrap a bank getter that supports topicSlug. Passes the slug through. */
 function topicTagged(
-  getter: (count: number, topicSlug?: string) => AnyQuestion[],
+  getter: (count?: number, topicSlug?: string) => Promise<AnyQuestion[]>,
 ): CourseRegistryEntry['getQuestions'] {
-  return (count, topic) => {
-    const qs = getter(count, topic)
+  return async (count, topic) => {
+    const qs = await getter(count, topic)
     return qs.map(q => ({
       id: q.id,
       question: q.question,
@@ -83,10 +167,10 @@ function topicTagged(
  * synthetic 'general' topic and ignores topic filter requests.
  */
 function untagged(
-  getter: (count: number) => AnyQuestion[],
+  getter: (count?: number, topicSlug?: string) => Promise<AnyQuestion[]>,
 ): CourseRegistryEntry['getQuestions'] {
-  return (count, _topic) => {
-    const qs = getter(count)
+  return async (count, _topic) => {
+    const qs = await getter(count)
     return qs.map(q => ({
       id: q.id,
       question: q.question,
@@ -101,8 +185,8 @@ function untagged(
 
 /** Algebra 2 bank groups by subtopic (enum), not topicSlug. */
 function algebra2Adapter(): CourseRegistryEntry['getQuestions'] {
-  return (count, topic) => {
-    const all = getAlgebra2Questions(100000) as AnyQuestion[]
+  return async (count, topic) => {
+    const all = await getAlgebra2Questions(100000) as AnyQuestion[]
     const filtered = topic ? all.filter(q => q.subtopic === topic) : all
     const arr = [...filtered]
     for (let i = arr.length - 1; i > 0; i--) {
@@ -172,10 +256,10 @@ export function getCourseEntry(slug: string): CourseRegistryEntry | null {
  * for a given course. Falls back to a single 'general' topic if the bank
  * doesn't tag its questions.
  */
-export function getCourseTopics(slug: string): { slug: string; title: string; count: number }[] {
+export async function getCourseTopics(slug: string): Promise<{ slug: string; title: string; count: number }[]> {
   const entry = getCourseEntry(slug)
   if (!entry) return []
-  const all = entry.getQuestions(100000)
+  const all = await entry.getQuestions(100000)
   const counts = new Map<string, number>()
   for (const q of all) {
     const ts = q.topicSlug || 'general'
@@ -202,22 +286,22 @@ function prettifyTopicSlug(slug: string): string {
  *
  * If multiple topics are selected, questions are interleaved roughly evenly.
  */
-export function buildQuestionPool(
+export async function buildQuestionPool(
   courseSlug: string,
   topicSlugs: string[],
   target: number,
-): TeacherLobbyQuestion[] {
+): Promise<TeacherLobbyQuestion[]> {
   const entry = getCourseEntry(courseSlug)
   if (!entry) return []
 
   // 1) Gather all questions matching at least one selected topic.
   let pool: TeacherLobbyQuestion[] = []
   if (topicSlugs.length === 0) {
-    pool = entry.getQuestions(100000)
+    pool = await entry.getQuestions(100000)
   } else {
     const seen = new Set<string | number>()
     for (const t of topicSlugs) {
-      const qs = entry.getQuestions(100000, t)
+      const qs = await entry.getQuestions(100000, t)
       for (const q of qs) {
         if (seen.has(q.id)) continue
         seen.add(q.id)

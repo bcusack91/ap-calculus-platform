@@ -14,7 +14,7 @@ export async function GET(req: Request) {
   if (!courseSlug) {
     return NextResponse.json({ courses: listSupportedCourses() })
   }
-  const topics = getCourseTopics(courseSlug)
+  const topics = await getCourseTopics(courseSlug)
   if (topics.length === 0) {
     return NextResponse.json({ error: 'Unsupported course' }, { status: 404 })
   }

@@ -44,7 +44,7 @@ export async function POST(_req: NextRequest, { params }: Ctx) {
   }
 
   const topicSlugs = Array.isArray(lobby.topicSlugs) ? (lobby.topicSlugs as string[]) : []
-  const pool = buildQuestionPool(lobby.courseSlug, topicSlugs, 200)
+  const pool = await buildQuestionPool(lobby.courseSlug, topicSlugs, 200)
   if (pool.length === 0) {
     return NextResponse.json(
       { error: 'No questions found for the chosen course/topics.' },
