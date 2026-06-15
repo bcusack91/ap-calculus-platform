@@ -765,6 +765,32 @@ export default function MCATDiagnosticPage() {
               </div>
             </div>
 
+            {/* Recommended lessons — surfaces the recommendedTopics the scorer
+                already computes so students get an AP-style remediation list. */}
+            {results.recommendedTopics?.length ? (
+              <div className="mb-8 rounded-2xl border-2 border-emerald-300 bg-white p-6 shadow-sm dark:border-emerald-700 dark:bg-gray-800">
+                <h3 className="mb-1 text-lg font-semibold text-gray-800 dark:text-gray-200">📚 Recommended Lessons</h3>
+                <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Start with these to close your biggest gaps.</p>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {results.recommendedTopics.map(t => (
+                    <Link
+                      key={t.slug}
+                      href={`/topics/${t.slug}`}
+                      className="flex items-center justify-between rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 transition hover:border-emerald-400 dark:border-emerald-700 dark:bg-emerald-900/20"
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{t.name}</span>
+                        <span className={`rounded-full px-1.5 py-0.5 text-[10px] ${t.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                          {t.priority === 'high' ? 'High' : 'Med'}
+                        </span>
+                      </span>
+                      <span className="text-emerald-600 dark:text-emerald-400">Study →</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
             {/* Review Test */}
             
           <DiagnosticChallengeCard

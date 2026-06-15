@@ -11,14 +11,18 @@ export function buildDiscretesPassage(
   section: Exclude<MCATSection, 'cars'>,
   all: MCATDiscreteQuestion[],
   limit?: number,
+  opts?: { idSuffix?: string; title?: string },
 ): MCATPassage | null {
   const discretes = typeof limit === 'number' ? all.slice(0, Math.max(0, limit)) : all
   if (!discretes.length) return null
   return {
-    id: `${section}-discretes`,
+    // `idSuffix` lets the full-length assembler emit several DISTINCT discrete
+    // mini-blocks (e.g. `${section}-discretes-1`, `-2`) with unique ids. Absent
+    // (the 2-/3-arg callers), the id stays `${section}-discretes` exactly.
+    id: `${section}-discretes${opts?.idSuffix ?? ''}`,
     section,
     discipline: 'Discrete questions',
-    title: 'Discrete Questions',
+    title: opts?.title ?? 'Discrete Questions',
     passageText:
       'The following questions are **independent of any passage** — each stands alone, as in the discrete sets on the real MCAT.',
     questions: discretes.map(({ question, options, correctAnswer, explanation, skill, needsReview }) => ({

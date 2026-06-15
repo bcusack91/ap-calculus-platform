@@ -18,6 +18,7 @@ import MCATFigure from '@/components/MCATFigure'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { scoreMCAT, type MCATScoreReport } from '@/lib/mcat-scoring'
+import { recommendFromFullLength } from '@/lib/mcat-fulllength-recs'
 import { MCAT_SECTION_META, type MCATPassage, type MCATSection } from '@/data/mcat/types'
 import 'katex/dist/katex.min.css'
 
@@ -122,6 +123,13 @@ export default function MCATPassageRunner({
     return scoreMCAT(raw)
   }, [submitted, mode, passages, answers]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Topic-level lesson recommendations for the full-length results screen,
+  // attributed via passage discipline (see mcat-fulllength-recs). Exam mode only.
+  const topicRecs = useMemo(
+    () => (mode === 'exam' ? recommendFromFullLength(passages, answers) : []),
+    [mode, passages, answers],
+  )
+
   const answeredCount = Object.keys(answers).length
   const totalQuestions = flatQuestions.length
 
@@ -178,6 +186,31 @@ export default function MCATPassageRunner({
                   </div>
                 )
               })()}
+              {topicRecs.length > 0 && (
+                <div className="mb-6 rounded-2xl border-2 border-emerald-300 bg-white p-5 shadow-sm dark:border-emerald-700 dark:bg-gray-800">
+                  <p className="mb-1 text-sm font-bold text-emerald-900 dark:text-emerald-200">📚 Recommended lessons</p>
+                  <p className="mb-3 text-xs text-gray-500 dark:text-gray-400">
+                    Based on the topics you missed most — open a lesson to remediate before your retake.
+                  </p>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {topicRecs.map((r) => (
+                      <Link
+                        key={r.slug}
+                        href={`/topics/${r.slug}`}
+                        className="flex items-center justify-between rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 transition hover:border-emerald-400 dark:border-emerald-700 dark:bg-emerald-900/20"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{r.name}</span>
+                          <span className={`rounded-full px-1.5 py-0.5 text-[10px] ${r.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                            {r.priority === 'high' ? 'High' : 'Med'}
+                          </span>
+                        </span>
+                        <span className="text-emerald-600 dark:text-emerald-400">Open →</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </>
           )}
           {/* Review */}
