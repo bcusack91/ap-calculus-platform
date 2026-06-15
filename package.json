@@ -31,6 +31,7 @@
     "db:reset": "prisma migrate reset --force && npm run seed:all"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1",
     "@auth/prisma-adapter": "^2.11.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",

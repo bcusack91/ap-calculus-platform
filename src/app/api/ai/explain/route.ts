@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import Anthropic from '@anthropic-ai/sdk'
 import { auth } from '@/lib/auth'
 import { rateLimit } from '@/lib/rate-limit'
 import { FREE_LIMITS } from '@/lib/premium'
@@ -75,30 +76,34 @@ export async function POST(request: Request) {
 
     const prompt = `${stylePrompts[style] || stylePrompts.simple}\n\nConcept: ${concept.slice(0, 500)}`
 
-    // If OpenAI API key is available, use it; otherwise return a templated response
-    const apiKey = process.env.OPENAI_API_KEY
+    // Generate a real explanation with Claude Haiku 4.5 when a key is configured;
+    // otherwise fall through to the templated response below. Only the concept
+    // name + chosen style is sent to the model (no student PII). A failed call
+    // degrades gracefully to the templates rather than erroring the request.
+    const apiKey = process.env.ANTHROPIC_API_KEY
     if (apiKey) {
-      const aiRes = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
-          messages: [
-            { role: 'system', content: 'You are a helpful tutor. Keep explanations concise (2-4 sentences). Be encouraging.' },
-            { role: 'user', content: prompt },
-          ],
-          max_tokens: 200,
-          temperature: 0.7,
-        }),
-      })
-
-      if (aiRes.ok) {
-        const data = await aiRes.json()
-        const explanation = data.choices?.[0]?.message?.content ?? ''
-        return NextResponse.json({ explanation })
+      try {
+        const client = new Anthropic({ apiKey })
+        const message = await client.messages.create({
+          model: 'claude-haiku-4-5',
+          max_tokens: 300,
+          system:
+            'You are a helpful, encouraging tutor for students (some as young as 9). ' +
+            'Keep explanations concise (2-4 sentences), in plain language, and accurate. ' +
+            'Do not ask the student questions back; just give the explanation.',
+          messages: [{ role: 'user', content: prompt }],
+        })
+        const explanation = message.content
+          .map((block) => (block.type === 'text' ? block.text : ''))
+          .join('')
+          .trim()
+        if (explanation) {
+          return NextResponse.json({ explanation })
+        }
+      } catch (err) {
+        // Fall through to the template fallback below so a transient model/API
+        // error never breaks the "Explain differently" feature.
+        console.error('[ai/explain] Claude call failed, using template fallback:', err)
       }
     }
 
