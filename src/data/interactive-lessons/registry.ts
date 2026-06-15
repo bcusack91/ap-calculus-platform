@@ -30,6 +30,7 @@ import { registryChunk1 } from './registry-chunk-1'
 import { registryChunk2 } from './registry-chunk-2'
 import { registryChunk3 } from './registry-chunk-3'
 import { registryChunk4 } from './registry-chunk-4'
+import { registryExtra } from './registry-extra'
 
 const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   ...registryChunk0,
@@ -37,6 +38,8 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   ...registryChunk2,
   ...registryChunk3,
   ...registryChunk4,
+  // Hand-authored lessons for previously-uncovered topics (see registry-extra.ts).
+  ...registryExtra,
 }
 
 // ---------------------------------------------------------------------------
