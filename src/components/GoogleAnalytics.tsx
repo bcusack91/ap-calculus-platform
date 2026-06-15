@@ -22,7 +22,7 @@ export default function GoogleAnalytics({ measurementId }: { measurementId: stri
   return (
     <>
       {/* Set default consent before GA loads */}
-      <Script id="google-consent-default" strategy="beforeInteractive">
+      <Script id="google-consent-default" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

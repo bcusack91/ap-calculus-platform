@@ -12,7 +12,8 @@
  * usable on a phone.
  */
 
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import MCATFigure from '@/components/MCATFigure'
 import { renderRichText } from '@/lib/render-rich-text'
@@ -57,6 +58,7 @@ export default function MCATPassageRunner({
   backHref,
   backLabel = 'Back',
   timeLimitMinutes,
+  form,
 }: {
   passages: MCATPassage[]
   mode: Mode
@@ -64,7 +66,10 @@ export default function MCATPassageRunner({
   backHref: string
   backLabel?: string
   timeLimitMinutes?: number
+  /** Full-length form number (1|2). When set in exam mode, results are persisted. */
+  form?: number
 }) {
+  const { data: session } = useSession()
   const [active, setActive] = useState(0) // active passage index
   // answers keyed "p:q" → selected option index
   const [answers, setAnswers] = useState<Record<string, number>>({})
@@ -105,7 +110,7 @@ export default function MCATPassageRunner({
     if (submitted || checkedPassages.has(active)) return
     setEliminated((e) => {
       const set = new Set(e[key(active, qi)] ?? [])
-      set.has(oi) ? set.delete(oi) : set.add(oi)
+      if (set.has(oi)) set.delete(oi); else set.add(oi)
       return { ...e, [key(active, qi)]: set }
     })
   }
@@ -121,7 +126,7 @@ export default function MCATPassageRunner({
       if (answers[key(pi, qi)] === q.correctAnswer) raw[p.section].correct++
     }))
     return scoreMCAT(raw)
-  }, [submitted, mode, passages, answers]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [submitted, mode, passages, answers])
 
   // Topic-level lesson recommendations for the full-length results screen,
   // attributed via passage discipline (see mcat-fulllength-recs). Exam mode only.
@@ -132,6 +137,34 @@ export default function MCATPassageRunner({
 
   const answeredCount = Object.keys(answers).length
   const totalQuestions = flatQuestions.length
+
+  // Persist a completed full-length once, so a weak result feeds the adaptive
+  // study plan (mirrors the diagnostic). Best-effort & fire-and-forget: only
+  // when signed in and we have a scored report; never blocks the results UI, and
+  // a failed POST is swallowed. The ref guards against React re-renders firing
+  // it twice; it resets on Retake (submitted -> false).
+  const savedRef = useRef(false)
+  useEffect(() => {
+    if (!submitted) { savedRef.current = false; return }
+    if (mode !== 'exam' || !report || !session?.user?.id || savedRef.current) return
+    savedRef.current = true
+    fetch('/api/mcat-full-length/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        form,
+        total: report.total,
+        percentileLabel: report.percentileLabel,
+        sections: report.sections.map((s) => ({
+          section: s.section, short: s.short, correct: s.correct, total: s.total, scaled: s.scaled,
+        })),
+        recommendedTopics: topicRecs,
+        weakAreas: report.sections
+          .filter((s) => s.total > 0 && s.correct / s.total < 0.5)
+          .map((s) => s.short),
+      }),
+    }).catch(() => { /* best-effort; results UI is unaffected */ })
+  }, [submitted, mode, report, topicRecs, form, session?.user?.id])
 
   // ---------- Results screen ----------
   if (submitted && report) {
@@ -359,7 +392,7 @@ export default function MCATPassageRunner({
                   className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-5 py-2.5 font-semibold text-white disabled:opacity-50"
                 >Check answers</button>
               )}
-              <button onClick={() => { setFlags((f) => { const n = new Set(f); n.has(active) ? n.delete(active) : n.add(active); return n }) }} aria-pressed={flags.has(active)} aria-label={flags.has(active) ? 'Unflag this passage for review' : 'Flag this passage for review'} className={`rounded-xl border-2 px-4 py-2.5 text-sm font-semibold ${flags.has(active) ? 'border-amber-400 text-amber-600' : 'border-gray-300 text-gray-500 dark:border-gray-600'}`}>
+              <button onClick={() => { setFlags((f) => { const n = new Set(f); if (n.has(active)) n.delete(active); else n.add(active); return n }) }} aria-pressed={flags.has(active)} aria-label={flags.has(active) ? 'Unflag this passage for review' : 'Flag this passage for review'} className={`rounded-xl border-2 px-4 py-2.5 text-sm font-semibold ${flags.has(active) ? 'border-amber-400 text-amber-600' : 'border-gray-300 text-gray-500 dark:border-gray-600'}`}>
                 {flags.has(active) ? '★ Flagged' : '☆ Flag'}
               </button>
               <div className="ml-auto flex gap-2">

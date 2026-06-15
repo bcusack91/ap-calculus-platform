@@ -6,7 +6,6 @@ import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import type {
   DiagnosticTestData,
-  DiagnosticQuestion,
   DiagnosticResults,
 } from '@/data/sat-practice/diagnostic-generator'
 import ScratchPad from '@/components/ScratchPad'

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
-import type { SATFullTest, SATTestQuestion, SATTestSection } from '@/data/sat-practice/test-generator'
+import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-generator'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -78,7 +78,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
   const [sectionStartTime, setSectionStartTime] = useState(0)
   const [completedSections, setCompletedSections] = useState<SectionResult[]>([])
   const [showNav, setShowNav] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
+  const [submitting, _setSubmitting] = useState(false)
   const [showCalculator, setShowCalculator] = useState(false)
   // Strikethrough tracker: sectionId -> questionIndex -> Set of option indices
   const [strikethroughs, setStrikethroughs] = useState<Map<string, Map<number, Set<number>>>>(new Map())
@@ -268,7 +268,6 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
   )
 
   // Submit current section
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleSubmitSection = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current)
 

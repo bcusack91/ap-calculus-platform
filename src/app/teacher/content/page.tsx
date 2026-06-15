@@ -13,7 +13,7 @@ interface TopicItem {
 }
 
 export default function TeacherContentPage() {
-  const { data: session, status } = useSession()
+  const { data: _session, status } = useSession()
   const router = useRouter()
   const [topics, setTopics] = useState<TopicItem[]>([])
   const [loading, setLoading] = useState(true)

@@ -74,25 +74,58 @@ function parseWeakAreas(weakAreas: unknown): string[] {
  * Fetch the signed-in user's most recent diagnostic for a course and reduce it
  * to a focus summary. `categoryPrefix` is the diagnostic category stem for the
  * course (e.g. "ap-stats-diagnostic"; rows are stored as
- * "ap-stats-diagnostic-<form>"). Returns null when there's no usable diagnostic.
+ * "ap-stats-diagnostic-<form>").
+ *
+ * A course may also feed the plan from a SECONDARY assessment stored under a
+ * different category stem (e.g. MCAT's full-length exam, "mcat-full-length",
+ * which is distinct from the diagnostic's "mcat-full-diagnostic"). Pass an array
+ * of prefixes to merge them: the most recent usable row per prefix contributes
+ * its recommendedTopics/weakAreas, results are deduped by slug (and by area
+ * string), and `takenAt` is the newest contributing row. A single string keeps
+ * the original single-prefix behavior, so existing callers are unaffected.
+ *
+ * Returns null when there's no usable diagnostic for any prefix.
  */
 export async function getDiagnosticFocus(
   userId: string,
-  categoryPrefix: string,
+  categoryPrefix: string | string[],
 ): Promise<DiagnosticFocus | null> {
-  const latest = await prisma.diagnosticTest.findFirst({
-    where: { userId, category: { startsWith: categoryPrefix } },
-    orderBy: { createdAt: 'desc' },
-    select: { results: true, weakAreas: true, createdAt: true },
-  })
-  if (!latest) return null
+  const prefixes = Array.isArray(categoryPrefix) ? categoryPrefix : [categoryPrefix]
 
-  const recommendedTopics = parseRecommendedTopics(latest.results)
-  const weakAreas = parseWeakAreas(latest.weakAreas)
+  // One latest row per prefix (each prefix tracks an independent assessment, so
+  // a stale row of one kind shouldn't hide a fresh row of another).
+  const rows = await Promise.all(
+    prefixes.map((prefix) =>
+      prisma.diagnosticTest.findFirst({
+        where: { userId, category: { startsWith: prefix } },
+        orderBy: { createdAt: 'desc' },
+        select: { results: true, weakAreas: true, createdAt: true },
+      }),
+    ),
+  )
 
-  if (recommendedTopics.length === 0 && weakAreas.length === 0) return null
+  const topicBySlug = new Map<string, RecommendedTopic>()
+  const weakSet = new Set<string>()
+  let takenAt: Date | null = null
 
-  return { weakAreas, recommendedTopics, takenAt: latest.createdAt }
+  for (const row of rows) {
+    if (!row) continue
+    // Higher-priority entry for a slug wins if the same topic appears twice.
+    const rank = (p?: string) => (p === 'high' ? 0 : p === 'medium' ? 1 : 2)
+    for (const t of parseRecommendedTopics(row.results)) {
+      const existing = topicBySlug.get(t.slug)
+      if (!existing || rank(t.priority) < rank(existing.priority)) topicBySlug.set(t.slug, t)
+    }
+    for (const w of parseWeakAreas(row.weakAreas)) weakSet.add(w)
+    if (!takenAt || row.createdAt > takenAt) takenAt = row.createdAt
+  }
+
+  const recommendedTopics = [...topicBySlug.values()]
+  const weakAreas = [...weakSet]
+
+  if ((recommendedTopics.length === 0 && weakAreas.length === 0) || !takenAt) return null
+
+  return { weakAreas, recommendedTopics, takenAt }
 }
 
 /**
@@ -150,7 +183,7 @@ export function prependPriorityTasks(
  */
 export async function applyAdaptivePriority(
   userId: string,
-  categoryPrefix: string,
+  categoryPrefix: string | string[],
   resolvedTasks: ResolvedTask[],
   startDate: Date,
 ): Promise<{ tasks: ResolvedTask[]; focus: DiagnosticFocus | null }> {

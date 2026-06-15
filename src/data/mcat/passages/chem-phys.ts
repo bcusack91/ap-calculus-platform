@@ -282,7 +282,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Bicarbonate is a mild base that deprotonates carboxylic acids (benzoic acid, pKa ~4) but not phenols or amines. The resulting benzoate ion is charged and water-soluble, so it partitions into the aqueous layer. Aniline is a base, not an acid, so NaHCO3 does not deprotonate it; naphthalene is inert.',
-        skill: 'Extraction',
+        skill: 'Acid–base extraction',
       },
       {
         question:
@@ -296,7 +296,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Acidifying the basic aqueous layer with HCl pushes the equilibrium back toward neutral benzoic acid (pKa ~4), which has low water solubility and precipitates. No oxidation occurs; NaCl is highly soluble; aniline was never in this aqueous layer.',
-        skill: 'Extraction',
+        skill: 'Solubility and pH',
       },
       {
         question:
@@ -310,7 +310,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage states dichloromethane is denser than water, so the organic layer sits on the bottom. Naphthalene is neutral and nonpolar, so it stays dissolved in that lower organic layer. Option A inverts the densities.',
-        skill: 'Extraction',
+        skill: 'Separatory funnel technique',
       },
       {
         question:
@@ -338,7 +338,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Aniline is a base; washing with aqueous HCl protonates it to the water-soluble anilinium ion, pulling it into the aqueous layer and leaving neutral naphthalene behind in the organic layer. Aniline can later be freed by basifying. NaHCO3/NaOH are bases and would not extract a basic compound; pure water does not ionize aniline appreciably.',
-        skill: 'Extraction',
+        skill: 'Acid–base extraction',
       },
     ],
   },

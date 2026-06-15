@@ -732,7 +732,7 @@ function buildFigureSupplementQuestions(
 
         // ── Q-b: Prediction question (Skill 2 — scientific reasoning) ──
         // Real MCAT asks: "If a fifth condition were added..."
-        const nextX = visual.figure?.xValues?.[3] ?? 4
+        const _nextX = visual.figure?.xValues?.[3] ?? 4
         const lastDelta = yValues[3] - yValues[2]
         const prevDelta = yValues[2] - yValues[1]
         const predictedCorrect =
@@ -860,8 +860,8 @@ function buildFigureSupplementQuestions(
         // ── Q-cmp: Comparison-trace mechanistic interpretation (Skill 2) ──
         // Real MCAT asks about what the difference between traces implies about mechanism
         if (comparisonLabel && comparisonValues) {
-          const primaryGain = yValues[3] - yValues[0]
-          const compGain = comparisonValues[3] - comparisonValues[0]
+          const _primaryGain = yValues[3] - yValues[0]
+          const _compGain = comparisonValues[3] - comparisonValues[0]
           const startDiff = yValues[0] - comparisonValues[0]
           const endDiff = yValues[3] - comparisonValues[3]
           const diverges = Math.abs(endDiff) > Math.abs(startDiff) * 1.3

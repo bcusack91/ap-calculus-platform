@@ -643,7 +643,7 @@ const questionPool: QuestionTemplate[] = [
       const c = randInt(1, 3)
       const xMax = Math.floor(p / (2 * c))
       const maxR = p * xMax - c * xMax * xMax
-      const { options, correctIndex } = makeOptions(maxR, 30)
+      const { options, correctIndex: _correctIndex } = makeOptions(maxR, 30)
       return {
         id: this.id, category: this.category,
         question: `Revenue is $R(x) = ${p}x - ${c}x^2$. How many units maximize revenue?`,

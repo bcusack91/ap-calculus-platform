@@ -14,7 +14,7 @@ interface StudyGroup {
 }
 
 export default function StudyGroupsPage() {
-  const { data: session, status } = useSession()
+  const { data: _session, status } = useSession()
   const [groups, setGroups] = useState<StudyGroup[]>([])
   const [loading, setLoading] = useState(true)
   const [creating, setCreating] = useState(false)

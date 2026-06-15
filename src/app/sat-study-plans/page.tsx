@@ -69,7 +69,7 @@ const gradients: Record<string, string> = {
 }
 
 export default function SATStudyPlansPage() {
-  const { data: session, status } = useSession()
+  const { data: _session, status } = useSession()
   const router = useRouter()
   const [adopting, setAdopting] = useState<string | null>(null)
   const [examDate, setExamDate] = useState('')

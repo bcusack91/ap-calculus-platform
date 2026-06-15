@@ -193,14 +193,14 @@ export function ContactForm() {
               placeholder="Please provide as much detail as possible..."
               disabled={status === "submitting"}
             />
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
               For content errors, please include the course name and specific topic.
             </p>
           </div>
 
           {/* Error Message */}
           {status === "error" && (
-            <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+            <div className="p-4 bg-red-50 border border-red-200 rounded-lg dark:bg-red-900/20 dark:border-red-800">
               <div className="flex gap-3">
                 <svg
                   className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"
@@ -215,7 +215,7 @@ export function ContactForm() {
                     d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <p className="text-sm text-red-800">{errorMessage}</p>
+                <p className="text-sm text-red-800 dark:text-red-300">{errorMessage}</p>
               </div>
             </div>
           )}
@@ -255,7 +255,7 @@ export function ContactForm() {
           </button>
 
           {/* Privacy Notice */}
-          <p className="text-xs text-gray-500 text-center">
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
             By submitting this form, you agree to our{" "}
             <a href="/privacy" className="text-blue-600 hover:underline">
               Privacy Policy

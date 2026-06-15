@@ -23,12 +23,6 @@ function randInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function randNonZero(min: number, max: number): number {
-  let n = 0
-  while (n === 0) n = randInt(min, max)
-  return n
-}
-
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -94,7 +88,7 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(2, 6)
       const total = randInt(3, 8) * (a + b)
       const partA = (total / (a + b)) * a
-      const { options, correctIndex } = makeOptions(partA, 5)
+      const { options, correctIndex: _correctIndex } = makeOptions(partA, 5)
       return {
         id: this.id, category: this.category,
         question: `Two quantities are in the ratio $${a} : ${b}$. If their sum is $${total}$, what is the larger quantity?`,
@@ -133,9 +127,9 @@ const questionPool: QuestionTemplate[] = [
       const r3 = randInt(1, 4)
       const mult = randInt(2, 6)
       const total = (r1 + r2 + r3) * mult
-      const partA = r1 * mult
+      const _partA = r1 * mult
       const partB = r2 * mult
-      const partC = r3 * mult
+      const _partC = r3 * mult
       const { options, correctIndex } = makeOptions(partB, 4)
       return {
         id: this.id, category: this.category,
@@ -189,7 +183,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(2, 8)
       const b = randInt(2, 8)
       const c = randInt(2, 8)
-      const ans = (b * c) / a
+      const _ans = (b * c) / a
       // Ensure integer answer
       const realA = randInt(2, 6)
       const realB = randInt(2, 6)
@@ -280,7 +274,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(2, 6)
       const b = randInt(2, 6)
       const k = randInt(2, 5)
-      const correct = a * k === b * k ? 'Yes' : 'No'
+      const _correct = a * k === b * k ? 'Yes' : 'No'
       // Create two fractions that may or may not be proportional
       const c = a * k
       const d = b * k
@@ -626,8 +620,8 @@ const questionPool: QuestionTemplate[] = [
       const scaleFactor = randInt(2, 5)
       const side = randInt(3, 10)
       const newSide = side * scaleFactor
-      const origArea = side * side
-      const newArea = newSide * newSide
+      const _origArea = side * side
+      const _newArea = newSide * newSide
       const areaRatio = scaleFactor * scaleFactor
       const { options, correctIndex } = makeOptions(areaRatio)
       return {
@@ -661,7 +655,7 @@ const questionPool: QuestionTemplate[] = [
       const k = randInt(2, 4)
       const origVol = randInt(2, 6)
       const cubeK = k * k * k
-      const ans = origVol * cubeK
+      const _ans = origVol * cubeK
       const { options, correctIndex } = makeOptions(cubeK)
       return {
         id: this.id, category: this.category,
@@ -764,7 +758,7 @@ const questionPool: QuestionTemplate[] = [
       const partB = randInt(2, 5)
       const total = (partA + partB) * randInt(5, 12)
       const share = total * partA / (partA + partB)
-      const { options, correctIndex } = makeOptions(share, 10)
+      const { options, correctIndex: _correctIndex } = makeOptions(share, 10)
       return {
         id: this.id, category: this.category,
         question: `$\\$${total}$ is split in the ratio $${partA} : ${partB}$. What is the smaller share?`,

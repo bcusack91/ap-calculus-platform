@@ -77,7 +77,7 @@ function getModuleRecommendations(byTopic: { slug: string; correct: number; tota
 /* ------------------------------------------------------------------ */
 
 export default function MCATractricePage() {
-  const { data: session, status } = useSession()
+  const { data: _session, status } = useSession()
   const router = useRouter()
 
   const [activeTest, setActiveTest] = useState<MCATSectionTest | null>(null)

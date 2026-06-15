@@ -28,7 +28,7 @@ const diagnosticConfig: Record<string, { apiPath: string; icon: string; label: s
 }
 
 export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: string }) {
-  const { data: session, status } = useSession()
+  const { data: _session, status } = useSession()
   const [result, setResult] = useState<DiagnosticResult | null>(null)
   const [topicProgress, setTopicProgress] = useState<Record<string, TopicProgressInfo>>({})
 

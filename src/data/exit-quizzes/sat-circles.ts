@@ -209,7 +209,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Circle Equations',
     generate() {
       const r = randInt(2, 6)
-      const area = Math.round(Math.PI * r * r)
+      const _area = Math.round(Math.PI * r * r)
       const correct = `$${r * r}\\pi$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${2 * r}\\pi$`, `$${r}\\pi$`, `$${r * r * 2}\\pi$`
@@ -249,8 +249,8 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(4, 12)
       const deg = [60, 90, 120, 180][randInt(0, 3)]
       const frac = deg / 360
-      const arcLen = `${frac === 0.5 ? '' : frac === 0.25 ? '\\frac{1}{2}' : `\\frac{${deg}}{360}`}\\cdot 2\\pi(${r})`
-      const simplified = deg === 180 ? `${r}\\pi` : deg === 90 ? `\\frac{${r}\\pi}{1}` : `${(2 * r * deg / 360)}`
+      const _arcLen = `${frac === 0.5 ? '' : frac === 0.25 ? '\\frac{1}{2}' : `\\frac{${deg}}{360}`}\\cdot 2\\pi(${r})`
+      const _simplified = deg === 180 ? `${r}\\pi` : deg === 90 ? `\\frac{${r}\\pi}{1}` : `${(2 * r * deg / 360)}`
       // Arc length = (θ/360) × 2πr
       const numCoeff = 2 * r * deg / 360
       const correct = Number.isInteger(numCoeff) ? `$${numCoeff}\\pi$` : `$\\frac{${2 * r * deg}}{360}\\pi$`
@@ -332,7 +332,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(3, 10)
       const thetaNum = randInt(1, 3)
       const thetaDen = [2, 3, 4, 6][randInt(0, 3)]
-      const s = r * thetaNum / thetaDen
+      const _s = r * thetaNum / thetaDen
       const correct = `$${fmtPi(r * thetaNum, thetaDen)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${r}\\pi$`, `$\\frac{${r}\\pi}{${thetaDen + 1}}$`, `$${r * thetaNum}\\pi$`
@@ -350,7 +350,7 @@ const questionPool: QuestionTemplate[] = [
     category: 'Arc Length & Sectors',
     generate() {
       const r = randInt(4, 10)
-      const semicircleArea = r * r / 2
+      const _semicircleArea = r * r / 2
       const correct = `$\\frac{${r * r}\\pi}{2}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${r * r}\\pi$`, `$${r}\\pi$`, `$\\frac{${r}\\pi}{2}$`
@@ -495,7 +495,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       // Find missing side using trig
       const hyp = randInt(8, 20)
-      const angle = 30
+      const _angle = 30
       // sin(30) = opp/hyp → opp = hyp/2
       const opp = hyp / 2
       const { options, correctIndex } = makeOptions(opp, 3)
@@ -772,7 +772,7 @@ const questionPool: QuestionTemplate[] = [
     id: 'sct-q38',
     category: 'Trig Applications & Review',
     generate() {
-      const correct = '$\\sin^2(\\theta) + \\cos^2(\\theta)$'
+      const _correct = '$\\sin^2(\\theta) + \\cos^2(\\theta)$'
       const { options, correctIndex } = makeStringOptions('$1$', [
         '$0$', '$\\sin(2\\theta)$', '$2\\cos(\\theta)$'
       ])

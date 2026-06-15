@@ -47,8 +47,8 @@ export default function ExitQuiz({
   onComplete,
   onCancel,
   previousAttempts,
-  lastScore,
-  mustRedoUnit,
+  lastScore: _lastScore,
+  mustRedoUnit: _mustRedoUnit,
   variant
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -75,14 +75,20 @@ export default function ExitQuiz({
     [question]
   )
 
-  // Precompute rendered HTML for the current question
+  // Precompute rendered HTML for the current question.
+  // `katexReady` is an intentional re-render trigger: renderLatex falls back to
+  // raw text until KaTeX finishes loading async, so these memos must recompute
+  // once it's ready even though katexReady isn't read inside the callback.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const renderedQuestion = useMemo(() => renderLatex(question?.question || ''), [question?.question, katexReady])
   const renderedOptions = useMemo(
     () => shuffled.options.map(o => renderLatex(o)),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [shuffled.options, katexReady]
   )
   const renderedExplanation = useMemo(
     () => renderLatex(question?.explanation || ''),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [question?.explanation, katexReady]
   )
 
@@ -197,7 +203,7 @@ export default function ExitQuiz({
     } finally {
       setSubmitting(false)
     }
-  }, [submitting, startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers])
+  }, [submitting, startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant])
 
   useEffect(() => {
     if (quizComplete) {

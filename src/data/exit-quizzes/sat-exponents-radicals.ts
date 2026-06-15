@@ -23,12 +23,6 @@ function randInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function randNonZero(min: number, max: number): number {
-  let n = 0
-  while (n === 0) n = randInt(min, max)
-  return n
-}
-
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -117,7 +111,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(2, 6)
       const b = randInt(2, 6)
       const n = randInt(2, 4)
-      const ans = Math.pow(a, n) * Math.pow(b, n)
+      const _ans = Math.pow(a, n) * Math.pow(b, n)
       const correct = `$${Math.pow(a, n)} \\cdot ${Math.pow(b, n)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${a + b}^{${n}}$`,
@@ -261,7 +255,7 @@ const questionPool: QuestionTemplate[] = [
       const base = randInt(2, 5)
       const n = randInt(2, 4)
       const val = Math.pow(base, n)
-      const { options, correctIndex } = makeOptions(val)
+      const { options, correctIndex: _correctIndex } = makeOptions(val)
       return {
         id: this.id, category: this.category,
         question: `If $x^{-${n}} = \\frac{1}{${val}}$, what is $x$?`,
@@ -502,7 +496,7 @@ const questionPool: QuestionTemplate[] = [
       const base = randInt(2, 4)
       const exp = randInt(2, 4)
       // base^(2x) = base^exp → 2x = exp
-      const val = Math.pow(base, exp)
+      const _val = Math.pow(base, exp)
       // We need exp to be even for integer answer
       const evenExp = exp * 2
       const bigVal = Math.pow(base, evenExp)
@@ -525,7 +519,7 @@ const questionPool: QuestionTemplate[] = [
       const val = Math.pow(base, n)
       const negN = -n
       const correct = `$\\frac{1}{${val}}$`
-      const { options, correctIndex } = makeStringOptions(correct, [
+      const { options, correctIndex: _correctIndex } = makeStringOptions(correct, [
         `$-${val}$`, `$${val}$`, `$\\frac{-1}{${val}}$`
       ])
       return {
@@ -542,7 +536,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       // 4^x = 2^(something): 4 = 2², so 4^x = 2^(2x)
       const exp = randInt(2, 6)
-      const ans = exp / 2
+      const _ans = exp / 2
       // Make exp even for integer answer
       const evenExp = randInt(1, 4) * 2
       const correct = String(evenExp / 2)
@@ -658,9 +652,9 @@ const questionPool: QuestionTemplate[] = [
       const expB = randInt(2, 4)
       const quotient = a / b
       const diffExp = expA - expB
-      let finalCoeff = quotient
-      let finalExp = diffExp
-      if (quotient < 1) { finalCoeff = quotient * 10; finalExp = diffExp - 1 }
+      let _finalCoeff = quotient
+      let _finalExp = diffExp
+      if (quotient < 1) { _finalCoeff = quotient * 10; _finalExp = diffExp - 1 }
       // Only generate when quotient is clean
       const cleanA = b * randInt(1, 3)
       const cleanQuotient = cleanA / b
@@ -826,7 +820,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(2, 5)
       const b = randInt(2, 5)
       const ans = a + b
-      const { options, correctIndex } = makeOptions(ans)
+      const { options, correctIndex: _correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
         question: `If $${base}^a \\cdot ${base}^b = ${base}^{${ans}}$, and $a = ${a}$, what is $b$?`,

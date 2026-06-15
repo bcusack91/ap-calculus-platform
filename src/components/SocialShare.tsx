@@ -18,7 +18,7 @@ export function SocialShare({ url, title, description }: SocialShareProps) {
 
   const encodedUrl = encodeURIComponent(url)
   const encodedTitle = encodeURIComponent(title)
-  const encodedDesc = encodeURIComponent(description || title)
+  const _encodedDesc = encodeURIComponent(description || title)
 
   const shareLinks = [
     {

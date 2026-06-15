@@ -58,7 +58,7 @@ interface TestStats {
 /* ------------------------------------------------------------------ */
 
 export default function SATPracticePage() {
-  const { data: session, status } = useSession()
+  const { data: _session, status } = useSession()
   const router = useRouter()
 
   const [activeTest, setActiveTest] = useState<SATFullTest | null>(null)

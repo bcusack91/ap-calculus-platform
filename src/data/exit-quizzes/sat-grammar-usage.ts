@@ -33,10 +33,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function pick<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
-
 function makeOptions(correct: string, distractors: string[]) {
   const others = distractors.filter(x => x !== correct).slice(0, 3)
   const all = shuffle([correct, ...others])

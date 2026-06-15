@@ -25,11 +25,11 @@ export function TopicContentTools({ topicTitle, topicSlug, courseName }: {
   // Determine if this is an AP exam course
   const isAPCourse = courseName.toLowerCase().startsWith('ap ')
   const isCalculus = courseName.toLowerCase().includes('calculus')
-  const isChemistry = courseName.toLowerCase().includes('chemistry')
-  const isBiology = courseName.toLowerCase().includes('biology')
-  const isAlgebra = courseName.toLowerCase().includes('algebra')
-  const isGeometry = courseName.toLowerCase().includes('geometry')
-  const isStatistics = courseName.toLowerCase().includes('statistics')
+  const _isChemistry = courseName.toLowerCase().includes('chemistry')
+  const _isBiology = courseName.toLowerCase().includes('biology')
+  const _isAlgebra = courseName.toLowerCase().includes('algebra')
+  const _isGeometry = courseName.toLowerCase().includes('geometry')
+  const _isStatistics = courseName.toLowerCase().includes('statistics')
 
   // Map course names to exam format data
   const examFormats: Record<string, { totalTime: string; sections: { name: string; format: string; questionCount: number; timeMinutes: number; weight: string; calculator?: boolean }[]; scoring: { scale: string; breakdown: { score: number; label: string; percentile?: string }[] }; tips: string[] }> = {
@@ -169,7 +169,7 @@ export function TopicContentTools({ topicTitle, topicSlug, courseName }: {
 
 // ─── Data Generators ─────────────────────────────────────────
 
-function getCommonMistakes(course: string, topic: string) {
+function getCommonMistakes(course: string, _topic: string) {
   const cl = course.toLowerCase()
   if (cl.includes('calculus')) {
     return [
@@ -210,7 +210,7 @@ function getCommonMistakes(course: string, topic: string) {
   return []
 }
 
-function getRealWorldApplications(course: string, topic: string) {
+function getRealWorldApplications(course: string, _topic: string) {
   const cl = course.toLowerCase()
   if (cl.includes('calculus')) {
     return [
@@ -244,7 +244,7 @@ function getRealWorldApplications(course: string, topic: string) {
   return []
 }
 
-function getWorkedExample(course: string, topic: string) {
+function getWorkedExample(course: string, _topic: string) {
   const cl = course.toLowerCase()
   if (cl.includes('calculus')) {
     return {
@@ -289,7 +289,7 @@ function getWorkedExample(course: string, topic: string) {
   return null
 }
 
-function getMultiStepProblem(course: string, topic: string) {
+function getMultiStepProblem(course: string, _topic: string) {
   const cl = course.toLowerCase()
   if (cl.includes('calculus')) {
     return {
@@ -319,7 +319,7 @@ function getMultiStepProblem(course: string, topic: string) {
   return null
 }
 
-function getGraphingQuestion(topic: string) {
+function getGraphingQuestion(_topic: string) {
   return {
     title: 'Sketch the Derivative',
     instruction: 'Click to place points that approximate the derivative f\'(x) of the parabola f(x) = x² shown in blue. Remember: the derivative of x² is 2x, which is a straight line through the origin.',
@@ -347,7 +347,7 @@ function getGraphingQuestion(topic: string) {
   }
 }
 
-function getAdaptiveQuestions(course: string, topic: string) {
+function getAdaptiveQuestions(course: string, _topic: string) {
   const cl = course.toLowerCase()
   if (cl.includes('calculus')) {
     return [

@@ -510,7 +510,7 @@ const questionPool: QuestionTemplate[] = [
       const x = randInt(-3, 3)
       const fx = a * x + b
       // f(f⁻¹(x)) = x always
-      const { options, correctIndex } = makeOptions(fx)
+      const { options, correctIndex: _correctIndex } = makeOptions(fx)
       return {
         id: this.id, category: this.category,
         question: `If $f(${x}) = ${fx}$, what is $f^{-1}(${fx})$?`,
@@ -542,7 +542,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(1, 5)
       const b = randInt(-5, 5)
       const x = randInt(-3, 3)
-      const ans = a * x + b
+      const _ans = a * x + b
       // f⁻¹(f(x)) = x
       const { options, correctIndex } = makeOptions(x)
       return {
@@ -680,8 +680,8 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(-8, 8)
       const c = randInt(1, 10)
       // |ax + b| = c → ax + b = c or ax + b = -c
-      const x1 = (c - b) / a
-      const x2 = (-c - b) / a
+      const _x1 = (c - b) / a
+      const _x2 = (-c - b) / a
       const numSolns = 2
       const { options, correctIndex } = makeOptions(numSolns)
       return {

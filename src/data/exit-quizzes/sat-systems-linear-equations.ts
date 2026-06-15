@@ -45,7 +45,7 @@ const questionPool: QuestionTemplate[] = [
     id: 'sys-q1', category: 'Substitution',
     generate() {
       const x = randInt(-5, 5); const y = randInt(-5, 5)
-      const a1 = 1, b1 = randNonZero(-4, 4), c1 = x + b1 * y
+      const _a1 = 1, b1 = randNonZero(-4, 4), c1 = x + b1 * y
       const a2 = randNonZero(-3, 3), b2 = randNonZero(-4, 4), c2 = a2 * x + b2 * y
       const { options, correctIndex } = makeOptions(x)
       return { id: this.id, category: this.category, question: `Solve for $x$:\n$x + ${b1}y = ${c1}$\n$${a2}x + ${b2}y = ${c2}$`, options, correctIndex, explanation: `From equation 1, $x = ${c1} - ${b1}y$. Substitute into equation 2 and solve to get $x = ${x}$.` }
@@ -55,7 +55,7 @@ const questionPool: QuestionTemplate[] = [
     id: 'sys-q2', category: 'Substitution',
     generate() {
       const x = randInt(-5, 5); const y = randInt(-5, 5)
-      const a1 = 1, b1 = randNonZero(-3, 3), c1 = x + b1 * y
+      const _a1 = 1, b1 = randNonZero(-3, 3), c1 = x + b1 * y
       const a2 = randNonZero(2, 4), b2 = randNonZero(-3, 3), c2 = a2 * x + b2 * y
       const { options, correctIndex } = makeOptions(y)
       return { id: this.id, category: this.category, question: `Solve for $y$:\n$x + ${b1}y = ${c1}$\n$${a2}x + ${b2}y = ${c2}$`, options, correctIndex, explanation: `Substitute $x = ${c1} - ${b1}y$ into equation 2, then solve for $y = ${y}$.` }
@@ -263,7 +263,7 @@ const questionPool: QuestionTemplate[] = [
     id: 'sys-q24', category: 'Graphing',
     generate() {
       const x = randInt(1, 5); const y = randInt(1, 5)
-      const sum = x + y; const product = x * y
+      const sum = x + y; const _product = x * y
       const { options, correctIndex } = makeOptions(sum, 3)
       return { id: this.id, category: this.category, question: `Two lines intersect at $(${x}, ${y})$. What is $x + y$?`, options, correctIndex, explanation: `$x + y = ${x} + ${y} = ${sum}$.` }
     }

@@ -291,9 +291,9 @@ const questionPool: QuestionTemplate[] = [
       const c = randInt(1, 8)
       const x = randInt(1, 8)
       // a(x - b) = c + x => ax - ab = c + x => (a-1)x = c + ab => x = (c+ab)/(a-1)
-      const rhs = c + x  // We want ax - ab = c + x
+      const _rhs = c + x  // We want ax - ab = c + x
       const ab = a * b
-      const lhs = a * x - ab
+      const _lhs = a * x - ab
       // Recalculate: a(x-b) = c + x where c = lhs - x = ax - ab - x = (a-1)x - ab
       const cVal = (a - 1) * x - ab
       const { options, correctIndex } = makeOptions(x)
@@ -389,7 +389,7 @@ const questionPool: QuestionTemplate[] = [
       const rate = randInt(12, 25)
       const hours = randInt(3, 8)
       const total = rate * hours
-      const { options, correctIndex } = makeOptions(total, 20)
+      const { options: _options, correctIndex } = makeOptions(total, 20)
       return {
         id: this.id, category: this.category,
         question: `A worker earns $\\$${rate}$ per hour. If they work ${hours} hours, which expression gives their total pay?\n\nWhat is the total pay?`,
@@ -440,7 +440,7 @@ const questionPool: QuestionTemplate[] = [
       const originalPrice = randInt(40, 100)
       const discountPct = randInt(10, 30)
       const salePrice = originalPrice - Math.round(originalPrice * discountPct / 100)
-      const { options, correctIndex } = makeOptions(salePrice, 5)
+      const { options: _options, correctIndex: _correctIndex } = makeOptions(salePrice, 5)
       return {
         id: this.id, category: this.category,
         question: `A shirt originally costs $\\$${originalPrice}$. It is on sale for ${discountPct}% off. What is the sale price?`,
@@ -688,8 +688,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(1, 10)
       const b = randInt(1, 8)
-      const sol1 = a + b
-      const sol2 = -(a - b) // Actually: |x - b| = a => x - b = a or x - b = -a => x = b+a or x = b-a
+      const _sol1 = a + b
+      const _sol2 = -(a - b) // Actually: |x - b| = a => x - b = a or x - b = -a => x = b+a or x = b-a
       const xPos = b + a
       const xNeg = b - a
       const { options, correctIndex } = makeOptions(xPos)
@@ -706,9 +706,9 @@ const questionPool: QuestionTemplate[] = [
     id: 'sle-q35',
     category: 'Word Problems',
     generate() {
-      const rate1 = randInt(30, 60)
-      const rate2 = randInt(40, 70)
-      const initialDist = randInt(10, 50)
+      const _rate1 = randInt(30, 60)
+      const _rate2 = randInt(40, 70)
+      const _initialDist = randInt(10, 50)
       // After t hours: rate1*t = rate2*t + initialDist? No, let's do simpler:
       // Person A has $a saved, saves $r1/week. Person B has $b saved, saves $r2/week. When equal?
       const saved_a = randInt(50, 200)

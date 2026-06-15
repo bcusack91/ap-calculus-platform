@@ -25,8 +25,9 @@ export async function POST(request: Request) {
   const start = startDate ? new Date(startDate) : new Date()
   const resolvedTasks = resolveMCATTemplateTasks(template, start)
 
-  // Adaptive (#4): front-load weak areas from the latest MCAT diagnostic; no-op if none.
-  const { tasks } = await applyAdaptivePriority(session.user.id, 'mcat-full-diagnostic', resolvedTasks, start)
+  // Adaptive (#4): front-load weak areas from the latest MCAT diagnostic AND the
+  // latest full-length exam (distinct categories, merged + deduped by slug). No-op if none.
+  const { tasks } = await applyAdaptivePriority(session.user.id, ['mcat-full-diagnostic', 'mcat-full-length'], resolvedTasks, start)
 
   // Compute default exam date if not provided (start + duration weeks)
   const defaultExamDate = new Date(start)

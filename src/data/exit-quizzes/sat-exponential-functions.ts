@@ -23,12 +23,6 @@ function randInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function randNonZero(min: number, max: number): number {
-  let n = 0
-  while (n === 0) n = randInt(min, max)
-  return n
-}
-
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -334,7 +328,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const P = 1000
       const r = randInt(4, 10)
-      const t = 1
+      const _t = 1
       // Compounded quarterly: n=4
       const A = Math.round(P * Math.pow(1 + r / 400, 4) * 100) / 100
       const simple = Math.round(P * (1 + r / 100) * 100) / 100
@@ -650,7 +644,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(1, 4)
       const b = randInt(1, 4)
       const ans = a + b
-      const { options, correctIndex } = makeOptions(ans)
+      const { options, correctIndex: _correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
         question: `If $${base}^a = ${Math.pow(base, a)}$ and $${base}^b = ${Math.pow(base, b)}$, what is $${base}^{a+b}$?`,
@@ -719,8 +713,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(100, 400)
       const b = [2, 3, 4][randInt(0, 2)]
-      const x = 0
-      const f0 = a
+      const _x = 0
+      const _f0 = a
       const correct = String(a)
       const { options, correctIndex } = makeStringOptions(correct, [
         String(a * b), String(b), '0'

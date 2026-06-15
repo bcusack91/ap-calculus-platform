@@ -218,7 +218,7 @@ const questionPool: QuestionTemplate[] = [
       const iqr = q3 - q1
       const lowerFence = q1 - 1.5 * iqr
       const upperFence = q3 + 1.5 * iqr
-      const outlier = upperFence + randInt(5, 20)
+      const _outlier = upperFence + randInt(5, 20)
       const ans = Math.round(upperFence)
       const correct = `Above $${ans}$ or below $${Math.round(lowerFence)}$`
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -296,8 +296,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(20, 40)
       const b = randInt(15, 35)
-      const c = randInt(10, 30)
-      const d = randInt(15, 35)
+      const _c = randInt(10, 30)
+      const _d = randInt(15, 35)
       const rowTotal = a + b
       const pct = Math.round((a / rowTotal) * 100)
       const { options, correctIndex } = makeOptions(pct, 5)
@@ -317,7 +317,7 @@ const questionPool: QuestionTemplate[] = [
       const dog = randInt(15, 30)
       const both = randInt(5, Math.min(cat, dog))
       const neither = randInt(5, 15)
-      const total = cat + dog - both + neither
+      const _total = cat + dog - both + neither
       const onlyCat = cat - both
       const { options, correctIndex } = makeOptions(onlyCat, 3)
       return {
@@ -531,8 +531,8 @@ const questionPool: QuestionTemplate[] = [
       const red = randInt(3, 8)
       const blue = randInt(3, 8)
       const total = red + blue
-      const pRed = Math.round((red / total) * 100)
-      const pBlue = Math.round((blue / total) * 100)
+      const _pRed = Math.round((red / total) * 100)
+      const _pBlue = Math.round((blue / total) * 100)
       const pRedOrBlue = 100
       const { options, correctIndex } = makeOptions(pRedOrBlue, 10)
       return {
@@ -689,7 +689,7 @@ const questionPool: QuestionTemplate[] = [
       const sorted = [...vals].sort((a, b) => a - b)
       const median = sorted[2]
       const mean = Math.round(vals.reduce((s, v) => s + v, 0) / 5)
-      const diff = Math.abs(mean - median)
+      const _diff = Math.abs(mean - median)
       const correct = mean > median ? 'Mean is larger' : mean < median ? 'Median is larger' : 'They are equal'
       const { options, correctIndex } = makeStringOptions(correct, [
         mean > median ? 'Median is larger' : 'Mean is larger',
@@ -781,9 +781,9 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review',
     generate() {
       const a = randInt(10, 25)
-      const b = randInt(10, 25)
+      const _b = randInt(10, 25)
       const c = randInt(10, 25)
-      const d = randInt(10, 25)
+      const _d = randInt(10, 25)
       const colTotal = a + c
       const conditionalPct = Math.round((a / colTotal) * 100)
       const { options, correctIndex } = makeOptions(conditionalPct, 5)

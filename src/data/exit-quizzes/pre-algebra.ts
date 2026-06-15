@@ -54,7 +54,7 @@ const questionPool: QuestionTemplate[] = [
   { id: 'pa-q22', category: 'Equations', generate() { const a = randInt(2, 5); const b = randNonZero(-8, 8); const ans = randNonZero(-4, 4); const result = a * ans - b; const { options, correctIndex } = makeOptions(ans, 3); return { id: this.id, category: this.category, question: `Solve: $${a}x - ${b} = ${result}$`, options, correctIndex, explanation: `$${a}x = ${result} + ${b} = ${result + b}$, so $x = ${ans}$.` } } },
 
   // ── Inequalities ──
-  { id: 'pa-q23', category: 'Inequalities', generate() { const b = randInt(2, 10); const ans = randInt(b + 1, 20); const { options, correctIndex } = makeStringOptions(`$x > ${b}$`, [`$x < ${b}$`, `$x \\geq ${b}$`, `$x \\leq ${b}$`]); return { id: this.id, category: this.category, question: `Solve: $x + 3 > ${b + 3}$`, options, correctIndex, explanation: `$x > ${b + 3} - 3 = ${b}$.` } } },
+  { id: 'pa-q23', category: 'Inequalities', generate() { const b = randInt(2, 10); const _ans = randInt(b + 1, 20); const { options, correctIndex } = makeStringOptions(`$x > ${b}$`, [`$x < ${b}$`, `$x \\geq ${b}$`, `$x \\leq ${b}$`]); return { id: this.id, category: this.category, question: `Solve: $x + 3 > ${b + 3}$`, options, correctIndex, explanation: `$x > ${b + 3} - 3 = ${b}$.` } } },
   { id: 'pa-q24', category: 'Inequalities', generate() { const a = randInt(2, 5); const ans = randInt(2, 8); const { options, correctIndex } = makeStringOptions(`$x \\leq ${ans}$`, [`$x \\geq ${ans}$`, `$x < ${ans}$`, `$x > ${ans}$`]); return { id: this.id, category: this.category, question: `Solve: $${a}x \\leq ${a * ans}$`, options, correctIndex, explanation: `$x \\leq ${a * ans} \\div ${a} = ${ans}$.` } } },
 
   // ── Geometry Basics ──

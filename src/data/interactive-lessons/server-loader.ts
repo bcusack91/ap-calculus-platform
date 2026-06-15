@@ -5,7 +5,7 @@
  * to the client component. This avoids client-side dynamic imports that create
  * webpack chunks which may not be deployed to the CDN.
  */
-import { getInteractiveTopicConfig, getVariantParts, getTopicVariantCount } from './registry'
+import { getInteractiveTopicConfig, getTopicVariantCount } from './registry'
 import type { LessonData } from './registry'
 
 export interface PreloadedLessonPart {

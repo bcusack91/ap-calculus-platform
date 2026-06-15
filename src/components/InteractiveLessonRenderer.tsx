@@ -33,7 +33,6 @@ import TextToSpeech from '@/components/TextToSpeech'
 import PrintButton from '@/components/PrintButton'
 import FontSizeAdjuster from '@/components/FontSizeAdjuster'
 import ReadingProgressBar from '@/components/ReadingProgressBar'
-import HintSystem from '@/components/HintSystem'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import MarkForReview from '@/components/MarkForReview'
 import ScratchPad from '@/components/ScratchPad'
@@ -500,7 +499,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     if (!session?.user) return // Only save if user is logged in
     
     queryCountRef.current++
-    const usingCache = !!(forceTopicId || cachedTopicId)
+    const _usingCache = !!(forceTopicId || cachedTopicId)
     
     try {
       // Calculate mastery level based on overall progress
@@ -1081,7 +1080,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       }
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, saveProgress, consumeTimeSpentSeconds])
+  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, consumeTimeSpentSeconds])
 
   const [retryCounts, setRetryCounts] = useState<Record<number, number>>({})
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
@@ -3028,7 +3027,7 @@ function MultipleChoiceQuiz({
     Array.from({ length: section.exercise?.questions?.length || 0 }, () => new Set<number>())
   )
 
-  const questions = section.exercise?.questions || []
+  const questions = useMemo(() => section.exercise?.questions || [], [section.exercise?.questions])
   const currentQuestion = questions[currentQuestionIndex]
 
   // Pre-compute shuffled options for all questions (stable per question content)
@@ -4055,7 +4054,7 @@ function InputBoxExercise({
   const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
 
   // Detect if any correct answer looks like electron configuration notation
-  const hasElectronConfigAnswers = correctAnswersList.some(a => looksLikeElectronConfig(a))
+  const _hasElectronConfigAnswers = correctAnswersList.some(a => looksLikeElectronConfig(a))
 
   // Add Q-labels to numbered questions so they match the answer boxes (Q1, Q2, etc.)
   const labeledContent = (section.content || '').replace(/^(\d+)\)/gm, (_, num) => `**Q${num}.**`)

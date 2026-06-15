@@ -211,7 +211,7 @@ const questionPool: QuestionTemplate[] = [
       const d = randInt(1, b - 1)
       const re = a - c
       const im = b - d
-      const imStr = im === 0 ? '' : ` + ${im}i`
+      const _imStr = im === 0 ? '' : ` + ${im}i`
       const correct = im === 0 ? `$${re}$` : `$${re} + ${im}i$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${re} - ${im}i$`, `$${a - c + b - d}$`, `$${re + 1} + ${im + 1}i$`
@@ -340,8 +340,8 @@ const questionPool: QuestionTemplate[] = [
       const b = randInt(1, 5)
       const re = a * a - b * b
       const im = 2 * a * b
-      const imSign = im >= 0 ? '+' : '-'
-      const absIm = Math.abs(im)
+      const _imSign = im >= 0 ? '+' : '-'
+      const _absIm = Math.abs(im)
       const correct = `$${re} + ${im}i$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${a * a + b * b}$`,
@@ -461,7 +461,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(1, 5)
       const b = randInt(1, 5)
       const mod2 = a * a + b * b
-      const correct = `$\\sqrt{${mod2}}$`
+      const _correct = `$\\sqrt{${mod2}}$`
       const isPerf = Number.isInteger(Math.sqrt(mod2))
       const display = isPerf ? `$${Math.sqrt(mod2)}$` : `$\\sqrt{${mod2}}$`
       const { options, correctIndex } = makeStringOptions(display, [

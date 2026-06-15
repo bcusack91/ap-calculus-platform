@@ -31,17 +31,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
-  const distractors = new Set<number>()
-  while (distractors.size < 3) {
-    const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
-  }
-  const all = [correct, ...distractors]
-  const shuffled = shuffle(all)
-  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
-}
-
 function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
   const unique = [...new Set(others)].filter(o => o !== correct).slice(0, 3)
   const fillers = ['None of the above', 'Cannot be determined', 'None of these']
