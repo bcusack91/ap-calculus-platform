@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { InArticleAd } from '@/components/ad-banner'
@@ -127,7 +128,7 @@ export function AutoGradedFRQ({ frqs = SAMPLE_FRQS }: { frqs?: FRQ[] }) {
       <div className="mb-5 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}
           components={{ p: ({ children }) => <p className="text-sm text-gray-800 dark:text-gray-200">{children}</p> }}>
-          {frq.prompt}
+          {escapeCurrencyMath(frq.prompt)}
         </ReactMarkdown>
       </div>
 
@@ -144,7 +145,7 @@ export function AutoGradedFRQ({ frqs = SAMPLE_FRQS }: { frqs?: FRQ[] }) {
                 <div className="flex-1">
                   <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}
                     components={{ p: ({ children }) => <p className="text-sm font-medium text-gray-900 dark:text-white"><strong>{part.label}</strong> {children}</p> }}>
-                    {part.prompt}
+                    {escapeCurrencyMath(part.prompt)}
                   </ReactMarkdown>
                 </div>
                 <span className="text-xs text-gray-400 flex-shrink-0 ml-2">{part.maxPoints} pts</span>

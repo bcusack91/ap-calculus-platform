@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
@@ -35,7 +36,7 @@ export function WorkedExample({ title, problem, steps, finalAnswer, commonMistak
           <span className="text-sm font-semibold text-amber-700 dark:text-amber-400">Problem:</span>
           <div className="mt-1 prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-              {problem}
+              {escapeCurrencyMath(problem)}
             </ReactMarkdown>
           </div>
         </div>
@@ -53,7 +54,7 @@ export function WorkedExample({ title, problem, steps, finalAnswer, commonMistak
                   </div>
                   <div className="prose prose-sm max-w-none dark:prose-invert">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {step.content}
+                      {escapeCurrencyMath(step.content)}
                     </ReactMarkdown>
                   </div>
                   {step.hint && (
@@ -99,7 +100,7 @@ export function WorkedExample({ title, problem, steps, finalAnswer, commonMistak
               <span className="font-bold text-green-800 dark:text-green-300">✅ Final Answer:</span>
               <div className="mt-1 prose prose-sm max-w-none dark:prose-invert">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {finalAnswer}
+                  {escapeCurrencyMath(finalAnswer)}
                 </ReactMarkdown>
               </div>
             </div>

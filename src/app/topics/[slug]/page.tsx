@@ -13,6 +13,7 @@ function TopicBottomAd() {
   return <AdBanner slot={slot} />
 }
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
@@ -509,7 +510,7 @@ export default async function TopicPage(props: TopicPageProps) {
                     rehypePlugins={[rehypeKatex]}
                     components={MarkdownComponents}
                   >
-                    {topic.textContent}
+                    {escapeCurrencyMath(topic.textContent)}
                   </ReactMarkdown>
                 )}
               </div>
@@ -566,7 +567,7 @@ export default async function TopicPage(props: TopicPageProps) {
                         </h4>
                         <div className="prose max-w-none">
                           <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
-                            {problem.question}
+                            {escapeCurrencyMath(problem.question)}
                           </ReactMarkdown>
                         </div>
                       </div>
@@ -578,7 +579,7 @@ export default async function TopicPage(props: TopicPageProps) {
                         </summary>
                         <div className="mt-4 prose max-w-none bg-purple-50 dark:bg-purple-900/20 p-4 rounded border-l-4 border-purple-500">
                           <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
-                            {problem.solution}
+                            {escapeCurrencyMath(problem.solution)}
                           </ReactMarkdown>
                         </div>
                       </details>

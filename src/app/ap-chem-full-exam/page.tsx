@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import type { ChemFRQ, FRQRubricItem } from '@/data/ap-chem-frq/questions'
@@ -298,7 +299,7 @@ export default function APChemFullExamPage() {
             </div>
 
             <div className="prose prose-sm max-w-none dark:prose-invert mb-6">
-              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{currentQ.question}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(currentQ.question)}</ReactMarkdown>
             </div>
 
             <div className="space-y-3">
@@ -317,7 +318,7 @@ export default function APChemFullExamPage() {
                   }`}
                 >
                   <span className="font-bold mr-2">{String.fromCharCode(65 + i)}.</span>
-                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={{ p: ({ children }) => <span>{children}</span> }}>{opt}</ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={{ p: ({ children }) => <span>{children}</span> }}>{escapeCurrencyMath(opt)}</ReactMarkdown>
                 </button>
               ))}
             </div>
@@ -441,7 +442,7 @@ export default function APChemFullExamPage() {
             <div className="px-6 py-5">
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-5 mb-6 border border-blue-200 dark:border-blue-700">
                 <div className="prose prose-sm max-w-none dark:prose-invert">
-                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{currentFRQ.prompt}</ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(currentFRQ.prompt)}</ReactMarkdown>
                 </div>
               </div>
 
@@ -455,7 +456,7 @@ export default function APChemFullExamPage() {
                         <span className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">({part.maxPoints} pts)</span>
                       </div>
                       <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
-                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{part.prompt}</ReactMarkdown>
+                        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(part.prompt)}</ReactMarkdown>
                       </div>
                       <textarea
                         value={frqResponses[key] || ''}

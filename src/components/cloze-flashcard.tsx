@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
@@ -39,7 +40,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             return (
               <span key={index} className="prose prose-purple max-w-none inline">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {formatFlashcardContent(part.text)}
+                  {escapeCurrencyMath(formatFlashcardContent(part.text))}
                 </ReactMarkdown>
               </span>
             )
@@ -94,7 +95,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
               <div className="text-sm text-green-900 font-semibold mb-2">EXPLANATION</div>
               <div className="text-sm prose prose-green max-w-none text-gray-900">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {formatFlashcardContent(back)}
+                  {escapeCurrencyMath(formatFlashcardContent(back))}
                 </ReactMarkdown>
               </div>
             </div>
@@ -121,7 +122,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
               <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
               <div className="text-sm prose prose-yellow max-w-none text-gray-900">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {formatFlashcardContent(hint)}
+                  {escapeCurrencyMath(formatFlashcardContent(hint))}
                 </ReactMarkdown>
               </div>
             </div>

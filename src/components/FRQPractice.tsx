@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { InArticleAd } from '@/components/ad-banner'
@@ -84,7 +85,7 @@ export function FRQPractice({
         <div className="mb-6 bg-white dark:bg-gray-900 rounded-lg p-5 border border-indigo-200 dark:border-indigo-700">
           <div className="prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-              {stimulus}
+              {escapeCurrencyMath(stimulus)}
             </ReactMarkdown>
           </div>
         </div>
@@ -112,7 +113,7 @@ export function FRQPractice({
 
               <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {part.prompt}
+                  {escapeCurrencyMath(part.prompt)}
                 </ReactMarkdown>
               </div>
 
@@ -165,7 +166,7 @@ export function FRQPractice({
                   </h5>
                   <div className="prose prose-sm max-w-none dark:prose-invert">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {part.sampleResponse}
+                      {escapeCurrencyMath(part.sampleResponse)}
                     </ReactMarkdown>
                   </div>
                 </div>

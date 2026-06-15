@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import {
@@ -498,7 +499,7 @@ export default function APStatsFRQPage() {
             <div className="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-5 mb-6 border border-teal-200 dark:border-teal-700">
               <div className="prose prose-sm max-w-none dark:prose-invert">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {currentFRQ.prompt}
+                  {escapeCurrencyMath(currentFRQ.prompt)}
                 </ReactMarkdown>
               </div>
             </div>
@@ -532,7 +533,7 @@ export default function APStatsFRQPage() {
 
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
                       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                        {part.prompt}
+                        {escapeCurrencyMath(part.prompt)}
                       </ReactMarkdown>
                     </div>
 
@@ -627,7 +628,7 @@ export default function APStatsFRQPage() {
                                 remarkPlugins={[remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
                               >
-                                {part.sampleAnswer}
+                                {escapeCurrencyMath(part.sampleAnswer)}
                               </ReactMarkdown>
                             </div>
                           </div>

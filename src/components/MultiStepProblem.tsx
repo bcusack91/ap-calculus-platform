@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
@@ -88,7 +89,7 @@ export function MultiStepProblem({ title, context, steps, difficulty }: MultiSte
           <p className="text-xs font-semibold text-orange-600 dark:text-orange-400 mb-1">CONTEXT:</p>
           <div className="prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-              {context}
+              {escapeCurrencyMath(context)}
             </ReactMarkdown>
           </div>
         </div>
@@ -123,7 +124,7 @@ export function MultiStepProblem({ title, context, steps, difficulty }: MultiSte
 
                 <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
                   <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                    {step.prompt}
+                    {escapeCurrencyMath(step.prompt)}
                   </ReactMarkdown>
                 </div>
 
@@ -195,7 +196,7 @@ export function MultiStepProblem({ title, context, steps, difficulty }: MultiSte
                   }`}>
                     <div className="prose prose-sm max-w-none dark:prose-invert">
                       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                        {step.explanation}
+                        {escapeCurrencyMath(step.explanation)}
                       </ReactMarkdown>
                     </div>
                     {step.carriesForward && correct && stepIdx < steps.length - 1 && (

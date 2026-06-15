@@ -1,6 +1,7 @@
 'use client'
 
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import AnimationWrapper from './AnimationWrapper'
@@ -101,7 +102,7 @@ export default function ContentWithAnimations({ content }: ContentWithAnimations
           rehypePlugins={[rehypeKatex]}
           components={MarkdownComponents}
         >
-          {segment}
+          {escapeCurrencyMath(segment)}
         </ReactMarkdown>
       )
     }

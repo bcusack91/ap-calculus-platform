@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import type { ReactNode } from 'react'
@@ -105,7 +106,7 @@ export default function TopicContentRenderer({ content }: TopicContentRendererPr
           rehypePlugins={[rehypeKatex]}
           components={MarkdownComponents}
         >
-          {segment}
+          {escapeCurrencyMath(segment)}
         </ReactMarkdown>
       )
     }

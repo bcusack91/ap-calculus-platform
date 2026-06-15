@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
@@ -247,7 +248,7 @@ export default function FlashcardReviewPage() {
                       <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
                       <div className="text-xl prose prose-purple max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {formatFlashcardContent(currentCard.flashcard.front)}
+                          {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.front))}
                         </ReactMarkdown>
                       </div>
                       <div className="mt-8 text-sm text-gray-600 text-center italic">
@@ -267,7 +268,7 @@ export default function FlashcardReviewPage() {
                   <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
                   <div className="text-xl prose prose-green max-w-none text-gray-900">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {formatFlashcardContent(currentCard.flashcard.back)}
+                      {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.back))}
                     </ReactMarkdown>
                   </div>
                   <div className="mt-8 text-sm text-gray-600 text-center">
@@ -293,7 +294,7 @@ export default function FlashcardReviewPage() {
                   <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
                   <div className="text-sm prose prose-yellow max-w-none text-gray-900">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                      {formatFlashcardContent(currentCard.flashcard.hint || '')}
+                      {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.hint || ''))}
                     </ReactMarkdown>
                   </div>
                 </div>

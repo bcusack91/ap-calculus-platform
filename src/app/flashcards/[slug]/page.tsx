@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
@@ -209,7 +210,7 @@ export default function FlashcardStudyPage() {
                       <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
                       <div className="text-lg prose prose-purple max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {formatFlashcardContent(currentCard.front)}
+                          {escapeCurrencyMath(formatFlashcardContent(currentCard.front))}
                         </ReactMarkdown>
                       </div>
                       <div className="mt-6 text-sm text-gray-700 text-center">
@@ -232,7 +233,7 @@ export default function FlashcardStudyPage() {
                       <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
                       <div className="text-lg prose prose-green max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {formatFlashcardContent(currentCard.back)}
+                          {escapeCurrencyMath(formatFlashcardContent(currentCard.back))}
                         </ReactMarkdown>
                       </div>
                       <div className="mt-6 text-sm text-gray-700 text-center">
@@ -258,7 +259,7 @@ export default function FlashcardStudyPage() {
                       <div className="text-sm text-yellow-900 font-semibold mb-2">💡 HINT</div>
                       <div className="text-sm prose prose-yellow max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {currentCard.hint}
+                          {escapeCurrencyMath(currentCard.hint)}
                         </ReactMarkdown>
                       </div>
                     </div>

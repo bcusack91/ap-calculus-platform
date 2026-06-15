@@ -29,12 +29,26 @@ const STOP_WORDS = new Set([
   'money', 'profit', 'revenue', 'wage', 'wages', 'salary', 'rent', 'tax',
   'taxes', 'income', 'budget', 'discount', 'sale', 'charged', 'charge',
   'interest', 'deposit', 'play', 'win', 'wins', 'claims', 'ticket', 'tickets',
+  // Added after an adversarial false-negative sweep found ~33 real garbling lines
+  // whose between-amount word was missing. All unambiguous money/prose words that
+  // cannot stand as a variable/unit inside inline math (and `\text{cost}` etc. are
+  // stripped before tokenizing, so common words like 'cost'/'total' stay safe).
+  'fee', 'fees', 'total', 'cost', 'setup', 'subtotal', 'membership', 'spending',
+  'increase', 'increased', 'bill', 'bills', 'item', 'items', 'withdraw', 'refund',
+  'rebate', 'coupon', 'subscription', 'apiece', 'cheaper', 'extra', 'remaining', 'saved',
 ])
 
 function stripLatex(s: string): string {
   return s
     .replace(/\\+text\s*\{[^}]*\}/g, ' ') // \text{ ... }
     .replace(/\\+[a-zA-Z]+/g, ' ') // \command (one or more backslashes)
+    // Strip sub/superscript labels so a subscripted variable like `x_{day}` or
+    // `E_{each}` never leaks "day"/"each" in as a prose word (would wrongly flag
+    // genuine math as currency). Adversarially verified: fixes the subscript-label
+    // false-positive class with zero currency regressions.
+    .replace(/[_^]\s*\{[^}]*\}/g, ' ') // _{...} / ^{...} groups
+    .replace(/[_^]\s*[A-Za-z0-9]+/g, ' ') // _x / ^2 / _day single-token sub/superscripts
+    .replace(/[{}]/g, ' ') // stray braces
 }
 
 function isCurrencyProse(inner: string): boolean {

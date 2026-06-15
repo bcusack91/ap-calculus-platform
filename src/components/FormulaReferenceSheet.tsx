@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
@@ -109,7 +110,7 @@ export function FormulaReferenceSheet({ course, categories }: FormulaReferenceSh
                       </div>
                       <div className="flex-1 prose prose-sm max-w-none dark:prose-invert">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                          {`$${f.formula}$`}
+                          {escapeCurrencyMath(`$${f.formula}$`)}
                         </ReactMarkdown>
                       </div>
                       {f.notes && (

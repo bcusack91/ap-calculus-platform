@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
@@ -100,7 +101,7 @@ export function PassageBasedPractice({ subject, passages }: PassageBasedPractice
         <div className="bg-white dark:bg-gray-900 rounded-lg p-5 border border-teal-200 dark:border-teal-700 mb-5">
           <div className="prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-              {passage.introduction}
+              {escapeCurrencyMath(passage.introduction)}
             </ReactMarkdown>
           </div>
           {passage.data && (
@@ -108,7 +109,7 @@ export function PassageBasedPractice({ subject, passages }: PassageBasedPractice
               <p className="text-xs font-semibold text-gray-500 mb-2">DATA / TABLE:</p>
               <div className="prose prose-sm max-w-none dark:prose-invert">
                 <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-                  {passage.data}
+                  {escapeCurrencyMath(passage.data)}
                 </ReactMarkdown>
               </div>
             </div>
