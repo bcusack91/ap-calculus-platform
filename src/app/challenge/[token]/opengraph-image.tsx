@@ -2,6 +2,10 @@ import { ImageResponse } from 'next/og'
 import { prisma } from '@/lib/prisma'
 import { getDiagnosticLabel } from '@/lib/diagnostic-challenge-utils'
 
+// Render at request time (not prerendered at build): next/og fetches emoji
+// glyphs from a CDN, and that build-time fetch can ETIMEDOUT and fail the deploy.
+export const dynamic = 'force-dynamic'
+
 export const runtime = 'nodejs'
 export const alt = 'You have been challenged on Study Mondo!'
 export const size = { width: 1200, height: 630 }
