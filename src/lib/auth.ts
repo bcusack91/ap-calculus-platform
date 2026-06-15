@@ -114,6 +114,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         session.user.role = token.role as UserRole
         session.user.stripeCustomerId = token.stripeCustomerId as string | undefined
         session.user.emailVerified = (token.emailVerified as Date | null | undefined) ?? null
+        session.user.birthYear = (token.birthYear as number | null | undefined) ?? null
       }
       return session
     },
@@ -128,6 +129,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           token.role = dbUser.role
           token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
           token.emailVerified = dbUser.emailVerified
+          token.birthYear = dbUser.birthYear
           token.lastRefreshed = Date.now()
         }
       }
@@ -141,12 +143,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (Date.now() - lastRefreshed > fiveMinutes) {
           const dbUser = await prisma.user.findUnique({
             where: { id: token.sub },
-            select: { emailVerified: true, role: true, stripeCustomerId: true },
+            select: { emailVerified: true, role: true, stripeCustomerId: true, birthYear: true },
           })
           if (dbUser) {
             token.emailVerified = dbUser.emailVerified
             token.role = dbUser.role
             token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
+            token.birthYear = dbUser.birthYear
           }
           token.lastRefreshed = Date.now()
         }

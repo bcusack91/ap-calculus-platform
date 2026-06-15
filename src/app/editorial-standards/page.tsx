@@ -79,11 +79,17 @@ export default function EditorialStandardsPage() {
           <p>
             We use software tooling to help organize our large curriculum, format
             mathematical notation consistently, and scale content production
-            across many subjects. However, <strong>every lesson and problem set
-            is reviewed by a human</strong> for mathematical accuracy, clarity,
-            and alignment to the relevant exam framework before it is published.
-            Technology helps us work faster; it does not replace editorial
-            judgment. We do not publish unreviewed, auto-generated text.
+            across many subjects. <strong>Every lesson and problem set is reviewed
+            by a human</strong> for mathematical accuracy, clarity, and alignment
+            to the relevant exam framework before it is published. Technology helps
+            us work faster; it does not replace editorial judgment.
+          </p>
+          <p className="mt-4">
+            Some optional, clearly-labeled study aids — such as on-demand
+            &ldquo;explain this differently&rdquo; help — may be generated for you
+            in real time by an AI assistant. These are study aids to support the
+            reviewed core lessons, are marked as AI-generated where used, and you
+            should always verify them against the lesson content.
           </p>
         </section>
 

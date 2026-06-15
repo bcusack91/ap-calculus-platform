@@ -8,6 +8,7 @@ declare module 'next-auth' {
       role: UserRole
       stripeCustomerId?: string
       emailVerified?: Date | null
+      birthYear?: number | null
     } & DefaultSession['user']
   }
 
@@ -22,5 +23,6 @@ declare module 'next-auth/jwt' {
     role: UserRole
     stripeCustomerId?: string
     emailVerified?: Date | null
+    birthYear?: number | null
   }
 }

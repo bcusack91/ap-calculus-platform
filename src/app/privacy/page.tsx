@@ -39,6 +39,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc pl-6 mt-2">
             <li><strong>Account Information:</strong> Name, email address, and password (hashed and securely stored)</li>
+            <li><strong>Birth Year:</strong> We ask for your birth year at sign-up to determine whether you are under 13 and apply the appropriate child-safety protections (see &quot;Children&apos;s Privacy&quot; below). We store only the year, not a full date of birth.</li>
             <li><strong>OAuth Data:</strong> If you sign in with Google, we receive your name, email, and profile picture from Google</li>
             <li><strong>Learning Progress:</strong> Topic completion, quiz scores, flashcard review data, and competitive match history</li>
             <li><strong>Profile Data:</strong> Avatar selections and display preferences</li>

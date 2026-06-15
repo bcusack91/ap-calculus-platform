@@ -265,9 +265,6 @@ export default async function TopicPage(props: TopicPageProps) {
                 <span className="text-green-600">✓</span> Advanced topic explanations
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-600">✓</span> Video tutorials
-              </li>
-              <li className="flex items-center gap-2">
                 <span className="text-green-600">✓</span> Additional practice problems
               </li>
               <li className="flex items-center gap-2">

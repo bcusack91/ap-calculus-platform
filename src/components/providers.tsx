@@ -8,6 +8,7 @@ import { ToastProvider } from '@/components/ToastProvider'
 import { PreferencesProvider } from '@/components/PreferencesProvider'
 import { ConsentProvider } from '@/components/ConsentProvider'
 import { KeyboardShortcuts } from '@/components/KeyboardShortcuts'
+import BirthYearGate from '@/components/BirthYearGate'
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient({
@@ -26,6 +27,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
             <PreferencesProvider>
               <KeyboardShortcuts />
               {children}
+              <BirthYearGate />
             </PreferencesProvider>
           </ToastProvider>
         </ConsentProvider>

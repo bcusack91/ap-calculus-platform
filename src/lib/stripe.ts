@@ -33,7 +33,6 @@ export const PLANS = {
     priceId: process.env.STRIPE_PREMIUM_PRICE_ID,
     features: [
       'Everything in Free',
-      'Video explanations for all topics',
       'Anki-style spaced repetition flashcards',
       'Progress tracking & analytics',
       'Additional practice quizzes',

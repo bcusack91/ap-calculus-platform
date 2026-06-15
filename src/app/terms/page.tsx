@@ -172,15 +172,42 @@ export default function TermsPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">10. Termination</h2>
+          <h2 className="text-2xl font-semibold mb-4">10. Subscriptions, Billing &amp; Refunds</h2>
           <p>
-            We reserve the right to terminate or suspend your access to the Service immediately, without prior notice or liability, 
+            Parts of the Service are offered as a paid <strong>Premium</strong> subscription. By starting a subscription you agree to the following:
+          </p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li><strong>Billing &amp; auto-renewal:</strong> Premium is billed in advance on a recurring basis (e.g., monthly) through our payment processor, Stripe, and <strong>automatically renews</strong> at the then-current price until you cancel.</li>
+            <li><strong>Cancellation:</strong> You may cancel at any time from your account&apos;s billing portal. Cancellation stops future renewals; you keep Premium access through the end of the current billing period.</li>
+            <li><strong>Refunds:</strong> Except where required by law, payments are non-refundable and partial periods are not pro-rated. We may, at our discretion, offer refunds case-by-case.</li>
+            <li><strong>Price changes:</strong> We may change subscription prices; changes apply to future billing periods and we will provide reasonable notice.</li>
+            <li><strong>Payment information:</strong> Card details are handled by Stripe; we do not store full card numbers. See our Privacy Policy for how billing data is handled.</li>
+            <li><strong>Free tier:</strong> A free, ad-supported tier is available; Premium removes ads and unlocks additional features as described on the pricing page.</li>
+          </ul>
+        </section>
+
+        <section className="mt-8">
+          <h2 className="text-2xl font-semibold mb-4">11. Eligibility, Age &amp; Children</h2>
+          <p>
+            The Service is used by students across a wide range of ages, including children under 13. By creating an account you confirm the age information you provide is accurate.
+          </p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li><strong>Under 13:</strong> Children under 13 receive additional protections (non-personalized, child-directed advertising and no session-replay analytics). We encourage a parent, guardian, or teacher to be involved in a child&apos;s use of the Service, and a parent/guardian may contact us at any time to review or delete a child&apos;s information. See the &quot;Children&apos;s Privacy&quot; section of our Privacy Policy.</li>
+            <li><strong>Accounts:</strong> You are responsible for the activity under your account and for keeping your credentials secure.</li>
+            <li><strong>Schools &amp; teachers:</strong> Where a teacher creates classrooms or lobbies, the teacher is responsible for obtaining any consents required by their institution.</li>
+          </ul>
+        </section>
+
+        <section className="mt-8">
+          <h2 className="text-2xl font-semibold mb-4">12. Termination</h2>
+          <p>
+            We reserve the right to terminate or suspend your access to the Service immediately, without prior notice or liability,
             for any reason, including but not limited to breach of these Terms of Service.
           </p>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">11. Governing Law</h2>
+          <h2 className="text-2xl font-semibold mb-4">13. Governing Law</h2>
           <p>
             These Terms shall be governed by and construed in accordance with the laws of the United States, 
             without regard to its conflict of law provisions.
@@ -188,7 +215,7 @@ export default function TermsPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">12. Severability</h2>
+          <h2 className="text-2xl font-semibold mb-4">14. Severability</h2>
           <p>
             If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated 
             to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.
@@ -196,7 +223,7 @@ export default function TermsPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">13. Contact Information</h2>
+          <h2 className="text-2xl font-semibold mb-4">15. Contact Information</h2>
           <p>
             If you have any questions about these Terms of Service, please contact us through the repository at:{" "}
             <a href="https://github.com/bcusack91/ap-calculus-platform" className="text-blue-600 hover:underline">

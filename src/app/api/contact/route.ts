@@ -2,7 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { auth } from "@/lib/auth";
+import { sendAdminAlertEmail } from "@/lib/email";
 import { z } from "zod";
+
+/** Owner inboxes that receive contact-form notifications (comma-separated env). */
+function contactRecipients(): string[] {
+  const raw = process.env.ADMIN_ALERT_EMAIL_TO || process.env.ADMIN_ALERT_OWNER_EMAILS || "";
+  return raw.split(",").map((s) => s.trim()).filter(Boolean);
+}
+
+function escapeHtml(s: string): string {
+  return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
+}
 
 // Rate limit: 5 contact submissions per IP per hour
 // (Redis-backed distributed limiter — falls back to in-memory when Redis is unconfigured)
@@ -105,6 +116,26 @@ export async function POST(request: NextRequest) {
         message,
       },
     });
+
+    // Notify the owner so "priority support" actually reaches a human (best-effort:
+    // a missing RESEND_API_KEY / no configured recipient must not fail the submit).
+    try {
+      const to = contactRecipients();
+      if (to.length > 0) {
+        const safe = {
+          name: escapeHtml(name), email: escapeHtml(email),
+          subject: escapeHtml(subject), category: escapeHtml(category), message: escapeHtml(message),
+        };
+        await sendAdminAlertEmail({
+          to,
+          subject: `[Contact] ${category}: ${subject}`,
+          text: `From: ${name} <${email}>\nCategory: ${category}\nSubject: ${subject}\n\n${message}`,
+          html: `<p><strong>From:</strong> ${safe.name} &lt;${safe.email}&gt;</p><p><strong>Category:</strong> ${safe.category}</p><p><strong>Subject:</strong> ${safe.subject}</p><hr/><p style="white-space:pre-wrap">${safe.message}</p>`,
+        });
+      }
+    } catch (notifyErr) {
+      console.error("Contact notification failed (non-fatal):", notifyErr);
+    }
 
     return NextResponse.json(
       {
