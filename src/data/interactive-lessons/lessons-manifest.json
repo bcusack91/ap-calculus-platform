@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "completing-the-square",
+    "importPath": "./algebra1-completing-the-square",
+    "partTitles": [
+      "🔲 Perfect Square Trinomials",
+      "The Completing-the-Square Method",
+      "Solving Quadratic Equations",
+      "Vertex Form & Graphing",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "absolute-value-algebra1",
+    "importPath": "./extra/absolute-value-algebra1",
+    "partTitles": [
+      "What Absolute Value Really Means",
+      "Solving the Two Cases",
+      "Isolate First, Then Watch for Special Cases",
+      "Variables on Both Sides & Extraneous Solutions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "circles-algebra2",
+    "importPath": "./extra/circles-algebra2",
+    "partTitles": [
+      "The Standard Equation",
+      "Reading & Graphing a Circle",
+      "General Form & Completing the Square",
+      "Building Circles from Geometry",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "absolute-extrema",
+    "importPath": "./extra/absolute-extrema",
+    "partTitles": [
+      "Local vs. Absolute Extrema",
+      "The Extreme Value Theorem",
+      "Critical Numbers",
+      "The Candidates Test",
+      "Cusps, Corners & Endpoint Traps",
+      "Applied Optimization",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "angle-relationships-geometry",
+    "importPath": "./extra/angle-relationships-geometry",
+    "partTitles": [
+      "Naming & Classifying Angles",
+      "Complementary & Supplementary Angles",
+      "Vertical Angles & Angles Around a Point",
+      "Parallel Lines & a Transversal",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "area-polygons-grade6",
+    "importPath": "./extra/area-polygons-grade6",
+    "partTitles": [
+      "What Is Area? Rectangles & Squares",
+      "Parallelograms",
+      "Triangles",
+      "Trapezoids",
+      "Composite Figures & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apes-air-pollution",
+    "importPath": "./extra/apes-air-pollution",
+    "partTitles": [
+      "🏭 Pollutants, Sources & Primary vs. Secondary",
+      "Photochemical Smog",
+      "Industrial Smog & Acid Deposition",
+      "Thermal Inversions & the Role of Weather",
+      "Health Effects & the Air Quality Index",
+      "Indoor Air Pollution",
+      "Control Technology, Policy & Mastery Check"
+    ]
+  }
+]
