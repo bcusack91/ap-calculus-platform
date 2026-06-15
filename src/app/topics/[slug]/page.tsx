@@ -521,7 +521,11 @@ export default async function TopicPage(props: TopicPageProps) {
               <InArticleAd />
             </div>
 
-            {/* Example Problems with colored styling */}
+            {/* Practice Problems — only when the topic actually has example
+                problems. Many topics (MCAT, AP humanities, CS, ...) practice via
+                the interactive lesson above + quizzes instead of ExampleProblem
+                rows, so we hide this section rather than show an empty "none yet" box. */}
+            {topic.exampleProblems.length > 0 && (
             <div className="mt-12">
               <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-4 rounded-t-lg">
                 <h2 className="text-2xl font-bold flex items-center gap-2">
@@ -595,6 +599,7 @@ export default async function TopicPage(props: TopicPageProps) {
                 )}
               </div>
             </div>
+            )}
 
             {/* Content Enrichment Tools */}
             <TopicContentTools
