@@ -79,5 +79,795 @@
       "Indoor Air Pollution",
       "Control Technology, Policy & Mastery Check"
     ]
+  },
+  {
+    "slug": "act-conflicting-viewpoints",
+    "importPath": "./extra/act-conflicting-viewpoints",
+    "partTitles": [
+      "Meet the Only \"Reading\" Passage on the Science Test",
+      "Summarizing Each Viewpoint",
+      "Agreement, Disagreement & Comparison Questions",
+      "Strengthen, Weaken & \"What If\" Questions",
+      "Strategy, Timing & Mastery Check"
+    ]
+  },
+  {
+    "slug": "act-intermediate-algebra",
+    "importPath": "./extra/act-intermediate-algebra",
+    "partTitles": [
+      "Exponents, Radicals & Algebraic Expressions",
+      "Quadratics: Factoring, the Formula & Systems",
+      "Inequalities, Functions & Absolute Value",
+      "The Coordinate Plane: Slope, Distance & Lines",
+      "Circles, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "act-plane-geometry-trig",
+    "importPath": "./extra/act-plane-geometry-trig",
+    "partTitles": [
+      "Angles, Lines & Triangle Sums",
+      "Triangles: Pythagoras, Special Triangles & Similarity",
+      "Polygons, Circles, Area & Perimeter",
+      "Right-Triangle Trigonometry (SOH-CAH-TOA)",
+      "Coordinate Geometry & Mastery Check"
+    ]
+  },
+  {
+    "slug": "act-research-summaries",
+    "importPath": "./extra/act-research-summaries",
+    "partTitles": [
+      "Anatomy of an Experiment Passage",
+      "Reading the Data: Tables, Trends & Trials",
+      "Comparing Experiments & Experimental Design",
+      "From Hypothesis to Conclusion",
+      "Strategy, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "arithmetic-geometric-sequences-alg1",
+    "importPath": "./extra/arithmetic-geometric-sequences-alg1",
+    "partTitles": [
+      "Sequences & the Common Difference",
+      "The Explicit Formula for Arithmetic Sequences",
+      "Geometric Sequences & the Common Ratio",
+      "Telling Them Apart & Real-World Models",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "box-plots",
+    "importPath": "./extra/box-plots",
+    "partTitles": [
+      "The Five-Number Summary",
+      "Building the Box & Whiskers",
+      "Outliers & the 1.5 × IQR Rule",
+      "Reading & Comparing Box Plots",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "compound-absolute-value-inequalities-alg1",
+    "importPath": "./extra/compound-absolute-value-inequalities-alg1",
+    "partTitles": [
+      "Compound Inequalities: AND vs. OR",
+      "Solving Compound Inequalities",
+      "Absolute Value as Distance",
+      "Solving |ax + b| Inequalities",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "domain-and-range",
+    "importPath": "./extra/domain-and-range",
+    "partTitles": [
+      "What Domain and Range Mean",
+      "Reading Domain & Range from Graphs",
+      "Domain from an Equation",
+      "Range & Real-World Restrictions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "exponent-rules-algebra1",
+    "importPath": "./extra/exponent-rules-algebra1",
+    "partTitles": [
+      "What an Exponent Really Means",
+      "Product, Quotient & Power Rules",
+      "Zero & Negative Exponents",
+      "Combining the Rules",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "exponential-growth-decay-alg1",
+    "importPath": "./extra/exponential-growth-decay-alg1",
+    "partTitles": [
+      "What Makes a Function Exponential?",
+      "Exponential Growth",
+      "Exponential Decay",
+      "Tables, Graphs & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "functions-basics-algebra1",
+    "importPath": "./extra/functions-basics-algebra1",
+    "partTitles": [
+      "What Is a Function?",
+      "Domain, Range & the Vertical Line Test",
+      "Function Notation f(x)",
+      "Reading Tables & Graphs",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "graphing-linear-equations-algebra1",
+    "importPath": "./extra/graphing-linear-equations-algebra1",
+    "partTitles": [
+      "The Coordinate Plane & Plotting Points",
+      "Slope: Steepness & Direction",
+      "Slope-Intercept Form",
+      "Intercepts, Standard Form & Special Lines",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "graphing-quadratics-algebra1",
+    "importPath": "./extra/graphing-quadratics-algebra1",
+    "partTitles": [
+      "The Parabola & Standard Form",
+      "Vertex & Axis of Symmetry",
+      "Intercepts, Roots & Factored Form",
+      "Vertex Form & Transformations",
+      "Putting It All Together & Mastery Check"
+    ]
+  },
+  {
+    "slug": "graphing-systems-algebra1",
+    "importPath": "./extra/graphing-systems-algebra1",
+    "partTitles": [
+      "What a System Is and What \"Solution\" Means",
+      "Graphing the Lines and Reading the Intersection",
+      "Three Types of Solutions",
+      "Real-World Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "linear-inequalities-algebra1",
+    "importPath": "./extra/linear-inequalities-algebra1",
+    "partTitles": [
+      "Reading and Understanding Inequalities",
+      "Solving One- and Two-Step Inequalities",
+      "Multi-Step Inequalities",
+      "Graphing, Interval Notation & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "linear-regression-correlation-alg1",
+    "importPath": "./extra/linear-regression-correlation-alg1",
+    "partTitles": [
+      "Scatterplots & Describing a Relationship",
+      "The Correlation Coefficient r",
+      "The Line of Best Fit",
+      "Predictions, Residuals & Cautions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "mean-median-mode-algebra1",
+    "importPath": "./extra/mean-median-mode-algebra1",
+    "partTitles": [
+      "What \"Center\" Means (mean / average)",
+      "Median & Mode",
+      "Outliers & Which Measure to Use",
+      "Working Backward & Weighted Means",
+      "Mixed Practice & Mastery Check (Exit Quiz)"
+    ]
+  },
+  {
+    "slug": "multiplying-polynomials-algebra1",
+    "importPath": "./extra/multiplying-polynomials-algebra1",
+    "partTitles": [
+      "The Distributive Property & Exponents",
+      "Monomial × Polynomial, Carefully",
+      "Binomial × Binomial (FOIL)",
+      "Special Products (Shortcuts)",
+      "Bigger Products, Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "outliers-in-data",
+    "importPath": "./extra/outliers-in-data",
+    "partTitles": [
+      "What Is an Outlier?",
+      "The 1.5 × IQR Rule",
+      "The Standard-Deviation Rule",
+      "How Outliers Affect Statistics",
+      "Causes, Decisions & Mastery Check"
+    ]
+  },
+  {
+    "slug": "percent-problems-algebra1",
+    "importPath": "./extra/percent-problems-algebra1",
+    "partTitles": [
+      "What a Percent Really Is",
+      "The Percent Proportion & The Three Questions",
+      "Finding the Whole (the Reverse Problem)",
+      "Percent Change, Tips, Tax & Discounts",
+      "Mixed Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-operations-algebra1",
+    "importPath": "./extra/polynomial-operations-algebra1",
+    "partTitles": [
+      "The Language of Polynomials",
+      "Adding Polynomials",
+      "Subtracting Polynomials",
+      "Word Problems & Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "proportions-algebra1",
+    "importPath": "./extra/proportions-algebra1",
+    "partTitles": [
+      "Ratios & What a Proportion Is",
+      "The Cross-Products Method",
+      "Variables in Binomials & Both Sides",
+      "Word Problems & Real Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "quadratic-formula-detailed-algebra1",
+    "importPath": "./extra/quadratic-formula-detailed-algebra1",
+    "partTitles": [
+      "Standard Form & Identifying a, b, c",
+      "Plugging Into the Formula",
+      "The Discriminant: How Many Solutions?",
+      "Irrational Roots & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "radical-operations-algebra1",
+    "importPath": "./extra/radical-operations-algebra1",
+    "partTitles": [
+      "Radicals and \"Like\" Terms",
+      "Combining Like Radicals",
+      "Simplify First, Then Combine",
+      "Multi-Term Problems & Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "ratios-rates-algebra1",
+    "importPath": "./extra/ratios-rates-algebra1",
+    "partTitles": [
+      "What Is a Ratio?",
+      "Rates & Unit Rates",
+      "Proportions & Cross-Multiplication",
+      "Real-World Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "simplifying-radicals-alg1",
+    "importPath": "./extra/simplifying-radicals-alg1",
+    "partTitles": [
+      "Square Roots & Perfect Squares",
+      "The Product & Quotient Rules",
+      "Adding & Subtracting Radicals",
+      "Multiplying Radicals",
+      "Rationalizing Denominators & Mastery Check"
+    ]
+  },
+  {
+    "slug": "simplifying-radicals-algebra1",
+    "importPath": "./extra/simplifying-radicals-algebra1",
+    "partTitles": [
+      "Square Roots & Perfect Squares",
+      "The Product Property",
+      "Variables Under the Radical",
+      "Adding, Multiplying & Rationalizing",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "slope-intercept-form-algebra1",
+    "importPath": "./extra/slope-intercept-form-algebra1",
+    "partTitles": [
+      "Slope-Intercept Form: y = mx + b",
+      "From Slope and a Point",
+      "From Two Points & Point-Slope Form",
+      "Special Lines, Standard Form & Modeling",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "solving-quadratics-algebra1",
+    "importPath": "./extra/solving-quadratics-algebra1",
+    "partTitles": [
+      "What Is a Quadratic Equation? (standard form, two roots, Zero Product Property)",
+      "Solving by Factoring",
+      "The Square Root Method",
+      "The Quadratic Formula & Discriminant",
+      "Choosing a Method, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "solving-systems-algebra1",
+    "importPath": "./extra/solving-systems-algebra1",
+    "partTitles": [
+      "What Is a System & Solving by Graphing",
+      "The Substitution Method",
+      "The Elimination Method",
+      "Special Cases & Choosing a Method",
+      "Word Problems & Mastery Check"
+    ]
+  },
+  {
+    "slug": "word-problems-linear-algebra1",
+    "importPath": "./extra/word-problems-linear-algebra1",
+    "partTitles": [
+      "Translating Words into Algebra",
+      "Number, Consecutive-Integer & Age Problems",
+      "Money, Coins & Percent Problems",
+      "Distance, Rate & Time + Geometry & Perimeter",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "complex-number-system-alg2",
+    "importPath": "./extra/complex-number-system-alg2",
+    "partTitles": [
+      "The Imaginary Unit i",
+      "Standard Form, the Complex Plane & Adding",
+      "Multiplying Complex Numbers",
+      "Conjugates, Division & Modulus",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "complex-numbers-intro-algebra2",
+    "importPath": "./extra/complex-numbers-intro-algebra2",
+    "partTitles": [
+      "The Imaginary Unit i",
+      "Complex Numbers in Standard Form",
+      "Adding, Subtracting & Multiplying",
+      "Powers of i & Complex Conjugates",
+      "Dividing, Solving & Mastery Check"
+    ]
+  },
+  {
+    "slug": "exponential-equations-algebra2",
+    "importPath": "./extra/exponential-equations-algebra2",
+    "partTitles": [
+      "What Makes an Equation \"Exponential\"?",
+      "The Same-Base Method",
+      "Logarithms: The Tool for Every Other Case",
+      "Solving with Logs & Real Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "factoring-polynomials-algebra2",
+    "importPath": "./extra/factoring-polynomials-algebra2",
+    "partTitles": [
+      "The Greatest Common Factor",
+      "Trinomials with Leading Coefficient 1",
+      "Trinomials when a ≠ 1 (the AC Method)",
+      "Special Patterns (difference of squares, perfect square trinomials, sum/difference of cubes)",
+      "A Strategy, Solving, & Mastery Check (with Exit Quiz)"
+    ]
+  },
+  {
+    "slug": "geometric-sequences-algebra2",
+    "importPath": "./extra/geometric-sequences-algebra2",
+    "partTitles": [
+      "The Common Ratio",
+      "The Explicit Formula",
+      "Recursive Rules, Missing Terms & Geometric Mean",
+      "Finite Geometric Series",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "geometric-sequences-series",
+    "importPath": "./extra/geometric-sequences-series",
+    "partTitles": [
+      "The Common Ratio",
+      "The nth-Term Formula",
+      "Finite Geometric Series",
+      "Infinite Geometric Series",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "infinite-series",
+    "importPath": "./extra/infinite-series",
+    "partTitles": [
+      "From Sequences to Series (partial sums, sigma notation)",
+      "Geometric Series & the Common Ratio (finding r, nth-term formula)",
+      "Convergence: When Does an Infinite Sum Have a Value? (the |r| < 1 rule)",
+      "The Sum Formula & Repeating Decimals (S = a1/(1-r), decimals to fractions)",
+      "Mixed Practice & Mastery Check (Exit Quiz)"
+    ]
+  },
+  {
+    "slug": "intro-trigonometry-alg2",
+    "importPath": "./extra/intro-trigonometry-alg2",
+    "partTitles": [
+      "Right Triangles & the Three Ratios",
+      "Finding a Missing Side",
+      "Finding a Missing Angle",
+      "Special Right Triangles & Exact Values",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "inverse-functions-algebra2",
+    "importPath": "./extra/inverse-functions-algebra2",
+    "partTitles": [
+      "The Idea of \"Undoing\"",
+      "Finding the Inverse Algebraically",
+      "Verifying Inverses with Composition",
+      "Graphs, One-to-One, and Domain Restrictions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "logarithmic-equations-algebra2",
+    "importPath": "./extra/logarithmic-equations-algebra2",
+    "partTitles": [
+      "Logs & Exponentials Are Inverses",
+      "The Three Log Properties",
+      "Convert to Exponential Form",
+      "Combine Logs & Check for Extraneous Roots",
+      "Applications, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "logarithmic-functions-algebra2",
+    "importPath": "./extra/logarithmic-functions-algebra2",
+    "partTitles": [
+      "What a Logarithm Really Is",
+      "The Graph & Its Inverse",
+      "The Laws of Logarithms",
+      "Change of Base & Real-World Models",
+      "Solving Equations & Mastery Check"
+    ]
+  },
+  {
+    "slug": "logarithms-properties-alg2",
+    "importPath": "./extra/logarithms-properties-alg2",
+    "partTitles": [
+      "What Is a Logarithm?",
+      "Common Logs, Natural Logs & Inverses",
+      "The Three Big Properties",
+      "Change of Base & Solving Equations",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "matrix-operations-algebra2",
+    "importPath": "./extra/matrix-operations-algebra2",
+    "partTitles": [
+      "Meet the Matrix",
+      "Addition, Subtraction & Scalar Multiplication",
+      "Matrix Multiplication",
+      "Special Matrices & Determinants",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "parabolas-conic-algebra2",
+    "importPath": "./extra/parabolas-conic-algebra2",
+    "partTitles": [
+      "Focus, Directrix & the Definition",
+      "Vertical Parabolas: x² = 4py",
+      "Horizontal Parabolas: y² = 4px",
+      "Translated Parabolas (Vertex (h, k))",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "piecewise-functions-algebra2",
+    "importPath": "./extra/piecewise-functions-algebra2",
+    "partTitles": [
+      "Reading the Notation",
+      "Boundary Points & Evaluating Carefully",
+      "Graphing Piecewise Functions",
+      "Absolute Value, Step Functions & Continuity",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-division-algebra2",
+    "importPath": "./extra/polynomial-division-algebra2",
+    "partTitles": [
+      "The Big Picture & Dividing by a Monomial",
+      "Long Division",
+      "Synthetic Division",
+      "The Remainder & Factor Theorems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-graphs-algebra2",
+    "importPath": "./extra/polynomial-graphs-algebra2",
+    "partTitles": [
+      "Degree, Leading Coefficient & End Behavior",
+      "Zeros & x-Intercepts",
+      "Multiplicity: Cross vs. Touch",
+      "Sketching a Full Graph",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-long-division",
+    "importPath": "./extra/polynomial-long-division",
+    "partTitles": [
+      "Why Divide Polynomials?",
+      "The Four-Step Loop",
+      "Remainders & Placeholders",
+      "The Remainder & Factor Theorems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-operations-theorems-alg2",
+    "importPath": "./extra/polynomial-operations-theorems-alg2",
+    "partTitles": [
+      "Vocabulary & Arithmetic of Polynomials",
+      "Special Products & Polynomial Division",
+      "The Remainder & Factor Theorems",
+      "Finding All the Roots",
+      "Roots, Multiplicity & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-theorems-algebra2",
+    "importPath": "./extra/polynomial-theorems-algebra2",
+    "partTitles": [
+      "Roots, Factors, and Zeros",
+      "The Remainder & Factor Theorems",
+      "The Rational Root Theorem",
+      "Fundamental Theorem, Multiplicity & Complex Roots",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "radical-equations-algebra2",
+    "importPath": "./extra/radical-equations-algebra2",
+    "partTitles": [
+      "Square Roots & the Big Idea",
+      "Extraneous Solutions",
+      "Equations That Become Quadratics",
+      "Cube Roots & Two Radicals",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rational-equations-algebra2",
+    "importPath": "./extra/rational-equations-algebra2",
+    "partTitles": [
+      "Restrictions & the LCD",
+      "The Core Method: Clear the Denominators",
+      "Factored Denominators & Quadratics",
+      "Extraneous Solutions & Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rational-exponents-algebra2",
+    "importPath": "./extra/rational-exponents-algebra2",
+    "partTitles": [
+      "From Roots to Fractional Powers",
+      "The m/n Power",
+      "Negative Exponents & Simplifying",
+      "Solving Equations & Variable Expressions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rational-functions-graphs-alg2",
+    "importPath": "./extra/rational-functions-graphs-alg2",
+    "partTitles": [
+      "What Is a Rational Function? (definition, domain, the 1/x parent graph)",
+      "Vertical Asymptotes & Holes (factor, cancel, classify)",
+      "Horizontal & Slant Asymptotes (degree rules, polynomial division)",
+      "Intercepts & Sketching the Whole Graph (full recipe)",
+      "Mixed Practice & Mastery Check (Exit Quiz)"
+    ]
+  },
+  {
+    "slug": "rational-operations-algebra2",
+    "importPath": "./extra/rational-operations-algebra2",
+    "partTitles": [
+      "Simplifying & Domain Restrictions",
+      "Multiplying & Dividing",
+      "Adding & Subtracting (Like Denominators) and the LCD",
+      "Unlike Denominators & Complex Fractions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "series-probability-alg2",
+    "importPath": "./extra/series-probability-alg2",
+    "partTitles": [
+      "Series & Sigma Notation",
+      "Arithmetic & Geometric Series",
+      "Counting Principles",
+      "Probability Basics",
+      "Compound Events & Mastery Check"
+    ]
+  },
+  {
+    "slug": "series-summation-algebra2",
+    "importPath": "./extra/series-summation-algebra2",
+    "partTitles": [
+      "From Sequences to Series & Sigma Notation",
+      "The Arithmetic Series Formula",
+      "Finite Geometric Series",
+      "Infinite Geometric Series",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "simplifying-rationals-algebra2",
+    "importPath": "./extra/simplifying-rationals-algebra2",
+    "partTitles": [
+      "What Is a Rational Expression?",
+      "The Factoring Toolkit",
+      "Factor, Then Cancel",
+      "Domain Restrictions & Opposite Factors",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "synthetic-division",
+    "importPath": "./extra/synthetic-division",
+    "partTitles": [
+      "Setting Up the Shortcut",
+      "The Algorithm: Bring Down, Multiply, Add",
+      "The Remainder & Factor Theorems",
+      "Factoring Polynomials & Special Divisors",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "area-between-curves",
+    "importPath": "./extra/area-between-curves",
+    "partTitles": [
+      "From Area Under a Curve to Area Between Two",
+      "The Formula & Finding the Bounds",
+      "When the Curves Cross",
+      "Integrating with Respect to y",
+      "Choosing dx vs. dy on Hard Regions",
+      "Applications & Mixed Regions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "chain-rule",
+    "importPath": "./extra/chain-rule",
+    "partTitles": [
+      "Composite Functions: The \"Inside\" and the \"Outside\"",
+      "The Rule Itself",
+      "The General Power Rule",
+      "Trig, Exponential & Logarithmic Chains",
+      "Nested Chains: Functions Inside Functions Inside Functions",
+      "Combining Rules, Tables & Related Rates",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "constant-multiple-sum-rules",
+    "importPath": "./extra/constant-multiple-sum-rules",
+    "partTitles": [
+      "Why We Need Differentiation Rules",
+      "The Constant Multiple Rule",
+      "The Sum & Difference Rule",
+      "Combining Both Rules on Polynomials",
+      "Negative & Fractional Powers, Roots, and Rewrites",
+      "Evaluating Derivatives & Common Traps",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "critical-points-and-extrema",
+    "importPath": "./extra/critical-points-and-extrema",
+    "partTitles": [
+      "What Is a Critical Point?",
+      "Increasing, Decreasing, and the Sign of f'",
+      "The First Derivative Test",
+      "Concavity & the Second Derivative Test",
+      "Endpoints, Global Extrema & Choosing a Test",
+      "Applied Extrema (Optimization)",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "curve-sketching",
+    "importPath": "./extra/curve-sketching",
+    "partTitles": [
+      "The Toolbox: What Derivatives Tell Us About Shape",
+      "Critical Numbers & the Increasing/Decreasing Test",
+      "The First Derivative Test",
+      "Concavity & the Second Derivative",
+      "Inflection Points & the Second Derivative Test",
+      "Asymptotes & End Behavior",
+      "Putting It All Together + Exit Quiz"
+    ]
+  },
+  {
+    "slug": "definite-integrals",
+    "importPath": "./extra/definite-integrals",
+    "partTitles": [
+      "Area Under a Curve & Riemann Sums",
+      "The Definite Integral as a Limit",
+      "Properties of Definite Integrals",
+      "FTC Part 2: Evaluating Integrals",
+      "FTC Part 1: Accumulation Functions",
+      "Applications: Net Change & Average Value",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "derivative-as-rate-of-change",
+    "importPath": "./extra/derivative-as-rate-of-change",
+    "partTitles": [
+      "Average Rate of Change",
+      "From Average to Instantaneous Rate",
+      "Units & Interpreting f'(a) in Context",
+      "Motion: Position, Velocity, Acceleration",
+      "Reading Rates from Graphs & Tables",
+      "Applied Rates Everywhere",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "derivative-as-slope",
+    "importPath": "./extra/derivative-as-slope",
+    "partTitles": [
+      "From Lines to Curves",
+      "From Secant to Tangent",
+      "The Derivative at a Point",
+      "The Derivative as a Function",
+      "Reading Slope Off a Graph",
+      "Tangent Lines & Linear Approximation",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "derivative-notation",
+    "importPath": "./extra/derivative-notation",
+    "partTitles": [
+      "Why So Many Symbols?",
+      "Lagrange (Prime) Notation",
+      "Leibniz Notation",
+      "Evaluating a Derivative at a Point",
+      "Higher-Order Derivatives",
+      "The Operator d/dx, Plus Euler & Newton",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "derivatives-of-exponential-functions",
+    "importPath": "./extra/derivatives-of-exponential-functions",
+    "partTitles": [
+      "Why Exponentials Are Special",
+      "The Natural Base e",
+      "General Base: d/dx a^x = a^x ln a",
+      "The Chain Rule with Exponentials",
+      "Product & Quotient Combinations",
+      "Tangent Lines, Growth & Decay",
+      "Pitfalls, Mixed Practice & Mastery Check"
+    ]
   }
 ]
