@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef, Suspense } from 'react'
+import { COURSE_COUNT, TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { InArticleAd } from '@/components/ad-banner'
@@ -295,7 +296,7 @@ function SearchContent() {
             <div className="text-center py-12">
               <div className="text-5xl mb-4">🔍</div>
               <p className="text-gray-500 dark:text-gray-400 mb-2">
-                Search across 24 courses and 700+ topics
+                Search across {COURSE_COUNT} courses and {TOPIC_COUNT_LABEL} topics
               </p>
               <p className="text-xs text-gray-400 dark:text-gray-400">
                 Start typing to find study materials instantly

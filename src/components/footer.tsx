@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { COURSE_COUNT, TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 import { EmailCapture } from '@/components/email-capture'
 import { getCourseHref } from '@/data/course-metadata'
 
@@ -61,7 +62,7 @@ export function Footer() {
               <span className="text-lg font-bold text-gray-900 dark:text-white">Study Mondo</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Free study resources for students from Grade 4 through AP and test prep. 24 courses, 700+ topics.
+              Free study resources for students from Grade 4 through AP and test prep. {COURSE_COUNT} courses, {TOPIC_COUNT_LABEL} topics.
             </p>
           </div>
 

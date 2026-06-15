@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { COURSE_COUNT, TOPIC_COUNT_LABEL } from "@/lib/site-stats";
 import { prisma } from "@/lib/prisma";
 import { courseMeta, defaultCourseMeta, sectionOrder } from "@/data/course-metadata";
 import DynamicStats from "@/components/DynamicStats";
@@ -10,7 +11,7 @@ export const revalidate = 3600; // ISR: revalidate every hour
 export const metadata: Metadata = {
   title: "Study Mondo — Free Math & Science Study Platform",
   description:
-    "Master 24 courses from Grade 4 through AP with free notes, flashcards, interactive lessons, and practice problems. 700+ topics, completely free.",
+    `Master ${COURSE_COUNT} courses from Grade 4 through AP with free notes, flashcards, interactive lessons, and practice problems. ${TOPIC_COUNT_LABEL} topics, completely free.`,
   // The homepage's own canonical (the root layout no longer sets one — see the
   // note there). Relative URL resolves against the root metadataBase.
   alternates: { canonical: "/" },
@@ -82,7 +83,7 @@ export default async function Home() {
               From Grade 4 to AP. SAT to ACT.
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              {totalCourses} courses · 700+ topics · Completely free
+              {totalCourses} courses · {TOPIC_COUNT_LABEL} topics · Completely free
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
               <TrackedLink

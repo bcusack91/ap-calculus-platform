@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { COURSE_COUNT } from '@/lib/site-stats'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { courseMeta, defaultCourseMeta, getCourseHref, sectionOrder } from '@/data/course-metadata'
@@ -7,7 +8,7 @@ export const revalidate = 3600 // ISR: revalidate every hour
 
 export const metadata: Metadata = {
   title: 'All Topics | Study Mondo',
-  description: 'Browse all study topics across 22 AP courses and subjects',
+  description: `Browse all study topics across ${COURSE_COUNT} courses and subjects`,
   alternates: {
     canonical: 'https://www.studymondo.com/topics',
   },

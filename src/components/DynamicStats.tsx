@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { COURSE_COUNT, TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 
 interface SiteStats {
   students: number
@@ -32,11 +33,11 @@ export default function DynamicStats() {
     return (
       <div className="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto">
         <div>
-          <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">24</div>
+          <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">{COURSE_COUNT}</div>
           <div className="text-xs text-gray-500 dark:text-gray-400">Courses</div>
         </div>
         <div>
-          <div className="text-2xl font-bold text-blue-700 dark:text-blue-400">700+</div>
+          <div className="text-2xl font-bold text-blue-700 dark:text-blue-400">{TOPIC_COUNT_LABEL}</div>
           <div className="text-xs text-gray-500 dark:text-gray-400">Topics</div>
         </div>
         <div>

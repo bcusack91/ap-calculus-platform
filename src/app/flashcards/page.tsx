@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { COURSE_COUNT, TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
@@ -7,7 +8,7 @@ export const revalidate = 3600 // ISR: revalidate every hour
 
 export const metadata: Metadata = {
   title: 'Flashcards | Study Mondo',
-  description: 'Review flashcards across 24 courses and 700+ topics. Powered by spaced repetition for optimal learning.',
+  description: `Review flashcards across ${COURSE_COUNT} courses and ${TOPIC_COUNT_LABEL} topics. Powered by spaced repetition for optimal learning.`,
   alternates: {
     canonical: 'https://www.studymondo.com/flashcards',
   },

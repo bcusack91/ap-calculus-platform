@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { COURSE_COUNT } from '@/lib/site-stats'
 import { prisma } from '@/lib/prisma'
 import { cached } from '@/lib/redis'
 import { unstable_cache } from 'next/cache'
@@ -54,7 +55,7 @@ export async function GET() {
   } catch (error) {
     console.error('[GET /api/stats]', error)
     return NextResponse.json(
-      { students: 0, lessonsStudied: 0, flashcardsReviewed: 0, matchesPlayed: 0, courses: 24, topics: 700 },
+      { students: 0, lessonsStudied: 0, flashcardsReviewed: 0, matchesPlayed: 0, courses: COURSE_COUNT, topics: 950 },
       { status: 200 }
     )
   }

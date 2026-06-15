@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { COURSE_COUNT, TOPIC_COUNT_LABEL, COURSE_CATALOG } from "@/lib/site-stats";
 
 export const metadata: Metadata = {
   title: "About Us | Study Mondo — Free Study Platform",
@@ -7,40 +8,12 @@ export const metadata: Metadata = {
     "Learn about Study Mondo's mission to provide free, high-quality study resources for students from Grade 4 through AP and test prep.",
 };
 
-const courseList = [
-  { section: "Middle School Math", courses: [
-    { name: "Grade 4 Math", icon: "4️⃣" },
-    { name: "Grade 5 Math", icon: "5️⃣" },
-    { name: "Grade 6 Math", icon: "6️⃣" },
-    { name: "Grade 7 Math", icon: "7️⃣" },
-    { name: "Grade 8 Math", icon: "8️⃣" },
-  ]},
-  { section: "High School Math", courses: [
-    { name: "Pre-Algebra", icon: "🔢" },
-    { name: "Algebra 1", icon: "📊" },
-    { name: "Geometry", icon: "📐" },
-    { name: "Algebra 2", icon: "🔣" },
-    { name: "AP Precalculus", icon: "📈" },
-    { name: "AP Calculus AB", icon: "∫" },
-    { name: "AP Calculus BC", icon: "∬" },
-    { name: "AP Statistics", icon: "📊" },
-  ]},
-  { section: "AP Sciences", courses: [
-    { name: "AP Physics 1", icon: "⚛️" },
-    { name: "AP Physics 2", icon: "🔬" },
-    { name: "AP Physics C: Mechanics", icon: "🎯" },
-    { name: "AP Physics C: E&M", icon: "⚡" },
-    { name: "AP Chemistry", icon: "🧪" },
-    { name: "AP Biology", icon: "🧬" },
-    { name: "AP Psychology", icon: "🧠" },
-    { name: "Organic Chemistry", icon: "⚗️" },
-  ]},
-  { section: "Test Prep", courses: [
-    { name: "SAT Prep", icon: "📝" },
-    { name: "ACT Prep", icon: "📋" },
-    { name: "MCAT Prep", icon: "🏥" },
-  ]},
-];
+// Derived from the course registry (single source of truth) so this list always
+// covers every course and can never under-count the catalog.
+const courseList = COURSE_CATALOG.map((g) => ({
+  section: g.section.replace(/\s*\(Grades[^)]*\)/, ""),
+  courses: g.courses.map((c) => ({ name: c.name, icon: c.icon })),
+}));
 
 export default function AboutPage() {
   return (
@@ -71,7 +44,7 @@ export default function AboutPage() {
                 to help students master challenging math and science courses.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                Our comprehensive study materials span 24 courses with 700+ topics, thousands of flashcards,
+                Our comprehensive study materials span {COURSE_COUNT} courses with {TOPIC_COUNT_LABEL} topics, thousands of flashcards,
                 interactive lessons, and detailed explanations — all created by educators who understand what
                 it takes to succeed.
               </p>
@@ -85,7 +58,7 @@ export default function AboutPage() {
                   <div className="text-3xl mb-4">📚</div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Comprehensive Notes</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Detailed explanations covering every topic across 24 courses, from Grade 4 math to AP sciences
+                    Detailed explanations covering every topic across {COURSE_COUNT} courses, from Grade 4 math to AP sciences
                   </p>
                 </div>
 
@@ -133,7 +106,7 @@ export default function AboutPage() {
 
             {/* Courses Covered */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">24 Courses We Cover</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{COURSE_COUNT} Courses We Cover</h2>
               <div className="space-y-6">
                 {courseList.map((section) => (
                   <div key={section.section} className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/50 dark:to-blue-950/50 rounded-2xl p-6">
@@ -156,7 +129,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">How It Works</h2>
               <div className="space-y-4">
                 {[
-                  { step: 1, title: "Choose Your Course", desc: "Select from 24 courses spanning middle school, high school, AP, and test prep" },
+                  { step: 1, title: "Choose Your Course", desc: `Select from ${COURSE_COUNT} courses spanning middle school, high school, AP, and test prep` },
                   { step: 2, title: "Study the Material", desc: "Read comprehensive notes, try interactive lessons, and understand key concepts" },
                   { step: 3, title: "Practice & Review", desc: "Reinforce your learning with flashcards, practice problems, and competitive challenges" },
                   { step: 4, title: "Track Your Progress", desc: "Monitor your mastery, maintain streaks, and watch your understanding grow" },
@@ -228,13 +201,13 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-4 gap-6 text-center">
               <div className="p-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                  24
+                  {COURSE_COUNT}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Courses</div>
               </div>
               <div className="p-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                  700+
+                  {TOPIC_COUNT_LABEL}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Topics</div>
               </div>

@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 
 // Render at request time (not prerendered at build): next/og fetches emoji
 // glyphs from a CDN, and that build-time fetch can ETIMEDOUT and fail the deploy.
@@ -71,7 +72,7 @@ export default async function Image() {
               lineHeight: 1.4,
             }}
           >
-            700+ topics with interactive flashcards for AP courses, math & science
+            {TOPIC_COUNT_LABEL} topics with interactive flashcards for AP courses, math & science
           </div>
         </div>
 
