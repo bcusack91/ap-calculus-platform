@@ -869,5 +869,915 @@
       "Tangent Lines, Growth & Decay",
       "Pitfalls, Mixed Practice & Mastery Check"
     ]
+  },
+  {
+    "slug": "derivatives-of-logarithmic-functions",
+    "importPath": "./extra/derivatives-of-logarithmic-functions",
+    "partTitles": [
+      "The Derivative of $\\ln x$",
+      "The Chain Rule with $\\ln$",
+      "Expand First, Then Differentiate",
+      "Other Bases, $\\ln\\lvert x\\rvert$, and the $b^x$ Connection",
+      "Logarithmic Differentiation",
+      "Tangent Lines, Related Rates & Graph Behavior",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "evaluating-limits-algebraically",
+    "importPath": "./extra/evaluating-limits-algebraically",
+    "partTitles": [
+      "Direct Substitution: Always Try This First",
+      "The $\\frac{0}{0}$ Form: Factor and Cancel",
+      "Rationalizing with Conjugates",
+      "Complex Fractions",
+      "Limits at Infinity",
+      "One-Sided, Piecewise & Special Trig Limits",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "evaluating-limits-graphically",
+    "importPath": "./extra/evaluating-limits-graphically",
+    "partTitles": [
+      "What a Limit Is Asking",
+      "One-Sided Limits",
+      "When Does the Limit Exist?",
+      "Limit vs. Function Value at a Point",
+      "Infinite Limits & Vertical Asymptotes",
+      "Limits at Infinity & Horizontal Asymptotes",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "first-derivative-test",
+    "importPath": "./extra/first-derivative-test",
+    "partTitles": [
+      "Increasing, Decreasing, and the Sign of $f'$",
+      "Critical Numbers",
+      "The Test Itself",
+      "Building a Sign Chart",
+      "Worked Examples: Products, Quotients & Trig",
+      "Subtleties: Non-Differentiable Points & Restricted Domains",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "higher-order-derivatives",
+    "importPath": "./extra/higher-order-derivatives",
+    "partTitles": [
+      "The Derivative of the Derivative",
+      "Polynomials & Power Functions",
+      "Trig, Exponentials, Logs & Reciprocals",
+      "Motion: Position, Velocity, Acceleration & Jerk",
+      "Concavity, Inflection Points & the Second-Derivative Test",
+      "Implicit 2nd Derivatives & $n$th-Derivative Patterns",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "indefinite-integrals",
+    "importPath": "./extra/indefinite-integrals",
+    "partTitles": [
+      "Antiderivatives and the \"+C\"",
+      "Reading the Integral Sign",
+      "The Power Rule for Integration",
+      "Constant-Multiple & Sum/Difference Rules",
+      "Trig, Exponential & the $1/x$ Integrals",
+      "Initial Conditions: Solving for $C$",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "indeterminate-forms-factoring",
+    "importPath": "./extra/indeterminate-forms-factoring",
+    "partTitles": [
+      "When Direct Substitution Gives You $\\frac{0}{0}$",
+      "The Hidden Common Factor $(x - a)$",
+      "Factoring Quadratics & Difference of Squares",
+      "Cubes, Higher Degrees & Synthetic Division",
+      "Rationalizing: Factoring's Cousin for Square Roots",
+      "🧩 Indeterminate Forms & Factoring",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "integration-by-parts",
+    "importPath": "./extra/integration-by-parts",
+    "partTitles": [
+      "Where the Formula Comes From",
+      "Choosing $u$ with LIATE",
+      "Standard Worked Examples",
+      "Logs, Inverse Trig & the $dv = dx$ Trick",
+      "Repeated Parts & the Cyclic Integral",
+      "Definite Integrals by Parts",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "introduction-to-limits",
+    "importPath": "./extra/introduction-to-limits",
+    "partTitles": [
+      "What a Limit Really Means",
+      "One-Sided Limits & When a Limit Fails to Exist",
+      "Reading Limits from Graphs & Tables",
+      "Evaluating Limits Algebraically",
+      "Infinite Limits & Vertical Asymptotes",
+      "Limits at Infinity & End Behavior",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "limit-notation-terminology",
+    "importPath": "./extra/limit-notation-terminology",
+    "partTitles": [
+      "The Idea of a Limit",
+      "Reading & Writing $\\lim$ Notation",
+      "One-Sided Limits",
+      "When Does the (Two-Sided) Limit Exist?",
+      "Infinite Limits & Limits at Infinity",
+      "Continuity & the Vocabulary of Limits",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "linear-approximation",
+    "importPath": "./extra/linear-approximation",
+    "partTitles": [
+      "Why a Tangent Line Is the Best Local Straight-Line Model",
+      "The Linearization $L(x)$ and the Standard Recipe",
+      "Differentials: $dy$, $dx$, and $\\Delta y \\approx dy$",
+      "The Classic Toolkit: Roots, Powers, Trig, Exp & Log",
+      "Error, Concavity & Over- vs. Under-Estimates",
+      "Applications: Error Propagation & Percent Error",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "logarithmic-differentiation-technique",
+    "importPath": "./extra/logarithmic-differentiation-technique",
+    "partTitles": [
+      "Why Take the Log First?",
+      "The 4-Step Method",
+      "Taming Big Products, Quotients & Roots",
+      "Variable Base AND Variable Exponent ($x^x$ and friends)",
+      "General Bases, General Exponents & Why the Old Rules Are Special Cases",
+      "Applications & Common Traps",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "newtons-method",
+    "importPath": "./extra/newtons-method",
+    "partTitles": [
+      "The Tangent-Line Idea",
+      "The Iteration Formula",
+      "Running the Iteration by Hand",
+      "Square Roots & Real Equations",
+      "Convergence Speed & Stopping",
+      "When It Fails",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "one-sided-limits-in-detail",
+    "importPath": "./extra/one-sided-limits-in-detail",
+    "partTitles": [
+      "Approaching From One Side",
+      "Reading Them Off a Graph",
+      "The Existence Theorem",
+      "Piecewise Functions, Algebraically",
+      "Infinite One-Sided Limits & Vertical Asymptotes",
+      "One-Sided Limits & Continuity",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "optimization-problems",
+    "importPath": "./extra/optimization-problems",
+    "partTitles": [
+      "What Optimization Is & The 5-Step Workflow",
+      "Building the Objective: Constraint & Domain",
+      "Area & Perimeter (Fences & Gardens)",
+      "Volume & Material (Boxes & Cans)",
+      "Distance, Cost & Revenue",
+      "Confirming the Extremum",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "partial-fractions",
+    "importPath": "./extra/partial-fractions",
+    "partTitles": [
+      "Why Break a Fraction Apart?",
+      "Distinct Linear Factors",
+      "Coefficient Matching & Repeated Linear Factors",
+      "Irreducible Quadratic Factors",
+      "Improper Fractions: Divide First",
+      "Integrating the Pieces",
+      "Full Problems, Applications & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "power-rule-basics",
+    "importPath": "./extra/power-rule-basics",
+    "partTitles": [
+      "The Rule for Whole-Number Powers",
+      "Negative & Fractional Exponents",
+      "Constant Multiples, Sums & Differences",
+      "Special Cases & Sneaky Rewrites",
+      "Evaluating & Higher-Order Derivatives",
+      "Applications: Slopes, Tangent Lines & Motion",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "product-rule",
+    "importPath": "./extra/product-rule",
+    "partTitles": [
+      "Why You Can't Just Multiply the Derivatives",
+      "The Rule Itself",
+      "Worked Examples with Trig, Exponential & Log Factors",
+      "Simplify, Factor & Evaluate",
+      "Product Rule Meets the Chain Rule",
+      "Value Tables & Three-Factor Products",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "quotient-rule",
+    "importPath": "./extra/quotient-rule",
+    "partTitles": [
+      "Why We Need It & the Formula",
+      "A Mnemonic & Sign Bookkeeping",
+      "Deriving the Trig Quotient Rules",
+      "Quotient Rule Meets the Chain Rule",
+      "Applications: Tangent Lines & Behavior",
+      "Traps & When NOT to Use It",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "rationalizing-techniques",
+    "importPath": "./extra/rationalizing-techniques",
+    "partTitles": [
+      "Roots, Conjugates & the Difference of Squares",
+      "Rationalizing the Denominator",
+      "Rationalizing the Numerator",
+      "The Conjugate Trick for $\\frac{0}{0}$ Limits",
+      "The Difference Quotient & Derivatives from the Definition",
+      "Harder Cases: Two Radicals & Limits at Infinity",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "riemann-sums",
+    "importPath": "./extra/riemann-sums",
+    "partTitles": [
+      "The Area Problem",
+      "Left vs. Right Rectangles",
+      "The Midpoint & Trapezoidal Rules",
+      "Over- and Under-Estimates",
+      "Data Tables & Unequal Widths",
+      "Sigma Notation & the Limit Definition",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "second-derivative-test",
+    "importPath": "./extra/second-derivative-test",
+    "partTitles": [
+      "Concavity and the Second Derivative",
+      "Inflection Points",
+      "The Test Itself",
+      "vs. the First Derivative Test",
+      "The Inconclusive Case",
+      "Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "trig-substitution",
+    "importPath": "./extra/trig-substitution",
+    "partTitles": [
+      "Why We Need a New Tool",
+      "The Universal Procedure",
+      "Case 1: $\\sqrt{a^2 - x^2}$ (Sine)",
+      "Case 2: $\\sqrt{a^2 + x^2}$ (Tangent)",
+      "Case 3: $\\sqrt{x^2 - a^2}$ (Secant)",
+      "Reference Triangles & Definite Integrals",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "u-substitution",
+    "importPath": "./extra/u-substitution",
+    "partTitles": [
+      "Why We Need It: Undoing the Chain Rule",
+      "Choosing the Right $u$",
+      "The Five-Step Method",
+      "Powers & Roots",
+      "Trig, Exponential & Logarithmic Integrals",
+      "Definite Integrals",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "volumes-disk-method",
+    "importPath": "./extra/volumes-disk-method",
+    "partTitles": [
+      "Slicing a Solid into Disks",
+      "The Disk Formula About the $x$-Axis",
+      "Worked Examples (About the $x$-Axis)",
+      "Rotating About the $y$-Axis",
+      "Rotating About a Non-Axis Line",
+      "Setup Pitfalls & Pro Strategy",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "volumes-shell-method",
+    "importPath": "./extra/volumes-shell-method",
+    "partTitles": [
+      "Why Shells? The Big Idea",
+      "The Shell Formula & First Example",
+      "Revolving About the $y$-Axis",
+      "Regions Between Two Curves",
+      "Revolving About a Shifted Vertical Axis",
+      "Horizontal Shells ($dy$) & Choosing $dx$ vs $dy$",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "volumes-washer-method",
+    "importPath": "./extra/volumes-washer-method",
+    "partTitles": [
+      "From Disks to Washers",
+      "Revolving About the $x$-Axis",
+      "Choosing Outer vs. Inner Radius",
+      "Revolving About a Horizontal Line $y = c$",
+      "Washers With Respect to $y$ (Vertical Axes)",
+      "The Full Set-Up Workflow",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "what-is-a-derivative",
+    "importPath": "./extra/what-is-a-derivative",
+    "partTitles": [
+      "The Rate-of-Change Problem",
+      "Secant Lines & the Difference Quotient",
+      "From Secant to Tangent: The Limit Idea",
+      "The Definition of the Derivative",
+      "Computing Derivatives from the Definition",
+      "What a Derivative MEANS (Velocity, Units & Sign)",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "alternating-series-test",
+    "importPath": "./extra/alternating-series-test",
+    "partTitles": [
+      "What Is an Alternating Series?",
+      "The Two Conditions",
+      "Running the Test",
+      "The Error (Remainder) Bound",
+      "Absolute vs. Conditional Convergence",
+      "Pitfalls & Fine Print",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "common-taylor-series",
+    "importPath": "./extra/common-taylor-series",
+    "partTitles": [
+      "What a Taylor Series Is",
+      "Taylor Polynomials & Centering",
+      "The Famous Five (Memorize These)",
+      "Substitution & Algebra Tricks",
+      "Differentiating & Integrating Series",
+      "Approximation, Error & Limits",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "comparison-tests",
+    "importPath": "./extra/comparison-tests",
+    "partTitles": [
+      "The Benchmark Series",
+      "The Direct Comparison Test",
+      "Manipulating Bounds Cleverly",
+      "The Limit Comparison Test",
+      "Choosing the Right Comparison",
+      "Strategy, Pitfalls & Test-Day Flow",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "integral-test",
+    "importPath": "./extra/integral-test",
+    "partTitles": [
+      "Series, Partial Sums & the Question of Convergence",
+      "The Rectangle Picture: Series as Area",
+      "The Three Hypotheses & the Statement",
+      "Applying the Test: Worked Examples",
+      "The Big Payoff: the $p$-Series",
+      "Estimating the Sum: the Remainder",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "parametric-calculus",
+    "importPath": "./extra/parametric-calculus",
+    "partTitles": [
+      "Curves, the Parameter & Plotting",
+      "The First Derivative $\\dfrac{dy}{dx}$ & Tangent Lines",
+      "The Second Derivative & Concavity",
+      "Arc Length",
+      "Vector Motion: Velocity, Speed, Acceleration & Distance",
+      "Area & Horizontal/Vertical Tangents",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "parametric-equations-intro",
+    "importPath": "./extra/parametric-equations-intro",
+    "partTitles": [
+      "What Is a Parameter?",
+      "Eliminating the Parameter",
+      "Orientation, Direction & Restricted Domains",
+      "Parametrizing Lines and Segments",
+      "Circles and Ellipses",
+      "The Slope $\\frac{dy}{dx}$ of a Parametric Curve",
+      "Motion, Speed & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polar-calculus",
+    "importPath": "./extra/polar-calculus",
+    "partTitles": [
+      "Polar Coordinates & the Polar↔Rectangular Bridge",
+      "Sketching Polar Curves & Using Symmetry",
+      "Slope $\\dfrac{dy}{dx}$ of a Polar Curve",
+      "Area Enclosed by a Polar Curve",
+      "Area Between Two Polar Curves",
+      "Arc Length of a Polar Curve",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polar-coordinates-intro",
+    "importPath": "./extra/polar-coordinates-intro",
+    "partTitles": [
+      "A New Way to Locate a Point",
+      "Plotting Points & Non-Uniqueness",
+      "Polar → Rectangular",
+      "Rectangular → Polar",
+      "Polar Equations of Simple Curves",
+      "The Classic Polar Graphs",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "power-series-intro",
+    "importPath": "./extra/power-series-intro",
+    "partTitles": [
+      "What a Power Series Is",
+      "The Geometric Power Series",
+      "Convergence & the Ratio Test",
+      "Radius of Convergence",
+      "The Interval of Convergence",
+      "Working With Power Series",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "radius-interval-convergence",
+    "importPath": "./extra/radius-interval-convergence",
+    "partTitles": [
+      "Why a Power Series Has a Domain",
+      "The Ratio Test: Your Engine for Finding $R$",
+      "Computing $R$ for Trickier Coefficients",
+      "Checking the Endpoints (the step that wins points)",
+      "The Three Behaviors & Full Worked Problems",
+      "Operations, Shortcuts & Common Traps",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "ratio-root-tests",
+    "importPath": "./extra/ratio-root-tests",
+    "partTitles": [
+      "Why Read a Series' Own Growth Rate?",
+      "The Ratio Test, Stated Precisely",
+      "Running the Ratio Test (Factorials & Exponentials)",
+      "The Star Case: $n^n$ and the Number $e$",
+      "The Root Test",
+      "Power Series & the Radius of Convergence",
+      "Choosing the Right Test, Pitfalls & Mastery Check"
+    ]
+  },
+  {
+    "slug": "sequences-intro",
+    "importPath": "./extra/sequences-intro",
+    "partTitles": [
+      "What Is a Sequence?",
+      "Explicit vs. Recursive Formulas",
+      "Arithmetic & Geometric Sequences",
+      "Monotonic & Bounded Sequences",
+      "The Limit of a Sequence",
+      "Convergence Tools: Functions, Geometric Terms & the Squeeze Theorem",
+      "Mixed Practice & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "series-intro",
+    "importPath": "./extra/series-intro",
+    "partTitles": [
+      "From Sequences to Series",
+      "Partial Sums & Convergence",
+      "Sigma Notation Fluency",
+      "Geometric Series",
+      "Telescoping Series",
+      "The $n$-th Term Test for Divergence",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "taylor-maclaurin-series",
+    "importPath": "./extra/taylor-maclaurin-series",
+    "partTitles": [
+      "The Big Idea: Polynomials That Mimic Functions",
+      "The Coefficient Formula",
+      "Maclaurin Series (centered at 0)",
+      "Taylor Series at a Nonzero Center",
+      "Taylor Polynomials & Sigma Notation",
+      "Convergence & the Radius of Convergence",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "csa-recursive-methods",
+    "importPath": "./extra/csa-recursive-methods",
+    "partTitles": [
+      "What Recursion Is",
+      "Tracing the Call Stack",
+      "Recursion vs. Iteration",
+      "Recursion on Strings",
+      "Fibonacci & Multiple Recursive Calls",
+      "Recursion on Arrays & Common Pitfalls",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "csp-create-performance-task",
+    "importPath": "./extra/csp-create-performance-task",
+    "partTitles": [
+      "What the Task Is & How It's Scored",
+      "Point 1: Program Purpose, Input & Output",
+      "Points 2 & 3: Data Abstraction with a List",
+      "Point 4: Procedural Abstraction with a Parameter",
+      "Point 5: Algorithm with Sequencing, Selection & Iteration",
+      "The Written Responses (3a–3d) & Point 6: Testing",
+      "Mastery Check & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "englang-rhetorical-analysis-essay",
+    "importPath": "./extra/englang-rhetorical-analysis-essay",
+    "partTitles": [
+      "The Rhetorical Situation",
+      "Ethos, Pathos, Logos",
+      "Rhetorical Strategies & Devices",
+      "Thesis & the AP Rubric",
+      "Body Paragraphs: Evidence & Commentary",
+      "Writing the Argument Essay (FRQ 3)",
+      "Synthesis, Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "englang-rhetorical-devices",
+    "importPath": "./extra/englang-rhetorical-devices",
+    "partTitles": [
+      "What Rhetoric Is and Why Devices Matter",
+      "The Three Appeals: Ethos, Pathos, Logos",
+      "Schemes: Devices of Arrangement",
+      "Tropes: Devices of Meaning",
+      "Diction, Tone, and Syntax",
+      "Putting It Together: Analyzing a Passage",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "englit-complex-poetic-analysis",
+    "importPath": "./extra/englit-complex-poetic-analysis",
+    "partTitles": [
+      "From Paraphrase to Interpretation",
+      "Meter & Scansion",
+      "Sound: Rhyme, Alliteration & Sonic Texture",
+      "Figurative Language & Imagery",
+      "Form, Structure & Syntax",
+      "Speaker, Tone & the Ambiguous Poem",
+      "Synthesis: The Full Close Reading & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "englit-essay-writing",
+    "importPath": "./extra/englit-essay-writing",
+    "partTitles": [
+      "The Three Free-Response Essays",
+      "The Defensible Thesis",
+      "Evidence: Quote, Embed, Curate",
+      "Commentary: Where Points Are Won",
+      "The Poetry Essay (Q1)",
+      "Prose (Q2) & Literary Argument (Q3)",
+      "Sophistication, Timing & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "englit-literary-criticism",
+    "importPath": "./extra/englit-literary-criticism",
+    "partTitles": [
+      "What Is a Critical Lens?",
+      "Formalism & New Criticism (Close Reading)",
+      "Historical, Biographical & New Historicist Lenses",
+      "Psychoanalytic & Archetypal Lenses",
+      "Marxist, Feminist & Postcolonial Lenses",
+      "Reader-Response, Structuralism & Deconstruction",
+      "Putting the Lenses to Work & Mastery Check"
+    ]
+  },
+  {
+    "slug": "englit-prose-style-analysis",
+    "importPath": "./extra/englit-prose-style-analysis",
+    "partTitles": [
+      "What Style Is (and Isn't)",
+      "Diction: The Weight of Word Choice",
+      "Syntax: The Architecture of Sentences",
+      "Tone & Imagery: Attitude and the Senses",
+      "Point of View, Voice & Figurative Layers",
+      "Putting It Together: A Full Worked Analysis",
+      "The Prose Essay & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apes-climate-change",
+    "importPath": "./extra/apes-climate-change",
+    "partTitles": [
+      "Weather vs. Climate & the Natural Greenhouse Effect",
+      "The Greenhouse Gases & Global Warming Potential",
+      "Evidence, the Carbon Cycle & Natural Drivers",
+      "Feedback Loops & Tipping Points",
+      "Impacts on Ecosystems, Oceans & People",
+      "Solutions: Mitigation, Adaptation & Policy",
+      "Synthesis, Mixed Practice & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "apes-geology-soil",
+    "importPath": "./extra/apes-geology-soil",
+    "partTitles": [
+      "Earth's Structure & Plate Tectonics",
+      "Weathering: Breaking Down Rock",
+      "Erosion, Deposition & Soil Formation",
+      "The Soil Profile & Horizons",
+      "Soil Texture, Properties & Fertility",
+      "Soil Degradation & Erosion",
+      "Soil Conservation, Management & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apes-ozone-indoor-air",
+    "importPath": "./extra/apes-ozone-indoor-air",
+    "partTitles": [
+      "The Ozone Layer: Earth's UV Shield",
+      "CFCs and the Chemistry of Depletion",
+      "The Antarctic Ozone Hole",
+      "The Montreal Protocol: A Policy Success Story",
+      "Indoor Air Quality: The Pollutants",
+      "Why Indoor Air Builds Up, and How to Fix It",
+      "Synthesis & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apes-solid-hazardous-waste",
+    "importPath": "./extra/apes-solid-hazardous-waste",
+    "partTitles": [
+      "What Is Waste? Streams, Composition & Generation",
+      "Sanitary Landfills",
+      "Incineration & Waste-to-Energy",
+      "The Waste Hierarchy: Reduce, Reuse, Recycle, Compost",
+      "Hazardous Waste, E-Waste & Superfund",
+      "Plastics, Ocean Pollution & Global Waste",
+      "Integrated Management, Economics & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apes-sustainability",
+    "importPath": "./extra/apes-sustainability",
+    "partTitles": [
+      "What Sustainability Means",
+      "Ecological Footprint & Carrying Capacity",
+      "Renewable Energy & the Energy Transition",
+      "Sustainable Agriculture, Forestry & Fisheries",
+      "Waste, the Circular Economy & the 3 R's",
+      "Green Solutions: Buildings, Cities & Efficiency",
+      "Policy, the Commons & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apes-water-pollution",
+    "importPath": "./extra/apes-water-pollution",
+    "partTitles": [
+      "Sources, Categories & the Point/Nonpoint Distinction",
+      "Nutrient Pollution & Eutrophication",
+      "Pathogens, Sewage & Wastewater Treatment",
+      "Toxic Pollution, Bioaccumulation & Biomagnification",
+      "Oil, Plastic, Sediment & Thermal Pollution",
+      "Groundwater & Drinking Water",
+      "Laws, Cleanup & Mastery Check"
+    ]
+  },
+  {
+    "slug": "macro-aggregate-demand-supply",
+    "importPath": "./extra/macro-aggregate-demand-supply",
+    "partTitles": [
+      "The AD–AS Model & the Aggregate Demand Curve",
+      "Shifts in Aggregate Demand",
+      "Short-Run & Long-Run Aggregate Supply",
+      "Equilibrium & Output Gaps",
+      "The Spending Multiplier & AD Shifts",
+      "Shocks, Self-Correction & Policy",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "power-physics",
+    "importPath": "./extra/power-physics",
+    "partTitles": [
+      "What Power Means",
+      "Power From Work: $P = \\dfrac{Fd}{t}$",
+      "Power From Speed: $P = Fv$",
+      "Power and Kinematics",
+      "Efficiency & Wasted Power",
+      "Real-World Power: Units, Horsepower & the Kilowatt-Hour",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "arc-length-and-sector-area",
+    "importPath": "./extra/arc-length-and-sector-area",
+    "partTitles": [
+      "Radians: The Natural Angle",
+      "Arc Length: $s = r\\theta$",
+      "Sector Area: $A = \\tfrac{1}{2}r^2\\theta$",
+      "The Degree Formulas (and the \"Fraction\" Method)",
+      "Angular & Linear Speed",
+      "Applications & Solving Backwards",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "circles-parabolas",
+    "importPath": "./extra/circles-parabolas",
+    "partTitles": [
+      "Distance, Midpoint & the Idea of a Locus",
+      "The Equation of a Circle",
+      "General Form & Completing the Square",
+      "Graphing & Analyzing Circles",
+      "Parabolas: The Focus–Directrix Definition",
+      "Shifted Parabolas & Completing the Square",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "complex-numbers",
+    "importPath": "./extra/complex-numbers",
+    "partTitles": [
+      "The Imaginary Unit & Powers of $i$",
+      "Adding, Subtracting & Multiplying",
+      "Conjugates & Division",
+      "The Complex Plane & Modulus",
+      "Polar (Trigonometric) Form",
+      "Complex Roots of Quadratics",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "degrees-and-radians",
+    "importPath": "./extra/degrees-and-radians",
+    "partTitles": [
+      "Two Ways to Measure an Angle",
+      "Converting Between Units",
+      "The Special Angles",
+      "Coterminal Angles & Standard Position",
+      "Arc Length & Sector Area",
+      "Angular Speed & Real-World Rotation",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "double-half-angle-identities",
+    "importPath": "./extra/double-half-angle-identities",
+    "partTitles": [
+      "Where the Double-Angle Formulas Come From",
+      "Tangent & Evaluating From a Given Ratio",
+      "Reading Double Angles Backwards (Recognition)",
+      "The Half-Angle Formulas",
+      "Power-Reduction Formulas",
+      "Solving Equations & Real Applications",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "ellipses-hyperbolas",
+    "importPath": "./extra/ellipses-hyperbolas",
+    "partTitles": [
+      "Slicing the Cone",
+      "The Standard Equations",
+      "Ellipses: Graphing & Finding Foci",
+      "Hyperbolas: Asymptotes, Vertices & Foci",
+      "Shifted Centers & Completing the Square",
+      "Eccentricity & Real-World Applications",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "function-transformations",
+    "importPath": "./extra/function-transformations",
+    "partTitles": [
+      "Parent Functions & the Big Idea",
+      "Vertical Transformations (the intuitive family)",
+      "Horizontal Transformations (the backwards family)",
+      "Combining Transformations & Order",
+      "Mapping Points & Reading Graphs",
+      "Symmetry & Modeling",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "fundamental-theorem-algebra",
+    "importPath": "./extra/fundamental-theorem-algebra",
+    "partTitles": [
+      "Zeros, Factors & the Connection Between Them",
+      "Core Factoring Techniques",
+      "The Rational Root Theorem",
+      "Synthetic Division & Peeling Off Factors",
+      "The Fundamental Theorem of Algebra",
+      "Complex Conjugate Roots & Building Polynomials",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "logarithmic-functions",
+    "importPath": "./extra/logarithmic-functions",
+    "partTitles": [
+      "Logs as the Inverse of Exponentials",
+      "The Graph, Domain & Asymptote",
+      "The Three Log Properties",
+      "Change of Base",
+      "Solving Exponential & Logarithmic Equations",
+      "Logarithmic Models & Semi-Log Plots",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "matrix-operations",
+    "importPath": "./extra/matrix-operations",
+    "partTitles": [
+      "Matrix Basics: Shape, Entries, and Equality",
+      "Addition, Subtraction, and Scalar Multiplication",
+      "Matrix Multiplication",
+      "The Identity Matrix and Inverses",
+      "Determinants",
+      "Solving Systems with Matrices",
+      "Applications, Mixed Practice & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "parametric-equations",
+    "importPath": "./extra/parametric-equations",
+    "partTitles": [
+      "What Is a Parameter?",
+      "Plotting & Direction of Motion",
+      "Eliminating the Parameter",
+      "Modeling Motion",
+      "Parametrizing Lines & Circles",
+      "Ellipses, Speed & Transformations",
+      "Mixed Practice & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "partial-fraction-decomposition",
+    "importPath": "./extra/partial-fraction-decomposition",
+    "partTitles": [
+      "Why, When, and Getting Ready",
+      "Distinct Linear Factors",
+      "Repeated Linear Factors",
+      "Irreducible Quadratic Factors",
+      "Improper Fractions: Divide First",
+      "Strategy & Full Synthesis",
+      "Mixed Mastery & Exit Quiz"
+    ]
   }
 ]
