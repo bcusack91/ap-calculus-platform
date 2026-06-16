@@ -97,18 +97,7 @@ const allQuestions: ApAfricanAmericanStudiesQuestion[] = [
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular `aas-*` slugs;
 // existing bank uses 5 coarse category slugs. Map each lesson slug to the closest
 // matching category so competitive topic-filtered queries return relevant questions.
-const topicSlugAliases: Record<string, string[]> = {
-  'aas-african-kingdoms': ['aas-african-kingdoms', 'origins-diaspora'],
-  'aas-transatlantic-slave-trade': ['aas-transatlantic-slave-trade', 'origins-diaspora'],
-  'aas-slavery-in-america': ['aas-slavery-in-america', 'origins-diaspora', 'resistance-abolition'],
-  'aas-resistance-abolition': ['aas-resistance-abolition', 'resistance-abolition'],
-  'aas-reconstruction-jim-crow': ['aas-reconstruction-jim-crow', 'resistance-abolition', 'community-society'],
-  'aas-great-migration-harlem': ['aas-great-migration-harlem', 'community-society', 'culture-identity'],
-  'aas-wwi-wwii-era': ['aas-wwi-wwii-era', 'community-society', 'political-struggles'],
-  'aas-civil-rights-movement': ['aas-civil-rights-movement', 'political-struggles'],
-  'aas-black-power-beyond': ['aas-black-power-beyond', 'political-struggles', 'culture-identity'],
-  'aas-contemporary-issues': ['aas-contemporary-issues', 'political-struggles', 'culture-identity', 'community-society'],
-}
+const topicSlugAliases: Record<string, string[]> = {}
 
 export function getApAASQuestions(count: number = 10, topicSlug?: string): ApAfricanAmericanStudiesQuestion[] {
   let pool = allQuestions

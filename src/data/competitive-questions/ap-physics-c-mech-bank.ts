@@ -262,12 +262,7 @@ const allQuestions: ApPhysicsCMechQuestion[] = [
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular slugs;
 // the bank uses coarser category slugs. This routes lesson slugs to the most
 // closely related bank category so competitive mode returns relevant questions.
-const topicSlugAliases: Record<string, string[]> = {
-  'physics-c-1d-kinematics': ['physics-c-position-velocity-acceleration', 'physics-c-variable-acceleration'],
-  'physics-c-2d-kinematics': ['physics-c-position-velocity-acceleration', 'physics-c-circular-motion'],
-  'physics-c-potential-energy-curves': ['physics-c-conservative-forces', 'physics-c-work-power'],
-  'physics-c-variable-mass': ['physics-c-momentum-collisions', 'physics-c-center-of-mass'],
-}
+const topicSlugAliases: Record<string, string[]> = {}
 
 export function getApPhysicsCMechQuestions(count: number = 10, topicSlug?: string): ApPhysicsCMechQuestion[] {
   let pool = allQuestions

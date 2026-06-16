@@ -111,21 +111,7 @@ const allQuestions: ApMicroQuestion[] = [
 
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular `micro-*` slugs;
 // existing bank uses 6 coarse category slugs.
-const topicSlugAliases: Record<string, string[]> = {
-  'micro-scarcity-marginal-analysis': ['basic-concepts'],
-  'micro-supply-demand': ['supply-demand'],
-  'micro-demand-supply-equilibrium': ['supply-demand'],
-  'micro-elasticity': ['elasticity'],
-  'micro-government-intervention': ['supply-demand', 'market-failure'],
-  'micro-production-costs': ['market-structures'],
-  'micro-perfect-competition': ['market-structures'],
-  'micro-monopoly': ['market-structures'],
-  'micro-monopolistic-oligopoly': ['market-structures'],
-  'micro-labor-markets': ['factor-markets'],
-  'micro-factor-markets': ['factor-markets'],
-  'micro-externalities-public-goods': ['market-failure'],
-  'micro-market-failure': ['market-failure'],
-}
+const topicSlugAliases: Record<string, string[]> = {}
 
 export function getApMicroQuestions(count: number = 10, topicSlug?: string): ApMicroQuestion[] {
   let pool = allQuestions

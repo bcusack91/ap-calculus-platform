@@ -23,8 +23,8 @@ async function getVectorQuestions(count?: number, _topicSlug?: string): Promise<
 async function getPolarQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/polar-coordinates-bank'); return m.getPolarQuestions(count ?? 10) }
 async function getApBiologyQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-biology-bank'); return m.getApBiologyQuestions(count ?? 10, topicSlug) }
 async function getApChemistryQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-chemistry-bank'); return m.getApChemistryQuestions(count ?? 10, topicSlug) }
-async function getApPsychologyQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-psychology-bank'); return m.getApPsychologyQuestions(count ?? 10) }
-async function getApStatisticsQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-statistics-bank'); return m.getApStatisticsQuestions(count ?? 10) }
+async function getApPsychologyQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-psychology-bank'); return m.getApPsychologyQuestions(count ?? 10, topicSlug) }
+async function getApStatisticsQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-statistics-bank'); return m.getApStatisticsQuestions(count ?? 10, topicSlug) }
 async function getApPhysics1Questions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-physics1-bank'); return m.getApPhysics1Questions(count ?? 10, topicSlug) }
 async function getSatMathQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-math-bank'); return m.getSatMathQuestions(count ?? 10) }
 async function getSatReadingQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-reading-bank'); return m.getSatReadingQuestions(count ?? 10) }
@@ -164,369 +164,7 @@ function formatCoordinate(x: number, y: number): string {
  * topicSlug. When a 1-to-1 mapping doesn't exist (e.g. a lesson that spans
  * several bank topics), use COURSE_GROUPING_LESSONS instead.
  */
-const LESSON_TO_BANK_TOPIC: Record<string, string> = {
-  // ---- AP Calculus AB (lesson slug → bank topic slug in ap-calculus-bank.ts)
-  'accumulation-functions-calcab': 'accumulation-functions',
-  'antiderivatives-indefinite-integrals-calcab': 'antiderivatives-indefinite-integrals',
-  'area-between-curves-calcab': 'area-between-curves',
-  'basic-differentiation-rules-calcab': 'basic-differentiation-rules',
-  'chain-rule-calcab': 'chain-rule',
-  'constant-multiple-sum-rules': 'basic-differentiation-rules',
-  'definite-integrals-calcab': 'fundamental-theorem-of-calculus',
-  'definition-of-derivative-calcab': 'definition-of-derivative',
-  'derivative-as-rate-of-change': 'definition-of-derivative',
-  'derivative-as-slope': 'definition-of-derivative',
-  'derivative-notation': 'definition-of-derivative',
-  'derivatives-of-exponential-functions': 'basic-differentiation-rules',
-  'derivatives-of-logarithmic-functions': 'basic-differentiation-rules',
-  'derivatives-of-trig-functions': 'basic-differentiation-rules',
-  'differential-equations-calcab': 'differential-equations-slope-fields',
-  'evaluating-limits-algebraically': 'limits-algebraically',
-  'evaluating-limits-graphically': 'limits-graphically',
-  'exponential-models-calcab': 'differential-equations-slope-fields',
-  'higher-order-derivatives': 'basic-differentiation-rules',
-  'indeterminate-forms-factoring': 'limits-algebraically',
-  'introduction-to-limits': 'limits-graphically',
-  'inverse-functions-derivatives-calcab': 'implicit-differentiation',
-  'limits-continuity-calcab': 'continuity-and-ivt',
-  'linearization-differentials-calcab': 'linearization-differentials',
-  'logarithmic-differentiation-technique': 'implicit-differentiation',
-  'one-sided-limits': 'limits-graphically',
-  'optimization-calcab': 'optimization',
-  'particle-motion-calcab': 'particle-motion',
-  'power-rule-basics': 'basic-differentiation-rules',
-  'product-rule': 'product-quotient-rules',
-  'quotient-rule': 'product-quotient-rules',
-  'rationalizing-techniques': 'limits-algebraically',
-  'tables-data-calcab': 'riemann-sums',
-  'theorem-applications-calcab': 'mean-value-theorem',
-  'u-substitution-calcab': 'integration-by-substitution',
-  'volumes-of-revolution-calcab': 'volumes-of-revolution',
-  'what-is-a-derivative': 'definition-of-derivative',
-  // ---- AP Calculus AB additional lesson slugs (limits unit + extras)
-  'what-is-a-limit': 'limits-graphically',
-  'estimating-limits-tables': 'limits-graphically',
-  'estimating-limits-graphs': 'limits-graphically',
-  'direct-substitution-method': 'limits-algebraically',
-  'factoring-method-limits': 'limits-algebraically',
-  'rationalizing-technique-limits': 'limits-algebraically',
-  'limits-at-infinity': 'limits-algebraically',
-  'infinite-limits-vertical-asymptotes': 'limits-algebraically',
-  'continuity-introduction': 'continuity-and-ivt',
-  'types-of-discontinuity': 'continuity-and-ivt',
-  'continuity-ivt-calcab': 'continuity-and-ivt',
-  'derivatives-exp-log-calcab': 'basic-differentiation-rules',
-  'implicit-differentiation-calcab': 'implicit-differentiation',
-  'concavity-inflection-points-calcab': 'curve-sketching',
-  'second-derivative-test': 'curve-sketching',
-  'second-derivative-test-calcab': 'curve-sketching',
-  'related-rates-calcab': 'related-rates',
-  'limits-at-infinity-calcab': 'limits-algebraically',
-  // ---- AP Calculus AB DB topic slugs (Applications of Derivatives unit)
-  // These curriculum slugs don't match any bank topicSlug verbatim, so without
-  // aliasing they fall through every router and hit the cumulative-MCQ bucket
-  // (which mixes physics, algebra 2, parametric, polar, etc. — totally
-  // off-topic). Map each to the closest AP Calc AB bank topic.
-  'critical-points-and-extrema': 'extreme-value-theorem',
-  'absolute-extrema': 'extreme-value-theorem',
-  'first-derivative-test': 'curve-sketching',
-  'optimization-problems': 'optimization',
-  'linear-approximation': 'linearization-differentials',
-  'newtons-method': 'linearization-differentials',
-  'lhopitals-rule': 'l-hopitals-rule',
-  // ---- AP Calculus AB DB topic slugs (Integration unit)
-  'antiderivatives-intro': 'antiderivatives-indefinite-integrals',
-  'indefinite-integrals': 'antiderivatives-indefinite-integrals',
-  'definite-integrals': 'fundamental-theorem-of-calculus',
-  'u-substitution': 'integration-by-substitution',
-  'volumes-disk-method': 'volumes-of-revolution',
-  'volumes-washer-method': 'volumes-of-revolution',
-  'volumes-shell-method': 'volumes-of-revolution',
-  // BC-flavored integration techniques that may appear in AB content trees;
-  // route to the closest AB-scope bank topic so questions stay relevant.
-  'integration-by-parts': 'antiderivatives-indefinite-integrals',
-  'partial-fractions': 'antiderivatives-indefinite-integrals',
-  'trig-substitution': 'integration-by-substitution',
-  // ---- AP Calculus AB DB topic slugs (Limits unit, additional)
-  'limit-notation-terminology': 'limits-graphically',
-  'one-sided-limits-in-detail': 'limits-graphically',
-  // Legacy "Calculus" course lesson slugs (pre-AP Calc AB course rebrand)
-  'power-rule': 'basic-differentiation-rules',
-
-  // ---- AP Precalculus (lesson slug → bank topic slug in precalc-bank.ts)
-  'polynomial-functions-precalc': 'polynomial-functions-end-behavior',
-  'rational-functions-precalc': 'rational-functions-asymptotes',
-  'exponential-functions-precalc': 'exponential-functions-growth-decay',
-  'logarithmic-functions-precalc': 'logarithmic-functions-properties',
-  'function-composition-inverses-precalc': 'composite-functions',
-  'transformations-precalc': 'transformations-of-functions',
-  'trigonometric-functions-precalc': 'trigonometric-ratios-unit-circle',
-  'trigonometric-identities-precalc': 'trig-identities-pythagorean',
-  'inverse-trig-functions-precalc': 'inverse-trig-functions',
-  'law-of-sines-cosines-precalc': 'law-of-sines-and-cosines',
-  'polar-coordinates-precalc': 'polar-coordinates-graphs',
-  'vectors-two-dimensions-precalc': 'vectors-in-two-dimensions',
-  'matrices-precalc': 'matrices-and-determinants',
-  'sequences-series-precalc': 'sequences-and-series',
-  'parametric-equations-precalc': 'parametric-equations-motion',
-  // Precalc lessons without an exact 1-to-1 bank topic — route to closest
-  // related bank topic so questions stay on-subject.
-  'conic-sections-precalc': 'polynomial-functions-end-behavior',
-  'limits-introduction-precalc': 'rates-of-change',
-  'rates-of-change-precalc': 'rates-of-change',
-  'systems-of-equations-precalc': 'systems-of-equations-matrices',
-  'continuity-precalc': 'rates-of-change',
-
-  // ---- AP Physics C: Mechanics
-  'physics-c-1d-kinematics': 'physics-c-position-velocity-acceleration',
-  'physics-c-2d-kinematics': 'physics-c-position-velocity-acceleration',
-  'physics-c-potential-energy-curves': 'physics-c-conservative-forces',
-  'physics-c-variable-mass': 'physics-c-momentum-collisions',
-
-  // ---- AP Physics C: E&M
-  'physics-c-coulomb-law': 'physics-c-electric-field-coulomb',
-  'physics-c-electric-fields': 'physics-c-electric-field-coulomb',
-  'physics-c-conductors-equilibrium': 'physics-c-gauss-law',
-  'physics-c-potential-energy': 'physics-c-electric-potential',
-  'physics-c-capacitors': 'physics-c-capacitors-dielectrics',
-  'physics-c-dielectrics': 'physics-c-capacitors-dielectrics',
-  'physics-c-energy-density': 'physics-c-capacitors-dielectrics',
-  'physics-c-power-circuits': 'physics-c-dc-circuits',
-  'physics-c-faraday-induction': 'physics-c-faraday-lenz',
-  'physics-c-inductance-rl': 'physics-c-inductance-rl-circuits',
-
-  // ---- AP Biology (lesson slug → bank topic in ap-biology-bank.ts)
-  'ap-bio-chemistry-of-life': 'water-biological-macromolecules',
-  'ap-bio-cell-structure-function': 'cell-structure-organelles',
-  'ap-bio-membrane-transport': 'cell-membrane-transport',
-  'ap-bio-cell-cycle-mitosis': 'cell-cycle-mitosis',
-  'ap-bio-cell-communication': 'signal-transduction',
-  'ap-bio-cellular-energetics': 'cellular-respiration',
-  'ap-bio-photosynthesis': 'photosynthesis',
-  'ap-bio-meiosis': 'meiosis-genetic-diversity',
-  'ap-bio-mendelian-genetics': 'mendelian-genetics',
-  'ap-bio-molecular-genetics': 'dna-structure-replication',
-  'ap-bio-gene-regulation': 'gene-regulation',
-  'ap-bio-natural-selection': 'natural-selection-evolution',
-  'ap-bio-ecology-energy-flow': 'ecology-ecosystems',
-  'ap-bio-population-ecology': 'ecology-ecosystems',
-  'ap-bio-immune-system': 'signal-transduction',
-  'ap-bio-biotechnology': 'biotechnology',
-  'ap-bio-experimental-design': 'biotechnology',
-  'ap-bio-evolution-evidence': 'natural-selection-evolution',
-  'ap-bio-ecology-interactions': 'ecology-ecosystems',
-  'ap-bio-hardy-weinberg': 'hardy-weinberg-population-genetics',
-  'ap-bio-phylogenetics': 'speciation',
-  'ap-bio-dna-technology': 'biotechnology',
-  'ap-bio-viral-biology': 'dna-structure-replication',
-  'ap-bio-nervous-system': 'signal-transduction',
-  'ap-bio-endocrine-system': 'signal-transduction',
-  'ap-bio-animal-behavior': 'ecology-ecosystems',
-  'ap-bio-chromosomal-inheritance': 'mendelian-genetics',
-  'ap-bio-origins-of-life': 'natural-selection-evolution',
-  'ap-bio-biodiversity': 'ecology-ecosystems',
-  'ap-bio-biogeochemical-cycles': 'ecology-ecosystems',
-  'ap-bio-plant-structure': 'ecology-ecosystems',
-
-  // ---- AP US History (lesson slug → bank era)
-  'apush-native-societies-exploration': 'colonial-america',
-  'apush-colonial-america': 'colonial-america',
-  'apush-colonial-society-conflicts': 'colonial-america',
-  'apush-revolution-independence': 'revolution-independence',
-  'apush-constitution-early-republic': 'revolution-independence',
-  'apush-democracy-expansion': 'civil-war',
-  'apush-reform-movements': 'civil-war',
-  'apush-civil-war': 'civil-war',
-  'apush-reconstruction': 'reconstruction',
-  'apush-gilded-age': 'reconstruction',
-  'apush-progressivism-wwi': 'reconstruction',
-  'apush-depression-wwii': 'reconstruction',
-
-  // ---- AP US Government
-  'gov-constitutional-foundations': 'constitutional-foundations',
-  'gov-federalism': 'federalism',
-  'gov-separation-of-powers': 'constitutional-foundations',
-  'gov-congress': 'constitutional-foundations',
-  'gov-presidency': 'constitutional-foundations',
-  'gov-judiciary': 'constitutional-foundations',
-  'gov-bureaucracy': 'federalism',
-  'gov-civil-liberties': 'civil-liberties',
-  'gov-civil-rights': 'civil-liberties',
-  'gov-ideologies': 'voting-elections',
-  'gov-public-opinion': 'voting-elections',
-  'gov-voting-elections': 'voting-elections',
-  'gov-parties-interest-groups': 'voting-elections',
-  'gov-media-technology': 'voting-elections',
-
-  // ---- AP World History (lesson slug → bank category)
-  'wh-global-tapestry': 'global-tapestry',
-  'wh-dar-al-islam': 'global-tapestry',
-  'wh-silk-roads-mongols': 'silk-roads-mongols',
-  'wh-indian-ocean-trade': 'silk-roads-mongols',
-  'wh-americas-africa-1200': 'global-tapestry',
-  'wh-land-based-empires': 'silk-roads-mongols',
-  'wh-islamic-empires': 'silk-roads-mongols',
-  'wh-east-asian-empires': 'silk-roads-mongols',
-  'wh-exploration-columbian-exchange': 'exploration-columbian-exchange',
-  'wh-maritime-empires-labor': 'exploration-columbian-exchange',
-  'wh-transoceanic': 'exploration-columbian-exchange',
-  'wh-enlightenment-political-revolutions': 'industrial-revolution',
-  'wh-revolutions': 'industrial-revolution',
-  'wh-industrial-revolution': 'industrial-revolution',
-  'wh-imperialism': 'industrial-revolution',
-  'wh-consequences-industrialization': 'industrial-revolution',
-  'wh-reform-migration': 'industrial-revolution',
-
-  // ---- AP Human Geography
-  'hg-intro-geography': 'intro-geography',
-  'hg-spatial-concepts': 'intro-geography',
-  'hg-population-growth': 'population-distribution',
-  'hg-migration': 'migration',
-  'hg-population-distribution': 'population-distribution',
-  'hg-culture-diffusion': 'culture-diffusion',
-  'hg-language-religion': 'culture-diffusion',
-  'hg-ethnicity-identity': 'culture-diffusion',
-  'hg-political-geography': 'political-geography',
-  'hg-political-power': 'political-geography',
-  'hg-agricultural-origins': 'urbanization',
-  'hg-agricultural-practices': 'urbanization',
-  'hg-urbanization': 'urbanization',
-  'hg-urban-challenges': 'urbanization',
-  'hg-globalization-trade': 'urbanization',
-  'hg-industrialization': 'urbanization',
-
-  // ---- AP Environmental Science
-  'enviro-earth-systems': 'ecosystems',
-  'enviro-plate-tectonics': 'ecosystems',
-  'enviro-rock-cycle': 'ecosystems',
-  'enviro-soil': 'ecosystems',
-  'enviro-atmosphere': 'climate-change',
-  'enviro-biodiversity': 'ecosystems',
-  'enviro-ecosystem-ecology': 'ecosystems',
-  'enviro-island-biogeography': 'ecosystems',
-  'enviro-biodiversity-loss': 'sustainability',
-  'enviro-invasive-species': 'sustainability',
-  'enviro-population-ecology': 'ecosystems',
-  'enviro-population-dynamics': 'ecosystems',
-  'enviro-human-population': 'sustainability',
-  'enviro-agriculture': 'sustainability',
-  'enviro-forestry': 'sustainability',
-  'enviro-water-resources': 'sustainability',
-  'enviro-water-pollution': 'pollution',
-  'enviro-fossil-fuels': 'energy',
-  'enviro-nuclear-energy': 'energy',
-  'enviro-renewable-energy': 'energy',
-  'enviro-energy-conservation': 'energy',
-  'enviro-climate-change': 'climate-change',
-  'enviro-ozone-depletion': 'pollution',
-  'enviro-toxicology': 'pollution',
-  'enviro-environmental-law': 'sustainability',
-
-  // ---- AP English Language
-  'englang-intro-rhetoric': 'rhetorical-analysis',
-  'englang-rhetorical-situation': 'rhetorical-analysis',
-  'englang-rhetorical-situation-writing': 'rhetorical-analysis',
-  'englang-claims-evidence': 'argument-writing',
-  'englang-claims-evidence-reading': 'rhetorical-analysis',
-  'englang-claims-evidence-writing': 'argument-writing',
-  'englang-reasoning-org-reading': 'rhetorical-analysis',
-  'englang-reasoning-org-writing': 'argument-writing',
-  'englang-argument-structure': 'argument-writing',
-  'englang-diction-syntax': 'style-syntax',
-  'englang-style-reading': 'style-syntax',
-  'englang-style-writing': 'style-syntax',
-  'englang-tone-voice-analysis': 'style-syntax',
-  'englang-ethos-pathos-logos': 'rhetorical-analysis',
-  'englang-logical-fallacies': 'argument-writing',
-  'englang-synthesis': 'argument-writing',
-  'englang-synthesis-essay': 'argument-writing',
-  'englang-developing-arguments': 'argument-writing',
-  'englang-writing-for-audience': 'argument-writing',
-
-  // ---- AP English Literature
-  'englit-short-fiction-1': 'narrative-technique',
-  'englit-short-fiction-2': 'narrative-technique',
-  'englit-short-fiction-3': 'narrative-technique',
-  'englit-poetry-1': 'poetry-analysis',
-  'englit-poetic-structure-form': 'poetry-analysis',
-  'englit-sound-devices': 'poetry-analysis',
-  'englit-poetry-2': 'poetry-analysis',
-  'englit-longer-fiction': 'narrative-technique',
-  'englit-dramatic-structure': 'narrative-technique',
-  'englit-longer-fiction-2': 'narrative-technique',
-  'englit-character-setting': 'character-analysis',
-  'englit-narration-pov': 'narrative-technique',
-  'englit-narrative-complexity': 'narrative-technique',
-  'englit-narrative-perspective': 'narrative-technique',
-  'englit-figurative-language': 'figurative-language',
-  'englit-tone-speaker': 'figurative-language',
-  'englit-symbol-motif-fiction': 'figurative-language',
-  'englit-plot-conflict-theme': 'character-analysis',
-  'englit-social-commentary-drama': 'character-analysis',
-
-  // ---- AP Microeconomics
-  'micro-scarcity-marginal-analysis': 'basic-concepts',
-  'micro-supply-demand': 'supply-demand',
-  'micro-demand-supply-equilibrium': 'supply-demand',
-  'micro-elasticity': 'elasticity',
-  'micro-government-intervention': 'market-failure',
-  'micro-production-costs': 'market-structures',
-  'micro-perfect-competition': 'market-structures',
-  'micro-monopoly': 'market-structures',
-  'micro-monopolistic-oligopoly': 'market-structures',
-  'micro-labor-markets': 'factor-markets',
-  'micro-factor-markets': 'factor-markets',
-  'micro-externalities-public-goods': 'market-failure',
-  'micro-market-failure': 'market-failure',
-
-  // ---- AP Macroeconomics
-  'macro-scarcity-opportunity-cost': 'gdp-growth',
-  'macro-comparative-advantage': 'gdp-growth',
-  'macro-gdp-growth': 'gdp-growth',
-  'macro-unemployment-inflation': 'gdp-growth',
-  'macro-ad-as': 'ad-as',
-  'macro-multiplier-effect': 'fiscal-policy',
-  'macro-phillips-curve': 'ad-as',
-  'macro-money-banking': 'monetary-policy',
-  'macro-monetary-policy': 'monetary-policy',
-  'macro-fiscal-policy': 'fiscal-policy',
-  'macro-fiscal-policy-tools': 'fiscal-policy',
-  'macro-open-economy': 'monetary-policy',
-  'macro-international-trade-finance': 'monetary-policy',
-
-  // ---- AP African American Studies
-  'aas-african-kingdoms': 'origins-diaspora',
-  'aas-transatlantic-slave-trade': 'origins-diaspora',
-  'aas-slavery-in-america': 'resistance-abolition',
-  'aas-resistance-abolition': 'resistance-abolition',
-  'aas-reconstruction-jim-crow': 'resistance-abolition',
-  'aas-great-migration-harlem': 'community-society',
-  'aas-wwi-wwii-era': 'community-society',
-  'aas-civil-rights-movement': 'political-struggles',
-  'aas-black-power-beyond': 'political-struggles',
-  'aas-contemporary-issues': 'culture-identity',
-
-  // ---- AP Computer Science Principles (course topic slug → generic bank topic slug)
-  // The ap-csp-bank uses 6 broad topicSlugs (algorithms, cybersecurity,
-  // digital-information, impact, internet, programming) while the curriculum
-  // exposes 15 fine-grained topics. Map each fine-grained topic to the most
-  // relevant bank slug so competitive mode returns questions instead of empty.
-  'csp-creative-development': 'programming',
-  'csp-collaboration-development': 'programming',
-  'csp-data': 'digital-information',
-  'csp-binary-data': 'digital-information',
-  'csp-data-compression-analysis': 'digital-information',
-  'csp-algorithms': 'algorithms',
-  'csp-algorithms-programming': 'algorithms',
-  'csp-procedures-lists': 'programming',
-  'csp-variables-control': 'programming',
-  'csp-computing-systems-networks': 'internet',
-  'csp-internet-protocols': 'internet',
-  'csp-fault-tolerance-security': 'cybersecurity',
-  'csp-safe-computing': 'cybersecurity',
-  'csp-impact-of-computing': 'impact',
-  'csp-social-ethical-impacts': 'impact',
-}
+const LESSON_TO_BANK_TOPIC: Record<string, string> = {}
 
 /**
  * Lesson slug → course bank dispatch key. Used by the generic per-course
@@ -899,14 +537,68 @@ const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc
   'calcbc-sequences-series': 'ap-calculus-bc',
 }
 
+// Every AP competitive bank getter. Each one filters by the question's canonical
+// topicSlug — the same slug the curriculum DB / competitive topic filter uses —
+// so a selected topic resolves to exactly that topic's questions.
+type ApBankGetter = (count: number, topicSlug?: string) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>
+const AP_BANK_GETTERS: ApBankGetter[] = [
+  getApBiologyQuestions, getApChemistryQuestions, getApPhysics1Questions, getApPhysics2Questions,
+  getApPhysicsCMechQuestions, getApPhysicsCEMQuestions, getApCalculusQuestions, getApCalculusBCQuestions,
+  getApStatisticsQuestions, getApPsychologyQuestions, getApUSGovQuestions, getApUSHistoryQuestions,
+  getApWorldHistoryQuestions, getApHumanGeoQuestions, getApMacroQuestions, getApMicroQuestions,
+  getApAPESQuestions, getApEngLangQuestions, getApEngLitQuestions, getApAASQuestions,
+  getApCSPQuestions, getApCSAQuestions,
+]
+
+// Lazy, cached map: canonical topic slug -> the AP bank getter that owns it.
+// Built once by scanning every AP bank, so any AP topic routes to its bank
+// without per-course alias tables (bank slugs ARE the canonical curriculum slugs).
+let _apSlugToGetter: Map<string, ApBankGetter> | null = null
+async function getApSlugToGetter(): Promise<Map<string, ApBankGetter>> {
+  if (_apSlugToGetter) return _apSlugToGetter
+  const map = new Map<string, ApBankGetter>()
+  for (const fn of AP_BANK_GETTERS) {
+    try {
+      const qs = await fn(1_000_000)
+      for (const q of qs) if (q.topicSlug && !map.has(q.topicSlug)) map.set(q.topicSlug, fn)
+    } catch { /* skip a bank that fails to load */ }
+  }
+  _apSlugToGetter = map
+  return map
+}
+
 export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): Promise<MatchQuestion[]> {
-  // Resolve a possibly-aliased lesson slug into an actual bank topic slug.
-  // Lesson slugs (from the curriculum DB) often differ from competitive bank
-  // topic slugs (e.g. lesson `linearization-differentials-calcab` → bank
-  // topic `linearization-differentials`). Without aliasing, those slugs would
-  // miss every routing branch and historically fell through to a unit-circle
-  // click-the-angle drill (the source of irrelevant unit-circle questions in
-  // AP Calc competitive mode).
+  // Generic AP per-topic routing (runs first): if the selected slug is a
+  // canonical topic of any AP bank, return exactly that topic's questions. This
+  // covers every AP course uniformly. Course-level grouping slugs (whole-unit /
+  // exam-prep buckets) are NOT per-question topics, so they fall through to the
+  // grouping logic below.
+  if (topicSlug) {
+    const apMap = await getApSlugToGetter()
+    const apGetter = apMap.get(topicSlug)
+    if (apGetter) {
+      const filtered = await apGetter(totalQuestions, topicSlug)
+      if (filtered.length > 0 && filtered.every(q => q.topicSlug === topicSlug)) {
+        return filtered.map((q, i) => {
+          const shuffled = shuffleOptions(q)
+          return {
+            id: i,
+            question: q.question as string,
+            options: shuffled.options,
+            correctAnswer: shuffled.correctAnswer,
+            answerIndex: shuffled.answerIndex,
+            explanation: q.explanation as string,
+            difficulty: q.difficulty,
+            type: 'multiple-choice',
+          } as MatchQuestion
+        })
+      }
+    }
+  }
+
+  // (Legacy) resolve a possibly-aliased lesson slug into a bank topic slug.
+  // LESSON_TO_BANK_TOPIC is now empty (identity) since bank slugs are canonical;
+  // kept for the non-AP branches below.
   const resolvedTopicSlug = topicSlug ? (LESSON_TO_BANK_TOPIC[topicSlug] ?? topicSlug) : topicSlug
   // Course-grouping lesson slugs (units/exam-prep buckets) should sample
   // randomly from the entire course bank instead of strict-filtering.

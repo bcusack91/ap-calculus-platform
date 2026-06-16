@@ -233,18 +233,7 @@ const allQuestions: ApPhysicsCEMQuestion[] = [
 ]
 
 // Lesson-slug → bank-slug alias map (granular lesson slugs → coarse bank slugs).
-const topicSlugAliases: Record<string, string[]> = {
-  'physics-c-coulomb-law': ['physics-c-electric-field-coulomb'],
-  'physics-c-electric-fields': ['physics-c-electric-field-coulomb', 'physics-c-gauss-law'],
-  'physics-c-conductors-equilibrium': ['physics-c-gauss-law', 'physics-c-electric-field-coulomb'],
-  'physics-c-potential-energy': ['physics-c-electric-potential'],
-  'physics-c-capacitors': ['physics-c-capacitors-dielectrics'],
-  'physics-c-dielectrics': ['physics-c-capacitors-dielectrics'],
-  'physics-c-energy-density': ['physics-c-capacitors-dielectrics'],
-  'physics-c-power-circuits': ['physics-c-dc-circuits'],
-  'physics-c-faraday-induction': ['physics-c-faraday-lenz'],
-  'physics-c-inductance-rl': ['physics-c-inductance-rl-circuits'],
-}
+const topicSlugAliases: Record<string, string[]> = {}
 
 export function getApPhysicsCEMQuestions(count: number = 10, topicSlug?: string): ApPhysicsCEMQuestion[] {
   let pool = allQuestions

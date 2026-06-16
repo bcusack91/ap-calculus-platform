@@ -87,22 +87,7 @@ const allQuestions: ApMacroQuestion[] = [
 
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular `macro-*` slugs;
 // existing bank uses 4 coarse category slugs.
-const topicSlugAliases: Record<string, string[]> = {
-  'macro-scarcity-opportunity-cost': ['gdp-growth'],
-  'macro-comparative-advantage': ['gdp-growth'],
-  'macro-gdp-growth': ['gdp-growth'],
-  'macro-unemployment-inflation': ['gdp-growth'],
-  'macro-ad-as': ['ad-as'],
-  'macro-aggregate-demand-supply': ['ad-as'],
-  'macro-multiplier-effect': ['ad-as', 'fiscal-policy'],
-  'macro-phillips-curve': ['ad-as'],
-  'macro-money-banking': ['monetary-policy'],
-  'macro-monetary-policy': ['monetary-policy'],
-  'macro-fiscal-policy': ['fiscal-policy'],
-  'macro-fiscal-policy-tools': ['fiscal-policy'],
-  'macro-open-economy': ['monetary-policy', 'gdp-growth'],
-  'macro-international-trade-finance': ['monetary-policy', 'gdp-growth'],
-}
+const topicSlugAliases: Record<string, string[]> = {}
 
 export function getApMacroQuestions(count: number = 10, topicSlug?: string): ApMacroQuestion[] {
   let pool = allQuestions

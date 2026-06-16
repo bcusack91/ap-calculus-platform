@@ -97,20 +97,7 @@ const allQuestions: ApUsHistoryQuestion[] = [
 
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular `apush-*` slugs;
 // existing bank uses 4 coarse era slugs. Map lesson slugs to nearest era category.
-const topicSlugAliases: Record<string, string[]> = {
-  'apush-native-societies-exploration': ['colonial-america'],
-  'apush-colonial-america': ['colonial-america'],
-  'apush-colonial-society-conflicts': ['colonial-america', 'revolution-independence'],
-  'apush-revolution-independence': ['revolution-independence'],
-  'apush-constitution-early-republic': ['revolution-independence'],
-  'apush-democracy-expansion': ['revolution-independence', 'civil-war'],
-  'apush-reform-movements': ['civil-war', 'revolution-independence'],
-  'apush-civil-war': ['civil-war'],
-  'apush-reconstruction': ['reconstruction'],
-  'apush-gilded-age': ['reconstruction'],
-  'apush-progressivism-wwi': ['reconstruction'],
-  'apush-depression-wwii': ['reconstruction'],
-}
+const topicSlugAliases: Record<string, string[]> = {}
 
 export function getApUSHistoryQuestions(count: number = 10, topicSlug?: string): ApUsHistoryQuestion[] {
   let pool = allQuestions
