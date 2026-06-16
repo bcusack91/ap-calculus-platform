@@ -309,12 +309,14 @@ To multiply $(a + bi)(c + di)$, distribute as usual, then use $i^2 = -1$.
 
 ### Worked Example: $(2 + 3i)(4 + 5i)$
 
-$$\\begin{aligned}
+$$
+\\begin{aligned}
 (2 + 3i)(4 + 5i) &= 8 + 10i + 12i + 15i^2 \\\\
 &= 8 + 22i + 15(-1) \\\\
 &= 8 + 22i - 15 \\\\
 &= -7 + 22i
-\\end{aligned}$$
+\\end{aligned}
+$$
 
 > ⚠️ **Don't forget $i^2 = -1$.** The $15i^2$ term becomes the *real* number $-15$, which changes the real part. Leaving it as $+15$ is the #1 multiplication error.`,
       },

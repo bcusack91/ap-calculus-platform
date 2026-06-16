@@ -330,12 +330,14 @@ Multiply just like binomials (FOIL), then replace $i^2$ with $-1$.
 
 ### Example: $(2 + 3i)(4 + 5i)$
 
-$$\\begin{aligned}
+$$
+\\begin{aligned}
 (2+3i)(4+5i) &= 8 + 10i + 12i + 15i^2 \\\\
 &= 8 + 22i + 15(-1) \\\\
 &= 8 + 22i - 15 \\\\
 &= -7 + 22i
-\\end{aligned}$$
+\\end{aligned}
+$$
 
 ### Example: A Single Imaginary Times Itself
 

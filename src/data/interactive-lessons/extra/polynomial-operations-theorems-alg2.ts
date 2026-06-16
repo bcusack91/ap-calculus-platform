@@ -229,10 +229,12 @@ Long division works just like with numbers: **divide, multiply, subtract, bring 
 
 ### Worked Example: $(2x^2 + 5x - 3) \\div (x + 3)$
 
-$$\\begin{array}{r}
+$$
+\\begin{array}{r}
 2x \\;-\\; 1 \\phantom{)} \\\\
 x+3 \\,\\overline{\\smash{)}\\,2x^2 + 5x - 3} \\\\
-\\end{array}$$
+\\end{array}
+$$
 
 **Step by step:**
 1. $2x^2 \\div x = 2x$. Multiply: $2x(x+3) = 2x^2 + 6x$. Subtract: $(2x^2 + 5x) - (2x^2 + 6x) = -x$.
@@ -274,12 +276,14 @@ When the divisor is **linear of the form $(x - c)$**, synthetic division is fast
 
 The divisor $(x-1)$ gives $c = 1$. Bring down, multiply by $1$, add — repeat:
 
-$$\\begin{array}{c|cccc}
+$$
+\\begin{array}{c|cccc}
 1 & 1 & -4 & 5 & -2 \\\\
   &   & 1 & -3 & 2 \\\\
 \\hline
   & 1 & -3 & 2 & 0
-\\end{array}$$
+\\end{array}
+$$
 
 Read the bottom row: quotient $x^2 - 3x + 2$, remainder $\\mathbf{0}$.
 
@@ -503,12 +507,14 @@ $$\\pm 1,\\; \\pm 2,\\; \\pm 3,\\; \\pm 4,\\; \\pm 6,\\; \\pm 12,\\; \\pm \\tfra
 
 **Step 3 — Divide it out (synthetic, $c = -1$).**
 
-$$\\begin{array}{c|cccc}
+$$
+\\begin{array}{c|cccc}
 -1 & 1 & -4 & 1 & 6 \\\\
    &   & -1 & 5 & -6 \\\\
 \\hline
    & 1 & -5 & 6 & 0
-\\end{array}$$
+\\end{array}
+$$
 
 Quotient: $x^2 - 5x + 6$.
 

@@ -10,14 +10,16 @@ export const calcbcTaylorPart3Data = {
 
 ### The Big Six (Must Memorize)
 
-$$\\boxed{\\begin{aligned}
+$$
+\\boxed{\\begin{aligned}
 \\frac{1}{1-x} &= \\sum_{n=0}^\\infty x^n, \\quad |x| < 1 \\\\
 e^x &= \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\text{all } x \\\\
 \\sin x &= \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}, \\quad \\text{all } x \\\\
 \\cos x &= \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n}}{(2n)!}, \\quad \\text{all } x \\\\
 \\ln(1+x) &= \\sum_{n=1}^\\infty \\frac{(-1)^{n+1} x^n}{n}, \\quad -1 < x \\le 1 \\\\
 \\arctan x &= \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}, \\quad -1 \\le x \\le 1
-\\end{aligned}}$$
+\\end{aligned}}
+$$
 
 ### Manipulation Toolkit
 

@@ -167,10 +167,12 @@ Write out the terms and add them.
 
 Legend says young Gauss added $1 + 2 + \\cdots + 100$ in seconds. The trick: **pair the ends.**
 
-$$\\begin{aligned}
+$$
+\\begin{aligned}
 S &= 1 + 2 + 3 + \\cdots + 98 + 99 + 100 \\\\
 S &= 100 + 99 + 98 + \\cdots + 3 + 2 + 1
-\\end{aligned}$$
+\\end{aligned}
+$$
 
 Add the two lines term by term — every pair sums to $101$, and there are $100$ pairs:
 
@@ -292,10 +294,12 @@ $$S_n = a_1 \\cdot \\frac{1 - r^{\\,n}}{1 - r}$$
 
 **Where it comes from** (the shift-and-subtract trick):
 
-$$\\begin{aligned}
+$$
+\\begin{aligned}
 S_n &= a_1 + a_1 r + a_1 r^2 + \\cdots + a_1 r^{n-1} \\\\
 r\\,S_n &= \\qquad\\; a_1 r + a_1 r^2 + \\cdots + a_1 r^{n-1} + a_1 r^{\\,n}
-\\end{aligned}$$
+\\end{aligned}
+$$
 
 Subtract the second line from the first — almost everything cancels:
 
