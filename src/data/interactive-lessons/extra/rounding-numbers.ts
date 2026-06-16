@@ -48,7 +48,7 @@ We round when we want a **quick estimate** instead of an exact count:
 | Exact number | Rounded (about) | Why round? |
 |--------------|-----------------|------------|
 | $287$ students | $300$ | Easier to remember |
-| $\\$4{,}812$ price | $\\$5{,}000$ | Quick "ballpark" cost |
+| \\$4,812 price | \\$5,000 | Quick "ballpark" cost |
 | $58$ minutes | $60$ (one hour) | Simpler to plan with |
 
 The rounded number isn't *exactly* right — but it's **close**, and close is often all you need.`,
@@ -488,18 +488,18 @@ Rounding isn't just for tests — people use it every day to **estimate** quickl
 | Situation | Exact | Rounded estimate |
 |-----------|-------|------------------|
 | Crowd at a game | $4{,}187$ fans | "about $4{,}000$" (nearest thousand) |
-| Money saved | $\\$68$ | "about $\\$70$" (nearest ten) |
+| Money saved | \\$68 | "about \\$70" (nearest ten) |
 | Pages in a book | $312$ pages | "about $300$" (nearest hundred) |
 | Steps walked | $9{,}640$ steps | "about $10{,}000$" (nearest thousand) |
 
-> 💡 **Estimating to check answers:** Suppose you add $\\$397 + \\$205$ and get $\\$602$. Round first: $\\$400 + \\$200 = \\$600$. Since $\\$600$ is close to $\\$602$, your answer looks **reasonable!** Rounding is a great way to catch big mistakes.`,
+> 💡 **Estimating to check answers:** Suppose you add \\$397 + \\$205 and get \\$602. Round first: \\$400 + \\$200 = \\$600. Since \\$600 is close to \\$602, your answer looks **reasonable!** Rounding is a great way to catch big mistakes.`,
       },
       {
         id: 'rnd4-dropdown',
         type: 'dropdown-select' as const,
         content: `**Estimate to Check** 🔽
 
-A store cart has items costing $\\$298$, $\\$52$, and $\\$149$. Round each to estimate the total.`,
+A store cart has items costing \\$298, \\$52, and \\$149. Round each to estimate the total.`,
         exercise: {
           dropdowns: [
             { label: '$\\$298$ to the nearest hundred:', options: ['$\\$200$', '$\\$300$', '$\\$290$'] },
