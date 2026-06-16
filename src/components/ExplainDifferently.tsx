@@ -11,6 +11,8 @@ interface ExplainDifferentlyProps {
 export default function ExplainDifferently({ concept, topicSlug }: ExplainDifferentlyProps) {
   const [explanation, setExplanation] = useState('')
   const [upgradeMsg, setUpgradeMsg] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
+  const [needAuth, setNeedAuth] = useState(false)
   const [loading, setLoading] = useState(false)
   const [style, setStyle] = useState<'simple' | 'analogy' | 'visual' | 'example'>('simple')
 
@@ -18,6 +20,8 @@ export default function ExplainDifferently({ concept, topicSlug }: ExplainDiffer
     setLoading(true)
     setExplanation('')
     setUpgradeMsg('')
+    setErrorMsg('')
+    setNeedAuth(false)
     try {
       const res = await fetch('/api/ai/explain', {
         method: 'POST',
@@ -27,13 +31,21 @@ export default function ExplainDifferently({ concept, topicSlug }: ExplainDiffer
       const data = await res.json().catch(() => ({}))
       if (res.ok) {
         setExplanation(data.explanation ?? '')
+      } else if (res.status === 401) {
+        // Not signed in — the AI tutor requires an account.
+        setNeedAuth(true)
       } else if (res.status === 429 && data.upgrade) {
         // Free daily AI-tutor quota reached — surface the upgrade path.
         setUpgradeMsg(data.error ?? 'Daily limit reached. Upgrade to Premium for unlimited AI explanations.')
       } else if (res.status === 429) {
         setUpgradeMsg('You\'re going a bit fast — please wait a moment and try again.')
+      } else {
+        // 400 / 5xx / anything unexpected — never leave the button silently dead.
+        setErrorMsg('Something went wrong generating that explanation. Please try again.')
       }
-    } catch { /* silent */ }
+    } catch {
+      setErrorMsg('Could not reach the tutor. Check your connection and try again.')
+    }
     setLoading(false)
   }
 
@@ -83,6 +95,24 @@ export default function ExplainDifferently({ concept, topicSlug }: ExplainDiffer
           >
             Upgrade to Premium
           </Link>
+        </div>
+      )}
+
+      {needAuth && (
+        <div className="mt-3 flex flex-col gap-2 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-blue-800 dark:text-blue-200">Sign in to use the AI tutor.</p>
+          <Link
+            href="/auth/signin"
+            className="flex-shrink-0 rounded-lg bg-blue-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-blue-700"
+          >
+            Sign in
+          </Link>
+        </div>
+      )}
+
+      {errorMsg && (
+        <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3 dark:border-amber-800 dark:bg-amber-900/20">
+          <p className="text-sm text-amber-800 dark:text-amber-200">{errorMsg}</p>
         </div>
       )}
     </div>

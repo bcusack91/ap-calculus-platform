@@ -42,30 +42,15 @@ export async function POST(request: Request) {
       )
     }
 
-    // Premium gate: free users get a limited number of AI explanations per day.
-    if (!(await effectiveIsPremium(session.user.role))) {
-      const dailyResult = await aiExplainFreeDailyLimiter.check(session.user.id)
-      if (!dailyResult.success) {
-        return NextResponse.json(
-          {
-            error: `You've used your ${FREE_LIMITS.aiExplanationsPerDay} free AI tutor explanations for today. Upgrade to Premium for unlimited explanations.`,
-            upgrade: true,
-          },
-          {
-            status: 429,
-            headers: {
-              'Retry-After': String(Math.ceil((dailyResult.resetTime - Date.now()) / 1000)),
-            },
-          }
-        )
-      }
-    }
-
+    // Validate the request body BEFORE consuming any daily quota, so a
+    // malformed request can never burn a free user's allowance.
     const { concept, style } = await request.json()
 
     if (!concept || typeof concept !== 'string') {
       return NextResponse.json({ error: 'Concept is required' }, { status: 400 })
     }
+
+    const isPremium = await effectiveIsPremium(session.user.role)
 
     const stylePrompts: Record<string, string> = {
       simple: 'Explain this concept using simple words that a 10-year-old could understand.',
@@ -76,12 +61,33 @@ export async function POST(request: Request) {
 
     const prompt = `${stylePrompts[style] || stylePrompts.simple}\n\nConcept: ${concept.slice(0, 500)}`
 
-    // Generate a real explanation with Claude Haiku 4.5 when a key is configured;
-    // otherwise fall through to the templated response below. Only the concept
-    // name + chosen style is sent to the model (no student PII). A failed call
-    // degrades gracefully to the templates rather than erroring the request.
+    // Generate a real explanation with Claude Haiku 4.5 when a key is configured.
+    // The free DAILY quota is only consumed when a real model explanation is
+    // actually delivered — template fallbacks (no key / model error / empty
+    // output) are NOT metered, so free users are never charged a slot or upsold
+    // to Premium for a canned template. Only the concept name + chosen style is
+    // sent to the model (no student PII).
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (apiKey) {
+      // Gate free users on their daily quota BEFORE the (paid) LLM call, but
+      // without consuming a slot yet — peek now, consume only on success.
+      if (!isPremium) {
+        const peek = await aiExplainFreeDailyLimiter.peek(session.user.id)
+        if (!peek.success) {
+          return NextResponse.json(
+            {
+              error: `You've used your ${FREE_LIMITS.aiExplanationsPerDay} free AI tutor explanations for today. Upgrade to Premium for unlimited explanations.`,
+              upgrade: true,
+            },
+            {
+              status: 429,
+              headers: {
+                'Retry-After': String(Math.ceil((peek.resetTime - Date.now()) / 1000)),
+              },
+            }
+          )
+        }
+      }
       try {
         const client = new Anthropic({ apiKey })
         const message = await client.messages.create({
@@ -98,6 +104,9 @@ export async function POST(request: Request) {
           .join('')
           .trim()
         if (explanation) {
+          // Real explanation produced — now (and only now) consume one free
+          // daily slot. Premium users are unmetered on the daily quota.
+          if (!isPremium) await aiExplainFreeDailyLimiter.check(session.user.id)
           return NextResponse.json({ explanation })
         }
       } catch (err) {

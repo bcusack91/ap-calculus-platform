@@ -73,6 +73,21 @@ function checkInMemory(identifier: string, config: RateLimitConfig): RateLimitRe
   return { success: true, remaining: config.maxRequests - entry.count, resetTime: entry.resetTime }
 }
 
+/**
+ * Non-consuming read of the current limit state — does NOT count a request.
+ * Use to gate expensive work before deciding whether to actually consume a
+ * slot (e.g. only meter an AI call once it produces a real result).
+ */
+function peekInMemory(identifier: string, config: RateLimitConfig): RateLimitResult {
+  const now = Date.now()
+  const entry = rateLimitMap.get(identifier)
+  if (!entry || now > entry.resetTime) {
+    return { success: true, remaining: config.maxRequests, resetTime: now + config.windowMs }
+  }
+  const remaining = Math.max(0, config.maxRequests - entry.count)
+  return { success: entry.count < config.maxRequests, remaining, resetTime: entry.resetTime }
+}
+
 // ─── Public API ─────────────────────────────────────────────────────────────
 
 export function rateLimit(config: RateLimitConfig) {
@@ -107,6 +122,26 @@ export function rateLimit(config: RateLimitConfig) {
         }
       }
       return checkInMemory(`${prefix}:${identifier}`, config)
+    },
+
+    /**
+     * Read the current limit state WITHOUT consuming a slot. Returns
+     * success:false when the identifier is already at/over the limit.
+     */
+    async peek(identifier: string): Promise<RateLimitResult> {
+      if (upstashLimiter) {
+        try {
+          const r = (await upstashLimiter.getRemaining(identifier)) as
+            | number
+            | { remaining: number; reset: number }
+          const remaining = typeof r === 'number' ? r : r.remaining
+          const resetTime = typeof r === 'number' ? Date.now() + config.windowMs : r.reset
+          return { success: remaining > 0, remaining, resetTime }
+        } catch {
+          return peekInMemory(`${prefix}:${identifier}`, config)
+        }
+      }
+      return peekInMemory(`${prefix}:${identifier}`, config)
     },
   }
 }
