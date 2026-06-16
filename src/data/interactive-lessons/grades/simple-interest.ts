@@ -66,7 +66,7 @@ After you find the interest, the **total amount** of money is just the principal
 
 $$A = P + I$$
 
-So if you invest \\$500 and earn \\$60 in interest, you end up with $A = 500 + 60 = \\$560$.
+So if you invest \\$500 and earn \\$60 in interest, you end up with $A = 500 + 60 = 560$, i.e. \\$560.
 
 ## Worked Example 🧮
 
@@ -76,7 +76,7 @@ You invest \\$500 at $4\\%$ simple interest for $3$ years. How much interest wil
 
 $$I = Prt = 500 \\times 0.04 \\times 3 = 500 \\times 0.12 = 60$$
 
-**You earn \\$60 in interest**, and your total amount is $500 + 60 = \\$560$.
+**You earn \\$60 in interest**, and your total amount is $500 + 60 = 560$, i.e. \\$560.
     `
       },
       {
@@ -152,7 +152,7 @@ You invest \\$800 at $5\\%$ simple interest for $4$ years. How much interest do 
 
 $$I = Prt = 800 \\times 0.05 \\times 4 = 800 \\times 0.20 = 160$$
 
-You earn **\\$160** in interest, for a total of $800 + 160 = \\$960$. 🎉
+You earn **\\$160** in interest, for a total of $800 + 160 = 960$, i.e. \\$960. 🎉
     `
       },
       {

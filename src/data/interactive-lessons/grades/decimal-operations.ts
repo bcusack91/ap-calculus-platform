@@ -17,7 +17,7 @@ A **decimal** is a way to show parts of a whole — just like a fraction. The li
 
 You already use decimals every single day:
 
-- **Money:** a snack costs **$\\$2.75$**
+- **Money:** a snack costs **\\$2.75**
 - **Sports:** a sprinter runs the 100m in **$10.4$** seconds
 - **Cooking:** a recipe needs **$1.5$** cups of sugar
 
@@ -232,12 +232,12 @@ Choose the option that correctly completes each sentence.`,
 
 Decimals show up constantly when we deal with **money**, **measurements**, and **sharing**.
 
-**Shopping trip:** Maya buys a notebook for $\\$3.49$ and a pen for $\\$1.25$.
+**Shopping trip:** Maya buys a notebook for \\$3.49 and a pen for \\$1.25.
 
-- **Total cost:** $\\$3.49 + \\$1.25 = \\$4.74$
-- **Change from $\\$10$:** $\\$10.00 - \\$4.74 = \\$5.26$
+- **Total cost:** \\$3.49 + \\$1.25 = \\$4.74
+- **Change from \\$10:** \\$10.00 - \\$4.74 = \\$5.26
 
-**Splitting evenly:** If 4 friends share a $\\$12.80$ pizza equally, each pays $\\$12.80 \\div 4 = \\$3.20$.
+**Splitting evenly:** If 4 friends share a \\$12.80 pizza equally, each pays \\$12.80 ÷ 4 = \\$3.20.
 
 The math is exactly the same as before — just remember to **line up** for $+$ and $-$, **count places** for $\\times$, and **keep the decimal lined up** for $\\div$. Money answers should always have **two** decimal places (cents).`,
       },
@@ -248,9 +248,9 @@ The math is exactly the same as before — just remember to **line up** for $+$ 
 
 Type just the number. For money answers, you can write it like $5.26$ (no dollar sign needed).
 
-- **Box 1:** A book costs $\\$8.99$ and a bookmark costs $\\$2.50$. What is the **total** cost?
-- **Box 2:** You pay with a $\\$20$ bill for an item that costs $\\$13.45$. How much **change** do you get?
-- **Box 3:** Four friends split a $\\$9.60$ bill equally. How much does **each** person pay?`,
+- **Box 1:** A book costs \\$8.99 and a bookmark costs \\$2.50. What is the **total** cost?
+- **Box 2:** You pay with a \\$20 bill for an item that costs \\$13.45. How much **change** do you get?
+- **Box 3:** Four friends split a \\$9.60 bill equally. How much does **each** person pay?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['11.49', '6.55', '2.40'],

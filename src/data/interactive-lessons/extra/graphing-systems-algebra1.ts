@@ -464,7 +464,7 @@ Here $x$ = gigabytes used and $y$ = monthly cost. When do they cost the same?
 
 $$0.10x + 30 = 0.20x + 20 \\;\\Rightarrow\\; 10 = 0.10x \\;\\Rightarrow\\; x = 100$$
 
-At $x = 100$ GB, $y = 0.10(100) + 30 = \\$40$. **They cost the same — \\$40 — at 100 GB.**
+At $x = 100$ GB, $y = 0.10(100) + 30 = 40$, giving \\$40. **They cost the same — \\$40 — at 100 GB.**
 
 > 💡 Below $100$ GB, Plan B is cheaper (its lower \\$20 flat fee dominates); above $100$ GB, Plan A's lower per-GB rate wins.`,
       },
@@ -505,7 +505,7 @@ Break even where cost $=$ revenue:
 
 $$5x + 200 = 15x \\;\\Rightarrow\\; 200 = 10x \\;\\Rightarrow\\; x = 20$$
 
-At $x = 20$ shirts, $y = 15(20) = \\$300$. **Break-even: 20 shirts, \\$300.**
+At $x = 20$ shirts, $y = 15(20) = 300$, giving \\$300. **Break-even: 20 shirts, \\$300.**
 
 > ✅ **Check:** cost $= 5(20) + 200 = 300$, revenue $= 15(20) = 300$. Equal ✓ — and past 20 shirts the stand finally makes a profit.`,
       },

@@ -134,7 +134,7 @@ Net exports is one piece of AD worth computing directly:
 
 $$NX = \\text{Exports} - \\text{Imports}$$
 
-If a country exports \\$700 billion of goods and imports \\$900 billion, then $NX = 700 - 900 = -\\$200$ billion — a **trade deficit**, which subtracts from aggregate demand.`,
+If a country exports \\$700 billion of goods and imports \\$900 billion, then $NX = 700 - 900 = -200$, i.e. -\\$200 billion — a **trade deficit**, which subtracts from aggregate demand.`,
       },
       {
         id: 'adas1-nx-drill',

@@ -515,10 +515,10 @@ You can now (1) spot a multi-step problem, (2) choose the right operation for ea
 **Step 1 — Read:** We need the *money left* after buying 24 tickets.
 
 **Step 2 & 3 — Plan & Solve:**
-$$\\text{Total cost: } 24 \\times \\$5 = \\$120$$
-$$\\text{Money left: } \\$150 - \\$120 = \\$30$$
+Total cost: $24 \\times 5 = 120$, i.e. \\$120
+Money left: $150 - 120 = 30$, i.e. \\$30
 
-**Step 4 — Check:** Estimate $25 \\times \\$5 = \\$125$, and $\\$150 - \\$125 = \\$25$. Our answer \\$30 is close to \\$25, so it's reasonable. ✓
+**Step 4 — Check:** Estimate $25 \\times 5 = 125$, i.e. \\$125, and $150 - 125 = 25$, i.e. \\$25. Our answer \\$30 is close to \\$25, so it's reasonable. ✓
 
 > 💡 The hidden answer was \\$120 (the total cost). The **real** answer is \\$30 (money left). Always finish the last step!`,
       },

@@ -560,7 +560,7 @@ $$y = 30x + 50$$
 - Slope $30$ → it costs **\\$30 more per hour**.
 - Intercept $50$ → even for $0$ hours, the bill starts at **\\$50** (the fee).
 
-For a 4-hour job: $y = 30(4) + 50 = 120 + 50 = \\$170$.
+For a 4-hour job: $y = 30(4) + 50 = 120 + 50 = 170$, giving \\$170.
 
 > 💡 The words tell you the equation: a fixed start is the **intercept**; a "per-unit" cost is the **slope**.`,
       },

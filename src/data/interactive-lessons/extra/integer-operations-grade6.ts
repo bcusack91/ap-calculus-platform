@@ -53,7 +53,7 @@ Integers show up everywhere in real life:
 | 8 degrees below zero | $-8$ |
 | A gain of 12 yards | $+12$ |
 | 3 floors below ground | $-3$ |
-| $\\$50$ owed (debt) | $-50$ |
+| \\$50 owed (debt) | $-50$ |
 | Sea level | $0$ |
 
 > ⚠️ **Not integers:** $\\frac{1}{2}$, $0.75$, and $-2.5$ are **not** integers because they aren't whole numbers. Integers never have a fraction or decimal part.`,

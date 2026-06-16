@@ -247,19 +247,19 @@ Decimals show up in real life all the time — especially with **money**! Dollar
 
 ## Money Example 💵
 
-You have $\\$20.00$ and you spend $\\$12.75$. **How much money is left?**
+You have \\$20.00 and you spend \\$12.75. **How much money is left?**
 
 This is a subtraction problem. Line up the points (the dollar amounts already have two decimal places):
 
 $$\\begin{array}{r} 20.00 \\\\ - 12.75 \\\\ \\hline 7.25 \\end{array}$$
 
-You have $\\$7.25$ left. ✅
+You have \\$7.25 left. ✅
 
 ## How to Tackle Word Problems
 
 1. **Read carefully** to decide whether to **add** (combining or total) or **subtract** (difference, change, or "how much left").
 2. **Line up the decimal points** and add placeholder zeros.
-3. **Check your answer** — does it make sense? If you started with $\\$20$ and spent some, the answer should be *less* than $\\$20$.
+3. **Check your answer** — does it make sense? If you started with \\$20 and spent some, the answer should be *less* than \\$20.
     `
       },
       {
@@ -268,13 +268,13 @@ You have $\\$7.25$ left. ✅
         content: `
 **Word Problem Practice** 🧮
 
-At the snack stand, Ava buys a juice for $\\$1.50$ and a granola bar for $\\$2.35$.
+At the snack stand, Ava buys a juice for \\$1.50 and a granola bar for \\$2.35.
 
 1) What is the **total cost** of both items? Add them. (Type it like $3.85$.)
 
-2) Ava pays with a $\\$5.00$ bill. How much **change** does she get back? (Type it like $1.15$.)
+2) Ava pays with a \\$5.00 bill. How much **change** does she get back? (Type it like $1.15$.)
 
-3) Later she finds $\\$0.40$ in her pocket and adds it to her change. How much money does she have now? (Type it like $1.55$.)
+3) Later she finds \\$0.40 in her pocket and adds it to her change. How much money does she have now? (Type it like $1.55$.)
     `,
         exercise: {
           boxes: 3,

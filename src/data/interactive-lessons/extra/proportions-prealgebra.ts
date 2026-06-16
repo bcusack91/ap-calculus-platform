@@ -495,12 +495,12 @@ A **unit rate** is a ratio with $1$ on the bottom — like price per *one* item 
 
 ### Worked Example — Better Buy
 
-- Store A: $\\$6$ for $4$ granola bars
-- Store B: $\\$9$ for $6$ granola bars
+- Store A: \\$6 for $4$ granola bars
+- Store B: \\$9 for $6$ granola bars
 
 Find each price **per bar**:
 
-$$\\text{A: } \\frac{6}{4} = \\$1.50 \\text{ per bar} \\qquad \\text{B: } \\frac{9}{6} = \\$1.50 \\text{ per bar}$$
+A: $\\frac{6}{4} = 1.50$ per bar, i.e. \\$1.50 per bar. B: $\\frac{9}{6} = 1.50$ per bar, i.e. \\$1.50 per bar.
 
 They're actually the **same** unit price! Both are $\\dfrac{3}{2}$ — equivalent ratios.
 
@@ -514,7 +514,7 @@ They're actually the **same** unit price! Both are $\\dfrac{3}{2}$ — equivalen
 Set up a proportion and solve.
 
 **1)** On a map, $2$ inches $= 50$ miles. How many miles is $5$ inches?  $\\,?$ *(miles)*
-**2)** If $3$ apples cost $\\$1.20$, how much do $7$ apples cost? $\\,?$ *(dollars)*
+**2)** If $3$ apples cost \\$1.20, how much do $7$ apples cost? $\\,?$ *(dollars)*
 **3)** A printer prints $8$ pages in $10$ seconds. How many pages in $25$ seconds? $\\,?$ *(pages)*`,
         exercise: {
           boxes: 3,
@@ -619,7 +619,7 @@ You can now (1) write and compare ratios, (2) cross multiply, (3) solve for any 
         content: `**One More Set** 🧮
 
 **1)** $\\dfrac{x + 3}{4} = \\dfrac{5}{2} \\;\\Rightarrow\\; x = \\,?$
-**2)** $15$ feet of rope costs $\\$6$. What does $25$ feet cost? $\\,?$ *(dollars)*`,
+**2)** $15$ feet of rope costs \\$6. What does $25$ feet cost? $\\,?$ *(dollars)*`,
         exercise: {
           boxes: 2,
           correctAnswers: ['7', '10'],

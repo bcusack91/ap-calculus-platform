@@ -492,14 +492,14 @@ In a linear story, the **rate of change** is the slope and the **starting amount
 
 ### Example: Gym Membership
 
-A gym charges a $\\$25$ sign-up fee plus $\\$15$ per month. Total cost after $x$ months:
+A gym charges a \\$25 sign-up fee plus \\$15 per month. Total cost after $x$ months:
 
 $$y = 15x + 25$$
 
 - $b = 25$: the cost at month $0$ (the one-time fee).
 - $m = 15$: the cost added each month.
 
-After $6$ months: $y = 15(6) + 25 = 90 + 25 = \\$115$.
+After $6$ months: $y = 15(6) + 25 = 90 + 25 = 115$, giving \\$115.
 
 > 💡 **Decode the words.** "Per," "each," and "every" signal the **slope**. A flat "fee," "deposit," or "starting" amount signals the **$y$-intercept**.`,
       },

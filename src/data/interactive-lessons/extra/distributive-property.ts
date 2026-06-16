@@ -488,11 +488,11 @@ $$6 \\times 53 = 6(50 + 3) = 300 + 18 = 318$$
 
 ### Shopping Example
 
-You buy $4$ notebooks, each costing $\\$3$ for the notebook plus $\\$1$ tax. The total is:
+You buy $4$ notebooks, each costing \\$3 for the notebook plus \\$1 tax. The total is:
 
-$$4(3 + 1) = 4 \\cdot 3 + 4 \\cdot 1 = 12 + 4 = \\$16$$
+$$4(3 + 1) = 4 \\cdot 3 + 4 \\cdot 1 = 12 + 4 = 16$$
 
-Either pay $\\$4$ per notebook four times, or buy $\\$12$ of notebooks and $\\$4$ of tax — same total. That's the distributive property in your wallet.`,
+giving \\$16. Either pay \\$4 per notebook four times, or buy \\$12 of notebooks and \\$4 of tax — same total. That's the distributive property in your wallet.`,
       },
       {
         id: 'dp4-mental-drill',

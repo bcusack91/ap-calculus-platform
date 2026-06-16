@@ -252,7 +252,7 @@ Functions are everywhere once you start looking. Anytime one quantity depends on
 
 ## Renting a Bike 🚲
 
-A bike-share company charges a flat **$3 fee** plus **$2 for every hour** you ride. We can write the total cost as a function of the number of hours, $h$:
+A bike-share company charges a flat **\\$3 fee** plus **\\$2 for every hour** you ride. We can write the total cost as a function of the number of hours, $h$:
 
 $$C(h) = 2h + 3$$
 
@@ -261,9 +261,9 @@ $$C(h) = 2h + 3$$
 
 | Hours $h$ | Cost $C(h) = 2h + 3$ | Total |
 |-----------|----------------------|-------|
-| $1$ | $2(1) + 3$ | $\\$5$ |
-| $2$ | $2(2) + 3$ | $\\$7$ |
-| $4$ | $2(4) + 3$ | $\\$11$ |
+| $1$ | $2(1) + 3$ | \\$5 |
+| $2$ | $2(2) + 3$ | \\$7 |
+| $4$ | $2(4) + 3$ | \\$11 |
 
 This is a function because each number of hours produces **exactly one** total cost. You will never be charged two different prices for the same ride length.
     `

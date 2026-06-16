@@ -734,7 +734,7 @@ $$E = (1.5\\ \\text{kW})(4\\ \\text{h}) = 6\\ \\text{kWh}$$
 
 In joules, that's $6 \\times 3.6\\ \\text{MJ} = 21.6\\ \\text{MJ}$ — a big number, which is exactly why we use kilowatt-hours for billing instead of joules.
 
-> 💡 To find the **cost**, multiply the energy by the price per kWh. At a rate of \$0.20 per kWh, those $6\\ \\text{kWh}$ cost $6 \\times \\$0.20 = \\$1.20$.`,
+> 💡 To find the **cost**, multiply the energy by the price per kWh. At a rate of \\$0.20 per kWh, those $6\\ \\text{kWh}$ cost $6 \\times 0.20 = 1.20$, i.e. \\$1.20.`,
       },
       {
         id: 'pow6-drill',

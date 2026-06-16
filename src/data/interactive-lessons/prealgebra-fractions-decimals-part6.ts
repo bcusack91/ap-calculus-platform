@@ -23,7 +23,7 @@ Solve problems involving fractions, decimals, and percents:
 
 **Shirt: \\$40, 25% off. Sale price?**
 
-Discount: \\$0.25 \\times 40 = 10$. Sale price: \\$40 - 10 = \\$30$ ✅
+Discount: \\$0.25 $\\times 40 = 10$. Sale price: \\$40 - 10 = \\$30 ✅
     
     `
     },

@@ -28,9 +28,9 @@ $\\frac{52 - 40}{40} \\times 100 = 30\\%$ increase
 - Increase of $p\\%$: multiply by $1 + p/100$
 - Decrease of $p\\%$: multiply by $1 - p/100$
 
-20% increase on \\$80: $80 \\times 1.20 = \\$96$
+20% increase on \\$80: $80 \\times 1.20 = 96$, i.e. \\$96
 
-15% discount on \\$200: $200 \\times 0.85 = \\$170$
+15% discount on \\$200: $200 \\times 0.85 = 170$, i.e. \\$170
 
 ### Successive Percent Changes ⚠️
 
@@ -48,7 +48,7 @@ $100 \\times 1.20 = 120$, then $120 \\times 0.80 = 96$ — that's a 4% net decre
 |------|------|
 | Multiplier for 30% off | $1 - 0.30 = 0.70$ |
 | Set up equation | $0.70x = 56$ |
-| Solve | $x = 56 ÷ 0.70 = \\$80$ |
+| Solve | $x = 56 ÷ 0.70 = 80$, i.e. \\$80 |
 
 ⚠️ Common mistake: adding 30% to \\$56 gives \\$72.80, which is WRONG.
 
@@ -109,7 +109,7 @@ These are all "percent increase" problems.
 | Tip (20%) | $42 × 0.20$ | \\$8.40 |
 | Total | — | \\$53.76 |
 
-**With multiplier:** $42 × (1 + 0.08 + 0.20) = 42 × 1.28 = \\$53.76$
+**With multiplier:** $42 × (1 + 0.08 + 0.20) = 42 × 1.28 = 53.76$, i.e. \\$53.76
 
 ### Worked Example 4
 

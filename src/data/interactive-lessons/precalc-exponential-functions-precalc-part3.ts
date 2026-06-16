@@ -41,21 +41,21 @@ $$\\boxed{A = P\\left(1 + \\frac{r}{n}\\right)^{nt}}$$
 
 ### Example 1: Quarterly Compounding
 
-> **$\\$5{,}000$ is invested at $6\\%$ annual interest compounded quarterly. Find the balance after $3$ years.**
+> **\\$5,000 is invested at $6\\%$ annual interest compounded quarterly. Find the balance after $3$ years.**
 
 $$A = 5000\\left(1 + \\frac{0.06}{4}\\right)^{4 \\cdot 3} = 5000(1.015)^{12}$$
 
-$(1.015)^{12} \\approx 1.19562$ → $A \\approx \\$5{,}978.09$
+$(1.015)^{12} \\approx 1.19562$ → $A \\approx 5978.09$, i.e. \\$5,978.09
 
 ### Example 2: Comparing Frequencies
 
-> **$\\$10{,}000$ at $8\\%$ for $5$ years. Compare annual vs monthly compounding.**
+> **\\$10,000 at $8\\%$ for $5$ years. Compare annual vs monthly compounding.**
 
 | Frequency | $n$ | Calculation | Final Amount |
 |:----------|:----|:-----------|:-------------|
-| Annual | $1$ | $10000(1.08)^5$ | $\\$14{,}693.28$ |
-| Monthly | $12$ | $10000(1.00\\overline{6})^{60}$ | $\\$14{,}898.46$ |
-| Difference | — | — | $\\$205.18$ more |
+| Annual | $1$ | $10000(1.08)^5$ | \\$14,693.28 |
+| Monthly | $12$ | $10000(1.00\\overline{6})^{60}$ | \\$14,898.46 |
+| Difference | — | — | \\$205.18 more |
 
 More frequent compounding always gives a **higher** return, but with diminishing marginal benefit.
       `
@@ -80,9 +80,9 @@ This limit is the foundation of continuous growth.
 
 ### Worked Example
 
-> **$\\$2{,}000$ invested at $5\\%$ compounded continuously for $10$ years.**
+> **\\$2,000 invested at $5\\%$ compounded continuously for $10$ years.**
 
-$A = 2000e^{0.05 \\cdot 10} = 2000e^{0.5} = 2000(1.6487...) \\approx \\$3{,}297.44$
+$A = 2000e^{0.05 \\cdot 10} = 2000e^{0.5} = 2000(1.6487...) \\approx 3297.44$, i.e. \\$3,297.44
 
 ### Converting Between Forms
 
@@ -150,7 +150,7 @@ $$r = \\ln(b)$$
       content: `
 **Compound Interest Drill** 🧮
 
-**1)** $\\$1{,}000$ at $10\\%$ compounded annually for $2$ years. What is $A$? (e.g., $\\$500$ at $8\\%$ annually for $1$ year: $500(1.08) = 540$)
+**1)** \\$1,000 at $10\\%$ compounded annually for $2$ years. What is $A$? (e.g., \\$500 at $8\\%$ annually for $1$ year: $500(1.08) = 540$)
 
 **2)** How many compounding periods in $4$ years of monthly compounding? (e.g., quarterly for $3$ years: $4 \\times 3 = 12$ periods)
 

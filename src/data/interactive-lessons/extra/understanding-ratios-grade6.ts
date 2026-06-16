@@ -332,7 +332,7 @@ To find a unit rate, **divide** so the second quantity equals $1$.
 
 ### Example: 12 dollars for 3 tickets
 
-$$\\frac{\\$12}{3 \\text{ tickets}} = \\frac{\\$12 \\div 3}{3 \\div 3} = \\frac{\\$4}{1 \\text{ ticket}}$$
+$$\\frac{12}{3 \\text{ tickets}} = \\frac{12 \\div 3}{3 \\div 3} = \\frac{4}{1 \\text{ ticket}}$$ which is \\$4 per ticket.
 
 The unit rate is **\\$4 per ticket**.
 
@@ -340,7 +340,7 @@ The unit rate is **\\$4 per ticket**.
 
 $$\\frac{150 \\text{ mi}}{3 \\text{ hr}} = \\frac{150 \\div 3}{3 \\div 3} = \\frac{50 \\text{ mi}}{1 \\text{ hr}} = 50 \\text{ mph}$$
 
-> 🔑 **Once you know the unit rate, you can find *any* amount** — just multiply. $7$ tickets $= 7 \\times \\$4 = \\$28$.`,
+> 🔑 **Once you know the unit rate, you can find *any* amount** — just multiply. $7$ tickets $= 7 \\times 4 = 28$, giving \\$28.`,
       },
       {
         id: 'ratio3-unitrate-check',
@@ -372,7 +372,7 @@ Find each unit rate by dividing.
 
 **1)** $20$ dollars for $5$ shirts $= \\,?$ dollars per shirt
 **2)** $45$ words typed in $9$ minutes $= \\,?$ words per minute
-**3)** A $7$-ticket bundle costs \\$$4$ each. Total cost $= \\$\\,?$`,
+**3)** A $7$-ticket bundle costs \\$4 each. Total cost $= \\,?$ dollars`,
         exercise: {
           boxes: 3,
           correctAnswers: ['4', '5', '28'],

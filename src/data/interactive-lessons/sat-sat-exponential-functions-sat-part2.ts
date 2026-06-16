@@ -75,7 +75,7 @@ $$A = Pe^{rt}$$`
 
 | Component | Value | Meaning |
 |-----------|-------|---------|
-| $P$ | $3{,}000$ | Initial investment |
+| $P$ | \\$3,000 | Initial investment |
 | $r$ | $0.08$ | 8% annual rate |
 | $n$ | $4$ | Compounded quarterly |
 | $t$ | $5$ | 5 years |
@@ -88,9 +88,9 @@ $$A = Pe^{rt}$$`
 
 | Compounding | Calculation | Result |
 |-------------|-------------|--------|
-| Annually ($n=1$) | $10000(1.06)^1$ | $\\$10{,}600.00$ |
-| Monthly ($n=12$) | $10000(1.005)^{12}$ | $\\$10{,}616.78$ |
-| Daily ($n=365$) | $10000(1.000164)^{365}$ | $\\$10{,}618.31$ |
+| Annually ($n=1$) | $10000(1.06)^1$ | \\$10,600.00 |
+| Monthly ($n=12$) | $10000(1.005)^{12}$ | \\$10,616.78 |
+| Daily ($n=365$) | $10000(1.000164)^{365}$ | \\$10,618.31 |
 
 More frequent compounding → slightly more interest, but diminishing returns.
 

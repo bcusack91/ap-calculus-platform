@@ -249,7 +249,7 @@ Below is the work for solving $3x + 8 = 23$. Choose the option that correctly fi
 
 Multi-step equations are perfect for real situations that have a **starting fee** plus a **per-item cost**.
 
-**Example — Bowling night:** A bowling alley charges $\\$3$ to rent shoes plus $\\$5$ per game. You spent $\\$23$ total. How many games did you play?
+**Example — Bowling night:** A bowling alley charges \\$3 to rent shoes plus \\$5 per game. You spent \\$23 total. How many games did you play?
 
 **Set up the equation.** Let $g$ = number of games:
 
@@ -273,8 +273,8 @@ The trick to word problems is **translating** words into an equation. Look for t
 
 Set up an equation, solve it, and type just the number.
 
-- **Box 1:** A taxi charges a $\\$4$ flat fee plus $\\$2$ per mile. Your ride cost $\\$18$. How many **miles** was the ride? (Solve $2m + 4 = 18$.)
-- **Box 2:** A gym membership is $\\$20$ to join plus $\\$15$ per month. You paid $\\$95$ total. How many **months** did you pay for? (Solve $15n + 20 = 95$.)
+- **Box 1:** A taxi charges a \\$4 flat fee plus \\$2 per mile. Your ride cost \\$18. How many **miles** was the ride? (Solve $2m + 4 = 18$.)
+- **Box 2:** A gym membership is \\$20 to join plus \\$15 per month. You paid \\$95 total. How many **months** did you pay for? (Solve $15n + 20 = 95$.)
 - **Box 3:** A pizza is split into slices. After eating $3$ slices, twice the slices left equals $10$. How many slices were **left**? (Solve $2x = 10$.)`,
         exercise: {
           boxes: 3,

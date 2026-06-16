@@ -23,7 +23,7 @@ A **rate** is a special kind of ratio that compares **two different units**. The
 
 **Examples of rates:**
 - $60$ miles in $2$ hours
-- $\\$15$ for $3$ books
+- \\$15 for $3$ books
 - $150$ words in $5$ minutes
 
 Notice that each one connects two *different* kinds of measurements. That is what makes it a rate instead of a plain ratio like $3$ cats to $4$ dogs (same unit: animals).
@@ -40,7 +40,7 @@ A **unit rate** is a rate where the **second quantity is exactly 1**. The word *
 | Rate | Unit Rate | Read As |
 |------|-----------|---------|
 | $60$ miles in $2$ hours | $30$ miles per $1$ hour | $30$ miles per hour |
-| $\\$15$ for $3$ books | $\\$5$ per $1$ book | $5$ dollars per book |
+| \\$15 for $3$ books | \\$5 per $1$ book | $5$ dollars per book |
 | $150$ words in $5$ minutes | $30$ words per $1$ minute | $30$ words per minute |
 
 The little word **"per"** is your clue. It means "for each one." Miles **per** hour means miles for each **one** hour.
@@ -56,11 +56,11 @@ To turn any rate into a unit rate, **divide the first quantity by the second qua
 
 $$\\text{Unit Rate} = \\frac{\\text{First Quantity}}{\\text{Second Quantity}}$$
 
-**Worked Example:** $\\$12$ for $4$ pounds of apples.
+**Worked Example:** \\$12 for $4$ pounds of apples.
 
 $$\\frac{12 \\text{ dollars}}{4 \\text{ pounds}} = 3 \\text{ dollars per pound}$$
 
-So the apples cost **$\\$3$ per pound**. Dividing by the second number "shrinks" it down to $1$, which is exactly what a unit rate needs. 🍎
+So the apples cost **\\$3 per pound**. Dividing by the second number "shrinks" it down to $1$, which is exactly what a unit rate needs. 🍎
     `
       },
       {
@@ -127,7 +127,7 @@ The car travels **$60$ miles per hour**. 🚗
         id: 'unit-rates-grade6-p2-worked2',
         type: 'text' as const,
         content: `
-## Example 2: Price → $\\$18$ for $6$ smoothies
+## Example 2: Price → \\$18 for $6$ smoothies
 
 **Step 1 — Set up the rate:**
 
@@ -141,7 +141,7 @@ $$18 \\div 6 = 3$$
 
 $$\\$3 \\text{ per } 1 \\text{ smoothie}$$
 
-Each smoothie costs **$\\$3$**. Now if a friend wants $10$ smoothies, you can quickly predict the cost: $10 \\times \\$3 = \\$30$. That is the real power of a unit rate! 🥤
+Each smoothie costs **\\$3**. Now if a friend wants $10$ smoothies, you can quickly predict the cost: $10 \\times 3 = 30$, i.e. \\$30. That is the real power of a unit rate! 🥤
     `
       },
       {
@@ -257,14 +257,14 @@ Unit rates are everywhere in real life. The most powerful use is **comparing pri
 
 ## Which Is the Better Buy? 🛒
 
-A small bag of pretzels is $\\$4$ for $8$ ounces. A large bag is $\\$9$ for $18$ ounces. Which is cheaper *per ounce*?
+A small bag of pretzels is \\$4 for $8$ ounces. A large bag is \\$9 for $18$ ounces. Which is cheaper *per ounce*?
 
 Find the **unit price** (dollars per ounce) for each:
 
-- **Small bag:** $\\dfrac{4}{8} = \\$0.50$ per ounce
-- **Large bag:** $\\dfrac{9}{18} = \\$0.50$ per ounce
+- **Small bag:** $\\dfrac{4}{8} = 0.50$, i.e. \\$0.50 per ounce
+- **Large bag:** $\\dfrac{9}{18} = 0.50$, i.e. \\$0.50 per ounce
 
-Surprise — they cost the **same** per ounce! Without unit rates, the large bag *looks* more expensive because $\\$9 > \\$4$. Unit rates reveal the truth. 🥨
+Surprise — they cost the **same** per ounce! Without unit rates, the large bag *looks* more expensive because \\$9 > \\$4. Unit rates reveal the truth. 🥨
 
 Unit rates also help you **make predictions** and **plan budgets**: once you know the cost for $1$ item, you can multiply to find the cost for *any* number of items.
     `
@@ -275,7 +275,7 @@ Unit rates also help you **make predictions** and **plan budgets**: once you kno
         content: `
 **Better Buy Practice** 🧮
 
-Juice comes in two sizes. Brand A is $\\$6$ for $3$ liters. Brand B is $\\$10$ for $5$ liters.
+Juice comes in two sizes. Brand A is \\$6 for $3$ liters. Brand B is \\$10 for $5$ liters.
 
 1) What is Brand A's unit price in **dollars per liter** ($6 \\div 3$)? (Type a single number.)
 
@@ -334,7 +334,7 @@ You made it! Here is everything about unit rates in one place.
 | **Rate** | A ratio of two *different* units | $60$ miles in $2$ hours |
 | **Unit Rate** | A rate where the second quantity is $1$ | $30$ miles per $1$ hour |
 | **Finding it** | Divide first quantity by second | $\\frac{60}{2} = 30$ |
-| **Unit Price** | Dollars per $1$ item | $\\frac{\\$12}{4} = \\$3$ per item |
+| **Unit Price** | Dollars per $1$ item | $\\frac{12}{4} = 3$, i.e. \\$3 per item |
 | **"per"** | Means "for each one" | miles **per** hour |
 
 **Remember:**

@@ -14,7 +14,7 @@ export const calcabDerivExpLogPart4Data = {
     {
       "id": "del4-compound",
       "type": "text" as const,
-      "content": "## Compound Interest\n\n### Continuous Compounding\n\n$$A = Pe^{rt}$$\n\nwhere $P$ = principal, $r$ = rate, $t$ = time.\n\n$\\frac{dA}{dt} = Pr e^{rt} = rA$\n\nThe rate of growth of money is proportional to current amount.\n\n### Example\n\n$\\$1000$ at $5\\%$ continuously compounded:\n\n$A = 1000e^{0.05t}$\n\n$\\frac{dA}{dt} = 50e^{0.05t}$\n\nAt $t = 10$: $\\frac{dA}{dt} = 50e^{0.5} \\approx \\$82.44$/year\n\n---\n\n### Newton's Law of Cooling\n\n$$T(t) = T_s + (T_0 - T_s)e^{-kt}$$\n\n$$\\frac{dT}{dt} = -k(T_0 - T_s)e^{-kt} = -k(T - T_s)$$\n\nRate of cooling is proportional to temperature difference."
+      "content": "## Compound Interest\n\n### Continuous Compounding\n\n$$A = Pe^{rt}$$\n\nwhere $P$ = principal, $r$ = rate, $t$ = time.\n\n$\\frac{dA}{dt} = Pr e^{rt} = rA$\n\nThe rate of growth of money is proportional to current amount.\n\n### Example\n\n\\$1000 at $5\\%$ continuously compounded:\n\n$A = 1000e^{0.05t}$\n\n$\\frac{dA}{dt} = 50e^{0.05t}$\n\nAt $t = 10$: $\\frac{dA}{dt} = 50e^{0.5} \\approx 82.44$, i.e. \\$82.44/year\n\n---\n\n### Newton's Law of Cooling\n\n$$T(t) = T_s + (T_0 - T_s)e^{-kt}$$\n\n$$\\frac{dT}{dt} = -k(T_0 - T_s)e^{-kt} = -k(T - T_s)$$\n\nRate of cooling is proportional to temperature difference."
     },
     {
       "id": "del4-quiz",

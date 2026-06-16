@@ -63,7 +63,7 @@ $$V = 25000(0.85)^4 \\approx \\$13{,}050$$
 | **Problem** | "A car bought for \\$32,000 depreciates 12% per year. Write a model and find its value after 5 years." |
 | **Identify** | $A_0 = 32000$, $r = 0.12$ (decay), $t$ in years |
 | **Model** | $V(t) = 32000(0.88)^t$ |
-| **After 5 years** | $V(5) = 32000(0.88)^5 = 32000(0.5277) \\approx \\$16,887$ |
+| **After 5 years** | $V(5) = 32000(0.88)^5 = 32000(0.5277) \\approx 16{,}887$, i.e. \\$16,887 |
 
 ### Worked Example 2: Finding the Rate from Two Data Points
 

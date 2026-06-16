@@ -15,7 +15,7 @@ export const parts: LessonData[] = [
 
 You already multiply whole numbers. But the real world is full of **decimals** — numbers with a decimal point. We multiply them all the time:
 
-- **Money:** Buying 4 snacks that each cost $\\$2.50$ → $4 \\times \\$2.50$
+- **Money:** Buying 4 snacks that each cost \\$2.50 → $4 \\times$ \\$2.50
 - **Measuring:** Cutting $3.5$ yards of fabric two times over → $2 \\times 3.5$
 - **Cooking:** Making $1.5$ times a recipe
 
@@ -232,15 +232,15 @@ Pick the right product from each menu.`,
 
 Most decimal multiplication you'll ever do is about **money** and **measurement**. The steps are exactly the same — just remember the answer is in dollars or units.
 
-**Example:** You buy $3$ notebooks that cost $\\$2.75$ each. How much do you pay in total?
+**Example:** You buy $3$ notebooks that cost \\$2.75 each. How much do you pay in total?
 
-**Solve $3 \\times \\$2.75$:**
+**Solve $3 \\times$ \\$2.75:**
 
 - **Step 1:** $3 \\times 275 = 825$
 - **Step 2:** $2.75$ has $2$ decimal places, so the total is $2$ places
-- **Step 3:** $825 \\rightarrow \\$8.25$
+- **Step 3:** $825 \\rightarrow$ \\$8.25
 
-**Check with estimation:** $\\$2.75$ is about $\\$3$, and $3 \\times \\$3 = \\$9$. Our answer $\\$8.25$ is close to $\\$9$, so it makes sense! ✓
+**Check with estimation:** \\$2.75 is about \\$3, and $3 \\times 3 = 9$, i.e. \\$9. Our answer \\$8.25 is close to \\$9, so it makes sense! ✓
 
 > **Tip:** Always **estimate first**. If your real answer is far from your estimate, you probably put the decimal point in the wrong spot.`,
       },
@@ -251,7 +251,7 @@ Most decimal multiplication you'll ever do is about **money** and **measurement*
 
 Type your answer as a plain number (for money, just the number — for example, \`6.25\`).
 
-1. A bottle of juice costs $\\$1.25$. How much do **4** bottles cost? (Find $4 \\times 1.25$.)
+1. A bottle of juice costs \\$1.25. How much do **4** bottles cost? (Find $4 \\times 1.25$.)
 2. A ribbon is $2.5$ meters long. You need **3** of them. How many meters total? (Find $3 \\times 2.5$.)
 3. One bag of apples weighs $1.5$ kg. How much do **6** bags weigh? (Find $6 \\times 1.5$.)`,
         exercise: {

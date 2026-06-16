@@ -105,7 +105,7 @@ Sometimes the SAT gives you a ratio and one part, not the total.
 | Step | Work |
 |------|------|
 | Gallons needed | $480 ÷ 32 = 15$ gallons |
-| Cost | $15 × \\$3.60 = \\$54$ |`
+| Cost | $15 × 3.60 = 54$, i.e. \\$54 |`
     },
     {
       id: 'rp1-quiz2',

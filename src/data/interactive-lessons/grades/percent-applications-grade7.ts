@@ -124,7 +124,7 @@ $$\\text{Discount} = 0.20 \\times 50 = 10 \\qquad \\text{Final} = 50 - 10 = \\$4
 **Method 2 — Multiply by what is left (the shortcut):**
 $$50 \\times (1 - 0.20) = 50 \\times 0.80 = \\$40$$
 
-Both give **$\\$40$**. The shortcut, *original price* $\\times (1 - \\text{discount rate})$, is faster once you trust it.
+Both give **\\$40**. The shortcut, *original price* $\\times (1 - \\text{discount rate})$, is faster once you trust it.
     `
       },
       {
@@ -135,12 +135,12 @@ Both give **$\\$40$**. The shortcut, *original price* $\\times (1 - \\text{disco
 
 **Sales tax** is an *extra* amount added on top of the price. Because you pay $100\\%$ of the price **plus** the tax, you multiply by $(1 + \\text{tax rate})$.
 
-**Example — $\\$30$ item with $8\\%$ tax:**
+**Example — \\$30 item with $8\\%$ tax:**
 $$30 \\times (1 + 0.08) = 30 \\times 1.08 = \\$32.40$$
 
 A **tip** is money you give for good service, usually a percent of the bill. To find the tip *amount* by itself, just multiply:
 
-**Example — $15\\%$ tip on a $\\$40$ bill:**
+**Example — $15\\%$ tip on a \\$40 bill:**
 $$40 \\times 0.15 = \\$6$$
 
 | Situation | What you do | Multiplier |
@@ -156,7 +156,7 @@ $$40 \\times 0.15 = \\$6$$
         content: `
 **Your Turn** ✏️
 
-A jacket costs $\\$60$ and is on sale for $25\\%$ off. Work through it step by step.
+A jacket costs \\$60 and is on sale for $25\\%$ off. Work through it step by step.
 
 - **Box 1:** The discount amount: $0.25 \\times 60 = ?$ (dollars)
 - **Box 2:** The sale price: $60 - \\text{discount} = ?$ (dollars)
@@ -261,12 +261,12 @@ Real receipts often combine several steps. Read carefully and figure out whether
 
 ## Maya's Restaurant Bill
 
-Maya and her friends order food that comes to a **$\\$40$ bill**. Their server is great, so they leave a **$20\\%$ tip**. To find the *total* Maya pays, she needs two pieces:
+Maya and her friends order food that comes to a **\\$40 bill**. Their server is great, so they leave a **$20\\%$ tip**. To find the *total* Maya pays, she needs two pieces:
 
-1. The **tip amount**: $40 \\times 0.20 = \\$8$
-2. The **total**: bill + tip $= 40 + 8 = \\$48$
+1. The **tip amount**: $40 \\times 0.20 = 8$, i.e. \\$8
+2. The **total**: bill + tip $= 40 + 8 = 48$, i.e. \\$48
 
-Notice this is the same idea as tax — money added *on top* — so the shortcut $40 \\times 1.20 = \\$48$ also works. 🍽️
+Notice this is the same idea as tax — money added *on top* — so the shortcut $40 \\times 1.20 = 48$, i.e. \\$48 also works. 🍽️
     `
       },
       {
@@ -275,7 +275,7 @@ Notice this is the same idea as tax — money added *on top* — so the shortcut
         content: `
 **Word Problem Practice** ✏️
 
-A video game normally costs $\\$80$. During a sale it is $15\\%$ off, and then $5\\%$ sales tax is added to the **sale price**.
+A video game normally costs \\$80. During a sale it is $15\\%$ off, and then $5\\%$ sales tax is added to the **sale price**.
 
 - **Box 1:** The sale price: $80 \\times 0.85 = ?$ (dollars)
 - **Box 2:** The tax on the sale price: $0.05 \\times \\text{sale price} = ?$ (dollars)
@@ -335,9 +335,9 @@ You now have a full toolkit for percent applications. Here is everything in one 
 | Application | Formula | Quick Example |
 |-------------|---------|---------------|
 | **Percent of a number** | $\\text{Percent} \\times \\text{Whole}$ | $0.25 \\times 80 = 20$ |
-| **Discount** | $\\text{Price} \\times (1 - \\text{rate})$ | $50 \\times 0.80 = \\$40$ |
-| **Tax** | $\\text{Price} \\times (1 + \\text{rate})$ | $30 \\times 1.08 = \\$32.40$ |
-| **Tip (amount)** | $\\text{Bill} \\times \\text{rate}$ | $40 \\times 0.15 = \\$6$ |
+| **Discount** | $\\text{Price} \\times (1 - \\text{rate})$ | $50 \\times 0.80 = 40$, i.e. \\$40 |
+| **Tax** | $\\text{Price} \\times (1 + \\text{rate})$ | $30 \\times 1.08 = 32.40$, i.e. \\$32.40 |
+| **Tip (amount)** | $\\text{Bill} \\times \\text{rate}$ | $40 \\times 0.15 = 6$, i.e. \\$6 |
 | **Percent change** | $\\frac{\\text{New} - \\text{Original}}{\\text{Original}} \\times 100\\%$ | $\\frac{13 - 10}{10} \\times 100\\% = 30\\%$ |
 
 **Remember the direction:** discounts go **down** ($1 - \\text{rate}$), while tax and tips go **up** ($1 + \\text{rate}$). Percent change is **positive** for an increase and **negative** for a decrease. Now show what you know! 💪

@@ -272,7 +272,7 @@ Patterns show up everywhere! Word problems often hide an add-or-subtract pattern
 | 3 | \\$20 |
 | 4 | \\$25 |
 
-The rule is **add 5** each week. So in Week 5 she will have $25 + 5 = \\$30$.
+The rule is **add 5** each week. So in Week 5 she will have $25 + 5 = 30$, giving \\$30.
 
 > 💡 Reading a word problem? Look for the **starting number** and the **amount it changes each time**. Those two facts give you the whole pattern.`,
       },

@@ -75,7 +75,7 @@ Concentration drops below $5\\text{ mg/L}$ after about $8$ hours.
 
 ### Comparison Example
 
-> **Investment A: $\\$10{,}000$ at $5\\%$ compounded annually. Investment B: $\\$8{,}000$ at $6\\%$ compounded continuously. When does B overtake A?**
+> **Investment A: \\$10,000 at $5\\%$ compounded annually. Investment B: \\$8,000 at $6\\%$ compounded continuously. When does B overtake A?**
 
 $A(t) = 10000(1.05)^t$
 

@@ -54,7 +54,7 @@ $$\\dots,\\; -3,\\; -2,\\; -1,\\; 0,\\; 1,\\; 2,\\; 3,\\; \\dots$$
 | $-3.5$ | has a decimal part |
 | $\\sqrt{2}$ | is irrational ($\\approx 1.414\\dots$) |
 
-> 💡 **Where they show up:** temperatures below zero ($-8^\\circ$), elevation below sea level ($-200$ ft), money you owe (a $-\\$50$ balance), and yardage lost in football.`,
+> 💡 **Where they show up:** temperatures below zero ($-8^\\circ$), elevation below sea level ($-200$ ft), money you owe (a -\\$50 balance), and yardage lost in football.`,
       },
       {
         id: 'owi1-numberline',

@@ -213,13 +213,13 @@ The unit rate is **$60$ miles per hour** (often written $60$ mph). That means in
       {
         id: 'rur2-worked2',
         type: 'text' as const,
-        content: `### Worked Example: $\\$6$ for $3$ pounds of apples
+        content: `### Worked Example: \\$6 for $3$ pounds of apples
 
 Divide dollars by pounds:
 
-$$\\frac{\\$6}{3 \\text{ lb}} = \\frac{6 \\div 3}{3 \\div 3} = \\frac{\\$2}{1 \\text{ lb}}$$
+$$\\frac{6}{3} = \\frac{6 \\div 3}{3 \\div 3} = \\frac{2}{1}$$
 
-The unit rate is **\\$2 per pound**. This is also called the **unit price** — the cost of exactly one pound.
+so \\$6 for $3$ lb gives \\$2 per $1$ lb. The unit rate is **\\$2 per pound**. This is also called the **unit price** — the cost of exactly one pound.
 
 ### Worked Example: $45$ words in $5$ minutes
 
@@ -239,7 +239,7 @@ The unit rate is **$9$ words per minute**.
 Divide the top by the bottom. Enter just the number for each unit rate.
 
 **1)** $\\dfrac{84 \\text{ miles}}{4 \\text{ hours}} = \\,?$ miles per hour
-**2)** $\\dfrac{\\$20}{5 \\text{ shirts}} = \\$\\,?$ per shirt
+**2)** $\\dfrac{20}{5} = \\,?$ &nbsp; (\\$20 for $5$ shirts, in \\$ per shirt)
 **3)** $\\dfrac{144 \\text{ beats}}{2 \\text{ minutes}} = \\,?$ beats per minute`,
         exercise: {
           boxes: 3,
@@ -308,16 +308,16 @@ When you shop, the **lower unit price** is the better deal (you pay less for eac
 
 ### Worked Example
 
-- **Store A:** $12$ granola bars for $\\$6$
-- **Store B:** $8$ granola bars for $\\$4.80$
+- **Store A:** $12$ granola bars for \\$6
+- **Store B:** $8$ granola bars for \\$4.80
 
 Find each **unit price** (dollars per bar) by dividing cost by quantity:
 
-$$\\text{Store A: } \\frac{\\$6}{12} = \\$0.50 \\text{ per bar}$$
+$$\\text{Store A: } \\frac{6}{12} = 0.50 \\text{ per bar}$$
 
-$$\\text{Store B: } \\frac{\\$4.80}{8} = \\$0.60 \\text{ per bar}$$
+$$\\text{Store B: } \\frac{4.80}{8} = 0.60 \\text{ per bar}$$
 
-Since $\\$0.50 < \\$0.60$, **Store A is the better buy** — each bar costs less.
+That is \\$0.50 per bar vs. \\$0.60 per bar. Since \\$0.50 is less than \\$0.60, **Store A is the better buy** — each bar costs less.
 
 > 💡 **Golden rule for shopping:** lower dollars-per-item = better deal. (For *speed* or *production*, you usually want the **higher** unit rate instead — more done per unit of time.)`,
       },
@@ -398,8 +398,8 @@ Decide whether you want the unit rate to be **bigger** or **smaller** to "win."`
 
 Find each unit price, then answer.
 
-**1)** $6$ pens for $\\$3$. Unit price $= \\$\\,?$ per pen.
-**2)** $10$ pens for $\\$4$. Unit price $= \\$\\,?$ per pen *(decimal)*.
+**1)** $6$ pens for \\$3. Unit price $= \\,?$ &nbsp; (in \\$ per pen).
+**2)** $10$ pens for \\$4. Unit price $= \\,?$ &nbsp; (in \\$ per pen, *decimal*).
 **3)** Which pack is the better buy — type **1** or **2**?`,
         exercise: {
           boxes: 3,
@@ -439,9 +439,11 @@ $$\\text{total} = \\text{unit rate} \\times \\text{number of units}$$
 
 ### Worked Example
 
-Apples cost $\\$2$ per pound. How much for $7$ pounds?
+Apples cost \\$2 per pound. How much for $7$ pounds?
 
-$$\\$2 \\text{ per lb} \\times 7 \\text{ lb} = \\$14$$
+$$2 \\text{ per lb} \\times 7 \\text{ lb} = 14$$
+
+so the total is \\$14.
 
 ### Worked Example
 
@@ -489,9 +491,9 @@ $$\\frac{180 \\text{ miles}}{60 \\text{ mph}} = 3 \\text{ hours}$$
 
 ### Worked Example
 
-Stickers cost $\\$0.25$ each. How many can you buy with $\\$2.00$?
+Stickers cost \\$0.25 each. How many can you buy with \\$2.00?
 
-$$\\frac{\\$2.00}{\\$0.25 \\text{ per sticker}} = 8 \\text{ stickers}$$
+$$\\frac{2.00}{0.25 \\text{ per sticker}} = 8 \\text{ stickers}$$
 
 > ⚠️ **Check your units!** When you *multiply* a unit rate by units, the bottom unit cancels and you get a total. When you *divide* a total by a unit rate, you get back a number of units.`,
       },
@@ -520,7 +522,7 @@ For each problem, decide the operation and the answer. Use the unit rate given.`
         content: `**Put It to Work** 🧮
 
 **1)** A faucet fills $4$ liters per minute. How many liters in $9$ minutes? $\\,?$ L
-**2)** Oranges cost $\\$3$ per bag. How many bags for $\\$18$? $\\,?$ bags
+**2)** Oranges cost \\$3 per bag. How many bags for \\$18? $\\,?$ bags
 **3)** A train travels $80$ miles per hour. How long to go $400$ miles? $\\,?$ hours`,
         exercise: {
           boxes: 3,
@@ -591,9 +593,9 @@ You can now (1) tell a rate from a ratio, (2) find a unit rate, (3) compare deal
         type: 'input-boxes' as const,
         content: `**One More Set** 🧮
 
-**1)** $\\$1.50$ for $5$ apples. Unit price $= \\$\\,?$ per apple *(decimal)*.
+**1)** \\$1.50 for $5$ apples. Unit price $= \\,?$ &nbsp; (in \\$ per apple, *decimal*).
 **2)** At $7$ pages per minute, pages read in $6$ minutes $= \\,?$ pages.
-**3)** Pack X: $4$ for $\\$1.00$ ($\\$0.25$ each). Pack Y: $10$ for $\\$2.00$ ($\\$0.20$ each). Which is the better buy — type **X** or **Y**?`,
+**3)** Pack X: $4$ for \\$1.00 (\\$0.25 each). Pack Y: $10$ for \\$2.00 (\\$0.20 each). Which is the better buy — type **X** or **Y**?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['0.3', '42', 'Y'],

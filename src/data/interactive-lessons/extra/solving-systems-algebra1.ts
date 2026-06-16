@@ -547,7 +547,7 @@ You can now solve systems by **graphing**, **substitution**, and **elimination**
 
 ### Worked Example — Tickets
 
-A theater sells **adult tickets for \\$8** and **child tickets for \\$5**. One night they sold **200 tickets** for a total of **\\$1{,}300**. How many of each?
+A theater sells **adult tickets for \\$8** and **child tickets for \\$5**. One night they sold **200 tickets** for a total of **\\$1,300**. How many of each?
 
 Let $a = $ adult tickets, $c = $ child tickets:
 

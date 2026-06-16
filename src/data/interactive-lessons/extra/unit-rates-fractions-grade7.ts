@@ -83,9 +83,11 @@ To turn any rate into a unit rate, **divide the first quantity by the second**:
 
 $$\\text{unit rate} = \\frac{\\text{first quantity}}{\\text{second quantity}}$$
 
-### Example: $\\$6$ for $3$ pounds of apples
+### Example: \\$6 for $3$ pounds of apples
 
-$$\\frac{\\$6}{3 \\text{ lb}} = \\frac{\\$2}{1 \\text{ lb}} = \\$2 \\text{ per pound}$$
+$$\\frac{6}{3 \\text{ lb}} = \\frac{2}{1 \\text{ lb}} = 2 \\text{ per pound}$$
+
+i.e. \\$2 per pound
 
 ### Example: $150$ words in $5$ minutes
 
@@ -121,7 +123,7 @@ $$\\frac{150 \\text{ words}}{5 \\text{ min}} = \\frac{30 \\text{ words}}{1 \\tex
 
 Divide the first quantity by the second. Enter just the number.
 
-**1)** $\\$20$ for $5$ notebooks $\\;\\Rightarrow\\;$ dollars per notebook $= \\,?$
+**1)** \\$20 for $5$ notebooks $\\;\\Rightarrow\\;$ dollars per notebook $= \\,?$
 **2)** $240$ words in $4$ minutes $\\;\\Rightarrow\\;$ words per minute $= \\,?$
 **3)** $36$ students on $3$ buses $\\;\\Rightarrow\\;$ students per bus $= \\,?$`,
         exercise: {
@@ -405,14 +407,18 @@ To find the **better deal**, compute the price **per one unit** for each option,
 
 ### Example: which is cheaper per pound?
 
-- **Option A:** $\\$3$ for $\\dfrac{3}{4}$ pound
-- **Option B:** $\\$5$ for $\\dfrac{5}{4}$ pound
+- **Option A:** \\$3 for $\\dfrac{3}{4}$ pound
+- **Option B:** \\$5 for $\\dfrac{5}{4}$ pound
 
-$$\\text{A: } \\frac{\\$3}{3/4} = 3 \\div \\frac{3}{4} = 3 \\times \\frac{4}{3} = \\frac{12}{3} = \\$4 \\text{ per lb}$$
+$$\\text{A: } \\frac{3}{3/4} = 3 \\div \\frac{3}{4} = 3 \\times \\frac{4}{3} = \\frac{12}{3} = 4 \\text{ per lb}$$
 
-$$\\text{B: } \\frac{\\$5}{5/4} = 5 \\div \\frac{5}{4} = 5 \\times \\frac{4}{5} = \\frac{20}{5} = \\$4 \\text{ per lb}$$
+so \\$4 per lb.
 
-> 💡 They cost the **same** per pound — $\\$4$ each! A bigger price tag doesn't mean a worse deal until you check the **unit price**.`,
+$$\\text{B: } \\frac{5}{5/4} = 5 \\div \\frac{5}{4} = 5 \\times \\frac{4}{5} = \\frac{20}{5} = 4 \\text{ per lb}$$
+
+so \\$4 per lb.
+
+> 💡 They cost the **same** per pound — \\$4 each! A bigger price tag doesn't mean a worse deal until you check the **unit price**.`,
       },
       {
         id: 'urf4-mc',
@@ -477,7 +483,7 @@ A factory robot paints $\\dfrac{3}{5}$ of a car in $\\dfrac{1}{4}$ hour.`,
         content: `**Apply It** 🧮
 
 **1)** A pipe fills $\\dfrac{1}{4}$ of a tank in $\\dfrac{1}{8}$ hour. Tanks per hour $= \\,?$  *(whole number)*
-**2)** Sugar costs $\\$2$ for $\\dfrac{2}{3}$ pound. Dollars **per pound** $= \\,?$  *(whole number)*
+**2)** Sugar costs \\$2 for $\\dfrac{2}{3}$ pound. Dollars **per pound** $= \\,?$  *(whole number)*
 **3)** A runner goes $\\dfrac{1}{2}$ mile in $\\dfrac{1}{12}$ hour. Speed in miles per hour $= \\,?$  *(whole number)*`,
         exercise: {
           boxes: 3,
@@ -551,7 +557,7 @@ Enter a fraction (like \`5/2\`) or a whole number.
 
 **1)** $\\dfrac{4}{5} \\div \\dfrac{2}{5} = \\,?$
 **2)** $\\dfrac{5}{6}$ liter in $\\dfrac{1}{3}$ hour $\\;\\Rightarrow\\;$ liters per hour $= \\,?$
-**3)** $\\$4$ for $\\dfrac{2}{3}$ pound $\\;\\Rightarrow\\;$ dollars per pound $= \\,?$`,
+**3)** \\$4 for $\\dfrac{2}{3}$ pound $\\;\\Rightarrow\\;$ dollars per pound $= \\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['2', '5/2', '6'],

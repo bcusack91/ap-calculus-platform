@@ -518,9 +518,9 @@ Which measure best describes the "typical" value? It depends on the data.
 
 **Classic example — house prices on a street:**
 
-$$\\$180\\text{k},\\; \\$190\\text{k},\\; \\$200\\text{k},\\; \\$210\\text{k},\\; \\$5{,}000\\text{k}$$
+\\$180k, \\$190k, \\$200k, \\$210k, \\$5,000k
 
-That one mansion is an outlier. The **mean** ($\\approx \\$1{,}156\\text{k}$) makes the street look far pricier than it is; the **median** ($\\$200\\text{k}$) describes a typical home much better.
+That one mansion is an outlier. The **mean** (about \\$1,156k) makes the street look far pricier than it is; the **median** (\\$200k) describes a typical home much better.
 
 > ⚠️ Outliers wreck the mean but not the median. When income, home prices, or any data has extreme values, the **median** is usually the fairer summary.`,
       },

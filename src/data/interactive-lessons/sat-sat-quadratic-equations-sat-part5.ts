@@ -85,8 +85,8 @@ This is a common SAT word problem pattern that combines quadratics with real-wor
 | Revenue | $R = (20 + 2x)(200 - 10x)$ |
 | Expand | $R = 4000 - 200x + 400x - 20x^2 = -20x^2 + 200x + 4000$ |
 | Vertex | $x = -200/(2(-20)) = 5$ |
-| Optimal price | $20 + 2(5) = \\$30$ |
-| Max revenue | $R = -20(25) + 200(5) + 4000 = \\$4500$ |
+| Optimal price | $20 + 2(5) = 30$, i.e. \\$30 |
+| Max revenue | $R = -20(25) + 200(5) + 4000 = 4500$, i.e. \\$4500 |
 
 ### Worked Example 3
 

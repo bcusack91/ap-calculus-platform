@@ -129,7 +129,7 @@ $$ab^t = c \\implies b^t = \\frac{c}{a} \\implies t = \\frac{\\ln(c/a)}{\\ln b}$
       content: `
 **Multi-Skill Drill** 🧮
 
-**1)** An investment grows as $A = 2000e^{0.06t}$. How many years to reach $\\$6{,}000$? Round to one decimal. (e.g., $1000e^{0.05t} = 3000$: $t = \\frac{\\ln 3}{0.05} = \\frac{1.099}{0.05} = 22.0$ years)
+**1)** An investment grows as $A = 2000e^{0.06t}$. How many years to reach \\$6,000? Round to one decimal. (e.g., $1000e^{0.05t} = 3000$: $t = \\frac{\\ln 3}{0.05} = \\frac{1.099}{0.05} = 22.0$ years)
 
 **2)** Condense: $2\\log x - \\frac{1}{2}\\log y$. Write the coefficient on $y$ when the expression equals $\\log\\left(\\frac{x^a}{y^b}\\right)$. What is $b$ as a fraction? (e.g., $3\\log x - 2\\log y = \\log(x^3/y^2)$, so $b = 2$)
 

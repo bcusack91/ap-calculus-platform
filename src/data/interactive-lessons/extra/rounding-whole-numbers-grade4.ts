@@ -39,7 +39,7 @@ export const parts: LessonData[] = [
 You don't always need an exact number. When a number is *close enough* to be useful, we **round** it.
 
 - A stadium holds $48{,}273$ people. The newspaper says **"about $48{,}000$ fans."**
-- A school raised $\\$1{,}962$. The principal announces **"nearly $\\$2{,}000$!"**
+- A school raised \\$1,962. The principal announces **"nearly \\$2,000!"**
 - A road trip is $311$ miles. Mom says **"around $300$ miles."**
 
 Each rounded number is easier to say, remember, and picture — and it's still honest, because it stays close to the real value.

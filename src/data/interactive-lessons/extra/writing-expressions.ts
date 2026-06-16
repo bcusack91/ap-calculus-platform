@@ -484,7 +484,7 @@ Let $t$ = the **number of tickets** bought. Then the total cost in dollars is:
 
 $$8t$$
 
-If $t = 3$ tickets, the cost is $8 \\cdot 3 = \\$24$. The expression $8t$ works for *any* number of tickets.
+If $t = 3$ tickets, the cost is $8 \\cdot 3 = 24$, i.e. \\$24. The expression $8t$ works for *any* number of tickets.
 
 ### Example: a pizza split equally among friends
 
@@ -528,13 +528,13 @@ $$\\dfrac{12}{f}\\ \\text{slices}$$
 
 | Situation | Variable means | Expression |
 |-----------|----------------|------------|
-| $\\$8$ per ticket | $t$ = tickets | $8t$ |
+| \\$8 per ticket | $t$ = tickets | $8t$ |
 | Started with $20$, spent some | $x$ = amount spent | $20 - x$ |
 | $5$ more than her age | $a$ = her age | $a + 5$ |
 | $36$ cookies shared equally | $k$ = kids | $\\dfrac{36}{k}$ |
 | Twice as far as before | $d$ = old distance | $2d$ |
 
-> ⚠️ **"Per," "each," and "every" almost always mean multiply.** "$\\$8$ per ticket × $t$ tickets" → $8t$. But "shared among / split equally" means **divide**.`,
+> ⚠️ **"Per," "each," and "every" almost always mean multiply.** "\\$8 per ticket × $t$ tickets" → $8t$. But "shared among / split equally" means **divide**.`,
       },
       {
         id: 'we4-realworld-dropdown',

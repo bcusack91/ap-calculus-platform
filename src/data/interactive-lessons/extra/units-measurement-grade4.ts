@@ -405,7 +405,7 @@ Find the total value in **cents**.
 
 **1)** $4$ quarters $= \\,?$ cents
 **2)** $2$ dimes and $1$ nickel $= \\,?$ cents
-**3)** $\\$2 = \\,?$ cents`,
+**3)** \\$2 $= \\,?$ cents`,
         exercise: {
           boxes: 3,
           correctAnswers: ['100', '25', '200'],

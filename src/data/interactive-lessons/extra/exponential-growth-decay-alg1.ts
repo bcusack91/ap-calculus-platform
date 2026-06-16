@@ -235,7 +235,7 @@ Write the growth factor $b = 1 + r$ for each percent increase. *(Enter a decimal
 
 To model growth, plug the **start** into $a$ and the **factor** into $b$.
 
-### Example: A \\$2{,}000 deposit earns $4\\%$ interest per year.
+### Example: A \\$2,000 deposit earns $4\\%$ interest per year.
 
 - Initial value: $a = 2000$
 - Growth rate: $r = 0.04$, so $b = 1.04$
@@ -283,7 +283,7 @@ $$y = 50(1.20)^{x}$$
         type: 'input-boxes' as const,
         content: `**Evaluate the Growth Model** 🧮
 
-Use $y = 2000(1.04)^{x}$ (the \\$2{,}000 deposit at $4\\%$).
+Use $y = 2000(1.04)^{x}$ (the \\$2,000 deposit at $4\\%$).
 
 **1)** Balance after $0$ years:   $y = \\,?$
 **2)** Balance after $1$ year:   $y = \\,?$
@@ -383,7 +383,7 @@ Decide from the base $b$. Remember: $b > 1$ grows, $0 < b < 1$ decays.`,
         type: 'text' as const,
         content: `## Building a Decay Equation
 
-### Example: A \\$24{,}000 car loses $15\\%$ of its value each year.
+### Example: A \\$24,000 car loses $15\\%$ of its value each year.
 
 - Initial value: $a = 24000$
 - Decay rate: $r = 0.15$, so $b = 1 - 0.15 = 0.85$

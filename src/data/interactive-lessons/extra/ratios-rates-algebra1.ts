@@ -181,7 +181,7 @@ $$\\frac{\\$6}{3 \\text{ lb}} = \\frac{\\$2}{1 \\text{ lb}} = \\$2 \\text{ per p
 Divide the top quantity by the bottom quantity. Enter just the number.
 
 **1)** $150$ miles in $3$ hours $= \\,?$ miles per hour
-**2)** $\\$12$ for $4$ notebooks $= \\,?$ dollars per notebook
+**2)** \\$12 for $4$ notebooks $= \\,?$ dollars per notebook
 **3)** $90$ words in $2$ minutes $= \\,?$ words per minute`,
         exercise: {
           boxes: 3,
@@ -201,10 +201,10 @@ Unit rates let you compare options that come in different sizes — the "better 
 
 ### Example: Which juice is cheaper?
 
-- Brand A: $\\$3.00$ for $24$ oz $\\;\\Rightarrow\\; 3.00 \\div 24 = \\$0.125$ per oz
-- Brand B: $\\$4.50$ for $40$ oz $\\;\\Rightarrow\\; 4.50 \\div 40 = \\$0.1125$ per oz
+- Brand A: \\$3.00 for $24$ oz $\\;\\Rightarrow\\; 3.00 \\div 24 = 0.125$, i.e. \\$0.125 per oz
+- Brand B: \\$4.50 for $40$ oz $\\;\\Rightarrow\\; 4.50 \\div 40 = 0.1125$, i.e. \\$0.1125 per oz
 
-Brand B costs **less per ounce** ($\\$0.1125 < \\$0.125$), so **Brand B is the better buy**.
+Brand B costs **less per ounce** (\\$0.1125 $<$ \\$0.125), so **Brand B is the better buy**.
 
 > ⚠️ Always compare the **same** unit. A lower total price is *not* always the better deal — compare price **per ounce** (or per item), never just the sticker price.`,
       },
@@ -426,7 +426,7 @@ Cross-multiply: $3x = 2 \\cdot 12 = 24$, so $x = 8$ cups.
 
 Set up a proportion (units lined up!) and solve. Enter just the number.
 
-**1)** $4$ apples cost $\\$3$. How much do $12$ apples cost (in dollars)?
+**1)** $4$ apples cost \\$3. How much do $12$ apples cost (in dollars)?
 **2)** A car goes $60$ miles in $1$ hour. How far in $3.5$ hours? (miles)
 **3)** A scale model is $1\\,\\text{cm} = 4\\,\\text{m}$. A wall is $20\\,\\text{m}$ tall. How tall is the model (cm)?`,
         exercise: {

@@ -224,7 +224,7 @@ $$\\frac{120 \\text{ miles}}{2 \\text{ hours}} = \\frac{60 \\text{ miles}}{1 \\t
 
 Divide the top quantity by the bottom to get the "per $1$" rate.
 
-**1)** $\\$45$ for $5$ tickets $=\\$\\,?$ per ticket
+**1)** \\$45 for $5$ tickets $=$ \\$? per ticket
 **2)** $360$ km in $4$ hours $=\\,?$ km/h
 **3)** $84$ heartbeats in $60$ seconds $=\\,?$ beats per second  *(decimal is fine)*`,
         exercise: {
@@ -245,14 +245,14 @@ A **unit price** is a unit rate for cost: **dollars per single item or per unit 
 
 ### Example: Which is the better buy?
 
-- **Option A:** $12$ granola bars for $\\$4.80$
-- **Option B:** $8$ granola bars for $\\$3.60$
+- **Option A:** $12$ granola bars for \\$4.80
+- **Option B:** $8$ granola bars for \\$3.60
 
 Find each unit price by dividing **cost ÷ quantity**:
 
-$$\\text{A: } \\frac{\\$4.80}{12} = \\$0.40 \\text{ per bar} \\qquad \\text{B: } \\frac{\\$3.60}{8} = \\$0.45 \\text{ per bar}$$
+$$\\text{A: } \\frac{4.80}{12} = 0.40 \\text{ per bar} \\qquad \\text{B: } \\frac{3.60}{8} = 0.45 \\text{ per bar}$$
 
-Option **A** costs less per bar ($\\$0.40 < \\$0.45$), so **A is the better buy**.
+So A is \\$0.40 per bar and B is \\$0.45 per bar. Option **A** costs less per bar (\\$0.40 < \\$0.45), so **A is the better buy**.
 
 > ⚠️ **Bigger package $\\ne$ always cheaper.** Always reduce to the *per-unit* price before deciding — that's the only fair comparison.`,
       },
@@ -384,13 +384,13 @@ Cross-multiply, then divide. Enter the value of $x$.
 
 The hardest part of a word problem is *setting it up*. The trick: **keep the same units lined up** — top with top, bottom with bottom.
 
-### Example: $3$ pencils cost $\\$1.20$. How much do $7$ pencils cost?
+### Example: $3$ pencils cost \\$1.20. How much do $7$ pencils cost?
 
 Set up "pencils over dollars" on both sides:
 
-$$\\frac{3 \\text{ pencils}}{\\$1.20} = \\frac{7 \\text{ pencils}}{\\$x}$$
+$$\\frac{3 \\text{ pencils}}{1.20 \\text{ dollars}} = \\frac{7 \\text{ pencils}}{x \\text{ dollars}}$$
 
-Cross-multiply: $\\;3x = 1.20 \\cdot 7 = 8.40$, so $x = 8.40 \\div 3 = \\$2.80$.
+Cross-multiply: $\\;3x = 1.20 \\cdot 7 = 8.40$, so $x = 8.40 \\div 3 = 2.80$, giving \\$2.80.
 
 > ⚠️ **Line up the units!** If pencils are on top on the left, pencils must be on top on the right. Flipping one side gives the wrong answer.`,
       },
@@ -399,7 +399,7 @@ Cross-multiply: $\\;3x = 1.20 \\cdot 7 = 8.40$, so $x = 8.40 \\div 3 = \\$2.80$.
         type: 'dropdown-select' as const,
         content: `**Set It Up and Solve** 🔽
 
-If $4$ notebooks cost $\\$10$, how much do $10$ notebooks cost?`,
+If $4$ notebooks cost \\$10, how much do $10$ notebooks cost?`,
         exercise: {
           dropdowns: [
             { label: 'Correct setup (notebooks/dollars):', options: ['$\\dfrac{4}{10} = \\dfrac{10}{x}$', '$\\dfrac{4}{10} = \\dfrac{x}{10}$', '$\\dfrac{10}{4} = \\dfrac{10}{x}$', '$\\dfrac{4}{x} = \\dfrac{10}{10}$'] },
@@ -581,7 +581,7 @@ You can now (1) write and simplify ratios, (2) find unit rates and the best buy,
         content: `**Mixed Practice** 🧮
 
 **1)** Simplify the ratio $24:36$ to lowest terms. Enter as a fraction like \`a/b\`.
-**2)** $\\$7.50$ for $6$ apples is how many dollars per apple?  *(decimal)*
+**2)** \\$7.50 for $6$ apples is how many dollars per apple?  *(decimal)*
 **3)** Solve $\\dfrac{x}{18} = \\dfrac{5}{6}$ for $x$.`,
         exercise: {
           boxes: 3,

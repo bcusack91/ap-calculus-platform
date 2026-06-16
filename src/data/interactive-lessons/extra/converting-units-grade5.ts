@@ -120,8 +120,8 @@ You will work with **two systems** of measurement this year.
 
 Remember the money idea: a smaller unit means a **bigger** number for the same amount. There are $4$ quarters in $1$ dollar.
 
-**1)** How many quarters are in $\\$3$? $\\,?$ quarters
-**2)** How many quarters are in $\\$5$? $\\,?$ quarters
+**1)** How many quarters are in \\$3? $\\,?$ quarters
+**2)** How many quarters are in \\$5? $\\,?$ quarters
 **3)** If you have $12$ quarters, how many dollars is that? $\\,?$ dollars`,
         exercise: {
           boxes: 3,

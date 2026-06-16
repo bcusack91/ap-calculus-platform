@@ -83,7 +83,7 @@ $$\\text{Total parts} = 7 \\implies \\text{each part} = 5 \\implies \\text{red} 
 
 The median is the 3rd value: $x = 9$.
 
-**Problem 4:** A sweater costs $\\$64$ after a $20\\%$ discount. Original price?
+**Problem 4:** A sweater costs \\$64 after a $20\\%$ discount. Original price?
 
 $$0.80P = 64 \\implies P = 80$$
       `

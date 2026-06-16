@@ -237,16 +237,16 @@ Unit rates let you compare options fairly. The smaller cost-per-item is the **be
 
 ### Example: which is the better deal?
 
-- **Brand A:** $\\$6$ for $4$ pounds
-- **Brand B:** $\\$10$ for $8$ pounds
+- **Brand A:** \\$6 for $4$ pounds
+- **Brand B:** \\$10 for $8$ pounds
 
 Find the price **per pound** for each:
 
-$$\\text{Brand A} = \\frac{\\$6}{4 \\text{ lb}} = \\$1.50 \\text{ per lb}$$
+Brand A: $\\dfrac{6}{4} = 1.50$, i.e. \\$1.50 per lb
 
-$$\\text{Brand B} = \\frac{\\$10}{8 \\text{ lb}} = \\$1.25 \\text{ per lb}$$
+Brand B: $\\dfrac{10}{8} = 1.25$, i.e. \\$1.25 per lb
 
-Brand B costs less per pound ($\\$1.25 < \\$1.50$), so **Brand B is the better buy**.
+Brand B costs less per pound (\\$1.25 < \\$1.50), so **Brand B is the better buy**.
 
 > 💡 To compare two deals, always reduce each to the **same unit rate** (here, dollars per pound). Whichever number is lower wins.`,
       },
@@ -257,9 +257,9 @@ Brand B costs less per pound ($\\$1.25 < \\$1.50$), so **Brand B is the better b
 
 Divide the first quantity by the second. Enter a number (decimals are fine).
 
-**1)** $\\$45$ for $9$ shirts $\\Rightarrow$ dollars per shirt $= \\,?$
+**1)** \\$45 for $9$ shirts $\\Rightarrow$ dollars per shirt $= \\,?$
 **2)** $360$ words typed in $6$ minutes $\\Rightarrow$ words per minute $= \\,?$
-**3)** $\\$7.50$ for $5$ pounds of apples $\\Rightarrow$ dollars per pound $= \\,?$`,
+**3)** \\$7.50 for $5$ pounds of apples $\\Rightarrow$ dollars per pound $= \\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['5', '60', '1.5'],
@@ -526,7 +526,7 @@ Cross multiply and solve for the variable. Enter just the number.
 
 Set up a proportion, then solve. Enter just the number.
 
-**1)** If $3$ notebooks cost $\\$12$, how much do $7$ notebooks cost? (dollars)
+**1)** If $3$ notebooks cost \\$12, how much do $7$ notebooks cost? (dollars)
 **2)** A map uses $1$ inch for every $25$ miles. How many miles is $4$ inches? (miles)`,
         exercise: {
           boxes: 2,

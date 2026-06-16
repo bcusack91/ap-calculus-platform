@@ -80,11 +80,11 @@ A **unit rate** expresses a ratio per **one** unit of the second quantity.
 
 $$\\text{Rate} = \\frac{210}{3.5} = 60 \\text{ mph}$$
 
-**Example 6 — Unit price:** A 12-pack of soda costs $\\$4.80$. Price per can?
+**Example 6 — Unit price:** A 12-pack of soda costs \\$4.80. Price per can?
 
 $$\\frac{4.80}{12} = \\$0.40 \\text{ per can}$$
 
-**Example 7 — Better deal:** Store A sells $5$ lb of apples for $\\$6.25$. Store B sells $3$ lb for $\\$3.45$. Which is cheaper per pound?
+**Example 7 — Better deal:** Store A sells $5$ lb of apples for \\$6.25. Store B sells $3$ lb for \\$3.45. Which is cheaper per pound?
 
 $$A: \\frac{6.25}{5} = \\$1.25/\\text{lb} \\qquad B: \\frac{3.45}{3} = \\$1.15/\\text{lb}$$
 

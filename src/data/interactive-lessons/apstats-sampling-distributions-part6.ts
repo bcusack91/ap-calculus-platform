@@ -117,13 +117,13 @@ $$P(\\hat{p} < 0.20) = P(Z < -1.63) = 0.0516$$
       content: `
 **Multi-Step Practice** 🧮
 
-The mean household income in a city is $\\mu = \\$65{,}000$ with $\\sigma = \\$15{,}000$. A random sample of 225 households is drawn.
+The mean household income in a city is $\\mu =$ \\$65,000 with $\\sigma =$ \\$15,000. A random sample of 225 households is drawn.
 
 **1)** What is the standard error of $\\bar{x}$?
 
-**2)** What is the $z$-score for $\\bar{x} = \\$67{,}000$?
+**2)** What is the $z$-score for $\\bar{x} =$ \\$67,000?
 
-**3)** What is $P(\\bar{x} > \\$67{,}000)$? (Use $P(Z > 2) = 0.0228$)
+**3)** What is $P(\\bar{x} > 67{,}000)$ for $\\bar{x}$ in dollars (i.e. \\$67,000)? (Use $P(Z > 2) = 0.0228$)
       `,
       exercise: {
         inputs: [

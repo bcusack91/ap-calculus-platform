@@ -884,10 +884,10 @@ T(x) = \\begin{cases}
 \\end{cases}
 $$
 
-- The first \\$10{,}000 is taxed at $10\\%$: that's at most $0.10 \\times 10000 = \\$1000$.
-- Every dollar **above** \\$10{,}000 is taxed at $20\\%$, and the constant $1000$ carries over the tax already owed on the first bracket.
+- The first \\$10,000 is taxed at $10\\%$: that's at most $0.10 \\times 10000 = 1000$, i.e. \\$1000.
+- Every dollar **above** \\$10,000 is taxed at $20\\%$, and the constant $1000$ carries over the tax already owed on the first bracket.
 
-### Tax on \\$25{,}000
+### Tax on \\$25,000
 Since $25000 > 10000$, use the bottom rule:
 
 $$T(25000) = 1000 + 0.20(25000 - 10000) = 1000 + 0.20(15000) = 1000 + 3000 = 4000$$

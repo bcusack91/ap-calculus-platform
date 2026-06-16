@@ -796,7 +796,7 @@ You now own both families end-to-end: classify, find any term, switch between re
         type: 'text' as const,
         content: `## Modeling With Sequences
 
-**Arithmetic — a raise of a fixed dollar amount.** A job pays \\$40{,}000 in year $1$ and adds a flat \\$2{,}500 raise each year. Salary is arithmetic with $a_1 = 40000$, $d = 2500$:
+**Arithmetic — a raise of a fixed dollar amount.** A job pays \\$40,000 in year $1$ and adds a flat \\$2,500 raise each year. Salary is arithmetic with $a_1 = 40000$, $d = 2500$:
 
 $$a_{10} = 40000 + (10-1)(2500) = 40000 + 22500 = 62500$$
 

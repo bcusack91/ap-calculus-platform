@@ -490,15 +490,15 @@ For each sentence, choose what's being asked.`,
 
 ### Worked Example: A \\$40 shirt is $25\\%$ off.
 
-Discount amount: $0.25 \\times 40 = \\$10$.
-Sale price: $40 - 10 = \\mathbf{\\$30}$.
+Discount amount: $0.25 \\times 40 = 10$, i.e. \\$10.
+Sale price: $40 - 10 = 30$, so **\\$30**.
 
 ### Worked Example: A \\$50 meal with a $20\\%$ tip.
 
-Tip amount: $0.20 \\times 50 = \\$10$.
-Total paid: $50 + 10 = \\mathbf{\\$60}$.
+Tip amount: $0.20 \\times 50 = 10$, i.e. \\$10.
+Total paid: $50 + 10 = 60$, so **\\$60**.
 
-> 💡 **One-step shortcut.** A $25\\%$ discount means you *pay* $75\\%$: $\\;0.75 \\times 40 = \\$30$. Adding a $20\\%$ tip means you pay $120\\%$: $\\;1.20 \\times 50 = \\$60$. Same answers, one multiplication.`,
+> 💡 **One-step shortcut.** A $25\\%$ discount means you *pay* $75\\%$: $0.75 \\times 40 = 30$, giving \\$30. Adding a $20\\%$ tip means you pay $120\\%$: $1.20 \\times 50 = 60$, giving \\$60. Same answers, one multiplication.`,
       },
       {
         id: 'pct4-discount-check',

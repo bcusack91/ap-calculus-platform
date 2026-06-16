@@ -36,11 +36,11 @@ $$0.30 \\times 250 = 75$$
 
 $$\\text{Percent Change} = \\frac{|\\text{New} - \\text{Original}|}{\\text{Original}} \\times 100\\%$$
 
-**Example 2 — Increase:** A price goes from $\\$40$ to $\\$52$. What is the percent increase?
+**Example 2 — Increase:** A price goes from \\$40 to \\$52. What is the percent increase?
 
 $$\\frac{52 - 40}{40} \\times 100\\% = \\frac{12}{40} \\times 100\\% = 30\\%$$
 
-**Example 3 — Decrease:** A shirt originally costs $\\$80$ and is on sale for $\\$60$. What is the percent discount?
+**Example 3 — Decrease:** A shirt originally costs \\$80 and is on sale for \\$60. What is the percent discount?
 
 $$\\frac{80 - 60}{80} \\times 100\\% = \\frac{20}{80} \\times 100\\% = 25\\%$$
 
@@ -78,17 +78,17 @@ $$\\frac{80 - 60}{80} \\times 100\\% = \\frac{20}{80} \\times 100\\% = 25\\%$$
 
 These are the most common real-world percent problems on the ACT.
 
-**Example 4 — Sales Tax:** A jacket costs $\\$65$ and the sales tax is $8\\%$. What is the total?
+**Example 4 — Sales Tax:** A jacket costs \\$65 and the sales tax is $8\\%$. What is the total?
 
 $$\\text{Tax} = 0.08 \\times 65 = 5.20 \\implies \\text{Total} = 65 + 5.20 = \\$70.20$$
 
-Or use the multiplier: $65 \\times 1.08 = \\$70.20$.
+Or use the multiplier: $65 \\times 1.08 = 70.20$, i.e. \\$70.20.
 
-**Example 5 — Tip:** A meal costs $\\$42$. You leave a $20\\%$ tip. Total cost?
+**Example 5 — Tip:** A meal costs \\$42. You leave a $20\\%$ tip. Total cost?
 
 $$42 \\times 1.20 = \\$50.40$$
 
-**Example 6 — Discount:** A $\\$120$ item is $35\\%$ off. Sale price?
+**Example 6 — Discount:** A \\$120 item is $35\\%$ off. Sale price?
 
 $$120 \\times (1 - 0.35) = 120 \\times 0.65 = \\$78$$
       `
@@ -101,7 +101,7 @@ $$120 \\times (1 - 0.35) = 120 \\times 0.65 = \\$78$$
 
 1) What is $40\\%$ of $90$?
 
-2) A $\\$50$ item is $20\\%$ off. What is the sale price in dollars?
+2) A \\$50 item is $20\\%$ off. What is the sale price in dollars?
 
 3) A value increased from $80$ to $100$. What is the percent increase?
       `,

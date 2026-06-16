@@ -15,8 +15,8 @@ export const parts: LessonData[] = [
 
 **Division** means splitting something into equal groups or sharing it fairly. We do this with decimals all the time in real life:
 
-- **Splitting a bill:** $\\$45.75 \\div 3$ friends
-- **Finding the unit price:** $\\$6.75$ for $5$ snacks → how much is *one*?
+- **Splitting a bill:** \\$45.75 ÷ 3 friends
+- **Finding the unit price:** \\$6.75 for $5$ snacks → how much is *one*?
 - **Sharing a measurement:** $12.5$ feet of rope $\\div\\ 5$ pieces
 
 A **decimal** is just a number with a point in it, like $12.6$ or $0.4$. Dividing decimals uses the same long division you already know — we just have to take good care of that little **decimal point**.`,
@@ -271,9 +271,9 @@ Choose the correct answer for each.`,
 
 Dividing decimals helps us **share money fairly** and **find the price of one item**.
 
-**Splitting a bill:** Three friends split a $\\$47.85$ dinner evenly. How much does each pay?
+**Splitting a bill:** Three friends split a \\$47.85 dinner evenly. How much does each pay?
 
-Solve $\\$47.85 \\div 3$:
+Solve \\$47.85 ÷ 3:
 
 \`\`\`
     15.95
@@ -295,9 +295,9 @@ Solve $\\$47.85 \\div 3$:
 
 Each friend pays **\\$15.95**.
 
-**Finding the unit price:** $4$ apples cost $\\$3.96$. How much is **one** apple?
+**Finding the unit price:** $4$ apples cost \\$3.96. How much is **one** apple?
 
-Solve $\\$3.96 \\div 4 = \\$0.99$ per apple. Knowing the **unit price** lets you compare deals at the store. Now try a few yourself!`,
+Solve \\$3.96 ÷ 4 = \\$0.99 per apple. Knowing the **unit price** lets you compare deals at the store. Now try a few yourself!`,
       },
       {
         id: 'p4-input',
@@ -307,7 +307,7 @@ Solve $\\$3.96 \\div 4 = \\$0.99$ per apple. Knowing the **unit price** lets you
 Type each answer as a decimal number (no dollar sign needed), like \`0.99\`.
 
 1. A $12.5$-foot rope is cut into $5$ equal pieces. How long is each piece (in feet)?
-2. Five granola bars cost $\\$6.75$. What is the price of **one** bar?
+2. Five granola bars cost \\$6.75. What is the price of **one** bar?
 3. A $4.8$-liter jug of juice is poured equally into $8$ cups. How many liters are in each cup?`,
         exercise: {
           boxes: 3,

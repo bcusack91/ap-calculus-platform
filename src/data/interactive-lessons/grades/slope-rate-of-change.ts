@@ -264,7 +264,7 @@ $$m = \\frac{150 \\text{ miles}}{3 \\text{ hours}} = 50 \\text{ miles per hour}$
 
 The slope **$50$** is exactly the car's speed!
 
-**Cost (a rate of change of money):** A taxi charges based on miles driven. If a $4$-mile ride costs $\\$10$ and an $8$-mile ride costs $\\$18$:
+**Cost (a rate of change of money):** A taxi charges based on miles driven. If a $4$-mile ride costs \\$10 and an $8$-mile ride costs \\$18:
 $$m = \\frac{18 - 10}{8 - 4} = \\frac{8}{4} = 2 \\text{ dollars per mile}$$
 
 **Reading the units:** "miles **per** hour," "dollars **per** mile," "degrees **per** hour" — the word **"per"** is a big hint that you are looking at a slope.`,

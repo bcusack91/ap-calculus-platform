@@ -558,9 +558,9 @@ $$C(g) = \\begin{cases} 30 & 0 \\le g \\le 2 \\\\ 30 + 10(g - 2) & g > 2 \\end{c
 |---------------|-------------|-------------|
 | $1.5$ GB | $0 \\le g \\le 2$ | \\$30 |
 | $2$ GB | $0 \\le g \\le 2$ | \\$30 |
-| $5$ GB | $g > 2$ | $30 + 10(5-2) = \\$60$ |
+| $5$ GB | $g > 2$ | $30 + 10(5-2) = 60$, i.e. \\$60 |
 
-> 💡 Notice the model is **continuous** at $g = 2$: the flat piece gives \\$30 and the second piece gives $30 + 10(0) = \\$30$. Good pricing models usually avoid surprise jumps right at the threshold.`,
+> 💡 Notice the model is **continuous** at $g = 2$: the flat piece gives \\$30 and the second piece gives $30 + 10(0) = 30$, i.e. \\$30. Good pricing models usually avoid surprise jumps right at the threshold.`,
       },
       {
         id: 'pw5-app-drill',

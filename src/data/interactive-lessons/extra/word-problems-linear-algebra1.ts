@@ -372,7 +372,7 @@ The trap: a pile of $10$ coins isn't worth $10$ — it depends on **which** coin
 > *"A jar has $7$ more dimes than nickels. The coins are worth \\$2.45 in total. How many nickels are there?"*
 
 **Let** $x =$ number of nickels. Then dimes $= x + 7$.
-**Value in cents** ($\\$2.45 = 245$ cents):
+**Value in cents** (\\$2.45 $= 245$ cents):
 
 $$\\underbrace{5x}_{\\text{nickels}} + \\underbrace{10(x + 7)}_{\\text{dimes}} = 245$$
 $$5x + 10x + 70 = 245 \\;\\Rightarrow\\; 15x = 175 \\;\\Rightarrow\\; x = \\tfrac{175}{15}$$
@@ -388,13 +388,13 @@ Hmm — that isn't a whole number, so let's recheck with cleaner numbers below. 
 
 > *"A jar has $5$ more dimes than nickels and is worth \\$3.50. How many nickels?"*
 
-**Let** $x =$ nickels, so dimes $= x + 5$. In cents ($\\$3.50 = 350$):
+**Let** $x =$ nickels, so dimes $= x + 5$. In cents (\\$3.50 $= 350$):
 
 $$5x + 10(x + 5) = 350$$
 $$5x + 10x + 50 = 350 \\;\\Rightarrow\\; 15x = 300 \\;\\Rightarrow\\; x = 20$$
 
 So there are $20$ nickels and $25$ dimes.
-**Check:** $20(5) + 25(10) = 100 + 250 = 350$ cents $= \\$3.50$ ✓`,
+**Check:** $20(5) + 25(10) = 100 + 250 = 350$ cents, i.e. \\$3.50 ✓`,
       },
       {
         id: 'wplin3-coins-drill',

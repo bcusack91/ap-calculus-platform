@@ -144,7 +144,7 @@ $P(10) = 5000(1.06)^{10} = 5000(1.7908...) \\approx 8{,}954$
 
 **1)** A bacteria culture starts with $200$ cells and triples every hour. How many cells after $4$ hours? (e.g., doubling: $50 \\cdot 2^3 = 400$)
 
-**2)** An investment of $\\$1{,}000$ earns $5\\%$ annually. What is it worth after $1$ year? (e.g., $\\$800$ at $10\\%$: $800(1.10) = 880$)
+**2)** An investment of \\$1,000 earns $5\\%$ annually. What is it worth after $1$ year? (e.g., \\$800 at $10\\%$: $800(1.10) = 880$)
 
 **3)** Evaluate $6 \\cdot \\left(\\frac{1}{3}\\right)^2$. (e.g., $4 \\cdot \\left(\\frac{1}{2}\\right)^3 = 4 \\cdot \\frac{1}{8} = 0.5$)
       `,

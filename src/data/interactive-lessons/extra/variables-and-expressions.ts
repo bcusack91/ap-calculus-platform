@@ -590,7 +590,7 @@ Let $m$ = number of miles. The total cost (in dollars) is:
 
 $$3 + 2m$$
 
-A $5$-mile ride costs $3 + 2(5) = 3 + 10 = \\$13$.
+A $5$-mile ride costs $3 + 2(5) = 3 + 10 = 13$, so \\$13.
 
 ### Example — You have \\$20 and spend \\$4 each day.
 
@@ -598,7 +598,7 @@ Let $d$ = number of days. The money left (in dollars) is:
 
 $$20 - 4d$$
 
-After $3$ days you have $20 - 4(3) = 20 - 12 = \\$8$.
+After $3$ days you have $20 - 4(3) = 20 - 12 = 8$, so \\$8.
 
 > 💡 **The pattern:** a fixed *start-up* amount becomes the **constant**, and the *per-unit* rate becomes the **coefficient** of the variable.`,
       },

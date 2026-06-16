@@ -785,7 +785,7 @@ Matrices organize real data and let you combine it with multiplication.
 
 $$\\begin{bmatrix} 4 & 6 \\end{bmatrix}\\begin{bmatrix} 5 \\\\ 3 \\end{bmatrix} = 4\\cdot5 + 6\\cdot3 = 20 + 18 = 38$$
 
-Total revenue $= \\$38$. A single $(1\\times2)(2\\times1)$ product summed everything at once.
+Total revenue $= 38$, i.e. \\$38. A single $(1\\times2)(2\\times1)$ product summed everything at once.
 
 > 💡 The same idea scales up: an $m \\times n$ "sales" matrix times an $n \\times 1$ "price" vector gives total revenue **per store** in one multiplication.`,
       },

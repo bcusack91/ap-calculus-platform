@@ -257,7 +257,7 @@ Choose the correct words to complete the rules of multi-digit multiplication.
 Multiplication shows up everywhere in daily life. The trick is spotting the **equal groups**.
 
 ## Shopping
-If one toy costs $\\$24$ and you buy $15$ toys, the total is $24 \\times 15 = \\$360$.
+If one toy costs \\$24 and you buy $15$ toys, the total is $24 \\times 15 = 360$, i.e. \\$360.
 
 ## Area
 A garden is $18$ feet long and $12$ feet wide. Its area is $18 \\times 12 = 216$ square feet.

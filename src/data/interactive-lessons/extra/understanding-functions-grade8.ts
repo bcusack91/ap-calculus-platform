@@ -383,7 +383,7 @@ $$C = 2t + 3$$
 - The **\\$2 per taco** is the number multiplied by the input (the *rate*).
 - The **\\$3 fee** is added once no matter what (the *starting value*).
 
-So $5$ tacos cost $C = 2(5) + 3 = \\$13$.
+So $5$ tacos cost $C = 2(5) + 3 = 13$, giving \\$13.
 
 > 💡 "Per," "each," and "every" signal the number you **multiply** by. "Flat fee," "starting," and "one-time" signal the number you **add**.`,
       },

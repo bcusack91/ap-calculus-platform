@@ -401,16 +401,20 @@ There are two equally good methods.
 
 **A shirt costs \\$25 and is marked up $20\\%$:**
 
-$$\\text{markup} = 0.20 \\times 25 = 5 \\quad\\Rightarrow\\quad 25 + 5 = \\$30$$
+$$\\text{markup} = 0.20 \\times 25 = 5 \\quad\\Rightarrow\\quad 25 + 5 = 30$$
+
+so the new price is \\$30.
 
 **A \\$80 jacket is $30\\%$ off:**
 
-$$\\text{discount} = 0.30 \\times 80 = 24 \\quad\\Rightarrow\\quad 80 - 24 = \\$56$$
+$$\\text{discount} = 0.30 \\times 80 = 24 \\quad\\Rightarrow\\quad 80 - 24 = 56$$
+
+so the sale price is \\$56.
 
 ### Method B — Multiply by the final percent (the shortcut)
 
-- A $20\\%$ increase means you keep $100\\% + 20\\% = 120\\%$: $\\;1.20 \\times 25 = \\$30$.
-- A $30\\%$ discount means you pay $100\\% - 30\\% = 70\\%$: $\\;0.70 \\times 80 = \\$56$.
+- A $20\\%$ increase means you keep $100\\% + 20\\% = 120\\%$: $\\;1.20 \\times 25 = 30$, giving \\$30.
+- A $30\\%$ discount means you pay $100\\% - 30\\% = 70\\%$: $\\;0.70 \\times 80 = 56$, giving \\$56.
 
 > 💡 **Method B is faster.** For a $30\\%$-off sale, just multiply by $0.70$ — you pay $70\\%$ of the original. One step, same answer.`,
       },
@@ -451,9 +455,9 @@ $$\\underbrace{1.20}_{+20\\%} \\times 25 = \\$30 \\qquad \\underbrace{0.70}_{-30
 
 Enter the final price in dollars (just the number).
 
-**1)** A \\$25 shirt is marked up $20\\%$. New price $= \\$\\,?$
-**2)** An \\$80 jacket is $30\\%$ off. Sale price $= \\$\\,?$
-**3)** A \\$200 bike is $40\\%$ off. Sale price $= \\$\\,?$`,
+**1)** A \\$25 shirt is marked up $20\\%$. New price $=$ \\$?
+**2)** An \\$80 jacket is $30\\%$ off. Sale price $=$ \\$?
+**3)** A \\$200 bike is $40\\%$ off. Sale price $=$ \\$?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['30', '56', '120'],
@@ -508,15 +512,19 @@ $$\\text{total} = \\text{base} + \\text{tax (or tip)}$$
 
 ### Worked Example: $8\\%$ sales tax on a \\$45 purchase
 
-$$\\text{tax} = 0.08 \\times 45 = \\$3.60$$
-$$\\text{total} = 45 + 3.60 = \\$48.60$$
+$$\\text{tax} = 0.08 \\times 45 = 3.60$$
+$$\\text{total} = 45 + 3.60 = 48.60$$
+
+giving a tax of \\$3.60 and a total of \\$48.60.
 
 ### Worked Example: An $18\\%$ tip on a \\$50 meal
 
-$$\\text{tip} = 0.18 \\times 50 = \\$9.00$$
-$$\\text{total} = 50 + 9 = \\$59.00$$
+$$\\text{tip} = 0.18 \\times 50 = 9.00$$
+$$\\text{total} = 50 + 9 = 59.00$$
 
-> 💡 **Shortcut:** since tax and tip are added on, you can multiply the base by $(1 + \\text{rate})$ for the total in one step: $1.08 \\times 45 = \\$48.60$.`,
+giving a tip of \\$9.00 and a total of \\$59.00.
+
+> 💡 **Shortcut:** since tax and tip are added on, you can multiply the base by $(1 + \\text{rate})$ for the total in one step: $1.08 \\times 45 = 48.60$, i.e. \\$48.60.`,
       },
       {
         id: 'pct4-tax-tip-check',
@@ -548,13 +556,17 @@ A **commission** is a percent of sales that a salesperson earns as pay.
 
 $$\\text{commission} = \\text{rate} \\times \\text{total sales}$$
 
-### Worked Example: A realtor earns $6\\%$ commission on a \\$250{,}000 home
+### Worked Example: A realtor earns $6\\%$ commission on a \\$250,000 home
 
-$$0.06 \\times 250{,}000 = \\$15{,}000$$
+$$0.06 \\times 250{,}000 = 15{,}000$$
 
-### Worked Example: A clerk earns $5\\%$ commission on \\$1{,}200 in sales
+which is \\$15,000.
 
-$$0.05 \\times 1{,}200 = \\$60$$
+### Worked Example: A clerk earns $5\\%$ commission on \\$1,200 in sales
+
+$$0.05 \\times 1{,}200 = 60$$
+
+which is \\$60.
 
 > 💡 Commission is the same operation as tax and tip — "percent of a number" — it's just *money earned* instead of *money added to a bill*.`,
       },
@@ -565,9 +577,9 @@ $$0.05 \\times 1{,}200 = \\$60$$
 
 Enter dollar amounts (just the number).
 
-**1)** A $7.5\\%$ tax on a \\$120 item. Tax $= \\$\\,?$
-**2)** A $15\\%$ tip on a \\$40 meal. Tip $= \\$\\,?$
-**3)** A $6\\%$ commission on \\$1{,}200 in sales. Commission $= \\$\\,?$`,
+**1)** A $7.5\\%$ tax on a \\$120 item. Tax $=$ \\$?
+**2)** A $15\\%$ tip on a \\$40 meal. Tip $=$ \\$?
+**3)** A $6\\%$ commission on \\$1,200 in sales. Commission $=$ \\$?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['9', '6', '72'],
@@ -593,13 +605,17 @@ $$I = P \\cdot r \\cdot t$$
 | $r$ | annual rate, as a **decimal** |
 | $t$ | time, in **years** |
 
-### Worked Example: \\$1{,}000 at $5\\%$ for $2$ years
+### Worked Example: \\$1,000 at $5\\%$ for $2$ years
 
-$$I = 1000 \\times 0.05 \\times 2 = \\$100$$
+$$I = 1000 \\times 0.05 \\times 2 = 100$$
+
+so the interest is \\$100.
 
 The **total amount** in the account is principal plus interest:
 
-$$P + I = 1000 + 100 = \\$1{,}100$$
+$$P + I = 1000 + 100 = 1{,}100$$
+
+which is \\$1,100.
 
 > ⚠️ **Two common slips:** (1) use $r$ as a *decimal* ($5\\% = 0.05$, not $5$), and (2) keep $t$ in *years* (6 months $= 0.5$ year).`,
       },
@@ -696,7 +712,7 @@ The review above asked you to *recognize* the right form. Now let's *compute* fu
 
 **1)** What is $35\\%$ of $200$? $\\,?$
 **2)** $90$ is $75\\%$ of what number? $\\,?$
-**3)** A \\$45 meal with a $20\\%$ tip costs a total of $\\$\\,?$`,
+**3)** A \\$45 meal with a $20\\%$ tip costs a total of \\$?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['70', '120', '54'],

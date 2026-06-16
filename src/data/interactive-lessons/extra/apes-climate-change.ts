@@ -839,7 +839,7 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
 
 **1)** A power company emits $500{,}000$ tons of CO₂ per year and pledges a $40\\%$ reduction. How many tons will it emit per year after the cut?
 
-**2)** A $\\$50$-per-ton carbon tax is applied to a factory that emits $2{,}000$ tons of CO₂. What is the annual tax bill, in dollars? (Enter just the number.)`,
+**2)** A \\$50-per-ton carbon tax is applied to a factory that emits $2{,}000$ tons of CO₂. What is the annual tax bill, in dollars? (Enter just the number.)`,
         exercise: {
           boxes: 2,
           correctAnswers: ['300000', '100000'],

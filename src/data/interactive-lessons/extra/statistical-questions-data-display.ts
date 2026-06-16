@@ -307,7 +307,7 @@ $$\\text{mean} = \\frac{\\text{sum of all values}}{\\text{number of values}}$$
 
 $$\\text{mean} = \\frac{4 + 8 + 6 + 2}{4} = \\frac{20}{4} = 5$$
 
-> 💡 The mean is like sharing equally: if four people had $\\$4, \\$8, \\$6, \\$2$ and pooled it, each would get $\\$5$.`,
+> 💡 The mean is like sharing equally: if four people had \\$4, \\$8, \\$6, \\$2 and pooled it, each would get \\$5.`,
       },
       {
         id: 'sqd3-mean-drill',

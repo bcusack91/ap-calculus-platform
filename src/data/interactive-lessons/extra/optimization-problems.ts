@@ -638,8 +638,9 @@ Let $x$ = the number of \\$1 increases.
 
 $$R'(x) = -60x + 240 = 0 \\;\\Rightarrow\\; x = 4.$$
 
-So the price is $p = 12 + 4 = \\$16$, attendance is $n = 600 - 120 = 480$, and
-$$R = 16 \\cdot 480 = \\$7680.$$
+So the price is $p = 12 + 4 = 16$, i.e. \\$16, attendance is $n = 600 - 120 = 480$, and
+$$R = 16 \\cdot 480 = 7680,$$
+i.e. \\$7,680.
 
 > 💡 Since $R$ is a downward parabola ($R'' = -60 < 0$), the single critical number is automatically the **maximum**. Revenue models are often quadratics — recognize the shape.`,
       },

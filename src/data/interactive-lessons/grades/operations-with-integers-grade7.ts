@@ -18,7 +18,7 @@ An **integer** is any whole number, including **zero** and the **negatives**: $\
 You already meet negative numbers all the time:
 
 - **Temperature:** it can be $-8$ degrees on a cold morning
-- **Money:** owing your friend $\\$5$ is like having $-5$ dollars
+- **Money:** owing your friend \\$5 is like having $-5$ dollars
 - **Elevation:** a diver $20$ meters below sea level is at $-20$ m
 
 The key idea is **direction**. On a number line, **positive** means moving **right** and **negative** means moving **left**. In this lesson you'll learn to **add**, **subtract**, **multiply**, and **divide** integers with confidence.`,
@@ -242,9 +242,9 @@ Negative numbers describe anything that can go **below a starting point** — mo
 
 - New temperature: $-5 + 8 = 3$°C 🌡️
 
-**Bank account:** Jordan has $\\$20$, then spends $\\$32$ (overdraft!).
+**Bank account:** Jordan has \\$20, then spends \\$32 (overdraft!).
 
-- Balance: $20 - 32 = 20 + (-32) = -12$, so Jordan owes $\\$12$ (a balance of $-\\$12$).
+- Balance: $20 - 32 = 20 + (-32) = -12$, so Jordan owes \\$12 (a balance of -\\$12).
 
 **Multiplying for repeated change:** A submarine descends $15$ meters each minute for $4$ minutes. Descending is negative:
 

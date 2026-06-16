@@ -37,8 +37,8 @@ export const satRatiosPart7Data = {
 
 | Step | Work |
 |------|------|
-| Markup | $50 × 1.60 = \\$80$ |
-| Sale discount | $80 × 0.75 = \\$60$ |
+| Markup | $50 × 1.60 = 80$, i.e. \\$80 |
+| Sale discount | $80 × 0.75 = 60$, i.e. \\$60 |
 | Net multiplier | $1.60 × 0.75 = 1.20$ → 20% net markup |
 
 ### Worked Example 2 — Proportion with Ratio Shift
@@ -90,9 +90,9 @@ export const satRatiosPart7Data = {
 
 | Step | Work |
 |------|------|
-| Original salary | $1.10x = 55{,}000$ → $x = \\$50{,}000$ |
-| Bonus | $55{,}000 × 0.05 = \\$2{,}750$ |
-| Total compensation | $55{,}000 + 2{,}750 = \\$57{,}750$ |
+| Original salary | $1.10x = 55000$ → $x = 50000$, i.e. \\$50,000 |
+| Bonus | $55000 × 0.05 = 2750$, i.e. \\$2,750 |
+| Total compensation | $55000 + 2750 = 57750$, i.e. \\$57,750 |
 
 ### Worked Example 4 — Scale + Percent
 

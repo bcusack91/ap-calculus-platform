@@ -474,13 +474,13 @@ These are all just "percent of a number," then add or subtract.
 
 ### Example — Tip: a meal costs \\$40 and you tip $15\\%$.
 
-$$0.15 \\times 40 = 6 \\;\\Rightarrow\\; \\text{total} = 40 + 6 = \\$46$$
+$$0.15 \\times 40 = 6 \\;\\Rightarrow\\; \\text{total} = 40 + 6 = 46$$, giving \\$46
 
 ### Example — Discount: a \\$50 jacket is $30\\%$ off.
 
-$$0.30 \\times 50 = 15 \\;\\Rightarrow\\; \\text{sale price} = 50 - 15 = \\$35$$
+$$0.30 \\times 50 = 15 \\;\\Rightarrow\\; \\text{sale price} = 50 - 15 = 35$$, giving \\$35
 
-> 🔑 **Shortcut for discounts:** $30\\%$ off means you **pay $70\\%$**. So $0.70 \\times 50 = \\$35$ in a single step — same answer, fewer moves.`,
+> 🔑 **Shortcut for discounts:** $30\\%$ off means you **pay $70\\%$**. So $0.70 \\times 50 = 35$ giving \\$35 in a single step — same answer, fewer moves.`,
       },
       {
         id: 'dp4-app-dd',

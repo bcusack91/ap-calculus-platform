@@ -529,7 +529,7 @@ Distribute the minus and combine:
 
 $$P = 12x^2 + 40x - 12x^2 - 15x - 200 = 25x - 200$$
 
-The $12x^2$ terms cancel, leaving a clean linear profit model, $P = 25x - 200$. Selling $x = 8$ items gives $P = 25(8) - 200 = \\$0$ — the break-even point.`,
+The $12x^2$ terms cancel, leaving a clean linear profit model, $P = 25x - 200$. Selling $x = 8$ items gives $P = 25(8) - 200 = 0$, i.e. \\$0 — the break-even point.`,
       },
       {
         id: 'poly4-app-check',

@@ -304,7 +304,7 @@ Decide whether the percent or the whole is missing, then solve. Enter percents *
 
 A tax or tip is a **part** you add **on top of** the original price.
 
-### Worked Example: \$50 dinner with an $18\\%$ tip
+### Worked Example: \\$50 dinner with an $18\\%$ tip
 
 **Step 1 — Find the tip (the part):**
 $$0.18 \\times 50 = 9$$
@@ -312,7 +312,7 @@ $$0.18 \\times 50 = 9$$
 **Step 2 — Add it to the bill:**
 $$50 + 9 = 59$$
 
-The total is $\\mathbf{\\$59}$.
+The total is **\\$59**.
 
 ### The One-Step Shortcut
 
@@ -329,9 +329,9 @@ $$1.18 \\times 50 = 59$$
 
 Find each **total** (price plus the added percent). Enter just the number of dollars.
 
-**1)** A \$40 shirt with $5\\%$ sales tax. Total $= ?$
-**2)** A \$30 meal with a $20\\%$ tip. Total $= ?$
-**3)** A \$200 purchase with $8\\%$ tax. Total $= ?$`,
+**1)** A \\$40 shirt with $5\\%$ sales tax. Total $= ?$
+**2)** A \\$30 meal with a $20\\%$ tip. Total $= ?$
+**3)** A \\$200 purchase with $8\\%$ tax. Total $= ?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['42', '36', '216'],
@@ -348,7 +348,7 @@ Find each **total** (price plus the added percent). Enter just the number of dol
 
 A discount is a **part** you **subtract** from the original price.
 
-### Worked Example: \$40 jacket, $25\\%$ off
+### Worked Example: \\$40 jacket, $25\\%$ off
 
 **Step 1 — Find the discount (the part):**
 $$0.25 \\times 40 = 10$$
@@ -356,7 +356,7 @@ $$0.25 \\times 40 = 10$$
 **Step 2 — Subtract it from the price:**
 $$40 - 10 = 30$$
 
-The sale price is $\\mathbf{\\$30}$.
+The sale price is **\\$30**.
 
 ### The One-Step Shortcut
 
@@ -408,9 +408,9 @@ The next drill deliberately mixes discounts and tips. Pause on each one and deci
 
 Read carefully — decide whether the percent is **added** or **subtracted**, then find the final amount in dollars.
 
-**1)** A \$60 game, $20\\%$ off. Sale price $= ?$
-**2)** A \$25 lunch with a $16\\%$ tip. Total $= ?$
-**3)** A \$150 coat, $40\\%$ off. Sale price $= ?$`,
+**1)** A \\$60 game, $20\\%$ off. Sale price $= ?$
+**2)** A \\$25 lunch with a $16\\%$ tip. Total $= ?$
+**3)** A \\$150 coat, $40\\%$ off. Sale price $= ?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['48', '29', '90'],
@@ -490,13 +490,13 @@ $$I = P \\times r \\times t$$
 
 where $P$ = principal, $r$ = annual rate (as a decimal), and $t$ = time in years.
 
-### Worked Example: \$500 at $4\\%$ for $3$ years
+### Worked Example: \\$500 at $4\\%$ for $3$ years
 
 $$I = 500 \\times 0.04 \\times 3 = 60$$
 
-You earn $\\mathbf{\\$60}$ in interest, so the account holds $500 + 60 = \\$560$.
+You earn **\\$60** in interest, so the account holds $500 + 60 = 560$, i.e. \\$560.
 
-> 💡 The interest each year is $500 \\times 0.04 = \\$20$, and over $3$ years that's $3 \\times \\$20 = \\$60$. The formula just bundles those two multiplications together.`,
+> 💡 The interest each year is $500 \\times 0.04 = 20$, i.e. \\$20, and over $3$ years that's $3 \\times 20 = 60$, i.e. \\$60. The formula just bundles those two multiplications together.`,
       },
       {
         id: 'pa4-interest-mc',
@@ -529,7 +529,7 @@ Watch the wording carefully — two different things get asked:
 - **Interest** ($I$) is *only* the money earned: $I = Prt$.
 - **Total balance** is the principal *plus* the interest: $P + I$.
 
-For \$500 at $4\\%$ for $3$ years, the interest is \$60 but the balance is \$560. The next drill asks for one or the other, so read each question to the end.`,
+For \\$500 at $4\\%$ for $3$ years, the interest is \\$60 but the balance is \\$560. The next drill asks for one or the other, so read each question to the end.`,
       },
       {
         id: 'pa4-interest-drill',
@@ -538,9 +538,9 @@ For \$500 at $4\\%$ for $3$ years, the interest is \$60 but the balance is \$560
 
 Use $I = P \\times r \\times t$. Enter dollar amounts as a number.
 
-**1)** \$2{,}000 at $3\\%$ for $4$ years. Interest $I = ?$
-**2)** \$800 at $10\\%$ for $2$ years. Interest $I = ?$
-**3)** \$1{,}000 at $5\\%$ for $1$ year — what is the **total balance** (principal $+$ interest)?`,
+**1)** \\$2,000 at $3\\%$ for $4$ years. Interest $I = ?$
+**2)** \\$800 at $10\\%$ for $2$ years. Interest $I = ?$
+**3)** \\$1,000 at $5\\%$ for $1$ year — what is the **total balance** (principal $+$ interest)?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['240', '160', '1050'],
@@ -575,9 +575,9 @@ You can now find a part, a percent, or a whole; apply tax, tips, and discounts; 
 
 When a price already has a discount baked in, you can't just add the percent back — you have to **undo** the multiplication.
 
-### Worked Example: After $20\\%$ off, a coat costs \$48. What was the original price?
+### Worked Example: After $20\\%$ off, a coat costs \\$48. What was the original price?
 
-"$20\\%$ off" means the \$48 is $80\\%$ of the original. So:
+"$20\\%$ off" means the \\$48 is $80\\%$ of the original. So:
 
 $$0.80 \\times (\\text{original}) = 48$$
 
@@ -585,11 +585,11 @@ Divide both sides by $0.80$:
 
 $$\\text{original} = \\frac{48}{0.80} = 60$$
 
-The original price was $\\mathbf{\\$60}$.
+The original price was **\\$60**.
 
-> ⚠️ **Why not just add $20\\%$ to \$48?** That gives $48 \\times 1.20 = \\$57.60$ — **wrong!** Adding $20\\%$ of \$48 isn't the same as undoing $20\\%$ of the (larger) original. Always divide by the complement, here $0.80$.
+> ⚠️ **Why not just add $20\\%$ to \\$48?** That gives $48 \\times 1.20 = 57.60$, i.e. \\$57.60 — **wrong!** Adding $20\\%$ of \\$48 isn't the same as undoing $20\\%$ of the (larger) original. Always divide by the complement, here $0.80$.
 
-> ✅ **Check:** $20\\%$ off \$60 is $0.20 \\times 60 = \\$12$, and $60 - 12 = \\$48$ ✓`,
+> ✅ **Check:** $20\\%$ off \\$60 is $0.20 \\times 60 = 12$, i.e. \\$12, and $60 - 12 = 48$, i.e. \\$48 ✓`,
       },
       {
         id: 'pa5-reverse-drill',
@@ -598,9 +598,9 @@ The original price was $\\mathbf{\\$60}$.
 
 Each price already includes the change. Find the **original** price in dollars by dividing.
 
-**1)** After $25\\%$ off, a bag costs \$45. Original $= ?$  *(divide by $0.75$)*
-**2)** After a $10\\%$ tax, a tablet costs \$220. Pre-tax price $= ?$  *(divide by $1.10$)*
-**3)** After $40\\%$ off, a chair costs \$90. Original $= ?$`,
+**1)** After $25\\%$ off, a bag costs \\$45. Original $= ?$  *(divide by $0.75$)*
+**2)** After a $10\\%$ tax, a tablet costs \\$220. Pre-tax price $= ?$  *(divide by $1.10$)*
+**3)** After $40\\%$ off, a chair costs \\$90. Original $= ?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['60', '200', '150'],

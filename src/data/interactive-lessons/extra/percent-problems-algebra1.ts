@@ -511,8 +511,8 @@ $$80 \\times 0.75 = 60 \\;\\Rightarrow\\; \\$60 \\text{ sale price}$$`,
 
 Use the multiplier shortcut. Enter dollar amounts as numbers (e.g. \`64.80\`).
 
-**1)** A \$120 bike is $40\\%$ off. Sale price $= \\,?$
-**2)** A \$25 meal with $8\\%$ tax. Total $= \\,?$
+**1)** A \\$120 bike is $40\\%$ off. Sale price $= \\,?$
+**2)** A \\$25 meal with $8\\%$ tax. Total $= \\,?$
 **3)** A population of $400$ grows by $15\\%$. New population $= \\,?$`,
         exercise: {
           boxes: 3,
@@ -564,12 +564,12 @@ You can now (1) convert percents, (2) find the part, (3) find the percent and th
         type: 'text' as const,
         content: `## A Classic Trap: Up Then Down
 
-A \$100 stock rises $20\\%$, then falls $20\\%$. Is it back to \$100?
+A \\$100 stock rises $20\\%$, then falls $20\\%$. Is it back to \\$100?
 
 **Step 1 — Up $20\\%$:** $100 \\times 1.20 = 120$.
 **Step 2 — Down $20\\%$:** $120 \\times 0.80 = 96$.
 
-It ends at $\\mathbf{\\$96}$ — a net **$4\\%$ loss**! The second $20\\%$ is taken from the *larger* \$120, so it removes more than the first $20\\%$ added.
+It ends at **\\$96** — a net **$4\\%$ loss**! The second $20\\%$ is taken from the *larger* \\$120, so it removes more than the first $20\\%$ added.
 
 > 💡 **Why:** $1.20 \\times 0.80 = 0.96$, which is a $4\\%$ decrease overall — no matter the starting price.`,
       },
@@ -601,7 +601,7 @@ It ends at $\\mathbf{\\$96}$ — a net **$4\\%$ loss**! The second $20\\%$ is ta
 
 **1)** $36$ is what percent of $48$? $= \\,?$  *(enter just the number)*
 **2)** $21$ is $35\\%$ of what number? $= \\,?$
-**3)** A \$90 coat is $30\\%$ off, then $10\\%$ sales tax is added. Final price $= \\,?$`,
+**3)** A \\$90 coat is $30\\%$ off, then $10\\%$ sales tax is added. Final price $= \\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['75', '60', '69.30'],

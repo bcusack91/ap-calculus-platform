@@ -776,7 +776,7 @@ $$4w = 20 \\quad\\Rightarrow\\quad w = 5$$
 Set up an equation and solve. Enter just the number.
 
 **1)** Five more than twice a number is $23$. What is the number?
-**2)** Maya has $\\$40$. She buys a backpack for $\\$16$ and then $x$ notebooks at $\\$3$ each, spending all $\\$40$. How many notebooks?
+**2)** Maya has \\$40. She buys a backpack for \\$16 and then $x$ notebooks at \\$3 each, spending all \\$40. How many notebooks?
 **3)** Three consecutive integers sum to $48$. What is the **smallest** one? *(Hint: $x + (x+1) + (x+2) = 48$.)*`,
         exercise: {
           boxes: 3,

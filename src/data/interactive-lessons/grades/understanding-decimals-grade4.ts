@@ -19,7 +19,7 @@ Look at the number $3.45$. That little dot in the middle is called the **decimal
 - The numbers to the **left** of the dot are whole ones.
 - The numbers to the **right** of the dot are parts smaller than one whole.
 
-When you see money, you are already reading decimals. A price like $\\$3.45$ means **3 whole dollars** and **45 cents** (a part of a dollar).`,
+When you see money, you are already reading decimals. A price like \\$3.45 means **3 whole dollars** and **45 cents** (a part of a dollar).`,
       },
       {
         id: 'p1-place-value',
@@ -216,17 +216,17 @@ Use the place value names you learned. Choose the correct place for each digit.`
 
 You use decimals every single time you spend or save money! In dollars and cents, the decimal point separates whole **dollars** from **cents**.
 
-- $\\$0.25 = $ 25 cents $= $ one quarter
-- $\\$0.50 = $ 50 cents $= $ a half dollar
-- $\\$1.75 = $ 1 dollar and 75 cents
+- \\$0.25 = 25 cents = one quarter
+- \\$0.50 = 50 cents = a half dollar
+- \\$1.75 = 1 dollar and 75 cents
 
 | Decimal | In Words | Coins / Value |
 |---------|----------|---------------|
-| $\\$0.10$ | ten cents | one dime |
-| $\\$0.25$ | twenty-five cents | one quarter |
-| $\\$0.50$ | fifty cents | two quarters |
+| \\$0.10 | ten cents | one dime |
+| \\$0.25 | twenty-five cents | one quarter |
+| \\$0.50 | fifty cents | two quarters |
 
-Because $\\$0.25 = \\frac{25}{100}$, and $\\frac{25}{100} = \\frac{1}{4}$, a quarter really is **one fourth** of a dollar. Let's use this in a real problem!`,
+Because \\$0.25 $= \\frac{25}{100}$, and $\\frac{25}{100} = \\frac{1}{4}$, a quarter really is **one fourth** of a dollar. Let's use this in a real problem!`,
       },
       {
         id: 'p4-input-boxes',
@@ -236,8 +236,8 @@ Because $\\$0.25 = \\frac{25}{100}$, and $\\frac{25}{100} = \\frac{1}{4}$, a qua
 Maya has some coins.
 
 1. She has one quarter. How many cents is that? (Type just the number of cents.)
-2. A pencil costs $\\$0.50$. How many cents is that?
-3. A dime is worth $\\$0.10$. How many cents is that?`,
+2. A pencil costs \\$0.50. How many cents is that?
+3. A dime is worth \\$0.10. How many cents is that?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['25', '50', '10'],
@@ -293,7 +293,7 @@ You now know that decimals are another way to write parts of a whole, just like 
 | Tenths place | the 5 in $2.5$ | $\\frac{5}{10}$ |
 | Hundredths place | the 3 in $0.03$ | $\\frac{3}{100}$ |
 | Decimal to fraction | $0.25$ | $\\frac{25}{100} = \\frac{1}{4}$ |
-| Money | $\\$0.50$ | 50 cents = a half dollar |
+| Money | \\$0.50 | 50 cents = a half dollar |
 
 **Remember:** the first place after the decimal point is **tenths**, and the second place is **hundredths**. Now try the challenge questions to put it all together!`,
       },

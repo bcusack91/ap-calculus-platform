@@ -30,7 +30,7 @@ $$P'(x) = -4x + 95 = 0 \\quad \\Rightarrow \\quad x = 23.75$$
 
 Since $x$ must be whole: $P(24) = -2(576) + 95(24) - 200 = -1152 + 2280 - 200 = 928$.
 
-$\\boxed{P_{\\max} = \\$928 \\text{ at } x = 24 \\text{ widgets}}$
+$\\boxed{P_{\\max} = 928 \\text{ at } x = 24 \\text{ widgets}}$, i.e. \\$928
 
 > **AP Tip:** On the AP exam, optimization word problems may use business language. Know the formulas for $R$, $C$, $P$, and marginal quantities.`
     },

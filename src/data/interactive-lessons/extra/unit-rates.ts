@@ -48,11 +48,11 @@ A **ratio** compares two quantities. A **rate** is a special ratio that compares
 |------------|------------------|---------|
 | $3$ cups flour to $2$ cups sugar | No (both cups) | ratio |
 | $120$ miles to $2$ hours | Yes (miles vs. hours) | rate |
-| $\\$6$ for $3$ pounds | Yes (dollars vs. pounds) | rate |
+| \\$6 for $3$ pounds | Yes (dollars vs. pounds) | rate |
 
 A rate is usually written as a fraction, keeping the units attached:
 
-$$\\frac{120 \\text{ miles}}{2 \\text{ hours}} \\qquad \\frac{\\$6}{3 \\text{ pounds}}$$
+$$\\frac{120 \\text{ miles}}{2 \\text{ hours}} \\qquad \\frac{6 \\text{ dollars}}{3 \\text{ pounds}}$$
 
 > 💡 The word **"per"** is your signal. "Miles **per** hour," "dollars **per** pound," and "students **per** teacher" are all rates.`,
       },
@@ -103,7 +103,7 @@ $$\\frac{120 \\div 2}{2 \\div 2} = \\frac{60}{1}$$
 | Rate | Unit rate | Read it as |
 |------|-----------|------------|
 | $\\dfrac{120 \\text{ mi}}{2 \\text{ hr}}$ | $\\dfrac{60 \\text{ mi}}{1 \\text{ hr}}$ | $60$ miles per hour |
-| $\\dfrac{\\$6}{3 \\text{ lb}}$ | $\\dfrac{\\$2}{1 \\text{ lb}}$ | $\\$2$ per pound |
+| $\\dfrac{6 \\text{ dollars}}{3 \\text{ lb}}$ | $\\dfrac{2 \\text{ dollars}}{1 \\text{ lb}}$ | \\$2 per pound |
 | $\\dfrac{45 \\text{ words}}{5 \\text{ min}}$ | $\\dfrac{9 \\text{ words}}{1 \\text{ min}}$ | $9$ words per minute |
 
 > 🔑 **Key Idea:** A unit rate always has a **denominator of 1**, so we usually just say the single number and the units — like "$60$ miles per hour."`,
@@ -135,7 +135,7 @@ For each rate, pick the matching unit rate (denominator $= 1$).`,
 Find each unit rate (the "per 1" amount). Enter just the number.
 
 **1)** $\\dfrac{18 \\text{ cookies}}{3 \\text{ kids}}$ → ? cookies per kid
-**2)** $\\dfrac{\\$24}{6 \\text{ tickets}}$ → ? dollars per ticket
+**2)** $\\dfrac{24 \\text{ dollars}}{6 \\text{ tickets}}$ → ? dollars per ticket
 **3)** $\\dfrac{250 \\text{ miles}}{5 \\text{ hours}}$ → ? miles per hour`,
         exercise: {
           boxes: 3,
@@ -177,9 +177,11 @@ Whatever follows the word **"per"** is the **denominator** (the thing you want o
 
 ### Worked Example: dollars **per** pound
 
-$\\$15$ buys $4$ pounds of grapes. Find the price **per pound**. "Per pound" means pounds go on the bottom:
+\\$15 buys $4$ pounds of grapes. Find the price **per pound**. "Per pound" means pounds go on the bottom:
 
-$$\\frac{\\$15}{4 \\text{ lb}} = 15 \\div 4 = \\$3.75 \\text{ per pound}$$
+$$\\frac{15 \\text{ dollars}}{4 \\text{ lb}} = 15 \\div 4 = 3.75 \\text{ per pound}$$
+
+That is \\$3.75 per pound.
 
 ### Worked Example: miles **per** hour
 
@@ -187,7 +189,7 @@ A car travels $180$ miles in $3$ hours:
 
 $$\\frac{180 \\text{ mi}}{3 \\text{ hr}} = 180 \\div 3 = 60 \\text{ miles per hour}$$
 
-> 💡 Two different unit rates live inside every rate. From "$\\$15$ for $4$ lb" you can also find **pounds per dollar**: $4 \\div 15 \\approx 0.27$ lb per dollar. Pick whichever the question asks for.`,
+> 💡 Two different unit rates live inside every rate. From "\\$15 for $4$ lb" you can also find **pounds per dollar**: $4 \\div 15 \\approx 0.27$ lb per dollar. Pick whichever the question asks for.`,
       },
       {
         id: 'ur2-which-on-bottom',
@@ -216,7 +218,7 @@ The word after "per" is the denominator. Choose the correct division for each.`,
 Divide to find each unit rate. Decimals are fine; round to the hundredth if it doesn't come out evenly.
 
 **1)** $312$ miles on $12$ gallons → ? miles per gallon
-**2)** $\\$5.40$ for $6$ apples → ? dollars per apple
+**2)** \\$5.40 for $6$ apples → ? dollars per apple
 **3)** $144$ pages read in $18$ minutes → ? pages per minute`,
         exercise: {
           boxes: 3,
@@ -292,13 +294,13 @@ $$\\text{unit price} = \\frac{\\text{total cost}}{\\text{number of units}}$$
 
 ### Worked Example
 
-A $20$-ounce bottle of juice costs $\\$3.20$. Find the unit price (per ounce):
+A $20$-ounce bottle of juice costs \\$3.20. Find the unit price (per ounce):
 
-$$\\frac{\\$3.20}{20 \\text{ oz}} = 3.20 \\div 20 = \\$0.16 \\text{ per ounce}$$
+$$\\frac{3.20 \\text{ dollars}}{20 \\text{ oz}} = 3.20 \\div 20 = 0.16 \\text{ per ounce}$$
 
-That's **$16$ cents per ounce**.
+That comes to \\$0.16 per ounce, or **$16$ cents per ounce**.
 
-> 💡 Stores often print the unit price on the shelf tag (like "$\\$0.16$ /oz") precisely so shoppers can compare. You're learning the math behind that tag.`,
+> 💡 Stores often print the unit price on the shelf tag (like "\\$0.16 /oz") precisely so shoppers can compare. You're learning the math behind that tag.`,
       },
       {
         id: 'ur3-unit-price-drill',
@@ -307,9 +309,9 @@ That's **$16$ cents per ounce**.
 
 Divide cost by amount. Enter the dollar amount (e.g. type $0.25$ for $25$ cents).
 
-**1)** $12$ oz of cereal for $\\$4.80$ → ? dollars per ounce
-**2)** $8$ rolls of paper towels for $\\$10.00$ → ? dollars per roll
-**3)** $5$ pounds of rice for $\\$6.45$ → ? dollars per pound`,
+**1)** $12$ oz of cereal for \\$4.80 → ? dollars per ounce
+**2)** $8$ rolls of paper towels for \\$10.00 → ? dollars per roll
+**3)** $5$ pounds of rice for \\$6.45 → ? dollars per pound`,
         exercise: {
           boxes: 3,
           correctAnswers: ['0.4', '1.25', '1.29'],
@@ -330,10 +332,10 @@ When two packages are different sizes, you **can't** just compare total prices �
 
 | Option | Size | Price | Unit price |
 |--------|------|-------|------------|
-| **A** | $16$ oz | $\\$3.84$ | $3.84 \\div 16 = \\$0.24$ /oz |
-| **B** | $24$ oz | $\\$5.04$ | $5.04 \\div 24 = \\$0.21$ /oz |
+| **A** | $16$ oz | \\$3.84 | $3.84 \\div 16 = 0.24$, i.e. \\$0.24 /oz |
+| **B** | $24$ oz | \\$5.04 | $5.04 \\div 24 = 0.21$, i.e. \\$0.21 /oz |
 
-Option **B** costs **$\\$0.21$ per ounce** vs. **$\\$0.24$ per ounce** for A. Since $0.21 < 0.24$, **Option B is the better buy** even though its total price is higher.
+Option **B** costs **\\$0.21 per ounce** vs. **\\$0.24 per ounce** for A. Since $0.21 < 0.24$, **Option B is the better buy** even though its total price is higher.
 
 > ⚠️ **The bigger package is *usually* cheaper per unit — but not always!** Always compute the unit price. The **lower** unit price wins.`,
       },
@@ -373,7 +375,7 @@ Option **B** costs **$\\$0.21$ per ounce** vs. **$\\$0.24$ per ounce** for A. Si
         type: 'dropdown-select' as const,
         content: `**Best Buy Walkthrough** 🔽
 
-A $32$-oz sports drink costs $\\$2.56$, and a $20$-oz bottle costs $\\$1.80$. Work it out.`,
+A $32$-oz sports drink costs \\$2.56, and a $20$-oz bottle costs \\$1.80. Work it out.`,
         exercise: {
           dropdowns: [
             { label: 'Unit price of the $32$-oz bottle:', options: ['$\\$0.08$ /oz', '$\\$0.12$ /oz', '$\\$0.16$ /oz', '$\\$0.80$ /oz'] },
@@ -416,9 +418,11 @@ $$\\text{total} = (\\text{unit rate}) \\times (\\text{number of units})$$
 
 ### Worked Example: total cost
 
-Bananas cost $\\$0.60$ per pound. How much do $7$ pounds cost?
+Bananas cost \\$0.60 per pound. How much do $7$ pounds cost?
 
-$$0.60 \\times 7 = \\$4.20$$
+$$0.60 \\times 7 = 4.20$$
+
+So $7$ pounds cost \\$4.20.
 
 ### Worked Example: distance from speed
 
@@ -435,7 +439,7 @@ $$50 \\text{ mph} \\times 4 \\text{ hr} = 200 \\text{ miles}$$
 
 Multiply the unit rate by the amount. Enter just the number.
 
-**1)** Apples are $\\$1.25$ per pound. Cost of $6$ pounds? → ? dollars
+**1)** Apples are \\$1.25 per pound. Cost of $6$ pounds? → ? dollars
 **2)** A typist does $40$ words per minute. Words in $9$ minutes? → ? words
 **3)** A car gets $32$ miles per gallon. Miles on $11$ gallons? → ? miles`,
         exercise: {
@@ -458,7 +462,7 @@ $$\\text{number of units} = \\frac{\\text{total}}{\\text{unit rate}}$$
 
 ### Worked Example: how many pounds?
 
-Cherries are $\\$4$ per pound. How many pounds can you buy with $\\$10$?
+Cherries are \\$4 per pound. How many pounds can you buy with \\$10?
 
 $$10 \\div 4 = 2.5 \\text{ pounds}$$
 
@@ -553,7 +557,7 @@ Use everything from this lesson. Enter just the number.
 
 **1)** $204$ miles in $4$ hours → ? miles per hour
 **2)** $\\frac{3}{4}$ cup flour makes $\\frac{1}{4}$ batch. Cups per FULL batch? → ?
-**3)** Pears are $\\$1.40$ per pound. Cost of $3$ pounds? → ? dollars`,
+**3)** Pears are \\$1.40 per pound. Cost of $3$ pounds? → ? dollars`,
         exercise: {
           boxes: 3,
           correctAnswers: ['51', '3', '4.2'],
@@ -568,7 +572,7 @@ Use everything from this lesson. Enter just the number.
         type: 'dropdown-select' as const,
         content: `**One More Best Buy** 🔽
 
-Bulk almonds: $3$ lb for $\\$13.50$. Small bag: $1$ lb for $\\$4.80$. Find the better buy.`,
+Bulk almonds: $3$ lb for \\$13.50. Small bag: $1$ lb for \\$4.80. Find the better buy.`,
         exercise: {
           dropdowns: [
             { label: 'Unit price of the bulk bag:', options: ['$\\$4.50$ /lb', '$\\$4.80$ /lb', '$\\$13.50$ /lb', '$\\$3.00$ /lb'] },

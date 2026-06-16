@@ -72,9 +72,9 @@ Negative numbers help us describe things that go **below** a starting point. Her
 
 - **Temperature:** $-10°$ means 10 degrees **below** zero (brrr! ❄️).
 - **Elevation:** $-50$ feet means 50 feet **below** sea level.
-- **Money:** $-\\$20$ means you **owe** \\$20 (a debt).
+- **Money:** $-20$, i.e. owing \\$20, means you **owe** \\$20 (a debt).
 
-In each case, the **positive** version means the opposite direction: $+10°$ is above zero, $+50$ feet is above sea level, and $+\\$20$ means you **have** \\$20.
+In each case, the **positive** version means the opposite direction: $+10°$ is above zero, $+50$ feet is above sea level, and $+20$, i.e. having \\$20, means you **have** \\$20.
 
 So integers let us talk about both directions — up and down, above and below, having and owing — all with one set of numbers.
     `

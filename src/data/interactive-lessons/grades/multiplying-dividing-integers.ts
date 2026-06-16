@@ -254,7 +254,7 @@ Negative numbers show up everywhere — temperatures dropping, money owed, and s
 **Temperature drop:** A cold front makes the temperature fall $3$ degrees each hour. We write a drop as $-3$. After $4$ hours, the change is:
 $$4 \\times (-3) = -12 \\text{ degrees}$$
 
-**Sharing a debt:** Four friends share a debt of $\\$20$ equally. A debt is negative, so the total is $-20$. Each person's share is:
+**Sharing a debt:** Four friends share a debt of \\$20 equally. A debt is negative, so the total is $-20$. Each person's share is:
 $$(-20) \\div 4 = -5 \\Rightarrow \\text{each owes } \\$5$$
 
 **Diving deeper:** A submarine descends $25$ meters every minute. Going down is $-25$. After $3$ minutes its depth change is $3 \\times (-25) = -75$ meters.
@@ -269,7 +269,7 @@ Watch the words: *"drop," "owe," "below,"* and *"descend"* all point to **negati
 Write each answer as a signed integer, like \`-12\` or \`6\`.
 
 1. The temperature drops $3$ degrees each hour for $4$ hours. What is the total change? ( $4 \\times (-3)$ )
-2. Five friends equally share a debt of $\\$30$. What is each person's share as an integer? ( $(-30) \\div 5$ )
+2. Five friends equally share a debt of \\$30. What is each person's share as an integer? ( $(-30) \\div 5$ )
 3. A diver goes down $6$ meters each minute for $7$ minutes. What is the total change in depth? ( $7 \\times (-6)$ )`,
         exercise: {
           boxes: 3,
