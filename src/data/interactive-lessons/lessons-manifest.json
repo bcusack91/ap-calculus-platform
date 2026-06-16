@@ -1779,5 +1779,805 @@
       "Strategy & Full Synthesis",
       "Mixed Mastery & Exit Quiz"
     ]
+  },
+  {
+    "slug": "piecewise-functions",
+    "importPath": "./extra/piecewise-functions",
+    "partTitles": [
+      "Anatomy & Notation",
+      "Evaluating Piecewise Functions",
+      "Graphing & Open/Closed Dots",
+      "Continuity at the Boundaries",
+      "Domain & Range",
+      "Absolute Value & Step Functions",
+      "Modeling, Mixed Practice & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "polar-coordinates",
+    "importPath": "./extra/polar-coordinates",
+    "partTitles": [
+      "Locating a Point with (r, θ)",
+      "Non-Uniqueness & Negative r",
+      "Converting Between Polar and Rectangular",
+      "Graphing r = f(θ) Point by Point",
+      "The Curve Library: Roses, Cardioids & Limaçons",
+      "Rates of Change, Symmetry & Distance from the Pole",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polynomial-division-remainder-theorem",
+    "importPath": "./extra/polynomial-division-remainder-theorem",
+    "partTitles": [
+      "Long Division of Polynomials",
+      "Synthetic Division (the Shortcut)",
+      "The Remainder Theorem",
+      "The Factor Theorem",
+      "Finding All the Zeros",
+      "Rational Roots & Slant Asymptotes",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rates-of-change",
+    "importPath": "./extra/rates-of-change",
+    "partTitles": [
+      "Average Rate of Change as a Secant Slope",
+      "Units, Signs & Interpretation",
+      "Instantaneous Rate as a Limit of Secants",
+      "Estimating IROC from a Table",
+      "Estimating IROC from a Graph",
+      "When the Rate Itself Is Changing",
+      "Mixed Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rational-functions-asymptotes",
+    "importPath": "./extra/rational-functions-asymptotes",
+    "partTitles": [
+      "Meet the Rational Function",
+      "Vertical Asymptotes & Holes",
+      "Horizontal Asymptotes (The Degree Test)",
+      "Slant (Oblique) Asymptotes",
+      "Intercepts & Sign Analysis",
+      "Putting It All Together: Sketching the Graph",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "sequences-arithmetic-geometric",
+    "importPath": "./extra/sequences-arithmetic-geometric",
+    "partTitles": [
+      "Sequences as Functions",
+      "Arithmetic Sequences",
+      "Geometric Sequences",
+      "Recursive vs. Explicit Rules",
+      "Series: Adding the Terms Up",
+      "Infinite Geometric Series",
+      "Applications, Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "solving-rational-inequalities",
+    "importPath": "./extra/solving-rational-inequalities",
+    "partTitles": [
+      "Why Rational Inequalities Are Different",
+      "Finding Every Critical Number",
+      "The Sign-Chart Method",
+      "Endpoints & Writing the Solution",
+      "Getting One Side to Zero",
+      "Multiplicity & Repeated Factors",
+      "Applications, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "solving-trig-equations",
+    "importPath": "./extra/solving-trig-equations",
+    "partTitles": [
+      "The Toolkit: Reference Angles & the Unit Circle",
+      "Basic Equations on [0, 2π)",
+      "All Solutions: The General Solution",
+      "Equations That Need Algebra First",
+      "Inverse Trig & the Calculator",
+      "Applications: Periodic Models",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "sum-difference-identities",
+    "importPath": "./extra/sum-difference-identities",
+    "partTitles": [
+      "Why We Need Them",
+      "The Cosine Formulas",
+      "The Sine Formulas",
+      "The Tangent Formulas",
+      "Exact Values: A Repeatable Method",
+      "Simplifying & Proving Identities",
+      "Applications, Mixed Practice & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "systems-of-equations",
+    "importPath": "./extra/systems-of-equations",
+    "partTitles": [
+      "What Is a System & What Does a Solution Mean?",
+      "The Substitution Method",
+      "The Elimination Method",
+      "No Solution & Infinitely Many Solutions",
+      "Nonlinear Systems",
+      "Three Variables & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "vectors-in-plane",
+    "importPath": "./extra/vectors-in-plane",
+    "partTitles": [
+      "What Is a Vector?",
+      "Component Form",
+      "Adding, Subtracting & Scaling Vectors",
+      "Unit Vectors & the i, j Form",
+      "Direction Angle & Magnitude–Direction Form",
+      "Applications: Velocity, Force & Bearings",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "ap-stats-descriptive-statistics-intro",
+    "importPath": "./extra/ap-stats-descriptive-statistics-intro",
+    "partTitles": [
+      "Individuals, Variables & Types of Data",
+      "Displaying Distributions",
+      "Describing a Distribution (Shape, Center, Spread)",
+      "Measures of Center: Mean & Median",
+      "Measures of Spread: Range & Standard Deviation",
+      "Five-Number Summary, Boxplots & Outliers",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apush-cold-war-civil-rights",
+    "importPath": "./extra/apush-cold-war-civil-rights",
+    "partTitles": [
+      "Origins of the Cold War (1945–1950)",
+      "The Cold War Heats Up (1950–1962)",
+      "Civil Rights: Early Foundations (1945–1955)",
+      "The Movement Peaks (1960–1965)",
+      "Cold War in the 1960s & the Vietnam War",
+      "Black Power, Détente & the 1970s",
+      "Reagan, the Cold War's End & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apush-reagan-to-present",
+    "importPath": "./extra/apush-reagan-to-present",
+    "partTitles": [
+      "The Conservative Resurgence & the Reagan Revolution",
+      "The End of the Cold War",
+      "The Bush Years & the \"New World Order\" (1989–1993)",
+      "The Clinton Era & 1990s Politics (1993–2001)",
+      "9/11, the War on Terror & the George W. Bush Years (2001–2009)",
+      "Obama, Recession & a Polarized 21st Century (2008–present)",
+      "Synthesis, Themes & Mastery Check"
+    ]
+  },
+  {
+    "slug": "apush-vietnam-social-change",
+    "importPath": "./extra/apush-vietnam-social-change",
+    "partTitles": [
+      "Roots of U.S. Involvement (Containment to Escalation)",
+      "Escalation Under Johnson (Gulf of Tonkin to Americanization)",
+      "The Turning Point: Tet, the Media, and the Credibility Gap",
+      "Nixon, Vietnamization, and the End of the War",
+      "The Antiwar Movement & the Counterculture",
+      "Rights Movements of the Era (Beyond the War)",
+      "Synthesis, Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "area-triangles-quadrilaterals",
+    "importPath": "./extra/area-triangles-quadrilaterals",
+    "partTitles": [
+      "Rectangles, Squares & Parallelograms",
+      "Triangles",
+      "Trapezoids, Rhombuses & Kites",
+      "Composite Figures & the Coordinate Plane",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "circle-basics-geometry",
+    "importPath": "./extra/circle-basics-geometry",
+    "partTitles": [
+      "The Parts of a Circle",
+      "Circumference",
+      "Area",
+      "Arcs, Sectors & Central Angles",
+      "Equation of a Circle & Mastery Check"
+    ]
+  },
+  {
+    "slug": "circle-theorems-arcs-geo",
+    "importPath": "./extra/circle-theorems-arcs-geo",
+    "partTitles": [
+      "Arcs, Central Angles & the Vocabulary of Circles",
+      "The Inscribed Angle Theorem",
+      "Special Inscribed Angles: Semicircles, Cyclic Quadrilaterals & Tangent–Chord",
+      "Angles from Chords, Secants & Tangents",
+      "Segment Lengths & Mastery Check"
+    ]
+  },
+  {
+    "slug": "congruent-triangles",
+    "importPath": "./extra/congruent-triangles",
+    "partTitles": [
+      "What Congruence Means & Correspondence",
+      "The SSS & SAS Postulates",
+      "ASA, AAS & the HL Shortcut",
+      "Choosing a Method, Proofs & the Traps",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "inscribed-angles",
+    "importPath": "./extra/inscribed-angles",
+    "partTitles": [
+      "Arcs, Central Angles & Intercepted Arcs",
+      "The Inscribed Angle Theorem",
+      "Three Powerful Corollaries (same arc, Thales, right triangles)",
+      "Inscribed (Cyclic) Quadrilaterals",
+      "Tangent–Chord Angles, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "parallel-lines-transversals",
+    "importPath": "./extra/parallel-lines-transversals",
+    "partTitles": [
+      "The Setup: Lines, Transversals & the Eight Angles",
+      "The Angle Pair Relationships",
+      "Finding Missing Angle Measures",
+      "Solving for x with Algebra",
+      "Proving Lines Parallel & Mastery Check"
+    ]
+  },
+  {
+    "slug": "polygon-angle-sums",
+    "importPath": "./extra/polygon-angle-sums",
+    "partTitles": [
+      "Polygons & the Triangle Foundation",
+      "The Interior Angle Sum Formula",
+      "Each Angle of a Regular Polygon",
+      "Exterior Angles & the 360° Rule",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "properties-quadrilaterals",
+    "importPath": "./extra/properties-quadrilaterals",
+    "partTitles": [
+      "The Quadrilateral Family",
+      "Parallelograms",
+      "Rectangles, Rhombuses & Squares",
+      "Trapezoids & Kites",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "pythagorean-theorem",
+    "importPath": "./extra/pythagorean-theorem",
+    "partTitles": [
+      "Right Triangles & the Theorem",
+      "Finding the Hypotenuse",
+      "Finding a Missing Leg",
+      "Applications, Distance & the Converse",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "similar-figures-scale-factor-geo",
+    "importPath": "./extra/similar-figures-scale-factor-geo",
+    "partTitles": [
+      "What Similarity Means",
+      "Finding Missing Sides",
+      "Perimeter, Area & Volume Ratios",
+      "Real-World Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "similar-triangles-geometry",
+    "importPath": "./extra/similar-triangles-geometry",
+    "partTitles": [
+      "What Similarity Means",
+      "The Three Similarity Shortcuts (AA, SSS, SAS)",
+      "Solving for Missing Sides",
+      "Real Applications: Shadows, Mirrors & the Side-Splitter",
+      "Perimeter, Area & Mastery Check"
+    ]
+  },
+  {
+    "slug": "special-right-triangles",
+    "importPath": "./extra/special-right-triangles",
+    "partTitles": [
+      "The 45-45-90 Triangle",
+      "The 30-60-90 Triangle",
+      "Working Backward (the hard direction)",
+      "Applications: Squares, Hexagons & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "special-segments-triangles",
+    "importPath": "./extra/special-segments-triangles",
+    "partTitles": [
+      "Perpendicular Bisectors & the Circumcenter",
+      "Angle Bisectors & the Incenter",
+      "Medians & the Centroid",
+      "Altitudes, the Orthocenter & Midsegments",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "surface-area-volume-solids-geo",
+    "importPath": "./extra/surface-area-volume-solids-geo",
+    "partTitles": [
+      "Prisms & Cylinders",
+      "Pyramids & Cones",
+      "Spheres",
+      "Composite Solids & Real-World Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "tangent-lines",
+    "importPath": "./extra/tangent-lines",
+    "partTitles": [
+      "The Tangent and Its Right Angle",
+      "Tangent Segments from an External Point",
+      "Tangent Angles & Intercepted Arcs",
+      "Tangents on the Coordinate Plane",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "triangle-angle-sum",
+    "importPath": "./extra/triangle-angle-sum",
+    "partTitles": [
+      "The 180° Rule",
+      "Classifying Triangles by Their Angles",
+      "Algebra with Triangle Angles",
+      "The Exterior Angle Theorem",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "triangle-congruence-theorems-geo",
+    "importPath": "./extra/triangle-congruence-theorems-geo",
+    "partTitles": [
+      "What Congruence Means",
+      "SSS and SAS",
+      "ASA, AAS, and the Two Fakes",
+      "HL & Proving with CPCTC",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "triangle-inequalities",
+    "importPath": "./extra/triangle-inequalities",
+    "partTitles": [
+      "The Triangle Inequality Theorem",
+      "The Range of the Third Side",
+      "Sides, Angles & Their Order",
+      "Exterior Angles & Ordering in Practice",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "trigonometric-ratios-geo",
+    "importPath": "./extra/trigonometric-ratios-geo",
+    "partTitles": [
+      "Labeling a Right Triangle (Opposite/Adjacent/Hypotenuse)",
+      "Sine, Cosine & Tangent (SOH-CAH-TOA)",
+      "Solving for Missing Sides",
+      "Finding Angles & Special Triangles (inverse trig, 30-60-90 & 45-45-90)",
+      "Applications (elevation/depression) & Mastery Check"
+    ]
+  },
+  {
+    "slug": "area-and-perimeter",
+    "importPath": "./extra/area-and-perimeter",
+    "partTitles": [
+      "What Do They Even Mean?",
+      "The Perimeter of a Rectangle",
+      "The Area of a Rectangle",
+      "Missing Sides & Real-World Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "classifying-shapes-grade4",
+    "importPath": "./extra/classifying-shapes-grade4",
+    "partTitles": [
+      "Sides, Vertices & Angles",
+      "Classifying Triangles",
+      "Classifying Quadrilaterals",
+      "Lines, Angles & Symmetry",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "comparing-ordering-numbers",
+    "importPath": "./extra/comparing-ordering-numbers",
+    "partTitles": [
+      "Place Value: The Secret to Every Comparison",
+      "Comparing Two Numbers with <, =, >",
+      "Ordering a List of Numbers",
+      "Comparing and Ordering Decimals",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "creating-analyzing-data",
+    "importPath": "./extra/creating-analyzing-data",
+    "partTitles": [
+      "Collecting Data with Tally Charts",
+      "Pictographs",
+      "Bar Graphs",
+      "Line Plots (Dot Plots)",
+      "Putting It All Together (Exit Quiz)"
+    ]
+  },
+  {
+    "slug": "factors-factor-pairs-grade4",
+    "importPath": "./extra/factors-factor-pairs-grade4",
+    "partTitles": [
+      "What Is a Factor?",
+      "Factor Pairs",
+      "Listing ALL the Factors",
+      "Prime, Composite & Real-World Factors",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "line-plots-data-grade4",
+    "importPath": "./extra/line-plots-data-grade4",
+    "partTitles": [
+      "What Is a Line Plot?",
+      "Making a Line Plot",
+      "Answering Questions from a Line Plot",
+      "Line Plots with Fractions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "lines-and-angles",
+    "importPath": "./extra/lines-and-angles",
+    "partTitles": [
+      "Points, Lines, Rays & Segments",
+      "How Lines Relate: Parallel, Perpendicular & Intersecting",
+      "Angles & How We Measure Them",
+      "Classifying Angles: Acute, Right, Obtuse & Straight",
+      "Adding Angles & Mastery Check"
+    ]
+  },
+  {
+    "slug": "lines-rays-angles-grade4",
+    "importPath": "./extra/lines-rays-angles-grade4",
+    "partTitles": [
+      "Points, Lines, Segments & Rays",
+      "What Is an Angle?",
+      "Classifying Angles",
+      "Measuring & Adding Angles",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "multi-digit-add-subtract-grade4",
+    "importPath": "./extra/multi-digit-add-subtract-grade4",
+    "partTitles": [
+      "Place Value & Lining Up the Digits",
+      "Addition with Regrouping (Carrying)",
+      "Subtraction with Regrouping (Borrowing)",
+      "Estimation & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "multi-step-word-problems-grade4",
+    "importPath": "./extra/multi-step-word-problems-grade4",
+    "partTitles": [
+      "What Makes a Problem \"Multi-Step\"?",
+      "Choosing the Right Operations",
+      "Money, Time & Measurement",
+      "Estimating & Checking Your Answer",
+      "Putting It All Together & Mastery Check"
+    ]
+  },
+  {
+    "slug": "number-patterns-grade4",
+    "importPath": "./extra/number-patterns-grade4",
+    "partTitles": [
+      "What Is a Pattern?",
+      "Add & Subtract Patterns",
+      "Multiply & Divide Patterns",
+      "Input-Output Tables",
+      "Shape Patterns & Mastery Check"
+    ]
+  },
+  {
+    "slug": "place-value-millions",
+    "importPath": "./extra/place-value-millions",
+    "partTitles": [
+      "What Place Value Means",
+      "The Value of a Digit",
+      "Three Ways to Write a Number",
+      "Comparing & Rounding",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "reading-bar-graphs-line-plots",
+    "importPath": "./extra/reading-bar-graphs-line-plots",
+    "partTitles": [
+      "The Parts of a Bar Graph",
+      "Comparing & Combining Bars",
+      "Meet the Line Plot",
+      "Line Plots with Fractions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rounding-numbers",
+    "importPath": "./extra/rounding-numbers",
+    "partTitles": [
+      "Place Value: The Foundation",
+      "The Rounding Rule",
+      "Tens, Hundreds & Thousands",
+      "Tricky Cases & Real Life",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rounding-whole-numbers-grade4",
+    "importPath": "./extra/rounding-whole-numbers-grade4",
+    "partTitles": [
+      "Place Value, the Map Behind Rounding",
+      "The Number Line Picture",
+      "The Digit Rule (No Number Line Needed)",
+      "Tricky Cases & Real-World Estimation",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "symmetry",
+    "importPath": "./extra/symmetry",
+    "partTitles": [
+      "What Is a Line of Symmetry?",
+      "Counting Lines of Symmetry",
+      "Symmetry in Letters & Real Life",
+      "Reflections (Mirror Images)",
+      "Rotational Symmetry & Mastery Check"
+    ]
+  },
+  {
+    "slug": "understanding-place-value-grade4",
+    "importPath": "./extra/understanding-place-value-grade4",
+    "partTitles": [
+      "What Place Value Means",
+      "Three Ways to Write a Number",
+      "The \"Ten Times\" Rule",
+      "Comparing, Ordering & Rounding",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "units-measurement-grade4",
+    "importPath": "./extra/units-measurement-grade4",
+    "partTitles": [
+      "Measuring Length",
+      "Weight & Liquid Volume",
+      "Time, Money & Reading Scales",
+      "Converting Units",
+      "Word Problems & Mastery Check"
+    ]
+  },
+  {
+    "slug": "adding-unlike-fractions-grade5",
+    "importPath": "./extra/adding-unlike-fractions-grade5",
+    "partTitles": [
+      "Why We Need a Common Denominator",
+      "Finding the Least Common Denominator",
+      "The Full Procedure (Add & Simplify)",
+      "Mixed Numbers & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "converting-units-grade5",
+    "importPath": "./extra/converting-units-grade5",
+    "partTitles": [
+      "Bigger Units, Smaller Units, and Why We Convert",
+      "The Metric System (Everything Is Powers of 10)",
+      "The Customary System (Length, Weight & Capacity)",
+      "Time, Two-Step Conversions & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "coordinate-plane-graphing-grade5",
+    "importPath": "./extra/coordinate-plane-graphing-grade5",
+    "partTitles": [
+      "Meet the Coordinate Plane",
+      "Ordered Pairs: An Address for Every Point",
+      "Reading Points Off a Graph",
+      "Distances, Paths & Patterns",
+      "Real-World Maps & Mastery Check"
+    ]
+  },
+  {
+    "slug": "dividing-decimals-grade5",
+    "importPath": "./extra/dividing-decimals-grade5",
+    "partTitles": [
+      "What Division With Decimals Means",
+      "Dividing a Decimal by a Whole Number",
+      "Dividing by Powers of 10 & Moving the Point",
+      "Dividing by a Decimal",
+      "Word Problems, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "factors-and-multiples",
+    "importPath": "./extra/factors-and-multiples",
+    "partTitles": [
+      "Finding Factors",
+      "Finding Multiples",
+      "Prime, Composite & Prime Factorization",
+      "Greatest Common Factor (GCF)",
+      "Least Common Multiple (LCM) & Mastery Check"
+    ]
+  },
+  {
+    "slug": "gcf-and-lcm",
+    "importPath": "./extra/gcf-and-lcm",
+    "partTitles": [
+      "Factors and the Greatest Common Factor",
+      "Prime Factorization & a Faster GCF",
+      "Multiples and the Least Common Multiple",
+      "Word Problems: GCF or LCM?",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "line-graphs",
+    "importPath": "./extra/line-graphs",
+    "partTitles": [
+      "What a Line Graph Shows",
+      "Reading Values From a Graph",
+      "Trends: Up, Down, and Flat",
+      "Answering Questions With Data",
+      "Building a Graph & Mastery Check"
+    ]
+  },
+  {
+    "slug": "multi-digit-division-grade5",
+    "importPath": "./extra/multi-digit-division-grade5",
+    "partTitles": [
+      "The Parts of a Division Problem & Smart Estimating",
+      "Dividing by a One-Digit Number",
+      "Dividing by a Two-Digit Number",
+      "Remainders & What They Mean",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "multi-digit-multiplication-grade5",
+    "importPath": "./extra/multi-digit-multiplication-grade5",
+    "partTitles": [
+      "Place Value: The Secret Behind Big Multiplication",
+      "Multiplying by a One-Digit Number",
+      "The Box (Area) Method for Two-Digit × Two-Digit",
+      "The Standard Algorithm (Two-Digit × Two-Digit)",
+      "Word Problems, Estimation & Mastery Check"
+    ]
+  },
+  {
+    "slug": "multiply-divide-fractions-grade5",
+    "importPath": "./extra/multiply-divide-fractions-grade5",
+    "partTitles": [
+      "Multiplying Fractions: Multiply Across the Top, Across the Bottom",
+      "Multiplying Fractions: Whole Numbers, Mixed Numbers & Simplifying",
+      "Dividing Fractions: Reciprocals & What Division Really Asks",
+      "Dividing Fractions: Keep, Change, Flip",
+      "Mixed Practice, Word Problems & Mastery Check"
+    ]
+  },
+  {
+    "slug": "multiplying-decimals-grade5",
+    "importPath": "./extra/multiplying-decimals-grade5",
+    "partTitles": [
+      "Decimals & Place Value",
+      "The Count-the-Places Rule",
+      "Bigger Numbers, Same Rule",
+      "Word Problems & Money",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "numerical-expressions",
+    "importPath": "./extra/numerical-expressions",
+    "partTitles": [
+      "What Is an Expression?",
+      "Order of Operations",
+      "Grouping Symbols",
+      "Writing & Interpreting Expressions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "order-of-operations",
+    "importPath": "./extra/order-of-operations",
+    "partTitles": [
+      "Why Order Matters",
+      "The Left-to-Right Teams",
+      "Grouping Symbols",
+      "Exponents & Full Expressions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "patterns-relationships",
+    "importPath": "./extra/patterns-relationships",
+    "partTitles": [
+      "Reading a Pattern and Finding Its Rule",
+      "Two Patterns at Once",
+      "Ordered Pairs",
+      "Graphing on the Coordinate Plane",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "prime-composite-numbers",
+    "importPath": "./extra/prime-composite-numbers",
+    "partTitles": [
+      "Factors: The Building Blocks",
+      "Prime vs. Composite",
+      "Divisibility Rules: Fast Tests",
+      "Prime Factorization & Factor Trees",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "data-displays-grade6",
+    "importPath": "./extra/data-displays-grade6",
+    "partTitles": [
+      "Dot Plots & Frequency Tables",
+      "Bar Graphs & Histograms",
+      "Stem-and-Leaf Plots & Line Graphs",
+      "Shape, Center & Spread",
+      "Choosing Displays & Mastery Check"
+    ]
+  },
+  {
+    "slug": "evaluating-expressions",
+    "importPath": "./extra/evaluating-expressions",
+    "partTitles": [
+      "Variables, Substitution & the Big Idea",
+      "Order of Operations (PEMDAS)",
+      "Substitution Meets the Order of Operations",
+      "Exponents & Real-World Formulas",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "integer-operations-grade6",
+    "importPath": "./extra/integer-operations-grade6",
+    "partTitles": [
+      "Meet the Integers (integers, number line, absolute value, comparing/ordering)",
+      "Adding Integers (same-sign and different-sign rules)",
+      "Subtracting Integers (Keep-Change-Change / add the opposite)",
+      "Multiplying & Dividing Integers (sign rule, counting negatives)",
+      "Order of Operations, Word Problems & Mastery (with Exit Quiz)"
+    ]
   }
 ]
