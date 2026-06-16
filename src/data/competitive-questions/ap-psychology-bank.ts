@@ -946,14 +946,6 @@ const allQuestions: ApPsychologyQuestion[] = [
     difficulty: 'easy',
   },
   {
-    id: 117,
-    question: 'A correlation coefficient of -0.85 indicates:',
-    options: ['A weak negative relationship', 'No relationship', 'A strong negative relationship', 'A strong positive relationship'],
-    correctAnswer: 2,
-    explanation: 'A correlation of -0.85 indicates a strong negative (inverse) relationship; as one variable increases, the other tends to decrease.',
-    difficulty: 'easy',
-  },
-  {
     id: 118,
     question: 'What cognitive bias describes people\'s tendency to overestimate their own abilities?',
     options: ['Hindsight bias', 'Dunning-Kruger effect', 'Anchoring bias', 'Availability heuristic'],
@@ -1106,14 +1098,6 @@ const allQuestions: ApPsychologyQuestion[] = [
     difficulty: 'medium',
   },
   {
-    id: 137,
-    question: 'The endocrine system communicates through:',
-    options: ['Electrical impulses along neurons', 'Hormones released into the bloodstream', 'Neurotransmitters across synapses', 'Reflexive arcs in the spinal cord'],
-    correctAnswer: 1,
-    explanation: 'The endocrine system uses glands to release hormones into the bloodstream, providing slower but longer-lasting chemical communication compared to the nervous system.',
-    difficulty: 'easy',
-  },
-  {
     id: 138,
     question: 'A psychologist who uses free association and dream analysis is most likely practicing:',
     options: ['Cognitive-behavioral therapy', 'Humanistic therapy', 'Psychoanalytic/psychodynamic therapy', 'Systematic desensitization'],
@@ -1242,14 +1226,6 @@ const allQuestions: ApPsychologyQuestion[] = [
     difficulty: 'medium',
   },
   {
-    id: 154,
-    question: 'Selective serotonin reuptake inhibitors (SSRIs) work by:',
-    options: ['Increasing dopamine production', 'Blocking serotonin reuptake to increase serotonin availability', 'Mimicking GABA at receptor sites', 'Destroying excess norepinephrine'],
-    correctAnswer: 1,
-    explanation: 'SSRIs block the reabsorption (reuptake) of serotonin into the presynaptic neuron, leaving more serotonin available in the synapse to improve mood.',
-    difficulty: 'medium',
-  },
-  {
     id: 155,
     question: 'In social psychology, the "just-world hypothesis" refers to the belief that:',
     options: ['People always act rationally', 'The world is inherently chaotic', 'People get what they deserve', 'Social hierarchies are natural'],
@@ -1314,28 +1290,12 @@ const allQuestions: ApPsychologyQuestion[] = [
     difficulty: 'medium',
   },
   {
-    id: 163,
-    question: 'Weber\'s law states that the just noticeable difference (JND) is:',
-    options: ['A fixed amount regardless of stimulus intensity', 'A constant proportion of the original stimulus', 'Only applicable to vision', 'Determined by the absolute threshold'],
-    correctAnswer: 1,
-    explanation: 'Weber\'s law states that the JND between two stimuli is a constant proportion of the original stimulus (e.g., you notice a 5% weight change regardless of starting weight).',
-    difficulty: 'hard',
-  },
-  {
     id: 164,
     question: 'The Stanford prison experiment conducted by Philip Zimbardo demonstrated:',
     options: ['The effectiveness of token economies', 'How social roles can influence behavior', 'That personality is stable across situations', 'The importance of random sampling'],
     correctAnswer: 1,
     explanation: 'Zimbardo\'s study showed that normal college students quickly adopted abusive (guards) or passive (prisoners) behaviors based on assigned social roles, demonstrating the power of situational forces.',
     difficulty: 'hard',
-  },
-  {
-    id: 165,
-    question: 'Which of the following is NOT one of the Big Five personality traits?',
-    options: ['Neuroticism', 'Extraversion', 'Self-actualization', 'Agreeableness'],
-    correctAnswer: 2,
-    explanation: 'The Big Five (OCEAN) traits are Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Self-actualization is a concept from Maslow\'s hierarchy, not a Big Five trait.',
-    difficulty: 'easy',
   },
   {
     id: 166,

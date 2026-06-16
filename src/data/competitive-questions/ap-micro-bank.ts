@@ -75,11 +75,9 @@ const allQuestions: ApMicroQuestion[] = [
   { id: 57, question: 'An increase in input costs causes the supply curve to:', options: ['Shift left', 'Shift right', 'Stay the same', 'Become flat'], correctAnswer: 0, explanation: 'Higher costs reduce supply at every price.', difficulty: 'easy', topicSlug: 'supply-demand' },
   { id: 58, question: 'At equilibrium price:', options: ['Quantity supplied equals quantity demanded', 'There is a shortage', 'There is a surplus', 'Sellers earn zero profit'], correctAnswer: 0, explanation: 'Definition of market equilibrium.', difficulty: 'easy', topicSlug: 'supply-demand' },
   // basic-concepts (8 → 10)
-  { id: 59, question: 'Opportunity cost is:', options: ['The value of the next-best alternative forgone', 'The dollar cost only', 'Sunk cost', 'Marginal cost'], correctAnswer: 0, explanation: 'Core economic concept of trade-off.', difficulty: 'easy', topicSlug: 'basic-concepts' },
   { id: 60, question: 'A production possibilities frontier (PPF) shows:', options: ['The maximum combinations of two goods that can be produced with given resources', 'Demand and supply', 'Equilibrium price', 'Marginal utility'], correctAnswer: 0, explanation: 'Trade-offs and opportunity cost.', difficulty: 'medium', topicSlug: 'basic-concepts' },
   // market-failure (8 → 10)
   { id: 61, question: 'A negative externality (e.g., pollution) results in:', options: ['Overproduction relative to social optimum', 'Underproduction', 'Optimal production', 'No production'], correctAnswer: 0, explanation: 'Private cost < social cost.', difficulty: 'medium', topicSlug: 'market-failure' },
-  { id: 62, question: 'Public goods are characterized by:', options: ['Non-rivalry and non-excludability', 'Excludability and rivalry', 'Privately produced only', 'Always congested'], correctAnswer: 0, explanation: 'Free-rider problem leads to underprovision.', difficulty: 'medium', topicSlug: 'market-failure' },
 ]
 
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular `micro-*` slugs;

@@ -165,9 +165,7 @@ const allQuestions: ApPhysicsCMechQuestion[] = [
   { id: 110, question: 'Work done by a variable force F(x) = 3x N from x=0 to x=2:', options: ['6 J', '3 J', '12 J', '9 J'], correctAnswer: 0, explanation: 'W = ∫₀² 3x dx = [3x²/2]₀² = 6 J.', difficulty: 'medium', topicSlug: 'physics-c-work-power' },
 
   // physics-c-conservative-forces (was 5 → 10)
-  { id: 111, question: 'A conservative force satisfies:', options: ['F = −dU/dx', 'F·v = 0', 'W ≠ 0 on closed loop', 'F = ma only'], correctAnswer: 0, explanation: 'F = −dU/dx; closed-loop work = 0.', difficulty: 'easy', topicSlug: 'physics-c-conservative-forces' },
   { id: 112, question: 'Which is NOT conservative?', options: ['Kinetic friction', 'Gravity', 'Spring force', 'Electrostatic force'], correctAnswer: 0, explanation: 'Friction dissipates energy; not conservative.', difficulty: 'easy', topicSlug: 'physics-c-conservative-forces' },
-  { id: 113, question: 'If U(x) = ½kx², the force is:', options: ['−kx', 'kx', '−½kx²', 'kx²'], correctAnswer: 0, explanation: 'F = −dU/dx = −kx (Hooke\'s law).', difficulty: 'easy', topicSlug: 'physics-c-conservative-forces' },
   { id: 114, question: 'For gravity near Earth, U =', options: ['mgh', '−mgh', '½mgh', 'g/h'], correctAnswer: 0, explanation: 'Near surface, U = mgh (relative to chosen zero).', difficulty: 'easy', topicSlug: 'physics-c-conservative-forces' },
   { id: 115, question: 'Equilibrium points correspond to:', options: ['dU/dx = 0', 'U = 0', 'F = max', 'd²U/dx² = 0'], correctAnswer: 0, explanation: 'Equilibrium ⇔ F = −dU/dx = 0.', difficulty: 'medium', topicSlug: 'physics-c-conservative-forces' },
 
@@ -175,7 +173,6 @@ const allQuestions: ApPhysicsCMechQuestion[] = [
   { id: 116, question: 'In an isolated system, total momentum is:', options: ['Conserved', 'Always zero', 'Equal to KE', 'Half of impulse'], correctAnswer: 0, explanation: 'Newton\'s 3rd law ⇒ total p is conserved with no external force.', difficulty: 'easy', topicSlug: 'physics-c-momentum-collisions' },
   { id: 117, question: 'In a perfectly inelastic collision:', options: ['Objects stick together', 'KE is conserved', 'Momentum is not conserved', 'Speeds reverse'], correctAnswer: 0, explanation: 'Maximum KE lost; objects move as one mass.', difficulty: 'easy', topicSlug: 'physics-c-momentum-collisions' },
   { id: 118, question: 'A 2-kg ball at 4 m/s strikes a 2-kg ball at rest in a 1D elastic collision. After:', options: ['First stops; second moves at 4 m/s', 'Both move at 2 m/s', 'First reverses at 4 m/s', 'Both stop'], correctAnswer: 0, explanation: 'Equal masses elastic 1D collision: velocities exchange.', difficulty: 'medium', topicSlug: 'physics-c-momentum-collisions' },
-  { id: 119, question: 'Impulse equals:', options: ['Change in momentum', 'Change in KE', 'Force × velocity', 'Power × time'], correctAnswer: 0, explanation: 'J = ∫F dt = Δp.', difficulty: 'easy', topicSlug: 'physics-c-momentum-collisions' },
   { id: 120, question: 'In an explosion, total momentum after equals:', options: ['Total momentum before', 'Zero', 'Sum of |momenta|', 'Total KE'], correctAnswer: 0, explanation: 'No external forces ⇒ momentum is conserved.', difficulty: 'easy', topicSlug: 'physics-c-momentum-collisions' },
 
   // physics-c-center-of-mass (was 5 → 10)

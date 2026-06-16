@@ -44,7 +44,6 @@ const allQuestions: ApAfricanAmericanStudiesQuestion[] = [
 
   // ============ TOP-UP: bring under-10 sub-topics to >=10 questions ============
   // origins-diaspora (3 → 10)
-  { id: 31, question: 'The Middle Passage refers to:', options: ['The transatlantic voyage of enslaved Africans to the Americas', 'A trade route in West Africa', 'A passage in the Bible', 'A 19th-century reform'], correctAnswer: 0, explanation: 'Brutal forced migration of millions.', difficulty: 'easy', topicSlug: 'origins-diaspora' },
   { id: 32, question: 'The kingdom of Mali was famous for:', options: ['Its wealth in gold and the pilgrimage of Mansa Musa', 'European-style feudalism', 'Buddhism', 'The Industrial Revolution'], correctAnswer: 0, explanation: '14th-century West African empire.', difficulty: 'medium', topicSlug: 'origins-diaspora' },
   { id: 33, question: 'Timbuktu was renowned in West Africa as a:', options: ['Center of Islamic scholarship and trade', 'European trading post', 'Coastal slave port', 'Roman colony'], correctAnswer: 0, explanation: 'Home to ancient libraries and universities.', difficulty: 'medium', topicSlug: 'origins-diaspora' },
   { id: 34, question: 'The Songhai Empire (15th–16th c.) was located in:', options: ['West Africa along the Niger River', 'Southern Africa', 'East Africa', 'North Africa only'], correctAnswer: 0, explanation: 'Successor to Mali; centered on Gao.', difficulty: 'medium', topicSlug: 'origins-diaspora' },
@@ -64,10 +63,8 @@ const allQuestions: ApAfricanAmericanStudiesQuestion[] = [
   // political-struggles (6 → 10)
   { id: 46, question: 'The 1963 March on Washington featured:', options: ['Martin Luther King Jr.\'s "I Have a Dream" speech', 'The signing of the Civil Rights Act', 'The end of slavery', 'The election of Barack Obama'], correctAnswer: 0, explanation: 'Massive demonstration for jobs and civil rights.', difficulty: 'easy', topicSlug: 'political-struggles' },
   { id: 47, question: 'The Voting Rights Act (1965) outlawed:', options: ['Discriminatory voting practices like literacy tests', 'Federal income tax', 'Segregated schools', 'Property ownership'], correctAnswer: 0, explanation: 'Federal enforcement of the 15th Amendment.', difficulty: 'medium', topicSlug: 'political-struggles' },
-  { id: 48, question: 'Brown v. Board of Education (1954) ruled that:', options: ['Racial segregation in public schools is unconstitutional', 'Schools can be segregated if equal', 'Voting is a state matter', 'Slavery was constitutional'], correctAnswer: 0, explanation: 'Overturned Plessy v. Ferguson in education.', difficulty: 'easy', topicSlug: 'political-struggles' },
   { id: 49, question: 'The Black Panther Party was founded in:', options: ['1966 in Oakland, California', '1900 in Atlanta', '1860 in Boston', '1980 in DC'], correctAnswer: 0, explanation: 'Self-defense and community-program organization.', difficulty: 'medium', topicSlug: 'political-struggles' },
   // resistance-abolition (9 → 10)
-  { id: 50, question: 'The Underground Railroad was:', options: ['A network of secret routes and safe houses helping enslaved people escape to freedom', 'A literal railroad', 'A government program', 'A militia'], correctAnswer: 0, explanation: 'Operated by abolitionists like Harriet Tubman.', difficulty: 'easy', topicSlug: 'resistance-abolition' },
 ]
 
 // Lesson-slug → bank-slug alias map. Lesson registry uses granular `aas-*` slugs;

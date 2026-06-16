@@ -185,24 +185,18 @@ const allQuestions: ApBiologyQuestion[] = [
   // cellular-respiration (was 7 → 10)
   { id: 124, question: 'Net ATP yield per glucose (aerobic):', options: ['~30–32 ATP', 'Exactly 38 ATP', '2 ATP', '0 ATP'], correctAnswer: 0, explanation: 'Modern estimates: 30–32 ATP per glucose.', difficulty: 'medium', topicSlug: 'cellular-respiration' },
   { id: 125, question: 'Glycolysis occurs in the:', options: ['Cytoplasm', 'Mitochondrial matrix', 'Inner membrane', 'Nucleus'], correctAnswer: 0, explanation: 'Anaerobic step in cytosol.', difficulty: 'easy', topicSlug: 'cellular-respiration' },
-  { id: 126, question: 'Final electron acceptor in aerobic respiration:', options: ['O₂', 'NAD⁺', 'CO₂', 'H₂O'], correctAnswer: 0, explanation: 'O₂ is reduced to H₂O at end of ETC.', difficulty: 'easy', topicSlug: 'cellular-respiration' },
 
   // photosynthesis (was 7 → 10)
-  { id: 127, question: 'Light reactions occur in:', options: ['Thylakoid membrane', 'Stroma', 'Cytosol', 'Outer chloroplast membrane'], correctAnswer: 0, explanation: 'Photosystems II and I are embedded in thylakoids.', difficulty: 'easy', topicSlug: 'photosynthesis' },
   { id: 128, question: 'Calvin cycle (dark reactions) fixes:', options: ['CO₂ into G3P (sugar)', 'O₂ into water', 'N₂ into ammonia', 'Glucose into CO₂'], correctAnswer: 0, explanation: 'RuBisCO catalyzes carbon fixation in stroma.', difficulty: 'medium', topicSlug: 'photosynthesis' },
   { id: 129, question: 'Photosystem II splits:', options: ['Water (releasing O₂)', 'CO₂', 'Glucose', 'NADH'], correctAnswer: 0, explanation: 'Photolysis of water provides electrons + O₂ byproduct.', difficulty: 'medium', topicSlug: 'photosynthesis' },
 
   // cell-cycle-mitosis (was 6 → 10)
   { id: 130, question: 'During metaphase, chromosomes are:', options: ['Aligned at the metaphase plate', 'Decondensing', 'Replicating', 'Separating'], correctAnswer: 0, explanation: 'Sister chromatids attached to spindle line up centrally.', difficulty: 'easy', topicSlug: 'cell-cycle-mitosis' },
-  { id: 131, question: 'DNA replication occurs during:', options: ['S phase', 'G1', 'M phase', 'G2'], correctAnswer: 0, explanation: 'Synthesis (S) phase between G1 and G2.', difficulty: 'easy', topicSlug: 'cell-cycle-mitosis' },
   { id: 132, question: 'Cyclin–CDK complexes regulate:', options: ['Progression through cell cycle checkpoints', 'Translation only', 'Membrane transport', 'Photosynthesis'], correctAnswer: 0, explanation: 'CDK activity rises and falls with cyclin levels.', difficulty: 'medium', topicSlug: 'cell-cycle-mitosis' },
   { id: 133, question: 'Cytokinesis in animal cells uses a:', options: ['Cleavage furrow (contractile ring of actin)', 'Cell plate', 'Cell wall growth', 'Spindle'], correctAnswer: 0, explanation: 'Animal cells pinch in two via actin/myosin ring.', difficulty: 'easy', topicSlug: 'cell-cycle-mitosis' },
 
   // meiosis-genetic-diversity (was 5 → 10)
-  { id: 134, question: 'Crossing over occurs during:', options: ['Prophase I of meiosis', 'Anaphase II', 'Mitosis', 'S phase'], correctAnswer: 0, explanation: 'Homologs exchange segments at chiasmata.', difficulty: 'medium', topicSlug: 'meiosis-genetic-diversity' },
   { id: 135, question: 'Independent assortment occurs at:', options: ['Metaphase I (random orientation of homolog pairs)', 'Anaphase II', 'Prophase II', 'Telophase'], correctAnswer: 0, explanation: 'Each pair orients independently.', difficulty: 'medium', topicSlug: 'meiosis-genetic-diversity' },
-  { id: 136, question: 'Meiosis produces:', options: ['Four haploid gametes from one diploid cell', 'Two diploid daughter cells', 'One polyploid cell', 'A clone of the parent'], correctAnswer: 0, explanation: 'Two divisions yield 4 genetically distinct haploid cells.', difficulty: 'easy', topicSlug: 'meiosis-genetic-diversity' },
-  { id: 137, question: 'Sister chromatids separate during:', options: ['Anaphase II', 'Anaphase I', 'Metaphase I', 'Prophase'], correctAnswer: 0, explanation: 'Anaphase II separates sister chromatids; Anaphase I separates homologs.', difficulty: 'medium', topicSlug: 'meiosis-genetic-diversity' },
   { id: 138, question: 'Nondisjunction can lead to:', options: ['Aneuploidy (e.g., trisomy 21)', 'Polyploidy only', 'Apoptosis only', 'Crossover'], correctAnswer: 0, explanation: 'Failure of chromosomes to separate properly.', difficulty: 'medium', topicSlug: 'meiosis-genetic-diversity' },
 
   // mendelian-genetics (was 6 → 10)
@@ -252,8 +246,6 @@ const allQuestions: ApBiologyQuestion[] = [
   { id: 170, question: 'Adenine pairs with:', options: ['Thymine (in DNA)', 'Cytosine', 'Guanine', 'Uracil (in DNA)'], correctAnswer: 0, explanation: 'A–T in DNA, A–U in RNA.', difficulty: 'easy', topicSlug: 'dna-structure-replication' },
 
   // transcription-translation (was 6 → 10)
-  { id: 171, question: 'Transcription produces:', options: ['mRNA from a DNA template', 'Protein from RNA', 'DNA from RNA', 'tRNA only'], correctAnswer: 0, explanation: 'RNA polymerase makes pre-mRNA.', difficulty: 'easy', topicSlug: 'transcription-translation' },
-  { id: 172, question: 'Translation occurs at:', options: ['Ribosomes', 'Nucleolus only', 'Smooth ER', 'Lysosomes'], correctAnswer: 0, explanation: 'Ribosomes (free or bound) synthesize proteins.', difficulty: 'easy', topicSlug: 'transcription-translation' },
   { id: 173, question: 'tRNA brings amino acids to the ribosome based on its:', options: ['Anticodon matching the mRNA codon', 'mRNA sequence', 'Promoter region', 'Poly-A tail'], correctAnswer: 0, explanation: 'Codon–anticodon base pairing.', difficulty: 'medium', topicSlug: 'transcription-translation' },
   { id: 174, question: 'Eukaryotic mRNA is processed by:', options: ['5\' cap, 3\' poly-A tail, intron splicing', 'Just translation', 'Reverse transcription', 'No processing'], correctAnswer: 0, explanation: 'Pre-mRNA → mature mRNA before export.', difficulty: 'medium', topicSlug: 'transcription-translation' },
 
