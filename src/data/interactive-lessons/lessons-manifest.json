@@ -2579,5 +2579,720 @@
       "Multiplying & Dividing Integers (sign rule, counting negatives)",
       "Order of Operations, Word Problems & Mastery (with Exit Quiz)"
     ]
+  },
+  {
+    "slug": "integers-number-line-grade6",
+    "importPath": "./extra/integers-number-line-grade6",
+    "partTitles": [
+      "Meet the Integers",
+      "Plotting on the Number Line",
+      "Comparing and Ordering Integers",
+      "Opposites and Absolute Value",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "mean-median-mode-range-grade6",
+    "importPath": "./extra/mean-median-mode-range-grade6",
+    "partTitles": [
+      "Meet the Four Measures",
+      "The Mean (Average)",
+      "The Median (Middle)",
+      "The Mode and the Range",
+      "All Four Together & Mastery Check"
+    ]
+  },
+  {
+    "slug": "measures-center-variability",
+    "importPath": "./extra/measures-center-variability",
+    "partTitles": [
+      "The Mean (Average)",
+      "Median & Mode",
+      "Range, Outliers & Choosing the Right Center",
+      "Mean Absolute Deviation (MAD)",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "one-step-equations-grade6",
+    "importPath": "./extra/one-step-equations-grade6",
+    "partTitles": [
+      "The Balance Idea & Inverse Operations",
+      "Addition & Subtraction Equations",
+      "Multiplication & Division Equations",
+      "Checking Answers & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rates-unit-rates-grade6",
+    "importPath": "./extra/rates-unit-rates-grade6",
+    "partTitles": [
+      "From Ratios to Rates",
+      "The Unit Rate",
+      "Comparing with Unit Rates (Better Buy)",
+      "Using Unit Rates to Solve Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "statistical-questions-data-display",
+    "importPath": "./extra/statistical-questions-data-display",
+    "partTitles": [
+      "What Makes a Question Statistical?",
+      "Dot Plots (Line Plots)",
+      "Center: Mean, Median, and Mode",
+      "Spread, Histograms & Box Plots",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "surface-area-volume-grade6",
+    "importPath": "./extra/surface-area-volume-grade6",
+    "partTitles": [
+      "Solids, Nets, and Two Big Ideas",
+      "Volume of Rectangular Prisms",
+      "Surface Area of Boxes & Cubes",
+      "Triangular Prisms",
+      "Real-World Problems & Mastery Check"
+    ]
+  },
+  {
+    "slug": "understanding-ratios-grade6",
+    "importPath": "./extra/understanding-ratios-grade6",
+    "partTitles": [
+      "What Is a Ratio?",
+      "Equivalent Ratios & Simplest Form",
+      "Ratio Tables & Unit Rates",
+      "Part-to-Part, Part-to-Whole & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "writing-evaluating-expressions-grade6",
+    "importPath": "./extra/writing-evaluating-expressions-grade6",
+    "partTitles": [
+      "The Language of Algebra",
+      "Turning Words into Expressions",
+      "Evaluating Expressions",
+      "Real-World Expressions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "writing-expressions",
+    "importPath": "./extra/writing-expressions",
+    "partTitles": [
+      "From Words to Math",
+      "Order Matters: \"Less Than\" & \"Divided By\"",
+      "Two-Step Phrases & Grouping",
+      "Real-World Expressions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "angle-relationships-grade7",
+    "importPath": "./extra/angle-relationships-grade7",
+    "partTitles": [
+      "Angle Basics & Adjacent Angles",
+      "Complementary & Supplementary Angles",
+      "Vertical Angles & Angles on a Line",
+      "Writing & Solving Equations for Unknown Angles",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "circles-circumference-area-grade7",
+    "importPath": "./extra/circles-circumference-area-grade7",
+    "partTitles": [
+      "The Parts of a Circle and the Magic Number π",
+      "Finding the Circumference",
+      "Finding the Area",
+      "Real-World Problems, Half Circles, and Working Backward",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "inequalities-grade7",
+    "importPath": "./extra/inequalities-grade7",
+    "partTitles": [
+      "Symbols & Meaning",
+      "Graphing on a Number Line",
+      "Solving One-Step Inequalities",
+      "Two-Step Inequalities & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "probability-basics-grade7",
+    "importPath": "./extra/probability-basics-grade7",
+    "partTitles": [
+      "What Is Probability?",
+      "Theoretical Probability & Sample Spaces",
+      "Complements: The Probability of \"Not\"",
+      "Experimental Probability & Predictions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "scale-drawings-grade7",
+    "importPath": "./extra/scale-drawings-grade7",
+    "partTitles": [
+      "What Is a Scale Drawing?",
+      "From Drawing to Real Life",
+      "From Real Life Back to the Drawing",
+      "Areas and Re-Scaling",
+      "Real-World Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "two-step-equations-grade7",
+    "importPath": "./extra/two-step-equations-grade7",
+    "partTitles": [
+      "What \"Undoing\" Means",
+      "The Core Method: $px + q = r$",
+      "Negatives, Division & Checking",
+      "Real-World Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "unit-rates-fractions-grade7",
+    "importPath": "./extra/unit-rates-fractions-grade7",
+    "partTitles": [
+      "Ratios, Rates, and \"Per One\"",
+      "Complex Fractions: Fraction ÷ Fraction",
+      "Computing Unit Rates with Fractions",
+      "Real-World Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "congruence-similarity",
+    "importPath": "./extra/congruence-similarity",
+    "partTitles": [
+      "Congruent Figures",
+      "Rigid Motions (Transformations)",
+      "Similar Figures & Scale Factor",
+      "Finding Missing Lengths with Proportions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "geometric-transformations-grade8",
+    "importPath": "./extra/geometric-transformations-grade8",
+    "partTitles": [
+      "Moving Shapes & Translations",
+      "Reflections (Flips)",
+      "Rotations (Turns)",
+      "Dilations, Congruence & Similarity",
+      "Sequences & Mastery Check"
+    ]
+  },
+  {
+    "slug": "radicals-integer-exponents-grade8",
+    "importPath": "./extra/radicals-integer-exponents-grade8",
+    "partTitles": [
+      "What Exponents Really Mean",
+      "The Exponent Rules",
+      "Zero and Negative Exponents",
+      "Square Roots & Cube Roots",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rational-irrational-numbers-grade8",
+    "importPath": "./extra/rational-irrational-numbers-grade8",
+    "partTitles": [
+      "What Makes a Number Rational",
+      "Irrational Numbers",
+      "Turning Repeating Decimals into Fractions",
+      "Estimating & Ordering on a Number Line",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "rotations-dilations",
+    "importPath": "./extra/rotations-dilations",
+    "partTitles": [
+      "Rotations: Turning Around a Point",
+      "Mastering Rotation Rules",
+      "Dilations: Resizing a Figure",
+      "Comparing, Combining & Working Backward",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "scatter-plots",
+    "importPath": "./extra/scatter-plots",
+    "partTitles": [
+      "Plotting & Reading Two Variables",
+      "Patterns: Association & Correlation",
+      "The Trend Line (Line of Best Fit)",
+      "The Equation: Slope, Intercept & Predicting",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "scatter-plots-trend-lines-grade8",
+    "importPath": "./extra/scatter-plots-trend-lines-grade8",
+    "partTitles": [
+      "What a Scatter Plot Shows",
+      "Describing Association",
+      "Drawing the Trend Line",
+      "Predicting & Interpreting",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "slope-linear-functions-grade8",
+    "importPath": "./extra/slope-linear-functions-grade8",
+    "partTitles": [
+      "What Slope Means",
+      "The Slope Formula",
+      "Slope-Intercept Form $y = mx + b$",
+      "Graphing Lines & Writing Equations",
+      "Real-World Models & Mastery Check"
+    ]
+  },
+  {
+    "slug": "solving-linear-equations-grade8",
+    "importPath": "./extra/solving-linear-equations-grade8",
+    "partTitles": [
+      "The Balance Idea & One-Step Equations",
+      "Two-Step Equations",
+      "Distributing & Combining Like Terms",
+      "Fractions, Decimals & Special Cases",
+      "Word Problems & Mastery Check"
+    ]
+  },
+  {
+    "slug": "translations-reflections",
+    "importPath": "./extra/translations-reflections",
+    "partTitles": [
+      "Sliding Figures: Translations",
+      "Flipping Figures: Reflections Over the Axes",
+      "Reflecting Over the Line $y = x$",
+      "Composing Two Transformations",
+      "Congruence, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "two-way-tables",
+    "importPath": "./extra/two-way-tables",
+    "partTitles": [
+      "Reading the Table",
+      "Completing a Table",
+      "Relative Frequencies",
+      "Conditional Relative Frequencies & Association",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "understanding-functions-grade8",
+    "importPath": "./extra/understanding-functions-grade8",
+    "partTitles": [
+      "What Is a Function?",
+      "Four Ways to Show a Function",
+      "Function Rules & Evaluating",
+      "Rate of Change, Initial Value & Linear vs. Nonlinear",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "absolute-value",
+    "importPath": "./extra/absolute-value",
+    "partTitles": [
+      "Distance From Zero",
+      "Evaluating Expressions & Comparing",
+      "Distance Between Two Points",
+      "Opposites & Equations Like $\\lvert x\\rvert = 5$",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "angle-measurements",
+    "importPath": "./extra/angle-measurements",
+    "partTitles": [
+      "What an Angle Is & How We Name It",
+      "Classifying Angles by Size",
+      "Measuring with a Protractor",
+      "Angle Pairs: Complementary, Supplementary & Vertical",
+      "Solving for Unknown Angles & Mastery Check"
+    ]
+  },
+  {
+    "slug": "combining-like-terms",
+    "importPath": "./extra/combining-like-terms",
+    "partTitles": [
+      "What Is a Term, and What Makes Terms \"Like\"?",
+      "Adding the Coefficients",
+      "Simplifying Longer Expressions",
+      "Distributing First, Then Combining",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "comparing-ordering-rational",
+    "importPath": "./extra/comparing-ordering-rational",
+    "partTitles": [
+      "What Counts as a Rational Number?",
+      "Comparing with Common Denominators",
+      "Comparing with Decimals",
+      "Negatives & Ordering a Whole List",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "coordinate-plane-graphing-prealg",
+    "importPath": "./extra/coordinate-plane-graphing-prealg",
+    "partTitles": [
+      "Building the Plane: Axes, Origin & Ordered Pairs",
+      "Plotting and Reading Points",
+      "The Four Quadrants & Points on the Axes",
+      "Distance, Reflections & Graphing a Table",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "decimals-and-percents",
+    "importPath": "./extra/decimals-and-percents",
+    "partTitles": [
+      "Place Value & What a Decimal Really Means",
+      "Arithmetic with Decimals",
+      "What a Percent Is & Converting",
+      "Finding a Percent of a Number",
+      "Percent Change & Mastery Check"
+    ]
+  },
+  {
+    "slug": "distributive-property",
+    "importPath": "./extra/distributive-property",
+    "partTitles": [
+      "The Core Idea",
+      "Negatives & the Minus Sign",
+      "Combine, Then Factor",
+      "Real-World Uses & Bigger Expressions",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "exponents-and-powers",
+    "importPath": "./extra/exponents-and-powers",
+    "partTitles": [
+      "What an Exponent Means",
+      "Multiplying and Dividing Powers",
+      "Power of a Power, Zero & Negative Exponents",
+      "Scientific Notation & Order of Operations",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "exponents-order-operations-prealg",
+    "importPath": "./extra/exponents-order-operations-prealg",
+    "partTitles": [
+      "What Exponents Mean",
+      "Special Powers & Negative Bases",
+      "The Order of Operations (PEMDAS)",
+      "Putting Exponents Into the Order",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "exponents-prealgebra",
+    "importPath": "./extra/exponents-prealgebra",
+    "partTitles": [
+      "What an Exponent Means",
+      "Special Cases & Negative Bases",
+      "Multiplying & Dividing Powers",
+      "Power of a Power, Power of a Product & Negative Exponents",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "fraction-decimal-conversions",
+    "importPath": "./extra/fraction-decimal-conversions",
+    "partTitles": [
+      "Two Names for the Same Number",
+      "Fraction → Decimal (Divide)",
+      "Terminating Decimal → Fraction",
+      "Repeating Decimal → Fraction",
+      "Comparing, Ordering & Mastery Check"
+    ]
+  },
+  {
+    "slug": "intro-statistics-prealg",
+    "importPath": "./extra/intro-statistics-prealg",
+    "partTitles": [
+      "Data, Variables, and Good Questions",
+      "Measures of Center: Mean, Median, Mode",
+      "Spread, Range, and Outliers",
+      "Displaying Data",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "mean-median-mode",
+    "importPath": "./extra/mean-median-mode",
+    "partTitles": [
+      "Measures of Center",
+      "The Mean (the Arithmetic Average)",
+      "The Median (the Middle Value)",
+      "The Mode & Choosing a Measure",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "one-step-equations-prealgebra",
+    "importPath": "./extra/one-step-equations-prealgebra",
+    "partTitles": [
+      "Equations, Balance & Inverse Operations",
+      "Addition & Subtraction Equations",
+      "Multiplication & Division Equations",
+      "Fractions, Decimals & Checking Your Work",
+      "Word Problems, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "operations-with-fractions",
+    "importPath": "./extra/operations-with-fractions",
+    "partTitles": [
+      "Fraction Foundations",
+      "Adding & Subtracting Fractions",
+      "Multiplying & Dividing Fractions",
+      "Mixed Numbers & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "operations-with-integers",
+    "importPath": "./extra/operations-with-integers",
+    "partTitles": [
+      "Integers & the Number Line",
+      "Adding Integers",
+      "Subtracting Integers",
+      "Multiplying & Dividing Integers",
+      "Order of Operations & Mastery Check"
+    ]
+  },
+  {
+    "slug": "order-of-operations-pemdas",
+    "importPath": "./extra/order-of-operations-pemdas",
+    "partTitles": [
+      "Why Order Matters",
+      "The PEMDAS Rule",
+      "Grouping Symbols & Nesting",
+      "Exponents & Full Expressions",
+      "Mixed Mastery & Exit Quiz"
+    ]
+  },
+  {
+    "slug": "percent-applications",
+    "importPath": "./extra/percent-applications",
+    "partTitles": [
+      "The Three Pieces of Every Percent Problem",
+      "Solving for the Percent or the Whole",
+      "Tax, Tips & Discounts",
+      "Percent Change & Simple Interest",
+      "Reverse Percents & Mastery Check"
+    ]
+  },
+  {
+    "slug": "percent-problems-prealgebra",
+    "importPath": "./extra/percent-problems-prealgebra",
+    "partTitles": [
+      "What a Percent Really Is",
+      "Finding the Percent OF a Number",
+      "The Three Kinds of Percent Questions",
+      "Percent Change: Tips, Tax, Discounts & Markups",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "percents-applications-prealg",
+    "importPath": "./extra/percents-applications-prealg",
+    "partTitles": [
+      "What a Percent Really Means",
+      "Finding a Percent of a Number",
+      "Percent Increase & Decrease",
+      "Real-World Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "perimeter-and-area",
+    "importPath": "./extra/perimeter-and-area",
+    "partTitles": [
+      "Perimeter: The Distance Around",
+      "Area of Rectangles, Squares & Parallelograms",
+      "Triangles & Trapezoids",
+      "Circles: Circumference & Area",
+      "Composite Figures, Real-World Problems & Mastery Check"
+    ]
+  },
+  {
+    "slug": "proportions-prealgebra",
+    "importPath": "./extra/proportions-prealgebra",
+    "partTitles": [
+      "Ratios & Equivalent Fractions",
+      "Cross Multiplication",
+      "Trickier Proportions",
+      "Word Problems & Real Applications",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "range-and-outliers",
+    "importPath": "./extra/range-and-outliers",
+    "partTitles": [
+      "Range: Measuring Spread",
+      "Spotting Outliers",
+      "The 1.5 × IQR Rule",
+      "How Outliers Distort Statistics",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "ratios-and-rates-prealgebra",
+    "importPath": "./extra/ratios-and-rates-prealgebra",
+    "partTitles": [
+      "What Is a Ratio?",
+      "Rates and Unit Rates",
+      "Proportions",
+      "Scaling, Maps, Recipes & Speed",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "ratios-proportions-prealg",
+    "importPath": "./extra/ratios-proportions-prealg",
+    "partTitles": [
+      "What Is a Ratio?",
+      "Rates and Unit Rates",
+      "Proportions & Equivalent Ratios",
+      "Solving Proportions for the Unknown",
+      "Applications & Mastery Check"
+    ]
+  },
+  {
+    "slug": "reading-graphs-charts",
+    "importPath": "./extra/reading-graphs-charts",
+    "partTitles": [
+      "Bar Graphs",
+      "Pictographs & Tables",
+      "Line Graphs & Trends",
+      "Circle (Pie) Graphs",
+      "Choosing & Interpreting Graphs"
+    ]
+  },
+  {
+    "slug": "solving-equations-prealg",
+    "importPath": "./extra/solving-equations-prealg",
+    "partTitles": [
+      "What Is an Equation?",
+      "Inverse Operations & One-Step Equations",
+      "Two-Step Equations",
+      "Negatives, Fractions & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "solving-graphing-inequalities-prealg",
+    "importPath": "./extra/solving-graphing-inequalities-prealg",
+    "partTitles": [
+      "What Inequalities Mean",
+      "Graphing on a Number Line",
+      "Solving with Add & Subtract",
+      "Multiply, Divide & The Flip Rule",
+      "Two-Step Inequalities & Mastery Check"
+    ]
+  },
+  {
+    "slug": "solving-two-step-equations",
+    "importPath": "./extra/solving-two-step-equations",
+    "partTitles": [
+      "The Big Idea: Undoing Operations",
+      "The Standard Move: $ax + b = c$",
+      "Division, Negatives & Variable Positions",
+      "Fractions, Decimals & Word Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "square-roots-perfect-squares",
+    "importPath": "./extra/square-roots-perfect-squares",
+    "partTitles": [
+      "Perfect Squares",
+      "Finding Square Roots",
+      "Estimating Non-Perfect Roots",
+      "Using Square Roots",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "unit-rates",
+    "importPath": "./extra/unit-rates",
+    "partTitles": [
+      "From Ratios to Rates to Unit Rates",
+      "Computing Unit Rates by Division",
+      "Unit Price & Finding the Best Buy",
+      "Using Unit Rates to Solve Problems",
+      "Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "variables-algebraic-expressions-prealg",
+    "importPath": "./extra/variables-algebraic-expressions-prealg",
+    "partTitles": [
+      "What Is a Variable?",
+      "Evaluating Expressions",
+      "Translating Words into Expressions",
+      "Terms, Coefficients & Like Terms",
+      "Simplifying & Mastery Check"
+    ]
+  },
+  {
+    "slug": "variables-and-expressions",
+    "importPath": "./extra/variables-and-expressions",
+    "partTitles": [
+      "The Anatomy of an Expression",
+      "Translating Words into Math",
+      "Evaluating by Substitution",
+      "Simplifying: Like Terms & Distributing",
+      "Real-World Modeling & Mastery Check"
+    ]
+  },
+  {
+    "slug": "volume-rectangular-prisms",
+    "importPath": "./extra/volume-rectangular-prisms",
+    "partTitles": [
+      "What Volume Means",
+      "The Formula $V = lwh$",
+      "Base Area × Height",
+      "Word Problems & Missing Sides",
+      "Cubes, Mixed Practice & Mastery Check"
+    ]
+  },
+  {
+    "slug": "calculator-strategies",
+    "importPath": "./extra/calculator-strategies",
+    "partTitles": [
+      "Your Calculator Is a Tool, Not a Crutch",
+      "Solve by Graphing",
+      "Systems, Tables & Trickier Graphs",
+      "Statistics, Tables & Smart Estimation",
+      "Putting It Together & Mastery Check"
+    ]
+  },
+  {
+    "slug": "process-of-elimination",
+    "importPath": "./extra/process-of-elimination",
+    "partTitles": [
+      "Why Eliminating Beats Searching",
+      "Eliminating on Reading & Writing",
+      "Eliminating on the Math Section",
+      "Timing, Discipline & Elimination Traps",
+      "Mixed Practice & Mastery Check"
+    ]
   }
 ]

@@ -2372,4 +2372,654 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Order of Operations, Word Problems & Mastery (with Exit Quiz)', loader: () => import('./extra/integer-operations-grade6').then((m) => m.parts[4]) },
     ],
   },
+  'integers-number-line-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Meet the Integers', loader: () => import('./extra/integers-number-line-grade6').then((m) => m.parts[0]) },
+      { title: 'Plotting on the Number Line', loader: () => import('./extra/integers-number-line-grade6').then((m) => m.parts[1]) },
+      { title: 'Comparing and Ordering Integers', loader: () => import('./extra/integers-number-line-grade6').then((m) => m.parts[2]) },
+      { title: 'Opposites and Absolute Value', loader: () => import('./extra/integers-number-line-grade6').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/integers-number-line-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'mean-median-mode-range-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Meet the Four Measures', loader: () => import('./extra/mean-median-mode-range-grade6').then((m) => m.parts[0]) },
+      { title: 'The Mean (Average)', loader: () => import('./extra/mean-median-mode-range-grade6').then((m) => m.parts[1]) },
+      { title: 'The Median (Middle)', loader: () => import('./extra/mean-median-mode-range-grade6').then((m) => m.parts[2]) },
+      { title: 'The Mode and the Range', loader: () => import('./extra/mean-median-mode-range-grade6').then((m) => m.parts[3]) },
+      { title: 'All Four Together & Mastery Check', loader: () => import('./extra/mean-median-mode-range-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'measures-center-variability': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Mean (Average)', loader: () => import('./extra/measures-center-variability').then((m) => m.parts[0]) },
+      { title: 'Median & Mode', loader: () => import('./extra/measures-center-variability').then((m) => m.parts[1]) },
+      { title: 'Range, Outliers & Choosing the Right Center', loader: () => import('./extra/measures-center-variability').then((m) => m.parts[2]) },
+      { title: 'Mean Absolute Deviation (MAD)', loader: () => import('./extra/measures-center-variability').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/measures-center-variability').then((m) => m.parts[4]) },
+    ],
+  },
+  'one-step-equations-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Balance Idea & Inverse Operations', loader: () => import('./extra/one-step-equations-grade6').then((m) => m.parts[0]) },
+      { title: 'Addition & Subtraction Equations', loader: () => import('./extra/one-step-equations-grade6').then((m) => m.parts[1]) },
+      { title: 'Multiplication & Division Equations', loader: () => import('./extra/one-step-equations-grade6').then((m) => m.parts[2]) },
+      { title: 'Checking Answers & Word Problems', loader: () => import('./extra/one-step-equations-grade6').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/one-step-equations-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'rates-unit-rates-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'From Ratios to Rates', loader: () => import('./extra/rates-unit-rates-grade6').then((m) => m.parts[0]) },
+      { title: 'The Unit Rate', loader: () => import('./extra/rates-unit-rates-grade6').then((m) => m.parts[1]) },
+      { title: 'Comparing with Unit Rates (Better Buy)', loader: () => import('./extra/rates-unit-rates-grade6').then((m) => m.parts[2]) },
+      { title: 'Using Unit Rates to Solve Problems', loader: () => import('./extra/rates-unit-rates-grade6').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/rates-unit-rates-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'statistical-questions-data-display': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Makes a Question Statistical?', loader: () => import('./extra/statistical-questions-data-display').then((m) => m.parts[0]) },
+      { title: 'Dot Plots (Line Plots)', loader: () => import('./extra/statistical-questions-data-display').then((m) => m.parts[1]) },
+      { title: 'Center: Mean, Median, and Mode', loader: () => import('./extra/statistical-questions-data-display').then((m) => m.parts[2]) },
+      { title: 'Spread, Histograms & Box Plots', loader: () => import('./extra/statistical-questions-data-display').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/statistical-questions-data-display').then((m) => m.parts[4]) },
+    ],
+  },
+  'surface-area-volume-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Solids, Nets, and Two Big Ideas', loader: () => import('./extra/surface-area-volume-grade6').then((m) => m.parts[0]) },
+      { title: 'Volume of Rectangular Prisms', loader: () => import('./extra/surface-area-volume-grade6').then((m) => m.parts[1]) },
+      { title: 'Surface Area of Boxes & Cubes', loader: () => import('./extra/surface-area-volume-grade6').then((m) => m.parts[2]) },
+      { title: 'Triangular Prisms', loader: () => import('./extra/surface-area-volume-grade6').then((m) => m.parts[3]) },
+      { title: 'Real-World Problems & Mastery Check', loader: () => import('./extra/surface-area-volume-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'understanding-ratios-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Ratio?', loader: () => import('./extra/understanding-ratios-grade6').then((m) => m.parts[0]) },
+      { title: 'Equivalent Ratios & Simplest Form', loader: () => import('./extra/understanding-ratios-grade6').then((m) => m.parts[1]) },
+      { title: 'Ratio Tables & Unit Rates', loader: () => import('./extra/understanding-ratios-grade6').then((m) => m.parts[2]) },
+      { title: 'Part-to-Part, Part-to-Whole & Word Problems', loader: () => import('./extra/understanding-ratios-grade6').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/understanding-ratios-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'writing-evaluating-expressions-grade6': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Language of Algebra', loader: () => import('./extra/writing-evaluating-expressions-grade6').then((m) => m.parts[0]) },
+      { title: 'Turning Words into Expressions', loader: () => import('./extra/writing-evaluating-expressions-grade6').then((m) => m.parts[1]) },
+      { title: 'Evaluating Expressions', loader: () => import('./extra/writing-evaluating-expressions-grade6').then((m) => m.parts[2]) },
+      { title: 'Real-World Expressions', loader: () => import('./extra/writing-evaluating-expressions-grade6').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/writing-evaluating-expressions-grade6').then((m) => m.parts[4]) },
+    ],
+  },
+  'writing-expressions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'From Words to Math', loader: () => import('./extra/writing-expressions').then((m) => m.parts[0]) },
+      { title: 'Order Matters: "Less Than" & "Divided By"', loader: () => import('./extra/writing-expressions').then((m) => m.parts[1]) },
+      { title: 'Two-Step Phrases & Grouping', loader: () => import('./extra/writing-expressions').then((m) => m.parts[2]) },
+      { title: 'Real-World Expressions', loader: () => import('./extra/writing-expressions').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/writing-expressions').then((m) => m.parts[4]) },
+    ],
+  },
+  'angle-relationships-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Angle Basics & Adjacent Angles', loader: () => import('./extra/angle-relationships-grade7').then((m) => m.parts[0]) },
+      { title: 'Complementary & Supplementary Angles', loader: () => import('./extra/angle-relationships-grade7').then((m) => m.parts[1]) },
+      { title: 'Vertical Angles & Angles on a Line', loader: () => import('./extra/angle-relationships-grade7').then((m) => m.parts[2]) },
+      { title: 'Writing & Solving Equations for Unknown Angles', loader: () => import('./extra/angle-relationships-grade7').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/angle-relationships-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'circles-circumference-area-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Parts of a Circle and the Magic Number π', loader: () => import('./extra/circles-circumference-area-grade7').then((m) => m.parts[0]) },
+      { title: 'Finding the Circumference', loader: () => import('./extra/circles-circumference-area-grade7').then((m) => m.parts[1]) },
+      { title: 'Finding the Area', loader: () => import('./extra/circles-circumference-area-grade7').then((m) => m.parts[2]) },
+      { title: 'Real-World Problems, Half Circles, and Working Backward', loader: () => import('./extra/circles-circumference-area-grade7').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/circles-circumference-area-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'inequalities-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Symbols & Meaning', loader: () => import('./extra/inequalities-grade7').then((m) => m.parts[0]) },
+      { title: 'Graphing on a Number Line', loader: () => import('./extra/inequalities-grade7').then((m) => m.parts[1]) },
+      { title: 'Solving One-Step Inequalities', loader: () => import('./extra/inequalities-grade7').then((m) => m.parts[2]) },
+      { title: 'Two-Step Inequalities & Word Problems', loader: () => import('./extra/inequalities-grade7').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/inequalities-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'probability-basics-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is Probability?', loader: () => import('./extra/probability-basics-grade7').then((m) => m.parts[0]) },
+      { title: 'Theoretical Probability & Sample Spaces', loader: () => import('./extra/probability-basics-grade7').then((m) => m.parts[1]) },
+      { title: 'Complements: The Probability of "Not"', loader: () => import('./extra/probability-basics-grade7').then((m) => m.parts[2]) },
+      { title: 'Experimental Probability & Predictions', loader: () => import('./extra/probability-basics-grade7').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/probability-basics-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'scale-drawings-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Scale Drawing?', loader: () => import('./extra/scale-drawings-grade7').then((m) => m.parts[0]) },
+      { title: 'From Drawing to Real Life', loader: () => import('./extra/scale-drawings-grade7').then((m) => m.parts[1]) },
+      { title: 'From Real Life Back to the Drawing', loader: () => import('./extra/scale-drawings-grade7').then((m) => m.parts[2]) },
+      { title: 'Areas and Re-Scaling', loader: () => import('./extra/scale-drawings-grade7').then((m) => m.parts[3]) },
+      { title: 'Real-World Practice & Mastery Check', loader: () => import('./extra/scale-drawings-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'two-step-equations-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What "Undoing" Means', loader: () => import('./extra/two-step-equations-grade7').then((m) => m.parts[0]) },
+      { title: 'The Core Method: $px + q = r$', loader: () => import('./extra/two-step-equations-grade7').then((m) => m.parts[1]) },
+      { title: 'Negatives, Division & Checking', loader: () => import('./extra/two-step-equations-grade7').then((m) => m.parts[2]) },
+      { title: 'Real-World Word Problems', loader: () => import('./extra/two-step-equations-grade7').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/two-step-equations-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'unit-rates-fractions-grade7': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Ratios, Rates, and "Per One"', loader: () => import('./extra/unit-rates-fractions-grade7').then((m) => m.parts[0]) },
+      { title: 'Complex Fractions: Fraction ÷ Fraction', loader: () => import('./extra/unit-rates-fractions-grade7').then((m) => m.parts[1]) },
+      { title: 'Computing Unit Rates with Fractions', loader: () => import('./extra/unit-rates-fractions-grade7').then((m) => m.parts[2]) },
+      { title: 'Real-World Applications', loader: () => import('./extra/unit-rates-fractions-grade7').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/unit-rates-fractions-grade7').then((m) => m.parts[4]) },
+    ],
+  },
+  'congruence-similarity': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Congruent Figures', loader: () => import('./extra/congruence-similarity').then((m) => m.parts[0]) },
+      { title: 'Rigid Motions (Transformations)', loader: () => import('./extra/congruence-similarity').then((m) => m.parts[1]) },
+      { title: 'Similar Figures & Scale Factor', loader: () => import('./extra/congruence-similarity').then((m) => m.parts[2]) },
+      { title: 'Finding Missing Lengths with Proportions', loader: () => import('./extra/congruence-similarity').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/congruence-similarity').then((m) => m.parts[4]) },
+    ],
+  },
+  'geometric-transformations-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Moving Shapes & Translations', loader: () => import('./extra/geometric-transformations-grade8').then((m) => m.parts[0]) },
+      { title: 'Reflections (Flips)', loader: () => import('./extra/geometric-transformations-grade8').then((m) => m.parts[1]) },
+      { title: 'Rotations (Turns)', loader: () => import('./extra/geometric-transformations-grade8').then((m) => m.parts[2]) },
+      { title: 'Dilations, Congruence & Similarity', loader: () => import('./extra/geometric-transformations-grade8').then((m) => m.parts[3]) },
+      { title: 'Sequences & Mastery Check', loader: () => import('./extra/geometric-transformations-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'radicals-integer-exponents-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Exponents Really Mean', loader: () => import('./extra/radicals-integer-exponents-grade8').then((m) => m.parts[0]) },
+      { title: 'The Exponent Rules', loader: () => import('./extra/radicals-integer-exponents-grade8').then((m) => m.parts[1]) },
+      { title: 'Zero and Negative Exponents', loader: () => import('./extra/radicals-integer-exponents-grade8').then((m) => m.parts[2]) },
+      { title: 'Square Roots & Cube Roots', loader: () => import('./extra/radicals-integer-exponents-grade8').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/radicals-integer-exponents-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'rational-irrational-numbers-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Makes a Number Rational', loader: () => import('./extra/rational-irrational-numbers-grade8').then((m) => m.parts[0]) },
+      { title: 'Irrational Numbers', loader: () => import('./extra/rational-irrational-numbers-grade8').then((m) => m.parts[1]) },
+      { title: 'Turning Repeating Decimals into Fractions', loader: () => import('./extra/rational-irrational-numbers-grade8').then((m) => m.parts[2]) },
+      { title: 'Estimating & Ordering on a Number Line', loader: () => import('./extra/rational-irrational-numbers-grade8').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/rational-irrational-numbers-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'rotations-dilations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Rotations: Turning Around a Point', loader: () => import('./extra/rotations-dilations').then((m) => m.parts[0]) },
+      { title: 'Mastering Rotation Rules', loader: () => import('./extra/rotations-dilations').then((m) => m.parts[1]) },
+      { title: 'Dilations: Resizing a Figure', loader: () => import('./extra/rotations-dilations').then((m) => m.parts[2]) },
+      { title: 'Comparing, Combining & Working Backward', loader: () => import('./extra/rotations-dilations').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/rotations-dilations').then((m) => m.parts[4]) },
+    ],
+  },
+  'scatter-plots': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Plotting & Reading Two Variables', loader: () => import('./extra/scatter-plots').then((m) => m.parts[0]) },
+      { title: 'Patterns: Association & Correlation', loader: () => import('./extra/scatter-plots').then((m) => m.parts[1]) },
+      { title: 'The Trend Line (Line of Best Fit)', loader: () => import('./extra/scatter-plots').then((m) => m.parts[2]) },
+      { title: 'The Equation: Slope, Intercept & Predicting', loader: () => import('./extra/scatter-plots').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/scatter-plots').then((m) => m.parts[4]) },
+    ],
+  },
+  'scatter-plots-trend-lines-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What a Scatter Plot Shows', loader: () => import('./extra/scatter-plots-trend-lines-grade8').then((m) => m.parts[0]) },
+      { title: 'Describing Association', loader: () => import('./extra/scatter-plots-trend-lines-grade8').then((m) => m.parts[1]) },
+      { title: 'Drawing the Trend Line', loader: () => import('./extra/scatter-plots-trend-lines-grade8').then((m) => m.parts[2]) },
+      { title: 'Predicting & Interpreting', loader: () => import('./extra/scatter-plots-trend-lines-grade8').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/scatter-plots-trend-lines-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'slope-linear-functions-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Slope Means', loader: () => import('./extra/slope-linear-functions-grade8').then((m) => m.parts[0]) },
+      { title: 'The Slope Formula', loader: () => import('./extra/slope-linear-functions-grade8').then((m) => m.parts[1]) },
+      { title: 'Slope-Intercept Form $y = mx + b$', loader: () => import('./extra/slope-linear-functions-grade8').then((m) => m.parts[2]) },
+      { title: 'Graphing Lines & Writing Equations', loader: () => import('./extra/slope-linear-functions-grade8').then((m) => m.parts[3]) },
+      { title: 'Real-World Models & Mastery Check', loader: () => import('./extra/slope-linear-functions-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'solving-linear-equations-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Balance Idea & One-Step Equations', loader: () => import('./extra/solving-linear-equations-grade8').then((m) => m.parts[0]) },
+      { title: 'Two-Step Equations', loader: () => import('./extra/solving-linear-equations-grade8').then((m) => m.parts[1]) },
+      { title: 'Distributing & Combining Like Terms', loader: () => import('./extra/solving-linear-equations-grade8').then((m) => m.parts[2]) },
+      { title: 'Fractions, Decimals & Special Cases', loader: () => import('./extra/solving-linear-equations-grade8').then((m) => m.parts[3]) },
+      { title: 'Word Problems & Mastery Check', loader: () => import('./extra/solving-linear-equations-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'translations-reflections': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Sliding Figures: Translations', loader: () => import('./extra/translations-reflections').then((m) => m.parts[0]) },
+      { title: 'Flipping Figures: Reflections Over the Axes', loader: () => import('./extra/translations-reflections').then((m) => m.parts[1]) },
+      { title: 'Reflecting Over the Line $y = x$', loader: () => import('./extra/translations-reflections').then((m) => m.parts[2]) },
+      { title: 'Composing Two Transformations', loader: () => import('./extra/translations-reflections').then((m) => m.parts[3]) },
+      { title: 'Congruence, Mixed Practice & Mastery Check', loader: () => import('./extra/translations-reflections').then((m) => m.parts[4]) },
+    ],
+  },
+  'two-way-tables': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Reading the Table', loader: () => import('./extra/two-way-tables').then((m) => m.parts[0]) },
+      { title: 'Completing a Table', loader: () => import('./extra/two-way-tables').then((m) => m.parts[1]) },
+      { title: 'Relative Frequencies', loader: () => import('./extra/two-way-tables').then((m) => m.parts[2]) },
+      { title: 'Conditional Relative Frequencies & Association', loader: () => import('./extra/two-way-tables').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/two-way-tables').then((m) => m.parts[4]) },
+    ],
+  },
+  'understanding-functions-grade8': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Function?', loader: () => import('./extra/understanding-functions-grade8').then((m) => m.parts[0]) },
+      { title: 'Four Ways to Show a Function', loader: () => import('./extra/understanding-functions-grade8').then((m) => m.parts[1]) },
+      { title: 'Function Rules & Evaluating', loader: () => import('./extra/understanding-functions-grade8').then((m) => m.parts[2]) },
+      { title: 'Rate of Change, Initial Value & Linear vs. Nonlinear', loader: () => import('./extra/understanding-functions-grade8').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/understanding-functions-grade8').then((m) => m.parts[4]) },
+    ],
+  },
+  'absolute-value': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Distance From Zero', loader: () => import('./extra/absolute-value').then((m) => m.parts[0]) },
+      { title: 'Evaluating Expressions & Comparing', loader: () => import('./extra/absolute-value').then((m) => m.parts[1]) },
+      { title: 'Distance Between Two Points', loader: () => import('./extra/absolute-value').then((m) => m.parts[2]) },
+      { title: 'Opposites & Equations Like $\\lvert x\\rvert = 5$', loader: () => import('./extra/absolute-value').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/absolute-value').then((m) => m.parts[4]) },
+    ],
+  },
+  'angle-measurements': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What an Angle Is & How We Name It', loader: () => import('./extra/angle-measurements').then((m) => m.parts[0]) },
+      { title: 'Classifying Angles by Size', loader: () => import('./extra/angle-measurements').then((m) => m.parts[1]) },
+      { title: 'Measuring with a Protractor', loader: () => import('./extra/angle-measurements').then((m) => m.parts[2]) },
+      { title: 'Angle Pairs: Complementary, Supplementary & Vertical', loader: () => import('./extra/angle-measurements').then((m) => m.parts[3]) },
+      { title: 'Solving for Unknown Angles & Mastery Check', loader: () => import('./extra/angle-measurements').then((m) => m.parts[4]) },
+    ],
+  },
+  'combining-like-terms': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Term, and What Makes Terms "Like"?', loader: () => import('./extra/combining-like-terms').then((m) => m.parts[0]) },
+      { title: 'Adding the Coefficients', loader: () => import('./extra/combining-like-terms').then((m) => m.parts[1]) },
+      { title: 'Simplifying Longer Expressions', loader: () => import('./extra/combining-like-terms').then((m) => m.parts[2]) },
+      { title: 'Distributing First, Then Combining', loader: () => import('./extra/combining-like-terms').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/combining-like-terms').then((m) => m.parts[4]) },
+    ],
+  },
+  'comparing-ordering-rational': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Counts as a Rational Number?', loader: () => import('./extra/comparing-ordering-rational').then((m) => m.parts[0]) },
+      { title: 'Comparing with Common Denominators', loader: () => import('./extra/comparing-ordering-rational').then((m) => m.parts[1]) },
+      { title: 'Comparing with Decimals', loader: () => import('./extra/comparing-ordering-rational').then((m) => m.parts[2]) },
+      { title: 'Negatives & Ordering a Whole List', loader: () => import('./extra/comparing-ordering-rational').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/comparing-ordering-rational').then((m) => m.parts[4]) },
+    ],
+  },
+  'coordinate-plane-graphing-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Building the Plane: Axes, Origin & Ordered Pairs', loader: () => import('./extra/coordinate-plane-graphing-prealg').then((m) => m.parts[0]) },
+      { title: 'Plotting and Reading Points', loader: () => import('./extra/coordinate-plane-graphing-prealg').then((m) => m.parts[1]) },
+      { title: 'The Four Quadrants & Points on the Axes', loader: () => import('./extra/coordinate-plane-graphing-prealg').then((m) => m.parts[2]) },
+      { title: 'Distance, Reflections & Graphing a Table', loader: () => import('./extra/coordinate-plane-graphing-prealg').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/coordinate-plane-graphing-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'decimals-and-percents': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Place Value & What a Decimal Really Means', loader: () => import('./extra/decimals-and-percents').then((m) => m.parts[0]) },
+      { title: 'Arithmetic with Decimals', loader: () => import('./extra/decimals-and-percents').then((m) => m.parts[1]) },
+      { title: 'What a Percent Is & Converting', loader: () => import('./extra/decimals-and-percents').then((m) => m.parts[2]) },
+      { title: 'Finding a Percent of a Number', loader: () => import('./extra/decimals-and-percents').then((m) => m.parts[3]) },
+      { title: 'Percent Change & Mastery Check', loader: () => import('./extra/decimals-and-percents').then((m) => m.parts[4]) },
+    ],
+  },
+  'distributive-property': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Core Idea', loader: () => import('./extra/distributive-property').then((m) => m.parts[0]) },
+      { title: 'Negatives & the Minus Sign', loader: () => import('./extra/distributive-property').then((m) => m.parts[1]) },
+      { title: 'Combine, Then Factor', loader: () => import('./extra/distributive-property').then((m) => m.parts[2]) },
+      { title: 'Real-World Uses & Bigger Expressions', loader: () => import('./extra/distributive-property').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/distributive-property').then((m) => m.parts[4]) },
+    ],
+  },
+  'exponents-and-powers': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What an Exponent Means', loader: () => import('./extra/exponents-and-powers').then((m) => m.parts[0]) },
+      { title: 'Multiplying and Dividing Powers', loader: () => import('./extra/exponents-and-powers').then((m) => m.parts[1]) },
+      { title: 'Power of a Power, Zero & Negative Exponents', loader: () => import('./extra/exponents-and-powers').then((m) => m.parts[2]) },
+      { title: 'Scientific Notation & Order of Operations', loader: () => import('./extra/exponents-and-powers').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/exponents-and-powers').then((m) => m.parts[4]) },
+    ],
+  },
+  'exponents-order-operations-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Exponents Mean', loader: () => import('./extra/exponents-order-operations-prealg').then((m) => m.parts[0]) },
+      { title: 'Special Powers & Negative Bases', loader: () => import('./extra/exponents-order-operations-prealg').then((m) => m.parts[1]) },
+      { title: 'The Order of Operations (PEMDAS)', loader: () => import('./extra/exponents-order-operations-prealg').then((m) => m.parts[2]) },
+      { title: 'Putting Exponents Into the Order', loader: () => import('./extra/exponents-order-operations-prealg').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/exponents-order-operations-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'exponents-prealgebra': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What an Exponent Means', loader: () => import('./extra/exponents-prealgebra').then((m) => m.parts[0]) },
+      { title: 'Special Cases & Negative Bases', loader: () => import('./extra/exponents-prealgebra').then((m) => m.parts[1]) },
+      { title: 'Multiplying & Dividing Powers', loader: () => import('./extra/exponents-prealgebra').then((m) => m.parts[2]) },
+      { title: 'Power of a Power, Power of a Product & Negative Exponents', loader: () => import('./extra/exponents-prealgebra').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/exponents-prealgebra').then((m) => m.parts[4]) },
+    ],
+  },
+  'fraction-decimal-conversions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Two Names for the Same Number', loader: () => import('./extra/fraction-decimal-conversions').then((m) => m.parts[0]) },
+      { title: 'Fraction → Decimal (Divide)', loader: () => import('./extra/fraction-decimal-conversions').then((m) => m.parts[1]) },
+      { title: 'Terminating Decimal → Fraction', loader: () => import('./extra/fraction-decimal-conversions').then((m) => m.parts[2]) },
+      { title: 'Repeating Decimal → Fraction', loader: () => import('./extra/fraction-decimal-conversions').then((m) => m.parts[3]) },
+      { title: 'Comparing, Ordering & Mastery Check', loader: () => import('./extra/fraction-decimal-conversions').then((m) => m.parts[4]) },
+    ],
+  },
+  'intro-statistics-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Data, Variables, and Good Questions', loader: () => import('./extra/intro-statistics-prealg').then((m) => m.parts[0]) },
+      { title: 'Measures of Center: Mean, Median, Mode', loader: () => import('./extra/intro-statistics-prealg').then((m) => m.parts[1]) },
+      { title: 'Spread, Range, and Outliers', loader: () => import('./extra/intro-statistics-prealg').then((m) => m.parts[2]) },
+      { title: 'Displaying Data', loader: () => import('./extra/intro-statistics-prealg').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/intro-statistics-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'mean-median-mode': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Measures of Center', loader: () => import('./extra/mean-median-mode').then((m) => m.parts[0]) },
+      { title: 'The Mean (the Arithmetic Average)', loader: () => import('./extra/mean-median-mode').then((m) => m.parts[1]) },
+      { title: 'The Median (the Middle Value)', loader: () => import('./extra/mean-median-mode').then((m) => m.parts[2]) },
+      { title: 'The Mode & Choosing a Measure', loader: () => import('./extra/mean-median-mode').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/mean-median-mode').then((m) => m.parts[4]) },
+    ],
+  },
+  'one-step-equations-prealgebra': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Equations, Balance & Inverse Operations', loader: () => import('./extra/one-step-equations-prealgebra').then((m) => m.parts[0]) },
+      { title: 'Addition & Subtraction Equations', loader: () => import('./extra/one-step-equations-prealgebra').then((m) => m.parts[1]) },
+      { title: 'Multiplication & Division Equations', loader: () => import('./extra/one-step-equations-prealgebra').then((m) => m.parts[2]) },
+      { title: 'Fractions, Decimals & Checking Your Work', loader: () => import('./extra/one-step-equations-prealgebra').then((m) => m.parts[3]) },
+      { title: 'Word Problems, Mixed Practice & Mastery Check', loader: () => import('./extra/one-step-equations-prealgebra').then((m) => m.parts[4]) },
+    ],
+  },
+  'operations-with-fractions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Fraction Foundations', loader: () => import('./extra/operations-with-fractions').then((m) => m.parts[0]) },
+      { title: 'Adding & Subtracting Fractions', loader: () => import('./extra/operations-with-fractions').then((m) => m.parts[1]) },
+      { title: 'Multiplying & Dividing Fractions', loader: () => import('./extra/operations-with-fractions').then((m) => m.parts[2]) },
+      { title: 'Mixed Numbers & Word Problems', loader: () => import('./extra/operations-with-fractions').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/operations-with-fractions').then((m) => m.parts[4]) },
+    ],
+  },
+  'operations-with-integers': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Integers & the Number Line', loader: () => import('./extra/operations-with-integers').then((m) => m.parts[0]) },
+      { title: 'Adding Integers', loader: () => import('./extra/operations-with-integers').then((m) => m.parts[1]) },
+      { title: 'Subtracting Integers', loader: () => import('./extra/operations-with-integers').then((m) => m.parts[2]) },
+      { title: 'Multiplying & Dividing Integers', loader: () => import('./extra/operations-with-integers').then((m) => m.parts[3]) },
+      { title: 'Order of Operations & Mastery Check', loader: () => import('./extra/operations-with-integers').then((m) => m.parts[4]) },
+    ],
+  },
+  'order-of-operations-pemdas': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Order Matters', loader: () => import('./extra/order-of-operations-pemdas').then((m) => m.parts[0]) },
+      { title: 'The PEMDAS Rule', loader: () => import('./extra/order-of-operations-pemdas').then((m) => m.parts[1]) },
+      { title: 'Grouping Symbols & Nesting', loader: () => import('./extra/order-of-operations-pemdas').then((m) => m.parts[2]) },
+      { title: 'Exponents & Full Expressions', loader: () => import('./extra/order-of-operations-pemdas').then((m) => m.parts[3]) },
+      { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/order-of-operations-pemdas').then((m) => m.parts[4]) },
+    ],
+  },
+  'percent-applications': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Three Pieces of Every Percent Problem', loader: () => import('./extra/percent-applications').then((m) => m.parts[0]) },
+      { title: 'Solving for the Percent or the Whole', loader: () => import('./extra/percent-applications').then((m) => m.parts[1]) },
+      { title: 'Tax, Tips & Discounts', loader: () => import('./extra/percent-applications').then((m) => m.parts[2]) },
+      { title: 'Percent Change & Simple Interest', loader: () => import('./extra/percent-applications').then((m) => m.parts[3]) },
+      { title: 'Reverse Percents & Mastery Check', loader: () => import('./extra/percent-applications').then((m) => m.parts[4]) },
+    ],
+  },
+  'percent-problems-prealgebra': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What a Percent Really Is', loader: () => import('./extra/percent-problems-prealgebra').then((m) => m.parts[0]) },
+      { title: 'Finding the Percent OF a Number', loader: () => import('./extra/percent-problems-prealgebra').then((m) => m.parts[1]) },
+      { title: 'The Three Kinds of Percent Questions', loader: () => import('./extra/percent-problems-prealgebra').then((m) => m.parts[2]) },
+      { title: 'Percent Change: Tips, Tax, Discounts & Markups', loader: () => import('./extra/percent-problems-prealgebra').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/percent-problems-prealgebra').then((m) => m.parts[4]) },
+    ],
+  },
+  'percents-applications-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What a Percent Really Means', loader: () => import('./extra/percents-applications-prealg').then((m) => m.parts[0]) },
+      { title: 'Finding a Percent of a Number', loader: () => import('./extra/percents-applications-prealg').then((m) => m.parts[1]) },
+      { title: 'Percent Increase & Decrease', loader: () => import('./extra/percents-applications-prealg').then((m) => m.parts[2]) },
+      { title: 'Real-World Applications', loader: () => import('./extra/percents-applications-prealg').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/percents-applications-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'perimeter-and-area': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Perimeter: The Distance Around', loader: () => import('./extra/perimeter-and-area').then((m) => m.parts[0]) },
+      { title: 'Area of Rectangles, Squares & Parallelograms', loader: () => import('./extra/perimeter-and-area').then((m) => m.parts[1]) },
+      { title: 'Triangles & Trapezoids', loader: () => import('./extra/perimeter-and-area').then((m) => m.parts[2]) },
+      { title: 'Circles: Circumference & Area', loader: () => import('./extra/perimeter-and-area').then((m) => m.parts[3]) },
+      { title: 'Composite Figures, Real-World Problems & Mastery Check', loader: () => import('./extra/perimeter-and-area').then((m) => m.parts[4]) },
+    ],
+  },
+  'proportions-prealgebra': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Ratios & Equivalent Fractions', loader: () => import('./extra/proportions-prealgebra').then((m) => m.parts[0]) },
+      { title: 'Cross Multiplication', loader: () => import('./extra/proportions-prealgebra').then((m) => m.parts[1]) },
+      { title: 'Trickier Proportions', loader: () => import('./extra/proportions-prealgebra').then((m) => m.parts[2]) },
+      { title: 'Word Problems & Real Applications', loader: () => import('./extra/proportions-prealgebra').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/proportions-prealgebra').then((m) => m.parts[4]) },
+    ],
+  },
+  'range-and-outliers': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Range: Measuring Spread', loader: () => import('./extra/range-and-outliers').then((m) => m.parts[0]) },
+      { title: 'Spotting Outliers', loader: () => import('./extra/range-and-outliers').then((m) => m.parts[1]) },
+      { title: 'The 1.5 × IQR Rule', loader: () => import('./extra/range-and-outliers').then((m) => m.parts[2]) },
+      { title: 'How Outliers Distort Statistics', loader: () => import('./extra/range-and-outliers').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/range-and-outliers').then((m) => m.parts[4]) },
+    ],
+  },
+  'ratios-and-rates-prealgebra': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Ratio?', loader: () => import('./extra/ratios-and-rates-prealgebra').then((m) => m.parts[0]) },
+      { title: 'Rates and Unit Rates', loader: () => import('./extra/ratios-and-rates-prealgebra').then((m) => m.parts[1]) },
+      { title: 'Proportions', loader: () => import('./extra/ratios-and-rates-prealgebra').then((m) => m.parts[2]) },
+      { title: 'Scaling, Maps, Recipes & Speed', loader: () => import('./extra/ratios-and-rates-prealgebra').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/ratios-and-rates-prealgebra').then((m) => m.parts[4]) },
+    ],
+  },
+  'ratios-proportions-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Ratio?', loader: () => import('./extra/ratios-proportions-prealg').then((m) => m.parts[0]) },
+      { title: 'Rates and Unit Rates', loader: () => import('./extra/ratios-proportions-prealg').then((m) => m.parts[1]) },
+      { title: 'Proportions & Equivalent Ratios', loader: () => import('./extra/ratios-proportions-prealg').then((m) => m.parts[2]) },
+      { title: 'Solving Proportions for the Unknown', loader: () => import('./extra/ratios-proportions-prealg').then((m) => m.parts[3]) },
+      { title: 'Applications & Mastery Check', loader: () => import('./extra/ratios-proportions-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'reading-graphs-charts': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Bar Graphs', loader: () => import('./extra/reading-graphs-charts').then((m) => m.parts[0]) },
+      { title: 'Pictographs & Tables', loader: () => import('./extra/reading-graphs-charts').then((m) => m.parts[1]) },
+      { title: 'Line Graphs & Trends', loader: () => import('./extra/reading-graphs-charts').then((m) => m.parts[2]) },
+      { title: 'Circle (Pie) Graphs', loader: () => import('./extra/reading-graphs-charts').then((m) => m.parts[3]) },
+      { title: 'Choosing & Interpreting Graphs', loader: () => import('./extra/reading-graphs-charts').then((m) => m.parts[4]) },
+    ],
+  },
+  'solving-equations-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is an Equation?', loader: () => import('./extra/solving-equations-prealg').then((m) => m.parts[0]) },
+      { title: 'Inverse Operations & One-Step Equations', loader: () => import('./extra/solving-equations-prealg').then((m) => m.parts[1]) },
+      { title: 'Two-Step Equations', loader: () => import('./extra/solving-equations-prealg').then((m) => m.parts[2]) },
+      { title: 'Negatives, Fractions & Word Problems', loader: () => import('./extra/solving-equations-prealg').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/solving-equations-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'solving-graphing-inequalities-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Inequalities Mean', loader: () => import('./extra/solving-graphing-inequalities-prealg').then((m) => m.parts[0]) },
+      { title: 'Graphing on a Number Line', loader: () => import('./extra/solving-graphing-inequalities-prealg').then((m) => m.parts[1]) },
+      { title: 'Solving with Add & Subtract', loader: () => import('./extra/solving-graphing-inequalities-prealg').then((m) => m.parts[2]) },
+      { title: 'Multiply, Divide & The Flip Rule', loader: () => import('./extra/solving-graphing-inequalities-prealg').then((m) => m.parts[3]) },
+      { title: 'Two-Step Inequalities & Mastery Check', loader: () => import('./extra/solving-graphing-inequalities-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'solving-two-step-equations': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Big Idea: Undoing Operations', loader: () => import('./extra/solving-two-step-equations').then((m) => m.parts[0]) },
+      { title: 'The Standard Move: $ax + b = c$', loader: () => import('./extra/solving-two-step-equations').then((m) => m.parts[1]) },
+      { title: 'Division, Negatives & Variable Positions', loader: () => import('./extra/solving-two-step-equations').then((m) => m.parts[2]) },
+      { title: 'Fractions, Decimals & Word Problems', loader: () => import('./extra/solving-two-step-equations').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/solving-two-step-equations').then((m) => m.parts[4]) },
+    ],
+  },
+  'square-roots-perfect-squares': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Perfect Squares', loader: () => import('./extra/square-roots-perfect-squares').then((m) => m.parts[0]) },
+      { title: 'Finding Square Roots', loader: () => import('./extra/square-roots-perfect-squares').then((m) => m.parts[1]) },
+      { title: 'Estimating Non-Perfect Roots', loader: () => import('./extra/square-roots-perfect-squares').then((m) => m.parts[2]) },
+      { title: 'Using Square Roots', loader: () => import('./extra/square-roots-perfect-squares').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/square-roots-perfect-squares').then((m) => m.parts[4]) },
+    ],
+  },
+  'unit-rates': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'From Ratios to Rates to Unit Rates', loader: () => import('./extra/unit-rates').then((m) => m.parts[0]) },
+      { title: 'Computing Unit Rates by Division', loader: () => import('./extra/unit-rates').then((m) => m.parts[1]) },
+      { title: 'Unit Price & Finding the Best Buy', loader: () => import('./extra/unit-rates').then((m) => m.parts[2]) },
+      { title: 'Using Unit Rates to Solve Problems', loader: () => import('./extra/unit-rates').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/unit-rates').then((m) => m.parts[4]) },
+    ],
+  },
+  'variables-algebraic-expressions-prealg': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is a Variable?', loader: () => import('./extra/variables-algebraic-expressions-prealg').then((m) => m.parts[0]) },
+      { title: 'Evaluating Expressions', loader: () => import('./extra/variables-algebraic-expressions-prealg').then((m) => m.parts[1]) },
+      { title: 'Translating Words into Expressions', loader: () => import('./extra/variables-algebraic-expressions-prealg').then((m) => m.parts[2]) },
+      { title: 'Terms, Coefficients & Like Terms', loader: () => import('./extra/variables-algebraic-expressions-prealg').then((m) => m.parts[3]) },
+      { title: 'Simplifying & Mastery Check', loader: () => import('./extra/variables-algebraic-expressions-prealg').then((m) => m.parts[4]) },
+    ],
+  },
+  'variables-and-expressions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Anatomy of an Expression', loader: () => import('./extra/variables-and-expressions').then((m) => m.parts[0]) },
+      { title: 'Translating Words into Math', loader: () => import('./extra/variables-and-expressions').then((m) => m.parts[1]) },
+      { title: 'Evaluating by Substitution', loader: () => import('./extra/variables-and-expressions').then((m) => m.parts[2]) },
+      { title: 'Simplifying: Like Terms & Distributing', loader: () => import('./extra/variables-and-expressions').then((m) => m.parts[3]) },
+      { title: 'Real-World Modeling & Mastery Check', loader: () => import('./extra/variables-and-expressions').then((m) => m.parts[4]) },
+    ],
+  },
+  'volume-rectangular-prisms': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Volume Means', loader: () => import('./extra/volume-rectangular-prisms').then((m) => m.parts[0]) },
+      { title: 'The Formula $V = lwh$', loader: () => import('./extra/volume-rectangular-prisms').then((m) => m.parts[1]) },
+      { title: 'Base Area × Height', loader: () => import('./extra/volume-rectangular-prisms').then((m) => m.parts[2]) },
+      { title: 'Word Problems & Missing Sides', loader: () => import('./extra/volume-rectangular-prisms').then((m) => m.parts[3]) },
+      { title: 'Cubes, Mixed Practice & Mastery Check', loader: () => import('./extra/volume-rectangular-prisms').then((m) => m.parts[4]) },
+    ],
+  },
+  'calculator-strategies': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Your Calculator Is a Tool, Not a Crutch', loader: () => import('./extra/calculator-strategies').then((m) => m.parts[0]) },
+      { title: 'Solve by Graphing', loader: () => import('./extra/calculator-strategies').then((m) => m.parts[1]) },
+      { title: 'Systems, Tables & Trickier Graphs', loader: () => import('./extra/calculator-strategies').then((m) => m.parts[2]) },
+      { title: 'Statistics, Tables & Smart Estimation', loader: () => import('./extra/calculator-strategies').then((m) => m.parts[3]) },
+      { title: 'Putting It Together & Mastery Check', loader: () => import('./extra/calculator-strategies').then((m) => m.parts[4]) },
+    ],
+  },
+  'process-of-elimination': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Why Eliminating Beats Searching', loader: () => import('./extra/process-of-elimination').then((m) => m.parts[0]) },
+      { title: 'Eliminating on Reading & Writing', loader: () => import('./extra/process-of-elimination').then((m) => m.parts[1]) },
+      { title: 'Eliminating on the Math Section', loader: () => import('./extra/process-of-elimination').then((m) => m.parts[2]) },
+      { title: 'Timing, Discipline & Elimination Traps', loader: () => import('./extra/process-of-elimination').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/process-of-elimination').then((m) => m.parts[4]) },
+    ],
+  },
 }
