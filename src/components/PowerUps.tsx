@@ -53,13 +53,20 @@ export function useCosmetics() {
 
   const purchase = useCallback((id: string, availableXP: number): boolean => {
     const c = COSMETICS.find((x) => x.id === id)
+    if (!c) return false
+    // Report the ACTUAL outcome: true only when the purchase commits (not when
+    // already owned or unaffordable). The flag is set inside the updater so it
+    // reflects fresh state; under StrictMode's double-invoke it still ends true
+    // iff the purchase is valid.
+    let ok = false
     setState((prev) => {
-      if (!c || prev.owned.includes(id) || availableXP < c.cost) return prev
+      if (prev.owned.includes(id) || availableXP < c.cost) return prev
+      ok = true
       const next = { owned: [...prev.owned, id], equipped: prev.equipped ?? id, spent: prev.spent + c.cost }
       try { localStorage.setItem(STORE_KEY, JSON.stringify(next)) } catch {}
       return next
     })
-    return !!c
+    return ok
   }, [])
 
   const equip = useCallback((id: string | null) => {

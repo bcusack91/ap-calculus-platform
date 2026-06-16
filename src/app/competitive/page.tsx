@@ -580,10 +580,13 @@ export default function CompetitivePage() {
           </div>
         )}
 
-        {/* Cosmetics Shop */}
+        {/* Cosmetics Shop. Base the spendable balance ONLY on a monotonic value
+            (total wins) — winStreak resets to 0 on any loss, and the spend
+            ledger only grows, so including streak would make already-purchased
+            cosmetics show phantom debt after a loss. */}
         {profile && (
           <div className="mt-8">
-            <PowerUpShop currentXP={profile.wins * 10 + profile.winStreak * 5} />
+            <PowerUpShop currentXP={profile.wins * 10} />
           </div>
         )}
       </div>
