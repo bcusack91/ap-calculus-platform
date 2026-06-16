@@ -26,7 +26,15 @@ export async function GET() {
 
     const totalUsers = allProgress.length
     if (totalUsers === 0) {
-      return NextResponse.json({ percentile: 100, totalUsers: 0, userCompleted: 0 })
+      // Match the success-path shape so the client never computes
+      // `100 - undefined` (= NaN) for the streak percentile in this empty window.
+      return NextResponse.json({
+        percentile: 100,
+        totalUsers: 0,
+        userCompleted: 0,
+        streakPercentile: 100,
+        currentStreak: 0,
+      })
     }
 
     // Sort and find percentile

@@ -74,6 +74,17 @@ export async function GET(request: NextRequest) {
     // Generate Six Sigma analytics
     const analytics = generateSixSigmaAnalytics(dataPoints)
 
+    // True per-problem time stats across ALL data points, in seconds (matching
+    // the per-type avgTime convention: timeToAnswer is ms -> /1000). The old code
+    // persisted only the FIRST topic's avgTime as the overall average.
+    const timesSec = dataPoints.map(d => d.timeToAnswer / 1000)
+    const avgTimePerProblem = timesSec.length > 0
+      ? timesSec.reduce((s, t) => s + t, 0) / timesSec.length
+      : 0
+    const timeStdDev = timesSec.length > 0
+      ? Math.sqrt(timesSec.reduce((s, t) => s + (t - avgTimePerProblem) ** 2, 0) / timesSec.length)
+      : 0
+
     // Persist computed metrics
     await prisma.sixSigmaMetrics.upsert({
       where: {
@@ -86,8 +97,8 @@ export async function GET(request: NextRequest) {
         accuracyStdDev: analytics.controlChart.accuracyStdDev,
         upperControlLimit: analytics.controlChart.upperControlLimit,
         lowerControlLimit: analytics.controlChart.lowerControlLimit,
-        avgTimePerProblem: Object.values(analytics.typeBreakdown)[0]?.avgTime ?? 0,
-        timeStdDev: 0,
+        avgTimePerProblem,
+        timeStdDev,
         totalAttempts: analytics.qualityMetrics.totalAttempts,
         totalErrors: analytics.qualityMetrics.totalErrors,
         dpmo: analytics.qualityMetrics.dpmo,
@@ -106,7 +117,8 @@ export async function GET(request: NextRequest) {
         accuracyStdDev: analytics.controlChart.accuracyStdDev,
         upperControlLimit: analytics.controlChart.upperControlLimit,
         lowerControlLimit: analytics.controlChart.lowerControlLimit,
-        avgTimePerProblem: Object.values(analytics.typeBreakdown)[0]?.avgTime ?? 0,
+        avgTimePerProblem,
+        timeStdDev,
         totalAttempts: analytics.qualityMetrics.totalAttempts,
         totalErrors: analytics.qualityMetrics.totalErrors,
         dpmo: analytics.qualityMetrics.dpmo,

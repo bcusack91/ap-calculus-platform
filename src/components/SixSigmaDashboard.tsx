@@ -69,7 +69,8 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
     return (
       <div className="bg-white dark:bg-gray-800 rounded-xl p-8 text-center">
         <p className="text-gray-500 dark:text-gray-400">
-          Complete at least 10 practice problems to see your Six Sigma analytics
+          Complete some practice problems to start seeing your Six Sigma analytics.
+          Control charts unlock at 20 attempts and process capability at 30.
         </p>
       </div>
     )
@@ -159,7 +160,7 @@ function OverviewTab({ analytics }: { analytics: SixSigmaAnalytics }) {
         />
         <MetricCard
           title="Process Capability"
-          value={processCapability.cpk.toFixed(2)}
+          value={qualityMetrics.totalAttempts < 30 ? '—' : processCapability.cpk.toFixed(2)}
           subtitle={processCapability.interpretation}
           color={processCapability.isCapable ? 'green' : 'yellow'}
         />
@@ -196,7 +197,15 @@ function ControlChartTab({ analytics }: { analytics: SixSigmaAnalytics }) {
         </p>
       </div>
 
-      {/* Control Limits Info */}
+      {/* Control Limits Info — needs a full rolling window (20 attempts) to be
+          meaningful; below that the limits degenerate to 0%/100%, so show a
+          progress note instead of misleading numbers. */}
+      {analytics.qualityMetrics.totalAttempts < 20 ? (
+        <div className="bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 p-6 rounded-lg text-center text-gray-600 dark:text-gray-400">
+          Complete at least 20 practice problems for a meaningful control chart
+          (you have {analytics.qualityMetrics.totalAttempts}).
+        </div>
+      ) : (
       <div className="grid md:grid-cols-3 gap-4">
         <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
           <div className="text-red-700 dark:text-red-300 font-semibold">Upper Control Limit</div>
@@ -217,6 +226,7 @@ function ControlChartTab({ analytics }: { analytics: SixSigmaAnalytics }) {
           </div>
         </div>
       </div>
+      )}
 
       {/* Out of Control Warning */}
       {controlChart.outOfControlPoints > 0 && (

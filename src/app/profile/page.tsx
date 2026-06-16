@@ -7,6 +7,7 @@ import AvatarBuilder from '@/components/AvatarBuilder';
 import ColorSchemeSelector from '@/components/ColorSchemeSelector';
 import { AvatarData } from '@/types/avatar';
 import { StudyHeatmap } from '@/components/StudyHeatmap';
+import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate';
 import { MilestonesList } from '@/components/MilestoneCelebrations';
 import NightModeScheduler from '@/components/NightModeScheduler';
 import DeleteAccountDialog from '@/components/DeleteAccountDialog';
@@ -126,9 +127,12 @@ export default function ProfilePage() {
         {/* Avatar Builder */}
         <AvatarBuilder initialAvatar={avatarData} onSave={handleSaveAvatar} />
 
-        {/* Study Heatmap */}
+        {/* Study Heatmap — gated as a Premium perk, consistent with the dashboard
+            (it was previously free here, bypassing the gate advertised elsewhere). */}
         <div className="max-w-4xl mx-auto mt-8">
-          <StudyHeatmap />
+          <PaidAnalyticsGate label="Study heatmap">
+            <StudyHeatmap />
+          </PaidAnalyticsGate>
         </div>
 
         {/* Milestones */}

@@ -189,14 +189,19 @@ function calculateSigmaLevel(dpmo: number): number {
     { dpmo: 233, sigma: 5.0 },
     { dpmo: 3.4, sigma: 6.0 }
   ]
-  
-  for (let i = 0; i < sigmaTable.length; i++) {
-    if (dpmo >= sigmaTable[i].dpmo) {
+
+  // Each row is the MAXIMUM DPMO allowed for that sigma band (lower DPMO = better).
+  // Walk best → worst and return the highest band the observed DPMO qualifies
+  // for (dpmo <= threshold). The old worst → best `dpmo >= threshold` scan
+  // returned the worst band a value *exceeded*, which over-reported quality
+  // (e.g. 100,000 DPMO -> 3σ instead of 2σ) and made the 5σ band unreachable.
+  for (let i = sigmaTable.length - 1; i >= 0; i--) {
+    if (dpmo <= sigmaTable[i].dpmo) {
       return sigmaTable[i].sigma
     }
   }
-  
-  return 6.0 // Beyond 6 sigma
+
+  return 1.0 // Worse than 1 sigma
 }
 
 /**
