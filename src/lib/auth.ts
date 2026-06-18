@@ -118,8 +118,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
       return session
     },
-    async jwt({ token, user, trigger: _trigger }) {
-      void _trigger;
+    async jwt({ token, user, trigger }) {
       if (user) {
         const dbUser = await prisma.user.findUnique({
           where: { id: user.id }
@@ -134,13 +133,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
       }
 
-      // Refresh role/emailVerified from DB periodically (every 5 minutes)
-      // instead of on every single auth() call, to avoid redundant DB queries.
-      // Changes like email verification or role upgrades will reflect within 5 min.
+      // Refresh role/emailVerified/birthYear from DB on an explicit client
+      // session update() (e.g. right after the BirthYearGate saves a birth
+      // year) AND periodically (every 5 minutes) otherwise — so an update()
+      // reflects immediately instead of waiting out the throttle window, while
+      // ordinary auth() calls avoid redundant DB queries.
       if (!user && token.sub) {
         const lastRefreshed = (token.lastRefreshed as number) || 0
         const fiveMinutes = 5 * 60 * 1000
-        if (Date.now() - lastRefreshed > fiveMinutes) {
+        if (trigger === 'update' || Date.now() - lastRefreshed > fiveMinutes) {
           const dbUser = await prisma.user.findUnique({
             where: { id: token.sub },
             select: { emailVerified: true, role: true, stripeCustomerId: true, birthYear: true },

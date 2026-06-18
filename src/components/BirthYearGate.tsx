@@ -17,9 +17,13 @@ export default function BirthYearGate() {
   const [birthYear, setBirthYear] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [saved, setSaved] = useState(false)
 
   if (status !== 'authenticated') return null
   if (session?.user?.birthYear != null) return null
+  // Once the birth year has been saved server-side, unmount immediately rather
+  // than waiting on the session refresh — so the user is never stuck on "Saving…".
+  if (saved) return null
 
   const thisYear = new Date().getFullYear()
 
@@ -48,8 +52,11 @@ export default function BirthYearGate() {
       if (thisYear - yr < 13) {
         document.cookie = `mondo_u13=1; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`
       }
-      // Refresh the session so birthYear is populated and this gate unmounts.
-      await update()
+      // The birth year is now persisted server-side, so dismiss the gate right
+      // away (no dependence on the session round-trip), then refresh the session
+      // in the background so birthYear propagates to the rest of the app.
+      setSaved(true)
+      void update()
     } catch {
       setError('Something went wrong. Please try again.')
       setSubmitting(false)
