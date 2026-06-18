@@ -124,10 +124,10 @@ When the SAT gives you a parabola through specific points and asks for the equat
         dropdowns: [
           'Check if expressions are equivalent → [Graph both — look for overlap|Use a slider|Run regression|Count zeros]',
           'Find equation through 3 points → [Table + regression|Slider on each coefficient|Guess and check|Factor]',
-          'Solve $|2x + 1| = 7$ → [Graph y = |2x+1| and y = 7, click intersections|Use the table only|Factor|Convert to quadratic]',
+          'Solve $|2x + 1| = 7$ → [Graph y = abs(2x+1) and y = 7, click intersections|Use the table only|Factor|Convert to quadratic]',
           'Find parameter for one solution → [Slider until tangent|Graph only the quadratic|Count zeros|Use the table]'
         ],
-        correctAnswers: ['Graph both — look for overlap', 'Table + regression', 'Graph y = |2x+1| and y = 7, click intersections', 'Slider until tangent'],
+        correctAnswers: ['Graph both — look for overlap', 'Table + regression', 'Graph y = abs(2x+1) and y = 7, click intersections', 'Slider until tangent'],
         hint1: 'Equivalent expressions produce identical graphs.',
         hint2: 'Three points → table input → regression gives the equation.',
         hint3: 'Absolute value creates a V-shape. A horizontal line crosses it at 0, 1, or 2 points.',

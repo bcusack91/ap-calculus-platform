@@ -12,6 +12,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import { latexToPlain } from '@/lib/latex-to-plain'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
@@ -230,10 +231,6 @@ function isAnswerMatch(studentAnswer: string, correctAnswer: string): boolean {
 }
 
 // Compare arrays of answers using smart numeric matching
-function areAllAnswersCorrect(studentAnswers: string[], correctAnswers: string[]): boolean {
-  if (studentAnswers.length !== correctAnswers.length) return false
-  return studentAnswers.every((sa, i) => isAnswerMatch(sa, correctAnswers[i]))
-}
 
 interface Section {
   id: string
@@ -3989,20 +3986,59 @@ function InputBoxExercise({
   isComplete: boolean
 }) {
   const exercise: LessonExercise = section.exercise ?? {}
-  const exerciseInputs: ExerciseInput[] = exercise.inputs ?? []
 
-  // Normalize between two exercise formats:
+  // Normalize between THREE exercise formats:
   // Format A: { boxes, correctAnswers, hint1, hint2, hint3, explanation }
   // Format B: { inputs: [{ label, correctAnswer, explanation }] }
+  // Format C: { question, correctAnswer, acceptableAnswers, hints, explanation }
+  //   — a single free-response question. Many lessons use this; without handling
+  //   it the question never rendered and the learner saw just a blank box.
+  const singleQ = exercise as LessonExercise & { question?: string; correctAnswer?: string; acceptableAnswers?: string[] }
+  // Format D: { questions: [{ question, answer|correctAnswer, acceptableAnswers }] }
+  //   — used by many bio/chem lessons; like Format B but with per-question
+  //   acceptable-answer alternatives. Normalized into the inputs shape below.
+  const questionsFmt = (exercise as { questions?: Array<{ question?: string; answer?: string; correctAnswer?: string; acceptableAnswers?: string[]; explanation?: string }> }).questions
+  const hasQuestionsArray = Array.isArray(questionsFmt) && questionsFmt.length > 0
+  const isSingleQuestionFormat =
+    (!exercise.inputs || exercise.inputs.length === 0) &&
+    !hasQuestionsArray &&
+    !exercise.correctAnswers &&
+    (typeof singleQ.correctAnswer === 'string' || typeof singleQ.question === 'string')
+
+  // Treat Formats C and D as inputs rows so the question renders as the
+  // (KaTeX-capable) label and the existing inputs UI/feedback is reused.
+  const exerciseInputs: ExerciseInput[] = (exercise.inputs && exercise.inputs.length > 0)
+    ? exercise.inputs
+    : hasQuestionsArray
+      ? questionsFmt!.map((q) => ({ label: q.question ?? '', correctAnswer: q.answer ?? q.correctAnswer ?? '', explanation: q.explanation }))
+      : isSingleQuestionFormat
+        ? [{ label: singleQ.question ?? '', correctAnswer: singleQ.correctAnswer ?? '', explanation: exercise.explanation }]
+        : []
+
   const hasInputsFormat = exerciseInputs.length > 0
   const numBoxes = hasInputsFormat ? exerciseInputs.length : (exercise.boxes || 1)
   const rawCorrectAnswers: string[] = hasInputsFormat
     ? exerciseInputs.map((input: ExerciseInput) => input.correctAnswer)
     : (exercise.correctAnswers || [])
   const correctAnswersList: string[] = rawCorrectAnswers.slice(0, numBoxes)
-  const inputExplanations: string[] | null = hasInputsFormat 
-    ? exerciseInputs.map((input: ExerciseInput) => input.explanation || '') 
+  const inputExplanations: string[] | null = hasInputsFormat
+    ? exerciseInputs.map((input: ExerciseInput) => input.explanation || '')
     : null
+
+  // Per-box list of ALL accepted answers: the primary plus any explicit
+  // alternatives (e.g. ['-3/4','-0.75'] — fraction/decimal pairs the numeric
+  // matcher can't equate on its own). For Formats A and B there are no
+  // alternatives, so this is just [correctAnswer] and matching is unchanged.
+  const acceptedByBox: string[][] = Array.from({ length: numBoxes }).map((_, i) => {
+    const alts = hasQuestionsArray
+      ? (questionsFmt![i]?.acceptableAnswers ?? [])
+      : (isSingleQuestionFormat && i === 0 && Array.isArray(singleQ.acceptableAnswers) ? singleQ.acceptableAnswers : [])
+    return [correctAnswersList[i], ...alts].filter((a): a is string => typeof a === 'string' && a.length > 0)
+  })
+  const isBoxCorrect = (index: number, answer: string): boolean =>
+    (acceptedByBox[index] ?? []).some((a) => isAnswerMatch(answer, a))
+  const areAllCorrect = (studentAnswers: string[]): boolean =>
+    studentAnswers.length === numBoxes && acceptedByBox.length === numBoxes && studentAnswers.every((a, i) => isBoxCorrect(i, a))
 
   const [answers, setAnswers] = useState<string[]>(Array(numBoxes).fill(''))
   const [attempts, setAttempts] = useState(0)
@@ -4013,8 +4049,8 @@ function InputBoxExercise({
 
   const handleSubmit = () => {
     setHasSubmitted(true)
-    const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
-    
+    const isCorrect = areAllCorrect(answers)
+
     if (isCorrect && !isComplete) {
       setTimeout(() => {
         onComplete(numBoxes, numBoxes)
@@ -4023,15 +4059,11 @@ function InputBoxExercise({
       const newAttempts = attempts + 1
       setAttempts(newAttempts)
       setShowHint(true)
-      
+
       if (newAttempts >= 4) {
         setShowAnswer(true)
         // Mark as complete after showing answer — count how many were correct
-        const correctCount = answers.filter((answer, index) => {
-          const correct = correctAnswersList[index]
-          if (!correct) return false
-          return answer.trim().toLowerCase() === correct.trim().toLowerCase()
-        }).length
+        const correctCount = answers.filter((answer, index) => isBoxCorrect(index, answer)).length
         setTimeout(() => {
           onComplete(correctCount, numBoxes)
         }, 500)
@@ -4051,7 +4083,7 @@ function InputBoxExercise({
     }
   }
 
-  const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
+  const isCorrect = areAllCorrect(answers)
 
   // Detect if any correct answer looks like electron configuration notation
   const _hasElectronConfigAnswers = correctAnswersList.some(a => looksLikeElectronConfig(a))
@@ -4086,7 +4118,7 @@ function InputBoxExercise({
                 {/* Per-input feedback */}
                 {hasSubmitted && (
                   <span className="text-xl">
-                    {isAnswerMatch(answers[index], correctAnswersList[index]) ? '✅' : '❌'}
+                    {isBoxCorrect(index, answers[index]) ? '✅' : '❌'}
                   </span>
                 )}
               </div>
@@ -4105,7 +4137,7 @@ function InputBoxExercise({
         /* Original boxes format: simple grid of input squares */
         <div className="flex gap-4 justify-center flex-wrap">
           {Array.from({ length: numBoxes }).map((_, index) => {
-            const boxCorrect = hasSubmitted ? isAnswerMatch(answers[index], correctAnswersList[index]) : null
+            const boxCorrect = hasSubmitted ? isBoxCorrect(index, answers[index]) : null
             const needsWideBox = correctAnswersList.some((ans: string) => ans.length > 2)
             return (
               <div key={index} className="flex flex-col items-center gap-2">
@@ -4143,9 +4175,14 @@ function InputBoxExercise({
       )}
 
       {showHint && !isCorrect && !showAnswer && (() => {
-        const hintMap: Record<number, string | undefined> = { 0: exercise.hint1, 1: exercise.hint2, 2: exercise.hint3 }
+        const hintsArr = (exercise as { hints?: string[] }).hints
+        const hintMap: Record<number, string | undefined> = {
+          0: exercise.hint1 ?? hintsArr?.[0],
+          1: exercise.hint2 ?? hintsArr?.[1],
+          2: exercise.hint3 ?? hintsArr?.[2],
+        }
         const wrongIndices = Array.from({ length: numBoxes })
-          .map((_, i) => isAnswerMatch(answers[i], correctAnswersList[i]) ? null : i)
+          .map((_, i) => isBoxCorrect(i, answers[i]) ? null : i)
           .filter((i): i is number => i !== null)
         return wrongIndices.length > 0 ? (
           <div className="space-y-3">
@@ -4222,14 +4259,52 @@ function DropdownExercise({
   isComplete: boolean
 }) {
   const exercise: LessonExercise = section.exercise ?? {}
-  const dropdowns: ExerciseDropdown[] = exercise.dropdowns ?? []
+  // Some lessons author dropdowns as a `questions` array of
+  // { question, options, correctAnswer } instead of `dropdowns`. Normalize that
+  // into the dropdowns shape (label = question; the per-dropdown correctAnswer
+  // is then picked up by the correctAnswersList logic below).
+  const questionFmtDropdowns = (exercise as { questions?: Array<{ question?: string; options?: string[]; correctAnswer?: string }> }).questions
+  const rawDropdowns: unknown[] = (exercise.dropdowns && exercise.dropdowns.length > 0)
+    ? exercise.dropdowns
+    : Array.isArray(questionFmtDropdowns)
+      ? questionFmtDropdowns
+          .filter((q) => Array.isArray(q.options))
+          .map((q) => ({ label: q.question, options: q.options as string[], correctAnswer: q.correctAnswer } as unknown as ExerciseDropdown))
+      : []
+  // Some lessons author each dropdown as a STRING with inline pipe-separated
+  // options, e.g. 'Label text → [opt1|opt2|opt3]'. Parse those into the object
+  // shape (label + options); the answer still comes from top-level correctAnswers.
+  const dropdowns: ExerciseDropdown[] = rawDropdowns.map((dd) => {
+    if (typeof dd === 'string') {
+      const m = dd.match(/\[([^[\]]*\|[^[\]]*)\]/)
+      if (m) {
+        const options = m[1].split('|').map((o) => o.trim()).filter(Boolean)
+        const label = dd.replace(m[0], '').replace(/[\s:>→-]+$/, '').trim()
+        return { label, options } as unknown as ExerciseDropdown
+      }
+      return { label: dd, options: [] } as unknown as ExerciseDropdown
+    }
+    return dd as ExerciseDropdown
+  })
 
   // Normalize between two data formats:
   // Format A: top-level correctAnswers: ['answer1', 'answer2', ...]
   // Format B: per-dropdown correctIndex: N (index into options array)
   const correctAnswersList: string[] = exercise.correctAnswers
     ? exercise.correctAnswers
-    : dropdowns.map((dd: ExerciseDropdown) => dd.options[dd.correctIndex])
+    : dropdowns.map((dd: ExerciseDropdown) => {
+        // Some lessons specify the answer per-dropdown rather than via a
+        // top-level exercise.correctAnswers. Support every shape used in the
+        // content: correctAnswers: ['...'] (array), correctAnswer: '...'
+        // (string), or correctIndex: N (index into options). Without this, the
+        // per-dropdown `correctAnswers` lessons resolved to undefined and could
+        // never be marked correct.
+        const perDd = dd as ExerciseDropdown & { correctAnswers?: string[]; correctAnswer?: string }
+        if (Array.isArray(perDd.correctAnswers) && perDd.correctAnswers.length > 0) return perDd.correctAnswers[0]
+        if (typeof perDd.correctAnswer === 'string') return perDd.correctAnswer
+        if (typeof dd.correctIndex === 'number') return dd.options[dd.correctIndex]
+        return ''
+      })
 
   const [answers, setAnswers] = useState<string[]>(Array(dropdowns.length).fill(''))
   const [randomizedOptions] = useState(() => 
@@ -4242,10 +4317,24 @@ function DropdownExercise({
   const [showHint, setShowHint] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
 
+  // Compare a selected option against the keyed answer. The selected value is
+  // always one of the (raw) options, so exact equality is the common path. But
+  // some lessons key the answer with slightly different formatting than the
+  // option — e.g. correctAnswer "$-5 < x < 5$" vs option "-5 < x < 5", or extra
+  // whitespace/case. Fall back to a format-insensitive compare (strip $, collapse
+  // whitespace, lowercase) so those resolve. This only ever equates strings that
+  // are the same content modulo formatting, so it can't accept a different option.
+  const ddMatch = (selected: string, correct: string): boolean => {
+    if (selected === correct) return true
+    if (typeof selected !== 'string' || typeof correct !== 'string') return false
+    const norm = (s: string) => s.replace(/\$/g, '').replace(/\s+/g, ' ').trim().toLowerCase()
+    return norm(selected) === norm(correct)
+  }
+
   const handleSubmit = () => {
     setValidated(true)
-    const isCorrect = correctAnswersList.every((correctAnswer: string, index: number) => 
-      answers[index] === correctAnswer
+    const isCorrect = correctAnswersList.every((correctAnswer: string, index: number) =>
+      ddMatch(answers[index], correctAnswer)
     )
     
     if (isCorrect && !isComplete) {
@@ -4260,8 +4349,8 @@ function DropdownExercise({
       if (newAttempts >= 4) {
         setShowAnswer(true)
         // Mark as complete after showing answer — count correct answers
-        const correctCount = correctAnswersList.filter((correctAnswer: string, index: number) => 
-          answers[index] === correctAnswer
+        const correctCount = correctAnswersList.filter((correctAnswer: string, index: number) =>
+          ddMatch(answers[index], correctAnswer)
         ).length
         setTimeout(() => {
           onComplete(correctCount, dropdowns.length)
@@ -4270,8 +4359,8 @@ function DropdownExercise({
     }
   }
 
-  const isFullyCorrect = validated && correctAnswersList.every((correctAnswer: string, index: number) => 
-    answers[index] === correctAnswer
+  const isFullyCorrect = validated && correctAnswersList.every((correctAnswer: string, index: number) =>
+    ddMatch(answers[index], correctAnswer)
   )
 
   const filledCount = answers.filter(a => a !== '').length
@@ -4283,7 +4372,7 @@ function DropdownExercise({
 
       <div className="space-y-3">
         {dropdowns.map((dropdown: ExerciseDropdown, index: number) => {
-          const isCorrect = answers[index] === correctAnswersList[index]
+          const isCorrect = ddMatch(answers[index], correctAnswersList[index])
           const showFeedback = validated && answers[index] !== ''
           const isAnswered = answers[index] !== ''
 
@@ -4367,7 +4456,10 @@ function DropdownExercise({
                   >
                     <option value="" disabled>Choose an answer…</option>
                     {randomizedOptions[index].map((option: string) => (
-                      <option key={option} value={option}>{option}</option>
+                      // Native <option> can't render KaTeX, so display a readable
+                      // plain-text/unicode form. The raw `option` stays as the
+                      // value, so answer matching is unaffected.
+                      <option key={option} value={option}>{latexToPlain(option)}</option>
                     ))}
                   </select>
                   {/* Chevron */}
