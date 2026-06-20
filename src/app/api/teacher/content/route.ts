@@ -1,15 +1,19 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { requireTeacher } from '@/lib/teacher-auth'
 
 /**
  * GET /api/teacher/content — Returns all courses, categories, and topics
  * for the teacher content library (browsing available content for assignments).
- * Cached for 1 hour.
+ *
+ * TEACHER/ADMIN only, like the rest of /api/teacher/*. Gating reads the session
+ * cookie, so the route is dynamic (no ISR caching).
  */
-export const revalidate = 3600
-
 export async function GET() {
   try {
+    const gate = await requireTeacher()
+    if ('error' in gate && gate.error) return gate.error
+
     const courses = await prisma.course.findMany({
       select: {
         slug: true,

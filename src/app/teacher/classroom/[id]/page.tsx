@@ -140,6 +140,8 @@ export default function ClassroomDetailPage() {
     requiredScore: '80',
   })
   const [creatingAssignment, setCreatingAssignment] = useState(false)
+  const [editingAssignmentId, setEditingAssignmentId] = useState<string | null>(null)
+  const [deletingAssignmentId, setDeletingAssignmentId] = useState<string | null>(null)
 
   // Competition creation
   const [showCompModal, setShowCompModal] = useState(false)
@@ -287,7 +289,33 @@ export default function ClassroomDetailPage() {
     }
   }
 
-  const createAssignment = async () => {
+  const closeAssignmentModal = () => {
+    setShowAssignmentModal(false)
+    setEditingAssignmentId(null)
+    setAssignmentForm({
+      title: '', type: 'INTERACTIVE_LESSON', topicSlug: '', topicSlugs: [],
+      dueDate: '', maxAttempts: '', requiredScore: '80',
+    })
+  }
+
+  // Resolve a topic slug to its human title using the loaded course list (for chips).
+  const topicTitle = (slug: string) => {
+    for (const c of courses) {
+      const t = c.topics.find((tp) => tp.slug === slug)
+      if (t) return t.title
+    }
+    return slug
+  }
+
+  // ISO timestamp -> value for a <input type="datetime-local"> (local wall clock).
+  const toLocalDatetimeInput = (iso: string | null) => {
+    if (!iso) return ''
+    const d = new Date(iso)
+    return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16)
+  }
+
+  // Create (POST) or edit (PUT) depending on whether we're editing an existing one.
+  const submitAssignment = async () => {
     if (!assignmentForm.title.trim()) return
     setCreatingAssignment(true)
     try {
@@ -304,22 +332,55 @@ export default function ClassroomDetailPage() {
       } else if (assignmentForm.topicSlug) {
         body.topicSlug = assignmentForm.topicSlug
       }
-      const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      })
+      const res = await fetch(
+        editingAssignmentId
+          ? `/api/teacher/classrooms/${classroomId}/assignments/${editingAssignmentId}`
+          : `/api/teacher/classrooms/${classroomId}/assignments`,
+        {
+          method: editingAssignmentId ? 'PUT' : 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        },
+      )
       if (res.ok) {
-        setShowAssignmentModal(false)
-        setAssignmentForm({
-          title: '', type: 'INTERACTIVE_LESSON', topicSlug: '', topicSlugs: [],
-          dueDate: '', maxAttempts: '', requiredScore: '80',
-        })
+        closeAssignmentModal()
         loadClassroom()
       }
     } finally {
       setCreatingAssignment(false)
     }
+  }
+
+  const startEditAssignment = (a: Assignment) => {
+    loadTopics()
+    setEditingAssignmentId(a.id)
+    setAssignmentForm({
+      title: a.title,
+      type: a.type,
+      topicSlug: a.topicSlug || '',
+      topicSlugs: a.topicSlugs && a.topicSlugs.length > 0 ? a.topicSlugs : (a.topicSlug ? [a.topicSlug] : []),
+      dueDate: toLocalDatetimeInput(a.dueDate),
+      maxAttempts: a.maxAttempts ? String(a.maxAttempts) : '',
+      requiredScore: a.requiredScore != null ? String(Math.round(a.requiredScore * 100)) : '',
+    })
+    setShowAssignmentModal(true)
+  }
+
+  const deleteAssignment = async (a: Assignment) => {
+    if (!confirm(`Unassign "${a.title}"? Students will no longer see it. Any submitted grades are kept.`)) return
+    setDeletingAssignmentId(a.id)
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments/${a.id}`, { method: 'DELETE' })
+      if (res.ok) loadClassroom()
+    } finally {
+      setDeletingAssignmentId(null)
+    }
+  }
+
+  const archiveClassroom = async () => {
+    if (!confirm('Archive this classroom? Students will lose access and it will be removed from your active list. Grades are preserved; contact support to restore it.')) return
+    const res = await fetch(`/api/teacher/classrooms/${classroomId}`, { method: 'DELETE' })
+    if (res.ok) router.push('/teacher')
   }
 
   const createCompetition = async () => {
@@ -638,11 +699,13 @@ export default function ClassroomDetailPage() {
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-white">{a.title}</h4>
-                        <div className="flex gap-3 mt-1 text-xs text-gray-500">
+                        <div className="flex flex-wrap gap-3 mt-1 text-xs text-gray-500">
                           <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded">
                             {a.type.replace(/_/g, ' ')}
                           </span>
-                          {a.topicSlug && <span>Topic: {a.topicSlug}</span>}
+                          {a.topicSlugs && a.topicSlugs.length > 1
+                            ? <span>Topics: {a.topicSlugs.length}</span>
+                            : a.topicSlug && <span>Topic: {a.topicSlug}</span>}
                           {a.requiredScore && <span>Required: {Math.round(a.requiredScore * 100)}%</span>}
                           {a.maxAttempts && <span>Max attempts: {a.maxAttempts}</span>}
                         </div>
@@ -657,6 +720,21 @@ export default function ClassroomDetailPage() {
                           </p>
                         )}
                       </div>
+                    </div>
+                    <div className="flex gap-2 mt-3">
+                      <button
+                        onClick={() => startEditAssignment(a)}
+                        className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => deleteAssignment(a)}
+                        disabled={deletingAssignmentId === a.id}
+                        className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all disabled:opacity-50"
+                      >
+                        {deletingAssignmentId === a.id ? 'Removing…' : 'Unassign'}
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -993,19 +1071,32 @@ export default function ClassroomDetailPage() {
               >
                 {saving ? 'Saving...' : 'Save Changes'}
               </button>
+
+              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-sm font-bold text-red-600 dark:text-red-400 mb-1">Danger Zone</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                  Archiving removes this class from your active list and revokes student access. Grades are preserved.
+                </p>
+                <button
+                  onClick={archiveClassroom}
+                  className="px-5 py-2.5 border-2 border-red-300 dark:border-red-800 text-red-600 dark:text-red-400 font-semibold rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 transition-all text-sm"
+                >
+                  Archive Classroom
+                </button>
+              </div>
             </div>
           </div>
         )}
       </div>
 
-      {/* Create Assignment Modal */}
+      {/* Create / Edit Assignment Modal */}
       <FocusTrapDialog
         open={showAssignmentModal}
-        onClose={() => setShowAssignmentModal(false)}
-        title="Create Assignment"
+        onClose={closeAssignmentModal}
+        title={editingAssignmentId ? 'Edit Assignment' : 'Create Assignment'}
       >
         <div className="p-8">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Create Assignment</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{editingAssignmentId ? 'Edit Assignment' : 'Create Assignment'}</h2>
           <div className="space-y-4">
             <div>
               <label
@@ -1046,23 +1137,46 @@ export default function ClassroomDetailPage() {
                 htmlFor="assignment-topic"
                 className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
               >
-                Topic
+                Topics
               </label>
               <select
                 id="assignment-topic"
-                value={assignmentForm.topicSlug}
-                onChange={(e) => setAssignmentForm({ ...assignmentForm, topicSlug: e.target.value })}
+                value=""
+                onChange={(e) => {
+                  const slug = e.target.value
+                  if (slug && !assignmentForm.topicSlugs.includes(slug)) {
+                    setAssignmentForm({ ...assignmentForm, topicSlugs: [...assignmentForm.topicSlugs, slug] })
+                  }
+                }}
                 className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
               >
-                <option value="">Select a topic...</option>
+                <option value="">+ Add a topic…</option>
                 {courses.map((c) => (
                   <optgroup key={c.courseTitle} label={c.courseTitle}>
                     {c.topics.map((t) => (
-                      <option key={t.slug} value={t.slug}>{t.title}</option>
+                      <option key={t.slug} value={t.slug} disabled={assignmentForm.topicSlugs.includes(t.slug)}>{t.title}</option>
                     ))}
                   </optgroup>
                 ))}
               </select>
+              {assignmentForm.topicSlugs.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {assignmentForm.topicSlugs.map((slug) => (
+                    <span key={slug} className="inline-flex items-center gap-1 px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg text-xs">
+                      {topicTitle(slug)}
+                      <button
+                        type="button"
+                        onClick={() => setAssignmentForm({ ...assignmentForm, topicSlugs: assignmentForm.topicSlugs.filter((s) => s !== slug) })}
+                        className="text-blue-500 hover:text-blue-800 dark:hover:text-blue-100 font-bold leading-none"
+                        aria-label={`Remove ${topicTitle(slug)}`}
+                      >
+                        ×
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              )}
+              <p className="mt-1 text-xs text-gray-400">Add one or more topics — students complete all of them.</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -1118,17 +1232,19 @@ export default function ClassroomDetailPage() {
           </div>
           <div className="flex gap-3 mt-6">
             <button
-              onClick={() => setShowAssignmentModal(false)}
+              onClick={closeAssignmentModal}
               className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
             >
               Cancel
             </button>
             <button
-              onClick={createAssignment}
+              onClick={submitAssignment}
               disabled={!assignmentForm.title.trim() || creatingAssignment}
               className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
-              {creatingAssignment ? 'Creating...' : 'Create Assignment'}
+              {creatingAssignment
+                ? (editingAssignmentId ? 'Saving…' : 'Creating...')
+                : (editingAssignmentId ? 'Save Changes' : 'Create Assignment')}
             </button>
           </div>
         </div>

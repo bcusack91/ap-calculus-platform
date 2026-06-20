@@ -36,6 +36,7 @@ export async function GET(
           orderBy: { joinedAt: 'asc' },
         },
         assignments: {
+          where: { isActive: true },
           orderBy: { createdAt: 'desc' },
           include: {
             _count: { select: { submissions: true } },

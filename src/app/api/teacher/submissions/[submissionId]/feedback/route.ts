@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireTeacher } from '@/lib/teacher-auth'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@prisma/client'
 
 // PUT /api/teacher/submissions/[submissionId]/feedback
 export async function PUT(
@@ -14,7 +15,16 @@ export async function PUT(
       return teacher.error
     }
 
-    const { feedback } = await req.json()
+    const body = await req.json()
+    const { feedback } = body
+    const hasScore = Object.prototype.hasOwnProperty.call(body, 'score')
+    const score: unknown = body.score
+
+    // Optional manual grade override, stored as a 0-1 fraction (the same scale
+    // the gradebook reads). `null` clears the grade.
+    if (hasScore && score !== null && (typeof score !== 'number' || score < 0 || score > 1)) {
+      return NextResponse.json({ error: 'Score must be a number between 0 and 1' }, { status: 400 })
+    }
 
     // Verify the teacher owns the classroom this assignment belongs to
     const submission = await prisma.assignmentSubmission.findUnique({
@@ -36,9 +46,22 @@ export async function PUT(
       return NextResponse.json({ error: 'Not your classroom' }, { status: 403 })
     }
 
+    const data: Prisma.AssignmentSubmissionUpdateInput = {}
+    if (Object.prototype.hasOwnProperty.call(body, 'feedback')) {
+      data.feedback = feedback?.trim() || null
+    }
+    if (hasScore) {
+      data.score = score as number | null
+      // A manually-graded submission counts as completed.
+      if (typeof score === 'number') {
+        data.status = 'COMPLETED'
+        if (!submission.completedAt) data.completedAt = new Date()
+      }
+    }
+
     const updated = await prisma.assignmentSubmission.update({
       where: { id: submissionId },
-      data: { feedback: feedback?.trim() || null },
+      data,
     })
 
     return NextResponse.json({ submission: updated })

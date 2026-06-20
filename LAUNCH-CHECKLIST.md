@@ -1,0 +1,91 @@
+# StudyMondo — Launch & Teacher-Dashboard Checklist
+
+_Tracks the critical things **you** (the owner) must do outside the code, what's already shipped, and the remaining code tasks Claude can build. Derived from the competitive teacher-dashboard review (June 2026)._
+
+Legend: `[ ]` to do · `[x]` done · 🔴 critical / blocks adoption · 🟠 high · 🟡 medium
+
+---
+
+## 1. Owner action items (cannot be done in code)
+
+These need **you** — an account, a signature, a dashboard setting, or a secret. Most are gates: the code is ready (or will be), but it does nothing until you complete these.
+
+### 1a. Add secrets to Vercel (Project → Settings → Environment Variables)
+Set these for **Production** (and Preview if you test there). Never commit them to git.
+
+- [ ] 🟠 `ANTHROPIC_API_KEY` — switches the AI tutor from the canned template fallback to real Claude (Haiku 4.5). **Also required before any teacher-AI features work.** Get it at console.anthropic.com.
+- [ ] 🟠 `STRIPE_SECRET_KEY` — Premium checkout returns HTTP 503 ("checkout isn't switched on yet") until this is set.
+- [ ] 🟠 `STRIPE_WEBHOOK_SECRET` — from the Stripe webhook endpoint you create (see 1d).
+- [ ] 🟠 `STRIPE_PREMIUM_PRICE_ID` — the monthly price ID (`price_…`) from Stripe.
+- [ ] 🟠 `STRIPE_PREMIUM_ANNUAL_PRICE_ID` — the annual price ID; enables the monthly/annual toggle.
+- [ ] 🟡 `NEXT_PUBLIC_APP_URL` — your canonical URL (e.g. `https://www.studymondo.com`); used for Stripe redirect URLs.
+- [ ] 🟡 `NEXT_PUBLIC_ADSENSE_CLIENT_ID`, `NEXT_PUBLIC_AD_SLOT_IN_ARTICLE`, `NEXT_PUBLIC_AD_SLOT_SIDEBAR` — confirm these are set in prod so ads actually render (and revenue flows).
+
+> After changing env vars in Vercel you must **redeploy** for them to take effect.
+
+### 1b. Sign & publish a Data Privacy Agreement (DPA) — 🔴 the #1 adoption gate
+Without a signed DPA + a clear privacy posture, school IT departments **block** the tool and no rostering/grade-passback work matters. This is more existential than any feature for an ad-funded site selling to under-13-heavy classrooms.
+- [ ] 🔴 Adopt a standard signable DPA (SDPC / NDPA national template — see privacy.a4l.org).
+- [ ] 🔴 Publish a FERPA/COPPA handling statement and decide the **"classroom is ad-free"** policy (public content can stay AdSense-funded; the teacher-assigned/classroom student experience should be ad-free). _Code to suppress ads on classroom/assigned routes is a separate task in §3._
+- [ ] 🟡 Confirm with Google AdSense that **personalized ads are disabled for under-13** (ties to the existing `mondo_u13` cookie / age gate). COPPA requirement.
+
+### 1c. Rostering — pick the path, then provision it — 🔴
+Roster sync + SSO is table stakes for every district-adopted competitor. **Recommended: use an aggregator** (Edlink or Clever-as-a-service) instead of building Google/Clever/ClassLink/Canvas natively — one integration covers them all and is the only realistic path for a small team.
+- [ ] 🔴 Create an **Edlink** (ed.link) or **Clever** developer account and get the API credentials.
+- [ ] 🟠 (If going direct to Google Classroom first instead of an aggregator) create a **Google Cloud project**, enable the Classroom API, configure the OAuth consent screen, and get the OAuth client ID/secret. Provide them as Vercel env vars (names TBD when the feature is built).
+- [ ] 🟡 Decide rollout order: Google Classroom import first (fastest), aggregator second.
+
+### 1d. Stripe configuration (Stripe Dashboard)
+- [ ] 🟠 Create the **Premium** product with a monthly price and an annual price; copy both price IDs into Vercel (see 1a).
+- [ ] 🟠 Add a **webhook endpoint** → `https://<your-domain>/api/stripe/webhook`, subscribe to checkout/subscription events, copy the signing secret into `STRIPE_WEBHOOK_SECRET`.
+- [ ] 🟡 Test a full checkout in Stripe test mode before going live.
+
+### 1e. Standards data (for standards-mastery reporting — §3)
+- [ ] 🟡 Provide or approve the authoritative lists to tag content against: **College Board AP units/skills**, **SAT domains**, **AAMC MCAT content categories**. Claude can draft the mapping; you confirm accuracy before it ships.
+
+---
+
+## 2. ✅ Shipped in code (this session)
+
+All verified: `tsc` clean, production build green. Committed to `main`.
+
+- [x] **Security:** added the missing TEACHER/ADMIN auth guard to `GET /api/teacher/content` (was unauthenticated).
+- [x] **Edit an assignment** — new `PUT /api/teacher/classrooms/[id]/assignments/[assignmentId]` + an **Edit** button that reopens the modal pre-filled.
+- [x] **Unassign an assignment** — new `DELETE …/[assignmentId]` (soft-deactivate, grades preserved) + an **Unassign** button. Deactivated assignments now hidden from both teacher and student views.
+- [x] **Multi-topic assignments** — the create/edit modal now lets you add several topics (chips), exposing the `topicSlugs[]` capability the backend already supported.
+- [x] **Grade override (API)** — `PUT …/submissions/[id]/feedback` now also accepts a numeric `score` (0–1) and marks the submission completed. _(UI to edit scores is the writable-gradebook task in §3.)_
+- [x] **Archive a classroom** — Settings → Danger Zone → **Archive Classroom** (wires the existing soft-deactivate).
+
+---
+
+## 3. Remaining code tasks (Claude can build — prioritized)
+
+Sequenced per the review: adoption gates → trust fixes → differentiation → lock-in. Items marked _(blocked)_ need an owner action from §1 first.
+
+- [ ] 🔴 **Google Classroom roster import + "Share to Classroom"** — _(blocked on 1c creds)_. The beachhead that turns code-only self-join into something schools approve.
+- [ ] 🔴 **Standards tagging + re-skin the mastery heatmap as standards-mastery** — _(needs 1e lists)_. The one place you out-specialize generalist Khan; analytics plumbing already exists.
+- [ ] 🟠 **Writable gradebook UI** — mount the existing (currently orphaned) `Gradebook.tsx` as a classroom tab, fix its raw-score display, thread `submissionId` through, and make cells editable against the score API already shipped in §2.
+- [ ] 🟠 **Per-student question randomization** (DeltaMath-style anti-cheat) — randomize order/options per student on assigned banks; reuses existing competitive banks.
+- [ ] 🟠 **Teacher AI via Haiku** — _(blocked on `ANTHROPIC_API_KEY`)_. Auto-generate a practice set targeting the class's weakest standard; AI-grade free-response against a rubric (teacher confirms).
+- [ ] 🟠 **Flashcard-set importer** — paste/CSV import from Quizlet/Knowt; removes the "I'd lose my library" switching cost.
+- [ ] 🟠 **Auto-remediation loop** — when a student fails an exit quiz, auto-seed a targeted follow-up assignment for one-click teacher approval (uses existing exit-quiz pass/redo data).
+- [ ] 🟡 **Ad-free classroom** — _(pending 1b policy)_. Suppress AdSense on teacher/assigned-content routes while keeping public content ad-funded.
+- [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember`; lets an owner share roster/gradebook/lobby. Lock-in play — do **after** there's a teacher base.
+- [ ] 🟡 **Parent/guardian progress emails** — _(gate behind 1b DPA)_. `guardianEmail` + scheduled email-out from existing `/student-report` data; no parent login (COPPA-light).
+- [ ] 🟡 **Sections/periods** — lightweight label on `Classroom` for teachers with multiple sections.
+- [ ] 🟢 **Unify the two competition systems** — let a scheduled competition launch into the live lobby; one cross-mode report.
+
+### Deferred big bets (don't start until there's real teacher adoption)
+- Native LTI 1.3 (NRPS + AGS 2.0) + Clever/ClassLink certification — months of work + ongoing cert; the aggregator (1c) is the realistic substitute.
+- Predictive AP/SAT/MCAT scaled-score bands — needs a validated model; a wrong prediction destroys teacher trust.
+
+---
+
+## 4. Suggested order
+1. **§1a env vars** (cheap, unblocks AI + payments immediately).
+2. **§1b DPA + ad-free policy** (the real adoption gate).
+3. **§1c rostering creds** → then Claude builds Google Classroom import.
+4. **§1e standards lists** → then Claude builds standards-mastery.
+5. Fill in the §3 trust/lock-in items (writable gradebook, randomization, importer, remediation).
+
+_Last updated: 2026-06-18. Source: teacher-dashboard competitive review (vs. AP Classroom, Khan/Khanmigo, Albert.io, IXL, DeltaMath, Quizizz, Kahoot, Edpuzzle, Quizlet/Knowt, Formative, Desmos, Google Classroom/Canvas)._
