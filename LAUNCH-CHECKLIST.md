@@ -56,6 +56,7 @@ All verified: `tsc` clean, production build green. Committed to `main`.
 - [x] **Grade override (API)** — `PUT …/submissions/[id]/feedback` now also accepts a numeric `score` (0–1) and marks the submission completed.
 - [x] **Writable gradebook UI** — new **Gradebook** tab in the classroom: click any cell to set/clear a 0–100% score. Upserts via `PUT /api/teacher/gradebook` (works even for students with no submission row yet); averages/letter grades recompute on save. Also fixed the old raw-score display bug.
 - [x] **Archive a classroom** — Settings → Danger Zone → **Archive Classroom** (wires the existing soft-deactivate).
+- [x] **Auto-remediation** — the classroom **Performance** tab now shows a "Suggested remediation" panel: topics where students didn't pass the exit quiz, grouped by topic (with a "must redo unit" count), excluding topics already assigned. One click assigns a targeted review lesson to the class. No schema change — derived from the exit-quiz data already loaded.
 
 ---
 
@@ -65,10 +66,9 @@ Sequenced per the review: adoption gates → trust fixes → differentiation →
 
 - [ ] 🔴 **Google Classroom roster import + "Share to Classroom"** — _(blocked on 1c creds)_. The beachhead that turns code-only self-join into something schools approve.
 - [ ] 🔴 **Standards tagging + re-skin the mastery heatmap as standards-mastery** — _(needs 1e lists)_. The one place you out-specialize generalist Khan; analytics plumbing already exists.
-- [ ] 🟠 **Per-student question randomization** (DeltaMath-style anti-cheat) — randomize order/options per student on assigned banks; reuses existing competitive banks.
 - [ ] 🟠 **Teacher AI via Haiku** — _(blocked on `ANTHROPIC_API_KEY`)_. Auto-generate a practice set targeting the class's weakest standard; AI-grade free-response against a rubric (teacher confirms).
-- [ ] 🟠 **Flashcard-set importer** — paste/CSV import from Quizlet/Knowt; removes the "I'd lose my library" switching cost.
-- [ ] 🟠 **Auto-remediation loop** — when a student fails an exit quiz, auto-seed a targeted follow-up assignment for one-click teacher approval (uses existing exit-quiz pass/redo data).
+- [ ] 🟠 **Flashcard-set importer** — _(needs your go-ahead: requires a new `FlashcardSet` schema migration + a set viewer)_. The `Flashcard` model has **no ownership/class scoping** (only `topicId`), so importing into a Topic would pollute that topic's cards for *every* student site-wide. Doing it correctly needs a small `FlashcardSet`/`FlashcardSetCard` model (a migration) and a viewer so the imported set is studyable/assignable. It's a real feature, not a quick win. **I can build it end-to-end the moment you authorize the migration.**
+- [ ] 🟡 **Per-student question randomization** — _(deferred — low value-to-risk)_. Option *order* is already randomized per render; the valuable part (different *questions* per student) means threading `studentId` through the core competitive match engine (~20 call sites) — high regression risk on a system we just stabilized, for marginal gain. Recommend leaving as-is unless teachers report collusion.
 - [ ] 🟡 **Ad-free classroom** — _(pending 1b policy)_. Suppress AdSense on teacher/assigned-content routes while keeping public content ad-funded.
 - [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember`; lets an owner share roster/gradebook/lobby. Lock-in play — do **after** there's a teacher base.
 - [ ] 🟡 **Parent/guardian progress emails** — _(gate behind 1b DPA)_. `guardianEmail` + scheduled email-out from existing `/student-report` data; no parent login (COPPA-light).

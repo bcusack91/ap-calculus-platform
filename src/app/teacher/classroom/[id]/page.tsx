@@ -162,6 +162,7 @@ export default function ClassroomDetailPage() {
   // Performance data
   const [perfData, setPerfData] = useState<ClassroomPerformanceData | null>(null)
   const [loadingPerf, setLoadingPerf] = useState(false)
+  const [creatingRemediation, setCreatingRemediation] = useState<string | null>(null)
 
   // Settings
   const [editName, setEditName] = useState('')
@@ -203,6 +204,7 @@ export default function ClassroomDetailPage() {
   const loadPerformance = async () => {
     if (perfData) return
     setLoadingPerf(true)
+    loadTopics() // so remediation suggestions can show human topic titles
     try {
       const res = await fetch(`/api/teacher/classrooms/${classroomId}/performance`)
       if (res.ok) setPerfData(await res.json())
@@ -382,6 +384,53 @@ export default function ClassroomDetailPage() {
     if (!confirm('Archive this classroom? Students will lose access and it will be removed from your active list. Grades are preserved; contact support to restore it.')) return
     const res = await fetch(`/api/teacher/classrooms/${classroomId}`, { method: 'DELETE' })
     if (res.ok) router.push('/teacher')
+  }
+
+  // Auto-remediation: from the exit-quiz data the Performance tab already loads,
+  // surface topics where students didn't pass — grouped by topic, and excluding
+  // topics that already have an assignment — so the teacher can one-click assign
+  // a targeted review lesson to the class.
+  const getRemediationSuggestions = () => {
+    if (!perfData || !classroom) return [] as { topicSlug: string; topicTitle: string; count: number; mustRedoCount: number }[]
+    const assignedTopics = new Set<string>()
+    for (const a of classroom.assignments) {
+      if (a.topicSlug) assignedTopics.add(a.topicSlug)
+      if (a.topicSlugs) for (const s of a.topicSlugs) assignedTopics.add(s)
+    }
+    const byTopic = new Map<string, { count: number; mustRedoCount: number }>()
+    for (const s of perfData.students) {
+      for (const eq of s.exitQuizzes || []) {
+        if (eq.passed || assignedTopics.has(eq.topicSlug)) continue
+        const entry = byTopic.get(eq.topicSlug) || { count: 0, mustRedoCount: 0 }
+        entry.count++
+        if (eq.mustRedoUnit) entry.mustRedoCount++
+        byTopic.set(eq.topicSlug, entry)
+      }
+    }
+    return Array.from(byTopic.entries())
+      .map(([topicSlug, v]) => ({ topicSlug, topicTitle: topicTitle(topicSlug), count: v.count, mustRedoCount: v.mustRedoCount }))
+      .sort((a, b) => b.count - a.count)
+  }
+
+  const createRemediation = async (topicSlug: string, title: string) => {
+    setCreatingRemediation(topicSlug)
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: `Remediation: ${title}`,
+          type: 'INTERACTIVE_LESSON',
+          topicSlug,
+          dueDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
+          requiredScore: 0.8,
+          maxAttempts: 3,
+        }),
+      })
+      if (res.ok) await loadClassroom() // refresh assignments so this topic drops out of suggestions
+    } finally {
+      setCreatingRemediation(null)
+    }
   }
 
   const createCompetition = async () => {
@@ -861,6 +910,45 @@ export default function ClassroomDetailPage() {
                     <div className="text-xs text-gray-500">Avg Streak</div>
                   </div>
                 </div>
+
+                {/* Suggested remediation (from exit-quiz failures) */}
+                {(() => {
+                  const suggestions = getRemediationSuggestions()
+                  if (suggestions.length === 0) return null
+                  return (
+                    <div className="mb-6 rounded-2xl border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/10 p-5">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xl">🛠️</span>
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white">Suggested remediation</h3>
+                      </div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+                        Topics where students didn’t pass the exit quiz. One click assigns a targeted review lesson to the class.
+                      </p>
+                      <div className="space-y-2">
+                        {suggestions.map((sug) => (
+                          <div key={sug.topicSlug} className="flex items-center justify-between gap-3 bg-white dark:bg-gray-800 rounded-xl p-3">
+                            <div className="min-w-0">
+                              <p className="font-medium text-gray-900 dark:text-white truncate">{sug.topicTitle}</p>
+                              <p className="text-xs text-gray-500">
+                                {sug.count} student{sug.count !== 1 ? 's' : ''} struggling
+                                {sug.mustRedoCount > 0 && (
+                                  <span className="text-red-600 dark:text-red-400"> · {sug.mustRedoCount} must redo unit</span>
+                                )}
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => createRemediation(sug.topicSlug, sug.topicTitle)}
+                              disabled={creatingRemediation === sug.topicSlug}
+                              className="shrink-0 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 transition-all"
+                            >
+                              {creatingRemediation === sug.topicSlug ? 'Assigning…' : '+ Assign review'}
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                })()}
 
                 {/* Per-Student Table */}
                 <div className="overflow-x-auto">
