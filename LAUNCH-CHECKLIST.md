@@ -53,7 +53,8 @@ All verified: `tsc` clean, production build green. Committed to `main`.
 - [x] **Edit an assignment** — new `PUT /api/teacher/classrooms/[id]/assignments/[assignmentId]` + an **Edit** button that reopens the modal pre-filled.
 - [x] **Unassign an assignment** — new `DELETE …/[assignmentId]` (soft-deactivate, grades preserved) + an **Unassign** button. Deactivated assignments now hidden from both teacher and student views.
 - [x] **Multi-topic assignments** — the create/edit modal now lets you add several topics (chips), exposing the `topicSlugs[]` capability the backend already supported.
-- [x] **Grade override (API)** — `PUT …/submissions/[id]/feedback` now also accepts a numeric `score` (0–1) and marks the submission completed. _(UI to edit scores is the writable-gradebook task in §3.)_
+- [x] **Grade override (API)** — `PUT …/submissions/[id]/feedback` now also accepts a numeric `score` (0–1) and marks the submission completed.
+- [x] **Writable gradebook UI** — new **Gradebook** tab in the classroom: click any cell to set/clear a 0–100% score. Upserts via `PUT /api/teacher/gradebook` (works even for students with no submission row yet); averages/letter grades recompute on save. Also fixed the old raw-score display bug.
 - [x] **Archive a classroom** — Settings → Danger Zone → **Archive Classroom** (wires the existing soft-deactivate).
 
 ---
@@ -64,7 +65,6 @@ Sequenced per the review: adoption gates → trust fixes → differentiation →
 
 - [ ] 🔴 **Google Classroom roster import + "Share to Classroom"** — _(blocked on 1c creds)_. The beachhead that turns code-only self-join into something schools approve.
 - [ ] 🔴 **Standards tagging + re-skin the mastery heatmap as standards-mastery** — _(needs 1e lists)_. The one place you out-specialize generalist Khan; analytics plumbing already exists.
-- [ ] 🟠 **Writable gradebook UI** — mount the existing (currently orphaned) `Gradebook.tsx` as a classroom tab, fix its raw-score display, thread `submissionId` through, and make cells editable against the score API already shipped in §2.
 - [ ] 🟠 **Per-student question randomization** (DeltaMath-style anti-cheat) — randomize order/options per student on assigned banks; reuses existing competitive banks.
 - [ ] 🟠 **Teacher AI via Haiku** — _(blocked on `ANTHROPIC_API_KEY`)_. Auto-generate a practice set targeting the class's weakest standard; AI-grade free-response against a rubric (teacher confirms).
 - [ ] 🟠 **Flashcard-set importer** — paste/CSV import from Quizlet/Knowt; removes the "I'd lose my library" switching cost.

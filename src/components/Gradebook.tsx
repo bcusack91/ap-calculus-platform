@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 
 interface Assignment {
   id: string
@@ -8,7 +8,6 @@ interface Assignment {
   type: string
   topicSlug: string | null
   dueDate: string | null
-  maxScore: number | null
 }
 
 interface Grade {
@@ -47,17 +46,72 @@ export default function Gradebook({ classroomId }: GradebookProps) {
   const [sortBy, setSortBy] = useState<'name' | 'average'>('name')
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc')
 
-  useEffect(() => {
-    fetch(`/api/teacher/gradebook?classroomId=${classroomId}`)
-      .then((r) => r.json())
-      .then((data) => {
-        setAssignments(data.assignments ?? [])
-        setStudents(data.students ?? [])
-        setStats(data.assignmentStats ?? [])
-      })
-      .catch(console.error)
-      .finally(() => setLoading(false))
+  // Which cell is currently being edited, and which is mid-save.
+  const [editing, setEditing] = useState<{ studentId: string; assignmentId: string } | null>(null)
+  const [savingCell, setSavingCell] = useState<string | null>(null)
+  // Set when the user hits Escape, so the input's onBlur (which can fire as the
+  // field unmounts) skips the save instead of committing the typed value.
+  const cancelRef = useRef(false)
+
+  const load = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/teacher/gradebook?classroomId=${classroomId}`)
+      const data = await res.json()
+      setAssignments(data.assignments ?? [])
+      setStudents(data.students ?? [])
+      setStats(data.assignmentStats ?? [])
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
+    }
   }, [classroomId])
+
+  useEffect(() => {
+    load()
+  }, [load])
+
+  // Persist (or clear) a single grade, then refetch so averages/footer stay in
+  // sync with the server's calculation. `raw` is a percentage string (0-100);
+  // empty clears the grade.
+  const saveGrade = async (studentId: string, assignmentId: string, raw: string) => {
+    setEditing(null)
+    const trimmed = raw.trim()
+
+    let score: number | null
+    if (trimmed === '') {
+      score = null
+    } else {
+      const pct = Number(trimmed)
+      if (!Number.isFinite(pct) || pct < 0 || pct > 100) return // ignore invalid input
+      score = pct / 100
+    }
+
+    // No-op if unchanged.
+    const current = students.find((s) => s.id === studentId)?.grades.find((g) => g.assignmentId === assignmentId)
+    const currentScore = current?.score ?? null
+    if (
+      (score === null && currentScore === null) ||
+      (score !== null && currentScore !== null && Math.abs(score - currentScore) < 1e-9)
+    ) {
+      return
+    }
+
+    const cellKey = `${studentId}-${assignmentId}`
+    setSavingCell(cellKey)
+    try {
+      const res = await fetch('/api/teacher/gradebook', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ classroomId, assignmentId, studentId, score }),
+      })
+      if (res.ok) await load()
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setSavingCell(null)
+    }
+  }
 
   const sorted = useMemo(() => {
     return [...students].sort((a, b) => {
@@ -155,6 +209,8 @@ export default function Gradebook({ classroomId }: GradebookProps) {
         </div>
       </div>
 
+      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Click any grade cell to set or change a score (0–100%). Leave it blank to clear.</p>
+
       {/* Gradebook table */}
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-x-auto">
         <table className="w-full text-sm">
@@ -173,7 +229,6 @@ export default function Gradebook({ classroomId }: GradebookProps) {
                   title={a.title}
                 >
                   <div className="truncate max-w-[80px]">{a.title}</div>
-                  {a.maxScore && <div className="text-xs text-gray-500 dark:text-gray-400 font-normal">/{a.maxScore}</div>}
                 </th>
               ))}
               <th
@@ -196,14 +251,38 @@ export default function Gradebook({ classroomId }: GradebookProps) {
                 </td>
                 {assignments.map((a) => {
                   const g = student.grades.find((gr) => gr.assignmentId === a.id)
+                  const isEditing = editing?.studentId === student.id && editing?.assignmentId === a.id
+                  const isSaving = savingCell === `${student.id}-${a.id}`
                   return (
                     <td key={a.id} className="text-center p-3">
-                      {g?.status === 'NOT_SUBMITTED' ? (
-                        <span className="text-gray-300">—</span>
+                      {isEditing ? (
+                        <input
+                          autoFocus
+                          type="number"
+                          min={0}
+                          max={100}
+                          defaultValue={g?.percentage ?? ''}
+                          onBlur={(e) => {
+                            if (cancelRef.current) { cancelRef.current = false; return }
+                            saveGrade(student.id, a.id, e.target.value)
+                          }}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') (e.target as HTMLInputElement).blur()
+                            else if (e.key === 'Escape') { cancelRef.current = true; setEditing(null) }
+                          }}
+                          className="w-16 px-1 py-0.5 text-center border-2 border-blue-400 rounded dark:bg-gray-700 dark:text-white"
+                          aria-label={`Grade for ${student.name || 'student'} on ${a.title}`}
+                        />
                       ) : (
-                        <span className={`font-medium ${gradeColor(g?.percentage ?? null)}`}>
-                          {g?.score ?? '—'}
-                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setEditing({ studentId: student.id, assignmentId: a.id })}
+                          disabled={isSaving}
+                          className={`w-full font-medium rounded px-1 py-0.5 hover:bg-blue-50 dark:hover:bg-blue-900/20 ${gradeColor(g?.percentage ?? null)} ${isSaving ? 'opacity-40' : ''}`}
+                          title="Click to edit grade"
+                        >
+                          {g?.percentage != null ? `${g.percentage}%` : '—'}
+                        </button>
                       )}
                     </td>
                   )
@@ -227,7 +306,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
                 const stat = stats.find((s) => s.id === a.id)
                 return (
                   <td key={a.id} className={`text-center p-3 font-medium ${gradeColor(stat?.average ?? null)}`}>
-                    {stat?.average !== null ? `${stat?.average}%` : '—'}
+                    {stat?.average != null ? `${stat?.average}%` : '—'}
                   </td>
                 )
               })}

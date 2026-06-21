@@ -114,3 +114,50 @@ export async function GET(req: NextRequest) {
     assignmentStats,
   })
 }
+
+// PUT /api/teacher/gradebook — manually set/clear one student's grade on one
+// assignment. Body: { classroomId, assignmentId, studentId, score } where score
+// is a 0-1 fraction, or null to clear. Upserts the submission so a grade can be
+// entered even for a student who has no submission row yet (e.g. joined after
+// the assignment was created).
+export async function PUT(req: NextRequest) {
+  const authResult = await requireTeacher()
+  if ('error' in authResult) return authResult.error
+  const { user } = authResult
+
+  const { classroomId, assignmentId, studentId, score } = await req.json()
+  if (!classroomId || !assignmentId || !studentId) {
+    return NextResponse.json({ error: 'classroomId, assignmentId, studentId required' }, { status: 400 })
+  }
+  if (score !== null && (typeof score !== 'number' || score < 0 || score > 1)) {
+    return NextResponse.json({ error: 'Score must be a number between 0 and 1, or null' }, { status: 400 })
+  }
+
+  // Ownership + that the assignment and student actually belong to this classroom.
+  const classroom = await prisma.classroom.findFirst({ where: { id: classroomId, teacherId: user.id } })
+  if (!classroom) return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
+
+  const assignment = await prisma.assignment.findFirst({ where: { id: assignmentId, classroomId } })
+  if (!assignment) return NextResponse.json({ error: 'Assignment not found' }, { status: 404 })
+
+  const member = await prisma.classroomMember.findFirst({
+    where: { classroomId, userId: studentId, isActive: true },
+  })
+  if (!member) return NextResponse.json({ error: 'Student not in classroom' }, { status: 404 })
+
+  if (score === null) {
+    // Clear an existing grade only — nothing to create.
+    await prisma.assignmentSubmission.updateMany({
+      where: { assignmentId, studentId },
+      data: { score: null },
+    })
+  } else {
+    await prisma.assignmentSubmission.upsert({
+      where: { assignmentId_studentId: { assignmentId, studentId } },
+      update: { score, status: 'COMPLETED', completedAt: new Date() },
+      create: { assignmentId, studentId, score, status: 'COMPLETED', completedAt: new Date() },
+    })
+  }
+
+  return NextResponse.json({ success: true })
+}
