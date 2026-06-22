@@ -163,6 +163,7 @@ export default function ClassroomDetailPage() {
   const [perfData, setPerfData] = useState<ClassroomPerformanceData | null>(null)
   const [loadingPerf, setLoadingPerf] = useState(false)
   const [creatingRemediation, setCreatingRemediation] = useState<string | null>(null)
+  const [startingLobby, setStartingLobby] = useState(false)
 
   // Settings
   const [editName, setEditName] = useState('')
@@ -194,6 +195,31 @@ export default function ClassroomDetailPage() {
   useEffect(() => {
     if (session) loadClassroom()
   }, [session, loadClassroom])
+
+  // Refresh the classroom (members/assignments/competitions) when the teacher
+  // returns to the tab, so stale data doesn't linger after a student joins or
+  // submits. Updates ONLY the display data — it deliberately does not touch the
+  // Settings edit fields, so an in-progress edit is never clobbered.
+  const refreshClassroom = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}`)
+      if (res.ok) setClassroom(await res.json())
+    } catch {
+      // ignore transient refresh failures — don't redirect on a focus refetch
+    }
+  }, [classroomId])
+
+  useEffect(() => {
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') refreshClassroom()
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    window.addEventListener('focus', refreshClassroom)
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible)
+      window.removeEventListener('focus', refreshClassroom)
+    }
+  }, [refreshClassroom])
 
   const loadTopics = async () => {
     if (courses.length > 0) return
@@ -431,6 +457,28 @@ export default function ClassroomDetailPage() {
     } finally {
       setCreatingRemediation(null)
     }
+  }
+
+  // Launch a real-time team game (Teacher Lobby) tied to this classroom, then
+  // jump straight into the lobby control room. Surfaces the live mode that
+  // otherwise lived only under /teacher/lobby.
+  const startLiveLobby = async () => {
+    setStartingLobby(true)
+    try {
+      const res = await fetch('/api/teacher/lobby', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: `${classroom?.name ?? 'Class'} Live Game`, numTeams: 2, classroomId }),
+      })
+      const json = await res.json().catch(() => ({}))
+      if (res.ok && json.lobby?.id) {
+        router.push(`/teacher/lobby/${json.lobby.id}`)
+        return
+      }
+    } catch {
+      // fall through to re-enable the button
+    }
+    setStartingLobby(false)
   }
 
   const createCompetition = async () => {
@@ -801,16 +849,29 @@ export default function ClassroomDetailPage() {
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 Competitions ({classroom.competitions.length})
               </h2>
-              <button
-                onClick={() => {
-                  loadTopics()
-                  setShowCompModal(true)
-                }}
-                className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-all text-sm"
-              >
-                + Schedule Competition
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={startLiveLobby}
+                  disabled={startingLobby}
+                  className="px-4 py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all text-sm disabled:opacity-50"
+                  title="Run a real-time team game your students join live"
+                >
+                  {startingLobby ? 'Starting…' : '▶ Start live game'}
+                </button>
+                <button
+                  onClick={() => {
+                    loadTopics()
+                    setShowCompModal(true)
+                  }}
+                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-all text-sm"
+                >
+                  + Schedule Competition
+                </button>
+              </div>
             </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 -mt-2 mb-4">
+              <strong>Start live game</strong> runs a real-time team match students join now. <strong>Schedule Competition</strong> sets up an async contest for later.
+            </p>
             {classroom.competitions.length === 0 ? (
               <div className="text-center py-12">
                 <div className="text-5xl mb-4">⚔️</div>

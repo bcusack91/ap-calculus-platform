@@ -57,6 +57,8 @@ All verified: `tsc` clean, production build green. Committed to `main`.
 - [x] **Writable gradebook UI** — new **Gradebook** tab in the classroom: click any cell to set/clear a 0–100% score. Upserts via `PUT /api/teacher/gradebook` (works even for students with no submission row yet); averages/letter grades recompute on save. Also fixed the old raw-score display bug.
 - [x] **Archive a classroom** — Settings → Danger Zone → **Archive Classroom** (wires the existing soft-deactivate).
 - [x] **Auto-remediation** — the classroom **Performance** tab now shows a "Suggested remediation" panel: topics where students didn't pass the exit quiz, grouped by topic (with a "must redo unit" count), excluding topics already assigned. One click assigns a targeted review lesson to the class. No schema change — derived from the exit-quiz data already loaded.
+- [x] **Live-game discoverability** — the Competitions tab now has a **▶ Start live game** button that launches a real-time team lobby tied to the classroom and jumps into the control room (the live mode previously lived only under `/teacher/lobby`), with a one-line explainer of live-vs-scheduled.
+- [x] **Fresh data on focus** — the classroom page now refetches members/assignments/competitions when the teacher returns to the tab (without clobbering in-progress Settings edits), so stale data doesn't linger after a student joins or submits.
 
 ---
 
@@ -73,7 +75,7 @@ Sequenced per the review: adoption gates → trust fixes → differentiation →
 - [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember`; lets an owner share roster/gradebook/lobby. Lock-in play — do **after** there's a teacher base.
 - [ ] 🟡 **Parent/guardian progress emails** — _(gate behind 1b DPA)_. `guardianEmail` + scheduled email-out from existing `/student-report` data; no parent login (COPPA-light).
 - [ ] 🟡 **Sections/periods** — lightweight label on `Classroom` for teachers with multiple sections.
-- [ ] 🟢 **Unify the two competition systems** — let a scheduled competition launch into the live lobby; one cross-mode report.
+- [ ] 🟢 **Unify the two competition systems (deeper)** — discoverability is done (Start-live-game button); the remaining optional work is letting a *scheduled* competition launch into the live lobby and rolling both into one cross-mode report.
 
 ### Deferred big bets (don't start until there's real teacher adoption)
 - Native LTI 1.3 (NRPS + AGS 2.0) + Clever/ClassLink certification — months of work + ongoing cert; the aggregator (1c) is the realistic substitute.
