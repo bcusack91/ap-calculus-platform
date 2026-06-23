@@ -21,14 +21,22 @@ export interface GeneratedCard {
 const MAX_FRONT = 500
 const MAX_BACK = 1000
 
-/** Tolerantly extract a JSON object from model output (strips code fences / prose). */
+/** Tolerantly extract JSON from model output (strips code fences / prose); the
+ *  value may be an object `{cards:[...]}` or a bare array `[...]`. */
 function extractJson(text: string): unknown {
   let t = text.trim()
   const fence = t.match(/```(?:json)?\s*([\s\S]*?)```/i)
   if (fence) t = fence[1].trim()
-  const start = t.indexOf('{')
-  const end = t.lastIndexOf('}')
-  if (start >= 0 && end > start) t = t.slice(start, end + 1)
+  const objStart = t.indexOf('{')
+  const objEnd = t.lastIndexOf('}')
+  const arrStart = t.indexOf('[')
+  const arrEnd = t.lastIndexOf(']')
+  // Slice to whichever JSON value starts first (handles a bare top-level array).
+  if (arrStart >= 0 && (objStart < 0 || arrStart < objStart) && arrEnd > arrStart) {
+    t = t.slice(arrStart, arrEnd + 1)
+  } else if (objStart >= 0 && objEnd > objStart) {
+    t = t.slice(objStart, objEnd + 1)
+  }
   return JSON.parse(t)
 }
 
@@ -48,7 +56,8 @@ export async function generateFlashcards(opts: {
   if (!apiKey) throw new FlashcardAIError('NO_API_KEY')
 
   const count = Math.max(3, Math.min(40, Math.round(opts.count || 12)))
-  const subjectLine = opts.subject?.trim() ? ` for the course "${opts.subject.trim()}"` : ''
+  const subjectClean = opts.subject?.trim().slice(0, 120) || ''
+  const subjectLine = subjectClean ? ` for the course "${subjectClean}"` : ''
 
   let text = ''
   try {
@@ -83,14 +92,19 @@ export async function generateFlashcards(opts: {
 
   if (!text) throw new FlashcardAIError('EMPTY')
 
-  let parsed: { cards?: unknown }
+  let parsed: unknown
   try {
-    parsed = extractJson(text) as { cards?: unknown }
+    parsed = extractJson(text)
   } catch {
     throw new FlashcardAIError('EMPTY')
   }
 
-  const raw = Array.isArray(parsed.cards) ? parsed.cards : []
+  // Accept either {cards:[...]} or a bare top-level array of cards.
+  const raw: unknown[] = Array.isArray(parsed)
+    ? parsed
+    : Array.isArray((parsed as { cards?: unknown })?.cards)
+      ? ((parsed as { cards: unknown[] }).cards)
+      : []
   const cards: GeneratedCard[] = raw
     .map((c) => c as { front?: unknown; back?: unknown })
     .filter((c) => typeof c.front === 'string' && typeof c.back === 'string' && c.front.trim() && c.back.trim())

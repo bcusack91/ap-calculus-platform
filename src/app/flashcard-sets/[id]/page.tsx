@@ -12,7 +12,6 @@ interface SetData {
   id: string
   title: string
   subject: string | null
-  topicSlug: string | null
   cards: Card[]
 }
 

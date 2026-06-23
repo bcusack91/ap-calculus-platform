@@ -17,7 +17,6 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
       id: true,
       title: true,
       subject: true,
-      topicSlug: true,
       cards: { orderBy: { order: 'asc' }, select: { id: true, front: true, back: true } },
     },
   })
