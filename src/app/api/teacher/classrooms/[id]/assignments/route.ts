@@ -57,9 +57,22 @@ export async function POST(
     return NextResponse.json({ error: 'Title is required' }, { status: 400 })
   }
 
-  if (!type) {
-    return NextResponse.json({ error: 'Assignment type is required' }, { status: 400 })
+  const VALID_TYPES = ['INTERACTIVE_LESSON', 'FLASHCARD_REVIEW', 'QUIZ', 'COMPETITIVE_PRACTICE']
+  if (!type || !VALID_TYPES.includes(type)) {
+    return NextResponse.json({ error: 'Valid assignment type is required' }, { status: 400 })
   }
+
+  // Coerce/validate the optional fields BEFORE Prisma so a malformed value
+  // returns a clean 400 instead of an unhandled Prisma 500.
+  let due: Date | null = null
+  if (dueDate) {
+    const d = new Date(dueDate)
+    if (isNaN(d.getTime())) return NextResponse.json({ error: 'Invalid due date' }, { status: 400 })
+    due = d
+  }
+  const attemptsNum = Number(maxAttempts)
+  const attempts = Number.isFinite(attemptsNum) && attemptsNum > 0 ? Math.min(Math.floor(attemptsNum), 9999) : 1
+  const reqScore = typeof requiredScore === 'number' && requiredScore >= 0 && requiredScore <= 1 ? requiredScore : null
 
   // If a flashcard set is attached, the teacher must own it.
   const fsid = typeof flashcardSetId === 'string' && flashcardSetId.trim() ? flashcardSetId.trim() : null
@@ -79,9 +92,9 @@ export async function POST(
       topicSlugs: topicSlugs || null,
       quizId: quizId || null,
       flashcardSetId: fsid,
-      dueDate: dueDate ? new Date(dueDate) : null,
-      maxAttempts: maxAttempts || 1,
-      requiredScore: requiredScore || null,
+      dueDate: due,
+      maxAttempts: attempts,
+      requiredScore: reqScore,
     },
   })
 

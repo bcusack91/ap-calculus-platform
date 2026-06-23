@@ -162,7 +162,8 @@ export function TeacherFlashcardSets() {
       const r = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: `Flashcards: ${set.title}`, type: 'FLASHCARD_REVIEW', flashcardSetId: set.id }),
+        // Studying flashcards is repeatable — don't cap re-studies at one attempt.
+        body: JSON.stringify({ title: `Flashcards: ${set.title}`, type: 'FLASHCARD_REVIEW', flashcardSetId: set.id, maxAttempts: 9999 }),
       })
       setAssignMsg((m) => ({ ...m, [set.id]: r.ok ? '✓ Assigned to class' : 'Assign failed' }))
     } catch {

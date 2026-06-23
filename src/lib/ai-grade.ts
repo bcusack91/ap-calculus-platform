@@ -107,7 +107,7 @@ export async function gradeFreeResponse(opts: {
     .slice(0, 25)
     .map((c) => ({
       description: (c.description as string).slice(0, 400),
-      points: typeof c.points === 'number' ? c.points : 0,
+      points: typeof c.points === 'number' && Number.isFinite(c.points) ? Math.max(0, Math.min(maxPoints, c.points)) : 0,
       earned: c.earned === true,
     }))
 
