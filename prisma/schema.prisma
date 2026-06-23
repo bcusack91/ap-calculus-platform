@@ -49,6 +49,7 @@ model User {
   classroomMemberships       ClassroomMember[]
   assignmentSubmissions      AssignmentSubmission[]
   createdAssignments         Assignment[]               @relation("AssignmentCreator")
+  flashcardSets              FlashcardSet[]             @relation("TeacherFlashcardSets")
   competitionParticipations  CompetitionParticipant[]
   competitiveGrantsReceived  CompetitiveGrant[]         @relation("CompetitiveGrantStudent")
   competitiveGrantsGiven     CompetitiveGrant[]         @relation("CompetitiveGrantTeacher")
@@ -392,6 +393,39 @@ model FlashcardProgress {
 
   @@unique([userId, flashcardId])
   @@index([userId, nextReview])
+}
+
+// Teacher-authored flashcard sets (manual, CSV/paste import, or AI-generated).
+// Distinct from the global Flashcard model (which is keyed to a Topic and shared
+// site-wide): a FlashcardSet is OWNED by a teacher and optionally scoped to one
+// of their classrooms, so importing/generating cards never pollutes global content.
+model FlashcardSet {
+  id          String             @id @default(cuid())
+  teacherId   String
+  classroomId String? // optional: scope the set to one of the teacher's classes
+  title       String
+  subject     String?
+  topicSlug   String? // optional topic this set relates to
+  source      String             @default("MANUAL") // MANUAL | IMPORT | AI
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  teacher     User               @relation("TeacherFlashcardSets", fields: [teacherId], references: [id], onDelete: Cascade)
+  classroom   Classroom?         @relation(fields: [classroomId], references: [id], onDelete: SetNull)
+  cards       FlashcardSetCard[]
+
+  @@index([teacherId])
+  @@index([classroomId])
+}
+
+model FlashcardSetCard {
+  id    String       @id @default(cuid())
+  setId String
+  front String
+  back  String
+  order Int          @default(0)
+  set   FlashcardSet @relation(fields: [setId], references: [id], onDelete: Cascade)
+
+  @@index([setId])
 }
 
 model Quiz {
@@ -783,23 +817,23 @@ enum LobbyStatus {
 
 // Teacher-created multi-student lobby with MMR-balanced team formation
 model TeacherLobby {
-  id          String              @id @default(cuid())
-  joinCode    String              @unique
-  teacherId   String
-  classroomId String?
-  name        String
-  topicSlug   String?
+  id           String             @id @default(cuid())
+  joinCode     String             @unique
+  teacherId    String
+  classroomId  String?
+  name         String
+  topicSlug    String?
   courseSlug   String?
-  topicSlugs   Json     @default("[]")
-  durationSec  Int      @default(600)
+  topicSlugs   Json               @default("[]")
+  durationSec  Int                @default(600)
   endsAt       DateTime?
   questionPool Json?
-  gameMode    String              @default("competitive")
-  numTeams    Int                 @default(2)
-  status      TeacherLobbyStatus  @default(OPEN)
-  createdAt   DateTime            @default(now())
-  startedAt   DateTime?
-  closedAt    DateTime?
+  gameMode     String             @default("competitive")
+  numTeams     Int                @default(2)
+  status       TeacherLobbyStatus @default(OPEN)
+  createdAt    DateTime           @default(now())
+  startedAt    DateTime?
+  closedAt     DateTime?
 
   teacher      User                      @relation("TeacherLobbyTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
   classroom    Classroom?                @relation("TeacherLobbyClassroom", fields: [classroomId], references: [id], onDelete: SetNull)
@@ -812,16 +846,16 @@ model TeacherLobby {
 }
 
 model TeacherLobbyParticipant {
-  id        String   @id @default(cuid())
-  lobbyId   String
-  userId    String
-  team      Int? // 0..numTeams-1, null until balanced
-  mmrAtJoin Int      @default(1000)
-  joinedAt  DateTime @default(now())
-  score             Int @default(0)
-  questionsAnswered Int @default(0)
-  questionsCorrect  Int @default(0)
-  lastQuestionIndex Int @default(0)
+  id                String   @id @default(cuid())
+  lobbyId           String
+  userId            String
+  team              Int? // 0..numTeams-1, null until balanced
+  mmrAtJoin         Int      @default(1000)
+  joinedAt          DateTime @default(now())
+  score             Int      @default(0)
+  questionsAnswered Int      @default(0)
+  questionsCorrect  Int      @default(0)
+  lastQuestionIndex Int      @default(0)
 
   lobby TeacherLobby @relation(fields: [lobbyId], references: [id], onDelete: Cascade)
   user  User         @relation("TeacherLobbyParticipantUser", fields: [userId], references: [id], onDelete: Cascade)
@@ -1017,6 +1051,7 @@ model Classroom {
   teacherLobbies    TeacherLobby[]         @relation("TeacherLobbyClassroom")
 
   curriculumPlans CurriculumPlan[]
+  flashcardSets   FlashcardSet[]
 
   @@index([teacherId])
   @@index([joinCode])

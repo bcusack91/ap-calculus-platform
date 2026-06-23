@@ -13,7 +13,7 @@ These need **you** — an account, a signature, a dashboard setting, or a secret
 ### 1a. Add secrets to Vercel (Project → Settings → Environment Variables)
 Set these for **Production** (and Preview if you test there). Never commit them to git.
 
-- [ ] 🟠 `ANTHROPIC_API_KEY` — switches the AI tutor from the canned template fallback to real Claude (Haiku 4.5). **Also required before any teacher-AI features work.** Get it at console.anthropic.com.
+- [x] 🟠 `ANTHROPIC_API_KEY` — **added.** The student AI tutor now uses real Claude (Haiku 4.5), and the new teacher AI flashcard generation is live.
 - [ ] 🟠 `STRIPE_SECRET_KEY` — Premium checkout returns HTTP 503 ("checkout isn't switched on yet") until this is set.
 - [ ] 🟠 `STRIPE_WEBHOOK_SECRET` — from the Stripe webhook endpoint you create (see 1d).
 - [ ] 🟠 `STRIPE_PREMIUM_PRICE_ID` — the monthly price ID (`price_…`) from Stripe.
@@ -59,6 +59,7 @@ All verified: `tsc` clean, production build green. Committed to `main`.
 - [x] **Auto-remediation** — the classroom **Performance** tab now shows a "Suggested remediation" panel: topics where students didn't pass the exit quiz, grouped by topic (with a "must redo unit" count), excluding topics already assigned. One click assigns a targeted review lesson to the class. No schema change — derived from the exit-quiz data already loaded.
 - [x] **Live-game discoverability** — the Competitions tab now has a **▶ Start live game** button that launches a real-time team lobby tied to the classroom and jumps into the control room (the live mode previously lived only under `/teacher/lobby`), with a one-line explainer of live-vs-scheduled.
 - [x] **Fresh data on focus** — the classroom page now refetches members/assignments/competitions when the teacher returns to the tab (without clobbering in-progress Settings edits), so stale data doesn't linger after a student joins or submits.
+- [x] **Teacher flashcard sets (AI + import + manual)** — Teacher Tools → Flashcard Sets is now real and persisted (new `FlashcardSet`/`FlashcardSetCard` tables, **owned by the teacher** so nothing pollutes global content). Build a set three ways: **generate with AI** (`/api/teacher/flashcard-sets/generate` → Claude Haiku → review/edit before saving), **import/paste** (Quizlet/Knowt-style term/definition lines), or **manually**. Each set is studyable + shareable at `/flashcard-sets/[id]`. **Prod DB migration applied** (prod was `db push`-managed with no migration baseline, so the two additive tables were applied directly — purely additive, existing data untouched, verified 0 rows after).
 
 ---
 
@@ -68,8 +69,8 @@ Sequenced per the review: adoption gates → trust fixes → differentiation →
 
 - [ ] 🔴 **Google Classroom roster import + "Share to Classroom"** — _(blocked on 1c creds)_. The beachhead that turns code-only self-join into something schools approve.
 - [ ] 🔴 **Standards tagging + re-skin the mastery heatmap as standards-mastery** — _(needs 1e lists)_. The one place you out-specialize generalist Khan; analytics plumbing already exists.
-- [ ] 🟠 **Teacher AI via Haiku** — _(blocked on `ANTHROPIC_API_KEY`)_. Auto-generate a practice set targeting the class's weakest standard; AI-grade free-response against a rubric (teacher confirms).
-- [ ] 🟠 **Flashcard-set importer** — _(needs your go-ahead: requires a new `FlashcardSet` schema migration + a set viewer)_. The `Flashcard` model has **no ownership/class scoping** (only `topicId`), so importing into a Topic would pollute that topic's cards for *every* student site-wide. Doing it correctly needs a small `FlashcardSet`/`FlashcardSetCard` model (a migration) and a viewer so the imported set is studyable/assignable. It's a real feature, not a quick win. **I can build it end-to-end the moment you authorize the migration.**
+- [ ] 🟠 **AI free-response grading** — the second half of teacher AI: grade a student's free-response/FRQ answer against a rubric or ideal answer, returning an editable score + feedback the teacher confirms. (Generation shipped; grading is the remaining piece. Now unblocked — `ANTHROPIC_API_KEY` is set.)
+- [ ] 🟡 **Assign a flashcard set to a class** — let a teacher push a saved FlashcardSet to a classroom as a FLASHCARD_REVIEW assignment (needs a small `flashcardSetId` field on Assignment + the student-side review flow). Sharable links work today.
 - [ ] 🟡 **Per-student question randomization** — _(deferred — low value-to-risk)_. Option *order* is already randomized per render; the valuable part (different *questions* per student) means threading `studentId` through the core competitive match engine (~20 call sites) — high regression risk on a system we just stabilized, for marginal gain. Recommend leaving as-is unless teachers report collusion.
 - [ ] 🟡 **Ad-free classroom** — _(pending 1b policy)_. Suppress AdSense on teacher/assigned-content routes while keeping public content ad-funded.
 - [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember`; lets an owner share roster/gradebook/lobby. Lock-in play — do **after** there's a teacher base.
