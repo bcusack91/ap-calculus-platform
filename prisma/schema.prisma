@@ -412,6 +412,7 @@ model FlashcardSet {
   teacher     User               @relation("TeacherFlashcardSets", fields: [teacherId], references: [id], onDelete: Cascade)
   classroom   Classroom?         @relation(fields: [classroomId], references: [id], onDelete: SetNull)
   cards       FlashcardSetCard[]
+  assignments Assignment[]
 
   @@index([teacherId])
   @@index([classroomId])
@@ -1109,29 +1110,32 @@ model ClassroomMember {
 }
 
 model Assignment {
-  id            String         @id @default(cuid())
-  classroomId   String
-  createdById   String
-  title         String
-  description   String?
-  type          AssignmentType
-  topicSlug     String? // specific topic to complete
-  topicSlugs    Json? // array of topic slugs for multi-topic assignments
-  quizId        String? // if type is QUIZ
-  dueDate       DateTime?
-  maxAttempts   Int            @default(1)
-  requiredScore Float? // minimum mastery/score required (0-1)
-  isActive      Boolean        @default(true)
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  id             String         @id @default(cuid())
+  classroomId    String
+  createdById    String
+  title          String
+  description    String?
+  type           AssignmentType
+  topicSlug      String? // specific topic to complete
+  topicSlugs     Json? // array of topic slugs for multi-topic assignments
+  quizId         String? // if type is QUIZ
+  flashcardSetId String? // if type is FLASHCARD_REVIEW, the teacher-created set to study
+  dueDate        DateTime?
+  maxAttempts    Int            @default(1)
+  requiredScore  Float? // minimum mastery/score required (0-1)
+  isActive       Boolean        @default(true)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
 
-  classroom   Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
-  createdBy   User                   @relation("AssignmentCreator", fields: [createdById], references: [id], onDelete: Cascade)
-  submissions AssignmentSubmission[]
+  classroom    Classroom              @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  createdBy    User                   @relation("AssignmentCreator", fields: [createdById], references: [id], onDelete: Cascade)
+  flashcardSet FlashcardSet?          @relation(fields: [flashcardSetId], references: [id], onDelete: SetNull)
+  submissions  AssignmentSubmission[]
 
   @@index([classroomId])
   @@index([createdById])
   @@index([dueDate])
+  @@index([flashcardSetId])
 }
 
 model AssignmentSubmission {

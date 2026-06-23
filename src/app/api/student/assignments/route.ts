@@ -67,6 +67,7 @@ export async function GET() {
         type: a.type,
         topicSlug: a.topicSlug,
         topicSlugs: a.topicSlugs,
+        flashcardSetId: a.flashcardSetId,
         dueDate: a.dueDate,
         maxAttempts: a.maxAttempts,
         requiredScore: a.requiredScore,

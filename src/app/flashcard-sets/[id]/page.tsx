@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
-import { useParams } from 'next/navigation'
+import { Suspense, useEffect, useState, useCallback } from 'react'
+import { useParams, useSearchParams } from 'next/navigation'
 
 interface Card {
   id: string
@@ -15,14 +15,32 @@ interface SetData {
   cards: Card[]
 }
 
-export default function FlashcardSetViewer() {
+function FlashcardSetViewerInner() {
   const params = useParams()
   const id = params.id as string
+  // When opened from an assignment (?assignment=<id>), let the student mark it studied.
+  const assignmentId = useSearchParams().get('assignment')
 
   const [set, setSet] = useState<SetData | null>(null)
   const [loading, setLoading] = useState(true)
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
+  const [marked, setMarked] = useState<'idle' | 'saving' | 'done' | 'error'>('idle')
+
+  const markStudied = async () => {
+    if (!assignmentId) return
+    setMarked('saving')
+    try {
+      const r = await fetch(`/api/student/assignments/${assignmentId}/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ score: 1 }),
+      })
+      setMarked(r.ok ? 'done' : 'error')
+    } catch {
+      setMarked('error')
+    }
+  }
 
   useEffect(() => {
     fetch(`/api/flashcard-sets/${id}`)
@@ -117,7 +135,34 @@ export default function FlashcardSetViewer() {
             Next →
           </button>
         </div>
+
+        {assignmentId && (
+          <div className="mt-8 text-center">
+            {marked === 'done' ? (
+              <p className="text-green-600 dark:text-green-400 font-semibold">✓ Marked as studied — you can close this.</p>
+            ) : (
+              <button
+                onClick={markStudied}
+                disabled={marked === 'saving'}
+                className="px-6 py-3 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 transition-all"
+              >
+                {marked === 'saving' ? 'Saving…' : "I've studied these — mark complete"}
+              </button>
+            )}
+            {marked === 'error' && (
+              <p className="text-sm text-red-600 dark:text-red-400 mt-2">Couldn’t save — make sure you’re signed in.</p>
+            )}
+          </div>
+        )}
       </div>
     </div>
+  )
+}
+
+export default function FlashcardSetViewer() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-500">Loading…</div>}>
+      <FlashcardSetViewerInner />
+    </Suspense>
   )
 }

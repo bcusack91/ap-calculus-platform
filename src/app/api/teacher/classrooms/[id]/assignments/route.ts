@@ -50,7 +50,7 @@ export async function POST(
     const result = await requireClassroomOwner(id)
     if ('error' in result && result.error) return result.error
 
-  const { title, description, type, topicSlug, topicSlugs, quizId, dueDate, maxAttempts, requiredScore } =
+  const { title, description, type, topicSlug, topicSlugs, quizId, flashcardSetId, dueDate, maxAttempts, requiredScore } =
     await req.json()
 
   if (!title || typeof title !== 'string') {
@@ -59,6 +59,13 @@ export async function POST(
 
   if (!type) {
     return NextResponse.json({ error: 'Assignment type is required' }, { status: 400 })
+  }
+
+  // If a flashcard set is attached, the teacher must own it.
+  const fsid = typeof flashcardSetId === 'string' && flashcardSetId.trim() ? flashcardSetId.trim() : null
+  if (fsid) {
+    const ownedSet = await prisma.flashcardSet.findFirst({ where: { id: fsid, teacherId: result.user!.id } })
+    if (!ownedSet) return NextResponse.json({ error: 'Not your flashcard set' }, { status: 403 })
   }
 
   const assignment = await prisma.assignment.create({
@@ -71,6 +78,7 @@ export async function POST(
       topicSlug: topicSlug || null,
       topicSlugs: topicSlugs || null,
       quizId: quizId || null,
+      flashcardSetId: fsid,
       dueDate: dueDate ? new Date(dueDate) : null,
       maxAttempts: maxAttempts || 1,
       requiredScore: requiredScore || null,

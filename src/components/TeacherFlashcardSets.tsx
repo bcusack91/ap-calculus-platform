@@ -45,6 +45,11 @@ export function TeacherFlashcardSets() {
   const [error, setError] = useState('')
   const [copiedId, setCopiedId] = useState<string | null>(null)
 
+  // Assign-to-class
+  const [classrooms, setClassrooms] = useState<{ id: string; name: string }[]>([])
+  const [assignFor, setAssignFor] = useState<string | null>(null)
+  const [assignMsg, setAssignMsg] = useState<Record<string, string>>({})
+
   // AI inputs
   const [aiTopic, setAiTopic] = useState('')
   const [aiCount, setAiCount] = useState('12')
@@ -137,6 +142,33 @@ export function TeacherFlashcardSets() {
     navigator.clipboard.writeText(`${window.location.origin}/flashcard-sets/${id}`)
     setCopiedId(id)
     setTimeout(() => setCopiedId((c) => (c === id ? null : c)), 1800)
+  }
+
+  const openAssign = async (setId: string) => {
+    setAssignFor((cur) => (cur === setId ? null : setId))
+    if (classrooms.length === 0) {
+      const r = await fetch('/api/teacher/classrooms')
+      if (r.ok) {
+        const data = await r.json()
+        setClassrooms((data.classrooms || []).map((c: { id: string; name: string }) => ({ id: c.id, name: c.name })))
+      }
+    }
+  }
+
+  const assignToClass = async (set: SetSummary, classroomId: string) => {
+    setAssignFor(null)
+    setAssignMsg((m) => ({ ...m, [set.id]: 'Assigning…' }))
+    try {
+      const r = await fetch(`/api/teacher/classrooms/${classroomId}/assignments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: `Flashcards: ${set.title}`, type: 'FLASHCARD_REVIEW', flashcardSetId: set.id }),
+      })
+      setAssignMsg((m) => ({ ...m, [set.id]: r.ok ? '✓ Assigned to class' : 'Assign failed' }))
+    } catch {
+      setAssignMsg((m) => ({ ...m, [set.id]: 'Assign failed' }))
+    }
+    setTimeout(() => setAssignMsg((m) => { const n = { ...m }; delete n[set.id]; return n }), 2800)
   }
 
   // ── Create view ──────────────────────────────────────────────────────────
@@ -239,21 +271,38 @@ export function TeacherFlashcardSets() {
       ) : (
         <div className="space-y-3">
           {sets.map((s) => (
-            <div key={s.id} className="p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 flex items-center justify-between gap-3">
-              <div className="min-w-0">
-                <div className="flex items-center gap-2">
-                  <h4 className="font-semibold text-gray-900 dark:text-white truncate">{s.title}</h4>
-                  <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">{s.source}</span>
+            <div key={s.id} className="p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-semibold text-gray-900 dark:text-white truncate">{s.title}</h4>
+                    <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">{s.source}</span>
+                  </div>
+                  <p className="text-xs text-gray-500">
+                    {s._count.cards} card{s._count.cards !== 1 ? 's' : ''}{s.subject ? ` · ${s.subject}` : ''}
+                  </p>
                 </div>
-                <p className="text-xs text-gray-500">
-                  {s._count.cards} card{s._count.cards !== 1 ? 's' : ''}{s.subject ? ` · ${s.subject}` : ''}
-                </p>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button onClick={() => openAssign(s.id)} className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700">Assign</button>
+                  <a href={`/flashcard-sets/${s.id}`} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700">Study</a>
+                  <button onClick={() => copyLink(s.id)} className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">{copiedId === s.id ? 'Copied!' : 'Copy link'}</button>
+                  <button onClick={() => deleteSet(s.id, s.title)} className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20">Delete</button>
+                </div>
               </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <a href={`/flashcard-sets/${s.id}`} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700">Study</a>
-                <button onClick={() => copyLink(s.id)} className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">{copiedId === s.id ? 'Copied!' : 'Copy link'}</button>
-                <button onClick={() => deleteSet(s.id, s.title)} className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20">Delete</button>
-              </div>
+              {assignFor === s.id && (
+                <div className="mt-3 flex items-center gap-2">
+                  <select
+                    defaultValue=""
+                    onChange={(e) => { if (e.target.value) assignToClass(s, e.target.value) }}
+                    className="px-3 py-1.5 text-sm border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
+                  >
+                    <option value="" disabled>Assign to a class…</option>
+                    {classrooms.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                  </select>
+                  {classrooms.length === 0 && <span className="text-xs text-gray-400">You have no classes yet.</span>}
+                </div>
+              )}
+              {assignMsg[s.id] && <p className="mt-2 text-xs text-green-600 dark:text-green-400">{assignMsg[s.id]}</p>}
             </div>
           ))}
         </div>

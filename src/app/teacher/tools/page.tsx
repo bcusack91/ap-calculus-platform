@@ -10,6 +10,7 @@ import { ClassAnalytics } from '@/components/ClassAnalytics'
 import { ParentGuardianView } from '@/components/ParentGuardianView'
 import { ClassAnnouncements } from '@/components/ClassAnnouncements'
 import { AutoGradedFRQ } from '@/components/AutoGradedFRQ'
+import { AIFreeResponseGrader } from '@/components/AIFreeResponseGrader'
 import { CurriculumMapping } from '@/components/CurriculumMapping'
 import { StudentGrouping } from '@/components/StudentGrouping'
 import { TeacherFlashcardSets } from '@/components/TeacherFlashcardSets'
@@ -17,7 +18,7 @@ import { TeacherFlashcardSets } from '@/components/TeacherFlashcardSets'
 const TOOLS = [
   { key: 'quiz-builder', label: 'Quiz Builder', icon: '📝', description: 'Create custom quizzes and assessments' },
   { key: 'templates', label: 'Assignment Templates', icon: '📋', description: 'Pre-built assignment templates by subject' },
-  { key: 'frq-grader', label: 'FRQ Auto-Grader', icon: '✍️', description: 'Auto-grade free-response questions' },
+  { key: 'frq-grader', label: 'FRQ Grader', icon: '✍️', description: 'AI-grade free-response answers + rubric practice' },
   { key: 'flashcards', label: 'Flashcard Sets', icon: '🃏', description: 'Create and share custom flashcard sets' },
   { key: 'analytics', label: 'Class Analytics', icon: '📊', description: 'Student performance analytics' },
   { key: 'grouping', label: 'Student Groups', icon: '👥', description: 'Create and manage student groups' },
@@ -94,7 +95,12 @@ export default function TeacherToolsPage() {
         <div>
           {activeTool === 'quiz-builder' && <TeacherQuizBuilder />}
           {activeTool === 'templates' && <AssignmentTemplates />}
-          {activeTool === 'frq-grader' && <AutoGradedFRQ />}
+          {activeTool === 'frq-grader' && (
+            <div className="space-y-6">
+              <AIFreeResponseGrader />
+              <AutoGradedFRQ />
+            </div>
+          )}
           {activeTool === 'flashcards' && <TeacherFlashcardSets />}
           {activeTool === 'analytics' && <ClassAnalytics />}
           {activeTool === 'grouping' && <StudentGrouping />}

@@ -12,6 +12,7 @@ interface AssignmentItem {
   type: 'INTERACTIVE_LESSON' | 'FLASHCARD_REVIEW' | 'QUIZ' | 'COMPETITIVE_PRACTICE'
   topicSlug: string | null
   topicSlugs: string[] | null
+  flashcardSetId: string | null
   dueDate: string | null
   maxAttempts: number
   requiredScore: number | null
@@ -54,6 +55,9 @@ function getActionUrl(a: AssignmentItem): string {
     case 'INTERACTIVE_LESSON':
       return slug ? `/topics/${slug}/interactive` : '/topics'
     case 'FLASHCARD_REVIEW':
+      // Teacher-created set → the set viewer (carrying the assignment id so the
+      // student can mark it studied). Otherwise fall back to topic flashcards.
+      if (a.flashcardSetId) return `/flashcard-sets/${a.flashcardSetId}?assignment=${a.id}`
       return slug ? `/flashcards/${slug}` : '/flashcards'
     case 'QUIZ':
       return slug ? `/topics/${slug}` : '/topics'
