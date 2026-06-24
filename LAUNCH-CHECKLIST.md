@@ -35,10 +35,14 @@ Roster sync + SSO is table stakes for every district-adopted competitor. **Recom
 - [ ] 🟠 (If going direct to Google Classroom first instead of an aggregator) create a **Google Cloud project**, enable the Classroom API, configure the OAuth consent screen, and get the OAuth client ID/secret. Provide them as Vercel env vars (names TBD when the feature is built).
 - [ ] 🟡 Decide rollout order: Google Classroom import first (fastest), aggregator second.
 
-### 1d. Stripe configuration (Stripe Dashboard)
-- [ ] 🟠 Create the **Premium** product with a monthly price and an annual price; copy both price IDs into Vercel (see 1a).
-- [ ] 🟠 Add a **webhook endpoint** → `https://<your-domain>/api/stripe/webhook`, subscribe to checkout/subscription events, copy the signing secret into `STRIPE_WEBHOOK_SECRET`.
-- [ ] 🟡 Test a full checkout in Stripe test mode before going live.
+### 1d. Stripe configuration (Stripe Dashboard) — the code side is DONE & hardened
+The integration (checkout, customer portal, webhook with signature verification + idempotency + role sync) is complete and audited. You only need the dashboard setup + env vars. Exact steps:
+1. [ ] 🟠 **Create the product + prices.** Stripe Dashboard → Products → add **Premium** with two recurring prices: monthly **$9.99** and annual **$7.99/mo ($95.88/yr)**. Copy each price's `price_…` id → set `STRIPE_PREMIUM_PRICE_ID` (monthly) and `STRIPE_PREMIUM_ANNUAL_PRICE_ID` (annual) in Vercel.
+2. [ ] 🟠 **Secret key.** Developers → API keys → copy the **Secret key** (`sk_…`) → `STRIPE_SECRET_KEY` in Vercel.
+3. [ ] 🟠 **Webhook.** Developers → Webhooks → Add endpoint → URL `https://www.studymondo.com/api/stripe/webhook`. Subscribe to: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_succeeded`, `invoice.payment_failed`. Copy the **Signing secret** (`whsec_…`) → `STRIPE_WEBHOOK_SECRET` in Vercel.
+4. [ ] 🟠 **Redeploy** Vercel after setting the 4 vars (env changes need a redeploy).
+5. [ ] 🟡 **Test in Stripe test mode first** with card `4242 4242 4242 4242` (any future expiry/CVC). _Safe to test with your own account now — the webhook no longer demotes TEACHER/ADMIN roles when a subscription starts/ends._
+6. [ ] 🟡 Enable Apple Pay / Google Pay in Stripe settings (the checkout already presents whatever you enable).
 
 ### 1e. Standards data (for standards-mastery reporting — §3)
 - [ ] 🟡 Provide or approve the authoritative lists to tag content against: **College Board AP units/skills**, **SAT domains**, **AAMC MCAT content categories**. Claude can draft the mapping; you confirm accuracy before it ships.

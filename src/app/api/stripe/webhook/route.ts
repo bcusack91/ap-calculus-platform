@@ -84,14 +84,22 @@ export async function POST(req: NextRequest) {
             session.subscription as string
           )
 
+          // Always record the subscription details on the account.
           await prisma.user.update({
             where: { id: userId },
             data: {
-              role: 'PREMIUM',
               stripeSubscriptionId: subscription.id,
               stripePriceId: subscription.items.data[0].price.id,
               stripeCurrentPeriodEnd: subscriptionPeriodEnd(subscription),
             },
+          })
+          // ...but only PROMOTE a FREE account to PREMIUM. Never overwrite a
+          // TEACHER/ADMIN role — they already get premium perks via isPaidRole,
+          // so a staff member buying or test-driving a subscription can't
+          // accidentally demote themselves out of their role.
+          await prisma.user.updateMany({
+            where: { id: userId, role: 'FREE' },
+            data: { role: 'PREMIUM' },
           })
         }
         break
@@ -120,13 +128,19 @@ export async function POST(req: NextRequest) {
       // canceled). Keep the app role in sync with the authoritative Stripe status.
       case 'customer.subscription.updated': {
         const subscription = event.data.object as Stripe.Subscription
+        // Sync the subscription fields on every account holding this subscription.
         await prisma.user.updateMany({
           where: { stripeSubscriptionId: subscription.id },
           data: {
-            role: roleForStatus(subscription.status),
             stripePriceId: subscription.items.data[0]?.price.id ?? null,
             stripeCurrentPeriodEnd: subscriptionPeriodEnd(subscription),
           },
+        })
+        // Only flip the role for plan-based (FREE/PREMIUM) accounts; never
+        // touch TEACHER/ADMIN.
+        await prisma.user.updateMany({
+          where: { stripeSubscriptionId: subscription.id, role: { in: ['FREE', 'PREMIUM'] } },
+          data: { role: roleForStatus(subscription.status) },
         })
         break
       }
@@ -143,11 +157,17 @@ export async function POST(req: NextRequest) {
 
       case 'customer.subscription.deleted': {
         const subscription = event.data.object as Stripe.Subscription
-        
+
+        // Downgrade only PREMIUM accounts back to FREE (leave TEACHER/ADMIN
+        // untouched). Must run BEFORE clearing the id, since the filter uses it.
+        await prisma.user.updateMany({
+          where: { stripeSubscriptionId: subscription.id, role: 'PREMIUM' },
+          data: { role: 'FREE' },
+        })
+        // Clear the stored subscription on every matching account.
         await prisma.user.updateMany({
           where: { stripeSubscriptionId: subscription.id },
           data: {
-            role: 'FREE',
             stripeSubscriptionId: null,
             stripePriceId: null,
             stripeCurrentPeriodEnd: null,

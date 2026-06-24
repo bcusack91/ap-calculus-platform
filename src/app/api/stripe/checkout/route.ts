@@ -66,6 +66,11 @@ export async function POST(request: Request) {
       })
     }
 
+    // Base URL for the post-checkout redirects. Prefer the configured app URL,
+    // but fall back to the request origin so a missing NEXT_PUBLIC_APP_URL can't
+    // produce a broken "undefined/premium/success" redirect.
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || new URL(request.url).origin
+
     // Create checkout session
     const checkoutSession = await getStripe().checkout.sessions.create({
       customer: stripeCustomerId,
@@ -79,8 +84,8 @@ export async function POST(request: Request) {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/premium`,
+      success_url: `${appUrl}/premium/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${appUrl}/premium`,
       metadata: {
         userId: user.id,
       },
