@@ -101,7 +101,7 @@ export default function Image() {
           }}
         >
           <span style={{ fontWeight: 600 }}>studymondo.com</span>
-          <span>100% Free · All Units Covered</span>
+          <span>All Units Covered</span>
         </div>
       </div>
     ),

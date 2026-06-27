@@ -61,13 +61,11 @@ export default function PrivacyPage() {
 
           <h3 className="text-xl font-semibold mt-6 mb-3">2.3 Cookies and Tracking Technologies</h3>
           <p>
-            We and our third-party advertising partners use cookies, web beacons, and similar tracking technologies to:
+            We use cookies, web beacons, and similar tracking technologies to:
           </p>
           <ul className="list-disc pl-6 mt-2">
             <li>Remember your preferences and settings</li>
             <li>Understand how you use our Service</li>
-            <li>Deliver personalized advertisements</li>
-            <li>Measure advertising effectiveness</li>
             <li>Improve Service performance and user experience</li>
           </ul>
           <p className="mt-4">
@@ -76,47 +74,19 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 mt-2">
             <li><strong>Essential Cookies:</strong> Required for basic Service functionality</li>
             <li><strong>Analytics Cookies:</strong> Help us understand user behavior and improve the Service</li>
-            <li><strong>Advertising Cookies:</strong> Used by third-party advertisers to deliver relevant ads</li>
             <li><strong>Preference Cookies:</strong> Remember your settings (e.g., dark mode, language)</li>
           </ul>
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">3. Third-Party Advertising and Analytics</h2>
-          
-          <h3 className="text-xl font-semibold mt-6 mb-3">3.1 Advertising Partners</h3>
+          <h2 className="text-2xl font-semibold mb-4">3. Third-Party Analytics</h2>
           <p>
-            We use third-party advertising networks to display advertisements on our Service. These advertising partners may use cookies 
-            and similar technologies to collect information about your visits to this and other websites to provide relevant advertisements 
-            about goods and services that may interest you.
-          </p>
-          <p className="mt-4">
-            Common advertising partners may include (but are not limited to):
-          </p>
-          <ul className="list-disc pl-6 mt-2">
-            <li>Google AdSense</li>
-            <li>Google Ad Manager</li>
-            <li>Other display advertising networks</li>
-          </ul>
-          <p className="mt-4">
-            <strong>Google AdSense and the DART Cookie:</strong> Google, as a third-party vendor, uses cookies to serve ads on our Service.
-            Google&apos;s use of the DART cookie enables it and its partners to serve ads to our users based on their visit to our Service
-            and other sites on the Internet. Users may opt out of the use of the DART cookie by visiting the
-            {" "}
-            <a href="https://policies.google.com/technologies/ads" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-              Google ad and content network privacy policy
-            </a>.
-            We may also use third-party advertising companies that use cookies, web beacons, and other tracking technologies to gather
-            information about your visits to our Service and other websites in order to provide advertisements about goods and services
-            of interest to you.
-          </p>
-          <p className="mt-4">
-            <strong>Consent and Non-Personalized Ads:</strong> If you have not consented to advertising cookies (or if your jurisdiction
-            requires opt-in consent), we instruct Google AdSense to serve <em>non-personalized</em> ads only. Non-personalized ads are
-            not based on your past behavior; they are targeted using contextual information about the page you are viewing.
+            Study Mondo does <strong>not</strong> display third-party advertising and does not use
+            advertising cookies or ad networks. We use a small number of analytics services only to
+            understand and improve the Service.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">3.2 Analytics Services</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">3.1 Analytics Services</h3>
           <p>
             We may use third-party analytics services to help us understand how users interact with our Service:
           </p>
@@ -136,19 +106,14 @@ export default function PrivacyPage() {
             <li>Device and browser information</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">3.3 Third-Party Privacy Policies</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">3.2 Third-Party Privacy Policies</h3>
           <p>
-            Our advertising and analytics partners have their own privacy policies. We encourage you to review:
+            Our analytics partners have their own privacy policies. We encourage you to review:
           </p>
           <ul className="list-disc pl-6 mt-2">
             <li>
               <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
                 Google Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="https://policies.google.com/technologies/ads" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                Google Advertising Privacy & Terms
               </a>
             </li>
             <li>
@@ -169,7 +134,6 @@ export default function PrivacyPage() {
             <li>Develop new features, products, and services</li>
             <li>Communicate with you (if you contact us)</li>
             <li>Detect and prevent technical issues or security threats</li>
-            <li>Display relevant advertisements through third-party partners</li>
             <li>Comply with legal obligations</li>
           </ul>
         </section>
@@ -180,7 +144,6 @@ export default function PrivacyPage() {
           <h3 className="text-xl font-semibold mt-6 mb-3">5.1 Third-Party Service Providers</h3>
           <p>We may share information with:</p>
           <ul className="list-disc pl-6 mt-2">
-            <li><strong>Advertising Networks:</strong> To display relevant advertisements</li>
             <li><strong>Analytics Providers:</strong> To analyze Service usage and performance</li>
             <li><strong>Hosting Services:</strong> To host and deliver our Service (e.g., Vercel)</li>
             <li><strong>Database Providers:</strong> To store educational content (e.g., Neon, PostgreSQL)</li>
@@ -237,27 +200,7 @@ export default function PrivacyPage() {
             <strong>Note:</strong> Blocking cookies may affect your ability to use certain features of our Service.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">7.2 Advertising Opt-Out</h3>
-          <p>You can opt out of personalized advertising through:</p>
-          <ul className="list-disc pl-6 mt-2">
-            <li>
-              <a href="https://adssettings.google.com/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                Google Ads Settings
-              </a>
-            </li>
-            <li>
-              <a href="http://www.aboutads.info/choices/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                Digital Advertising Alliance (DAA) Opt-Out
-              </a>
-            </li>
-            <li>
-              <a href="http://www.networkadvertising.org/choices/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                Network Advertising Initiative (NAI) Opt-Out
-              </a>
-            </li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-3">7.3 Do Not Track</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">7.2 Do Not Track</h3>
           <p>
             Some browsers include a &quot;Do Not Track&quot; (DNT) feature. Currently, there is no industry standard for responding to DNT signals. 
             We do not currently respond to DNT signals, but we will update this policy if standards are established.
@@ -296,8 +239,8 @@ export default function PrivacyPage() {
             birth year at sign-up and apply additional protections to accounts identified as under 13:
           </p>
           <ul className="list-disc pl-6 mt-2">
-            <li><strong>Non-personalized advertising only</strong>, with ads tagged for child-directed treatment (no
-              interest-based/behavioral ad targeting), regardless of cookie-consent choices.</li>
+            <li><strong>No advertising</strong> — the Service displays no ads to anyone, so there is no ad
+              targeting or ad tracking of children.</li>
             <li><strong>No session-replay analytics</strong> (Microsoft Clarity is never loaded for under-13 accounts).</li>
             <li>We collect only the information needed to operate the learning features, and a child&apos;s name is shown to
               other students as a first name and last initial only.</li>

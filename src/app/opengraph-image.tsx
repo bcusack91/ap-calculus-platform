@@ -108,7 +108,7 @@ export default function Image() {
             Study Resources
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '26px', margin: '0 0 36px 0', maxWidth: '700px' }}>
-            Notes, flashcards, practice problems & interactive lessons — 100% free
+            Notes, flashcards, practice problems & interactive lessons
           </p>
 
           {/* Subject pills */}

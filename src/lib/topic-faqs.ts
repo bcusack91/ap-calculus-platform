@@ -49,7 +49,7 @@ export function generateTopicFaqs(topic: TopicFaqInput): FaqItem[] {
   // Is it free?
   faqs.push({
     question: `Is this ${title} study guide free?`,
-    answer: `Yes — all study notes, flashcards, and practice problems for ${title} on Study Mondo are 100% free. No account is needed to access the content.`,
+    answer: `Yes — all study notes, flashcards, and practice problems for ${title} on Study Mondo are free to access. No account is needed.`,
   })
 
   // Course context

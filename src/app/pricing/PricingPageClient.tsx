@@ -7,14 +7,13 @@ import { trackPremiumUpgradeClick } from '@/lib/analytics'
 import { PREMIUM_BENEFITS, PREMIUM_PRICING, FREE_LIMITS } from '@/lib/premium'
 import { useEffectiveRole } from '@/lib/use-effective-role'
 
-// Free tier — these are genuinely free for everyone (the platform is ad-funded).
+// Free tier — what every account gets at no cost.
 const FREE_FEATURES = [
   'All courses, topics, lessons & interactive content',
   'Diagnostics, practice tests, daily questions & study plans',
   'Example problems & worked solutions',
   'Flashcards, streaks, achievements & progress tracking',
   `${FREE_LIMITS.aiExplanationsPerDay} AI tutor explanations per day`,
-  'Ad-supported experience',
 ]
 
 // Premium — ONLY what is actually gated. Sourced from src/lib/premium.ts so this
@@ -88,7 +87,7 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
             Simple, transparent pricing
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Study Mondo is free forever. Upgrade to Premium for the full experience.
+            Start for free. Upgrade to Premium for unlimited AI tutoring and advanced analytics.
           </p>
 
           {/* Billing toggle — only shown when an annual price is actually sold. */}
@@ -210,7 +209,7 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
           <div className="space-y-6">
             {[
               { q: 'Can I cancel anytime?', a: 'Yes! Cancel your subscription at any time from the customer portal. You\'ll keep Premium access until the end of your billing period.' },
-              { q: 'Is the free plan really free?', a: 'Absolutely. Study Mondo\'s free plan includes access to all text explanations, example problems, and basic flashcards — forever. We fund it through ads.' },
+              { q: 'Is there a free plan?', a: 'Yes. The free plan includes all courses, lessons, practice, study plans, and basic flashcards, plus a few AI tutor explanations per day. Premium adds unlimited AI tutoring, advanced analytics, and priority support.' },
               { q: 'Do you offer student discounts?', a: 'Our pricing is already student-friendly. We\'re also exploring institutional licensing for schools — contact us for details.' },
               { q: 'What payment methods do you accept?', a: 'We accept all major credit cards, debit cards, and Apple Pay / Google Pay through our payment processor Stripe.' },
             ].map(({ q, a }) => (

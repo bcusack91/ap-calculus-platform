@@ -111,8 +111,7 @@ export function CookieConsent() {
                     We Value Your Privacy
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    We use cookies to enhance your learning experience, analyze site traffic, 
-                    and display relevant advertisements that help keep this platform free. 
+                    We use cookies to enhance your learning experience and analyze site traffic.
                     By clicking &quot;Accept All&quot;, you consent to our use of cookies.{" "}
                     <Link 
                       href="/privacy" 
@@ -165,10 +164,6 @@ export function CookieConsent() {
               <div>
                 <span className="font-semibold text-gray-900 dark:text-white">Analytics Cookies:</span> Help us understand how you use the site
                 so we can improve your learning experience (Google Analytics, Vercel Analytics, and Microsoft Clarity session replay).
-              </div>
-              <div>
-                <span className="font-semibold text-gray-900 dark:text-white">Advertising Cookies:</span> Enable us to show relevant ads that support 
-                this free educational platform (Google AdSense, third-party ad networks).
               </div>
             </div>
           </details>

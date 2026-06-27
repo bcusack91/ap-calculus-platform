@@ -136,11 +136,10 @@ export default function EditorialStandardsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">Independence &amp; Funding</h2>
           <p>
-            Study Mondo is free to use and supported by third-party advertising.
-            Advertising never influences the substance of our educational
-            content — lessons and problems are written purely to help students
-            learn. You can read more about how we handle data and advertising in
-            our{" "}
+            Study Mondo has a large free tier plus an optional Premium subscription, and runs no
+            ads. Our funding model never influences the substance of our educational content —
+            lessons and problems are written purely to help students learn. You can read more about
+            how we handle data in our{" "}
             <Link href="/privacy" className="text-purple-700 hover:underline dark:text-purple-300">
               Privacy Policy
             </Link>

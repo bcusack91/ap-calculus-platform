@@ -42,8 +42,8 @@ function PremiumSuccess() {
           Welcome to Premium!
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          Your subscription is active. You now have an ad-free experience, advanced analytics,
-          spaced-repetition flashcards, and every premium learning feature unlocked.
+          Your subscription is active. You now have unlimited AI tutoring, advanced analytics,
+          and every Premium learning feature unlocked.
         </p>
         {refreshing && (
           <p className="text-sm text-gray-400 dark:text-gray-500 mb-4">Activating your account…</p>

@@ -21,7 +21,7 @@ export function EmailCapture({
   source = 'website',
   interests = [],
   heading = 'Get Free Study Tips',
-  description = 'Join thousands of students. Get weekly study tips, practice problem sets, and exam strategies — 100% free.',
+  description = 'Join thousands of students. Get weekly study tips, practice problem sets, and exam strategies.',
   buttonText = 'Subscribe',
   compact = false,
 }: EmailCaptureProps) {

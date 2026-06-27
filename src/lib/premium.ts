@@ -9,10 +9,11 @@
  * in lockstep.)
  *
  * Keep PREMIUM_BENEFITS in sync with the actual gates:
- *  - Ad-free                  → src/components/ad-banner.tsx (role check)
  *  - Unlimited AI tutor       → src/app/api/ai/explain/route.ts (FREE_LIMITS.aiExplanationsPerDay)
  *  - Advanced analytics       → the Six Sigma analytics surface (role check + UpgradeCTA)
  *  - Priority support         → support routing / claim
+ *
+ * (The site is ad-free, so "ad-free" is no longer a Premium differentiator.)
  */
 
 export type UserRole = 'FREE' | 'PREMIUM' | 'TEACHER' | 'ADMIN'
@@ -67,7 +68,6 @@ export const FREE_LIMITS = {
  * do not add aspirational items.
  */
 export const PREMIUM_BENEFITS: readonly string[] = [
-  'Ad-free experience across the entire site',
   'Unlimited AI tutor explanations (free plan: 5 per day)',
   'Advanced performance analytics — Six Sigma quality reports, control charts, and DPMO trends',
   'Priority email support',

@@ -3,7 +3,7 @@ import PricingPage from './PricingPageClient'
 
 export const metadata: Metadata = {
   title: 'Pricing — Study Mondo',
-  description: 'Compare free and premium plans on Study Mondo. Get ad-free studying, spaced repetition flashcards, progress tracking, and more.',
+  description: 'Compare the free and Premium plans on Study Mondo. Premium adds unlimited AI tutoring, advanced analytics, and priority support.',
   openGraph: {
     title: 'Pricing — Study Mondo',
     description: 'Compare free and premium plans on Study Mondo.',

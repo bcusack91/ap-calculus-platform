@@ -171,7 +171,7 @@ export default function SATLandingPage() {
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
             Full-length practice tests, diagnostic assessments, 35+ topic quizzes,
-            interactive lessons, and a personalized score predictor — all completely free.
+            interactive lessons, and a personalized score predictor.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

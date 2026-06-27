@@ -102,7 +102,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <details className="group border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-800">
                   <summary className="font-semibold text-gray-900 dark:text-white cursor-pointer list-none flex justify-between items-center">
-                    Is this platform really completely free?
+                    Is there a free plan?
                     <span className="transition group-open:rotate-180">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -110,8 +110,9 @@ export default function ContactPage() {
                     </span>
                   </summary>
                   <p className="mt-3 text-gray-600 text-sm">
-                    Yes! All educational content is 100% free with no hidden costs, subscriptions, or paywalls. 
-                    The platform is supported by non-intrusive advertisements.
+                    Yes — the free plan includes all courses, lessons, practice, and study plans, plus a few
+                    AI tutor explanations per day. Premium is an optional upgrade that adds unlimited AI
+                    tutoring, advanced analytics, and priority support.
                   </p>
                 </details>
 

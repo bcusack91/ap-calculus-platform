@@ -23,8 +23,7 @@ export const PLANS = {
     features: [
       'Access to text explanations',
       'Example problems',
-      'Basic flashcards (no progress tracking)',
-      'Ad-supported experience'
+      'Basic flashcards (no progress tracking)'
     ]
   },
   PREMIUM: {
@@ -38,7 +37,6 @@ export const PLANS = {
       'Additional practice quizzes',
       'Adaptive learning modules',
       'Diagnostic tests',
-      'Ad-free experience',
       'Daily streak tracking',
       'Achievement system'
     ]

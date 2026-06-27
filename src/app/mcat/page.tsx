@@ -264,7 +264,7 @@ export default function MCATLandingPage() {
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
             Practice questions across all 4 MCAT sections, diagnostic assessments, 18+ topic lessons,
-            study plans, and daily practice — all completely free.
+            study plans, and daily practice.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

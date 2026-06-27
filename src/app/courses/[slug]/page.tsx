@@ -285,7 +285,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
               </div>
             )}
             <p className="mt-4">
-              All content is completely free. Start with any category below, or jump to a specific topic that you need help with.
+              Start with any category below, or jump to a specific topic that you need help with.
             </p>
           </div>
         </div>

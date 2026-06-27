@@ -40,7 +40,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                 We believe that high-quality educational resources should be accessible to every student,
-                regardless of their financial situation. That&apos;s why we created this completely free platform
+                regardless of their financial situation. That&apos;s why we created this platform
                 to help students master challenging math and science courses.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -149,15 +149,14 @@ export default function AboutPage() {
 
             {/* Funding Model */}
             <div className="bg-blue-50 dark:bg-blue-950/50 border border-blue-100 dark:border-blue-900 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">How We Stay Free</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Model</h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                Our platform is supported by non-intrusive advertisements. We carefully select
-                ad partners to ensure they don&apos;t disrupt your learning experience. These ads allow
-                us to maintain and improve the platform without charging students.
+                A large free tier means any student can learn here at no cost — courses, lessons,
+                practice, study plans, and flashcards. There are no ads.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                We&apos;re committed to keeping all educational content free. No hidden fees — just
-                free, quality education for everyone.
+                An optional Premium subscription — unlimited AI tutoring, advanced analytics, and
+                priority support — funds the platform and keeps the free content growing.
               </p>
             </div>
 
@@ -221,7 +220,7 @@ export default function AboutPage() {
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
                   100%
                 </div>
-                <div className="text-gray-600 dark:text-gray-400 mt-2">Free Forever</div>
+                <div className="text-gray-600 dark:text-gray-400 mt-2">Free to start</div>
               </div>
             </div>
           </div>

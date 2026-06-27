@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 import { PREMIUM_BENEFITS, PREMIUM_PRICING } from '@/lib/premium'
 
 export const metadata: Metadata = {
-  title: 'Study Mondo Premium — Ad-Free, Unlimited AI Tutor & Advanced Analytics',
+  title: 'Study Mondo Premium — Unlimited AI Tutor & Advanced Analytics',
   description:
-    'All study content stays free. Upgrade to Premium for an ad-free experience, unlimited AI tutor explanations, advanced performance analytics, and priority support.',
+    'Upgrade to Premium for unlimited AI tutor explanations, advanced performance analytics, and priority support.',
   alternates: { canonical: 'https://www.studymondo.com/premium' },
 }
 
-const BENEFIT_ICONS = ['🚫', '🤖', '📊', '💬']
+const BENEFIT_ICONS = ['🤖', '📊', '💬']
 
 export default function PremiumPage() {
   return (
@@ -21,12 +21,12 @@ export default function PremiumPage() {
             ⭐ Study Mondo Premium
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
-            Go further, distraction-free
+            Go further with Premium
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Every course, lesson, diagnostic, and practice problem stays{' '}
-            <span className="font-semibold">100% free</span>. Premium adds the power-ups serious
-            students want — without any ads getting in the way.
+            The free plan covers a huge amount — courses, lessons, diagnostics, and practice. Premium
+            adds the power-ups serious students want: unlimited AI tutoring, advanced analytics, and
+            priority support.
           </p>
 
           {/* Benefits — sourced from src/lib/premium.ts so this matches what's actually gated */}
@@ -65,10 +65,9 @@ export default function PremiumPage() {
             </div>
           </div>
 
-          {/* Funding note */}
           <p className="mx-auto mt-12 max-w-lg text-sm text-gray-500 dark:text-gray-400">
-            Free accounts are supported by non-intrusive ads, which keeps all educational content
-            free forever. Premium simply removes them and unlocks the extras above. Cancel anytime.
+            The free plan covers a lot. Premium adds the extras above for students who want to go
+            further. Cancel anytime.
           </p>
         </div>
       </div>

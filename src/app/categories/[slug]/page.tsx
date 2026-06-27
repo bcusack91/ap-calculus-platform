@@ -241,7 +241,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 ))}
               </ul>
               <p className="mt-4">
-                Click on any topic below to start studying. All materials are completely free.
+                Click on any topic below to start studying.
               </p>
             </div>
           </div>

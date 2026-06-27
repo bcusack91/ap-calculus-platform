@@ -30,7 +30,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold mb-4">2. Description of Service</h2>
           <p>
             This Service provides free educational content, study materials, flashcards, and practice problems for Advanced Placement (AP®) level courses 
-            in mathematics and science subjects. The Service is supported by third-party advertisements.
+            in mathematics and science subjects.
           </p>
           <p className="mt-4">
             <strong>Trademark Notice:</strong> AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
@@ -70,28 +70,12 @@ export default function TermsPage() {
         </section>
 
         <section className="mt-8">
-          <h2 className="text-2xl font-semibold mb-4">4. Third-Party Advertising</h2>
-          
-          <h3 className="text-xl font-semibold mt-6 mb-3">4.1 Ad-Supported Service</h3>
+          <h2 className="text-2xl font-semibold mb-4">4. The Service &amp; Subscriptions</h2>
           <p>
-            This Service is provided free of charge and is supported by third-party advertisements. By using the Service, you agree to:
+            The Service offers a free tier and an optional paid <strong>Premium</strong> subscription
+            (see the pricing page for current features and prices). The Service does <strong>not</strong>{' '}
+            display third-party advertising.
           </p>
-          <ul className="list-disc pl-6 mt-2">
-            <li>View advertisements displayed on the Service</li>
-            <li>Allow cookies and tracking technologies used by advertising partners (see Privacy Policy)</li>
-            <li>Understand that we do not control or endorse third-party advertiser content</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-3">4.2 Third-Party Links</h3>
-          <p>
-            Advertisements may contain links to third-party websites. We are not responsible for:
-          </p>
-          <ul className="list-disc pl-6 mt-2">
-            <li>The content, accuracy, or practices of third-party websites</li>
-            <li>Products or services offered by advertisers</li>
-            <li>Privacy practices of third-party advertisers</li>
-            <li>Any transactions you may enter into with third-party advertisers</li>
-          </ul>
         </section>
 
         <section className="mt-8">
@@ -99,7 +83,6 @@ export default function TermsPage() {
           <p>You agree not to:</p>
           <ul className="list-disc pl-6 mt-2">
             <li>Use the Service for any unlawful purpose</li>
-            <li>Attempt to circumvent, disable, or interfere with advertisements</li>
             <li>Use automated systems (bots, scrapers) to access the Service</li>
             <li>Attempt to reverse engineer or extract source code from the Service</li>
             <li>Overload or attempt to disrupt the Service infrastructure</li>
@@ -158,7 +141,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold mb-4">8. Changes to Service</h2>
           <p>
             We reserve the right to modify, suspend, or discontinue the Service (or any part thereof) at any time without notice. 
-            We may also update course content, add or remove features, or change our advertising partners without prior notification.
+            We may also update course content, or add or remove features, without prior notification.
           </p>
         </section>
 
@@ -182,7 +165,7 @@ export default function TermsPage() {
             <li><strong>Refunds:</strong> Except where required by law, payments are non-refundable and partial periods are not pro-rated. We may, at our discretion, offer refunds case-by-case.</li>
             <li><strong>Price changes:</strong> We may change subscription prices; changes apply to future billing periods and we will provide reasonable notice.</li>
             <li><strong>Payment information:</strong> Card details are handled by Stripe; we do not store full card numbers. See our Privacy Policy for how billing data is handled.</li>
-            <li><strong>Free tier:</strong> A free, ad-supported tier is available; Premium removes ads and unlocks additional features as described on the pricing page.</li>
+            <li><strong>Free tier:</strong> A free tier is available; Premium unlocks additional features as described on the pricing page.</li>
           </ul>
         </section>
 

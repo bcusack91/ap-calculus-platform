@@ -8,7 +8,6 @@ import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/navbar";
 import { CookieConsent } from "@/components/cookie-consent";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import AdSenseScript from "@/components/AdSenseScript";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
 import { Footer } from "@/components/footer";
 import { WebVitals } from "@/components/web-vitals";
@@ -35,9 +34,6 @@ export const metadata: Metadata = {
   // canonical set it in their own metadata/layout. The homepage sets its own
   // canonical in src/app/page.tsx.
   manifest: "/site.webmanifest",
-  other: {
-    "google-adsense-account": "ca-pub-8403501245603262",
-  },
   keywords: [
     "study mondo",
     "studymondo",
@@ -72,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Free notes, flashcards, practice problems & interactive lessons — 100% free. Join thousands of students studying smarter.",
+      "Free notes, flashcards, practice problems & interactive lessons. Join thousands of students studying smarter.",
     images: ["https://www.studymondo.com/og-image.png"],
   },
   icons: {
@@ -89,7 +85,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
   const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID
   const isProd = process.env.NODE_ENV === 'production'
@@ -100,7 +95,6 @@ export default function RootLayout({
         {/* Preconnect to external origins for faster resource loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         {/* JSON-LD structured data */}
         <script
@@ -153,7 +147,6 @@ export default function RootLayout({
         <WebVitals />
         <Providers>
           {isProd && gaId && <GoogleAnalytics measurementId={gaId} />}
-          {isProd && adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
           {isProd && clarityProjectId && <MicrosoftClarity projectId={clarityProjectId} />}
           <div className="flex min-h-screen flex-col">
             <a
