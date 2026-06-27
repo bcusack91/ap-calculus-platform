@@ -41,8 +41,9 @@ The integration (checkout, customer portal, webhook with signature verification 
 2. [ ] 🟠 **Secret key.** Developers → API keys → copy the **Secret key** (`sk_…`) → `STRIPE_SECRET_KEY` in Vercel.
 3. [ ] 🟠 **Webhook.** Developers → Webhooks → Add endpoint → URL `https://www.studymondo.com/api/stripe/webhook`. Subscribe to: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_succeeded`, `invoice.payment_failed`. Copy the **Signing secret** (`whsec_…`) → `STRIPE_WEBHOOK_SECRET` in Vercel.
 4. [ ] 🟠 **Redeploy** Vercel after setting the 4 vars (env changes need a redeploy).
-5. [ ] 🟡 **Test in Stripe test mode first** with card `4242 4242 4242 4242` (any future expiry/CVC). _Safe to test with your own account now — the webhook no longer demotes TEACHER/ADMIN roles when a subscription starts/ends._
+5. [x] 🟡 **Tested in Stripe test mode** — ✅ verified end-to-end (2026-06-27): a `4242` monthly checkout created the customer, the webhook delivered + verified (`checkout.session.completed` + `invoice.payment_succeeded`), and the account upgraded to PREMIUM with a correct renewal date. **Currently running in TEST mode** (test keys in Vercel) — intentional, while the other launch items are finished.
 6. [ ] 🟡 Enable Apple Pay / Google Pay in Stripe settings (the checkout already presents whatever you enable).
+7. [ ] 🔴 **GO LIVE (later, when ready to charge):** in Stripe **Live** mode recreate the product + 2 prices and the webhook (you get NEW `price_…` and `whsec_…`), grab the `sk_live_…` key, overwrite all four Stripe env vars in Vercel with the live values, redeploy, then do one real-card purchase + refund to confirm. (Account must be activated for live charges first.)
 
 ### 1e. Standards data (for standards-mastery reporting — §3)
 - [ ] 🟡 Provide or approve the authoritative lists to tag content against: **College Board AP units/skills**, **SAT domains**, **AAMC MCAT content categories**. Claude can draft the mapping; you confirm accuracy before it ships.
