@@ -1,6 +1,6 @@
 # StudyMondo — Launch & Teacher-Dashboard Checklist
 
-_Tracks the critical things **you** (the owner) must do outside the code, what's already shipped, and the remaining code tasks Claude can build. Derived from the competitive teacher-dashboard review (June 2026)._
+_Tracks the critical things **you** (the owner) must do outside the code, what's already shipped, and the remaining code tasks Claude can build. Derived from the competitive teacher-dashboard review (June 2026). Study Mondo is now **ad-free** (subscription-funded), which simplifies the district story considerably._
 
 Legend: `[ ]` to do · `[x]` done · 🔴 critical / blocks adoption · 🟠 high · 🟡 medium
 
@@ -13,87 +13,94 @@ These need **you** — an account, a signature, a dashboard setting, or a secret
 ### 1a. Add secrets to Vercel (Project → Settings → Environment Variables)
 Set these for **Production** (and Preview if you test there). Never commit them to git.
 
-- [x] 🟠 `ANTHROPIC_API_KEY` — **added.** The student AI tutor now uses real Claude (Haiku 4.5), and the new teacher AI flashcard generation is live.
-- [ ] 🟠 `STRIPE_SECRET_KEY` — Premium checkout returns HTTP 503 ("checkout isn't switched on yet") until this is set.
+- [x] 🟠 `ANTHROPIC_API_KEY` — **added.** Student AI tutor (Haiku 4.5), teacher AI flashcard generation, and AI free-response grading are live.
+- [ ] 🟠 `STRIPE_SECRET_KEY` — Premium checkout returns HTTP 503 ("checkout isn't switched on yet") until this is set. **(Currently in Stripe TEST mode — intentional.)**
 - [ ] 🟠 `STRIPE_WEBHOOK_SECRET` — from the Stripe webhook endpoint you create (see 1d).
 - [ ] 🟠 `STRIPE_PREMIUM_PRICE_ID` — the monthly price ID (`price_…`) from Stripe.
 - [ ] 🟠 `STRIPE_PREMIUM_ANNUAL_PRICE_ID` — the annual price ID; enables the monthly/annual toggle.
-- [ ] 🟡 `NEXT_PUBLIC_APP_URL` — your canonical URL (e.g. `https://www.studymondo.com`); used for Stripe redirect URLs.
-- [ ] 🟡 `NEXT_PUBLIC_ADSENSE_CLIENT_ID`, `NEXT_PUBLIC_AD_SLOT_IN_ARTICLE`, `NEXT_PUBLIC_AD_SLOT_SIDEBAR` — confirm these are set in prod so ads actually render (and revenue flows).
+- [ ] 🟡 `NEXT_PUBLIC_APP_URL` — your canonical URL (`https://www.studymondo.com`); used for Stripe redirect URLs.
 
 > After changing env vars in Vercel you must **redeploy** for them to take effect.
+> _AdSense env vars removed — the site is ad-free now, nothing to configure._
 
-### 1b. Sign & publish a Data Privacy Agreement (DPA) — 🔴 the #1 adoption gate
-Without a signed DPA + a clear privacy posture, school IT departments **block** the tool and no rostering/grade-passback work matters. This is more existential than any feature for an ad-funded site selling to under-13-heavy classrooms.
-- [ ] 🔴 Adopt a standard signable DPA (SDPC / NDPA national template — see privacy.a4l.org).
-- [ ] 🔴 Publish a FERPA/COPPA handling statement and decide the **"classroom is ad-free"** policy (public content can stay AdSense-funded; the teacher-assigned/classroom student experience should be ad-free). _Code to suppress ads on classroom/assigned routes is a separate task in §3._
-- [ ] 🟡 Confirm with Google AdSense that **personalized ads are disabled for under-13** (ties to the existing `mondo_u13` cookie / age gate). COPPA requirement.
+### 1b. Set up the privacy contact inbox — 🟠 NEW (do this first — it's on public pages)
+The new `/security` and `/dpa` pages and the DPA request flow route districts to **privacy@studymondo.com**. That address must actually receive mail.
+- [ ] 🟠 Create `privacy@studymondo.com` as a forwarding alias to your real inbox (most domain/email hosts do this in a couple of clicks). _Or_ tell Claude to swap the pages to `brendan@cusackprep.com` if you'd rather not set up an alias.
 
-### 1c. Rostering — pick the path, then provision it — 🔴
-Roster sync + SSO is table stakes for every district-adopted competitor. **Recommended: use an aggregator** (Edlink or Clever-as-a-service) instead of building Google/Clever/ClassLink/Canvas natively — one integration covers them all and is the only realistic path for a small team.
-- [ ] 🔴 Create an **Edlink** (ed.link) or **Clever** developer account and get the API credentials.
-- [ ] 🟠 (If going direct to Google Classroom first instead of an aggregator) create a **Google Cloud project**, enable the Classroom API, configure the OAuth consent screen, and get the OAuth client ID/secret. Provide them as Vercel env vars (names TBD when the feature is built).
-- [ ] 🟡 Decide rollout order: Google Classroom import first (fastest), aggregator second.
+### 1c. Sign a Data Privacy Agreement (DPA) when a district asks — 🔴 the #1 adoption gate
+The **pages are now built** (`/security` trust page + `/dpa` request page, linked in the footer). What's left is the human signature side.
+- [ ] 🔴 When a district requests it, **sign** their DPA (or the SDPC / NDPA national template — see privacy.a4l.org). The `/dpa` page tells them how to start and what we'll sign.
+- [ ] 🟡 (Optional, proactive) Register Study Mondo on the **SDPC** so districts can find/initiate agreements with you. Claude can guide the registration.
+- [x] 🟡 ~~Ad-free classroom policy~~ — **moot/done:** the entire site is ad-free, so there's no "ads in the classroom" concern and no COPPA personalized-ads setting to disable.
 
-### 1d. Stripe configuration (Stripe Dashboard) — the code side is DONE & hardened
-The integration (checkout, customer portal, webhook with signature verification + idempotency + role sync) is complete and audited. You only need the dashboard setup + env vars. Exact steps:
-1. [ ] 🟠 **Create the product + prices.** Stripe Dashboard → Products → add **Premium** with two recurring prices: monthly **$9.99** and annual **$7.99/mo ($95.88/yr)**. Copy each price's `price_…` id → set `STRIPE_PREMIUM_PRICE_ID` (monthly) and `STRIPE_PREMIUM_ANNUAL_PRICE_ID` (annual) in Vercel.
-2. [ ] 🟠 **Secret key.** Developers → API keys → copy the **Secret key** (`sk_…`) → `STRIPE_SECRET_KEY` in Vercel.
-3. [ ] 🟠 **Webhook.** Developers → Webhooks → Add endpoint → URL `https://www.studymondo.com/api/stripe/webhook`. Subscribe to: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_succeeded`, `invoice.payment_failed`. Copy the **Signing secret** (`whsec_…`) → `STRIPE_WEBHOOK_SECRET` in Vercel.
-4. [ ] 🟠 **Redeploy** Vercel after setting the 4 vars (env changes need a redeploy).
-5. [x] 🟡 **Tested in Stripe test mode** — ✅ verified end-to-end (2026-06-27): a `4242` monthly checkout created the customer, the webhook delivered + verified (`checkout.session.completed` + `invoice.payment_succeeded`), and the account upgraded to PREMIUM with a correct renewal date. **Currently running in TEST mode** (test keys in Vercel) — intentional, while the other launch items are finished.
-6. [ ] 🟡 Enable Apple Pay / Google Pay in Stripe settings (the checkout already presents whatever you enable).
-7. [ ] 🔴 **GO LIVE (later, when ready to charge):** in Stripe **Live** mode recreate the product + 2 prices and the webhook (you get NEW `price_…` and `whsec_…`), grab the `sk_live_…` key, overwrite all four Stripe env vars in Vercel with the live values, redeploy, then do one real-card purchase + refund to confirm. (Account must be activated for live charges first.)
+### 1d. Rostering — pick the path, then provision it — 🔴
+Roster sync + SSO is table stakes for district adoption. **Recommended: an aggregator (Edlink)** rather than building Google/Clever/ClassLink/Canvas natively — one integration covers them all. **Interim:** CSV roster import now ships (see §2), so teachers aren't blocked while you set this up.
+- [ ] 🔴 Create an **Edlink** (ed.link) developer/sandbox account and get the API credentials → hand them to Claude to build the sync.
+- [ ] 🟡 Decide rollout order: Google Classroom import first (fastest via Edlink), the rest after.
 
-### 1e. Standards data (for standards-mastery reporting — §3)
-- [ ] 🟡 Provide or approve the authoritative lists to tag content against: **College Board AP units/skills**, **SAT domains**, **AAMC MCAT content categories**. Claude can draft the mapping; you confirm accuracy before it ships.
+### 1e. Microsoft SSO (optional) — code scaffold is DONE, needs an Azure app
+The Microsoft "Continue with Microsoft" sign-in is **wired but inactive** until you provide credentials.
+- [ ] 🟡 In **Azure Portal → Microsoft Entra ID → App registrations**, register an app. Redirect URI: `https://www.studymondo.com/api/auth/callback/microsoft-entra-id`. Then set in Vercel:
+  - `AUTH_MICROSOFT_ENTRA_ID_ID` (Application/client ID)
+  - `AUTH_MICROSOFT_ENTRA_ID_SECRET` (client secret value)
+  - `AUTH_MICROSOFT_ENTRA_ID_ISSUER` (optional — pin to one tenant; omit for any work/school account)
+  - `NEXT_PUBLIC_MICROSOFT_SSO_ENABLED=true` (shows the button) → redeploy.
+- _Ask Claude for the exact click-by-click Azure walkthrough when you're ready._
+
+### 1f. Authorize the class-sections DB change — 🟡 one quick OK unblocks §3
+Class sections/periods is the one remaining district item that needs a **prod database migration** (a single nullable `section` column on `Classroom` — additive, existing rows untouched, reversible).
+- [ ] 🟡 Give Claude the **OK to apply the additive `Classroom.section` column to prod**, and it will ship the sections/period UI in one pass (the safe apply-column-first-then-deploy order).
+
+### 1g. Standards data — ✅ done
+- [x] 🟡 Standards taxonomy approved (35 courses, 229 standards) and **shipped** — standards-mastery is live (see §2).
 
 ---
 
-## 2. ✅ Shipped in code (this session)
+## 2. ✅ Shipped in code
 
 All verified: `tsc` clean, production build green. Committed to `main`.
 
-- [x] **Security:** added the missing TEACHER/ADMIN auth guard to `GET /api/teacher/content` (was unauthenticated).
-- [x] **Edit an assignment** — new `PUT /api/teacher/classrooms/[id]/assignments/[assignmentId]` + an **Edit** button that reopens the modal pre-filled.
-- [x] **Unassign an assignment** — new `DELETE …/[assignmentId]` (soft-deactivate, grades preserved) + an **Unassign** button. Deactivated assignments now hidden from both teacher and student views.
-- [x] **Multi-topic assignments** — the create/edit modal now lets you add several topics (chips), exposing the `topicSlugs[]` capability the backend already supported.
-- [x] **Grade override (API)** — `PUT …/submissions/[id]/feedback` now also accepts a numeric `score` (0–1) and marks the submission completed.
-- [x] **Writable gradebook UI** — new **Gradebook** tab in the classroom: click any cell to set/clear a 0–100% score. Upserts via `PUT /api/teacher/gradebook` (works even for students with no submission row yet); averages/letter grades recompute on save. Also fixed the old raw-score display bug.
-- [x] **Archive a classroom** — Settings → Danger Zone → **Archive Classroom** (wires the existing soft-deactivate).
-- [x] **Auto-remediation** — the classroom **Performance** tab now shows a "Suggested remediation" panel: topics where students didn't pass the exit quiz, grouped by topic (with a "must redo unit" count), excluding topics already assigned. One click assigns a targeted review lesson to the class. No schema change — derived from the exit-quiz data already loaded.
-- [x] **Live-game discoverability** — the Competitions tab now has a **▶ Start live game** button that launches a real-time team lobby tied to the classroom and jumps into the control room (the live mode previously lived only under `/teacher/lobby`), with a one-line explainer of live-vs-scheduled.
-- [x] **Fresh data on focus** — the classroom page now refetches members/assignments/competitions when the teacher returns to the tab (without clobbering in-progress Settings edits), so stale data doesn't linger after a student joins or submits.
-- [x] **AI free-response grading** — Teacher Tools → FRQ Grader now has an **AI Free-Response Grader**: paste a question, an optional rubric/ideal answer, and a student's response → Claude suggests a score + per-criterion breakdown + feedback (advisory; the teacher decides the final grade). New `POST /api/teacher/ai-grade`, teacher-gated + rate-limited; no data persisted, no student PII sent.
-- [x] **Assign a flashcard set to a class** — each saved set has an **Assign** button (pick a class) that creates a FLASHCARD_REVIEW assignment carrying a new `Assignment.flashcardSetId` (additive column, applied to prod). Students see it in their assignments and open it at the set viewer; a "mark complete" button there records the submission. (Migration verified + applied; existing rows untouched.)
-- [x] **Teacher flashcard sets (AI + import + manual)** — Teacher Tools → Flashcard Sets is now real and persisted (new `FlashcardSet`/`FlashcardSetCard` tables, **owned by the teacher** so nothing pollutes global content). Build a set three ways: **generate with AI** (`/api/teacher/flashcard-sets/generate` → Claude Haiku → review/edit before saving), **import/paste** (Quizlet/Knowt-style term/definition lines), or **manually**. Each set is studyable + shareable at `/flashcard-sets/[id]`. **Prod DB migration applied** (prod was `db push`-managed with no migration baseline, so the two additive tables were applied directly — purely additive, existing data untouched, verified 0 rows after).
+### This session (district-readiness — Batch A, commit 389f361c)
+- [x] **CSV roster import** — `POST /api/teacher/classrooms/[id]/import-roster` + a Students-tab **Import students** modal (paste or upload CSV of `email` or `name,email`). Links existing accounts or pre-creates minimal verified accounts (claimable via the student's school Google/Microsoft login); never alters an existing account's role/name/password. Interim bridge until Edlink (1d).
+- [x] **Security & Student Data Privacy page** (`/security`) — FERPA/COPPA posture, AI data handling, subprocessor list, retention, breach response. Footer-linked.
+- [x] **DPA page** (`/dpa`) — how districts request a signed agreement (SDPC National DPA + state exhibits). Footer-linked.
+- [x] **Microsoft Entra ID (Azure AD) SSO** — env-gated provider + sign-in button with the same OAuth account-link protection as Google. Inactive until 1e env vars are set.
+- [x] **Terms cleanup** — removed stale "child-directed advertising" language (now ad-free).
+
+### Previous session (standards + SEO, commit a9948530)
+- [x] **Standards-mastery** — new **🎯 Standards** classroom tab: class mastery grouped by official AP unit / SAT domain / MCAT content category, with exam weightings. Code-mapped from seeded categories (no manual tagging, no migration).
+- [x] **SEO E-E-A-T** — named reviewer + last-reviewed date + article metadata on all ~200 tool pages; unique per-subject bodies on the thinnest families (score-predictor / practice / study-plans).
+
+### Earlier this cycle (teacher dashboard)
+- [x] Auth guard on `GET /api/teacher/content`; edit/unassign assignments; multi-topic assignments; grade override API; **writable Gradebook tab**; archive classroom; **auto-remediation** panel; **live-game** Start button; fresh-data-on-focus; **AI free-response grading**; **assign a flashcard set to a class**; **teacher flashcard sets** (AI + import + manual). _(Two additive prod migrations applied + verified: `Assignment.flashcardSetId`, `FlashcardSet`/`FlashcardSetCard`.)_
 
 ---
 
 ## 3. Remaining code tasks (Claude can build — prioritized)
 
-Sequenced per the review: adoption gates → trust fixes → differentiation → lock-in. Items marked _(blocked)_ need an owner action from §1 first.
+Sequenced: adoption gates → trust → differentiation → lock-in. _(blocked)_ = needs an owner action from §1.
 
-- [ ] 🔴 **Google Classroom roster import + "Share to Classroom"** — _(blocked on 1c creds)_. The beachhead that turns code-only self-join into something schools approve.
-- [ ] 🔴 **Standards tagging + re-skin the mastery heatmap as standards-mastery** — _(needs 1e lists)_. The one place you out-specialize generalist Khan; analytics plumbing already exists.
-- [ ] 🟡 **Per-student question randomization** — _(deferred — low value-to-risk)_. Option *order* is already randomized per render; the valuable part (different *questions* per student) means threading `studentId` through the core competitive match engine (~20 call sites) — high regression risk on a system we just stabilized, for marginal gain. Recommend leaving as-is unless teachers report collusion.
-- [ ] 🟡 **Ad-free classroom** — _(pending 1b policy)_. Suppress AdSense on teacher/assigned-content routes while keeping public content ad-funded.
-- [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember`; lets an owner share roster/gradebook/lobby. Lock-in play — do **after** there's a teacher base.
-- [ ] 🟡 **Parent/guardian progress emails** — _(gate behind 1b DPA)_. `guardianEmail` + scheduled email-out from existing `/student-report` data; no parent login (COPPA-light).
-- [ ] 🟡 **Sections/periods** — lightweight label on `Classroom` for teachers with multiple sections.
-- [ ] 🟢 **Unify the two competition systems (deeper)** — discoverability is done (Start-live-game button); the remaining optional work is letting a *scheduled* competition launch into the live lobby and rolling both into one cross-mode report.
+- [ ] 🔴 **Google Classroom / Clever / ClassLink roster sync** — _(blocked on 1d Edlink creds)_. Turns CSV-import + self-join into one-click district rostering.
+- [ ] 🟡 **Class sections/periods** — _(blocked on 1f migration OK)_. Built in one pass once authorized: a `section` label on `Classroom`, surfaced in create/settings and the roster.
+- [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember` so an owner can share roster/gradebook/lobby. Touches `requireClassroomOwner` across ~15 routes → its own careful pass; do after sections.
+- [ ] 🟡 **Per-district admin rollup** — a district-scoped view over the existing site-admin analytics. Worth building once there's a pilot district to shape it.
+- [ ] 🟡 **Evidence-of-impact reporting** — usage→growth views for districts. Needs real pilot data to be meaningful; stage until there's a cohort.
+- [ ] 🟡 **Finish SEO staging** — roll unique bodies to the remaining tool families (daily-question / FRQ / unit-tests) + gate any still-thin pages out of `sitemap.ts`.
+- [ ] 🟡 **Parent/guardian progress emails** — `guardianEmail` + scheduled send from existing `/student-report` data; no parent login (COPPA-light).
+- [ ] 🟢 **Per-student question randomization** — _(deferred — low value-to-risk)_. Threading `studentId` through the match engine (~20 call sites) is high regression risk for marginal gain.
 
 ### Deferred big bets (don't start until there's real teacher adoption)
-- Native LTI 1.3 (NRPS + AGS 2.0) + Clever/ClassLink certification — months of work + ongoing cert; the aggregator (1c) is the realistic substitute.
+- Native LTI 1.3 (NRPS + AGS 2.0) + Clever/ClassLink certification — months of work + ongoing cert; the aggregator (1d) is the realistic substitute.
 - Predictive AP/SAT/MCAT scaled-score bands — needs a validated model; a wrong prediction destroys teacher trust.
 
 ---
 
 ## 4. Suggested order
-1. **§1a env vars** (cheap, unblocks AI + payments immediately).
-2. **§1b DPA + ad-free policy** (the real adoption gate).
-3. **§1c rostering creds** → then Claude builds Google Classroom import.
-4. **§1e standards lists** → then Claude builds standards-mastery.
-5. Fill in the §3 trust/lock-in items (writable gradebook, randomization, importer, remediation).
+1. **§1b privacy inbox** (2 minutes; it's already on public pages).
+2. **§1f sections OK** (one word; unblocks a quick, useful build).
+3. **§1d Edlink creds** → then Claude builds real roster sync (CSV import bridges the gap meanwhile).
+4. **§1c DPA** signature when a district asks (pages are live).
+5. **§1e Microsoft SSO** Azure app if any target districts are Microsoft shops.
+6. **§1a Stripe** live-mode when you're ready to actually charge.
 
-_Last updated: 2026-06-18. Source: teacher-dashboard competitive review (vs. AP Classroom, Khan/Khanmigo, Albert.io, IXL, DeltaMath, Quizizz, Kahoot, Edpuzzle, Quizlet/Knowt, Formative, Desmos, Google Classroom/Canvas)._
+_Last updated: 2026-06-27. Source: teacher-dashboard competitive review (vs. AP Classroom, Khan/Khanmigo, Albert.io, IXL, DeltaMath, Quizizz, Kahoot, Edpuzzle, Quizlet/Knowt, Formative, Desmos, Google Classroom/Canvas)._
