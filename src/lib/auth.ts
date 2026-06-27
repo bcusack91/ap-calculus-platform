@@ -1,8 +1,17 @@
 import NextAuth from "next-auth"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import Google from "next-auth/providers/google"
+import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id"
 import Credentials from "next-auth/providers/credentials"
 import { prisma } from "@/lib/prisma"
+
+// Microsoft Entra ID (Azure AD) SSO is wired but only activated when the org
+// provides credentials, so districts on Microsoft can sign in without code
+// changes. Issuer defaults to the multi-tenant endpoint (any work/school
+// account) unless AUTH_MICROSOFT_ENTRA_ID_ISSUER pins a single tenant.
+export const microsoftSsoEnabled = !!(
+  process.env.AUTH_MICROSOFT_ENTRA_ID_ID && process.env.AUTH_MICROSOFT_ENTRA_ID_SECRET
+)
 import type { UserRole } from "@prisma/client"
 import bcrypt from "bcryptjs"
 import {
@@ -24,6 +33,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
+    ...(microsoftSsoEnabled
+      ? [
+          MicrosoftEntraID({
+            clientId: process.env.AUTH_MICROSOFT_ENTRA_ID_ID,
+            clientSecret: process.env.AUTH_MICROSOFT_ENTRA_ID_SECRET,
+            // issuer falls back to AUTH_MICROSOFT_ENTRA_ID_ISSUER, then "common"
+          }),
+        ]
+      : []),
     Credentials({
       name: "credentials",
       credentials: {
@@ -81,19 +99,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async signIn({ user, account }) {
       // Allow all credential sign-ins
       if (account?.provider === 'credentials') return true
-      
-      // Allow Google OAuth sign-ins
-      if (account?.provider === 'google') {
+
+      // OAuth providers (Google, Microsoft Entra ID) — same linking protection.
+      if (account?.provider === 'google' || account?.provider === 'microsoft-entra-id') {
         // Ensure user has an email
         if (!user.email) return false
 
         // Check if a credentials-only account exists with this email.
         // If it does, only allow linking if that account's email is verified.
         // This prevents an attacker from pre-registering with a victim's
-        // email and then having the victim's Google sign-in link to it.
+        // email and then having the victim's OAuth sign-in link to it.
+        // (Roster-imported students are created with a verified email, so
+        // they can claim their account via their school Google/Microsoft login.)
         const existingUser = await prisma.user.findUnique({
           where: { email: user.email },
-          select: { password: true, emailVerified: true, accounts: { where: { provider: 'google' } } },
+          select: { password: true, emailVerified: true, accounts: { where: { provider: account.provider } } },
         })
 
         if (existingUser && existingUser.accounts.length === 0) {
@@ -105,7 +125,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         return true
       }
-      
+
       return true
     },
     async session({ session, token }) {

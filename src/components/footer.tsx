@@ -30,6 +30,8 @@ const footerLinks = {
     { name: 'Editorial Standards', href: '/editorial-standards' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Security', href: '/security' },
+    { name: 'Data Privacy (DPA)', href: '/dpa' },
   ],
 }
 

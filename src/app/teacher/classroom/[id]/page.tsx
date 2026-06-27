@@ -257,6 +257,53 @@ export default function ClassroomDetailPage() {
 
   const [showQR, setShowQR] = useState(false)
 
+  // CSV roster import
+  const [showImport, setShowImport] = useState(false)
+  const [importText, setImportText] = useState('')
+  const [importing, setImporting] = useState(false)
+  const [importError, setImportError] = useState('')
+  const [importResult, setImportResult] = useState<null | {
+    totalRows: number
+    added: number
+    reactivated: number
+    alreadyMembers: number
+    newAccounts: number
+    invalid: string[]
+  }>(null)
+
+  const importRoster = async () => {
+    setImporting(true)
+    setImportError('')
+    setImportResult(null)
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/import-roster`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: importText }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setImportError(data.error || 'Import failed')
+      } else {
+        setImportResult(data.summary)
+        setImportText('')
+        loadClassroom()
+      }
+    } catch {
+      setImportError('Import failed. Please try again.')
+    } finally {
+      setImporting(false)
+    }
+  }
+
+  const onRosterFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const txt = await file.text()
+    setImportText((prev) => (prev ? `${prev}\n${txt}` : txt))
+    e.target.value = ''
+  }
+
   const removeMember = async (memberId: string) => {
     if (!confirm('Remove this student from the classroom?')) return
     const res = await fetch(`/api/teacher/classrooms/${classroomId}/members/${memberId}`, {
@@ -674,6 +721,17 @@ export default function ClassroomDetailPage() {
                 Students ({activeMembers.length})
               </h2>
               <div className="flex items-center gap-3">
+                <button
+                  onClick={() => {
+                    setShowImport(true)
+                    setImportResult(null)
+                    setImportError('')
+                  }}
+                  className="text-xs font-medium px-3 py-1.5 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors"
+                  title="Bulk-add students from a CSV or pasted list of emails"
+                >
+                  📥 Import students
+                </button>
                 {activeMembers.length > 0 && (
                   <button
                     onClick={async () => {
@@ -1533,6 +1591,81 @@ export default function ClassroomDetailPage() {
               className="flex-1 px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {creatingComp ? 'Scheduling...' : 'Schedule Competition'}
+            </button>
+          </div>
+        </div>
+      </FocusTrapDialog>
+
+      {/* Import students (CSV roster) */}
+      <FocusTrapDialog
+        open={showImport}
+        onClose={() => setShowImport(false)}
+        title="Import students"
+      >
+        <div className="p-8 max-w-lg">
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Import students</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Paste a list of students or upload a CSV. One per line — just the email, or{' '}
+            <span className="font-mono">name, email</span>. A header row is ignored.
+          </p>
+
+          <textarea
+            value={importText}
+            onChange={(e) => setImportText(e.target.value)}
+            rows={7}
+            placeholder={'Ada Lovelace, ada@school.org\nalan@school.org\nGrace Hopper, grace@school.org'}
+            className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white font-mono text-sm"
+          />
+
+          <div className="flex items-center gap-3 mt-3">
+            <label className="text-xs font-medium px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors cursor-pointer">
+              📄 Upload CSV
+              <input type="file" accept=".csv,text/csv,text/plain" onChange={onRosterFile} className="hidden" />
+            </label>
+            <span className="text-xs text-gray-400">Up to 300 students per import</span>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900/20 p-3 text-xs text-gray-600 dark:text-gray-300">
+            Students you add this way can sign in with their <strong>school Google or Microsoft account</strong>{' '}
+            using the same email. You can also just share the join code{' '}
+            <span className="font-mono font-bold text-blue-600">{classroom.joinCode}</span>.
+          </div>
+
+          {importError && (
+            <div className="mt-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-lg text-sm">
+              {importError}
+            </div>
+          )}
+
+          {importResult && (
+            <div className="mt-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 px-4 py-3 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+              <p className="font-semibold text-green-700 dark:text-green-400 mb-1">Import complete</p>
+              <ul className="space-y-0.5">
+                <li>{importResult.added} added{importResult.newAccounts > 0 ? ` (${importResult.newAccounts} new account${importResult.newAccounts !== 1 ? 's' : ''})` : ''}</li>
+                {importResult.reactivated > 0 && <li>{importResult.reactivated} re-added</li>}
+                {importResult.alreadyMembers > 0 && <li>{importResult.alreadyMembers} already in this class</li>}
+                {importResult.invalid.length > 0 && (
+                  <li className="text-amber-600 dark:text-amber-400">
+                    {importResult.invalid.length} line{importResult.invalid.length !== 1 ? 's' : ''} skipped (no valid email)
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
+
+          <div className="flex gap-3 mt-6">
+            <button
+              onClick={() => setShowImport(false)}
+              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            >
+              {importResult ? 'Done' : 'Cancel'}
+            </button>
+            <button
+              onClick={importRoster}
+              disabled={!importText.trim() || importing}
+              className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              {importing ? 'Importing...' : 'Import'}
             </button>
           </div>
         </div>

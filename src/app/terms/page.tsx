@@ -175,7 +175,7 @@ export default function TermsPage() {
             The Service is used by students across a wide range of ages, including children under 13. By creating an account you confirm the age information you provide is accurate.
           </p>
           <ul className="list-disc pl-6 mt-2 space-y-1">
-            <li><strong>Under 13:</strong> Children under 13 receive additional protections (non-personalized, child-directed advertising and no session-replay analytics). We encourage a parent, guardian, or teacher to be involved in a child&apos;s use of the Service, and a parent/guardian may contact us at any time to review or delete a child&apos;s information. See the &quot;Children&apos;s Privacy&quot; section of our Privacy Policy.</li>
+            <li><strong>Under 13:</strong> Children under 13 receive additional protections. We do not serve advertising to students and do not use children&apos;s data for behavioral advertising or session-replay analytics. We encourage a parent, guardian, or teacher to be involved in a child&apos;s use of the Service, and a parent/guardian may contact us at any time to review or delete a child&apos;s information. See the &quot;Children&apos;s Privacy&quot; section of our Privacy Policy.</li>
             <li><strong>Accounts:</strong> You are responsible for the activity under your account and for keeping your credentials secure.</li>
             <li><strong>Schools &amp; teachers:</strong> Where a teacher creates classrooms or lobbies, the teacher is responsible for obtaining any consents required by their institution.</li>
           </ul>

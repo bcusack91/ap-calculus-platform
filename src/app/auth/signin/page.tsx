@@ -88,6 +88,26 @@ function SignInForm() {
           Continue with Google
         </button>
 
+        {/* Microsoft Entra SSO — shown only when configured (district Microsoft tenants). */}
+        {process.env.NEXT_PUBLIC_MICROSOFT_SSO_ENABLED === 'true' && (
+          <button
+            type="button"
+            onClick={() => {
+              trackLogin('microsoft-entra-id')
+              signIn('microsoft-entra-id', { callbackUrl: safeCallback })
+            }}
+            className="w-full flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium text-gray-700 dark:text-gray-200"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 23 23" aria-hidden="true">
+              <path fill="#f25022" d="M1 1h10v10H1z" />
+              <path fill="#7fba00" d="M12 1h10v10H12z" />
+              <path fill="#00a4ef" d="M1 12h10v10H1z" />
+              <path fill="#ffb900" d="M12 12h10v10H12z" />
+            </svg>
+            Continue with Microsoft
+          </button>
+        )}
+
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-300 dark:border-gray-600"></div>
