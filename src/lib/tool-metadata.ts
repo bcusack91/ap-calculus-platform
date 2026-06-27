@@ -2,6 +2,12 @@ import type { Metadata } from 'next'
 
 const SITE_URL = 'https://www.studymondo.com'
 
+// E-E-A-T signals applied to every tool page: a named reviewing entity and a
+// last-reviewed date help Google assess education (YMYL) content. Bump
+// LAST_REVIEWED when the tool-page content is refreshed.
+const AUTHOR = 'Study Mondo team'
+const LAST_REVIEWED = '2026-06-23T00:00:00.000Z'
+
 /**
  * Build canonical + Open Graph + Twitter metadata for the ~200 course-family
  * tool pages (daily-question, score-predictor, practice, study-plans, frq,
@@ -33,11 +39,15 @@ export function toolMetadata({
     title,
     description,
     alternates: { canonical: url },
+    authors: [{ name: AUTHOR }],
     openGraph: {
       title,
       description,
       url,
-      type: 'website',
+      type: 'article',
+      authors: [AUTHOR],
+      publishedTime: LAST_REVIEWED,
+      modifiedTime: LAST_REVIEWED,
     },
     twitter: {
       card: 'summary_large_image',

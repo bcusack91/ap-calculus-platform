@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireClassroomOwner } from '@/lib/teacher-auth'
 import { prisma } from '@/lib/prisma'
+import { findStandard } from '@/data/standards'
 
 // GET /api/teacher/classrooms/[id]/analytics
 export async function GET(
@@ -183,7 +184,7 @@ export async function GET(
         id: true,
         title: true,
         slug: true,
-        category: { select: { name: true } },
+        category: { select: { name: true, course: { select: { slug: true, name: true } } } },
       },
     })
 
@@ -215,6 +216,42 @@ export async function GET(
       }
     })
 
+    // === 4b. Standards mastery ===
+    // Group ALL worked topics by course + unit. The seeded category IS the
+    // official AP unit / SAT domain / MCAT content category, decorated with the
+    // official code + exam weighting from the approved standards taxonomy.
+    type StdAgg = {
+      course: string; courseSlug: string; standard: string
+      code?: string; weight?: string
+      mastered: number; completed: number; inProgress: number; topics: number
+    }
+    const stdMap = new Map<string, StdAgg>()
+    for (const topicId of topicIds) {
+      const topic = topicMap.get(topicId)
+      if (!topic) continue
+      const courseName = topic.category.course?.name ?? 'Other'
+      const courseSlug = topic.category.course?.slug ?? ''
+      const categoryName = topic.category.name
+      const key = `${courseSlug}::${categoryName}`
+      const entries = topicMastery.filter((t) => t.topicId === topicId)
+      const m = entries.find((e) => e.status === 'MASTERED')?._count ?? 0
+      const c = entries.find((e) => e.status === 'COMPLETED')?._count ?? 0
+      const p = entries.find((e) => e.status === 'IN_PROGRESS')?._count ?? 0
+      let cur = stdMap.get(key)
+      if (!cur) {
+        const std = findStandard(courseName, categoryName)
+        cur = { course: courseName, courseSlug, standard: categoryName, code: std?.code, weight: std?.weight, mastered: 0, completed: 0, inProgress: 0, topics: 0 }
+        stdMap.set(key, cur)
+      }
+      cur.mastered += m; cur.completed += c; cur.inProgress += p; cur.topics += 1
+    }
+    const standardsMastery = [...stdMap.values()]
+      .map((s) => {
+        const total = s.mastered + s.completed + s.inProgress
+        return { ...s, total, masteryRate: total > 0 ? Math.round(((s.mastered + s.completed) / total) * 100) : 0 }
+      })
+      .sort((a, b) => a.course.localeCompare(b.course) || (a.code || '').localeCompare(b.code || '') || a.standard.localeCompare(b.standard))
+
     return NextResponse.json({
       scoreDistribution,
       weeklyProgress: Object.entries(weeklyProgress)
@@ -223,6 +260,7 @@ export async function GET(
       studentPerformance: studentPerformance.sort(
         (a, b) => (b.assignmentAverage ?? 0) - (a.assignmentAverage ?? 0)
       ),
+      standardsMastery,
       topicHeatmap: heatmapData.sort((a, b) => b.total - a.total).slice(0, 30),
       summary: {
         totalStudents: studentIds.length,

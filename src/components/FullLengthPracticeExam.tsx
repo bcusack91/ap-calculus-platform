@@ -1,5 +1,7 @@
 'use client'
 
+
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
@@ -164,7 +166,7 @@ function blankAnswer(item: ExamItem): ItemAnswer {
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
-export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
+function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   const { subject, description, backLink, ctaLinks, accent, sections, totalTimeMinutes, aboutInfo } = config
   const t = TOKENS[accent]
 
@@ -691,4 +693,13 @@ export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
   }
 
   return null
+}
+
+export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
+  return (
+    <>
+      <FullLengthPracticeExamInner {...config} />
+      <ToolPageSeoBody subjectName={config.subject} />
+    </>
+  )
 }

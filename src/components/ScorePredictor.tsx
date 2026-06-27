@@ -1,5 +1,7 @@
 'use client'
 
+
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
@@ -105,7 +107,7 @@ const CONF_BADGE: Record<string, string> = {
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
-export default function ScorePredictor(config: ScorePredictorConfig) {
+function ScorePredictorInner(config: ScorePredictorConfig) {
   const { subject, description, apiEndpoint, maxScore, scoreLabel, accent, practiceLink, diagnosticLink } = config
   const t = T[accent]
   const { status } = useSession()
@@ -325,5 +327,14 @@ export default function ScorePredictor(config: ScorePredictorConfig) {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ScorePredictor(config: ScorePredictorConfig) {
+  return (
+    <>
+      <ScorePredictorInner {...config} />
+      <ToolPageSeoBody subjectName={config.subject} />
+    </>
   )
 }

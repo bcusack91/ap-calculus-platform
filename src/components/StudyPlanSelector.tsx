@@ -1,5 +1,7 @@
 'use client'
 
+
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
@@ -111,7 +113,7 @@ export interface StudyPlanSelectorConfig {
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
-export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
+function StudyPlanSelectorInner(config: StudyPlanSelectorConfig) {
   const { subject, description, backLink, apiEndpoint, accent, examLabel, plans, diagnosticPrefix } = config
   const t = A[accent]
   const { status } = useSession()
@@ -218,5 +220,14 @@ export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
+  return (
+    <>
+      <StudyPlanSelectorInner {...config} />
+      <ToolPageSeoBody subjectName={config.subject} />
+    </>
   )
 }

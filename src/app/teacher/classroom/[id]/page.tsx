@@ -9,6 +9,7 @@ import { ClassAnnouncements } from '@/components/ClassAnnouncements'
 import { ClassroomChallenges } from '@/components/ClassroomChallenges'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
 import Gradebook from '@/components/Gradebook'
+import { StandardsMastery } from '@/components/StandardsMastery'
 
 interface Member {
   id: string
@@ -115,7 +116,7 @@ interface AssignmentCreateBody {
   topicSlug?: string
 }
 
-type TabType = 'members' | 'assignments' | 'competitions' | 'performance' | 'gradebook' | 'groups' | 'announcements' | 'challenges' | 'settings'
+type TabType = 'members' | 'assignments' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'groups' | 'announcements' | 'challenges' | 'settings'
 
 export default function ClassroomDetailPage() {
   const router = useRouter()
@@ -546,6 +547,7 @@ export default function ClassroomDetailPage() {
     { key: 'competitions', label: 'Competitions', icon: '⚔️' },
     { key: 'performance', label: 'Performance', icon: '📊' },
     { key: 'gradebook', label: 'Gradebook', icon: '📒' },
+    { key: 'standards', label: 'Standards', icon: '🎯' },
     { key: 'groups', label: 'Groups', icon: '👥' },
     { key: 'announcements', label: 'Announce', icon: '📢' },
     { key: 'challenges', label: 'Challenges', icon: '🏅' },
@@ -1138,6 +1140,14 @@ export default function ClassroomDetailPage() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Gradebook</h2>
             <Gradebook classroomId={classroomId} />
+          </div>
+        )}
+
+        {/* Standards Mastery Tab */}
+        {activeTab === 'standards' && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Standards Mastery</h2>
+            <StandardsMastery classroomId={classroomId} />
           </div>
         )}
 
