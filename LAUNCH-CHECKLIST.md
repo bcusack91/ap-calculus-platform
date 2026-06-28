@@ -47,9 +47,8 @@ The Microsoft "Continue with Microsoft" sign-in is **wired but inactive** until 
   - `NEXT_PUBLIC_MICROSOFT_SSO_ENABLED=true` (shows the button) → redeploy.
 - _Ask Claude for the exact click-by-click Azure walkthrough when you're ready._
 
-### 1f. Authorize the class-sections DB change — 🟡 one quick OK unblocks §3
-Class sections/periods is the one remaining district item that needs a **prod database migration** (a single nullable `section` column on `Classroom` — additive, existing rows untouched, reversible).
-- [ ] 🟡 Give Claude the **OK to apply the additive `Classroom.section` column to prod**, and it will ship the sections/period UI in one pass (the safe apply-column-first-then-deploy order).
+### 1f. Authorize the class-sections DB change — ✅ done
+- [x] 🟡 Owner authorized the additive `Classroom.section` column; applied to prod (verified text/nullable, rows unchanged) and the sections/period UI shipped (see §2).
 
 ### 1g. Standards data — ✅ done
 - [x] 🟡 Standards taxonomy approved (35 courses, 229 standards) and **shipped** — standards-mastery is live (see §2).
@@ -59,6 +58,9 @@ Class sections/periods is the one remaining district item that needs a **prod da
 ## 2. ✅ Shipped in code
 
 All verified: `tsc` clean, production build green. Committed to `main`.
+
+### This session (district-readiness — Batch B, commit 6b7017ac)
+- [x] **Class sections/periods** — additive nullable `Classroom.section` (applied to prod + migration file committed). "Section / period" field in the create modal and Settings; shown in the classroom list + header; included in CSV/JSON export. Adversarially reviewed (completeness / correctness / security) before ship.
 
 ### This session (district-readiness — Batch A, commit 389f361c)
 - [x] **CSV roster import** — `POST /api/teacher/classrooms/[id]/import-roster` + a Students-tab **Import students** modal (paste or upload CSV of `email` or `name,email`). Links existing accounts or pre-creates minimal verified accounts (claimable via the student's school Google/Microsoft login); never alters an existing account's role/name/password. Interim bridge until Edlink (1d).
@@ -81,7 +83,7 @@ All verified: `tsc` clean, production build green. Committed to `main`.
 Sequenced: adoption gates → trust → differentiation → lock-in. _(blocked)_ = needs an owner action from §1.
 
 - [ ] 🔴 **Google Classroom / Clever / ClassLink roster sync** — _(blocked on 1d Edlink creds)_. Turns CSV-import + self-join into one-click district rostering.
-- [ ] 🟡 **Class sections/periods** — _(blocked on 1f migration OK)_. Built in one pass once authorized: a `section` label on `Classroom`, surfaced in create/settings and the roster.
+- [x] 🟡 **Class sections/periods** — ✅ shipped (see §2, commit 6b7017ac).
 - [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember` so an owner can share roster/gradebook/lobby. Touches `requireClassroomOwner` across ~15 routes → its own careful pass; do after sections.
 - [ ] 🟡 **Per-district admin rollup** — a district-scoped view over the existing site-admin analytics. Worth building once there's a pilot district to shape it.
 - [ ] 🟡 **Evidence-of-impact reporting** — usage→growth views for districts. Needs real pilot data to be meaningful; stage until there's a cohort.
@@ -96,11 +98,11 @@ Sequenced: adoption gates → trust → differentiation → lock-in. _(blocked)_
 ---
 
 ## 4. Suggested order
-1. **§1b privacy inbox** (2 minutes; it's already on public pages).
-2. **§1f sections OK** (one word; unblocks a quick, useful build).
-3. **§1d Edlink creds** → then Claude builds real roster sync (CSV import bridges the gap meanwhile).
-4. **§1c DPA** signature when a district asks (pages are live).
-5. **§1e Microsoft SSO** Azure app if any target districts are Microsoft shops.
+1. **§1b privacy inbox** (~2 minutes; it's already on public pages). Your email is Microsoft 365 via GoDaddy — easiest path is a GoDaddy alias (productivity.godaddy.com → Admin → Email aliases → Add Alias → "privacy"), or a free shared mailbox if 2+ people should read it.
+2. ~~§1f sections OK~~ ✅ done — sections shipped.
+3. **§1d Edlink** — reasonable to DEFER (production ~$499+/mo on a 12-mo commit; building/testing is free). CSV import + self-join bridge the gap now.
+4. **§1c DPA** signature when a district asks (pages are live). You don't host a document — districts initiate; sign their SDPC National DPA, e-sign where allowed.
+5. **§1e Microsoft SSO** — DEFER until a Microsoft-shop district needs direct SSO (K-12 is Google-dominant and aggregators broker Microsoft logins anyway).
 6. **§1a Stripe** live-mode when you're ready to actually charge.
 
-_Last updated: 2026-06-27. Source: teacher-dashboard competitive review (vs. AP Classroom, Khan/Khanmigo, Albert.io, IXL, DeltaMath, Quizizz, Kahoot, Edpuzzle, Quizlet/Knowt, Formative, Desmos, Google Classroom/Canvas)._
+_Last updated: 2026-06-28. Source: teacher-dashboard competitive review (vs. AP Classroom, Khan/Khanmigo, Albert.io, IXL, DeltaMath, Quizizz, Kahoot, Edpuzzle, Quizlet/Knowt, Formative, Desmos, Google Classroom/Canvas)._
