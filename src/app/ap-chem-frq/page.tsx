@@ -14,6 +14,7 @@ import {
   type ChemFRQ,
   type FRQRubricItem,
 } from '@/data/ap-chem-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
@@ -51,7 +52,7 @@ type Filter = 'all' | 'long' | 'short'
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function APChemFRQPage() {
+function APChemFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -710,5 +711,14 @@ export default function APChemFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APChemFRQPage() {
+  return (
+    <>
+      <APChemFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Chemistry" />
+    </>
   )
 }

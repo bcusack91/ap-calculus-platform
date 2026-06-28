@@ -14,6 +14,7 @@ import {
   type APESFRQ,
   type FRQRubricItem,
 } from '@/data/ap-enviro-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APAPESFRQPage() {
+function APAPESFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APAPESFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APAPESFRQPage() {
+  return (
+    <>
+      <APAPESFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Environmental Science" />
+    </>
   )
 }

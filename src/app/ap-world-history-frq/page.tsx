@@ -14,6 +14,7 @@ import {
   type WorldHistoryFRQ,
   type FRQRubricItem,
 } from '@/data/ap-world-history-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APWorldHistoryFRQPage() {
+function APWorldHistoryFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APWorldHistoryFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APWorldHistoryFRQPage() {
+  return (
+    <>
+      <APWorldHistoryFRQPageInner />
+      <ToolPageSeoBody subjectName="AP World History: Modern" />
+    </>
   )
 }

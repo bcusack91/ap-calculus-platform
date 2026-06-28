@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { InArticleAd } from '@/components/ad-banner'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 interface DailyQ {
   topicSlug: string
@@ -17,7 +18,7 @@ interface DailyQ {
   dayNumber: number
 }
 
-export default function APCalcABDailyQuestionPage() {
+function APCalcABDailyQuestionPageInner() {
   const [questions, setQuestions] = useState<DailyQ[]>([])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
@@ -141,5 +142,14 @@ export default function APCalcABDailyQuestionPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APCalcABDailyQuestionPage() {
+  return (
+    <>
+      <APCalcABDailyQuestionPageInner />
+      <ToolPageSeoBody subjectName="AP Calculus AB" />
+    </>
   )
 }

@@ -11,6 +11,7 @@ import {
 import { getOrAssignPostCompletionCtaVariant, type PostCompletionCtaVariant } from '@/lib/experiments'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { InArticleAd } from '@/components/ad-banner'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 interface DailyQ {
   topicSlug: string
@@ -18,7 +19,7 @@ interface DailyQ {
   dayNumber: number
 }
 
-export default function OChemDailyQuestionPage() {
+function OChemDailyQuestionPageInner() {
   const [questions, setQuestions] = useState<DailyQ[]>([])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
@@ -175,5 +176,14 @@ export default function OChemDailyQuestionPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function OChemDailyQuestionPage() {
+  return (
+    <>
+      <OChemDailyQuestionPageInner />
+      <ToolPageSeoBody subjectName="Organic Chemistry" />
+    </>
   )
 }

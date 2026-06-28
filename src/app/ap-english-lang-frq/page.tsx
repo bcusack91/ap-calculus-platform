@@ -14,6 +14,7 @@ import {
   type EngLangFRQ,
   type FRQRubricItem,
 } from '@/data/ap-english-lang-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APEngLangFRQPage() {
+function APEngLangFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APEngLangFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APEngLangFRQPage() {
+  return (
+    <>
+      <APEngLangFRQPageInner />
+      <ToolPageSeoBody subjectName="AP English Language & Composition" />
+    </>
   )
 }

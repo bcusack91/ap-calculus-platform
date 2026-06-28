@@ -7,6 +7,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import { InArticleAd } from '@/components/ad-banner'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 /** Renders $…$/markdown content as KaTeX/HTML, re-rendering once KaTeX loads. */
 function RichText({ text, className, inline }: { text: string; className?: string; inline?: boolean }) {
@@ -50,7 +51,7 @@ const sectionColors: Record<string, string> = {
   'psych-soc': 'from-purple-500 to-pink-500',
 }
 
-export default function MCATDailyQuestionPage() {
+function MCATDailyQuestionPageInner() {
   const [questions, setQuestions] = useState<MCATDailyQ[]>([])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<Record<string, number | null>>({})
@@ -244,5 +245,14 @@ export default function MCATDailyQuestionPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function MCATDailyQuestionPage() {
+  return (
+    <>
+      <MCATDailyQuestionPageInner />
+      <ToolPageSeoBody subjectName="MCAT" />
+    </>
   )
 }

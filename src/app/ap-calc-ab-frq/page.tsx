@@ -14,6 +14,7 @@ import {
   type CalcABFRQ,
   type FRQRubricItem,
 } from '@/data/ap-calc-ab-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APCalcABFRQPage() {
+function APCalcABFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -678,5 +679,14 @@ export default function APCalcABFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APCalcABFRQPage() {
+  return (
+    <>
+      <APCalcABFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Calculus AB" />
+    </>
   )
 }

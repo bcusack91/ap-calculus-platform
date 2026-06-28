@@ -14,6 +14,7 @@ import {
   type AASFRQ,
   type FRQRubricItem,
 } from '@/data/ap-african-american-studies-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APAASFRQPage() {
+function APAASFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APAASFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APAASFRQPage() {
+  return (
+    <>
+      <APAASFRQPageInner />
+      <ToolPageSeoBody subjectName="AP African American Studies" />
+    </>
   )
 }

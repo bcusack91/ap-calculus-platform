@@ -14,6 +14,7 @@ import {
   type PrecalcFRQ,
   type FRQRubricItem,
 } from '@/data/ap-precalc-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APPrecalcFRQPage() {
+function APPrecalcFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -687,5 +688,14 @@ export default function APPrecalcFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APPrecalcFRQPage() {
+  return (
+    <>
+      <APPrecalcFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Precalculus" />
+    </>
   )
 }

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { InArticleAd } from '@/components/ad-banner'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 interface DailyQ {
   topicSlug: string
@@ -19,7 +20,7 @@ const sectionColor: Record<string, string> = {
   Science: 'from-green-500 to-emerald-500',
 }
 
-export default function ACTDailyQuestionPage() {
+function ACTDailyQuestionPageInner() {
   const [questions, setQuestions] = useState<DailyQ[]>([])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
@@ -103,5 +104,14 @@ export default function ACTDailyQuestionPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ACTDailyQuestionPage() {
+  return (
+    <>
+      <ACTDailyQuestionPageInner />
+      <ToolPageSeoBody subjectName="ACT" />
+    </>
   )
 }

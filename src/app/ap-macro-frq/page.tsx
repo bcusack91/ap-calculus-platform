@@ -14,6 +14,7 @@ import {
   type MacroFRQ,
   type FRQRubricItem,
 } from '@/data/ap-macro-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APMacroFRQPage() {
+function APMacroFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -444,5 +445,14 @@ export default function APMacroFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APMacroFRQPage() {
+  return (
+    <>
+      <APMacroFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Macroeconomics" />
+    </>
   )
 }

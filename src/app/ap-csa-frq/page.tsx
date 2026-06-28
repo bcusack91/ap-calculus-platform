@@ -14,6 +14,7 @@ import {
   type CSAFRQ,
   type FRQRubricItem,
 } from '@/data/ap-csa-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APCSAFRQPage() {
+function APCSAFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APCSAFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APCSAFRQPage() {
+  return (
+    <>
+      <APCSAFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Computer Science A" />
+    </>
   )
 }

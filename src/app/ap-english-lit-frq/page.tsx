@@ -14,6 +14,7 @@ import {
   type EngLitFRQ,
   type FRQRubricItem,
 } from '@/data/ap-english-lit-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APEngLitFRQPage() {
+function APEngLitFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APEngLitFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APEngLitFRQPage() {
+  return (
+    <>
+      <APEngLitFRQPageInner />
+      <ToolPageSeoBody subjectName="AP English Literature & Composition" />
+    </>
   )
 }

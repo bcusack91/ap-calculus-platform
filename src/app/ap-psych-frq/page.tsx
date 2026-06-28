@@ -14,6 +14,7 @@ import {
   type PsychFRQ,
   type FRQRubricItem,
 } from '@/data/ap-psych-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'concept-application' | 'research-design'
 
-export default function APPsychFRQPage() {
+function APPsychFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -687,5 +688,14 @@ export default function APPsychFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APPsychFRQPage() {
+  return (
+    <>
+      <APPsychFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Psychology" />
+    </>
   )
 }

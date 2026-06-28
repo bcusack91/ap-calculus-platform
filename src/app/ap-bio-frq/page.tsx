@@ -14,6 +14,7 @@ import {
   type BioFRQ,
   type FRQRubricItem,
 } from '@/data/ap-bio-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APBioFRQPage() {
+function APBioFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -680,5 +681,14 @@ export default function APBioFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APBioFRQPage() {
+  return (
+    <>
+      <APBioFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Biology" />
+    </>
   )
 }

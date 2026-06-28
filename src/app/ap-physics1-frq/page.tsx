@@ -14,6 +14,7 @@ import {
   type Physics1FRQ,
   type FRQRubricItem,
 } from '@/data/ap-physics-1-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APPhysics1FRQPage() {
+function APPhysics1FRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -680,5 +681,14 @@ export default function APPhysics1FRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APPhysics1FRQPage() {
+  return (
+    <>
+      <APPhysics1FRQPageInner />
+      <ToolPageSeoBody subjectName="AP Physics 1: Algebra-Based" />
+    </>
   )
 }

@@ -206,7 +206,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
       'sat', 'act', 'mcat', 'algebra1', 'algebra2', 'geometry',
-      'grade8-math', 'prealgebra', 'precalc', 'ochem',
+      // grade8-math & prealgebra omitted: no unique SEO body exists for those
+      // subjects yet, so their daily-question pages stay out of the sitemap
+      // until they have substantive content (avoids thin/scaled-content signal).
+      'precalc', 'ochem',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-daily-question`,
       lastModified: new Date(),

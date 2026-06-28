@@ -14,6 +14,7 @@ import {
   type HumanGeoFRQ,
   type FRQRubricItem,
 } from '@/data/ap-human-geo-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APHumanGeoFRQPage() {
+function APHumanGeoFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -437,5 +438,14 @@ export default function APHumanGeoFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APHumanGeoFRQPage() {
+  return (
+    <>
+      <APHumanGeoFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Human Geography" />
+    </>
   )
 }

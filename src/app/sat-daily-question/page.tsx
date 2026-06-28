@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { InArticleAd } from '@/components/ad-banner'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 interface DailyQ {
   section: 'math' | 'reading-writing'
@@ -18,7 +19,7 @@ interface DailyQ {
   dayNumber: number
 }
 
-export default function SATDailyQuestionPage() {
+function SATDailyQuestionPageInner() {
   const [questions, setQuestions] = useState<DailyQ[]>([])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<Record<string, number | null>>({})
@@ -213,5 +214,14 @@ export default function SATDailyQuestionPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function SATDailyQuestionPage() {
+  return (
+    <>
+      <SATDailyQuestionPageInner />
+      <ToolPageSeoBody subjectName="SAT" />
+    </>
   )
 }

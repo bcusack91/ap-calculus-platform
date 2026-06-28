@@ -14,6 +14,7 @@ import {
   type USGovFRQ,
   type FRQRubricItem,
 } from '@/data/ap-us-gov-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APUSGovFRQPage() {
+function APUSGovFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -438,5 +439,14 @@ export default function APUSGovFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APUSGovFRQPage() {
+  return (
+    <>
+      <APUSGovFRQPageInner />
+      <ToolPageSeoBody subjectName="AP United States Government and Politics" />
+    </>
   )
 }

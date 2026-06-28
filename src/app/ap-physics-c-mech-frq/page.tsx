@@ -14,6 +14,7 @@ import {
   type PhysicsCMechFRQ,
   type FRQRubricItem,
 } from '@/data/ap-physics-c-mech-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
@@ -51,7 +52,7 @@ type Filter = 'all' | 'long' | 'short'
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function APPhysicsCMechFRQPage() {
+function APPhysicsCMechFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -712,5 +713,14 @@ export default function APPhysicsCMechFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APPhysicsCMechFRQPage() {
+  return (
+    <>
+      <APPhysicsCMechFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Physics C: Mechanics" />
+    </>
   )
 }

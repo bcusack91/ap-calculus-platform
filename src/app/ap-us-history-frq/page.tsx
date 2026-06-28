@@ -14,6 +14,7 @@ import {
   type USHistoryFRQ,
   type FRQRubricItem,
 } from '@/data/ap-us-history-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APUSHistoryFRQPage() {
+function APUSHistoryFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -435,5 +436,14 @@ export default function APUSHistoryFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APUSHistoryFRQPage() {
+  return (
+    <>
+      <APUSHistoryFRQPageInner />
+      <ToolPageSeoBody subjectName="AP United States History" />
+    </>
   )
 }

@@ -14,6 +14,7 @@ import {
   type StatsFRQ,
   type FRQRubricItem,
 } from '@/data/ap-stats-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APStatsFRQPage() {
+function APStatsFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -687,5 +688,14 @@ export default function APStatsFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APStatsFRQPage() {
+  return (
+    <>
+      <APStatsFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Statistics" />
+    </>
   )
 }

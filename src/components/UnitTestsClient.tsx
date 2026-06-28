@@ -17,6 +17,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { InArticleAd } from '@/components/ad-banner'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 type Phase = 'menu' | 'testing' | 'results'
 
@@ -222,6 +223,8 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
             </ul>
           </div>
         </section>
+
+        <ToolPageSeoBody subjectName={config.courseTitle} />
       </div>
     )
   }

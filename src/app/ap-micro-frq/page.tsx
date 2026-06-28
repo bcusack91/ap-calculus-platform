@@ -14,6 +14,7 @@ import {
   type MicroFRQ,
   type FRQRubricItem,
 } from '@/data/ap-micro-frq/questions'
+import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
 function gradeResponse(
   response: string,
@@ -39,7 +40,7 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
-export default function APMicroFRQPage() {
+function APMicroFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
 
@@ -444,5 +445,14 @@ export default function APMicroFRQPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function APMicroFRQPage() {
+  return (
+    <>
+      <APMicroFRQPageInner />
+      <ToolPageSeoBody subjectName="AP Microeconomics" />
+    </>
   )
 }
