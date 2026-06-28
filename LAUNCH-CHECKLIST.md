@@ -84,10 +84,10 @@ Sequenced: adoption gates → trust → differentiation → lock-in. _(blocked)_
 
 - [ ] 🔴 **Google Classroom / Clever / ClassLink roster sync** — _(blocked on 1d Edlink creds)_. Turns CSV-import + self-join into one-click district rostering.
 - [x] 🟡 **Class sections/periods** — ✅ shipped (see §2, commit 6b7017ac).
-- [ ] 🟡 **Co-teacher support** — add a `role` (STUDENT/CO_TEACHER) to `ClassroomMember` so an owner can share roster/gradebook/lobby. Touches `requireClassroomOwner` across ~15 routes → its own careful pass; do after sections.
+- [ ] 🟡 **Co-teacher support** — ⏳ **BUILT, held pending your OK to create the `ClassroomCoTeacher` prod table.** Owner adds co-teachers by email (Settings); co-teachers can view/teach (roster, assignments, gradebook, analytics, curriculum, announcements) but not change settings/archive/manage co-teachers. Used a separate `ClassroomCoTeacher` table (not a `ClassroomMember.role`) so co-teachers never pollute student rosters/analytics. Adversarially auth-reviewed; 5 findings fixed. tsc + build green. Say "go" and I apply the table + push.
 - [ ] 🟡 **Per-district admin rollup** — a district-scoped view over the existing site-admin analytics. Worth building once there's a pilot district to shape it.
 - [ ] 🟡 **Evidence-of-impact reporting** — usage→growth views for districts. Needs real pilot data to be meaningful; stage until there's a cohort.
-- [ ] 🟡 **Finish SEO staging** — roll unique bodies to the remaining tool families (daily-question / FRQ / unit-tests) + gate any still-thin pages out of `sitemap.ts`.
+- [x] 🟡 **Finish SEO staging** — ✅ done (commit dec98378): unique bodies on unit-tests (21) + daily-question/FRQ (53 wrapped), and grade8-math/prealgebra daily-question gated out of `sitemap.ts` (still thin).
 - [ ] 🟡 **Parent/guardian progress emails** — `guardianEmail` + scheduled send from existing `/student-report` data; no parent login (COPPA-light).
 - [ ] 🟢 **Per-student question randomization** — _(deferred — low value-to-risk)_. Threading `studentId` through the match engine (~20 call sites) is high regression risk for marginal gain.
 
