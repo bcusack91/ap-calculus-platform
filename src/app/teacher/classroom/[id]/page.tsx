@@ -50,6 +50,7 @@ interface ClassroomDetail {
   joinCode: string
   subject: string | null
   grade: string | null
+  section: string | null
   isActive: boolean
   createdAt: string
   members: Member[]
@@ -171,6 +172,7 @@ export default function ClassroomDetailPage() {
   const [editDesc, setEditDesc] = useState('')
   const [editSubject, setEditSubject] = useState('')
   const [editGrade, setEditGrade] = useState('')
+  const [editSection, setEditSection] = useState('')
   const [saving, setSaving] = useState(false)
 
   const loadClassroom = useCallback(async () => {
@@ -186,6 +188,7 @@ export default function ClassroomDetailPage() {
       setEditDesc(data.description || '')
       setEditSubject(data.subject || '')
       setEditGrade(data.grade || '')
+      setEditSection(data.section || '')
     } catch {
       router.push('/teacher')
     } finally {
@@ -568,6 +571,7 @@ export default function ClassroomDetailPage() {
           description: editDesc || null,
           subject: editSubject || null,
           grade: editGrade || null,
+          section: editSection || null,
         }),
       })
       loadClassroom()
@@ -635,6 +639,7 @@ export default function ClassroomDetailPage() {
             <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
               {classroom.subject && <span>{classroom.subject}</span>}
               {classroom.grade && <span>Grade {classroom.grade}</span>}
+              {classroom.section && <span>{classroom.section}</span>}
               <span>{activeMembers.length} students</span>
             </div>
           </div>
@@ -1275,6 +1280,23 @@ export default function ClassroomDetailPage() {
                     className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                   />
                 </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="settings-section"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Section / period <span className="font-normal text-gray-400">(optional)</span>
+                </label>
+                <input
+                  id="settings-section"
+                  type="text"
+                  maxLength={60}
+                  value={editSection}
+                  onChange={(e) => setEditSection(e.target.value)}
+                  placeholder="e.g., Period 3 or Section A"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                />
               </div>
               <div>
                 <label

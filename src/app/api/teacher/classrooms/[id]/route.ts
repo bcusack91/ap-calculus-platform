@@ -68,7 +68,7 @@ export async function PUT(
     const result = await requireClassroomOwner(id)
     if ('error' in result && result.error) return result.error
 
-    const { name, description, subject, grade, isActive } = await req.json()
+    const { name, description, subject, grade, section, isActive } = await req.json()
 
     const classroom = await prisma.classroom.update({
       where: { id },
@@ -77,6 +77,7 @@ export async function PUT(
         ...(description !== undefined && { description: description?.trim() || null }),
         ...(subject !== undefined && { subject: subject?.trim() || null }),
         ...(grade !== undefined && { grade: grade?.trim() || null }),
+        ...(section !== undefined && { section: section?.trim() || null }),
         ...(isActive !== undefined && { isActive }),
       },
     })

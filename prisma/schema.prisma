@@ -1038,6 +1038,7 @@ model Classroom {
   schoolId    String?
   subject     String? // e.g., "AP Calculus", "Algebra 1"
   grade       String? // e.g., "9th", "10th"
+  section     String? // e.g., "Period 3", "Section A" — free-text label for teachers with multiple sections
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt

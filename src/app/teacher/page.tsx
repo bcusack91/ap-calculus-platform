@@ -12,6 +12,7 @@ interface ClassroomSummary {
   name: string
   subject: string | null
   grade: string | null
+  section: string | null
   joinCode: string
   isActive: boolean
   createdAt: string
@@ -55,7 +56,7 @@ export default function TeacherDashboard() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [showCreateModal, setShowCreateModal] = useState(false)
-  const [newClass, setNewClass] = useState({ name: '', subject: '', grade: '', description: '' })
+  const [newClass, setNewClass] = useState({ name: '', subject: '', grade: '', section: '', description: '' })
   const [creating, setCreating] = useState(false)
 
   useEffect(() => {
@@ -95,7 +96,7 @@ export default function TeacherDashboard() {
       })
       if (res.ok) {
         setShowCreateModal(false)
-        setNewClass({ name: '', subject: '', grade: '', description: '' })
+        setNewClass({ name: '', subject: '', grade: '', section: '', description: '' })
         loadDashboard()
       }
     } catch (err) {
@@ -183,9 +184,9 @@ export default function TeacherDashboard() {
                       {cls.joinCode}
                     </span>
                   </div>
-                  {(cls.subject || cls.grade) && (
+                  {(cls.subject || cls.grade || cls.section) && (
                     <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                      {[cls.subject, cls.grade].filter(Boolean).join(' • ')}
+                      {[cls.subject, cls.grade, cls.section].filter(Boolean).join(' • ')}
                     </p>
                   )}
                   <div className="flex gap-4 text-sm text-gray-600 dark:text-gray-400">
@@ -399,6 +400,23 @@ export default function TeacherDashboard() {
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
                 />
               </div>
+            </div>
+            <div>
+              <label
+                htmlFor="new-classroom-section"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Section / period <span className="font-normal text-gray-400">(optional)</span>
+              </label>
+              <input
+                id="new-classroom-section"
+                type="text"
+                maxLength={60}
+                value={newClass.section}
+                onChange={(e) => setNewClass({ ...newClass, section: e.target.value })}
+                placeholder="e.g., Period 3 or Section A"
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              />
             </div>
             <div>
               <label

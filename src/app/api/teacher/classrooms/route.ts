@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     const result = await requireTeacher()
     if ('error' in result && result.error) return result.error
 
-  const { name, description, subject, grade, schoolId } = await req.json()
+  const { name, description, subject, grade, section, schoolId } = await req.json()
 
   if (!name || typeof name !== 'string' || name.trim().length < 2) {
     return NextResponse.json({ error: 'Classroom name is required (min 2 characters)' }, { status: 400 })
@@ -54,6 +54,7 @@ export async function POST(req: NextRequest) {
       description: description?.trim() || null,
       subject: subject?.trim() || null,
       grade: grade?.trim() || null,
+      section: section?.trim() || null,
       teacherId: result.user!.id,
       schoolId: schoolId || null,
       joinCode,

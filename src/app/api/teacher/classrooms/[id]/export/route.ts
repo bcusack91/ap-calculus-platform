@@ -147,6 +147,7 @@ export async function GET(
         name: classroom.name,
         subject: classroom.subject,
         grade: classroom.grade,
+        section: classroom.section,
       },
       generatedAt: new Date().toISOString(),
       students: students.map((student) => {
