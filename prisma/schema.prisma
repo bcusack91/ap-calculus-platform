@@ -47,6 +47,7 @@ model User {
   // Teacher dashboard relations
   ownedClassrooms            Classroom[]                @relation("ClassroomTeacher")
   classroomMemberships       ClassroomMember[]
+  coTeaching                 ClassroomCoTeacher[]       @relation("CoTeaching")
   assignmentSubmissions      AssignmentSubmission[]
   createdAssignments         Assignment[]               @relation("AssignmentCreator")
   flashcardSets              FlashcardSet[]             @relation("TeacherFlashcardSets")
@@ -1054,9 +1055,26 @@ model Classroom {
 
   curriculumPlans CurriculumPlan[]
   flashcardSets   FlashcardSet[]
+  coTeachers      ClassroomCoTeacher[]
 
   @@index([teacherId])
   @@index([joinCode])
+}
+
+// Co-teachers: teachers (other than the owner) granted access to a classroom.
+// Kept in a SEPARATE table from ClassroomMember so it never pollutes the
+// student-centric member queries (rosters, analytics, gradebook, counts).
+model ClassroomCoTeacher {
+  id          String   @id @default(cuid())
+  classroomId String
+  userId      String
+  addedAt     DateTime @default(now())
+
+  classroom Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  user      User      @relation("CoTeaching", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([classroomId, userId])
+  @@index([userId])
 }
 
 model CompetitiveGrant {

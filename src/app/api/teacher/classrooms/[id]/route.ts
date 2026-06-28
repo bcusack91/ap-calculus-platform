@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomOwner, requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
  * GET  /api/teacher/classrooms/[id] — get classroom details with members
@@ -14,8 +14,9 @@ export async function GET(
 ) {
   try {
     const { id } = await params
-    const result = await requireClassroomOwner(id)
-    if ('error' in result && result.error) return result.error
+    // Owner, admin, or co-teacher may view the classroom.
+    const result = await requireClassroomAccess(id)
+    if ('error' in result) return result.error
 
     const classroom = await prisma.classroom.findUnique({
       where: { id },
@@ -48,11 +49,17 @@ export async function GET(
             _count: { select: { participants: true } },
           },
         },
+        coTeachers: {
+          include: { user: { select: { id: true, name: true, email: true } } },
+          orderBy: { addedAt: 'asc' },
+        },
         _count: { select: { members: true } },
       },
     })
 
-    return NextResponse.json(classroom)
+    // isOwner lets the client gate owner-only controls (settings, archive,
+    // managing co-teachers) even though co-teachers can view this payload.
+    return NextResponse.json({ ...classroom, isOwner: result.isOwner })
   } catch (error) {
     console.error('[GET /api/teacher/classrooms/[id]]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

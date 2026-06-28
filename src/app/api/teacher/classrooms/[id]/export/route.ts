@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { prisma } from '@/lib/prisma'
 
 /**
@@ -24,7 +24,7 @@ export async function GET(
 ) {
   try {
     const { id: classroomId } = await params
-    const teacher = await requireClassroomOwner(classroomId)
+    const teacher = await requireClassroomAccess(classroomId)
     if ('error' in teacher && teacher.error) {
       return teacher.error
     }

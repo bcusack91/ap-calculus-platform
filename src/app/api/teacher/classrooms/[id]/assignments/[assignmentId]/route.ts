@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
  * PUT    /api/teacher/classrooms/[id]/assignments/[assignmentId] — edit an assignment
@@ -9,7 +9,7 @@ import { requireClassroomOwner } from '@/lib/teacher-auth'
 
 /** Resolve the assignment only if the caller owns its classroom AND it belongs to that classroom. */
 async function getOwnedAssignment(classroomId: string, assignmentId: string) {
-  const result = await requireClassroomOwner(classroomId)
+  const result = await requireClassroomAccess(classroomId)
   if ('error' in result && result.error) return { error: result.error }
 
   const assignment = await prisma.assignment.findUnique({ where: { id: assignmentId } })

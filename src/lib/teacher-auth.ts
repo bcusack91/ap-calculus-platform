@@ -48,7 +48,43 @@ export async function requireClassroomOwner(classroomId: string) {
     return { error: NextResponse.json({ error: 'Not your classroom' }, { status: 403 }) }
   }
 
-  return { user: result.user!, classroom }
+  return { user: result.user!, classroom, isOwner: true as const }
+}
+
+/**
+ * Verify the current user may *teach* a classroom — i.e. they are the owner, an
+ * ADMIN, or a co-teacher. Use for teaching operations (view roster,
+ * assignments, gradebook, analytics, announcements, competitions, lobby).
+ * Owner-only actions (settings, archive, managing co-teachers) must keep using
+ * requireClassroomOwner. The returned `isOwner` lets callers gate further.
+ */
+export async function requireClassroomAccess(classroomId: string) {
+  const result = await requireTeacher()
+  if ('error' in result && result.error) return result
+
+  const classroom = await prisma.classroom.findUnique({
+    where: { id: classroomId },
+  })
+
+  if (!classroom) {
+    return { error: NextResponse.json({ error: 'Classroom not found' }, { status: 404 }) }
+  }
+
+  // Owner or ADMIN — full access.
+  if (classroom.teacherId === result.user!.id || result.user!.role === 'ADMIN') {
+    return { user: result.user!, classroom, isOwner: true as const }
+  }
+
+  // Co-teacher — teaching access, not ownership.
+  const coTeacher = await prisma.classroomCoTeacher.findUnique({
+    where: { classroomId_userId: { classroomId, userId: result.user!.id } },
+    select: { id: true },
+  })
+  if (coTeacher) {
+    return { user: result.user!, classroom, isOwner: false as const }
+  }
+
+  return { error: NextResponse.json({ error: 'Not your classroom' }, { status: 403 }) }
 }
 
 /**

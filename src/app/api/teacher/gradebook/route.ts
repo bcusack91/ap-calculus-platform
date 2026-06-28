@@ -13,9 +13,12 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'classroomId required' }, { status: 400 })
   }
 
-  // Verify teacher owns classroom
+  // Verify the teacher owns OR co-teaches the classroom (ADMIN: any).
   const classroom = await prisma.classroom.findFirst({
-    where: { id: classroomId, teacherId: user.id },
+    where:
+      user.role === 'ADMIN'
+        ? { id: classroomId }
+        : { id: classroomId, OR: [{ teacherId: user.id }, { coTeachers: { some: { userId: user.id } } }] },
     include: {
       members: {
         include: {
@@ -133,8 +136,13 @@ export async function PUT(req: NextRequest) {
     return NextResponse.json({ error: 'Score must be a number between 0 and 1, or null' }, { status: 400 })
   }
 
-  // Ownership + that the assignment and student actually belong to this classroom.
-  const classroom = await prisma.classroom.findFirst({ where: { id: classroomId, teacherId: user.id } })
+  // Owner/co-teacher (ADMIN: any) + that the assignment and student actually belong to this classroom.
+  const classroom = await prisma.classroom.findFirst({
+    where:
+      user.role === 'ADMIN'
+        ? { id: classroomId }
+        : { id: classroomId, OR: [{ teacherId: user.id }, { coTeachers: { some: { userId: user.id } } }] },
+  })
   if (!classroom) return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
 
   const assignment = await prisma.assignment.findFirst({ where: { id: assignmentId, classroomId } })

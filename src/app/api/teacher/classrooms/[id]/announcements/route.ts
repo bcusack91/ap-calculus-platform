@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
@@ -27,11 +27,18 @@ export async function GET(
     }
 
     if (classroom.teacherId !== session.user.id) {
-      const membership = await prisma.classroomMember.findUnique({
-        where: { classroomId_userId: { classroomId, userId: session.user.id } },
-        select: { isActive: true },
-      })
-      if (!membership || !membership.isActive) {
+      // Allow an active student member OR a co-teacher to read announcements.
+      const [membership, coTeacher] = await Promise.all([
+        prisma.classroomMember.findUnique({
+          where: { classroomId_userId: { classroomId, userId: session.user.id } },
+          select: { isActive: true },
+        }),
+        prisma.classroomCoTeacher.findUnique({
+          where: { classroomId_userId: { classroomId, userId: session.user.id } },
+          select: { id: true },
+        }),
+      ])
+      if ((!membership || !membership.isActive) && !coTeacher) {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
       }
     }
@@ -59,7 +66,7 @@ export async function POST(
 ) {
   try {
     const { id: classroomId } = await params
-    const teacher = await requireClassroomOwner(classroomId)
+    const teacher = await requireClassroomAccess(classroomId)
     if ('error' in teacher && teacher.error) {
       return teacher.error
     }
@@ -96,7 +103,7 @@ export async function DELETE(
 ) {
   try {
     const { id: classroomId } = await params
-    const teacher = await requireClassroomOwner(classroomId)
+    const teacher = await requireClassroomAccess(classroomId)
     if ('error' in teacher && teacher.error) {
       return teacher.error
     }

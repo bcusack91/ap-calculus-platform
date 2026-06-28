@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
  * DELETE /api/teacher/classrooms/[id]/members/[memberId] — remove a student
@@ -11,7 +11,7 @@ export async function DELETE(
 ) {
   try {
     const { id, memberId } = await params
-    const result = await requireClassroomOwner(id)
+    const result = await requireClassroomAccess(id)
     if ('error' in result && result.error) return result.error
 
   // Scope the mutation to THIS classroom — keying on memberId alone would let

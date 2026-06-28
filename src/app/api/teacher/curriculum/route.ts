@@ -3,6 +3,27 @@ import { prisma } from '@/lib/prisma'
 import { parseBody, createCurriculumSchema } from '@/lib/validations'
 import { requireTeacher } from '@/lib/auth-guard'
 
+// Owner, co-teacher, or ADMIN may access a classroom's curriculum.
+async function ownerOrCoTeacher(
+  classroomId: string,
+  user: { id: string; role: string },
+  ownerTeacherId: string
+) {
+  if (ownerTeacherId === user.id || user.role === 'ADMIN') return true
+  const ct = await prisma.classroomCoTeacher.findUnique({
+    where: { classroomId_userId: { classroomId, userId: user.id } },
+    select: { id: true },
+  })
+  return !!ct
+}
+
+// Where-filter for direct classroom lookups (owner OR co-teacher; ADMIN: any).
+function classroomAccessWhere(classroomId: string, user: { id: string; role: string }) {
+  return user.role === 'ADMIN'
+    ? { id: classroomId }
+    : { id: classroomId, OR: [{ teacherId: user.id }, { coTeachers: { some: { userId: user.id } } }] }
+}
+
 // GET /api/teacher/curriculum?classroomId=xxx
 export async function GET(req: NextRequest) {
   const authResult = await requireTeacher()
@@ -15,7 +36,7 @@ export async function GET(req: NextRequest) {
   }
 
   const classroom = await prisma.classroom.findFirst({
-    where: { id: classroomId, teacherId: user.id },
+    where: classroomAccessWhere(classroomId, user),
   })
   if (!classroom) {
     return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
@@ -52,7 +73,7 @@ export async function POST(req: NextRequest) {
   const { classroomId, title, description, startDate, endDate, weeks } = parsed.data
 
   const classroom = await prisma.classroom.findFirst({
-    where: { id: classroomId, teacherId: user.id },
+    where: classroomAccessWhere(classroomId, user),
   })
   if (!classroom) {
     return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })
@@ -110,7 +131,7 @@ export async function PUT(req: NextRequest) {
       where: { id: body.itemId },
       include: { week: { include: { plan: { include: { classroom: true } } } } },
     })
-    if (!item || item.week.plan.classroom.teacherId !== user.id) {
+    if (!item || !(await ownerOrCoTeacher(item.week.plan.classroom.id, user, item.week.plan.classroom.teacherId))) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
     const updated = await prisma.curriculumItem.update({
@@ -131,7 +152,7 @@ export async function PUT(req: NextRequest) {
       where: { id: body.weekId },
       include: { plan: { include: { classroom: true } } },
     })
-    if (!week || week.plan.classroom.teacherId !== user.id) {
+    if (!week || !(await ownerOrCoTeacher(week.plan.classroom.id, user, week.plan.classroom.teacherId))) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
     const maxOrder = await prisma.curriculumItem.aggregate({
@@ -156,7 +177,7 @@ export async function PUT(req: NextRequest) {
       where: { id: body.planId },
       include: { classroom: true },
     })
-    if (!plan || plan.classroom.teacherId !== user.id) {
+    if (!plan || !(await ownerOrCoTeacher(plan.classroom.id, user, plan.classroom.teacherId))) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
     const maxWeek = await prisma.curriculumWeek.aggregate({
@@ -195,7 +216,7 @@ export async function DELETE(req: NextRequest) {
       where: { id },
       include: { week: { include: { plan: { include: { classroom: true } } } } },
     })
-    if (!item || item.week.plan.classroom.teacherId !== user.id) {
+    if (!item || !(await ownerOrCoTeacher(item.week.plan.classroom.id, user, item.week.plan.classroom.teacherId))) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
     await prisma.curriculumItem.delete({ where: { id } })
@@ -204,7 +225,7 @@ export async function DELETE(req: NextRequest) {
       where: { id },
       include: { plan: { include: { classroom: true } } },
     })
-    if (!week || week.plan.classroom.teacherId !== user.id) {
+    if (!week || !(await ownerOrCoTeacher(week.plan.classroom.id, user, week.plan.classroom.teacherId))) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
     await prisma.curriculumWeek.delete({ where: { id } })
@@ -213,7 +234,7 @@ export async function DELETE(req: NextRequest) {
       where: { id },
       include: { classroom: true },
     })
-    if (!plan || plan.classroom.teacherId !== user.id) {
+    if (!plan || !(await ownerOrCoTeacher(plan.classroom.id, user, plan.classroom.teacherId))) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
     await prisma.curriculumPlan.delete({ where: { id } })

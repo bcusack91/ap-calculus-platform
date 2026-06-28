@@ -15,6 +15,7 @@ interface ClassroomSummary {
   section: string | null
   joinCode: string
   isActive: boolean
+  coTaught?: boolean
   createdAt: string
   _count: { members: number; assignments: number; competitions: number }
 }
@@ -179,6 +180,11 @@ export default function TeacherDashboard() {
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
                       {cls.name}
+                      {cls.coTaught && (
+                        <span className="ml-2 align-middle px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-[10px] font-semibold rounded-full">
+                          Co-teacher
+                        </span>
+                      )}
                     </h3>
                     <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-mono font-bold rounded-lg">
                       {cls.joinCode}

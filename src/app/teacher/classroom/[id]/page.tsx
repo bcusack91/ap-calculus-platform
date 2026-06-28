@@ -52,6 +52,8 @@ interface ClassroomDetail {
   grade: string | null
   section: string | null
   isActive: boolean
+  isOwner?: boolean
+  coTeachers?: { id: string; user: { id: string; name: string | null; email: string | null } }[]
   createdAt: string
   members: Member[]
   assignments: Assignment[]
@@ -305,6 +307,43 @@ export default function ClassroomDetailPage() {
     const txt = await file.text()
     setImportText((prev) => (prev ? `${prev}\n${txt}` : txt))
     e.target.value = ''
+  }
+
+  // Co-teachers (owner-only management)
+  const [coTeacherEmail, setCoTeacherEmail] = useState('')
+  const [addingCoTeacher, setAddingCoTeacher] = useState(false)
+  const [coTeacherError, setCoTeacherError] = useState('')
+
+  const addCoTeacher = async () => {
+    if (!coTeacherEmail.trim()) return
+    setAddingCoTeacher(true)
+    setCoTeacherError('')
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: coTeacherEmail.trim() }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setCoTeacherError(data.error || 'Could not add co-teacher')
+      } else {
+        setCoTeacherEmail('')
+        loadClassroom()
+      }
+    } catch {
+      setCoTeacherError('Could not add co-teacher')
+    } finally {
+      setAddingCoTeacher(false)
+    }
+  }
+
+  const removeCoTeacher = async (userId: string) => {
+    if (!confirm('Remove this co-teacher? They will lose access to this class.')) return
+    const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers/${userId}`, {
+      method: 'DELETE',
+    })
+    if (res.ok) loadClassroom()
   }
 
   const removeMember = async (memberId: string) => {
@@ -1313,26 +1352,87 @@ export default function ClassroomDetailPage() {
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white resize-none"
                 />
               </div>
-              <button
-                onClick={saveSettings}
-                disabled={saving || !editName.trim()}
-                className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 transition-all"
-              >
-                {saving ? 'Saving...' : 'Save Changes'}
-              </button>
-
-              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-                <h3 className="text-sm font-bold text-red-600 dark:text-red-400 mb-1">Danger Zone</h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
-                  Archiving removes this class from your active list and revokes student access. Grades are preserved.
-                </p>
+              {classroom.isOwner !== false && (
                 <button
-                  onClick={archiveClassroom}
-                  className="px-5 py-2.5 border-2 border-red-300 dark:border-red-800 text-red-600 dark:text-red-400 font-semibold rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 transition-all text-sm"
+                  onClick={saveSettings}
+                  disabled={saving || !editName.trim()}
+                  className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 transition-all"
                 >
-                  Archive Classroom
+                  {saving ? 'Saving...' : 'Save Changes'}
                 </button>
-              </div>
+              )}
+
+              {classroom.isOwner === false && (
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  You’re a co-teacher of this class. Only the class owner can change settings, manage co-teachers, or archive it.
+                </p>
+              )}
+
+              {/* Co-teachers (owner-only) */}
+              {classroom.isOwner !== false && (
+                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                  <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1">Co-teachers</h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                    Co-teachers can view the roster, post assignments, grade, and run the class — but can’t change these settings or archive it. They need their own teacher account first.
+                  </p>
+                  {classroom.coTeachers && classroom.coTeachers.length > 0 && (
+                    <div className="space-y-2 mb-3">
+                      {classroom.coTeachers.map((ct) => (
+                        <div
+                          key={ct.user.id}
+                          className="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-700/30"
+                        >
+                          <div>
+                            <p className="text-sm font-medium text-gray-900 dark:text-white">{ct.user.name || 'Teacher'}</p>
+                            <p className="text-xs text-gray-500">{ct.user.email}</p>
+                          </div>
+                          <button
+                            onClick={() => removeCoTeacher(ct.user.id)}
+                            className="text-red-500 hover:text-red-700 text-sm font-medium"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="flex gap-2">
+                    <input
+                      type="email"
+                      value={coTeacherEmail}
+                      onChange={(e) => setCoTeacherEmail(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === 'Enter') addCoTeacher() }}
+                      placeholder="teacher@school.org"
+                      className="flex-1 px-4 py-2.5 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white text-sm"
+                    />
+                    <button
+                      onClick={addCoTeacher}
+                      disabled={!coTeacherEmail.trim() || addingCoTeacher}
+                      className="px-4 py-2.5 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 transition-all text-sm whitespace-nowrap"
+                    >
+                      {addingCoTeacher ? 'Adding…' : 'Add co-teacher'}
+                    </button>
+                  </div>
+                  {coTeacherError && (
+                    <p className="text-sm text-red-600 dark:text-red-400 mt-2">{coTeacherError}</p>
+                  )}
+                </div>
+              )}
+
+              {classroom.isOwner !== false && (
+                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                  <h3 className="text-sm font-bold text-red-600 dark:text-red-400 mb-1">Danger Zone</h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                    Archiving removes this class from your active list and revokes student access. Grades are preserved.
+                  </p>
+                  <button
+                    onClick={archiveClassroom}
+                    className="px-5 py-2.5 border-2 border-red-300 dark:border-red-800 text-red-600 dark:text-red-400 font-semibold rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 transition-all text-sm"
+                  >
+                    Archive Classroom
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}

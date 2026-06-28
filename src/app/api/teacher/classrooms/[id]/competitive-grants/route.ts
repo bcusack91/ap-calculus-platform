@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess, requireClassroomOwner } from '@/lib/teacher-auth'
 
 /**
  * GET /api/teacher/classrooms/[id]/competitive-grants
@@ -11,7 +11,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id: classroomId } = await params
-  const result = await requireClassroomOwner(classroomId)
+  const result = await requireClassroomAccess(classroomId)
   if ('error' in result && result.error) return result.error
 
   const grants = await prisma.competitiveGrant.findMany({
@@ -34,6 +34,7 @@ export async function POST(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id: classroomId } = await params
+  // Granting competitive-mode access is an unlock/economy lever — owner only.
   const result = await requireClassroomOwner(classroomId)
   if ('error' in result && result.error) return result.error
   const teacher = result.user!
@@ -101,6 +102,7 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id: classroomId } = await params
+  // Revoking competitive-mode access is an unlock/economy lever — owner only.
   const result = await requireClassroomOwner(classroomId)
   if ('error' in result && result.error) return result.error
   const teacher = result.user!

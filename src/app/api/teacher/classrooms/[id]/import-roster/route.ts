@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
  * POST /api/teacher/classrooms/[id]/import-roster
@@ -79,7 +79,7 @@ export async function POST(
 ) {
   try {
     const { id: classroomId } = await params
-    const result = await requireClassroomOwner(classroomId)
+    const result = await requireClassroomAccess(classroomId)
     if ('error' in result && result.error) return result.error
 
     const body = await req.json().catch(() => null)

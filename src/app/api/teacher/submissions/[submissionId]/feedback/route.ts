@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { requireTeacher } from '@/lib/teacher-auth'
+import { requireTeacher, requireClassroomAccess } from '@/lib/teacher-auth'
 import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
 
@@ -26,15 +26,11 @@ export async function PUT(
       return NextResponse.json({ error: 'Score must be a number between 0 and 1' }, { status: 400 })
     }
 
-    // Verify the teacher owns the classroom this assignment belongs to
+    // Verify the teacher owns OR co-teaches the classroom this assignment belongs to.
     const submission = await prisma.assignmentSubmission.findUnique({
       where: { id: submissionId },
       include: {
-        assignment: {
-          include: {
-            classroom: { select: { teacherId: true } },
-          },
-        },
+        assignment: { select: { classroomId: true } },
       },
     })
 
@@ -42,9 +38,8 @@ export async function PUT(
       return NextResponse.json({ error: 'Submission not found' }, { status: 404 })
     }
 
-    if (submission.assignment.classroom.teacherId !== teacher.user!.id) {
-      return NextResponse.json({ error: 'Not your classroom' }, { status: 403 })
-    }
+    const access = await requireClassroomAccess(submission.assignment.classroomId)
+    if ('error' in access) return access.error
 
     const data: Prisma.AssignmentSubmissionUpdateInput = {}
     if (Object.prototype.hasOwnProperty.call(body, 'feedback')) {

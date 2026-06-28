@@ -14,9 +14,12 @@ export async function GET() {
 
     const teacherId = result.user!.id
 
-  // Get all classrooms with counts
+  // Get all classrooms with counts — owned OR co-taught.
   const classrooms = await prisma.classroom.findMany({
-    where: { teacherId, isActive: true },
+    where: {
+      isActive: true,
+      OR: [{ teacherId }, { coTeachers: { some: { userId: teacherId } } }],
+    },
     include: {
       _count: { select: { members: true, assignments: true, competitions: true } },
     },
@@ -90,7 +93,8 @@ export async function GET() {
   }
 
   return NextResponse.json({
-    classrooms,
+    // coTaught flag lets the UI badge classes the teacher co-teaches (vs owns).
+    classrooms: classrooms.map((c) => ({ ...c, coTaught: c.teacherId !== teacherId })),
     stats: {
       totalClassrooms: classrooms.length,
       totalStudents,

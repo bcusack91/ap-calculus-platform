@@ -15,9 +15,12 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'studentId and classroomId required' }, { status: 400 })
   }
 
-  // Verify teacher owns the classroom
+  // Verify the teacher owns OR co-teaches the classroom (ADMIN: any).
   const classroom = await prisma.classroom.findFirst({
-    where: { id: classroomId, teacherId: user.id },
+    where:
+      user.role === 'ADMIN'
+        ? { id: classroomId }
+        : { id: classroomId, OR: [{ teacherId: user.id }, { coTeachers: { some: { userId: user.id } } }] },
   })
   if (!classroom) {
     return NextResponse.json({ error: 'Classroom not found' }, { status: 404 })

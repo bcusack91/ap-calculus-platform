@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
  * GET /api/teacher/classrooms/[id]/performance — get student performance data
@@ -13,7 +13,7 @@ export async function GET(
 ) {
   try {
     const { id } = await params
-    const result = await requireClassroomOwner(id)
+    const result = await requireClassroomAccess(id)
     if ('error' in result && result.error) return result.error
 
   // Get all active members
