@@ -14,6 +14,7 @@ These need **you** — an account, a signature, a dashboard setting, or a secret
 Set these for **Production** (and Preview if you test there). Never commit them to git.
 
 - [x] 🟠 `ANTHROPIC_API_KEY` — **added.** Student AI tutor (Haiku 4.5), teacher AI flashcard generation, and AI free-response grading are live.
+- [ ] 🔴 `RESEND_API_KEY` + verified sending domain — **emails (password reset, email verification, weekly digests, parent emails) silently fail without this.** Plus `SMTP_FROM` (e.g. `Study Mondo <noreply@send.studymondo.com>`) matching the verified domain. See the RESEND setup steps. Confirm `AUTH_SECRET`/`NEXTAUTH_SECRET` is set too (signs unsubscribe/confirm links).
 - [ ] 🟠 `STRIPE_SECRET_KEY` — Premium checkout returns HTTP 503 ("checkout isn't switched on yet") until this is set. **(Currently in Stripe TEST mode — intentional.)**
 - [ ] 🟠 `STRIPE_WEBHOOK_SECRET` — from the Stripe webhook endpoint you create (see 1d).
 - [ ] 🟠 `STRIPE_PREMIUM_PRICE_ID` — the monthly price ID (`price_…`) from Stripe.
@@ -85,10 +86,11 @@ Sequenced: adoption gates → trust → differentiation → lock-in. _(blocked)_
 - [ ] 🔴 **Google Classroom / Clever / ClassLink roster sync** — _(blocked on 1d Edlink creds)_. Turns CSV-import + self-join into one-click district rostering.
 - [x] 🟡 **Class sections/periods** — ✅ shipped (see §2, commit 6b7017ac).
 - [x] 🟡 **Co-teacher support** — ✅ shipped (commit 1b242b08). Owner adds co-teachers by email (Settings); co-teachers view/teach (roster, assignments, gradebook, per-submission grading, analytics, curriculum, announcements) but not settings/archive/manage-co-teachers/competitive-grants (owner-only). Separate `ClassroomCoTeacher` table (applied to prod) so co-teachers never pollute student rosters/analytics. Adversarially auth-reviewed; 5 findings fixed.
-- [ ] 🟡 **Per-district admin rollup** — a district-scoped view over the existing site-admin analytics. Worth building once there's a pilot district to shape it.
-- [ ] 🟡 **Evidence-of-impact reporting** — usage→growth views for districts. Needs real pilot data to be meaningful; stage until there's a cohort.
+- [x] 🟡 **Per-district admin rollup** — ✅ shipped (commit 3d98ba15). Admin → Districts tab, groups by School.district. (Populates as schools set their district + students join.)
+- [x] 🟡 **Evidence-of-impact reporting** — ✅ shipped (commit 3d98ba15). Admin → Impact tab: diagnostic improvement, usage→mastery, mastery distribution, weekly completions.
 - [x] 🟡 **Finish SEO staging** — ✅ done (commit dec98378): unique bodies on unit-tests (21) + daily-question/FRQ (53 wrapped), and grade8-math/prealgebra daily-question gated out of `sitemap.ts` (still thin).
-- [ ] 🟡 **Parent/guardian progress emails** — `guardianEmail` + scheduled send from existing `/student-report` data; no parent login (COPPA-light).
+- [ ] 🟡 **Parent/guardian progress emails** — ⏳ **BUILT, held pending your OK to add the `User.guardianEmail` column to prod.** Student adds a guardian email in their profile → **double opt-in** (guardian confirms before any digest) → weekly cron sends a progress summary; unsubscribe + rate-limit included. Adversarially reviewed (consent/abuse fixes applied). Say "go" and I apply the column + push.
+- [ ] 🟢 **Competition-system unification** — DEFERRED. An explorer scoped it at **3–5 days** (cross-mode reporting + launching a scheduled comp into a live lobby), not the "minor polish" it sounded like. The cheap slice (a "Launch live" button on a scheduled comp) is ~1–2 days if you want just that later.
 - [ ] 🟢 **Per-student question randomization** — _(deferred — low value-to-risk)_. Threading `studentId` through the match engine (~20 call sites) is high regression risk for marginal gain.
 
 ### Deferred big bets (don't start until there's real teacher adoption)
