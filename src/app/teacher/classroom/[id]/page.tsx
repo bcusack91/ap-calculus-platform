@@ -346,6 +346,16 @@ export default function ClassroomDetailPage() {
     if (res.ok) loadClassroom()
   }
 
+  // A co-teacher removing themselves (leave the class).
+  const leaveClass = async () => {
+    if (!session?.user?.id) return
+    if (!confirm('Leave this class? You will lose access to it.')) return
+    const res = await fetch(`/api/teacher/classrooms/${classroomId}/co-teachers/${session.user.id}`, {
+      method: 'DELETE',
+    })
+    if (res.ok) router.push('/teacher')
+  }
+
   const removeMember = async (memberId: string) => {
     if (!confirm('Remove this student from the classroom?')) return
     const res = await fetch(`/api/teacher/classrooms/${classroomId}/members/${memberId}`, {
@@ -1363,9 +1373,17 @@ export default function ClassroomDetailPage() {
               )}
 
               {classroom.isOwner === false && (
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  You’re a co-teacher of this class. Only the class owner can change settings, manage co-teachers, or archive it.
-                </p>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    You’re a co-teacher of this class. Only the class owner can change settings, manage co-teachers, or archive it.
+                  </p>
+                  <button
+                    onClick={leaveClass}
+                    className="px-5 py-2.5 border-2 border-red-300 dark:border-red-800 text-red-600 dark:text-red-400 font-semibold rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 transition-all text-sm"
+                  >
+                    Leave class
+                  </button>
+                </div>
               )}
 
               {/* Co-teachers (owner-only) */}

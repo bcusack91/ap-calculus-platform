@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireClassroomOwner } from '@/lib/teacher-auth'
+import { requireClassroomOwner, requireTeacher } from '@/lib/teacher-auth'
 
 /**
  * DELETE /api/teacher/classrooms/[id]/co-teachers/[userId]
- * Remove a co-teacher. Owner only. Scoped to this classroom.
+ * Remove a co-teacher. The classroom OWNER may remove anyone; a co-teacher may
+ * remove THEMSELVES (leave the class). Scoped to this classroom.
  */
 export async function DELETE(
   _req: NextRequest,
@@ -12,8 +13,16 @@ export async function DELETE(
 ) {
   try {
     const { id: classroomId, userId } = await params
-    const result = await requireClassroomOwner(classroomId)
-    if ('error' in result && result.error) return result.error
+
+    // Self-leave: a teacher can always remove their own co-teacher link.
+    // Otherwise, only the owner may remove another co-teacher.
+    const teacher = await requireTeacher()
+    if ('error' in teacher && teacher.error) return teacher.error
+
+    if (userId !== teacher.user!.id) {
+      const owner = await requireClassroomOwner(classroomId)
+      if ('error' in owner && owner.error) return owner.error
+    }
 
     await prisma.classroomCoTeacher.deleteMany({ where: { classroomId, userId } })
 

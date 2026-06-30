@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
+import { DistrictRollup } from '@/components/admin/DistrictRollup'
+import { ImpactAnalytics } from '@/components/admin/ImpactAnalytics'
 
 interface UserResult {
   id: string
@@ -157,7 +159,7 @@ const ROLES = [
 export default function AdminPanel() {
   const router = useRouter()
   const { status } = useSession()
-  const [tab, setTab] = useState<'analytics' | 'users'>('analytics')
+  const [tab, setTab] = useState<'analytics' | 'districts' | 'impact' | 'users'>('analytics')
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
   const [analyticsLoading, setAnalyticsLoading] = useState(true)
   const [retention, setRetention] = useState<RetentionData | null>(null)
@@ -376,7 +378,7 @@ export default function AdminPanel() {
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6">
-          {(['analytics', 'users'] as const).map((t) => (
+          {(['analytics', 'districts', 'impact', 'users'] as const).map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -386,7 +388,7 @@ export default function AdminPanel() {
                   : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100'
               }`}
             >
-              {t === 'analytics' ? '📊 Analytics' : '👥 Users'}
+              {t === 'analytics' ? '📊 Analytics' : t === 'districts' ? '🏫 Districts' : t === 'impact' ? '📈 Impact' : '👥 Users'}
             </button>
           ))}
         </div>
@@ -985,6 +987,10 @@ export default function AdminPanel() {
         )}
 
         {/* Users Tab */}
+        {tab === 'districts' && <DistrictRollup />}
+
+        {tab === 'impact' && <ImpactAnalytics />}
+
         {tab === 'users' && (
           <div>
         <div className="flex gap-3 mb-6">
