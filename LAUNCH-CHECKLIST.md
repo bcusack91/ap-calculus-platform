@@ -6,6 +6,19 @@ Legend: `[ ]` to do · `[x]` done · 🔴 critical / blocks adoption · 🟠 hig
 
 ---
 
+## 0. Content-review remediation — SHIPPED 2026-07-01
+
+A 7-dimension end-to-end review ran (overall B‑: strong engine, unfinished finish). P0 + P1 fixes shipped (commits be5c9431, 57175612, eee11650):
+- **Removed the demo facade** — deleted 10 fake sample-data components that shipped to real users (fake "Google Classroom connected", fake student leaderboard on every dashboard, fake classroom Groups/Announcements/Challenges, keyword FRQ "grader", no-op "Assign" templates). `/teacher/tools` now shows only the 3 real tools.
+- **Copy honesty** — "100% Free" → "$0 to start"; removed unverifiable "Join thousands of students"; dropped "Free … Platform" titles.
+- **Content** — de-geographied 94 "case study" lessons (no more "Why do geographers…" in a CS lesson).
+- **Teacher self-provisioning** — `/for-teachers` + one-click FREE→TEACHER (no admin needed).
+- **Schools UI** — admin can create schools; teachers attach classes → the district rollup can finally populate.
+- **UX** — onboarding routing, tool-page breadcrumbs, unified course front-door, differentiated hero, plain-language premium perks.
+- **Still open (from the review, not yet done):** wire real Announcements/Groups back into the classroom (were hidden, not rebuilt); gamification depth (Daily Challenge/BattlePass are shallow — deferred); full `/courses/[slug]`→hub redirect (only homepage links unified); printable/PDF class reports.
+
+---
+
 ## 1. Owner action items (cannot be done in code)
 
 These need **you** — an account, a signature, a dashboard setting, or a secret. Most are gates: the code is ready (or will be), but it does nothing until you complete these.
