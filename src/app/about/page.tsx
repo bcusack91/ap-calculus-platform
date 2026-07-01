@@ -3,7 +3,7 @@ import Link from "next/link";
 import { COURSE_COUNT, TOPIC_COUNT_LABEL, COURSE_CATALOG } from "@/lib/site-stats";
 
 export const metadata: Metadata = {
-  title: "About Us | Study Mondo — Free Study Platform",
+  title: "About Us | Study Mondo",
   description:
     "Learn about Study Mondo's mission to provide free, high-quality study resources for students from Grade 4 through AP and test prep.",
 };
@@ -218,7 +218,7 @@ export default function AboutPage() {
               </div>
               <div className="p-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                  100%
+                  $0
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Free to start</div>
               </div>

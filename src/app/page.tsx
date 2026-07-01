@@ -9,7 +9,7 @@ import TrackedLink from '@/components/TrackedLink'
 export const revalidate = 3600; // ISR: revalidate every hour
 
 export const metadata: Metadata = {
-  title: "Study Mondo — Free Math & Science Study Platform",
+  title: "Study Mondo — Math & Science Study Platform",
   description:
     `Master ${COURSE_COUNT} courses from Grade 4 through AP, SAT/ACT, and MCAT — notes, flashcards, interactive lessons, and practice problems across ${TOPIC_COUNT_LABEL} topics. Free to start.`,
   // The homepage's own canonical (the root layout no longer sets one — see the

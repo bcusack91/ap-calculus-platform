@@ -41,8 +41,8 @@ export default function DynamicStats() {
           <div className="text-xs text-gray-500 dark:text-gray-400">Topics</div>
         </div>
         <div>
-          <div className="text-2xl font-bold text-cyan-700 dark:text-cyan-400">100%</div>
-          <div className="text-xs text-gray-500 dark:text-gray-400">Free</div>
+          <div className="text-2xl font-bold text-cyan-700 dark:text-cyan-400">$0</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400">To start</div>
         </div>
       </div>
     )

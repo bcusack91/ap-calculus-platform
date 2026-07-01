@@ -93,7 +93,7 @@ export function Footer() {
           <EmailCapture
             source="footer"
             heading="Stay Ahead in School"
-            description="Free weekly study tips, practice sets, and exam strategies. Join thousands of students."
+            description="Free weekly study tips, practice sets, and exam strategies. No spam, unsubscribe anytime."
             buttonText="Get Free Tips"
           />
         </div>

@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { LMSIntegration } from '@/components/LMSIntegration'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
 
 interface ClassroomSummary {
@@ -317,16 +316,9 @@ export default function TeacherDashboard() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
               { icon: '📝', label: 'Quiz Builder', href: '/teacher/tools?tab=quiz-builder' },
-              { icon: '📋', label: 'Templates', href: '/teacher/tools?tab=templates' },
               { icon: '✍️', label: 'FRQ Grader', href: '/teacher/tools?tab=frq-grader' },
               { icon: '🃏', label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
-              { icon: '📊', label: 'Analytics', href: '/teacher/tools?tab=analytics' },
-              { icon: '👥', label: 'Groups', href: '/teacher/tools?tab=grouping' },
               { icon: '⚔️', label: 'Class Lobby', href: '/teacher/lobby' },
-              { icon: '📢', label: 'Announcements', href: '/teacher/tools?tab=announcements' },
-              { icon: '🗺️', label: 'Curriculum Map', href: '/teacher/tools?tab=curriculum' },
-              { icon: '👨‍👩‍👧', label: 'Parent View', href: '/teacher/tools?tab=parent-view' },
-              { icon: '🔗', label: 'LMS Integration', href: '#lms' },
             ].map((tool) => (
               <Link
                 key={tool.label}
@@ -342,10 +334,6 @@ export default function TeacherDashboard() {
           </div>
         </div>
 
-        {/* LMS Integration */}
-        <div id="lms" className="mt-8">
-          <LMSIntegration />
-        </div>
       </div>
 
       {/* Create Classroom Modal */}

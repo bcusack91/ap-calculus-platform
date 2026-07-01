@@ -786,7 +786,32 @@ export const SUBJECT_SEO: SubjectSeo[] = [
 
 const norm = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '')
 const BY_NAME = new Map(SUBJECT_SEO.map((s) => [norm(s.name), s]))
+// Index the pre-colon "base" name too, so a short display name ("AP Physics 1")
+// resolves to a fuller config key ("AP Physics 1: Algebra-Based"). Without this,
+// tool pages that pass the short name render no SEO body (thin-content risk).
+const BY_NAME_BASE = new Map<string, SubjectSeo>()
+for (const s of SUBJECT_SEO) {
+  const base = norm(s.name.split(':')[0])
+  if (base && !BY_NAME_BASE.has(base)) BY_NAME_BASE.set(base, s)
+}
 const BY_SLUG = new Map(SUBJECT_SEO.map((s) => [s.slug, s]))
 
-export function getSubjectSeoByName(name: string): SubjectSeo | undefined { return BY_NAME.get(norm(name)) }
+export function getSubjectSeoByName(name: string): SubjectSeo | undefined {
+  const key = norm(name)
+  if (!key) return undefined
+  const exact = BY_NAME.get(key)
+  if (exact) return exact
+  // Fallback: match on the config's pre-colon base name (handles short display
+  // names like "AP Physics 1" vs the fuller "AP Physics 1: Algebra-Based").
+  const base = BY_NAME_BASE.get(key)
+  if (base) return base
+  // Last resort: a config name begins with the query (guard length to avoid
+  // over-eager matches on very short strings).
+  if (key.length >= 6) {
+    for (const s of SUBJECT_SEO) {
+      if (norm(s.name).startsWith(key)) return s
+    }
+  }
+  return undefined
+}
 export function getSubjectSeoBySlug(slug: string): SubjectSeo | undefined { return BY_SLUG.get(slug) }

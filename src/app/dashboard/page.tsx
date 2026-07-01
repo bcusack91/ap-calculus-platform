@@ -22,7 +22,6 @@ import RandomPracticeButton from '@/components/RandomPracticeButton'
 import { DailyChallenge } from '@/components/DailyChallenge'
 import { SeasonalEvents } from '@/components/SeasonalEvents'
 import { BattlePass } from '@/components/BattlePass'
-import { SeasonRankings } from '@/components/SeasonRankings'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import { StudyHeatmap } from '@/components/StudyHeatmap'
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
@@ -937,8 +936,6 @@ function DashboardContent() {
         {/* ============ EXTRAS: gamification & social ============ */}
         {tab === 'extras' && (
         <div role="tabpanel" id="dashboard-tabpanel-extras" aria-labelledby="dashboard-tab-extras" className="grid gap-6 sm:grid-cols-2">
-          {/* Season Rankings */}
-          <SeasonRankings currentUserId={session?.user?.id} />
           {/* Challenge a Friend */}
           <ChallengeAFriend />
           {/* Seasonal Events */}

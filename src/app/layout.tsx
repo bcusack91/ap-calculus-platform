@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Free notes, flashcards, practice problems & interactive lessons for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — join thousands of students studying smarter.",
+      "Free notes, flashcards, practice problems & interactive lessons for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — study smarter, free to start.",
     url: "https://www.studymondo.com",
     siteName: "Study Mondo",
     type: "website",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Free notes, flashcards, practice problems & interactive lessons. Join thousands of students studying smarter.",
+      "Free notes, flashcards, practice problems & interactive lessons. Study smarter — free to start.",
     images: ["https://www.studymondo.com/og-image.png"],
   },
   icons: {

@@ -42,3 +42,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scratch / temp working files (not part of the app)
+*.bak
+scripts/_*
+.claude-tmp/
+/all_potential_slugs.txt
+/ap_calc_ab_targets.txt
+/mapped_slugs.txt

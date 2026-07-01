@@ -5,26 +5,16 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { TeacherQuizBuilder } from '@/components/TeacherQuizBuilder'
-import { AssignmentTemplates } from '@/components/AssignmentTemplates'
-import { ClassAnalytics } from '@/components/ClassAnalytics'
-import { ParentGuardianView } from '@/components/ParentGuardianView'
-import { ClassAnnouncements } from '@/components/ClassAnnouncements'
-import { AutoGradedFRQ } from '@/components/AutoGradedFRQ'
 import { AIFreeResponseGrader } from '@/components/AIFreeResponseGrader'
-import { CurriculumMapping } from '@/components/CurriculumMapping'
-import { StudentGrouping } from '@/components/StudentGrouping'
 import { TeacherFlashcardSets } from '@/components/TeacherFlashcardSets'
 
+// Only genuinely-working, DB-backed tools are surfaced here. Class analytics,
+// student groups, announcements, and curriculum mapping live inside a specific
+// classroom (real data + context) — not in this global hub.
 const TOOLS = [
   { key: 'quiz-builder', label: 'Quiz Builder', icon: '📝', description: 'Create custom quizzes and assessments' },
-  { key: 'templates', label: 'Assignment Templates', icon: '📋', description: 'Pre-built assignment templates by subject' },
-  { key: 'frq-grader', label: 'FRQ Grader', icon: '✍️', description: 'AI-grade free-response answers + rubric practice' },
+  { key: 'frq-grader', label: 'FRQ Grader', icon: '✍️', description: 'AI-grade free-response answers' },
   { key: 'flashcards', label: 'Flashcard Sets', icon: '🃏', description: 'Create and share custom flashcard sets' },
-  { key: 'analytics', label: 'Class Analytics', icon: '📊', description: 'Student performance analytics' },
-  { key: 'grouping', label: 'Student Groups', icon: '👥', description: 'Create and manage student groups' },
-  { key: 'announcements', label: 'Announcements', icon: '📢', description: 'Post class announcements' },
-  { key: 'curriculum', label: 'Curriculum Map', icon: '🗺️', description: 'Map topics to textbook chapters' },
-  { key: 'parent-view', label: 'Parent View', icon: '👨‍👩‍👧', description: 'Preview the parent/guardian dashboard' },
 ] as const
 
 type ToolKey = (typeof TOOLS)[number]['key']
@@ -94,19 +84,8 @@ export default function TeacherToolsPage() {
         {/* Active Tool */}
         <div>
           {activeTool === 'quiz-builder' && <TeacherQuizBuilder />}
-          {activeTool === 'templates' && <AssignmentTemplates />}
-          {activeTool === 'frq-grader' && (
-            <div className="space-y-6">
-              <AIFreeResponseGrader />
-              <AutoGradedFRQ />
-            </div>
-          )}
+          {activeTool === 'frq-grader' && <AIFreeResponseGrader />}
           {activeTool === 'flashcards' && <TeacherFlashcardSets />}
-          {activeTool === 'analytics' && <ClassAnalytics />}
-          {activeTool === 'grouping' && <StudentGrouping />}
-          {activeTool === 'announcements' && <ClassAnnouncements isTeacher />}
-          {activeTool === 'curriculum' && <CurriculumMapping />}
-          {activeTool === 'parent-view' && <ParentGuardianView />}
         </div>
       </div>
     </div>
