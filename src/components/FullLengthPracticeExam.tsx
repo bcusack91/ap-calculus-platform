@@ -2,6 +2,7 @@
 
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
@@ -698,6 +699,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
 export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
   return (
     <>
+      <ToolBreadcrumb subjectName={config.subject} tool="Practice Exam" />
       <FullLengthPracticeExamInner {...config} />
       <ToolPageSeoBody subjectName={config.subject} />
     </>

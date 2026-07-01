@@ -56,7 +56,8 @@ export default function TeacherDashboard() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [showCreateModal, setShowCreateModal] = useState(false)
-  const [newClass, setNewClass] = useState({ name: '', subject: '', grade: '', section: '', description: '' })
+  const [newClass, setNewClass] = useState({ name: '', subject: '', grade: '', section: '', description: '', schoolId: '' })
+  const [schools, setSchools] = useState<{ id: string; name: string; district: string | null }[]>([])
   const [creating, setCreating] = useState(false)
 
   useEffect(() => {
@@ -85,6 +86,15 @@ export default function TeacherDashboard() {
     if (session) loadDashboard()
   }, [session, loadDashboard])
 
+  // Schools for the optional "school" picker in Create Classroom (feeds the
+  // admin district rollup). Empty until an admin has created schools.
+  useEffect(() => {
+    fetch('/api/teacher/schools')
+      .then((r) => (r.ok ? r.json() : { schools: [] }))
+      .then((d) => setSchools(d.schools ?? []))
+      .catch(() => setSchools([]))
+  }, [])
+
   const createClassroom = async () => {
     if (!newClass.name.trim()) return
     setCreating(true)
@@ -96,7 +106,7 @@ export default function TeacherDashboard() {
       })
       if (res.ok) {
         setShowCreateModal(false)
-        setNewClass({ name: '', subject: '', grade: '', section: '', description: '' })
+        setNewClass({ name: '', subject: '', grade: '', section: '', description: '', schoolId: '' })
         loadDashboard()
       }
     } catch (err) {
@@ -412,6 +422,29 @@ export default function TeacherDashboard() {
                 className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
               />
             </div>
+            {schools.length > 0 && (
+              <div>
+                <label
+                  htmlFor="new-classroom-school"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  School <span className="font-normal text-gray-400">(optional)</span>
+                </label>
+                <select
+                  id="new-classroom-school"
+                  value={newClass.schoolId}
+                  onChange={(e) => setNewClass({ ...newClass, schoolId: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                >
+                  <option value="">No school</option>
+                  {schools.map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.name}{s.district ? ` — ${s.district}` : ''}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
             <div>
               <label
                 htmlFor="new-classroom-description"

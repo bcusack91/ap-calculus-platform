@@ -69,7 +69,7 @@ export const FREE_LIMITS = {
  */
 export const PREMIUM_BENEFITS: readonly string[] = [
   'Unlimited AI tutor explanations (free plan: 5 per day)',
-  'Advanced performance analytics — Six Sigma quality reports, control charts, and DPMO trends',
+  'Advanced performance analytics — see exactly which topics are costing you points, with mastery and consistency trends over time',
   'Priority email support',
 ]
 

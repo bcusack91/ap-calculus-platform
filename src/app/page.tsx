@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { COURSE_COUNT, TOPIC_COUNT_LABEL } from "@/lib/site-stats";
 import { prisma } from "@/lib/prisma";
-import { courseMeta, defaultCourseMeta, sectionOrder } from "@/data/course-metadata";
+import { courseMeta, defaultCourseMeta, sectionOrder, getCourseHref } from "@/data/course-metadata";
 import DynamicStats from "@/components/DynamicStats";
 import { InArticleAd } from "@/components/ad-banner";
 import TrackedLink from '@/components/TrackedLink'
@@ -80,10 +80,14 @@ export default async function Home() {
               Master Math & Science
             </h1>
             <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700 dark:text-purple-400">
-              From Grade 4 to AP. SAT to ACT.
+              Grade 4 → AP · SAT · ACT · MCAT
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              {totalCourses} courses · {TOPIC_COUNT_LABEL} topics · Free to start
+              Diagnostics find your gaps, then adaptive lessons and spaced-repetition practice take
+              you to mastery — free, with no ads.
+            </p>
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              {totalCourses} courses · {TOPIC_COUNT_LABEL} topics
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
               <TrackedLink
@@ -131,7 +135,7 @@ export default async function Home() {
                   {courses.map((course) => (
                     <TrackedLink
                       key={course.slug}
-                      href={`/courses/${course.slug}`}
+                      href={getCourseHref(course.slug)}
                       eventName="homepage_course_card_click"
                       eventParams={{
                         course_slug: course.slug,
@@ -139,7 +143,7 @@ export default async function Home() {
                         cta_type: 'course_card',
                         page_template: 'homepage',
                         section_name: sectionName,
-                        destination: `/courses/${course.slug}`,
+                        destination: getCourseHref(course.slug),
                       }}
                       className="group relative flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
                     >

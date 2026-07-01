@@ -210,6 +210,9 @@ export function Navbar() {
             <Link href="/topics" className="transition-colors hover:text-foreground/80">
               Topics
             </Link>
+            <Link href="/for-teachers" className="transition-colors hover:text-foreground/80">
+              For Teachers
+            </Link>
 
             {/* Courses Dropdown */}
             <div ref={coursesRef} className="relative" onKeyDown={coursesKeyNav}>

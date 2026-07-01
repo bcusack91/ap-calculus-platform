@@ -2,6 +2,7 @@
 
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
@@ -333,6 +334,7 @@ function ScorePredictorInner(config: ScorePredictorConfig) {
 export default function ScorePredictor(config: ScorePredictorConfig) {
   return (
     <>
+      <ToolBreadcrumb subjectName={config.subject} tool="Score Predictor" />
       <ScorePredictorInner {...config} />
       <ToolPageSeoBody subjectName={config.subject} />
     </>

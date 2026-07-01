@@ -2,6 +2,7 @@
 
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
@@ -226,6 +227,7 @@ function StudyPlanSelectorInner(config: StudyPlanSelectorConfig) {
 export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
   return (
     <>
+      <ToolBreadcrumb subjectName={config.subject} tool="Study Plan" />
       <StudyPlanSelectorInner {...config} />
       <ToolPageSeoBody subjectName={config.subject} />
     </>

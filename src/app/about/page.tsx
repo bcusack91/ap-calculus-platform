@@ -165,8 +165,9 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Important Notice</h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 <strong>Original Content:</strong> All study materials, explanations, and practice problems
-                on this platform are original works created by our team of educators. We are not affiliated
-                with the College Board.
+                on this platform are original works created and reviewed by our education team (see our{' '}
+                <a href="/editorial-standards" className="text-blue-600 hover:underline">Editorial Standards</a>).
+                We are not affiliated with the College Board.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 <strong>Trademark Notice:</strong> AP® is a trademark registered by the College Board,

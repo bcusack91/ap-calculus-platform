@@ -53,6 +53,9 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           Topics
         </Link>
+        <Link href="/for-teachers" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
+          For Teachers
+        </Link>
         {/* Mobile Courses List — categorized */}
         <div className="px-3 py-2">
           <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>

@@ -130,8 +130,10 @@ function SignUpForm() {
 
       trackSignUp('credentials')
 
-      // Redirect back to the page the user originally tried to access.
-      router.push(safeCallback)
+      // If the user was heading somewhere specific, honor it; otherwise send new
+      // users through the guided onboarding wizard (course pick + first topic)
+      // instead of dropping them back on the homepage.
+      router.push(safeCallback !== '/' ? safeCallback : '/onboarding')
       router.refresh()
     } catch {
       setError('An error occurred during sign up')

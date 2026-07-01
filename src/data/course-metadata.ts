@@ -118,6 +118,14 @@ export const courseHubPaths: Record<string, string> = {
   'sat-prep': '/sat',
   'act-prep': '/act',
   'mcat-prep': '/mcat',
+  // Aliases for the subject-config (SEO) slug namespace, which differs from the
+  // DB course slug for these — so getCourseHref() resolves correctly when called
+  // with a SubjectSeo.slug (e.g. from ToolBreadcrumb) instead of 404-ing.
+  'sat': '/sat',
+  'psat': '/psat',
+  'act': '/act',
+  'mcat': '/mcat',
+  'ap-cs-principles': '/ap-cs-principles',
 }
 
 /**

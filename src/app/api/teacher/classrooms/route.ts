@@ -38,6 +38,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Classroom name is required (min 2 characters)' }, { status: 400 })
   }
 
+  // Validate the optional school so a bad id returns a clean 400 rather than a
+  // 500 from the FK constraint. (Schools are admin-seeded; teachers self-select.)
+  if (schoolId) {
+    const school = await prisma.school.findUnique({ where: { id: schoolId }, select: { id: true } })
+    if (!school) {
+      return NextResponse.json({ error: 'Unknown school.' }, { status: 400 })
+    }
+  }
+
   // Generate unique join code
   let joinCode = generateJoinCode()
   let attempts = 0
