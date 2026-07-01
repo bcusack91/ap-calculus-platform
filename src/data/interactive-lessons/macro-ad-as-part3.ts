@@ -15,7 +15,7 @@ This part examines specific patterns and real-world examples related to Aggregat
 
 | Concept | Description |
 |---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Aggregate Demand & Aggregate Supply |
+| **Structural pattern** | A recurring structure within Aggregate Demand & Aggregate Supply |
 | **Case study** | A specific real-world example that illustrates Aggregate Demand & Aggregate Supply |
 | **Comparison** | Analyzing similarities and differences across examples of Aggregate Demand & Aggregate Supply |
       `
@@ -29,7 +29,7 @@ This part examines specific patterns and real-world examples related to Aggregat
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'Why do analysts use case studies?',
             options: [
               'They are easier than analysis',
               'They provide concrete examples that illustrate abstract concepts',
@@ -40,7 +40,7 @@ This part examines specific patterns and real-world examples related to Aggregat
             explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
           },
           {
-            question: 'Comparing examples of Aggregate Demand & Aggregate Supply across regions helps:',
+            question: 'Comparing examples of Aggregate Demand & Aggregate Supply across examples helps:',
             options: [
               'Nothing',
               'Identify universal patterns and unique local variations',
@@ -59,8 +59,8 @@ This part examines specific patterns and real-world examples related to Aggregat
       content: `
 ## Patterns & Examples — Deeper Dive
 
-### Spatial pattern
-The geographic distribution related to Aggregate Demand & Aggregate Supply. Understanding this concept is essential for mastering Aggregate Demand & Aggregate Supply in AP Macroeconomics.
+### Structural pattern
+A recurring structure within Aggregate Demand & Aggregate Supply. Understanding this concept is essential for mastering Aggregate Demand & Aggregate Supply in AP Macroeconomics.
 
 ### Case study
 A specific real-world example that illustrates Aggregate Demand & Aggregate Supply. This builds on the previous concept and connects to broader themes in the course.
@@ -75,7 +75,7 @@ Analyzing similarities and differences across examples of Aggregate Demand & Agg
       content: `
 **Applied Recall (exact term answers)** ✍️
 
-1) What term refers to the geographic distribution related to Aggregate Demand & Aggregate Supply?
+1) What term refers to a recurring structure within Aggregate Demand & Aggregate Supply?
 
 2) What concept describes a specific real-world example that illustrates Aggregate Demand & Aggregate Supply?
 
@@ -85,11 +85,11 @@ Use the exact term from this part.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'Starts with: S',
         hint2: 'Starts with: C',
         hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Aggregate Demand & Aggregate Supply), Case study (A specific real-world example that illustrates Aggregate Demand & Aggregate Supply), and Comparison (Analyzing similarities and differences across examples of Aggregate Demand & Aggregate Supply).'
+        explanation: 'Expected answers: Structural pattern (A recurring structure within Aggregate Demand & Aggregate Supply), Case study (A specific real-world example that illustrates Aggregate Demand & Aggregate Supply), and Comparison (Analyzing similarities and differences across examples of Aggregate Demand & Aggregate Supply).'
       }
     },
     {
@@ -101,23 +101,23 @@ Use the exact term from this part.
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Aggregate Demand & Aggregate Supply is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: 'A recurring structure within Aggregate Demand & Aggregate Supply is called ___',
+            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
           },
           {
             label: 'A specific real-world example that illustrates Aggregate Demand & Aggregate Supply describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
           },
           {
             label: 'Analyzing similarities and differences across examples of Aggregate Demand & Aggregate Supply is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'This is the first key concept from the lesson.',
         hint2: 'This is the second key concept from the lesson.',
         hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Aggregate Demand & Aggregate Supply. Case study — A specific real-world example that illustrates Aggregate Demand & Aggregate Supply. Comparison — Analyzing similarities and differences across examples of Aggregate Demand & Aggregate Supply.'
+        explanation: 'Structural pattern — A recurring structure within Aggregate Demand & Aggregate Supply. Case study — A specific real-world example that illustrates Aggregate Demand & Aggregate Supply. Comparison — Analyzing similarities and differences across examples of Aggregate Demand & Aggregate Supply.'
       }
     },
     {
@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Aggregate Demand & Aggregate Supply.
+- Don\'\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Aggregate Demand & Aggregate Supply.
 - **Comparison** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 
@@ -150,23 +150,23 @@ Use the exact term from this part.
             question: 'An AP question asks you to provide TWO examples of Aggregate Demand & Aggregate Supply. The strongest response would:',
             options: [
               'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
+              'Use examples from different examples to show the concept applies broadly',
               'Make up fictional examples',
               'Provide only one example'
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
           },
           {
-            question: 'A pattern observed in Aggregate Demand & Aggregate Supply is consistent across multiple world regions. This suggests:',
+            question: 'A pattern observed in Aggregate Demand & Aggregate Supply is consistent across many examples. This suggests:',
             options: [
               'Coincidence',
-              'An underlying process that operates at a global scale',
+              'An underlying process that reflects a broad general principle',
               'The data is wrong',
               'Local factors only'
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
           }
         ]
       }

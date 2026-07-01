@@ -15,7 +15,7 @@ This part examines specific patterns and real-world examples related to The Civi
 
 | Concept | Description |
 |---------|-------------|
-| **Spatial pattern** | The geographic distribution related to The Civil War |
+| **Structural pattern** | A recurring structure within The Civil War |
 | **Case study** | A specific real-world example that illustrates The Civil War |
 | **Comparison** | Analyzing similarities and differences across examples of The Civil War |
       `
@@ -29,7 +29,7 @@ This part examines specific patterns and real-world examples related to The Civi
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'Why do analysts use case studies?',
             options: [
               'They are easier than analysis',
               'They provide concrete examples that illustrate abstract concepts',
@@ -40,7 +40,7 @@ This part examines specific patterns and real-world examples related to The Civi
             explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
           },
           {
-            question: 'Comparing examples of The Civil War across regions helps:',
+            question: 'Comparing examples of The Civil War across examples helps:',
             options: [
               'Nothing',
               'Identify universal patterns and unique local variations',
@@ -59,8 +59,8 @@ This part examines specific patterns and real-world examples related to The Civi
       content: `
 ## Patterns & Examples — Deeper Dive
 
-### Spatial pattern
-The geographic distribution related to The Civil War. Understanding this concept is essential for mastering The Civil War in AP US History.
+### Structural pattern
+A recurring structure within The Civil War. Understanding this concept is essential for mastering The Civil War in AP US History.
 
 ### Case study
 A specific real-world example that illustrates The Civil War. This builds on the previous concept and connects to broader themes in the course.
@@ -75,7 +75,7 @@ Analyzing similarities and differences across examples of The Civil War. This is
       content: `
 **Applied Recall (exact term answers)** ✍️
 
-1) What term refers to the geographic distribution related to The Civil War?
+1) What term refers to a recurring structure within The Civil War?
 
 2) What concept describes a specific real-world example that illustrates The Civil War?
 
@@ -85,11 +85,11 @@ Use the exact term from this part.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'Starts with: S',
         hint2: 'Starts with: C',
         hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to The Civil War), Case study (A specific real-world example that illustrates The Civil War), and Comparison (Analyzing similarities and differences across examples of The Civil War).'
+        explanation: 'Expected answers: Structural pattern (A recurring structure within The Civil War), Case study (A specific real-world example that illustrates The Civil War), and Comparison (Analyzing similarities and differences across examples of The Civil War).'
       }
     },
     {
@@ -101,23 +101,23 @@ Use the exact term from this part.
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to The Civil War is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: 'A recurring structure within The Civil War is called ___',
+            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
           },
           {
             label: 'A specific real-world example that illustrates The Civil War describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
           },
           {
             label: 'Analyzing similarities and differences across examples of The Civil War is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'This is the first key concept from the lesson.',
         hint2: 'This is the second key concept from the lesson.',
         hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to The Civil War. Case study — A specific real-world example that illustrates The Civil War. Comparison — Analyzing similarities and differences across examples of The Civil War.'
+        explanation: 'Structural pattern — A recurring structure within The Civil War. Case study — A specific real-world example that illustrates The Civil War. Comparison — Analyzing similarities and differences across examples of The Civil War.'
       }
     },
     {
@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of The Civil War.
+- Don\'\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of The Civil War.
 - **Comparison** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 
@@ -150,23 +150,23 @@ Use the exact term from this part.
             question: 'An AP question asks you to provide TWO examples of The Civil War. The strongest response would:',
             options: [
               'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
+              'Use examples from different examples to show the concept applies broadly',
               'Make up fictional examples',
               'Provide only one example'
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
           },
           {
-            question: 'A pattern observed in The Civil War is consistent across multiple world regions. This suggests:',
+            question: 'A pattern observed in The Civil War is consistent across many examples. This suggests:',
             options: [
               'Coincidence',
-              'An underlying process that operates at a global scale',
+              'An underlying process that reflects a broad general principle',
               'The data is wrong',
               'Local factors only'
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
           }
         ]
       }

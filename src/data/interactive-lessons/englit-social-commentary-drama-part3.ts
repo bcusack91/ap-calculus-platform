@@ -15,7 +15,7 @@ This part examines specific patterns and real-world examples related to Social C
 
 | Concept | Description |
 |---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Social Commentary in Drama |
+| **Structural pattern** | A recurring structure within Social Commentary in Drama |
 | **Case study** | A specific real-world example that illustrates Social Commentary in Drama |
 | **Comparison** | Analyzing similarities and differences across examples of Social Commentary in Drama |
       `
@@ -29,7 +29,7 @@ This part examines specific patterns and real-world examples related to Social C
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'Why do analysts use case studies?',
             options: [
               'They are easier than analysis',
               'They provide concrete examples that illustrate abstract concepts',
@@ -40,7 +40,7 @@ This part examines specific patterns and real-world examples related to Social C
             explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
           },
           {
-            question: 'Comparing examples of Social Commentary in Drama across regions helps:',
+            question: 'Comparing examples of Social Commentary in Drama across examples helps:',
             options: [
               'Nothing',
               'Identify universal patterns and unique local variations',
@@ -59,8 +59,8 @@ This part examines specific patterns and real-world examples related to Social C
       content: `
 ## Patterns & Examples — Deeper Dive
 
-### Spatial pattern
-The geographic distribution related to Social Commentary in Drama. Understanding this concept is essential for mastering Social Commentary in Drama in AP English Literature.
+### Structural pattern
+A recurring structure within Social Commentary in Drama. Understanding this concept is essential for mastering Social Commentary in Drama in AP English Literature.
 
 ### Case study
 A specific real-world example that illustrates Social Commentary in Drama. This builds on the previous concept and connects to broader themes in the course.
@@ -75,7 +75,7 @@ Analyzing similarities and differences across examples of Social Commentary in D
       content: `
 **Applied Recall (exact term answers)** ✍️
 
-1) What term refers to the geographic distribution related to Social Commentary in Drama?
+1) What term refers to a recurring structure within Social Commentary in Drama?
 
 2) What concept describes a specific real-world example that illustrates Social Commentary in Drama?
 
@@ -85,11 +85,11 @@ Use the exact term from this part.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'Starts with: S',
         hint2: 'Starts with: C',
         hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Social Commentary in Drama), Case study (A specific real-world example that illustrates Social Commentary in Drama), and Comparison (Analyzing similarities and differences across examples of Social Commentary in Drama).'
+        explanation: 'Expected answers: Structural pattern (A recurring structure within Social Commentary in Drama), Case study (A specific real-world example that illustrates Social Commentary in Drama), and Comparison (Analyzing similarities and differences across examples of Social Commentary in Drama).'
       }
     },
     {
@@ -101,23 +101,23 @@ Use the exact term from this part.
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Social Commentary in Drama is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: 'A recurring structure within Social Commentary in Drama is called ___',
+            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
           },
           {
             label: 'A specific real-world example that illustrates Social Commentary in Drama describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
           },
           {
             label: 'Analyzing similarities and differences across examples of Social Commentary in Drama is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'This is the first key concept from the lesson.',
         hint2: 'This is the second key concept from the lesson.',
         hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Social Commentary in Drama. Case study — A specific real-world example that illustrates Social Commentary in Drama. Comparison — Analyzing similarities and differences across examples of Social Commentary in Drama.'
+        explanation: 'Structural pattern — A recurring structure within Social Commentary in Drama. Case study — A specific real-world example that illustrates Social Commentary in Drama. Comparison — Analyzing similarities and differences across examples of Social Commentary in Drama.'
       }
     },
     {
@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Social Commentary in Drama.
+- Don\'\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Social Commentary in Drama.
 - **Comparison** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 
@@ -150,23 +150,23 @@ Use the exact term from this part.
             question: 'An AP question asks you to provide TWO examples of Social Commentary in Drama. The strongest response would:',
             options: [
               'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
+              'Use examples from different examples to show the concept applies broadly',
               'Make up fictional examples',
               'Provide only one example'
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
           },
           {
-            question: 'A pattern observed in Social Commentary in Drama is consistent across multiple world regions. This suggests:',
+            question: 'A pattern observed in Social Commentary in Drama is consistent across many examples. This suggests:',
             options: [
               'Coincidence',
-              'An underlying process that operates at a global scale',
+              'An underlying process that reflects a broad general principle',
               'The data is wrong',
               'Local factors only'
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
           }
         ]
       }

@@ -15,7 +15,7 @@ This part examines specific patterns and real-world examples related to Diction 
 
 | Concept | Description |
 |---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Diction & Syntax |
+| **Structural pattern** | A recurring structure within Diction & Syntax |
 | **Case study** | A specific real-world example that illustrates Diction & Syntax |
 | **Comparison** | Analyzing similarities and differences across examples of Diction & Syntax |
       `
@@ -29,7 +29,7 @@ This part examines specific patterns and real-world examples related to Diction 
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'Why do analysts use case studies?',
             options: [
               'They are easier than analysis',
               'They provide concrete examples that illustrate abstract concepts',
@@ -40,7 +40,7 @@ This part examines specific patterns and real-world examples related to Diction 
             explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
           },
           {
-            question: 'Comparing examples of Diction & Syntax across regions helps:',
+            question: 'Comparing examples of Diction & Syntax across examples helps:',
             options: [
               'Nothing',
               'Identify universal patterns and unique local variations',
@@ -59,8 +59,8 @@ This part examines specific patterns and real-world examples related to Diction 
       content: `
 ## Patterns & Examples — Deeper Dive
 
-### Spatial pattern
-The geographic distribution related to Diction & Syntax. Understanding this concept is essential for mastering Diction & Syntax in AP English Language.
+### Structural pattern
+A recurring structure within Diction & Syntax. Understanding this concept is essential for mastering Diction & Syntax in AP English Language.
 
 ### Case study
 A specific real-world example that illustrates Diction & Syntax. This builds on the previous concept and connects to broader themes in the course.
@@ -75,7 +75,7 @@ Analyzing similarities and differences across examples of Diction & Syntax. This
       content: `
 **Applied Recall (exact term answers)** ✍️
 
-1) What term refers to the geographic distribution related to Diction & Syntax?
+1) What term refers to a recurring structure within Diction & Syntax?
 
 2) What concept describes a specific real-world example that illustrates Diction & Syntax?
 
@@ -85,11 +85,11 @@ Use the exact term from this part.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'Starts with: S',
         hint2: 'Starts with: C',
         hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Diction & Syntax), Case study (A specific real-world example that illustrates Diction & Syntax), and Comparison (Analyzing similarities and differences across examples of Diction & Syntax).'
+        explanation: 'Expected answers: Structural pattern (A recurring structure within Diction & Syntax), Case study (A specific real-world example that illustrates Diction & Syntax), and Comparison (Analyzing similarities and differences across examples of Diction & Syntax).'
       }
     },
     {
@@ -101,23 +101,23 @@ Use the exact term from this part.
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to Diction & Syntax is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: 'A recurring structure within Diction & Syntax is called ___',
+            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
           },
           {
             label: 'A specific real-world example that illustrates Diction & Syntax describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
           },
           {
             label: 'Analyzing similarities and differences across examples of Diction & Syntax is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
+        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
         hint1: 'This is the first key concept from the lesson.',
         hint2: 'This is the second key concept from the lesson.',
         hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Diction & Syntax. Case study — A specific real-world example that illustrates Diction & Syntax. Comparison — Analyzing similarities and differences across examples of Diction & Syntax.'
+        explanation: 'Structural pattern — A recurring structure within Diction & Syntax. Case study — A specific real-world example that illustrates Diction & Syntax. Comparison — Analyzing similarities and differences across examples of Diction & Syntax.'
       }
     },
     {
@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Diction & Syntax.
+- Don\'\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Diction & Syntax.
 - **Comparison** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 
@@ -150,23 +150,23 @@ Use the exact term from this part.
             question: 'An AP question asks you to provide TWO examples of Diction & Syntax. The strongest response would:',
             options: [
               'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
+              'Use examples from different examples to show the concept applies broadly',
               'Make up fictional examples',
               'Provide only one example'
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
           },
           {
-            question: 'A pattern observed in Diction & Syntax is consistent across multiple world regions. This suggests:',
+            question: 'A pattern observed in Diction & Syntax is consistent across many examples. This suggests:',
             options: [
               'Coincidence',
-              'An underlying process that operates at a global scale',
+              'An underlying process that reflects a broad general principle',
               'The data is wrong',
               'Local factors only'
             ],
             correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
           }
         ]
       }
