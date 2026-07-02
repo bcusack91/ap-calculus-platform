@@ -7,6 +7,7 @@ import { Redis } from '@upstash/redis'
 // ── API Rate Limiter (optional — skipped if Upstash not configured) ──
 let apiRatelimit: Ratelimit | null = null
 let authRatelimit: Ratelimit | null = null
+let gameRatelimit: Ratelimit | null = null
 
 if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
   const redis = new Redis({
@@ -26,6 +27,17 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     redis,
     limiter: Ratelimit.slidingWindow(30, '60 s'),
     prefix: 'rl:auth',
+    analytics: true,
+  })
+  // Competitive gameplay polls every ~500ms and is used by whole classrooms
+  // behind a single school IP, so the general IP limiter throttles legit play.
+  // These endpoints are limited per USER with a generous budget instead (a
+  // single match is ~180 req/min; 600 leaves headroom while still bounding a
+  // runaway/abusive client).
+  gameRatelimit = new Ratelimit({
+    redis,
+    limiter: Ratelimit.slidingWindow(600, '60 s'),
+    prefix: 'rl:game',
     analytics: true,
   })
 } else if (process.env.NODE_ENV === 'production') {
@@ -82,6 +94,45 @@ export async function middleware(request: NextRequest) {
     }
 
     const ip = getClientIp(request)
+
+    // Competitive gameplay (match polling, answer submission, queue polling) is
+    // high-frequency by design and shared across a classroom's single IP. Limit
+    // it per authenticated USER with a generous budget so a shared IP isn't
+    // throttled mid-match, while a single user still can't hammer it.
+    if (nextUrl.pathname.startsWith('/api/competitive/') && gameRatelimit) {
+      try {
+        const secureCookie = nextUrl.protocol === 'https:'
+        const cookieName = secureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
+        const gameToken = await getToken({
+          req: request,
+          secret: process.env.AUTH_SECRET,
+          secureCookie,
+          cookieName,
+          salt: cookieName,
+        })
+        const key = gameToken?.sub ? `user:${gameToken.sub}` : `ip:${ip}`
+        const { success, limit, reset } = await gameRatelimit.limit(key)
+        if (!success) {
+          return NextResponse.json(
+            { error: 'Too many requests. Please try again later.' },
+            {
+              status: 429,
+              headers: {
+                'X-RateLimit-Limit': limit.toString(),
+                'X-RateLimit-Remaining': '0',
+                'X-RateLimit-Reset': reset.toString(),
+                'Retry-After': Math.ceil((reset - Date.now()) / 1000).toString(),
+              },
+            }
+          )
+        }
+        return NextResponse.next()
+      } catch (err) {
+        // Fail open — a rate-limiter blip must not break live matches.
+        console.error('[middleware] game rate limiter error (failing open):', err)
+        return NextResponse.next()
+      }
+    }
 
     // Use stricter limiter for auth endpoints, but exclude NextAuth
     // internal routes (callback, session, csrf, providers) since OAuth
