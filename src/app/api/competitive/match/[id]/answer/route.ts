@@ -19,13 +19,13 @@ export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id: matchId } = await params;
   try {
     const session = await auth();
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { id: matchId } = await params;
     const body = await request.json();
     const parsed = parseBody(answerSubmissionSchema, body);
     if (!parsed.success) {
@@ -514,9 +514,12 @@ export async function POST(
     return NextResponse.json(result.data, { status: result.status });
 
   } catch (error) {
-    console.error('Error submitting answer:', error);
+    // Include the matchId + error detail so recurrences are diagnosable in one
+    // look (this path previously swallowed everything into a generic 500, which
+    // the client rendered as a silently-stuck question).
+    console.error(`Error submitting answer (match ${matchId}):`, error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Could not record answer, please retry' },
       { status: 500 }
     );
   }

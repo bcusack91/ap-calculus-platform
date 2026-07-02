@@ -114,6 +114,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect' | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [correctAnswerIndex, setCorrectAnswerIndex] = useState<number | null>(null);
   const [feedbackQuestionIndex, setFeedbackQuestionIndex] = useState<number | null>(null);
   const [player1Emotion, setPlayer1Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
@@ -370,15 +371,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const isPlayer1 = currentUserId === matchState.player1Id;
     const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
     const currentQuestion = matchState.questions[playerQuestionIndex];
-    
-    // Check if this player already answered the current question
-    const alreadyAnswered = isPlayer1
-      ? matchState.gameData?.player1AnsweredCurrent
-      : matchState.gameData?.player2AnsweredCurrent;
-    
-    if (alreadyAnswered) {
-      return;
-    }
+    // (Double-submit is already prevented by isSubmitting above + the server's
+    // question-index check; the old gameData.player{1,2}AnsweredCurrent guard read
+    // fields the server never writes, so it was dead code and has been removed.)
 
     setSelectedPosition(answerIndex);
     setIsSubmitting(true);
@@ -396,6 +391,24 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       });
 
       const _endTime = Date.now();
+
+      // If the submission failed server-side (e.g. a transient error under load,
+      // or a rejected/stale question index), DO NOT render it as a wrong answer —
+      // that silently left players stuck on the same question with no score. Surface
+      // it and let them re-tap to retry; the next poll will have re-synced state.
+      if (!response.ok) {
+        let msg = 'Could not submit your answer — tap an option to retry.';
+        try {
+          const err = await response.json();
+          if (err?.error) msg = `Couldn't submit (${err.error}) — tap an option to retry.`;
+        } catch { /* non-JSON error body */ }
+        console.error('Answer submit failed:', response.status, msg);
+        setSubmitError(msg);
+        setIsSubmitting(false);
+        setSelectedPosition(null);
+        return;
+      }
+      setSubmitError(null);
 
       const data = await response.json();
 
@@ -472,6 +485,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       }
     } catch (error) {
       console.error('ERROR submitting answer:', error);
+      setSubmitError('Network error submitting your answer — tap an option to retry.');
       setIsSubmitting(false);
       setSelectedPosition(null);
     }
@@ -880,7 +894,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt || currentQuestion.question}>
             {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
           </h2>
-          
+
+          {submitError && (
+            <div className="mb-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 px-4 py-2 text-sm text-red-700 dark:text-red-300">
+              {submitError}
+            </div>
+          )}
+
           {isSubmitting && (
             <div className="flex items-center justify-center gap-2 text-purple-600">
               <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-600"></div>

@@ -87,21 +87,21 @@ export default function APPhysics1CompetitivePage() {
 
   const checkQueue = useCallback(async () => {
     try {
-      const res = await fetch('/api/competitive/queue')
+      const res = await fetch(selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue')
       const data: QueueStatus = await res.json()
       if (data.status === 'not_in_queue') {
         setInQueue(false)
         setQueueStatus(null)
       } else if (data.status === 'matched') {
         setInQueue(false)
-        router.push(`/competitive/match/${data.matchId}?from=ap-physics1`)
+        router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${data.matchId}?from=ap-physics1`)
       } else {
         setQueueStatus(data)
       }
     } catch (err) {
       console.error('Error checking queue:', err)
     }
-  }, [router])
+  }, [router, selectedMode])
 
   useEffect(() => {
     if (inQueue) {
@@ -120,14 +120,14 @@ export default function APPhysics1CompetitivePage() {
 
   const joinQueue = async () => {
     try {
-      const res = await fetch('/api/competitive/queue', {
+      const res = await fetch(selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topicSlug: selectedTopic || 'ap-physics1', gameMode: selectedMode }),
       })
       const data: QueueStatus = await res.json()
       if (data.status === 'matched') {
-        router.push(`/competitive/match/${data.matchId}?from=ap-physics1`)
+        router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${data.matchId}?from=ap-physics1`)
       } else {
         setInQueue(true)
         setQueueStatus(data)
@@ -155,7 +155,7 @@ export default function APPhysics1CompetitivePage() {
         body: JSON.stringify({ topicSlug: selectedTopic || 'ap-physics1', gameMode: selectedMode, aiDifficulty: difficulty }),
       })
       const data = await res.json()
-      if (data.matchId) router.push(`/competitive/match/${data.matchId}?from=ap-physics1`)
+      if (data.matchId) router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${data.matchId}?from=ap-physics1`)
     } catch (err) {
       console.error('Error starting AI practice:', err)
     }

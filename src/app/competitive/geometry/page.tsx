@@ -52,13 +52,13 @@ export default function GeometryCompetitivePage() {
 
   const checkQueue = useCallback(async () => {
     try {
-      const res = await fetch('/api/competitive/queue')
+      const res = await fetch(selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue')
       const data: QueueStatus = await res.json()
       if (data.status === 'not_in_queue') { setInQueue(false); setQueueStatus(null) }
-      else if (data.status === 'matched') { setInQueue(false); router.push(`/competitive/match/${data.matchId}?from=geometry`) }
+      else if (data.status === 'matched') { setInQueue(false); router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${data.matchId}?from=geometry`) }
       else setQueueStatus(data)
     } catch (err) { console.error('Error checking queue:', err) }
-  }, [router])
+  }, [router, selectedMode])
 
   useEffect(() => { if (inQueue) { const i = setInterval(checkQueue, 2000); return () => clearInterval(i) } }, [inQueue, checkQueue])
 
@@ -72,9 +72,9 @@ export default function GeometryCompetitivePage() {
 
   const joinQueue = async () => {
     try {
-      const res = await fetch('/api/competitive/queue', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicSlug: selectedTopic || 'geometry', gameMode: selectedMode }) })
+      const res = await fetch(selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicSlug: selectedTopic || 'geometry', gameMode: selectedMode }) })
       const data: QueueStatus = await res.json()
-      if (data.status === 'matched') router.push(`/competitive/match/${data.matchId}?from=geometry`)
+      if (data.status === 'matched') router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${data.matchId}?from=geometry`)
       else { setInQueue(true); setQueueStatus(data) }
     } catch (err) { console.error('Error joining queue:', err) }
   }
@@ -85,7 +85,7 @@ export default function GeometryCompetitivePage() {
     try {
       const res = await fetch('/api/competitive/practice-ai', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicSlug: selectedTopic || 'geometry', gameMode: selectedMode, aiDifficulty: difficulty }) })
       const data = await res.json()
-      if (data.matchId) router.push(`/competitive/match/${data.matchId}?from=geometry`)
+      if (data.matchId) router.push(`/competitive/${selectedMode === 'TEAM_BATTLE' ? 'team-match' : 'match'}/${data.matchId}?from=geometry`)
     } catch (err) { console.error('Error:', err) }
   }
 
