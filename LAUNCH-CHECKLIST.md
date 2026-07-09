@@ -6,6 +6,17 @@ Legend: `[ ]` to do · `[x]` done · 🔴 critical / blocks adoption · 🟠 hig
 
 ---
 
+## 0a. Pre-launch audit criticals — SHIPPED 2026-07-09 (commit 5968683f)
+
+A fresh 9-agent audit (full site + mobile) found 6 critical launch blockers; all fixed + adversarially reviewed:
+1. Public internal roadmap page deleted (/improvement-roadmap was live + in sitemap — request removal in Search Console if indexed).
+2. Legal template disclaimers removed from Privacy/Terms; contacts → privacy@studymondo.com.
+3. Exit-quiz pass no longer 404s (competitive-course-map, 12 divergent slugs fixed).
+4. Assignments now reach the gradebook: server-side auto-grading from exit-quiz / competitive / lesson events (assignment-autocomplete lib); client self-grade hole closed; maxAttempts blank = unlimited.
+5. TeacherQuizBuilder demoware deleted.
+6. Schedule Competition UI removed (no student surface existed).
+Remaining from that audit: HIGH tier (join-class callback loss, OG image social proof, report-a-problem, onboarding gaps) + a full mobile batch (match screen unusable on phones, nav scroll, KaTeX on daily-question pages, numeric keyboards) — see the audit report in session history.
+
 ## 0. Content-review remediation — SHIPPED 2026-07-01
 
 A 7-dimension end-to-end review ran (overall B‑: strong engine, unfinished finish). P0 + P1 fixes shipped (commits be5c9431, 57175612, eee11650):
