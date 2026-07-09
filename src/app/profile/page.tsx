@@ -10,6 +10,7 @@ import { StudyHeatmap } from '@/components/StudyHeatmap';
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate';
 import { MilestonesList } from '@/components/MilestoneCelebrations';
 import NightModeScheduler from '@/components/NightModeScheduler';
+import { GuardianEmailCard } from '@/components/GuardianEmailCard';
 import DeleteAccountDialog from '@/components/DeleteAccountDialog';
 
 export default function ProfilePage() {
@@ -102,6 +103,9 @@ export default function ProfilePage() {
             </div>
           </div>
         </div>
+
+        {/* Parent / guardian email */}
+        <GuardianEmailCard />
 
         {/* Color Scheme */}
         <div className="max-w-md mx-auto mb-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">

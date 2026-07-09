@@ -5,6 +5,10 @@
       "schedule": "0 14 * * 0"
     },
     {
+      "path": "/api/cron/parent-digest",
+      "schedule": "0 15 * * 0"
+    },
+    {
       "path": "/api/cron/streak-reminder",
       "schedule": "0 18 * * *"
     },

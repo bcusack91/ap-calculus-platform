@@ -22,6 +22,7 @@ model User {
   stripeCurrentPeriodEnd DateTime?
   avatarData             Json? // Custom avatar configuration
   birthYear              Int? // Self-reported at signup; drives COPPA child-directed treatment for under-13
+  guardianEmail          String? // Optional parent/guardian address for weekly progress emails (opt-out via EmailSubscriber)
   createdAt              DateTime                      @default(now())
   updatedAt              DateTime                      @updatedAt
   schoolId               String?

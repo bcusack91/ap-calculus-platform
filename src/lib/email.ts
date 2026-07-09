@@ -174,6 +174,101 @@ export async function sendWeeklyDigest(
 }
 
 /**
+ * Weekly progress summary sent to a student's parent/guardian. The unsubscribe
+ * footer is keyed to the guardian's email so they can opt out independently.
+ */
+export async function sendParentProgressEmail(
+  guardianEmail: string,
+  studentName: string | null,
+  stats: {
+    lessonsCompleted: number
+    avgMastery: number // 0-100
+    currentStreak: number
+    minutesStudied: number
+    flashcardsReviewed: number
+    quizzesTaken: number
+  }
+) {
+  const who = studentName || 'Your student'
+  // Never send a parent digest without a working (signed) unsubscribe link.
+  if (!makeUnsubscribeToken(guardianEmail)) return
+  await sendEmail({
+    from: FROM_ADDRESS,
+    to: guardianEmail,
+    subject: `${who}'s week on Study Mondo 📊`,
+    text: `Here's ${who}'s week on Study Mondo: ${stats.lessonsCompleted} lessons completed, ${stats.avgMastery}% average mastery, ${stats.quizzesTaken} quizzes, ${stats.minutesStudied} minutes studied, ${stats.currentStreak} day streak. You're receiving this because someone added your email as a guardian contact; use the unsubscribe link below to stop.`,
+    html: emailLayout(`
+      <h1 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #111827;">
+        ${who}&rsquo;s week 📊
+      </h1>
+      <p style="color: #4b5563; font-size: 16px; line-height: 1.5; margin-bottom: 24px;">
+        Here&rsquo;s a quick summary of ${who}&rsquo;s progress on Study Mondo this week.
+      </p>
+      <div style="background-color: #f9fafb; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr>
+            <td style="padding: 8px 0; color: #4b5563; font-size: 15px;">📚 Lessons completed</td>
+            <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #111827; font-size: 18px;">${stats.lessonsCompleted}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #4b5563; font-size: 15px;">🎯 Average mastery</td>
+            <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #111827; font-size: 18px;">${stats.avgMastery}%</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #4b5563; font-size: 15px;">🧠 Quizzes</td>
+            <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #111827; font-size: 18px;">${stats.quizzesTaken}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #4b5563; font-size: 15px;">⏱️ Minutes studied</td>
+            <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #111827; font-size: 18px;">${stats.minutesStudied}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #4b5563; font-size: 15px;">🔥 Streak</td>
+            <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #7c3aed; font-size: 18px;">${stats.currentStreak} days</td>
+          </tr>
+        </table>
+      </div>
+      <p style="color: #9ca3af; font-size: 13px; line-height: 1.5;">
+        You&rsquo;re receiving this because your email was added as a parent/guardian contact on Study Mondo. You can
+        unsubscribe at any time using the link below.
+      </p>
+    `, guardianEmail),
+  })
+}
+
+/**
+ * Double opt-in: ask a parent/guardian to confirm before any progress digests
+ * are sent. Returns silently (no email) if no signing secret is configured.
+ */
+export async function sendGuardianConfirmEmail(guardianEmail: string, studentName: string | null) {
+  const token = makeUnsubscribeToken(guardianEmail)
+  if (!token) return
+  const confirmUrl = `${APP_URL}/api/guardian-confirm?token=${encodeURIComponent(token)}`
+  const who = studentName || 'A student'
+  await sendEmail({
+    from: FROM_ADDRESS,
+    to: guardianEmail,
+    subject: `Confirm weekly progress updates for ${who}`,
+    text: `${who} added your email on Study Mondo to receive a short weekly progress summary. Confirm to start: ${confirmUrl}\n\nIf you don't recognize this, just ignore this email — you won't be added or emailed again.`,
+    html: emailLayout(`
+      <h1 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #111827;">
+        Confirm progress updates
+      </h1>
+      <p style="color: #4b5563; font-size: 16px; line-height: 1.5; margin-bottom: 24px;">
+        ${who} added your email on Study Mondo to receive a short <strong>weekly summary</strong> of their progress.
+        Confirm below to start receiving it.
+      </p>
+      <a href="${confirmUrl}" style="display: inline-block; background-color: #7c3aed; color: #ffffff; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none;">
+        Confirm &amp; subscribe
+      </a>
+      <p style="color: #9ca3af; font-size: 13px; line-height: 1.5; margin-top: 20px;">
+        If you don&rsquo;t recognize this, just ignore this email — you won&rsquo;t be added or emailed again.
+      </p>
+    `, guardianEmail),
+  })
+}
+
+/**
  * Send a streak reminder to keep the user motivated.
  */
 export async function sendStreakReminder(email: string, name: string | null, currentStreak: number) {
