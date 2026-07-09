@@ -32,7 +32,7 @@ export async function GET() {
     })
 
     if (memberships.length === 0) {
-      return NextResponse.json({ assignments: [], classrooms: [] })
+      return NextResponse.json({ assignments: [], classrooms: [], upcomingCompetitions: [] })
     }
 
     const classroomIds = memberships.map((m) => m.classroom.id)
@@ -101,7 +101,28 @@ export async function GET() {
       teacher: m.classroom.teacher?.name || 'Teacher',
     }))
 
-    return NextResponse.json({ assignments: shaped, classrooms })
+    // Upcoming scheduled live games for the student's classrooms — a read-only
+    // heads-up ("be in class Friday"). The teacher launches the actual live
+    // lobby at game time; no answer/question data is exposed here.
+    const upcomingCompetitions = await prisma.scheduledCompetition.findMany({
+      where: {
+        classroomId: { in: classroomIds },
+        status: 'SCHEDULED',
+        endsAt: { gte: new Date() },
+      },
+      select: {
+        id: true,
+        title: true,
+        scheduledAt: true,
+        endsAt: true,
+        duration: true,
+        classroom: { select: { id: true, name: true } },
+      },
+      orderBy: { scheduledAt: 'asc' },
+      take: 10,
+    })
+
+    return NextResponse.json({ assignments: shaped, classrooms, upcomingCompetitions })
   } catch (error) {
     console.error('[GET /api/student/assignments]', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

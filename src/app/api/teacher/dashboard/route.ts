@@ -68,11 +68,14 @@ export async function GET() {
     take: 10,
   })
 
-  // Upcoming competitions
+  // Upcoming competitions — scheduled live games that haven't been launched
+  // yet (launching converts them to a TeacherLobby and marks them COMPLETED).
+  // The endsAt filter keeps never-launched past games from lingering here.
   const upcomingCompetitions = await prisma.scheduledCompetition.findMany({
     where: {
       classroomId: { in: classroomIds },
       status: { in: ['SCHEDULED', 'ACTIVE'] },
+      endsAt: { gte: now },
     },
     include: {
       classroom: { select: { name: true } },

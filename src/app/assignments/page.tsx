@@ -34,6 +34,15 @@ interface ClassroomInfo {
   teacher: string
 }
 
+interface UpcomingCompetition {
+  id: string
+  title: string
+  scheduledAt: string
+  endsAt: string
+  duration: number
+  classroom: { id: string; name: string }
+}
+
 const TYPE_LABELS: Record<string, { label: string; icon: string }> = {
   INTERACTIVE_LESSON: { label: 'Interactive Lesson', icon: '📖' },
   FLASHCARD_REVIEW: { label: 'Flashcard Review', icon: '🃏' },
@@ -93,6 +102,7 @@ export default function StudentAssignmentsPage() {
   const router = useRouter()
   const [assignments, setAssignments] = useState<AssignmentItem[]>([])
   const [classrooms, setClassrooms] = useState<ClassroomInfo[]>([])
+  const [upcomingCompetitions, setUpcomingCompetitions] = useState<UpcomingCompetition[]>([])
   const [loading, setLoading] = useState(true)
   const [filterStatus, setFilterStatus] = useState<FilterStatus>('all')
   const [filterClassroom, setFilterClassroom] = useState<string>('all')
@@ -114,6 +124,7 @@ export default function StudentAssignmentsPage() {
         const data = await res.json()
         setAssignments(data.assignments)
         setClassrooms(data.classrooms)
+        setUpcomingCompetitions(data.upcomingCompetitions || [])
       }
     } catch {
       // ignore
@@ -162,6 +173,38 @@ export default function StudentAssignmentsPage() {
             </p>
           </div>
         </div>
+
+        {/* Upcoming live games — read-only heads-up so students know to be in class */}
+        {upcomingCompetitions.length > 0 && (
+          <div className="mb-8 bg-white dark:bg-gray-800 rounded-xl shadow-md border border-purple-200 dark:border-purple-800 p-5">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-1">📅 Upcoming live games</h2>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+              Your teacher will start these in class — be there and ready to join!
+            </p>
+            <div className="space-y-3">
+              {upcomingCompetitions.map((c) => (
+                <div
+                  key={c.id}
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 rounded-lg bg-purple-50 dark:bg-purple-900/10"
+                >
+                  <div className="min-w-0">
+                    <p className="font-semibold text-gray-900 dark:text-white truncate">⚔️ {c.title}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{c.classroom.name}</p>
+                  </div>
+                  <div className="text-sm text-purple-700 dark:text-purple-300 font-medium whitespace-nowrap">
+                    {new Date(c.scheduledAt).toLocaleString(undefined, {
+                      weekday: 'short',
+                      month: 'short',
+                      day: 'numeric',
+                      hour: 'numeric',
+                      minute: '2-digit',
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Class announcements (hidden per classroom when there are none) */}
         {classrooms.length > 0 && (

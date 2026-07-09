@@ -56,6 +56,7 @@ model User {
   competitiveGrantsReceived  CompetitiveGrant[]         @relation("CompetitiveGrantStudent")
   competitiveGrantsGiven     CompetitiveGrant[]         @relation("CompetitiveGrantTeacher")
   exitQuizAttempts           ExitQuizAttempt[]
+  dailyChallengeResults      DailyChallengeResult[]
   userAchievements           UserAchievement[]
   bookmarks                  Bookmark[]
   announcements              Announcement[]             @relation("AnnouncementAuthor")
@@ -546,6 +547,18 @@ model DiagnosticTest {
   // Hot path: every diagnostic history/latest-attempt lookup filters on
   // (userId, category) ordered by createdAt desc.
   @@index([userId, category, createdAt])
+}
+
+model DailyChallengeResult {
+  id          String   @id @default(cuid())
+  userId      String
+  day         DateTime @db.Date
+  score       Int
+  total       Int
+  completedAt DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, day])
 }
 
 model DailyStreak {

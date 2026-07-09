@@ -158,6 +158,19 @@ export default function ClassroomDetailPage() {
   const [creatingRemediation, setCreatingRemediation] = useState<string | null>(null)
   const [startingLobby, setStartingLobby] = useState(false)
 
+  // Schedule a future live game (ScheduledCompetition = the calendar entry;
+  // launching it creates a real TeacherLobby students join by code)
+  const [showScheduleModal, setShowScheduleModal] = useState(false)
+  const [scheduleForm, setScheduleForm] = useState({
+    title: '',
+    topicSlug: '',
+    scheduledAt: '',
+    durationMin: '10',
+  })
+  const [schedulingComp, setSchedulingComp] = useState(false)
+  const [scheduleError, setScheduleError] = useState('')
+  const [launchingCompId, setLaunchingCompId] = useState<string | null>(null)
+
   // Settings
   const [editName, setEditName] = useState('')
   const [editDesc, setEditDesc] = useState('')
@@ -570,6 +583,61 @@ export default function ClassroomDetailPage() {
     setStartingLobby(false)
   }
 
+  // Create a ScheduledCompetition — a calendar entry the class can see on
+  // their assignments page. At game time the teacher hits "Launch now" and it
+  // becomes a real TeacherLobby.
+  const submitSchedule = async () => {
+    if (!scheduleForm.title.trim() || !scheduleForm.topicSlug || !scheduleForm.scheduledAt) return
+    setSchedulingComp(true)
+    setScheduleError('')
+    try {
+      const start = new Date(scheduleForm.scheduledAt)
+      const durationMin = Math.max(1, Math.min(60, Math.floor(Number(scheduleForm.durationMin) || 10)))
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: scheduleForm.title.trim(),
+          topicSlug: scheduleForm.topicSlug,
+          scheduledAt: start.toISOString(),
+          endsAt: new Date(start.getTime() + durationMin * 60 * 1000).toISOString(),
+          duration: durationMin * 60, // model stores seconds
+        }),
+      })
+      if (res.ok) {
+        setShowScheduleModal(false)
+        setScheduleForm({ title: '', topicSlug: '', scheduledAt: '', durationMin: '10' })
+        await loadClassroom()
+      } else {
+        const json = await res.json().catch(() => ({}))
+        setScheduleError(json.error || 'Could not schedule the game')
+      }
+    } catch {
+      setScheduleError('Could not schedule the game')
+    } finally {
+      setSchedulingComp(false)
+    }
+  }
+
+  // Turn a scheduled competition into a live TeacherLobby and jump into the
+  // lobby control room (students then join by code, exactly like Start live game).
+  const launchCompetition = async (compId: string) => {
+    setLaunchingCompId(compId)
+    try {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitions/${compId}/launch`, {
+        method: 'POST',
+      })
+      const json = await res.json().catch(() => ({}))
+      if (res.ok && json.lobby?.id) {
+        router.push(`/teacher/lobby/${json.lobby.id}`)
+        return
+      }
+    } catch {
+      // fall through to re-enable the button
+    }
+    setLaunchingCompId(null)
+  }
+
 
   const saveSettings = async () => {
     setSaving(true)
@@ -918,6 +986,17 @@ export default function ClassroomDetailPage() {
               </h2>
               <div className="flex flex-wrap gap-2">
                 <button
+                  onClick={() => {
+                    loadTopics()
+                    setScheduleError('')
+                    setShowScheduleModal(true)
+                  }}
+                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-all text-sm"
+                  title="Put a live game on the calendar — students see it on their assignments page"
+                >
+                  📅 Schedule live game
+                </button>
+                <button
                   onClick={startLiveLobby}
                   disabled={startingLobby}
                   className="px-4 py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all text-sm disabled:opacity-50"
@@ -928,7 +1007,8 @@ export default function ClassroomDetailPage() {
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 -mt-2 mb-4">
-              <strong>Start live game</strong> runs a real-time team match your students join live from any device.
+              <strong>Start live game</strong> runs a real-time team match your students join live from any device.{' '}
+              <strong>Schedule live game</strong> puts one on the calendar — students see it on their assignments page, and you hit <strong>Launch now</strong> at game time.
             </p>
             {classroom.competitions.length === 0 ? (
               <div className="text-center py-12">
@@ -949,7 +1029,7 @@ export default function ClassroomDetailPage() {
                         <div className="flex gap-3 mt-1 text-xs text-gray-500">
                           <span>Topic: {c.topicSlug}</span>
                           <span>Mode: {c.gameMode.replace(/_/g, ' ')}</span>
-                          <span>Duration: {c.duration}min</span>
+                          <span>Duration: {Math.round(c.duration / 60)}min</span>
                         </div>
                       </div>
                       <div className="text-right">
@@ -974,6 +1054,18 @@ export default function ClassroomDetailPage() {
                     <p className="text-xs text-gray-400 mt-2">
                       {new Date(c.scheduledAt).toLocaleString()} — {new Date(c.endsAt).toLocaleString()}
                     </p>
+                    {c.status === 'SCHEDULED' && (
+                      <div className="mt-3">
+                        <button
+                          onClick={() => launchCompetition(c.id)}
+                          disabled={launchingCompId === c.id}
+                          className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all disabled:opacity-50"
+                          title="Start this game now as a live lobby your students join by code"
+                        >
+                          {launchingCompId === c.id ? 'Launching…' : '▶ Launch now'}
+                        </button>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -1549,6 +1641,116 @@ export default function ClassroomDetailPage() {
               {creatingAssignment
                 ? (editingAssignmentId ? 'Saving…' : 'Creating...')
                 : (editingAssignmentId ? 'Save Changes' : 'Create Assignment')}
+            </button>
+          </div>
+        </div>
+      </FocusTrapDialog>
+
+      {/* Schedule live game (creates a ScheduledCompetition calendar entry) */}
+      <FocusTrapDialog
+        open={showScheduleModal}
+        onClose={() => setShowScheduleModal(false)}
+        title="Schedule live game"
+      >
+        <div className="p-4 sm:p-8">
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">📅 Schedule live game</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+            Students see this on their assignments page so they know to be in class.
+            At game time, hit <strong>Launch now</strong> on the competition to open the live lobby.
+          </p>
+          <div className="space-y-4">
+            <div>
+              <label
+                htmlFor="schedule-title"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Title *
+              </label>
+              <input
+                id="schedule-title"
+                type="text"
+                value={scheduleForm.title}
+                onChange={(e) => setScheduleForm({ ...scheduleForm, title: e.target.value })}
+                placeholder="e.g., Friday Derivatives Showdown"
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="schedule-topic"
+                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Topic *
+              </label>
+              <select
+                id="schedule-topic"
+                value={scheduleForm.topicSlug}
+                onChange={(e) => setScheduleForm({ ...scheduleForm, topicSlug: e.target.value })}
+                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              >
+                <option value="">Select a topic…</option>
+                {courses.map((c) => (
+                  <optgroup key={c.courseTitle} label={c.courseTitle}>
+                    {c.topics.map((t) => (
+                      <option key={t.slug} value={t.slug}>{t.title}</option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  htmlFor="schedule-when"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  When *
+                </label>
+                <input
+                  id="schedule-when"
+                  type="datetime-local"
+                  value={scheduleForm.scheduledAt}
+                  onChange={(e) => setScheduleForm({ ...scheduleForm, scheduledAt: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="schedule-duration"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  Duration (minutes)
+                </label>
+                <input
+                  id="schedule-duration"
+                  type="number"
+                  value={scheduleForm.durationMin}
+                  onChange={(e) => setScheduleForm({ ...scheduleForm, durationMin: e.target.value })}
+                  min="1"
+                  max="60"
+                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                />
+              </div>
+            </div>
+          </div>
+          {scheduleError && (
+            <div className="mt-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-lg text-sm">
+              {scheduleError}
+            </div>
+          )}
+          <div className="flex gap-3 mt-6">
+            <button
+              onClick={() => setShowScheduleModal(false)}
+              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={submitSchedule}
+              disabled={!scheduleForm.title.trim() || !scheduleForm.topicSlug || !scheduleForm.scheduledAt || schedulingComp}
+              className="flex-1 px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              {schedulingComp ? 'Scheduling…' : 'Schedule'}
             </button>
           </div>
         </div>
