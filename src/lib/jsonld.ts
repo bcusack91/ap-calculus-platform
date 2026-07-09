@@ -15,9 +15,13 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/android-chrome-512x512.png`,
+    // sameAs should list the org's real social profiles (e.g. an official
+    // X/Twitter, Instagram, TikTok, or YouTube channel URL). No official
+    // profiles exist in the codebase today — OWNER: add full profile URLs here
+    // as strings once accounts are created; do NOT add share-intent links.
     sameAs: [],
     description:
-      'Free interactive study platform for AP courses, math, science, and more. Features flashcards, quizzes, competitive mode, and progress tracking.',
+      'Study Mondo is an ad-free freemium learning platform covering math from grade 4 through AP courses, plus SAT, ACT, and MCAT prep. Students get interactive lessons, flashcards, practice exams, diagnostics, score predictors, and study plans; teachers get class management and progress-tracking tools.',
   }
 }
 
@@ -96,6 +100,71 @@ export function learningResourceJsonLd(topic: {
         name: topic.courseTitle,
       },
     }),
+  }
+}
+
+/**
+ * The three shared tool-page families that render ToolPageSeoBody. Used for
+ * both the per-family SEO intro and the LearningResource JSON-LD below.
+ */
+export type ToolFamily = 'score-predictor' | 'practice' | 'study-plan'
+
+const TOOL_FAMILY_LABELS: Record<ToolFamily, string> = {
+  'score-predictor': 'Score Predictor',
+  practice: 'Practice Exam',
+  'study-plan': 'Study Plans',
+}
+
+const TOOL_FAMILY_RESOURCE_TYPES: Record<ToolFamily, string> = {
+  'score-predictor': 'Assessment',
+  practice: 'Practice Exam',
+  'study-plan': 'Study Guide',
+}
+
+const TOOL_FAMILY_DESCRIPTIONS: Record<ToolFamily, (subject: string) => string> = {
+  'score-predictor': (subject) =>
+    `Estimate your ${subject} exam score from your quiz results, topic mastery, and practice-exam performance.`,
+  practice: (subject) =>
+    `Full-length ${subject} practice exam with realistic timing, instant scoring, and explanations for every question.`,
+  'study-plan': (subject) =>
+    `Day-by-day ${subject} study plans sized for different prep timelines, tracked from your dashboard.`,
+}
+
+/** Best-effort educationalLevel from the subject display name. */
+function educationalLevelForSubject(subjectName: string): string {
+  if (/mcat|organic chemistry/i.test(subjectName)) return 'College'
+  const grade = subjectName.match(/grade\s*(\d+)/i)
+  if (grade) return `Grade ${grade[1]}`
+  if (/pre-?algebra/i.test(subjectName)) return 'Middle School'
+  return 'High School'
+}
+
+/**
+ * LearningResource schema for the templated tool pages (score predictor,
+ * full-length practice exam, study plans). Rendered by the shared wrapper
+ * components in src/components/{ScorePredictor,FullLengthPracticeExam,StudyPlanSelector}.tsx.
+ */
+export function toolLearningResourceJsonLd({
+  subjectName,
+  tool,
+}: {
+  subjectName: string
+  tool: ToolFamily
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name: `${subjectName} ${TOOL_FAMILY_LABELS[tool]}`,
+    description: TOOL_FAMILY_DESCRIPTIONS[tool](subjectName),
+    learningResourceType: TOOL_FAMILY_RESOURCE_TYPES[tool],
+    educationalLevel: educationalLevelForSubject(subjectName),
+    isAccessibleForFree: true,
+    inLanguage: 'en',
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
   }
 }
 

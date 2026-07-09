@@ -8,6 +8,7 @@ import FocusTrapDialog from '@/components/FocusTrapDialog'
 import { QRCodeSVG } from 'qrcode.react'
 import Gradebook from '@/components/Gradebook'
 import { StandardsMastery } from '@/components/StandardsMastery'
+import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 
 interface Member {
   id: string
@@ -117,7 +118,7 @@ interface AssignmentCreateBody {
   topicSlug?: string
 }
 
-type TabType = 'members' | 'assignments' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'settings'
+type TabType = 'members' | 'assignments' | 'announcements' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'settings'
 
 export default function ClassroomDetailPage() {
   const router = useRouter()
@@ -605,6 +606,7 @@ export default function ClassroomDetailPage() {
   const tabs: { key: TabType; label: string; icon: string }[] = [
     { key: 'members', label: 'Students', icon: '👤' },
     { key: 'assignments', label: 'Assignments', icon: '📋' },
+    { key: 'announcements', label: 'Announce', icon: '📢' },
     { key: 'competitions', label: 'Competitions', icon: '⚔️' },
     { key: 'performance', label: 'Performance', icon: '📊' },
     { key: 'gradebook', label: 'Gradebook', icon: '📒' },
@@ -1193,7 +1195,15 @@ export default function ClassroomDetailPage() {
         {activeTab === 'gradebook' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Gradebook</h2>
-            <Gradebook classroomId={classroomId} />
+            <Gradebook classroomId={classroomId} classroomName={classroom.name} />
+          </div>
+        )}
+
+        {/* Announcements Tab */}
+        {activeTab === 'announcements' && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Announcements</h2>
+            <ClassroomAnnouncements classroomId={classroomId} isTeacher={true} />
           </div>
         )}
 

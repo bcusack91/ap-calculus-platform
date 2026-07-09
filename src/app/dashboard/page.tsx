@@ -21,7 +21,6 @@ import DashboardTutorial from '@/components/DashboardTutorial'
 import RandomPracticeButton from '@/components/RandomPracticeButton'
 import { DailyChallenge } from '@/components/DailyChallenge'
 import { SeasonalEvents } from '@/components/SeasonalEvents'
-import { BattlePass } from '@/components/BattlePass'
 import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 import { StudyHeatmap } from '@/components/StudyHeatmap'
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
@@ -961,8 +960,6 @@ function DashboardContent() {
           <ChallengeAFriend />
           {/* Seasonal Events */}
           <SeasonalEvents />
-          {/* Battle Pass */}
-          <BattlePass />
           {/* Study Heatmap */}
           <PaidAnalyticsGate label="Study heatmap">
             <StudyHeatmap />

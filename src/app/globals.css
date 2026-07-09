@@ -611,3 +611,67 @@ pre {
     max-width: 100%;
   }
 }
+
+/* ============ Printable class report (Gradebook) ============
+   When a gradebook is on the page, printing shows only the grade sheet:
+   plain black-on-white, full table (no scroll clipping), with a
+   classroom-name + date header rendered by the component (print:block). */
+@media print {
+  /* Show only the gradebook, hide everything else on the page (nav, tabs, buttons). */
+  body:has(.gradebook-print-root) * {
+    visibility: hidden;
+  }
+  body:has(.gradebook-print-root) .gradebook-print-root,
+  body:has(.gradebook-print-root) .gradebook-print-root * {
+    visibility: visible;
+  }
+  body:has(.gradebook-print-root) .gradebook-print-root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Black on white, no chrome. */
+  .gradebook-print-root,
+  .gradebook-print-root * {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Expand the table: no scroll container clipping, no sticky offsets. */
+  .gradebook-print-root .overflow-x-auto {
+    overflow: visible !important;
+  }
+  .gradebook-print-root .sticky {
+    position: static !important;
+  }
+  .gradebook-print-root .truncate {
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: normal !important;
+    max-width: none !important;
+  }
+
+  /* Readable, compact grade sheet. */
+  .gradebook-print-root table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 10pt;
+  }
+  .gradebook-print-root th,
+  .gradebook-print-root td {
+    border: 1px solid #999 !important;
+    padding: 4px 6px !important;
+  }
+  .gradebook-print-root thead {
+    display: table-header-group; /* repeat header on each page */
+  }
+  .gradebook-print-root tr {
+    break-inside: avoid;
+  }
+}

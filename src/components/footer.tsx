@@ -25,6 +25,7 @@ const footerLinks = {
   ],
   'Company': [
     { name: 'About', href: '/about' },
+    { name: 'For Teachers', href: '/for-teachers' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
     { name: 'Editorial Standards', href: '/editorial-standards' },

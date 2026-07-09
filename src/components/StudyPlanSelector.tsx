@@ -3,6 +3,7 @@
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
+import { toolLearningResourceJsonLd } from '@/lib/jsonld'
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
@@ -227,9 +228,17 @@ function StudyPlanSelectorInner(config: StudyPlanSelectorConfig) {
 export default function StudyPlanSelector(config: StudyPlanSelectorConfig) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            toolLearningResourceJsonLd({ subjectName: config.subject, tool: 'study-plan' })
+          ),
+        }}
+      />
       <ToolBreadcrumb subjectName={config.subject} tool="Study Plan" />
       <StudyPlanSelectorInner {...config} />
-      <ToolPageSeoBody subjectName={config.subject} />
+      <ToolPageSeoBody subjectName={config.subject} tool="study-plan" />
     </>
   )
 }

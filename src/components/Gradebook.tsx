@@ -36,9 +36,10 @@ interface AssignmentStat {
 
 interface GradebookProps {
   classroomId: string
+  classroomName?: string
 }
 
-export default function Gradebook({ classroomId }: GradebookProps) {
+export default function Gradebook({ classroomId, classroomName }: GradebookProps) {
   const [assignments, setAssignments] = useState<Assignment[]>([])
   const [students, setStudents] = useState<Student[]>([])
   const [stats, setStats] = useState<AssignmentStat[]>([])
@@ -178,7 +179,27 @@ export default function Gradebook({ classroomId }: GradebookProps) {
   }
 
   return (
-    <div>
+    <div className="gradebook-print-root">
+      {/* Print-only report header */}
+      <div className="hidden print:block mb-4">
+        <h1 className="text-xl font-bold">{classroomName ? `${classroomName} — Grade Report` : 'Grade Report'}</h1>
+        <p className="text-sm">
+          Printed {new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
+          {' · '}{students.length} students · {assignments.length} assignments
+        </p>
+      </div>
+
+      {/* Toolbar (hidden when printing) */}
+      <div className="flex justify-end mb-4 print:hidden">
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="px-4 py-2 text-sm font-medium bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
+        >
+          🖨️ Print report
+        </button>
+      </div>
+
       {/* Summary stats */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm text-center">
@@ -209,7 +230,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
         </div>
       </div>
 
-      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Click any grade cell to set or change a score (0–100%). Leave it blank to clear.</p>
+      <p className="text-xs text-gray-500 dark:text-gray-400 mb-2 print:hidden">Click any grade cell to set or change a score (0–100%). Leave it blank to clear.</p>
 
       {/* Gradebook table */}
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-x-auto">

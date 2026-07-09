@@ -3,6 +3,7 @@
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
+import { toolLearningResourceJsonLd } from '@/lib/jsonld'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import type { AccentColor } from './PracticeExam'
@@ -699,9 +700,17 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
 export default function FullLengthPracticeExam(config: FullLengthExamConfig) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            toolLearningResourceJsonLd({ subjectName: config.subject, tool: 'practice' })
+          ),
+        }}
+      />
       <ToolBreadcrumb subjectName={config.subject} tool="Practice Exam" />
       <FullLengthPracticeExamInner {...config} />
-      <ToolPageSeoBody subjectName={config.subject} />
+      <ToolPageSeoBody subjectName={config.subject} tool="practice" />
     </>
   )
 }

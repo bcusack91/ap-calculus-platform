@@ -3,6 +3,7 @@
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
+import { toolLearningResourceJsonLd } from '@/lib/jsonld'
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
@@ -334,9 +335,17 @@ function ScorePredictorInner(config: ScorePredictorConfig) {
 export default function ScorePredictor(config: ScorePredictorConfig) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            toolLearningResourceJsonLd({ subjectName: config.subject, tool: 'score-predictor' })
+          ),
+        }}
+      />
       <ToolBreadcrumb subjectName={config.subject} tool="Score Predictor" />
       <ScorePredictorInner {...config} />
-      <ToolPageSeoBody subjectName={config.subject} />
+      <ToolPageSeoBody subjectName={config.subject} tool="score-predictor" />
     </>
   )
 }

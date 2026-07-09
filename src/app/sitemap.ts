@@ -6,6 +6,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { topicHubs } from '@/data/topic-hubs'
 import { CRAM_PLANS, CRAM_PLAN_COURSE_SLUGS } from '@/data/cram-plans'
+import { courseHubPaths } from '@/data/course-metadata'
 
 export const revalidate = 3600 // Revalidate every hour
 
@@ -178,8 +179,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     })),
     // All diagnostic pages
+    // NOTE: the calculus diagnostics are canonically /calcab-diagnostic and
+    // /calcbc-diagnostic — next.config.ts 301s the /ap-calc{ab,bc}-diagnostic
+    // aliases to them, so the sitemap must emit the canonical targets.
     ...([
-      'ap-bio', 'ap-calcab', 'ap-calcbc', 'ap-chem', 'ap-stats', 'ap-psych',
+      'ap-bio', 'calcab', 'calcbc', 'ap-chem', 'ap-stats', 'ap-psych',
       'ap-physics1', 'ap-physics2', 'ap-physics-c-mech', 'ap-physics-c-em', 'ap-precalculus',
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
@@ -299,12 +303,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return []
   })
 
-  const coursePages: MetadataRoute.Sitemap = courses.map((course) => ({
-    url: `${baseUrl}/courses/${course.slug}`,
-    lastModified: course.updatedAt,
-    changeFrequency: 'weekly',
-    priority: 0.9,
-  }))
+  // Only emit /courses/[slug] for courses WITHOUT a dedicated hub page.
+  // Courses in courseHubPaths canonicalize to their hub URL (which the static
+  // list above already covers), so submitting the /courses/ duplicate would
+  // create "duplicate, submitted URL not selected as canonical" noise.
+  const coursePages: MetadataRoute.Sitemap = courses
+    .filter((course) => !(course.slug in courseHubPaths))
+    .map((course) => ({
+      url: `${baseUrl}/courses/${course.slug}`,
+      lastModified: course.updatedAt,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    }))
 
   // Topic pages. We only need each topic's textContent LENGTH (not the body) to
   // apply the thin-content filter, so measure it in SQL rather than streaming

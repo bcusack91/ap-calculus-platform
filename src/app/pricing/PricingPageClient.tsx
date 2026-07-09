@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { trackPremiumUpgradeClick } from '@/lib/analytics'
@@ -156,9 +157,6 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
 
           {/* Premium plan */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-purple-500 p-8 relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-              MOST POPULAR
-            </div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Premium</h2>
             <p className="text-gray-500 dark:text-gray-400 mb-6">The complete study experience</p>
             <div className="mb-6">
@@ -209,8 +207,23 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
           <div className="space-y-6">
             {[
               { q: 'Can I cancel anytime?', a: 'Yes! Cancel your subscription at any time from the customer portal. You\'ll keep Premium access until the end of your billing period.' },
-              { q: 'Is there a free plan?', a: 'Yes. The free plan includes all courses, lessons, practice, study plans, and basic flashcards, plus a few AI tutor explanations per day. Premium adds unlimited AI tutoring, advanced analytics, and priority support.' },
-              { q: 'Do you offer student discounts?', a: 'Our pricing is already student-friendly. We\'re also exploring institutional licensing for schools — contact us for details.' },
+              { q: 'Is there a free plan?', a: `Yes. The free plan includes all courses, lessons, practice, diagnostics, study plans, flashcards, streaks, and progress tracking, plus ${FREE_LIMITS.aiExplanationsPerDay} AI tutor explanations per day. Premium adds unlimited AI tutoring, advanced performance analytics, and priority email support.` },
+              {
+                q: 'What about schools and teachers?',
+                a: (
+                  <>
+                    Teacher tools are free — classrooms, the gradebook, and standards mastery tracking all cost nothing. Head to{' '}
+                    <Link href="/for-teachers" className="text-purple-600 dark:text-purple-400 underline hover:no-underline">
+                      For Teachers
+                    </Link>{' '}
+                    to set up your class, and see our{' '}
+                    <Link href="/dpa" className="text-purple-600 dark:text-purple-400 underline hover:no-underline">
+                      DPA page
+                    </Link>{' '}
+                    if your school or district needs a data privacy agreement.
+                  </>
+                ),
+              },
               { q: 'What payment methods do you accept?', a: 'We accept all major credit cards, debit cards, and Apple Pay / Google Pay through our payment processor Stripe.' },
             ].map(({ q, a }) => (
               <div key={q} className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm">

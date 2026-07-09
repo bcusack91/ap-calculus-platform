@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 
 interface AssignmentItem {
   id: string
@@ -161,6 +162,21 @@ export default function StudentAssignmentsPage() {
             </p>
           </div>
         </div>
+
+        {/* Class announcements (hidden per classroom when there are none) */}
+        {classrooms.length > 0 && (
+          <div className="space-y-6 mb-8">
+            {classrooms.map((c) => (
+              <ClassroomAnnouncements
+                key={c.id}
+                classroomId={c.id}
+                isTeacher={false}
+                hideWhenEmpty
+                classroomName={c.name}
+              />
+            ))}
+          </div>
+        )}
 
         {assignments.length === 0 ? (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-12 text-center">
