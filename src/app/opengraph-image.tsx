@@ -146,7 +146,7 @@ export default function Image() {
           }}
         >
           <span style={{ fontWeight: 600 }}>studymondo.com</span>
-          <span>Join thousands of students studying smarter</span>
+          <span>Free lessons, flashcards &amp; practice — Grade 4 to AP</span>
         </div>
       </div>
     ),

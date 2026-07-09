@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
+import ReportProblem from '@/components/ReportProblem'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
@@ -288,6 +289,9 @@ export default function ExitQuiz({
                         {!answer?.correct && (
                           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1" dangerouslySetInnerHTML={{ __html: renderLatex(q.explanation) }} />
                         )}
+                        <div className="mt-1.5">
+                          <ReportProblem questionId={String(q.id ?? i)} topicSlug={topicSlug} context={q.question.slice(0, 200)} />
+                        </div>
                       </div>
                     </div>
                   </div>

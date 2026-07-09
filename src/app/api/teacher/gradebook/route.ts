@@ -21,6 +21,7 @@ export async function GET(req: NextRequest) {
         : { id: classroomId, OR: [{ teacherId: user.id }, { coTeachers: { some: { userId: user.id } } }] },
     include: {
       members: {
+        where: { isActive: true },
         include: {
           user: { select: { id: true, name: true, email: true, image: true } },
         },

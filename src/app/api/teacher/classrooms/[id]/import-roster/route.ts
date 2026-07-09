@@ -107,7 +107,7 @@ export async function POST(
 
     // Existing accounts for these emails.
     const existing = await prisma.user.findMany({
-      where: { email: { in: emails } },
+      where: { email: { in: emails, mode: 'insensitive' } },
       select: { id: true, email: true },
     })
     const existingEmails = new Set(existing.map((u) => u.email!.toLowerCase()))
@@ -133,7 +133,7 @@ export async function POST(
 
       // Mirror signup: give each new account a LearningPath.
       const newUsers = await prisma.user.findMany({
-        where: { email: { in: newEmails } },
+        where: { email: { in: newEmails, mode: 'insensitive' } },
         select: { id: true },
       })
       if (newUsers.length > 0) {
@@ -146,7 +146,7 @@ export async function POST(
 
     // Resolve every email to a user id (existing + newly created).
     const allUsers = await prisma.user.findMany({
-      where: { email: { in: emails } },
+      where: { email: { in: emails, mode: 'insensitive' } },
       select: { id: true, email: true },
     })
 

@@ -40,7 +40,9 @@ export async function GET(
           where: { isActive: true },
           orderBy: { createdAt: 'desc' },
           include: {
-            _count: { select: { submissions: true } },
+            // Count only real activity — creation seeds a NOT_STARTED row per
+            // student, which made every new assignment show "N submissions".
+            _count: { select: { submissions: { where: { status: { not: 'NOT_STARTED' } } } } },
           },
         },
         competitions: {

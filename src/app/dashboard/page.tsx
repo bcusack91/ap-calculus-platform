@@ -172,6 +172,7 @@ function DashboardContent() {
   const [sendingVerification, setSendingVerification] = useState(false)
   const [verificationError, setVerificationError] = useState(false)
   const [pendingAssignments, setPendingAssignments] = useState(0)
+  const [pathTopic, setPathTopic] = useState<string | null>(null)
   const [achievements, setAchievements] = useState<AchievementData[]>([])
   const [achievementStats, setAchievementStats] = useState({ unlocked: 0, total: 0 })
   const [newAchievements, setNewAchievements] = useState<string[]>([])
@@ -302,6 +303,8 @@ function DashboardContent() {
         router.push('/onboarding')
         return
       }
+      // Keep the study path so the cold-start card can point at the next topic.
+      if (d.learningPath?.currentTopic) setPathTopic(d.learningPath.currentTopic)
     }
 
     // Fetch AP Chem diagnostic recommendations
@@ -398,6 +401,7 @@ function DashboardContent() {
   const overview = data?.overview
   const streak = data?.streak
   const courseProgress = data?.courseProgress ?? []
+  // Onboarding-selected study path (used for the cold-start card below)
   const recentActivity = data?.recentActivity ?? []
 
   const statusLabel = (s: string) => {
@@ -710,6 +714,23 @@ function DashboardContent() {
                 )}
               </div>
             ) : null}
+
+            {/* Cold start: onboarding picked a course but nothing studied yet —
+                give the promised "start your study path" entry point. */}
+            {courseProgress.length === 0 && pathTopic && (
+              <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 shadow-sm text-white">
+                <h2 className="text-xl font-bold mb-1">🚀 Start your study path</h2>
+                <p className="text-sm text-purple-100 mb-4">
+                  Your course is ready — jump into your first topic and your progress will show up here.
+                </p>
+                <Link
+                  href={`/topics/${pathTopic}`}
+                  className="inline-block px-5 py-2.5 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
+                >
+                  Start your first topic →
+                </Link>
+              </div>
+            )}
 
             {/* Course Progress */}
             {courseProgress.length > 0 && (

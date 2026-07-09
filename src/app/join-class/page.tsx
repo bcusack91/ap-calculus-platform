@@ -64,7 +64,7 @@ function JoinClassContent() {
           <h1 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Sign in to join a class</h1>
           <p className="text-gray-500 mb-6">You need an account to join a classroom.</p>
           <Link
-            href="/auth/signin"
+            href={`/auth/signin?callbackUrl=${encodeURIComponent(joinCode ? `/join-class?code=${joinCode}` : '/join-class')}`}
             className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all"
           >
             Sign In

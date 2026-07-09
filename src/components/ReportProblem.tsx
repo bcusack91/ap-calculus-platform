@@ -14,18 +14,27 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
   const [description, setDescription] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async () => {
     if (!category || !description.trim()) return
     setSubmitting(true)
+    setError('')
     try {
-      await fetch('/api/report-problem', {
+      const res = await fetch('/api/report-problem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId, topicSlug, context, category, description: description.trim() }),
       })
-      setSubmitted(true)
-    } catch { /* silent */ }
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        const data = await res.json().catch(() => ({}))
+        setError(data.error || 'Could not submit — please try again.')
+      }
+    } catch {
+      setError('Could not submit — please try again.')
+    }
     setSubmitting(false)
   }
 
@@ -53,7 +62,13 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
     <div className="mt-2 p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 space-y-2">
       <p className="text-xs font-medium text-gray-700 dark:text-gray-300">What&apos;s wrong?</p>
       <div className="flex flex-wrap gap-1.5">
-        {['Wrong answer', 'Unclear question', 'Typo', 'Missing content', 'Other'].map(cat => (
+        {([
+          { label: 'Wrong answer', value: 'wrong-answer' },
+          { label: 'Unclear question', value: 'unclear' },
+          { label: 'Typo', value: 'typo' },
+          { label: 'Missing content', value: 'broken' },
+          { label: 'Other', value: 'other' },
+        ] as const).map(({ label, value: cat }) => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}
@@ -63,7 +78,7 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-600'
             }`}
           >
-            {cat}
+            {label}
           </button>
         ))}
       </div>
@@ -75,6 +90,7 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
         className="w-full text-xs rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-2 py-1.5 focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
         maxLength={500}
       />
+      {error && <p className="text-xs text-red-600 dark:text-red-400">{error}</p>}
       <div className="flex gap-2">
         <button
           onClick={handleSubmit}

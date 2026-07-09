@@ -51,6 +51,36 @@ const COURSE_GROUPS = [
     ],
   },
   {
+    label: 'AP History & Social Science',
+    courses: [
+      { slug: 'ap-us-history', name: 'AP US History', icon: '🇺🇸', description: 'Colonial era to modern day' },
+      { slug: 'ap-world-history', name: 'AP World History', icon: '🌍', description: '1200 CE to the present' },
+      { slug: 'ap-us-government', name: 'AP US Government', icon: '🏛️', description: 'Constitution, institutions, rights' },
+      { slug: 'ap-human-geography', name: 'AP Human Geography', icon: '🗺️', description: 'Population, culture, cities' },
+      { slug: 'ap-macroeconomics', name: 'AP Macroeconomics', icon: '📉', description: 'GDP, inflation, policy' },
+      { slug: 'ap-microeconomics', name: 'AP Microeconomics', icon: '💹', description: 'Markets, firms, elasticity' },
+      { slug: 'ap-african-american-studies', name: 'AP African American Studies', icon: '✊', description: 'History, culture, movements' },
+    ],
+  },
+  {
+    label: 'AP English & Computer Science',
+    courses: [
+      { slug: 'ap-english-language', name: 'AP English Language', icon: '✒️', description: 'Rhetoric, argument, synthesis' },
+      { slug: 'ap-english-literature', name: 'AP English Literature', icon: '📚', description: 'Fiction, poetry, drama' },
+      { slug: 'ap-computer-science-a', name: 'AP Computer Science A', icon: '💻', description: 'Java, OOP, algorithms' },
+      { slug: 'ap-computer-science-principles', name: 'AP CS Principles', icon: '🖥️', description: 'Computing ideas, impacts' },
+    ],
+  },
+  {
+    label: 'More AP Sciences',
+    courses: [
+      { slug: 'ap-physics-2', name: 'AP Physics 2', icon: '🧲', description: 'Fluids, thermo, E&M, optics' },
+      { slug: 'ap-physics-c-mechanics', name: 'AP Physics C: Mechanics', icon: '🎯', description: 'Calculus-based mechanics' },
+      { slug: 'ap-physics-c-em', name: 'AP Physics C: E&M', icon: '⚡', description: 'Calculus-based E&M' },
+      { slug: 'ap-environmental-science', name: 'AP Environmental Science', icon: '🌱', description: 'Ecosystems, energy, pollution' },
+    ],
+  },
+  {
     label: 'Test Prep',
     courses: [
       { slug: 'sat-prep', name: 'SAT Prep', icon: '📝', description: 'Math, Reading, Writing' },
@@ -252,7 +282,7 @@ export default function OnboardingPage() {
               {saving ? 'Setting up...' : 'Start Learning →'}
             </button>
             <p className="mt-6 text-xs text-gray-400">
-              You can change your course any time from the dashboard.
+              You can explore any other course anytime from the Courses menu.
             </p>
           </div>
         )}

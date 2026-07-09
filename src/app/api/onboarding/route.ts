@@ -86,7 +86,10 @@ export async function GET() {
     })
 
     return NextResponse.json({
-      hasCompletedOnboarding: !!learningPath || topicProgressCount > 0,
+      // A LearningPath ROW exists for every account (created at signup) — only a
+      // path with a chosen course (currentTopic set) counts as onboarded. Prior
+      // study activity also counts, so existing users are never forced back in.
+      hasCompletedOnboarding: !!learningPath?.currentTopic || topicProgressCount > 0,
       learningPath: learningPath
         ? {
             currentTopic: learningPath.currentTopic,

@@ -84,7 +84,13 @@ function SignUpForm() {
       setError('Please select an avatar')
       return
     }
+    await createAccount(selectedAvatar)
+  }
 
+  // Creates the account (avatar optional — the "skip" path passes null so
+  // skipping no longer navigates away and destroys the signup).
+  const createAccount = async (avatar: AvatarData | null) => {
+    setError('')
     setIsLoading(true)
 
     try {
@@ -97,7 +103,7 @@ function SignUpForm() {
           password,
           name,
           birthYear,
-          avatarData: selectedAvatar
+          avatarData: avatar ?? undefined
         }),
       })
 
@@ -283,10 +289,11 @@ function SignUpForm() {
               <div className="text-center">
                 <button
                   type="button"
-                  onClick={() => router.push('/profile')}
-                  className="text-purple-600 dark:text-purple-400 hover:underline text-sm"
+                  onClick={() => createAccount(null)}
+                  disabled={isLoading}
+                  className="text-purple-600 dark:text-purple-400 hover:underline text-sm disabled:opacity-50"
                 >
-                  Or customize your own avatar later →
+                  Skip for now — create my account →
                 </button>
               </div>
             </div>
