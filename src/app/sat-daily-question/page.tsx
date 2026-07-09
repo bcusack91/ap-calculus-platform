@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { MathText } from '@/components/MathText'
 import { InArticleAd } from '@/components/ad-banner'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
@@ -117,9 +118,7 @@ function SATDailyQuestionPageInner() {
 
                   {/* Question Body */}
                   <div className="p-6">
-                    <p className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
-                      {q.question.question}
-                    </p>
+                    <MathText text={q.question.question} className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
 
                     {/* Options */}
                     <div className="mb-5 space-y-2">
@@ -153,8 +152,7 @@ function SATDailyQuestionPageInner() {
                           >
                             <span className="mr-2 font-bold">
                               {String.fromCharCode(65 + i)}.
-                            </span>
-                            {opt}
+                            </span><MathText inline text={opt} />
                           </button>
                         )
                       })}
@@ -174,9 +172,7 @@ function SATDailyQuestionPageInner() {
                         <div className="mb-1 font-semibold text-gray-900 dark:text-white">
                           {sel === correct ? '✅ Correct!' : '❌ Incorrect'}
                         </div>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {q.question.explanation}
-                        </p>
+                        <MathText text={q.question.explanation} className="text-gray-600 dark:text-gray-400" />
                       </div>
                     )}
                   </div>

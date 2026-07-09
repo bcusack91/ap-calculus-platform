@@ -270,7 +270,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
                             if (e.key === 'Enter') (e.target as HTMLInputElement).blur()
                             else if (e.key === 'Escape') { cancelRef.current = true; setEditing(null) }
                           }}
-                          className="w-16 px-1 py-0.5 text-center border-2 border-blue-400 rounded dark:bg-gray-700 dark:text-white"
+                          className="w-16 px-1 py-0.5 text-center text-base border-2 border-blue-400 rounded dark:bg-gray-700 dark:text-white"
                           aria-label={`Grade for ${student.name || 'student'} on ${a.title}`}
                         />
                       ) : (
@@ -299,7 +299,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
           {/* Footer with assignment averages */}
           <tfoot>
             <tr className="border-t-2 border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700/50">
-              <td className="p-3 font-medium text-gray-600 dark:text-gray-400 sticky left-0 bg-gray-50 dark:bg-gray-700/50 z-10">
+              <td className="p-3 font-medium text-gray-600 dark:text-gray-400 sticky left-0 bg-gray-50 dark:bg-gray-700 z-10">
                 Class Average
               </td>
               {assignments.map((a) => {

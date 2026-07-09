@@ -236,7 +236,7 @@ export function TeacherFlashcardSets() {
                 <button onClick={() => setCards((c) => [...c, { front: '', back: '' }])} className="text-sm text-purple-600 hover:text-purple-800 font-medium">+ Add card</button>
               </div>
               {cards.map((c, i) => (
-                <div key={i} className="grid grid-cols-[1fr,1fr,auto] gap-2 items-start">
+                <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr,1fr,auto] gap-2 items-start">
                   <textarea value={c.front} onChange={(e) => updateCard(i, 'front', e.target.value)} rows={2} placeholder="Front (term)" className="px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm dark:bg-gray-700 dark:text-white" />
                   <textarea value={c.back} onChange={(e) => updateCard(i, 'back', e.target.value)} rows={2} placeholder="Back (definition)" className="px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm dark:bg-gray-700 dark:text-white" />
                   <button onClick={() => removeCard(i)} className="px-2 py-1 text-red-500 hover:text-red-700" title="Remove">✕</button>
@@ -273,7 +273,7 @@ export function TeacherFlashcardSets() {
         <div className="space-y-3">
           {sets.map((s) => (
             <div key={s.id} className="p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30">
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-wrap items-center justify-between gap-3 gap-y-2">
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <h4 className="font-semibold text-gray-900 dark:text-white truncate">{s.title}</h4>
@@ -283,7 +283,7 @@ export function TeacherFlashcardSets() {
                     {s._count.cards} card{s._count.cards !== 1 ? 's' : ''}{s.subject ? ` · ${s.subject}` : ''}
                   </p>
                 </div>
-                <div className="flex items-center gap-2 shrink-0">
+                <div className="flex flex-wrap items-center gap-2 shrink-0">
                   <button onClick={() => openAssign(s.id)} className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-600 text-white hover:bg-green-700">Assign</button>
                   <a href={`/flashcard-sets/${s.id}`} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700">Study</a>
                   <button onClick={() => copyLink(s.id)} className="px-3 py-1.5 text-xs font-semibold rounded-lg border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">{copiedId === s.id ? 'Copied!' : 'Copy link'}</button>

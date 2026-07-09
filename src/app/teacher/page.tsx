@@ -132,7 +132,7 @@ export default function TeacherDashboard() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Teacher Dashboard
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mt-1">
@@ -204,7 +204,7 @@ export default function TeacherDashboard() {
                       {[cls.subject, cls.grade, cls.section].filter(Boolean).join(' • ')}
                     </p>
                   )}
-                  <div className="flex gap-4 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
                     <span>👤 {cls._count.members} students</span>
                     <span>📋 {cls._count.assignments} assignments</span>
                     <span>⚔️ {cls._count.competitions} competitions</span>

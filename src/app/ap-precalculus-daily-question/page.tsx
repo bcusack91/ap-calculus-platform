@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { MathText } from '@/components/MathText'
 import { InArticleAd } from '@/components/ad-banner'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 
@@ -55,7 +56,7 @@ function APPrecalculusDailyQuestionPageInner() {
                 <span className="text-sm font-medium opacity-80">Today&apos;s AP Precalculus Question</span>
               </div>
               <div className="p-6">
-                <p className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question.question}</p>
+                <MathText text={q.question.question} className="mb-5 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
                 <div className="mb-5 space-y-2">
                   {q.question.options.map((opt, i) => {
                     let cls = 'w-full rounded-xl border px-4 py-3 text-left text-sm transition '
@@ -65,7 +66,7 @@ function APPrecalculusDailyQuestionPageInner() {
                       else cls += 'border-gray-200 text-gray-500 dark:border-gray-600 dark:text-gray-400'
                     } else if (i === selected) cls += 'border-cyan-500 bg-cyan-50 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300 dark:border-cyan-500'
                     else cls += 'border-gray-200 text-gray-700 hover:border-cyan-300 hover:bg-cyan-50/50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-cyan-500'
-                    return (<button key={i} onClick={() => !revealed && setSelected(i)} disabled={revealed} className={cls}><span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}</button>)
+                    return (<button key={i} onClick={() => !revealed && setSelected(i)} disabled={revealed} className={cls}><span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><MathText inline text={opt} /></button>)
                   })}
                 </div>
                 {!revealed ? (
@@ -73,7 +74,7 @@ function APPrecalculusDailyQuestionPageInner() {
                 ) : (
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
-                    <p className="text-gray-600 dark:text-gray-400">{q.question.explanation}</p>
+                    <MathText text={q.question.explanation} className="text-gray-600 dark:text-gray-400" />
                   </div>
                 )}
               </div>

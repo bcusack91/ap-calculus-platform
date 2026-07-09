@@ -137,7 +137,7 @@ export function BattlePass() {
                 <span className="text-xs text-gray-700 dark:text-gray-300">{reward.free.name}</span>
                 {unlocked && !freeClaimed && (
                   <button onClick={() => claimReward(reward.level, 'free')}
-                    className="text-[10px] px-2 py-0.5 bg-green-500 text-white rounded-full">Claim</button>
+                    className="text-xs px-3 py-1.5 bg-green-500 text-white rounded-full">Claim</button>
                 )}
                 {freeClaimed && <span className="text-[10px] text-green-500">✓</span>}
               </div>
@@ -148,7 +148,7 @@ export function BattlePass() {
                 <span className="text-xs text-gray-700 dark:text-gray-300">{reward.premium.name}</span>
                 {state.isPremium && unlocked && !premClaimed && (
                   <button onClick={() => claimReward(reward.level, 'premium')}
-                    className="text-[10px] px-2 py-0.5 bg-purple-500 text-white rounded-full">Claim</button>
+                    className="text-xs px-3 py-1.5 bg-purple-500 text-white rounded-full">Claim</button>
                 )}
                 {premClaimed && <span className="text-[10px] text-purple-500">✓</span>}
               </div>

@@ -221,7 +221,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   if (error || !matchState) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-8 text-center">
           <p className="text-red-500 text-lg mb-4">{error || 'Match not found'}</p>
           <button
             onClick={() => router.push(lobbyPath)}
@@ -259,8 +259,8 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
           </div>
 
           {/* Scoreboard */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-6">
-            <div className="grid grid-cols-3 gap-4 items-center text-center">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-8 mb-6">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-4 items-center text-center">
               <div>
                 <p className="text-purple-300 text-sm font-semibold mb-2">
                   {matchState.myTeam === 1 ? 'YOUR TEAM' : 'OPPONENT TEAM'}
@@ -302,7 +302,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       <div className="max-w-4xl mx-auto">
         {/* Score Header */}
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 mb-6">
-          <div className="grid grid-cols-3 gap-4 items-center text-center">
+          <div className="grid grid-cols-3 gap-1.5 sm:gap-4 items-center text-center">
             <div>
               <p className="text-purple-300 text-xs font-semibold uppercase tracking-wider">Your Team</p>
               <p className="text-white text-sm mt-1">
@@ -351,7 +351,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
         {/* Question Area */}
         {question && (
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4 sm:p-8">
             <div className="flex justify-between items-center mb-4">
               <span className="text-sm text-gray-500">
                 Question {matchState.myQuestionIndex + 1}

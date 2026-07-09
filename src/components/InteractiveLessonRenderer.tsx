@@ -1474,10 +1474,15 @@ function SectionRenderer({
 }) {
   if (section.type === 'text') {
     return (
-      <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-5xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight prose-h1:text-gray-900 dark:prose-h1:text-white prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg prose-strong:text-purple-700 dark:prose-strong:text-purple-400 prose-strong:font-semibold prose-a:text-purple-600 dark:prose-a:text-purple-400 prose-a:no-underline hover:prose-a:underline prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-code:bg-purple-50 dark:prose-code:bg-purple-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-ul:my-6 prose-ul:space-y-2 prose-li:my-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg">
+      <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-3xl sm:prose-h1:text-5xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight prose-h1:text-gray-900 dark:prose-h1:text-white prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg prose-strong:text-purple-700 dark:prose-strong:text-purple-400 prose-strong:font-semibold prose-a:text-purple-600 dark:prose-a:text-purple-400 prose-a:no-underline hover:prose-a:underline prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-code:bg-purple-50 dark:prose-code:bg-purple-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-ul:my-6 prose-ul:space-y-2 prose-li:my-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg">
         <style jsx>{`
           :global(.prose h1) {
-            font-size: 3rem !important;
+            font-size: 1.875rem !important;
+          }
+          @media (min-width: 640px) {
+            :global(.prose h1) {
+              font-size: 3rem !important;
+            }
             margin-bottom: 2rem !important;
             line-height: 1.2 !important;
             font-weight: 800 !important;
@@ -2234,7 +2239,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
         </div>
 
         <div className="relative w-full mx-auto" style={{ maxWidth: '900px' }}>
-          <svg width="100%" height="700" viewBox="0 0 900 700" className="bg-white rounded-lg shadow-inner">
+          <svg width="100%" height="auto" viewBox="0 0 900 700" className="bg-white rounded-lg shadow-inner w-full h-auto" style={{ aspectRatio: '9 / 7' }}>
             {/* Grid */}
             <g stroke="#e2e8f0" strokeWidth="1">
               <line x1="0" y1="350" x2="900" y2="350"/>
@@ -2863,7 +2868,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                   strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
                   ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
                   li: ({ children }) => <li className="text-lg">{children}</li>,
-                  table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+                  table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
                   thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
                   tbody: ({ children }) => <tbody>{children}</tbody>,
                   tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
@@ -2908,7 +2913,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                 {children}
               </blockquote>
             ),
-            table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+            table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
             thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
             tbody: ({ children }) => <tbody>{children}</tbody>,
             tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
@@ -2942,7 +2947,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
               </blockquote>
             ),
             hr: () => <hr className="my-8 border-t-2 border-purple-100 dark:border-purple-800/50" />,
-            table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+            table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
             thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
             tbody: ({ children }) => <tbody>{children}</tbody>,
             tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
@@ -2981,7 +2986,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             </blockquote>
           ),
           hr: () => <hr className="my-8 border-t-2 border-purple-100 dark:border-purple-800/50" />,
-          table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
+          table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
           thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
           tbody: ({ children }) => <tbody>{children}</tbody>,
           tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
@@ -3188,7 +3193,7 @@ function MultipleChoiceQuiz({
                     className={`absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition focus:opacity-100 ${
                       isEliminated
                         ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 opacity-100'
-                        : 'text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                        : 'text-gray-400 dark:text-gray-500 opacity-40 sm:opacity-0 sm:group-hover:opacity-100 group-focus-within:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
                     }`}
                     title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
                     aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
@@ -3421,7 +3426,7 @@ function MiniBossBattle({
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-900 via-red-900 to-black">
         <div className="text-center">
-          <div className={`text-9xl mb-8 transition-all duration-1000 ${entranceAnimComplete ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
+          <div className={`text-7xl sm:text-9xl mb-8 transition-all duration-1000 ${entranceAnimComplete ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
             ⚔️
           </div>
           <h1 className={`text-4xl sm:text-6xl font-bold text-red-500 mb-4 transition-all duration-1000 delay-500 ${entranceAnimComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -3454,8 +3459,8 @@ function MiniBossBattle({
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-400 via-orange-500 to-red-600">
         <div className="text-center animate-bounce-in">
-          <div className="text-9xl mb-8 animate-spin-slow">🏆</div>
-          <h1 className="text-7xl font-bold text-white mb-6 drop-shadow-lg">
+          <div className="text-7xl sm:text-9xl mb-8 animate-spin-slow">🏆</div>
+          <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6 drop-shadow-lg">
             VICTORY!
           </h1>
           <p className="text-4xl text-white mb-4">You defeated {config.bossName}!</p>
@@ -3507,7 +3512,7 @@ function MiniBossBattle({
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 via-gray-900 to-black">
         <div className="text-center">
-          <div className="text-9xl mb-8">💀</div>
+          <div className="text-7xl sm:text-9xl mb-8">💀</div>
           <h1 className="text-4xl sm:text-6xl font-bold text-red-500 mb-6">
             DEFEATED...
           </h1>
@@ -3644,7 +3649,7 @@ function MiniBossBattle({
                     className={`absolute right-4 top-1/2 -translate-y-1/2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition focus:opacity-100 ${
                       eliminatedOptions.has(option.label)
                         ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 opacity-100'
-                        : 'text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                        : 'text-gray-400 dark:text-gray-500 opacity-40 sm:opacity-0 sm:group-hover:opacity-100 group-focus-within:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
                     }`}
                     title={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
                     aria-label={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
@@ -4094,7 +4099,7 @@ function InputBoxExercise({
             const isEConfig = looksLikeElectronConfig(input.correctAnswer)
             return (
             <div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                 <label className="flex-1 text-base font-medium text-gray-700 dark:text-gray-300">
                   <InlineLatex text={input.label} />
                 </label>
@@ -4103,7 +4108,7 @@ function InputBoxExercise({
                   type="text"
                   value={answers[index]}
                   onChange={(e) => handleInputChange(index, e.target.value)}
-                  className={`${isEConfig ? 'w-64' : 'w-32'} px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
+                  className={`${isEConfig ? 'w-full sm:w-64' : 'w-full sm:w-32'} px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
                   disabled={isComplete || showAnswer}
                   placeholder={isEConfig ? 'e.g. [Ne]3s23p5' : '?'}
                 />
@@ -4618,7 +4623,7 @@ function SquareRootInput({
         value={displayValue}
         onChange={handleChange}
         disabled={disabled}
-        className="w-24 h-8 text-sm text-center border-2 rounded focus:ring-2 focus:ring-blue-500 px-2"
+        className="w-24 h-10 text-base text-center border-2 rounded focus:ring-2 focus:ring-blue-500 px-2"
         placeholder={hint || 'e.g. sqrt(2)'}
       />
     </div>
@@ -4690,7 +4695,7 @@ function FractionInput({
         value={displayValue}
         onChange={handleChange}
         disabled={disabled}
-        className="w-32 h-8 text-sm text-center border-2 rounded focus:ring-2 focus:ring-blue-500 px-2"
+        className="w-32 h-10 text-base text-center border-2 rounded focus:ring-2 focus:ring-blue-500 px-2"
         placeholder="e.g. sqrt(2)/2"
       />
       <div className="text-xs text-gray-500">Type: 1/2 or sqrt(2)/2</div>

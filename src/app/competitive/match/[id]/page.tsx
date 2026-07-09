@@ -577,7 +577,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               </div>
             )}
 
-            <div className="grid grid-cols-2 gap-8 my-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 my-8">
               <div className={`p-6 rounded-xl ${
                 isPlayer1 ? 'bg-purple-100 dark:bg-purple-900/30 ring-2 ring-purple-500' : 
                 'bg-gray-100 dark:bg-gray-700'
@@ -809,7 +809,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-[200px_1fr_200px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_200px] gap-3 md:gap-6">
           {/* Left Panel - Player 1 */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
             <div className="text-center">
@@ -890,7 +890,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           </div>
         ) : currentQuestion && (
         <>
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt || currentQuestion.question}>
             {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
           </h2>

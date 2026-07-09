@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 import { useFocusTrap, useEscapeKey } from '@/lib/accessibility'
 
 interface FocusTrapDialogProps {
@@ -17,6 +17,16 @@ interface FocusTrapDialogProps {
 export default function FocusTrapDialog({ open, onClose, children, title, className }: FocusTrapDialogProps) {
   const containerRef = useFocusTrap(open)
   useEscapeKey(onClose, open)
+
+  // Lock body scroll while the dialog is open
+  useEffect(() => {
+    if (!open) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prev
+    }
+  }, [open])
 
   if (!open) return null
 

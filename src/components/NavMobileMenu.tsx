@@ -48,7 +48,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
     })
 
   return (
-    <div className="md:hidden border-t">
+    <div className="md:hidden border-t max-h-[calc(100vh-3.5rem)] overflow-y-auto overscroll-contain">
       <div className="space-y-1 px-4 pb-3 pt-2">
         <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           Topics
@@ -68,7 +68,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
                 <Link
                   key={course.slug}
                   href={getCourseHref(course.slug)}
-                  className="block pl-4 py-1.5 text-sm hover:bg-accent rounded-md"
+                  className="block pl-4 py-2.5 text-sm hover:bg-accent rounded-md"
                   onClick={onClose}
                 >
                   {course.icon || '📚'} {course.name}
@@ -93,7 +93,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
                 <Link
                   key={course.slug}
                   href={getCourseHref(course.slug)}
-                  className="block pl-8 py-1.5 text-sm hover:bg-accent rounded-md"
+                  className="block pl-8 py-2.5 text-sm hover:bg-accent rounded-md"
                   onClick={onClose}
                 >
                   {course.icon || '📚'} {course.name}

@@ -78,13 +78,13 @@ export function ImpactAnalytics() {
         <p className="text-xs text-gray-500 mb-4">Average mastery by how many topics a student has worked — more usage should mean more mastery.</p>
         <div className="space-y-2">
           {data.usageOutcome.map((b) => (
-            <div key={b.label} className="flex items-center gap-3">
-              <div className="w-28 text-sm text-gray-700 dark:text-gray-300">{b.label}</div>
+            <div key={b.label} className="flex items-center gap-2 sm:gap-3">
+              <div className="w-20 sm:w-28 shrink-0 text-xs sm:text-sm text-gray-700 dark:text-gray-300">{b.label}</div>
               <div className="flex-1 h-4 rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden">
                 <div className="h-full bg-purple-500" style={{ width: `${b.avgMastery}%` }} />
               </div>
-              <div className="w-12 text-right text-sm font-bold text-gray-700 dark:text-gray-300">{b.avgMastery}%</div>
-              <div className="w-20 text-right text-xs text-gray-400">{b.students} students</div>
+              <div className="w-10 sm:w-12 shrink-0 text-right text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300">{b.avgMastery}%</div>
+              <div className="w-16 sm:w-20 shrink-0 text-right text-[10px] sm:text-xs text-gray-400">{b.students} students</div>
             </div>
           ))}
         </div>

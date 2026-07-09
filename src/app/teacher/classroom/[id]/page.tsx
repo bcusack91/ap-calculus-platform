@@ -722,11 +722,11 @@ export default function ClassroomDetailPage() {
         {/* Members Tab */}
         {activeTab === 'members' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex flex-wrap justify-between items-center gap-y-2 mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 Students ({activeMembers.length})
               </h2>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3 gap-y-2">
                 <button
                   onClick={() => {
                     setShowImport(true)
@@ -779,9 +779,9 @@ export default function ClassroomDetailPage() {
                 {activeMembers.map((m) => (
                   <div
                     key={m.id}
-                    className="flex items-center justify-between p-4 rounded-xl bg-gray-50 dark:bg-gray-700/30"
+                    className="flex flex-wrap items-center justify-between gap-y-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-700/30"
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
                       {m.user.image ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
@@ -794,14 +794,14 @@ export default function ClassroomDetailPage() {
                           {(m.user.name || m.user.email || '?')[0].toUpperCase()}
                         </div>
                       )}
-                      <div>
+                      <div className="min-w-0">
                         <p className="font-medium text-gray-900 dark:text-white">
                           {m.user.name || 'Unnamed Student'}
                         </p>
-                        <p className="text-xs text-gray-500">{m.user.email}</p>
+                        <p className="text-xs text-gray-500 truncate">{m.user.email}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3 gap-y-2">
                       <span className="text-xs text-gray-400">
                         Joined {new Date(m.joinedAt).toLocaleDateString()}
                       </span>
@@ -911,11 +911,11 @@ export default function ClassroomDetailPage() {
         {/* Competitions Tab */}
         {activeTab === 'competitions' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex flex-wrap justify-between items-center gap-y-2 mb-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 Competitions ({classroom.competitions.length})
               </h2>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <button
                   onClick={startLiveLobby}
                   disabled={startingLobby}
@@ -1390,7 +1390,7 @@ export default function ClassroomDetailPage() {
         onClose={closeAssignmentModal}
         title={editingAssignmentId ? 'Edit Assignment' : 'Create Assignment'}
       >
-        <div className="p-8">
+        <div className="p-4 sm:p-8">
           <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{editingAssignmentId ? 'Edit Assignment' : 'Create Assignment'}</h2>
           <div className="space-y-4">
             <div>
@@ -1473,7 +1473,7 @@ export default function ClassroomDetailPage() {
               )}
               <p className="mt-1 text-xs text-gray-400">Add one or more topics — students complete all of them.</p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label
                   htmlFor="assignment-due-date"
@@ -1552,7 +1552,7 @@ export default function ClassroomDetailPage() {
         onClose={() => setShowImport(false)}
         title="Import students"
       >
-        <div className="p-8 max-w-lg">
+        <div className="p-4 sm:p-8 max-w-lg">
           <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Import students</h2>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             Paste a list of students or upload a CSV. One per line — just the email, or{' '}

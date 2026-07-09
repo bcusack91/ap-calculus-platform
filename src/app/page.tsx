@@ -3,7 +3,6 @@ import { COURSE_COUNT, TOPIC_COUNT_LABEL } from "@/lib/site-stats";
 import { prisma } from "@/lib/prisma";
 import { courseMeta, defaultCourseMeta, sectionOrder, getCourseHref } from "@/data/course-metadata";
 import DynamicStats from "@/components/DynamicStats";
-import { InArticleAd } from "@/components/ad-banner";
 import TrackedLink from '@/components/TrackedLink'
 
 export const revalidate = 3600; // ISR: revalidate every hour
@@ -89,7 +88,7 @@ export default async function Home() {
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
               {totalCourses} courses · {TOPIC_COUNT_LABEL} topics
             </p>
-            <div className="mt-8 flex items-center justify-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <TrackedLink
                 href="/topics"
                 eventName="homepage_cta_click"
@@ -174,9 +173,6 @@ export default async function Home() {
       </section>
 
       {/* Ad placement between courses and features */}
-      <div className="container py-8">
-        <InArticleAd />
-      </div>
 
       {/* Features Section */}
       <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">
