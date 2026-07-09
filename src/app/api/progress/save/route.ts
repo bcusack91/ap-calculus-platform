@@ -5,6 +5,7 @@ import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard
 import { progressSaveSchema, parseBody } from '@/lib/validations'
 import { invalidateCache, dashboardCacheKey } from '@/lib/redis'
 import { touchDailyStreak } from '@/lib/streak'
+import { recordAssignmentStarted } from '@/lib/assignment-autocomplete'
 
 export async function POST(request: Request) {
   try {
@@ -315,6 +316,17 @@ export async function POST(request: Request) {
     // Progress changed — drop the user's cached dashboard so their next
     // dashboard load reflects this update immediately rather than after the TTL.
     await invalidateCache(dashboardCacheKey(session.user.id))
+
+    // Mark matching classroom assignments IN_PROGRESS (never COMPLETED — the
+    // client-reported masteryLevel is untrusted; completion + score are recorded
+    // server-side from the exit-quiz submit). Best-effort.
+    if (topicSlug) {
+      await recordAssignmentStarted({
+        userId: session.user.id,
+        topicSlug,
+        types: ['INTERACTIVE_LESSON', 'QUIZ'],
+      })
+    }
 
     return NextResponse.json({
       success: true,

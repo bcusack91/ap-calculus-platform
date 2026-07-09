@@ -9,6 +9,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
 import { useSearchParams, useRouter } from 'next/navigation'
+import { competitiveHrefForCourse } from '@/lib/competitive-course-map'
 import { useSession } from 'next-auth/react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
@@ -840,10 +841,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           }
           // Route to course-specific competitive mode with the topic
           // pre-selected (matches the exit-quiz completion handler).
-          const competitiveUrl = courseSlug
-            ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
-            : '/competitive'
-          router.push(competitiveUrl)
+          router.push(competitiveHrefForCourse(courseSlug, topicSlug))
         }
         finalSave()
       } else {
@@ -894,10 +892,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
     if (passed) {
       // Passed! Navigate to course-specific competitive mode with topic pre-selected
-      const competitiveUrl = courseSlug
-        ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
-        : '/competitive'
-      router.push(competitiveUrl)
+      router.push(competitiveHrefForCourse(courseSlug, topicSlug))
     } else if (totalVariants > 1 && variant < totalVariants) {
       // Failed exit quiz and more variants available → advance to next variant
       const nextVariant = variant + 1
@@ -1047,10 +1042,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       } else if (destination === 'course') {
         router.push(`/courses/${courseSlug || 'ap-chemistry'}`)
       } else if (destination === 'competitive') {
-        const competitiveUrl = courseSlug
-          ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
-          : '/competitive'
-        router.push(competitiveUrl)
+        router.push(competitiveHrefForCourse(courseSlug, topicSlug))
       }
     } else {
       // Jump to first unmastered part

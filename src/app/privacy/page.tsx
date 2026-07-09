@@ -297,12 +297,9 @@ export default function PrivacyPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">12. Contact Us</h2>
           <p>
-            If you have questions or concerns about this Privacy Policy or our data practices, please contact us through our repository:
-          </p>
-          <p className="mt-4">
-            <a href="https://github.com/bcusack91/ap-calculus-platform" className="text-blue-600 hover:underline">
-              https://github.com/bcusack91/ap-calculus-platform
-            </a>
+            If you have questions or concerns about this Privacy Policy or our data practices — including parent/guardian
+            requests to review or delete a child&apos;s information — email us at{' '}
+            <a href="mailto:privacy@studymondo.com" className="text-blue-600 hover:underline">privacy@studymondo.com</a>.
           </p>
           <p className="mt-4">
             You can also delete your account and its associated data yourself at any time from your{' '}
@@ -318,14 +315,6 @@ export default function PrivacyPage() {
             <li>Verification of your identity</li>
             <li>Preferred contact method</li>
           </ul>
-        </section>
-
-        <section className="mt-8 p-6 bg-slate-50 rounded-lg border">
-          <p className="text-sm text-muted-foreground">
-            <strong>Legal Disclaimer:</strong> This Privacy Policy is provided as a template and should be reviewed by a qualified attorney 
-            before deployment to production. Privacy laws vary by jurisdiction and may require additional disclosures or safeguards. 
-            Consider consulting with legal counsel familiar with GDPR, CCPA, COPPA, and other applicable privacy regulations.
-          </p>
         </section>
       </div>
     </div>

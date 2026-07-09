@@ -325,7 +325,6 @@ export default function TeacherDashboard() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              { icon: '📝', label: 'Quiz Builder', href: '/teacher/tools?tab=quiz-builder' },
               { icon: '✍️', label: 'FRQ Grader', href: '/teacher/tools?tab=frq-grader' },
               { icon: '🃏', label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
               { icon: '⚔️', label: 'Class Lobby', href: '/teacher/lobby' },

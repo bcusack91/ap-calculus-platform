@@ -4,7 +4,6 @@ import { useState, useMemo } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { TeacherQuizBuilder } from '@/components/TeacherQuizBuilder'
 import { AIFreeResponseGrader } from '@/components/AIFreeResponseGrader'
 import { TeacherFlashcardSets } from '@/components/TeacherFlashcardSets'
 
@@ -12,7 +11,6 @@ import { TeacherFlashcardSets } from '@/components/TeacherFlashcardSets'
 // student groups, announcements, and curriculum mapping live inside a specific
 // classroom (real data + context) — not in this global hub.
 const TOOLS = [
-  { key: 'quiz-builder', label: 'Quiz Builder', icon: '📝', description: 'Create custom quizzes and assessments' },
   { key: 'frq-grader', label: 'FRQ Grader', icon: '✍️', description: 'AI-grade free-response answers' },
   { key: 'flashcards', label: 'Flashcard Sets', icon: '🃏', description: 'Create and share custom flashcard sets' },
 ] as const
@@ -27,7 +25,7 @@ export default function TeacherToolsPage() {
   const initialTab = useMemo(() => {
     const tab = searchParams.get('tab')
     if (tab && TOOLS.some((t) => t.key === tab)) return tab as ToolKey
-    return 'quiz-builder' as ToolKey
+    return 'frq-grader' as ToolKey
   }, [searchParams])
 
   const [activeTool, setActiveTool] = useState<ToolKey>(initialTab)
@@ -59,7 +57,7 @@ export default function TeacherToolsPage() {
             Teacher Tools
           </h1>
           <p className="text-gray-600 dark:text-gray-400 mt-1">
-            Build quizzes, manage groups, track analytics, and more
+            AI-grade free responses and build flashcard sets for your classes
           </p>
         </div>
 
@@ -83,7 +81,6 @@ export default function TeacherToolsPage() {
 
         {/* Active Tool */}
         <div>
-          {activeTool === 'quiz-builder' && <TeacherQuizBuilder />}
           {activeTool === 'frq-grader' && <AIFreeResponseGrader />}
           {activeTool === 'flashcards' && <TeacherFlashcardSets />}
         </div>

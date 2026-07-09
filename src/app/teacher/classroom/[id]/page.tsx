@@ -145,16 +145,6 @@ export default function ClassroomDetailPage() {
   const [editingAssignmentId, setEditingAssignmentId] = useState<string | null>(null)
   const [deletingAssignmentId, setDeletingAssignmentId] = useState<string | null>(null)
 
-  // Competition creation
-  const [showCompModal, setShowCompModal] = useState(false)
-  const [compForm, setCompForm] = useState({
-    title: '',
-    topicSlug: '',
-    gameMode: 'SPEED_ROUND',
-    scheduledAt: '',
-    duration: '30',
-  })
-  const [creatingComp, setCreatingComp] = useState(false)
 
   // Competitive grants
   const [competitiveGrants, setCompetitiveGrants] = useState<Record<string, boolean>>({})
@@ -578,33 +568,6 @@ export default function ClassroomDetailPage() {
     setStartingLobby(false)
   }
 
-  const createCompetition = async () => {
-    if (!compForm.title.trim() || !compForm.topicSlug || !compForm.scheduledAt) return
-    setCreatingComp(true)
-    try {
-      const scheduledAt = new Date(compForm.scheduledAt)
-      const endsAt = new Date(scheduledAt.getTime() + parseInt(compForm.duration) * 60 * 1000)
-      const res = await fetch(`/api/teacher/classrooms/${classroomId}/competitions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          title: compForm.title,
-          topicSlug: compForm.topicSlug,
-          gameMode: compForm.gameMode,
-          scheduledAt: scheduledAt.toISOString(),
-          endsAt: endsAt.toISOString(),
-          duration: parseInt(compForm.duration),
-        }),
-      })
-      if (res.ok) {
-        setShowCompModal(false)
-        setCompForm({ title: '', topicSlug: '', gameMode: 'SPEED_ROUND', scheduledAt: '', duration: '30' })
-        loadClassroom()
-      }
-    } finally {
-      setCreatingComp(false)
-    }
-  }
 
   const saveSettings = async () => {
     setSaving(true)
@@ -655,11 +618,6 @@ export default function ClassroomDetailPage() {
     { value: 'COMPETITIVE_PRACTICE', label: 'Competitive Practice' },
   ]
 
-  const gameModes = [
-    { value: 'SPEED_ROUND', label: 'Speed Round' },
-    { value: 'ACCURACY', label: 'Accuracy Challenge' },
-    { value: 'SURVIVAL', label: 'Survival Mode' },
-  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -966,25 +924,16 @@ export default function ClassroomDetailPage() {
                 >
                   {startingLobby ? 'Starting…' : '▶ Start live game'}
                 </button>
-                <button
-                  onClick={() => {
-                    loadTopics()
-                    setShowCompModal(true)
-                  }}
-                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-all text-sm"
-                >
-                  + Schedule Competition
-                </button>
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 -mt-2 mb-4">
-              <strong>Start live game</strong> runs a real-time team match students join now. <strong>Schedule Competition</strong> sets up an async contest for later.
+              <strong>Start live game</strong> runs a real-time team match your students join live from any device.
             </p>
             {classroom.competitions.length === 0 ? (
               <div className="text-center py-12">
                 <div className="text-5xl mb-4">⚔️</div>
                 <h3 className="text-lg font-bold mb-2">No competitions yet</h3>
-                <p className="text-gray-500">Schedule a competition for your students</p>
+                <p className="text-gray-500">Start a live game to run a real-time review match with your class</p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -1596,124 +1545,6 @@ export default function ClassroomDetailPage() {
         </div>
       </FocusTrapDialog>
 
-      {/* Schedule Competition Modal */}
-      <FocusTrapDialog
-        open={showCompModal}
-        onClose={() => setShowCompModal(false)}
-        title="Schedule Competition"
-      >
-        <div className="p-8">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Schedule Competition</h2>
-          <div className="space-y-4">
-            <div>
-              <label
-                htmlFor="competition-title"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Title *
-              </label>
-              <input
-                id="competition-title"
-                type="text"
-                value={compForm.title}
-                onChange={(e) => setCompForm({ ...compForm, title: e.target.value })}
-                placeholder="e.g., Friday Speed Challenge"
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="competition-topic"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Topic *
-              </label>
-              <select
-                id="competition-topic"
-                value={compForm.topicSlug}
-                onChange={(e) => setCompForm({ ...compForm, topicSlug: e.target.value })}
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              >
-                <option value="">Select a topic...</option>
-                {courses.map((c) => (
-                  <optgroup key={c.courseTitle} label={c.courseTitle}>
-                    {c.topics.map((t) => (
-                      <option key={t.slug} value={t.slug}>{t.title}</option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label
-                htmlFor="competition-game-mode"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-              >
-                Game Mode
-              </label>
-              <select
-                id="competition-game-mode"
-                value={compForm.gameMode}
-                onChange={(e) => setCompForm({ ...compForm, gameMode: e.target.value })}
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              >
-                {gameModes.map((m) => (
-                  <option key={m.value} value={m.value}>{m.label}</option>
-                ))}
-              </select>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label
-                  htmlFor="competition-start-time"
-                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-                >
-                  Start Time *
-                </label>
-                <input
-                  id="competition-start-time"
-                  type="datetime-local"
-                  value={compForm.scheduledAt}
-                  onChange={(e) => setCompForm({ ...compForm, scheduledAt: e.target.value })}
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="competition-duration"
-                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1"
-                >
-                  Duration (min)
-                </label>
-                <input
-                  id="competition-duration"
-                  type="number"
-                  value={compForm.duration}
-                  onChange={(e) => setCompForm({ ...compForm, duration: e.target.value })}
-                  min="5"
-                  max="180"
-                  className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-3 mt-6">
-            <button
-              onClick={() => setShowCompModal(false)}
-              className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-all"
-            >
-              Cancel
-            </button>
-            <button
-              onClick={createCompetition}
-              disabled={!compForm.title.trim() || !compForm.topicSlug || !compForm.scheduledAt || creatingComp}
-              className="flex-1 px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              {creatingComp ? 'Scheduling...' : 'Schedule Competition'}
-            </button>
-          </div>
-        </div>
-      </FocusTrapDialog>
 
       {/* Import students (CSV roster) */}
       <FocusTrapDialog

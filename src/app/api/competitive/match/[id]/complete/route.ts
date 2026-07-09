@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { recordCompetitiveAssignment } from '@/lib/assignment-autocomplete';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
@@ -194,6 +195,9 @@ export async function POST(
       }
       throw txError;
     }
+
+    // Auto-record COMPETITIVE_PRACTICE assignment submissions (best-effort).
+    await recordCompetitiveAssignment(matchId);
 
     return NextResponse.json({ status: 'completed', winnerId });
   } catch (error) {

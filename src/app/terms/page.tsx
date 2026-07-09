@@ -208,17 +208,9 @@ export default function TermsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">15. Contact Information</h2>
           <p>
-            If you have any questions about these Terms of Service, please contact us through the repository at:{" "}
-            <a href="https://github.com/bcusack91/ap-calculus-platform" className="text-blue-600 hover:underline">
-              https://github.com/bcusack91/ap-calculus-platform
-            </a>
-          </p>
-        </section>
-
-        <section className="mt-8 p-6 bg-slate-50 rounded-lg border">
-          <p className="text-sm text-muted-foreground">
-            <strong>Important Notice:</strong> These Terms of Service are provided as a template and should be reviewed by a qualified attorney 
-            before deployment to production. Legal requirements may vary by jurisdiction and intended use case.
+            If you have any questions about these Terms of Service, email us at{" "}
+            <a href="mailto:privacy@studymondo.com" className="text-blue-600 hover:underline">privacy@studymondo.com</a>{" "}
+            or use our <a href="/contact" className="text-blue-600 hover:underline">contact form</a>.
           </p>
         </section>
       </div>

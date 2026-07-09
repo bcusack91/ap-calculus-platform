@@ -70,8 +70,11 @@ export async function POST(
     if (isNaN(d.getTime())) return NextResponse.json({ error: 'Invalid due date' }, { status: 400 })
     due = d
   }
+  // Blank/invalid maxAttempts means UNLIMITED (the form's placeholder says
+  // "Unlimited") — previously this collapsed to 1, silently locking students
+  // out after a single attempt.
   const attemptsNum = Number(maxAttempts)
-  const attempts = Number.isFinite(attemptsNum) && attemptsNum > 0 ? Math.min(Math.floor(attemptsNum), 9999) : 1
+  const attempts = Number.isFinite(attemptsNum) && attemptsNum > 0 ? Math.min(Math.floor(attemptsNum), 9999) : 9999
   const reqScore = typeof requiredScore === 'number' && requiredScore >= 0 && requiredScore <= 1 ? requiredScore : null
 
   // If a flashcard set is attached, the teacher must own it.

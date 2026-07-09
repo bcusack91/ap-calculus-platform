@@ -30,6 +30,7 @@
  * match that is genuinely still in progress.
  */
 import { prisma } from '@/lib/prisma'
+import { recordCompetitiveAssignment } from '@/lib/assignment-autocomplete'
 
 /**
  * How long after `startedAt` an IN_PROGRESS match is considered abandoned.
@@ -54,7 +55,7 @@ interface SweepableGameData {
 export async function sweepStaleMatchById(matchId: string): Promise<boolean> {
   const cutoff = new Date(Date.now() - STALE_MATCH_MS)
   try {
-    return await prisma.$transaction(async (tx) => {
+    const swept = await prisma.$transaction(async (tx) => {
       // Lock the row first so a concurrent /complete, /answer, or sibling
       // sweeper can't interleave (mirrors match/[id]/complete).
       await tx.$queryRaw`SELECT id FROM "CompetitiveMatch" WHERE id = ${matchId} FOR UPDATE`
@@ -85,6 +86,13 @@ export async function sweepStaleMatchById(matchId: string): Promise<boolean> {
       })
       return true
     }, { timeout: 15000 })
+    // Abandoned matches still carry real answer history — credit any matching
+    // COMPETITIVE_PRACTICE assignments (best-effort, no-ops without one). Only
+    // when THIS call did the transition, so credit records exactly once.
+    if (swept) {
+      await recordCompetitiveAssignment(matchId)
+    }
+    return swept
   } catch {
     // Best-effort: a lost race or transient DB hiccup must not break the
     // request that happened to trigger the sweep.

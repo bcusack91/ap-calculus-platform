@@ -65,13 +65,25 @@ export async function POST(
           members: { some: { userId: studentId, isActive: true } },
         },
       },
-      select: { id: true, maxAttempts: true },
+      select: { id: true, maxAttempts: true, type: true },
     })
 
     if (!assignment) {
       return NextResponse.json(
         { error: 'Assignment not found' },
         { status: 404 }
+      )
+    }
+
+    // Only FLASHCARD_REVIEW may self-report completion (its score is
+    // completion-semantics, always 1). Lesson/quiz/competitive assignments are
+    // graded automatically from server-verified events (exit-quiz submit,
+    // match finalization) — accepting a client score here would let students
+    // self-grade to 100%.
+    if (assignment.type !== 'FLASHCARD_REVIEW') {
+      return NextResponse.json(
+        { error: 'This assignment is graded automatically when you complete the work.' },
+        { status: 400 }
       )
     }
 

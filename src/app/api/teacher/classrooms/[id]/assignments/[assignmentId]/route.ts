@@ -46,7 +46,7 @@ export async function PUT(
         ...(topicSlug !== undefined && { topicSlug: topicSlug || null }),
         ...(topicSlugs !== undefined && { topicSlugs: topicSlugs || null }),
         ...(dueDate !== undefined && { dueDate: dueDate ? new Date(dueDate) : null }),
-        ...(maxAttempts !== undefined && { maxAttempts: maxAttempts || 1 }),
+        ...(maxAttempts !== undefined && { maxAttempts: Number(maxAttempts) > 0 ? Math.min(Math.floor(Number(maxAttempts)), 9999) : 9999 }),
         ...(requiredScore !== undefined && { requiredScore: requiredScore ?? null }),
       },
     })

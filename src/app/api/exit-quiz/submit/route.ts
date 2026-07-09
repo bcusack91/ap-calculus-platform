@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
@@ -239,6 +240,19 @@ export async function POST(request: Request) {
     } catch (metricsError) {
       console.error('exit-quiz metrics write failed (non-fatal):', metricsError)
     }
+
+    // Auto-record classroom-assignment submissions from this result. The score
+    // is recomputed here from the answer records (same trust level the platform
+    // already uses for MASTERED status and competitive unlocks — the per-answer
+    // booleans originate client-side; true re-grading against the question bank
+    // is a follow-up). Completes both QUIZ and INTERACTIVE_LESSON assignments
+    // on this topic (lessons culminate in the exit quiz). Best-effort.
+    await recordAssignmentCompletion({
+      userId,
+      topicSlug,
+      types: ['QUIZ', 'INTERACTIVE_LESSON'],
+      score: totalQuestions > 0 ? score / totalQuestions : 0,
+    })
 
     return NextResponse.json(result)
 

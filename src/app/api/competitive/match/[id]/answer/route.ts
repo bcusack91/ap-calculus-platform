@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
 import { answerSubmissionSchema, parseBody } from '@/lib/validations';
+import { recordCompetitiveAssignment } from '@/lib/assignment-autocomplete';
 import type { Prisma } from '@prisma/client';
 
 interface MatchGameData {
@@ -511,6 +512,14 @@ export async function POST(
     if ('error' in result) {
       return NextResponse.json({ error: result.error }, { status: result.status });
     }
+
+    // Match just finished → auto-record COMPETITIVE_PRACTICE assignment
+    // submissions for both players from server-written answer history.
+    // Outside the transaction (best-effort; must not fail the answer).
+    if (result.data.matchComplete) {
+      await recordCompetitiveAssignment(matchId);
+    }
+
     return NextResponse.json(result.data, { status: result.status });
 
   } catch (error) {
