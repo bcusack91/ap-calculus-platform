@@ -47,6 +47,8 @@ export async function PUT(
     }
     if (hasScore) {
       data.score = score as number | null
+      // A teacher-entered grade is authoritative — auto-grading skips this row.
+      data.gradedManually = score !== null
       // A manually-graded submission counts as completed.
       if (typeof score === 'number') {
         data.status = 'COMPLETED'

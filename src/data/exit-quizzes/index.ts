@@ -1009,6 +1009,31 @@ export function hasExitQuiz(topicSlug: string): boolean {
 }
 
 /**
+ * Stable, content-derived question id.
+ *
+ * Overriding each generated question's id with a deterministic hash of its content
+ * (question text + options + correct index) makes the id reproducible across
+ * sessions and processes. That is what lets the server re-grade a past attempt
+ * against the bank (see src/lib/exit-quiz-regrade.ts): ExitQuiz stores this id as
+ * `questionId`, and the submit route hashes the bank the same way to resolve it.
+ *
+ * For banks that randomize their content per call (generative math/SAT pools), the
+ * hash differs every time, so those questions remain non-reproducible and the
+ * regrader safely falls back to the client-asserted correctness. The id stays
+ * unique within a quiz, so it is still a valid React key / shuffle seed. FNV-1a is
+ * used so the browser and Node compute identical hashes.
+ */
+function stableQuestionId(topicSlug: string, question: string, options: string[], correctIndex: number): string {
+  const seed = `${question}␞${options.join('␟')}␞${correctIndex}`
+  let h = 0x811c9dc5
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i)
+    h = Math.imul(h, 0x01000193)
+  }
+  return `${topicSlug}#${(h >>> 0).toString(36)}`
+}
+
+/**
  * Generate an exit quiz for a given topic slug.
  * Dynamically loads only the requested question pool on demand.
  */
@@ -1018,5 +1043,14 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10): P
     throw new Error(`No exit quiz found for topic: ${topicSlug}`)
   }
   const mod = await loader()
-  return mod.generateExitQuiz(count, topicSlug)
+  const questions = mod.generateExitQuiz(count, topicSlug)
+  return questions.map((q) => ({
+    ...q,
+    id: stableQuestionId(
+      topicSlug,
+      typeof q.question === 'string' ? q.question : '',
+      Array.isArray(q.options) ? q.options : [],
+      typeof q.correctIndex === 'number' ? q.correctIndex : 0,
+    ),
+  }))
 }

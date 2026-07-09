@@ -158,13 +158,13 @@ export async function PUT(req: NextRequest) {
     // Clear an existing grade only — nothing to create.
     await prisma.assignmentSubmission.updateMany({
       where: { assignmentId, studentId },
-      data: { score: null },
+      data: { score: null, gradedManually: false },
     })
   } else {
     await prisma.assignmentSubmission.upsert({
       where: { assignmentId_studentId: { assignmentId, studentId } },
-      update: { score, status: 'COMPLETED', completedAt: new Date() },
-      create: { assignmentId, studentId, score, status: 'COMPLETED', completedAt: new Date() },
+      update: { score, status: 'COMPLETED', completedAt: new Date(), gradedManually: true },
+      create: { assignmentId, studentId, score, status: 'COMPLETED', completedAt: new Date(), gradedManually: true },
     })
   }
 

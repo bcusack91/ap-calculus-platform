@@ -5,6 +5,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
+import { QRCodeSVG } from 'qrcode.react'
 import Gradebook from '@/components/Gradebook'
 import { StandardsMastery } from '@/components/StandardsMastery'
 
@@ -678,13 +679,11 @@ export default function ClassroomDetailPage() {
           <div className="mb-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm text-center max-w-sm mx-auto">
             <h3 className="font-bold text-gray-900 dark:text-white mb-3">Scan to Join</h3>
             <div className="bg-white p-4 rounded-lg inline-block mb-3">
-              {/* Simple QR code using a public API — no npm dependency needed */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(`${typeof window !== 'undefined' ? window.location.origin : 'https://www.studymondo.com'}/join-class?code=${classroom.joinCode}`)}`}
-                alt={`QR code to join classroom ${classroom.name}`}
-                width={200}
-                height={200}
+              {/* Self-hosted SVG QR — no third-party host (school filters) and the join link never leaves the page */}
+              <QRCodeSVG
+                value={`${typeof window !== 'undefined' ? window.location.origin : 'https://www.studymondo.com'}/join-class?code=${classroom.joinCode}`}
+                size={200}
+                title={`QR code to join classroom ${classroom.name}`}
                 className="mx-auto"
               />
             </div>

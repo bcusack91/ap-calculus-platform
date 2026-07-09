@@ -1169,6 +1169,7 @@ model AssignmentSubmission {
   startedAt    DateTime?
   completedAt  DateTime?
   feedback     String? // teacher feedback
+  gradedManually Boolean        @default(false) // teacher-entered grade — auto-grading must not touch
   createdAt    DateTime         @default(now())
   updatedAt    DateTime         @updatedAt
 

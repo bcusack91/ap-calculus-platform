@@ -20,8 +20,7 @@ const MMR_HISTORY_RETENTION_DAYS = 365
  */
 export async function GET(request: Request) {
   try {
-    // Inline CRON_SECRET check (null-check + compare) — same pattern as
-    // src/app/api/email/weekly-digest/route.ts. Kept inline intentionally.
+    // Inline CRON_SECRET check (null-check + compare). Kept inline intentionally.
     const authHeader = request.headers.get('authorization')
     const cronSecret = process.env.CRON_SECRET
     if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {

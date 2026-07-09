@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { regradeExitQuiz } from '@/lib/exit-quiz-regrade'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 
@@ -55,16 +56,41 @@ export async function POST(request: Request) {
     const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant } = parsed.data
     const userId = session.user.id
 
-    // Pass/fail and mastery are decided HERE, not by the client. Clamp the score,
-    // then recompute passed/mustRedoUnit from the shared thresholds — the client's
-    // `passed`/`mustRedoUnit` are ignored (they gate MASTERED status + competitive
-    // unlock, so they cannot be trusted). When per-question answers are present,
-    // prefer the server's own correct-count as the authoritative score.
-    const answerCorrect = (answers || []).filter((a) => a.correct === true).length
-    const hasScoredAnswers = (answers || []).some((a) => typeof a.correct === 'boolean')
-    const score = hasScoredAnswers
-      ? Math.min(answerCorrect, totalQuestions)
-      : Math.min(Math.max(0, rawScore), totalQuestions)
+    // Pass/fail and mastery are decided HERE, not by the client. These gate MASTERED
+    // status + competitive unlock + assignment auto-grading, so nothing client-sent
+    // can be trusted: the client's `passed`/`mustRedoUnit` are ignored, and the
+    // per-answer `correct` booleans are RE-GRADED server-side against the real
+    // question bank whenever the question can be resolved (regradeExitQuiz reproduces
+    // the client's seeded option shuffle and compares to the bank's correct answer).
+    // Only answers whose questionId can't be resolved fall back to the client value,
+    // and we warn once per request when that happens.
+    const answers_ = answers || []
+    let score: number
+    if (answers_.length > 0) {
+      const regrade = await regradeExitQuiz(topicSlug, answers_)
+      if (regrade.resolvedCount > 0) {
+        // At least one question graded from the bank — trust the server count.
+        score = Math.min(regrade.score, totalQuestions)
+      } else {
+        // Nothing resolvable (bank not found or non-reproducible ids) — preserve the
+        // legacy behavior: use the client's per-answer booleans, else the raw score.
+        const answerCorrect = answers_.filter((a) => a.correct === true).length
+        const hasScoredAnswers = answers_.some((a) => typeof a.correct === 'boolean')
+        score = hasScoredAnswers
+          ? Math.min(answerCorrect, totalQuestions)
+          : Math.min(Math.max(0, rawScore), totalQuestions)
+      }
+      if (regrade.usedFallback) {
+        console.warn(
+          `[exit-quiz/submit] regrade fell back to client-asserted correctness for ` +
+            `${regrade.unresolvedCount}/${answers_.length} answers (topicSlug=${topicSlug}); ` +
+            `question bank could not be resolved for those questions`,
+        )
+      }
+    } else {
+      // No per-question answers submitted — nothing to regrade; use the raw score.
+      score = Math.min(Math.max(0, rawScore), totalQuestions)
+    }
     const passed = score >= Math.ceil(totalQuestions * EXIT_QUIZ_PASS_FRACTION)
     const mustRedoUnit = score < Math.ceil(totalQuestions * EXIT_QUIZ_REDO_FRACTION)
 
@@ -241,12 +267,12 @@ export async function POST(request: Request) {
       console.error('exit-quiz metrics write failed (non-fatal):', metricsError)
     }
 
-    // Auto-record classroom-assignment submissions from this result. The score
-    // is recomputed here from the answer records (same trust level the platform
-    // already uses for MASTERED status and competitive unlocks — the per-answer
-    // booleans originate client-side; true re-grading against the question bank
-    // is a follow-up). Completes both QUIZ and INTERACTIVE_LESSON assignments
-    // on this topic (lessons culminate in the exit quiz). Best-effort.
+    // Auto-record classroom-assignment submissions from this result. `score` is the
+    // server-verified value computed above (re-graded against the question bank where
+    // the questions resolve; client-asserted only for unresolved questions), so this
+    // is the same authoritative number that gates MASTERED status and competitive
+    // unlocks. Completes both QUIZ and INTERACTIVE_LESSON assignments on this topic
+    // (lessons culminate in the exit quiz). Best-effort.
     await recordAssignmentCompletion({
       userId,
       topicSlug,

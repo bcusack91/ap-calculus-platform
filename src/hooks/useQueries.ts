@@ -122,33 +122,6 @@ export function useFlashcardSession(topicSlug?: string) {
   })
 }
 
-// ─── Notes ─────────────────────────────────────────────────────────────
-export function useNotes(topicSlug?: string) {
-  return useQuery({
-    queryKey: ['notes', topicSlug],
-    queryFn: () => fetcher(topicSlug ? `/api/notes?topicSlug=${topicSlug}` : '/api/notes'),
-  })
-}
-
-export function useSaveNote() {
-  const qc = useQueryClient()
-  return useMutation({
-    mutationFn: async ({ topicSlug, content }: { topicSlug: string; content: string }) => {
-      const res = await fetch('/api/notes', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug, content }),
-      })
-      if (!res.ok) throw new Error('Failed to save note')
-      return res.json()
-    },
-    onSuccess: (_data, variables) => {
-      qc.invalidateQueries({ queryKey: ['notes', variables.topicSlug] })
-      qc.invalidateQueries({ queryKey: ['notes', undefined] })
-    },
-  })
-}
-
 // ─── Search ────────────────────────────────────────────────────────────
 export function useSearch(query: string) {
   return useQuery({

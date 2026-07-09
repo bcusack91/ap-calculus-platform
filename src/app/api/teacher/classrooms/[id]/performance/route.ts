@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Prisma } from '@prisma/client'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 
@@ -34,9 +35,55 @@ export async function GET(
 
   const studentIds = members.map((m) => m.user.id)
 
-  // Get topic progress for all students
+  // Scope mastery to topics this CLASS actually works on (otherwise an AP Calc
+  // class's "Avg Mastery" averages in every unrelated course a student touches):
+  //   (a) topics referenced by the classroom's assignments, UNION
+  //   (b) topics of any course whose name/slug matches the classroom subject.
+  // If neither yields any topics, keep the unscoped view — better than empty.
+  const topicScopeOr: Prisma.TopicWhereInput[] = []
+
+  const classAssignments = await prisma.assignment.findMany({
+    where: { classroomId: id },
+    select: { topicSlug: true, topicSlugs: true },
+  })
+  const assignedSlugs = new Set<string>()
+  for (const a of classAssignments) {
+    if (a.topicSlug) assignedSlugs.add(a.topicSlug)
+    if (Array.isArray(a.topicSlugs)) {
+      for (const s of a.topicSlugs) {
+        if (typeof s === 'string' && s) assignedSlugs.add(s)
+      }
+    }
+  }
+  if (assignedSlugs.size > 0) topicScopeOr.push({ slug: { in: Array.from(assignedSlugs) } })
+
+  const subject = ('classroom' in result ? result.classroom.subject : null)?.trim().toLowerCase() ?? ''
+  if (subject) {
+    const courses = await prisma.course.findMany({ select: { id: true, name: true, slug: true } })
+    const matchedCourseIds = courses
+      .filter((c) => {
+        const name = c.name.toLowerCase()
+        const slug = c.slug.toLowerCase()
+        return (
+          name.includes(subject) || subject.includes(name) ||
+          slug.includes(subject) || subject.includes(slug)
+        )
+      })
+      .map((c) => c.id)
+    if (matchedCourseIds.length > 0) {
+      topicScopeOr.push({ category: { courseId: { in: matchedCourseIds } } })
+    }
+  }
+
+  let topicScope: Prisma.TopicWhereInput | undefined
+  if (topicScopeOr.length > 0) {
+    const scopedTopicCount = await prisma.topic.count({ where: { OR: topicScopeOr } })
+    if (scopedTopicCount > 0) topicScope = { OR: topicScopeOr }
+  }
+
+  // Get topic progress for all students (scoped to the class's topics when derivable)
   const topicProgress = await prisma.topicProgress.findMany({
-    where: { userId: { in: studentIds } },
+    where: { userId: { in: studentIds }, ...(topicScope ? { topic: topicScope } : {}) },
     include: {
       topic: { select: { slug: true, title: true, category: { select: { name: true, course: { select: { name: true } } } } } },
     },

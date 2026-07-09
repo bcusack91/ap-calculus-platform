@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
 import { flashcardReviewSchema, parseBody } from '@/lib/validations'
+import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 
 /**
  * POST /api/flashcards/review
@@ -90,6 +91,24 @@ export async function POST(req: NextRequest) {
         reviewCount: reviewCount + 1
       }
     })
+
+    // Best-effort assignment auto-completion: topic-based FLASHCARD_REVIEW
+    // assignments (no teacher flashcardSetId) are studied on this surface,
+    // which previously never recorded a submission. A card review actually
+    // completed above, so record completion semantics (score 1 — matching
+    // the set-viewer's explicit submit). Helper swallows its own failures.
+    const reviewedCard = await prisma.flashcard.findUnique({
+      where: { id: flashcardId },
+      select: { topic: { select: { slug: true } } },
+    })
+    if (reviewedCard?.topic?.slug) {
+      await recordAssignmentCompletion({
+        userId: session.user.id,
+        topicSlug: reviewedCard.topic.slug,
+        types: ['FLASHCARD_REVIEW'],
+        score: 1,
+      })
+    }
 
     return NextResponse.json({
       success: true,

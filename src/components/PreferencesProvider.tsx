@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react'
-import { useSession } from 'next-auth/react'
 
 export type ColorScheme = 'default' | 'ocean' | 'forest' | 'sunset' | 'rose'
 
@@ -42,7 +41,6 @@ export function usePreferences() {
 const STORAGE_KEY = 'user-preferences'
 
 export function PreferencesProvider({ children }: { children: ReactNode }) {
-  const { status } = useSession()
   const [preferences, setPreferences] = useState<UserPreferences>(defaultPreferences)
   const [loading, setLoading] = useState(true)
 
@@ -60,21 +58,6 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   }, [])
   /* eslint-enable react-hooks/set-state-in-effect */
 
-  // Sync from server when authenticated
-  useEffect(() => {
-    if (status !== 'authenticated') return
-    fetch('/api/user/preferences')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (data?.preferences) {
-          const merged = { ...defaultPreferences, ...data.preferences }
-          setPreferences(merged)
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(merged))
-        }
-      })
-      .catch(() => {/* use local */})
-  }, [status])
-
   // Apply color scheme to DOM whenever it changes
   useEffect(() => {
     if (preferences.colorScheme && preferences.colorScheme !== 'default') {
@@ -88,14 +71,6 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     setPreferences((prev) => {
       const next = { ...prev, [key]: value }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
-      // Fire and forget server sync
-      if (typeof window !== 'undefined') {
-        fetch('/api/user/preferences', {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ [key]: value }),
-        }).catch(() => {/* silent */})
-      }
       return next
     })
   }, [])

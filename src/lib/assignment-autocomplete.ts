@@ -98,7 +98,7 @@ export async function recordAssignmentCompletion(params: {
               THEN now()
             ELSE NULL
           END
-        WHERE "AssignmentSubmission"."feedback" IS NULL
+        WHERE "AssignmentSubmission"."gradedManually" = false
       `
     }
   } catch (error) {

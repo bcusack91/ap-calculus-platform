@@ -114,6 +114,10 @@ export default function OnboardingPage() {
   const handleComplete = async () => {
     if (!selectedCourse) return
     setSaving(true)
+    // The onboarding wizard IS the walkthrough — mark the dashboard tutorial
+    // as seen (same localStorage key DashboardTutorial checks) so new users
+    // don't get a second back-to-back walkthrough modal.
+    localStorage.setItem('dashboard-tutorial-completed', 'true')
     try {
       const res = await fetch('/api/onboarding', {
         method: 'POST',
