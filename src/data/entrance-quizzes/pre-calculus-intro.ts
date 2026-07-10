@@ -27,7 +27,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'pc-ent-5b', question: 'Solve sin(x) = ½ for 0 ≤ x < 2π. Which values satisfy this?', options: ['x = π/6 only', 'x = π/6 and x = 5π/6', 'x = π/3 and x = 2π/3', 'x = π/4 and x = 3π/4'], correctIndex: 1, explanation: 'sin(x) = ½ in [0, 2π) at x = π/6 (30°) and x = π − π/6 = 5π/6 (150°), both in Q1 and Q2 where sine is positive.', partNumber: 5, partTitle: 'Trig Identities & Equations' },
 
   // Part 6: Sequences & Series
-  { id: 'pc-ent-6a', question: 'In an arithmetic sequence with first term a₁ = 3 and common difference d = 4, what is the 10th term?', options: ['39', '40', '43', '36'], correctIndex: 0, explanation: 'aₙ = a₁ + (n − 1)d = 3 + (10 − 1)(4) = 3 + 36 = 39.', partNumber: 6, partTitle: 'Sequences & Series' },
+  { id: 'pc-ent-6a', question: 'In an arithmetic sequence with first term a₁ = 3 and common difference d = 4, what is the 10th term?', options: ['39', '31', '43', '36'], correctIndex: 0, explanation: 'aₙ = a₁ + (n − 1)d = 3 + (10 − 1)(4) = 3 + 36 = 39.', partNumber: 6, partTitle: 'Sequences & Series' },
   { id: 'pc-ent-6b', question: 'What is the common ratio of the geometric sequence 2, 6, 18, 54, …?', options: ['2', '3', '4', '6'], correctIndex: 1, explanation: 'Divide consecutive terms: 6/2 = 3, 18/6 = 3. The common ratio r = 3.', partNumber: 6, partTitle: 'Sequences & Series' },
 
   // Part 7: Review & Applications

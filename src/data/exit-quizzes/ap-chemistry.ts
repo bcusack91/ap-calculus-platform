@@ -827,7 +827,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'For a weak base B with Kb = 1.8 × 10⁻⁵ at 0.10 M concentration, what is the approximate pH?',
-    options: ['5.13', '8.87', '9.13', '11.13'],
+    options: ['5.13', '8.87', '2.87', '11.13'],
     correctAnswer: 3,
     explanation: 'B + H₂O ⇌ BH⁺ + OH⁻. x² ≈ 0.10 × 1.8 × 10⁻⁵ = 1.8 × 10⁻⁶. x = [OH⁻] ≈ 1.34 × 10⁻³ M. pOH = −log(1.34 × 10⁻³) ≈ 2.87. pH = 14 − 2.87 = 11.13.',
     difficulty: 'hard',
@@ -1622,7 +1622,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── moles-molar-mass (batch 2 — had 4, adding 4 → 8) ──────────
   { question: 'How many atoms are in 2 moles of helium?', options: ['$6.02 \\times 10^{23}$', '$1.204 \\times 10^{24}$', '$3.01 \\times 10^{23}$', '$2$'], correctAnswer: 1, explanation: '$2 \\times 6.022 \\times 10^{23} = 1.204 \\times 10^{24}$ atoms.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'A' },
-  { question: 'The molar mass of Ca(OH)₂ is:', options: ['57 g/mol', '74 g/mol', '40 g/mol', '58 g/mol'], correctAnswer: 1, explanation: '$40 + 2(16 + 1) = 40 + 34 = 74$ g/mol.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'B' },
+  { question: 'The molar mass of Ca(OH)₂ is:', options: ['57 g/mol', '74 g/mol', '40 g/mol', '114 g/mol'], correctAnswer: 1, explanation: '$40 + 2(16 + 1) = 40 + 34 = 74$ g/mol.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'B' },
   { question: 'If 180 g of glucose ($C_6H_{12}O_6$, MM = 180 g/mol) is dissolved, how many moles is that?', options: ['0.5 mol', '1 mol', '2 mol', '180 mol'], correctAnswer: 1, explanation: '$n = m/M = 180/180 = 1$ mol.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'both' },
   { question: 'At STP, 1 mole of any ideal gas occupies approximately:', options: ['11.2 L', '22.4 L', '44.8 L', '1 L'], correctAnswer: 1, explanation: 'Molar volume of an ideal gas at STP ≈ 22.4 L.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'A' },
 

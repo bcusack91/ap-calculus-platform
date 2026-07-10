@@ -38,7 +38,7 @@ const QUESTION_POOL: Question[] = [
   { question: 'What is the range of f(x) = x² if the domain is all real numbers?', options: ['All real numbers', 'y ≥ 0', 'y > 0', 'y ≤ 0'], correctAnswer: 1, explanation: 'x² is always non-negative (≥ 0) for any real x. The minimum value is 0 (at x = 0), so the range is y ≥ 0.' },
   { question: 'Simplify: (2x³)²', options: ['2x⁶', '4x⁶', '4x⁵', '2x⁵'], correctAnswer: 1, explanation: '(2x³)² = 2² × (x³)² = 4x⁶. Raise both the coefficient and variable to the power.' },
   { question: 'Which equation has no solution?', options: ['x + 1 = x + 1', '2x = 2x + 3', 'x = 0', '3x = 9'], correctAnswer: 1, explanation: '2x = 2x + 3 → 0 = 3, which is a contradiction. No value of x satisfies this equation.' },
-  { question: 'Convert to scientific notation: 0.00045', options: ['4.5 × 10⁻⁴', '45 × 10⁻⁵', '4.5 × 10⁻³', '0.45 × 10⁻³'], correctAnswer: 0, explanation: 'Move the decimal 4 places right: 0.00045 = 4.5 × 10⁻⁴.' },
+  { question: 'Convert to scientific notation: 0.00045', options: ['4.5 × 10⁻⁴', '4.5 × 10⁻⁵', '4.5 × 10⁻³', '4.5 × 10⁴'], correctAnswer: 0, explanation: 'Move the decimal 4 places right: 0.00045 = 4.5 × 10⁻⁴.' },
   { question: 'Find the x-intercept of y = 3x − 9.', options: ['(3, 0)', '(−3, 0)', '(0, −9)', '(9, 0)'], correctAnswer: 0, explanation: 'Set y = 0: 0 = 3x − 9 → 3x = 9 → x = 3. The x-intercept is (3, 0).' },
   { question: 'Solve: x/3 + 2 = 5', options: ['1', '9', '7', '15'], correctAnswer: 1, explanation: 'x/3 + 2 = 5 → x/3 = 3 → x = 9.' },
   { question: 'What is the product of (x + 3)(x − 3)?', options: ['x² − 9', 'x² + 9', 'x² − 6x + 9', 'x² + 6x + 9'], correctAnswer: 0, explanation: 'This is a difference of squares: (x + 3)(x − 3) = x² − 9.' },

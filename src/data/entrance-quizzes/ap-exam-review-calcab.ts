@@ -86,7 +86,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ar-ent-5a',
     question: 'The average value of $f(x) = x^2$ on $[0,3]$ is:',
-    options: ['$3$', '$9$', '$4.5$', '$\\frac{9}{2}$'],
+    options: ['$3$', '$9$', '$4.5$', '$\\frac{9}{4}$'],
     correctIndex: 0,
     explanation: '$\\frac{1}{3}\\int_0^3 x^2\\,dx = \\frac{1}{3}(9) = 3$.',
     partNumber: 5,

@@ -16,7 +16,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'primitive-types',
     question: 'What is printed by the following code?\n```java\nint a = 7, b = 2;\nSystem.out.println(a / b + " " + a % b + " " + (double) a / b);\n```',
-    options: ['3 1 3.5', '3.5 1 3.5', '3 1.0 3.5', '3.5 1 3.5'],
+    options: ['3 1 3.5', '3.5 1 3.5', '3 1.0 3.5', '3 1 3.0'],
     correctAnswer: 0,
     explanation: 'Integer division: 7/2 = 3. Modulus: 7%2 = 1. Cast then divide: (double)7 / 2 = 3.5. The first cast promotes the dividend, so the division is performed in floating point.',
   },

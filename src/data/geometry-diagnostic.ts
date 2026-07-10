@@ -121,7 +121,7 @@ const questionPool: PoolQuestion[] = [
   { question: 'The area of a regular hexagon with side s is:', options: ['(3√3/2)s²', '6s²', '3s²', '(√3/4)s²'], correctAnswer: 0, explanation: 'A regular hexagon = 6 equilateral triangles. A = 6 × (√3/4)s² = (3√3/2)s².', domain: 'area-volume', topicSlug: 'area-triangles-quadrilaterals', formSet: 'both' },
 
   // ---- Coordinate Geometry & Transformations ----
-  { question: 'The distance between (1, 2) and (4, 6) is:', options: ['5', '7', '√25', '3'], correctAnswer: 0, explanation: 'd = √((4−1)² + (6−2)²) = √(9+16) = √25 = 5.', domain: 'coordinate-geometry', topicSlug: 'special-segments-triangles', formSet: 'A' },
+  { question: 'The distance between (1, 2) and (4, 6) is:', options: ['5', '7', '√7', '3'], correctAnswer: 0, explanation: 'd = √((4−1)² + (6−2)²) = √(9+16) = √25 = 5.', domain: 'coordinate-geometry', topicSlug: 'special-segments-triangles', formSet: 'A' },
   { question: 'The midpoint of (2, 8) and (6, 4) is:', options: ['(4, 6)', '(8, 12)', '(2, 2)', '(4, 4)'], correctAnswer: 0, explanation: 'Midpoint = ((2+6)/2, (8+4)/2) = (4, 6).', domain: 'coordinate-geometry', topicSlug: 'special-segments-triangles', formSet: 'A' },
   { question: 'A reflection over the y-axis maps (3, 5) to:', options: ['(−3, 5)', '(3, −5)', '(−3, −5)', '(5, 3)'], correctAnswer: 0, explanation: 'Reflecting over the y-axis negates the x-coordinate: (3, 5) → (−3, 5).', domain: 'coordinate-geometry', topicSlug: 'rigid-transformations-geo', formSet: 'A' },
   { question: 'A 90° clockwise rotation maps (x, y) to:', options: ['(y, −x)', '(−y, x)', '(−x, −y)', '(x, −y)'], correctAnswer: 0, explanation: '90° clockwise: (x, y) → (y, −x).', domain: 'coordinate-geometry', topicSlug: 'rigid-transformations-geo', formSet: 'B' },

@@ -136,11 +136,11 @@ const questionPool: PoolQuestion[] = [
 
   // ---- Exponents & Radicals ----
   { question: 'Simplify: x³ · x⁵', options: ['x⁸', 'x¹⁵', 'x²', '2x⁸'], correctAnswer: 0, explanation: 'When multiplying same base, add exponents: x³⁺⁵ = x⁸.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'A' },
-  { question: 'Write 0.00045 in scientific notation:', options: ['4.5 × 10⁻⁴', '45 × 10⁻⁵', '4.5 × 10⁴', '0.45 × 10⁻³'], correctAnswer: 0, explanation: 'Move decimal 4 places right: 4.5 × 10⁻⁴.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'A' },
+  { question: 'Write 0.00045 in scientific notation:', options: ['4.5 × 10⁻⁴', '4.5 × 10⁻³', '4.5 × 10⁴', '4.5 × 10⁻⁵'], correctAnswer: 0, explanation: 'Move decimal 4 places right: 4.5 × 10⁻⁴.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'A' },
   { question: 'Simplify: √(50)', options: ['5√2', '25√2', '10√5', '2√25'], correctAnswer: 0, explanation: '√50 = √(25 · 2) = 5√2.', domain: 'exponents-radicals', topicSlug: 'simplifying-radicals-algebra1', formSet: 'A' },
   { question: 'Simplify: (x²)⁴', options: ['x⁸', 'x⁶', '4x²', 'x¹⁶'], correctAnswer: 0, explanation: 'Power of a power: multiply exponents. (x²)⁴ = x²ˣ⁴ = x⁸.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'B' },
   { question: 'What is 2⁻³?', options: ['1/8', '−8', '−6', '8'], correctAnswer: 0, explanation: '2⁻³ = 1/2³ = 1/8.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'B' },
-  { question: 'Simplify: √(72)', options: ['6√2', '8√9', '3√8', '12√2'], correctAnswer: 0, explanation: '√72 = √(36 · 2) = 6√2.', domain: 'exponents-radicals', topicSlug: 'simplifying-radicals-algebra1', formSet: 'B' },
+  { question: 'Simplify: √(72)', options: ['6√2', '8√9', '8√3', '12√2'], correctAnswer: 0, explanation: '√72 = √(36 · 2) = 6√2.', domain: 'exponents-radicals', topicSlug: 'simplifying-radicals-algebra1', formSet: 'B' },
   { question: 'x⁰ = (for x ≠ 0)', options: ['1', '0', 'x', 'Undefined'], correctAnswer: 0, explanation: 'Any non-zero number raised to the 0 power equals 1.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'both' },
   { question: 'Simplify: x⁶/x²', options: ['x⁴', 'x³', 'x⁸', 'x¹²'], correctAnswer: 0, explanation: 'When dividing same base, subtract exponents: x⁶⁻² = x⁴.', domain: 'exponents-radicals', topicSlug: 'exponent-rules-algebra1', formSet: 'both' },
 ]

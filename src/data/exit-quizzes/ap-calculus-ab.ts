@@ -858,7 +858,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'A 10-ft ladder leans against a wall. If the base slides away at $2$ ft/s, how fast is the top sliding down when the base is $6$ ft from the wall?',
-    options: ['$\\dfrac{3}{2}$ ft/s', '$\\dfrac{-3}{2}$ ft/s', '$-2$ ft/s', '$\\dfrac{-6}{4}$ ft/s'],
+    options: ['$\\dfrac{3}{2}$ ft/s', '$\\dfrac{-3}{2}$ ft/s', '$-2$ ft/s', '$\\dfrac{-8}{3}$ ft/s'],
     correctAnswer: 1,
     explanation: '$x^2 + y^2 = 100$. Differentiate: $2x\\frac{dx}{dt} + 2y\\frac{dy}{dt} = 0$. At $x = 6$: $y = 8$. $\\frac{dy}{dt} = \\frac{-x}{y}\\frac{dx}{dt} = \\frac{-6}{8}(2) = -\\frac{3}{2}$ ft/s.',
     difficulty: 'hard',
@@ -888,7 +888,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'The linearization of $f(x) = \\sqrt[3]{x}$ at $a = 8$ gives an approximation for $\\sqrt[3]{8.1}$ of:',
-    options: ['$2.0042$', '$2.0083$', '$2.01$', '$2.1$'],
+    options: ['$2.0042$', '$2.0083$', '$2.025$', '$2.1$'],
     correctAnswer: 1,
     explanation: '$f\'(x) = \\frac{1}{3}x^{-2/3}$. $L(x) = 2 + \\frac{1}{12}(x - 8)$. $L(8.1) = 2 + \\frac{0.1}{12} \\approx 2.0083$.',
     difficulty: 'medium',
@@ -1046,7 +1046,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'The average value of $f(x) = x^2$ on $[0, 3]$ is:',
-    options: ['$3$', '$9$', '$\\dfrac{9}{2}$', '$\\dfrac{27}{3}$'],
+    options: ['$3$', '$9$', '$\\dfrac{9}{2}$', '$\\dfrac{9}{4}$'],
     correctAnswer: 0,
     explanation: '$f_{\\text{avg}} = \\frac{1}{3}\\int_0^3 x^2 dx = \\frac{1}{3} \\cdot \\frac{27}{3} = \\frac{27}{9} = 3$.',
     difficulty: 'easy',
@@ -1248,7 +1248,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   // ══════════════════════════════════════════════════════════════
   {
     question: 'What is $\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x^2 - 5x + 6}$?',
-    options: ['$6$', '$\\dfrac{6}{1}$', '$0$', '$\\infty$'],
+    options: ['$6$', '$-6$', '$0$', '$\\infty$'],
     correctAnswer: 0,
     explanation: 'Factor: $\\frac{(x-3)(x+3)}{(x-3)(x-2)} = \\frac{x+3}{x-2}$. At $x=3$: $\\frac{6}{1} = 6$.',
     difficulty: 'medium',
@@ -1622,7 +1622,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'What is $\\dfrac{d}{dx}\\left[\\dfrac{\\sin x}{x}\\right]$ at $x = \\pi$?',
-    options: ['$\\dfrac{-1}{\\pi}$', '$\\dfrac{1}{\\pi}$', '$0$', '$\\dfrac{-\\pi}{\\pi^2}$'],
+    options: ['$\\dfrac{-1}{\\pi}$', '$\\dfrac{1}{\\pi}$', '$0$', '$-1$'],
     correctAnswer: 0,
     explanation: 'Quotient rule: $\\frac{x\\cos x - \\sin x}{x^2}$. At $x=\\pi$: $\\frac{\\pi(-1) - 0}{\\pi^2} = \\frac{-1}{\\pi}$.',
     difficulty: 'hard',
@@ -4265,7 +4265,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'Air is pumped into a spherical balloon at $\\dfrac{dV}{dt} = 100$ cm³/s. Find $\\dfrac{dr}{dt}$ when $r = 5$ cm.',
-    options: ['$1/\\pi$', '$1/(\\pi)$ cm/s', '$1/\\pi$ cm/s', '$1/\\pi$'],
+    options: ['$1/(5\\pi)$ cm/s', '$4/\\pi$ cm/s', '$1/\\pi$ cm/s', '$5/\\pi$ cm/s'],
     correctAnswer: 2,
     explanation: '$100 = 4\\pi(5)^2 \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\Rightarrow \\dfrac{dr}{dt} = 1/\\pi$ cm/s.',
     difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',

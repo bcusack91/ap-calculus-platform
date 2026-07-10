@@ -82,7 +82,7 @@ const questionPool: PoolQuestion[] = [
 
   // ---- Expressions & Equations ----
   { question: '3⁻² equals:', options: ['1/9', '−9', '9', '−6'], correctAnswer: 0, explanation: '3⁻² = 1/3² = 1/9.', domain: 'expressions-equations', topicSlug: 'integer-exponents', formSet: 'A' },
-  { question: 'Write 0.00045 in scientific notation.', options: ['4.5 × 10⁻⁴', '45 × 10⁻⁵', '4.5 × 10⁴', '0.45 × 10⁻³'], correctAnswer: 0, explanation: '0.00045 = 4.5 × 10⁻⁴.', domain: 'expressions-equations', topicSlug: 'scientific-notation-grade8', formSet: 'A' },
+  { question: 'Write 0.00045 in scientific notation.', options: ['4.5 × 10⁻⁴', '4.5 × 10⁻⁵', '4.5 × 10⁴', '4.5 × 10⁻³'], correctAnswer: 0, explanation: '0.00045 = 4.5 × 10⁻⁴.', domain: 'expressions-equations', topicSlug: 'scientific-notation-grade8', formSet: 'A' },
   { question: 'Solve: 2x + 5 = 17', options: ['x = 6', 'x = 11', 'x = 7', 'x = 22'], correctAnswer: 0, explanation: '2x = 12 → x = 6.', domain: 'expressions-equations', topicSlug: 'solving-linear-equations-grade8', formSet: 'A' },
   { question: '(2³)² simplifies to:', options: ['2⁶', '2⁵', '2⁹', '4⁶'], correctAnswer: 0, explanation: 'Power rule: (2³)² = 2^(3×2) = 2⁶ = 64.', domain: 'expressions-equations', topicSlug: 'integer-exponents', formSet: 'B' },
   { question: '3.2 × 10⁵ in standard form is:', options: ['320,000', '32,000', '3,200,000', '3,200'], correctAnswer: 0, explanation: '3.2 × 10⁵ = 320,000.', domain: 'expressions-equations', topicSlug: 'scientific-notation-grade8', formSet: 'B' },

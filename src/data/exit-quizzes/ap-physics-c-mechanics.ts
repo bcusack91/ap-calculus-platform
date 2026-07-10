@@ -130,7 +130,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'The position of a particle is r(t) = (3t²)î + (4t − t²)ĵ. What is the magnitude of acceleration?',
-    options: ['2 m/s²', '6 m/s²', '2√10 m/s²', '√40 m/s²'],
+    options: ['2 m/s²', '6 m/s²', '2√10 m/s²', '4√2 m/s²'],
     correctAnswer: 2,
     explanation: 'v = 6tî + (4 − 2t)ĵ. a = 6î − 2ĵ. |a| = √(36 + 4) = √40 = 2√10 m/s².',
     difficulty: 'medium',
@@ -378,7 +378,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A particle of mass 4 kg is subject to F(x) = 12x². What is the velocity at x = 2 m if v = 0 at x = 0? (use work-energy theorem)',
-    options: ['4 m/s', '4√2 m/s', '8 m/s', '√(32) m/s'],
+    options: ['4 m/s', '4√2 m/s', '8 m/s', '2√2 m/s'],
     correctAnswer: 0,
     explanation: 'W = ∫₀² 12x² dx = [4x³]₀² = 32 J. By the work-energy theorem: ½(4)v² = 32 ⟹ v² = 16 ⟹ v = 4 m/s.',
     difficulty: 'hard',
@@ -1342,7 +1342,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'Two springs (k₁ = 100 N/m, k₂ = 200 N/m) are connected in parallel supporting a 3 kg mass. The period of oscillation is:',
-    options: ['2π/10 s', '2π√(3/300) s', 'π/5 s', '2π√(1/100) s'],
+    options: ['π/10 s', '2π√(300/3) s', 'π/5 s', '2π√(3/100) s'],
     correctAnswer: 2,
     explanation: 'Parallel: k_eff = k₁ + k₂ = 300 N/m. T = 2π√(m/k) = 2π√(3/300) = 2π√(1/100) = 2π/10 = π/5 s.',
     difficulty: 'medium',
@@ -1460,7 +1460,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A 1 kg mass is attached to a vertical spring (k = 40 N/m). When pulled down 0.1 m from the equilibrium and released, what is the maximum speed?',
-    options: ['√(0.4) m/s', '2 m/s', '0.2 m/s', '0.632 m/s'],
+    options: ['4 m/s', '2 m/s', '0.2 m/s', '0.632 m/s'],
     correctAnswer: 3,
     explanation: '½kA² = ½mv². v = A√(k/m) = 0.1√(40) = 0.1 × 6.32 ≈ 0.632 m/s.',
     difficulty: 'medium',

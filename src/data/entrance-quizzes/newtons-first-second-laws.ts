@@ -65,7 +65,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'n12-ent-4a',
     question: 'What is the weight of a $10$ kg object near Earth\'s surface? (Use $g = 9.8$ m/s².)',
-    options: ['$10$ N', '$98$ N', '$9.8$ N', '$980$ N'],
+    options: ['$10$ N', '$98$ N', '$0.98$ N', '$980$ N'],
     correctIndex: 1,
     explanation: 'Weight $= mg = 10 \\times 9.8 = 98$ N.',
     partNumber: 4,

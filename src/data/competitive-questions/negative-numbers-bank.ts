@@ -313,9 +313,9 @@ const allQuestions: NegativeNumberQuestion[] = [
   {
     id: 38,
     question: 'Which expression equals $-1$?',
-    options: ['$\\frac{-5}{5}$', '$\\frac{5}{-1}$', '$\\frac{-1}{-1}$', '$(-1)^2$'],
+    options: ['$\\frac{-5}{5}$', '$\\frac{5}{-1}$', '$\\frac{10}{-5}$', '$(-1)^2$'],
     correctAnswer: 0,
-    explanation: '$\\frac{-5}{5} = -1$. The other options equal $-5$, $1$, and $1$.',
+    explanation: '$\\frac{-5}{5} = -1$. The other options equal $-5$, $-2$, and $1$.',
     difficulty: 'easy',
   },
   {

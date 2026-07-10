@@ -412,7 +412,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   {
     question:
       'A jar contains 8 red marbles, 5 blue marbles, and 7 green marbles. If you randomly draw one marble, what is the probability it is either red or blue?',
-    options: ['8/20', '13/20', '8/13', '5/8'],
+    options: ['8/20', '13/20', '8/13', '1/10'],
     correctAnswer: 1,
     explanation:
       'Total marbles = 20. Red or Blue = 8 + 5 = 13. P(Red or Blue) = 13/20.',
@@ -423,7 +423,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   {
     question:
       'In a standard deck of 52 cards, what is the probability of drawing a spade given that the card drawn is black?',
-    options: ['1/2', '13/26', '13/52', '1/4'],
+    options: ['1/2', '3/4', '1/8', '1/4'],
     correctAnswer: 0,
     explanation:
       'P(Spade | Black) = P(Spade AND Black) / P(Black) = (13/52) / (26/52) = 13/26 = 1/2. Half of black cards are spades.',
@@ -872,7 +872,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   {
     question:
       'A fair die is rolled twice. Let X = the sum of the two rolls. What is P(X = 7)?',
-    options: ['1/6', '1/12', '1/36', '6/36'],
+    options: ['1/11', '1/12', '1/36', '6/36'],
     correctAnswer: 3,
     explanation:
       'Ways to get sum = 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways. Total outcomes = 36. P(X=7) = 6/36 = 1/6.',

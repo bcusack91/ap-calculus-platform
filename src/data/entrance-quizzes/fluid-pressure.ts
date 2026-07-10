@@ -74,7 +74,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'fp-ent-4b',
     question: 'A tire gauge reads $200$ kPa. The absolute pressure inside the tire is approximately:',
-    options: ['$200$ kPa', '$100$ kPa', '$301$ kPa', '$99$ kPa'],
+    options: ['$200$ kPa', '$400$ kPa', '$301$ kPa', '$99$ kPa'],
     correctIndex: 2,
     explanation: '$P_{abs} = P_{gauge} + P_{atm} = 200 + 101 = 301$ kPa.',
     partNumber: 4,

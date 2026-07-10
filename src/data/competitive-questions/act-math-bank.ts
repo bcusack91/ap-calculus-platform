@@ -288,7 +288,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 35,
     question: 'Convert $0.75$ to a fraction in lowest terms.',
-    options: ['$\\frac{3}{4}$', '$\\frac{7}{10}$', '$\\frac{75}{10}$', '$\\frac{15}{20}$'],
+    options: ['$\\frac{3}{4}$', '$\\frac{7}{10}$', '$\\frac{75}{10}$', '$\\frac{4}{3}$'],
     correctAnswer: 0,
     explanation: '$0.75 = \\frac{75}{100} = \\frac{3}{4}$.',
     difficulty: 'easy',
@@ -368,7 +368,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 45,
     question: 'Simplify: $\\frac{12}{18}$',
-    options: ['$\\frac{2}{3}$', '$\\frac{3}{4}$', '$\\frac{4}{6}$', '$\\frac{6}{9}$'],
+    options: ['$\\frac{2}{3}$', '$\\frac{3}{4}$', '$\\frac{3}{2}$', '$\\frac{1}{2}$'],
     correctAnswer: 0,
     explanation: '$\\frac{12}{18} = \\frac{12 \\div 6}{18 \\div 6} = \\frac{2}{3}$.',
     difficulty: 'easy',
@@ -752,7 +752,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 93,
     question: 'Simplify: $\\frac{\\sqrt{18}}{\\sqrt{2}}$',
-    options: ['$3$', '$9$', '$\\sqrt{9}$', '$6$'],
+    options: ['$3$', '$9$', '$\\sqrt{16}$', '$6$'],
     correctAnswer: 0,
     explanation: '$\\frac{\\sqrt{18}}{\\sqrt{2}} = \\sqrt{\\frac{18}{2}} = \\sqrt{9} = 3$.',
     difficulty: 'medium',
@@ -968,7 +968,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 120,
     question: 'Simplify: $\\frac{3!\\cdot 4!}{5!}$',
-    options: ['$\\frac{6}{5}$', '$\\frac{1}{5}$', '$12$', '$\\frac{24}{120}$'],
+    options: ['$\\frac{6}{5}$', '$\\frac{1}{5}$', '$12$', '$\\frac{5}{6}$'],
     correctAnswer: 0,
     explanation: '$\\frac{6 \\times 24}{120} = \\frac{144}{120} = \\frac{6}{5}$.',
     difficulty: 'medium',
@@ -1016,7 +1016,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 126,
     question: 'A box contains $3$ red, $4$ blue, and $5$ green balls. Two balls are drawn without replacement. What is the probability both are red?',
-    options: ['$\\frac{1}{22}$', '$\\frac{1}{16}$', '$\\frac{9}{144}$', '$\\frac{3}{12}$'],
+    options: ['$\\frac{1}{22}$', '$\\frac{1}{16}$', '$\\frac{1}{11}$', '$\\frac{3}{12}$'],
     correctAnswer: 0,
     explanation: '$P = \\frac{3}{12} \\times \\frac{2}{11} = \\frac{6}{132} = \\frac{1}{22}$.',
     difficulty: 'medium',
@@ -1072,7 +1072,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 133,
     question: 'Solve: $\\sqrt{2x + 3} = 5$',
-    options: ['$11$', '$14$', '$4$', '$\\frac{22}{2}$'],
+    options: ['$11$', '$14$', '$4$', '$\\frac{25}{2}$'],
     correctAnswer: 0,
     explanation: '$2x + 3 = 25 \\Rightarrow 2x = 22 \\Rightarrow x = 11$.',
     difficulty: 'hard',
@@ -1224,7 +1224,7 @@ const allQuestions: ActMathQuestion[] = [
   {
     id: 152,
     question: 'What is the length of the diagonal of a rectangular prism with dimensions $3$, $4$, and $12$?',
-    options: ['$13$', '$\\sqrt{169}$', '$19$', '$\\sqrt{29}$'],
+    options: ['$13$', '$5$', '$19$', '$\\sqrt{29}$'],
     correctAnswer: 0,
     explanation: '$d = \\sqrt{3^2 + 4^2 + 12^2} = \\sqrt{9 + 16 + 144} = \\sqrt{169} = 13$.',
     difficulty: 'hard',

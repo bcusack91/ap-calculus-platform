@@ -324,7 +324,7 @@ const allQuestions: PreCalcQuestion[] = [
   // exponential-functions-growth-decay (5 → 10)
   { id: 221, question: '$f(x) = 2^x$ has $y$-intercept:', options: ['$1$', '$2$', '$0$', '$\\ln 2$'], correctAnswer: 0, explanation: '$2^0 = 1$.', difficulty: 'easy', topicSlug: 'exponential-functions-growth-decay' },
   { id: 222, question: 'Horizontal asymptote of $f(x) = 3^x$:', options: ['$y = 0$', '$y = 1$', '$y = 3$', 'None'], correctAnswer: 0, explanation: 'As $x \\to -\\infty$, $f \\to 0^+$.', difficulty: 'easy', topicSlug: 'exponential-functions-growth-decay' },
-  { id: 223, question: 'Growth factor of $f(x) = 5(1.08)^x$ is:', options: ['$1.08$', '$5$', '$0.08$', '$8\\%$'], correctAnswer: 0, explanation: 'Base of exponential = growth factor.', difficulty: 'easy', topicSlug: 'exponential-functions-growth-decay' },
+  { id: 223, question: 'Growth factor of $f(x) = 5(1.08)^x$ is:', options: ['$1.08$', '$5$', '$0.08$', '$0.92$'], correctAnswer: 0, explanation: 'Base of exponential = growth factor.', difficulty: 'easy', topicSlug: 'exponential-functions-growth-decay' },
   { id: 224, question: 'Decay factor 0.7 corresponds to a decrease of:', options: ['$30\\%$ each step', '$70\\%$ each step', '$0.3\\%$', '$7\\%$'], correctAnswer: 0, explanation: '$1 - 0.7 = 0.3 = 30\\%$.', difficulty: 'easy', topicSlug: 'exponential-functions-growth-decay' },
   { id: 225, question: '$2^{x+3} = $?', options: ['$8 \\cdot 2^x$', '$2^x + 8$', '$x + 3$', '$2^x \\cdot 3$'], correctAnswer: 0, explanation: 'Exponent rule: $2^{x+3} = 2^3 \\cdot 2^x = 8 \\cdot 2^x$.', difficulty: 'medium', topicSlug: 'exponential-functions-growth-decay' },
 

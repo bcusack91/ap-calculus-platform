@@ -16,8 +16,8 @@ const questionPool: MCATQuizQuestion[] = [
     subtopicSlug: 'mcat-physics-mechanics-kinematics-mcat',
   },
   {
-    question: 'A 5 kg box is pushed across a floor with a coefficient of kinetic friction of 0.3. What is the frictional force?',
-    options: ['1.5 N', '15 N', '14.7 N', '50 N'],
+    question: 'A 5 kg box is pushed across a floor with a coefficient of kinetic friction of 0.3. What is the frictional force? (g = 9.8 m/s²)',
+    options: ['1.5 N', '2.9 N', '14.7 N', '50 N'],
     correctAnswer: 2,
     explanation: 'fk = μk × N = μk × mg = 0.3 × 5 × 9.8 = 14.7 N.',
     difficulty: 'easy',
@@ -41,7 +41,7 @@ const questionPool: MCATQuizQuestion[] = [
   },
   {
     question: 'A submarine is at a depth of 100 m in seawater (ρ = 1025 kg/m³). What is the gauge pressure? (g = 9.8 m/s²)',
-    options: ['1.0 × 10⁶ Pa', '1.005 × 10⁶ Pa', '1.005 × 10⁵ Pa', '1.0 × 10⁵ Pa'],
+    options: ['1.106 × 10⁶ Pa', '1.005 × 10⁶ Pa', '2.01 × 10⁶ Pa', '1.0 × 10⁵ Pa'],
     correctAnswer: 1,
     explanation: 'Gauge pressure = ρgh = 1025 × 9.8 × 100 = 1,004,500 Pa ≈ 1.005 × 10⁶ Pa. This is the pressure due to the water column above, not including atmospheric pressure.',
     difficulty: 'medium',
@@ -57,9 +57,9 @@ const questionPool: MCATQuizQuestion[] = [
   },
   {
     question: 'A 2 kg object on a spring (k = 200 N/m) oscillates in simple harmonic motion. What is its period?',
-    options: ['0.2π s', '0.1π s', 'π/5 s', '2π s'],
+    options: ['20π s', '0.1π s', 'π/5 s', '2π s'],
     correctAnswer: 2,
-    explanation: 'T = 2π√(m/k) = 2π√(2/200) = 2π√(0.01) = 2π(0.1) = 0.2π = π/5 s ≈ 0.63 s.',
+    explanation: 'T = 2π√(m/k) = 2π√(2/200) = 2π√(0.01) = 2π(0.1) = π/5 s ≈ 0.63 s. Inverting the ratio (using k/m) gives 20π s, which is incorrect.',
     difficulty: 'medium',
     subtopicSlug: 'mcat-physics-mechanics-fluids-waves-mcat',
   },
