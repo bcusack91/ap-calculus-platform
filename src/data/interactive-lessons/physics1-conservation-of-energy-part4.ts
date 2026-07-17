@@ -60,7 +60,7 @@ $$h_{\\text{min}} = \\frac{5}{2}R = 2.5R$$
       exercise: {
         questions: [
           {
-            question: 'A roller coaster starts from rest at 40 m. Its speed at 15 m is ($g = 10$ m/s²):',
+            question: 'A roller coaster starts from rest at 40 m. Its speed at 15 m is ($g = 10$ $m/s^{2}$):',
             options: [
               '10 m/s',
               '15 m/s',
@@ -82,7 +82,7 @@ $$h_{\\text{min}} = \\frac{5}{2}R = 2.5R$$
             explanation: '$h_{\\text{min}} = 2.5R = 2.5(10) = 25$ m.'
           },
           {
-            question: 'A roller coaster car passes point A at 20 m/s (height 30 m). At point B (height 10 m), its speed is ($g = 10$ m/s²):',
+            question: 'A roller coaster car passes point A at 20 m/s (height 30 m). At point B (height 10 m), its speed is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{400}$ m/s',
               '$\\sqrt{600}$ m/s',
@@ -129,7 +129,7 @@ $$v = \\sqrt{2gL(\\cos\\phi - \\cos\\theta)}$$
       content: `
 **Roller Coaster & Pendulum Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A roller coaster starts from rest at 50 m. What is its speed at the bottom (in m/s)? (Round to nearest integer.)
 
@@ -190,7 +190,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A roller coaster starts from rest at 45 m and encounters a loop of radius 10 m. Its speed at the top of the loop is ($g = 10$ m/s²):',
+            question: 'A roller coaster starts from rest at 45 m and encounters a loop of radius 10 m. Its speed at the top of the loop is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{100}$ m/s',
               '$\\sqrt{500}$ m/s',
@@ -201,7 +201,7 @@ Use $g = 10$ m/s².
             explanation: 'Top of loop is at $h = 2R = 20$ m. $v^2 = 2g(h_0 - 2R) = 2(10)(45 - 20) = 500$. $v = \\sqrt{500} \\approx 22.4$ m/s.'
           },
           {
-            question: 'A 1 m pendulum released from $90°$ ($\\cos 90° = 0$) has what speed at the bottom ($g = 10$ m/s²)?',
+            question: 'A 1 m pendulum released from $90°$ ($\\cos 90° = 0$) has what speed at the bottom ($g = 10$ $m/s^{2}$)?',
             options: [
               '$\\sqrt{10}$ m/s',
               '$\\sqrt{20}$ m/s',

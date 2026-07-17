@@ -118,13 +118,13 @@ $$I = \\sum m_i r_i^2$$
           },
           {
             label: 'For rolling without slipping, the velocity of the contact point is:',
-            options: ['zero', 'v_cm', '2v_cm', 'Rω²'],
+            options: ['zero', 'v_cm', '2v_cm', '$R\\omega^{2}$'],
             correctIndex: 0,
             explanation: 'For rolling without slipping, the contact point has zero velocity (translation and rotation cancel).'
           },
           {
             label: 'The rolling condition that connects linear and angular motion is:',
-            options: ['v = Rω', 'v = R/ω', 'v = Rα', 'v = R²ω'],
+            options: ['v = Rω', 'v = R/ω', 'v = Rα', 'v = $R^{2}\\omega$'],
             correctIndex: 0,
             explanation: 'The rolling condition $v_{\\text{cm}} = R\\omega$ connects linear and angular motion.'
           },
@@ -165,7 +165,7 @@ $$I = \\sum m_i r_i^2$$
               '10 rad/s'
             ],
             correctAnswer: 1,
-            explanation: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(200)(4) = 400$ kg·m². $\\alpha = \\tau/I = 100/400 = 0.25$ rad/s². $\\omega = \\alpha t = (0.25)(10) = 2.5$ rad/s.'
+            explanation: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(200)(4) = 400$ $kg\\cdot m^{2}$. $\\alpha = \\tau/I = 100/400 = 0.25$ $rad/s^{2}$. $\\omega = \\alpha t = (0.25)(10) = 2.5$ rad/s.'
           }
         ]
       }

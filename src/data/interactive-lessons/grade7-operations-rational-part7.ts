@@ -83,7 +83,7 @@ $(-3)(4) + 8 \\div (-2) = -12 + (-4) = -16$ ✅
         correctAnswers: ["Multiplication","1"],
         hint1: "PEMDAS: M before A.",
         hint2: "Even exponent of −1.",
-        explanation: "Multiply first. (−1)⁴ = 1."
+        explanation: "Multiply first. $(-1)^{4}$ = 1."
       }
     },
     {

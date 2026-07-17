@@ -40,7 +40,7 @@ Every gas sample is described by four measurable quantities:
 | Variable | Symbol | SI Unit | Common Units |
 |----------|--------|---------|--------------|
 | **Pressure** | $P$ | Pascal (Pa) | atm, mmHg, torr, kPa |
-| **Volume** | $V$ | m³ | liters (L) |
+| **Volume** | $V$ | $m^{3}$ | liters (L) |
 | **Temperature** | $T$ | Kelvin (K) | °C (must convert!) |
 | **Amount** | $n$ | moles (mol) | — |
 
@@ -149,10 +149,10 @@ where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
           {
             question: 'At the same temperature, which gas has the highest average molecular speed?',
             options: [
-              'O₂ (M = 32 g/mol)',
-              'N₂ (M = 28 g/mol)',
+              '$O_{2}$ (M = 32 g/mol)',
+              '$N_{2}$ (M = 28 g/mol)',
               'He (M = 4 g/mol)',
-              'CO₂ (M = 44 g/mol)'
+              '$CO_{2}$ (M = 44 g/mol)'
             ],
             correctAnswer: 2,
             explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. At the same temperature, speed is inversely related to the square root of molar mass. Helium has the smallest molar mass (4 g/mol), so it moves the fastest.'
@@ -218,7 +218,7 @@ Convert the following gas measurements:
           },
           {
             id: 'gl1-dd3',
-            label: 'At the same temperature, He atoms move ___ O₂ molecules',
+            label: 'At the same temperature, He atoms move ___ $O_{2}$ molecules',
             options: ['faster than', 'slower than', 'the same speed as'],
             correctIndex: 0,
             explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. Lighter molecules (smaller M) have higher speeds at the same temperature.'
@@ -310,13 +310,13 @@ Convert the following gas measurements:
           {
             question: 'At the same temperature, which gas molecule has the greatest average speed?',
             options: [
-              'CO₂ (M = 44 g/mol)',
-              'N₂ (M = 28 g/mol)',
-              'H₂ (M = 2 g/mol)',
+              '$CO_{2}$ (M = 44 g/mol)',
+              '$N_{2}$ (M = 28 g/mol)',
+              '$H_{2}$ (M = 2 g/mol)',
               'Ar (M = 40 g/mol)'
             ],
             correctAnswer: 2,
-            explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. The lightest molecule (H₂, M = 2 g/mol) has the greatest average speed at any given temperature.'
+            explanation: '$v_{\\text{rms}} = \\sqrt{3RT/M}$. The lightest molecule ($H_{2}$, M = 2 g/mol) has the greatest average speed at any given temperature.'
           },
           {
             question: 'Which assumption of KMT breaks down at very high pressures?',

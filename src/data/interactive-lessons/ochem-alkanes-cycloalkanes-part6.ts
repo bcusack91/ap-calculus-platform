@@ -199,9 +199,9 @@ This trade-off is **Hammond's postulate** in action: bromination has a late, pro
           {
             question: 'You want to selectively install a halogen at the single 3° carbon of 2-methylbutane, getting mostly one product. Which reagent and why?',
             options: [
-              'Cl₂/hν, because chlorine is highly selective for 3° positions',
-              'Br₂/hν, because bromine is highly selective (3° ≫ 2° ≫ 1°) and favors the tertiary position',
-              'O₂, via combustion',
+              '$Cl_{2}/h\\nu$, because chlorine is highly selective for 3° positions',
+              '$Br_{2}/h\\nu$, because bromine is highly selective (3° ≫ 2° ≫ 1°) and favors the tertiary position',
+              '$O_{2}$, via combustion',
               'Either halogen gives the same clean result'
             ],
             correctAnswer: 1,

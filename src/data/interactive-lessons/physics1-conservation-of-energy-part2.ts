@@ -80,7 +80,7 @@ $$E_{\\text{thermal}} = f_k d = \\mu_k mg d$$
             explanation: 'At constant speed, $\\Delta KE = 0$ and $\\Delta PE = 0$. The applied work exactly equals the friction work: $W_{\\text{app}} = f_k d$. All the energy goes to heat.'
           },
           {
-            question: 'An elevator motor lifts a 500 kg elevator at constant speed through 20 m ($g = 10$ m/s²). The work done by the motor is:',
+            question: 'An elevator motor lifts a 500 kg elevator at constant speed through 20 m ($g = 10$ $m/s^{2}$). The work done by the motor is:',
             options: [
               '0 J (constant speed)',
               '50,000 J',
@@ -99,7 +99,7 @@ $$E_{\\text{thermal}} = f_k d = \\mu_k mg d$$
       content: `
 ## Worked Example: Friction on a Ramp
 
-A 4 kg block slides down a 5 m ramp (height 3 m) with $\\mu_k = 0.2$. Find the speed at the bottom ($g = 10$ m/s²).
+A 4 kg block slides down a 5 m ramp (height 3 m) with $\\mu_k = 0.2$. Find the speed at the bottom ($g = 10$ $m/s^{2}$).
 
 **Step 1**: Identify energies
 - $KE_i = 0$ (starts from rest)
@@ -131,7 +131,7 @@ Without friction: $v = \\sqrt{2(10)(3)} = \\sqrt{60} \\approx 7.75$ m/s. Frictio
       content: `
 **Practice with Non-Conservative Forces** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 5 kg block slides down from a height of 8 m on a frictionless ramp, then across a rough flat surface ($\\mu_k = 0.4$) for 10 m. What is its speed (in m/s)? (Round to the nearest tenth.)
 
@@ -192,7 +192,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 2 kg block slides from height 5 m on a frictionless ramp and then across 4 m of rough floor ($\\mu_k = 0.5$). The speed at the end is ($g = 10$ m/s²):',
+            question: 'A 2 kg block slides from height 5 m on a frictionless ramp and then across 4 m of rough floor ($\\mu_k = 0.5$). The speed at the end is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{60}$ m/s',
               '$\\sqrt{100}$ m/s',

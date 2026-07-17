@@ -104,7 +104,7 @@ Water as a pure liquid is omitted.
               '$K_c = \\frac{[\\text{Fe}]^2}{[\\text{Fe}_2\\text{O}_3]}$'
             ],
             correctAnswer: 1,
-            explanation: 'Pure solids (Fe₂O₃ and Fe) are excluded. Only gases remain: $K_c = \\frac{[\\text{CO}_2]^3}{[\\text{CO}]^3}$.'
+            explanation: 'Pure solids ($Fe_{2}O_{3}$ and Fe) are excluded. Only gases remain: $K_c = \\frac{[\\text{CO}_2]^3}{[\\text{CO}]^3}$.'
           },
           {
             question: 'For $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$, what is $K_c$?',
@@ -181,8 +181,8 @@ The solid carbon is omitted.
         correctAnswers: ['numerator', 'exponents', '1', '1'],
         hint1: 'Products over reactants is the convention.',
         hint2: 'Think about $[\\text{A}]^a$ — the coefficient $a$ goes where?',
-        hint3: 'The coefficient on O₂ in the balanced equation is 1.',
-        explanation: 'Products go in the numerator, reactants in the denominator. Coefficients become exponents. Pure solids/liquids have activity = 1. The coefficient on O₂ is 1, so its exponent in $K_c$ is 1.'
+        hint3: 'The coefficient on $O_{2}$ in the balanced equation is 1.',
+        explanation: 'Products go in the numerator, reactants in the denominator. Coefficients become exponents. Pure solids/liquids have activity = 1. The coefficient on $O_{2}$ is 1, so its exponent in $K_c$ is 1.'
       }
     },
     {
@@ -234,7 +234,7 @@ Enter the three exponents (integers):
               '$K_c = [\\text{NH}_3] + [\\text{HCl}]$'
             ],
             correctAnswer: 1,
-            explanation: 'NH₄Cl is a pure solid — it is excluded from the $K_c$ expression. Therefore $K_c = [\\text{NH}_3][\\text{HCl}]$.'
+            explanation: '$NH_{4}Cl$ is a pure solid — it is excluded from the $K_c$ expression. Therefore $K_c = [\\text{NH}_3][\\text{HCl}]$.'
           }
         ]
       }

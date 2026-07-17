@@ -41,7 +41,7 @@ Combine all concepts:
       exercise: {
         questions: [
           {
-                    "question": "End behavior of −2x⁴?",
+                    "question": "End behavior of $-2x^{4}$?",
                     "options": [
                               "Both ends down",
                               "Both ends up",
@@ -83,11 +83,11 @@ Combine all concepts:
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"−2x⁴ has what end behavior?","options":["Both ends down","Both ends up","Opposite ends","Cannot tell"]},{"label":"x² − 1 factors as","options":["(x−1)(x+1)","(x−1)²","x(x−1)","Cannot factor"]}],
+        dropdowns: [{"label":"$-2x^{4}$ has what end behavior?","options":["Both ends down","Both ends up","Opposite ends","Cannot tell"]},{"label":"$x^{2}$ − 1 factors as","options":["(x−1)(x+1)","$(x-1)^{2}$","x(x−1)","Cannot factor"]}],
         correctAnswers: ["Both ends down","(x−1)(x+1)"],
         hint1: "Even + negative.",
         hint2: "Difference of squares.",
-        explanation: "Even neg → both down. x²−1 = (x−1)(x+1)."
+        explanation: "Even neg → both down. $x^{2}-1$ = (x−1)(x+1)."
       }
     },
     {
@@ -98,8 +98,8 @@ Combine all concepts:
 
 | # | Concept | Problem |
 |---|---------|------|
-| 1 | End behavior | −2x⁴ |
-| 2 | Zeros | x²−1 |
+| 1 | End behavior | $-2x^{4}$ |
+| 2 | Zeros | $x^{2}-1$ |
 | 3 | Turning points | degree 4 |
     
     `
@@ -113,7 +113,7 @@ Combine all concepts:
       exercise: {
         questions: [
           {
-                    "question": "Zeros of x²−1?",
+                    "question": "Zeros of $x^{2}-1$?",
                     "options": [
                               "x=1 and x=−1",
                               "x=1 only",

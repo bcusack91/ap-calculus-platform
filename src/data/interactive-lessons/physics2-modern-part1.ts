@@ -214,7 +214,7 @@ A sodium surface has work function $\\phi = 2.28$ eV. Ultraviolet light of wavel
             options: [
               'A horizontal line (constant KE for all f)',
               'A straight line with positive slope starting at f = 0',
-              'A straight line with positive slope starting at f = f₀ (zero KE below f₀)',
+              'A straight line with positive slope starting at f = $f_{0}$ (zero KE below $f_{0}$)',
               'An exponential curve'
             ],
             correctAnswer: 2,

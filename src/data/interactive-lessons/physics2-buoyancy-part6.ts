@@ -22,14 +22,14 @@ The atmosphere is a fluid! Every object in air experiences a buoyant force:
 
 $$F_{B,\\text{air}} = \\rho_{\\text{air}} V_{\\text{obj}} g$$
 
-With $\\rho_{\\text{air}} \\approx 1.2$ kg/m³ at sea level.
+With $\\rho_{\\text{air}} \\approx 1.2$ $kg/m^{3}$ at sea level.
 
 ### Why We Usually Ignore It
 
 For most solid objects, air buoyancy is negligible:
 
-- 1 kg iron block: $V \\approx 1.3 \\times 10^{-4}$ m³ → $F_B \\approx 0.0016$ N (0.016% of weight)
-- 1 kg wood: $V \\approx 1.4 \\times 10^{-3}$ m³ → $F_B \\approx 0.017$ N (0.17% of weight)
+- 1 kg iron block: $V \\approx 1.3 \\times 10^{-4}$ $m^{3}$ → $F_B \\approx 0.0016$ N (0.016% of weight)
+- 1 kg wood: $V \\approx 1.4 \\times 10^{-3}$ $m^{3}$ → $F_B \\approx 0.017$ N (0.17% of weight)
 
 But for **large, low-density objects**, it matters!
 
@@ -43,11 +43,11 @@ The balloon rises when $\\rho_{\\text{cold}} V > \\rho_{\\text{hot}} V + m_{\\te
 
 ### Helium Balloons
 
-$\\rho_{\\text{He}} \\approx 0.16$ kg/m³ vs. $\\rho_{\\text{air}} \\approx 1.2$ kg/m³
+$\\rho_{\\text{He}} \\approx 0.16$ $kg/m^{3}$ vs. $\\rho_{\\text{air}} \\approx 1.2$ $kg/m^{3}$
 
-Lift per m³: $(1.2 - 0.16)(10) \\approx 10.4$ N/m³
+Lift per $m^{3}$: $(1.2 - 0.16)(10) \\approx 10.4$ $N/m^{3}$
 
-A 1 m³ helium balloon can lift about 1 kg!
+A 1 $m^{3}$ helium balloon can lift about 1 kg!
       `
     },
     {
@@ -122,10 +122,10 @@ A hydrometer is a floating device that measures liquid density:
       id: 'bu6-app-drill',
       type: 'input-boxes' as const,
       content: `
-**Application Problems** (use $g = 10$ m/s²)
+**Application Problems** (use $g = 10$ $m/s^{2}$)
 
-A helium balloon has volume 0.50 m³. The envelope + string mass is 0.010 kg.
-$\\rho_{\\text{air}} = 1.2$ kg/m³, $\\rho_{\\text{He}} = 0.16$ kg/m³.
+A helium balloon has volume 0.50 $m^{3}$. The envelope + string mass is 0.010 kg.
+$\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$, $\\rho_{\\text{He}} = 0.16$ $kg/m^{3}$.
 
 1) Buoyant force on the balloon (in N)
 
@@ -153,7 +153,7 @@ $\\rho_{\\text{air}} = 1.2$ kg/m³, $\\rho_{\\text{He}} = 0.16$ kg/m³.
       exercise: {
         questions: [
           {
-            question: 'A ship moves from the ocean (salt water, $\\rho = 1025$ kg/m³) into a freshwater river ($\\rho = 1000$). The ship:',
+            question: 'A ship moves from the ocean (salt water, $\\rho = 1025$ $kg/m^{3}$) into a freshwater river ($\\rho = 1000$). The ship:',
             options: [
               'Rises higher in the water',
               'Sinks lower in the water',

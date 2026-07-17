@@ -28,7 +28,7 @@ export const physCEMIndRLPart7Data = {
       question: 'A solenoid with 2000 turns, length 0.5 m, and diameter 4 cm is wound on an iron core ($\\kappa_m = 500$). Its inductance is approximately:',
       options: ['$\\approx 6.32$ H', '$\\approx 0.632$ H', '$\\approx 63.2$ H', '$\\approx 0.0632$ H'],
       correctAnswer: 0,
-      explanation: '$A = \\pi(0.02)^2 = 4\\pi \\times 10^{-4}$ m². $L = \\kappa_m \\mu_0 N^2 A/\\ell = 500 \\times 4\\pi \\times 10^{-7} \\times 4 \\times 10^6 \\times 4\\pi \\times 10^{-4}/0.5$. $= 500 \\times (4\\pi)^2 \\times 10^{-7} \\times 10^6 \\times 10^{-4}/0.5 = 500 \\times 16\\pi^2 \\times 10^{-5}/0.5 \\approx 500 \\times 158 \\times 10^{-5} \\times 2 \\approx 6.32$ H.'
+      explanation: '$A = \\pi(0.02)^2 = 4\\pi \\times 10^{-4}$ $m^{2}$. $L = \\kappa_m \\mu_0 N^2 A/\\ell = 500 \\times 4\\pi \\times 10^{-7} \\times 4 \\times 10^6 \\times 4\\pi \\times 10^{-4}/0.5$. $= 500 \\times (4\\pi)^2 \\times 10^{-7} \\times 10^6 \\times 10^{-4}/0.5 = 500 \\times 16\\pi^2 \\times 10^{-5}/0.5 \\approx 500 \\times 158 \\times 10^{-5} \\times 2 \\approx 6.32$ H.'
     },
     {
       id: 'indrl7-applications',

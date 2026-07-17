@@ -82,7 +82,7 @@ $$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
       exercise: {
         questions: [
           {
-            question: 'For Rate = k[A]²[B], what is the overall order of the reaction?',
+            question: 'For Rate = k[A]$ {}^{2}$[B], what is the overall order of the reaction?',
             options: [
               '1',
               '2',
@@ -93,7 +93,7 @@ $$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
             explanation: 'Overall order = sum of individual orders = 2 + 1 = 3. The reaction is second-order in A, first-order in B, and third-order overall.'
           },
           {
-            question: 'If the rate law is Rate = k[A]²[B]⁰, what happens to the rate when [B] is tripled?',
+            question: 'If the rate law is Rate = k[A]$ {}^{2}$[B]$ {}^{0}$, what happens to the rate when [B] is tripled?',
             options: [
               'Rate triples',
               'Rate increases by 9×',
@@ -101,7 +101,7 @@ $$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
               'Rate decreases'
             ],
             correctAnswer: 2,
-            explanation: '[B]⁰ = 1, so the concentration of B does not appear in the rate law. The rate is independent of [B].'
+            explanation: '[B]$ {}^{0}$ = 1, so the concentration of B does not appear in the rate law. The rate is independent of [B].'
           },
           {
             question: 'The rate constant k depends on:',
@@ -112,7 +112,7 @@ $$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
               'Volume of the container'
             ],
             correctAnswer: 1,
-            explanation: 'The rate constant k depends on temperature (through the Arrhenius equation: k = Ae^(−Ea/RT)) but is independent of reactant concentrations.'
+            explanation: 'The rate constant k depends on temperature (through the Arrhenius equation: k = $Ae^{-Ea/RT}$) but is independent of reactant concentrations.'
           }
         ]
       }
@@ -195,10 +195,10 @@ Given:
       exercise: {
         boxes: 3,
         correctAnswers: ['2', '1', '2.0'],
-        hint1: 'Compare Exp 1 & 2: Rate ratio = 0.018/0.0020 = 9. [X] ratio = 0.30/0.10 = 3. So 3^m = 9.',
-        hint2: 'Compare Exp 1 & 3: Rate ratio = 0.0060/0.0020 = 3. [Y] ratio = 3. So 3^n = 3.',
-        hint3: 'Rate = k[X]²[Y]. Use Exp 1: 0.0020 = k(0.10)²(0.10) = k(0.001). k = 2.0 M⁻²s⁻¹.',
-        explanation: '1) 0.018/0.0020 = 9 = 3^m, so m = 2. 2) 0.0060/0.0020 = 3 = 3^n, so n = 1. 3) Rate = k[X]²[Y]. 0.0020 = k(0.01)(0.10) = 0.001k. k = 2.0 M⁻²s⁻¹.'
+        hint1: 'Compare Exp 1 & 2: Rate ratio = 0.018/0.0020 = 9. [X] ratio = 0.30/0.10 = 3. So $3^{m}$ = 9.',
+        hint2: 'Compare Exp 1 & 3: Rate ratio = 0.0060/0.0020 = 3. [Y] ratio = 3. So $3^{n}$ = 3.',
+        hint3: 'Rate = k[X]$ {}^{2}$[Y]. Use Exp 1: 0.0020 = $k(0.10)^{2}(0.10)$ = k(0.001). k = 2.0 $M^{-2}s^{-1}$.',
+        explanation: '1) 0.018/0.0020 = 9 = $3^{m}$, so m = 2. 2) 0.0060/0.0020 = 3 = $3^{n}$, so n = 1. 3) Rate = k[X]$ {}^{2}$[Y]. 0.0020 = k(0.01)(0.10) = 0.001k. k = 2.0 $M^{-2}s^{-1}$.'
       }
     },
     {
@@ -258,9 +258,9 @@ When comparing experiments to find the order in A, you must choose experiments w
         ],
         correctAnswers: ['experimentally', '0', '3', 'temperature'],
         hint1: 'Rate laws cannot be deduced from the overall balanced equation alone.',
-        hint2: '2^0 = 1, so rate is unchanged.',
-        hint3: '3^m = 27 → m = 3.',
-        explanation: 'Rate law exponents are experimental. Order 0 means rate is independent of that species. 3³ = 27 so order is 3. k depends on temperature via the Arrhenius equation.'
+        hint2: '$2^{0}$ = 1, so rate is unchanged.',
+        hint3: '$3^{m}$ = 27 → m = 3.',
+        explanation: 'Rate law exponents are experimental. Order 0 means rate is independent of that species. $3^{3}$ = 27 so order is 3. k depends on temperature via the Arrhenius equation.'
       }
     },
     {
@@ -272,7 +272,7 @@ When comparing experiments to find the order in A, you must choose experiments w
       exercise: {
         questions: [
           {
-            question: 'For Rate = k[A][B]², if [A] is doubled and [B] is tripled, the rate changes by a factor of:',
+            question: 'For Rate = k[A][B]$ {}^{2}$, if [A] is doubled and [B] is tripled, the rate changes by a factor of:',
             options: [
               '6',
               '12',
@@ -280,15 +280,15 @@ When comparing experiments to find the order in A, you must choose experiments w
               '36'
             ],
             correctAnswer: 2,
-            explanation: 'Factor = (2)¹ × (3)² = 2 × 9 = 18. The rate increases by a factor of 18.'
+            explanation: 'Factor = $(2)^{1}$ × $(3)^{2}$ = 2 × 9 = 18. The rate increases by a factor of 18.'
           },
           {
             question: 'A reaction has overall order 2. Which could be the rate law?',
             options: [
-              'Rate = k[A]²[B]',
+              'Rate = k[A]$ {}^{2}$[B]',
               'Rate = k[A][B]',
-              'Rate = k[A]³',
-              'Rate = k[A]²[B]²'
+              'Rate = k[A]$ {}^{3}$',
+              'Rate = k[A]$ {}^{2}$[B]$ {}^{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Rate = k[A][B] has overall order 1 + 1 = 2. The other options give orders of 3, 3, and 4 respectively.'

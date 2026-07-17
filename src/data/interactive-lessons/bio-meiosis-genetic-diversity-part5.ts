@@ -9,10 +9,10 @@ export const bioMeiosisPart5Data = {
 
 **Part 5 of 7 — Sources of Genetic Variation**
 
-1. Independent assortment: 2ⁿ possible combinations (n = # of chromosome pairs)
+1. Independent assortment: $2^{n}$ possible combinations (n = # of chromosome pairs)
 2. Crossing over: creates new allele combinations
 3. Random fertilization: any sperm + any egg
-4. Humans: 2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)
+4. Humans: $2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)
       `
     },
     {
@@ -26,20 +26,20 @@ export const bioMeiosisPart5Data = {
           {
             question: 'Which of the following correctly describes Independent assortment?',
             options: [
-              '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
+              '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)',
               'creates new allele combinations',
-              '2ⁿ possible combinations (n = # of chromosome pairs)',
+              '$2^{n}$ possible combinations (n = # of chromosome pairs)',
               'any sperm + any egg'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Independent assortment: 2ⁿ possible combinations (n = # of chromosome pairs). The other options describe different concepts from this topic.'
+            explanation: 'Correct — Independent assortment: $2^{n}$ possible combinations (n = # of chromosome pairs). The other options describe different concepts from this topic.'
           },
           {
             question: 'Which of the following is true about Random fertilization?',
             options: [
-              '2ⁿ possible combinations (n = # of chromosome pairs)',
+              '$2^{n}$ possible combinations (n = # of chromosome pairs)',
               'creates new allele combinations',
-              '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
+              '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)',
               'any sperm + any egg'
             ],
             correctAnswer: 3,
@@ -54,10 +54,10 @@ export const bioMeiosisPart5Data = {
       content: `
 ### Key Details
 
-- **Independent assortment**: 2ⁿ possible combinations (n = # of chromosome pairs)
+- **Independent assortment**: $2^{n}$ possible combinations (n = # of chromosome pairs)
 - **Crossing over**: creates new allele combinations
 - **Random fertilization**: any sperm + any egg
-- **Humans**: 2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)
+- **Humans**: $2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)
       `
     },
     {
@@ -71,13 +71,13 @@ export const bioMeiosisPart5Data = {
           {
             question: 'Which statement about Humans is correct?',
             options: [
-              '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)',
-              '2ⁿ possible combinations (n = # of chromosome pairs)',
+              '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)',
+              '$2^{n}$ possible combinations (n = # of chromosome pairs)',
               'creates new allele combinations',
               'any sperm + any egg'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Humans: 2²³ × 2²³ = ~70 trillion possible combinations (without crossing over). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Correct — Humans: $2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over). Each option describes a real concept from this topic, so pay attention to the specific details.'
           }
         ]
       }
@@ -92,22 +92,22 @@ export const bioMeiosisPart5Data = {
         dropdowns: [
           {
             label: 'Independent assortment',
-            options: ['2ⁿ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg', '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)']
+            options: ['$2^{n}$ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg', '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)']
           },
           {
             label: 'Crossing over',
-            options: ['2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)', 'any sperm + any egg', 'creates new allele combinations', '2ⁿ possible combinations (n = # of chromosome pairs)']
+            options: ['$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)', 'any sperm + any egg', 'creates new allele combinations', '$2^{n}$ possible combinations (n = # of chromosome pairs)']
           },
           {
             label: 'Random fertilization',
-            options: ['any sperm + any egg', '2ⁿ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', '2²³ × 2²³ = ~70 trillion possible combinations (without crossing over)']
+            options: ['any sperm + any egg', '$2^{n}$ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)']
           }
         ],
-        correctAnswers: ['2ⁿ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg'],
+        correctAnswers: ['$2^{n}$ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg'],
         hint1: 'Think about what each concept specifically describes in Sources of Genetic Variation.',
         hint2: 'Look for key terms that distinguish each concept from the others.',
         hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Sources of Genetic Variation describes a specific idea. Independent assortment: 2ⁿ possible combinations (n = # of chromosome pairs). Crossing over: creates new allele combinations. Random fertilization: any sperm + any egg.'
+        explanation: 'Each concept in Sources of Genetic Variation describes a specific idea. Independent assortment: $2^{n}$ possible combinations (n = # of chromosome pairs). Crossing over: creates new allele combinations. Random fertilization: any sperm + any egg.'
       }
     }
   ]

@@ -111,7 +111,7 @@ $x = 1$ (multiplicity 2, bounces), $x = -3$ (multiplicity 1, crosses) ✅
       exercise: {
         questions: [
           {
-                    "question": "Zero of (x+5)³ is at x =",
+                    "question": "Zero of $(x+5)^{3}$ is at x =",
                     "options": [
                               "−5",
                               "5",

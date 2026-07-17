@@ -15,7 +15,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart2Data = {
 | Step | What You Do | Tool |
 |------|-------------|------|
 | **1. Stoichiometry** | Neutralization: strong acid/base reacts completely with one buffer component | ICE table (in moles) |
-| **2. Equilibrium** | Calculate new pH from adjusted [HA]/[A⁻] ratio | Henderson-Hasselbalch |
+| **2. Equilibrium** | Calculate new pH from adjusted [HA]/[$A^{-}$] ratio | Henderson-Hasselbalch |
 
 > 🔑 **Why this matters:** This two-step method is how every buffer problem on the AP exam is solved — master it and you can handle any buffer calculation.
 
@@ -227,18 +227,18 @@ After destruction, treat as a simple strong acid or base problem!
         dropdowns: [
           {
             label: 'Adding $H^+$ to a buffer converts',
-            options: ['HA to A⁻', 'A⁻ to HA', 'H₂O to OH⁻', 'nothing']
+            options: ['HA to $A^{-}$', '$A^{-}$ to HA', '$H_{2}O$ to $OH^{-}$', 'nothing']
           },
           {
             label: 'The pH of a buffer where $[A^-] > [HA]$ is',
-            options: ['less than pKₐ', 'equal to pKₐ', 'greater than pKₐ', 'always 7']
+            options: ['less than $pK_{a}$', 'equal to $pK_{a}$', 'greater than $pK_{a}$', 'always 7']
           },
           {
             label: 'A buffer is destroyed when',
             options: ['any acid is added', 'one component is completely consumed', 'pH changes at all', 'water is added']
           }
         ],
-        correctAnswers: ['A⁻ to HA', 'greater than pKₐ', 'one component is completely consumed'],
+        correctAnswers: ['$A^{-}$ to HA', 'greater than $pK_{a}$', 'one component is completely consumed'],
         hint1: '$A^- + H^+ \\rightarrow HA$.',
         hint2: '$\\log([A^-]/[HA]) > 0$ when $[A^-] > [HA]$.',
         hint3: 'The buffer needs both components to function.',

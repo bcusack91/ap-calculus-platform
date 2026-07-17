@@ -52,7 +52,7 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
       exercise: {
         questions: [
           {
-            question: 'A 12-kg metal block of volume $1.5\\times10^{-3}$ m³ is fully submerged in water. Buoyant force (g = 10):',
+            question: 'A 12-kg metal block of volume $1.5\\times10^{-3}$ $m^{3}$ is fully submerged in water. Buoyant force (g = 10):',
             options: [
               '12 N',
               '15 N',
@@ -65,16 +65,16 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
           {
             question: 'In water, a swimmer floats with 4% of body volume above the surface. Body density:',
             options: [
-              '40 kg/m³',
-              '400 kg/m³',
-              '960 kg/m³',
-              '1040 kg/m³'
+              '40 $kg/m^{3}$',
+              '400 $kg/m^{3}$',
+              '960 $kg/m^{3}$',
+              '1040 $kg/m^{3}$'
             ],
             correctAnswer: 2,
-            explanation: '96% submerged ⇒ $\\rho_{body} = 0.96 \\times 1000 = 960$ kg/m³.'
+            explanation: '96% submerged ⇒ $\\rho_{body} = 0.96 \\times 1000 = 960$ $kg/m^{3}$.'
           },
           {
-            question: 'A submerged object weighs 27 N in water and 30 N in air. Its density (kg/m³)?',
+            question: 'A submerged object weighs 27 N in water and 30 N in air. Its density $(kg/m^{3})$?',
             options: [
               '1000',
               '3000',
@@ -82,7 +82,7 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
               '10000'
             ],
             correctAnswer: 3,
-            explanation: '$F_b = 30 - 27 = 3$ N → $V = 3/(1000 \\cdot 10) = 3.0\\times10^{-4}$ m³. Mass = 3.0 kg → $\\rho = 10{,}000$ kg/m³.'
+            explanation: '$F_b = 30 - 27 = 3$ N → $V = 3/(1000 \\cdot 10) = 3.0\\times10^{-4}$ $m^{3}$. Mass = 3.0 kg → $\\rho = 10{,}000$ $kg/m^{3}$.'
           }
         ]
       }
@@ -93,11 +93,11 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
       content: `
 **AP Synthesis Calculations** 🧮 (g = 10, $\\rho_w = 1000$)
 
-1) An iceberg has total volume 800 m³ ($\\rho_{ice} = 917$). Volume above water in fresh water (m³, 1 decimal)?
+1) An iceberg has total volume 800 $m^{3}$ ($\\rho_{ice} = 917$). Volume above water in fresh water ($m^{3}$, 1 decimal)?
 
-2) A 50-kg log floats with 70% submerged. Volume of the log (m³, 4 decimals)?
+2) A 50-kg log floats with 70% submerged. Volume of the log ($m^{3}$, 4 decimals)?
 
-3) A 4 kg ball with $V = 0.0040$ m³ is held by a string at the BOTTOM (submerged). Tension (N)?
+3) A 4 kg ball with $V = 0.0040$ $m^{3}$ is held by a string at the BOTTOM (submerged). Tension (N)?
       `,
       exercise: {
         boxes: 3,
@@ -105,7 +105,7 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
         hint1: 'Above-fraction = 1 − $\\rho_{ice}/\\rho_w$.',
         hint2: '$V_{sub}=m/\\rho_w$, $V_{obj}=V_{sub}/0.70$.',
         hint3: '$\\rho_{ball} = m/V$. Compare to water.',
-        explanation: '1) Above fraction = $1 - 917/1000 = 0.083$. $V_{above} = 800 \\times 0.083 = 66.4$ m³. 2) $V_{sub} = 50/1000 = 0.05$ m³ → $V_{obj} = 0.05/0.70 = 0.0714$ m³. 3) $\\rho_{ball} = 4/0.004 = 1000$ kg/m³ = $\\rho_w$ → neutrally buoyant → $T = 0$.'
+        explanation: '1) Above fraction = $1 - 917/1000 = 0.083$. $V_{above} = 800 \\times 0.083 = 66.4$ $m^{3}$. 2) $V_{sub} = 50/1000 = 0.05$ $m^{3}$ → $V_{obj} = 0.05/0.70 = 0.0714$ $m^{3}$. 3) $\\rho_{ball} = 4/0.004 = 1000$ $kg/m^{3}$ = $\\rho_w$ → neutrally buoyant → $T = 0$.'
       }
     },
     {
@@ -152,18 +152,18 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
       exercise: {
         questions: [
           {
-            question: 'A 10-kg cylinder of volume 0.012 m³ is fully submerged in water (g = 10). The acceleration of the cylinder when released is:',
+            question: 'A 10-kg cylinder of volume 0.012 $m^{3}$ is fully submerged in water (g = 10). The acceleration of the cylinder when released is:',
             options: [
-              '2 m/s² downward',
-              '2 m/s² upward',
-              '10 m/s² upward',
+              '2 $m/s^{2}$ downward',
+              '2 $m/s^{2}$ upward',
+              '10 $m/s^{2}$ upward',
               '0 (neutral)'
             ],
             correctAnswer: 1,
-            explanation: '$F_b = 1000(10)(0.012) = 120$ N up. $W = 100$ N. Net = 20 N up. $a = 20/10 = 2$ m/s² upward.'
+            explanation: '$F_b = 1000(10)(0.012) = 120$ N up. $W = 100$ N. Net = 20 N up. $a = 20/10 = 2$ $m/s^{2}$ upward.'
           },
           {
-            question: 'A small boat plus crew has total mass 500 kg. To safely operate, max safe submerged depth is 0.40 m. The minimum waterline area (m²) needed:',
+            question: 'A small boat plus crew has total mass 500 kg. To safely operate, max safe submerged depth is 0.40 m. The minimum waterline area $(m^{2})$ needed:',
             options: [
               '0.50',
               '1.25',
@@ -171,7 +171,7 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
               '12.5'
             ],
             correctAnswer: 1,
-            explanation: '$m = \\rho_w A d \\Rightarrow A = m/(\\rho_w d) = 500/(1000 \\cdot 0.40) = 1.25$ m².'
+            explanation: '$m = \\rho_w A d \\Rightarrow A = m/(\\rho_w d) = 500/(1000 \\cdot 0.40) = 1.25$ $m^{2}$.'
           }
         ]
       }

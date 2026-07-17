@@ -67,7 +67,7 @@ When solute particles are added to a solvent:
 ### Key Distinction
 
 - **Nonelectrolytes** (glucose, sucrose): dissolve as intact molecules → 1 particle per formula unit
-- **Electrolytes** (NaCl, CaCl₂): dissociate into ions → multiple particles per formula unit
+- **Electrolytes** (NaCl, $CaCl_{2}$): dissociate into ions → multiple particles per formula unit
       `
     },
     {
@@ -162,7 +162,7 @@ $$T_f = 0.0 - 1.86 = -1.86 \\text{ °C}$$
 
 ### Why Does NaCl Have $i = 2$?
 
-NaCl dissociates into **2 ions**: Na⁺ + Cl⁻. Each formula unit produces 2 particles:
+NaCl dissociates into **2 ions**: $Na^{+}$ + $Cl^{-}$. Each formula unit produces 2 particles:
 
 $$\\text{NaCl} \\rightarrow \\text{Na}^+ + \\text{Cl}^-$$
       `
@@ -177,11 +177,11 @@ The van\'t Hoff factor tells you how many particles one formula unit produces in
 
 | Solute | Dissociation | Theoretical $i$ |
 |--------|-------------|-----------------|
-| Glucose (C₆H₁₂O₆) | Does not dissociate | 1 |
-| NaCl | Na⁺ + Cl⁻ | 2 |
-| CaCl₂ | Ca²⁺ + 2Cl⁻ | 3 |
-| Al₂(SO₄)₃ | 2Al³⁺ + 3SO₄²⁻ | 5 |
-| K₃PO₄ | 3K⁺ + PO₄³⁻ | 4 |
+| Glucose $(C_{6}H_{12}O_{6})$ | Does not dissociate | 1 |
+| NaCl | $Na^{+}$ + $Cl^{-}$ | 2 |
+| $CaCl_{2}$ | $Ca^{2+}$ + $2Cl^{-}$ | 3 |
+| $Al_{2}(SO_{4})_{3}$ | $2Al^{3+}$ + $3SO_{4}^{2-}$ | 5 |
+| $K_{3}PO_{4}$ | $3K^{+}$ + $PO_{4}^{3-}$ | 4 |
 
 
 ---
@@ -190,11 +190,11 @@ The van\'t Hoff factor tells you how many particles one formula unit produces in
 
 In real solutions, ion pairing can reduce the effective $i$:
 - NaCl: theoretical $i = 2$, actual $i \\approx 1.9$ in moderate concentrations
-- CaCl₂: theoretical $i = 3$, actual $i \\approx 2.7$
+- $CaCl_{2}$: theoretical $i = 3$, actual $i \\approx 2.7$
 
 For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
 
-> ⚠️ **Warning:** For electrolytes, always multiply by the van\'t Hoff factor $i$. Forgetting $i$ is the most common mistake on colligative property problems — NaCl gives $i = 2$, CaCl₂ gives $i = 3$, etc.
+> ⚠️ **Warning:** For electrolytes, always multiply by the van\'t Hoff factor $i$. Forgetting $i$ is the most common mistake on colligative property problems — NaCl gives $i = 2$, $CaCl_{2}$ gives $i = 3$, etc.
       `
     },
     {
@@ -210,22 +210,22 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
             options: [
               '0.10 m glucose ($i = 1$)',
               '0.10 m NaCl ($i = 2$)',
-              '0.10 m CaCl₂ ($i = 3$)',
-              '0.10 m K₃PO₄ ($i = 4$)'
+              '0.10 m $CaCl_{2}$ ($i = 3$)',
+              '0.10 m $K_{3}PO_{4}$ ($i = 4$)'
             ],
             correctAnswer: 3,
-            explanation: '$\\Delta T_b = iK_bm$. All have the same $m = 0.10$. K₃PO₄ has the largest $i = 4$, producing the most particles and the greatest boiling point elevation.'
+            explanation: '$\\Delta T_b = iK_bm$. All have the same $m = 0.10$. $K_{3}PO_{4}$ has the largest $i = 4$, producing the most particles and the greatest boiling point elevation.'
           },
           {
             question: 'Which solution has the lowest freezing point?',
             options: [
               '0.20 m glucose',
               '0.10 m NaCl',
-              '0.10 m CaCl₂',
-              '0.05 m Al₂(SO₄)₃'
+              '0.10 m $CaCl_{2}$',
+              '0.05 m $Al_{2}(SO_{4})_{3}$'
             ],
             correctAnswer: 2,
-            explanation: 'Calculate $im$ for each: glucose: $1 \\times 0.20 = 0.20$. NaCl: $2 \\times 0.10 = 0.20$. CaCl₂: $3 \\times 0.10 = 0.30$. Al₂(SO₄)₃: $5 \\times 0.05 = 0.25$. CaCl₂ has the largest $im = 0.30$, giving the greatest $\\Delta T_f$ and the lowest freezing point.'
+            explanation: 'Calculate $im$ for each: glucose: $1 \\times 0.20 = 0.20$. NaCl: $2 \\times 0.10 = 0.20$. $CaCl_{2}$: $3 \\times 0.10 = 0.30$. $Al_{2}(SO_{4})_{3}$: $5 \\times 0.05 = 0.25$. $CaCl_{2}$ has the largest $im = 0.30$, giving the greatest $\\Delta T_f$ and the lowest freezing point.'
           },
           {
             question: 'Road salt (NaCl) works to melt ice because:',
@@ -281,19 +281,19 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
             options: ['Increase', 'Decrease', 'Stay the same', 'Become unpredictable']
           },
           {
-            label: 'CaCl₂ ($i = 3$) is more effective than NaCl ($i = 2$) as a road deicer because',
-            options: ['CaCl₂ is cheaper', 'CaCl₂ produces more particles per formula unit', 'CaCl₂ has a higher molar mass', 'CaCl₂ is more soluble in organic solvents']
+            label: '$CaCl_{2}$ ($i = 3$) is more effective than NaCl ($i = 2$) as a road deicer because',
+            options: ['$CaCl_{2}$ is cheaper', '$CaCl_{2}$ produces more particles per formula unit', '$CaCl_{2}$ has a higher molar mass', '$CaCl_{2}$ is more soluble in organic solvents']
           },
           {
             label: 'The colligative property formulas use molality instead of molarity because molality',
             options: ['Is easier to measure', 'Does not change with temperature', 'Is always larger', 'Uses grams instead of moles']
           }
         ],
-        correctAnswers: ['number of solute particles', 'Increase', 'CaCl₂ produces more particles per formula unit', 'Does not change with temperature'],
+        correctAnswers: ['number of solute particles', 'Increase', '$CaCl_{2}$ produces more particles per formula unit', 'Does not change with temperature'],
         hint1: 'The word "colligative" relates to the collective effect of particles.',
         hint2: 'Solute particles disrupt the solvent structure, requiring more energy to boil.',
         hint3: 'More particles per formula unit → greater freezing point depression.',
-        explanation: 'Colligative properties depend on the number (not identity) of particles. Solute raises the boiling point and lowers the freezing point. CaCl₂ produces 3 particles vs. 2 for NaCl. Molality is temperature-independent since it uses mass, not volume.'
+        explanation: 'Colligative properties depend on the number (not identity) of particles. Solute raises the boiling point and lowers the freezing point. $CaCl_{2}$ produces 3 particles vs. 2 for NaCl. Molality is temperature-independent since it uses mass, not volume.'
       }
     },
     {
@@ -318,13 +318,13 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
           {
             question: 'Which of the following 0.10 m aqueous solutions would have the highest boiling point?',
             options: [
-              'C₆H₁₂O₆ (glucose)',
+              '$C_{6}H_{12}O_{6}$ (glucose)',
               'NaCl',
-              'MgCl₂',
+              '$MgCl_{2}$',
               'All have the same boiling point'
             ],
             correctAnswer: 2,
-            explanation: 'MgCl₂ dissociates into Mg²⁺ + 2Cl⁻ ($i = 3$), producing the most particles. $\\Delta T_b = iK_bm$: glucose gives $1(0.512)(0.10) = 0.051$, NaCl gives $2(0.512)(0.10) = 0.10$, MgCl₂ gives $3(0.512)(0.10) = 0.15$. MgCl₂ has the highest boiling point.'
+            explanation: '$MgCl_{2}$ dissociates into $Mg^{2+}$ + $2Cl^{-}$ ($i = 3$), producing the most particles. $\\Delta T_b = iK_bm$: glucose gives $1(0.512)(0.10) = 0.051$, NaCl gives $2(0.512)(0.10) = 0.10$, $MgCl_{2}$ gives $3(0.512)(0.10) = 0.15$. $MgCl_{2}$ has the highest boiling point.'
           }
         ]
       }

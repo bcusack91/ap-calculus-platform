@@ -85,17 +85,17 @@ $$M_A \\times V_A \\xrightarrow{= n_A} \\text{moles A} \\xrightarrow{\\text{mole
 
 ### Worked Example
 
-How many mL of 0.100 M AgNO₃ are needed to react completely with 25.0 mL of 0.200 M NaCl?
+How many mL of 0.100 M $AgNO_{3}$ are needed to react completely with 25.0 mL of 0.200 M NaCl?
 
 $$\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$$
 
 **Step 1:** Moles NaCl = $0.200 \\times 0.0250 = 0.00500$ mol
 
-**Step 2:** Mole ratio is 1:1, so moles AgNO₃ = 0.00500 mol
+**Step 2:** Mole ratio is 1:1, so moles $AgNO_{3}$ = 0.00500 mol
 
 **Step 3:** Volume = $n/M = 0.00500/0.100 = 0.0500$ L $= 50.0$ mL
 
-**Answer:** 50.0 mL of 0.100 M AgNO₃
+**Answer:** 50.0 mL of 0.100 M $AgNO_{3}$
       `
     },
     {
@@ -160,7 +160,7 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
             explanation: '$n = M \\times V = 0.500 \\times 0.100 = 0.050$ mol. Remember to convert 100 mL to 0.100 L first!'
           },
           {
-            question: 'In a titration, 20.0 mL of 0.100 M NaOH neutralizes 10.0 mL of H₂SO₄. The molarity of H₂SO₄ is:',
+            question: 'In a titration, 20.0 mL of 0.100 M NaOH neutralizes 10.0 mL of $H_{2}SO_{4}$. The molarity of $H_{2}SO_{4}$ is:',
             options: [
               '0.050 M',
               '0.100 M',
@@ -168,7 +168,7 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
               '0.400 M'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{H}_2\\text{SO}_4 + 2\\text{NaOH} \\rightarrow \\text{Na}_2\\text{SO}_4 + 2\\text{H}_2\\text{O}$. Moles NaOH: $0.100 \\times 0.0200 = 0.00200$ mol. Moles H₂SO₄: $0.00200 / 2 = 0.00100$ mol. Molarity: $0.00100/0.0100 = 0.100$ M.'
+            explanation: '$\\text{H}_2\\text{SO}_4 + 2\\text{NaOH} \\rightarrow \\text{Na}_2\\text{SO}_4 + 2\\text{H}_2\\text{O}$. Moles NaOH: $0.100 \\times 0.0200 = 0.00200$ mol. Moles $H_{2}SO_{4}$: $0.00200 / 2 = 0.00100$ mol. Molarity: $0.00100/0.0100 = 0.100$ M.'
           },
           {
             question: 'The key formula for solution stoichiometry is:',
@@ -194,15 +194,15 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
 
 **2)** In the reaction $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$, how many mL of 0.250 M NaOH are needed to neutralize 50.0 mL of 0.100 M HCl? (to 3 significant figures)
 
-**3)** A titration requires 28.5 mL of 0.200 M KOH to neutralize 25.0 mL of HNO₃ (1:1 ratio). What is the molarity of HNO₃? (to 3 significant figures)
+**3)** A titration requires 28.5 mL of 0.200 M KOH to neutralize 25.0 mL of $HNO_{3}$ (1:1 ratio). What is the molarity of $HNO_{3}$? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.100', '20.0', '0.228'],
         hint1: '$n = 0.400 \\times 0.250$.',
         hint2: 'Moles HCl = $0.100 \\times 0.050 = 0.005$ mol. Need same moles NaOH. $V = n/M = 0.005/0.250$.',
-        hint3: 'Moles KOH = $0.200 \\times 0.0285$. Since 1:1, moles HNO₃ = same. $M = n/V = n/0.0250$.',
-        explanation: '1) $n = 0.400 \\times 0.250 = 0.100$ mol. 2) Moles HCl = $0.100 \\times 0.0500 = 0.00500$ mol = moles NaOH. $V = 0.00500/0.250 = 0.0200$ L $= 20.0$ mL. 3) Moles KOH = $0.200 \\times 0.0285 = 0.00570$ mol = moles HNO₃. $M = 0.00570/0.0250 = 0.228$ M.'
+        hint3: 'Moles KOH = $0.200 \\times 0.0285$. Since 1:1, moles $HNO_{3}$ = same. $M = n/V = n/0.0250$.',
+        explanation: '1) $n = 0.400 \\times 0.250 = 0.100$ mol. 2) Moles HCl = $0.100 \\times 0.0500 = 0.00500$ mol = moles NaOH. $V = 0.00500/0.250 = 0.0200$ L $= 20.0$ mL. 3) Moles KOH = $0.200 \\times 0.0285 = 0.00570$ mol = moles $HNO_{3}$. $M = 0.00570/0.0250 = 0.228$ M.'
       }
     },
     {
@@ -257,7 +257,7 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
             explanation: '$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$ (1:1). Moles NaOH: $0.300 \\times 0.0500 = 0.01500$ mol = moles NaCl. Mass: $0.01500 \\times 58.44 = 0.877$ g ≈ 0.878 g.'
           },
           {
-            question: 'A student needs 0.0500 mol of AgNO₃ from a 0.250 M solution. What volume should be measured?',
+            question: 'A student needs 0.0500 mol of $AgNO_{3}$ from a 0.250 M solution. What volume should be measured?',
             options: [
               '50.0 mL',
               '100 mL',

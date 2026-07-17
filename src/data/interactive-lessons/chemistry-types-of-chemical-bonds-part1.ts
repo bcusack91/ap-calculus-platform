@@ -274,7 +274,7 @@ Determine the charge on each ion formed and the formula of the resulting ionic c
             explanation: 'Fluorine is in Group 17 with 7 valence electrons. It gains 1 electron to achieve a noble gas configuration, forming $\\text{F}^-$ (charge $-1$).'
           },
           {
-            label: 'Ratio of Ca to F in CaF₂:',
+            label: 'Ratio of Ca to F in $CaF_{2}$:',
             correctAnswer: '1:2',
             explanation: '$\\text{Ca}^{2+}$ needs two $\\text{F}^-$ ions to balance charges: $(+2) + 2(-1) = 0$. The formula is $\\text{CaF}_2$, so the ratio is 1:2.'
           }

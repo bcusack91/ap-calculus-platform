@@ -58,7 +58,7 @@ Unlike tetrahedral or octahedral geometries, the positions in a trigonal bipyram
 - Axial bonds are slightly longer than equatorial bonds
 - The non-equivalence leads to several different molecular geometries when lone pairs are present
 
-### Example: PCl₅
+### Example: $PCl_{5}$
 
 Phosphorus pentachloride has 5 bonding pairs and 0 lone pairs:
 - Steric number = 5
@@ -133,11 +133,11 @@ Or equivalently: place atoms along the +x, −x, +y, −y, +z, and −z axes.
 
 | Molecule | Central Atom | Bonds | Lone Pairs | Geometry |
 |----------|-------------|-------|------------|----------|
-| SF₆ | S | 6 | 0 | Octahedral |
-| PCl₆⁻ | P | 6 | 0 | Octahedral |
-| SiF₆²⁻ | Si | 6 | 0 | Octahedral |
+| $SF_{6}$ | S | 6 | 0 | Octahedral |
+| $PCl_{6}^{-}$ | P | 6 | 0 | Octahedral |
+| $SiF_{6}^{2-}$ | Si | 6 | 0 | Octahedral |
 
-SF₆ is a classic example: sulfur forms 6 equivalent bonds to fluorine with all F–S–F angles = 90°.
+$SF_{6}$ is a classic example: sulfur forms 6 equivalent bonds to fluorine with all F–S–F angles = 90°.
 
 ---`
     },
@@ -179,11 +179,11 @@ SF₆ is a classic example: sulfur forms 6 equivalent bonds to fluorine with all
 
 | Steric # | Geometry | Bond Angles | Hybridization | Example |
 |----------|----------|------------|---------------|---------|
-| 2 | Linear | 180° | sp | CO₂ |
-| 3 | Trigonal planar | 120° | sp² | BF₃ |
-| 4 | Tetrahedral | 109.5° | sp³ | CH₄ |
-| 5 | Trigonal bipyramidal | 90°, 120° | sp³d | PCl₅ |
-| 6 | Octahedral | 90° | sp³d² | SF₆ |
+| 2 | Linear | 180° | sp | $CO_{2}$ |
+| 3 | Trigonal planar | 120° | $sp^{2}$ | $BF_{3}$ |
+| 4 | Tetrahedral | 109.5° | $sp^{3}$ | $CH_{4}$ |
+| 5 | Trigonal bipyramidal | 90°, 120° | $sp^{3}d$ | $PCl_{5}$ |
+| 6 | Octahedral | 90° | $sp^{3}d^{2}$ | $SF_{6}$ |
 
 ### Pattern: Bond Angles Decrease as Steric Number Increases
 
@@ -221,16 +221,16 @@ $$\\boxed{180° \\to 120° \\to 109.5° \\to 90°}$$
           {
             id: 'vg-3-7-dd3',
             label: 'Trigonal bipyramidal geometry (steric number 5) corresponds to _______',
-            options: ['sp²', 'sp³', 'sp³d', 'sp³d²'],
+            options: ['$sp^{2}$', '$sp^{3}$', '$sp^{3}d$', '$sp^{3}d^{2}$'],
             correctIndex: 2,
-            explanation: 'Trigonal bipyramidal geometry (steric number 5) corresponds to sp³d hybridization.'
+            explanation: 'Trigonal bipyramidal geometry (steric number 5) corresponds to $sp^{3}d$ hybridization.'
           },
           {
             id: 'vg-3-7-dd4',
             label: 'Octahedral geometry (steric number 6) corresponds to _______ hybridization',
-            options: ['sp²', 'sp³', 'sp³d', 'sp³d²'],
+            options: ['$sp^{2}$', '$sp^{3}$', '$sp^{3}d$', '$sp^{3}d^{2}$'],
             correctIndex: 3,
-            explanation: 'Octahedral geometry (steric number 6) corresponds to sp³d² hybridization.'
+            explanation: 'Octahedral geometry (steric number 6) corresponds to $sp^{3}d^{2}$ hybridization.'
           }
         ]
       }
@@ -243,18 +243,18 @@ $$\\boxed{180° \\to 120° \\to 109.5° \\to 90°}$$
       exercise: {
         questions: [
           {
-            question: 'Why can phosphorus form PCl₅ but nitrogen cannot form NCl₅?',
+            question: 'Why can phosphorus form $PCl_{5}$ but nitrogen cannot form $NCl_{5}$?',
             options: [
               'Nitrogen is too electronegative',
               'Phosphorus has accessible d orbitals; nitrogen does not',
-              'NCl₅ would be too large a molecule',
+              '$NCl_{5}$ would be too large a molecule',
               'Nitrogen already has a full octet and cannot bond more'
             ],
             correctAnswer: 1,
             explanation: 'Phosphorus is in Period 3 and has empty 3d orbitals available for bonding. Nitrogen is in Period 2 with no accessible d orbitals, so it cannot expand beyond an octet.'
           },
           {
-            question: 'How many total bond angles of 90° exist between adjacent atoms in an octahedral molecule like SF₆?',
+            question: 'How many total bond angles of 90° exist between adjacent atoms in an octahedral molecule like $SF_{6}$?',
             options: ['4', '6', '8', '12'],
             correctAnswer: 3,
             explanation: 'Each of the 6 positions has 4 neighbors at 90°, giving 6 × 4 = 24, but each angle is shared between 2 atoms, so 24/2 = 12 unique 90° angles.'

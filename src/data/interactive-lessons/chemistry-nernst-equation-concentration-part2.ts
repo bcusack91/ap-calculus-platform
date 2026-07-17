@@ -130,7 +130,7 @@ Remember: solids and pure liquids are excluded from Q!
             explanation: '$\\Delta E = -0.0592/n \\times \\log(10) = -0.0592/1 \\times 1 = -0.0592$ V. Increasing Q decreases E.'
           },
           {
-            question: 'If Q = 10⁶ for a 2-electron cell with E° = 1.00 V at 25°C, E equals:',
+            question: 'If Q = $10^{6}$ for a 2-electron cell with E° = 1.00 V at 25°C, E equals:',
             options: [
               '0.822 V',
               '1.178 V',

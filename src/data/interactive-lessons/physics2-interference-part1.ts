@@ -164,10 +164,10 @@ Interference doesn't create or destroy energy — it **redistributes** it. The e
           },
           {
             label: 'Maximum intensity from two equal sources is',
-            options: ['I₀', '2I₀', '3I₀', '4I₀']
+            options: ['$I_{0}$', '$2I_{0}$', '$3I_{0}$', '$4I_{0}$']
           }
         ],
-        correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', '4I₀'],
+        correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', '$4I_{0}$'],
         hint1: '2.5λ = (2 + ½)λ — that is a half-integer multiple.',
         hint2: 'Coherent sources must have the same frequency AND a fixed phase difference.',
         hint3: 'At the center, both waves travel the same distance.',

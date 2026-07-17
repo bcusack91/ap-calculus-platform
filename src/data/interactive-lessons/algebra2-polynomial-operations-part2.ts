@@ -48,7 +48,7 @@ $= 2x^2 - 5x - 12$ ✅
                               "$x^2+10$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "FOIL: x²+5x+2x+10 = x²+7x+10."
+                    "explanation": "FOIL: $x^{2}+5x+2x+10$ = $x^{2}+7x+10$."
           }
 ]
       }
@@ -75,7 +75,7 @@ $(x+3)^2 = x^2 + 6x + ?$
         correctAnswers: ["7","10","9"],
         hint1: "5+2.",
         hint2: "5×2.",
-        hint3: "3².",
+        hint3: "$3^{2}$.",
         explanation: "1) 7. 2) 10. 3) 9."
       }
     },
@@ -90,7 +90,7 @@ $(x+3)^2 = x^2 + 6x + ?$
         correctAnswers: ["First, Outer, Inner, Last","$a^2-b^2$"],
         hint1: "Method for multiplying binomials.",
         hint2: "Difference of squares.",
-        explanation: "FOIL: First/Outer/Inner/Last. (a+b)(a−b)=a²−b²."
+        explanation: "FOIL: First/Outer/Inner/Last. (a+b)(a−b)=$a^{2}-b^{2}$."
       }
     },
     {
@@ -124,7 +124,7 @@ $(x+3)^2 = x^2 + 6x + ?$
                               "$2x$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Difference of squares: a²−b² = x²−16."
+                    "explanation": "Difference of squares: $a^{2}-b^{2}$ = $x^{2}-16$."
           }
 ]
       }

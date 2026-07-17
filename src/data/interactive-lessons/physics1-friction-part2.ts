@@ -105,7 +105,7 @@ $$a = \\frac{F_{\\text{applied}} - \\mu_k mg}{m}$$
 
 ### Example
 
-A 10 kg box is pushed with 60 N on a surface where $\\mu_k = 0.30$. ($g = 10$ m/s²)
+A 10 kg box is pushed with 60 N on a surface where $\\mu_k = 0.30$. ($g = 10$ $m/s^{2}$)
 
 $$f_k = \\mu_k mg = 0.30 \\times 10 \\times 10 = 30 \\text{ N}$$
 $$a = \\frac{60 - 30}{10} = \\frac{30}{10} = 3 \\text{ m/s}^2$$
@@ -120,7 +120,7 @@ $$a = \\frac{60 - 30}{10} = \\frac{30}{10} = 3 \\text{ m/s}^2$$
       exercise: {
         questions: [
           {
-            question: 'A 5 kg block sits on a surface with $\\mu_s = 0.4$. You push horizontally with 15 N. What is the friction force? ($g = 10$ m/s²)',
+            question: 'A 5 kg block sits on a surface with $\\mu_s = 0.4$. You push horizontally with 15 N. What is the friction force? ($g = 10$ $m/s^{2}$)',
             options: [
               '15 N',
               '20 N',
@@ -131,7 +131,7 @@ $$a = \\frac{60 - 30}{10} = \\frac{30}{10} = 3 \\text{ m/s}^2$$
             explanation: '$f_{s,\\max} = \\mu_s mg = 0.4 \\times 50 = 20$ N. Since 15 N < 20 N, the block doesn\'t move and $f_s = 15$ N (matches applied force).'
           },
           {
-            question: 'A sliding 8 kg block has $\\mu_k = 0.25$ on a horizontal surface. What force is needed to keep it moving at constant velocity? ($g = 10$ m/s²)',
+            question: 'A sliding 8 kg block has $\\mu_k = 0.25$ on a horizontal surface. What force is needed to keep it moving at constant velocity? ($g = 10$ $m/s^{2}$)',
             options: [
               '2 N',
               '10 N',
@@ -161,9 +161,9 @@ $$a = \\frac{60 - 30}{10} = \\frac{30}{10} = 3 \\text{ m/s}^2$$
       content: `
 **Friction Equation Practice** 🧮
 
-Use $g = 10$ m/s² for all problems.
+Use $g = 10$ $m/s^{2}$ for all problems.
 
-1) A 15 kg block on a surface ($\\mu_k = 0.20$) is pushed with 50 N horizontally. What is the acceleration (in m/s²)?
+1) A 15 kg block on a surface ($\\mu_k = 0.20$) is pushed with 50 N horizontally. What is the acceleration $(in m/s^{2})$?
 
 2) A 10 kg block slides on a surface ($\\mu_k = 0.50$). What horizontal force is needed for the block to slide at constant velocity (in N)?
 
@@ -177,7 +177,7 @@ Use $g = 10$ m/s² for all problems.
         hint1: '$a = (F - \\mu_k mg)/m = (50 - 0.20 \\times 150)/15$.',
         hint2: 'Constant velocity: $F = f_k = \\mu_k mg = 0.50 \\times 100$.',
         hint3: '$F_{\\max} = \\mu_s mg = 0.60 \\times 250$.',
-        explanation: '1) $f_k = 0.20 \\times 150 = 30$ N. $a = (50-30)/15 = 20/15 = 1.33$ m/s². 2) $F = 0.50 \\times 100 = 50$ N. 3) $f_{s,\\max} = 0.60 \\times 250 = 150$ N.'
+        explanation: '1) $f_k = 0.20 \\times 150 = 30$ N. $a = (50-30)/15 = 20/15 = 1.33$ $m/s^{2}$. 2) $F = 0.50 \\times 100 = 50$ N. 3) $f_{s,\\max} = 0.60 \\times 250 = 150$ N.'
       }
     },
     {
@@ -218,7 +218,7 @@ Use $g = 10$ m/s² for all problems.
       exercise: {
         questions: [
           {
-            question: 'A 4 kg block is pushed across a surface with 30 N. It accelerates at 2.5 m/s². What is $\\mu_k$? ($g = 10$ m/s²)',
+            question: 'A 4 kg block is pushed across a surface with 30 N. It accelerates at 2.5 $m/s^{2}$. What is $\\mu_k$? ($g = 10$ $m/s^{2}$)',
             options: [
               '0.25',
               '0.50',

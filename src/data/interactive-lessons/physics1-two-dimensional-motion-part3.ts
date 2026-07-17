@@ -148,13 +148,13 @@ $$v_{BG} = \\sqrt{v_{BW}^2 + v_{WG}^2} = \\sqrt{16 + 9} = 5 \\text{ m/s}$$
             label: 'If two cars travel in the same direction, the relative speed between them is the _____ of their speeds.',
             options: ['sum', 'difference', 'product', 'average'],
             correctIndex: 1,
-            explanation: 'When moving in the same direction, relative speed = |v₁ − v₂|.'
+            explanation: 'When moving in the same direction, relative speed = |$v_{1}$ − $v_{2}$|.'
           },
           {
             label: 'If two cars travel toward each other, the relative speed is the _____ of their speeds.',
             options: ['sum', 'difference', 'product', 'average'],
             correctIndex: 0,
-            explanation: 'When moving toward each other (opposite directions), relative speed = v₁ + v₂.'
+            explanation: 'When moving toward each other (opposite directions), relative speed = $v_{1}$ + $v_{2}$.'
           },
           {
             label: 'The velocity of A relative to B is the negative of:',

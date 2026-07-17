@@ -34,14 +34,14 @@ $$v^2 = v_0^2 + 2a\\Delta x$$
 
 ### Worked Example: Up and Back Down
 
-A block is launched at $v_0 = 8$ m/s up a 30° incline with $\\mu_k = 0.20$ ($g = 10$ m/s²).
+A block is launched at $v_0 = 8$ m/s up a 30° incline with $\\mu_k = 0.20$ ($g = 10$ $m/s^{2}$).
 
-**Going up:** $a_{\\text{up}} = g(\\sin 30° + \\mu_k\\cos 30°) = 10(0.50 + 0.173) = 6.73$ m/s²
+**Going up:** $a_{\\text{up}} = g(\\sin 30° + \\mu_k\\cos 30°) = 10(0.50 + 0.173) = 6.73$ $m/s^{2}$
 
 **Distance up:** $v^2 = v_0^2 - 2a_{\\text{up}}d$
 $$0 = 64 - 2(6.73)d \\Rightarrow d = 64/13.46 = 4.75 \\text{ m}$$
 
-**Going down:** $a_{\\text{down}} = g(\\sin 30° - \\mu_k\\cos 30°) = 10(0.50 - 0.173) = 3.27$ m/s²
+**Going down:** $a_{\\text{down}} = g(\\sin 30° - \\mu_k\\cos 30°) = 10(0.50 - 0.173) = 3.27$ $m/s^{2}$
 
 **Speed at bottom:** $v^2 = 2(3.27)(4.75) = 31.1$
 $$v = \\sqrt{31.1} \\approx 5.6 \\text{ m/s}$$
@@ -62,7 +62,7 @@ $$d = \\frac{1}{2}at^2 \\Rightarrow t = \\sqrt{\\frac{2d}{a}}$$
 
 ### Example
 
-A block slides from rest down a 5 m frictionless 45° incline ($g = 10$ m/s²).
+A block slides from rest down a 5 m frictionless 45° incline ($g = 10$ $m/s^{2}$).
 
 $$a = g\\sin 45° = 7.07 \\text{ m/s}^2$$
 $$t = \\sqrt{\\frac{2 \\times 5}{7.07}} = \\sqrt{1.414} = 1.19 \\text{ s}$$
@@ -95,7 +95,7 @@ $$t = v_0/a = 10/7.17 = 1.39 \\text{ s}$$
             explanation: 'Friction removes kinetic energy on both the way up AND the way down. The block returns with less speed than it started with.'
           },
           {
-            question: 'A block slides from rest down a frictionless 30° incline for 2 seconds ($g = 10$ m/s²). How far does it travel?',
+            question: 'A block slides from rest down a frictionless 30° incline for 2 seconds ($g = 10$ $m/s^{2}$). How far does it travel?',
             options: [
               '5 m',
               '10 m',
@@ -103,7 +103,7 @@ $$t = v_0/a = 10/7.17 = 1.39 \\text{ s}$$
               '40 m'
             ],
             correctAnswer: 1,
-            explanation: '$a = g\\sin 30° = 5$ m/s². $d = \\frac{1}{2}(5)(4) = 10$ m.'
+            explanation: '$a = g\\sin 30° = 5$ $m/s^{2}$. $d = \\frac{1}{2}(5)(4) = 10$ m.'
           },
           {
             question: 'On a rough incline, a block takes time $t_1$ to slide down a distance $d$ from rest. On a frictionless version of the same incline, the time is $t_2$. Which is greater?',
@@ -125,9 +125,9 @@ $$t = v_0/a = 10/7.17 = 1.39 \\text{ s}$$
       content: `
 **Kinematics on Inclines** 🧮
 
-A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$ ($g = 10$ m/s², $\\sin 37° = 0.60$, $\\cos 37° = 0.80$).
+A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$ ($g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $\\cos 37° = 0.80$).
 
-1) What is the acceleration down the slope (in m/s²)?
+1) What is the acceleration down the slope $(in m/s^{2})$?
 
 2) What is the speed at the bottom (in m/s)?
 
@@ -141,7 +141,7 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
         hint1: '$a = g(\\sin 37° - \\mu_k\\cos 37°) = 10(0.60 - 0.20)$.',
         hint2: '$v^2 = 2(4)(4) = 32$. $v = \\sqrt{32}$.',
         hint3: '$t = v/a = 5.66/4$. Or $t = \\sqrt{2d/a} = \\sqrt{8/4} = \\sqrt{2}$.',
-        explanation: '1) $a = 10(0.60 - 0.25 \\times 0.80) = 10(0.40) = 4$ m/s². 2) $v = \\sqrt{32} \\approx 5.66$ m/s. 3) $t = \\sqrt{2} \\approx 1.4$ s.'
+        explanation: '1) $a = 10(0.60 - 0.25 \\times 0.80) = 10(0.40) = 4$ $m/s^{2}$. 2) $v = \\sqrt{32} \\approx 5.66$ m/s. 3) $t = \\sqrt{2} \\approx 1.4$ s.'
       }
     },
     {
@@ -176,7 +176,7 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
       exercise: {
         questions: [
           {
-            question: 'A block is launched at 12 m/s up a frictionless 30° incline ($g = 10$ m/s²). How far up the slope does it travel?',
+            question: 'A block is launched at 12 m/s up a frictionless 30° incline ($g = 10$ $m/s^{2}$). How far up the slope does it travel?',
             options: [
               '7.2 m',
               '14.4 m',
@@ -184,10 +184,10 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
               '28.8 m'
             ],
             correctAnswer: 1,
-            explanation: '$a = g\\sin 30° = 5$ m/s². $0 = 144 - 2(5)d$. $d = 144/10 = 14.4$ m.'
+            explanation: '$a = g\\sin 30° = 5$ $m/s^{2}$. $0 = 144 - 2(5)d$. $d = 144/10 = 14.4$ m.'
           },
           {
-            question: 'A block slides from rest down a 53° incline ($\\mu_k = 0.40$, $g = 10$ m/s², $\\sin 53° = 0.80$, $\\cos 53° = 0.60$). After sliding 5 m, its speed is:',
+            question: 'A block slides from rest down a 53° incline ($\\mu_k = 0.40$, $g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$, $\\cos 53° = 0.60$). After sliding 5 m, its speed is:',
             options: [
               '4.5 m/s',
               '6.3 m/s',
@@ -195,7 +195,7 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
               '8.9 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$a = 10(0.80 - 0.40 \\times 0.60) = 10(0.80 - 0.24) = 5.6$ m/s². $v^2 = 2(5.6)(5) = 56$. $v = \\sqrt{56} \\approx 7.5$ m/s.'
+            explanation: '$a = 10(0.80 - 0.40 \\times 0.60) = 10(0.80 - 0.24) = 5.6$ $m/s^{2}$. $v^2 = 2(5.6)(5) = 56$. $v = \\sqrt{56} \\approx 7.5$ m/s.'
           }
         ]
       }

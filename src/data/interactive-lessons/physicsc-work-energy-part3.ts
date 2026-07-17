@@ -62,7 +62,7 @@ This is a restoring force (like a spring with $k = 10$ N/m).
       content: `
 **Potential Energy Functions** 🧮
 
-1) A 4 kg object is at height 5 m. Gravitational PE (J)? ($g = 10$ m/s²)
+1) A 4 kg object is at height 5 m. Gravitational PE (J)? ($g = 10$ $m/s^{2}$)
 
 2) A spring ($k = 200$ N/m) is compressed 1 m. Elastic PE (J)?
 

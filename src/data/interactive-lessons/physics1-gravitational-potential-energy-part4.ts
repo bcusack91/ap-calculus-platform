@@ -32,7 +32,7 @@ $$v_f = \\sqrt{2gh}$$
 
 ### Example
 
-A ball is dropped from 20 m ($g = 10$ m/s²):
+A ball is dropped from 20 m ($g = 10$ $m/s^{2}$):
 
 $$v_f = \\sqrt{2(10)(20)} = \\sqrt{400} = 20 \\text{ m/s}$$
       `
@@ -50,7 +50,7 @@ $$h_{\\max} = \\frac{v_i^2}{2g}$$
 
 ### Example
 
-A ball is thrown upward at 30 m/s ($g = 10$ m/s²):
+A ball is thrown upward at 30 m/s ($g = 10$ $m/s^{2}$):
 
 $$h_{\\max} = \\frac{(30)^2}{2(10)} = \\frac{900}{20} = 45 \\text{ m}$$
 
@@ -142,7 +142,7 @@ All three have the **same speed** when they reach the ground (assuming no air re
       content: `
 **KE ↔ PE Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A ball is dropped from 31.25 m. What is its speed just before hitting the ground (in m/s)?
 
@@ -205,7 +205,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 3 kg ball is thrown downward at 5 m/s from a 20 m ledge. Its speed at the ground is ($g = 10$ m/s²):',
+            question: 'A 3 kg ball is thrown downward at 5 m/s from a 20 m ledge. Its speed at the ground is ($g = 10$ $m/s^{2}$):',
             options: [
               '15 m/s',
               '20 m/s',
@@ -216,7 +216,7 @@ Use $g = 10$ m/s².
             explanation: '$\\frac{1}{2}(3)(25) + 3(10)(20) = \\frac{1}{2}(3)v_f^2$. $37.5 + 600 = 1.5v_f^2$. $v_f^2 = 637.5/1.5 = 425$. $v_f = \\sqrt{425} \\approx 20.6$ m/s.'
           },
           {
-            question: 'A pendulum is released from a height of 0.8 m above its lowest point. Its speed at the lowest point is ($g = 10$ m/s²):',
+            question: 'A pendulum is released from a height of 0.8 m above its lowest point. Its speed at the lowest point is ($g = 10$ $m/s^{2}$):',
             options: [
               '2 m/s',
               '4 m/s',

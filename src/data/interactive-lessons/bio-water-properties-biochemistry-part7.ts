@@ -44,10 +44,10 @@ export const bioWaterPropertiesPart7Data = {
           {
             question: 'A biologist studying an enzyme finds it works best at pH 7.4 but denatures at pH 5.0. What cellular mechanism prevents this denaturation?',
             options: [
-              'Active transport of H⁺ ions',
+              'Active transport of $H^{+}$ ions',
               'Buffer systems that maintain pH',
               'Osmotic regulation',
-              'Passive diffusion of OH⁻ ions'
+              'Passive diffusion of $OH^{-}$ ions'
             ],
             correctAnswer: 1,
             explanation: 'Biological buffer systems (like the bicarbonate buffer in blood) resist pH changes, maintaining the optimal pH range for enzyme function.'

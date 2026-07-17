@@ -12,7 +12,7 @@ export const physics1FluidsContinuityPart7Data = {
 You've mastered volume flow rate, single-pipe continuity, branching, and mass flow rate. AP loves multi-step continuity questions that lead into Bernoulli (Topic 4), so this synthesis solidifies the foundation.
 
 **Big Ideas Recap:**
-- $Q = Av$ defines volume flow rate (m³/s)
+- $Q = Av$ defines volume flow rate $(m^{3}/s)$
 - Incompressible continuity: $A_1 v_1 = A_2 v_2$
 - Junctions: $\\sum Q_{in} = \\sum Q_{out}$
 - Mass flow rate: $\\dot m = \\rho Av$
@@ -73,7 +73,7 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
             explanation: 'Continuity: $Q = Av$ is constant.'
           },
           {
-            question: 'A pipe has volume flow rate 0.020 m³/s. In a section of area 0.010 m², the speed is:',
+            question: 'A pipe has volume flow rate 0.020 $m^{3}/s$. In a section of area 0.010 $m^{2}$, the speed is:',
             options: [
               '0.0002 m/s',
               '0.5 m/s',
@@ -92,11 +92,11 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
       content: `
 **AP Synthesis Calculations** 🧮 ($\\rho_w = 1000$)
 
-1) A pipe of inner diameter 8 cm carries water at 1.5 m/s. Volume flow rate (m³/s, 4 sig figs)?
+1) A pipe of inner diameter 8 cm carries water at 1.5 m/s. Volume flow rate ($m^{3}/s$, 4 sig figs)?
 
 2) Same flow enters a section of diameter 4 cm. New speed (m/s)?
 
-3) Two pipes ($A_1 = 0.005$ m², $v_1 = 4$ m/s and $A_2 = 0.003$ m², $v_2 = 5$ m/s) merge into a pipe of area $0.010$ m². Outlet speed (m/s)?
+3) Two pipes ($A_1 = 0.005$ $m^{2}$, $v_1 = 4$ m/s and $A_2 = 0.003$ $m^{2}$, $v_2 = 5$ m/s) merge into a pipe of area $0.010$ $m^{2}$. Outlet speed (m/s)?
       `,
       exercise: {
         boxes: 3,
@@ -104,7 +104,7 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
         hint1: '$Q = \\pi r^2 v$.',
         hint2: 'Diameter halved → speed × 4.',
         hint3: '$v_3 = (Q_1+Q_2)/A_3$.',
-        explanation: '1) $A = \\pi (0.04)^2 ≈ 5.027\\times10^{-3}$ m². $Q = 5.027\\times10^{-3} \\times 1.5 ≈ 7.540\\times10^{-3}$ m³/s. 2) $v_2 = 1.5 \\times 4 = 6$ m/s. 3) $Q_{tot} = 0.005(4)+0.003(5) = 0.035$ m³/s. $v_3 = 0.035/0.010 = 3.5$ m/s.'
+        explanation: '1) $A = \\pi (0.04)^2 ≈ 5.027\\times10^{-3}$ $m^{2}$. $Q = 5.027\\times10^{-3} \\times 1.5 ≈ 7.540\\times10^{-3}$ $m^{3}/s$. 2) $v_2 = 1.5 \\times 4 = 6$ m/s. 3) $Q_{tot} = 0.005(4)+0.003(5) = 0.035$ $m^{3}/s$. $v_3 = 0.035/0.010 = 3.5$ m/s.'
       }
     },
     {
@@ -170,7 +170,7 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
               '20 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$Q_{main} = \\pi (0.15)^2 (2) ≈ 0.1414$ m³/s. Each pipe: $Q_{main}/5 ≈ 0.0283$ m³/s. $A_{small} = \\pi(0.03)^2 ≈ 2.83\\times10^{-3}$ m². $v = 0.0283/2.83\\times10^{-3} = 10$ m/s.'
+            explanation: '$Q_{main} = \\pi (0.15)^2 (2) ≈ 0.1414$ $m^{3}/s$. Each pipe: $Q_{main}/5 ≈ 0.0283$ $m^{3}/s$. $A_{small} = \\pi(0.03)^2 ≈ 2.83\\times10^{-3}$ $m^{2}$. $v = 0.0283/2.83\\times10^{-3} = 10$ m/s.'
           }
         ]
       }

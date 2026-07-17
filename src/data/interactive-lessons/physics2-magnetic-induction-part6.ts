@@ -97,7 +97,7 @@ Voltage goes up by 5×, current goes down by 5×. Power is conserved: $120 \\tim
             explanation: '$V_{\\text{rms}} = V_{\\text{peak}}/\\sqrt{2} = 170/1.414 \\approx 120$ V. This is why US household outlets are rated 120 V (rms) while peak is about 170 V.'
           },
           {
-            question: 'A 50-turn coil ($A = 0.02$ m²) rotates at 120 rev/s in a 0.3 T field. Peak EMF:',
+            question: 'A 50-turn coil ($A = 0.02$ $m^{2}$) rotates at 120 rev/s in a 0.3 T field. Peak EMF:',
             options: ['36 V', '226 V', '1131 V', '113 V'],
             correctAnswer: 2,
             explanation: '$\\omega = 2\\pi \\times 120 = 754$ rad/s. $\\mathcal{E}_{\\text{peak}} = NBA\\omega = 50 \\times 0.3 \\times 0.02 \\times 754 = 226$ V. Wait — $50 \\times 0.3 \\times 0.02 = 0.3$, $0.3 \\times 754 = 226$ V. But let me recheck: actually $\\mathcal{E} = NBA\\omega = 50(0.3)(0.02)(240\\pi) = 0.3 \\times 753.98 \\approx 226$ V.'

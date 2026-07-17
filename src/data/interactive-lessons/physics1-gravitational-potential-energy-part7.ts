@@ -86,7 +86,7 @@ This final lesson integrates all gravitational PE concepts: reference levels, co
       content: `
 **AP-Style Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A roller coaster starts at rest at height 25 m and passes over a 10 m hill. What is its speed at the top of the 10 m hill (in m/s, to 1 decimal)?
 
@@ -149,7 +149,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 0.2 kg ball is dropped from 5 m onto a spring. Just before touching the spring, the ball\'s KE is ($g = 10$ m/s²):',
+            question: 'A 0.2 kg ball is dropped from 5 m onto a spring. Just before touching the spring, the ball\'s KE is ($g = 10$ $m/s^{2}$):',
             options: [
               '1 J',
               '5 J',
@@ -160,7 +160,7 @@ Use $g = 10$ m/s².
             explanation: 'All PE converts to KE: $KE = mgh = 0.2(10)(5) = 10$ J.'
           },
           {
-            question: 'A block slides down a 45° incline of length 4 m with friction ($\\mu_k = 0.3$). Its speed at the bottom, starting from rest, is closest to ($g = 10$ m/s²):',
+            question: 'A block slides down a 45° incline of length 4 m with friction ($\\mu_k = 0.3$). Its speed at the bottom, starting from rest, is closest to ($g = 10$ $m/s^{2}$):',
             options: [
               '5.3 m/s',
               '6.0 m/s',

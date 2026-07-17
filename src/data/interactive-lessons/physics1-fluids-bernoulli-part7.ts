@@ -106,7 +106,7 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
 
 1) A large open tank's water surface is 10 m above a small hole. Exit speed (m/s)?
 
-2) Horizontal pipe: $A_1 = 0.04$ m², $v_1 = 1$ m/s, $P_1 = 200$ kPa; $A_2 = 0.01$ m². Find $P_2$ (kPa).
+2) Horizontal pipe: $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $P_1 = 200$ kPa; $A_2 = 0.01$ $m^{2}$. Find $P_2$ (kPa).
 
 3) A Pitot tube on a small drone reads $\\Delta P = 24$ Pa ($\\rho_{air} = 1.2$). Airspeed (m/s)?
       `,
@@ -174,7 +174,7 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
             explanation: '$R = 2\\sqrt{hH} = 2\\sqrt{1.25 \\times 0.45} = 2\\sqrt{0.5625} = 2(0.75) = 1.5$ m.'
           },
           {
-            question: 'Water flows in a horizontal pipe from $A_1 = 0.04$ m² to $A_2 = 0.01$ m². If $v_1 = 2$ m/s and $P_1 = 250$ kPa, the pressure $P_2$ at the narrow end is:',
+            question: 'Water flows in a horizontal pipe from $A_1 = 0.04$ $m^{2}$ to $A_2 = 0.01$ $m^{2}$. If $v_1 = 2$ m/s and $P_1 = 250$ kPa, the pressure $P_2$ at the narrow end is:',
             options: [
               '$220$ kPa',
               '$280$ kPa',

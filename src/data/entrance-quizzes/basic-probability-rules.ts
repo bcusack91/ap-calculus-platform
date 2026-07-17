@@ -18,10 +18,10 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'bpr-ent-1b',
-    question: 'If P(A) = 0.65, what is P(Aᶜ)?',
+    question: 'If P(A) = 0.65, what is $P(A^{c})$?',
     options: ['0.65', '0.35', '1.65', '−0.65'],
     correctIndex: 1,
-    explanation: 'By the complement rule, P(Aᶜ) = 1 − P(A) = 1 − 0.65 = 0.35.',
+    explanation: 'By the complement rule, $P(A^{c})$ = 1 − P(A) = 1 − 0.65 = 0.35.',
     partNumber: 1,
     partTitle: 'Basic Probability',
   },

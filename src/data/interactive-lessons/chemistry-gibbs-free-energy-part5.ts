@@ -232,7 +232,7 @@ For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
       exercise: {
         questions: [
           {
-            question: 'For a reaction with ΔG° = −30 kJ/mol at 298 K, if Q = 10⁶, then ΔG is approximately:',
+            question: 'For a reaction with ΔG° = −30 kJ/mol at 298 K, if Q = $10^{6}$, then ΔG is approximately:',
             options: [
               '−30 kJ/mol',
               '+4.2 kJ/mol',

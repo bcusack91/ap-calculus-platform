@@ -858,7 +858,7 @@ An open-top box is made from a $12 \\times 12$ inch sheet by cutting an $x \\tim
           hint1: 'Two cuts of size $x$ come out of each 12-inch side, so $2x \\le 12$, i.e. $x \\le 6$.',
           hint2: '$V\'(x) = (12-2x)(12-6x) = 0$ at $x = 6$ and $x = 2$.',
           hint3: 'At $x=6$ the base width $12-2(6)=0$, so $V=0$; the real maximum is at the interior critical number $x=2$.',
-          explanation: 'Domain $0 \\le x \\le 6$ is geometric. $V\'=0$ at $x=2$ and $x=6$; $x=6$ gives $V=0$, so the maximum volume is at $x=2$ (giving $V = 2\\cdot 8^2 = 128$ in³).',
+          explanation: 'Domain $0 \\le x \\le 6$ is geometric. $V\'=0$ at $x=2$ and $x=6$; $x=6$ gives $V=0$, so the maximum volume is at $x=2$ (giving $V = 2\\cdot 8^2 = 128$ $in^{3}$).',
         },
       },
     ],

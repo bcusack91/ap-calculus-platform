@@ -33,7 +33,7 @@ You need **two** initial conditions:
       type: 'text' as const,
       content: `## Worked Example: Cubic Position from Linear Acceleration
 
-**Problem:** $a(t) = 4 - 2t$ m/s², $v(0) = 0$, $x(0) = 5$ m. Find the position when the particle first stops.
+**Problem:** $a(t) = 4 - 2t$ $m/s^{2}$, $v(0) = 0$, $x(0) = 5$ m. Find the position when the particle first stops.
 
 ### Solution
 
@@ -55,7 +55,7 @@ $$x(4) = 5 + 32 - \\frac{64}{3} = 5 + \\frac{96 - 64}{3} = 5 + \\frac{32}{3} = \
 
 ### Verification
 
-Check units: $[a] = $ m/s², after two integrations: $[x] = $ m ✓
+Check units: $[a] = $ $m/s^{2}$, after two integrations: $[x] = $ m ✓
 
 Check: at $t = 0$, $x = 5$ ✓, $v = 0$ ✓`
     },

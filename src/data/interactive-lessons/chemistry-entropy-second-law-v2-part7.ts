@@ -50,7 +50,7 @@ This section reviews all entropy concepts and presents AP-style questions that c
       exercise: {
         questions: [
           {
-            question: 'Consider the dissolution of ammonium nitrate: NH₄NO₃(s) → NH₄⁺(aq) + NO₃⁻(aq). This process is endothermic ($\\Delta H > 0$) but spontaneous at room temperature. Which statement best explains this?',
+            question: 'Consider the dissolution of ammonium nitrate: $NH_{4}NO_{3}(s)$ → $NH_{4}^{+}(aq)$ + $NO_{3}^{-}(aq)$. This process is endothermic ($\\Delta H > 0$) but spontaneous at room temperature. Which statement best explains this?',
             options: [
               'The decrease in enthalpy drives the reaction',
               'The increase in system entropy ($\\Delta S_{\\text{sys}} > 0$) is large enough to overcome the unfavorable $\\Delta H$',
@@ -61,7 +61,7 @@ This section reviews all entropy concepts and presents AP-style questions that c
             explanation: 'The solid dissolving into ions significantly increases entropy ($\\Delta S_{\\text{sys}} > 0$). At room temperature, $T\\Delta S$ exceeds $\\Delta H$, so $\\Delta G < 0$ (or equivalently, $\\Delta S_{\\text{univ}} > 0$).'
           },
           {
-            question: 'At what temperature would the dissolution of NH₄NO₃ become nonspontaneous if $\\Delta H = +25.7$ kJ and $\\Delta S = +108.7$ J/K?',
+            question: 'At what temperature would the dissolution of $NH_{4}NO_{3}$ become nonspontaneous if $\\Delta H = +25.7$ kJ and $\\Delta S = +108.7$ J/K?',
             options: [
               'Below 236 K',
               'Above 236 K',

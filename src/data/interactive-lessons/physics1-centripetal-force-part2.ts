@@ -107,7 +107,7 @@ Sometimes **two or more forces** combine to provide centripetal force:
       content: `
 **Force Analysis Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 1200 kg car rounds a flat curve of radius 80 m. If $\\mu_s = 0.6$, what is the maximum speed before the car skids (in m/s, round to 3 significant figures)?
 
@@ -173,7 +173,7 @@ Use $g = 10$ m/s².
             explanation: 'Both strings pull on the ball, and the horizontal components of both tensions point toward the center of the circle. Gravity acts vertically and has no horizontal component.'
           },
           {
-            question: 'A 1000 kg car travels at 20 m/s over a circular hill of radius 50 m. The normal force at the top is ($g = 10$ m/s²):',
+            question: 'A 1000 kg car travels at 20 m/s over a circular hill of radius 50 m. The normal force at the top is ($g = 10$ $m/s^{2}$):',
             options: [
               '2000 N',
               '4000 N',

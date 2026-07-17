@@ -150,16 +150,16 @@ $$6 < x < 16$$`
       content: '**Match the Triangle Property** — Select the correct value for each scenario.',
       exercise: {
         dropdowns: [
-          '45-45-90 triangle, leg = 7. Hypotenuse = [7√2|14|7√3|7]',
-          '30-60-90 triangle, hypotenuse = 12. Short leg = [6|4|6√3|12√3]',
-          'Sides 5 and 12, right angle between them. Hypotenuse = [13|17|√119|10]',
+          '45-45-90 triangle, leg = 7. Hypotenuse = [$7\\sqrt{2}$|14|$7\\sqrt{3}$|7]',
+          '30-60-90 triangle, hypotenuse = 12. Short leg = [6|4|$6\\sqrt{3}$|$12\\sqrt{3}$]',
+          'Sides 5 and 12, right angle between them. Hypotenuse = [13|17|$\\sqrt{119}$|10]',
           'Similar triangles, scale factor 1:4. Area ratio = [1:16|1:4|1:8|1:64]'
         ],
-        correctAnswers: ['7√2', '6', '13', '1:16'],
-        hint1: 'For 45-45-90: hypotenuse = leg × √2.',
+        correctAnswers: ['$7\\sqrt{2}$', '6', '13', '1:16'],
+        hint1: 'For 45-45-90: hypotenuse = leg × $\\sqrt{2}$.',
         hint2: 'For 30-60-90: hypotenuse = 2 × short leg.',
-        hint3: 'Area ratio = (side ratio)².',
-        explanation: '45-45-90: hyp = 7√2. 30-60-90: short leg = 12/2 = 6. Pythagorean: √(25+144) = √169 = 13 (a 5-12-13 triple). Area scales as the square of the side ratio: (1/4)² = 1/16.'
+        hint3: 'Area ratio = $(side ratio)^{2}$.',
+        explanation: '45-45-90: hyp = $7\\sqrt{2}$. 30-60-90: short leg = 12/2 = 6. Pythagorean: $\\sqrt{25+144}$ = $\\sqrt{169}$ = 13 (a 5-12-13 triple). Area scales as the square of the side ratio: $(1/4)^{2}$ = 1/16.'
       }
     },
     {

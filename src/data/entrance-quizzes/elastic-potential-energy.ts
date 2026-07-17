@@ -98,7 +98,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'epe-ent-5b',
-    question: 'A spring ($k = 500$ N/m) is compressed $0.2$ m and launches a $0.1$ kg ball vertically. What maximum height does the ball reach? (Use $g = 10$ m/s².)',
+    question: 'A spring ($k = 500$ N/m) is compressed $0.2$ m and launches a $0.1$ kg ball vertically. What maximum height does the ball reach? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$5$ m', '$10$ m', '$20$ m', '$50$ m'],
     correctIndex: 1,
     explanation: '$\\frac{1}{2}kx^2 = mgh$. $h = kx^2/(2mg) = 500(0.04)/(2 \\times 0.1 \\times 10) = 20/2 = 10$ m.',
@@ -109,7 +109,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Spring Constant Determination
   {
     id: 'epe-ent-6a',
-    question: 'A $2$ kg mass hangs from a spring and stretches it $0.1$ m. What is the spring constant? (Use $g = 10$ m/s².)',
+    question: 'A $2$ kg mass hangs from a spring and stretches it $0.1$ m. What is the spring constant? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$20$ N/m', '$100$ N/m', '$200$ N/m', '$2000$ N/m'],
     correctIndex: 2,
     explanation: 'At equilibrium, $kx = mg$. $k = mg/x = (2)(10)/0.1 = 200$ N/m.',

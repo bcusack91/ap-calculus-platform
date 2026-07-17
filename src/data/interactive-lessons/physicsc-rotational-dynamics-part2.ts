@@ -30,7 +30,7 @@ Common moments of inertia:
 
 **Find I for a 3 kg point mass at 2 m from the axis.**
 
-$I = mr^2 = 3(4) = 12$ kg·m² ✅
+$I = mr^2 = 3(4) = 12$ $kg\\cdot m^{2}$ ✅
     
     `
     },
@@ -62,11 +62,11 @@ $I = mr^2 = 3(4) = 12$ kg·m² ✅
       content: `
 **Moment of Inertia** 🧮
 
-1) A 3 kg point mass is 2 m from the axis. $I$ (kg·m²)?
+1) A 3 kg point mass is 2 m from the axis. $I$ $(kg\\cdot m^{2})$?
 
-2) A solid disk has $m = 4$ kg, $r = 1$ m. $I$ (kg·m²)?
+2) A solid disk has $m = 4$ kg, $r = 1$ m. $I$ $(kg\\cdot m^{2})$?
 
-3) A solid sphere has $m = 5$ kg, $r = 2$ m. $I$ (kg·m²)?
+3) A solid sphere has $m = 5$ kg, $r = 2$ m. $I$ $(kg\\cdot m^{2})$?
     
     `,
       exercise: {

@@ -165,13 +165,13 @@ Light travels from air into water at an angle of 45° from the normal. Find the 
 
 **Step 1: Set up the coordinate system**
 \`\`\`
-        Air (n₁ = 1.0)
+        Air ($n_{1}$ = 1.0)
     ────┼────  45° from normal
         │
 ────────┴────────  ← water surface
-        │ θ₂ = ?
+        │ $\\theta_{2}$ = ?
         ┼────
-    Water (n₂ = 1.33)
+    Water ($n_{2}$ = 1.33)
 \`\`\`
 
 Light direction: downward into water (positive direction)
@@ -222,13 +222,13 @@ Light travels from water to air at 30° from the normal. Find the refraction ang
 
 **Step 1: Set up the coordinate system**
 \`\`\`
-    Water (n₁ = 1.33)
+    Water ($n_{1}$ = 1.33)
         ┼────  30° from normal
         │
 ────────┴────────  ← water surface
         │
-    ────┼────  θ₂ = ?
-        Air (n₂ = 1.0)
+    ────┼────  $\\theta_{2}$ = ?
+        Air ($n_{2}$ = 1.0)
 \`\`\`
 
 Light direction: upward into air (positive direction)
@@ -326,14 +326,14 @@ Enter in order (to 3 significant figures where applicable):
             options: [
               'Using degrees instead of radians',
               'Swapping which n goes with which medium',
-              'Writing c = 3.0×10⁸ m/s',
+              'Writing c = $3.0\\times 10^{8}$ m/s',
               'Drawing the boundary line'
             ],
             correctAnswer: 1,
             explanation: 'Always label medium 1 as where the light starts and medium 2 as where it\'s going. Swapping them flips your answer.'
           },
           {
-            question: 'Your calculation gives θ₂ > 90°. Is that physically reasonable?',
+            question: 'Your calculation gives $\\theta_{2}$ > 90°. Is that physically reasonable?',
             options: [
               'Yes — any angle is valid',
               'No — this usually means a setup error (or it\'s a TIR situation)',

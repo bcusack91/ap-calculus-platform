@@ -113,7 +113,7 @@ The horizontal motion of Ball B is completely separate from its vertical free fa
       content: `
 **Independence of Motion Practice** 🧮
 
-A ball is launched horizontally at 15 m/s from the top of a 20 m tall building. Use $g = 10$ m/s².
+A ball is launched horizontally at 15 m/s from the top of a 20 m tall building. Use $g = 10$ $m/s^{2}$.
 
 1) How long does it take to reach the ground? (in seconds)
 
@@ -179,7 +179,7 @@ A ball is launched horizontally at 15 m/s from the top of a 20 m tall building. 
             explanation: 'The horizontal velocity stays constant at 100 m/s because there is no horizontal acceleration. Gravity only affects the vertical component.'
           },
           {
-            question: 'A bullet is fired horizontally from a height of 1.25 m. Using $g = 10$ m/s², how long until it hits the ground?',
+            question: 'A bullet is fired horizontally from a height of 1.25 m. Using $g = 10$ $m/s^{2}$, how long until it hits the ground?',
             options: [
               '0.25 s',
               '0.35 s',

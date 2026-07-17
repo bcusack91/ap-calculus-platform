@@ -120,9 +120,9 @@ These components are always perpendicular, so we use the Pythagorean theorem.
 
 1) A wheel of radius 0.3 m rotates at 20 rad/s. What is the tangential speed of a point on the rim? (in m/s)
 
-2) A disk accelerates at $\\alpha = 4$ rad/s². What is the tangential acceleration of a point 0.5 m from the center? (in m/s²)
+2) A disk accelerates at $\\alpha = 4$ $rad/s^{2}$. What is the tangential acceleration of a point 0.5 m from the center? $(in m/s^{2})$
 
-3) A point on a spinning wheel has tangential velocity 12 m/s and is 0.6 m from the center. What is the centripetal acceleration? (in m/s²)
+3) A point on a spinning wheel has tangential velocity 12 m/s and is 0.6 m from the center. What is the centripetal acceleration? $(in m/s^{2})$
       `,
       exercise: {
         boxes: 3,
@@ -130,7 +130,7 @@ These components are always perpendicular, so we use the Pythagorean theorem.
         hint1: '$v = r\\omega = (0.3)(20)$',
         hint2: '$a_t = r\\alpha = (0.5)(4)$',
         hint3: '$a_c = v^2/r = (12)^2/0.6$',
-        explanation: '1) $v = (0.3)(20) = 6$ m/s. 2) $a_t = (0.5)(4) = 2$ m/s². 3) $a_c = 144/0.6 = 240$ m/s².'
+        explanation: '1) $v = (0.3)(20) = 6$ m/s. 2) $a_t = (0.5)(4) = 2$ $m/s^{2}$. 3) $a_c = 144/0.6 = 240$ $m/s^{2}$.'
       }
     },
     {
@@ -171,15 +171,15 @@ These components are always perpendicular, so we use the Pythagorean theorem.
       exercise: {
         questions: [
           {
-            question: 'A bicycle wheel (radius 0.35 m) has $\\omega = 10$ rad/s and $\\alpha = 2$ rad/s². The total acceleration of a point on the rim is closest to:',
+            question: 'A bicycle wheel (radius 0.35 m) has $\\omega = 10$ rad/s and $\\alpha = 2$ $rad/s^{2}$. The total acceleration of a point on the rim is closest to:',
             options: [
-              '0.7 m/s²',
-              '35 m/s²',
-              '35.01 m/s²',
-              '37 m/s²'
+              '0.7 $m/s^{2}$',
+              '35 $m/s^{2}$',
+              '35.01 $m/s^{2}$',
+              '37 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a_t = r\\alpha = (0.35)(2) = 0.7$ m/s². $a_c = r\\omega^2 = (0.35)(100) = 35$ m/s². $a = \\sqrt{0.7^2 + 35^2} = \\sqrt{0.49 + 1225} = \\sqrt{1225.49} \\approx 35.01$ m/s².'
+            explanation: '$a_t = r\\alpha = (0.35)(2) = 0.7$ $m/s^{2}$. $a_c = r\\omega^2 = (0.35)(100) = 35$ $m/s^{2}$. $a = \\sqrt{0.7^2 + 35^2} = \\sqrt{0.49 + 1225} = \\sqrt{1225.49} \\approx 35.01$ $m/s^{2}$.'
           },
           {
             question: 'Two gears are meshed together. Gear A (radius 10 cm) drives Gear B (radius 20 cm). If Gear A rotates at 100 rad/s, Gear B rotates at:',

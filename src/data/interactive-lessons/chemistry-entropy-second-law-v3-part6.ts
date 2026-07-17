@@ -48,7 +48,7 @@ Calculate $\\Delta S^\\circ_{\\text{rxn}}$ in J/(mol·K):
 Calculate $\\Delta S^\\circ_{\\text{rxn}}$ in J/(mol·K):
     `, exercise: { boxes: 1, correctAnswers: ['2.9'],
         hint1: 'Products: 1 × 213.8 = 213.8. Reactants: 1 × 5.7 + 1 × 205.2 = 210.9.',
-        explanation: '$\\Delta S^\\circ = 213.8 - (5.7 + 205.2) = 213.8 - 210.9 = 2.9$ J/(mol·K). Close to zero — same gas moles on both sides. Slightly positive because CO₂ is more complex than O₂.' } },
+        explanation: '$\\Delta S^\\circ = 213.8 - (5.7 + 205.2) = 213.8 - 210.9 = 2.9$ J/(mol·K). Close to zero — same gas moles on both sides. Slightly positive because $CO_{2}$ is more complex than $O_{2}$.' } },
     { id: 'en6v3-calc3', type: 'input-boxes' as const, content: `
 **Problem 3 (Multi-step):**
 
@@ -66,7 +66,7 @@ $\\Delta S^\\circ_{\\text{rxn}}$ in J/(mol·K):
     { id: 'en6v3-analysis', type: 'multiple-choice' as const, content: `
 **Analysis Questions**
     `, exercise: { questions: [
-          { question: 'In Problem 3, why is ΔS° much more negative when H₂O(l) forms vs H₂O(g)?', options: ['Liquid water has higher entropy', 'You lose 3 mol of gas instead of 1 mol', 'The temperature changes', 'The enthalpy is different'], correctAnswer: 1, explanation: 'With H₂O(g): 3 mol gas → 2 mol gas (net -1). With H₂O(l): 3 mol gas → 0 mol gas (net -3). Going from gas to liquid represents a much larger decrease in disorder.' },
+          { question: 'In Problem 3, why is ΔS° much more negative when $H_{2}O(l)$ forms vs $H_{2}O(g)$?', options: ['Liquid water has higher entropy', 'You lose 3 mol of gas instead of 1 mol', 'The temperature changes', 'The enthalpy is different'], correctAnswer: 1, explanation: 'With $H_{2}O(g)$: 3 mol gas → 2 mol gas (net -1). With $H_{2}O(l)$: 3 mol gas → 0 mol gas (net -3). Going from gas to liquid represents a much larger decrease in disorder.' },
           { question: 'A student calculates $\\Delta S^\\circ = +45$ J/(mol·K) for a reaction. Which is most likely true?', options: ['More gas molecules in products', 'All reactants and products are solids', 'Fewer gas molecules in products', 'Temperature must be positive'], correctAnswer: 0, explanation: 'A positive $\\Delta S^\\circ$ most commonly results from a net increase in gas molecules. Solids have such small $S^\\circ$ values that reactions among only solids rarely give +45 J/(mol·K).' }
         ] } },
     { id: 'en6v3-check', type: 'multiple-choice' as const, content: `

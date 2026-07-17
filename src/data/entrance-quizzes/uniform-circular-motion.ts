@@ -54,9 +54,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ucm-ent-3b',
     question: 'A car travels at $20$ m/s around a curve of radius $100$ m. What is the centripetal acceleration?',
-    options: ['$0.2$ m/s²', '$2$ m/s²', '$4$ m/s²', '$200$ m/s²'],
+    options: ['$0.2$ $m/s^{2}$', '$2$ $m/s^{2}$', '$4$ $m/s^{2}$', '$200$ $m/s^{2}$'],
     correctIndex: 2,
-    explanation: '$a_c = v^2/r = 400/100 = 4$ m/s².',
+    explanation: '$a_c = v^2/r = 400/100 = 4$ $m/s^{2}$.',
     partNumber: 3,
     partTitle: 'Centripetal Acceleration',
   },

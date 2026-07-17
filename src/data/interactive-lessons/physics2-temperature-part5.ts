@@ -92,7 +92,7 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
       exercise: {
         questions: [
           {
-            question: 'Two identical steel rails (each 12.0 m long) are laid end-to-end with a gap at their junction. If the temperature can increase by 40°C, the minimum gap needed to prevent buckling is: (α_steel = 12 × 10⁻⁶ /°C)',
+            question: 'Two identical steel rails (each 12.0 m long) are laid end-to-end with a gap at their junction. If the temperature can increase by 40°C, the minimum gap needed to prevent buckling is: (α_steel = $12 \\times 10^{-6}$ /°C)',
             options: [
               '5.76 mm (one rail expands into the gap)',
               '11.52 mm (both rails expand toward the gap)',
@@ -150,7 +150,7 @@ You must heat the brass ring to about **152°C** for it to slip over the steel r
           {
             question: 'A brass ring at 20°C is too small to fit over an aluminum cylinder at 20°C. Both are heated together. As temperature increases:',
             options: [
-              'The ring fits eventually because brass expands faster (α_brass = 19 > α_Al = 23 × 10⁻⁶)',
+              'The ring fits eventually because brass expands faster (α_brass = 19 > α_Al = $23 \\times 10^{-6}$)',
               'The ring never fits because aluminum expands faster than brass',
               'The ring fits immediately at any higher temperature',
               'Whether it fits depends on the initial size difference and the α values'

@@ -142,7 +142,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'Block A ($2$ kg) is pushed against block B ($3$ kg) on a frictionless surface with a $10$ N force. What force does A exert on B?',
     options: ['$4$ N', '$6$ N', '$10$ N', '$5$ N'],
     correctIndex: 1,
-    explanation: 'System acceleration: $a = 10/(2+3) = 2$ m/s². Force of A on B: $F = m_B \\times a = 3 \\times 2 = 6$ N.',
+    explanation: 'System acceleration: $a = 10/(2+3) = 2$ $m/s^{2}$. Force of A on B: $F = m_B \\times a = 3 \\times 2 = 6$ N.',
     partNumber: 6,
     partTitle: 'Systems of Objects',
   },

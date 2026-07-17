@@ -50,9 +50,9 @@ Real motion often involves several phases. Each phase may have different acceler
 
 ### Example: A car trip
 
-1. **Accelerate** (0–10 s): $a = 3$ m/s², $v$ increases from 0 to 30 m/s
+1. **Accelerate** (0–10 s): $a = 3$ $m/s^{2}$, $v$ increases from 0 to 30 m/s
 2. **Cruise** (10–30 s): $a = 0$, $v$ stays at 30 m/s
-3. **Brake** (30–40 s): $a = -3$ m/s², $v$ decreases from 30 to 0 m/s
+3. **Brake** (30–40 s): $a = -3$ $m/s^{2}$, $v$ decreases from 30 to 0 m/s
 
 | Phase | $v$-$t$ Graph | $a$-$t$ Graph | $x$-$t$ Graph |
 |-------|--------------|--------------|---------------|
@@ -80,7 +80,7 @@ Total displacement = sum of areas under each phase of the $v$-$t$ graph.
               '6 s'
             ],
             correctAnswer: 2,
-            explanation: 'The velocity goes from +10 to −6 (a change of −16 m/s in 8 s), so $a = -2$ m/s². Setting $v = 0$: $0 = 10 - 2t \\Rightarrow t = 5$ s.'
+            explanation: 'The velocity goes from +10 to −6 (a change of −16 m/s in 8 s), so $a = -2$ $m/s^{2}$. Setting $v = 0$: $0 = 10 - 2t \\Rightarrow t = 5$ s.'
           },
           {
             question: 'During the interval where velocity is positive but decreasing, the $x$-$t$ graph is:',
@@ -122,7 +122,7 @@ A $v$-$t$ graph shows:
 
 2) What is the total displacement for the entire trip? (in meters)
 
-3) What is the acceleration during Phase 3? (in m/s²)
+3) What is the acceleration during Phase 3? $(in m/s^{2})$
       `,
       exercise: {
         boxes: 3,
@@ -130,7 +130,7 @@ A $v$-$t$ graph shows:
         hint1: 'Triangle: $\\frac{1}{2}(4)(8)$',
         hint2: 'Phase 1 (triangle) + Phase 2 (rectangle) + Phase 3 (triangle): $16 + 8(6) + \\frac{1}{2}(4)(8)$',
         hint3: 'Slope = $(0 - 8)/(14 - 10)$',
-        explanation: '1) $\\frac{1}{2}(4)(8) = 16$ m. 2) $16 + 48 + 16 = 80$ m. 3) $a = (0-8)/(14-10) = -8/4 = -2$ m/s².'
+        explanation: '1) $\\frac{1}{2}(4)(8) = 16$ m. 2) $16 + 48 + 16 = 80$ m. 3) $a = (0-8)/(14-10) = -8/4 = -2$ $m/s^{2}$.'
       }
     },
     {
@@ -179,7 +179,7 @@ A $v$-$t$ graph shows:
               '18 m'
             ],
             correctAnswer: 2,
-            explanation: 'Distance = |area₁| + |area₂| = |6 × 4| + |-3 × 6| = 24 + 18 = 42 m. (Net displacement would be $24 - 18 = 6$ m.)'
+            explanation: 'Distance = |$area_{1}$| + |$area_{2}$| = |6 × 4| + |-3 × 6| = 24 + 18 = 42 m. (Net displacement would be $24 - 18 = 6$ m.)'
           },
           {
             question: 'An object\'s $x$-$t$ graph is concave up. The object\'s speed is:',

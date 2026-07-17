@@ -54,9 +54,9 @@ This section presents AP-style problems that integrate concepts from Parts 1–6
       content: `## Problem Set 2 — Population Viability Analysis
 
 ### Scenario
-A population of an endangered amphibian has been monitored for 10 years. The data below show the census size (N) and estimated effective population size (Nₑ):
+A population of an endangered amphibian has been monitored for 10 years. The data below show the census size (N) and estimated effective population size $(N_{e})$:
 
-| Year | Census Size (N) | Nₑ |
+| Year | Census Size (N) | $N_{e}$ |
 |---|---|---|
 | 1 | 500 | 120 |
 | 2 | 480 | 110 |
@@ -73,7 +73,7 @@ A population of an endangered amphibian has been monitored for 10 years. The dat
 - Census size has declined **68%** over 10 years (500 → 160).
 - The ratio $N_e / N$ has remained low (~0.14–0.24), indicating that most individuals do not contribute genetically.
 - By Year 10, $N_e = 22$ — **below the 50-individual threshold** for short-term inbreeding risk.
-- The population is likely entering the **extinction vortex**: declining Nₑ → more inbreeding → lower fitness → further decline.
+- The population is likely entering the **extinction vortex**: declining $N_{e}$ → more inbreeding → lower fitness → further decline.
 `
     },
     {
@@ -86,7 +86,7 @@ A population of an endangered amphibian has been monitored for 10 years. The dat
             question: 'Based on the amphibian population data, which of the following is the most immediate genetic concern by Year 10?',
             options: [
               'Gene flow is too high, reducing local adaptation',
-              'Nₑ has dropped below 50, increasing risk of severe inbreeding depression',
+              '$N_{e}$ has dropped below 50, increasing risk of severe inbreeding depression',
               'The population has exceeded carrying capacity',
               'Natural selection is eliminating beneficial alleles'
             ],
@@ -154,7 +154,7 @@ This predicts ~44% species loss from a 90% habitat reduction.
       exercise: {
         questions: [
           {
-            question: 'An island originally covered by 1,000 km² of forest containing an estimated 200 bird species is reduced to 100 km² of forest. Using $z = 0.30$, the predicted number of remaining bird species is approximately:',
+            question: 'An island originally covered by 1,000 $km^{2}$ of forest containing an estimated 200 bird species is reduced to 100 $km^{2}$ of forest. Using $z = 0.30$, the predicted number of remaining bird species is approximately:',
             options: [
               '200 (no change)',
               '100 (50% loss)',
@@ -193,7 +193,7 @@ This predicts ~44% species loss from a 90% habitat reduction.
             options: ['vortex', 'debt', 'cascade', 'threshold']
           },
           {
-            label: 'When Nₑ drops below 50, the most immediate genetic threat is ___ depression.',
+            label: 'When $N_{e}$ drops below 50, the most immediate genetic threat is ___ depression.',
             options: ['inbreeding', 'outbreeding', 'population', 'environmental']
           },
           {
@@ -205,7 +205,7 @@ This predicts ~44% species loss from a 90% habitat reduction.
         hint1: 'The exponent z controls how steeply species number declines with area.',
         hint2: 'Extinction debt implies a future "payment" — species are committed to extinction but still present.',
         hint3: 'Simpson\'s index uses squared proportions, giving more weight to dominant species.',
-        explanation: 'A higher z-value means species number drops more steeply as area decreases. Extinction debt refers to species doomed to local extinction that still persist temporarily. Below Nₑ = 50, inbreeding depression becomes the most urgent genetic concern. Simpson\'s index emphasizes dominant species because squaring proportions amplifies the contribution of common species.'
+        explanation: 'A higher z-value means species number drops more steeply as area decreases. Extinction debt refers to species doomed to local extinction that still persist temporarily. Below $N_{e}$ = 50, inbreeding depression becomes the most urgent genetic concern. Simpson\'s index emphasizes dominant species because squaring proportions amplifies the contribution of common species.'
       }
     },
     {
@@ -229,7 +229,7 @@ This predicts ~44% species loss from a 90% habitat reduction.
 
 ### Common Mistakes to Avoid
 - Confusing species richness with species diversity (richness is only one component).
-- Using census size (N) instead of effective population size (Nₑ) when assessing genetic vulnerability.
+- Using census size (N) instead of effective population size $(N_{e})$ when assessing genetic vulnerability.
 - Forgetting that Simpson's and Shannon indices measure different aspects — know when each is appropriate.
 - Assuming species-area predictions are exact — they are estimates with limitations.
 

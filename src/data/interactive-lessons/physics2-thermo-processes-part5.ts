@@ -116,8 +116,8 @@ $$\\boxed{U = \\frac{f}{2}nRT}$$
 | Gas Type | Degrees of Freedom ($f$) | $U$ | $C_v$ | $C_p$ | $\\gamma$ |
 |----------|--------------------------|-----|--------|--------|----------|
 | **Monatomic** (He, Ne, Ar) | 3 (translation only) | $\\frac{3}{2}nRT$ | $\\frac{3}{2}R$ | $\\frac{5}{2}R$ | $5/3 \\approx 1.67$ |
-| **Diatomic** (N₂, O₂, H₂) | 5 (3 trans + 2 rot) | $\\frac{5}{2}nRT$ | $\\frac{5}{2}R$ | $\\frac{7}{2}R$ | $7/5 = 1.40$ |
-| **Polyatomic** (CO₂, H₂O) | 6 (3 trans + 3 rot) | $3nRT$ | $3R$ | $4R$ | $4/3 \\approx 1.33$ |
+| **Diatomic** ($N_{2}$, $O_{2}$, $H_{2}$) | 5 (3 trans + 2 rot) | $\\frac{5}{2}nRT$ | $\\frac{5}{2}R$ | $\\frac{7}{2}R$ | $7/5 = 1.40$ |
+| **Polyatomic** ($CO_{2}$, $H_{2}O$) | 6 (3 trans + 3 rot) | $3nRT$ | $3R$ | $4R$ | $4/3 \\approx 1.33$ |
 
 > ⚠️ Always: $C_p = C_v + R$ (for ideal gases) and $\\gamma = C_p/C_v$
 
@@ -133,9 +133,9 @@ $$\\boxed{U = \\frac{f}{2}nRT}$$
         questions: [
           {
             question: 'Two containers hold the same number of molecules at the same temperature. Container A has helium, container B has oxygen. Which is true?',
-            options: ['$KE_{avg}$ is the same, but $v_{rms}$ of He is greater', '$v_{rms}$ is the same for both', 'He has higher $KE_{avg}$', 'O₂ has higher $v_{rms}$ because it is heavier'],
+            options: ['$KE_{avg}$ is the same, but $v_{rms}$ of He is greater', '$v_{rms}$ is the same for both', 'He has higher $KE_{avg}$', '$O_{2}$ has higher $v_{rms}$ because it is heavier'],
             correctAnswer: 0,
-            explanation: '$KE_{avg} = \\frac{3}{2}k_BT$ depends only on $T$. But $v_{rms} = \\sqrt{3k_BT/m}$ — lighter He molecules move faster than heavier O₂ molecules.'
+            explanation: '$KE_{avg} = \\frac{3}{2}k_BT$ depends only on $T$. But $v_{rms} = \\sqrt{3k_BT/m}$ — lighter He molecules move faster than heavier $O_{2}$ molecules.'
           },
           {
             question: 'The internal energy of 2 mol of a monatomic ideal gas at 400 K is:',
@@ -166,7 +166,7 @@ $$\\boxed{U = \\frac{f}{2}nRT}$$
 
 **1)** What is the average translational KE of a molecule at $T = 600$ K? (in $10^{-20}$ J, round to 2 decimal places)
 
-**2)** What is $v_{rms}$ for N₂ ($M = 0.028$ kg/mol) at 300 K? (in m/s, round to nearest whole number)
+**2)** What is $v_{rms}$ for $N_{2}$ ($M = 0.028$ kg/mol) at 300 K? (in m/s, round to nearest whole number)
 
 **3)** What is the internal energy of 3 mol of diatomic gas at 500 K? (in J, round to nearest whole number)
       `,

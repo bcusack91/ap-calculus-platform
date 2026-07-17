@@ -15,7 +15,7 @@ For a uniform field through a flat surface:
 $\Phi_E = EA\\cos\\theta$
 
 - $\\theta$ is the angle between $\\vec{E}$ and the outward normal $\\hat{n}$
-- SI unit: N·m²/C (or V·m)
+- SI unit: $N\\cdot m^{2}/C$ (or V·m)
     
     `
     },
@@ -25,9 +25,9 @@ $\Phi_E = EA\\cos\\theta$
       content: `
 ## Worked Example
 
-**$E = 500$ N/C passes through a $0.2$ m² surface perpendicular to it. Find $\\Phi$.**
+**$E = 500$ N/C passes through a $0.2$ $m^{2}$ surface perpendicular to it. Find $\\Phi$.**
 
-$\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ N·m²/C ✅
+$\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ $N\\cdot m^{2}/C$ ✅
     
     `
     },
@@ -59,11 +59,11 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ N·m²/C ✅
       content: `
 **Electric Flux** 🧮
 
-1) $E = 500$ N/C, $A = 0.2$ m², $\\theta = 0°$. Flux (N·m²/C)?
+1) $E = 500$ N/C, $A = 0.2$ $m^{2}$, $\\theta = 0°$. Flux $(N\\cdot m^{2}/C)$?
 
-2) $E = 500$ N/C, $A = 0.2$ m², $\\theta = 90°$. Flux (N·m²/C)?
+2) $E = 500$ N/C, $A = 0.2$ $m^{2}$, $\\theta = 90°$. Flux $(N\\cdot m^{2}/C)$?
 
-3) $E = 500$ N/C, $A = 0.2$ m², $\\theta = 60°$. Flux (N·m²/C)?
+3) $E = 500$ N/C, $A = 0.2$ $m^{2}$, $\\theta = 60°$. Flux $(N\\cdot m^{2}/C)$?
     
     `,
       exercise: {
@@ -82,11 +82,11 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ N·m²/C ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The SI unit of electric flux is","options":["N·m²/C","N/C","C/m²","V/m²"]},{"label":"Electric flux depends on the angle between $\\\\vec{E}$ and","options":["The outward area normal $\\\\hat{n}$","The surface edge","The charge","The wire"]}],
-        correctAnswers: ["N·m²/C","The outward area normal $\\\\hat{n}$"],
-        hint1: "$\\Phi = EA$ has units (N/C)(m²).",
+        dropdowns: [{"label":"The SI unit of electric flux is","options":["$N\\cdot m^{2}/C$","N/C","$C/m^{2}$","$V/m^{2}$"]},{"label":"Electric flux depends on the angle between $\\\\vec{E}$ and","options":["The outward area normal $\\\\hat{n}$","The surface edge","The charge","The wire"]}],
+        correctAnswers: ["$N\\cdot m^{2}/C$","The outward area normal $\\\\hat{n}$"],
+        hint1: "$\\Phi = EA$ has units $(N/C)(m^{2})$.",
         hint2: "$\\Phi = \\vec{E} \\cdot d\\vec{A}$, where $d\\vec{A} = \\hat{n}\\,dA$.",
-        explanation: "Flux units: N·m²/C. It depends on the angle between $\\vec{E}$ and the surface normal $\\hat{n}$."
+        explanation: "Flux units: $N\\cdot m^{2}/C$. It depends on the angle between $\\vec{E}$ and the surface normal $\\hat{n}$."
       }
     },
     {

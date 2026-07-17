@@ -14,7 +14,7 @@ export const physics2MagInductPart7Data = {
 
 | Topic | Equation | Units |
 |-------|----------|-------|
-| Magnetic flux | $\\Phi_B = BA\\cos\\theta$ | Wb = T·m² |
+| Magnetic flux | $\\Phi_B = BA\\cos\\theta$ | Wb = $T\\cdot m^{2}$ |
 | Faraday's law | $\\mathcal{E} = -N\\frac{d\\Phi}{dt}$ | V |
 | Motional EMF | $\\mathcal{E} = BLv$ | V |
 | Induced current | $I = \\mathcal{E}/R$ | A |
@@ -113,7 +113,7 @@ export const physics2MagInductPart7Data = {
       content: `
 **Final Challenge** 🧮
 
-A 100-turn coil (area 0.05 m²) rotates at 60 Hz in a 0.2 T field.
+A 100-turn coil $(area 0.05 m^{2})$ rotates at 60 Hz in a 0.2 T field.
 
 **1)** Angular frequency $\\omega$? (rad/s, round to nearest integer)
 

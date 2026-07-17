@@ -80,11 +80,11 @@ export const geoCirclesPart7Data = {
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"C = 2πr is the formula for","options":["Circumference","Area","Diameter","Sector area"]},{"label":"A = πr² is the formula for","options":["Area of a circle","Circumference","Arc length","Tangent length"]}],
+        dropdowns: [{"label":"C = 2πr is the formula for","options":["Circumference","Area","Diameter","Sector area"]},{"label":"A = $\\pi r^{2}$ is the formula for","options":["Area of a circle","Circumference","Arc length","Tangent length"]}],
         correctAnswers: ["Circumference","Area of a circle"],
         hint1: "Distance around.",
         hint2: "Space inside.",
-        explanation: "2πr = circumference. πr² = area."
+        explanation: "2πr = circumference. $\\pi r^{2}$ = area."
       }
     },
     {

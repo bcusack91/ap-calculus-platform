@@ -91,15 +91,15 @@ Notice: $0.36 + 0.48 + 0.16 = 1.00$ ✓
       content: `**Fill in the Blanks: Genotype Frequencies** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'In the equation p² + 2pq + q² = 1, the term 2pq represents the frequency of ___ individuals', options: ['homozygous dominant', 'heterozygous', 'homozygous recessive', 'all dominant'] },
-          { label: 'If p = 0.8, then q² = ___', options: ['0.64', '0.04', '0.20', '0.32'] },
+          { label: 'In the equation $p^{2}$ + 2pq + $q^{2}$ = 1, the term 2pq represents the frequency of ___ individuals', options: ['homozygous dominant', 'heterozygous', 'homozygous recessive', 'all dominant'] },
+          { label: 'If p = 0.8, then $q^{2}$ = ___', options: ['0.64', '0.04', '0.20', '0.32'] },
           { label: 'The Hardy-Weinberg equations assume the population is ___', options: ['evolving rapidly', 'not evolving', 'very small', 'undergoing selection'] }
         ],
         correctAnswers: ['heterozygous', '0.04', 'not evolving'],
         hint1: 'Think about what 2pq means — two different alleles in one individual.',
-        hint2: 'If p = 0.8, then q = 0.2, and q² = (0.2)² = ?',
+        hint2: 'If p = 0.8, then q = 0.2, and $q^{2}$ = $(0.2)^{2}$ = ?',
         hint3: 'Hardy-Weinberg describes a population in equilibrium — no evolutionary change.',
-        explanation: '2pq represents heterozygotes (Aa). If p = 0.8, q = 0.2, so q² = 0.04. Hardy-Weinberg equilibrium describes a population that is NOT evolving — allele frequencies stay constant.'
+        explanation: '2pq represents heterozygotes (Aa). If p = 0.8, q = 0.2, so $q^{2}$ = 0.04. Hardy-Weinberg equilibrium describes a population that is NOT evolving — allele frequencies stay constant.'
       }
     },
     {
@@ -138,10 +138,10 @@ Think of it like a null hypothesis in statistics: Hardy-Weinberg is the **baseli
       exercise: {
         questions: [
           {
-            question: 'In a population of 500 individuals, 20 show the recessive phenotype. What is q²?',
+            question: 'In a population of 500 individuals, 20 show the recessive phenotype. What is $q^{2}$?',
             options: ['0.02', '0.04', '0.20', '0.96'],
             correctAnswer: 1,
-            explanation: 'q² = number with recessive phenotype / total = 20/500 = 0.04. This is the frequency of the homozygous recessive genotype.'
+            explanation: '$q^{2}$ = number with recessive phenotype / total = 20/500 = 0.04. This is the frequency of the homozygous recessive genotype.'
           },
           {
             question: 'Hardy-Weinberg equilibrium serves as a:',

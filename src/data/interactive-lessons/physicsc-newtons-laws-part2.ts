@@ -59,7 +59,7 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
       content: `
 **Newton's Second Law with Calculus** 🧮
 
-1) A 4 kg object has a net force of 20 N. What is its acceleration (m/s²)?
+1) A 4 kg object has a net force of 20 N. What is its acceleration $(m/s^{2})$?
 
 2) A 2 kg mass has $F(t) = 6t$ N. What is the velocity (m/s) at $t = 3$ s if starting from rest? (Hint: integrate $a(t) = 3t$ from 0 to 3). Give answer as a decimal.
 
@@ -72,7 +72,7 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
         hint1: "$a = F/m = 20/4$.",
         hint2: "$v = \\int_0^3 3t\\,dt = [3t^2/2]_0^3$. Evaluate carefully.",
         hint3: "$v = at = (F/m) \\cdot t$.",
-        explanation: "1) $a = 20/4 = 5$ m/s². 2) $v = 3(9)/2 = 13.5$ m/s. 3) $a = 3$ m/s², $v = 3(3) = 9$ m/s."
+        explanation: "1) $a = 20/4 = 5$ $m/s^{2}$. 2) $v = 3(9)/2 = 13.5$ m/s. 3) $a = 3$ $m/s^{2}$, $v = 3(3) = 9$ m/s."
       }
     },
     {

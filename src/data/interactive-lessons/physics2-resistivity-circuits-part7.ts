@@ -131,7 +131,7 @@ export const physics2ResCircPart7Data = {
       exercise: {
         boxes: 4,
         correctAnswers: ['0.318', '23.0', '5', 'brighter'],
-        hint1: '$A = \\pi(0.001)^2 ≈ 3.14 \\times 10^{-6}$ m². $R = \\rho L/A$',
+        hint1: '$A = \\pi(0.001)^2 ≈ 3.14 \\times 10^{-6}$ $m^{2}$. $R = \\rho L/A$',
         hint2: '$\\tau = RC = 10$ s. $0.9 = 1 - e^{-t/\\tau}$, so $t = -\\tau \\ln(0.1)$',
         hint3: '$V_{term} = \\mathcal{E} - Ir = 6 - 2(0.5)$',
         hint4: 'With one bulb gone, $R_{total}$ increases, so $I$ decreases, less drop across $r$, more $V_{term}$ for remaining bulb',

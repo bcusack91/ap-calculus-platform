@@ -61,7 +61,7 @@ $$\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$$
 
 $$K_p = P_{\\text{CO}_2}$$
 
-Both CaCO₃ and CaO are solids — they are excluded. Only the gaseous CO₂ appears.
+Both $CaCO_{3}$ and CaO are solids — they are excluded. Only the gaseous $CO_{2}$ appears.
 
 
 ---
@@ -103,7 +103,7 @@ Liquid water is excluded from the expression.
               '$K_c = \\frac{3[\\text{CO}_2]}{3[\\text{CO}]}$'
             ],
             correctAnswer: 1,
-            explanation: 'Fe₂O₃(s) and Fe(s) are both solids — exclude them. Only the gases remain: $K_c = \\frac{[\\text{CO}_2]^3}{[\\text{CO}]^3}$.'
+            explanation: '$Fe_{2}O_{3}(s)$ and Fe(s) are both solids — exclude them. Only the gases remain: $K_c = \\frac{[\\text{CO}_2]^3}{[\\text{CO}]^3}$.'
           },
           {
             question: 'For $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$, the equilibrium expression is:',
@@ -130,8 +130,8 @@ Liquid water is excluded from the expression.
 > 🔑 **Key Concept:** Even though solids and liquids don\'t appear in the $K$ expression, they must still be **present** for the equilibrium to exist.
 
 For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$:
-- If all the CaCO₃ decomposes (none left), the system is NOT at equilibrium
-- Some solid CaCO₃ must remain for the reverse reaction to be possible
+- If all the $CaCO_{3}$ decomposes (none left), the system is NOT at equilibrium
+- Some solid $CaCO_{3}$ must remain for the reverse reaction to be possible
 
 
 ---
@@ -141,7 +141,7 @@ For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$:
 As long as some solid is present:
 - Adding more solid does NOT shift the equilibrium
 - Removing some solid (as long as some remains) does NOT shift the equilibrium
-- The equilibrium partial pressure of CO₂ is the same whether you have 1 g or 1 kg of CaCO₃
+- The equilibrium partial pressure of $CO_{2}$ is the same whether you have 1 g or 1 kg of $CaCO_{3}$
 
 
 ---
@@ -212,9 +212,9 @@ For each species, determine whether it appears in the equilibrium expression.
         boxes: 3,
         correctAnswers: ['0.040', '3', '0.09'],
         hint1: 'Since both solids are excluded, $K_p = P_{\\text{CO}_2}$.',
-        hint2: 'C(s) is excluded. The remaining species are H₂O(g), CO(g), and H₂(g).',
+        hint2: 'C(s) is excluded. The remaining species are $H_{2}O(g)$, CO(g), and $H_{2}(g)$.',
         hint3: '$K_p = P_{\\text{NH}_3} \\times P_{\\text{HCl}} = 0.30 \\times 0.30$',
-        explanation: '1) $K_p = P_{\\text{CO}_2} = 0.040$ atm. 2) Exclude C(s); include H₂O(g), CO(g), H₂(g) → 3 species. 3) $K_p = (0.30)(0.30) = 0.09$.'
+        explanation: '1) $K_p = P_{\\text{CO}_2} = 0.040$ atm. 2) Exclude C(s); include $H_{2}O(g)$, CO(g), $H_{2}(g)$ → 3 species. 3) $K_p = (0.30)(0.30) = 0.09$.'
       }
     },
     {
@@ -226,7 +226,7 @@ For each species, determine whether it appears in the equilibrium expression.
       exercise: {
         questions: [
           {
-            question: 'Adding more solid CaCO₃ to the equilibrium CaCO₃(s) ⇌ CaO(s) + CO₂(g) will:',
+            question: 'Adding more solid $CaCO_{3}$ to the equilibrium $CaCO_{3}(s)$ ⇌ CaO(s) + $CO_{2}(g)$ will:',
             options: [
               'Increase $P_{\\text{CO}_2}$',
               'Decrease $P_{\\text{CO}_2}$',

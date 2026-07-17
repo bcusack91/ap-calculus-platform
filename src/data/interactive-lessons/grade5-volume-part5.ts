@@ -14,7 +14,7 @@ Volume is used everywhere:
 - **Filling**: How much water does a tank hold?
 - **Building**: How much concrete is needed?
 
-1 liter = 1,000 cm³
+1 liter = 1,000 $cm^{3}$
     
     `
     },
@@ -26,7 +26,7 @@ Volume is used everywhere:
 
 **A fish tank is 40 cm × 20 cm × 30 cm. How many liters?**
 
-$V = 40 \\times 20 \\times 30 = 24{,}000$ cm³
+$V = 40 \\times 20 \\times 30 = 24{,}000$ $cm^{3}$
 
 $24{,}000 \\div 1{,}000 = 24$ liters ✅
     
@@ -43,13 +43,13 @@ $24{,}000 \\div 1{,}000 = 24$ liters ✅
           {
                     "question": "A box is 12 in × 8 in × 5 in. Volume?",
                     "options": [
-                              "480 in³",
-                              "25 in³",
-                              "96 in³",
-                              "200 in³"
+                              "480 $in^{3}$",
+                              "25 $in^{3}$",
+                              "96 $in^{3}$",
+                              "200 $in^{3}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "12 × 8 × 5 = 480 in³."
+                    "explanation": "12 × 8 × 5 = 480 $in^{3}$."
           }
 ]
       }
@@ -60,9 +60,9 @@ $24{,}000 \\div 1{,}000 = 24$ liters ✅
       content: `
 **Real-World Volume** 🧮
 
-1) Box: 12 × 8 × 5 inches. Volume (in³)?
+1) Box: 12 × 8 × 5 inches. Volume $(in^{3})$?
 
-2) Pool: 10 × 5 × 2 m. Volume (m³)?
+2) Pool: 10 × 5 × 2 m. Volume $(m^{3})$?
 
 3) Tank: 50 × 30 × 20 cm. How many liters?
     
@@ -72,8 +72,8 @@ $24{,}000 \\div 1{,}000 = 24$ liters ✅
         correctAnswers: ["480","100","30"],
         hint1: "12 × 8 × 5.",
         hint2: "10 × 5 × 2.",
-        hint3: "Find cm³ first, then divide by 1000.",
-        explanation: "1) 480. 2) 100. 3) 50×30×20=30,000 cm³ = 30 liters."
+        hint3: "Find $cm^{3}$ first, then divide by 1000.",
+        explanation: "1) 480. 2) 100. 3) 50×30×20=30,000 $cm^{3}$ = 30 liters."
       }
     },
     {
@@ -83,11 +83,11 @@ $24{,}000 \\div 1{,}000 = 24$ liters ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"1 liter equals","options":["1,000 cm³","100 cm³","1 m³","10 cm³"]},{"label":"To find how many boxes fit in a crate, you need","options":["Volume of both","Perimeter of both","Area of both","Weight of both"]}],
-        correctAnswers: ["1,000 cm³","Volume of both"],
-        hint1: "Liter-cm³ conversion.",
+        dropdowns: [{"label":"1 liter equals","options":["1,000 $cm^{3}$","100 $cm^{3}$","1 $m^{3}$","10 $cm^{3}$"]},{"label":"To find how many boxes fit in a crate, you need","options":["Volume of both","Perimeter of both","Area of both","Weight of both"]}],
+        correctAnswers: ["1,000 $cm^{3}$","Volume of both"],
+        hint1: "$Liter-cm^{3}$ conversion.",
         hint2: "Packing is about 3D space.",
-        explanation: "1 L = 1,000 cm³. Packing requires volume."
+        explanation: "1 L = 1,000 $cm^{3}$. Packing requires volume."
       }
     },
     {
@@ -113,7 +113,7 @@ $24{,}000 \\div 1{,}000 = 24$ liters ✅
       exercise: {
         questions: [
           {
-                    "question": "How many cm³ in 1 liter?",
+                    "question": "How many $cm^{3}$ in 1 liter?",
                     "options": [
                               "1,000",
                               "100",
@@ -121,7 +121,7 @@ $24{,}000 \\div 1{,}000 = 24$ liters ✅
                               "10,000"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "1 L = 1,000 cm³."
+                    "explanation": "1 L = 1,000 $cm^{3}$."
           }
 ]
       }

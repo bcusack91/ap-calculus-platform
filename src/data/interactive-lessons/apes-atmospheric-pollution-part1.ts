@@ -15,8 +15,8 @@ export const apesAtmosphericPollutionPart1Data = {
 
 | Type | Definition | Examples |
 |------|-----------|---------|
-| **Primary** | Emitted directly from a source | CO, SO₂, NO, particulate matter (PM), VOCs |
-| **Secondary** | Formed by chemical reactions in the atmosphere | Ozone (O₃), sulfuric acid (H₂SO₄), nitric acid |
+| **Primary** | Emitted directly from a source | CO, $SO_{2}$, NO, particulate matter (PM), VOCs |
+| **Secondary** | Formed by chemical reactions in the atmosphere | Ozone $(O_{3})$, sulfuric acid $(H_{2}SO_{4})$, nitric acid |
 
 ---
 
@@ -25,13 +25,13 @@ export const apesAtmosphericPollutionPart1Data = {
 | Pollutant | Source | Health/Environmental Effect |
 |-----------|--------|---------------------------|
 | **CO (carbon monoxide)** | Incomplete combustion (vehicles) | Binds to hemoglobin; reduces oxygen delivery |
-| **SO₂ (sulfur dioxide)** | Burning coal, volcanic eruptions | Acid rain, respiratory problems |
-| **NOₓ (nitrogen oxides)** | Vehicle exhaust, power plants | Acid rain, smog formation |
+| **$SO_{2}$ (sulfur dioxide)** | Burning coal, volcanic eruptions | Acid rain, respiratory problems |
+| **$NO_{x}$ (nitrogen oxides)** | Vehicle exhaust, power plants | Acid rain, smog formation |
 | **PM (particulate matter)** | Combustion, dust, construction | Lung damage, reduced visibility |
-| **O₃ (ground-level ozone)** | Secondary: UV + NOₓ + VOCs | Respiratory damage, crop damage |
+| **$O_{3}$ (ground-level ozone)** | Secondary: UV + $NO_{x}$ + VOCs | Respiratory damage, crop damage |
 | **Pb (lead)** | Formerly gasoline; paint, smelters | Neurotoxin, developmental damage in children |
 
-> 🔑 **Ozone paradox:** Ground-level O₃ is a harmful pollutant (smog), but stratospheric O₃ is beneficial (blocks UV radiation). "Good up high, bad nearby."
+> 🔑 **Ozone paradox:** Ground-level $O_{3}$ is a harmful pollutant (smog), but stratospheric $O_{3}$ is beneficial (blocks UV radiation). "Good up high, bad nearby."
       `
     },
     {
@@ -46,12 +46,12 @@ export const apesAtmosphericPollutionPart1Data = {
             question: 'Ground-level ozone is a secondary pollutant because:',
             options: [
               'It is emitted directly from car exhaust pipes',
-              'It forms from chemical reactions between NOₓ and VOCs in the presence of sunlight',
+              'It forms from chemical reactions between $NO_{x}$ and VOCs in the presence of sunlight',
               'It is the same as stratospheric ozone',
               'It comes from volcanic eruptions'
             ],
             correctAnswer: 1,
-            explanation: 'Ground-level ozone is NOT emitted directly. It forms when nitrogen oxides (NOₓ) react with volatile organic compounds (VOCs) in the presence of UV sunlight — making it a secondary pollutant.'
+            explanation: 'Ground-level ozone is NOT emitted directly. It forms when nitrogen oxides $(NO_{x})$ react with volatile organic compounds (VOCs) in the presence of UV sunlight — making it a secondary pollutant.'
           },
           {
             question: 'Which statement about ozone is correct?',
@@ -75,8 +75,8 @@ export const apesAtmosphericPollutionPart1Data = {
 
 | Type | Formation | Location | Worst Time |
 |------|----------|----------|-----------|
-| **Industrial (London/gray) smog** | SO₂ + particulates from coal burning + fog | Cold, humid climates | Winter mornings |
-| **Photochemical (LA/brown) smog** | NOₓ + VOCs + sunlight → O₃ | Warm, sunny cities with traffic | Summer afternoons |
+| **Industrial (London/gray) smog** | $SO_{2}$ + particulates from coal burning + fog | Cold, humid climates | Winter mornings |
+| **Photochemical (LA/brown) smog** | $NO_{x}$ + VOCs + sunlight → $O_{3}$ | Warm, sunny cities with traffic | Summer afternoons |
 
 ### Thermal Inversions
 - Normally: warm air rises, carrying pollutants upward
@@ -87,18 +87,18 @@ export const apesAtmosphericPollutionPart1Data = {
 
 | Step | Process |
 |------|---------|
-| 1 | SO₂ and NOₓ emitted from coal plants and vehicles |
-| 2 | React with water vapor: SO₂ → H₂SO₄; NOₓ → HNO₃ |
+| 1 | $SO_{2}$ and $NO_{x}$ emitted from coal plants and vehicles |
+| 2 | React with water vapor: $SO_{2}$ → $H_{2}SO_{4}$; $NO_{x}$ → $HNO_{3}$ |
 | 3 | Fall as acid rain, snow, fog, or dry particles |
 | 4 | Effects: lake acidification, forest damage, building/statue erosion |
 
-- Normal rain pH: ~5.6 (slightly acidic due to dissolved CO₂)
+- Normal rain pH: ~5.6 (slightly acidic due to dissolved $CO_{2}$)
 - Acid rain pH: < 5.0 (can be as low as 4.0)
 
 ## Stratospheric Ozone Depletion
 - **Cause:** CFCs (chlorofluorocarbons) from refrigerants, aerosol cans
-- CFCs release chlorine atoms that destroy O₃ molecules catalytically
-- One Cl atom can destroy ~100,000 O₃ molecules
+- CFCs release chlorine atoms that destroy $O_{3}$ molecules catalytically
+- One Cl atom can destroy ~100,000 $O_{3}$ molecules
 - **Montreal Protocol (1987):** International treaty phasing out CFCs — major success story
       `
     },
@@ -117,10 +117,10 @@ export const apesAtmosphericPollutionPart1Data = {
       exercise: {
         boxes: 3,
         correctAnswers: ['ozone', 'Montreal', 'sulfur'],
-        hint1: 'O₃ — the secondary pollutant in brown smog.',
+        hint1: '$O_{3}$ — the secondary pollutant in brown smog.',
         hint2: 'Named after a city in Canada.',
-        hint3: 'SO₂ — produced by burning coal.',
-        explanation: 'Photochemical smog = ground-level ozone. Montreal Protocol (1987) = CFC phase-out. Acid rain = SO₂ + NOₓ + H₂O.'
+        hint3: '$SO_{2}$ — produced by burning coal.',
+        explanation: 'Photochemical smog = ground-level ozone. Montreal Protocol (1987) = CFC phase-out. Acid rain = $SO_{2}$ + $NO_{x}$ + $H_{2}O$.'
       }
     },
     {
@@ -140,7 +140,7 @@ export const apesAtmosphericPollutionPart1Data = {
             options: ['Primary', 'Secondary', 'Stratospheric', 'Natural']
           },
           {
-            label: 'Coal-burning smog in cold, foggy cities with SO₂ and particulates is ___ smog',
+            label: 'Coal-burning smog in cold, foggy cities with $SO_{2}$ and particulates is ___ smog',
             options: ['Industrial (gray/London)', 'Photochemical (brown/LA)', 'Volcanic', 'Stratospheric']
           }
         ],
@@ -159,9 +159,9 @@ export const apesAtmosphericPollutionPart1Data = {
 
 - Know the 6 EPA criteria pollutants and their sources
 - **Primary vs secondary:** if it forms from a chemical reaction in the atmosphere, it is secondary
-- Industrial smog (SO₂, cold, coal) vs photochemical smog (O₃, hot, cars) — know conditions for each
+- Industrial smog ($SO_{2}$, cold, coal) vs photochemical smog ($O_{3}$, hot, cars) — know conditions for each
 - Clean Air Act (1970) regulates criteria pollutants; Montreal Protocol (1987) addresses CFCs
-- Acid rain: SO₂ + NOₓ → acids; effects on lakes, forests, buildings
+- Acid rain: $SO_{2}$ + $NO_{x}$ → acids; effects on lakes, forests, buildings
 - The ozone layer is RECOVERING thanks to the Montreal Protocol — a rare environmental success
       `
     },
@@ -182,7 +182,7 @@ export const apesAtmosphericPollutionPart1Data = {
               'Cold air naturally contains fewer oxygen molecules'
             ],
             correctAnswer: 1,
-            explanation: 'During a thermal inversion, warm air acts as a lid above cool surface air, trapping pollutants (CO, PM, SO₂) at ground level. Mountains worsen this by preventing horizontal air movement.'
+            explanation: 'During a thermal inversion, warm air acts as a lid above cool surface air, trapping pollutants (CO, PM, $SO_{2}$) at ground level. Mountains worsen this by preventing horizontal air movement.'
           },
           {
             question: 'The Montreal Protocol is considered one of the most successful environmental agreements because:',

@@ -63,7 +63,7 @@ An object remains at rest or in uniform motion unless acted upon by a net extern
       content: `
 **Newton's First Law Practice** 🧮
 
-1) A book sits on a table with no net force. What is its acceleration (in m/s²)?
+1) A book sits on a table with no net force. What is its acceleration $(in m/s^{2})$?
 
 2) A ball rolls at 10 m/s on a frictionless surface. What is its speed (m/s) after 5 seconds?
 

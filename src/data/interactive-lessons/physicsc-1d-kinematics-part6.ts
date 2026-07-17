@@ -30,7 +30,7 @@ This workshop focuses on developing systematic problem-solving skills for AP Phy
       type: 'text' as const,
       content: `## Worked Problem 1: Multi-Phase Motion
 
-**Problem:** A rocket launches vertically from rest. For $0 \\le t \\le 10$ s, its acceleration is $a(t) = 6t$ m/s². At $t = 10$ s, the engine cuts off and gravity takes over ($a = -10$ m/s²). Find the maximum height.
+**Problem:** A rocket launches vertically from rest. For $0 \\le t \\le 10$ s, its acceleration is $a(t) = 6t$ $m/s^{2}$. At $t = 10$ s, the engine cuts off and gravity takes over ($a = -10$ $m/s^{2}$). Find the maximum height.
 
 ### Solution
 
@@ -62,7 +62,7 @@ $$\\Delta y = 300(30) - \\frac{1}{2}(10)(900) = 9000 - 4500 = 4500 \\text{ m}$$
       question: 'In the rocket problem above, what is the total time from launch until the rocket returns to the ground?',
       options: ['$70$ s', '$60$ s', '$40$ s', '$50$ s'],
       correctAnswer: 0,
-      explanation: 'Phase 1: $10$ s. Phase 2: rocket goes from $1000$ m at $300$ m/s upward with $a = -10$ m/s². Position in Phase 2: $y = 1000 + 300\\tau - 5\\tau^2 = 0 \\implies \\tau^2 - 60\\tau - 200 = 0 \\implies \\tau = \\frac{60 + \\sqrt{3600+800}}{2} = \\frac{60 + \\sqrt{4400}}{2} \\approx 60$ s. Total ≈ $70$ s.'
+      explanation: 'Phase 1: $10$ s. Phase 2: rocket goes from $1000$ m at $300$ m/s upward with $a = -10$ $m/s^{2}$. Position in Phase 2: $y = 1000 + 300\\tau - 5\\tau^2 = 0 \\implies \\tau^2 - 60\\tau - 200 = 0 \\implies \\tau = \\frac{60 + \\sqrt{3600+800}}{2} = \\frac{60 + \\sqrt{4400}}{2} \\approx 60$ s. Total ≈ $70$ s.'
     },
     {
       id: '1dkin6-prob2',

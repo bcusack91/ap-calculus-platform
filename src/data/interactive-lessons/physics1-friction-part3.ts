@@ -145,15 +145,15 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
             explanation: 'Without friction, the crate would slide backward relative to the truck. Static friction prevents this by pointing forward — it\'s what accelerates the crate along with the truck.'
           },
           {
-            question: 'A hockey puck slides on ice ($\\mu_k = 0.05$) with no applied force. Its deceleration is ($g = 10$ m/s²):',
+            question: 'A hockey puck slides on ice ($\\mu_k = 0.05$) with no applied force. Its deceleration is ($g = 10$ $m/s^{2}$):',
             options: [
-              '0.05 m/s²',
-              '0.5 m/s²',
-              '5 m/s²',
-              '10 m/s²'
+              '0.05 $m/s^{2}$',
+              '0.5 $m/s^{2}$',
+              '5 $m/s^{2}$',
+              '10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = \\mu_k g = 0.05 \\times 10 = 0.5$ m/s² (deceleration). This is independent of the puck\'s mass.'
+            explanation: '$a = \\mu_k g = 0.05 \\times 10 = 0.5$ $m/s^{2}$ (deceleration). This is independent of the puck\'s mass.'
           }
         ]
       }
@@ -164,11 +164,11 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
       content: `
 **FBD with Friction — Calculations** 🧮
 
-1) A 5 kg block slides to the right on a surface with $\\mu_k = 0.40$. No other horizontal force acts. What is the block\'s acceleration (magnitude, in m/s²)? Use $g = 10$ m/s².
+1) A 5 kg block slides to the right on a surface with $\\mu_k = 0.40$. No other horizontal force acts. What is the block\'s acceleration (magnitude, in $m/s^{2}$)? Use $g = 10$ $m/s^{2}$.
 
 2) The block from #1 has an initial speed of 10 m/s. How far does it slide before stopping (in m)?
 
-3) A 12 kg box is pushed with 80 N across a rough floor ($\\mu_k = 0.30$). What is the acceleration (in m/s²)?
+3) A 12 kg box is pushed with 80 N across a rough floor ($\\mu_k = 0.30$). What is the acceleration $(in m/s^{2})$?
 
 *Round all answers to 3 significant figures.*
       `,
@@ -178,7 +178,7 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
         hint1: '$a = \\mu_k g = 0.40 \\times 10$.',
         hint2: '$v^2 = v_0^2 + 2a\\Delta x$. $0 = 100 + 2(-4)\\Delta x$.',
         hint3: '$a = (F - \\mu_k mg)/m = (80 - 0.30 \\times 120)/12$.',
-        explanation: '1) $a = 0.40 \\times 10 = 4$ m/s² (deceleration). 2) $\\Delta x = v_0^2/(2a) = 100/8 = 12.5$ m. 3) $f_k = 0.30 \\times 120 = 36$ N. $a = (80 - 36)/12 = 44/12 = 3.67$ m/s².'
+        explanation: '1) $a = 0.40 \\times 10 = 4$ $m/s^{2}$ (deceleration). 2) $\\Delta x = v_0^2/(2a) = 100/8 = 12.5$ m. 3) $f_k = 0.30 \\times 120 = 36$ N. $a = (80 - 36)/12 = 44/12 = 3.67$ $m/s^{2}$.'
       }
     },
     {
@@ -225,7 +225,7 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
       exercise: {
         questions: [
           {
-            question: 'A 6 kg box is pushed right with 42 N on a rough horizontal surface ($\\mu_k = 0.20$, $g = 10$ m/s²). The net force on the box is:',
+            question: 'A 6 kg box is pushed right with 42 N on a rough horizontal surface ($\\mu_k = 0.20$, $g = 10$ $m/s^{2}$). The net force on the box is:',
             options: [
               '42 N right',
               '30 N right',
@@ -236,7 +236,7 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
             explanation: '$f_k = \\mu_k mg = 0.20 \\times 60 = 12$ N left. $F_{\\text{net}} = 42 - 12 = 30$ N right.'
           },
           {
-            question: 'A sliding block decelerates at 3 m/s² on a horizontal surface. What is $\\mu_k$? ($g = 10$ m/s²)',
+            question: 'A sliding block decelerates at 3 $m/s^{2}$ on a horizontal surface. What is $\\mu_k$? ($g = 10$ $m/s^{2}$)',
             options: [
               '0.03',
               '0.30',

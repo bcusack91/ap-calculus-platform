@@ -36,7 +36,7 @@ Every phase change has a name — and a reverse process:
 | **Freezing** | Liquid → Solid | Water → Ice |
 | **Vaporization** | Liquid → Gas | Water → Steam |
 | **Condensation** | Gas → Liquid | Steam → Water droplets |
-| **Sublimation** | Solid → Gas (skipping liquid) | Dry ice → CO₂ gas |
+| **Sublimation** | Solid → Gas (skipping liquid) | Dry ice → $CO_{2}$ gas |
 | **Deposition** | Gas → Solid (skipping liquid) | Frost forming on windows |
 
 ### Energy Rules
@@ -64,7 +64,7 @@ During any phase change, the **temperature stays constant** even though energy i
               'Condensation'
             ],
             correctAnswer: 2,
-            explanation: 'Sublimation is the direct transition from solid to gas. Dry ice (solid CO₂) is a classic example — it sublimates at atmospheric pressure rather than melting.'
+            explanation: 'Sublimation is the direct transition from solid to gas. Dry ice $(solid CO_{2})$ is a classic example — it sublimates at atmospheric pressure rather than melting.'
           },
           {
             question: 'During a phase change, which quantity remains constant?',

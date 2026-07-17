@@ -160,7 +160,7 @@ If the hole is at height $H$ above the ground, the jet exits horizontally at spe
       exercise: {
         questions: [
           {
-            question: 'A large open tank has a small hole 3.2 m below the water surface. Exit speed of the water (g = 10 m/s²)?',
+            question: 'A large open tank has a small hole 3.2 m below the water surface. Exit speed of the water (g = 10 $m/s^{2}$)?',
             options: [
               '$4$ m/s',
               '$6$ m/s',

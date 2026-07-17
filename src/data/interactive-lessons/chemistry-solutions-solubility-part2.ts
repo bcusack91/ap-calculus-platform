@@ -111,7 +111,7 @@ $$m = \\frac{0.0999 \\text{ mol}}{0.2500 \\text{ kg}} = 0.400 \\; m$$
 
 $$\\boxed{\\text{mass \\%} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 100\\%}$$
 
-Example: 5.0 g NaCl in 95.0 g H₂O → mass% = $\\frac{5.0}{5.0 + 95.0} \\times 100 = 5.0\\%$
+Example: 5.0 g NaCl in 95.0 g $H_{2}O$ → mass% = $\\frac{5.0}{5.0 + 95.0} \\times 100 = 5.0\\%$
 
 
 ---
@@ -145,7 +145,7 @@ $$\\boxed{\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}}
 | Molality ($m$) | mol solute / kg solvent | No | Colligative properties |
 | Mass % | (mass solute / mass solution) × 100 | No | General, industry |
 | Mole fraction ($\\chi$) | mol A / total mol | No | Raoult\'s law, gases |
-| ppm | (mass solute / mass solution) × 10⁶ | No | Trace analysis |
+| ppm | (mass solute / mass solution) × $10^{6}$ | No | Trace analysis |
       `
     },
     {
@@ -221,7 +221,7 @@ $$\\boxed{\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}}
       content: `
 ## 🧪 Mole Fraction Worked Example
 
-> **Problem:** A solution contains 46.0 g of ethanol (C₂H₅OH, $M = 46.07$ g/mol) and 72.0 g of water ($M = 18.02$ g/mol). Calculate the mole fraction of ethanol.
+> **Problem:** A solution contains 46.0 g of ethanol ($C_{2}H_{5}OH$, $M = 46.07$ g/mol) and 72.0 g of water ($M = 18.02$ g/mol). Calculate the mole fraction of ethanol.
 
 > **Solution:**
 

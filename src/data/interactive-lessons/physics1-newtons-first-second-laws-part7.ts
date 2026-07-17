@@ -102,7 +102,7 @@ $$\\vec{F}_{\\text{net}} = m\\vec{a}$$
 
 A 3 kg block sits on a frictionless table. A string runs horizontally from the block, over a frictionless pulley at the table\'s edge, and down to a hanging 2 kg block.
 
-1) What is the acceleration of the system (in m/s²)? Round to 3 significant figures. Use $g = 9.8$ m/s².
+1) What is the acceleration of the system $(in m/s^{2})$? Round to 3 significant figures. Use $g = 9.8$ $m/s^{2}$.
 
 2) What is the tension in the string (in N)? Round to 3 significant figures.
 
@@ -114,7 +114,7 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
         hint1: 'System: $F_{\\text{net}} = m_2 g$, total mass $= m_1 + m_2 = 5$ kg.',
         hint2: 'For the hanging block: $m_2 g - T = m_2 a$, so $T = m_2(g - a)$.',
         hint3: '$d = \\frac{1}{2}at^2 = \\frac{1}{2}(3.92)(4)$.',
-        explanation: '1) $a = m_2 g/(m_1 + m_2) = 2(9.8)/5 = 19.6/5 = 3.9$ m/s². 2) $T = m_2(g - a) = 2(9.8 - 3.92) = 2(5.88) = 11.8$ N. 3) $d = \\frac{1}{2}(3.92)(4) = 7.84 \\approx 7.8$ m.'
+        explanation: '1) $a = m_2 g/(m_1 + m_2) = 2(9.8)/5 = 19.6/5 = 3.9$ $m/s^{2}$. 2) $T = m_2(g - a) = 2(9.8 - 3.92) = 2(5.88) = 11.8$ N. 3) $d = \\frac{1}{2}(3.92)(4) = 7.84 \\approx 7.8$ m.'
       }
     },
     {
@@ -166,15 +166,15 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
             explanation: 'The box is decelerating (slowing down), so the net force must be opposite to the direction of motion. This net force is friction.'
           },
           {
-            question: 'A force $F$ gives a 4 kg object an acceleration of 3 m/s². The same force acts on a 12 kg object. What is the acceleration of the 12 kg object?',
+            question: 'A force $F$ gives a 4 kg object an acceleration of 3 $m/s^{2}$. The same force acts on a 12 kg object. What is the acceleration of the 12 kg object?',
             options: [
-              '1 m/s²',
-              '3 m/s²',
-              '9 m/s²',
-              '36 m/s²'
+              '1 $m/s^{2}$',
+              '3 $m/s^{2}$',
+              '9 $m/s^{2}$',
+              '36 $m/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'First find $F = ma = 4 \\times 3 = 12$ N. Then for the 12 kg object: $a = F/m = 12/12 = 1$ m/s².'
+            explanation: 'First find $F = ma = 4 \\times 3 = 12$ N. Then for the 12 kg object: $a = F/m = 12/12 = 1$ $m/s^{2}$.'
           }
         ]
       }
@@ -188,7 +188,7 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
       exercise: {
         questions: [
           {
-            question: 'An astronaut of mass 80 kg stands on a scale on a planet where $g = 5$ m/s². The elevator she\'s in accelerates upward at 3 m/s². What does the scale read?',
+            question: 'An astronaut of mass 80 kg stands on a scale on a planet where $g = 5$ $m/s^{2}$. The elevator she\'s in accelerates upward at 3 $m/s^{2}$. What does the scale read?',
             options: [
               '160 N',
               '400 N',
@@ -207,7 +207,7 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
               '10000 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = \\Delta v/\\Delta t = (0 - 20)/5 = -4$ m/s². $F = ma = 2000 \\times 4 = 8000$ N.'
+            explanation: '$a = \\Delta v/\\Delta t = (0 - 20)/5 = -4$ $m/s^{2}$. $F = ma = 2000 \\times 4 = 8000$ N.'
           }
         ]
       }

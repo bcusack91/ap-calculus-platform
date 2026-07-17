@@ -70,7 +70,7 @@ $$\\omega = \\frac{\\Delta\\theta}{\\Delta t} = \\frac{2\\pi}{T} = 2\\pi f$$
 |----------|--------|-------|-------------|
 | Angular velocity | $\\omega$ | rad/s | $\\omega = 2\\pi f = 2\\pi/T$ |
 | Linear speed | $v$ | m/s | $v = r\\omega$ |
-| Centripetal acceleration | $a_c$ | m/s² | $a_c = r\\omega^2 = v\\omega$ |
+| Centripetal acceleration | $a_c$ | $m/s^{2}$ | $a_c = r\\omega^2 = v\\omega$ |
 
 ### Converting Between Linear and Angular
 
@@ -138,7 +138,7 @@ For a rotating solid object (like a wheel):
 
 2) A point on the rim of the wheel in problem 1 has what linear speed (in m/s, round to 3 significant figures)?
 
-3) What is the centripetal acceleration of that point (in m/s², round to nearest whole number)?
+3) What is the centripetal acceleration of that point (in $m/s^{2}$, round to nearest whole number)?
       `,
       exercise: {
         boxes: 3,
@@ -146,7 +146,7 @@ For a rotating solid object (like a wheel):
         hint1: '$\\omega = 2\\pi f = 2\\pi(3)$.',
         hint2: '$v = r\\omega$.',
         hint3: '$a_c = r\\omega^2$ or $v^2/r$.',
-        explanation: '1) $\\omega = 2\\pi(3) = 6\\pi = 18.85 \\approx 18.8$ rad/s. 2) $v = 0.35 \\times 18.85 = 6.60 \\approx 6.6$ m/s. 3) $a_c = 0.35 \\times 18.85^2 = 0.35 \\times 355.3 = 124.4 \\approx 124$ m/s².'
+        explanation: '1) $\\omega = 2\\pi(3) = 6\\pi = 18.85 \\approx 18.8$ rad/s. 2) $v = 0.35 \\times 18.85 = 6.60 \\approx 6.6$ m/s. 3) $a_c = 0.35 \\times 18.85^2 = 0.35 \\times 355.3 = 124.4 \\approx 124$ $m/s^{2}$.'
       }
     },
     {

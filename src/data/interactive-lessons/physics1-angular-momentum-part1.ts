@@ -23,8 +23,8 @@ For a rigid body rotating about a fixed axis:
 $$L = I\\omega$$
 
 Where:
-- $L$ = angular momentum (kg·m²/s)
-- $I$ = rotational inertia (kg·m²)
+- $L$ = angular momentum $(kg\\cdot m^{2}/s)$
+- $I$ = rotational inertia $(kg\\cdot m^{2})$
 - $\\omega$ = angular velocity (rad/s)
 
 ### For a Point Mass
@@ -92,13 +92,13 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
           {
             question: 'A 2 kg ball moves at 5 m/s in a circle of radius 3 m. Its angular momentum is:',
             options: [
-              '10 kg·m²/s',
-              '15 kg·m²/s',
-              '30 kg·m²/s',
-              '90 kg·m²/s'
+              '10 $kg\\cdot m^{2}/s$',
+              '15 $kg\\cdot m^{2}/s$',
+              '30 $kg\\cdot m^{2}/s$',
+              '90 $kg\\cdot m^{2}/s$'
             ],
             correctAnswer: 2,
-            explanation: '$L = mvr = (2)(5)(3) = 30$ kg·m²/s.'
+            explanation: '$L = mvr = (2)(5)(3) = 30$ $kg\\cdot m^{2}/s$.'
           },
           {
             question: 'Which has greater angular momentum: a hoop ($I = MR^2$) or a disk ($I = \\frac{1}{2}MR^2$) with the same $M$, $R$, and $\\omega$?',
@@ -120,19 +120,19 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
       content: `
 **Angular Momentum Calculations** 🧮
 
-1) A solid disk ($M = 4$ kg, $R = 0.5$ m) spins at $\\omega = 10$ rad/s. What is its angular momentum? (in kg·m²/s)
+1) A solid disk ($M = 4$ kg, $R = 0.5$ m) spins at $\\omega = 10$ rad/s. What is its angular momentum? $(in kg\\cdot m^{2}/s)$
 
-2) A particle of mass 0.5 kg moves at 8 m/s in a circle of radius 2 m. What is its angular momentum? (in kg·m²/s)
+2) A particle of mass 0.5 kg moves at 8 m/s in a circle of radius 2 m. What is its angular momentum? $(in kg\\cdot m^{2}/s)$
 
-3) A flywheel has $L = 200$ kg·m²/s and $I = 25$ kg·m². What is its angular velocity? (in rad/s)
+3) A flywheel has $L = 200$ $kg\\cdot m^{2}/s$ and $I = 25$ $kg\\cdot m^{2}$. What is its angular velocity? (in rad/s)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['5', '8', '8'],
-        hint1: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.25) = 0.5$ kg·m². $L = I\\omega$',
+        hint1: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.25) = 0.5$ $kg\\cdot m^{2}$. $L = I\\omega$',
         hint2: '$L = mvr = (0.5)(8)(2)$',
         hint3: '$\\omega = L/I = 200/25$',
-        explanation: '1) $I = \\frac{1}{2}(4)(0.25) = 0.5$ kg·m². $L = (0.5)(10) = 5$ kg·m²/s. 2) $L = (0.5)(8)(2) = 8$ kg·m²/s. 3) $\\omega = 200/25 = 8$ rad/s.'
+        explanation: '1) $I = \\frac{1}{2}(4)(0.25) = 0.5$ $kg\\cdot m^{2}$. $L = (0.5)(10) = 5$ $kg\\cdot m^{2}/s$. 2) $L = (0.5)(8)(2) = 8$ $kg\\cdot m^{2}/s$. 3) $\\omega = 200/25 = 8$ rad/s.'
       }
     },
     {
@@ -145,9 +145,9 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
         dropdowns: [
           {
             label: 'The SI units of angular momentum are:',
-            options: ['kg·m/s', 'kg·m²/s', 'N·m', 'kg·m²/s²'],
+            options: ['kg·m/s', '$kg\\cdot m^{2}/s$', 'N·m', '$kg\\cdot m^{2}/s^{2}$'],
             correctIndex: 1,
-            explanation: 'Angular momentum has units of kg·m²/s (rotational inertia × angular velocity).'
+            explanation: 'Angular momentum has units of $kg\\cdot m^{2}/s$ (rotational inertia × angular velocity).'
           },
           {
             label: 'The equation that defines angular momentum for a rigid body is:',
@@ -173,15 +173,15 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
       exercise: {
         questions: [
           {
-            question: 'Earth has a rotational inertia of about $9.7 \\times 10^{37}$ kg·m² and rotates once every 24 hours. Its angular momentum is approximately:',
+            question: 'Earth has a rotational inertia of about $9.7 \\times 10^{37}$ $kg\\cdot m^{2}$ and rotates once every 24 hours. Its angular momentum is approximately:',
             options: [
-              '$7.1 \\times 10^{33}$ kg·m²/s',
-              '$7.1 \\times 10^{37}$ kg·m²/s',
-              '$9.7 \\times 10^{37}$ kg·m²/s',
-              '$2.4 \\times 10^{39}$ kg·m²/s'
+              '$7.1 \\times 10^{33}$ $kg\\cdot m^{2}/s$',
+              '$7.1 \\times 10^{37}$ $kg\\cdot m^{2}/s$',
+              '$9.7 \\times 10^{37}$ $kg\\cdot m^{2}/s$',
+              '$2.4 \\times 10^{39}$ $kg\\cdot m^{2}/s$'
             ],
             correctAnswer: 0,
-            explanation: '$\\omega = 2\\pi/(24 \\times 3600) = 7.27 \\times 10^{-5}$ rad/s. $L = I\\omega = (9.7 \\times 10^{37})(7.27 \\times 10^{-5}) \\approx 7.1 \\times 10^{33}$ kg·m²/s.'
+            explanation: '$\\omega = 2\\pi/(24 \\times 3600) = 7.27 \\times 10^{-5}$ rad/s. $L = I\\omega = (9.7 \\times 10^{37})(7.27 \\times 10^{-5}) \\approx 7.1 \\times 10^{33}$ $kg\\cdot m^{2}/s$.'
           },
           {
             question: 'Two identical disks rotate about the same axis. Disk A spins at $\\omega$ and Disk B at $2\\omega$. The ratio $L_B/L_A$ is:',

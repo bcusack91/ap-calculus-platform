@@ -36,9 +36,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'Which electron configuration represents a ground-state copper (Cu, Z=29) atom?',
-    options: ['[Ar] 3d⁹ 4s²', '[Ar] 3d¹⁰ 4s¹', '[Ar] 3d⁸ 4s²', '[Ar] 3d¹⁰ 4s²'],
+    options: ['[Ar] $3d^{9}$ $4s^{2}$', '[Ar] $3d^{10}$ $4s^{1}$', '[Ar] $3d^{8}$ $4s^{2}$', '[Ar] $3d^{10}$ $4s^{2}$'],
     correctAnswer: 1,
-    explanation: 'Copper is anomalous: a completely filled 3d subshell is more stable than 3d⁹ 4s². The actual configuration is [Ar] 3d¹⁰ 4s¹.',
+    explanation: 'Copper is anomalous: a completely filled 3d subshell is more stable than $3d^{9}$ $4s^{2}$. The actual configuration is [Ar] $3d^{10}$ $4s^{1}$.',
     difficulty: 'medium',
     domain: 'atomic-structure',
     topicSlug: 'electron-configuration',
@@ -58,7 +58,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'A photoelectron spectrum shows a peak at ~2500 eV and a much smaller peak at ~21 eV. Which element is most consistent with this data?',
     options: ['Helium', 'Carbon', 'Lithium', 'Neon'],
     correctAnswer: 2,
-    explanation: 'Lithium has 2 core electrons (1s²) with high binding energy and 1 valence electron (2s¹) at lower binding energy. The 2:1 peak ratio (two 1s electrons vs. one 2s electron) matches lithium.',
+    explanation: 'Lithium has 2 core electrons $(1s^{2})$ with high binding energy and 1 valence electron $(2s^{1})$ at lower binding energy. The 2:1 peak ratio (two 1s electrons vs. one 2s electron) matches lithium.',
     difficulty: 'hard',
     domain: 'atomic-structure',
     topicSlug: 'photoelectron-spectroscopy',
@@ -66,10 +66,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   // Form B variants
   {
-    question: 'How many moles of oxygen atoms are in 64 g of O₂?',
+    question: 'How many moles of oxygen atoms are in 64 g of $O_{2}$?',
     options: ['1 mol', '2 mol', '4 mol', '8 mol'],
     correctAnswer: 2,
-    explanation: 'Molar mass of O₂ = 32 g/mol. 64 g ÷ 32 g/mol = 2 mol O₂ = 4 mol O atoms.',
+    explanation: 'Molar mass of $O_{2}$ = 32 g/mol. 64 g ÷ 32 g/mol = 2 mol $O_{2}$ = 4 mol O atoms.',
     difficulty: 'easy',
     domain: 'atomic-structure',
     topicSlug: 'moles-molar-mass',
@@ -104,7 +104,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'In a PES spectrum for neon (Ne), how many distinct peaks are expected?',
     options: ['1', '2', '3', '4'],
     correctAnswer: 1,
-    explanation: 'Ne has configuration 1s² 2s² 2p⁶. There are two distinct subshells (1s and 2s/2p each at different energies). In a simplified PES, 1s appears as one peak and the n=2 electrons (2s and 2p) sometimes merge; typically 2 peaks are observed (1s core and 2s/2p valence).',
+    explanation: 'Ne has configuration $1s^{2}$ $2s^{2}$ $2p^{6}$. There are two distinct subshells (1s and 2s/2p each at different energies). In a simplified PES, 1s appears as one peak and the n=2 electrons (2s and 2p) sometimes merge; typically 2 peaks are observed (1s core and 2s/2p valence).',
     difficulty: 'hard',
     domain: 'atomic-structure',
     topicSlug: 'photoelectron-spectroscopy',
@@ -125,10 +125,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'What is the formal charge on nitrogen in the nitrate ion (NO₃⁻)?',
+    question: 'What is the formal charge on nitrogen in the nitrate ion $(NO_{3}^{-})$?',
     options: ['+1', '0', '-1', '+2'],
     correctAnswer: 0,
-    explanation: 'In NO₃⁻, N forms one double bond and two single bonds, giving it 5 bonds total. Formal charge = 5 (valence e⁻) - 0 (lone pair e⁻) - ½(8 bonding e⁻) = 5 - 0 - 4 = +1.',
+    explanation: 'In $NO_{3}^{-}$, N forms one double bond and two single bonds, giving it 5 bonds total. Formal charge = 5 $(valence e^{-})$ - 0 (lone pair $e^{-}$) - $\\tfrac{1}{2} (8 bonding e^{-})$ = 5 - 0 - 4 = +1.',
     difficulty: 'hard',
     domain: 'bonding',
     topicSlug: 'lewis-structures-formal-charge',
@@ -145,10 +145,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'The carbon atoms in ethene (C₂H₄) are sp²-hybridized. What type of bond connects the two carbon atoms?',
+    question: 'The carbon atoms in ethene $(C_{2}H_{4})$ are $sp^{2}$-hybridized. What type of bond connects the two carbon atoms?',
     options: ['Single σ bond only', 'One σ bond and one π bond', 'Two π bonds', 'Two σ bonds'],
     correctAnswer: 1,
-    explanation: 'A C=C double bond consists of one σ bond (from sp² orbital overlap head-on) and one π bond (from side-by-side p orbital overlap).',
+    explanation: 'A C=C double bond consists of one σ bond (from $sp^{2}$ orbital overlap head-on) and one π bond (from side-by-side p orbital overlap).',
     difficulty: 'medium',
     domain: 'bonding',
     topicSlug: 'hybridization-sigma-pi-bonds',
@@ -157,39 +157,39 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // Form B variants
   {
     question: 'Which compound contains predominantly covalent bonding?',
-    options: ['NaCl', 'MgO', 'CO₂', 'CaF₂'],
+    options: ['NaCl', 'MgO', '$CO_{2}$', '$CaF_{2}$'],
     correctAnswer: 2,
-    explanation: 'CO₂ is formed between two nonmetals (C and O) and shares electrons through covalent bonds. The others are ionic compounds.',
+    explanation: '$CO_{2}$ is formed between two nonmetals (C and O) and shares electrons through covalent bonds. The others are ionic compounds.',
     difficulty: 'easy',
     domain: 'bonding',
     topicSlug: 'types-of-chemical-bonds',
     formSet: 'B',
   },
   {
-    question: 'In CO₂, what is the formal charge on each oxygen atom (with the correct Lewis structure)?',
+    question: 'In $CO_{2}$, what is the formal charge on each oxygen atom (with the correct Lewis structure)?',
     options: ['0', '-1', '+1', '-2'],
     correctAnswer: 0,
-    explanation: 'In the correct Lewis structure of CO₂, each O has a double bond and 2 lone pairs. Formal charge = 6 - 4 - ½(4) = 6 - 4 - 2 = 0.',
+    explanation: 'In the correct Lewis structure of $CO_{2}$, each O has a double bond and 2 lone pairs. Formal charge = 6 - 4 - ½(4) = 6 - 4 - 2 = 0.',
     difficulty: 'medium',
     domain: 'bonding',
     topicSlug: 'lewis-structures-formal-charge',
     formSet: 'B',
   },
   {
-    question: 'Water (H₂O) has a bent molecular geometry. What is the approximate H-O-H bond angle?',
+    question: 'Water $(H_{2}O)$ has a bent molecular geometry. What is the approximate H-O-H bond angle?',
     options: ['90°', '104.5°', '109.5°', '120°'],
     correctAnswer: 1,
-    explanation: 'O in H₂O has 2 bonding pairs and 2 lone pairs. Lone pairs compress the bond angle from the ideal tetrahedral 109.5° to approximately 104.5°.',
+    explanation: 'O in $H_{2}O$ has 2 bonding pairs and 2 lone pairs. Lone pairs compress the bond angle from the ideal tetrahedral 109.5° to approximately 104.5°.',
     difficulty: 'easy',
     domain: 'bonding',
     topicSlug: 'vsepr-molecular-geometry',
     formSet: 'B',
   },
   {
-    question: 'What hybridization does the central nitrogen atom in NH₃ adopt?',
-    options: ['sp', 'sp²', 'sp³', 'sp³d'],
+    question: 'What hybridization does the central nitrogen atom in $NH_{3}$ adopt?',
+    options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
     correctAnswer: 2,
-    explanation: 'N in NH₃ has 3 bonding pairs and 1 lone pair = 4 electron domains → sp³ hybridization. The molecular shape is trigonal pyramidal.',
+    explanation: 'N in $NH_{3}$ has 3 bonding pairs and 1 lone pair = 4 electron domains → $sp^{3}$ hybridization. The molecular shape is trigonal pyramidal.',
     difficulty: 'easy',
     domain: 'bonding',
     topicSlug: 'hybridization-sigma-pi-bonds',
@@ -200,10 +200,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
   //  3. INTERMOLECULAR FORCES & STATES OF MATTER
   // ══════════════════════════════════════════════════════════════════
   {
-    question: 'Which intermolecular force is responsible for the unusually high boiling point of water compared to H₂S?',
+    question: 'Which intermolecular force is responsible for the unusually high boiling point of water compared to $H_{2}S$?',
     options: ['London dispersion forces', 'Dipole-dipole forces', 'Hydrogen bonding', 'Ion-dipole forces'],
     correctAnswer: 2,
-    explanation: 'Water molecules form hydrogen bonds (O-H···O) due to O\'s high electronegativity and H bonded to it. This gives water a much higher boiling point (100°C) vs. H₂S (-60°C).',
+    explanation: 'Water molecules form hydrogen bonds (O-H···O) due to O\'s high electronegativity and H bonded to it. This gives water a much higher boiling point (100°C) vs. $H_{2}S$ (-60°C).',
     difficulty: 'easy',
     domain: 'imf',
     topicSlug: 'types-intermolecular-forces',
@@ -213,7 +213,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'At constant temperature, a gas is compressed from 4.0 L to 1.0 L. If the initial pressure was 1.5 atm, what is the final pressure?',
     options: ['0.375 atm', '1.5 atm', '6.0 atm', '3.0 atm'],
     correctAnswer: 2,
-    explanation: 'Boyle\'s Law: P₁V₁ = P₂V₂ → (1.5)(4.0) = P₂(1.0) → P₂ = 6.0 atm.',
+    explanation: 'Boyle\'s Law: $P_{1}V_{1}$ = $P_{2}V_{2}$ → (1.5)(4.0) = $P_{2}(1.0)$ → $P_{2}$ = 6.0 atm.',
     difficulty: 'easy',
     domain: 'imf',
     topicSlug: 'ideal-gas-law',
@@ -221,7 +221,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'Which substance would you expect to have the highest solubility in water?',
-    options: ['CCl₄', 'CH₄', 'NaCl', 'I₂'],
+    options: ['$CCl_{4}$', '$CH_{4}$', 'NaCl', '$I_{2}$'],
     correctAnswer: 2,
     explanation: '"Like dissolves like." NaCl is an ionic compound that dissociates into ions, readily solvated by polar water molecules—far more soluble than the nonpolar substances listed.',
     difficulty: 'easy',
@@ -231,10 +231,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   // Form B variants
   {
-    question: 'Rank the following in order of increasing boiling point: CH₄, HCl, NH₃',
-    options: ['NH₃ < HCl < CH₄', 'CH₄ < HCl < NH₃', 'CH₄ < NH₃ < HCl', 'HCl < CH₄ < NH₃'],
+    question: 'Rank the following in order of increasing boiling point: $CH_{4}$, HCl, $NH_{3}$',
+    options: ['$NH_{3}$ < HCl < $CH_{4}$', '$CH_{4}$ < HCl < $NH_{3}$', '$CH_{4}$ < $NH_{3}$ < HCl', 'HCl < $CH_{4}$ < $NH_{3}$'],
     correctAnswer: 1,
-    explanation: 'CH₄ (nonpolar, only LDF) has the lowest bp. HCl has dipole-dipole forces. NH₃ has hydrogen bonding—the strongest, giving the highest bp. Order: CH₄ < HCl < NH₃.',
+    explanation: '$CH_{4}$ (nonpolar, only LDF) has the lowest bp. HCl has dipole-dipole forces. $NH_{3}$ has hydrogen bonding—the strongest, giving the highest bp. Order: $CH_{4}$ < HCl < $NH_{3}$.',
     difficulty: 'medium',
     domain: 'imf',
     topicSlug: 'types-intermolecular-forces',
@@ -244,7 +244,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'A gas at 27°C occupies 3.0 L. If heated to 127°C at constant pressure, what is the new volume?',
     options: ['1.5 L', '4.0 L', '4.5 L', '12 L'],
     correctAnswer: 1,
-    explanation: 'Charles\'s Law: V₁/T₁ = V₂/T₂. T₁ = 300 K, T₂ = 400 K. V₂ = 3.0 × (400/300) = 4.0 L.',
+    explanation: 'Charles\'s Law: $V_{1}/T_{1}$ = $V_{2}/T_{2}$. $T_{1}$ = 300 K, $T_{2}$ = 400 K. $V_{2}$ = 3.0 × (400/300) = 4.0 L.',
     difficulty: 'medium',
     domain: 'imf',
     topicSlug: 'ideal-gas-law',
@@ -270,20 +270,20 @@ export const apChemQuestionPool: APChemQuestion[] = [
   //  4. CHEMICAL REACTIONS & STOICHIOMETRY
   // ══════════════════════════════════════════════════════════════════
   {
-    question: 'In the reaction 2H₂O₂ → 2H₂O + O₂, what type of reaction is this?',
+    question: 'In the reaction $2H_{2}O_{2}$ → $2H_{2}O$ + $O_{2}$, what type of reaction is this?',
     options: ['Synthesis', 'Decomposition', 'Single replacement', 'Combustion'],
     correctAnswer: 1,
-    explanation: 'One reactant (H₂O₂) breaks down into two products (H₂O and O₂) — the definition of a decomposition reaction.',
+    explanation: 'One reactant $(H_{2}O_{2})$ breaks down into two products $(H_{2}O and O_{2})$ — the definition of a decomposition reaction.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'reaction-types',
     formSet: 'A',
   },
   {
-    question: 'For the reaction N₂ + 3H₂ → 2NH₃, how many grams of NH₃ are produced from 14 g of N₂? ($M_{N_2}$ = 28 g/mol, $M_{NH_3}$ = 17 g/mol)',
+    question: 'For the reaction $N_{2}$ + $3H_{2}$ → $2NH_{3}$, how many grams of $NH_{3}$ are produced from 14 g of $N_{2}$? ($M_{N_2}$ = 28 g/mol, $M_{NH_3}$ = 17 g/mol)',
     options: ['17 g', '34 g', '8.5 g', '28 g'],
     correctAnswer: 0,
-    explanation: '14 g N₂ × (1 mol/28 g) = 0.5 mol N₂. Stoichiometry: 1 mol N₂ → 2 mol NH₃, so 0.5 → 1 mol NH₃. Mass = 1 mol × 17 g/mol = 17 g NH₃.',
+    explanation: '14 g $N_{2}$ × (1 mol/28 g) = 0.5 mol $N_{2}$. Stoichiometry: 1 mol $N_{2}$ → 2 mol $NH_{3}$, so 0.5 → 1 mol $NH_{3}$. Mass = 1 mol × 17 g/mol = 17 g $NH_{3}$.',
     difficulty: 'medium',
     domain: 'reactions',
     topicSlug: 'stoichiometry-limiting-reactants',
@@ -291,19 +291,19 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'In the net ionic equation for the reaction of aqueous HCl and NaOH, what are the spectator ions?',
-    options: ['H⁺ and OH⁻', 'Na⁺ and Cl⁻', 'Na⁺ and OH⁻', 'H⁺ and Cl⁻'],
+    options: ['$H^{+}$ and $OH^{-}$', '$Na^{+}$ and $Cl^{-}$', '$Na^{+}$ and $OH^{-}$', '$H^{+}$ and $Cl^{-}$'],
     correctAnswer: 1,
-    explanation: 'HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O. Net ionic: H⁺ + OH⁻ → H₂O. The Na⁺ and Cl⁻ ions appear unchanged on both sides — they are the spectator ions.',
+    explanation: 'HCl(aq) + NaOH(aq) → NaCl(aq) + $H_{2}O$. Net ionic: $H^{+}$ + $OH^{-}$ → $H_{2}O$. The $Na^{+}$ and $Cl^{-}$ ions appear unchanged on both sides — they are the spectator ions.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'net-ionic-equations',
     formSet: 'A',
   },
   {
-    question: 'In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, which species is oxidized?',
-    options: ['Zn', 'Cu²⁺', 'SO₄²⁻', 'Zn²⁺'],
+    question: 'In the reaction Zn + $CuSO_{4}$ → $ZnSO_{4}$ + Cu, which species is oxidized?',
+    options: ['Zn', '$Cu^{2+}$', '$SO_{4}^{2-}$', '$Zn^{2+}$'],
     correctAnswer: 0,
-    explanation: 'Zn goes from 0 to +2 (loses electrons) — it is oxidized. Cu²⁺ goes from +2 to 0 (gains electrons) — it is reduced.',
+    explanation: 'Zn goes from 0 to +2 (loses electrons) — it is oxidized. $Cu^{2+}$ goes from +2 to 0 (gains electrons) — it is reduced.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'oxidation-reduction-reactions',
@@ -314,22 +314,22 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'Which of the following is a double-displacement (metathesis) reaction?',
     options: [
       'Fe + S → FeS',
-      'CaCO₃ → CaO + CO₂',
-      'AgNO₃ + NaCl → AgCl + NaNO₃',
-      'C + O₂ → CO₂',
+      '$CaCO_{3}$ → CaO + $CO_{2}$',
+      '$AgNO_{3}$ + NaCl → AgCl + $NaNO_{3}$',
+      'C + $O_{2}$ → $CO_{2}$',
     ],
     correctAnswer: 2,
-    explanation: 'In a double-displacement reaction two ionic compounds exchange partners: AgNO₃ + NaCl → AgCl + NaNO₃. The others are synthesis, decomposition, and combustion.',
+    explanation: 'In a double-displacement reaction two ionic compounds exchange partners: $AgNO_{3}$ + NaCl → AgCl + $NaNO_{3}$. The others are synthesis, decomposition, and combustion.',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'reaction-types',
     formSet: 'B',
   },
   {
-    question: 'If 20 g of H₂ reacts with 160 g of O₂ to form water (M_H₂O = 18 g/mol), which is the limiting reactant?',
-    options: ['H₂', 'O₂', 'Neither — they are in stoichiometric amounts', 'Both are limiting'],
+    question: 'If 20 g of $H_{2}$ reacts with 160 g of $O_{2}$ to form water ($M_{H_2O}$ = 18 g/mol), which is the limiting reactant?',
+    options: ['$H_{2}$', '$O_{2}$', 'Neither — they are in stoichiometric amounts', 'Both are limiting'],
     correctAnswer: 2,
-    explanation: '2H₂ + O₂ → 2H₂O. 20 g H₂ = 10 mol H₂; 160 g O₂ = 5 mol O₂. Ratio needed: 2:1 H₂:O₂. We have exactly 10 mol H₂ : 5 mol O₂ = 2:1. They are stoichiometrically equivalent — neither is limiting.',
+    explanation: '$2H_{2}$ + $O_{2}$ → $2H_{2}O$. 20 g $H_{2}$ = 10 mol $H_{2}$; 160 g $O_{2}$ = 5 mol $O_{2}$. Ratio needed: 2:1 $H_{2}$:$O_{2}$. We have exactly 10 mol $H_{2}$ : 5 mol $O_{2}$ = 2:1. They are stoichiometrically equivalent — neither is limiting.',
     difficulty: 'hard',
     domain: 'reactions',
     topicSlug: 'stoichiometry-limiting-reactants',
@@ -337,19 +337,19 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'Which of the following compounds is soluble in water according to solubility rules?',
-    options: ['AgCl', 'BaSO₄', 'Ca(NO₃)₂', 'PbS'],
+    options: ['AgCl', '$BaSO_{4}$', '$Ca(NO_{3})_{2}$', 'PbS'],
     correctAnswer: 2,
-    explanation: 'All nitrates (NO₃⁻) are soluble. Ca(NO₃)₂ is soluble. AgCl, BaSO₄, and PbS are insoluble (common exceptions).',
+    explanation: 'All nitrates $(NO_{3}^{-})$ are soluble. $Ca(NO_{3})_{2}$ is soluble. AgCl, $BaSO_{4}$, and PbS are insoluble (common exceptions).',
     difficulty: 'medium',
     domain: 'reactions',
     topicSlug: 'net-ionic-equations',
     formSet: 'B',
   },
   {
-    question: 'In the half-reaction MnO₄⁻ → Mn²⁺, what is the change in oxidation state of manganese?',
+    question: 'In the half-reaction $MnO_{4}^{-}$ → $Mn^{2+}$, what is the change in oxidation state of manganese?',
     options: ['+7 to +2 (reduction of 5)', '+2 to +7 (oxidation of 5)', '+4 to +2 (reduction of 2)', '0 to +2 (oxidation of 2)'],
     correctAnswer: 0,
-    explanation: 'In MnO₄⁻, Mn is +7. In Mn²⁺, Mn is +2. The change is +7 → +2, a gain of 5 electrons — this is reduction.',
+    explanation: 'In $MnO_{4}^{-}$, Mn is +7. In $Mn^{2+}$, Mn is +2. The change is +7 → +2, a gain of 5 electrons — this is reduction.',
     difficulty: 'medium',
     domain: 'reactions',
     topicSlug: 'oxidation-reduction-reactions',
@@ -373,7 +373,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'A first-order reaction has a half-life of 20 minutes. What fraction of the original reactant remains after 60 minutes?',
     options: ['1/2', '1/4', '1/8', '1/16'],
     correctAnswer: 2,
-    explanation: '60 min ÷ 20 min/half-life = 3 half-lives. Fraction remaining = (1/2)³ = 1/8.',
+    explanation: '60 min ÷ 20 min/half-life = 3 half-lives. Fraction remaining = $(1/2)^{3}$ = 1/8.',
     difficulty: 'medium',
     domain: 'kinetics',
     topicSlug: 'integrated-rate-laws',
@@ -427,9 +427,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'For a zero-order reaction, what is the half-life expression?',
-    options: ['t½ = 0.693/k', 't½ = [A]₀ / 2k', 't½ = 1 / k[A]₀', 't½ = k / [A]₀'],
+    options: ['t½ = 0.693/k', 't½ = [A]$ {}_{0}$ / 2k', 't½ = 1 / k[A]$ {}_{0}$', 't½ = k / [A]$ {}_{0}$'],
     correctAnswer: 1,
-    explanation: 'For a zero-order reaction, [A] = [A]₀ − kt. At half-life, [A] = [A]₀/2. So [A]₀/2 = [A]₀ − k·t½ → t½ = [A]₀/2k.',
+    explanation: 'For a zero-order reaction, [A] = [A]$ {}_{0}$ − kt. At half-life, [A] = [A]$ {}_{0}/2$. So [A]$ {}_{0}/2$ = [A]$ {}_{0}$ − k·t½ → t½ = [A]$ {}_{0}/2k$.',
     difficulty: 'hard',
     domain: 'kinetics',
     topicSlug: 'integrated-rate-laws',
@@ -437,19 +437,19 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'In a proposed mechanism: Step 1 (slow): A + B → C; Step 2 (fast): C + B → D. What is the predicted rate law?',
-    options: ['Rate = k[A][B]²', 'Rate = k[A][B]', 'Rate = k[C][B]', 'Rate = k[A]'],
+    options: ['Rate = k[A][B]$ {}^{2}$', 'Rate = k[A][B]', 'Rate = k[C][B]', 'Rate = k[A]'],
     correctAnswer: 1,
-    explanation: 'The rate is determined by the slow step: Rate = k₁[A][B]. The intermediate C does not appear in the rate law derived from elementary step 1.',
+    explanation: 'The rate is determined by the slow step: Rate = $k_{1}$[A][B]. The intermediate C does not appear in the rate law derived from elementary step 1.',
     difficulty: 'medium',
     domain: 'kinetics',
     topicSlug: 'reaction-mechanisms',
     formSet: 'B',
   },
   {
-    question: 'A reaction has rate = k[A]². If [A] is doubled, the rate changes by a factor of:',
+    question: 'A reaction has rate = k[A]$ {}^{2}$. If [A] is doubled, the rate changes by a factor of:',
     options: ['2', '4', '8', '16'],
     correctAnswer: 1,
-    explanation: 'Rate = k[A]². New rate = k(2[A])² = 4k[A]². Factor = 4.',
+    explanation: 'Rate = k[A]$ {}^{2}$. New rate = k(2[A])$ {}^{2}$ = 4k[A]$ {}^{2}$. Factor = 4.',
     difficulty: 'easy',
     domain: 'kinetics',
     topicSlug: 'reaction-rates-and-rate-laws',
@@ -496,7 +496,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   // Form B
   {
-    question: 'Using Hess\'s Law, if ΔH₁ = +100 kJ for A→B and ΔH₂ = −250 kJ for B→C, what is ΔH for A→C?',
+    question: 'Using Hess\'s Law, if $\\Delta H_{1}$ = +100 kJ for A→B and $\\Delta H_{2}$ = −250 kJ for B→C, what is ΔH for A→C?',
     options: ['+150 kJ', '−150 kJ', '+350 kJ', '−350 kJ'],
     correctAnswer: 1,
     explanation: 'A→C = A→B + B→C. ΔH = +100 + (−250) = −150 kJ. Hess\'s Law: enthalpy changes are additive.',
@@ -547,16 +547,16 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'Which of the following has the highest molar entropy at 25°C?',
-    options: ['H₂O(s)', 'H₂O(l)', 'H₂O(g)', 'All have equal entropy'],
+    options: ['$H_{2}O(s)$', '$H_{2}O(l)$', '$H_{2}O(g)$', 'All have equal entropy'],
     correctAnswer: 2,
-    explanation: 'Gases have far more microstates (ways to arrange particles) than liquids or solids. S°: H₂O(g) >> H₂O(l) > H₂O(s).',
+    explanation: 'Gases have far more microstates (ways to arrange particles) than liquids or solids. S°: $H_{2}O(g)$ >> $H_{2}O(l)$ > $H_{2}O(s)$.',
     difficulty: 'easy',
     domain: 'thermodynamics',
     topicSlug: 'entropy-second-law',
     formSet: 'both',
   },
   {
-    question: 'For the reaction 2 NO₂(g) → N₂O₄(g), what is the sign of ΔS?',
+    question: 'For the reaction 2 $NO_{2}(g)$ → $N_{2}O_{4}(g)$, what is the sign of ΔS?',
     options: ['Positive', 'Negative', 'Zero', 'Cannot be determined'],
     correctAnswer: 1,
     explanation: 'Two moles of gas combine into one mole of gas. Fewer gas molecules means fewer microstates → ΔS < 0.',
@@ -640,25 +640,25 @@ export const apChemQuestionPool: APChemQuestion[] = [
   //  7. EQUILIBRIUM
   // ══════════════════════════════════════════════════════════════════
   {
-    question: 'For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), what is the expression for Kc?',
+    question: 'For the equilibrium $N_{2}(g)$ + $3H_{2}(g)$ ⇌ $2NH_{3}(g)$, what is the expression for Kc?',
     options: [
-      'Kc = [NH₃]² / ([N₂][H₂]³)',
-      'Kc = [N₂][H₂]³ / [NH₃]²',
-      'Kc = [NH₃] / ([N₂][H₂])',
-      'Kc = 2[NH₃] / ([N₂] + 3[H₂])',
+      'Kc = [$NH_{3}$]$ {}^{2}$ / ([$N_{2}$][$H_{2}$]$ {}^{3}$)',
+      'Kc = [$N_{2}$][$H_{2}$]$ {}^{3}$ / [$NH_{3}$]$ {}^{2}$',
+      'Kc = [$NH_{3}$] / ([$N_{2}$][$H_{2}$])',
+      'Kc = 2[$NH_{3}$] / ([$N_{2}$] + 3[$H_{2}$])',
     ],
     correctAnswer: 0,
-    explanation: 'Kc = [products]^coefficients / [reactants]^coefficients = [NH₃]²/([N₂][H₂]³).',
+    explanation: 'Kc = [products]^coefficients / [reactants]^coefficients = [$NH_{3}$]$ {}^{2}$/([$N_{2}$][$H_{2}$]$ {}^{3}$).',
     difficulty: 'easy',
     domain: 'equilibrium',
     topicSlug: 'equilibrium-constants-expressions',
     formSet: 'A',
   },
   {
-    question: 'For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), what happens when pressure is increased by reducing the volume?',
+    question: 'For $N_{2}(g)$ + $3H_{2}(g)$ ⇌ $2NH_{3}(g)$, what happens when pressure is increased by reducing the volume?',
     options: [
-      'Equilibrium shifts left, producing more N₂ and H₂',
-      'Equilibrium shifts right, producing more NH₃',
+      'Equilibrium shifts left, producing more $N_{2}$ and $H_{2}$',
+      'Equilibrium shifts right, producing more $NH_{3}$',
       'No shift because all species are gases',
       'Kc increases',
     ],
@@ -670,7 +670,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'An ICE table is set up for A(g) ⇌ 2B(g) with [A]₀ = 1.0 M and [B]₀ = 0. At equilibrium, [A] = 0.8 M. What is [B] at equilibrium?',
+    question: 'An ICE table is set up for A(g) ⇌ 2B(g) with [A]$ {}_{0}$ = 1.0 M and [B]$ {}_{0}$ = 0. At equilibrium, [A] = 0.8 M. What is [B] at equilibrium?',
     options: ['0.2 M', '0.4 M', '0.8 M', '1.6 M'],
     correctAnswer: 1,
     explanation: 'Change in [A] = −0.2 M. By stoichiometry 1:2, change in [B] = +0.4 M. [B]eq = 0 + 0.4 = 0.4 M.',
@@ -680,10 +680,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'The Ksp of AgCl is 1.8 × 10⁻¹⁰. What is the molar solubility of AgCl in pure water?',
-    options: ['1.8 × 10⁻¹⁰ M', '1.34 × 10⁻⁵ M', '3.6 × 10⁻¹⁰ M', '9.0 × 10⁻¹¹ M'],
+    question: 'The Ksp of AgCl is $1.8 \\times 10^{-10}$. What is the molar solubility of AgCl in pure water?',
+    options: ['$1.8 \\times 10^{-10}$ M', '$1.34 \\times 10^{-5}$ M', '$3.6 \\times 10^{-10}$ M', '$9.0 \\times 10^{-11}$ M'],
     correctAnswer: 1,
-    explanation: 'AgCl ⇌ Ag⁺ + Cl⁻. Ksp = s² = 1.8 × 10⁻¹⁰. s = √(1.8 × 10⁻¹⁰) ≈ 1.34 × 10⁻⁵ M.',
+    explanation: 'AgCl ⇌ $Ag^{+}$ + $Cl^{-}$. Ksp = $s^{2}$ = $1.8 \\times 10^{-10}$. s = $\\sqrt{1.8 \\times 10^{-10}}$ ≈ $1.34 \\times 10^{-5}$ M.',
     difficulty: 'medium',
     domain: 'equilibrium',
     topicSlug: 'solubility-ksp',
@@ -691,12 +691,12 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   // Form B
   {
-    question: 'For the reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), if Kc = 1000, which best describes the equilibrium mixture?',
+    question: 'For the reaction $2SO_{2}(g)$ + $O_{2}(g)$ ⇌ $2SO_{3}(g)$, if Kc = 1000, which best describes the equilibrium mixture?',
     options: [
-      'Mostly reactants (SO₂ + O₂)',
+      'Mostly reactants $(SO_{2} + O_{2})$',
       'Equal amounts of reactants and products',
-      'Mostly products (SO₃)',
-      'Only SO₃, no reactants remain',
+      'Mostly products $(SO_{3})$',
+      'Only $SO_{3}$, no reactants remain',
     ],
     correctAnswer: 2,
     explanation: 'A large Kc (≫1) indicates the reaction lies far to the right: products are heavily favored at equilibrium.',
@@ -736,10 +736,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'The Ksp of Mg(OH)₂ is 5.6 × 10⁻¹². What is its molar solubility?',
-    options: ['1.12 × 10⁻⁴ M', '1.77 × 10⁻⁴ M', '5.6 × 10⁻⁴ M', '2.4 × 10⁻³ M'],
+    question: 'The Ksp of $Mg(OH)_{2}$ is $5.6 \\times 10^{-12}$. What is its molar solubility?',
+    options: ['$1.12 \\times 10^{-4}$ M', '$1.77 \\times 10^{-4}$ M', '$5.6 \\times 10^{-4}$ M', '$2.4 \\times 10^{-3}$ M'],
     correctAnswer: 0,
-    explanation: 'Mg(OH)₂ ⇌ Mg²⁺ + 2OH⁻. Ksp = s(2s)² = 4s³ = 5.6 × 10⁻¹². s³ = 1.4 × 10⁻¹². s = ∛(1.4 × 10⁻¹²) ≈ 1.12 × 10⁻⁴ M.',
+    explanation: '$Mg(OH)_{2}$ ⇌ $Mg^{2+}$ + $2OH^{-}$. Ksp = $s(2s)^{2}$ = $4s^{3}$ = $5.6 \\times 10^{-12}$. $s^{3}$ = $1.4 \\times 10^{-12}$. s = ∛$(1.4 \\times 10^{-12})$ ≈ $1.12 \\times 10^{-4}$ M.',
     difficulty: 'hard',
     domain: 'equilibrium',
     topicSlug: 'solubility-ksp',
@@ -752,33 +752,33 @@ export const apChemQuestionPool: APChemQuestion[] = [
   {
     question: 'According to the Brønsted-Lowry definition, an acid is:',
     options: [
-      'A substance that produces OH⁻ in water',
-      'A proton (H⁺) donor',
+      'A substance that produces $OH^{-}$ in water',
+      'A proton $(H^{+})$ donor',
       'An electron-pair acceptor',
       'A substance that neutralizes bases only in aqueous solution',
     ],
     correctAnswer: 1,
-    explanation: 'Brønsted-Lowry acids DONATE protons (H⁺). Arrhenius acids produce H⁺ in water. Lewis acids accept electron pairs.',
+    explanation: 'Brønsted-Lowry acids DONATE protons $(H^{+})$. Arrhenius acids produce $H^{+}$ in water. Lewis acids accept electron pairs.',
     difficulty: 'easy',
     domain: 'acids-bases',
     topicSlug: 'acid-base-theories-ph',
     formSet: 'A',
   },
   {
-    question: 'What is the pH of a 0.001 M HNO₃ solution?',
+    question: 'What is the pH of a 0.001 M $HNO_{3}$ solution?',
     options: ['1', '2', '3', '4'],
     correctAnswer: 2,
-    explanation: 'HNO₃ is a strong acid, fully dissociating. [H⁺] = 0.001 M = 10⁻³ M. pH = −log(10⁻³) = 3.',
+    explanation: '$HNO_{3}$ is a strong acid, fully dissociating. [$H^{+}$] = 0.001 M = $10^{-3}$ M. pH = $-\\log (10^{-3})$ = 3.',
     difficulty: 'easy',
     domain: 'acids-bases',
     topicSlug: 'acid-base-theories-ph',
     formSet: 'A',
   },
   {
-    question: 'A weak acid HA has Ka = 1.0 × 10⁻⁵. What is the pH of a 0.10 M HA solution?',
+    question: 'A weak acid HA has Ka = $1.0 \\times 10^{-5}$. What is the pH of a 0.10 M HA solution?',
     options: ['3.0', '3.5', '5.0', '5.5'],
     correctAnswer: 0,
-    explanation: 'HA ⇌ H⁺ + A⁻. Ka = x²/(0.10 − x) ≈ x²/0.10 = 10⁻⁵. x² = 10⁻⁶. x = 10⁻³. pH = −log(10⁻³) = 3.',
+    explanation: 'HA ⇌ $H^{+}$ + $A^{-}$. Ka = $x^{2}/(0.10 - x)$ ≈ $x^{2}/0.10$ = $10^{-5}$. $x^{2}$ = $10^{-6}$. x = $10^{-3}$. pH = $-\\log (10^{-3})$ = 3.',
     difficulty: 'medium',
     domain: 'acids-bases',
     topicSlug: 'weak-acids-bases-ka-kb',
@@ -788,7 +788,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'A buffer is made with 0.1 M acetic acid (pKa = 4.74) and 0.1 M sodium acetate. What is the pH?',
     options: ['4.74', '5.00', '4.00', '7.00'],
     correctAnswer: 0,
-    explanation: 'Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) = 4.74 + log(0.1/0.1) = 4.74 + log(1) = 4.74 + 0 = 4.74.',
+    explanation: 'Henderson-Hasselbalch: pH = pKa + log([$A^{-}$]/[HA]) = 4.74 + log(0.1/0.1) = 4.74 + log(1) = 4.74 + 0 = 4.74.',
     difficulty: 'easy',
     domain: 'acids-bases',
     topicSlug: 'buffer-solutions-henderson-hasselbalch',
@@ -798,7 +798,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'At the equivalence point of a titration of a weak acid with NaOH, the solution will be:',
     options: ['Neutral (pH = 7)', 'Slightly acidic', 'Slightly basic', 'Highly acidic'],
     correctAnswer: 2,
-    explanation: 'At the equivalence point, all the weak acid has been converted to its conjugate base (A⁻), which hydrolyzes in water to give a slightly basic solution.',
+    explanation: 'At the equivalence point, all the weak acid has been converted to its conjugate base $(A^{-})$, which hydrolyzes in water to give a slightly basic solution.',
     difficulty: 'medium',
     domain: 'acids-bases',
     topicSlug: 'acid-base-titrations',
@@ -807,9 +807,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // Form B
   {
     question: 'Which of the following is classified as a Lewis acid?',
-    options: ['NH₃', 'BF₃', 'OH⁻', 'H₂O'],
+    options: ['$NH_{3}$', '$BF_{3}$', '$OH^{-}$', '$H_{2}O$'],
     correctAnswer: 1,
-    explanation: 'BF₃ has an empty p orbital and accepts electron pairs — it is a Lewis acid. NH₃ and OH⁻ donate electron pairs (Lewis bases).',
+    explanation: '$BF_{3}$ has an empty p orbital and accepts electron pairs — it is a Lewis acid. $NH_{3}$ and $OH^{-}$ donate electron pairs (Lewis bases).',
     difficulty: 'medium',
     domain: 'acids-bases',
     topicSlug: 'acid-base-theories-ph',
@@ -826,10 +826,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'For a weak base B with Kb = 1.8 × 10⁻⁵ at 0.10 M concentration, what is the approximate pH?',
+    question: 'For a weak base B with Kb = $1.8 \\times 10^{-5}$ at 0.10 M concentration, what is the approximate pH?',
     options: ['5.13', '8.87', '2.87', '11.13'],
     correctAnswer: 3,
-    explanation: 'B + H₂O ⇌ BH⁺ + OH⁻. x² ≈ 0.10 × 1.8 × 10⁻⁵ = 1.8 × 10⁻⁶. x = [OH⁻] ≈ 1.34 × 10⁻³ M. pOH = −log(1.34 × 10⁻³) ≈ 2.87. pH = 14 − 2.87 = 11.13.',
+    explanation: 'B + $H_{2}O$ ⇌ $BH^{+}$ + $OH^{-}$. $x^{2}$ ≈ 0.10 × $1.8 \\times 10^{-5}$ = $1.8 \\times 10^{-6}$. x = [$OH^{-}$] ≈ $1.34 \\times 10^{-3}$ M. pOH = $-\\log (1.34 \\times 10^{-3})$ ≈ 2.87. pH = 14 − 2.87 = 11.13.',
     difficulty: 'hard',
     domain: 'acids-bases',
     topicSlug: 'weak-acids-bases-ka-kb',
@@ -844,7 +844,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
       'Buffers only work in neutral pH ranges',
     ],
     correctAnswer: 2,
-    explanation: 'A buffer contains a weak acid (HA) and its conjugate base (A⁻). HA reacts with added OH⁻; A⁻ reacts with added H⁺. This dual reserve keeps pH nearly constant.',
+    explanation: 'A buffer contains a weak acid (HA) and its conjugate base $(A^{-})$. HA reacts with added $OH^{-}$; $A^{-}$ reacts with added $H^{+}$. This dual reserve keeps pH nearly constant.',
     difficulty: 'easy',
     domain: 'acids-bases',
     topicSlug: 'buffer-solutions-henderson-hasselbalch',
@@ -854,7 +854,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'At the half-equivalence point of a weak acid-strong base titration, pH equals:',
     options: ['7', 'pKa of the weak acid', 'pKb of the conjugate base', '14 − pKa'],
     correctAnswer: 1,
-    explanation: 'At the half-equivalence point, [HA] = [A⁻]. By Henderson-Hasselbalch, pH = pKa + log(1) = pKa. This is used to experimentally find pKa.',
+    explanation: 'At the half-equivalence point, [HA] = [$A^{-}$]. By Henderson-Hasselbalch, pH = pKa + log(1) = pKa. This is used to experimentally find pKa.',
     difficulty: 'medium',
     domain: 'acids-bases',
     topicSlug: 'acid-base-titrations',
@@ -900,10 +900,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'How many grams of copper are deposited when a current of 2.0 A flows for 3,000 seconds through a Cu²⁺ solution? (M_Cu = 63.5 g/mol, F = 96,485 C/mol)',
+    question: 'How many grams of copper are deposited when a current of 2.0 A flows for 3,000 seconds through a $Cu^{2+}$ solution? (M_Cu = 63.5 g/mol, F = 96,485 C/mol)',
     options: ['1.97 g', '3.95 g', '0.985 g', '7.90 g'],
     correctAnswer: 0,
-    explanation: 'Charge = It = 2.0 × 3000 = 6000 C. Moles e⁻ = 6000/96485 ≈ 0.0622 mol. For Cu²⁺→Cu, need 2 electrons per Cu: mol Cu = 0.0311. Mass = 0.0311 × 63.5 ≈ 1.97 g.',
+    explanation: 'Charge = It = 2.0 × 3000 = 6000 C. Moles $e^{-}$ = 6000/96485 ≈ 0.0622 mol. For $Cu^{2+}$→Cu, need 2 electrons per Cu: mol Cu = 0.0311. Mass = 0.0311 × 63.5 ≈ 1.97 g.',
     difficulty: 'hard',
     domain: 'electrochemistry',
     topicSlug: 'electrolytic-cells-faraday',
@@ -919,7 +919,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
       'Cu, because copper cations are reduced',
     ],
     correctAnswer: 1,
-    explanation: 'The electrode with the LOWER (more negative) standard reduction potential is the anode (oxidation). E°(Zn²⁺/Zn) = −0.76 V vs. E°(Cu²⁺/Cu) = +0.34 V → Zn is the anode.',
+    explanation: 'The electrode with the LOWER (more negative) standard reduction potential is the anode (oxidation). E°$(Zn^{2+}/Zn)$ = −0.76 V vs. E°$(Cu^{2+}/Cu)$ = +0.34 V → Zn is the anode.',
     difficulty: 'medium',
     domain: 'electrochemistry',
     topicSlug: 'galvanic-cells-potentials',
@@ -937,9 +937,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'In electrolysis of water, which gas is produced at the cathode?',
-    options: ['O₂', 'H₂', 'Cl₂', 'H₂O'],
+    options: ['$O_{2}$', '$H_{2}$', '$Cl_{2}$', '$H_{2}O$'],
     correctAnswer: 1,
-    explanation: 'At the cathode, reduction occurs: 2H₂O + 2e⁻ → H₂ + 2OH⁻. Hydrogen gas is produced at the cathode. Oxygen is produced at the anode.',
+    explanation: 'At the cathode, reduction occurs: $2H_{2}O$ + $2e^{-}$ → $H_{2}$ + $2OH^{-}$. Hydrogen gas is produced at the cathode. Oxygen is produced at the anode.',
     difficulty: 'easy',
     domain: 'electrochemistry',
     topicSlug: 'electrolytic-cells-faraday',
@@ -1057,9 +1057,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   },
   {
     question: 'For the equilibrium A(g) ⇌ 2B(g), the equilibrium expression Kc equals:',
-    options: ['[A]/[B]²', '[B]²/[A]', '[A][B]²', '2[B]/[A]'],
+    options: ['[A]/[B]$ {}^{2}$', '[B]$ {}^{2}$/[A]', '[A][B]$ {}^{2}$', '2[B]/[A]'],
     correctAnswer: 1,
-    explanation: 'Kc = [products]^coefficients / [reactants]^coefficients = [B]² / [A].',
+    explanation: 'Kc = [products]^coefficients / [reactants]^coefficients = [B]$ {}^{2}$ / [A].',
     difficulty: 'medium',
     domain: 'equilibrium',
     topicSlug: 'intro-equilibrium',
@@ -1121,9 +1121,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // --- galvanic-cells-thermo-applications (was 0) ---
   {
     question: 'The equation ΔG° = −nFE° connects free energy and cell potential. F represents:',
-    options: ['Frequency', 'Faraday\'s constant (96,485 C/mol e⁻)', 'Force in newtons', 'Formation energy'],
+    options: ['Frequency', 'Faraday\'s constant (96,485 C/mol $e^{-}$)', 'Force in newtons', 'Formation energy'],
     correctAnswer: 1,
-    explanation: 'F (Faraday\'s constant) is the charge per mole of electrons: 96,485 C/mol e⁻.',
+    explanation: 'F (Faraday\'s constant) is the charge per mole of electrons: 96,485 C/mol $e^{-}$.',
     difficulty: 'easy',
     domain: 'electrochemistry',
     topicSlug: 'galvanic-cells-thermo-applications',
@@ -1207,7 +1207,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'For A ⇌ 2B with K = 4.0 and initial [A] = 1.0 M, [B] = 0, what is the equilibrium [B]?',
     options: ['0.5 M', '1.0 M', '1.33 M', '2.0 M'],
     correctAnswer: 2,
-    explanation: 'Let x = change in [A]. Then [A] = 1−x, [B] = 2x. K = (2x)² / (1−x) = 4.0. Solving: 4x² = 4 − 4x → 4x² + 4x − 4 = 0 → x ≈ 0.618. [B] = 2(0.618) ≈ 1.24 M. Closest answer is 1.33 M (rounding in a test context).',
+    explanation: 'Let x = change in [A]. Then [A] = 1−x, [B] = 2x. K = $(2x)^{2}$ / (1−x) = 4.0. Solving: $4x^{2}$ = 4 − 4x → $4x^{2}$ + 4x − 4 = 0 → x ≈ 0.618. [B] = 2(0.618) ≈ 1.24 M. Closest answer is 1.33 M (rounding in a test context).',
     difficulty: 'hard',
     domain: 'equilibrium',
     topicSlug: 'ice-tables-calculations',
@@ -1228,7 +1228,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // moles-molar-mass
   {
-    question: 'What is the molar mass of Ca(OH)₂?',
+    question: 'What is the molar mass of $Ca(OH)_{2}$?',
     options: ['57 g/mol', '74 g/mol', '40 g/mol', '96 g/mol'],
     correctAnswer: 1,
     explanation: 'Ca = 40, O = 16 × 2 = 32, H = 1 × 2 = 2. Total = 40 + 32 + 2 = 74 g/mol.',
@@ -1238,10 +1238,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'How many molecules are in 2.0 mol of H₂O?',
-    options: ['6.02 × 10²³', '1.20 × 10²⁴', '3.01 × 10²³', '2.00 × 10²⁴'],
+    question: 'How many molecules are in 2.0 mol of $H_{2}O$?',
+    options: ['$6.02 \\times 10^{23}$', '$1.20 \\times 10^{24}$', '$3.01 \\times 10^{23}$', '$2.00 \\times 10^{24}$'],
     correctAnswer: 1,
-    explanation: '2.0 mol × 6.02 × 10²³ molecules/mol = 1.20 × 10²⁴ molecules.',
+    explanation: '2.0 mol × $6.02 \\times 10^{23}$ molecules/mol = $1.20 \\times 10^{24}$ molecules.',
     difficulty: 'easy',
     domain: 'atomic-structure',
     topicSlug: 'moles-molar-mass',
@@ -1250,10 +1250,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // electron-configuration
   {
-    question: 'Which element has the ground-state electron configuration [Ne] 3s² 3p⁴?',
+    question: 'Which element has the ground-state electron configuration [Ne] $3s^{2}$ $3p^{4}$?',
     options: ['Phosphorus', 'Sulfur', 'Chlorine', 'Silicon'],
     correctAnswer: 1,
-    explanation: '[Ne] = 10 electrons + 3s²3p⁴ = 6 more → Z = 16 → Sulfur.',
+    explanation: '[Ne] = 10 electrons + $3s^{2}3p^{4}$ = 6 more → Z = 16 → Sulfur.',
     difficulty: 'easy',
     domain: 'atomic-structure',
     topicSlug: 'electron-configuration',
@@ -1298,10 +1298,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // lewis-structures-formal-charge
   {
-    question: 'The formal charge on the nitrogen atom in the ammonium ion (NH₄⁺) is:',
+    question: 'The formal charge on the nitrogen atom in the ammonium ion $(NH_{4}^{+})$ is:',
     options: ['0', '+1', '−1', '+2'],
     correctAnswer: 1,
-    explanation: 'N has 5 valence e⁻. In NH₄⁺ it has 4 bonds and 0 lone pairs → FC = 5 − 0 − 4 = +1.',
+    explanation: 'N has 5 valence $e^{-}$. In $NH_{4}^{+}$ it has 4 bonds and 0 lone pairs → FC = 5 − 0 − 4 = +1.',
     difficulty: 'medium',
     domain: 'bonding',
     topicSlug: 'lewis-structures-formal-charge',
@@ -1310,10 +1310,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // vsepr-molecular-geometry
   {
-    question: 'What is the molecular geometry of SF₄ (4 bonding pairs, 1 lone pair on S)?',
+    question: 'What is the molecular geometry of $SF_{4}$ (4 bonding pairs, 1 lone pair on S)?',
     options: ['Tetrahedral', 'Square planar', 'See-saw', 'Trigonal bipyramidal'],
     correctAnswer: 2,
-    explanation: 'SF₄ has 5 electron groups (trigonal bipyramidal domain). One lone pair in an equatorial position gives a see-saw shape.',
+    explanation: '$SF_{4}$ has 5 electron groups (trigonal bipyramidal domain). One lone pair in an equatorial position gives a see-saw shape.',
     difficulty: 'medium',
     domain: 'bonding',
     topicSlug: 'vsepr-molecular-geometry',
@@ -1323,7 +1323,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // hybridization-sigma-pi-bonds
   {
     question: 'A carbon atom forming a triple bond uses which hybridization?',
-    options: ['sp³', 'sp²', 'sp', 'sp³d'],
+    options: ['$sp^{3}$', '$sp^{2}$', 'sp', '$sp^{3}d$'],
     correctAnswer: 2,
     explanation: 'A triple bond consists of 1 σ and 2 π bonds. The carbon uses sp hybridization (2 electron groups: the triple bond + one other bond).',
     difficulty: 'medium',
@@ -1373,7 +1373,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'Which reaction type involves one element replacing another in a compound?',
     options: ['Synthesis', 'Decomposition', 'Single replacement', 'Double replacement'],
     correctAnswer: 2,
-    explanation: 'In a single-replacement reaction, a more reactive element displaces a less reactive element from a compound (e.g., Zn + CuSO₄ → ZnSO₄ + Cu).',
+    explanation: 'In a single-replacement reaction, a more reactive element displaces a less reactive element from a compound (e.g., Zn + $CuSO_{4}$ → $ZnSO_{4}$ + Cu).',
     difficulty: 'easy',
     domain: 'reactions',
     topicSlug: 'reaction-types',
@@ -1418,7 +1418,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // reaction-rates-and-rate-laws
   {
-    question: 'For the rate law rate = k[A]²[B], what is the overall reaction order?',
+    question: 'For the rate law rate = k[A]$ {}^{2}$[B], what is the overall reaction order?',
     options: ['1', '2', '3', '4'],
     correctAnswer: 2,
     explanation: 'Overall order = sum of exponents = 2 + 1 = 3.',
@@ -1433,7 +1433,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'For a first-order reaction, a plot of ln[A] vs. time gives:',
     options: ['A parabola', 'A straight line', 'An exponential curve', 'A horizontal line'],
     correctAnswer: 1,
-    explanation: 'The integrated first-order rate law ln[A] = ln[A]₀ − kt is linear in ln[A] vs. t, with slope = −k.',
+    explanation: 'The integrated first-order rate law ln[A] = ln[A]$ {}_{0}$ − kt is linear in ln[A] vs. t, with slope = −k.',
     difficulty: 'easy',
     domain: 'kinetics',
     topicSlug: 'integrated-rate-laws',
@@ -1490,7 +1490,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // equilibrium-constants-expressions
   {
-    question: 'Kp is related to Kc by the equation Kp = Kc(RT)^Δn. Δn represents:',
+    question: 'Kp is related to Kc by the equation Kp = $Kc(RT)^{\\Delta}n$. Δn represents:',
     options: ['Total moles of gas', 'Moles of products minus moles of reactants (gaseous only)', 'The change in temperature', 'The number of atoms'],
     correctAnswer: 1,
     explanation: 'Δn = (moles of gaseous products) − (moles of gaseous reactants) in the balanced equation.',
@@ -1500,10 +1500,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'For 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), the expression for Kc is:',
-    options: ['[SO₃]² / ([SO₂]²[O₂])', '[SO₂]²[O₂] / [SO₃]²', '2[SO₃] / (2[SO₂] + [O₂])', '[SO₃] / [SO₂][O₂]'],
+    question: 'For $2SO_{2}(g)$ + $O_{2}(g)$ ⇌ $2SO_{3}(g)$, the expression for Kc is:',
+    options: ['[$SO_{3}$]$ {}^{2}$ / ([$SO_{2}$]$ {}^{2}$[$O_{2}$])', '[$SO_{2}$]$ {}^{2}$[$O_{2}$] / [$SO_{3}$]$ {}^{2}$', '2[$SO_{3}$] / (2[$SO_{2}$] + [$O_{2}$])', '[$SO_{3}$] / [$SO_{2}$][$O_{2}$]'],
     correctAnswer: 0,
-    explanation: 'Kc = [products]^coeff / [reactants]^coeff = [SO₃]² / ([SO₂]²[O₂]).',
+    explanation: 'Kc = [products]^coeff / [reactants]^coeff = [$SO_{3}$]$ {}^{2}$ / ([$SO_{2}$]$ {}^{2}$[$O_{2}$]).',
     difficulty: 'easy',
     domain: 'equilibrium',
     topicSlug: 'equilibrium-constants-expressions',
@@ -1512,7 +1512,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // le-chatelier-equilibrium-shifts
   {
-    question: 'For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), decreasing the volume at constant temperature will shift equilibrium:',
+    question: 'For $N_{2}(g)$ + $3H_{2}(g)$ ⇌ $2NH_{3}(g)$, decreasing the volume at constant temperature will shift equilibrium:',
     options: ['Toward reactants', 'Toward products', 'No shift', 'Depends on temperature'],
     correctAnswer: 1,
     explanation: 'Decreasing volume increases pressure. The system shifts to the side with fewer moles of gas: 2 mol products vs 4 mol reactants → shift right.',
@@ -1534,10 +1534,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // solubility-ksp
   {
-    question: 'For AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq), if Ksp = 1.8 × 10⁻¹⁰, the molar solubility is approximately:',
-    options: ['1.3 × 10⁻⁵ M', '1.8 × 10⁻¹⁰ M', '9.0 × 10⁻⁶ M', '1.3 × 10⁻³ M'],
+    question: 'For AgCl(s) ⇌ $Ag^{+}(aq)$ + $Cl^{-}(aq)$, if Ksp = $1.8 \\times 10^{-10}$, the molar solubility is approximately:',
+    options: ['$1.3 \\times 10^{-5}$ M', '$1.8 \\times 10^{-10}$ M', '$9.0 \\times 10^{-6}$ M', '$1.3 \\times 10^{-3}$ M'],
     correctAnswer: 0,
-    explanation: 'Let s = solubility. Ksp = s × s = s². s = √(1.8 × 10⁻¹⁰) ≈ 1.3 × 10⁻⁵ M.',
+    explanation: 'Let s = solubility. Ksp = s × s = $s^{2}$. s = $\\sqrt{1.8 \\times 10^{-10}}$ ≈ $1.3 \\times 10^{-5}$ M.',
     difficulty: 'medium',
     domain: 'equilibrium',
     topicSlug: 'solubility-ksp',
@@ -1546,10 +1546,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // weak-acids-bases-ka-kb
   {
-    question: 'A weak acid with Ka = 1.8 × 10⁻⁵ has a conjugate base with Kb equal to:',
-    options: ['1.8 × 10⁻⁵', '5.6 × 10⁻¹⁰', '1.0 × 10⁻¹⁴', '5.6 × 10⁻⁸'],
+    question: 'A weak acid with Ka = $1.8 \\times 10^{-5}$ has a conjugate base with Kb equal to:',
+    options: ['$1.8 \\times 10^{-5}$', '$5.6 \\times 10^{-10}$', '$1.0 \\times 10^{-14}$', '$5.6 \\times 10^{-8}$'],
     correctAnswer: 1,
-    explanation: 'Ka × Kb = Kw = 1.0 × 10⁻¹⁴. Kb = Kw / Ka = 1.0 × 10⁻¹⁴ / 1.8 × 10⁻⁵ ≈ 5.6 × 10⁻¹⁰.',
+    explanation: 'Ka × Kb = Kw = $1.0 \\times 10^{-14}$. Kb = Kw / Ka = $1.0 \\times 10^{-14}$ / $1.8 \\times 10^{-5}$ ≈ $5.6 \\times 10^{-10}$.',
     difficulty: 'medium',
     domain: 'acids-bases',
     topicSlug: 'weak-acids-bases-ka-kb',
@@ -1561,7 +1561,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'A buffer with equal concentrations of weak acid and conjugate base has pH equal to:',
     options: ['7.00', 'pKa', 'pKb', '14 − pKa'],
     correctAnswer: 1,
-    explanation: 'When [HA] = [A⁻], the Henderson-Hasselbalch equation gives pH = pKa + log(1) = pKa.',
+    explanation: 'When [HA] = [$A^{-}$], the Henderson-Hasselbalch equation gives pH = pKa + log(1) = pKa.',
     difficulty: 'easy',
     domain: 'acids-bases',
     topicSlug: 'buffer-solutions-henderson-hasselbalch',
@@ -1594,10 +1594,10 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // electrolytic-cells-faraday
   {
-    question: 'How many coulombs are needed to deposit 1 mole of Cu from Cu²⁺ (2 electrons per ion)?',
+    question: 'How many coulombs are needed to deposit 1 mole of Cu from $Cu^{2+}$ (2 electrons per ion)?',
     options: ['96,485 C', '192,970 C', '48,243 C', '289,455 C'],
     correctAnswer: 1,
-    explanation: 'Cu²⁺ + 2e⁻ → Cu requires 2 mol e⁻ per mol Cu. Charge = 2 × 96,485 = 192,970 C.',
+    explanation: '$Cu^{2+}$ + $2e^{-}$ → Cu requires 2 mol $e^{-}$ per mol Cu. Charge = 2 × 96,485 = 192,970 C.',
     difficulty: 'medium',
     domain: 'electrochemistry',
     topicSlug: 'electrolytic-cells-faraday',
@@ -1606,7 +1606,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // galvanic-cells-potentials
   {
-    question: 'In a standard galvanic cell notation (Zn|Zn²⁺||Cu²⁺|Cu), the double vertical line represents:',
+    question: 'In a standard galvanic cell notation (Zn|$Zn^{2+}$||$Cu^{2+}$|Cu), the double vertical line represents:',
     options: ['The wire', 'The anode', 'The salt bridge', 'The cathode'],
     correctAnswer: 2,
     explanation: 'The || in cell notation represents the salt bridge (or porous barrier) separating the two half-cells.',
@@ -1622,16 +1622,16 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── moles-molar-mass (batch 2 — had 4, adding 4 → 8) ──────────
   { question: 'How many atoms are in 2 moles of helium?', options: ['$6.02 \\times 10^{23}$', '$1.204 \\times 10^{24}$', '$3.01 \\times 10^{23}$', '$2$'], correctAnswer: 1, explanation: '$2 \\times 6.022 \\times 10^{23} = 1.204 \\times 10^{24}$ atoms.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'A' },
-  { question: 'The molar mass of Ca(OH)₂ is:', options: ['57 g/mol', '74 g/mol', '40 g/mol', '114 g/mol'], correctAnswer: 1, explanation: '$40 + 2(16 + 1) = 40 + 34 = 74$ g/mol.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'B' },
+  { question: 'The molar mass of $Ca(OH)_{2}$ is:', options: ['57 g/mol', '74 g/mol', '40 g/mol', '114 g/mol'], correctAnswer: 1, explanation: '$40 + 2(16 + 1) = 40 + 34 = 74$ g/mol.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'B' },
   { question: 'If 180 g of glucose ($C_6H_{12}O_6$, MM = 180 g/mol) is dissolved, how many moles is that?', options: ['0.5 mol', '1 mol', '2 mol', '180 mol'], correctAnswer: 1, explanation: '$n = m/M = 180/180 = 1$ mol.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'both' },
   { question: 'At STP, 1 mole of any ideal gas occupies approximately:', options: ['11.2 L', '22.4 L', '44.8 L', '1 L'], correctAnswer: 1, explanation: 'Molar volume of an ideal gas at STP ≈ 22.4 L.', difficulty: 'easy', domain: 'reactions', topicSlug: 'moles-molar-mass', formSet: 'A' },
 
   // ── electron-configuration (batch 2 — had 3, adding 5 → 8) ─────
-  { question: 'The electron configuration of Fe (Z = 26) is:', options: ['[Ar] 4s² 3d⁶', '[Ar] 3d⁸', '[Ar] 4s² 3d⁴', '[Ar] 4s¹ 3d⁷'], correctAnswer: 0, explanation: 'Iron: [Ar] 4s² 3d⁶. The 4s fills before 3d.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'A' },
+  { question: 'The electron configuration of Fe (Z = 26) is:', options: ['[Ar] $4s^{2}$ $3d^{6}$', '[Ar] $3d^{8}$', '[Ar] $4s^{2}$ $3d^{4}$', '[Ar] $4s^{1}$ $3d^{7}$'], correctAnswer: 0, explanation: 'Iron: [Ar] $4s^{2}$ $3d^{6}$. The 4s fills before 3d.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'A' },
   { question: 'Hund\'s rule states that electrons:', options: ['Fill the lowest energy orbital first', 'Occupy degenerate orbitals singly before pairing', 'Cannot share the same quantum numbers', 'Pair with opposite spins only'], correctAnswer: 1, explanation: 'Hund: maximize spin by filling each orbital of a subshell singly first.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'B' },
-  { question: 'Which element has the configuration [Ne] 3s² 3p⁵?', options: ['Chlorine', 'Argon', 'Sulfur', 'Fluorine'], correctAnswer: 0, explanation: '[Ne] 3s² 3p⁵ = 10 + 7 = 17 electrons → Cl.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'A' },
+  { question: 'Which element has the configuration [Ne] $3s^{2}$ $3p^{5}$?', options: ['Chlorine', 'Argon', 'Sulfur', 'Fluorine'], correctAnswer: 0, explanation: '[Ne] $3s^{2}$ $3p^{5}$ = 10 + 7 = 17 electrons → Cl.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'A' },
   { question: 'The Pauli exclusion principle says that:', options: ['Two electrons in the same orbital must have opposite spins', 'Electrons fill the lowest energy first', 'Each orbital holds 3 electrons', 'All electrons have the same spin'], correctAnswer: 0, explanation: 'No two electrons can have the same set of four quantum numbers → opposite spins in an orbital.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'B' },
-  { question: 'Cu (Z = 29) has an anomalous configuration because:', options: ['It loses electrons easily', '[Ar] 3d¹⁰ 4s¹ is more stable than [Ar] 3d⁹ 4s²', 'It is a noble gas', 'It has no d electrons'], correctAnswer: 1, explanation: 'A fully filled d subshell (3d¹⁰) provides extra stability.', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'both' },
+  { question: 'Cu (Z = 29) has an anomalous configuration because:', options: ['It loses electrons easily', '[Ar] $3d^{10}$ $4s^{1}$ is more stable than [Ar] $3d^{9}$ $4s^{2}$', 'It is a noble gas', 'It has no d electrons'], correctAnswer: 1, explanation: 'A fully filled d subshell $(3d^{10})$ provides extra stability.', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'electron-configuration', formSet: 'both' },
 
   // ── periodic-trends (batch 2 — had 3, adding 5 → 8) ────────────
   { question: 'Across a period, atomic radius generally:', options: ['Increases', 'Decreases', 'Stays the same', 'Oscillates'], correctAnswer: 1, explanation: 'More protons pull electrons closer → smaller radius.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'periodic-trends', formSet: 'A' },
@@ -1643,7 +1643,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // ── photoelectron-spectroscopy (batch 2 — had 3, adding 5 → 8) ──
   { question: 'In a PES spectrum, peaks farther to the left (higher binding energy) correspond to:', options: ['Valence electrons', 'Core electrons closer to the nucleus', 'Free electrons', 'Photons'], correctAnswer: 1, explanation: 'Higher BE = more tightly bound = closer to the nucleus.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
   { question: 'The height of a PES peak tells you:', options: ['Binding energy', 'Number of electrons in that subshell', 'Atomic mass', 'Wavelength of light'], correctAnswer: 1, explanation: 'Peak height ∝ number of electrons with that binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
-  { question: 'An element shows PES peaks at very high BE (2 electrons), moderate BE (2), and low BE (3). It is likely:', options: ['Nitrogen', 'Oxygen', 'Carbon', 'Boron'], correctAnswer: 0, explanation: '1s² 2s² 2p³ = 7 electrons → Nitrogen.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
+  { question: 'An element shows PES peaks at very high BE (2 electrons), moderate BE (2), and low BE (3). It is likely:', options: ['Nitrogen', 'Oxygen', 'Carbon', 'Boron'], correctAnswer: 0, explanation: '$1s^{2}$ $2s^{2}$ $2p^{3}$ = 7 electrons → Nitrogen.', difficulty: 'medium', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'A' },
   { question: 'PES relies on the ___ effect.', options: ['Compton', 'Photoelectric', 'Doppler', 'Zeeman'], correctAnswer: 1, explanation: 'Photons eject electrons; KE measured to deduce binding energy.', difficulty: 'easy', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'B' },
   { question: 'Two elements have identical PES spectra except for a slightly different binding energy shift. They are likely:', options: ['Different elements', 'Isotopes', 'Ions of the same element', 'Allotropes'], correctAnswer: 1, explanation: 'Isotopes have the same electron structure but different nuclear mass (minor BE shift).', difficulty: 'hard', domain: 'atomic-structure', topicSlug: 'photoelectron-spectroscopy', formSet: 'both' },
 
@@ -1652,33 +1652,33 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'A metallic bond is best described as:', options: ['Shared electron pair between two atoms', 'A sea of delocalized electrons shared among metal cations', 'Transfer of electrons from one atom to another', 'Weak intermolecular force'], correctAnswer: 1, explanation: 'Metal atoms release valence electrons into a delocalized "sea."', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'B' },
   { question: 'In a polar covalent bond, electrons are:', options: ['Transferred completely', 'Shared equally', 'Shared unequally', 'Not involved'], correctAnswer: 2, explanation: 'Moderate ΔEN → unequal sharing → partial charges.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'A' },
   { question: 'Bond strength generally ___ as bond order increases.', options: ['Decreases', 'Increases', 'Stays the same', 'Becomes zero'], correctAnswer: 1, explanation: 'Triple > double > single bond strength.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'B' },
-  { question: 'Which compound is most likely ionic?', options: ['CO₂', 'H₂O', 'NaCl', 'CH₄'], correctAnswer: 2, explanation: 'Na (metal) + Cl (nonmetal) → large ΔEN → ionic.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'both' },
+  { question: 'Which compound is most likely ionic?', options: ['$CO_{2}$', '$H_{2}O$', 'NaCl', '$CH_{4}$'], correctAnswer: 2, explanation: 'Na (metal) + Cl (nonmetal) → large ΔEN → ionic.', difficulty: 'easy', domain: 'bonding', topicSlug: 'types-of-chemical-bonds', formSet: 'both' },
 
   // ── lewis-structures-formal-charge (batch 2 — had 3, adding 5 → 8)
-  { question: 'Formal charge = valence electrons − (lone pair e⁻ + ½ bonding e⁻). For the N in NH₃:', options: ['0', '+1', '−1', '+2'], correctAnswer: 0, explanation: 'N has 5 valence e⁻. In NH₃: 2 lone pair + ½(6 bonding) = 2 + 3 = 5. FC = 5 − 5 = 0.', difficulty: 'medium', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'A' },
+  { question: 'Formal charge = valence electrons − (lone pair $e^{-}$ + ½ bonding $e^{-}$). For the N in $NH_{3}$:', options: ['0', '+1', '−1', '+2'], correctAnswer: 0, explanation: 'N has 5 valence $e^{-}$. In $NH_{3}$: 2 lone pair + ½(6 bonding) = 2 + 3 = 5. FC = 5 − 5 = 0.', difficulty: 'medium', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'A' },
   { question: 'The best Lewis structure minimizes:', options: ['The number of bonds', 'Formal charges on all atoms', 'Lone pairs', 'Electronegativity differences'], correctAnswer: 1, explanation: 'Lower formal charges → more stable → preferred structure.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'B' },
-  { question: 'How many lone pairs are on the O in H₂O?', options: ['0', '1', '2', '3'], correctAnswer: 2, explanation: 'O has 6 valence e⁻; 2 used in bonds → 4 remaining = 2 lone pairs.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'A' },
+  { question: 'How many lone pairs are on the O in $H_{2}O$?', options: ['0', '1', '2', '3'], correctAnswer: 2, explanation: 'O has 6 valence $e^{-}$; 2 used in bonds → 4 remaining = 2 lone pairs.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'A' },
   { question: 'A resonance structure is needed when:', options: ['There is only one valid Lewis structure', 'Multiple equivalent structures can be drawn', 'The molecule has no bonds', 'Formal charges are all zero'], correctAnswer: 1, explanation: 'Resonance = multiple structures differing only in electron placement.', difficulty: 'easy', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'B' },
   { question: 'Octet exceptions include molecules with:', options: ['Only single bonds', 'Only noble-gas atoms', 'Expanded octets (elements in period 3+)', 'Only hydrogen'], correctAnswer: 2, explanation: 'Elements in period 3+ can use d orbitals → >8 electrons around central atom.', difficulty: 'medium', domain: 'bonding', topicSlug: 'lewis-structures-formal-charge', formSet: 'both' },
 
   // ── vsepr-molecular-geometry (batch 2 — had 3, adding 5 → 8) ───
   { question: 'A molecule with 4 bonding pairs and 0 lone pairs has ___ geometry.', options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal bipyramidal'], correctAnswer: 2, explanation: '4 electron groups, all bonding → tetrahedral (109.5°).', difficulty: 'easy', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'A' },
-  { question: 'Water has 2 bonds and 2 lone pairs. Its shape is:', options: ['Linear', 'Bent', 'Tetrahedral', 'Trigonal planar'], correctAnswer: 1, explanation: '4 e⁻ groups (tetrahedral e⁻ geometry) but 2 LP → bent molecular shape.', difficulty: 'easy', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'B' },
-  { question: 'NH₃ has ___ molecular geometry.', options: ['Tetrahedral', 'Trigonal pyramidal', 'Trigonal planar', 'Bent'], correctAnswer: 1, explanation: '3 bonds + 1 LP → trigonal pyramidal.', difficulty: 'easy', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'A' },
+  { question: 'Water has 2 bonds and 2 lone pairs. Its shape is:', options: ['Linear', 'Bent', 'Tetrahedral', 'Trigonal planar'], correctAnswer: 1, explanation: '4 $e^{-}$ groups (tetrahedral $e^{-}$ geometry) but 2 LP → bent molecular shape.', difficulty: 'easy', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'B' },
+  { question: '$NH_{3}$ has ___ molecular geometry.', options: ['Tetrahedral', 'Trigonal pyramidal', 'Trigonal planar', 'Bent'], correctAnswer: 1, explanation: '3 bonds + 1 LP → trigonal pyramidal.', difficulty: 'easy', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'A' },
   { question: 'The bond angle in an ideal trigonal planar molecule is:', options: ['90°', '109.5°', '120°', '180°'], correctAnswer: 2, explanation: '3 groups in a plane: 360°/3 = 120° apart.', difficulty: 'easy', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'B' },
   { question: 'Lone pairs ___ bond angles compared to the ideal geometry.', options: ['Increase', 'Decrease', 'Don\'t affect', 'Double'], correctAnswer: 1, explanation: 'Lone pairs exert greater repulsion → compress bond angles.', difficulty: 'medium', domain: 'bonding', topicSlug: 'vsepr-molecular-geometry', formSet: 'both' },
 
   // ── hybridization-sigma-pi-bonds (batch 2 — had 3, adding 5 → 8)
-  { question: 'A carbon with a triple bond uses ___ hybridization.', options: ['sp', 'sp²', 'sp³', 'sp³d'], correctAnswer: 0, explanation: 'Triple bond = 1 σ + 2 π; 2 groups → sp hybridization (linear).', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'A' },
+  { question: 'A carbon with a triple bond uses ___ hybridization.', options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'], correctAnswer: 0, explanation: 'Triple bond = 1 σ + 2 π; 2 groups → sp hybridization (linear).', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'A' },
   { question: 'How many sigma and pi bonds are in a C=C double bond?', options: ['2σ, 0π', '1σ, 1π', '0σ, 2π', '2σ, 2π'], correctAnswer: 1, explanation: 'A double bond = 1 sigma (head-on) + 1 pi (side-to-side overlap).', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'B' },
-  { question: 'In ethane (C₂H₆), each carbon is ___ hybridized.', options: ['sp', 'sp²', 'sp³', 'unhybridized'], correctAnswer: 2, explanation: '4 groups around each C → sp³.', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'A' },
-  { question: 'sp² hybridization gives ___ geometry.', options: ['Linear', 'Tetrahedral', 'Trigonal planar', 'Octahedral'], correctAnswer: 2, explanation: '3 hybrid orbitals in a plane at 120° → trigonal planar.', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'B' },
+  { question: 'In ethane $(C_{2}H_{6})$, each carbon is ___ hybridized.', options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'], correctAnswer: 2, explanation: '4 groups around each C → $sp^{3}$.', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'A' },
+  { question: '$sp^{2}$ hybridization gives ___ geometry.', options: ['Linear', 'Tetrahedral', 'Trigonal planar', 'Octahedral'], correctAnswer: 2, explanation: '3 hybrid orbitals in a plane at 120° → trigonal planar.', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'B' },
   { question: 'Pi bonds form from ___ overlap of p orbitals.', options: ['Head-on', 'Side-by-side (lateral)', 'Diagonal', 's-orbital'], correctAnswer: 1, explanation: 'Pi bonds = lateral overlap of unhybridized p orbitals above and below the bond axis.', difficulty: 'easy', domain: 'bonding', topicSlug: 'hybridization-sigma-pi-bonds', formSet: 'both' },
 
   // ── types-intermolecular-forces (batch 2 — had 3, adding 5 → 8) ─
   { question: 'Hydrogen bonding occurs when H is bonded to:', options: ['Any element', 'C, Si, or Ge', 'N, O, or F', 'Only F'], correctAnswer: 2, explanation: 'H-bonding requires H attached to highly electronegative N, O, or F.', difficulty: 'easy', domain: 'imf', topicSlug: 'types-intermolecular-forces', formSet: 'A' },
   { question: 'London dispersion forces are present in:', options: ['Only polar molecules', 'Only nonpolar molecules', 'All molecules', 'Only ionic compounds'], correctAnswer: 2, explanation: 'LDF arise from temporary dipoles and exist in ALL molecules/atoms.', difficulty: 'easy', domain: 'imf', topicSlug: 'types-intermolecular-forces', formSet: 'B' },
-  { question: 'Which has the highest boiling point: CH₄, SiH₄, GeH₄, SnH₄?', options: ['CH₄', 'SiH₄', 'GeH₄', 'SnH₄'], correctAnswer: 3, explanation: 'All nonpolar → only LDF → larger molar mass → stronger LDF → higher BP.', difficulty: 'medium', domain: 'imf', topicSlug: 'types-intermolecular-forces', formSet: 'A' },
+  { question: 'Which has the highest boiling point: $CH_{4}$, $SiH_{4}$, $GeH_{4}$, $SnH_{4}$?', options: ['$CH_{4}$', '$SiH_{4}$', '$GeH_{4}$', '$SnH_{4}$'], correctAnswer: 3, explanation: 'All nonpolar → only LDF → larger molar mass → stronger LDF → higher BP.', difficulty: 'medium', domain: 'imf', topicSlug: 'types-intermolecular-forces', formSet: 'A' },
   { question: 'Dipole-dipole forces exist between molecules that are:', options: ['Nonpolar', 'Polar', 'Ionic', 'Metallic'], correctAnswer: 1, explanation: 'Permanent dipoles attract each other → dipole-dipole interaction.', difficulty: 'easy', domain: 'imf', topicSlug: 'types-intermolecular-forces', formSet: 'B' },
   { question: 'Water has an unusually high boiling point due to:', options: ['Its large molar mass', 'Strong hydrogen bonding', 'London dispersion forces', 'Covalent network bonding'], correctAnswer: 1, explanation: 'Extensive H-bonding in water raises BP far above similar-mass molecules.', difficulty: 'easy', domain: 'imf', topicSlug: 'types-intermolecular-forces', formSet: 'both' },
 
@@ -1692,50 +1692,50 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // ── solutions-solubility (batch 2 — had 3, adding 5 → 8) ───────
   { question: '"Like dissolves like" means:', options: ['All substances dissolve in water', 'Polar solutes dissolve in polar solvents', 'Temperature doesn\'t matter', 'Solubility is always high'], correctAnswer: 1, explanation: 'Polar/ionic in polar solvents; nonpolar in nonpolar solvents.', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'A' },
   { question: 'Molarity (M) is defined as:', options: ['Moles solute / kg solvent', 'Moles solute / L solution', 'Grams solute / L solution', 'Moles solute / moles solvent'], correctAnswer: 1, explanation: '$M = n/V$ (moles per liter of solution).', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'B' },
-  { question: 'Dissolving NaCl in water is aided by:', options: ['London forces', 'Ion-dipole interactions', 'Nonpolar bonding', 'Metallic bonding'], correctAnswer: 1, explanation: 'Water dipoles surround Na⁺ and Cl⁻ → ion-dipole interaction.', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'A' },
+  { question: 'Dissolving NaCl in water is aided by:', options: ['London forces', 'Ion-dipole interactions', 'Nonpolar bonding', 'Metallic bonding'], correctAnswer: 1, explanation: 'Water dipoles surround $Na^{+}$ and $Cl^{-}$ → ion-dipole interaction.', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'A' },
   { question: 'A solution with more solute than the equilibrium amount is:', options: ['Unsaturated', 'Saturated', 'Supersaturated', 'Dilute'], correctAnswer: 2, explanation: 'Supersaturated: dissolved solute exceeds the normal solubility limit.', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'B' },
   { question: 'Increasing temperature ___ the solubility of most solid solutes.', options: ['Decreases', 'Increases', 'Does not affect', 'Eliminates'], correctAnswer: 1, explanation: 'Most solid dissolution is endothermic → heat favors dissolving (Le Chatelier).', difficulty: 'easy', domain: 'imf', topicSlug: 'solutions-solubility', formSet: 'both' },
 
   // ── reaction-types (batch 2 — had 3, adding 5 → 8) ─────────────
   { question: 'A synthesis reaction has the form:', options: ['AB → A + B', 'A + B → AB', 'AB + CD → AD + CB', 'A + BC → AC + B'], correctAnswer: 1, explanation: 'Synthesis (combination): two or more reactants → one product.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
-  { question: 'Combustion of a hydrocarbon always produces:', options: ['O₂ and H₂', 'CO₂ and H₂O', 'CO and H₂O', 'C and H₂O'], correctAnswer: 1, explanation: '$C_xH_y + O_2 \\to CO_2 + H_2O$ (complete combustion).', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
-  { question: 'Zn + CuSO₄ → ZnSO₄ + Cu is a ___ reaction.', options: ['Decomposition', 'Synthesis', 'Single replacement', 'Double replacement'], correctAnswer: 2, explanation: 'Zn replaces Cu in the compound → single replacement.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
-  { question: 'AgNO₃ + NaCl → AgCl↓ + NaNO₃ is a ___ reaction.', options: ['Single replacement', 'Double replacement (metathesis)', 'Synthesis', 'Decomposition'], correctAnswer: 1, explanation: 'Cations and anions swap partners → double replacement; AgCl precipitates.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
-  { question: '2 KClO₃ → 2 KCl + 3 O₂ is a ___ reaction.', options: ['Synthesis', 'Single replacement', 'Decomposition', 'Combustion'], correctAnswer: 2, explanation: 'One reactant breaks into two or more products → decomposition.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'both' },
+  { question: 'Combustion of a hydrocarbon always produces:', options: ['$O_{2}$ and $H_{2}$', '$CO_{2}$ and $H_{2}O$', 'CO and $H_{2}O$', 'C and $H_{2}O$'], correctAnswer: 1, explanation: '$C_xH_y + O_2 \\to CO_2 + H_2O$ (complete combustion).', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
+  { question: 'Zn + $CuSO_{4}$ → $ZnSO_{4}$ + Cu is a ___ reaction.', options: ['Decomposition', 'Synthesis', 'Single replacement', 'Double replacement'], correctAnswer: 2, explanation: 'Zn replaces Cu in the compound → single replacement.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'A' },
+  { question: '$AgNO_{3}$ + NaCl → AgCl↓ + $NaNO_{3}$ is a ___ reaction.', options: ['Single replacement', 'Double replacement (metathesis)', 'Synthesis', 'Decomposition'], correctAnswer: 1, explanation: 'Cations and anions swap partners → double replacement; AgCl precipitates.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'B' },
+  { question: '2 $KClO_{3}$ → 2 KCl + 3 $O_{2}$ is a ___ reaction.', options: ['Synthesis', 'Single replacement', 'Decomposition', 'Combustion'], correctAnswer: 2, explanation: 'One reactant breaks into two or more products → decomposition.', difficulty: 'easy', domain: 'reactions', topicSlug: 'reaction-types', formSet: 'both' },
 
   // ── stoichiometry-limiting-reactants (batch 2 — had 3, adding 5 → 8)
   { question: 'The limiting reactant determines:', options: ['The color of products', 'The maximum amount of product formed', 'The reaction speed', 'The catalyst needed'], correctAnswer: 1, explanation: 'The limiting reactant runs out first → caps the product yield.', difficulty: 'easy', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'A' },
-  { question: 'If 4 mol H₂ reacts with 1 mol O₂ ($2H_2 + O_2 \\to 2H_2O$), the limiting reactant is:', options: ['H₂', 'O₂', 'H₂O', 'Neither'], correctAnswer: 1, explanation: '1 mol O₂ requires 2 mol H₂. Only 1 mol O₂ → produces 2 mol H₂O; 2 mol H₂ excess.', difficulty: 'medium', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'B' },
+  { question: 'If 4 mol $H_{2}$ reacts with 1 mol $O_{2}$ ($2H_2 + O_2 \\to 2H_2O$), the limiting reactant is:', options: ['$H_{2}$', '$O_{2}$', '$H_{2}O$', 'Neither'], correctAnswer: 1, explanation: '1 mol $O_{2}$ requires 2 mol $H_{2}$. Only 1 mol $O_{2}$ → produces 2 mol $H_{2}O$; 2 mol $H_{2}$ excess.', difficulty: 'medium', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'B' },
   { question: 'Percent yield = (actual / theoretical) × 100. If 8 g produced out of 10 g theoretical:', options: ['80%', '125%', '8%', '10%'], correctAnswer: 0, explanation: '$(8/10) \\times 100 = 80\\%$.', difficulty: 'easy', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'A' },
   { question: 'In stoichiometry, mole ratios come from:', options: ['Molar masses', 'Coefficients in the balanced equation', 'Densities', 'Electron configurations'], correctAnswer: 1, explanation: 'Balanced equation coefficients give mole ratios of reactants and products.', difficulty: 'easy', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'B' },
   { question: 'The excess reactant is the one that:', options: ['Is used up first', 'Remains after the reaction', 'Has the highest molar mass', 'Is the catalyst'], correctAnswer: 1, explanation: 'Excess reactant = leftover after the limiting reactant is consumed.', difficulty: 'easy', domain: 'reactions', topicSlug: 'stoichiometry-limiting-reactants', formSet: 'both' },
 
   // ── net-ionic-equations (batch 2 — had 3, adding 5 → 8) ────────
   { question: 'Spectator ions are ions that:', options: ['React to form a precipitate', 'Appear unchanged on both sides of the equation', 'Only exist in the gas phase', 'Are always polyatomic'], correctAnswer: 1, explanation: 'Spectator ions don\'t change → cancel out → not in net ionic equation.', difficulty: 'easy', domain: 'reactions', topicSlug: 'net-ionic-equations', formSet: 'A' },
-  { question: 'In the reaction NaOH(aq) + HCl(aq) → NaCl(aq) + H₂O(l), the net ionic equation is:', options: ['Na⁺ + Cl⁻ → NaCl', 'OH⁻ + H⁺ → H₂O', 'NaOH + HCl → NaCl + H₂O', 'Na⁺ + OH⁻ + H⁺ + Cl⁻ → Na⁺ + Cl⁻ + H₂O'], correctAnswer: 1, explanation: 'Na⁺ and Cl⁻ are spectators; net ionic: H⁺ + OH⁻ → H₂O.', difficulty: 'easy', domain: 'reactions', topicSlug: 'net-ionic-equations', formSet: 'B' },
+  { question: 'In the reaction NaOH(aq) + HCl(aq) → NaCl(aq) + $H_{2}O(l)$, the net ionic equation is:', options: ['$Na^{+}$ + $Cl^{-}$ → NaCl', '$OH^{-}$ + $H^{+}$ → $H_{2}O$', 'NaOH + HCl → NaCl + $H_{2}O$', '$Na^{+}$ + $OH^{-}$ + $H^{+}$ + $Cl^{-}$ → $Na^{+}$ + $Cl^{-}$ + $H_{2}O$'], correctAnswer: 1, explanation: '$Na^{+}$ and $Cl^{-}$ are spectators; net ionic: $H^{+}$ + $OH^{-}$ → $H_{2}O$.', difficulty: 'easy', domain: 'reactions', topicSlug: 'net-ionic-equations', formSet: 'B' },
   { question: 'A compound written as molecules (not ions) in an ionic equation is:', options: ['Always a gas', 'A weak electrolyte, solid, or liquid', 'Always an acid', 'Always soluble'], correctAnswer: 1, explanation: 'Weak electrolytes, solids, liquids, and gases are written in molecular form.', difficulty: 'medium', domain: 'reactions', topicSlug: 'net-ionic-equations', formSet: 'A' },
   { question: 'Strong electrolytes are written as ___ in ionic equations.', options: ['Molecules', 'Separated ions', 'Gases', 'Precipitates'], correctAnswer: 1, explanation: 'Strong electrolytes fully dissociate → written as separate ions.', difficulty: 'easy', domain: 'reactions', topicSlug: 'net-ionic-equations', formSet: 'B' },
   { question: 'If mixing two solutions produces no precipitate, no gas, and no water, the net ionic equation is:', options: ['Very long', 'NR (no reaction)', 'A redox equation', 'Always acidic'], correctAnswer: 1, explanation: 'No driving force → no reaction occurs → all ions remain as spectators.', difficulty: 'easy', domain: 'reactions', topicSlug: 'net-ionic-equations', formSet: 'both' },
 
   // ── oxidation-reduction-reactions (batch 2 — had 3, adding 5 → 8)
   { question: 'Oxidation is defined as:', options: ['Gain of electrons', 'Loss of electrons', 'Gain of protons', 'Loss of oxygen'], correctAnswer: 1, explanation: 'OIL RIG: Oxidation Is Loss of electrons.', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'A' },
-  { question: 'In the reaction 2 Mg + O₂ → 2 MgO, Mg is:', options: ['Reduced', 'Oxidized', 'A spectator', 'Unchanged'], correctAnswer: 1, explanation: 'Mg goes from 0 to +2 → loses electrons → oxidized.', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'B' },
-  { question: 'The oxidation state of O in most compounds is:', options: ['+2', '−1', '−2', '0'], correctAnswer: 2, explanation: 'Oxygen is typically −2 (except in peroxides, OF₂, etc.).', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'A' },
+  { question: 'In the reaction 2 Mg + $O_{2}$ → 2 MgO, Mg is:', options: ['Reduced', 'Oxidized', 'A spectator', 'Unchanged'], correctAnswer: 1, explanation: 'Mg goes from 0 to +2 → loses electrons → oxidized.', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'B' },
+  { question: 'The oxidation state of O in most compounds is:', options: ['+2', '−1', '−2', '0'], correctAnswer: 2, explanation: 'Oxygen is typically −2 (except in peroxides, $OF_{2}$, etc.).', difficulty: 'easy', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'A' },
   { question: 'The substance that gets reduced is the:', options: ['Reducing agent', 'Oxidizing agent', 'Catalyst', 'Solvent'], correctAnswer: 1, explanation: 'The oxidizing agent gains electrons (is reduced) and causes oxidation of the other.', difficulty: 'medium', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'B' },
   { question: 'A disproportionation reaction is when an element is simultaneously:', options: ['Dissolved and precipitated', 'Oxidized and reduced', 'Heated and cooled', 'Ionized and neutralized'], correctAnswer: 1, explanation: 'Same element acts as both oxidizing and reducing agent.', difficulty: 'hard', domain: 'reactions', topicSlug: 'oxidation-reduction-reactions', formSet: 'both' },
 
   // ── reaction-rates-and-rate-laws (batch 2 — had 3, adding 5 → 8)
   { question: 'Increasing temperature speeds up a reaction because:', options: ['It lowers activation energy', 'It increases the fraction of molecules with sufficient energy', 'It changes the products', 'It decreases the rate constant'], correctAnswer: 1, explanation: 'Higher T → more molecules exceed $E_a$ → more effective collisions.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'A' },
   { question: 'A catalyst speeds up a reaction by:', options: ['Increasing temperature', 'Providing an alternative pathway with lower $E_a$', 'Changing the equilibrium constant', 'Adding more reactant'], correctAnswer: 1, explanation: 'Catalysts lower the activation energy barrier.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'B' },
-  { question: 'For rate = k[A]²[B], the overall reaction order is:', options: ['2', '3', '1', '4'], correctAnswer: 1, explanation: 'Sum of exponents: 2 + 1 = 3 (third-order overall).', difficulty: 'easy', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'A' },
+  { question: 'For rate = k[A]$ {}^{2}$[B], the overall reaction order is:', options: ['2', '3', '1', '4'], correctAnswer: 1, explanation: 'Sum of exponents: 2 + 1 = 3 (third-order overall).', difficulty: 'easy', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'A' },
   { question: 'If doubling [A] quadruples the rate, the reaction is ___ order in A.', options: ['Zero', 'First', 'Second', 'Third'], correctAnswer: 2, explanation: '$2^n = 4 \\Rightarrow n = 2$. Second-order in A.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'B' },
-  { question: 'Units of a first-order rate constant are:', options: ['M/s', 's⁻¹', 'M⁻¹s⁻¹', 'M⁻²s⁻¹'], correctAnswer: 1, explanation: 'rate = k[A]; $k = \\text{rate}/[A] = (M/s)/M = s^{-1}$.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'both' },
+  { question: 'Units of a first-order rate constant are:', options: ['M/s', '$s^{-1}$', '$M^{-1}s^{-1}$', '$M^{-2}s^{-1}$'], correctAnswer: 1, explanation: 'rate = k[A]; $k = \\text{rate}/[A] = (M/s)/M = s^{-1}$.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'reaction-rates-and-rate-laws', formSet: 'both' },
 
   // ── integrated-rate-laws (batch 2 — had 3, adding 5 → 8) ───────
-  { question: 'A first-order reaction has a linear plot of:', options: ['[A] vs. t', 'ln[A] vs. t', '1/[A] vs. t', '[A]² vs. t'], correctAnswer: 1, explanation: 'First-order: $\\ln[A] = -kt + \\ln[A]_0$ → linear in ln[A] vs. t.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'A' },
+  { question: 'A first-order reaction has a linear plot of:', options: ['[A] vs. t', 'ln[A] vs. t', '1/[A] vs. t', '[A]$ {}^{2}$ vs. t'], correctAnswer: 1, explanation: 'First-order: $\\ln[A] = -kt + \\ln[A]_0$ → linear in ln[A] vs. t.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'A' },
   { question: 'The half-life of a first-order reaction is:', options: ['$t_{1/2} = 0.693/k$', '$t_{1/2} = 1/(k[A]_0)$', '$t_{1/2} = [A]_0/(2k)$', '$t_{1/2} = k/0.693$'], correctAnswer: 0, explanation: '$t_{1/2} = \\ln 2 / k = 0.693/k$; independent of initial concentration.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'B' },
-  { question: 'For a zero-order reaction, the rate is:', options: ['Proportional to [A]', 'Proportional to [A]²', 'Constant (independent of [A])', 'Inversely proportional to [A]'], correctAnswer: 2, explanation: 'Zero-order: rate = k (constant regardless of concentration).', difficulty: 'easy', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'A' },
-  { question: 'A second-order reaction has a linear plot of:', options: ['[A] vs. t', 'ln[A] vs. t', '1/[A] vs. t', '1/[A]² vs. t'], correctAnswer: 2, explanation: 'Second-order: $1/[A] = kt + 1/[A]_0$ → linear in 1/[A] vs. t.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'B' },
+  { question: 'For a zero-order reaction, the rate is:', options: ['Proportional to [A]', 'Proportional to [A]$ {}^{2}$', 'Constant (independent of [A])', 'Inversely proportional to [A]'], correctAnswer: 2, explanation: 'Zero-order: rate = k (constant regardless of concentration).', difficulty: 'easy', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'A' },
+  { question: 'A second-order reaction has a linear plot of:', options: ['[A] vs. t', 'ln[A] vs. t', '1/[A] vs. t', '1/[A]$ {}^{2}$ vs. t'], correctAnswer: 2, explanation: 'Second-order: $1/[A] = kt + 1/[A]_0$ → linear in 1/[A] vs. t.', difficulty: 'easy', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'B' },
   { question: 'In a first-order reaction, the half-life ___ as the reaction proceeds.', options: ['Increases', 'Decreases', 'Stays the same', 'Doubles'], correctAnswer: 2, explanation: '$t_{1/2} = 0.693/k$; doesn\'t depend on [A] → constant throughout.', difficulty: 'medium', domain: 'kinetics', topicSlug: 'integrated-rate-laws', formSet: 'both' },
 
   // ── activation-energy-arrhenius (batch 2 — had 3, adding 5 → 8) ─
@@ -1798,30 +1798,30 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'After disturbing an equilibrium, the system adjusts until $Q$ ___ $K$ again.', options: ['Exceeds', 'Equals', 'Is less than', 'Is unrelated to'], correctAnswer: 1, explanation: 'The system always re-establishes $Q = K$.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'both' },
 
   // ── acid-base-theories-ph (batch 2 — had 4, adding 4 → 8) ──────
-  { question: 'A Brønsted-Lowry acid is a:', options: ['Proton acceptor', 'Electron pair donor', 'Proton donor', 'Electron acceptor'], correctAnswer: 2, explanation: 'Brønsted-Lowry: acid = proton (H⁺) donor.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'A' },
+  { question: 'A Brønsted-Lowry acid is a:', options: ['Proton acceptor', 'Electron pair donor', 'Proton donor', 'Electron acceptor'], correctAnswer: 2, explanation: 'Brønsted-Lowry: acid = proton $(H^{+})$ donor.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'A' },
   { question: 'What is the pH of a 0.001 M HCl solution?', options: ['1', '3', '7', '11'], correctAnswer: 1, explanation: 'HCl strong acid: $[H^+] = 10^{-3}$ M; $pH = -\\log(10^{-3}) = 3$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'B' },
   { question: 'pH + pOH =', options: ['7', '10', '14', '1'], correctAnswer: 2, explanation: 'At 25°C: $pH + pOH = 14$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'A' },
-  { question: 'A Lewis acid is:', options: ['A proton donor', 'An electron-pair acceptor', 'An electron-pair donor', 'A proton acceptor'], correctAnswer: 1, explanation: 'Lewis acid = electron-pair acceptor (e.g., BF₃, Al³⁺).', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'both' },
+  { question: 'A Lewis acid is:', options: ['A proton donor', 'An electron-pair acceptor', 'An electron-pair donor', 'A proton acceptor'], correctAnswer: 1, explanation: 'Lewis acid = electron-pair acceptor (e.g., $BF_{3}$, $Al^{3+}$).', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-theories-ph', formSet: 'both' },
 
   // ── weak-acids-bases-ka-kb (batch 2 — had 3, adding 5 → 8) ─────
   { question: 'For a weak acid HA, $K_a$ expresses:', options: ['$[H^+][A^-]/[HA]$', '$[HA]/[H^+][A^-]$', '$[H^+]/[HA]$', '$[A^-]/[H^+]$'], correctAnswer: 0, explanation: '$K_a = [H^+][A^-]/[HA]$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'A' },
-  { question: 'The conjugate base of H₂O is:', options: ['H₃O⁺', 'OH⁻', 'O²⁻', 'H₂O₂'], correctAnswer: 1, explanation: 'H₂O loses a proton → OH⁻.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'B' },
+  { question: 'The conjugate base of $H_{2}O$ is:', options: ['$H_{3}O^{+}$', '$OH^{-}$', '$O^{2-}$', '$H_{2}O_{2}$'], correctAnswer: 1, explanation: '$H_{2}O$ loses a proton → $OH^{-}$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'B' },
   { question: '$K_a \\times K_b$ for a conjugate acid-base pair equals:', options: ['1', '$K_w = 10^{-14}$', '$10^{-7}$', '14'], correctAnswer: 1, explanation: '$K_a \\cdot K_b = K_w = 1.0 \\times 10^{-14}$ at 25°C.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'A' },
   { question: 'A larger $K_a$ value means the acid is:', options: ['Weaker', 'Stronger', 'Neutral', 'A base'], correctAnswer: 1, explanation: 'Larger $K_a$ → more dissociation → stronger acid.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'B' },
-  { question: 'Percent ionization of a weak acid ___ as initial concentration decreases.', options: ['Decreases', 'Increases', 'Stays the same', 'Becomes zero'], correctAnswer: 1, explanation: 'More dilute → higher fraction ionized (even though [H⁺] decreases).', difficulty: 'hard', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'both' },
+  { question: 'Percent ionization of a weak acid ___ as initial concentration decreases.', options: ['Decreases', 'Increases', 'Stays the same', 'Becomes zero'], correctAnswer: 1, explanation: 'More dilute → higher fraction ionized (even though [$H^{+}$] decreases).', difficulty: 'hard', domain: 'acids-bases', topicSlug: 'weak-acids-bases-ka-kb', formSet: 'both' },
 
   // ── buffer-solutions-henderson-hasselbalch (batch 2 — had 3, adding 5 → 8)
   { question: 'A buffer resists pH changes because it contains:', options: ['A strong acid only', 'A weak acid and its conjugate base', 'Pure water', 'A strong base only'], correctAnswer: 1, explanation: 'Buffer = weak acid/conjugate base pair (or weak base/conjugate acid).', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'buffer-solutions-henderson-hasselbalch', formSet: 'A' },
   { question: 'Henderson-Hasselbalch: $pH =$', options: ['$pK_a + \\log([A^-]/[HA])$', '$pK_a - \\log([A^-]/[HA])$', '$pK_b + \\log([HA]/[A^-])$', '$-\\log[H^+]$'], correctAnswer: 0, explanation: '$pH = pK_a + \\log([A^-]/[HA])$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'buffer-solutions-henderson-hasselbalch', formSet: 'B' },
   { question: 'When $[HA] = [A^-]$, $pH =$', options: ['7', '14', '$pK_a$', '0'], correctAnswer: 2, explanation: '$\\log(1) = 0$ → $pH = pK_a$.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'buffer-solutions-henderson-hasselbalch', formSet: 'A' },
   { question: 'Buffer capacity is greatest when:', options: ['pH is far from $pK_a$', 'pH ≈ $pK_a$ and concentrations are high', 'The solution is very dilute', 'Only the weak acid is present'], correctAnswer: 1, explanation: 'Maximum capacity near $pK_a$; higher absolute concentrations → more buffering.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'buffer-solutions-henderson-hasselbalch', formSet: 'B' },
-  { question: 'Adding small amounts of strong acid to a buffer converts ___ to ___.', options: ['HA to A⁻', 'A⁻ to HA', 'H₂O to OH⁻', 'Salt to acid'], correctAnswer: 1, explanation: 'Added H⁺ reacts with A⁻ → HA, consuming the acid and resisting pH drop.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'buffer-solutions-henderson-hasselbalch', formSet: 'both' },
+  { question: 'Adding small amounts of strong acid to a buffer converts ___ to ___.', options: ['HA to $A^{-}$', '$A^{-}$ to HA', '$H_{2}O$ to $OH^{-}$', 'Salt to acid'], correctAnswer: 1, explanation: 'Added $H^{+}$ reacts with $A^{-}$ → HA, consuming the acid and resisting pH drop.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'buffer-solutions-henderson-hasselbalch', formSet: 'both' },
 
   // ── acid-base-titrations (batch 2 — had 3, adding 5 → 8) ───────
   { question: 'At the equivalence point of a strong acid–strong base titration, pH =', options: ['0', '7', '14', '<7'], correctAnswer: 1, explanation: 'Strong acid + strong base → neutral salt → pH = 7.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'A' },
-  { question: 'The half-equivalence point of a weak acid titration has pH =', options: ['7', '$pK_a$', '$pK_b$', '14'], correctAnswer: 1, explanation: 'At half-equivalence: [HA] = [A⁻] → $pH = pK_a$.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'B' },
+  { question: 'The half-equivalence point of a weak acid titration has pH =', options: ['7', '$pK_a$', '$pK_b$', '14'], correctAnswer: 1, explanation: 'At half-equivalence: [HA] = [$A^{-}$] → $pH = pK_a$.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'B' },
   { question: 'Phenolphthalein turns pink above pH ≈', options: ['4.5', '7', '8.2', '12'], correctAnswer: 2, explanation: 'Phenolphthalein: colorless below ~8.2, pink above.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'A' },
-  { question: 'At the equivalence point of a weak acid–strong base titration, pH is:', options: ['7', '<7', '>7', '0'], correctAnswer: 2, explanation: 'The conjugate base A⁻ remains → basic solution → pH > 7.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'B' },
+  { question: 'At the equivalence point of a weak acid–strong base titration, pH is:', options: ['7', '<7', '>7', '0'], correctAnswer: 2, explanation: 'The conjugate base $A^{-}$ remains → basic solution → pH > 7.', difficulty: 'medium', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'B' },
   { question: 'A titration curve\'s steepest region occurs near the:', options: ['Start', 'Buffer region', 'Equivalence point', 'End'], correctAnswer: 2, explanation: 'Near equivalence, small volume additions cause large pH changes.', difficulty: 'easy', domain: 'acids-bases', topicSlug: 'acid-base-titrations', formSet: 'both' },
 
   // ── galvanic-cells-potentials (batch 2 — had 4, adding 4 → 8) ──
@@ -1840,9 +1840,9 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // ── electrolytic-cells-faraday (batch 2 — had 3, adding 5 → 8) ──
   { question: 'In electrolysis, electrical energy drives a ___ reaction.', options: ['Spontaneous', 'Non-spontaneous', 'Equilibrium', 'Nuclear'], correctAnswer: 1, explanation: 'Electrolytic cells use external current to force non-spontaneous reactions.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'A' },
   { question: 'Faraday\'s law: $m = (MIt)/(nF)$. Depositing 1 mol of Cu (n=2) requires ___ coulombs.', options: ['96485', '192970', '48243', '289455'], correctAnswer: 1, explanation: '$Q = nF = 2(96485) = 192970$ C.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'B' },
-  { question: 'In electrolysis of molten NaCl, Na is produced at the:', options: ['Anode', 'Cathode', 'Salt bridge', 'Wire'], correctAnswer: 1, explanation: 'Na⁺ is reduced (gains electrons) at the cathode → Na metal.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'A' },
+  { question: 'In electrolysis of molten NaCl, Na is produced at the:', options: ['Anode', 'Cathode', 'Salt bridge', 'Wire'], correctAnswer: 1, explanation: '$Na^{+}$ is reduced (gains electrons) at the cathode → Na metal.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'A' },
   { question: 'Electroplating uses ___ cells.', options: ['Galvanic', 'Electrolytic', 'Fuel', 'Concentration'], correctAnswer: 1, explanation: 'External current drives metal deposition onto an object → electrolytic.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'B' },
-  { question: 'In electrolysis of aqueous NaCl, ___ is produced at the anode instead of Cl₂ if the overvoltage of Cl₂ is too high.', options: ['Na metal', 'H₂', 'O₂', 'NaOH'], correctAnswer: 2, explanation: 'Water can be oxidized at the anode to produce O₂ if Cl₂ overvoltage is too large.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'both' },
+  { question: 'In electrolysis of aqueous NaCl, ___ is produced at the anode instead of $Cl_{2}$ if the overvoltage of $Cl_{2}$ is too high.', options: ['Na metal', '$H_{2}$', '$O_{2}$', 'NaOH'], correctAnswer: 2, explanation: 'Water can be oxidized at the anode to produce $O_{2}$ if $Cl_{2}$ overvoltage is too large.', difficulty: 'hard', domain: 'electrochemistry', topicSlug: 'electrolytic-cells-faraday', formSet: 'both' },
 
   // ── properties-states-matter (batch 2 — had 4, adding 4 → 8) ───
   { question: 'In the solid state, particles are:', options: ['Far apart and moving freely', 'Close together in a fixed arrangement', 'Close together but flowing', 'Ionized'], correctAnswer: 1, explanation: 'Solids: fixed positions, vibrate in place.', difficulty: 'easy', domain: 'imf', topicSlug: 'properties-states-matter', formSet: 'A' },
@@ -1872,7 +1872,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: '$\\Delta G° = -nFE°$. A larger positive $E°$ means:', options: ['Less spontaneous', 'More spontaneous', 'At equilibrium', 'Non-spontaneous'], correctAnswer: 1, explanation: 'Larger $E°$ → more negative $\\Delta G°$ → more spontaneous.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
   { question: 'The relationship $\\ln K = nFE°/(RT)$ shows that a positive $E°$ corresponds to:', options: ['$K < 1$', '$K = 1$', '$K > 1$', '$K = 0$'], correctAnswer: 2, explanation: 'Positive $E°$ → positive exponent → $K > 1$.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'B' },
   { question: 'A dead battery has $E =$', options: ['$E°$', 'A very large value', '0', '-1'], correctAnswer: 2, explanation: 'Dead battery: $Q = K$, $E = 0$.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
-  { question: 'Fuel cells convert chemical energy to electrical energy and are similar to ___ cells.', options: ['Electrolytic', 'Galvanic', 'Concentration only', 'Nuclear'], correctAnswer: 1, explanation: 'Fuel cells are galvanic cells with continuous fuel supply (e.g., H₂/O₂).', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'both' },
+  { question: 'Fuel cells convert chemical energy to electrical energy and are similar to ___ cells.', options: ['Electrolytic', 'Galvanic', 'Concentration only', 'Nuclear'], correctAnswer: 1, explanation: 'Fuel cells are galvanic cells with continuous fuel supply (e.g., $H_{2}/O_{2}$).', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'both' },
 ]
 
 /* ------------------------------------------------------------------ */

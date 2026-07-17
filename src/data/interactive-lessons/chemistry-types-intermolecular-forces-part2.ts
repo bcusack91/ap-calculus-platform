@@ -30,24 +30,24 @@ export const chemTypesIntermolecularForcesPart2Data = {
           {
             question: 'Which of the following molecules is polar and therefore experiences dipole-dipole forces?',
             options: [
-              'CO₂ (linear)',
-              'CH₄ (tetrahedral)',
+              '$CO_{2}$ (linear)',
+              '$CH_{4}$ (tetrahedral)',
               'HCl (linear)',
-              'CCl₄ (tetrahedral)'
+              '$CCl_{4}$ (tetrahedral)'
             ],
             correctAnswer: 2,
-            explanation: 'HCl is polar because it has one polar bond and no symmetry to cancel the dipole. CO₂ is linear with equal and opposite bond dipoles that cancel. CH₄ and CCl₄ are symmetric tetrahedral molecules whose bond dipoles cancel.'
+            explanation: 'HCl is polar because it has one polar bond and no symmetry to cancel the dipole. $CO_{2}$ is linear with equal and opposite bond dipoles that cancel. $CH_{4}$ and $CCl_{4}$ are symmetric tetrahedral molecules whose bond dipoles cancel.'
           },
           {
-            question: 'Why does CO₂ NOT experience dipole-dipole forces despite having polar C=O bonds?',
+            question: 'Why does $CO_{2}$ NOT experience dipole-dipole forces despite having polar C=O bonds?',
             options: [
               'Carbon and oxygen have the same electronegativity',
               'The linear geometry causes the bond dipoles to cancel, making the molecule nonpolar',
-              'CO₂ is an ionic compound',
+              '$CO_{2}$ is an ionic compound',
               'Double bonds cannot be polar'
             ],
             correctAnswer: 1,
-            explanation: 'CO₂ has two polar C=O bonds, but the linear geometry (180°) causes the two bond dipoles to point in exactly opposite directions, canceling each other out. The molecule has no net dipole moment, so it is nonpolar.'
+            explanation: '$CO_{2}$ has two polar C=O bonds, but the linear geometry (180°) causes the two bond dipoles to point in exactly opposite directions, canceling each other out. The molecule has no net dipole moment, so it is nonpolar.'
           }
         ]
       }
@@ -93,7 +93,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
       id: 'if-dd-examples',
       type: 'text',
       title: 'Examples of Dipole-Dipole Molecules',
-      content: `Common molecules that experience dipole-dipole forces:\n\n| Molecule | Why It\'s Polar | Geometry |\n|----------|---------------|----------|\n| HCl | H–Cl bond has large $\\Delta$EN | Linear |\n| HF | H–F bond is highly polar | Linear |\n| CH₃Cl | C–Cl bond is polar; asymmetric shape | Tetrahedral (but not symmetric) |\n| SO₂ | Two S=O bonds in bent geometry | Bent |\n| CHCl₃ | Three C–Cl bonds + one C–H; asymmetric | Tetrahedral (not symmetric) |\n\n---\n\nMolecules that are NOT polar (only LDF):\n\n| Molecule | Why Nonpolar |\n|----------|--------------|\n| CO₂ | Linear — bond dipoles cancel |\n| CH₄ | Symmetric tetrahedral — bond dipoles cancel |\n| BF₃ | Symmetric trigonal planar — bond dipoles cancel |\n| N₂, O₂ | Identical atoms — no polar bonds at all |`
+      content: `Common molecules that experience dipole-dipole forces:\n\n| Molecule | Why It\'s Polar | Geometry |\n|----------|---------------|----------|\n| HCl | H–Cl bond has large $\\Delta$EN | Linear |\n| HF | H–F bond is highly polar | Linear |\n| $CH_{3}Cl$ | C–Cl bond is polar; asymmetric shape | Tetrahedral (but not symmetric) |\n| $SO_{2}$ | Two S=O bonds in bent geometry | Bent |\n| $CHCl_{3}$ | Three C–Cl bonds + one C–H; asymmetric | Tetrahedral (not symmetric) |\n\n---\n\nMolecules that are NOT polar (only LDF):\n\n| Molecule | Why Nonpolar |\n|----------|--------------|\n| $CO_{2}$ | Linear — bond dipoles cancel |\n| $CH_{4}$ | Symmetric tetrahedral — bond dipoles cancel |\n| $BF_{3}$ | Symmetric trigonal planar — bond dipoles cancel |\n| $N_{2}$, $O_{2}$ | Identical atoms — no polar bonds at all |`
     },
     {
       id: 'if-dd-identify',
@@ -105,16 +105,16 @@ export const chemTypesIntermolecularForcesPart2Data = {
           {
             question: 'Which molecule experiences dipole-dipole forces?',
             options: [
-              'N₂',
-              'BF₃ (trigonal planar)',
-              'SO₂ (bent)',
-              'CH₄ (tetrahedral)'
+              '$N_{2}$',
+              '$BF_{3}$ (trigonal planar)',
+              '$SO_{2}$ (bent)',
+              '$CH_{4}$ (tetrahedral)'
             ],
             correctAnswer: 2,
-            explanation: 'SO₂ has a bent geometry, so the bond dipoles do NOT cancel. It has a net dipole moment and experiences dipole-dipole forces. N₂ is nonpolar (identical atoms), BF₃ is symmetric (dipoles cancel), and CH₄ is symmetric tetrahedral (dipoles cancel).'
+            explanation: '$SO_{2}$ has a bent geometry, so the bond dipoles do NOT cancel. It has a net dipole moment and experiences dipole-dipole forces. $N_{2}$ is nonpolar (identical atoms), $BF_{3}$ is symmetric (dipoles cancel), and $CH_{4}$ is symmetric tetrahedral (dipoles cancel).'
           },
           {
-            question: 'A polar molecule like CHCl₃ experiences which types of intermolecular forces?',
+            question: 'A polar molecule like $CHCl_{3}$ experiences which types of intermolecular forces?',
             options: [
               'Only dipole-dipole forces',
               'Only London Dispersion Forces',
@@ -135,7 +135,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
       exercise: {
         questions: [
           {
-            question: 'Propane (C₃H₈, MW = 44) boils at -42°C. Acetaldehyde (CH₃CHO, MW = 44) boils at 20°C. Both have similar molar masses. What explains the higher boiling point of acetaldehyde?',
+            question: 'Propane ($C_{3}H_{8}$, MW = 44) boils at -42°C. Acetaldehyde ($CH_{3}CHO$, MW = 44) boils at 20°C. Both have similar molar masses. What explains the higher boiling point of acetaldehyde?',
             options: [
               'Acetaldehyde has more electrons',
               'Propane has stronger hydrogen bonds',

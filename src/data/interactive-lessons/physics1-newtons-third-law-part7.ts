@@ -65,15 +65,15 @@ $$\\vec{F}_{A \\text{ on } B} = -\\vec{F}_{B \\text{ on } A}$$
             explanation: 'Newton\'s Third Law: the forces are always equal regardless of who initiates the push or the masses involved. The girl accelerates more because she has less mass.'
           },
           {
-            question: 'In an Atwood machine with $m_1 = 3$ kg and $m_2 = 7$ kg, the acceleration is ($g = 10$ m/s²):',
+            question: 'In an Atwood machine with $m_1 = 3$ kg and $m_2 = 7$ kg, the acceleration is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s²',
-              '4 m/s²',
-              '7 m/s²',
-              '10 m/s²'
+              '2 $m/s^{2}$',
+              '4 $m/s^{2}$',
+              '7 $m/s^{2}$',
+              '10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = (m_2 - m_1)g/(m_1 + m_2) = (7-3)(10)/(7+3) = 40/10 = 4$ m/s².'
+            explanation: '$a = (m_2 - m_1)g/(m_1 + m_2) = (7-3)(10)/(7+3) = 40/10 = 4$ $m/s^{2}$.'
           },
           {
             question: 'Block A (2 kg) is on top of block B (3 kg) on a frictionless floor. A horizontal force of 25 N is applied to B. What horizontal force accelerates A?',
@@ -84,7 +84,7 @@ $$\\vec{F}_{A \\text{ on } B} = -\\vec{F}_{B \\text{ on } A}$$
               '5 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = 25/(2+3) = 5$ m/s². The force on A is friction from B: $F = m_A a = 2 \\times 5 = 10$ N.'
+            explanation: '$a = 25/(2+3) = 5$ $m/s^{2}$. The force on A is friction from B: $F = m_A a = 2 \\times 5 = 10$ N.'
           }
         ]
       }
@@ -95,9 +95,9 @@ $$\\vec{F}_{A \\text{ on } B} = -\\vec{F}_{B \\text{ on } A}$$
       content: `
 **AP-Style Free Response** 🧮
 
-A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m_2 = 2$ kg hanging off the edge. Use $g = 10$ m/s².
+A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m_2 = 2$ kg hanging off the edge. Use $g = 10$ $m/s^{2}$.
 
-1) Find the acceleration of the system (in m/s²).
+1) Find the acceleration of the system $(in m/s^{2})$.
 
 2) Find the tension in the string (in N).
 
@@ -109,7 +109,7 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
         hint1: '$a = m_2 g/(m_1 + m_2) = 2(10)/10$.',
         hint2: '$T = m_1 a = 8 \\times 2$. Or: $T = m_2(g - a) = 2(10-2)$.',
         hint3: '$d = \\frac{1}{2}at^2 \\Rightarrow t = \\sqrt{2d/a} = \\sqrt{2(1.5)/2}$.',
-        explanation: '1) $a = 2(10)/10 = 2$ m/s². 2) $T = 8(2) = 16$ N. Check: $16 < m_2 g = 20$ ✓. 3) $t = \\sqrt{2(1.5)/2} = \\sqrt{1.5} = 1.22$ s.'
+        explanation: '1) $a = 2(10)/10 = 2$ $m/s^{2}$. 2) $T = 8(2) = 16$ N. Check: $16 < m_2 g = 20$ ✓. 3) $t = \\sqrt{2(1.5)/2} = \\sqrt{1.5} = 1.22$ s.'
       }
     },
     {
@@ -161,7 +161,7 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
             explanation: '$a = F/(m + 3m) = F/(4m)$. Contact force = $3m \\times F/(4m) = 3F/4$.'
           },
           {
-            question: 'A string connects a 4 kg block (on a frictionless table) to a 1 kg hanging block. The tension in the string is ($g = 10$ m/s²):',
+            question: 'A string connects a 4 kg block (on a frictionless table) to a 1 kg hanging block. The tension in the string is ($g = 10$ $m/s^{2}$):',
             options: [
               '2 N',
               '8 N',
@@ -169,7 +169,7 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
               '40 N'
             ],
             correctAnswer: 1,
-            explanation: '$a = m_2 g/(m_1 + m_2) = 1(10)/5 = 2$ m/s². $T = m_1 a = 4(2) = 8$ N.'
+            explanation: '$a = m_2 g/(m_1 + m_2) = 1(10)/5 = 2$ $m/s^{2}$. $T = m_1 a = 4(2) = 8$ N.'
           }
         ]
       }
@@ -183,7 +183,7 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
       exercise: {
         questions: [
           {
-            question: 'A person of mass 70 kg stands on a scale in an elevator. The scale reads 560 N. What is the elevator doing? ($g = 9.8$ m/s², $mg = 686$ N)',
+            question: 'A person of mass 70 kg stands on a scale in an elevator. The scale reads 560 N. What is the elevator doing? ($g = 9.8$ $m/s^{2}$, $mg = 686$ N)',
             options: [
               'Accelerating upward',
               'Moving upward at constant velocity',
@@ -191,7 +191,7 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
               'In free fall'
             ],
             correctAnswer: 2,
-            explanation: '$N = 560 < mg = 686$, so apparent weight is less than true weight. This means the elevator is accelerating downward. $a = g - N/m = 9.8 - 560/70 = 9.8 - 8 = 1.8$ m/s² downward.'
+            explanation: '$N = 560 < mg = 686$, so apparent weight is less than true weight. This means the elevator is accelerating downward. $a = g - N/m = 9.8 - 560/70 = 9.8 - 8 = 1.8$ $m/s^{2}$ downward.'
           },
           {
             question: 'An Atwood machine has masses $m$ and $4m$. The tension in the string is:',

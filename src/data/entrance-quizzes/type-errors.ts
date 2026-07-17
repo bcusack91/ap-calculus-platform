@@ -11,13 +11,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'te-ent-1a',
     question: 'A Type I error is:',
     options: [
-      'Failing to reject a false H₀',
-      'Rejecting a true H₀ (false alarm)',
-      'Correctly rejecting a false H₀',
-      'Correctly failing to reject a true H₀'
+      'Failing to reject a false $H_{0}$',
+      'Rejecting a true $H_{0}$ (false alarm)',
+      'Correctly rejecting a false $H_{0}$',
+      'Correctly failing to reject a true $H_{0}$'
     ],
     correctIndex: 1,
-    explanation: 'A Type I error is rejecting H₀ when it is actually true — a false alarm or false positive. The probability of a Type I error equals α, the significance level.',
+    explanation: 'A Type I error is rejecting $H_{0}$ when it is actually true — a false alarm or false positive. The probability of a Type I error equals α, the significance level.',
     partNumber: 1,
     partTitle: 'Type I Errors'
   },
@@ -31,7 +31,7 @@ const questions: EntranceQuizQuestion[] = [
       'Insufficient power'
     ],
     correctIndex: 2,
-    explanation: 'Concluding a drug works (rejecting H₀: drug has no effect) when it actually doesn\'t work (H₀ is true) is a Type I error — a false positive.',
+    explanation: 'Concluding a drug works (rejecting $H_{0}$: drug has no effect) when it actually doesn\'t work ($H_{0}$ is true) is a Type I error — a false positive.',
     partNumber: 1,
     partTitle: 'Type I Errors'
   },
@@ -41,13 +41,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'te-ent-2a',
     question: 'A Type II error is:',
     options: [
-      'Rejecting H₀ when it is true',
-      'Failing to reject H₀ when Hₐ is actually true (missed detection)',
+      'Rejecting $H_{0}$ when it is true',
+      'Failing to reject $H_{0}$ when $H_{a}$ is actually true (missed detection)',
       'Choosing the wrong significance level',
       'Using a one-tailed test when a two-tailed test is needed'
     ],
     correctIndex: 1,
-    explanation: 'A Type II error is failing to reject H₀ when Hₐ is actually true — a missed detection or false negative. The probability of a Type II error is denoted β.',
+    explanation: 'A Type II error is failing to reject $H_{0}$ when $H_{a}$ is actually true — a missed detection or false negative. The probability of a Type II error is denoted β.',
     partNumber: 2,
     partTitle: 'Type II Errors'
   },
@@ -61,7 +61,7 @@ const questions: EntranceQuizQuestion[] = [
       'Statistical significance'
     ],
     correctIndex: 2,
-    explanation: 'Concluding a drug doesn\'t work (failing to reject H₀) when it actually does work (Hₐ is true) is a Type II error — a false negative.',
+    explanation: 'Concluding a drug doesn\'t work (failing to reject $H_{0}$) when it actually does work ($H_{a}$ is true) is a Type II error — a false negative.',
     partNumber: 2,
     partTitle: 'Type II Errors'
   },
@@ -72,12 +72,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'The power of a test is defined as:',
     options: [
       'The probability of making a Type I error',
-      '1 − β, the probability of correctly rejecting a false H₀',
+      '1 − β, the probability of correctly rejecting a false $H_{0}$',
       'The significance level α',
-      'The probability that H₀ is true'
+      'The probability that $H_{0}$ is true'
     ],
     correctIndex: 1,
-    explanation: 'Power = 1 − β = P(correctly rejecting a false H₀). Higher power means the test is better at detecting a real effect when one exists.',
+    explanation: 'Power = 1 − β = P(correctly rejecting a false $H_{0}$). Higher power means the test is better at detecting a real effect when one exists.',
     partNumber: 3,
     partTitle: 'Power of a Test'
   },
@@ -102,12 +102,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'If α = 0.05, this means:',
     options: [
       'We accept a 5% chance of a Type II error',
-      'We accept a 5% chance of a Type I error (rejecting a true H₀)',
+      'We accept a 5% chance of a Type I error $(rejecting a true H_{0})$',
       'The test has 5% power',
       '5% of the data is significant'
     ],
     correctIndex: 1,
-    explanation: 'α = 0.05 means we accept a 5% risk of committing a Type I error — rejecting H₀ when it is actually true.',
+    explanation: 'α = 0.05 means we accept a 5% risk of committing a Type I error — rejecting $H_{0}$ when it is actually true.',
     partNumber: 4,
     partTitle: 'Significance Level α'
   },
@@ -203,15 +203,15 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'te-ent-7b',
-    question: 'Why is the phrase "accept H₀" considered incorrect in statistics?',
+    question: 'Why is the phrase "accept $H_{0}$" considered incorrect in statistics?',
     options: [
-      'Because we should say "prove H₀" instead',
-      'Because failing to reject H₀ does not prove H₀ is true — we simply lack sufficient evidence against it',
-      'Because H₀ is always false',
-      'Because "accept" is only used for Hₐ'
+      'Because we should say "prove $H_{0}$" instead',
+      'Because failing to reject $H_{0}$ does not prove $H_{0}$ is true — we simply lack sufficient evidence against it',
+      'Because $H_{0}$ is always false',
+      'Because "accept" is only used for $H_{a}$'
     ],
     correctIndex: 1,
-    explanation: '"Fail to reject H₀" ≠ "accept H₀." We never prove H₀ is true — we simply lack sufficient evidence to reject it. The absence of evidence is not evidence of absence.',
+    explanation: '"Fail to reject $H_{0}$" ≠ "accept $H_{0}$." We never prove $H_{0}$ is true — we simply lack sufficient evidence to reject it. The absence of evidence is not evidence of absence.',
     partNumber: 7,
     partTitle: 'AP Review & Applications'
   }

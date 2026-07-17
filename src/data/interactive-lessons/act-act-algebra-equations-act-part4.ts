@@ -109,7 +109,7 @@ $$-0.30x = -2.4 \\implies x = 8$$
 
 **Answer:** 8 liters of 40% and 4 liters of 70%.
 
-**ACT Tip:** For mixture problems, set up: (amount₁)(concentration₁) + (amount₂)(concentration₂) = (total)(target concentration).
+**ACT Tip:** For mixture problems, set up: $(amount_{1})(concentration_{1})$ + $(amount_{2})(concentration_{2})$ = (total)(target concentration).
       `
     },
     {
@@ -130,7 +130,7 @@ $$-0.30x = -2.4 \\implies x = 8$$
           },
           {
             label: 'In a mixture problem, you set up …',
-            options: ['amount₁ + amount₂ = target', 'concentration₁ × concentration₂ = target', 'amount × concentration for each part = total amount × target %', 'rate × time = distance']
+            options: ['$amount_{1}$ + $amount_{2}$ = target', '$concentration_{1}$ × $concentration_{2}$ = target', 'amount × concentration for each part = total amount × target %', 'rate × time = distance']
           }
         ],
         correctAnswers: ['rate × time', 'Total distance ÷ total time', 'amount × concentration for each part = total amount × target %'],

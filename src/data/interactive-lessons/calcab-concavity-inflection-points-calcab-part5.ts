@@ -61,7 +61,7 @@ export const calcabConcavityPart5Data = {
     {
       "id": "c5-free-fall",
       "type": "text" as const,
-      "content": "## 📌 Free Fall & Projectile Motion\n\n$s(t) = -\\frac{1}{2}gt^2 + v_0 t + s_0$ (with $g = 32$ ft/s² or $9.8$ m/s²)\n\n$v(t) = -gt + v_0$\n$a(t) = -g$ (constant, always concave down)\n\nSince $a < 0$ always:\n- While going up ($v > 0$): slowing down\n- At the top ($v = 0$): instantaneously stopped\n- While falling ($v < 0$): speeding up (downward)\n\n### Maximum Height\n$v(t) = 0$: $t = v_0/g$\n\n$s_{max} = s_0 + \\frac{v_0^2}{2g}$"
+      "content": "## 📌 Free Fall & Projectile Motion\n\n$s(t) = -\\frac{1}{2}gt^2 + v_0 t + s_0$ (with $g = 32$ $ft/s^{2}$ or $9.8$ $m/s^{2}$)\n\n$v(t) = -gt + v_0$\n$a(t) = -g$ (constant, always concave down)\n\nSince $a < 0$ always:\n- While going up ($v > 0$): slowing down\n- At the top ($v = 0$): instantaneously stopped\n- While falling ($v < 0$): speeding up (downward)\n\n### Maximum Height\n$v(t) = 0$: $t = v_0/g$\n\n$s_{max} = s_0 + \\frac{v_0^2}{2g}$"
     },
     {
       "id": "c5-input",

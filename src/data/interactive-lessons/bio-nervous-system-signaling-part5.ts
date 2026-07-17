@@ -14,15 +14,15 @@ When an action potential reaches the axon terminal, the electrical signal must b
 
 | Step | Event | Key Players |
 |---|---|---|
-| **1** | Action potential arrives at the axon terminal | Voltage-gated Na⁺/K⁺ channels |
-| **2** | Voltage-gated **Ca²⁺ channels** open; Ca²⁺ flows INTO the terminal | Ca²⁺ ions |
-| **3** | Ca²⁺ triggers **synaptic vesicles** to fuse with the presynaptic membrane (**exocytosis**) | SNARE proteins, synaptotagmin |
+| **1** | Action potential arrives at the axon terminal | Voltage-gated $Na^{+}/K^{+}$ channels |
+| **2** | Voltage-gated **$Ca^{2+}$ channels** open; $Ca^{2+}$ flows INTO the terminal | $Ca^{2+}$ ions |
+| **3** | $Ca^{2+}$ triggers **synaptic vesicles** to fuse with the presynaptic membrane (**exocytosis**) | SNARE proteins, synaptotagmin |
 | **4** | **Neurotransmitters** are released into the synaptic cleft | Acetylcholine, dopamine, etc. |
 | **5** | Neurotransmitters bind to **receptors** on the postsynaptic membrane | Ligand-gated ion channels or G-protein coupled receptors |
-| **6** | Ion channels open (or close) on the postsynaptic cell, changing its membrane potential | Na⁺, K⁺, Cl⁻ channels |
+| **6** | Ion channels open (or close) on the postsynaptic cell, changing its membrane potential | $Na^{+}$, $K^{+}$, $Cl^{-}$ channels |
 | **7** | Neurotransmitter is **removed** from the cleft (reuptake, enzymatic degradation, or diffusion) | Transporters, enzymes |
 
-> **Critical concept:** Ca²⁺ influx is the trigger that links the electrical signal (action potential) to the chemical signal (neurotransmitter release). Without Ca²⁺ entry, no neurotransmitter is released.
+> **Critical concept:** $Ca^{2+}$ influx is the trigger that links the electrical signal (action potential) to the chemical signal (neurotransmitter release). Without $Ca^{2+}$ entry, no neurotransmitter is released.
 `
     },
     {
@@ -34,16 +34,16 @@ When an action potential reaches the axon terminal, the electrical signal must b
           {
             question: 'Which ion is directly responsible for triggering neurotransmitter release from synaptic vesicles?',
             options: [
-              'Na⁺',
-              'K⁺',
-              'Ca²⁺',
-              'Cl⁻'
+              '$Na^{+}$',
+              '$K^{+}$',
+              '$Ca^{2+}$',
+              '$Cl^{-}$'
             ],
             correctAnswer: 2,
-            explanation: 'When the action potential reaches the axon terminal, voltage-gated Ca²⁺ channels open. The Ca²⁺ influx causes synaptic vesicles to fuse with the presynaptic membrane via exocytosis, releasing neurotransmitters into the synaptic cleft. Ca²⁺ is the essential link between the electrical and chemical signals.'
+            explanation: 'When the action potential reaches the axon terminal, voltage-gated $Ca^{2+}$ channels open. The $Ca^{2+}$ influx causes synaptic vesicles to fuse with the presynaptic membrane via exocytosis, releasing neurotransmitters into the synaptic cleft. $Ca^{2+}$ is the essential link between the electrical and chemical signals.'
           },
           {
-            question: 'A researcher applies a drug that blocks all voltage-gated Ca²⁺ channels at the axon terminal. What would be the expected effect?',
+            question: 'A researcher applies a drug that blocks all voltage-gated $Ca^{2+}$ channels at the axon terminal. What would be the expected effect?',
             options: [
               'Action potentials would fail to propagate along the axon',
               'The resting membrane potential would become more negative',
@@ -51,7 +51,7 @@ When an action potential reaches the axon terminal, the electrical signal must b
               'The postsynaptic cell would become permanently depolarized'
             ],
             correctAnswer: 2,
-            explanation: 'Blocking voltage-gated Ca²⁺ channels at the axon terminal would prevent Ca²⁺ from entering the terminal when an action potential arrives. Without Ca²⁺ influx, synaptic vesicles cannot fuse with the membrane, so no neurotransmitter is released. The action potential would still propagate normally along the axon (that uses Na⁺ and K⁺ channels).'
+            explanation: 'Blocking voltage-gated $Ca^{2+}$ channels at the axon terminal would prevent $Ca^{2+}$ from entering the terminal when an action potential arrives. Without $Ca^{2+}$ influx, synaptic vesicles cannot fuse with the membrane, so no neurotransmitter is released. The action potential would still propagate normally along the axon (that uses $Na^{+}$ and $K^{+}$ channels).'
           }
         ]
       }
@@ -68,7 +68,7 @@ Neurotransmitters can have different effects on the postsynaptic cell depending 
 | Property | EPSP (Excitatory) | IPSP (Inhibitory) |
 |---|---|---|
 | **Effect on membrane potential** | Depolarization (more positive) | Hyperpolarization (more negative) |
-| **Ion channels that open** | Na⁺ or Ca²⁺ channels (positive ions in) | K⁺ channels (positive ions out) or Cl⁻ channels (negative ions in) |
+| **Ion channels that open** | $Na^{+}$ or $Ca^{2+}$ channels (positive ions in) | $K^{+}$ channels (positive ions out) or $Cl^{-}$ channels (negative ions in) |
 | **Effect on action potential** | Makes firing MORE likely | Makes firing LESS likely |
 | **Example** | Glutamate binding to AMPA receptor | GABA binding to GABA_A receptor |
 
@@ -107,15 +107,15 @@ If the sum of all EPSPs and IPSPs at the axon hillock reaches **threshold (−55
             explanation: 'Spatial summation occurs when signals from multiple different presynaptic neurons (at different synapses) arrive at the same time and are summed together. The 5 EPSPs and 3 IPSPs from different sources combine at the axon hillock to determine whether threshold is reached.'
           },
           {
-            question: 'A neurotransmitter binds to a postsynaptic receptor and causes Cl⁻ channels to open. Cl⁻ flows into the cell. This produces:',
+            question: 'A neurotransmitter binds to a postsynaptic receptor and causes $Cl^{-}$ channels to open. $Cl^{-}$ flows into the cell. This produces:',
             options: [
               'An EPSP, because ions are entering the cell',
-              'An IPSP, because the influx of negative Cl⁻ ions hyperpolarizes the membrane',
+              'An IPSP, because the influx of negative $Cl^{-}$ ions hyperpolarizes the membrane',
               'An action potential, because the threshold is immediately reached',
-              'No change in membrane potential, because Cl⁻ is electrically neutral'
+              'No change in membrane potential, because $Cl^{-}$ is electrically neutral'
             ],
             correctAnswer: 1,
-            explanation: 'When Cl⁻ (a negative ion) flows into the cell, it makes the inside of the cell more negative (hyperpolarizes the membrane). This is an inhibitory postsynaptic potential (IPSP) because it moves the membrane potential further from threshold, making an action potential less likely.'
+            explanation: 'When $Cl^{-}$ (a negative ion) flows into the cell, it makes the inside of the cell more negative (hyperpolarizes the membrane). This is an inhibitory postsynaptic potential (IPSP) because it moves the membrane potential further from threshold, making an action potential less likely.'
           }
         ]
       }
@@ -128,7 +128,7 @@ If the sum of all EPSPs and IPSPs at the axon hillock reaches **threshold (−55
         dropdowns: [
           {
             label: 'Neurotransmitter release is triggered by the influx of ___ into the axon terminal.',
-            options: ['Na⁺', 'K⁺', 'Ca²⁺', 'Cl⁻']
+            options: ['$Na^{+}$', '$K^{+}$', '$Ca^{2+}$', '$Cl^{-}$']
           },
           {
             label: 'Synaptic vesicles release neurotransmitter into the synaptic cleft via the process of ___.',
@@ -143,11 +143,11 @@ If the sum of all EPSPs and IPSPs at the axon hillock reaches **threshold (−55
             options: ['spatial', 'temporal', 'chemical', 'electrical']
           }
         ],
-        correctAnswers: ['Ca²⁺', 'exocytosis', 'EPSP', 'temporal'],
+        correctAnswers: ['$Ca^{2+}$', 'exocytosis', 'EPSP', 'temporal'],
         hint1: 'Calcium is the critical link between the electrical signal and neurotransmitter release.',
         hint2: 'Exocytosis = vesicles fuse with the membrane and release contents outward.',
         hint3: 'Temporal = time; spatial = space (different locations).',
-        explanation: 'Ca²⁺ influx triggers exocytosis of synaptic vesicles. EPSPs depolarize the postsynaptic membrane (making firing more likely), while IPSPs hyperpolarize it (making firing less likely). Temporal summation involves rapid-fire signals from one source; spatial summation involves simultaneous signals from multiple sources.'
+        explanation: '$Ca^{2+}$ influx triggers exocytosis of synaptic vesicles. EPSPs depolarize the postsynaptic membrane (making firing more likely), while IPSPs hyperpolarize it (making firing less likely). Temporal summation involves rapid-fire signals from one source; spatial summation involves simultaneous signals from multiple sources.'
       }
     },
     {
@@ -157,14 +157,14 @@ If the sum of all EPSPs and IPSPs at the axon hillock reaches **threshold (−55
 
 ### Key Takeaways
 1. Synaptic transmission converts an **electrical signal** (action potential) to a **chemical signal** (neurotransmitter release) and back to electrical.
-2. **Ca²⁺ influx** into the axon terminal triggers **exocytosis** of synaptic vesicles containing neurotransmitters.
+2. **$Ca^{2+}$ influx** into the axon terminal triggers **exocytosis** of synaptic vesicles containing neurotransmitters.
 3. Neurotransmitters bind postsynaptic receptors, opening ion channels that produce **EPSPs** (excitatory, depolarizing) or **IPSPs** (inhibitory, hyperpolarizing).
 4. **Spatial summation** = signals from multiple presynaptic neurons added together.
 5. **Temporal summation** = rapid-fire signals from one presynaptic neuron added together.
 6. The axon hillock is the integration center — if summed EPSPs and IPSPs reach **threshold**, an action potential fires.
 
 ### AP Exam Connection
-- Understand the role of Ca²⁺ as the trigger for neurotransmitter release.
+- Understand the role of $Ca^{2+}$ as the trigger for neurotransmitter release.
 - Be able to predict the effect of blocking or enhancing any step in synaptic transmission.
 - Know the difference between EPSPs and IPSPs and how summation determines whether a neuron fires.
 

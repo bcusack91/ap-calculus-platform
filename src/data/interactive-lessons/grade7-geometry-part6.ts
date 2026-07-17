@@ -24,9 +24,9 @@ Apply geometry skills:
 
 **Paint a wall 12 ft × 8 ft with a 3 ft × 4 ft window. Paint needed?**
 
-Wall area: $12(8) = 96$ ft²
-Window: $3(4) = 12$ ft²
-Paint: $96 - 12 = 84$ ft² ✅
+Wall area: $12(8) = 96$ $ft^{2}$
+Window: $3(4) = 12$ $ft^{2}$
+Paint: $96 - 12 = 84$ $ft^{2}$ ✅
     
     `
     },
@@ -98,7 +98,7 @@ Paint: $96 - 12 = 84$ ft² ✅
 |---|---------|--------|
 | 1 | Fencing for circular garden, r=5 | C = 2πr |
 | 2 | Wrapping a 4×3×2 box | SA |
-| 3 | Water in cylindrical tank | V = πr²h |
+| 3 | Water in cylindrical tank | V = $\\pi r^{2}h$ |
     
     `
     },

@@ -132,7 +132,7 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
         hint1: '$F = (9 \\times 10^9)(6 \\times 10^{-6})^2/(0.2)^2 = (9 \\times 10^9)(36 \\times 10^{-12})/0.04$.',
         hint2: 'Touching neutral sphere: +6 shared equally → +3 μC each.',
         hint3: 'New force: $(9 \\times 10^9)(3 \\times 10^{-6})(6 \\times 10^{-6})/(0.2)^2$.',
-        explanation: 'Original F = 8.1 N. After sharing, one sphere has +3 μC. New F = k(3)(6)/r² × 10⁻¹² = 4.05 N. Force halved because one charge halved.'
+        explanation: 'Original F = 8.1 N. After sharing, one sphere has +3 μC. New F = $k(3)(6)/r^{2}$ × $10^{-12}$ = 4.05 N. Force halved because one charge halved.'
       }
     },
     {
@@ -182,7 +182,7 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
               'Quadruple one charge, halve the distance'
             ],
             correctAnswer: 2,
-            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: (a) 3/(2²) = 3/4. (b) 2×2 = 4×. (d) 4/(0.5²) = 4/0.25 = 16×. Only (c) gives exactly 6×.'
+            explanation: 'Triple one charge (×3) × double the other (×2) × distance unchanged = 6×. Check the others: (a) $3/(2^{2})$ = 3/4. (b) 2×2 = 4×. (d) $4/(0.5^{2})$ = 4/0.25 = 16×. Only (c) gives exactly 6×.'
           },
           {
             question: 'A conducting sphere has excess charge +Q. A cavity is carved inside (no charge in the cavity). What is the electric field inside the cavity?',

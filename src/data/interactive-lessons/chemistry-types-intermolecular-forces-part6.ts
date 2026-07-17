@@ -28,7 +28,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       id: 'if-prop-bp',
       type: 'text',
       title: 'Boiling Point',
-      content: `**Boiling point** is the temperature at which a liquid\'s vapor pressure equals atmospheric pressure. At this point, molecules throughout the liquid have enough kinetic energy to overcome intermolecular forces and enter the gas phase.\n\n**Stronger IMFs $\\rightarrow$ Higher boiling point**\n\nBoiling requires breaking IMFs (not covalent bonds). The stronger the IMFs, the more energy (higher temperature) is needed.\n\n**Examples showing IMF effect on boiling point:**\n\n| Substance | IMFs Present | BP (°C) |\n|-----------|-------------|--------|\n| He | LDF only (very weak) | -269 |\n| N₂ | LDF only | -196 |\n| HCl | Dipole-dipole + LDF | -85 |\n| H₂O | H-bonding + DD + LDF | 100 |\n| NaCl (in water) | Ion-dipole | (ionic compound, MP = 801) |\n\nThe trend clearly shows: as IMF strength increases, boiling point increases.\n\n> 🔑 **Key Concept:** Boiling requires breaking IMFs (not covalent bonds). Stronger IMFs = higher boiling point.`
+      content: `**Boiling point** is the temperature at which a liquid\'s vapor pressure equals atmospheric pressure. At this point, molecules throughout the liquid have enough kinetic energy to overcome intermolecular forces and enter the gas phase.\n\n**Stronger IMFs $\\rightarrow$ Higher boiling point**\n\nBoiling requires breaking IMFs (not covalent bonds). The stronger the IMFs, the more energy (higher temperature) is needed.\n\n**Examples showing IMF effect on boiling point:**\n\n| Substance | IMFs Present | BP (°C) |\n|-----------|-------------|--------|\n| He | LDF only (very weak) | -269 |\n| $N_{2}$ | LDF only | -196 |\n| HCl | Dipole-dipole + LDF | -85 |\n| $H_{2}O$ | H-bonding + DD + LDF | 100 |\n| NaCl (in water) | Ion-dipole | (ionic compound, MP = 801) |\n\nThe trend clearly shows: as IMF strength increases, boiling point increases.\n\n> 🔑 **Key Concept:** Boiling requires breaking IMFs (not covalent bonds). Stronger IMFs = higher boiling point.`
     },
     {
       id: 'if-prop-bp-q',
@@ -38,26 +38,26 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'Which has the higher boiling point: CH₃OH (methanol) or CH₃SH (methanethiol)?',
+            question: 'Which has the higher boiling point: $CH_{3}OH$ (methanol) or $CH_{3}SH$ (methanethiol)?',
             options: [
-              'CH₃SH — sulfur is larger so LDF are stronger',
-              'CH₃OH — it has hydrogen bonding while CH₃SH does not',
+              '$CH_{3}SH$ — sulfur is larger so LDF are stronger',
+              '$CH_{3}OH$ — it has hydrogen bonding while $CH_{3}SH$ does not',
               'They are the same because they have similar structures',
-              'CH₃SH — S–H bonds are more polar than O–H bonds'
+              '$CH_{3}SH$ — S–H bonds are more polar than O–H bonds'
             ],
             correctAnswer: 1,
-            explanation: 'CH₃OH has an O–H bond and can form hydrogen bonds. CH₃SH has an S–H bond, but sulfur is NOT N, O, or F, so it cannot form hydrogen bonds (only dipole-dipole + LDF). Hydrogen bonding in methanol gives it a much higher boiling point (65°C vs. 6°C).'
+            explanation: '$CH_{3}OH$ has an O–H bond and can form hydrogen bonds. $CH_{3}SH$ has an S–H bond, but sulfur is NOT N, O, or F, so it cannot form hydrogen bonds (only dipole-dipole + LDF). Hydrogen bonding in methanol gives it a much higher boiling point (65°C vs. 6°C).'
           },
           {
-            question: 'Arrange in order of INCREASING boiling point: Ar, HBr, H₂O',
+            question: 'Arrange in order of INCREASING boiling point: Ar, HBr, $H_{2}O$',
             options: [
-              'H₂O < HBr < Ar',
-              'Ar < H₂O < HBr',
-              'Ar < HBr < H₂O',
-              'HBr < Ar < H₂O'
+              '$H_{2}O$ < HBr < Ar',
+              'Ar < $H_{2}O$ < HBr',
+              'Ar < HBr < $H_{2}O$',
+              'HBr < Ar < $H_{2}O$'
             ],
             correctAnswer: 2,
-            explanation: 'Ar (nonpolar, LDF only, BP = -186°C) < HBr (polar, dipole-dipole + LDF, BP = -67°C) < H₂O (hydrogen bonding + DD + LDF, BP = 100°C). The order follows increasing IMF strength.'
+            explanation: 'Ar (nonpolar, LDF only, BP = -186°C) < HBr (polar, dipole-dipole + LDF, BP = -67°C) < $H_{2}O$ (hydrogen bonding + DD + LDF, BP = 100°C). The order follows increasing IMF strength.'
           }
         ]
       }
@@ -76,7 +76,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'Ethanol (CH₃CH₂OH) has a LOWER vapor pressure than diethyl ether (CH₃CH₂OCH₂CH₃) at the same temperature. What explains this?',
+            question: 'Ethanol $(CH_{3}CH_{2}OH)$ has a LOWER vapor pressure than diethyl ether $(CH_{3}CH_{2}OCH_{2}CH_{3})$ at the same temperature. What explains this?',
             options: [
               'Ethanol has weaker IMFs',
               'Ethanol has hydrogen bonding, creating stronger IMFs that keep more molecules in the liquid phase',

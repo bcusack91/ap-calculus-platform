@@ -1,5 +1,7 @@
 'use client'
 
+import { MathText } from '@/components/MathText'
+
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Image from 'next/image'
@@ -329,7 +331,7 @@ function QuizBlock({
         </button>
       ) : isCorrect ? (
         <div className="flex items-center gap-2 text-green-700 dark:text-green-400 font-semibold">
-          <span className="text-xl">&#9989;</span> Correct! {quiz.explanation}
+          <span className="text-xl">&#9989;</span> Correct! <MathText inline text={quiz.explanation} />
         </div>
       ) : (
         <div className="space-y-3">

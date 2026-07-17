@@ -62,10 +62,10 @@ The researcher measured the number of floating leaf disks over time under three 
         maxPoints: 3,
         rubric: [
           { points: 1, description: 'Identifies photosynthesis as the source of oxygen production in light', keywords: ['photosynthesis', 'light reactions', 'photolysis', 'water splitting'] },
-          { points: 1, description: 'Explains that O₂ gas accumulates in intercellular spaces, making disks buoyant', keywords: ['oxygen', 'O2', 'gas', 'buoyant', 'intercellular', 'float'] },
-          { points: 1, description: 'Explains that in the dark, only cellular respiration occurs, consuming O₂ and producing CO₂ (which dissolves), so disks remain dense', keywords: ['respiration', 'dark', 'consume', 'CO2', 'dissolve', 'no photosynthesis'] },
+          { points: 1, description: 'Explains that $O_{2}$ gas accumulates in intercellular spaces, making disks buoyant', keywords: ['oxygen', 'O2', 'gas', 'buoyant', 'intercellular', 'float'] },
+          { points: 1, description: 'Explains that in the dark, only cellular respiration occurs, consuming $O_{2}$ and producing $CO_{2}$ (which dissolves), so disks remain dense', keywords: ['respiration', 'dark', 'consume', 'CO2', 'dissolve', 'no photosynthesis'] },
         ],
-        sampleAnswer: 'In the light, photosynthesis occurs in the chloroplasts. The light reactions split water molecules, producing O₂ as a byproduct. This O₂ gas accumulates in the intercellular spaces of the leaf disks, reducing their density and causing them to float.\n\nIn the dark, photosynthesis cannot occur (no light energy to drive photosystem II). Only cellular respiration takes place, consuming O₂ and producing CO₂, which dissolves readily in the bicarbonate solution. Without net O₂ production, the disks remain dense and sink.',
+        sampleAnswer: 'In the light, photosynthesis occurs in the chloroplasts. The light reactions split water molecules, producing $O_{2}$ as a byproduct. This $O_{2}$ gas accumulates in the intercellular spaces of the leaf disks, reducing their density and causing them to float.\n\nIn the dark, photosynthesis cannot occur (no light energy to drive photosystem II). Only cellular respiration takes place, consuming $O_{2}$ and producing $CO_{2}$, which dissolves readily in the bicarbonate solution. Without net $O_{2}$ production, the disks remain dense and sink.',
       },
       {
         label: '(b)',
@@ -74,9 +74,9 @@ The researcher measured the number of floating leaf disks over time under three 
         rubric: [
           { points: 1, description: 'States that higher light intensity increases the rate of light-dependent reactions', keywords: ['light intensity', 'rate', 'light-dependent', 'photosystems'] },
           { points: 1, description: 'Explains that more photons excite more electrons in photosystems, increasing ATP and NADPH production', keywords: ['photon', 'electron', 'ATP', 'NADPH', 'photosystem'] },
-          { points: 1, description: 'Connects increased ATP/NADPH to faster Calvin cycle and greater net O₂ output', keywords: ['Calvin cycle', 'carbon fixation', 'oxygen', 'net', 'faster'] },
+          { points: 1, description: 'Connects increased ATP/NADPH to faster Calvin cycle and greater net $O_{2}$ output', keywords: ['Calvin cycle', 'carbon fixation', 'oxygen', 'net', 'faster'] },
         ],
-        sampleAnswer: 'In Condition A (bright light), more photons are available to excite electrons in Photosystem II and Photosystem I. This drives a faster rate of electron transport, producing more ATP (via chemiosmosis) and NADPH.\n\nWith more ATP and NADPH available, the Calvin cycle fixes CO₂ faster. The higher rate of light reactions also means more water is split, producing O₂ more rapidly. The net rate of photosynthesis exceeds the rate of cellular respiration by a greater margin in bright light than in dim light, so disks float sooner.',
+        sampleAnswer: 'In Condition A (bright light), more photons are available to excite electrons in Photosystem II and Photosystem I. This drives a faster rate of electron transport, producing more ATP (via chemiosmosis) and NADPH.\n\nWith more ATP and NADPH available, the Calvin cycle fixes $CO_{2}$ faster. The higher rate of light reactions also means more water is split, producing $O_{2}$ more rapidly. The net rate of photosynthesis exceeds the rate of cellular respiration by a greater margin in bright light than in dim light, so disks float sooner.',
       },
       {
         label: '(c)',
@@ -84,19 +84,19 @@ The researcher measured the number of floating leaf disks over time under three 
         maxPoints: 2,
         rubric: [
           { points: 1, description: 'Predicts that the disks will NOT float (will sink)', keywords: ['sink', 'not float', 'will not', 'no floating'] },
-          { points: 1, description: 'Justifies by explaining that blocking PSII stops water splitting and thus O₂ production', keywords: ['PSII', 'photosystem II', 'electron', 'block', 'water splitting', 'no oxygen', 'no O2'] },
+          { points: 1, description: 'Justifies by explaining that blocking PSII stops water splitting and thus $O_{2}$ production', keywords: ['PSII', 'photosystem II', 'electron', 'block', 'water splitting', 'no oxygen', 'no O2'] },
         ],
-        sampleAnswer: 'The disks will sink. DCMU blocks electron flow from Photosystem II. Without electron transport from PSII, water molecules are no longer split (photolysis is halted), so no O₂ is produced. Without O₂ accumulation in the intercellular spaces, the disks cannot become buoyant. Additionally, cellular respiration will continue to consume any remaining O₂, ensuring the disks stay dense and sink.',
+        sampleAnswer: 'The disks will sink. DCMU blocks electron flow from Photosystem II. Without electron transport from PSII, water molecules are no longer split (photolysis is halted), so no $O_{2}$ is produced. Without $O_{2}$ accumulation in the intercellular spaces, the disks cannot become buoyant. Additionally, cellular respiration will continue to consume any remaining $O_{2}$, ensuring the disks stay dense and sink.',
       },
       {
         label: '(d)',
         prompt: 'Design a controlled experiment to determine the compensation point (the light intensity at which the rate of photosynthesis equals the rate of cellular respiration) for the spinach leaf disks. Include your independent variable, dependent variable, and at least two controlled variables.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Correctly identifies the independent variable as light intensity and the dependent variable as net O₂ production (or floating rate)', keywords: ['independent', 'light intensity', 'dependent', 'floating', 'oxygen', 'rate'] },
-          { points: 1, description: 'Identifies at least two controlled variables (e.g., temperature, CO₂ concentration, leaf disk size, number of disks) and describes how to find the compensation point', keywords: ['controlled', 'constant', 'temperature', 'CO2', 'compensation', 'equal'] },
+          { points: 1, description: 'Correctly identifies the independent variable as light intensity and the dependent variable as net $O_{2}$ production (or floating rate)', keywords: ['independent', 'light intensity', 'dependent', 'floating', 'oxygen', 'rate'] },
+          { points: 1, description: 'Identifies at least two controlled variables (e.g., temperature, $CO_{2}$ concentration, leaf disk size, number of disks) and describes how to find the compensation point', keywords: ['controlled', 'constant', 'temperature', 'CO2', 'compensation', 'equal'] },
         ],
-        sampleAnswer: 'Set up multiple groups of leaf disks (same species, same size, same number per group) in sodium bicarbonate solution at constant temperature. Expose each group to a different light intensity (e.g., 0, 50, 100, 200, 400, 800 lux). Measure the time for 50% of disks to float in each group.\n\nIndependent variable: Light intensity. Dependent variable: Time for 50% of disks to float (a proxy for net O₂ production rate). Controlled variables: Temperature, NaHCO₃ concentration, disk diameter, number of disks per replicate.\n\nThe compensation point is the light intensity at which no disks float (net gas exchange is zero — photosynthesis rate equals respiration rate).',
+        sampleAnswer: 'Set up multiple groups of leaf disks (same species, same size, same number per group) in sodium bicarbonate solution at constant temperature. Expose each group to a different light intensity (e.g., 0, 50, 100, 200, 400, 800 lux). Measure the time for 50% of disks to float in each group.\n\nIndependent variable: Light intensity. Dependent variable: Time for 50% of disks to float (a proxy for net $O_{2}$ production rate). Controlled variables: Temperature, $NaHCO_{3}$ concentration, disk diameter, number of disks per replicate.\n\nThe compensation point is the light intensity at which no disks float (net gas exchange is zero — photosynthesis rate equals respiration rate).',
       },
     ],
   },
@@ -193,7 +193,7 @@ const shortFRQs: BioFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: 'Correctly calculates expected values: 75 purple, 25 white', keywords: ['75', '25', 'expected'] },
-          { points: 1, description: 'Correctly applies χ² formula: (72-75)²/75 + (28-25)²/25 = 0.12 + 0.36 = 0.48', keywords: ['0.48', '0.12', '0.36', 'chi-square'] },
+          { points: 1, description: 'Correctly applies $\\chi^{2}$ formula: $(72-75)^{2}/75$ + $(28-25)^{2}/25$ = 0.12 + 0.36 = 0.48', keywords: ['0.48', '0.12', '0.36', 'chi-square'] },
         ],
         sampleAnswer: 'Expected: 100 × 3/4 = 75 purple, 100 × 1/4 = 25 white.\n\n$\\chi^2 = \\frac{(72-75)^2}{75} + \\frac{(28-25)^2}{25} = \\frac{9}{75} + \\frac{9}{25} = 0.12 + 0.36 = 0.48$',
       },
@@ -223,7 +223,7 @@ const shortFRQs: BioFRQ[] = [
         prompt: 'Calculate the frequencies of alleles *a* and *A* in this population using the Hardy-Weinberg equation.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Correctly calculates q² = 80/500 = 0.16, q = 0.4', keywords: ['0.16', 'q²', '0.4', 'q = 0.4'] },
+          { points: 1, description: 'Correctly calculates $q^{2}$ = 80/500 = 0.16, q = 0.4', keywords: ['0.16', 'q²', '0.4', 'q = 0.4'] },
           { points: 1, description: 'Correctly calculates p = 1 - q = 0.6', keywords: ['0.6', 'p = 0.6', '1 - 0.4'] },
         ],
         sampleAnswer: 'Frequency of homozygous recessive: $q^2 = 80/500 = 0.16$\n\n$q = \\sqrt{0.16} = 0.4$\n\n$p = 1 - q = 1 - 0.4 = 0.6$\n\nSo allele A frequency (p) = 0.6 and allele a frequency (q) = 0.4.',
@@ -295,7 +295,7 @@ const shortFRQs: BioFRQ[] = [
     title: 'Ecology: Energy Flow & Trophic Levels',
     prompt: `In a grassland ecosystem, researchers measured the energy available at each trophic level:
 
-| Trophic Level | Energy (kcal/m²/yr) |
+| Trophic Level | Energy $(kcal/m^{2}/yr)$ |
 |:---|:---:|
 | Producers (grasses) | 20,000 |
 | Primary consumers (grasshoppers) | 2,000 |
@@ -322,7 +322,7 @@ const shortFRQs: BioFRQ[] = [
         rubric: [
           { points: 1, description: 'Explains that with ~10% transfer efficiency, energy rapidly diminishes (20,000 → 2,000 → 200 → 20) and by the 5th level there is insufficient energy to support a viable population', keywords: ['10%', 'diminish', 'insufficient', 'not enough', 'support', 'population', 'limit'] },
         ],
-        sampleAnswer: 'With only ~10% energy transfer at each level, energy decreases by an order of magnitude per step: 20,000 → 2,000 → 200 → 20. A 5th trophic level would have only ~2 kcal/m²/yr — far too little to sustain a population of apex predators. The progressive energy loss imposes an energetic ceiling on food chain length.',
+        sampleAnswer: 'With only ~10% energy transfer at each level, energy decreases by an order of magnitude per step: 20,000 → 2,000 → 200 → 20. A 5th trophic level would have only ~2 $kcal/m^{2}/yr$ — far too little to sustain a population of apex predators. The progressive energy loss imposes an energetic ceiling on food chain length.',
       },
       {
         label: '(c)',

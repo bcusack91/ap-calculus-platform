@@ -12,8 +12,8 @@ export const mcatBiostatisticsPart2Data = {
 
 | Hypothesis | Definition | Example |
 |-----------|-----------|---------|
-| Null (H₀) | No effect or difference | The drug has no effect on blood pressure |
-| Alternative (H₁) | There is an effect | The drug lowers blood pressure |
+| Null $(H_{0})$ | No effect or difference | The drug has no effect on blood pressure |
+| Alternative $(H_{1})$ | There is an effect | The drug lowers blood pressure |
 
 **One-tailed vs Two-tailed:**
 - **One-tailed**: Predicts direction (Drug **lowers** BP) → p-value not split
@@ -23,21 +23,21 @@ export const mcatBiostatisticsPart2Data = {
 
 | Error | What Happens | Probability |
 |-------|-------------|------------|
-| Type I | Reject H₀ when it's true (False positive) | $\\alpha$ (significance level) |
-| Type II | Fail to reject H₀ when it's false (False negative) | $\\beta$ |
+| Type I | Reject $H_{0}$ when it's true (False positive) | $\\alpha$ (significance level) |
+| Type II | Fail to reject $H_{0}$ when it's false (False negative) | $\\beta$ |
 
 **Critical:** α = 0.05 means 5% chance of Type I error (standard MCAT threshold)
 
 ### p-value Interpretation
 
 \`\`\`
-p < 0.05 → Reject H₀ (statistically significant)
-p ≥ 0.05 → Fail to reject H₀ (not significant)
+p < 0.05 → Reject $H_{0}$ (statistically significant)
+p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
 \`\`\`
 
 **Example:** A study finds p = 0.03 for a new antibiotic efficacy.
 - Interpretation: **3% chance** these results occurred by random chance if the antibiotic has no real effect
-- Conclusion: Reject H₀; the antibiotic likely has real efficacy
+- Conclusion: Reject $H_{0}$; the antibiotic likely has real efficacy
 
 ### Power & Sample Size
 
@@ -60,18 +60,18 @@ p ≥ 0.05 → Fail to reject H₀ (not significant)
               `The vaccine has no effect`
             ],
             correctAnswer: 2,
-            explanation: `p = 0.08 > 0.05, so we fail to reject H₀. The study did not find sufficient evidence of vaccine efficacy at the 0.05 significance level.`
+            explanation: `p = 0.08 > 0.05, so we fail to reject $H_{0}$. The study did not find sufficient evidence of vaccine efficacy at the 0.05 significance level.`
           },
           {
             question: `Researchers test if caffeine affects exam scores. They use a **two-tailed** test with α=0.05. What does α represent here?`,
             options: [
               `The probability the caffeine has an effect`,
-              `The probability of incorrectly rejecting H₀ (Type I error)`,
+              `The probability of incorrectly rejecting $H_{0}$ (Type I error)`,
               `The p-value threshold`,
               `Both B and C`
             ],
             correctAnswer: 3,
-            explanation: `α is both the significance level (threshold for rejecting H₀) and the maximum acceptable Type I error rate. If p < 0.05, we reject H₀.`
+            explanation: `α is both the significance level (threshold for rejecting $H_{0}$) and the maximum acceptable Type I error rate. If p < 0.05, we reject $H_{0}$.`
           },
           {
             question: `A study of 50 patients finds a difference in pain scores (p=0.06), but a study of 500 patients on the same drug finds p=0.04. Why did power increase?`,
@@ -93,7 +93,7 @@ p ≥ 0.05 → Fail to reject H₀ (not significant)
               `Neither; p=0.10 is conclusive`
             ],
             correctAnswer: 1,
-            explanation: `Failing to reject H₀ when there might be a real effect = Type II error (false negative). p=0.10 means insufficient evidence, not proof of no effect.`
+            explanation: `Failing to reject $H_{0}$ when there might be a real effect = Type II error (false negative). p=0.10 means insufficient evidence, not proof of no effect.`
           }
         ]
       }
@@ -103,8 +103,8 @@ p ≥ 0.05 → Fail to reject H₀ (not significant)
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- **p-value** = Probability of observing data (or more extreme) if H₀ is true
-- **α=0.05** = 5% threshold; p < 0.05 → reject H₀
+- **p-value** = Probability of observing data (or more extreme) if $H_{0}$ is true
+- **α=0.05** = 5% threshold; p < 0.05 → reject $H_{0}$
 - **Type I error** (α): False positive; Type II error (β): False negative
 - **Power** (1−β): Increases with larger sample size; typical goal is 80%+
 - **MCAT Tip**: p < 0.05 = statistically significant; always check the p-value first`
@@ -120,7 +120,7 @@ p ≥ 0.05 → Fail to reject H₀ (not significant)
 Study result: p = 0.03, α = 0.05.
 
 1. Compare p to α.
-2. Since 0.03 < 0.05, reject H₀.
+2. Since 0.03 < 0.05, reject $H_{0}$.
 
 Conclusion: **statistically significant** finding.
 </details>
@@ -130,7 +130,7 @@ Conclusion: **statistically significant** finding.
 
 A test concludes a drug works, but in reality it does not.
 
-1. Rejected H₀ when H₀ was true.
+1. Rejected $H_{0}$ when $H_{0}$ was true.
 2. This is a false positive.
 
 Error type: **Type I error (α)**.

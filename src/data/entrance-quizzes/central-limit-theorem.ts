@@ -103,11 +103,11 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'Normal(0, 1)',
       'Normal(μ, σ)',
-      'Normal(μ, σ/√n)',
-      'Normal(x̄, s/√n)'
+      'Normal(μ, $\\sigma /\\sqrt{n}$)',
+      'Normal(x̄, $s/\\sqrt{n}$)'
     ],
     correctIndex: 2,
-    explanation: 'Under the CLT, x̄ ~ Normal(μ, σ/√n) approximately, for large n.',
+    explanation: 'Under the CLT, x̄ ~ Normal(μ, $\\sigma /\\sqrt{n}$) approximately, for large n.',
     partNumber: 4,
     partTitle: 'Normal Approximation'
   },
@@ -117,11 +117,11 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'z = (x − μ) / σ',
       'z = (x̄ − μ) / σ',
-      'z = (x̄ − μ) / (σ/√n)',
+      'z = (x̄ − μ) / $(\\sigma /\\sqrt{n})$',
       'z = (x̄ − x) / s'
     ],
     correctIndex: 2,
-    explanation: 'The z-score for inference about means is z = (x̄ − μ) / (σ/√n), standardizing x̄ using its standard error.',
+    explanation: 'The z-score for inference about means is z = (x̄ − μ) / $(\\sigma /\\sqrt{n})$, standardizing x̄ using its standard error.',
     partNumber: 4,
     partTitle: 'Normal Approximation'
   },

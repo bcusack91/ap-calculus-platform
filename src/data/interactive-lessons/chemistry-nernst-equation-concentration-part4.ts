@@ -122,10 +122,10 @@ All three quantities are interconnected:
           {
             question: 'If E° = 0.30 V for a 2-electron process, K is approximately:',
             options: [
-              '10¹⁰',
-              '10⁵',
-              '10²',
-              '10¹'
+              '$10^{10}$',
+              '$10^{5}$',
+              '$10^{2}$',
+              '$10^{1}$'
             ],
             correctAnswer: 0,
             explanation: '$\\log K = (2)(0.30)/0.0592 = 0.60/0.0592 = 10.1$. So $K = 10^{10.1} \\approx 10^{10}$.'
@@ -196,17 +196,17 @@ At 25°C:
           },
           {
             label: 'Doubling n in E° = (0.0592/n) log K means',
-            options: ['K doubles', 'E° doubles', 'the same E° corresponds to K²', 'K is halved']
+            options: ['K doubles', 'E° doubles', 'the same E° corresponds to $K^{2}$', 'K is halved']
           },
           {
             label: 'The three interconnected quantities are ΔG°, E°, and',
             options: ['ΔH°', 'Q', 'K', 'T']
           }
         ],
-        correctAnswers: ['> 1', 'the cell is at equilibrium', 'the same E° corresponds to K²', 'K'],
+        correctAnswers: ['> 1', 'the cell is at equilibrium', 'the same E° corresponds to $K^{2}$', 'K'],
         hint1: 'Positive E° → spontaneous → products favored → K > 1.',
         hint2: 'At equilibrium: E = 0 and Q = K.',
-        hint3: 'If n doubles, log K doubles too (to keep E° the same), so K becomes K².',
+        hint3: 'If n doubles, log K doubles too (to keep E° the same), so K becomes $K^{2}$.',
         explanation: 'E° > 0 → K > 1. The derivation uses equilibrium conditions (E = 0, Q = K). If n doubles: log K = nE°/0.0592 doubles, meaning K squares. The triangle: ΔG° ↔ E° ↔ K.'
       }
     },
@@ -221,16 +221,16 @@ At 25°C:
           {
             question: 'A 3-electron cell has E° = 0.40 V. K is approximately:',
             options: [
-              '10⁷',
-              '10¹⁰',
-              '10²⁰',
-              '10³⁰'
+              '$10^{7}$',
+              '$10^{10}$',
+              '$10^{20}$',
+              '$10^{30}$'
             ],
             correctAnswer: 2,
             explanation: '$\\log K = (3)(0.40)/0.0592 = 1.20/0.0592 = 20.3$. So $K \\approx 10^{20}$.'
           },
           {
-            question: 'Two cells have E° = 0.50 V but different n values (n₁ = 1, n₂ = 2). Which has the larger K?',
+            question: 'Two cells have E° = 0.50 V but different n values ($n_{1}$ = 1, $n_{2}$ = 2). Which has the larger K?',
             options: [
               'Cell 1 (n = 1) — fewer electrons means larger K',
               'Cell 2 (n = 2) — more electrons means larger K',

@@ -102,13 +102,13 @@ When converting rates, both the numerator and denominator units may change.
 
 ### Worked Example 4
 
-**A density is given as 2.7 g/cm³. Convert to kg/m³. (1 kg = 1000 g, 1 m = 100 cm)**
+**A density is given as 2.7 $g/cm^{3}$. Convert to $kg/m^{3}$. (1 kg = 1000 g, 1 m = 100 cm)**
 
 | Step | Work |
 |------|------|
 | Grams → kg | $÷ 1000$ |
-| cm³ → m³ | $÷ (100)^3 = ÷ 1{,}000{,}000$ |
-| Combined | $2.7 × \\frac{1{,}000{,}000}{1{,}000} = 2{,}700$ kg/m³ |
+| $cm^{3}$ → $m^{3}$ | $÷ (100)^3 = ÷ 1{,}000{,}000$ |
+| Combined | $2.7 × \\frac{1{,}000{,}000}{1{,}000} = 2{,}700$ $kg/m^{3}$ |
 
 The numerator and denominator conversions partially cancel — a common SAT shortcut.
 
@@ -154,13 +154,13 @@ Write every step with units. If units don't cancel correctly, something is flipp
           { label: 'Miles → feet', options: ['× 5,280', '÷ 5,280', '× 1,760', '÷ 1,760'] },
           { label: 'Hours → seconds', options: ['× 3,600', '÷ 3,600', '× 60', '÷ 60'] },
           { label: 'Square feet → square yards', options: ['÷ 9', '÷ 3', '× 9', '× 3'] },
-          { label: 'kg/m³ → g/cm³', options: ['÷ 1,000', '× 1,000', '÷ 1,000,000', '× 1,000,000'] }
+          { label: '$kg/m^{3}$ → $g/cm^{3}$', options: ['÷ 1,000', '× 1,000', '÷ 1,000,000', '× 1,000,000'] }
         ],
         correctAnswers: ['× 5,280', '× 3,600', '÷ 9', '÷ 1,000'],
         hint1: '1 mile = 5,280 feet — bigger unit to smaller, so multiply.',
         hint2: '1 hour = 3,600 seconds (60 min × 60 sec).',
         hint3: '$1 \\text{ yd}^2 = (3 \\text{ ft})^2 = 9 \\text{ ft}^2$, so divide by 9.',
-        explanation: 'Miles to feet: multiply by 5,280. Hours to seconds: $60 × 60 = 3{,}600$. Square feet to square yards: divide by $3^2 = 9$. kg/m³ to g/cm³: divide by 1,000.'
+        explanation: 'Miles to feet: multiply by 5,280. Hours to seconds: $60 × 60 = 3{,}600$. Square feet to square yards: divide by $3^2 = 9$. $kg/m^{3}$ to $g/cm^{3}$: divide by 1,000.'
       }
     },
     {
@@ -172,8 +172,8 @@ Write every step with units. If units don't cancel correctly, something is flipp
 |-----------|----------|
 | Single unit | Multiply by conversion fraction |
 | Rate (two units) | Convert numerator AND denominator |
-| Area units | Square the linear factor: ft² → yd² ÷ 9 |
-| Volume units | Cube the linear factor: ft³ → yd³ ÷ 27 |
+| Area units | Square the linear factor: $ft^{2}$ → $yd^{2}$ ÷ 9 |
+| Volume units | Cube the linear factor: $ft^{3}$ → $yd^{3}$ ÷ 27 |
 
 - Write units at every step — if they don't cancel, something is wrong
 - SAT always provides conversion factors; focus on the **method**

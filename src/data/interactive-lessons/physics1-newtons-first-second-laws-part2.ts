@@ -42,7 +42,7 @@ $$\\vec{a} = \\frac{\\vec{F}_{\\text{net}}}{m}$$
 
 $$1 \\text{ N} = 1 \\text{ kg} \\cdot \\text{m/s}^2$$
 
-A newton is the force needed to accelerate a 1 kg mass at 1 m/s².
+A newton is the force needed to accelerate a 1 kg mass at 1 $m/s^{2}$.
 
 ### Important Clarifications
 
@@ -107,7 +107,7 @@ Many AP problems test your ability to reason about **how changes** in force or m
 
 ### Example
 
-A force $F$ gives a mass $m$ an acceleration of $4$ m/s².
+A force $F$ gives a mass $m$ an acceleration of $4$ $m/s^{2}$.
 
 What acceleration does a force $3F$ give to a mass $2m$?
 
@@ -125,13 +125,13 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
           {
             question: 'A 10 kg object experiences a net force of 30 N. What is its acceleration?',
             options: [
-              '0.33 m/s²',
-              '3 m/s²',
-              '30 m/s²',
-              '300 m/s²'
+              '0.33 $m/s^{2}$',
+              '3 $m/s^{2}$',
+              '30 $m/s^{2}$',
+              '300 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = F_{\\text{net}}/m = 30/10 = 3$ m/s². This is a direct application of Newton\'s Second Law.'
+            explanation: '$a = F_{\\text{net}}/m = 30/10 = 3$ $m/s^{2}$. This is a direct application of Newton\'s Second Law.'
           },
           {
             question: 'If the same net force is applied to two objects and object A has twice the mass of object B, then:',
@@ -145,7 +145,7 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
             explanation: '$a = F/m$. If $m_A = 2m_B$ and the forces are equal, then $a_A = F/(2m_B) = a_B/2$. Object A has half the acceleration.'
           },
           {
-            question: 'An object accelerates at 5 m/s² when a 20 N net force is applied. What net force is needed to accelerate it at 8 m/s²?',
+            question: 'An object accelerates at 5 $m/s^{2}$ when a 20 N net force is applied. What net force is needed to accelerate it at 8 $m/s^{2}$?',
             options: [
               '12.5 N',
               '20 N',
@@ -164,11 +164,11 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
       content: `
 **Newton\'s Second Law Calculations** 🧮
 
-1) What net force (in N) is needed to accelerate a 1200 kg car at 2.5 m/s²?
+1) What net force (in N) is needed to accelerate a 1200 kg car at 2.5 $m/s^{2}$?
 
-2) A 0.50 kg ball experiences a net force of 4.0 N. What is its acceleration (in m/s²)?
+2) A 0.50 kg ball experiences a net force of 4.0 N. What is its acceleration $(in m/s^{2})$?
 
-3) An object accelerates at 6 m/s² under a net force of 18 N. What is its mass (in kg)?
+3) An object accelerates at 6 $m/s^{2}$ under a net force of 18 N. What is its mass (in kg)?
       `,
       exercise: {
         boxes: 3,
@@ -176,7 +176,7 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
         hint1: '$F = ma = 1200 \\times 2.5$',
         hint2: '$a = F/m = 4.0/0.50$',
         hint3: '$m = F/a = 18/6$',
-        explanation: '1) $F = ma = 1200 \\times 2.5 = 3000$ N. 2) $a = F/m = 4.0/0.50 = 8.0$ m/s². 3) $m = F/a = 18/6 = 3$ kg.'
+        explanation: '1) $F = ma = 1200 \\times 2.5 = 3000$ N. 2) $a = F/m = 4.0/0.50 = 8.0$ $m/s^{2}$. 3) $m = F/a = 18/6 = 3$ kg.'
       }
     },
     {
@@ -207,9 +207,9 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
           },
           {
             label: 'The SI unit of force (newton) equals:',
-            options: ['kg·m/s', 'kg·m/s²', 'kg·m²/s²', 'kg/m·s²'],
+            options: ['kg·m/s', '$kg\\cdot m/s^{2}$', '$kg\\cdot m^{2}/s^{2}$', '$kg/m\\cdot s^{2}$'],
             correctIndex: 1,
-            explanation: '$1$ N $= 1$ kg·m/s². This comes directly from $F = ma$: (kg)(m/s²) = kg·m/s².'
+            explanation: '$1$ N $= 1$ $kg\\cdot m/s^{2}$. This comes directly from $F = ma$: $(kg)(m/s^{2})$ = $kg\\cdot m/s^{2}$.'
           }
         ]
       }
@@ -236,13 +236,13 @@ $$a' = \\frac{3F}{2m} = \\frac{3}{2} \\cdot \\frac{F}{m} = \\frac{3}{2} \\cdot 4
           {
             question: 'Three forces act on a 2 kg object: 10 N right, 4 N left, and 2 N left. What is the magnitude and direction of the acceleration?',
             options: [
-              '2 m/s² to the right',
-              '3 m/s² to the right',
-              '8 m/s² to the right',
-              '2 m/s² to the left'
+              '2 $m/s^{2}$ to the right',
+              '3 $m/s^{2}$ to the right',
+              '8 $m/s^{2}$ to the right',
+              '2 $m/s^{2}$ to the left'
             ],
             correctAnswer: 0,
-            explanation: '$F_{\\text{net}} = 10 - 4 - 2 = 4$ N to the right. $a = F_{\\text{net}}/m = 4/2 = 2$ m/s² to the right.'
+            explanation: '$F_{\\text{net}} = 10 - 4 - 2 = 4$ N to the right. $a = F_{\\text{net}}/m = 4/2 = 2$ $m/s^{2}$ to the right.'
           }
         ]
       }

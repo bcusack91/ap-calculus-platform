@@ -83,11 +83,11 @@ Odd degree, negative leading coeff → Left ↑, Right ↓ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"For x⁴, both ends go","options":["Up","Down","Opposite directions","To zero"]},{"label":"For −x³, the right end goes","options":["Down","Up","To zero","Stays constant"]}],
+        dropdowns: [{"label":"For $x^{4}$, both ends go","options":["Up","Down","Opposite directions","To zero"]},{"label":"For $-x^{3}$, the right end goes","options":["Down","Up","To zero","Stays constant"]}],
         correctAnswers: ["Up","Down"],
         hint1: "Even + positive.",
         hint2: "Odd + negative → right ↓.",
-        explanation: "x⁴: even+positive→both up. −x³: odd+neg→right down."
+        explanation: "$x^{4}$: even+positive→both up. $-x^{3}$: odd+neg→right down."
       }
     },
     {

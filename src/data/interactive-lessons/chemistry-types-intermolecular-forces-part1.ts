@@ -96,15 +96,15 @@ export const chemTypesIntermolecularForcesPart1Data = {
             explanation: 'Xe has the most electrons and the largest, most polarizable electron cloud, giving it the strongest LDF. This is why Xe has the highest boiling point among the noble gases listed.'
           },
           {
-            question: 'The halogens F₂, Cl₂, Br₂, and I₂ are all nonpolar. Which phase pattern is consistent with increasing LDF strength?',
+            question: 'The halogens $F_{2}$, $Cl_{2}$, $Br_{2}$, and $I_{2}$ are all nonpolar. Which phase pattern is consistent with increasing LDF strength?',
             options: [
               'All are gases at room temperature',
-              'F₂ is a gas, Cl₂ is a gas, Br₂ is a liquid, I₂ is a solid',
+              '$F_{2}$ is a gas, $Cl_{2}$ is a gas, $Br_{2}$ is a liquid, $I_{2}$ is a solid',
               'All are solids at room temperature',
-              'F₂ is a solid, Cl₂ is a liquid, Br₂ is a gas, I₂ is a gas'
+              '$F_{2}$ is a solid, $Cl_{2}$ is a liquid, $Br_{2}$ is a gas, $I_{2}$ is a gas'
             ],
             correctAnswer: 1,
-            explanation: 'As molar mass increases from F₂ to I₂, LDF strength increases. F₂ and Cl₂ are gases (weak LDF), Br₂ is a liquid (moderate LDF), and I₂ is a solid (strongest LDF among these). This trend directly reflects increasing LDF strength.'
+            explanation: 'As molar mass increases from $F_{2}$ to $I_{2}$, LDF strength increases. $F_{2}$ and $Cl_{2}$ are gases (weak LDF), $Br_{2}$ is a liquid (moderate LDF), and $I_{2}$ is a solid (strongest LDF among these). This trend directly reflects increasing LDF strength.'
           }
         ]
       }
@@ -117,7 +117,7 @@ export const chemTypesIntermolecularForcesPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'n-Pentane (straight chain C₅H₁₂) boils at 36°C while neopentane (compact/spherical C₅H₁₂) boils at 10°C. What explains this difference?',
+            question: 'n-Pentane (straight chain $C_{5}H_{12}$) boils at 36°C while neopentane $(compact/spherical C_{5}H_{12})$ boils at 10°C. What explains this difference?',
             options: [
               'n-Pentane has more electrons than neopentane',
               'n-Pentane is polar while neopentane is nonpolar',

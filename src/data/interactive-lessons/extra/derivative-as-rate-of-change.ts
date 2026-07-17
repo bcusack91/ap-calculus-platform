@@ -374,15 +374,15 @@ A **negative** derivative means the quantity is **decreasing**. If $W'(20) = -0.
 A spherical balloon is being inflated. Its volume $V$ (in cubic centimeters) at time $t$ (seconds) satisfies $V'(4) = 30$.
 
 **1)** At $t = 4$ s, is the volume increasing or decreasing? Type **inc** or **dec**.
-**2)** By roughly how many cm³ does the volume change during the next $1$ second? *(use the rate)*
+**2)** By roughly how many $cm^{3}$ does the volume change during the next $1$ second? *(use the rate)*
 **3)** A different balloon has $V'(t) = 0$ at some instant. Its volume is momentarily constant — at that instant the rate of change is $\\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['inc', '30', '0'],
           hint1: 'A positive derivative ($30 > 0$) means the quantity is increasing.',
-          hint2: 'Rate $\\approx \\dfrac{\\Delta V}{\\Delta t}$, so over $1$ second $\\Delta V \\approx 30 \\cdot 1 = 30$ cm³.',
+          hint2: 'Rate $\\approx \\dfrac{\\Delta V}{\\Delta t}$, so over $1$ second $\\Delta V \\approx 30 \\cdot 1 = 30$ $cm^{3}$.',
           hint3: 'When the derivative equals $0$, the instantaneous rate of change is $0$ — the quantity is momentarily neither rising nor falling.',
-          explanation: '1) $V\'(4)=30>0 \\Rightarrow$ increasing (**inc**).  2) $\\Delta V \\approx 30\\cdot 1 = 30$ cm³.  3) $V\'=0$ means a rate of $0$.',
+          explanation: '1) $V\'(4)=30>0 \\Rightarrow$ increasing (**inc**).  2) $\\Delta V \\approx 30\\cdot 1 = 30$ $cm^{3}$.  3) $V\'=0$ means a rate of $0$.',
         },
       },
     ],
@@ -414,7 +414,7 @@ $$s(t) \\;\\xrightarrow{\\;\\frac{d}{dt}\\;}\\; v(t) = s'(t) \\;\\xrightarrow{\\
 |----------|--------|---------|---------------|
 | Position | $s(t)$ | where the object is | meters (m) |
 | Velocity | $v(t) = s'(t)$ | rate of change of position | m/s |
-| Acceleration | $a(t) = v'(t)$ | rate of change of velocity | m/s² |
+| Acceleration | $a(t) = v'(t)$ | rate of change of velocity | $m/s^{2}$ |
 
 **Velocity vs. speed:**
 - **Velocity** is *signed*: positive = moving in the positive direction, negative = moving in the negative direction.
@@ -464,7 +464,7 @@ $$-32t + 48 = 0 \\;\\Rightarrow\\; t = \\frac{48}{32} = 1.5 \\text{ s}.$$
 
 **Velocity at $t = 2$:** $v(2) = -32(2) + 48 = -16$ ft/s (moving **down**, since negative).
 
-**Acceleration:** $a(t) = v'(t) = -32$ ft/s² (constant — gravity).
+**Acceleration:** $a(t) = v'(t) = -32$ $ft/s^{2}$ (constant — gravity).
 
 > ✅ **Check the turning point:** velocity is $+16$ before $t=1.5$ and $-16$ after, so the ball rises, stops at $t = 1.5$ s, then falls. ✓`,
       },
@@ -477,14 +477,14 @@ A particle moves along a line with position $s(t) = t^2 - 6t + 8$ (meters, $t$ i
 
 **1)** Find the velocity at $t = 1$: $v(1) = \\,?$ *(m/s)*
 **2)** At what time is the particle momentarily at rest ($v = 0$)? $t = \\,?$ *(s)*
-**3)** The acceleration is constant. $a(t) = \\,?$ *(m/s²)*`,
+**3)** The acceleration is constant. $a(t) = \\,?$ *$(m/s^{2})$*`,
         exercise: {
           boxes: 3,
           correctAnswers: ['-4', '3', '2'],
           hint1: '$v(1) = 2(1) - 6 = -4$ m/s (moving in the negative direction).',
           hint2: 'Set $2t - 6 = 0 \\Rightarrow t = 3$ s.',
-          hint3: '$a(t) = v\'(t) = \\dfrac{d}{dt}(2t-6) = 2$ m/s².',
-          explanation: '1) $v(1)=-4$ m/s.  2) $v=0$ at $t=3$ s.  3) $a=2$ m/s² (derivative of $2t-6$).',
+          hint3: '$a(t) = v\'(t) = \\dfrac{d}{dt}(2t-6) = 2$ $m/s^{2}$.',
+          explanation: '1) $v(1)=-4$ m/s.  2) $v=0$ at $t=3$ s.  3) $a=2$ $m/s^{2}$ (derivative of $2t-6$).',
         },
       },
       {

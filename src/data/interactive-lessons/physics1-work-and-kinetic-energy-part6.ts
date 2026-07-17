@@ -46,7 +46,7 @@ $$\\sum F_i d_i \\cos\\theta_i = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$$
       content: `
 ## Worked Example 1: Pulling at an Angle
 
-A 12 kg box, initially at rest, is pulled 6 m across a rough horizontal floor by a rope at $37°$ above horizontal with tension $T = 100$ N. The coefficient of kinetic friction is $\\mu_k = 0.25$ ($g = 10$ m/s²).
+A 12 kg box, initially at rest, is pulled 6 m across a rough horizontal floor by a rope at $37°$ above horizontal with tension $T = 100$ N. The coefficient of kinetic friction is $\\mu_k = 0.25$ ($g = 10$ $m/s^{2}$).
 
 **Step 1:** Normal force
 $$N = mg - T\\sin(37°) = 120 - 100(0.6) = 120 - 60 = 60 \\text{ N}$$
@@ -73,7 +73,7 @@ $$390 = \\frac{1}{2}(12)v_f^2 \\Rightarrow v_f = \\sqrt{\\frac{780}{12}} = \\sqr
       exercise: {
         questions: [
           {
-            question: 'A 5 kg block starts at rest and slides 4 m down a frictionless $30°$ incline. Its speed at the bottom is ($g = 10$ m/s²):',
+            question: 'A 5 kg block starts at rest and slides 4 m down a frictionless $30°$ incline. Its speed at the bottom is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{20}$ m/s ≈ 4.5 m/s',
               '$\\sqrt{40}$ m/s ≈ 6.3 m/s',
@@ -95,7 +95,7 @@ $$390 = \\frac{1}{2}(12)v_f^2 \\Rightarrow v_f = \\sqrt{\\frac{780}{12}} = \\sqr
             explanation: '$\\Delta KE = \\frac{1}{2}(1200)(100) - \\frac{1}{2}(1200)(900) = 60{,}000 - 540{,}000 = -480{,}000$ J. $W = -Fd \\Rightarrow -F(50) = -480{,}000 \\Rightarrow F = 9600$ N.'
           },
           {
-            question: 'A 2 kg ball is thrown straight up at 15 m/s. Using work-energy, the maximum height is ($g = 10$ m/s²):',
+            question: 'A 2 kg ball is thrown straight up at 15 m/s. Using work-energy, the maximum height is ($g = 10$ $m/s^{2}$):',
             options: [
               '5.625 m',
               '7.5 m',
@@ -114,7 +114,7 @@ $$390 = \\frac{1}{2}(12)v_f^2 \\Rightarrow v_f = \\sqrt{\\frac{780}{12}} = \\sqr
       content: `
 **Workshop Calculations** 🧮
 
-Use $g = 10$ m/s². Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
+Use $g = 10$ $m/s^{2}$. Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
 
 1) A 3 kg object moving at 4 m/s has a 15 N net force applied in the direction of motion for 2 m. What is the final speed (in m/s, to 3 significant figures)?
 
@@ -186,7 +186,7 @@ Use $g = 10$ m/s². Use $\\cos(37°) = 0.8$, $\\sin(37°) = 0.6$.
             explanation: '$\\Delta KE = -\\frac{1}{2}(1000)(400) = -200{,}000$ J. $W_f = -5000d = -200{,}000 \\Rightarrow d = 40$ m.'
           },
           {
-            question: 'An engine with 30 kW power pulls a 2000 kg car up a $5°$ incline at constant speed. Neglecting friction, the car\'s speed is approximately ($g = 10$ m/s², $\\sin 5° \\approx 0.087$):',
+            question: 'An engine with 30 kW power pulls a 2000 kg car up a $5°$ incline at constant speed. Neglecting friction, the car\'s speed is approximately ($g = 10$ $m/s^{2}$, $\\sin 5° \\approx 0.087$):',
             options: [
               '8.6 m/s',
               '15 m/s',

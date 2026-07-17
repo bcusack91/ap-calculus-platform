@@ -42,13 +42,13 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
           {
             question: 'A wheel starts from rest and reaches $\\omega = 30$ rad/s after $\\theta = 150$ rad. The angular acceleration is:',
             options: [
-              '1 rad/s²',
-              '2 rad/s²',
-              '3 rad/s²',
-              '5 rad/s²'
+              '1 $rad/s^{2}$',
+              '2 $rad/s^{2}$',
+              '3 $rad/s^{2}$',
+              '5 $rad/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$: $900 = 0 + 2\\alpha(150)$. $\\alpha = 900/300 = 3$ rad/s².'
+            explanation: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$: $900 = 0 + 2\\alpha(150)$. $\\alpha = 900/300 = 3$ $rad/s^{2}$.'
           },
           {
             question: 'A car tire (radius 0.3 m) rotates at 100 rad/s. The car speed is:',
@@ -62,15 +62,15 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
             explanation: '$v = R\\omega = (0.3)(100) = 30$ m/s (rolling without slipping).'
           },
           {
-            question: 'A grinding wheel ($I = 0.5$ kg·m²) requires 10 N·m of torque to achieve $\\alpha = 20$ rad/s². What is its actual $\\alpha$?',
+            question: 'A grinding wheel ($I = 0.5$ $kg\\cdot m^{2}$) requires 10 N·m of torque to achieve $\\alpha = 20$ $rad/s^{2}$. What is its actual $\\alpha$?',
             options: [
-              '10 rad/s²',
-              '20 rad/s²',
-              '5 rad/s²',
-              '40 rad/s²'
+              '10 $rad/s^{2}$',
+              '20 $rad/s^{2}$',
+              '5 $rad/s^{2}$',
+              '40 $rad/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\tau = I\\alpha \\Rightarrow \\alpha = \\tau/I = 10/0.5 = 20$ rad/s². The question confirms the calculation.'
+            explanation: '$\\tau = I\\alpha \\Rightarrow \\alpha = \\tau/I = 10/0.5 = 20$ $rad/s^{2}$. The question confirms the calculation.'
           }
         ]
       }
@@ -85,7 +85,7 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
 
 2) A solid cylinder (mass 5 kg, radius 0.2 m) rolls without slipping at 4 m/s. What is its angular velocity? (in rad/s)
 
-3) A fan blade decelerates from $\\omega_0 = 80$ rad/s to $\\omega = 20$ rad/s while making 50 revolutions. What is the angular acceleration? (in rad/s², round to 3 significant figures. Include the negative sign)
+3) A fan blade decelerates from $\\omega_0 = 80$ rad/s to $\\omega = 20$ rad/s while making 50 revolutions. What is the angular acceleration? (in $rad/s^{2}$, round to 3 significant figures. Include the negative sign)
       `,
       exercise: {
         boxes: 3,
@@ -93,7 +93,7 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
         hint1: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(0 + 50)(2) = 50$ rad. Rev $= 50/(2\\pi)$',
         hint2: '$\\omega = v/R = 4/0.2$',
         hint3: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$. $\\theta = 50 \\times 2\\pi = 100\\pi$ rad.',
-        explanation: '1) $\\theta = 50$ rad. Rev $= 50/(2\\pi) \\approx 7.96 \\approx 8.0$. 2) $\\omega = 4/0.2 = 20$ rad/s. 3) $20^2 = 80^2 + 2\\alpha(100\\pi)$. $400 - 6400 = 200\\pi\\alpha$. $-6000 = 628.3\\alpha$. $\\alpha = -9.55 \\approx -9.5$ rad/s².'
+        explanation: '1) $\\theta = 50$ rad. Rev $= 50/(2\\pi) \\approx 7.96 \\approx 8.0$. 2) $\\omega = 4/0.2 = 20$ rad/s. 3) $20^2 = 80^2 + 2\\alpha(100\\pi)$. $400 - 6400 = 200\\pi\\alpha$. $-6000 = 628.3\\alpha$. $\\alpha = -9.55 \\approx -9.5$ $rad/s^{2}$.'
       }
     },
     {
@@ -106,7 +106,7 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
         dropdowns: [
           {
             label: 'When time is unknown, which rotational kinematics equation should you use?',
-            options: ['ω = ω₀ + αt', 'ω² = ω₀² + 2αθ', 'θ = ω₀t + ½αt²', 'θ = ½(ω₀ + ω)t'],
+            options: ['ω = $\\omega_{0}$ + αt', '$\\omega^{2}$ = $\\omega_{0}^{2}$ + 2αθ', 'θ = $\\omega_{0}t$ + $\\tfrac{1}{2} \\alpha t^{2}$', 'θ = $\\tfrac{1}{2} (\\omega_{0} + \\omega )t$'],
             correctIndex: 1,
             explanation: 'When time is unknown but you know $\\omega_0$, $\\omega$, and $\\theta$ (or $\\alpha$), use $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$.'
           },

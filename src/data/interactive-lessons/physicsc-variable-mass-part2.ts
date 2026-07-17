@@ -95,7 +95,7 @@ The term $g t_b$ is called **gravity loss** — the velocity penalty for fightin
     {
       id: 'vm2-mcq3',
       type: 'mcq' as const,
-      question: 'A rocket with $v_e = 2500$ m/s, $m_0/m_f = 4$, and burn time $60$ s launches vertically. What is $\\Delta v$? ($g = 10$ m/s²)',
+      question: 'A rocket with $v_e = 2500$ m/s, $m_0/m_f = 4$, and burn time $60$ s launches vertically. What is $\\Delta v$? ($g = 10$ $m/s^{2}$)',
       options: ['$2866$ m/s', '$3466$ m/s', '$4066$ m/s', '$2266$ m/s'],
       correctAnswer: 0,
       explanation: '$\\Delta v = 2500\\ln 4 - 10(60) = 2500(1.386) - 600 = 3466 - 600 = 2866$ m/s.'

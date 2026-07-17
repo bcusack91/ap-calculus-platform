@@ -135,7 +135,7 @@ $$\\boxed{\\sin\\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}}$$
       content: `
 **Unit Circle Computations** 🧮
 
-All answers should be exact. Use sqrt for square roots and fractions (e.g., sqrt(3)/2).
+All answers should be exact. Use sqrt for square roots and fractions (e.g., $\\sqrt{3}/2$).
 
 **1)** $\\cos\\frac{7\\pi}{6} = \\;?$ Write the exact value including the sign. (e.g., $\\cos\\frac{2\\pi}{3}$: Q II, ref angle $\\frac{\\pi}{3}$, $\\cos\\frac{\\pi}{3} = 1/2$, negative in Q II → answer: $-1/2$)
 

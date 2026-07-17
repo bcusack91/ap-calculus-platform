@@ -9,7 +9,7 @@ export const actPlaneGeomPart4Data = {
 
 **Part 4 of 7 — Circles**
 
-Area = πr²; Circumference = 2πr = πd.
+Area = $\\pi r^{2}$; Circumference = 2πr = πd.
 
 Arc length = (central angle/360°) × circumference.
       `
@@ -23,26 +23,26 @@ Arc length = (central angle/360°) × circumference.
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Area = πr²; Circumference = 2πr = πd.?',
+            question: 'Which of the following correctly describes Area = $\\pi r^{2}$; Circumference = 2πr = πd.?',
             options: [
               'Arc length = (central angle/360°) × circumference.',
               'Inscribed angle = half the central angle (same arc).',
-              'Area = πr²; Circumference = 2πr = πd.',
-              'Sector area = (central angle/360°) × πr².'
+              'Area = $\\pi r^{2}$; Circumference = 2πr = πd.',
+              'Sector area = (central angle/360°) × $\\pi r^{2}$.'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Area = πr²; Circumference = 2πr = πd. The other options describe different concepts from this topic.'
+            explanation: 'Correct — Area = $\\pi r^{2}$; Circumference = 2πr = πd. The other options describe different concepts from this topic.'
           },
           {
             question: 'Select the statement that correctly describes Key Insight:',
             options: [
-              'Sector area = (central angle/360°) × πr².',
+              'Sector area = (central angle/360°) × $\\pi r^{2}$.',
               'Inscribed angle = half the central angle (same arc).',
-              'Area = πr²; Circumference = 2πr = πd.',
+              'Area = $\\pi r^{2}$; Circumference = 2πr = πd.',
               'Arc length = (central angle/360°) × circumference.'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Sector area = (central angle/360°) × πr². Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Correct — Key Insight: Sector area = (central angle/360°) × $\\pi r^{2}$. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -51,7 +51,7 @@ Arc length = (central angle/360°) × circumference.
       id: 'act-p4-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Sector area = (central angle/360°) × πr².
+**Key Insight:** Sector area = (central angle/360°) × $\\pi r^{2}$.
 
 **ACT Tip:** Inscribed angle = half the central angle (same arc).
       `
@@ -69,8 +69,8 @@ Arc length = (central angle/360°) × circumference.
             options: [
               'Arc length = (central angle/360°) × circumference.',
               'Inscribed angle = half the central angle (same arc).',
-              'Sector area = (central angle/360°) × πr².',
-              'Area = πr²; Circumference = 2πr = πd.'
+              'Sector area = (central angle/360°) × $\\pi r^{2}$.',
+              'Area = $\\pi r^{2}$; Circumference = 2πr = πd.'
             ],
             correctAnswer: 1,
             explanation: 'Correct — ACT Tip: Inscribed angle = half the central angle (same arc). Each option describes a real concept from this topic, so pay attention to the specific details.'
@@ -88,18 +88,18 @@ Arc length = (central angle/360°) × circumference.
         dropdowns: [
           {
             label: 'Key Insight',
-            options: ['Inscribed angle = half the central angle (same arc).', 'Area = πr²; Circumference = 2πr = πd.', 'Arc length = (central angle/360°) × circumference.', 'Sector area = (central angle/360°) × πr².']
+            options: ['Inscribed angle = half the central angle (same arc).', 'Area = $\\pi r^{2}$; Circumference = 2πr = πd.', 'Arc length = (central angle/360°) × circumference.', 'Sector area = (central angle/360°) × $\\pi r^{2}$.']
           },
           {
             label: 'ACT Tip',
-            options: ['Arc length = (central angle/360°) × circumference.', 'Area = πr²; Circumference = 2πr = πd.', 'Sector area = (central angle/360°) × πr².', 'Inscribed angle = half the central angle (same arc).']
+            options: ['Arc length = (central angle/360°) × circumference.', 'Area = $\\pi r^{2}$; Circumference = 2πr = πd.', 'Sector area = (central angle/360°) × $\\pi r^{2}$.', 'Inscribed angle = half the central angle (same arc).']
           }
         ],
-        correctAnswers: ['Sector area = (central angle/360°) × πr².', 'Inscribed angle = half the central angle (same arc).'],
+        correctAnswers: ['Sector area = (central angle/360°) × $\\pi r^{2}$.', 'Inscribed angle = half the central angle (same arc).'],
         hint1: 'Think about what each concept specifically describes in Circles.',
         hint2: 'Look for key terms that distinguish each concept from the others.',
         hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Circles describes a specific idea. Key Insight: Sector area = (central angle/360°) × πr². ACT Tip: Inscribed angle = half the central angle (same arc).'
+        explanation: 'Each concept in Circles describes a specific idea. Key Insight: Sector area = (central angle/360°) × $\\pi r^{2}$. ACT Tip: Inscribed angle = half the central angle (same arc).'
       }
     }
   ]

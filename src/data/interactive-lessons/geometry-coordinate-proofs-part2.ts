@@ -82,8 +82,8 @@ $2 \\times (-\\frac{1}{2}) = -1$ → **Yes!** ✅
         dropdowns: [{"label":"Parallel lines have","options":["Equal slopes","Perpendicular slopes","No slope","Zero slope"]},{"label":"Perpendicular slopes multiply to","options":["−1","0","1","Undefined"]}],
         correctAnswers: ["Equal slopes","−1"],
         hint1: "Same steepness.",
-        hint2: "m₁ × m₂ = −1.",
-        explanation: "Parallel: m₁=m₂. Perpendicular: m₁·m₂=−1."
+        hint2: "$m_{1}$ × $m_{2}$ = −1.",
+        explanation: "Parallel: $m_{1}$=$m_{2}$. Perpendicular: $m_{1}\\cdot m_{2}$=−1."
       }
     },
     {

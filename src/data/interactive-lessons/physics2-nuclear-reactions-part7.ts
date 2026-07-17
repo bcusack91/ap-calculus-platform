@@ -29,8 +29,8 @@ export const physics2NuclearPart7Data = {
 | Type | Emitted | $\\Delta A$ | $\\Delta Z$ | Penetration |
 |------|---------|-----------|-----------|-------------|
 | Alpha | $^4_2\\text{He}$ | $-4$ | $-2$ | Low (paper) |
-| Beta⁻ | $^0_{-1}e + \\bar{\\nu}$ | $0$ | $+1$ | Medium (foil) |
-| Beta⁺ | $^0_{+1}e + \\nu$ | $0$ | $-1$ | Medium |
+| Beta$ {}^{-}$ | $^0_{-1}e + \\bar{\\nu}$ | $0$ | $+1$ | Medium (foil) |
+| Beta$ {}^{+}$ | $^0_{+1}e + \\nu$ | $0$ | $-1$ | Medium |
 | Gamma | $^0_0\\gamma$ | $0$ | $0$ | High (lead) |
 | Neutron | $^1_0n$ | $-1$ | $0$ | High |
       `
@@ -91,7 +91,7 @@ export const physics2NuclearPart7Data = {
             explanation: 'The strong nuclear force acts only over ~$10^{-15}$ m (about 1 femtometer) but is about 100× stronger than the electromagnetic force at that range. It binds protons and neutrons together, overcoming the proton-proton electrostatic repulsion.'
           },
           {
-            question: 'Radium-226 undergoes alpha decay, then the daughter undergoes beta⁻ decay. The final nucleus has:',
+            question: 'Radium-226 undergoes alpha decay, then the daughter undergoes beta$ {}^{-}$ decay. The final nucleus has:',
             options: [
               '$A = 222$, $Z = 87$',
               '$A = 222$, $Z = 89$',
@@ -99,7 +99,7 @@ export const physics2NuclearPart7Data = {
               '$A = 222$, $Z = 87$'
             ],
             correctAnswer: 2,
-            explanation: 'Alpha: $A = 226 - 4 = 222$, $Z = 88 - 2 = 86$ (radon). Beta⁻: $A = 222$ (unchanged), $Z = 86 + 1 = 87$ (francium). Final: $^{222}_{87}\\text{Fr}$.'
+            explanation: 'Alpha: $A = 226 - 4 = 222$, $Z = 88 - 2 = 86$ (radon). Beta$ {}^{-}$: $A = 222$ (unchanged), $Z = 86 + 1 = 87$ (francium). Final: $^{222}_{87}\\text{Fr}$.'
           },
           {
             question: 'A sample has mass $m$ and undergoes nuclear reactions releasing 0.1% of its mass as energy. Energy released:',

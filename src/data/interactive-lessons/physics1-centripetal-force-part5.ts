@@ -148,7 +148,7 @@ $$v_{min} = \\sqrt{rg\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}}$$
       content: `
 **Banking Angle Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A highway curve has radius 200 m. What banking angle is needed for a design speed of 30 m/s (in degrees, round to 3 significant figures)?
 
@@ -203,7 +203,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A frictionless banked curve has $\\theta = 45°$ and $r = 50$ m. The design speed is ($g = 10$ m/s²):',
+            question: 'A frictionless banked curve has $\\theta = 45°$ and $r = 50$ m. The design speed is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{250} \\approx 15.8$ m/s',
               '$\\sqrt{500} \\approx 22.4$ m/s',

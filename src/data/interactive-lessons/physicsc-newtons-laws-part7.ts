@@ -23,9 +23,9 @@ export const physCNewtonPart7Data = {
       content: `
 ## Worked Example
 
-**An Atwood machine has masses 3 kg and 5 kg. Find the acceleration. ($g = 10$ m/s²)**
+**An Atwood machine has masses 3 kg and 5 kg. Find the acceleration. ($g = 10$ $m/s^{2}$)**
 
-$a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 2.5$ m/s² ✅
+$a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 2.5$ $m/s^{2}$ ✅
     
     `
     },
@@ -38,7 +38,7 @@ $a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 
       exercise: {
         questions: [
           {
-                    "question": "An elevator accelerates upward at 2 m/s². A person's apparent weight:",
+                    "question": "An elevator accelerates upward at 2 $m/s^{2}$. A person's apparent weight:",
                     "options": [
                               "Increases",
                               "Decreases",
@@ -57,9 +57,9 @@ $a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 
       content: `
 **Review & Applications** 🧮
 
-1) Atwood machine: masses 3 kg and 5 kg. Acceleration (m/s²)? ($g = 10$ m/s²)
+1) Atwood machine: masses 3 kg and 5 kg. Acceleration $(m/s^{2})$? ($g = 10$ $m/s^{2}$)
 
-2) A 10 kg object hangs from a rope. What is the tension (N)? ($g = 10$ m/s²)
+2) A 10 kg object hangs from a rope. What is the tension (N)? ($g = 10$ $m/s^{2}$)
 
 3) A 4 kg block is pushed with 30 N. Friction is 10 N. What is the net force (N)?
     
@@ -70,7 +70,7 @@ $a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 
         hint1: "$a = (m_2 - m_1)g / (m_1 + m_2)$.",
         hint2: "At rest: $T = mg$.",
         hint3: "$F_{net} = F_{app} - f$.",
-        explanation: "1) $(5-3)(10)/(3+5) = 20/8 = 2.5$ m/s². 2) $T = 10 \\times 10 = 100$ N. 3) $30 - 10 = 20$ N."
+        explanation: "1) $(5-3)(10)/(3+5) = 20/8 = 2.5$ $m/s^{2}$. 2) $T = 10 \\times 10 = 100$ N. 3) $30 - 10 = 20$ N."
       }
     },
     {

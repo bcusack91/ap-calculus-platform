@@ -92,11 +92,11 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
       content: `
 **AP Synthesis Calculations** 🧮 (g = 10, $\\rho_w = 1000$, $P_{atm} = 1.0\\times10^{5}$)
 
-1) A 0.50 m³ block of metal has mass 1350 kg. Density (kg/m³)?
+1) A 0.50 $m^{3}$ block of metal has mass 1350 kg. Density $(kg/m^{3})$?
 
 2) Diver at 20 m below sea surface (ρ ≈ 1000). Absolute pressure (Pa)?
 
-3) Hydraulic lift: input $A_1 = 0.0010$ m², output $A_2 = 0.040$ m². To lift 4000 N, input force needed (N)?
+3) Hydraulic lift: input $A_1 = 0.0010$ $m^{2}$, output $A_2 = 0.040$ $m^{2}$. To lift 4000 N, input force needed (N)?
       `,
       exercise: {
         boxes: 3,
@@ -104,7 +104,7 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
         hint1: '$\\rho = m/V$.',
         hint2: '$P_{abs} = P_{atm} + \\rho g h$.',
         hint3: '$F_1 = F_2 (A_1/A_2)$.',
-        explanation: '1) $\\rho = 1350/0.50 = 2700$ kg/m³ (aluminum). 2) $P_{abs} = 10^{5} + 1000(10)(20) = 3.0\\times10^{5}$ Pa = 3 atm. 3) $F_1 = 4000 \\times (0.0010/0.040) = 4000/40 = 100$ N.'
+        explanation: '1) $\\rho = 1350/0.50 = 2700$ $kg/m^{3}$ (aluminum). 2) $P_{abs} = 10^{5} + 1000(10)(20) = 3.0\\times10^{5}$ Pa = 3 atm. 3) $F_1 = 4000 \\times (0.0010/0.040) = 4000/40 = 100$ N.'
       }
     },
     {
@@ -170,7 +170,7 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
               '5000 Pa'
             ],
             correctAnswer: 3,
-            explanation: '$F = mg = 50$ N. $A = 0.10^2 = 0.01$ m². $P = 50/0.01 = 5000$ Pa.'
+            explanation: '$F = mg = 50$ N. $A = 0.10^2 = 0.01$ $m^{2}$. $P = 50/0.01 = 5000$ Pa.'
           }
         ]
       }

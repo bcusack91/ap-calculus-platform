@@ -228,7 +228,7 @@ Answer the following about equilibrium constants:
               'Reactants are favored'
             ],
             correctAnswer: 1,
-            explanation: '$K_c = 54 > 1$ means the products are favored at equilibrium — there is more HI than H₂ and I₂ at this temperature.'
+            explanation: '$K_c = 54 > 1$ means the products are favored at equilibrium — there is more HI than $H_{2}$ and $I_{2}$ at this temperature.'
           }
         ]
       }

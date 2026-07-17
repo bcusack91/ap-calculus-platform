@@ -37,8 +37,8 @@ Type both equations, then click the intersection point to get exact coordinates 
       question: 'Which problem would benefit MOST from using the Desmos calculator?',
       options: [
         'What is 3/4 of 120?',
-        'Factor x² - 9',
-        'Find where y = 2x² - 3x + 1 and y = x + 2 intersect',
+        'Factor $x^{2}$ - 9',
+        'Find where y = $2x^{2}$ - 3x + 1 and y = x + 2 intersect',
         'Solve 5x = 35'
       ],
       correctAnswer: 2,

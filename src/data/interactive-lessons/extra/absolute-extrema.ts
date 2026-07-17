@@ -830,13 +830,13 @@ Using the pen from above with $A(x) = 40x - 2x^2$ on $[0, 20]$, work through the
           dropdowns: [
             { label: '$A\'(x) =$', options: ['$40 - 4x$', '$40 - 2x$', '$80x - 2$', '$-4x$'] },
             { label: 'The critical number is $x =$', options: ['$10$', '$20$', '$40$', '$5$'] },
-            { label: 'The maximum area (in m²) is:', options: ['$200$', '$400$', '$100$', '$160$'] },
+            { label: 'The maximum area $(in m^{2})$ is:', options: ['$200$', '$400$', '$100$', '$160$'] },
           ],
           correctAnswers: ['$40 - 4x$', '$10$', '$200$'],
           hint1: 'Differentiate $40x - 2x^2$ term by term.',
           hint2: 'Set $40 - 4x = 0 \\Rightarrow x = 10$, which is inside $[0,20]$.',
           hint3: 'Candidates $x = 0, 10, 20$ give $A = 0,\\ 200,\\ 0$. The biggest is at $x=10$.',
-          explanation: '$A\'(x) = 40 - 4x = 0 \\Rightarrow x = 10$. Then $A(10) = 40(10) - 2(100) = 400 - 200 = 200$ m². Endpoints give $A=0$, so the max area is $200$ m².',
+          explanation: '$A\'(x) = 40 - 4x = 0 \\Rightarrow x = 10$. Then $A(10) = 40(10) - 2(100) = 400 - 200 = 200$ $m^{2}$. Endpoints give $A=0$, so the max area is $200$ $m^{2}$.',
         },
       },
       {

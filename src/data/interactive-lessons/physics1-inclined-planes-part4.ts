@@ -51,13 +51,13 @@ $$T = m_2(g - a) = \\frac{m_1 m_2 g(1 + \\sin\\theta)}{m_1 + m_2}$$
       content: `
 ## Worked Example
 
-$m_1 = 4$ kg on a frictionless 30° incline, connected to $m_2 = 3$ kg hanging ($g = 10$ m/s²).
+$m_1 = 4$ kg on a frictionless 30° incline, connected to $m_2 = 3$ kg hanging ($g = 10$ $m/s^{2}$).
 
 **Driving force:** $m_2 g - m_1 g\\sin 30° = 30 - 20 = 10$ N
 
 **Total mass:** $m_1 + m_2 = 7$ kg
 
-**Acceleration:** $a = 10/7 \\approx 1.43$ m/s²
+**Acceleration:** $a = 10/7 \\approx 1.43$ $m/s^{2}$
 
 **Tension:** $T = m_2(g - a) = 3(10 - 1.43) = 25.7$ N
 
@@ -122,11 +122,11 @@ $$a = \\frac{m_2 g - m_1 g\\sin\\theta - \\mu_k m_1 g\\cos\\theta}{m_1 + m_2}$$
       content: `
 **Connected System Calculations** 🧮
 
-$m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5$ kg hanging freely ($g = 10$ m/s², $\\sin 30° = 0.50$).
+$m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5$ kg hanging freely ($g = 10$ $m/s^{2}$, $\\sin 30° = 0.50$).
 
 1) What is the net driving force of the system (in N)?
 
-2) What is the acceleration (in m/s², to one decimal)?
+2) What is the acceleration (in $m/s^{2}$, to one decimal)?
 
 3) What is the tension in the string (in N, to one decimal)?
 
@@ -138,7 +138,7 @@ $m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5
         hint1: 'Net force = $m_2 g - m_1 g\\sin 30° = 50 - 30$.',
         hint2: '$a = 20/(6 + 5) = 20/11$.',
         hint3: '$T = m_2(g - a) = 5(10 - 1.818)$. Or $T = m_1 g\\sin 30° + m_1 a = 30 + 6(1.818) = 30 + 10.9 = 40.9$.',
-        explanation: '1) $50 - 30 = 20$ N. 2) $a = 20/11 \\approx 1.8$ m/s². 3) $T = 5(10 - 1.8) = 41.0$ N.'
+        explanation: '1) $50 - 30 = 20$ N. 2) $a = 20/11 \\approx 1.8$ $m/s^{2}$. 3) $T = 5(10 - 1.8) = 41.0$ N.'
       }
     },
     {
@@ -179,15 +179,15 @@ $m_1 = 6$ kg on a frictionless 30° incline, connected over a pulley to $m_2 = 5
       exercise: {
         questions: [
           {
-            question: 'A 3 kg block on a frictionless 53° incline is connected to a 4 kg hanging mass ($g = 10$ m/s², $\\sin 53° = 0.80$). What is the acceleration?',
+            question: 'A 3 kg block on a frictionless 53° incline is connected to a 4 kg hanging mass ($g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$). What is the acceleration?',
             options: [
-              '1.0 m/s²',
-              '2.3 m/s²',
-              '4.0 m/s²',
-              '5.7 m/s²'
+              '1.0 $m/s^{2}$',
+              '2.3 $m/s^{2}$',
+              '4.0 $m/s^{2}$',
+              '5.7 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Net force = $m_2 g - m_1 g\\sin 53° = 40 - 24 = 16$ N. $a = 16/7 \\approx 2.3$ m/s².'
+            explanation: 'Net force = $m_2 g - m_1 g\\sin 53° = 40 - 24 = 16$ N. $a = 16/7 \\approx 2.3$ $m/s^{2}$.'
           },
           {
             question: 'For the system above, the tension in the string is approximately:',

@@ -22,7 +22,7 @@ export const physCConsForcePart6Data = {
     {
       id: 'cf6-mcq1',
       type: 'mcq' as const,
-      question: 'A 0.5 kg ball is dropped from $h = 20$ m. Air resistance does $-30$ J of work during the fall. What is the ball\'s speed just before hitting the ground? ($g = 10$ m/s²)',
+      question: 'A 0.5 kg ball is dropped from $h = 20$ m. Air resistance does $-30$ J of work during the fall. What is the ball\'s speed just before hitting the ground? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{2(70)/0.5} \\approx 16.7$ m/s',
         '$\\sqrt{2(10)(20)} = 20$ m/s',

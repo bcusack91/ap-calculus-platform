@@ -9,7 +9,7 @@ export const physics1UniversalGravitationPart2Data = {
 
 **Part 2 of 7 — Universal Gravitation**
 
-The gravitational field describes how massive objects modify the space around them, creating a region where other masses experience a gravitational force. This is the concept behind $g$ — and it's not always $9.8$ m/s²!
+The gravitational field describes how massive objects modify the space around them, creating a region where other masses experience a gravitational force. This is the concept behind $g$ — and it's not always $9.8$ $m/s^{2}$!
 
 **In this lesson you will learn:**
 - The gravitational field concept: $g = GM/r^2$
@@ -31,20 +31,20 @@ The gravitational field $\\vec{g}$ at a point in space tells you the gravitation
 $$\\vec{g} = \\frac{\\vec{F}}{m_{test}} \\quad \\Rightarrow \\quad g = \\frac{GM}{r^2}$$
 
 - Direction: toward the center of the mass $M$ creating the field
-- Units: N/kg (equivalent to m/s²)
+- Units: N/kg (equivalent to $m/s^{2}$)
 - $g$ is a property of **space** — it exists whether or not a test mass is there
 
 ### Weight and Gravitational Field
 
 $$W = mg$$
 
-where $g$ is the local gravitational field strength. On Earth's surface: $g \\approx 9.8$ m/s².
+where $g$ is the local gravitational field strength. On Earth's surface: $g \\approx 9.8$ $m/s^{2}$.
 
 ### How $g$ Varies with Distance
 
 $$g(r) = \\frac{GM}{r^2}$$
 
-At Earth's surface ($r = R_E$): $g_0 = GM_E/R_E^2 \\approx 9.8$ m/s²
+At Earth's surface ($r = R_E$): $g_0 = GM_E/R_E^2 \\approx 9.8$ $m/s^{2}$
 
 At altitude $h$ above the surface ($r = R_E + h$):
 
@@ -52,7 +52,7 @@ $$g(h) = \\frac{GM_E}{(R_E + h)^2} = g_0 \\left(\\frac{R_E}{R_E + h}\\right)^2$$
 
 ### Surface Gravity on Other Bodies
 
-| Body | $g$ (m/s²) | Compared to Earth |
+| Body | $g$ $(m/s^{2})$ | Compared to Earth |
 |------|-----------|------------------|
 | Moon | 1.6 | 0.16$g$ |
 | Mars | 3.7 | 0.38$g$ |
@@ -110,13 +110,13 @@ $$g(h) = \\frac{GM_E}{(R_E + h)^2} = g_0 \\left(\\frac{R_E}{R_E + h}\\right)^2$$
       content: `
 **Gravitational Field Calculations** 🧮
 
-Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $g_E = 10$ m/s², $R_E = 6.4 \\times 10^6$ m.
+Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $g_E = 10$ $m/s^{2}$, $R_E = 6.4 \\times 10^6$ m.
 
-1) What is the gravitational field strength at twice Earth's radius from Earth's center (in m/s²)?
+1) What is the gravitational field strength at twice Earth's radius from Earth's center $(in m/s^{2})$?
 
-2) Mars has mass $6.42 \\times 10^{23}$ kg and radius $3.39 \\times 10^6$ m. What is its surface gravity (in m/s², round to 3 significant figures)?
+2) Mars has mass $6.42 \\times 10^{23}$ kg and radius $3.39 \\times 10^6$ m. What is its surface gravity (in $m/s^{2}$, round to 3 significant figures)?
 
-3) At what distance from Earth's center (in units of $R_E$, round to 3 significant figures) is $g = 1$ m/s²?
+3) At what distance from Earth's center (in units of $R_E$, round to 3 significant figures) is $g = 1$ $m/s^{2}$?
       `,
       exercise: {
         boxes: 3,
@@ -124,7 +124,7 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $g_E = 10$ m/s², $R_E = 6.4 \\time
         hint1: '$g \\propto 1/r^2$. At $2R_E$: $g = g_E/4$.',
         hint2: '$g = GM/R^2$.',
         hint3: '$g/g_E = (R_E/r)^2 \\Rightarrow r/R_E = \\sqrt{g_E/g}$.',
-        explanation: '1) $g = 10/4 = 2.5$ m/s². 2) $g = 6.67 \\times 10^{-11}(6.42 \\times 10^{23})/(3.39 \\times 10^6)^2 = 4.28 \\times 10^{13}/1.15 \\times 10^{13} = 3.72 \\approx 3.7$ m/s². 3) $r/R_E = \\sqrt{10/1} = \\sqrt{10} = 3.162 \\approx 3.2$.'
+        explanation: '1) $g = 10/4 = 2.5$ $m/s^{2}$. 2) $g = 6.67 \\times 10^{-11}(6.42 \\times 10^{23})/(3.39 \\times 10^6)^2 = 4.28 \\times 10^{13}/1.15 \\times 10^{13} = 3.72 \\approx 3.7$ $m/s^{2}$. 3) $r/R_E = \\sqrt{10/1} = \\sqrt{10} = 3.162 \\approx 3.2$.'
       }
     },
     {
@@ -142,10 +142,10 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $g_E = 10$ m/s², $R_E = 6.4 \\time
             explanation: 'Inside a uniform spherical shell, the gravitational field is exactly zero (Shell Theorem). All the gravitational pulls from different parts of the shell cancel.'
           },
           {
-            label: 'The units N/kg and m/s² are:',
+            label: 'The units N/kg and $m/s^{2}$ are:',
             options: ['Completely different', 'Equivalent — same physical dimension', 'Similar but not interchangeable', 'Only equal on Earth'],
             correctIndex: 1,
-            explanation: '1 N = 1 kg·m/s², so 1 N/kg = 1 (kg·m/s²)/kg = 1 m/s². They are exactly the same unit.'
+            explanation: '1 N = 1 $kg\\cdot m/s^{2}$, so 1 N/kg = 1 $(kg\\cdot m/s^{2})/kg$ = 1 $m/s^{2}$. They are exactly the same unit.'
           },
           {
             label: 'If Earth somehow shrank to half its radius (same mass), surface gravity would:',
@@ -165,7 +165,7 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $g_E = 10$ m/s², $R_E = 6.4 \\time
       exercise: {
         questions: [
           {
-            question: 'A 60 kg person weighs 600 N on Earth. On a planet where $g = 5$ m/s², they would weigh:',
+            question: 'A 60 kg person weighs 600 N on Earth. On a planet where $g = 5$ $m/s^{2}$, they would weigh:',
             options: [
               '120 N',
               '300 N',

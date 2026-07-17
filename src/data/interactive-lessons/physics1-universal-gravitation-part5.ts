@@ -100,7 +100,7 @@ Escape velocity = $\\sqrt{2}$ × orbital velocity at the same radius. A satellit
       content: `
 **Satellite Calculations** 🧮
 
-Use $g = 10$ m/s², $R_E = 6.4 \\times 10^6$ m, $M_E = 6.0 \\times 10^{24}$ kg, $G = 6.67 \\times 10^{-11}$.
+Use $g = 10$ $m/s^{2}$, $R_E = 6.4 \\times 10^6$ m, $M_E = 6.0 \\times 10^{24}$ kg, $G = 6.67 \\times 10^{-11}$.
 
 1) What is the orbital velocity for a satellite at altitude $h = 200$ km above Earth (in m/s, round to nearest 100)?
 

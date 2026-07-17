@@ -37,7 +37,7 @@ $$\\tau = \\mu B\\sin\\theta = NIAB\\sin\\theta$$`
       question: 'A circular coil of 100 turns, radius 5 cm, carries 2 A in a 0.4 T field. The maximum torque on the coil is:',
       options: ['$0.628$ N·m', '$0.314$ N·m', '$1.257$ N·m', '$6.28$ N·m'],
       correctAnswer: 0,
-      explanation: '$\\mu = NIA = 100 \\times 2 \\times \\pi(0.05)^2 = 200\\pi(0.0025) = 0.5\\pi$ A·m². $\\tau_{\\max} = \\mu B = 0.5\\pi(0.4) = 0.2\\pi \\approx 0.628$ N·m.'
+      explanation: '$\\mu = NIA = 100 \\times 2 \\times \\pi(0.05)^2 = 200\\pi(0.0025) = 0.5\\pi$ $A\\cdot m^{2}$. $\\tau_{\\max} = \\mu B = 0.5\\pi(0.4) = 0.2\\pi \\approx 0.628$ N·m.'
     },
     {
       id: 'magf5-energy',
@@ -69,7 +69,7 @@ The negative sign confirms torque rotates toward $\\theta = 0$ (stable equilibri
     {
       id: 'magf5-mcq2',
       type: 'mcq' as const,
-      question: 'A magnetic dipole with $\\mu = 0.5$ A·m² is initially aligned with a 2 T field. The work required by an external agent to rotate it $180°$ is:',
+      question: 'A magnetic dipole with $\\mu = 0.5$ $A\\cdot m^{2}$ is initially aligned with a 2 T field. The work required by an external agent to rotate it $180°$ is:',
       options: ['2 J', '1 J', '0.5 J', '4 J'],
       correctAnswer: 0,
       explanation: '$W = \\mu B(\\cos 0° - \\cos 180°) = 0.5 \\times 2 \\times (1 - (-1)) = 0.5 \\times 2 \\times 2 = 2$ J.'

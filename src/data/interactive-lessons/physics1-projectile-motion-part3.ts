@@ -112,7 +112,7 @@ $$R_{max} = \\frac{v_0^2}{g}$$
       content: `
 **Time and Range Calculations** 🧮
 
-A ball is launched from ground level at 30 m/s at 53° above horizontal. Use $g = 10$ m/s², $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
+A ball is launched from ground level at 30 m/s at 53° above horizontal. Use $g = 10$ $m/s^{2}$, $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
 
 1) $v_{0y}$ (in m/s)
 
@@ -168,7 +168,7 @@ A ball is launched from ground level at 30 m/s at 53° above horizontal. Use $g 
       content: `
 **Exit Problem** ✅
 
-A projectile is launched at 20 m/s at 45° from ground level. Use $g = 10$ m/s², $\\sin 45° \\approx 0.707$.
+A projectile is launched at 20 m/s at 45° from ground level. Use $g = 10$ $m/s^{2}$, $\\sin 45° \\approx 0.707$.
 
 1) Time of flight (in seconds, round to 1 decimal)
 

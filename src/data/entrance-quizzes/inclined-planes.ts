@@ -24,10 +24,10 @@ const questions: EntranceQuizQuestion[] = [
   // Part 2: Frictionless Inclines
   {
     id: 'ip-ent-2a',
-    question: 'A block slides down a frictionless $30°$ incline. What is its acceleration? (Use $g = 10$ m/s².)',
-    options: ['$5$ m/s²', '$5\\sqrt{3}$ m/s²', '$10$ m/s²', '$10\\sqrt{3}$ m/s²'],
+    question: 'A block slides down a frictionless $30°$ incline. What is its acceleration? (Use $g = 10$ $m/s^{2}$.)',
+    options: ['$5$ $m/s^{2}$', '$5\\sqrt{3}$ $m/s^{2}$', '$10$ $m/s^{2}$', '$10\\sqrt{3}$ $m/s^{2}$'],
     correctIndex: 0,
-    explanation: '$a = g\\sin\\theta = 10\\sin 30° = 10 \\times 0.5 = 5$ m/s².',
+    explanation: '$a = g\\sin\\theta = 10\\sin 30° = 10 \\times 0.5 = 5$ $m/s^{2}$.',
     partNumber: 2,
     partTitle: 'Frictionless Inclines',
   },
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 3: Inclines with Friction
   {
     id: 'ip-ent-3a',
-    question: 'A $4$ kg block slides down a $37°$ incline with $\\mu_k = 0.25$. What is the friction force? ($\\sin 37° \\approx 0.6$, $\\cos 37° \\approx 0.8$, $g = 10$ m/s².)',
+    question: 'A $4$ kg block slides down a $37°$ incline with $\\mu_k = 0.25$. What is the friction force? ($\\sin 37° \\approx 0.6$, $\\cos 37° \\approx 0.8$, $g = 10$ $m/s^{2}$.)',
     options: ['$4$ N', '$6$ N', '$8$ N', '$10$ N'],
     correctIndex: 2,
     explanation: '$N = mg\\cos\\theta = 4(10)(0.8) = 32$ N. $f_k = \\mu_k N = 0.25 \\times 32 = 8$ N.',
@@ -84,10 +84,10 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5: Pushing/Pulling on Inclines
   {
     id: 'ip-ent-5a',
-    question: 'A $10$ kg box is pushed up a smooth $30°$ incline with a force of $80$ N parallel to the surface. What is the acceleration? (Use $g = 10$ m/s².)',
-    options: ['$3$ m/s²', '$5$ m/s²', '$8$ m/s²', '$13$ m/s²'],
+    question: 'A $10$ kg box is pushed up a smooth $30°$ incline with a force of $80$ N parallel to the surface. What is the acceleration? (Use $g = 10$ $m/s^{2}$.)',
+    options: ['$3$ $m/s^{2}$', '$5$ $m/s^{2}$', '$8$ $m/s^{2}$', '$13$ $m/s^{2}$'],
     correctIndex: 0,
-    explanation: 'Net force up the incline: $F - mg\\sin 30° = 80 - 10(10)(0.5) = 80 - 50 = 30$ N. $a = 30/10 = 3$ m/s².',
+    explanation: 'Net force up the incline: $F - mg\\sin 30° = 80 - 10(10)(0.5) = 80 - 50 = 30$ N. $a = 30/10 = 3$ $m/s^{2}$.',
     partNumber: 5,
     partTitle: 'Pushing/Pulling on Inclines',
   },
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Connected Objects on Inclines
   {
     id: 'ip-ent-6a',
-    question: 'A $5$ kg block on a $30°$ frictionless incline is connected by a string over a pulley to a $3$ kg hanging mass. Which way does the system accelerate? (Use $g = 10$ m/s².)',
+    question: 'A $5$ kg block on a $30°$ frictionless incline is connected by a string over a pulley to a $3$ kg hanging mass. Which way does the system accelerate? (Use $g = 10$ $m/s^{2}$.)',
     options: ['The $5$ kg block slides down', 'The $3$ kg mass falls', 'The system is in equilibrium', 'Not enough information'],
     correctIndex: 0,
     explanation: 'Force pulling 5 kg down the incline: $5(10)\\sin 30° = 25$ N. Weight of 3 kg mass: $3(10) = 30$ N. Wait — $30 > 25$, so the hanging mass falls and pulls the block up. Actually let me recalculate: the 3 kg mass weighs 30 N pulling one way, gravity along the incline on the 5 kg block is 25 N. Since 30 > 25, the 3 kg mass descends.',
@@ -129,10 +129,10 @@ const questions: EntranceQuizQuestion[] = [
   // Part 7: Synthesis & AP Review
   {
     id: 'ip-ent-7a',
-    question: 'A skier ($60$ kg) descends a $45°$ slope with $\\mu_k = 0.1$. What is the net acceleration? (Use $g = 10$ m/s², $\\sin 45° = \\cos 45° \\approx 0.707$.)',
-    options: ['$\\approx 6.4$ m/s²', '$\\approx 7.1$ m/s²', '$\\approx 5.0$ m/s²', '$\\approx 3.5$ m/s²'],
+    question: 'A skier ($60$ kg) descends a $45°$ slope with $\\mu_k = 0.1$. What is the net acceleration? (Use $g = 10$ $m/s^{2}$, $\\sin 45° = \\cos 45° \\approx 0.707$.)',
+    options: ['$\\approx 6.4$ $m/s^{2}$', '$\\approx 7.1$ $m/s^{2}$', '$\\approx 5.0$ $m/s^{2}$', '$\\approx 3.5$ $m/s^{2}$'],
     correctIndex: 0,
-    explanation: '$a = g(\\sin 45° - \\mu_k \\cos 45°) = 10(0.707 - 0.1 \\times 0.707) = 10(0.707)(0.9) \\approx 6.4$ m/s².',
+    explanation: '$a = g(\\sin 45° - \\mu_k \\cos 45°) = 10(0.707 - 0.1 \\times 0.707) = 10(0.707)(0.9) \\approx 6.4$ $m/s^{2}$.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },

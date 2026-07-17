@@ -45,7 +45,7 @@ export const chemTypesOfChemicalBondsPart5Data = {
 | **Electrical conductivity (solid)** | No | No | Yes |
 | **Electrical conductivity (liquid/dissolved)** | Yes | No (unless ionizes) | Yes |
 | **Solubility in water** | Often soluble | Polar dissolves in polar | Insoluble |
-| **Examples** | NaCl, MgO, CaF₂ | H₂O, CO₂, CH₄ | Fe, Cu, Al |
+| **Examples** | NaCl, MgO, $CaF_{2}$ | $H_{2}O$, $CO_{2}$, $CH_{4}$ | Fe, Cu, Al |
 
 
 ---
@@ -81,11 +81,11 @@ export const chemTypesOfChemicalBondsPart5Data = {
             options: [
               'NaCl (ionic)',
               'Fe (metallic)',
-              'CH₄ (molecular)',
+              '$CH_{4}$ (molecular)',
               'MgO (ionic)'
             ],
             correctAnswer: 2,
-            explanation: 'Molecular compounds like CH₄ have weak intermolecular forces (London dispersion forces only). These require very little energy to overcome, resulting in very low melting points (CH₄ melts at $-182$ °C).'
+            explanation: 'Molecular compounds like $CH_{4}$ have weak intermolecular forces (London dispersion forces only). These require very little energy to overcome, resulting in very low melting points ($CH_{4}$ melts at $-182$ °C).'
           },
           {
             question: 'A solid conducts electricity and can be hammered into a thin sheet. It is most likely:',
@@ -119,7 +119,7 @@ You can predict the most likely bond type based on the **types of elements** inv
 
 2. **Nonmetal + nonmetal** → **Covalent bond**
    - Similar electronegativities; electron sharing
-   - Examples: H₂O, CO₂, NH₃
+   - Examples: $H_{2}O$, $CO_{2}$, $NH_{3}$
 
 3. **Metal + metal** → **Metallic bond**
    - Delocalized valence electrons
@@ -252,7 +252,7 @@ In a covalent network solid, atoms are connected by **continuous covalent bonds*
               'A covalent network solid'
             ],
             correctAnswer: 2,
-            explanation: 'Very low melting point = weak intermolecular forces = molecular compound. It doesn\'t conduct in any state because there are no mobile ions or delocalized electrons. (This describes CO₂, which sublimes at $-78$ °C.)'
+            explanation: 'Very low melting point = weak intermolecular forces = molecular compound. It doesn\'t conduct in any state because there are no mobile ions or delocalized electrons. (This describes $CO_{2}$, which sublimes at $-78$ °C.)'
           }
         ]
       }

@@ -20,13 +20,13 @@ Two objects starting at the same point, going the same way:
 
 ### Opposite Direction Problems
 Two objects starting at the same point, going opposite directions:
-- **Combined rate** = speed₁ + speed₂
+- **Combined rate** = $speed_{1}$ + $speed_{2}$
 - Total distance apart = combined rate × time
 
 ### Meeting Problems
 Two objects starting at different points, moving toward each other:
 - They cover the distance between them at a **combined rate**
-- Time to meet = total distance ÷ (speed₁ + speed₂)
+- Time to meet = total distance ÷ $(speed_{1} + speed_{2})$
 
 **Example:** City A and B are 300 miles apart. Train 1 leaves A at 60 mph, Train 2 leaves B at 40 mph. When do they meet?
 - Combined rate = 60 + 40 = 100 mph

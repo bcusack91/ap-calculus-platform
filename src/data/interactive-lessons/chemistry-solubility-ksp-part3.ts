@@ -80,7 +80,7 @@ $s = \\sqrt{1.8 \\times 10^{-10}} = 1.3 \\times 10^{-5}$ M
 
 ### In 0.10 M NaCl
 
-The Cl⁻ from NaCl provides an initial $[\\text{Cl}^-] = 0.10$ M.
+The $Cl^{-}$ from NaCl provides an initial $[\\text{Cl}^-] = 0.10$ M.
 
 $$K_{sp} = [\\text{Ag}^+][\\text{Cl}^-] = (s)(0.10 + s)$$
 
@@ -118,7 +118,7 @@ The common ion reduced solubility by a factor of about **7,000**!
               'Increase $K_{sp}$'
             ],
             correctAnswer: 1,
-            explanation: 'The added Cl⁻ (common ion) shifts the equilibrium left, causing more AgCl to precipitate and decreasing its solubility. $K_{sp}$ itself doesn\'t change — only the solubility does.'
+            explanation: 'The added $Cl^{-}$ (common ion) shifts the equilibrium left, causing more AgCl to precipitate and decreasing its solubility. $K_{sp}$ itself doesn\'t change — only the solubility does.'
           },
           {
             question: 'The common ion effect is an application of:',
@@ -134,13 +134,13 @@ The common ion reduced solubility by a factor of about **7,000**!
           {
             question: 'Which of the following would be a "common ion" when dissolving $\\text{PbCl}_2$?',
             options: [
-              '$\\text{Na}^+$ from NaNO₃',
+              '$\\text{Na}^+$ from $NaNO_{3}$',
               '$\\text{Cl}^-$ from KCl',
-              '$\\text{NO}_3^-$ from NaNO₃',
+              '$\\text{NO}_3^-$ from $NaNO_{3}$',
               '$\\text{K}^+$ from KCl'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{PbCl}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{Cl}^-$. A common ion is one that appears in the dissolution equation. Cl⁻ from KCl is a common ion.'
+            explanation: '$\\text{PbCl}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{Cl}^-$. A common ion is one that appears in the dissolution equation. $Cl^{-}$ from KCl is a common ion.'
           }
         ]
       }
@@ -151,11 +151,11 @@ The common ion reduced solubility by a factor of about **7,000**!
       content: `
 **Practice: Common Ion Problems** 🧮
 
-Find the molar solubility of $\\text{BaSO}_4$ ($K_{sp} = 1.1 \\times 10^{-10}$) in 0.050 M Na₂SO₄.
+Find the molar solubility of $\\text{BaSO}_4$ ($K_{sp} = 1.1 \\times 10^{-10}$) in 0.050 M $Na_{2}SO_{4}$.
 
 $\\text{BaSO}_4(s) \\rightleftharpoons \\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq)$
 
-$[\\text{SO}_4^{2-}]$ from Na₂SO₄ = 0.050 M
+$[\\text{SO}_4^{2-}]$ from $Na_{2}SO_{4}$ = 0.050 M
 
 $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
 
@@ -220,12 +220,12 @@ $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
             question: 'The solubility of $\\text{CaF}_2$ ($K_{sp} = 3.9 \\times 10^{-11}$) in 0.10 M NaF compared to pure water is:',
             options: [
               'Higher — NaF helps dissolution',
-              'Lower — F⁻ is a common ion that shifts equilibrium left',
-              'The same — NaF doesn\'t affect CaF₂',
-              'Zero — CaF₂ won\'t dissolve at all'
+              'Lower — $F^{-}$ is a common ion that shifts equilibrium left',
+              'The same — NaF doesn\'t affect $CaF_{2}$',
+              'Zero — $CaF_{2}$ won\'t dissolve at all'
             ],
             correctAnswer: 1,
-            explanation: 'F⁻ from NaF is a common ion in the CaF₂ dissolution. It shifts the equilibrium left, reducing the amount of CaF₂ that dissolves.'
+            explanation: '$F^{-}$ from NaF is a common ion in the $CaF_{2}$ dissolution. It shifts the equilibrium left, reducing the amount of $CaF_{2}$ that dissolves.'
           },
           {
             question: 'For $\\text{PbI}_2$ ($K_{sp} = 9.8 \\times 10^{-9}$) in 0.10 M KI, the molar solubility is approximately:',

@@ -77,7 +77,7 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
 | Feature | Detail |
 |---------|--------|
 | Phase | Same as reactants |
-| Example | H⁺ catalyzing ester hydrolysis |
+| Example | $H^{+}$ catalyzing ester hydrolysis |
 | Advantage | Better mixing, uniform activity |
 | Disadvantage | Hard to separate from products |
 
@@ -131,15 +131,15 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
             explanation: 'Catalysts provide an alternative mechanism with lower Ea. They do not change ΔH, temperature, or equilibrium position.'
           },
           {
-            question: 'If a catalyst lowers Ea from 100 kJ/mol to 60 kJ/mol at 300 K, by what factor does k increase? (Use k₂/k₁ = e^((Ea1−Ea2)/(RT)))',
+            question: 'If a catalyst lowers Ea from 100 kJ/mol to 60 kJ/mol at 300 K, by what factor does k increase? (Use $k_{2}/k_{1}$ = $e^{(Ea1-Ea2)/(RT)}$)',
             options: [
               '1.7',
               '167',
-              '9.2 × 10⁶',
-              '1.5 × 10⁷'
+              '$9.2 \\times 10^{6}$',
+              '$1.5 \\times 10^{7}$'
             ],
             correctAnswer: 3,
-            explanation: 'k₂/k₁ = e^((100,000−60,000)/(8.314×300)) = e^(40,000/2494) = e^(16.04) = 9.2 × 10⁶ ≈ 10⁷. Actually e^16 = 8.9 × 10⁶, so the closest is 1.5 × 10⁷ depending on precise rounding.'
+            explanation: '$k_{2}/k_{1}$ = e^((100,000−60,000)/(8.314×300)) = e^(40,000/2494) = $e^{16.04}$ = $9.2 \\times 10^{6}$ ≈ $10^{7}$. Actually $e^{16}$ = $8.9 \\times 10^{6}$, so the closest is $1.5 \\times 10^{7}$ depending on precise rounding.'
           },
           {
             question: 'Which statement about enzymes is correct?',
@@ -211,7 +211,7 @@ If a substance binds strongly to active sites and cannot be removed, the catalys
             options: ['homogeneous catalyst', 'heterogeneous catalyst', 'enzyme', 'inhibitor']
           },
           {
-            label: 'H⁺ ions catalyzing a reaction in aqueous solution is',
+            label: '$H^{+}$ ions catalyzing a reaction in aqueous solution is',
             options: ['homogeneous catalysis', 'heterogeneous catalysis', 'enzyme catalysis', 'autocatalysis']
           },
           {
@@ -225,9 +225,9 @@ If a substance binds strongly to active sites and cannot be removed, the catalys
         ],
         correctAnswers: ['heterogeneous catalyst', 'homogeneous catalysis', 'regenerated', 'not shift equilibrium'],
         hint1: 'Solid + gas = different phases = heterogeneous.',
-        hint2: 'H⁺ in solution + reactants in solution = same phase = homogeneous.',
+        hint2: '$H^{+}$ in solution + reactants in solution = same phase = homogeneous.',
         hint3: 'Catalysts are consumed then regenerated — net effect is zero change.',
-        explanation: 'Pt solid with gas = heterogeneous. H⁺ in solution = homogeneous. Catalysts are regenerated (cancel out). Catalysts speed up both directions equally, so no equilibrium shift.'
+        explanation: 'Pt solid with gas = heterogeneous. $H^{+}$ in solution = homogeneous. Catalysts are regenerated (cancel out). Catalysts speed up both directions equally, so no equilibrium shift.'
       }
     },
     {
@@ -236,21 +236,21 @@ If a substance binds strongly to active sites and cannot be removed, the catalys
       content: `
 **Catalyst Effect on Rate** 🧮
 
-An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ s⁻¹ at 300 K.
+An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ $s^{-1}$ at 300 K.
 
 **1)** A catalyst lowers $E_a$ to 80 kJ/mol. What is the ratio $k_{\\text{cat}}/k_{\\text{uncat}}$ at 300 K? Use $\\ln(k_{\\text{cat}}/k_{\\text{uncat}}) = (E_{a,\\text{uncat}} - E_{a,\\text{cat}})/(RT)$. Calculate this exponent first. (to 3 significant figures)
 
 **2)** The catalyzed $k$ is approximately how many times larger? Express as a power of 10. (integer)
 
-**3)** If the catalyzed half-life is $t_{1/2} = 0.693/k_{\\text{cat}}$, and $k_{\\text{cat}} \\approx 1.0 \\times 10^{-3}$ s⁻¹, what is the half-life? (in seconds, whole number)
+**3)** If the catalyzed half-life is $t_{1/2} = 0.693/k_{\\text{cat}}$, and $k_{\\text{cat}} \\approx 1.0 \\times 10^{-3}$ $s^{-1}$, what is the half-life? (in seconds, whole number)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['16.1', '7', '693'],
         hint1: '(120,000 − 80,000)/(8.314 × 300) = 40,000/2494 = 16.04 ≈ 16.1.',
-        hint2: 'e^16.1 ≈ 9.7 × 10⁶ ≈ 10⁷. Power of 10 = 7.',
-        hint3: 't₁/₂ = 0.693/(1.0 × 10⁻³) = 693 s.',
-        explanation: '1) ΔEa/(RT) = 40,000/2494 = 16.1. 2) e^16.1 ≈ 10⁷ → 7 orders of magnitude. 3) t₁/₂ = 0.693/0.001 = 693 s (about 11.5 minutes).'
+        hint2: '$e^{16.1}$ ≈ $9.7 \\times 10^{6}$ ≈ $10^{7}$. Power of 10 = 7.',
+        hint3: '$t_{1}/_{2}$ = $0.693/(1.0 \\times 10^{-3})$ = 693 s.',
+        explanation: '1) ΔEa/(RT) = 40,000/2494 = 16.1. 2) $e^{16.1}$ ≈ $10^{7}$ → 7 orders of magnitude. 3) $t_{1}/_{2}$ = 0.693/0.001 = 693 s (about 11.5 minutes).'
       }
     },
     {

@@ -134,7 +134,7 @@ This is why peak forces in collisions can be enormous even though the average fo
               '20 N·s'
             ],
             correctAnswer: 0,
-            explanation: 'Total impulse = area₁ + area₂ = $(+20)(3) + (-10)(2) = 60 + (-20) = +40$ N·s. Remember that areas below the axis are negative.'
+            explanation: 'Total impulse = $area_{1}$ + $area_{2}$ = $(+20)(3) + (-10)(2) = 60 + (-20) = +40$ N·s. Remember that areas below the axis are negative.'
           }
         ]
       }

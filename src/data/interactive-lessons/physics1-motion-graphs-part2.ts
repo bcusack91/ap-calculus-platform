@@ -144,7 +144,7 @@ A velocity-time graph shows:
 - From $t = 0$ to $t = 4$ s: velocity increases linearly from 0 to 12 m/s
 - From $t = 4$ to $t = 8$ s: velocity stays constant at 12 m/s
 
-1) What is the acceleration during the first 4 seconds? (in m/s²)
+1) What is the acceleration during the first 4 seconds? $(in m/s^{2})$
 
 2) What is the displacement from $t = 0$ to $t = 4$ s? (in meters)
 
@@ -156,7 +156,7 @@ A velocity-time graph shows:
         hint1: 'Slope = $\\Delta v / \\Delta t = 12/4$',
         hint2: 'Area of a triangle: $\\frac{1}{2}(4)(12)$',
         hint3: 'Triangle (0–4 s) + rectangle (4–8 s): $24 + 12(4)$',
-        explanation: '1) $a = 12/4 = 3$ m/s². 2) Triangle area: $\\frac{1}{2}(4)(12) = 24$ m. 3) $24 + 12(4) = 24 + 48 = 72$ m.'
+        explanation: '1) $a = 12/4 = 3$ $m/s^{2}$. 2) Triangle area: $\\frac{1}{2}(4)(12) = 24$ m. 3) $24 + 12(4) = 24 + 48 = 72$ m.'
       }
     },
     {

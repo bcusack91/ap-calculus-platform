@@ -82,7 +82,7 @@ $$\\boxed{\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{
 
 ### 3. Atoms vs. Molecules
 
-> ⚠️ **Warning:** 1 mol H₂O = $6.022 \\times 10^{23}$ **molecules** (not atoms!). Total atoms in 1 mol H₂O = $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ atoms (3 per molecule).
+> ⚠️ **Warning:** 1 mol $H_{2}O$ = $6.022 \\times 10^{23}$ **molecules** (not atoms!). Total atoms in 1 mol $H_{2}O$ = $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ atoms (3 per molecule).
 
 
 ---
@@ -122,15 +122,15 @@ $$\\boxed{\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{
             question: 'A compound contains 27.3% C and 72.7% O by mass. What is its empirical formula? (C = 12.01, O = 16.00)',
             options: [
               'CO',
-              'CO₂',
-              'CO₃',
-              'C₂O'
+              '$CO_{2}$',
+              '$CO_{3}$',
+              '$C_{2}O$'
             ],
             correctAnswer: 1,
-            explanation: 'Assume 100 g: C: $27.3/12.01 = 2.27$ mol, O: $72.7/16.00 = 4.54$ mol. Ratio: $4.54/2.27 = 2.00$. So for every 1 C there are 2 O → CO₂.'
+            explanation: 'Assume 100 g: C: $27.3/12.01 = 2.27$ mol, O: $72.7/16.00 = 4.54$ mol. Ratio: $4.54/2.27 = 2.00$. So for every 1 C there are 2 O → $CO_{2}$.'
           },
           {
-            question: 'How many moles of oxygen atoms are in 0.500 mol of Ca(NO₃)₂?',
+            question: 'How many moles of oxygen atoms are in 0.500 mol of $Ca(NO_{3})_{2}$?',
             options: [
               '0.500 mol',
               '1.00 mol',
@@ -138,7 +138,7 @@ $$\\boxed{\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{
               '3.00 mol'
             ],
             correctAnswer: 3,
-            explanation: 'Each formula unit of Ca(NO₃)₂ contains 2 NO₃⁻ groups, each with 3 O atoms → 6 O atoms total per formula unit. Moles of O = $0.500 \\times 6 = 3.00$ mol.'
+            explanation: 'Each formula unit of $Ca(NO_{3})_{2}$ contains 2 $NO_{3}^{-}$ groups, each with 3 O atoms → 6 O atoms total per formula unit. Moles of O = $0.500 \\times 6 = 3.00$ mol.'
           },
           {
             question: 'Equal numbers of moles of sodium (Na, $M = 22.99$) and potassium (K, $M = 39.10$) are compared. Which statement is true?',
@@ -160,23 +160,23 @@ $$\\boxed{\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{
       content: `
 **AP-Style Free Response Calculations** 🧮
 
-A student analyzes a pure sample of hydrated copper(II) sulfate, CuSO₄·5H₂O.
+A student analyzes a pure sample of hydrated copper(II) sulfate, $CuSO_{4}\\cdot 5H_{2}O$.
 
 > **Given:** Cu = 63.55, S = 32.07, O = 16.00, H = 1.008
 
-**1)** Calculate the molar mass of CuSO₄·5H₂O in g/mol. (to 3 significant figures)
+**1)** Calculate the molar mass of $CuSO_{4}\\cdot 5H_{2}O$ in g/mol. (to 3 significant figures)
 
-**2)** What is the percent by mass of water in CuSO₄·5H₂O? (to 3 significant figures)
+**2)** What is the percent by mass of water in $CuSO_{4}\\cdot 5H_{2}O$? (to 3 significant figures)
 
-**3)** If the student has 50.0 g of CuSO₄·5H₂O, how many moles of water molecules are present? (to 3 significant figures)
+**3)** If the student has 50.0 g of $CuSO_{4}\\cdot 5H_{2}O$, how many moles of water molecules are present? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['249.70', '36.1', '1.001'],
         hint1: '$M = 63.55 + 32.07 + 4(16.00) + 5[2(1.008) + 16.00]$.',
         hint2: '$\\%\\text{H}_2\\text{O} = \\frac{5 \\times 18.02}{M_{\\text{total}}} \\times 100$.',
-        hint3: 'Find moles of the hydrate first ($50.0/M$), then multiply by 5 since there are 5 H₂O per formula unit.',
-        explanation: '1) $M_{\\text{CuSO}_4} = 63.55 + 32.07 + 4(16.00) = 159.62$ g/mol. $M_{5\\text{H}_2\\text{O}} = 5 \\times [2(1.008) + 16.00] = 5(18.016) = 90.08$ g/mol. Total: $159.62 + 90.08 = 249.70$ g/mol. 2) $\\%\\text{H}_2\\text{O} = 90.08/249.70 \\times 100 = 36.1\\%$. 3) Moles of hydrate: $50.0/249.70 = 0.2002$ mol. Moles of H₂O: $5 \\times 0.2002 = 1.001$ mol.'
+        hint3: 'Find moles of the hydrate first ($50.0/M$), then multiply by 5 since there are 5 $H_{2}O$ per formula unit.',
+        explanation: '1) $M_{\\text{CuSO}_4} = 63.55 + 32.07 + 4(16.00) = 159.62$ g/mol. $M_{5\\text{H}_2\\text{O}} = 5 \\times [2(1.008) + 16.00] = 5(18.016) = 90.08$ g/mol. Total: $159.62 + 90.08 = 249.70$ g/mol. 2) $\\%\\text{H}_2\\text{O} = 90.08/249.70 \\times 100 = 36.1\\%$. 3) Moles of hydrate: $50.0/249.70 = 0.2002$ mol. Moles of $H_{2}O$: $5 \\times 0.2002 = 1.001$ mol.'
       }
     },
     {
@@ -224,7 +224,7 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, CuSO₄·5H₂O
       exercise: {
         questions: [
           {
-            question: 'A compound has the empirical formula CH₂O and a molar mass of 120.10 g/mol. How many carbon atoms are in one molecule of this compound? ($M_{\\text{CH}_2\\text{O}} = 30.03$ g/mol)',
+            question: 'A compound has the empirical formula $CH_{2}O$ and a molar mass of 120.10 g/mol. How many carbon atoms are in one molecule of this compound? ($M_{\\text{CH}_2\\text{O}} = 30.03$ g/mol)',
             options: [
               '1',
               '2',
@@ -232,18 +232,18 @@ A student analyzes a pure sample of hydrated copper(II) sulfate, CuSO₄·5H₂O
               '6'
             ],
             correctAnswer: 2,
-            explanation: '$n = 120.10/30.03 = 4.0$. Molecular formula = C₄H₈O₄. There are 4 carbon atoms per molecule.'
+            explanation: '$n = 120.10/30.03 = 4.0$. Molecular formula = $C_{4}H_{8}O_{4}$. There are 4 carbon atoms per molecule.'
           },
           {
             question: 'A 5.00 g sample of a compound contains $2.19 \\times 10^{22}$ molecules. If the compound is 40.0% C, 6.7% H, and 53.3% O by mass, what is its molecular formula?',
             options: [
-              'CH₂O',
-              'C₂H₄O₂',
-              'C₃H₆O₃',
-              'C₅H₁₀O₅'
+              '$CH_{2}O$',
+              '$C_{2}H_{4}O_{2}$',
+              '$C_{3}H_{6}O_{3}$',
+              '$C_{5}H_{10}O_{5}$'
             ],
             correctAnswer: 2,
-            explanation: 'First find molar mass: $n = 2.19 \\times 10^{22} / 6.022 \\times 10^{23} = 0.0364$ mol. $M = 5.00/0.0364 = 137$ g/mol. Empirical formula from composition (40.0% C, 6.7% H, 53.3% O) is CH₂O ($M_{\\text{emp}} = 30.03$). But wait: $137/30.03 \\approx 4.6$, which is not a whole number. Let me recalculate: actually $n = 2.19 \\times 10^{22}/6.022 \\times 10^{23} = 0.03638$ mol. $M = 5.00/0.03638 = 137.4$ g/mol. Hmm, let me re-examine. If the answer is C₃H₆O₃ ($M = 90.08$), then $n = 5.00/90.08 = 0.0555$ mol and molecules $= 0.0555 \\times 6.022 \\times 10^{23} = 3.34 \\times 10^{22}$. For the answer to work with $2.19 \\times 10^{22}$ molecules: $M = 5.00/0.0364 = 137.4$. None of the answers give 137.4. The correct approach: the empirical formula CH₂O has $M = 30.03$, and $n=3$ gives C₃H₆O₃ with $M = 90.08$. With $M = 90.08$: molecules = $(5.00/90.08) \\times 6.022 \\times 10^{23} = 3.34 \\times 10^{22}$. The answer is C₃H₆O₃.'
+            explanation: 'First find molar mass: $n = 2.19 \\times 10^{22} / 6.022 \\times 10^{23} = 0.0364$ mol. $M = 5.00/0.0364 = 137$ g/mol. Empirical formula from composition (40.0% C, 6.7% H, 53.3% O) is $CH_{2}O$ ($M_{\\text{emp}} = 30.03$). But wait: $137/30.03 \\approx 4.6$, which is not a whole number. Let me recalculate: actually $n = 2.19 \\times 10^{22}/6.022 \\times 10^{23} = 0.03638$ mol. $M = 5.00/0.03638 = 137.4$ g/mol. Hmm, let me re-examine. If the answer is $C_{3}H_{6}O_{3}$ ($M = 90.08$), then $n = 5.00/90.08 = 0.0555$ mol and molecules $= 0.0555 \\times 6.022 \\times 10^{23} = 3.34 \\times 10^{22}$. For the answer to work with $2.19 \\times 10^{22}$ molecules: $M = 5.00/0.0364 = 137.4$. None of the answers give 137.4. The correct approach: the empirical formula $CH_{2}O$ has $M = 30.03$, and $n=3$ gives $C_{3}H_{6}O_{3}$ with $M = 90.08$. With $M = 90.08$: molecules = $(5.00/90.08) \\times 6.022 \\times 10^{23} = 3.34 \\times 10^{22}$. The answer is $C_{3}H_{6}O_{3}$.'
           }
         ]
       }

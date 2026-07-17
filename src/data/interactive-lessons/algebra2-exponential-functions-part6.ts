@@ -96,7 +96,7 @@ $72 \\div 8 = 9$ years (approximately) ✅
 |---|---------|--------|
 | 1 | Doubling at 6%? | ~12 years |
 | 2 | $1000 ×(1.05)² | 1102.5 |
-| 3 | log₂(64) | 6 |
+| 3 | $\\log_{2}(64)$ | 6 |
     
     `
     },
@@ -117,7 +117,7 @@ $72 \\div 8 = 9$ years (approximately) ✅
                               "4"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "2⁶ = 64."
+                    "explanation": "$2^{6}$ = 64."
           }
 ]
       }

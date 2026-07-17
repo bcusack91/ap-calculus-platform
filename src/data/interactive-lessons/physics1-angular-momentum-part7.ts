@@ -86,7 +86,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
       content: `
 **AP Calculation Practice** 🧮
 
-1) A solid cylinder ($M = 10$ kg, $R = 0.2$ m) starts from rest and a constant torque of 4 N·m is applied. What is its angular momentum after 5 seconds? (in kg·m²/s)
+1) A solid cylinder ($M = 10$ kg, $R = 0.2$ m) starts from rest and a constant torque of 4 N·m is applied. What is its angular momentum after 5 seconds? $(in kg\\cdot m^{2}/s)$
 
 2) A hoop (mass 2 kg, radius 0.5 m) rolls without slipping at 3 m/s. What is its total kinetic energy? (in J)
 
@@ -98,7 +98,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
         hint1: '$\\tau = \\Delta L/\\Delta t \\Rightarrow \\Delta L = \\tau \\cdot t = 4(5)$',
         hint2: 'For a hoop rolling: $KE = mv^2$ (translational + rotational both equal $\\frac{1}{2}mv^2$)',
         hint3: '$L_i = mvR = 30(4)(2) = 240$. $I_f = \\frac{1}{2}(100)(4) + 30(4) = 200 + 120 = 320$. $\\omega_f = L/I_f$.',
-        explanation: '1) $\\Delta L = \\tau t = 4(5) = 20$ kg·m²/s. 2) Hoop: $KE = \\frac{1}{2}mv^2 + \\frac{1}{2}(mR^2)(v/R)^2 = \\frac{1}{2}mv^2 + \\frac{1}{2}mv^2 = mv^2 = 2(9) = 18$ J. 3) $L_i = 240$ kg·m²/s. $I_f = 200 + 120 = 320$ kg·m². $\\omega_f = 240/320 = 0.75$ rad/s.'
+        explanation: '1) $\\Delta L = \\tau t = 4(5) = 20$ $kg\\cdot m^{2}/s$. 2) Hoop: $KE = \\frac{1}{2}mv^2 + \\frac{1}{2}(mR^2)(v/R)^2 = \\frac{1}{2}mv^2 + \\frac{1}{2}mv^2 = mv^2 = 2(9) = 18$ J. 3) $L_i = 240$ $kg\\cdot m^{2}/s$. $I_f = 200 + 120 = 320$ $kg\\cdot m^{2}$. $\\omega_f = 240/320 = 0.75$ rad/s.'
       }
     },
     {
@@ -111,7 +111,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
         dropdowns: [
           {
             label: 'The expression for angular momentum L is:',
-            options: ['Iω', 'Iα', 'τθ', '½Iω²'],
+            options: ['Iω', 'Iα', 'τθ', '$\\tfrac{1}{2} I\\omega^{2}$'],
             correctIndex: 0,
             explanation: 'Angular momentum is $L = I\\omega$.'
           },
@@ -145,7 +145,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
       exercise: {
         questions: [
           {
-            question: 'A disk ($I = 4$ kg·m²) rotates at 5 rad/s. A torque of 8 N·m acts for 3 seconds in the direction of rotation. The final angular velocity is:',
+            question: 'A disk ($I = 4$ $kg\\cdot m^{2}$) rotates at 5 rad/s. A torque of 8 N·m acts for 3 seconds in the direction of rotation. The final angular velocity is:',
             options: [
               '7 rad/s',
               '11 rad/s',
@@ -153,7 +153,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
               '17 rad/s'
             ],
             correctAnswer: 1,
-            explanation: '$\\alpha = \\tau/I = 8/4 = 2$ rad/s². $\\omega_f = \\omega_i + \\alpha t = 5 + 2(3) = 11$ rad/s.'
+            explanation: '$\\alpha = \\tau/I = 8/4 = 2$ $rad/s^{2}$. $\\omega_f = \\omega_i + \\alpha t = 5 + 2(3) = 11$ rad/s.'
           },
           {
             question: 'Planet A has twice the mass and half the orbital radius of Planet B. Both are in circular orbits. The ratio $L_A/L_B$ is:',

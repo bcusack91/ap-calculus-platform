@@ -58,7 +58,7 @@ Classic $\\text{E}2$ bases include hydroxide ($\\text{HO}^-$), alkoxides ($\\tex
               'Rate = k[substrate], independent of base concentration',
               'Rate = k[substrate][base], first order in each',
               'Rate = k[base], independent of substrate',
-              'Rate = k[substrate]²'
+              'Rate = k[substrate]$ {}^{2}$'
             ],
             correctAnswer: 1,
             explanation: 'E2 is concerted and bimolecular: both substrate and base are in the single rate-determining step, so rate = k[substrate][base]. Rate = k[substrate] alone is the E1/SN1 fingerprint (rate-determining ionization), not E2.'

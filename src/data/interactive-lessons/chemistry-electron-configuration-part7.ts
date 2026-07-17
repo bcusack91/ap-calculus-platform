@@ -39,9 +39,9 @@ Electron configurations explain **why** periodic trends exist:
 
 | Trend | Across a Period (→) | Down a Group (↓) | Why |
 |-------|---------------------|-------------------|-----|
-| Atomic Radius | **Decreases** | **Increases** | More protons pull e⁻ closer (→); higher n = farther from nucleus (↓) |
-| Ionization Energy | Generally **increases** | **Decreases** | Greater $Z_{eff}$ holds e⁻ tighter (→); valence e⁻ farther out (↓) |
-| Electronegativity | **Increases** | **Decreases** | Higher $Z_{eff}$ attracts bonding e⁻ (→); distance reduces pull (↓) |
+| Atomic Radius | **Decreases** | **Increases** | More protons pull $e^{-}$ closer (→); higher n = farther from nucleus (↓) |
+| Ionization Energy | Generally **increases** | **Decreases** | Greater $Z_{eff}$ holds $e^{-}$ tighter (→); valence $e^{-}$ farther out (↓) |
+| Electronegativity | **Increases** | **Decreases** | Higher $Z_{eff}$ attracts bonding $e^{-}$ (→); distance reduces pull (↓) |
 
 ---
 
@@ -49,8 +49,8 @@ Electron configurations explain **why** periodic trends exist:
 
 | Exception | What Happens | Why |
 |-----------|-------------|-----|
-| IE: Be → B | IE **drops** | B removes a 2p e⁻ (higher energy) vs. Be's 2s e⁻ |
-| IE: N → O | IE **drops** | O has a paired 2p e⁻; N's half-filled 2p³ has extra stability |
+| IE: Be → B | IE **drops** | B removes a 2p $e^{-}$ (higher energy) vs. Be's 2s $e^{-}$ |
+| IE: N → O | IE **drops** | O has a paired 2p $e^{-}$; N's half-filled $2p^{3}$ has extra stability |
 
 > ⚠️ These exceptions are **frequently tested** on the AP exam. Always connect your explanation back to electron configuration and subshell occupancy.`
     },
@@ -71,7 +71,7 @@ The first ionization energy of oxygen (Z = 8) is **lower** than that of nitrogen
               'Oxygen is more electronegative than nitrogen, so it holds its electrons less tightly.'
             ],
             correctAnswer: 1,
-            explanation: 'Nitrogen has the configuration [He] 2s² 2p³ — all three 2p electrons are unpaired (half-filled, extra stable). Oxygen is [He] 2s² 2p⁴ — one 2p orbital now has a paired electron. The electron-electron repulsion from pairing makes that fourth 2p electron easier to remove, lowering the IE despite the higher nuclear charge.'
+            explanation: 'Nitrogen has the configuration [He] $2s^{2}$ $2p^{3}$ — all three 2p electrons are unpaired (half-filled, extra stable). Oxygen is [He] $2s^{2}$ $2p^{4}$ — one 2p orbital now has a paired electron. The electron-electron repulsion from pairing makes that fourth 2p electron easier to remove, lowering the IE despite the higher nuclear charge.'
           }
         ]
       }
@@ -81,7 +81,7 @@ The first ionization energy of oxygen (Z = 8) is **lower** than that of nitrogen
       type: 'multiple-choice' as const,
       content: `### AP-Style Question 2: Identifying an Element
 
-An element has the electron configuration [Kr] 4d¹⁰ 5s² 5p⁴. Which statement about this element is correct?`,
+An element has the electron configuration [Kr] $4d^{10}$ $5s^{2}$ $5p^{4}$. Which statement about this element is correct?`,
       exercise: {
         questions: [
           {
@@ -93,7 +93,7 @@ An element has the electron configuration [Kr] 4d¹⁰ 5s² 5p⁴. Which stateme
               'It has 4 unpaired electrons.'
             ],
             correctAnswer: 2,
-            explanation: 'Count total electrons: 36 (Kr) + 10 + 2 + 4 = 52 → Tellurium (Te). Te is in Period 5, Group 16 (chalcogens). Valence electrons = 5s² 5p⁴ = 6. In the 5p⁴ configuration (by Hund\'s rule), there are 2 unpaired electrons, not 4.'
+            explanation: 'Count total electrons: 36 (Kr) + 10 + 2 + 4 = 52 → Tellurium (Te). Te is in Period 5, Group 16 (chalcogens). Valence electrons = $5s^{2}$ $5p^{4}$ = 6. In the $5p^{4}$ configuration (by Hund\'s rule), there are 2 unpaired electrons, not 4.'
           }
         ]
       }
@@ -103,19 +103,19 @@ An element has the electron configuration [Kr] 4d¹⁰ 5s² 5p⁴. Which stateme
       type: 'multiple-choice' as const,
       content: `### AP-Style Question 3: Transition Metal Ion
 
-The ion Ti²⁺ is used in some catalytic processes. What is the ground-state electron configuration of Ti²⁺?`,
+The ion $Ti^{2+}$ is used in some catalytic processes. What is the ground-state electron configuration of $Ti^{2+}$?`,
       exercise: {
         questions: [
           {
-            question: 'Electron configuration of Ti²⁺:',
+            question: 'Electron configuration of $Ti^{2+}$:',
             options: [
-              '[Ar] 4s² 3d⁰',
-              '[Ar] 3d²',
-              '[Ar] 4s¹ 3d¹',
-              '[Ar] 3d² 4s²'
+              '[Ar] $4s^{2}$ $3d^{0}$',
+              '[Ar] $3d^{2}$',
+              '[Ar] $4s^{1}$ $3d^{1}$',
+              '[Ar] $3d^{2}$ $4s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Neutral Ti (Z = 22): [Ar] 4s² 3d². To form Ti²⁺, remove the 2 electrons with the highest n first — both 4s electrons. This leaves [Ar] 3d². This is a common AP trap: students often try to remove from 3d because it was listed last.'
+            explanation: 'Neutral Ti (Z = 22): [Ar] $4s^{2}$ $3d^{2}$. To form $Ti^{2+}$, remove the 2 electrons with the highest n first — both 4s electrons. This leaves [Ar] $3d^{2}$. This is a common AP trap: students often try to remove from 3d because it was listed last.'
           }
         ]
       }
@@ -133,11 +133,11 @@ The ion Ti²⁺ is used in some catalytic processes. What is the ground-state el
 ---
 
 ### Mistake 2: Forgetting Exceptions
-❌ Cr: [Ar] 4s² 3d⁴  
-✅ Cr: [Ar] 3d⁵ 4s¹ (half-filled d subshell)
+❌ Cr: [Ar] $4s^{2}$ $3d^{4}$  
+✅ Cr: [Ar] $3d^{5}$ $4s^{1}$ (half-filled d subshell)
 
-❌ Cu: [Ar] 4s² 3d⁹  
-✅ Cu: [Ar] 3d¹⁰ 4s¹ (fully filled d subshell)
+❌ Cu: [Ar] $4s^{2}$ $3d^{9}$  
+✅ Cu: [Ar] $3d^{10}$ $4s^{1}$ (fully filled d subshell)
 
 
 ---
@@ -162,14 +162,14 @@ Write the electron configuration in noble gas shorthand (e.g., [Ar] 3d5 4s1). A 
       exercise: {
         inputs: [
           {
-            label: 'Co³⁺ (Cobalt ion, Z = 27)',
+            label: '$Co^{3+}$ (Cobalt ion, Z = 27)',
             correctAnswer: '[Ar] 3d6',
-            explanation: 'Neutral Co: [Ar] 4s² 3d⁷. Remove 3 electrons: first both 4s electrons (2), then 1 from 3d → [Ar] 3d⁶. Co³⁺ has 24 electrons total (27 − 3).'
+            explanation: 'Neutral Co: [Ar] $4s^{2}$ $3d^{7}$. Remove 3 electrons: first both 4s electrons (2), then 1 from 3d → [Ar] $3d^{6}$. $Co^{3+}$ has 24 electrons total (27 − 3).'
           },
           {
-            label: 'Ag⁺ (Silver ion, Z = 47)',
+            label: '$Ag^{+}$ (Silver ion, Z = 47)',
             correctAnswer: '[Kr] 4d10',
-            explanation: 'Neutral Ag is an exception (like Cu): [Kr] 4d¹⁰ 5s¹. Remove 1 electron from 5s → [Kr] 4d¹⁰. Silver ion has a completely filled d subshell, making it very stable.'
+            explanation: 'Neutral Ag is an exception (like Cu): [Kr] $4d^{10}$ $5s^{1}$. Remove 1 electron from 5s → [Kr] $4d^{10}$. Silver ion has a completely filled d subshell, making it very stable.'
           }
         ]
       }
@@ -186,19 +186,19 @@ These questions connect electron configuration to other chemistry concepts.`,
             label: 'Which element has the highest first ionization energy: Na, Mg, Al, Si?',
             options: ['Na', 'Mg', 'Al', 'Si'],
             correctIndex: 1,
-            explanation: 'Magnesium (Mg) has a higher IE than aluminum (Al) because Mg has a full 3s² subshell, while Al must remove an electron from 3p¹ (which is higher in energy and easier to remove). While IE generally increases across a period, the s² → p¹ transition causes a drop from Mg to Al. Si is higher than Al but lower than Mg.'
+            explanation: 'Magnesium (Mg) has a higher IE than aluminum (Al) because Mg has a full $3s^{2}$ subshell, while Al must remove an electron from $3p^{1}$ (which is higher in energy and easier to remove). While IE generally increases across a period, the $s^{2}$ → $p^{1}$ transition causes a drop from Mg to Al. Si is higher than Al but lower than Mg.'
           },
           {
-            label: 'Which species has the same electron configuration as Ne: O²⁻, F⁻, Na⁺, or all of them?',
-            options: ['Only O²⁻', 'Only F⁻', 'Only Na⁺', 'All of them'],
+            label: 'Which species has the same electron configuration as Ne: $O^{2-}$, $F^{-}$, $Na^{+}$, or all of them?',
+            options: ['Only $O^{2-}$', 'Only $F^{-}$', 'Only $Na^{+}$', 'All of them'],
             correctIndex: 3,
-            explanation: 'Ne has 10 electrons: 1s² 2s² 2p⁶. O²⁻ (8 + 2 = 10), F⁻ (9 + 1 = 10), and Na⁺ (11 − 1 = 10) all have 10 electrons. They are all isoelectronic with neon.'
+            explanation: 'Ne has 10 electrons: $1s^{2}$ $2s^{2}$ $2p^{6}$. $O^{2-}$ (8 + 2 = 10), $F^{-}$ (9 + 1 = 10), and $Na^{+}$ (11 − 1 = 10) all have 10 electrons. They are all isoelectronic with neon.'
           },
           {
-            label: 'An atom has 3 unpaired electrons and the configuration [Ar] 4s² 3dⁿ. What is n?',
+            label: 'An atom has 3 unpaired electrons and the configuration [Ar] $4s^{2}$ $3d^{n}$. What is n?',
             options: ['3', '5', '7', '8'],
             correctIndex: 0,
-            explanation: 'With n = 3 (i.e., 3d³), the three d electrons each occupy a separate orbital by Hund\'s rule, giving 3 unpaired electrons. For n = 5: 5 unpaired; n = 7: 3 unpaired (but 4s²3d⁷ gives 3 unpaired too — however 3d³ is the simplest answer with exactly 3 in the d subshell); n = 8: 2 unpaired.'
+            explanation: 'With n = 3 (i.e., $3d^{3}$), the three d electrons each occupy a separate orbital by Hund\'s rule, giving 3 unpaired electrons. For n = 5: 5 unpaired; n = 7: 3 unpaired (but $4s^{2}3d^{7}$ gives 3 unpaired too — however $3d^{3}$ is the simplest answer with exactly 3 in the d subshell); n = 8: 2 unpaired.'
           }
         ]
       }
@@ -216,13 +216,13 @@ Congratulations on completing all 7 parts! Here is everything you need to know:
 
 | Topic | Key Fact | AP Must-Know |
 |-------|----------|-------------|
-| Subshells | s, p, d, f hold 2, 6, 10, 14 e⁻ | Know max electrons per subshell |
+| Subshells | s, p, d, f hold 2, 6, 10, 14 $e^{-}$ | Know max electrons per subshell |
 | Three Rules | Aufbau → Pauli → Hund's | Apply in this order |
 | Noble Gas Shorthand | Replace core with [noble gas] | Focus on valence electrons |
-| Exceptions | Cr: [Ar] 3d⁵ 4s¹, Cu: [Ar] 3d¹⁰ 4s¹ | Half-filled/full d = extra stability |
+| Exceptions | Cr: [Ar] $3d^{5}$ $4s^{1}$, Cu: [Ar] $3d^{10}$ $4s^{1}$ | Half-filled/full d = extra stability |
 | Ion Configs | Remove from highest n first | 4s before 3d for TM cations |
 | Quantum Numbers | n, l, $m_l$, $m_s$ | Uniquely identify every electron |
-| Periodic Trends | Radius, IE, EN from e⁻ config | Know the exceptions (Be→B, N→O) |
+| Periodic Trends | Radius, IE, EN from $e^{-}$ config | Know the exceptions (Be→B, N→O) |
 
 ---
 

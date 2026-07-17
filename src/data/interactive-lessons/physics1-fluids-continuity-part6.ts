@@ -69,7 +69,7 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
               '4.0 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$A_1 = 240$ m², $A_2 = 120$ m². $v_2 = v_1 (A_1/A_2) = 1.0 \\times 2 = 2.0$ m/s.'
+            explanation: '$A_1 = 240$ $m^{2}$, $A_2 = 120$ $m^{2}$. $v_2 = v_1 (A_1/A_2) = 1.0 \\times 2 = 2.0$ m/s.'
           }
         ]
       }
@@ -80,11 +80,11 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
       content: `
 **Workshop Calculations** 🧮 ($\\rho_w = 1000$)
 
-1) A circular pipe of radius 0.020 m carries water at 2.0 m/s. Volume flow rate (m³/s)?
+1) A circular pipe of radius 0.020 m carries water at 2.0 m/s. Volume flow rate $(m^{3}/s)$?
 
 2) Same pipe narrows to radius 0.010 m. New speed (m/s)?
 
-3) Pipe area $0.0050$ m², $v = 4.0$ m/s. Mass flow rate of water (kg/s)?
+3) Pipe area $0.0050$ $m^{2}$, $v = 4.0$ m/s. Mass flow rate of water (kg/s)?
       `,
       exercise: {
         boxes: 3,
@@ -92,7 +92,7 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
         hint1: '$Q = \\pi r^2 v$.',
         hint2: 'Speed × $(r_1/r_2)^2$.',
         hint3: '$\\dot m = \\rho A v$.',
-        explanation: '1) $Q = \\pi (0.020)^2 (2.0) ≈ 0.00251$ m³/s. 2) $v_2 = 2.0 \\times 4 = 8.0$ m/s. 3) $\\dot m = 1000(0.0050)(4.0) = 20$ kg/s.'
+        explanation: '1) $Q = \\pi (0.020)^2 (2.0) ≈ 0.00251$ $m^{3}/s$. 2) $v_2 = 2.0 \\times 4 = 8.0$ m/s. 3) $\\dot m = 1000(0.0050)(4.0) = 20$ kg/s.'
       }
     },
     {
@@ -116,10 +116,10 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
             explanation: '$v_{branch} = (Q/4)/A_{main} = v_{main}/4$.'
           },
           {
-            label: 'Mass flow rate of water in a pipe is 5 kg/s. Volume flow rate (m³/s):',
+            label: 'Mass flow rate of water in a pipe is 5 kg/s. Volume flow rate $(m^{3}/s)$:',
             options: ['0.005', '0.05', '0.5', '5'],
             correctIndex: 0,
-            explanation: '$Q = \\dot m / \\rho = 5/1000 = 0.005$ m³/s.'
+            explanation: '$Q = \\dot m / \\rho = 5/1000 = 0.005$ $m^{3}/s$.'
           },
           {
             label: 'A river slows down where it widens. The cross-sectional area:',
@@ -158,7 +158,7 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
               '400 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ m². $v = \\dot m/(\\rho A) = 31.4/(1000 \\times 7.85\\times10^{-3}) = 4.0$ m/s.'
+            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ $m^{2}$. $v = \\dot m/(\\rho A) = 31.4/(1000 \\times 7.85\\times10^{-3}) = 4.0$ m/s.'
           }
         ]
       }

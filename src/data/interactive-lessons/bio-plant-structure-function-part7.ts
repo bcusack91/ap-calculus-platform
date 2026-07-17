@@ -18,7 +18,7 @@ $$\\Psi_s = -iCRT$$
 
 | Variable | Value |
 |---|---|
-| $i$ | Ionization constant (1 for glucose/sucrose, 2 for NaCl, 3 for CaCl₂) |
+| $i$ | Ionization constant (1 for glucose/sucrose, 2 for NaCl, 3 for $CaCl_{2}$) |
 | $C$ | Molar concentration (mol/L) |
 | $R$ | 0.0831 L·bar/mol·K |
 | $T$ | Temperature in Kelvin (°C + 273) |
@@ -101,7 +101,7 @@ AP Biology frequently tests your ability to design and interpret experiments inv
 
 **Scenario 3: Ethylene & Ripening**
 - Unripe bananas sealed with ripe apple → ripen faster
-- Unripe bananas sealed with KMnO₄ (ethylene absorber) → ripen slowly
+- Unripe bananas sealed with $KMnO_{4}$ (ethylene absorber) → ripen slowly
 - **Conclusion**: Ethylene gas from the apple accelerates banana ripening`
     },
     {
@@ -199,7 +199,7 @@ When answering FRQs about plant transport:
               'Root pressure increases to compensate for lost transpiration'
             ],
             correctAnswer: 1,
-            explanation: 'Closing stomata directly reduces transpiration (water loss from leaves). Since transpiration creates the tension that pulls water up through the xylem, closing stomata reduces the driving force for xylem transport. CO₂ entry is also reduced, slowing photosynthesis — but this is secondary to the immediate transpiration effect.'
+            explanation: 'Closing stomata directly reduces transpiration (water loss from leaves). Since transpiration creates the tension that pulls water up through the xylem, closing stomata reduces the driving force for xylem transport. $CO_{2}$ entry is also reduced, slowing photosynthesis — but this is secondary to the immediate transpiration effect.'
           },
           {
             question: 'A ring of bark (including phloem) is removed from around a tree trunk (girdling). Which prediction is correct?',

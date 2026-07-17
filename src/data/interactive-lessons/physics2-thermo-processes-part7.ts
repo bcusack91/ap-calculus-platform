@@ -81,8 +81,8 @@ export const physics2ThermoProcPart7Data = {
 | Gas Type | $f$ | $C_v$ | $C_p$ | $\\gamma$ | Example |
 |----------|-----|--------|--------|----------|---------|
 | Monatomic | 3 | $\\frac{3}{2}R$ | $\\frac{5}{2}R$ | $1.67$ | He, Ne, Ar |
-| Diatomic | 5 | $\\frac{5}{2}R$ | $\\frac{7}{2}R$ | $1.40$ | N₂, O₂, H₂ |
-| Polyatomic | 6 | $3R$ | $4R$ | $1.33$ | CO₂, H₂O |
+| Diatomic | 5 | $\\frac{5}{2}R$ | $\\frac{7}{2}R$ | $1.40$ | $N_{2}$, $O_{2}$, $H_{2}$ |
+| Polyatomic | 6 | $3R$ | $4R$ | $1.33$ | $CO_{2}$, $H_{2}O$ |
 
 ---
 

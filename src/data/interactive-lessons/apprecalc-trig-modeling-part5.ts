@@ -36,7 +36,7 @@ $\\sin(\\frac{\\pi}{2}) = 1$ → $\\sin^{-1}(1) = \\frac{\\pi}{2} = 90°$ ✅
       exercise: {
         questions: [
           {
-                    "question": "sin⁻¹(0) = ?",
+                    "question": "$\\sin^{-1}(0)$ = ?",
                     "options": [
                               "0°",
                               "90°",
@@ -108,7 +108,7 @@ $\\sin(\\frac{\\pi}{2}) = 1$ → $\\sin^{-1}(1) = \\frac{\\pi}{2} = 90°$ ✅
       exercise: {
         questions: [
           {
-                    "question": "cos⁻¹(0) = ?",
+                    "question": "$\\cos^{-1}(0)$ = ?",
                     "options": [
                               "90°",
                               "0°",

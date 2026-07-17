@@ -54,7 +54,7 @@ Note: The deceleration going up is **greater** than the acceleration going down!
       content: `
 ## Worked Example
 
-A 5 kg block slides down a 37° incline with $\\mu_k = 0.25$ ($g = 10$ m/s², $\\sin 37° = 0.60$, $\\cos 37° = 0.80$).
+A 5 kg block slides down a 37° incline with $\\mu_k = 0.25$ ($g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $\\cos 37° = 0.80$).
 
 **Step 1:** Normal force: $N = mg\\cos 37° = 50 \\times 0.80 = 40$ N
 
@@ -62,11 +62,11 @@ A 5 kg block slides down a 37° incline with $\\mu_k = 0.25$ ($g = 10$ m/s², $\
 
 **Step 3:** Net force along slope: $F_{\\text{net}} = mg\\sin 37° - f_k = 30 - 10 = 20$ N
 
-**Step 4:** Acceleration: $a = 20/5 = 4$ m/s²
+**Step 4:** Acceleration: $a = 20/5 = 4$ $m/s^{2}$
 
-Compare to frictionless: $a = g\\sin 37° = 6$ m/s²
+Compare to frictionless: $a = g\\sin 37° = 6$ $m/s^{2}$
 
-Friction reduced the acceleration by $\\mu_k g\\cos 37° = 2$ m/s².
+Friction reduced the acceleration by $\\mu_k g\\cos 37° = 2$ $m/s^{2}$.
       `
     },
     {
@@ -119,13 +119,13 @@ Friction reduced the acceleration by $\\mu_k g\\cos 37° = 2$ m/s².
       content: `
 **Incline + Friction Problems** 🧮
 
-A 10 kg block slides down a 53° incline with $\\mu_k = 0.30$ ($g = 10$ m/s², $\\sin 53° = 0.80$, $\\cos 53° = 0.60$).
+A 10 kg block slides down a 53° incline with $\\mu_k = 0.30$ ($g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$, $\\cos 53° = 0.60$).
 
 1) What is the normal force (in N)?
 
 2) What is the kinetic friction force (in N)?
 
-3) What is the acceleration down the slope (in m/s²)?
+3) What is the acceleration down the slope $(in m/s^{2})$?
 
 *Round all answers to 3 significant figures.*
       `,
@@ -135,7 +135,7 @@ A 10 kg block slides down a 53° incline with $\\mu_k = 0.30$ ($g = 10$ m/s², $
         hint1: '$N = mg\\cos 53° = 100 \\times 0.60$.',
         hint2: '$f_k = \\mu_k N = 0.30 \\times 60$.',
         hint3: '$a = (mg\\sin 53° - f_k)/m = (80 - 18)/10$.',
-        explanation: '1) $N = 60$ N. 2) $f_k = 18$ N. 3) $a = (80 - 18)/10 = 62/10 = 6.2$ m/s².'
+        explanation: '1) $N = 60$ N. 2) $f_k = 18$ N. 3) $a = (80 - 18)/10 = 62/10 = 6.2$ $m/s^{2}$.'
       }
     },
     {
@@ -179,15 +179,15 @@ If $\\mu_s = 0.577$, the critical angle is $\\tan^{-1}(0.577) = 30°$. Any steep
             explanation: 'Constant velocity means $mg\\sin\\theta = \\mu_k mg\\cos\\theta$, so $\\mu_k = \\tan 37° = 0.75$.'
           },
           {
-            question: 'A 4 kg block is launched at 8 m/s UP a 30° rough incline ($\\mu_k = 0.20$, $g = 10$ m/s²). What is the deceleration?',
+            question: 'A 4 kg block is launched at 8 m/s UP a 30° rough incline ($\\mu_k = 0.20$, $g = 10$ $m/s^{2}$). What is the deceleration?',
             options: [
-              '3.3 m/s²',
-              '5.0 m/s²',
-              '6.7 m/s²',
-              '8.5 m/s²'
+              '3.3 $m/s^{2}$',
+              '5.0 $m/s^{2}$',
+              '6.7 $m/s^{2}$',
+              '8.5 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'Going up, both gravity and friction oppose motion: $a = g(\\sin 30° + \\mu_k \\cos 30°) = 10(0.50 + 0.20 \\times 0.866) = 10(0.50 + 0.173) = 6.73 \\approx 6.7$ m/s².'
+            explanation: 'Going up, both gravity and friction oppose motion: $a = g(\\sin 30° + \\mu_k \\cos 30°) = 10(0.50 + 0.20 \\times 0.866) = 10(0.50 + 0.173) = 6.73 \\approx 6.7$ $m/s^{2}$.'
           }
         ]
       }

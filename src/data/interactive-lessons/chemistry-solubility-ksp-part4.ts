@@ -76,7 +76,7 @@ $$\\boxed{[\\text{ion}]_{\\text{after mixing}} = \\frac{[\\text{ion}]_{\\text{in
 
 ---
 
-> **Problem:** 50.0 mL of $0.0020$ M $\\text{Pb(NO}_3)_2$ is mixed with 50.0 mL of $0.0040$ M NaCl. Does PbCl₂ precipitate? ($K_{sp} = 1.7 \\times 10^{-5}$)
+> **Problem:** 50.0 mL of $0.0020$ M $\\text{Pb(NO}_3)_2$ is mixed with 50.0 mL of $0.0040$ M NaCl. Does $PbCl_{2}$ precipitate? ($K_{sp} = 1.7 \\times 10^{-5}$)
 
 > **Solution:**
 
@@ -138,7 +138,7 @@ $Q_{sp} < K_{sp}$ → **No precipitate forms.**
       content: `
 **Practice: Will It Precipitate?** 🧮
 
-25.0 mL of $0.0010$ M AgNO₃ is mixed with 75.0 mL of $0.0020$ M NaCl.
+25.0 mL of $0.0010$ M $AgNO_{3}$ is mixed with 75.0 mL of $0.0020$ M NaCl.
 
 $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
 
@@ -205,15 +205,15 @@ $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
       exercise: {
         questions: [
           {
-            question: 'Equal volumes of $1.0 \\times 10^{-3}$ M BaCl₂ and $1.0 \\times 10^{-3}$ M Na₂SO₄ are mixed. $K_{sp}(\\text{BaSO}_4) = 1.1 \\times 10^{-10}$. Does BaSO₄ precipitate?',
+            question: 'Equal volumes of $1.0 \\times 10^{-3}$ M $BaCl_{2}$ and $1.0 \\times 10^{-3}$ M $Na_{2}SO_{4}$ are mixed. $K_{sp}(\\text{BaSO}_4) = 1.1 \\times 10^{-10}$. Does $BaSO_{4}$ precipitate?',
             options: [
               'No — $Q_{sp} < K_{sp}$',
               'Yes — $Q_{sp} = (5.0 \\times 10^{-4})^2 = 2.5 \\times 10^{-7} > K_{sp}$',
               'Cannot determine without knowing the exact volume',
-              'No — BaSO₄ is soluble'
+              'No — $BaSO_{4}$ is soluble'
             ],
             correctAnswer: 1,
-            explanation: 'After mixing equal volumes, each ion is diluted by half: $[\\text{Ba}^{2+}] = [\\text{SO}_4^{2-}] = 5.0 \\times 10^{-4}$ M. $Q_{sp} = (5.0 \\times 10^{-4})^2 = 2.5 \\times 10^{-7} \\gg 1.1 \\times 10^{-10} = K_{sp}$. Yes, BaSO₄ precipitates.'
+            explanation: 'After mixing equal volumes, each ion is diluted by half: $[\\text{Ba}^{2+}] = [\\text{SO}_4^{2-}] = 5.0 \\times 10^{-4}$ M. $Q_{sp} = (5.0 \\times 10^{-4})^2 = 2.5 \\times 10^{-7} \\gg 1.1 \\times 10^{-10} = K_{sp}$. Yes, $BaSO_{4}$ precipitates.'
           },
           {
             question: 'To a solution with $[\\text{Ag}^+] = 1.0 \\times 10^{-5}$ M, NaCl is slowly added. At what $[\\text{Cl}^-]$ does AgCl begin to precipitate? ($K_{sp} = 1.8 \\times 10^{-10}$)',

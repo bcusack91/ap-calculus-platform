@@ -1,0 +1,52 @@
+  [0/5464] 0 mcqs, 0 flags, 0s
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  [400/5464] 24442 mcqs, 94 flags, 17s
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  [800/5464] 32994 mcqs, 140 flags, 23s
+  [1200/5464] 35652 mcqs, 142 flags, 23s
+  [1600/5464] 38644 mcqs, 144 flags, 24s
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+  [2000/5464] 41274 mcqs, 167 flags, 26s
+  [2400/5464] 44264 mcqs, 172 flags, 28s
+  [2800/5464] 47117 mcqs, 172 flags, 28s
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  [3200/5464] 56466 mcqs, 249 flags, 33s
+  [3600/5464] 58844 mcqs, 251 flags, 34s
+  [4000/5464] 61291 mcqs, 252 flags, 35s
+  [4400/5464] 64261 mcqs, 255 flags, 37s
+  [4800/5464] 66374 mcqs, 262 flags, 38s
+  [5200/5464] 69391 mcqs, 296 flags, 39s

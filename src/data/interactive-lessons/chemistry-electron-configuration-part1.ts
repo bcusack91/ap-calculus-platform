@@ -14,9 +14,9 @@ export const chemElectronConfigPart1Data = {
 
 | Particle | Charge | Location | How to Find Count |
 |----------|--------|----------|-------------------|
-| Proton (p⁺) | +1 | Nucleus | = Atomic number (Z) |
-| Neutron (n⁰) | 0 | Nucleus | = Mass number − Z |
-| Electron (e⁻) | −1 | Electron cloud | = Z (neutral atom) |
+| Proton $(p^{+})$ | +1 | Nucleus | = Atomic number (Z) |
+| Neutron $(n^{0})$ | 0 | Nucleus | = Mass number − Z |
+| Electron $(e^{-})$ | −1 | Electron cloud | = Z (neutral atom) |
 
 > 🔑 **Why this matters:** The atomic number defines the element, and the electron count determines all chemical behavior — bonding, reactivity, and periodic trends.
 
@@ -34,9 +34,9 @@ export const chemElectronConfigPart1Data = {
 
 | Particle | Symbol | Charge | Location | Relative Mass |
 |----------|--------|--------|----------|---------------|
-| Proton | p⁺ | +1 | Nucleus | 1 amu |
-| Neutron | n⁰ | 0 | Nucleus | 1 amu |
-| Electron | e⁻ | −1 | Electron cloud | ≈ 0 amu (1/1836 amu) |
+| Proton | $p^{+}$ | +1 | Nucleus | 1 amu |
+| Neutron | $n^{0}$ | 0 | Nucleus | 1 amu |
+| Electron | $e^{-}$ | −1 | Electron cloud | ≈ 0 amu (1/1836 amu) |
 
 **Key relationships:**
 - The **atomic number (Z)** = number of protons = number of electrons (in a neutral atom)
@@ -110,9 +110,9 @@ Chlorine-37 ($^{37}_{17}\\text{Cl}$) has a mass number of 37 and an atomic numbe
 When an atom gains or loses **electrons**, it becomes an **ion**:
 
 - **Cation** (positive ion): atom loses electrons → fewer electrons than protons
-  - Na → Na⁺ (11 protons, 10 electrons)
+  - Na → $Na^{+}$ (11 protons, 10 electrons)
 - **Anion** (negative ion): atom gains electrons → more electrons than protons
-  - Cl → Cl⁻ (17 protons, 18 electrons)
+  - Cl → $Cl^{-}$ (17 protons, 18 electrons)
 
 > ⚠️ **Important:** Gaining or losing electrons does NOT change the atomic number or the identity of the element. Only changing protons does that.`
     },
@@ -121,14 +121,14 @@ When an atom gains or loses **electrons**, it becomes an **ion**:
       type: 'multiple-choice' as const,
       content: `### Ion Particle Counts
 
-How many electrons does the ion Ca²⁺ have? (Calcium has atomic number 20.)`,
+How many electrons does the ion $Ca^{2+}$ have? (Calcium has atomic number 20.)`,
       exercise: {
         questions: [
           {
-            question: 'Number of electrons in Ca²⁺:',
+            question: 'Number of electrons in $Ca^{2+}$:',
             options: ['22', '20', '18', '16'],
             correctAnswer: 2,
-            explanation: 'Calcium has 20 protons and normally 20 electrons. Ca²⁺ means it lost 2 electrons: 20 − 2 = 18 electrons.'
+            explanation: 'Calcium has 20 protons and normally 20 electrons. $Ca^{2+}$ means it lost 2 electrons: 20 − 2 = 18 electrons.'
           }
         ]
       }

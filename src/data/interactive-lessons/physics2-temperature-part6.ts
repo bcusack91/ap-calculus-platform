@@ -112,7 +112,7 @@ At higher temperatures, the distribution **flattens and shifts right** — more 
             question: 'If you double the Kelvin temperature of a gas, the rms speed of its molecules:',
             options: [
               'Doubles',
-              'Increases by a factor of √2 ≈ 1.41',
+              'Increases by a factor of $\\sqrt{2}$ ≈ 1.41',
               'Quadruples',
               'Stays the same'
             ],

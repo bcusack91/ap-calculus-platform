@@ -78,7 +78,7 @@ $dB = 10\\log\\left(\\frac{10^{-2}}{10^{-12}}\\right) = 10\\log(10^{10}) = 10 \\
 
 ### Common Sound Levels
 
-| Sound | Intensity (W/m²) | Decibels |
+| Sound | Intensity $(W/m^{2})$ | Decibels |
 |:------|:-----------------|:---------|
 | Whisper | $10^{-10}$ | $20$ dB |
 | Conversation | $10^{-6}$ | $60$ dB |

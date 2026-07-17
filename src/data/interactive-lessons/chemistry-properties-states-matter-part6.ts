@@ -65,15 +65,15 @@ From **weakest to strongest**:
       exercise: {
         questions: [
           {
-            question: 'CH₄ (molar mass 16 g/mol) is a gas at room temperature while H₂O (molar mass 18 g/mol) is a liquid, even though they have similar molar masses. Why?',
+            question: '$CH_{4}$ (molar mass 16 g/mol) is a gas at room temperature while $H_{2}O$ (molar mass 18 g/mol) is a liquid, even though they have similar molar masses. Why?',
             options: [
-              'CH₄ has stronger LDF because carbon is larger',
-              'H₂O has hydrogen bonding, which is much stronger than the LDF in nonpolar CH₄',
-              'CH₄ is ionic and H₂O is molecular',
-              'H₂O has a higher molar mass'
+              '$CH_{4}$ has stronger LDF because carbon is larger',
+              '$H_{2}O$ has hydrogen bonding, which is much stronger than the LDF in nonpolar $CH_{4}$',
+              '$CH_{4}$ is ionic and $H_{2}O$ is molecular',
+              '$H_{2}O$ has a higher molar mass'
             ],
             correctAnswer: 1,
-            explanation: 'CH₄ is nonpolar (tetrahedral, symmetric) and only has weak LDF. H₂O is polar with strong hydrogen bonding (O–H···O). The much stronger H-bonds in water give it a much higher boiling point (100°C vs. −161°C), so water is liquid while methane is gas at 25°C.'
+            explanation: '$CH_{4}$ is nonpolar (tetrahedral, symmetric) and only has weak LDF. $H_{2}O$ is polar with strong hydrogen bonding (O–H···O). The much stronger H-bonds in water give it a much higher boiling point (100°C vs. −161°C), so water is liquid while methane is gas at 25°C.'
           },
           {
             question: 'Predict the order of boiling points: HF, HCl, HBr, HI.',
@@ -87,7 +87,7 @@ From **weakest to strongest**:
             explanation: 'HF has strong hydrogen bonding (H bonded to F), giving it the highest bp. For HCl, HBr, HI — all have dipole-dipole forces, but the dominant factor is increasing molar mass → increasing LDF: HCl (bp −85°C) < HBr (bp −67°C) < HI (bp −35°C) < HF (bp 19°C).'
           },
           {
-            question: 'NaCl is a solid at room temperature, but ethanol (C₂H₅OH) is a liquid. What best explains this?',
+            question: 'NaCl is a solid at room temperature, but ethanol $(C_{2}H_{5}OH)$ is a liquid. What best explains this?',
             options: [
               'Ethanol has weaker IMFs (H-bonding) than the strong ionic bonds in NaCl',
               'NaCl has a lower molar mass',
@@ -95,7 +95,7 @@ From **weakest to strongest**:
               'NaCl has London Dispersion Forces only'
             ],
             correctAnswer: 0,
-            explanation: 'NaCl is an ionic solid held together by very strong electrostatic forces between Na⁺ and Cl⁻ ions (mp 801°C). Ethanol is a molecular substance with hydrogen bonding — much weaker than ionic bonds — so it\'s a liquid at room temperature (bp 78°C).'
+            explanation: 'NaCl is an ionic solid held together by very strong electrostatic forces between $Na^{+}$ and $Cl^{-}$ ions (mp 801°C). Ethanol is a molecular substance with hydrogen bonding — much weaker than ionic bonds — so it\'s a liquid at room temperature (bp 78°C).'
           }
         ]
       }
@@ -126,11 +126,11 @@ From **weakest to strongest**:
 
 | Pair | Higher BP | Why |
 |------|-----------|-----|
-| CH₄ vs. H₂O | H₂O | H-bonding ≫ LDF |
+| $CH_{4}$ vs. $H_{2}O$ | $H_{2}O$ | H-bonding ≫ LDF |
 | HF vs. HCl | HF | H-bonding > dipole-dipole + LDF |
 | n-pentane vs. neopentane | n-pentane | More surface area → stronger LDF |
-| NaCl vs. CH₃OH | NaCl | Ionic bonds ≫ H-bonding |
-| H₂O vs. H₂S | H₂O | H-bonding (O) > no H-bonding (S not F/O/N) |
+| NaCl vs. $CH_{3}OH$ | NaCl | Ionic bonds ≫ H-bonding |
+| $H_{2}O$ vs. $H_{2}S$ | $H_{2}O$ | H-bonding (O) > no H-bonding (S not F/O/N) |
       `
     },
     {
@@ -141,26 +141,26 @@ From **weakest to strongest**:
       exercise: {
         questions: [
           {
-            question: 'Rank from lowest to highest boiling point: CH₃OH (methanol), CH₃CH₃ (ethane), CH₃F (fluoromethane).',
+            question: 'Rank from lowest to highest boiling point: $CH_{3}OH$ (methanol), $CH_{3}CH_{3}$ (ethane), $CH_{3}F$ (fluoromethane).',
             options: [
-              'CH₃CH₃ < CH₃F < CH₃OH',
-              'CH₃OH < CH₃F < CH₃CH₃',
-              'CH₃F < CH₃CH₃ < CH₃OH',
-              'CH₃OH < CH₃CH₃ < CH₃F'
+              '$CH_{3}CH_{3}$ < $CH_{3}F$ < $CH_{3}OH$',
+              '$CH_{3}OH$ < $CH_{3}F$ < $CH_{3}CH_{3}$',
+              '$CH_{3}F$ < $CH_{3}CH_{3}$ < $CH_{3}OH$',
+              '$CH_{3}OH$ < $CH_{3}CH_{3}$ < $CH_{3}F$'
             ],
             correctAnswer: 0,
-            explanation: 'CH₃CH₃ is nonpolar (LDF only, bp −89°C). CH₃F is polar (dipole-dipole + LDF, bp −78°C). CH₃OH has hydrogen bonding (O–H, bp 65°C). Order: LDF < dipole-dipole < H-bonding.'
+            explanation: '$CH_{3}CH_{3}$ is nonpolar (LDF only, bp −89°C). $CH_{3}F$ is polar (dipole-dipole + LDF, bp −78°C). $CH_{3}OH$ has hydrogen bonding (O–H, bp 65°C). Order: LDF < dipole-dipole < H-bonding.'
           },
           {
             question: 'Which substance has the highest boiling point?',
             options: [
               'Ne (molar mass 20)',
-              'O₂ (molar mass 32)',
-              'Cl₂ (molar mass 71)',
-              'Br₂ (molar mass 160)'
+              '$O_{2}$ (molar mass 32)',
+              '$Cl_{2}$ (molar mass 71)',
+              '$Br_{2}$ (molar mass 160)'
             ],
             correctAnswer: 3,
-            explanation: 'All four are nonpolar molecules with only LDF. Br₂ has the highest molar mass (160 g/mol), giving it the strongest LDF and the highest boiling point (59°C). Ne boils at −246°C, O₂ at −183°C, Cl₂ at −34°C.'
+            explanation: 'All four are nonpolar molecules with only LDF. $Br_{2}$ has the highest molar mass (160 g/mol), giving it the strongest LDF and the highest boiling point (59°C). Ne boils at −246°C, $O_{2}$ at −183°C, $Cl_{2}$ at −34°C.'
           }
         ]
       }
@@ -175,21 +175,21 @@ From **weakest to strongest**:
           {
             id: 'sm6-vp-dd1',
             label: 'Ethanol has weaker H-bonding than water (one OH group vs',
-            options: ['Water (H₂O)', 'Ethanol (C₂H₅OH)'],
+            options: ['Water $(H_{2}O)$', 'Ethanol $(C_{2}H_{5}OH)$'],
             correctIndex: 1,
             explanation: 'Ethanol has weaker H-bonding than water (one OH group vs. two, and ethanol\'s nonpolar tail contributes more LDF character). Weaker IMFs → molecules escape more easily → higher vapor pressure.'
           },
           {
             id: 'sm6-vp-dd2',
             label: 'Diethyl ether cannot form hydrogen bonds as a pure substance (no O–H or N–H)',
-            options: ['Diethyl ether (C₂H₅OC₂H₅)', 'Ethanol (C₂H₅OH)'],
+            options: ['Diethyl ether $(C_{2}H_{5}OC_{2}H_{5})$', 'Ethanol $(C_{2}H_{5}OH)$'],
             correctIndex: 0,
             explanation: 'Diethyl ether cannot form hydrogen bonds as a pure substance (no O–H or N–H). Ethanol has H-bonding (O–H). Weaker IMFs in ether → higher vapor pressure.'
           },
           {
             id: 'sm6-vp-dd3',
             label: 'Both are nonpolar (LDF only)',
-            options: ['Pentane (C₅H₁₂)', 'Decane (C₁₀H₂₂)'],
+            options: ['Pentane $(C_{5}H_{12})$', 'Decane $(C_{10}H_{22})$'],
             correctIndex: 0,
             explanation: 'Both are nonpolar (LDF only). Pentane has lower molar mass → weaker LDF → molecules escape more easily → higher vapor pressure.'
           }
@@ -206,16 +206,16 @@ From **weakest to strongest**:
           {
             question: 'Which liquid has the highest surface tension at room temperature?',
             options: [
-              'Hexane (C₆H₁₄) — LDF only',
-              'Acetone (CH₃COCH₃) — dipole-dipole',
-              'Ethanol (C₂H₅OH) — H-bonding',
-              'Water (H₂O) — strong, extensive H-bonding network'
+              'Hexane $(C_{6}H_{14})$ — LDF only',
+              'Acetone $(CH_{3}COCH_{3})$ — dipole-dipole',
+              'Ethanol $(C_{2}H_{5}OH)$ — H-bonding',
+              'Water $(H_{2}O)$ — strong, extensive H-bonding network'
             ],
             correctAnswer: 3,
             explanation: 'Water has the highest surface tension among common molecular liquids (72.8 mN/m at 20°C) due to its extensive hydrogen bonding network. Each water molecule can form up to 4 hydrogen bonds.'
           },
           {
-            question: 'Glycerol (C₃H₈O₃, with 3 OH groups) is much more viscous than ethanol (C₂H₅OH, with 1 OH group). Why?',
+            question: 'Glycerol ($C_{3}H_{8}O_{3}$, with 3 OH groups) is much more viscous than ethanol ($C_{2}H_{5}OH$, with 1 OH group). Why?',
             options: [
               'Glycerol is nonpolar',
               'Glycerol has 3 OH groups enabling a more extensive H-bonding network, creating greater resistance to flow',
@@ -261,23 +261,23 @@ From **weakest to strongest**:
       exercise: {
         questions: [
           {
-            question: 'Arrange the following in order of increasing boiling point: Ar, NaCl, C₂H₅OH, CH₄',
+            question: 'Arrange the following in order of increasing boiling point: Ar, NaCl, $C_{2}H_{5}OH$, $CH_{4}$',
             options: [
-              'Ar < CH₄ < C₂H₅OH < NaCl',
-              'CH₄ < Ar < NaCl < C₂H₅OH',
-              'NaCl < C₂H₅OH < CH₄ < Ar',
-              'C₂H₅OH < CH₄ < Ar < NaCl'
+              'Ar < $CH_{4}$ < $C_{2}H_{5}OH$ < NaCl',
+              '$CH_{4}$ < Ar < NaCl < $C_{2}H_{5}OH$',
+              'NaCl < $C_{2}H_{5}OH$ < $CH_{4}$ < Ar',
+              '$C_{2}H_{5}OH$ < $CH_{4}$ < Ar < NaCl'
             ],
             correctAnswer: 0,
-            explanation: 'Ar (−186°C, LDF, small atom) < CH₄ (−161°C, LDF, slightly larger) < C₂H₅OH (78°C, H-bonding) < NaCl (1413°C, ionic bonding). This follows the expected trend: weak LDF < H-bonding < ionic.'
+            explanation: 'Ar (−186°C, LDF, small atom) < $CH_{4}$ (−161°C, LDF, slightly larger) < $C_{2}H_{5}OH$ (78°C, H-bonding) < NaCl (1413°C, ionic bonding). This follows the expected trend: weak LDF < H-bonding < ionic.'
           },
           {
             question: 'At 25°C, which substance has the lowest vapor pressure?',
             options: [
-              'CH₃OCH₃ (dimethyl ether, dipole-dipole)',
-              'C₂H₅OH (ethanol, H-bonding)',
-              'C₃H₈ (propane, LDF only)',
-              'H₂O (water, strong H-bonding)'
+              '$CH_{3}OCH_{3}$ (dimethyl ether, dipole-dipole)',
+              '$C_{2}H_{5}OH$ (ethanol, H-bonding)',
+              '$C_{3}H_{8}$ (propane, LDF only)',
+              '$H_{2}O$ (water, strong H-bonding)'
             ],
             correctAnswer: 3,
             explanation: 'Water has the strongest IMFs (extensive H-bonding network with two O–H bonds and two lone pairs per molecule). Stronger IMFs → harder for molecules to escape → lower vapor pressure.'

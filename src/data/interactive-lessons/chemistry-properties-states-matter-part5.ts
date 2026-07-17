@@ -64,7 +64,7 @@ Each line represents conditions where **two phases coexist** in equilibrium:
 
 > 🔑 **Key Concept — Triple Point:** The **unique** temperature and pressure where **solid, liquid, and gas coexist** simultaneously. For water: $T = 0.01°C$, $P = 611.7$ Pa (0.00604 atm).
 
-> 🔑 **Key Concept — Critical Point:** Above this temperature and pressure, liquid and gas become **indistinguishable** → a **supercritical fluid**. For water: $T_c = 374°C$, $P_c = 218$ atm. For CO₂: $T_c = 31.1°C$, $P_c = 73$ atm.
+> 🔑 **Key Concept — Critical Point:** Above this temperature and pressure, liquid and gas become **indistinguishable** → a **supercritical fluid**. For water: $T_c = 374°C$, $P_c = 218$ atm. For $CO_{2}$: $T_c = 31.1°C$, $P_c = 73$ atm.
       `
     },
     {
@@ -133,16 +133,16 @@ To find the phase at a specific temperature and pressure:
 - Cross the gas-liquid line → **condensation**
 - Cross the liquid-solid line → **freezing**
 
-### Example: What happens when you heat CO₂ at 1 atm?
+### Example: What happens when you heat $CO_{2}$ at 1 atm?
 
-At 1 atm pressure, trace a horizontal line across the CO₂ phase diagram:
+At 1 atm pressure, trace a horizontal line across the $CO_{2}$ phase diagram:
 - You start in the **solid** region.
 - You cross the **solid-gas** line (sublimation curve) — but **not** the solid-liquid or liquid-gas lines!
-- CO₂ goes directly from solid → gas (**sublimation**).
+- $CO_{2}$ goes directly from solid → gas (**sublimation**).
 
 ---
 
-> 💡 **Tip:** At 1 atm, CO₂ goes directly from solid → gas (**sublimation**) because 1 atm is **below** the triple point pressure of CO₂ (5.11 atm). At pressures below the triple point, the liquid phase does not exist!
+> 💡 **Tip:** At 1 atm, $CO_{2}$ goes directly from solid → gas (**sublimation**) because 1 atm is **below** the triple point pressure of $CO_{2}$ (5.11 atm). At pressures below the triple point, the liquid phase does not exist!
 
 This is why dry ice sublimes at atmospheric pressure instead of melting!
       `
@@ -183,9 +183,9 @@ This is why dry ice sublimes at atmospheric pressure instead of melting!
       type: 'text' as const,
       title: 'Water\'s Anomalous Phase Diagram',
       content: `
-## Water vs. CO₂: The Anomaly
+## Water vs. $CO_{2}$: The Anomaly
 
-### Typical Substances (e.g., CO₂)
+### Typical Substances (e.g., $CO_{2}$)
 
 For most substances, the **solid-liquid line slopes to the right** (positive slope). This means:
 - Increasing pressure at constant temperature **favors the solid** phase.
@@ -209,7 +209,7 @@ Water\'s solid-liquid line slopes **to the left** (negative slope)! This means:
 
 ### Comparison Table
 
-| Feature | Water (H₂O) | Carbon Dioxide (CO₂) |
+| Feature | Water $(H_{2}O)$ | Carbon Dioxide $(CO_{2})$ |
 |---------|-------------|---------------------|
 | Solid-liquid line slope | Negative (slopes left) | Positive (slopes right) |
 | Solid density vs. liquid | Solid < Liquid (ice floats) | Solid > Liquid (normal) |
@@ -237,15 +237,15 @@ Water\'s solid-liquid line slopes **to the left** (negative slope)! This means:
             explanation: 'The negative slope means increasing pressure at constant temperature converts solid to liquid — pressure favors the denser phase. Since liquid water is denser than ice, increasing pressure favors the liquid.'
           },
           {
-            question: 'Why does CO₂ sublime at 1 atm instead of melting?',
+            question: 'Why does $CO_{2}$ sublime at 1 atm instead of melting?',
             options: [
-              'CO₂ has very strong intermolecular forces',
-              '1 atm is below the triple point pressure of CO₂ (5.11 atm), so the liquid phase doesn\'t exist',
-              'CO₂ is a network covalent solid',
-              'CO₂ has a negative solid-liquid slope like water'
+              '$CO_{2}$ has very strong intermolecular forces',
+              '1 atm is below the triple point pressure of $CO_{2}$ (5.11 atm), so the liquid phase doesn\'t exist',
+              '$CO_{2}$ is a network covalent solid',
+              '$CO_{2}$ has a negative solid-liquid slope like water'
             ],
             correctAnswer: 1,
-            explanation: 'CO₂\'s triple point is at 5.11 atm. Since normal atmospheric pressure (1 atm) is below this, the liquid phase cannot exist at 1 atm. Heating solid CO₂ at 1 atm causes it to go directly from solid to gas (sublimation).'
+            explanation: '$CO_{2}$\'s triple point is at 5.11 atm. Since normal atmospheric pressure (1 atm) is below this, the liquid phase cannot exist at 1 atm. Heating solid $CO_{2}$ at 1 atm causes it to go directly from solid to gas (sublimation).'
           }
         ]
       }
@@ -262,12 +262,12 @@ Above the **critical temperature** ($T_c$) and **critical pressure** ($P_c$), a 
 - The boundary between liquid and gas **disappears** — there is no distinct phase transition.
 - The substance has properties of **both** a liquid (dissolving power, density) and a gas (fills container, low viscosity).
 
-### Supercritical CO₂ — An Important Application
+### Supercritical $CO_{2}$ — An Important Application
 
-Because CO₂\'s critical point is relatively accessible ($T_c = 31.1°C$, $P_c = 73$ atm):
-- **Supercritical CO₂** is widely used as a "green" solvent in industrial processes.
-- It is used to **decaffeinate coffee** — it dissolves caffeine selectively, then the CO₂ is depressurized and the caffeine is recovered.
-- It leaves no toxic residue (CO₂ simply evaporates when pressure is released).
+Because $CO_{2}$\'s critical point is relatively accessible ($T_c = 31.1°C$, $P_c = 73$ atm):
+- **Supercritical $CO_{2}$** is widely used as a "green" solvent in industrial processes.
+- It is used to **decaffeinate coffee** — it dissolves caffeine selectively, then the $CO_{2}$ is depressurized and the caffeine is recovered.
+- It leaves no toxic residue ($CO_{2}$ simply evaporates when pressure is released).
       `
     },
     {
@@ -314,7 +314,7 @@ Because CO₂\'s critical point is relatively accessible ($T_c = 31.1°C$, $P_c 
             explanation: 'At 30°C (below the triple point temperature of 50°C) and 1 atm (above the triple point pressure of 0.5 atm), we are in the upper-left region of the phase diagram. This is typically the solid region (high pressure, low temperature).'
           },
           {
-            question: 'If you want to observe the liquid phase of CO₂, you need a minimum pressure of approximately:',
+            question: 'If you want to observe the liquid phase of $CO_{2}$, you need a minimum pressure of approximately:',
             options: [
               '1 atm',
               '5.11 atm',
@@ -322,7 +322,7 @@ Because CO₂\'s critical point is relatively accessible ($T_c = 31.1°C$, $P_c 
               '218 atm'
             ],
             correctAnswer: 1,
-            explanation: 'The triple point of CO₂ is at 5.11 atm. The liquid phase only exists at or above the triple point pressure. Below 5.11 atm, CO₂ transitions directly between solid and gas (sublimation/deposition).'
+            explanation: 'The triple point of $CO_{2}$ is at 5.11 atm. The liquid phase only exists at or above the triple point pressure. Below 5.11 atm, $CO_{2}$ transitions directly between solid and gas (sublimation/deposition).'
           }
         ]
       }

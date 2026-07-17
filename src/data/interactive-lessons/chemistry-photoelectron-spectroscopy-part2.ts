@@ -56,11 +56,11 @@ Each **peak** in a PES spectrum corresponds to a **subshell** (1s, 2s, 2p, 3s, e
 ---
 
 ### Example: Lithium (Li, Z = 3)
-Electron configuration: 1s² 2s¹
+Electron configuration: $1s^{2}$ $2s^{1}$
 
 A PES spectrum for lithium shows:
-- **Peak 1** (far left, highest BE): Relative height of 2 → corresponds to **1s²** (2 electrons)
-- **Peak 2** (far right, lowest BE): Relative height of 1 → corresponds to **2s¹** (1 electron)`
+- **Peak 1** (far left, highest BE): Relative height of 2 → corresponds to **$1s^{2}$** (2 electrons)
+- **Peak 2** (far right, lowest BE): Relative height of 1 → corresponds to **$2s^{1}$** (1 electron)`
     },
     {
       id: 'ps2-quiz1',
@@ -89,15 +89,15 @@ On a PES spectrum, the x-axis displays binding energy. How is it oriented?`,
       type: 'text' as const,
       content: `## 📌 Reading a Spectrum: Nitrogen (Z = 7)
 
-Nitrogen has the electron configuration: **1s² 2s² 2p³**
+Nitrogen has the electron configuration: **$1s^{2}$ $2s^{2}$ $2p^{3}$**
 
 Its PES spectrum shows **three peaks**:
 
 | Peak | Position | Relative Height | Subshell |
 |------|----------|----------------|----------|
-| 1 | Far left (highest BE) | 2 | 1s² |
-| 2 | Middle | 2 | 2s² |
-| 3 | Far right (lowest BE) | 3 | 2p³ |
+| 1 | Far left (highest BE) | 2 | $1s^{2}$ |
+| 2 | Middle | 2 | $2s^{2}$ |
+| 3 | Far right (lowest BE) | 3 | $2p^{3}$ |
 
 **Notice:**
 - The 1s peak has the **highest** binding energy because those electrons are closest to the nucleus
@@ -122,7 +122,7 @@ Its PES spectrum shows **three peaks**:
               '12'
             ],
             correctAnswer: 2,
-            explanation: 'The total number of electrons is the sum of the relative heights: 2 + 2 + 6 = 10 electrons. This atom has 10 electrons, which corresponds to neon (Ne) with the configuration 1s² 2s² 2p⁶.'
+            explanation: 'The total number of electrons is the sum of the relative heights: 2 + 2 + 6 = 10 electrons. This atom has 10 electrons, which corresponds to neon (Ne) with the configuration $1s^{2}$ $2s^{2}$ $2p^{6}$.'
           }
         ]
       }
@@ -171,7 +171,7 @@ Consider a PES spectrum with peaks at relative heights of 2, 2, 6, 2, and 3 (fro
             text: 'What element does this spectrum represent?',
             options: ['Nitrogen (Z=7)', 'Neon (Z=10)', 'Aluminum (Z=13)', 'Phosphorus (Z=15)', 'Chlorine (Z=17)'],
             correctIndex: 3,
-            explanation: 'Total electrons: 2 + 2 + 6 + 2 + 3 = 15. This corresponds to phosphorus (P, Z = 15) with configuration 1s² 2s² 2p⁶ 3s² 3p³.'
+            explanation: 'Total electrons: 2 + 2 + 6 + 2 + 3 = 15. This corresponds to phosphorus (P, Z = 15) with configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$.'
           }
         ]
       }

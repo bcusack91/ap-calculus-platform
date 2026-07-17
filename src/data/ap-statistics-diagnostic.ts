@@ -280,7 +280,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'The coefficient of determination R² = r² = (0.82)² ≈ 0.6724, meaning about 67.24% of variation in exam scores is explained by study hours.',
+      'The coefficient of determination $R^{2}$ = $r^{2}$ = $(0.82)^{2}$ ≈ 0.6724, meaning about 67.24% of variation in exam scores is explained by study hours.',
     domain: 'unit-2-exploring-two-variable',
     topicSlug: 'coefficient-determination',
     formSet: 'A',
@@ -453,7 +453,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 0,
     explanation:
-      'With 3 coin flips: P(0H)=(1/2)³=1/8, P(1H)=3/8, P(2H)=3/8, P(3H)=1/8. These match answer (A).',
+      'With 3 coin flips: P(0H)=$(1/2)^{3}$=1/8, P(1H)=3/8, P(2H)=3/8, P(3H)=1/8. These match answer (A).',
     domain: 'unit-4-probability-distributions',
     topicSlug: 'discrete-random-variables',
     formSet: 'A',
@@ -464,7 +464,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     options: ['≈0.088', '≈0.205', '≈0.396', '≈0.500'],
     correctAnswer: 1,
     explanation:
-      'This is binomial: n=5, p=0.25, k=2. P(X=2) = C(5,2) × (0.25)² × (0.75)³ = 10 × 0.0625 × 0.422 ≈ 0.264. Closest is 0.205 (alternative calculation: ≈0.205).',
+      'This is binomial: n=5, p=0.25, k=2. P(X=2) = C(5,2) × $(0.25)^{2}$ × $(0.75)^{3}$ = 10 × 0.0625 × 0.422 ≈ 0.264. Closest is 0.205 (alternative calculation: ≈0.205).',
     domain: 'unit-4-probability-distributions',
     topicSlug: 'binomial-distribution',
     formSet: 'B',
@@ -475,7 +475,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     options: ['0.02', '0.10', '≈0.0185', '≈0.9224'],
     correctAnswer: 2,
     explanation:
-      'Geometric distribution: P(X=k) = (1-p)^(k-1) × p. P(X=5) = (0.98)⁴ × 0.02 ≈ 0.0185.',
+      'Geometric distribution: P(X=k) = $(1-p)^{k-1}$ × p. P(X=5) = $(0.98)^{4}$ × 0.02 ≈ 0.0185.',
     domain: 'unit-4-probability-distributions',
     topicSlug: 'geometric-distribution',
     formSet: 'A',
@@ -505,7 +505,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'The sampling distribution of X̄ has mean μ = 100 and standard error SE = σ/√n = 15/√25 = 15/5 = 3.',
+      'The sampling distribution of X̄ has mean μ = 100 and standard error SE = $\\sigma /\\sqrt{n}$ = $15/\\sqrt{25}$ = 15/5 = 3.',
     domain: 'unit-5-sampling-distributions',
     topicSlug: 'sampling-distributions',
     formSet: 'A',
@@ -532,7 +532,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     options: ['0.4', '0.049', '0.015', '0.004'],
     correctAnswer: 1,
     explanation:
-      'SE(p̂) = √[p(1−p)/n] = √[0.4 × 0.6 / 100] = √0.0024 ≈ 0.049.',
+      'SE(p̂) = √[p(1−p)/n] = √[0.4 × 0.6 / 100] = $\\sqrt{0.0024}$ ≈ 0.049.',
     domain: 'unit-5-sampling-distributions',
     topicSlug: 'sampling-distributions',
     formSet: 'B',
@@ -548,7 +548,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'SE₁ = σ/√100 = σ/10. SE₂ = σ/√400 = σ/20. The new SE is half the old SE.',
+      '$SE_{1}$ = $\\sigma /\\sqrt{100}$ = σ/10. $SE_{2}$ = $\\sigma /\\sqrt{400}$ = σ/20. The new SE is half the old SE.',
     domain: 'unit-5-sampling-distributions',
     topicSlug: 'sampling-distributions',
     formSet: 'A',
@@ -569,16 +569,16 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'A researcher tests H₀: p = 0.5 vs. Hₐ: p ≠ 0.5 for whether a coin is fair. The p-value is 0.08. At α = 0.05, what is the correct conclusion?',
+      'A researcher tests $H_{0}$: p = 0.5 vs. $H_{a}$: p ≠ 0.5 for whether a coin is fair. The p-value is 0.08. At α = 0.05, what is the correct conclusion?',
     options: [
-      'Reject H₀; the coin is not fair',
-      'Fail to reject H₀; the coin is fair',
-      'Accept H₀; we have proven the coin is fair',
-      'Reject H₀ because 0.08 > 0.05',
+      'Reject $H_{0}$; the coin is not fair',
+      'Fail to reject $H_{0}$; the coin is fair',
+      'Accept $H_{0}$; we have proven the coin is fair',
+      'Reject $H_{0}$ because 0.08 > 0.05',
     ],
     correctAnswer: 1,
     explanation:
-      'Since p-value (0.08) > α (0.05), we fail to reject H₀. We do not have enough evidence to conclude the coin is unfair. (Note: we never "prove" H₀ is true.)',
+      'Since p-value (0.08) > α (0.05), we fail to reject $H_{0}$. We do not have enough evidence to conclude the coin is unfair. (Note: we never "prove" $H_{0}$ is true.)',
     domain: 'unit-6-inference-categorical-proportions',
     topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',
@@ -587,14 +587,14 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     question:
       'A drug company claims that more than 60% of patients respond positively to their new medication. The appropriate test is:',
     options: [
-      'H₀: p > 0.6; Hₐ: p ≤ 0.6',
-      'H₀: p = 0.6; Hₐ: p > 0.6',
-      'H₀: p ≤ 0.6; Hₐ: p > 0.6',
-      'H₀: p = 0.6; Hₐ: p ≠ 0.6',
+      '$H_{0}$: p > 0.6; $H_{a}$: p ≤ 0.6',
+      '$H_{0}$: p = 0.6; $H_{a}$: p > 0.6',
+      '$H_{0}$: p ≤ 0.6; $H_{a}$: p > 0.6',
+      '$H_{0}$: p = 0.6; $H_{a}$: p ≠ 0.6',
     ],
     correctAnswer: 2,
     explanation:
-      'The null hypothesis is the status quo (the claim to be proven false). The alternative is the claim being tested. Here, Hₐ: p > 0.6 (the company\'s claim).',
+      'The null hypothesis is the status quo (the claim to be proven false). The alternative is the claim being tested. Here, $H_{a}$: p > 0.6 (the company\'s claim).',
     domain: 'unit-6-inference-categorical-proportions',
     topicSlug: 'tests-proportions',
     formSet: 'B',
@@ -610,7 +610,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 0,
     explanation:
-      'Type I error: reject H₀ when H₀ is true. H₀: the drug doesn\'t work. Type I: we reject that and approve a drug that doesn\'t actually work.',
+      'Type I error: reject $H_{0}$ when $H_{0}$ is true. $H_{0}$: the drug doesn\'t work. Type I: we reject that and approve a drug that doesn\'t actually work.',
     domain: 'unit-6-inference-categorical-proportions',
     topicSlug: 'type-errors',
     formSet: 'A',
@@ -663,16 +663,16 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'In a hypothesis test, H₀: μ = 25 vs. Hₐ: μ > 25. The sample mean is 28 and the p-value is 0.03. At α = 0.05, what is the conclusion?',
+      'In a hypothesis test, $H_{0}$: μ = 25 vs. $H_{a}$: μ > 25. The sample mean is 28 and the p-value is 0.03. At α = 0.05, what is the conclusion?',
     options: [
-      'Reject H₀; the mean is significantly greater than 25',
-      'Fail to reject H₀; we cannot conclude the mean is greater than 25',
+      'Reject $H_{0}$; the mean is significantly greater than 25',
+      'Fail to reject $H_{0}$; we cannot conclude the mean is greater than 25',
       'The sample size must be larger',
-      'Accept H₀; the mean equals 25',
+      'Accept $H_{0}$; the mean equals 25',
     ],
     correctAnswer: 0,
     explanation:
-      'p-value (0.03) < α (0.05), so we reject H₀ and conclude the mean is significantly greater than 25.',
+      'p-value (0.03) < α (0.05), so we reject $H_{0}$ and conclude the mean is significantly greater than 25.',
     domain: 'unit-7-inference-quantitative-means',
     topicSlug: 'tests-means',
     formSet: 'A',
@@ -684,14 +684,14 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     question:
       'A chi-square test is used to test the independence of two categorical variables. If the p-value is 0.02 and α = 0.05, we:',
     options: [
-      'Reject H₀ and conclude the variables are independent',
-      'Reject H₀ and conclude the variables are associated',
-      'Fail to reject H₀ and conclude the variables are independent',
-      'Accept H₀ as proven',
+      'Reject $H_{0}$ and conclude the variables are independent',
+      'Reject $H_{0}$ and conclude the variables are associated',
+      'Fail to reject $H_{0}$ and conclude the variables are independent',
+      'Accept $H_{0}$ as proven',
     ],
     correctAnswer: 1,
     explanation:
-      'H₀: the variables are independent. p-value (0.02) < α (0.05), so we reject H₀ and conclude they are associated (not independent).',
+      '$H_{0}$: the variables are independent. p-value (0.02) < α (0.05), so we reject $H_{0}$ and conclude they are associated (not independent).',
     domain: 'unit-8-inference-categorical-chi-square',
     topicSlug: 'chi-square-tests',
     formSet: 'A',
@@ -702,7 +702,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     options: ['Very large (p-value small)', 'Very small (p-value large)', 'Negative', 'Undefined'],
     correctAnswer: 1,
     explanation:
-      'χ² = Σ[(O−E)² / E]. When O ≈ E, each term is small, so χ² ≈ 0, yielding a large p-value. This supports H₀ (observed matches expected).',
+      '$\\chi^{2}$ = Σ[$(O-E)^{2}$ / E]. When O ≈ E, each term is small, so $\\chi^{2}$ ≈ 0, yielding a large p-value. This supports $H_{0}$ (observed matches expected).',
     domain: 'unit-8-inference-categorical-chi-square',
     topicSlug: 'chi-square-tests',
     formSet: 'B',
@@ -732,7 +732,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'p-value (0.001) << α (0.05), so we reject H₀ that the slope = 0. We conclude square footage has a significant effect on price.',
+      'p-value (0.001) << α (0.05), so we reject $H_{0}$ that the slope = 0. We conclude square footage has a significant effect on price.',
     domain: 'unit-9-inference-quantitative-slopes',
     topicSlug: 'inference-regression',
     formSet: 'A',
@@ -755,7 +755,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'When testing H₀: β₁ = 0 (slope is zero) in a regression model, which would be a Type II error?',
+      'When testing $H_{0}$: $\\beta_{1}$ = 0 (slope is zero) in a regression model, which would be a Type II error?',
     options: [
       'Concluding the slope is zero when it actually is not',
       'Concluding the slope is not zero when it actually is zero',
@@ -764,7 +764,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 0,
     explanation:
-      'Type II error: fail to reject H₀ when H₀ is false. Here, H₀ is "slope = 0." Type II: we fail to reject it when the slope is actually not zero.',
+      'Type II error: fail to reject $H_{0}$ when $H_{0}$ is false. Here, $H_{0}$ is "slope = 0." Type II: we fail to reject it when the slope is actually not zero.',
     domain: 'unit-9-inference-quantitative-slopes',
     topicSlug: 'type-errors',
     formSet: 'A',
@@ -839,16 +839,16 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'A researcher tests H₀: μ₁ = μ₂ (two groups have equal means) and gets a p-value of 0.15 at α = 0.05. The correct interpretation is:',
+      'A researcher tests $H_{0}$: $\\mu_{1}$ = $\\mu_{2}$ (two groups have equal means) and gets a p-value of 0.15 at α = 0.05. The correct interpretation is:',
     options: [
       'The means are equal',
       'The means are different',
-      'We have insufficient evidence to conclude the means differ; we fail to reject H₀',
+      'We have insufficient evidence to conclude the means differ; we fail to reject $H_{0}$',
       'We have proven the null hypothesis is true',
     ],
     correctAnswer: 2,
     explanation:
-      'p-value (0.15) > α (0.05), so we fail to reject H₀. We cannot conclude the means differ. Note: we never prove H₀ true, only fail to reject it.',
+      'p-value (0.15) > α (0.05), so we fail to reject $H_{0}$. We cannot conclude the means differ. Note: we never prove $H_{0}$ true, only fail to reject it.',
     domain: 'unit-7-inference-quantitative-means',
     topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',
@@ -886,7 +886,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     options: ['n ≈ 100', 'n ≈ 600', 'n ≈ 1200', 'n ≈ 2400'],
     correctAnswer: 1,
     explanation:
-      'n = (z*)² × p(1−p) / E² = (1.96)² × 0.5 × 0.5 / (0.04)² ≈ 600.',
+      'n = $(z\\cdot )^{2}$ × p(1−p) / $E^{2}$ = $(1.96)^{2}$ × 0.5 × 0.5 / $(0.04)^{2}$ ≈ 600.',
     domain: 'unit-6-inference-categorical-proportions',
     topicSlug: 'ci-proportions',
     formSet: 'A',
@@ -954,14 +954,14 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     question:
       'A researcher finds that the p-value for her test is 0.045. If she had used α = 0.05, her conclusion would be to:',
     options: [
-      'Reject H₀',
-      'Fail to reject H₀',
-      'Accept H₀ as proven',
+      'Reject $H_{0}$',
+      'Fail to reject $H_{0}$',
+      'Accept $H_{0}$ as proven',
       'Increase the sample size',
     ],
     correctAnswer: 0,
     explanation:
-      'p-value (0.045) < α (0.05), so we reject H₀. The result is statistically significant at the 0.05 level.',
+      'p-value (0.045) < α (0.05), so we reject $H_{0}$. The result is statistically significant at the 0.05 level.',
     domain: 'unit-6-inference-categorical-proportions',
     topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',
@@ -986,10 +986,10 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     question:
       'An airline claims that on average, flights are delayed by 5 minutes. A traveler suspects the actual delay is greater. What are the appropriate null and alternative hypotheses?',
     options: [
-      'H₀: μ = 5; Hₐ: μ > 5',
-      'H₀: μ = 5; Hₐ: μ < 5',
-      'H₀: μ > 5; Hₐ: μ = 5',
-      'H₀: μ ≠ 5; Hₐ: μ = 5',
+      '$H_{0}$: μ = 5; $H_{a}$: μ > 5',
+      '$H_{0}$: μ = 5; $H_{a}$: μ < 5',
+      '$H_{0}$: μ > 5; $H_{a}$: μ = 5',
+      '$H_{0}$: μ ≠ 5; $H_{a}$: μ = 5',
     ],
     correctAnswer: 0,
     explanation:
@@ -1020,7 +1020,7 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'A very small p-value indicates strong evidence against H₀, but it does not prove H₀ is false. Effect size is separate from statistical significance.',
+      'A very small p-value indicates strong evidence against $H_{0}$, but it does not prove $H_{0}$ is false. Effect size is separate from statistical significance.',
     domain: 'unit-6-inference-categorical-proportions',
     topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',

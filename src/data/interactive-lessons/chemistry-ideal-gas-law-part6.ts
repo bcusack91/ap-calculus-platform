@@ -64,7 +64,7 @@ This reduces to Boyle's or Charles's law when one variable is held constant.
 
 ### Example 1: Volume at STP
 
-> **Problem:** What volume does 0.750 mol of CO₂ occupy at STP?
+> **Problem:** What volume does 0.750 mol of $CO_{2}$ occupy at STP?
 
 > **Solution:**
 
@@ -108,16 +108,16 @@ $$\\text{grams} \\rightarrow \\text{moles} \\rightarrow \\text{mole ratio} \\rig
 
 ### Example
 
-> **Problem:** How many liters of O₂ at 25°C and 1.00 atm are produced from the decomposition of 49.0 g of KClO₃?
+> **Problem:** How many liters of $O_{2}$ at 25°C and 1.00 atm are produced from the decomposition of 49.0 g of $KClO_{3}$?
 
 > **Solution:**
 
 $$2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$$
 
-Step 1: Moles of KClO₃ ($M = 122.55$ g/mol):
+Step 1: Moles of $KClO_{3}$ ($M = 122.55$ g/mol):
 $$n = 49.0/122.55 = 0.400 \\text{ mol}$$
 
-Step 2: Moles of O₂:
+Step 2: Moles of $O_{2}$:
 $$0.400 \\times \\frac{3}{2} = 0.600 \\text{ mol O}_2$$
 
 Step 3: Volume:
@@ -155,7 +155,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             explanation: '$V_2 = P_1V_1T_2/(T_1P_2) = (1.50)(8.00)(273.15)/((200)(1.00)) = 3277.8/200 = 16.4$ L.'
           },
           {
-            question: 'How many liters of H₂ at STP are produced when 6.54 g of Zn reacts with excess HCl? ($\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$; Zn = 65.38 g/mol)',
+            question: 'How many liters of $H_{2}$ at STP are produced when 6.54 g of Zn reacts with excess HCl? ($\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$; Zn = 65.38 g/mol)',
             options: [
               '1.12 L',
               '2.24 L',
@@ -163,7 +163,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
               '22.4 L'
             ],
             correctAnswer: 1,
-            explanation: 'Moles Zn $= 6.54/65.38 = 0.100$ mol. 1:1 ratio → 0.100 mol H₂. At STP: $V = 0.100 \\times 22.4 = 2.24$ L.'
+            explanation: 'Moles Zn $= 6.54/65.38 = 0.100$ mol. 1:1 ratio → 0.100 mol $H_{2}$. At STP: $V = 0.100 \\times 22.4 = 2.24$ L.'
           }
         ]
       }
@@ -176,7 +176,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
 
 **1)** A 5.00 L gas sample at 2.00 atm and 400 K is cooled to 200 K and compressed to 1.00 L. What is the new pressure? (in atm)
 
-**2)** At STP, how many grams of CO₂ ($M = 44.01$ g/mol) occupy 11.2 L? (in g, to 3 significant figures)
+**2)** At STP, how many grams of $CO_{2}$ ($M = 44.01$ g/mol) occupy 11.2 L? (in g, to 3 significant figures)
 
 **3)** A mixture of 0.30 mol He and 0.70 mol Ar has a total pressure of 5.00 atm. What is the partial pressure of Ar? (in atm)
       `,
@@ -188,7 +188,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             explanation: 'Combined gas law: $P_2 = P_1V_1T_2/(T_1V_2) = (2.00)(5.00)(200)/((400)(1.00)) = 2000/400 = 5.00$ atm.'
           },
           {
-            label: 'Mass of CO₂ (g)',
+            label: 'Mass of $CO_{2}$ (g)',
             correctAnswer: '22.01',
             explanation: 'At STP: $n = 11.2/22.4 = 0.500$ mol. $m = nM = 0.500 \\times 44.01 = 22.005 \\approx 22.01$ g.'
           },
@@ -211,21 +211,21 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             id: 'gl6-dd1',
             label: 'Know P, V, T — need to find n. Use ___',
-            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', `Dalton's Law`],
+            options: ['PV = nRT', '$P_{1}V_{1}/T_{1}$ = $P_{2}V_{2}/T_{2}$', 'M = mRT/(PV)', `Dalton's Law`],
             correctIndex: 0,
             explanation: `When you know P, V, T and need to find n (or vice versa) for a single set of conditions, use the ideal gas law directly.`
           },
           {
             id: 'gl6-dd2',
             label: 'Same gas changes conditions (P, V, T change). Use ___',
-            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', `Dalton's Law`],
+            options: ['PV = nRT', '$P_{1}V_{1}/T_{1}$ = $P_{2}V_{2}/T_{2}$', 'M = mRT/(PV)', `Dalton's Law`],
             correctIndex: 1,
             explanation: `When the same gas sample changes conditions (different P, V, or T before and after), use the combined gas law.`
           },
           {
             id: 'gl6-dd3',
             label: 'Multiple gases in one container — need pressures. Use ___',
-            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', `Dalton's Law`],
+            options: ['PV = nRT', '$P_{1}V_{1}/T_{1}$ = $P_{2}V_{2}/T_{2}$', 'M = mRT/(PV)', `Dalton's Law`],
             correctIndex: 3,
             explanation: `When multiple gases are in the same container and you need individual or total pressures, use Dalton's Law of Partial Pressures.`
           }
@@ -255,12 +255,12 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             question: 'At STP, which of the following samples contains the most molecules?',
             options: [
               '22.4 L of He',
-              '11.2 L of O₂',
-              '44.8 L of N₂',
-              '22.4 L of CO₂'
+              '11.2 L of $O_{2}$',
+              '44.8 L of $N_{2}$',
+              '22.4 L of $CO_{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'At STP, 22.4 L = 1 mol for any ideal gas. He: 1 mol, O₂: 0.5 mol, N₂: 2 mol, CO₂: 1 mol. N₂ at 44.8 L has the most moles and therefore the most molecules.'
+            explanation: 'At STP, 22.4 L = 1 mol for any ideal gas. He: 1 mol, $O_{2}$: 0.5 mol, $N_{2}$: 2 mol, $CO_{2}$: 1 mol. $N_{2}$ at 44.8 L has the most moles and therefore the most molecules.'
           },
           {
             question: 'A gas changes from 2.00 atm and 5.00 L to 4.00 atm. If temperature stays constant, the new volume is:',
@@ -276,16 +276,16 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             question: 'An unknown gas has a mass of 2.86 g and occupies 1.00 L at STP. The molar mass is most likely:',
             options: [
-              '28 g/mol (N₂)',
-              '32 g/mol (O₂)',
-              '44 g/mol (CO₂)',
-              '64 g/mol (SO₂)'
+              '28 g/mol $(N_{2})$',
+              '32 g/mol $(O_{2})$',
+              '44 g/mol $(CO_{2})$',
+              '64 g/mol $(SO_{2})$'
             ],
             correctAnswer: 3,
-            explanation: 'At STP, 1.00 L has $n = 1.00/22.4 = 0.0446$ mol. $M = 2.86/0.0446 = 64.1$ g/mol, which matches SO₂.'
+            explanation: 'At STP, 1.00 L has $n = 1.00/22.4 = 0.0446$ mol. $M = 2.86/0.0446 = 64.1$ g/mol, which matches $SO_{2}$.'
           },
           {
-            question: 'A mixture of N₂ and O₂ exerts a total pressure of 1.00 atm. If $P_{N_2} = 0.78$ atm, what is $P_{O_2}$?',
+            question: 'A mixture of $N_{2}$ and $O_{2}$ exerts a total pressure of 1.00 atm. If $P_{N_2} = 0.78$ atm, what is $P_{O_2}$?',
             options: [
               '0.12 atm',
               '0.22 atm',
@@ -296,7 +296,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             explanation: `Dalton's Law: $P_{O_2} = P_{\\text{total}} - P_{N_2} = 1.00 - 0.78 = 0.22$ atm.`
           },
           {
-            question: 'How many liters of O₂ at STP are needed to completely react with 4.00 mol of CH₄? ($\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$)',
+            question: 'How many liters of $O_{2}$ at STP are needed to completely react with 4.00 mol of $CH_{4}$? ($\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$)',
             options: [
               '44.8 L',
               '89.6 L',
@@ -304,7 +304,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
               '22.4 L'
             ],
             correctAnswer: 2,
-            explanation: '4.00 mol CH₄ × 2 mol O₂/1 mol CH₄ = 8.00 mol O₂. At STP: $8.00 \\times 22.4 = 179.2$ L.'
+            explanation: '4.00 mol $CH_{4}$ × 2 mol $O_{2}/1$ mol $CH_{4}$ = 8.00 mol $O_{2}$. At STP: $8.00 \\times 22.4 = 179.2$ L.'
           },
           {
             question: 'A tire is inflated to 2.20 atm at 20°C. After driving, the temperature rises to 50°C. Assuming constant volume, the new pressure is:',
@@ -329,7 +329,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             explanation: `When the same gas changes conditions (before/after), use the combined gas law. You don't need n if it cancels.`
           },
           {
-            question: 'At constant T and P, 2.0 L of N₂ reacts with 6.0 L of H₂. Using $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, the volume of NH₃ produced is:',
+            question: 'At constant T and P, 2.0 L of $N_{2}$ reacts with 6.0 L of $H_{2}$. Using $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, the volume of $NH_{3}$ produced is:',
             options: [
               '2.0 L',
               '4.0 L',
@@ -337,14 +337,14 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
               '8.0 L'
             ],
             correctAnswer: 1,
-            explanation: 'At constant T and P, volume ratios = mole ratios. 1 vol N₂ : 3 vol H₂ : 2 vol NH₃. From 2.0 L N₂ → 4.0 L NH₃.'
+            explanation: 'At constant T and P, volume ratios = mole ratios. 1 vol $N_{2}$ : 3 vol $H_{2}$ : 2 vol $NH_{3}$. From 2.0 L $N_{2}$ → 4.0 L $NH_{3}$.'
           },
           {
             question: `Which of the following problems requires Dalton's Law?`,
             options: [
               'Finding the volume of a gas at a new temperature',
               'Finding the molar mass from density',
-              'Finding the partial pressure of O₂ in a mixture of gases',
+              'Finding the partial pressure of $O_{2}$ in a mixture of gases',
               'Finding moles from P, V, and T'
             ],
             correctAnswer: 2,

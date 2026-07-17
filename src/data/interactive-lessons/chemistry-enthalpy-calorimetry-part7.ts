@@ -97,7 +97,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         questions: [
           {
-            question: 'A 5.00 g sample of propane (C₃H₈, molar mass = 44.1 g/mol) is burned in a bomb calorimeter (C_cal = 12.0 kJ/°C), causing a 7.30°C temperature rise. The molar energy of combustion is approximately:',
+            question: 'A 5.00 g sample of propane ($C_{3}H_{8}$, molar mass = 44.1 g/mol) is burned in a bomb calorimeter (C_cal = 12.0 kJ/°C), causing a 7.30°C temperature rise. The molar energy of combustion is approximately:',
             options: [
               '−773 kJ/mol',
               '−2220 kJ/mol',
@@ -108,7 +108,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             explanation: '$q_{\\text{cal}} = (12.0)(7.30) = 87.6$ kJ. $q_{\\text{rxn}} = -87.6$ kJ. Moles = $5.00/44.1 = 0.1134$ mol. $\\Delta E = -87.6/0.1134 = -773$ kJ/mol.'
           },
           {
-            question: 'Given: (1) 2Fe(s) + 3/2 O₂(g) → Fe₂O₃(s), ΔH = −824 kJ and (2) 2Al(s) + 3/2 O₂(g) → Al₂O₃(s), ΔH = −1676 kJ. What is ΔH for Fe₂O₃(s) + 2Al(s) → Al₂O₃(s) + 2Fe(s)?',
+            question: 'Given: (1) 2Fe(s) + 3/2 $O_{2}(g)$ → $Fe_{2}O_{3}(s)$, ΔH = −824 kJ and (2) 2Al(s) + 3/2 $O_{2}(g)$ → $Al_{2}O_{3}(s)$, ΔH = −1676 kJ. What is ΔH for $Fe_{2}O_{3}(s)$ + 2Al(s) → $Al_{2}O_{3}(s)$ + 2Fe(s)?',
             options: [
               '−852 kJ',
               '+852 kJ',
@@ -116,18 +116,18 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               '+2500 kJ'
             ],
             correctAnswer: 0,
-            explanation: 'Reverse (1): Fe₂O₃ → 2Fe + 3/2 O₂, ΔH = +824 kJ. Keep (2): 2Al + 3/2 O₂ → Al₂O₃, ΔH = −1676 kJ. Add: $+824 + (-1676) = -852$ kJ.'
+            explanation: 'Reverse (1): $Fe_{2}O_{3}$ → 2Fe + 3/2 $O_{2}$, ΔH = +824 kJ. Keep (2): 2Al + 3/2 $O_{2}$ → $Al_{2}O_{3}$, ΔH = −1676 kJ. Add: $+824 + (-1676) = -852$ kJ.'
           },
           {
             question: 'Which statement about $\\Delta H°_f$ is correct?',
             options: [
-              '$\\Delta H°_f$ for H₂O(g) and H₂O(l) are the same',
-              '$\\Delta H°_f$ for O₃(g) is zero',
+              '$\\Delta H°_f$ for $H_{2}O(g)$ and $H_{2}O(l)$ are the same',
+              '$\\Delta H°_f$ for $O_{3}(g)$ is zero',
               '$\\Delta H°_f$ for an element in its standard state is zero',
               '$\\Delta H°_f$ is always negative'
             ],
             correctAnswer: 2,
-            explanation: 'By definition, $\\Delta H°_f = 0$ for elements in their standard states. O₃ is NOT the standard state of oxygen (O₂ is), so $\\Delta H°_f$(O₃) ≠ 0. H₂O(g) and H₂O(l) have different ΔH°_f values. Many compounds have positive $\\Delta H°_f$.'
+            explanation: 'By definition, $\\Delta H°_f = 0$ for elements in their standard states. $O_{3}$ is NOT the standard state of oxygen $(O_{2} is)$, so $\\Delta H°_f$(O₃) ≠ 0. $H_{2}O(g)$ and $H_{2}O(l)$ have different ΔH°_f values. Many compounds have positive $\\Delta H°_f$.'
           }
         ]
       }
@@ -169,7 +169,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: ['ΔE', 'ΔH', 'ΔG', 'ΔS']
           },
           {
-            label: 'The $\\Delta H°_f$ for O₃(g) is',
+            label: 'The $\\Delta H°_f$ for $O_{3}(g)$ is',
             options: ['zero', 'positive', 'negative', 'undefined']
           },
           {
@@ -177,15 +177,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             options: ['path function', 'state function', 'vector quantity', 'constant']
           },
           {
-            label: 'Dissolving NH₄NO₃ in water cools the solution. This process is',
+            label: 'Dissolving $NH_{4}NO_{3}$ in water cools the solution. This process is',
             options: ['exothermic', 'endothermic', 'isothermal', 'adiabatic']
           }
         ],
         correctAnswers: ['ΔH', 'positive', 'state function', 'endothermic'],
         hint1: 'Coffee-cup operates at constant pressure.',
-        hint2: 'O₃ is NOT the standard state of oxygen — forming it requires energy.',
+        hint2: '$O_{3}$ is NOT the standard state of oxygen — forming it requires energy.',
         hint3: 'State functions depend only on initial and final states.',
-        explanation: 'Coffee-cup at constant pressure measures ΔH. O₃ has positive ΔH°_f (ozone is less stable than O₂). Hess\'s Law works because ΔH is path-independent. Cooling the solution means the system absorbed heat (endothermic).'
+        explanation: 'Coffee-cup at constant pressure measures ΔH. $O_{3}$ has positive ΔH°_f (ozone is less stable than $O_{2}$). Hess\'s Law works because ΔH is path-independent. Cooling the solution means the system absorbed heat (endothermic).'
       }
     },
     {

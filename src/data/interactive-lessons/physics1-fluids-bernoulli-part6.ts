@@ -33,7 +33,7 @@ The hardest AP fluids problems combine BOTH governing equations: continuity to f
 
 ### Worked Venturi
 
-A horizontal Venturi: wide section $A_1 = 0.10$ m² has $v_1 = 2$ m/s, $P_1 = 200$ kPa; narrow throat $A_2 = 0.025$ m². Find $P_2$.
+A horizontal Venturi: wide section $A_1 = 0.10$ $m^{2}$ has $v_1 = 2$ m/s, $P_1 = 200$ kPa; narrow throat $A_2 = 0.025$ $m^{2}$. Find $P_2$.
 
 **Step 1 — Continuity:** $v_2 = v_1 (A_1/A_2) = 2 \\times 4 = 8$ m/s.
 
@@ -44,7 +44,7 @@ So $P_2 = 170$ kPa. The throat pressure dropped by 30 kPa.
 
 ### Combined Pipe with Elevation Change
 
-A pipe carries water from $A_1 = 0.04$ m², $v_1 = 1$ m/s, $y_1 = 0$, $P_1 = 300$ kPa upward to $A_2 = 0.01$ m², $y_2 = 5$ m. Find $P_2$.
+A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 = 300$ kPa upward to $A_2 = 0.01$ $m^{2}$, $y_2 = 5$ m. Find $P_2$.
 
 - $v_2 = 4$ m/s by continuity.
 - Bernoulli: $P_2 = 300{,}000 + \\tfrac{1}{2}(1000)(1 - 16) + 1000(10)(0 - 5) = 300{,}000 - 7500 - 50{,}000 = 242{,}500$ Pa.
@@ -100,11 +100,11 @@ A pipe carries water from $A_1 = 0.04$ m², $v_1 = 1$ m/s, $y_1 = 0$, $P_1 = 300
       content: `
 **Combined Workshop** 🧮 ($\\rho_w = 1000$, g = 10)
 
-1) Horizontal Venturi: $A_1 = 0.020$ m², $v_1 = 3$ m/s, $P_1 = 250$ kPa; $A_2 = 0.010$ m². Find $P_2$ (kPa).
+1) Horizontal Venturi: $A_1 = 0.020$ $m^{2}$, $v_1 = 3$ m/s, $P_1 = 250$ kPa; $A_2 = 0.010$ $m^{2}$. Find $P_2$ (kPa).
 
-2) A vertical pipe: $A_1 = 0.005$ m², $v_1 = 4$ m/s, $y_1 = 0$, $P_1 = 400$ kPa. Upper end: $A_2 = 0.005$ m² (same area), $y_2 = 10$ m. Find $P_2$ (kPa).
+2) A vertical pipe: $A_1 = 0.005$ $m^{2}$, $v_1 = 4$ m/s, $y_1 = 0$, $P_1 = 400$ kPa. Upper end: $A_2 = 0.005$ $m^{2}$ (same area), $y_2 = 10$ m. Find $P_2$ (kPa).
 
-3) Same pipe, but upper end narrows to $A_2 = 0.0025$ m². Find $P_2$ (kPa).
+3) Same pipe, but upper end narrows to $A_2 = 0.0025$ $m^{2}$. Find $P_2$ (kPa).
       `,
       exercise: {
         boxes: 3,
@@ -159,7 +159,7 @@ A pipe carries water from $A_1 = 0.04$ m², $v_1 = 1$ m/s, $y_1 = 0$, $P_1 = 300
       exercise: {
         questions: [
           {
-            question: 'A horizontal pipe goes from $A_1 = 0.10$ m² ($v_1 = 1$ m/s, $P_1 = 300$ kPa) to $A_2 = 0.025$ m². The pressure $P_2$ is:',
+            question: 'A horizontal pipe goes from $A_1 = 0.10$ $m^{2}$ ($v_1 = 1$ m/s, $P_1 = 300$ kPa) to $A_2 = 0.025$ $m^{2}$. The pressure $P_2$ is:',
             options: [
               '$292.5$ kPa',
               '$300$ kPa',

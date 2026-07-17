@@ -50,7 +50,7 @@ $$\\text{Solid} \\xrightarrow{\\text{melting}} \\text{Liquid} \\xrightarrow{\\te
 The **triple point** is where all three boundary lines meet — the unique $(T, P)$ where solid, liquid, and gas coexist in equilibrium.
 
 - For water: $T_{\\text{tp}} = 0.01$°C, $P_{\\text{tp}} = 611$ Pa (well below atmospheric pressure)
-- For CO₂: $T_{\\text{tp}} = -56.6$°C, $P_{\\text{tp}} = 5.18$ atm (above atmospheric pressure — this is why CO₂ sublimates at 1 atm!)
+- For $CO_{2}$: $T_{\\text{tp}} = -56.6$°C, $P_{\\text{tp}} = 5.18$ atm (above atmospheric pressure — this is why $CO_{2}$ sublimates at 1 atm!)
 
 ### Critical Point
 The **critical point** is the endpoint of the liquid-gas boundary line. Above this temperature and pressure:
@@ -78,9 +78,9 @@ A liquid boils when its vapor pressure equals the external pressure above it.
       exercise: {
         questions: [
           {
-            question: 'CO₂ has a triple point pressure of 5.18 atm. At normal atmospheric pressure (1 atm), what happens when solid CO₂ is heated?',
+            question: '$CO_{2}$ has a triple point pressure of 5.18 atm. At normal atmospheric pressure (1 atm), what happens when solid $CO_{2}$ is heated?',
             options: [
-              'It melts into liquid CO₂, then boils',
+              'It melts into liquid $CO_{2}$, then boils',
               'It sublimates directly from solid to gas',
               'It stays solid indefinitely',
               'It becomes a supercritical fluid'

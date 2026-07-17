@@ -27,8 +27,8 @@ $$^A_Z X$$
 |----------|--------|-----|-----|
 | Proton | $^1_1p$ or $^1_1\\text{H}$ | 1 | 1 |
 | Neutron | $^1_0n$ | 1 | 0 |
-| Electron (beta⁻) | $^0_{-1}e$ or $\\beta^-$ | 0 | $-1$ |
-| Positron (beta⁺) | $^0_{+1}e$ or $\\beta^+$ | 0 | $+1$ |
+| Electron $(beta^{-})$ | $^0_{-1}e$ or $\\beta^-$ | 0 | $-1$ |
+| Positron $(beta^{+})$ | $^0_{+1}e$ or $\\beta^+$ | 0 | $+1$ |
 | Alpha particle | $^4_2\\text{He}$ or $\\alpha$ | 4 | 2 |
 | Gamma ray | $^0_0\\gamma$ | 0 | 0 |
 | Neutrino | $\\nu$ | 0 | 0 |
@@ -54,8 +54,8 @@ Every nuclear reaction must conserve:
 | Decay Type | What Happens | $\\Delta Z$ | $\\Delta A$ | Penetrating Power |
 |-----------|-------------|-----------|-----------|-------------------|
 | **Alpha** ($\\alpha$) | Emits $^4_2\\text{He}$ | $-2$ | $-4$ | Low (paper stops it) |
-| **Beta⁻** ($\\beta^-$) | $n \\to p + e^- + \\bar{\\nu}_e$ | $+1$ | $0$ | Medium (metal foil) |
-| **Beta⁺** ($\\beta^+$) | $p \\to n + e^+ + \\nu_e$ | $-1$ | $0$ | Medium |
+| **Beta$ {}^{-}$** ($\\beta^-$) | $n \\to p + e^- + \\bar{\\nu}_e$ | $+1$ | $0$ | Medium (metal foil) |
+| **Beta$ {}^{+}$** ($\\beta^+$) | $p \\to n + e^+ + \\nu_e$ | $-1$ | $0$ | Medium |
 | **Gamma** ($\\gamma$) | Emits high-energy photon | $0$ | $0$ | High (lead/concrete) |
 | **Electron capture** | $p + e^- \\to n + \\nu_e$ | $-1$ | $0$ | — |
 
@@ -65,7 +65,7 @@ $$^{238}_{92}\\text{U} \\to ^{234}_{90}\\text{Th} + ^4_2\\text{He}$$
 
 Check: $A$: $238 = 234 + 4$ ✓ | $Z$: $92 = 90 + 2$ ✓
 
-### Example: Beta⁻ Decay of Carbon-14
+### Example: Beta$ {}^{-}$ Decay of Carbon-14
 
 $$^{14}_6\\text{C} \\to ^{14}_7\\text{N} + ^0_{-1}e + \\bar{\\nu}_e$$
 
@@ -87,14 +87,14 @@ Check: $A$: $14 = 14 + 0$ ✓ | $Z$: $6 = 7 + (-1)$ ✓
             explanation: '$A$: $226 = 222 + A_X$ → $A_X = 4$. $Z$: $88 = 86 + Z_X$ → $Z_X = 2$. Particle with $A = 4$, $Z = 2$ is an alpha particle ($^4_2\\text{He}$).'
           },
           {
-            question: '$^{14}_6\\text{C}$ undergoes beta⁻ decay. The daughter nucleus is:',
+            question: '$^{14}_6\\text{C}$ undergoes beta$ {}^{-}$ decay. The daughter nucleus is:',
             options: ['$^{14}_5\\text{B}$', '$^{14}_7\\text{N}$', '$^{10}_4\\text{Be}$', '$^{13}_6\\text{C}$'],
             correctAnswer: 1,
-            explanation: 'Beta⁻: $Z$ increases by 1, $A$ stays the same. $Z = 6 + 1 = 7$ (nitrogen), $A = 14$. This is the basis of radiocarbon dating!'
+            explanation: 'Beta$ {}^{-}$: $Z$ increases by 1, $A$ stays the same. $Z = 6 + 1 = 7$ (nitrogen), $A = 14$. This is the basis of radiocarbon dating!'
           },
           {
             question: 'Which decay does NOT change the mass number $A$?',
-            options: ['Alpha decay', 'Beta⁻ decay', 'Neutron emission', 'All change $A$'],
+            options: ['Alpha decay', 'Beta$ {}^{-}$ decay', 'Neutron emission', 'All change $A$'],
             correctAnswer: 1,
             explanation: 'Beta decay (both $\\beta^-$ and $\\beta^+$) only changes $Z$ by ±1; $A$ stays constant. Alpha decay changes $A$ by 4, and neutron emission changes $A$ by 1.'
           },

@@ -85,7 +85,7 @@ This final lesson brings together everything from the unit: the definition of wo
       content: `
 **AP-Style Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 0.2 kg ball is dropped from 20 m. What is its speed just before hitting the ground (in m/s)?
 
@@ -146,7 +146,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 3 kg block is pushed 5 m up a frictionless $37°$ incline from rest. The push force is 50 N parallel to the incline ($g = 10$ m/s²). The block\'s speed at the top is:',
+            question: 'A 3 kg block is pushed 5 m up a frictionless $37°$ incline from rest. The push force is 50 N parallel to the incline ($g = 10$ $m/s^{2}$). The block\'s speed at the top is:',
             options: [
               '$\\sqrt{30}$ m/s',
               '$\\sqrt{46.7}$ m/s',

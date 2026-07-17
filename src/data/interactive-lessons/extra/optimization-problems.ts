@@ -394,7 +394,7 @@ The concept check confirmed the *shape*; now run the full calculus on a fresh nu
 A rectangular garden is enclosed on **all four sides** with $60$ ft of fencing.
 
 **1)** Using $A(x) = x(30 - x)$, the maximizing side length is $x = \\,?$ ft
-**2)** The maximum area is $\\,?$ ft²`,
+**2)** The maximum area is $\\,?$ $ft^{2}$`,
         exercise: {
           boxes: 2,
           correctAnswers: ['15', '225'],
@@ -421,7 +421,7 @@ Change the geometry and the answer changes. With one side along a river, only **
 A farmer has $120$ ft of fence and a river along one side (no fence needed there). Let $y$ be each side perpendicular to the river, so $x = 120 - 2y$ is the side parallel to it.
 
 **1)** The maximizing perpendicular side is $y = \\,?$ ft
-**2)** The maximum enclosed area is $\\,?$ ft²`,
+**2)** The maximum enclosed area is $\\,?$ $ft^{2}$`,
         exercise: {
           boxes: 2,
           correctAnswers: ['30', '1800'],
@@ -576,7 +576,7 @@ A closed cylindrical can has fixed volume $V$, radius $r$, and height $h$, so $V
 
 ---
 
-> 🔑 **Beyond Geometry:** Optimization runs the business world too — shortest path, cheapest design, and maximum revenue. Two pro tricks: minimize **distance²** instead of distance, and build **revenue** as $\\text{(price)} \\times \\text{(quantity)}$.`,
+> 🔑 **Beyond Geometry:** Optimization runs the business world too — shortest path, cheapest design, and maximum revenue. Two pro tricks: minimize **distance$ {}^{2}$** instead of distance, and build **revenue** as $\\text{(price)} \\times \\text{(quantity)}$.`,
       },
       {
         id: 'opt5-distance',
@@ -685,7 +685,7 @@ Find the $x$-coordinate of the point on $y = x^2$ closest to $(0, 3)$. Minimize 
           hint1: '$\\dfrac{d}{dx}\\!\\left[x^2 + (x^2 - 3)^2\\right] = 2x + 2(x^2 - 3)(2x) = 2x\\left(1 + 2(x^2 - 3)\\right)$.',
           hint2: 'Factor: $2x(2x^2 - 5) = 0$, so $x = 0$ or $x^2 = \\tfrac{5}{2}$.',
           hint3: 'The positive nonzero root is $x = \\sqrt{5/2} = \\sqrt{2.5} \\approx 1.58$.',
-          explanation: 'Setting the derivative to $0$: $2x(2x^2 - 5) = 0 \\Rightarrow x = \\sqrt{2.5} \\approx 1.58$ (the $x = 0$ root is a local *max* of distance here). The minimum distance² is $\\tfrac{11}{4}$.',
+          explanation: 'Setting the derivative to $0$: $2x(2x^2 - 5) = 0 \\Rightarrow x = \\sqrt{2.5} \\approx 1.58$ (the $x = 0$ root is a local *max* of distance here). The minimum distance$ {}^{2}$ is $\\tfrac{11}{4}$.',
         },
       },
     ],

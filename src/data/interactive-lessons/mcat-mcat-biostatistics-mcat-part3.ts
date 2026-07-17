@@ -14,7 +14,7 @@ A CI gives a **range** where the true parameter likely lies (unlike a single p-v
 
 \`\`\`
 95% CI = Sample mean ± 1.96 × SE
-(where SE = SD / √n)
+(where SE = SD / $\\sqrt{n}$)
 \`\`\`
 
 **Interpretation:** "We are 95% confident the true population mean falls within this range."

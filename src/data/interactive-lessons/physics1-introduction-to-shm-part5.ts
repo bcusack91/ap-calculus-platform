@@ -173,13 +173,13 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
           {
             question: 'A spring system has $f = 10$ Hz and $A = 0.05$ m. The maximum acceleration is closest to:',
             options: [
-              '$20$ m/s²',
-              '$100$ m/s²',
-              '$200$ m/s²',
-              '$2000$ m/s²'
+              '$20$ $m/s^{2}$',
+              '$100$ $m/s^{2}$',
+              '$200$ $m/s^{2}$',
+              '$2000$ $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$\\omega = 2\\pi f = 20\\pi$. $a_{\\text{max}} = A\\omega^2 = 0.05(20\\pi)^2 = 0.05(400\\pi^2) = 0.05(3948) \\approx 197 \\approx 200$ m/s².'
+            explanation: '$\\omega = 2\\pi f = 20\\pi$. $a_{\\text{max}} = A\\omega^2 = 0.05(20\\pi)^2 = 0.05(400\\pi^2) = 0.05(3948) \\approx 197 \\approx 200$ $m/s^{2}$.'
           },
           {
             question: 'If you triple the frequency of an oscillator (same amplitude), the maximum speed:',

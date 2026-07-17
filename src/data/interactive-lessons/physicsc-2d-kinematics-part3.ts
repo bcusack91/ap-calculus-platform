@@ -126,7 +126,7 @@ $$t = \\frac{\\vec{r}_0}{\\vec{v}_A - \\vec{v}_B}$$
 
 ### Example
 
-A police car at the origin accelerates east with $a = 4$ m/s² from rest. A speeder is $100$ m east traveling at constant $20$ m/s east.
+A police car at the origin accelerates east with $a = 4$ $m/s^{2}$ from rest. A speeder is $100$ m east traveling at constant $20$ m/s east.
 
 Police: $x_P = 2t^2$. Speeder: $x_S = 100 + 20t$.
 

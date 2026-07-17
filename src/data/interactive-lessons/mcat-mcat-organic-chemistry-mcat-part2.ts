@@ -97,11 +97,11 @@ export const mcatOrgChemPart2Data = {
 
 **Question:** Predict the main product(s) when (R)-2-bromopropane is treated with potassium ethoxide (KOEt) in ethanol at 75°C:
 <pre>
-       CH₃
+       $CH_{3}$
        |
 (R)-H-C-Br  + KOEt (excess) → ?
        |
-       CH₃
+       $CH_{3}$
 </pre>
 
 **Solution:**
@@ -125,7 +125,7 @@ export const mcatOrgChemPart2Data = {
 <pre>
      Br
      |
-  (ring)-C-CH₃
+  $(ring)-C-CH_{3}$
      |
      H
 </pre>
@@ -153,14 +153,14 @@ export const mcatOrgChemPart2Data = {
 <pre>
          |Br       4-step:
       /  \         1. Identify chiral center at C1 (2° carbon bearing Br)
-      \  /         2. CN⁻ is strong, DMSO is polar aprotic
+      \  /         2. $CN^{-}$ is strong, DMSO is polar aprotic
       (ring)       3. BUT the cyclohexane ring creates steric hindrance
                    4. SN2 still wins: backside attack occurs
 </pre>
 
 **Solution**:
 1. **Substrate**: 2° but IN A RING with bulky neighbors (gem-dimethyl effects from fused rings, methyl group on C2)
-2. **Nucleophile**: CN⁻ – strong, small, polar aprotic solvent
+2. **Nucleophile**: $CN^{-}$ – strong, small, polar aprotic solvent
 3. **Expected mechanism**: SN2 (good nucleophile + aprotic solvent)
 
 **BUT**: The ring + adjacent methyl makes backside attack difficult. **SN2 is heavily retarded**.
@@ -173,11 +173,11 @@ export const mcatOrgChemPart2Data = {
 <details>
 <summary><b>Example 4: Stereochemistry loss in SN1</b></summary>
 
-**Question:** (R)-2-iodooctane in aqueous AgNO₃ (SN1 conditions) produces a 50:50 mixture of (R) and (S) alcohols. Why not 100% inversion or 100% retention?
+**Question:** (R)-2-iodooctane in aqueous $AgNO_{3}$ (SN1 conditions) produces a 50:50 mixture of (R) and (S) alcohols. Why not 100% inversion or 100% retention?
 
 **Solution**:
-1. Ag⁺ abstracts I⁻ → carbocation forms
-2. Carbocation is **planar** (sp² hybridized)
+1. $Ag^{+}$ abstracts $I^{-}$ → carbocation forms
+2. Carbocation is **planar** $(sp^{2} hybridized)$
 3. Water can attack from either face (above or below the plane)
 4. ~50% attack from above → (S) enantiomer
 5. ~50% attack from below → (R) enantiomer

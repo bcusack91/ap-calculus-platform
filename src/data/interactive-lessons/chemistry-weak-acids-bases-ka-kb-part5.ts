@@ -193,14 +193,14 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
           },
           {
             label: 'For a diprotic acid, $[\\text{second anion}]$ approximately equals',
-            options: ['Kₐ₁', 'Kₐ₂', 'Kₐ₁ \× Kₐ₂', 'zero']
+            options: ['$K_{a1}$', '$K_{a2}$', '$K_{a1}$ \× $K_{a2}$', 'zero']
           },
           {
             label: 'The $K_a$ of $HSO_4^-$ is the same as',
-            options: ['Kₐ₁ of H₂SO₄', 'Kₐ₂ of H₂SO₄', 'K_b of SO₄²⁻', 'K_w']
+            options: ['$K_{a1}$ of $H_{2}SO_{4}$', '$K_{a2}$ of $H_{2}SO_{4}$', 'K_b of $SO_{4}^{2-}$', 'K_w']
           }
         ],
-        correctAnswers: ['increases', 'Kₐ₂', 'Kₐ₂ of H₂SO₄'],
+        correctAnswers: ['increases', '$K_{a2}$', '$K_{a2}$ of $H_{2}SO_{4}$'],
         hint1: 'Le Chatelier: dilution favors more ions.',
         hint2: 'This is a remarkable simplification for diprotic acids.',
         hint3: '$HSO_4^-$ is the intermediate species in the dissociation of $H_2SO_4$.',

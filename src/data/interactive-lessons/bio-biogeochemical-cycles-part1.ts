@@ -80,7 +80,7 @@ When precipitation reaches Earth's surface, water follows several paths:
 
 ### Biological Connections
 - All organisms require water for metabolic reactions (hydrolysis, condensation reactions).
-- Water is a reactant in **photosynthesis**: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂
+- Water is a reactant in **photosynthesis**: $6CO_{2}$ + $6H_{2}O$ → $C_{6}H_{12}O_{6}$ + $6O_{2}$
 - Water is a product of **aerobic cellular respiration**.
 - Aquatic ecosystems depend on the continuous cycling of water to maintain dissolved oxygen, nutrient transport, and temperature regulation.
 `

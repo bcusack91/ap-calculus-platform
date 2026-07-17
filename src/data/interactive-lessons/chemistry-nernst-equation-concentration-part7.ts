@@ -54,7 +54,7 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
 |------|:------------:|---------|-------------|
 | Primary | No | Alkaline | One-time use |
 | Secondary | Yes | Li-ion, lead-acid | Reversible reaction |
-| Fuel cell | Continuous | H₂/O₂ | Reactants fed in |
+| Fuel cell | Continuous | $H_{2}/O_{2}$ | Reactants fed in |
 | Concentration | Until equal | Same-metal | E° = 0 |
 
 > 🔑 **Key Concept:** Know any one of $\\Delta G°$, $E°$, or $K$ — and you can calculate the other two. This "thermodynamic triangle" unifies equilibrium, electrochemistry, and thermodynamics.
@@ -93,10 +93,10 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
           {
             question: 'In a hydrogen fuel cell, the only product at the cathode is:',
             options: [
-              'CO₂',
-              'H₂',
-              'H₂O',
-              'O₂'
+              '$CO_{2}$',
+              '$H_{2}$',
+              '$H_{2}O$',
+              '$O_{2}$'
             ],
             correctAnswer: 2,
             explanation: 'Cathode: $\\text{O}_2 + 4\\text{H}^+ + 4e^- \\rightarrow 2\\text{H}_2\\text{O}$. The product is water — making hydrogen fuel cells environmentally clean.'

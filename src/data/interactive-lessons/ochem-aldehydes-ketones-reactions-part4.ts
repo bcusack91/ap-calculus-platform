@@ -136,7 +136,7 @@ $\\text{RCHO} + 2\\,\\text{[Ag(NH}_3)_2]^+ + 3\\,\\text{OH}^- \\rightarrow \\tex
             options: [
               'Ag+ to Ag metal',
               'Cu2+ (blue) to Cu2O (brick-red)',
-              'Cr2O7^2- to Cr3+',
+              '$Cr2O7^{2}$- to Cr3+',
               'MnO4- to Mn2+'
             ],
             correctAnswer: 1,

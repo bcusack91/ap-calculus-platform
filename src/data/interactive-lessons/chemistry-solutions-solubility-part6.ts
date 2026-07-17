@@ -69,7 +69,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       content: `
 ## 🧪 Worked Example 1: Concentration Conversion
 
-> **Problem:** A solution is prepared by dissolving 34.2 g of sucrose (C₁₂H₂₂O₁₁, $M = 342.30$ g/mol) in 200.0 g of water. The density of the resulting solution is 1.024 g/mL. Calculate molality, molarity, mass percent, and mole fraction.
+> **Problem:** A solution is prepared by dissolving 34.2 g of sucrose ($C_{12}H_{22}O_{11}$, $M = 342.30$ g/mol) in 200.0 g of water. The density of the resulting solution is 1.024 g/mL. Calculate molality, molarity, mass percent, and mole fraction.
 
 ### Given
 
@@ -267,7 +267,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '4'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta T_f = 0.56$ °C. $i = \\Delta T_f/(K_fm) = 0.56/((1.86)(0.10)) = 0.56/0.186 = 3.0$. The compound dissociates into 3 ions (e.g., CaCl₂ → Ca²⁺ + 2Cl⁻).'
+            explanation: '$\\Delta T_f = 0.56$ °C. $i = \\Delta T_f/(K_fm) = 0.56/((1.86)(0.10)) = 0.56/0.186 = 3.0$. The compound dissociates into 3 ions (e.g., $CaCl_{2}$ → $Ca^{2+}$ + $2Cl^{-}$).'
           },
           {
             question: 'Which technique would give the most accurate molar mass determination for a protein with $M \\approx 50{,}000$ g/mol?',

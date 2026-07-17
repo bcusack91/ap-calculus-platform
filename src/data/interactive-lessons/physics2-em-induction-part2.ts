@@ -58,7 +58,7 @@ Push a magnet toward a coil: $B$ increases at the coil → $\\Phi$ increases →
 
 $$|\\varepsilon| = NA\\cos\\theta \\cdot \\frac{|\\Delta B|}{\\Delta t}$$
 
-**Example:** A solenoid's field increases from 0 to 0.5 T in 0.1 s through a 100-turn coil of area 0.02 m² ($\\theta = 0°$):
+**Example:** A solenoid's field increases from 0 to 0.5 T in 0.1 s through a 100-turn coil of area 0.02 $m^{2}$ ($\\theta = 0°$):
 
 $$|\\varepsilon| = (100)(0.02)(1)\\frac{0.5}{0.1} = 10 \\text{ V}$$
 
@@ -148,7 +148,7 @@ Even modest changes in flux through many-turn coils can produce significant volt
 
 A square coil has 80 turns, each with side length 10 cm. The coil sits in a uniform field ($\\theta = 0°$) that decreases from 0.6 T to 0.2 T in 0.05 s.
 
-1) Area of each turn (in m²)
+1) Area of each turn $(in m^{2})$
 
 2) Change in flux per turn $|\\Delta\\Phi|$ (in Wb)
 
@@ -159,10 +159,10 @@ A square coil has 80 turns, each with side length 10 cm. The coil sits in a unif
       exercise: {
         boxes: 3,
         correctAnswers: ['0.01', '0.004', '6.4'],
-        hint1: '$A = (0.10)^2 = 0.01$ m².',
+        hint1: '$A = (0.10)^2 = 0.01$ $m^{2}$.',
         hint2: '$|\\Delta\\Phi| = |\\Delta B| \\cdot A = |0.2 - 0.6| \\times 0.01 = 0.004$ Wb.',
         hint3: '$|\\varepsilon| = N \\frac{|\\Delta\\Phi|}{\\Delta t} = 80 \\times \\frac{0.004}{0.05} = 6.4$ V.',
-        explanation: '$A = 0.01$ m². $|\\Delta\\Phi| = (0.4)(0.01) = 0.004$ Wb. $|\\varepsilon| = 80 \\times 0.004/0.05 = 80 \\times 0.08 = 6.4$ V.'
+        explanation: '$A = 0.01$ $m^{2}$. $|\\Delta\\Phi| = (0.4)(0.01) = 0.004$ Wb. $|\\varepsilon| = 80 \\times 0.004/0.05 = 80 \\times 0.08 = 6.4$ V.'
       }
     },
     {

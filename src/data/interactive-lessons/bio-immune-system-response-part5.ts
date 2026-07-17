@@ -85,7 +85,7 @@ One of the most remarkable features of adaptive immunity is **immunological memo
 - Upon re-exposure, rapidly differentiate into **plasma cells** producing large amounts of antibody
 
 ### Memory T Cells
-- Both CD4⁺ and CD8⁺ T cells can become memory cells
+- Both $CD4^{+}$ and $CD8^{+}$ T cells can become memory cells
 - Divided into subtypes:
 
 | Subtype | Location | Function |

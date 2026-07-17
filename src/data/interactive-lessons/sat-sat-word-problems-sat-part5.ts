@@ -49,7 +49,7 @@ $$V = 25000(0.85)^4 \\approx \\$13{,}050$$
         '8,000'
       ],
       correctAnswer: 3,
-      explanation: '12 hours ÷ 3 hours = 4 doubling periods. 500 × 2⁴ = 500 × 16 = 8,000. Each doubling: 500 → 1,000 → 2,000 → 4,000 → 8,000.'
+      explanation: '12 hours ÷ 3 hours = 4 doubling periods. 500 × $2^{4}$ = 500 × 16 = 8,000. Each doubling: 500 → 1,000 → 2,000 → 4,000 → 8,000.'
     },
     {
       id: 'wp5-text2',
@@ -130,9 +130,9 @@ When the SAT gives you $f(t) = 1000(1.06)^t$:
         ],
         correctAnswers: ['decreases by 15%', '1/8', '2% every quarter', '4000'],
         hint1: 'Base 0.85 = 1 − 0.15, so 15% decrease.',
-        hint2: '15 hours ÷ 5 = 3 half-lives. (1/2)³ = 1/8.',
+        hint2: '15 hours ÷ 5 = 3 half-lives. $(1/2)^{3}$ = 1/8.',
         hint3: 'The exponent 4t means 4 periods per year (quarterly).',
-        explanation: '0.85 = 1 − 0.15 → 15% decrease. 3 half-lives → (1/2)³ = 1/8. Exponent 4t means t is in years, 4 compoundings per year → 2% quarterly. 30 years = 3 doubling periods: 500 → 1000 → 2000 → 4000.'
+        explanation: '0.85 = 1 − 0.15 → 15% decrease. 3 half-lives → $(1/2)^{3}$ = 1/8. Exponent 4t means t is in years, 4 compoundings per year → 2% quarterly. 30 years = 3 doubling periods: 500 → 1000 → 2000 → 4000.'
       }
     },
     {

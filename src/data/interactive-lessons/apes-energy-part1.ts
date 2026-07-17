@@ -97,8 +97,8 @@ export const apesEnergyPart1Data = {
 ## Carbon Footprint
 
 - Total greenhouse gas emissions from an individual, organization, or activity
-- Measured in tons of CO₂ equivalent (CO₂e) per year
-- Average American: ~16 tons CO₂e/year (global average: ~4.5 tons)
+- Measured in tons of $CO_{2}$ equivalent $(CO_{2}e)$ per year
+- Average American: ~16 tons $CO_{2}e/year$ (global average: ~4.5 tons)
 - Largest contributions: transportation, home energy, food
 
 ## Environmental Justice and Energy
@@ -117,7 +117,7 @@ export const apesEnergyPart1Data = {
 
 2) Using waste heat from electricity generation for building heating is called _______ (or combined heat and power).
 
-3) The total greenhouse gas emissions of an individual or organization measured in tons of CO₂ equivalent is called a carbon _______.
+3) The total greenhouse gas emissions of an individual or organization measured in tons of $CO_{2}$ equivalent is called a carbon _______.
       `,
       exercise: {
         boxes: 3,

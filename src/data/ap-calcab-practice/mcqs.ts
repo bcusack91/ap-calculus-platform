@@ -173,7 +173,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-4-contextual-applications-differentiation',
     question: 'A spherical balloon is being inflated so that its radius increases at $\\dfrac{dr}{dt} = 0.5$ cm/s. When $r=10$ cm, the rate of increase of the volume is',
-    options: ['$200\\pi$ cm³/s', '$50\\pi$ cm³/s', '$400\\pi$ cm³/s', '$20\\pi$ cm³/s'],
+    options: ['$200\\pi$ $cm^{3}/s$', '$50\\pi$ $cm^{3}/s$', '$400\\pi$ $cm^{3}/s$', '$20\\pi$ $cm^{3}/s$'],
     correctAnswer: 0,
     explanation: '$V=\\frac{4}{3}\\pi r^3 \\Rightarrow \\frac{dV}{dt}=4\\pi r^2 \\frac{dr}{dt}=4\\pi(100)(0.5)=200\\pi$.',
   },

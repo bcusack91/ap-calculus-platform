@@ -63,9 +63,9 @@ Time to sharpen your graph skills with a variety of practice problems. These pro
 **Graph Conversion Practice** 🧮
 
 An $a$-$t$ graph shows:
-- $a = +6$ m/s² from $t = 0$ to $t = 3$ s
+- $a = +6$ $m/s^{2}$ from $t = 0$ to $t = 3$ s
 - $a = 0$ from $t = 3$ to $t = 7$ s
-- $a = -4$ m/s² from $t = 7$ to $t = 10$ s
+- $a = -4$ $m/s^{2}$ from $t = 7$ to $t = 10$ s
 
 The initial velocity is $v_0 = 2$ m/s.
 
@@ -101,7 +101,7 @@ The initial velocity is $v_0 = 2$ m/s.
               '$t = 4$ s'
             ],
             correctAnswer: 1,
-            explanation: 'The acceleration is $a = (8-(-4))/6 = 2$ m/s². Direction changes when $v = 0$: $0 = -4 + 2t \\Rightarrow t = 2$ s.'
+            explanation: 'The acceleration is $a = (8-(-4))/6 = 2$ $m/s^{2}$. Direction changes when $v = 0$: $0 = -4 + 2t \\Rightarrow t = 2$ s.'
           },
           {
             question: 'For the same object, the displacement from $t = 0$ to $t = 6$ s is:',
@@ -129,7 +129,7 @@ A car starts from rest. Its $v$-$t$ graph is a straight line reaching 20 m/s at 
 
 2) What is the average velocity for the entire trip? (in m/s)
 
-3) What is the deceleration magnitude in the braking phase? (in m/s²)
+3) What is the deceleration magnitude in the braking phase? $(in m/s^{2})$
       `,
       exercise: {
         boxes: 3,
@@ -137,7 +137,7 @@ A car starts from rest. Its $v$-$t$ graph is a straight line reaching 20 m/s at 
         hint1: 'Three areas: triangle + rectangle + triangle = $\\frac{1}{2}(5)(20) + 20(10) + \\frac{1}{2}(5)(20)$',
         hint2: '$v_{\\text{avg}} = \\Delta x / \\Delta t = 300/20$',
         hint3: '$|a| = \\Delta v / \\Delta t = 20/5$',
-        explanation: '1) $50 + 200 + 50 = 300$ m. 2) $300/20 = 15$ m/s. 3) $|a| = 20/5 = 4$ m/s².'
+        explanation: '1) $50 + 200 + 50 = 300$ m. 2) $300/20 = 15$ m/s. 3) $|a| = 20/5 = 4$ $m/s^{2}$.'
       }
     },
     {

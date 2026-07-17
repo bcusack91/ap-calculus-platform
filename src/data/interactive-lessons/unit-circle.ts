@@ -77,27 +77,27 @@ Select the correct simplified form for each square root:
       exercise: {
         dropdowns: [
           {
-            label: '√0 =',
-            options: ['0', '1', '√2', '√3', '2']
+            label: '$\\sqrt{0}$ =',
+            options: ['0', '1', '$\\sqrt{2}$', '$\\sqrt{3}$', '2']
           },
           {
-            label: '√1 =',
-            options: ['0', '1', '√2', '√3', '2']
+            label: '$\\sqrt{1}$ =',
+            options: ['0', '1', '$\\sqrt{2}$', '$\\sqrt{3}$', '2']
           },
           {
-            label: '√2 =',
-            options: ['0', '1', '√2', '√3', '2']
+            label: '$\\sqrt{2}$ =',
+            options: ['0', '1', '$\\sqrt{2}$', '$\\sqrt{3}$', '2']
           },
           {
-            label: '√3 =',
-            options: ['0', '1', '√2', '√3', '2']
+            label: '$\\sqrt{3}$ =',
+            options: ['0', '1', '$\\sqrt{2}$', '$\\sqrt{3}$', '2']
           },
           {
-            label: '√4 =',
-            options: ['0', '1', '√2', '√3', '2']
+            label: '$\\sqrt{4}$ =',
+            options: ['0', '1', '$\\sqrt{2}$', '$\\sqrt{3}$', '2']
           }
         ],
-        correctAnswers: ['0', '1', '√2', '√3', '2']
+        correctAnswers: ['0', '1', '$\\sqrt{2}$', '$\\sqrt{3}$', '2']
       }
     },
     {

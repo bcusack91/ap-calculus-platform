@@ -41,7 +41,7 @@ $4x + 3 + 2x + 7 = (4x + 2x) + (3 + 7) = 6x + 10$ ✅
                               "8x",
                               "15x",
                               "53x",
-                              "8x²"
+                              "$8x^{2}$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Add coefficients: 5+3 = 8."
@@ -112,7 +112,7 @@ $4x + 3 + 2x + 7 = (4x + 2x) + (3 + 7) = 6x + 10$ ✅
                     "options": [
                               "3x and 7x",
                               "3x and 7y",
-                              "3x and 3x²",
+                              "3x and $3x^{2}$",
                               "3 and 3x"
                     ],
                     "correctAnswer": 0,

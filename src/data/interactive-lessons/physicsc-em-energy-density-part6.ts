@@ -18,7 +18,7 @@ This workshop practices computing electromagnetic energy using integration and e
     {
       id: 'eden6-mcq1',
       type: 'mcq' as const,
-      question: 'A parallel-plate capacitor has $A = 0.04$ m², $d = 2$ mm, $V = 500$ V. What energy is stored? (Use $\\varepsilon_0 = 8.85 \\times 10^{-12}$.)',
+      question: 'A parallel-plate capacitor has $A = 0.04$ $m^{2}$, $d = 2$ mm, $V = 500$ V. What energy is stored? (Use $\\varepsilon_0 = 8.85 \\times 10^{-12}$.)',
       options: [
         '$22.1$ μJ',
         '$44.3$ μJ',
@@ -118,7 +118,7 @@ Both contributions have the same geometric factor $\\ln(b/a)/(4\\pi)$ — the en
         'Cannot compare without more information'
       ],
       correctAnswer: 0,
-      explanation: '$u_E = \\frac{1}{2}\\varepsilon_0 E^2 = \\frac{1}{2}(8.85 \\times 10^{-12})(10^{12}) \\approx 4.4$ J/m³. $u_B = B^2/(2\\mu_0) = 1/(2 \\times 4\\pi \\times 10^{-7}) \\approx 4 \\times 10^5$ J/m³. $u_B \\gg u_E$.'
+      explanation: '$u_E = \\frac{1}{2}\\varepsilon_0 E^2 = \\frac{1}{2}(8.85 \\times 10^{-12})(10^{12}) \\approx 4.4$ $J/m^{3}$. $u_B = B^2/(2\\mu_0) = 1/(2 \\times 4\\pi \\times 10^{-7}) \\approx 4 \\times 10^5$ $J/m^{3}$. $u_B \\gg u_E$.'
     },
     {
       id: 'eden6-mcq5',

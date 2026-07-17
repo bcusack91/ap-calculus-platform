@@ -82,14 +82,14 @@ $$\\boxed{\\left(P + \\frac{an^2}{V^2}\\right)(V - nb) = nRT}$$
 
 ### Example Values
 
-| Gas | $a$ (L²·atm/mol²) | $b$ (L/mol) |
+| Gas | $a$ $(L^{2}\\cdot atm/mol^{2})$ | $b$ (L/mol) |
 |-----|-------------------|-------------|
 | He | 0.034 | 0.024 |
-| N₂ | 1.39 | 0.039 |
-| CO₂ | 3.59 | 0.043 |
-| H₂O | 5.46 | 0.031 |
+| $N_{2}$ | 1.39 | 0.039 |
+| $CO_{2}$ | 3.59 | 0.043 |
+| $H_{2}O$ | 5.46 | 0.031 |
 
-Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). He has tiny values for both (noble gas, very small).
+Notice: $H_{2}O$ has a large $a$ (strong H-bonds) but small $b$ (small molecule). He has tiny values for both (noble gas, very small).
       `
     },
     {
@@ -104,12 +104,12 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
             question: 'Which gas would be expected to deviate MOST from ideal behavior at moderate conditions?',
             options: [
               'He',
-              'H₂',
-              'NH₃',
+              '$H_{2}$',
+              '$NH_{3}$',
               'Ne'
             ],
             correctAnswer: 2,
-            explanation: 'NH₃ is a polar molecule that can form hydrogen bonds, giving it strong intermolecular forces. Noble gases (He, Ne) and H₂ have very weak London forces, so they behave more ideally.'
+            explanation: '$NH_{3}$ is a polar molecule that can form hydrogen bonds, giving it strong intermolecular forces. Noble gases (He, Ne) and $H_{2}$ have very weak London forces, so they behave more ideally.'
           },
           {
             question: 'In the van der Waals equation, the "$a$" parameter corrects for:',
@@ -144,7 +144,7 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
 
 **1)** 0.500 mol of an ideal gas at 1.00 atm and 273 K occupies what volume? (in L, to 3 significant figures)
 
-**2)** A real gas has $a = 3.59$ L²·atm/mol² and $b = 0.043$ L/mol. For 1.00 mol in a 0.500 L container at 500 K, calculate the ideal gas pressure first: $P_{\\text{ideal}} = nRT/V$. (in atm, to 3 significant figures)
+**2)** A real gas has $a = 3.59$ $L^{2}\\cdot atm/mol^{2}$ and $b = 0.043$ L/mol. For 1.00 mol in a 0.500 L container at 500 K, calculate the ideal gas pressure first: $P_{\\text{ideal}} = nRT/V$. (in atm, to 3 significant figures)
 
 **3)** What is the corrected van der Waals pressure for the same gas? Use $P = nRT/(V-nb) - an^2/V^2$. (in atm, to 3 significant figures)
       `,
@@ -195,7 +195,7 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
             label: 'A gas with strong intermolecular forces has a ___',
             options: ['large a value', 'small a value', 'a = 0'],
             correctIndex: 0,
-            explanation: 'Strong intermolecular forces (like hydrogen bonding in H₂O or NH₃) correspond to a large $a$ value in the van der Waals equation.'
+            explanation: 'Strong intermolecular forces (like hydrogen bonding in $H_{2}O$ or $NH_{3}$) correspond to a large $a$ value in the van der Waals equation.'
           },
           {
             id: 'gl7-dd4',
@@ -216,7 +216,7 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
       exercise: {
         questions: [
           {
-            question: 'A student collects 250 mL of O₂ over water at 22°C and 748 mmHg (vapor pressure of water at 22°C = 19.8 mmHg). Using the ideal gas law, the moles of dry O₂ collected is closest to:',
+            question: 'A student collects 250 mL of $O_{2}$ over water at 22°C and 748 mmHg (vapor pressure of water at 22°C = 19.8 mmHg). Using the ideal gas law, the moles of dry $O_{2}$ collected is closest to:',
             options: [
               '0.0078 mol',
               '0.0098 mol',
@@ -227,7 +227,7 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
             explanation: '$P_{O_2} = 748 - 19.8 = 728.2$ mmHg $= 728.2/760 = 0.9582$ atm. $V = 0.250$ L, $T = 295.15$ K. $n = PV/(RT) = (0.9582)(0.250)/((0.0821)(295.15)) = 0.2396/24.23 = 0.00989 \\approx 0.0098$ mol.'
           },
           {
-            question: 'Consider the reaction: $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(g)$. If 4.0 L of H₂ reacts with excess O₂ at constant T and P, the volume of H₂O produced is:',
+            question: 'Consider the reaction: $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(g)$. If 4.0 L of $H_{2}$ reacts with excess $O_{2}$ at constant T and P, the volume of $H_{2}O$ produced is:',
             options: [
               '2.0 L',
               '4.0 L',
@@ -235,18 +235,18 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
               '8.0 L'
             ],
             correctAnswer: 1,
-            explanation: `At constant T and P, volumes of gases are in the same ratio as moles (Avogadro's Law). 2 mol H₂ → 2 mol H₂O. So 4.0 L H₂ → 4.0 L H₂O (same mole ratio, 2:2 = 1:1).`
+            explanation: `At constant T and P, volumes of gases are in the same ratio as moles (Avogadro's Law). 2 mol $H_{2}$ → 2 mol $H_{2}O$. So 4.0 L $H_{2}$ → 4.0 L $H_{2}O$ (same mole ratio, 2:2 = 1:1).`
           },
           {
             question: 'Which of the following gases would deviate MOST from ideal behavior?',
             options: [
               'He at 500 K and 0.5 atm',
-              'H₂ at 400 K and 1 atm',
-              'NH₃ at 200 K and 50 atm',
+              '$H_{2}$ at 400 K and 1 atm',
+              '$NH_{3}$ at 200 K and 50 atm',
               'Ne at 300 K and 2 atm'
             ],
             correctAnswer: 2,
-            explanation: 'NH₃ has strong hydrogen bonding (large intermolecular forces), and at low T and high P, molecules are close together and slow-moving. This maximizes deviation from ideal behavior.'
+            explanation: '$NH_{3}$ has strong hydrogen bonding (large intermolecular forces), and at low T and high P, molecules are close together and slow-moving. This maximizes deviation from ideal behavior.'
           },
           {
             question: 'In the van der Waals equation $(P + a(n/V)^2)(V - nb) = nRT$, the "a" term corrects for:',

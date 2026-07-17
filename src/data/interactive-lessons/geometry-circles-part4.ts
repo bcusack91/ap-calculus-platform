@@ -67,10 +67,10 @@ Forms a right triangle: $d = \\sqrt{5^2 + 12^2} = \\sqrt{25+144} = \\sqrt{169} =
       exercise: {
         boxes: 3,
         correctAnswers: ["5","13","10"],
-        hint1: "√(9+16).",
-        hint2: "√(25+144).",
-        hint3: "√(64+36).",
-        explanation: "1) √25=5. 2) √169=13. 3) √100=10."
+        hint1: "$\\sqrt{9+16}$.",
+        hint2: "$\\sqrt{25+144}$.",
+        hint3: "$\\sqrt{64+36}$.",
+        explanation: "1) $\\sqrt{25}$=5. 2) $\\sqrt{169}$=13. 3) $\\sqrt{100}$=10."
       }
     },
     {
@@ -118,7 +118,7 @@ Forms a right triangle: $d = \\sqrt{5^2 + 12^2} = \\sqrt{25+144} = \\sqrt{169} =
                               "25"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(9+16)=√25=5."
+                    "explanation": "$\\sqrt{9+16}$=$\\sqrt{25}$=5."
           }
 ]
       }

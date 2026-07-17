@@ -9,7 +9,7 @@ export const g5VolumePart1Data = {
 
 **Part 1 of 7 — Understanding Volume**
 
-**Volume** = the amount of space inside a 3D object, measured in **cubic units** (cm³, m³, in³).
+**Volume** = the amount of space inside a 3D object, measured in **cubic units** ($cm^{3}$, $m^{3}$, $in^{3}$).
 
 Think of volume as the number of unit cubes that fit inside a shape.
     
@@ -78,11 +78,11 @@ $V = 5 \\times 4 \\times 3 = 60$ unit cubes ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Volume tells us how much _____ a 3D shape takes up","options":["Space","Surface","Length","Weight"]},{"label":"The abbreviation for cubic centimeters is","options":["cm³","cm²","cm","c³"]}],
-        correctAnswers: ["Space","cm³"],
+        dropdowns: [{"label":"Volume tells us how much _____ a 3D shape takes up","options":["Space","Surface","Length","Weight"]},{"label":"The abbreviation for cubic centimeters is","options":["$cm^{3}$","$cm^{2}$","cm","$c^{3}$"]}],
+        correctAnswers: ["Space","$cm^{3}$"],
         hint1: "Volume is about the inside.",
         hint2: "Cubic = exponent 3.",
-        explanation: "Volume = space inside. Cubic centimeters = cm³."
+        explanation: "Volume = space inside. Cubic centimeters = $cm^{3}$."
       }
     },
     {
@@ -95,7 +95,7 @@ $V = 5 \\times 4 \\times 3 = 60$ unit cubes ✅
 |---|---------|----------|
 | 1 | Unit cube | Volume = 1 cubic unit |
 | 2 | Count cubes | Multiply layers × rows × columns |
-| 3 | Units | Always cubic (cm³, not cm²) |
+| 3 | Units | Always cubic ($cm^{3}$, not $cm^{2}$) |
     
     `
     },

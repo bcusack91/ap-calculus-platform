@@ -48,9 +48,9 @@ No net torque → angular momentum is conserved!
 
 A solid disk ($M = 5$ kg, $R = 0.4$ m) has a tangential force of $20$ N applied at its rim.
 
-- $I = \\frac{1}{2}MR^2 = \\frac{1}{2}(5)(0.16) = 0.4$ kg·m²
+- $I = \\frac{1}{2}MR^2 = \\frac{1}{2}(5)(0.16) = 0.4$ $kg\\cdot m^{2}$
 - $\\tau = FR = (20)(0.4) = 8$ N·m
-- $\\alpha = \\tau/I = 8/0.4 = 20$ rad/s²
+- $\\alpha = \\tau/I = 8/0.4 = 20$ $rad/s^{2}$
 
 ### Example 2: Pulley Problem
 
@@ -70,15 +70,15 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
       exercise: {
         questions: [
           {
-            question: 'A net torque of 12 N·m acts on an object with $I = 3$ kg·m². The angular acceleration is:',
+            question: 'A net torque of 12 N·m acts on an object with $I = 3$ $kg\\cdot m^{2}$. The angular acceleration is:',
             options: [
-              '2 rad/s²',
-              '4 rad/s²',
-              '6 rad/s²',
-              '36 rad/s²'
+              '2 $rad/s^{2}$',
+              '4 $rad/s^{2}$',
+              '6 $rad/s^{2}$',
+              '36 $rad/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\alpha = \\tau/I = 12/3 = 4$ rad/s².'
+            explanation: '$\\alpha = \\tau/I = 12/3 = 4$ $rad/s^{2}$.'
           },
           {
             question: 'Doubling the rotational inertia while keeping the net torque the same will:',
@@ -111,11 +111,11 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
       content: `
 **Rotational Dynamics Calculations** 🧮
 
-1) A solid cylinder ($M = 8$ kg, $R = 0.25$ m) has a net torque of 5 N·m applied. What is $\\alpha$? (in rad/s²)
+1) A solid cylinder ($M = 8$ kg, $R = 0.25$ m) has a net torque of 5 N·m applied. What is $\\alpha$? $(in rad/s^{2})$
 
-2) A wheel ($I = 2$ kg·m²) starts from rest and a constant torque of 6 N·m is applied for 4 seconds. What is the final angular velocity? (in rad/s)
+2) A wheel ($I = 2$ $kg\\cdot m^{2}$) starts from rest and a constant torque of 6 N·m is applied for 4 seconds. What is the final angular velocity? (in rad/s)
 
-3) A disk ($I = 0.5$ kg·m²) decelerates from 40 rad/s to rest in 8 seconds. What is the magnitude of the braking torque? (in N·m)
+3) A disk ($I = 0.5$ $kg\\cdot m^{2}$) decelerates from 40 rad/s to rest in 8 seconds. What is the magnitude of the braking torque? (in N·m)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -125,7 +125,7 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
         hint1: 'First find $I$ for a solid cylinder: $I = \\frac{1}{2}MR^2$. Then use $\\alpha = \\tau/I$.',
         hint2: 'Find $\\alpha = \\tau/I$ first, then use $\\omega = \\omega_0 + \\alpha t$ with $\\omega_0 = 0$.',
         hint3: 'Find $\\alpha$ from $\\alpha = \\Delta\\omega / \\Delta t$, then use $\\tau = I\\alpha$.',
-        explanation: '1) $I = 0.25$ kg·m². $\\alpha = 5/0.25 = 20$ rad/s². 2) $\\alpha = 3$ rad/s². $\\omega = 0 + 3(4) = 12$ rad/s. 3) $\\alpha = 40/8 = 5$ rad/s². $|\\tau| = (0.5)(5) = 2.5$ N·m.'
+        explanation: '1) $I = 0.25$ $kg\\cdot m^{2}$. $\\alpha = 5/0.25 = 20$ $rad/s^{2}$. 2) $\\alpha = 3$ $rad/s^{2}$. $\\omega = 0 + 3(4) = 12$ rad/s. 3) $\\alpha = 40/8 = 5$ $rad/s^{2}$. $|\\tau| = (0.5)(5) = 2.5$ N·m.'
       }
     },
     {
@@ -150,9 +150,9 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
           },
           {
             label: 'The SI units of angular acceleration α are:',
-            options: ['N·m', 'kg·m²/s', 'rad/s²', 'kg·m²'],
+            options: ['N·m', '$kg\\cdot m^{2}/s$', '$rad/s^{2}$', '$kg\\cdot m^{2}$'],
             correctIndex: 2,
-            explanation: 'Angular acceleration $\\alpha$ has units of rad/s², computed from $\\alpha = \\tau/I$.'
+            explanation: 'Angular acceleration $\\alpha$ has units of $rad/s^{2}$, computed from $\\alpha = \\tau/I$.'
           }
         ]
       }
@@ -166,7 +166,7 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
       exercise: {
         questions: [
           {
-            question: 'A merry-go-round ($I = 500$ kg·m²) is pushed with a constant torque. It accelerates from rest to $2$ rad/s in $20$ seconds. The torque is:',
+            question: 'A merry-go-round ($I = 500$ $kg\\cdot m^{2}$) is pushed with a constant torque. It accelerates from rest to $2$ rad/s in $20$ seconds. The torque is:',
             options: [
               '25 N·m',
               '50 N·m',
@@ -174,10 +174,10 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
               '500 N·m'
             ],
             correctAnswer: 1,
-            explanation: '$\\alpha = \\Delta\\omega/\\Delta t = 2/20 = 0.1$ rad/s². $\\tau = I\\alpha = (500)(0.1) = 50$ N·m.'
+            explanation: '$\\alpha = \\Delta\\omega/\\Delta t = 2/20 = 0.1$ $rad/s^{2}$. $\\tau = I\\alpha = (500)(0.1) = 50$ N·m.'
           },
           {
-            question: 'A torque changes the angular momentum of a wheel from 100 kg·m²/s to 160 kg·m²/s in 4 seconds. The torque is:',
+            question: 'A torque changes the angular momentum of a wheel from 100 $kg\\cdot m^{2}/s$ to 160 $kg\\cdot m^{2}/s$ in 4 seconds. The torque is:',
             options: [
               '10 N·m',
               '15 N·m',

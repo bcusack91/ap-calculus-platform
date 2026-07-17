@@ -25,15 +25,15 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ug-ent-2a',
     question: 'The value of $G$ (gravitational constant) is approximately:',
-    options: ['$6.67 \\times 10^{-11}$ N·m²/kg²', '$9.8$ m/s²', '$6.02 \\times 10^{23}$', '$3.0 \\times 10^8$ m/s'],
+    options: ['$6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$', '$9.8$ $m/s^{2}$', '$6.02 \\times 10^{23}$', '$3.0 \\times 10^8$ m/s'],
     correctIndex: 0,
-    explanation: '$G \\approx 6.67 \\times 10^{-11}$ N·m²/kg² is a universal constant that appears in Newton\'s law of gravitation.',
+    explanation: '$G \\approx 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$ is a universal constant that appears in Newton\'s law of gravitation.',
     partNumber: 2,
     partTitle: 'The Gravitational Constant',
   },
   {
     id: 'ug-ent-2b',
-    question: 'The constant $g = 9.8$ m/s² near Earth\'s surface is related to $G$ by which expression?',
+    question: 'The constant $g = 9.8$ $m/s^{2}$ near Earth\'s surface is related to $G$ by which expression?',
     options: ['$g = GM_E$', '$g = G/R_E^2$', '$g = GM_E/R_E^2$', '$g = GM_E R_E$'],
     correctIndex: 2,
     explanation: 'At Earth\'s surface, $mg = GMm/R_E^2$, so $g = GM_E/R_E^2$.',

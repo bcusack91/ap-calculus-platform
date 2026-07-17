@@ -55,7 +55,7 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
               'The mutation rate decreases because the polymerase works more carefully'
             ],
             correctAnswer: 1,
-            explanation: 'Proofreading (3\\u2019-5\\u2019 exonuclease) typically provides a 100-fold improvement in accuracy. Losing it increases the error rate from ~1/10^10 to ~1/10^8 (base selection and mismatch repair still operate). This is a significant increase in mutation rate.'
+            explanation: 'Proofreading (3\\u2019-5\\u2019 exonuclease) typically provides a 100-fold improvement in accuracy. Losing it increases the error rate from ~$1/10^{10}$ to ~$1/10^{8}$ (base selection and mismatch repair still operate). This is a significant increase in mutation rate.'
           },
           {
             question: 'In mismatch repair, how does the cell distinguish the parental (correct) strand from the daughter (potentially incorrect) strand in E. coli?',

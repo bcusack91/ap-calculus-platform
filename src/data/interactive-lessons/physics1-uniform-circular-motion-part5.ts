@@ -133,11 +133,11 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
       content: `
 **Non-Uniform Circular Motion Calculations** 🧮
 
-1) A car moves at 15 m/s around a curve of radius 50 m while accelerating at $a_t = 2$ m/s². What is the centripetal acceleration (in m/s²)?
+1) A car moves at 15 m/s around a curve of radius 50 m while accelerating at $a_t = 2$ $m/s^{2}$. What is the centripetal acceleration $(in m/s^{2})$?
 
-2) For the same car, what is the magnitude of the total acceleration (in m/s², round to 3 significant figures)?
+2) For the same car, what is the magnitude of the total acceleration (in $m/s^{2}$, round to 3 significant figures)?
 
-3) A ball moves in a vertical circle of radius 2 m. At the side of the circle, its speed is 5 m/s and its tangential acceleration is $g = 10$ m/s² (due to gravity). What is the total acceleration (in m/s², round to 3 significant figures)?
+3) A ball moves in a vertical circle of radius 2 m. At the side of the circle, its speed is 5 m/s and its tangential acceleration is $g = 10$ $m/s^{2}$ (due to gravity). What is the total acceleration (in $m/s^{2}$, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
@@ -145,7 +145,7 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
         hint1: '$a_c = v^2/r = 15^2/50$.',
         hint2: '$a_{total} = \\sqrt{a_c^2 + a_t^2}$.',
         hint3: 'Find $a_c = v^2/r$ first, then $a_{total} = \\sqrt{a_c^2 + g^2}$.',
-        explanation: '1) $a_c = 225/50 = 4.5$ m/s². 2) $a_{total} = \\sqrt{4.5^2 + 2^2} = \\sqrt{20.25 + 4} = \\sqrt{24.25} \\approx 4.9$ m/s². 3) $a_c = 25/2 = 12.5$ m/s². $a_{total} = \\sqrt{12.5^2 + 10^2} = \\sqrt{156.25 + 100} = \\sqrt{256.25} \\approx 16.0$ m/s².'
+        explanation: '1) $a_c = 225/50 = 4.5$ $m/s^{2}$. 2) $a_{total} = \\sqrt{4.5^2 + 2^2} = \\sqrt{20.25 + 4} = \\sqrt{24.25} \\approx 4.9$ $m/s^{2}$. 3) $a_c = 25/2 = 12.5$ $m/s^{2}$. $a_{total} = \\sqrt{12.5^2 + 10^2} = \\sqrt{156.25 + 100} = \\sqrt{256.25} \\approx 16.0$ $m/s^{2}$.'
       }
     },
     {
@@ -186,15 +186,15 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
       exercise: {
         questions: [
           {
-            question: 'A particle has centripetal acceleration 6 m/s² and tangential acceleration 8 m/s². The total acceleration is:',
+            question: 'A particle has centripetal acceleration 6 $m/s^{2}$ and tangential acceleration 8 $m/s^{2}$. The total acceleration is:',
             options: [
-              '10 m/s²',
-              '14 m/s²',
-              '2 m/s²',
-              '7 m/s²'
+              '10 $m/s^{2}$',
+              '14 $m/s^{2}$',
+              '2 $m/s^{2}$',
+              '7 $m/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: '$a_{total} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$ m/s². This is a 3-4-5 right triangle (scaled by 2)!'
+            explanation: '$a_{total} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$ $m/s^{2}$. This is a 3-4-5 right triangle (scaled by 2)!'
           },
           {
             question: 'In a vertical circle, the speed of a ball is greatest at the _____ and least at the _____.',

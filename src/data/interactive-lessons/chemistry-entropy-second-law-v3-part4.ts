@@ -23,10 +23,10 @@ $$\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°_{\\text{products}} - \\sum n \\
 
 | Substance | $S°$ | Substance | $S°$ |
 |-----------|------|-----------|------|
-| H₂(g) | 130.6 | O₂(g) | 205.0 |
-| N₂(g) | 191.5 | CO₂(g) | 213.7 |
-| H₂O(l) | 69.9 | H₂O(g) | 188.7 |
-| CH₄(g) | 186.3 | NH₃(g) | 192.3 |
+| $H_{2}(g)$ | 130.6 | $O_{2}(g)$ | 205.0 |
+| $N_{2}(g)$ | 191.5 | $CO_{2}(g)$ | 213.7 |
+| $H_{2}O(l)$ | 69.9 | $H_{2}O(g)$ | 188.7 |
+| $CH_{4}(g)$ | 186.3 | $NH_{3}(g)$ | 192.3 |
 | C(graphite) | 5.7 | Fe(s) | 27.3 |
     ` },
     { id: 'en4v3-calc1', type: 'input-boxes' as const, content: `
@@ -57,12 +57,12 @@ Using: $S°$(C) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
 
 **2)** Is this positive or negative? (type positive or negative)
 
-**3)** Does this make sense? Same number of gas moles, but CO₂ is more complex than O₂. (type yes or no)
+**3)** Does this make sense? Same number of gas moles, but $CO_{2}$ is more complex than $O_{2}$. (type yes or no)
     `, exercise: { boxes: 3, correctAnswers: ['3.0', 'positive', 'yes'],
         hint1: '$213.7 - (5.7 + 205.0)$',
         hint2: 'Check the sign.',
-        hint3: 'CO₂ is triatomic (more vibrational modes) vs O₂ diatomic, and a solid is consumed.',
-        explanation: '$\\Delta S° = 213.7 - (5.7 + 205.0) = 213.7 - 210.7 = 3.0$ J/(mol·K). Slightly positive: same gas moles but solid consumed and CO₂ has more complexity.' } },
+        hint3: '$CO_{2}$ is triatomic (more vibrational modes) vs $O_{2}$ diatomic, and a solid is consumed.',
+        explanation: '$\\Delta S° = 213.7 - (5.7 + 205.0) = 213.7 - 210.7 = 3.0$ J/(mol·K). Slightly positive: same gas moles but solid consumed and $CO_{2}$ has more complexity.' } },
     { id: 'en4v3-quiz', type: 'multiple-choice' as const, content: `
 **Trends Check** 🎯
     `, exercise: { questions: [

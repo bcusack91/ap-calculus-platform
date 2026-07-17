@@ -64,11 +64,11 @@ The **volume flow rate** $Q$ measures how much fluid passes a point per unit tim
 $$Q = A \\cdot v$$
 
 Where:
-- $Q$ = volume flow rate (m³/s)
-- $A$ = cross-sectional area (m²)
+- $Q$ = volume flow rate $(m^{3}/s)$
+- $A$ = cross-sectional area $(m^{2})$
 - $v$ = fluid speed (m/s)
 
-Units: 1 m³/s = 1000 liters/s. Typical garden hose: $Q \\approx 3 \\times 10^{-4}$ m³/s.
+Units: 1 $m^{3}/s$ = 1000 liters/s. Typical garden hose: $Q \\approx 3 \\times 10^{-4}$ $m^{3}/s$.
       `
     },
     {
@@ -104,13 +104,13 @@ Units: 1 m³/s = 1000 liters/s. Typical garden hose: $Q \\approx 3 \\times 10^{-
           {
             question: 'Water flows through a hose at 2 m/s. The hose has a circular cross-section with radius 1 cm. The volume flow rate is:',
             options: [
-              '$6.28 \\times 10^{-4}$ m³/s',
-              '$6.28 \\times 10^{-2}$ m³/s',
-              '$2.0 \\times 10^{-4}$ m³/s',
-              '$3.14 \\times 10^{-4}$ m³/s'
+              '$6.28 \\times 10^{-4}$ $m^{3}/s$',
+              '$6.28 \\times 10^{-2}$ $m^{3}/s$',
+              '$2.0 \\times 10^{-4}$ $m^{3}/s$',
+              '$3.14 \\times 10^{-4}$ $m^{3}/s$'
             ],
             correctAnswer: 0,
-            explanation: '$Q = Av = \\pi r^2 v = \\pi (0.01)^2 (2) = 6.28 \\times 10^{-4}$ m³/s ≈ 0.63 liters per second.'
+            explanation: '$Q = Av = \\pi r^2 v = \\pi (0.01)^2 (2) = 6.28 \\times 10^{-4}$ $m^{3}/s$ ≈ 0.63 liters per second.'
           }
         ]
       }
@@ -123,11 +123,11 @@ Units: 1 m³/s = 1000 liters/s. Typical garden hose: $Q \\approx 3 \\times 10^{-
 
 Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
 
-1) Cross-sectional area of the pipe (in m², scientific notation: e.g., "1.26e-3")
+1) Cross-sectional area of the pipe (in $m^{2}$, scientific notation: e.g., "1.26e-3")
 
-2) Volume flow rate (in m³/s, use same format)
+2) Volume flow rate (in $m^{3}/s$, use same format)
 
-3) How many seconds to fill a 50-liter (0.050 m³) bucket?
+3) How many seconds to fill a 50-liter $(0.050 m^{3})$ bucket?
 
 *Round all answers to 3 significant figures.*
       `,
@@ -137,7 +137,7 @@ Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
         hint1: '$A = \\pi r^2 = \\pi (0.02)^2$.',
         hint2: '$Q = Av = (1.26 \\times 10^{-3})(3.0)$.',
         hint3: '$t = V/Q = 0.050/Q$.',
-        explanation: '$A = \\pi(0.02)^2 = 1.26 \\times 10^{-3}$ m². $Q = 1.26 \\times 10^{-3} \\times 3.0 = 3.77 \\times 10^{-3}$ m³/s. $t = 0.050/(3.77 \\times 10^{-3}) = 13.3$ s.'
+        explanation: '$A = \\pi(0.02)^2 = 1.26 \\times 10^{-3}$ $m^{2}$. $Q = 1.26 \\times 10^{-3} \\times 3.0 = 3.77 \\times 10^{-3}$ $m^{3}/s$. $t = 0.050/(3.77 \\times 10^{-3}) = 13.3$ s.'
       }
     },
     {

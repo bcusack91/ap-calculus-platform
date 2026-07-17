@@ -55,7 +55,7 @@ export const chemMixturesSeparationsPart5Data = {
 
 ### Example
 
-> **Problem:** Determine the mass percent of Cl⁻ in a 0.500 g sample. Adding excess AgNO₃ produces 0.854 g of AgCl.
+> **Problem:** Determine the mass percent of $Cl^{-}$ in a 0.500 g sample. Adding excess $AgNO_{3}$ produces 0.854 g of AgCl.
 
 > **Solution:**
 
@@ -64,9 +64,9 @@ $$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
 Step 1: Moles of AgCl ($M = 143.32$ g/mol):
 $$n_{AgCl} = \\frac{0.854}{143.32} = 5.96 \\times 10^{-3} \\text{ mol}$$
 
-Step 2: Moles of Cl⁻ = moles of AgCl = $5.96 \\times 10^{-3}$ mol
+Step 2: Moles of $Cl^{-}$ = moles of AgCl = $5.96 \\times 10^{-3}$ mol
 
-Step 3: Mass of Cl⁻ ($M = 35.45$ g/mol):
+Step 3: Mass of $Cl^{-}$ ($M = 35.45$ g/mol):
 $$m_{Cl^-} = 5.96 \\times 10^{-3} \\times 35.45 = 0.211 \\text{ g}$$
 
 Step 4: Mass percent:
@@ -139,7 +139,7 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
 
 ### When to Use
 
-- When the analyte is insoluble (e.g., CaCO₃ in antacid tablets)
+- When the analyte is insoluble (e.g., $CaCO_{3}$ in antacid tablets)
 - When the reaction is slow
 - When there is no suitable indicator for direct titration
       `
@@ -175,15 +175,15 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
             explanation: 'The equivalence point is the theoretical point where the stoichiometric amount of titrant has been added to completely react with all the analyte. The indicator changes color near (but not exactly at) this point.'
           },
           {
-            question: 'Which reagent would you add to determine the amount of sulfate (SO₄²⁻) by gravimetric analysis?',
+            question: 'Which reagent would you add to determine the amount of sulfate $(SO_{4}^{2-})$ by gravimetric analysis?',
             options: [
               'NaOH',
               'HCl',
-              'BaCl₂',
-              'AgNO₃'
+              '$BaCl_{2}$',
+              '$AgNO_{3}$'
             ],
             correctAnswer: 2,
-            explanation: '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$. BaCl₂ precipitates sulfate as BaSO₄, which is very insoluble and easy to filter and weigh.'
+            explanation: '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$. $BaCl_{2}$ precipitates sulfate as $BaSO_{4}$, which is very insoluble and easy to filter and weigh.'
           }
         ]
       }
@@ -194,28 +194,28 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
       content: `
 **Analytical Calculations** 🧮
 
-**1)** In a gravimetric analysis, 1.000 g of a sample produces 0.466 g of BaSO₄ ($M = 233.43$ g/mol). How many moles of SO₄²⁻ were in the sample? (to 3 significant figures)
+**1)** In a gravimetric analysis, 1.000 g of a sample produces 0.466 g of $BaSO_{4}$ ($M = 233.43$ g/mol). How many moles of $SO_{4}^{2-}$ were in the sample? (to 3 significant figures)
 
-**2)** 20.0 mL of unknown H₂SO₄ is titrated with 0.150 M NaOH. It takes 40.0 mL to reach equivalence. The reaction is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. What is the molarity of H₂SO₄? (to 3 significant figures)
+**2)** 20.0 mL of unknown $H_{2}SO_{4}$ is titrated with 0.150 M NaOH. It takes 40.0 mL to reach equivalence. The reaction is $H_{2}SO_{4}$ + 2NaOH → $Na_{2}SO_{4}$ + $2H_{2}O$. What is the molarity of $H_{2}SO_{4}$? (to 3 significant figures)
 
-**3)** What is the mass percent of SO₄²⁻ ($M = 96.06$ g/mol) in the sample from problem 1? (to 3 significant figures, as a percentage)
+**3)** What is the mass percent of $SO_{4}^{2-}$ ($M = 96.06$ g/mol) in the sample from problem 1? (to 3 significant figures, as a percentage)
       `,
       exercise: {
         inputs: [
           {
-            label: 'Moles of SO₄²⁻',
+            label: 'Moles of $SO_{4}^{2-}$',
             correctAnswer: '0.0020',
-            explanation: '$n = 0.466/233.43 = 1.997 \\times 10^{-3} \\approx 0.0020$ mol. One mole of BaSO₄ contains one mole of SO₄²⁻.'
+            explanation: '$n = 0.466/233.43 = 1.997 \\times 10^{-3} \\approx 0.0020$ mol. One mole of $BaSO_{4}$ contains one mole of $SO_{4}^{2-}$.'
           },
           {
-            label: 'Molarity of H₂SO₄ (M)',
+            label: 'Molarity of $H_{2}SO_{4}$ (M)',
             correctAnswer: '0.150',
-            explanation: 'Moles NaOH $= 0.150 \\times 0.0400 = 0.00600$ mol. Mole ratio is 2:1, so moles H₂SO₄ $= 0.00600/2 = 0.00300$. $M = 0.00300/0.0200 = 0.150$ M.'
+            explanation: 'Moles NaOH $= 0.150 \\times 0.0400 = 0.00600$ mol. Mole ratio is 2:1, so moles $H_{2}SO_{4}$ $= 0.00600/2 = 0.00300$. $M = 0.00300/0.0200 = 0.150$ M.'
           },
           {
-            label: 'Mass percent of SO₄²⁻ (%)',
+            label: 'Mass percent of $SO_{4}^{2-}$ (%)',
             correctAnswer: '19.2',
-            explanation: 'Mass of SO₄²⁻ $= 0.0020 \\times 96.06 = 0.192$ g. Mass percent $= (0.192/1.000) \\times 100 = 19.2\\%$.'
+            explanation: 'Mass of $SO_{4}^{2-}$ $= 0.0020 \\times 96.06 = 0.192$ g. Mass percent $= (0.192/1.000) \\times 100 = 19.2\\%$.'
           }
         ]
       }
@@ -230,10 +230,10 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
         dropdowns: [
           {
             id: 'mx5-dd1',
-            label: 'Finding the amount of Cl⁻ by precipitating AgCl and weighing it is a classic',
+            label: 'Finding the amount of $Cl^{-}$ by precipitating AgCl and weighing it is a classic',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 0,
-            explanation: 'Finding the amount of Cl⁻ by precipitating AgCl and weighing it is a classic gravimetric analysis.'
+            explanation: 'Finding the amount of $Cl^{-}$ by precipitating AgCl and weighing it is a classic gravimetric analysis.'
           },
           {
             id: 'mx5-dd2',

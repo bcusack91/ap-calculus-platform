@@ -13,7 +13,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'gpe-ent-1b',
-    question: 'A $3$ kg book is on a shelf $2$ m above the floor. What is its gravitational PE relative to the floor? (Use $g = 10$ m/s².)',
+    question: 'A $3$ kg book is on a shelf $2$ m above the floor. What is its gravitational PE relative to the floor? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$6$ J', '$30$ J', '$60$ J', '$600$ J'],
     correctIndex: 2,
     explanation: '$U_g = mgh = 3 \\times 10 \\times 2 = 60$ J.',
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 3: Work & Change in PE
   {
     id: 'gpe-ent-3a',
-    question: 'You lift a $5$ kg box $4$ m upward at constant velocity. The work you do is: (Use $g = 10$ m/s².)',
+    question: 'You lift a $5$ kg box $4$ m upward at constant velocity. The work you do is: (Use $g = 10$ $m/s^{2}$.)',
     options: ['$20$ J', '$50$ J', '$200$ J', '$400$ J'],
     correctIndex: 2,
     explanation: 'At constant velocity, your force equals weight: $F = mg = 50$ N. $W = Fd = 50 \\times 4 = 200$ J. This equals the change in PE.',
@@ -64,7 +64,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 4: PE on Inclines & Ramps
   {
     id: 'gpe-ent-4a',
-    question: 'A $2$ kg ball rolls down a ramp from a height of $5$ m. The change in gravitational PE is: (Use $g = 10$ m/s².)',
+    question: 'A $2$ kg ball rolls down a ramp from a height of $5$ m. The change in gravitational PE is: (Use $g = 10$ $m/s^{2}$.)',
     options: ['$+100$ J', '$-100$ J', '$+50$ J', '$-50$ J'],
     correctIndex: 1,
     explanation: '$\\Delta U_g = mg\\Delta h = 2(10)(0-5) = -100$ J. PE decreases because the ball moves to a lower height.',
@@ -84,7 +84,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5: PE & Kinetic Energy Conversion
   {
     id: 'gpe-ent-5a',
-    question: 'A ball is dropped from $20$ m. Ignoring air resistance, what is its speed just before hitting the ground? (Use $g = 10$ m/s².)',
+    question: 'A ball is dropped from $20$ m. Ignoring air resistance, what is its speed just before hitting the ground? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$10$ m/s', '$20$ m/s', '$200$ m/s', '$\\sqrt{200}$ m/s'],
     correctIndex: 1,
     explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = \\sqrt{400} = 20$ m/s.',
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Gravitational PE Problems
   {
     id: 'gpe-ent-6a',
-    question: 'A roller coaster car ($500$ kg) is at the top of a $40$ m hill. How much PE does it have relative to the bottom? (Use $g = 10$ m/s².)',
+    question: 'A roller coaster car ($500$ kg) is at the top of a $40$ m hill. How much PE does it have relative to the bottom? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$20{,}000$ J', '$200{,}000$ J', '$500{,}000$ J', '$2{,}000{,}000$ J'],
     correctIndex: 1,
     explanation: '$U_g = mgh = 500 \\times 10 \\times 40 = 200{,}000$ J = $200$ kJ.',
@@ -113,7 +113,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'gpe-ent-6b',
-    question: 'A $0.5$ kg ball is thrown upward with $10$ m/s. What maximum height does it reach? (Use $g = 10$ m/s².)',
+    question: 'A $0.5$ kg ball is thrown upward with $10$ m/s. What maximum height does it reach? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$1$ m', '$5$ m', '$10$ m', '$50$ m'],
     correctIndex: 1,
     explanation: 'At max height, all KE converts to PE: $\\frac{1}{2}mv^2 = mgh$. $h = v^2/(2g) = 100/20 = 5$ m.',

@@ -89,10 +89,10 @@ This net inward pull causes the surface to **contract** to the smallest possible
           {
             question: 'Which liquid would you expect to have the highest surface tension?',
             options: [
-              'Hexane (C₆H₁₄) — nonpolar, LDF only',
-              'Acetone (CH₃COCH₃) — dipole-dipole forces',
-              'Glycerol (C₃H₈O₃) — three OH groups, extensive H-bonding',
-              'Diethyl ether (C₂H₅OC₂H₅) — weak dipole'
+              'Hexane $(C_{6}H_{14})$ — nonpolar, LDF only',
+              'Acetone $(CH_{3}COCH_{3})$ — dipole-dipole forces',
+              'Glycerol $(C_{3}H_{8}O_{3})$ — three OH groups, extensive H-bonding',
+              'Diethyl ether $(C_{2}H_{5}OC_{2}H_{5})$ — weak dipole'
             ],
             correctAnswer: 2,
             explanation: 'Glycerol has three hydroxyl (–OH) groups, enabling extensive hydrogen bonding. Stronger and more numerous IMFs lead to higher surface tension.'
@@ -184,7 +184,7 @@ Capillary action involves two types of forces:
 - Example: water molecules attracting each other via H-bonds
 
 **2. Adhesion** — attraction between **unlike** molecules (liquid–surface)
-- Example: water molecules attracted to the glass surface (SiO₂ has polar O–H groups)
+- Example: water molecules attracted to the glass surface ($SiO_{2}$ has polar O–H groups)
 
 ### Meniscus Shape
 
@@ -220,7 +220,7 @@ The height a liquid rises in a capillary tube depends on:
               'Gravity pulls the center of the water down'
             ],
             correctAnswer: 1,
-            explanation: 'Water is attracted to the polar SiO₂ surface of glass (adhesion) more strongly than water molecules are attracted to each other (cohesion). This causes water to climb the walls, forming a concave meniscus.'
+            explanation: 'Water is attracted to the polar $SiO_{2}$ surface of glass (adhesion) more strongly than water molecules are attracted to each other (cohesion). This causes water to climb the walls, forming a concave meniscus.'
           },
           {
             question: 'Mercury forms a convex (domed) meniscus in glass because:',
@@ -282,10 +282,10 @@ $$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\fra
           {
             question: 'Which liquid has the highest vapor pressure at 25°C?',
             options: [
-              'Water (H₂O) — strong H-bonding',
-              'Ethanol (C₂H₅OH) — moderate H-bonding',
-              'Diethyl ether (C₂H₅OC₂H₅) — weak dipole-dipole',
-              'Glycerol (C₃H₈O₃) — extensive H-bonding'
+              'Water $(H_{2}O)$ — strong H-bonding',
+              'Ethanol $(C_{2}H_{5}OH)$ — moderate H-bonding',
+              'Diethyl ether $(C_{2}H_{5}OC_{2}H_{5})$ — weak dipole-dipole',
+              'Glycerol $(C_{3}H_{8}O_{3})$ — extensive H-bonding'
             ],
             correctAnswer: 2,
             explanation: 'Diethyl ether has the weakest IMFs of the four, so its molecules escape to the gas phase most easily, giving it the highest vapor pressure. Glycerol has the strongest (most extensive H-bonding) and thus the lowest vapor pressure.'

@@ -27,7 +27,7 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 ### What You'll Master in Part 3
 - Deriving Henderson-Hasselbalch from the $K_a$ expression
 - Using the equation to find pH, p$K_a$, or concentration ratios
-- Applying the basic buffer version: pOH = p$K_b$ + log([BH⁺]/[B])`
+- Applying the basic buffer version: pOH = p$K_b$ + log([$BH^{+}$]/[B])`
     },
     {
       id: 'bf3-derivation',
@@ -213,7 +213,7 @@ Both methods give the same answer. Method 1 is usually preferred for consistency
           },
           {
             label: 'Increasing $[A^-]$ while holding $[HA]$ constant will',
-            options: ['decrease pH', 'increase pH', 'not change pH', 'change Kₐ']
+            options: ['decrease pH', 'increase pH', 'not change pH', 'change $K_{a}$']
           },
           {
             label: 'The Henderson-Hasselbalch equation assumes',

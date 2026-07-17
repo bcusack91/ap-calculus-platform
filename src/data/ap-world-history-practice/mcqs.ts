@@ -855,7 +855,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation:
-      'Anthropogenic greenhouse gas emissions — overwhelmingly CO₂ from fossil fuels — are the scientific consensus explanation for the warming described. The other options contradict the scientific record.',
+      'Anthropogenic greenhouse gas emissions — overwhelmingly $CO_{2}$ from fossil fuels — are the scientific consensus explanation for the warming described. The other options contradict the scientific record.',
     topic: 'unit-9-globalization',
   },
 ]

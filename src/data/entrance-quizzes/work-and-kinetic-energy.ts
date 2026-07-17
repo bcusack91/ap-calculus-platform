@@ -84,7 +84,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5: Work Done by Gravity
   {
     id: 'wke-ent-5a',
-    question: 'A $5$ kg ball falls $10$ m. What work does gravity do on it? (Use $g = 10$ m/s².)',
+    question: 'A $5$ kg ball falls $10$ m. What work does gravity do on it? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$-500$ J', '$50$ J', '$500$ J', '$-50$ J'],
     correctIndex: 2,
     explanation: 'Gravity acts downward, displacement is downward, so $\\theta = 0°$. $W = mgh = 5 \\times 10 \\times 10 = 500$ J (positive, since force and displacement are in the same direction).',

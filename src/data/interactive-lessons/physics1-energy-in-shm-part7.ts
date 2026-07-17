@@ -139,13 +139,13 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
         dropdowns: [
           {
             label: 'The total energy of a mass-spring system in SHM is given by E =',
-            options: ['½kA²', '½kA', 'kA²', '2kA²'],
+            options: ['$\\tfrac{1}{2} kA^{2}$', '½kA', '$kA^{2}$', '$2kA^{2}$'],
             correctIndex: 0,
             explanation: 'The total energy in a mass-spring SHM system is $E = \\frac{1}{2}kA^2$.'
           },
           {
             label: 'The displacement at which kinetic energy equals potential energy is:',
-            options: ['x = A/2', 'x = A/√2', 'x = A/3', 'x = A/4'],
+            options: ['x = A/2', 'x = $A/\\sqrt{2}$', 'x = A/3', 'x = A/4'],
             correctIndex: 1,
             explanation: 'KE = PE at $x = A/\\sqrt{2}$, where $PE = \\frac{1}{2}k(A/\\sqrt{2})^2 = \\frac{1}{4}kA^2 = E/2$.'
           },

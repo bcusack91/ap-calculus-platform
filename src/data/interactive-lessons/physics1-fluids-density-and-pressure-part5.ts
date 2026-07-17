@@ -92,11 +92,11 @@ You trade distance for force, exactly like a lever or pulley system.
       content: `
 **Hydraulic Press Calculations** 🧮
 
-1) A hydraulic jack: $A_1 = 4.0\\times10^{-4}$ m², $A_2 = 2.0\\times10^{-2}$ m². A 200 N force on the small piston lifts how many N?
+1) A hydraulic jack: $A_1 = 4.0\\times10^{-4}$ $m^{2}$, $A_2 = 2.0\\times10^{-2}$ $m^{2}$. A 200 N force on the small piston lifts how many N?
 
 2) Same jack — to raise the load 0.10 m, how far (m) must the small piston travel?
 
-3) Input piston of area 0.0025 m² needs to lift a 1.5 kN load using a 60 N input. What output area $A_2$ (m²) is required?
+3) Input piston of area 0.0025 $m^{2}$ needs to lift a 1.5 kN load using a 60 N input. What output area $A_2$ $(m^{2})$ is required?
       `,
       exercise: {
         boxes: 3,
@@ -104,7 +104,7 @@ You trade distance for force, exactly like a lever or pulley system.
         hint1: '$F_2 = F_1 (A_2/A_1)$.',
         hint2: 'Volume conservation: $A_1 d_1 = A_2 d_2$.',
         hint3: '$A_2 = A_1 (F_2/F_1)$.',
-        explanation: '1) $F_2 = 200 \\times (2.0\\times10^{-2}/4.0\\times10^{-4}) = 200 \\times 50 = 10{,}000$ N. 2) $d_1 = d_2 (A_2/A_1) = 0.10 \\times 50 = 5$ m. 3) $A_2 = 0.0025 \\times (1500/60) = 0.0625$ m².'
+        explanation: '1) $F_2 = 200 \\times (2.0\\times10^{-2}/4.0\\times10^{-4}) = 200 \\times 50 = 10{,}000$ N. 2) $d_1 = d_2 (A_2/A_1) = 0.10 \\times 50 = 5$ m. 3) $A_2 = 0.0025 \\times (1500/60) = 0.0625$ $m^{2}$.'
       }
     },
     {

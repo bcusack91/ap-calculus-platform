@@ -154,7 +154,7 @@ $$\\boxed{\\text{Units of } \\frac{dy}{dx} = \\frac{\\text{units of } y}{\\text{
         dropdowns: [
           { label: '$\\frac{d}{dx}[x^3]$ equals', options: ['$x^3$', '$3x^2$', '$3x^3$', '$x^2/3$'] },
           { label: '$f\'\'(x)$ in Leibniz notation is', options: ['$\\frac{dy}{dx}$', '$\\frac{d^2y}{dx^2}$', '$\\frac{d^2y}{d^2x}$', '$\\left(\\frac{dy}{dx}\\right)^2$'] },
-          { label: 'If distance is in meters and time in seconds, $\\frac{dx}{dt}$ has units', options: ['meters', 'm/s', 'm/s²', 's/m'] }
+          { label: 'If distance is in meters and time in seconds, $\\frac{dx}{dt}$ has units', options: ['meters', 'm/s', '$m/s^{2}$', 's/m'] }
         ],
         correctAnswers: ['$3x^2$', '$\\frac{d^2y}{dx^2}$', 'm/s'],
         hint1: 'Power rule: $\\frac{d}{dx}[x^n] = nx^{n-1}$.',

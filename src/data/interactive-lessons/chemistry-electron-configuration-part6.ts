@@ -14,7 +14,7 @@ export const chemElectronConfigPart6Data = {
 
 | Level of Detail | What It Tells You | Example (for a 2p electron) |
 |----------------|-------------------|----------------------------|
-| Configuration | Which subshells are occupied | 2p⁴ |
+| Configuration | Which subshells are occupied | $2p^{4}$ |
 | Orbital diagram | Spin of each electron | ↑↓ ↑ ↑ |
 | Quantum numbers | Exact "address" of one electron | n=2, l=1, $m_l$=−1, $m_s$=+½ |
 
@@ -66,7 +66,7 @@ How many unpaired electrons does nitrogen (N, Z = 7) have?`,
             question: 'Unpaired electrons in nitrogen:',
             options: ['0', '1', '2', '3'],
             correctAnswer: 3,
-            explanation: 'Nitrogen has the configuration 1s² 2s² 2p³. The three 2p electrons each occupy a separate orbital (Hund\'s rule), so nitrogen has 3 unpaired electrons.'
+            explanation: 'Nitrogen has the configuration $1s^{2}$ $2s^{2}$ $2p^{3}$. The three 2p electrons each occupy a separate orbital (Hund\'s rule), so nitrogen has 3 unpaired electrons.'
           }
         ]
       }
@@ -115,7 +115,7 @@ Every electron in an atom is described by a unique set of four quantum numbers �
       type: 'text' as const,
       content: `## 📋 Allowed Values Summary
 
-| Subshell | n (example) | l | $m_l$ values | # orbitals | Max e⁻ |
+| Subshell | n (example) | l | $m_l$ values | # orbitals | Max $e^{-}$ |
 |----------|-------------|---|----------------|------------|--------|
 | 1s | 1 | 0 | 0 | 1 | 2 |
 | 2p | 2 | 1 | −1, 0, +1 | 3 | 6 |
@@ -167,9 +167,9 @@ Use the relationships between quantum numbers to answer.`,
             explanation: 'For f orbitals, l = 3. Number of orbitals = 2l + 1 = 2(3) + 1 = 7.'
           },
           {
-            label: 'How many total electrons can the n = 2 level hold? (Use formula: 2n²)',
+            label: 'How many total electrons can the n = 2 level hold? (Use formula: $2n^{2}$)',
             correctAnswer: '8',
-            explanation: '2n² = 2(2²) = 2(4) = 8. The n = 2 level has 2s (2 electrons) + 2p (6 electrons) = 8 total.'
+            explanation: '$2n^{2}$ = $2(2^{2})$ = 2(4) = 8. The n = 2 level has 2s (2 electrons) + 2p (6 electrons) = 8 total.'
           }
         ]
       }
@@ -197,7 +197,7 @@ Use the relationships between quantum numbers to answer.`,
 | Formula | Meaning | Example (l = 2, d subshell) |
 |---------|---------|-----------------------------|
 | # orbitals = 2l + 1 | Orbitals in a subshell | 2(2) + 1 = 5 orbitals |
-| max e⁻ = 2(2l + 1) | Electrons in a subshell | 2(5) = 10 electrons |
+| max $e^{-}$ = 2(2l + 1) | Electrons in a subshell | 2(5) = 10 electrons |
 
 ---
 

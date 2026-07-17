@@ -141,15 +141,15 @@ $$\\boxed{T = \\frac{m_1 m_2}{m_1 + m_2} g}$$
             explanation: '$a = (m_2 - m_1)g/(m_1 + m_2) = 0$ when $m_1 = m_2$. The system is in equilibrium.'
           },
           {
-            question: 'A 2 kg block on a frictionless table is connected to a 3 kg hanging block. The acceleration of the system is ($g = 10$ m/s²):',
+            question: 'A 2 kg block on a frictionless table is connected to a 3 kg hanging block. The acceleration of the system is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s²',
-              '6 m/s²',
-              '10 m/s²',
-              '15 m/s²'
+              '2 $m/s^{2}$',
+              '6 $m/s^{2}$',
+              '10 $m/s^{2}$',
+              '15 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = m_2 g/(m_1 + m_2) = 3(10)/(2 + 3) = 30/5 = 6$ m/s².'
+            explanation: '$a = m_2 g/(m_1 + m_2) = 3(10)/(2 + 3) = 30/5 = 6$ $m/s^{2}$.'
           }
         ]
       }
@@ -160,9 +160,9 @@ $$\\boxed{T = \\frac{m_1 m_2}{m_1 + m_2} g}$$
       content: `
 **Atwood Machine Calculations** 🧮
 
-An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ m/s².
+An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ $m/s^{2}$.
 
-1) What is the acceleration of the system (in m/s²)?
+1) What is the acceleration of the system $(in m/s^{2})$?
 
 2) What is the tension in the string (in N)?
 
@@ -174,7 +174,7 @@ An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ m/s².
         hint1: '$a = (m_2 - m_1)g/(m_1 + m_2) = (6-4)(10)/(6+4)$.',
         hint2: '$T = 2m_1 m_2 g/(m_1 + m_2) = 2(4)(6)(10)/(10)$.',
         hint3: '$v = v_0 + at = 0 + 2(3)$.',
-        explanation: '1) $a = (6-4)(10)/(6+4) = 20/10 = 2$ m/s². 2) $T = 2(4)(6)(10)/10 = 480/10 = 48$ N. Check: $48 > m_1 g = 40$ ✓ and $48 < m_2 g = 60$ ✓. 3) $v = 0 + 2(3) = 6$ m/s.'
+        explanation: '1) $a = (6-4)(10)/(6+4) = 20/10 = 2$ $m/s^{2}$. 2) $T = 2(4)(6)(10)/10 = 480/10 = 48$ N. Check: $48 > m_1 g = 40$ ✓ and $48 < m_2 g = 60$ ✓. 3) $v = 0 + 2(3) = 6$ m/s.'
       }
     },
     {
@@ -215,7 +215,7 @@ An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'In a table-pulley system (frictionless table), $m_1 = 5$ kg on the table and $m_2 = 5$ kg hanging. What is the tension? ($g = 10$ m/s²)',
+            question: 'In a table-pulley system (frictionless table), $m_1 = 5$ kg on the table and $m_2 = 5$ kg hanging. What is the tension? ($g = 10$ $m/s^{2}$)',
             options: [
               '25 N',
               '50 N',
@@ -223,18 +223,18 @@ An Atwood machine has $m_1 = 4$ kg and $m_2 = 6$ kg. Use $g = 10$ m/s².
               '100 N'
             ],
             correctAnswer: 0,
-            explanation: '$a = m_2 g/(m_1 + m_2) = 5(10)/10 = 5$ m/s². $T = m_1 a = 5(5) = 25$ N. Or: $T = m_1 m_2 g/(m_1 + m_2) = 25(10)/10 = 25$ N.'
+            explanation: '$a = m_2 g/(m_1 + m_2) = 5(10)/10 = 5$ $m/s^{2}$. $T = m_1 a = 5(5) = 25$ N. Or: $T = m_1 m_2 g/(m_1 + m_2) = 25(10)/10 = 25$ N.'
           },
           {
-            question: 'An Atwood machine has $m_1 = 1$ kg and $m_2 = 9$ kg. The acceleration is closest to ($g = 10$ m/s²):',
+            question: 'An Atwood machine has $m_1 = 1$ kg and $m_2 = 9$ kg. The acceleration is closest to ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s²',
-              '5 m/s²',
-              '8 m/s²',
-              '10 m/s²'
+              '2 $m/s^{2}$',
+              '5 $m/s^{2}$',
+              '8 $m/s^{2}$',
+              '10 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a = (9-1)(10)/(9+1) = 80/10 = 8$ m/s². Since $m_2 \\gg m_1$, the acceleration is close to $g$.'
+            explanation: '$a = (9-1)(10)/(9+1) = 80/10 = 8$ $m/s^{2}$. Since $m_2 \\gg m_1$, the acceleration is close to $g$.'
           }
         ]
       }

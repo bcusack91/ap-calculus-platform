@@ -61,7 +61,7 @@ This form is needed for gases at high speeds. AP Physics 2 focuses on the incomp
             explanation: 'Conservation of mass: $Q_{\\text{in}} = Q_{\\text{out1}} + Q_{\\text{out2}} + Q_{\\text{out3}}$. $5 = 1.5 + 1.5 + Q_3$. $Q_3 = 2.0$ L/s.'
           },
           {
-            question: 'Two pipes merge into one. Pipe A (area 10 cm², speed 3 m/s) and Pipe B (area 5 cm², speed 4 m/s) merge into Pipe C (area 20 cm²). Speed in C is:',
+            question: 'Two pipes merge into one. Pipe A (area 10 $cm^{2}$, speed 3 m/s) and Pipe B (area 5 $cm^{2}$, speed 4 m/s) merge into Pipe C $(area 20 cm^{2})$. Speed in C is:',
             options: [
               '2.5 m/s',
               '3.5 m/s',
@@ -122,7 +122,7 @@ The fluid exits 2,500× faster than the plunger moves!
 
 A syringe barrel has diameter 2.0 cm. The needle has diameter 1.0 mm. The plunger is pushed at 1.0 cm/s.
 
-1) Area of the barrel (in cm²)
+1) Area of the barrel $(in cm^{2})$
 
 2) Area ratio $A_{\\text{barrel}}/A_{\\text{needle}}$
 
@@ -134,9 +134,9 @@ A syringe barrel has diameter 2.0 cm. The needle has diameter 1.0 mm. The plunge
         boxes: 3,
         correctAnswers: ['3.14', '400', '4'],
         hint1: '$A = \\pi r^2 = \\pi(1.0)^2$ (radius = 1.0 cm).',
-        hint2: 'Needle radius = 0.5 mm = 0.05 cm. $A_{\\text{needle}} = \\pi(0.05)^2 = 7.85 \\times 10^{-3}$ cm². Ratio = $3.14/0.00785$.',
+        hint2: 'Needle radius = 0.5 mm = 0.05 cm. $A_{\\text{needle}} = \\pi(0.05)^2 = 7.85 \\times 10^{-3}$ $cm^{2}$. Ratio = $3.14/0.00785$.',
         hint3: '$v_{\\text{needle}} = (A_{\\text{barrel}}/A_{\\text{needle}}) \\times v_{\\text{plunger}} = 400 \\times 0.01$ m/s.',
-        explanation: '$A_{\\text{barrel}} = \\pi(1)^2 = 3.14$ cm². $A_{\\text{needle}} = \\pi(0.05)^2 = 0.00785$ cm². Ratio = 400. $v = 400 \\times 0.01 = 4.0$ m/s.'
+        explanation: '$A_{\\text{barrel}} = \\pi(1)^2 = 3.14$ $cm^{2}$. $A_{\\text{needle}} = \\pi(0.05)^2 = 0.00785$ $cm^{2}$. Ratio = 400. $v = 400 \\times 0.01 = 4.0$ m/s.'
       }
     },
     {
@@ -148,7 +148,7 @@ A syringe barrel has diameter 2.0 cm. The needle has diameter 1.0 mm. The plunge
       exercise: {
         questions: [
           {
-            question: 'At a pipe junction, 3 pipes merge into 1. The three pipes carry 2, 3, and 5 L/s respectively. The single outlet pipe has area 10 cm². The exit speed is:',
+            question: 'At a pipe junction, 3 pipes merge into 1. The three pipes carry 2, 3, and 5 L/s respectively. The single outlet pipe has area 10 $cm^{2}$. The exit speed is:',
             options: [
               '1.0 m/s',
               '10 m/s',
@@ -156,7 +156,7 @@ A syringe barrel has diameter 2.0 cm. The needle has diameter 1.0 mm. The plunge
               '0.1 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$Q = 2 + 3 + 5 = 10$ L/s = $10 \\times 10^{-3}$ m³/s = $0.01$ m³/s. $v = Q/A = 0.01/(10 \\times 10^{-4}) = 0.01/0.001 = 10$ m/s.'
+            explanation: '$Q = 2 + 3 + 5 = 10$ L/s = $10 \\times 10^{-3}$ $m^{3}/s$ = $0.01$ $m^{3}/s$. $v = Q/A = 0.01/(10 \\times 10^{-4}) = 0.01/0.001 = 10$ m/s.'
           },
           {
             question: 'The continuity equation is fundamentally a statement of:',

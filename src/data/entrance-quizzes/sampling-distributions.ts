@@ -73,11 +73,11 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'σ',
       'σ/n',
-      'σ/√n',
-      'σ²/n'
+      '$\\sigma /\\sqrt{n}$',
+      '$\\sigma^{2}/n$'
     ],
     correctIndex: 2,
-    explanation: 'Standard error of x̄ = σ/√n; it decreases as sample size n increases.',
+    explanation: 'Standard error of x̄ = $\\sigma /\\sqrt{n}$; it decreases as sample size n increases.',
     partNumber: 3,
     partTitle: 'Standard Error'
   },
@@ -102,12 +102,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'For the sampling distribution of x̄, the center is ___ and the spread is ___.',
     options: [
       'x̄; σ',
-      'μ; σ/√n',
+      'μ; $\\sigma /\\sqrt{n}$',
       'μ; σ',
-      'x̄; σ/√n'
+      'x̄; $\\sigma /\\sqrt{n}$'
     ],
     correctIndex: 1,
-    explanation: 'The center of the sampling distribution of x̄ is μ; the spread is σ/√n.',
+    explanation: 'The center of the sampling distribution of x̄ is μ; the spread is $\\sigma /\\sqrt{n}$.',
     partNumber: 4,
     partTitle: 'Center & Spread of Distributions'
   },
@@ -167,7 +167,7 @@ const questions: EntranceQuizQuestion[] = [
       '200'
     ],
     correctIndex: 1,
-    explanation: 'Standard error = σ/√n = 20/√100 = 20/10 = 2.',
+    explanation: 'Standard error = $\\sigma /\\sqrt{n}$ = $20/\\sqrt{100}$ = 20/10 = 2.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -181,7 +181,7 @@ const questions: EntranceQuizQuestion[] = [
       'It doubles'
     ],
     correctIndex: 1,
-    explanation: 'Quadrupling the sample size cuts the standard error in half because √4 = 2, so σ/√(4n) = (σ/√n)/2.',
+    explanation: 'Quadrupling the sample size cuts the standard error in half because $\\sqrt{4}$ = 2, so $\\sigma /\\sqrt{4n}$ = $(\\sigma /\\sqrt{n})/2$.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -211,7 +211,7 @@ const questions: EntranceQuizQuestion[] = [
       'They are the same concept with different names'
     ],
     correctIndex: 1,
-    explanation: 'Individual observations have variability σ, while statistics have variability measured by standard error (e.g., σ/√n), which is smaller. The AP exam requires this distinction.',
+    explanation: 'Individual observations have variability σ, while statistics have variability measured by standard error (e.g., $\\sigma /\\sqrt{n}$), which is smaller. The AP exam requires this distinction.',
     partNumber: 7,
     partTitle: 'AP Review & Applications'
   }

@@ -57,13 +57,13 @@ export const chemTypesIntermolecularForcesPart3Data = {
           {
             question: 'Which molecule can form hydrogen bonds with other molecules of the same kind?',
             options: [
-              'CH₃OCH₃ (dimethyl ether)',
-              'CH₃OH (methanol)',
-              'CH₃CH₃ (ethane)',
-              'CH₂Cl₂ (dichloromethane)'
+              '$CH_{3}OCH_{3}$ (dimethyl ether)',
+              '$CH_{3}OH$ (methanol)',
+              '$CH_{3}CH_{3}$ (ethane)',
+              '$CH_{2}Cl_{2}$ (dichloromethane)'
             ],
             correctAnswer: 1,
-            explanation: 'CH₃OH (methanol) has an O–H bond, so it has a hydrogen donor. The oxygen also has lone pairs, making it a hydrogen acceptor. It can form hydrogen bonds with itself. Dimethyl ether has lone pairs on O (acceptor) but no O–H, N–H, or F–H bond (no donor), so it cannot hydrogen bond with itself.'
+            explanation: '$CH_{3}OH$ (methanol) has an O–H bond, so it has a hydrogen donor. The oxygen also has lone pairs, making it a hydrogen acceptor. It can form hydrogen bonds with itself. Dimethyl ether has lone pairs on O (acceptor) but no O–H, N–H, or F–H bond (no donor), so it cannot hydrogen bond with itself.'
           },
           {
             question: 'HCl has a polar H–Cl bond, but it does NOT form hydrogen bonds. Why?',
@@ -91,21 +91,21 @@ export const chemTypesIntermolecularForcesPart3Data = {
             label: '$\\text{H}_2\\text{O}$ (water)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 0,
-            explanation: 'H₂O has O–H bonds (donor) and lone pairs on O (acceptor). It forms strong hydrogen bonds, explaining its unusually high boiling point.'
+            explanation: '$H_{2}O$ has O–H bonds (donor) and lone pairs on O (acceptor). It forms strong hydrogen bonds, explaining its unusually high boiling point.'
           },
           {
             id: 'hb-ch4',
             label: '$\\text{CH}_4$ (methane)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 1,
-            explanation: 'CH₄ has C–H bonds. Carbon is not N, O, or F, so CH₄ cannot form hydrogen bonds. It only has LDF.'
+            explanation: '$CH_{4}$ has C–H bonds. Carbon is not N, O, or F, so $CH_{4}$ cannot form hydrogen bonds. It only has LDF.'
           },
           {
             id: 'hb-nh3',
             label: '$\\text{NH}_3$ (ammonia)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 0,
-            explanation: 'NH₃ has N–H bonds (donor) and a lone pair on N (acceptor). It can form hydrogen bonds.'
+            explanation: '$NH_{3}$ has N–H bonds (donor) and a lone pair on N (acceptor). It can form hydrogen bonds.'
           },
           {
             id: 'hb-hf',
@@ -131,15 +131,15 @@ export const chemTypesIntermolecularForcesPart3Data = {
       exercise: {
         questions: [
           {
-            question: 'Water (H₂O, MW = 18) has a much higher boiling point than H₂S (MW = 34). What is the primary reason?',
+            question: 'Water ($H_{2}O$, MW = 18) has a much higher boiling point than $H_{2}S$ (MW = 34). What is the primary reason?',
             options: [
               'Water has a higher molar mass',
               'Water has stronger London Dispersion Forces',
-              'Water has hydrogen bonding while H₂S does not',
-              'H₂S is a nonpolar molecule'
+              'Water has hydrogen bonding while $H_{2}S$ does not',
+              '$H_{2}S$ is a nonpolar molecule'
             ],
             correctAnswer: 2,
-            explanation: 'Water has O–H bonds that allow hydrogen bonding, giving it much stronger IMF than H₂S. Sulfur is not N, O, or F, so H₂S cannot form hydrogen bonds — it only has dipole-dipole forces and LDF. Despite water\'s lower molar mass, its hydrogen bonding gives it a much higher boiling point.'
+            explanation: 'Water has O–H bonds that allow hydrogen bonding, giving it much stronger IMF than $H_{2}S$. Sulfur is not N, O, or F, so $H_{2}S$ cannot form hydrogen bonds — it only has dipole-dipole forces and LDF. Despite water\'s lower molar mass, its hydrogen bonding gives it a much higher boiling point.'
           },
           {
             question: 'How many hydrogen bonds can a single water molecule form at maximum?',

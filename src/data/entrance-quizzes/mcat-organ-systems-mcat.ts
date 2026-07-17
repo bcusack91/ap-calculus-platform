@@ -39,15 +39,15 @@ const questions: EntranceQuizQuestion[] = [
   // Part 2: Respiratory System
   {
     id: 'mos-ent-2a',
-    question: 'The majority of CO₂ in the blood is transported as:',
+    question: 'The majority of $CO_{2}$ in the blood is transported as:',
     options: [
-      'Dissolved CO₂ in plasma.',
-      'CO₂ bound to hemoglobin (carbaminohemoglobin).',
-      'Bicarbonate ions (HCO₃⁻) in the plasma.',
-      'CO₂ bound to albumin.'
+      'Dissolved $CO_{2}$ in plasma.',
+      '$CO_{2}$ bound to hemoglobin (carbaminohemoglobin).',
+      'Bicarbonate ions $(HCO_{3}^{-})$ in the plasma.',
+      '$CO_{2}$ bound to albumin.'
     ],
     correctIndex: 2,
-    explanation: '~70% of CO₂ is transported as HCO₃⁻. Inside RBCs, carbonic anhydrase catalyzes CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻. HCO₃⁻ exits RBCs via the chloride shift. ~20–23% is carbaminohemoglobin; only ~7% is dissolved.',
+    explanation: '~70% of $CO_{2}$ is transported as $HCO_{3}^{-}$. Inside RBCs, carbonic anhydrase catalyzes $CO_{2}$ + $H_{2}O$ → $H_{2}CO_{3}$ → $H^{+}$ + $HCO_{3}^{-}$. $HCO_{3}^{-}$ exits RBCs via the chloride shift. ~20–23% is carbaminohemoglobin; only ~7% is dissolved.',
     partNumber: 2,
     partTitle: 'Respiratory System'
   },
@@ -61,7 +61,7 @@ const questions: EntranceQuizQuestion[] = [
       'Increase, then rapidly decrease during the same inspiratory event.'
     ],
     correctIndex: 1,
-    explanation: 'Diaphragm contraction increases thoracic volume. By Boyle\'s Law (P₁V₁ = P₂V₂), increased volume decreases intrathoracic pressure below atmospheric pressure (~−1 cmH₂O). This pressure gradient drives air into the lungs (bulk flow).',
+    explanation: 'Diaphragm contraction increases thoracic volume. By Boyle\'s Law ($P_{1}V_{1}$ = $P_{2}V_{2}$), increased volume decreases intrathoracic pressure below atmospheric pressure (~−1 $cmH_{2}O$). This pressure gradient drives air into the lungs (bulk flow).',
     partNumber: 2,
     partTitle: 'Respiratory System'
   },
@@ -101,13 +101,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'mos-ent-4a',
     question: 'During an action potential, rapid depolarization (phase 0) is caused by:',
     options: [
-      'Efflux of K⁺ through voltage-gated K⁺ channels.',
-      'Influx of Na⁺ through voltage-gated Na⁺ channels.',
-      'Influx of Ca²⁺ through L-type calcium channels.',
-      'Efflux of Cl⁻ through ligand-gated channels.'
+      'Efflux of $K^{+}$ through voltage-gated $K^{+}$ channels.',
+      'Influx of $Na^{+}$ through voltage-gated $Na^{+}$ channels.',
+      'Influx of $Ca^{2+}$ through L-type calcium channels.',
+      'Efflux of $Cl^{-}$ through ligand-gated channels.'
     ],
     correctIndex: 1,
-    explanation: 'When membrane potential reaches threshold (~−55 mV), voltage-gated Na⁺ channels rapidly open, allowing massive Na⁺ influx down its electrochemical gradient. This drives the membrane potential toward +30 to +40 mV (depolarization). K⁺ efflux causes repolarization (phase 3).',
+    explanation: 'When membrane potential reaches threshold (~−55 mV), voltage-gated $Na^{+}$ channels rapidly open, allowing massive $Na^{+}$ influx down its electrochemical gradient. This drives the membrane potential toward +30 to +40 mV (depolarization). $K^{+}$ efflux causes repolarization (phase 3).',
     partNumber: 4,
     partTitle: 'Nervous System'
   },
@@ -121,7 +121,7 @@ const questions: EntranceQuizQuestion[] = [
       'α2-adrenergic receptor'
     ],
     correctIndex: 1,
-    explanation: 'β1-adrenergic receptors (Gs-coupled) dominate in the SA node and ventricles. Norepinephrine/epinephrine binding increases cAMP, activating PKA, which phosphorylates HCN and L-type Ca²⁺ channels to increase heart rate (chronotropy) and contractility (inotropy).',
+    explanation: 'β1-adrenergic receptors (Gs-coupled) dominate in the SA node and ventricles. Norepinephrine/epinephrine binding increases cAMP, activating PKA, which phosphorylates HCN and L-type $Ca^{2+}$ channels to increase heart rate (chronotropy) and contractility (inotropy).',
     partNumber: 4,
     partTitle: 'Nervous System'
   },
@@ -159,15 +159,15 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Problem-Solving Workshop
   {
     id: 'mos-ent-6a',
-    question: 'A patient presents with metabolic acidosis (low blood pH, low HCO₃⁻). The respiratory system compensates by:',
+    question: 'A patient presents with metabolic acidosis (low blood pH, low $HCO_{3}^{-}$). The respiratory system compensates by:',
     options: [
-      'Hypoventilating to retain CO₂ and raise blood pH.',
-      'Hyperventilating to blow off CO₂, reducing carbonic acid and raising blood pH.',
-      'Increasing aldosterone secretion to retain HCO₃⁻.',
+      'Hypoventilating to retain $CO_{2}$ and raise blood pH.',
+      'Hyperventilating to blow off $CO_{2}$, reducing carbonic acid and raising blood pH.',
+      'Increasing aldosterone secretion to retain $HCO_{3}^{-}$.',
       'Releasing ADH to retain water and dilute the acid concentration.'
     ],
     correctIndex: 1,
-    explanation: 'In metabolic acidosis, chemoreceptors detect low pH and stimulate hyperventilation. Exhaling CO₂ shifts the equilibrium CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ to the left, consuming H⁺ and raising pH. This respiratory compensation acts within minutes.',
+    explanation: 'In metabolic acidosis, chemoreceptors detect low pH and stimulate hyperventilation. Exhaling $CO_{2}$ shifts the equilibrium $CO_{2}$ + $H_{2}O$ ⇌ $H_{2}CO_{3}$ ⇌ $H^{+}$ + $HCO_{3}^{-}$ to the left, consuming $H^{+}$ and raising pH. This respiratory compensation acts within minutes.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -211,7 +211,7 @@ const questions: EntranceQuizQuestion[] = [
       'Insulin release to mobilize glucose as an emergency fuel.'
     ],
     correctIndex: 1,
-    explanation: 'Hemorrhage triggers baroreceptor-mediated sympathetic activation (↑HR, ↑contractility, vasoconstriction) and hormonal responses (ADH retains water, RAAS releases aldosterone to retain Na⁺/water). Together these restore blood pressure and volume—a critical integrated organ-systems response.',
+    explanation: 'Hemorrhage triggers baroreceptor-mediated sympathetic activation (↑HR, ↑contractility, vasoconstriction) and hormonal responses (ADH retains water, RAAS releases aldosterone to retain $Na^{+}/water$). Together these restore blood pressure and volume—a critical integrated organ-systems response.',
     partNumber: 7,
     partTitle: 'Review & Applications'
   }

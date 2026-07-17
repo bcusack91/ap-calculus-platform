@@ -52,7 +52,7 @@ The equilibrium constant tells us the **extent** to which a reaction proceeds:
 | Reaction | $K$ | Interpretation |
 |----------|-----|---------------|
 | $2\\,\\text{H}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{H}_2\\text{O}(g)$ at 500 K | $\\sim 10^{80}$ | Essentially irreversible — goes to completion |
-| $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ at 25°C | $4.6 \\times 10^{-3}$ | Reactants (N₂O₄) are favored |
+| $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ at 25°C | $4.6 \\times 10^{-3}$ | Reactants $(N_{2}O_{4})$ are favored |
 | $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$ at 425°C | $54$ | Products (HI) are favored |
 
 

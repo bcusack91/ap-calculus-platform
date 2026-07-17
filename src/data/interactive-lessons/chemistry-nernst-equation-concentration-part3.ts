@@ -87,7 +87,7 @@ The system wants to reach **equilibrium** (equal concentrations). It does this b
       content: `
 ## 🧪 Worked Example — Copper Concentration Cell
 
-> **Problem:** A Cu/Cu²⁺ concentration cell at 25°C has $[\\text{Cu}^{2+}]_{\\text{left}} = 0.010$ M (dilute, anode) and $[\\text{Cu}^{2+}]_{\\text{right}} = 1.0$ M (concentrated, cathode). Given $n = 2$ (from $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$) and $E° = 0$, calculate the cell potential.
+> **Problem:** A $Cu/Cu^{2+}$ concentration cell at 25°C has $[\\text{Cu}^{2+}]_{\\text{left}} = 0.010$ M (dilute, anode) and $[\\text{Cu}^{2+}]_{\\text{right}} = 1.0$ M (concentrated, cathode). Given $n = 2$ (from $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$) and $E° = 0$, calculate the cell potential.
 
 > **Solution:**
 
@@ -235,7 +235,7 @@ At 25°C:
       exercise: {
         questions: [
           {
-            question: 'A Ni concentration cell has [Ni²⁺] = 0.001 M and 1.0 M (n = 2). The voltage at 25°C is:',
+            question: 'A Ni concentration cell has [$Ni^{2+}$] = 0.001 M and 1.0 M (n = 2). The voltage at 25°C is:',
             options: [
               '0.0296 V',
               '0.0592 V',
@@ -254,7 +254,7 @@ At 25°C:
               'Zero'
             ],
             correctAnswer: 1,
-            explanation: 'At the anode, Ag dissolves: Ag → Ag⁺ + e⁻. This increases [Ag⁺] in the dilute compartment. The cell drives both compartments toward equal concentration.'
+            explanation: 'At the anode, Ag dissolves: Ag → $Ag^{+}$ + $e^{-}$. This increases [$Ag^{+}$] in the dilute compartment. The cell drives both compartments toward equal concentration.'
           }
         ]
       }

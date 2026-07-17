@@ -33,7 +33,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'buoy-ent-2b',
-    question: 'A block of wood ($\\rho = 600$ kg/m³) floats in water ($\\rho = 1000$ kg/m³). What fraction is submerged?',
+    question: 'A block of wood ($\\rho = 600$ $kg/m^{3}$) floats in water ($\\rho = 1000$ $kg/m^{3}$). What fraction is submerged?',
     options: ['$40\\%$', '$60\\%$', '$100\\%$', '$50\\%$'],
     correctIndex: 1,
     explanation: 'Fraction submerged = $\\rho_{object}/\\rho_{fluid} = 600/1000 = 0.6 = 60\\%$.',
@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'buoy-ent-3b',
-    question: 'A $5$ kg metal block ($V = 0.002$ m³) is submerged in water. Its apparent weight is: (use $g = 10$ m/s²)',
+    question: 'A $5$ kg metal block ($V = 0.002$ $m^{3}$) is submerged in water. Its apparent weight is: (use $g = 10$ $m/s^{2}$)',
     options: ['$50$ N', '$30$ N', '$20$ N', '$10$ N'],
     correctIndex: 1,
     explanation: '$W = 50$ N. $F_b = 1000 \\times 0.002 \\times 10 = 20$ N. Apparent weight = $50 - 20 = 30$ N.',
@@ -73,10 +73,10 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'buoy-ent-4b',
-    question: 'An object floats with $90\\%$ submerged in water. In a liquid with $\\rho = 800$ kg/m³, the object will:',
+    question: 'An object floats with $90\\%$ submerged in water. In a liquid with $\\rho = 800$ $kg/m^{3}$, the object will:',
     options: ['Float higher', 'Float at same level', 'Sink completely', 'Float with $90\\%$ submerged'],
     correctIndex: 2,
-    explanation: 'The object\'s density = $0.9 \\times 1000 = 900$ kg/m³. Since $900 > 800$, the object is denser than the new liquid and sinks.',
+    explanation: 'The object\'s density = $0.9 \\times 1000 = 900$ $kg/m^{3}$. Since $900 > 800$, the object is denser than the new liquid and sinks.',
     partNumber: 4,
     partTitle: 'Buoyancy in Different Fluids',
   },

@@ -51,7 +51,7 @@ Let's consolidate everything about motion graphs. This review covers all three g
       exercise: {
         questions: [
           {
-            question: 'An object starts from rest and its $a$-$t$ graph shows constant $a = 5$ m/s² for 4 s. What shape is the $x$-$t$ graph?',
+            question: 'An object starts from rest and its $a$-$t$ graph shows constant $a = 5$ $m/s^{2}$ for 4 s. What shape is the $x$-$t$ graph?',
             options: [
               'Horizontal line',
               'Straight line with positive slope',
@@ -97,7 +97,7 @@ A $v$-$t$ graph shows the following:
 - $t = 2$ to $t = 6$ s: $v$ is constant at 6 m/s
 - $t = 6$ to $t = 10$ s: $v$ decreases linearly from 6 m/s to $-2$ m/s
 
-1) What is the acceleration during the interval $t = 6$ to $t = 10$ s? (in m/s²)
+1) What is the acceleration during the interval $t = 6$ to $t = 10$ s? $(in m/s^{2})$
 
 2) At what time does the object reverse direction? (in seconds)
 
@@ -109,7 +109,7 @@ A $v$-$t$ graph shows the following:
         hint1: '$a = (-2 - 6)/(10 - 6) = -8/4$',
         hint2: 'The velocity is zero when $v = 6 + (-2)(t - 6) = 0$. Solve: $6 - 2(t-6) = 0$.',
         hint3: 'Sum areas: triangle (0-2) + rectangle (2-6) + trapezoid (6-10). The trapezoid from 6-10 has positive and negative parts.',
-        explanation: '1) $a = -8/4 = -2$ m/s². 2) $v = 6 - 2(t-6) = 0 \\Rightarrow t = 9$ s. 3) Phase 1: $\\frac{1}{2}(2)(6) = 6$ m. Phase 2: $6(4) = 24$ m. Phase 3 (6-9 s, positive): $\\frac{1}{2}(3)(6) = 9$ m. Phase 3 (9-10 s, negative): $\\frac{1}{2}(1)(2) = -1$ m. Total = $6 + 24 + 9 - 1 = 38$... Actually let me recalculate Phase 3 as trapezoid: $\\frac{1}{2}(6 + (-2))(4) = \\frac{1}{2}(4)(4) = 8$. Total = $6 + 24 + 8 = 38$... Hmm. Let me be careful: Phase 3 trapezoid area = $\\frac{1}{2}(v_1 + v_2)(\\Delta t) = \\frac{1}{2}(6+(-2))(4) = \\frac{1}{2}(4)(4) = 8$. Total = $6+24+8 = 38$ m. But by splitting: positive triangle (6-9): $\\frac{1}{2}(3)(6) = 9$. Negative triangle (9-10): $\\frac{1}{2}(1)(2) = 1$. Net from 6-10: $9-1 = 8$. Total = $6+24+8 = 38$ m. Let me fix the answer to 38.'
+        explanation: '1) $a = -8/4 = -2$ $m/s^{2}$. 2) $v = 6 - 2(t-6) = 0 \\Rightarrow t = 9$ s. 3) Phase 1: $\\frac{1}{2}(2)(6) = 6$ m. Phase 2: $6(4) = 24$ m. Phase 3 (6-9 s, positive): $\\frac{1}{2}(3)(6) = 9$ m. Phase 3 (9-10 s, negative): $\\frac{1}{2}(1)(2) = -1$ m. Total = $6 + 24 + 9 - 1 = 38$... Actually let me recalculate Phase 3 as trapezoid: $\\frac{1}{2}(6 + (-2))(4) = \\frac{1}{2}(4)(4) = 8$. Total = $6 + 24 + 8 = 38$... Hmm. Let me be careful: Phase 3 trapezoid area = $\\frac{1}{2}(v_1 + v_2)(\\Delta t) = \\frac{1}{2}(6+(-2))(4) = \\frac{1}{2}(4)(4) = 8$. Total = $6+24+8 = 38$ m. But by splitting: positive triangle (6-9): $\\frac{1}{2}(3)(6) = 9$. Negative triangle (9-10): $\\frac{1}{2}(1)(2) = 1$. Net from 6-10: $9-1 = 8$. Total = $6+24+8 = 38$ m. Let me fix the answer to 38.'
       }
     },
     {

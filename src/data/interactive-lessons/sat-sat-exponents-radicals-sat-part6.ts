@@ -140,12 +140,12 @@ This is the **conjugate pattern** — the radical disappears!
       content: '**Can These Be Combined?** 🔍\n\nDetermine whether each pair can be simplified into a single term.',
       exercise: {
         dropdowns: [
-          { label: '$3\\sqrt{5} + 2\\sqrt{5}$', options: ['Yes → 5√5', 'No — different radicands', 'Yes → 5√10', 'Yes → 6√5'] },
-          { label: '$\\sqrt{3} + \\sqrt{12}$', options: ['Yes → 3√3', 'No — different radicands', 'Yes → √15', 'Yes → 4√3'] },
-          { label: '$2\\sqrt{3} + 5\\sqrt{2}$', options: ['No — different radicands', 'Yes → 7√5', 'Yes → 7√6', 'Yes → √34'] },
-          { label: '$\\sqrt{50} - \\sqrt{32}$', options: ['Yes → √2', 'No — different radicands', 'Yes → √18', 'Yes → 2√2'] }
+          { label: '$3\\sqrt{5} + 2\\sqrt{5}$', options: ['Yes → $5\\sqrt{5}$', 'No — different radicands', 'Yes → $5\\sqrt{10}$', 'Yes → $6\\sqrt{5}$'] },
+          { label: '$\\sqrt{3} + \\sqrt{12}$', options: ['Yes → $3\\sqrt{3}$', 'No — different radicands', 'Yes → $\\sqrt{15}$', 'Yes → $4\\sqrt{3}$'] },
+          { label: '$2\\sqrt{3} + 5\\sqrt{2}$', options: ['No — different radicands', 'Yes → $7\\sqrt{5}$', 'Yes → $7\\sqrt{6}$', 'Yes → $\\sqrt{34}$'] },
+          { label: '$\\sqrt{50} - \\sqrt{32}$', options: ['Yes → $\\sqrt{2}$', 'No — different radicands', 'Yes → $\\sqrt{18}$', 'Yes → $2\\sqrt{2}$'] }
         ],
-        correctAnswers: ['Yes → 5√5', 'Yes → 3√3', 'No — different radicands', 'Yes → √2'],
+        correctAnswers: ['Yes → $5\\sqrt{5}$', 'Yes → $3\\sqrt{3}$', 'No — different radicands', 'Yes → $\\sqrt{2}$'],
         hint1: 'Same radicand ($\\sqrt{5}$) → combine coefficients.',
         hint2: '$\\sqrt{12} = 2\\sqrt{3}$, so now both have $\\sqrt{3}$.',
         hint3: '$\\sqrt{3}$ and $\\sqrt{2}$ are different radicands — can\'t combine.',

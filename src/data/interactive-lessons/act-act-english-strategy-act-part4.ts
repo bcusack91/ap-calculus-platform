@@ -69,7 +69,7 @@ The three sub-categories:
               'For example,'
             ],
             correctAnswer: 2,
-            explanation: '"Meanwhile" signals that another simultaneous process is occurring. Both absorption of sunlight and intake of CO₂ happen as part of the same process, making "Meanwhile" the best fit.'
+            explanation: '"Meanwhile" signals that another simultaneous process is occurring. Both absorption of sunlight and intake of $CO_{2}$ happen as part of the same process, making "Meanwhile" the best fit.'
           }
         ]
       }

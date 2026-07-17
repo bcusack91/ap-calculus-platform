@@ -414,25 +414,25 @@ export const MCQS: MCQItem[] = [
     question: 'For a hypothesis test, the p-value is',
     options: [
       'the probability the null hypothesis is true',
-      'the probability of observing the test statistic, or one more extreme, assuming H₀ is true',
+      'the probability of observing the test statistic, or one more extreme, assuming $H_{0}$ is true',
       'the significance level α',
       'the probability of a Type II error',
     ],
     correctAnswer: 1,
-    explanation: 'p-value = P(observed test statistic OR more extreme | H₀ true). NOT P(H₀ true). Compare to α to decide.',
+    explanation: 'p-value = P(observed test statistic OR more extreme | $H_{0}$ true). NOT $P(H_{0} true)$. Compare to α to decide.',
   },
   {
     type: 'mcq',
     topic: 'unit-8-inference-means',
     question: 'A two-sample t-test gives p-value = 0.03 with α = 0.05. The correct conclusion is',
     options: [
-      'Fail to reject H₀; means are equal',
-      'Reject H₀; convincing evidence of a difference in means',
-      'Accept H₀; means are equal',
+      'Fail to reject $H_{0}$; means are equal',
+      'Reject $H_{0}$; convincing evidence of a difference in means',
+      'Accept $H_{0}$; means are equal',
       'p-value > α; no conclusion',
     ],
     correctAnswer: 1,
-    explanation: 'p (0.03) < α (0.05) ⇒ REJECT H₀ ⇒ statistically significant evidence of a difference in population means.',
+    explanation: 'p (0.03) < α (0.05) ⇒ REJECT $H_{0}$ ⇒ statistically significant evidence of a difference in population means.',
   },
 
   /* ---- U9 Inference for Slopes & Chi-Square (4) ---- */
@@ -475,12 +475,12 @@ export const MCQS: MCQItem[] = [
     topic: 'unit-9-chi-square-slopes',
     question: 'A linear regression t-test for slope produces $t = 3.5$ with df = 18 and p < 0.01. The conclusion at α = 0.05 is',
     options: [
-      'Fail to reject H₀; no linear relationship',
-      'Reject H₀; statistically significant linear relationship between x and y',
+      'Fail to reject $H_{0}$; no linear relationship',
+      'Reject $H_{0}$; statistically significant linear relationship between x and y',
       'p > α; no conclusion',
       'The regression model fits perfectly',
     ],
     correctAnswer: 1,
-    explanation: 'p (< 0.01) < α (0.05) ⇒ REJECT H₀ ⇒ statistically significant evidence of a linear relationship (β ≠ 0).',
+    explanation: 'p (< 0.01) < α (0.05) ⇒ REJECT $H_{0}$ ⇒ statistically significant evidence of a linear relationship (β ≠ 0).',
   },
 ]

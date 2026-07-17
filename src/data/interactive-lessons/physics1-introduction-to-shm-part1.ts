@@ -123,7 +123,7 @@ The acceleration is **proportional to displacement** and always directed toward 
 
 1) A spring with $k = 200$ N/m is stretched 0.1 m from equilibrium. What is the restoring force magnitude? (in N)
 
-2) A 2 kg mass on a spring ($k = 50$ N/m) is displaced 0.3 m. What is the magnitude of its acceleration? (in m/s²)
+2) A 2 kg mass on a spring ($k = 50$ N/m) is displaced 0.3 m. What is the magnitude of its acceleration? $(in m/s^{2})$
 
 3) For a mass-spring system, $\\omega = \\sqrt{k/m}$. If $k = 80$ N/m and $m = 5$ kg, what is $\\omega$? (in rad/s)
 
@@ -135,7 +135,7 @@ The acceleration is **proportional to displacement** and always directed toward 
         hint1: '$|F| = kx = 200(0.1)$',
         hint2: '$|a| = kx/m = 50(0.3)/2$',
         hint3: '$\\omega = \\sqrt{80/5} = \\sqrt{16}$',
-        explanation: '1) $|F| = 200(0.1) = 20$ N. 2) $|a| = 50(0.3)/2 = 7.5$ m/s². 3) $\\omega = \\sqrt{16} = 4$ rad/s.'
+        explanation: '1) $|F| = 200(0.1) = 20$ N. 2) $|a| = 50(0.3)/2 = 7.5$ $m/s^{2}$. 3) $\\omega = \\sqrt{16} = 4$ rad/s.'
       }
     },
     {
@@ -148,7 +148,7 @@ The acceleration is **proportional to displacement** and always directed toward 
         dropdowns: [
           {
             label: 'The restoring force in simple harmonic motion is described by:',
-            options: ['F = kx', 'F = -kx', 'F = kx²', 'F = -kv'],
+            options: ['F = kx', 'F = -kx', 'F = $kx^{2}$', 'F = -kv'],
             correctIndex: 1,
             explanation: 'SHM requires $F = -kx$: a restoring force proportional to displacement with the negative sign indicating it opposes the displacement.'
           },

@@ -135,35 +135,35 @@ Consider this mechanism:
           {
             question: 'What is the catalyst in this mechanism?',
             options: [
-              'H₂O₂',
-              'H₂O',
-              'I⁻',
-              'IO⁻'
+              '$H_{2}O_{2}$',
+              '$H_{2}O$',
+              '$I^{-}$',
+              '$IO^{-}$'
             ],
             correctAnswer: 2,
-            explanation: 'I⁻ is consumed in Step 1 and regenerated in Step 2. It is present at the start and end but not in the overall equation. This is the definition of a catalyst.'
+            explanation: '$I^{-}$ is consumed in Step 1 and regenerated in Step 2. It is present at the start and end but not in the overall equation. This is the definition of a catalyst.'
           },
           {
             question: 'What is the intermediate?',
             options: [
-              'H₂O₂',
-              'H₂O',
-              'I⁻',
-              'IO⁻'
+              '$H_{2}O_{2}$',
+              '$H_{2}O$',
+              '$I^{-}$',
+              '$IO^{-}$'
             ],
             correctAnswer: 3,
-            explanation: 'IO⁻ is produced in Step 1 and consumed in Step 2. It does not appear in the overall equation. It is formed during the reaction and then used up — a classic intermediate.'
+            explanation: '$IO^{-}$ is produced in Step 1 and consumed in Step 2. It does not appear in the overall equation. It is formed during the reaction and then used up — a classic intermediate.'
           },
           {
             question: 'The overall reaction is:',
             options: [
-              'H₂O₂ → H₂O + O',
-              '2H₂O₂ → 2H₂O + O₂',
-              'H₂O₂ + I⁻ → H₂O + IO⁻',
-              'H₂O₂ + IO⁻ → H₂O + O₂ + I⁻'
+              '$H_{2}O_{2}$ → $H_{2}O$ + O',
+              '$2H_{2}O_{2}$ → $2H_{2}O$ + $O_{2}$',
+              '$H_{2}O_{2}$ + $I^{-}$ → $H_{2}O$ + $IO^{-}$',
+              '$H_{2}O_{2}$ + $IO^{-}$ → $H_{2}O$ + $O_{2}$ + $I^{-}$'
             ],
             correctAnswer: 1,
-            explanation: 'Adding Step 1 + Step 2: 2H₂O₂ + I⁻ + IO⁻ → 2H₂O + O₂ + I⁻ + IO⁻. Cancel I⁻ and IO⁻: 2H₂O₂ → 2H₂O + O₂.'
+            explanation: 'Adding Step 1 + Step 2: $2H_{2}O_{2}$ + $I^{-}$ + $IO^{-}$ → $2H_{2}O$ + $O_{2}$ + $I^{-}$ + $IO^{-}$. Cancel $I^{-}$ and $IO^{-}$: $2H_{2}O_{2}$ → $2H_{2}O$ + $O_{2}$.'
           }
         ]
       }
@@ -182,11 +182,11 @@ Consider:
       exercise: {
         dropdowns: [
           {
-            label: 'N₂O₂ is a(n)',
+            label: '$N_{2}O_{2}$ is a(n)',
             options: ['reactant', 'product', 'intermediate', 'catalyst']
           },
           {
-            label: 'N₂O is a(n)',
+            label: '$N_{2}O$ is a(n)',
             options: ['reactant', 'product', 'intermediate', 'catalyst']
           },
           {
@@ -195,14 +195,14 @@ Consider:
           },
           {
             label: 'The overall reaction is',
-            options: ['2NO + 2H₂ → N₂ + 2H₂O', 'NO + H₂ → N₂ + H₂O', '2NO + H₂ → N₂O₂ + H₂O', 'N₂O₂ + H₂ → N₂O + H₂O']
+            options: ['2NO + $2H_{2}$ → $N_{2}$ + $2H_{2}O$', 'NO + $H_{2}$ → $N_{2}$ + $H_{2}O$', '2NO + $H_{2}$ → $N_{2}O_{2}$ + $H_{2}O$', '$N_{2}O_{2}$ + $H_{2}$ → $N_{2}O$ + $H_{2}O$']
           }
         ],
-        correctAnswers: ['intermediate', 'intermediate', '2', '2NO + 2H₂ → N₂ + 2H₂O'],
-        hint1: 'N₂O₂ is produced in Step 1 and consumed in Step 2 → intermediate.',
-        hint2: 'N₂O is produced in Step 2 and consumed in Step 3 → intermediate.',
-        hint3: 'Add all steps: 2NO + N₂O₂ + N₂O + 2H₂ → N₂O₂ + N₂O + N₂ + 2H₂O. Cancel intermediates.',
-        explanation: 'N₂O₂ and N₂O are both intermediates (2 total). Adding steps: 2NO + 2H₂ → N₂ + 2H₂O (after canceling N₂O₂ and N₂O). No catalysts in this mechanism.'
+        correctAnswers: ['intermediate', 'intermediate', '2', '2NO + $2H_{2}$ → $N_{2}$ + $2H_{2}O$'],
+        hint1: '$N_{2}O_{2}$ is produced in Step 1 and consumed in Step 2 → intermediate.',
+        hint2: '$N_{2}O$ is produced in Step 2 and consumed in Step 3 → intermediate.',
+        hint3: 'Add all steps: 2NO + $N_{2}O_{2}$ + $N_{2}O$ + $2H_{2}$ → $N_{2}O_{2}$ + $N_{2}O$ + $N_{2}$ + $2H_{2}O$. Cancel intermediates.',
+        explanation: '$N_{2}O_{2}$ and $N_{2}O$ are both intermediates (2 total). Adding steps: 2NO + $2H_{2}$ → $N_{2}$ + $2H_{2}O$ (after canceling $N_{2}O_{2}$ and $N_{2}O$). No catalysts in this mechanism.'
       }
     },
     {

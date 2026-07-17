@@ -11,7 +11,7 @@ export const physCEMCoulombPart2Data = {
 
 $F = k\\frac{|q_1||q_2|}{r^2}$
 
-where $k = 8.99 \\times 10^9$ N·m²/C² $= \\frac{1}{4\\pi\\epsilon_0}$
+where $k = 8.99 \\times 10^9$ $N\\cdot m^{2}/C^{2}$ $= \\frac{1}{4\\pi\\epsilon_0}$
 
 - Force is along the line connecting the charges
 - Attractive for opposite charges, repulsive for like charges
@@ -64,7 +64,7 @@ $= (9 \\times 10^9)\\frac{4 \\times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
 
 2) Two $+1$ μC charges are 0.1 m apart. $F = k(10^{-12})/(0.01) = 9 \\times 10^9 \\times 10^{-10}$ = ____ N. (Give the answer as a decimal.)
 
-3) The Coulomb constant $k$ is approximately ____ $\\times 10^9$ N·m²/C².
+3) The Coulomb constant $k$ is approximately ____ $\\times 10^9$ $N\\cdot m^{2}/C^{2}$.
     
     `,
       exercise: {

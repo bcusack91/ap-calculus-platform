@@ -71,7 +71,7 @@ Biodiversity is not just an abstract concept — it directly supports the goods 
   - Unknown species may hold undiscovered medicinal compounds.
 
 ### Regulating Services
-- **Climate regulation**: Forests sequester carbon (~2.6 Gt C/year); oceans absorb ~25% of anthropogenic CO₂.
+- **Climate regulation**: Forests sequester carbon (~2.6 Gt C/year); oceans absorb ~25% of anthropogenic $CO_{2}$.
 - **Flood control**: Wetlands absorb floodwaters, reducing downstream damage. Mangroves and coral reefs buffer coastal storms.
 - **Water purification**: Riparian zones and wetlands filter sediments, nutrients, and pollutants from water.
 - **Pollination**: Wild and managed pollinators are essential for ~35% of global crop production.

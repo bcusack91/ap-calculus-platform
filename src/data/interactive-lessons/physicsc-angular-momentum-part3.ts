@@ -29,10 +29,10 @@ $$\\frac{d\\vec{L}}{dt} = \\frac{d}{dt}(\\vec{r} \\times \\vec{p}) = \\underbrac
     {
       id: 'am3-mcq1',
       type: 'mcq' as const,
-      question: 'A torque of $12$ N·m is applied to a wheel with $I = 4$ kg·m² for $3$ seconds. The change in angular momentum is:',
-      options: ['$36$ kg·m²/s', '$12$ kg·m²/s', '$4$ kg·m²/s', '$48$ kg·m²/s'],
+      question: 'A torque of $12$ N·m is applied to a wheel with $I = 4$ $kg\\cdot m^{2}$ for $3$ seconds. The change in angular momentum is:',
+      options: ['$36$ $kg\\cdot m^{2}/s$', '$12$ $kg\\cdot m^{2}/s$', '$4$ $kg\\cdot m^{2}/s$', '$48$ $kg\\cdot m^{2}/s$'],
       correctAnswer: 0,
-      explanation: '$\\Delta L = \\tau \\cdot \\Delta t = 12 \\times 3 = 36$ kg·m²/s. This is the rotational impulse-momentum theorem: $\\int \\tau\\,dt = \\Delta L$.'
+      explanation: '$\\Delta L = \\tau \\cdot \\Delta t = 12 \\times 3 = 36$ $kg\\cdot m^{2}/s$. This is the rotational impulse-momentum theorem: $\\int \\tau\\,dt = \\Delta L$.'
     },
     {
       id: 'am3-impulse',
@@ -47,7 +47,7 @@ For a constant torque: $\\vec{J} = \\vec{\\tau}\\,\\Delta t$
 
 ### Worked Example
 
-A figure skater extends her arms (initial $I_1 = 4$ kg·m², $\\omega_1 = 2$ rad/s). She brings her arms in, changing her moment of inertia to $I_2 = 1.5$ kg·m² over $0.5$ seconds. 
+A figure skater extends her arms (initial $I_1 = 4$ $kg\\cdot m^{2}$, $\\omega_1 = 2$ rad/s). She brings her arms in, changing her moment of inertia to $I_2 = 1.5$ $kg\\cdot m^{2}$ over $0.5$ seconds. 
 
 If no external torque acts:
 
@@ -64,10 +64,10 @@ But $\\Delta L = 0$ for the system! The internal torque changes $I$ and $\\omega
     {
       id: 'am3-mcq2',
       type: 'mcq' as const,
-      question: 'A constant torque brings a wheel from rest to $\\omega = 20$ rad/s in $5$ s. The angular impulse delivered is $100$ kg·m²/s. The moment of inertia is:',
-      options: ['$5$ kg·m²', '$20$ kg·m²', '$100$ kg·m²', '$0.5$ kg·m²'],
+      question: 'A constant torque brings a wheel from rest to $\\omega = 20$ rad/s in $5$ s. The angular impulse delivered is $100$ $kg\\cdot m^{2}/s$. The moment of inertia is:',
+      options: ['$5$ $kg\\cdot m^{2}$', '$20$ $kg\\cdot m^{2}$', '$100$ $kg\\cdot m^{2}$', '$0.5$ $kg\\cdot m^{2}$'],
       correctAnswer: 0,
-      explanation: '$\\Delta L = I\\omega - 0 = I(20) = 100$. $I = 100/20 = 5$ kg·m².'
+      explanation: '$\\Delta L = I\\omega - 0 = I(20) = 100$. $I = 100/20 = 5$ $kg\\cdot m^{2}$.'
     },
     {
       id: 'am3-variable',
@@ -113,7 +113,7 @@ $$mg - \\frac{1}{2}Ma = ma \\implies a = \\frac{mg}{m + M/2}$$`
     {
       id: 'am3-mcq4',
       type: 'mcq' as const,
-      question: 'A disk with $I = 2$ kg·m² has angular velocity $\\omega(t) = 3t^2$ rad/s. The torque at $t = 2$ s is:',
+      question: 'A disk with $I = 2$ $kg\\cdot m^{2}$ has angular velocity $\\omega(t) = 3t^2$ rad/s. The torque at $t = 2$ s is:',
       options: ['$24$ N·m', '$12$ N·m', '$36$ N·m', '$6$ N·m'],
       correctAnswer: 0,
       explanation: '$L = I\\omega = 2(3t^2) = 6t^2$. $\\tau = dL/dt = 12t$. At $t = 2$: $\\tau = 24$ N·m. Alternatively: $\\alpha = d\\omega/dt = 6t$, $\\tau = I\\alpha = 2(6)(2) = 24$ N·m.'

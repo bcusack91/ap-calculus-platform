@@ -119,11 +119,11 @@ This lets you find $I$ about any axis that is parallel to one through the center
       content: `
 **Rotational Inertia Calculations** 🧮
 
-1) Three masses (2 kg each) are arranged on a light rod at distances 0.1 m, 0.3 m, and 0.5 m from the rotation axis. What is the total rotational inertia? (in kg·m², round to 3 significant figures)
+1) Three masses (2 kg each) are arranged on a light rod at distances 0.1 m, 0.3 m, and 0.5 m from the rotation axis. What is the total rotational inertia? (in $kg\\cdot m^{2}$, round to 3 significant figures)
 
-2) A solid disk has mass 4 kg and radius 0.3 m. What is its rotational inertia about its central axis? (in kg·m²)
+2) A solid disk has mass 4 kg and radius 0.3 m. What is its rotational inertia about its central axis? $(in kg\\cdot m^{2})$
 
-3) A solid sphere has $I = 0.8$ kg·m² and radius 0.2 m. What is its mass? (in kg)
+3) A solid sphere has $I = 0.8$ $kg\\cdot m^{2}$ and radius 0.2 m. What is its mass? (in kg)
       `,
       exercise: {
         boxes: 3,
@@ -131,7 +131,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
         hint1: '$I = 2(0.1)^2 + 2(0.3)^2 + 2(0.5)^2$',
         hint2: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.09)$',
         hint3: '$I = \\frac{2}{5}MR^2 \\Rightarrow M = 5I/(2R^2)$',
-        explanation: '1) $I = 2(0.01) + 2(0.09) + 2(0.25) = 0.02 + 0.18 + 0.50 = 0.70$ kg·m². 2) $I = \\frac{1}{2}(4)(0.09) = 0.18$ kg·m². 3) $M = 5(0.8)/(2 \\times 0.04) = 4.0/0.08 = 50$ kg.'
+        explanation: '1) $I = 2(0.01) + 2(0.09) + 2(0.25) = 0.02 + 0.18 + 0.50 = 0.70$ $kg\\cdot m^{2}$. 2) $I = \\frac{1}{2}(4)(0.09) = 0.18$ $kg\\cdot m^{2}$. 3) $M = 5(0.8)/(2 \\times 0.04) = 4.0/0.08 = 50$ kg.'
       }
     },
     {
@@ -150,7 +150,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
           },
           {
             label: 'The rotational inertia of a solid disk about its central axis is:',
-            options: ['MR²', '½MR²', '⅖MR²', '⅔MR²'],
+            options: ['$MR^{2}$', '$\\tfrac{1}{2} MR^{2}$', '⅖$MR^{2}$', '$\\tfrac{2}{3} MR^{2}$'],
             correctIndex: 1,
             explanation: 'A solid disk (or cylinder) has $I = \\frac{1}{2}MR^2$ about its central axis.'
           },
@@ -185,13 +185,13 @@ This lets you find $I$ about any axis that is parallel to one through the center
           {
             question: 'Using the parallel axis theorem, the rotational inertia of a disk (mass 2 kg, radius 0.1 m) about an axis at its rim is:',
             options: [
-              '0.01 kg·m²',
-              '0.02 kg·m²',
-              '0.03 kg·m²',
-              '0.04 kg·m²'
+              '0.01 $kg\\cdot m^{2}$',
+              '0.02 $kg\\cdot m^{2}$',
+              '0.03 $kg\\cdot m^{2}$',
+              '0.04 $kg\\cdot m^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$I = I_{\\text{cm}} + Md^2 = \\frac{1}{2}(2)(0.01) + (2)(0.01) = 0.01 + 0.02 = 0.03$ kg·m².'
+            explanation: '$I = I_{\\text{cm}} + Md^2 = \\frac{1}{2}(2)(0.01) + (2)(0.01) = 0.01 + 0.02 = 0.03$ $kg\\cdot m^{2}$.'
           }
         ]
       }

@@ -70,11 +70,11 @@ Person (60 kg) pushes box (20 kg) with 100 N on a frictionless floor.
 - Wait — on a frictionless floor, the person pushes the box and the floor provides no traction. Let\'s say the person can push off a wall.
 - The person pushes the wall with force $F$; the wall pushes back on the person with $F$
 - System mass: $60 + 20 = 80$ kg
-- If the person exerts 100 N: $a = 100/80 = 1.25$ m/s² for the whole system
+- If the person exerts 100 N: $a = 100/80 = 1.25$ $m/s^{2}$ for the whole system
 
 **Individual analysis (box only):**
 - Person pushes box: 100 N... but wait, we need to find the *actual* contact force
-- If $a = 1.25$ m/s²: $F_{\\text{on box}} = m_{\\text{box}} \\times a = 20 \\times 1.25 = 25$ N
+- If $a = 1.25$ $m/s^{2}$: $F_{\\text{on box}} = m_{\\text{box}} \\times a = 20 \\times 1.25 = 25$ N
       `
     },
     {
@@ -156,7 +156,7 @@ In every case, the object accelerates because the **net external force on that o
       content: `
 **System and Object Analysis** 🧮
 
-A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system accelerates at 2 m/s².
+A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system accelerates at 2 $m/s^{2}$.
 
 1) What is the net external force on the system (in N)?
 

@@ -46,15 +46,15 @@ This works because $W_{\\text{air}} - W_{\\text{water}} = F_B = \\rho_w V g$, an
       id: 'bu3-lab-drill',
       type: 'input-boxes' as const,
       content: `
-**Lab Analysis Drill** (use $g = 10$ m/s², $\\rho_{\\text{water}} = 1000$ kg/m³)
+**Lab Analysis Drill** (use $g = 10$ $m/s^{2}$, $\\rho_{\\text{water}} = 1000$ $kg/m^{3}$)
 
 A metal block weighs 45 N in air and 35 N when fully submerged in water.
 
 1) Buoyant force on the block (in N)
 
-2) Volume of the block (in m³)
+2) Volume of the block $(in m^{3})$
 
-3) Density of the block (in kg/m³)
+3) Density of the block $(in kg/m^{3})$
 
 *Round all answers to 3 significant figures.*
       `,
@@ -64,7 +64,7 @@ A metal block weighs 45 N in air and 35 N when fully submerged in water.
         hint1: '$F_B = W_{\\text{air}} - W_{\\text{water}} = 45 - 35$.',
         hint2: '$F_B = \\rho_w V g$. So $V = F_B / (\\rho_w g) = 10/(1000 \\times 10)$.',
         hint3: '$m = W/g = 45/10 = 4.5$ kg. $\\rho = m/V = 4.5/0.001$.',
-        explanation: '$F_B = 10$ N. $V = 10/(1000 \\times 10) = 0.001$ m³. $\\rho = 4.5/0.001 = 4500$ kg/m³ (close to titanium).'
+        explanation: '$F_B = 10$ N. $V = 10/(1000 \\times 10) = 0.001$ $m^{3}$. $\\rho = 4.5/0.001 = 4500$ $kg/m^{3}$ (close to titanium).'
       }
     },
     {
@@ -83,13 +83,13 @@ $$a = \\frac{F_{\\text{net}}}{m} = \\left(1 - \\frac{\\rho_{\\text{fluid}}}{\\rh
 
 ### Example
 
-An iron ball ($\\rho = 7800$ kg/m³) sinks in water. Its initial acceleration (ignoring drag):
+An iron ball ($\\rho = 7800$ $kg/m^{3}$) sinks in water. Its initial acceleration (ignoring drag):
 
 $$a = \\left(1 - \\frac{1000}{7800}\\right)(10) = (1 - 0.128)(10) = 8.72 \\text{ m/s}^2$$
 
 That's only slightly less than free fall! Iron is so much denser than water that buoyancy barely slows it.
 
-But for an object with $\\rho = 1200$ kg/m³:
+But for an object with $\\rho = 1200$ $kg/m^{3}$:
 
 $$a = \\left(1 - \\frac{1000}{1200}\\right)(10) = (0.167)(10) = 1.67 \\text{ m/s}^2$$
 
@@ -107,9 +107,9 @@ Much slower — buoyancy is providing significant support.
           {
             question: 'You weigh a block in three different liquids. In which liquid does the scale read the LOWEST?',
             options: [
-              'Alcohol (ρ = 800 kg/m³)',
-              'Water (ρ = 1000 kg/m³)',
-              'Mercury (ρ = 13,600 kg/m³)',
+              'Alcohol (ρ = 800 $kg/m^{3}$)',
+              'Water (ρ = 1000 $kg/m^{3}$)',
+              'Mercury (ρ = 13,600 $kg/m^{3}$)',
               'All read the same'
             ],
             correctAnswer: 2,
@@ -141,11 +141,11 @@ Much slower — buoyancy is providing significant support.
 
 $F_B = 25.0 - 22.6 = 2.4$ N
 
-$V = F_B/(\\rho_w g) = 2.4/(1000 \\times 10) = 2.4 \\times 10^{-4}$ m³
+$V = F_B/(\\rho_w g) = 2.4/(1000 \\times 10) = 2.4 \\times 10^{-4}$ $m^{3}$
 
-$\\rho = m/V = 2.5 / (2.4 \\times 10^{-4}) = 10{,}417$ kg/m³
+$\\rho = m/V = 2.5 / (2.4 \\times 10^{-4}) = 10{,}417$ $kg/m^{3}$
 
-**Verdict:** Pure gold has $\\rho = 19{,}300$ kg/m³. This crown has $\\rho \\approx 10{,}400$ kg/m³ — the goldsmith was a fraud! (The crown was likely a gold-silver alloy.)
+**Verdict:** Pure gold has $\\rho = 19{,}300$ $kg/m^{3}$. This crown has $\\rho \\approx 10{,}400$ $kg/m^{3}$ — the goldsmith was a fraud! (The crown was likely a gold-silver alloy.)
       `
     },
     {
@@ -159,13 +159,13 @@ $\\rho = m/V = 2.5 / (2.4 \\times 10^{-4}) = 10{,}417$ kg/m³
           {
             question: 'A crown weighs 7.84 N in air and 7.34 N in water. Its density is approximately:',
             options: [
-              '19,300 kg/m³ (pure gold)',
-              '15,700 kg/m³ (gold-silver mix)',
-              '10,500 kg/m³ (silver)',
-              '7,800 kg/m³ (iron)'
+              '19,300 $kg/m^{3}$ (pure gold)',
+              '15,700 $kg/m^{3}$ (gold-silver mix)',
+              '10,500 $kg/m^{3}$ (silver)',
+              '7,800 $kg/m^{3}$ (iron)'
             ],
             correctAnswer: 1,
-            explanation: '$F_B = 0.50$ N. $V = 0.50/10{,}000 = 5 \\times 10^{-5}$ m³. $m = 0.784$ kg. $\\rho = 0.784/(5 \\times 10^{-5}) = 15{,}680 \\approx 15{,}700$ kg/m³. Not pure gold, not pure silver — a mix.'
+            explanation: '$F_B = 0.50$ N. $V = 0.50/10{,}000 = 5 \\times 10^{-5}$ $m^{3}$. $m = 0.784$ kg. $\\rho = 0.784/(5 \\times 10^{-5}) = 15{,}680 \\approx 15{,}700$ $kg/m^{3}$. Not pure gold, not pure silver — a mix.'
           },
           {
             question: 'Two objects are fully submerged in water: a 1 kg block of aluminum and a 1 kg block of lead. Which has a greater buoyant force?',

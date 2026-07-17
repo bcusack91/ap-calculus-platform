@@ -145,7 +145,7 @@ Every one of these applications relies on the same simple rule: charges exert fo
               'No — that value is too small to measure'
             ],
             correctAnswer: 1,
-            explanation: 'Charge must be a whole-number multiple of e = 1.6 × 10⁻¹⁹ C. Since 2.4/1.6 = 1.5, which is not an integer, this charge is impossible.'
+            explanation: 'Charge must be a whole-number multiple of e = $1.6 \\times 10^{-19}$ C. Since 2.4/1.6 = 1.5, which is not an integer, this charge is impossible.'
           }
         ]
       }

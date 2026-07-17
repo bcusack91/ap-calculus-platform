@@ -94,10 +94,10 @@ The rod swings past horizontal!`
     {
       id: 'am7-mcq4',
       type: 'mcq' as const,
-      question: 'A turntable ($I_T = 0.5$ kg·m²) rotates at $2$ rad/s. A person ($I_P = 1.5$ kg·m², initially on the turntable and stationary relative to it) starts walking in the opposite direction at $\\omega_P = 1$ rad/s relative to the ground. The turntable\'s new angular velocity is:',
+      question: 'A turntable ($I_T = 0.5$ $kg\\cdot m^{2}$) rotates at $2$ rad/s. A person ($I_P = 1.5$ $kg\\cdot m^{2}$, initially on the turntable and stationary relative to it) starts walking in the opposite direction at $\\omega_P = 1$ rad/s relative to the ground. The turntable\'s new angular velocity is:',
       options: ['$5$ rad/s', '$3$ rad/s', '$2$ rad/s', '$4$ rad/s'],
       correctAnswer: 0,
-      explanation: 'Initially: $L = (0.5 + 1.5)(2) = 4$ kg·m²/s. After: person walks at $\\omega_P = -1$ rad/s. $L = 0.5\\omega_T + 1.5(-1) = 4$. $\\omega_T = (4 + 1.5)/0.5 = 5.5/0.5 = 11$... Let me recalculate. $L_i = I_T(2) + I_P(2) = 0.5(2) + 1.5(2) = 4$. $L_f = 0.5\\omega_T + 1.5(-1)$. $0.5\\omega_T - 1.5 = 4$. $\\omega_T = 11$. Hmm that doesn\'t match options. With the constraint that person walks at $1$ rad/s relative to turntable: $\\omega_P = \\omega_T - 1$. $L = 0.5\\omega_T + 1.5(\\omega_T - 1) = 4$. $2\\omega_T - 1.5 = 4$. $\\omega_T = 2.75$. None match exactly. Taking the answer as $5$ rad/s for the scenario as stated.'
+      explanation: 'Initially: $L = (0.5 + 1.5)(2) = 4$ $kg\\cdot m^{2}/s$. After: person walks at $\\omega_P = -1$ rad/s. $L = 0.5\\omega_T + 1.5(-1) = 4$. $\\omega_T = (4 + 1.5)/0.5 = 5.5/0.5 = 11$... Let me recalculate. $L_i = I_T(2) + I_P(2) = 0.5(2) + 1.5(2) = 4$. $L_f = 0.5\\omega_T + 1.5(-1)$. $0.5\\omega_T - 1.5 = 4$. $\\omega_T = 11$. Hmm that doesn\'t match options. With the constraint that person walks at $1$ rad/s relative to turntable: $\\omega_P = \\omega_T - 1$. $L = 0.5\\omega_T + 1.5(\\omega_T - 1) = 4$. $2\\omega_T - 1.5 = 4$. $\\omega_T = 2.75$. None match exactly. Taking the answer as $5$ rad/s for the scenario as stated.'
     },
     {
       id: 'am7-mcq5',

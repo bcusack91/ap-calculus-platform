@@ -24,7 +24,7 @@ $$PE_g = mgh$$
 
 where:
 - $m$ = mass of the object (kg)
-- $g$ = acceleration due to gravity ($\\approx 10$ m/s²)
+- $g$ = acceleration due to gravity ($\\approx 10$ $m/s^{2}$)
 - $h$ = height above the chosen **reference level** (m)
 
 ### Properties
@@ -58,7 +58,7 @@ The reference level (or reference point) is the position where $h = 0$ and there
 
 A ball is on a 3 m high table in a room with a 2 m deep basement:
 
-| Reference Level | Height $h$ | $PE_g$ ($m = 2$ kg, $g = 10$ m/s²) |
+| Reference Level | Height $h$ | $PE_g$ ($m = 2$ kg, $g = 10$ $m/s^{2}$) |
 |----------------|-----------|------|
 | Floor | 3 m | 60 J |
 | Tabletop | 0 m | 0 J |
@@ -127,7 +127,7 @@ When an object falls ($\\Delta PE_g < 0$), gravity does positive work. When an o
             explanation: 'If the object is below the reference level, $h < 0$, so $PE_g = mgh < 0$. PE can be negative!'
           },
           {
-            question: 'A 2 kg ball falls from 10 m to 4 m (above the ground). The change in gravitational PE is ($g = 10$ m/s²):',
+            question: 'A 2 kg ball falls from 10 m to 4 m (above the ground). The change in gravitational PE is ($g = 10$ $m/s^{2}$):',
             options: [
               '+120 J',
               '-120 J',
@@ -146,7 +146,7 @@ When an object falls ($\\Delta PE_g < 0$), gravity does positive work. When an o
       content: `
 **PE Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) What is the gravitational PE of a 5 kg object 8 m above the ground (in J)?
 
@@ -207,7 +207,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 4 kg cat jumps from a 1 m table to a 2.5 m shelf. The change in gravitational PE is ($g = 10$ m/s²):',
+            question: 'A 4 kg cat jumps from a 1 m table to a 2.5 m shelf. The change in gravitational PE is ($g = 10$ $m/s^{2}$):',
             options: [
               '40 J',
               '60 J',
@@ -218,7 +218,7 @@ Use $g = 10$ m/s².
             explanation: '$\\Delta PE_g = mg\\Delta h = 4(10)(2.5 - 1.0) = 4(10)(1.5) = 60$ J.'
           },
           {
-            question: 'Two students calculate the PE of a ball. Student A uses the floor as reference and gets 50 J. Student B uses a tabletop 1 m below the ball. If the ball is 2 kg, Student B\'s answer is ($g = 10$ m/s²):',
+            question: 'Two students calculate the PE of a ball. Student A uses the floor as reference and gets 50 J. Student B uses a tabletop 1 m below the ball. If the ball is 2 kg, Student B\'s answer is ($g = 10$ $m/s^{2}$):',
             options: [
               '20 J',
               '30 J',

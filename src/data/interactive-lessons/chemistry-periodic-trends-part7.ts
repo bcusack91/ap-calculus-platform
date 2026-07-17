@@ -63,9 +63,9 @@ The AP exam frequently tests these exceptions:
 
 | Exception | What Happens | Why |
 |-----------|-------------|-----|
-| IE: B < Be | IE **drops** going from Be to B | B removes a $2p$ e⁻ (higher energy) vs. Be's $2s$ e⁻ |
-| IE: O < N | IE **drops** going from N to O | O has a paired $2p$ e⁻; N's half-filled $2p^3$ is extra stable |
-| EA: F < Cl (less negative) | F gains e⁻ less readily than Cl | F is so small → e⁻–e⁻ repulsion in tiny $2p$ orbitals |
+| IE: B < Be | IE **drops** going from Be to B | B removes a $2p$ $e^{-}$ (higher energy) vs. Be's $2s$ $e^{-}$ |
+| IE: O < N | IE **drops** going from N to O | O has a paired $2p$ $e^{-}$; N's half-filled $2p^3$ is extra stable |
+| EA: F < Cl (less negative) | F gains $e^{-}$ less readily than Cl | F is so small → $e^{-}$–$e^{-}$ repulsion in tiny $2p$ orbitals |
 | EA ≈ 0: N, Be, Ne | Won't accept an extra electron | Stable configs: half-filled $2p^3$, full $2s^2$, full octet |
 
 ---
@@ -76,7 +76,7 @@ The AP exam frequently tests these exceptions:
 |---------|---------------|------|
 | F | −328 | Small size → repulsion offsets gain |
 | Cl | −349 | Larger, less repulsion → **most negative** EA |
-| N, Be, Ne | ≈ 0 | Stable subshell configs resist extra e⁻ |
+| N, Be, Ne | ≈ 0 | Stable subshell configs resist extra $e^{-}$ |
 
 ---
 
@@ -136,7 +136,7 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
 
 ### Template for Across-a-Period Explanations
 
-> "As you move from [element A] to [element B] across Period [N], the atomic number increases from [Z₁] to [Z₂]. Electrons are added to the same principal energy level ($n = $ [N]), and same-shell electrons do not effectively shield each other. Therefore, the effective nuclear charge ($Z_{eff}$) increases, which causes [property] to [increase/decrease]."
+> "As you move from [element A] to [element B] across Period [N], the atomic number increases from [$Z_{1}$] to [$Z_{2}$]. Electrons are added to the same principal energy level ($n = $ [N]), and same-shell electrons do not effectively shield each other. Therefore, the effective nuclear charge ($Z_{eff}$) increases, which causes [property] to [increase/decrease]."
 
 
 ---
@@ -197,20 +197,20 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
 
 **1.** Of Li, C, F, and Na — which element has the highest first ionization energy? (Type the symbol.)
 
-**2.** Rank the following from smallest to largest ionic radius: Na⁺, Mg²⁺, F⁻. All have 10 electrons. (Type as symbols separated by commas, smallest first, e.g., "Mg2+, Na+, F-".)
+**2.** Rank the following from smallest to largest ionic radius: $Na^{+}$, $Mg^{2+}$, $F^{-}$. All have 10 electrons. (Type as symbols separated by commas, smallest first, e.g., "Mg2+, Na+, F-".)
 
 **3.** Which element in Period 3 has the smallest atomic radius (excluding noble gases)? (Type the symbol.)`,
       exercise: {
         inputs: [
           {
-            label: 'Highest IE₁:',
+            label: 'Highest $IE_{1}$:',
             correctAnswer: 'F',
-            explanation: 'F is in Period 2, Group 17 — farthest right. Li (Group 1) and Na (Group 1, Period 3) have very low IEs. C (Group 14) is moderate. F has the highest $Z_{eff}$ among these and the highest IE₁.'
+            explanation: 'F is in Period 2, Group 17 — farthest right. Li (Group 1) and Na (Group 1, Period 3) have very low IEs. C (Group 14) is moderate. F has the highest $Z_{eff}$ among these and the highest $IE_{1}$.'
           },
           {
             label: 'Smallest to largest ionic radius:',
             correctAnswer: 'Mg2+, Na+, F-',
-            explanation: 'All three have 10 electrons. Proton counts: Mg²⁺ = 12, Na⁺ = 11, F⁻ = 9. More protons = smaller radius. So Mg²⁺ (65 pm) < Na⁺ (95 pm) < F⁻ (133 pm).'
+            explanation: 'All three have 10 electrons. Proton counts: $Mg^{2+}$ = 12, $Na^{+}$ = 11, $F^{-}$ = 9. More protons = smaller radius. So $Mg^{2+}$ (65 pm) < $Na^{+}$ (95 pm) < $F^{-}$ (133 pm).'
           },
           {
             label: 'Smallest atomic radius in Period 3:',
@@ -249,15 +249,15 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
             explanation: 'The huge jump occurs between $IE_2$ and $IE_3$ (1,451 → 7,733, a factor of 5×). This means the element has 2 valence electrons that are easy to remove, then the 3rd requires breaking into the core. This is Group 2 — magnesium.'
           },
           {
-            question: 'Which of the following correctly ranks the species from smallest to largest radius: Al³⁺, Na⁺, F⁻, N³⁻ (all have 10 electrons)?',
+            question: 'Which of the following correctly ranks the species from smallest to largest radius: $Al^{3+}$, $Na^{+}$, $F^{-}$, $N^{3-}$ (all have 10 electrons)?',
             options: [
-              'N³⁻ < F⁻ < Na⁺ < Al³⁺',
-              'Al³⁺ < Na⁺ < F⁻ < N³⁻',
-              'F⁻ < N³⁻ < Na⁺ < Al³⁺',
-              'Na⁺ < Al³⁺ < F⁻ < N³⁻'
+              '$N^{3-}$ < $F^{-}$ < $Na^{+}$ < $Al^{3+}$',
+              '$Al^{3+}$ < $Na^{+}$ < $F^{-}$ < $N^{3-}$',
+              '$F^{-}$ < $N^{3-}$ < $Na^{+}$ < $Al^{3+}$',
+              '$Na^{+}$ < $Al^{3+}$ < $F^{-}$ < $N^{3-}$'
             ],
             correctAnswer: 1,
-            explanation: 'All have 10 electrons. Proton counts: Al³⁺ = 13, Na⁺ = 11, F⁻ = 9, N³⁻ = 7. More protons = more pull = smaller radius. So Al³⁺ < Na⁺ < F⁻ < N³⁻.'
+            explanation: 'All have 10 electrons. Proton counts: $Al^{3+}$ = 13, $Na^{+}$ = 11, $F^{-}$ = 9, $N^{3-}$ = 7. More protons = more pull = smaller radius. So $Al^{3+}$ < $Na^{+}$ < $F^{-}$ < $N^{3-}$.'
           },
           {
             question: 'A student claims "atomic radius increases across a period because more electrons are added." What is wrong with this reasoning?',

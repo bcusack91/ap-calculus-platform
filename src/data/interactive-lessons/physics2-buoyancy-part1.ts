@@ -50,9 +50,9 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
 
 Where:
 - $F_B$ = buoyant force (N)
-- $\\rho_{\\text{fluid}}$ = density of the fluid (kg/m³)
+- $\\rho_{\\text{fluid}}$ = density of the fluid $(kg/m^{3})$
 - $V_{\\text{displaced}}$ = volume of fluid displaced (= volume of the object that's submerged)
-- $g$ = 9.8 m/s² (or 10 for AP estimates)
+- $g$ = 9.8 $m/s^{2}$ (or 10 for AP estimates)
 
 ### The Key Insight
 
@@ -110,9 +110,9 @@ The buoyant force depends on:
       id: 'bu1-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Buoyant Force Drill** (use $g = 10$ m/s², $\\rho_{\\text{water}} = 1000$ kg/m³)
+**Buoyant Force Drill** (use $g = 10$ $m/s^{2}$, $\\rho_{\\text{water}} = 1000$ $kg/m^{3}$)
 
-A block with volume $V = 0.005$ m³ is fully submerged in water.
+A block with volume $V = 0.005$ $m^{3}$ is fully submerged in water.
 
 1) Buoyant force on the block (in N)
 

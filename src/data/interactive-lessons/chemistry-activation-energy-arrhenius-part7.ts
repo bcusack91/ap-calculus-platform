@@ -119,21 +119,21 @@ A reaction energy diagram shows:
       content: `
 **AP Problem 2: Arrhenius Calculation** 🧮
 
-The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}$ s⁻¹ at 298 K and $k = 4.87 \\times 10^{-3}$ s⁻¹ at 338 K.
+The rate constant for the decomposition of $N_{2}O_{5}$ is $k = 3.46 \\times 10^{-5}$ $s^{-1}$ at 298 K and $k = 4.87 \\times 10^{-3}$ $s^{-1}$ at 338 K.
 
 **1)** Calculate $E_a$ in kJ/mol. (to 3 significant figures)
 
-**2)** Calculate the frequency factor $A$. (order of magnitude: enter the exponent, e.g., for 10¹³ enter 13)
+**2)** Calculate the frequency factor $A$. (order of magnitude: enter the exponent, e.g., for $10^{13}$ enter 13)
 
-**3)** What would $k$ be at 310 K? (in s⁻¹, to 1 significant figure in scientific notation, e.g., 2e-4)
+**3)** What would $k$ be at 310 K? (in $s^{-1}$, to 1 significant figure in scientific notation, e.g., 2e-4)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['103.5', '13', '2e-4'],
         hint1: 'ln(4.87e-3/3.46e-5) = ln(140.8) = 4.948. 1/298 − 1/338 = 3.356e-3 − 2.959e-3 = 3.97e-4. Ea = 8.314 × 4.948/3.97e-4 = 41.14/3.97e-4 = 103,600 J/mol = 103.6 kJ/mol.',
-        hint2: 'ln A = ln k + Ea/(RT) = ln(3.46e-5) + 103,600/(8.314 × 298) = −10.27 + 41.77 = 31.50. A = e^31.5 ≈ 4.8 × 10¹³. Exponent = 13.',
-        hint3: 'ln(k/3.46e-5) = (103,600/8.314)(1/298 − 1/310) = 12,462 × (3.356e-3 − 3.226e-3) = 12,462 × 1.30e-4 = 1.62. k = 3.46e-5 × e^1.62 = 3.46e-5 × 5.05 = 1.75e-4 ≈ 2e-4.',
-        explanation: '1) Ea = 8.314 × ln(140.8)/3.97e-4 = 103,600 J/mol = 103.5 kJ/mol. 2) ln A = 31.5 → A ≈ 10¹³. 3) At 310 K: k ≈ 2 × 10⁻⁴ s⁻¹.'
+        hint2: 'ln A = ln k + Ea/(RT) = ln(3.46e-5) + 103,600/(8.314 × 298) = −10.27 + 41.77 = 31.50. A = $e^{31.5}$ ≈ $4.8 \\times 10^{13}$. Exponent = 13.',
+        hint3: 'ln(k/3.46e-5) = (103,600/8.314)(1/298 − 1/310) = 12,462 × (3.356e-3 − 3.226e-3) = 12,462 × 1.30e-4 = 1.62. k = 3.46e-5 × $e^{1.62}$ = 3.46e-5 × 5.05 = 1.75e-4 ≈ 2e-4.',
+        explanation: '1) Ea = 8.314 × ln(140.8)/3.97e-4 = 103,600 J/mol = 103.5 kJ/mol. 2) ln A = 31.5 → A ≈ $10^{13}$. 3) At 310 K: k ≈ $2 \\times 10^{-4}$ $s^{-1}$.'
       }
     },
     {
@@ -161,10 +161,10 @@ The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}
               '1.5',
               '150',
               '22,000',
-              '4.5 × 10⁴'
+              '$4.5 \\times 10^{4}$'
             ],
             correctAnswer: 2,
-            explanation: 'Ratio = e^((75,000−50,000)/(8.314×300)) = e^(25,000/2494) = e^(10.02) ≈ 22,400 ≈ 22,000.'
+            explanation: 'Ratio = e^((75,000−50,000)/(8.314×300)) = e^(25,000/2494) = $e^{10.02}$ ≈ 22,400 ≈ 22,000.'
           },
           {
             question: 'Why do enzymes stop working at very high temperatures?',
@@ -189,7 +189,7 @@ The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}
       exercise: {
         dropdowns: [
           {
-            label: 'The Boltzmann factor e^(−Ea/RT) represents the fraction of molecules with',
+            label: 'The Boltzmann factor $e^{-Ea/RT}$ represents the fraction of molecules with',
             options: ['any kinetic energy', 'energy ≥ Ea', 'energy = 0', 'energy < Ea']
           },
           {
@@ -206,9 +206,9 @@ The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}
           }
         ],
         correctAnswers: ['energy ≥ Ea', 'slope', 'A (frequency factor)', 'adsorbing reactants and weakening bonds'],
-        hint1: 'e^(−Ea/RT) gives the fraction of molecules with enough energy to react.',
+        hint1: '$e^{-Ea/RT}$ gives the fraction of molecules with enough energy to react.',
         hint2: 'slope = −Ea/R → Ea = −R × slope.',
-        hint3: 'If Ea = 0: k = Ae⁰ = A.',
+        hint3: 'If Ea = 0: k = $Ae^{0}$ = A.',
         explanation: 'Boltzmann factor = fraction with energy ≥ Ea. Slope of ln k vs 1/T gives Ea. Ea = 0 → k = A. Heterogeneous catalysts adsorb molecules onto their surface, weakening bonds.'
       }
     },
@@ -220,7 +220,7 @@ The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}
 
 A catalyzed reaction has the following data:
 
-| T (K) | k (M⁻¹s⁻¹) |
+| T (K) | k $(M^{-1}s^{-1})$ |
 |-------|-----------|
 | 300 | 0.050 |
 | 350 | 0.85 |
@@ -236,8 +236,8 @@ A catalyzed reaction has the following data:
         correctAnswers: ['50.2', '49.8', '5e8'],
         hint1: 'ln(0.85/0.050) = ln(17) = 2.833. 1/300 − 1/350 = 3.333e-3 − 2.857e-3 = 4.76e-4. Ea = 8.314 × 2.833/4.76e-4 = 23.55/4.76e-4 = 49,500 J/mol ≈ 50.2 kJ/mol.',
         hint2: 'ΔEa = 100 − 50.2 = 49.8 kJ/mol.',
-        hint3: 'k(cat)/k(uncat) = e^((100,000−50,200)/(8.314×300)) = e^(49,800/2494) = e^(19.97) ≈ 4.7 × 10⁸ ≈ 5 × 10⁸.',
-        explanation: '1) Ea = 8.314 × 2.833/4.76e-4 = 49,500 J/mol ≈ 50.2 kJ/mol. 2) 100.0 − 50.2 = 49.8 kJ/mol. 3) e^(19.97) ≈ 5 × 10⁸.'
+        hint3: 'k(cat)/k(uncat) = e^((100,000−50,200)/(8.314×300)) = e^(49,800/2494) = $e^{19.97}$ ≈ $4.7 \\times 10^{8}$ ≈ $5 \\times 10^{8}$.',
+        explanation: '1) Ea = 8.314 × 2.833/4.76e-4 = 49,500 J/mol ≈ 50.2 kJ/mol. 2) 100.0 − 50.2 = 49.8 kJ/mol. 3) $e^{19.97}$ ≈ $5 \\times 10^{8}$.'
       }
     },
     {
@@ -251,13 +251,13 @@ A catalyzed reaction has the following data:
           {
             question: 'A student measures k at 5 temperatures and plots ln k vs 1/T. The best-fit line has slope = −6,000 K and y-intercept = 25.0. What is Ea and A?',
             options: [
-              'Ea = 49.9 kJ/mol, A = e²⁵ ≈ 7.2 × 10¹⁰',
+              'Ea = 49.9 kJ/mol, A = $e^{25}$ ≈ $7.2 \\times 10^{10}$',
               'Ea = 6.0 kJ/mol, A = 25.0',
               'Ea = 49.9 kJ/mol, A = 25.0',
-              'Ea = 6,000 J/mol, A = e²⁵'
+              'Ea = 6,000 J/mol, A = $e^{25}$'
             ],
             correctAnswer: 0,
-            explanation: 'Ea = −R × slope = −8.314 × (−6,000) = 49,884 J/mol = 49.9 kJ/mol. A = e^(y-intercept) = e²⁵ ≈ 7.2 × 10¹⁰.'
+            explanation: 'Ea = −R × slope = −8.314 × (−6,000) = 49,884 J/mol = 49.9 kJ/mol. A = $e^{y-intercept}$ = $e^{25}$ ≈ $7.2 \\times 10^{10}$.'
           },
           {
             question: 'Which combination would make a reaction fastest?',
@@ -268,7 +268,7 @@ A catalyzed reaction has the following data:
               'Low Ea, low T, no catalyst'
             ],
             correctAnswer: 1,
-            explanation: 'Fastest rate requires: low Ea (large Boltzmann factor), high T (more energy), and a catalyst (further lowers Ea). This maximizes k = Ae^(−Ea/RT).'
+            explanation: 'Fastest rate requires: low Ea (large Boltzmann factor), high T (more energy), and a catalyst (further lowers Ea). This maximizes k = $Ae^{-Ea/RT}$.'
           }
         ]
       }

@@ -102,7 +102,7 @@ $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
       exercise: {
         questions: [
           {
-            question: '10.0 mL of 0.0040 M AgNO₃ is mixed with 10.0 mL of 0.0060 M K₂CrO₄. $K_{sp}(\\text{Ag}_2\\text{CrO}_4) = 1.1 \\times 10^{-12}$. After dilution: $[\\text{Ag}^+] = 0.0020$ M, $[\\text{CrO}_4^{2-}] = 0.0030$ M. What is $Q_{sp}$?',
+            question: '10.0 mL of 0.0040 M $AgNO_{3}$ is mixed with 10.0 mL of 0.0060 M $K_{2}CrO_{4}$. $K_{sp}(\\text{Ag}_2\\text{CrO}_4) = 1.1 \\times 10^{-12}$. After dilution: $[\\text{Ag}^+] = 0.0020$ M, $[\\text{CrO}_4^{2-}] = 0.0030$ M. What is $Q_{sp}$?',
             options: [
               '$Q_{sp} = (0.0020)^2(0.0030) = 1.2 \\times 10^{-8}$',
               '$Q_{sp} = (0.0020)(0.0030) = 6.0 \\times 10^{-6}$',
@@ -139,15 +139,15 @@ $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
             options: ['precipitation problem', 'common ion problem', 'K_sp from solubility problem', 'selective precipitation problem']
           },
           {
-            label: '"Will BaSO₄ precipitate when mixing BaCl₂ and Na₂SO₄?" — this requires',
+            label: '"Will $BaSO_{4}$ precipitate when mixing $BaCl_{2}$ and $Na_{2}SO_{4}$?" — this requires',
             options: ['calculating molar solubility', 'comparing Q_sp to K_sp', 'finding K_sp', 'selective precipitation analysis']
           },
           {
-            label: '"Find the solubility of PbCl₂ in 0.50 M NaCl" — this involves',
+            label: '"Find the solubility of $PbCl_{2}$ in 0.50 M NaCl" — this involves',
             options: ['precipitation prediction', 'finding K_sp', 'the common ion effect', 'selective precipitation']
           },
           {
-            label: '"Separate Ag⁺ from Cu²⁺ using NaCl" — this is',
+            label: '"Separate $Ag^{+}$ from $Cu^{2+}$ using NaCl" — this is',
             options: ['a molar solubility problem', 'a K_sp determination', 'a common ion problem', 'selective precipitation']
           }
         ],
@@ -187,7 +187,7 @@ $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
             options: [
               'Temperature',
               'Presence of a common ion',
-              'Adding an inert salt like NaNO₃ (at low concentrations)',
+              'Adding an inert salt like $NaNO_{3}$ (at low concentrations)',
               'Changing $K_{sp}$'
             ],
             correctAnswer: 2,

@@ -818,7 +818,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation:
-      'A binding minimum wage above equilibrium causes Q_L^S > Q_L^D → surplus of labor (unemployment).',
+      'A binding minimum wage above equilibrium causes $Q_{L}^{S}$ > $Q_{L}^{D}$ → surplus of labor (unemployment).',
   },
 
   /* ============================ UNIT 6 — MARKET FAILURE & GOVT (6) ============================ */

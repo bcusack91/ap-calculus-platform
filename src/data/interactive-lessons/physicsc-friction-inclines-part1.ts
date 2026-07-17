@@ -38,7 +38,7 @@ $$N = mg + F\\sin\\theta$$`
     {
       id: 'fri1-mcq1',
       type: 'mcq' as const,
-      question: 'A 10 kg block sits on a surface with $\\mu_s = 0.4$ and $\\mu_k = 0.3$. A horizontal force of 30 N is applied. What is the friction force on the block? (Use $g = 10$ m/s²)',
+      question: 'A 10 kg block sits on a surface with $\\mu_s = 0.4$ and $\\mu_k = 0.3$. A horizontal force of 30 N is applied. What is the friction force on the block? (Use $g = 10$ $m/s^{2}$)',
       options: [
         '$30$ N (static friction matches applied force)',
         '$39.2$ N (maximum static friction)',
@@ -137,15 +137,15 @@ $$\\theta_{\\text{opt}} = \\arctan(\\mu_s)$$`
     {
       id: 'fri1-mcq4',
       type: 'mcq' as const,
-      question: 'A 20 kg crate on a floor ($\\mu_s = 0.6$, $\\mu_k = 0.4$) has a 150 N horizontal force applied. What is the acceleration? ($g = 10$ m/s²)',
+      question: 'A 20 kg crate on a floor ($\\mu_s = 0.6$, $\\mu_k = 0.4$) has a 150 N horizontal force applied. What is the acceleration? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$3.5$ m/s²',
-        '$0$ m/s² (block does not move)',
-        '$2.5$ m/s²',
-        '$7.5$ m/s²'
+        '$3.5$ $m/s^{2}$',
+        '$0$ $m/s^{2}$ (block does not move)',
+        '$2.5$ $m/s^{2}$',
+        '$7.5$ $m/s^{2}$'
       ],
       correctAnswer: 0,
-      explanation: '$f_{s,\\max} = \\mu_s mg = 0.6 \\times 200 = 120$ N. Since 150 N $> 120$ N, the block moves. Use kinetic friction: $f_k = \\mu_k mg = 0.4 \\times 200 = 80$ N. Then $a = (150 - 80)/20 = 3.5$ m/s².'
+      explanation: '$f_{s,\\max} = \\mu_s mg = 0.6 \\times 200 = 120$ N. Since 150 N $> 120$ N, the block moves. Use kinetic friction: $f_k = \\mu_k mg = 0.4 \\times 200 = 80$ N. Then $a = (150 - 80)/20 = 3.5$ $m/s^{2}$.'
     },
     {
       id: 'fri1-summary',

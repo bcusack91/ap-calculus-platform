@@ -144,7 +144,7 @@ export const satWordProblemsPart7Data = {
         hint1: 'Two unknowns with two relationships → system.',
         hint2: 'Doubling = exponential growth.',
         hint3: 'Approaching each other = add speeds.',
-        explanation: 'Two unknowns → system: x = 2y + 3, x + y = 21. Doubling → exponential: A₀(2)^(t/8). Approaching → combined rate: d = (v₁+v₂)t. Mixing solutions → track the solute: c₁v₁ + c₂v₂ = c_f(v₁+v₂).'
+        explanation: 'Two unknowns → system: x = 2y + 3, x + y = 21. Doubling → exponential: $A_{0}(2)^{t/8}$. Approaching → combined rate: d = $(v_{1}+v_{2})t$. Mixing solutions → track the solute: $c_{1}v_{1}$ + $c_{2}v_{2}$ = $c_{f}(v_{1}+v_{2})$.'
       }
     },
     {

@@ -24,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 2: Friction Force Formula
   {
     id: 'fr-ent-2a',
-    question: 'A $20$ kg box sits on a surface with $\\mu_s = 0.5$. What is the maximum static friction force? (Use $g = 10$ m/s².)',
+    question: 'A $20$ kg box sits on a surface with $\\mu_s = 0.5$. What is the maximum static friction force? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$10$ N', '$50$ N', '$100$ N', '$200$ N'],
     correctIndex: 2,
     explanation: '$f_{s,max} = \\mu_s N = \\mu_s mg = 0.5 \\times 20 \\times 10 = 100$ N.',
@@ -33,7 +33,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'fr-ent-2b',
-    question: 'A $10$ kg box slides on a surface with $\\mu_k = 0.3$. What is the kinetic friction force? (Use $g = 10$ m/s².)',
+    question: 'A $10$ kg box slides on a surface with $\\mu_k = 0.3$. What is the kinetic friction force? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$3$ N', '$10$ N', '$30$ N', '$100$ N'],
     correctIndex: 2,
     explanation: '$f_k = \\mu_k N = \\mu_k mg = 0.3 \\times 10 \\times 10 = 30$ N.',
@@ -94,16 +94,16 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5: Friction & Acceleration
   {
     id: 'fr-ent-5a',
-    question: 'A $5$ kg block is pulled with $40$ N on a surface with $\\mu_k = 0.4$. What is the acceleration? (Use $g = 10$ m/s².)',
-    options: ['$2$ m/s²', '$4$ m/s²', '$6$ m/s²', '$8$ m/s²'],
+    question: 'A $5$ kg block is pulled with $40$ N on a surface with $\\mu_k = 0.4$. What is the acceleration? (Use $g = 10$ $m/s^{2}$.)',
+    options: ['$2$ $m/s^{2}$', '$4$ $m/s^{2}$', '$6$ $m/s^{2}$', '$8$ $m/s^{2}$'],
     correctIndex: 1,
-    explanation: '$f_k = \\mu_k mg = 0.4 \\times 5 \\times 10 = 20$ N. $F_{net} = 40 - 20 = 20$ N. $a = 20/5 = 4$ m/s².',
+    explanation: '$f_k = \\mu_k mg = 0.4 \\times 5 \\times 10 = 20$ N. $F_{net} = 40 - 20 = 20$ N. $a = 20/5 = 4$ $m/s^{2}$.',
     partNumber: 5,
     partTitle: 'Friction & Acceleration',
   },
   {
     id: 'fr-ent-5b',
-    question: 'A block slides on a rough surface and decelerates at $3$ m/s². What is the coefficient of kinetic friction? (Use $g = 10$ m/s².)',
+    question: 'A block slides on a rough surface and decelerates at $3$ $m/s^{2}$. What is the coefficient of kinetic friction? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$0.1$', '$0.2$', '$0.3$', '$0.5$'],
     correctIndex: 2,
     explanation: 'Only friction decelerates the block: $\\mu_k mg = ma$. So $\\mu_k = a/g = 3/10 = 0.3$.',
@@ -114,7 +114,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Static Friction Threshold
   {
     id: 'fr-ent-6a',
-    question: 'You push a $50$ kg crate with increasing force. It starts to move when you push with $200$ N. What is $\\mu_s$? (Use $g = 10$ m/s².)',
+    question: 'You push a $50$ kg crate with increasing force. It starts to move when you push with $200$ N. What is $\\mu_s$? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$0.2$', '$0.3$', '$0.4$', '$0.5$'],
     correctIndex: 2,
     explanation: 'At the threshold: $F = \\mu_s mg$. $200 = \\mu_s \\times 50 \\times 10$, so $\\mu_s = 200/500 = 0.4$.',

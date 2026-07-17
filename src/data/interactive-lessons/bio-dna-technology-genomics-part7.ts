@@ -86,7 +86,7 @@ where:
 
 **Q**: You start with 10 copies of a DNA template. After 25 cycles of PCR, how many copies of the target region will you have?
 
-**A**: $N = 10 \\times 2^{25} = 10 \\times 33{,}554{,}432 = 335{,}544{,}320$ copies (~3.4 × 10⁸)
+**A**: $N = 10 \\times 2^{25} = 10 \\times 33{,}554{,}432 = 335{,}544{,}320$ copies (~$3.4 \\times 10^{8}$)
 
 #### Worked Example 2
 
@@ -114,13 +114,13 @@ Since $n$ must be a whole number: **n = 24 cycles** minimum.
           {
             question: 'A lab technician starts a PCR reaction with 5 template molecules. After 30 cycles, approximately how many copies of the target sequence are produced?',
             options: [
-              '5 × 2³⁰ ≈ 5.4 billion copies',
+              '5 × $2^{30}$ ≈ 5.4 billion copies',
               '5 × 30 = 150 copies',
-              '2³⁰ ≈ 1 billion copies (ignoring the starting 5)',
-              '5³⁰ ≈ 9.3 × 10²⁰ copies'
+              '$2^{30}$ ≈ 1 billion copies (ignoring the starting 5)',
+              '$5^{30}$ ≈ $9.3 \\times 10^{20}$ copies'
             ],
             correctAnswer: 0,
-            explanation: 'Using N = N₀ × 2ⁿ: N = 5 × 2³⁰ = 5 × 1,073,741,824 ≈ 5.4 × 10⁹ (5.4 billion). Each template molecule is independently amplified, so you multiply the starting amount by the amplification factor.'
+            explanation: 'Using N = $N_{0}$ × $2^{n}$: N = 5 × $2^{30}$ = 5 × 1,073,741,824 ≈ $5.4 \\times 10^{9}$ (5.4 billion). Each template molecule is independently amplified, so you multiply the starting amount by the amplification factor.'
           },
           {
             question: 'If a PCR machine runs 35 cycles but the primers have a melting temperature of 58°C, at which step\'s temperature would incorrect annealing most likely cause non-specific amplification?',
@@ -214,8 +214,8 @@ AP Biology FRQs may ask you to **design or evaluate** a CRISPR experiment. Here 
             options: ['a combined', 'a single', 'no', 'an identical']
           },
           {
-            label: 'After n cycles of PCR, the number of target copies equals N₀ × _____.',
-            options: ['2ⁿ', 'n²', '2n', 'n × 2']
+            label: 'After n cycles of PCR, the number of target copies equals $N_{0}$ × _____.',
+            options: ['$2^{n}$', '$n^{2}$', '2n', 'n × 2']
           },
           {
             label: 'The best negative control for a CRISPR knockout experiment uses Cas9 with a _____ gRNA.',
@@ -226,11 +226,11 @@ AP Biology FRQs may ask you to **design or evaluate** a CRISPR experiment. Here 
             options: ['sequencing', 'Western blot', 'ELISA', 'flow cytometry']
           }
         ],
-        correctAnswers: ['a combined', '2ⁿ', 'non-targeting', 'sequencing'],
+        correctAnswers: ['a combined', '$2^{n}$', 'non-targeting', 'sequencing'],
         hint1: 'Heterozygotes carry two different alleles, each contributing its own restriction pattern to the gel.',
         hint2: 'PCR amplification is exponential — each cycle doubles the number of copies.',
         hint3: 'A non-targeting gRNA does not match any sequence in the genome, providing a true negative control.',
-        explanation: 'Heterozygotes show a combined pattern from both alleles. PCR amplification follows N = N₀ × 2ⁿ (exponential). Non-targeting gRNAs are the gold-standard negative control for CRISPR experiments. DNA sequencing confirms the exact nucleotide changes introduced by editing.'
+        explanation: 'Heterozygotes show a combined pattern from both alleles. PCR amplification follows N = $N_{0}$ × $2^{n}$ (exponential). Non-targeting gRNAs are the gold-standard negative control for CRISPR experiments. DNA sequencing confirms the exact nucleotide changes introduced by editing.'
       }
     },
     {

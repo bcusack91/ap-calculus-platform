@@ -163,7 +163,7 @@ Connect all 9 dots (arranged in a 3×3 grid) with 4 straight lines without lifti
 | Misconception | Correction |
 |--------------|-----------|
 | Heuristics are always wrong | Heuristics are usually RIGHT — they just create systematic errors in specific situations |
-| Algorithms are always better | Algorithms are impractical for complex problems (chess has 10^120 possible games) |
+| Algorithms are always better | Algorithms are impractical for complex problems (chess has $10^{120}$ possible games) |
 | Insight = guessing | Insight involves unconscious processing that suddenly becomes conscious — it's not random |
 | Mental set = functional fixedness | Both are fixation, but: mental set = stuck on STRATEGY; functional fixedness = stuck on OBJECT function |
 

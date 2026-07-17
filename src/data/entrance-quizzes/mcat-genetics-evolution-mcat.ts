@@ -39,7 +39,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 2: Non-Mendelian Patterns
   {
     id: 'mge-ent-2a',
-    question: 'In codominance, a cross between a red-flowered plant (R¹R¹) and a white-flowered plant (R²R²) produces offspring with both red and white patches. This differs from incomplete dominance because:',
+    question: 'In codominance, a cross between a red-flowered plant $(R^{1}R^{1})$ and a white-flowered plant $(R^{2}R^{2})$ produces offspring with both red and white patches. This differs from incomplete dominance because:',
     options: [
       'In codominance, both alleles are fully expressed simultaneously; in incomplete dominance, a blended intermediate phenotype results.',
       'In codominance, only one allele is expressed; in incomplete dominance, both are equally silent.',
@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'mge-ent-2b',
-    question: 'Hemophilia A is an X-linked recessive disorder. A carrier mother (X^H X^h) and an unaffected father (X^H Y) have children. What fraction of their daughters will be carriers?',
+    question: 'Hemophilia A is an X-linked recessive disorder. A carrier mother $(X^{H} X^{h})$ and an unaffected father $(X^{H} Y)$ have children. What fraction of their daughters will be carriers?',
     options: [
       '0%',
       '25%',
@@ -61,7 +61,7 @@ const questions: EntranceQuizQuestion[] = [
       '100%'
     ],
     correctIndex: 2,
-    explanation: 'Mother is X^H X^h; father is X^H Y. Daughters receive the father\'s X^H plus either mother\'s X^H or X^h. Possible daughters: X^H X^H (normal, 1/2) and X^H X^h (carrier, 1/2). Sons: X^H Y (normal) and X^h Y (affected). So 50% of daughters are carriers.',
+    explanation: 'Mother is $X^{H}$ $X^{h}$; father is $X^{H}$ Y. Daughters receive the father\'s $X^{H}$ plus either mother\'s $X^{H}$ or $X^{h}$. Possible daughters: $X^{H}$ $X^{H}$ (normal, 1/2) and $X^{H}$ $X^{h}$ (carrier, 1/2). Sons: $X^{H}$ Y (normal) and $X^{h}$ Y (affected). So 50% of daughters are carriers.',
     partNumber: 2,
     partTitle: 'Non-Mendelian Patterns'
   },
@@ -107,7 +107,7 @@ const questions: EntranceQuizQuestion[] = [
       '0.21'
     ],
     correctIndex: 1,
-    explanation: 'HWE: p + q = 1, so p = 0.7. Heterozygote frequency = 2pq = 2(0.7)(0.3) = 0.42. Homozygous dominant = p² = 0.49; homozygous recessive = q² = 0.09. Always check: 0.49 + 0.42 + 0.09 = 1.0 ✓',
+    explanation: 'HWE: p + q = 1, so p = 0.7. Heterozygote frequency = 2pq = 2(0.7)(0.3) = 0.42. Homozygous dominant = $p^{2}$ = 0.49; homozygous recessive = $q^{2}$ = 0.09. Always check: 0.49 + 0.42 + 0.09 = 1.0 ✓',
     partNumber: 4,
     partTitle: 'Population Genetics'
   },

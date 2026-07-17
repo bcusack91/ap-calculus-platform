@@ -76,7 +76,7 @@ Cheat sheet of the patterns most likely to appear on exam day.
 
 ## Efficiency Quick Hits
 
-- Replace nested loops with a single pass + dictionary (O(n²) → O(n)).
+- Replace nested loops with a single pass + dictionary ($O(n^{2})$ → O(n)).
 - Pre-sort once, then linear scan, instead of repeated max searches.
 - Cache repeated computations.
 - Pick the right data structure: list for ordered, set for membership, dictionary for keyed lookup.

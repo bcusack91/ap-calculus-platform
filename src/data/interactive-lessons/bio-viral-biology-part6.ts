@@ -55,7 +55,7 @@ Prions are **misfolded versions of a normal brain protein** (PrP) that cause oth
 
 ### Normal vs Prion Protein
 
-| Feature | PrPᶜ (normal) | PrPˢᶜ (prion) |
+| Feature | $PrP^{c}$ (normal) | $PrP^{sc}$ (prion) |
 |---------|---------------|----------------|
 | Structure | Mostly α-helix | Mostly β-sheet |
 | Solubility | Soluble | Insoluble, forms aggregates |
@@ -63,8 +63,8 @@ Prions are **misfolded versions of a normal brain protein** (PrP) that cause oth
 | Function | May help with cell signaling, copper transport | Causes neurodegeneration |
 
 ### How Prions Propagate
-1. PrPˢᶜ contacts normal PrPᶜ
-2. PrPˢᶜ acts as a **template**, converting PrPᶜ to PrPˢᶜ
+1. $PrP^{sc}$ contacts normal $PrP^{c}$
+2. $PrP^{sc}$ acts as a **template**, converting $PrP^{c}$ to $PrP^{sc}$
 3. Misfolded proteins aggregate → amyloid fibrils → plaques
 4. Plaques cause neuronal death → spongy brain tissue (spongiform encephalopathy)
 
@@ -82,7 +82,7 @@ Prions are **misfolded versions of a normal brain protein** (PrP) that cause oth
 ### Why Prions Are So Dangerous
 - **No nucleic acid** → cannot be targeted by antiviral drugs
 - **Resistant to**: autoclaving (standard conditions), UV radiation, formaldehyde, proteases
-- **No immune response** — PrPˢᶜ is the host's own protein (self antigen)
+- **No immune response** — $PrP^{sc}$ is the host's own protein (self antigen)
 - **No cure** — all prion diseases are currently fatal
 - Discovered by **Stanley Prusiner** (Nobel Prize, 1997)
 
@@ -104,10 +104,10 @@ Prions are **misfolded versions of a normal brain protein** (PrP) that cause oth
               'Prions can only infect plants'
             ],
             correctAnswer: 1,
-            explanation: 'Prions are misfolded proteins (PrPˢᶜ) that contain no DNA or RNA. They propagate by converting normal PrPᶜ into the misfolded form — an entirely protein-based mode of infection.'
+            explanation: 'Prions are misfolded proteins $(PrP^{sc})$ that contain no DNA or RNA. They propagate by converting normal $PrP^{c}$ into the misfolded form — an entirely protein-based mode of infection.'
           },
           {
-            question: 'What structural change occurs when PrPᶜ is converted to PrPˢᶜ?',
+            question: 'What structural change occurs when $PrP^{c}$ is converted to $PrP^{sc}$?',
             options: [
               'α-helix to β-sheet conversion',
               'Phosphorylation of tyrosine residues',
@@ -115,7 +115,7 @@ Prions are **misfolded versions of a normal brain protein** (PrP) that cause oth
               'Cleavage into smaller peptides'
             ],
             correctAnswer: 0,
-            explanation: 'The normal PrPᶜ protein is rich in α-helices. The prion form (PrPˢᶜ) has the same amino acid sequence but refolds into β-sheet-rich structures that aggregate into insoluble amyloid fibrils.'
+            explanation: 'The normal $PrP^{c}$ protein is rich in α-helices. The prion form $(PrP^{sc})$ has the same amino acid sequence but refolds into β-sheet-rich structures that aggregate into insoluble amyloid fibrils.'
           }
         ]
       }
@@ -145,9 +145,9 @@ SARS-CoV-2 illustrates nearly every concept in viral biology:
 - **mRNA vaccines** (Pfizer, Moderna) — encode spike protein to train immune system
 - **Viral evolution** explained need for boosters and updated vaccines
 - **Genomic surveillance** — sequencing tracks variant emergence in real time
-- **R₀ (basic reproduction number)** — measure of transmissibility
+- **$R_{0}$ (basic reproduction number)** — measure of transmissibility
 
-| Variant | Key Feature | R₀ Estimate |
+| Variant | Key Feature | $R_{0}$ Estimate |
 |---------|-------------|-------------|
 | Original (Wuhan) | ACE2 binding | ~2.5 |
 | Alpha (B.1.1.7) | N501Y mutation ↑ binding | ~4–5 |
@@ -168,23 +168,23 @@ SARS-CoV-2 illustrates nearly every concept in viral biology:
             options: ['dsDNA', 'ssRNA', 'protein', 'dsRNA']
           },
           {
-            label: 'Prion diseases are caused by the conversion of normal PrPᶜ to misfolded ___ form',
-            options: ['PrPˢᶜ', 'PrPᵐ', 'PrPᵈ', 'PrPⁿ']
+            label: 'Prion diseases are caused by the conversion of normal $PrP^{c}$ to misfolded ___ form',
+            options: ['$PrP^{sc}$', '$PrP^{m}$', '$PrP^{d}$', '$PrP^{n}$']
           },
           {
             label: 'SARS-CoV-2 enters host cells by binding its spike protein to the ___ receptor',
             options: ['CD4', 'ACE2', 'sialic acid', 'CCR5']
           },
           {
-            label: 'Prion diseases are untreatable partly because PrPˢᶜ is the host\'s own ___ and doesn\'t trigger an immune response',
+            label: 'Prion diseases are untreatable partly because $PrP^{sc}$ is the host\'s own ___ and doesn\'t trigger an immune response',
             options: ['carbohydrate', 'lipid', 'protein', 'nucleic acid']
           }
         ],
-        correctAnswers: ['ssRNA', 'PrPˢᶜ', 'ACE2', 'protein'],
+        correctAnswers: ['ssRNA', '$PrP^{sc}$', 'ACE2', 'protein'],
         hint1: 'Viroids are the simplest infectious agents — just a single strand of RNA.',
         hint2: 'The "Sc" stands for "scrapie" — the sheep disease where prions were first characterized.',
         hint3: 'ACE2 is the key receptor for coronaviruses including SARS-CoV-2.',
-        explanation: 'Viroids are naked circular ssRNA molecules. Prions are misfolded PrPˢᶜ proteins. SARS-CoV-2 uses ACE2 as its receptor. PrPˢᶜ is the host\'s own protein (self antigen), so the immune system doesn\'t recognize it as foreign.'
+        explanation: 'Viroids are naked circular ssRNA molecules. Prions are misfolded $PrP^{sc}$ proteins. SARS-CoV-2 uses ACE2 as its receptor. $PrP^{sc}$ is the host\'s own protein (self antigen), so the immune system doesn\'t recognize it as foreign.'
       }
     }
   ]

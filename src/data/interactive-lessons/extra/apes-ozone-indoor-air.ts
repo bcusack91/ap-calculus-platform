@@ -38,7 +38,7 @@ export const parts: LessonData[] = [
 | How Ozone Blocks UV (the Chapman cycle) |
 | Why UV Matters for Life |
 
-> 🔑 **Key Concept:** The **same molecule, O₃,** is a life-saving shield in the **stratosphere** but a harmful pollutant at **ground level**. This entire lesson is about the *good* stratospheric ozone — what destroys it, and how we are repairing it — followed by the air *inside* the buildings where you spend most of your life.`,
+> 🔑 **Key Concept:** The **same molecule, $O_{3}$,** is a life-saving shield in the **stratosphere** but a harmful pollutant at **ground level**. This entire lesson is about the *good* stratospheric ozone — what destroys it, and how we are repairing it — followed by the air *inside* the buildings where you spend most of your life.`,
       },
       {
         id: 'apoz1-good-bad',
@@ -47,14 +47,14 @@ export const parts: LessonData[] = [
 
 Ozone's role flips completely depending on **altitude**:
 
-| Layer | Altitude | Role of O₃ | Verdict |
+| Layer | Altitude | Role of $O_{3}$ | Verdict |
 |-------|----------|------------|---------|
 | **Stratosphere** | ~15–35 km up | Absorbs incoming UV radiation, shielding life | ✅ Good ozone |
 | **Troposphere** | Ground level | Smog component; damages lungs and crops | ❌ Bad ozone |
 
 The **stratospheric** ozone layer is sometimes called the "ozone shield." It is what this lesson is about.
 
-> ⚠️ **The #1 exam trap of this whole topic:** *stratospheric ozone depletion* (the "ozone hole," caused by **CFCs**) is a **completely different problem** from *ground-level ozone* (smog, caused by **NOₓ + VOCs + sunlight**). Fixing one does nothing for the other. Do not confuse them.`,
+> ⚠️ **The #1 exam trap of this whole topic:** *stratospheric ozone depletion* (the "ozone hole," caused by **CFCs**) is a **completely different problem** from *ground-level ozone* (smog, caused by **$NO_{x}$ + VOCs + sunlight**). Fixing one does nothing for the other. Do not confuse them.`,
       },
       {
         id: 'apoz1-q-goodbad',
@@ -76,13 +76,13 @@ The **stratospheric** ozone layer is sometimes called the "ozone shield." It is 
             {
               question: 'The destruction of the stratospheric ozone layer is a SEPARATE issue from ground-level (tropospheric) ozone smog because:',
               options: [
-                'They occur at different altitudes and have different causes (CFCs vs. NOₓ + VOCs + sunlight)',
+                'They occur at different altitudes and have different causes (CFCs vs. $NO_{x}$ + VOCs + sunlight)',
                 'They are actually the same problem with two names',
                 'Both are caused by the same CFC molecules',
                 'Stratospheric ozone is man-made while ground-level ozone is natural',
               ],
               correctAnswer: 0,
-              explanation: 'Stratospheric depletion is caused by CFCs high in the atmosphere; ground-level ozone is a secondary pollutant formed near the surface from NOₓ + VOCs + sunlight. Same molecule, different altitudes, different causes.',
+              explanation: 'Stratospheric depletion is caused by CFCs high in the atmosphere; ground-level ozone is a secondary pollutant formed near the surface from $NO_{x}$ + VOCs + sunlight. Same molecule, different altitudes, different causes.',
             },
           ],
         },
@@ -154,7 +154,7 @@ The crucial point: **steps 1 and 3 absorb UV energy.** That absorbed UV never re
                 'By physically blocking visible light from reaching the ground',
               ],
               correctAnswer: 0,
-              explanation: 'As O₂ and O₃ are split by UV (and ozone reforms), the UV photons are absorbed. That absorbed UV energy never reaches the surface, which is the protection the layer provides.',
+              explanation: 'As $O_{2}$ and $O_{3}$ are split by UV (and ozone reforms), the UV photons are absorbed. That absorbed UV energy never reaches the surface, which is the protection the layer provides.',
             },
             {
               question: 'Increased UV-B radiation reaching the surface (from a thinner ozone layer) is harmful mainly because it:',
@@ -265,15 +265,15 @@ Walk through how one CFC molecule ends up destroying many ozone molecules.`,
         exercise: {
           dropdowns: [
             { label: 'First, in the stratosphere, UV light:', options: ['Splits a chlorine (Cl) atom off the CFC', 'Turns the CFC into oxygen', 'Bonds two CFCs together', 'Freezes the CFC'] },
-            { label: 'The freed chlorine atom then reacts with ozone to form:', options: ['ClO + O₂', 'O₃ + Cl₂', 'CO₂ + H₂O', 'HNO₃'] },
+            { label: 'The freed chlorine atom then reacts with ozone to form:', options: ['ClO + $O_{2}$', '$O_{3}$ + $Cl_{2}$', '$CO_{2}$ + $H_{2}O$', '$HNO_{3}$'] },
             { label: 'A later step regenerates the chlorine atom, so chlorine acts as a:', options: ['Catalyst (not used up)', 'Reactant that is consumed', 'Greenhouse gas', 'Primary pollutant'] },
             { label: 'Consequently, one chlorine atom destroys:', options: ['Many thousands of ozone molecules', 'Exactly one ozone molecule', 'Zero ozone molecules', 'Only oxygen molecules'] },
           ],
-          correctAnswers: ['Splits a chlorine (Cl) atom off the CFC', 'ClO + O₂', 'Catalyst (not used up)', 'Many thousands of ozone molecules'],
+          correctAnswers: ['Splits a chlorine (Cl) atom off the CFC', 'ClO + $O_{2}$', 'Catalyst (not used up)', 'Many thousands of ozone molecules'],
           hint1: 'Intense stratospheric UV is what finally breaks the stable CFC.',
-          hint2: 'Cl + O₃ → ClO + O₂ is the ozone-destroying step.',
+          hint2: 'Cl + $O_{3}$ → ClO + $O_{2}$ is the ozone-destroying step.',
           hint3: 'Because the Cl atom is regenerated, it keeps attacking — a catalyst.',
-          explanation: 'UV frees Cl from the CFC; Cl + O₃ → ClO + O₂; then ClO + O → Cl + O₂ regenerates Cl. Because chlorine is regenerated (a catalyst), one atom destroys ~100,000 ozone molecules.',
+          explanation: 'UV frees Cl from the CFC; Cl + $O_{3}$ → ClO + $O_{2}$; then ClO + O → Cl + $O_{2}$ regenerates Cl. Because chlorine is regenerated (a catalyst), one atom destroys ~100,000 ozone molecules.',
         },
       },
       {
@@ -289,7 +289,7 @@ CFCs are the headliner, but they are not alone:
 | **Halons** | Fire extinguishers; release **bromine**, even more destructive per atom |
 | **Carbon tetrachloride, methyl chloroform** | Solvents; chlorine sources |
 | **HCFCs** | Transitional replacements — *less* damaging but still harmful; being phased out |
-| **N₂O (nitrous oxide)** | Now a significant remaining ODS (from fertilizer, combustion) |
+| **$N_{2}O$ (nitrous oxide)** | Now a significant remaining ODS (from fertilizer, combustion) |
 
 > 💡 **HCFCs vs. HFCs:** **HCFCs** still contain chlorine (some ozone damage) and were a *temporary* bridge. **HFCs** contain **no chlorine**, so they don't deplete ozone — but many are potent **greenhouse gases**, which is why they too are now being phased down (Kigali Amendment, 2016).`,
       },
@@ -303,7 +303,7 @@ CFCs are the headliner, but they are not alone:
               question: 'Which element released from CFCs is the key catalyst that destroys stratospheric ozone?',
               options: ['Chlorine (Cl)', 'Fluorine (F)', 'Carbon (C)', 'Nitrogen (N)'],
               correctAnswer: 0,
-              explanation: 'It is the chlorine atom that catalytically destroys ozone (Cl + O₃ → ClO + O₂, then regenerated). Bromine from halons is similar and even more destructive per atom. Fluorine plays little role.',
+              explanation: 'It is the chlorine atom that catalytically destroys ozone (Cl + $O_{3}$ → ClO + $O_{2}$, then regenerated). Bromine from halons is similar and even more destructive per atom. Fluorine plays little role.',
             },
             {
               question: 'HFCs were adopted as CFC replacements, but they have a remaining downside. What is it?',
@@ -395,12 +395,12 @@ Less ozone overhead means **more UV-B** reaches the surface. Effects scale with 
 | Affected | Consequence of more UV-B |
 |----------|---------------------------|
 | **Humans** | More **skin cancer**, **cataracts**, weakened immune systems |
-| **Phytoplankton** | Damaged — and they are the base of the **marine food web** and major O₂/carbon sink |
+| **Phytoplankton** | Damaged — and they are the base of the **marine food web** and major $O_{2}/carbon$ sink |
 | **Crops & plants** | Reduced growth and yields |
 | **Amphibians** | UV damages eggs; contributes to declines |
 | **Materials** | Faster breakdown of plastics, paints, rubber |
 
-> 💡 **Phytoplankton are the sleeper answer.** Because they anchor ocean food webs and draw down CO₂, UV harm to them ripples through *entire ecosystems* and even the carbon cycle — a favorite free-response connection.`,
+> 💡 **Phytoplankton are the sleeper answer.** Because they anchor ocean food webs and draw down $CO_{2}$, UV harm to them ripples through *entire ecosystems* and even the carbon cycle — a favorite free-response connection.`,
       },
       {
         id: 'apoz3-input-uv',
@@ -427,12 +427,12 @@ A common rule of thumb: each **1% decrease** in ozone column lets roughly **2% m
 
 | Myth | Reality |
 |------|---------|
-| "The ozone hole causes global warming." | **No.** Ozone depletion (CFCs/UV) and climate change (CO₂/heat trapping) are **distinct** problems — though CFCs *also happen to be* greenhouse gases, the depletion mechanism is about UV, not heat. |
+| "The ozone hole causes global warming." | **No.** Ozone depletion (CFCs/UV) and climate change $(CO_{2}/heat trapping)$ are **distinct** problems — though CFCs *also happen to be* greenhouse gases, the depletion mechanism is about UV, not heat. |
 | "The hole lets in heat and melts the ice." | **No.** The hole lets in more **UV**, not heat. Warming/ice melt is driven by greenhouse gases. |
 
 > ⚠️ **Keep the two global atmospheric problems straight:**
 > • **Ozone depletion** → CFCs → more **UV** → skin cancer, ecosystem harm.
-> • **Climate change** → CO₂/CH₄ → trapped **heat** → warming, sea-level rise.
+> • **Climate change** → $CO_{2}/CH_{4}$ → trapped **heat** → warming, sea-level rise.
 > They overlap only in that some chemicals (CFCs, HFCs) appear in both stories.`,
       },
       {
@@ -444,14 +444,14 @@ For each item, choose which global atmospheric problem it belongs to.`,
         exercise: {
           dropdowns: [
             { label: 'Increased skin cancer and cataracts:', options: ['Ozone depletion', 'Climate change'] },
-            { label: 'Caused mainly by CO₂ and CH₄ trapping heat:', options: ['Climate change', 'Ozone depletion'] },
+            { label: 'Caused mainly by $CO_{2}$ and $CH_{4}$ trapping heat:', options: ['Climate change', 'Ozone depletion'] },
             { label: 'Driven by chlorine from CFCs in the stratosphere:', options: ['Ozone depletion', 'Climate change'] },
             { label: 'Rising sea levels from melting ice and thermal expansion:', options: ['Climate change', 'Ozone depletion'] },
           ],
           correctAnswers: ['Ozone depletion', 'Climate change', 'Ozone depletion', 'Climate change'],
           hint1: 'If it involves UV reaching the surface, it is ozone depletion.',
           hint2: 'If it involves trapped heat, it is climate change.',
-          hint3: 'CFCs/chlorine → depletion; CO₂/CH₄/heat → climate change.',
+          hint3: 'CFCs/chlorine → depletion; $CO_{2}/CH_{4}/heat$ → climate change.',
           explanation: 'Ozone depletion = CFC chlorine thins the layer → more UV → skin cancer/cataracts. Climate change = greenhouse gases trap heat → warming and sea-level rise. They are separate problems with separate causes.',
         },
       },
@@ -509,7 +509,7 @@ Why did it succeed where many treaties fail?
                 'Banned all use of fossil fuels',
               ],
               correctAnswer: 0,
-              explanation: 'The Montreal Protocol targeted ozone-depleting substances (CFCs, halons). It is universally ratified, CFC use collapsed, and the ozone layer is now projected to recover. (The Clean Air Act sets U.S. criteria-pollutant limits; the Kyoto/Paris agreements address CO₂.)',
+              explanation: 'The Montreal Protocol targeted ozone-depleting substances (CFCs, halons). It is universally ratified, CFC use collapsed, and the ozone layer is now projected to recover. (The Clean Air Act sets U.S. criteria-pollutant limits; the Kyoto/Paris agreements address $CO_{2}$.)',
             },
             {
               question: 'Even though CFC emissions were halted, why is the ozone layer recovering only slowly?',
@@ -537,9 +537,9 @@ The exam frequently mixes these up. Keep them straight:
 | **Montreal Protocol (1987)** | CFCs / ODS | **Stratospheric ozone** depletion |
 | **Kigali Amendment (2016)** | **HFCs** | Climate (HFCs are greenhouse gases) — an *add-on* to Montreal |
 | **Clean Air Act (U.S.)** | 6 criteria pollutants | **Ground-level** smog & air quality |
-| **Kyoto Protocol / Paris Agreement** | CO₂ and other GHGs | **Climate change** |
+| **Kyoto Protocol / Paris Agreement** | $CO_{2}$ and other GHGs | **Climate change** |
 
-> ⚠️ **Triple trap:** *Montreal = ozone layer/CFCs.* *Clean Air Act = ground-level smog/NAAQS.* *Paris/Kyoto = climate/CO₂.* The Kigali Amendment is the bridge — it lives *inside* the Montreal framework but fights **climate**, not ozone.`,
+> ⚠️ **Triple trap:** *Montreal = ozone layer/CFCs.* *Clean Air Act = ground-level smog/NAAQS.* *Paris/Kyoto = $climate/CO_{2}$.* The Kigali Amendment is the bridge — it lives *inside* the Montreal framework but fights **climate**, not ozone.`,
       },
       {
         id: 'apoz4-dd-policy',
@@ -549,14 +549,14 @@ The exam frequently mixes these up. Keep them straight:
           dropdowns: [
             { label: 'Phased out CFCs to protect the stratospheric ozone layer:', options: ['Montreal Protocol', 'Clean Air Act', 'Paris Agreement', 'Endangered Species Act'] },
             { label: 'Sets U.S. national limits (NAAQS) for criteria pollutants like ground-level ozone:', options: ['Clean Air Act', 'Montreal Protocol', 'Kyoto Protocol', 'Kigali Amendment'] },
-            { label: 'Targets CO₂ and other greenhouse gases to limit climate change:', options: ['Paris Agreement', 'Montreal Protocol', 'Clean Air Act', 'Safe Drinking Water Act'] },
+            { label: 'Targets $CO_{2}$ and other greenhouse gases to limit climate change:', options: ['Paris Agreement', 'Montreal Protocol', 'Clean Air Act', 'Safe Drinking Water Act'] },
             { label: 'Amendment that phases down HFCs (greenhouse gases) under the ozone treaty:', options: ['Kigali Amendment', 'Clean Air Act', 'Kyoto Protocol', 'NAAQS'] },
           ],
           correctAnswers: ['Montreal Protocol', 'Clean Air Act', 'Paris Agreement', 'Kigali Amendment'],
           hint1: 'CFCs and the ozone layer → Montreal.',
           hint2: 'NAAQS and ground-level smog → Clean Air Act.',
-          hint3: 'CO₂/climate → Paris; HFC phase-down add-on → Kigali.',
-          explanation: 'Montreal Protocol → CFCs/ozone layer. Clean Air Act → U.S. criteria pollutants/smog. Paris Agreement → CO₂/climate. Kigali Amendment → HFC phase-down (climate) under the Montreal framework.',
+          hint3: '$CO_{2}/climate$ → Paris; HFC phase-down add-on → Kigali.',
+          explanation: 'Montreal Protocol → CFCs/ozone layer. Clean Air Act → U.S. criteria pollutants/smog. Paris Agreement → $CO_{2}/climate$. Kigali Amendment → HFC phase-down (climate) under the Montreal framework.',
         },
       },
       {
@@ -668,7 +668,7 @@ Both are **invisible and odorless**, which is what makes them so deadly — you 
 
 **Carbon monoxide (CO)**
 - Produced by **incomplete combustion** — faulty furnaces, gas appliances, generators run indoors, blocked chimneys.
-- Binds hemoglobin ~**200× more strongly than O₂**, starving tissues of oxygen.
+- Binds hemoglobin ~**200× more strongly than $O_{2}$**, starving tissues of oxygen.
 - Causes headache, dizziness, and at high levels, death.
 - Detected with a **CO alarm**; prevented by appliance maintenance and never running engines indoors.
 
@@ -771,13 +771,13 @@ Cut the air-exchange rate in half (a tightly sealed room) and indoor concentrati
 Use $\\text{Indoor concentration} \\approx \\dfrac{\\text{Emission rate}}{\\text{Ventilation rate}}$.
 
 **1)** Emissions stay constant, but sealing a house cuts its ventilation (air-exchange) rate to **one-third** of before. The indoor pollutant concentration becomes how many times larger? (enter the number)
-**2)** "Air changes per hour" (ACH) is how many times a room's full air volume is replaced each hour. If a room of volume **60 m³** has a ventilation airflow of **120 m³ per hour**, what is its ACH? (enter the number)`,
+**2)** "Air changes per hour" (ACH) is how many times a room's full air volume is replaced each hour. If a room of volume **60 $m^{3}$** has a ventilation airflow of **120 $m^{3}$ per hour**, what is its ACH? (enter the number)`,
         exercise: {
           boxes: 2,
           correctAnswers: ['3', '2'],
           hint1: 'Concentration is inversely proportional to ventilation: cutting it to 1/3 multiplies concentration by 3.',
           hint2: 'ACH = airflow ÷ room volume.',
-          hint3: 'ACH = 120 m³/h ÷ 60 m³ = ?',
+          hint3: 'ACH = 120 $m^{3}/h$ ÷ 60 $m^{3}$ = ?',
           explanation: '1) Ventilation ÷3 → concentration ×3 for the same emission. 2) ACH = 120 ÷ 60 = 2 air changes per hour. Higher ACH dilutes pollutants faster.',
         },
       },
@@ -910,10 +910,10 @@ You now command both halves of this topic: the **stratospheric ozone shield** (i
 
 | Concept | Key fact |
 |---------|----------|
-| Good vs. bad ozone | Stratospheric O₃ shields UV (good); ground-level O₃ is smog (bad) |
+| Good vs. bad ozone | Stratospheric $O_{3}$ shields UV (good); ground-level $O_{3}$ is smog (bad) |
 | Ozone layer location | Stratosphere, ~15–35 km up |
-| Depletion cause | **CFCs** → UV frees **Cl** → catalytic O₃ destruction |
-| Catalyst point | One Cl atom destroys ~100,000 O₃ molecules |
+| Depletion cause | **CFCs** → UV frees **Cl** → catalytic $O_{3}$ destruction |
+| Catalyst point | One Cl atom destroys ~100,000 $O_{3}$ molecules |
 | Ozone hole | Seasonal thinning over **Antarctica**, worst in **spring (Sep–Oct)** |
 | Hole driver | Polar stratospheric clouds + vortex + returning sunlight |
 | Effects of more UV-B | Skin cancer, cataracts, harm to phytoplankton/crops |
@@ -923,7 +923,7 @@ You now command both halves of this topic: the **stratospheric ozone shield** (i
 | Developed vs. developing | Radon/CO/VOCs (developed) vs. cookfire smoke (developing) |
 | Master indoor fix | **Ventilation** (plus source control) |
 
-> ⚠️ **Top traps:** ozone depletion (CFCs/UV) ≠ ground-level ozone smog ≠ climate change (CO₂/heat); the hole is **seasonal** over **Antarctica**; chlorine is a **catalyst**; tightly **sealing** a building makes indoor air *worse*, not better.`,
+> ⚠️ **Top traps:** ozone depletion (CFCs/UV) ≠ ground-level ozone smog ≠ climate change $(CO_{2}/heat)$; the hole is **seasonal** over **Antarctica**; chlorine is a **catalyst**; tightly **sealing** a building makes indoor air *worse*, not better.`,
       },
       {
         id: 'apoz7-mixed',
@@ -934,13 +934,13 @@ You now command both halves of this topic: the **stratospheric ozone shield** (i
             {
               question: 'Which sequence correctly describes stratospheric ozone depletion?',
               options: [
-                'CFCs drift to the stratosphere → UV frees Cl → Cl catalytically destroys O₃',
-                'NOₓ + VOCs + sunlight near the ground → O₃ destroyed',
-                'CO₂ traps heat → ozone melts',
-                'Radon rises into the stratosphere → O₃ destroyed',
+                'CFCs drift to the stratosphere → UV frees Cl → Cl catalytically destroys $O_{3}$',
+                '$NO_{x}$ + VOCs + sunlight near the ground → $O_{3}$ destroyed',
+                '$CO_{2}$ traps heat → ozone melts',
+                'Radon rises into the stratosphere → $O_{3}$ destroyed',
               ],
               correctAnswer: 0,
-              explanation: 'Stable CFCs reach the stratosphere, UV splits off a chlorine atom, and that chlorine catalytically destroys ozone (Cl + O₃ → ClO + O₂, then Cl is regenerated). The other options describe smog, climate change, or nonsense.',
+              explanation: 'Stable CFCs reach the stratosphere, UV splits off a chlorine atom, and that chlorine catalytically destroys ozone (Cl + $O_{3}$ → ClO + $O_{2}$, then Cl is regenerated). The other options describe smog, climate change, or nonsense.',
             },
             {
               question: 'A homeowner in a developed country wants to reduce the two odorless indoor "silent killers." They should prioritize:',
@@ -993,7 +993,7 @@ Answer all three to finish the lesson.`,
                 'Is continuously re-emitted from car exhaust',
               ],
               correctAnswer: 0,
-              explanation: 'Cl + O₃ → ClO + O₂, then ClO + O → Cl + O₂ regenerates the chlorine atom. Because chlorine is a catalyst (not used up), one atom keeps destroying ozone — on the order of 100,000 molecules.',
+              explanation: 'Cl + $O_{3}$ → ClO + $O_{2}$, then ClO + O → Cl + $O_{2}$ regenerates the chlorine atom. Because chlorine is a catalyst (not used up), one atom keeps destroying ozone — on the order of 100,000 molecules.',
             },
             {
               question: 'The Antarctic ozone hole is best described as:',

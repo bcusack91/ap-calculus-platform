@@ -109,7 +109,7 @@ $$R_f = \\frac{4.2}{7.0} = 0.60$$
 ## 💨 Gas Chromatography (GC)
 
 - Stationary phase: liquid coating on the inside of a long, thin tube (capillary column)
-- Mobile phase: inert carrier gas (He or N₂)
+- Mobile phase: inert carrier gas (He or $N_{2}$)
 - Sample is **vaporized** and carried through the column
 - Components separate based on boiling point and polarity
 

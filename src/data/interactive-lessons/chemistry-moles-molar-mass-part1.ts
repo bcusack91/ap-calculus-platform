@@ -65,7 +65,7 @@ Avogadro's number is defined so that **one mole of carbon-12 atoms has a mass of
 | H | 1.008 | 1.008 |
 | C | 12.01 | 12.01 |
 | O | 16.00 | 16.00 |
-| H₂O | 18.02 | 18.02 |
+| $H_{2}O$ | 18.02 | 18.02 |
       `
     },
     {
@@ -118,7 +118,7 @@ $$\\text{atoms of Fe} = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{6.022 \
 
 ### Example 2: Particles → Moles
 
-> **Problem:** How many moles is $3.011 \\times 10^{23}$ molecules of CO₂?
+> **Problem:** How many moles is $3.011 \\times 10^{23}$ molecules of $CO_{2}$?
 
 **Solution:**
 
@@ -129,13 +129,13 @@ $$\\text{mol CO}_2 = 3.011 \\times 10^{23} \\; \\cancel{\\text{molecules CO}_2} 
 
 ### Watch Out for Polyatomic Molecules!
 
-> ⚠️ **Warning:** Don't confuse molecules with atoms! One molecule of H₂O contains 3 atoms (2 H + 1 O). Always check whether the question asks for molecules or individual atoms.
+> ⚠️ **Warning:** Don't confuse molecules with atoms! One molecule of $H_{2}O$ contains 3 atoms (2 H + 1 O). Always check whether the question asks for molecules or individual atoms.
 
-> **Problem:** If you have 1 mol of H₂O, how many molecules and atoms do you have?
+> **Problem:** If you have 1 mol of $H_{2}O$, how many molecules and atoms do you have?
 
 **Solution:**
 
-**Molecules of H₂O:**
+**Molecules of $H_{2}O$:**
 
 $$1 \\; \\cancel{\\text{mol H}_2\\text{O}} \\times \\frac{6.022 \\times 10^{23} \\text{ molecules H}_2\\text{O}}{1 \\; \\cancel{\\text{mol H}_2\\text{O}}} = 6.022 \\times 10^{23} \\text{ molecules of H}_2\\text{O}$$
 
@@ -172,7 +172,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
             explanation: 'Avogadro\'s number is $6.022 \\times 10^{23}$, defined as the number of particles in one mole of a substance.'
           },
           {
-            question: 'How many molecules are in 3.00 mol of water (H₂O)?',
+            question: 'How many molecules are in 3.00 mol of water $(H_{2}O)$?',
             options: [
               '$6.022 \\times 10^{23}$',
               '$1.204 \\times 10^{24}$',
@@ -180,7 +180,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
               '$5.420 \\times 10^{24}$'
             ],
             correctAnswer: 2,
-            explanation: '$3.00 \\text{ mol} \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ molecules. Note: this is the number of H₂O molecules, not individual atoms.'
+            explanation: '$3.00 \\text{ mol} \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ molecules. Note: this is the number of $H_{2}O$ molecules, not individual atoms.'
           },
           {
             question: 'One mole of any substance always contains:',
@@ -204,16 +204,16 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
 
 **1)** How many atoms are in 0.750 mol of aluminum (Al)? Express your answer in scientific notation as $a \\times 10^{23}$ — enter only the value of $a$ (to 3 significant figures).
 
-**2)** A sample contains $1.806 \\times 10^{24}$ molecules of CO₂. How many moles is this? (to 3 significant figures)
+**2)** A sample contains $1.806 \\times 10^{24}$ molecules of $CO_{2}$. How many moles is this? (to 3 significant figures)
 
-**3)** How many individual oxygen atoms are in 2.00 mol of O₂? Express as $a \\times 10^{24}$ — enter only $a$ (to 3 significant figures).
+**3)** How many individual oxygen atoms are in 2.00 mol of $O_{2}$? Express as $a \\times 10^{24}$ — enter only $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['4.52', '3.00', '2.409'],
         hint1: 'Multiply moles by Avogadro\'s number: $0.750 \\times 6.022 \\times 10^{23} = 4.517 \\times 10^{23}$.',
         hint2: 'Divide particles by Avogadro\'s number: $1.806 \\times 10^{24} \\div 6.022 \\times 10^{23}$.',
-        hint3: 'Each O₂ molecule has 2 oxygen atoms, so multiply moles of O₂ by $N_A$ and then by 2.',
+        hint3: 'Each $O_{2}$ molecule has 2 oxygen atoms, so multiply moles of $O_{2}$ by $N_A$ and then by 2.',
         explanation: '1) $0.750 \\times 6.022 \\times 10^{23} = 4.517 \\times 10^{23}$, so $a = 4.52$. 2) $1.806 \\times 10^{24} / 6.022 \\times 10^{23} = 3.00$ mol. 3) $2.00 \\text{ mol O}_2 \\times 6.022 \\times 10^{23} = 1.2044 \\times 10^{24}$ molecules, each with 2 O atoms: $2.4088 \\times 10^{24}$ atoms, so $a = 2.409$.'
       }
     },
@@ -239,10 +239,10 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
           },
           {
             label: 'If you have 0.5 mol of NaCl, you have ______ formula units',
-            options: ['6.022 × 10²³', '3.011 × 10²³', '1.204 × 10²⁴', '3.011 × 10²²']
+            options: ['$6.022 \\times 10^{23}$', '$3.011 \\times 10^{23}$', '$1.204 \\times 10^{24}$', '$3.011 \\times 10^{22}$']
           }
         ],
-        correctAnswers: ['amount of substance', 'Avogadro\'s number', 'the same number of', '3.011 × 10²³'],
+        correctAnswers: ['amount of substance', 'Avogadro\'s number', 'the same number of', '$3.011 \\times 10^{23}$'],
         hint1: 'The mole is the SI base unit for the amount of substance.',
         hint2: '$N_A = 6.022 \\times 10^{23}$ is named after Amedeo Avogadro.',
         hint3: 'A mole is a fixed number — 2 mol always means $2 \\times 6.022 \\times 10^{23}$ particles, regardless of the element.',
@@ -269,7 +269,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
             explanation: '$n = 1.2044 \\times 10^{24} / 6.022 \\times 10^{23} = 2.00$ mol.'
           },
           {
-            question: 'One mole of H₂O contains how many total atoms?',
+            question: 'One mole of $H_{2}O$ contains how many total atoms?',
             options: [
               '$6.022 \\times 10^{23}$',
               '$1.204 \\times 10^{24}$',
@@ -277,7 +277,7 @@ $$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ 
               '$2.409 \\times 10^{24}$'
             ],
             correctAnswer: 2,
-            explanation: 'Each H₂O molecule has 3 atoms (2 H + 1 O). Total atoms = $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$.'
+            explanation: 'Each $H_{2}O$ molecule has 3 atoms (2 H + 1 O). Total atoms = $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$.'
           }
         ]
       }

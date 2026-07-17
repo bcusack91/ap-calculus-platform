@@ -23,10 +23,10 @@ export const FRQS: SAQItem[] = [
     parts: [
       {
         letter: 'A',
-        question: 'Draw a correctly labeled graph of long-run aggregate supply (LRAS), short-run aggregate supply (SRAS), and aggregate demand (AD) for Westland. Show: (i) current short-run equilibrium price level (PL₁) and real GDP (Y₁), and (ii) the full-employment output (Yₑ).',
+        question: 'Draw a correctly labeled graph of long-run aggregate supply (LRAS), short-run aggregate supply (SRAS), and aggregate demand (AD) for Westland. Show: (i) current short-run equilibrium price level $(PL_{1})$ and real GDP $(Y_{1})$, and (ii) the full-employment output $(Y_{e})$.',
         rubric: [
           { id: 'a1', label: '1 pt — Correctly labeled axes (PL on y, Real GDP on x), AD downward sloping, SRAS upward sloping, LRAS vertical', description: 'Axes must be labeled (Price Level, Real GDP). All three curves must be present and correctly shaped.' },
-          { id: 'a2', label: '1 pt — Y₁ shown to the LEFT of Yₑ (recessionary gap) at the SRAS-AD intersection, with PL₁ identified', description: 'A recessionary gap must be visually clear: short-run equilibrium output is below LRAS.' },
+          { id: 'a2', label: '1 pt — $Y_{1}$ shown to the LEFT of $Y_{e}$ (recessionary gap) at the SRAS-AD intersection, with $PL_{1}$ identified', description: 'A recessionary gap must be visually clear: short-run equilibrium output is below LRAS.' },
         ],
       },
       {
@@ -38,10 +38,10 @@ export const FRQS: SAQItem[] = [
       },
       {
         letter: 'C',
-        question: 'Using a correctly labeled graph of the money market, show how the action you identified in part (B) affects the nominal interest rate. Label the original equilibrium (i₁) and the new equilibrium (i₂).',
+        question: 'Using a correctly labeled graph of the money market, show how the action you identified in part (B) affects the nominal interest rate. Label the original equilibrium $(i_{1})$ and the new equilibrium $(i_{2})$.',
         rubric: [
           { id: 'c1', label: '1 pt — Correctly labeled money market (axes: nominal interest rate i; quantity of money M)', description: 'Axes labeled, MD downward sloping, MS vertical.' },
-          { id: 'c2', label: '1 pt — Money supply shifts RIGHT and i₂ < i₁ shown', description: 'New equilibrium clearly to the right with a lower nominal interest rate.' },
+          { id: 'c2', label: '1 pt — Money supply shifts RIGHT and $i_{2}$ < $i_{1}$ shown', description: 'New equilibrium clearly to the right with a lower nominal interest rate.' },
         ],
       },
       {
@@ -69,18 +69,18 @@ export const FRQS: SAQItem[] = [
         letter: 'G',
         question: 'Assume Westland\'s real GDP returns to full employment after the Reserve Bank acts. In the long run, what happens to the price level and to long-run aggregate supply (LRAS) compared to the original equilibrium? Explain.',
         rubric: [
-          { id: 'g1', label: '1 pt — Price level rises; LRAS unchanged (vertical at full-employment output)', description: 'Must state that the price level is higher than PL₁ once AD shifts right to close the gap, and that LRAS itself does not shift (it is determined by potential output, not policy).' },
+          { id: 'g1', label: '1 pt — Price level rises; LRAS unchanged (vertical at full-employment output)', description: 'Must state that the price level is higher than $PL_{1}$ once AD shifts right to close the gap, and that LRAS itself does not shift (it is determined by potential output, not policy).' },
         ],
       },
     ],
     sampleResponse:
-      '(A) AD/AS graph: vertical axis = Price Level, horizontal axis = Real GDP. Draw a vertical LRAS at Yₑ, an upward-sloping SRAS, and a downward-sloping AD intersecting SRAS at (Y₁, PL₁) where Y₁ < Yₑ. The horizontal distance Yₑ − Y₁ is the recessionary gap.\n\n' +
+      '(A) AD/AS graph: vertical axis = Price Level, horizontal axis = Real GDP. Draw a vertical LRAS at $Y_{e}$, an upward-sloping SRAS, and a downward-sloping AD intersecting SRAS at ($Y_{1}$, $PL_{1}$) where $Y_{1}$ < $Y_{e}$. The horizontal distance $Y_{e}$ − $Y_{1}$ is the recessionary gap.\n\n' +
       '(B) The Reserve Bank should conduct an open-market PURCHASE of government bonds.\n\n' +
-      '(C) Money market graph: axes labeled (i, M). Vertical MS₁ shifts RIGHT to MS₂; downward-sloping MD unchanged. New equilibrium has lower nominal interest rate i₂ < i₁.\n\n' +
+      '(C) Money market graph: axes labeled (i, M). Vertical $MS_{1}$ shifts RIGHT to $MS_{2}$; downward-sloping MD unchanged. New equilibrium has lower nominal interest rate $i_{2}$ < $i_{1}$.\n\n' +
       '(D) The lower nominal interest rate reduces real interest rates, lowering the cost of borrowing for firms. This increases business investment spending (a component of AD).\n\n' +
       '(E) Money multiplier = 1 / RR = 1 / 0.10 = 10. Maximum money-supply increase = $200M × 10 = $2,000M ($2 billion).\n\n' +
       '(F) Spending multiplier = 1 / (1 − MPC) = 1 / (1 − 0.75) = 1 / 0.25 = 4. Maximum ΔReal GDP = $100M × 4 = $400M.\n\n' +
-      '(G) Once expansionary monetary policy shifts AD right and Westland reaches full-employment output Yₑ, the new equilibrium price level is HIGHER than PL₁. LRAS itself is unchanged — it is determined by the country\'s potential output, not by AD-side policy.',
+      '(G) Once expansionary monetary policy shifts AD right and Westland reaches full-employment output $Y_{e}$, the new equilibrium price level is HIGHER than $PL_{1}$. LRAS itself is unchanged — it is determined by the country\'s potential output, not by AD-side policy.',
   },
 
   /* ---------- FRQ 2 — SHORT (LOANABLE FUNDS / CROWDING OUT) ---------- */
@@ -93,10 +93,10 @@ export const FRQS: SAQItem[] = [
     parts: [
       {
         letter: 'A',
-        question: 'Using a correctly labeled graph of the loanable funds market in Eastland, show the effect of the increased deficit-financed government spending on the real interest rate. Label the original real interest rate (r₁) and the new real interest rate (r₂).',
+        question: 'Using a correctly labeled graph of the loanable funds market in Eastland, show the effect of the increased deficit-financed government spending on the real interest rate. Label the original real interest rate $(r_{1})$ and the new real interest rate $(r_{2})$.',
         rubric: [
           { id: 'a1', label: '1 pt — Correctly labeled loanable funds market (axes: real interest rate; quantity of loanable funds)', description: 'Axes labeled. Demand for loanable funds (D_LF) downward, supply (S_LF) upward.' },
-          { id: 'a2', label: '1 pt — D_LF shifts RIGHT and r₂ > r₁', description: 'Higher government borrowing increases demand for loanable funds, raising the real interest rate.' },
+          { id: 'a2', label: '1 pt — D_LF shifts RIGHT and $r_{2}$ > $r_{1}$', description: 'Higher government borrowing increases demand for loanable funds, raising the real interest rate.' },
         ],
       },
       {
@@ -129,7 +129,7 @@ export const FRQS: SAQItem[] = [
       },
     ],
     sampleResponse:
-      '(A) Loanable funds market: axes (r, Q_LF). Increased government borrowing shifts D_LF right; r rises from r₁ to r₂.\n\n' +
+      '(A) Loanable funds market: axes (r, Q_LF). Increased government borrowing shifts D_LF right; r rises from $r_{1}$ to $r_{2}$.\n\n' +
       '(B) The higher real interest rate raises the cost of borrowing for firms, so private investment spending falls — the crowding-out effect.\n\n' +
       '(C) Higher real interest rates in Eastland attract foreign financial capital. Foreigners must buy Eastland\'s currency to invest, raising demand for the currency and causing it to APPRECIATE.\n\n' +
       '(D) An appreciated currency makes Eastland\'s exports more expensive abroad and imports cheaper at home, so NET EXPORTS decrease.\n\n' +

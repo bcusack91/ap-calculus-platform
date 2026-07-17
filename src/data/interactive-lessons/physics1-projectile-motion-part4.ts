@@ -91,7 +91,7 @@ $$t_{up} = \\frac{t_{flight}}{2}$$
       content: `
 **Maximum Height Calculations** 🧮
 
-A ball is launched at 50 m/s at 37° above horizontal. Use $g = 10$ m/s², $\\sin 37° = 0.6$.
+A ball is launched at 50 m/s at 37° above horizontal. Use $g = 10$ $m/s^{2}$, $\\sin 37° = 0.6$.
 
 1) $v_{0y}$ (in m/s)
 
@@ -131,7 +131,7 @@ All launches are at the same speed $v_0$.
             explanation: '$h \\propto \\sin^2\\theta$. $\\frac{h_{60}}{h_{30}} = \\frac{\\sin^2 60°}{\\sin^2 30°} = \\frac{(\\sqrt{3}/2)^2}{(1/2)^2} = \\frac{3/4}{1/4} = 3$.'
           },
           {
-            label: 'If the maximum height is 20 m, the initial vertical velocity was (use $g = 10$ m/s²):',
+            label: 'If the maximum height is 20 m, the initial vertical velocity was (use $g = 10$ $m/s^{2}$):',
             options: ['10 m/s', '20 m/s', '30 m/s', '40 m/s'],
             correctIndex: 1,
             explanation: '$h = \\frac{v_{0y}^2}{2g}$, so $v_{0y} = \\sqrt{2gh} = \\sqrt{2(10)(20)} = \\sqrt{400} = 20$ m/s.'
@@ -145,7 +145,7 @@ All launches are at the same speed $v_0$.
       content: `
 **Challenge Problem** 🏆
 
-A ball is launched from ground level and reaches a maximum height of 31.25 m. The total time of flight is 5 s. Use $g = 10$ m/s².
+A ball is launched from ground level and reaches a maximum height of 31.25 m. The total time of flight is 5 s. Use $g = 10$ $m/s^{2}$.
 
 1) $v_{0y}$ (in m/s)
 
@@ -173,7 +173,7 @@ A ball is launched from ground level and reaches a maximum height of 31.25 m. Th
       exercise: {
         questions: [
           {
-            question: 'A projectile reaches a max height of 80 m. Using $g = 10$ m/s², what was $v_{0y}$?',
+            question: 'A projectile reaches a max height of 80 m. Using $g = 10$ $m/s^{2}$, what was $v_{0y}$?',
             options: [
               '20 m/s',
               '30 m/s',

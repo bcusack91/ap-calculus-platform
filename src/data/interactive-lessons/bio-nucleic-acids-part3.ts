@@ -14,7 +14,7 @@ export const bioNucleicAcidsPart3Data = {
 | **tRNA** | Brings the correct amino acid to the ribosome during translation |
 | **rRNA** | Catalytic component of the ribosome |
 | **ATP** | Energy currency (a modified nucleotide) |
-| **NAD⁺ / FAD / NADP⁺** | Electron carriers (also nucleotide-based) |
+| **$NAD^{+}$ / FAD / NADP$ {}^{+}$** | Electron carriers (also nucleotide-based) |
 
 ### The central dogma
 
@@ -56,9 +56,9 @@ This single reaction powers nearly everything cells do — muscle contraction, a
 
 ### Other nucleotide-based cofactors
 
-- **NAD⁺ / NADH** — electron carrier in respiration
-- **FAD / FADH₂** — electron carrier in respiration
-- **NADP⁺ / NADPH** — electron carrier in photosynthesis and biosynthesis
+- **$NAD^{+}$ / NADH** — electron carrier in respiration
+- **FAD / $FADH_{2}$** — electron carrier in respiration
+- **NADP$ {}^{+}$ / NADPH** — electron carrier in photosynthesis and biosynthesis
 - **cAMP** — second messenger in cell signaling
 
 So nucleotides do far more than store information — they are also the cell's **energy and signaling currency**.
@@ -71,7 +71,7 @@ So nucleotides do far more than store information — they are also the cell's *
       exercise: {
         questions: [
           {
-            question: 'ATP, NAD⁺, and cAMP all share the same fundamental building block. They are all:',
+            question: 'ATP, $NAD^{+}$, and cAMP all share the same fundamental building block. They are all:',
             options: [
               'Modified amino acids',
               'Modified fatty acids',
@@ -79,7 +79,7 @@ So nucleotides do far more than store information — they are also the cell's *
               'Polysaccharides'
             ],
             correctAnswer: 2,
-            explanation: 'ATP, NAD⁺, FAD, NADP⁺, and cAMP are all nucleotide-based, illustrating how the cell repurposes one chemical scaffold across many roles.'
+            explanation: 'ATP, $NAD^{+}$, FAD, NADP$ {}^{+}$, and cAMP are all nucleotide-based, illustrating how the cell repurposes one chemical scaffold across many roles.'
           }
         ]
       }

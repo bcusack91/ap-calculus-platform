@@ -93,7 +93,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'shm-ent-5b',
-    question: 'A pendulum with $L = 1$ m on Earth ($g = 10$ m/s²) has a period of approximately:',
+    question: 'A pendulum with $L = 1$ m on Earth ($g = 10$ $m/s^{2}$) has a period of approximately:',
     options: ['$1$ s', '$2$ s', '$\\pi$ s', '$2\\pi$ s'],
     correctIndex: 1,
     explanation: '$T = 2\\pi\\sqrt{1/10} = 2\\pi\\sqrt{0.1} \\approx 2\\pi(0.316) \\approx 2$ s.',

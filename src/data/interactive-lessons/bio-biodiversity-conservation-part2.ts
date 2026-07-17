@@ -135,7 +135,7 @@ $$D = 1 - 4 \\times (0.25)^2 = 1 - 4 \\times 0.0625 = 1 - 0.25 = 0.75$$
         dropdowns: [
           {
             label: 'The Shannon diversity index is calculated as $H\' = -\\sum p_i$ ___ $p_i$.',
-            options: ['× ln', '× log₁₀', '÷', '+ ln']
+            options: ['× ln', '× $\\log_{10}$', '÷', '+ ln']
           },
           {
             label: 'If a community has only one species, the Shannon index $H\'$ equals ___.',
@@ -152,8 +152,8 @@ $$D = 1 - 4 \\times (0.25)^2 = 1 - 4 \\times 0.0625 = 1 - 0.25 = 0.75$$
         ],
         correctAnswers: ['× ln', '0', 'different', 'rare'],
         hint1: 'The Shannon formula involves the natural logarithm of each proportion.',
-        hint2: 'With one species, p₁ = 1, and ln(1) = 0.',
-        hint3: 'Simpson\'s index weights common species more heavily because p² is larger for abundant species.',
+        hint2: 'With one species, $p_{1}$ = 1, and ln(1) = 0.',
+        hint3: 'Simpson\'s index weights common species more heavily because $p^{2}$ is larger for abundant species.',
         explanation: 'The Shannon index formula is H\' = −Σ pᵢ ln pᵢ. When only one species exists, p = 1 and ln(1) = 0, so H\' = 0. Simpson\'s D gives the probability of drawing two individuals of different species. The Shannon index gives more weight to rare species because the ln function amplifies small proportions, while Simpson\'s squaring of proportions emphasizes common species.'
       }
     },

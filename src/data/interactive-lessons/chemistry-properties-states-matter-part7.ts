@@ -58,18 +58,18 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
       exercise: {
         questions: [
           {
-            question: 'The normal boiling point of NH₃ (−33°C) is much higher than that of PH₃ (−87°C), even though PH₃ has a higher molar mass. This is best explained by:',
+            question: 'The normal boiling point of $NH_{3}$ (−33°C) is much higher than that of $PH_{3}$ (−87°C), even though $PH_{3}$ has a higher molar mass. This is best explained by:',
             options: [
-              'NH₃ has stronger London Dispersion Forces',
-              'NH₃ can form hydrogen bonds while PH₃ cannot',
-              'PH₃ is ionic while NH₃ is molecular',
-              'NH₃ has a lower molar mass, so it boils at a higher temperature'
+              '$NH_{3}$ has stronger London Dispersion Forces',
+              '$NH_{3}$ can form hydrogen bonds while $PH_{3}$ cannot',
+              '$PH_{3}$ is ionic while $NH_{3}$ is molecular',
+              '$NH_{3}$ has a lower molar mass, so it boils at a higher temperature'
             ],
             correctAnswer: 1,
-            explanation: 'NH₃ has N–H bonds where N is one of the three atoms (F, O, N) that enable hydrogen bonding. PH₃ has P–H bonds, but P is not F, O, or N, so PH₃ cannot form H-bonds. The strong H-bonding in NH₃ gives it a much higher boiling point despite lower molar mass.'
+            explanation: '$NH_{3}$ has N–H bonds where N is one of the three atoms (F, O, N) that enable hydrogen bonding. $PH_{3}$ has P–H bonds, but P is not F, O, or N, so $PH_{3}$ cannot form H-bonds. The strong H-bonding in $NH_{3}$ gives it a much higher boiling point despite lower molar mass.'
           },
           {
-            question: 'Which of the following best explains why the vapor pressure of ethanol (C₂H₅OH) is lower than that of dimethyl ether (CH₃OCH₃) at the same temperature, even though they have the same molar mass (46 g/mol)?',
+            question: 'Which of the following best explains why the vapor pressure of ethanol $(C_{2}H_{5}OH)$ is lower than that of dimethyl ether $(CH_{3}OCH_{3})$ at the same temperature, even though they have the same molar mass (46 g/mol)?',
             options: [
               'Ethanol has weaker London Dispersion Forces',
               'Dimethyl ether is ionic',
@@ -77,18 +77,18 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
               'Dimethyl ether has a higher molecular weight'
             ],
             correctAnswer: 2,
-            explanation: 'Ethanol has an O–H group that enables hydrogen bonding between molecules. Dimethyl ether (CH₃–O–CH₃) has no O–H or N–H bonds, so it can only exhibit dipole-dipole forces (weaker). Stronger IMFs in ethanol → lower vapor pressure.'
+            explanation: 'Ethanol has an O–H group that enables hydrogen bonding between molecules. Dimethyl ether ($CH_{3}$–O–$CH_{3}$) has no O–H or N–H bonds, so it can only exhibit dipole-dipole forces (weaker). Stronger IMFs in ethanol → lower vapor pressure.'
           },
           {
-            question: 'A student observes that SiO₂ (quartz) has a melting point of 1713°C while CO₂ (dry ice) sublimes at −78°C. Both contain elements from the same groups. The best explanation is:',
+            question: 'A student observes that $SiO_{2}$ (quartz) has a melting point of 1713°C while $CO_{2}$ (dry ice) sublimes at −78°C. Both contain elements from the same groups. The best explanation is:',
             options: [
-              'SiO₂ is a network covalent solid with strong covalent bonds throughout, while CO₂ is a molecular solid with weak LDF',
-              'CO₂ has stronger bonds than SiO₂',
-              'SiO₂ is an ionic solid while CO₂ is molecular',
-              'CO₂ has a higher molar mass'
+              '$SiO_{2}$ is a network covalent solid with strong covalent bonds throughout, while $CO_{2}$ is a molecular solid with weak LDF',
+              '$CO_{2}$ has stronger bonds than $SiO_{2}$',
+              '$SiO_{2}$ is an ionic solid while $CO_{2}$ is molecular',
+              '$CO_{2}$ has a higher molar mass'
             ],
             correctAnswer: 0,
-            explanation: 'SiO₂ forms a 3D network covalent solid — every Si is covalently bonded to 4 O atoms in a continuous network. Melting requires breaking strong covalent bonds. CO₂ exists as discrete O=C=O molecules with only weak LDF between them. This dramatic difference in bonding type explains the huge difference in thermal stability.'
+            explanation: '$SiO_{2}$ forms a 3D network covalent solid — every Si is covalently bonded to 4 O atoms in a continuous network. Melting requires breaking strong covalent bonds. $CO_{2}$ exists as discrete O=C=O molecules with only weak LDF between them. This dramatic difference in bonding type explains the huge difference in thermal stability.'
           }
         ]
       }
@@ -131,7 +131,7 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
               'The substance is water'
             ],
             correctAnswer: 1,
-            explanation: 'If a substance sublimes at 1 atm (goes solid → gas without a liquid phase), then 1 atm must be below the triple point pressure. The liquid phase only exists at pressures ≥ the triple point pressure. This is the case for CO₂ (triple point at 5.11 atm).'
+            explanation: 'If a substance sublimes at 1 atm (goes solid → gas without a liquid phase), then 1 atm must be below the triple point pressure. The liquid phase only exists at pressures ≥ the triple point pressure. This is the case for $CO_{2}$ (triple point at 5.11 atm).'
           }
         ]
       }
@@ -147,23 +147,23 @@ $$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{I
 
 | Substance | Formula | Molar Mass (g/mol) | Boiling Point (°C) |
 |-----------|---------|--------------------|--------------------|
-| Methane | CH₄ | 16 | −161 |
-| Hydrogen sulfide | H₂S | 34 | −60 |
-| Water | H₂O | 18 | 100 |
+| Methane | $CH_{4}$ | 16 | −161 |
+| Hydrogen sulfide | $H_{2}S$ | 34 | −60 |
+| Water | $H_{2}O$ | 18 | 100 |
 | Hydrogen fluoride | HF | 20 | 19.5 |
 
 ### Analysis
 
-All four are hydrides of Period 2 or 3 elements. If only LDF mattered, boiling points would increase with molar mass: CH₄ < H₂O < HF < H₂S.
+All four are hydrides of Period 2 or 3 elements. If only LDF mattered, boiling points would increase with molar mass: $CH_{4}$ < $H_{2}O$ < HF < $H_{2}S$.
 
-But the actual order is: CH₄ (−161) < H₂S (−60) < HF (19.5) < H₂O (100).
+But the actual order is: $CH_{4}$ (−161) < $H_{2}S$ (−60) < HF (19.5) < $H_{2}O$ (100).
 
 **Why?**
 
-- **CH₄**: Nonpolar, tetrahedral → LDF only → very low bp
-- **H₂S**: Polar, but S is not F/O/N → no H-bonding → dipole-dipole + LDF → moderate bp
+- **$CH_{4}$**: Nonpolar, tetrahedral → LDF only → very low bp
+- **$H_{2}S$**: Polar, but S is not F/O/N → no H-bonding → dipole-dipole + LDF → moderate bp
 - **HF**: H-bonding (H–F) → high bp, but only one H per molecule limits the H-bond network
-- **H₂O**: H-bonding (O–H), and each molecule has 2 H atoms and 2 lone pairs → extensive 3D H-bonding network → highest bp
+- **$H_{2}O$**: H-bonding (O–H), and each molecule has 2 H atoms and 2 lone pairs → extensive 3D H-bonding network → highest bp
 
 ---
 
@@ -178,14 +178,14 @@ But the actual order is: CH₄ (−161) < H₂S (−60) < HF (19.5) < H₂O (100
       exercise: {
         inputs: [
           {
-            label: 'What type of IMF explains why H₂O has a much higher boiling point than H₂S? (two words)',
+            label: 'What type of IMF explains why $H_{2}O$ has a much higher boiling point than $H_{2}S$? (two words)',
             correctAnswer: 'hydrogen bonding',
-            explanation: 'H₂O has O–H bonds where oxygen is one of the three hydrogen-bonding atoms (F, O, N). H₂S has S–H bonds, but sulfur is not F, O, or N, so H₂S cannot form hydrogen bonds. The strong H-bonding in water gives it a much higher boiling point.'
+            explanation: '$H_{2}O$ has O–H bonds where oxygen is one of the three hydrogen-bonding atoms (F, O, N). $H_{2}S$ has S–H bonds, but sulfur is not F, O, or N, so $H_{2}S$ cannot form hydrogen bonds. The strong H-bonding in water gives it a much higher boiling point.'
           },
           {
-            label: 'In a phase diagram, the pressure at the triple point of CO₂ is 5.11 atm. Can liquid CO₂ exist at 1 atm? (yes/no)',
+            label: 'In a phase diagram, the pressure at the triple point of $CO_{2}$ is 5.11 atm. Can liquid $CO_{2}$ exist at 1 atm? (yes/no)',
             correctAnswer: 'no',
-            explanation: 'The liquid phase only exists at pressures at or above the triple point pressure. Since 1 atm < 5.11 atm, liquid CO₂ cannot exist at 1 atm. At atmospheric pressure, CO₂ sublimes directly from solid to gas.'
+            explanation: 'The liquid phase only exists at pressures at or above the triple point pressure. Since 1 atm < 5.11 atm, liquid $CO_{2}$ cannot exist at 1 atm. At atmospheric pressure, $CO_{2}$ sublimes directly from solid to gas.'
           },
           {
             label: 'On a heating curve, the flat (horizontal) regions represent _____ (phase changes/temperature increases)',
@@ -218,10 +218,10 @@ But the actual order is: CH₄ (−161) < H₂S (−60) < HF (19.5) < H₂O (100
           },
           {
             id: 'sm7-dd3',
-            label: '_______ solids (like diamond and SiO₂) typically have the highest melting',
+            label: '_______ solids (like diamond and $SiO_{2}$) typically have the highest melting',
             options: ['ionic', 'molecular', 'metallic', 'network covalent'],
             correctIndex: 3,
-            explanation: 'Network covalent solids (like diamond and SiO₂) typically have the highest melting points because melting requires breaking strong, continuous covalent bonds throughout the solid.'
+            explanation: 'Network covalent solids (like diamond and $SiO_{2}$) typically have the highest melting points because melting requires breaking strong, continuous covalent bonds throughout the solid.'
           },
           {
             id: 'sm7-dd4',
@@ -243,13 +243,13 @@ But the actual order is: CH₄ (−161) < H₂S (−60) < HF (19.5) < H₂O (100
           {
             question: 'Which of the following correctly ranks substances from lowest to highest normal boiling point?',
             options: [
-              'SiO₂ < NaCl < H₂O < CH₄',
-              'CH₄ < H₂O < NaCl < SiO₂',
-              'H₂O < CH₄ < SiO₂ < NaCl',
-              'NaCl < SiO₂ < CH₄ < H₂O'
+              '$SiO_{2}$ < NaCl < $H_{2}O$ < $CH_{4}$',
+              '$CH_{4}$ < $H_{2}O$ < NaCl < $SiO_{2}$',
+              '$H_{2}O$ < $CH_{4}$ < $SiO_{2}$ < NaCl',
+              'NaCl < $SiO_{2}$ < $CH_{4}$ < $H_{2}O$'
             ],
             correctAnswer: 1,
-            explanation: 'CH₄ (molecular, LDF only, bp −161°C) < H₂O (molecular, H-bonding, bp 100°C) < NaCl (ionic, bp 1413°C) < SiO₂ (network covalent, bp 2230°C). This follows the general trend: molecular < ionic < network covalent.'
+            explanation: '$CH_{4}$ (molecular, LDF only, bp −161°C) < $H_{2}O$ (molecular, H-bonding, bp 100°C) < NaCl (ionic, bp 1413°C) < $SiO_{2}$ (network covalent, bp 2230°C). This follows the general trend: molecular < ionic < network covalent.'
           },
           {
             question: 'A substance has the following properties: conducts electricity only when dissolved in water, has a high melting point, and is brittle. The substance is most likely:',
@@ -307,7 +307,7 @@ But the actual order is: CH₄ (−161) < H₂S (−60) < HF (19.5) < H₂O (100
           {
             label: 'The type of crystalline solid with the highest typical melting points is _____ (ionic/molecular/metallic/network covalent)',
             correctAnswer: 'network covalent',
-            explanation: 'Network covalent solids (like diamond, SiC, SiO₂) have the highest melting points because the entire solid is one continuous network of strong covalent bonds. Melting requires breaking these bonds throughout the entire structure.'
+            explanation: 'Network covalent solids (like diamond, SiC, $SiO_{2}$) have the highest melting points because the entire solid is one continuous network of strong covalent bonds. Melting requires breaking these bonds throughout the entire structure.'
           }
         ]
       }

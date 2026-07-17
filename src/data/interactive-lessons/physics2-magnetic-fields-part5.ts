@@ -176,11 +176,11 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
         dropdowns: [
           {
             label: 'B field of a long wire varies as:',
-            options: ['1/r²', '1/r', 'constant', 'r']
+            options: ['$1/r^{2}$', '1/r', 'constant', 'r']
           },
           {
             label: 'B field inside a solenoid is:',
-            options: ['zero', 'uniform', 'varies as 1/r', 'varies as r²']
+            options: ['zero', 'uniform', 'varies as 1/r', 'varies as $r^{2}$']
           },
           {
             label: 'Ampère\'s law relates the line integral of B to:',

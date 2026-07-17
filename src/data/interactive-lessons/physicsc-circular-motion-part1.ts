@@ -108,7 +108,7 @@ $$v_{\\max} = \\sqrt{\\mu_s g r}$$
 
 ### Worked Example
 
-A car takes a flat turn of radius 50 m. If $\\mu_s = 0.8$ and $g = 10$ m/s²:
+A car takes a flat turn of radius 50 m. If $\\mu_s = 0.8$ and $g = 10$ $m/s^{2}$:
 
 $$v_{\\max} = \\sqrt{0.8 \\times 10 \\times 50} = \\sqrt{400} = 20 \\text{ m/s} = 72 \\text{ km/h}$$
 
@@ -133,7 +133,7 @@ Notice: the period depends on the angle $\\theta$ and string length $L$, but **n
     {
       id: 'cm1-mcq3',
       type: 'mcq' as const,
-      question: 'A conical pendulum with $L = 1$ m makes angle $\\theta = 30°$ with the vertical. What is the speed of the mass? ($g = 10$ m/s²)',
+      question: 'A conical pendulum with $L = 1$ m makes angle $\\theta = 30°$ with the vertical. What is the speed of the mass? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{gL\\sin^2\\theta/\\cos\\theta} \\approx 1.88$ m/s',
         '$\\sqrt{gL\\sin\\theta} \\approx 2.24$ m/s',

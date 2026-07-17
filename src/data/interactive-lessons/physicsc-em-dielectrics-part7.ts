@@ -27,7 +27,7 @@ $$\\sigma_b = \\sigma_f\\left(1 - \\frac{1}{\\kappa}\\right)$$`
     {
       id: 'dielec7-mcq1',
       type: 'mcq' as const,
-      question: 'A parallel-plate capacitor ($A = 0.01$ m², $d = 1$ mm) is filled with a dielectric ($\\kappa = 6$). What is the capacitance? ($\\varepsilon_0 = 8.85 \\times 10^{-12}$)',
+      question: 'A parallel-plate capacitor ($A = 0.01$ $m^{2}$, $d = 1$ mm) is filled with a dielectric ($\\kappa = 6$). What is the capacitance? ($\\varepsilon_0 = 8.85 \\times 10^{-12}$)',
       options: ['$531$ pF', '$88.5$ pF', '$53.1$ pF', '$5.31$ nF'],
       correctAnswer: 0,
       explanation: '$C = \\kappa\\varepsilon_0 A/d = 6(8.85 \\times 10^{-12})(0.01)/(10^{-3}) = 5.31 \\times 10^{-10} = 531$ pF.'

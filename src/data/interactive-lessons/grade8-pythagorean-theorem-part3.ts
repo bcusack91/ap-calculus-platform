@@ -46,7 +46,7 @@ $d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$ ✅
                               "25"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(9+16) = √25 = 5."
+                    "explanation": "$\\sqrt{9+16}$ = $\\sqrt{25}$ = 5."
           }
 ]
       }
@@ -67,10 +67,10 @@ $d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$ ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["5","5","13"],
-        hint1: "√(9+16).",
-        hint2: "√(9+16).",
-        hint3: "√(25+144).",
-        explanation: "1) √25=5. 2) √25=5. 3) √169=13."
+        hint1: "$\\sqrt{9+16}$.",
+        hint2: "$\\sqrt{9+16}$.",
+        hint3: "$\\sqrt{25+144}$.",
+        explanation: "1) $\\sqrt{25}$=5. 2) $\\sqrt{25}$=5. 3) $\\sqrt{169}$=13."
       }
     },
     {
@@ -80,7 +80,7 @@ $d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The distance formula uses a","options":["Square root","Cube root","Fourth root","No root"]},{"label":"The differences (x₂−x₁) and (y₂−y₁) represent","options":["Legs of a right triangle","The hypotenuse","The slope","The area"]}],
+        dropdowns: [{"label":"The distance formula uses a","options":["Square root","Cube root","Fourth root","No root"]},{"label":"The differences $(x_{2}-x_{1})$ and $(y_{2}-y_{1})$ represent","options":["Legs of a right triangle","The hypotenuse","The slope","The area"]}],
         correctAnswers: ["Square root","Legs of a right triangle"],
         hint1: "Final step: take the square root.",
         hint2: "Horizontal and vertical legs.",

@@ -101,7 +101,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               '$P_{\\text{CaO}} \\cdot P_{\\text{CO}_2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Both CaCO₃ and CaO are solids — exclude them. Only CO₂(g) remains: $K_p = P_{\\text{CO}_2}$.'
+            explanation: 'Both $CaCO_{3}$ and CaO are solids — exclude them. Only $CO_{2}(g)$ remains: $K_p = P_{\\text{CO}_2}$.'
           },
           {
             question: 'At 25°C, $K = 1.0 \\times 10^{-14}$ for $\\text{H}_2\\text{O}(l) \\rightleftharpoons \\text{H}^+(aq) + \\text{OH}^-(aq)$. This means:',
@@ -162,14 +162,14 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
 
 **2)** What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 7.9e4)
 
-**3)** The decomposition of SO₃ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
+**3)** The decomposition of $SO_{3}$ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['reactant-favored', '7.9e4', 'increase'],
-        hint1: '$K_c = 1.6 \\times 10^{-10} \\ll 1$, so reactants (SO₃) dominate.',
+        hint1: '$K_c = 1.6 \\times 10^{-10} \\ll 1$, so reactants $(SO_{3})$ dominate.',
         hint2: 'Reverse the reaction and divide by 2. $K\' = (1/K)^{1/2} = (1/(1.6 \\times 10^{-10}))^{1/2}$.',
         hint3: 'Endothermic reactions: increasing T shifts right, increasing K.',
         explanation: '1) $K \\ll 1$ → reactant-favored. 2) Reverse: $K\' = 1/(1.6 \\times 10^{-10}) = 6.25 \\times 10^{9}$. Divide by 2: $K\'\' = (6.25 \\times 10^9)^{1/2} = 7.9 \\times 10^4$. 3) Endothermic decomposition + higher T → K increases.'
@@ -232,11 +232,11 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
             explanation: 'Dynamic equilibrium means both reactions continue. The rates are equal, so there is no net change — but molecular-level reactions never stop.'
           },
           {
-            question: 'For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c = 0.36$ at 100°C. If 1.00 mol N₂O₄ is placed in a 1.00 L flask at 100°C, at equilibrium there will be:',
+            question: 'For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c = 0.36$ at 100°C. If 1.00 mol $N_{2}O_{4}$ is placed in a 1.00 L flask at 100°C, at equilibrium there will be:',
             options: [
-              'Only N₂O₄ present',
-              'Only NO₂ present',
-              'More N₂O₄ than NO₂ by concentration',
+              'Only $N_{2}O_{4}$ present',
+              'Only $NO_{2}$ present',
+              'More $N_{2}O_{4}$ than $NO_{2}$ by concentration',
               'Cannot be determined without solving the ICE table'
             ],
             correctAnswer: 3,

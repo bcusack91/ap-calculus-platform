@@ -74,7 +74,7 @@ $x^2 - 9 = (x+?)(x-?)$
         correctAnswers: ["2","3","3"],
         hint1: "Two numbers that add to 5 and multiply to 6.",
         hint2: "The other of those two numbers.",
-        hint3: "√9.",
+        hint3: "$\\sqrt{9}$.",
         explanation: "1) 2. 2) 3. 3) 3."
       }
     },
@@ -89,7 +89,7 @@ $x^2 - 9 = (x+?)(x-?)$
         correctAnswers: ["$(a+b)(a-b)$","Add to b and multiply to c"],
         hint1: "Difference of squares.",
         hint2: "m+n=b, mn=c.",
-        explanation: "a²−b²=(a+b)(a−b). Trinomial: m+n=b, mn=c."
+        explanation: "$a^{2}-b^{2}$=(a+b)(a−b). Trinomial: m+n=b, mn=c."
       }
     },
     {
@@ -123,7 +123,7 @@ $x^2 - 9 = (x+?)(x-?)$
                               "Cannot be factored"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Difference of squares: x²−3²."
+                    "explanation": "Difference of squares: $x^{2}-3^{2}$."
           }
 ]
       }

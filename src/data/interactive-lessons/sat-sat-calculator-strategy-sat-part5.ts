@@ -17,7 +17,7 @@ After entering data points, type: \`y₁ ~ mx₁ + b\`
 Desmos finds the best-fit line and gives you:
 - **m** (slope) — the rate of change
 - **b** (y-intercept) — starting value
-- **r²** — how well the line fits (closer to 1 = better fit)
+- **$r^{2}$** — how well the line fits (closer to 1 = better fit)
 
 ### When the SAT Gives You a Scatterplot
 1. Enter the visible data points into a Desmos table
@@ -41,12 +41,12 @@ A **residual** = actual value − predicted value. If residuals show a pattern (
       question: 'In Desmos, after entering data points into a table, which expression creates a line of best fit?',
       options: [
         'y = mx + b',
-        'y₁ ~ mx₁ + b',
+        '$y_{1}$ ~ $mx_{1}$ + b',
         'f(x) = ax + b',
         'table(x, y)'
       ],
       correctAnswer: 1,
-      explanation: 'The tilde (~) tells Desmos to perform regression. y₁ ~ mx₁ + b finds the best-fit linear equation. Desmos then reports the values of m and b.'
+      explanation: 'The tilde (~) tells Desmos to perform regression. $y_{1}$ ~ $mx_{1}$ + b finds the best-fit linear equation. Desmos then reports the values of m and b.'
     },
     {
       id: 'cs5-text2',
@@ -125,16 +125,16 @@ Once you have the equation, plug in any $x$ to predict $y$. In Desmos, just look
       content: '**Regression Match** — Choose the correct regression model.',
       exercise: {
         dropdowns: [
-          'Data follows a straight-line pattern → [Linear: y₁ ~ mx₁ + b|Exponential|Quadratic|None]',
-          'Data doubles repeatedly → [Exponential: y₁ ~ ab^(x₁)|Linear|Quadratic|Logarithmic]',
-          'Data forms an arch shape (rises then falls) → [Quadratic: y₁ ~ ax₁² + bx₁ + c|Linear|Exponential|Cubic]',
-          'r² close to 1 means → [Model fits well|Model fits poorly|Slope is 1|Data is linear]'
+          'Data follows a straight-line pattern → [Linear: $y_{1}$ ~ $mx_{1}$ + b|Exponential|Quadratic|None]',
+          'Data doubles repeatedly → [Exponential: $y_{1}$ ~ $ab^{x_{1}}$|Linear|Quadratic|Logarithmic]',
+          'Data forms an arch shape (rises then falls) → [Quadratic: $y_{1}$ ~ $ax_{1}^{2}$ + $bx_{1}$ + c|Linear|Exponential|Cubic]',
+          '$r^{2}$ close to 1 means → [Model fits well|Model fits poorly|Slope is 1|Data is linear]'
         ],
-        correctAnswers: ['Linear: y₁ ~ mx₁ + b', 'Exponential: y₁ ~ ab^(x₁)', 'Quadratic: y₁ ~ ax₁² + bx₁ + c', 'Model fits well'],
+        correctAnswers: ['Linear: $y_{1}$ ~ $mx_{1}$ + b', 'Exponential: $y_{1}$ ~ $ab^{x_{1}}$', 'Quadratic: $y_{1}$ ~ $ax_{1}^{2}$ + $bx_{1}$ + c', 'Model fits well'],
         hint1: 'Constant rate of change = linear.',
         hint2: 'Repeated multiplication = exponential.',
         hint3: 'Parabolic shape = quadratic.',
-        explanation: 'Linear for constant growth, exponential for percent-based growth, quadratic for parabolic patterns. r² near 1 means the model explains the data well.'
+        explanation: 'Linear for constant growth, exponential for percent-based growth, quadratic for parabolic patterns. $r^{2}$ near 1 means the model explains the data well.'
       }
     },
     {

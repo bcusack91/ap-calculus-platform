@@ -310,7 +310,7 @@ Enter the correct term for each description.
               '6:1'
             ],
             correctAnswer: 1,
-            explanation: 'For a cube: SA = 6s² = 6(9) = 54 μm². Volume = s³ = 27 μm³. SA:V = 54/27 = 2:1. As the cell grows from 1→2→3 μm, the SA:V drops from 6:1 → 3:1 → 2:1, illustrating why larger cells face diffusion limitations.'
+            explanation: 'For a cube: SA = $6s^{2}$ = 6(9) = 54 $\\mu m^{2}$. Volume = $s^{3}$ = 27 $\\mu m^{3}$. SA:V = 54/27 = 2:1. As the cell grows from 1→2→3 μm, the SA:V drops from 6:1 → 3:1 → 2:1, illustrating why larger cells face diffusion limitations.'
           }
         ]
       }

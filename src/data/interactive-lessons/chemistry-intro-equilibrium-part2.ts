@@ -147,7 +147,7 @@ $$K_p = K_c(RT)^{-2}$$
               '$2\\,\\text{NO}_2(g) \\rightleftharpoons \\text{N}_2\\text{O}_4(g)$'
             ],
             correctAnswer: 1,
-            explanation: '$K_p = K_c$ when $\\Delta n = 0$. For H₂ + I₂ ⇌ 2 HI: $\\Delta n = 2 - (1 + 1) = 0$. All other options have $\\Delta n \\neq 0$.'
+            explanation: '$K_p = K_c$ when $\\Delta n = 0$. For $H_{2}$ + $I_{2}$ ⇌ 2 HI: $\\Delta n = 2 - (1 + 1) = 0$. All other options have $\\Delta n \\neq 0$.'
           }
         ]
       }

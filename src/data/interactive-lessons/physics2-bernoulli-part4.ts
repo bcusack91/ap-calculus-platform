@@ -54,7 +54,7 @@ AP Physics 2 focuses on the Bernoulli explanation: faster air on top → lower p
       exercise: {
         questions: [
           {
-            question: 'Air flows at 80 m/s over the top of a wing and 70 m/s under the bottom. The pressure difference between bottom and top is: ($\\rho_{\\text{air}} = 1.2$ kg/m³)',
+            question: 'Air flows at 80 m/s over the top of a wing and 70 m/s under the bottom. The pressure difference between bottom and top is: ($\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$)',
             options: [
               '600 Pa',
               '900 Pa',
@@ -65,7 +65,7 @@ AP Physics 2 focuses on the Bernoulli explanation: faster air on top → lower p
             explanation: '$\\Delta P = \\frac{1}{2}\\rho(v_{\\text{top}}^2 - v_{\\text{bottom}}^2) = \\frac{1}{2}(1.2)(6400 - 4900) = 0.6(1500) = 900$ Pa.'
           },
           {
-            question: 'An airplane has wing area 30 m² and the pressure difference between bottom and top is 900 Pa. The lift force is:',
+            question: 'An airplane has wing area 30 $m^{2}$ and the pressure difference between bottom and top is 900 Pa. The lift force is:',
             options: [
               '30 N',
               '900 N',
@@ -120,7 +120,7 @@ At high speeds, a Formula 1 car generates enough downforce to drive upside down 
       id: 'be4-roof-drill',
       type: 'input-boxes' as const,
       content: `
-**Hurricane Roof Problem** ($\\rho_{\\text{air}} = 1.2$ kg/m³)
+**Hurricane Roof Problem** ($\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$)
 
 A hurricane with wind speed 50 m/s blows over a flat roof. The air inside the house is still.
 
@@ -128,7 +128,7 @@ A hurricane with wind speed 50 m/s blows over a flat roof. The air inside the ho
 
 2) Net upward pressure on the roof (in Pa)
 
-3) If the roof area is 200 m², the upward force (in kN)
+3) If the roof area is 200 $m^{2}$, the upward force (in kN)
       `,
       exercise: {
         boxes: 3,

@@ -102,7 +102,7 @@ The four products are $\\frac{9}{16}, \\frac{3}{16}, \\frac{3}{16}, \\frac{1}{16
               '16 types, one for each Punnett square cell'
             ],
             correctAnswer: 1,
-            explanation: 'RrYy is heterozygous for 2 genes, so it makes 2² = 4 gamete types: RY, Ry, rY, ry (each allele of gene 1 combined with each allele of gene 2). Option A lists only the two "parental" combinations and misses the recombinant gametes Ry and rY, which independent assortment specifically produces. The 16 in option D is the number of grid CELLS (offspring outcomes), not gamete types.'
+            explanation: 'RrYy is heterozygous for 2 genes, so it makes $2^{2}$ = 4 gamete types: RY, Ry, rY, ry (each allele of gene 1 combined with each allele of gene 2). Option A lists only the two "parental" combinations and misses the recombinant gametes Ry and rY, which independent assortment specifically produces. The 16 in option D is the number of grid CELLS (offspring outcomes), not gamete types.'
           },
           {
             question: 'In a RrYy × RrYy dihybrid cross, what fraction of the offspring are expected to show BOTH recessive phenotypes (wrinkled AND green)?',
@@ -223,7 +223,7 @@ That single multiplication replaces hunting through 64 boxes. The whole trihybri
               '16 gamete types; 16 cells'
             ],
             correctAnswer: 1,
-            explanation: 'There are 4 heterozygous gene pairs, so gamete types = 2⁴ = 16, and the full grid is 16 × 16 = 256 cells. Option A (8 and 64) is the trihybrid answer (n = 3) — a common off-by-one error when you miscount the number of heterozygous genes. The grid size is always (gamete types)², i.e. 4ⁿ, which is why hand-drawing it becomes hopeless past n = 2.'
+            explanation: 'There are 4 heterozygous gene pairs, so gamete types = $2^{4}$ = 16, and the full grid is 16 × 16 = 256 cells. Option A (8 and 64) is the trihybrid answer (n = 3) — a common off-by-one error when you miscount the number of heterozygous genes. The grid size is always $(gamete types)^{2}$, i.e. $4^{n}$, which is why hand-drawing it becomes hopeless past n = 2.'
           },
           {
             question: 'From the trihybrid cross AaBbCc × AaBbCc, what is the probability of an offspring that is homozygous dominant for ALL three genes (AABBCC)?',

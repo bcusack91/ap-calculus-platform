@@ -153,7 +153,7 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
           },
           {
             label: 'Each Bernoulli term has units of:',
-            options: ['m/s', 'kg/m³', 'J/m³ (= Pa)', 'N/s'],
+            options: ['m/s', '$kg/m^{3}$', '$J/m^{3}$ (= Pa)', 'N/s'],
             correctIndex: 2,
             explanation: 'Energy per unit volume — confirmed by dimensional analysis.'
           }

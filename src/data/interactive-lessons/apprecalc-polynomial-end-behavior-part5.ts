@@ -41,7 +41,7 @@ Steps to sketch:
       exercise: {
         questions: [
           {
-                    "question": "y-intercept of f(x) = x² − 9?",
+                    "question": "y-intercept of f(x) = $x^{2}$ − 9?",
                     "options": [
                               "−9",
                               "9",
@@ -72,9 +72,9 @@ Find $f(0)$:
       exercise: {
         boxes: 3,
         correctAnswers: ["-9","0","1"],
-        hint1: "0² − 9.",
-        hint2: "0³ − 0.",
-        hint3: "2(0)² + 1.",
+        hint1: "$0^{2}$ − 9.",
+        hint2: "$0^{3}$ − 0.",
+        hint3: "$2(0)^{2}$ + 1.",
         explanation: "1) −9. 2) 0. 3) 1."
       }
     },
@@ -115,7 +115,7 @@ Find $f(0)$:
       exercise: {
         questions: [
           {
-                    "question": "Zeros of x² − 4?",
+                    "question": "Zeros of $x^{2}$ − 4?",
                     "options": [
                               "x = 2 and x = −2",
                               "x = 4",

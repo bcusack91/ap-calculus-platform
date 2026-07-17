@@ -200,7 +200,7 @@ $2°$ substrate; reagent is a strong nucleophile but **weak base** $\\rightarrow
               'Both are equally stereospecific'
             ],
             correctAnswer: 1,
-            explanation: 'In E2, only the β-H anti-periplanar to the leaving group is removed, locking in the alkene geometry from the substrate configuration. In E1 the intermediate is a planar (sp²) carbocation with free rotation, so it can lose either available β-proton, scrambling stereochemistry and giving a mix.'
+            explanation: 'In E2, only the β-H anti-periplanar to the leaving group is removed, locking in the alkene geometry from the substrate configuration. In E1 the intermediate is a planar $(sp^{2})$ carbocation with free rotation, so it can lose either available β-proton, scrambling stereochemistry and giving a mix.'
           }
         ]
       }

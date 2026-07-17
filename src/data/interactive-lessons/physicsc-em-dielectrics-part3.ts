@@ -10,8 +10,8 @@ When an external electric field is applied to a dielectric, the molecules inside
 
 ### Molecular picture
 
-- **Polar molecules** (e.g., H₂O): permanent dipoles rotate to partially align with $\\vec{E}$.
-- **Non-polar molecules** (e.g., N₂): the external field **induces** a dipole by displacing the electron cloud.
+- **Polar molecules** (e.g., $H_{2}O$): permanent dipoles rotate to partially align with $\\vec{E}$.
+- **Non-polar molecules** (e.g., $N_{2}$): the external field **induces** a dipole by displacing the electron cloud.
 
 In both cases, the net effect is an internal field $\\vec{E}_p$ that **opposes** the applied field $\\vec{E}_0$.`
     },
@@ -55,13 +55,13 @@ For a **uniform** dielectric in a uniform field, $\\nabla \\cdot \\vec{P} = 0$, 
       type: 'mcq' as const,
       question: 'A parallel-plate capacitor with field $E = 1000$ V/m is filled with a dielectric ($\\kappa = 4$). What is the bound surface charge density $\\sigma_b$?',
       options: [
-        '$3\\varepsilon_0 \\times 1000$ C/m²',
-        '$4\\varepsilon_0 \\times 1000$ C/m²',
-        '$\\varepsilon_0 \\times 1000$ C/m²',
-        '$5\\varepsilon_0 \\times 1000$ C/m²'
+        '$3\\varepsilon_0 \\times 1000$ $C/m^{2}$',
+        '$4\\varepsilon_0 \\times 1000$ $C/m^{2}$',
+        '$\\varepsilon_0 \\times 1000$ $C/m^{2}$',
+        '$5\\varepsilon_0 \\times 1000$ $C/m^{2}$'
       ],
       correctAnswer: 0,
-      explanation: '$P = \\varepsilon_0(\\kappa - 1)E = \\varepsilon_0(3)(1000) = 3000\\varepsilon_0$. The bound surface charge density equals $P$, so $\\sigma_b = 3\\varepsilon_0 \\times 1000$ C/m².'
+      explanation: '$P = \\varepsilon_0(\\kappa - 1)E = \\varepsilon_0(3)(1000) = 3000\\varepsilon_0$. The bound surface charge density equals $P$, so $\\sigma_b = 3\\varepsilon_0 \\times 1000$ $C/m^{2}$.'
     },
     {
       id: 'dielec3-fields',

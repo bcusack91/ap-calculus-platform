@@ -94,7 +94,7 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
       exercise: {
         questions: [
           {
-            question: 'For $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, $K_c = 0.042$. If 1.00 mol PCl₅ is placed in a 10.0 L flask, what approach is best?',
+            question: 'For $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, $K_c = 0.042$. If 1.00 mol $PCl_{5}$ is placed in a 10.0 L flask, what approach is best?',
             options: [
               'Use the 5% approximation ($[\\text{init}]/K = 0.10/0.042 = 2.4 < 100$)',
               'Use the quadratic formula ($[\\text{init}]/K = 2.4 < 100$)',
@@ -135,23 +135,23 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
       content: `
 **AP Free-Response Style** 🧮
 
-> **Problem:** For $\\text{CO}(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{COCl}_2(g)$ with $K_c = 255$ at 100°C, a 1.00 L flask is charged with 0.400 mol CO and 0.400 mol Cl₂. No COCl₂ is initially present.
+> **Problem:** For $\\text{CO}(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{COCl}_2(g)$ with $K_c = 255$ at 100°C, a 1.00 L flask is charged with 0.400 mol CO and 0.400 mol $Cl_{2}$. No $COCl_{2}$ is initially present.
 
 **1)** Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter, e.g., "x")
 
 **2)** The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Using the approximation ($0.400/255$ is small... actually $0.400/255 = 0.00157 < 100$). Should you use the quadratic? (Enter "yes" or "no")
 
-**3)** Actually, $[\\text{init}]/K = 0.400/255 = 0.00157$, which is much LESS than 100. This means K is LARGE relative to the initial concentration, meaning the reaction goes nearly to completion. The limiting approach here is to assume the reaction goes to completion, then back-calculate. If the reaction goes to completion, what is the limiting reagent amount of COCl₂ formed? (Enter in mol)
+**3)** Actually, $[\\text{init}]/K = 0.400/255 = 0.00157$, which is much LESS than 100. This means K is LARGE relative to the initial concentration, meaning the reaction goes nearly to completion. The limiting approach here is to assume the reaction goes to completion, then back-calculate. If the reaction goes to completion, what is the limiting reagent amount of $COCl_{2}$ formed? (Enter in mol)
 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['x', 'yes', '0.400'],
-        hint1: 'COCl₂ starts at 0 and gains $+x$.',
+        hint1: '$COCl_{2}$ starts at 0 and gains $+x$.',
         hint2: 'The ratio $[\\text{init}]/K < 100$ means the approximation fails (but for large K, not small K).',
-        hint3: 'CO and Cl₂ are in a 1:1 ratio, both at 0.400 mol. They are equally limiting → 0.400 mol COCl₂.',
-        explanation: '1) $[\\text{COCl}_2]_{eq} = x$. 2) Yes — when K is very large, the standard small-x approximation doesn\'t apply either; a quadratic or limiting-reagent approach is needed. 3) Both CO and Cl₂ start at 0.400 mol with 1:1 stoichiometry, so 0.400 mol COCl₂ can form at completion.'
+        hint3: 'CO and $Cl_{2}$ are in a 1:1 ratio, both at 0.400 mol. They are equally limiting → 0.400 mol $COCl_{2}$.',
+        explanation: '1) $[\\text{COCl}_2]_{eq} = x$. 2) Yes — when K is very large, the standard small-x approximation doesn\'t apply either; a quadratic or limiting-reagent approach is needed. 3) Both CO and $Cl_{2}$ start at 0.400 mol with 1:1 stoichiometry, so 0.400 mol $COCl_{2}$ can form at completion.'
       }
     },
     {

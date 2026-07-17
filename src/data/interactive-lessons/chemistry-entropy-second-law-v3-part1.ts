@@ -123,11 +123,11 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
             explanation: 'Entropy is NOT conserved — it can be created in irreversible processes. Energy is the conserved quantity (First Law).'
           },
           {
-            question: 'Rank from lowest to highest entropy: H₂O(g), H₂O(s), H₂O(l)',
+            question: 'Rank from lowest to highest entropy: $H_{2}O(g)$, $H_{2}O(s)$, $H_{2}O(l)$',
             options: [
-              'H₂O(s) < H₂O(l) < H₂O(g)',
-              'H₂O(g) < H₂O(l) < H₂O(s)',
-              'H₂O(l) < H₂O(s) < H₂O(g)',
+              '$H_{2}O(s)$ < $H_{2}O(l)$ < $H_{2}O(g)$',
+              '$H_{2}O(g)$ < $H_{2}O(l)$ < $H_{2}O(s)$',
+              '$H_{2}O(l)$ < $H_{2}O(s)$ < $H_{2}O(g)$',
               'All have equal entropy'
             ],
             correctAnswer: 0,

@@ -23,7 +23,7 @@ export const g7GeometryPart5Data = {
 
 **Cylinder: r = 3 cm, h = 10 cm.**
 
-$V = \\pi(3)^2(10) = 90\\pi \\approx 282.6$ cm³ ✅
+$V = \\pi(3)^2(10) = 90\\pi \\approx 282.6$ $cm^{3}$ ✅
     
     `
     },
@@ -66,7 +66,7 @@ $V = \\pi(3)^2(10) = 90\\pi \\approx 282.6$ cm³ ✅
         boxes: 3,
         correctAnswers: ["160","87.92","60"],
         hint1: "8 × 5 × 4.",
-        hint2: "π(2²)(7) = 3.14(4)(7).",
+        hint2: "$\\pi (2^{2})(7)$ = 3.14(4)(7).",
         hint3: "V = Bh = 12(5).",
         explanation: "1) 160. 2) 3.14(4)(7)=87.92. 3) 12(5)=60."
       }
@@ -110,13 +110,13 @@ $V = \\pi(3)^2(10) = 90\\pi \\approx 282.6$ cm³ ✅
           {
                     "question": "Cylinder volume formula?",
                     "options": [
-                              "V = πr²h",
+                              "V = $\\pi r^{2}h$",
                               "V = 2πrh",
                               "V = πrh",
-                              "V = πd²h"
+                              "V = $\\pi d^{2}h$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "V = πr²h."
+                    "explanation": "V = $\\pi r^{2}h$."
           }
 ]
       }

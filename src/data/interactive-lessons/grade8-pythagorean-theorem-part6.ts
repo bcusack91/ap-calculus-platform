@@ -45,7 +45,7 @@ $h = \\sqrt{10^2 - 6^2} = \\sqrt{100-36} = \\sqrt{64} = 8$ ft ✅
                               "14 ft"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(169−25) = √144 = 12."
+                    "explanation": "$\\sqrt{169-25}$ = $\\sqrt{144}$ = 12."
           }
 ]
       }
@@ -66,10 +66,10 @@ $h = \\sqrt{10^2 - 6^2} = \\sqrt{100-36} = \\sqrt{64} = 8$ ft ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["12","20","15"],
-        hint1: "√(169−25).",
-        hint2: "√(256+144).",
-        hint3: "√(81+144).",
-        explanation: "1) √144=12. 2) √400=20. 3) √225=15."
+        hint1: "$\\sqrt{169-25}$.",
+        hint2: "$\\sqrt{256+144}$.",
+        hint3: "$\\sqrt{81+144}$.",
+        explanation: "1) $\\sqrt{144}$=12. 2) $\\sqrt{400}$=20. 3) $\\sqrt{225}$=15."
       }
     },
     {
@@ -117,7 +117,7 @@ $h = \\sqrt{10^2 - 6^2} = \\sqrt{100-36} = \\sqrt{64} = 8$ ft ✅
                               "192 in"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(256+144) = √400 = 20."
+                    "explanation": "$\\sqrt{256+144}$ = $\\sqrt{400}$ = 20."
           }
 ]
       }

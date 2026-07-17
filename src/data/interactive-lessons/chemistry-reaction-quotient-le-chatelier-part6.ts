@@ -112,7 +112,7 @@ $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$, 
       exercise: {
         questions: [
           {
-            question: 'To maximize SO₃ production, a chemical engineer should:',
+            question: 'To maximize $SO_{3}$ production, a chemical engineer should:',
             options: [
               'Increase temperature and decrease pressure',
               'Decrease temperature and increase pressure',
@@ -120,7 +120,7 @@ $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$, 
               'Add a catalyst (only)'
             ],
             correctAnswer: 1,
-            explanation: 'Exothermic: low T shifts right (K increases). 3 mol gas → 2 mol gas: high P shifts right. So low T + high P maximizes SO₃. A catalyst helps reach equilibrium faster but doesn\'t change yield.'
+            explanation: 'Exothermic: low T shifts right (K increases). 3 mol gas → 2 mol gas: high P shifts right. So low T + high P maximizes $SO_{3}$. A catalyst helps reach equilibrium faster but doesn\'t change yield.'
           },
           {
             question: 'If temperature is increased for this reaction:',
@@ -216,7 +216,7 @@ For: $\\text{A}(g) + 2\\,\\text{B}(g) \\rightleftharpoons 3\\,\\text{C}(g)$, $\\
             explanation: '$Q = [\\text{B}]^2/[\\text{A}] = (1.0)^2/(1.0) = 1.0$. Since $Q = 1.0 > K = 0.50$, the system shifts left.'
           },
           {
-            question: 'For the Contact Process ($2\\,\\text{SO}_2 + \\text{O}_2 \\rightleftharpoons 2\\,\\text{SO}_3$, $\\Delta H < 0$), industry uses ~450°C and V₂O₅ catalyst. The moderate temperature is a compromise between:',
+            question: 'For the Contact Process ($2\\,\\text{SO}_2 + \\text{O}_2 \\rightleftharpoons 2\\,\\text{SO}_3$, $\\Delta H < 0$), industry uses ~450°C and $V_{2}O_{5}$ catalyst. The moderate temperature is a compromise between:',
             options: [
               'High yield (low T favors products) and reasonable rate (higher T needed for speed)',
               'High K (high T) and low pressure',

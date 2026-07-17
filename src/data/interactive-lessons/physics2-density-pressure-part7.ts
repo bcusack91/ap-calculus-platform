@@ -46,8 +46,8 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
 - Default on AP: usually asking for **absolute** unless stated otherwise
 
 ### 2. Units
-- Density: must be in kg/m³ (not g/cm³) for SI calculations
-- Pressure: Pa = N/m² (not kPa, not atm, unless specified)
+- Density: must be in $kg/m^{3}$ $(not g/cm^{3})$ for SI calculations
+- Pressure: Pa = $N/m^{2}$ (not kPa, not atm, unless specified)
 
 ### 3. Depth Direction
 - $h$ is measured **downward from the surface**, not upward from the bottom
@@ -103,7 +103,7 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
             explanation: 'Equal pressures at the interface: $\\rho_{\\text{oil}} g h_{\\text{oil}} = \\rho_w g h_w$. So $h_w = h_{\\text{oil}} \\times (\\rho_{\\text{oil}}/\\rho_w) = 34 \\times 0.85 = 28.9$ cm.'
           },
           {
-            question: 'A 500 cm³ object has mass 350 g. It is placed in water. What happens?',
+            question: 'A 500 $cm^{3}$ object has mass 350 g. It is placed in water. What happens?',
             options: [
               'Sinks — density is greater than water',
               'Floats with 70% submerged',
@@ -111,7 +111,7 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
               'Neutrally buoyant'
             ],
             correctAnswer: 1,
-            explanation: '$\\rho = 350/500 = 0.70$ g/cm³ = 700 kg/m³. Since 700 < 1000, it floats. Fraction submerged = 700/1000 = 70%.'
+            explanation: '$\\rho = 350/500 = 0.70$ $g/cm^{3}$ = 700 $kg/m^{3}$. Since 700 < 1000, it floats. Fraction submerged = 700/1000 = 70%.'
           }
         ]
       }
@@ -120,13 +120,13 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
       id: 'dp7-mixed-drill',
       type: 'input-boxes' as const,
       content: `
-**Final Mixed Drill** (use $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa)
+**Final Mixed Drill** (use $g = 10$ $m/s^{2}$, $P_{\\text{atm}} = 10^5$ Pa)
 
 1) Pressure at 25 m depth in a lake (absolute, in Pa)
 
-2) A 0.004 m³ block of wood (density 600 kg/m³) floats. Volume above water (in m³)
+2) A 0.004 $m^{3}$ block of wood $(density 600 kg/m^{3})$ floats. Volume above water $(in m^{3})$
 
-3) Force needed on a 0.002 m² piston to hold back water at 15 m depth (gauge force, in N)
+3) Force needed on a 0.002 $m^{2}$ piston to hold back water at 15 m depth (gauge force, in N)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -136,7 +136,7 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
         hint1: '$P = 10^5 + (1000)(10)(25) = 10^5 + 250{,}000$.',
         hint2: 'Fraction submerged = 600/1000 = 0.6. Above water = $0.004 \\times 0.4$.',
         hint3: '$P_{\\text{gauge}} = \\rho g h = (1000)(10)(15) = 150{,}000$ Pa. $F = P \\times A$.',
-        explanation: '1) $P = 350{,}000$ Pa. 2) 40% above water: $0.004 \\times 0.4 = 0.0016$ m³. 3) $F = (150{,}000)(0.002) = 300$ N.'
+        explanation: '1) $P = 350{,}000$ Pa. 2) 40% above water: $0.004 \\times 0.4 = 0.0016$ $m^{3}$. 3) $F = (150{,}000)(0.002) = 300$ N.'
       }
     },
     {
@@ -159,7 +159,7 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
             explanation: 'In a static fluid (or nearly static), pressure at the same depth is the same everywhere. The drain\'s location doesn\'t change the hydrostatic pressure. (If water is flowing, there\'s a slight dynamic effect, but for AP purposes, the answer is clear.)'
           },
           {
-            question: 'You pour 1 liter of oil (SG = 0.80) into 1 liter of water. After settling, the total height of liquid in a cylindrical container of cross-section 0.01 m² is:',
+            question: 'You pour 1 liter of oil (SG = 0.80) into 1 liter of water. After settling, the total height of liquid in a cylindrical container of cross-section 0.01 $m^{2}$ is:',
             options: [
               '0.10 m',
               '0.15 m',
@@ -167,7 +167,7 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
               '0.25 m'
             ],
             correctAnswer: 2,
-            explanation: 'Total volume = 2 liters = 0.002 m³. Height = $V/A = 0.002/0.01 = 0.20$ m. The oil floats on top of the water, but the total height depends only on total volume and cross-section area.'
+            explanation: 'Total volume = 2 liters = 0.002 $m^{3}$. Height = $V/A = 0.002/0.01 = 0.20$ m. The oil floats on top of the water, but the total height depends only on total volume and cross-section area.'
           }
         ]
       }

@@ -31,7 +31,7 @@ export const MCQS: MCQItem[] = [
     question: 'A photoelectron spectrum of an element shows four peaks at binding energies (in MJ/mol): 126, 9.07, and 0.74, all of equal height, and 5.31 at three times that height. The element is most likely',
     options: ['Sodium (Na)', 'Magnesium (Mg)', 'Aluminum (Al)', 'Chlorine (Cl)'],
     correctAnswer: 1,
-    explanation: 'The peaks correspond to 1s (126), 2s (9.07), 2p (5.31), and 3s (0.74). The 2p peak is three times the height of the others, so it holds 6 electrons, and the equal-height 1s, 2s, and 3s peaks hold 2 each: 1s²2s²2p⁶3s² ⇒ Mg.',
+    explanation: 'The peaks correspond to 1s (126), 2s (9.07), 2p (5.31), and 3s (0.74). The 2p peak is three times the height of the others, so it holds 6 electrons, and the equal-height 1s, 2s, and 3s peaks hold 2 each: $1s^{2}2s^{2}2p^{6}3s^{2}$ ⇒ Mg.',
   },
   {
     type: 'mcq',
@@ -52,7 +52,7 @@ export const MCQS: MCQItem[] = [
     question: 'Which has the highest first ionization energy?',
     options: ['Na', 'Mg', 'Al', 'Si'],
     correctAnswer: 3,
-    explanation: 'IE generally increases left-to-right across a period. Si is rightmost ⇒ highest IE among these. (Mg has a small bump above Al due to filled 3s², but Si > Mg.)',
+    explanation: 'IE generally increases left-to-right across a period. Si is rightmost ⇒ highest IE among these. (Mg has a small bump above Al due to filled $3s^{2}$, but Si > Mg.)',
   },
   {
     type: 'mcq',
@@ -86,7 +86,7 @@ export const MCQS: MCQItem[] = [
     question: 'Which molecule is polar?',
     options: ['$\\text{CO}_2$', '$\\text{CH}_4$', '$\\text{H}_2\\text{O}$', '$\\text{BF}_3$'],
     correctAnswer: 2,
-    explanation: 'H₂O is bent (lone pairs on O) ⇒ dipoles do not cancel ⇒ polar. The others are linear/tetrahedral/trigonal planar with symmetric polar bonds canceling.',
+    explanation: '$H_{2}O$ is bent (lone pairs on O) ⇒ dipoles do not cancel ⇒ polar. The others are linear/tetrahedral/trigonal planar with symmetric polar bonds canceling.',
   },
   {
     type: 'mcq',
@@ -102,7 +102,7 @@ export const MCQS: MCQItem[] = [
     question: 'Which compound has the smallest lattice energy in magnitude?',
     options: ['NaF', 'NaCl', 'KCl', 'CaO'],
     correctAnswer: 2,
-    explanation: 'Lattice energy $\\propto |q_+ q_-|/r$. CaO has highest charges (2+, 2−). KCl has largest cation (K⁺) of the +1/−1 pairs ⇒ largest $r$ ⇒ smallest magnitude.',
+    explanation: 'Lattice energy $\\propto |q_+ q_-|/r$. CaO has highest charges (2+, 2−). KCl has largest cation $(K^{+})$ of the +1/−1 pairs ⇒ largest $r$ ⇒ smallest magnitude.',
   },
 
   /* ---- U3 Intermolecular Forces & Properties (5) ---- */
@@ -112,7 +112,7 @@ export const MCQS: MCQItem[] = [
     question: 'Which substance has the highest boiling point?',
     options: ['$\\text{CH}_4$', '$\\text{NH}_3$', '$\\text{H}_2\\text{O}$', '$\\text{HF}$'],
     correctAnswer: 2,
-    explanation: 'All can H-bond except CH₄. H₂O has 2 H-bond donors AND 2 acceptors per molecule ⇒ extensive H-bonding network ⇒ highest BP (100°C).',
+    explanation: 'All can H-bond except $CH_{4}$. $H_{2}O$ has 2 H-bond donors AND 2 acceptors per molecule ⇒ extensive H-bonding network ⇒ highest BP (100°C).',
   },
   {
     type: 'mcq',
@@ -136,7 +136,7 @@ export const MCQS: MCQItem[] = [
     question: 'Which solution has the highest boiling point elevation?',
     options: ['0.10 m glucose', '0.10 m NaCl', '0.10 m $\\text{CaCl}_2$', '0.10 m sucrose'],
     correctAnswer: 2,
-    explanation: 'Boiling point elevation $\\propto i \\cdot m$. Glucose, sucrose: $i = 1$. NaCl: $i = 2$. CaCl₂: $i = 3$ ⇒ greatest effect.',
+    explanation: 'Boiling point elevation $\\propto i \\cdot m$. Glucose, sucrose: $i = 1$. NaCl: $i = 2$. $CaCl_{2}$: $i = 3$ ⇒ greatest effect.',
   },
   {
     type: 'mcq',
@@ -156,7 +156,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-4-chemical-reactions',
-    question: 'How many grams of $\\text{O}_2$ are produced from complete decomposition of 200. g of KClO₃ via $2\\text{KClO}_3 \\to 2\\text{KCl} + 3\\text{O}_2$? (Molar mass: KClO₃ = 122.5 g/mol; O₂ = 32 g/mol)',
+    question: 'How many grams of $\\text{O}_2$ are produced from complete decomposition of 200. g of $KClO_{3}$ via $2\\text{KClO}_3 \\to 2\\text{KCl} + 3\\text{O}_2$? (Molar mass: $KClO_{3}$ = 122.5 g/mol; $O_{2}$ = 32 g/mol)',
     options: ['39.2 g', '78.4 g', '156.8 g', '200 g'],
     correctAnswer: 1,
     explanation: '$n_{KClO_3} = 200/122.5 = 1.633$ mol. $n_{O_2} = (3/2)(1.633) = 2.45$ mol. Mass = 2.45 × 32 = 78.4 g.',
@@ -173,9 +173,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-4-chemical-reactions',
     question: 'Which of these aqueous solutions, when mixed, will form a precipitate?',
-    options: ['NaCl + KNO₃', 'AgNO₃ + NaCl', 'NaOH + KCl', 'KNO₃ + Na₂SO₄'],
+    options: ['NaCl + $KNO_{3}$', '$AgNO_{3}$ + NaCl', 'NaOH + KCl', '$KNO_{3}$ + $Na_{2}SO_{4}$'],
     correctAnswer: 1,
-    explanation: 'AgCl is insoluble (Ag⁺ + Cl⁻ → AgCl↓). All other combinations give only soluble salts.',
+    explanation: 'AgCl is insoluble ($Ag^{+}$ + $Cl^{-}$ → AgCl↓). All other combinations give only soluble salts.',
   },
   {
     type: 'mcq',
@@ -183,7 +183,7 @@ export const MCQS: MCQItem[] = [
     question: 'When $25.0$ mL of $0.10$ M HCl is mixed with $25.0$ mL of $0.10$ M NaOH, the resulting solution is',
     options: ['acidic', 'basic', 'neutral', 'a buffer'],
     correctAnswer: 2,
-    explanation: 'Equal moles of strong acid + strong base ⇒ complete neutralization ⇒ NaCl + H₂O ⇒ NEUTRAL (pH 7).',
+    explanation: 'Equal moles of strong acid + strong base ⇒ complete neutralization ⇒ NaCl + $H_{2}O$ ⇒ NEUTRAL (pH 7).',
   },
   {
     type: 'mcq',
@@ -211,7 +211,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-kinetics',
-    question: 'A first-order reaction has rate constant $k = 0.0231$ s⁻¹. The half-life is',
+    question: 'A first-order reaction has rate constant $k = 0.0231$ $s^{-1}$. The half-life is',
     options: ['10 s', '15 s', '30 s', '60 s'],
     correctAnswer: 2,
     explanation: '$t_{1/2} = \\ln 2 / k = 0.693/0.0231 = 30$ s.',
@@ -311,7 +311,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-7-equilibrium',
     question: 'For $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$, $\\Delta H < 0$. Increasing temperature shifts equilibrium',
-    options: ['to the right (more NH₃)', 'to the left (less NH₃)', 'no change', 'cannot determine'],
+    options: ['to the right $(more NH_{3})$', 'to the left $(less NH_{3})$', 'no change', 'cannot determine'],
     correctAnswer: 1,
     explanation: 'Le Châtelier: exothermic forward reaction. Heating favors the endothermic direction (reverse) ⇒ shift LEFT.',
   },
@@ -357,7 +357,7 @@ export const MCQS: MCQItem[] = [
     question: 'The pH of 0.010 M HCl is',
     options: ['1', '2', '3', '7'],
     correctAnswer: 1,
-    explanation: 'HCl strong acid ⇒ [H⁺] = 0.010 M = $10^{-2}$ ⇒ pH = 2.',
+    explanation: 'HCl strong acid ⇒ [$H^{+}$] = 0.010 M = $10^{-2}$ ⇒ pH = 2.',
   },
   {
     type: 'mcq',
@@ -373,7 +373,7 @@ export const MCQS: MCQItem[] = [
     question: 'A buffer is most effective at a pH equal to',
     options: ['7', '$pK_a$ of the weak acid', '$pK_a + 1$', '$pK_w$'],
     correctAnswer: 1,
-    explanation: 'Buffer capacity is maximum when pH = pKa (Henderson-Hasselbalch: pH = pKa when [A⁻]/[HA] = 1).',
+    explanation: 'Buffer capacity is maximum when pH = pKa (Henderson-Hasselbalch: pH = pKa when [$A^{-}$]/[HA] = 1).',
   },
   {
     type: 'mcq',
@@ -381,7 +381,7 @@ export const MCQS: MCQItem[] = [
     question: 'A buffer contains 0.20 M acetic acid (pKa = 4.74) and 0.20 M sodium acetate. The pH is',
     options: ['3.74', '4.74', '5.74', '7.00'],
     correctAnswer: 1,
-    explanation: 'Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) = 4.74 + log(1) = 4.74.',
+    explanation: 'Henderson-Hasselbalch: pH = pKa + log([$A^{-}$]/[HA]) = 4.74 + log(1) = 4.74.',
   },
   {
     type: 'mcq',
@@ -426,9 +426,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-9-applications-thermodynamics',
     question: 'Electrolysis of molten NaCl produces',
-    options: ['Na₂O and Cl₂', 'Na metal and Cl₂', 'NaOH and H₂', 'Na₂CO₃ and Cl₂'],
+    options: ['$Na_{2}O$ and $Cl_{2}$', 'Na metal and $Cl_{2}$', 'NaOH and $H_{2}$', '$Na_{2}CO_{3}$ and $Cl_{2}$'],
     correctAnswer: 1,
-    explanation: 'In molten NaCl: Na⁺ reduced at cathode → Na(l). Cl⁻ oxidized at anode → Cl₂(g).',
+    explanation: 'In molten NaCl: $Na^{+}$ reduced at cathode → Na(l). $Cl^{-}$ oxidized at anode → $Cl_{2}(g)$.',
   },
   {
     type: 'mcq',

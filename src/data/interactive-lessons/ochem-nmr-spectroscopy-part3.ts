@@ -205,7 +205,7 @@ Typical magnitudes are themselves diagnostic of geometry:
 | Free rotation, $\\text{H-C-C-H}$ (e.g., ethyl) | $6\\text{–}8$ |
 | Vinyl *cis*, $\\text{C=C}$ | $6\\text{–}12$ |
 | Vinyl *trans*, $\\text{C=C}$ | $12\\text{–}18$ |
-| Geminal, $\\text{H-C-H}$ (diastereotopic) | $0\\text{–}3$ (often $\\sim 2$, or large/negative in sp³) |
+| Geminal, $\\text{H-C-H}$ (diastereotopic) | $0\\text{–}3$ (often $\\sim 2$, or large/negative in $sp^{3}$) |
 | Aromatic *ortho* | $7\\text{–}10$ |
 
 The *trans* > *cis* relationship across a double bond is especially useful: a $J \\approx 16\\ \\text{Hz}$ between two vinyl protons is strong evidence for a *trans* (E) alkene, while $J \\approx 8\\ \\text{Hz}$ points to *cis* (Z).

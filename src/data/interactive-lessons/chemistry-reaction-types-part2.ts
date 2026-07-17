@@ -82,7 +82,7 @@ The activity series ranks metals (and hydrogen) by their ability to lose electro
 
 | Most Reactive | | | Least Reactive |
 |:---:|:---:|:---:|:---:|
-| Li, K, Ba, Ca, Na | Mg, Al, Zn, Fe | Ni, Sn, Pb, **H₂** | Cu, Hg, Ag, Pt, Au |
+| Li, K, Ba, Ca, Na | Mg, Al, Zn, Fe | Ni, Sn, Pb, **$H_{2}$** | Cu, Hg, Ag, Pt, Au |
 
 
 ---
@@ -91,10 +91,10 @@ The activity series ranks metals (and hydrogen) by their ability to lose electro
 
 > 🔑 **Key Concept:** The activity series determines which replacement reactions will occur:
 
-1. **A metal above H₂** can react with acids to produce H₂ gas
-2. **A metal below H₂** (Cu, Ag, Au) cannot dissolve in common acids
+1. **A metal above $H_{2}$** can react with acids to produce $H_{2}$ gas
+2. **A metal below $H_{2}$** (Cu, Ag, Au) cannot dissolve in common acids
 3. **A metal can replace any metal below it** in solution
-4. **A halogen can replace any halogen below it**: F₂ > Cl₂ > Br₂ > I₂
+4. **A halogen can replace any halogen below it**: $F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$
 
 
 ---
@@ -170,7 +170,7 @@ $$\\boxed{\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}}
               '$\\text{Ag} + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{Na}$'
             ],
             correctAnswer: 2,
-            explanation: 'Zinc is above copper in the activity series, so Zn can displace Cu from CuSO₄. Copper cannot displace iron, gold cannot displace hydrogen from acids, and silver cannot displace sodium.'
+            explanation: 'Zinc is above copper in the activity series, so Zn can displace Cu from $CuSO_{4}$. Copper cannot displace iron, gold cannot displace hydrogen from acids, and silver cannot displace sodium.'
           },
           {
             question: 'What type of reaction is: $\\text{BaCl}_2 + \\text{Na}_2\\text{SO}_4 \\rightarrow \\text{BaSO}_4\\downarrow + 2\\text{NaCl}$?',
@@ -181,7 +181,7 @@ $$\\boxed{\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}}
               'Decomposition'
             ],
             correctAnswer: 2,
-            explanation: 'Two ionic compounds exchange ions: Ba²⁺ pairs with SO₄²⁻ and Na⁺ pairs with Cl⁻. The precipitate BaSO₄ drives the reaction forward. This is double replacement.'
+            explanation: 'Two ionic compounds exchange ions: $Ba^{2+}$ pairs with $SO_{4}^{2-}$ and $Na^{+}$ pairs with $Cl^{-}$. The precipitate $BaSO_{4}$ drives the reaction forward. This is double replacement.'
           },
           {
             question: 'In the reaction $\\text{Mg} + 2\\text{HCl} \\rightarrow \\text{MgCl}_2 + \\text{H}_2$, what drives the reaction?',
@@ -192,7 +192,7 @@ $$\\boxed{\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}}
               'The reaction is endothermic'
             ],
             correctAnswer: 1,
-            explanation: 'Magnesium is above hydrogen in the activity series, meaning Mg is more reactive. It can displace H from HCl, producing H₂ gas. Metals above H react with acids.'
+            explanation: 'Magnesium is above hydrogen in the activity series, meaning Mg is more reactive. It can displace H from HCl, producing $H_{2}$ gas. Metals above H react with acids.'
           },
           {
             question: 'Which is a driving force for a double replacement reaction?',
@@ -245,7 +245,7 @@ For each scenario, indicate if a reaction occurs. Type the **chemical formula of
           },
           {
             label: 'The halogen activity order (most to least reactive) is',
-            options: ['I₂ > Br₂ > Cl₂ > F₂', 'F₂ > Cl₂ > Br₂ > I₂', 'Cl₂ > F₂ > Br₂ > I₂', 'F₂ > I₂ > Br₂ > Cl₂']
+            options: ['$I_{2}$ > $Br_{2}$ > $Cl_{2}$ > $F_{2}$', '$F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$', '$Cl_{2}$ > $F_{2}$ > $Br_{2}$ > $I_{2}$', '$F_{2}$ > $I_{2}$ > $Br_{2}$ > $Cl_{2}$']
           },
           {
             label: 'A neutralization reaction (acid + base → salt + water) is a type of',
@@ -256,11 +256,11 @@ For each scenario, indicate if a reaction occurs. Type the **chemical formula of
             options: ['a synthesis occurs', 'a single replacement occurs', 'no reaction occurs', 'decomposition occurs']
           }
         ],
-        correctAnswers: ['one', 'F₂ > Cl₂ > Br₂ > I₂', 'double replacement', 'no reaction occurs'],
+        correctAnswers: ['one', '$F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$', 'double replacement', 'no reaction occurs'],
         hint1: 'Single replacement: element + compound → compound + element. How many uncombined elements are among the reactants?',
         hint2: 'Reactivity decreases going down Group 17.',
         hint3: 'Acid–base neutralization: two compounds exchange ions.',
-        explanation: 'In single replacement, there is exactly one free element as a reactant. Halogen reactivity: F₂ > Cl₂ > Br₂ > I₂ (decreases down the group). Neutralization is double replacement (ion exchange). Without a driving force (precipitate, gas, or water), no double replacement occurs.'
+        explanation: 'In single replacement, there is exactly one free element as a reactant. Halogen reactivity: $F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$ (decreases down the group). Neutralization is double replacement (ion exchange). Without a driving force (precipitate, gas, or water), no double replacement occurs.'
       }
     },
     {
@@ -274,13 +274,13 @@ For each scenario, indicate if a reaction occurs. Type the **chemical formula of
           {
             question: 'When chlorine gas is bubbled through a solution of potassium iodide, the products are:',
             options: [
-              'KCl + I₂',
-              'KI + Cl₂ (no reaction)',
-              'KClI + O₂',
+              'KCl + $I_{2}$',
+              'KI + $Cl_{2}$ (no reaction)',
+              'KClI + $O_{2}$',
               'HCl + KOH'
             ],
             correctAnswer: 0,
-            explanation: '$\\text{Cl}_2 + 2\\text{KI} \\rightarrow 2\\text{KCl} + \\text{I}_2$. Chlorine is above iodine in the halogen activity series, so Cl₂ displaces I⁻ from KI. This is single replacement.'
+            explanation: '$\\text{Cl}_2 + 2\\text{KI} \\rightarrow 2\\text{KCl} + \\text{I}_2$. Chlorine is above iodine in the halogen activity series, so $Cl_{2}$ displaces $I^{-}$ from KI. This is single replacement.'
           },
           {
             question: 'Mixing solutions of lead(II) nitrate and potassium iodide produces a yellow precipitate. This reaction is:',
@@ -291,7 +291,7 @@ For each scenario, indicate if a reaction occurs. Type the **chemical formula of
               'Double replacement'
             ],
             correctAnswer: 3,
-            explanation: '$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\text{KNO}_3$. Two ionic compounds exchange ions, and the insoluble precipitate PbI₂ (yellow) drives the reaction. This is double replacement.'
+            explanation: '$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\text{KNO}_3$. Two ionic compounds exchange ions, and the insoluble precipitate $PbI_{2}$ (yellow) drives the reaction. This is double replacement.'
           }
         ]
       }

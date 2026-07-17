@@ -26,7 +26,7 @@ $$\\Phi_B = BA\\cos\\theta$$
 
 where:
 - $B$ = magnetic field strength (T)
-- $A$ = area of the surface (m²)
+- $A$ = area of the surface $(m^{2})$
 - $\\theta$ = angle between $\\vec{B}$ and the **area normal** $\\hat{n}$ (the vector perpendicular to the surface)
 
 ### SI Unit
@@ -97,10 +97,10 @@ Each turn contributes the same flux, so we multiply by $N$.
               'Volt (V)'
             ],
             correctAnswer: 1,
-            explanation: 'Magnetic flux is measured in Webers: 1 Wb = 1 T·m².'
+            explanation: 'Magnetic flux is measured in Webers: 1 Wb = 1 $T\\cdot m^{2}$.'
           },
           {
-            question: 'A circular loop of area 0.05 m² is in a uniform field $B = 0.3$ T. The field is perpendicular to the plane of the loop. The magnetic flux through the loop is:',
+            question: 'A circular loop of area 0.05 $m^{2}$ is in a uniform field $B = 0.3$ T. The field is perpendicular to the plane of the loop. The magnetic flux through the loop is:',
             options: [
               '0 Wb',
               '0.015 Wb',
@@ -157,7 +157,7 @@ Faraday discovered that **changing flux induces an EMF** (voltage) in the loop. 
 
 A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic field of $B = 0.5$ T.
 
-1) Area of the loop in m²
+1) Area of the loop in $m^{2}$
 
 2) Maximum possible flux through the loop (in Wb)
 
@@ -168,10 +168,10 @@ A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic 
       exercise: {
         boxes: 3,
         correctAnswers: ['0.06', '0.03', '0.015'],
-        hint1: '$A = (0.20)(0.30)$ m².',
+        hint1: '$A = (0.20)(0.30)$ $m^{2}$.',
         hint2: 'Maximum flux occurs at $\\theta = 0°$: $\\Phi = BA = (0.5)(0.06)$.',
         hint3: '$\\Phi = BA\\cos 60° = (0.03)(0.5) = 0.015$ Wb.',
-        explanation: '$A = 0.20 \\times 0.30 = 0.06$ m². $\\Phi_{\\max} = (0.5)(0.06) = 0.03$ Wb. At $\\theta = 60°$: $\\Phi = 0.03 \\cos 60° = 0.03 \\times 0.5 = 0.015$ Wb.'
+        explanation: '$A = 0.20 \\times 0.30 = 0.06$ $m^{2}$. $\\Phi_{\\max} = (0.5)(0.06) = 0.03$ Wb. At $\\theta = 60°$: $\\Phi = 0.03 \\cos 60° = 0.03 \\times 0.5 = 0.015$ Wb.'
       }
     },
     {
@@ -183,7 +183,7 @@ A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic 
       exercise: {
         questions: [
           {
-            question: 'A coil has 200 turns, each with area 0.01 m², in a field of 0.4 T perpendicular to the coil. The total flux linkage is:',
+            question: 'A coil has 200 turns, each with area 0.01 $m^{2}$, in a field of 0.4 T perpendicular to the coil. The total flux linkage is:',
             options: [
               '0.004 Wb',
               '0.8 Wb',

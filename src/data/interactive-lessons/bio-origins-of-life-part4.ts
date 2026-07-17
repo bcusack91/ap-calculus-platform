@@ -154,8 +154,8 @@ The first true cells were **prokaryotic** — lacking a nucleus and membrane-bou
         correctAnswers: ['hydrophobic', 'fatty acids', 'acetyl-CoA'],
         hint1: 'This thermodynamic effect drives nonpolar molecules to aggregate, minimizing their contact with water.',
         hint2: 'These amphiphilic molecules are the building blocks of cell membranes.',
-        hint3: 'This pathway uses H₂ and CO₂ as substrates — gases abundant at alkaline hydrothermal vents.',
-        explanation: 'The hydrophobic effect drives spontaneous membrane assembly. Protocells grew by adding fatty acids. LUCA\'s use of the acetyl-CoA pathway (which uses H₂ and CO₂) supports the hydrothermal vent hypothesis for life\'s origin.'
+        hint3: 'This pathway uses $H_{2}$ and $CO_{2}$ as substrates — gases abundant at alkaline hydrothermal vents.',
+        explanation: 'The hydrophobic effect drives spontaneous membrane assembly. Protocells grew by adding fatty acids. LUCA\'s use of the acetyl-CoA pathway (which uses $H_{2}$ and $CO_{2}$) supports the hydrothermal vent hypothesis for life\'s origin.'
       }
     },
     {

@@ -43,7 +43,7 @@ Create **two separate DVAT tables** — one for each direction:
       content: `
 ## Worked Example
 
-A ball is kicked at 20 m/s at 37° above horizontal from ground level. Use $g = 10$ m/s², $\\cos 37° = 0.8$, $\\sin 37° = 0.6$.
+A ball is kicked at 20 m/s at 37° above horizontal from ground level. Use $g = 10$ $m/s^{2}$, $\\cos 37° = 0.8$, $\\sin 37° = 0.6$.
 
 ### Step 1: Resolve Components
 
@@ -78,7 +78,7 @@ $$\\Delta y_{max} = 7.2 \\text{ m}$$
       content: `
 **Guided Problem 1 — Cliff Launch** 🏔️
 
-A stone is thrown horizontally at 12 m/s from a 45 m cliff. Use $g = 10$ m/s².
+A stone is thrown horizontally at 12 m/s from a 45 m cliff. Use $g = 10$ $m/s^{2}$.
 
 1) Time to reach the ground (in seconds)
 
@@ -101,7 +101,7 @@ A stone is thrown horizontally at 12 m/s from a 45 m cliff. Use $g = 10$ m/s².
       content: `
 **Guided Problem 2 — Angled Launch** ⚽
 
-A soccer ball is kicked at 25 m/s at 53° above horizontal from ground level. Use $g = 10$ m/s², $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
+A soccer ball is kicked at 25 m/s at 53° above horizontal from ground level. Use $g = 10$ $m/s^{2}$, $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
 
 1) $v_{0x}$ (in m/s)
 
@@ -158,7 +158,7 @@ A soccer ball is kicked at 25 m/s at 53° above horizontal from ground level. Us
       exercise: {
         questions: [
           {
-            question: 'A ball is launched at 30 m/s at 30° above horizontal. Use $g = 10$ m/s², $\\sin 30° = 0.5$, $\\cos 30° \\approx 0.866$. What is the maximum height?',
+            question: 'A ball is launched at 30 m/s at 30° above horizontal. Use $g = 10$ $m/s^{2}$, $\\sin 30° = 0.5$, $\\cos 30° \\approx 0.866$. What is the maximum height?',
             options: [
               '5.0 m',
               '7.5 m',
@@ -169,7 +169,7 @@ A soccer ball is kicked at 25 m/s at 53° above horizontal from ground level. Us
             explanation: '$v_{0y} = 30\\sin 30° = 15$ m/s. At max height: $0 = v_{0y}^2 - 2g h$, so $h = \\frac{v_{0y}^2}{2g} = \\frac{225}{20} = 11.25$ m.'
           },
           {
-            question: 'A plane flying at 200 m/s horizontally drops a package from 500 m. Using $g = 10$ m/s², how far ahead of the drop point does the package land?',
+            question: 'A plane flying at 200 m/s horizontally drops a package from 500 m. Using $g = 10$ $m/s^{2}$, how far ahead of the drop point does the package land?',
             options: [
               '1000 m',
               '2000 m',
@@ -188,7 +188,7 @@ A soccer ball is kicked at 25 m/s at 53° above horizontal from ground level. Us
       content: `
 **Exit Problem** ✅
 
-A ball is launched from the ground at 40 m/s at 37° above horizontal. Use $g = 10$ m/s², $\\cos 37° = 0.8$, $\\sin 37° = 0.6$.
+A ball is launched from the ground at 40 m/s at 37° above horizontal. Use $g = 10$ $m/s^{2}$, $\\cos 37° = 0.8$, $\\sin 37° = 0.6$.
 
 1) Maximum height (in meters)
 

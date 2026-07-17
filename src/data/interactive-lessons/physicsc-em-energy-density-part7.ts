@@ -44,11 +44,11 @@ MRI machines use superconducting solenoids with $B \\approx 3$ T. The energy den
 
 $$u = \\frac{(3)^2}{2(4\\pi \\times 10^{-7})} \\approx 3.6 \\times 10^6 \\text{ J/m}^3$$
 
-A typical MRI magnet volume $\\sim 1$ m³ stores $\\sim 3.6$ MJ — equivalent to a car traveling at 200 km/h. This is why quench protection is critical.
+A typical MRI magnet volume $\\sim 1$ $m^{3}$ stores $\\sim 3.6$ MJ — equivalent to a car traveling at 200 km/h. This is why quench protection is critical.
 
 ### Solar energy
 
-The Sun's intensity at Earth is $I \\approx 1400$ W/m². The corresponding field amplitudes:
+The Sun's intensity at Earth is $I \\approx 1400$ $W/m^{2}$. The corresponding field amplitudes:
 
 $$E_0 = \\sqrt{\\frac{2I}{c\\varepsilon_0}} \\approx 1027 \\text{ V/m}$$
 
@@ -65,7 +65,7 @@ $$B_0 = E_0/c \\approx 3.4 \\times 10^{-6} \\text{ T}$$
     {
       id: 'eden7-mcq2',
       type: 'mcq' as const,
-      question: 'An EM wave has average intensity $I = 500$ W/m². The peak electric field is approximately:',
+      question: 'An EM wave has average intensity $I = 500$ $W/m^{2}$. The peak electric field is approximately:',
       options: [
         '$614$ V/m',
         '$307$ V/m',
@@ -85,15 +85,15 @@ $$B_0 = E_0/c \\approx 3.4 \\times 10^{-6} \\text{ T}$$
 | Forgetting factor of $\\frac{1}{2}$ | $u = \\frac{1}{2}\\varepsilon_0 E^2$, not $\\varepsilon_0 E^2$ |
 | Wrong volume element | Spherical: $4\\pi r^2 dr$; cylindrical: $2\\pi r L\\,dr$ |
 | Limits of integration | Integrate only where $E \\neq 0$ |
-| Confusing $U$ and $u$ | $U$ = total energy (J); $u$ = energy per volume (J/m³) |
+| Confusing $U$ and $u$ | $U$ = total energy (J); $u$ = energy per volume $(J/m^{3})$ |
 | Dropping constants | Keep $\\varepsilon_0$, $\\mu_0$ throughout; cancel at the end |
 | EM wave average | $\\langle E^2 \\rangle = E_0^2/2$; include factor of $1/2$ for time average |
 
 ### Dimensional analysis shortcuts
 
-- $\\varepsilon_0 E^2$ has dimensions of J/m³ ✓
-- $B^2/\\mu_0$ has dimensions of J/m³ ✓
-- $E \\times B / \\mu_0$ has dimensions of W/m² ✓`
+- $\\varepsilon_0 E^2$ has dimensions of $J/m^{3}$ ✓
+- $B^2/\\mu_0$ has dimensions of $J/m^{3}$ ✓
+- $E \\times B / \\mu_0$ has dimensions of $W/m^{2}$ ✓`
     },
     {
       id: 'eden7-mcq3',

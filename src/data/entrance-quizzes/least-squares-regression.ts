@@ -11,13 +11,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'lsr-ent-1a',
     question: 'The equation of the least-squares regression line (LSRL) is ŷ = a + bx. How is the slope b calculated?',
     options: [
-      'b = r(sₓ/s_y)',
-      'b = r(s_y/sₓ)',
+      'b = $r(s_{x}/s_{y})$',
+      'b = $r(s_{y}/s_{x})$',
       'b = (ȳ − x̄) / r',
       'b = Σ(x − x̄)(y − ȳ) / n'
     ],
     correctIndex: 1,
-    explanation: 'The slope of the LSRL is b = r(s_y/sₓ), where r is the correlation, s_y is the standard deviation of y, and sₓ is the standard deviation of x.',
+    explanation: 'The slope of the LSRL is b = $r(s_{y}/s_{x})$, where r is the correlation, s_y is the standard deviation of y, and $s_{x}$ is the standard deviation of x.',
     partNumber: 1,
     partTitle: 'Regression Line Equation'
   },
@@ -113,7 +113,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'What is always true about the mean of the residuals for a least-squares regression line?',
     options: [
       'It equals the slope b',
-      'It equals r²',
+      'It equals $r^{2}$',
       'It equals 0',
       'It equals the standard deviation of y'
     ],
@@ -139,7 +139,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'lsr-ent-5b',
-    question: 'If r² = 0.64 for a model predicting weight from height, which interpretation is correct?',
+    question: 'If $r^{2}$ = 0.64 for a model predicting weight from height, which interpretation is correct?',
     options: [
       '"The correlation between height and weight is 0.64."',
       '"64% of the weights are correctly predicted."',
@@ -147,7 +147,7 @@ const questions: EntranceQuizQuestion[] = [
       '"Height causes 64% of weight gain."'
     ],
     correctIndex: 2,
-    explanation: 'r² in context: "Approximately 64% of the variability in weight [y] is explained by the linear model with height [x]." It measures how well the model accounts for variation.',
+    explanation: '$r^{2}$ in context: "Approximately 64% of the variability in weight [y] is explained by the linear model with height [x]." It measures how well the model accounts for variation.',
     partNumber: 5,
     partTitle: 'Regression in Context'
   },
@@ -187,11 +187,11 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'Only the y-intercept',
       'Only the correlation r',
-      'The slope and r²',
+      'The slope and $r^{2}$',
       'Only the residuals'
     ],
     correctIndex: 2,
-    explanation: 'On the AP exam, you must interpret both the slope and r² in context, using the actual variable names and units of measurement.',
+    explanation: 'On the AP exam, you must interpret both the slope and $r^{2}$ in context, using the actual variable names and units of measurement.',
     partNumber: 7,
     partTitle: 'AP Review & Applications'
   },
@@ -200,12 +200,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'From computer regression output, which quantities should you be able to identify?',
     options: [
       'Only the equation of the line',
-      'Slope, intercept, r², s (standard deviation of residuals), and p-value',
+      'Slope, intercept, $r^{2}$, s (standard deviation of residuals), and p-value',
       'Only the p-value and conclusion',
       'Only the residuals and fitted values'
     ],
     correctIndex: 1,
-    explanation: 'From computer output, identify: slope (coefficient of x), intercept (constant), r² (coefficient of determination), s (standard deviation of residuals), and the p-value for the slope.',
+    explanation: 'From computer output, identify: slope (coefficient of x), intercept (constant), $r^{2}$ (coefficient of determination), s (standard deviation of residuals), and the p-value for the slope.',
     partNumber: 7,
     partTitle: 'AP Review & Applications'
   }

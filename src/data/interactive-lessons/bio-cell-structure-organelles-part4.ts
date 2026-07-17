@@ -101,7 +101,7 @@ Lysosomes are membrane-bound organelles containing **hydrolytic enzymes** (hydro
 
 | Property | Detail |
 |----------|--------|
-| **Internal pH** | ~4.5–5.0 (acidic — maintained by H⁺ pumps) |
+| **Internal pH** | ~4.5–5.0 (acidic — maintained by $H^{+}$ pumps) |
 | **Enzyme type** | Acid hydrolases (lipases, proteases, nucleases, etc.) |
 | **Membrane protection** | Inner membrane is heavily glycosylated to resist self-digestion |
 | **Origin** | Formed from Golgi; enzymes tagged with mannose-6-phosphate |

@@ -160,7 +160,7 @@ export const psychThinkingPart7Data = {
 |--------------|-----------|
 | Heuristics are bad/irrational | They're EFFICIENT and usually correct — they just have predictable failure modes |
 | Availability = representativeness | Availability = how COMMON. Representativeness = what CATEGORY |
-| Algorithms are always better | Impractical for complex problems — chess has 10^120 possible games |
+| Algorithms are always better | Impractical for complex problems — chess has $10^{120}$ possible games |
 | Functional fixedness = mental set | Fixedness = OBJECT function. Set = STRATEGY |
 | Smart people don't have biases | Everyone has biases — expertise may even increase overconfidence |
 | Creativity is purely innate | Creativity can be developed through expertise, environment, and motivation |

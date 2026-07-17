@@ -11,10 +11,10 @@ const questions: EntranceQuizQuestion[] = [
     id: 'tm-ent-1a',
     question: 'A researcher believes the average commute time in a city exceeds 30 minutes. Which hypotheses should she test?',
     options: [
-      'H₀: x̄ = 30; Hₐ: x̄ > 30',
-      'H₀: μ = 30; Hₐ: μ > 30',
-      'H₀: μ > 30; Hₐ: μ = 30',
-      'H₀: μ = 30; Hₐ: μ ≠ 30'
+      '$H_{0}$: x̄ = 30; $H_{a}$: x̄ > 30',
+      '$H_{0}$: μ = 30; $H_{a}$: μ > 30',
+      '$H_{0}$: μ > 30; $H_{a}$: μ = 30',
+      '$H_{0}$: μ = 30; $H_{a}$: μ ≠ 30'
     ],
     correctIndex: 1,
     explanation: 'Hypotheses are written about the population mean μ, not the sample mean x̄. Since she believes the mean exceeds 30, the alternative is μ > 30.',
@@ -40,13 +40,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'tm-ent-2a',
     question: 'What is the formula for the one-sample t-test statistic?',
     options: [
-      't = (x̄ − μ₀) / (σ/√n)',
-      't = (x̄ − μ₀) / (s/√n)',
-      't = (μ₀ − x̄) / (s/√n)',
-      't = (x̄ − μ₀) / s'
+      't = (x̄ − $\\mu_{0}$) / $(\\sigma /\\sqrt{n})$',
+      't = (x̄ − $\\mu_{0}$) / $(s/\\sqrt{n})$',
+      't = ($\\mu_{0}$ − x̄) / $(s/\\sqrt{n})$',
+      't = (x̄ − $\\mu_{0}$) / s'
     ],
     correctIndex: 1,
-    explanation: 'The one-sample t-test statistic is t = (x̄ − μ₀) / (s/√n), with degrees of freedom df = n − 1. We use s (not σ) because the population standard deviation is unknown.',
+    explanation: 'The one-sample t-test statistic is t = (x̄ − $\\mu_{0}$) / $(s/\\sqrt{n})$, with degrees of freedom df = n − 1. We use s (not σ) because the population standard deviation is unknown.',
     partNumber: 2,
     partTitle: 'One-Sample t-Test'
   },
@@ -69,13 +69,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'tm-ent-3a',
     question: 'Which formula gives the test statistic for a two-sample t-test?',
     options: [
-      't = (x̄₁ − x̄₂) / √(s₁²/n₁ + s₂²/n₂)',
-      't = (x̄₁ + x̄₂) / √(s₁²/n₁ + s₂²/n₂)',
-      't = (x̄₁ − x̄₂) / (s_pooled/√n)',
-      't = (x̄₁ − x̄₂) / (s₁ + s₂)'
+      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
+      't = (x̄$ {}_{1}$ + x̄$ {}_{2}$) / $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
+      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / $(s_{pooled}/\\sqrt{n})$',
+      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / $(s_{1} + s_{2})$'
     ],
     correctIndex: 0,
-    explanation: 'The two-sample t-test statistic is t = (x̄₁ − x̄₂) / √(s₁²/n₁ + s₂²/n₂). This compares the difference in sample means to its estimated standard error.',
+    explanation: 'The two-sample t-test statistic is t = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$. This compares the difference in sample means to its estimated standard error.',
     partNumber: 3,
     partTitle: 'Two-Sample t-Test'
   },
@@ -96,7 +96,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 4: Confidence Intervals & Tests
   {
     id: 'tm-ent-4a',
-    question: 'A two-sided test at α = 0.05 rejects H₀: μ = 50. What can you conclude about a 95% confidence interval for μ from the same data?',
+    question: 'A two-sided test at α = 0.05 rejects $H_{0}$: μ = 50. What can you conclude about a 95% confidence interval for μ from the same data?',
     options: [
       'The interval contains 50',
       'The interval does not contain 50',
@@ -110,15 +110,15 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'tm-ent-4b',
-    question: 'A 95% confidence interval for μ is (72, 88). If you test H₀: μ = 70 vs Hₐ: μ ≠ 70 at α = 0.05, what is the result?',
+    question: 'A 95% confidence interval for μ is (72, 88). If you test $H_{0}$: μ = 70 vs $H_{a}$: μ ≠ 70 at α = 0.05, what is the result?',
     options: [
-      'Fail to reject H₀ because 70 is below the interval',
-      'Reject H₀ because 70 is NOT in the 95% CI',
-      'Fail to reject H₀ because the interval is wide',
+      'Fail to reject $H_{0}$ because 70 is below the interval',
+      'Reject $H_{0}$ because 70 is NOT in the 95% CI',
+      'Fail to reject $H_{0}$ because the interval is wide',
       'Cannot determine without the p-value'
     ],
     correctIndex: 1,
-    explanation: 'If the hypothesized value (70) is not contained in the 95% confidence interval (72, 88), the two-sided test rejects H₀ at α = 0.05.',
+    explanation: 'If the hypothesized value (70) is not contained in the 95% confidence interval (72, 88), the two-sided test rejects $H_{0}$ at α = 0.05.',
     partNumber: 4,
     partTitle: 'Confidence Intervals & Tests'
   },
@@ -154,7 +154,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Problem-Solving Workshop
   {
     id: 'tm-ent-6a',
-    question: 'A sample of n = 36 has x̄ = 105 and s = 12. Testing H₀: μ = 100 vs Hₐ: μ > 100, what is the t-statistic?',
+    question: 'A sample of n = 36 has x̄ = 105 and s = 12. Testing $H_{0}$: μ = 100 vs $H_{a}$: μ > 100, what is the t-statistic?',
     options: [
       't = 1.5',
       't = 2.0',
@@ -162,7 +162,7 @@ const questions: EntranceQuizQuestion[] = [
       't = 3.0'
     ],
     correctIndex: 2,
-    explanation: 't = (x̄ − μ₀) / (s/√n) = (105 − 100) / (12/√36) = 5 / 2 = 2.5. With df = 35, the p-value is approximately 0.009, providing strong evidence against H₀.',
+    explanation: 't = (x̄ − $\\mu_{0}$) / $(s/\\sqrt{n})$ = (105 − 100) / $(12/\\sqrt{36})$ = 5 / 2 = 2.5. With df = 35, the p-value is approximately 0.009, providing strong evidence against $H_{0}$.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -185,19 +185,19 @@ const questions: EntranceQuizQuestion[] = [
     id: 'tm-ent-7a',
     question: 'Which is the correct format for stating a conclusion to a significance test on the AP exam?',
     options: [
-      '"We accept H₀ because p > α."',
-      '"Because the p-value (_) is less than α = _, we reject H₀."',
+      '"We accept $H_{0}$ because p > α."',
+      '"Because the p-value (_) is less than α = _, we reject $H_{0}$."',
       '"The null hypothesis is true."',
-      '"We prove that μ ≠ μ₀."'
+      '"We prove that μ ≠ $\\mu_{0}$."'
     ],
     correctIndex: 1,
-    explanation: 'The proper conclusion states: "Because p-value (___) [is/is not] less than α = ___, we [reject/fail to reject] H₀." Never say "accept H₀" or "prove."',
+    explanation: 'The proper conclusion states: "Because p-value (___) [is/is not] less than α = ___, we [reject/fail to reject] $H_{0}$." Never say "accept $H_{0}$" or "prove."',
     partNumber: 7,
     partTitle: 'AP Review & Applications'
   },
   {
     id: 'tm-ent-7b',
-    question: 'After rejecting H₀: μ = 200 in a test about average daily calories burned, which interpretation is best?',
+    question: 'After rejecting $H_{0}$: μ = 200 in a test about average daily calories burned, which interpretation is best?',
     options: [
       '"We proved that the mean calories burned is not 200."',
       '"There is convincing evidence that the mean daily calories burned differs from 200."',

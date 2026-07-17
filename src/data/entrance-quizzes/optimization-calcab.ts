@@ -184,7 +184,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 7: Review & AP Exam Applications
   {
     id: 'opt-ent-7a',
-    question: 'A cylindrical can must hold 1000 cm³. The radius minimizing surface area satisfies $r =$:',
+    question: 'A cylindrical can must hold 1000 $cm^{3}$. The radius minimizing surface area satisfies $r =$:',
     options: [
       '$\\sqrt[3]{\\frac{500}{\\pi}}$',
       '$10$',

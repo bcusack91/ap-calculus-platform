@@ -173,7 +173,7 @@ For a given element, the **emission lines** and the **absorption lines** appear 
           },
           {
             question: 'A flame test of an unknown salt produces a bright crimson-red line at ~671 nm. The likely cation is:',
-            options: ['Na⁺', 'K⁺', 'Li⁺', 'Cu²⁺'],
+            options: ['$Na^{+}$', '$K^{+}$', '$Li^{+}$', '$Cu^{2+}$'],
             correctAnswer: 2,
             explanation: 'Lithium produces a characteristic crimson-red flame at ~671 nm. Sodium is yellow, potassium violet, copper blue-green.'
           }

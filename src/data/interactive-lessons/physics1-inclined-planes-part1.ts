@@ -74,7 +74,7 @@ This is **less than** $mg$ — the steeper the incline, the smaller the normal f
       exercise: {
         questions: [
           {
-            question: 'A 10 kg block sits on a 30° incline ($g = 10$ m/s²). What is the component of weight along the slope?',
+            question: 'A 10 kg block sits on a 30° incline ($g = 10$ $m/s^{2}$). What is the component of weight along the slope?',
             options: [
               '50 N',
               '86.6 N',
@@ -115,7 +115,7 @@ This is **less than** $mg$ — the steeper the incline, the smaller the normal f
       content: `
 **Calculate the Components** 🧮
 
-A 20 kg block sits on a 37° incline ($g = 10$ m/s², $\\sin 37° = 0.60$, $\\cos 37° = 0.80$).
+A 20 kg block sits on a 37° incline ($g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $\\cos 37° = 0.80$).
 
 1) What is the component of weight parallel to the slope (in N)?
 
@@ -172,7 +172,7 @@ A 20 kg block sits on a 37° incline ($g = 10$ m/s², $\\sin 37° = 0.60$, $\\co
       exercise: {
         questions: [
           {
-            question: 'A 5 kg object on a 53° incline ($\\sin 53° = 0.80$, $\\cos 53° = 0.60$, $g = 10$ m/s²). What is the normal force?',
+            question: 'A 5 kg object on a 53° incline ($\\sin 53° = 0.80$, $\\cos 53° = 0.60$, $g = 10$ $m/s^{2}$). What is the normal force?',
             options: [
               '30 N',
               '40 N',

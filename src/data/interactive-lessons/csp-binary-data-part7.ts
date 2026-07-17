@@ -44,7 +44,7 @@ Final cheat sheet of the binary and data-representation facts most tested on the
               "12"
             ],
             correctAnswer: 2,
-            explanation: "2⁹ = 512 < 1000; 2¹⁰ = 1024 ≥ 1000."
+            explanation: "$2^{9}$ = 512 < 1000; $2^{10}$ = 1024 ≥ 1000."
           }
         ]
       }
@@ -58,11 +58,11 @@ Final cheat sheet of the binary and data-representation facts most tested on the
 | Memorize | Value |
 |----------|-------|
 | 1 byte | 8 bits |
-| 2⁸ | 256 |
-| 2¹⁰ | 1,024 (≈ 1 KB) |
-| 2¹⁶ | 65,536 |
-| 2²⁰ | ≈ 1 million (≈ 1 MB) |
-| 2³² | ≈ 4.3 billion (≈ 4 GB) |
+| $2^{8}$ | 256 |
+| $2^{10}$ | 1,024 (≈ 1 KB) |
+| $2^{16}$ | 65,536 |
+| $2^{20}$ | ≈ 1 million (≈ 1 MB) |
+| $2^{32}$ | ≈ 4.3 billion (≈ 4 GB) |
 
 ## Common Misconceptions to Avoid
 
@@ -73,7 +73,7 @@ Final cheat sheet of the binary and data-representation facts most tested on the
 
 ## Common Calculations
 
-- Min bits for N values: ⌈log₂ N⌉.
+- Min bits for N values: ⌈$\\log_{2}$ N⌉.
 - Image bytes: W × H × bytesPerPixel.
 - Audio bytes/sec: sampleRate × bytesPerSample × channels.
 - Total storage of M items × k bytes each: M·k.
@@ -96,8 +96,8 @@ Final cheat sheet of the binary and data-representation facts most tested on the
         correctAnswers: ["byte", "128", "20"],
         hint1: "Standard grouping unit.",
         hint2: "Place value 128.",
-        hint3: "2²⁰ ≈ 1,048,576.",
-        explanation: "8 bits = 1 byte. 10000000₂ = 128. 20 bits cover 1M values."
+        hint3: "$2^{20}$ ≈ 1,048,576.",
+        explanation: "8 bits = 1 byte. $10000000_{2}$ = 128. 20 bits cover 1M values."
       }
     },
     {
@@ -134,7 +134,7 @@ Final cheat sheet of the binary and data-representation facts most tested on the
       content: `
 ## Final Exam Tips
 
-- "Smallest number of bits to represent N values" → ⌈log₂ N⌉. Always.
+- "Smallest number of bits to represent N values" → ⌈$\\log_{2}$ N⌉. Always.
 - Distinguish lossless (perfectly reversible) from lossy (approximate).
 - Encryption ≠ compression: encryption preserves size, compression shrinks it.
 - Different file types are just different conventions for interpreting the SAME underlying bits.
@@ -169,7 +169,7 @@ Final cheat sheet of the binary and data-representation facts most tested on the
               "64-bit unsigned integers as the only sufficient option, since smaller widths cannot represent the dataset."
             ],
             correctAnswer: 2,
-            explanation: "2³² ≈ 4.29 billion ≥ 4 billion. 32-bit is the smallest sufficient size."
+            explanation: "$2^{32}$ ≈ 4.29 billion ≥ 4 billion. 32-bit is the smallest sufficient size."
           }
         ]
       }

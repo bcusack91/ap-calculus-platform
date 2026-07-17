@@ -112,7 +112,7 @@ Example: $\\text{Cu}^{2+}$ is $[\\text{Ar}]\\,3d^9$ — one unpaired $d$ electro
               `$[\\text{Ar}]\\,4s^2\\,3d^3$`
             ],
             correctAnswer: 0,
-            explanation: `Neutral Fe is $[\\text{Ar}]\\,3d^6\\,4s^2$. Remove electrons from 4s first (2 electrons removed), then one from 3d to get Fe³⁺: $[\\text{Ar}]\\,3d^5$.`
+            explanation: `Neutral Fe is $[\\text{Ar}]\\,3d^6\\,4s^2$. Remove electrons from 4s first (2 electrons removed), then one from 3d to get $Fe^{3+}$: $[\\text{Ar}]\\,3d^5$.`
           },
           {
             question: `Which ion is diamagnetic (all electrons paired)?`,
@@ -155,12 +155,12 @@ $$Z_{eff} = Z - S$$
 | Property | Across Period (→) | Down Group (↓) | Driven By |
 |----------|-------------------|----------------|-----------|
 | Atomic radius | Decreases | Increases | Higher $Z_{eff}$ pulls electrons in; more shells add distance |
-| Ionization energy (IE₁) | Increases | Decreases | Harder to remove from tighter-held valence shell |
+| Ionization energy $(IE_{1})$ | Increases | Decreases | Harder to remove from tighter-held valence shell |
 | Electronegativity | Increases | Decreases | Same as IE — ability to attract bonding electrons |
-| Electron affinity | Generally more negative | Generally less negative | More favorable to add e⁻ with high $Z_{eff}$ |
+| Electron affinity | Generally more negative | Generally less negative | More favorable to add $e^{-}$ with high $Z_{eff}$ |
 | Metallic character | Decreases | Increases | Inverse of IE — metals lose electrons easily |
 
-### IE₁ Exceptions (MUST Know for MCAT)
+### $IE_{1}$ Exceptions (MUST Know for MCAT)
 
 Ionization energy generally rises across a period, but there are two important dips:
 
@@ -173,8 +173,8 @@ Ionization energy generally rises across a period, but there are two important d
 ### Ionization Energy Jump Logic (MCAT Favorite)
 
 A large jump between successive ionization energies reveals the **valence electron count**:
-- Big jump between IE₂ and IE₃ → 2 valence electrons → Group IIA
-- Big jump between IE₁ and IE₂ → 1 valence electron → Group IA
+- Big jump between $IE_{2}$ and $IE_{3}$ → 2 valence electrons → Group IIA
+- Big jump between $IE_{1}$ and $IE_{2}$ → 1 valence electron → Group IA
 `
     },
     {

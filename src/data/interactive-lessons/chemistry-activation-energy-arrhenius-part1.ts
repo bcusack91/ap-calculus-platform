@@ -57,10 +57,10 @@ Even with enough energy, the molecules must collide with the correct **geometric
 
 ---
 
-### Example: NO + NO₃ → 2NO₂
+### Example: NO + $NO_{3}$ → $2NO_{2}$
 
-- ✅ O of NO hits O of NO₃ → bonds can rearrange → reaction!
-- ❌ N of NO hits N of NO₃ → wrong atoms in contact → no reaction
+- ✅ O of NO hits O of $NO_{3}$ → bonds can rearrange → reaction!
+- ❌ N of NO hits N of $NO_{3}$ → wrong atoms in contact → no reaction
 
 
 ---
@@ -162,7 +162,7 @@ $$\\boxed{f = e^{-E_a/(RT)}}$$
           },
           {
             label: 'The fraction of molecules with energy ≥ Ea is given by',
-            options: ['Ea/RT', 'e^(−Ea/RT)', 'RT/Ea', 'ln(Ea/RT)']
+            options: ['Ea/RT', '$e^{-Ea/RT}$', 'RT/Ea', 'ln(Ea/RT)']
           },
           {
             label: 'Increasing temperature increases the fraction beyond Ea because',
@@ -173,11 +173,11 @@ $$\\boxed{f = e^{-E_a/(RT)}}$$
             options: ['increases with temperature', 'decreases with temperature', 'stays constant (equals 1)', 'depends on Ea']
           }
         ],
-        correctAnswers: ['shorter and broader', 'e^(−Ea/RT)', 'the distribution broadens to higher energies', 'stays constant (equals 1)'],
+        correctAnswers: ['shorter and broader', '$e^{-Ea/RT}$', 'the distribution broadens to higher energies', 'stays constant (equals 1)'],
         hint1: 'Total number of molecules is constant, so the curve flattens as it broadens.',
-        hint2: 'The Boltzmann factor is e^(−Ea/RT).',
+        hint2: 'The Boltzmann factor is $e^{-Ea/RT}$.',
         hint3: 'The distribution shifts and broadens — more molecules have high energies.',
-        explanation: 'Higher T: curve is shorter and broader (total area = 1, always). Fraction ≥ Ea = e^(−Ea/RT). The broadening puts more area beyond Ea. Total area is always 1 (normalized probability).'
+        explanation: 'Higher T: curve is shorter and broader (total area = 1, always). Fraction ≥ Ea = $e^{-Ea/RT}$. The broadening puts more area beyond Ea. Total area is always 1 (normalized probability).'
       }
     },
     {
@@ -225,9 +225,9 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
         boxes: 3,
         correctAnswers: ['20.0', '2.1e-9', '19.4'],
         hint1: 'Ea/(RT) = 50,000/(8.314 × 300) = 50,000/2494.2 = 20.05 ≈ 20.0.',
-        hint2: 'e^(−20.0) = 2.06 × 10⁻⁹ ≈ 2.1 × 10⁻⁹.',
+        hint2: '$e^{-20.0}$ = $2.06 \\times 10^{-9}$ ≈ $2.1 \\times 10^{-9}$.',
         hint3: 'Ea/(RT) = 50,000/(8.314 × 310) = 50,000/2577.3 = 19.40 ≈ 19.4.',
-        explanation: '1) 50,000/(8.314 × 300) = 20.0. 2) e^(−20.0) ≈ 2.1 × 10⁻⁹. 3) 50,000/(8.314 × 310) = 19.4. The decrease from 20.0 to 19.4 may seem small, but e^(−19.4)/e^(−20.0) = e^(0.6) ≈ 1.8, so the rate nearly doubles!'
+        explanation: '1) 50,000/(8.314 × 300) = 20.0. 2) $e^{-20.0}$ ≈ $2.1 \\times 10^{-9}$. 3) 50,000/(8.314 × 310) = 19.4. The decrease from 20.0 to 19.4 may seem small, but $e^{-19.4}/e^{-20.0}$ = $e^{0.6}$ ≈ 1.8, so the rate nearly doubles!'
       }
     },
     {
@@ -242,12 +242,12 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
             question: 'Which factor most dramatically affects the fraction of effective collisions when temperature increases by 10°C?',
             options: [
               'Collision frequency (molecules move faster)',
-              'The Boltzmann factor e^(−Ea/RT)',
+              'The Boltzmann factor $e^{-Ea/RT}$',
               'The steric factor',
               'The number of molecules'
             ],
             correctAnswer: 1,
-            explanation: 'While collision frequency increases modestly with temperature (proportional to √T), the exponential Boltzmann factor e^(−Ea/RT) changes much more dramatically. This exponential dependence is the dominant effect.'
+            explanation: 'While collision frequency increases modestly with temperature (proportional to $\\sqrt{T}$), the exponential Boltzmann factor $e^{-Ea/RT}$ changes much more dramatically. This exponential dependence is the dominant effect.'
           },
           {
             question: 'A reaction with a very large Ea will:',
@@ -258,7 +258,7 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
               'Not require collisions'
             ],
             correctAnswer: 1,
-            explanation: 'Large Ea means e^(−Ea/RT) is very small, so only a tiny fraction of collisions have enough energy. The reaction is slow unless temperature is very high.'
+            explanation: 'Large Ea means $e^{-Ea/RT}$ is very small, so only a tiny fraction of collisions have enough energy. The reaction is slow unless temperature is very high.'
           }
         ]
       }

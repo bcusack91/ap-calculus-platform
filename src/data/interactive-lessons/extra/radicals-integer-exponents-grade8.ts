@@ -258,7 +258,7 @@ Each problem below uses exactly one rule. Identify which one (add, subtract, or 
         type: 'input-boxes' as const,
         content: `**Simplify to a Single Exponent** 🧮
 
-Each answer is a single power of the form (base)^(exponent). Enter just the **exponent**.
+Each answer is a single power of the form $(base)^{exponent}$. Enter just the **exponent**.
 
 **1)** $7^5 \\cdot 7^6 = 7^{\\,?}$
 **2)** $\\dfrac{10^{12}}{10^{4}} = 10^{\\,?}$

@@ -78,7 +78,7 @@ The Biological Dynamics of Forest Fragments Project (BDFFP) near Manaus, Brazil:
               'About 90%'
             ],
             correctAnswer: 2,
-            explanation: 'If 90% of habitat is destroyed, 10% remains. Using S = cA^z: S_new/S_original = (0.1A/A)^0.25 = 0.1^0.25 = 0.562. So about 56% of species remain, meaning approximately 44% are predicted to be lost. Note: this is a long-term prediction; actual species loss may lag behind habitat loss ("extinction debt").'
+            explanation: 'If 90% of habitat is destroyed, 10% remains. Using S = $cA^{z}$: S_new/S_original = $(0.1A/A)^{0.25}$ = $0.1^{0.25}$ = 0.562. So about 56% of species remain, meaning approximately 44% are predicted to be lost. Note: this is a long-term prediction; actual species loss may lag behind habitat loss ("extinction debt").'
           }
         ]
       }
@@ -125,18 +125,18 @@ Harvesting organisms faster than they can reproduce:
 ### Pollution
 Chemical, physical, and biological contaminants that degrade ecosystems:
 
-- **Nutrient pollution (eutrophication)** — excess nitrogen and phosphorus from agriculture cause algal blooms → oxygen depletion → dead zones (e.g., Gulf of Mexico hypoxic zone: ~15,000 km²).
+- **Nutrient pollution (eutrophication)** — excess nitrogen and phosphorus from agriculture cause algal blooms → oxygen depletion → dead zones (e.g., Gulf of Mexico hypoxic zone: ~15,000 $km^{2}$).
 - **Pesticides** — DDT caused eggshell thinning in raptors; neonicotinoids linked to pollinator declines.
 - **Heavy metals** — mercury biomagnification through aquatic food chains.
 - **Plastic pollution** — ~8 million tons enter oceans annually; microplastics found in virtually all marine organisms.
-- **Acid rain** — SO₂ and NOₓ emissions lower pH of lakes and soils, harming aquatic organisms and nutrient availability.
+- **Acid rain** — $SO_{2}$ and $NO_{x}$ emissions lower pH of lakes and soils, harming aquatic organisms and nutrient availability.
 
 ### Climate Change
 Rapidly becoming one of the most significant threats:
 
 - **Range shifts** — species move poleward or to higher elevations as temperatures rise; not all species can keep pace.
 - **Phenological mismatches** — timing of migration, flowering, and insect emergence falls out of sync with food availability.
-- **Ocean acidification** — increased CO₂ dissolves in seawater, lowering pH. Coral reefs and shellfish cannot form calcium carbonate structures.
+- **Ocean acidification** — increased $CO_{2}$ dissolves in seawater, lowering pH. Coral reefs and shellfish cannot form calcium carbonate structures.
 - **Coral bleaching** — elevated ocean temperatures cause corals to expel symbiotic zooxanthellae; prolonged bleaching causes death.
 - **Sea level rise** — threatens coastal habitats (mangroves, salt marshes, nesting beaches).
 

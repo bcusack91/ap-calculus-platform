@@ -64,7 +64,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       content: `
 ## 📌 AP-Style Problem Walkthrough
 
-> **Problem:** A student reacts 25.0 mL of 0.400 M Pb(NO₃)₂ with 35.0 mL of 0.300 M KI. Find the mass of PbI₂ precipitate formed.
+> **Problem:** A student reacts 25.0 mL of 0.400 M $Pb(NO_{3})_{2}$ with 35.0 mL of 0.300 M KI. Find the mass of $PbI_{2}$ precipitate formed.
 
 > **Solution:**
 
@@ -77,7 +77,7 @@ $M_{\\text{PbI}_2} = 461.0$ g/mol
 
 ### Step 1: Find Moles
 
-- mol Pb(NO₃)₂ = $0.400 \\times 0.0250 = 0.0100$ mol
+- mol $Pb(NO_{3})_{2}$ = $0.400 \\times 0.0250 = 0.0100$ mol
 - mol KI = $0.300 \\times 0.0350 = 0.0105$ mol
 
 
@@ -85,14 +85,14 @@ $M_{\\text{PbI}_2} = 461.0$ g/mol
 
 ### Step 2: Limiting Reactant
 
-- From Pb(NO₃)₂: $0.0100 \\; \\cancel{\\text{mol Pb(NO}_3)_2} \\times \\frac{1 \\text{ mol PbI}_2}{1 \\; \\cancel{\\text{mol Pb(NO}_3)_2}} = 0.0100$ mol PbI₂
-- From KI: $0.0105 \\; \\cancel{\\text{mol KI}} \\times \\frac{1 \\text{ mol PbI}_2}{2 \\; \\cancel{\\text{mol KI}}} = 0.00525$ mol PbI₂
+- From $Pb(NO_{3})_{2}$: $0.0100 \\; \\cancel{\\text{mol Pb(NO}_3)_2} \\times \\frac{1 \\text{ mol PbI}_2}{1 \\; \\cancel{\\text{mol Pb(NO}_3)_2}} = 0.0100$ mol $PbI_{2}$
+- From KI: $0.0105 \\; \\cancel{\\text{mol KI}} \\times \\frac{1 \\text{ mol PbI}_2}{2 \\; \\cancel{\\text{mol KI}}} = 0.00525$ mol $PbI_{2}$
 - KI produces less → **KI is limiting**
 
 
 ---
 
-### Step 3: Mass of PbI₂
+### Step 3: Mass of $PbI_{2}$
 
 $$m = 0.00525 \\; \\cancel{\\text{mol PbI}_2} \\times \\frac{461.0 \\text{ g PbI}_2}{1 \\; \\cancel{\\text{mol PbI}_2}} = 2.42 \\text{ g PbI}_2$$
 
@@ -101,7 +101,7 @@ $$m = 0.00525 \\; \\cancel{\\text{mol PbI}_2} \\times \\frac{461.0 \\text{ g PbI
 
 ### Key Insight
 
-Even though we had fewer moles of Pb(NO₃)₂ initially (0.0100 vs 0.0105), KI was limiting because the reaction requires **2 mol KI per 1 mol Pb(NO₃)₂**.
+Even though we had fewer moles of $Pb(NO_{3})_{2}$ initially (0.0100 vs 0.0105), KI was limiting because the reaction requires **2 mol KI per 1 mol $Pb(NO_{3})_{2}$**.
       `
     },
     {
@@ -113,7 +113,7 @@ Even though we had fewer moles of Pb(NO₃)₂ initially (0.0100 vs 0.0105), KI 
       exercise: {
         questions: [
           {
-            question: 'In the reaction $\\text{CaCO}_3 + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$, 10.0 g of CaCO₃ ($M = 100.1$) reacts with excess HCl. What volume of CO₂ is produced at STP (1 mol gas = 22.4 L)?',
+            question: 'In the reaction $\\text{CaCO}_3 + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$, 10.0 g of $CaCO_{3}$ ($M = 100.1$) reacts with excess HCl. What volume of $CO_{2}$ is produced at STP (1 mol gas = 22.4 L)?',
             options: [
               '1.12 L',
               '2.24 L',
@@ -121,7 +121,7 @@ Even though we had fewer moles of Pb(NO₃)₂ initially (0.0100 vs 0.0105), KI 
               '22.4 L'
             ],
             correctAnswer: 1,
-            explanation: 'Moles CaCO₃: 10.0/100.1 = 0.0999 mol. Mole ratio 1:1 → 0.0999 mol CO₂. Volume at STP: 0.0999 × 22.4 = 2.24 L.'
+            explanation: 'Moles $CaCO_{3}$: 10.0/100.1 = 0.0999 mol. Mole ratio 1:1 → 0.0999 mol $CO_{2}$. Volume at STP: 0.0999 × 22.4 = 2.24 L.'
           },
           {
             question: 'A student obtains 3.50 g of a product with a theoretical yield of 5.00 g. The percent yield is:',
@@ -135,7 +135,7 @@ Even though we had fewer moles of Pb(NO₃)₂ initially (0.0100 vs 0.0105), KI 
             explanation: '$\\% \\text{ yield} = (3.50/5.00) \\times 100 = 70.0\\%$.'
           },
           {
-            question: 'In a titration, 15.0 mL of 0.100 M Ba(OH)₂ neutralizes 30.0 mL of HCl. The molarity of HCl is:',
+            question: 'In a titration, 15.0 mL of 0.100 M $Ba(OH)_{2}$ neutralizes 30.0 mL of HCl. The molarity of HCl is:',
             options: [
               '0.050 M',
               '0.100 M',
@@ -143,7 +143,7 @@ Even though we had fewer moles of Pb(NO₃)₂ initially (0.0100 vs 0.0105), KI 
               '0.300 M'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{Ba(OH)}_2 + 2\\text{HCl} \\rightarrow \\text{BaCl}_2 + 2\\text{H}_2\\text{O}$. Mol Ba(OH)₂ = 0.100 × 0.0150 = 0.00150 mol. Mol HCl = 0.00150 × 2 = 0.00300 mol. M(HCl) = 0.00300/0.0300 = 0.100 M.'
+            explanation: '$\\text{Ba(OH)}_2 + 2\\text{HCl} \\rightarrow \\text{BaCl}_2 + 2\\text{H}_2\\text{O}$. Mol $Ba(OH)_{2}$ = 0.100 × 0.0150 = 0.00150 mol. Mol HCl = 0.00150 × 2 = 0.00300 mol. M(HCl) = 0.00300/0.0300 = 0.100 M.'
           },
           {
             question: 'Which of the following is NOT needed to solve a limiting reactant problem?',
@@ -173,17 +173,17 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
 
 **1)** The limiting reactant is which? Type **Al** or **HCl**.
 
-**2)** What is the theoretical yield of AlCl₃ in grams? (to 3 significant figures)
+**2)** What is the theoretical yield of $AlCl_{3}$ in grams? (to 3 significant figures)
 
-**3)** What is the actual yield of AlCl₃ in grams? (to 3 significant figures)
+**3)** What is the actual yield of $AlCl_{3}$ in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['Al', '66.7', '60.0'],
-        hint1: 'Mol Al = 13.49/26.98 = 0.500. Mol HCl = 109.4/36.46 = 3.000. From Al: 0.500 × 2/2 = 0.500 mol AlCl₃. From HCl: 3.000 × 2/6 = 1.000 mol AlCl₃. Which produces less?',
+        hint1: 'Mol Al = 13.49/26.98 = 0.500. Mol HCl = 109.4/36.46 = 3.000. From Al: 0.500 × 2/2 = 0.500 mol $AlCl_{3}$. From HCl: 3.000 × 2/6 = 1.000 mol $AlCl_{3}$. Which produces less?',
         hint2: 'Theoretical = 0.500 × 133.34.',
         hint3: 'Actual = theoretical × 0.90.',
-        explanation: '1) Mol Al = 0.500 → 0.500 mol AlCl₃. Mol HCl = 3.000 → 1.000 mol AlCl₃. Al produces less → Al is limiting. 2) Theoretical: 0.500 × 133.34 = 66.7 g. 3) Actual: 66.7 × 0.90 = 60.0 g.'
+        explanation: '1) Mol Al = 0.500 → 0.500 mol $AlCl_{3}$. Mol HCl = 3.000 → 1.000 mol $AlCl_{3}$. Al produces less → Al is limiting. 2) Theoretical: 0.500 × 133.34 = 66.7 g. 3) Actual: 66.7 × 0.90 = 60.0 g.'
       }
     },
     {
@@ -199,11 +199,11 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
             options: [
               'Mg',
               'HCl',
-              'MgCl₂',
+              '$MgCl_{2}$',
               'They are in exact ratio'
             ],
             correctAnswer: 1,
-            explanation: 'Mol Mg = 2.43/24.31 = 0.100 mol → 0.100 mol MgCl₂. Mol HCl = 3.00 × 0.0500 = 0.150 mol → 0.150/2 = 0.075 mol MgCl₂. HCl produces less → HCl is limiting.'
+            explanation: 'Mol Mg = 2.43/24.31 = 0.100 mol → 0.100 mol $MgCl_{2}$. Mol HCl = 3.00 × 0.0500 = 0.150 mol → 0.150/2 = 0.075 mol $MgCl_{2}$. HCl produces less → HCl is limiting.'
           },
           {
             question: 'For the AP free-response section, which approach earns the most credit for stoichiometry problems?',
@@ -260,7 +260,7 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
       exercise: {
         questions: [
           {
-            question: 'A student reacts 40.0 mL of 0.500 M Na₂CO₃ with 60.0 mL of 0.400 M CaCl₂. How many grams of CaCO₃ ($M = 100.1$) precipitate form? ($\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3 + 2\\text{NaCl}$)',
+            question: 'A student reacts 40.0 mL of 0.500 M $Na_{2}CO_{3}$ with 60.0 mL of 0.400 M $CaCl_{2}$. How many grams of $CaCO_{3}$ ($M = 100.1$) precipitate form? ($\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3 + 2\\text{NaCl}$)',
             options: [
               '1.00 g',
               '2.00 g',
@@ -268,7 +268,7 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
               '4.00 g'
             ],
             correctAnswer: 1,
-            explanation: 'Mol Na₂CO₃ = 0.500 × 0.0400 = 0.0200 mol → 0.0200 mol CaCO₃. Mol CaCl₂ = 0.400 × 0.0600 = 0.0240 mol → 0.0240 mol CaCO₃. Na₂CO₃ produces less → limiting. CaCO₃ = 0.0200 × 100.1 = 2.00 g.'
+            explanation: 'Mol $Na_{2}CO_{3}$ = 0.500 × 0.0400 = 0.0200 mol → 0.0200 mol $CaCO_{3}$. Mol $CaCl_{2}$ = 0.400 × 0.0600 = 0.0240 mol → 0.0240 mol $CaCO_{3}$. $Na_{2}CO_{3}$ produces less → limiting. $CaCO_{3}$ = 0.0200 × 100.1 = 2.00 g.'
           },
           {
             question: 'A pharmaceutical company needs to produce 500 g of aspirin with a process that has 82% yield. The theoretical yield they must target is approximately:',

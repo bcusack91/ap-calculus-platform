@@ -150,7 +150,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-4-contextual-applications-differentiation',
-    question: 'A spherical snowball melts at a rate of 12 cm³/min. When the radius is 5 cm, the rate at which the radius is changing is',
+    question: 'A spherical snowball melts at a rate of 12 $cm^{3}/min$. When the radius is 5 cm, the rate at which the radius is changing is',
     options: ['$-\\dfrac{9}{25\\pi}$ cm/min', '$-\\dfrac{3}{25\\pi}$ cm/min', '$-\\dfrac{1}{25\\pi}$ cm/min', '$-12$ cm/min'],
     correctAnswer: 1,
     explanation: '$V=\\frac{4}{3}\\pi r^3 \\Rightarrow dV/dt = 4\\pi r^2 dr/dt$. $-12 = 4\\pi(25)(dr/dt) \\Rightarrow dr/dt = -12/(100\\pi) = -3/(25\\pi)$.',
@@ -176,7 +176,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-analytical-applications-differentiation',
-    question: 'A box with a square base and open top has volume 32 ft³. The dimensions that minimize surface area are (base side, height) =',
+    question: 'A box with a square base and open top has volume 32 $ft^{3}$. The dimensions that minimize surface area are (base side, height) =',
     options: ['$(2, 8)$', '$(4, 2)$', '$(8, 0.5)$', '$(2\\sqrt 2, 4)$'],
     correctAnswer: 1,
     explanation: '$V = x^2 h = 32 \\Rightarrow h = 32/x^2$. $S = x^2 + 4xh = x^2 + 128/x$. $S\' = 2x - 128/x^2 = 0 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$, $h = 2$.',

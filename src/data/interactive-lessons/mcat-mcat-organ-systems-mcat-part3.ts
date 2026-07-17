@@ -58,7 +58,7 @@ Flow: fatty/acidic chyme enters duodenum → **secretin + CCK** released → pan
 
 ### Carbohydrate Absorption Mechanism
 
-Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport powered by the Na⁺ gradient from the basolateral Na⁺/K⁺ ATPase), then exit to blood via **GLUT2**. Fructose enters by facilitated diffusion via **GLUT5**. This Na⁺-coupled uptake is why oral rehydration therapy pairs glucose with sodium.`
+Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport powered by the $Na^{+}$ gradient from the basolateral $Na^{+}/K^{+}$ ATPase), then exit to blood via **GLUT2**. Fructose enters by facilitated diffusion via **GLUT5**. This $Na^{+}$-coupled uptake is why oral rehydration therapy pairs glucose with sodium.`
     },
     {
       id: 'os3-quiz1',
@@ -76,13 +76,13 @@ Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport po
             question: `Surgical removal of the terminal ileum would most likely cause which two deficiencies, and why?`,
             options: [`Vitamin B$_{12}$ deficiency and bile-salt malabsorption, because both are absorbed in the ileum`, `Iron and calcium deficiency, because both are absorbed in the ileum`, `Protein and carbohydrate malabsorption, because all enzymes act in the ileum`, `Water-soluble vitamin loss only, because the ileum absorbs all vitamins`],
             correctAnswer: 0,
-            explanation: `The terminal ileum specifically absorbs vitamin B$_{12}$ (bound to intrinsic factor) and reabsorbs bile salts for enterohepatic recycling. Losing it → B₁₂ deficiency (megaloblastic anemia) and bile-salt wasting (fat malabsorption, diarrhea). Iron and calcium are absorbed in the duodenum (option 2); most macronutrient absorption occurs in the jejunum (option 3).`
+            explanation: `The terminal ileum specifically absorbs vitamin B$_{12}$ (bound to intrinsic factor) and reabsorbs bile salts for enterohepatic recycling. Losing it → $B_{12}$ deficiency (megaloblastic anemia) and bile-salt wasting (fat malabsorption, diarrhea). Iron and calcium are absorbed in the duodenum (option 2); most macronutrient absorption occurs in the jejunum (option 3).`
           },
           {
             question: `A patient takes a proton-pump inhibitor that strongly suppresses parietal-cell HCl secretion. By negative feedback, blood levels of which hormone would RISE, and what downstream effect is impaired?`,
-            options: [`Gastrin rises; pepsinogen activation and B₁₂ absorption are impaired due to low acid and reduced intrinsic factor effectiveness`, `Secretin rises; bicarbonate secretion is impaired`, `CCK rises; bile release is impaired`, `Gastrin falls; acid secretion increases`],
+            options: [`Gastrin rises; pepsinogen activation and $B_{12}$ absorption are impaired due to low acid and reduced intrinsic factor effectiveness`, `Secretin rises; bicarbonate secretion is impaired`, `CCK rises; bile release is impaired`, `Gastrin falls; acid secretion increases`],
             correctAnswer: 0,
-            explanation: `Acid normally suppresses gastrin (negative feedback). Blocking acid removes that inhibition, so G cells release MORE gastrin (hypergastrinemia). Low gastric acid impairs pepsin activation (pepsinogen needs acid) and reduces nonheme iron and B₁₂ availability. Secretin and CCK respond to duodenal acid/fat, not directly to parietal-cell blockade; option 4 reverses the feedback logic.`
+            explanation: `Acid normally suppresses gastrin (negative feedback). Blocking acid removes that inhibition, so G cells release MORE gastrin (hypergastrinemia). Low gastric acid impairs pepsin activation (pepsinogen needs acid) and reduces nonheme iron and $B_{12}$ availability. Secretin and CCK respond to duodenal acid/fat, not directly to parietal-cell blockade; option 4 reverses the feedback logic.`
           }
         ]
       }
@@ -119,14 +119,14 @@ Glucose/galactose enter enterocytes via **SGLT1** (secondary active transport po
 </details>
 
 <details>
-<summary><b>Example 3: Reason about Na⁺-coupled glucose uptake</b></summary>
+<summary><b>Example 3: Reason about $Na^{+}$-coupled glucose uptake</b></summary>
 
-**Question:** A drug blocks the basolateral Na⁺/K⁺ ATPase in enterocytes. Predict the effect on intestinal glucose absorption via SGLT1.
+**Question:** A drug blocks the basolateral $Na^{+}/K^{+}$ ATPase in enterocytes. Predict the effect on intestinal glucose absorption via SGLT1.
 
 **Solution:**
-1. SGLT1 is **secondary active transport** — it uses the inward Na⁺ gradient to drag glucose into the cell against its gradient.
-2. The Na⁺/K⁺ ATPase pumps Na⁺ out the basolateral side to MAINTAIN that gradient.
-3. Block the pump → intracellular Na⁺ rises → the Na⁺ gradient collapses → **SGLT1 can no longer import glucose**. ✓
+1. SGLT1 is **secondary active transport** — it uses the inward $Na^{+}$ gradient to drag glucose into the cell against its gradient.
+2. The $Na^{+}/K^{+}$ ATPase pumps $Na^{+}$ out the basolateral side to MAINTAIN that gradient.
+3. Block the pump → intracellular $Na^{+}$ rises → the $Na^{+}$ gradient collapses → **SGLT1 can no longer import glucose**. ✓
 
 **High-yield connection:** This is the textbook example of how a primary active pump powers a secondary active transporter — and why oral rehydration solutions combine glucose with sodium to maximize co-transport.
 </details>`

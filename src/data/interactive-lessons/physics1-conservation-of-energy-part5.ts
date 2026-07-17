@@ -68,7 +68,7 @@ $$d = \\frac{KE_i}{f_k} = \\frac{\\frac{1}{2}mv^2}{\\mu_k mg} = \\frac{v^2}{2\\m
       exercise: {
         questions: [
           {
-            question: 'A 5 kg block sliding at 10 m/s on a rough surface ($\\mu_k = 0.5$) slides to a stop. How far does it travel ($g = 10$ m/s²)?',
+            question: 'A 5 kg block sliding at 10 m/s on a rough surface ($\\mu_k = 0.5$) slides to a stop. How far does it travel ($g = 10$ $m/s^{2}$)?',
             options: [
               '5 m',
               '10 m',
@@ -90,7 +90,7 @@ $$d = \\frac{KE_i}{f_k} = \\frac{\\frac{1}{2}mv^2}{\\mu_k mg} = \\frac{v^2}{2\\m
             explanation: '$d = v^2/(2\\mu_k g)$. Mass cancels! Stopping distance is independent of mass.'
           },
           {
-            question: 'A 2 kg block slides down a rough ramp (height 3 m, ramp length 5 m, $\\mu_k = 0.3$). The energy dissipated by friction is ($g = 10$ m/s²):',
+            question: 'A 2 kg block slides down a rough ramp (height 3 m, ramp length 5 m, $\\mu_k = 0.3$). The energy dissipated by friction is ($g = 10$ $m/s^{2}$):',
             options: [
               '12 J',
               '24 J',
@@ -109,7 +109,7 @@ $$d = \\frac{KE_i}{f_k} = \\frac{\\frac{1}{2}mv^2}{\\mu_k mg} = \\frac{v^2}{2\\m
       content: `
 **Friction Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A car ($m = 1000$ kg) moving at 20 m/s brakes on a road ($\\mu_k = 0.5$). What is the stopping distance (in m)?
 
@@ -195,7 +195,7 @@ $$h_f = (60 - 52)/20 = 0.4 \\text{ m}$$
       exercise: {
         questions: [
           {
-            question: 'A hockey puck sliding at 20 m/s on ice ($\\mu_k = 0.1$) comes to a stop. The stopping distance is ($g = 10$ m/s²):',
+            question: 'A hockey puck sliding at 20 m/s on ice ($\\mu_k = 0.1$) comes to a stop. The stopping distance is ($g = 10$ $m/s^{2}$):',
             options: [
               '20 m',
               '100 m',
@@ -206,7 +206,7 @@ $$h_f = (60 - 52)/20 = 0.4 \\text{ m}$$
             explanation: '$d = v^2/(2\\mu_k g) = 400/(2 \\times 0.1 \\times 10) = 400/2 = 200$ m.'
           },
           {
-            question: 'A 4 kg block slides down from 5 m on a rough ramp ($\\mu_k = 0.3$, ramp length 10 m, $\\cos\\theta = 0.866$). Its KE at the bottom is ($g = 10$ m/s²):',
+            question: 'A 4 kg block slides down from 5 m on a rough ramp ($\\mu_k = 0.3$, ramp length 10 m, $\\cos\\theta = 0.866$). Its KE at the bottom is ($g = 10$ $m/s^{2}$):',
             options: [
               '200 J',
               '104 J',

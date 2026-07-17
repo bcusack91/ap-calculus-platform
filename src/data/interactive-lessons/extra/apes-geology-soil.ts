@@ -257,7 +257,7 @@ Chemical weathering reactions need **water**, and many involve **acids**, so the
 
 | Process | What Happens | Environmental Link |
 |---------|-------------|--------------------|
-| **Dissolution / carbonation** | Slightly acidic rainwater (H₂CO₃) dissolves limestone (CaCO₃) | Forms **caves, sinkholes, karst** topography |
+| **Dissolution / carbonation** | Slightly acidic rainwater $(H_{2}CO_{3})$ dissolves limestone $(CaCO_{3})$ | Forms **caves, sinkholes, karst** topography |
 | **Hydrolysis** | Water reacts with silicate minerals (feldspar) → **clay** | Produces most of the world's clay-rich soils |
 | **Oxidation** | Oxygen reacts with iron minerals → iron oxides (**rust**) | The reddish color of many tropical soils |
 
@@ -265,7 +265,7 @@ The carbonation reaction is the most-tested:
 
 $$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{CO}_3 \\quad\\text{then}\\quad \\text{H}_2\\text{CO}_3 + \\text{CaCO}_3 \\rightarrow \\text{Ca}^{2+} + 2\\,\\text{HCO}_3^{-}$$
 
-> ⚠️ **Acid rain accelerates this.** Extra SO₂ and NOₓ in the air make rainfall more acidic, speeding the dissolution of limestone and marble buildings, statues, and bedrock — a direct link to the Air Pollution unit.`,
+> ⚠️ **Acid rain accelerates this.** Extra $SO_{2}$ and $NO_{x}$ in the air make rainfall more acidic, speeding the dissolution of limestone and marble buildings, statues, and bedrock — a direct link to the Air Pollution unit.`,
       },
       {
         id: 'apgs2-dd-weathering',
@@ -537,7 +537,7 @@ Two movements define the middle of the profile:
 
 This explains a tropical paradox previewed in Part 2: tropical soils are **deeply weathered** yet often **infertile**, because intense rainfall **leaches** nutrients away as fast as they're released.
 
-> ⚠️ **Acid + leaching connection:** Acid deposition (from SO₂/NOₓ) accelerates leaching of base nutrients like calcium and magnesium from forest soils, which is one way acid rain damages ecosystems far from the smokestack.`,
+> ⚠️ **Acid + leaching connection:** Acid deposition $(from SO_{2}/NO_{x})$ accelerates leaching of base nutrients like calcium and magnesium from forest soils, which is one way acid rain damages ecosystems far from the smokestack.`,
       },
       {
         id: 'apgs4-q-leaching',
@@ -702,11 +702,11 @@ Beyond texture, a few measurable properties decide fertility:
 | **Permeability** | How fast water flows through | Too low → waterlogging; too high → drought/leaching |
 | **Water-holding capacity** | How much water the soil retains | Highest in clay/humus-rich soils |
 | **pH** | Acidity/alkalinity | Most crops prefer **slightly acidic to neutral (~6–7)** |
-| **Cation Exchange Capacity (CEC)** | Ability to hold positively-charged nutrients (Ca²⁺, K⁺, NH₄⁺) | **High CEC = fertile**; clay and humus give high CEC |
+| **Cation Exchange Capacity (CEC)** | Ability to hold positively-charged nutrients ($Ca^{2+}$, $K^{+}$, $NH_{4}^{+}$) | **High CEC = fertile**; clay and humus give high CEC |
 
 **Cation Exchange Capacity (CEC)** is the key fertility concept: nutrient cations cling to the negatively-charged surfaces of clay and humus particles, then release to plant roots. Sandy, humus-poor soils have **low CEC** and lose nutrients easily.
 
-> ⚠️ **pH controls nutrient availability.** If soil is too acidic, nutrients lock up and toxic aluminum is freed; farmers add **lime (CaCO₃)** to raise pH. If too alkaline, they may add sulfur. Many essential nutrients are most available near pH 6.5.`,
+> ⚠️ **pH controls nutrient availability.** If soil is too acidic, nutrients lock up and toxic aluminum is freed; farmers add **lime $(CaCO_{3})$** to raise pH. If too alkaline, they may add sulfur. Many essential nutrients are most available near pH 6.5.`,
       },
       {
         id: 'apgs5-dd-properties',
@@ -717,13 +717,13 @@ Beyond texture, a few measurable properties decide fertility:
             { label: 'A soil\'s ability to hold positively-charged nutrients for plant roots:', options: ['Cation exchange capacity (CEC)', 'Permeability', 'Porosity', 'Salinity'] },
             { label: 'Which component gives soil HIGH nutrient-holding capacity?', options: ['Clay and humus', 'Pure sand', 'Gravel', 'Bedrock'] },
             { label: 'Most crops grow best at a soil pH that is:', options: ['Slightly acidic to neutral (~6–7)', 'Strongly acidic (~2–3)', 'Strongly alkaline (~11–12)', 'Exactly 0'] },
-            { label: 'To raise the pH of an overly acidic soil, a farmer adds:', options: ['Lime (CaCO₃)', 'Sulfur', 'Table salt', 'Sand'] },
+            { label: 'To raise the pH of an overly acidic soil, a farmer adds:', options: ['Lime $(CaCO_{3})$', 'Sulfur', 'Table salt', 'Sand'] },
           ],
-          correctAnswers: ['Cation exchange capacity (CEC)', 'Clay and humus', 'Slightly acidic to neutral (~6–7)', 'Lime (CaCO₃)'],
+          correctAnswers: ['Cation exchange capacity (CEC)', 'Clay and humus', 'Slightly acidic to neutral (~6–7)', 'Lime $(CaCO_{3})$'],
           hint1: 'The nutrient-holding property is abbreviated CEC.',
           hint2: 'Negatively-charged clay and humus surfaces grab nutrient cations.',
-          hint3: 'Lime (CaCO₃) neutralizes acidity and raises pH.',
-          explanation: 'CEC measures nutrient-holding ability, supplied mainly by clay and humus. Most crops prefer pH ~6–7; lime (CaCO₃) raises an acidic soil\'s pH, while sulfur lowers an alkaline one.',
+          hint3: 'Lime $(CaCO_{3})$ neutralizes acidity and raises pH.',
+          explanation: 'CEC measures nutrient-holding ability, supplied mainly by clay and humus. Most crops prefer pH ~6–7; lime $(CaCO_{3})$ raises an acidic soil\'s pH, while sulfur lowers an alkaline one.',
         },
       },
       {
@@ -982,7 +982,7 @@ Every method works by **keeping soil covered, slowing water, and keeping roots a
                 'Compacts the soil to hold more water',
               ],
               correctAnswer: 0,
-              explanation: 'Legumes form a partnership with nitrogen-fixing bacteria in their root nodules, converting atmospheric N₂ into usable nitrogen compounds and naturally replenishing soil nitrogen.',
+              explanation: 'Legumes form a partnership with nitrogen-fixing bacteria in their root nodules, converting atmospheric $N_{2}$ into usable nitrogen compounds and naturally replenishing soil nitrogen.',
             },
             {
               question: 'One environmental ADVANTAGE of organic fertilizer (compost/manure) over synthetic fertilizer is that it:',

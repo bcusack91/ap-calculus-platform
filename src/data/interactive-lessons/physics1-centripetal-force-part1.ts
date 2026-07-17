@@ -103,7 +103,7 @@ $$F_c = \\frac{mv^2}{r} = m\\omega^2 r = \\frac{4\\pi^2 mr}{T^2}$$
       content: `
 **Centripetal Force Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 0.5 kg ball moves in a circle of radius 2 m at 4 m/s. What centripetal force is required (in N)?
 

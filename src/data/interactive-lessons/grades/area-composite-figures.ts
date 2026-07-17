@@ -65,9 +65,9 @@ Every composite-figure problem follows the same plan:
 $$A_{total} = A_1 + A_2 + A_3 + \\dots$$
 
 **Worked example — an L-shaped figure.** Split the "L" into two rectangles:
-- Top rectangle: $8$ ft by $3$ ft → $A_1 = 8 \\times 3 = 24$ ft²
-- Bottom rectangle: $5$ ft by $4$ ft → $A_2 = 5 \\times 4 = 20$ ft²
-- Total: $A = 24 + 20 = 44$ ft² ✓
+- Top rectangle: $8$ ft by $3$ ft → $A_1 = 8 \\times 3 = 24$ $ft^{2}$
+- Bottom rectangle: $5$ ft by $4$ ft → $A_2 = 5 \\times 4 = 20$ $ft^{2}$
+- Total: $A = 24 + 20 = 44$ $ft^{2}$ ✓
 
 That's it — split, solve each piece, then add!`
       },
@@ -114,8 +114,8 @@ A house-shaped figure is a **rectangle** with a **triangle** roof on top.
 **Step 1 — Break it apart.** It's already two pieces: one rectangle + one triangle.
 
 **Step 2 — Find each area.**
-- Rectangle: $A_1 = l \\times w = 12 \\times 8 = 96$ m²
-- Triangle: $A_2 = \\frac{1}{2}bh = \\frac{1}{2} \\times 12 \\times 5 = \\frac{1}{2} \\times 60 = 30$ m²
+- Rectangle: $A_1 = l \\times w = 12 \\times 8 = 96$ $m^{2}$
+- Triangle: $A_2 = \\frac{1}{2}bh = \\frac{1}{2} \\times 12 \\times 5 = \\frac{1}{2} \\times 60 = 30$ $m^{2}$
 
 **Step 3 — Add them.**
 $$A = 96 + 30 = 126 \\text{ m}^2 ✓$$
@@ -134,8 +134,8 @@ A swimming pool is a **rectangle** with a **semicircle** on one end.
 **Step 1 — Break it apart.** One rectangle + one semicircle.
 
 **Step 2 — Find each area** (use $\\pi \\approx 3.14$).
-- Rectangle: $A_1 = 10 \\times 6 = 60$ cm²
-- Semicircle: $A_2 = \\frac{1}{2}\\pi r^2 = \\frac{1}{2} \\times 3.14 \\times 3^2 = \\frac{1}{2} \\times 3.14 \\times 9 = \\frac{1}{2} \\times 28.26 = 14.13$ cm²
+- Rectangle: $A_1 = 10 \\times 6 = 60$ $cm^{2}$
+- Semicircle: $A_2 = \\frac{1}{2}\\pi r^2 = \\frac{1}{2} \\times 3.14 \\times 3^2 = \\frac{1}{2} \\times 3.14 \\times 9 = \\frac{1}{2} \\times 28.26 = 14.13$ $cm^{2}$
 
 **Step 3 — Add them.**
 $$A = 60 + 14.13 = 74.13 \\text{ cm}^2 ✓$$
@@ -151,15 +151,15 @@ A figure is a **rectangle with a triangle on top** (a "house" shape).
 - Rectangle: $9$ ft wide and $6$ ft tall
 - Triangle on top: base $= 9$ ft, height $= 4$ ft
 
-**Box 1:** Area of the **rectangle** in ft² (use $A = l \\times w$)
-**Box 2:** Area of the **triangle** in ft² (use $A = \\frac{1}{2}bh$)
-**Box 3:** The **total area** in ft²`,
+**Box 1:** Area of the **rectangle** in $ft^{2}$ (use $A = l \\times w$)
+**Box 2:** Area of the **triangle** in $ft^{2}$ (use $A = \\frac{1}{2}bh$)
+**Box 3:** The **total area** in $ft^{2}$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['54', '18', '72'],
           hint1: 'Box 1: multiply width by height. Box 2: multiply base times height, then take half. Box 3: add Box 1 and Box 2.',
           hint2: 'Box 1: $9 \\times 6$. Box 2: $\\frac{1}{2} \\times 9 \\times 4$. Box 3: rectangle area + triangle area.',
-          explanation: 'Box 1: $9 \\times 6 = 54$ ft². Box 2: $\\frac{1}{2} \\times 9 \\times 4 = \\frac{1}{2} \\times 36 = 18$ ft². Box 3: $54 + 18 = 72$ ft². ✓'
+          explanation: 'Box 1: $9 \\times 6 = 54$ $ft^{2}$. Box 2: $\\frac{1}{2} \\times 9 \\times 4 = \\frac{1}{2} \\times 36 = 18$ $ft^{2}$. Box 3: $54 + 18 = 72$ $ft^{2}$. ✓'
         }
       }
     ]
@@ -182,24 +182,24 @@ Break each figure into basic shapes, then combine the areas.`,
             {
               question: 'An L-shaped figure splits into two rectangles: one is $7$ m by $2$ m, and the other is $3$ m by $5$ m. What is the **total area**?',
               options: [
-                '$14$ m²',
-                '$15$ m²',
-                '$29$ m²',
-                '$35$ m²'
+                '$14$ $m^{2}$',
+                '$15$ $m^{2}$',
+                '$29$ $m^{2}$',
+                '$35$ $m^{2}$'
               ],
               correctAnswer: 2,
-              explanation: 'First rectangle: $7 \\times 2 = 14$ m². Second rectangle: $3 \\times 5 = 15$ m². Total: $14 + 15 = 29$ m².'
+              explanation: 'First rectangle: $7 \\times 2 = 14$ $m^{2}$. Second rectangle: $3 \\times 5 = 15$ $m^{2}$. Total: $14 + 15 = 29$ $m^{2}$.'
             },
             {
               question: 'A figure is a rectangle ($10$ cm by $4$ cm) with a triangle on top (base $10$ cm, height $6$ cm). What is the **total area**?',
               options: [
-                '$40$ cm²',
-                '$30$ cm²',
-                '$60$ cm²',
-                '$70$ cm²'
+                '$40$ $cm^{2}$',
+                '$30$ $cm^{2}$',
+                '$60$ $cm^{2}$',
+                '$70$ $cm^{2}$'
               ],
               correctAnswer: 3,
-              explanation: 'Rectangle: $10 \\times 4 = 40$ cm². Triangle: $\\frac{1}{2} \\times 10 \\times 6 = 30$ cm². Total: $40 + 30 = 70$ cm².'
+              explanation: 'Rectangle: $10 \\times 4 = 40$ $cm^{2}$. Triangle: $\\frac{1}{2} \\times 10 \\times 6 = 30$ $cm^{2}$. Total: $40 + 30 = 70$ $cm^{2}$.'
             }
           ]
         }
@@ -243,11 +243,11 @@ A composite figure is made of a **rectangle** and a **semicircle**. Choose the c
 Composite-figure math shows up whenever a real object isn't a perfect single shape.
 
 **Example — a garden.** Maya's vegetable garden is shaped like a rectangle with a triangular flower bed attached to one end. To buy the right amount of soil, she needs the **total area**.
-- Rectangle part: $15$ ft by $8$ ft → $A_1 = 15 \\times 8 = 120$ ft²
-- Triangle part: base $8$ ft, height $6$ ft → $A_2 = \\frac{1}{2} \\times 8 \\times 6 = 24$ ft²
-- Total area: $120 + 24 = 144$ ft²
+- Rectangle part: $15$ ft by $8$ ft → $A_1 = 15 \\times 8 = 120$ $ft^{2}$
+- Triangle part: base $8$ ft, height $6$ ft → $A_2 = \\frac{1}{2} \\times 8 \\times 6 = 24$ $ft^{2}$
+- Total area: $120 + 24 = 144$ $ft^{2}$
 
-So Maya needs enough soil to cover **$144$ ft²**. Breaking the garden into a rectangle and a triangle made the problem easy. Now try a couple yourself.`
+So Maya needs enough soil to cover **$144$ $ft^{2}$**. Breaking the garden into a rectangle and a triangle made the problem easy. Now try a couple yourself.`
       },
       {
         id: 'p4-input',
@@ -261,14 +261,14 @@ A classroom rug is shaped like a **rectangle with a semicircle** on one end.
 Use $\\pi \\approx 3.14$.
 
 **Box 1:** The **radius** of the semicircle in ft
-**Box 2:** Area of the **rectangle** in ft²
-**Box 3:** Area of the **semicircle** in ft² (use $A = \\frac{1}{2}\\pi r^2$, rounded to two decimals)`,
+**Box 2:** Area of the **rectangle** in $ft^{2}$
+**Box 3:** Area of the **semicircle** in $ft^{2}$ (use $A = \\frac{1}{2}\\pi r^2$, rounded to two decimals)`,
         exercise: {
           boxes: 3,
           correctAnswers: ['2', '32', '6.28'],
           hint1: 'Box 1: the radius is half the diameter. Box 2: multiply length by width. Box 3: half of $\\pi$ times radius squared.',
           hint2: 'Box 1: $4 \\div 2$. Box 2: $8 \\times 4$. Box 3: $\\frac{1}{2} \\times 3.14 \\times 2^2$.',
-          explanation: 'Box 1: $r = 4 \\div 2 = 2$ ft. Box 2: $8 \\times 4 = 32$ ft². Box 3: $\\frac{1}{2} \\times 3.14 \\times 2^2 = \\frac{1}{2} \\times 3.14 \\times 4 = \\frac{1}{2} \\times 12.56 = 6.28$ ft². ✓'
+          explanation: 'Box 1: $r = 4 \\div 2 = 2$ ft. Box 2: $8 \\times 4 = 32$ $ft^{2}$. Box 3: $\\frac{1}{2} \\times 3.14 \\times 2^2 = \\frac{1}{2} \\times 3.14 \\times 4 = \\frac{1}{2} \\times 12.56 = 6.28$ $ft^{2}$. ✓'
         }
       },
       {
@@ -282,13 +282,13 @@ Use the **subtraction method** for this one.`,
             {
               question: 'A square sign is $10$ in by $10$ in. A small $4$ in by $3$ in **rectangular hole** is cut out of it for a bolt. What is the **area of the sign that remains**?',
               options: [
-                '$88$ in²',
-                '$100$ in²',
-                '$112$ in²',
-                '$12$ in²'
+                '$88$ $in^{2}$',
+                '$100$ $in^{2}$',
+                '$112$ $in^{2}$',
+                '$12$ $in^{2}$'
               ],
               correctAnswer: 0,
-              explanation: 'Full square: $10 \\times 10 = 100$ in². Hole: $4 \\times 3 = 12$ in². Remaining area: $100 - 12 = 88$ in². Sometimes it is easier to subtract a missing piece!'
+              explanation: 'Full square: $10 \\times 10 = 100$ $in^{2}$. Hole: $4 \\times 3 = 12$ $in^{2}$. Remaining area: $100 - 12 = 88$ $in^{2}$. Sometimes it is easier to subtract a missing piece!'
             }
           ]
         }
@@ -321,7 +321,7 @@ You now know how to find the area of any composite figure! Here's the whole plan
 
 **Key reminders:**
 - The **radius** is half the **diameter**.
-- Area is always measured in **square units** (cm², ft², m²).
+- Area is always measured in **square units** ($cm^{2}$, $ft^{2}$, $m^{2}$).
 - A **semicircle** is half a circle: $A = \\frac{1}{2}\\pi r^2$.
 
 Now take on the challenge questions below!`
@@ -337,24 +337,24 @@ These mix the addition and subtraction methods. Take your time and work step by 
             {
               question: 'A trapezoid has parallel bases of $6$ m and $10$ m and a height of $4$ m. A **triangle** with base $10$ m and height $3$ m sits on top of it. What is the **total area**?',
               options: [
-                '$32$ m²',
-                '$47$ m²',
-                '$15$ m²',
-                '$62$ m²'
+                '$32$ $m^{2}$',
+                '$47$ $m^{2}$',
+                '$15$ $m^{2}$',
+                '$62$ $m^{2}$'
               ],
               correctAnswer: 1,
-              explanation: 'Trapezoid: $\\frac{1}{2}(6 + 10) \\times 4 = \\frac{1}{2} \\times 16 \\times 4 = 32$ m². Triangle: $\\frac{1}{2} \\times 10 \\times 3 = 15$ m². Total: $32 + 15 = 47$ m².'
+              explanation: 'Trapezoid: $\\frac{1}{2}(6 + 10) \\times 4 = \\frac{1}{2} \\times 16 \\times 4 = 32$ $m^{2}$. Triangle: $\\frac{1}{2} \\times 10 \\times 3 = 15$ $m^{2}$. Total: $32 + 15 = 47$ $m^{2}$.'
             },
             {
               question: 'A rectangular floor is $12$ ft by $9$ ft. A square closet $3$ ft by $3$ ft is **not** part of the floor (it is walled off). What is the area of the **usable floor**?',
               options: [
-                '$108$ ft²',
-                '$99$ ft²',
-                '$9$ ft²',
-                '$117$ ft²'
+                '$108$ $ft^{2}$',
+                '$99$ $ft^{2}$',
+                '$9$ $ft^{2}$',
+                '$117$ $ft^{2}$'
               ],
               correctAnswer: 1,
-              explanation: 'Whole floor: $12 \\times 9 = 108$ ft². Closet removed: $3 \\times 3 = 9$ ft². Usable floor: $108 - 9 = 99$ ft². This is the subtraction method in action!'
+              explanation: 'Whole floor: $12 \\times 9 = 108$ $ft^{2}$. Closet removed: $3 \\times 3 = 9$ $ft^{2}$. Usable floor: $108 - 9 = 99$ $ft^{2}$. This is the subtraction method in action!'
             }
           ]
         }

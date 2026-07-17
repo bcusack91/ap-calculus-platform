@@ -31,9 +31,9 @@ $$I = \\sum m_i r_i^2 \\quad \\text{(discrete)} \\qquad I = \\int r^2\\,dm \\qua
       id: 'am2-mcq1',
       type: 'mcq' as const,
       question: 'A solid disk of mass $4$ kg and radius $0.5$ m spins at $\\omega = 10$ rad/s. Its angular momentum is:',
-      options: ['$5$ kg·m²/s', '$10$ kg·m²/s', '$20$ kg·m²/s', '$2.5$ kg·m²/s'],
+      options: ['$5$ $kg\\cdot m^{2}/s$', '$10$ $kg\\cdot m^{2}/s$', '$20$ $kg\\cdot m^{2}/s$', '$2.5$ $kg\\cdot m^{2}/s$'],
       correctAnswer: 0,
-      explanation: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.25) = 0.5$ kg·m². $L = I\\omega = 0.5 \\times 10 = 5$ kg·m²/s.'
+      explanation: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.25) = 0.5$ $kg\\cdot m^{2}$. $L = I\\omega = 0.5 \\times 10 = 5$ $kg\\cdot m^{2}/s$.'
     },
     {
       id: 'am2-parallel',

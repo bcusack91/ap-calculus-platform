@@ -27,14 +27,14 @@ Pressure is force spread over an area. Whether it's the pressure of a finger pus
 $$P = \\frac{F_\\perp}{A}$$
 
 - $F_\\perp$: force perpendicular (normal) to the surface (N)
-- $A$: area over which the force acts (m²)
-- $P$: pressure (Pa = N/m²)
+- $A$: area over which the force acts $(m^{2})$
+- $P$: pressure (Pa = $N/m^{2}$)
 
 ### Useful Pressure Conversions
 
 | Unit | Equivalent |
 |------|-----------|
-| 1 Pa | 1 N/m² |
+| 1 Pa | 1 $N/m^{2}$ |
 | 1 kPa | 1000 Pa |
 | 1 atm | $1.013\\times10^{5}$ Pa ≈ 101 kPa |
 | 1 atm | 760 mmHg |
@@ -62,7 +62,7 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
             question: 'Pressure is force per unit:',
             options: ['Length', 'Area', 'Volume', 'Time'],
             correctAnswer: 1,
-            explanation: '$P = F/A$. The SI unit pascal (Pa) is N/m².'
+            explanation: '$P = F/A$. The SI unit pascal (Pa) is $N/m^{2}$.'
           },
           {
             question: 'Two equal forces are applied to two surfaces. The smaller surface experiences:',
@@ -95,11 +95,11 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
       content: `
 **Pressure Calculations** 🧮
 
-1) A 200 N force pushes on a $4.0\\times10^{-2}$ m² surface. Pressure (Pa)?
+1) A 200 N force pushes on a $4.0\\times10^{-2}$ $m^{2}$ surface. Pressure (Pa)?
 
-2) An adult of mass 80 kg stands on one foot of area 0.020 m² ($g = 9.8$). Pressure under the foot (Pa)?
+2) An adult of mass 80 kg stands on one foot of area 0.020 $m^{2}$ ($g = 9.8$). Pressure under the foot (Pa)?
 
-3) A force of 50 N is applied to a tack of contact area $1.0\\times10^{-6}$ m². Pressure (Pa)?
+3) A force of 50 N is applied to a tack of contact area $1.0\\times10^{-6}$ $m^{2}$. Pressure (Pa)?
       `,
       exercise: {
         boxes: 3,
@@ -134,7 +134,7 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
             label: 'A 1 m × 2 m board has a 100 N force on it. The pressure is:',
             options: ['100 Pa', '50 Pa', '200 Pa', '20 Pa'],
             correctIndex: 1,
-            explanation: '$A = 2$ m². $P = 100/2 = 50$ Pa.'
+            explanation: '$A = 2$ $m^{2}$. $P = 100/2 = 50$ Pa.'
           },
           {
             label: 'Doubling the area while keeping force constant changes the pressure by:',
@@ -154,7 +154,7 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
       exercise: {
         questions: [
           {
-            question: 'A 75 kg person lies face-down on a bed of nails with 1500 nails in contact, each tip area $1.0\\times10^{-6}$ m². Pressure under each nail (g = 9.8) is approximately:',
+            question: 'A 75 kg person lies face-down on a bed of nails with 1500 nails in contact, each tip area $1.0\\times10^{-6}$ $m^{2}$. Pressure under each nail (g = 9.8) is approximately:',
             options: [
               '$4.9\\times10^{2}$ Pa',
               '$4.9\\times10^{5}$ Pa',
@@ -162,10 +162,10 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
               '$7.4\\times10^{2}$ Pa'
             ],
             correctAnswer: 1,
-            explanation: 'Total weight $W = 735$ N; total contact area $= 1500\\times1.0\\times10^{-6} = 1.5\\times10^{-3}$ m². $P = 735/1.5\\times10^{-3} = 4.9\\times10^{5}$ Pa — far below skin\'s pierce threshold.'
+            explanation: 'Total weight $W = 735$ N; total contact area $= 1500\\times1.0\\times10^{-6} = 1.5\\times10^{-3}$ $m^{2}$. $P = 735/1.5\\times10^{-3} = 4.9\\times10^{5}$ Pa — far below skin\'s pierce threshold.'
           },
           {
-            question: 'Atmospheric pressure of 101 kPa pushes on a windowpane of area 1.5 m². The total atmospheric force on it (assuming pressure inside ≈ outside) is:',
+            question: 'Atmospheric pressure of 101 kPa pushes on a windowpane of area 1.5 $m^{2}$. The total atmospheric force on it (assuming pressure inside ≈ outside) is:',
             options: [
               '~150 N — but balanced by interior pressure',
               '~$1.5\\times10^{5}$ N — but balanced by interior pressure',

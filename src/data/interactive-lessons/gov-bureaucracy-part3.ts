@@ -90,7 +90,7 @@ export const govBureaucracyPart3Data = {
 
 | Agency | Program | Description |
 |---|---|---|
-| **EPA** | NAAQS | Sets National Ambient Air Quality Standards for 6 'criteria pollutants' (ozone, particulates, CO, SO₂, NO₂, lead); states submit SIPs (state implementation plans) |
+| **EPA** | NAAQS | Sets National Ambient Air Quality Standards for 6 'criteria pollutants' (ozone, particulates, CO, $SO_{2}$, $NO_{2}$, lead); states submit SIPs (state implementation plans) |
 | **OSHA** | PELs | Permissible exposure limits for workplace chemicals; ~7-8M inspections/year delegated to state OSH agencies |
 | **FDA** | Drug approval | NDAs (new drug applications) require ~10-12 years + ~\\$2B average to develop + approve; clinical trials Phase 1-2-3 |
 | **SEC** | Disclosure | Public companies file 10-K (annual), 10-Q (quarterly), 8-K (material events), proxy statements |

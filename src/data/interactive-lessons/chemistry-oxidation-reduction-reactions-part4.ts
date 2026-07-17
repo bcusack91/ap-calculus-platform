@@ -6,7 +6,7 @@ export const chemOxidationReductionReactionsPart4Data = {
       type: 'text' as const,
       content: `# ⚡ Balancing Redox in Basic Solution
 
-**Part 4 of 7 — Adding OH⁻ to Neutralize H⁺**
+**Part 4 of 7 — Adding $OH^{-}$ to Neutralize $H^{+}$**
 
 ---
 
@@ -37,23 +37,23 @@ export const chemOxidationReductionReactionsPart4Data = {
 
 ### Strategy: Balance in Acid First, Then Convert
 
-> 🔑 **Key Concept:** Always balance in acidic solution first (Steps 1–7), then convert to basic by adding OH⁻.
+> 🔑 **Key Concept:** Always balance in acidic solution first (Steps 1–7), then convert to basic by adding $OH^{-}$.
 
 | Step | Action |
 |------|--------|
 | 1–7 | Balance as if in **acidic** solution (same 7 steps) |
-| 8 | Add **OH⁻** to **both sides** — one OH⁻ for each H⁺ |
-| 9 | Combine H⁺ + OH⁻ → H₂O on the appropriate side |
-| 10 | Cancel any H₂O that appears on both sides |
+| 8 | Add **$OH^{-}$** to **both sides** — one $OH^{-}$ for each $H^{+}$ |
+| 9 | Combine $H^{+}$ + $OH^{-}$ → $H_{2}O$ on the appropriate side |
+| 10 | Cancel any $H_{2}O$ that appears on both sides |
 
 
 ---
 
 ### Why This Works
 
-> ⚠️ **Warning:** In basic solution, free H⁺ ions don\'t exist! If your final equation still has H⁺, you haven\'t finished converting.
+> ⚠️ **Warning:** In basic solution, free $H^{+}$ ions don\'t exist! If your final equation still has $H^{+}$, you haven\'t finished converting.
 
-By adding OH⁻ to neutralize every H⁺, we convert to a form appropriate for basic conditions.
+By adding $OH^{-}$ to neutralize every $H^{+}$, we convert to a form appropriate for basic conditions.
 
 
 ---
@@ -62,7 +62,7 @@ By adding OH⁻ to neutralize every H⁺, we convert to a form appropriate for b
 
 $$\\boxed{\\text{H}^+ + \\text{OH}^- \\rightarrow \\text{H}_2\\text{O}}$$
 
-If there are 6 H⁺ in your acidic-balanced equation, add 6 OH⁻ to **both sides**.
+If there are 6 $H^{+}$ in your acidic-balanced equation, add 6 $OH^{-}$ to **both sides**.
       `
     },
     {
@@ -96,7 +96,7 @@ $$6e^- + 8\\text{H}^+ + 2\\text{MnO}_4^- \\rightarrow 2\\text{MnO}_2 + 4\\text{H
 **Add:**
 $$8\\text{H}^+ + 2\\text{MnO}_4^- + 3\\text{H}_2\\text{O} + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + 4\\text{H}_2\\text{O} + \\text{BrO}_3^- + 6\\text{H}^+$$
 
-**Simplify H⁺ and H₂O:**
+**Simplify $H^{+}$ and $H_{2}O$:**
 $$2\\text{H}^+ + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \\text{H}_2\\text{O} + \\text{BrO}_3^-$$
 
 
@@ -104,15 +104,15 @@ $$2\\text{H}^+ + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \
 
 ### Steps 8–10: Convert to basic
 
-Add 2 OH⁻ to both sides (to neutralize 2 H⁺):
+Add 2 $OH^{-}$ to both sides (to neutralize 2 $H^{+}$):
 
 $$2\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \\text{H}_2\\text{O} + \\text{BrO}_3^- + 2\\text{OH}^-$$
 
-Cancel 1 H₂O from both sides:
+Cancel 1 $H_{2}O$ from both sides:
 
 $$\\boxed{\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \\text{BrO}_3^- + 2\\text{OH}^-}$$
 
-✅ No H⁺ remains — appropriate for basic solution!
+✅ No $H^{+}$ remains — appropriate for basic solution!
       `
     },
     {
@@ -124,37 +124,37 @@ $$\\boxed{\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\
       exercise: {
         questions: [
           {
-            question: 'To convert an acidic-balanced equation to basic, you add _____ to both sides for each H⁺.',
+            question: 'To convert an acidic-balanced equation to basic, you add _____ to both sides for each $H^{+}$.',
             options: [
-              'H₂O',
-              'H⁺',
-              'OH⁻',
-              'e⁻'
+              '$H_{2}O$',
+              '$H^{+}$',
+              '$OH^{-}$',
+              '$e^{-}$'
             ],
             correctAnswer: 2,
-            explanation: 'Add one OH⁻ to both sides for each H⁺ present. On the side with H⁺, the combination H⁺ + OH⁻ → H₂O replaces the H⁺ ions.'
+            explanation: 'Add one $OH^{-}$ to both sides for each $H^{+}$ present. On the side with $H^{+}$, the combination $H^{+}$ + $OH^{-}$ → $H_{2}O$ replaces the $H^{+}$ ions.'
           },
           {
-            question: 'After adding OH⁻ to neutralize H⁺, what must you do?',
+            question: 'After adding $OH^{-}$ to neutralize $H^{+}$, what must you do?',
             options: [
               'Add more electrons',
-              'Combine H⁺ + OH⁻ → H₂O and cancel H₂O on both sides',
+              'Combine $H^{+}$ + $OH^{-}$ → $H_{2}O$ and cancel $H_{2}O$ on both sides',
               'Remove all water molecules',
-              'Add more H⁺'
+              'Add more $H^{+}$'
             ],
             correctAnswer: 1,
-            explanation: 'After adding OH⁻, combine H⁺ + OH⁻ to form H₂O. Then cancel any H₂O molecules that appear on both sides of the equation.'
+            explanation: 'After adding $OH^{-}$, combine $H^{+}$ + $OH^{-}$ to form $H_{2}O$. Then cancel any $H_{2}O$ molecules that appear on both sides of the equation.'
           },
           {
             question: 'In basic solution, a properly balanced equation should contain:',
             options: [
-              'H⁺ ions',
-              'Only H₂O and OH⁻ (no free H⁺)',
-              'Neither H₂O nor OH⁻',
-              'Equal amounts of H⁺ and OH⁻'
+              '$H^{+}$ ions',
+              'Only $H_{2}O$ and $OH^{-}$ (no free $H^{+}$)',
+              'Neither $H_{2}O$ nor $OH^{-}$',
+              'Equal amounts of $H^{+}$ and $OH^{-}$'
             ],
             correctAnswer: 1,
-            explanation: 'In basic solution, free H⁺ doesn\'t exist. A properly balanced equation should have OH⁻ and H₂O but NO H⁺ ions.'
+            explanation: 'In basic solution, free $H^{+}$ doesn\'t exist. A properly balanced equation should have $OH^{-}$ and $H_{2}O$ but NO $H^{+}$ ions.'
           }
         ]
       }
@@ -171,19 +171,19 @@ $$3\\text{Cu}(s) + 8\\text{H}^+ + 2\\text{NO}_3^- \\rightarrow 3\\text{Cu}^{2+} 
 
 Convert to basic solution:
 
-**1)** How many OH⁻ must be added to both sides?
+**1)** How many $OH^{-}$ must be added to both sides?
 
-**2)** How many H₂O molecules appear on the LEFT side after combining H⁺ + OH⁻?
+**2)** How many $H_{2}O$ molecules appear on the LEFT side after combining $H^{+}$ + $OH^{-}$?
 
-**3)** After canceling H₂O, how many H₂O remain on the product side? (Hint: 8 H₂O form on the left, 4 H₂O already on right)
+**3)** After canceling $H_{2}O$, how many $H_{2}O$ remain on the product side? (Hint: 8 $H_{2}O$ form on the left, 4 $H_{2}O$ already on right)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['8', '8', '0'],
-        hint1: 'There are 8 H⁺ — add one OH⁻ per H⁺.',
-        hint2: 'Each H⁺ + OH⁻ → H₂O. So 8 H⁺ produce 8 H₂O on the left.',
-        hint3: 'Left: 8 H₂O. Right: 4 H₂O + 8 OH⁻ introduced. Cancel 4 H₂O from both sides. Right side: 4 − 4 = 0 H₂O remaining.',
-        explanation: '1) 8 OH⁻ (one per H⁺). 2) 8 H₂O on the left (from 8 H⁺ + 8 OH⁻). 3) Cancel 4 H₂O from both sides: left has 8 − 4 = 4, right has 4 − 4 = 0. Final: 3Cu + 4H₂O + 2NO₃⁻ → 3Cu²⁺ + 2NO + 8OH⁻.'
+        hint1: 'There are 8 $H^{+}$ — add one $OH^{-}$ per $H^{+}$.',
+        hint2: 'Each $H^{+}$ + $OH^{-}$ → $H_{2}O$. So 8 $H^{+}$ produce 8 $H_{2}O$ on the left.',
+        hint3: 'Left: 8 $H_{2}O$. Right: 4 $H_{2}O$ + 8 $OH^{-}$ introduced. Cancel 4 $H_{2}O$ from both sides. Right side: 4 − 4 = 0 $H_{2}O$ remaining.',
+        explanation: '1) 8 $OH^{-}$ (one per $H^{+}$). 2) 8 $H_{2}O$ on the left $(from 8 H^{+} + 8 OH^{-})$. 3) Cancel 4 $H_{2}O$ from both sides: left has 8 − 4 = 4, right has 4 − 4 = 0. Final: 3Cu + $4H_{2}O$ + $2NO_{3}^{-}$ → $3Cu^{2+}$ + 2NO + $8OH^{-}$.'
       }
     },
     {
@@ -200,22 +200,22 @@ Convert to basic solution:
           },
           {
             label: 'In basic solution, oxygen atoms are ultimately balanced using',
-            options: ['H₂O and OH⁻', 'O₂ molecules', 'H₂O₂', 'O²⁻ ions']
+            options: ['$H_{2}O$ and $OH^{-}$', '$O_{2}$ molecules', '$H_{2}O_{2}$', '$O^{2-}$ ions']
           },
           {
             label: 'A correctly balanced basic equation will have',
-            options: ['H⁺ on the left', 'H⁺ on the right', 'no H⁺ anywhere', 'equal H⁺ and OH⁻']
+            options: ['$H^{+}$ on the left', '$H^{+}$ on the right', 'no $H^{+}$ anywhere', 'equal $H^{+}$ and $OH^{-}$']
           },
           {
             label: 'Batteries in alkaline solution involve redox reactions balanced in',
             options: ['acidic solution', 'basic solution', 'neutral solution', 'no solution needed']
           }
         ],
-        correctAnswers: ['identical to the acidic method', 'H₂O and OH⁻', 'no H⁺ anywhere', 'basic solution'],
+        correctAnswers: ['identical to the acidic method', '$H_{2}O$ and $OH^{-}$', 'no $H^{+}$ anywhere', 'basic solution'],
         hint1: 'We balance in acid first, then convert.',
-        hint2: 'H₂O balances O, then OH⁻ replaces H⁺.',
-        hint3: 'All H⁺ must be neutralized by OH⁻.',
-        explanation: 'Steps 1–7 are identical to acidic. In basic solution, O is balanced by H₂O and OH⁻ (after conversion). No H⁺ remains. Alkaline batteries operate in basic solution.'
+        hint2: '$H_{2}O$ balances O, then $OH^{-}$ replaces $H^{+}$.',
+        hint3: 'All $H^{+}$ must be neutralized by $OH^{-}$.',
+        explanation: 'Steps 1–7 are identical to acidic. In basic solution, O is balanced by $H_{2}O$ and $OH^{-}$ (after conversion). No $H^{+}$ remains. Alkaline batteries operate in basic solution.'
       }
     },
     {
@@ -227,18 +227,18 @@ Convert to basic solution:
       exercise: {
         questions: [
           {
-            question: 'Balance in basic solution: Cr(OH)₃(s) + ClO⁻(aq) → CrO₄²⁻(aq) + Cl⁻(aq). What appears in the balanced equation?',
+            question: 'Balance in basic solution: $Cr(OH)_{3}(s)$ + $ClO^{-}(aq)$ → $CrO_{4}^{2-}(aq)$ + $Cl^{-}(aq)$. What appears in the balanced equation?',
             options: [
-              'H⁺ and H₂O',
-              'OH⁻ and H₂O',
-              'Only H₂O',
-              'Neither H₂O nor OH⁻'
+              '$H^{+}$ and $H_{2}O$',
+              '$OH^{-}$ and $H_{2}O$',
+              'Only $H_{2}O$',
+              'Neither $H_{2}O$ nor $OH^{-}$'
             ],
             correctAnswer: 1,
-            explanation: 'In basic solution, the balanced equation contains OH⁻ and H₂O (but NO H⁺). After balancing in acid and converting, you\'ll have OH⁻ on one side and H₂O on the other.'
+            explanation: 'In basic solution, the balanced equation contains $OH^{-}$ and $H_{2}O$ (but NO $H^{+}$). After balancing in acid and converting, you\'ll have $OH^{-}$ on one side and $H_{2}O$ on the other.'
           },
           {
-            question: 'If an equation balanced in acid has 4H⁺ on the left and 2H₂O on the right, after converting to basic solution, how many OH⁻ will appear?',
+            question: 'If an equation balanced in acid has $4H^{+}$ on the left and $2H_{2}O$ on the right, after converting to basic solution, how many $OH^{-}$ will appear?',
             options: [
               '2',
               '4',
@@ -246,7 +246,7 @@ Convert to basic solution:
               '8'
             ],
             correctAnswer: 1,
-            explanation: 'Add 4 OH⁻ to both sides (one per H⁺). Left: 4H⁺ + 4OH⁻ → 4H₂O. Right: 2H₂O + 4OH⁻. Cancel 2 H₂O: Left has 2H₂O, Right has 4OH⁻. The 4 OH⁻ remain on the product side.'
+            explanation: 'Add 4 $OH^{-}$ to both sides (one per $H^{+}$). Left: $4H^{+}$ + $4OH^{-}$ → $4H_{2}O$. Right: $2H_{2}O$ + $4OH^{-}$. Cancel 2 $H_{2}O$: Left has $2H_{2}O$, Right has $4OH^{-}$. The 4 $OH^{-}$ remain on the product side.'
           }
         ]
       }

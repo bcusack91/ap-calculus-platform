@@ -127,7 +127,7 @@ The SAT usually gives you a two-way table and asks:
         hint1: '"At least one" → complement is easiest.',
         hint2: 'Red and blue are mutually exclusive (can\'t be both) → just add.',
         hint3: 'Dice rolls are independent → multiply.',
-        explanation: 'At least one → complement: 1 − (1/2)³ = 7/8. Mutually exclusive colors → add: P(R) + P(B). Independent dice → multiply: (1/6)². Without replacement → second draw changes: (4/52)(3/51).'
+        explanation: 'At least one → complement: 1 − $(1/2)^{3}$ = 7/8. Mutually exclusive colors → add: P(R) + P(B). Independent dice → multiply: $(1/6)^{2}$. Without replacement → second draw changes: (4/52)(3/51).'
       }
     },
     {

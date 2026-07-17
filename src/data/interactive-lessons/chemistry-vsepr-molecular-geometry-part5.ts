@@ -33,10 +33,10 @@ export const chemVseprMolecularGeometryPart5Data = {
     {
       id: 'vg-5-2',
       type: 'text',
-      title: 'Worked Example: SO₂',
-      content: `## Worked Example: SO₂ (Sulfur Dioxide)
+      title: 'Worked Example: $SO_{2}$',
+      content: `## Worked Example: $SO_{2}$ (Sulfur Dioxide)
 
-> **Problem:** Predict the molecular geometry of SO₂.
+> **Problem:** Predict the molecular geometry of $SO_{2}$.
 
 > **Solution:**
 
@@ -67,10 +67,10 @@ $$\\boxed{\\text{SO}_2: \\quad \\text{3 e⁻ domains} \\to \\text{trigonal plana
     {
       id: 'vg-5-3',
       type: 'text',
-      title: 'Worked Example: XeF₄',
-      content: `## Worked Example: XeF₄ (Xenon Tetrafluoride)
+      title: 'Worked Example: $XeF_{4}$',
+      content: `## Worked Example: $XeF_{4}$ (Xenon Tetrafluoride)
 
-> **Problem:** Predict the molecular geometry of XeF₄.
+> **Problem:** Predict the molecular geometry of $XeF_{4}$.
 
 > **Solution:**
 
@@ -108,19 +108,19 @@ $$\\boxed{\\text{XeF}_4: \\quad \\text{6 e⁻ domains} \\to \\text{octahedral (E
       exercise: {
         questions: [
           {
-            question: 'What is the molecular geometry of PF₃? (P has 5 valence e⁻, each F has 7. P has 3 bonds and 1 lone pair.)',
+            question: 'What is the molecular geometry of $PF_{3}$? (P has 5 valence $e^{-}$, each F has 7. P has 3 bonds and 1 lone pair.)',
             options: ['Trigonal planar', 'Tetrahedral', 'Trigonal pyramidal', 'Bent'],
             correctAnswer: 2,
             explanation: 'P has 3 bonds + 1 lone pair = steric number 4 → tetrahedral ED geometry. With 1 lone pair removed, molecular geometry = trigonal pyramidal.'
           },
           {
-            question: 'What is the molecular geometry of ICl₃? (I has 7 valence e⁻, uses 3 for bonds, has 2 lone pairs.)',
+            question: 'What is the molecular geometry of $ICl_{3}$? (I has 7 valence $e^{-}$, uses 3 for bonds, has 2 lone pairs.)',
             options: ['Trigonal planar', 'Trigonal pyramidal', 'T-shaped', 'Seesaw'],
             correctAnswer: 2,
             explanation: 'I has 3 bonds + 2 lone pairs = steric number 5 → trigonal bipyramidal ED geometry. With 2 lone pairs in equatorial positions, molecular geometry = T-shaped.'
           },
           {
-            question: 'What is the molecular geometry of BrF₅? (Br has 7 valence e⁻, uses 5 for bonds, has 1 lone pair.)',
+            question: 'What is the molecular geometry of $BrF_{5}$? (Br has 7 valence $e^{-}$, uses 5 for bonds, has 1 lone pair.)',
             options: ['Trigonal bipyramidal', 'Octahedral', 'Square pyramidal', 'Square planar'],
             correctAnswer: 2,
             explanation: 'Br has 5 bonds + 1 lone pair = steric number 6 → octahedral ED geometry. With 1 lone pair, molecular geometry = square pyramidal.'
@@ -136,22 +136,22 @@ $$\\boxed{\\text{XeF}_4: \\quad \\text{6 e⁻ domains} \\to \\text{octahedral (E
       exercise: {
         inputs: [
           {
-            label: 'Steric number of S in H₂S',
+            label: 'Steric number of S in $H_{2}S$',
             correctAnswer: '4',
-            explanation: 'Sulfur in H₂S has 2 bonds + 2 lone pairs = steric number of 4.'
+            explanation: 'Sulfur in $H_{2}S$ has 2 bonds + 2 lone pairs = steric number of 4.'
           },
           {
-            label: 'Number of lone pairs on iodine in IF₅',
+            label: 'Number of lone pairs on iodine in $IF_{5}$',
             correctAnswer: '1',
             explanation: 'Iodine has 7 valence electrons. 5 are used for bonds, leaving 2 electrons = 1 lone pair.'
           },
           {
-            label: 'Steric number of N in NO₂⁻',
+            label: 'Steric number of N in $NO_{2}^{-}$',
             correctAnswer: '3',
-            explanation: 'Nitrogen in NO₂⁻ has 2 bonds (or resonance structures with one double and one single bond, still 2 domains) + 1 lone pair = steric number 3.'
+            explanation: 'Nitrogen in $NO_{2}^{-}$ has 2 bonds (or resonance structures with one double and one single bond, still 2 domains) + 1 lone pair = steric number 3.'
           },
           {
-            label: 'Number of lone pairs on Cl in ClF₃',
+            label: 'Number of lone pairs on Cl in $ClF_{3}$',
             correctAnswer: '2',
             explanation: 'Chlorine has 7 valence electrons. 3 are used in bonds to F, leaving 4 electrons = 2 lone pairs.'
           }
@@ -166,19 +166,19 @@ $$\\boxed{\\text{XeF}_4: \\quad \\text{6 e⁻ domains} \\to \\text{octahedral (E
 
 | Steric # | Lone Pairs | Bonding Pairs | ED Geometry | Molecular Geometry | Example |
 |----------|-----------|--------------|-------------|-------------------|---------|
-| 2 | 0 | 2 | Linear | Linear | CO₂ |
-| 3 | 0 | 3 | Trig. planar | Trigonal planar | BF₃ |
-| 3 | 1 | 2 | Trig. planar | Bent | SO₂ |
-| 4 | 0 | 4 | Tetrahedral | Tetrahedral | CH₄ |
-| 4 | 1 | 3 | Tetrahedral | Trigonal pyramidal | NH₃ |
-| 4 | 2 | 2 | Tetrahedral | Bent | H₂O |
-| 5 | 0 | 5 | Trig. bipyramidal | Trigonal bipyramidal | PCl₅ |
-| 5 | 1 | 4 | Trig. bipyramidal | Seesaw | SF₄ |
-| 5 | 2 | 3 | Trig. bipyramidal | T-shaped | ClF₃ |
-| 5 | 3 | 2 | Trig. bipyramidal | Linear | XeF₂ |
-| 6 | 0 | 6 | Octahedral | Octahedral | SF₆ |
-| 6 | 1 | 5 | Octahedral | Square pyramidal | BrF₅ |
-| 6 | 2 | 4 | Octahedral | Square planar | XeF₄ |
+| 2 | 0 | 2 | Linear | Linear | $CO_{2}$ |
+| 3 | 0 | 3 | Trig. planar | Trigonal planar | $BF_{3}$ |
+| 3 | 1 | 2 | Trig. planar | Bent | $SO_{2}$ |
+| 4 | 0 | 4 | Tetrahedral | Tetrahedral | $CH_{4}$ |
+| 4 | 1 | 3 | Tetrahedral | Trigonal pyramidal | $NH_{3}$ |
+| 4 | 2 | 2 | Tetrahedral | Bent | $H_{2}O$ |
+| 5 | 0 | 5 | Trig. bipyramidal | Trigonal bipyramidal | $PCl_{5}$ |
+| 5 | 1 | 4 | Trig. bipyramidal | Seesaw | $SF_{4}$ |
+| 5 | 2 | 3 | Trig. bipyramidal | T-shaped | $ClF_{3}$ |
+| 5 | 3 | 2 | Trig. bipyramidal | Linear | $XeF_{2}$ |
+| 6 | 0 | 6 | Octahedral | Octahedral | $SF_{6}$ |
+| 6 | 1 | 5 | Octahedral | Square pyramidal | $BrF_{5}$ |
+| 6 | 2 | 4 | Octahedral | Square planar | $XeF_{4}$ |
 
 This chart is essential for the AP exam — memorize it!
 
@@ -193,24 +193,24 @@ This chart is essential for the AP exam — memorize it!
         dropdowns: [
           {
             id: 'vg-5-7-dd1',
-            label: 'Molecular geometry of SnCl₂',
+            label: 'Molecular geometry of $SnCl_{2}$',
             options: ['Trigonal planar', 'Bent', 'Linear', 'Trigonal pyramidal'],
             correctIndex: 1,
-            explanation: 'SnCl₂ (Sn has 2 bonds + 1 lone pair) → steric number 3, trigonal planar ED, bent molecular geometry.'
+            explanation: '$SnCl_{2}$ (Sn has 2 bonds + 1 lone pair) → steric number 3, trigonal planar ED, bent molecular geometry.'
           },
           {
             id: 'vg-5-7-dd2',
-            label: 'Molecular geometry of TeCl₄',
+            label: 'Molecular geometry of $TeCl_{4}$',
             options: ['Tetrahedral', 'Seesaw', 'Square planar', 'Trigonal bipyramidal'],
             correctIndex: 1,
-            explanation: 'TeCl₄ has 4 bonds + 1 lone pair on Te → steric number 5, trigonal bipyramidal ED, seesaw molecular geometry.'
+            explanation: '$TeCl_{4}$ has 4 bonds + 1 lone pair on Te → steric number 5, trigonal bipyramidal ED, seesaw molecular geometry.'
           },
           {
             id: 'vg-5-7-dd3',
-            label: 'Molecular geometry of IF₅',
+            label: 'Molecular geometry of $IF_{5}$',
             options: ['Square pyramidal', 'Octahedral', 'Trigonal bipyramidal', 'Square planar'],
             correctIndex: 0,
-            explanation: 'IF₅ has 5 bonds + 1 lone pair on I → steric number 6, octahedral ED, square pyramidal molecular geometry.'
+            explanation: '$IF_{5}$ has 5 bonds + 1 lone pair on I → steric number 6, octahedral ED, square pyramidal molecular geometry.'
           }
         ]
       }
@@ -223,7 +223,7 @@ This chart is essential for the AP exam — memorize it!
       exercise: {
         questions: [
           {
-            question: 'SeF₄ has 34 total valence electrons. Selenium is the central atom with 4 bonds to F and 1 lone pair. What is the molecular geometry?',
+            question: '$SeF_{4}$ has 34 total valence electrons. Selenium is the central atom with 4 bonds to F and 1 lone pair. What is the molecular geometry?',
             options: ['Tetrahedral', 'Square planar', 'Seesaw', 'Trigonal bipyramidal'],
             correctAnswer: 2,
             explanation: 'Se has 4 bonds + 1 lone pair = steric number 5. ED geometry = trigonal bipyramidal. With 1 lone pair in an equatorial position, molecular geometry = seesaw.'

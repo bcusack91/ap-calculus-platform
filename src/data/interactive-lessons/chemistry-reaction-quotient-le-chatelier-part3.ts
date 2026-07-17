@@ -39,10 +39,10 @@ export const chemReactionQuotientLeChatPart3Data = {
 
 For: $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$
 
-If we add more N₂:
+If we add more $N_{2}$:
 - $[\\text{N}_2]$ increases immediately
 - Q decreases (denominator gets bigger) → $Q < K$
-- System shifts **right** to consume the added N₂
+- System shifts **right** to consume the added $N_{2}$
 - At the new equilibrium: $[\\text{NH}_3]$ is higher, $[\\text{H}_2]$ is lower
 
 
@@ -50,10 +50,10 @@ If we add more N₂:
 
 ### Adding Product → Shift Left
 
-If we add more NH₃:
+If we add more $NH_{3}$:
 - $[\\text{NH}_3]$ increases immediately
 - Q increases (numerator gets bigger) → $Q > K$
-- System shifts **left** to consume the added NH₃
+- System shifts **left** to consume the added $NH_{3}$
 - At the new equilibrium: $[\\text{N}_2]$ and $[\\text{H}_2]$ are higher
 
 
@@ -120,15 +120,15 @@ If we add more NH₃:
             explanation: 'Adding a product increases the numerator of Q, making $Q > K$. The system shifts left to consume the excess product, producing more A and B.'
           },
           {
-            question: 'Removing H₂ from the equilibrium $\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$ will:',
+            question: 'Removing $H_{2}$ from the equilibrium $\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$ will:',
             options: [
-              'Shift right to make more NH₃',
-              'Shift left to make more H₂',
+              'Shift right to make more $NH_{3}$',
+              'Shift left to make more $H_{2}$',
               'Have no effect',
               'Increase K'
             ],
             correctAnswer: 1,
-            explanation: 'Removing a reactant (H₂) decreases the denominator of Q, making $Q > K$. The system shifts left to produce more H₂ (and more N₂), partially restoring the lost H₂.'
+            explanation: 'Removing a reactant $(H_{2})$ decreases the denominator of Q, making $Q > K$. The system shifts left to produce more $H_{2}$ (and more $N_{2}$), partially restoring the lost $H_{2}$.'
           },
           {
             question: 'After adding extra reactant to a system at equilibrium, the system reaches a new equilibrium. At the new equilibrium:',
@@ -164,7 +164,7 @@ For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ a
         hint1: 'Adding a reactant: Q decreases, system shifts right.',
         hint2: 'Removing a product: Q decreases, system shifts right.',
         hint3: 'Both stresses favor shifting right (adding reactant AND removing product both decrease Q).',
-        explanation: '1) Adding Cl₂ (reactant) → Q decreases → shift right. 2) Removing HCl (product) → Q decreases → shift right. 3) Removing H₂ alone would shift left, but adding Cl₂ and removing a product both shift right — wait, removing H₂ is a reactant removal. However, the net effect of adding Cl₂ AND removing H₂ depends on magnitudes. In general, adding a reactant and removing H₂ work in opposite directions... Actually: adding Cl₂ decreases Q; removing H₂ increases Q. The question says both happen — the result depends on magnitudes but typically the combination of adding one reactant while removing another is ambiguous. However, the answer "right" assumes the Cl₂ addition dominates or we note that removing H₂ doesn\'t appear. Correction: Both adding Cl₂ (shift right) and removing HCl would both shift right, so the answer is right.'
+        explanation: '1) Adding $Cl_{2}$ (reactant) → Q decreases → shift right. 2) Removing HCl (product) → Q decreases → shift right. 3) Removing $H_{2}$ alone would shift left, but adding $Cl_{2}$ and removing a product both shift right — wait, removing $H_{2}$ is a reactant removal. However, the net effect of adding $Cl_{2}$ AND removing $H_{2}$ depends on magnitudes. In general, adding a reactant and removing $H_{2}$ work in opposite directions... Actually: adding $Cl_{2}$ decreases Q; removing $H_{2}$ increases Q. The question says both happen — the result depends on magnitudes but typically the combination of adding one reactant while removing another is ambiguous. However, the answer "right" assumes the $Cl_{2}$ addition dominates or we note that removing $H_{2}$ doesn\'t appear. Correction: Both adding $Cl_{2}$ (shift right) and removing HCl would both shift right, so the answer is right.'
       }
     },
     {
@@ -213,7 +213,7 @@ For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ a
       exercise: {
         questions: [
           {
-            question: 'For the Haber process $\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$, removing NH₃ as it forms will:',
+            question: 'For the Haber process $\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$, removing $NH_{3}$ as it forms will:',
             options: [
               'Shift equilibrium left',
               'Shift equilibrium right, increasing yield',
@@ -221,7 +221,7 @@ For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ a
               'Change the value of K'
             ],
             correctAnswer: 1,
-            explanation: 'Removing a product (NH₃) decreases Q below K, shifting the reaction right. This is actually used industrially — NH₃ is continuously removed to drive the reaction forward and maximize yield.'
+            explanation: 'Removing a product $(NH_{3})$ decreases Q below K, shifting the reaction right. This is actually used industrially — $NH_{3}$ is continuously removed to drive the reaction forward and maximize yield.'
           },
           {
             question: 'At equilibrium, $[\\text{A}] = 1.0$ M. A student adds A to make $[\\text{A}] = 2.0$ M. At the new equilibrium, $[\\text{A}]$ will be:',

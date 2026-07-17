@@ -66,7 +66,7 @@ A current loop in a magnetic field experiences torque $\\vec{\\tau} = \\vec{\\mu
     {
       id: 'magf7-mcq3',
       type: 'mcq' as const,
-      question: 'A DC motor coil has 200 turns, area $50$ cm², carries 3 A in a 0.8 T field. At the position of maximum torque, $\\tau$ is:',
+      question: 'A DC motor coil has 200 turns, area $50$ $cm^{2}$, carries 3 A in a 0.8 T field. At the position of maximum torque, $\\tau$ is:',
       options: ['2.4 N·m', '1.2 N·m', '4.8 N·m', '0.24 N·m'],
       correctAnswer: 0,
       explanation: '$\\tau_{\\max} = NIAB = 200 \\times 3 \\times 50 \\times 10^{-4} \\times 0.8 = 200 \\times 3 \\times 0.004 = 2.4$ N·m.'

@@ -45,7 +45,7 @@ Memorize this table — it organizes the entire unit. Each later part drills int
 
 | Category | Examples | Main Source |
 |----------|----------|-------------|
-| **Plant nutrients** | Nitrate (NO₃⁻), phosphate (PO₄³⁻) | Fertilizer runoff, sewage, detergents |
+| **Plant nutrients** | Nitrate $(NO_{3}^{-})$, phosphate $(PO_{4}^{3-})$ | Fertilizer runoff, sewage, detergents |
 | **Oxygen-demanding wastes** | Organic matter (sewage, manure, food waste) | Sewage, feedlots, food processing |
 | **Pathogens** | Bacteria, viruses, protozoa (*E. coli*, cholera) | Untreated human/animal waste |
 | **Toxic chemicals** | Heavy metals (Hg, Pb, As), pesticides, PCBs | Mining, industry, agriculture |
@@ -122,7 +122,7 @@ Pollution behaves very differently depending on **where** the water is.
 |---------|-------------------------------|------------------------|
 | Movement | Flows quickly; flushes and dilutes | Moves very slowly (sometimes cm/day) |
 | Recovery | Can recover in months–years once the source stops | May take **decades–centuries** to recover |
-| Oxygen / microbes | Plenty → pollutants break down faster | Little O₂, few microbes → pollutants persist |
+| Oxygen / microbes | Plenty → pollutants break down faster | Little $O_{2}$, few microbes → pollutants persist |
 | Cleanup | Visible and accessible | Hidden underground; extremely hard to clean |
 
 > 🔑 **Setting up the arc:** Groundwater pollution is so dangerous precisely because it is **slow to move, slow to recover, and hard to detect** — we'll return to it in Part 6. First, Part 2 tackles the most exam-heavy surface-water problem: **nutrient pollution and eutrophication**.`,
@@ -209,7 +209,7 @@ $$\\text{Excess N + P} \\rightarrow \\text{algal bloom} \\rightarrow \\text{die-
                 'The water becomes too acidic for fish to survive',
               ],
               correctAnswer: 0,
-              explanation: 'Excess N and P fuel an algal bloom; when the algae die, aerobic bacteria decompose them and consume dissolved oxygen. The resulting hypoxia (low O₂) is what kills the fish — not the nutrients themselves.',
+              explanation: 'Excess N and P fuel an algal bloom; when the algae die, aerobic bacteria decompose them and consume dissolved oxygen. The resulting hypoxia $(low O_{2})$ is what kills the fish — not the nutrients themselves.',
             },
             {
               question: 'The two nutrients most responsible for triggering eutrophication are:',
@@ -237,7 +237,7 @@ Put the cascade in sequence by choosing what happens at each stage.`,
           hint1: 'Start with the nutrients that pour in from runoff.',
           hint2: 'Too many nutrients → too many algae.',
           hint3: 'Decomposing the dead algae uses oxygen, so the fish suffocate.',
-          explanation: 'Excess N + P → algal bloom → die-off → bacterial decomposition consumes O₂ → hypoxia → fish suffocate. The oxygen crash is the lethal step.',
+          explanation: 'Excess N + P → algal bloom → die-off → bacterial decomposition consumes $O_{2}$ → hypoxia → fish suffocate. The oxygen crash is the lethal step.',
         },
       },
       {
@@ -249,8 +249,8 @@ Two key measurements describe an oxygen problem:
 
 | Term | Meaning | What high/low values mean |
 |------|---------|----------------------------|
-| **Dissolved Oxygen (DO)** | Amount of O₂ dissolved in the water (mg/L) | **High DO = healthy** water; low DO = stressed/dead |
-| **Biochemical Oxygen Demand (BOD)** | O₂ bacteria need to decompose the organic waste present | **High BOD = lots of waste** → oxygen will be depleted |
+| **Dissolved Oxygen (DO)** | Amount of $O_{2}$ dissolved in the water (mg/L) | **High DO = healthy** water; low DO = stressed/dead |
+| **Biochemical Oxygen Demand (BOD)** | $O_{2}$ bacteria need to decompose the organic waste present | **High BOD = lots of waste** → oxygen will be depleted |
 
 A river badly polluted with sewage or dead algae has **high BOD** (lots of organic matter to break down) and ends up with **low DO** (the bacteria used it up). They move in **opposite** directions.
 
@@ -504,7 +504,7 @@ The producers (algae) have a concentration of **0.05 ppm**.
           hint1: 'One level up = ×10: $0.05 \\times 10$.',
           hint2: 'Three levels up = ×10 three times = ×1000.',
           hint3: '$0.05 \\times 10 \\times 10 \\times 10 = 0.05 \\times 1000$.',
-          explanation: '1) One trophic level up: 0.05 × 10 = 0.5 ppm. 2) Three levels up: 0.05 × 10³ = 0.05 × 1000 = 50 ppm. The top predator carries a 1000× heavier dose than the producers.',
+          explanation: '1) One trophic level up: 0.05 × 10 = 0.5 ppm. 2) Three levels up: $0.05 \\times 10^{3}$ = 0.05 × 1000 = 50 ppm. The top predator carries a 1000× heavier dose than the producers.',
         },
       },
       {
@@ -553,7 +553,7 @@ Most ocean oil pollution actually comes from **nonpoint runoff and small chronic
 | Effect of an oil spill | Mechanism |
 |------------------------|-----------|
 | Coats birds & mammals | Destroys waterproofing/insulation of feathers and fur → hypothermia, drowning |
-| Blocks sunlight & gas exchange | Surface slick reduces photosynthesis and O₂ exchange |
+| Blocks sunlight & gas exchange | Surface slick reduces photosynthesis and $O_{2}$ exchange |
 | Smothers organisms | Coats gills, shellfish, marsh plants |
 | Toxic to eggs/larvae | Hydrocarbons poison developing organisms |
 
@@ -616,7 +616,7 @@ $$\\text{Warmer water} \\;\\Rightarrow\\; \\text{less dissolved O}_2 \\;\\Righta
 
 | Effect | Why |
 |--------|-----|
-| Lower dissolved oxygen | **Warm water holds less O₂** — the core mechanism |
+| Lower dissolved oxygen | **Warm water holds less $O_{2}$** — the core mechanism |
 | Faster metabolism | Fish need *more* oxygen just as there is *less* available |
 | Disrupted breeding/migration | Temperature cues are thrown off |
 | Thermal shock | Sudden temperature change can kill organisms outright |
@@ -635,7 +635,7 @@ $$\\text{Warmer water} \\;\\Rightarrow\\; \\text{less dissolved O}_2 \\;\\Righta
             { label: 'Plastic that has fragmented to under 5 mm is called:', options: ['Microplastic', 'Sediment', 'Effluent', 'Methylmercury'] },
           ],
           correctAnswers: ['Dissolved oxygen', 'Turbidity', 'Destroying feather waterproofing/insulation', 'Microplastic'],
-          hint1: 'Warm water holds less O₂.',
+          hint1: 'Warm water holds less $O_{2}$.',
           hint2: 'Cloudiness from suspended particles = turbidity.',
           hint3: 'Oil ruins feathers; tiny plastic fragments are microplastics.',
           explanation: 'Thermal pollution lowers dissolved oxygen; sediment raises turbidity (cloudiness) and blocks light; oil destroys feather waterproofing; plastic fragments under 5 mm are microplastics.',
@@ -684,7 +684,7 @@ Groundwater sits in **aquifers** — underground layers of permeable rock and se
 
 | Source | Contaminant |
 |--------|-------------|
-| Fertilizer & septic systems | **Nitrate (NO₃⁻)** |
+| Fertilizer & septic systems | **Nitrate $(NO_{3}^{-})$** |
 | Leaking underground storage tanks (gas stations) | Gasoline, MTBE, hydrocarbons |
 | Landfills (leachate) | Mixed toxics, heavy metals |
 | Industrial injection / spills | Solvents, heavy metals |
@@ -731,7 +731,7 @@ Groundwater sits in **aquifers** — underground layers of permeable rock and se
         type: 'text' as const,
         content: `## Two Headline Drinking-Water Contaminants
 
-**Nitrate (NO₃⁻):** runs off from fertilizer and seeps from septic systems into wells. In infants under 6 months, nitrate interferes with the blood's ability to carry oxygen, causing **methemoglobinemia ("blue baby syndrome")**. The EPA's drinking-water limit (MCL) for nitrate is **10 mg/L (as nitrogen)**.
+**Nitrate $(NO_{3}^{-})$:** runs off from fertilizer and seeps from septic systems into wells. In infants under 6 months, nitrate interferes with the blood's ability to carry oxygen, causing **methemoglobinemia ("blue baby syndrome")**. The EPA's drinking-water limit (MCL) for nitrate is **10 mg/L (as nitrogen)**.
 
 **Arsenic (As):** dissolves naturally from rock into groundwater in many regions (and from mining/pesticides). Chronic exposure causes **cancer** and skin/organ damage. The EPA's drinking-water limit for arsenic is **10 ppb (0.010 mg/L)**.
 
@@ -891,8 +891,8 @@ The cheapest, most effective approach is **prevention** — stopping pollution b
 |---------|----------|
 | Leading U.S. water-pollution source | **Nonpoint** runoff (agriculture) |
 | Point vs. nonpoint | Point = one identifiable pipe/source; nonpoint = diffuse runoff |
-| Eutrophication | Excess **N + P** → algal bloom → die-off → bacteria use O₂ → fish kill |
-| DO vs. BOD | High BOD (waste) → low DO (oxygen); warm water holds less O₂ |
+| Eutrophication | Excess **N + P** → algal bloom → die-off → bacteria use $O_{2}$ → fish kill |
+| DO vs. BOD | High BOD (waste) → low DO (oxygen); warm water holds less $O_{2}$ |
 | Pathogens | Indicator = **fecal coliform / *E. coli***; cause cholera, typhoid |
 | Sewage treatment | Primary (physical) → secondary (bacteria/BOD) → tertiary (N,P) → disinfection |
 | Bioaccumulation vs. biomagnification | In one organism over time vs. up the food chain (top predator worst) |

@@ -13,7 +13,7 @@ export const g5VolumePart7Data = {
 - **Rectangular prism**: $V = l \\times w \\times h$
 - **Cube**: $V = s^3$
 - **Composite**: Split and add volumes
-- **1 liter = 1,000 cm³**
+- **1 liter = 1,000 $cm^{3}$**
     
     `
     },
@@ -24,7 +24,7 @@ export const g5VolumePart7Data = {
 ## Worked Example
 
 **Cube side 6 cm. Volume?**
-$V = 6^3 = 216$ cm³ ✅
+$V = 6^3 = 216$ $cm^{3}$ ✅
     
     `
     },
@@ -39,13 +39,13 @@ $V = 6^3 = 216$ cm³ ✅
           {
                     "question": "Volume of 8 × 5 × 4 cm prism?",
                     "options": [
-                              "160 cm³",
-                              "80 cm³",
-                              "17 cm³",
-                              "320 cm³"
+                              "160 $cm^{3}$",
+                              "80 $cm^{3}$",
+                              "17 $cm^{3}$",
+                              "320 $cm^{3}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "8 × 5 × 4 = 160 cm³."
+                    "explanation": "8 × 5 × 4 = 160 $cm^{3}$."
           }
 ]
       }
@@ -56,18 +56,18 @@ $V = 6^3 = 216$ cm³ ✅
       content: `
 **Review** 🧮
 
-1) Rectangular prism 8 × 5 × 4 cm. Volume (cm³)?
+1) Rectangular prism 8 × 5 × 4 cm. Volume $(cm^{3})$?
 
-2) Cube, side 7 cm. Volume (cm³)?
+2) Cube, side 7 cm. Volume $(cm^{3})$?
 
-3) 5,000 cm³ = ? liters
+3) 5,000 $cm^{3}$ = ? liters
     
     `,
       exercise: {
         boxes: 3,
         correctAnswers: ["160","343","5"],
         hint1: "8 × 5 × 4.",
-        hint2: "7³.",
+        hint2: "$7^{3}$.",
         hint3: "Divide by 1,000.",
         explanation: "1) 160. 2) 343. 3) 5."
       }
@@ -79,11 +79,11 @@ $V = 6^3 = 216$ cm³ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Volume formula for a rectangular prism","options":["V = l × w × h","V = 2(l+w+h)","V = l × w","V = 6s²"]},{"label":"To convert cm³ to liters, divide by","options":["1,000","100","10","10,000"]}],
+        dropdowns: [{"label":"Volume formula for a rectangular prism","options":["V = l × w × h","V = 2(l+w+h)","V = l × w","V = $6s^{2}$"]},{"label":"To convert $cm^{3}$ to liters, divide by","options":["1,000","100","10","10,000"]}],
         correctAnswers: ["V = l × w × h","1,000"],
         hint1: "Three dimensions.",
-        hint2: "1 L = 1,000 cm³.",
-        explanation: "V = lwh. Divide cm³ by 1,000 for liters."
+        hint2: "1 L = 1,000 $cm^{3}$.",
+        explanation: "V = lwh. Divide $cm^{3}$ by 1,000 for liters."
       }
     },
     {
@@ -96,7 +96,7 @@ $V = 6^3 = 216$ cm³ ✅
 |---|------|---------|
 | 1 | Prism | 8 × 5 × 4 |
 | 2 | Cube | s = 7 |
-| 3 | Convert | 5,000 cm³ to liters |
+| 3 | Convert | 5,000 $cm^{3}$ to liters |
     
     `
     },
@@ -109,7 +109,7 @@ $V = 6^3 = 216$ cm³ ✅
       exercise: {
         questions: [
           {
-                    "question": "5,000 cm³ = ? liters",
+                    "question": "5,000 $cm^{3}$ = ? liters",
                     "options": [
                               "5",
                               "50",

@@ -141,7 +141,7 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
               'It violates conservation of energy'
             ],
             correctAnswer: 2,
-            explanation: 'The Bohr model only works well for hydrogen and other one-electron systems (He⁺, Li²⁺, etc.).'
+            explanation: 'The Bohr model only works well for hydrogen and other one-electron systems ($He^{+}$, $Li^{2+}$, etc.).'
           }
         ]
       }
@@ -195,7 +195,7 @@ The full **quantum-mechanical model** (Schrödinger, 1926) replaces orbits with 
             question: 'In a PES spectrum of nitrogen (Z = 7), how many distinct peaks would you expect?',
             options: ['1 (one for the atom)', '3 (1s, 2s, 2p)', '7 (one per electron)', '4 (1s, 2s, 2p, 3s)'],
             correctAnswer: 1,
-            explanation: 'N has electron configuration 1s² 2s² 2p³ — three occupied subshells, three PES peaks. Heights: 2 : 2 : 3.'
+            explanation: 'N has electron configuration $1s^{2}$ $2s^{2}$ $2p^{3}$ — three occupied subshells, three PES peaks. Heights: 2 : 2 : 3.'
           },
           {
             question: 'Why doesn\'t the Rydberg formula predict the wavelengths of sodium\'s emission lines?',

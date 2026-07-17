@@ -70,7 +70,7 @@ $$\\Psi_s = -iCRT$$
               'It increases because more particles are present'
             ],
             correctAnswer: 2,
-            explanation: 'Adding solute to water makes the solute potential (Ψs) more negative, which decreases the overall water potential. NaCl dissociates into Na⁺ and Cl⁻ (i = 2), having an even greater effect than a non-ionizing solute.'
+            explanation: 'Adding solute to water makes the solute potential (Ψs) more negative, which decreases the overall water potential. NaCl dissociates into $Na^{+}$ and $Cl^{-}$ (i = 2), having an even greater effect than a non-ionizing solute.'
           }
         ]
       }
@@ -111,12 +111,12 @@ This is the primary mechanism for long-distance water transport in plants. It wo
 
 | State | Mechanism | Result |
 |---|---|---|
-| **Open** | Guard cells take up K⁺ → water enters by osmosis → cells swell | CO₂ enters, O₂ and H₂O exit |
-| **Closed** | K⁺ leaves guard cells → water exits → cells become flaccid | Reduces water loss |
+| **Open** | Guard cells take up $K^{+}$ → water enters by osmosis → cells swell | $CO_{2}$ enters, $O_{2}$ and $H_{2}O$ exit |
+| **Closed** | $K^{+}$ leaves guard cells → water exits → cells become flaccid | Reduces water loss |
 
 ### What controls stomata opening?
-- **Light** → blue light activates proton pumps → K⁺ uptake → stomata open
-- **Low CO₂** inside leaf → stomata open to allow CO₂ entry
+- **Light** → blue light activates proton pumps → $K^{+}$ uptake → stomata open
+- **Low $CO_{2}$** inside leaf → stomata open to allow $CO_{2}$ entry
 - **Abscisic acid (ABA)** → released during drought → causes stomata to close
 - **Circadian rhythms** → stomata typically open during day, close at night`
     },
@@ -141,12 +141,12 @@ This is the primary mechanism for long-distance water transport in plants. It wo
             question: 'Guard cells open stomata by:',
             options: [
               'Losing water and becoming flaccid',
-              'Actively pumping K⁺ in, causing water to enter by osmosis',
+              'Actively pumping $K^{+}$ in, causing water to enter by osmosis',
               'Contracting their cell walls like muscle cells',
               'Releasing abscisic acid to nearby cells'
             ],
             correctAnswer: 1,
-            explanation: 'Guard cells take up K⁺ ions (potassium) actively, which lowers their water potential. Water enters by osmosis, the cells swell, and the stomatal pore opens due to the thickened inner wall bending outward.'
+            explanation: 'Guard cells take up $K^{+}$ ions (potassium) actively, which lowers their water potential. Water enters by osmosis, the cells swell, and the stomatal pore opens due to the thickened inner wall bending outward.'
           }
         ]
       }

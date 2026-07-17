@@ -155,9 +155,9 @@ In a non-inertial frame, objects appear to accelerate without any real force. Fo
 
 1) A 1500 kg car and a 75 kg person both experience the same net force. The ratio of the car\'s acceleration to the person\'s acceleration is $a_{\\text{car}}/a_{\\text{person}}$ = ? (express as a decimal)
 
-2) On the Moon, $g_{\\text{Moon}} = 1.6$ m/s². What is the weight (in N) of a 60 kg astronaut on the Moon?
+2) On the Moon, $g_{\\text{Moon}} = 1.6$ $m/s^{2}$. What is the weight (in N) of a 60 kg astronaut on the Moon?
 
-3) An object weighs 490 N on Earth ($g = 9.8$ m/s²). What is its mass in kg?
+3) An object weighs 490 N on Earth ($g = 9.8$ $m/s^{2}$). What is its mass in kg?
 
 *Round all answers to 3 significant figures.*
       `,

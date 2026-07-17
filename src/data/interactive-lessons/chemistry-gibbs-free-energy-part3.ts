@@ -210,7 +210,7 @@ Both methods give the same answer at 25°C.
             options: ['products + reactants', 'products × reactants', 'Σ products − Σ reactants', 'reactants − products']
           },
           {
-            label: 'ΔG°_f for N₂(g) is',
+            label: 'ΔG°_f for $N_{2}(g)$ is',
             options: ['191.6 J/(mol·K)', '0 kJ/mol', '-16.4 kJ/mol', 'undefined']
           },
           {
@@ -224,9 +224,9 @@ Both methods give the same answer at 25°C.
         ],
         correctAnswers: ['Σ products − Σ reactants', '0 kJ/mol', 'less stable than its elements', 'enthalpy and entropy'],
         hint1: 'Same pattern as ΔH° calculations.',
-        hint2: 'N₂(g) is an element in its standard state.',
+        hint2: '$N_{2}(g)$ is an element in its standard state.',
         hint3: 'Positive ΔG°_f means decomposition back to elements is spontaneous.',
-        explanation: 'ΔG° = Σ products − Σ reactants (same as ΔH°). N₂(g) is an element in its standard state, so ΔG°_f = 0. If ΔG°_f > 0, the compound is thermodynamically unstable relative to its elements. ΔG = ΔH − TΔS captures both enthalpy and entropy.'
+        explanation: 'ΔG° = Σ products − Σ reactants (same as ΔH°). $N_{2}(g)$ is an element in its standard state, so ΔG°_f = 0. If ΔG°_f > 0, the compound is thermodynamically unstable relative to its elements. ΔG = ΔH − TΔS captures both enthalpy and entropy.'
       }
     },
     {
@@ -238,7 +238,7 @@ Both methods give the same answer at 25°C.
       exercise: {
         questions: [
           {
-            question: 'Given ΔG°_f (kJ/mol): NO₂(g) = +51.3, N₂O₄(g) = +97.9. Calculate ΔG° for 2NO₂(g) → N₂O₄(g).',
+            question: 'Given ΔG°_f (kJ/mol): $NO_{2}(g)$ = +51.3, $N_{2}O_{4}(g)$ = +97.9. Calculate ΔG° for $2NO_{2}(g)$ → $N_{2}O_{4}(g)$.',
             options: [
               '+4.7 kJ',
               '−4.7 kJ',
@@ -246,7 +246,7 @@ Both methods give the same answer at 25°C.
               '−149.2 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = [97.9] - [2(51.3)] = 97.9 - 102.6 = -4.7$ kJ. The dimerization of NO₂ is slightly spontaneous under standard conditions.'
+            explanation: '$\\Delta G° = [97.9] - [2(51.3)] = 97.9 - 102.6 = -4.7$ kJ. The dimerization of $NO_{2}$ is slightly spontaneous under standard conditions.'
           },
           {
             question: 'Why might ΔG°_rxn calculated from ΔG°_f values differ from ΔG at non-standard conditions?',

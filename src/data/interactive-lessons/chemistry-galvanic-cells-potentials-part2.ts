@@ -191,8 +191,8 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
         correctAnswers: ['anode', 'negative (−)', 'cathode', 'decreases', 'increases'],
         hint1: 'AN OX, RED CAT.',
         hint2: 'The anode produces electrons, giving it a negative charge in galvanic cells.',
-        hint3: 'Cations move toward the region becoming more negative (where Cu²⁺ is consumed).',
-        explanation: 'Oxidation at the anode (negative in galvanic). Cations migrate toward the cathode to replace consumed ions. The anode dissolves (mass decreases, e.g., Zn → Zn²⁺) and metal deposits on the cathode (mass increases, e.g., Cu²⁺ → Cu).'
+        hint3: 'Cations move toward the region becoming more negative (where $Cu^{2+}$ is consumed).',
+        explanation: 'Oxidation at the anode (negative in galvanic). Cations migrate toward the cathode to replace consumed ions. The anode dissolves (mass decreases, e.g., Zn → $Zn^{2+}$) and metal deposits on the cathode (mass increases, e.g., $Cu^{2+}$ → Cu).'
       }
     },
     {
@@ -216,7 +216,7 @@ $\\text{Mg}(s) + \\text{Fe}^{2+}(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{F
         hint1: 'Which metal is oxidized (loses electrons)?',
         hint2: 'Which metal is produced by reduction?',
         hint3: 'Mg goes from 0 to +2, Fe goes from +2 to 0.',
-        explanation: '1) Mg is oxidized (Mg → Mg²⁺ + 2e⁻), so Mg is the anode. 2) Fe²⁺ is reduced to Fe at the cathode, so Fe is the cathode. 3) Mg loses 2e⁻ and Fe²⁺ gains 2e⁻ → 2 electrons transferred.'
+        explanation: '1) Mg is oxidized (Mg → $Mg^{2+}$ + $2e^{-}$), so Mg is the anode. 2) $Fe^{2+}$ is reduced to Fe at the cathode, so Fe is the cathode. 3) Mg loses $2e^{-}$ and $Fe^{2+}$ gains $2e^{-}$ → 2 electrons transferred.'
       }
     },
     {
@@ -247,7 +247,7 @@ $\\text{Mg}(s) + \\text{Fe}^{2+}(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{F
               'They don\'t flow at all'
             ],
             correctAnswer: 1,
-            explanation: 'At the anode, metal dissolves producing cations (e.g., Zn²⁺). Anions from the salt bridge migrate toward the anode to balance these new positive charges.'
+            explanation: 'At the anode, metal dissolves producing cations (e.g., $Zn^{2+}$). Anions from the salt bridge migrate toward the anode to balance these new positive charges.'
           }
         ]
       }

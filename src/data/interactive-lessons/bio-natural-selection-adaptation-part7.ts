@@ -136,7 +136,7 @@ On the AP exam you must read a short scenario and instantly name the right mecha
               '480'
             ],
             correctAnswer: 3,
-            explanation: 'q² = 160/1000 = 0.16, so q = √0.16 = 0.4 and p = 0.6. Heterozygotes = 2pq = 2(0.6)(0.4) = 0.48; count = 0.48 × 1000 = 480. Option C (360) is the trap: that is p² × 1000 = 0.36 × 1000 = 360, the number of HOMOZYGOUS DOMINANT (BB) rabbits, not heterozygotes. Option B (160) is simply the given bb count (q² × N). Use 2pq for carriers.'
+            explanation: '$q^{2}$ = 160/1000 = 0.16, so q = $\\sqrt{0.16}$ = 0.4 and p = 0.6. Heterozygotes = 2pq = 2(0.6)(0.4) = 0.48; count = 0.48 × 1000 = 480. Option C (360) is the trap: that is $p^{2}$ × 1000 = 0.36 × 1000 = 360, the number of HOMOZYGOUS DOMINANT (BB) rabbits, not heterozygotes. Option B (160) is simply the given bb count $(q^{2} \\times N)$. Use 2pq for carriers.'
           },
           {
             question: 'A peacock population shows extreme male tail elaboration that lowers male survival but greatly increases mating success. A small subgroup of 8 peacocks then colonizes an isolated island, and by chance the island population has a much higher frequency of the long-tail allele than the mainland, with no difference in survival or mating involved in the change. Which two processes are illustrated by the tail elaboration and by the island shift, respectively?',
@@ -151,15 +151,15 @@ On the AP exam you must read a short scenario and instantly name the right mecha
             explanation: 'The tail trait spreads because it raises MATING success despite a survival cost — that is SEXUAL SELECTION. The island shift happens by CHANCE in a small founding group with no fitness difference — that is the FOUNDER EFFECT, a form of genetic drift. Option D is the trap: the island change is NOT gene flow (no ongoing migration of alleles between populations is described) but a one-time chance sampling of founders, which is drift, not gene flow.'
           },
           {
-            question: 'A population is found to have genotype frequencies of exactly p² , 2pq , and q² that remain unchanged across many generations. A student concludes, "This proves the population can never evolve." What is the BEST evaluation of this conclusion?',
+            question: 'A population is found to have genotype frequencies of exactly $p^{2}$ , 2pq , and $q^{2}$ that remain unchanged across many generations. A student concludes, "This proves the population can never evolve." What is the BEST evaluation of this conclusion?',
             options: [
               'Correct, because matching Hardy-Weinberg proportions guarantees the population is permanently non-evolving',
               'Incorrect, because Hardy-Weinberg equilibrium only indicates no detectable change at this locus under current conditions; it is a null model, and any of the five forces could act in the future',
-              'Correct, because allele frequencies in equilibrium are fixed by the equation p² + 2pq + q² = 1',
+              'Correct, because allele frequencies in equilibrium are fixed by the equation $p^{2}$ + 2pq + $q^{2}$ = 1',
               'Incorrect, because a population in equilibrium must have equal allele frequencies'
             ],
             correctAnswer: 1,
-            explanation: 'Hardy-Weinberg equilibrium is a NULL MODEL: it indicates no current detectable evolution at this locus, but it does not prevent future change if selection, drift, gene flow, mutation, or non-random mating begins to act. Option C is the trap: the equation p² + 2pq + q² = 1 is just a mathematical identity that always sums to 1 for any p and q — it does not "fix" or guarantee anything about whether the population will evolve.'
+            explanation: 'Hardy-Weinberg equilibrium is a NULL MODEL: it indicates no current detectable evolution at this locus, but it does not prevent future change if selection, drift, gene flow, mutation, or non-random mating begins to act. Option C is the trap: the equation $p^{2}$ + 2pq + $q^{2}$ = 1 is just a mathematical identity that always sums to 1 for any p and q — it does not "fix" or guarantee anything about whether the population will evolve.'
           }
         ]
       }

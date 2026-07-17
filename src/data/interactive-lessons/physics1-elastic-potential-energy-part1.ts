@@ -146,7 +146,7 @@ Hooke\'s Law is valid only for **small displacements**. Beyond the **elastic lim
       content: `
 **Hooke\'s Law Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A spring stretches 0.05 m when a 2 kg mass hangs from it. What is the spring constant $k$ (in N/m)?
 
@@ -209,7 +209,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 0.3 kg mass is hung from a spring and stretches it by 6 cm. The spring constant is ($g = 10$ m/s²):',
+            question: 'A 0.3 kg mass is hung from a spring and stretches it by 6 cm. The spring constant is ($g = 10$ $m/s^{2}$):',
             options: [
               '5 N/m',
               '18 N/m',

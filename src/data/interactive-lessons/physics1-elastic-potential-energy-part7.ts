@@ -87,13 +87,13 @@ This final lesson integrates Hooke\'s Law, elastic PE, spring work, spring-mass 
       content: `
 **AP-Style Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 0.25 kg ball is launched by a spring ($k = 400$ N/m) compressed 0.1 m on a frictionless surface. What is the ball\'s speed (in m/s)?
 
 2) A 2 kg block oscillates with $k = 800$ N/m and amplitude 0.05 m. What is the speed when $x = 0.03$ m (in m/s)?
 
-3) A block is attached to a spring ($k = 300$ N/m). The block oscillates with maximum speed 6 m/s and maximum acceleration 120 m/s². What is the mass (in kg)?
+3) A block is attached to a spring ($k = 300$ N/m). The block oscillates with maximum speed 6 m/s and maximum acceleration 120 $m/s^{2}$. What is the mass (in kg)?
 
 *Round all answers to 3 significant figures.*
       `,
@@ -150,7 +150,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A spring ($k = 500$ N/m) is compressed 0.1 m and launches a 0.25 kg ball straight up. The ball rises to a height of ($g = 10$ m/s²):',
+            question: 'A spring ($k = 500$ N/m) is compressed 0.1 m and launches a 0.25 kg ball straight up. The ball rises to a height of ($g = 10$ $m/s^{2}$):',
             options: [
               '0.5 m',
               '1.0 m',
@@ -161,7 +161,7 @@ Use $g = 10$ m/s².
             explanation: '$\\frac{1}{2}kx^2 = mgh$. $\\frac{1}{2}(500)(0.01) = 0.25(10)h$. $2.5 = 2.5h$. $h = 1.0$ m.'
           },
           {
-            question: 'A 1 kg block slides at 4 m/s into a spring ($k = 200$ N/m) on a surface with $\\mu_k = 0.5$. The maximum compression is closest to ($g = 10$ m/s²):',
+            question: 'A 1 kg block slides at 4 m/s into a spring ($k = 200$ N/m) on a surface with $\\mu_k = 0.5$. The maximum compression is closest to ($g = 10$ $m/s^{2}$):',
             options: [
               '0.2 m',
               '0.24 m',

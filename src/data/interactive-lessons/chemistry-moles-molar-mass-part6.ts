@@ -69,7 +69,7 @@ $$\\boxed{\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A
       content: `
 ## 📌 Lab Scenario: Analyzing an Unknown
 
-A student in the lab weighs out 11.0 g of an unknown white solid. Analysis shows it is pure calcium carbonate (CaCO₃, $M = 100.09$ g/mol).
+A student in the lab weighs out 11.0 g of an unknown white solid. Analysis shows it is pure calcium carbonate ($CaCO_{3}$, $M = 100.09$ g/mol).
 
 
 ---
@@ -84,7 +84,7 @@ $$\\text{mol CaCO}_3 = 11.0 \\; \\cancel{\\text{g CaCO}_3} \\times \\frac{1 \\te
 
 $$\\text{formula units} = 0.1099 \\; \\cancel{\\text{mol CaCO}_3} \\times \\frac{6.022 \\times 10^{23} \\text{ formula units CaCO}_3}{1 \\; \\cancel{\\text{mol CaCO}_3}} = 6.62 \\times 10^{22} \\text{ formula units CaCO}_3$$
 
-**c) How many total atoms?** (CaCO₃ has 5 atoms per formula unit: 1 Ca + 1 C + 3 O)
+**c) How many total atoms?** ($CaCO_{3}$ has 5 atoms per formula unit: 1 Ca + 1 C + 3 O)
 
 $$\\text{atoms} = 6.62 \\times 10^{22} \\; \\cancel{\\text{formula units CaCO}_3} \\times \\frac{5 \\text{ atoms}}{1 \\; \\cancel{\\text{formula unit CaCO}_3}} = 3.31 \\times 10^{23} \\text{ atoms}$$
 
@@ -104,7 +104,7 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
       exercise: {
         questions: [
           {
-            question: 'How many oxygen atoms are in 44.0 g of CO₂ ($M = 44.01$ g/mol)?',
+            question: 'How many oxygen atoms are in 44.0 g of $CO_{2}$ ($M = 44.01$ g/mol)?',
             options: [
               '$6.022 \\times 10^{23}$',
               '$1.204 \\times 10^{24}$',
@@ -112,10 +112,10 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
               '$3.011 \\times 10^{23}$'
             ],
             correctAnswer: 1,
-            explanation: 'Moles of CO₂: $44.0/44.01 = 1.00$ mol. Molecules: $1.00 \\times 6.022 \\times 10^{23} = 6.022 \\times 10^{23}$. Each CO₂ has 2 oxygen atoms: $2 \\times 6.022 \\times 10^{23} = 1.204 \\times 10^{24}$ oxygen atoms.'
+            explanation: 'Moles of $CO_{2}$: $44.0/44.01 = 1.00$ mol. Molecules: $1.00 \\times 6.022 \\times 10^{23} = 6.022 \\times 10^{23}$. Each $CO_{2}$ has 2 oxygen atoms: $2 \\times 6.022 \\times 10^{23} = 1.204 \\times 10^{24}$ oxygen atoms.'
           },
           {
-            question: 'A student needs exactly $3.011 \\times 10^{23}$ molecules of ethanol (C₂H₅OH, $M = 46.07$ g/mol). What mass should they weigh out?',
+            question: 'A student needs exactly $3.011 \\times 10^{23}$ molecules of ethanol ($C_{2}H_{5}OH$, $M = 46.07$ g/mol). What mass should they weigh out?',
             options: [
               '11.5 g',
               '23.0 g',
@@ -157,9 +157,9 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
         boxes: 3,
         correctAnswers: ['55.85', '2.57', '2.409'],
         hint1: '12.01 g of C = 1.000 mol of C. You need 1.000 mol of Fe.',
-        hint2: 'Moles of NaCl = $25.0/58.44$. Each formula unit has 1 Cl⁻, so multiply moles by $N_A$.',
-        hint3: 'Moles of H₂O = $36.04/18.02 = 2.00$ mol. Each molecule has 2 H atoms.',
-        explanation: '1) $12.01$ g C $= 1.000$ mol C $= 6.022 \\times 10^{23}$ atoms. We need the same number of Fe atoms, which is $1.000$ mol Fe $= 55.85$ g. 2) $n = 25.0/58.44 = 0.4278$ mol NaCl → $0.4278$ mol Cl⁻. $N = 0.4278 \\times 6.022 \\times 10^{23} = 2.576 \\times 10^{23}$, so $a = 2.57$. 3) $2.00$ mol H₂O $\\times 6.022 \\times 10^{23} = 1.2044 \\times 10^{24}$ molecules $\\times 2 = 2.409 \\times 10^{24}$ H atoms.'
+        hint2: 'Moles of NaCl = $25.0/58.44$. Each formula unit has 1 $Cl^{-}$, so multiply moles by $N_A$.',
+        hint3: 'Moles of $H_{2}O$ = $36.04/18.02 = 2.00$ mol. Each molecule has 2 H atoms.',
+        explanation: '1) $12.01$ g C $= 1.000$ mol C $= 6.022 \\times 10^{23}$ atoms. We need the same number of Fe atoms, which is $1.000$ mol Fe $= 55.85$ g. 2) $n = 25.0/58.44 = 0.4278$ mol NaCl → $0.4278$ mol $Cl^{-}$. $N = 0.4278 \\times 6.022 \\times 10^{23} = 2.576 \\times 10^{23}$, so $a = 2.57$. 3) $2.00$ mol $H_{2}O$ $\\times 6.022 \\times 10^{23} = 1.2044 \\times 10^{24}$ molecules $\\times 2 = 2.409 \\times 10^{24}$ H atoms.'
       }
     },
     {
@@ -175,8 +175,8 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
             options: ['grams → particles → moles', 'grams → moles → particles', 'particles → grams → moles', 'moles → grams → particles']
           },
           {
-            label: 'In 1 mol of H₂SO₄, the total number of atoms is',
-            options: ['3', '7', '3 × 6.022 × 10²³', '7 × 6.022 × 10²³']
+            label: 'In 1 mol of $H_{2}SO_{4}$, the total number of atoms is',
+            options: ['3', '7', '3 × $6.022 \\times 10^{23}$', '7 × $6.022 \\times 10^{23}$']
           },
           {
             label: 'Equal masses of aluminum ($M = 26.98$) and iron ($M = 55.85$) contain',
@@ -184,14 +184,14 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
           },
           {
             label: 'The mass of one atom of carbon-12 in grams is $12.01 / N_A$, which is approximately',
-            options: ['1.99 × 10⁻²³ g', '2.00 × 10⁻²³ g', '1.99 × 10⁻²² g', '6.02 × 10⁻²³ g']
+            options: ['$1.99 \\times 10^{-23}$ g', '$2.00 \\times 10^{-23}$ g', '$1.99 \\times 10^{-22}$ g', '$6.02 \\times 10^{-23}$ g']
           }
         ],
-        correctAnswers: ['grams → moles → particles', '7 × 6.022 × 10²³', 'more moles of Al', '1.99 × 10⁻²³ g'],
+        correctAnswers: ['grams → moles → particles', '7 × $6.022 \\times 10^{23}$', 'more moles of Al', '$1.99 \\times 10^{-23}$ g'],
         hint1: 'You always go through moles as the central hub.',
-        hint2: 'H₂SO₄ has 2 H + 1 S + 4 O = 7 atoms per formula unit.',
+        hint2: '$H_{2}SO_{4}$ has 2 H + 1 S + 4 O = 7 atoms per formula unit.',
         hint3: 'Smaller molar mass means more moles per gram.',
-        explanation: 'Grams → moles → particles is the correct path. H₂SO₄ has 7 atoms per molecule, so 1 mol has $7 \\times N_A$ atoms. Al has a lower molar mass, so equal masses yield more moles of Al. $12.01/(6.022 \\times 10^{23}) = 1.994 \\times 10^{-23}$ g per atom.'
+        explanation: 'Grams → moles → particles is the correct path. $H_{2}SO_{4}$ has 7 atoms per molecule, so 1 mol has $7 \\times N_A$ atoms. Al has a lower molar mass, so equal masses yield more moles of Al. $12.01/(6.022 \\times 10^{23}) = 1.994 \\times 10^{-23}$ g per atom.'
       }
     },
     {
@@ -214,7 +214,7 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
             explanation: 'Moles: $1.505 \\times 10^{23} / 6.022 \\times 10^{23} = 0.250$ mol. Molar mass: $M = m/n = 10.0/0.250 = 40.0$ g/mol.'
           },
           {
-            question: 'How many grams of oxygen are in 50.0 g of calcium carbonate (CaCO₃, $M = 100.09$ g/mol)?',
+            question: 'How many grams of oxygen are in 50.0 g of calcium carbonate ($CaCO_{3}$, $M = 100.09$ g/mol)?',
             options: [
               '16.0 g',
               '24.0 g',
@@ -222,7 +222,7 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
               '48.0 g'
             ],
             correctAnswer: 1,
-            explanation: 'Moles of CaCO₃: $50.0/100.09 = 0.4996$ mol. Each CaCO₃ has 3 O atoms, so moles of O: $3 \\times 0.4996 = 1.499$ mol. Mass of O: $1.499 \\times 16.00 = 24.0$ g. Or by percent: $\\%O = 3(16.00)/100.09 = 47.96\\%$; $0.4796 \\times 50.0 = 24.0$ g.'
+            explanation: 'Moles of $CaCO_{3}$: $50.0/100.09 = 0.4996$ mol. Each $CaCO_{3}$ has 3 O atoms, so moles of O: $3 \\times 0.4996 = 1.499$ mol. Mass of O: $1.499 \\times 16.00 = 24.0$ g. Or by percent: $\\%O = 3(16.00)/100.09 = 47.96\\%$; $0.4796 \\times 50.0 = 24.0$ g.'
           }
         ]
       }

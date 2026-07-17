@@ -33,7 +33,7 @@ This has the lowest ignition temperature (~$10^8$ K) of any fusion reaction.
 | Requirement | Why | Value for D-T |
 |------------|-----|---------------|
 | Extreme temperature | Overcome Coulomb repulsion ($\\sim10^8$ K) | $\\sim 10^8$ K |
-| High density | Increase collision probability | $\\sim 10^{20}$ particles/m³ |
+| High density | Increase collision probability | $\\sim 10^{20}$ $particles/m^{3}$ |
 | Sufficient confinement time | Keep plasma together long enough | $\\sim 1$ s |
 
 > 🔑 **Coulomb barrier:** Both nuclei are positive → electrostatic repulsion. Only at extreme temperatures do nuclei have enough KE to get close enough for the strong nuclear force to bind them.

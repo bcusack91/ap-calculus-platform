@@ -13,7 +13,7 @@ Now we move from STATIC fluids to MOVING fluids. The first key concept: how fast
 
 **In this lesson you will learn:**
 - The definition $Q = A\\,v$
-- Units (m³/s) and conversions to L/min, gal/min
+- Units $(m^{3}/s)$ and conversions to L/min, gal/min
 - How $Q$ depends on cross-section and speed
 - Why $Q$ matters before we get to continuity
       `
@@ -26,8 +26,8 @@ Now we move from STATIC fluids to MOVING fluids. The first key concept: how fast
 
 $$Q = A\\, v$$
 
-- $Q$: volume flow rate (m³/s)
-- $A$: cross-sectional area (m²)
+- $Q$: volume flow rate $(m^{3}/s)$
+- $A$: cross-sectional area $(m^{2})$
 - $v$: average fluid speed perpendicular to $A$ (m/s)
 
 ### Why It Works
@@ -49,9 +49,9 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
 | $1 \\text{ gal} \\approx 3.785 \\text{ L}$ |
 
 ### Reality Anchors
-- A garden hose: ~$10^{-4}$ m³/s (0.1 L/s)
-- A bathroom faucet: ~$10^{-4}$ – $10^{-3}$ m³/s
-- A river the size of the Mississippi: ~$10^{4}$ m³/s
+- A garden hose: ~$10^{-4}$ $m^{3}/s$ (0.1 L/s)
+- A bathroom faucet: ~$10^{-4}$ – $10^{-3}$ $m^{3}/s$
+- A river the size of the Mississippi: ~$10^{4}$ $m^{3}/s$
       `
     },
     {
@@ -64,9 +64,9 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
         questions: [
           {
             question: 'Volume flow rate $Q$ has units of:',
-            options: ['m/s', 'm²/s', 'm³/s', 'kg/s'],
+            options: ['m/s', '$m^{2}/s$', '$m^{3}/s$', 'kg/s'],
             correctAnswer: 2,
-            explanation: '$Q = Av$, units = m² × m/s = m³/s.'
+            explanation: '$Q = Av$, units = $m^{2}$ × m/s = $m^{3}/s$.'
           },
           {
             question: 'If you double the cross-sectional area at constant speed:',
@@ -75,7 +75,7 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
             explanation: '$Q = Av$. Doubling $A$ doubles $Q$.'
           },
           {
-            question: 'A pipe carries water at 0.5 m³/s with $A = 0.10$ m². Flow speed?',
+            question: 'A pipe carries water at 0.5 $m^{3}/s$ with $A = 0.10$ $m^{2}$. Flow speed?',
             options: ['0.05 m/s', '0.5 m/s', '5 m/s', '50 m/s'],
             correctAnswer: 2,
             explanation: '$v = Q/A = 0.5/0.10 = 5$ m/s.'
@@ -89,19 +89,19 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
       content: `
 **Flow Rate Calculations** 🧮
 
-1) Pipe area $A = 0.020$ m², fluid speed $v = 3.0$ m/s. $Q$ (m³/s)?
+1) Pipe area $A = 0.020$ $m^{2}$, fluid speed $v = 3.0$ m/s. $Q$ $(m^{3}/s)$?
 
-2) River area $A = 50$ m², speed 1.2 m/s. $Q$ (m³/s)?
+2) River area $A = 50$ $m^{2}$, speed 1.2 m/s. $Q$ $(m^{3}/s)$?
 
-3) A faucet delivers 2.0 L/s. Convert to m³/s.
+3) A faucet delivers 2.0 L/s. Convert to $m^{3}/s$.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.06', '60', '0.002'],
         hint1: '$Q = Av$.',
         hint2: '$Q = Av$.',
-        hint3: '1 L = $10^{-3}$ m³.',
-        explanation: '1) $Q = 0.020 \\times 3.0 = 0.060$ m³/s. 2) $Q = 50 \\times 1.2 = 60$ m³/s. 3) 2.0 L/s × $10^{-3}$ m³/L = 0.002 m³/s.'
+        hint3: '1 L = $10^{-3}$ $m^{3}$.',
+        explanation: '1) $Q = 0.020 \\times 3.0 = 0.060$ $m^{3}/s$. 2) $Q = 50 \\times 1.2 = 60$ $m^{3}/s$. 3) 2.0 L/s × $10^{-3}$ $m^{3}/L$ = 0.002 $m^{3}/s$.'
       }
     },
     {
@@ -126,15 +126,15 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
           },
           {
             label: 'A river is 100 m wide and 5 m deep, flowing at 2 m/s. Volume flow rate is:',
-            options: ['10 m³/s', '500 m³/s', '1000 m³/s', '5000 m³/s'],
+            options: ['10 $m^{3}/s$', '500 $m^{3}/s$', '1000 $m^{3}/s$', '5000 $m^{3}/s$'],
             correctIndex: 2,
-            explanation: '$A = 500$ m², $Q = 500 \\times 2 = 1000$ m³/s.'
+            explanation: '$A = 500$ $m^{2}$, $Q = 500 \\times 2 = 1000$ $m^{3}/s$.'
           },
           {
-            label: 'A garden hose with $A = 1.0\\times10^{-4}$ m² carries 0.5 L/s. Speed of water?',
+            label: 'A garden hose with $A = 1.0\\times10^{-4}$ $m^{2}$ carries 0.5 L/s. Speed of water?',
             options: ['0.5 m/s', '5 m/s', '50 m/s', '500 m/s'],
             correctIndex: 1,
-            explanation: '$Q = 5\\times10^{-4}$ m³/s. $v = Q/A = 5\\times10^{-4}/10^{-4} = 5$ m/s.'
+            explanation: '$Q = 5\\times10^{-4}$ $m^{3}/s$. $v = Q/A = 5\\times10^{-4}/10^{-4} = 5$ m/s.'
           }
         ]
       }
@@ -148,16 +148,16 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
       exercise: {
         questions: [
           {
-            question: 'A pump delivers 0.012 m³/s of water through a pipe of cross-section $4.0\\times10^{-4}$ m². Flow speed?',
+            question: 'A pump delivers 0.012 $m^{3}/s$ of water through a pipe of cross-section $4.0\\times10^{-4}$ $m^{2}$. Flow speed?',
             options: ['3 m/s', '12 m/s', '30 m/s', '300 m/s'],
             correctAnswer: 2,
             explanation: '$v = Q/A = 0.012/(4.0\\times10^{-4}) = 30$ m/s.'
           },
           {
-            question: 'A spillway 8 m wide × 1.5 m deep carries water at 2.5 m/s. Flow rate (m³/s)?',
+            question: 'A spillway 8 m wide × 1.5 m deep carries water at 2.5 m/s. Flow rate $(m^{3}/s)$?',
             options: ['12', '20', '30', '60'],
             correctAnswer: 2,
-            explanation: '$A = 12$ m². $Q = Av = 12 \\times 2.5 = 30$ m³/s.'
+            explanation: '$A = 12$ $m^{2}$. $Q = Av = 12 \\times 2.5 = 30$ $m^{3}/s$.'
           }
         ]
       }

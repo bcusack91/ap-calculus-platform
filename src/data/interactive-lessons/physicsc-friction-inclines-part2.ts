@@ -35,7 +35,7 @@ $$v^2 = v_0^2 + 2(g\\sin\\theta)\\Delta x$$`
     {
       id: 'fri2-mcq1',
       type: 'mcq' as const,
-      question: 'A block slides from rest down a frictionless $30°$ incline. How far does it travel in 2 seconds? ($g = 10$ m/s²)',
+      question: 'A block slides from rest down a frictionless $30°$ incline. How far does it travel in 2 seconds? ($g = 10$ $m/s^{2}$)',
       options: [
         '$10$ m',
         '$5$ m',
@@ -43,7 +43,7 @@ $$v^2 = v_0^2 + 2(g\\sin\\theta)\\Delta x$$`
         '$17.3$ m'
       ],
       correctAnswer: 0,
-      explanation: '$a = g\\sin 30° = 10 \\times 0.5 = 5$ m/s². Distance $= \\frac{1}{2}at^2 = \\frac{1}{2}(5)(4) = 10$ m.'
+      explanation: '$a = g\\sin 30° = 10 \\times 0.5 = 5$ $m/s^{2}$. Distance $= \\frac{1}{2}at^2 = \\frac{1}{2}(5)(4) = 10$ m.'
     },
     {
       id: 'fri2-energy',
@@ -70,7 +70,7 @@ $$L = \\frac{v_0^2}{2g\\sin\\theta} = \\frac{100}{2(10)(\\sin 45°)} = \\frac{10
 
 **Time to reach the top:**
 
-Decelerating at $a = -g\\sin 45° = -7.07$ m/s²:
+Decelerating at $a = -g\\sin 45° = -7.07$ $m/s^{2}$:
 $$v = v_0 - (g\\sin\\theta)t = 0$$
 $$t = \\frac{v_0}{g\\sin\\theta} = \\frac{10}{7.07} = 1.41 \\text{ s}$$
 
@@ -85,7 +85,7 @@ This is valid until $v = 0$ at $x_{\\max} = \\frac{v_0^2}{2g\\sin\\theta}$.`
     {
       id: 'fri2-mcq2',
       type: 'mcq' as const,
-      question: 'A ball rolls up a frictionless $60°$ ramp with $v_0 = 8$ m/s. What maximum height does it reach? ($g = 10$ m/s²)',
+      question: 'A ball rolls up a frictionless $60°$ ramp with $v_0 = 8$ m/s. What maximum height does it reach? ($g = 10$ $m/s^{2}$)',
       options: [
         '$3.2$ m',
         '$3.7$ m',

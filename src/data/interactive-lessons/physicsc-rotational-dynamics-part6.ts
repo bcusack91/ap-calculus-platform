@@ -26,11 +26,11 @@ export const physCRotationPart6Data = {
 
 **A 20 N force acts tangentially on a disk ($m = 4$ kg, $r = 0.5$ m). Find $\\alpha$.**
 
-$I = \\frac{1}{2}mr^2 = \\frac{1}{2}(4)(0.25) = 0.5$ kg·m²
+$I = \\frac{1}{2}mr^2 = \\frac{1}{2}(4)(0.25) = 0.5$ $kg\\cdot m^{2}$
 
 $\\tau = Fr = 20(0.5) = 10$ N·m
 
-$\\alpha = \\tau / I = 10 / 0.5 = 20$ rad/s² ✅
+$\\alpha = \\tau / I = 10 / 0.5 = 20$ $rad/s^{2}$ ✅
     
     `
     },
@@ -62,11 +62,11 @@ $\\alpha = \\tau / I = 10 / 0.5 = 20$ rad/s² ✅
       content: `
 **Problem-Solving Workshop** 🧮
 
-1) A 20 N tangential force on a disk ($I = 0.5$ kg·m², $r = 0.5$ m). $\\alpha$ (rad/s²)?
+1) A 20 N tangential force on a disk ($I = 0.5$ $kg\\cdot m^{2}$, $r = 0.5$ m). $\\alpha$ $(rad/s^{2})$?
 
-2) A torque of 10 N·m acts on a wheel ($I = 2$ kg·m²). $\\alpha$ (rad/s²)?
+2) A torque of 10 N·m acts on a wheel ($I = 2$ $kg\\cdot m^{2}$). $\\alpha$ $(rad/s^{2})$?
 
-3) A wheel accelerates from rest at 4 rad/s² for 3 s. It then decelerates at 6 rad/s². Time to stop (s)?
+3) A wheel accelerates from rest at 4 $rad/s^{2}$ for 3 s. It then decelerates at 6 $rad/s^{2}$. Time to stop (s)?
     
     `,
       exercise: {
@@ -75,7 +75,7 @@ $\\alpha = \\tau / I = 10 / 0.5 = 20$ rad/s² ✅
         hint1: "$\\tau = Fr = 10$ N·m. $\\alpha = \\tau/I = 10/0.5$.",
         hint2: "$\\alpha = \\tau/I$.",
         hint3: "Final $\\omega = 4(3) = 12$ rad/s. Then $t = \\omega/\\alpha = 12/6$.",
-        explanation: "1) $\\alpha = 10/0.5 = 20$ rad/s². 2) $\\alpha = 10/2 = 5$ rad/s². 3) $\\omega = 12$ rad/s, deceleration time = $12/6 = 2$ s."
+        explanation: "1) $\\alpha = 10/0.5 = 20$ $rad/s^{2}$. 2) $\\alpha = 10/2 = 5$ $rad/s^{2}$. 3) $\\omega = 12$ rad/s, deceleration time = $12/6 = 2$ s."
       }
     },
     {

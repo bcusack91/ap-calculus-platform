@@ -46,12 +46,12 @@ $$\\boxed{\\% \\text{ by mass} = \\frac{\\text{mass of element in 1 mol of compo
 
 ### Example 1
 
-> **Problem:** Find the percent composition of water (H₂O, $M = 18.02$ g/mol).
+> **Problem:** Find the percent composition of water ($H_{2}O$, $M = 18.02$ g/mol).
 
 **Solution:**
 
-- Mass of H in 1 mol H₂O: $2(1.008) = 2.016$ g
-- Mass of O in 1 mol H₂O: $1(16.00) = 16.00$ g
+- Mass of H in 1 mol $H_{2}O$: $2(1.008) = 2.016$ g
+- Mass of O in 1 mol $H_{2}O$: $1(16.00) = 16.00$ g
 
 $$\\%\\text{H} = \\frac{2.016 \\text{ g H}}{18.02 \\text{ g H}_2\\text{O}} \\times 100\\% = 11.19\\%$$
 
@@ -64,7 +64,7 @@ $$\\%\\text{O} = \\frac{16.00 \\text{ g O}}{18.02 \\text{ g H}_2\\text{O}} \\tim
 
 ### Example 2
 
-> **Problem:** Find the percent composition of glucose (C₆H₁₂O₆, $M = 180.16$ g/mol).
+> **Problem:** Find the percent composition of glucose ($C_{6}H_{12}O_{6}$, $M = 180.16$ g/mol).
 
 **Solution:**
 
@@ -116,7 +116,7 @@ If you know the percent composition, you can determine the **empirical formula**
 - H: $6.65/3.33 = 2.00$
 - O: $3.33/3.33 = 1.00$
 
-**Step 4:** Ratio = 1 : 2 : 1 → Empirical formula: **CH₂O**
+**Step 4:** Ratio = 1 : 2 : 1 → Empirical formula: **$CH_{2}O$**
       `
     },
     {
@@ -128,7 +128,7 @@ If you know the percent composition, you can determine the **empirical formula**
       exercise: {
         questions: [
           {
-            question: 'What is the percent composition of oxygen in CO₂? ($M = 44.01$ g/mol)',
+            question: 'What is the percent composition of oxygen in $CO_{2}$? ($M = 44.01$ g/mol)',
             options: [
               '27.29%',
               '36.36%',
@@ -150,15 +150,15 @@ If you know the percent composition, you can determine the **empirical formula**
             explanation: 'Assuming a 100 g sample converts percentages directly to grams, making the calculation straightforward.'
           },
           {
-            question: 'A compound has the empirical formula CH₂O. Which of these could be its molecular formula?',
+            question: 'A compound has the empirical formula $CH_{2}O$. Which of these could be its molecular formula?',
             options: [
-              'CO₂',
-              'C₂H₄O',
-              'C₂H₄O₂',
-              'C₃H₆O₂'
+              '$CO_{2}$',
+              '$C_{2}H_{4}O$',
+              '$C_{2}H_{4}O_{2}$',
+              '$C_{3}H_{6}O_{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'The molecular formula must be a whole-number multiple of the empirical formula CH₂O. $\\text{C}_2\\text{H}_4\\text{O}_2 = 2 \\times \\text{CH}_2\\text{O}$ ✓. The other options do not maintain the 1:2:1 ratio.'
+            explanation: 'The molecular formula must be a whole-number multiple of the empirical formula $CH_{2}O$. $\\text{C}_2\\text{H}_4\\text{O}_2 = 2 \\times \\text{CH}_2\\text{O}$ ✓. The other options do not maintain the 1:2:1 ratio.'
           }
         ]
       }
@@ -171,11 +171,11 @@ If you know the percent composition, you can determine the **empirical formula**
 
 > **Given:** H = 1.008, C = 12.01, N = 14.01, O = 16.00, S = 32.07
 
-**1)** What is the percent by mass of nitrogen in ammonia (NH₃, $M = 17.03$ g/mol)? (to 3 significant figures)
+**1)** What is the percent by mass of nitrogen in ammonia ($NH_{3}$, $M = 17.03$ g/mol)? (to 3 significant figures)
 
-**2)** What is the percent by mass of sulfur in SO₃ ($M = 80.07$ g/mol)? (to 3 significant figures)
+**2)** What is the percent by mass of sulfur in $SO_{3}$ ($M = 80.07$ g/mol)? (to 3 significant figures)
 
-**3)** A compound is 85.7% C and 14.3% H by mass. What is the ratio of C to H in the empirical formula? (Enter as a single number: if the ratio is C₁H₂, enter 2)
+**3)** A compound is 85.7% C and 14.3% H by mass. What is the ratio of C to H in the empirical formula? (Enter as a single number: if the ratio is $C_{1}H_{2}$, enter 2)
       `,
       exercise: {
         boxes: 3,
@@ -183,7 +183,7 @@ If you know the percent composition, you can determine the **empirical formula**
         hint1: '$\\%\\text{N} = \\frac{14.01}{17.03} \\times 100\\%$.',
         hint2: '$\\%\\text{S} = \\frac{32.07}{80.07} \\times 100\\%$.',
         hint3: 'Assume 100 g: 85.7 g C and 14.3 g H. Convert to moles and divide by the smallest value.',
-        explanation: '1) $\\%\\text{N} = 14.01/17.03 \\times 100 = 82.2\\%$. 2) $\\%\\text{S} = 32.07/80.07 \\times 100 = 40.1\\%$. 3) C: $85.7/12.01 = 7.14$ mol; H: $14.3/1.008 = 14.19$ mol. Ratio: $14.19/7.14 = 1.99 \\approx 2$. So the formula is CH₂ and the H-to-C ratio is 2.'
+        explanation: '1) $\\%\\text{N} = 14.01/17.03 \\times 100 = 82.2\\%$. 2) $\\%\\text{S} = 32.07/80.07 \\times 100 = 40.1\\%$. 3) C: $85.7/12.01 = 7.14$ mol; H: $14.3/1.008 = 14.19$ mol. Ratio: $14.19/7.14 = 1.99 \\approx 2$. So the formula is $CH_{2}$ and the H-to-C ratio is 2.'
       }
     },
     {
@@ -213,7 +213,7 @@ If you know the percent composition, you can determine the **empirical formula**
         ],
         correctAnswers: ['100%', 'percent composition', 'many oxygen atoms relative to its total mass', '2'],
         hint1: 'All mass percents must account for the total mass of the compound.',
-        hint2: 'Compounds with the same empirical formula (like CH₂O and C₂H₄O₂) have identical percent compositions.',
+        hint2: 'Compounds with the same empirical formula (like $CH_{2}O$ and $C_{2}H_{4}O_{2}$) have identical percent compositions.',
         hint3: 'Percent composition depends on the fraction of total mass from each element.',
         explanation: 'Mass percents sum to 100%. Same empirical formula → same percent composition. High %O means much of the mass is oxygen. A ratio of 1.50 = 3/2, so multiply by 2 to get whole numbers (e.g., 1.50 → 3).'
       }
@@ -227,7 +227,7 @@ If you know the percent composition, you can determine the **empirical formula**
       exercise: {
         questions: [
           {
-            question: 'Aspirin has the formula C₉H₈O₄. What is its percent composition of carbon? (C = 12.01, H = 1.008, O = 16.00)',
+            question: 'Aspirin has the formula $C_{9}H_{8}O_{4}$. What is its percent composition of carbon? (C = 12.01, H = 1.008, O = 16.00)',
             options: [
               '40.00%',
               '50.00%',
@@ -241,12 +241,12 @@ If you know the percent composition, you can determine the **empirical formula**
             question: 'A compound is 52.2% C, 13.0% H, and 34.8% O. What is its empirical formula?',
             options: [
               'CHO',
-              'CH₂O',
-              'CH₃O',
-              'C₂H₆O'
+              '$CH_{2}O$',
+              '$CH_{3}O$',
+              '$C_{2}H_{6}O$'
             ],
             correctAnswer: 3,
-            explanation: 'Assume 100 g: C: $52.2/12.01 = 4.35$ mol, H: $13.0/1.008 = 12.90$ mol, O: $34.8/16.00 = 2.175$ mol. Divide by smallest (2.175): C = 2.00, H = 5.93 ≈ 6, O = 1.00. Ratio = 2:6:1 → empirical formula is C₂H₆O (this is already the simplest ratio since the subscripts share no common factor greater than 1).'
+            explanation: 'Assume 100 g: C: $52.2/12.01 = 4.35$ mol, H: $13.0/1.008 = 12.90$ mol, O: $34.8/16.00 = 2.175$ mol. Divide by smallest (2.175): C = 2.00, H = 5.93 ≈ 6, O = 1.00. Ratio = 2:6:1 → empirical formula is $C_{2}H_{6}O$ (this is already the simplest ratio since the subscripts share no common factor greater than 1).'
           }
         ]
       }

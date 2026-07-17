@@ -27,7 +27,7 @@ This is one of the most powerful conservation laws in physics!
     {
       id: 'am4-mcq1',
       type: 'mcq' as const,
-      question: 'A figure skater spins with $I_1 = 5$ kg·m² at $\\omega_1 = 4$ rad/s, then pulls her arms in to $I_2 = 2$ kg·m². Her new angular velocity is:',
+      question: 'A figure skater spins with $I_1 = 5$ $kg\\cdot m^{2}$ at $\\omega_1 = 4$ rad/s, then pulls her arms in to $I_2 = 2$ $kg\\cdot m^{2}$. Her new angular velocity is:',
       options: ['$10$ rad/s', '$8$ rad/s', '$2$ rad/s', '$20$ rad/s'],
       correctAnswer: 0,
       explanation: '$L = I_1\\omega_1 = I_2\\omega_2$. $\\omega_2 = \\frac{5 \\times 4}{2} = 10$ rad/s. She spins 2.5× faster.'
@@ -51,7 +51,7 @@ Where does this energy come from? From the **internal work** done by the skater'
 
 ### Worked Example
 
-$I_1 = 5$ kg·m², $\\omega_1 = 4$ rad/s, $I_2 = 2$ kg·m²:
+$I_1 = 5$ $kg\\cdot m^{2}$, $\\omega_1 = 4$ rad/s, $I_2 = 2$ $kg\\cdot m^{2}$:
 
 $$K_1 = \\frac{1}{2}(5)(16) = 40 \\text{ J}$$
 
@@ -96,7 +96,7 @@ Forces at the pivot have zero moment arm → zero torque about the pivot. This m
       question: 'A $0.01$ kg bullet at $400$ m/s embeds in a $2$ kg rod of length $1$ m, pivoted at one end. The angular velocity after impact is approximately:',
       options: ['$5.97$ rad/s', '$2$ rad/s', '$4$ rad/s', '$200$ rad/s'],
       correctAnswer: 0,
-      explanation: '$L_i = 0.01 \\times 400 \\times 1 = 4$ kg·m²/s. $I_f = \\frac{1}{3}(2)(1)^2 + 0.01(1)^2 = 0.667 + 0.01 = 0.677$ kg·m². $\\omega = 4/0.677 \\approx 5.91$ rad/s $\\approx 5.97$ rad/s.'
+      explanation: '$L_i = 0.01 \\times 400 \\times 1 = 4$ $kg\\cdot m^{2}/s$. $I_f = \\frac{1}{3}(2)(1)^2 + 0.01(1)^2 = 0.667 + 0.01 = 0.677$ $kg\\cdot m^{2}$. $\\omega = 4/0.677 \\approx 5.91$ rad/s $\\approx 5.97$ rad/s.'
     },
     {
       id: 'am4-kepler',

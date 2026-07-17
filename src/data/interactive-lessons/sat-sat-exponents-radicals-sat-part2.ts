@@ -143,12 +143,12 @@ The SAT often asks you to rewrite an expression. Know these equivalences:
       content: '**Radical or Exponent?** 🔍\n\nConvert each expression to the other form.',
       exercise: {
         dropdowns: [
-          { label: '$\\sqrt[3]{x^2}$ in exponent form', options: ['x^(2/3)', 'x^(3/2)', 'x^(2/3) or 2x^(1/3)', 'x^6'] },
-          { label: '$x^{-1/2}$ in radical form', options: ['1/sqrt(x)', 'sqrt(x)', '-sqrt(x)', '1/x^2'] },
-          { label: '$\\sqrt{x} \\cdot \\sqrt[3]{x}$ as single power', options: ['x^(5/6)', 'x^(1/6)', 'x^(2/3)', 'x^(1/5)'] },
-          { label: '$(\\sqrt{x})^3$ as single power', options: ['x^(3/2)', 'x^(2/3)', 'x^3', 'x^(1/3)'] }
+          { label: '$\\sqrt[3]{x^2}$ in exponent form', options: ['$x^{2/3}$', '$x^{3/2}$', '$x^{2/3}$ or $2x^{1/3}$', '$x^{6}$'] },
+          { label: '$x^{-1/2}$ in radical form', options: ['$1/\\sqrt{x}$', '$\\sqrt{x}$', '$-\\sqrt{x}$', '$1/x^{2}$'] },
+          { label: '$\\sqrt{x} \\cdot \\sqrt[3]{x}$ as single power', options: ['$x^{5/6}$', '$x^{1/6}$', '$x^{2/3}$', '$x^{1/5}$'] },
+          { label: '$(\\sqrt{x})^3$ as single power', options: ['$x^{3/2}$', '$x^{2/3}$', '$x^{3}$', '$x^{1/3}$'] }
         ],
-        correctAnswers: ['x^(2/3)', '1/sqrt(x)', 'x^(5/6)', 'x^(3/2)'],
+        correctAnswers: ['$x^{2/3}$', '$1/\\sqrt{x}$', '$x^{5/6}$', '$x^{3/2}$'],
         hint1: 'The index (root) goes in the denominator of the fraction exponent.',
         hint2: 'Negative exponent → reciprocal.',
         hint3: '$x^{1/2} \\cdot x^{1/3} = x^{1/2 + 1/3}$. Find a common denominator.',

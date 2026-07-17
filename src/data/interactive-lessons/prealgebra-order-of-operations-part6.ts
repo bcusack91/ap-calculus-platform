@@ -79,11 +79,11 @@ $3^2 + 2 \\times 5 = 9 + 10 = 19$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"\"The sum of 4 and 3\" requires","options":["Parentheses to group the addition","No grouping","Multiplication first","Subtraction"]},{"label":"\"5 squared\" means","options":["5² = 25","5 × 2 = 10","√5","5 + 5"]}],
-        correctAnswers: ["Parentheses to group the addition","5² = 25"],
+        dropdowns: [{"label":"\"The sum of 4 and 3\" requires","options":["Parentheses to group the addition","No grouping","Multiplication first","Subtraction"]},{"label":"\"5 squared\" means","options":["$5^{2}$ = 25","5 × 2 = 10","$\\sqrt{5}$","5 + 5"]}],
+        correctAnswers: ["Parentheses to group the addition","$5^{2}$ = 25"],
         hint1: "Sum means add → group it.",
         hint2: "Squared = power of 2.",
-        explanation: "Group the sum in parentheses. 5²=25."
+        explanation: "Group the sum in parentheses. $5^{2}$=25."
       }
     },
     {
@@ -95,7 +95,7 @@ $3^2 + 2 \\times 5 = 9 + 10 = 19$ ✅
 | # | Problem | Expression | Value |
 |---|---------|-----------|-------|
 | 1 | Double the sum of 4 and 3 | 2(4+3) | 14 |
-| 2 | 5 squared minus 10 | 5²−10 | 15 |
+| 2 | 5 squared minus 10 | $5^{2}-10$ | 15 |
 | 3 | Sum of 8 and 6 divided by 2 | (8+6)÷2 | 7 |
     
     `

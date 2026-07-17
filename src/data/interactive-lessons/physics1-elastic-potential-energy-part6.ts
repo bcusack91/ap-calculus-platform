@@ -75,7 +75,7 @@ $$d = 4 \\text{ m up the ramp}$$
             explanation: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2$. $\\frac{1}{2}(2)(9) = \\frac{1}{2}(200)x^2$. $9 = 100x^2$. $x^2 = 0.09$. $x = 0.3$ m.'
           },
           {
-            question: 'A spring ($k = 800$ N/m) compressed by 0.1 m launches a 0.4 kg ball vertically. The ball rises to a maximum height of ($g = 10$ m/s²):',
+            question: 'A spring ($k = 800$ N/m) compressed by 0.1 m launches a 0.4 kg ball vertically. The ball rises to a maximum height of ($g = 10$ $m/s^{2}$):',
             options: [
               '0.5 m',
               '1.0 m',
@@ -105,7 +105,7 @@ $$d = 4 \\text{ m up the ramp}$$
       content: `
 **Workshop Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A spring ($k = 480$ N/m) compressed by 0.05 m launches a 0.3 kg ball on a frictionless horizontal surface. What is the ball\'s speed (in m/s)?
 
@@ -168,7 +168,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 0.5 kg block is launched by a spring ($k = 200$ N/m, compressed 0.2 m) up a frictionless $30°$ incline. How far along the incline does it travel ($g = 10$ m/s²)?',
+            question: 'A 0.5 kg block is launched by a spring ($k = 200$ N/m, compressed 0.2 m) up a frictionless $30°$ incline. How far along the incline does it travel ($g = 10$ $m/s^{2}$)?',
             options: [
               '0.8 m',
               '1.6 m',

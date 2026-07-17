@@ -32,7 +32,7 @@ $$L = L_0 + \\Delta L = L_0(1 + \\alpha \\Delta T)$$
 
 ### Coefficients of Linear Expansion
 
-| Material | $\\alpha$ (× 10⁻⁶ /°C) |
+| Material | $\\alpha$ (× $10^{-6}$ /°C) |
 |---|---|
 | Aluminum | 23 |
 | Brass | 19 |
@@ -90,8 +90,8 @@ A metal ring is heated so its inner diameter expands. It's slipped over a shaft,
           {
             question: 'A steel rod and an aluminum rod have the same length and undergo the same temperature increase. Which rod expands more?',
             options: [
-              'Steel (α = 12 × 10⁻⁶ /°C)',
-              'Aluminum (α = 23 × 10⁻⁶ /°C)',
+              'Steel (α = $12 \\times 10^{-6}$ /°C)',
+              'Aluminum (α = $23 \\times 10^{-6}$ /°C)',
               'They expand equally',
               'It depends on the cross-sectional area'
             ],
@@ -99,7 +99,7 @@ A metal ring is heated so its inner diameter expands. It's slipped over a shaft,
             explanation: 'Since $\\Delta L = \\alpha L_0 \\Delta T$, and both rods have the same $L_0$ and $\\Delta T$, the rod with the larger $\\alpha$ expands more. Aluminum ($\\alpha = 23 \\times 10^{-6}$) > Steel ($\\alpha = 12 \\times 10^{-6}$).'
           },
           {
-            question: 'A bimetallic strip is made of brass (α = 19 × 10⁻⁶ /°C) bonded to steel (α = 12 × 10⁻⁶ /°C). When heated, the strip bends:',
+            question: 'A bimetallic strip is made of brass (α = $19 \\times 10^{-6}$ /°C) bonded to steel (α = $12 \\times 10^{-6}$ /°C). When heated, the strip bends:',
             options: [
               'Toward the brass side',
               'Toward the steel side',
@@ -168,7 +168,7 @@ Use $\\alpha_{\\text{steel}} = 12 \\times 10^{-6}$ /°C and $\\alpha_{\\text{Al}
             explanation: '$\\Delta L = \\alpha L_0 \\Delta T$. Since $\\Delta L$ is directly proportional to $L_0$, doubling $L_0$ doubles $\\Delta L$.'
           },
           {
-            question: 'Pyrex glass (α = 3.2 × 10⁻⁶ /°C) is preferred for laboratory glassware because:',
+            question: 'Pyrex glass (α = $3.2 \\times 10^{-6}$ /°C) is preferred for laboratory glassware because:',
             options: [
               'It is cheaper than ordinary glass',
               'Its very low α means minimal expansion, reducing the risk of cracking from thermal stress',

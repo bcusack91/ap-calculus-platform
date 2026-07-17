@@ -100,7 +100,7 @@ $$= 1.118 \\times 10^{-5} \\times 8 \\times 10^{8} = 8944 \\times g \\approx 8.9
 <details>
 <summary><b>Example 3: Interpret a density-gradient (Meselson–Stahl) result</b></summary>
 
-**Question:** DNA labeled with heavy ¹⁵N is shifted to ¹⁴N medium. After one round of replication, a CsCl gradient shows a single band of intermediate density. What does this rule out?
+**Question:** DNA labeled with heavy $ {}^{15}N$ is shifted to $ {}^{14}N$ medium. After one round of replication, a CsCl gradient shows a single band of intermediate density. What does this rule out?
 
 **Solution:**
 1. CsCl gradient bands DNA by buoyant density (isopycnic). ✓
@@ -115,7 +115,7 @@ $$= 1.118 \\times 10^{-5} \\times 8 \\times 10^{8} = 8944 \\times g \\approx 8.9
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- RCF = 1.118×10⁻⁵ · r · RPM²; force scales with RPM². Report g, not RPM.
+- RCF = $1.118\\times 10^{-5}$ · r · $RPM^{2}$; force scales with $RPM^{2}$. Report g, not RPM.
 - Sedimentation rises with particle size and (density − medium density).
 - Differential centrifugation: increasing speeds pellet nuclei → mitochondria → microsomes → ribosomes.
 - Isopycnic/density-gradient: particle bands where its buoyant density = medium density (size-independent). Svedberg units are NOT additive (50S + 30S = 70S).`

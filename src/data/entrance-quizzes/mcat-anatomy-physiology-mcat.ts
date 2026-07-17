@@ -9,7 +9,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 1: Musculoskeletal System
   {
     id: 'map-ent-1a',
-    question: 'During a skeletal muscle contraction, the binding of Ca²⁺ to troponin causes:',
+    question: 'During a skeletal muscle contraction, the binding of $Ca^{2+}$ to troponin causes:',
     options: [
       'Direct cross-bridge formation between actin and myosin without further steps.',
       'Tropomyosin to shift, exposing myosin-binding sites on actin filaments.',
@@ -17,7 +17,7 @@ const questions: EntranceQuizQuestion[] = [
       'Actin filaments to slide toward the Z-discs without myosin involvement.'
     ],
     correctIndex: 1,
-    explanation: 'At rest, tropomyosin blocks myosin-binding sites on actin. Ca²⁺ (released from the SR) binds troponin C, causing a conformational shift in the troponin-tropomyosin complex. Tropomyosin moves laterally, exposing binding sites—allowing myosin heads (already charged with ADP + Pi) to bind and initiate the power stroke.',
+    explanation: 'At rest, tropomyosin blocks myosin-binding sites on actin. $Ca^{2+}$ (released from the SR) binds troponin C, causing a conformational shift in the troponin-tropomyosin complex. Tropomyosin moves laterally, exposing binding sites—allowing myosin heads (already charged with ADP + Pi) to bind and initiate the power stroke.',
     partNumber: 1,
     partTitle: 'Musculoskeletal System'
   },
@@ -85,13 +85,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'map-ent-3b',
     question: 'MHC class I molecules present peptide antigens to:',
     options: [
-      'CD4⁺ helper T cells, initiating antibody production.',
-      'CD8⁺ cytotoxic T cells, triggering destruction of the presenting cell.',
+      '$CD4^{+}$ helper T cells, initiating antibody production.',
+      '$CD8^{+}$ cytotoxic T cells, triggering destruction of the presenting cell.',
       'B cells, promoting immunoglobulin class switching.',
       'NK cells, inhibiting their cytotoxic activity.'
     ],
     correctIndex: 1,
-    explanation: 'MHC class I (on all nucleated cells) presents endogenous/intracellular antigens (e.g., viral peptides) to CD8⁺ cytotoxic T cells via TCR interaction. Activated CTLs kill the presenting cell. MHC class II (on APCs) presents to CD4⁺ helper T cells.',
+    explanation: 'MHC class I (on all nucleated cells) presents endogenous/intracellular antigens (e.g., viral peptides) to $CD8^{+}$ cytotoxic T cells via TCR interaction. Activated CTLs kill the presenting cell. MHC class II (on APCs) presents to $CD4^{+}$ helper T cells.',
     partNumber: 3,
     partTitle: 'Immune System'
   },
@@ -176,12 +176,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'The juxtaglomerular apparatus (JGA) releases renin when:',
     options: [
       'Blood pressure in the afferent arteriole increases.',
-      'Blood pressure in the afferent arteriole decreases, Na⁺ delivery to the macula densa falls, or sympathetic stimulation occurs.',
+      'Blood pressure in the afferent arteriole decreases, $Na^{+}$ delivery to the macula densa falls, or sympathetic stimulation occurs.',
       'Aldosterone levels are high.',
       'ANP (atrial natriuretic peptide) is released from the atria.'
     ],
     correctIndex: 1,
-    explanation: 'Renin is released from JG cells in response to: (1) decreased stretch in the afferent arteriole (↓BP), (2) decreased NaCl at the macula densa, and (3) β1-adrenergic stimulation. Renin initiates the RAAS cascade → angiotensin II → aldosterone → ↑Na⁺/water retention → ↑BP.',
+    explanation: 'Renin is released from JG cells in response to: (1) decreased stretch in the afferent arteriole (↓BP), (2) decreased NaCl at the macula densa, and (3) β1-adrenergic stimulation. Renin initiates the RAAS cascade → angiotensin II → aldosterone → ↑$Na^{+}/water$ retention → ↑BP.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -197,7 +197,7 @@ const questions: EntranceQuizQuestion[] = [
       'Have abundant mitochondria, high myoglobin content, and resist fatigue via aerobic metabolism.'
     ],
     correctIndex: 3,
-    explanation: 'Type I (slow-twitch, red, oxidative) fibers: rich in mitochondria, high myoglobin (O₂ storage), dense capillary supply, rely on aerobic respiration → fatigue-resistant, ideal for endurance. Type IIb (fast-twitch, white, glycolytic) fibers: large, powerful, fatigue quickly, rely on anaerobic glycolysis.',
+    explanation: 'Type I (slow-twitch, red, oxidative) fibers: rich in mitochondria, high myoglobin $(O_{2} storage)$, dense capillary supply, rely on aerobic respiration → fatigue-resistant, ideal for endurance. Type IIb (fast-twitch, white, glycolytic) fibers: large, powerful, fatigue quickly, rely on anaerobic glycolysis.',
     partNumber: 7,
     partTitle: 'Review & Applications'
   },

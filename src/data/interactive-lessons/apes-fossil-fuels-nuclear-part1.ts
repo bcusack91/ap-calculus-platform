@@ -32,7 +32,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 | **Hydraulic fracturing (fracking)** | Natural gas/oil | Water contamination, induced earthquakes, methane leaks |
 | **Offshore drilling** | Oil/gas | Oil spill risk (Deepwater Horizon 2010) |
 
-> 🔑 **Natural gas burns cleaner than coal** (less CO₂, no SO₂, less PM) but methane leaks during extraction reduce this advantage. Methane is 80x more potent as a GHG than CO₂ over 20 years.
+> 🔑 **Natural gas burns cleaner than coal** (less $CO_{2}$, no $SO_{2}$, less PM) but methane leaks during extraction reduce this advantage. Methane is 80x more potent as a GHG than $CO_{2}$ over 20 years.
       `
     },
     {
@@ -57,7 +57,7 @@ export const apesFossilFuelsNuclearPart1Data = {
           {
             question: 'A major environmental concern with hydraulic fracturing (fracking) is:',
             options: [
-              'It produces more CO₂ than coal mining',
+              'It produces more $CO_{2}$ than coal mining',
               'Potential groundwater contamination and induced seismic activity',
               'It only works in tropical climates',
               'It completely depletes all underground water'
@@ -79,7 +79,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 | **Fuel** | Uranium-235 (U-235) |
 | **Process** | Nuclear fission: splitting atoms releases enormous energy |
 | **Electricity share** | ~10% of global electricity; ~20% in the US |
-| **CO₂ emissions** | Near-zero during operation |
+| **$CO_{2}$ emissions** | Near-zero during operation |
 | **Waste** | Highly radioactive; remains dangerous for thousands of years |
 | **Accidents** | Chernobyl (1986), Fukushima (2011), Three Mile Island (1979) |
 
@@ -87,7 +87,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 
 | Pros | Cons |
 |------|------|
-| Very low CO₂ emissions | Radioactive waste storage (10,000+ years) |
+| Very low $CO_{2}$ emissions | Radioactive waste storage (10,000+ years) |
 | High energy density | Risk of catastrophic accidents |
 | Reliable baseload power | High construction costs |
 | Small land footprint | Uranium mining environmental impacts |
@@ -95,7 +95,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 
 ## Comparing Fossil Fuels
 
-| Fuel | CO₂ per kWh | SO₂ | PM | Other Issues |
+| Fuel | $CO_{2}$ per kWh | $SO_{2}$ | PM | Other Issues |
 |------|------------|-----|----|----|
 | **Coal** | ~1,000 g | High | High | Ash, acid rain, mercury |
 | **Oil** | ~840 g | Moderate | Moderate | Oil spills, habitat loss |
@@ -110,7 +110,7 @@ export const apesFossilFuelsNuclearPart1Data = {
 
 1) Nuclear power plants generate electricity through nuclear _______ (splitting uranium atoms).
 
-2) The fossil fuel that produces the MOST CO₂ per unit of energy is _______.
+2) The fossil fuel that produces the MOST $CO_{2}$ per unit of energy is _______.
 
 3) The 1986 nuclear disaster in Ukraine is known as the _______ accident.
       `,
@@ -120,7 +120,7 @@ export const apesFossilFuelsNuclearPart1Data = {
         hint1: 'Splitting atoms apart (not fusion).',
         hint2: 'The dirtiest fossil fuel.',
         hint3: 'A city in northern Ukraine.',
-        explanation: 'Nuclear fission = splitting atoms. Coal = highest CO₂/kWh (~1,000g). Chernobyl = worst nuclear disaster (1986).'
+        explanation: 'Nuclear fission = splitting atoms. Coal = highest $CO_{2}/kWh$ (~1,000g). Chernobyl = worst nuclear disaster (1986).'
       }
     },
     {
@@ -132,7 +132,7 @@ export const apesFossilFuelsNuclearPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'An energy source that produces near-zero CO₂ during operation but creates radioactive waste is ___',
+            label: 'An energy source that produces near-zero $CO_{2}$ during operation but creates radioactive waste is ___',
             options: ['Nuclear fission', 'Coal combustion', 'Natural gas', 'Solar photovoltaic']
           },
           {
@@ -148,7 +148,7 @@ export const apesFossilFuelsNuclearPart1Data = {
         hint1: 'Uranium-based, low carbon, waste concerns.',
         hint2: 'High-pressure fluid fractures underground rock.',
         hint3: 'Sulfuric acid from exposed minerals in mine sites.',
-        explanation: 'Nuclear = low CO₂ + radioactive waste. Fracking = high-pressure fluid extraction. Acid mine drainage = acid from exposed coal mine minerals.'
+        explanation: 'Nuclear = low $CO_{2}$ + radioactive waste. Fracking = high-pressure fluid extraction. Acid mine drainage = acid from exposed coal mine minerals.'
       }
     },
     {
@@ -157,9 +157,9 @@ export const apesFossilFuelsNuclearPart1Data = {
       content: `
 ## AP Exam Strategy: Fossil Fuels & Nuclear
 
-- Know the relative CO₂ emissions: coal > oil > natural gas
+- Know the relative $CO_{2}$ emissions: coal > oil > natural gas
 - Understand the trade-offs of **each** energy source — AP FRQs often ask for pros AND cons
-- Nuclear: emphasize low CO₂ BUT radioactive waste problem
+- Nuclear: emphasize low $CO_{2}$ BUT radioactive waste problem
 - **Fracking** is a hot topic — know the water contamination and seismic concerns
 - Coal mining methods: surface (strip), mountaintop removal, underground — know impacts of each
 - Be able to compare natural gas to coal (cleaner burning but methane leaks offset some benefits)
@@ -174,7 +174,7 @@ export const apesFossilFuelsNuclearPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'A country wants to reduce CO₂ emissions while maintaining reliable baseload electricity. Which strategy would be MOST effective?',
+            question: 'A country wants to reduce $CO_{2}$ emissions while maintaining reliable baseload electricity. Which strategy would be MOST effective?',
             options: [
               'Building more coal power plants with carbon capture',
               'Replacing coal plants with nuclear power plants',
@@ -182,10 +182,10 @@ export const apesFossilFuelsNuclearPart1Data = {
               'Eliminating all electricity generation'
             ],
             correctAnswer: 1,
-            explanation: 'Nuclear produces near-zero CO₂ during operation and provides reliable 24/7 baseload power, making it effective for replacing coal. However, waste disposal and safety remain challenges.'
+            explanation: 'Nuclear produces near-zero $CO_{2}$ during operation and provides reliable 24/7 baseload power, making it effective for replacing coal. However, waste disposal and safety remain challenges.'
           },
           {
-            question: 'Switching from coal to natural gas for electricity generation reduces CO₂ emissions by approximately:',
+            question: 'Switching from coal to natural gas for electricity generation reduces $CO_{2}$ emissions by approximately:',
             options: [
               '5-10%',
               '50% per kWh',
@@ -193,7 +193,7 @@ export const apesFossilFuelsNuclearPart1Data = {
               '0% — they produce the same emissions'
             ],
             correctAnswer: 1,
-            explanation: 'Natural gas produces ~490 g CO₂/kWh vs. coal at ~1,000 g CO₂/kWh — roughly a 50% reduction. However, methane leaks during extraction can reduce this climate benefit.'
+            explanation: 'Natural gas produces ~490 g $CO_{2}/kWh$ vs. coal at ~1,000 g $CO_{2}/kWh$ — roughly a 50% reduction. However, methane leaks during extraction can reduce this climate benefit.'
           }
         ]
       }

@@ -48,7 +48,7 @@ $(1 + \\alpha \\Delta T)^3 \\approx 1 + 3\\alpha \\Delta T$ for small $\\alpha \
 
 ### Volume Expansion Coefficients
 
-| Material | $\\beta$ (× 10⁻⁶ /°C) |
+| Material | $\\beta$ (× $10^{-6}$ /°C) |
 |---|---|
 | Aluminum | 69 |
 | Steel | 36 |
@@ -70,7 +70,7 @@ $(1 + \\alpha \\Delta T)^3 \\approx 1 + 3\\alpha \\Delta T$ for small $\\alpha \
 Water is one of the most unusual substances in nature. Most materials contract when cooled and expand when heated. Water does this **above 4°C**, but between **0°C and 4°C, water expands as it cools**.
 
 ### Key Facts
-- Water has its **maximum density at 4°C** ($\\rho = 1{,}000.0$ kg/m³)
+- Water has its **maximum density at 4°C** ($\\rho = 1{,}000.0$ $kg/m^{3}$)
 - From 4°C → 0°C, water **expands** (density decreases)
 - Ice at 0°C is about **9% less dense** than liquid water at 0°C
 
@@ -101,7 +101,7 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
               'β = α',
               'β = 2α',
               'β ≈ 3α',
-              'β = α²'
+              'β = $\\alpha^{2}$'
             ],
             correctAnswer: 2,
             explanation: 'A volume has three linear dimensions. Each expands by factor $\\alpha$, so $\\beta \\approx 3\\alpha$. This comes from expanding $(1 + \\alpha \\Delta T)^3 \\approx 1 + 3\\alpha \\Delta T$.'
@@ -115,7 +115,7 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
               '100°C'
             ],
             correctAnswer: 1,
-            explanation: 'Water reaches its maximum density of $1{,}000.0$ kg/m³ at 4°C. Below 4°C, water anomalously expands as it cools, making it less dense.'
+            explanation: 'Water reaches its maximum density of $1{,}000.0$ $kg/m^{3}$ at 4°C. Below 4°C, water anomalously expands as it cools, making it less dense.'
           },
           {
             question: 'A steel tank is completely filled with gasoline at 15°C. On a hot day (40°C), the gasoline will:',
@@ -139,17 +139,17 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
 
 1) A steel container holds 50.0 L of gasoline at 10°C. How much gasoline (in mL) overflows when heated to 35°C? Use $\\beta_{\\text{gas}} = 950 \\times 10^{-6}$ /°C and $\\beta_{\\text{steel}} = 36 \\times 10^{-6}$ /°C. (Answer = ΔV_gas − ΔV_tank)
 
-2) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) has a volume of 200.0 cm³ at 20°C. Find its volume increase $\\Delta V$ (in cm³) when heated to 120°C. Round to 3 significant figures.
+2) A glass flask ($\\beta = 27 \\times 10^{-6}$ /°C) has a volume of 200.0 $cm^{3}$ at 20°C. Find its volume increase $\\Delta V$ $(in cm^{3})$ when heated to 120°C. Round to 3 significant figures.
 
-3) An aluminum cube ($\\alpha = 23 \\times 10^{-6}$ /°C) has a side of 10.0 cm at 20°C. Find the increase in its volume $\\Delta V$ (in cm³) when heated to 220°C. Use $\\beta = 3\\alpha$. Round to 3 significant figures.
+3) An aluminum cube ($\\alpha = 23 \\times 10^{-6}$ /°C) has a side of 10.0 cm at 20°C. Find the increase in its volume $\\Delta V$ $(in cm^{3})$ when heated to 220°C. Use $\\beta = 3\\alpha$. Round to 3 significant figures.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['1143', '0.54', '13.8'],
         hint1: '$\\Delta V_{\\text{overflow}} = (\\beta_{\\text{gas}} - \\beta_{\\text{steel}}) V_0 \\Delta T = (950 - 36) \\times 10^{-6} \\times 50.0 \\times 25$. Convert L to mL.',
         hint2: '$\\Delta V = \\beta V_0 \\Delta T = (27 \\times 10^{-6})(200.0)(100)$.',
-        hint3: '$V_0 = (10.0)^3 = 1000$ cm³. $\\beta = 3(23 \\times 10^{-6}) = 69 \\times 10^{-6}$. $\\Delta V = (69 \\times 10^{-6})(1000)(200)$.',
-        explanation: '1) $\\Delta V = (914 \\times 10^{-6})(50.0)(25) = 1.1425$ L $= 1{,}143$ mL. 2) $\\Delta V = (27 \\times 10^{-6})(200.0)(100) = 0.54$ cm³. 3) $V_0 = 1{,}000$ cm³, $\\beta = 69 \\times 10^{-6}$ /°C, $\\Delta T = 200$°C. $\\Delta V = (69 \\times 10^{-6})(1{,}000)(200) = 13.8$ cm³.'
+        hint3: '$V_0 = (10.0)^3 = 1000$ $cm^{3}$. $\\beta = 3(23 \\times 10^{-6}) = 69 \\times 10^{-6}$. $\\Delta V = (69 \\times 10^{-6})(1000)(200)$.',
+        explanation: '1) $\\Delta V = (914 \\times 10^{-6})(50.0)(25) = 1.1425$ L $= 1{,}143$ mL. 2) $\\Delta V = (27 \\times 10^{-6})(200.0)(100) = 0.54$ $cm^{3}$. 3) $V_0 = 1{,}000$ $cm^{3}$, $\\beta = 69 \\times 10^{-6}$ /°C, $\\Delta T = 200$°C. $\\Delta V = (69 \\times 10^{-6})(1{,}000)(200) = 13.8$ $cm^{3}$.'
       }
     },
     {

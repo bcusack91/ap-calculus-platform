@@ -68,7 +68,7 @@ For pH calculation, only $K_{a1}$ matters in practice (subsequent dissociations 
 
 An **amphiprotic** species can act as either an acid or a base:
 - $\\text{H}_2\\text{O}$ (acid/base of water)
-- $\\text{HCO}_3^-$ (acid: loses H⁺ → $\\text{CO}_3^{2-}$; base: gains H⁺ → $\\text{H}_2\\text{CO}_3$)
+- $\\text{HCO}_3^-$ (acid: loses $H^{+}$ → $\\text{CO}_3^{2-}$; base: gains $H^{+}$ → $\\text{H}_2\\text{CO}_3$)
 - $\\text{HPO}_4^{2-}$, $\\text{H}_2\\text{PO}_4^-$, amino acids
 `
     },
@@ -90,7 +90,7 @@ An **amphiprotic** species can act as either an acid or a base:
             explanation: `Lower $\\text{p}K_a$ = stronger acid. Acid A ($\\text{p}K_a = 3.2$) is strongest. For comparison, Acid D's $\\text{p}K_a = -\\log(4.5 \\times 10^{-6}) \\approx 5.3$, weaker than Acid A.`
           },
           {
-            question: `A buffer contains 0.050 M formic acid (HCOOH) and 0.200 M formate (HCOO⁻). $\\text{p}K_a = 3.74$. What is the pH?`,
+            question: `A buffer contains 0.050 M formic acid (HCOOH) and 0.200 M formate $(HCOO^{-})$. $\\text{p}K_a = 3.74$. What is the pH?`,
             options: [`3.14`, `3.74`, `4.34`, `4.74`],
             correctAnswer: 2,
             explanation: `$\\text{pH} = \\text{p}K_a + \\log([\\text{A}^-]/[\\text{HA}]) = 3.74 + \\log(0.200/0.050) = 3.74 + \\log 4 = 3.74 + 0.60 = \\mathbf{4.34}$.`

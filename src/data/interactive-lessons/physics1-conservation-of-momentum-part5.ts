@@ -137,9 +137,9 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
       content: `
 **External Force Analysis** 🧮
 
-1) A 5 kg ball falls for 4 seconds. How much momentum does gravity add? (in kg·m/s, use $g = 10$ m/s²)
+1) A 5 kg ball falls for 4 seconds. How much momentum does gravity add? (in kg·m/s, use $g = 10$ $m/s^{2}$)
 
-2) Two 3 kg blocks collide on a surface with friction $\\mu_k = 0.2$. If the collision lasts 0.005 s, what is the impulse from friction on the system during the collision? (in N·s, use $g = 10$ m/s²)
+2) Two 3 kg blocks collide on a surface with friction $\\mu_k = 0.2$. If the collision lasts 0.005 s, what is the impulse from friction on the system during the collision? (in N·s, use $g = 10$ $m/s^{2}$)
 
 3) For the same system in problem 2, if the blocks slide together for 2 s after colliding, what impulse does friction deliver during this time? (in N·s)
 

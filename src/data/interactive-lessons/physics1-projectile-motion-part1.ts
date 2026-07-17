@@ -65,7 +65,7 @@ The **time to fall** depends only on the **height**, not on how fast the object 
       exercise: {
         questions: [
           {
-            question: 'A marble rolls off a 1.25 m high table. Using $g = 10$ m/s², how long does it take to hit the floor?',
+            question: 'A marble rolls off a 1.25 m high table. Using $g = 10$ $m/s^{2}$, how long does it take to hit the floor?',
             options: [
               '0.25 s',
               '0.5 s',
@@ -106,7 +106,7 @@ The **time to fall** depends only on the **height**, not on how fast the object 
       content: `
 **Horizontal Launch Calculations** 🧮
 
-A ball is launched horizontally at 10 m/s from the top of a 20 m cliff. Use $g = 10$ m/s².
+A ball is launched horizontally at 10 m/s from the top of a 20 m cliff. Use $g = 10$ $m/s^{2}$.
 
 1) Time to reach the ground (in seconds)
 
@@ -163,7 +163,7 @@ A ball is launched horizontally at 10 m/s from the top of a 20 m cliff. Use $g =
       exercise: {
         questions: [
           {
-            question: 'A plane flying at 500 m altitude at 100 m/s drops a package. Using $g = 10$ m/s², how far horizontally does the package travel before hitting the ground?',
+            question: 'A plane flying at 500 m altitude at 100 m/s drops a package. Using $g = 10$ $m/s^{2}$, how far horizontally does the package travel before hitting the ground?',
             options: [
               '500 m',
               '1000 m',

@@ -66,7 +66,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'What is $E^\\circ_{\\text{cell}}$ for the cell: Zn(s) | Zn²⁺(aq) || Ag⁺(aq) | Ag(s)?',
+            question: 'What is $E^\\circ_{\\text{cell}}$ for the cell: Zn(s) | $Zn^{2+}(aq)$ || $Ag^{+}(aq)$ | Ag(s)?',
             options: [
               '+0.04 V',
               '+1.56 V',
@@ -85,7 +85,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '6'
             ],
             correctAnswer: 1,
-            explanation: 'Zn → Zn²⁺ + 2e⁻ and 2Ag⁺ + 2e⁻ → 2Ag. The balanced equation transfers 2 electrons (Ag⁺ only needs 1e⁻, but we need 2 Ag⁺ to match the 2e⁻ from Zn).'
+            explanation: 'Zn → $Zn^{2+}$ + $2e^{-}$ and $2Ag^{+}$ + $2e^{-}$ → 2Ag. The balanced equation transfers 2 electrons ($Ag^{+}$ only needs $1e^{-}$, but we need 2 $Ag^{+}$ to match the $2e^{-}$ from Zn).'
           },
           {
             question: '$\\Delta G^\\circ$ for the Zn-Ag cell ($E^\\circ = 1.56$ V, $n = 2$) is:',
@@ -109,7 +109,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 > **Given:** $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44$ V
 
-For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
+For the cell: Fe(s) | $Fe^{2+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s)
 
 **1)** $E^\\circ_{\\text{cell}} = ?$ (in V, to 3 significant figures)
 
@@ -121,7 +121,7 @@ For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
         boxes: 3,
         correctAnswers: ['0.78', '2', '-150'],
         hint1: '$E^\\circ_{\\text{cell}} = 0.34 - (-0.44)$',
-        hint2: 'Both Fe → Fe²⁺ and Cu²⁺ → Cu involve 2 electrons.',
+        hint2: 'Both Fe → $Fe^{2+}$ and $Cu^{2+}$ → Cu involve 2 electrons.',
         hint3: '$\\Delta G^\\circ = -(2)(96485)(0.78)$. Convert to kJ.',
         explanation: '1) $E^\\circ = 0.34 - (-0.44) = 0.78$ V. 2) $n = 2$. 3) $\\Delta G^\\circ = -(2)(96485)(0.78) = -150{,}517$ J $\\approx -150$ kJ (actually -151 kJ, but -150 is accepted).'
       }
@@ -132,19 +132,19 @@ For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
       content: `
 **Cell Analysis** 🔽
 
-For the cell: Al(s) | Al³⁺(aq) || Ag⁺(aq) | Ag(s)
+For the cell: Al(s) | $Al^{3+}(aq)$ || $Ag^{+}(aq)$ | Ag(s)
 
-> **Given:** Al³⁺/Al = −1.66 V, Ag⁺/Ag = +0.80 V
+> **Given:** $Al^{3+}/Al$ = −1.66 V, $Ag^{+}/Ag$ = +0.80 V
       `,
       exercise: {
         dropdowns: [
           {
             label: 'The anode is',
-            options: ['Al', 'Ag', 'Al³⁺', 'Ag⁺']
+            options: ['Al', 'Ag', '$Al^{3+}$', '$Ag^{+}$']
           },
           {
             label: 'The cathode is',
-            options: ['Al', 'Ag', 'Al³⁺', 'Ag⁺']
+            options: ['Al', 'Ag', '$Al^{3+}$', '$Ag^{+}$']
           },
           {
             label: '$E^\\circ_{\\text{cell}}$ equals',
@@ -159,7 +159,7 @@ For the cell: Al(s) | Al³⁺(aq) || Ag⁺(aq) | Ag(s)
         hint1: 'Al is on the left → anode.',
         hint2: 'Ag is on the right → cathode.',
         hint3: '$E^\\circ = 0.80 - (-1.66) = 2.46$ V.',
-        explanation: 'Al is the anode (oxidized: Al → Al³⁺ + 3e⁻). Ag is the cathode (Ag⁺ + e⁻ → Ag). $E^\\circ = 0.80 - (-1.66) = 2.46$ V. Al loses 3e⁻, so $n = 3$ (we need 3Ag⁺ to accept 3e⁻).'
+        explanation: 'Al is the anode (oxidized: Al → $Al^{3+}$ + $3e^{-}$). Ag is the cathode ($Ag^{+}$ + $e^{-}$ → Ag). $E^\\circ = 0.80 - (-1.66) = 2.46$ V. Al loses $3e^{-}$, so $n = 3$ (we need $3Ag^{+}$ to accept $3e^{-}$).'
       }
     },
     {

@@ -85,7 +85,7 @@ Total: $15 \\times 4 = 60$ cubes ✅
         correctAnswers: ["Length × Width × Height","64"],
         hint1: "Three dimensions multiplied.",
         hint2: "4 × 4 × 4.",
-        explanation: "V = L×W×H. 4³ = 64."
+        explanation: "V = L×W×H. $4^{3}$ = 64."
       }
     },
     {

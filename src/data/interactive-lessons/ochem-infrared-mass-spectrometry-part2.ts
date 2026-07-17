@@ -23,7 +23,7 @@ A molecule with $N$ atoms has $3N - 6$ vibrational modes ($3N - 5$ if linear), s
       id: 'infra2-wavenumber',
       type: 'text' as const,
       content: `
-### Why We Use Wavenumbers (cm⁻¹)
+### Why We Use Wavenumbers $(cm^{-1})$
 
 IR spectra are plotted against **wavenumber**, symbol $\\tilde{\\nu}$, with units of $\\text{cm}^{-1}$ (reciprocal centimeters). The wavenumber is simply the reciprocal of the wavelength:
 

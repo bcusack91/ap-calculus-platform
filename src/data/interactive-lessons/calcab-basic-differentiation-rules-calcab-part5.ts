@@ -31,8 +31,8 @@ $$\\boxed{f''(x) = \\frac{d^2 y}{dx^2} = \\frac{d}{dx}\\left[\\frac{dy}{dx}\\rig
 |-----------|---------|------|
 | $s(t)$ | Position | meters |
 | $s'(t) = v(t)$ | Velocity | m/s |
-| $s''(t) = a(t)$ | Acceleration | m/s² |
-| $s'''(t) = j(t)$ | Jerk | m/s³ |`
+| $s''(t) = a(t)$ | Acceleration | $m/s^{2}$ |
+| $s'''(t) = j(t)$ | Jerk | $m/s^{3}$ |`
     },
     {
       id: 'diff5-examples',

@@ -53,13 +53,13 @@ Time to work through challenging problems involving angular momentum, rotational
           {
             question: 'An Atwood machine uses a solid disk pulley ($M = 4$ kg, $R = 0.2$ m). Masses of 3 kg and 5 kg hang on either side. The acceleration of the system is closest to:',
             options: [
-              '$1.5$ m/s²',
-              '$1.8$ m/s²',
-              '$2.0$ m/s²',
-              '$2.5$ m/s²'
+              '$1.5$ $m/s^{2}$',
+              '$1.8$ $m/s^{2}$',
+              '$2.0$ $m/s^{2}$',
+              '$2.5$ $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = \\frac{(m_2 - m_1)g}{m_1 + m_2 + M/2} = \\frac{(5-3)(10)}{3 + 5 + 2} = \\frac{20}{10} = 2.0$ m/s². With exact $g = 9.8$: $a = 19.6/10 = 1.96 \\approx 2.0$. But with the pulley contributing $M/2$: $a = (2)(9.8)/(3+5+2) = 19.6/10 = 1.96$. Closest to 2.0 m/s².'
+            explanation: '$a = \\frac{(m_2 - m_1)g}{m_1 + m_2 + M/2} = \\frac{(5-3)(10)}{3 + 5 + 2} = \\frac{20}{10} = 2.0$ $m/s^{2}$. With exact $g = 9.8$: $a = 19.6/10 = 1.96 \\approx 2.0$. But with the pulley contributing $M/2$: $a = (2)(9.8)/(3+5+2) = 19.6/10 = 1.96$. Closest to 2.0 $m/s^{2}$.'
           }
         ]
       }
@@ -70,7 +70,7 @@ Time to work through challenging problems involving angular momentum, rotational
       content: `
 **Workshop Calculations** 🧮
 
-1) A turntable ($I = 1.2$ kg·m², $\\omega = 6$ rad/s) has a ring ($I = 0.8$ kg·m²) dropped on it from rest. Find the final $\\omega$. (in rad/s, round to 3 significant figures)
+1) A turntable ($I = 1.2$ $kg\\cdot m^{2}$, $\\omega = 6$ rad/s) has a ring ($I = 0.8$ $kg\\cdot m^{2}$) dropped on it from rest. Find the final $\\omega$. (in rad/s, round to 3 significant figures)
 
 2) How much kinetic energy is lost in the collision above? (in J, round to 3 significant figures)
 
@@ -107,7 +107,7 @@ Time to work through challenging problems involving angular momentum, rotational
           },
           {
             label: 'The total kinetic energy of a rolling object is:',
-            options: ['½Iω²', 'Iω', 'τθ', '½mv² + ½Iω²'],
+            options: ['$\\tfrac{1}{2} I\\omega^{2}$', 'Iω', 'τθ', '$\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{2} I\\omega^{2}$'],
             correctIndex: 3,
             explanation: 'For a rolling object, total KE includes both translational ($\\frac{1}{2}mv^2$) and rotational ($\\frac{1}{2}I\\omega^2$) components.'
           }
@@ -134,7 +134,7 @@ Time to work through challenging problems involving angular momentum, rotational
             explanation: 'The solid ball has smaller $I$ ($\\frac{2}{5}MR^2$ vs $\\frac{2}{3}MR^2$). Less energy goes to rotation → more goes to translation → faster speed.'
           },
           {
-            question: 'A record player turntable ($I_1 = 0.1$ kg·m²) spins at $33\\frac{1}{3}$ RPM. A second identical turntable (not spinning) is dropped on top. The final RPM is:',
+            question: 'A record player turntable ($I_1 = 0.1$ $kg\\cdot m^{2}$) spins at $33\\frac{1}{3}$ RPM. A second identical turntable (not spinning) is dropped on top. The final RPM is:',
             options: [
               '$11\\frac{1}{9}$ RPM',
               '$16\\frac{2}{3}$ RPM',

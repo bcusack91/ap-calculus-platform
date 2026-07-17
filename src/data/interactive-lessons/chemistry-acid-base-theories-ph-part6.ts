@@ -218,7 +218,7 @@ $$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
         dropdowns: [
           {
             label: 'To find pH of a strong acid, you need to know the acid\'s',
-            options: ['Kₐ value', 'initial concentration only', 'molecular weight', 'conjugate base strength']
+            options: ['$K_{a}$ value', 'initial concentration only', 'molecular weight', 'conjugate base strength']
           },
           {
             label: 'When mixing strong acid and strong base, the solution is acidic if',

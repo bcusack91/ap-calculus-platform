@@ -112,20 +112,20 @@ $$F_E = 1.60 \\text{ N}$$
 
 $q_1 = +2.0\\ \\mu\\text{C}$, $q_2 = +8.0\\ \\mu\\text{C}$, separated by $r = 0.40$ m.
 
-Use $k = 9.0 \\times 10^9$ N·m²/C² (rounded for cleaner math).
+Use $k = 9.0 \\times 10^9$ $N\\cdot m^{2}/C^{2}$ (rounded for cleaner math).
 
 Enter in order:
-1) $|q_1 q_2|$ in C² (use scientific notation like \$216e-12\`)
-2) $r^2$ in m²
+1) $|q_1 q_2|$ in $C^{2}$ (use scientific notation like \$216e-12\`)
+2) $r^2$ in $m^{2}$
 3) Force magnitude in N (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['16e-12', '0.16', '0.9'],
         hint1: '$|q_1 q_2| = (2.0 \\times 10^{-6})(8.0 \\times 10^{-6})$.',
-        hint2: '$r^2 = (0.40)^2 = 0.16$ m².',
+        hint2: '$r^2 = (0.40)^2 = 0.16$ $m^{2}$.',
         hint3: '$F = (9.0 \\times 10^9)(16 \\times 10^{-12}/0.16) = (9.0 \\times 10^9)(10^{-10}) = 0.9$ N.',
-        explanation: 'F = k|q₁q₂|/r² = (9.0 × 10⁹)(16 × 10⁻¹²)/(0.16) = 0.9 N. Repulsive — both positive.'
+        explanation: 'F = k|$q_{1}q_{2}$|/$r^{2}$ = $(9.0 \\times 10^{9})(16 \\times 10^{-12})/(0.16)$ = 0.9 N. Repulsive — both positive.'
       }
     },
     {
@@ -138,7 +138,7 @@ Enter in order:
         dropdowns: [
           {
             label: '5.0 μC in coulombs is',
-            options: ['5.0 × 10⁻³ C', '5.0 × 10⁻⁶ C', '5.0 × 10⁻⁹ C', '5.0 × 10⁻¹² C']
+            options: ['$5.0 \\times 10^{-3}$ C', '$5.0 \\times 10^{-6}$ C', '$5.0 \\times 10^{-9}$ C', '$5.0 \\times 10^{-12}$ C']
           },
           {
             label: '30 cm in meters is',
@@ -146,13 +146,13 @@ Enter in order:
           },
           {
             label: '200 nC in coulombs is',
-            options: ['2.0 × 10⁻⁵ C', '2.0 × 10⁻⁷ C', '2.0 × 10⁻⁹ C', '200 × 10⁻⁹ C']
+            options: ['$2.0 \\times 10^{-5}$ C', '$2.0 \\times 10^{-7}$ C', '$2.0 \\times 10^{-9}$ C', '$200 \\times 10^{-9}$ C']
           }
         ],
-        correctAnswers: ['5.0 × 10⁻⁶ C', '0.30 m', '2.0 × 10⁻⁷ C'],
-        hint1: 'μ (micro) = 10⁻⁶, n (nano) = 10⁻⁹.',
-        hint2: '1 cm = 10⁻² m.',
-        hint3: '200 × 10⁻⁹ = 2.0 × 10⁻⁷.',
+        correctAnswers: ['$5.0 \\times 10^{-6}$ C', '0.30 m', '$2.0 \\times 10^{-7}$ C'],
+        hint1: 'μ (micro) = $10^{-6}$, n (nano) = $10^{-9}$.',
+        hint2: '1 cm = $10^{-2}$ m.',
+        hint3: '$200 \\times 10^{-9}$ = $2.0 \\times 10^{-7}$.',
         explanation: 'Unit conversion is the #1 source of errors on AP electrostatics problems. Always convert to SI before plugging into formulas.'
       }
     },
@@ -167,19 +167,19 @@ Enter in order:
           {
             question: 'Two charges of +1.0 μC each are 1.0 m apart. The force between them is approximately:',
             options: [
-              '9.0 × 10⁻³ N (about 0.009 N)',
+              '$9.0 \\times 10^{-3}$ N (about 0.009 N)',
               '9.0 N',
-              '9.0 × 10³ N',
-              '9.0 × 10⁹ N'
+              '$9.0 \\times 10^{3}$ N',
+              '$9.0 \\times 10^{9}$ N'
             ],
             correctAnswer: 0,
-            explanation: 'F = k|q₁q₂|/r² = (9 × 10⁹)(10⁻⁶)(10⁻⁶)/(1)² = 9 × 10⁻³ N. The force is small because microcoulombs are tiny amounts of charge.'
+            explanation: 'F = k|$q_{1}q_{2}$|/$r^{2}$ = $(9 \\times 10^{9})(10^{-6})(10^{-6})/(1)^{2}$ = $9 \\times 10^{-3}$ N. The force is small because microcoulombs are tiny amounts of charge.'
           },
           {
             question: 'If you solve a Coulomb\'s Law problem and get F = 450,000 N between two small lab charges, what most likely happened?',
             options: [
               'That\'s reasonable for static electricity',
-              'You forgot to convert μC to C (used 10⁻⁶ incorrectly)',
+              'You forgot to convert μC to C (used $10^{-6}$ incorrectly)',
               'You used the wrong constant k',
               'Coulomb\'s Law doesn\'t work for small charges'
             ],
@@ -217,7 +217,7 @@ Enter in order:
               'A factor of 10,000 (too big)'
             ],
             correctAnswer: 3,
-            explanation: 'Using r = 20 instead of r = 0.20 means r² = 400 instead of 0.04. Since r² appears in the denominator, the denominator is 10,000× too large, making F 10,000× too small.'
+            explanation: 'Using r = 20 instead of r = 0.20 means $r^{2}$ = 400 instead of 0.04. Since $r^{2}$ appears in the denominator, the denominator is 10,000× too large, making F 10,000× too small.'
           },
           {
             question: 'Which step in problem-solving is most often skipped, causing errors?',

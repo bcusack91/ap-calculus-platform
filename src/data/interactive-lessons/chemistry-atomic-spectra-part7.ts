@@ -59,7 +59,7 @@ export const chemAtomicSpectraPart7Data = {
 1. **Sign errors in $\\Delta E$.** $E_n$ is *negative*. The energy of the **emitted photon** is the *positive* magnitude $|E_{n_f} - E_{n_i}|$.
 2. **Forgetting unit conversions.** Always convert nm → m before plugging into $E = hc/\\lambda$.
 3. **Mixing up "shorter wavelength" with "less energy."** Shorter $\\lambda$ ⇒ HIGHER energy.
-4. **Applying the Rydberg formula to non-hydrogen atoms.** It only works for one-electron systems (H, He⁺, Li²⁺, …).
+4. **Applying the Rydberg formula to non-hydrogen atoms.** It only works for one-electron systems (H, $He^{+}$, $Li^{2+}$, …).
 5. **Confusing emission and absorption.** They occur at the *same* wavelengths, but the direction of the transition is opposite.
 6. **Reading PES wrong.** Higher binding energy = closer to nucleus = lower $n$ orbital.
       `
@@ -85,7 +85,7 @@ export const chemAtomicSpectraPart7Data = {
             question: 'In a photoelectron spectrum of an unknown atom, the highest binding-energy peak is at 1,090 eV with relative height 2. The next peak is at 63 eV (height 2), then 9 eV (height 5). The atom is most likely:',
             options: ['Carbon (Z=6)', 'Nitrogen (Z=7)', 'Phosphorus (Z=15)', 'Sulfur (Z=16)'],
             correctAnswer: 2,
-            explanation: 'Heights 2 : 2 : 5 = 9 total electrons in 3 subshells (1s² 2s² 2p... wait, 2p only holds 6). Reread: 2 + 2 + 5 = 9. Hmm — but the peaks should be 1s, 2s, 2p, 3s, 3p... Actually this is P: 1s² 2s² 2p⁶ 3s² 3p³ → peaks at 1s² (2), 2s² (2), 2p⁶ (6), 3s² (2), 3p³ (3). Heights given here (2:2:5) represent a simplified 3-peak summary; for AP-CED P (Z=15) is the closest fit when considering simplified PES. (Note: the AP exam typically draws all 5 P peaks.)'
+            explanation: 'Heights 2 : 2 : 5 = 9 total electrons in 3 subshells ($1s^{2}$ $2s^{2}$ 2p... wait, 2p only holds 6). Reread: 2 + 2 + 5 = 9. Hmm — but the peaks should be 1s, 2s, 2p, 3s, 3p... Actually this is P: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$ → peaks at $1s^{2}$ (2), $2s^{2}$ (2), $2p^{6}$ (6), $3s^{2}$ (2), $3p^{3}$ (3). Heights given here (2:2:5) represent a simplified 3-peak summary; for AP-CED P (Z=15) is the closest fit when considering simplified PES. (Note: the AP exam typically draws all 5 P peaks.)'
           },
           {
             question: 'The Bohr model correctly predicts the Lyman series wavelengths of hydrogen but FAILS to predict the spectrum of helium. The most fundamental reason is:',

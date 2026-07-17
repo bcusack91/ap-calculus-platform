@@ -123,7 +123,7 @@ NGS technologies sequence **millions of fragments simultaneously** (massively pa
             explanation: 'The defining feature of NGS is massively parallel sequencing — millions of fragments are sequenced at the same time. This increases throughput and dramatically reduces the cost and time to sequence a genome.'
           },
           {
-            question: 'A BLAST search returns a hit with an E-value of 1 × 10⁻⁵⁰. What does this indicate?',
+            question: 'A BLAST search returns a hit with an E-value of $1 \\times 10^{-50}$. What does this indicate?',
             options: [
               'The match is highly significant — extremely unlikely to have occurred by chance',
               'The match is not significant and likely occurred by random chance',
@@ -131,7 +131,7 @@ NGS technologies sequence **millions of fragments simultaneously** (massively pa
               'The database sequence is 50% identical to the query'
             ],
             correctAnswer: 0,
-            explanation: 'The E-value represents the expected number of alignments with that score occurring by chance. An E-value of 10⁻⁵⁰ is extremely small, meaning the match is almost certainly due to true homology rather than random similarity.'
+            explanation: 'The E-value represents the expected number of alignments with that score occurring by chance. An E-value of $10^{-50}$ is extremely small, meaning the match is almost certainly due to true homology rather than random similarity.'
           }
         ]
       }

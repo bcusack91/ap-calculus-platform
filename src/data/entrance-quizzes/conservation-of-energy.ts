@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 3: Conservation Without Friction
   {
     id: 'coe-ent-3a',
-    question: 'A $2$ kg ball is released from $5$ m. What is its speed at the bottom? (Use $g = 10$ m/s², no friction.)',
+    question: 'A $2$ kg ball is released from $5$ m. What is its speed at the bottom? (Use $g = 10$ $m/s^{2}$, no friction.)',
     options: ['$5$ m/s', '$10$ m/s', '$20$ m/s', '$50$ m/s'],
     correctIndex: 1,
     explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s.',
@@ -73,7 +73,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'coe-ent-4b',
-    question: 'A $4$ kg block slides down from $5$ m and reaches the bottom at $8$ m/s. How much energy was lost to friction? (Use $g = 10$ m/s².)',
+    question: 'A $4$ kg block slides down from $5$ m and reaches the bottom at $8$ m/s. How much energy was lost to friction? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$40$ J', '$72$ J', '$128$ J', '$200$ J'],
     correctIndex: 0,
     explanation: '$PE_i = mgh = 4(10)(5) = 200$ J. $KE_f = \\frac{1}{2}(4)(64) = 128$ J. Energy lost = $200 - 128 = 72$ J. Hmm wait: $\\frac{1}{2}(4)(8^2) = \\frac{1}{2}(4)(64) = 128$ J. Lost = $200 - 128 = 72$ J. The answer is $72$ J.',
@@ -143,7 +143,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'coe-ent-7b',
-    question: 'A skater goes up a frictionless ramp. To reach a height of $3.2$ m, the minimum speed at the bottom must be: (Use $g = 10$ m/s².)',
+    question: 'A skater goes up a frictionless ramp. To reach a height of $3.2$ m, the minimum speed at the bottom must be: (Use $g = 10$ $m/s^{2}$.)',
     options: ['$4$ m/s', '$6$ m/s', '$8$ m/s', '$10$ m/s'],
     correctIndex: 2,
     explanation: '$\\frac{1}{2}mv^2 = mgh \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(3.2)} = \\sqrt{64} = 8$ m/s.',

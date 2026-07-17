@@ -35,12 +35,12 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | Decomposition | $AB \\rightarrow A + B$ | One → many (often with $\\Delta$) |
 | Single Replacement | $A + BC \\rightarrow AC + B$ | Free element + compound |
 | Double Replacement | $AB + CD \\rightarrow AD + CB$ | Two ionic compounds swap ions |
-| Combustion | $\\text{Fuel} + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ | Organic + O₂ |
+| Combustion | $\\text{Fuel} + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ | Organic + $O_{2}$ |
 
 
 ---
 
-> 🔑 **Key Concept:** To classify any reaction, follow this decision tree: (1) Only one reactant? → **Decomposition**. (2) Only one product? → **Synthesis**. (3) O₂ + fuel → CO₂ + H₂O? → **Combustion**. (4) Free element + compound? → **Single replacement**. (5) Two ionic compounds? → **Double replacement**.
+> 🔑 **Key Concept:** To classify any reaction, follow this decision tree: (1) Only one reactant? → **Decomposition**. (2) Only one product? → **Synthesis**. (3) $O_{2}$ + fuel → $CO_{2}$ + $H_{2}O$? → **Combustion**. (4) Free element + compound? → **Single replacement**. (5) Two ionic compounds? → **Double replacement**.
 
 
 ---
@@ -57,7 +57,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 ---
 
-> 💡 **Tip:** On the AP exam, quickly scan for visual cues: a **lone reactant** (decomposition), **O₂ on the left with CO₂ + H₂O on the right** (combustion), a **free element** mixed with a compound (single replacement), or **two aqueous ionic compounds** (double replacement).
+> 💡 **Tip:** On the AP exam, quickly scan for visual cues: a **lone reactant** (decomposition), **$O_{2}$ on the left with $CO_{2}$ + $H_{2}O$ on the right** (combustion), a **free element** mixed with a compound (single replacement), or **two aqueous ionic compounds** (double replacement).
 
 > ⚠️ **Warning:** Common errors when predicting products: (1) writing incorrect ionic formulas by not cross-checking charges, (2) forgetting to consult the activity series for single replacement, (3) predicting a double replacement when no driving force exists (no precipitate, gas, or water), and (4) submitting unbalanced equations.
       `
@@ -78,7 +78,7 @@ For double replacement reactions in solution, the AP exam often asks for net ion
 |------|--------|---------|
 | 1 | Write balanced **molecular** equation | $\\text{AgNO}_3(\\text{aq}) + \\text{NaCl}(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s}) + \\text{NaNO}_3(\\text{aq})$ |
 | 2 | Split soluble ionic compounds into **ions** | $\\text{Ag}^+ + \\text{NO}_3^- + \\text{Na}^+ + \\text{Cl}^- \\rightarrow \\text{AgCl}(\\text{s}) + \\text{Na}^+ + \\text{NO}_3^-$ |
-| 3 | Cancel **spectator ions** (unchanged on both sides) | Na⁺ and NO₃⁻ cancel |
+| 3 | Cancel **spectator ions** (unchanged on both sides) | $Na^{+}$ and $NO_{3}^{-}$ cancel |
 | 4 | Write the **net ionic** equation | $\\text{Ag}^+(\\text{aq}) + \\text{Cl}^-(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s})$ |
 
 ---
@@ -122,7 +122,7 @@ For double replacement reactions in solution, the AP exam often asks for net ion
               '$\\text{Na}^+ + \\text{Cl}^- + \\text{H}_2\\text{O} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
-            explanation: 'The molecular equation is NaOH + HCl → NaCl + H₂O. Na⁺ and Cl⁻ are spectator ions. The net ionic equation shows only what actually reacts: $\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$.'
+            explanation: 'The molecular equation is NaOH + HCl → NaCl + $H_{2}O$. $Na^{+}$ and $Cl^{-}$ are spectator ions. The net ionic equation shows only what actually reacts: $\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$.'
           },
           {
             question: 'Heating copper(II) carbonate produces a black solid and a gas. This is best classified as:',
@@ -144,7 +144,7 @@ For double replacement reactions in solution, the AP exam often asks for net ion
               'Gold forms a protective oxide layer'
             ],
             correctAnswer: 1,
-            explanation: 'Gold is far below hydrogen in the activity series (it is the least reactive metal). Only metals above hydrogen can displace H₂ from acids. Gold requires aqua regia (HCl + HNO₃) to dissolve.'
+            explanation: 'Gold is far below hydrogen in the activity series (it is the least reactive metal). Only metals above hydrogen can displace $H_{2}$ from acids. Gold requires aqua regia $(HCl + HNO_{3})$ to dissolve.'
           }
         ]
       }
@@ -168,8 +168,8 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
         correctAnswers: ['synthesis', 'double', 'combustion'],
         hint1: 'Two elements combine to form one ionic compound.',
         hint2: 'Two aqueous ionic compounds exchange ions; a precipitate forms.',
-        hint3: 'A hydrocarbon reacts with oxygen to form CO₂ and H₂O.',
-        explanation: '1) Synthesis: 2Na + Cl₂ → 2NaCl (two elements → one compound). 2) Double replacement: Pb(NO₃)₂ + 2KI → PbI₂↓ + 2KNO₃ (ions exchange; precipitate forms). 3) Combustion: octane + O₂ → CO₂ + H₂O (hydrocarbon + oxygen).'
+        hint3: 'A hydrocarbon reacts with oxygen to form $CO_{2}$ and $H_{2}O$.',
+        explanation: '1) Synthesis: 2Na + $Cl_{2}$ → 2NaCl (two elements → one compound). 2) Double replacement: $Pb(NO_{3})_{2}$ + 2KI → $PbI_{2}$↓ + $2KNO_{3}$ (ions exchange; precipitate forms). 3) Combustion: octane + $O_{2}$ → $CO_{2}$ + $H_{2}O$ (hydrocarbon + oxygen).'
       }
     },
     {
@@ -184,12 +184,12 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
             question: 'A student mixes aqueous solutions of barium chloride and sodium sulfate. A white precipitate forms. The formula of the precipitate is:',
             options: [
               'NaCl',
-              'BaSO₄',
-              'BaNa₂',
-              'Na₂Cl₂'
+              '$BaSO_{4}$',
+              '$BaNa_{2}$',
+              '$Na_{2}Cl_{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{BaCl}_2(aq) + \\text{Na}_2\\text{SO}_4(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{NaCl}(aq)$. BaSO₄ is the insoluble precipitate (white). NaCl is soluble and remains in solution.'
+            explanation: '$\\text{BaCl}_2(aq) + \\text{Na}_2\\text{SO}_4(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{NaCl}(aq)$. $BaSO_{4}$ is the insoluble precipitate (white). NaCl is soluble and remains in solution.'
           },
           {
             question: 'Which reaction represents the thermal decomposition of limestone?',
@@ -200,7 +200,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
               '$\\text{CaCO}_3 + \\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$'
             ],
             correctAnswer: 0,
-            explanation: 'Limestone is CaCO₃. Thermal decomposition (heating) breaks it into CaO (quicklime) + CO₂. This is used industrially in cement production. Option B is the reverse (synthesis), and D is a double replacement with an acid.'
+            explanation: 'Limestone is $CaCO_{3}$. Thermal decomposition (heating) breaks it into CaO (quicklime) + $CO_{2}$. This is used industrially in cement production. Option B is the reverse (synthesis), and D is a double replacement with an acid.'
           }
         ]
       }
@@ -214,7 +214,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
       exercise: {
         dropdowns: [
           {
-            label: 'The formation of rust (Fe₂O₃) from iron and oxygen is a type of',
+            label: 'The formation of rust $(Fe_{2}O_{3})$ from iron and oxygen is a type of',
             options: ['decomposition', 'synthesis', 'single replacement', 'combustion']
           },
           {
@@ -223,18 +223,18 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
           },
           {
             label: 'Fluorine gas can displace chloride ions from NaCl because',
-            options: ['F₂ is less reactive than Cl₂', 'F₂ is more reactive than Cl₂', 'NaCl is insoluble', 'fluorine is a metal']
+            options: ['$F_{2}$ is less reactive than $Cl_{2}$', '$F_{2}$ is more reactive than $Cl_{2}$', 'NaCl is insoluble', 'fluorine is a metal']
           },
           {
             label: 'An acid reacting with a base to form salt and water is called',
             options: ['combustion', 'synthesis', 'neutralization', 'decomposition']
           }
         ],
-        correctAnswers: ['synthesis', 'removed because they don\'t change', 'F₂ is more reactive than Cl₂', 'neutralization'],
+        correctAnswers: ['synthesis', 'removed because they don\'t change', '$F_{2}$ is more reactive than $Cl_{2}$', 'neutralization'],
         hint1: 'Two elements forming one compound.',
         hint2: 'Spectator ions appear identically on both sides.',
         hint3: 'Reactivity decreases down Group 17: F > Cl > Br > I.',
-        explanation: 'Rust formation is synthesis (4Fe + 3O₂ → 2Fe₂O₃). Spectator ions don\'t participate and are removed from net ionic equations. F₂ > Cl₂ in reactivity (higher in Group 17). Acid + base → salt + water is neutralization (a type of double replacement).'
+        explanation: 'Rust formation is synthesis (4Fe + $3O_{2}$ → $2Fe_{2}O_{3}$). Spectator ions don\'t participate and are removed from net ionic equations. $F_{2}$ > $Cl_{2}$ in reactivity (higher in Group 17). Acid + base → salt + water is neutralization (a type of double replacement).'
       }
     },
     {
@@ -254,7 +254,7 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
               '$\\text{FeCl}_3 + 3\\text{NaOH} \\rightarrow \\text{FeO}_3 + 3\\text{NaCl} + 3\\text{H}_2$'
             ],
             correctAnswer: 1,
-            explanation: 'Double replacement: Fe³⁺ pairs with OH⁻ → Fe(OH)₃ (brown precipitate). Na⁺ pairs with Cl⁻ → NaCl. Balanced: FeCl₃ + 3NaOH → Fe(OH)₃↓ + 3NaCl. Fe: 1=1 ✓, Cl: 3=3 ✓, Na: 3=3 ✓, O: 3=3 ✓, H: 3=3 ✓.'
+            explanation: 'Double replacement: $Fe^{3+}$ pairs with $OH^{-}$ → $Fe(OH)_{3}$ (brown precipitate). $Na^{+}$ pairs with $Cl^{-}$ → NaCl. Balanced: $FeCl_{3}$ + 3NaOH → $Fe(OH)_{3}$↓ + 3NaCl. Fe: 1=1 ✓, Cl: 3=3 ✓, Na: 3=3 ✓, O: 3=3 ✓, H: 3=3 ✓.'
           },
           {
             question: 'On the AP exam, which piece of information is MOST important for predicting whether a single replacement reaction occurs?',

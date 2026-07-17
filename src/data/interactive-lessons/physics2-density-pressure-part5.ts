@@ -71,7 +71,7 @@ Because pressure increases with depth. The lower part of the wall experiences mo
               '6,280,000 N'
             ],
             correctAnswer: 1,
-            explanation: '$P = \\rho g h = (1000)(10)(200) = 2 \\times 10^6$ Pa. $A = \\pi(0.1)^2 \\approx 0.0314$ m². $F = PA = (2 \\times 10^6)(0.0314) \\approx 62{,}800$ N ≈ 63 kN. That\'s about 14,000 lbs on a tiny window!'
+            explanation: '$P = \\rho g h = (1000)(10)(200) = 2 \\times 10^6$ Pa. $A = \\pi(0.1)^2 \\approx 0.0314$ $m^{2}$. $F = PA = (2 \\times 10^6)(0.0314) \\approx 62{,}800$ N ≈ 63 kN. That\'s about 14,000 lbs on a tiny window!'
           },
           {
             question: 'Why must dam walls be thicker at the bottom?',
@@ -91,7 +91,7 @@ Because pressure increases with depth. The lower part of the wall experiences mo
       id: 'dp5-force-drill',
       type: 'input-boxes' as const,
       content: `
-**Force Calculation Drill** (use $g = 10$ m/s²)
+**Force Calculation Drill** (use $g = 10$ $m/s^{2}$)
 
 A rectangular tank (2.0 m wide × 1.0 m long × 1.5 m deep) is filled completely with water.
 
@@ -106,7 +106,7 @@ A rectangular tank (2.0 m wide × 1.0 m long × 1.5 m deep) is filled completely
         correctAnswers: ['30000', '7500', '22500'],
         hint1: 'Bottom: $F = \\rho g h \\times A = (1000)(10)(1.5)(2.0 \\times 1.0)$.',
         hint2: 'Average pressure on vertical wall: $P_{\\text{avg}} = \\frac{1}{2}\\rho g h = \\frac{1}{2}(1000)(10)(1.5)$.',
-        hint3: 'Wall area = $2.0 \\times 1.5 = 3.0$ m². $F = P_{\\text{avg}} \\times A = 7500 \\times 3.0$.',
+        hint3: 'Wall area = $2.0 \\times 1.5 = 3.0$ $m^{2}$. $F = P_{\\text{avg}} \\times A = 7500 \\times 3.0$.',
         explanation: 'Bottom: $F = (1000)(10)(1.5)(2.0) = 30{,}000$ N. Avg pressure on wall: $(1/2)(1000)(10)(1.5) = 7500$ Pa. Wall force: $7500 \\times (2.0 \\times 1.5) = 22{,}500$ N.'
       }
     },

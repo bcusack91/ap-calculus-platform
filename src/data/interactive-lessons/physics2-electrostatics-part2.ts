@@ -22,7 +22,7 @@ $$F_E = k\\frac{|q_1 q_2|}{r^2}$$
 
 Where:
 - $F_E$ = electrostatic force (N)
-- $k = 8.99 \\times 10^9$ N·m²/C² (Coulomb's constant)
+- $k = 8.99 \\times 10^9$ $N\\cdot m^{2}/C^{2}$ (Coulomb's constant)
 - $q_1, q_2$ = the two charges (C)
 - $r$ = distance between charge centers (m)
 
@@ -122,8 +122,8 @@ Use fractions like \$21/4\` or whole numbers like \$24\`.
       exercise: {
         boxes: 3,
         correctAnswers: ['1/4', '4', '1/2'],
-        hint1: 'Inverse-square: doubling distance → 1/(2²) = 1/4.',
-        hint2: 'Halving distance → 1/(1/2)² = 4.',
+        hint1: 'Inverse-square: doubling distance → $1/(2^{2})$ = 1/4.',
+        hint2: 'Halving distance → $1/(1/2)^{2}$ = 4.',
         hint3: 'Charge ×2 gives ×2. Distance ×2 gives ×1/4. Net: 2 × 1/4 = 1/2.',
         explanation: 'Combine direct and inverse-square factors by multiplying them together.'
       }
@@ -151,7 +151,7 @@ Use fractions like \$21/4\` or whole numbers like \$24\`.
             question: 'If distance changes from r to 3r, force magnitude changes by what factor?',
             options: ['1/9', '1/3', '3', '9'],
             correctAnswer: 0,
-            explanation: 'Inverse-square law: F ∝ 1/r². Distance tripled → F_new = F_old / 9.'
+            explanation: 'Inverse-square law: F ∝ $1/r^{2}$. Distance tripled → F_new = F_old / 9.'
           },
           {
             question: 'What does Coulomb\'s Law equation directly give you?',
@@ -169,11 +169,11 @@ Use fractions like \$21/4\` or whole numbers like \$24\`.
             options: [
               'They are about equal',
               'Gravity is much stronger',
-              'Electric force is about 10³⁶ times stronger',
+              'Electric force is about $10^{36}$ times stronger',
               'They can\'t be compared'
             ],
             correctAnswer: 2,
-            explanation: 'The electric force between fundamental particles is vastly stronger than gravity — by about 10³⁶. This is why electrostatics dominates at atomic scales.'
+            explanation: 'The electric force between fundamental particles is vastly stronger than gravity — by about $10^{36}$. This is why electrostatics dominates at atomic scales.'
           }
         ]
       }
@@ -195,7 +195,7 @@ Use fractions like \$21/4\` or whole numbers like \$24\`.
               'They used the wrong units'
             ],
             correctAnswer: 1,
-            explanation: 'The formula uses |q₁q₂|, giving a positive magnitude. Direction (attractive vs repulsive) is determined separately from the formula.'
+            explanation: 'The formula uses |$q_{1}q_{2}$|, giving a positive magnitude. Direction (attractive vs repulsive) is determined separately from the formula.'
           },
           {
             question: 'A student says: "I doubled the distance, so force is halved." What\'s the error?',
@@ -206,7 +206,7 @@ Use fractions like \$21/4\` or whole numbers like \$24\`.
               'You can\'t change the distance'
             ],
             correctAnswer: 1,
-            explanation: 'Common mistake! Force goes as 1/r², not 1/r. Doubling distance → force × (1/2²) = force/4.'
+            explanation: 'Common mistake! Force goes as $1/r^{2}$, not 1/r. Doubling distance → force × $(1/2^{2})$ = force/4.'
           }
         ]
       }

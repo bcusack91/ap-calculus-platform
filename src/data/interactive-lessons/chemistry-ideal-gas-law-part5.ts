@@ -59,7 +59,7 @@ $$P_{\\text{total}} = \\frac{n_{\\text{total}}RT}{V}$$
 
 ### Example
 
-> **Problem:** A 10.0 L container at 300 K holds 0.200 mol N₂ and 0.300 mol O₂.
+> **Problem:** A 10.0 L container at 300 K holds 0.200 mol $N_{2}$ and 0.300 mol $O_{2}$.
 
 > **Solution:**
 
@@ -135,7 +135,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
       exercise: {
         questions: [
           {
-            question: 'A container holds 1.0 mol of N₂ and 3.0 mol of H₂ at a total pressure of 2.0 atm. What is the partial pressure of H₂?',
+            question: 'A container holds 1.0 mol of $N_{2}$ and 3.0 mol of $H_{2}$ at a total pressure of 2.0 atm. What is the partial pressure of $H_{2}$?',
             options: [
               '0.50 atm',
               '1.0 atm',
@@ -157,7 +157,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             explanation: '$P_{\\text{gas}} = P_{\\text{total}} - P_{H_2O} = 758 - 31.8 = 726.2 \\approx 726$ mmHg.'
           },
           {
-            question: 'If the mole fraction of O₂ in air is 0.21, and the total atmospheric pressure is 1.00 atm, what is the partial pressure of O₂?',
+            question: 'If the mole fraction of $O_{2}$ in air is 0.21, and the total atmospheric pressure is 1.00 atm, what is the partial pressure of $O_{2}$?',
             options: [
               '0.21 atm',
               '0.79 atm',
@@ -190,12 +190,12 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             explanation: '$\\chi_{Ar} = 0.50/(0.50+1.50) = 0.25$. $P_{Ar} = 0.25 \\times 4.00 = 1.00$ atm.'
           },
           {
-            label: 'Pressure of dry H₂ (mmHg)',
+            label: 'Pressure of dry $H_{2}$ (mmHg)',
             correctAnswer: '725.2',
             explanation: '$P_{H_2} = 745 - 19.8 = 725.2$ mmHg.'
           },
           {
-            label: 'Partial pressure of CO₂ (atm)',
+            label: 'Partial pressure of $CO_{2}$ (atm)',
             correctAnswer: '0.75',
             explanation: '$P_{CO_2} = \\chi_{CO_2} \\times P_{\\text{total}} = 0.30 \\times 2.50 = 0.75$ atm.'
           }
@@ -243,7 +243,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
       exercise: {
         questions: [
           {
-            question: 'A tank contains 4.0 mol O₂ and 6.0 mol N₂ at 800 kPa total. The partial pressure of O₂ is:',
+            question: 'A tank contains 4.0 mol $O_{2}$ and 6.0 mol $N_{2}$ at 800 kPa total. The partial pressure of $O_{2}$ is:',
             options: [
               '200 kPa',
               '320 kPa',
@@ -320,7 +320,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             explanation: 'By definition, mole fractions always sum to exactly 1.0 (representing 100% of the mixture).'
           },
           {
-            question: `A diver's tank contains 80% N₂ and 20% O₂ at 200 atm total. The partial pressure of O₂ is:`,
+            question: `A diver's tank contains 80% $N_{2}$ and 20% $O_{2}$ at 200 atm total. The partial pressure of $O_{2}$ is:`,
             options: [
               '20 atm',
               '40 atm',

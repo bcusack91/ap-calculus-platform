@@ -53,7 +53,7 @@ When PE **increases**, gravity does **negative** work (energy is stored).
 
 ### Example 1: Free Fall
 
-A 2 kg ball falls from $h = 10$ m to $h = 3$ m. ($g = 10$ m/s²)
+A 2 kg ball falls from $h = 10$ m to $h = 3$ m. ($g = 10$ $m/s^{2}$)
 
 $$W_g = -\\Delta PE_g = -mg(h_f - h_i) = -2(10)(3 - 10) = -20(-7) = 140 \\text{ J}$$
 
@@ -85,7 +85,7 @@ The ball lost 40 J of KE going up (converting to PE).
       exercise: {
         questions: [
           {
-            question: 'A 5 kg ball falls freely from 12 m to 2 m. The work done by gravity is ($g = 10$ m/s²):',
+            question: 'A 5 kg ball falls freely from 12 m to 2 m. The work done by gravity is ($g = 10$ $m/s^{2}$):',
             options: [
               '-500 J',
               '-100 J',
@@ -126,7 +126,7 @@ The ball lost 40 J of KE going up (converting to PE).
       content: `
 **Work by Gravity Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 3 kg ball is dropped from 15 m. What is the work done by gravity as it falls to the ground (in J)?
 
@@ -187,7 +187,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 2 kg projectile is launched upward and reaches a maximum height of 20 m above its launch point. The work done by gravity from launch to maximum height is ($g = 10$ m/s²):',
+            question: 'A 2 kg projectile is launched upward and reaches a maximum height of 20 m above its launch point. The work done by gravity from launch to maximum height is ($g = 10$ $m/s^{2}$):',
             options: [
               '+400 J',
               '-400 J',

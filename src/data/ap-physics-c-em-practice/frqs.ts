@@ -92,7 +92,7 @@ A student wishes to determine an unknown capacitance $C$ by discharging it throu
       },
       {
         prompt: '(c) Using the data, compute the slope (use the first and last points) and determine $C$ in microfarads.',
-        rubric: '$\\ln(9.00) = 2.197$, $\\ln(0.74) = -0.301$. Slope $= (-0.301 - 2.197)/(5 - 0) = -2.498/5 = -0.500$ s⁻¹. $\\tau = 1/0.500 = 2.00$ s. $C = \\tau/R = 2.00/10000 = 2.0 \\times 10^{-4}$ F = 200 μF. 3 pts.',
+        rubric: '$\\ln(9.00) = 2.197$, $\\ln(0.74) = -0.301$. Slope $= (-0.301 - 2.197)/(5 - 0) = -2.498/5 = -0.500$ $s^{-1}$. $\\tau = 1/0.500 = 2.00$ s. $C = \\tau/R = 2.00/10000 = 2.0 \\times 10^{-4}$ F = 200 μF. 3 pts.',
       },
       {
         prompt: '(d) Identify ONE source of systematic error and ONE source of random error in this experiment. For each, briefly indicate how it could be reduced.',

@@ -71,7 +71,7 @@ If a value triples, the percent increase is 200%, not 300%. Many students make t
             explanation: `Percent increase = (9 − 2) / 2 × 100% = 7/2 × 100% = 350%.`
           },
           {
-            question: `Cell count goes from 1.5 × 10^4 to 6.0 × 10^4. What is the fold-change?`,
+            question: `Cell count goes from $1.5 \\times 10^{4}$ to $6.0 \\times 10^{4}$. What is the fold-change?`,
             options: [
               `4×`,
               `3×`,
@@ -79,7 +79,7 @@ If a value triples, the percent increase is 200%, not 300%. Many students make t
               `6×`
             ],
             correctAnswer: 0,
-            explanation: `Fold-change = 6.0 × 10^4 / 1.5 × 10^4 = 4×. The powers of 10 cancel.`
+            explanation: `Fold-change = $6.0 \\times 10^{4}$ / $1.5 \\times 10^{4}$ = 4×. The powers of 10 cancel.`
           },
           {
             question: `A student calculates percent change as (new − old) / new × 100%. What error are they making?`,

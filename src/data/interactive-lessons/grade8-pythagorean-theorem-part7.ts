@@ -42,11 +42,11 @@ $c = \\sqrt{64+225} = \\sqrt{289} = 17$ ✅
                     "options": [
                               "17",
                               "23",
-                              "√23",
+                              "$\\sqrt{23}$",
                               "289"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "64+225=289. √289=17."
+                    "explanation": "64+225=289. $\\sqrt{289}$=17."
           }
 ]
       }
@@ -70,7 +70,7 @@ $c = \\sqrt{64+225} = \\sqrt{289} = 17$ ✅
         hint1: "64+225.",
         hint2: "625−49.",
         hint3: "36+64.",
-        explanation: "1) √289=17. 2) √576=24. 3) √100=10."
+        explanation: "1) $\\sqrt{289}$=17. 2) $\\sqrt{576}$=24. 3) $\\sqrt{100}$=10."
       }
     },
     {
@@ -84,7 +84,7 @@ $c = \\sqrt{64+225} = \\sqrt{289} = 17$ ✅
         correctAnswers: ["Right triangles","Acute"],
         hint1: "Need a 90° angle.",
         hint2: "Greater → all acute angles.",
-        explanation: "Right triangles only. a²+b² > c² → acute."
+        explanation: "Right triangles only. $a^{2}+b^{2}$ > $c^{2}$ → acute."
       }
     },
     {
@@ -118,7 +118,7 @@ $c = \\sqrt{64+225} = \\sqrt{289} = 17$ ✅
                               "625"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "625−49=576. √576=24."
+                    "explanation": "625−49=576. $\\sqrt{576}$=24."
           }
 ]
       }

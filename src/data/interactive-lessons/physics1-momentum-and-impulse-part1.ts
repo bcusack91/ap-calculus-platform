@@ -181,9 +181,9 @@ This means doubling velocity:
           },
           {
             label: 'The SI unit of momentum is:',
-            options: ['kg·m/s²', 'kg·m/s', 'N·m', 'J'],
+            options: ['$kg\\cdot m/s^{2}$', 'kg·m/s', 'N·m', 'J'],
             correctIndex: 1,
-            explanation: 'Momentum $p = mv$ has units of kg·m/s. Note that kg·m/s² is the unit of force (Newtons).'
+            explanation: 'Momentum $p = mv$ has units of kg·m/s. Note that $kg\\cdot m/s^{2}$ is the unit of force (Newtons).'
           },
           {
             label: 'If you double an object\'s velocity, its momentum:',

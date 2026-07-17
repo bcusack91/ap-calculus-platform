@@ -14,14 +14,14 @@ export const bioEnzymesPart5Data = {
 | Type | Nature | Examples |
 |------|--------|----------|
 | **Inorganic cofactors** | Metal ions | $Zn^{2+}$, $Fe^{2+}$, $Mg^{2+}$, $Cu^{2+}$ |
-| **Coenzymes** | Organic molecules | NAD⁺, FAD, coenzyme A |
+| **Coenzymes** | Organic molecules | $NAD^{+}$, FAD, coenzyme A |
 | **Prosthetic groups** | Tightly bound | Heme group in hemoglobin |
 
 ### Important Coenzymes
 
 | Coenzyme | Derived from | Function |
 |----------|-------------|----------|
-| **NAD⁺** | Niacin (B3) | Electron carrier in respiration |
+| **$NAD^{+}$** | Niacin (B3) | Electron carrier in respiration |
 | **FAD** | Riboflavin (B2) | Electron carrier in Krebs cycle |
 | **Coenzyme A** | Pantothenic acid (B5) | Carries acetyl groups |
 | **ATP** | Adenine nucleotide | Energy currency |
@@ -36,7 +36,7 @@ export const bioEnzymesPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'NAD⁺ functions as a(n):',
+            question: '$NAD^{+}$ functions as a(n):',
             options: [
               'Enzyme',
               'Substrate',
@@ -44,7 +44,7 @@ export const bioEnzymesPart5Data = {
               'Competitive inhibitor'
             ],
             correctAnswer: 2,
-            explanation: 'NAD⁺ is a coenzyme that carries electrons (as NADH) during cellular respiration. It shuttles electrons to the electron transport chain.'
+            explanation: '$NAD^{+}$ is a coenzyme that carries electrons (as NADH) during cellular respiration. It shuttles electrons to the electron transport chain.'
           }
         ]
       }
@@ -100,7 +100,7 @@ Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). Wi
             options: ['substrates', 'cofactors', 'products', 'inhibitors']
           },
           {
-            label: 'NAD⁺ is derived from vitamin ___',
+            label: '$NAD^{+}$ is derived from vitamin ___',
             options: ['A', 'B3 (niacin)', 'C', 'D']
           },
           {
@@ -112,7 +112,7 @@ Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). Wi
         hint1: 'These non-protein helpers are often metal ions.',
         hint2: 'This B vitamin is essential for cellular respiration.',
         hint3: 'Holo = whole, complete.',
-        explanation: 'Metal ion helpers are cofactors. NAD⁺ comes from niacin (vitamin B3). A complete, active enzyme with its cofactor is a holoenzyme.'
+        explanation: 'Metal ion helpers are cofactors. $NAD^{+}$ comes from niacin (vitamin B3). A complete, active enzyme with its cofactor is a holoenzyme.'
       }
     }
   ]

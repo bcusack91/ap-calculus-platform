@@ -62,15 +62,15 @@ $$p = 1 - q = 1 - 0.02 = 0.98$$
       exercise: {
         questions: [
           {
-            question: 'Why do we start Hardy-Weinberg calculations with q² rather than p²?',
+            question: 'Why do we start Hardy-Weinberg calculations with $q^{2}$ rather than $p^{2}$?',
             options: [
               'Because q is always smaller than p',
               'Because homozygous recessive is the only genotype identifiable from phenotype alone',
               'Because the recessive allele is more common',
-              'Because q² is easier to calculate'
+              'Because $q^{2}$ is easier to calculate'
             ],
             correctAnswer: 1,
-            explanation: 'With complete dominance, individuals with the dominant phenotype can be either homozygous dominant (AA) or heterozygous (Aa) — you cannot distinguish them by looking. Only homozygous recessives (aa) can be identified by phenotype, so q² is the starting point.'
+            explanation: 'With complete dominance, individuals with the dominant phenotype can be either homozygous dominant (AA) or heterozygous (Aa) — you cannot distinguish them by looking. Only homozygous recessives (aa) can be identified by phenotype, so $q^{2}$ is the starting point.'
           },
           {
             question: 'In the CF example, approximately what fraction of the population are carriers (Ff)?',
@@ -126,16 +126,16 @@ $$p = 1 - 0.6 = 0.4$$
 In a class of 100 students, 36 cannot taste PTC paper (recessive phenotype). Calculate the allele and genotype frequencies.`,
       exercise: {
         dropdowns: [
-          { label: 'q² = ___', options: ['0.36', '0.64', '0.60', '0.16'] },
+          { label: '$q^{2}$ = ___', options: ['0.36', '0.64', '0.60', '0.16'] },
           { label: 'q = ___', options: ['0.36', '0.60', '0.40', '0.16'] },
           { label: 'p = ___', options: ['0.36', '0.60', '0.40', '0.64'] },
           { label: '2pq (carrier frequency) = ___', options: ['0.24', '0.48', '0.36', '0.16'] }
         ],
         correctAnswers: ['0.36', '0.60', '0.40', '0.48'],
-        hint1: 'q² = non-tasters / total = 36/100',
-        hint2: 'q = √(q²) = √(0.36)',
+        hint1: '$q^{2}$ = non-tasters / total = 36/100',
+        hint2: 'q = $\\sqrt{q^{2}}$ = $\\sqrt{0.36}$',
         hint3: 'p = 1 − q, then 2pq = 2 × p × q',
-        explanation: 'q² = 36/100 = 0.36. q = √0.36 = 0.6. p = 1 − 0.6 = 0.4. The carrier frequency 2pq = 2(0.4)(0.6) = 0.48, meaning 48% of the class are heterozygous tasters.'
+        explanation: '$q^{2}$ = 36/100 = 0.36. q = $\\sqrt{0.36}$ = 0.6. p = 1 − 0.6 = 0.4. The carrier frequency 2pq = 2(0.4)(0.6) = 0.48, meaning 48% of the class are heterozygous tasters.'
       }
     },
     {
@@ -148,7 +148,7 @@ In a class of 100 students, 36 cannot taste PTC paper (recessive phenotype). Cal
             question: 'In a population of 1,000 mice, 90 are albino (recessive). What is the frequency of the dominant allele (p)?',
             options: ['0.09', '0.30', '0.70', '0.91'],
             correctAnswer: 2,
-            explanation: 'q² = 90/1000 = 0.09. q = √0.09 = 0.3. p = 1 − 0.3 = 0.70.'
+            explanation: '$q^{2}$ = 90/1000 = 0.09. q = $\\sqrt{0.09}$ = 0.3. p = 1 − 0.3 = 0.70.'
           },
           {
             question: 'A common misconception is that dominant alleles are always more frequent than recessive alleles. Which statement is correct?',

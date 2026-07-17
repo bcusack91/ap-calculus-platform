@@ -142,7 +142,7 @@ This is why the contact point has zero velocity — it's the condition for no sl
         dropdowns: [
           {
             label: 'The rolling without slipping condition is:',
-            options: ['v = Rω', 'v = R/ω', 'v = ω/R', 'v = R²ω'],
+            options: ['v = Rω', 'v = R/ω', 'v = ω/R', 'v = $R^{2}\\omega$'],
             correctIndex: 0,
             explanation: 'The rolling without slipping condition is $v_{\\text{cm}} = R\\omega$.'
           },

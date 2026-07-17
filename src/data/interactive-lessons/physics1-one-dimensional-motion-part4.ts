@@ -74,11 +74,11 @@ Each equation is missing one variable. Choose based on what you **know** and wha
       content: `
 ## Worked Example
 
-**Problem:** A car starts from rest and accelerates at $3$ m/s² for $8$ s. Find (a) the final velocity and (b) the distance traveled.
+**Problem:** A car starts from rest and accelerates at $3$ $m/s^{2}$ for $8$ s. Find (a) the final velocity and (b) the distance traveled.
 
 **Solution:**
 
-Known: $v_0 = 0$, $a = 3$ m/s², $t = 8$ s, $x_0 = 0$
+Known: $v_0 = 0$, $a = 3$ $m/s^{2}$, $t = 8$ s, $x_0 = 0$
 
 **(a)** Use $v = v_0 + at$:
 $$v = 0 + (3)(8) = 24 \\text{ m/s}$$
@@ -112,13 +112,13 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
           {
             question: 'A car decelerates from 20 m/s to rest over a distance of 50 m. What is the acceleration?',
             options: [
-              '$-2$ m/s²',
-              '$-4$ m/s²',
-              '$+4$ m/s²',
-              '$-8$ m/s²'
+              '$-2$ $m/s^{2}$',
+              '$-4$ $m/s^{2}$',
+              '$+4$ $m/s^{2}$',
+              '$-8$ $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Using $v^2 = v_0^2 + 2a\\Delta x$: $0 = 20^2 + 2a(50)$, so $0 = 400 + 100a$, giving $a = -4$ m/s².'
+            explanation: 'Using $v^2 = v_0^2 + 2a\\Delta x$: $0 = 20^2 + 2a(50)$, so $0 = 400 + 100a$, giving $a = -4$ $m/s^{2}$.'
           },
           {
             question: 'The kinematic equations assume:',
@@ -140,11 +140,11 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
       content: `
 **Kinematic Equation Practice** 🧮
 
-1) A motorcycle accelerates from $v_0 = 5$ m/s at $a = 2$ m/s² for $t = 6$ s. What is the final velocity? (in m/s)
+1) A motorcycle accelerates from $v_0 = 5$ m/s at $a = 2$ $m/s^{2}$ for $t = 6$ s. What is the final velocity? (in m/s)
 
-2) A plane needs to reach 80 m/s to take off. If it starts from rest and accelerates at 4 m/s², what runway length does it need? (in meters)
+2) A plane needs to reach 80 m/s to take off. If it starts from rest and accelerates at 4 $m/s^{2}$, what runway length does it need? (in meters)
 
-3) A car traveling at 30 m/s brakes with $a = -6$ m/s². How long does it take to stop? (in seconds)
+3) A car traveling at 30 m/s brakes with $a = -6$ $m/s^{2}$. How long does it take to stop? (in seconds)
       `,
       exercise: {
         boxes: 3,
@@ -193,7 +193,7 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
       exercise: {
         questions: [
           {
-            question: 'A ball is thrown upward with $v_0 = 20$ m/s and decelerates at $10$ m/s² (due to gravity). How high does it go?',
+            question: 'A ball is thrown upward with $v_0 = 20$ m/s and decelerates at $10$ $m/s^{2}$ (due to gravity). How high does it go?',
             options: [
               '10 m',
               '20 m',
@@ -204,7 +204,7 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
             explanation: 'At the top, $v = 0$. Using $v^2 = v_0^2 + 2a\\Delta x$: $0 = 20^2 + 2(-10)(\\Delta x)$, so $0 = 400 - 20\\Delta x$, giving $\\Delta x = 20$ m.'
           },
           {
-            question: 'A particle starts from rest at the origin and has acceleration $a = 6$ m/s². What is its position at $t = 3$ s?',
+            question: 'A particle starts from rest at the origin and has acceleration $a = 6$ $m/s^{2}$. What is its position at $t = 3$ s?',
             options: [
               '9 m',
               '18 m',

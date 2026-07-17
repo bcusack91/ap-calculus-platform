@@ -29,7 +29,7 @@ This is why atmospheric pressure is sometimes stated as "760 mmHg" or "760 torr.
 
 ### Why Mercury?
 
-Mercury is very dense ($\\rho = 13{,}600$ kg/m³), so the column is only 76 cm tall. A water barometer would need a column over **10 meters** tall!
+Mercury is very dense ($\\rho = 13{,}600$ $kg/m^{3}$), so the column is only 76 cm tall. A water barometer would need a column over **10 meters** tall!
       `
     },
     {
@@ -131,9 +131,9 @@ Or equivalently: 1 mmHg ≈ 133.3 Pa.
       id: 'dp3-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Pressure Measurement Drill** (use $g = 10$ m/s²)
+**Pressure Measurement Drill** (use $g = 10$ $m/s^{2}$)
 
-A closed-end manometer has mercury ($\\rho = 13{,}600$ kg/m³) with a height of 0.50 m.
+A closed-end manometer has mercury ($\\rho = 13{,}600$ $kg/m^{3}$) with a height of 0.50 m.
 
 1) Gas pressure in Pa
 

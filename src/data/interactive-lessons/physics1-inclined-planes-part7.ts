@@ -96,19 +96,19 @@ $$a = \\frac{m_{\\text{hang}}g - m_{\\text{incline}}g\\sin\\theta}{m_{\\text{han
       content: `
 **AP-Style Calculations** 📝
 
-1) A block slides from rest down a frictionless 30° incline that is 10 m long. What is its speed at the bottom (in m/s)? ($g = 10$ m/s², $\\sin 30° = 0.50$)
+1) A block slides from rest down a frictionless 30° incline that is 10 m long. What is its speed at the bottom (in m/s)? ($g = 10$ $m/s^{2}$, $\\sin 30° = 0.50$)
 
-2) A 5 kg block on a 37° incline ($\\mu_k = 0.25$, $g = 10$ m/s²) slides down. What is the acceleration (in m/s²)? ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$)
+2) A 5 kg block on a 37° incline ($\\mu_k = 0.25$, $g = 10$ $m/s^{2}$) slides down. What is the acceleration $(in m/s^{2})$? ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$)
 
-3) What angle gives a frictionless incline acceleration of $5$ m/s²? ($g = 10$ m/s², $\\sin 30° = 0.50$)
+3) What angle gives a frictionless incline acceleration of $5$ $m/s^{2}$? ($g = 10$ $m/s^{2}$, $\\sin 30° = 0.50$)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['10', '4', '30'],
-        hint1: '$a = g\\sin 30° = 5$ m/s². $v^2 = 2(5)(10) = 100$.',
+        hint1: '$a = g\\sin 30° = 5$ $m/s^{2}$. $v^2 = 2(5)(10) = 100$.',
         hint2: '$a = g(\\sin 37° - \\mu_k\\cos 37°) = 10(0.60 - 0.20) = 4$.',
         hint3: '$g\\sin\\theta = 5$, so $\\sin\\theta = 0.50$, $\\theta = 30°$.',
-        explanation: '1) $v = \\sqrt{100} = 10$ m/s. 2) $a = 10(0.60 - 0.25 \\times 0.80) = 4$ m/s². 3) $\\sin\\theta = 5/10 = 0.50$, $\\theta = 30°$.'
+        explanation: '1) $v = \\sqrt{100} = 10$ m/s. 2) $a = 10(0.60 - 0.25 \\times 0.80) = 4$ $m/s^{2}$. 3) $\\sin\\theta = 5/10 = 0.50$, $\\theta = 30°$.'
       }
     },
     {
@@ -178,7 +178,7 @@ Weight decomposition + friction + kinematics. The ultimate application of all dy
       exercise: {
         questions: [
           {
-            question: 'A 2 kg block on a 53° frictionless incline is connected to a 3 kg hanging mass ($g = 10$ m/s², $\\sin 53° = 0.80$). What is the tension in the string?',
+            question: 'A 2 kg block on a 53° frictionless incline is connected to a 3 kg hanging mass ($g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$). What is the tension in the string?',
             options: [
               '16 N',
               '20.8 N',
@@ -186,18 +186,18 @@ Weight decomposition + friction + kinematics. The ultimate application of all dy
               '30 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = (m_2 g - m_1 g\\sin 53°)/(m_1 + m_2) = (30 - 16)/5 = 14/5 = 2.8$ m/s². $T = m_2(g - a) = 3(10 - 2.8) = 3(7.2) = 21.6 \\approx 22$ N.'
+            explanation: '$a = (m_2 g - m_1 g\\sin 53°)/(m_1 + m_2) = (30 - 16)/5 = 14/5 = 2.8$ $m/s^{2}$. $T = m_2(g - a) = 3(10 - 2.8) = 3(7.2) = 21.6 \\approx 22$ N.'
           },
           {
-            question: 'A block launched at 10 m/s up a 30° incline ($\\mu_k = 0.30$, $g = 10$ m/s²) travels up the slope. What is the deceleration? ($\\cos 30° = 0.866$)',
+            question: 'A block launched at 10 m/s up a 30° incline ($\\mu_k = 0.30$, $g = 10$ $m/s^{2}$) travels up the slope. What is the deceleration? ($\\cos 30° = 0.866$)',
             options: [
-              '5.0 m/s²',
-              '6.3 m/s²',
-              '7.6 m/s²',
-              '10.0 m/s²'
+              '5.0 $m/s^{2}$',
+              '6.3 $m/s^{2}$',
+              '7.6 $m/s^{2}$',
+              '10.0 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a = g(\\sin 30° + \\mu_k\\cos 30°) = 10(0.50 + 0.30 \\times 0.866) = 10(0.50 + 0.26) = 7.6$ m/s².'
+            explanation: '$a = g(\\sin 30° + \\mu_k\\cos 30°) = 10(0.50 + 0.30 \\times 0.866) = 10(0.50 + 0.26) = 7.6$ $m/s^{2}$.'
           }
         ]
       }

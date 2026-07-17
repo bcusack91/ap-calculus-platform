@@ -45,7 +45,7 @@ $d = \\sqrt{9+16} = 5$ ✅
                               "60"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(25+144)=√169=13."
+                    "explanation": "$\\sqrt{25+144}$=$\\sqrt{169}$=13."
           }
 ]
       }
@@ -66,7 +66,7 @@ $d = \\sqrt{9+16} = 5$ ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["13","4","2"],
-        hint1: "√(25+144).",
+        hint1: "$\\sqrt{25+144}$.",
         hint2: "(2+6)/2.",
         hint3: "6/3.",
         explanation: "1) 13. 2) 4. 3) 2."

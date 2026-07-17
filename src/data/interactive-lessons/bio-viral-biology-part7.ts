@@ -73,7 +73,7 @@ These questions mirror the style and difficulty of AP Biology free-response and 
               'Multiple drugs prevent the virus from entering cells'
             ],
             correctAnswer: 2,
-            explanation: 'HIV has an extremely high mutation rate (~10⁻⁴/nt), so resistance to any single drug can emerge rapidly. The probability of simultaneously acquiring resistance mutations to 3+ drugs acting on different targets is multiplicatively tiny (e.g., 10⁻⁴ × 10⁻⁴ × 10⁻⁴ = 10⁻¹²).'
+            explanation: 'HIV has an extremely high mutation rate (~$10^{-4}/nt$), so resistance to any single drug can emerge rapidly. The probability of simultaneously acquiring resistance mutations to 3+ drugs acting on different targets is multiplicatively tiny (e.g., $10^{-4}$ × $10^{-4}$ × $10^{-4}$ = $10^{-12}$).'
           }
         ]
       }
@@ -156,15 +156,15 @@ A new influenza strain with an H subtype never seen in humans emerges from a pig
 **Question**: Is DNA or protein the genetic material of bacteriophage T2?
 
 **Design**:
-1. Labeled phage DNA with ³²P (phosphorus is in DNA but not protein)
-2. Labeled phage protein with ³⁵S (sulfur is in protein but not DNA)
+1. Labeled phage DNA with $ {}^{32}P$ (phosphorus is in DNA but not protein)
+2. Labeled phage protein with $ {}^{35}S$ (sulfur is in protein but not DNA)
 3. Infected bacteria with labeled phages
 4. Separated phages from bacteria using a blender + centrifugation
 5. Measured radioactivity in pellet (bacteria) vs supernatant (phage ghosts)
 
 **Results**:
-- ³²P found in the **pellet** (bacteria) → DNA entered the cell
-- ³⁵S found in the **supernatant** (phage ghosts) → protein stayed outside
+- $ {}^{32}P$ found in the **pellet** (bacteria) → DNA entered the cell
+- $ {}^{35}S$ found in the **supernatant** (phage ghosts) → protein stayed outside
 
 **Conclusion**: DNA is the genetic material, not protein.
 
@@ -186,7 +186,7 @@ A new influenza strain with an H subtype never seen in humans emerges from a pig
       exercise: {
         dropdowns: [
           {
-            label: 'In the Hershey-Chase experiment, ³²P was used to label phage ___ because phosphorus is present in nucleic acids but not proteins',
+            label: 'In the Hershey-Chase experiment, $ {}^{32}P$ was used to label phage ___ because phosphorus is present in nucleic acids but not proteins',
             options: ['protein', 'DNA', 'lipids', 'carbohydrates']
           },
           {
@@ -204,9 +204,9 @@ A new influenza strain with an H subtype never seen in humans emerges from a pig
         ],
         correctAnswers: ['DNA', 'multiplicatively lower', 'conversion', 'pre-existing genetic variation'],
         hint1: 'Phosphorus is a component of the nucleic acid backbone (phosphodiester bonds).',
-        hint2: 'If probability of resistance to one drug is 10⁻⁴, what happens when you multiply several of those probabilities?',
+        hint2: 'If probability of resistance to one drug is $10^{-4}$, what happens when you multiply several of those probabilities?',
         hint3: 'The prophage converts the bacterium to a new phenotype — that\'s the term.',
-        explanation: '³²P labels DNA (phosphorus is in the backbone). Combination therapy is effective because the probability of multi-drug resistance is the product of individual probabilities (multiplicatively lower). Lysogenic conversion is when prophage genes change the host phenotype. Drug resistance arises because natural selection acts on pre-existing variants in the quasispecies population.'
+        explanation: '$ {}^{32}P$ labels DNA (phosphorus is in the backbone). Combination therapy is effective because the probability of multi-drug resistance is the product of individual probabilities (multiplicatively lower). Lysogenic conversion is when prophage genes change the host phenotype. Drug resistance arises because natural selection acts on pre-existing variants in the quasispecies population.'
       }
     }
   ]

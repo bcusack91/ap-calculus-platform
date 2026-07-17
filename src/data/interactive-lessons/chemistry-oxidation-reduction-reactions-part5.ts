@@ -39,21 +39,21 @@ export const chemOxidationReductionReactionsPart5Data = {
 
 | Rank | Metal | Oxidation | Notes |
 |------|-------|-----------|-------|
-| 1 | Li | Li → Li⁺ + e⁻ | Most active — reacts with cold water |
-| 2 | K | K → K⁺ + e⁻ | Reacts violently with water |
-| 3 | Ba | Ba → Ba²⁺ + 2e⁻ | Reacts with water |
-| 4 | Ca | Ca → Ca²⁺ + 2e⁻ | Reacts with water |
-| 5 | Na | Na → Na⁺ + e⁻ | Reacts with cold water |
-| 6 | Mg | Mg → Mg²⁺ + 2e⁻ | Reacts with steam |
-| 7 | Al | Al → Al³⁺ + 3e⁻ | Reacts with steam |
-| 8 | Zn | Zn → Zn²⁺ + 2e⁻ | Reacts with acids |
-| 9 | Fe | Fe → Fe²⁺ + 2e⁻ | Reacts with acids |
-| 10 | Ni | Ni → Ni²⁺ + 2e⁻ | Reacts with acids |
-| — | **H₂** | **H₂ → 2H⁺ + 2e⁻** | **Reference point** |
-| 11 | Cu | Cu → Cu²⁺ + 2e⁻ | Does NOT react with most acids |
-| 12 | Ag | Ag → Ag⁺ + e⁻ | Very unreactive |
-| 13 | Pt | Pt → Pt²⁺ + 2e⁻ | Noble metal |
-| 14 | Au | Au → Au³⁺ + 3e⁻ | Least active — noble metal |
+| 1 | Li | Li → $Li^{+}$ + $e^{-}$ | Most active — reacts with cold water |
+| 2 | K | K → $K^{+}$ + $e^{-}$ | Reacts violently with water |
+| 3 | Ba | Ba → $Ba^{2+}$ + $2e^{-}$ | Reacts with water |
+| 4 | Ca | Ca → $Ca^{2+}$ + $2e^{-}$ | Reacts with water |
+| 5 | Na | Na → $Na^{+}$ + $e^{-}$ | Reacts with cold water |
+| 6 | Mg | Mg → $Mg^{2+}$ + $2e^{-}$ | Reacts with steam |
+| 7 | Al | Al → $Al^{3+}$ + $3e^{-}$ | Reacts with steam |
+| 8 | Zn | Zn → $Zn^{2+}$ + $2e^{-}$ | Reacts with acids |
+| 9 | Fe | Fe → $Fe^{2+}$ + $2e^{-}$ | Reacts with acids |
+| 10 | Ni | Ni → $Ni^{2+}$ + $2e^{-}$ | Reacts with acids |
+| — | **$H_{2}$** | **$H_{2}$ → $2H^{+}$ + $2e^{-}$** | **Reference point** |
+| 11 | Cu | Cu → $Cu^{2+}$ + $2e^{-}$ | Does NOT react with most acids |
+| 12 | Ag | Ag → $Ag^{+}$ + $e^{-}$ | Very unreactive |
+| 13 | Pt | Pt → $Pt^{2+}$ + $2e^{-}$ | Noble metal |
+| 14 | Au | Au → $Au^{3+}$ + $3e^{-}$ | Least active — noble metal |
       `
     },
     {
@@ -75,11 +75,11 @@ $$\\boxed{\\text{Less active metal} + \\text{More active metal ion} \\rightarrow
 
 ### Examples
 
-**Zn(s) + CuSO₄(aq) → ?**
+**Zn(s) + $CuSO_{4}(aq)$ → ?**
 - Zn is ABOVE Cu in the series → **reaction occurs**
 $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
 
-**Cu(s) + ZnSO₄(aq) → ?**
+**Cu(s) + $ZnSO_{4}(aq)$ → ?**
 - Cu is BELOW Zn in the series → **no reaction (NR)**
 
 
@@ -87,11 +87,11 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 ### Metals and Acids
 
-Metals **above hydrogen** in the activity series react with dilute acids (HCl, H₂SO₄) to produce H₂ gas:
+Metals **above hydrogen** in the activity series react with dilute acids (HCl, $H_{2}SO_{4}$) to produce $H_{2}$ gas:
 
 $$\\text{Zn}(s) + 2\\text{HCl}(aq) \\rightarrow \\text{ZnCl}_2(aq) + \\text{H}_2(g)$$
 
-> ⚠️ **Warning:** Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or H₂SO₄.
+> ⚠️ **Warning:** Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or $H_{2}SO_{4}$.
       `
     },
     {
@@ -116,17 +116,17 @@ Steel (mostly Fe) is coated with zinc (Zn). Since Zn is more active than Fe, the
 
 ### Copper Pennies in Silver Nitrate
 
-When a copper penny is placed in AgNO₃ solution:
+When a copper penny is placed in $AgNO_{3}$ solution:
 $$\\text{Cu}(s) + 2\\text{Ag}^+(aq) \\rightarrow \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$$
 
-Cu is above Ag → reaction occurs. Silver crystals grow on the penny while the solution turns blue (Cu²⁺).
+Cu is above Ag → reaction occurs. Silver crystals grow on the penny while the solution turns blue $(Cu^{2+})$.
 
 
 ---
 
 ### Dissolving Gold
 
-Gold requires **aqua regia** (a mixture of HNO₃ and HCl) — ordinary acids cannot oxidize it.
+Gold requires **aqua regia** (a mixture of $HNO_{3}$ and HCl) — ordinary acids cannot oxidize it.
       `
     },
     {
@@ -138,15 +138,15 @@ Gold requires **aqua regia** (a mixture of HNO₃ and HCl) — ordinary acids ca
       exercise: {
         questions: [
           {
-            question: 'A strip of zinc metal is placed in a solution of CuSO₄. What happens?',
+            question: 'A strip of zinc metal is placed in a solution of $CuSO_{4}$. What happens?',
             options: [
               'No reaction — Cu is more active than Zn',
               'Zn dissolves and Cu metal deposits — Zn is more active than Cu',
               'Both metals dissolve',
-              'ZnSO₄ precipitates'
+              '$ZnSO_{4}$ precipitates'
             ],
             correctAnswer: 1,
-            explanation: 'Zn is above Cu in the activity series, so Zn can displace Cu²⁺ from solution. Zn → Zn²⁺ (dissolves) and Cu²⁺ → Cu (deposits as solid copper).'
+            explanation: 'Zn is above Cu in the activity series, so Zn can displace $Cu^{2+}$ from solution. Zn → $Zn^{2+}$ (dissolves) and $Cu^{2+}$ → Cu (deposits as solid copper).'
           },
           {
             question: 'Which metal will NOT react with dilute HCl?',
@@ -157,7 +157,7 @@ Gold requires **aqua regia** (a mixture of HNO₃ and HCl) — ordinary acids ca
               'Copper'
             ],
             correctAnswer: 3,
-            explanation: 'Copper (Cu) is below hydrogen in the activity series. It cannot reduce H⁺ to H₂, so it does not react with dilute HCl. Zn, Fe, and Mg are all above H and will react.'
+            explanation: 'Copper (Cu) is below hydrogen in the activity series. It cannot reduce $H^{+}$ to $H_{2}$, so it does not react with dilute HCl. Zn, Fe, and Mg are all above H and will react.'
           },
           {
             question: 'If you place an iron nail into a solution of aluminum sulfate, what occurs?',
@@ -165,10 +165,10 @@ Gold requires **aqua regia** (a mixture of HNO₃ and HCl) — ordinary acids ca
               'Fe displaces Al — iron is more active',
               'No reaction — iron is less active than aluminum',
               'Both metals react with sulfate',
-              'A precipitate of FeSO₄ forms'
+              'A precipitate of $FeSO_{4}$ forms'
             ],
             correctAnswer: 1,
-            explanation: 'Aluminum (Al) is above iron (Fe) in the activity series. Fe cannot displace Al³⁺ from solution. A less active metal cannot displace a more active metal\'s ions.'
+            explanation: 'Aluminum (Al) is above iron (Fe) in the activity series. Fe cannot displace $Al^{3+}$ from solution. A less active metal cannot displace a more active metal\'s ions.'
           },
           {
             question: 'Galvanized steel uses zinc coating to protect iron because:',
@@ -192,9 +192,9 @@ Gold requires **aqua regia** (a mixture of HNO₃ and HCl) — ordinary acids ca
 
 Will a reaction occur? Type **yes** or **no**.
 
-**1)** Ag(s) + CuSO₄(aq) → ?
+**1)** Ag(s) + $CuSO_{4}(aq)$ → ?
 
-**2)** Mg(s) + FeCl₂(aq) → ?
+**2)** Mg(s) + $FeCl_{2}(aq)$ → ?
 
 **3)** Fe(s) + HCl(aq) → ?
       `,
@@ -204,7 +204,7 @@ Will a reaction occur? Type **yes** or **no**.
         hint1: 'Is Ag above or below Cu in the activity series?',
         hint2: 'Is Mg above or below Fe in the activity series?',
         hint3: 'Is Fe above or below H in the activity series?',
-        explanation: '1) No — Ag is below Cu in the series; it cannot displace Cu²⁺. 2) Yes — Mg is above Fe; Mg(s) + FeCl₂(aq) → MgCl₂(aq) + Fe(s). 3) Yes — Fe is above H; Fe(s) + 2HCl(aq) → FeCl₂(aq) + H₂(g).'
+        explanation: '1) No — Ag is below Cu in the series; it cannot displace $Cu^{2+}$. 2) Yes — Mg is above Fe; Mg(s) + $FeCl_{2}(aq)$ → $MgCl_{2}(aq)$ + Fe(s). 3) Yes — Fe is above H; Fe(s) + 2HCl(aq) → $FeCl_{2}(aq)$ + $H_{2}(g)$.'
       }
     },
     {
@@ -234,7 +234,7 @@ Will a reaction occur? Type **yes** or **no**.
         ],
         correctAnswers: ['loses electrons easily', 'do not react with dilute acids', 'above', 'the least reactive metal listed'],
         hint1: 'Active metals are strong reducing agents — they give up electrons.',
-        hint2: 'Cu, Ag, Pt, Au cannot reduce H⁺ to H₂.',
+        hint2: 'Cu, Ag, Pt, Au cannot reduce $H^{+}$ to $H_{2}$.',
         hint3: 'More active = higher in the series = can displace lower ones.',
         explanation: 'Active metals lose electrons easily (strong reducing agents). Metals below H don\'t react with dilute acids. The displacing metal must be above the ion\'s metal in the series. Gold is the least reactive metal — it\'s nearly impossible to oxidize.'
       }
@@ -256,10 +256,10 @@ Will a reaction occur? Type **yes** or **no**.
               '$\\text{Cu}(s) + \\text{NaCl}(aq) \\rightarrow$'
             ],
             correctAnswer: 2,
-            explanation: 'Zn is above Pb in the activity series. Zn(s) + Pb(NO₃)₂(aq) → Zn(NO₃)₂(aq) + Pb(s). Au and Ag cannot displace Cu or react with dilute acids. Cu cannot displace Na.'
+            explanation: 'Zn is above Pb in the activity series. Zn(s) + $Pb(NO_{3})_{2}(aq)$ → $Zn(NO_{3})_{2}(aq)$ + Pb(s). Au and Ag cannot displace Cu or react with dilute acids. Cu cannot displace Na.'
           },
           {
-            question: 'A student places metal X into a solution of YCl₂ and observes metal Y depositing on X. This means:',
+            question: 'A student places metal X into a solution of $YCl_{2}$ and observes metal Y depositing on X. This means:',
             options: [
               'Y is more active than X',
               'X is more active than Y',
@@ -267,7 +267,7 @@ Will a reaction occur? Type **yes** or **no**.
               'No redox reaction occurred'
             ],
             correctAnswer: 1,
-            explanation: 'Metal X displaced Y²⁺ from solution, meaning X is more active (higher in the activity series) than Y. X was oxidized and Y²⁺ was reduced to solid Y.'
+            explanation: 'Metal X displaced $Y^{2+}$ from solution, meaning X is more active (higher in the activity series) than Y. X was oxidized and $Y^{2+}$ was reduced to solid Y.'
           }
         ]
       }

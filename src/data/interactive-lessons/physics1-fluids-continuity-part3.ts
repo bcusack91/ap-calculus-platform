@@ -93,7 +93,7 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
 
 2) A garden hose of inner diameter 2.0 cm runs at 1.0 m/s. Nozzle diameter 0.50 cm. Speed at nozzle (m/s)?
 
-3) A pipe with $A_1 = 6.0\\times10^{-3}$ m² and $v_1 = 4.0$ m/s narrows to $A_2 = 1.0\\times10^{-3}$ m². New speed (m/s)?
+3) A pipe with $A_1 = 6.0\\times10^{-3}$ $m^{2}$ and $v_1 = 4.0$ m/s narrows to $A_2 = 1.0\\times10^{-3}$ $m^{2}$. New speed (m/s)?
       `,
       exercise: {
         boxes: 3,
@@ -159,7 +159,7 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
             explanation: 'Speed × $(d_1/d_2)^2 = 1.5 \\times 9 = 13.5$ m/s.'
           },
           {
-            question: 'A pipe carries 0.030 m³/s of water. In a section of radius 5 cm, the speed is approximately:',
+            question: 'A pipe carries 0.030 $m^{3}/s$ of water. In a section of radius 5 cm, the speed is approximately:',
             options: [
               '0.038 m/s',
               '3.8 m/s',
@@ -167,7 +167,7 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
               '380 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ m². $v = Q/A = 0.030/7.85\\times10^{-3} ≈ 3.8$ m/s.'
+            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ $m^{2}$. $v = Q/A = 0.030/7.85\\times10^{-3} ≈ 3.8$ m/s.'
           }
         ]
       }

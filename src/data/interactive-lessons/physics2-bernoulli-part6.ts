@@ -72,7 +72,7 @@ Then: $Q = A_1 v_1$
       exercise: {
         questions: [
           {
-            question: 'A Pitot tube reading shows stagnation pressure of 103 kPa and static pressure of 101 kPa. With $\\rho_{\\text{air}} = 1.2$ kg/m³, the airspeed is:',
+            question: 'A Pitot tube reading shows stagnation pressure of 103 kPa and static pressure of 101 kPa. With $\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$, the airspeed is:',
             options: [
               '18 m/s',
               '41 m/s',
@@ -134,7 +134,7 @@ $$v = \\sqrt{\\frac{2P}{\\rho}} = \\sqrt{\\frac{2(300{,}000)}{1000}} = 24.5 \\te
       id: 'be6-building-drill',
       type: 'input-boxes' as const,
       content: `
-**Building Water Pressure** ($\\rho = 1000$ kg/m³, $g = 10$ m/s²)
+**Building Water Pressure** ($\\rho = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$)
 
 Street main pressure: 400,000 Pa. The pipe (constant area) goes up to the 10th floor, 30 m above street level. (Same pipe area, so $v$ stays constant.)
 

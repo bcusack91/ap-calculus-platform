@@ -58,13 +58,13 @@ Engineers use **specific impulse** $I_{sp}$ to measure engine efficiency:
 
 $$I_{sp} = \\frac{v_e}{g_0}$$
 
-where $g_0 = 9.81$ m/s². Units: seconds.
+where $g_0 = 9.81$ $m/s^{2}$. Units: seconds.
 
 | Engine Type | $I_{sp}$ (s) | $v_e$ (m/s) |
 |:---|:---|:---|
 | Solid rocket | 250 | 2450 |
 | Liquid (kerosene/LOX) | 310 | 3040 |
-| Liquid (H₂/LOX) | 450 | 4410 |
+| Liquid $(H_{2}/LOX)$ | 450 | 4410 |
 | Ion thruster | 3000 | 29,400 |
 
 Thrust in terms of $I_{sp}$: $F = I_{sp} \\cdot g_0 \\cdot \\dot{m}$`

@@ -29,7 +29,7 @@ $$a_{\\text{avg}} = \\frac{\\Delta v}{\\Delta t} = \\frac{v_f - v_i}{t_f - t_i}$
 | Property | Description |
 |----------|-------------|
 | **Vector quantity** | Has magnitude and direction (sign) |
-| **SI unit** | m/s² (meters per second squared) |
+| **SI unit** | $m/s^{2}$ (meters per second squared) |
 | **Meaning** | How much velocity changes each second |
 
 ### Example
@@ -83,16 +83,16 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
           {
             question: 'A car moves east at 25 m/s and brakes to 5 m/s in 4 s. Taking east as positive, what is the average acceleration?',
             options: [
-              '+5 m/s²',
-              '-5 m/s²',
-              '+7.5 m/s²',
-              '-7.5 m/s²'
+              '+5 $m/s^{2}$',
+              '-5 $m/s^{2}$',
+              '+7.5 $m/s^{2}$',
+              '-7.5 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a = (v_f - v_i)/\\Delta t = (5 - 25)/4 = -20/4 = -5$ m/s². The negative sign indicates the acceleration is directed west (opposite to the motion), causing the car to slow down.'
+            explanation: '$a = (v_f - v_i)/\\Delta t = (5 - 25)/4 = -20/4 = -5$ $m/s^{2}$. The negative sign indicates the acceleration is directed west (opposite to the motion), causing the car to slow down.'
           },
           {
-            question: 'An object has velocity $v = -8$ m/s and acceleration $a = -3$ m/s². The object is:',
+            question: 'An object has velocity $v = -8$ m/s and acceleration $a = -3$ $m/s^{2}$. The object is:',
             options: [
               'Speeding up in the negative direction',
               'Slowing down in the negative direction',
@@ -103,7 +103,7 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
             explanation: 'When velocity and acceleration have the same sign (both negative here), the object speeds up. It\'s moving in the negative direction and getting faster.'
           },
           {
-            question: 'An object has velocity $v = +6$ m/s and acceleration $a = -2$ m/s². After 1 second, the velocity is:',
+            question: 'An object has velocity $v = +6$ m/s and acceleration $a = -2$ $m/s^{2}$. After 1 second, the velocity is:',
             options: [
               '+8 m/s',
               '+4 m/s',
@@ -122,11 +122,11 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
       content: `
 **Acceleration Calculations** 🧮
 
-1) A train accelerates from rest to 36 m/s in 12 s. What is the average acceleration? (in m/s²)
+1) A train accelerates from rest to 36 m/s in 12 s. What is the average acceleration? $(in m/s^{2})$
 
-2) A ball rolling at 14 m/s comes to rest in 7 s. What is the average acceleration? (in m/s², include the sign)
+2) A ball rolling at 14 m/s comes to rest in 7 s. What is the average acceleration? (in $m/s^{2}$, include the sign)
 
-3) An object has acceleration $a = 4$ m/s² and initial velocity $v_i = 3$ m/s. What is the velocity after 5 s? (in m/s)
+3) An object has acceleration $a = 4$ $m/s^{2}$ and initial velocity $v_i = 3$ m/s. What is the velocity after 5 s? (in m/s)
       `,
       exercise: {
         boxes: 3,
@@ -134,7 +134,7 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
         hint1: '$a = \\Delta v / \\Delta t = (36 - 0)/12$',
         hint2: '$a = (v_f - v_i)/\\Delta t = (0 - 14)/7$',
         hint3: '$v_f = v_i + a \\cdot t = 3 + 4(5)$',
-        explanation: '1) $a = (36 - 0)/12 = 3$ m/s². 2) $a = (0 - 14)/7 = -2$ m/s². The negative sign indicates deceleration. 3) $v_f = 3 + 4(5) = 3 + 20 = 23$ m/s.'
+        explanation: '1) $a = (36 - 0)/12 = 3$ $m/s^{2}$. 2) $a = (0 - 14)/7 = -2$ $m/s^{2}$. The negative sign indicates deceleration. 3) $v_f = 3 + 4(5) = 3 + 20 = 23$ m/s.'
       }
     },
     {
@@ -153,9 +153,9 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
           },
           {
             label: 'The SI unit of acceleration is:',
-            options: ['m/s', 'm/s²', 'km/h', 'N'],
+            options: ['m/s', '$m/s^{2}$', 'km/h', 'N'],
             correctIndex: 1,
-            explanation: 'Acceleration = change in velocity / time = (m/s)/s = m/s².'
+            explanation: 'Acceleration = change in velocity / time = (m/s)/s = $m/s^{2}$.'
           },
           {
             label: 'If acceleration is zero, the object must be:',
@@ -177,16 +177,16 @@ Both velocity and acceleration are negative → the car is **speeding up** (goin
           {
             question: 'A bicycle goes from 2 m/s to 8 m/s in 3 s, then from 8 m/s to 5 m/s in 2 s. What is the average acceleration over the entire 5 s?',
             options: [
-              '0.6 m/s²',
-              '1.0 m/s²',
-              '2.0 m/s²',
-              '3.0 m/s²'
+              '0.6 $m/s^{2}$',
+              '1.0 $m/s^{2}$',
+              '2.0 $m/s^{2}$',
+              '3.0 $m/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'For the entire interval: $a_{\\text{avg}} = (v_f - v_i)/\\Delta t = (5 - 2)/5 = 3/5 = 0.6$ m/s². Only the initial and final velocities and total time matter for the overall average.'
+            explanation: 'For the entire interval: $a_{\\text{avg}} = (v_f - v_i)/\\Delta t = (5 - 2)/5 = 3/5 = 0.6$ $m/s^{2}$. Only the initial and final velocities and total time matter for the overall average.'
           },
           {
-            question: 'A car is moving at $-15$ m/s. It has an acceleration of $+3$ m/s². After 5 seconds, the car will be:',
+            question: 'A car is moving at $-15$ m/s. It has an acceleration of $+3$ $m/s^{2}$. After 5 seconds, the car will be:',
             options: [
               'Moving at $-30$ m/s',
               'Moving at $0$ m/s',

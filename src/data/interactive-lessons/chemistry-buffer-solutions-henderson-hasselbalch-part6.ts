@@ -177,18 +177,18 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
         dropdowns: [
           {
             label: 'Adding exactly half the moles of strong base to a weak acid creates a buffer at',
-            options: ['pH = 7', 'pH = pKₐ', 'pH = pK_b', 'pH = 0']
+            options: ['pH = 7', 'pH = $pK_{a}$', 'pH = pK_b', 'pH = 0']
           },
           {
             label: 'The Henderson-Hasselbalch equation CANNOT be used when',
-            options: ['[A⁻] = [HA]', 'the buffer is destroyed', 'pH = pKₐ', 'the solution is dilute']
+            options: ['[$A^{-}$] = [HA]', 'the buffer is destroyed', 'pH = $pK_{a}$', 'the solution is dilute']
           },
           {
             label: 'In an AP free-response buffer problem, always show',
             options: ['only the final pH', 'the stoichiometry table then Henderson-Hasselbalch', 'just the formula', 'a diagram']
           }
         ],
-        correctAnswers: ['pH = pKₐ', 'the buffer is destroyed', 'the stoichiometry table then Henderson-Hasselbalch'],
+        correctAnswers: ['pH = $pK_{a}$', 'the buffer is destroyed', 'the stoichiometry table then Henderson-Hasselbalch'],
         hint1: 'Half neutralization gives 1:1 ratio.',
         hint2: 'A destroyed buffer has only one component — it\'s no longer a buffer.',
         hint3: 'AP graders want to see your work: stoichiometry first, then equilibrium.',

@@ -107,7 +107,7 @@ $$T = R_{45°} \\cdot \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} = \\begin
             explanation: '$(x,y) \\to (-x,-y)$: rotation by $180°$ (also equals point reflection through origin).'
           },
           {
-            question: 'To apply T₁ then T₂: the combined matrix is:',
+            question: 'To apply $T_{1}$ then $T_{2}$: the combined matrix is:',
             options: ['$T_1 T_2$', '$T_2 T_1$', '$T_1 + T_2$', '$T_1 - T_2$'],
             correctAnswer: 1,
             explanation: 'Right-to-left: $T_2 \\cdot T_1 \\cdot \\vec{v}$ applies $T_1$ first, then $T_2$.'

@@ -37,7 +37,7 @@ $$v_{\\text{design}} = \\sqrt{200(10)\\tan 15°} = \\sqrt{2000(0.268)} = \\sqrt{
     {
       id: 'cm3-mcq1',
       type: 'mcq' as const,
-      question: 'A frictionless banked curve has $r = 100$ m and $\\beta = 30°$. What speed allows a car to navigate without sliding? ($g = 10$ m/s²)',
+      question: 'A frictionless banked curve has $r = 100$ m and $\\beta = 30°$. What speed allows a car to navigate without sliding? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{1000\\tan 30°} \\approx 24.0$ m/s',
         '$\\sqrt{1000\\sin 30°} \\approx 22.4$ m/s',
@@ -83,7 +83,7 @@ This range widens with more friction and narrows to a single value ($v_{\\text{d
     {
       id: 'cm3-mcq2',
       type: 'mcq' as const,
-      question: 'A banked curve with $\\beta = 20°$, $r = 150$ m, $\\mu_s = 0.3$. What is $v_{\\max}$? ($g = 10$ m/s²)',
+      question: 'A banked curve with $\\beta = 20°$, $r = 150$ m, $\\mu_s = 0.3$. What is $v_{\\max}$? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{1500 \\cdot \\frac{\\tan 20° + 0.3}{1 - 0.3\\tan 20°}} \\approx 33.0$ m/s',
         '$\\sqrt{1500\\tan 20°} \\approx 23.4$ m/s',

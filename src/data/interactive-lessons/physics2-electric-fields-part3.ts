@@ -154,7 +154,7 @@ This is why lightning rods work — charge concentrates at the sharp tip, creati
           },
           {
             id: 'fl2',
-            label: 'Region A has 12 field lines per cm². Region B has 3 lines per cm². Field strength comparison:',
+            label: 'Region A has 12 field lines per $cm^{2}$. Region B has 3 lines per $cm^{2}$. Field strength comparison:',
             options: ['A = B', 'A is 4× stronger than B', 'B is 4× stronger than A', 'Cannot determine'],
             correctAnswer: 'A is 4× stronger than B'
           },

@@ -70,8 +70,8 @@ AC = BC → **Isosceles** ✅
         correctAnswers: ["4","3","5"],
         hint1: "|4−0|.",
         hint2: "|3−0|.",
-        hint3: "√(9+16).",
-        explanation: "1) 4. 2) 3. 3) √25=5. This is a 3-4-5 right triangle!"
+        hint3: "$\\sqrt{9+16}$.",
+        explanation: "1) 4. 2) 3. 3) $\\sqrt{25}$=5. This is a 3-4-5 right triangle!"
       }
     },
     {

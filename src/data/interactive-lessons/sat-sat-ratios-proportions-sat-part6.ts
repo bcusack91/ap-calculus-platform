@@ -175,7 +175,7 @@ The drain slows down the filling but doesn't stop it (fill rate > drain rate).`
 | Work (together) | $1/a + 1/b = 1/t$ |
 | Work (one starts early) | Find remaining work, then use combined rate |
 | Fill & drain | Subtract drain rate: $1/a - 1/b$ |
-| Mixture | Amount₁ + Amount₂ = Amount_mix |
+| Mixture | $Amount_{1}$ + $Amount_{2}$ = Amount_mix |
 | Workers × time | Total work = workers × time (constant) |
 
 - **Never add times** — always convert to rates first

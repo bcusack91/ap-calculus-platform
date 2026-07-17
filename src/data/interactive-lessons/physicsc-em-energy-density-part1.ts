@@ -4,7 +4,7 @@ export const physCEMEnergyDenPart1Data = {
     {
       id: 'eden1-intro',
       type: 'text' as const,
-      content: `# Energy Density — Part 1: Energy Stored in Capacitors (½CV²)
+      content: `# Energy Density — Part 1: Energy Stored in Capacitors $(\\tfrac{1}{2} CV^{2})$
 
 A charged capacitor stores electric potential energy in the electric field between its plates. There are three equivalent expressions:
 

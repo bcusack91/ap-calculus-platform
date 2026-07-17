@@ -43,7 +43,7 @@ $(4 + 1)^2 - 3 = 5^2 - 3 = 25 - 3 = 22$ ✅
                               "7"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "(5)² = 25."
+                    "explanation": "$(5)^{2}$ = 25."
           }
 ]
       }
@@ -66,7 +66,7 @@ $(4 + 1)^2 - 3 = 5^2 - 3 = 25 - 3 = 22$ ✅
         correctAnswers: ["25","8","17"],
         hint1: "Inside first: 2+3=5.",
         hint2: "Inside first: 6−2=4.",
-        hint3: "Exponent first: 4²=16.",
+        hint3: "Exponent first: $4^{2}$=16.",
         explanation: "1) 25. 2) 8. 3) 17."
       }
     },
@@ -81,7 +81,7 @@ $(4 + 1)^2 - 3 = 5^2 - 3 = 25 - 3 = 22$ ✅
         correctAnswers: ["First (innermost out)","3 × 3"],
         hint1: "P comes first in PEMDAS.",
         hint2: "Base × base.",
-        explanation: "Parentheses first. 3² = 3×3 = 9."
+        explanation: "Parentheses first. $3^{2}$ = 3×3 = 9."
       }
     },
     {
@@ -92,9 +92,9 @@ $(4 + 1)^2 - 3 = 5^2 - 3 = 25 - 3 = 22$ ✅
 
 | # | Expression | Value |
 |---|-----------|-------|
-| 1 | (2+3)² | 25 |
+| 1 | $(2+3)^{2}$ | 25 |
 | 2 | 2(6−2) | 8 |
-| 3 | 4² + 1 | 17 |
+| 3 | $4^{2}$ + 1 | 17 |
     
     `
     },

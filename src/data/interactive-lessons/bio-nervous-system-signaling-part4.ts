@@ -14,7 +14,7 @@ Once an action potential is triggered at the axon hillock, it must travel the fu
 
 In unmyelinated axons, the action potential propagates by **continuous conduction**:
 
-1. Na⁺ rushes into the cell at the site of the action potential.
+1. $Na^{+}$ rushes into the cell at the site of the action potential.
 2. These positive ions spread to the adjacent membrane region (local current).
 3. The adjacent region depolarizes to threshold and fires its own action potential.
 4. This process repeats **sequentially** along every segment of the axon membrane.
@@ -26,11 +26,11 @@ In unmyelinated axons, the action potential propagates by **continuous conductio
 In myelinated axons, the action potential propagates by **saltatory conduction** (Latin *saltare* = "to jump"):
 
 1. The myelin sheath **insulates** the axon, preventing ion flow across myelinated segments.
-2. Action potentials can only occur at the **nodes of Ranvier**, where the membrane is exposed and rich in voltage-gated Na⁺ channels.
+2. Action potentials can only occur at the **nodes of Ranvier**, where the membrane is exposed and rich in voltage-gated $Na^{+}$ channels.
 3. Local current flows rapidly through the myelinated segments (low resistance, like current through a wire).
 4. The action potential effectively **"jumps"** from node to node.
 
-> This is fast (~12–120 m/s) and energy-efficient (fewer ions cross the membrane, so less Na⁺/K⁺ pump activity needed).
+> This is fast (~12–120 m/s) and energy-efficient (fewer ions cross the membrane, so less $Na^{+}/K^{+}$ pump activity needed).
 `
     },
     {
@@ -44,16 +44,16 @@ In myelinated axons, the action potential propagates by **saltatory conduction**
             options: [
               'Myelin prevents the neuron from reaching threshold',
               'Action potentials regenerate only at nodes of Ranvier, effectively jumping over myelinated segments',
-              'Myelin increases the number of Na⁺ channels evenly along the axon',
+              'Myelin increases the number of $Na^{+}$ channels evenly along the axon',
               'The myelin sheath releases neurotransmitters at each segment'
             ],
             correctAnswer: 1,
-            explanation: 'Myelin insulates the axon membrane between nodes, preventing ion exchange. Action potentials can only be generated at the nodes of Ranvier, where voltage-gated Na⁺ channels are concentrated. The signal "jumps" from node to node via rapid local current flow through the myelinated internodes.'
+            explanation: 'Myelin insulates the axon membrane between nodes, preventing ion exchange. Action potentials can only be generated at the nodes of Ranvier, where voltage-gated $Na^{+}$ channels are concentrated. The signal "jumps" from node to node via rapid local current flow through the myelinated internodes.'
           },
           {
             question: 'A researcher compares signal speed in two neurons of equal diameter — one myelinated and one unmyelinated. The myelinated neuron conducts signals faster because:',
             options: [
-              'It has more Na⁺/K⁺ pumps to restore ion gradients quickly',
+              'It has more $Na^{+}/K^{+}$ pumps to restore ion gradients quickly',
               'Current travels rapidly through insulated segments and only needs to regenerate at nodes',
               'It has a higher threshold for action potential initiation',
               'Myelin increases the diameter of the axon mechanically'
@@ -86,7 +86,7 @@ Several factors determine how fast an action potential travels along an axon:
 | **Conduction type** | Continuous | Saltatory |
 | **Speed** | 0.5–2 m/s | 12–120 m/s |
 | **Energy cost** | Higher (more ions cross membrane) | Lower (ions cross only at nodes) |
-| **Na⁺ channel distribution** | Evenly distributed along entire axon | Concentrated at nodes of Ranvier |
+| **$Na^{+}$ channel distribution** | Evenly distributed along entire axon | Concentrated at nodes of Ranvier |
 | **Example** | C-fibers (slow pain, temperature) | Aα fibers (proprioception, motor) |
 
 ### Axon Diameter and Speed
@@ -116,7 +116,7 @@ Several factors determine how fast an action potential travels along an axon:
             options: [
               'Using saltatory conduction between widely spaced nodes',
               'Having a very large diameter that reduces internal resistance to current flow',
-              'Containing more Na⁺/K⁺ ATPase pumps than vertebrate neurons',
+              'Containing more $Na^{+}/K^{+}$ ATPase pumps than vertebrate neurons',
               'Being surrounded by a specialized type of myelin found only in invertebrates'
             ],
             correctAnswer: 1,
@@ -147,7 +147,7 @@ Several factors determine how fast an action potential travels along an axon:
             options: ['continuous', 'saltatory', 'graded', 'retrograde']
           },
           {
-            label: 'Action potentials can only regenerate at ___ in a myelinated axon because these are the only sites with exposed voltage-gated Na⁺ channels.',
+            label: 'Action potentials can only regenerate at ___ in a myelinated axon because these are the only sites with exposed voltage-gated $Na^{+}$ channels.',
             options: ['Schwann cells', 'axon hillocks', 'nodes of Ranvier', 'dendrite spines']
           },
           {
@@ -163,7 +163,7 @@ Several factors determine how fast an action potential travels along an axon:
         hint1: 'Saltatory comes from the Latin word for "to jump."',
         hint2: 'Nodes of Ranvier are the gaps between myelin segments.',
         hint3: 'Wider tubes allow current to flow more easily, like wider pipes carry more water.',
-        explanation: 'Saltatory conduction allows action potentials to jump between nodes of Ranvier, dramatically increasing speed. Larger diameter reduces internal resistance. Myelinated axons are energy-efficient because Na⁺ and K⁺ only cross the membrane at nodes, requiring less Na⁺/K⁺ ATPase activity to restore gradients.'
+        explanation: 'Saltatory conduction allows action potentials to jump between nodes of Ranvier, dramatically increasing speed. Larger diameter reduces internal resistance. Myelinated axons are energy-efficient because $Na^{+}$ and $K^{+}$ only cross the membrane at nodes, requiring less $Na^{+}/K^{+}$ ATPase activity to restore gradients.'
       }
     },
     {

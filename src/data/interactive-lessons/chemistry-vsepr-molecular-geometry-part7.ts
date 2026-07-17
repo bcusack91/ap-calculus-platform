@@ -32,25 +32,25 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         questions: [
           {
-            question: 'What is the molecular geometry of OF₂? (O has 6 valence e⁻, 2 bonds to F, 2 lone pairs)',
+            question: 'What is the molecular geometry of $OF_{2}$? (O has 6 valence $e^{-}$, 2 bonds to F, 2 lone pairs)',
             options: ['Linear', 'Bent', 'Trigonal planar', 'Tetrahedral'],
             correctAnswer: 1,
-            explanation: 'Oxygen has 2 bonds + 2 lone pairs = steric number 4 → tetrahedral ED geometry. With 2 lone pairs, molecular geometry = bent (like H₂O).'
+            explanation: 'Oxygen has 2 bonds + 2 lone pairs = steric number 4 → tetrahedral ED geometry. With 2 lone pairs, molecular geometry = bent $(like H_{2}O)$.'
           },
           {
-            question: 'What is the molecular geometry of NO₃⁻? (N is central with 3 resonance-equivalent bonds and 0 lone pairs)',
+            question: 'What is the molecular geometry of $NO_{3}^{-}$? (N is central with 3 resonance-equivalent bonds and 0 lone pairs)',
             options: ['Trigonal pyramidal', 'Trigonal planar', 'Bent', 'Tetrahedral'],
             correctAnswer: 1,
             explanation: 'Nitrogen has 3 bonds + 0 lone pairs = steric number 3 → trigonal planar geometry. All O–N–O angles are 120°.'
           },
           {
-            question: 'What is the molecular geometry of I₃⁻? (Central I has 2 bonds to I and 3 lone pairs)',
+            question: 'What is the molecular geometry of $I_{3}^{-}$? (Central I has 2 bonds to I and 3 lone pairs)',
             options: ['Linear', 'Bent', 'T-shaped', 'Trigonal bipyramidal'],
             correctAnswer: 0,
             explanation: 'Central iodine has 2 bonds + 3 lone pairs = steric number 5 → trigonal bipyramidal ED geometry. With 3 lone pairs all equatorial, the 2 bonds are axial → linear molecular geometry.'
           },
           {
-            question: 'What is the molecular geometry of PH₃? (P has 5 valence e⁻, 3 bonds, 1 lone pair)',
+            question: 'What is the molecular geometry of $PH_{3}$? (P has 5 valence $e^{-}$, 3 bonds, 1 lone pair)',
             options: ['Trigonal planar', 'Tetrahedral', 'Trigonal pyramidal', 'Bent'],
             correctAnswer: 2,
             explanation: 'Phosphorus has 3 bonds + 1 lone pair = steric number 4 → tetrahedral ED geometry. With 1 lone pair, molecular geometry = trigonal pyramidal.'
@@ -66,24 +66,24 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         inputs: [
           {
-            label: 'Bond angle in BeCl₂ (linear geometry, in degrees)',
+            label: 'Bond angle in $BeCl_{2}$ (linear geometry, in degrees)',
             correctAnswer: '180',
-            explanation: 'BeCl₂ has 2 electron domains → linear → bond angle = 180°.'
+            explanation: '$BeCl_{2}$ has 2 electron domains → linear → bond angle = 180°.'
           },
           {
-            label: 'Approximate bond angle in H₂S (bent, from tetrahedral parent, in degrees; use ideal tetrahedral value)',
+            label: 'Approximate bond angle in $H_{2}S$ (bent, from tetrahedral parent, in degrees; use ideal tetrahedral value)',
             correctAnswer: '109.5',
-            explanation: 'H₂S has steric number 4 (2 bonds + 2 lone pairs) → bent geometry derived from tetrahedral. The ideal parent angle is 109.5° (actual is slightly less due to lone pair compression, but the ideal tetrahedral angle is the reference).'
+            explanation: '$H_{2}S$ has steric number 4 (2 bonds + 2 lone pairs) → bent geometry derived from tetrahedral. The ideal parent angle is 109.5° (actual is slightly less due to lone pair compression, but the ideal tetrahedral angle is the reference).'
           },
           {
-            label: 'Equatorial bond angle in PCl₅ (trigonal bipyramidal, in degrees)',
+            label: 'Equatorial bond angle in $PCl_{5}$ (trigonal bipyramidal, in degrees)',
             correctAnswer: '120',
             explanation: 'In the trigonal bipyramidal geometry, the equatorial–equatorial bond angle is 120°.'
           },
           {
-            label: 'Bond angle in AlCl₃ (trigonal planar, in degrees)',
+            label: 'Bond angle in $AlCl_{3}$ (trigonal planar, in degrees)',
             correctAnswer: '120',
-            explanation: 'AlCl₃ has 3 bonds + 0 lone pairs → trigonal planar → all bond angles = 120°.'
+            explanation: '$AlCl_{3}$ has 3 bonds + 0 lone pairs → trigonal planar → all bond angles = 120°.'
           }
         ]
       }
@@ -97,38 +97,38 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
         dropdowns: [
           {
             id: 'vg-7-4-dd1',
-            label: 'BCl₃ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric',
+            label: '$BCl_{3}$ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
-            explanation: 'BCl₃ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric → nonpolar.'
+            explanation: '$BCl_{3}$ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric → nonpolar.'
           },
           {
             id: 'vg-7-4-dd2',
-            label: 'SCl₂ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric',
+            label: '$SCl_{2}$ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
-            explanation: 'SCl₂ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric → polar.'
+            explanation: '$SCl_{2}$ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric → polar.'
           },
           {
             id: 'vg-7-4-dd3',
-            label: 'PCl₅ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone...',
+            label: '$PCl_{5}$ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone...',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
-            explanation: 'PCl₅ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone pairs. Symmetric → nonpolar.'
+            explanation: '$PCl_{5}$ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone pairs. Symmetric → nonpolar.'
           },
           {
             id: 'vg-7-4-dd4',
-            label: 'AsF₃ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric',
+            label: '$AsF_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
-            explanation: 'AsF₃ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric → polar.'
+            explanation: '$AsF_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric → polar.'
           },
           {
             id: 'vg-7-4-dd5',
-            label: 'XeF₂ has a linear molecular geometry (2 bonds + 3 lone pairs',
+            label: '$XeF_{2}$ has a linear molecular geometry (2 bonds + 3 lone pairs',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
-            explanation: 'XeF₂ has a linear molecular geometry (2 bonds + 3 lone pairs, axial bonds). The two Xe–F dipoles cancel → nonpolar.'
+            explanation: '$XeF_{2}$ has a linear molecular geometry (2 bonds + 3 lone pairs, axial bonds). The two Xe–F dipoles cancel → nonpolar.'
           }
         ]
       }
@@ -175,32 +175,32 @@ AP Chemistry FRQs often ask you to:
       exercise: {
         questions: [
           {
-            question: 'Consider the molecules SO₃ and SO₃²⁻. Which statement is correct?',
+            question: 'Consider the molecules $SO_{3}$ and $SO_{3}^{2-}$. Which statement is correct?',
             options: [
               'Both are trigonal planar',
-              'SO₃ is trigonal planar; SO₃²⁻ is trigonal pyramidal',
+              '$SO_{3}$ is trigonal planar; $SO_{3}^{2-}$ is trigonal pyramidal',
               'Both are trigonal pyramidal',
-              'SO₃ is trigonal pyramidal; SO₃²⁻ is trigonal planar'
+              '$SO_{3}$ is trigonal pyramidal; $SO_{3}^{2-}$ is trigonal planar'
             ],
             correctAnswer: 1,
-            explanation: 'SO₃ has 3 bonds + 0 lone pairs on S → trigonal planar. SO₃²⁻ has 3 bonds + 1 lone pair on S (the extra 2 electrons from the charge become a lone pair) → steric number 4 → tetrahedral ED → trigonal pyramidal molecular geometry.'
+            explanation: '$SO_{3}$ has 3 bonds + 0 lone pairs on S → trigonal planar. $SO_{3}^{2-}$ has 3 bonds + 1 lone pair on S (the extra 2 electrons from the charge become a lone pair) → steric number 4 → tetrahedral ED → trigonal pyramidal molecular geometry.'
           },
           {
             question: 'Which of the following species has the smallest bond angle?',
-            options: ['BF₃ (120°)', 'CH₄ (109.5°)', 'H₂O (≈104.5°)', 'CO₂ (180°)'],
+            options: ['$BF_{3}$ (120°)', '$CH_{4}$ (109.5°)', '$H_{2}O$ (≈104.5°)', '$CO_{2}$ (180°)'],
             correctAnswer: 2,
-            explanation: 'H₂O has the smallest bond angle at approximately 104.5°. Starting from the tetrahedral angle of 109.5°, the 2 lone pairs on oxygen compress the H–O–H angle significantly.'
+            explanation: '$H_{2}O$ has the smallest bond angle at approximately 104.5°. Starting from the tetrahedral angle of 109.5°, the 2 lone pairs on oxygen compress the H–O–H angle significantly.'
           },
           {
-            question: 'The boiling point of NF₃ (−129°C) is significantly lower than that of NH₃ (−33°C), even though NF₃ has a greater molar mass. Which explanation is most consistent with this observation?',
+            question: 'The boiling point of $NF_{3}$ (−129°C) is significantly lower than that of $NH_{3}$ (−33°C), even though $NF_{3}$ has a greater molar mass. Which explanation is most consistent with this observation?',
             options: [
-              'NF₃ is nonpolar while NH₃ is polar',
-              'NH₃ can form hydrogen bonds (N–H); NF₃ cannot (no H atoms)',
-              'NF₃ has a trigonal planar geometry',
+              '$NF_{3}$ is nonpolar while $NH_{3}$ is polar',
+              '$NH_{3}$ can form hydrogen bonds (N–H); $NF_{3}$ cannot (no H atoms)',
+              '$NF_{3}$ has a trigonal planar geometry',
               'N–F bonds are stronger than N–H bonds'
             ],
             correctAnswer: 1,
-            explanation: 'Both NF₃ and NH₃ are polar with trigonal pyramidal geometry. However, NH₃ has N–H bonds that allow hydrogen bonding (a strong intermolecular force). NF₃ has no H atoms, so it cannot form hydrogen bonds — only dipole–dipole and London forces. This explains NH₃\'s much higher boiling point.'
+            explanation: 'Both $NF_{3}$ and $NH_{3}$ are polar with trigonal pyramidal geometry. However, $NH_{3}$ has N–H bonds that allow hydrogen bonding (a strong intermolecular force). $NF_{3}$ has no H atoms, so it cannot form hydrogen bonds — only dipole–dipole and London forces. This explains $NH_{3}$\'s much higher boiling point.'
           }
         ]
       }
@@ -213,24 +213,24 @@ AP Chemistry FRQs often ask you to:
       exercise: {
         inputs: [
           {
-            label: 'Molecular geometry of SiCl₄ (Si: 4 bonds, 0 lone pairs)',
+            label: 'Molecular geometry of $SiCl_{4}$ (Si: 4 bonds, 0 lone pairs)',
             correctAnswer: 'tetrahedral',
-            explanation: 'SiCl₄ has steric number 4 (4 bonds + 0 lone pairs) → tetrahedral geometry.'
+            explanation: '$SiCl_{4}$ has steric number 4 (4 bonds + 0 lone pairs) → tetrahedral geometry.'
           },
           {
-            label: 'Molecular geometry of ClF₅ (Cl: 5 bonds, 1 lone pair)',
+            label: 'Molecular geometry of $ClF_{5}$ (Cl: 5 bonds, 1 lone pair)',
             correctAnswer: 'square pyramidal',
-            explanation: 'ClF₅ has steric number 6 (5 bonds + 1 lone pair) → octahedral ED → square pyramidal molecular geometry.'
+            explanation: '$ClF_{5}$ has steric number 6 (5 bonds + 1 lone pair) → octahedral ED → square pyramidal molecular geometry.'
           },
           {
-            label: 'Is SiF₄ polar or nonpolar? (Type "polar" or "nonpolar")',
+            label: 'Is $SiF_{4}$ polar or nonpolar? (Type "polar" or "nonpolar")',
             correctAnswer: 'nonpolar',
-            explanation: 'SiF₄ has a symmetric tetrahedral geometry with 4 identical F atoms. The bond dipoles cancel → nonpolar.'
+            explanation: '$SiF_{4}$ has a symmetric tetrahedral geometry with 4 identical F atoms. The bond dipoles cancel → nonpolar.'
           },
           {
-            label: 'Molecular geometry of SO₂ (S: 2 double bonds, 1 lone pair)',
+            label: 'Molecular geometry of $SO_{2}$ (S: 2 double bonds, 1 lone pair)',
             correctAnswer: 'bent',
-            explanation: 'SO₂ has steric number 3 (2 bonds + 1 lone pair) → trigonal planar ED → bent molecular geometry.'
+            explanation: '$SO_{2}$ has steric number 3 (2 bonds + 1 lone pair) → trigonal planar ED → bent molecular geometry.'
           }
         ]
       }
@@ -243,37 +243,37 @@ AP Chemistry FRQs often ask you to:
       exercise: {
         questions: [
           {
-            question: 'Arrange these molecules in order of INCREASING bond angle: H₂O, NH₃, CH₄',
+            question: 'Arrange these molecules in order of INCREASING bond angle: $H_{2}O$, $NH_{3}$, $CH_{4}$',
             options: [
-              'CH₄ < NH₃ < H₂O',
-              'H₂O < NH₃ < CH₄',
-              'NH₃ < H₂O < CH₄',
-              'H₂O < CH₄ < NH₃'
+              '$CH_{4}$ < $NH_{3}$ < $H_{2}O$',
+              '$H_{2}O$ < $NH_{3}$ < $CH_{4}$',
+              '$NH_{3}$ < $H_{2}O$ < $CH_{4}$',
+              '$H_{2}O$ < $CH_{4}$ < $NH_{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'All three have steric number 4 (tetrahedral ED). H₂O has 2 lone pairs → ≈104.5°. NH₃ has 1 lone pair → ≈107°. CH₄ has 0 lone pairs → 109.5°. More lone pairs = more compression = smaller bond angle. Order: H₂O < NH₃ < CH₄.'
+            explanation: 'All three have steric number 4 (tetrahedral ED). $H_{2}O$ has 2 lone pairs → ≈104.5°. $NH_{3}$ has 1 lone pair → ≈107°. $CH_{4}$ has 0 lone pairs → 109.5°. More lone pairs = more compression = smaller bond angle. Order: $H_{2}O$ < $NH_{3}$ < $CH_{4}$.'
           },
           {
-            question: 'A student claims that SF₄ is nonpolar because sulfur has 4 identical S–F bonds. What is wrong with this reasoning?',
+            question: 'A student claims that $SF_{4}$ is nonpolar because sulfur has 4 identical S–F bonds. What is wrong with this reasoning?',
             options: [
               'S–F bonds are not polar',
-              'SF₄ has a seesaw geometry (not tetrahedral), so the bond dipoles don\'t cancel',
-              'SF₄ actually has 6 bonds, not 4',
+              '$SF_{4}$ has a seesaw geometry (not tetrahedral), so the bond dipoles don\'t cancel',
+              '$SF_{4}$ actually has 6 bonds, not 4',
               'Fluorine is not electronegative enough to create bond dipoles'
             ],
             correctAnswer: 1,
-            explanation: 'SF₄ has 4 bonds + 1 lone pair → steric number 5 → seesaw molecular geometry (not tetrahedral). The seesaw shape is asymmetric, so the four S–F bond dipoles do NOT cancel, making SF₄ polar. The student incorrectly assumed a symmetric geometry.'
+            explanation: '$SF_{4}$ has 4 bonds + 1 lone pair → steric number 5 → seesaw molecular geometry (not tetrahedral). The seesaw shape is asymmetric, so the four S–F bond dipoles do NOT cancel, making $SF_{4}$ polar. The student incorrectly assumed a symmetric geometry.'
           },
           {
-            question: 'Which of the following is the best explanation for why XeF₄ is nonpolar despite having 2 lone pairs?',
+            question: 'Which of the following is the best explanation for why $XeF_{4}$ is nonpolar despite having 2 lone pairs?',
             options: [
               'Xe–F bonds are nonpolar',
               'Lone pairs don\'t affect polarity',
               'The 2 lone pairs are trans (180° apart) in the octahedral arrangement, creating a symmetric square planar shape',
-              'XeF₄ does not actually have lone pairs'
+              '$XeF_{4}$ does not actually have lone pairs'
             ],
             correctAnswer: 2,
-            explanation: 'XeF₄ has steric number 6 (octahedral ED). The 2 lone pairs sit in trans positions (opposite sides), and the 4 F atoms form a symmetric square planar arrangement. Because of this symmetry, all bond dipoles cancel, making the molecule nonpolar.'
+            explanation: '$XeF_{4}$ has steric number 6 (octahedral ED). The 2 lone pairs sit in trans positions (opposite sides), and the 4 F atoms form a symmetric square planar arrangement. Because of this symmetry, all bond dipoles cancel, making the molecule nonpolar.'
           }
         ]
       }

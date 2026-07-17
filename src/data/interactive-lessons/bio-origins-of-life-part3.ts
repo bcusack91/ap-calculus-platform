@@ -81,7 +81,7 @@ Key discoveries demonstrating catalytic RNA:
 
 - RNA can fold into complex 3D structures (like proteins)
 - RNA contains **ribose** sugar with a 2'-OH group that enables diverse chemistry
-- RNA nucleotides (ATP, GTP, NAD⁺, FAD, coenzyme A) serve as **metabolic cofactors** in all modern cells — possible "molecular fossils" from the RNA world
+- RNA nucleotides (ATP, GTP, $NAD^{+}$, FAD, coenzyme A) serve as **metabolic cofactors** in all modern cells — possible "molecular fossils" from the RNA world
       `
     },
     {
@@ -133,15 +133,15 @@ Key discoveries demonstrating catalytic RNA:
             options: ['chemically stable', 'catalytically active', 'easily transcribed', 'water soluble']
           },
           {
-            label: 'Modern metabolic cofactors like ATP, NAD⁺, and FAD are ___ nucleotides, considered "molecular fossils" from the RNA world.',
+            label: 'Modern metabolic cofactors like ATP, $NAD^{+}$, and FAD are ___ nucleotides, considered "molecular fossils" from the RNA world.',
             options: ['RNA-based', 'DNA-based', 'protein-based', 'lipid-based']
           }
         ],
         correctAnswers: ['rRNA', 'chemically stable', 'RNA-based'],
         hint1: 'Which type of RNA is the structural and catalytic component of ribosomes?',
         hint2: 'The 2\'-OH group on ribose makes RNA prone to hydrolysis — removing it makes DNA more resistant.',
-        hint3: 'ATP, NAD⁺, CoA all contain adenine ribonucleotides — a clue about their evolutionary origin.',
-        explanation: 'The ribosome\'s peptidyl transferase activity comes from rRNA. DNA replaced RNA for information storage because deoxyribose makes it more chemically stable. Modern cofactors like ATP and NAD⁺ are RNA-based molecules, likely remnants of the RNA world.'
+        hint3: 'ATP, $NAD^{+}$, CoA all contain adenine ribonucleotides — a clue about their evolutionary origin.',
+        explanation: 'The ribosome\'s peptidyl transferase activity comes from rRNA. DNA replaced RNA for information storage because deoxyribose makes it more chemically stable. Modern cofactors like ATP and $NAD^{+}$ are RNA-based molecules, likely remnants of the RNA world.'
       }
     },
     {
@@ -153,7 +153,7 @@ Key discoveries demonstrating catalytic RNA:
 - The **RNA World hypothesis** proposes that early life used RNA for both information storage and catalysis
 - **Ribozymes** (catalytic RNA) provide key evidence — especially the ribosome's rRNA-based catalytic core
 - RNA can store genetic information (as seen in RNA viruses)
-- Modern **metabolic cofactors** (ATP, NAD⁺, FAD, CoA) are RNA-based "molecular fossils"
+- Modern **metabolic cofactors** (ATP, $NAD^{+}$, FAD, CoA) are RNA-based "molecular fossils"
 - DNA eventually replaced RNA for genetic storage because it is **more chemically stable** (deoxyribose lacks the hydrolysis-prone 2'-OH)
 - The transition: RNA world → RNA+protein world → DNA+RNA+protein world (modern)
 - In vitro evolution experiments have generated ribozymes capable of replicating RNA templates

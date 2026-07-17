@@ -45,7 +45,7 @@ $7^2 + 24^2 = 49 + 576 = 625 = 25^2$ → **Yes, right triangle!** ✅
                               "Obtuse"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "25+144=169=13². Right triangle."
+                    "explanation": "25+144=169=$13^{2}$. Right triangle."
           }
 ]
       }
@@ -69,7 +69,7 @@ $7^2 + 24^2 = 49 + 576 = 625 = 25^2$ → **Yes, right triangle!** ✅
         hint1: "49 + 576.",
         hint2: "25 + 144.",
         hint3: "36 + 64.",
-        explanation: "1) 625. 2) 169. 3) 100. All equal c², so all right triangles."
+        explanation: "1) 625. 2) 169. 3) 100. All equal $c^{2}$, so all right triangles."
       }
     },
     {
@@ -83,7 +83,7 @@ $7^2 + 24^2 = 49 + 576 = 625 = 25^2$ → **Yes, right triangle!** ✅
         correctAnswers: ["Right","Acute"],
         hint1: "Equals → right angle.",
         hint2: "Greater → all angles < 90°.",
-        explanation: "= c²: right. > c²: acute. < c²: obtuse."
+        explanation: "= $c^{2}$: right. > $c^{2}$: acute. < $c^{2}$: obtuse."
       }
     },
     {
@@ -117,7 +117,7 @@ $7^2 + 24^2 = 49 + 576 = 625 = 25^2$ → **Yes, right triangle!** ✅
                               "Equilateral"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Sum less than c² → obtuse."
+                    "explanation": "Sum less than $c^{2}$ → obtuse."
           }
 ]
       }

@@ -161,7 +161,7 @@ Plot $a$ vs. $F/m$:
       content: `
 **Experimental Calculations** 🧮
 
-1) A 3 kg block on a horizontal surface requires 12 N to just start sliding. What is $\\mu_s$? ($g = 10$ m/s²)
+1) A 3 kg block on a horizontal surface requires 12 N to just start sliding. What is $\\mu_s$? ($g = 10$ $m/s^{2}$)
 
 2) A block slides at constant velocity down a ramp inclined at 20°. What is $\\mu_k$? ($\\tan 20° = 0.364$, round to 3 significant figures)
 

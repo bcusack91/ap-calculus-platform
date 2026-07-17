@@ -56,7 +56,7 @@ Two columns of "exchangeable" protons — $\\text{O-H}$ (alcohol $\\sim 1\\text{
               'A proton on a carbon bearing chlorine'
             ],
             correctAnswer: 1,
-            explanation: 'The aldehyde proton resonates at $9\\text{–}10\\ \\text{ppm}$, far downfield, because it is deshielded both by the electronegative, sp²-hybridized carbonyl carbon and by the anisotropy of the $\\text{C=O}$ $\\pi$ system. Alkyl ($\\sim 1\\ \\text{ppm}$), aromatic ($\\sim 7\\ \\text{ppm}$), and $\\text{H-C-Cl}$ ($\\sim 3.5\\ \\text{ppm}$) all fall well short of $9.7\\ \\text{ppm}$.'
+            explanation: 'The aldehyde proton resonates at $9\\text{–}10\\ \\text{ppm}$, far downfield, because it is deshielded both by the electronegative, $sp^{2}$-hybridized carbonyl carbon and by the anisotropy of the $\\text{C=O}$ $\\pi$ system. Alkyl ($\\sim 1\\ \\text{ppm}$), aromatic ($\\sim 7\\ \\text{ppm}$), and $\\text{H-C-Cl}$ ($\\sim 3.5\\ \\text{ppm}$) all fall well short of $9.7\\ \\text{ppm}$.'
           },
           {
             question: 'Which of these protons would appear furthest UPFIELD (smallest $\\delta$)?',

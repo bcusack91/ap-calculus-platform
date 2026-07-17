@@ -41,10 +41,10 @@ export const chemOxidationReductionReactionsPart3Data = {
 |------|--------|
 | 1 | **Separate** the equation into two half-reactions |
 | 2 | **Balance atoms** other than O and H in each half-reaction |
-| 3 | **Balance O** by adding **H₂O** |
-| 4 | **Balance H** by adding **H⁺** |
-| 5 | **Balance charge** by adding **electrons (e⁻)** |
-| 6 | **Equalize electrons** — multiply half-reactions so e⁻ cancel |
+| 3 | **Balance O** by adding **$H_{2}O$** |
+| 4 | **Balance H** by adding **$H^{+}$** |
+| 5 | **Balance charge** by adding **electrons $(e^{-})$** |
+| 6 | **Equalize electrons** — multiply half-reactions so $e^{-}$ cancel |
 | 7 | **Add** half-reactions together and simplify |
 
 
@@ -83,24 +83,24 @@ Already balanced (1 Mn each side, 1 Fe each side).
 
 ---
 
-### Step 3: Balance O with H₂O
+### Step 3: Balance O with $H_{2}O$
 $\\text{MnO}_4^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$
 
 
 ---
 
-### Step 4: Balance H with H⁺
+### Step 4: Balance H with $H^{+}$
 $8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$
 
 
 ---
 
-### Step 5: Balance charge with e⁻
+### Step 5: Balance charge with $e^{-}$
 
-**Reduction:** Left charge: 8(+1) + (−1) = +7. Right charge: +2. Need 5e⁻ on left.
+**Reduction:** Left charge: 8(+1) + (−1) = +7. Right charge: +2. Need $5e^{-}$ on left.
 $$5e^- + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$$
 
-**Oxidation:** Left charge: +2. Right charge: +3. Need 1e⁻ on right.
+**Oxidation:** Left charge: +2. Right charge: +3. Need $1e^{-}$ on right.
 $$\\text{Fe}^{2+} \\rightarrow \\text{Fe}^{3+} + e^-$$
 
 
@@ -112,7 +112,7 @@ $$5\\text{Fe}^{2+} \\rightarrow 5\\text{Fe}^{3+} + 5e^-$$
 
 ---
 
-### Step 7: Add and cancel e⁻
+### Step 7: Add and cancel $e^{-}$
 $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}}$$
 
 
@@ -137,27 +137,27 @@ $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text
           {
             question: 'In acidic solution, oxygen atoms are balanced by adding:',
             options: [
-              'O₂ molecules',
-              'OH⁻ ions',
-              'H₂O molecules',
-              'O²⁻ ions'
+              '$O_{2}$ molecules',
+              '$OH^{-}$ ions',
+              '$H_{2}O$ molecules',
+              '$O^{2-}$ ions'
             ],
             correctAnswer: 2,
-            explanation: 'In acidic solution, oxygen is balanced by adding H₂O to the side that needs more O. Then hydrogen is balanced by adding H⁺.'
+            explanation: 'In acidic solution, oxygen is balanced by adding $H_{2}O$ to the side that needs more O. Then hydrogen is balanced by adding $H^{+}$.'
           },
           {
-            question: 'After balancing O with H₂O and H with H⁺, what is added to balance charge?',
+            question: 'After balancing O with $H_{2}O$ and H with $H^{+}$, what is added to balance charge?',
             options: [
-              'More H⁺ ions',
-              'OH⁻ ions',
-              'Electrons (e⁻)',
+              'More $H^{+}$ ions',
+              '$OH^{-}$ ions',
+              'Electrons $(e^{-})$',
               'Protons'
             ],
             correctAnswer: 2,
-            explanation: 'After atoms are balanced, charge is balanced by adding electrons (e⁻) to the more positive side of each half-reaction.'
+            explanation: 'After atoms are balanced, charge is balanced by adding electrons $(e^{-})$ to the more positive side of each half-reaction.'
           },
           {
-            question: 'In the half-reaction MnO₄⁻ → Mn²⁺ (acidic), how many electrons are gained?',
+            question: 'In the half-reaction $MnO_{4}^{-}$ → $Mn^{2+}$ (acidic), how many electrons are gained?',
             options: [
               '2',
               '3',
@@ -165,7 +165,7 @@ $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text
               '7'
             ],
             correctAnswer: 2,
-            explanation: 'Mn goes from +7 (in MnO₄⁻) to +2. That\'s a decrease of 5, meaning 5 electrons are gained (reduction). The balanced half-reaction is: 5e⁻ + 8H⁺ + MnO₄⁻ → Mn²⁺ + 4H₂O.'
+            explanation: 'Mn goes from +7 $(in MnO_{4}^{-})$ to +2. That\'s a decrease of 5, meaning 5 electrons are gained (reduction). The balanced half-reaction is: $5e^{-}$ + $8H^{+}$ + $MnO_{4}^{-}$ → $Mn^{2+}$ + $4H_{2}O$.'
           },
           {
             question: 'Why must electrons be equalized before adding half-reactions?',
@@ -176,7 +176,7 @@ $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text
               'To balance oxygen atoms'
             ],
             correctAnswer: 1,
-            explanation: 'Electrons are transferred, not created or destroyed. They must cancel when the half-reactions are added. If the oxidation half gives 2e⁻ and reduction takes 5e⁻, we need to find the LCM and multiply each accordingly.'
+            explanation: 'Electrons are transferred, not created or destroyed. They must cancel when the half-reactions are added. If the oxidation half gives $2e^{-}$ and reduction takes $5e^{-}$, we need to find the LCM and multiply each accordingly.'
           }
         ]
       }
@@ -189,19 +189,19 @@ $$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text
 
 For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\rightarrow \\text{Cr}^{3+}$
 
-**1)** How many H₂O molecules are needed (and on which side)? Type the coefficient only.
+**1)** How many $H_{2}O$ molecules are needed (and on which side)? Type the coefficient only.
 
-**2)** How many H⁺ ions are needed? Type the coefficient only.
+**2)** How many $H^{+}$ ions are needed? Type the coefficient only.
 
 **3)** How many electrons are needed? Type the coefficient only.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['7', '14', '6'],
-        hint1: 'There are 7 O atoms on the left in Cr₂O₇²⁻. Add 7 H₂O to the right.',
-        hint2: '7 H₂O on the right has 14 H atoms. Add 14 H⁺ to the left.',
-        hint3: 'Left charge: 14(+1) + (−2) = +12. Right: 2(+3) = +6. Need 6e⁻ on left to go from +12 to +6.',
-        explanation: '1) 7 H₂O on the product side (to balance 7 O). 2) 14 H⁺ on the reactant side (to balance 14 H from 7 H₂O). 3) 6e⁻ on the reactant side. Charge: 14 + (−2) + (−6) = +6 on left; 2(+3) = +6 on right ✓. Each Cr goes from +6 to +3, gaining 3e⁻ × 2 Cr = 6e⁻ total.'
+        hint1: 'There are 7 O atoms on the left in $Cr_{2}O_{7}^{2-}$. Add 7 $H_{2}O$ to the right.',
+        hint2: '7 $H_{2}O$ on the right has 14 H atoms. Add 14 $H^{+}$ to the left.',
+        hint3: 'Left charge: 14(+1) + (−2) = +12. Right: 2(+3) = +6. Need $6e^{-}$ on left to go from +12 to +6.',
+        explanation: '1) 7 $H_{2}O$ on the product side (to balance 7 O). 2) 14 $H^{+}$ on the reactant side (to balance 14 H from 7 $H_{2}O$). 3) $6e^{-}$ on the reactant side. Charge: 14 + (−2) + (−6) = +6 on left; 2(+3) = +6 on right ✓. Each Cr goes from +6 to +3, gaining $3e^{-}$ × 2 Cr = $6e^{-}$ total.'
       }
     },
     {
@@ -214,7 +214,7 @@ For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\righta
         dropdowns: [
           {
             label: 'In acidic solution, the source of hydrogen atoms for balancing is',
-            options: ['H₂O', 'H⁺', 'OH⁻', 'H₂']
+            options: ['$H_{2}O$', '$H^{+}$', '$OH^{-}$', '$H_{2}$']
           },
           {
             label: 'Electrons are added to the more _____ side of a half-reaction',
@@ -229,11 +229,11 @@ For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\righta
             options: ['left (reactant) side', 'right (product) side', 'both sides', 'neither side']
           }
         ],
-        correctAnswers: ['H⁺', 'positive', 'right (product) side', 'left (reactant) side'],
-        hint1: 'In acidic solution, we add H⁺ (protons) to balance H.',
+        correctAnswers: ['$H^{+}$', 'positive', 'right (product) side', 'left (reactant) side'],
+        hint1: 'In acidic solution, we add $H^{+}$ (protons) to balance H.',
         hint2: 'Electrons are negative — adding them reduces the positive charge.',
         hint3: 'Oxidation means losing electrons — they\'re released as a product.',
-        explanation: 'In acidic solution, H⁺ provides hydrogen. Electrons go on the more positive side to balance charge. In oxidation, electrons are products (released). In reduction, electrons are reactants (consumed).'
+        explanation: 'In acidic solution, $H^{+}$ provides hydrogen. Electrons go on the more positive side to balance charge. In oxidation, electrons are products (released). In reduction, electrons are reactants (consumed).'
       }
     },
     {
@@ -245,7 +245,7 @@ For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\righta
       exercise: {
         questions: [
           {
-            question: 'Balance in acidic solution: Cu(s) + NO₃⁻(aq) → Cu²⁺(aq) + NO(g). What is the coefficient of H⁺ in the balanced equation?',
+            question: 'Balance in acidic solution: Cu(s) + $NO_{3}^{-}(aq)$ → $Cu^{2+}(aq)$ + NO(g). What is the coefficient of $H^{+}$ in the balanced equation?',
             options: [
               '2',
               '4',
@@ -253,7 +253,7 @@ For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\righta
               '8'
             ],
             correctAnswer: 3,
-            explanation: 'Oxidation: Cu → Cu²⁺ + 2e⁻. Reduction: 3e⁻ + 4H⁺ + NO₃⁻ → NO + 2H₂O. Equalize: multiply oxidation by 3, reduction by 2. Total: 3Cu + 8H⁺ + 2NO₃⁻ → 3Cu²⁺ + 2NO + 4H₂O. Coefficient of H⁺ = 8.'
+            explanation: 'Oxidation: Cu → $Cu^{2+}$ + $2e^{-}$. Reduction: $3e^{-}$ + $4H^{+}$ + $NO_{3}^{-}$ → NO + $2H_{2}O$. Equalize: multiply oxidation by 3, reduction by 2. Total: 3Cu + $8H^{+}$ + $2NO_{3}^{-}$ → $3Cu^{2+}$ + 2NO + $4H_{2}O$. Coefficient of $H^{+}$ = 8.'
           },
           {
             question: 'In the balanced equation above, how many electrons are transferred in total?',
@@ -264,7 +264,7 @@ For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\righta
               '6'
             ],
             correctAnswer: 3,
-            explanation: 'Cu loses 2e⁻ each × 3 Cu = 6e⁻ lost. N gains 3e⁻ each × 2 NO₃⁻ = 6e⁻ gained. The LCM of 2 and 3 is 6, so 6 electrons are transferred.'
+            explanation: 'Cu loses $2e^{-}$ each × 3 Cu = $6e^{-}$ lost. N gains $3e^{-}$ each × 2 $NO_{3}^{-}$ = $6e^{-}$ gained. The LCM of 2 and 3 is 6, so 6 electrons are transferred.'
           }
         ]
       }

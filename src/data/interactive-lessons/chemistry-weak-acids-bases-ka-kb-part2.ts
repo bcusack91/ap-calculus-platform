@@ -216,7 +216,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
         dropdowns: [
           {
             label: 'At equilibrium in a weak acid solution, the major species is',
-            options: ['H⁺', 'A⁻', 'undissociated HA', 'water only']
+            options: ['$H^{+}$', '$A^{-}$', 'undissociated HA', 'water only']
           },
           {
             label: 'If the 5% approximation fails, you must',
@@ -224,7 +224,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
           },
           {
             label: 'Increasing the initial concentration of a weak acid will',
-            options: ['increase Kₐ', 'decrease Kₐ', 'decrease percent ionization', 'not affect equilibrium']
+            options: ['increase $K_{a}$', 'decrease $K_{a}$', 'decrease percent ionization', 'not affect equilibrium']
           }
         ],
         correctAnswers: ['undissociated HA', 'use the quadratic formula', 'decrease percent ionization'],

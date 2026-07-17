@@ -208,14 +208,14 @@ Higher concentrations → steeper jump at equivalence, but equivalence point is 
           },
           {
             label: 'After the equivalence point, the pH is determined by',
-            options: ['excess H⁺', 'excess OH⁻', 'the salt', 'the indicator']
+            options: ['excess $H^{+}$', 'excess $OH^{-}$', 'the salt', 'the indicator']
           },
           {
             label: 'For a strong acid-strong base titration, the equivalence point pH is always',
             options: ['acidic', 'basic', 'exactly 7', 'depends on volumes']
           }
         ],
-        correctAnswers: ['3 to 11', 'make the steep region steeper', 'excess OH⁻', 'exactly 7'],
+        correctAnswers: ['3 to 11', 'make the steep region steeper', 'excess $OH^{-}$', 'exactly 7'],
         hint1: 'The jump covers a wide pH range near equivalence.',
         hint2: 'Higher concentration = more dramatic pH change per mL.',
         hint3: 'Excess titrant (NaOH) determines post-equivalence pH.',

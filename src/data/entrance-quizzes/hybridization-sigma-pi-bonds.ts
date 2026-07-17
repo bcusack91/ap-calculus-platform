@@ -8,8 +8,8 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'hyb-ent-1a', question: 'Hybridization is the mixing of:', options: ['Atoms to form molecules', 'Bonds to form networks', 'Atomic orbitals to form new hybrid orbitals', 'Electrons to form pairs'], correctIndex: 2, explanation: 'Hybridization is the concept of mixing atomic orbitals (s, p, d) to form new hybrid orbitals that are equivalent in energy and shape.', partNumber: 1, partTitle: 'Introduction to Hybridization' },
   { id: 'hyb-ent-1b', question: 'An atom with 4 regions of electron density is ___ hybridized:', options: ['$sp$', '$sp^2$', '$sp^3$', '$sp^3d$'], correctIndex: 2, explanation: '4 electron groups require 4 hybrid orbitals: one s + three p = $sp^3$ hybridization, giving tetrahedral geometry.', partNumber: 1, partTitle: 'Introduction to Hybridization' },
 
-  { id: 'hyb-ent-2a', question: 'What is the hybridization of carbon in $C_2H_4$ (ethylene)?', options: ['$sp$', '$sp^2$', '$sp^3$', '$sp^3d$'], correctIndex: 1, explanation: 'Each carbon in ethylene has 3 regions of electron density (2 C–H bonds + 1 C=C), so it is $sp^2$ hybridized with 120° bond angles.', partNumber: 2, partTitle: 'sp, sp², sp³ Hybridization' },
-  { id: 'hyb-ent-2b', question: 'An $sp$ hybridized atom has what geometry?', options: ['Bent', 'Trigonal planar', 'Linear', 'Tetrahedral'], correctIndex: 2, explanation: '$sp$ hybridization produces 2 hybrid orbitals oriented 180° apart, giving linear geometry (e.g., $CO_2$, $C_2H_2$).', partNumber: 2, partTitle: 'sp, sp², sp³ Hybridization' },
+  { id: 'hyb-ent-2a', question: 'What is the hybridization of carbon in $C_2H_4$ (ethylene)?', options: ['$sp$', '$sp^2$', '$sp^3$', '$sp^3d$'], correctIndex: 1, explanation: 'Each carbon in ethylene has 3 regions of electron density (2 C–H bonds + 1 C=C), so it is $sp^2$ hybridized with 120° bond angles.', partNumber: 2, partTitle: 'sp, $sp^{2}$, $sp^{3}$ Hybridization' },
+  { id: 'hyb-ent-2b', question: 'An $sp$ hybridized atom has what geometry?', options: ['Bent', 'Trigonal planar', 'Linear', 'Tetrahedral'], correctIndex: 2, explanation: '$sp$ hybridization produces 2 hybrid orbitals oriented 180° apart, giving linear geometry (e.g., $CO_2$, $C_2H_2$).', partNumber: 2, partTitle: 'sp, $sp^{2}$, $sp^{3}$ Hybridization' },
 
   { id: 'hyb-ent-3a', question: 'A sigma ($\\sigma$) bond is formed by:', options: ['Side-by-side overlap of p orbitals', 'Head-on overlap of orbitals along the bond axis', 'Delocalization of electrons', 'Transfer of electrons'], correctIndex: 1, explanation: 'Sigma bonds form from head-on (end-to-end) overlap of orbitals along the internuclear axis. They are the strongest type of covalent bond.', partNumber: 3, partTitle: 'Sigma Bonds' },
   { id: 'hyb-ent-3b', question: 'Every single covalent bond is a:', options: ['Pi bond', 'Sigma bond', 'Mixture of sigma and pi', 'Hydrogen bond'], correctIndex: 1, explanation: 'All single bonds are sigma bonds. The first bond between any two atoms is always a sigma bond formed by head-on overlap.', partNumber: 3, partTitle: 'Sigma Bonds' },
@@ -34,7 +34,7 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Introduction to Hybridization' },
-    { partNumber: 2, partTitle: 'sp, sp², sp³ Hybridization' },
+    { partNumber: 2, partTitle: 'sp, $sp^{2}$, $sp^{3}$ Hybridization' },
     { partNumber: 3, partTitle: 'Sigma Bonds' },
     { partNumber: 4, partTitle: 'Pi Bonds' },
     { partNumber: 5, partTitle: 'Counting σ and π Bonds' },

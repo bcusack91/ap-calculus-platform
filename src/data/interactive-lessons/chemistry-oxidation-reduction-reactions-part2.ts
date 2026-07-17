@@ -62,8 +62,8 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 | Atom | Reactant | Product | Change | Process |
 |------|----------|---------|--------|---------|
-| Zn | 0 | +2 | ↑ +2 | **Oxidized** (lost 2e⁻) |
-| Cu | +2 | 0 | ↓ −2 | **Reduced** (gained 2e⁻) |
+| Zn | 0 | +2 | ↑ +2 | **Oxidized** $(lost 2e^{-})$ |
+| Cu | +2 | 0 | ↓ −2 | **Reduced** $(gained 2e^{-})$ |
       `
     },
     {
@@ -97,7 +97,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
 
 - **Zn** is the **reducing agent** — it gives up electrons (gets oxidized: 0 → +2)
-- **Cu²⁺** is the **oxidizing agent** — it takes electrons (gets reduced: +2 → 0)
+- **$Cu^{2+}$** is the **oxidizing agent** — it takes electrons (gets reduced: +2 → 0)
 
 
 ---
@@ -106,11 +106,11 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 | Agent | Why |
 |-------|-----|
-| KMnO₄ (Mn = +7) | Mn is easily reduced |
-| K₂Cr₂O₇ (Cr = +6) | Cr is easily reduced |
-| HNO₃ (concentrated) | NO₃⁻ is a strong oxidizer |
-| O₂ | Oxygen readily gains electrons |
-| Halogens (F₂, Cl₂) | Very electronegative |
+| $KMnO_{4}$ (Mn = +7) | Mn is easily reduced |
+| $K_{2}Cr_{2}O_{7}$ (Cr = +6) | Cr is easily reduced |
+| $HNO_{3}$ (concentrated) | $NO_{3}^{-}$ is a strong oxidizer |
+| $O_{2}$ | Oxygen readily gains electrons |
+| Halogens ($F_{2}$, $Cl_{2}$) | Very electronegative |
 
 
 ---
@@ -120,7 +120,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 | Agent | Why |
 |-------|-----|
 | Active metals (Na, Mg, Zn) | Easily lose electrons |
-| H₂ | Can donate electrons |
+| $H_{2}$ | Can donate electrons |
 | C (carbon/coke) | Commonly reduces metal ores |
       `
     },
@@ -135,11 +135,11 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 | Reaction Type | Redox? | Why |
 |--------------|--------|-----|
 | Combustion | ✅ Yes | Carbon/hydrogen oxidized, oxygen reduced |
-| Synthesis (metal + nonmetal) | ✅ Yes | Metal loses e⁻, nonmetal gains e⁻ |
+| Synthesis (metal + nonmetal) | ✅ Yes | Metal loses $e^{-}$, nonmetal gains $e^{-}$ |
 | Single replacement | ✅ Yes | One element displaces another |
 | Double replacement | ❌ No | Ions just swap partners — no electron transfer |
 | Acid-base (neutralization) | ❌ No | Proton transfer, not electron transfer |
-| Precipitation | ❌ No | Ions combine to form solid — no e⁻ transfer |
+| Precipitation | ❌ No | Ions combine to form solid — no $e^{-}$ transfer |
 
 
 ---
@@ -158,12 +158,12 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
       exercise: {
         questions: [
           {
-            question: 'In the reaction 2Na(s) + Cl₂(g) → 2NaCl(s), which species is oxidized?',
+            question: 'In the reaction 2Na(s) + $Cl_{2}(g)$ → 2NaCl(s), which species is oxidized?',
             options: [
-              'Cl₂',
+              '$Cl_{2}$',
               'Na',
               'NaCl',
-              'Cl⁻'
+              '$Cl^{-}$'
             ],
             correctAnswer: 1,
             explanation: 'Na goes from 0 to +1 — its oxidation state increases, meaning it lost an electron. Oxidation Is Loss (OIL). Na is oxidized.'
@@ -177,7 +177,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
               'Spectator'
             ],
             correctAnswer: 1,
-            explanation: 'Na is oxidized (loses electrons), which means it CAUSES Cl₂ to be reduced. The species that gets oxidized is the reducing agent.'
+            explanation: 'Na is oxidized (loses electrons), which means it CAUSES $Cl_{2}$ to be reduced. The species that gets oxidized is the reducing agent.'
           },
           {
             question: 'Which of these reactions is NOT a redox reaction?',
@@ -188,18 +188,18 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
               '$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$'
             ],
             correctAnswer: 2,
-            explanation: 'NaCl + AgNO₃ → AgCl + NaNO₃ is a double-replacement (precipitation) reaction. No oxidation states change: Na stays +1, Cl stays −1, Ag stays +1, N stays +5, O stays −2. It is NOT redox.'
+            explanation: 'NaCl + $AgNO_{3}$ → AgCl + $NaNO_{3}$ is a double-replacement (precipitation) reaction. No oxidation states change: Na stays +1, Cl stays −1, Ag stays +1, N stays +5, O stays −2. It is NOT redox.'
           },
           {
-            question: 'In the reaction Fe₂O₃ + 3CO → 2Fe + 3CO₂, the oxidizing agent is:',
+            question: 'In the reaction $Fe_{2}O_{3}$ + 3CO → 2Fe + $3CO_{2}$, the oxidizing agent is:',
             options: [
-              'Fe₂O₃',
+              '$Fe_{2}O_{3}$',
               'CO',
               'Fe',
-              'CO₂'
+              '$CO_{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'Fe in Fe₂O₃ goes from +3 → 0 (reduced). C in CO goes from +2 → +4 (oxidized). Fe₂O₃ gets reduced, so it is the oxidizing agent (it causes CO to be oxidized).'
+            explanation: 'Fe in $Fe_{2}O_{3}$ goes from +3 → 0 (reduced). C in CO goes from +2 → +4 (oxidized). $Fe_{2}O_{3}$ gets reduced, so it is the oxidizing agent (it causes CO to be oxidized).'
           }
         ]
       }
@@ -268,15 +268,15 @@ For the reaction: $\\text{2Al}(s) + 3\\text{Cl}_2(g) \\rightarrow 2\\text{AlCl}_
       exercise: {
         questions: [
           {
-            question: 'In the reaction 2H₂(g) + O₂(g) → 2H₂O(l), the reducing agent is:',
+            question: 'In the reaction $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$, the reducing agent is:',
             options: [
-              'O₂',
-              'H₂',
-              'H₂O',
+              '$O_{2}$',
+              '$H_{2}$',
+              '$H_{2}O$',
               'There is no reducing agent'
             ],
             correctAnswer: 1,
-            explanation: 'H goes from 0 to +1 (oxidized — loses electrons). O goes from 0 to −2 (reduced — gains electrons). H₂ is oxidized, so it is the reducing agent. O₂ is the oxidizing agent.'
+            explanation: 'H goes from 0 to +1 (oxidized — loses electrons). O goes from 0 to −2 (reduced — gains electrons). $H_{2}$ is oxidized, so it is the reducing agent. $O_{2}$ is the oxidizing agent.'
           },
           {
             question: 'Which observation would suggest a redox reaction is occurring?',
@@ -287,7 +287,7 @@ For the reaction: $\\text{2Al}(s) + 3\\text{Cl}_2(g) \\rightarrow 2\\text{AlCl}_
               'Two solutions are mixed with no visible change'
             ],
             correctAnswer: 1,
-            explanation: 'A metal dissolving in acid with gas evolution (H₂) is classic redox: the metal is oxidized (0 → positive) and H⁺ is reduced (H⁺ → H₂, oxidation state +1 → 0).'
+            explanation: 'A metal dissolving in acid with gas evolution $(H_{2})$ is classic redox: the metal is oxidized (0 → positive) and $H^{+}$ is reduced ($H^{+}$ → $H_{2}$, oxidation state +1 → 0).'
           }
         ]
       }

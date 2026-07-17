@@ -48,7 +48,7 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
 | Confusing $\\rho$ (resistivity) with $R$ (resistance) | $\\rho$ is a material property; $R$ depends on geometry too |
 | Thinking drift velocity = signal speed | Drift velocity is $\\sim 10^{-4}$ m/s; signal propagates at $\\sim c$ |
 | Mixing up conventional current and electron flow | Conventional: + to −. Electrons: − to + |
-| Forgetting units on $\\alpha$ | $\\alpha$ has units of °C⁻¹ (or K⁻¹) |
+| Forgetting units on $\\alpha$ | $\\alpha$ has units of °$C^{-1}$ $(or K^{-1})$ |
       `
     },
     {
@@ -114,11 +114,11 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
       exercise: {
         boxes: 4,
         correctAnswers: ['11.2', '2.0', '11.2', '1080'],
-        hint1: '$A = \\pi(d/2)^2 = \\pi(2.5 \\times 10^{-4})^2 = 1.96 \\times 10^{-7}$ m². $R = \\rho L/A$.',
+        hint1: '$A = \\pi(d/2)^2 = \\pi(2.5 \\times 10^{-4})^2 = 1.96 \\times 10^{-7}$ $m^{2}$. $R = \\rho L/A$.',
         hint2: '$I = \\varepsilon/(R + r) = 12/(5.6 + 0.4)$.',
         hint3: '$V = \\varepsilon - Ir = 12 - (2.0)(0.40)$.',
         hint4: '$E = Pt = 1200 \\times (15 \\times 60) = 1200 \\times 900$ J. Convert to kJ.',
-        explanation: '1) $A = \\pi(2.5 \\times 10^{-4})^2 = 1.96 \\times 10^{-7}$ m². $R = (1.10 \\times 10^{-6})(2.0)/(1.96 \\times 10^{-7}) = 11.2$ $\\Omega$. 2) $I = 12/6.0 = 2.0$ A. 3) $V = 12 - 0.80 = 11.2$ V. 4) $E = 1200 \\times 900 = 1{,}080{,}000$ J $= 1080$ kJ.'
+        explanation: '1) $A = \\pi(2.5 \\times 10^{-4})^2 = 1.96 \\times 10^{-7}$ $m^{2}$. $R = (1.10 \\times 10^{-6})(2.0)/(1.96 \\times 10^{-7}) = 11.2$ $\\Omega$. 2) $I = 12/6.0 = 2.0$ A. 3) $V = 12 - 0.80 = 11.2$ V. 4) $E = 1200 \\times 900 = 1{,}080{,}000$ J $= 1080$ kJ.'
       }
     },
     {
@@ -166,7 +166,7 @@ On the AP Physics 2 exam, you'll encounter free-response questions that combine 
       exercise: {
         questions: [
           {
-            question: 'A copper wire carries 3.0 A. The wire has $n = 8.5 \\times 10^{28}$ electrons/m³ and cross-sectional area $2.0 \\times 10^{-6}$ m². The drift velocity is closest to:',
+            question: 'A copper wire carries 3.0 A. The wire has $n = 8.5 \\times 10^{28}$ $electrons/m^{3}$ and cross-sectional area $2.0 \\times 10^{-6}$ $m^{2}$. The drift velocity is closest to:',
             options: [
               '$1.1 \\times 10^{-4}$ m/s',
               '$2.2 \\times 10^{-4}$ m/s',
@@ -177,7 +177,7 @@ On the AP Physics 2 exam, you'll encounter free-response questions that combine 
             explanation: '$v_d = I/(nAe) = 3.0/(8.5 \\times 10^{28} \\times 2.0 \\times 10^{-6} \\times 1.6 \\times 10^{-19}) = 3.0/(2.72 \\times 10^{4}) = 1.1 \\times 10^{-4}$ m/s.'
           },
           {
-            question: 'A tungsten filament ($\\alpha = 4.5 \\times 10^{-3}$ °C⁻¹) has resistance 15 $\\Omega$ at 20°C. At operating temperature, its resistance is 180 $\\Omega$. The operating temperature is closest to:',
+            question: 'A tungsten filament ($\\alpha = 4.5 \\times 10^{-3}$ °$C^{-1}$) has resistance 15 $\\Omega$ at 20°C. At operating temperature, its resistance is 180 $\\Omega$. The operating temperature is closest to:',
             options: [
               '500°C',
               '1200°C',

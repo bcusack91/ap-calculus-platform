@@ -85,7 +85,7 @@ Calculate and apply!
       exercise: {
         questions: [
           {
-            question: "Light travels at 2.0 × 10⁸ m/s in a material. What is the index of refraction? (c = 3.0 × 10⁸ m/s)",
+            question: "Light travels at $2.0 \\times 10^{8}$ m/s in a material. What is the index of refraction? (c = $3.0 \\times 10^{8}$ m/s)",
             options: [
               "n = 1.5",
               "n = 0.67",
@@ -93,7 +93,7 @@ Calculate and apply!
               "n = 6.0"
             ],
             correctAnswer: 0,
-            explanation: "Using n = c/v: n = (3.0 × 10⁸)/(2.0 × 10⁸) = 1.5. This is typical for glass!"
+            explanation: "Using n = c/v: n = $(3.0 \\times 10^{8})/(2.0 \\times 10^{8})$ = 1.5. This is typical for glass!"
           },
           {
             question: "When light enters water (n = 1.33) from air, what happens to its speed?",

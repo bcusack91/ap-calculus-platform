@@ -153,7 +153,7 @@ If a gas expands from the same initial state:
       content: `
 **First Law Practice** 🧮
 
-A gas undergoes an isobaric expansion at $P = 2 \\times 10^5$ Pa from $V_i = 0.01$ m³ to $V_f = 0.03$ m³. $Q = 10000$ J is added.
+A gas undergoes an isobaric expansion at $P = 2 \\times 10^5$ Pa from $V_i = 0.01$ $m^{3}$ to $V_f = 0.03$ $m^{3}$. $Q = 10000$ J is added.
 
 **1)** Work done by the gas? (in J)
 

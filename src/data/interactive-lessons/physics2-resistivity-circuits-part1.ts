@@ -23,7 +23,7 @@ $$\\boxed{R = \\frac{\\rho L}{A}}$$
 | $R$ | Resistance | $\\Omega$ (ohms) |
 | $\\rho$ | Resistivity | $\\Omega \\cdot \\text{m}$ |
 | $L$ | Length of conductor | m |
-| $A$ | Cross-sectional area | m² |
+| $A$ | Cross-sectional area | $m^{2}$ |
 
 ---
 
@@ -76,7 +76,7 @@ $$\\boxed{I = nqv_d A}$$
 
 | Symbol | Meaning | Typical Value |
 |--------|---------|--------------|
-| $n$ | Number density of carriers | $\\sim 10^{28}$ m⁻³ for Cu |
+| $n$ | Number density of carriers | $\\sim 10^{28}$ $m^{-3}$ for Cu |
 | $q$ | Charge per carrier | $1.6 \\times 10^{-19}$ C |
 | $v_d$ | Drift velocity | $\\sim 10^{-4}$ m/s (very slow!) |
 | $A$ | Cross-sectional area | depends on wire |
@@ -148,13 +148,13 @@ In a uniform wire with electric field $E$:
 
 A copper wire ($\\rho = 1.68 \\times 10^{-8}$ Ω·m) is 2 m long with a circular cross-section of radius 1 mm.
 
-**1)** Cross-sectional area $A$? (in m², scientific notation)
+**1)** Cross-sectional area $A$? (in $m^{2}$, scientific notation)
 
 **2)** Resistance $R$? (in Ω, round to 4 decimal places)
 
 **3)** If the wire is stretched to 4 m (same volume), $R_{new}/R_{old} = ?$
 
-**4)** Current density $J$ if $I = 3$ A? (in A/m², scientific notation)
+**4)** Current density $J$ if $I = 3$ A? (in $A/m^{2}$, scientific notation)
       `,
       exercise: {
         boxes: 4,
@@ -163,7 +163,7 @@ A copper wire ($\\rho = 1.68 \\times 10^{-8}$ Ω·m) is 2 m long with a circular
         hint2: '$R = \\rho L/A$',
         hint3: 'Volume constant → $L$ doubles, $A$ halves → $R$ quadruples',
         hint4: '$J = I/A = 3/3.14 \\times 10^{-6}$',
-        explanation: '1) $A = \\pi(10^{-3})^2 ≈ 3.14 \\times 10^{-6}$ m². 2) $R = 1.68 \\times 10^{-8} \\times 2/(3.14 \\times 10^{-6}) ≈ 0.0107$ Ω. 3) Stretching doubles $L$ and halves $A$: $R_{new} = 4R_{old}$. 4) $J = 3/(3.14 \\times 10^{-6}) ≈ 9.55 \\times 10^5$ A/m².'
+        explanation: '1) $A = \\pi(10^{-3})^2 ≈ 3.14 \\times 10^{-6}$ $m^{2}$. 2) $R = 1.68 \\times 10^{-8} \\times 2/(3.14 \\times 10^{-6}) ≈ 0.0107$ Ω. 3) Stretching doubles $L$ and halves $A$: $R_{new} = 4R_{old}$. 4) $J = 3/(3.14 \\times 10^{-6}) ≈ 9.55 \\times 10^5$ $A/m^{2}$.'
       }
     }
   ]

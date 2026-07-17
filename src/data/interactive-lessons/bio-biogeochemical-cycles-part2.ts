@@ -12,14 +12,14 @@ Carbon is the **backbone of all organic molecules** — proteins, nucleic acids,
 
 | Reservoir | Carbon Stored (gigatons C) | Residence Time |
 |-----------|---------------------------|----------------|
-| **Atmosphere** (CO₂, CH₄) | ~850 GtC | ~5 years |
-| **Oceans** (dissolved CO₂, bicarbonate) | ~38,000 GtC | ~400 years |
+| **Atmosphere** ($CO_{2}$, $CH_{4}$) | ~850 GtC | ~5 years |
+| **Oceans** (dissolved $CO_{2}$, bicarbonate) | ~38,000 GtC | ~400 years |
 | **Fossil fuels** (coal, oil, gas) | ~4,000 GtC | Millions of years |
 | **Soil organic matter** | ~1,500 GtC | decades–centuries |
 | **Living biomass** | ~550 GtC | years–decades |
 | **Sedimentary rock** (limestone) | ~60,000,000 GtC | Millions of years |
 
-> 🔬 **AP Key Point:** Sedimentary rocks (especially limestone/CaCO₃) store the vast majority of Earth's carbon, but this carbon cycles very slowly through geological processes.`
+> 🔬 **AP Key Point:** Sedimentary rocks $(especially limestone/CaCO_{3})$ store the vast majority of Earth's carbon, but this carbon cycles very slowly through geological processes.`
     },
     {
       id: 'bgc2-quiz1',
@@ -31,18 +31,18 @@ Carbon is the **backbone of all organic molecules** — proteins, nucleic acids,
             question: 'Which reservoir stores the MOST carbon on Earth?',
             options: ['The atmosphere', 'The oceans', 'Fossil fuels', 'Sedimentary rock (limestone)'],
             correctAnswer: 3,
-            explanation: 'Sedimentary rocks, particularly limestone (CaCO₃), store approximately 60 million GtC — far more than all other reservoirs combined. However, this carbon cycles extremely slowly over geological time scales (millions of years).'
+            explanation: 'Sedimentary rocks, particularly limestone $(CaCO_{3})$, store approximately 60 million GtC — far more than all other reservoirs combined. However, this carbon cycles extremely slowly over geological time scales (millions of years).'
           },
           {
-            question: 'The atmospheric residence time of CO₂ is approximately 5 years. This means:',
+            question: 'The atmospheric residence time of $CO_{2}$ is approximately 5 years. This means:',
             options: [
-              'CO₂ emissions disappear from the atmosphere in 5 years',
-              'An individual CO₂ molecule is replaced by exchange with other reservoirs every ~5 years on average',
+              '$CO_{2}$ emissions disappear from the atmosphere in 5 years',
+              'An individual $CO_{2}$ molecule is replaced by exchange with other reservoirs every ~5 years on average',
               'The atmosphere can only hold 5 years worth of emissions',
-              'CO₂ causes warming for only 5 years'
+              '$CO_{2}$ causes warming for only 5 years'
             ],
             correctAnswer: 1,
-            explanation: 'Residence time means the average time an individual CO₂ molecule spends in the atmosphere before being exchanged with another reservoir. However, because emissions add NET new carbon, the overall increase in atmospheric CO₂ persists for much longer (centuries).'
+            explanation: 'Residence time means the average time an individual $CO_{2}$ molecule spends in the atmosphere before being exchanged with another reservoir. However, because emissions add NET new carbon, the overall increase in atmospheric $CO_{2}$ persists for much longer (centuries).'
           }
         ]
       }
@@ -56,26 +56,26 @@ Carbon is the **backbone of all organic molecules** — proteins, nucleic acids,
 
 $$6CO_2 + 6H_2O \\xrightarrow{\\text{light energy}} C_6H_{12}O_6 + 6O_2$$
 
-- Converts atmospheric CO₂ → organic carbon (glucose)
+- Converts atmospheric $CO_{2}$ → organic carbon (glucose)
 - Performed by **autotrophs**: plants, algae, cyanobacteria
-- Occurs in **chloroplasts** (Calvin cycle fixes CO₂ using RuBisCO)
+- Occurs in **chloroplasts** (Calvin cycle fixes $CO_{2}$ using RuBisCO)
 - Removes ~120 GtC/year from the atmosphere
 
 ### Cellular Respiration (Carbon Release)
 
 $$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + ATP$$
 
-- Converts organic carbon → CO₂ (released to atmosphere)
+- Converts organic carbon → $CO_{2}$ (released to atmosphere)
 - Performed by **all living organisms** (autotrophs AND heterotrophs)
 - Releases ~120 GtC/year to the atmosphere
 
 ### Decomposition
 
 - **Decomposers** (bacteria, fungi) break down dead organic matter
-- Releases CO₂ (aerobic) or CH₄ (anaerobic decomposition)
+- Releases $CO_{2}$ (aerobic) or $CH_{4}$ (anaerobic decomposition)
 - Returns carbon locked in biomass back to the atmosphere/soil
 
-> ⚖️ **Balance:** Before industrialization, photosynthesis and respiration/decomposition were roughly balanced, keeping atmospheric CO₂ at ~280 ppm for thousands of years.`
+> ⚖️ **Balance:** Before industrialization, photosynthesis and respiration/decomposition were roughly balanced, keeping atmospheric $CO_{2}$ at ~280 ppm for thousands of years.`
     },
     {
       id: 'bgc2-quiz2',
@@ -92,13 +92,13 @@ $$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + ATP$$
               'Only organisms without chloroplasts'
             ],
             correctAnswer: 2,
-            explanation: 'ALL living organisms perform cellular respiration, including plants. Plants photosynthesize AND respire. During the day, photosynthesis typically exceeds respiration (net CO₂ uptake), but at night, plants only respire (net CO₂ release).'
+            explanation: 'ALL living organisms perform cellular respiration, including plants. Plants photosynthesize AND respire. During the day, photosynthesis typically exceeds respiration (net $CO_{2}$ uptake), but at night, plants only respire (net $CO_{2}$ release).'
           },
           {
             question: 'Anaerobic decomposition of organic matter primarily releases:',
-            options: ['CO₂ only', 'O₂', 'CH₄ (methane)', 'N₂O (nitrous oxide)'],
+            options: ['$CO_{2}$ only', '$O_{2}$', '$CH_{4}$ (methane)', '$N_{2}O$ (nitrous oxide)'],
             correctAnswer: 2,
-            explanation: 'When decomposers (methanogenic archaea) break down organic matter in oxygen-poor environments (wetlands, landfills, rice paddies, ruminant stomachs), they release methane (CH₄). Methane is a greenhouse gas ~80× more potent than CO₂ over a 20-year period.'
+            explanation: 'When decomposers (methanogenic archaea) break down organic matter in oxygen-poor environments (wetlands, landfills, rice paddies, ruminant stomachs), they release methane $(CH_{4})$. Methane is a greenhouse gas ~80× more potent than $CO_{2}$ over a 20-year period.'
           }
         ]
       }
@@ -110,13 +110,13 @@ $$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + ATP$$
 
 ### The Ocean Carbon Sink
 
-The ocean absorbs CO₂ through two main mechanisms:
+The ocean absorbs $CO_{2}$ through two main mechanisms:
 
-1. **Physical pump** — CO₂ dissolves at the ocean surface (cold water absorbs more CO₂)
-   - CO₂ + H₂O → H₂CO₃ (carbonic acid) → HCO₃⁻ + H⁺
+1. **Physical pump** — $CO_{2}$ dissolves at the ocean surface (cold water absorbs more $CO_{2}$)
+   - $CO_{2}$ + $H_{2}O$ → $H_{2}CO_{3}$ (carbonic acid) → $HCO_{3}^{-}$ + $H^{+}$
    - This produces **bicarbonate ions**, lowering ocean pH (**ocean acidification**)
 
-2. **Biological pump** — Marine phytoplankton fix CO₂ via photosynthesis
+2. **Biological pump** — Marine phytoplankton fix $CO_{2}$ via photosynthesis
    - Dead organisms sink, carrying carbon to the deep ocean ("marine snow")
    - Some carbon is buried in deep-sea sediments for millions of years
 
@@ -134,7 +134,7 @@ The ocean absorbs CO₂ through two main mechanisms:
 - Deforestation releases ~1.5 GtC/year
 - Total human emissions: **~11 GtC/year**
 - Oceans absorb ~2.5 GtC/year; land absorbs ~3 GtC/year
-- **Net atmospheric increase: ~5 GtC/year** → CO₂ now exceeds 420 ppm`
+- **Net atmospheric increase: ~5 GtC/year** → $CO_{2}$ now exceeds 420 ppm`
     },
     {
       id: 'bgc2-dropdown',
@@ -143,15 +143,15 @@ The ocean absorbs CO₂ through two main mechanisms:
       exercise: {
         dropdowns: [
           {
-            label: 'The process that converts atmospheric CO₂ into organic carbon is ___',
+            label: 'The process that converts atmospheric $CO_{2}$ into organic carbon is ___',
             options: ['cellular respiration', 'photosynthesis', 'decomposition', 'combustion']
           },
           {
-            label: 'Before industrialization, atmospheric CO₂ was approximately ___',
+            label: 'Before industrialization, atmospheric $CO_{2}$ was approximately ___',
             options: ['180 ppm', '280 ppm', '350 ppm', '420 ppm']
           },
           {
-            label: 'When CO₂ dissolves in ocean water, it forms ___ which lowers ocean pH',
+            label: 'When $CO_{2}$ dissolves in ocean water, it forms ___ which lowers ocean pH',
             options: ['carbonic acid', 'sulfuric acid', 'hydrochloric acid', 'acetic acid']
           },
           {
@@ -161,9 +161,9 @@ The ocean absorbs CO₂ through two main mechanisms:
         ],
         correctAnswers: ['photosynthesis', '280 ppm', 'carbonic acid', 'the oceans'],
         hint1: 'Photosynthesis literally means "light synthesis" — building molecules using light energy.',
-        hint2: 'Pre-industrial CO₂ was stable for thousands of years before rising sharply after ~1750.',
-        hint3: 'CO₂ + H₂O → H₂CO₃ — this reaction is the basis of ocean acidification.',
-        explanation: 'Photosynthesis fixes atmospheric CO₂ into organic molecules. Pre-industrial CO₂ was ~280 ppm (now >420 ppm). Dissolved CO₂ forms carbonic acid (H₂CO₃), which dissociates to release H⁺ ions, lowering ocean pH. The oceans hold ~38,000 GtC, making them the largest rapidly-cycling carbon reservoir.'
+        hint2: 'Pre-industrial $CO_{2}$ was stable for thousands of years before rising sharply after ~1750.',
+        hint3: '$CO_{2}$ + $H_{2}O$ → $H_{2}CO_{3}$ — this reaction is the basis of ocean acidification.',
+        explanation: 'Photosynthesis fixes atmospheric $CO_{2}$ into organic molecules. Pre-industrial $CO_{2}$ was ~280 ppm (now >420 ppm). Dissolved $CO_{2}$ forms carbonic acid $(H_{2}CO_{3})$, which dissociates to release $H^{+}$ ions, lowering ocean pH. The oceans hold ~38,000 GtC, making them the largest rapidly-cycling carbon reservoir.'
       }
     }
   ]

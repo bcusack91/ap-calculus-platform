@@ -78,7 +78,7 @@ const questionPool: PoolQuestion[] = [
   { question: '(−24) ÷ 6 = ?', options: ['−4', '4', '−18', '18'], correctAnswer: 0, explanation: 'Negative ÷ positive = negative. 24 ÷ 6 = 4, so answer is −4.', domain: 'integers-operations', topicSlug: 'operations-with-integers', formSet: 'B' },
   { question: 'Evaluate: 2 × (3 + 5) − 4', options: ['12', '16', '10', '14'], correctAnswer: 0, explanation: 'Parentheses first: 3 + 5 = 8. Then 2 × 8 = 16. Then 16 − 4 = 12.', domain: 'integers-operations', topicSlug: 'order-of-operations-pemdas', formSet: 'B' },
   { question: '|−9| = ?', options: ['9', '−9', '0', '1'], correctAnswer: 0, explanation: 'Absolute value is the distance from zero: |−9| = 9.', domain: 'integers-operations', topicSlug: 'operations-with-integers', formSet: 'both' },
-  { question: '(−2)³ = ?', options: ['−8', '8', '−6', '6'], correctAnswer: 0, explanation: '(−2)³ = (−2)(−2)(−2) = 4 × (−2) = −8.', domain: 'integers-operations', topicSlug: 'operations-with-integers', formSet: 'both' },
+  { question: '$(-2)^{3}$ = ?', options: ['−8', '8', '−6', '6'], correctAnswer: 0, explanation: '$(-2)^{3}$ = (−2)(−2)(−2) = 4 × (−2) = −8.', domain: 'integers-operations', topicSlug: 'operations-with-integers', formSet: 'both' },
 
   // ---- Fractions & Decimals ----
   { question: '1/3 + 1/4 = ?', options: ['7/12', '2/7', '1/7', '5/12'], correctAnswer: 0, explanation: 'LCD = 12. 4/12 + 3/12 = 7/12.', domain: 'fractions-decimals', topicSlug: 'operations-with-fractions', formSet: 'A' },
@@ -115,7 +115,7 @@ const questionPool: PoolQuestion[] = [
   { question: 'The volume of a rectangular prism 3 × 4 × 5 is:', options: ['60', '12', '47', '24'], correctAnswer: 0, explanation: 'V = l × w × h = 3 × 4 × 5 = 60.', domain: 'geometry-measurement', topicSlug: 'volume-rectangular-prisms', formSet: 'A' },
   { question: 'Two angles of a triangle are 50° and 70°. The third angle is:', options: ['60°', '120°', '80°', '40°'], correctAnswer: 0, explanation: '180 − 50 − 70 = 60°.', domain: 'geometry-measurement', topicSlug: 'angle-measurements', formSet: 'A' },
   { question: 'The perimeter of a square with side 9 is:', options: ['36', '81', '18', '27'], correctAnswer: 0, explanation: 'P = 4s = 4 × 9 = 36.', domain: 'geometry-measurement', topicSlug: 'perimeter-and-area', formSet: 'B' },
-  { question: 'The surface area of a cube with side 3 is:', options: ['54', '27', '18', '36'], correctAnswer: 0, explanation: 'SA = 6s² = 6 × 9 = 54.', domain: 'geometry-measurement', topicSlug: 'volume-rectangular-prisms', formSet: 'B' },
+  { question: 'The surface area of a cube with side 3 is:', options: ['54', '27', '18', '36'], correctAnswer: 0, explanation: 'SA = $6s^{2}$ = 6 × 9 = 54.', domain: 'geometry-measurement', topicSlug: 'volume-rectangular-prisms', formSet: 'B' },
   { question: 'An angle measuring 90° is called:', options: ['Right', 'Acute', 'Obtuse', 'Straight'], correctAnswer: 0, explanation: 'A 90° angle is a right angle.', domain: 'geometry-measurement', topicSlug: 'angle-measurements', formSet: 'B' },
   { question: 'The area of a triangle with base 10 and height 6 is:', options: ['30', '60', '16', '8'], correctAnswer: 0, explanation: 'A = (1/2)bh = (1/2)(10)(6) = 30.', domain: 'geometry-measurement', topicSlug: 'perimeter-and-area', formSet: 'both' },
   { question: 'Complementary angles add up to:', options: ['90°', '180°', '360°', '45°'], correctAnswer: 0, explanation: 'Complementary angles sum to 90°.', domain: 'geometry-measurement', topicSlug: 'angle-measurements', formSet: 'both' },

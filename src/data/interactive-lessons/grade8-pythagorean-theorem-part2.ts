@@ -44,7 +44,7 @@ $a = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$ ✅
                               "14"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "169−25=144. √144=12."
+                    "explanation": "169−25=144. $\\sqrt{144}$=12."
           }
 ]
       }
@@ -68,7 +68,7 @@ $a = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$ ✅
         hint1: "169 − 25.",
         hint2: "225 − 81.",
         hint3: "289 − 64.",
-        explanation: "1) √144=12. 2) √144=12. 3) √225=15."
+        explanation: "1) $\\sqrt{144}$=12. 2) $\\sqrt{144}$=12. 3) $\\sqrt{225}$=15."
       }
     },
     {
@@ -80,9 +80,9 @@ $a = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$ ✅
       exercise: {
         dropdowns: [{"label":"To find a missing leg, use","options":["$a = \\sqrt{c^2 - b^2}$","$a = c + b$","$a = c \\times b$","$a = c - b$"]},{"label":"The hypotenuse is always the ____ value","options":["Largest","Smallest","Middle","Unknown"]}],
         correctAnswers: ["$a = \\sqrt{c^2 - b^2}$","Largest"],
-        hint1: "Rearrange a²+b²=c².",
+        hint1: "Rearrange $a^{2}+b^{2}$=$c^{2}$.",
         hint2: "Opposite the largest angle.",
-        explanation: "Leg = √(c²−b²). Hypotenuse is the largest side."
+        explanation: "Leg = $\\sqrt{c^{2}-b^{2}}$. Hypotenuse is the largest side."
       }
     },
     {
@@ -116,7 +116,7 @@ $a = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$ ✅
                               "18"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "225−81=144. √144=12."
+                    "explanation": "225−81=144. $\\sqrt{144}$=12."
           }
 ]
       }

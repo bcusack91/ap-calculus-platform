@@ -27,15 +27,15 @@ This final part presents AP-style questions that integrate concepts from the ent
       exercise: {
         questions: [
           {
-            question: 'A student modifies the Miller-Urey experiment by replacing the reducing gas mixture (CH₄, NH₃, H₂) with an oxidizing mixture containing O₂. What is the most likely result?',
+            question: 'A student modifies the Miller-Urey experiment by replacing the reducing gas mixture ($CH_{4}$, $NH_{3}$, $H_{2}$) with an oxidizing mixture containing $O_{2}$. What is the most likely result?',
             options: [
-              'Far fewer or no organic molecules would be produced because O₂ would oxidize and break down organic compounds as they form',
+              'Far fewer or no organic molecules would be produced because $O_{2}$ would oxidize and break down organic compounds as they form',
               'The same amino acids would be produced because the energy source (electric sparks) is unchanged',
-              'More complex organic molecules would be produced because O₂ provides additional energy',
-              'Only nucleotides would be produced because O₂ selectively inhibits amino acid synthesis'
+              'More complex organic molecules would be produced because $O_{2}$ provides additional energy',
+              'Only nucleotides would be produced because $O_{2}$ selectively inhibits amino acid synthesis'
             ],
             correctAnswer: 0,
-            explanation: 'Organic molecules are thermodynamically unstable in the presence of O₂. In an oxidizing atmosphere, any organic molecules that form would be rapidly broken down. This is precisely why the reducing conditions of early Earth were essential for prebiotic chemistry — and why the Miller-Urey experiment used a reducing gas mixture.'
+            explanation: 'Organic molecules are thermodynamically unstable in the presence of $O_{2}$. In an oxidizing atmosphere, any organic molecules that form would be rapidly broken down. This is precisely why the reducing conditions of early Earth were essential for prebiotic chemistry — and why the Miller-Urey experiment used a reducing gas mixture.'
           },
           {
             question: 'Scientists discovered over 90 amino acids in the Murchison meteorite (1969). How does this finding support the hypothesis of abiogenesis?',
@@ -165,7 +165,7 @@ This final part presents AP-style questions that integrate concepts from the ent
    - Use specific details: "70S ribosomes" not just "ribosomes"; "circular DNA" not just "DNA"
 
 3. **Timeline interpretation**: "Explain why the evolution of oxygenic photosynthesis was a prerequisite for the evolution of complex multicellular life..."
-   - Connect: photosynthesis → O₂ → aerobic respiration → more ATP → larger cells → multicellularity
+   - Connect: photosynthesis → $O_{2}$ → aerobic respiration → more ATP → larger cells → multicellularity
 
 ### Key Reasoning Chains for the Exam
 
@@ -175,8 +175,8 @@ Reducing atmosphere + energy → simple organics → polymers → self-replicati
 **Chain 2: Endosymbiosis sequence**
 Prokaryotes → endosymbiosis (alpha-proteobacteria → mitochondria) → eukaryotes → endosymbiosis (cyanobacteria → chloroplasts) → photosynthetic eukaryotes
 
-**Chain 3: O₂ and complexity**
-Cyanobacteria → O₂ → GOE → ozone layer + aerobic respiration → more energy → eukaryotes → multicellularity → Cambrian explosion
+**Chain 3: $O_{2}$ and complexity**
+Cyanobacteria → $O_{2}$ → GOE → ozone layer + aerobic respiration → more energy → eukaryotes → multicellularity → Cambrian explosion
       `
     },
     {

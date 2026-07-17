@@ -22,7 +22,7 @@ Acid-base chemistry appears in nearly every MCAT section — chemistry passages,
 | Brønsted-Lowry | Donates $\\text{H}^+$ (proton donor) | Accepts $\\text{H}^+$ (proton acceptor) | Any solvent |
 | Lewis | Accepts electron pair | Donates electron pair | Broadest definition |
 
-**Conjugate pairs:** When a Brønsted acid donates H⁺, it forms its conjugate base:
+**Conjugate pairs:** When a Brønsted acid donates $H^{+}$, it forms its conjugate base:
 
 $$\\text{HA} \\rightleftharpoons \\text{H}^+ + \\text{A}^-$$
 
@@ -30,8 +30,8 @@ $$\\text{HA} \\rightleftharpoons \\text{H}^+ + \\text{A}^-$$
 - Weaker acid → stronger conjugate base
 
 **Lewis acids/bases (MCAT favorites):**
-- $\\text{BF}_3$, $\\text{AlCl}_3$, metal cations, $\\text{H}^+$ are Lewis acids (accept e⁻ pair)
-- $\\text{NH}_3$, $\\text{OH}^-$, $\\text{Cl}^-$, water are Lewis bases (donate e⁻ pair)
+- $\\text{BF}_3$, $\\text{AlCl}_3$, metal cations, $\\text{H}^+$ are Lewis acids (accept $e^{-}$ pair)
+- $\\text{NH}_3$, $\\text{OH}^-$, $\\text{Cl}^-$, water are Lewis bases (donate $e^{-}$ pair)
 
 ### Strong vs. Weak
 
@@ -165,17 +165,17 @@ Key points on the curve:
 | Point | pH Relationship | Significance |
 |-------|----------------|--------------|
 | Initial | pH calculated from $K_a$, $[\\text{HA}]$ | Higher than strong acid of same concentration |
-| Half-equivalence | pH = p$K_a$ | Equal amounts HA and A⁻ — maximum buffer capacity |
-| Equivalence | pH > 7 | A⁻ hydrolyzes water: $\\text{A}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HA} + \\text{OH}^-$ |
+| Half-equivalence | pH = p$K_a$ | Equal amounts HA and $A^{-}$ — maximum buffer capacity |
+| Equivalence | pH > 7 | $A^{-}$ hydrolyzes water: $\\text{A}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HA} + \\text{OH}^-$ |
 | Past equivalence | pH determined by excess base | |
 
 ### Buffer Capacity
 
 A buffer resists pH change by:
-- **Adding acid (H⁺):** consumed by conjugate base → $\\text{A}^- + \\text{H}^+ \\to \\text{HA}$
-- **Adding base (OH⁻):** consumed by weak acid → $\\text{HA} + \\text{OH}^- \\to \\text{A}^- + \\text{H}_2\\text{O}$
+- **Adding acid $(H^{+})$:** consumed by conjugate base → $\\text{A}^- + \\text{H}^+ \\to \\text{HA}$
+- **Adding base $(OH^{-})$:** consumed by weak acid → $\\text{HA} + \\text{OH}^- \\to \\text{A}^- + \\text{H}_2\\text{O}$
 
-**Maximum capacity** is at pH = p$K_a$ (equal concentrations of HA and A⁻).
+**Maximum capacity** is at pH = p$K_a$ (equal concentrations of HA and $A^{-}$).
 
 ### Physiological Buffer: Bicarbonate
 
@@ -185,7 +185,7 @@ Normal blood pH = 7.40. $\\text{p}K_a$ of $\\text{H}_2\\text{CO}_3$ ≈ 6.1.
 
 Henderson-Hasselbalch: $7.40 = 6.1 + \\log([\\text{HCO}_3^-]/[\\text{H}_2\\text{CO}_3])$
 
-Ratio ≈ 20:1 (HCO₃⁻ : H₂CO₃), maintained by lungs and kidneys.
+Ratio ≈ 20:1 ($HCO_{3}^{-}$ : $H_{2}CO_{3}$), maintained by lungs and kidneys.
 `
     },
     {
@@ -214,18 +214,18 @@ Ratio ≈ 20:1 (HCO₃⁻ : H₂CO₃), maintained by lungs and kidneys.
               `100:1`
             ],
             correctAnswer: 0,
-            explanation: `pH = p$K_a + \\log([A^-]/[HA])$. $5.76 = 4.76 + \\log(\\text{ratio})$ → $\\log(\\text{ratio}) = 1.0$ → ratio = 10. [A⁻] must be 10× [HA].`
+            explanation: `pH = p$K_a + \\log([A^-]/[HA])$. $5.76 = 4.76 + \\log(\\text{ratio})$ → $\\log(\\text{ratio}) = 1.0$ → ratio = 10. [$A^{-}$] must be 10× [HA].`
           },
           {
-            question: `In the bicarbonate buffer system of blood, hyperventilation (exhaling excess CO₂) would:`,
+            question: `In the bicarbonate buffer system of blood, hyperventilation (exhaling excess $CO_{2}$) would:`,
             options: [
               `Lower blood pH (respiratory acidosis)`,
               `Raise blood pH (respiratory alkalosis)`,
               `Have no effect on blood pH`,
-              `Increase [HCO₃⁻] to compensate`
+              `Increase [$HCO_{3}^{-}$] to compensate`
             ],
             correctAnswer: 1,
-            explanation: `Exhaling CO₂ shifts equilibrium left ($\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$), removing H⁺ and raising pH (respiratory alkalosis).`
+            explanation: `Exhaling $CO_{2}$ shifts equilibrium left ($\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$), removing $H^{+}$ and raising pH (respiratory alkalosis).`
           },
           {
             question: `Which indicator should be used for a weak acid/strong base titration with an equivalence point at pH 9.0?`,
@@ -252,7 +252,7 @@ Ratio ≈ 20:1 (HCO₃⁻ : H₂CO₃), maintained by lungs and kidneys.
 - **Half-equivalence point:** pH = p$K_a$ — most frequent MCAT titration question.
 - **Equivalence point:** weak acid + strong base → pH > 7 (conjugate base hydrolysis).
 - **Buffer capacity** is maximum at pH = p$K_a$.
-- **Blood buffer:** bicarbonate system, pH 7.40, controlled by lungs (CO₂) and kidneys (HCO₃⁻).
+- **Blood buffer:** bicarbonate system, pH 7.40, controlled by lungs $(CO_{2})$ and kidneys $(HCO_{3}^{-})$.
 `
     }
   ]

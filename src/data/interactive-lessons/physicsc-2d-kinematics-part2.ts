@@ -32,7 +32,7 @@ This is a **parabola** opening downward.`
     {
       id: '2dkin2-mcq1',
       type: 'mcq' as const,
-      question: 'A projectile is launched at $50$ m/s at $37°$ above horizontal ($\\cos 37° \\approx 0.8$, $\\sin 37° \\approx 0.6$). What is the maximum height? (Use $g = 10$ m/s².)',
+      question: 'A projectile is launched at $50$ m/s at $37°$ above horizontal ($\\cos 37° \\approx 0.8$, $\\sin 37° \\approx 0.6$). What is the maximum height? (Use $g = 10$ $m/s^{2}$.)',
       options: ['$45$ m', '$90$ m', '$125$ m', '$30$ m'],
       correctAnswer: 0,
       explanation: '$v_{0y} = 50(0.6) = 30$ m/s. At max height, $v_y = 0$: $0 = 30^2 - 2(10)h \\implies h = 900/20 = 45$ m.'
@@ -102,7 +102,7 @@ $$t = \\frac{v_{0y} + \\sqrt{v_{0y}^2 + 2gh}}{g}$$
 
 ### Worked Example
 
-A ball is thrown horizontally at $15$ m/s from a $20$ m cliff ($g = 10$ m/s²).
+A ball is thrown horizontally at $15$ m/s from a $20$ m cliff ($g = 10$ $m/s^{2}$).
 
 - $v_{0x} = 15$ m/s, $v_{0y} = 0$
 

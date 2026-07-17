@@ -118,7 +118,7 @@ $p = 1 - q = 1 - 0.4 = 0.6$
               '0.81'
             ],
             correctAnswer: 1,
-            explanation: 'The recessive phenotype frequency = q². Here q² = 900/10,000 = 0.09, so q = √0.09 = 0.30. Option A (0.09) is the trap: 0.09 is q² (the GENOTYPE/phenotype frequency of aa), not the ALLELE frequency q. You must take the square root to get the allele frequency. Forgetting the square root is the most common Hardy-Weinberg error.'
+            explanation: 'The recessive phenotype frequency = $q^{2}$. Here $q^{2}$ = 900/10,000 = 0.09, so q = $\\sqrt{0.09}$ = 0.30. Option A (0.09) is the trap: 0.09 is $q^{2}$ (the GENOTYPE/phenotype frequency of aa), not the ALLELE frequency q. You must take the square root to get the allele frequency. Forgetting the square root is the most common Hardy-Weinberg error.'
           },
           {
             question: 'Using the same plant population (q = 0.30, so p = 0.70), what fraction of the plants are heterozygous CARRIERS that show purple flowers but carry the white allele?',
@@ -129,7 +129,7 @@ $p = 1 - q = 1 - 0.4 = 0.6$
               '0.49'
             ],
             correctAnswer: 2,
-            explanation: 'Carriers are heterozygotes (Aa), with frequency 2pq = 2(0.70)(0.30) = 0.42, or 42%. Option D (0.49) is the trap: that is p² = 0.70² = 0.49, the frequency of HOMOZYGOUS DOMINANT (AA) plants, not heterozygotes. Be careful to use 2pq for carriers, not p².'
+            explanation: 'Carriers are heterozygotes (Aa), with frequency 2pq = 2(0.70)(0.30) = 0.42, or 42%. Option D (0.49) is the trap: that is $p^{2}$ = $0.70^{2}$ = 0.49, the frequency of HOMOZYGOUS DOMINANT (AA) plants, not heterozygotes. Be careful to use 2pq for carriers, not $p^{2}$.'
           }
         ]
       }
@@ -220,7 +220,7 @@ $p = \\frac{1400}{2000} = 0.70 \\qquad q = \\frac{600}{2000} = 0.30$
               '324'
             ],
             correctAnswer: 2,
-            explanation: 'Heterozygote frequency = 2pq = 2(0.9)(0.1) = 0.18; count = 0.18 × 400 = 72. Option D (324) is the trap: that is p² × 400 = 0.81 × 400 = 324, the number of HOMOZYGOUS DOMINANT birds, not heterozygotes. Option A (4) is q² × 400 = 0.01 × 400 = 4 (homozygous recessive). Match the term to 2pq for heterozygotes.'
+            explanation: 'Heterozygote frequency = 2pq = 2(0.9)(0.1) = 0.18; count = 0.18 × 400 = 72. Option D (324) is the trap: that is $p^{2}$ × 400 = 0.81 × 400 = 324, the number of HOMOZYGOUS DOMINANT birds, not heterozygotes. Option A (4) is $q^{2}$ × 400 = 0.01 × 400 = 4 (homozygous recessive). Match the term to 2pq for heterozygotes.'
           },
           {
             question: 'A biologist samples 200 fish and finds 50 AA, 100 Aa, and 50 aa. To test whether this population is in Hardy-Weinberg equilibrium, what is the correct FIRST step?',
@@ -231,7 +231,7 @@ $p = \\frac{1400}{2000} = 0.70 \\qquad q = \\frac{600}{2000} = 0.30$
               'Conclude it IS in equilibrium because heterozygotes are the most common genotype'
             ],
             correctAnswer: 1,
-            explanation: 'The correct procedure is to compute actual allele frequencies from the data (here p = [2(50)+100]/400 = 0.5, q = 0.5), predict expected counts (p²·N = 50, 2pq·N = 100, q²·N = 50), and compare to observed — they match, so it IS in equilibrium. Option A is the trap: equilibrium does NOT require equal genotype counts; it requires the observed counts to match the p²:2pq:q² prediction, which must be calculated, not assumed from whether categories look "equal."'
+            explanation: 'The correct procedure is to compute actual allele frequencies from the data (here p = [2(50)+100]/400 = 0.5, q = 0.5), predict expected counts ($p^{2}\\cdot N$ = 50, 2pq·N = 100, $q^{2}\\cdot N$ = 50), and compare to observed — they match, so it IS in equilibrium. Option A is the trap: equilibrium does NOT require equal genotype counts; it requires the observed counts to match the $p^{2}$:2pq:$q^{2}$ prediction, which must be calculated, not assumed from whether categories look "equal."'
           }
         ]
       }

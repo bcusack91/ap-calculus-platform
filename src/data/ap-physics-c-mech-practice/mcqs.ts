@@ -19,9 +19,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-1-kinematics',
     question: 'A particle moves with position $x(t) = 3t^3 - 6t^2 + 2t$ (meters). Its acceleration at $t = 2$ s is',
-    options: ['$12$ m/s²', '$24$ m/s²', '$18$ m/s²', '$36$ m/s²'],
+    options: ['$12$ $m/s^{2}$', '$24$ $m/s^{2}$', '$18$ $m/s^{2}$', '$36$ $m/s^{2}$'],
     correctAnswer: 1,
-    explanation: '$v = 9t^2 - 12t + 2$; $a = 18t - 12$. At $t = 2$: $a = 36 - 12 = 24$ m/s².',
+    explanation: '$v = 9t^2 - 12t + 2$; $a = 18t - 12$. At $t = 2$: $a = 36 - 12 = 24$ $m/s^{2}$.',
   },
   {
     type: 'mcq',
@@ -34,7 +34,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-1-kinematics',
-    question: 'A ball is thrown straight up with initial velocity 20 m/s. Taking $g = 10$ m/s², the maximum height reached is',
+    question: 'A ball is thrown straight up with initial velocity 20 m/s. Taking $g = 10$ $m/s^{2}$, the maximum height reached is',
     options: ['$10$ m', '$20$ m', '$40$ m', '$200$ m'],
     correctAnswer: 1,
     explanation: '$v^2 = v_0^2 - 2gh$. At max: $0 = 400 - 20h \\Rightarrow h = 20$ m.',
@@ -50,7 +50,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-1-kinematics',
-    question: 'An object moves so that its acceleration is $a(t) = 6t$ m/s². If $v(0) = 0$ and $x(0) = 0$, then $x(2)$ equals',
+    question: 'An object moves so that its acceleration is $a(t) = 6t$ $m/s^{2}$. If $v(0) = 0$ and $x(0) = 0$, then $x(2)$ equals',
     options: ['$4$ m', '$6$ m', '$8$ m', '$12$ m'],
     correctAnswer: 2,
     explanation: '$v = \\int 6t\\,dt = 3t^2$. $x = \\int 3t^2\\,dt = t^3$. $x(2) = 8$ m.',
@@ -59,9 +59,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-1-kinematics',
     question: 'A car traveling at 30 m/s decelerates uniformly to a stop over 75 m. The deceleration magnitude is',
-    options: ['$3.0$ m/s²', '$6.0$ m/s²', '$9.0$ m/s²', '$15$ m/s²'],
+    options: ['$3.0$ $m/s^{2}$', '$6.0$ $m/s^{2}$', '$9.0$ $m/s^{2}$', '$15$ $m/s^{2}$'],
     correctAnswer: 1,
-    explanation: '$v^2 = v_0^2 + 2ad \\Rightarrow 0 = 900 + 2a(75) \\Rightarrow a = -6.0$ m/s². Magnitude = 6.0 m/s².',
+    explanation: '$v^2 = v_0^2 + 2ad \\Rightarrow 0 = 900 + 2a(75) \\Rightarrow a = -6.0$ $m/s^{2}$. Magnitude = 6.0 $m/s^{2}$.',
   },
 
   /* ---- U2 Newton's Laws (6) ---- */
@@ -69,14 +69,14 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-2-newtons-laws',
     question: 'A 5 kg block on a frictionless horizontal surface is pulled by a 20 N horizontal force. Its acceleration is',
-    options: ['$2$ m/s²', '$4$ m/s²', '$5$ m/s²', '$25$ m/s²'],
+    options: ['$2$ $m/s^{2}$', '$4$ $m/s^{2}$', '$5$ $m/s^{2}$', '$25$ $m/s^{2}$'],
     correctAnswer: 1,
-    explanation: '$a = F/m = 20/5 = 4$ m/s².',
+    explanation: '$a = F/m = 20/5 = 4$ $m/s^{2}$.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-newtons-laws',
-    question: 'A 2 kg object hanging from a rope attached to the ceiling of an elevator. If the elevator accelerates upward at 3 m/s², the rope tension is (g = 10 m/s²)',
+    question: 'A 2 kg object hanging from a rope attached to the ceiling of an elevator. If the elevator accelerates upward at 3 $m/s^{2}$, the rope tension is (g = 10 $m/s^{2}$)',
     options: ['$14$ N', '$20$ N', '$26$ N', '$30$ N'],
     correctAnswer: 2,
     explanation: '$T - mg = ma \\Rightarrow T = m(g+a) = 2(13) = 26$ N.',
@@ -100,15 +100,15 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-2-newtons-laws',
-    question: 'A 4 kg block sits on a 6 kg block on a frictionless surface. The coefficient of static friction between blocks is 0.40. The maximum horizontal force on the lower block such that the upper block does not slip is (g = 10 m/s²)',
+    question: 'A 4 kg block sits on a 6 kg block on a frictionless surface. The coefficient of static friction between blocks is 0.40. The maximum horizontal force on the lower block such that the upper block does not slip is (g = 10 $m/s^{2}$)',
     options: ['$16$ N', '$24$ N', '$40$ N', '$60$ N'],
     correctAnswer: 2,
-    explanation: 'Max friction on top block = $\\mu_s m_{top} g = 0.40(4)(10) = 16$ N. This gives top block max accel $a = 16/4 = 4$ m/s². Both move together: $F = (m_{top}+m_{bot})a = 10(4) = 40$ N.',
+    explanation: 'Max friction on top block = $\\mu_s m_{top} g = 0.40(4)(10) = 16$ N. This gives top block max accel $a = 16/4 = 4$ $m/s^{2}$. Both move together: $F = (m_{top}+m_{bot})a = 10(4) = 40$ N.',
   },
   {
     type: 'mcq',
     topic: 'unit-2-newtons-laws',
-    question: 'A car rounds a flat (unbanked) curve of radius 50 m. The minimum coefficient of static friction needed for the car to navigate at 20 m/s without slipping is (g = 10 m/s²)',
+    question: 'A car rounds a flat (unbanked) curve of radius 50 m. The minimum coefficient of static friction needed for the car to navigate at 20 m/s without slipping is (g = 10 $m/s^{2}$)',
     options: ['$0.40$', '$0.50$', '$0.60$', '$0.80$'],
     correctAnswer: 3,
     explanation: 'Centripetal: $\\mu g = v^2/r \\Rightarrow \\mu = v^2/(rg) = 400/(50 \\cdot 10) = 0.80$.',
@@ -218,10 +218,10 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-torque-rotational',
-    question: 'A torque of 10 N·m is applied to a wheel with moment of inertia 2 kg·m². The angular acceleration is',
-    options: ['$2$ rad/s²', '$5$ rad/s²', '$10$ rad/s²', '$20$ rad/s²'],
+    question: 'A torque of 10 N·m is applied to a wheel with moment of inertia 2 $kg\\cdot m^{2}$. The angular acceleration is',
+    options: ['$2$ $rad/s^{2}$', '$5$ $rad/s^{2}$', '$10$ $rad/s^{2}$', '$20$ $rad/s^{2}$'],
     correctAnswer: 1,
-    explanation: '$\\tau = I\\alpha \\Rightarrow \\alpha = \\tau/I = 10/2 = 5$ rad/s².',
+    explanation: '$\\tau = I\\alpha \\Rightarrow \\alpha = \\tau/I = 10/2 = 5$ $rad/s^{2}$.',
   },
   {
     type: 'mcq',
@@ -234,7 +234,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-torque-rotational',
-    question: 'A figure skater pulls in her arms while spinning, decreasing her moment of inertia from $4$ kg·m² to $1$ kg·m². If her initial angular velocity was 2 rad/s, her new angular velocity is',
+    question: 'A figure skater pulls in her arms while spinning, decreasing her moment of inertia from $4$ $kg\\cdot m^{2}$ to $1$ $kg\\cdot m^{2}$. If her initial angular velocity was 2 rad/s, her new angular velocity is',
     options: ['$0.5$ rad/s', '$2$ rad/s', '$4$ rad/s', '$8$ rad/s'],
     correctAnswer: 3,
     explanation: 'Conservation of angular momentum: $I_1\\omega_1 = I_2\\omega_2$. $4(2) = 1\\omega_2 \\Rightarrow \\omega_2 = 8$ rad/s.',
@@ -266,10 +266,10 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-torque-rotational',
-    question: 'A torque is applied to a thin hoop ($I = MR^2$) of mass 2 kg and radius 0.5 m. To produce angular acceleration 4 rad/s², the required torque is',
+    question: 'A torque is applied to a thin hoop ($I = MR^2$) of mass 2 kg and radius 0.5 m. To produce angular acceleration 4 $rad/s^{2}$, the required torque is',
     options: ['$1.0$ N·m', '$2.0$ N·m', '$4.0$ N·m', '$8.0$ N·m'],
     correctAnswer: 1,
-    explanation: '$I = (2)(0.5)^2 = 0.5$ kg·m². $\\tau = I\\alpha = 0.5(4) = 2.0$ N·m.',
+    explanation: '$I = (2)(0.5)^2 = 0.5$ $kg\\cdot m^{2}$. $\\tau = I\\alpha = 0.5(4) = 2.0$ N·m.',
   },
 
   /* ---- U6 Oscillations (5) ---- */
@@ -284,7 +284,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-6-oscillations',
-    question: 'A simple pendulum of length L on Earth (g = 9.8 m/s²) has period 2.0 s. The length L is approximately',
+    question: 'A simple pendulum of length L on Earth (g = 9.8 $m/s^{2}$) has period 2.0 s. The length L is approximately',
     options: ['$0.50$ m', '$0.99$ m', '$1.50$ m', '$2.0$ m'],
     correctAnswer: 1,
     explanation: '$T = 2\\pi\\sqrt{L/g} \\Rightarrow L = T^2 g/(4\\pi^2) = 4(9.8)/(39.5) \\approx 0.99$ m.',
@@ -301,9 +301,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-6-oscillations',
     question: 'A simple harmonic oscillator has $x(t) = 5\\cos(2t)$ m. Its acceleration at $t = 0$ is',
-    options: ['$0$ m/s²', '$-10$ m/s²', '$-20$ m/s²', '$+20$ m/s²'],
+    options: ['$0$ $m/s^{2}$', '$-10$ $m/s^{2}$', '$-20$ $m/s^{2}$', '$+20$ $m/s^{2}$'],
     correctAnswer: 2,
-    explanation: '$a = d^2x/dt^2 = -5(4)\\cos(2t) = -20\\cos(2t)$. At t=0: $a = -20$ m/s².',
+    explanation: '$a = d^2x/dt^2 = -5(4)\\cos(2t) = -20\\cos(2t)$. At t=0: $a = -20$ $m/s^{2}$.',
   },
   {
     type: 'mcq',
@@ -318,7 +318,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-7-gravitation',
-    question: 'The gravitational force between two masses m₁ and m₂ at separation r is',
+    question: 'The gravitational force between two masses $m_{1}$ and $m_{2}$ at separation r is',
     options: ['$Gm_1 m_2/r$', '$Gm_1 m_2/r^2$', '$Gm_1 m_2 r^2$', '$G(m_1 + m_2)/r^2$'],
     correctAnswer: 1,
     explanation: 'Newton\'s law of gravitation: $F = Gm_1 m_2/r^2$.',

@@ -133,12 +133,12 @@ Exponential growth is NOT linear. It starts slow and gets dramatically fast.
       content: '**Identify the Model** 🔍\n\nFor each scenario, pick the correct model type.',
       exercise: {
         dropdowns: [
-          { label: 'A car depreciates 12% per year from $25,000', options: ['25000(0.88)^t', '25000 − 0.12t', '25000(1.12)^t', '25000/0.12t'] },
-          { label: 'A salary increases by $2,000 each year from $40,000', options: ['40000 + 2000t', '40000(1.02)^t', '40000(2000)^t', '42000^t'] },
-          { label: 'An investment grows 7% annually from $10,000', options: ['10000(1.07)^t', '10000 + 0.07t', '10000(0.93)^t', '10700^t'] },
-          { label: 'A sample halves every 4 years from 600g', options: ['600(0.5)^(t/4)', '600 − 150t', '600(0.5)^(4t)', '600/2t'] }
+          { label: 'A car depreciates 12% per year from $25,000', options: ['$25000(0.88)^{t}$', '25000 − 0.12t', '$25000(1.12)^{t}$', '25000/0.12t'] },
+          { label: 'A salary increases by $2,000 each year from $40,000', options: ['40000 + 2000t', '$40000(1.02)^{t}$', '$40000(2000)^{t}$', '$42000^{t}$'] },
+          { label: 'An investment grows 7% annually from $10,000', options: ['$10000(1.07)^{t}$', '10000 + 0.07t', '$10000(0.93)^{t}$', '$10700^{t}$'] },
+          { label: 'A sample halves every 4 years from 600g', options: ['$600(0.5)^{t/4}$', '600 − 150t', '$600(0.5)^{4t}$', '600/2t'] }
         ],
-        correctAnswers: ['25000(0.88)^t', '40000 + 2000t', '10000(1.07)^t', '600(0.5)^(t/4)'],
+        correctAnswers: ['$25000(0.88)^{t}$', '40000 + 2000t', '$10000(1.07)^{t}$', '$600(0.5)^{t/4}$'],
         hint1: 'Depreciates 12% → keeps 88% → multiply by 0.88 each year.',
         hint2: 'Increases by a fixed dollar amount → linear (addition).',
         hint3: 'Grows 7% → factor of 1.07. Halves every 4 years → $(0.5)^{t/4}$.',

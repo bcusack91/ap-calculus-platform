@@ -198,7 +198,7 @@ Test your understanding of reflection concepts!
               "Both distances are negative"
             ],
             correctAnswer: 1,
-            explanation: "With Cartesian convention where light travels left-to-right (negative to positive), the object on the left has negative distance (dₒ < 0) and the virtual image behind the mirror on the right has positive distance (dᵢ > 0). Remember: dᵢ = -dₒ"
+            explanation: "With Cartesian convention where light travels left-to-right (negative to positive), the object on the left has negative distance ($d_{o}$ < 0) and the virtual image behind the mirror on the right has positive distance (dᵢ > 0). Remember: dᵢ = $-d_{o}$"
           }
         ]
       }

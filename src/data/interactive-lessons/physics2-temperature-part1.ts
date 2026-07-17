@@ -165,7 +165,7 @@ Convert the following temperatures. Round to the nearest whole number.
               'Stays the same',
               'Doubles',
               'Quadruples',
-              'Increases by a factor of √2'
+              'Increases by a factor of $\\sqrt{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Average KE is directly proportional to Kelvin temperature: $KE_{avg} = \\frac{3}{2}k_BT$. Doubling $T$ doubles $KE_{avg}$.'

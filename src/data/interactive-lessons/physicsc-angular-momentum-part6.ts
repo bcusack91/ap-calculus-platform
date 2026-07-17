@@ -59,7 +59,7 @@ The algebra is involved but the approach is systematic:
       question: 'A merry-go-round (uniform disk, $M = 200$ kg, $R = 2$ m) spins at $0.5$ rad/s. A $50$ kg child jumps on at the rim. The new angular velocity is:',
       options: ['$\\frac{1}{3}$ rad/s', '$0.4$ rad/s', '$0.25$ rad/s', '$0.5$ rad/s'],
       correctAnswer: 0,
-      explanation: '$I_{\\text{disk}} = \\frac{1}{2}(200)(4) = 400$ kg·m². $I_{\\text{child}} = 50(4) = 200$ kg·m². $L = 400(0.5) = 200$. $\\omega_f = 200/(400+200) = 200/600 = 1/3$ rad/s.'
+      explanation: '$I_{\\text{disk}} = \\frac{1}{2}(200)(4) = 400$ $kg\\cdot m^{2}$. $I_{\\text{child}} = 50(4) = 200$ $kg\\cdot m^{2}$. $L = 400(0.5) = 200$. $\\omega_f = 200/(400+200) = 200/600 = 1/3$ rad/s.'
     },
     {
       id: 'am6-prob2',

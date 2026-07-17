@@ -122,7 +122,7 @@ That is a surprisingly large pressure — about 72 psi — from a relatively dil
 
 ### Strong Electrolytes
 - **Completely** dissociate into ions in solution
-- Examples: NaCl, KBr, HCl, NaOH, CaCl₂
+- Examples: NaCl, KBr, HCl, NaOH, $CaCl_{2}$
 - Conduct electricity strongly
 - $i$ equals the total number of ions produced
 
@@ -131,7 +131,7 @@ That is a surprisingly large pressure — about 72 psi — from a relatively dil
 
 ### Weak Electrolytes
 - **Partially** dissociate in solution
-- Examples: CH₃COOH (acetic acid), NH₃, HF
+- Examples: $CH_{3}COOH$ (acetic acid), $NH_{3}$, HF
 - Conduct electricity weakly
 - $i$ is between 1 and the theoretical maximum (closer to 1 for weak electrolytes)
 
@@ -140,7 +140,7 @@ That is a surprisingly large pressure — about 72 psi — from a relatively dil
 
 ### Nonelectrolytes
 - Do **not** dissociate — dissolve as whole molecules
-- Examples: glucose (C₆H₁₂O₆), sucrose, ethanol, urea
+- Examples: glucose $(C_{6}H_{12}O_{6})$, sucrose, ethanol, urea
 - Do not conduct electricity
 - $i = 1$ always
 
@@ -155,7 +155,7 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
 |--------|-----|------|----------------|
 | Glucose | 1 | $1(1.86)(0.10) = 0.186$ °C | $-0.19$ °C |
 | NaCl | 2 | $2(1.86)(0.10) = 0.372$ °C | $-0.37$ °C |
-| CaCl₂ | 3 | $3(1.86)(0.10) = 0.558$ °C | $-0.56$ °C |
+| $CaCl_{2}$ | 3 | $3(1.86)(0.10) = 0.558$ °C | $-0.56$ °C |
       `
     },
     {
@@ -193,11 +193,11 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
             options: [
               '0.10 M glucose ($i = 1$)',
               '0.10 M NaCl ($i = 2$)',
-              '0.050 M CaCl₂ ($i = 3$)',
-              '0.10 M KNO₃ ($i = 2$)'
+              '0.050 M $CaCl_{2}$ ($i = 3$)',
+              '0.10 M $KNO_{3}$ ($i = 2$)'
             ],
             correctAnswer: 1,
-            explanation: '$\\Pi = iMRT$. Calculate $iM$ for each: glucose: $1(0.10) = 0.10$. NaCl: $2(0.10) = 0.20$. CaCl₂: $3(0.050) = 0.15$. KNO₃: $2(0.10) = 0.20$. NaCl and KNO₃ are tied. But NaCl appears first among the tied options.'
+            explanation: '$\\Pi = iMRT$. Calculate $iM$ for each: glucose: $1(0.10) = 0.10$. NaCl: $2(0.10) = 0.20$. $CaCl_{2}$: $3(0.050) = 0.15$. $KNO_{3}$: $2(0.10) = 0.20$. NaCl and $KNO_{3}$ are tied. But NaCl appears first among the tied options.'
           }
         ]
       }
@@ -212,7 +212,7 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
 
 **1)** Calculate the osmotic pressure (in atm) of a 0.200 M glucose ($i = 1$) solution at 37°C (body temperature). (to 3 significant figures)
 
-**2)** A 0.150 M CaCl₂ ($i = 3$) solution at 25°C has what osmotic pressure? (in atm, to 3 significant figures)
+**2)** A 0.150 M $CaCl_{2}$ ($i = 3$) solution at 25°C has what osmotic pressure? (in atm, to 3 significant figures)
 
 **3)** A protein solution has an osmotic pressure of 0.0821 atm at 25°C. What is the molarity of the protein? ($i = 1$; answer in M to 3 significant figures)
       `,
@@ -264,7 +264,7 @@ If you apply pressure **greater** than the osmotic pressure to the concentrated 
       exercise: {
         dropdowns: [
           {
-            label: 'Acetic acid (CH₃COOH) is a weak electrolyte, so its van\'t Hoff factor is',
+            label: 'Acetic acid $(CH_{3}COOH)$ is a weak electrolyte, so its van\'t Hoff factor is',
             options: ['Exactly 1', 'Between 1 and 2', 'Exactly 2', 'Greater than 2']
           },
           {
@@ -284,7 +284,7 @@ If you apply pressure **greater** than the osmotic pressure to the concentrated 
         hint1: 'Weak electrolytes partially dissociate, so $i$ is between 1 and the theoretical max.',
         hint2: 'Osmotic pressure is defined as the pressure needed to stop osmosis.',
         hint3: 'Compare $iM$ products: glucose: $1(0.30) = 0.30$; NaCl: $2(0.15) = 0.30$.',
-        explanation: 'CH₃COOH partially dissociates, so $1 < i < 2$. Osmotic pressure exactly stops osmosis; reverse osmosis needs more. Both solutions have $iM = 0.30$, so they are isotonic.'
+        explanation: '$CH_{3}COOH$ partially dissociates, so $1 < i < 2$. Osmotic pressure exactly stops osmosis; reverse osmosis needs more. Both solutions have $iM = 0.30$, so they are isotonic.'
       }
     },
     {
@@ -296,7 +296,7 @@ If you apply pressure **greater** than the osmotic pressure to the concentrated 
       exercise: {
         questions: [
           {
-            question: 'A solution containing 6.00 g of urea (CH₄N₂O, $M = 60.06$ g/mol, $i = 1$) in 1.00 L of solution at 27°C has an osmotic pressure of approximately:',
+            question: 'A solution containing 6.00 g of urea ($CH_{4}N_{2}O$, $M = 60.06$ g/mol, $i = 1$) in 1.00 L of solution at 27°C has an osmotic pressure of approximately:',
             options: [
               '1.22 atm',
               '2.46 atm',

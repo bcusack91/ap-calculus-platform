@@ -41,8 +41,8 @@ $$P_{gauge} = \\rho g h$$
 $$P_{abs} = P_0 + \\rho g h$$
 
 Where:
-- $\\rho$: fluid density (kg/m³)
-- $g = 9.8$ m/s² (often $g = 10$ on AP estimates)
+- $\\rho$: fluid density $(kg/m^{3})$
+- $g = 9.8$ $m/s^{2}$ (often $g = 10$ on AP estimates)
 - $h$: depth **below the free surface** (m)
 - $P_0$: pressure at the surface (often $P_{atm} = 1.013\\times10^{5}$ Pa)
 
@@ -103,7 +103,7 @@ Pressure at depth $h$ is the same whether you're at the bottom of a thin tube or
       id: 'fdp3-calculations',
       type: 'input-boxes' as const,
       content: `
-**Hydrostatic Calculations** 🧮 (use $g = 9.8$ m/s², $\\rho_{water} = 1000$ kg/m³, $\\rho_{Hg} = 13{,}600$ kg/m³)
+**Hydrostatic Calculations** 🧮 (use $g = 9.8$ $m/s^{2}$, $\\rho_{water} = 1000$ $kg/m^{3}$, $\\rho_{Hg} = 13{,}600$ $kg/m^{3}$)
 
 1) Gauge pressure at the bottom of a 3.0 m deep fresh water pool (Pa)?
 

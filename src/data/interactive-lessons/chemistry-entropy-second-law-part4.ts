@@ -154,10 +154,10 @@ This formula applies at the **equilibrium** transition temperature, where the pr
             explanation: 'The Third Law states that the entropy of a perfect crystal at absolute zero (0 K = −273.15°C) is zero. This is because there is only one microstate ($W = 1$, $S = k \\ln 1 = 0$).'
           },
           {
-            question: 'Which has a higher standard molar entropy: H₂O(l) or H₂O(g)?',
+            question: 'Which has a higher standard molar entropy: $H_{2}O(l)$ or $H_{2}O(g)$?',
             options: [
-              'H₂O(l) — liquid has more hydrogen bonding',
-              'H₂O(g) — gas has far more freedom of motion',
+              '$H_{2}O(l)$ — liquid has more hydrogen bonding',
+              '$H_{2}O(g)$ — gas has far more freedom of motion',
               'They are equal — same compound',
               'Cannot be determined'
             ],
@@ -198,7 +198,7 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
         hint1: 'Gas always has higher entropy than liquid.',
         hint2: 'Graphite has a layered structure with more freedom than diamond\'s rigid lattice.',
         hint3: 'More atoms per molecule = more vibrational modes = more entropy.',
-        explanation: '1) H₂O(g) > H₂O(l) — gas phase always has higher entropy. 2) Graphite > diamond — graphite\'s layered structure has more vibrational freedom. 3) O₃ > O₂ — more atoms means more ways to vibrate and store energy.'
+        explanation: '1) $H_{2}O(g)$ > $H_{2}O(l)$ — gas phase always has higher entropy. 2) Graphite > diamond — graphite\'s layered structure has more vibrational freedom. 3) $O_{3}$ > $O_{2}$ — more atoms means more ways to vibrate and store energy.'
       }
     },
     {
@@ -247,21 +247,21 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
               'ΔS = ΔH_vap × T',
               'ΔS = ΔH_vap / T',
               'ΔS = T / ΔH_vap',
-              'ΔS = ΔH_vap / T²'
+              'ΔS = ΔH_vap / $T^{2}$'
             ],
             correctAnswer: 1,
             explanation: 'At the equilibrium phase transition temperature: $\\Delta S = \\Delta H / T$. This applies because the transition is reversible at the boiling point.'
           },
           {
-            question: 'Rank in order of increasing S°: Ne(g), N₂(g), CO₂(g)',
+            question: 'Rank in order of increasing S°: Ne(g), $N_{2}(g)$, $CO_{2}(g)$',
             options: [
-              'Ne < N₂ < CO₂',
-              'CO₂ < N₂ < Ne',
-              'N₂ < Ne < CO₂',
-              'Ne < CO₂ < N₂'
+              'Ne < $N_{2}$ < $CO_{2}$',
+              '$CO_{2}$ < $N_{2}$ < Ne',
+              '$N_{2}$ < Ne < $CO_{2}$',
+              'Ne < $CO_{2}$ < $N_{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'For gases at the same conditions, more atoms in a molecule means more ways to vibrate and rotate — so higher entropy. Ne (monatomic, S° ≈ 146 J/mol·K) < N₂ (diatomic, S° ≈ 192 J/mol·K) < CO₂ (triatomic, S° ≈ 214 J/mol·K).'
+            explanation: 'For gases at the same conditions, more atoms in a molecule means more ways to vibrate and rotate — so higher entropy. Ne (monatomic, S° ≈ 146 J/mol·K) < $N_{2}$ (diatomic, S° ≈ 192 J/mol·K) < $CO_{2}$ (triatomic, S° ≈ 214 J/mol·K).'
           }
         ]
       }

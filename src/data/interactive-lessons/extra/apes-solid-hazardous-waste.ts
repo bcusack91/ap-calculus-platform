@@ -263,14 +263,14 @@ If the liner fails, leachate can contaminate the **groundwater / aquifer** below
         type: 'text' as const,
         content: `## Methane: The Gas Threat
 
-As buried organic waste (food, paper, yard trimmings) decomposes **without oxygen** — **anaerobically** — bacteria produce **landfill gas**, which is roughly half **methane (CH₄)** and half **carbon dioxide (CO₂)**.
+As buried organic waste (food, paper, yard trimmings) decomposes **without oxygen** — **anaerobically** — bacteria produce **landfill gas**, which is roughly half **methane $(CH_{4})$** and half **carbon dioxide $(CO_{2})$**.
 
 $$\\text{Organic waste} \\xrightarrow{\\text{anaerobic bacteria}} \\text{CH}_4 \\;+\\; \\text{CO}_2$$
 
 Methane is a problem for two reasons:
 
 1. **Explosion / fire hazard** if it builds up.
-2. **Potent greenhouse gas** — methane traps far more heat per molecule than CO₂ (over a ~100-year window, roughly **25–30× stronger**).
+2. **Potent greenhouse gas** — methane traps far more heat per molecule than $CO_{2}$ (over a ~100-year window, roughly **25–30× stronger**).
 
 The fix: **methane recovery wells** collect the gas. It can then be **flared** (burned off) or, better, **burned to generate electricity** — turning a pollutant into an energy source.
 
@@ -283,7 +283,7 @@ The fix: **methane recovery wells** collect the gas. It can then be **flared** (
         exercise: {
           dropdowns: [
             { label: 'Protects groundwater from toxic liquid:', options: ['Clay + plastic liner', 'Methane recovery well', 'Daily soil cover', 'Monitoring well'] },
-            { label: 'Captures CH₄ from decomposing organics:', options: ['Methane recovery well', 'Leachate liner', 'Final cap', 'Scrubber'] },
+            { label: 'Captures $CH_{4}$ from decomposing organics:', options: ['Methane recovery well', 'Leachate liner', 'Final cap', 'Scrubber'] },
             { label: 'Reduces odor, pests, and blowing litter:', options: ['Daily soil cover', 'Leachate pipes', 'Geomembrane liner', 'Flare stack'] },
             { label: 'Detects leaks in the surrounding aquifer:', options: ['Monitoring well', 'Methane well', 'Compactor', 'Final cap'] },
           ],
@@ -291,7 +291,7 @@ The fix: **methane recovery wells** collect the gas. It can then be **flared** (
           hint1: 'The bottom barrier stops downward-moving leachate.',
           hint2: 'A dedicated well taps the gas building up inside the pile.',
           hint3: 'Soil spread each day controls surface problems; perimeter wells test the water.',
-          explanation: 'Liner → blocks leachate (protects groundwater); methane recovery well → captures CH₄; daily soil cover → controls odor/pests/litter; monitoring wells → detect groundwater contamination.',
+          explanation: 'Liner → blocks leachate (protects groundwater); methane recovery well → captures $CH_{4}$; daily soil cover → controls odor/pests/litter; monitoring wells → detect groundwater contamination.',
         },
       },
       {
@@ -301,10 +301,10 @@ The fix: **methane recovery wells** collect the gas. It can then be **flared** (
 
 Engineers size methane-recovery systems using two facts:
 
-- Landfill gas is roughly **half methane, half CO₂** by volume, so the methane you can capture is about **50%** of the total gas collected.
-- Each ton of methane that **escapes** carries the warming punch of roughly **25 tons of CO₂** over a century.
+- Landfill gas is roughly **half methane, half $CO_{2}$** by volume, so the methane you can capture is about **50%** of the total gas collected.
+- Each ton of methane that **escapes** carries the warming punch of roughly **25 tons of $CO_{2}$** over a century.
 
-Multiplying those out shows why capture is worth the investment — even a modest gas-collection system prevents a large amount of CO₂-equivalent warming.
+Multiplying those out shows why capture is worth the investment — even a modest gas-collection system prevents a large amount of $CO_{2}$-equivalent warming.
 
 > 💡 **Setup:** The math below uses the 50% rule and the 25× warming factor. Keep them straight — one is a *volume* split, the other a *warming-potency* multiplier.`,
       },
@@ -313,17 +313,17 @@ Multiplying those out shows why capture is worth the investment — even a modes
         type: 'input-boxes' as const,
         content: `**Landfill Gas Math** 🧮
 
-Landfill gas is roughly **50% methane (CH₄)** and **50% carbon dioxide (CO₂)** by volume.
+Landfill gas is roughly **50% methane $(CH_{4})$** and **50% carbon dioxide $(CO_{2})$** by volume.
 
 **1)** A landfill captures 800,000 cubic meters of landfill gas in a year. About how many cubic meters of that are methane? (enter the number)
-**2)** Methane traps about 25 times as much heat per unit as CO₂. If 100 tons of methane escape uncaptured, that is equivalent to how many tons of CO₂ in warming potential? (enter the number)`,
+**2)** Methane traps about 25 times as much heat per unit as $CO_{2}$. If 100 tons of methane escape uncaptured, that is equivalent to how many tons of $CO_{2}$ in warming potential? (enter the number)`,
         exercise: {
           boxes: 2,
           correctAnswers: ['400000', '2500'],
           hint1: 'Half of the landfill gas is methane.',
-          hint2: '$800{,}000 \\times 0.50 = 400{,}000$ cubic meters of CH₄.',
+          hint2: '$800{,}000 \\times 0.50 = 400{,}000$ cubic meters of $CH_{4}$.',
           hint3: 'Multiply the methane mass by its warming factor: $100 \\times 25 = 2500$.',
-          explanation: '1) $800{,}000 \\times 0.50 = 400{,}000$ m³ of methane. 2) $100 \\text{ tons} \\times 25 = 2500$ tons of CO₂-equivalent. This is why capturing landfill methane has such a large climate payoff.',
+          explanation: '1) $800{,}000 \\times 0.50 = 400{,}000$ $m^{3}$ of methane. 2) $100 \\text{ tons} \\times 25 = 2500$ tons of $CO_{2}$-equivalent. This is why capturing landfill methane has such a large climate payoff.',
         },
       },
     ],
@@ -456,7 +456,7 @@ Suppose an incinerator reduces waste **volume by 90%**.
           hint1: 'Reducing volume by 90% leaves 10% behind.',
           hint2: '$5000 \\times 0.10 = 500$ cubic meters remain.',
           hint3: 'If 90% is gone, the remainder is 100% − 90% = 10%.',
-          explanation: '1) 10% of 5000 = 500 m³ of ash remain. 2) That remaining ash is 10% of the original volume. Incineration is unmatched for shrinking waste volume — but the concentrated ash still needs disposal.',
+          explanation: '1) 10% of 5000 = 500 $m^{3}$ of ash remain. 2) That remaining ash is 10% of the original volume. Incineration is unmatched for shrinking waste volume — but the concentrated ash still needs disposal.',
         },
       },
     ],
@@ -556,11 +556,11 @@ $$\\text{Organic waste} + \\text{O}_2 \\xrightarrow{\\text{aerobic microbes}} \\
 | Benefit of Composting | Why It Matters |
 |-----------------------|----------------|
 | Diverts organics from landfills | ~30–40% of MSW is compostable organics |
-| **Avoids landfill methane** | Aerobic composting makes CO₂, not the worse greenhouse gas CH₄ |
+| **Avoids landfill methane** | Aerobic composting makes $CO_{2}$, not the worse greenhouse gas $CH_{4}$ |
 | Returns nutrients to soil | Reduces need for synthetic fertilizer |
 | Improves soil water retention | Healthier, more drought-resistant soil |
 
-> ⚠️ **Aerobic vs. anaerobic — a key contrast:** Composting (with oxygen) produces mostly **CO₂**. The *same* organics buried in an oxygen-poor landfill decompose **anaerobically** and produce **methane (CH₄)** — a far stronger greenhouse gas. Composting therefore has a real climate advantage over landfilling food and yard waste.`,
+> ⚠️ **Aerobic vs. anaerobic — a key contrast:** Composting (with oxygen) produces mostly **$CO_{2}$**. The *same* organics buried in an oxygen-poor landfill decompose **anaerobically** and produce **methane $(CH_{4})$** — a far stronger greenhouse gas. Composting therefore has a real climate advantage over landfilling food and yard waste.`,
       },
       {
         id: 'apesw4-dd-strategies',
@@ -578,8 +578,8 @@ Match each action to the correct level of the waste hierarchy or recycling type.
           correctAnswers: ['Source reduction', 'Closed-loop recycling', 'Composting (aerobic)', 'Open-loop (downcycling)'],
           hint1: 'Using less material in the first place is the top of the hierarchy.',
           hint2: 'Same product again = closed loop; a different, lower-grade product = open loop.',
-          hint3: 'Composting needs oxygen and yields humus + CO₂.',
-          explanation: 'Reusable bag → source reduction (top of hierarchy). Can → can = closed-loop. Food → humus with O₂ = aerobic composting. Bottle → carpet = open-loop downcycling (a different, lower-grade product).',
+          hint3: 'Composting needs oxygen and yields humus + $CO_{2}$.',
+          explanation: 'Reusable bag → source reduction (top of hierarchy). Can → can = closed-loop. Food → humus with $O_{2}$ = aerobic composting. Bottle → carpet = open-loop downcycling (a different, lower-grade product).',
         },
       },
       {
@@ -792,7 +792,7 @@ Plastics are cheap, light, and durable — and that **durability** is exactly th
 |----------|-------------|
 | **Non-biodegradable** | Persists for **hundreds of years**; doesn't rot like paper or food |
 | **Photodegrades into fragments** | Sunlight breaks it into ever-smaller **microplastics** (< 5 mm) |
-| **Made from fossil fuels** | Production adds to CO₂ and depends on petroleum |
+| **Made from fossil fuels** | Production adds to $CO_{2}$ and depends on petroleum |
 | **Many incompatible resin types** | Hard to recycle; much is downcycled or landfilled |
 | **Lightweight & buoyant** | Easily blows/washes into waterways and floats to sea |
 
@@ -1018,10 +1018,10 @@ A city of 50,000 people generates 100,000 tons of MSW per year.
 | U.S. per-capita MSW | ~**4.9 lb/person/day** |
 | Sanitary landfill | Liner + leachate collection (groundwater) + methane wells |
 | Leachate | Toxic liquid → threatens **groundwater** |
-| Landfill methane | **Anaerobic** decay → CH₄ (potent greenhouse gas; capture for energy) |
+| Landfill methane | **Anaerobic** decay → $CH_{4}$ (potent greenhouse gas; capture for energy) |
 | Incineration | ~80–90% **volume** reduction; toxic **fly ash**; WTE makes electricity |
 | Waste hierarchy | **Reduce → Reuse → Recycle/Compost → Energy → Landfill** |
-| Composting | **Aerobic** → CO₂ + humus (avoids landfill methane) |
+| Composting | **Aerobic** → $CO_{2}$ + humus (avoids landfill methane) |
 | Hazardous waste | **I-C-R-T**: Ignitable, Corrosive, Reactive, Toxic |
 | RCRA vs. CERCLA | RCRA = cradle-to-grave (active); CERCLA/Superfund = cleanup of abandoned sites |
 | Love Canal | Buried toxics under a neighborhood → created Superfund |
@@ -1082,13 +1082,13 @@ Answer all three to finish the lesson.`,
             {
               question: 'Composting food and yard waste has a climate advantage over landfilling them because composting is:',
               options: [
-                'Aerobic, producing mostly CO₂ instead of the stronger greenhouse gas methane',
+                'Aerobic, producing mostly $CO_{2}$ instead of the stronger greenhouse gas methane',
                 'Anaerobic, producing pure oxygen',
                 'A form of incineration that destroys all carbon',
                 'Identical to landfilling in its emissions',
               ],
               correctAnswer: 0,
-              explanation: 'Composting is aerobic (with oxygen) and yields mostly CO₂ plus humus. The same organics buried anaerobically in a landfill generate methane, a far more potent greenhouse gas — so composting reduces climate impact.',
+              explanation: 'Composting is aerobic (with oxygen) and yields mostly $CO_{2}$ plus humus. The same organics buried anaerobically in a landfill generate methane, a far more potent greenhouse gas — so composting reduces climate impact.',
             },
             {
               question: 'Which pairing is correct?',

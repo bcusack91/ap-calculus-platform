@@ -230,7 +230,7 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
             question: 'Which is a real-world example of electrolysis?',
             options: [
               'A car battery producing electricity',
-              'Splitting water into H₂ and O₂ using a power supply',
+              'Splitting water into $H_{2}$ and $O_{2}$ using a power supply',
               'A lemon battery lighting an LED',
               'A fuel cell generating power'
             ],

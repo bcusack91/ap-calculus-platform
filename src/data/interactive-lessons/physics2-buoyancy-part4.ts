@@ -59,7 +59,7 @@ $$m_{\\text{extra}} = \\rho_w V_{\\text{raft}} - m_{\\text{raft}}$$
 
 ### Worked Example
 
-A wooden raft has volume 2.0 m³ and mass 1200 kg. Maximum extra mass:
+A wooden raft has volume 2.0 $m^{3}$ and mass 1200 kg. Maximum extra mass:
 
 $$m_{\\text{extra}} = (1000)(2.0) - 1200 = 2000 - 1200 = 800 \\text{ kg}$$
 
@@ -77,7 +77,7 @@ The raft can hold up to 800 kg before going under!
       exercise: {
         questions: [
           {
-            question: 'A cube of side 0.10 m and density 600 kg/m³ floats in water. The depth of the bottom of the cube below the water surface is:',
+            question: 'A cube of side 0.10 m and density 600 $kg/m^{3}$ floats in water. The depth of the bottom of the cube below the water surface is:',
             options: [
               '0.04 m',
               '0.06 m',
@@ -88,15 +88,15 @@ The raft can hold up to 800 kg before going under!
             explanation: 'Fraction submerged = 600/1000 = 0.60. Depth = $0.60 \\times 0.10 = 0.06$ m = 6 cm.'
           },
           {
-            question: 'A floating block has 3/4 of its volume submerged in a liquid of density 1200 kg/m³. The block\'s density is:',
+            question: 'A floating block has 3/4 of its volume submerged in a liquid of density 1200 $kg/m^{3}$. The block\'s density is:',
             options: [
-              '1600 kg/m³',
-              '900 kg/m³',
-              '1200 kg/m³',
-              '400 kg/m³'
+              '1600 $kg/m^{3}$',
+              '900 $kg/m^{3}$',
+              '1200 $kg/m^{3}$',
+              '400 $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\rho_{\\text{obj}}/\\rho_{\\text{fluid}} = V_{\\text{sub}}/V_{\\text{total}} = 3/4$. So $\\rho_{\\text{obj}} = (3/4)(1200) = 900$ kg/m³.'
+            explanation: '$\\rho_{\\text{obj}}/\\rho_{\\text{fluid}} = V_{\\text{sub}}/V_{\\text{total}} = 3/4$. So $\\rho_{\\text{obj}} = (3/4)(1200) = 900$ $kg/m^{3}$.'
           },
           {
             question: 'An ice cube with a pebble frozen inside floats in water. The pebble melts free and sinks. The water level:',
@@ -116,9 +116,9 @@ The raft can hold up to 800 kg before going under!
       id: 'bu4-raft-drill',
       type: 'input-boxes' as const,
       content: `
-**Raft Problem Drill** (use $g = 10$ m/s²)
+**Raft Problem Drill** (use $g = 10$ $m/s^{2}$)
 
-A styrofoam raft ($\\rho = 50$ kg/m³) is $2.0 \\times 1.0 \\times 0.20$ m.
+A styrofoam raft ($\\rho = 50$ $kg/m^{3}$) is $2.0 \\times 1.0 \\times 0.20$ m.
 
 1) Mass of the raft (in kg)
 
@@ -132,7 +132,7 @@ A styrofoam raft ($\\rho = 50$ kg/m³) is $2.0 \\times 1.0 \\times 0.20$ m.
         hint1: '$m = \\rho V = 50 \\times (2.0 \\times 1.0 \\times 0.20)$.',
         hint2: '$F_{B,\\text{max}} = \\rho_w V g = (1000)(0.40)(10)$.',
         hint3: '$m_{\\text{extra}} = F_{B,\\text{max}}/g - m_{\\text{raft}} = 400 - 20$.',
-        explanation: '$V = 0.40$ m³. $m = 50 \\times 0.40 = 20$ kg. $F_{B,\\text{max}} = (1000)(0.40)(10) = 4000$ N. Max total mass = $4000/10 = 400$ kg. Extra = $400 - 20 = 380$ kg.'
+        explanation: '$V = 0.40$ $m^{3}$. $m = 50 \\times 0.40 = 20$ kg. $F_{B,\\text{max}} = (1000)(0.40)(10) = 4000$ N. Max total mass = $4000/10 = 400$ kg. Extra = $400 - 20 = 380$ kg.'
       }
     },
     {
@@ -144,7 +144,7 @@ A styrofoam raft ($\\rho = 50$ kg/m³) is $2.0 \\times 1.0 \\times 0.20$ m.
       exercise: {
         questions: [
           {
-            question: 'You pour oil ($\\rho = 800$ kg/m³) on top of water in a tank. A block ($\\rho = 900$ kg/m³) is placed in the tank. The block will:',
+            question: 'You pour oil ($\\rho = 800$ $kg/m^{3}$) on top of water in a tank. A block ($\\rho = 900$ $kg/m^{3}$) is placed in the tank. The block will:',
             options: [
               'Float on the oil',
               'Sink to the bottom',

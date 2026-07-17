@@ -59,28 +59,28 @@ The city of Greenville is planning to replace its aging 200-megawatt (MW) coal-f
 - **Option A:** Build a new 200-MW natural gas combined-cycle power plant.
 - **Option B:** Build a 200-MW solar photovoltaic (PV) facility plus an equivalent amount of natural gas backup capacity to be used when the sun is not available.
 
-Greenville currently uses approximately **1.5 × 10⁹ kilowatt-hours (kWh)** of electricity per year.
+Greenville currently uses approximately **$1.5 \\times 10^{9}$ kilowatt-hours (kWh)** of electricity per year.
 
-Approximate CO₂ emissions per kilowatt-hour (kWh) of electricity generated:
-- Coal: 1.0 kg CO₂/kWh
-- Natural gas: 0.45 kg CO₂/kWh
-- Solar PV: 0.05 kg CO₂/kWh (lifecycle: manufacturing + transport)`,
+Approximate $CO_{2}$ emissions per kilowatt-hour (kWh) of electricity generated:
+- Coal: 1.0 kg $CO_{2}/kWh$
+- Natural gas: 0.45 kg $CO_{2}/kWh$
+- Solar PV: 0.05 kg $CO_{2}/kWh$ (lifecycle: manufacturing + transport)`,
     parts: [
       {
-        prompt: '**(a) Calculate** the total annual CO₂ emissions (in kilograms) from Greenville\'s current coal plant, assuming it provides all 1.5 × 10⁹ kWh of the city\'s electricity. Show your work.',
-        rubric: 'Setup: 1.5 × 10⁹ kWh × 1.0 kg CO₂/kWh = 1.5 × 10⁹ kg CO₂/yr (1 point setup with units, 1 point correct answer).',
+        prompt: '**(a) Calculate** the total annual $CO_{2}$ emissions (in kilograms) from Greenville\'s current coal plant, assuming it provides all $1.5 \\times 10^{9}$ kWh of the city\'s electricity. Show your work.',
+        rubric: 'Setup: $1.5 \\times 10^{9}$ kWh × 1.0 kg $CO_{2}/kWh$ = $1.5 \\times 10^{9}$ kg $CO_{2}/yr$ (1 point setup with units, 1 point correct answer).',
       },
       {
-        prompt: '**(b) Calculate** the percent reduction in annual CO₂ emissions if Greenville switches entirely from coal to natural gas. Show your work.',
-        rubric: 'Coal: 1.5 × 10⁹ kg. Natural gas: 1.5 × 10⁹ × 0.45 = 6.75 × 10⁸ kg. Reduction = (1.5 × 10⁹ − 6.75 × 10⁸) / 1.5 × 10⁹ = 0.55 = 55% reduction. (Acceptable: any reasonable calculation showing 55% or equivalent fraction.)',
+        prompt: '**(b) Calculate** the percent reduction in annual $CO_{2}$ emissions if Greenville switches entirely from coal to natural gas. Show your work.',
+        rubric: 'Coal: $1.5 \\times 10^{9}$ kg. Natural gas: $1.5 \\times 10^{9}$ × 0.45 = $6.75 \\times 10^{8}$ kg. Reduction = $(1.5 \\times 10^{9} - 6.75 \\times 10^{8})$ / $1.5 \\times 10^{9}$ = 0.55 = 55% reduction. (Acceptable: any reasonable calculation showing 55% or equivalent fraction.)',
       },
       {
-        prompt: '**(c) Identify** ONE specific environmental DRAWBACK of natural gas as an electricity source (other than CO₂ emissions).',
-        rubric: 'Acceptable: methane leakage during extraction/transport (CH₄ has high GWP); hydraulic fracturing (fracking) causing groundwater contamination; induced seismicity from wastewater injection; large water consumption for fracking; habitat disruption from well pads and pipelines; air emissions of NOx and VOCs from drilling operations.',
+        prompt: '**(c) Identify** ONE specific environmental DRAWBACK of natural gas as an electricity source (other than $CO_{2}$ emissions).',
+        rubric: 'Acceptable: methane leakage during extraction/transport ($CH_{4}$ has high GWP); hydraulic fracturing (fracking) causing groundwater contamination; induced seismicity from wastewater injection; large water consumption for fracking; habitat disruption from well pads and pipelines; air emissions of NOx and VOCs from drilling operations.',
       },
       {
         prompt: '**(d) Describe** ONE advantage and ONE disadvantage of Option B (solar PV + natural gas backup) compared to Option A (natural gas only).',
-        rubric: 'Advantage: lower lifecycle CO₂ emissions; renewable solar reduces fossil fuel use; reduces local air pollutants when sun is generating; no fuel cost for solar portion; can be scaled with battery storage. Disadvantage: solar is intermittent (no power at night/cloudy days, requires backup); higher upfront capital cost; large land area required; some natural gas use continues; PV manufacturing has environmental footprint.',
+        rubric: 'Advantage: lower lifecycle $CO_{2}$ emissions; renewable solar reduces fossil fuel use; reduces local air pollutants when sun is generating; no fuel cost for solar portion; can be scaled with battery storage. Disadvantage: solar is intermittent (no power at night/cloudy days, requires backup); higher upfront capital cost; large land area required; some natural gas use continues; PV manufacturing has environmental footprint.',
       },
       {
         prompt: '**(e) Explain** how energy CONSERVATION measures (such as building insulation upgrades or LED lighting) could reduce the size of the power plant the city needs to build, and identify ONE specific conservation measure.',
@@ -112,7 +112,7 @@ The U.S. EPA recommends that fish tissue not exceed **0.3 ppm methylmercury** fo
     parts: [
       {
         prompt: '**(a) Identify** the source of the mercury entering this reservoir from the coal-fired power plant, and describe how it ultimately ends up in the fish tissue.',
-        rubric: 'Source: trace mercury in coal is volatilized during combustion and emitted from the smokestack as gaseous Hg. Pathway: atmospheric Hg deposits onto water/land via wet or dry deposition → enters reservoir → anaerobic bacteria in sediments methylate inorganic Hg into methylmercury (CH₃Hg⁺) → methylmercury is taken up by phytoplankton → biomagnifies through the food web (described in part b).',
+        rubric: 'Source: trace mercury in coal is volatilized during combustion and emitted from the smokestack as gaseous Hg. Pathway: atmospheric Hg deposits onto water/land via wet or dry deposition → enters reservoir → anaerobic bacteria in sediments methylate inorganic Hg into methylmercury $(CH_{3}Hg^{+})$ → methylmercury is taken up by phytoplankton → biomagnifies through the food web (described in part b).',
       },
       {
         prompt: '**(b) Calculate** by what factor the mercury concentration increases from phytoplankton to largemouth bass. Show your work.',

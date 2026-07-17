@@ -58,8 +58,8 @@ $$k = \\frac{\\text{rate}}{[\\text{A}][\\text{B}]} = \\frac{2.0 \\times 10^{-4}}
 | Order | Rate law | Units of $k$ |
 |-------|---------|-------------|
 | 0th | rate = $k$ | M/s |
-| 1st | rate = $k$[A] | 1/s (s⁻¹) |
-| 2nd | rate = $k$[A]² or $k$[A][B] | M⁻¹s⁻¹ |
+| 1st | rate = $k$[A] | 1/s $(s^{-1})$ |
+| 2nd | rate = $k$[A]$ {}^{2}$ or $k$[A][B] | $M^{-1}s^{-1}$ |
 
 **MCAT tip:** The units of $k$ tell you the reaction order!
 
@@ -132,7 +132,7 @@ Example: enzyme-catalyzed reactions at substrate saturation; zero-order because 
 
 - Rate laws must be determined experimentally from rate/concentration data
 - To find order: compare runs where only one concentration changes; use ratio $\\text{rate}_2/\\text{rate}_1 = ([\\text{X}]_2/[\\text{X}]_1)^m$
-- Units of $k$: 0th order = M/s; 1st order = s⁻¹; 2nd order = M⁻¹s⁻¹
+- Units of $k$: 0th order = M/s; 1st order = $s^{-1}$; 2nd order = $M^{-1}s^{-1}$
 - Zero-order reactions: rate is constant; seen in enzyme kinetics at Vmax
 - Rate laws are determined experimentally — **not** from balanced equations (unless elementary step)
 `

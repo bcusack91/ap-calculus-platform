@@ -13,7 +13,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'pm-ent-1b',
-    question: 'A ball rolls off a table $1.25$ m high. How long does it take to reach the floor? (Use $g = 10$ m/s².)',
+    question: 'A ball rolls off a table $1.25$ m high. How long does it take to reach the floor? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$0.25$ s', '$0.5$ s', '$1.0$ s', '$1.25$ s'],
     correctIndex: 1,
     explanation: 'Using $h = \\frac{1}{2}gt^2$: $1.25 = \\frac{1}{2}(10)t^2$, so $t^2 = 0.25$ and $t = 0.5$ s.',
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 3: Time of Flight
   {
     id: 'pm-ent-3a',
-    question: 'A ball is launched at $30$ m/s at $30°$ on level ground. How long is it in the air? (Use $g = 10$ m/s².)',
+    question: 'A ball is launched at $30$ m/s at $30°$ on level ground. How long is it in the air? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$1$ s', '$1.5$ s', '$3$ s', '$6$ s'],
     correctIndex: 2,
     explanation: '$v_{0y} = 30\\sin 30° = 15$ m/s. Time to apex = $v_{0y}/g = 15/10 = 1.5$ s. Total time = $2 \\times 1.5 = 3$ s.',
@@ -64,7 +64,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 4: Maximum Height
   {
     id: 'pm-ent-4a',
-    question: 'A projectile launched at $40$ m/s at $45°$ reaches what maximum height? (Use $g = 10$ m/s².)',
+    question: 'A projectile launched at $40$ m/s at $45°$ reaches what maximum height? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$20$ m', '$40$ m', '$80$ m', '$160$ m'],
     correctIndex: 1,
     explanation: '$v_{0y} = 40\\sin 45° = 20\\sqrt{2}$ m/s. $H = v_{0y}^2/(2g) = (20\\sqrt{2})^2/20 = 800/20 = 40$ m.',
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Problem-Solving Workshop
   {
     id: 'pm-ent-6a',
-    question: 'A projectile is launched at $50$ m/s at $37°$ ($\\sin 37° \\approx 0.6$, $\\cos 37° \\approx 0.8$). What is the range on level ground? (Use $g = 10$ m/s².)',
+    question: 'A projectile is launched at $50$ m/s at $37°$ ($\\sin 37° \\approx 0.6$, $\\cos 37° \\approx 0.8$). What is the range on level ground? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$120$ m', '$200$ m', '$240$ m', '$300$ m'],
     correctIndex: 2,
     explanation: '$R = v_0^2 \\sin 2\\theta / g = 2500 \\sin 74° / 10$. Or use $R = v_{0x} \\times T = (50 \\times 0.8) \\times 2(50 \\times 0.6)/10 = 40 \\times 6 = 240$ m.',
@@ -113,7 +113,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'pm-ent-6b',
-    question: 'A ball is launched horizontally at $10$ m/s from a $45$ m high cliff. How far from the base does it land? (Use $g = 10$ m/s².)',
+    question: 'A ball is launched horizontally at $10$ m/s from a $45$ m high cliff. How far from the base does it land? (Use $g = 10$ $m/s^{2}$.)',
     options: ['$10$ m', '$20$ m', '$30$ m', '$45$ m'],
     correctIndex: 2,
     explanation: 'Time to fall: $45 = \\frac{1}{2}(10)t^2 \\Rightarrow t = 3$ s. Horizontal distance $= 10 \\times 3 = 30$ m.',

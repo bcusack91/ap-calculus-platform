@@ -83,10 +83,10 @@ $$\\text{pH} = -\\log(1.34 \\times 10^{-3}) = 3 - \\log(1.34) \\approx 2.87$$
       exercise: {
         questions: [
           {
-            question: `What is the pH of 0.00100 M HNO₃?`,
+            question: `What is the pH of 0.00100 M $HNO_{3}$?`,
             options: [`2`, `3`, `11`, `12`],
             correctAnswer: 1,
-            explanation: `HNO₃ is a strong acid: $[\\text{H}^+] = 0.00100\\text{ M} = 10^{-3}\\text{ M}$. pH $= -\\log(10^{-3}) = \\mathbf{3}$.`
+            explanation: `$HNO_{3}$ is a strong acid: $[\\text{H}^+] = 0.00100\\text{ M} = 10^{-3}\\text{ M}$. pH $= -\\log(10^{-3}) = \\mathbf{3}$.`
           },
           {
             question: `The pH of a solution is 11. What is $[\\text{H}^+]$?`,

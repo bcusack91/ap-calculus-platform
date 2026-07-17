@@ -130,7 +130,7 @@ It wouldn't! Mass cancels from all equations. The minimum height is independent 
       content: `
 **AP-Style Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A car ($m = 1000$ kg) rounds a flat curve ($r = 50$ m, $\\mu_s = 0.6$). What is the maximum speed (in m/s, round to 3 significant figures)?
 

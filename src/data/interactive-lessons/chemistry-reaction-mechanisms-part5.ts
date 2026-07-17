@@ -120,7 +120,7 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
               'Mechanisms I and II'
             ],
             correctAnswer: 0,
-            explanation: 'Mech I: Step 1 slow → rate = k[A][B] ✓ (matches experiment). Sum: 2A + B → C + D ✓. Mech II: rate = k[A]²[B] ✗ (doesn\'t match — should be first order in A). Mech III: rate = k[A]² ✗ (doesn\'t match — missing [B]).'
+            explanation: 'Mech I: Step 1 slow → rate = k[A][B] ✓ (matches experiment). Sum: 2A + B → C + D ✓. Mech II: rate = k[A]$ {}^{2}$[B] ✗ (doesn\'t match — should be first order in A). Mech III: rate = k[A]$ {}^{2}$ ✗ (doesn\'t match — missing [B]).'
           },
           {
             question: 'A mechanism passes both criteria. This means the mechanism is:',
@@ -160,7 +160,7 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
           },
           {
             label: 'Rate law from Mechanism X (after eliminating intermediate I)',
-            options: ['rate = k[H₂][I₂]', 'rate = k[I]²[H₂]', 'rate = k[H₂]', 'rate = k[I₂]']
+            options: ['rate = k[$H_{2}$][$I_{2}$]', 'rate = k[I]$ {}^{2}$[$H_{2}$]', 'rate = k[$H_{2}$]', 'rate = k[$I_{2}$]']
           },
           {
             label: 'Does Mechanism Y sum to the overall reaction?',
@@ -171,11 +171,11 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
             options: ['X only', 'Y only', 'Both X and Y', 'Neither']
           }
         ],
-        correctAnswers: ['Yes', 'rate = k[H₂][I₂]', 'Yes', 'Both X and Y'],
-        hint1: 'X: I₂ → 2I, then 2I + H₂ → 2HI. Sum: H₂ + I₂ → 2HI ✓.',
-        hint2: 'X Step 2: rate = k₂[I]²[H₂]. [I] = (Keq[I₂])^(1/2). [I]² = Keq[I₂]. Rate = k₂Keq[H₂][I₂] = k_obs[H₂][I₂].',
-        hint3: 'Y: one step → rate = k[H₂][I₂]. Both give the same rate law!',
-        explanation: 'Both mechanisms sum correctly and both predict rate = k[H₂][I₂]. This illustrates that multiple mechanisms can be consistent with the same data — we cannot distinguish between them from rate law alone.'
+        correctAnswers: ['Yes', 'rate = k[$H_{2}$][$I_{2}$]', 'Yes', 'Both X and Y'],
+        hint1: 'X: $I_{2}$ → 2I, then 2I + $H_{2}$ → 2HI. Sum: $H_{2}$ + $I_{2}$ → 2HI ✓.',
+        hint2: 'X Step 2: rate = $k_{2}$[I]$ {}^{2}$[$H_{2}$]. [I] = (Keq[$I_{2}$])^(1/2). [I]$ {}^{2}$ = Keq[$I_{2}$]. Rate = $k_{2}Keq$[$H_{2}$][$I_{2}$] = k_obs[$H_{2}$][$I_{2}$].',
+        hint3: 'Y: one step → rate = k[$H_{2}$][$I_{2}$]. Both give the same rate law!',
+        explanation: 'Both mechanisms sum correctly and both predict rate = k[$H_{2}$][$I_{2}$]. This illustrates that multiple mechanisms can be consistent with the same data — we cannot distinguish between them from rate law alone.'
       }
     },
     {
@@ -225,8 +225,8 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
         boxes: 3,
         correctAnswers: ['yes', 'k[A][B]', 'yes'],
         hint1: 'Step 1 + Step 2: A + B + D + B → D + C. Cancel D: A + 2B → C ✓.',
-        hint2: 'Step 1 (slow): A + B → D. Rate = k₁[A][B].',
-        hint3: 'k₁[A][B] matches experimental k[A][B] ✓.',
+        hint2: 'Step 1 (slow): A + B → D. Rate = $k_{1}$[A][B].',
+        hint3: '$k_{1}$[A][B] matches experimental k[A][B] ✓.',
         explanation: '1) A + B + D + B → D + C. Cancel D: A + 2B → C ✓. 2) RDS = Step 1: rate = k[A][B]. 3) Matches experimental rate law ✓. Mechanism is valid!'
       }
     },
@@ -239,7 +239,7 @@ $$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experi
       exercise: {
         questions: [
           {
-            question: 'A proposed mechanism gives rate = k[A]² but the experimental rate law is rate = k[A][B]. The mechanism is:',
+            question: 'A proposed mechanism gives rate = k[A]$ {}^{2}$ but the experimental rate law is rate = k[A][B]. The mechanism is:',
             options: [
               'Valid because it satisfies Criterion 1',
               'Invalid because the rate law doesn\'t match',

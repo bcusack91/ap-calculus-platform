@@ -67,7 +67,7 @@ $A = 8(3) + 4(3) = 24 + 12 = 36$ sq units ✅
         boxes: 3,
         correctAnswers: ["30","28","36"],
         hint1: "A = ½bh.",
-        hint2: "A = ½(b₁+b₂)h.",
+        hint2: "A = $\\tfrac{1}{2} (b_{1}+b_{2})h$.",
         hint3: "Add two rectangle areas.",
         explanation: "1) ½(10)(6)=30. 2) ½(14)(4)=28. 3) 24+12=36."
       }

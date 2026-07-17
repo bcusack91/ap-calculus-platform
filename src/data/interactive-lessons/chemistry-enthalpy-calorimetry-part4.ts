@@ -180,7 +180,7 @@ The negative sign reflects that heat released by the reaction is absorbed by the
               'J/(g·°C)',
               'kJ/°C',
               'kJ/mol',
-              'J/K²'
+              '$J/K^{2}$'
             ],
             correctAnswer: 1,
             explanation: '$C_{\\text{cal}}$ is the heat capacity of the entire calorimeter apparatus. Its units are energy per degree: kJ/°C (or J/°C). This is different from specific heat, which is per gram.'

@@ -58,8 +58,8 @@ If $x$-$t$ is a **parabola** (concave up):
 If $v$-$t$ is a **horizontal line** at 8 m/s:
 → $a$-$t$ is a **horizontal line** at $a = 0$
 
-If $v$-$t$ is a **straight line** with slope $-3$ m/s²:
-→ $a$-$t$ is a **horizontal line** at $a = -3$ m/s²
+If $v$-$t$ is a **straight line** with slope $-3$ $m/s^{2}$:
+→ $a$-$t$ is a **horizontal line** at $a = -3$ $m/s^{2}$
 
 ### Constant Acceleration Summary
 
@@ -88,18 +88,18 @@ If $v$-$t$ is a **straight line** with slope $-3$ m/s²:
             explanation: 'A straight line on the $x$-$t$ graph has constant slope, so the velocity is constant. The $v$-$t$ graph is a horizontal line at the value of that slope.'
           },
           {
-            question: 'If the $v$-$t$ graph is a straight line with slope $-4$ m/s², the $a$-$t$ graph is:',
+            question: 'If the $v$-$t$ graph is a straight line with slope $-4$ $m/s^{2}$, the $a$-$t$ graph is:',
             options: [
               'A straight line with negative slope',
-              'A horizontal line at $a = -4$ m/s²',
+              'A horizontal line at $a = -4$ $m/s^{2}$',
               'A parabola',
               'A straight line with positive slope'
             ],
             correctAnswer: 1,
-            explanation: 'The slope of the $v$-$t$ graph is the acceleration. A constant slope of $-4$ m/s² means constant acceleration, so the $a$-$t$ graph is a horizontal line at $-4$ m/s².'
+            explanation: 'The slope of the $v$-$t$ graph is the acceleration. A constant slope of $-4$ $m/s^{2}$ means constant acceleration, so the $a$-$t$ graph is a horizontal line at $-4$ $m/s^{2}$.'
           },
           {
-            question: 'If the $a$-$t$ graph is a horizontal line at $a = 2$ m/s² and $v_0 = 0$, the $v$-$t$ graph is:',
+            question: 'If the $a$-$t$ graph is a horizontal line at $a = 2$ $m/s^{2}$ and $v_0 = 0$, the $v$-$t$ graph is:',
             options: [
               'A horizontal line at 2 m/s',
               'A straight line starting at 0 with slope 2',
@@ -107,7 +107,7 @@ If $v$-$t$ is a **straight line** with slope $-3$ m/s²:
               'A horizontal line at 0'
             ],
             correctAnswer: 1,
-            explanation: 'Constant acceleration means velocity changes linearly. Starting from $v_0 = 0$ with $a = 2$ m/s², the $v$-$t$ graph is $v = 2t$, a straight line through the origin with slope 2.'
+            explanation: 'Constant acceleration means velocity changes linearly. Starting from $v_0 = 0$ with $a = 2$ $m/s^{2}$, the $v$-$t$ graph is $v = 2t$, a straight line through the origin with slope 2.'
           }
         ]
       }
@@ -155,7 +155,7 @@ If $v$-$t$ is a **straight line** with slope $-3$ m/s²:
 
 A $v$-$t$ graph shows a straight line from $v = 0$ at $t = 0$ to $v = 20$ m/s at $t = 5$ s, then constant at $v = 20$ m/s from $t = 5$ to $t = 10$ s.
 
-1) What is the acceleration from $t = 0$ to $t = 5$ s? (in m/s²)
+1) What is the acceleration from $t = 0$ to $t = 5$ s? $(in m/s^{2})$
 
 2) What is the displacement from $t = 0$ to $t = 5$ s? (in meters)
 
@@ -167,7 +167,7 @@ A $v$-$t$ graph shows a straight line from $v = 0$ at $t = 0$ to $v = 20$ m/s at
         hint1: 'Slope = $20/5$',
         hint2: 'Triangle: $\\frac{1}{2}(5)(20) = 50$ m',
         hint3: 'Triangle + rectangle: $50 + 20(5) = 50 + 100$',
-        explanation: '1) $a = 20/5 = 4$ m/s². 2) $\\frac{1}{2}(5)(20) = 50$ m. 3) $50 + 20(5) = 50 + 100 = 150$ m.'
+        explanation: '1) $a = 20/5 = 4$ $m/s^{2}$. 2) $\\frac{1}{2}(5)(20) = 50$ m. 3) $50 + 20(5) = 50 + 100 = 150$ m.'
       }
     },
     {

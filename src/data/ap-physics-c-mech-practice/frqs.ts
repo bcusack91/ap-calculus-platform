@@ -55,7 +55,7 @@ A 0.50 kg block on a frictionless surface is attached to a spring (k = 8.0 N/m).
       },
       {
         prompt: '(b) Sketch $x(t)$, $v(t)$, and $a(t)$ on aligned axes for one full period. Label key values (max amplitudes, zero crossings).',
-        rubric: '$x(t) = 0.20\\cos(4t)$, amplitude 0.20 m, T ≈ 1.57 s. $v(t) = -0.80\\sin(4t)$, amplitude 0.80 m/s. $a(t) = -3.20\\cos(4t)$, amplitude 3.20 m/s². v leads x by π/2; a is exactly opposite of x (180°). Award 1 pt per correct curve with correct amplitude/phase. 3 pts.',
+        rubric: '$x(t) = 0.20\\cos(4t)$, amplitude 0.20 m, T ≈ 1.57 s. $v(t) = -0.80\\sin(4t)$, amplitude 0.80 m/s. $a(t) = -3.20\\cos(4t)$, amplitude 3.20 $m/s^{2}$. v leads x by π/2; a is exactly opposite of x (180°). Award 1 pt per correct curve with correct amplitude/phase. 3 pts.',
       },
       {
         prompt: '(c) At what position(s) is the block\'s speed maximum, and what is that speed?',
@@ -78,7 +78,7 @@ A student designs an experiment to measure $g$ using a modified Atwood machine: 
 
 The student records:
 
-| Trial | $m_1$ (kg) | $m_2$ (kg) | $a$ measured (m/s²) |
+| Trial | $m_1$ (kg) | $m_2$ (kg) | $a$ measured $(m/s^{2})$ |
 |-------|------------|------------|---------------------|
 | 1 | 0.20 | 0.30 | 1.96 |
 | 2 | 0.20 | 0.40 | 3.27 |
@@ -95,12 +95,12 @@ The student records:
         rubric: 'Rearrange: $a = g \\cdot (m_2 - m_1)/(m_1 + m_2)$. Plot $a$ (y-axis) vs. $(m_2 - m_1)/(m_1 + m_2)$ (x-axis). The slope = $g$. Linear with intercept = 0. 3 pts.',
       },
       {
-        prompt: '(c) For Trial 4, calculate the value of $(m_2 - m_1)/(m_1 + m_2)$ and verify it gives a value of g consistent with $g \\approx 9.8$ m/s².',
-        rubric: 'Trial 4: $(0.60 - 0.20)/(0.60 + 0.20) = 0.40/0.80 = 0.500$. Theoretical $a = 0.500 g = 4.90$ m/s² ⇒ measured matches exactly with $g = 9.8$ m/s². ✓ 2 pts.',
+        prompt: '(c) For Trial 4, calculate the value of $(m_2 - m_1)/(m_1 + m_2)$ and verify it gives a value of g consistent with $g \\approx 9.8$ $m/s^{2}$.',
+        rubric: 'Trial 4: $(0.60 - 0.20)/(0.60 + 0.20) = 0.40/0.80 = 0.500$. Theoretical $a = 0.500 g = 4.90$ $m/s^{2}$ ⇒ measured matches exactly with $g = 9.8$ $m/s^{2}$. ✓ 2 pts.',
       },
       {
         prompt: '(d) Identify TWO sources of systematic error that would cause the measured value of $g$ to be SMALLER than the true value, and explain how each affects the result.',
-        rubric: 'Examples (any 2 valid): (i) Friction in pulley axle: opposes motion → reduces measured $a$ → slope (and inferred $g$) too small. (ii) Pulley has mass/rotational inertia: some torque needed to spin pulley → less of (m₂−m₁)g goes to translational acceleration → $a$ smaller. (iii) Air drag opposes motion. (iv) String stretching/elasticity. (v) Timing latency overestimates fall time → underestimates $a$. 2 pts (1 per source with correct directional reasoning).',
+        rubric: 'Examples (any 2 valid): (i) Friction in pulley axle: opposes motion → reduces measured $a$ → slope (and inferred $g$) too small. (ii) Pulley has mass/rotational inertia: some torque needed to spin pulley → less of $(m_{2}-m_{1})g$ goes to translational acceleration → $a$ smaller. (iii) Air drag opposes motion. (iv) String stretching/elasticity. (v) Timing latency overestimates fall time → underestimates $a$. 2 pts (1 per source with correct directional reasoning).',
       },
     ],
   },
@@ -118,7 +118,7 @@ A solid uniform sphere (mass $M$, radius $R$, $I = \\tfrac{2}{5}MR^2$) is releas
         rubric: '$Mgh = \\tfrac{1}{2}Mv^2 + \\tfrac{1}{2}I\\omega^2$. Rolling constraint $\\omega = v/R$. Substitute: $Mgh = \\tfrac{1}{2}Mv^2 + \\tfrac{1}{2}(\\tfrac{2}{5}MR^2)(v/R)^2 = \\tfrac{1}{2}Mv^2 + \\tfrac{1}{5}Mv^2 = \\tfrac{7}{10}Mv^2$. ⇒ $v = \\sqrt{10gh/7}$. 3 pts.',
       },
       {
-        prompt: '(b) For h = 1.40 m and $g = 9.8$ m/s², compute the numerical value of $v$.',
+        prompt: '(b) For h = 1.40 m and $g = 9.8$ $m/s^{2}$, compute the numerical value of $v$.',
         rubric: '$v = \\sqrt{10(9.8)(1.40)/7} = \\sqrt{19.6} \\approx 4.43$ m/s. 2 pts.',
       },
       {

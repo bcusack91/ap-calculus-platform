@@ -54,9 +54,9 @@ An **electron domain** (also called an **electron group** or **region of electro
 ---
 
 **Examples:**
-- **CO₂**: C has 2 double bonds → **2 electron domains**
-- **H₂O**: O has 2 single bonds + 2 lone pairs → **4 electron domains**
-- **NH₃**: N has 3 single bonds + 1 lone pair → **4 electron domains**
+- **$CO_{2}$**: C has 2 double bonds → **2 electron domains**
+- **$H_{2}O$**: O has 2 single bonds + 2 lone pairs → **4 electron domains**
+- **$NH_{3}$**: N has 3 single bonds + 1 lone pair → **4 electron domains**
 - **HCN**: C has 1 single bond + 1 triple bond → **2 electron domains**`
     },
     {
@@ -67,19 +67,19 @@ An **electron domain** (also called an **electron group** or **region of electro
       exercise: {
         questions: [
           {
-            question: 'How many electron domains surround the carbon atom in formaldehyde (H₂C=O)? Carbon has 2 single bonds to H and 1 double bond to O.',
+            question: 'How many electron domains surround the carbon atom in formaldehyde ($H_{2}C$=O)? Carbon has 2 single bonds to H and 1 double bond to O.',
             options: ['2', '3', '4', '5'],
             correctAnswer: 1,
             explanation: 'Carbon has 2 single bonds (to H atoms) + 1 double bond (to O) = 3 electron domains. Remember, a double bond counts as only one electron domain.'
           },
           {
-            question: 'How many electron domains surround the nitrogen atom in NH₃? Nitrogen has 3 single bonds and 1 lone pair.',
+            question: 'How many electron domains surround the nitrogen atom in $NH_{3}$? Nitrogen has 3 single bonds and 1 lone pair.',
             options: ['3', '4', '5', '6'],
             correctAnswer: 1,
             explanation: 'Nitrogen has 3 single bonds + 1 lone pair = 4 electron domains. Lone pairs count as electron domains just like bonds do.'
           },
           {
-            question: 'How many electron domains surround the central carbon in CO₂? Carbon has 2 double bonds to oxygen.',
+            question: 'How many electron domains surround the central carbon in $CO_{2}$? Carbon has 2 double bonds to oxygen.',
             options: ['2', '3', '4', '6'],
             correctAnswer: 0,
             explanation: 'Each double bond counts as 1 electron domain. Carbon has 2 double bonds = 2 electron domains.'
@@ -113,7 +113,7 @@ The steric number determines the **electron domain geometry** — the arrangemen
 
 ### Example Calculation
 
-**For H₂O:**
+**For $H_{2}O$:**
 - Bonded atoms = 2 (two H atoms)
 - Lone pairs on O = 2
 - Steric number = 2 + 2 = **4**
@@ -131,24 +131,24 @@ Note: The *molecular* geometry (shape based only on atom positions) may differ f
       exercise: {
         inputs: [
           {
-            label: 'Steric number of carbon in CH₄ (4 bonds, 0 lone pairs)',
+            label: 'Steric number of carbon in $CH_{4}$ (4 bonds, 0 lone pairs)',
             correctAnswer: '4',
-            explanation: 'Carbon in CH₄ has 4 bonded atoms and 0 lone pairs. Steric number = 4 + 0 = 4.'
+            explanation: 'Carbon in $CH_{4}$ has 4 bonded atoms and 0 lone pairs. Steric number = 4 + 0 = 4.'
           },
           {
-            label: 'Steric number of sulfur in SF₆ (6 bonds, 0 lone pairs)',
+            label: 'Steric number of sulfur in $SF_{6}$ (6 bonds, 0 lone pairs)',
             correctAnswer: '6',
-            explanation: 'Sulfur in SF₆ has 6 bonded atoms and 0 lone pairs. Steric number = 6 + 0 = 6.'
+            explanation: 'Sulfur in $SF_{6}$ has 6 bonded atoms and 0 lone pairs. Steric number = 6 + 0 = 6.'
           },
           {
-            label: 'Steric number of phosphorus in PCl₅ (5 bonds, 0 lone pairs)',
+            label: 'Steric number of phosphorus in $PCl_{5}$ (5 bonds, 0 lone pairs)',
             correctAnswer: '5',
-            explanation: 'Phosphorus in PCl₅ has 5 bonded atoms and 0 lone pairs. Steric number = 5 + 0 = 5.'
+            explanation: 'Phosphorus in $PCl_{5}$ has 5 bonded atoms and 0 lone pairs. Steric number = 5 + 0 = 5.'
           },
           {
-            label: 'Steric number of xenon in XeF₂ (2 bonds, 3 lone pairs)',
+            label: 'Steric number of xenon in $XeF_{2}$ (2 bonds, 3 lone pairs)',
             correctAnswer: '5',
-            explanation: 'Xenon in XeF₂ has 2 bonded atoms + 3 lone pairs = steric number of 5.'
+            explanation: 'Xenon in $XeF_{2}$ has 2 bonded atoms + 3 lone pairs = steric number of 5.'
           }
         ]
       }
@@ -179,13 +179,13 @@ They are the **same** when there are **no lone pairs** on the central atom.
 
 They are **different** when **lone pairs are present** — because lone pairs take up space in the electron domain geometry but are invisible in the molecular shape.
 
-**Example: CH₄ vs. NH₃ vs. H₂O**
+**Example: $CH_{4}$ vs. $NH_{3}$ vs. $H_{2}O$**
 
 | Molecule | Steric # | Lone Pairs | Electron Domain Geometry | Molecular Geometry |
 |----------|----------|-----------|--------------------------|-------------------|
-| CH₄ | 4 | 0 | Tetrahedral | Tetrahedral |
-| NH₃ | 4 | 1 | Tetrahedral | Trigonal pyramidal |
-| H₂O | 4 | 2 | Tetrahedral | Bent |
+| $CH_{4}$ | 4 | 0 | Tetrahedral | Tetrahedral |
+| $NH_{3}$ | 4 | 1 | Tetrahedral | Trigonal pyramidal |
+| $H_{2}O$ | 4 | 2 | Tetrahedral | Bent |
 
 All three have the same electron domain geometry (tetrahedral), but the molecular geometry changes as lone pairs replace bonding pairs.
 
@@ -220,7 +220,7 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
               'Bent'
             ],
             correctAnswer: 2,
-            explanation: 'Steric number 4 → tetrahedral electron domain geometry. With 1 lone pair and 3 bonding pairs, the molecular geometry is trigonal pyramidal (like NH₃).'
+            explanation: 'Steric number 4 → tetrahedral electron domain geometry. With 1 lone pair and 3 bonding pairs, the molecular geometry is trigonal pyramidal $(like NH_{3})$.'
           }
         ]
       }

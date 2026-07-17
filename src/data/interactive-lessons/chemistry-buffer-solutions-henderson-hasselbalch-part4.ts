@@ -14,8 +14,8 @@ export const chemBufferSolutionsHendersonHasselbalchPart4Data = {
 
 | Factor | Effect on Buffer Capacity |
 |--------|--------------------------|
-| Higher concentrations of HA and A⁻ | Greater capacity (more moles to neutralize) |
-| Equal concentrations of HA and A⁻ | Maximum capacity (pH = p$K_a$) |
+| Higher concentrations of HA and $A^{-}$ | Greater capacity (more moles to neutralize) |
+| Equal concentrations of HA and $A^{-}$ | Maximum capacity (pH = p$K_a$) |
 | Very unequal ratio (>10:1 or <1:10) | Buffer breaks — outside effective range |
 
 **Effective range: p$K_a$ ± 1**
@@ -220,10 +220,10 @@ But now there\'s half the buffering capacity.
           },
           {
             label: 'To increase buffer capacity without changing pH, you should',
-            options: ['add more HA only', 'add more A⁻ only', 'add equal moles of both HA and A⁻', 'add water']
+            options: ['add more HA only', 'add more $A^{-}$ only', 'add equal moles of both HA and $A^{-}$', 'add water']
           }
         ],
-        correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both HA and A⁻'],
+        correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both HA and $A^{-}$'],
         hint1: 'Effective range is $pK_a \\pm 1$; choose $pK_a \\approx$ target pH.',
         hint2: 'Dilution maintains the ratio.',
         hint3: 'Ratio = 100 means $\\log(100) = 2$, so pH = $pK_a + 2$ — outside $pK_a \\pm 1$.',

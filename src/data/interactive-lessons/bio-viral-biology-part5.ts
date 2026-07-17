@@ -27,9 +27,9 @@ Viruses evolve faster than any other biological entity. Their rapid mutation rat
 
 | Factor | Explanation |
 |--------|-------------|
-| **High mutation rate** | RdRp and reverse transcriptase lack proofreading (~10⁻⁴ errors/nt) |
+| **High mutation rate** | RdRp and reverse transcriptase lack proofreading (~$10^{-4}$ errors/nt) |
 | **Short generation time** | New viral generation every 8–72 hours |
-| **Huge population size** | A single infected cell can produce 10³–10⁵ virions |
+| **Huge population size** | A single infected cell can produce $10^{3}$–$10^{5}$ virions |
 | **Strong selection pressure** | Immune system, antiviral drugs, host barriers |
 | **Recombination** | Co-infection allows genome segment exchange |
 | **Small genome size** | Single mutations can have large phenotypic effects |
@@ -38,11 +38,11 @@ Viruses evolve faster than any other biological entity. Their rapid mutation rat
 
 | Virus Type | Error Rate (per nucleotide) | Example |
 |------------|---------------------------|---------|
-| RNA viruses | ~10⁻⁴ | Influenza, HIV |
-| Retroviruses | ~10⁻⁴ to 10⁻⁵ | HIV |
-| ssDNA viruses | ~10⁻⁴ to 10⁻⁵ | Parvovirus |
-| dsDNA viruses | ~10⁻⁶ to 10⁻⁸ | Herpesvirus |
-| Host DNA polymerase | ~10⁻⁹ to 10⁻¹⁰ | Human genome |
+| RNA viruses | ~$10^{-4}$ | Influenza, HIV |
+| Retroviruses | ~$10^{-4}$ to $10^{-5}$ | HIV |
+| ssDNA viruses | ~$10^{-4}$ to $10^{-5}$ | Parvovirus |
+| dsDNA viruses | ~$10^{-6}$ to $10^{-8}$ | Herpesvirus |
+| Host DNA polymerase | ~$10^{-9}$ to $10^{-10}$ | Human genome |
 
 > 🧬 RNA viruses are near the **error threshold** — the maximum mutation rate that still allows preservation of essential genetic information. Higher rates would cause "error catastrophe."
       `

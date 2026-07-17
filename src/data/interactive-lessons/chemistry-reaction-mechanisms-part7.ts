@@ -95,27 +95,27 @@ Mechanism:
           {
             question: 'The rate law predicted by this mechanism is:',
             options: [
-              'rate = k[H₂O₂]²',
-              'rate = k[H₂O₂][I⁻]',
-              'rate = k[H₂O₂][IO⁻]',
-              'rate = k[IO⁻][I⁻]'
+              'rate = k[$H_{2}O_{2}$]$ {}^{2}$',
+              'rate = k[$H_{2}O_{2}$][$I^{-}$]',
+              'rate = k[$H_{2}O_{2}$][$IO^{-}$]',
+              'rate = k[$IO^{-}$][$I^{-}$]'
             ],
             correctAnswer: 1,
-            explanation: 'Step 1 is the RDS: rate = k₁[H₂O₂][I⁻]. No intermediates in this expression. I⁻ appears because it is a catalyst that participates in the slow step.'
+            explanation: 'Step 1 is the RDS: rate = $k_{1}$[$H_{2}O_{2}$][$I^{-}$]. No intermediates in this expression. $I^{-}$ appears because it is a catalyst that participates in the slow step.'
           },
           {
             question: 'Identify all intermediates and catalysts:',
             options: [
-              'Intermediate: I⁻; Catalyst: IO⁻',
-              'Intermediate: IO⁻; Catalyst: I⁻',
-              'Intermediate: H₂O₂; Catalyst: I⁻',
-              'Intermediate: IO⁻; Catalyst: H₂O'
+              'Intermediate: $I^{-}$; Catalyst: $IO^{-}$',
+              'Intermediate: $IO^{-}$; Catalyst: $I^{-}$',
+              'Intermediate: $H_{2}O_{2}$; Catalyst: $I^{-}$',
+              'Intermediate: $IO^{-}$; Catalyst: $H_{2}O$'
             ],
             correctAnswer: 1,
-            explanation: 'IO⁻ is produced in Step 1 and consumed in Step 2 → intermediate. I⁻ is consumed in Step 1 and regenerated in Step 2 → catalyst.'
+            explanation: '$IO^{-}$ is produced in Step 1 and consumed in Step 2 → intermediate. $I^{-}$ is consumed in Step 1 and regenerated in Step 2 → catalyst.'
           },
           {
-            question: 'If [I⁻] is doubled while [H₂O₂] is held constant, the rate will:',
+            question: 'If [$I^{-}$] is doubled while [$H_{2}O_{2}$] is held constant, the rate will:',
             options: [
               'Stay the same',
               'Double',
@@ -123,7 +123,7 @@ Mechanism:
               'Be cut in half'
             ],
             correctAnswer: 1,
-            explanation: 'Rate = k[H₂O₂][I⁻]. The rate is first order in [I⁻], so doubling [I⁻] doubles the rate.'
+            explanation: 'Rate = k[$H_{2}O_{2}$][$I^{-}$]. The rate is first order in [$I^{-}$], so doubling [$I^{-}$] doubles the rate.'
           }
         ]
       }
@@ -143,17 +143,17 @@ Mechanism:
 
 **1)** How many intermediates? (number)
 
-**2)** The rate law from the slow step contains an intermediate. After elimination, the rate law is Rate = k_obs[NO]ⁿ[H₂]ᵐ. What is n? (number)
+**2)** The rate law from the slow step contains an intermediate. After elimination, the rate law is Rate = k_obs[NO]$ {}^{n}$[$H_{2}$]$ {}^{m}$. What is n? (number)
 
 **3)** What is m? (number)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['2', '2', '1'],
-        hint1: 'N₂O₂ (produced Step 1, consumed Step 2) and N₂O (produced Step 2, consumed Step 3) = 2 intermediates.',
-        hint2: 'Step 2: rate = k₂[N₂O₂][H₂]. [N₂O₂] = Keq[NO]². Rate = k₂Keq[NO]²[H₂]. n = 2.',
-        hint3: '[H₂] appears once in the slow step. m = 1.',
-        explanation: '1) N₂O₂ and N₂O are both intermediates (2 total). 2) Rate = k₂[N₂O₂][H₂] → [N₂O₂] = Keq[NO]² → Rate = k_obs[NO]²[H₂]. n = 2. 3) m = 1. Overall third order.'
+        hint1: '$N_{2}O_{2}$ (produced Step 1, consumed Step 2) and $N_{2}O$ (produced Step 2, consumed Step 3) = 2 intermediates.',
+        hint2: 'Step 2: rate = $k_{2}$[$N_{2}O_{2}$][$H_{2}$]. [$N_{2}O_{2}$] = Keq[NO]$ {}^{2}$. Rate = $k_{2}Keq$[NO]$ {}^{2}$[$H_{2}$]. n = 2.',
+        hint3: '[$H_{2}$] appears once in the slow step. m = 1.',
+        explanation: '1) $N_{2}O_{2}$ and $N_{2}O$ are both intermediates (2 total). 2) Rate = $k_{2}$[$N_{2}O_{2}$][$H_{2}$] → [$N_{2}O_{2}$] = Keq[NO]$ {}^{2}$ → Rate = k_obs[NO]$ {}^{2}$[$H_{2}$]. n = 2. 3) m = 1. Overall third order.'
       }
     },
     {
@@ -222,7 +222,7 @@ An energy diagram for a two-step mechanism shows:
             options: ['a termolecular step', 'a pre-equilibrium with dissociation', 'only one step', 'a catalyst']
           },
           {
-            label: 'If experimental rate law is rate = k[A] but a proposed mechanism predicts rate = k[A]², the mechanism is',
+            label: 'If experimental rate law is rate = k[A] but a proposed mechanism predicts rate = k[A]$ {}^{2}$, the mechanism is',
             options: ['valid', 'invalid', 'uncertain', 'proven correct']
           },
           {
@@ -232,7 +232,7 @@ An energy diagram for a two-step mechanism shows:
         ],
         correctAnswers: ['catalyst', 'a pre-equilibrium with dissociation', 'invalid', '4 peaks and 3 valleys'],
         hint1: 'Consumed then regenerated = catalyst. Produced then consumed = intermediate.',
-        hint2: 'e.g., X₂ ⇌ 2X gives [X] ∝ [X₂]^(1/2).',
+        hint2: 'e.g., $X_{2}$ ⇌ 2X gives [X] ∝ [$X_{2}$]^(1/2).',
         hint3: 'If predicted ≠ experimental, the mechanism is invalid.',
         explanation: 'Consumed and regenerated = catalyst. Fractional orders from dissociation equilibria. Rate law mismatch = invalid mechanism. n steps = n peaks, (n−1) valleys.'
       }
@@ -254,7 +254,7 @@ A student proposes:
 
 **1)** Does the mechanism sum to the overall reaction? (yes or no)
 
-**2)** The rate law from Step 1 is rate = k[A][B]. Does this match the experimental rate law rate = k[A][B]²? (yes or no)
+**2)** The rate law from Step 1 is rate = k[A][B]. Does this match the experimental rate law rate = k[A][B]$ {}^{2}$? (yes or no)
 
 **3)** Is this proposed mechanism valid? (yes or no)
       `,
@@ -262,9 +262,9 @@ A student proposes:
         boxes: 3,
         correctAnswers: ['yes', 'no', 'no'],
         hint1: 'A + B + F + B + G + C → F + G + D + E. Cancel F and G: A + 2B + C → D + E. Matches overall ✓.',
-        hint2: 'Step 1: rate = k[A][B]. Experimental: rate = k[A][B]². These are different (first order vs second order in B).',
+        hint2: 'Step 1: rate = k[A][B]. Experimental: rate = k[A][B]$ {}^{2}$. These are different (first order vs second order in B).',
         hint3: 'Criterion 1 (sum) ✓ but Criterion 2 (rate law) ✗. Mechanism is invalid.',
-        explanation: '1) Steps sum correctly ✓. 2) Predicted rate = k[A][B] but experimental = k[A][B]² → mismatch ✗. 3) Since Criterion 2 fails, the mechanism is invalid. A valid mechanism would need [B] to appear twice in the rate expression.'
+        explanation: '1) Steps sum correctly ✓. 2) Predicted rate = k[A][B] but experimental = k[A][B]$ {}^{2}$ → mismatch ✗. 3) Since Criterion 2 fails, the mechanism is invalid. A valid mechanism would need [B] to appear twice in the rate expression.'
       }
     },
     {

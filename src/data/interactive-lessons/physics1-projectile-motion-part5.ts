@@ -110,7 +110,7 @@ Consider a projectile launched at speed $v_0$ at angle $\\theta$:
       content: `
 **Using Symmetry to Solve Problems** 🧮
 
-A ball is launched from the ground at 20 m/s at 30° above horizontal. Use $g = 10$ m/s², $\\sin 30° = 0.5$, $\\cos 30° \\approx 0.866$.
+A ball is launched from the ground at 20 m/s at 30° above horizontal. Use $g = 10$ $m/s^{2}$, $\\sin 30° = 0.5$, $\\cos 30° \\approx 0.866$.
 
 1) Time to reach maximum height (in seconds)
 
@@ -184,7 +184,7 @@ In these cases, you must solve the full kinematic equations without relying on s
       exercise: {
         questions: [
           {
-            question: 'A ball launched at 53° with speed 25 m/s has $v_{0y} = 20$ m/s. Using $g = 10$ m/s², its speed 1 s after launch equals its speed at what other time?',
+            question: 'A ball launched at 53° with speed 25 m/s has $v_{0y} = 20$ m/s. Using $g = 10$ $m/s^{2}$, its speed 1 s after launch equals its speed at what other time?',
             options: [
               '2 s',
               '3 s',

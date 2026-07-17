@@ -1,0 +1,1354 @@
+[
+ {
+  "file": "interactive-lessons/act-act-plane-geometry-act-part2.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['any side < sum of the other two.', 'Pythagorean theorem: a\u00b2 + b\u00b2 = c\u00b2 (right triangles only).', 'Special right triangles: 30-60-90 (1, \u221a3, 2) and 45-45-90 (1, 1, ",
+  "after": "correctAnswers: ['any side < sum of the other two.', 'Pythagorean theorem: $a^{2}$ + $b^{2}$ = $c^{2}$ (right triangles only).', 'Special right triangles: 30-60-90 (1, $\\\\sqrt{3}$,"
+ },
+ {
+  "file": "interactive-lessons/act-act-plane-geometry-act-part3.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90\u00b0; Rhombus: all sides equal; Square: both.', 'Trapezoid area: \u00bd(b\u2081 + b\u2082)h.'],",
+  "after": "correctAnswers: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90\u00b0; Rhombus: all sides equal; Square: both.', 'Trapezoid area: $\\\\tfrac{1}{2} (b_{1} + b_"
+ },
+ {
+  "file": "interactive-lessons/act-act-plane-geometry-act-part4.ts",
+  "line": 98,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Sector area = (central angle/360\u00b0) \u00d7 \u03c0r\u00b2.', 'Inscribed angle = half the central angle (same arc).'],",
+  "after": "correctAnswers: ['Sector area = (central angle/360\u00b0) \u00d7 $\\\\pi r^{2}$.', 'Inscribed angle = half the central angle (same arc).'],"
+ },
+ {
+  "file": "interactive-lessons/act-act-plane-geometry-act-part5.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['A = lw, P = 2l + 2w.', 'A = \u00bdbh.', 'Circle: A = \u03c0r\u00b2, C = 2\u03c0r.'],",
+  "after": "correctAnswers: ['A = lw, P = 2l + 2w.', 'A = \u00bdbh.', 'Circle: A = $\\\\pi r^{2}$, C = 2\u03c0r.'],"
+ },
+ {
+  "file": "interactive-lessons/act-act-plane-geometry-act-part6.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['A = lw, P = 2l + 2w.', 'A = \u00bdbh.', 'Circle: A = \u03c0r\u00b2, C = 2\u03c0r.'],",
+  "after": "correctAnswers: ['A = lw, P = 2l + 2w.', 'A = \u00bdbh.', 'Circle: A = $\\\\pi r^{2}$, C = 2\u03c0r.'],"
+ },
+ {
+  "file": "interactive-lessons/act-act-plane-geometry-act-part7.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['A = lw, P = 2l + 2w.', 'A = \u00bdbh.', 'Circle: A = \u03c0r\u00b2, C = 2\u03c0r.'],",
+  "after": "correctAnswers: ['A = lw, P = 2l + 2w.', 'A = \u00bdbh.', 'Circle: A = $\\\\pi r^{2}$, C = 2\u03c0r.'],"
+ },
+ {
+  "file": "interactive-lessons/act-act-trigonometry-act-part1.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['sin = opp/hyp, cos = adj/hyp, tan = opp/adj.', 'Inverse trig: if sin \u03b8 = 0.5, then \u03b8 = sin\u207b\u00b9(0.5) = 30\u00b0.', 'Pythagorean theorem connects to trig: sin\u00b2\u03b8 + cos\u00b2\u03b8 = ",
+  "after": "correctAnswers: ['sin = opp/hyp, cos = adj/hyp, tan = opp/adj.', 'Inverse trig: if sin \u03b8 = 0.5, then \u03b8 = $\\\\sin^{-1}(0.5)$ = 30\u00b0.', 'Pythagorean theorem connects to trig: $\\\\sin^{2"
+ },
+ {
+  "file": "interactive-lessons/act-act-trigonometry-act-part2.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['draw a right triangle from the scenario.', 'a/sin A = b/sin B = c/sin C.', 'Law of Cosines: c\u00b2 = a\u00b2 + b\u00b2 - 2ab cos C.'],",
+  "after": "correctAnswers: ['draw a right triangle from the scenario.', 'a/sin A = b/sin B = c/sin C.', 'Law of Cosines: $c^{2}$ = $a^{2}$ + $b^{2}$ - 2ab cos C.'],"
+ },
+ {
+  "file": "interactive-lessons/act-act-trigonometry-act-part4.ts",
+  "line": 102,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['sin\u00b2\u03b8 + cos\u00b2\u03b8 = 1.', 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.', 'Double angle: sin 2\u03b8 = 2 sin \u03b8 cos \u03b8; cos 2\u03b8 = cos\u00b2\u03b8 - sin\u00b2\u03b8.'],",
+  "after": "correctAnswers: ['$\\\\sin^{2}\\\\theta$ + $\\\\cos^{2}\\\\theta$ = 1.', 'Reciprocal: csc = 1/sin, sec = 1/cos, cot = 1/tan.', 'Double angle: sin 2\u03b8 = 2 sin \u03b8 cos \u03b8; cos 2\u03b8 = $\\\\cos^{2}\\\\t"
+ },
+ {
+  "file": "interactive-lessons/bio-biogeochemical-cycles-part4.ts",
+  "line": 196,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['PO\u2084\u00b3\u207b (phosphate)', 'freshwater', 'weathering of rocks', 'eutrophication'],",
+  "after": "correctAnswers: ['$PO_{4}^{3-}$ (phosphate)', 'freshwater', 'weathering of rocks', 'eutrophication'],"
+ },
+ {
+  "file": "interactive-lessons/bio-biogeochemical-cycles-part5.ts",
+  "line": 189,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['cattle ranching and soy farming', 'dead zones', 'calcium carbonate (CaCO\u2083)', 'agricultural fertilizer runoff'],",
+  "after": "correctAnswers: ['cattle ranching and soy farming', 'dead zones', 'calcium carbonate $(CaCO_{3})$', 'agricultural fertilizer runoff'],"
+ },
+ {
+  "file": "interactive-lessons/bio-cell-communication-signaling-part4.ts",
+  "line": 106,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['kinases add phosphate groups', 'cAMP, Ca\u00b2\u207a, IP\u2083', 'one signal \u2192 many responses'],",
+  "after": "correctAnswers: ['kinases add phosphate groups', 'cAMP, $Ca^{2+}$, $IP_{3}$', 'one signal \u2192 many responses'],"
+ },
+ {
+  "file": "interactive-lessons/bio-chromosomal-inheritance-patterns-part2.ts",
+  "line": 144,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['males', 'X^A X^a', 'father to all sons', 'all daughters (carriers)'],",
+  "after": "correctAnswers: ['males', '$X^{A}$ $X^{a}$', 'father to all sons', 'all daughters (carriers)'],"
+ },
+ {
+  "file": "interactive-lessons/bio-dna-replication-part6.ts",
+  "line": 112,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['16', 'sixteen', '2^4'],",
+  "after": "acceptableAnswers: ['16', 'sixteen', '$2^{4}$'],"
+ },
+ {
+  "file": "interactive-lessons/bio-dna-technology-genomics-part7.ts",
+  "line": 229,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['a combined', '2\u207f', 'non-targeting', 'sequencing'],",
+  "after": "correctAnswers: ['a combined', '$2^{n}$', 'non-targeting', 'sequencing'],"
+ },
+ {
+  "file": "interactive-lessons/bio-immune-system-response-part6.ts",
+  "line": 164,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['IgE', 'CD4\u207a helper T', 'epinephrine', 'DNA and proteins'],",
+  "after": "correctAnswers: ['IgE', '$CD4^{+}$ helper T', 'epinephrine', 'DNA and proteins'],"
+ },
+ {
+  "file": "interactive-lessons/bio-meiosis-genetic-diversity-part5.ts",
+  "line": 106,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['2\u207f possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg'],",
+  "after": "correctAnswers: ['$2^{n}$ possible combinations (n = # of chromosome pairs)', 'creates new allele combinations', 'any sperm + any egg'],"
+ },
+ {
+  "file": "interactive-lessons/bio-nervous-system-signaling-part2.ts",
+  "line": 155,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['\u221270 mV', '3 Na\u207a out, 2 K\u207a in', 'K\u207a', 'proteins (anions)'],",
+  "after": "correctAnswers: ['\u221270 mV', '3 $Na^{+}$ out, 2 $K^{+}$ in', '$K^{+}$', 'proteins (anions)'],"
+ },
+ {
+  "file": "interactive-lessons/bio-nervous-system-signaling-part3.ts",
+  "line": 144,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['threshold', 'Na\u207a', 'K\u207a', 'absolute'],",
+  "after": "correctAnswers: ['threshold', '$Na^{+}$', '$K^{+}$', 'absolute'],"
+ },
+ {
+  "file": "interactive-lessons/bio-nervous-system-signaling-part5.ts",
+  "line": 146,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Ca\u00b2\u207a', 'exocytosis', 'EPSP', 'temporal'],",
+  "after": "correctAnswers: ['$Ca^{2+}$', 'exocytosis', 'EPSP', 'temporal'],"
+ },
+ {
+  "file": "interactive-lessons/bio-nervous-system-signaling-part7.ts",
+  "line": 182,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Na\u207a; Na\u207a', 'accumulate', 'spatial', 'less'],",
+  "after": "correctAnswers: ['$Na^{+}$; $Na^{+}$', 'accumulate', 'spatial', 'less'],"
+ },
+ {
+  "file": "interactive-lessons/bio-origins-of-life-part1.ts",
+  "line": 121,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['outgassing', 'free oxygen (O\u2082)', 'hydrothermal vents'],",
+  "after": "correctAnswers: ['outgassing', 'free oxygen $(O_{2})$', 'hydrothermal vents'],"
+ },
+ {
+  "file": "interactive-lessons/bio-viral-biology-part6.ts",
+  "line": 183,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['ssRNA', 'PrP\u02e2\u1d9c', 'ACE2', 'protein'],",
+  "after": "correctAnswers: ['ssRNA', '$PrP^{sc}$', 'ACE2', 'protein'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-applications-of-derivatives-calcab-part5.ts",
+  "line": 161,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: '(e^2-1)/2',",
+  "after": "correctAnswer: '$(e^{2}-1)/2$',"
+ },
+ {
+  "file": "interactive-lessons/calcab-applications-of-derivatives-calcab-part5.ts",
+  "line": 162,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['(e^2-1)/2', '(e^2 - 1)/2', '(e\u00b2-1)/2'],",
+  "after": "acceptableAnswers: ['$(e^{2}-1)/2$', '$(e^{2} - 1)/2$', '$(e^{2}-1)/2$'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-applications-of-derivatives-calcab-part6.ts",
+  "line": 187,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: '120sqrt(2)',",
+  "after": "correctAnswer: '$120\\\\sqrt{2}$',"
+ },
+ {
+  "file": "interactive-lessons/calcab-applications-of-derivatives-calcab-part6.ts",
+  "line": 188,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['120sqrt(2)', '120*sqrt(2)', '169.7', '170', '60sqrt(8)', '240/sqrt(2)'],",
+  "after": "acceptableAnswers: ['$120\\\\sqrt{2}$', '$120\\\\cdot \\\\sqrt{2}$', '169.7', '170', '$60\\\\sqrt{8}$', '$240/\\\\sqrt{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-derivatives-exp-log-calcab-part1.ts",
+  "line": 18,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "], correctAnswers: ['$-\\\\sin x \\\\cdot e^{\\\\cos x}$', 'No solution (e^x > 0 always)', 'Increasing and concave up'], hint1: 'Chain rule: $e^{\\\\cos x} \\\\cdot (-\\\\sin x)$.', hint2: '$e",
+  "after": "], correctAnswers: ['$-\\\\sin x \\\\cdot e^{\\\\cos x}$', 'No solution ($e^{x}$ > 0 always)', 'Increasing and concave up'], hint1: 'Chain rule: $e^{\\\\cos x} \\\\cdot (-\\\\sin x)$.', hint2:"
+ },
+ {
+  "file": "interactive-lessons/calcab-differential-equations-calcab-part2.ts",
+  "line": 140,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: 'sqrt(34)',",
+  "after": "correctAnswer: '$\\\\sqrt{34}$',"
+ },
+ {
+  "file": "interactive-lessons/calcab-differential-equations-calcab-part2.ts",
+  "line": 141,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['sqrt(34)', 'sqrt34', '\u221a34'],",
+  "after": "acceptableAnswers: ['$\\\\sqrt{34}$', 'sqrt34', '$\\\\sqrt{34}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-differential-equations-calcab-part5.ts",
+  "line": 128,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: 'sqrt(22)',",
+  "after": "correctAnswer: '$\\\\sqrt{22}$',"
+ },
+ {
+  "file": "interactive-lessons/calcab-differential-equations-calcab-part5.ts",
+  "line": 129,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['sqrt(22)', 'sqrt22', '\u221a22'],",
+  "after": "acceptableAnswers: ['$\\\\sqrt{22}$', 'sqrt22', '$\\\\sqrt{22}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-implicit-differentiation-calcab-part4.ts",
+  "line": 18,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "], correctAnswers: ['Concave down (d\u00b2y/dx\u00b2 < 0)', 'Concave up (d\u00b2y/dx\u00b2 > 0)', 'The y-value appears in the denominator as y\u00b3'], hint1: '$d^2y/dx^2 = -25/y^3 = -25/64 < 0$.', hint2: ",
+  "after": "], correctAnswers: ['Concave down ($d^{2}y/dx^{2}$ < 0)', 'Concave up ($d^{2}y/dx^{2}$ > 0)', 'The y-value appears in the denominator as $y^{3}$'], hint1: '$d^2y/dx^2 = -25/y^3 = -"
+ },
+ {
+  "file": "interactive-lessons/calcab-implicit-differentiation-calcab-part7.ts",
+  "line": 10,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'The \"plug in early\" technique works best when:', options: ['You need dy/dx at a specific point, not a general formula', 'You need the general formula', 'The equation i",
+  "after": "{ question: 'The \"plug in early\" technique works best when:', options: ['You need dy/dx at a specific point, not a general formula', 'You need the general formula', 'The equation i"
+ },
+ {
+  "file": "interactive-lessons/calcab-limits-continuity-calcab-part5.ts",
+  "line": 208,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: 'sqrt(3)',",
+  "after": "correctAnswer: '$\\\\sqrt{3}$',"
+ },
+ {
+  "file": "interactive-lessons/calcab-limits-continuity-calcab-part5.ts",
+  "line": 209,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['sqrt(3)', '\u221a3', '1.732', '1.73'],",
+  "after": "acceptableAnswers: ['$\\\\sqrt{3}$', '$\\\\sqrt{3}$', '1.732', '1.73'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part1.ts",
+  "line": 9,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'A square\\'s side grows at 3 cm/s. How fast does the area grow when $s = 10$ cm?', options: ['$60$ cm\u00b2/s', '$30$ cm\u00b2/s', '$100$ cm\u00b2/s', '$9$ cm\u00b2/s'], correctAnswer: 0, ",
+  "after": "{ question: 'A square\\'s side grows at 3 cm/s. How fast does the area grow when $s = 10$ cm?', options: ['$60$ $cm^{2}/s$', '$30$ $cm^{2}/s$', '$100$ $cm^{2}/s$', '$9$ $cm^{2}/s$']"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part1.ts",
+  "line": 20,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'A cube\\'s edge grows at 2 cm/s. How fast does $V$ grow when $s = 5$ cm?', options: ['$150$ cm\u00b3/s', '$75$ cm\u00b3/s', '$50$ cm\u00b3/s', '$250$ cm\u00b3/s'], correctAnswer: 0, explan",
+  "after": "{ question: 'A cube\\'s edge grows at 2 cm/s. How fast does $V$ grow when $s = 5$ cm?', options: ['$150$ $cm^{3}/s$', '$75$ $cm^{3}/s$', '$50$ $cm^{3}/s$', '$250$ $cm^{3}/s$'], corr"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part3.ts",
+  "line": 13,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "{ id: 'rr3-input', type: 'input-boxes' as const, content: `**Volume Rate Problems** \ud83e\uddee\\n\\n**1)** Sphere: $dV/dt = 36\\\\pi$, $r = 3$. $dr/dt = $ (integer)\\n\\n**2)** Cone ($r = h/3$, f",
+  "after": "{ id: 'rr3-input', type: 'input-boxes' as const, content: `**Volume Rate Problems** \ud83e\uddee\\n\\n**1)** Sphere: $dV/dt = 36\\\\pi$, $r = 3$. $dr/dt = $ (integer)\\n\\n**2)** Cone ($r = h/3$, f"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part3.ts",
+  "line": 20,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'A cylindrical tank (fixed radius 4 m) fills at 8\u03c0 m\u00b3/min. $dh/dt = $', options: ['$1/2$ m/min', '$2$ m/min', '$8\\\\pi$ m/min', '$1/(2\\\\pi)$ m/min'], correctAnswer: 0, e",
+  "after": "{ question: 'A cylindrical tank (fixed radius 4 m) fills at 8\u03c0 $m^{3}/min$. $dh/dt = $', options: ['$1/2$ m/min', '$2$ m/min', '$8\\\\pi$ m/min', '$1/(2\\\\pi)$ m/min'], correctAnswer:"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part4.ts",
+  "line": 18,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "], correctAnswers: ['Use $\\\\tan\\\\theta = h/d$', '$\\\\sec^2\\\\theta \\\\cdot d\\\\theta/dt = f\\'(t)$', '90\u00b0'], hint1: 'Opposite over adjacent = tan.', hint2: 'Derivative of tan is sec\u00b2.',",
+  "after": "], correctAnswers: ['Use $\\\\tan\\\\theta = h/d$', '$\\\\sec^2\\\\theta \\\\cdot d\\\\theta/dt = f\\'(t)$', '90\u00b0'], hint1: 'Opposite over adjacent = tan.', hint2: 'Derivative of tan is $\\\\sec^"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part5.ts",
+  "line": 13,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "{ id: 'rr5-input', type: 'input-boxes' as const, content: `**Area Rate Calculations** \ud83e\uddee\\n\\n**1)** Rectangle: $l = 8$, $w = 5$, $dl/dt = 3$, $dw/dt = -1$. $dA/dt = $ (integer)\\n\\n**",
+  "after": "{ id: 'rr5-input', type: 'input-boxes' as const, content: `**Area Rate Calculations** \ud83e\uddee\\n\\n**1)** Rectangle: $l = 8$, $w = 5$, $dl/dt = 3$, $dw/dt = -1$. $dA/dt = $ (integer)\\n\\n**"
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part7.ts",
+  "line": 10,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: '\"Sand is added at 5 ft\u00b3/min\" tells you:', options: ['$dV/dt = 5$', '$dr/dt = 5$', '$dh/dt = 5$', '$V = 5t$'], correctAnswer: 0, explanation: 'Volume rate of sand = $dV",
+  "after": "{ question: '\"Sand is added at 5 $ft^{3}/min$\" tells you:', options: ['$dV/dt = 5$', '$dr/dt = 5$', '$dh/dt = 5$', '$V = 5t$'], correctAnswer: 0, explanation: 'Volume rate of sand "
+ },
+ {
+  "file": "interactive-lessons/calcab-u-substitution-calcab-part6.ts",
+  "line": 140,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['e - 1', 'e-1', 'e^1 - 1', 'e^1-1'],",
+  "after": "acceptableAnswers: ['e - 1', 'e-1', '$e^{1}$ - 1', '$e^{1}-1$'],"
+ },
+ {
+  "file": "interactive-lessons/calcab-u-substitution-calcab-part7.ts",
+  "line": 131,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: '(1 - e^(-1))/2',",
+  "after": "correctAnswer: '$(1 - e^{-1})/2$',"
+ },
+ {
+  "file": "interactive-lessons/calcab-u-substitution-calcab-part7.ts",
+  "line": 132,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['(1 - e^(-1))/2', '(1-e^(-1))/2', '(1-1/e)/2', '(e-1)/(2e)'],",
+  "after": "acceptableAnswers: ['$(1 - e^{-1})/2$', '$(1-e^{-1})/2$', '(1-1/e)/2', '(e-1)/(2e)'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-arc-length-surface-area-calcbc-part4.ts",
+  "line": 101,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['2pisqrt5', '2\u03c0\u221a5', '2pi*sqrt(5)', '2pi sqrt5', '2pisqrt(5)'],",
+  "after": "acceptableAnswers: ['2pisqrt5', '$2\\\\pi \\\\sqrt{5}$', '$2pi\\\\cdot \\\\sqrt{5}$', '2pi sqrt5', '$2pi\\\\sqrt{5}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-arc-length-surface-area-calcbc-part7.ts",
+  "line": 102,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['0.88', '0.881', '0.8814', 'ln(1+sqrt(2))'],",
+  "after": "acceptableAnswers: ['0.88', '0.881', '0.8814', '$\\\\ln (1+\\\\sqrt{2})$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-bc-exam-strategies-calcbc-part4.ts",
+  "line": 96,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: '-sqrt(2)',",
+  "after": "correctAnswer: '$-\\\\sqrt{2}$',"
+ },
+ {
+  "file": "interactive-lessons/calcbc-bc-exam-strategies-calcbc-part4.ts",
+  "line": 97,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['-sqrt(2)', '-\u221a2', '-1.414', '-1.41'],",
+  "after": "acceptableAnswers: ['$-\\\\sqrt{2}$', '$-\\\\sqrt{2}$', '-1.414', '-1.41'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-convergence-tests-summary-calcbc-part6.ts",
+  "line": 98,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['1/e', '0.368', '0.37', 'e^(-1)', 'e^{-1}'],",
+  "after": "acceptableAnswers: ['1/e', '0.368', '0.37', '$e^{-1}$', '$e^{-1}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-differential-equations-bc-calcbc-part1.ts",
+  "line": 139,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['1.353', '1.354', '10e^{-2}', '10/e^2'],",
+  "after": "acceptableAnswers: ['1.353', '1.354', '$10e^{-2}$', '$10/e^{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-differential-equations-bc-calcbc-part6.ts",
+  "line": 77,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['40.17', '40.18', '2e^3'],",
+  "after": "acceptableAnswers: ['40.17', '40.18', '$2e^{3}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-differential-equations-bc-calcbc-part7.ts",
+  "line": 101,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['0.147', '0.146', '0.1465', '8e^{-4}'],",
+  "after": "acceptableAnswers: ['0.147', '0.146', '0.1465', '$8e^{-4}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-infinite-series-calcbc-part1.ts",
+  "line": 108,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['0.37', '0.368', '1/e', 'e^{-1}'],",
+  "after": "acceptableAnswers: ['0.37', '0.368', '1/e', '$e^{-1}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-lhopitals-advanced-calcbc-part2.ts",
+  "line": 125,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['1', '1.0', 'e^0'],",
+  "after": "acceptableAnswers: ['1', '1.0', '$e^{0}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-parametric-curves-calculus-calcbc-part5.ts",
+  "line": 109,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: 'sqrt(1+r^2/l^2)',",
+  "after": "correctAnswer: '$\\\\sqrt{1+r^{2}/l^{2}}$',"
+ },
+ {
+  "file": "interactive-lessons/calcbc-parametric-curves-calculus-calcbc-part5.ts",
+  "line": 110,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['sqrt(1+r^2/l^2)', '1'],",
+  "after": "acceptableAnswers: ['$\\\\sqrt{1+r^{2}/l^{2}}$', '1'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-review-connections-calcbc-part1.ts",
+  "line": 100,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "correctAnswer: 'e^x',",
+  "after": "correctAnswer: '$e^{x}$',"
+ },
+ {
+  "file": "interactive-lessons/calcbc-review-connections-calcbc-part1.ts",
+  "line": 101,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['e^x', 'exp(x)', 'e^(x)'],",
+  "after": "acceptableAnswers: ['$e^{x}$', 'exp(x)', '$e^{x}$'],"
+ },
+ {
+  "file": "interactive-lessons/calcbc-taylor-maclaurin-series-calcbc-part2.ts",
+  "line": 113,
+  "section_type": "input-box",
+  "has_options_nearby": true,
+  "before": "acceptableAnswers: ['7.39', '7.38', 'e^2'],",
+  "after": "acceptableAnswers: ['7.39', '7.38', '$e^{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-theories-ph-part1.ts",
+  "line": 232,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['acid', '2', 'H\u207a + OH\u207b \\\u2192 H\u2082O', '1.0 \\\u00d7 10\u207b\u00b9\u2074'],",
+  "after": "correctAnswers: ['acid', '2', '$H^{+}$ + $OH^{-}$ \\\u2192 $H_{2}O$', '1.0 \\\u00d7 $10^{-14}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-theories-ph-part2.ts",
+  "line": 210,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['base', 'NH\u2084\u207a', 'acid', 'OH\u207b'],",
+  "after": "correctAnswers: ['base', '$NH_{4}^{+}$', 'acid', '$OH^{-}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-titrations-part2.ts",
+  "line": 218,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['3 to 11', 'make the steep region steeper', 'excess OH\u207b', 'exactly 7'],",
+  "after": "correctAnswers: ['3 to 11', 'make the steep region steeper', 'excess $OH^{-}$', 'exactly 7'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-titrations-part3.ts",
+  "line": 239,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['weak acids partially ionize', 'buffer region', 'only the conjugate base A\u207b and Na\u207a', '9'],",
+  "after": "correctAnswers: ['weak acids partially ionize', 'buffer region', 'only the conjugate base $A^{-}$ and $Na^{+}$', '9'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-titrations-part4.ts",
+  "line": 221,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['two equivalence points', 'hydrolysis of A\u207b', 'excess strong base'],",
+  "after": "correctAnswers: ['two equivalence points', 'hydrolysis of $A^{-}$', 'excess strong base'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-titrations-part6.ts",
+  "line": 203,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['ICE table with K\u2090', 'Henderson-Hasselbalch', 'ICE table with K_b', 'excess OH\u207b method'],",
+  "after": "correctAnswers: ['ICE table with $K_{a}$', 'Henderson-Hasselbalch', 'ICE table with K_b', 'excess $OH^{-}$ method'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-acid-base-titrations-part7.ts",
+  "line": 193,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['equivalence point', 'A\u207b only (conjugate base)', 'the half-equivalence point', '8-10'],",
+  "after": "correctAnswers: ['equivalence point', '$A^{-}$ only (conjugate base)', 'the half-equivalence point', '8-10'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-activation-energy-arrhenius-part1.ts",
+  "line": 176,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['shorter and broader', 'e^(\u2212Ea/RT)', 'the distribution broadens to higher energies', 'stays constant (equals 1)'],",
+  "after": "correctAnswers: ['shorter and broader', '$e^{-Ea/RT}$', 'the distribution broadens to higher energies', 'stays constant (equals 1)'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-activation-energy-arrhenius-part5.ts",
+  "line": 186,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['temperatures', 'temperature', 'greater than k\u2081', 'Arrhenius equations in ln form'],",
+  "after": "correctAnswers: ['temperatures', 'temperature', 'greater than $k_{1}$', 'Arrhenius equations in ln form'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-buffer-solutions-henderson-hasselbalch-part1.ts",
+  "line": 200,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['buffer', 'weak acid', 'H\u2082CO\u2083/HCO\u2083\u207b', 'approximately equal'],",
+  "after": "correctAnswers: ['buffer', 'weak acid', '$H_{2}CO_{3}/HCO_{3}^{-}$', 'approximately equal'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-buffer-solutions-henderson-hasselbalch-part2.ts",
+  "line": 241,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['A\u207b to HA', 'greater than pK\u2090', 'one component is completely consumed'],",
+  "after": "correctAnswers: ['$A^{-}$ to HA', 'greater than $pK_{a}$', 'one component is completely consumed'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-buffer-solutions-henderson-hasselbalch-part4.ts",
+  "line": 226,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both HA and A\u207b'],",
+  "after": "correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both HA and $A^{-}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-buffer-solutions-henderson-hasselbalch-part5.ts",
+  "line": 222,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['1:1', 'it partially converts HA to A\u207b', 'more NaCH\u2083COO'],",
+  "after": "correctAnswers: ['1:1', 'it partially converts HA to $A^{-}$', 'more $NaCH_{3}COO$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-buffer-solutions-henderson-hasselbalch-part6.ts",
+  "line": 191,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['pH = pK\u2090', 'the buffer is destroyed', 'the stoichiometry table then Henderson-Hasselbalch'],",
+  "after": "correctAnswers: ['pH = $pK_{a}$', 'the buffer is destroyed', 'the stoichiometry table then Henderson-Hasselbalch'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-buffer-solutions-henderson-hasselbalch-part7.ts",
+  "line": 190,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['the K\u2090 expression', 'pK\u2090 + 1', 'exactly equal to the target pH', 'capacity'],",
+  "after": "correctAnswers: ['the $K_{a}$ expression', '$pK_{a}$ + 1', 'exactly equal to the target pH', 'capacity'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-electrolytic-cells-faraday-part3.ts",
+  "line": 240,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Br\u2082', 'H\u2082', 'Cu metal', 'O\u2082'],",
+  "after": "correctAnswers: ['$Br_{2}$', '$H_{2}$', 'Cu metal', '$O_{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-electrolytic-cells-faraday-part4.ts",
+  "line": 208,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['96,485 C/mol e\u207b', 'deposit double the mass', '2 F of charge', 'seconds'],",
+  "after": "correctAnswers: ['96,485 C/mol $e^{-}$', 'deposit double the mass', '2 F of charge', 'seconds'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-electrolytic-cells-faraday-part5.ts",
+  "line": 220,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['the plating metal', 'aqueous NaCl (brine)', 'water would be reduced instead of Al\u00b3\u207a', 'precious metals (Ag, Au, Pt)'],",
+  "after": "correctAnswers: ['the plating metal', 'aqueous NaCl (brine)', 'water would be reduced instead of $Al^{3+}$', 'precious metals (Ag, Au, Pt)'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-electrolytic-cells-faraday-part6.ts",
+  "line": 158,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['seconds', 'm = ItM/(nF)', 'charge (q = It)', 'H\u2082 and O\u2082'],",
+  "after": "correctAnswers: ['seconds', 'm = ItM/(nF)', 'charge (q = It)', '$H_{2}$ and $O_{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-enthalpy-calorimetry-part2.ts",
+  "line": 248,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['heat transferred', 'Br\u2082(l)', '3', 'the reaction pathway'],",
+  "after": "correctAnswers: ['heat transferred', '$Br_{2}(l)$', '3', 'the reaction pathway'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-part2.ts",
+  "line": 227,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['change in moles of gas', 'decrease', 'O\u2083', 'negative'],",
+  "after": "correctAnswers: ['change in moles of gas', 'decrease', '$O_{3}$', 'negative'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-v2-part4.ts",
+  "line": 154,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['zero', 'H\u2082O(g)', 'positive', 'always positive (at T > 0 K)'],",
+  "after": "correctAnswers: ['zero', '$H_{2}O(g)$', 'positive', 'always positive (at T > 0 K)'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-v3-part6.ts",
+  "line": 69,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'In Problem 3, why is \u0394S\u00b0 much more negative when H\u2082O(l) forms vs H\u2082O(g)?', options: ['Liquid water has higher entropy', 'You lose 3 mol of gas instead of 1 mol', 'The ",
+  "after": "{ question: 'In Problem 3, why is \u0394S\u00b0 much more negative when $H_{2}O(l)$ forms vs $H_{2}O(g)$?', options: ['Liquid water has higher entropy', 'You lose 3 mol of gas instead of 1 m"
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-v3-part7.ts",
+  "line": 61,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'Which has the highest standard molar entropy?', options: ['Fe(s) at 298 K', 'H\u2082O(l) at 298 K', 'H\u2082O(g) at 298 K', 'NaCl(s) at 298 K'], correctAnswer: 2, explanation: '",
+  "after": "{ question: 'Which has the highest standard molar entropy?', options: ['Fe(s) at 298 K', '$H_{2}O(l)$ at 298 K', '$H_{2}O(g)$ at 298 K', 'NaCl(s) at 298 K'], correctAnswer: 2, expl"
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-v3-part7.ts",
+  "line": 66,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{ question: 'A student says: \"An endothermic reaction can never be spontaneous.\" Is this correct?', options: ['Yes \u2014 endothermic means non-spontaneous', 'No \u2014 if \u0394S is positive eno",
+  "after": "{ question: 'A student says: \"An endothermic reaction can never be spontaneous.\" Is this correct?', options: ['Yes \u2014 endothermic means non-spontaneous', 'No \u2014 if \u0394S is positive eno"
+ },
+ {
+  "file": "interactive-lessons/chemistry-gibbs-free-energy-part7.ts",
+  "line": 125,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['720', '10^10', '0.1'],",
+  "after": "correctAnswers: ['720', '$10^{10}$', '0.1'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-integrated-rate-laws-part2.ts",
+  "line": 204,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['1 (no change)', '1/8', 's\u207b\u00b9', 'exponential decay'],",
+  "after": "correctAnswers: ['1 (no change)', '1/8', '$s^{-1}$', 'exponential decay'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-moles-molar-mass-part1.ts",
+  "line": 245,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['amount of substance', 'Avogadro\\'s number', 'the same number of', '3.011 \u00d7 10\u00b2\u00b3'],",
+  "after": "correctAnswers: ['amount of substance', 'Avogadro\\'s number', 'the same number of', '$3.011 \\\\times 10^{23}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-moles-molar-mass-part3.ts",
+  "line": 231,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['divide by M', 'multiply by N\u2090', 'two', 'doubles'],",
+  "after": "correctAnswers: ['divide by M', 'multiply by $N_{a}$', 'two', 'doubles'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-moles-molar-mass-part6.ts",
+  "line": 190,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['grams \u2192 moles \u2192 particles', '7 \u00d7 6.022 \u00d7 10\u00b2\u00b3', 'more moles of Al', '1.99 \u00d7 10\u207b\u00b2\u00b3 g'],",
+  "after": "correctAnswers: ['grams \u2192 moles \u2192 particles', '7 \u00d7 $6.022 \\\\times 10^{23}$', 'more moles of Al', '$1.99 \\\\times 10^{-23}$ g'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-nernst-equation-concentration-part4.ts",
+  "line": 206,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['> 1', 'the cell is at equilibrium', 'the same E\u00b0 corresponds to K\u00b2', 'K'],",
+  "after": "correctAnswers: ['> 1', 'the cell is at equilibrium', 'the same E\u00b0 corresponds to $K^{2}$', 'K'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-nernst-equation-concentration-part5.ts",
+  "line": 230,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['primary (non-rechargeable) battery', 'H\u2082O', 'intercalation', 'applying external voltage to reverse the reaction'],",
+  "after": "correctAnswers: ['primary (non-rechargeable) battery', '$H_{2}O$', 'intercalation', 'applying external voltage to reverse the reaction'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-net-ionic-equations-part2.ts",
+  "line": 243,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['H\u207a + NO\u2083\u207b', 'as a complete formula', 'soluble \u2014 split into NH\u2084\u207a and NO\u2083\u207b', 'H\u2082CO\u2083 (kept molecular)'],",
+  "after": "correctAnswers: ['$H^{+}$ + $NO_{3}^{-}$', 'as a complete formula', 'soluble \u2014 split into $NH_{4}^{+}$ and $NO_{3}^{-}$', '$H_{2}CO_{3}$ (kept molecular)'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-net-ionic-equations-part4.ts",
+  "line": 234,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['AgI', 'soluble', 'soluble', 'Na\u207a and NO\u2083\u207b'],",
+  "after": "correctAnswers: ['AgI', 'soluble', 'soluble', '$Na^{+}$ and $NO_{3}^{-}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-net-ionic-equations-part5.ts",
+  "line": 233,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['H\u207a + OH\u207b \u2192 H\u2082O', 'HF (molecular)', 'weak base', 'a very stable molecular compound'],",
+  "after": "correctAnswers: ['$H^{+}$ + $OH^{-}$ \u2192 $H_{2}O$', 'HF (molecular)', 'weak base', 'a very stable molecular compound'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-net-ionic-equations-part6.ts",
+  "line": 196,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['water formation', 'CO\u2082', 'NH\u2083 + H\u2082O', 'no reaction'],",
+  "after": "correctAnswers: ['water formation', '$CO_{2}$', '$NH_{3}$ + $H_{2}O$', 'no reaction'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-net-ionic-equations-part7.ts",
+  "line": 183,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['0', 'H\u207a + OH\u207b \u2192 H\u2082O', 'H\u2082CO\u2083', 'Fe(OH)\u2083'],",
+  "after": "correctAnswers: ['0', '$H^{+}$ + $OH^{-}$ \u2192 $H_{2}O$', '$H_{2}CO_{3}$', '$Fe(OH)_{3}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-oxidation-reduction-reactions-part3.ts",
+  "line": 232,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['H\u207a', 'positive', 'right (product) side', 'left (reactant) side'],",
+  "after": "correctAnswers: ['$H^{+}$', 'positive', 'right (product) side', 'left (reactant) side'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-oxidation-reduction-reactions-part4.ts",
+  "line": 214,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['identical to the acidic method', 'H\u2082O and OH\u207b', 'no H\u207a anywhere', 'basic solution'],",
+  "after": "correctAnswers: ['identical to the acidic method', '$H_{2}O$ and $OH^{-}$', 'no $H^{+}$ anywhere', 'basic solution'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-oxidation-reduction-reactions-part6.ts",
+  "line": 198,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Mn\u00b2\u207a', 'MnO\u2082', 'O\u2082', 'electrons cannot be created or destroyed'],",
+  "after": "correctAnswers: ['$Mn^{2+}$', '$MnO_{2}$', '$O_{2}$', 'electrons cannot be created or destroyed'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part1.ts",
+  "line": 193,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['stoichiometric coefficients', 'series of elementary steps', 'elementary steps', 'rate = k[A]\u00b2'],",
+  "after": "correctAnswers: ['stoichiometric coefficients', 'series of elementary steps', 'elementary steps', 'rate = k[A]$ {}^{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part2.ts",
+  "line": 201,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['intermediate', 'intermediate', '2', '2NO + 2H\u2082 \u2192 N\u2082 + 2H\u2082O'],",
+  "after": "correctAnswers: ['intermediate', 'intermediate', '2', '2NO + $2H_{2}$ \u2192 $N_{2}$ + $2H_{2}O$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part4.ts",
+  "line": 192,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['the rate-determining step', 'a pre-equilibrium produces a dissociated species', 'B reacts after the RDS', 'k\u2082 \u00d7 Keq'],",
+  "after": "correctAnswers: ['the rate-determining step', 'a pre-equilibrium produces a dissociated species', 'B reacts after the RDS', '$k_{2}$ \u00d7 Keq'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part5.ts",
+  "line": 174,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Yes', 'rate = k[H\u2082][I\u2082]', 'Yes', 'Both X and Y'],",
+  "after": "correctAnswers: ['Yes', 'rate = k[$H_{2}$][$I_{2}$]', 'Yes', 'Both X and Y'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part6.ts",
+  "line": 164,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['rate = k[H\u2082O\u2082][I\u207b]', 'rate = k[H\u2082O\u2082]', 'A only', 'catalyst'],",
+  "after": "correctAnswers: ['rate = k[$H_{2}O_{2}$][$I^{-}$]', 'rate = k[$H_{2}O_{2}$]', 'A only', 'catalyst'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-rates-and-rate-laws-part5.ts",
+  "line": 212,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['is independent of [A]\u2080', '2', 'first-order', 'is constant'],",
+  "after": "correctAnswers: ['is independent of [A]$ {}_{0}$', '2', 'first-order', 'is constant'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-rates-and-rate-laws-part6.ts",
+  "line": 212,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['1', '2', '0', 'M\u207b\u00b2s\u207b\u00b9'],",
+  "after": "correctAnswers: ['1', '2', '0', '$M^{-2}s^{-1}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-types-part2.ts",
+  "line": 259,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['one', 'F\u2082 > Cl\u2082 > Br\u2082 > I\u2082', 'double replacement', 'no reaction occurs'],",
+  "after": "correctAnswers: ['one', '$F_{2}$ > $Cl_{2}$ > $Br_{2}$ > $I_{2}$', 'double replacement', 'no reaction occurs'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-types-part3.ts",
+  "line": 249,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['oxygen', 'glucose', 'O\u2082 as a reactant with CO\u2082 and H\u2082O as products', 'increases'],",
+  "after": "correctAnswers: ['oxygen', 'glucose', '$O_{2}$ as a reactant with $CO_{2}$ and $H_{2}O$ as products', 'increases'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-types-part5.ts",
+  "line": 275,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['ion charges', 'activity series', 'H\u2082O', 'no reaction occurs'],",
+  "after": "correctAnswers: ['ion charges', 'activity series', '$H_{2}O$', 'no reaction occurs'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-types-part7.ts",
+  "line": 233,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['synthesis', 'removed because they don\\'t change', 'F\u2082 is more reactive than Cl\u2082', 'neutralization'],",
+  "after": "correctAnswers: ['synthesis', 'removed because they don\\'t change', '$F_{2}$ is more reactive than $Cl_{2}$', 'neutralization'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-solubility-ksp-part2.ts",
+  "line": 192,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "'s\u00b2',",
+  "after": "'$s^{2}$',"
+ },
+ {
+  "file": "interactive-lessons/chemistry-solubility-ksp-part2.ts",
+  "line": 193,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "'4s\u00b3',",
+  "after": "'$4s^{3}$',"
+ },
+ {
+  "file": "interactive-lessons/chemistry-solutions-solubility-part4.ts",
+  "line": 292,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['number of solute particles', 'Increase', 'CaCl\u2082 produces more particles per formula unit', 'Does not change with temperature'],",
+  "after": "correctAnswers: ['number of solute particles', 'Increase', '$CaCl_{2}$ produces more particles per formula unit', 'Does not change with temperature'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-solutions-solubility-part7.ts",
+  "line": 202,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Always soluble', 'Osmotic pressure', 'Quadruples', 'K\u207a and NO\u2083\u207b', 'Ion pairing reduces the effective i'],",
+  "after": "correctAnswers: ['Always soluble', 'Osmotic pressure', 'Quadruples', '$K^{+}$ and $NO_{3}^{-}$', 'Ion pairing reduces the effective i'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-weak-acids-bases-ka-kb-part3.ts",
+  "line": 233,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['acidic', 'negligibly weak', '[OH\u207b] from ICE table'],",
+  "after": "correctAnswers: ['acidic', 'negligibly weak', '[$OH^{-}$] from ICE table'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-weak-acids-bases-ka-kb-part5.ts",
+  "line": 203,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['increases', 'K\u2090\u2082', 'K\u2090\u2082 of H\u2082SO\u2084'],",
+  "after": "correctAnswers: ['increases', '$K_{a2}$', '$K_{a2}$ of $H_{2}SO_{4}$'],"
+ },
+ {
+  "file": "interactive-lessons/chemistry-weak-acids-bases-ka-kb-part6.ts",
+  "line": 210,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['K\u2090 of the weak acid (to find K_b of conjugate base)', 'close but slightly off \u2014 consider quadratic', 'higher pH'],",
+  "after": "correctAnswers: ['$K_{a}$ of the weak acid (to find K_b of conjugate base)', 'close but slightly off \u2014 consider quadratic', 'higher pH'],"
+ },
+ {
+  "file": "interactive-lessons/csp-algorithms-part4.ts",
+  "line": 128,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: [\"n\", \"log\u2082(n)\", \"20\"],",
+  "after": "correctAnswers: [\"n\", \"$\\\\log_{2}(n)$\", \"20\"],"
+ },
+ {
+  "file": "interactive-lessons/csp-algorithms-programming-part7.ts",
+  "line": 99,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: [\"caller\", \"n\u00b2\", \"return\"],",
+  "after": "correctAnswers: [\"caller\", \"$n^{2}$\", \"return\"],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-air-pollution.ts",
+  "line": 251,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['NO\u2093 and VOCs', 'Sunlight (UV)', 'Ground-level ozone (O\u2083)', 'Mid-afternoon'],",
+  "after": "correctAnswers: ['$NO_{x}$ and VOCs', 'Sunlight (UV)', 'Ground-level ozone $(O_{3})$', 'Mid-afternoon'],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-air-pollution.ts",
+  "line": 416,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Sulfuric acid (H\u2082SO\u2084)', 'Nitric acid (HNO\u2083)', '5.6'],",
+  "after": "correctAnswers: ['Sulfuric acid $(H_{2}SO_{4})$', 'Nitric acid $(HNO_{3})$', '5.6'],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-climate-change.ts",
+  "line": 261,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Burning fossil fuels', 'Methane (CH\u2084)', 'Nitrous oxide (N\u2082O)', 'Coal'],",
+  "after": "correctAnswers: ['Burning fossil fuels', 'Methane $(CH_{4})$', 'Nitrous oxide $(N_{2}O)$', 'Coal'],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-climate-change.ts",
+  "line": 387,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Carbon sink (removes CO\u2082)', 'Carbon source (adds CO\u2082)', 'Carbon sink (removes CO\u2082)', 'Carbon source (adds CO\u2082)'],",
+  "after": "correctAnswers: ['Carbon sink $(removes CO_{2})$', 'Carbon source $(adds CO_{2})$', 'Carbon sink $(removes CO_{2})$', 'Carbon source $(adds CO_{2})$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-geology-soil.ts",
+  "line": 722,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Cation exchange capacity (CEC)', 'Clay and humus', 'Slightly acidic to neutral (~6\u20137)', 'Lime (CaCO\u2083)'],",
+  "after": "correctAnswers: ['Cation exchange capacity (CEC)', 'Clay and humus', 'Slightly acidic to neutral (~6\u20137)', 'Lime $(CaCO_{3})$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-ozone-indoor-air.ts",
+  "line": 272,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Splits a chlorine (Cl) atom off the CFC', 'ClO + O\u2082', 'Catalyst (not used up)', 'Many thousands of ozone molecules'],",
+  "after": "correctAnswers: ['Splits a chlorine (Cl) atom off the CFC', 'ClO + $O_{2}$', 'Catalyst (not used up)', 'Many thousands of ozone molecules'],"
+ },
+ {
+  "file": "interactive-lessons/extra/apes-sustainability.ts",
+  "line": 731,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Reduce', 'Recycle', 'Linear economy', 'Methane (CH\u2084)'],",
+  "after": "correctAnswers: ['Reduce', 'Recycle', 'Linear economy', 'Methane $(CH_{4})$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/factoring-polynomials-algebra2.ts",
+  "line": 152,
+  "section_type": "input-boxes",
+  "has_options_nearby": false,
+  "before": "correctAnswers: ['3x', '5y^3', '7x'],",
+  "after": "correctAnswers: ['3x', '$5y^{3}$', '7x'],"
+ },
+ {
+  "file": "interactive-lessons/extra/fundamental-theorem-algebra.ts",
+  "line": 294,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['(x-5)(x+5)', '(x+4)(x+5)', '5x^2(x-2)'],",
+  "after": "correctAnswers: ['(x-5)(x+5)', '(x+4)(x+5)', '$5x^{2}(x-2)$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/fundamental-theorem-algebra.ts",
+  "line": 796,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['x^2-3x-10', 'x^2+4', 'x^2-14x+49'],",
+  "after": "correctAnswers: ['$x^{2}-3x-10$', '$x^{2}+4$', '$x^{2}-14x+49$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/indefinite-integrals.ts",
+  "line": 406,
+  "section_type": "input-boxes",
+  "has_options_nearby": false,
+  "before": "correctAnswers: ['x^8/8', 'x^3/3', '3/2'],",
+  "after": "correctAnswers: ['$x^{8}/8$', '$x^{3}/3$', '3/2'],"
+ },
+ {
+  "file": "interactive-lessons/extra/multiplying-polynomials-algebra1.ts",
+  "line": 108,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['28x^5', '6x^6', '6x^6'],",
+  "after": "correctAnswers: ['$28x^{5}$', '$6x^{6}$', '$6x^{6}$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/polynomial-division-algebra2.ts",
+  "line": 111,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['2x+3', '3x^2-2x+1'],",
+  "after": "correctAnswers: ['2x+3', '$3x^{2}-2x+1$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/rationalizing-techniques.ts",
+  "line": 275,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['2', '2', '3(sqrt(x)+1)'],",
+  "after": "correctAnswers: ['2', '2', '$3(\\\\sqrt{x}+1)$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/rationalizing-techniques.ts",
+  "line": 387,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['sqrt(x)+7', 'sqrt(x+9)+3'],",
+  "after": "correctAnswers: ['$\\\\sqrt{x}+7$', '$\\\\sqrt{x+9}+3$'],"
+ },
+ {
+  "file": "interactive-lessons/extra/u-substitution.ts",
+  "line": 797,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['15/4', 'e^2-1'],",
+  "after": "correctAnswers: ['15/4', '$e^{2}-1$'],"
+ },
+ {
+  "file": "interactive-lessons/grade5-volume-part1.ts",
+  "line": 82,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"Space\",\"cm\u00b3\"],",
+  "after": "correctAnswers: [\"Space\",\"$cm^{3}$\"],"
+ },
+ {
+  "file": "interactive-lessons/grade5-volume-part3.ts",
+  "line": 86,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"V = l \u00d7 w \u00d7 h\",\"s\u00b3\"],",
+  "after": "correctAnswers: [\"V = l \u00d7 w \u00d7 h\",\"$s^{3}$\"],"
+ },
+ {
+  "file": "interactive-lessons/grade5-volume-part4.ts",
+  "line": 85,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"Breaking into simpler shapes and adding volumes\",\"35 cm\u00b3\"],",
+  "after": "correctAnswers: [\"Breaking into simpler shapes and adding volumes\",\"35 $cm^{3}$\"],"
+ },
+ {
+  "file": "interactive-lessons/grade5-volume-part5.ts",
+  "line": 87,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"1,000 cm\u00b3\",\"Volume of both\"],",
+  "after": "correctAnswers: [\"1,000 $cm^{3}$\",\"Volume of both\"],"
+ },
+ {
+  "file": "interactive-lessons/grade7-geometry-part3.ts",
+  "line": 84,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"C = 2\u03c0r\",\"A = \u03c0r\u00b2\"],",
+  "after": "correctAnswers: [\"C = 2\u03c0r\",\"A = $\\\\pi r^{2}$\"],"
+ },
+ {
+  "file": "interactive-lessons/grade7-geometry-part7.ts",
+  "line": 84,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"Cylinder\",\"6s\u00b2\"],",
+  "after": "correctAnswers: [\"Cylinder\",\"$6s^{2}$\"],"
+ },
+ {
+  "file": "interactive-lessons/grades/perimeter-and-area-grade6.ts",
+  "line": 253,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['$A = l \\\\times w$', 'square units (like cm\u00b2)'],",
+  "after": "correctAnswers: ['$A = l \\\\times w$', 'square units $(like cm^{2})$'],"
+ },
+ {
+  "file": "interactive-lessons/grades/surface-area-volume.ts",
+  "line": 225,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['$V = s^3$', 'cubic units (like cm\u00b3)'],",
+  "after": "correctAnswers: ['$V = s^3$', 'cubic units $(like cm^{3})$'],"
+ },
+ {
+  "file": "interactive-lessons/macro-unemployment-inflation-part1.ts",
+  "line": 83,
+  "section_type": "multiple-choice",
+  "has_options_nearby": true,
+  "before": "{question:'If the CPI was 120 last year and 126 this year, what is the inflation rate?',options:['6.0% \u2014 calculated as the raw difference between this year\\'s CPI and last year\\'s ",
+  "after": "{question:'If the CPI was 120 last year and 126 this year, what is the inflation rate?',options:['6.0% \u2014 calculated as the raw difference between this year\\'s CPI and last year\\'s "
+ },
+ {
+  "file": "interactive-lessons/physics2-electrostatics-part3.ts",
+  "line": 152,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['5.0 \u00d7 10\u207b\u2076 C', '0.30 m', '2.0 \u00d7 10\u207b\u2077 C'],",
+  "after": "correctAnswers: ['$5.0 \\\\times 10^{-6}$ C', '0.30 m', '$2.0 \\\\times 10^{-7}$ C'],"
+ },
+ {
+  "file": "interactive-lessons/physics2-interference-part1.ts",
+  "line": 170,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', '4I\u2080'],",
+  "after": "correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', '$4I_{0}$'],"
+ },
+ {
+  "file": "interactive-lessons/physics2-magnetic-fields-part6.ts",
+  "line": 212,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['A\u00b7m\u00b2', 'parallel or antiparallel', 'commutator', '0\u00b0'],",
+  "after": "correctAnswers: ['$A\\\\cdot m^{2}$', 'parallel or antiparallel', 'commutator', '0\u00b0'],"
+ },
+ {
+  "file": "interactive-lessons/physicsc-em-gauss-law-part1.ts",
+  "line": 86,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"N\u00b7m\u00b2/C\",\"The outward area normal $\\\\\\\\hat{n}$\"],",
+  "after": "correctAnswers: [\"$N\\\\cdot m^{2}/C$\",\"The outward area normal $\\\\\\\\hat{n}$\"],"
+ },
+ {
+  "file": "interactive-lessons/prealgebra-order-of-operations-part6.ts",
+  "line": 83,
+  "section_type": "dropdown-select",
+  "has_options_nearby": false,
+  "before": "correctAnswers: [\"Parentheses to group the addition\",\"5\u00b2 = 25\"],",
+  "after": "correctAnswers: [\"Parentheses to group the addition\",\"$5^{2}$ = 25\"],"
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-functions-precalc-part2.ts",
+  "line": 148,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['-sqrt(3)/2', '-1/2', '1/4'],",
+  "after": "correctAnswers: ['$-\\\\sqrt{3}/2$', '-1/2', '1/4'],"
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-functions-precalc-part3.ts",
+  "line": 156,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['15/17', '-1/2', 'sqrt(3)/2'],",
+  "after": "correctAnswers: ['15/17', '-1/2', '$\\\\sqrt{3}/2$'],"
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-functions-precalc-part4.ts",
+  "line": 139,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['-sqrt(3)', '-13/12', '2'],",
+  "after": "correctAnswers: ['$-\\\\sqrt{3}$', '-13/12', '2'],"
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-identities-precalc-part4.ts",
+  "line": 152,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['8', 'cos', 'sqrt(3)/2'],",
+  "after": "correctAnswers: ['8', 'cos', '$\\\\sqrt{3}/2$'],"
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-identities-precalc-part7.ts",
+  "line": 153,
+  "section_type": "input-boxes",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['1', 'cos', '-sqrt(3)/3'],",
+  "after": "correctAnswers: ['1', 'cos', '$-\\\\sqrt{3}/3$'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-calculator-strategy-sat-part5.ts",
+  "line": 133,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Linear: y\u2081 ~ mx\u2081 + b', 'Exponential: y\u2081 ~ ab^(x\u2081)', 'Quadratic: y\u2081 ~ ax\u2081\u00b2 + bx\u2081 + c', 'Model fits well'],",
+  "after": "correctAnswers: ['Linear: $y_{1}$ ~ $mx_{1}$ + b', 'Exponential: $y_{1}$ ~ $ab^{x_{1}}$', 'Quadratic: $y_{1}$ ~ $ax_{1}^{2}$ + $bx_{1}$ + c', 'Model fits well'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponential-functions-sat-part1.ts",
+  "line": 141,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['25000(0.88)^t', '40000 + 2000t', '10000(1.07)^t', '600(0.5)^(t/4)'],",
+  "after": "correctAnswers: ['$25000(0.88)^{t}$', '40000 + 2000t', '$10000(1.07)^{t}$', '$600(0.5)^{t/4}$'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponents-radicals-sat-part2.ts",
+  "line": 151,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['x^(2/3)', '1/sqrt(x)', 'x^(5/6)', 'x^(3/2)'],",
+  "after": "correctAnswers: ['$x^{2/3}$', '$1/\\\\sqrt{x}$', '$x^{5/6}$', '$x^{3/2}$'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponents-radicals-sat-part3.ts",
+  "line": 145,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['3.5 \u00d7 10^5', '9.1 \u00d7 10^(-3)', '2 \u00d7 10^4', '8 \u00d7 10^9'],",
+  "after": "correctAnswers: ['$3.5 \\\\times 10^{5}$', '$9.1 \\\\times 10^{-3}$', '$2 \\\\times 10^{4}$', '$8 \\\\times 10^{9}$'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponents-radicals-sat-part4.ts",
+  "line": 148,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['2^6', '3^(-3)', '2^(3/2)', '4'],",
+  "after": "correctAnswers: ['$2^{6}$', '$3^{-3}$', '$2^{3/2}$', '4'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponents-radicals-sat-part6.ts",
+  "line": 148,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Yes \u2192 5\u221a5', 'Yes \u2192 3\u221a3', 'No \u2014 different radicands', 'Yes \u2192 \u221a2'],",
+  "after": "correctAnswers: ['Yes \u2192 $5\\\\sqrt{5}$', 'Yes \u2192 $3\\\\sqrt{3}$', 'No \u2014 different radicands', 'Yes \u2192 $\\\\sqrt{2}$'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-geometry-angles-sat-part2.ts",
+  "line": 158,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['7\u221a2', '6', '13', '1:16'],",
+  "after": "correctAnswers: ['$7\\\\sqrt{2}$', '6', '13', '1:16'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-geometry-angles-sat-part3.ts",
+  "line": 147,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['\u00bdbh', 'bh', '\u00bd(b\u2081 + b\u2082)h', 'Total \u2212 Unshaded'],",
+  "after": "correctAnswers: ['\u00bdbh', 'bh', '$\\\\tfrac{1}{2} (b_{1} + b_{2})h$', 'Total \u2212 Unshaded'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-polynomials-factoring-sat-part5.ts",
+  "line": 155,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Valid (factor and cancel)', 'Invalid (can\\'t cancel x)', 'Valid (cancel 3x)', 'Invalid (x\u00b2 + 4 doesn\\'t factor)'],",
+  "after": "correctAnswers: ['Valid (factor and cancel)', 'Invalid (can\\'t cancel x)', 'Valid (cancel 3x)', 'Invalid ($x^{2}$ + 4 doesn\\'t factor)'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-polynomials-factoring-sat-part7.ts",
+  "line": 167,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Difference of squares', 'Factor by grouping', 'Disguised quadratic (u = x\u00b3)', 'Perfect square trinomial'],",
+  "after": "correctAnswers: ['Difference of squares', 'Factor by grouping', 'Disguised quadratic (u = $x^{3}$)', 'Perfect square trinomial'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-ratios-proportions-sat-part3.ts",
+  "line": 166,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['Inverse variation', 'Direct variation', 'Inverse variation', 'Neither (it\\'s quadratic: A = s\u00b2)'],",
+  "after": "correctAnswers: ['Inverse variation', 'Direct variation', 'Inverse variation', 'Neither (it\\'s quadratic: A = $s^{2}$)'],"
+ },
+ {
+  "file": "interactive-lessons/sat-sat-ratios-proportions-sat-part5.ts",
+  "line": 163,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['k (linear)', 'k\u00b2 (area)', 'k\u00b3 (volume)', 'Does not scale (angles are equal)'],",
+  "after": "correctAnswers: ['k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)', 'Does not scale (angles are equal)'],"
+ },
+ {
+  "file": "interactive-lessons/unit-circle.ts",
+  "line": 100,
+  "section_type": "dropdown-select",
+  "has_options_nearby": true,
+  "before": "correctAnswers: ['0', '1', '\u221a2', '\u221a3', '2']",
+  "after": "correctAnswers: ['0', '1', '$\\\\sqrt{2}$', '$\\\\sqrt{3}$', '2']"
+ }
+]

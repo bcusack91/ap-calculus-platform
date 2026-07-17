@@ -106,9 +106,9 @@ Use $e = 1.6 \\times 10^{-19}$ C.
       exercise: {
         boxes: 3,
         correctAnswers: ['5', '-8e-13', 'no'],
-        hint1: 'n = |q|/e = 8.0 × 10⁻¹⁹ / 1.6 × 10⁻¹⁹ = 5.',
-        hint2: 'q = −ne = −(5 × 10⁶)(1.6 × 10⁻¹⁹) = −8.0 × 10⁻¹³ C.',
-        hint3: '2.0 × 10⁻¹⁹ / 1.6 × 10⁻¹⁹ = 1.25 — not an integer!',
+        hint1: 'n = |q|/e = $8.0 \\times 10^{-19}$ / $1.6 \\times 10^{-19}$ = 5.',
+        hint2: 'q = −ne = $-(5 \\times 10^{6})(1.6 \\times 10^{-19})$ = −$8.0 \\times 10^{-13}$ C.',
+        hint3: '$2.0 \\times 10^{-19}$ / $1.6 \\times 10^{-19}$ = 1.25 — not an integer!',
         explanation: 'Quantization means only integer multiples of e are allowed. Any non-integer result means the charge is physically impossible.'
       }
     },
@@ -146,7 +146,7 @@ Use $e = 1.6 \\times 10^{-19}$ C.
               '$+3.0 \\times 10^{-19}$ C'
             ],
             correctAnswer: 1,
-            explanation: 'q = −ne = −(3)(1.6 × 10⁻¹⁹) = −4.8 × 10⁻¹⁹ C. Negative because excess electrons.'
+            explanation: 'q = −ne = $-(3)(1.6 \\times 10^{-19})$ = −$4.8 \\times 10^{-19}$ C. Negative because excess electrons.'
           },
           {
             question: 'A physicist claims to measure a charge of $2.5e$. Is this possible?',

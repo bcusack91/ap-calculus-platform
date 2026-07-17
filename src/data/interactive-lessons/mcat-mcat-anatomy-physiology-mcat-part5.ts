@@ -27,7 +27,7 @@ Light is unusual: photoreceptors **hyperpolarize** to light and *depolarize in t
 
 $$\\text{Dark: cGMP high} \\to \\text{Na}^+ \\text{ channels OPEN} \\to \\text{depolarized} \\to \\text{glutamate released}$$
 
-- Light → photon isomerizes **11-cis-retinal** to **all-trans-retinal** → activates opsin → transducin (G-protein) → activates **phosphodiesterase** → cGMP falls → Na⁺ channels CLOSE → cell **hyperpolarizes** → less glutamate.
+- Light → photon isomerizes **11-cis-retinal** to **all-trans-retinal** → activates opsin → transducin (G-protein) → activates **phosphodiesterase** → cGMP falls → $Na^{+}$ channels CLOSE → cell **hyperpolarizes** → less glutamate.
 - Net retinal wiring: photoreceptor → bipolar cell → ganglion cell (axons form the optic nerve).
 
 ### Visual Pathway & Field Defects
@@ -52,7 +52,7 @@ Sound → Pinna → Ear canal → **Tympanic membrane** → Ossicles (**malleus 
 
 ### Hair-Cell Mechanotransduction
 
-Stereocilia bend toward the tallest → **tip links** pull open K⁺ channels → K⁺ enters (endolymph is K⁺-rich) → depolarization → Ca²⁺ influx → glutamate release. Bending the other way closes channels.
+Stereocilia bend toward the tallest → **tip links** pull open $K^{+}$ channels → $K^{+}$ enters (endolymph is $K^{+}$-rich) → depolarization → $Ca^{2+}$ influx → glutamate release. Bending the other way closes channels.
 
 ### Conductive vs. Sensorineural Hearing Loss
 
@@ -68,7 +68,7 @@ Stereocilia bend toward the tallest → **tip links** pull open K⁺ channels �
 
 ### Taste & Smell (Chemoreception)
 
-- **Taste**: 5 modalities — sweet, salty, sour, bitter, umami. Salty/sour use ion channels (Na⁺, H⁺); sweet/bitter/umami use **GPCRs**.
+- **Taste**: 5 modalities — sweet, salty, sour, bitter, umami. Salty/sour use ion channels ($Na^{+}$, $H^{+}$); sweet/bitter/umami use **GPCRs**.
 - **Smell**: olfactory receptor neurons (each expresses one GPCR type) → olfactory bulb → cortex.
 - Smell is the ONLY sense that **bypasses the thalamus**, projecting directly to the limbic system → strong emotional/memory links.`
     },
@@ -80,9 +80,9 @@ Stereocilia bend toward the tallest → **tip links** pull open K⁺ channels �
         questions: [
           {
             question: `A researcher records from an isolated vertebrate photoreceptor in complete darkness and finds it is steadily releasing glutamate. When a flash of light is delivered, the most direct sequence of events is:`,
-            options: [`cGMP-gated Na⁺ channels close, the cell hyperpolarizes, and glutamate release decreases`, `cGMP-gated Na⁺ channels open, the cell depolarizes, and glutamate release increases`, `Voltage-gated Ca²⁺ channels open, the cell depolarizes, and glutamate release increases`, `Cl⁻ channels open, the cell depolarizes, and glutamate release decreases`],
+            options: [`cGMP-gated $Na^{+}$ channels close, the cell hyperpolarizes, and glutamate release decreases`, `cGMP-gated $Na^{+}$ channels open, the cell depolarizes, and glutamate release increases`, `Voltage-gated $Ca^{2+}$ channels open, the cell depolarizes, and glutamate release increases`, `$Cl^{-}$ channels open, the cell depolarizes, and glutamate release decreases`],
             correctAnswer: 0,
-            explanation: `Photoreceptors are depolarized in the dark (high cGMP keeps Na⁺ channels open, "dark current"), continuously releasing glutamate. Light activates the opsin → transducin → phosphodiesterase cascade, which DEGRADES cGMP, closing the Na⁺ channels. The cell therefore HYPERPOLARIZES and releases LESS glutamate. Option B is the dark state, not the response to light — a classic trap because most receptors depolarize to their stimulus. Phototransduction is the textbook exception.`
+            explanation: `Photoreceptors are depolarized in the dark (high cGMP keeps $Na^{+}$ channels open, "dark current"), continuously releasing glutamate. Light activates the opsin → transducin → phosphodiesterase cascade, which DEGRADES cGMP, closing the $Na^{+}$ channels. The cell therefore HYPERPOLARIZES and releases LESS glutamate. Option B is the dark state, not the response to light — a classic trap because most receptors depolarize to their stimulus. Phototransduction is the textbook exception.`
           },
           {
             question: `A patient with a slowly growing pituitary tumor compressing the optic chiasm at the midline would most likely present with:`,
@@ -114,7 +114,7 @@ Stereocilia bend toward the tallest → **tip links** pull open K⁺ channels �
 2. Ossicles (malleus → incus → stapes) provide **impedance matching**, pushing on the oval window.
 3. Fluid pressure wave travels up the cochlea, vibrating the **basilar membrane**.
 4. 4 kHz is a relatively HIGH frequency → maximal displacement near the **base** of the cochlea (stiff, narrow region) — **tonotopy**. ✓
-5. Hair-cell stereocilia bend → tip links open K⁺ channels → depolarization → glutamate → CN VIII → A1 (temporal lobe).
+5. Hair-cell stereocilia bend → tip links open $K^{+}$ channels → depolarization → glutamate → CN VIII → A1 (temporal lobe).
 
 **MCAT note:** Damage to the cochlear BASE (e.g., noise/age-related) preferentially destroys **high-frequency** hearing first — explaining presbycusis.
 </details>
@@ -150,7 +150,7 @@ Stereocilia bend toward the tallest → **tip links** pull open K⁺ channels �
       type: 'text' as const,
       content: `### Key Takeaways — Part 5
 
-- Phototransduction is **hyperpolarizing**: light closes cGMP-gated Na⁺ channels → less glutamate.
+- Phototransduction is **hyperpolarizing**: light closes cGMP-gated $Na^{+}$ channels → less glutamate.
 - Chiasm lesion → bitemporal hemianopia (nasal fibers cross).
 - Tonotopy: cochlear base = high frequency, apex = low frequency.
 - Conductive loss → Weber to bad ear; sensorineural → Weber to good ear.

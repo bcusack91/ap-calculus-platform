@@ -100,7 +100,7 @@ $$\\underbrace{Q = 0}_{\\text{pure reactants}} \\quad \\xleftarrow{\\text{shift 
 > $$\\boxed{Q_c = \\frac{[\\text{CO}_2][\\text{H}_2]}{[\\text{CO}][\\text{H}_2\\text{O}]} = \\frac{(0.20)(0.20)}{(0.10)(0.10)} = \\frac{0.04}{0.01} = 4.0}$$
 >
 > Since $Q = 4.0 < K = 5.0$:
-> - The system shifts **right** to produce more CO₂ and H₂
+> - The system shifts **right** to produce more $CO_{2}$ and $H_{2}$
 > - $[\\text{CO}]$ and $[\\text{H}_2\\text{O}]$ will decrease
 > - $[\\text{CO}_2]$ and $[\\text{H}_2]$ will increase
       `
@@ -172,8 +172,8 @@ Current state: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0.20$ M
         correctAnswers: ['0.08', 'right', 'higher'],
         hint1: '$Q_c = \\frac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]} = \\frac{(0.20)^2}{0.50}$',
         hint2: '$Q = 0.08 < K = 0.36$, so the reaction shifts right.',
-        hint3: 'Shifting right means producing more NO₂.',
-        explanation: '1) $Q = (0.20)^2/0.50 = 0.04/0.50 = 0.08$. 2) $Q = 0.08 < K = 0.36$, so shift right (toward products). 3) Shifting right produces more NO₂, so $[\\text{NO}_2]$ increases above 0.20 M.'
+        hint3: 'Shifting right means producing more $NO_{2}$.',
+        explanation: '1) $Q = (0.20)^2/0.50 = 0.04/0.50 = 0.08$. 2) $Q = 0.08 < K = 0.36$, so shift right (toward products). 3) Shifting right produces more $NO_{2}$, so $[\\text{NO}_2]$ increases above 0.20 M.'
       }
     },
     {

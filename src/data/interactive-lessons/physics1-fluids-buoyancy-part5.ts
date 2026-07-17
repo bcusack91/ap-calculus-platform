@@ -101,11 +101,11 @@ where $V_{hull}$ is the hull's displaceable internal volume.
       content: `
 **Floating Calculations** 🧮 (g = 10, $\\rho_w = 1000$, $\\rho_{sw} = 1030$)
 
-1) A barge has a flat bottom of area $50$ m² and total mass $30{,}000$ kg. Draft depth in fresh water (m)?
+1) A barge has a flat bottom of area $50$ $m^{2}$ and total mass $30{,}000$ kg. Draft depth in fresh water (m)?
 
 2) Same barge in seawater. Draft depth (m, 4 decimal places)?
 
-3) A wooden raft (density 600 kg/m³) is shaped as a $2\\text{ m} \\times 2\\text{ m} \\times 0.30\\text{ m}$ slab. Submerged depth in water (m)?
+3) A wooden raft $(density 600 kg/m^{3})$ is shaped as a $2\\text{ m} \\times 2\\text{ m} \\times 0.30\\text{ m}$ slab. Submerged depth in water (m)?
       `,
       exercise: {
         boxes: 3,
@@ -160,7 +160,7 @@ where $V_{hull}$ is the hull's displaceable internal volume.
       exercise: {
         questions: [
           {
-            question: 'A 80-kg boat has a flat hull of area 4.0 m². Cargo of 1200 kg is loaded. Submerged depth in fresh water (g = 10)?',
+            question: 'A 80-kg boat has a flat hull of area 4.0 $m^{2}$. Cargo of 1200 kg is loaded. Submerged depth in fresh water (g = 10)?',
             options: [
               '0.020 m',
               '0.30 m',
@@ -171,7 +171,7 @@ where $V_{hull}$ is the hull's displaceable internal volume.
             explanation: 'Total mass = 1280 kg. $d = 1280/(1000 \\cdot 4.0) = 0.32$ m.'
           },
           {
-            question: 'A wooden raft of volume 1.0 m³ and density 700 kg/m³ floats in fresh water. How much additional cargo (in kg) can be loaded before the raft is fully submerged?',
+            question: 'A wooden raft of volume 1.0 $m^{3}$ and density 700 $kg/m^{3}$ floats in fresh water. How much additional cargo (in kg) can be loaded before the raft is fully submerged?',
             options: [
               '70 kg',
               '300 kg',
@@ -179,7 +179,7 @@ where $V_{hull}$ is the hull's displaceable internal volume.
               '1000 kg'
             ],
             correctAnswer: 1,
-            explanation: 'Max $V_{sub} = 1.0$ m³ ⇒ max total mass = 1000 kg. Raft mass = 700 kg. Cargo allowance = 1000 − 700 = 300 kg.'
+            explanation: 'Max $V_{sub} = 1.0$ $m^{3}$ ⇒ max total mass = 1000 kg. Raft mass = 700 kg. Cargo allowance = 1000 − 700 = 300 kg.'
           }
         ]
       }

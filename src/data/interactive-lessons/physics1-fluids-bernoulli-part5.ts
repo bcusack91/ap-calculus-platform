@@ -105,7 +105,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
 
 2) An airfoil has $v_{top} = 80$ m/s, $v_{bot} = 60$ m/s. Pressure difference $\\Delta P = P_{bot} - P_{top}$ (Pa)?
 
-3) Wing area = 12 m². Lift force using the $\\Delta P$ from Q2 (N)?
+3) Wing area = 12 $m^{2}$. Lift force using the $\\Delta P$ from Q2 (N)?
       `,
       exercise: {
         boxes: 3,
@@ -160,7 +160,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
       exercise: {
         questions: [
           {
-            question: 'An airfoil with surface area $A = 10$ m² has air speeds $v_{top} = 100$ m/s and $v_{bot} = 90$ m/s ($\\rho_{air} = 1.2$). Approximate lift force?',
+            question: 'An airfoil with surface area $A = 10$ $m^{2}$ has air speeds $v_{top} = 100$ m/s and $v_{bot} = 90$ m/s ($\\rho_{air} = 1.2$). Approximate lift force?',
             options: [
               '$570$ N',
               '$1140$ N',
@@ -171,7 +171,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             explanation: '$\\Delta P = \\tfrac{1}{2}(1.2)(10000 - 8100) = 0.6(1900) = 1140$ Pa. $F = 1140 \\times 10 = 11{,}400$ N.'
           },
           {
-            question: 'A Pitot tube on a small plane shows $P_{stag} - P_{static} = 1500$ Pa. The airspeed ($\\rho_{air} = 1.2$ kg/m³)?',
+            question: 'A Pitot tube on a small plane shows $P_{stag} - P_{static} = 1500$ Pa. The airspeed ($\\rho_{air} = 1.2$ $kg/m^{3}$)?',
             options: [
               '$25$ m/s',
               '$50$ m/s',

@@ -28,9 +28,9 @@ Archimedes (~250 BC) realized that the buoyant force equals the weight of the fl
 
 $$\\boxed{F_b = \\rho_{fluid}\\, g\\, V_{disp}}$$
 
-- $\\rho_{fluid}$: density of the SURROUNDING fluid (kg/m³)
-- $V_{disp}$: volume of fluid displaced (m³)
-- $g = 9.8$ m/s² (or 10 in many AP problems)
+- $\\rho_{fluid}$: density of the SURROUNDING fluid $(kg/m^{3})$
+- $V_{disp}$: volume of fluid displaced $(m^{3})$
+- $g = 9.8$ $m/s^{2}$ (or 10 in many AP problems)
 
 ### The Three Scenarios
 
@@ -45,8 +45,8 @@ $$\\boxed{F_b = \\rho_{fluid}\\, g\\, V_{disp}}$$
 If only half a block is underwater, only that half displaces water. The portion above the surface displaces **air**, which contributes nearly nothing to buoyancy (very small $\\rho_{air}$).
 
 ### Quick Numerical Anchor
-- 1 m³ of water weighs ~10,000 N (using $g \\approx 10$, $\\rho = 1000$).
-- So 1 m³ submerged in water → buoyant force ~10,000 N.
+- 1 $m^{3}$ of water weighs ~10,000 N (using $g \\approx 10$, $\\rho = 1000$).
+- So 1 $m^{3}$ submerged in water → buoyant force ~10,000 N.
       `
     },
     {
@@ -69,26 +69,26 @@ If only half a block is underwater, only that half displaces water. The portion 
             explanation: '$F_b = W_{displaced\\ fluid} = \\rho_{fluid} g V_{disp}$.'
           },
           {
-            question: 'A block of volume 0.05 m³ is fully submerged in water. Its $V_{disp}$ is:',
+            question: 'A block of volume 0.05 $m^{3}$ is fully submerged in water. Its $V_{disp}$ is:',
             options: [
-              'Less than 0.05 m³',
-              '0.05 m³',
-              'More than 0.05 m³',
+              'Less than 0.05 $m^{3}$',
+              '0.05 $m^{3}$',
+              'More than 0.05 $m^{3}$',
               'Depends on weight'
             ],
             correctAnswer: 1,
             explanation: 'Fully submerged → $V_{disp} = V_{obj}$.'
           },
           {
-            question: 'A wooden block of volume 0.10 m³ floats with 30% submerged. $V_{disp}$ equals:',
+            question: 'A wooden block of volume 0.10 $m^{3}$ floats with 30% submerged. $V_{disp}$ equals:',
             options: [
-              '0.030 m³',
-              '0.070 m³',
-              '0.10 m³',
-              '0.13 m³'
+              '0.030 $m^{3}$',
+              '0.070 $m^{3}$',
+              '0.10 $m^{3}$',
+              '0.13 $m^{3}$'
             ],
             correctAnswer: 0,
-            explanation: 'Only the submerged 30% displaces water: $V_{disp} = 0.30 \\times 0.10 = 0.030$ m³.'
+            explanation: 'Only the submerged 30% displaces water: $V_{disp} = 0.30 \\times 0.10 = 0.030$ $m^{3}$.'
           }
         ]
       }
@@ -99,11 +99,11 @@ If only half a block is underwater, only that half displaces water. The portion 
       content: `
 **Archimedes Calculations** 🧮 (g = 10, $\\rho_w = 1000$, $\\rho_{sw} = 1030$)
 
-1) A 0.30 m³ object is fully submerged in fresh water. Buoyant force (N)?
+1) A 0.30 $m^{3}$ object is fully submerged in fresh water. Buoyant force (N)?
 
 2) Same object, this time fully submerged in seawater. Buoyant force (N)?
 
-3) A boat displaces 8.0 m³ of water when floating. Its weight (N)?
+3) A boat displaces 8.0 $m^{3}$ of water when floating. Its weight (N)?
       `,
       exercise: {
         boxes: 3,
@@ -158,7 +158,7 @@ If only half a block is underwater, only that half displaces water. The portion 
       exercise: {
         questions: [
           {
-            question: 'A fully submerged 5.0-kg object displaces $2.0\\times10^{-3}$ m³ of water. Buoyant force on it (g = 10) is:',
+            question: 'A fully submerged 5.0-kg object displaces $2.0\\times10^{-3}$ $m^{3}$ of water. Buoyant force on it (g = 10) is:',
             options: [
               '0.20 N',
               '20 N',
@@ -171,13 +171,13 @@ If only half a block is underwater, only that half displaces water. The portion 
           {
             question: 'A floating boat with a total weight of 12,000 N displaces what volume of fresh water? (g = 10)',
             options: [
-              '0.12 m³',
-              '1.2 m³',
-              '12 m³',
-              '120 m³'
+              '0.12 $m^{3}$',
+              '1.2 $m^{3}$',
+              '12 $m^{3}$',
+              '120 $m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Floating ⇒ $W = F_b = \\rho g V_{disp}$. $V_{disp} = 12000/(1000 \\cdot 10) = 1.2$ m³.'
+            explanation: 'Floating ⇒ $W = F_b = \\rho g V_{disp}$. $V_{disp} = 12000/(1000 \\cdot 10) = 1.2$ $m^{3}$.'
           }
         ]
       }

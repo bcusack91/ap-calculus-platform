@@ -16,7 +16,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'The SI unit of magnetic field strength is:',
     options: ['Coulomb', 'Gauss', 'Tesla', 'Weber'],
     correctIndex: 2,
-    explanation: 'The SI unit is the tesla (T). $1$ T $= 1$ kg/(A·s²). The gauss is a CGS unit ($1$ T $= 10^4$ G).',
+    explanation: 'The SI unit is the tesla (T). $1$ T $= 1$ $kg/(A\\cdot s^{2})$. The gauss is a CGS unit ($1$ T $= 10^4$ G).',
     partNumber: 1,
     partTitle: 'Magnetic Field Sources',
   },

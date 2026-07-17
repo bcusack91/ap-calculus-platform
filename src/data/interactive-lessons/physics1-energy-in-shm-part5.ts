@@ -186,7 +186,7 @@ A damped oscillator starts with amplitude $A_0 = 0.20$ m and loses 10% of its en
           },
           {
             label: 'The total energy of an SHM system is proportional to:',
-            options: ['amplitude²', 'amplitude', '1/amplitude', '1/amplitude²'],
+            options: ['amplitude$ {}^{2}$', 'amplitude', '1/amplitude', '$1/amplitude^{2}$'],
             correctIndex: 0,
             explanation: 'Energy is proportional to amplitude squared: $E = \\frac{1}{2}kA^2$. So if $A$ halves, $E$ drops to one quarter.'
           }

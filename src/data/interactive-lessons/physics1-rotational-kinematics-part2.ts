@@ -57,7 +57,7 @@ These equations are valid only when $\\alpha$ is **constant** (uniform angular a
 A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
 
 - $\\omega_0 = 0$, $\\omega = 50$ rad/s, $t = 10$ s
-- $\\alpha = \\frac{\\omega - \\omega_0}{t} = \\frac{50}{10} = 5$ rad/s²
+- $\\alpha = \\frac{\\omega - \\omega_0}{t} = \\frac{50}{10} = 5$ $rad/s^{2}$
 - $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2 = 0 + \\frac{1}{2}(5)(100) = 250$ rad
 - In revolutions: $250/(2\\pi) \\approx 39.8$ revolutions
       `
@@ -71,7 +71,7 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
       exercise: {
         questions: [
           {
-            question: 'A wheel starts at rest and accelerates at $2$ rad/s² for $6$ seconds. Its final angular velocity is:',
+            question: 'A wheel starts at rest and accelerates at $2$ $rad/s^{2}$ for $6$ seconds. Its final angular velocity is:',
             options: [
               '3 rad/s',
               '6 rad/s',
@@ -95,13 +95,13 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
           {
             question: 'A flywheel decelerates from $100$ rad/s to rest over $200$ rad. Its angular acceleration is:',
             options: [
-              '$-25$ rad/s²',
-              '$-0.5$ rad/s²',
-              '$-50$ rad/s²',
-              '$-100$ rad/s²'
+              '$-25$ $rad/s^{2}$',
+              '$-0.5$ $rad/s^{2}$',
+              '$-50$ $rad/s^{2}$',
+              '$-100$ $rad/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$: $0 = 100^2 + 2\\alpha(200)$. $-10000 = 400\\alpha$. $\\alpha = -25$ rad/s².'
+            explanation: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$: $0 = 100^2 + 2\\alpha(200)$. $-10000 = 400\\alpha$. $\\alpha = -25$ $rad/s^{2}$.'
           }
         ]
       }
@@ -112,9 +112,9 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
       content: `
 **Rotational Kinematics Calculations** 🧮
 
-1) A disk starts from rest and accelerates at $3$ rad/s². How many radians does it rotate in $4$ seconds?
+1) A disk starts from rest and accelerates at $3$ $rad/s^{2}$. How many radians does it rotate in $4$ seconds?
 
-2) A wheel spinning at $40$ rad/s decelerates at $-5$ rad/s². How long (in seconds) until it stops?
+2) A wheel spinning at $40$ rad/s decelerates at $-5$ $rad/s^{2}$. How long (in seconds) until it stops?
 
 3) A turbine accelerates from $10$ rad/s to $50$ rad/s over $8$ seconds. How many revolutions does it make? (Round to 3 significant figures)
       `,
@@ -137,12 +137,12 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
         dropdowns: [
           {
             label: 'When time is unknown but you know initial and final angular velocity and angle, which equation should you use?',
-            options: ['ω = ω₀ + αt', 'θ = ω₀t + ½αt²', 'ω² = ω₀² + 2αθ', 'θ = ½(ω₀ + ω)t'],
+            options: ['ω = $\\omega_{0}$ + αt', 'θ = $\\omega_{0}t$ + $\\tfrac{1}{2} \\alpha t^{2}$', '$\\omega^{2}$ = $\\omega_{0}^{2}$ + 2αθ', 'θ = $\\tfrac{1}{2} (\\omega_{0} + \\omega )t$'],
             correctIndex: 2,
             explanation: 'When time is not given and you have $\\omega_0$, $\\omega$, and $\\theta$ (or $\\alpha$), use $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$.'
           },
           {
-            label: 'The equation ω = ω₀ + αt does not involve which variable?',
+            label: 'The equation ω = $\\omega_{0}$ + αt does not involve which variable?',
             options: ['angular displacement', 'final angular velocity', 'angular acceleration', 'time'],
             correctIndex: 0,
             explanation: '$\\omega = \\omega_0 + \\alpha t$ does not involve angular displacement $\\theta$. Use this when $\\theta$ is not needed or given.'
@@ -167,13 +167,13 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
           {
             question: 'A wheel makes 10 revolutions while accelerating from rest to $20$ rad/s. The angular acceleration is closest to:',
             options: [
-              '$1.6$ rad/s²',
-              '$3.2$ rad/s²',
-              '$6.4$ rad/s²',
-              '$10$ rad/s²'
+              '$1.6$ $rad/s^{2}$',
+              '$3.2$ $rad/s^{2}$',
+              '$6.4$ $rad/s^{2}$',
+              '$10$ $rad/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\theta = 10 \\times 2\\pi = 20\\pi$ rad. $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$: $400 = 0 + 2\\alpha(20\\pi)$. $\\alpha = 400/(40\\pi) = 10/\\pi \\approx 3.18 \\approx 3.2$ rad/s².'
+            explanation: '$\\theta = 10 \\times 2\\pi = 20\\pi$ rad. $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$: $400 = 0 + 2\\alpha(20\\pi)$. $\\alpha = 400/(40\\pi) = 10/\\pi \\approx 3.18 \\approx 3.2$ $rad/s^{2}$.'
           },
           {
             question: 'A centrifuge decelerates uniformly from $200$ rad/s to $50$ rad/s in $15$ seconds. The total angle rotated is:',

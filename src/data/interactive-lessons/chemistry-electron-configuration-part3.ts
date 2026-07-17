@@ -73,7 +73,7 @@ Let's build electron configurations from scratch, starting simple and working up
 |------|----------|-----------------|---------------|
 | 1 | 1s | 1 | 1 ✓ |
 
-**Configuration: 1s¹**
+**Configuration: $1s^{1}$**
 
 Only one electron — it goes into the lowest energy subshell, 1s.`
     },
@@ -90,7 +90,7 @@ Only one electron — it goes into the lowest energy subshell, 1s.`
 | 2 | 2s | 2 | 4 |
 | 3 | 2p | 2 | 6 ✓ |
 
-**Configuration: 1s² 2s² 2p²**
+**Configuration: $1s^{2}$ $2s^{2}$ $2p^{2}$**
 
 By Hund's rule, the two 2p electrons occupy **two separate** p orbitals with parallel spins — they don't pair up in the same orbital.`
     },
@@ -108,7 +108,7 @@ By Hund's rule, the two 2p electrons occupy **two separate** p orbitals with par
 | 3 | 2p | 6 | 10 |
 | 4 | 3s | 1 | 11 ✓ |
 
-**Configuration: 1s² 2s² 2p⁶ 3s¹**
+**Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$**
 
 The first 10 electrons fill the n = 1 and n = 2 levels completely. The 11th electron starts a new shell.`
     },
@@ -129,9 +129,9 @@ The first 10 electrons fill the n = 1 and n = 2 levels completely. The 11th elec
 | 6 | 4s | 2 | 20 |
 | 7 | 3d | 6 | 26 ✓ |
 
-**Configuration: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶**
+**Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{6}$**
 
-Notice: **4s fills before 3d** in the Aufbau order, so 4s² appears before 3d⁶.
+Notice: **4s fills before 3d** in the Aufbau order, so $4s^{2}$ appears before $3d^{6}$.
 
 > 💡 **Tip:** Always verify your total by adding the superscripts:
 > 2 + 2 + 6 + 2 + 6 + 2 + 6 = 26 ✓`
@@ -141,7 +141,7 @@ Notice: **4s fills before 3d** in the Aufbau order, so 4s² appears before 3d⁶
       type: 'multiple-choice' as const,
       content: `### Identify the Element
 
-Which element has the electron configuration **1s² 2s² 2p⁶ 3s² 3p⁴**?`,
+Which element has the electron configuration **$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{4}$**?`,
       exercise: {
         questions: [
           {
@@ -164,12 +164,12 @@ Write the full electron configuration for the following elements (e.g., 1s2 2s2 
           {
             label: 'Nitrogen (N, Z = 7):',
             correctAnswer: '1s2 2s2 2p3',
-            explanation: 'Nitrogen has 7 electrons. Fill in order: 1s² (2), 2s² (4), 2p³ (7). Total = 7 ✓. By Hund\'s rule, the three 2p electrons each occupy a separate orbital with parallel spins.'
+            explanation: 'Nitrogen has 7 electrons. Fill in order: $1s^{2}$ (2), $2s^{2}$ (4), $2p^{3}$ (7). Total = 7 ✓. By Hund\'s rule, the three 2p electrons each occupy a separate orbital with parallel spins.'
           },
           {
             label: 'Argon (Ar, Z = 18):',
             correctAnswer: '1s2 2s2 2p6 3s2 3p6',
-            explanation: 'Argon has 18 electrons: 1s² 2s² 2p⁶ 3s² 3p⁶. Total: 2 + 2 + 6 + 2 + 6 = 18 ✓. Argon completes the third period and is a noble gas.'
+            explanation: 'Argon has 18 electrons: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$. Total: 2 + 2 + 6 + 2 + 6 = 18 ✓. Argon completes the third period and is a noble gas.'
           }
         ]
       }
@@ -185,12 +185,12 @@ Write the full electron configuration. Remember: 4s fills before 3d!`,
           {
             label: 'Calcium (Ca, Z = 20):',
             correctAnswer: '1s2 2s2 2p6 3s2 3p6 4s2',
-            explanation: 'Calcium has 20 electrons. After filling through 3p⁶ (18 electrons), the next 2 go into 4s: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s². Total = 20 ✓.'
+            explanation: 'Calcium has 20 electrons. After filling through $3p^{6}$ (18 electrons), the next 2 go into 4s: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$. Total = 20 ✓.'
           },
           {
             label: 'Zinc (Zn, Z = 30):',
             correctAnswer: '1s2 2s2 2p6 3s2 3p6 4s2 3d10',
-            explanation: 'Zinc has 30 electrons. After 4s² (20 electrons), the 3d subshell fills completely: 3d¹⁰ (30). Configuration: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰. Total = 30 ✓.'
+            explanation: 'Zinc has 30 electrons. After $4s^{2}$ (20 electrons), the 3d subshell fills completely: $3d^{10}$ (30). Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$. Total = 30 ✓.'
           }
         ]
       }
@@ -206,13 +206,13 @@ Which of the following electron configurations is INCORRECT?`,
           {
             question: 'Select the incorrect configuration:',
             options: [
-              'Li: 1s² 2s¹',
-              'O: 1s² 2s² 2p⁴',
-              'Mg: 1s² 2s² 2p⁶ 3s²',
-              'K: 1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹'
+              'Li: $1s^{2}$ $2s^{1}$',
+              'O: $1s^{2}$ $2s^{2}$ $2p^{4}$',
+              'Mg: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$',
+              'K: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $3d^{1}$'
             ],
             correctAnswer: 3,
-            explanation: 'Potassium (K, Z = 19) should be 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹, not 3d¹. The 4s subshell is lower in energy than 3d and fills first. The 19th electron goes into 4s, not 3d.'
+            explanation: 'Potassium (K, Z = 19) should be $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{1}$, not $3d^{1}$. The 4s subshell is lower in energy than 3d and fills first. The 19th electron goes into 4s, not 3d.'
           }
         ]
       }
@@ -247,7 +247,7 @@ Which of the following electron configurations is INCORRECT?`,
 
 In **Part 4**, you'll learn **noble gas shorthand notation** — a way to simplify long configurations like:
 
-1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ → **[Ar] 4s² 3d⁶**
+$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{6}$ → **[Ar] $4s^{2}$ $3d^{6}$**
 
 This will save you time on the AP exam and make it easier to focus on the valence electrons that matter most for chemistry.`
     }

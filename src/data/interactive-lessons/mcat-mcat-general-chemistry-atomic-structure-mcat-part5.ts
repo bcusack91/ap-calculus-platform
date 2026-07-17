@@ -51,7 +51,7 @@ $$E_n = -\\frac{13.6\\text{ eV}}{n^2}$$
               `Sulfur (S, $Z=16$)`
             ],
             correctAnswer: 0,
-            explanation: `Total electrons $= 2+6+2+2 = 12$. The subshells from lowest to highest BE are: $3s$ (2 e⁻), $2p$ (6 e⁻), $2s$ (2 e⁻), $1s$ (2 e⁻). Configuration: $1s^2 2s^2 2p^6 3s^2 = \\text{Mg}$ ($Z=12$).`
+            explanation: `Total electrons $= 2+6+2+2 = 12$. The subshells from lowest to highest BE are: $3s$ $(2 e^{-})$, $2p$ $(6 e^{-})$, $2s$ $(2 e^{-})$, $1s$ $(2 e^{-})$. Configuration: $1s^2 2s^2 2p^6 3s^2 = \\text{Mg}$ ($Z=12$).`
           },
           {
             question: `Element X has a first ionization energy of 900 kJ/mol and a second ionization energy of 1{,}760 kJ/mol. Its third ionization energy is 14{,}850 kJ/mol. In which group is X?`,

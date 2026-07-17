@@ -124,7 +124,7 @@ This is the simplest case. When Step 1 is slow, the rate law comes directly from
 
 $$\\boxed{\\text{Rate} = k_1[\\text{NO}_2][\\text{F}_2]}$$
 
-This is a bimolecular step, so exponents come from stoichiometry. The rate law is **first order in NO₂ and first order in F₂** — overall second order.
+This is a bimolecular step, so exponents come from stoichiometry. The rate law is **first order in $NO_{2}$ and first order in $F_{2}$** — overall second order.
 
 
 ---
@@ -187,15 +187,15 @@ Mechanism:
 
 **2)** Express $[\\text{N}_2\\text{O}_2]$ in terms of $[\\text{NO}]$ using $K_{eq}$. What power of $[\\text{NO}]$ appears? (enter a number)
 
-**3)** The final rate law is rate = k[NO]ⁿ[O₂]ᵐ. What are n and m? (enter as: n,m)
+**3)** The final rate law is rate = k[NO]$ {}^{n}$[$O_{2}$]$ {}^{m}$. What are n and m? (enter as: n,m)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['N2O2', '2', '2,1'],
-        hint1: 'Rate = k₂[N₂O₂][O₂]. N₂O₂ is the intermediate (produced in Step 1, consumed in Step 2).',
-        hint2: 'Keq = [N₂O₂]/[NO]². So [N₂O₂] = Keq[NO]². Power of [NO] is 2.',
-        hint3: 'Rate = k₂Keq[NO]²[O₂] = k_obs[NO]²[O₂]. So n = 2, m = 1.',
-        explanation: '1) N₂O₂ is the intermediate. 2) Keq = [N₂O₂]/[NO]² → [N₂O₂] = Keq[NO]². 3) Rate = k₂Keq[NO]²[O₂], so n = 2, m = 1. Overall third order.'
+        hint1: 'Rate = $k_{2}$[$N_{2}O_{2}$][$O_{2}$]. $N_{2}O_{2}$ is the intermediate (produced in Step 1, consumed in Step 2).',
+        hint2: 'Keq = [$N_{2}O_{2}$]/[NO]$ {}^{2}$. So [$N_{2}O_{2}$] = Keq[NO]$ {}^{2}$. Power of [NO] is 2.',
+        hint3: 'Rate = $k_{2}Keq$[NO]$ {}^{2}$[$O_{2}$] = k_obs[NO]$ {}^{2}$[$O_{2}$]. So n = 2, m = 1.',
+        explanation: '1) $N_{2}O_{2}$ is the intermediate. 2) Keq = [$N_{2}O_{2}$]/[NO]$ {}^{2}$ → [$N_{2}O_{2}$] = Keq[NO]$ {}^{2}$. 3) Rate = $k_{2}Keq$[NO]$ {}^{2}$[$O_{2}$], so n = 2, m = 1. Overall third order.'
       }
     },
     {
@@ -247,7 +247,7 @@ Mechanism:
               'rate = k[A][B][C]'
             ],
             correctAnswer: 2,
-            explanation: 'Step 1 is slow (RDS). It is unimolecular: A → B. Rate = k₁[A]. No need for pre-equilibrium since the slow step is first.'
+            explanation: 'Step 1 is slow (RDS). It is unimolecular: A → B. Rate = $k_{1}$[A]. No need for pre-equilibrium since the slow step is first.'
           },
           {
             question: 'Mechanism:\nStep 1: A + B ⇌ C (fast, reversible)\nStep 2: C → D (slow)\nThe rate law is:',
@@ -258,7 +258,7 @@ Mechanism:
               'rate = k[A][B][C]'
             ],
             correctAnswer: 1,
-            explanation: 'Step 2 (slow): rate = k₂[C]. But C is an intermediate. From equilibrium: [C] = Keq[A][B]. Substituting: rate = k₂Keq[A][B] = k_obs[A][B].'
+            explanation: 'Step 2 (slow): rate = $k_{2}$[C]. But C is an intermediate. From equilibrium: [C] = Keq[A][B]. Substituting: rate = $k_{2}Keq$[A][B] = k_obs[A][B].'
           }
         ]
       }

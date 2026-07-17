@@ -174,7 +174,7 @@ Bernoulli tells you HOW the pressure responds (energy).
             explanation: '$\\Delta P = \\tfrac{1}{2}(1000)(9 - 81) = -36$ kPa. $P_2 = 164$ kPa.'
           },
           {
-            question: 'Air ($\\rho = 1.2$ kg/m³) blows past one face of a building at 30 m/s; on the leeward face the air is essentially still. The pressure difference (windward minus leeward face) at the same height is approximately:',
+            question: 'Air ($\\rho = 1.2$ $kg/m^{3}$) blows past one face of a building at 30 m/s; on the leeward face the air is essentially still. The pressure difference (windward minus leeward face) at the same height is approximately:',
             options: [
               '$+540$ Pa',
               '$-540$ Pa',

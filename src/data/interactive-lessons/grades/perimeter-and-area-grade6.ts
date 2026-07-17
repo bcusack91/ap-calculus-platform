@@ -58,21 +58,21 @@ Because perimeter is a **length**, we measure it in **linear units** like cm, m,
         type: 'text',
         content: `## Area: The Space Inside 🟦
 
-**Area** is the amount of space **inside** a shape. We measure it in **square units** (like cm² or ft²) because we are counting how many little squares fit inside.
+**Area** is the amount of space **inside** a shape. We measure it in **square units** (like $cm^{2}$ or $ft^{2}$) because we are counting how many little squares fit inside.
 
 **Rectangle** — multiply length by width:
 
 $$A = l \\times w$$
 
 **Example:** A rectangle that is $8$ cm long and $3$ cm wide has
-- $A = 8 \\times 3 = 24$ cm² ✓ (that's $24$ little $1$-cm squares inside!)
+- $A = 8 \\times 3 = 24$ $cm^{2}$ ✓ (that's $24$ little $1$-cm squares inside!)
 
 **Square** — since all sides are equal, multiply a side by itself:
 
 $$A = s \\times s = s^2$$
 
 **Example:** A square with side $5$ in has
-- $A = 5^2 = 25$ in² ✓
+- $A = 5^2 = 25$ $in^{2}$ ✓
 
 **Triangle** — a triangle takes up exactly **half** of a rectangle with the same base and height:
 
@@ -80,7 +80,7 @@ $$A = \\frac{1}{2}bh$$
 
 where $b$ is the **base** and $h$ is the **height**.
 
-> **Watch the units!** Perimeter uses plain units (cm). Area uses **square** units (cm²).`
+> **Watch the units!** Perimeter uses plain units (cm). Area uses **square** units $(cm^{2})$.`
       },
       {
         id: 'p1-check',
@@ -142,9 +142,9 @@ Same rectangle ($l = 9$ m, $w = 4$ m). Find the area.
 
 - Formula: $A = l \\times w$
 - Plug in: $A = 9 \\times 4$
-- Compute: $A = 36$ m² ✓
+- Compute: $A = 36$ $m^{2}$ ✓
 
-Notice how the **same shape** gives a perimeter of $26$ m but an area of $36$ m² — different ideas, different units!`
+Notice how the **same shape** gives a perimeter of $26$ m but an area of $36$ $m^{2}$ — different ideas, different units!`
       },
       {
         id: 'p2-worked-tri',
@@ -156,7 +156,7 @@ Notice how the **same shape** gives a perimeter of $26$ m but an area of $36$ m�
 A square has a side length of $7$ ft. Find both the perimeter and the area.
 
 - Perimeter: $P = 4s = 4 \\times 7 = 28$ ft ✓
-- Area: $A = s^2 = 7 \\times 7 = 49$ ft² ✓
+- Area: $A = s^2 = 7 \\times 7 = 49$ $ft^{2}$ ✓
 
 ---
 
@@ -167,7 +167,7 @@ A triangle has a base of $b = 10$ cm and a height of $h = 6$ cm. Find the area.
 - Formula: $A = \\frac{1}{2}bh$
 - Plug in: $A = \\frac{1}{2} \\times 10 \\times 6$
 - Compute the easy way: first $10 \\times 6 = 60$, then half of that is $\\frac{1}{2} \\times 60 = 30$
-- So $A = 30$ cm² ✓
+- So $A = 30$ $cm^{2}$ ✓
 
 > **Tip for triangles:** multiply the base and height first, *then* take half. It keeps the numbers simple!
 
@@ -181,14 +181,14 @@ Now you try a few in the boxes below.`
 A rectangle is $\\textbf{12}$ cm long and $\\textbf{5}$ cm wide. Use $P = 2(l + w)$ and $A = l \\times w$.
 
 **Box 1:** The **perimeter** in cm
-**Box 2:** The **area** in cm²
-**Box 3:** A triangle has base $8$ cm and height $5$ cm. Its **area** in cm² (use $A = \\frac{1}{2}bh$)`,
+**Box 2:** The **area** in $cm^{2}$
+**Box 3:** A triangle has base $8$ cm and height $5$ cm. Its **area** in $cm^{2}$ (use $A = \\frac{1}{2}bh$)`,
         exercise: {
           boxes: 3,
           correctAnswers: ['34', '60', '20'],
           hint1: 'Box 1: add length and width, then double it. Box 2: multiply length times width. Box 3: multiply base times height, then take half.',
           hint2: 'Box 1: $2(12 + 5)$. Box 2: $12 \\times 5$. Box 3: $\\frac{1}{2} \\times 8 \\times 5$.',
-          explanation: 'Box 1: $2(12 + 5) = 2(17) = 34$ cm. Box 2: $12 \\times 5 = 60$ cm². Box 3: $\\frac{1}{2} \\times 8 \\times 5 = \\frac{1}{2} \\times 40 = 20$ cm². ✓'
+          explanation: 'Box 1: $2(12 + 5) = 2(17) = 34$ cm. Box 2: $12 \\times 5 = 60$ $cm^{2}$. Box 3: $\\frac{1}{2} \\times 8 \\times 5 = \\frac{1}{2} \\times 40 = 20$ $cm^{2}$. ✓'
         }
       }
     ]
@@ -211,13 +211,13 @@ Remember: **perimeter** adds the sides (linear units), **area** multiplies (squa
             {
               question: 'A square has a side length of $6$ m. What is its **area**?',
               options: [
-                '$24$ m²',
-                '$36$ m²',
-                '$12$ m²',
-                '$30$ m²'
+                '$24$ $m^{2}$',
+                '$36$ $m^{2}$',
+                '$12$ $m^{2}$',
+                '$30$ $m^{2}$'
               ],
               correctAnswer: 1,
-              explanation: 'Area of a square is $A = s^2 = 6 \\times 6 = 36$ m². ($24$ m would be the perimeter, $4 \\times 6$.)'
+              explanation: 'Area of a square is $A = s^2 = 6 \\times 6 = 36$ $m^{2}$. ($24$ m would be the perimeter, $4 \\times 6$.)'
             },
             {
               question: 'A rectangle has length $11$ in and width $2$ in. What is its **perimeter**?',
@@ -228,7 +228,7 @@ Remember: **perimeter** adds the sides (linear units), **area** multiplies (squa
                 '$24$ in'
               ],
               correctAnswer: 2,
-              explanation: 'Perimeter is $P = 2(l + w) = 2(11 + 2) = 2(13) = 26$ in. ($22$ in² would be the area.)'
+              explanation: 'Perimeter is $P = 2(l + w) = 2(11 + 2) = 2(13) = 26$ in. ($22$ $in^{2}$ would be the area.)'
             }
           ]
         }
@@ -247,12 +247,12 @@ For each measurement, choose the correct **formula** and the correct **unit type
             },
             {
               label: 'The answer for an **area** should be measured in…',
-              options: ['square units (like cm²)', 'linear units (like cm)']
+              options: ['square units $(like cm^{2})$', 'linear units (like cm)']
             }
           ],
-          correctAnswers: ['$A = l \\times w$', 'square units (like cm²)'],
+          correctAnswers: ['$A = l \\times w$', 'square units $(like cm^{2})$'],
           hint1: 'Area means the space inside, found by multiplying length times width. Because we count squares inside, area uses square units.',
-          explanation: 'The area of a rectangle is $A = l \\times w$, and area is always measured in **square units** like cm² because you are counting the squares that fit inside. ✓'
+          explanation: 'The area of a rectangle is $A = l \\times w$, and area is always measured in **square units** like $cm^{2}$ because you are counting the squares that fit inside. ✓'
         }
       }
     ]
@@ -280,7 +280,7 @@ Perimeter and area show up constantly in the real world. The trick is reading th
 | Buying grass seed for a lawn | **Area** (inside) |
 
 **Story example:** Jada is tiling a rectangular kitchen floor that is $7$ ft long and $5$ ft wide. Tiles cover the *inside*, so she needs the **area**:
-- $A = l \\times w = 7 \\times 5 = 35$ ft² of tile. 🧱
+- $A = l \\times w = 7 \\times 5 = 35$ $ft^{2}$ of tile. 🧱
 
 Now use this idea on the problems below!`
       },
@@ -293,13 +293,13 @@ The Patel family is building a rectangular vegetable garden that is $\\textbf{10
 
 **Box 1:** They want a **fence around** the garden. How many feet of fencing? (perimeter)
 **Box 2:** They want **soil to cover** the ground inside. How many square feet? (area)
-**Box 3:** A triangular flower bed has base $4$ ft and height $3$ ft. Its **area** in ft²?`,
+**Box 3:** A triangular flower bed has base $4$ ft and height $3$ ft. Its **area** in $ft^{2}$?`,
         exercise: {
           boxes: 3,
           correctAnswers: ['32', '60', '6'],
           hint1: 'Fencing goes around → perimeter $= 2(l + w)$. Soil covers the inside → area $= l \\times w$. Triangle area $= \\frac{1}{2}bh$.',
           hint2: 'Box 1: $2(10 + 6)$. Box 2: $10 \\times 6$. Box 3: $\\frac{1}{2} \\times 4 \\times 3$.',
-          explanation: 'Box 1 (perimeter): $2(10 + 6) = 2(16) = 32$ ft. Box 2 (area): $10 \\times 6 = 60$ ft². Box 3 (triangle): $\\frac{1}{2} \\times 4 \\times 3 = 6$ ft². ✓'
+          explanation: 'Box 1 (perimeter): $2(10 + 6) = 2(16) = 32$ ft. Box 2 (area): $10 \\times 6 = 60$ $ft^{2}$. Box 3 (triangle): $\\frac{1}{2} \\times 4 \\times 3 = 6$ $ft^{2}$. ✓'
         }
       },
       {
@@ -311,13 +311,13 @@ The Patel family is building a rectangular vegetable garden that is $\\textbf{10
             {
               question: 'Devon is painting one **square wall** of a shed. The wall is $9$ ft on each side. How many **square feet** of wall does he need to paint?',
               options: [
-                '$36$ ft²',
-                '$18$ ft²',
-                '$81$ ft²',
-                '$72$ ft²'
+                '$36$ $ft^{2}$',
+                '$18$ $ft^{2}$',
+                '$81$ $ft^{2}$',
+                '$72$ $ft^{2}$'
               ],
               correctAnswer: 2,
-              explanation: 'Painting covers the inside of the wall, so use area: $A = s^2 = 9 \\times 9 = 81$ ft². ($36$ ft would be the perimeter, $4 \\times 9$.)'
+              explanation: 'Painting covers the inside of the wall, so use area: $A = s^2 = 9 \\times 9 = 81$ $ft^{2}$. ($36$ ft would be the perimeter, $4 \\times 9$.)'
             }
           ]
         }
@@ -347,7 +347,7 @@ You can now find the **perimeter** and **area** of rectangles, squares, and tria
 **The two big ideas to never forget:**
 
 - **Perimeter** is the distance **around** → add the sides → **linear units** (cm, ft).
-- **Area** is the space **inside** → multiply → **square units** (cm², ft²).
+- **Area** is the space **inside** → multiply → **square units** ($cm^{2}$, $ft^{2}$).
 
 > **Quick gut-check:** Going *around* the outside? Perimeter. Covering the *inside*? Area. Get that right and the formula does the rest! 💪`
       },
@@ -362,13 +362,13 @@ These mix together perimeter and area for different shapes. Decide *around or in
             {
               question: 'A triangle has a base of $12$ cm and a height of $5$ cm. What is its **area**?',
               options: [
-                '$60$ cm²',
-                '$30$ cm²',
-                '$17$ cm²',
-                '$34$ cm²'
+                '$60$ $cm^{2}$',
+                '$30$ $cm^{2}$',
+                '$17$ $cm^{2}$',
+                '$34$ $cm^{2}$'
               ],
               correctAnswer: 1,
-              explanation: 'Triangle area is $A = \\frac{1}{2}bh = \\frac{1}{2} \\times 12 \\times 5 = \\frac{1}{2} \\times 60 = 30$ cm². ✓'
+              explanation: 'Triangle area is $A = \\frac{1}{2}bh = \\frac{1}{2} \\times 12 \\times 5 = \\frac{1}{2} \\times 60 = 30$ $cm^{2}$. ✓'
             },
             {
               question: 'A rectangle has a perimeter of $20$ ft. If its length is $7$ ft, what is its **width**?',

@@ -49,11 +49,11 @@ $$\\boxed{n_c = \\sqrt{n_{top} \\cdot n_{bottom}} = \\sqrt{n_{glass}}}$$
 
 | Glass $n$ | Ideal $n_c$ | Real Material | Actual $n_c$ |
 |----------|-----------|---------------|-------------|
-| 1.50 | 1.22 | MgF₂ | 1.38 |
-| 1.52 | 1.23 | MgF₂ | 1.38 |
-| 1.70 | 1.30 | MgF₂ or SiO₂ | ~1.38–1.46 |
+| 1.50 | 1.22 | $MgF_{2}$ | 1.38 |
+| 1.52 | 1.23 | $MgF_{2}$ | 1.38 |
+| 1.70 | 1.30 | $MgF_{2}$ or $SiO_{2}$ | ~1.38–1.46 |
 
-> ⚠️ MgF₂ ($n = 1.38$) isn't ideal but is widely used because it's durable, hard, and close enough. Perfect cancellation isn't achieved, but reflection drops from ~4% to ~1%.
+> ⚠️ $MgF_{2}$ ($n = 1.38$) isn't ideal but is widely used because it's durable, hard, and close enough. Perfect cancellation isn't achieved, but reflection drops from ~4% to ~1%.
 
 ---
 
@@ -71,7 +71,7 @@ Single-layer coatings only cancel one wavelength. **Multi-layer** coatings stack
 | Coating Type | Layers | Residual Reflection |
 |-------------|--------|-------------------|
 | Uncoated glass | 0 | ~4% per surface |
-| Single-layer (MgF₂) | 1 | ~1.2% |
+| Single-layer $(MgF_{2})$ | 1 | ~1.2% |
 | Double-layer | 2 | ~0.5% |
 | Multi-layer (broadband) | 4–7 | <0.2% |
 
@@ -118,7 +118,7 @@ An anti-reflection coating makes reflected light dark → more light passes thro
             explanation: 'Air → coating (low→high): shift. Coating → glass (low→high): shift. Total: 2 phase changes.'
           },
           {
-            question: 'MgF₂ ($n = 1.38$) coating optimized for $\\lambda = 550$ nm. Minimum thickness:',
+            question: '$MgF_{2}$ ($n = 1.38$) coating optimized for $\\lambda = 550$ nm. Minimum thickness:',
             options: ['99.6 nm', '199.3 nm', '275 nm', '137.5 nm'],
             correctAnswer: 0,
             explanation: '$t = \\lambda/(4n) = 550/(4 \\times 1.38) = 550/5.52 = 99.6$ nm.'
@@ -150,7 +150,7 @@ Design a coating for glass ($n = 1.52$) optimized for green light ($\\lambda = 5
 
 **2)** Minimum coating thickness using ideal $n_c$? (in nm, round to 1 decimal place)
 
-**3)** If MgF₂ ($n = 1.38$) is used instead, minimum thickness? (in nm, round to 1 decimal place)
+**3)** If $MgF_{2}$ ($n = 1.38$) is used instead, minimum thickness? (in nm, round to 1 decimal place)
 
 **4)** Uncoated glass reflects ~4% per surface. A 6-surface lens system loses approximately what % to reflection without coatings? (round to nearest whole number)
       `,

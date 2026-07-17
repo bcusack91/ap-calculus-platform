@@ -37,8 +37,8 @@ export const chemMixturesSeparationsPart1Data = {
 
 | Category | Definition | Examples |
 |----------|-----------|----------|
-| **Element** | One type of atom | Gold (Au), Oxygen (O₂) |
-| **Compound** | Two+ elements chemically bonded in fixed ratio | H₂O, NaCl, CO₂ |
+| **Element** | One type of atom | Gold (Au), Oxygen $(O_{2})$ |
+| **Compound** | Two+ elements chemically bonded in fixed ratio | $H_{2}O$, NaCl, $CO_{2}$ |
 | **Mixture** | Two+ substances physically combined, variable composition | Air, saltwater, trail mix |
 
 
@@ -75,9 +75,9 @@ The most common type of homogeneous mixture:
 
 Solutions can be:
 - **Solid in liquid**: sugar in water
-- **Gas in liquid**: CO₂ in soda
+- **Gas in liquid**: $CO_{2}$ in soda
 - **Liquid in liquid**: ethanol in water
-- **Gas in gas**: air (N₂ + O₂ + Ar + ...)
+- **Gas in gas**: air $(N_{2} + O_{2} + Ar + ...)$
 - **Solid in solid**: alloys (brass = Cu + Zn)
 
 
@@ -190,10 +190,10 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
         dropdowns: [
           {
             id: 'mx1-dd1',
-            label: 'Air (a uniform mixture of N₂, O₂, Ar, etc.) is classified as a',
+            label: 'Air (a uniform mixture of $N_{2}$, $O_{2}$, Ar, etc.) is classified as a',
             options: ['solution', 'colloid', 'suspension'],
             correctIndex: 0,
-            explanation: 'Air is a homogeneous mixture of gases (N₂, O₂, Ar, etc.) — a true solution.'
+            explanation: 'Air is a homogeneous mixture of gases ($N_{2}$, $O_{2}$, Ar, etc.) — a true solution.'
           },
           {
             id: 'mx1-dd2',

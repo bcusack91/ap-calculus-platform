@@ -50,7 +50,7 @@ If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This hel
     {
       id: 'cs2-q2',
       type: 'quiz' as const,
-      question: 'You need to find the vertex of y = -2x² + 8x - 3. The fastest Desmos method is:',
+      question: 'You need to find the vertex of y = $-2x^{2}$ + 8x - 3. The fastest Desmos method is:',
       options: [
         'Complete the square by hand',
         'Use the -b/2a formula',
@@ -58,7 +58,7 @@ If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This hel
         'Create a table and scan values'
       ],
       correctAnswer: 2,
-      explanation: 'Type y = -2x² + 8x - 3 into Desmos. Since a is negative, the parabola opens downward. Click the highest point to see the vertex coordinates (2, 5). This takes about 5 seconds.'
+      explanation: 'Type y = $-2x^{2}$ + 8x - 3 into Desmos. Since a is negative, the parabola opens downward. Click the highest point to see the vertex coordinates (2, 5). This takes about 5 seconds.'
     },
     {
       id: 'cs2-text2',

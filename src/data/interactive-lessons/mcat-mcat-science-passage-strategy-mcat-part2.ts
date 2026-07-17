@@ -102,7 +102,7 @@ A passage reports the effect of an inhibitor on reaction rate:
             question: `A passage reports a sigmoidal (S-shaped) curve of oxygen saturation vs. partial pressure. This shape most directly indicates:`,
             options: [`Cooperative binding, as seen in hemoglobin`, `Simple linear diffusion`, `Enzyme denaturation`, `A first-order rate law`],
             correctAnswer: 0,
-            explanation: `A sigmoidal binding curve is the hallmark of positive cooperativity — binding of one ligand increases affinity for the next. Hemoglobin's O₂ binding is the canonical MCAT example; myoglobin, by contrast, gives a hyperbolic curve.`
+            explanation: `A sigmoidal binding curve is the hallmark of positive cooperativity — binding of one ligand increases affinity for the next. Hemoglobin's $O_{2}$ binding is the canonical MCAT example; myoglobin, by contrast, gives a hyperbolic curve.`
           },
           {
             question: `An answer choice gives a rate in mol/s, but the table reports µmol/min. Before selecting, you should:`,

@@ -9,7 +9,7 @@ export const calcabConcavityPart6Data = {
     {
       "id": "c6-optimize",
       "type": "text" as const,
-      "content": "## 📖 Second Derivative Test in Optimization\n\nIn optimization problems, after finding critical points, the second derivative test confirms max/min:\n\n### Example: Maximize Area\n\nA farmer has 400 ft of fencing for a rectangular pen against a barn. Maximize area.\n\n$A = x(400 - 2x) = 400x - 2x^2$\n\n$A' = 400 - 4x = 0 \\implies x = 100$\n\n$A'' = -4 < 0$ → maximum confirmed!\n\n$A_{max} = 100(200) = 20,000$ ft²\n\n---\n\n### When the Domain is Restricted\n\nIf $f''< 0$ everywhere on an interval, then:\n- Only ONE critical point → it MUST be the absolute max\n- No need for endpoint checking if domain is all reals\n\nIf $f'' > 0$ everywhere:\n- The single critical point is the absolute min"
+      "content": "## 📖 Second Derivative Test in Optimization\n\nIn optimization problems, after finding critical points, the second derivative test confirms max/min:\n\n### Example: Maximize Area\n\nA farmer has 400 ft of fencing for a rectangular pen against a barn. Maximize area.\n\n$A = x(400 - 2x) = 400x - 2x^2$\n\n$A' = 400 - 4x = 0 \\implies x = 100$\n\n$A'' = -4 < 0$ → maximum confirmed!\n\n$A_{max} = 100(200) = 20,000$ $ft^{2}$\n\n---\n\n### When the Domain is Restricted\n\nIf $f''< 0$ everywhere on an interval, then:\n- Only ONE critical point → it MUST be the absolute max\n- No need for endpoint checking if domain is all reals\n\nIf $f'' > 0$ everywhere:\n- The single critical point is the absolute min"
     },
     {
       "id": "c6-economics",
@@ -61,7 +61,7 @@ export const calcabConcavityPart6Data = {
     {
       "id": "c6-global",
       "type": "text" as const,
-      "content": "## 📌 Global vs. Local Extrema\n\n### Closed Interval Method (Absolute Extrema)\n\nOn a closed interval $[a, b]$:\n1. Find all critical points in $(a, b)$\n2. Evaluate $f$ at critical points AND endpoints\n3. Largest value = absolute max, smallest = absolute min\n\n### When Second Derivative Helps\n\nIf there's only one critical point $c$ on the domain:\n- $f''(c) > 0$ → absolute minimum\n- $f''(c) < 0$ → absolute maximum\n\n### Example: Minimize Surface Area\n\nCylinder with volume $1000$ cm³. Minimize $SA = 2\\pi r^2 + 2\\pi r h$.\n\nConstraint: $\\pi r^2 h = 1000 \\implies h = 1000/(\\pi r^2)$\n\n$SA = 2\\pi r^2 + 2000/r$\n\n$SA' = 4\\pi r - 2000/r^2 = 0 \\implies r^3 = 500/\\pi \\implies r = (500/\\pi)^{1/3}$\n\n$SA'' = 4\\pi + 4000/r^3 > 0$ always → confirmed minimum!"
+      "content": "## 📌 Global vs. Local Extrema\n\n### Closed Interval Method (Absolute Extrema)\n\nOn a closed interval $[a, b]$:\n1. Find all critical points in $(a, b)$\n2. Evaluate $f$ at critical points AND endpoints\n3. Largest value = absolute max, smallest = absolute min\n\n### When Second Derivative Helps\n\nIf there's only one critical point $c$ on the domain:\n- $f''(c) > 0$ → absolute minimum\n- $f''(c) < 0$ → absolute maximum\n\n### Example: Minimize Surface Area\n\nCylinder with volume $1000$ $cm^{3}$. Minimize $SA = 2\\pi r^2 + 2\\pi r h$.\n\nConstraint: $\\pi r^2 h = 1000 \\implies h = 1000/(\\pi r^2)$\n\n$SA = 2\\pi r^2 + 2000/r$\n\n$SA' = 4\\pi r - 2000/r^2 = 0 \\implies r^3 = 500/\\pi \\implies r = (500/\\pi)^{1/3}$\n\n$SA'' = 4\\pi + 4000/r^3 > 0$ always → confirmed minimum!"
     },
     {
       "id": "c6-input",

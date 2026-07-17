@@ -115,16 +115,16 @@ $P(\\text{at least one child affected}) = 1 - \\frac{81}{256} = \\frac{175}{256}
       content: `
 ### Worked Problem 4: Multiple Alleles + Binomial (ABO Blood Type)
 
-**Setup.** Human ABO blood type uses **three alleles**: *I^A* and *I^B* are codominant to each other, and both are dominant to the recessive *i*. So genotype *I^A I^A* or *I^A i* → type A; *I^B I^B* or *I^B i* → type B; *I^A I^B* → type AB; *ii* → type O. A man of genotype *I^A i* has children with a woman of genotype *I^B i*.
+**Setup.** Human ABO blood type uses **three alleles**: *$I^{A}$* and *$I^{B}$* are codominant to each other, and both are dominant to the recessive *i*. So genotype *$I^{A}$ $I^{A}$* or *$I^{A}$ i* → type A; *$I^{B}$ $I^{B}$* or *$I^{B}$ i* → type B; *$I^{A}$ $I^{B}$* → type AB; *ii* → type O. A man of genotype *$I^{A}$ i* has children with a woman of genotype *$I^{B}$ i*.
 
 **(a) What blood-type ratio is expected among their children?**
 
 Treat it as a monohybrid cross with the four allele combinations. Gametes: man gives $\\frac{1}{2}I^A,\\ \\frac{1}{2}i$; woman gives $\\frac{1}{2}I^B,\\ \\frac{1}{2}i$.
 
-|        | **I^A** (½) | **i** (½) |
+|        | **$I^{A}$** (½) | **i** (½) |
 |--------|-------------|-----------|
-| **I^B** (½) | I^A I^B (AB) | I^B i (B) |
-| **i** (½) | I^A i (A) | i i (O) |
+| **$I^{B}$** (½) | $I^{A}$ $I^{B}$ (AB) | $I^{B}$ i (B) |
+| **i** (½) | $I^{A}$ i (A) | i i (O) |
 
 The four equally likely children are **AB : B : A : O = 1 : 1 : 1 : 1** — each blood type with probability $\\frac{1}{4}$. (This 1:1:1:1 result is a hallmark of crossing two double-heterozygote-like parents who share no alleles.)
 

@@ -70,7 +70,7 @@ where $R_H = 1/(ne)$ is the **Hall coefficient**.`
     {
       id: 'magf6-mcq4',
       type: 'mcq' as const,
-      question: 'A current loop has $\\vec{\\mu} = 0.1\\hat{x}$ A·m² in a field $\\vec{B} = 0.5\\hat{x} + 0.3\\hat{y}$ T. The torque on the loop is:',
+      question: 'A current loop has $\\vec{\\mu} = 0.1\\hat{x}$ $A\\cdot m^{2}$ in a field $\\vec{B} = 0.5\\hat{x} + 0.3\\hat{y}$ T. The torque on the loop is:',
       options: ['$0.03\\hat{z}$ N·m', '$-0.03\\hat{z}$ N·m', '$0.05\\hat{z}$ N·m', '$0$'],
       correctAnswer: 0,
       explanation: '$\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B} = 0.1\\hat{x} \\times (0.5\\hat{x} + 0.3\\hat{y}) = 0.1(0.5)(\\hat{x}\\times\\hat{x}) + 0.1(0.3)(\\hat{x}\\times\\hat{y}) = 0 + 0.03\\hat{z}$.'

@@ -141,7 +141,7 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
       exercise: {
         questions: [
           {
-            question: 'For the reaction 2SO₂(g) + O₂(g) → 2SO₃(g), the sign of ΔS is:',
+            question: 'For the reaction $2SO_{2}(g)$ + $O_{2}(g)$ → $2SO_{3}(g)$, the sign of ΔS is:',
             options: [
               'Positive (entropy increases)',
               'Negative (entropy decreases)',
@@ -171,7 +171,7 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
               'Decreases entropy because water molecules become ordered'
             ],
             correctAnswer: 1,
-            explanation: 'Dissolving breaks the ordered crystal lattice, dispersing Na⁺ and Cl⁻ ions throughout the solution. Despite some ordering of water around ions, the overall entropy usually increases.'
+            explanation: 'Dissolving breaks the ordered crystal lattice, dispersing $Na^{+}$ and $Cl^{-}$ ions throughout the solution. Despite some ordering of water around ions, the overall entropy usually increases.'
           }
         ]
       }
@@ -216,19 +216,19 @@ Type "+" or "−" for the sign of $\\Delta S$:
             options: ['increase', 'decrease', 'stay the same', 'become zero']
           },
           {
-            label: 'Between O₂(g) and O₃(g) at the same temperature, the one with higher molar entropy is',
-            options: ['O₂', 'O₃', 'they are equal', 'cannot determine']
+            label: 'Between $O_{2}(g)$ and $O_{3}(g)$ at the same temperature, the one with higher molar entropy is',
+            options: ['$O_{2}$', '$O_{3}$', 'they are equal', 'cannot determine']
           },
           {
             label: 'The entropy change for condensation is',
             options: ['positive', 'negative', 'zero', 'undefined']
           }
         ],
-        correctAnswers: ['change in moles of gas', 'decrease', 'O₃', 'negative'],
+        correctAnswers: ['change in moles of gas', 'decrease', '$O_{3}$', 'negative'],
         hint1: 'Gases dominate the entropy calculation.',
         hint2: 'Smaller volume = fewer positions available = fewer microstates.',
-        hint3: 'O₃ has more atoms and more vibrational modes.',
-        explanation: 'Moles of gas is the strongest predictor. Compression reduces volume and microstates. O₃ has more complexity (more atoms, more vibrations) than O₂. Condensation (gas → liquid) always decreases entropy.'
+        hint3: '$O_{3}$ has more atoms and more vibrational modes.',
+        explanation: 'Moles of gas is the strongest predictor. Compression reduces volume and microstates. $O_{3}$ has more complexity (more atoms, more vibrations) than $O_{2}$. Condensation (gas → liquid) always decreases entropy.'
       }
     },
     {
@@ -242,20 +242,20 @@ Type "+" or "−" for the sign of $\\Delta S$:
           {
             question: 'For which reaction is ΔS most likely POSITIVE?',
             options: [
-              'N₂(g) + 3H₂(g) → 2NH₃(g)',
-              'Ag⁺(aq) + Cl⁻(aq) → AgCl(s)',
-              'CaCO₃(s) → CaO(s) + CO₂(g)',
-              '2CO(g) + O₂(g) → 2CO₂(g)'
+              '$N_{2}(g)$ + $3H_{2}(g)$ → $2NH_{3}(g)$',
+              '$Ag^{+}(aq)$ + $Cl^{-}(aq)$ → AgCl(s)',
+              '$CaCO_{3}(s)$ → CaO(s) + $CO_{2}(g)$',
+              '2CO(g) + $O_{2}(g)$ → $2CO_{2}(g)$'
             ],
             correctAnswer: 2,
-            explanation: 'CaCO₃(s) → CaO(s) + CO₂(g): $\\Delta n_{\\text{gas}} = 1 - 0 = +1$. A gas is produced from a solid, so entropy increases. All other options have $\\Delta n_{\\text{gas}} \\leq 0$.'
+            explanation: '$CaCO_{3}(s)$ → CaO(s) + $CO_{2}(g)$: $\\Delta n_{\\text{gas}} = 1 - 0 = +1$. A gas is produced from a solid, so entropy increases. All other options have $\\Delta n_{\\text{gas}} \\leq 0$.'
           },
           {
-            question: 'Rank the following in order of increasing entropy: H₂O(s), H₂O(l), H₂O(g)',
+            question: 'Rank the following in order of increasing entropy: $H_{2}O(s)$, $H_{2}O(l)$, $H_{2}O(g)$',
             options: [
-              'H₂O(g) < H₂O(l) < H₂O(s)',
-              'H₂O(s) < H₂O(g) < H₂O(l)',
-              'H₂O(s) < H₂O(l) < H₂O(g)',
+              '$H_{2}O(g)$ < $H_{2}O(l)$ < $H_{2}O(s)$',
+              '$H_{2}O(s)$ < $H_{2}O(g)$ < $H_{2}O(l)$',
+              '$H_{2}O(s)$ < $H_{2}O(l)$ < $H_{2}O(g)$',
               'All have the same entropy'
             ],
             correctAnswer: 2,

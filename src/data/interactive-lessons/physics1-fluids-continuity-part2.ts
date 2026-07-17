@@ -89,7 +89,7 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
       content: `
 **Continuity Calculations** 🧮
 
-1) Water flows at 4 m/s in a pipe of area $0.020$ m². Speed in a narrower section of area $0.0050$ m² (m/s)?
+1) Water flows at 4 m/s in a pipe of area $0.020$ $m^{2}$. Speed in a narrower section of area $0.0050$ $m^{2}$ (m/s)?
 
 2) A pipe of radius 5 cm carries water at 1 m/s. Pipe narrows to radius 2 cm. New speed (m/s)?
 
@@ -101,7 +101,7 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
         hint1: '$v_2 = v_1 A_1/A_2$.',
         hint2: '$v_2 = v_1 (r_1/r_2)^2$.',
         hint3: '$v_2 = v_1 A_1/A_2$.',
-        explanation: '1) $v_2 = 4 \\times 0.020/0.0050 = 4 \\times 4 = 16$ m/s. 2) $v_2 = 1 \\times (5/2)^2 = 6.25$ m/s. 3) $A_1 = 320$ m², $A_2 = 40$ m², ratio = 8 → $v_2 = 2.5 \\times 8 = 20$ m/s.'
+        explanation: '1) $v_2 = 4 \\times 0.020/0.0050 = 4 \\times 4 = 16$ m/s. 2) $v_2 = 1 \\times (5/2)^2 = 6.25$ m/s. 3) $A_1 = 320$ $m^{2}$, $A_2 = 40$ $m^{2}$, ratio = 8 → $v_2 = 2.5 \\times 8 = 20$ m/s.'
       }
     },
     {
@@ -159,7 +159,7 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
             explanation: 'Area ratio = $(4/2)^2 = 4$. Speed × 4 = 8 m/s.'
           },
           {
-            question: 'Two pipes of areas 0.01 m² and 0.02 m² merge into a single pipe of area 0.015 m². Speeds in the inlets are 3 m/s and 1 m/s. Speed in the outlet?',
+            question: 'Two pipes of areas 0.01 $m^{2}$ and 0.02 $m^{2}$ merge into a single pipe of area 0.015 $m^{2}$. Speeds in the inlets are 3 m/s and 1 m/s. Speed in the outlet?',
             options: [
               '$\\dfrac{1}{3}$ m/s',
               '1 m/s',
@@ -167,7 +167,7 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
               '5 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$Q_{total} = 0.01(3) + 0.02(1) = 0.05$ m³/s. $v_{out} = 0.05/0.015 = 10/3 ≈ 3.33$ m/s.'
+            explanation: '$Q_{total} = 0.01(3) + 0.02(1) = 0.05$ $m^{3}/s$. $v_{out} = 0.05/0.015 = 10/3 ≈ 3.33$ m/s.'
           }
         ]
       }

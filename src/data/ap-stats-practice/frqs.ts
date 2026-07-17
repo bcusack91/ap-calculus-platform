@@ -157,11 +157,11 @@ A school district is investigating whether a new tutoring program improves stude
     parts: [
       {
         prompt: '(a) Conduct a two-sample t-test to determine whether the mean score for tutored students is significantly higher than for non-tutored students. Use $\\alpha = 0.05$. (Use df ≈ 154, $t^* \\approx 1.65$ for one-sided.) Show all hypotheses, conditions, test statistic, p-value, and conclusion.',
-        rubric: 'H₀: $\\mu_T = \\mu_{NT}$; Hₐ: $\\mu_T > \\mu_{NT}$. Conditions: random samples (stated), independent groups, n=80 each large ⇒ CLT applies. SE = $\\sqrt{12^2/80 + 14^2/80} = \\sqrt{1.8 + 2.45} = \\sqrt{4.25} \\approx 2.06$. $t = (76.5 - 70.2)/2.06 = 6.3/2.06 \\approx 3.06$. p-value (one-sided, df ≈ 154) ≈ 0.0013. Since p < 0.05, REJECT H₀. Convincing evidence the mean score is higher for tutored students.',
+        rubric: '$H_{0}$: $\\mu_T = \\mu_{NT}$; $H_{a}$: $\\mu_T > \\mu_{NT}$. Conditions: random samples (stated), independent groups, n=80 each large ⇒ CLT applies. SE = $\\sqrt{12^2/80 + 14^2/80} = \\sqrt{1.8 + 2.45} = \\sqrt{4.25} \\approx 2.06$. $t = (76.5 - 70.2)/2.06 = 6.3/2.06 \\approx 3.06$. p-value (one-sided, df ≈ 154) ≈ 0.0013. Since p < 0.05, REJECT $H_{0}$. Convincing evidence the mean score is higher for tutored students.',
       },
       {
         prompt: '(b) Conduct a two-proportion z-test to determine whether the pass rate is significantly higher among tutored students. Use $\\alpha = 0.05$.',
-        rubric: '$\\hat{p}_T = 0.8125$, $\\hat{p}_{NT} = 0.625$. Pooled $\\hat{p} = 115/160 = 0.71875$. SE = $\\sqrt{0.71875 \\cdot 0.28125 (1/80 + 1/80)} = \\sqrt{0.20215 \\cdot 0.025} = \\sqrt{0.00505} \\approx 0.0711$. $z = (0.8125 - 0.625)/0.0711 \\approx 2.64$. p-value (one-sided) ≈ 0.0042. REJECT H₀. Convincing evidence pass rate is higher for tutored students.',
+        rubric: '$\\hat{p}_T = 0.8125$, $\\hat{p}_{NT} = 0.625$. Pooled $\\hat{p} = 115/160 = 0.71875$. SE = $\\sqrt{0.71875 \\cdot 0.28125 (1/80 + 1/80)} = \\sqrt{0.20215 \\cdot 0.025} = \\sqrt{0.00505} \\approx 0.0711$. $z = (0.8125 - 0.625)/0.0711 \\approx 2.64$. p-value (one-sided) ≈ 0.0042. REJECT $H_{0}$. Convincing evidence pass rate is higher for tutored students.',
       },
       {
         prompt: '(c) Both tests indicate significantly higher performance for tutored students. Can the researchers conclude that the tutoring program CAUSES improved scores? Explain.',

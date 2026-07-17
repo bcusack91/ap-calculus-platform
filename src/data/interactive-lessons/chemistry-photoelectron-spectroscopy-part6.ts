@@ -76,7 +76,7 @@ When given PES data and asked to identify an element, follow this systematic app
               'Calcium (Ca, Z = 20)'
             ],
             correctAnswer: 2,
-            explanation: 'Peak heights: 2 + 2 + 6 + 2 + 6 + 1 = 19 electrons. This corresponds to: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁶(6), 4s¹(1) = potassium (K, Z = 19). The last peak with height 1 is the single 4s electron, which has the lowest binding energy.'
+            explanation: 'Peak heights: 2 + 2 + 6 + 2 + 6 + 1 = 19 electrons. This corresponds to: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $4s^{1}(1)$ = potassium (K, Z = 19). The last peak with height 1 is the single 4s electron, which has the lowest binding energy.'
           }
         ]
       }
@@ -90,7 +90,7 @@ When given PES data and asked to identify an element, follow this systematic app
       exercise: {
         questions: [
           {
-            text: 'Al (1s² 2s² 2p⁶ 3s² 3p¹) would show:',
+            text: 'Al $(1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{1})$ would show:',
             options: [
               '3 peaks: 2, 8, 3',
               '5 peaks: 2, 2, 6, 2, 1',
@@ -98,7 +98,7 @@ When given PES data and asked to identify an element, follow this systematic app
               '4 peaks: 2, 8, 2, 1'
             ],
             correctAnswer: 1,
-            explanation: 'Aluminum has 5 occupied subshells: 1s² (2), 2s² (2), 2p⁶ (6), 3s² (2), 3p¹ (1). Each subshell produces one peak, giving 5 peaks with heights 2, 2, 6, 2, 1 from highest to lowest binding energy.'
+            explanation: 'Aluminum has 5 occupied subshells: $1s^{2}$ (2), $2s^{2}$ (2), $2p^{6}$ (6), $3s^{2}$ (2), $3p^{1}$ (1). Each subshell produces one peak, giving 5 peaks with heights 2, 2, 6, 2, 1 from highest to lowest binding energy.'
           }
         ]
       }
@@ -114,12 +114,12 @@ When given PES data and asked to identify an element, follow this systematic app
           {
             label: 'What is element X? (chemical symbol)',
             correctAnswer: 'Si',
-            explanation: 'Element X: 2 + 2 + 6 + 2 + 2 = 14 electrons → silicon (Si). Configuration: 1s² 2s² 2p⁶ 3s² 3p².'
+            explanation: 'Element X: 2 + 2 + 6 + 2 + 2 = 14 electrons → silicon (Si). Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{2}$.'
           },
           {
             label: 'What is element Y? (chemical symbol)',
             correctAnswer: 'P',
-            explanation: 'Element Y: 2 + 2 + 6 + 2 + 3 = 15 electrons → phosphorus (P). Configuration: 1s² 2s² 2p⁶ 3s² 3p³.'
+            explanation: 'Element Y: 2 + 2 + 6 + 2 + 3 = 15 electrons → phosphorus (P). Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$.'
           },
           {
             label: 'Which element (X or Y) has higher 1s binding energy? (enter X or Y)',
@@ -141,13 +141,13 @@ When given PES data and asked to identify an element, follow this systematic app
             text: 'A student sees this spectrum and claims the total is 2+2+6+2+6+2+6 = 26. Is this spectrum complete for any real neutral atom?',
             options: ['Yes — it represents iron (Fe, Z = 26)', 'No — the spectrum is missing a 3d peak and cannot represent a real element as shown', 'Yes — it represents krypton (Kr, Z = 36)', 'Yes — it represents argon (Ar, Z = 18)'],
             correctIndex: 1,
-            explanation: 'The peak pattern 2, 2, 6, 2, 6, 2, 6 implies subshells 1s², 2s², 2p⁶, 3s², 3p⁶, 4s², 4p⁶ — but this is not a valid ground-state configuration. The 3d subshell must fill (up to 10 electrons) before the 4p subshell. No neutral atom has electrons in 4p without first filling 3d. This spectrum is incomplete or erroneous — a 3d peak is missing.'
+            explanation: 'The peak pattern 2, 2, 6, 2, 6, 2, 6 implies subshells $1s^{2}$, $2s^{2}$, $2p^{6}$, $3s^{2}$, $3p^{6}$, $4s^{2}$, $4p^{6}$ — but this is not a valid ground-state configuration. The 3d subshell must fill (up to 10 electrons) before the 4p subshell. No neutral atom has electrons in 4p without first filling 3d. This spectrum is incomplete or erroneous — a 3d peak is missing.'
           },
           {
             text: 'What is missing from this PES spectrum if the element is supposed to have electrons in the 3d subshell?',
             options: ['A peak of height 10 between the 3p and 4s peaks', 'A peak of height 6 after the 4p peak', 'Nothing is missing', 'A peak of height 2 before the 1s peak'],
             correctIndex: 0,
-            explanation: 'If the element has electrons beyond the 3p⁶ subshell, the 3d subshell must fill before 4p. A complete spectrum for krypton would include a 3d¹⁰ peak (height 10) between the 3p⁶ and 4s² peaks, giving total electrons: 2+2+6+2+6+10+2+6 = 36.'
+            explanation: 'If the element has electrons beyond the $3p^{6}$ subshell, the 3d subshell must fill before 4p. A complete spectrum for krypton would include a $3d^{10}$ peak (height 10) between the $3p^{6}$ and $4s^{2}$ peaks, giving total electrons: 2+2+6+2+6+10+2+6 = 36.'
           }
         ]
       }
@@ -171,7 +171,7 @@ When given PES data and asked to identify an element, follow this systematic app
               'Incorrect — the element is in Period 4'
             ],
             correctAnswer: 0,
-            explanation: 'Peaks: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁴(4). Total = 16 electrons → sulfur (S, Z = 16). Since the outermost occupied subshell is 3p, sulfur is indeed in Period 3. The student is correct.'
+            explanation: 'Peaks: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{4}(4)$. Total = 16 electrons → sulfur (S, Z = 16). Since the outermost occupied subshell is 3p, sulfur is indeed in Period 3. The student is correct.'
           }
         ]
       }
@@ -185,9 +185,9 @@ Write the expected PES peak heights (from highest to lowest binding energy) for 
       exercise: {
         inputs: [
           {
-            label: 'Peak heights for argon (Ar, Z = 18): 1s² 2s² 2p⁶ 3s² 3p⁶',
+            label: 'Peak heights for argon (Ar, Z = 18): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$',
             correctAnswer: '2,2,6,2,6',
-            explanation: 'Argon has 5 occupied subshells: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁶(6). The peak heights from left to right are: 2, 2, 6, 2, 6.'
+            explanation: 'Argon has 5 occupied subshells: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$. The peak heights from left to right are: 2, 2, 6, 2, 6.'
           }
         ]
       }
@@ -224,9 +224,9 @@ Write the expected PES peak heights (from highest to lowest binding energy) for 
 
 | Task | Strategy |
 |------|----------|
-| Compare spectra | Adjacent elements differ by 1 e⁻; all BEs shift with Z |
-| Predict a spectrum | Write e⁻ config → each subshell = one peak |
-| Verify answer | Total e⁻ must = atomic number for neutral atoms |
+| Compare spectra | Adjacent elements differ by 1 $e^{-}$; all BEs shift with Z |
+| Predict a spectrum | Write $e^{-}$ config → each subshell = one peak |
+| Verify answer | Total $e^{-}$ must = atomic number for neutral atoms |
 
 ---
 

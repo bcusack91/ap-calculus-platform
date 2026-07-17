@@ -44,7 +44,7 @@ $= x + 3$ (since $(x+2)(x+3) = x^2+5x+6$) ✅
                               "$x^2+2$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "(x+1)(x+2) = x²+3x+2."
+                    "explanation": "(x+1)(x+2) = $x^{2}+3x+2$."
           }
 ]
       }
@@ -65,8 +65,8 @@ $= x + 3$ (since $(x+2)(x+3) = x^2+5x+6$) ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["2","3","3"],
-        hint1: "Factor x²+3x+2.",
-        hint2: "Factor x²+5x+6.",
+        hint1: "Factor $x^{2}+3x+2$.",
+        hint2: "Factor $x^{2}+5x+6$.",
         hint3: "Factor out 2x.",
         explanation: "1) x+2. 2) x+3. 3) x+3."
       }

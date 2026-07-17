@@ -147,7 +147,7 @@ This is why:
         dropdowns: [
           {
             label: 'Doubling the telescope diameter improves angular resolution by a factor of',
-            options: ['2', '4', '√2', 'no improvement']
+            options: ['2', '4', '$\\sqrt{2}$', 'no improvement']
           },
           {
             label: 'Using blue light instead of red light in a microscope',

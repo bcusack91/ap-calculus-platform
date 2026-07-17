@@ -16,27 +16,27 @@ A **buffer** is a solution that resists changes in pH when small amounts of stro
 
 ## How Buffers Work
 
-When you add strong acid (H⁺) to a buffer:
+When you add strong acid $(H^{+})$ to a buffer:
 $$\\text{H}^+ + \\text{A}^- \\to \\text{HA}$$
 
-The added H⁺ is consumed by the conjugate base — pH barely changes.
+The added $H^{+}$ is consumed by the conjugate base — pH barely changes.
 
-When you add strong base (OH⁻) to a buffer:
+When you add strong base $(OH^{-})$ to a buffer:
 $$\\text{OH}^- + \\text{HA} \\to \\text{A}^- + \\text{H}_2\\text{O}$$
 
-The added OH⁻ is consumed by the weak acid — pH barely changes.
+The added $OH^{-}$ is consumed by the weak acid — pH barely changes.
 
 ## Buffer Capacity
 
 **Buffer capacity** is the amount of acid or base the buffer can absorb before pH changes significantly.
 
 Buffer capacity is **highest** when:
-1. Concentrations of weak acid and conjugate base are large (more moles to react with added H⁺/OH⁻)
-2. The ratio $[\\text{A}^-]/[\\text{HA}]$ is close to 1 (i.e., pH ≈ pKₐ)
+1. Concentrations of weak acid and conjugate base are large (more moles to react with added $H^{+}/OH^{-}$)
+2. The ratio $[\\text{A}^-]/[\\text{HA}]$ is close to 1 (i.e., pH ≈ $pK_{a}$)
 
 A buffer becomes **ineffective** when:
 - The ratio $[\\text{A}^-]/[\\text{HA}]$ exceeds 10:1 or drops below 1:10
-- This corresponds to the **buffer range: pKₐ ± 1**
+- This corresponds to the **buffer range: $pK_{a}$ ± 1**
 
 ## Choosing a Buffer for a Target pH
 
@@ -79,10 +79,10 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
       exercise: {
         questions: [
           {
-            question: `A buffer contains 0.20 mol acetic acid and 0.20 mol sodium acetate (pKₐ = 4.74). When 0.010 mol NaOH is added, which component changes and in which direction?`,
+            question: `A buffer contains 0.20 mol acetic acid and 0.20 mol sodium acetate ($pK_{a}$ = 4.74). When 0.010 mol NaOH is added, which component changes and in which direction?`,
             options: [
-              `[HA] decreases, [A⁻] increases`,
-              `[HA] increases, [A⁻] decreases`,
+              `[HA] decreases, [$A^{-}$] increases`,
+              `[HA] increases, [$A^{-}$] decreases`,
               `Both decrease`,
               `Neither changes — the buffer neutralizes it completely`
             ],
@@ -114,24 +114,24 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
           {
             question: `What is buffer capacity MOST dependent on?`,
             options: [
-              `The pKₐ of the weak acid alone`,
+              `The $pK_{a}$ of the weak acid alone`,
               `The absolute concentrations of the weak acid and conjugate base`,
               `The temperature of the solution`,
               `The volume of the solution`
             ],
             correctAnswer: 1,
-            explanation: `Buffer capacity depends on how many moles of acid and base are available to react. Higher **absolute concentrations** of HA and A⁻ = more capacity. pKₐ governs the pH at which the buffer is optimal, but capacity (moles that can be absorbed) comes from concentration.`
+            explanation: `Buffer capacity depends on how many moles of acid and base are available to react. Higher **absolute concentrations** of HA and $A^{-}$ = more capacity. $pK_{a}$ governs the pH at which the buffer is optimal, but capacity (moles that can be absorbed) comes from concentration.`
           },
           {
             question: `A buffer is prepared with 0.10 M acetic acid and 0.10 M sodium acetate ($\\text{p}K_a = 4.74$). After adding excess NaOH, all the acetic acid is consumed. The solution now contains only 0.10 M acetate. What happens to the buffering?`,
             options: [
               `Buffering is maximized because pure acetate has high $K_b$`,
-              `Buffering is lost because there is no weak acid left to neutralize additional OH⁻`,
+              `Buffering is lost because there is no weak acid left to neutralize additional $OH^{-}$`,
               `Buffering continues at a higher pH`,
               `The pH drops sharply because acetate is basic`
             ],
             correctAnswer: 1,
-            explanation: `Buffers require both a weak acid and conjugate base. If all HA is consumed, there is no weak acid to absorb additional OH⁻. Any more base added will cause a sharp pH increase — the buffer is **exhausted**.`
+            explanation: `Buffers require both a weak acid and conjugate base. If all HA is consumed, there is no weak acid to absorb additional $OH^{-}$. Any more base added will cause a sharp pH increase — the buffer is **exhausted**.`
           }
         ]
       }
@@ -141,7 +141,7 @@ Normal blood values: $\\text{pH} = 7.40$; $[\\text{HCO}_3^-] = 24\\text{ mM}$; $
       type: 'text' as const,
       content: `## Key Takeaways — Part 3
 
-- Buffers resist pH change by consuming added H⁺ (via A⁻) or OH⁻ (via HA)
+- Buffers resist pH change by consuming added $H^{+}$ $(via A^{-})$ or $OH^{-}$ (via HA)
 - HH equation: $\\text{pH} = \\text{p}K_a + \\log([\\text{A}^-]/[\\text{HA}])$
 - Best buffering: $\\text{pH} \\approx \\text{p}K_a$; effective range: $\\text{p}K_a \\pm 1$
 - Buffer capacity increases with higher concentrations of buffer components

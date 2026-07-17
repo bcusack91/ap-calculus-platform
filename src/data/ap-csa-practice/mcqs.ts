@@ -60,7 +60,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'objects-and-references',
-    question: 'Which call computes ⌊√50⌋ as an int?',
+    question: 'Which call computes ⌊$\\sqrt{50}$⌋ as an int?',
     options: ['(int) Math.sqrt(50)', 'Math.sqrt(50).intValue()', 'Math.floor(50)', 'Math.sqrt((int) 50)'],
     correctAnswer: 0,
     explanation: 'Math.sqrt returns a double. Casting to int truncates toward zero, which equals the floor for non-negative values. Math.sqrt is a static double, not a wrapper object, so .intValue() does not apply.',
@@ -144,7 +144,7 @@ export const MCQS: MCQItem[] = [
     question: 'Consider:\n```java\nint n = 12;\nint count = 0;\nwhile (n > 0) {\n  if (n % 2 == 1) count++;\n  n /= 2;\n}\n```\nWhat does `count` equal after the loop?',
     options: ['0', '1', '2', '3'],
     correctAnswer: 2,
-    explanation: 'This counts the 1-bits in n. 12 = 1100₂, which has two 1-bits. Trace: n=12 (even, n→6), n=6 (even, n→3), n=3 (odd ⇒count=1, n→1), n=1 (odd ⇒count=2, n→0).',
+    explanation: 'This counts the 1-bits in n. 12 = $1100_{2}$, which has two 1-bits. Trace: n=12 (even, n→6), n=6 (even, n→3), n=3 (odd ⇒count=1, n→1), n=1 (odd ⇒count=2, n→0).',
   },
 
   /* ---- Unit 5: Writing Classes ---- */

@@ -61,9 +61,9 @@ $F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
       content: `
 **Circular Motion** 🧮
 
-1) A car goes around a curve of radius 50 m at 20 m/s. What is the centripetal acceleration (m/s²)?
+1) A car goes around a curve of radius 50 m at 20 m/s. What is the centripetal acceleration $(m/s^{2})$?
 
-2) An object moves in a circle of radius 2 m with centripetal acceleration 8 m/s². What is the speed (m/s)?
+2) An object moves in a circle of radius 2 m with centripetal acceleration 8 $m/s^{2}$. What is the speed (m/s)?
 
 3) A 2 kg ball on a 0.5 m string moves at 4 m/s. What is the tension/centripetal force (N)?
     
@@ -74,7 +74,7 @@ $F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
         hint1: "$a_c = v^2/r = (20)^2/50$.",
         hint2: "$v^2 = a_c \\cdot r$, then take the square root.",
         hint3: "$F_c = mv^2/r = 2(16)/0.5$.",
-        explanation: "1) $400/50 = 8$ m/s². 2) $v = \\sqrt{8 \\times 2} = \\sqrt{16} = 4$ m/s. 3) $32/0.5 = 64$... wait, $2(16)/0.5 = 64$ N. Let me recheck: $F = 2 \\times 16 / 0.5 = 64$ N."
+        explanation: "1) $400/50 = 8$ $m/s^{2}$. 2) $v = \\sqrt{8 \\times 2} = \\sqrt{16} = 4$ m/s. 3) $32/0.5 = 64$... wait, $2(16)/0.5 = 64$ N. Let me recheck: $F = 2 \\times 16 / 0.5 = 64$ N."
       }
     },
     {

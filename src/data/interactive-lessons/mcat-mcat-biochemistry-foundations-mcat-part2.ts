@@ -135,7 +135,7 @@ Classify each inhibitor type.
 <details>
 <summary><b>Example 3: Compare catalytic efficiency of two enzymes at low substrate concentration</b></summary>
 
-**Question:** Enzyme A: $K_m = 0.5$ mM, $k_{cat} = 500$ s⁻¹. Enzyme B: $K_m = 5$ mM, $k_{cat} = 2000$ s⁻¹. Which enzyme is more efficient when cellular [S] ≈ 0.1 mM?
+**Question:** Enzyme A: $K_m = 0.5$ mM, $k_{cat} = 500$ $s^{-1}$. Enzyme B: $K_m = 5$ mM, $k_{cat} = 2000$ $s^{-1}$. Which enzyme is more efficient when cellular [S] ≈ 0.1 mM?
 
 **Solution:**
 1. **Catalytic efficiency** = $k_{cat}/K_m$ (velocity per unit substrate at low [S])
@@ -149,8 +149,8 @@ Classify each inhibitor type.
 4. **Result**: Enzyme A is more efficient (2.5× higher $k_{cat}/K_m$)
 
 5. **At [S] = 0.1 mM**:
-   - Enzyme A: $v_A = 500(0.1)/(0.5 + 0.1) ≈ 83$ s⁻¹ (relative to $[E]$)
-   - Enzyme B: $v_B = 2000(0.1)/(5 + 0.1) ≈ 40$ s⁻¹
+   - Enzyme A: $v_A = 500(0.1)/(0.5 + 0.1) ≈ 83$ $s^{-1}$ (relative to $[E]$)
+   - Enzyme B: $v_B = 2000(0.1)/(5 + 0.1) ≈ 40$ $s^{-1}$
    - Enzyme A wins at low [S] ✓
 
 **Why this matters**: Under cellular conditions where substrate is limiting, high $k_{cat}/K_m$ predicts enzyme performance better than either parameter alone.

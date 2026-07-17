@@ -23,7 +23,7 @@ For squares: $A = s^2$
       content: `
 ## Worked Example
 
-**Rectangle: 8 m × 5 m.** $A = 8 \\times 5 = 40$ m² ✅
+**Rectangle: 8 m × 5 m.** $A = 8 \\times 5 = 40$ $m^{2}$ ✅
     
     `
     },
@@ -38,13 +38,13 @@ For squares: $A = s^2$
           {
                     "question": "Area of rectangle 12 cm × 3 cm?",
                     "options": [
-                              "36 cm²",
-                              "30 cm²",
-                              "15 cm²",
-                              "72 cm²"
+                              "36 $cm^{2}$",
+                              "30 $cm^{2}$",
+                              "15 $cm^{2}$",
+                              "72 $cm^{2}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "A = 12 × 3 = 36 cm²."
+                    "explanation": "A = 12 × 3 = 36 $cm^{2}$."
           }
 ]
       }
@@ -55,11 +55,11 @@ For squares: $A = s^2$
       content: `
 **Area** 🧮
 
-1) Rectangle 6 × 4 cm. Area (cm²)?
+1) Rectangle 6 × 4 cm. Area $(cm^{2})$?
 
-2) Rectangle 7 × 5 m. Area (m²)?
+2) Rectangle 7 × 5 m. Area $(m^{2})$?
 
-3) Square, side 10 in. Area (in²)?
+3) Square, side 10 in. Area $(in^{2})$?
     
     `,
       exercise: {
@@ -67,7 +67,7 @@ For squares: $A = s^2$
         correctAnswers: ["24","35","100"],
         hint1: "A = l × w = 6 × 4.",
         hint2: "A = 7 × 5.",
-        hint3: "A = s² = 10².",
+        hint3: "A = $s^{2}$ = $10^{2}$.",
         explanation: "1) 24. 2) 35. 3) 100."
       }
     },
@@ -78,7 +78,7 @@ For squares: $A = s^2$
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Area is measured in","options":["Square units","Linear units","Cubic units","No units"]},{"label":"Rectangle area 30 m², length 6 m. Width?","options":["5 m","24 m","180 m","36 m"]}],
+        dropdowns: [{"label":"Area is measured in","options":["Square units","Linear units","Cubic units","No units"]},{"label":"Rectangle area 30 $m^{2}$, length 6 m. Width?","options":["5 m","24 m","180 m","36 m"]}],
         correctAnswers: ["Square units","5 m"],
         hint1: "Area describes a 2D region.",
         hint2: "30 = 6 × w → w = ?",
@@ -108,7 +108,7 @@ For squares: $A = s^2$
       exercise: {
         questions: [
           {
-                    "question": "Square garden, area 49 m². Side length?",
+                    "question": "Square garden, area 49 $m^{2}$. Side length?",
                     "options": [
                               "7 m",
                               "24.5 m",
@@ -116,7 +116,7 @@ For squares: $A = s^2$
                               "49 m"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "s = √49 = 7 m."
+                    "explanation": "s = $\\sqrt{49}$ = 7 m."
           }
 ]
       }

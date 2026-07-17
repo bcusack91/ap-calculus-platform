@@ -63,8 +63,8 @@ Earth barely accelerates because $a_{\\text{Earth}} = mg/M_{\\text{Earth}} \\app
 ### Why We Don\'t Notice Earth\'s Acceleration
 
 For a 1 kg ball:
-- Ball: $a = 9.8$ m/s² (very noticeable!)
-- Earth: $a = 9.8/(6 \\times 10^{24}) \\approx 1.6 \\times 10^{-24}$ m/s² (completely undetectable)
+- Ball: $a = 9.8$ $m/s^{2}$ (very noticeable!)
+- Earth: $a = 9.8/(6 \\times 10^{24}) \\approx 1.6 \\times 10^{-24}$ $m/s^{2}$ (completely undetectable)
 
 ### Important Distinction
 
@@ -155,7 +155,7 @@ $$N_{\\text{table}} = W_B + N_{AB} = 49 + 19.6 = 68.6 \\text{ N}$$
       content: `
 **Force Pair Calculations** 🧮
 
-Block A (3 kg) sits on top of Block B (7 kg), which sits on a table. Use $g = 9.8$ m/s².
+Block A (3 kg) sits on top of Block B (7 kg), which sits on a table. Use $g = 9.8$ $m/s^{2}$.
 
 1) What is the magnitude of the force that Block A exerts on Block B (in N)?
 

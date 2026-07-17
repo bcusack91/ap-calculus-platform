@@ -125,7 +125,7 @@ Changes in **pH, temperature, or salt concentration** can disrupt these bonds an
           }
         ],
         correctAnswers: ['peptide', 'R group', 'secondary'],
-        hint1: 'Formed by dehydration synthesis between -COOH and -NH₂.',
+        hint1: 'Formed by dehydration synthesis between -COOH and $-NH_{2}$.',
         hint2: 'This side chain makes each amino acid unique.',
         hint3: 'Regular repeating patterns stabilized by backbone H-bonds.',
         explanation: 'Peptide bonds link amino acids. The R group (side chain) varies among the 20 amino acids. α-helices and β-sheets are secondary structures.'

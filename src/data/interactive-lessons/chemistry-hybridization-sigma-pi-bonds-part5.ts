@@ -15,9 +15,9 @@ export const chemHybridizationSigmaPiBondsPart5Data = {
 
 | Section |
 |---------|
-| Orbital Picture of Ethene (C₂H₄) |
+| Orbital Picture of Ethene $(C_{2}H_{4})$ |
 | Why Ethene Is Planar |
-| Orbital Picture of Acetylene (C₂H₂) |
+| Orbital Picture of Acetylene $(C_{2}H_{2})$ |
 | Orbital Picture of HCN |
 | Key Observations |
 
@@ -38,18 +38,18 @@ export const chemHybridizationSigmaPiBondsPart5Data = {
 
 Every double bond consists of exactly **one sigma bond** and **one pi bond**.
 
-### Orbital Picture of Ethene (C₂H₄)
+### Orbital Picture of Ethene $(C_{2}H_{4})$
 
 **Each carbon** in ethene:
-- Has 3 electron domains (2 C–H + 1 C=C) → **sp² hybridized**
-- Uses 3 sp² orbitals for sigma bonds
+- Has 3 electron domains (2 C–H + 1 C=C) → **$sp^{2}$ hybridized**
+- Uses 3 $sp^{2}$ orbitals for sigma bonds
 - Has 1 unhybridized p orbital perpendicular to the molecular plane
 
 **The C=C double bond:**
-- The sigma bond forms from **sp²–sp²** head-on overlap
+- The sigma bond forms from **$sp^{2}$–$sp^{2}$** head-on overlap
 - The pi bond forms from **p–p** lateral overlap (unhybridized p orbitals)
 
-**Bond count for C₂H₄:**
+**Bond count for $C_{2}H_{4}$:**
 - 4 C–H bonds → 4σ
 - 1 C=C bond → 1σ + 1π
 - **Total: 5σ + 1π = 6 bonds total**
@@ -66,7 +66,7 @@ Every double bond consists of exactly **one sigma bond** and **one pi bond**.
 
 Every triple bond consists of **one sigma bond** and **two pi bonds**.
 
-### Orbital Picture of Acetylene (C₂H₂)
+### Orbital Picture of Acetylene $(C_{2}H_{2})$
 
 **Each carbon** in acetylene:
 - Has 2 electron domains (1 C–H + 1 C≡C) → **sp hybridized**
@@ -78,7 +78,7 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
 - 1 pi bond: p–p lateral overlap in one plane
 - 1 pi bond: p–p lateral overlap in the perpendicular plane
 
-**Bond count for C₂H₂:**
+**Bond count for $C_{2}H_{2}$:**
 - 2 C–H bonds → 2σ
 - 1 C≡C bond → 1σ + 2π
 - **Total: 3σ + 2π = 5 bonds total**
@@ -106,27 +106,27 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
       exercise: {
         questions: [
           {
-            question: 'In C₂H₄ (ethene), each carbon is:',
-            options: ['sp hybridized with 2 unhybridized p orbitals', 'sp² hybridized with 1 unhybridized p orbital', 'sp³ hybridized with 0 unhybridized p orbitals', 'unhybridized'],
+            question: 'In $C_{2}H_{4}$ (ethene), each carbon is:',
+            options: ['sp hybridized with 2 unhybridized p orbitals', '$sp^{2}$ hybridized with 1 unhybridized p orbital', '$sp^{3}$ hybridized with 0 unhybridized p orbitals', 'unhybridized'],
             correctAnswer: 1,
-            explanation: 'Each carbon in ethene has 3 electron domains → sp² hybridized. sp² uses 1s + 2p, leaving 1 unhybridized p orbital for the pi bond.'
+            explanation: 'Each carbon in ethene has 3 electron domains → $sp^{2}$ hybridized. $sp^{2}$ uses 1s + 2p, leaving 1 unhybridized p orbital for the pi bond.'
           },
           {
-            question: 'How many pi bonds are in a molecule of N₂ (N≡N)?',
+            question: 'How many pi bonds are in a molecule of $N_{2}$ (N≡N)?',
             options: ['0', '1', '2', '3'],
             correctAnswer: 2,
-            explanation: 'N₂ has a triple bond. Triple bond = 1σ + 2π. So there are 2 pi bonds.'
+            explanation: '$N_{2}$ has a triple bond. Triple bond = 1σ + 2π. So there are 2 pi bonds.'
           },
           {
-            question: 'Why is ethene (C₂H₄) a flat, planar molecule?',
+            question: 'Why is ethene $(C_{2}H_{4})$ a flat, planar molecule?',
             options: [
-              'All atoms are sp³ hybridized',
+              'All atoms are $sp^{3}$ hybridized',
               'The pi bond requires parallel p orbitals, forcing all atoms into one plane',
               'The molecule is too small to be nonplanar',
               'Hydrogen atoms always lie in the same plane'
             ],
             correctAnswer: 1,
-            explanation: 'The pi bond in C₂H₄ forms from side-by-side overlap of unhybridized p orbitals. These must remain parallel, which forces all 6 atoms into the same plane.'
+            explanation: 'The pi bond in $C_{2}H_{4}$ forms from side-by-side overlap of unhybridized p orbitals. These must remain parallel, which forces all 6 atoms into the same plane.'
           }
         ]
       }
@@ -141,9 +141,9 @@ Adding pi bonds to a sigma bond makes the overall bond **stronger** and **shorte
 
 | Bond Type | Bond Order | Example | Bond Energy (kJ/mol) | Bond Length (pm) |
 |-----------|-----------|---------|---------------------|-----------------|
-| C–C single | 1 | C₂H₆ | ~348 | 154 |
-| C=C double | 2 | C₂H₄ | ~614 | 134 |
-| C≡C triple | 3 | C₂H₂ | ~839 | 120 |
+| C–C single | 1 | $C_{2}H_{6}$ | ~348 | 154 |
+| C=C double | 2 | $C_{2}H_{4}$ | ~614 | 134 |
+| C≡C triple | 3 | $C_{2}H_{2}$ | ~839 | 120 |
 
 ### Key Observations
 
@@ -167,12 +167,12 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
       exercise: {
         inputs: [
           {
-            label: 'Total sigma bonds in C₂H₄ (H₂C=CH₂: 4 C–H bonds + 1 C=C)',
+            label: 'Total sigma bonds in $C_{2}H_{4}$ ($H_{2}C$=$CH_{2}$: 4 C–H bonds + 1 C=C)',
             correctAnswer: '5',
             explanation: '4 C–H single bonds = 4σ. 1 C=C double bond = 1σ + 1π. Total sigma bonds = 4 + 1 = 5.'
           },
           {
-            label: 'Total pi bonds in C₂H₂ (HC≡CH: 2 C–H bonds + 1 C≡C)',
+            label: 'Total pi bonds in $C_{2}H_{2}$ (HC≡CH: 2 C–H bonds + 1 C≡C)',
             correctAnswer: '2',
             explanation: '2 C–H bonds contribute 0 pi bonds. 1 C≡C triple bond = 1σ + 2π. Total pi bonds = 2.'
           },
@@ -187,7 +187,7 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
             explanation: '1 H–C single bond = 0π. 1 C≡N triple bond = 2π. Total pi bonds = 2.'
           },
           {
-            label: 'Hybridization of each carbon in C₂H₂ — how many electron domains per carbon?',
+            label: 'Hybridization of each carbon in $C_{2}H_{2}$ — how many electron domains per carbon?',
             correctAnswer: '2',
             explanation: 'Each carbon has 1 C–H bond + 1 C≡C triple bond = 2 electron domains → sp hybridization.'
           }
@@ -203,17 +203,17 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
         dropdowns: [
           {
             id: 'hy-5-7-dd1',
-            label: 'Carbon in C₂H₄ has 3 electron domains (2 C–H + 1 C=C) → _______ hybridization',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            label: 'Carbon in $C_{2}H_{4}$ has 3 electron domains (2 C–H + 1 C=C) → _______ hybridization',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctIndex: 1,
-            explanation: 'Carbon in C₂H₄ has 3 electron domains (2 C–H + 1 C=C) → sp² hybridization.'
+            explanation: 'Carbon in $C_{2}H_{4}$ has 3 electron domains (2 C–H + 1 C=C) → $sp^{2}$ hybridization.'
           },
           {
             id: 'hy-5-7-dd2',
-            label: 'Carbon in C₂H₂ has 2 electron domains (1 C–H + 1 C≡C) → _______ hybridization',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            label: 'Carbon in $C_{2}H_{2}$ has 2 electron domains (1 C–H + 1 C≡C) → _______ hybridization',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctIndex: 0,
-            explanation: 'Carbon in C₂H₂ has 2 electron domains (1 C–H + 1 C≡C) → sp hybridization.'
+            explanation: 'Carbon in $C_{2}H_{2}$ has 2 electron domains (1 C–H + 1 C≡C) → sp hybridization.'
           },
           {
             id: 'hy-5-7-dd3',
@@ -240,16 +240,16 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
       exercise: {
         questions: [
           {
-            question: 'In the molecule CH₂=CH–CH₃ (propene), how many total pi bonds are there?',
+            question: 'In the molecule $CH_{2}$=CH–$CH_{3}$ (propene), how many total pi bonds are there?',
             options: ['0', '1', '2', '3'],
             correctAnswer: 1,
             explanation: 'Propene has one C=C double bond, which contains 1 pi bond. All other bonds (C–H and C–C single bonds) are sigma bonds only.'
           },
           {
-            question: 'Which of the following correctly lists the hybridization of all three carbons in propene (CH₂=CH–CH₃) from left to right?',
-            options: ['sp², sp², sp³', 'sp², sp², sp²', 'sp³, sp², sp³', 'sp, sp², sp³'],
+            question: 'Which of the following correctly lists the hybridization of all three carbons in propene ($CH_{2}$=CH–$CH_{3}$) from left to right?',
+            options: ['$sp^{2}$, $sp^{2}$, $sp^{3}$', '$sp^{2}$, $sp^{2}$, $sp^{2}$', '$sp^{3}$, $sp^{2}$, $sp^{3}$', 'sp, $sp^{2}$, $sp^{3}$'],
             correctAnswer: 0,
-            explanation: 'Left C: 2 H + 1 C=C = 3 domains → sp². Middle C: 1 H + 1 C=C + 1 C–C = 3 domains → sp². Right C: 3 H + 1 C–C = 4 domains → sp³.'
+            explanation: 'Left C: 2 H + 1 C=C = 3 domains → $sp^{2}$. Middle C: 1 H + 1 C=C + 1 C–C = 3 domains → $sp^{2}$. Right C: 3 H + 1 C–C = 4 domains → $sp^{3}$.'
           },
           {
             question: 'The estimated energy of a C=C pi bond alone (not the whole double bond) is approximately:',

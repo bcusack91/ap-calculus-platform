@@ -97,13 +97,13 @@ A plot of $\\ln k$ vs $1/T$ gives a **straight line** with:
           {
             question: 'If the y-intercept of an Arrhenius plot is 30.0, what is A?',
             options: [
-              '30.0 s⁻¹',
-              'e³⁰ s⁻¹',
+              '30.0 $s^{-1}$',
+              '$e^{30}$ $s^{-1}$',
               '30.0/R',
-              'ln(30.0) s⁻¹'
+              'ln(30.0) $s^{-1}$'
             ],
             correctAnswer: 1,
-            explanation: 'y-intercept = ln A = 30.0. Therefore A = e³⁰ ≈ 1.07 × 10¹³ s⁻¹ (for a first-order reaction).'
+            explanation: 'y-intercept = ln A = 30.0. Therefore A = $e^{30}$ ≈ $1.07 \\times 10^{13}$ $s^{-1}$ (for a first-order reaction).'
           }
         ]
       }
@@ -116,12 +116,12 @@ A plot of $\\ln k$ vs $1/T$ gives a **straight line** with:
 
 The rate constant for a reaction was measured at several temperatures:
 
-| $T$ (K) | $k$ (s⁻¹) | $1/T$ (K⁻¹) | $\\ln k$ |
+| $T$ (K) | $k$ $(s^{-1})$ | $1/T$ $(K^{-1})$ | $\\ln k$ |
 |---------|----------|------------|--------|
-| 300 | 1.0 × 10⁻⁷ | 3.33 × 10⁻³ | −16.12 |
-| 350 | 3.0 × 10⁻⁵ | 2.86 × 10⁻³ | −10.41 |
-| 400 | 1.5 × 10⁻³ | 2.50 × 10⁻³ | −6.50 |
-| 450 | 2.0 × 10⁻² | 2.22 × 10⁻³ | −3.91 |
+| 300 | $1.0 \\times 10^{-7}$ | $3.33 \\times 10^{-3}$ | −16.12 |
+| 350 | $3.0 \\times 10^{-5}$ | $2.86 \\times 10^{-3}$ | −10.41 |
+| 400 | $1.5 \\times 10^{-3}$ | $2.50 \\times 10^{-3}$ | −6.50 |
+| 450 | $2.0 \\times 10^{-2}$ | $2.22 \\times 10^{-3}$ | −3.91 |
 
 
 ---
@@ -146,8 +146,8 @@ $$E_a = -R \\times \\text{slope} = -(8.314)(-11{,}000) = 91{,}500 \\; \\text{J/m
 **Arrhenius Plot Calculations** 🧮
 
 An Arrhenius plot of ln k vs 1/T has two data points:
-- Point 1: $1/T = 3.00 \\times 10^{-3}$ K⁻¹, $\\ln k = -8.00$
-- Point 2: $1/T = 2.50 \\times 10^{-3}$ K⁻¹, $\\ln k = -4.00$
+- Point 1: $1/T = 3.00 \\times 10^{-3}$ $K^{-1}$, $\\ln k = -8.00$
+- Point 2: $1/T = 2.50 \\times 10^{-3}$ $K^{-1}$, $\\ln k = -4.00$
 
 **1)** What is the slope of the line? (in K, include sign)
 
@@ -161,7 +161,7 @@ An Arrhenius plot of ln k vs 1/T has two data points:
         hint1: 'Slope = (−4.00 − (−8.00))/(2.50e-3 − 3.00e-3) = 4.00/(−5.00e-4) = −8,000 K.',
         hint2: 'Ea = −R × slope = −8.314 × (−8,000) = 66,512 J/mol = 66.5 kJ/mol.',
         hint3: 'ln A = ln k − slope × (1/T) = −8.00 − (−8,000)(3.00e-3) = −8.00 + 24.0 = 16.0.',
-        explanation: '1) Slope = 4.00/(−5.00 × 10⁻⁴) = −8,000 K. 2) Ea = 8.314 × 8,000 = 66,512 J/mol = 66.5 kJ/mol. 3) ln A = −8.00 + 8,000 × 3.00 × 10⁻³ = −8.00 + 24.0 = 16.0.'
+        explanation: '1) Slope = $4.00/(-5.00 \\times 10^{-4})$ = −8,000 K. 2) Ea = 8.314 × 8,000 = 66,512 J/mol = 66.5 kJ/mol. 3) ln A = −8.00 + 8,000 × $3.00 \\times 10^{-3}$ = −8.00 + 24.0 = 16.0.'
       }
     },
     {
@@ -213,7 +213,7 @@ $$T(K) = T(°C) + 273.15$$
           },
           {
             label: 'The x-axis of an Arrhenius plot is',
-            options: ['T', 'ln T', '1/T', 'T²']
+            options: ['T', 'ln T', '1/T', '$T^{2}$']
           },
           {
             label: 'Moving RIGHT on an Arrhenius plot (larger 1/T) means',

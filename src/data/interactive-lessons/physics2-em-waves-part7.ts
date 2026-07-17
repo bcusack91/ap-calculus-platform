@@ -87,13 +87,13 @@ export const physics2EmWavesPart7Data = {
             explanation: 'P1: $I_0/2$ (unpolarized). P2: $(I_0/2)\\cos^2(30°) = (I_0/2)(3/4)$. P3: result $\\times \\cos^2(30°) = (I_0/2)(3/4)(3/4) = 9I_0/32$. Note: angle between P2 and P3 is $60°-30° = 30°$, NOT 60°!'
           },
           {
-            question: 'A source at 4 m has intensity 100 W/m². At 8 m, intensity is:',
-            options: ['50 W/m²', '25 W/m²', '200 W/m²', '12.5 W/m²'],
+            question: 'A source at 4 m has intensity 100 $W/m^{2}$. At 8 m, intensity is:',
+            options: ['50 $W/m^{2}$', '25 $W/m^{2}$', '200 $W/m^{2}$', '12.5 $W/m^{2}$'],
             correctAnswer: 1,
-            explanation: 'Quick ratio: $I_1 r_1^2 = I_2 r_2^2$. $100(16) = I_2(64)$. $I_2 = 1600/64 = 25$ W/m². Or: double the distance → $1/4$ the intensity.'
+            explanation: 'Quick ratio: $I_1 r_1^2 = I_2 r_2^2$. $100(16) = I_2(64)$. $I_2 = 1600/64 = 25$ $W/m^{2}$. Or: double the distance → $1/4$ the intensity.'
           },
           {
-            question: 'A satellite uses a solar sail (perfect reflector, area 1000 m²). Sunlight intensity is 1400 W/m². The force on the sail is:',
+            question: 'A satellite uses a solar sail (perfect reflector, area 1000 $m^{2}$). Sunlight intensity is 1400 $W/m^{2}$. The force on the sail is:',
             options: ['$4.7 \\times 10^{-3}$ N', '$9.3 \\times 10^{-3}$ N', '$1.4 \\times 10^6$ N', '$4.7 \\times 10^{-6}$ N'],
             correctAnswer: 1,
             explanation: 'Radiation pressure (reflected): $P = 2I/c = 2(1400)/(3 \\times 10^8) = 9.3 \\times 10^{-6}$ Pa. Force: $F = PA = 9.3 \\times 10^{-6} \\times 1000 = 9.3 \\times 10^{-3}$ N. Small but constant — adds up over time in space!'

@@ -38,7 +38,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Predict sign of ΔS | Count $\\Delta n_{\\text{gas}}$ (products − reactants) | If $\\Delta n = 0$, consider phase & complexity |
 | Calculate ΔS° | $\\Delta S° = \\sum n \\cdot S°(\\text{prod}) - \\sum m \\cdot S°(\\text{react})$ | $S°$ for elements is **NOT** zero! |
 | Unit conversion | Convert ΔS from J/K to kJ/K (÷ 1000) | Must match ΔH units before computing ΔG |
-| Entropy of surroundings | $\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$ | Exothermic → positive ΔSₛᵤᵣᵣ |
+| Entropy of surroundings | $\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$ | Exothermic → positive $\\Delta S_{s}$ᵤᵣᵣ |
 
 ---
 
@@ -62,7 +62,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'For 4Fe(s) + 3O₂(g) → 2Fe₂O₃(s), the sign of ΔS° is:',
+            question: 'For 4Fe(s) + $3O_{2}(g)$ → $2Fe_{2}O_{3}(s)$, the sign of ΔS° is:',
             options: [
               'Positive',
               'Negative',
@@ -203,7 +203,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             explanation: 'For ΔG = ΔH − TΔS to be negative at ALL temperatures: ΔH must be negative (exothermic) and ΔS must be positive. Then both terms make ΔG more negative.'
           },
           {
-            question: 'The dissolution of NH₄Cl in water is endothermic (ΔH > 0) and spontaneous at room temperature. What must be true?',
+            question: 'The dissolution of $NH_{4}Cl$ in water is endothermic (ΔH > 0) and spontaneous at room temperature. What must be true?',
             options: [
               'ΔS must be negative',
               'ΔS must be positive and large enough that TΔS > ΔH',

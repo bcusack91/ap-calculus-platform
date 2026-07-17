@@ -44,7 +44,7 @@ export const physics2EmWavesPart6Data = {
 $\\lambda = c/f = 3 \\times 10^8 / 10^8 = 3$ m
 
 **Step 2 — Intensity at receiver:**
-$I = P/(4\\pi r^2) = 50 / (4\\pi \\times (10^3)^2) = 50/(4\\pi \\times 10^6) \\approx 4.0 \\times 10^{-6}$ W/m²
+$I = P/(4\\pi r^2) = 50 / (4\\pi \\times (10^3)^2) = 50/(4\\pi \\times 10^6) \\approx 4.0 \\times 10^{-6}$ $W/m^{2}$
 
 **Step 3 — E field amplitude:**
 $E_0 = \\sqrt{2I/(c\\epsilon_0)} = \\sqrt{2(4.0 \\times 10^{-6})/(3 \\times 10^8 \\times 8.85 \\times 10^{-12})} \\approx 0.055$ V/m
@@ -82,7 +82,7 @@ $B_0 = E_0/c = 0.055/(3 \\times 10^8) \\approx 1.8 \\times 10^{-10}$ T
             explanation: '$\\vec{S} = \\vec{E} \\times \\vec{B}/\\mu_0$ points in the direction of energy propagation. Its magnitude $|S| = EB/\\mu_0$ gives the instantaneous power per unit area (intensity when time-averaged).'
           },
           {
-            question: 'Sunlight ($I \\approx 1400$ W/m²) hits a perfect mirror. The radiation pressure is:',
+            question: 'Sunlight ($I \\approx 1400$ $W/m^{2}$) hits a perfect mirror. The radiation pressure is:',
             options: ['$4.7 \\times 10^{-6}$ Pa', '$9.3 \\times 10^{-6}$ Pa', '$1400$ Pa', '$2.8 \\times 10^3$ Pa'],
             correctAnswer: 1,
             explanation: 'Perfect mirror → $P = 2I/c = 2(1400)/(3 \\times 10^8) \\approx 9.3 \\times 10^{-6}$ Pa. Tiny pressure, but over large areas (solar sails) it adds up to measurable force.'
@@ -98,9 +98,9 @@ $B_0 = E_0/c = 0.055/(3 \\times 10^8) \\approx 1.8 \\times 10^{-10}$ T
 
 A laser has power 5 mW and beam diameter 2 mm.
 
-**1)** Beam cross-sectional area in m²? (use scientific notation like 3.14e-6)
+**1)** Beam cross-sectional area in $m^{2}$? (use scientific notation like 3.14e-6)
 
-**2)** Intensity of beam? (in W/m², round to nearest integer)
+**2)** Intensity of beam? (in $W/m^{2}$, round to nearest integer)
 
 **3)** If this light is fully absorbed by a surface, what is the radiation pressure in Pa? (scientific notation like 5.3e-6)
       `,
@@ -110,7 +110,7 @@ A laser has power 5 mW and beam diameter 2 mm.
         hint1: '$A = \\pi r^2 = \\pi(0.001)^2$',
         hint2: '$I = P/A = 0.005/A$',
         hint3: '$P_{rad} = I/c$ for absorbed light',
-        explanation: '1) $\\pi(10^{-3})^2 \\approx 3.14 \\times 10^{-6}$ m². 2) $0.005/3.14 \\times 10^{-6} \\approx 1592$ W/m². 3) $1592/(3 \\times 10^8) \\approx 5.3 \\times 10^{-6}$ Pa.'
+        explanation: '1) $\\pi(10^{-3})^2 \\approx 3.14 \\times 10^{-6}$ $m^{2}$. 2) $0.005/3.14 \\times 10^{-6} \\approx 1592$ $W/m^{2}$. 3) $1592/(3 \\times 10^8) \\approx 5.3 \\times 10^{-6}$ Pa.'
       }
     },
     {

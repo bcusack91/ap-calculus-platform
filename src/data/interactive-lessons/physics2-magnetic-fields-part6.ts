@@ -167,7 +167,7 @@ The deflection angle is proportional to the current, making it a useful measurin
 
 A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and sits in a 0.30 T uniform magnetic field.
 
-1) Magnetic dipole moment $\\mu$ (in A·m²)
+1) Magnetic dipole moment $\\mu$ $(in A\\cdot m^{2})$
 
 2) Maximum torque on the coil (in N·m)
 
@@ -181,7 +181,7 @@ A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and
         hint1: '$\\mu = NIA = (50)(2.0)(0.08 \\times 0.05)$.',
         hint2: '$\\tau_{max} = \\mu B = (0.40)(0.30)$, occurring when $\\phi = 90°$.',
         hint3: '$\\tau = \\mu B \\sin 30° = (0.40)(0.30)(0.5)$.',
-        explanation: '(1) $A = 0.08 \\times 0.05 = 0.004$ m². $\\mu = (50)(2.0)(0.004) = 0.40$ A·m². (2) $\\tau_{max} = \\mu B = (0.40)(0.30) = 0.12$ N·m. (3) $\\tau = (0.40)(0.30)\\sin 30° = 0.12 \\times 0.5 = 0.06$ N·m.'
+        explanation: '(1) $A = 0.08 \\times 0.05 = 0.004$ $m^{2}$. $\\mu = (50)(2.0)(0.004) = 0.40$ $A\\cdot m^{2}$. (2) $\\tau_{max} = \\mu B = (0.40)(0.30) = 0.12$ N·m. (3) $\\tau = (0.40)(0.30)\\sin 30° = 0.12 \\times 0.5 = 0.06$ N·m.'
       }
     },
     {
@@ -194,7 +194,7 @@ A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and
         dropdowns: [
           {
             label: 'Magnetic dipole moment μ = NIA has units of:',
-            options: ['T·m', 'A·m²', 'N/m', 'Wb']
+            options: ['T·m', '$A\\cdot m^{2}$', 'N/m', 'Wb']
           },
           {
             label: 'Torque is zero when μ and B are:',
@@ -209,11 +209,11 @@ A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and
             options: ['0°', '45°', '90°', '180°']
           }
         ],
-        correctAnswers: ['A·m²', 'parallel or antiparallel', 'commutator', '0°'],
-        hint1: '$\\mu = NIA$ → (turns)(amps)(m²) = A·m².',
+        correctAnswers: ['$A\\cdot m^{2}$', 'parallel or antiparallel', 'commutator', '0°'],
+        hint1: '$\\mu = NIA$ → $(turns)(amps)(m^{2})$ = $A\\cdot m^{2}$.',
         hint2: '$\\tau = \\mu B \\sin\\phi = 0$ when $\\phi = 0°$ or $180°$.',
         hint3: 'Minimum of $-\\cos\\phi$ occurs at $\\phi = 0°$.',
-        explanation: 'μ has units A·m². Torque vanishes when μ ∥ B or μ antiparallel to B (sin = 0). A commutator reverses current for continuous rotation. Energy is minimum at φ = 0° (stable equilibrium).'
+        explanation: 'μ has units $A\\cdot m^{2}$. Torque vanishes when μ ∥ B or μ antiparallel to B (sin = 0). A commutator reverses current for continuous rotation. Energy is minimum at φ = 0° (stable equilibrium).'
       }
     }
   ]

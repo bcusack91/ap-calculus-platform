@@ -86,9 +86,9 @@ To move beyond molecular equations, you must know which substances **dissociate*
 
 | Category | Examples |
 |----------|----------|
-| Strong acids | HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄ |
-| Strong bases | NaOH, KOH, Ca(OH)₂, Ba(OH)₂ |
-| Soluble ionic compounds | NaCl, KNO₃, AgNO₃ (any soluble salt) |
+| Strong acids | HCl, HBr, HI, $HNO_{3}$, $H_{2}SO_{4}$, $HClO_{4}$ |
+| Strong bases | NaOH, KOH, $Ca(OH)_{2}$, $Ba(OH)_{2}$ |
+| Soluble ionic compounds | NaCl, $KNO_{3}$, $AgNO_{3}$ (any soluble salt) |
 
 $$\\boxed{\\text{NaCl}(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq)}$$
 
@@ -99,8 +99,8 @@ $$\\boxed{\\text{NaCl}(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq)}$$
 
 | Category | Examples |
 |----------|----------|
-| Weak acids | HF, CH₃COOH, H₂CO₃ |
-| Weak bases | NH₃, amines |
+| Weak acids | HF, $CH_{3}COOH$, $H_{2}CO_{3}$ |
+| Weak bases | $NH_{3}$, amines |
 
 These remain mostly as intact molecules in solution and are written in **molecular form**.
 
@@ -111,8 +111,8 @@ These remain mostly as intact molecules in solution and are written in **molecul
 
 | Category | Examples |
 |----------|----------|
-| Molecular compounds | Sugar (C₆H₁₂O₆), ethanol |
-| Water | H₂O |
+| Molecular compounds | Sugar $(C_{6}H_{12}O_{6})$, ethanol |
+| Water | $H_{2}O$ |
 
 
 ---
@@ -140,9 +140,9 @@ These remain mostly as intact molecules in solution and are written in **molecul
 
 > **Solution:**
 
-**Step 1:** Reactants: AgNO₃ and NaCl (both in aqueous solution)
+**Step 1:** Reactants: $AgNO_{3}$ and NaCl (both in aqueous solution)
 
-**Step 2:** Products: The cations and anions swap partners → AgCl and NaNO₃
+**Step 2:** Products: The cations and anions swap partners → AgCl and $NaNO_{3}$
 
 **Step 3:** Already balanced:
 $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
@@ -172,18 +172,18 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
               'Without phase labels'
             ],
             correctAnswer: 1,
-            explanation: 'In a molecular (formula) equation, all compounds are written as complete, neutral formulas such as NaCl or AgNO₃, not as separated ions.'
+            explanation: 'In a molecular (formula) equation, all compounds are written as complete, neutral formulas such as NaCl or $AgNO_{3}$, not as separated ions.'
           },
           {
             question: 'Which of the following is a strong electrolyte that fully dissociates in water?',
             options: [
-              'CH₃COOH (acetic acid)',
-              'C₆H₁₂O₆ (glucose)',
-              'HNO₃ (nitric acid)',
-              'H₂O (water)'
+              '$CH_{3}COOH$ (acetic acid)',
+              '$C_{6}H_{12}O_{6}$ (glucose)',
+              '$HNO_{3}$ (nitric acid)',
+              '$H_{2}O$ (water)'
             ],
             correctAnswer: 2,
-            explanation: 'HNO₃ is one of the six common strong acids and fully dissociates into H⁺ and NO₃⁻ in water. Acetic acid is a weak acid, glucose is a non-electrolyte, and water is a very weak electrolyte.'
+            explanation: '$HNO_{3}$ is one of the six common strong acids and fully dissociates into $H^{+}$ and $NO_{3}^{-}$ in water. Acetic acid is a weak acid, glucose is a non-electrolyte, and water is a very weak electrolyte.'
           },
           {
             question: 'The phase label (aq) means the substance is:',
@@ -220,9 +220,9 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
 
 **1)** KBr dissolved in water
 
-**2)** CH₃COOH (acetic acid) in water
+**2)** $CH_{3}COOH$ (acetic acid) in water
 
-**3)** C₂H₅OH (ethanol) in water
+**3)** $C_{2}H_{5}OH$ (ethanol) in water
       `,
       exercise: {
         boxes: 3,
@@ -230,7 +230,7 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
         hint1: 'KBr is a soluble ionic compound. Does it fully dissociate?',
         hint2: 'Acetic acid is an organic acid. Is it on the strong acid list?',
         hint3: 'Ethanol is a molecular (covalent) compound.',
-        explanation: '1) KBr is a soluble ionic salt → strong electrolyte (fully dissociates into K⁺ and Br⁻). 2) CH₃COOH is a weak acid → weak electrolyte (partially dissociates). 3) Ethanol is a molecular compound that does not produce ions → non-electrolyte.'
+        explanation: '1) KBr is a soluble ionic salt → strong electrolyte (fully dissociates into $K^{+}$ and $Br^{-}$). 2) $CH_{3}COOH$ is a weak acid → weak electrolyte (partially dissociates). 3) Ethanol is a molecular compound that does not produce ions → non-electrolyte.'
       }
     },
     {
@@ -243,7 +243,7 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
         dropdowns: [
           {
             label: 'In a molecular equation, NaCl(aq) is written as',
-            options: ['Na⁺ + Cl⁻', 'NaCl', 'Na + Cl', 'Na₂Cl₂']
+            options: ['$Na^{+}$ + $Cl^{-}$', 'NaCl', 'Na + Cl', '$Na_{2}Cl_{2}$']
           },
           {
             label: 'A substance labeled (s) in an equation is a',
@@ -262,7 +262,7 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
         hint1: 'Molecular equations keep compounds as complete formulas.',
         hint2: 'The (s) phase label stands for a specific state of matter.',
         hint3: 'HCl is one of the six common strong acids.',
-        explanation: 'In molecular equations, NaCl stays as NaCl (not ions). (s) means solid. HCl is a strong acid (strong electrolyte). Sugar (C₆H₁₂O₆) does not produce ions in solution — non-electrolyte.'
+        explanation: 'In molecular equations, NaCl stays as NaCl (not ions). (s) means solid. HCl is a strong acid (strong electrolyte). Sugar $(C_{6}H_{12}O_{6})$ does not produce ions in solution — non-electrolyte.'
       }
     },
     {
@@ -282,18 +282,18 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
               '$\\text{Pb(NO}_3)_2(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(aq) + 2\\text{KNO}_3(aq)$'
             ],
             correctAnswer: 1,
-            explanation: 'Pb²⁺ needs 2 I⁻ ions to form PbI₂, so we need 2 KI. This gives 2 KNO₃. PbI₂ is insoluble so it is labeled (s). The balanced equation is Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq).'
+            explanation: '$Pb^{2+}$ needs 2 $I^{-}$ ions to form $PbI_{2}$, so we need 2 KI. This gives 2 $KNO_{3}$. $PbI_{2}$ is insoluble so it is labeled (s). The balanced equation is $Pb(NO_{3})_{2}(aq)$ + 2KI(aq) → $PbI_{2}(s)$ + $2KNO_{3}(aq)$.'
           },
           {
             question: 'Which of the following would be written in molecular form (NOT as ions) in a complete ionic equation?',
             options: [
-              'NaNO₃(aq)',
-              'H₂O(l)',
+              '$NaNO_{3}(aq)$',
+              '$H_{2}O(l)$',
               'KOH(aq)',
               'HBr(aq)'
             ],
             correctAnswer: 1,
-            explanation: 'H₂O(l) is a liquid, not an aqueous strong electrolyte. It stays in molecular form. NaNO₃(aq), KOH(aq), and HBr(aq) are all strong electrolytes in solution and would be written as separated ions.'
+            explanation: '$H_{2}O(l)$ is a liquid, not an aqueous strong electrolyte. It stays in molecular form. $NaNO_{3}(aq)$, KOH(aq), and HBr(aq) are all strong electrolytes in solution and would be written as separated ions.'
           }
         ]
       }

@@ -47,13 +47,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 | System | Cathode Product | Anode Product |
 |--------|----------------|---------------|
-| Molten salt | Metal | Nonmetal (Cl₂, O₂, Br₂) |
-| Aqueous, active metal | H₂ | Depends on anion |
+| Molten salt | Metal | Nonmetal ($Cl_{2}$, $O_{2}$, $Br_{2}$) |
+| Aqueous, active metal | $H_{2}$ | Depends on anion |
 | Aqueous, less active metal | Metal deposits | Depends on anion |
-| Aqueous, halide anion | — | Halogen (Cl₂, Br₂, I₂) |
-| Aqueous, oxyanion/F⁻ | — | O₂ |
+| Aqueous, halide anion | — | Halogen ($Cl_{2}$, $Br_{2}$, $I_{2}$) |
+| Aqueous, $oxyanion/F^{-}$ | — | $O_{2}$ |
 
-> 🔑 **Quick Rule:** Active metals (Na, K, Ca, Al) can’t be deposited from aqueous solution—you get H₂ instead. Use molten salts for these metals.
+> 🔑 **Quick Rule:** Active metals (Na, K, Ca, Al) can’t be deposited from aqueous solution—you get $H_{2}$ instead. Use molten salts for these metals.
 
 
 ---
@@ -74,7 +74,7 @@ This combines all steps into one equation.
       exercise: {
         questions: [
           {
-            question: 'A current of 3.00 A flows through CuSO₄ solution for 2.00 hours. How many grams of Cu deposit? (Cu²⁺ + 2e⁻ → Cu, M = 63.55 g/mol)',
+            question: 'A current of 3.00 A flows through $CuSO_{4}$ solution for 2.00 hours. How many grams of Cu deposit? ($Cu^{2+}$ + $2e^{-}$ → Cu, M = 63.55 g/mol)',
             options: [
               '3.56 g',
               '7.12 g',
@@ -87,16 +87,16 @@ This combines all steps into one equation.
           {
             question: 'In the electrolysis of aqueous KBr, the products are:',
             options: [
-              'Cathode: K metal, Anode: Br₂',
-              'Cathode: H₂, Anode: Br₂',
-              'Cathode: H₂, Anode: O₂',
-              'Cathode: K metal, Anode: O₂'
+              'Cathode: K metal, Anode: $Br_{2}$',
+              'Cathode: $H_{2}$, Anode: $Br_{2}$',
+              'Cathode: $H_{2}$, Anode: $O_{2}$',
+              'Cathode: K metal, Anode: $O_{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'K⁺ is too reactive to deposit from water → H₂ at cathode. Br⁻ is a simple halide → Br₂ at anode. Products: H₂ and Br₂.'
+            explanation: '$K^{+}$ is too reactive to deposit from water → $H_{2}$ at cathode. $Br^{-}$ is a simple halide → $Br_{2}$ at anode. Products: $H_{2}$ and $Br_{2}$.'
           },
           {
-            question: 'How long (in minutes) must a 5.00 A current flow to deposit 10.0 g of Ag? (Ag⁺ + e⁻ → Ag, M = 107.87 g/mol)',
+            question: 'How long (in minutes) must a 5.00 A current flow to deposit 10.0 g of Ag? ($Ag^{+}$ + $e^{-}$ → Ag, M = 107.87 g/mol)',
             options: [
               '14.9 min',
               '29.8 min',
@@ -117,9 +117,9 @@ This combines all steps into one equation.
 
 **1)** $I = 4.00$ A, $t = 50.0$ min. Total charge in coulombs?
 
-**2)** Using the charge from (1), how many grams of Ni deposit from Ni²⁺? ($n = 2$, $M_{\\text{Ni}} = 58.69$ g/mol) (to 3 significant figures)
+**2)** Using the charge from (1), how many grams of Ni deposit from $Ni^{2+}$? ($n = 2$, $M_{\\text{Ni}} = 58.69$ g/mol) (to 3 significant figures)
 
-**3)** In the electrolysis of molten CaCl₂, what forms at the cathode? (type "Ca" or "Cl2")
+**3)** In the electrolysis of molten $CaCl_{2}$, what forms at the cathode? (type "Ca" or "Cl2")
       `,
       exercise: {
         boxes: 3,
@@ -127,7 +127,7 @@ This combines all steps into one equation.
         hint1: '$q = 4.00 \\times (50.0 \\times 60)$',
         hint2: '$m = 12000 \\times 58.69/(2 \\times 96485)$',
         hint3: 'In molten salts, the cation is reduced at the cathode.',
-        explanation: '1) $q = 4.00 \\times 3000 = 12{,}000$ C. 2) $m = 12{,}000 \\times 58.69/(2 \\times 96{,}485) = 704{,}280/192{,}970 = 3.65$ g. 3) Ca²⁺ is reduced to Ca at the cathode (molten → no water competition).'
+        explanation: '1) $q = 4.00 \\times 3000 = 12{,}000$ C. 2) $m = 12{,}000 \\times 58.69/(2 \\times 96{,}485) = 704{,}280/192{,}970 = 3.65$ g. 3) $Ca^{2+}$ is reduced to Ca at the cathode (molten → no water competition).'
       }
     },
     {
@@ -151,15 +151,15 @@ This combines all steps into one equation.
             options: ['voltage', 'charge (q = It)', 'mass deposited', 'moles deposited']
           },
           {
-            label: 'The electrolysis of aqueous Na₂SO₄ produces',
-            options: ['Na and SO₂', 'H₂ and O₂', 'Na and O₂', 'H₂ and SO₂']
+            label: 'The electrolysis of aqueous $Na_{2}SO_{4}$ produces',
+            options: ['Na and $SO_{2}$', '$H_{2}$ and $O_{2}$', 'Na and $O_{2}$', '$H_{2}$ and $SO_{2}$']
           }
         ],
-        correctAnswers: ['seconds', 'm = ItM/(nF)', 'charge (q = It)', 'H₂ and O₂'],
+        correctAnswers: ['seconds', 'm = ItM/(nF)', 'charge (q = It)', '$H_{2}$ and $O_{2}$'],
         hint1: 'I is in amperes (C/s), so t must be in seconds.',
         hint2: 'Include molar mass M to convert moles to grams.',
         hint3: 'In series, the same current flows for the same time.',
-        explanation: 'Time in seconds. m = ItM/(nF). Series cells: same charge. Na₂SO₄(aq): Na⁺ too reactive → H₂; SO₄²⁻ is an oxyanion → O₂.'
+        explanation: 'Time in seconds. m = ItM/(nF). Series cells: same charge. $Na_{2}SO_{4}(aq)$: $Na^{+}$ too reactive → $H_{2}$; $SO_{4}^{2-}$ is an oxyanion → $O_{2}$.'
       }
     },
     {
@@ -171,7 +171,7 @@ This combines all steps into one equation.
       exercise: {
         questions: [
           {
-            question: 'Cells A (Ag⁺, n=1) and B (Cu²⁺, n=2) are in series. 5.39 g of Ag deposits in Cell A. How many grams of Cu deposit in Cell B? (M_Ag = 107.87, M_Cu = 63.55)',
+            question: 'Cells A ($Ag^{+}$, n=1) and B ($Cu^{2+}$, n=2) are in series. 5.39 g of Ag deposits in Cell A. How many grams of Cu deposit in Cell B? (M_Ag = 107.87, M_Cu = 63.55)',
             options: [
               '3.18 g',
               '1.59 g',

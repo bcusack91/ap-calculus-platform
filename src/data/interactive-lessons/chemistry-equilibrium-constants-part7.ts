@@ -72,7 +72,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               '$K_c = 1$'
             ],
             correctAnswer: 1,
-            explanation: 'Both Cr(s) and CrCl₃(s) are pure solids — excluded! Only Cl₂(g) remains. With Cl₂ only in the denominator: $K_c = \\frac{1}{[\\text{Cl}_2]^3}$.'
+            explanation: 'Both Cr(s) and $CrCl_{3}(s)$ are pure solids — excluded! Only $Cl_{2}(g)$ remains. With $Cl_{2}$ only in the denominator: $K_c = \\frac{1}{[\\text{Cl}_2]^3}$.'
           },
           {
             question: 'Given: $\\text{A} \\rightleftharpoons \\text{B}$, $K_1 = 0.50$ and $\\text{B} \\rightleftharpoons \\text{C}$, $K_2 = 8.0$. What is $K$ for $2\\,\\text{C} \\rightleftharpoons 2\\,\\text{A}$?',
@@ -195,7 +195,7 @@ At equilibrium at 700 K: $[\\text{SO}_2] = 0.10\\;\\text{M}$, $[\\text{O}_2] = 0
               'The reaction will stop completely'
             ],
             correctAnswer: 1,
-            explanation: '$Q = 5.0 \\times 10^{-6} > K = 1.67 \\times 10^{-7}$, so there are too many products. The reaction shifts left, converting H₂ and S₂ back into H₂S.'
+            explanation: '$Q = 5.0 \\times 10^{-6} > K = 1.67 \\times 10^{-7}$, so there are too many products. The reaction shifts left, converting $H_{2}$ and $S_{2}$ back into $H_{2}S$.'
           }
         ]
       }

@@ -111,7 +111,7 @@ $$v(t) = v_T\\tanh\\left(\\frac{gt}{v_T}\\right)$$
     {
       id: 'varaccel4-mcq3',
       type: 'mcq' as const,
-      question: 'An object falls with $a = 10 - 0.4v^2$ m/s². The terminal velocity is:',
+      question: 'An object falls with $a = 10 - 0.4v^2$ $m/s^{2}$. The terminal velocity is:',
       options: ['$5$ m/s', '$25$ m/s', '$4$ m/s', '$\\sqrt{10}$ m/s'],
       correctAnswer: 0,
       explanation: 'At terminal velocity, $a = 0$: $10 - 0.4v_T^2 = 0 \\implies v_T^2 = 25 \\implies v_T = 5$ m/s.'

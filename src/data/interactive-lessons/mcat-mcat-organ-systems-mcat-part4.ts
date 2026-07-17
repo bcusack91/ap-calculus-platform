@@ -61,7 +61,7 @@ where $U_x$ = urine concentration of substance x, $V$ = urine flow rate, $P_x$ =
 
 ### Countercurrent Multiplier (How Concentrated Urine Is Made)
 
-The thick ascending limb actively pumps Na⁺/K⁺/2Cl⁻ out (impermeable to water), making the medullary interstitium hyperosmotic (up to ~1200 mOsm). The descending limb (water-permeable, solute-impermeable) loses water passively into that gradient. The vasa recta preserve the gradient via countercurrent EXCHANGE. ADH then lets water exit the collecting duct down this gradient → concentrated urine.`
+The thick ascending limb actively pumps $Na^{+}/K^{+}/2Cl^{-}$ out (impermeable to water), making the medullary interstitium hyperosmotic (up to ~1200 mOsm). The descending limb (water-permeable, solute-impermeable) loses water passively into that gradient. The vasa recta preserve the gradient via countercurrent EXCHANGE. ADH then lets water exit the collecting duct down this gradient → concentrated urine.`
     },
     {
       id: 'os4-quiz1',
@@ -124,13 +124,13 @@ Clearance (30) < GFR (120) → the tubule reabsorbs most of the filtered substan
 <details>
 <summary><b>Example 3: Predict the effect of a loop diuretic</b></summary>
 
-**Question:** Furosemide blocks the Na⁺/K⁺/2Cl⁻ cotransporter in the thick ascending limb. Predict its effect on (a) the medullary osmotic gradient and (b) urine volume.
+**Question:** Furosemide blocks the $Na^{+}/K^{+}/2Cl^{-}$ cotransporter in the thick ascending limb. Predict its effect on (a) the medullary osmotic gradient and (b) urine volume.
 
 **Solution:**
 1. The thick ascending limb normally pumps NaCl into the interstitium to build the medullary gradient.
 2. Blocking the cotransporter → less NaCl deposited → the medullary gradient COLLAPSES.
 3. Without a steep gradient, the collecting duct cannot extract water even when ADH is present.
-4. Result: large volume of dilute urine (powerful diuresis), plus K⁺ wasting (K⁺ no longer recycled). ✓
+4. Result: large volume of dilute urine (powerful diuresis), plus $K^{+}$ wasting ($K^{+}$ no longer recycled). ✓
 
 **High-yield connection:** This is why loop diuretics are the strongest class — they attack the gradient itself, not just one segment's transport.
 </details>`

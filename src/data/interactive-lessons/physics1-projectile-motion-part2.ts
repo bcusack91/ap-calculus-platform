@@ -108,7 +108,7 @@ For AP Physics problems, you should know these common values:
       content: `
 **Angled Launch Problem** 🧮
 
-A football is kicked at 25 m/s at 53° above horizontal from ground level. Use $g = 10$ m/s², $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
+A football is kicked at 25 m/s at 53° above horizontal from ground level. Use $g = 10$ $m/s^{2}$, $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
 
 1) $v_{0x}$ (in m/s)
 
@@ -162,7 +162,7 @@ A football is kicked at 25 m/s at 53° above horizontal from ground level. Use $
       content: `
 **Exit Problem** ✅
 
-A golf ball is hit at 50 m/s at 37° above horizontal. Use $g = 10$ m/s², $\\cos 37° = 0.8$, $\\sin 37° = 0.6$.
+A golf ball is hit at 50 m/s at 37° above horizontal. Use $g = 10$ $m/s^{2}$, $\\cos 37° = 0.8$, $\\sin 37° = 0.6$.
 
 1) $v_{0x}$ (in m/s)
 

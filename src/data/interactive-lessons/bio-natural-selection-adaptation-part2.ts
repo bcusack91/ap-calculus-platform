@@ -155,7 +155,7 @@ Because the three modes are defined by their effect on the **mean** and **varian
               '0.60'
             ],
             correctAnswer: 1,
-            explanation: 'Use allele-counting: the b allele count is 2(bb) + 1(Bb) = 2(80) + 240 = 400. Total alleles = 2N = 2(500) = 1000. So frequency of b = 400/1000 = 0.40. Option A (0.16) is the trap — that is the GENOTYPE frequency of bb (80/500 = 0.16, which equals q²), not the ALLELE frequency q. Confusing q² with q is the most common error in the unit.'
+            explanation: 'Use allele-counting: the b allele count is 2(bb) + 1(Bb) = 2(80) + 240 = 400. Total alleles = 2N = 2(500) = 1000. So frequency of b = 400/1000 = 0.40. Option A (0.16) is the trap — that is the GENOTYPE frequency of bb (80/500 = 0.16, which equals $q^{2}$), not the ALLELE frequency q. Confusing $q^{2}$ with q is the most common error in the unit.'
           },
           {
             question: 'In the same beetle population, directional selection acts so that bb individuals have relative fitness 0.0 (all die before reproducing) while BB and Bb have fitness 1.0. After one round of selection, which best describes the change in the B allele frequency?',

@@ -88,7 +88,7 @@ Growth has nearly stopped — the herd is leveling off at carrying capacity, the
       content: `
 ### Problem 3 — Diversity Index
 
-A biologist surveys a 1 m² quadrat of tide-pool invertebrates and records the counts below. Compute Simpson's Diversity Index, $D = 1 - \\sum (p_i)^2$.
+A biologist surveys a 1 $m^{2}$ quadrat of tide-pool invertebrates and records the counts below. Compute Simpson's Diversity Index, $D = 1 - \\sum (p_i)^2$.
 
 | Species | Count | $p_i$ | $(p_i)^2$ |
 |---|---|---|---|
@@ -167,7 +167,7 @@ Because $N = K/2$, this is the **maximum** growth rate the population will ever 
             explanation: 'Fastest growth is at N = K/2 = 400. There dN/dt = (0.6)(400)(800-400)/800 = (0.6)(400)(0.5) = 120/yr. The trap "N = 400, dN/dt = 240" forgets the (K-N)/K = 0.5 factor and just computes r_max × N (0.6 × 400 = 240) — that is the exponential value, double the true logistic maximum. The "N = 800" choice is the always-wrong peak-at-K trap (dN/dt = 0 at K).'
           },
           {
-            question: 'A meadow contains 4 species with proportions 0.5, 0.3, 0.1, and 0.1. What is Simpson\'s index D = 1 - Σ(pi)², and what does it represent?',
+            question: 'A meadow contains 4 species with proportions 0.5, 0.3, 0.1, and 0.1. What is Simpson\'s index D = 1 - $\\Sigma (pi)^{2}$, and what does it represent?',
             options: [
               'D = 0.36; the probability two random individuals are the same species',
               'D = 0.64; the probability two random individuals are different species',
@@ -175,7 +175,7 @@ Because $N = K/2$, this is the **maximum** growth rate the population will ever 
               'D = 0.64; the probability two random individuals are the same species'
             ],
             correctAnswer: 1,
-            explanation: 'Σ(pi)² = 0.25 + 0.09 + 0.01 + 0.01 = 0.36, so D = 1 - 0.36 = 0.64, the probability that two randomly drawn individuals are DIFFERENT species. The "D = 0.36" traps report Σ(pi)² before subtracting from 1 (and 0.36 is the probability of the SAME species). The interpretation must also match: the "1 −" form measures the chance of DIFFERENT species, so any answer pairing 0.64 with "same species" is internally inconsistent.'
+            explanation: '$\\Sigma (pi)^{2}$ = 0.25 + 0.09 + 0.01 + 0.01 = 0.36, so D = 1 - 0.36 = 0.64, the probability that two randomly drawn individuals are DIFFERENT species. The "D = 0.36" traps report $\\Sigma (pi)^{2}$ before subtracting from 1 (and 0.36 is the probability of the SAME species). The interpretation must also match: the "1 −" form measures the chance of DIFFERENT species, so any answer pairing 0.64 with "same species" is internally inconsistent.'
           }
         ]
       }

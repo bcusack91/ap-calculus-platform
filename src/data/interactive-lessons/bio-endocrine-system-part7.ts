@@ -181,7 +181,7 @@ AP Biology free-response questions often ask you to **design an experiment** inv
 | **Positive feedback** | Rare; amplifies signal; requires terminating event (oxytocin, LH surge) |
 | **Insulin/Glucagon** | Antagonistic; regulate blood glucose; beta cells / alpha cells |
 | **Thyroid axis** | TRH → TSH → T3/T4 → negative feedback; metabolism regulation |
-| **Calcium balance** | PTH raises Ca²⁺; Calcitonin lowers Ca²⁺; antagonistic hormones |
+| **Calcium balance** | PTH raises $Ca^{2+}$; Calcitonin lowers $Ca^{2+}$; antagonistic hormones |
 
 ### Common Free-Response Themes
 1. **Trace a feedback loop** — identify all components (stimulus, sensor, integrator, effector, response, feedback)

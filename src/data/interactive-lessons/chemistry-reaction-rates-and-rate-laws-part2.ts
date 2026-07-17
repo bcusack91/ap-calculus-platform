@@ -60,7 +60,7 @@ Increasing $[A]$ or $[B]$ directly increases the rate (when $m, n > 0$).
 
 ### Example
 
-Burning steel wool in pure O₂ (100%) is dramatically faster than in air (21% O₂) because the concentration of oxygen molecules is about 5 times higher.
+Burning steel wool in pure $O_{2}$ (100%) is dramatically faster than in air (21% $O_{2}$) because the concentration of oxygen molecules is about 5 times higher.
       `
     },
     {
@@ -254,7 +254,7 @@ $$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
         correctAnswers: ['activation energy', 'surface area', 'double the rate', 'fraction of molecules exceeding Ea'],
         hint1: 'Catalysts lower Ea but do not change thermodynamic quantities.',
         hint2: 'Grinding exposes more surface for reaction.',
-        hint3: 'For a first-order reactant, Rate = k[A]¹. Doubling [A] doubles the rate.',
+        hint3: 'For a first-order reactant, Rate = k[A]$ {}^{1}$. Doubling [A] doubles the rate.',
         explanation: 'Catalysts lower Ea. Grinding increases surface area. For first-order, rate is directly proportional to [A]. Temperature increases the fraction of molecules with energy ≥ Ea (Boltzmann distribution).'
       }
     },
@@ -276,9 +276,9 @@ $$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
         boxes: 3,
         correctAnswers: ['0.080', '9', '70'],
         hint1: '45°C is 20°C above 25°C, so two doublings: rate × 2 × 2.',
-        hint2: 'Rate ∝ [A]². If [A] → 3[A], rate → 3² = 9 times.',
+        hint2: 'Rate ∝ [A]$ {}^{2}$. If [A] → 3[A], rate → $3^{2}$ = 9 times.',
         hint3: 'ΔEa = 120 − 50 = 70 kJ/mol.',
-        explanation: '1) 20°C increase = 2 doublings. 0.020 × 2² = 0.020 × 4 = 0.080 M/s. 2) Rate = k[A]². If [A] triples: rate factor = 3² = 9. 3) 120 − 50 = 70 kJ/mol reduction in activation energy.'
+        explanation: '1) 20°C increase = 2 doublings. 0.020 × $2^{2}$ = 0.020 × 4 = 0.080 M/s. 2) Rate = k[A]$ {}^{2}$. If [A] triples: rate factor = $3^{2}$ = 9. 3) 120 − 50 = 70 kJ/mol reduction in activation energy.'
       }
     },
     {
@@ -309,7 +309,7 @@ $$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
               'Halve the rate'
             ],
             correctAnswer: 2,
-            explanation: 'For a zero-order reactant, Rate = k[X]⁰ = k. The rate is independent of [X], so changing [X] has no effect.'
+            explanation: 'For a zero-order reactant, Rate = k[X]$ {}^{0}$ = k. The rate is independent of [X], so changing [X] has no effect.'
           }
         ]
       }

@@ -77,7 +77,7 @@ Package weights: $X \\sim N(50, 4)$ lbs. Packing material: $Y \\sim N(2, 0.5)$ l
         hint1: '$E(X+Y) = 50 + 2 = 52$.',
         hint2: '$4^2 + 0.5^2 = 16 + 0.25 = 16.25$.',
         hint3: '$\\sqrt{16.25} \\approx 4.03$.',
-        explanation: '1) 52 lbs. 2) 16.25 lbs². 3) 4.03 lbs.'
+        explanation: '1) 52 lbs. 2) 16.25 $lbs^{2}$. 3) 4.03 lbs.'
       }
     }
   ]

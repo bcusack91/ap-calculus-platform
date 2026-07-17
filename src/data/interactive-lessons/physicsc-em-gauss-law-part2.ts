@@ -13,7 +13,7 @@ $\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\epsilon_0}$
 
 The total electric flux through any closed surface equals the enclosed charge divided by $\epsilon_0$.
 
-- $\epsilon_0 = 8.85 \\times 10^{-12}$ C²/(N·m²)
+- $\epsilon_0 = 8.85 \\times 10^{-12}$ $C^{2}/(N\\cdot m^{2})$
 - The surface is called a **Gaussian surface**
 - It is most useful when the charge distribution has symmetry
     
@@ -27,7 +27,7 @@ The total electric flux through any closed surface equals the enclosed charge di
 
 **A Gaussian surface encloses $Q = 5 \\times 10^{-9}$ C. Find the total flux.**
 
-$\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ N·m²/C ✅
+$\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ $N\\cdot m^{2}/C$ ✅
     
     `
     },
@@ -59,9 +59,9 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
       content: `
 **Gauss's Law** 🧮
 
-1) A Gaussian surface encloses no charge. Net flux (N·m²/C)?
+1) A Gaussian surface encloses no charge. Net flux $(N\\cdot m^{2}/C)$?
 
-2) A Gaussian surface encloses $Q = 5$ nC. $\\Phi \\approx ?$ N·m²/C. (Use $\epsilon_0 \\approx 8.85 \\times 10^{-12}$. Round to nearest integer.)
+2) A Gaussian surface encloses $Q = 5$ nC. $\\Phi \\approx ?$ $N\\cdot m^{2}/C$. (Use $\epsilon_0 \\approx 8.85 \\times 10^{-12}$. Round to nearest integer.)
 
 3) Charges of $+3q$ and $-q$ are inside a Gaussian surface. The net enclosed charge is ___ $q$.
     
@@ -72,7 +72,7 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
         hint1: "No charge enclosed → zero flux.",
         hint2: "$5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$.",
         hint3: "$3q + (-q) = 2q$.",
-        explanation: "1) $\\Phi = 0$. 2) $\\approx 565$ N·m²/C. 3) $3q - q = 2q$."
+        explanation: "1) $\\Phi = 0$. 2) $\\approx 565$ $N\\cdot m^{2}/C$. 3) $3q - q = 2q$."
       }
     },
     {

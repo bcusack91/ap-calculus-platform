@@ -48,7 +48,7 @@ Just like electrical resistance opposes current flow, **thermal resistance** opp
 $$R = \\frac{L}{k}$$
 
 Where:
-- $R$ = thermal resistance per unit area (m²·K/W)
+- $R$ = thermal resistance per unit area $(m^{2}\\cdot K/W)$
 - $L$ = thickness (m)
 - $k$ = thermal conductivity (W/(m·K))
 
@@ -118,9 +118,9 @@ The air gap provides about **98%** of the total thermal resistance, despite bein
       content: `
 **Conduction Calculation Drill** 🔢
 
-A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total surface area of 0.80 m². The inside is at 2°C and the outside is at 32°C.
+A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total surface area of 0.80 $m^{2}$. The inside is at 2°C and the outside is at 32°C.
 
-1) What is the thermal resistance $R = L/k$ of the wall? (m²·K/W, round to 3 significant figures)
+1) What is the thermal resistance $R = L/k$ of the wall? ($m^{2}\\cdot K/W$, round to 3 significant figures)
 
 2) What is the rate of heat flow into the cooler? (in watts, round to 3 significant figures)
 
@@ -132,7 +132,7 @@ A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total s
         hint1: '$R = L/k = 0.030 / 0.033$.',
         hint2: '$Q/t = A \\Delta T / R = (0.80)(30) / 0.91$.',
         hint3: 'Total heat = power × time. Convert 6 hours to seconds: $6 \\times 3{,}600 = 21{,}600$ s. Then convert J to kJ.',
-        explanation: '1) $R = 0.030/0.033 = 0.909 \\approx 0.91$ m²·K/W. 2) $Q/t = (0.80)(30)/0.91 = 26.4$ W. 3) $Q = (26.4)(21{,}600) = 570{,}240$ J $\\approx 570$ kJ.'
+        explanation: '1) $R = 0.030/0.033 = 0.909 \\approx 0.91$ $m^{2}\\cdot K/W$. 2) $Q/t = (0.80)(30)/0.91 = 26.4$ W. 3) $Q = (26.4)(21{,}600) = 570{,}240$ J $\\approx 570$ kJ.'
       }
     },
     {
@@ -141,11 +141,11 @@ A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total s
       content: `
 **Composite Wall Drill** 🔢
 
-A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation ($k = 0.040$ W/(m·K)) in series. The wall area is 12 m². The inside temperature is 22°C and the outside is $-8$°C.
+A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation ($k = 0.040$ W/(m·K)) in series. The wall area is 12 $m^{2}$. The inside temperature is 22°C and the outside is $-8$°C.
 
-1) $R_{\\text{brick}}$ in m²·K/W (round to 3 significant figures)
+1) $R_{\\text{brick}}$ in $m^{2}\\cdot K/W$ (round to 3 significant figures)
 
-2) $R_{\\text{insulation}}$ in m²·K/W (round to 3 significant figures)
+2) $R_{\\text{insulation}}$ in $m^{2}\\cdot K/W$ (round to 3 significant figures)
 
 3) Total rate of heat loss through the wall in watts (round to nearest whole number)
       `,
@@ -155,7 +155,7 @@ A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation (
         hint1: '$R_{\\text{brick}} = L/k = 0.10/0.60$.',
         hint2: '$R_{\\text{insulation}} = L/k = 0.05/0.040$.',
         hint3: '$R_{\\text{total}} = R_{\\text{brick}} + R_{\\text{insulation}}$. Then $Q/t = A \\Delta T / R_{\\text{total}} = (12)(30)/R_{\\text{total}}$.',
-        explanation: '1) $R_{\\text{brick}} = 0.10/0.60 = 0.167 \\approx 0.17$ m²·K/W. 2) $R_{\\text{insulation}} = 0.05/0.04 = 1.25$ m²·K/W. 3) $R_{\\text{total}} = 0.17 + 1.25 = 1.42$ m²·K/W. $Q/t = (12)(30)/1.42 = 254$ W. Note the insulation provides 88% of the total resistance!'
+        explanation: '1) $R_{\\text{brick}} = 0.10/0.60 = 0.167 \\approx 0.17$ $m^{2}\\cdot K/W$. 2) $R_{\\text{insulation}} = 0.05/0.04 = 1.25$ $m^{2}\\cdot K/W$. 3) $R_{\\text{total}} = 0.17 + 1.25 = 1.42$ $m^{2}\\cdot K/W$. $Q/t = (12)(30)/1.42 = 254$ W. Note the insulation provides 88% of the total resistance!'
       }
     },
     {
@@ -175,7 +175,7 @@ A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation (
               'About 10 times larger'
             ],
             correctAnswer: 2,
-            explanation: '$R_{\\text{foam}} = 0.02/0.033 = 0.606$ m²·K/W. $R_{\\text{brick}} = 0.10/0.60 = 0.167$ m²·K/W. Ratio: $0.606/0.167 \\approx 3.6$. A thin layer of good insulation beats a thick wall of brick!'
+            explanation: '$R_{\\text{foam}} = 0.02/0.033 = 0.606$ $m^{2}\\cdot K/W$. $R_{\\text{brick}} = 0.10/0.60 = 0.167$ $m^{2}\\cdot K/W$. Ratio: $0.606/0.167 \\approx 3.6$. A thin layer of good insulation beats a thick wall of brick!'
           },
           {
             question: 'In steady-state conduction through a composite wall, which quantity is the SAME through every layer?',

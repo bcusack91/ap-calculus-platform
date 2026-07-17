@@ -41,7 +41,7 @@ Predict $\\Delta S$ sign for each:
         hint1: 'Solid → gas = huge entropy increase.',
         hint2: '3 mol gas → 2 mol gas.',
         hint3: 'Solid dissolves into ions in solution.',
-        explanation: 'Sublimation: +(s→g). O₂→O₃: −(3mol→2mol gas). Dissolving: +(ordered solid → spread ions). Mg+O₂: −(1mol gas→0). PCl₅ decomposition: +(1mol→2mol gas).' } },
+        explanation: 'Sublimation: +(s→g). $O_{2}$→$O_{3}$: −(3mol→2mol gas). Dissolving: +(ordered solid → spread ions). $Mg+O_{2}$: −(1mol gas→0). $PCl_{5}$ decomposition: +(1mol→2mol gas).' } },
     { id: 'en5v3-tricky', type: 'multiple-choice' as const, content: `
 **Tricky Cases** 🎯
     `, exercise: { questions: [

@@ -75,12 +75,12 @@ export const psychClassicalPart3Data = {
 
       | Step | What Happens | Example |
       |---|---|---|
-      | 1st order | Bell (CS₁) + Food (UCS) → Salivation | Dog salivates to bell |
-      | 2nd order | Light (NS) + Bell (CS₁) → Salivation | Dog salivates to light |
-      | Result | Light becomes CS₂ | No food was ever paired with the light |
+      | 1st order | Bell $(CS_{1})$ + Food (UCS) → Salivation | Dog salivates to bell |
+      | 2nd order | Light (NS) + Bell $(CS_{1})$ → Salivation | Dog salivates to light |
+      | Result | Light becomes $CS_{2}$ | No food was ever paired with the light |
 
       ### Key Insight
-      Higher-order conditioning is weaker and extinguishes faster than first-order conditioning. The AP exam may ask you to explain why — the answer is that CS₂ was never directly paired with the UCS.
+      Higher-order conditioning is weaker and extinguishes faster than first-order conditioning. The AP exam may ask you to explain why — the answer is that $CS_{2}$ was never directly paired with the UCS.
       `
     },
     {
@@ -130,7 +130,7 @@ export const psychClassicalPart3Data = {
         correctAnswers: ['extinction', 'spontaneous recovery', 'higher-order conditioning'],
         hint1: 'The CR fades when the reinforcing UCS is removed.',
         hint2: 'Time off allows the suppressed association to temporarily resurface.',
-        hint3: 'This creates a chain: NS → CS₂ through pairing with CS₁.',
+        hint3: 'This creates a chain: NS → $CS_{2}$ through pairing with $CS_{1}$.',
         explanation: 'Extinction = CR weakens without UCS. Spontaneous recovery = CR returns after rest. Higher-order conditioning = new CS created by pairing with an existing CS, without the original UCS.'
       }
     },
@@ -143,7 +143,7 @@ export const psychClassicalPart3Data = {
       ### Misconceptions to Avoid
       - Extinction does NOT erase the learning — it suppresses the response. Spontaneous recovery proves the association still exists in memory.
       - Spontaneous recovery is typically weaker than the original CR and fades quickly if the UCS is not reintroduced.
-      - Higher-order conditioning does NOT require the UCS to be present — only an established CS₁ is needed.
+      - Higher-order conditioning does NOT require the UCS to be present — only an established $CS_{1}$ is needed.
       - Re-acquisition after extinction is faster than the original learning, further proving extinction doesn't erase the association.
 
       ### AP Strategy Moves
@@ -173,15 +173,15 @@ export const psychClassicalPart3Data = {
             explanation: 'This is spontaneous recovery: after extinction (therapy eliminated the fear) and a rest period (3 months), the CR (anxiety) briefly reappears. It will likely fade quickly without the UCS being reintroduced.'
           },
           {
-            question: 'A researcher conditions a dog to salivate to a bell (CS₁). Then the researcher pairs a light with the bell (without food). The dog begins to salivate slightly at the light. This is:',
+            question: 'A researcher conditions a dog to salivate to a bell $(CS_{1})$. Then the researcher pairs a light with the bell (without food). The dog begins to salivate slightly at the light. This is:',
             options: [
-              'higher-order conditioning — the light became a CS₂ through pairing with CS₁',
+              'higher-order conditioning — the light became a $CS_{2}$ through pairing with $CS_{1}$',
               'acquisition — the dog is learning to associate light with food',
               'generalization — the dog is responding to a similar stimulus',
               'spontaneous recovery — the CR returned after extinction'
             ],
             correctAnswer: 0,
-            explanation: 'This is higher-order (second-order) conditioning. The light (NS) was paired with the bell (CS₁), making the light a CS₂. Note: food (UCS) was never paired with the light directly. The response will be weaker and extinguish faster than the original bell-salivation association.'
+            explanation: 'This is higher-order (second-order) conditioning. The light (NS) was paired with the bell $(CS_{1})$, making the light a $CS_{2}$. Note: food (UCS) was never paired with the light directly. The response will be weaker and extinguish faster than the original bell-salivation association.'
           }
         ]
       }

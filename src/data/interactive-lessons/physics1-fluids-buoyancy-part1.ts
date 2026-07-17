@@ -94,11 +94,11 @@ This is **the buoyant force**.
       content: `
 **Quick Buoyancy Calculations** 🧮 (g = 10, $\\rho_{water} = 1000$)
 
-1) A fully submerged object displaces 0.020 m³ of water. Buoyant force (N)?
+1) A fully submerged object displaces 0.020 $m^{3}$ of water. Buoyant force (N)?
 
-2) A block, half-submerged, displaces 0.0050 m³. Buoyant force (N)?
+2) A block, half-submerged, displaces 0.0050 $m^{3}$. Buoyant force (N)?
 
-3) A balloon of volume 1.0 m³ in air ($\\rho_{air} = 1.2$). Buoyant force from air (N)?
+3) A balloon of volume 1.0 $m^{3}$ in air ($\\rho_{air} = 1.2$). Buoyant force from air (N)?
       `,
       exercise: {
         boxes: 3,

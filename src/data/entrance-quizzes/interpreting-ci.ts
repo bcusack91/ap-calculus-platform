@@ -91,7 +91,7 @@ const questions: EntranceQuizQuestion[] = [
       'Increasing the population standard deviation'
     ],
     correctIndex: 2,
-    explanation: 'The margin of error decreases with larger n (since SE = s/√n gets smaller), lower confidence level (smaller critical value), or smaller variability.',
+    explanation: 'The margin of error decreases with larger n (since SE = $s/\\sqrt{n}$ gets smaller), lower confidence level (smaller critical value), or smaller variability.',
     partNumber: 3,
     partTitle: 'Margin of Error'
   },
@@ -113,15 +113,15 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'ici-ent-4b',
-    question: 'A 95% confidence interval for (μ₁ − μ₂) is (2.1, 8.5). What can we conclude?',
+    question: 'A 95% confidence interval for $(\\mu_{1} - \\mu_{2})$ is (2.1, 8.5). What can we conclude?',
     options: [
       'There is no significant difference between the two means',
-      'The interval suggests μ₁ > μ₂ at the 95% confidence level because the entire interval is above 0',
-      'μ₁ is exactly 5.3 larger than μ₂',
+      'The interval suggests $\\mu_{1}$ > $\\mu_{2}$ at the 95% confidence level because the entire interval is above 0',
+      '$\\mu_{1}$ is exactly 5.3 larger than $\\mu_{2}$',
       'We need a larger sample to draw any conclusion'
     ],
     correctIndex: 1,
-    explanation: 'A CI for (μ₁ − μ₂) that is entirely above 0 suggests μ₁ > μ₂ at that confidence level. Since 0 is not in the interval, a difference of 0 (no difference) is not a plausible value.',
+    explanation: 'A CI for $(\\mu_{1} - \\mu_{2})$ that is entirely above 0 suggests $\\mu_{1}$ > $\\mu_{2}$ at that confidence level. Since 0 is not in the interval, a difference of 0 (no difference) is not a plausible value.',
     partNumber: 4,
     partTitle: 'What CIs Tell Us'
   },
@@ -203,7 +203,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'ici-ent-7b',
-    question: 'A CI for (μ₁ − μ₂) is (−3.2, 1.8). Does this provide convincing evidence that the two means differ?',
+    question: 'A CI for $(\\mu_{1} - \\mu_{2})$ is (−3.2, 1.8). Does this provide convincing evidence that the two means differ?',
     options: [
       'Yes, because the interval contains negative values',
       'Yes, because the interval is wide',

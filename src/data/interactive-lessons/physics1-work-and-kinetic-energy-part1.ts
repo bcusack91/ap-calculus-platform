@@ -145,7 +145,7 @@ $$W = Fd\\cos\\theta$$
       content: `
 **Work Calculations** 🧮
 
-Use $g = 10$ m/s² where needed.
+Use $g = 10$ $m/s^{2}$ where needed.
 
 1) A force of 80 N pulls a sled at $\\theta = 60°$ above the horizontal for a distance of 10 m. What is the work done (in J)?
 

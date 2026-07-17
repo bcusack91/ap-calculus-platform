@@ -79,7 +79,7 @@ Energy in electromagnetic fields flows according to the **Poynting vector**:
 
 $$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$$
 
-$\\vec{S}$ has units of W/m² and represents the power per unit area flowing through a surface.
+$\\vec{S}$ has units of $W/m^{2}$ and represents the power per unit area flowing through a surface.
 
 ### Poynting's Theorem
 

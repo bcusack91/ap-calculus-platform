@@ -34,7 +34,7 @@ Water is the most abundant molecule in living organisms, making up 60-70% of you
               'Van der Waals forces'
             ],
             correctAnswer: 1,
-            explanation: 'Water molecules are held together by hydrogen bonds — the attraction between the δ⁺ hydrogen of one molecule and the δ⁻ oxygen of another.'
+            explanation: 'Water molecules are held together by hydrogen bonds — the attraction between the $\\delta^{+}$ hydrogen of one molecule and the $\\delta^{-}$ oxygen of another.'
           },
           {
             question: 'The bond angle in a water molecule is approximately:',
@@ -63,7 +63,7 @@ Water ($H_2O$) has a **bent molecular geometry** with a bond angle of approximat
 | **Electronegativity** | Oxygen (3.44) >> Hydrogen (2.20) |
 | **Bond type** | Polar covalent |
 | **Molecular shape** | Bent (angular) |
-| **Partial charges** | δ⁻ on O, δ⁺ on H |
+| **Partial charges** | $\\delta^{-}$ on O, $\\delta^{+}$ on H |
 
 ### Hydrogen Bonds
 

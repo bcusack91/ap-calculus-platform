@@ -54,7 +54,7 @@ Each integration introduces a NEW constant, determined by initial conditions.
 
 A ball is thrown upward at 64 ft/s from height 80 ft. Find $s(t)$.
 
-$a(t) = -32$ ft/s² (gravity)
+$a(t) = -32$ $ft/s^{2}$ (gravity)
 
 **Step 1:** $v(t) = \\int (-32)\\,dt = -32t + C_1$
 - $v(0) = 64$ → $C_1 = 64$
@@ -65,7 +65,7 @@ $a(t) = -32$ ft/s² (gravity)
 
 $$\\boxed{s(t) = -16t^2 + 64t + 80}$$
 
-> **Key Fact:** In free fall, $a = -32$ ft/s² or $a = -9.8$ m/s². The negative sign means downward. Two initial conditions are needed: $v(0)$ and $s(0)$.`
+> **Key Fact:** In free fall, $a = -32$ $ft/s^{2}$ or $a = -9.8$ $m/s^{2}$. The negative sign means downward. Two initial conditions are needed: $v(0)$ and $s(0)$.`
     },
     {
       id: 'anti3-quiz1',
@@ -200,7 +200,7 @@ $$\\boxed{f'(x) + \\text{initial condition} \\xrightarrow{\\int} \\text{unique }
 | IVP | Antiderivative + initial condition → find $C$ |
 | Double IVP | $f'' \\to f' \\to f$ needs TWO conditions |
 | Motion | $a \\xrightarrow{\\int} v \\xrightarrow{\\int} s$, each step needs an IC |
-| Free fall | $a = -32$ ft/s², $v(t) = -32t + v_0$, $s(t) = -16t^2 + v_0 t + s_0$ |
+| Free fall | $a = -32$ $ft/s^{2}$, $v(t) = -32t + v_0$, $s(t) = -16t^2 + v_0 t + s_0$ |
 | AP shortcut | $f(b) = f(a) + \\int_a^b f'(x)\\,dx$ |
 
 > **Up Next:** Part 4 — Algebraic Manipulation Before Integrating.`

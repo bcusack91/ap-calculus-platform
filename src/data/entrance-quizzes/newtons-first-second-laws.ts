@@ -45,9 +45,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'n12-ent-3a',
     question: 'A $5$ kg object experiences a net force of $20$ N. What is its acceleration?',
-    options: ['$2$ m/s²', '$4$ m/s²', '$25$ m/s²', '$100$ m/s²'],
+    options: ['$2$ $m/s^{2}$', '$4$ $m/s^{2}$', '$25$ $m/s^{2}$', '$100$ $m/s^{2}$'],
     correctIndex: 1,
-    explanation: '$a = F_{net}/m = 20/5 = 4$ m/s².',
+    explanation: '$a = F_{net}/m = 20/5 = 4$ $m/s^{2}$.',
     partNumber: 3,
     partTitle: "Newton's Second Law",
   },
@@ -64,7 +64,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 4: Weight & Normal Force
   {
     id: 'n12-ent-4a',
-    question: 'What is the weight of a $10$ kg object near Earth\'s surface? (Use $g = 9.8$ m/s².)',
+    question: 'What is the weight of a $10$ kg object near Earth\'s surface? (Use $g = 9.8$ $m/s^{2}$.)',
     options: ['$10$ N', '$98$ N', '$0.98$ N', '$980$ N'],
     correctIndex: 1,
     explanation: 'Weight $= mg = 10 \\times 9.8 = 98$ N.',
@@ -115,9 +115,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'n12-ent-6a',
     question: 'Two forces act on a $3$ kg object: $12$ N east and $4$ N west. What is the acceleration?',
-    options: ['$\\frac{8}{3}$ m/s² east', '$\\frac{16}{3}$ m/s² east', '$4$ m/s² west', '$\\frac{8}{3}$ m/s² west'],
+    options: ['$\\frac{8}{3}$ $m/s^{2}$ east', '$\\frac{16}{3}$ $m/s^{2}$ east', '$4$ $m/s^{2}$ west', '$\\frac{8}{3}$ $m/s^{2}$ west'],
     correctIndex: 0,
-    explanation: '$F_{net} = 12 - 4 = 8$ N east. $a = F_{net}/m = 8/3 \\approx 2.67$ m/s² east.',
+    explanation: '$F_{net} = 12 - 4 = 8$ N east. $a = F_{net}/m = 8/3 \\approx 2.67$ $m/s^{2}$ east.',
     partNumber: 6,
     partTitle: 'Applying F = ma',
   },
@@ -126,7 +126,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'A $1000$ kg car accelerates from rest to $20$ m/s in $10$ s. What net force is required?',
     options: ['$1000$ N', '$2000$ N', '$10000$ N', '$20000$ N'],
     correctIndex: 1,
-    explanation: '$a = \\Delta v/\\Delta t = 20/10 = 2$ m/s². $F = ma = 1000 \\times 2 = 2000$ N.',
+    explanation: '$a = \\Delta v/\\Delta t = 20/10 = 2$ $m/s^{2}$. $F = ma = 1000 \\times 2 = 2000$ N.',
     partNumber: 6,
     partTitle: 'Applying F = ma',
   },

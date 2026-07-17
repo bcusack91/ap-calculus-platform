@@ -29,8 +29,8 @@ export const whChallenges21stCenturyPart2Data = {
 
 | Element | Mechanism |
 |---|---|
-| Greenhouse effect | CO₂, methane, nitrous oxide trap heat radiating from Earth\'s surface |
-| Carbon cycle | Pre-industrial CO₂ ~280 ppm; 2024 ~422 ppm — fastest rise in millions of years |
+| Greenhouse effect | $CO_{2}$, methane, nitrous oxide trap heat radiating from Earth\'s surface |
+| Carbon cycle | Pre-industrial $CO_{2}$ ~280 ppm; 2024 ~422 ppm — fastest rise in millions of years |
 | Feedback loops | Melting Arctic sea ice exposes dark ocean → more heat absorbed → more melting |
 | Tipping points | Amazon dieback, Greenland ice sheet collapse, methane release from permafrost |
 | Impacts | Sea-level rise, extreme weather, agricultural disruption, climate refugees |
@@ -141,7 +141,7 @@ export const whChallenges21stCenturyPart2Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'Atmospheric CO₂ trapping infrared radiation re-emitted from Earth\'s surface: ___',
+            label: 'Atmospheric $CO_{2}$ trapping infrared radiation re-emitted from Earth\'s surface: ___',
             options: ['climate change', 'pandemics', 'populism', 'algorithmic disruption']
           },
           {

@@ -21,7 +21,7 @@ The voltage across the gap is $V = Ed = \\sigma_f d / (\\kappa\\varepsilon_0)$.`
     {
       id: 'dielec4-mcq1',
       type: 'mcq' as const,
-      question: 'A capacitor with plate separation $d = 2$ mm holds charge density $\\sigma_f = 4.43 \\times 10^{-8}$ C/m² and is filled with dielectric $\\kappa = 5$. What is the voltage across the plates? ($\\varepsilon_0 = 8.85 \\times 10^{-12}$)',
+      question: 'A capacitor with plate separation $d = 2$ mm holds charge density $\\sigma_f = 4.43 \\times 10^{-8}$ $C/m^{2}$ and is filled with dielectric $\\kappa = 5$. What is the voltage across the plates? ($\\varepsilon_0 = 8.85 \\times 10^{-12}$)',
       options: ['$2.0$ V', '$10.0$ V', '$0.4$ V', '$50.0$ V'],
       correctAnswer: 0,
       explanation: '$V = \\sigma_f d/(\\kappa\\varepsilon_0) = (4.43 \\times 10^{-8})(2 \\times 10^{-3})/(5 \\times 8.85 \\times 10^{-12}) = 8.86 \\times 10^{-11}/4.425 \\times 10^{-11} = 2.0$ V.'

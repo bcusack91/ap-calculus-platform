@@ -96,7 +96,7 @@ This single scenario touches every concept in the unit, which is exactly how AP 
             explanation: 'N = MC/R = (80 × 100)/20 = 8000/20 = 400 frogs. A drought killing a fixed 50% regardless of density is density-INDEPENDENT (its proportional effect does not depend on crowding). The trap pairing "density-dependent" is wrong because no part of the drought intensifies with population density — that label is reserved for factors like disease or competition whose per-capita impact grows as the population becomes crowded.'
           },
           {
-            question: 'Two prairie plots each contain 4 plant species. Plot 1: proportions 0.85, 0.05, 0.05, 0.05. Plot 2: proportions 0.25, 0.25, 0.25, 0.25. Which plot has higher Simpson\'s diversity (D = 1 - Σpi²), and what general principle does the comparison illustrate?',
+            question: 'Two prairie plots each contain 4 plant species. Plot 1: proportions 0.85, 0.05, 0.05, 0.05. Plot 2: proportions 0.25, 0.25, 0.25, 0.25. Which plot has higher Simpson\'s diversity (D = 1 - $\\Sigma pi^{2}$), and what general principle does the comparison illustrate?',
             options: [
               'Plot 1, because richness is equal and it has a clear dominant species',
               'Plot 2, illustrating that greater evenness raises diversity even when richness is equal',
@@ -104,7 +104,7 @@ This single scenario touches every concept in the unit, which is exactly how AP 
               'Plot 1, because Simpson\'s index measures only the number of species'
             ],
             correctAnswer: 1,
-            explanation: 'Plot 1: Σpi² = 0.7225 + 0.0025×3 = 0.73, so D ≈ 0.27. Plot 2: Σpi² = 4(0.0625) = 0.25, so D = 0.75. Plot 2 wins because of higher evenness. The trap "they are equal because both have 4 species" is the richness-equals-diversity fallacy — Simpson\'s index responds to evenness too, so the dominated Plot 1 scores far lower despite identical richness.'
+            explanation: 'Plot 1: $\\Sigma pi^{2}$ = 0.7225 + 0.0025×3 = 0.73, so D ≈ 0.27. Plot 2: $\\Sigma pi^{2}$ = 4(0.0625) = 0.25, so D = 0.75. Plot 2 wins because of higher evenness. The trap "they are equal because both have 4 species" is the richness-equals-diversity fallacy — Simpson\'s index responds to evenness too, so the dominated Plot 1 scores far lower despite identical richness.'
           }
         ]
       }

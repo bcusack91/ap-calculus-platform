@@ -42,11 +42,11 @@ $d = \\sqrt{3^2+4^2+12^2} = \\sqrt{9+16+144} = \\sqrt{169} = 13$ ✅
                     "options": [
                               "3",
                               "5",
-                              "√5",
+                              "$\\sqrt{5}$",
                               "1"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(1+4+4) = √9 = 3."
+                    "explanation": "$\\sqrt{1+4+4}$ = $\\sqrt{9}$ = 3."
           }
 ]
       }
@@ -67,10 +67,10 @@ $d = \\sqrt{3^2+4^2+12^2} = \\sqrt{9+16+144} = \\sqrt{169} = 13$ ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["13","3","11"],
-        hint1: "√(9+16+144).",
-        hint2: "√(1+4+4).",
-        hint3: "√(4+36+81).",
-        explanation: "1) √169=13. 2) √9=3. 3) √121=11."
+        hint1: "$\\sqrt{9+16+144}$.",
+        hint2: "$\\sqrt{1+4+4}$.",
+        hint3: "$\\sqrt{4+36+81}$.",
+        explanation: "1) $\\sqrt{169}$=13. 2) $\\sqrt{9}$=3. 3) $\\sqrt{121}$=11."
       }
     },
     {
@@ -84,7 +84,7 @@ $d = \\sqrt{3^2+4^2+12^2} = \\sqrt{9+16+144} = \\sqrt{169} = 13$ ✅
         correctAnswers: ["Three","$\\sqrt{l^2+w^2+h^2}$"],
         hint1: "Length, width, height.",
         hint2: "Square, add, square root.",
-        explanation: "3D uses three dimensions. d = √(l²+w²+h²)."
+        explanation: "3D uses three dimensions. d = $\\sqrt{l^{2}+w^{2}+h^{2}}$."
       }
     },
     {

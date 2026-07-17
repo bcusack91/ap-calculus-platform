@@ -169,7 +169,7 @@ The unit circle's symmetry comes from the **definition of sine and cosine**:
 1. **Reflection across the y-axis** (QI ↔ QII):
    - x-coordinates become negative
    - y-coordinates stay the same
-   - Example: cos(30°) = √3/2, cos(150°) = -√3/2
+   - Example: cos(30°) = $\\sqrt{3}/2$, cos(150°) = $-\\sqrt{3}/2$
 
 2. **Reflection across the x-axis** (QI ↔ QIV):
    - x-coordinates stay the same
@@ -178,7 +178,7 @@ The unit circle's symmetry comes from the **definition of sine and cosine**:
 
 3. **Rotation by 180°** (QI ↔ QIII):
    - Both coordinates become negative
-   - Example: (√2/2, √2/2) at 45° becomes (-√2/2, -√2/2) at 225°
+   - Example: ($\\sqrt{2}/2$, $\\sqrt{2}/2$) at 45° becomes ($-\\sqrt{2}/2$, $-\\sqrt{2}/2$) at 225°
 
 This is why you only need to memorize the first quadrant! 🎯
       `

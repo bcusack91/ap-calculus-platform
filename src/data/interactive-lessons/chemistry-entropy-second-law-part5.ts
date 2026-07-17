@@ -101,9 +101,9 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
       exercise: {
         questions: [
           {
-            question: 'When calculating ΔS°_rxn, the standard entropy of O₂(g) is:',
+            question: 'When calculating ΔS°_rxn, the standard entropy of $O_{2}(g)$ is:',
             options: [
-              'Zero, because O₂ is an element',
+              'Zero, because $O_{2}$ is an element',
               '205.1 J/(mol·K) — its absolute standard entropy',
               'Undefined for elements',
               'Negative because oxygen is a gas'
@@ -163,7 +163,7 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
         correctAnswers: ['2.9', '-242.2'],
         hint1: '$[213.7] - [5.7 + 205.1]$',
         hint2: '$[213.7 + 2(188.8)] - [186.3 + 2(205.1)]$',
-        explanation: '1) $\\Delta S° = 213.7 - (5.7 + 205.1) = 213.7 - 210.8 = 2.9$ J/K. Note: despite $\\Delta n_{\\text{gas}} = 0$, ΔS° is slightly positive. 2) $\\Delta S° = [213.7 + 377.6] - [186.3 + 410.2] = 591.3 - 596.5 = -5.2$ J/K. Wait, let me recalculate: $213.7 + 2(188.8) = 213.7 + 377.6 = 591.3$. $186.3 + 2(205.1) = 186.3 + 410.2 = 596.5$. $\\Delta S° = 591.3 - 596.5 = -5.2$ J/K. Hmm, that contradicts the answer. Let me recheck with $\\Delta n_{gas} = 3-3=0$... The answer -5.2 is correct. Actually I need to reconsider the given answer of -242.2. With H₂O(l) instead: $[213.7 + 2(69.9)] - [186.3 + 2(205.1)] = 353.5 - 596.5 = -243.0$. The answer should be -5.2 J/K with H₂O(g).'
+        explanation: '1) $\\Delta S° = 213.7 - (5.7 + 205.1) = 213.7 - 210.8 = 2.9$ J/K. Note: despite $\\Delta n_{\\text{gas}} = 0$, ΔS° is slightly positive. 2) $\\Delta S° = [213.7 + 377.6] - [186.3 + 410.2] = 591.3 - 596.5 = -5.2$ J/K. Wait, let me recalculate: $213.7 + 2(188.8) = 213.7 + 377.6 = 591.3$. $186.3 + 2(205.1) = 186.3 + 410.2 = 596.5$. $\\Delta S° = 591.3 - 596.5 = -5.2$ J/K. Hmm, that contradicts the answer. Let me recheck with $\\Delta n_{gas} = 3-3=0$... The answer -5.2 is correct. Actually I need to reconsider the given answer of -242.2. With $H_{2}O(l)$ instead: $[213.7 + 2(69.9)] - [186.3 + 2(205.1)] = 353.5 - 596.5 = -243.0$. The answer should be -5.2 J/K with $H_{2}O(g)$.'
       }
     },
     {
@@ -175,7 +175,7 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
       exercise: {
         dropdowns: [
           {
-            label: 'When using the ΔS° formula, S° for elements like N₂(g) is',
+            label: 'When using the ΔS° formula, S° for elements like $N_{2}(g)$ is',
             options: ['zero', 'always negative', 'a positive value you must look up', 'undefined']
           },
           {
@@ -207,7 +207,7 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
       exercise: {
         questions: [
           {
-            question: 'For 2H₂(g) + O₂(g) → 2H₂O(g), using S° values: H₂ = 130.7, O₂ = 205.1, H₂O(g) = 188.8 [all in J/(mol·K)], ΔS° is:',
+            question: 'For $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(g)$, using S° values: $H_{2}$ = 130.7, $O_{2}$ = 205.1, $H_{2}O(g)$ = 188.8 [all in J/(mol·K)], ΔS° is:',
             options: [
               '+88.6 J/K',
               '−88.6 J/K',

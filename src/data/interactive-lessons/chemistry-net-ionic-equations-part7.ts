@@ -71,21 +71,21 @@ On the AP Chemistry exam, you may be asked to:
 | Reaction Type | Driving Force | Net Ionic Pattern |
 |--------------|---------------|-------------------|
 | Precipitation | Insoluble solid | Cation + Anion → Solid |
-| Strong acid + Strong base | Water | H⁺ + OH⁻ → H₂O |
-| Weak acid + Strong base | Water | HA + OH⁻ → A⁻ + H₂O |
-| Strong acid + Weak base | Proton transfer | H⁺ + B → BH⁺ |
-| Acid + Carbonate | Gas + Water | 2H⁺ + CO₃²⁻ → H₂O + CO₂ |
-| Acid + Bicarbonate | Gas + Water | H⁺ + HCO₃⁻ → H₂O + CO₂ |
-| Acid + Sulfide | Gas | 2H⁺ + S²⁻ → H₂S(g) |
+| Strong acid + Strong base | Water | $H^{+}$ + $OH^{-}$ → $H_{2}O$ |
+| Weak acid + Strong base | Water | HA + $OH^{-}$ → $A^{-}$ + $H_{2}O$ |
+| Strong acid + Weak base | Proton transfer | $H^{+}$ + B → $BH^{+}$ |
+| Acid + Carbonate | Gas + Water | $2H^{+}$ + $CO_{3}^{2-}$ → $H_{2}O$ + $CO_{2}$ |
+| Acid + Bicarbonate | Gas + Water | $H^{+}$ + $HCO_{3}^{-}$ → $H_{2}O$ + $CO_{2}$ |
+| Acid + Sulfide | Gas | $2H^{+}$ + $S^{2-}$ → $H_{2}S(g)$ |
 
 
 ---
 
 > 🔑 **Quick Solubility Rules:**
-> - **Always soluble:** Na⁺, K⁺, NH₄⁺, NO₃⁻
-> - **Usually soluble:** Cl⁻, Br⁻, I⁻ (except Ag⁺, Pb²⁺, Hg₂²⁺)
-> - **Usually soluble:** SO₄²⁻ (except Ba²⁺, Pb²⁺, Ca²⁺, Sr²⁺)
-> - **Usually insoluble:** OH⁻, S²⁻, CO₃²⁻, PO₄³⁻ (except Group 1, NH₄⁺)
+> - **Always soluble:** $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, $NO_{3}^{-}$
+> - **Usually soluble:** $Cl^{-}$, $Br^{-}$, $I^{-}$ (except $Ag^{+}$, $Pb^{2+}$, $Hg_{2}^{2+}$)
+> - **Usually soluble:** $SO_{4}^{2-}$ (except $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, $Sr^{2+}$)
+> - **Usually insoluble:** $OH^{-}$, $S^{2-}$, $CO_{3}^{2-}$, $PO_{4}^{3-}$ (except Group 1, $NH_{4}^{+}$)
       `
     },
     {
@@ -105,7 +105,7 @@ On the AP Chemistry exam, you may be asked to:
               '$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) \\rightarrow \\text{AgNO}_3(s)$'
             ],
             correctAnswer: 1,
-            explanation: 'Ag₂CrO₄ is insoluble (a dark red precipitate). The formula requires 2 Ag⁺ per CrO₄²⁻ because Ag is +1 and CrO₄ is −2. Net ionic: 2Ag⁺(aq) + CrO₄²⁻(aq) → Ag₂CrO₄(s). Charge: 2(+1) + (−2) = 0 ✓.'
+            explanation: '$Ag_{2}CrO_{4}$ is insoluble (a dark red precipitate). The formula requires 2 $Ag^{+}$ per $CrO_{4}^{2-}$ because Ag is +1 and $CrO_{4}$ is −2. Net ionic: $2Ag^{+}(aq)$ + $CrO_{4}^{2-}(aq)$ → $Ag_{2}CrO_{4}(s)$. Charge: 2(+1) + (−2) = 0 ✓.'
           },
           {
             question: 'A solution of sulfuric acid is added to a solution of barium hydroxide. The net ionic equation is:',
@@ -116,7 +116,7 @@ On the AP Chemistry exam, you may be asked to:
               '$\\text{H}_2\\text{SO}_4(aq) + \\text{Ba(OH)}_2(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{H}_2\\text{O}(l)$'
             ],
             correctAnswer: 2,
-            explanation: 'This reaction has TWO driving forces: BaSO₄(s) precipitate AND H₂O formation. There are NO spectator ions! Every ion participates. The net ionic equation includes all species.'
+            explanation: 'This reaction has TWO driving forces: $BaSO_{4}(s)$ precipitate AND $H_{2}O$ formation. There are NO spectator ions! Every ion participates. The net ionic equation includes all species.'
           },
           {
             question: 'Excess hydrochloric acid is added to a solution of potassium carbonate. What is observed?',
@@ -127,7 +127,7 @@ On the AP Chemistry exam, you may be asked to:
               'No visible change occurs'
             ],
             correctAnswer: 2,
-            explanation: '2H⁺(aq) + CO₃²⁻(aq) → H₂O(l) + CO₂(g). The CO₂ gas produces visible bubbles (effervescence). This is a classic observation on the AP exam.'
+            explanation: '$2H^{+}(aq)$ + $CO_{3}^{2-}(aq)$ → $H_{2}O(l)$ + $CO_{2}(g)$. The $CO_{2}$ gas produces visible bubbles (effervescence). This is a classic observation on the AP exam.'
           }
         ]
       }
@@ -149,10 +149,10 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
       exercise: {
         boxes: 3,
         correctAnswers: ['Fe(OH)3', 'NR', 'PbSO4'],
-        hint1: 'Fe³⁺ + OH⁻ → Fe(OH)₃. Is Fe(OH)₃ soluble?',
-        hint2: 'Products would be NH₄NO₃ and KCl. Are either insoluble?',
-        hint3: 'Pb²⁺ + SO₄²⁻ → PbSO₄. Is SO₄²⁻ soluble with Pb²⁺?',
-        explanation: '1) Fe(OH)₃ — iron(III) hydroxide is insoluble (rust-brown precipitate). 2) NR — both NH₄NO₃ and KCl are soluble. No driving force. 3) PbSO₄ — sulfate is generally soluble, but Pb²⁺ is one of the exceptions → white precipitate.'
+        hint1: '$Fe^{3+}$ + $OH^{-}$ → $Fe(OH)_{3}$. Is $Fe(OH)_{3}$ soluble?',
+        hint2: 'Products would be $NH_{4}NO_{3}$ and KCl. Are either insoluble?',
+        hint3: '$Pb^{2+}$ + $SO_{4}^{2-}$ → $PbSO_{4}$. Is $SO_{4}^{2-}$ soluble with $Pb^{2+}$?',
+        explanation: '1) $Fe(OH)_{3}$ — iron(III) hydroxide is insoluble (rust-brown precipitate). 2) NR — both $NH_{4}NO_{3}$ and KCl are soluble. No driving force. 3) $PbSO_{4}$ — sulfate is generally soluble, but $Pb^{2+}$ is one of the exceptions → white precipitate.'
       }
     },
     {
@@ -164,27 +164,27 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
       exercise: {
         dropdowns: [
           {
-            label: 'In the reaction H₂SO₄(aq) + Ba(OH)₂(aq), the number of spectator ions is',
+            label: 'In the reaction $H_{2}SO_{4}(aq)$ + $Ba(OH)_{2}(aq)$, the number of spectator ions is',
             options: ['0', '1', '2', '4']
           },
           {
             label: 'The net ionic equation for ANY strong acid + strong base reaction is',
-            options: ['unique to each pair', 'H⁺ + OH⁻ → H₂O', 'HA + BOH → BA + H₂O', 'always involves a precipitate']
+            options: ['unique to each pair', '$H^{+}$ + $OH^{-}$ → $H_{2}O$', 'HA + BOH → BA + $H_{2}O$', 'always involves a precipitate']
           },
           {
-            label: 'When HCl is added to Na₂CO₃, the unstable intermediate is',
-            options: ['NaCl', 'H₂CO₃', 'CO₂', 'HClCO₃']
+            label: 'When HCl is added to $Na_{2}CO_{3}$, the unstable intermediate is',
+            options: ['NaCl', '$H_{2}CO_{3}$', '$CO_{2}$', '$HClCO_{3}$']
           },
           {
             label: 'A student observes a rust-brown precipitate when mixing two solutions. The precipitate is most likely',
-            options: ['CuSO₄', 'AgCl', 'Fe(OH)₃', 'BaSO₄']
+            options: ['$CuSO_{4}$', 'AgCl', '$Fe(OH)_{3}$', '$BaSO_{4}$']
           }
         ],
-        correctAnswers: ['0', 'H⁺ + OH⁻ → H₂O', 'H₂CO₃', 'Fe(OH)₃'],
-        hint1: 'Both BaSO₄ and H₂O form — does anything remain as a spectator?',
+        correctAnswers: ['0', '$H^{+}$ + $OH^{-}$ → $H_{2}O$', '$H_{2}CO_{3}$', '$Fe(OH)_{3}$'],
+        hint1: 'Both $BaSO_{4}$ and $H_{2}O$ form — does anything remain as a spectator?',
         hint2: 'The salt ions are always spectators in strong-strong reactions.',
-        hint3: 'H⁺ + CO₃²⁻ first forms H₂CO₃, which then decomposes.',
-        explanation: 'H₂SO₄ + Ba(OH)₂: BaSO₄ precipitates and H₂O forms — zero spectators! Strong-strong: always H⁺ + OH⁻ → H₂O. Acid + carbonate → H₂CO₃ (unstable) → H₂O + CO₂. Rust-brown precipitate = Fe(OH)₃.'
+        hint3: '$H^{+}$ + $CO_{3}^{2-}$ first forms $H_{2}CO_{3}$, which then decomposes.',
+        explanation: '$H_{2}SO_{4}$ + $Ba(OH)_{2}$: $BaSO_{4}$ precipitates and $H_{2}O$ forms — zero spectators! Strong-strong: always $H^{+}$ + $OH^{-}$ → $H_{2}O$. Acid + carbonate → $H_{2}CO_{3}$ (unstable) → $H_{2}O$ + $CO_{2}$. Rust-brown precipitate = $Fe(OH)_{3}$.'
       }
     },
     {
@@ -199,23 +199,23 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
             question: 'A student adds dilute HCl to an unknown white solid and observes vigorous bubbling. The solid is most likely:',
             options: [
               'NaCl',
-              'BaSO₄',
-              'CaCO₃',
+              '$BaSO_{4}$',
+              '$CaCO_{3}$',
               'AgCl'
             ],
             correctAnswer: 2,
-            explanation: 'Bubbling with acid indicates gas formation. CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂↑. The CO₂ gas causes the bubbling. NaCl, BaSO₄, and AgCl would not produce gas with HCl.'
+            explanation: 'Bubbling with acid indicates gas formation. $CaCO_{3}$ + 2HCl → $CaCl_{2}$ + $H_{2}O$ + $CO_{2}$↑. The $CO_{2}$ gas causes the bubbling. NaCl, $BaSO_{4}$, and AgCl would not produce gas with HCl.'
           },
           {
-            question: 'For the reaction: HF(aq) + NaOH(aq) → NaF(aq) + H₂O(l), the spectator ion(s) are:',
+            question: 'For the reaction: HF(aq) + NaOH(aq) → NaF(aq) + $H_{2}O(l)$, the spectator ion(s) are:',
             options: [
-              'H⁺ and F⁻',
-              'Na⁺ only',
-              'Na⁺ and F⁻',
-              'Na⁺ and OH⁻'
+              '$H^{+}$ and $F^{-}$',
+              '$Na^{+}$ only',
+              '$Na^{+}$ and $F^{-}$',
+              '$Na^{+}$ and $OH^{-}$'
             ],
             correctAnswer: 1,
-            explanation: 'HF is a weak acid — it stays molecular, so F⁻ is NOT a separate species on the reactant side. NaOH dissociates to Na⁺ + OH⁻, and NaF dissociates to Na⁺ + F⁻. Na⁺ appears on both sides → only spectator.'
+            explanation: 'HF is a weak acid — it stays molecular, so $F^{-}$ is NOT a separate species on the reactant side. NaOH dissociates to $Na^{+}$ + $OH^{-}$, and NaF dissociates to $Na^{+}$ + $F^{-}$. $Na^{+}$ appears on both sides → only spectator.'
           }
         ]
       }
@@ -237,7 +237,7 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
               'No reaction occurs'
             ],
             correctAnswer: 1,
-            explanation: 'Ca₃(PO₄)₂ is insoluble (phosphates are generally insoluble except with Group 1/NH₄⁺). The formula needs 3 Ca²⁺ and 2 PO₄³⁻ for charge balance: 3(+2) + 2(−3) = 0. Na⁺ and Cl⁻ are spectators.'
+            explanation: '$Ca_{3}(PO_{4})_{2}$ is insoluble (phosphates are generally insoluble except with Group $1/NH_{4}^{+}$). The formula needs 3 $Ca^{2+}$ and 2 $PO_{4}^{3-}$ for charge balance: 3(+2) + 2(−3) = 0. $Na^{+}$ and $Cl^{-}$ are spectators.'
           },
           {
             question: 'Which statement best explains why net ionic equations are useful?',

@@ -139,7 +139,7 @@ The period depends on $\\cos\\theta$ and $L$, but NOT on the mass. Faster spinni
       content: `
 **Horizontal Circle Problems** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A car rounds a flat curve of radius 40 m. If $\\mu_s = 0.5$, what is the maximum speed (in m/s, round to 3 significant figures)?
 

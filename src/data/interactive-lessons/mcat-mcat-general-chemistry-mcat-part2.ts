@@ -197,7 +197,7 @@ Examples: $\\text{H}_2\\text{O}$, $\\text{NH}_3$, $\\text{HF}$, alcohols, carbox
             explanation: `Ion-dipole forces arise between an ionic charge and a polar molecule's dipole. The partial negative oxygen of water is attracted to $\\text{Na}^+$. This is the strongest intermolecular force.`
           },
           {
-            question: `$n$-Butane (CH₃CH₂CH₂CH₃) has a higher boiling point than isobutane (same formula, branched). This is due to:`,
+            question: `$n$-Butane $(CH_{3}CH_{2}CH_{2}CH_{3})$ has a higher boiling point than isobutane (same formula, branched). This is due to:`,
             options: [
               `Stronger hydrogen bonding in $n$-butane`,
               `Greater surface area in $n$-butane increases London dispersion forces`,

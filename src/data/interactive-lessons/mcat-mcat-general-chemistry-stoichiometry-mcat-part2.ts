@@ -131,9 +131,9 @@ $$1.00 \\times 3 = 3.00\\text{ mol CO}_2$$
 Step 3 — Grams:
 $$3.00 \\times 44.0 = \\mathbf{132\\text{ g CO}_2}$$
 
-## MCAT Shortcut: Combustion O₂ Coefficient
+## MCAT Shortcut: Combustion $O_{2}$ Coefficient
 
-For $\\text{C}_3\\text{H}_8$: $x=3$, $y=8$. O₂ needed $= 3 + 8/4 = 3 + 2 = 5$. ✓
+For $\\text{C}_3\\text{H}_8$: $x=3$, $y=8$. $O_{2}$ needed $= 3 + 8/4 = 3 + 2 = 5$. ✓
 `
     },
     {
@@ -146,7 +146,7 @@ For $\\text{C}_3\\text{H}_8$: $x=3$, $y=8$. O₂ needed $= 3 + 8/4 = 3 + 2 = 5$.
             question: `Balance the combustion of $\\text{C}_4\\text{H}_{10}$ (butane). What is the coefficient for $\\text{O}_2$?`,
             options: [`5`, `13/2 (or multiply: 13 with 2 $\\text{C}_4\\text{H}_{10}$)`, `6`, `8`],
             correctAnswer: 1,
-            explanation: `$\\text{C}_4\\text{H}_{10} + \\text{O}_2 \\to 4\\text{CO}_2 + 5\\text{H}_2\\text{O}$. O needed $= 4(2) + 5(1) = 13$ oxygen atoms = 6.5 O₂. Coefficient $= \\mathbf{13/2}$ (or use $2\\text{C}_4\\text{H}_{10} + 13\\text{O}_2 \\to ...$). Using the formula: $x=4$, $y=10$: $4 + 10/4 = 4 + 2.5 = 6.5$.`
+            explanation: `$\\text{C}_4\\text{H}_{10} + \\text{O}_2 \\to 4\\text{CO}_2 + 5\\text{H}_2\\text{O}$. O needed $= 4(2) + 5(1) = 13$ oxygen atoms = 6.5 $O_{2}$. Coefficient $= \\mathbf{13/2}$ (or use $2\\text{C}_4\\text{H}_{10} + 13\\text{O}_2 \\to ...$). Using the formula: $x=4$, $y=10$: $4 + 10/4 = 4 + 2.5 = 6.5$.`
           },
           {
             question: `Decomposition of $\\text{CaCO}_3$ on heating yields $\\text{CaO}$ and $\\text{CO}_2$. This is an example of:`,

@@ -25,8 +25,8 @@ $$P = P_0 + \\rho g h$$
 Where:
 - $P$ = absolute pressure at depth $h$
 - $P_0$ = pressure at the surface (usually $P_{\\text{atm}}$)
-- $\\rho$ = fluid density (kg/m³)
-- $g = 9.8$ m/s² (or 10 for AP estimates)
+- $\\rho$ = fluid density $(kg/m^{3})$
+- $g = 9.8$ $m/s^{2}$ (or 10 for AP estimates)
 - $h$ = depth below the surface (m)
 
 ### Key Insights
@@ -62,7 +62,7 @@ A small force on a small piston creates the same pressure as a large force on a 
 
 ### Example
 
-A hydraulic lift has pistons with areas $A_1 = 0.01$ m² and $A_2 = 0.5$ m². You push with 100 N on the small piston.
+A hydraulic lift has pistons with areas $A_1 = 0.01$ $m^{2}$ and $A_2 = 0.5$ $m^{2}$. You push with 100 N on the small piston.
 
 $$F_2 = 100 \\times \\frac{0.5}{0.01} = 100 \\times 50 = 5000 \\text{ N}$$
 
@@ -117,7 +117,7 @@ You amplified the force by 50×! But there's a trade-off: the small piston moves
       id: 'dp2-depth-drill',
       type: 'input-boxes' as const,
       content: `
-**Depth-Pressure Drill** (use $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa, $\\rho_{\\text{water}} = 1000$ kg/m³)
+**Depth-Pressure Drill** (use $g = 10$ $m/s^{2}$, $P_{\\text{atm}} = 10^5$ Pa, $\\rho_{\\text{water}} = 1000$ $kg/m^{3}$)
 
 1) Gauge pressure at 5 m depth in water (in Pa)
 
@@ -140,11 +140,11 @@ You amplified the force by 50×! But there's a trade-off: the small piston moves
       content: `
 **Hydraulic Lift Drill**
 
-A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area $A_2 = 0.25$ m².
+A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area $A_2 = 0.25$ $m^{2}$.
 
 1) Pressure under the car piston (in Pa)
 
-2) Area of small input piston needed if you can push with 300 N (in m²)
+2) Area of small input piston needed if you can push with 300 N $(in m^{2})$
 
 3) How far must the small piston move to raise the car 0.10 m? (in m)
 
@@ -156,7 +156,7 @@ A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area 
         hint1: '$P = F/A = 15{,}000 / 0.25$.',
         hint2: '$A_1 = F_1/P = 300/60{,}000$.',
         hint3: 'Work in = work out: $F_1 d_1 = F_2 d_2$. So $d_1 = F_2 d_2 / F_1 = 15{,}000 \\times 0.10 / 300$.',
-        explanation: 'P = 60,000 Pa. $A_1 = 300/60{,}000 = 0.005$ m². By conservation of energy: $d_1 = (15{,}000)(0.10)/300 = 5$ m. You push 5 m to lift the car 10 cm!'
+        explanation: 'P = 60,000 Pa. $A_1 = 300/60{,}000 = 0.005$ $m^{2}$. By conservation of energy: $d_1 = (15{,}000)(0.10)/300 = 5$ m. You push 5 m to lift the car 10 cm!'
       }
     },
     {

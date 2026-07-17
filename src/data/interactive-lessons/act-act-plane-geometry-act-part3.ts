@@ -27,7 +27,7 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
             options: [
               'opposite sides equal and parallel, opposite angles equal.',
               'all angles 90°; Rhombus: all sides equal; Square: both.',
-              'Trapezoid area: ½(b₁ + b₂)h.',
+              'Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.',
               'Regular polygon: all sides and angles equal.'
             ],
             correctAnswer: 0,
@@ -36,13 +36,13 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
           {
             question: 'Which of the following is true about Key Insight?',
             options: [
-              'Trapezoid area: ½(b₁ + b₂)h.',
+              'Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.',
               'all angles 90°; Rhombus: all sides equal; Square: both.',
               'Regular polygon: all sides and angles equal.',
               'opposite sides equal and parallel, opposite angles equal.'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Key Insight: Trapezoid area: ½(b₁ + b₂)h. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Correct — Key Insight: Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -51,7 +51,7 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
       id: 'act-p3-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Trapezoid area: ½(b₁ + b₂)h.
+**Key Insight:** Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.
 
 **ACT Tip:** Regular polygon: all sides and angles equal.
       `
@@ -67,7 +67,7 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
           {
             question: 'Regarding Quadrilaterals & Polygons, which correctly describes ACT Tip?',
             options: [
-              'Trapezoid area: ½(b₁ + b₂)h.',
+              'Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.',
               'opposite sides equal and parallel, opposite angles equal.',
               'all angles 90°; Rhombus: all sides equal; Square: both.',
               'Regular polygon: all sides and angles equal.'
@@ -88,22 +88,22 @@ Rectangle: all angles 90°; Rhombus: all sides equal; Square: both.
         dropdowns: [
           {
             label: 'Parallelogram',
-            options: ['Regular polygon: all sides and angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'opposite sides equal and parallel, opposite angles equal.', 'Trapezoid area: ½(b₁ + b₂)h.']
+            options: ['Regular polygon: all sides and angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'opposite sides equal and parallel, opposite angles equal.', 'Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.']
           },
           {
             label: 'Rectangle',
-            options: ['Trapezoid area: ½(b₁ + b₂)h.', 'Regular polygon: all sides and angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'opposite sides equal and parallel, opposite angles equal.']
+            options: ['Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.', 'Regular polygon: all sides and angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'opposite sides equal and parallel, opposite angles equal.']
           },
           {
             label: 'Key Insight',
-            options: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'Trapezoid area: ½(b₁ + b₂)h.', 'Regular polygon: all sides and angles equal.']
+            options: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.', 'Regular polygon: all sides and angles equal.']
           }
         ],
-        correctAnswers: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'Trapezoid area: ½(b₁ + b₂)h.'],
+        correctAnswers: ['opposite sides equal and parallel, opposite angles equal.', 'all angles 90°; Rhombus: all sides equal; Square: both.', 'Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.'],
         hint1: 'Think about what each concept specifically describes in Quadrilaterals & Polygons.',
         hint2: 'Look for key terms that distinguish each concept from the others.',
         hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Quadrilaterals & Polygons describes a specific idea. Parallelogram: opposite sides equal and parallel, opposite angles equal. Rectangle: all angles 90°; Rhombus: all sides equal; Square: both. Key Insight: Trapezoid area: ½(b₁ + b₂)h.'
+        explanation: 'Each concept in Quadrilaterals & Polygons describes a specific idea. Parallelogram: opposite sides equal and parallel, opposite angles equal. Rectangle: all angles 90°; Rhombus: all sides equal; Square: both. Key Insight: Trapezoid area: $\\tfrac{1}{2} (b_{1} + b_{2})h$.'
       }
     }
   ]

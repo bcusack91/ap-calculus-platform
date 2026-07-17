@@ -75,7 +75,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -200 - (298)(0.100) = -200 - 29.8 = -229.8$ kJ. Remember to convert ΔS to kJ/K!'
           },
           {
-            question: 'A reaction has K = 2.5 × 10⁻⁴ at 298 K. ΔG° is:',
+            question: 'A reaction has K = $2.5 \\times 10^{-4}$ at 298 K. ΔG° is:',
             options: [
               '−20.5 kJ',
               '+20.5 kJ',
@@ -161,7 +161,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'A student calculates ΔG° = −20 kJ/mol at 298 K but finds Q = 10⁸. The forward reaction is:',
+            question: 'A student calculates ΔG° = −20 kJ/mol at 298 K but finds Q = $10^{8}$. The forward reaction is:',
             options: [
               'Still spontaneous because ΔG° < 0',
               'Nonspontaneous because Q is very large (past equilibrium)',

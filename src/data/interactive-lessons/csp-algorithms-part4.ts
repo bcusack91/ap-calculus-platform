@@ -40,7 +40,7 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
               "Splitting one procedure into two equivalent procedures."
             ],
             correctAnswer: 0,
-            explanation: "Asymptotic improvement (n² → n) dominates micro-optimizations."
+            explanation: "Asymptotic improvement ($n^{2}$ → n) dominates micro-optimizations."
           },
           {
             question: "A search algorithm runs over a sorted list. Which fact most clearly enables a faster (logarithmic) search?",
@@ -65,7 +65,7 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
 | Algorithm | Requires | Time on n items |
 |-----------|----------|----------------|
 | **Linear** | Nothing | up to n comparisons |
-| **Binary** | Sorted list | about log₂(n) comparisons |
+| **Binary** | Sorted list | about $\\log_{2}(n)$ comparisons |
 
 For 1,000,000 items, linear can need a million comparisons; binary needs about 20. The connection: **data structure** (sortedness) directly determines which **algorithm** you can use.
 
@@ -93,7 +93,7 @@ A recommendation algorithm that always returns the most-clicked content reinforc
 
 2) Hiding the implementation of an algorithm behind a procedure name is an example of _______.
 
-3) Switching from an n² algorithm to an n algorithm is an example of an _______ improvement.
+3) Switching from an $n^{2}$ algorithm to an n algorithm is an example of an _______ improvement.
       `,
       exercise: {
         boxes: 3,
@@ -114,22 +114,22 @@ A recommendation algorithm that always returns the most-clicked content reinforc
         dropdowns: [
           {
             label: "Linear search on n items needs at most ___ comparisons",
-            options: ["n", "log₂(n)", "n²", "1"]
+            options: ["n", "$\\log_{2}(n)$", "$n^{2}$", "1"]
           },
           {
             label: "Binary search on n items needs about ___ comparisons",
-            options: ["log₂(n)", "n", "√n", "2n"]
+            options: ["$\\log_{2}(n)$", "n", "$\\sqrt{n}$", "2n"]
           },
           {
             label: "For n = 1,048,576 (≈ 1 million), binary search uses about ___ comparisons",
             options: ["20", "1000", "1", "500,000"]
           }
         ],
-        correctAnswers: ["n", "log₂(n)", "20"],
+        correctAnswers: ["n", "$\\log_{2}(n)$", "20"],
         hint1: "Worst case checks every element.",
         hint2: "Each step halves the remaining range.",
-        hint3: "log₂(2²⁰) = 20.",
-        explanation: "Linear is O(n); binary is O(log n). 2²⁰ ≈ 1.05 million, so log₂(1M) ≈ 20."
+        hint3: "$\\log_{2}(2^{20})$ = 20.",
+        explanation: "Linear is O(n); binary is O(log n). $2^{20}$ ≈ 1.05 million, so $\\log_{2}(1M)$ ≈ 20."
       }
     },
     {
@@ -138,7 +138,7 @@ A recommendation algorithm that always returns the most-clicked content reinforc
       content: `
 ## AP Exam Strategy: Cross-Topic Reasoning
 
-- "Most efficient" almost always means lowest growth rate (n vs n² vs log n).
+- "Most efficient" almost always means lowest growth rate (n vs $n^{2}$ vs log n).
 - If the question mentions a sorted list, **binary search** is on the table.
 - If two algorithms produce identical output, the question is about **efficiency**, not correctness.
 - Watch for cross-topic framing: "the algorithm runs on a server" hints at scalability; "the algorithm assigns loans" hints at bias/impact.
@@ -161,7 +161,7 @@ A recommendation algorithm that always returns the most-clicked content reinforc
               "Exactly 1"
             ],
             correctAnswer: 0,
-            explanation: "2²² ≈ 4.2M, so log₂(4M) ≈ 22."
+            explanation: "$2^{22}$ ≈ 4.2M, so $\\log_{2}(4M)$ ≈ 22."
           },
           {
             question: "A school adopts an automated scheduling algorithm that consistently assigns students with last names early in the alphabet to better elective slots. Which CSP cross-topic concern is most directly raised?",

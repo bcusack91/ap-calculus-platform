@@ -58,15 +58,15 @@ A 1 T field stores:
 
 $$u_B = \\frac{(1)^2}{2(4\\pi \\times 10^{-7})} = \\frac{1}{8\\pi \\times 10^{-7}} \\approx 4 \\times 10^5 \\text{ J/m}^3$$
 
-> For comparison, the electric energy density $u_E = \\frac{1}{2}\\epsilon_0 E^2$: a field of $3 \\times 10^6$ V/m (near breakdown) stores only $\\sim 40$ J/m³.`
+> For comparison, the electric energy density $u_E = \\frac{1}{2}\\epsilon_0 E^2$: a field of $3 \\times 10^6$ V/m (near breakdown) stores only $\\sim 40$ $J/m^{3}$.`
     },
     {
       id: 'indrl5-mcq2',
       type: 'mcq' as const,
       question: 'The magnetic energy density in a region where $B = 0.02$ T is:',
-      options: ['$\\approx 159$ J/m³', '$\\approx 1590$ J/m³', '$\\approx 15.9$ J/m³', '$\\approx 1.59$ J/m³'],
+      options: ['$\\approx 159$ $J/m^{3}$', '$\\approx 1590$ $J/m^{3}$', '$\\approx 15.9$ $J/m^{3}$', '$\\approx 1.59$ $J/m^{3}$'],
       correctAnswer: 0,
-      explanation: '$u_B = B^2/(2\\mu_0) = (4 \\times 10^{-4})/(2 \\times 4\\pi \\times 10^{-7}) = (4 \\times 10^{-4})/(8\\pi \\times 10^{-7}) \\approx 4 \\times 10^{-4}/(2.51 \\times 10^{-6}) \\approx 159$ J/m³.'
+      explanation: '$u_B = B^2/(2\\mu_0) = (4 \\times 10^{-4})/(2 \\times 4\\pi \\times 10^{-7}) = (4 \\times 10^{-4})/(8\\pi \\times 10^{-7}) \\approx 4 \\times 10^{-4}/(2.51 \\times 10^{-6}) \\approx 159$ $J/m^{3}$.'
     },
     {
       id: 'indrl5-energy-budget',

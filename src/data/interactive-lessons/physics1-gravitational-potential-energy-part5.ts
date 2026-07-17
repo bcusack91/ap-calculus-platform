@@ -49,7 +49,7 @@ The PE bar shrinks to zero while the KE bar grows to the same height. Total ener
 4. **Draw** bars proportional to energy values
 5. **Check** that total energy is conserved (or account for non-conservative work)
 
-### Example: Ball Thrown Upward (1 kg, $v_i = 20$ m/s, $g = 10$ m/s²)
+### Example: Ball Thrown Upward (1 kg, $v_i = 20$ m/s, $g = 10$ $m/s^{2}$)
 
 **Initial state** (ground level, $h = 0$):
 - KE$_i = \\frac{1}{2}(1)(20)^2 = 200$ J
@@ -82,7 +82,7 @@ When friction is present, some energy is converted to **thermal energy** ($E_{\\
 
 ### Example: Block Sliding Down a Rough Ramp
 
-A 2 kg block slides 5 m down a $30°$ rough ramp ($\\mu_k = 0.2$, $g = 10$ m/s²):
+A 2 kg block slides 5 m down a $30°$ rough ramp ($\\mu_k = 0.2$, $g = 10$ $m/s^{2}$):
 
 - $\\Delta h = 5\\sin(30°) = 2.5$ m
 - Initial PE = $2(10)(2.5) = 50$ J
@@ -148,7 +148,7 @@ A 2 kg block slides 5 m down a $30°$ rough ramp ($\\mu_k = 0.2$, $g = 10$ m/s²
       content: `
 **Bar Chart Calculations** 🧮
 
-A 4 kg ball is thrown upward at 15 m/s from ground level. Use $g = 10$ m/s².
+A 4 kg ball is thrown upward at 15 m/s from ground level. Use $g = 10$ $m/s^{2}$.
 
 1) What is the initial KE (in J)?
 
@@ -213,7 +213,7 @@ A ball is dropped from a height and bounces back to a lower height.
       exercise: {
         questions: [
           {
-            question: 'A 5 kg ball is dropped from 10 m. It hits the ground and bounces back to 6 m. How much energy was lost to thermal energy ($g = 10$ m/s²)?',
+            question: 'A 5 kg ball is dropped from 10 m. It hits the ground and bounces back to 6 m. How much energy was lost to thermal energy ($g = 10$ $m/s^{2}$)?',
             options: [
               '100 J',
               '200 J',

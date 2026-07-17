@@ -39,7 +39,7 @@ This workshop focuses on applying Newton\'s Third Law to solve connected-object 
 
 Blocks A (2 kg), B (3 kg), C (5 kg) on a frictionless surface. $F = 40$ N pushes A.
 
-**System:** $a = 40/10 = 4$ m/s²
+**System:** $a = 40/10 = 4$ $m/s^{2}$
 
 **Contact force between B and C:** $F_{BC} = m_C \\times a = 5 \\times 4 = 20$ N
 
@@ -94,18 +94,18 @@ $$T = 3(3.92) = 11.76 \\text{ N}$$
               '40 N'
             ],
             correctAnswer: 2,
-            explanation: '$a = 50/10 = 5$ m/s². The contact force between the 3 kg and 5 kg blocks must accelerate only the 5 kg block: $F = 5 \\times 5 = 25$ N.'
+            explanation: '$a = 50/10 = 5$ $m/s^{2}$. The contact force between the 3 kg and 5 kg blocks must accelerate only the 5 kg block: $F = 5 \\times 5 = 25$ N.'
           },
           {
-            question: 'In a modified Atwood machine (1 kg on table, 4 kg hanging, frictionless), the acceleration is closest to ($g = 10$ m/s²):',
+            question: 'In a modified Atwood machine (1 kg on table, 4 kg hanging, frictionless), the acceleration is closest to ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s²',
-              '4 m/s²',
-              '8 m/s²',
-              '10 m/s²'
+              '2 $m/s^{2}$',
+              '4 $m/s^{2}$',
+              '8 $m/s^{2}$',
+              '10 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a = m_2 g/(m_1 + m_2) = 4(10)/5 = 40/5 = 8$ m/s².'
+            explanation: '$a = m_2 g/(m_1 + m_2) = 4(10)/5 = 40/5 = 8$ $m/s^{2}$.'
           },
           {
             question: 'Two boxes are connected by a rope. A pulls B across a frictionless floor with force $F$. The tension in the rope connecting them is less than $F$ because:',
@@ -127,9 +127,9 @@ $$T = 3(3.92) = 11.76 \\text{ N}$$
       content: `
 **Workshop Calculations** 🧮
 
-An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ m/s².
+An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ $m/s^{2}$.
 
-1) What is the acceleration (in m/s²)?
+1) What is the acceleration $(in m/s^{2})$?
 
 2) What is the tension in the string (in N)?
 
@@ -141,7 +141,7 @@ An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ m/s².
         hint1: '$a = (m_2 - m_1)g/(m_1 + m_2) = (15-5)(10)/(20)$.',
         hint2: '$T = m_1(g + a) = 5(10 + 5)$.',
         hint3: '$d = \\frac{1}{2}at^2 = \\frac{1}{2}(5)(4)$.',
-        explanation: '1) $a = 10(10)/20 = 100/20 = 5$ m/s². 2) $T = 5(10 + 5) = 5 \\times 15 = 75$ N. Check: $75 > m_1 g = 50$ ✓, $75 < m_2 g = 150$ ✓. 3) $d = \\frac{1}{2}(5)(4) = 10$ m.'
+        explanation: '1) $a = 10(10)/20 = 100/20 = 5$ $m/s^{2}$. 2) $T = 5(10 + 5) = 5 \\times 15 = 75$ N. Check: $75 > m_1 g = 50$ ✓, $75 < m_2 g = 150$ ✓. 3) $d = \\frac{1}{2}(5)(4) = 10$ m.'
       }
     },
     {
@@ -190,10 +190,10 @@ An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ m/s².
               '24 N'
             ],
             correctAnswer: 0,
-            explanation: '$a = 30/(6+4) = 3$ m/s². Tension accelerates B only: $T = m_B a = 4 \\times 3 = 12$ N.'
+            explanation: '$a = 30/(6+4) = 3$ $m/s^{2}$. Tension accelerates B only: $T = m_B a = 4 \\times 3 = 12$ N.'
           },
           {
-            question: 'An Atwood machine with $m_1 = 2$ kg and $m_2 = 8$ kg is released. After 1 second, the speed of each mass is ($g = 10$ m/s²):',
+            question: 'An Atwood machine with $m_1 = 2$ kg and $m_2 = 8$ kg is released. After 1 second, the speed of each mass is ($g = 10$ $m/s^{2}$):',
             options: [
               '2 m/s',
               '4 m/s',
@@ -201,7 +201,7 @@ An Atwood machine has $m_1 = 5$ kg and $m_2 = 15$ kg. Use $g = 10$ m/s².
               '8 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$a = (8-2)(10)/(8+2) = 60/10 = 6$ m/s². $v = at = 6 \\times 1 = 6$ m/s.'
+            explanation: '$a = (8-2)(10)/(8+2) = 60/10 = 6$ $m/s^{2}$. $v = at = 6 \\times 1 = 6$ m/s.'
           }
         ]
       }

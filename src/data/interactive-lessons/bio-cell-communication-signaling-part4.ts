@@ -10,7 +10,7 @@ export const bioCellCommPart4Data = {
 **Part 4 of 7 — Signal Transduction Pathways**
 
 1. Phosphorylation cascades: kinases add phosphate groups
-2. Second messengers: cAMP, Ca²⁺, IP₃
+2. Second messengers: cAMP, $Ca^{2+}$, $IP_{3}$
 3. Signal amplification: one signal → many responses
 4. G-protein linked: α subunit activates adenylyl cyclase → cAMP
       `
@@ -26,7 +26,7 @@ export const bioCellCommPart4Data = {
           {
             question: 'Which of the following correctly describes Phosphorylation cascades?',
             options: [
-              'cAMP, Ca²⁺, IP₃',
+              'cAMP, $Ca^{2+}$, $IP_{3}$',
               'one signal → many responses',
               'kinases add phosphate groups',
               'α subunit activates adenylyl cyclase → cAMP'
@@ -37,7 +37,7 @@ export const bioCellCommPart4Data = {
           {
             question: 'Select the statement that correctly describes Signal amplification:',
             options: [
-              'cAMP, Ca²⁺, IP₃',
+              'cAMP, $Ca^{2+}$, $IP_{3}$',
               'α subunit activates adenylyl cyclase → cAMP',
               'one signal → many responses',
               'kinases add phosphate groups'
@@ -55,7 +55,7 @@ export const bioCellCommPart4Data = {
 ### Key Details
 
 - **Phosphorylation cascades**: kinases add phosphate groups
-- **Second messengers**: cAMP, Ca²⁺, IP₃
+- **Second messengers**: cAMP, $Ca^{2+}$, $IP_{3}$
 - **Signal amplification**: one signal → many responses
 - **G-protein linked**: α subunit activates adenylyl cyclase → cAMP
       `
@@ -71,7 +71,7 @@ export const bioCellCommPart4Data = {
           {
             question: 'Which of these accurately represents G-protein linked?',
             options: [
-              'cAMP, Ca²⁺, IP₃',
+              'cAMP, $Ca^{2+}$, $IP_{3}$',
               'α subunit activates adenylyl cyclase → cAMP',
               'kinases add phosphate groups',
               'one signal → many responses'
@@ -92,22 +92,22 @@ export const bioCellCommPart4Data = {
         dropdowns: [
           {
             label: 'Phosphorylation cascades',
-            options: ['α subunit activates adenylyl cyclase → cAMP', 'cAMP, Ca²⁺, IP₃', 'kinases add phosphate groups', 'one signal → many responses']
+            options: ['α subunit activates adenylyl cyclase → cAMP', 'cAMP, $Ca^{2+}$, $IP_{3}$', 'kinases add phosphate groups', 'one signal → many responses']
           },
           {
             label: 'Second messengers',
-            options: ['one signal → many responses', 'α subunit activates adenylyl cyclase → cAMP', 'cAMP, Ca²⁺, IP₃', 'kinases add phosphate groups']
+            options: ['one signal → many responses', 'α subunit activates adenylyl cyclase → cAMP', 'cAMP, $Ca^{2+}$, $IP_{3}$', 'kinases add phosphate groups']
           },
           {
             label: 'Signal amplification',
-            options: ['one signal → many responses', 'cAMP, Ca²⁺, IP₃', 'kinases add phosphate groups', 'α subunit activates adenylyl cyclase → cAMP']
+            options: ['one signal → many responses', 'cAMP, $Ca^{2+}$, $IP_{3}$', 'kinases add phosphate groups', 'α subunit activates adenylyl cyclase → cAMP']
           }
         ],
-        correctAnswers: ['kinases add phosphate groups', 'cAMP, Ca²⁺, IP₃', 'one signal → many responses'],
+        correctAnswers: ['kinases add phosphate groups', 'cAMP, $Ca^{2+}$, $IP_{3}$', 'one signal → many responses'],
         hint1: 'Think about what each concept specifically describes in Signal Transduction Pathways.',
         hint2: 'Look for key terms that distinguish each concept from the others.',
         hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Signal Transduction Pathways describes a specific idea. Phosphorylation cascades: kinases add phosphate groups. Second messengers: cAMP, Ca²⁺, IP₃. Signal amplification: one signal → many responses.'
+        explanation: 'Each concept in Signal Transduction Pathways describes a specific idea. Phosphorylation cascades: kinases add phosphate groups. Second messengers: cAMP, $Ca^{2+}$, $IP_{3}$. Signal amplification: one signal → many responses.'
       }
     }
   ]

@@ -56,7 +56,7 @@ $$\\text{Long-term} \\to \\begin{cases} \\textbf{Explicit (declarative)} & \\tex
 
 ### Biological Basis: Long-Term Potentiation (LTP)
 
-LTP — the cellular model of learning — is strengthening of synaptic transmission via the **NMDA receptor**, which requires *both* presynaptic glutamate release AND postsynaptic depolarization to expel its Mg²⁺ block, allowing Ca²⁺ influx. The hippocampus is essential for *forming* new explicit memories (cf. patient H.M., who lost his hippocampi and could form no new declarative memories but could still learn motor skills).`
+LTP — the cellular model of learning — is strengthening of synaptic transmission via the **NMDA receptor**, which requires *both* presynaptic glutamate release AND postsynaptic depolarization to expel its $Mg^{2+}$ block, allowing $Ca^{2+}$ influx. The hippocampus is essential for *forming* new explicit memories (cf. patient H.M., who lost his hippocampi and could form no new declarative memories but could still learn motor skills).`
     },
     {
       id: 'pb2-quiz1',

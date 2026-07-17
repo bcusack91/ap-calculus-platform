@@ -188,24 +188,24 @@ Pick the right formula, plug in carefully, and simplify. Answers are left in ter
             {
               question: 'Find the volume of a **cylinder** with radius $2$ m and height $7$ m.',
               options: [
-                '$14\\pi$ m³',
-                '$28\\pi$ m³',
-                '$56\\pi$ m³',
-                '$98\\pi$ m³'
+                '$14\\pi$ $m^{3}$',
+                '$28\\pi$ $m^{3}$',
+                '$56\\pi$ $m^{3}$',
+                '$98\\pi$ $m^{3}$'
               ],
               correctAnswer: 1,
-              explanation: '$V = \\pi r^2 h = \\pi (2)^2 (7) = \\pi (4)(7) = 28\\pi$ m³. Square the radius first, then multiply by the height.'
+              explanation: '$V = \\pi r^2 h = \\pi (2)^2 (7) = \\pi (4)(7) = 28\\pi$ $m^{3}$. Square the radius first, then multiply by the height.'
             },
             {
               question: 'Find the volume of a **sphere** with radius $3$ in.',
               options: [
-                '$9\\pi$ in³',
-                '$27\\pi$ in³',
-                '$36\\pi$ in³',
-                '$108\\pi$ in³'
+                '$9\\pi$ $in^{3}$',
+                '$27\\pi$ $in^{3}$',
+                '$36\\pi$ $in^{3}$',
+                '$108\\pi$ $in^{3}$'
               ],
               correctAnswer: 2,
-              explanation: '$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (3)^3 = \\frac{4}{3}\\pi (27) = 36\\pi$ in³. Cube the radius, then take $\\frac{4}{3}$ of it.'
+              explanation: '$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (3)^3 = \\frac{4}{3}\\pi (27) = 36\\pi$ $in^{3}$. Cube the radius, then take $\\frac{4}{3}$ of it.'
             }
           ]
         }
@@ -291,13 +291,13 @@ Read carefully and choose the correct shape and formula.`,
             {
               question: 'A paper cup shaped like a **cone** has radius $4$ cm and height $9$ cm. How much water can it hold (in terms of $\\pi$)?',
               options: [
-                '$48\\pi$ cm³',
-                '$144\\pi$ cm³',
-                '$36\\pi$ cm³',
-                '$12\\pi$ cm³'
+                '$48\\pi$ $cm^{3}$',
+                '$144\\pi$ $cm^{3}$',
+                '$36\\pi$ $cm^{3}$',
+                '$12\\pi$ $cm^{3}$'
               ],
               correctAnswer: 0,
-              explanation: '$V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (4)^2 (9) = \\frac{1}{3}\\pi (16)(9) = \\frac{1}{3}\\pi (144) = 48\\pi$ cm³.'
+              explanation: '$V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (4)^2 (9) = \\frac{1}{3}\\pi (16)(9) = \\frac{1}{3}\\pi (144) = 48\\pi$ $cm^{3}$.'
             }
           ]
         }
@@ -342,24 +342,24 @@ Mix and match everything you've learned. Answers are in terms of $\\pi$.`,
             {
               question: 'A cylinder and a cone both have radius $3$ cm and height $6$ cm. What is the **difference** between the cylinder\'s volume and the cone\'s volume?',
               options: [
-                '$18\\pi$ cm³',
-                '$36\\pi$ cm³',
-                '$54\\pi$ cm³',
-                '$72\\pi$ cm³'
+                '$18\\pi$ $cm^{3}$',
+                '$36\\pi$ $cm^{3}$',
+                '$54\\pi$ $cm^{3}$',
+                '$72\\pi$ $cm^{3}$'
               ],
               correctAnswer: 1,
-              explanation: 'Cylinder: $\\pi (3)^2 (6) = 54\\pi$. Cone: $\\frac{1}{3}\\pi (3)^2 (6) = 18\\pi$. Difference: $54\\pi - 18\\pi = 36\\pi$ cm³.'
+              explanation: 'Cylinder: $\\pi (3)^2 (6) = 54\\pi$. Cone: $\\frac{1}{3}\\pi (3)^2 (6) = 18\\pi$. Difference: $54\\pi - 18\\pi = 36\\pi$ $cm^{3}$.'
             },
             {
               question: 'A sphere has radius $6$ in. What is its volume?',
               options: [
-                '$72\\pi$ in³',
-                '$216\\pi$ in³',
-                '$288\\pi$ in³',
-                '$864\\pi$ in³'
+                '$72\\pi$ $in^{3}$',
+                '$216\\pi$ $in^{3}$',
+                '$288\\pi$ $in^{3}$',
+                '$864\\pi$ $in^{3}$'
               ],
               correctAnswer: 2,
-              explanation: '$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (6)^3 = \\frac{4}{3}\\pi (216) = 4 \\times 72\\,\\pi = 288\\pi$ in³.'
+              explanation: '$V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (6)^3 = \\frac{4}{3}\\pi (216) = 4 \\times 72\\,\\pi = 288\\pi$ $in^{3}$.'
             }
           ]
         }

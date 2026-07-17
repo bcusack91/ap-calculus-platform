@@ -144,7 +144,7 @@ export const FRQS: SAQItem[] = [
       },
     ],
     sampleResponse:
-      '(A) Market graph: D₁ shifts right to D₂ along upward-sloping S; new equilibrium has higher P and higher Q. Firm graph: D = MR is horizontal at the new (higher) market price, above ATC at the profit-max quantity q* where MC crosses MR from below.\n\n' +
+      '(A) Market graph: $D_{1}$ shifts right to $D_{2}$ along upward-sloping S; new equilibrium has higher P and higher Q. Firm graph: D = MR is horizontal at the new (higher) market price, above ATC at the profit-max quantity q* where MC crosses MR from below.\n\n' +
       '(B) Profit rectangle: width = q*, height = P_new − ATC at q*. Shade this rectangle on the firm graph.\n\n' +
       '(C) Positive short-run economic profit attracts new firms into the industry. Market supply shifts RIGHT, lowering price. Entry continues until economic profit returns to zero.\n\n' +
       '(D) In long-run equilibrium, P = MC = min ATC.\n\n' +

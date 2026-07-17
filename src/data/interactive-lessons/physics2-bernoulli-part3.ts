@@ -92,9 +92,9 @@ This is exactly the speed an object would have if it **fell freely** from height
       id: 'be3-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Torricelli Drill** (use $g = 10$ m/s²)
+**Torricelli Drill** (use $g = 10$ $m/s^{2}$)
 
-A large water tank has a small hole 5.0 m below the water surface. The hole has area $2.0 \\times 10^{-4}$ m².
+A large water tank has a small hole 5.0 m below the water surface. The hole has area $2.0 \\times 10^{-4}$ $m^{2}$.
 
 1) Exit speed of the water (in m/s)
 
@@ -108,9 +108,9 @@ A large water tank has a small hole 5.0 m below the water surface. The hole has 
         boxes: 3,
         correctAnswers: ['10', '2', '4.9'],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(5.0)}$.',
-        hint2: '$Q = Av = (2.0 \\times 10^{-4})(10) = 2.0 \\times 10^{-3}$ m³/s.',
+        hint2: '$Q = Av = (2.0 \\times 10^{-4})(10) = 2.0 \\times 10^{-3}$ $m^{3}/s$.',
         hint3: 'Projectile: exits horizontally at $v = 10$ m/s, falls $h = 1.2$ m. $t = \\sqrt{2h/g} = \\sqrt{2(1.2)/10}$. $x = vt$.',
-        explanation: '$v = \\sqrt{100} = 10$ m/s. $Q = 2.0 \\times 10^{-3}$ m³/s = 2 L/s. Fall time: $t = \\sqrt{2(1.2)/10} = 0.49$ s. $x = 10(0.49) = 4.9$ m.'
+        explanation: '$v = \\sqrt{100} = 10$ m/s. $Q = 2.0 \\times 10^{-3}$ $m^{3}/s$ = 2 L/s. Fall time: $t = \\sqrt{2(1.2)/10} = 0.49$ s. $x = 10(0.49) = 4.9$ m.'
       }
     },
     {
@@ -153,7 +153,7 @@ The exit speed increases with depth ($v = \\sqrt{2gh}$), but a deeper hole means
       exercise: {
         questions: [
           {
-            question: 'A sealed tank of water is pressurized with compressed air (gauge pressure 50,000 Pa). There is a hole 2 m below the surface. The exit speed is approximately: ($\\rho = 1000$ kg/m³, $g = 10$ m/s²)',
+            question: 'A sealed tank of water is pressurized with compressed air (gauge pressure 50,000 Pa). There is a hole 2 m below the surface. The exit speed is approximately: ($\\rho = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$)',
             options: [
               '6.3 m/s',
               '10 m/s',

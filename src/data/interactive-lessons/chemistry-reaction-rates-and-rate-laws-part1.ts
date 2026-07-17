@@ -101,7 +101,7 @@ $$\\boxed{\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}
             explanation: 'Reactant concentrations decrease over time, so Δ[A] is negative. Multiplying by −1 gives a positive rate, since we define rate as a positive quantity.'
           },
           {
-            question: 'For N₂ + 3H₂ → 2NH₃, the rate of disappearance of H₂ is 0.30 M/s. What is the rate of appearance of NH₃?',
+            question: 'For $N_{2}$ + $3H_{2}$ → $2NH_{3}$, the rate of disappearance of $H_{2}$ is 0.30 M/s. What is the rate of appearance of $NH_{3}$?',
             options: [
               '0.10 M/s',
               '0.20 M/s',
@@ -109,7 +109,7 @@ $$\\boxed{\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}
               '0.45 M/s'
             ],
             correctAnswer: 1,
-            explanation: 'Rate = (1/3)(−Δ[H₂]/Δt) = (1/2)(Δ[NH₃]/Δt). Rate = 0.30/3 = 0.10 M/s. Then Δ[NH₃]/Δt = 2 × 0.10 = 0.20 M/s.'
+            explanation: 'Rate = (1/3)(−Δ[$H_{2}$]/Δt) = (1/2)(Δ[$NH_{3}$]/Δt). Rate = 0.30/3 = 0.10 M/s. Then Δ[$NH_{3}$]/Δt = 2 × 0.10 = 0.20 M/s.'
           }
         ]
       }
@@ -207,7 +207,7 @@ The **initial rate** is the instantaneous rate at $t = 0$, before significant pr
 | **Conductivity** | Ion concentration | Reactions producing/consuming ions |
 | **Mass loss** | Mass of system | Reactions releasing gas |
 | **Titration** (aliquot method) | Concentration at specific times | Slow reactions |
-| **pH measurement** | [H⁺] or [OH⁻] | Acid/base reactions |
+| **pH measurement** | [$H^{+}$] or [$OH^{-}$] | Acid/base reactions |
 
 
 ---
@@ -229,25 +229,25 @@ where $\\varepsilon$ = molar absorptivity, $b$ = path length, $c$ = concentratio
 
 Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
 
-| Time (s) | [NO₂] (M) |
+| Time (s) | [$NO_{2}$] (M) |
 |----------|-----------|
 | 0 | 0.500 |
 | 50 | 0.380 |
 | 100 | 0.300 |
 
-**1)** What is the average rate of disappearance of NO₂ over the first 50 s? (in M/s, 3 significant figures)
+**1)** What is the average rate of disappearance of $NO_{2}$ over the first 50 s? (in M/s, 3 significant figures)
 
 **2)** What is the average rate of the reaction over the first 50 s? (divide by stoichiometric coefficient, 3 significant figures)
 
-**3)** What is the average rate of appearance of O₂ over the interval 0–100 s? (in M/s, 3 significant figures)
+**3)** What is the average rate of appearance of $O_{2}$ over the interval 0–100 s? (in M/s, 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.0024', '0.0012', '0.0010'],
-        hint1: 'Rate of disappearance = −Δ[NO₂]/Δt = −(0.380 − 0.500)/(50 − 0).',
-        hint2: 'Rate of reaction = (1/2) × rate of disappearance of NO₂.',
-        hint3: 'Rate of reaction = rate of appearance of O₂ (coefficient is 1). Use the 0–100 s interval.',
-        explanation: '1) −Δ[NO₂]/Δt = −(0.380 − 0.500)/50 = 0.120/50 = 0.0024 M/s. 2) Rate = (1/2)(0.0024) = 0.0012 M/s. 3) Over 0–100 s: Rate = (1/2)(−(0.300 − 0.500)/100) = (1/2)(0.0020) = 0.0010 M/s. Rate of O₂ appearance = 0.0010 M/s.'
+        hint1: 'Rate of disappearance = −Δ[$NO_{2}$]/Δt = −(0.380 − 0.500)/(50 − 0).',
+        hint2: 'Rate of reaction = (1/2) × rate of disappearance of $NO_{2}$.',
+        hint3: 'Rate of reaction = rate of appearance of $O_{2}$ (coefficient is 1). Use the 0–100 s interval.',
+        explanation: '1) −Δ[$NO_{2}$]/Δt = −(0.380 − 0.500)/50 = 0.120/50 = 0.0024 M/s. 2) Rate = (1/2)(0.0024) = 0.0012 M/s. 3) Over 0–100 s: Rate = (1/2)(−(0.300 − 0.500)/100) = (1/2)(0.0020) = 0.0010 M/s. Rate of $O_{2}$ appearance = 0.0010 M/s.'
       }
     },
     {
@@ -259,7 +259,7 @@ Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
       exercise: {
         questions: [
           {
-            question: 'For 2H₂O₂ → 2H₂O + O₂, if O₂ forms at 0.015 M/s, what is the rate of disappearance of H₂O₂?',
+            question: 'For $2H_{2}O_{2}$ → $2H_{2}O$ + $O_{2}$, if $O_{2}$ forms at 0.015 M/s, what is the rate of disappearance of $H_{2}O_{2}$?',
             options: [
               '0.0075 M/s',
               '0.015 M/s',
@@ -267,7 +267,7 @@ Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
               '0.045 M/s'
             ],
             correctAnswer: 2,
-            explanation: 'Rate = Δ[O₂]/Δt = (1/2)(−Δ[H₂O₂]/Δt). So −Δ[H₂O₂]/Δt = 2 × 0.015 = 0.030 M/s.'
+            explanation: 'Rate = Δ[$O_{2}$]/Δt = (1/2)(−Δ[$H_{2}O_{2}$]/Δt). So −Δ[$H_{2}O_{2}$]/Δt = 2 × 0.015 = 0.030 M/s.'
           },
           {
             question: 'Which method would best track the rate of a reaction that produces a colored product?',

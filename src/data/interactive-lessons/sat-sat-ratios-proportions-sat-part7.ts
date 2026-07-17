@@ -102,8 +102,8 @@ export const satRatiosPart7Data = {
 |------|------|
 | Real dimensions | $6 × 50 = 300$ cm, $8 × 50 = 400$ cm |
 | Convert to meters | $3$ m × $4$ m |
-| Room area | $12$ m² |
-| With patio (+20%) | $12 × 1.20 = 14.4$ m² |
+| Room area | $12$ $m^{2}$ |
+| With patio (+20%) | $12 × 1.20 = 14.4$ $m^{2}$ |
 
 ### Top 5 SAT Strategies for This Topic
 

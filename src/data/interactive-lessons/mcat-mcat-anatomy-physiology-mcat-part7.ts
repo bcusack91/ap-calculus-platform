@@ -35,22 +35,22 @@ $$\\text{pH} = -\\log[\\text{H}^+] \\qquad \\text{Henderson–Hasselbalch: } \\t
 
 | Disorder | Primary change | pH | Cause |
 |----------|----------------|----|----|
-| Respiratory acidosis | ↑ PCO₂ | Low | Hypoventilation (COPD, opioids) |
-| Respiratory alkalosis | ↓ PCO₂ | High | Hyperventilation (anxiety, altitude) |
-| Metabolic acidosis | ↓ HCO₃⁻ | Low | Ketoacidosis, lactic acid, diarrhea (HCO₃⁻ loss) |
-| Metabolic alkalosis | ↑ HCO₃⁻ | High | Vomiting (H⁺ loss), antacids |
+| Respiratory acidosis | ↑ $PCO_{2}$ | Low | Hypoventilation (COPD, opioids) |
+| Respiratory alkalosis | ↓ $PCO_{2}$ | High | Hyperventilation (anxiety, altitude) |
+| Metabolic acidosis | ↓ $HCO_{3}^{-}$ | Low | Ketoacidosis, lactic acid, diarrhea $(HCO_{3}^{-} loss)$ |
+| Metabolic alkalosis | ↑ $HCO_{3}^{-}$ | High | Vomiting $(H^{+} loss)$, antacids |
 
 $$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$
 
 ### Compensation (Don't Confuse with Correction)
 
-- **Respiratory** problems → **renal** compensation (kidneys retain/excrete HCO₃⁻): slow, hours–days.
-- **Metabolic** problems → **respiratory** compensation (change ventilation to adjust PCO₂): fast, minutes–hours.
+- **Respiratory** problems → **renal** compensation (kidneys retain/excrete $HCO_{3}^{-}$): slow, hours–days.
+- **Metabolic** problems → **respiratory** compensation (change ventilation to adjust $PCO_{2}$): fast, minutes–hours.
 - Compensation moves pH TOWARD normal but never **overshoots**; the body never fully overcorrects.
 
 ### Renal Integration
 
-- Kidneys regulate **volume/BP** (renin–angiotensin–aldosterone), **osmolarity** (ADH), **acid–base** (H⁺/HCO₃⁻ handling), and **RBC mass** (EPO) — the master integrator with the lungs and heart.
+- Kidneys regulate **volume/BP** (renin–angiotensin–aldosterone), **osmolarity** (ADH), **acid–base** $(H^{+}/HCO_{3}^{-} handling)$, and **RBC mass** (EPO) — the master integrator with the lungs and heart.
 
 ### Endocrine vs. Nervous Signaling (Two Coordinating Systems)
 
@@ -70,10 +70,10 @@ The **hypothalamus–pituitary axis** links the two, translating neural input in
       exercise: {
         questions: [
           {
-            question: `Arterial blood gas from an uncontrolled type 1 diabetic shows pH 7.25, low HCO₃⁻, and a PCO₂ of 22 mmHg (low; normal ~40). The deep, rapid breathing observed (Kussmaul respirations) is best interpreted as:`,
-            options: [`Respiratory compensation for a primary metabolic acidosis — hyperventilation blows off CO₂ to raise pH toward normal`, `A primary respiratory alkalosis causing the low HCO₃⁻`, `Respiratory compensation for a primary metabolic alkalosis`, `An uncompensated respiratory acidosis from CO₂ retention`],
+            question: `Arterial blood gas from an uncontrolled type 1 diabetic shows pH 7.25, low $HCO_{3}^{-}$, and a $PCO_{2}$ of 22 mmHg (low; normal ~40). The deep, rapid breathing observed (Kussmaul respirations) is best interpreted as:`,
+            options: [`Respiratory compensation for a primary metabolic acidosis — hyperventilation blows off $CO_{2}$ to raise pH toward normal`, `A primary respiratory alkalosis causing the low $HCO_{3}^{-}$`, `Respiratory compensation for a primary metabolic alkalosis`, `An uncompensated respiratory acidosis from $CO_{2}$ retention`],
             correctAnswer: 0,
-            explanation: `The primary problem is metabolic acidosis (ketoacids consume HCO₃⁻ → low HCO₃⁻, low pH). The LOW PCO₂ shows the lungs are hyperventilating to blow off CO₂, shifting $\\text{CO}_2+\\text{H}_2\\text{O}\\rightleftharpoons\\text{H}^++\\text{HCO}_3^-$ leftward and reducing H⁺ — respiratory COMPENSATION. Option B mislabels a compensatory low PCO₂ as the primary disorder (but then pH would be HIGH, not 7.25). Option D is contradicted by the LOW (not high) PCO₂.`
+            explanation: `The primary problem is metabolic acidosis (ketoacids consume $HCO_{3}^{-}$ → low $HCO_{3}^{-}$, low pH). The LOW $PCO_{2}$ shows the lungs are hyperventilating to blow off $CO_{2}$, shifting $\\text{CO}_2+\\text{H}_2\\text{O}\\rightleftharpoons\\text{H}^++\\text{HCO}_3^-$ leftward and reducing $H^{+}$ — respiratory COMPENSATION. Option B mislabels a compensatory low $PCO_{2}$ as the primary disorder (but then pH would be HIGH, not 7.25). Option D is contradicted by the LOW (not high) $PCO_{2}$.`
           },
           {
             question: `A surge of luteinizing hormone (LH) triggers ovulation. Just before ovulation, rising estrogen from the dominant follicle stimulates even MORE LH release. This relationship is an example of:`,
@@ -82,10 +82,10 @@ The **hypothalamus–pituitary axis** links the two, translating neural input in
             explanation: `Late in the follicular phase, high estrogen SWITCHES from inhibiting to STIMULATING gonadotropin release, so estrogen and LH amplify each other → the LH surge → ovulation. This self-amplifying loop driving toward a discrete endpoint is the hallmark of POSITIVE feedback (like oxytocin in labor or clotting). Option B describes estrogen's behavior at LOWER concentrations earlier in the cycle, not the pre-ovulatory surge — a classic trap.`
           },
           {
-            question: `A patient with a chronic, slowly developing respiratory acidosis from COPD has a near-normal pH despite a persistently elevated PCO₂. The mechanism keeping the pH near normal is primarily:`,
-            options: [`Renal compensation — the kidneys retain and generate HCO₃⁻ over days to buffer the retained CO₂`, `Pulmonary compensation — the lungs increase ventilation to lower HCO₃⁻`, `Immediate bicarbonate buffering that fully corrects the pH within minutes`, `Hepatic compensation — the liver synthesizes albumin to bind H⁺`],
+            question: `A patient with a chronic, slowly developing respiratory acidosis from COPD has a near-normal pH despite a persistently elevated $PCO_{2}$. The mechanism keeping the pH near normal is primarily:`,
+            options: [`Renal compensation — the kidneys retain and generate $HCO_{3}^{-}$ over days to buffer the retained $CO_{2}$`, `Pulmonary compensation — the lungs increase ventilation to lower $HCO_{3}^{-}$`, `Immediate bicarbonate buffering that fully corrects the pH within minutes`, `Hepatic compensation — the liver synthesizes albumin to bind $H^{+}$`],
             correctAnswer: 0,
-            explanation: `A RESPIRATORY disorder is compensated by the KIDNEYS, which retain/regenerate HCO₃⁻ to offset the chronically high PCO₂ — a slow process (days), consistent with "chronic." That elevated HCO₃⁻ buffers the extra H⁺, pulling pH back toward normal. Option B is backwards (the lungs ARE the source of the problem and cannot fix retained CO₂ here). Option C overstates buffering (it blunts but cannot fully correct). Option D is not a recognized acid–base compensation route.`
+            explanation: `A RESPIRATORY disorder is compensated by the KIDNEYS, which retain/regenerate $HCO_{3}^{-}$ to offset the chronically high $PCO_{2}$ — a slow process (days), consistent with "chronic." That elevated $HCO_{3}^{-}$ buffers the extra $H^{+}$, pulling pH back toward normal. Option B is backwards (the lungs ARE the source of the problem and cannot fix retained $CO_{2}$ here). Option C overstates buffering (it blunts but cannot fully correct). Option D is not a recognized acid–base compensation route.`
           }
         ]
       }
@@ -98,15 +98,15 @@ The **hypothalamus–pituitary axis** links the two, translating neural input in
 <details>
 <summary><b>Example 1: Diagnose an acid–base disorder from an ABG</b></summary>
 
-**Question:** A patient vomiting for 2 days has pH 7.52, HCO₃⁻ 34 mEq/L (high), PCO₂ 47 mmHg (slightly high). Identify the primary disorder and the compensation.
+**Question:** A patient vomiting for 2 days has pH 7.52, $HCO_{3}^{-}$ 34 mEq/L (high), $PCO_{2}$ 47 mmHg (slightly high). Identify the primary disorder and the compensation.
 
 **Solution:**
 1. pH 7.52 → **alkalosis** (above 7.45).
-2. HCO₃⁻ is HIGH and moves pH the same direction as the disturbance → primary **metabolic alkalosis** (vomiting loses gastric H⁺). ✓
-3. PCO₂ is slightly HIGH — the lungs **hypoventilate** to retain CO₂ and pull pH back down → **respiratory compensation**. ✓
+2. $HCO_{3}^{-}$ is HIGH and moves pH the same direction as the disturbance → primary **metabolic alkalosis** (vomiting loses gastric $H^{+}$). ✓
+3. $PCO_{2}$ is slightly HIGH — the lungs **hypoventilate** to retain $CO_{2}$ and pull pH back down → **respiratory compensation**. ✓
 4. Compensation is partial (pH still alkalotic), as expected — the body never overshoots.
 
-**MCAT note:** Match the primary disorder to whichever value (HCO₃⁻ or PCO₂) explains the pH direction; the other value reveals compensation.
+**MCAT note:** Match the primary disorder to whichever value $(HCO_{3}^{-} or PCO_{2})$ explains the pH direction; the other value reveals compensation.
 </details>
 
 <details>
@@ -141,7 +141,7 @@ The **hypothalamus–pituitary axis** links the two, translating neural input in
 
 - Negative feedback opposes the stimulus (set-point control); positive feedback amplifies to a discrete endpoint (oxytocin, LH surge, clotting).
 - Respiratory disorders → renal compensation (slow); metabolic disorders → respiratory compensation (fast). Compensation never overshoots.
-- Match HCO₃⁻ vs. PCO₂ to the pH direction to find the primary acid–base disorder.
+- Match $HCO_{3}^{-}$ vs. $PCO_{2}$ to the pH direction to find the primary acid–base disorder.
 - Insulin/glucagon, hypothalamic thermoregulation, and the kidney's RAAS/ADH/EPO roles show how systems integrate.
 - Think in systems and connections, not isolated facts.`
     }

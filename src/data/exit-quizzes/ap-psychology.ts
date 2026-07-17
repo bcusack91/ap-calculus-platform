@@ -95,9 +95,9 @@ export const apPsychQuestionPool: APPsychQuestion[] = [
   // ══════════════════════════════════════════════════════════════════
   {
     question: 'During an action potential, which ions rush into the neuron through voltage-gated channels, causing depolarization?',
-    options: ['Potassium (K⁺)', 'Sodium (Na⁺)', 'Chloride (Cl⁻)', 'Calcium (Ca²⁺)'],
+    options: ['Potassium $(K^{+})$', 'Sodium $(Na^{+})$', 'Chloride $(Cl^{-})$', 'Calcium $(Ca^{2+})$'],
     correctAnswer: 1,
-    explanation: 'During depolarization, voltage-gated sodium channels open and Na⁺ ions rush into the neuron, making the interior more positive.',
+    explanation: 'During depolarization, voltage-gated sodium channels open and $Na^{+}$ ions rush into the neuron, making the interior more positive.',
     difficulty: 'medium',
     domain: 'biological-bases',
     topicSlug: 'biological-bases-brain',

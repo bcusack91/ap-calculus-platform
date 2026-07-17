@@ -128,7 +128,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         prompt: 'Factor $f(x)$ completely.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Recognizes quadratic form: u² − 5u + 4 = (u − 1)(u − 4)', keywords: ['substitution', 'quadratic', 'u =', 'x^2'] },
+          { points: 1, description: 'Recognizes quadratic form: $u^{2}$ − 5u + 4 = (u − 1)(u − 4)', keywords: ['substitution', 'quadratic', 'u =', 'x^2'] },
           { points: 1, description: 'Full factorization: (x−1)(x+1)(x−2)(x+2)', keywords: ['(x-1)', '(x+1)', '(x-2)', '(x+2)', 'x − 1', 'x + 1', 'x − 2', 'x + 2'] },
         ],
         sampleAnswer: 'Let $u = x^2$: $u^2 - 5u + 4 = (u - 1)(u - 4) = (x^2 - 1)(x^2 - 4) = (x-1)(x+1)(x-2)(x+2)$.',
@@ -169,7 +169,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         prompt: 'Combine the left side into a single logarithm.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Uses product rule: log₂((x+3)(x−1))', keywords: ['product', 'log_2((x+3)(x-1))', '(x+3)(x-1)', 'multiply'] },
+          { points: 1, description: 'Uses product rule: $\\log_{2}((x+3)(x-1))$', keywords: ['product', 'log_2((x+3)(x-1))', '(x+3)(x-1)', 'multiply'] },
         ],
         sampleAnswer: '$\\log_2((x+3)(x-1)) = 3$ (product rule for logarithms).',
       },
@@ -211,7 +211,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: 'Sets y = (2x+3)/(x−1), swaps x and y, and solves algebraically', keywords: ['swap', 'interchange', 'solve for y'] },
-          { points: 1, description: 'Gets f⁻¹(x) = (x + 3)/(x − 2)', keywords: ['(x + 3)/(x - 2)', 'x + 3', 'x - 2'] },
+          { points: 1, description: 'Gets $f^{-1}(x)$ = (x + 3)/(x − 2)', keywords: ['(x + 3)/(x - 2)', 'x + 3', 'x - 2'] },
         ],
         sampleAnswer: '$y = \\frac{2x+3}{x-1}$ → Swap: $x = \\frac{2y+3}{y-1}$ → $x(y-1) = 2y+3$ → $xy - x = 2y + 3$ → $xy - 2y = x + 3$ → $y(x-2) = x+3$ → $y = \\frac{x+3}{x-2}$.\n\nSo $f^{-1}(x) = \\frac{x+3}{x-2}$.',
       },
@@ -229,7 +229,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         prompt: 'Verify that $f(f^{-1}(x)) = x$.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Substitutes f⁻¹(x) into f and simplifies to x', keywords: ['simplif', 'substitute', 'verify', '= x'] },
+          { points: 1, description: 'Substitutes $f^{-1}(x)$ into f and simplifies to x', keywords: ['simplif', 'substitute', 'verify', '= x'] },
         ],
         sampleAnswer: '$f\\left(\\frac{x+3}{x-2}\\right) = \\frac{2 \\cdot \\frac{x+3}{x-2} + 3}{\\frac{x+3}{x-2} - 1} = \\frac{\\frac{2(x+3) + 3(x-2)}{x-2}}{\\frac{(x+3) - (x-2)}{x-2}} = \\frac{2x+6+3x-6}{x+3-x+2} = \\frac{5x}{5} = x$. ✓',
       },
@@ -251,8 +251,8 @@ const precalcFRQs: PrecalcFRQ[] = [
         prompt: 'Convert the equation to rectangular form.',
         maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Multiplies both sides by r: r² = 4rcosθ', keywords: ['r²', 'r^2', 'multiply by r'] },
-          { points: 1, description: 'Substitutes x²+y² and x to get (x−2)² + y² = 4', keywords: ['(x-2)²', 'x² + y² = 4x', 'circle'] },
+          { points: 1, description: 'Multiplies both sides by r: $r^{2}$ = 4rcosθ', keywords: ['r²', 'r^2', 'multiply by r'] },
+          { points: 1, description: 'Substitutes $x^{2}+y^{2}$ and x to get $(x-2)^{2}$ + $y^{2}$ = 4', keywords: ['(x-2)²', 'x² + y² = 4x', 'circle'] },
         ],
         sampleAnswer: 'Multiply both sides by $r$: $r^2 = 4r\\cos\\theta$.\n\nSince $r^2 = x^2 + y^2$ and $r\\cos\\theta = x$:\n\n$x^2 + y^2 = 4x$ → $x^2 - 4x + y^2 = 0$ → $(x-2)^2 + y^2 = 4$.',
       },
@@ -270,7 +270,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         prompt: 'Find the area of the region enclosed by the curve.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'Area = πr² = 4π', keywords: ['4π', '4pi', 'π(2)²', 'pi(2)^2'] },
+          { points: 1, description: 'Area = $\\pi r^{2}$ = 4π', keywords: ['4π', '4pi', 'π(2)²', 'pi(2)^2'] },
         ],
         sampleAnswer: '$A = \\pi r^2 = \\pi(2)^2 = 4\\pi$.',
       },
@@ -293,7 +293,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: 'Common ratio r = 2', keywords: ['r = 2', 'ratio = 2', 'common ratio is 2'] },
-          { points: 1, description: 'General term: aₙ = 3(2)^(n−1)', keywords: ['3(2)', '3 · 2', '2^(n-1)', '2^{n-1}'] },
+          { points: 1, description: 'General term: $a_{n}$ = $3(2)^{n-1}$', keywords: ['3(2)', '3 · 2', '2^(n-1)', '2^{n-1}'] },
         ],
         sampleAnswer: '$r = 6/3 = 2$. General term: $a_n = 3 \\cdot 2^{n-1}$.',
       },
@@ -302,7 +302,7 @@ const precalcFRQs: PrecalcFRQ[] = [
         prompt: 'Find the sum of the first 8 terms.',
         maxPoints: 1,
         rubric: [
-          { points: 1, description: 'S₈ = 765', keywords: ['765'] },
+          { points: 1, description: '$S_{8}$ = 765', keywords: ['765'] },
         ],
         sampleAnswer: '$S_8 = 3 \\cdot \\frac{2^8 - 1}{2 - 1} = 3(255) = 765$.',
       },

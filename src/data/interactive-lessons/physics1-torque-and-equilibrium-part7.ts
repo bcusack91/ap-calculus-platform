@@ -91,7 +91,7 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
 
 2) A wrench handle is 0.25 m long. What perpendicular force is needed to produce 50 N·m of torque? (in N)
 
-3) A 60 kg person stands 2 m from the left end of a 5 m beam (mass 20 kg) supported at both ends. Find the left support force. (in N, use $g = 10$ m/s²)
+3) A 60 kg person stands 2 m from the left end of a 5 m beam (mass 20 kg) supported at both ends. Find the left support force. (in N, use $g = 10$ $m/s^{2}$)
       `,
       exercise: {
         boxes: 3,

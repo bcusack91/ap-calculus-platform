@@ -46,11 +46,11 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 ### Predicting Aqueous Electrolysis Products
 
-**Cathode:** Metal deposits if $E°_{\\text{metal}} > -0.83$ V; otherwise H₂
+**Cathode:** Metal deposits if $E°_{\\text{metal}} > -0.83$ V; otherwise $H_{2}$
 
-**Anode:** Halide → halogen; oxyanion/F⁻ → O₂
+**Anode:** Halide → halogen; $oxyanion/F^{-}$ → $O_{2}$
 
-> 🔑 **AP Quick Check:** If the metal is above H₂ in the activity series (active metals like Na, K, Al), then H₂ forms at the cathode instead of the metal.
+> 🔑 **AP Quick Check:** If the metal is above $H_{2}$ in the activity series (active metals like Na, K, Al), then $H_{2}$ forms at the cathode instead of the metal.
 
 
 ---
@@ -68,8 +68,8 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
 
 | Process | Input | Product |
 |---------|-------|---------|
-| Hall-Héroult | Al₂O₃ in cryolite | Al metal |
-| Chlor-alkali | NaCl(aq) | Cl₂, H₂, NaOH |
+| Hall-Héroult | $Al_{2}O_{3}$ in cryolite | Al metal |
+| Chlor-alkali | NaCl(aq) | $Cl_{2}$, $H_{2}$, NaOH |
 | Electrorefining | Impure Cu | 99.99% pure Cu |
 | Electroplating | Metal ion solution | Metal-coated object |
       `
@@ -83,15 +83,15 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
       exercise: {
         questions: [
           {
-            question: 'A student electrolyzes aqueous CuCl₂. At which electrode does each product form?',
+            question: 'A student electrolyzes aqueous $CuCl_{2}$. At which electrode does each product form?',
             options: [
-              'Cathode: H₂, Anode: O₂',
-              'Cathode: Cu, Anode: Cl₂',
-              'Cathode: Cu, Anode: O₂',
-              'Cathode: H₂, Anode: Cl₂'
+              'Cathode: $H_{2}$, Anode: $O_{2}$',
+              'Cathode: Cu, Anode: $Cl_{2}$',
+              'Cathode: Cu, Anode: $O_{2}$',
+              'Cathode: $H_{2}$, Anode: $Cl_{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Cu²⁺ has $E° = +0.34$ V (more positive than water), so Cu deposits at the cathode. Cl⁻ is a simple halide, so Cl₂ forms at the anode.'
+            explanation: '$Cu^{2+}$ has $E° = +0.34$ V (more positive than water), so Cu deposits at the cathode. $Cl^{-}$ is a simple halide, so $Cl_{2}$ forms at the anode.'
           },
           {
             question: 'In ALL electrochemical cells, reduction occurs at the:',
@@ -124,7 +124,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
       content: `
 **Integration Problems** 🧮
 
-**1)** How many grams of Al can be produced from Al³⁺ ($n = 3$, $M = 26.98$ g/mol) using $I = 100$ A for $1.00$ hour?
+**1)** How many grams of Al can be produced from $Al^{3+}$ ($n = 3$, $M = 26.98$ g/mol) using $I = 100$ A for $1.00$ hour?
 
 **2)** In the electrolysis of aqueous NaI, what gas forms at the cathode? (type "H2" or "O2" or "Na")
 
@@ -136,9 +136,9 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
         boxes: 3,
         correctAnswers: ['33.6', 'H2', 'I2'],
         hint1: '$m = (100)(3600)(26.98)/((3)(96485))$',
-        hint2: 'Na⁺ is too reactive to deposit from water.',
-        hint3: 'I⁻ is a simple halide.',
-        explanation: '1) $m = 360{,}000 \\times 26.98/(3 \\times 96{,}485) = 9{,}712{,}800/289{,}455 = 33.6$ g. 2) Na⁺ has E° = −2.71 V << −0.83 V → H₂ forms. 3) I⁻ is a halide → I₂ forms at the anode.'
+        hint2: '$Na^{+}$ is too reactive to deposit from water.',
+        hint3: '$I^{-}$ is a simple halide.',
+        explanation: '1) $m = 360{,}000 \\times 26.98/(3 \\times 96{,}485) = 9{,}712{,}800/289{,}455 = 33.6$ g. 2) $Na^{+}$ has E° = −2.71 V << −0.83 V → $H_{2}$ forms. 3) $I^{-}$ is a halide → $I_{2}$ forms at the anode.'
       }
     },
     {
@@ -168,9 +168,9 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
         ],
         correctAnswers: ['all electrochemical cells', 'one mole of electrons', 'electrolytic', 'cathode'],
         hint1: 'AN OX and RED CAT are universal rules.',
-        hint2: 'F = 96,485 C/mol e⁻.',
+        hint2: 'F = 96,485 C/mol $e^{-}$.',
         hint3: 'Charging = forcing the non-spontaneous reverse reaction.',
-        explanation: 'AN OX/RED CAT: universal. F = charge of 1 mol e⁻. Charging = electrolysis. Plating object = cathode (where metal deposits).'
+        explanation: 'AN OX/RED CAT: universal. F = charge of 1 mol $e^{-}$. Charging = electrolysis. Plating object = cathode (where metal deposits).'
       }
     },
     {
@@ -182,7 +182,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
       exercise: {
         questions: [
           {
-            question: 'Three cells in series electrolyze solutions of AgNO₃ (n=1), Cu(NO₃)₂ (n=2), and Au(NO₃)₃ (n=3). If 1.00 mol of Ag deposits, how much Au deposits?',
+            question: 'Three cells in series electrolyze solutions of $AgNO_{3}$ (n=1), $Cu(NO_{3})_{2}$ (n=2), and $Au(NO_{3})_{3}$ (n=3). If 1.00 mol of Ag deposits, how much Au deposits?',
             options: [
               '1.00 mol',
               '0.500 mol',
@@ -190,7 +190,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
               '3.00 mol'
             ],
             correctAnswer: 2,
-            explanation: 'In series: same charge flows through all cells. 1.00 mol Ag needs 1.00 mol e⁻. In the Au cell ($n = 3$): mol Au = $1.00/3 = 0.333$ mol.'
+            explanation: 'In series: same charge flows through all cells. 1.00 mol Ag needs 1.00 mol $e^{-}$. In the Au cell ($n = 3$): mol Au = $1.00/3 = 0.333$ mol.'
           },
           {
             question: 'Which best summarizes the relationship between galvanic and electrolytic cells?',

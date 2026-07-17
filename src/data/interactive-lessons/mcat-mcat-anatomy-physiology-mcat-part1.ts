@@ -75,21 +75,21 @@ Remodeling is hormonally controlled:
         questions: [
           {
             question: `A researcher adds a drug that blocks the SERCA pump in isolated skeletal muscle fibers, then stimulates them once. Compared with normal fibers, the treated fibers will most likely:`,
-            options: [`Fail to relax normally, remaining contracted because cytosolic Ca²⁺ cannot be cleared`, `Fail to contract at all because Ca²⁺ never reaches troponin`, `Contract more weakly because less ATP is hydrolyzed by myosin`, `Relax faster because Ca²⁺ is pumped out of the cell`],
+            options: [`Fail to relax normally, remaining contracted because cytosolic $Ca^{2+}$ cannot be cleared`, `Fail to contract at all because $Ca^{2+}$ never reaches troponin`, `Contract more weakly because less ATP is hydrolyzed by myosin`, `Relax faster because $Ca^{2+}$ is pumped out of the cell`],
             correctAnswer: 0,
-            explanation: `SERCA pumps cytosolic Ca²⁺ back into the SR to terminate contraction. Block it and Ca²⁺ stays high, keeping troponin occupied and tropomyosin off the binding sites → sustained contraction (impaired relaxation). The trap "fail to contract" confuses SERCA (relaxation) with the ryanodine release channel (contraction) — Ca²⁺ release is unaffected here. SERCA pumps into the SR, not out of the cell.`
+            explanation: `SERCA pumps cytosolic $Ca^{2+}$ back into the SR to terminate contraction. Block it and $Ca^{2+}$ stays high, keeping troponin occupied and tropomyosin off the binding sites → sustained contraction (impaired relaxation). The trap "fail to contract" confuses SERCA (relaxation) with the ryanodine release channel (contraction) — $Ca^{2+}$ release is unaffected here. SERCA pumps into the SR, not out of the cell.`
           },
           {
             question: `An experimental sarcomere is stretched so far that thick and thin filaments barely overlap, then stimulated. The force it generates is much lower than at resting length. This is best explained by:`,
-            options: [`Fewer cross-bridges can form between myosin and actin at extreme length`, `Less Ca²⁺ is released from the SR at long sarcomere lengths`, `Troponin loses its affinity for Ca²⁺ when stretched`, `ATP hydrolysis is inhibited by the increased length`],
+            options: [`Fewer cross-bridges can form between myosin and actin at extreme length`, `Less $Ca^{2+}$ is released from the SR at long sarcomere lengths`, `Troponin loses its affinity for $Ca^{2+}$ when stretched`, `ATP hydrolysis is inhibited by the increased length`],
             correctAnswer: 0,
-            explanation: `Active force depends on the number of cross-bridges, which depends on filament overlap (the length–tension relationship). At extreme stretch, overlap is minimal, so few heads can bind actin and force falls. Ca²⁺ release, troponin affinity, and ATP hydrolysis are not the length-dependent limiters here — the geometry of overlap is. This is the molecular basis of the Frank–Starling-style length–tension curve.`
+            explanation: `Active force depends on the number of cross-bridges, which depends on filament overlap (the length–tension relationship). At extreme stretch, overlap is minimal, so few heads can bind actin and force falls. $Ca^{2+}$ release, troponin affinity, and ATP hydrolysis are not the length-dependent limiters here — the geometry of overlap is. This is the molecular basis of the Frank–Starling-style length–tension curve.`
           },
           {
-            question: `A patient with chronic kidney disease cannot activate vitamin D and develops low blood Ca²⁺. The expected compensatory hormonal change and its effect on bone is:`,
-            options: [`Increased PTH, which stimulates osteoclast-mediated resorption, releasing Ca²⁺ from bone`, `Increased calcitonin, which drives Ca²⁺ into bone`, `Decreased PTH, which spares bone from resorption`, `Increased calcitonin, which stimulates osteoblasts to absorb Ca²⁺`],
+            question: `A patient with chronic kidney disease cannot activate vitamin D and develops low blood $Ca^{2+}$. The expected compensatory hormonal change and its effect on bone is:`,
+            options: [`Increased PTH, which stimulates osteoclast-mediated resorption, releasing $Ca^{2+}$ from bone`, `Increased calcitonin, which drives $Ca^{2+}$ into bone`, `Decreased PTH, which spares bone from resorption`, `Increased calcitonin, which stimulates osteoblasts to absorb $Ca^{2+}$`],
             correctAnswer: 0,
-            explanation: `Low blood Ca²⁺ is sensed by the parathyroid glands → PTH rises. PTH increases osteoclast activity (via RANKL), liberating Ca²⁺ from bone, and boosts renal Ca²⁺ reabsorption. Chronically this causes renal osteodystrophy (weakened bone). Calcitonin would *lower* blood Ca²⁺ — the wrong direction for a hypocalcemic patient — so the calcitonin options are traps.`
+            explanation: `Low blood $Ca^{2+}$ is sensed by the parathyroid glands → PTH rises. PTH increases osteoclast activity (via RANKL), liberating $Ca^{2+}$ from bone, and boosts renal $Ca^{2+}$ reabsorption. Chronically this causes renal osteodystrophy (weakened bone). Calcitonin would *lower* blood $Ca^{2+}$ — the wrong direction for a hypocalcemic patient — so the calcitonin options are traps.`
           }
         ]
       }
@@ -102,14 +102,14 @@ Remodeling is hormonally controlled:
 <details>
 <summary><b>Example 1: Trace the events from nerve signal to relaxation</b></summary>
 
-**Question:** Put the following in the correct order and identify which step requires ATP: (a) Ca²⁺ binds troponin, (b) ACh binds nicotinic receptors, (c) SERCA returns Ca²⁺ to SR, (d) power stroke, (e) ryanodine receptors open.
+**Question:** Put the following in the correct order and identify which step requires ATP: (a) $Ca^{2+}$ binds troponin, (b) ACh binds nicotinic receptors, (c) SERCA returns $Ca^{2+}$ to SR, (d) power stroke, (e) ryanodine receptors open.
 
 **Solution:**
 1. **(b)** ACh binds receptors → end-plate depolarization.
-2. Depolarization travels down T-tubules → DHP receptors trigger **(e)** ryanodine receptor opening → Ca²⁺ into cytosol.
-3. **(a)** Ca²⁺ binds troponin → tropomyosin moves → binding sites exposed.
+2. Depolarization travels down T-tubules → DHP receptors trigger **(e)** ryanodine receptor opening → $Ca^{2+}$ into cytosol.
+3. **(a)** $Ca^{2+}$ binds troponin → tropomyosin moves → binding sites exposed.
 4. **(d)** Power stroke — myosin pulls actin (ADP + Pi released). ATP needed to **detach** and re-cock the head.
-5. **(c)** SERCA pumps Ca²⁺ back into SR — **requires ATP** — allowing relaxation.
+5. **(c)** SERCA pumps $Ca^{2+}$ back into SR — **requires ATP** — allowing relaxation.
 
 **MCAT note:** ATP is consumed at *two* points: detachment/re-cocking of myosin AND SERCA pumping. This is why rigor mortis (no ATP) locks myosin onto actin. ✓
 </details>
@@ -130,13 +130,13 @@ Remodeling is hormonally controlled:
 <details>
 <summary><b>Example 3: Reason about a calcium-channel experiment</b></summary>
 
-**Question:** Cardiac muscle is bathed in Ca²⁺-free extracellular fluid; skeletal muscle is treated identically. Both are then stimulated. Predict the result for each and explain.
+**Question:** Cardiac muscle is bathed in $Ca^{2+}$-free extracellular fluid; skeletal muscle is treated identically. Both are then stimulated. Predict the result for each and explain.
 
 **Solution:**
-- **Skeletal muscle still contracts (at least initially):** its Ca²⁺ for contraction comes almost entirely from the SR, released by mechanical DHP–ryanodine coupling — independent of extracellular Ca²⁺.
-- **Cardiac muscle fails to contract normally:** it depends on **Ca²⁺-induced Ca²⁺ release** — extracellular Ca²⁺ entering through L-type channels triggers SR release. Remove extracellular Ca²⁺ and the trigger is gone. ✓
+- **Skeletal muscle still contracts (at least initially):** its $Ca^{2+}$ for contraction comes almost entirely from the SR, released by mechanical DHP–ryanodine coupling — independent of extracellular $Ca^{2+}$.
+- **Cardiac muscle fails to contract normally:** it depends on **$Ca^{2+}$-induced $Ca^{2+}$ release** — extracellular $Ca^{2+}$ entering through L-type channels triggers SR release. Remove extracellular $Ca^{2+}$ and the trigger is gone. ✓
 
-**Interpretation:** This experiment distinguishes the two excitation–contraction mechanisms — a classic MCAT discrimination point and the reason cardiac (not skeletal) function is sensitive to Ca²⁺-channel blockers.
+**Interpretation:** This experiment distinguishes the two excitation–contraction mechanisms — a classic MCAT discrimination point and the reason cardiac (not skeletal) function is sensitive to $Ca^{2+}$-channel blockers.
 </details>`
     },
     {

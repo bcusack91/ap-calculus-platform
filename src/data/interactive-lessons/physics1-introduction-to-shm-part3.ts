@@ -24,7 +24,7 @@ $$T = 2\\pi\\sqrt{\\frac{L}{g}}$$
 
 Where:
 - $L$ = length of the pendulum (from pivot to center of mass)
-- $g$ = gravitational acceleration ($9.8$ m/s² on Earth)
+- $g$ = gravitational acceleration ($9.8$ $m/s^{2}$ on Earth)
 
 ### Key Dependencies
 
@@ -120,11 +120,11 @@ where $I$ is the rotational inertia about the pivot and $d$ is the distance from
       content: `
 **Pendulum Calculations** 🧮
 
-1) A pendulum is 1.0 m long. What is its period on Earth? (in seconds, round to 3 significant figures, use $g = 9.8$ m/s²)
+1) A pendulum is 1.0 m long. What is its period on Earth? (in seconds, round to 3 significant figures, use $g = 9.8$ $m/s^{2}$)
 
 2) A pendulum has a period of 3.0 s on Earth. What is its length? (in m, round to 3 significant figures)
 
-3) A pendulum has period 2.0 s on Earth. What would its period be on a planet where $g = 2.45$ m/s²? (in s)
+3) A pendulum has period 2.0 s on Earth. What would its period be on a planet where $g = 2.45$ $m/s^{2}$? (in s)
       `,
       exercise: {
         boxes: 3,

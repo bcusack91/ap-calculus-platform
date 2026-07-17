@@ -1,0 +1,1113 @@
+[
+ {
+  "file": "interactive-lessons/calcbc-taylor-maclaurin-series-calcbc-part3.ts",
+  "total": 17,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 17,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csp-binary-data-part1.ts",
+  "total": 13,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 12,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part4.ts",
+  "total": 11,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 11
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/rationalizing-techniques.ts",
+  "total": 10,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 7,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 3
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-calculator-strategy-sat-part5.ts",
+  "total": 9,
+  "counts": {
+   "unicode_supsub": 8,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-calculator-strategy-sat-part2.ts",
+  "total": 9,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 5,
+   "html_tags": 0,
+   "pseudo": 4
+  }
+ },
+ {
+  "file": "interactive-lessons/reflection-refraction-part3-reflection.ts",
+  "total": 8,
+  "counts": {
+   "unicode_supsub": 8,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/piecewise-functions.ts",
+  "total": 8,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 8,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-v3-part4.ts",
+  "total": 7,
+  "counts": {
+   "unicode_supsub": 7,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-parametric-curves-calculus-calcbc-part5.ts",
+  "total": 6,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 4,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponential-functions-sat-part1.ts",
+  "total": 5,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 5,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/simplifying-radicals-alg1.ts",
+  "total": 5,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 5,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/series-summation-algebra2.ts",
+  "total": 5,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 5,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/radical-operations-algebra1.ts",
+  "total": 5,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 5,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/indefinite-integrals.ts",
+  "total": 5,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 5,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-complex-numbers-sat-part4.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 4,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/registry-extra.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/multiplying-polynomials-algebra1.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 4,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/fundamental-theorem-algebra.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 4,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csp-algorithms-part1.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 4,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-activation-energy-arrhenius-part7.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 4
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-applications-of-derivatives-calcab-part5.ts",
+  "total": 4,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 3,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-complex-numbers-sat-part3.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 3,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-circles-trig-sat-part1.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 3,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-calculator-strategy-sat-part6.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 3,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/registry-chunk-2.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 3,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/registry-chunk-1.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 3,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/polynomial-operations-algebra1.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 3,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-lewis-structures-formal-charge-part6.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 3,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-gibbs-free-energy-part6.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 3,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-part6.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 3,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-review-connections-calcbc-part1.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-bc-exam-strategies-calcbc-part4.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-u-substitution-calcab-part7.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 3
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-limits-continuity-calcab-part5.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-differential-equations-calcab-part5.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-differential-equations-calcab-part2.ts",
+  "total": 3,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-exponential-functions-sat-part2.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-calculator-strategy-sat-part4.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/registry-chunk-0.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/reflection-refraction.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/precalc-continuity-precalc-part7.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/micro-scarcity-marginal-analysis-part1.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/grade5-volume-part6.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/polynomial-division-algebra2.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csa-class-design-part1.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-rates-and-rate-laws-part6.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-entropy-second-law-v2-part4.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-activation-energy-arrhenius-part6.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-differential-equations-bc-calcbc-part1.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-convergence-tests-summary-calcbc-part6.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-arc-length-surface-area-calcbc-part4.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-u-substitution-calcab-part6.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-derivatives-exp-log-calcab-part4.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 2,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-applications-of-derivatives-calcab-part6.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 2
+  }
+ },
+ {
+  "file": "interactive-lessons/bio-biodiversity-conservation-part2.ts",
+  "total": 2,
+  "counts": {
+   "unicode_supsub": 2,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-passport-advanced-math-sat-part4.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-complex-numbers-sat-part5.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/sat-sat-complex-numbers-sat-part1.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-identities-precalc-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-identities-precalc-part4.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-functions-precalc-part4.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-functions-precalc-part3.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/precalc-trigonometric-functions-precalc-part2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/u-substitution.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/surface-area-volume-solids-geo.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/polynomial-operations-theorems-alg2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/factoring-polynomials-algebra2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/exponential-growth-decay-alg1.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/csa-recursive-methods.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/complex-numbers-intro-algebra2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/complex-number-system-alg2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/extra/apes-climate-change.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csp-internet-protocols-part1.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csp-fault-tolerance-security-part2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csp-algorithms-programming-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/csa-using-objects-part1.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-rates-and-rate-laws-part4.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part5.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-reaction-mechanisms-part1.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-nernst-equation-concentration-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-nernst-equation-concentration-part4.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-gibbs-free-energy-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-enthalpy-calorimetry-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/chemistry-activation-energy-arrhenius-part3.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-taylor-maclaurin-series-calcbc-part2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-polar-calculus-calcbc-part4.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-polar-area-derivatives-calcbc-part3.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-parametric-derivatives-calcbc-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-lhopitals-advanced-calcbc-part2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-infinite-series-calcbc-part1.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-differential-equations-bc-calcbc-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-differential-equations-bc-calcbc-part6.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcbc-arc-length-surface-area-calcbc-part7.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 1
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part5.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-related-rates-calcab-part3.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/calcab-limits-at-infinity-part3.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 1,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/bio-nervous-system-signaling-part2.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/bio-dna-replication-part6.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 0,
+   "sqrt_char": 0,
+   "caret": 1,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ },
+ {
+  "file": "interactive-lessons/algebra2-exponential-functions-part6.ts",
+  "total": 1,
+  "counts": {
+   "unicode_supsub": 1,
+   "sqrt_char": 0,
+   "caret": 0,
+   "html_tags": 0,
+   "pseudo": 0
+  }
+ }
+]

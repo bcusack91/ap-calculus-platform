@@ -31,15 +31,15 @@ $$n_a M_a V_a = n_b M_b V_b$$
 ### Weak Acid + Strong Base
 
 - **Initially:** pH > 0 (weak acid partially dissociates)
-- **Buffer region:** pH ≈ pKₐ when halfway to equivalence ("half-equivalence point")
-- **At half-equivalence:** $[\\text{HA}] = [\\text{A}^-]$ → pH = pKₐ ← **MCAT key fact**
+- **Buffer region:** pH ≈ $pK_{a}$ when halfway to equivalence ("half-equivalence point")
+- **At half-equivalence:** $[\\text{HA}] = [\\text{A}^-]$ → pH = $pK_{a}$ ← **MCAT key fact**
 - **At equivalence:** pH > 7 (conjugate base hydrolyzes: $\\text{A}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HA} + \\text{OH}^-$)
 - **After equivalence:** pH from excess strong base
 
 ### Weak Base + Strong Acid
 
 - **At equivalence:** pH < 7 (conjugate acid hydrolyzes)
-- **At half-equivalence:** pOH = pKb, or equivalently pH = 14 − pKb = pKₐ of conjugate acid
+- **At half-equivalence:** pOH = pKb, or equivalently pH = 14 − pKb = $pK_{a}$ of conjugate acid
 
 ## Key Features of Titration Curves
 
@@ -47,17 +47,17 @@ $$n_a M_a V_a = n_b M_b V_b$$
 |---------|---------|
 | Endpoint (indicator changes) | Should be ≈ equivalence point |
 | Equivalence point | Stoichiometrically equal moles acid and base |
-| Half-equivalence point | pH = pKₐ (for weak acid titration) |
+| Half-equivalence point | pH = $pK_{a}$ (for weak acid titration) |
 | Inflection point | Steepest part of curve; near equivalence |
 | Buffer region | Shallow slope; brackets the half-equivalence point |
 
 ## Acid-Base Indicators
 
-Indicators are weak acids (HIn) where HIn and In⁻ are different colors:
+Indicators are weak acids (HIn) where HIn and $In^{-}$ are different colors:
 
 $$\\text{HIn} \\rightleftharpoons \\text{H}^+ + \\text{In}^-$$
 
-Color changes at pH ≈ pKₐ (indicator). The indicator transitions over ~pH = pKₐ ± 1.
+Color changes at pH ≈ $pK_{a}$ (indicator). The indicator transitions over ~pH = $pK_{a}$ ± 1.
 
 **Common indicators:**
 
@@ -95,7 +95,7 @@ For $\\text{H}_3\\text{PO}_4$ + NaOH:
             explanation: `$M_a V_a = M_b V_b$: $M_{\\text{HCl}} \\times 50.0 = 0.400 \\times 25.0$. $M_{\\text{HCl}} = 10.0/50.0 = \\mathbf{0.200\\text{ M}}$.`
           },
           {
-            question: `In the titration of 0.100 M acetic acid (pKₐ = 4.74) with NaOH, what is the pH at the half-equivalence point?`,
+            question: `In the titration of 0.100 M acetic acid ($pK_{a}$ = 4.74) with NaOH, what is the pH at the half-equivalence point?`,
             options: [`3.87`, `4.74`, `7.00`, `8.87`],
             correctAnswer: 1,
             explanation: `At the half-equivalence point, exactly half the weak acid has been converted to its conjugate base, so $[\\text{HA}] = [\\text{A}^-]$ and HH gives $\\text{pH} = \\text{p}K_a + \\log(1) = \\text{p}K_a = \\mathbf{4.74}$.`
@@ -106,10 +106,10 @@ For $\\text{H}_3\\text{PO}_4$ + NaOH:
               `pH = 7.00 — neutral salt`,
               `pH < 7 — conjugate acid hydrolyzes`,
               `pH > 7 — conjugate base hydrolyzes`,
-              `pH = pKₐ`
+              `pH = $pK_{a}$`
             ],
             correctAnswer: 2,
-            explanation: `At equivalence, all acetic acid has become sodium acetate ($\\text{CH}_3\\text{COO}^-$). Acetate is a weak base: $\\text{CH}_3\\text{COO}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{CH}_3\\text{COOH} + \\text{OH}^-$. This produces OH⁻ → pH > 7.`
+            explanation: `At equivalence, all acetic acid has become sodium acetate ($\\text{CH}_3\\text{COO}^-$). Acetate is a weak base: $\\text{CH}_3\\text{COO}^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{CH}_3\\text{COOH} + \\text{OH}^-$. This produces $OH^{-}$ → pH > 7.`
           },
           {
             question: `Which indicator is most appropriate for the titration of a weak acid with NaOH (equivalence point ≈ pH 9)?`,
@@ -132,12 +132,12 @@ For $\\text{H}_3\\text{PO}_4$ + NaOH:
             question: `A titration curve shows a nearly horizontal plateau region between 10 mL and 20 mL of titrant added, with minimum slope at 15 mL. What is happening at 15 mL?`,
             options: [
               `Equivalence point — all acid is neutralized`,
-              `Half-equivalence point — pH equals pKₐ`,
+              `Half-equivalence point — pH equals $pK_{a}$`,
               `Excess base is present`,
               `The indicator changes color`
             ],
             correctAnswer: 1,
-            explanation: `The plateau region with minimum slope change is the **buffer region**. The midpoint of this plateau (15 mL) is the **half-equivalence point**, where $[\\text{HA}] = [\\text{A}^-]$ and pH = pKₐ.`
+            explanation: `The plateau region with minimum slope change is the **buffer region**. The midpoint of this plateau (15 mL) is the **half-equivalence point**, where $[\\text{HA}] = [\\text{A}^-]$ and pH = $pK_{a}$.`
           }
         ]
       }
@@ -150,8 +150,8 @@ For $\\text{H}_3\\text{PO}_4$ + NaOH:
 - At equivalence: moles acid = moles base; $M_aV_a = M_bV_b$ (for 1:1)
 - Strong acid + strong base → equivalence pH = 7.00
 - Weak acid + strong base → equivalence pH > 7 (conjugate base hydrolysis)
-- **Half-equivalence point:** $[\\text{HA}] = [\\text{A}^-]$ → pH = pKₐ — most testable titration fact
-- Indicators change color over ~pKₐ ± 1; choose so that transition includes equivalence pH
+- **Half-equivalence point:** $[\\text{HA}] = [\\text{A}^-]$ → pH = $pK_{a}$ — most testable titration fact
+- Indicators change color over ~$pK_{a}$ ± 1; choose so that transition includes equivalence pH
 - Phenolphthalein: pH 8.2–10, good for weak acid titrations (equiv. pH > 7)
 - Polyprotic acids give multiple equivalence points on the titration curve
 `

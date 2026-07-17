@@ -69,7 +69,7 @@ Given concentration-vs-time data, create:
 
 > **Problem:** Given the following data, determine the reaction order and find $k$.
 
-| $t$ (s) | $[A]$ (M) | $\\ln[A]$ | $1/[A]$ (M⁻¹) |
+| $t$ (s) | $[A]$ (M) | $\\ln[A]$ | $1/[A]$ $(M^{-1})$ |
 |---------|----------|---------|--------------|
 | 0 | 1.000 | 0.000 | 1.000 |
 | 10 | 0.607 | −0.500 | 1.648 |
@@ -122,9 +122,9 @@ Given this data:
             question: 'What is the value of k?',
             options: [
               '0.0010 M/s',
-              '0.0010 s⁻¹',
-              '0.0010 M⁻¹s⁻¹',
-              '1.0 × 10⁻³ M⁻¹s⁻¹'
+              '0.0010 $s^{-1}$',
+              '0.0010 $M^{-1}s^{-1}$',
+              '$1.0 \\times 10^{-3}$ $M^{-1}s^{-1}$'
             ],
             correctAnswer: 0,
             explanation: 'Slope = −k = −0.100/100 = −0.0010. k = 0.0010 M/s. Units M/s confirm zero-order.'
@@ -138,7 +138,7 @@ Given this data:
               'Never (asymptotic)'
             ],
             correctAnswer: 2,
-            explanation: '[B] = −kt + [B]₀. 0 = −(0.0010)t + 0.400. t = 400 s. Zero-order reactions reach completion in finite time.'
+            explanation: '[B] = −kt + [B]$ {}_{0}$. 0 = −(0.0010)t + 0.400. t = 400 s. Zero-order reactions reach completion in finite time.'
           }
         ]
       }
@@ -149,7 +149,7 @@ Given this data:
       content: `
 **Identify the Order** 🧮
 
-| $t$ (min) | $[C]$ (M) | $\\ln[C]$ | $1/[C]$ (M⁻¹) |
+| $t$ (min) | $[C]$ (M) | $\\ln[C]$ | $1/[C]$ $(M^{-1})$ |
 |----------|----------|---------|--------------|
 | 0 | 0.500 | −0.693 | 2.00 |
 | 5 | 0.333 | −1.099 | 3.00 |
@@ -166,9 +166,9 @@ Given this data:
         boxes: 3,
         correctAnswers: ['2', '0.2', '0.13'],
         hint1: 'Check Δ(1/[C]): 1.00, 1.00, 1.00 → constant → second-order.',
-        hint2: 'Slope = k = 1.00/5 = 0.20 M⁻¹min⁻¹.',
+        hint2: 'Slope = k = 1.00/5 = 0.20 $M^{-1}min^{-1}$.',
         hint3: '1/[C] = 0.20(25) + 2.00 = 5.00 + 2.00 = 7.00. [C] = 1/7.00 = 0.143 ≈ 0.14. Hmm let me recalc: 0.20 × 25 = 5.0; 5.0 + 2.0 = 7.0; 1/7.0 = 0.1429 ≈ 0.14.',
-        explanation: '1) Δ(1/[C]) = 1.00 per 5 min (constant) → second-order. 2) k = slope = 1.00/5 = 0.20 M⁻¹min⁻¹. 3) 1/[C] = 0.20(25) + 2.00 = 7.00 → [C] = 0.14 M.'
+        explanation: '1) Δ(1/[C]) = 1.00 per 5 min (constant) → second-order. 2) k = slope = 1.00/5 = 0.20 $M^{-1}min^{-1}$. 3) 1/[C] = 0.20(25) + 2.00 = 7.00 → [C] = 0.14 M.'
       }
     },
     {
@@ -231,12 +231,12 @@ A student collects concentration-time data and plots all three standard graphs. 
             question: 'What is the rate constant k?',
             options: [
               '0.45 M/s',
-              '0.45 s⁻¹',
-              '0.45 M⁻¹s⁻¹',
-              '−0.45 M⁻¹s⁻¹'
+              '0.45 $s^{-1}$',
+              '0.45 $M^{-1}s^{-1}$',
+              '−0.45 $M^{-1}s^{-1}$'
             ],
             correctAnswer: 2,
-            explanation: 'For second-order, slope of 1/[A] vs t = +k. k = 0.45 M⁻¹s⁻¹.'
+            explanation: 'For second-order, slope of 1/[A] vs t = +k. k = 0.45 $M^{-1}s^{-1}$.'
           }
         ]
       }
@@ -261,7 +261,7 @@ A student collects concentration-time data and plots all three standard graphs. 
             explanation: 'Constant half-lives → first-order. Zero-order half-lives decrease; second-order half-lives increase.'
           },
           {
-            question: 'A plot of 1/[A] vs t is linear with y-intercept 4.0 M⁻¹. What is [A]₀?',
+            question: 'A plot of 1/[A] vs t is linear with y-intercept 4.0 $M^{-1}$. What is [A]$ {}_{0}$?',
             options: [
               '4.0 M',
               '0.25 M',
@@ -269,7 +269,7 @@ A student collects concentration-time data and plots all three standard graphs. 
               '2.0 M'
             ],
             correctAnswer: 1,
-            explanation: 'y-intercept = 1/[A]₀ = 4.0 M⁻¹. So [A]₀ = 1/4.0 = 0.25 M.'
+            explanation: 'y-intercept = 1/[A]$ {}_{0}$ = 4.0 $M^{-1}$. So [A]$ {}_{0}$ = 1/4.0 = 0.25 M.'
           }
         ]
       }

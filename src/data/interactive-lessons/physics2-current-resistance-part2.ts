@@ -53,7 +53,7 @@ $$R = \\frac{\\rho L}{A}$$
 |--------|---------|---------|
 | $\\rho$ | Resistivity | $\\Omega \\cdot \\text{m}$ |
 | $L$ | Length | m |
-| $A$ | Cross-sectional area | m² |
+| $A$ | Cross-sectional area | $m^{2}$ |
 
 ### What Each Factor Does
 
@@ -151,9 +151,9 @@ $$R = \\frac{\\rho L}{A}$$
 
 Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
 
-1) A copper wire is 10.0 m long with cross-sectional area $2.0 \\times 10^{-6}$ m². What is its resistance? (in $\\Omega$)
+1) A copper wire is 10.0 m long with cross-sectional area $2.0 \\times 10^{-6}$ $m^{2}$. What is its resistance? (in $\\Omega$)
 
-2) A copper wire has resistance 0.50 $\\Omega$ and length 5.0 m. What is its cross-sectional area? (in m², scientific notation like 1.7e-7)
+2) A copper wire has resistance 0.50 $\\Omega$ and length 5.0 m. What is its cross-sectional area? (in $m^{2}$, scientific notation like 1.7e-7)
 
 3) You need a copper wire with resistance exactly 1.0 $\\Omega$ and diameter 1.0 mm. How long must it be? (in m, round to nearest whole number)
       `,
@@ -162,8 +162,8 @@ Use $\\rho_{\\text{Cu}} = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m.
         correctAnswers: ['0.084', '1.68e-7', '47'],
         hint1: '$R = \\rho L / A = (1.68 \\times 10^{-8})(10.0) / (2.0 \\times 10^{-6})$.',
         hint2: '$A = \\rho L / R = (1.68 \\times 10^{-8})(5.0) / 0.50$.',
-        hint3: '$L = RA/\\rho$. Area = $\\pi(d/2)^2 = \\pi(0.0005)^2 = 7.85 \\times 10^{-7}$ m². $L = (1.0)(7.85 \\times 10^{-7}) / (1.68 \\times 10^{-8})$.',
-        explanation: '1) $R = (1.68 \\times 10^{-8})(10) / (2 \\times 10^{-6}) = 0.084$ $\\Omega$. 2) $A = (1.68 \\times 10^{-8})(5) / 0.50 = 1.68 \\times 10^{-7}$ m². 3) $A = \\pi(5 \\times 10^{-4})^2 = 7.85 \\times 10^{-7}$ m². $L = (1.0)(7.85 \\times 10^{-7}) / (1.68 \\times 10^{-8}) = 46.7 \\approx 47$ m.'
+        hint3: '$L = RA/\\rho$. Area = $\\pi(d/2)^2 = \\pi(0.0005)^2 = 7.85 \\times 10^{-7}$ $m^{2}$. $L = (1.0)(7.85 \\times 10^{-7}) / (1.68 \\times 10^{-8})$.',
+        explanation: '1) $R = (1.68 \\times 10^{-8})(10) / (2 \\times 10^{-6}) = 0.084$ $\\Omega$. 2) $A = (1.68 \\times 10^{-8})(5) / 0.50 = 1.68 \\times 10^{-7}$ $m^{2}$. 3) $A = \\pi(5 \\times 10^{-4})^2 = 7.85 \\times 10^{-7}$ $m^{2}$. $L = (1.0)(7.85 \\times 10^{-7}) / (1.68 \\times 10^{-8}) = 46.7 \\approx 47$ m.'
       }
     },
     {

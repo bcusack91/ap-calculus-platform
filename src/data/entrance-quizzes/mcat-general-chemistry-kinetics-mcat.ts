@@ -8,10 +8,10 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 const questions: EntranceQuizQuestion[] = [
   // Part 1 — Rate Laws & Reaction Order
   { id: 'mgkn-ent-1a', question: 'For the rate law $rate = k[A]^2[B]$, the overall reaction order is:', options: ['1', '2', '3', '4'], correctIndex: 2, explanation: 'Overall order = sum of exponents = 2 + 1 = 3.', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
-  { id: 'mgkn-ent-1b', question: 'When [A] doubles and the rate quadruples (with all other concentrations fixed), the order in A is:', options: ['0', '1', '2', '3'], correctIndex: 2, explanation: 'rate ∝ [A]^n. If [A] doubles and rate × 4 = 2^n → n = 2 (second order in A).', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
+  { id: 'mgkn-ent-1b', question: 'When [A] doubles and the rate quadruples (with all other concentrations fixed), the order in A is:', options: ['0', '1', '2', '3'], correctIndex: 2, explanation: 'rate ∝ [A]^n. If [A] doubles and rate × 4 = $2^{n}$ → n = 2 (second order in A).', partNumber: 1, partTitle: 'Rate Laws & Reaction Order' },
 
   // Part 2 — Integrated Rate Laws & Half-Life
-  { id: 'mgkn-ent-2a', question: 'For a first-order reaction with k = 0.10 s⁻¹, the half-life is approximately:', options: ['0.10 s', '6.93 s', '10 s', '693 s'], correctIndex: 1, explanation: 't₁/₂ = ln 2 / k = 0.693 / 0.10 ≈ 6.93 s.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
+  { id: 'mgkn-ent-2a', question: 'For a first-order reaction with k = 0.10 $s^{-1}$, the half-life is approximately:', options: ['0.10 s', '6.93 s', '10 s', '693 s'], correctIndex: 1, explanation: '$t_{1}/_{2}$ = ln 2 / k = 0.693 / 0.10 ≈ 6.93 s.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
   { id: 'mgkn-ent-2b', question: 'The integrated rate law for a first-order reaction A → products is:', options: ['$[A] = [A]_0 - kt$', '$\\ln[A] = \\ln[A]_0 - kt$', '$1/[A] = 1/[A]_0 + kt$', '$[A]^2 = [A]_0^2 - kt$'], correctIndex: 1, explanation: 'A plot of ln[A] vs. t is linear (slope = −k) for a first-order reaction.', partNumber: 2, partTitle: 'Integrated Rate Laws & Half-Life' },
 
   // Part 3 — Activation Energy & Arrhenius Equation
@@ -24,7 +24,7 @@ const questions: EntranceQuizQuestion[] = [
 
   // Part 5 — Mixed MCAT Review
   { id: 'mgkn-ent-5a', question: 'Doubling the temperature of a reaction (in K) typically:', options: ['Has no effect on rate', 'Doubles the rate', 'Increases rate by a factor of roughly 2–4 per 10 K rise', 'Decreases the rate by half'], correctIndex: 2, explanation: 'A common rule of thumb: rate roughly doubles for every ~10 K rise (the actual factor depends on Ea via Arrhenius).', partNumber: 5, partTitle: 'Mixed MCAT Review' },
-  { id: 'mgkn-ent-5b', question: 'A zero-order reaction A → products has a rate that is:', options: ['Proportional to [A]', 'Proportional to [A]²', 'Independent of [A]', 'Inversely proportional to [A]'], correctIndex: 2, explanation: 'rate = k[A]⁰ = k. Common for surface-catalyzed or enzyme-saturated reactions where [A] doesn\'t matter at high concentrations.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
+  { id: 'mgkn-ent-5b', question: 'A zero-order reaction A → products has a rate that is:', options: ['Proportional to [A]', 'Proportional to [A]$ {}^{2}$', 'Independent of [A]', 'Inversely proportional to [A]'], correctIndex: 2, explanation: 'rate = k[A]$ {}^{0}$ = k. Common for surface-catalyzed or enzyme-saturated reactions where [A] doesn\'t matter at high concentrations.', partNumber: 5, partTitle: 'Mixed MCAT Review' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {

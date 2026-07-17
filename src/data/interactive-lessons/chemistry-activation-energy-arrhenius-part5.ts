@@ -66,7 +66,7 @@ $$\\ln k_2 = \\ln k_1 + \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\ri
       content: `
 ## 🧪 Worked Example
 
-A reaction has $k_1 = 0.0120$ s⁻¹ at $T_1 = 400$ K and $k_2 = 0.150$ s⁻¹ at $T_2 = 500$ K.
+A reaction has $k_1 = 0.0120$ $s^{-1}$ at $T_1 = 400$ K and $k_2 = 0.150$ $s^{-1}$ at $T_2 = 500$ K.
 
 **Find $E_a$:**
 
@@ -85,11 +85,11 @@ $$E_a = \\frac{21.0}{0.000500} = 42{,}000 \\; \\text{J/mol} = 42.0 \\; \\text{kJ
       content: `
 **Practice: Finding Ea** 🧮
 
-A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10^{-2}$ s⁻¹ at 400 K.
+A reaction has $k = 2.0 \\times 10^{-3}$ $s^{-1}$ at 300 K and $k = 6.0 \\times 10^{-2}$ $s^{-1}$ at 400 K.
 
 **1)** Calculate $\\ln(k_2/k_1)$. (to 3 significant figures)
 
-**2)** Calculate $1/T_1 - 1/T_2$. (in K⁻¹, give as decimal: e.g., 0.000833)
+**2)** Calculate $1/T_1 - 1/T_2$. (in $K^{-1}$, give as decimal: e.g., 0.000833)
 
 **3)** Calculate $E_a$ in kJ/mol. (to 3 significant figures)
       `,
@@ -97,9 +97,9 @@ A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10
         boxes: 3,
         correctAnswers: ['3.40', '0.000833', '33.9'],
         hint1: 'ln(6.0e-2 / 2.0e-3) = ln(30) = 3.401 ≈ 3.40.',
-        hint2: '1/300 − 1/400 = 0.003333 − 0.002500 = 0.000833 K⁻¹.',
+        hint2: '1/300 − 1/400 = 0.003333 − 0.002500 = 0.000833 $K^{-1}$.',
         hint3: 'Ea = (8.314 × 3.40)/0.000833 = 28.27/0.000833 = 33,935 J/mol = 33.9 kJ/mol.',
-        explanation: '1) ln(30) = 3.40. 2) 1/300 − 1/400 = 8.33 × 10⁻⁴. 3) Ea = 8.314 × 3.40 / 8.33 × 10⁻⁴ = 33,900 J/mol = 33.9 kJ/mol.'
+        explanation: '1) ln(30) = 3.40. 2) 1/300 − 1/400 = $8.33 \\times 10^{-4}$. 3) Ea = 8.314 × 3.40 / $8.33 \\times 10^{-4}$ = 33,900 J/mol = 33.9 kJ/mol.'
       }
     },
     {
@@ -108,21 +108,21 @@ A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10
       content: `
 **Practice: Predicting k at a New Temperature** 🧮
 
-A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
+A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ $s^{-1}$ at 350 K.
 
 **1)** Calculate $k$ at 400 K. First find $\\ln(k_2/k_1)$. (to 3 significant figures)
 
-**2)** Now find $k_2$. (in s⁻¹, to 3 significant figures)
+**2)** Now find $k_2$. (in $s^{-1}$, to 3 significant figures)
 
 **3)** By what factor did k increase from 350 K to 400 K? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['2.16', '0.087', '8.7'],
-        hint1: 'ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂) = (50,000/8.314)(1/350 − 1/400) = 6,014 × (2.857e-3 − 2.500e-3) = 6,014 × 3.57e-4 = 2.147 ≈ 2.16.',
-        hint2: 'k₂/k₁ = e^2.16 = 8.67. k₂ = 0.010 × 8.67 = 0.0867 ≈ 0.087.',
-        hint3: 'Factor = k₂/k₁ = 0.087/0.010 = 8.7.',
-        explanation: '1) ln(k₂/k₁) = (50,000/8.314)(1/350 − 1/400) = 6,014 × 3.57 × 10⁻⁴ = 2.16. 2) k₂ = 0.010 × e^(2.16) = 0.010 × 8.67 = 0.087 s⁻¹. 3) Factor = 8.7.'
+        hint1: '$\\ln (k_{2}/k_{1})$ = $(Ea/R)(1/T_{1} - 1/T_{2})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × (2.857e-3 − 2.500e-3) = 6,014 × 3.57e-4 = 2.147 ≈ 2.16.',
+        hint2: '$k_{2}/k_{1}$ = $e^{2.16}$ = 8.67. $k_{2}$ = 0.010 × 8.67 = 0.0867 ≈ 0.087.',
+        hint3: 'Factor = $k_{2}/k_{1}$ = 0.087/0.010 = 8.7.',
+        explanation: '1) $\\ln (k_{2}/k_{1})$ = (50,000/8.314)(1/350 − 1/400) = 6,014 × $3.57 \\times 10^{-4}$ = 2.16. 2) $k_{2}$ = 0.010 × $e^{2.16}$ = 0.010 × 8.67 = 0.087 $s^{-1}$. 3) Factor = 8.7.'
       }
     },
     {
@@ -142,7 +142,7 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
               'k'
             ],
             correctAnswer: 2,
-            explanation: 'When we subtract ln k₁ from ln k₂, the ln A terms cancel: ln A − ln A = 0. This is why we can find Ea without knowing A.'
+            explanation: 'When we subtract ln $k_{1}$ from ln $k_{2}$, the ln A terms cancel: ln A − ln A = 0. This is why we can find Ea without knowing A.'
           },
           {
             question: 'If k doubles when T increases from 300 K to 310 K, what is Ea approximately?',
@@ -153,7 +153,7 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
               '212 kJ/mol'
             ],
             correctAnswer: 1,
-            explanation: 'ln(2) = 0.693. 1/300 − 1/310 = 1.075 × 10⁻⁴. Ea = 8.314 × 0.693/(1.075 × 10⁻⁴) = 5.761/(1.075 × 10⁻⁴) = 53,590 J/mol ≈ 53 kJ/mol.'
+            explanation: 'ln(2) = 0.693. 1/300 − 1/310 = $1.075 \\times 10^{-4}$. Ea = 8.314 × $0.693/(1.075 \\times 10^{-4})$ = $5.761/(1.075 \\times 10^{-4})$ = 53,590 J/mol ≈ 53 kJ/mol.'
           }
         ]
       }
@@ -175,16 +175,16 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
             options: ['concentration', 'pressure', 'temperature', 'surface area']
           },
           {
-            label: 'If T₁ < T₂ and Ea > 0, then k₂ is',
-            options: ['less than k₁', 'equal to k₁', 'greater than k₁', 'unrelated to k₁']
+            label: 'If $T_{1}$ < $T_{2}$ and Ea > 0, then $k_{2}$ is',
+            options: ['less than $k_{1}$', 'equal to $k_{1}$', 'greater than $k_{1}$', 'unrelated to $k_{1}$']
           },
           {
             label: 'The two-point equation can be derived by subtracting two',
             options: ['rate laws', 'equilibrium expressions', 'Arrhenius equations in ln form', 'integrated rate laws']
           }
         ],
-        correctAnswers: ['temperatures', 'temperature', 'greater than k₁', 'Arrhenius equations in ln form'],
-        hint1: 'The two-point form involves k₁, T₁, k₂, T₂.',
+        correctAnswers: ['temperatures', 'temperature', 'greater than $k_{1}$', 'Arrhenius equations in ln form'],
+        hint1: 'The two-point form involves $k_{1}$, $T_{1}$, $k_{2}$, $T_{2}$.',
         hint2: 'Larger Ea → steeper Arrhenius plot → more temperature sensitivity.',
         hint3: 'Higher temperature always gives larger k (assuming Ea > 0).',
         explanation: 'Two-point relates k at different T. Larger Ea = more T-sensitive. Higher T → larger k. Derived by subtracting two linearized Arrhenius equations.'
@@ -199,7 +199,7 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
       exercise: {
         questions: [
           {
-            question: 'A reaction has k = 1.0 × 10⁻⁵ s⁻¹ at 500 K and Ea = 80 kJ/mol. At what temperature will k = 1.0 × 10⁻³ s⁻¹?',
+            question: 'A reaction has k = $1.0 \\times 10^{-5}$ $s^{-1}$ at 500 K and Ea = 80 kJ/mol. At what temperature will k = $1.0 \\times 10^{-3}$ $s^{-1}$?',
             options: [
               '562 K',
               '600 K',
@@ -207,7 +207,7 @@ A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
               '650 K'
             ],
             correctAnswer: 1,
-            explanation: 'ln(k₂/k₁) = ln(100) = 4.605. 4.605 = (80,000/8.314)(1/500 − 1/T₂) = 9,621(0.00200 − 1/T₂). 0.000479 = 0.00200 − 1/T₂. 1/T₂ = 0.001521. T₂ = 657 K. This is closest to 650 K, but let me recheck: 9621 × (0.002 − 1/T₂) = 4.605 → 0.002 − 1/T₂ = 4.785e-4 → 1/T₂ = 0.001521 → T₂ ≈ 657. Hmm none match exactly. Let me try 600 K: (Ea/R)(1/500−1/600) = 9621(0.002−0.001667) = 9621(3.33e-4) = 3.204. e^3.204 = 24.6. k₂ = 1.0e-5 × 24.6 = 2.46e-4. Not 1.0e-3. At 650: 9621(0.002−0.001538) = 9621(4.62e-4) = 4.44. e^4.44 = 84.8. k = 8.5e-4. Close to 1e-3 but not exact. The exact answer T₂ ≈ 657 K is closest to 650 K.'
+            explanation: '$\\ln (k_{2}/k_{1})$ = ln(100) = 4.605. 4.605 = $(80,000/8.314)(1/500 - 1/T_{2})$ = 9,$621(0.00200 - 1/T_{2})$. 0.000479 = 0.00200 − $1/T_{2}$. $1/T_{2}$ = 0.001521. $T_{2}$ = 657 K. This is closest to 650 K, but let me recheck: 9621 × $(0.002 - 1/T_{2})$ = 4.605 → 0.002 − $1/T_{2}$ = 4.785e-4 → $1/T_{2}$ = 0.001521 → $T_{2}$ ≈ 657. Hmm none match exactly. Let me try 600 K: (Ea/R)(1/500−1/600) = 9621(0.002−0.001667) = 9621(3.33e-4) = 3.204. $e^{3.204}$ = 24.6. $k_{2}$ = 1.0e-5 × 24.6 = 2.46e-4. Not 1.0e-3. At 650: 9621(0.002−0.001538) = 9621(4.62e-4) = 4.44. $e^{4.44}$ = 84.8. k = 8.5e-4. Close to 1e-3 but not exact. The exact answer $T_{2}$ ≈ 657 K is closest to 650 K.'
           },
           {
             question: 'If k triples when temperature increases from 300 K to 320 K, what is Ea?',

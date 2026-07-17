@@ -45,7 +45,7 @@ Change one reactant concentration at a time and measure the effect on rate:
 - Exp 1→3: [B] doubles, rate × 2 → 1st order in B
 - **Rate = $k[A]^2[B]$**; overall 3rd order
 
-Calculate $k$: $k = \\text{Rate}/([A]^2[B]) = 2.0 \\times 10^{-4}/(0.01 \\times 0.10) = 0.20$ M⁻²s⁻¹
+Calculate $k$: $k = \\text{Rate}/([A]^2[B]) = 2.0 \\times 10^{-4}/(0.01 \\times 0.10) = 0.20$ $M^{-2}s^{-1}$
 `
     },
     {
@@ -120,7 +120,7 @@ Only 25% of original remains.
             explanation: `A concentration-independent, constant half-life is the defining characteristic of first-order kinetics. $t_{1/2} = 0.693/k$ for first-order processes.`
           },
           {
-            question: `A drug in the body follows first-order kinetics with $k = 0.139$ hr⁻¹. Its half-life is approximately:`,
+            question: `A drug in the body follows first-order kinetics with $k = 0.139$ $hr^{-1}$. Its half-life is approximately:`,
             options: [
               `5 hours`,
               `7 hours`,

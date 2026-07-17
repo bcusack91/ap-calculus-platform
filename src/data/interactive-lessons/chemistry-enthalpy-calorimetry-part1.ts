@@ -159,7 +159,7 @@ If a reaction is exothermic in the forward direction, it is endothermic in rever
             explanation: 'In an exothermic reaction, the system releases heat to the surroundings. The surrounding water absorbs this heat, so its temperature increases.'
           },
           {
-            question: 'For the reaction N₂(g) + O₂(g) → 2NO(g) with ΔH = +181 kJ, energy is:',
+            question: 'For the reaction $N_{2}(g)$ + $O_{2}(g)$ → 2NO(g) with ΔH = +181 kJ, energy is:',
             options: [
               'Released; this is exothermic',
               'Absorbed; this is exothermic',
@@ -203,7 +203,7 @@ Type "exothermic" or "endothermic" for each process:
         hint1: 'Freezing releases heat to the surroundings (you must remove heat to freeze water).',
         hint2: 'If the solution feels cold, heat flowed from your hand INTO the solution — the dissolving process absorbed heat.',
         hint3: 'Burning (combustion) releases large amounts of heat.',
-        explanation: '1) Freezing is exothermic — the water releases heat as intermolecular bonds form. 2) NH₄NO₃ dissolving is endothermic — it absorbs heat from surroundings, making them feel cold. 3) Combustion is always exothermic — burning methane releases heat energy.'
+        explanation: '1) Freezing is exothermic — the water releases heat as intermolecular bonds form. 2) $NH_{4}NO_{3}$ dissolving is endothermic — it absorbs heat from surroundings, making them feel cold. 3) Combustion is always exothermic — burning methane releases heat energy.'
       }
     },
     {
@@ -255,10 +255,10 @@ Type "exothermic" or "endothermic" for each process:
               'The reaction destroys heat energy'
             ],
             correctAnswer: 1,
-            explanation: 'NH₄NO₃ dissolving in water is endothermic. The system absorbs heat from your hand (the surroundings), making your hand feel cold. Energy is not created or destroyed — it flows from surroundings to system.'
+            explanation: '$NH_{4}NO_{3}$ dissolving in water is endothermic. The system absorbs heat from your hand (the surroundings), making your hand feel cold. Energy is not created or destroyed — it flows from surroundings to system.'
           },
           {
-            question: 'If ΔH = −484 kJ for the reaction 2H₂(g) + O₂(g) → 2H₂O(l), what is ΔH for 2H₂O(l) → 2H₂(g) + O₂(g)?',
+            question: 'If ΔH = −484 kJ for the reaction $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$, what is ΔH for $2H_{2}O(l)$ → $2H_{2}(g)$ + $O_{2}(g)$?',
             options: [
               '−484 kJ',
               '+484 kJ',

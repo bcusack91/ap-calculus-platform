@@ -45,7 +45,7 @@ $M = (5, 7)$ ✅
                               "25"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(9+16) = √25 = 5."
+                    "explanation": "$\\sqrt{9+16}$ = $\\sqrt{25}$ = 5."
           }
 ]
       }
@@ -66,10 +66,10 @@ $M = (5, 7)$ ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["5","5","10"],
-        hint1: "√(9+16).",
-        hint2: "√(16+9).",
-        hint3: "√(36+64).",
-        explanation: "1) √25=5. 2) √25=5. 3) √100=10."
+        hint1: "$\\sqrt{9+16}$.",
+        hint2: "$\\sqrt{16+9}$.",
+        hint3: "$\\sqrt{36+64}$.",
+        explanation: "1) $\\sqrt{25}$=5. 2) $\\sqrt{25}$=5. 3) $\\sqrt{100}$=10."
       }
     },
     {
@@ -82,7 +82,7 @@ $M = (5, 7)$ ✅
         dropdowns: [{"label":"The midpoint formula averages the","options":["Coordinates","Distances","Slopes","Areas"]},{"label":"The distance formula comes from the","options":["Pythagorean theorem","Midpoint formula","Slope formula","Area formula"]}],
         correctAnswers: ["Coordinates","Pythagorean theorem"],
         hint1: "Average x and y separately.",
-        hint2: "a²+b²=c².",
+        hint2: "$a^{2}+b^{2}$=$c^{2}$.",
         explanation: "Midpoint: average coordinates. Distance: Pythagorean theorem."
       }
     },

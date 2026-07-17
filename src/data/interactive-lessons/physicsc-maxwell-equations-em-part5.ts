@@ -14,7 +14,7 @@ export const physCEMMaxwellPart5Data = {
 
 $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$
 
-$|\\vec{S}|$ = power per unit area (W/m²)
+$|\\vec{S}|$ = power per unit area $(W/m^{2})$
 
 Average intensity: $I = \\frac{1}{2}c\\varepsilon_0 E_0^2 = \\frac{E_0 B_0}{2\\mu_0}$
 
@@ -70,7 +70,7 @@ $E_0 = \\sqrt{\\frac{2I}{c\\varepsilon_0}} = \\sqrt{\\frac{2(1.36 \\times 10^3)}
             question: 'The Poynting vector $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$ physically represents:',
             options: ['Energy stored per volume', 'Power transported per unit area', 'Force per unit charge', 'Magnetic flux'],
             correctAnswer: 1,
-            explanation: '$|\\vec{S}|$ is the instantaneous power per unit area (W/m²), and its direction is the direction of energy flow.'
+            explanation: '$|\\vec{S}|$ is the instantaneous power per unit area $(W/m^{2})$, and its direction is the direction of energy flow.'
           },
           {
             question: 'If the amplitude $E_0$ of an EM wave is doubled, its intensity $I = \\frac{1}{2}c\\varepsilon_0 E_0^2$ becomes:',

@@ -147,13 +147,13 @@ If they DO give you a figure:
           'Triangle angle sum = [180°|360°|90°|270°]',
           'Volume of cone vs. cylinder (same r, h): cone is [1/3|1/2|2/3|equal]',
           'Perpendicular slopes multiply to [−1|0|1|undefined]',
-          'Area scales by k² when lengths scale by [k|k²|k³|√k]'
+          'Area scales by $k^{2}$ when lengths scale by [k|$k^{2}$|$k^{3}$|$\\sqrt{k}$]'
         ],
         correctAnswers: ['180°', '1/3', '−1', 'k'],
         hint1: 'These are fundamental geometry facts you should recall instantly.',
         hint2: 'Cone = (1/3) × cylinder when base and height match.',
-        hint3: 'Perpendicular slopes are negative reciprocals: m₁ × m₂ = −1.',
-        explanation: 'Triangles: 180°. Cone is 1/3 of cylinder. Perpendicular slopes: m₁ × m₂ = −1. When lengths scale by k, areas scale by k².'
+        hint3: 'Perpendicular slopes are negative reciprocals: $m_{1}$ × $m_{2}$ = −1.',
+        explanation: 'Triangles: 180°. Cone is 1/3 of cylinder. Perpendicular slopes: $m_{1}$ × $m_{2}$ = −1. When lengths scale by k, areas scale by $k^{2}$.'
       }
     },
     {

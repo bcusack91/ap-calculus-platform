@@ -34,7 +34,7 @@ Instead of solving algebraically, graph both equations and **count the intersect
     {
       id: 'cs3-q1',
       type: 'quiz' as const,
-      question: 'The system y = x² and y = 4 has how many solutions? (Think graphically)',
+      question: 'The system y = $x^{2}$ and y = 4 has how many solutions? (Think graphically)',
       options: [
         '0',
         '1',
@@ -42,7 +42,7 @@ Instead of solving algebraically, graph both equations and **count the intersect
         '4'
       ],
       correctAnswer: 2,
-      explanation: 'y = x² is a parabola opening upward, and y = 4 is a horizontal line. They intersect at two points: (2, 4) and (-2, 4). In Desmos you\'d see two intersection dots.'
+      explanation: 'y = $x^{2}$ is a parabola opening upward, and y = 4 is a horizontal line. They intersect at two points: (2, 4) and (-2, 4). In Desmos you\'d see two intersection dots.'
     },
     {
       id: 'cs3-q2',

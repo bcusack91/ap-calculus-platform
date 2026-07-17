@@ -34,15 +34,15 @@ $$T = m_2(g - a) = \\frac{m_1 m_2 g(1 + \\sin\\theta + \\mu_k\\cos\\theta)}{m_1 
     {
       id: 'fri5-mcq1',
       type: 'mcq' as const,
-      question: 'In an Atwood-incline system: $m_1 = 4$ kg on a $30°$ rough incline ($\\mu_k = 0.2$), $m_2 = 3$ kg hanging. What is the acceleration? ($g = 10$ m/s²)',
+      question: 'In an Atwood-incline system: $m_1 = 4$ kg on a $30°$ rough incline ($\\mu_k = 0.2$), $m_2 = 3$ kg hanging. What is the acceleration? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\approx 0.88$ m/s² (hanging mass descends)',
-        '$\\approx 1.43$ m/s² (block slides up)',
-        '$0$ m/s² (system is in equilibrium)',
-        '$\\approx 2.14$ m/s² (block slides down)'
+        '$\\approx 0.88$ $m/s^{2}$ (hanging mass descends)',
+        '$\\approx 1.43$ $m/s^{2}$ (block slides up)',
+        '$0$ $m/s^{2}$ (system is in equilibrium)',
+        '$\\approx 2.14$ $m/s^{2}$ (block slides down)'
       ],
       correctAnswer: 0,
-      explanation: '$a = \\frac{m_2 g - m_1 g(\\sin 30° + 0.2\\cos 30°)}{m_1 + m_2} = \\frac{30 - 4(10)(0.5 + 0.173)}{7} = \\frac{30 - 26.93}{7} \\approx 0.44$ m/s². Wait — let me recalculate: $a = \\frac{30 - 40(0.673)}{7} = \\frac{30 - 26.93}{7} = 0.438$ m/s². The direction: since $a > 0$, the hanging mass descends.'
+      explanation: '$a = \\frac{m_2 g - m_1 g(\\sin 30° + 0.2\\cos 30°)}{m_1 + m_2} = \\frac{30 - 4(10)(0.5 + 0.173)}{7} = \\frac{30 - 26.93}{7} \\approx 0.44$ $m/s^{2}$. Wait — let me recalculate: $a = \\frac{30 - 40(0.673)}{7} = \\frac{30 - 26.93}{7} = 0.438$ $m/s^{2}$. The direction: since $a > 0$, the hanging mass descends.'
     },
     {
       id: 'fri5-two-inclines',

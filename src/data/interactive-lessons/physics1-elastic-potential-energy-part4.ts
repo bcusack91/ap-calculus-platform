@@ -140,11 +140,11 @@ Force/acceleration and speed are **out of phase** — when one is max, the other
       content: `
 **Spring-Mass Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 2 kg mass hangs from a spring ($k = 100$ N/m). How far does the spring stretch at equilibrium (in m)?
 
-2) A 0.5 kg block oscillates on a spring ($k = 200$ N/m) with amplitude 0.1 m. What is the maximum acceleration (in m/s²)?
+2) A 0.5 kg block oscillates on a spring ($k = 200$ N/m) with amplitude 0.1 m. What is the maximum acceleration $(in m/s^{2})$?
 
 3) Same system as problem 2. What is the maximum speed of the block (in m/s)?
 
@@ -156,7 +156,7 @@ Use $g = 10$ m/s².
         hint1: '$x_0 = mg/k = 2(10)/100$.',
         hint2: '$a_{\\max} = kA/m = 200(0.1)/0.5$.',
         hint3: 'At max speed, all PE converts to KE: $\\frac{1}{2}kA^2 = \\frac{1}{2}mv_{\\max}^2 \\Rightarrow v_{\\max} = A\\sqrt{k/m}$.',
-        explanation: '1) $x_0 = 20/100 = 0.2$ m. 2) $a_{\\max} = 200(0.1)/0.5 = 40$ m/s². 3) $v_{\\max} = 0.1\\sqrt{200/0.5} = 0.1\\sqrt{400} = 0.1(20) = 2$ m/s.'
+        explanation: '1) $x_0 = 20/100 = 0.2$ m. 2) $a_{\\max} = 200(0.1)/0.5 = 40$ $m/s^{2}$. 3) $v_{\\max} = 0.1\\sqrt{200/0.5} = 0.1\\sqrt{400} = 0.1(20) = 2$ m/s.'
       }
     },
     {

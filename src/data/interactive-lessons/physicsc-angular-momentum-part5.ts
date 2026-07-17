@@ -114,7 +114,7 @@ $$\\Omega = \\frac{(0.5)(9.8)(0.15)}{0.0025 \\times 100} = \\frac{0.735}{0.25} =
     {
       id: 'am5-mcq3',
       type: 'mcq' as const,
-      question: 'A spinning wheel ($I = 0.1$ kg·m², $\\omega = 50$ rad/s) is held horizontally at one end of its axle, $r = 0.3$ m from the support. The precession rate is (take $g = 10$ m/s², wheel mass $= 2$ kg):',
+      question: 'A spinning wheel ($I = 0.1$ $kg\\cdot m^{2}$, $\\omega = 50$ rad/s) is held horizontally at one end of its axle, $r = 0.3$ m from the support. The precession rate is (take $g = 10$ $m/s^{2}$, wheel mass $= 2$ kg):',
       options: ['$1.2$ rad/s', '$0.6$ rad/s', '$6$ rad/s', '$12$ rad/s'],
       correctAnswer: 0,
       explanation: '$\\Omega = Mgr/(I\\omega) = (2)(10)(0.3)/(0.1 \\times 50) = 6/5 = 1.2$ rad/s.'

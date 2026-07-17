@@ -15,7 +15,7 @@ $P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v}$
 
 $P_{avg} = \\frac{W}{\\Delta t} = \\frac{\\Delta E}{\\Delta t}$
 
-Unit: **Watt** (W) = J/s = kg·m²/s³
+Unit: **Watt** (W) = J/s = $kg\\cdot m^{2}/s^{3}$
     
     `
     },
@@ -25,7 +25,7 @@ Unit: **Watt** (W) = J/s = kg·m²/s³
       content: `
 ## Worked Example
 
-**A motor lifts a 100 kg load 10 m in 5 s. Find the average power. ($g = 10$ m/s²)**
+**A motor lifts a 100 kg load 10 m in 5 s. Find the average power. ($g = 10$ $m/s^{2}$)**
 
 $P = \\frac{W}{t} = \\frac{mgh}{t} = \\frac{100(10)(10)}{5} = 2000$ W ✅
     
@@ -59,7 +59,7 @@ $P = \\frac{W}{t} = \\frac{mgh}{t} = \\frac{100(10)(10)}{5} = 2000$ W ✅
       content: `
 **Power** 🧮
 
-1) A motor lifts 100 kg by 10 m in 5 s. Average power (W)? ($g = 10$ m/s²)
+1) A motor lifts 100 kg by 10 m in 5 s. Average power (W)? ($g = 10$ $m/s^{2}$)
 
 2) A force of 50 N moves an object at 10 m/s. Instantaneous power (W)?
 

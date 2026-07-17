@@ -56,7 +56,7 @@ A flat sheet cannot perfectly represent a sphere. Every projection sacrifices at
       exercise: {
         questions: [
           {
-            question: "A teacher wants to show students that Africa (30.4 million km²) is roughly 14× larger than Greenland (2.2 million km²). The most appropriate projection is:",
+            question: "A teacher wants to show students that Africa $(30.4 million km^{2})$ is roughly 14× larger than Greenland $(2.2 million km^{2})$. The most appropriate projection is:",
             options: [
               "Mercator — it preserves shape",
               "Gall-Peters — it preserves area",

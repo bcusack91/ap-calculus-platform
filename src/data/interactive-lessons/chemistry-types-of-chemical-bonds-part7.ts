@@ -55,7 +55,7 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
 
 ### ❌ Misconception 4: "All covalent compounds have low melting points"
 
-**Reality:** Molecular covalent compounds generally have low MPs, but **covalent network solids** (diamond, SiO₂) have extremely high melting points because you must break covalent bonds throughout the structure.
+**Reality:** Molecular covalent compounds generally have low MPs, but **covalent network solids** (diamond, $SiO_{2}$) have extremely high melting points because you must break covalent bonds throughout the structure.
 
 
 ---
@@ -76,7 +76,7 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
               'NaCl dissolves in water',
               'The N≡N bond energy (945 kJ/mol) is higher than the lattice energy of some ionic compounds',
               'Metals are malleable',
-              'CO₂ is a gas at room temperature'
+              '$CO_{2}$ is a gas at room temperature'
             ],
             correctAnswer: 1,
             explanation: 'The N≡N triple bond (945 kJ/mol) is stronger than the lattice energy of some ionic compounds (e.g., CsCl at 657 kJ/mol). Bond strength depends on the specific bonds, not just the category.'
@@ -96,12 +96,12 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
             question: 'The formula NaCl represents:',
             options: [
               'One molecule of sodium chloride',
-              'The simplest ratio of Na⁺ to Cl⁻ ions in the crystal lattice (a formula unit)',
+              'The simplest ratio of $Na^{+}$ to $Cl^{-}$ ions in the crystal lattice (a formula unit)',
               'Two atoms bonded covalently',
               'A metallic alloy of sodium and chlorine'
             ],
             correctAnswer: 1,
-            explanation: 'Ionic compounds do not form molecules. NaCl represents a formula unit — the simplest whole-number ratio of ions in the crystal lattice (1 Na⁺ for every 1 Cl⁻).'
+            explanation: 'Ionic compounds do not form molecules. NaCl represents a formula unit — the simplest whole-number ratio of ions in the crystal lattice (1 $Na^{+}$ for every 1 $Cl^{-}$).'
           }
         ]
       }

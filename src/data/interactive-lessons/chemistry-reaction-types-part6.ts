@@ -31,7 +31,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ### Step 1: Identify the Reaction Type
 
-> 💡 **Tip:** On the AP exam, quickly classify reactions by counting reactants/products and looking for O₂, free elements, or ionic compounds exchanging partners.
+> 💡 **Tip:** On the AP exam, quickly classify reactions by counting reactants/products and looking for $O_{2}$, free elements, or ionic compounds exchanging partners.
 
 | Clue | Reaction Type |
 |------|--------------|
@@ -39,7 +39,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | One reactant → multiple products | Decomposition |
 | Element + compound → element + compound | Single replacement |
 | Two compounds → two new compounds | Double replacement |
-| Fuel + O₂ → CO₂ + H₂O | Combustion |
+| Fuel + $O_{2}$ → $CO_{2}$ + $H_{2}O$ | Combustion |
 
 
 ---
@@ -51,7 +51,7 @@ Apply the rules for that reaction type:
 - Decomposition: break into simpler substances
 - Single replacement: check activity series, swap element
 - Double replacement: swap cations, check for driving force
-- Combustion: products are CO₂ + H₂O
+- Combustion: products are $CO_{2}$ + $H_{2}O$
 
 
 ---
@@ -81,7 +81,7 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
 > **Solution:**
 
 1. **Type:** Two elements combining → **Synthesis**
-2. **Product:** Mg²⁺ + N³⁻ → Mg₃N₂ (cross charges: 3 Mg, 2 N)
+2. **Product:** $Mg^{2+}$ + $N^{3-}$ → $Mg_{3}N_{2}$ (cross charges: 3 Mg, 2 N)
 3. **Balance:**
 
 $$\\boxed{3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2}$$
@@ -97,7 +97,7 @@ $$\\boxed{3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2}$$
 
 1. **Type:** Element + compound → **Single replacement**
 2. **Activity series:** Fe is above Ag → reaction proceeds
-3. **Product:** Fe replaces Ag. Fe has charge +2 → Fe(NO₃)₂ + Ag
+3. **Product:** Fe replaces Ag. Fe has charge +2 → $Fe(NO_{3})_{2}$ + Ag
 4. **Balance:**
 
 $$\\boxed{\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text{Ag}}$$
@@ -112,8 +112,8 @@ $$\\boxed{\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text
 > **Solution:**
 
 1. **Type:** Two ionic compounds → **Double replacement**
-2. **Swap:** Na⁺ with Cl⁻ → NaCl; Ca²⁺ with CO₃²⁻ → CaCO₃
-3. **Driving force:** CaCO₃ is insoluble → precipitate forms ✓
+2. **Swap:** $Na^{+}$ with $Cl^{-}$ → NaCl; $Ca^{2+}$ with $CO_{3}^{2-}$ → $CaCO_{3}$
+3. **Driving force:** $CaCO_{3}$ is insoluble → precipitate forms ✓
 4. **Balance:**
 
 $$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\\downarrow + 2\\text{NaCl}}$$
@@ -136,7 +136,7 @@ $$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\
               'Double replacement'
             ],
             correctAnswer: 3,
-            explanation: 'Two ionic compounds exchange ions: K⁺ pairs with NO₃⁻, and Pb²⁺ pairs with I⁻. The precipitate PbI₂ (yellow) drives the reaction. This is double replacement.'
+            explanation: 'Two ionic compounds exchange ions: $K^{+}$ pairs with $NO_{3}^{-}$, and $Pb^{2+}$ pairs with $I^{-}$. The precipitate $PbI_{2}$ (yellow) drives the reaction. This is double replacement.'
           },
           {
             question: 'Classify: $2\\text{Li} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH} + \\text{H}_2$',
@@ -147,7 +147,7 @@ $$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\
               'Double replacement'
             ],
             correctAnswer: 2,
-            explanation: 'An element (Li) reacts with a compound (H₂O). Li replaces one of the hydrogen atoms in water. Element + compound → new compound + new element = single replacement.'
+            explanation: 'An element (Li) reacts with a compound $(H_{2}O)$. Li replaces one of the hydrogen atoms in water. Element + compound → new compound + new element = single replacement.'
           },
           {
             question: 'Classify: $\\text{CaO} + \\text{H}_2\\text{O} \\rightarrow \\text{Ca(OH)}_2$',
@@ -169,7 +169,7 @@ $$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\
               'Combustion'
             ],
             correctAnswer: 3,
-            explanation: 'An organic compound reacts with O₂ to produce CO₂ and H₂O. This is the hallmark of combustion (specifically, the combustion of glucose).'
+            explanation: 'An organic compound reacts with $O_{2}$ to produce $CO_{2}$ and $H_{2}O$. This is the hallmark of combustion (specifically, the combustion of glucose).'
           }
         ]
       }
@@ -193,8 +193,8 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
         correctAnswers: ['synthesis', 'double', 'combustion'],
         hint1: 'Two elements combine into one compound.',
         hint2: 'Two ionic compounds swap their ions.',
-        hint3: 'A hydrocarbon reacting with O₂ to produce CO₂ + H₂O.',
-        explanation: '1) Synthesis: $4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$ — two elements combine into one product. 2) Double replacement: AgNO₃ + NaCl → AgCl↓ + NaNO₃ — ions swap partners. 3) Combustion: C₂H₆ + O₂ → CO₂ + H₂O — hydrocarbon burns in oxygen.'
+        hint3: 'A hydrocarbon reacting with $O_{2}$ to produce $CO_{2}$ + $H_{2}O$.',
+        explanation: '1) Synthesis: $4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$ — two elements combine into one product. 2) Double replacement: $AgNO_{3}$ + NaCl → AgCl↓ + $NaNO_{3}$ — ions swap partners. 3) Combustion: $C_{2}H_{6}$ + $O_{2}$ → $CO_{2}$ + $H_{2}O$ — hydrocarbon burns in oxygen.'
       }
     },
     {
@@ -214,7 +214,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
               '$\\text{Zn} + \\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}$'
             ],
             correctAnswer: 1,
-            explanation: 'Single replacement: Zn (charge +2) replaces H. Products: ZnCl₂ + H₂. Balanced: $\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$. Zn: 1=1 ✓, H: 2=2 ✓, Cl: 2=2 ✓.'
+            explanation: 'Single replacement: Zn (charge +2) replaces H. Products: $ZnCl_{2}$ + $H_{2}$. Balanced: $\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$. Zn: 1=1 ✓, H: 2=2 ✓, Cl: 2=2 ✓.'
           },
           {
             question: 'Predict and balance: $\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow$ ?',
@@ -225,7 +225,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
               '$\\text{Li}_2\\text{O} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$'
             ],
             correctAnswer: 1,
-            explanation: 'Synthesis: Metal oxide + water → metal hydroxide. Li₂O + H₂O → 2LiOH. Li: 2=2 ✓, O: 1+1=2 and 2(1)=2 ✓, H: 2=2 ✓.'
+            explanation: 'Synthesis: Metal oxide + water → metal hydroxide. $Li_{2}O$ + $H_{2}O$ → 2LiOH. Li: 2=2 ✓, O: 1+1=2 and 2(1)=2 ✓, H: 2=2 ✓.'
           }
         ]
       }
@@ -247,7 +247,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
             options: ['synthesis', 'decomposition', 'single replacement', 'combustion']
           },
           {
-            label: 'The reaction Na₂O + H₂O → 2NaOH is classified as',
+            label: 'The reaction $Na_{2}O$ + $H_{2}O$ → 2NaOH is classified as',
             options: ['decomposition', 'double replacement', 'synthesis', 'neutralization']
           },
           {
@@ -271,7 +271,7 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
       exercise: {
         questions: [
           {
-            question: 'A student adds a piece of copper wire to a solution of silver nitrate. Blue crystals of Cu(NO₃)₂ form and silver metal deposits. This reaction is:',
+            question: 'A student adds a piece of copper wire to a solution of silver nitrate. Blue crystals of $Cu(NO_{3})_{2}$ form and silver metal deposits. This reaction is:',
             options: [
               'Synthesis',
               'Double replacement',
@@ -282,12 +282,12 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
             explanation: '$\\text{Cu} + 2\\text{AgNO}_3 \\rightarrow \\text{Cu(NO}_3)_2 + 2\\text{Ag}$. A free element (Cu) replaces another element (Ag) in a compound. This is single replacement. Cu is above Ag in the activity series.'
           },
           {
-            question: 'When potassium chlorate (KClO₃) is heated, it decomposes. The products are:',
+            question: 'When potassium chlorate $(KClO_{3})$ is heated, it decomposes. The products are:',
             options: [
-              'K + Cl₂ + O₂',
-              'KCl + O₂',
-              'K₂O + ClO₂',
-              'KOH + Cl₂'
+              'K + $Cl_{2}$ + $O_{2}$',
+              'KCl + $O_{2}$',
+              '$K_{2}O$ + $ClO_{2}$',
+              'KOH + $Cl_{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Metal chlorates decompose into metal chloride + oxygen gas: $2\\text{KClO}_3 \\xrightarrow{\\Delta} 2\\text{KCl} + 3\\text{O}_2$. This is a standard decomposition pattern.'

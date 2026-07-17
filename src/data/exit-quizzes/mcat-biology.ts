@@ -22,9 +22,9 @@ const questionPool: MCATQuizQuestion[] = [
   },
   {
     question: 'During oxidative phosphorylation, the final electron acceptor in the electron transport chain is:',
-    options: ['NAD⁺', 'FAD', 'O₂', 'CO₂'],
+    options: ['$NAD^{+}$', 'FAD', '$O_{2}$', '$CO_{2}$'],
     correctAnswer: 2,
-    explanation: 'Molecular oxygen (O₂) is the final electron acceptor in the ETC. It receives electrons from Complex IV and combines with H⁺ to form water.',
+    explanation: 'Molecular oxygen $(O_{2})$ is the final electron acceptor in the ETC. It receives electrons from Complex IV and combines with $H^{+}$ to form water.',
     difficulty: 'easy',
   },
   {

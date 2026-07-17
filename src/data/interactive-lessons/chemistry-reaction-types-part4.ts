@@ -87,11 +87,11 @@ export const chemReactionTypesPart4Data = {
 $$\\text{Ca(OH)}_2 + \\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2 + \\text{H}_2\\text{O}$$
 
 Instead of counting individual H, O, and P atoms, notice:
-- **PO₄** appears on both sides — treat it as one unit
-- Balance PO₄: need 2 on left → coefficient of H₃PO₄ = 2 ✓
-- Balance Ca: need 3 on right → coefficient of Ca(OH)₂ = 3 ✓
-- Count H: left has 3(2) + 2(3) = 12. Right needs 12 → coefficient of H₂O = 6
-- Check O from OH and H₂O: left 3(2) = 6 from OH; right 6 from H₂O ✓
+- **$PO_{4}$** appears on both sides — treat it as one unit
+- Balance $PO_{4}$: need 2 on left → coefficient of $H_{3}PO_{4}$ = 2 ✓
+- Balance Ca: need 3 on right → coefficient of $Ca(OH)_{2}$ = 3 ✓
+- Count H: left has 3(2) + 2(3) = 12. Right needs 12 → coefficient of $H_{2}O$ = 6
+- Check O from OH and $H_{2}O$: left 3(2) = 6 from OH; right 6 from $H_{2}O$ ✓
 
 $$\\boxed{3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2 + 6\\text{H}_2\\text{O}}$$
 
@@ -102,9 +102,9 @@ $$\\boxed{3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3
 
 | Ion | Formula | Ion | Formula |
 |-----|---------|-----|---------|
-| Sulfate | SO₄²⁻ | Nitrate | NO₃⁻ |
-| Phosphate | PO₄³⁻ | Carbonate | CO₃²⁻ |
-| Hydroxide | OH⁻ | Ammonium | NH₄⁺ |
+| Sulfate | $SO_{4}^{2-}$ | Nitrate | $NO_{3}^{-}$ |
+| Phosphate | $PO_{4}^{3-}$ | Carbonate | $CO_{3}^{2-}$ |
+| Hydroxide | $OH^{-}$ | Ammonium | $NH_{4}^{+}$ |
       `
     },
     {
@@ -120,7 +120,7 @@ $$\\boxed{3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3
 > **Solution:**
 
 - Balance Fe: $2\\text{Fe} + \\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$ → Fe: 2 = 2 ✓
-- Balance O: need 3 O on left, but O₂ gives even numbers → use LCM of 2 and 3 = 6
+- Balance O: need 3 O on left, but $O_{2}$ gives even numbers → use LCM of 2 and 3 = 6
 - $2\\text{Fe} + 1.5\\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$ → multiply all by 2:
 $$\\boxed{4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3}$$
 
@@ -164,7 +164,7 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
             explanation: 'Only coefficients (numbers in front of formulas) may be changed. Changing subscripts would change the identity of the substance, which is not allowed.'
           },
           {
-            question: 'What is the coefficient of O₂ when the equation $\\text{C}_3\\text{H}_8 + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ is balanced?',
+            question: 'What is the coefficient of $O_{2}$ when the equation $\\text{C}_3\\text{H}_8 + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ is balanced?',
             options: [
               '3',
               '4',
@@ -172,7 +172,7 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
               '7'
             ],
             correctAnswer: 2,
-            explanation: '$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$. Products have 3(2) + 4(1) = 10 oxygen atoms → 10/2 = 5 O₂.'
+            explanation: '$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$. Products have 3(2) + 4(1) = 10 oxygen atoms → 10/2 = 5 $O_{2}$.'
           },
           {
             question: 'The polyatomic ion shortcut is most useful when:',
@@ -183,7 +183,7 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
               'The equation involves only elements'
             ],
             correctAnswer: 1,
-            explanation: 'When a polyatomic ion (like SO₄²⁻, NO₃⁻, or PO₄³⁻) appears unchanged on both sides of the equation, you can balance it as a single unit instead of tracking each atom individually.'
+            explanation: 'When a polyatomic ion (like $SO_{4}^{2-}$, $NO_{3}^{-}$, or $PO_{4}^{3-}$) appears unchanged on both sides of the equation, you can balance it as a single unit instead of tracking each atom individually.'
           },
           {
             question: 'Which equation is correctly balanced?',
@@ -207,7 +207,7 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
 
 Balance each equation. Enter the coefficient of the indicated substance.
 
-**1)** $\\underline{\\hspace{1em}}\\,\\text{N}_2 + \\underline{\\hspace{1em}}\\,\\text{H}_2 \\rightarrow \\underline{\\hspace{1em}}\\,\\text{NH}_3$ → coefficient of H₂ = ?
+**1)** $\\underline{\\hspace{1em}}\\,\\text{N}_2 + \\underline{\\hspace{1em}}\\,\\text{H}_2 \\rightarrow \\underline{\\hspace{1em}}\\,\\text{NH}_3$ → coefficient of $H_{2}$ = ?
 
 **2)** $\\underline{\\hspace{1em}}\\,\\text{Al} + \\underline{\\hspace{1em}}\\,\\text{HCl} \\rightarrow \\underline{\\hspace{1em}}\\,\\text{AlCl}_3 + \\underline{\\hspace{1em}}\\,\\text{H}_2$ → coefficient of HCl = ?
 
@@ -216,9 +216,9 @@ Balance each equation. Enter the coefficient of the indicated substance.
       exercise: {
         boxes: 3,
         correctAnswers: ['3', '6', '3'],
-        hint1: '$\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$. Each NH₃ has 3 H atoms; 2 NH₃ needs 6 H atoms.',
-        hint2: '$2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$. Each AlCl₃ has 3 Cl; two AlCl₃ need 6 Cl.',
-        hint3: '$\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2$. 3 O from Fe₂O₃ + 3 from CO = 6 O; products have 3(2) = 6 O.',
+        hint1: '$\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$. Each $NH_{3}$ has 3 H atoms; 2 $NH_{3}$ needs 6 H atoms.',
+        hint2: '$2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$. Each $AlCl_{3}$ has 3 Cl; two $AlCl_{3}$ need 6 Cl.',
+        hint3: '$\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2$. 3 O from $Fe_{2}O_{3}$ + 3 from CO = 6 O; products have 3(2) = 6 O.',
         explanation: '1) $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$: N: 2=2 ✓, H: 6=6 ✓. 2) $2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$: Al: 2=2 ✓, H: 6=6 ✓, Cl: 6=6 ✓. 3) $\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2$: Fe: 2=2 ✓, O: 3+3=6 and 3(2)=6 ✓, C: 3=3 ✓.'
       }
     },
@@ -250,8 +250,8 @@ Balance each equation. Enter the coefficient of the indicated substance.
         correctAnswers: ['last', 'multiply all coefficients by 2', 'identity of the substance', 'numbers of each type of atom on both sides'],
         hint1: 'H and O often appear in multiple compounds, making them trickier to balance first.',
         hint2: 'Fractional coefficients are valid mathematically, but we prefer whole numbers.',
-        hint3: 'H₂O vs. H₂O₂ are different substances with different subscripts.',
-        explanation: 'Balance H and O last since they appear in many compounds. Multiply all coefficients by the denominator to eliminate fractions. Changing subscripts changes what the compound is (e.g., H₂O ≠ H₂O₂). Conservation of mass means atoms are conserved — same count on both sides.'
+        hint3: '$H_{2}O$ vs. $H_{2}O_{2}$ are different substances with different subscripts.',
+        explanation: 'Balance H and O last since they appear in many compounds. Multiply all coefficients by the denominator to eliminate fractions. Changing subscripts changes what the compound is (e.g., $H_{2}O$ ≠ $H_{2}O_{2}$). Conservation of mass means atoms are conserved — same count on both sides.'
       }
     },
     {

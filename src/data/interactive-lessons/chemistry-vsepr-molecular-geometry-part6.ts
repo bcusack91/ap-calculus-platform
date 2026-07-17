@@ -36,21 +36,21 @@ Even if individual bonds are polar, the molecule can be nonpolar if the geometry
 
 | Molecule | Geometry | Polar Bonds? | Molecular Dipole? | Why? |
 |----------|----------|-------------|-------------------|------|
-| CO₂ | Linear | Yes (C=O) | **No** | Two equal dipoles point in opposite directions → cancel |
-| BF₃ | Trigonal planar | Yes (B–F) | **No** | Three equal dipoles at 120° → cancel |
-| CH₄ | Tetrahedral | Yes (C–H) | **No** | Four equal dipoles in tetrahedral arrangement → cancel |
-| SF₆ | Octahedral | Yes (S–F) | **No** | Six equal dipoles → cancel |
-| XeF₂ | Linear | Yes (Xe–F) | **No** | Two equal dipoles 180° apart → cancel |
+| $CO_{2}$ | Linear | Yes (C=O) | **No** | Two equal dipoles point in opposite directions → cancel |
+| $BF_{3}$ | Trigonal planar | Yes (B–F) | **No** | Three equal dipoles at 120° → cancel |
+| $CH_{4}$ | Tetrahedral | Yes (C–H) | **No** | Four equal dipoles in tetrahedral arrangement → cancel |
+| $SF_{6}$ | Octahedral | Yes (S–F) | **No** | Six equal dipoles → cancel |
+| $XeF_{2}$ | Linear | Yes (Xe–F) | **No** | Two equal dipoles 180° apart → cancel |
 
 ### Polar Molecules (Asymmetric — Dipoles Don\'t Cancel)
 
 | Molecule | Geometry | Why Polar? |
 |----------|----------|-----------|
-| H₂O | Bent | Two O–H dipoles point in same general direction |
-| NH₃ | Trigonal pyramidal | Three N–H dipoles point "upward" — no opposing dipole |
+| $H_{2}O$ | Bent | Two O–H dipoles point in same general direction |
+| $NH_{3}$ | Trigonal pyramidal | Three N–H dipoles point "upward" — no opposing dipole |
 | HCl | Linear (diatomic) | Only one bond, so the bond dipole IS the molecular dipole |
-| SO₂ | Bent | Two S=O dipoles don\'t cancel due to bent shape |
-| CHCl₃ | Tetrahedral | Different atoms → dipoles don\'t fully cancel |
+| $SO_{2}$ | Bent | Two S=O dipoles don\'t cancel due to bent shape |
+| $CHCl_{3}$ | Tetrahedral | Different atoms → dipoles don\'t fully cancel |
 
 ### The Two Requirements for a Nonpolar Molecule
 
@@ -71,7 +71,7 @@ If either condition fails, the molecule is polar.
       exercise: {
         questions: [
           {
-            question: 'Is CCl₄ polar or nonpolar?',
+            question: 'Is $CCl_{4}$ polar or nonpolar?',
             options: [
               'Polar — because C–Cl bonds are polar',
               'Nonpolar — because the tetrahedral symmetry cancels all bond dipoles',
@@ -79,10 +79,10 @@ If either condition fails, the molecule is polar.
               'Nonpolar — because there are no bond dipoles'
             ],
             correctAnswer: 1,
-            explanation: 'Although each C–Cl bond is polar, CCl₄ has a symmetric tetrahedral geometry with 4 identical Cl atoms. The 4 bond dipoles cancel exactly, making the molecule nonpolar.'
+            explanation: 'Although each C–Cl bond is polar, $CCl_{4}$ has a symmetric tetrahedral geometry with 4 identical Cl atoms. The 4 bond dipoles cancel exactly, making the molecule nonpolar.'
           },
           {
-            question: 'Is H₂O polar or nonpolar?',
+            question: 'Is $H_{2}O$ polar or nonpolar?',
             options: [
               'Nonpolar — the O–H bond dipoles cancel',
               'Polar — the bent geometry means bond dipoles don\'t cancel',
@@ -90,10 +90,10 @@ If either condition fails, the molecule is polar.
               'Polar — because it has lone pairs'
             ],
             correctAnswer: 1,
-            explanation: 'H₂O has a bent geometry (104.5°). The two O–H bond dipoles both point away from the oxygen, but because the molecule is bent (not linear), they don\'t cancel. The net dipole points toward oxygen.'
+            explanation: '$H_{2}O$ has a bent geometry (104.5°). The two O–H bond dipoles both point away from the oxygen, but because the molecule is bent (not linear), they don\'t cancel. The net dipole points toward oxygen.'
           },
           {
-            question: 'CH₂Cl₂ has a tetrahedral geometry with 2 H and 2 Cl around carbon. Is it polar?',
+            question: '$CH_{2}Cl_{2}$ has a tetrahedral geometry with 2 H and 2 Cl around carbon. Is it polar?',
             options: [
               'Nonpolar — tetrahedral geometry always cancels dipoles',
               'Polar — the C–H and C–Cl dipoles have different magnitudes and don\'t cancel',
@@ -101,7 +101,7 @@ If either condition fails, the molecule is polar.
               'Cannot be determined without more information'
             ],
             correctAnswer: 1,
-            explanation: 'Even though the geometry is tetrahedral, the surrounding atoms are NOT all the same. C–Cl dipoles are much stronger than C–H dipoles, so the net dipole does not cancel. CH₂Cl₂ is polar.'
+            explanation: 'Even though the geometry is tetrahedral, the surrounding atoms are NOT all the same. C–Cl dipoles are much stronger than C–H dipoles, so the net dipole does not cancel. $CH_{2}Cl_{2}$ is polar.'
           }
         ]
       }
@@ -124,19 +124,19 @@ Lone pairs contribute to the electron density around the central atom but don\'t
 
 | Molecule | Lone Pairs | Geometry | Polar? |
 |----------|-----------|----------|--------|
-| NH₃ | 1 | Trigonal pyramidal | **Yes** — lone pair creates net dipole |
-| H₂O | 2 | Bent | **Yes** — lone pairs enhance net dipole |
-| SF₄ | 1 | Seesaw | **Yes** — asymmetric shape |
-| ClF₃ | 2 | T-shaped | **Yes** — asymmetric shape |
+| $NH_{3}$ | 1 | Trigonal pyramidal | **Yes** — lone pair creates net dipole |
+| $H_{2}O$ | 2 | Bent | **Yes** — lone pairs enhance net dipole |
+| $SF_{4}$ | 1 | Seesaw | **Yes** — asymmetric shape |
+| $ClF_{3}$ | 2 | T-shaped | **Yes** — asymmetric shape |
 
 ### Exception: Symmetric Lone Pair Arrangements
 
-> 💡 **Tip:** Some molecules with lone pairs are still nonpolar — if the lone pairs are arranged symmetrically (e.g., XeF₂ with 3 equatorial lone pairs, XeF₄ with trans lone pairs), the overall dipole cancels.
+> 💡 **Tip:** Some molecules with lone pairs are still nonpolar — if the lone pairs are arranged symmetrically (e.g., $XeF_{2}$ with 3 equatorial lone pairs, $XeF_{4}$ with trans lone pairs), the overall dipole cancels.
 
 Some molecules have lone pairs but are still **nonpolar** because the lone pairs are arranged symmetrically:
 
-- **XeF₂**: 3 lone pairs (all equatorial) + 2 bonds (axial) → **linear** → nonpolar
-- **XeF₄**: 2 lone pairs (trans) + 4 bonds → **square planar** → nonpolar
+- **$XeF_{2}$**: 3 lone pairs (all equatorial) + 2 bonds (axial) → **linear** → nonpolar
+- **$XeF_{4}$**: 2 lone pairs (trans) + 4 bonds → **square planar** → nonpolar
 
 The key is whether the overall arrangement (bonds + lone pairs) produces a net dipole.`
     },
@@ -152,35 +152,35 @@ The key is whether the overall arrangement (bonds + lone pairs) produces a net d
             label: '$\\text{BF}_3$ (trigonal planar)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
-            explanation: 'BF₃ has a symmetric trigonal planar geometry with 3 identical F atoms. Bond dipoles cancel → nonpolar.'
+            explanation: '$BF_{3}$ has a symmetric trigonal planar geometry with 3 identical F atoms. Bond dipoles cancel → nonpolar.'
           },
           {
             id: 'vg-6-5-dd2',
             label: '$\\text{SO}_2$ (bent)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
-            explanation: 'SO₂ has a bent geometry (steric number 3, 1 lone pair). The two S=O dipoles don\'t cancel → polar.'
+            explanation: '$SO_{2}$ has a bent geometry (steric number 3, 1 lone pair). The two S=O dipoles don\'t cancel → polar.'
           },
           {
             id: 'vg-6-5-dd3',
             label: '$\\text{XeF}_4$ (square planar)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
-            explanation: 'XeF₄ has a square planar geometry with lone pairs in trans positions. The four Xe–F dipoles cancel → nonpolar.'
+            explanation: '$XeF_{4}$ has a square planar geometry with lone pairs in trans positions. The four Xe–F dipoles cancel → nonpolar.'
           },
           {
             id: 'vg-6-5-dd4',
             label: '$\\text{SF}_4$ (seesaw)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
-            explanation: 'SF₄ has a seesaw geometry (steric number 5, 1 lone pair). The asymmetric shape means dipoles don\'t fully cancel → polar.'
+            explanation: '$SF_{4}$ has a seesaw geometry (steric number 5, 1 lone pair). The asymmetric shape means dipoles don\'t fully cancel → polar.'
           },
           {
             id: 'vg-6-5-dd5',
             label: '$\\text{CO}_2$ (linear)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
-            explanation: 'CO₂ is linear with 2 identical C=O double bonds pointing in opposite directions. Dipoles cancel → nonpolar.'
+            explanation: '$CO_{2}$ is linear with 2 identical C=O double bonds pointing in opposite directions. Dipoles cancel → nonpolar.'
           }
         ]
       }
@@ -211,7 +211,7 @@ Polar molecules with N–H, O–H, or F–H bonds can form **hydrogen bonds** �
 
 ### Example Comparison
 
-| Property | CO₂ (nonpolar) | H₂O (polar) |
+| Property | $CO_{2}$ (nonpolar) | $H_{2}O$ (polar) |
 |----------|----------------|-------------|
 | Boiling point | −78.5°C (sublimes) | 100°C |
 | Solubility in water | Slightly soluble | N/A (is water) |
@@ -229,19 +229,19 @@ The dramatic difference in boiling points is largely due to water\'s strong hydr
       exercise: {
         inputs: [
           {
-            label: 'Is PCl₃ polar or nonpolar? (Type "polar" or "nonpolar")',
+            label: 'Is $PCl_{3}$ polar or nonpolar? (Type "polar" or "nonpolar")',
             correctAnswer: 'polar',
-            explanation: 'PCl₃ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). The asymmetric shape means bond dipoles don\'t cancel → polar.'
+            explanation: '$PCl_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). The asymmetric shape means bond dipoles don\'t cancel → polar.'
           },
           {
-            label: 'Is SF₆ polar or nonpolar? (Type "polar" or "nonpolar")',
+            label: 'Is $SF_{6}$ polar or nonpolar? (Type "polar" or "nonpolar")',
             correctAnswer: 'nonpolar',
-            explanation: 'SF₆ has a perfectly symmetric octahedral geometry with 6 identical F atoms. All bond dipoles cancel → nonpolar.'
+            explanation: '$SF_{6}$ has a perfectly symmetric octahedral geometry with 6 identical F atoms. All bond dipoles cancel → nonpolar.'
           },
           {
-            label: 'Is NF₃ polar or nonpolar? (Type "polar" or "nonpolar")',
+            label: 'Is $NF_{3}$ polar or nonpolar? (Type "polar" or "nonpolar")',
             correctAnswer: 'polar',
-            explanation: 'NF₃ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Like NH₃, the asymmetric shape creates a net dipole → polar.'
+            explanation: '$NF_{3}$ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Like $NH_{3}$, the asymmetric shape creates a net dipole → polar.'
           }
         ]
       }
@@ -255,9 +255,9 @@ The dramatic difference in boiling points is largely due to water\'s strong hydr
         questions: [
           {
             question: 'Which of the following molecules is nonpolar despite having polar bonds?',
-            options: ['NH₃', 'H₂O', 'CCl₄', 'HF'],
+            options: ['$NH_{3}$', '$H_{2}O$', '$CCl_{4}$', 'HF'],
             correctAnswer: 2,
-            explanation: 'CCl₄ has polar C–Cl bonds, but its symmetric tetrahedral geometry causes all bond dipoles to cancel, resulting in a nonpolar molecule.'
+            explanation: '$CCl_{4}$ has polar C–Cl bonds, but its symmetric tetrahedral geometry causes all bond dipoles to cancel, resulting in a nonpolar molecule.'
           },
           {
             question: 'Two molecules have the same molar mass. Molecule A is polar and molecule B is nonpolar. Which likely has the higher boiling point?',

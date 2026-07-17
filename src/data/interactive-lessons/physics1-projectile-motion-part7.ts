@@ -90,7 +90,7 @@ This is the final lesson of the Projectile Motion unit. We'll review **everythin
       content: `
 **AP Calculation Problem 1** 🧮
 
-A projectile is launched from ground level at 100 m/s at 53° above horizontal. Use $g = 10$ m/s², $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
+A projectile is launched from ground level at 100 m/s at 53° above horizontal. Use $g = 10$ $m/s^{2}$, $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
 
 1) $v_{0x}$ (in m/s)
 
@@ -160,7 +160,7 @@ A projectile is launched from ground level at 100 m/s at 53° above horizontal. 
             explanation: 'Both the bullet and monkey experience the same gravitational acceleration. The bullet falls below its straight-line path by the same amount the monkey falls. They meet! This is the famous "monkey and hunter" problem demonstrating independence of motion.'
           },
           {
-            question: 'On the Moon ($g_{Moon} = 1.6$ m/s²), a ball launched at the same speed and angle as on Earth ($g = 10$ m/s²) would have a range that is:',
+            question: 'On the Moon ($g_{Moon} = 1.6$ $m/s^{2}$), a ball launched at the same speed and angle as on Earth ($g = 10$ $m/s^{2}$) would have a range that is:',
             options: [
               '1.6 times Earth\'s range',
               '6.25 times Earth\'s range',
@@ -179,7 +179,7 @@ A projectile is launched from ground level at 100 m/s at 53° above horizontal. 
       content: `
 **AP Free-Response Style** 📝
 
-A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aiming to clear a 50 m wide canyon. Use $g = 10$ m/s².
+A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aiming to clear a 50 m wide canyon. Use $g = 10$ $m/s^{2}$.
 
 1) Time to fall 20 m (in seconds)
 
@@ -205,7 +205,7 @@ A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aimin
       exercise: {
         questions: [
           {
-            question: 'A football is kicked at 20 m/s at 45° from ground level. Using $g = 10$ m/s² and $\\sin 90° = 1$, the range is:',
+            question: 'A football is kicked at 20 m/s at 45° from ground level. Using $g = 10$ $m/s^{2}$ and $\\sin 90° = 1$, the range is:',
             options: [
               '20 m',
               '40 m',
@@ -216,7 +216,7 @@ A stunt driver launches a car horizontally off a 20 m high ramp at 25 m/s, aimin
             explanation: '$R = \\frac{v_0^2\\sin 2\\theta}{g} = \\frac{400 \\cdot \\sin 90°}{10} = \\frac{400}{10} = 40$ m.'
           },
           {
-            question: 'A projectile launched at 60 m/s at 37° ($\\sin 37° = 0.6$) has a max height of (use $g = 10$ m/s²):',
+            question: 'A projectile launched at 60 m/s at 37° ($\\sin 37° = 0.6$) has a max height of (use $g = 10$ $m/s^{2}$):',
             options: [
               '32.4 m',
               '64.8 m',

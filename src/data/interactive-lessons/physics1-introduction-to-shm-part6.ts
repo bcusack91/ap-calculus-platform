@@ -74,7 +74,7 @@ A 0.50 kg block on a spring oscillates with a period of 0.40 s and an amplitude 
       content: `
 **Problem 2** 🧮
 
-A pendulum clock keeps perfect time on Earth ($g = 9.8$ m/s²). It is taken to a planet where $g = 4.9$ m/s².
+A pendulum clock keeps perfect time on Earth ($g = 9.8$ $m/s^{2}$). It is taken to a planet where $g = 4.9$ $m/s^{2}$.
 
 1) By what factor does the period change? (give as a decimal, round to 3 significant figures)
 
@@ -126,13 +126,13 @@ An object in SHM has a position given by $x(t) = 0.15\\cos(10t)$ (in meters, wit
           {
             question: 'What is the maximum acceleration?',
             options: [
-              '$1.5$ m/s²',
-              '$10$ m/s²',
-              '$15$ m/s²',
-              '$150$ m/s²'
+              '$1.5$ $m/s^{2}$',
+              '$10$ $m/s^{2}$',
+              '$15$ $m/s^{2}$',
+              '$150$ $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a_{\\text{max}} = A\\omega^2 = 0.15 \\times 10^2 = 0.15 \\times 100 = 15$ m/s².'
+            explanation: '$a_{\\text{max}} = A\\omega^2 = 0.15 \\times 10^2 = 0.15 \\times 100 = 15$ $m/s^{2}$.'
           }
         ]
       }
@@ -176,7 +176,7 @@ Two identical springs each have spring constant $k$. A mass $m$ is attached.
 
 A 2.0 kg mass hangs from a vertical spring and stretches it 0.10 m to a new equilibrium. It is then pulled down an additional 0.05 m and released.
 
-1) What is the spring constant $k$? (in N/m, use $g = 9.8$ m/s²)
+1) What is the spring constant $k$? (in N/m, use $g = 9.8$ $m/s^{2}$)
 
 2) What is the period of oscillation? (in seconds, round to 3 significant figures)
 

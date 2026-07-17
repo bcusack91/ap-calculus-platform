@@ -102,7 +102,7 @@ AP free-response questions often ask how errors affect results:
       exercise: {
         questions: [
           {
-            question: 'A student determines the mass of BaSO₄ precipitate but does not dry it completely before weighing. The reported mass percent of SO₄²⁻ will be:',
+            question: 'A student determines the mass of $BaSO_{4}$ precipitate but does not dry it completely before weighing. The reported mass percent of $SO_{4}^{2-}$ will be:',
             options: [
               'Too high, because the wet precipitate has extra mass',
               'Too low, because water reduces the mass',
@@ -110,7 +110,7 @@ AP free-response questions often ask how errors affect results:
               'Zero, because the experiment failed'
             ],
             correctAnswer: 0,
-            explanation: 'Wet precipitate weighs more than dry → student calculates more moles of SO₄²⁻ than actually present → mass percent is reported as too high.'
+            explanation: 'Wet precipitate weighs more than dry → student calculates more moles of $SO_{4}^{2-}$ than actually present → mass percent is reported as too high.'
           },
           {
             question: 'In a Beer\'s Law experiment, a student uses a cuvette with a 2.00 cm path length instead of the standard 1.00 cm. If they use a calibration curve made with 1.00 cm cuvettes, the reported concentration will be:',
@@ -145,9 +145,9 @@ AP free-response questions often ask how errors affect results:
 
 **1)** A 2.000 g sample of a mixture of NaCl and sand is dissolved in water, filtered, and the filtrate is evaporated. The recovered NaCl has a mass of 0.850 g. What is the mass percent of NaCl in the original mixture? (to 3 significant figures)
 
-**2)** 25.00 mL of a Ba(OH)₂ solution is titrated with 0.1000 M HCl. It takes 35.60 mL of HCl to reach the equivalence point. The reaction is Ba(OH)₂ + 2HCl → BaCl₂ + 2H₂O. What is the molarity of Ba(OH)₂? (to 3 significant figures)
+**2)** 25.00 mL of a $Ba(OH)_{2}$ solution is titrated with 0.1000 M HCl. It takes 35.60 mL of HCl to reach the equivalence point. The reaction is $Ba(OH)_{2}$ + 2HCl → $BaCl_{2}$ + $2H_{2}O$. What is the molarity of $Ba(OH)_{2}$? (to 3 significant figures)
 
-**3)** A calibration curve for Fe³⁺ (using thiocyanate complex) has slope 4500 L/(mol·cm) at $b = 1.00$ cm. An unknown solution has $A = 0.900$. What is $[\\text{Fe}^{3+}]$? (in M, in scientific notation as X.Xe-4, write just the coefficient to 3 significant figures, e.g., "2.0")
+**3)** A calibration curve for $Fe^{3+}$ (using thiocyanate complex) has slope 4500 L/(mol·cm) at $b = 1.00$ cm. An unknown solution has $A = 0.900$. What is $[\\text{Fe}^{3+}]$? (in M, in scientific notation as X.Xe-4, write just the coefficient to 3 significant figures, e.g., "2.0")
       `,
       exercise: {
         inputs: [
@@ -157,12 +157,12 @@ AP free-response questions often ask how errors affect results:
             explanation: 'Mass percent $= (0.850/2.000) \\times 100 = 42.5\\%$.'
           },
           {
-            label: 'Molarity of Ba(OH)₂ (M)',
+            label: 'Molarity of $Ba(OH)_{2}$ (M)',
             correctAnswer: '0.0712',
-            explanation: 'Moles HCl $= 0.1000 \\times 0.03560 = 3.560 \\times 10^{-3}$ mol. Mole ratio 2:1 → moles Ba(OH)₂ $= 1.780 \\times 10^{-3}$. $M = 1.780 \\times 10^{-3}/0.02500 = 0.0712$ M.'
+            explanation: 'Moles HCl $= 0.1000 \\times 0.03560 = 3.560 \\times 10^{-3}$ mol. Mole ratio 2:1 → moles $Ba(OH)_{2}$ $= 1.780 \\times 10^{-3}$. $M = 1.780 \\times 10^{-3}/0.02500 = 0.0712$ M.'
           },
           {
-            label: '[Fe³⁺] coefficient (×10⁻⁴ M)',
+            label: '[$Fe^{3+}$] coefficient $(\\times 10^{-4} M)$',
             correctAnswer: '2.0',
             explanation: '$c = A/(\\varepsilon b) = 0.900/(4500 \\times 1.00) = 2.0 \\times 10^{-4}$ M.'
           }
@@ -217,7 +217,7 @@ AP free-response questions often ask how errors affect results:
       exercise: {
         questions: [
           {
-            question: 'A student wants to determine the amount of iron in a water sample. She adds a reagent that forms a colored complex with Fe³⁺, measures the absorbance, and uses a calibration curve. Which analytical technique is she using?',
+            question: 'A student wants to determine the amount of iron in a water sample. She adds a reagent that forms a colored complex with $Fe^{3+}$, measures the absorbance, and uses a calibration curve. Which analytical technique is she using?',
             options: [
               'Gravimetric analysis',
               'Titration',
@@ -225,18 +225,18 @@ AP free-response questions often ask how errors affect results:
               'Chromatography'
             ],
             correctAnswer: 2,
-            explanation: 'The student is using spectroscopy (specifically colorimetry) with Beer\'s Law. The colored complex absorbs light, and the absorbance is used with a calibration curve to find the concentration of Fe³⁺.'
+            explanation: 'The student is using spectroscopy (specifically colorimetry) with Beer\'s Law. The colored complex absorbs light, and the absorbance is used with a calibration curve to find the concentration of $Fe^{3+}$.'
           },
           {
             question: 'Which of the following is the correct order of steps for a complete gravimetric analysis of chloride content?',
             options: [
-              'Dissolve sample → Add excess AgNO₃ → Filter → Dry → Weigh precipitate',
-              'Filter → Add AgNO₃ → Dissolve → Dry → Weigh',
-              'Weigh precipitate → Filter → Add AgNO₃ → Dissolve',
-              'Add AgNO₃ → Weigh → Filter → Dry → Dissolve'
+              'Dissolve sample → Add excess $AgNO_{3}$ → Filter → Dry → Weigh precipitate',
+              'Filter → Add $AgNO_{3}$ → Dissolve → Dry → Weigh',
+              'Weigh precipitate → Filter → Add $AgNO_{3}$ → Dissolve',
+              'Add $AgNO_{3}$ → Weigh → Filter → Dry → Dissolve'
             ],
             correctAnswer: 0,
-            explanation: 'The correct sequence: dissolve the sample, add excess precipitating agent (AgNO₃ for Cl⁻), filter to collect AgCl precipitate, dry it thoroughly, then weigh it. The mass of AgCl is used to calculate the amount of Cl⁻.'
+            explanation: 'The correct sequence: dissolve the sample, add excess precipitating agent $(AgNO_{3} for Cl^{-})$, filter to collect AgCl precipitate, dry it thoroughly, then weigh it. The mass of AgCl is used to calculate the amount of $Cl^{-}$.'
           }
         ]
       }

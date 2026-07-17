@@ -55,7 +55,7 @@ This final part ties together everything from all four fluid mechanics topics: d
       exercise: {
         questions: [
           {
-            question: 'A submarine has a small window at depth 200 m. The water pressure on the window is approximately: ($\\rho_w = 1000$ kg/m³, $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa)',
+            question: 'A submarine has a small window at depth 200 m. The water pressure on the window is approximately: ($\\rho_w = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$, $P_{\\text{atm}} = 10^5$ Pa)',
             options: [
               '2,000,000 Pa',
               '2,100,000 Pa',
@@ -66,7 +66,7 @@ This final part ties together everything from all four fluid mechanics topics: d
             explanation: '$P = P_{\\text{atm}} + \\rho g h = 100000 + (1000)(10)(200) = 100000 + 2000000 = 2{,}100{,}000$ Pa = 2.1 MPa. That\'s 21 atmospheres!'
           },
           {
-            question: 'An object with density 800 kg/m³ and volume 0.05 m³ is fully submerged in water and held by a string from below. The tension in the string is: ($g = 10$ m/s²)',
+            question: 'An object with density 800 $kg/m^{3}$ and volume 0.05 $m^{3}$ is fully submerged in water and held by a string from below. The tension in the string is: ($g = 10$ $m/s^{2}$)',
             options: [
               '100 N',
               '400 N',
@@ -94,7 +94,7 @@ This final part ties together everything from all four fluid mechanics topics: d
       id: 'be7-comprehensive-drill',
       type: 'input-boxes' as const,
       content: `
-**AP Comprehensive Problem** ($\\rho = 1000$ kg/m³, $g = 10$ m/s²)
+**AP Comprehensive Problem** ($\\rho = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$)
 
 A fire hose (diameter 6.0 cm) is connected to a hydrant at ground level with pressure 400,000 Pa. The hose goes up 10 m to a nozzle (diameter 2.0 cm) that is open to the atmosphere ($P_{\\text{atm}} = 100{,}000$ Pa).
 

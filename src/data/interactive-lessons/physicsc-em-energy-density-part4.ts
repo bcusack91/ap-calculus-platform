@@ -4,7 +4,7 @@ export const physCEMEnergyDenPart4Data = {
     {
       id: 'eden4-intro',
       type: 'text' as const,
-      content: `# Energy Density — Part 4: Magnetic Energy Density u = B²/(2μ₀)
+      content: `# Energy Density — Part 4: Magnetic Energy Density u = $B^{2}/(2\\mu_{0})$
 
 Just as electric fields store energy with density $u_E = \\frac{1}{2}\\varepsilon_0 E^2$, **magnetic fields** also store energy:
 
@@ -27,13 +27,13 @@ $$\\implies u_B = \\frac{B^2}{2\\mu_0}$$`
       type: 'mcq' as const,
       question: 'What is the magnetic energy density inside a solenoid where $B = 0.5$ T? ($\\mu_0 = 4\\pi \\times 10^{-7}$)',
       options: [
-        '$\\approx 10^5$ J/m³',
-        '$\\approx 10^3$ J/m³',
-        '$\\approx 10^{-3}$ J/m³',
-        '$\\approx 10$ J/m³'
+        '$\\approx 10^5$ $J/m^{3}$',
+        '$\\approx 10^3$ $J/m^{3}$',
+        '$\\approx 10^{-3}$ $J/m^{3}$',
+        '$\\approx 10$ $J/m^{3}$'
       ],
       correctAnswer: 0,
-      explanation: '$u_B = B^2/(2\\mu_0) = (0.25)/(2 \\times 4\\pi \\times 10^{-7}) = 0.25/(8\\pi \\times 10^{-7}) \\approx 0.25/2.51 \\times 10^{-6} \\approx 10^5$ J/m³.'
+      explanation: '$u_B = B^2/(2\\mu_0) = (0.25)/(2 \\times 4\\pi \\times 10^{-7}) = 0.25/(8\\pi \\times 10^{-7}) \\approx 0.25/2.51 \\times 10^{-6} \\approx 10^5$ $J/m^{3}$.'
     },
     {
       id: 'eden4-comparison',
@@ -123,13 +123,13 @@ verifying $U/L = \\frac{1}{2}(\\mathcal{L}/L)I^2$.`
       type: 'mcq' as const,
       question: 'Earth\'s magnetic field is $\\sim 5 \\times 10^{-5}$ T. The magnetic energy density at Earth\'s surface is approximately:',
       options: [
-        '$\\sim 10^{-3}$ J/m³',
-        '$\\sim 10^{-6}$ J/m³',
-        '$\\sim 1$ J/m³',
-        '$\\sim 10^{3}$ J/m³'
+        '$\\sim 10^{-3}$ $J/m^{3}$',
+        '$\\sim 10^{-6}$ $J/m^{3}$',
+        '$\\sim 1$ $J/m^{3}$',
+        '$\\sim 10^{3}$ $J/m^{3}$'
       ],
       correctAnswer: 0,
-      explanation: '$u = B^2/(2\\mu_0) = (2.5 \\times 10^{-9})/(2 \\times 4\\pi \\times 10^{-7}) \\approx 2.5 \\times 10^{-9}/2.5 \\times 10^{-6} = 10^{-3}$ J/m³.'
+      explanation: '$u = B^2/(2\\mu_0) = (2.5 \\times 10^{-9})/(2 \\times 4\\pi \\times 10^{-7}) \\approx 2.5 \\times 10^{-9}/2.5 \\times 10^{-6} = 10^{-3}$ $J/m^{3}$.'
     }
   ]
 };

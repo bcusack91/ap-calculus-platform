@@ -140,7 +140,7 @@ A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward)
 
 2) What is the average force from the floor on the ball? (in N, to nearest whole number)
 
-3) How does this force compare to the ball\'s weight ($mg$)? Give the ratio $F_{\\text{avg}}/mg$ to 3 significant figures. (use $g = 9.8$ m/s²)
+3) How does this force compare to the ball\'s weight ($mg$)? Give the ratio $F_{\\text{avg}}/mg$ to 3 significant figures. (use $g = 9.8$ $m/s^{2}$)
       `,
       exercise: {
         boxes: 3,

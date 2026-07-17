@@ -133,7 +133,7 @@ $$\\boxed{m = \\frac{It \\cdot M}{nF}} = \\frac{(2.00)(3600)(63.55)}{(2)(96{,}48
             explanation: '$I \\times t = \\text{(C/s)(s)} = \\text{C}$ (coulombs). It represents the total electric charge passed through the cell.'
           },
           {
-            question: 'To deposit 1 mole of Ag from Ag⁺ (n = 1), the charge needed is:',
+            question: 'To deposit 1 mole of Ag from $Ag^{+}$ (n = 1), the charge needed is:',
             options: [
               '96,485 C (1 Faraday)',
               '192,970 C (2 Faradays)',
@@ -141,10 +141,10 @@ $$\\boxed{m = \\frac{It \\cdot M}{nF}} = \\frac{(2.00)(3600)(63.55)}{(2)(96{,}48
               '289,455 C (3 Faradays)'
             ],
             correctAnswer: 0,
-            explanation: 'Ag⁺ + e⁻ → Ag requires 1 electron per atom. 1 mole of Ag requires 1 mole of electrons = 1 Faraday = 96,485 C.'
+            explanation: '$Ag^{+}$ + $e^{-}$ → Ag requires 1 electron per atom. 1 mole of Ag requires 1 mole of electrons = 1 Faraday = 96,485 C.'
           },
           {
-            question: 'To deposit 1 mole of Al from Al³⁺ (n = 3), the charge needed is:',
+            question: 'To deposit 1 mole of Al from $Al^{3+}$ (n = 3), the charge needed is:',
             options: [
               '96,485 C',
               '192,970 C',
@@ -152,7 +152,7 @@ $$\\boxed{m = \\frac{It \\cdot M}{nF}} = \\frac{(2.00)(3600)(63.55)}{(2)(96{,}48
               '385,940 C'
             ],
             correctAnswer: 2,
-            explanation: 'Al³⁺ + 3e⁻ → Al requires 3 electrons per atom. 1 mole of Al requires 3 moles of electrons = 3F = 3 × 96,485 = 289,455 C.'
+            explanation: '$Al^{3+}$ + $3e^{-}$ → Al requires 3 electrons per atom. 1 mole of Al requires 3 moles of electrons = 3F = 3 × 96,485 = 289,455 C.'
           }
         ]
       }
@@ -190,14 +190,14 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
         dropdowns: [
           {
             label: 'Faraday\'s constant F equals',
-            options: ['96,485 J/mol', '96,485 C/mol e⁻', '96,485 V', '96,485 A']
+            options: ['96,485 J/mol', '96,485 C/mol $e^{-}$', '96,485 V', '96,485 A']
           },
           {
             label: 'Doubling the current while keeping time constant will',
             options: ['deposit half the mass', 'deposit the same mass', 'deposit double the mass', 'deposit no mass']
           },
           {
-            label: 'For Cu²⁺ + 2e⁻ → Cu, depositing 1 mol Cu requires',
+            label: 'For $Cu^{2+}$ + $2e^{-}$ → Cu, depositing 1 mol Cu requires',
             options: ['1 F of charge', '2 F of charge', '3 F of charge', '0.5 F of charge']
           },
           {
@@ -205,11 +205,11 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
             options: ['minutes', 'hours', 'seconds', 'any unit']
           }
         ],
-        correctAnswers: ['96,485 C/mol e⁻', 'deposit double the mass', '2 F of charge', 'seconds'],
+        correctAnswers: ['96,485 C/mol $e^{-}$', 'deposit double the mass', '2 F of charge', 'seconds'],
         hint1: 'F is charge per mole of electrons.',
         hint2: 'Double current → double charge → double moles.',
-        hint3: 'n = 2 for Cu²⁺, so 2 moles of electrons per mole of Cu.',
-        explanation: 'F = 96,485 C/mol e⁻. Double I → double q → double product. Cu²⁺ needs 2e⁻ = 2F per mole. Time must be in seconds for q = It in coulombs.'
+        hint3: 'n = 2 for $Cu^{2+}$, so 2 moles of electrons per mole of Cu.',
+        explanation: 'F = 96,485 C/mol $e^{-}$. Double I → double q → double product. $Cu^{2+}$ needs $2e^{-}$ = 2F per mole. Time must be in seconds for q = It in coulombs.'
       }
     },
     {
@@ -221,7 +221,7 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
       exercise: {
         questions: [
           {
-            question: 'A current of 10.0 A runs for 30.0 min through a solution of AuCl₃. How many grams of Au deposit? (Au³⁺ + 3e⁻ → Au, M_Au = 197.0 g/mol)',
+            question: 'A current of 10.0 A runs for 30.0 min through a solution of $AuCl_{3}$. How many grams of Au deposit? ($Au^{3+}$ + $3e^{-}$ → Au, M_Au = 197.0 g/mol)',
             options: [
               '12.2 g',
               '36.7 g',
@@ -240,7 +240,7 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
               '0.025 mol'
             ],
             correctAnswer: 1,
-            explanation: 'In series, the same charge flows through both cells. 0.10 mol Ag needs 0.10 mol e⁻. The same 0.10 mol e⁻ flows through the Cu cell. With $n = 2$: mol Cu = $0.10/2 = 0.050$ mol.'
+            explanation: 'In series, the same charge flows through both cells. 0.10 mol Ag needs 0.10 mol $e^{-}$. The same 0.10 mol $e^{-}$ flows through the Cu cell. With $n = 2$: mol Cu = $0.10/2 = 0.050$ mol.'
           }
         ]
       }

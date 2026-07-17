@@ -138,15 +138,15 @@ The exam loves to juxtapose two things that students blur together. Run these si
       exercise: {
         questions: [
           {
-            question: 'AP-style mutant prediction: An E. coli strain has the partial-diploid genotype I⁻ Oᶜ Z⁺ / I⁺ O⁺ Z⁻. Will functional β-galactosidase be produced in the ABSENCE of inducer?',
+            question: 'AP-style mutant prediction: An E. coli strain has the partial-diploid genotype $I^{-}$ $O^{c}$ $Z^{+}$ / $I^{+}$ $O^{+}$ $Z^{-}$. Will functional β-galactosidase be produced in the ABSENCE of inducer?',
             options: [
               'No — without inducer the operon cannot be expressed',
-              'Yes — the Z⁺ gene sits on the Oᶜ (operator-constitutive) operon, which is transcribed regardless of inducer or repressor, so functional enzyme is made constitutively',
-              'No — the I⁺ on the plasmid makes a repressor that shuts off both operons',
+              'Yes — the $Z^{+}$ gene sits on the $O^{c}$ (operator-constitutive) operon, which is transcribed regardless of inducer or repressor, so functional enzyme is made constitutively',
+              'No — the $I^{+}$ on the plasmid makes a repressor that shuts off both operons',
               'Yes — but only because inducer is secretly present'
             ],
             correctAnswer: 1,
-            explanation: 'The functional Z⁺ is linked to Oᶜ, a cis-acting operator that the repressor cannot bind, so that operon is constitutive and makes β-gal even without inducer. Option C is the key trap: although I⁺ makes a good repressor, a cis-acting Oᶜ cannot be rescued in trans, so the repressor cannot silence the Oᶜ Z⁺ operon. Option A ignores constitutivity, and option D invents an inducer not in the problem.'
+            explanation: 'The functional $Z^{+}$ is linked to $O^{c}$, a cis-acting operator that the repressor cannot bind, so that operon is constitutive and makes β-gal even without inducer. Option C is the key trap: although $I^{+}$ makes a good repressor, a cis-acting $O^{c}$ cannot be rescued in trans, so the repressor cannot silence the $O^{c}$ $Z^{+}$ operon. Option A ignores constitutivity, and option D invents an inducer not in the problem.'
           },
           {
             question: 'A eukaryotic gene becomes heritably silenced in a cell lineage. Researchers find heavy DNA methylation of its promoter CpG island and deacetylated histones, but no change in its nucleotide sequence. Which statement is correct?',

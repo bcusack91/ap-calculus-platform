@@ -71,7 +71,7 @@ export const mcatBiostatisticsPart1Data = {
             explanation: `6–14 μg/mL spans from (mean − 2SD) to (mean + 2SD). The 68-95-99.7 rule states 95% falls within 2 SD.`
           },
           {
-            question: `A viral load assay produces results: 10³, 10⁴, 10⁵, 10⁶, 10⁷ copies/mL. Why is variance problematic for this data?`,
+            question: `A viral load assay produces results: $10^{3}$, $10^{4}$, $10^{5}$, $10^{6}$, $10^{7}$ copies/mL. Why is variance problematic for this data?`,
             options: [
               `Too many zeros in the data`,
               `The extremely wide range makes SD uninformative`,
@@ -79,7 +79,7 @@ export const mcatBiostatisticsPart1Data = {
               `All of the above`
             ],
             correctAnswer: 2,
-            explanation: `With log-scale (exponential) data spanning 10³ to 10⁷, standard deviation is huge (meaningless). Log-transform first: ln(10³) ≈ 6.9, ln(10⁷) ≈ 16.1, now SD ≈ 3.5 makes sense.`
+            explanation: `With log-scale (exponential) data spanning $10^{3}$ to $10^{7}$, standard deviation is huge (meaningless). Log-transform first: $\\ln (10^{3})$ ≈ 6.9, $\\ln (10^{7})$ ≈ 16.1, now SD ≈ 3.5 makes sense.`
           },
           {
             question: `Which statement about the normal distribution is FALSE?`,

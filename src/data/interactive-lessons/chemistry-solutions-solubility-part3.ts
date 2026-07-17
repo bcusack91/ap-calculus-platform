@@ -188,11 +188,11 @@ $$C_3 = 1.0 \\times (0.1)^3 = 0.001 \\text{ M} = 1 \\times 10^{-3} \\text{ M}$$
       content: `
 **Dilution Calculations** 🧮
 
-**1)** What volume (in mL) of 16.0 M HNO₃ is needed to prepare 1.00 L of 0.400 M HNO₃?
+**1)** What volume (in mL) of 16.0 M $HNO_{3}$ is needed to prepare 1.00 L of 0.400 M $HNO_{3}$?
 
-**2)** If 25.0 mL of 0.800 M CuSO₄ is diluted to 100.0 mL, what is the final molarity? (to 3 significant figures)
+**2)** If 25.0 mL of 0.800 M $CuSO_{4}$ is diluted to 100.0 mL, what is the final molarity? (to 3 significant figures)
 
-**3)** A 1.00 M stock solution undergoes three serial 1:10 dilutions. What is the final concentration? (answer in M, use scientific notation as a × 10⁻³ — enter just the coefficient $a$)
+**3)** A 1.00 M stock solution undergoes three serial 1:10 dilutions. What is the final concentration? (answer in M, use scientific notation as a × $10^{-3}$ — enter just the coefficient $a$)
       `,
       exercise: {
         boxes: 3,
@@ -211,10 +211,10 @@ $$C_3 = 1.0 \\times (0.1)^3 = 0.001 \\text{ M} = 1 \\times 10^{-3} \\text{ M}$$
 
 ### From a Solid Solute
 
-To prepare 250.0 mL of 0.200 M Na₂CO₃ ($M = 105.99$ g/mol):
+To prepare 250.0 mL of 0.200 M $Na_{2}CO_{3}$ ($M = 105.99$ g/mol):
 
 1. **Calculate mass needed:** $m = n \\times M_{\\text{molar}} = (0.200 \\times 0.2500) \\times 105.99 = 5.30$ g
-2. **Weigh** 5.30 g of Na₂CO₃ on an analytical balance
+2. **Weigh** 5.30 g of $Na_{2}CO_{3}$ on an analytical balance
 3. **Transfer** to a 250 mL volumetric flask
 4. **Add water** to dissolve, then fill to the 250 mL mark
 5. **Mix** by inverting several times
@@ -224,7 +224,7 @@ To prepare 250.0 mL of 0.200 M Na₂CO₃ ($M = 105.99$ g/mol):
 
 ### From a Stock Solution (Dilution)
 
-To prepare 100.0 mL of 0.0500 M Na₂CO₃ from the 0.200 M solution:
+To prepare 100.0 mL of 0.0500 M $Na_{2}CO_{3}$ from the 0.200 M solution:
 
 $$V_1 = \\frac{(0.0500)(100.0)}{0.200} = 25.0 \\text{ mL}$$
 

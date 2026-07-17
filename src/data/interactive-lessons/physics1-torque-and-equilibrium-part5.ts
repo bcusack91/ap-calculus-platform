@@ -113,7 +113,7 @@ $$600 - 120 - 4F = 0 \\Rightarrow F = 120 \\text{ N}$$
 
 2) A 10 m uniform beam (weight 200 N) has its fulcrum 3 m from the left end. A 500 N weight hangs at the left end. What upward force (in N) is needed at the right end to balance? (Round to nearest whole number)
 
-3) Two children sit on a see-saw: 30 kg at 2 m left and 20 kg at 3 m right. What is the net torque about the fulcrum? (in N·m, use $g = 10$ m/s², positive = CCW)
+3) Two children sit on a see-saw: 30 kg at 2 m left and 20 kg at 3 m right. What is the net torque about the fulcrum? (in N·m, use $g = 10$ $m/s^{2}$, positive = CCW)
       `,
       exercise: {
         boxes: 3,

@@ -34,9 +34,9 @@ For 2D motion in the $xy$-plane, $\\vec{L}$ points along $\\hat{z}$:
       id: 'am1-mcq1',
       type: 'mcq' as const,
       question: 'A 2 kg particle moves with velocity $\\vec{v} = 3\\hat{x}$ m/s at position $\\vec{r} = 4\\hat{y}$ m. Its angular momentum about the origin is:',
-      options: ['$-24\\hat{z}$ kg·m²/s', '$24\\hat{z}$ kg·m²/s', '$12\\hat{z}$ kg·m²/s', '$0$'],
+      options: ['$-24\\hat{z}$ $kg\\cdot m^{2}/s$', '$24\\hat{z}$ $kg\\cdot m^{2}/s$', '$12\\hat{z}$ $kg\\cdot m^{2}/s$', '$0$'],
       correctAnswer: 0,
-      explanation: '$\\vec{L} = \\vec{r} \\times m\\vec{v} = 4\\hat{y} \\times 2(3\\hat{x}) = 24(\\hat{y}\\times\\hat{x}) = -24\\hat{z}$ kg·m²/s. Recall $\\hat{y}\\times\\hat{x} = -\\hat{z}$.'
+      explanation: '$\\vec{L} = \\vec{r} \\times m\\vec{v} = 4\\hat{y} \\times 2(3\\hat{x}) = 24(\\hat{y}\\times\\hat{x}) = -24\\hat{z}$ $kg\\cdot m^{2}/s$. Recall $\\hat{y}\\times\\hat{x} = -\\hat{z}$.'
     },
     {
       id: 'am1-straight',
@@ -102,7 +102,7 @@ This is the $z$-component: $L_z = m(xv_y - yv_x)$.`
       id: 'am1-mcq4',
       type: 'mcq' as const,
       question: 'The SI units of angular momentum are:',
-      options: ['kg·m²/s', 'kg·m/s²', 'N·m', 'J·s'],
+      options: ['$kg\\cdot m^{2}/s$', '$kg\\cdot m/s^{2}$', 'N·m', 'J·s'],
       correctAnswer: 0,
       explanation: '$[L] = [r][p] = \\text{m} \\cdot \\text{kg}\\cdot\\text{m/s} = \\text{kg}\\cdot\\text{m}^2/\\text{s}$. Note that J·s (joule-seconds) has the same dimensions — this is why Planck\'s constant $\\hbar$ has units of angular momentum.'
     },
@@ -118,7 +118,7 @@ This is the $z$-component: $L_z = m(xv_y - yv_x)$.`
 | Circular motion | $L = mvr = mr^2\\omega$ |
 | Straight line | $L = mvd$ (constant) |
 | Direction | Right-hand rule ($\\vec{r}$ to $\\vec{p}$) |
-| Units | kg·m²/s |
+| Units | $kg\\cdot m^{2}/s$ |
 
 > **Next:** Part 2 — Angular momentum of rigid bodies ($L = I\\omega$).`
     }

@@ -33,7 +33,7 @@ Practice the calculations and design choices the AP exam asks under a time crunc
               "8"
             ],
             correctAnswer: 1,
-            explanation: "2⁵ = 32 < 50; 2⁶ = 64 ≥ 50."
+            explanation: "$2^{5}$ = 32 < 50; $2^{6}$ = 64 ≥ 50."
           },
           {
             question: "Convert binary 10110010 to decimal.",
@@ -57,14 +57,14 @@ Practice the calculations and design choices the AP exam asks under a time crunc
 
 **Question:** "We have 5 different statuses to encode in each record. Minimum bits per record?"
 
-- 2² = 4 (too small).
-- 2³ = 8 ≥ 5 ✓.
+- $2^{2}$ = 4 (too small).
+- $2^{3}$ = 8 ≥ 5 ✓.
 - Use **3 bits**.
 
 **Question:** "We have 1,000,000 user IDs. Minimum bits per ID?"
 
-- 2¹⁹ = 524,288 (too small).
-- 2²⁰ = 1,048,576 ≥ 1M ✓.
+- $2^{19}$ = 524,288 (too small).
+- $2^{20}$ = 1,048,576 ≥ 1M ✓.
 - Use **20 bits**.
 
 ## Worked: Storage Estimation
@@ -103,10 +103,10 @@ Practice the calculations and design choices the AP exam asks under a time crunc
       exercise: {
         boxes: 3,
         correctAnswers: ["7", "4", "255"],
-        hint1: "2⁶ = 64 < 100; 2⁷ = 128 ≥ 100.",
-        hint2: "2³² ≈ 4.3 × 10⁹.",
+        hint1: "$2^{6}$ = 64 < 100; $2^{7}$ = 128 ≥ 100.",
+        hint2: "$2^{32}$ ≈ $4.3 \\times 10^{9}$.",
         hint3: "Sum 1+2+4+…+128.",
-        explanation: "7 bits suffice. 2³² ≈ 4 billion. 11111111 = 255."
+        explanation: "7 bits suffice. $2^{32}$ ≈ 4 billion. 11111111 = 255."
       }
     },
     {
@@ -132,9 +132,9 @@ Practice the calculations and design choices the AP exam asks under a time crunc
         ],
         correctAnswers: ["01100100", "~16 million", "176 KB"],
         hint1: "64 + 32 + 4.",
-        hint2: "2²⁴ = 16,777,216.",
+        hint2: "$2^{24}$ = 16,777,216.",
         hint3: "44,100 × 2 bytes × 2 channels = 176,400 bytes.",
-        explanation: "100 = 64 + 32 + 4. 2²⁴ ≈ 16 million colors. CD audio ≈ 176 KB/s stereo."
+        explanation: "100 = 64 + 32 + 4. $2^{24}$ ≈ 16 million colors. CD audio ≈ 176 KB/s stereo."
       }
     },
     {
@@ -143,11 +143,11 @@ Practice the calculations and design choices the AP exam asks under a time crunc
       content: `
 ## AP Exam Strategy: Quick Calculations
 
-- For "minimum bits for N values" → smallest n where 2ⁿ ≥ N.
+- For "minimum bits for N values" → smallest n where $2^{n}$ ≥ N.
 - For "storage of M items, each k bits" → M·k / 8 bytes.
 - For audio: bytes/sec = sampleRate × bytesPerSample × channels.
 - For images: bytes = width × height × bytesPerPixel.
-- Don't worry about hex on the AP — it's rarely tested. Decimal/binary conversions and 2ⁿ values are the core.
+- Don't worry about hex on the AP — it's rarely tested. Decimal/binary conversions and $2^{n}$ values are the core.
       `
     },
     {

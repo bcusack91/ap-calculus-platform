@@ -83,7 +83,7 @@ Since $K_{sp}(\\text{AgCl})$ is much smaller, AgCl precipitates at a much lower 
 
 **AgCl**: $[\\text{Cl}^-] = \\frac{K_{sp}}{[\\text{Ag}^+]} = \\frac{1.8 \\times 10^{-10}}{0.010} = 1.8 \\times 10^{-8}$ M
 
-**PbCl₂**: $[\\text{Cl}^-] = \\sqrt{\\frac{K_{sp}}{[\\text{Pb}^{2+}]}} = \\sqrt{\\frac{1.7 \\times 10^{-5}}{0.010}} = \\sqrt{1.7 \\times 10^{-3}} = 0.041$ M
+**$PbCl_{2}$**: $[\\text{Cl}^-] = \\sqrt{\\frac{K_{sp}}{[\\text{Pb}^{2+}]}} = \\sqrt{\\frac{1.7 \\times 10^{-5}}{0.010}} = \\sqrt{1.7 \\times 10^{-3}} = 0.041$ M
 
 
 ---
@@ -91,18 +91,18 @@ Since $K_{sp}(\\text{AgCl})$ is much smaller, AgCl precipitates at a much lower 
 ### Step 2: Order of precipitation
 
 AgCl precipitates first (at $[\\text{Cl}^-] = 1.8 \\times 10^{-8}$ M).
-PbCl₂ doesn\'t start precipitating until $[\\text{Cl}^-] = 0.041$ M.
+$PbCl_{2}$ doesn\'t start precipitating until $[\\text{Cl}^-] = 0.041$ M.
 
 
 ---
 
 ### Step 3: Can we separate them completely?
 
-When $[\\text{Cl}^-] = 0.041$ M (just before PbCl₂ starts), what is $[\\text{Ag}^+]$?
+When $[\\text{Cl}^-] = 0.041$ M (just before $PbCl_{2}$ starts), what is $[\\text{Ag}^+]$?
 
 $[\\text{Ag}^+] = \\frac{K_{sp}}{[\\text{Cl}^-]} = \\frac{1.8 \\times 10^{-10}}{0.041} = 4.4 \\times 10^{-9}$ M
 
-This is essentially zero compared to the initial 0.010 M — virtually **all** Ag⁺ has precipitated before any Pb²⁺ does. Excellent separation!
+This is essentially zero compared to the initial 0.010 M — virtually **all** $Ag^{+}$ has precipitated before any $Pb^{2+}$ does. Excellent separation!
 
 > 💡 **Tip:** When $K_{sp}$ values differ by several orders of magnitude, selective precipitation gives nearly complete separation. The greater the difference, the cleaner the separation.
       `
@@ -146,16 +146,16 @@ This is essentially zero compared to the initial 0.010 M — virtually **all** A
       content: `
 **Practice: Selective Precipitation** 🧮
 
-A solution contains $[\\text{Ca}^{2+}] = 0.020$ M and $[\\text{Ba}^{2+}] = 0.020$ M. Na₂SO₄ is added slowly.
+A solution contains $[\\text{Ca}^{2+}] = 0.020$ M and $[\\text{Ba}^{2+}] = 0.020$ M. $Na_{2}SO_{4}$ is added slowly.
 
 $K_{sp}(\\text{CaSO}_4) = 4.9 \\times 10^{-5}$
 $K_{sp}(\\text{BaSO}_4) = 1.1 \\times 10^{-10}$
 
 Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
 
-**1)** $[\\text{SO}_4^{2-}]$ needed to start precipitating BaSO₄? (Enter in scientific notation, e.g. 5.5e-9)
+**1)** $[\\text{SO}_4^{2-}]$ needed to start precipitating $BaSO_{4}$? (Enter in scientific notation, e.g. 5.5e-9)
 
-**2)** $[\\text{SO}_4^{2-}]$ needed to start precipitating CaSO₄? (Enter in scientific notation, e.g. 2.5e-3)
+**2)** $[\\text{SO}_4^{2-}]$ needed to start precipitating $CaSO_{4}$? (Enter in scientific notation, e.g. 2.5e-3)
 
 **3)** Which precipitates first? (Enter "BaSO4" or "CaSO4")
 
@@ -166,8 +166,8 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
         correctAnswers: ['5.5e-9', '2.5e-3', 'BaSO4'],
         hint1: '$[\\text{SO}_4^{2-}] = K_{sp}/[\\text{Ba}^{2+}] = 1.1 \\times 10^{-10}/0.020$',
         hint2: '$[\\text{SO}_4^{2-}] = K_{sp}/[\\text{Ca}^{2+}] = 4.9 \\times 10^{-5}/0.020$',
-        hint3: 'The one requiring less SO₄²⁻ precipitates first.',
-        explanation: '1) $[\\text{SO}_4^{2-}] = 1.1 \\times 10^{-10}/0.020 = 5.5 \\times 10^{-9}$ M. 2) $[\\text{SO}_4^{2-}] = 4.9 \\times 10^{-5}/0.020 = 2.45 \\times 10^{-3} \\approx 2.5 \\times 10^{-3}$ M. 3) BaSO₄ precipitates first (requires far less SO₄²⁻).'
+        hint3: 'The one requiring less $SO_{4}^{2-}$ precipitates first.',
+        explanation: '1) $[\\text{SO}_4^{2-}] = 1.1 \\times 10^{-10}/0.020 = 5.5 \\times 10^{-9}$ M. 2) $[\\text{SO}_4^{2-}] = 4.9 \\times 10^{-5}/0.020 = 2.45 \\times 10^{-3} \\approx 2.5 \\times 10^{-3}$ M. 3) $BaSO_{4}$ precipitates first (requires far less $SO_{4}^{2-}$).'
       }
     },
     {
@@ -211,7 +211,7 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
       exercise: {
         questions: [
           {
-            question: 'A solution has $[\\text{I}^-] = 0.10$ M and $[\\text{Cl}^-] = 0.10$ M. AgNO₃ is added. $K_{sp}(\\text{AgI}) = 8.5 \\times 10^{-17}$, $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$. Which precipitates first?',
+            question: 'A solution has $[\\text{I}^-] = 0.10$ M and $[\\text{Cl}^-] = 0.10$ M. $AgNO_{3}$ is added. $K_{sp}(\\text{AgI}) = 8.5 \\times 10^{-17}$, $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$. Which precipitates first?',
             options: [
               'AgCl — it is more common',
               'AgI — it has the smaller $K_{sp}$ and reaches saturation first',
@@ -222,15 +222,15 @@ Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
             explanation: '$[\\text{Ag}^+]$ needed for AgI: $8.5 \\times 10^{-17}/0.10 = 8.5 \\times 10^{-16}$ M. For AgCl: $1.8 \\times 10^{-10}/0.10 = 1.8 \\times 10^{-9}$ M. AgI precipitates first at a much lower $[\\text{Ag}^+]$.'
           },
           {
-            question: 'For the above problem, when AgCl just begins to precipitate ($[\\text{Ag}^+] = 1.8 \\times 10^{-9}$ M), what fraction of I⁻ remains in solution?',
+            question: 'For the above problem, when AgCl just begins to precipitate ($[\\text{Ag}^+] = 1.8 \\times 10^{-9}$ M), what fraction of $I^{-}$ remains in solution?',
             options: [
               'About 50%',
               'About 100% — none has precipitated',
-              'Essentially 0% — virtually all I⁻ has precipitated',
+              'Essentially 0% — virtually all $I^{-}$ has precipitated',
               'About 10%'
             ],
             correctAnswer: 2,
-            explanation: 'When $[\\text{Ag}^+] = 1.8 \\times 10^{-9}$: $[\\text{I}^-] = K_{sp}(\\text{AgI})/[\\text{Ag}^+] = 8.5 \\times 10^{-17}/(1.8 \\times 10^{-9}) = 4.7 \\times 10^{-8}$ M. This is $4.7 \\times 10^{-5}\\%$ of the original 0.10 M — essentially all I⁻ has been removed.'
+            explanation: 'When $[\\text{Ag}^+] = 1.8 \\times 10^{-9}$: $[\\text{I}^-] = K_{sp}(\\text{AgI})/[\\text{Ag}^+] = 8.5 \\times 10^{-17}/(1.8 \\times 10^{-9}) = 4.7 \\times 10^{-8}$ M. This is $4.7 \\times 10^{-5}\\%$ of the original 0.10 M — essentially all $I^{-}$ has been removed.'
           }
         ]
       }

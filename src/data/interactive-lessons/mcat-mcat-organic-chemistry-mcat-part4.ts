@@ -66,7 +66,7 @@ The best leaving group generally determines the direction and feasibility of int
             question: `Most nucleophilic acyl substitution reactions on carboxylic acid derivatives proceed through which key species?`,
             options: [`A tetrahedral intermediate that then expels the leaving group`, `A planar carbocation`, `A free radical`, `An aromatic transition state`],
             correctAnswer: 0,
-            explanation: `The nucleophile adds to the trigonal carbonyl carbon to give an sp³ tetrahedral intermediate; this then collapses, ejecting the leaving group to regenerate the C=O. The quality of that leaving group sets the reactivity order (halide > anhydride > ester > amide).`
+            explanation: `The nucleophile adds to the trigonal carbonyl carbon to give an $sp^{3}$ tetrahedral intermediate; this then collapses, ejecting the leaving group to regenerate the C=O. The quality of that leaving group sets the reactivity order (halide > anhydride > ester > amide).`
           },
           {
             question: `Acetyl-CoA is described as a "high-energy" thioester. Why are thioesters more reactive toward nucleophilic acyl substitution than ordinary oxygen esters?`,
@@ -104,55 +104,55 @@ The best leaving group generally determines the direction and feasibility of int
 
 **Question:** Compare the reactivity of these compounds toward nucleophilic attack:
 <pre>
-(A) CH₃-C(=O)-Cl        (Acid chloride)
-(B) CH₃-C(=O)-O-C(=O)-CH₃  (Acetic anhydride)
-(C) CH₃-C(=O)-OCH₃       (Methyl ester)
-(D) CH₃-C(=O)-NH₂        (Primary amide)
+(A) $CH_{3}-C$(=O)-Cl        (Acid chloride)
+(B) $CH_{3}-C$(=O)-O-C(=O)$-CH_{3}$  (Acetic anhydride)
+(C) $CH_{3}-C$(=O)$-OCH_{3}$       (Methyl ester)
+(D) $CH_{3}-C$(=O)$-NH_{2}$        (Primary amide)
 </pre>
 
 **Solution**:
 1. **Leaving group quality comparison**:
-   - (A) Cl⁻ = excellent leaving group → most reactive
-   - (B) CH₃COO⁻ = good leaving group (stabilized by acetyl C=O) → 2nd most reactive
-   - (C) CH₃O⁻ = moderate leaving group → less reactive than B
-   - (D) NH₂⁻ = terrible leaving group (basic) → least reactive
+   - (A) $Cl^{-}$ = excellent leaving group → most reactive
+   - (B) $CH_{3}COO^{-}$ = good leaving group (stabilized by acetyl C=O) → 2nd most reactive
+   - (C) $CH_{3}O^{-}$ = moderate leaving group → less reactive than B
+   - (D) $NH_{2}^{-}$ = terrible leaving group (basic) → least reactive
 
 2. **Resonance effects** (secondary factor):
-   - (D) NH₂ donates electron density to C=O, reducing electrophilicity
+   - (D) $NH_{2}$ donates electron density to C=O, reducing electrophilicity
    - (A) Cl is electron-withdrawing by induction, increasing C=O electrophilicity
 
 3. **Reactivity order**: **(A) > (B) > (C) > (D)**
 
-**MCAT Strategy**: If you forget the exact order, remember: the better the leaving group, the more reactive. Cl > O-C(=O) > O-alkyl > NH₂.
+**MCAT Strategy**: If you forget the exact order, remember: the better the leaving group, the more reactive. Cl > O-C(=O) > O-alkyl > $NH_{2}$.
 </details>
 
 <details>
 <summary><b>Example 2: Ester to amide transformation via nucleophilic acyl substitution</b></summary>
 
-**Question:** Methyl acetate (CH₃COOCH₃) reacts with excess aniline (C₆H₅NH₂) to form an amide. Show the product and explain why the ester is displaced:
+**Question:** Methyl acetate $(CH_{3}COOCH_{3})$ reacts with excess aniline $(C_{6}H_{5}NH_{2})$ to form an amide. Show the product and explain why the ester is displaced:
 <pre>
-CH₃-C(=O)-OCH₃  +  C₆H₅NH₂  →  ?
+$CH_{3}-C$(=O)$-OCH_{3}$  +  $C_{6}H_{5}NH_{2}$  →  ?
 </pre>
 
 **Solution**:
 1. **Nucleophilic acyl substitution mechanism**:
    - Aniline (nucleophile) attacks the ester carbonyl
    - Tetrahedral intermediate forms
-   - Methoxide (CH₃O⁻) is a weaker leaving group than aniline is as a nucleophile
+   - Methoxide $(CH_{3}O^{-})$ is a weaker leaving group than aniline is as a nucleophile
    - But we must compare: Which is the better leaving group?
    
 2. **Leaving group comparison**: 
-   - CH₃O⁻ pKₐ(conjugate acid) ≈ 15 (methanol) → decent leaving group
-   - NH₂⁻ pKₐ(conjugate acid) ≈ 35 (ammonia) → terrible leaving group
+   - $CH_{3}O^{-}$ $pK_{a}(conjugate acid)$ ≈ 15 (methanol) → decent leaving group
+   - $NH_{2}^{-}$ $pK_{a}(conjugate acid)$ ≈ 35 (ammonia) → terrible leaving group
    
 3. **Why does the ester react?**
    - Aniline is a strong nucleophile (aromatic amine with lone pair on N)
-   - Although NH₂⁻ is a poor leaving group, the ester is reactive enough
+   - Although $NH_{2}^{-}$ is a poor leaving group, the ester is reactive enough
    - Once the amide forms, it is **resistant to further reaction** (poor leaving group protects it)
 
-4. **Product**: **CH₃-C(=O)-NH-C₆H₅** (N-phenylacetamide or *N*-acetylaniline)
+4. **Product**: **$CH_{3}-C$(=O)$-NH-C_{6}H_{5}$** (N-phenylacetamide or *N*-acetylaniline)
 
-**Biochemistry connection**: Peptides are made this way in lab (activating carboxylic acids), and the resulting amide bonds resist hydrolysis because NH₂⁻ is a terrible leaving group. This stability is why enzymes are required to break peptide bonds in the body.
+**Biochemistry connection**: Peptides are made this way in lab (activating carboxylic acids), and the resulting amide bonds resist hydrolysis because $NH_{2}^{-}$ is a terrible leaving group. This stability is why enzymes are required to break peptide bonds in the body.
 
 **MCAT Strategy**: Ester → Amide is thermodynamically favorable because the resulting amide is so unreactive (stability of product).
 </details>
@@ -162,28 +162,28 @@ CH₃-C(=O)-OCH₃  +  C₆H₅NH₂  →  ?
 
 **Question:** A triglyceride (fat with 3 ester groups) is treated with excess NaOH in ethanol (soap-making process). What happens?
 <pre>
-(Fat structure simplified as R-C(=O)-O-CH₂-CH(OH)-CH₂-O-C(=O)-R')
+(Fat structure simplified as R-C(=O)$-O-CH_{2}-CH(OH)-CH_{2}-O-C$(=O)-R')
         (ester arms on triglyceride backbone)
 </pre>
 
 **Solution**:
-1. **Reagent**: NaOH = strong base + nucleophile (OH⁻ is attacking)
+1. **Reagent**: NaOH = strong base + nucleophile ($OH^{-}$ is attacking)
 2. **Mechanism**: Nucleophilic acyl substitution (ester hydrolysis)
-   - OH⁻ attacks the ester C=O
+   - $OH^{-}$ attacks the ester C=O
    - Tetrahedral intermediate forms
-   - Alkoxide (R-CH-O⁻) leaves via C-O bond cleavage
-   - Carboxylate ion (RCOO⁻) is formed
+   - Alkoxide $(R-CH-O^{-})$ leaves via C-O bond cleavage
+   - Carboxylate ion $(RCOO^{-})$ is formed
 
-3. **Stoichiometry**: 1 triglyceride + 3 NaOH → 1 glycerol (HOCH₂CHOH CH₂OH) + 3 sodium carboxylates (RCOONa, "soap")
+3. **Stoichiometry**: 1 triglyceride + 3 NaOH → 1 glycerol $(HOCH_{2}CHOH CH_{2}OH)$ + 3 sodium carboxylates (RCOONa, "soap")
 
 4. **Products**:
    - **Glycerol**: 3-carbon backbone  (reusable for biodiesel)
-   - **Sodium carboxylates**: Long-chain salts (e.g., sodium stearate C₁₇H₃₅COONa) = SOAP!
+   - **Sodium carboxylates**: Long-chain salts (e.g., sodium stearate $C_{17}H_{35}COONa$) = SOAP!
    - pH increases (basic product)
 
 **Why saponification is irreversible**: 
-- Carboxylate (RCOO⁻) is stabilized by delocalization
-- Reverse reaction would require O² form attack at C=O (bad nucleophile)
+- Carboxylate $(RCOO^{-})$ is stabilized by delocalization
+- Reverse reaction would require $O^{2}$ form attack at C=O (bad nucleophile)
 - Very thermodynamically favorable
 
 **MCAT Strategy**: Saponification = ester hydrolysis in basic conditions. Always produces carboxylate salt + alcohol. Often appears with triglycerides or phospholipids in biochemistry passages.
@@ -204,14 +204,14 @@ Ester:                  R-C(=O)-O-R'
    - N can donate electron density into π system of C=O
    - Two resonance forms:
      - Form 1: C=O with negative charge on O
-     - Form 2: C-O with positive charge on N (C=N⁺)
+     - Form 2: C-O with positive charge on N (C=$N^{+}$)
    - Result: **Partial double-bond character in the C-N bond** (~40%)
 
 2. **Consequence of amide resonance**:
    - C=O electrophilicity **decreases** (less polarized)
    - C-N bond becomes **stronger** (shorter, more rigid)
    - Nucleophile cannot easily attack C=O
-   - Even if attack occurs, NH₂⁻ is an extremely poor leaving group
+   - Even if attack occurs, $NH_{2}^{-}$ is an extremely poor leaving group
 
 3. **Ester comparison**:
    - Oxygen lone pair is FARTHER from C=O (on neighboring carbon)

@@ -13,7 +13,7 @@ Abiogenesis is the natural process by which life arose from non-living matter. T
 
 ### The Central Question
 
-How did simple inorganic molecules (H₂O, CH₄, NH₃, H₂) become the complex organic molecules (amino acids, nucleotides, lipids, sugars) required for life?
+How did simple inorganic molecules ($H_{2}O$, $CH_{4}$, $NH_{3}$, $H_{2}$) become the complex organic molecules (amino acids, nucleotides, lipids, sugars) required for life?
 
 ### Key terms for this part
 - **abiogenesis** — the origin of life from non-living chemical systems
@@ -46,7 +46,7 @@ How did simple inorganic molecules (H₂O, CH₄, NH₃, H₂) become the comple
             options: [
               '"Primordial soup" of organic molecules in a reducing atmosphere',
               'Deep underground cave system with no light',
-              'Highly oxidizing atmosphere rich in O₂',
+              'Highly oxidizing atmosphere rich in $O_{2}$',
               'Frozen glacier where molecules were preserved'
             ],
             correctAnswer: 0,
@@ -65,7 +65,7 @@ How did simple inorganic molecules (H₂O, CH₄, NH₃, H₂) become the comple
 
 Both scientists independently proposed a stepwise model:
 
-1. **Simple inorganic molecules** (H₂O, CH₄, NH₃, H₂) were present in Earth's early reducing atmosphere
+1. **Simple inorganic molecules** ($H_{2}O$, $CH_{4}$, $NH_{3}$, $H_{2}$) were present in Earth's early reducing atmosphere
 2. **Energy sources** (UV light, lightning) drove reactions that produced simple organic molecules (amino acids, simple sugars, nucleotide bases)
 3. These organics accumulated in the oceans, creating a **"primordial soup"** (also called "prebiotic broth")
 4. Over time, more complex molecules formed through **polymerization** — amino acids → polypeptides; nucleotides → nucleic acids
@@ -79,7 +79,7 @@ Both scientists independently proposed a stepwise model:
 
 ### Limitations
 
-- The exact composition of early Earth's atmosphere is debated — it may have been more neutral (CO₂/N₂-dominated) than strongly reducing
+- The exact composition of early Earth's atmosphere is debated — it may have been more neutral $(CO_{2}/N_{2}-dominated)$ than strongly reducing
 - The hypothesis does not explain **how** self-replication began
 - Concentration of dilute organics in the open ocean is problematic ("dilution problem")
       `
@@ -97,7 +97,7 @@ Stanley Miller (a graduate student) and Harold Urey designed an apparatus to tes
 | Component | Purpose |
 |---|---|
 | **Flask with water** | Simulated the early ocean |
-| **Gas mixture** (CH₄, NH₃, H₂, H₂O) | Simulated the reducing atmosphere |
+| **Gas mixture** ($CH_{4}$, $NH_{3}$, $H_{2}$, $H_{2}O$) | Simulated the reducing atmosphere |
 | **Electrodes providing sparks** | Simulated lightning as an energy source |
 | **Condenser** | Cooled gases to allow products to collect in the water |
 
@@ -118,7 +118,7 @@ After running for **one week**:
 ### Later Refinements
 
 - **2008 re-analysis** of Miller's sealed vials (using modern mass spectrometry) found **over 20 amino acids** — even more than originally reported
-- Experiments with **volcanic gas mixtures** (CO₂, N₂, H₂S) also produce amino acids, supporting synthesis even under less reducing conditions
+- Experiments with **volcanic gas mixtures** ($CO_{2}$, $N_{2}$, $H_{2}S$) also produce amino acids, supporting synthesis even under less reducing conditions
 - **Meteorite analysis** (Murchison meteorite, 1969): over 90 amino acids found on a carbonaceous chondrite, confirming that organic synthesis occurs in space as well
       `
     },
@@ -145,9 +145,9 @@ After running for **one week**:
         ],
         correctAnswers: ['lightning', 'reducing', 'amino acids'],
         hint1: 'What natural phenomenon provides sudden bursts of electrical energy in the atmosphere?',
-        hint2: 'The atmosphere lacked free O₂ and contained electron-donating gases.',
+        hint2: 'The atmosphere lacked free $O_{2}$ and contained electron-donating gases.',
         hint3: 'These are the monomers of proteins — the most abundant organic products in the experiment.',
-        explanation: 'The Miller-Urey experiment used electric sparks (lightning simulation) in a reducing atmosphere (CH₄, NH₃, H₂, H₂O) and successfully produced amino acids, demonstrating that the building blocks of life can form abiotically.'
+        explanation: 'The Miller-Urey experiment used electric sparks (lightning simulation) in a reducing atmosphere ($CH_{4}$, $NH_{3}$, $H_{2}$, $H_{2}O$) and successfully produced amino acids, demonstrating that the building blocks of life can form abiotically.'
       }
     },
     {

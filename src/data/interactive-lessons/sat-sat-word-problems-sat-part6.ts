@@ -29,7 +29,7 @@ If two figures are similar with scale factor $k$:
 - Areas scale by $k^2$
 - Volumes scale by $k^3$
 
-**Example:** A model building is 1/50 scale. If the model's area is 2 ft², the real building's area = $2 \\times 50^2 = 5,000$ ft²
+**Example:** A model building is 1/50 scale. If the model's area is 2 $ft^{2}$, the real building's area = $2 \\times 50^2 = 5,000$ $ft^{2}$
 
 ### The Pythagorean Theorem in Context
 Ladder problems, diagonal walks, line-of-sight distances — always draw a right triangle.`
@@ -45,7 +45,7 @@ Ladder problems, diagonal walks, line-of-sight distances — always draw a right
         'It increases by a factor of 27'
       ],
       correctAnswer: 2,
-      explanation: 'When dimensions are multiplied by k, area is multiplied by k². Since k = 3, area increases by 3² = 9. If the original was 4 × 6 = 24, the enlarged is 12 × 18 = 216 = 24 × 9.'
+      explanation: 'When dimensions are multiplied by k, area is multiplied by $k^{2}$. Since k = 3, area increases by $3^{2}$ = 9. If the original was 4 × 6 = 24, the enlarged is 12 × 18 = 216 = 24 × 9.'
     },
     {
       id: 'wp6-text2',

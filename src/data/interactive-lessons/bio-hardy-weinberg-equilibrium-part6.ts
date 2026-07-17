@@ -100,7 +100,7 @@ $$\\chi^2 = 0.047 + 0.110 + 0.065 = 0.222$$
               'Conclude that no evolution has occurred'
             ],
             correctAnswer: 1,
-            explanation: 'When χ² > critical value, the probability that the observed deviation from HW expectations occurred by chance is less than 5% (at α = 0.05). We reject H₀ and conclude the population is likely NOT in HW equilibrium.'
+            explanation: 'When $\\chi^{2}$ > critical value, the probability that the observed deviation from HW expectations occurred by chance is less than 5% (at α = 0.05). We reject $H_{0}$ and conclude the population is likely NOT in HW equilibrium.'
           }
         ]
       }
@@ -144,16 +144,16 @@ Look at which genotype category contributes most to $\\chi^2$:
 A biologist tests whether a population of frogs is in HW equilibrium for a color gene. She observes 40 GG, 120 Gg, and 40 gg (n = 200). Expected under HW: 50 GG, 100 Gg, 50 gg.`,
       exercise: {
         dropdowns: [
-          { label: 'The (O−E)²/E for GG = ___', options: ['1.0', '2.0', '4.0', '0.5'] },
-          { label: 'The (O−E)²/E for Gg = ___', options: ['1.0', '2.0', '4.0', '0.5'] },
-          { label: 'Total χ² = ___', options: ['3.0', '4.0', '6.0', '8.0'] },
+          { label: 'The $(O-E)^{2}/E$ for GG = ___', options: ['1.0', '2.0', '4.0', '0.5'] },
+          { label: 'The $(O-E)^{2}/E$ for Gg = ___', options: ['1.0', '2.0', '4.0', '0.5'] },
+          { label: 'Total $\\chi^{2}$ = ___', options: ['3.0', '4.0', '6.0', '8.0'] },
           { label: 'At α = 0.05, the null hypothesis should be ___', options: ['rejected', 'not rejected', 'accepted', 'restated'] }
         ],
         correctAnswers: ['2.0', '4.0', '8.0', 'rejected'],
-        hint1: 'For GG: (40 − 50)²/50 = 100/50',
-        hint2: 'For Gg: (120 − 100)²/100 = 400/100',
-        hint3: 'Total χ² = 2.0 + 4.0 + 2.0 = 8.0. Compare with 3.841.',
-        explanation: 'GG: (40−50)²/50 = 2.0. Gg: (120−100)²/100 = 4.0. gg: (40−50)²/50 = 2.0. Total χ² = 8.0. Since 8.0 > 3.841, we reject H₀. There is excess heterozygosity — possibly heterozygote advantage.'
+        hint1: 'For GG: $(40 - 50)^{2}/50$ = 100/50',
+        hint2: 'For Gg: $(120 - 100)^{2}/100$ = 400/100',
+        hint3: 'Total $\\chi^{2}$ = 2.0 + 4.0 + 2.0 = 8.0. Compare with 3.841.',
+        explanation: 'GG: $(40-50)^{2}/50$ = 2.0. Gg: $(120-100)^{2}/100$ = 4.0. gg: $(40-50)^{2}/50$ = 2.0. Total $\\chi^{2}$ = 8.0. Since 8.0 > 3.841, we reject $H_{0}$. There is excess heterozygosity — possibly heterozygote advantage.'
       }
     },
     {
@@ -163,7 +163,7 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
       exercise: {
         questions: [
           {
-            question: 'A researcher calculates χ² = 1.85 for a HW test (df = 1, α = 0.05). What should she conclude?',
+            question: 'A researcher calculates $\\chi^{2}$ = 1.85 for a HW test (df = 1, α = 0.05). What should she conclude?',
             options: [
               'The population is definitely in HW equilibrium',
               'The population is evolving',
@@ -171,7 +171,7 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
               'The sample size was too small'
             ],
             correctAnswer: 2,
-            explanation: 'Since χ² = 1.85 < 3.841 (critical value at α = 0.05, df = 1), we fail to reject the null hypothesis. This means we do not have sufficient statistical evidence to conclude the population deviates from HW equilibrium — but this does NOT prove equilibrium exists.'
+            explanation: 'Since $\\chi^{2}$ = 1.85 < 3.841 (critical value at α = 0.05, df = 1), we fail to reject the null hypothesis. This means we do not have sufficient statistical evidence to conclude the population deviates from HW equilibrium — but this does NOT prove equilibrium exists.'
           },
           {
             question: 'In the frog example, the excess of heterozygotes (Gg) compared to HW expectations most likely suggests:',

@@ -66,7 +66,7 @@ $$L = \\frac{\\kappa_m \\mu_0 N^2 A}{\\ell}$$`
     {
       id: 'indrl1-mcq2',
       type: 'mcq' as const,
-      question: 'A solenoid has 500 turns, length 0.25 m, and cross-section area $4 \\times 10^{-4}$ m². Its inductance is:',
+      question: 'A solenoid has 500 turns, length 0.25 m, and cross-section area $4 \\times 10^{-4}$ $m^{2}$. Its inductance is:',
       options: ['$\\approx 0.503$ mH', '$\\approx 5.03$ mH', '$\\approx 50.3$ mH', '$\\approx 0.0503$ mH'],
       correctAnswer: 0,
       explanation: '$L = \\mu_0 N^2 A/\\ell = (4\\pi \\times 10^{-7})(250000)(4 \\times 10^{-4})/(0.25) = (4\\pi \\times 10^{-7})(250000)(1.6 \\times 10^{-3}) = 4\\pi \\times 10^{-7} \\times 400 \\approx 5.03 \\times 10^{-4}$ H $= 0.503$ mH.'

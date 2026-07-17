@@ -116,7 +116,7 @@ where $BE$ = binding energy (energy needed to remove the electron from that subs
               `Fluorine (F, $Z=9$)`
             ],
             correctAnswer: 0,
-            explanation: `Total electrons = $1 + 2 + 6 + 2 = 11$. With 4 subshells from lowest to highest BE: $3s$ (1 e⁻), $2p$ (6 e⁻), $2s$ (2 e⁻), $1s$ (2 e⁻). That's $[\\text{Ne}]\\, 3s^1$ = **Sodium ($Z=11$)**.`
+            explanation: `Total electrons = $1 + 2 + 6 + 2 = 11$. With 4 subshells from lowest to highest BE: $3s$ $(1 e^{-})$, $2p$ $(6 e^{-})$, $2s$ $(2 e^{-})$, $1s$ $(2 e^{-})$. That's $[\\text{Ne}]\\, 3s^1$ = **Sodium ($Z=11$)**.`
           }
         ]
       }

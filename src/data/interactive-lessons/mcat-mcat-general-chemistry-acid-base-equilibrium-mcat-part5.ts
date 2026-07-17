@@ -95,7 +95,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
               `$Q = 0.33$; shifts left`
             ],
             correctAnswer: 1,
-            explanation: `$Q = [\\text{NH}_3]^2/([\\text{N}_2][\\text{H}_2]^3) = (1.0)^2/((1.0)(1.0)^3) = 1.0$. Since $Q(1.0) > K_c(0.060)$, the reaction shifts **left** (toward reactants) to decrease [NH₃] and increase [N₂] and [H₂].`
+            explanation: `$Q = [\\text{NH}_3]^2/([\\text{N}_2][\\text{H}_2]^3) = (1.0)^2/((1.0)(1.0)^3) = 1.0$. Since $Q(1.0) > K_c(0.060)$, the reaction shifts **left** (toward reactants) to decrease [$NH_{3}$] and increase [$N_{2}$] and [$H_{2}$].`
           },
           {
             question: `The reaction $\\text{A} \\rightleftharpoons 2\\text{B}$ is endothermic. What happens to $K$ when temperature increases?`,
@@ -124,7 +124,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
             options: [
               `More AgCl dissolves (common ion increases solubility)`,
               `No change — NaCl is not involved in the AgCl equilibrium`,
-              `AgCl precipitation increases (common ion Cl⁻ reduces solubility)`,
+              `AgCl precipitation increases (common ion $Cl^{-}$ reduces solubility)`,
               `The solution becomes unsaturated`
             ],
             correctAnswer: 2,
@@ -175,7 +175,7 @@ Adding a common ion (e.g., adding NaF to a $\\text{CaF}_2$ solution) shifts equi
 
 **Part 2:** Ka, Kb, pKa, Henderson-Hasselbalch equation, percent dissociation, polyprotic acids, amphiprotic species.
 
-**Part 3:** Buffer mechanism (HA consumes OH⁻; A⁻ consumes H⁺), buffer capacity, buffer range (pKa ± 1), bicarbonate buffer in blood, acid-base disturbances.
+**Part 3:** Buffer mechanism (HA consumes $OH^{-}$; $A^{-}$ consumes $H^{+}$), buffer capacity, buffer range (pKa ± 1), bicarbonate buffer in blood, acid-base disturbances.
 
 **Part 4:** Titration curves, equivalence vs half-equivalence point (pH = pKa), indicators, strong/weak acid titration differences, polyprotic titrations.
 

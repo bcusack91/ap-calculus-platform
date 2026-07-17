@@ -79,10 +79,10 @@ where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the 
           {
             question: 'At the same temperature, which gas has the fastest average molecular speed?',
             options: [
-              'O₂ (32 g/mol)',
-              'N₂ (28 g/mol)',
+              '$O_{2}$ (32 g/mol)',
+              '$N_{2}$ (28 g/mol)',
               'He (4 g/mol)',
-              'CO₂ (44 g/mol)'
+              '$CO_{2}$ (44 g/mol)'
             ],
             correctAnswer: 2,
             explanation: 'At the same temperature, all gases have the same average KE. Since $KE = \\frac{1}{2}mv^2$, lighter molecules must move faster to have the same KE. Helium (4 g/mol) is the lightest, so it moves fastest.'
@@ -195,12 +195,12 @@ where $M$ is the molar mass in **kg/mol** (not g/mol!).
       exercise: {
         inputs: [
           {
-            label: 'Calculate the rms speed of N₂ (M = 0.028 kg/mol) at 300 K, in m/s (round to the nearest whole number)',
+            label: 'Calculate the rms speed of $N_{2}$ (M = 0.028 kg/mol) at 300 K, in m/s (round to the nearest whole number)',
             correctAnswer: '517',
             explanation: '$v_{\\text{rms}} = \\sqrt{\\frac{3(8.314)(300)}{0.028}} = \\sqrt{\\frac{7482.6}{0.028}} = \\sqrt{267{,}236} \\approx 517$ m/s.'
           },
           {
-            label: 'If the temperature is doubled from 300 K to 600 K, what is the new rms speed of N₂ in m/s? (round to the nearest whole number)',
+            label: 'If the temperature is doubled from 300 K to 600 K, what is the new rms speed of $N_{2}$ in m/s? (round to the nearest whole number)',
             correctAnswer: '731',
             explanation: 'Doubling the temperature multiplies $v_{\\text{rms}}$ by $\\sqrt{2}$: $517 \\times \\sqrt{2} \\approx 517 \\times 1.414 \\approx 731$ m/s.'
           }

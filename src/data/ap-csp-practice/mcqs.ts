@@ -79,7 +79,7 @@ export const MCQS: MCQItem[] = [
     question: 'What is the decimal value of the binary number 10110?',
     options: ['18', '20', '22', '26'],
     correctAnswer: 2,
-    explanation: '10110₂ = 1·16 + 0·8 + 1·4 + 1·2 + 0·1 = 16 + 4 + 2 = 22.',
+    explanation: '$10110_{2}$ = 1·16 + 0·8 + 1·4 + 1·2 + 0·1 = 16 + 4 + 2 = 22.',
   },
   {
     type: 'mcq',
@@ -87,7 +87,7 @@ export const MCQS: MCQItem[] = [
     question: 'Convert the decimal number 45 to binary.',
     options: ['101100', '101101', '110100', '110101'],
     correctAnswer: 1,
-    explanation: '45 = 32 + 8 + 4 + 1 = 2⁵ + 2³ + 2² + 2⁰ = 101101₂.',
+    explanation: '45 = 32 + 8 + 4 + 1 = $2^{5}$ + $2^{3}$ + $2^{2}$ + $2^{0}$ = $101101_{2}$.',
   },
   {
     type: 'mcq',
@@ -95,7 +95,7 @@ export const MCQS: MCQItem[] = [
     question: 'How many distinct values can be represented in 8 bits?',
     options: ['8', '16', '128', '256'],
     correctAnswer: 3,
-    explanation: 'n bits represent 2ⁿ distinct values; 2⁸ = 256.',
+    explanation: 'n bits represent $2^{n}$ distinct values; $2^{8}$ = 256.',
   },
   {
     type: 'mcq',
@@ -103,7 +103,7 @@ export const MCQS: MCQItem[] = [
     question: 'A pixel\'s color is stored using 24 bits (8 bits each for R, G, B). What is the total number of distinct colors that can be represented?',
     options: ['256', '65,536', '16,777,216', '4,294,967,296'],
     correctAnswer: 2,
-    explanation: '2²⁴ = 16,777,216 distinct colors. (8 bits per channel × 3 channels = 24 bits total.)',
+    explanation: '$2^{24}$ = 16,777,216 distinct colors. (8 bits per channel × 3 channels = 24 bits total.)',
   },
   {
     type: 'mcq',
@@ -218,7 +218,7 @@ export const MCQS: MCQItem[] = [
     question: 'The string "A" is encoded in ASCII as the decimal number 65. What is "A" in 8-bit binary?',
     options: ['01000001', '01000101', '11000001', '01100001'],
     correctAnswer: 0,
-    explanation: '65 = 64 + 1 = 2⁶ + 2⁰ = 01000001₂.',
+    explanation: '65 = 64 + 1 = $2^{6}$ + $2^{0}$ = $01000001_{2}$.',
   },
   {
     type: 'mcq',
@@ -357,7 +357,7 @@ export const MCQS: MCQItem[] = [
       'Both perform exactly 1,000,000 comparisons.',
     ],
     correctAnswer: 0,
-    explanation: 'Linear search: O(n) = up to n comparisons. Binary search: O(log₂ n) ≈ log₂(10⁶) ≈ 20 comparisons. The dramatic difference is the canonical CSP example of algorithmic efficiency.',
+    explanation: 'Linear search: O(n) = up to n comparisons. Binary search: $O(\\log_{2} n)$ ≈ $\\log_{2}(10^{6})$ ≈ 20 comparisons. The dramatic difference is the canonical CSP example of algorithmic efficiency.',
   },
   {
     type: 'mcq',
@@ -408,11 +408,11 @@ export const MCQS: MCQItem[] = [
     options: [
       'O(n) — linear time',
       'O(n log n) — quasilinear time',
-      'O(n²) — quadratic time',
-      'O(2ⁿ) — exponential time',
+      '$O(n^{2})$ — quadratic time',
+      '$O(2^{n})$ — exponential time',
     ],
     correctAnswer: 3,
-    explanation: 'Polynomial-time algorithms (O(n), O(n log n), O(n²), O(n³)) are considered "reasonable." Exponential or factorial growth is not reasonable for large inputs even on fast hardware.',
+    explanation: 'Polynomial-time algorithms (O(n), O(n log n), $O(n^{2})$, $O(n^{3})$) are considered "reasonable." Exponential or factorial growth is not reasonable for large inputs even on fast hardware.',
   },
   {
     type: 'mcq',
@@ -641,9 +641,9 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'algorithms-programming',
     question: 'A program processes a list of 1,000 student records. The runtime is 0.5 seconds. If the input is doubled to 2,000 records and the runtime increases to 2.0 seconds, the algorithm most plausibly has time complexity',
-    options: ['O(1)', 'O(n)', 'O(n²)', 'O(2ⁿ)'],
+    options: ['O(1)', 'O(n)', '$O(n^{2})$', '$O(2^{n})$'],
     correctAnswer: 2,
-    explanation: 'Doubling the input quadrupled the runtime. That is the signature of O(n²): time scales with the square of input size. (For O(n), time would have doubled to 1.0 s.)',
+    explanation: 'Doubling the input quadrupled the runtime. That is the signature of $O(n^{2})$: time scales with the square of input size. (For O(n), time would have doubled to 1.0 s.)',
   },
   {
     type: 'mcq',

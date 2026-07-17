@@ -31,9 +31,9 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
 
 ### Key Characteristics
 - **More common in males** than females
-- Males need only **one copy** of the recessive allele (hemizygous: Xᵃ Y)
-- Females need **two copies** to express the trait (XᵃXᵃ)
-- **Carrier females** (X^A Xᵃ) are phenotypically normal but can pass the allele to sons
+- Males need only **one copy** of the recessive allele (hemizygous: $X^{a}$ Y)
+- Females need **two copies** to express the trait $(X^{a}X^{a})$
+- **Carrier females** $(X^{A} X^{a})$ are phenotypically normal but can pass the allele to sons
 - An affected male gets the allele from his **mother** (never from father)
 - An affected father passes the allele to **all daughters** (who become carriers) but **no sons**
 
@@ -48,10 +48,10 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
 ### Punnett Square: Carrier Female × Normal Male
 
 \`\`\`
-           X^A        Xᵃ
-  X^A    X^A X^A    X^A Xᵃ
+           $X^{A}$        $X^{a}$
+  $X^{A}$    $X^{A}$ $X^{A}$    $X^{A}$ $X^{a}$
           (normal ♀)  (carrier ♀)
-  Y      X^A Y      Xᵃ Y
+  Y      $X^{A}$ Y      $X^{a}$ Y
           (normal ♂)  (affected ♂)
 \`\`\`
 
@@ -64,7 +64,7 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
       exercise: {
         questions: [
           {
-            question: 'A woman who is a carrier for hemophilia (X^H X^h) marries a man with normal clotting (X^H Y). What percentage of their sons will have hemophilia?',
+            question: 'A woman who is a carrier for hemophilia $(X^{H} X^{h})$ marries a man with normal clotting $(X^{H} Y)$. What percentage of their sons will have hemophilia?',
             options: [
               '50%',
               '25%',
@@ -72,10 +72,10 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
               '0%'
             ],
             correctAnswer: 0,
-            explanation: 'The carrier mother has a 50% chance of passing X^h to each son. Sons who receive X^h will be hemizygous (X^h Y) and express hemophilia. Sons who receive X^H will be normal (X^H Y).'
+            explanation: 'The carrier mother has a 50% chance of passing $X^{h}$ to each son. Sons who receive $X^{h}$ will be hemizygous $(X^{h} Y)$ and express hemophilia. Sons who receive $X^{H}$ will be normal $(X^{H} Y)$.'
           },
           {
-            question: 'A color-blind man (X^c Y) marries a woman with normal vision who is NOT a carrier (X^C X^C). Which statement is correct about their children?',
+            question: 'A color-blind man $(X^{c} Y)$ marries a woman with normal vision who is NOT a carrier $(X^{C} X^{C})$. Which statement is correct about their children?',
             options: [
               'All daughters will be carriers; no sons will be color-blind',
               'Half of all children will be color-blind',
@@ -83,7 +83,7 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
               'No children will carry the color-blindness allele'
             ],
             correctAnswer: 0,
-            explanation: 'The father passes his X^c to all daughters (making them X^C X^c carriers) and his Y to all sons. The mother contributes X^C to all children. So daughters are all carriers, and sons are all X^C Y (normal vision).'
+            explanation: 'The father passes his $X^{c}$ to all daughters (making them $X^{C}$ $X^{c}$ carriers) and his Y to all sons. The mother contributes $X^{C}$ to all children. So daughters are all carriers, and sons are all $X^{C}$ Y (normal vision).'
           }
         ]
       }
@@ -130,7 +130,7 @@ Genes on the **Y chromosome** that have no counterpart on the X:
           },
           {
             label: 'A carrier female for an X-linked recessive trait has the genotype ___',
-            options: ['X^A X^a', 'X^a X^a', 'X^A X^A', 'X^a Y']
+            options: ['$X^{A}$ $X^{a}$', '$X^{a}$ $X^{a}$', '$X^{A}$ $X^{A}$', '$X^{a}$ Y']
           },
           {
             label: 'Y-linked traits are transmitted from ___ to ___',
@@ -141,11 +141,11 @@ Genes on the **Y chromosome** that have no counterpart on the X:
             options: ['all daughters (carriers)', 'all sons', 'no children', 'half of daughters']
           }
         ],
-        correctAnswers: ['males', 'X^A X^a', 'father to all sons', 'all daughters (carriers)'],
+        correctAnswers: ['males', '$X^{A}$ $X^{a}$', 'father to all sons', 'all daughters (carriers)'],
         hint1: 'Which sex has only one X chromosome?',
         hint2: 'A carrier expresses the dominant phenotype but carries one recessive allele.',
         hint3: 'The Y chromosome goes from father to son; the X goes from father to daughter.',
-        explanation: 'Males are hemizygous (one X), so one recessive allele causes expression. Carriers are heterozygous females. Y-linked traits pass father-to-son. An affected father gives X^a to all daughters (who become carriers) and Y to all sons.'
+        explanation: 'Males are hemizygous (one X), so one recessive allele causes expression. Carriers are heterozygous females. Y-linked traits pass father-to-son. An affected father gives $X^{a}$ to all daughters (who become carriers) and Y to all sons.'
       }
     },
     {
@@ -163,7 +163,7 @@ Genes on the **Y chromosome** that have no counterpart on the X:
               'No children'
             ],
             correctAnswer: 0,
-            explanation: 'An affected father (X^D Y) passes his X^D to ALL daughters (who will be affected since the trait is dominant) and his Y to all sons (who will be unaffected).'
+            explanation: 'An affected father $(X^{D} Y)$ passes his $X^{D}$ to ALL daughters (who will be affected since the trait is dominant) and his Y to all sons (who will be unaffected).'
           },
           {
             question: 'Which pedigree pattern is most consistent with X-linked recessive inheritance?',

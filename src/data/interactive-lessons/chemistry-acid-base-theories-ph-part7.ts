@@ -41,7 +41,7 @@ export const chemAcidBaseTheoriesPhPart7Data = {
 |--------|------|------|-------|
 | Arrhenius | Produces $H^+$ | Produces $OH^-$ | Aqueous only |
 | Brønsted-Lowry | Proton donor | Proton acceptor | Any solvent |
-| Lewis | e⁻ pair acceptor | e⁻ pair donor | Broadest |
+| Lewis | $e^{-}$ pair acceptor | $e^{-}$ pair donor | Broadest |
 
 
 ---
@@ -175,7 +175,7 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
         dropdowns: [
           {
             label: 'The 6 strong acids include all EXCEPT',
-            options: ['HCl', 'HF', 'HBr', 'HClO₄']
+            options: ['HCl', 'HF', 'HBr', '$HClO_{4}$']
           },
           {
             label: 'pH + pOH = 14 is true at',

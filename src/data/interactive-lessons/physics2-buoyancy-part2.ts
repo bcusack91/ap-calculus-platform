@@ -59,7 +59,7 @@ This is the **fraction submerged** equation. Let's use it:
 
 ### Example: Wooden Block
 
-A wooden block ($\\rho = 700$ kg/m³) floats in water ($\\rho = 1000$ kg/m³).
+A wooden block ($\\rho = 700$ $kg/m^{3}$) floats in water ($\\rho = 1000$ $kg/m^{3}$).
 
 $$\\text{Fraction submerged} = \\frac{700}{1000} = 0.70 = 70\\%$$
 
@@ -67,7 +67,7 @@ $$\\text{Fraction submerged} = \\frac{700}{1000} = 0.70 = 70\\%$$
 
 ### Example: Ice in Seawater
 
-Ice ($\\rho = 917$ kg/m³) in seawater ($\\rho = 1025$ kg/m³):
+Ice ($\\rho = 917$ $kg/m^{3}$) in seawater ($\\rho = 1025$ $kg/m^{3}$):
 
 $$\\text{Fraction submerged} = \\frac{917}{1025} = 0.895 = 89.5\\%$$
 
@@ -113,7 +113,7 @@ Only 10.5% of an iceberg is visible above the surface!
               '100% (it sinks)'
             ],
             correctAnswer: 1,
-            explanation: '$\\rho_{\\text{obj}} = 0.75 \\times 1000 = 750$ kg/m³. In new liquid ($\\rho = 1500$): fraction = $750/1500 = 0.50 = 50\\%$. The object floats higher in the denser liquid.'
+            explanation: '$\\rho_{\\text{obj}} = 0.75 \\times 1000 = 750$ $kg/m^{3}$. In new liquid ($\\rho = 1500$): fraction = $750/1500 = 0.50 = 50\\%$. The object floats higher in the denser liquid.'
           }
         ]
       }
@@ -122,13 +122,13 @@ Only 10.5% of an iceberg is visible above the surface!
       id: 'bu2-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-**Floating Drill** (use $g = 10$ m/s²)
+**Floating Drill** (use $g = 10$ $m/s^{2}$)
 
-A rectangular barge ($6.0 \\times 3.0 \\times 1.0$ m) has mass 12,000 kg. It floats in freshwater ($\\rho = 1000$ kg/m³).
+A rectangular barge ($6.0 \\times 3.0 \\times 1.0$ m) has mass 12,000 kg. It floats in freshwater ($\\rho = 1000$ $kg/m^{3}$).
 
-1) Volume of the barge (in m³)
+1) Volume of the barge $(in m^{3})$
 
-2) Volume of water displaced (in m³)
+2) Volume of water displaced $(in m^{3})$
 
 3) Depth the barge sinks to (draft, in m)
 
@@ -140,7 +140,7 @@ A rectangular barge ($6.0 \\times 3.0 \\times 1.0$ m) has mass 12,000 kg. It flo
         hint1: '$V = 6.0 \\times 3.0 \\times 1.0$.',
         hint2: 'Floating: $F_B = W$. $\\rho_w V_{\\text{disp}} g = mg$. $V_{\\text{disp}} = m/\\rho_w = 12{,}000/1000$.',
         hint3: 'Draft = $V_{\\text{disp}} / (\\text{length} \\times \\text{width}) = 12/(6 \\times 3)$.',
-        explanation: '$V_{\\text{barge}} = 18$ m³. $V_{\\text{disp}} = 12{,}000/1000 = 12$ m³. Draft = $12/(6 \\times 3) = 12/18 = 0.667$ m. The barge sits 0.67 m deep, leaving 0.33 m of freeboard.'
+        explanation: '$V_{\\text{barge}} = 18$ $m^{3}$. $V_{\\text{disp}} = 12{,}000/1000 = 12$ $m^{3}$. Draft = $12/(6 \\times 3) = 12/18 = 0.667$ m. The barge sits 0.67 m deep, leaving 0.33 m of freeboard.'
       }
     },
     {

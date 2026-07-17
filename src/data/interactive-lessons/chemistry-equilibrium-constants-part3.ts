@@ -220,7 +220,7 @@ Find $\\Delta n$ for each reaction (enter an integer, use a negative sign if nee
               '$\\Delta n = -1$'
             ],
             correctAnswer: 1,
-            explanation: 'Only count **gaseous** species! C(s) is excluded. Gaseous products: 2 mol CO. Gaseous reactants: 1 mol CO₂. $\\Delta n = 2 - 1 = 1$.'
+            explanation: 'Only count **gaseous** species! C(s) is excluded. Gaseous products: 2 mol CO. Gaseous reactants: 1 mol $CO_{2}$. $\\Delta n = 2 - 1 = 1$.'
           },
           {
             question: 'At 300 K, $K_c = 10.0$ for a reaction with $\\Delta n = -1$. Using $R = 0.08206$, what is the approximate value of $K_p$?',

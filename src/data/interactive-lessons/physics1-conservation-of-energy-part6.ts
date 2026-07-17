@@ -73,7 +73,7 @@ The block travels **2.5 m** along the ramp (reaching height $h = 2.5\\sin 30° =
       content: `
 **Spring Launcher Variations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) Same spring ($k = 800$ N/m), compressed $0.25$ m, launches a 2 kg block up a ramp with friction ($\\mu_k = 0.2$, angle $30°$). Find the distance along the ramp (in m, to 3 significant figures). Hint: $N = mg\\cos\\theta$.
 
@@ -165,7 +165,7 @@ Note: friction acts over 3 m **plus** the compression distance $x$! This gives a
       content: `
 **Complex Multi-Step Problems** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 3 kg block starts at rest at height 8 m, slides down a frictionless ramp, across 2 m of rough floor ($\\mu_k = 0.4$), and compresses a spring ($k = 600$ N/m). What is the maximum spring compression (in m, to 3 significant figures)?
 

@@ -125,7 +125,7 @@ Blood calcium levels are regulated by two **antagonistic hormones** — a patter
 | **Source** | Parathyroid glands (4 small glands behind the thyroid) |
 | **Released when** | Blood calcium is LOW |
 | **Effect** | RAISES blood calcium |
-| **Mechanisms** | Stimulates osteoclasts to release Ca²⁺ from bone; Increases Ca²⁺ reabsorption in kidneys; Activates vitamin D → increases Ca²⁺ absorption in intestines |
+| **Mechanisms** | Stimulates osteoclasts to release $Ca^{2+}$ from bone; Increases $Ca^{2+}$ reabsorption in kidneys; Activates vitamin D → increases $Ca^{2+}$ absorption in intestines |
 
 ### Calcitonin
 | Feature | Detail |
@@ -133,16 +133,16 @@ Blood calcium levels are regulated by two **antagonistic hormones** — a patter
 | **Source** | Thyroid gland (C cells / parafollicular cells) |
 | **Released when** | Blood calcium is HIGH |
 | **Effect** | LOWERS blood calcium |
-| **Mechanisms** | Inhibits osteoclasts; Promotes Ca²⁺ deposition into bone; Increases Ca²⁺ excretion by kidneys |
+| **Mechanisms** | Inhibits osteoclasts; Promotes $Ca^{2+}$ deposition into bone; Increases $Ca^{2+}$ excretion by kidneys |
 
 ### Calcium Homeostasis Summary
 \`\`\`
-Blood Ca²⁺ LOW → PTH released → Ca²⁺ released from bone,
+Blood $Ca^{2+}$ LOW → PTH released → $Ca^{2+}$ released from bone,
                                    reabsorbed in kidneys,
-                                   absorbed in intestines → Ca²⁺ rises
+                                   absorbed in intestines → $Ca^{2+}$ rises
 
-Blood Ca²⁺ HIGH → Calcitonin released → Ca²⁺ deposited in bone,
-                                          excreted by kidneys → Ca²⁺ falls
+Blood $Ca^{2+}$ HIGH → Calcitonin released → $Ca^{2+}$ deposited in bone,
+                                          excreted by kidneys → $Ca^{2+}$ falls
 \`\`\`
 
 > 🔑 **PTH is the dominant regulator** of blood calcium in humans. Calcitonin plays a more significant role in other vertebrates (like fish and rodents) and is less critical in adult humans, but it is still tested on the AP exam as the antagonistic partner of PTH.

@@ -196,7 +196,7 @@ Test your understanding of TIR!
               "Diamond doesn't refract light"
             ],
             correctAnswer: 2,
-            explanation: "A small critical angle (θc = sin⁻¹(n₂/n₁)) means n₁ (diamond) is much larger than n₂ (air). Diamond's n=2.42 is very high, causing the small critical angle and making light bounce around inside—creating sparkle!"
+            explanation: "A small critical angle (θc = $\\sin^{-1}(n_{2}/n_{1})$) means $n_{1}$ (diamond) is much larger than $n_{2}$ (air). Diamond's n=2.42 is very high, causing the small critical angle and making light bounce around inside—creating sparkle!"
           },
           {
             question: "What condition is necessary for total internal reflection to be possible?",
@@ -207,7 +207,7 @@ Test your understanding of TIR!
               "Light must be at exactly 45°"
             ],
             correctAnswer: 1,
-            explanation: "Total internal reflection can only occur when light travels from a denser medium (higher n) to a less dense medium (lower n). This is because the critical angle formula requires n₁ > n₂."
+            explanation: "Total internal reflection can only occur when light travels from a denser medium (higher n) to a less dense medium (lower n). This is because the critical angle formula requires $n_{1}$ > $n_{2}$."
           },
           {
             question: "Light in glass (n=1.5) hits the glass-air boundary at 45°. The critical angle is 41.8°. What is the refraction angle?",

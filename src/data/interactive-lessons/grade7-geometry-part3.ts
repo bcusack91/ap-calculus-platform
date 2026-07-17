@@ -25,7 +25,7 @@ $\\pi \\approx 3.14$
 **Circle with radius 5 cm.**
 
 $C = 2\\pi(5) = 10\\pi \\approx 31.4$ cm
-$A = \\pi(5)^2 = 25\\pi \\approx 78.5$ cm² ✅
+$A = \\pi(5)^2 = 25\\pi \\approx 78.5$ $cm^{2}$ ✅
     
     `
     },
@@ -69,7 +69,7 @@ $A = \\pi(5)^2 = 25\\pi \\approx 78.5$ cm² ✅
         correctAnswers: ["43.96","31.4","50.24"],
         hint1: "C = 2πr = 2(3.14)(7).",
         hint2: "C = πd = 3.14(10).",
-        hint3: "A = πr² = 3.14(16).",
+        hint3: "A = $\\pi r^{2}$ = 3.14(16).",
         explanation: "1) 2(3.14)(7)=43.96. 2) 3.14(10)=31.4. 3) 3.14(16)=50.24."
       }
     },
@@ -80,11 +80,11 @@ $A = \\pi(5)^2 = 25\\pi \\approx 78.5$ cm² ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Circumference formula","options":["C = 2πr","C = πr²","C = 2r","C = πr"]},{"label":"Area of a circle formula","options":["A = πr²","A = 2πr","A = πd","A = r²"]}],
-        correctAnswers: ["C = 2πr","A = πr²"],
+        dropdowns: [{"label":"Circumference formula","options":["C = 2πr","C = $\\pi r^{2}$","C = 2r","C = πr"]},{"label":"Area of a circle formula","options":["A = $\\pi r^{2}$","A = 2πr","A = πd","A = $r^{2}$"]}],
+        correctAnswers: ["C = 2πr","A = $\\pi r^{2}$"],
         hint1: "Distance around.",
         hint2: "Space inside.",
-        explanation: "C = 2πr (circumference). A = πr² (area)."
+        explanation: "C = 2πr (circumference). A = $\\pi r^{2}$ (area)."
       }
     },
     {
@@ -118,7 +118,7 @@ $A = \\pi(5)^2 = 25\\pi \\approx 78.5$ cm² ✅
                               "6.28"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "A = π(3)² = 9π ≈ 28.26."
+                    "explanation": "A = $\\pi (3)^{2}$ = 9π ≈ 28.26."
           }
 ]
       }

@@ -212,14 +212,14 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
           },
           {
             label: 'Adding NaOH to excess weak acid creates a buffer because',
-            options: ['NaOH is a buffer', 'it partially converts HA to A⁻', 'it neutralizes all the acid', 'it changes Kₐ']
+            options: ['NaOH is a buffer', 'it partially converts HA to $A^{-}$', 'it neutralizes all the acid', 'it changes $K_{a}$']
           },
           {
             label: 'To increase both the pH and capacity of an acetate buffer, you should add',
-            options: ['more CH₃COOH', 'more NaCH₃COO', 'water', 'HCl']
+            options: ['more $CH_{3}COOH$', 'more $NaCH_{3}COO$', 'water', 'HCl']
           }
         ],
-        correctAnswers: ['1:1', 'it partially converts HA to A⁻', 'more NaCH₃COO'],
+        correctAnswers: ['1:1', 'it partially converts HA to $A^{-}$', 'more $NaCH_{3}COO$'],
         hint1: 'At $pH = pK_a$, the ratio is 1:1.',
         hint2: 'Partial neutralization creates both buffer components.',
         hint3: 'More $A^-$ increases capacity AND increases the ratio (higher pH).',

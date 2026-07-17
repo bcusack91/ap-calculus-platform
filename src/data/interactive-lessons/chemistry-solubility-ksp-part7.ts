@@ -47,8 +47,8 @@ $$\\boxed{K_{sp} = [\\text{M}^{n+}]^a[\\text{X}^{m-}]^b}$$
 | Type | $K_{sp}$ in terms of $s$ | Solve for $s$ |
 |------|--------------------------|---------------|
 | MX | $s^2$ | $s = \\sqrt{K_{sp}}$ |
-| MX₂ or M₂X | $4s^3$ | $s = \\sqrt[3]{K_{sp}/4}$ |
-| M₂X₃ | $108s^5$ | $s = \\sqrt[5]{K_{sp}/108}$ |
+| $MX_{2}$ or $M_{2}X$ | $4s^3$ | $s = \\sqrt[3]{K_{sp}/4}$ |
+| $M_{2}X_{3}$ | $108s^5$ | $s = \\sqrt[5]{K_{sp}/108}$ |
 
 
 ---
@@ -86,18 +86,18 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
             question: 'Which of the following changes will increase the molar solubility of $\\text{AgCl}(s)$ in water?',
             options: [
               'Adding NaCl to the solution',
-              'Adding AgNO₃ to the solution',
+              'Adding $AgNO_{3}$ to the solution',
               'Removing some solid AgCl from the container',
-              'Adding NaNO₃ (if it forms a complex with Ag⁺ or is none of the above — actually none of these common choices increases solubility simply). The correct choice: Adding NH₃, which complexes Ag⁺'
+              'Adding $NaNO_{3}$ (if it forms a complex with $Ag^{+}$ or is none of the above — actually none of these common choices increases solubility simply). The correct choice: Adding $NH_{3}$, which complexes $Ag^{+}$'
             ],
             correctAnswer: 3,
-            explanation: 'Adding NaCl or AgNO₃ introduces common ions, decreasing solubility. Removing solid doesn\'t change the equilibrium (as long as some solid remains). Adding NH₃ complexes Ag⁺ (forming $\\text{Ag(NH}_3)_2^+$), removing it from solution and shifting equilibrium right, increasing solubility.'
+            explanation: 'Adding NaCl or $AgNO_{3}$ introduces common ions, decreasing solubility. Removing solid doesn\'t change the equilibrium (as long as some solid remains). Adding $NH_{3}$ complexes $Ag^{+}$ (forming $\\text{Ag(NH}_3)_2^+$), removing it from solution and shifting equilibrium right, increasing solubility.'
           },
           {
             question: '$K_{sp}(\\text{BaCO}_3) = 2.6 \\times 10^{-9}$ and $K_{sp}(\\text{SrCO}_3) = 5.6 \\times 10^{-10}$. Both are 1:1 salts. Which is more soluble in pure water?',
             options: [
-              'SrCO₃ (smaller $K_{sp}$)',
-              'BaCO₃ (larger $K_{sp}$)',
+              '$SrCO_{3}$ (smaller $K_{sp}$)',
+              '$BaCO_{3}$ (larger $K_{sp}$)',
               'They have equal solubility',
               'Cannot determine without calculating'
             ],
@@ -107,13 +107,13 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
           {
             question: 'A saturated solution of $\\text{CaF}_2$ is at equilibrium. Which change will cause more $\\text{CaF}_2$ to dissolve?',
             options: [
-              'Adding solid CaF₂',
+              'Adding solid $CaF_{2}$',
               'Adding NaF',
-              'Adding HCl (which reacts with F⁻ to form HF)',
-              'Adding CaCl₂'
+              'Adding HCl (which reacts with $F^{-}$ to form HF)',
+              'Adding $CaCl_{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'HCl reacts with F⁻: $\\text{H}^+ + \\text{F}^- \\rightarrow \\text{HF}$. This removes F⁻ from solution, shifting the dissolution equilibrium right, causing more CaF₂ to dissolve. Adding NaF or CaCl₂ would introduce common ions and decrease solubility.'
+            explanation: 'HCl reacts with $F^{-}$: $\\text{H}^+ + \\text{F}^- \\rightarrow \\text{HF}$. This removes $F^{-}$ from solution, shifting the dissolution equilibrium right, causing more $CaF_{2}$ to dissolve. Adding NaF or $CaCl_{2}$ would introduce common ions and decrease solubility.'
           }
         ]
       }

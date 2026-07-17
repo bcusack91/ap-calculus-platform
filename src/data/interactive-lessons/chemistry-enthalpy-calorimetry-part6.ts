@@ -108,7 +108,7 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
       exercise: {
         questions: [
           {
-            question: '$\\Delta H°_f$ for O₂(g) is:',
+            question: '$\\Delta H°_f$ for $O_{2}(g)$ is:',
             options: [
               '−249.2 kJ/mol',
               '+249.2 kJ/mol',
@@ -119,15 +119,15 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
             explanation: '$\\text{O}_2(g)$ is oxygen in its standard state. The $\\Delta H°_f$ of any element in its standard state is zero by definition.'
           },
           {
-            question: 'The formation reaction for H₂O(l) is:',
+            question: 'The formation reaction for $H_{2}O(l)$ is:',
             options: [
-              '2H(g) + O(g) → H₂O(l)',
-              'H₂O(g) → H₂O(l)',
-              'H₂(g) + ½O₂(g) → H₂O(l)',
-              'H₂(g) + O₂(g) → H₂O₂(l)'
+              '2H(g) + O(g) → $H_{2}O(l)$',
+              '$H_{2}O(g)$ → $H_{2}O(l)$',
+              '$H_{2}(g)$ + $\\tfrac{1}{2} O_{2}(g)$ → $H_{2}O(l)$',
+              '$H_{2}(g)$ + $O_{2}(g)$ → $H_{2}O_{2}(l)$'
             ],
             correctAnswer: 2,
-            explanation: 'A formation reaction starts with elements in their standard states and produces exactly one mole of the compound. H₂(g) and O₂(g) are the standard states of hydrogen and oxygen.'
+            explanation: 'A formation reaction starts with elements in their standard states and produces exactly one mole of the compound. $H_{2}(g)$ and $O_{2}(g)$ are the standard states of hydrogen and oxygen.'
           },
           {
             question: 'Why is the formula "products minus reactants"?',
@@ -194,7 +194,7 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
           },
           {
             label: 'The standard state of mercury at 25°C is',
-            options: ['Hg(s)', 'Hg(l)', 'Hg(g)', 'Hg₂(l)']
+            options: ['Hg(s)', 'Hg(l)', 'Hg(g)', '$Hg_{2}(l)$']
           }
         ],
         correctAnswers: ['positive (not zero)', 'one mole', 'exothermic', 'Hg(l)'],
@@ -215,16 +215,16 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
           {
             question: 'Which of the following is a valid formation reaction?',
             options: [
-              '2C(s) + 3H₂(g) → C₂H₆(g)',
-              'C₂H₆(g) → 2C(s) + 3H₂(g)',
-              'C(s) + 3H(g) → CH₃(g)',
-              '2C(s) + 3H₂(g) → 2CH₃(g)'
+              '2C(s) + $3H_{2}(g)$ → $C_{2}H_{6}(g)$',
+              '$C_{2}H_{6}(g)$ → 2C(s) + $3H_{2}(g)$',
+              'C(s) + 3H(g) → $CH_{3}(g)$',
+              '2C(s) + $3H_{2}(g)$ → $2CH_{3}(g)$'
             ],
             correctAnswer: 0,
-            explanation: 'A formation reaction must: (1) start with elements in standard states (C(s,graphite) and H₂(g) ✓), (2) produce exactly 1 mol of compound (1 mol C₂H₆ ✓). Option B is the reverse, C uses atoms not molecules, D produces 2 mol.'
+            explanation: 'A formation reaction must: (1) start with elements in standard states (C(s,graphite) and $H_{2}(g)$ ✓), (2) produce exactly 1 mol of compound (1 mol $C_{2}H_{6}$ ✓). Option B is the reverse, C uses atoms not molecules, D produces 2 mol.'
           },
           {
-            question: 'For the reaction 2Al(s) + Fe₂O₃(s) → Al₂O₃(s) + 2Fe(s), given $\\Delta H°_f$: Al₂O₃ = −1675.7, Fe₂O₃ = −824.2, Al = 0, Fe = 0, $\\Delta H°_{\\text{rxn}}$ is:',
+            question: 'For the reaction 2Al(s) + $Fe_{2}O_{3}(s)$ → $Al_{2}O_{3}(s)$ + 2Fe(s), given $\\Delta H°_f$: $Al_{2}O_{3}$ = −1675.7, $Fe_{2}O_{3}$ = −824.2, Al = 0, Fe = 0, $\\Delta H°_{\\text{rxn}}$ is:',
             options: [
               '−851.5 kJ',
               '+851.5 kJ',

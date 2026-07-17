@@ -66,7 +66,7 @@ If $W < F_b$ → impossible to rest (would float up).
             explanation: 'Apparent weight = $W - F_b = 30 - 8 = 22$ N.'
           },
           {
-            question: 'A buoy of density 200 kg/m³ is tied to the bottom of a 10 m deep pool. The rope tension points:',
+            question: 'A buoy of density 200 $kg/m^{3}$ is tied to the bottom of a 10 m deep pool. The rope tension points:',
             options: ['Up (toward the buoy)', 'Down (toward the bottom)', 'Sideways', 'Zero'],
             correctAnswer: 1,
             explanation: 'The buoy wants to rise (low density). The rope pulls DOWN on the buoy (and up on the bottom anchor) to keep it submerged.'
@@ -91,11 +91,11 @@ If $W < F_b$ → impossible to rest (would float up).
       content: `
 **Submerged Calculations** 🧮 (g = 10, $\\rho_w = 1000$)
 
-1) A solid metal ball of mass 4.0 kg and volume $5.0\\times10^{-4}$ m³ is fully submerged. Apparent weight on a spring scale (N)?
+1) A solid metal ball of mass 4.0 kg and volume $5.0\\times10^{-4}$ $m^{3}$ is fully submerged. Apparent weight on a spring scale (N)?
 
-2) A foam buoy of mass 2.0 kg and volume 0.020 m³ is held UNDER water by a rope. Tension in rope (N)?
+2) A foam buoy of mass 2.0 kg and volume 0.020 $m^{3}$ is held UNDER water by a rope. Tension in rope (N)?
 
-3) A 50 N weight rests on a pool bottom. It displaces $2.0\\times10^{-3}$ m³. Normal force from the pool bottom (N)?
+3) A 50 N weight rests on a pool bottom. It displaces $2.0\\times10^{-3}$ $m^{3}$. Normal force from the pool bottom (N)?
       `,
       exercise: {
         boxes: 3,
@@ -133,7 +133,7 @@ If $W < F_b$ → impossible to rest (would float up).
             explanation: 'Air-filled balloon has very low avg density → $F_b \\gg W$ → strong net upward force.'
           },
           {
-            label: 'A 1 kg block fully submerged with $V = 0.001$ m³ in water — its apparent weight (g = 10):',
+            label: 'A 1 kg block fully submerged with $V = 0.001$ $m^{3}$ in water — its apparent weight (g = 10):',
             options: ['Zero (neutral)', '5 N', '10 N', '20 N'],
             correctIndex: 0,
             explanation: '$W = 10$ N. $F_b = 1000(10)(0.001) = 10$ N. $W_{app} = 0$. Density matches water exactly → neutrally buoyant.'
@@ -150,7 +150,7 @@ If $W < F_b$ → impossible to rest (would float up).
       exercise: {
         questions: [
           {
-            question: 'A 6.0-kg copper block ($V = 6.7\\times10^{-4}$ m³) hangs from a string in water. Tension in the string (g = 10)?',
+            question: 'A 6.0-kg copper block ($V = 6.7\\times10^{-4}$ $m^{3}$) hangs from a string in water. Tension in the string (g = 10)?',
             options: [
               '60 N',
               '53.3 N',
@@ -161,7 +161,7 @@ If $W < F_b$ → impossible to rest (would float up).
             explanation: '$T = W - F_b = 60 - 1000(10)(6.7\\times10^{-4}) = 60 - 6.7 = 53.3$ N.'
           },
           {
-            question: 'A 0.50-kg air-filled ball of volume $5.0\\times10^{-3}$ m³ is HELD UNDER water by a string anchored to the bottom. Tension in the string (g = 10)?',
+            question: 'A 0.50-kg air-filled ball of volume $5.0\\times10^{-3}$ $m^{3}$ is HELD UNDER water by a string anchored to the bottom. Tension in the string (g = 10)?',
             options: [
               '5 N',
               '45 N',

@@ -45,7 +45,7 @@ $A = (x+5)(x+2) = x^2 + 7x + 10$ ✅
                               "$4x+12$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "FOIL: x²+4x+3x+12."
+                    "explanation": "FOIL: $x^{2}+4x+3x+12$."
           }
 ]
       }
@@ -72,7 +72,7 @@ $x^2 - 1 = (x+1)(x-?)$
         correctAnswers: ["7","12","1"],
         hint1: "3+4.",
         hint2: "3×4.",
-        hint3: "Difference of squares: 1²=1.",
+        hint3: "Difference of squares: $1^{2}$=1.",
         explanation: "1) 7. 2) 12. 3) 1."
       }
     },
@@ -83,7 +83,7 @@ $x^2 - 1 = (x+1)(x-?)$
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The zeros of a polynomial are where","options":["$p(x) = 0$","$p(x)$ is maximum","x = 0","The graph is steep"]},{"label":"Area of a rectangle is","options":["Length × Width","Length + Width","2(L+W)","L²"]}],
+        dropdowns: [{"label":"The zeros of a polynomial are where","options":["$p(x) = 0$","$p(x)$ is maximum","x = 0","The graph is steep"]},{"label":"Area of a rectangle is","options":["Length × Width","Length + Width","2(L+W)","$L^{2}$"]}],
         correctAnswers: ["$p(x) = 0$","Length × Width"],
         hint1: "x-intercepts.",
         hint2: "Area = LW.",

@@ -91,10 +91,10 @@ This is heavily tested in electrophoresis and separation contexts.`
 **Question:** Aspartic acid (Asp, D) has a side chain with a carboxylic acid (pKa ≈ 3.9). Is aspartic acid positively, negatively, or neutrally charged at pH 7?
 
 **Solution:**
-1. At pH 7 > pKa (3.9), the carboxylic acid is deprotonated: −COO⁻
-2. The $\\alpha$-carboxylic acid (backbone, pKa ≈ 2) is also deprotonated: −COO⁻
-3. The $\\alpha$-amino group (pKa ≈ 9.6) is protonated: −NH₃⁺
-4. Net charge: (−1 from side chain) + (−1 from backbone) + (+1 from backbone NH₃) = **−1 (negatively charged)**
+1. At pH 7 > pKa (3.9), the carboxylic acid is deprotonated: $-COO^{-}$
+2. The $\\alpha$-carboxylic acid (backbone, pKa ≈ 2) is also deprotonated: $-COO^{-}$
+3. The $\\alpha$-amino group (pKa ≈ 9.6) is protonated: $-NH_{3}^{+}$
+4. Net charge: (−1 from side chain) + (−1 from backbone) + (+1 from backbone $NH_{3}$) = **−1 (negatively charged)**
 
 **MCAT Strategy:** At physiological pH (~7), acidic amino acids (D, E) are negative; basic amino acids (K, R, H) are positive because their pKa values are far from 7.
 </details>
@@ -116,20 +116,20 @@ This is heavily tested in electrophoresis and separation contexts.`
 <summary><b>Example 3: Calculate effective charge on a peptide</b></summary>
 
 **Question:** A tripeptide is Asp-Phe-Lys. At pH 7:
-- Asp side chain (pKa 3.9): −COO⁻
+- Asp side chain (pKa 3.9): $-COO^{-}$
 - Phe side chain: nonpolar (no charge)
-- Lys side chain (pKa 10.5): −NH₃⁺
-- N-terminus (pKa ~9): −NH₃⁺
-- C-terminus (pKa ~3): −COO⁻
+- Lys side chain (pKa 10.5): $-NH_{3}^{+}$
+- N-terminus (pKa ~9): $-NH_{3}^{+}$
+- C-terminus (pKa ~3): $-COO^{-}$
 
 What is the net charge?
 
 **Solution:**
-1. Asp side chain: pH > pKa, so −COO⁻ → **−1**
+1. Asp side chain: pH > pKa, so $-COO^{-}$ → **−1**
 2. Phe side chain: nonpolar → **0**
-3. Lys side chain: pH < pKa, so −NH₃⁺ → **+1**
-4. N-terminus: pH < pKa, so −NH₃⁺ → **+1**
-5. C-terminus: pH > pKa, so −COO⁻ → **−1**
+3. Lys side chain: pH < pKa, so $-NH_{3}^{+}$ → **+1**
+4. N-terminus: pH < pKa, so $-NH_{3}^{+}$ → **+1**
+5. C-terminus: pH > pKa, so $-COO^{-}$ → **−1**
 6. **Net charge = −1 + 0 + 1 + 1 − 1 = 0**
 
 **MCAT Strategy:** For charges near physiological pH, check each ionizable group against its pKa. If pH >> pKa, deprotonate; if pH << pKa, protonate.

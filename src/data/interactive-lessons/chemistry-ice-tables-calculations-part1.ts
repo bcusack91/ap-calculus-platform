@@ -73,7 +73,7 @@ For the reaction: $aA + bB \\rightleftharpoons cC + dD$
 
 > **Solution:** Since we start with no products and $K > 0$, the reaction shifts **right**.
 
-|  | H₂ | I₂ | 2 HI |
+|  | $H_{2}$ | $I_{2}$ | 2 HI |
 |--|-----|-----|------|
 | **I** | 1.00 | 1.00 | 0 |
 | **C** | $-x$ | $-x$ | $+2x$ |
@@ -165,10 +165,10 @@ Initial concentrations: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0
       exercise: {
         boxes: 3,
         correctAnswers: ['+2x', '0.50 - x', '2x'],
-        hint1: 'The coefficient of NO₂ is 2, so the change is $+2x$ (product increases).',
+        hint1: 'The coefficient of $NO_{2}$ is 2, so the change is $+2x$ (product increases).',
         hint2: 'Equilibrium = Initial + Change: $0.50 + (-x) = 0.50 - x$.',
         hint3: 'Equilibrium = Initial + Change: $0 + 2x = 2x$.',
-        explanation: '1) NO₂ has coefficient 2 and is a product → $+2x$. 2) $[\\text{N}_2\\text{O}_4]_{eq} = 0.50 - x$. 3) $[\\text{NO}_2]_{eq} = 0 + 2x = 2x$.'
+        explanation: '1) $NO_{2}$ has coefficient 2 and is a product → $+2x$. 2) $[\\text{N}_2\\text{O}_4]_{eq} = 0.50 - x$. 3) $[\\text{NO}_2]_{eq} = 0 + 2x = 2x$.'
       }
     },
     {

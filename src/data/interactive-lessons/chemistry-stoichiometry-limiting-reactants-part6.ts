@@ -54,7 +54,7 @@ $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{mol A} \\xrightarrow{\\text{ra
       content: `
 ## 🧪 Comprehensive Worked Example
 
-> **Problem:** In the reaction below, 50.0 g of Fe₂O₃ ($M = 159.7$) reacts with 30.0 g of Al ($M = 26.98$). The percent yield is 78%. Find:
+> **Problem:** In the reaction below, 50.0 g of $Fe_{2}O_{3}$ ($M = 159.7$) reacts with 30.0 g of Al ($M = 26.98$). The percent yield is 78%. Find:
 > a) the limiting reactant
 > b) the theoretical yield of Fe ($M = 55.85$)
 > c) the actual yield of Fe
@@ -69,7 +69,7 @@ $$\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2
 
 ### Step 1: Convert to Moles
 
-- Moles Fe₂O₃: $50.0 \\; \\cancel{\\text{g Fe}_2\\text{O}_3} \\times \\frac{1 \\text{ mol Fe}_2\\text{O}_3}{159.7 \\; \\cancel{\\text{g Fe}_2\\text{O}_3}} = 0.3131$ mol Fe₂O₃
+- Moles $Fe_{2}O_{3}$: $50.0 \\; \\cancel{\\text{g Fe}_2\\text{O}_3} \\times \\frac{1 \\text{ mol Fe}_2\\text{O}_3}{159.7 \\; \\cancel{\\text{g Fe}_2\\text{O}_3}} = 0.3131$ mol $Fe_{2}O_{3}$
 - Moles Al: $30.0 \\; \\cancel{\\text{g Al}} \\times \\frac{1 \\text{ mol Al}}{26.98 \\; \\cancel{\\text{g Al}}} = 1.112$ mol Al
 
 
@@ -77,9 +77,9 @@ $$\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2
 
 ### Step 2: Find Limiting Reactant
 
-- From Fe₂O₃: $0.3131 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3} \\times \\frac{2 \\text{ mol Fe}}{1 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3}} = 0.6262$ mol Fe
+- From $Fe_{2}O_{3}$: $0.3131 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3} \\times \\frac{2 \\text{ mol Fe}}{1 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3}} = 0.6262$ mol Fe
 - From Al: $1.112 \\; \\cancel{\\text{mol Al}} \\times \\frac{2 \\text{ mol Fe}}{2 \\; \\cancel{\\text{mol Al}}} = 1.112$ mol Fe
-- Fe₂O₃ produces less → **Fe₂O₃ is limiting**
+- $Fe_{2}O_{3}$ produces less → **$Fe_{2}O_{3}$ is limiting**
 
 
 ---
@@ -116,15 +116,15 @@ Al remaining: $(1.112 - 0.6262) \\; \\cancel{\\text{mol Al}} \\times \\frac{26.9
       exercise: {
         questions: [
           {
-            question: 'In the reaction $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, 8.0 g of H₂ ($M = 2.016$) reacts with 48.0 g of O₂ ($M = 32.00$). The limiting reactant is:',
+            question: 'In the reaction $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, 8.0 g of $H_{2}$ ($M = 2.016$) reacts with 48.0 g of $O_{2}$ ($M = 32.00$). The limiting reactant is:',
             options: [
-              'H₂ — because it has less mass',
-              'O₂ — because it produces fewer moles of H₂O',
-              'H₂ — because it produces fewer moles of H₂O',
+              '$H_{2}$ — because it has less mass',
+              '$O_{2}$ — because it produces fewer moles of $H_{2}O$',
+              '$H_{2}$ — because it produces fewer moles of $H_{2}O$',
               'They are in exact stoichiometric ratio'
             ],
             correctAnswer: 1,
-            explanation: 'Moles H₂: 8.0/2.016 = 3.97 mol → 3.97 × (2/2) = 3.97 mol H₂O. Moles O₂: 48.0/32.00 = 1.50 mol → 1.50 × (2/1) = 3.00 mol H₂O. O₂ produces fewer moles of product → O₂ is the limiting reactant.'
+            explanation: 'Moles $H_{2}$: 8.0/2.016 = 3.97 mol → 3.97 × (2/2) = 3.97 mol $H_{2}O$. Moles $O_{2}$: 48.0/32.00 = 1.50 mol → 1.50 × (2/1) = 3.00 mol $H_{2}O$. $O_{2}$ produces fewer moles of product → $O_{2}$ is the limiting reactant.'
           },
           {
             question: 'A reaction has a theoretical yield of 25.0 g and a percent yield of 80.0%. The actual yield is:',
@@ -161,21 +161,21 @@ Given: $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
 
 $M_{\\text{N}_2} = 28.02$ g/mol, $M_{\\text{H}_2} = 2.016$ g/mol, $M_{\\text{NH}_3} = 17.03$ g/mol
 
-A reaction starts with 28.02 g of N₂ and 8.064 g of H₂. Percent yield = 85%.
+A reaction starts with 28.02 g of $N_{2}$ and 8.064 g of $H_{2}$. Percent yield = 85%.
 
 **1)** Which is limiting? Type **N2** or **H2**. (Hint: calculate mol product from each)
 
-**2)** What is the theoretical yield of NH₃ in grams? (to 3 significant figures)
+**2)** What is the theoretical yield of $NH_{3}$ in grams? (to 3 significant figures)
 
-**3)** What is the actual yield of NH₃ in grams? (to 3 significant figures)
+**3)** What is the actual yield of $NH_{3}$ in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['N2', '34.1', '29.0'],
-        hint1: 'Mol N₂ = 28.02/28.02 = 1.000. Mol H₂ = 8.064/2.016 = 4.000. From N₂: 1.000 × 2 = 2.000 mol NH₃. From H₂: 4.000 × 2/3 = 2.667 mol NH₃. Which is less?',
-        hint2: 'Theoretical yield = mol NH₃ (from limiting) × $M_{\\text{NH}_3}$ = 2.000 × 17.03.',
+        hint1: 'Mol $N_{2}$ = 28.02/28.02 = 1.000. Mol $H_{2}$ = 8.064/2.016 = 4.000. From $N_{2}$: 1.000 × 2 = 2.000 mol $NH_{3}$. From $H_{2}$: 4.000 × 2/3 = 2.667 mol $NH_{3}$. Which is less?',
+        hint2: 'Theoretical yield = mol $NH_{3}$ (from limiting) × $M_{\\text{NH}_3}$ = 2.000 × 17.03.',
         hint3: 'Actual = theoretical × 0.85.',
-        explanation: '1) From N₂: 1.000 × 2 = 2.000 mol NH₃. From H₂: 4.000 × 2/3 = 2.667 mol NH₃. N₂ produces less → N₂ is limiting. 2) Theoretical: 2.000 × 17.03 = 34.1 g. 3) Actual: 34.1 × 0.85 = 29.0 g.'
+        explanation: '1) From $N_{2}$: 1.000 × 2 = 2.000 mol $NH_{3}$. From $H_{2}$: 4.000 × 2/3 = 2.667 mol $NH_{3}$. $N_{2}$ produces less → $N_{2}$ is limiting. 2) Theoretical: 2.000 × 17.03 = 34.1 g. 3) Actual: 34.1 × 0.85 = 29.0 g.'
       }
     },
     {
@@ -219,15 +219,15 @@ A reaction starts with 28.02 g of N₂ and 8.064 g of H₂. Percent yield = 85%.
       exercise: {
         questions: [
           {
-            question: 'In the thermite reaction $\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$, if 100.0 g of Fe₂O₃ ($M = 159.7$) reacts with 100.0 g of Al ($M = 26.98$), which is limiting?',
+            question: 'In the thermite reaction $\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$, if 100.0 g of $Fe_{2}O_{3}$ ($M = 159.7$) reacts with 100.0 g of Al ($M = 26.98$), which is limiting?',
             options: [
-              'Fe₂O₃',
+              '$Fe_{2}O_{3}$',
               'Al',
               'Both run out simultaneously',
               'Cannot be determined'
             ],
             correctAnswer: 0,
-            explanation: 'Moles Fe₂O₃: 100.0/159.7 = 0.626 mol → 1.252 mol Fe. Moles Al: 100.0/26.98 = 3.706 mol → 3.706 mol Fe. Fe₂O₃ produces less product → Fe₂O₃ is limiting.'
+            explanation: 'Moles $Fe_{2}O_{3}$: 100.0/159.7 = 0.626 mol → 1.252 mol Fe. Moles Al: 100.0/26.98 = 3.706 mol → 3.706 mol Fe. $Fe_{2}O_{3}$ produces less product → $Fe_{2}O_{3}$ is limiting.'
           },
           {
             question: 'Using the previous problem, the theoretical yield of Fe ($M = 55.85$) is approximately:',
@@ -238,7 +238,7 @@ A reaction starts with 28.02 g of N₂ and 8.064 g of H₂. Percent yield = 85%.
               '111.7 g'
             ],
             correctAnswer: 2,
-            explanation: 'Fe₂O₃ is limiting: 0.626 mol → 0.626 × 2 = 1.252 mol Fe → 1.252 × 55.85 = 69.9 g Fe.'
+            explanation: '$Fe_{2}O_{3}$ is limiting: 0.626 mol → 0.626 × 2 = 1.252 mol Fe → 1.252 × 55.85 = 69.9 g Fe.'
           }
         ]
       }

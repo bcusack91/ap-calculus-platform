@@ -27,7 +27,7 @@ For constant $\\alpha$:
       content: `
 ## Worked Example
 
-**A wheel accelerates from rest at $\\alpha = 4$ rad/s². Find $\\omega$ at $t = 3$ s.**
+**A wheel accelerates from rest at $\\alpha = 4$ $rad/s^{2}$. Find $\\omega$ at $t = 3$ s.**
 
 $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
     
@@ -61,11 +61,11 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
       content: `
 **Angular Kinematics** 🧮
 
-1) A wheel starts from rest with $\\alpha = 4$ rad/s². Angular velocity (rad/s) at $t = 3$ s?
+1) A wheel starts from rest with $\\alpha = 4$ $rad/s^{2}$. Angular velocity (rad/s) at $t = 3$ s?
 
 2) Same wheel: angular displacement (rad) in 3 s?
 
-3) A wheel has $\omega_0 = 2$ rad/s, $\\alpha = 4$ rad/s². Find $\\omega$ (rad/s) at $t = 2$ s.
+3) A wheel has $\omega_0 = 2$ rad/s, $\\alpha = 4$ $rad/s^{2}$. Find $\\omega$ (rad/s) at $t = 2$ s.
     
     `,
       exercise: {

@@ -7,7 +7,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'Pressure is defined as:',
     options: ['Force times area', 'Force divided by area', 'Mass divided by volume', 'Energy per unit volume'],
     correctIndex: 1,
-    explanation: 'Pressure $P = F/A$, measured in pascals (Pa = N/m²).',
+    explanation: 'Pressure $P = F/A$, measured in pascals (Pa = $N/m^{2}$).',
     partNumber: 1,
     partTitle: 'Pressure Basics',
   },
@@ -33,7 +33,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'fp-ent-2b',
-    question: 'A diver descends $10$ m in fresh water ($\\rho = 1000$ kg/m³). The gauge pressure increase is:',
+    question: 'A diver descends $10$ m in fresh water ($\\rho = 1000$ $kg/m^{3}$). The gauge pressure increase is:',
     options: ['$9800$ Pa', '$98000$ Pa', '$980$ Pa', '$9.8 \\times 10^6$ Pa'],
     correctIndex: 1,
     explanation: 'Gauge pressure increase = $\\rho gh = 1000 \\times 9.8 \\times 10 = 98{,}000$ Pa ≈ 1 atm.',
@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'fp-ent-3b',
-    question: 'A hydraulic lift has pistons of area $0.01$ m² and $1$ m². If $100$ N is applied to the small piston, the force on the large piston is:',
+    question: 'A hydraulic lift has pistons of area $0.01$ $m^{2}$ and $1$ $m^{2}$. If $100$ N is applied to the small piston, the force on the large piston is:',
     options: ['$100$ N', '$1000$ N', '$10{,}000$ N', '$1$ N'],
     correctIndex: 2,
     explanation: '$F_2 = F_1 (A_2/A_1) = 100(1/0.01) = 10{,}000$ N. The hydraulic system multiplies force by the area ratio.',

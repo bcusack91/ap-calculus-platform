@@ -98,7 +98,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-2-capacitors',
-    question: 'Two capacitors C₁ = 3 μF and C₂ = 6 μF are connected in parallel. The equivalent capacitance is',
+    question: 'Two capacitors $C_{1}$ = 3 μF and $C_{2}$ = 6 μF are connected in parallel. The equivalent capacitance is',
     options: ['$2$ μF', '$4.5$ μF', '$9$ μF', '$18$ μF'],
     correctAnswer: 2,
     explanation: 'Parallel capacitors add: $C = C_1 + C_2 = 9$ μF.',
@@ -356,7 +356,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-induction',
-    question: 'A circular loop of area 0.10 m² is in a magnetic field $B(t) = 2t$ T (perpendicular to loop). The induced EMF magnitude is',
+    question: 'A circular loop of area 0.10 $m^{2}$ is in a magnetic field $B(t) = 2t$ T (perpendicular to loop). The induced EMF magnitude is',
     options: ['$0.10$ V', '$0.20$ V', '$2.0$ V', '$0.50$ V'],
     correctAnswer: 1,
     explanation: '$\\Phi = BA = (2t)(0.10) = 0.20t$. $|\\epsilon| = |d\\Phi/dt| = 0.20$ V (constant).',

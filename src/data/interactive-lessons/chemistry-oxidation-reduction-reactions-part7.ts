@@ -59,7 +59,7 @@ $$\\boxed{\\text{Anode} | \\text{Anode ion} || \\text{Cathode ion} | \\text{Cath
 
 Example: $\\text{Zn}(s) | \\text{Zn}^{2+}(aq) || \\text{Cu}^{2+}(aq) | \\text{Cu}(s)$
 
-This represents: Zn is oxidized at the anode, Cu²⁺ is reduced at the cathode.
+This represents: Zn is oxidized at the anode, $Cu^{2+}$ is reduced at the cathode.
       `
     },
     {
@@ -119,7 +119,7 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
       exercise: {
         questions: [
           {
-            question: 'In a galvanic cell made from Zn/Zn²⁺ and Cu/Cu²⁺ half-cells, the zinc electrode is the:',
+            question: 'In a galvanic cell made from $Zn/Zn^{2+}$ and $Cu/Cu^{2+}$ half-cells, the zinc electrode is the:',
             options: [
               'Cathode (reduction occurs)',
               'Anode (oxidation occurs)',
@@ -127,10 +127,10 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
               'It depends on concentration'
             ],
             correctAnswer: 1,
-            explanation: 'Zn is more active than Cu (more negative E°). Zn is oxidized (Zn → Zn²⁺ + 2e⁻) at the anode. Cu²⁺ is reduced (Cu²⁺ + 2e⁻ → Cu) at the cathode.'
+            explanation: 'Zn is more active than Cu (more negative E°). Zn is oxidized (Zn → $Zn^{2+}$ + $2e^{-}$) at the anode. $Cu^{2+}$ is reduced ($Cu^{2+}$ + $2e^{-}$ → Cu) at the cathode.'
           },
           {
-            question: 'Calculate $E^\\circ_{\\text{cell}}$ for a galvanic cell: Zn | Zn²⁺ || Cu²⁺ | Cu. Given: $E^\\circ_{\\text{Cu}} = +0.34$ V, $E^\\circ_{\\text{Zn}} = -0.76$ V.',
+            question: 'Calculate $E^\\circ_{\\text{cell}}$ for a galvanic cell: Zn | $Zn^{2+}$ || $Cu^{2+}$ | Cu. Given: $E^\\circ_{\\text{Cu}} = +0.34$ V, $E^\\circ_{\\text{Zn}} = -0.76$ V.',
             options: [
               '+0.42 V',
               '+1.10 V',
@@ -171,13 +171,13 @@ Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/
       content: `
 **Cell Potential Calculations** 🧮
 
-Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²⁺/Cu = +0.34 V
+Use the reduction potentials: $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.45 V, $Cu^{2+}/Cu$ = +0.34 V
 
-**1)** Calculate $E^\\circ_{\\text{cell}}$ for Fe | Fe²⁺ || Ag⁺ | Ag (in V, to 3 significant figures)
+**1)** Calculate $E^\\circ_{\\text{cell}}$ for Fe | $Fe^{2+}$ || $Ag^{+}$ | Ag (in V, to 3 significant figures)
 
-**2)** Calculate $E^\\circ_{\\text{cell}}$ for Fe | Fe²⁺ || Cu²⁺ | Cu (in V, to 3 significant figures)
+**2)** Calculate $E^\\circ_{\\text{cell}}$ for Fe | $Fe^{2+}$ || $Cu^{2+}$ | Cu (in V, to 3 significant figures)
 
-**3)** Is the cell Cu | Cu²⁺ || Fe²⁺ | Fe spontaneous? Type **yes** or **no**.
+**3)** Is the cell Cu | $Cu^{2+}$ || $Fe^{2+}$ | Fe spontaneous? Type **yes** or **no**.
       `,
       exercise: {
         boxes: 3,
@@ -229,7 +229,7 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
       exercise: {
         questions: [
           {
-            question: 'Balance in acidic solution: MnO₄⁻ + Sn²⁺ → Mn²⁺ + Sn⁴⁺. What is the coefficient of Sn²⁺ in the balanced equation?',
+            question: 'Balance in acidic solution: $MnO_{4}^{-}$ + $Sn^{2+}$ → $Mn^{2+}$ + $Sn^{4+}$. What is the coefficient of $Sn^{2+}$ in the balanced equation?',
             options: [
               '2',
               '3',
@@ -237,10 +237,10 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
               '5'
             ],
             correctAnswer: 3,
-            explanation: 'Reduction: MnO₄⁻ → Mn²⁺ gains 5e⁻ (Mn: +7 → +2). Oxidation: Sn²⁺ → Sn⁴⁺ loses 2e⁻. LCM(5,2) = 10. Multiply reduction by 2: 2MnO₄⁻. Multiply oxidation by 5: 5Sn²⁺. Balanced: 2MnO₄⁻ + 5Sn²⁺ + 16H⁺ → 2Mn²⁺ + 5Sn⁴⁺ + 8H₂O. Coefficient of Sn²⁺ = 5.'
+            explanation: 'Reduction: $MnO_{4}^{-}$ → $Mn^{2+}$ gains $5e^{-}$ (Mn: +7 → +2). Oxidation: $Sn^{2+}$ → $Sn^{4+}$ loses $2e^{-}$. LCM(5,2) = 10. Multiply reduction by 2: $2MnO_{4}^{-}$. Multiply oxidation by 5: $5Sn^{2+}$. Balanced: $2MnO_{4}^{-}$ + $5Sn^{2+}$ + $16H^{+}$ → $2Mn^{2+}$ + $5Sn^{4+}$ + $8H_{2}O$. Coefficient of $Sn^{2+}$ = 5.'
           },
           {
-            question: 'A strip of copper is placed in a solution of AgNO₃. Which statement is true?',
+            question: 'A strip of copper is placed in a solution of $AgNO_{3}$. Which statement is true?',
             options: [
               'No reaction occurs because copper is less active than silver',
               'Silver crystals form on the copper strip and the solution turns blue',
@@ -248,7 +248,7 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
               'Both metals dissolve into solution'
             ],
             correctAnswer: 1,
-            explanation: 'Cu is above Ag in the activity series. Cu(s) + 2Ag⁺(aq) → Cu²⁺(aq) + 2Ag(s). Silver deposits on the copper strip (shiny crystals), and Cu²⁺ ions make the solution turn blue.'
+            explanation: 'Cu is above Ag in the activity series. Cu(s) + $2Ag^{+}(aq)$ → $Cu^{2+}(aq)$ + 2Ag(s). Silver deposits on the copper strip (shiny crystals), and $Cu^{2+}$ ions make the solution turn blue.'
           }
         ]
       }
@@ -262,7 +262,7 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
       exercise: {
         questions: [
           {
-            question: 'In the reaction: 2Al(s) + 3Cu²⁺(aq) → 2Al³⁺(aq) + 3Cu(s), how many total electrons are transferred?',
+            question: 'In the reaction: 2Al(s) + $3Cu^{2+}(aq)$ → $2Al^{3+}(aq)$ + 3Cu(s), how many total electrons are transferred?',
             options: [
               '2',
               '3',
@@ -270,7 +270,7 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
               '9'
             ],
             correctAnswer: 2,
-            explanation: 'Each Al loses 3e⁻ × 2 Al = 6e⁻ total lost. Each Cu²⁺ gains 2e⁻ × 3 Cu²⁺ = 6e⁻ total gained. Six electrons are transferred in the balanced equation.'
+            explanation: 'Each Al loses $3e^{-}$ × 2 Al = $6e^{-}$ total lost. Each $Cu^{2+}$ gains $2e^{-}$ × 3 $Cu^{2+}$ = $6e^{-}$ total gained. Six electrons are transferred in the balanced equation.'
           },
           {
             question: 'Which of the following best explains why redox reactions are fundamental to electrochemistry?',

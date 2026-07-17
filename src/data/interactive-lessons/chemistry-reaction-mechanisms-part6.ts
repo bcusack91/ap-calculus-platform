@@ -51,8 +51,8 @@ $$\\boxed{\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}}$$
           {
             question: 'What is the intermediate in this mechanism?',
             options: [
-              'O₃',
-              'O₂',
+              '$O_{3}$',
+              '$O_{2}$',
               'O (oxygen atom)',
               'There is no intermediate'
             ],
@@ -60,26 +60,26 @@ $$\\boxed{\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}}$$
             explanation: 'O is produced in Step 1 and consumed in Step 2. It does not appear in the overall equation. It is the reaction intermediate.'
           },
           {
-            question: 'The rate law from the slow step is rate = k₂[O][O₃]. After eliminating [O] using pre-equilibrium, the rate law becomes:',
+            question: 'The rate law from the slow step is rate = $k_{2}$[O][$O_{3}$]. After eliminating [O] using pre-equilibrium, the rate law becomes:',
             options: [
-              'rate = k[O₃][O₂]',
-              'rate = k[O₃]²/[O₂]',
-              'rate = k[O₃]²[O₂]',
-              'rate = k[O₃]'
+              'rate = k[$O_{3}$][$O_{2}$]',
+              'rate = k[$O_{3}$]$ {}^{2}$/[$O_{2}$]',
+              'rate = k[$O_{3}$]$ {}^{2}$[$O_{2}$]',
+              'rate = k[$O_{3}$]'
             ],
             correctAnswer: 1,
-            explanation: 'Step 1 equilibrium: Keq = [O₂][O]/[O₃] → [O] = Keq[O₃]/[O₂]. Substituting: rate = k₂ × Keq[O₃]/[O₂] × [O₃] = k_obs[O₃]²/[O₂]. This matches the experimental rate law!'
+            explanation: 'Step 1 equilibrium: Keq = [$O_{2}$][O]/[$O_{3}$] → [O] = Keq[$O_{3}$]/[$O_{2}$]. Substituting: rate = $k_{2}$ × Keq[$O_{3}$]/[$O_{2}$] × [$O_{3}$] = k_obs[$O_{3}$]$ {}^{2}$/[$O_{2}$]. This matches the experimental rate law!'
           },
           {
-            question: 'The negative order in [O₂] means:',
+            question: 'The negative order in [$O_{2}$] means:',
             options: [
-              'O₂ speeds up the reaction',
-              'O₂ is not involved in the reaction',
-              'Adding O₂ slows down the reaction',
-              'O₂ is a catalyst'
+              '$O_{2}$ speeds up the reaction',
+              '$O_{2}$ is not involved in the reaction',
+              'Adding $O_{2}$ slows down the reaction',
+              '$O_{2}$ is a catalyst'
             ],
             correctAnswer: 2,
-            explanation: '[O₂] in the denominator means rate ∝ 1/[O₂]. Adding O₂ pushes Step 1 equilibrium back toward O₃ (Le Chatelier\'s), reducing [O] and slowing the reaction.'
+            explanation: '[$O_{2}$] in the denominator means rate ∝ 1/[$O_{2}$]. Adding $O_{2}$ pushes Step 1 equilibrium back toward $O_{3}$ (Le Chatelier\'s), reducing [O] and slowing the reaction.'
           }
         ]
       }
@@ -109,7 +109,7 @@ where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
         correctAnswers: ['ES', 'E', 'E,S'],
         hint1: 'ES is produced in Step 1 and consumed in Step 2 → intermediate.',
         hint2: 'E is consumed in Step 1 and regenerated in Step 2 → catalyst (enzyme).',
-        hint3: 'Rate = k₂[ES]. From equilibrium: [ES] = Keq[E][S]. So Rate = k₂Keq[E][S] = k_obs[E][S].',
+        hint3: 'Rate = $k_{2}$[ES]. From equilibrium: [ES] = Keq[E][S]. So Rate = $k_{2}Keq$[E][S] = k_obs[E][S].',
         explanation: '1) ES is the intermediate. 2) E (enzyme) is the catalyst. 3) Rate = k_obs[E][S]. This is the simplified Michaelis-Menten model.'
       }
     },
@@ -119,7 +119,7 @@ where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
       content: `
 ## ⚖️ Problem 3: Comparing Mechanisms
 
-> **Problem:** Compare mechanisms A and B for H₂O₂ decomposition and determine which matches the experimental rate law Rate = $k[\\text{H}_2\\text{O}_2][\\text{I}^-]$.
+> **Problem:** Compare mechanisms A and B for $H_{2}O_{2}$ decomposition and determine which matches the experimental rate law Rate = $k[\\text{H}_2\\text{O}_2][\\text{I}^-]$.
 
 **Overall:** $2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$
 
@@ -146,26 +146,26 @@ where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
         dropdowns: [
           {
             label: 'Mechanism A: rate law from slow step',
-            options: ['rate = k[H₂O₂]', 'rate = k[H₂O₂][I⁻]', 'rate = k[IO⁻][H₂O₂]', 'rate = k[I⁻]']
+            options: ['rate = k[$H_{2}O_{2}$]', 'rate = k[$H_{2}O_{2}$][$I^{-}$]', 'rate = k[$IO^{-}$][$H_{2}O_{2}$]', 'rate = k[$I^{-}$]']
           },
           {
             label: 'Mechanism B: rate law from slow step',
-            options: ['rate = k[H₂O₂]', 'rate = k[H₂O₂][I⁻]', 'rate = k[O][H₂O₂]', 'rate = k[H₂O₂]²']
+            options: ['rate = k[$H_{2}O_{2}$]', 'rate = k[$H_{2}O_{2}$][$I^{-}$]', 'rate = k[O][$H_{2}O_{2}$]', 'rate = k[$H_{2}O_{2}$]$ {}^{2}$']
           },
           {
             label: 'Which mechanism matches the experimental rate law?',
             options: ['A only', 'B only', 'Both A and B', 'Neither']
           },
           {
-            label: 'In Mechanism A, I⁻ is a(n)',
+            label: 'In Mechanism A, $I^{-}$ is a(n)',
             options: ['reactant', 'product', 'intermediate', 'catalyst']
           }
         ],
-        correctAnswers: ['rate = k[H₂O₂][I⁻]', 'rate = k[H₂O₂]', 'A only', 'catalyst'],
-        hint1: 'Mechanism A slow step: H₂O₂ + I⁻ → ... Rate = k[H₂O₂][I⁻].',
-        hint2: 'Mechanism B slow step: H₂O₂ → ... Rate = k[H₂O₂] (unimolecular).',
-        hint3: 'Experimental rate = k[H₂O₂][I⁻] → matches A, not B.',
-        explanation: 'A: rate = k[H₂O₂][I⁻] ✓ (matches experiment). B: rate = k[H₂O₂] ✗ (missing [I⁻]). Only A is valid. In A, I⁻ is consumed in Step 1 and regenerated in Step 2 = catalyst.'
+        correctAnswers: ['rate = k[$H_{2}O_{2}$][$I^{-}$]', 'rate = k[$H_{2}O_{2}$]', 'A only', 'catalyst'],
+        hint1: 'Mechanism A slow step: $H_{2}O_{2}$ + $I^{-}$ → ... Rate = k[$H_{2}O_{2}$][$I^{-}$].',
+        hint2: 'Mechanism B slow step: $H_{2}O_{2}$ → ... Rate = k[$H_{2}O_{2}$] (unimolecular).',
+        hint3: 'Experimental rate = k[$H_{2}O_{2}$][$I^{-}$] → matches A, not B.',
+        explanation: 'A: rate = k[$H_{2}O_{2}$][$I^{-}$] ✓ (matches experiment). B: rate = k[$H_{2}O_{2}$] ✗ (missing [$I^{-}$]). Only A is valid. In A, $I^{-}$ is consumed in Step 1 and regenerated in Step 2 = catalyst.'
       }
     },
     {
@@ -189,10 +189,10 @@ If reactants start at energy = 0 kJ:
       exercise: {
         boxes: 3,
         correctAnswers: ['80', '-30', '-40'],
-        hint1: 'TS₁ = reactants + Ea₁ = 0 + 80 = 80 kJ.',
-        hint2: 'Intermediate = reactants + ΔH₁ = 0 + (−30) = −30 kJ.',
-        hint3: 'Products = reactants + ΔH₁ + ΔH₂ = 0 + (−30) + (−10) = −40 kJ.',
-        explanation: '1) TS₁ = 0 + 80 = 80 kJ. 2) Intermediate = 0 + (−30) = −30 kJ. 3) Products = 0 + (−30) + (−10) = −40 kJ. The overall ΔH = −40 kJ (exothermic).'
+        hint1: '$TS_{1}$ = reactants + $Ea_{1}$ = 0 + 80 = 80 kJ.',
+        hint2: 'Intermediate = reactants + $\\Delta H_{1}$ = 0 + (−30) = −30 kJ.',
+        hint3: 'Products = reactants + $\\Delta H_{1}$ + $\\Delta H_{2}$ = 0 + (−30) + (−10) = −40 kJ.',
+        explanation: '1) $TS_{1}$ = 0 + 80 = 80 kJ. 2) Intermediate = 0 + (−30) = −30 kJ. 3) Products = 0 + (−30) + (−10) = −40 kJ. The overall ΔH = −40 kJ (exothermic).'
       }
     },
     {
@@ -204,7 +204,7 @@ If reactants start at energy = 0 kJ:
       exercise: {
         questions: [
           {
-            question: 'The experimental rate law for a reaction is rate = k[X]²[Y]. Which mechanism is consistent?\n\n(I) X + X → Z (slow); Z + Y → P (fast)\n(II) X + Y ⇌ Z (fast); Z + X → P (slow)',
+            question: 'The experimental rate law for a reaction is rate = k[X]$ {}^{2}$[Y]. Which mechanism is consistent?\n\n(I) X + X → Z (slow); Z + Y → P (fast)\n(II) X + Y ⇌ Z (fast); Z + X → P (slow)',
             options: [
               'I only',
               'II only',
@@ -212,7 +212,7 @@ If reactants start at energy = 0 kJ:
               'Neither'
             ],
             correctAnswer: 2,
-            explanation: 'I: Step 1 slow → rate = k[X]² ✗ (missing [Y]). II: Step 2 slow → rate = k₂[Z][X]. [Z] = Keq[X][Y]. Rate = k_obs[X]²[Y] ✓. Only II matches.'
+            explanation: 'I: Step 1 slow → rate = k[X]$ {}^{2}$ ✗ (missing [Y]). II: Step 2 slow → rate = $k_{2}$[Z][X]. [Z] = Keq[X][Y]. Rate = k_obs[X]$ {}^{2}$[Y] ✓. Only II matches.'
           },
           {
             question: 'A negative-order dependence on a product (like rate ∝ 1/[P]) typically indicates:',

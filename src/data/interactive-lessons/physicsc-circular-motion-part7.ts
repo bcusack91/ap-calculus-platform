@@ -66,15 +66,15 @@ $$= \\sqrt{2000 \\times 0.931} = \\sqrt{1862} \\approx 43.1 \\text{ m/s} \\appro
     {
       id: 'cm7-mcq2',
       type: 'mcq' as const,
-      question: 'A particle moves along a circle. At a certain instant, $|\\vec{a}| = 10$ m/s² and the acceleration makes a $60°$ angle with the radius. What is $a_c$?',
+      question: 'A particle moves along a circle. At a certain instant, $|\\vec{a}| = 10$ $m/s^{2}$ and the acceleration makes a $60°$ angle with the radius. What is $a_c$?',
       options: [
-        '$10\\cos 60° = 5$ m/s²',
-        '$10\\sin 60° \\approx 8.66$ m/s²',
-        '$10$ m/s²',
-        '$10\\tan 60° \\approx 17.3$ m/s²'
+        '$10\\cos 60° = 5$ $m/s^{2}$',
+        '$10\\sin 60° \\approx 8.66$ $m/s^{2}$',
+        '$10$ $m/s^{2}$',
+        '$10\\tan 60° \\approx 17.3$ $m/s^{2}$'
       ],
       correctAnswer: 0,
-      explanation: 'The angle between $\\vec{a}$ and the radial direction is $60°$. The radial component: $a_c = |\\vec{a}|\\cos 60° = 5$ m/s². The tangential component: $a_t = |\\vec{a}|\\sin 60° \\approx 8.66$ m/s².'
+      explanation: 'The angle between $\\vec{a}$ and the radial direction is $60°$. The radial component: $a_c = |\\vec{a}|\\cos 60° = 5$ $m/s^{2}$. The tangential component: $a_t = |\\vec{a}|\\sin 60° \\approx 8.66$ $m/s^{2}$.'
     },
     {
       id: 'cm7-app2',
@@ -134,7 +134,7 @@ This is about 35,800 km above Earth's surface.`
     {
       id: 'cm7-mcq5',
       type: 'mcq' as const,
-      question: 'A bucket of water swings in a vertical circle of radius 1 m. What is the minimum speed at the top so the water doesn\'t fall out? ($g = 10$ m/s²)',
+      question: 'A bucket of water swings in a vertical circle of radius 1 m. What is the minimum speed at the top so the water doesn\'t fall out? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{10} \\approx 3.16$ m/s',
         '$10$ m/s',

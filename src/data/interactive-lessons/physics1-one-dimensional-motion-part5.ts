@@ -25,7 +25,7 @@ This is one of the most elegant results in physics, first demonstrated by Galile
 ### Sign Convention (standard)
 
 Taking **upward as positive**:
-- $a = -g = -9.8$ m/s²
+- $a = -g = -9.8$ $m/s^{2}$
 - Upward velocities are **positive**
 - Downward velocities are **negative**
 
@@ -121,13 +121,13 @@ A ball is thrown upward at 19.6 m/s:
           {
             question: 'A ball is thrown straight up. At the very top of its path, its acceleration is:',
             options: [
-              '0 m/s²',
-              '9.8 m/s² upward',
-              '9.8 m/s² downward',
+              '0 $m/s^{2}$',
+              '9.8 $m/s^{2}$ upward',
+              '9.8 $m/s^{2}$ downward',
               'Changing from upward to downward'
             ],
             correctAnswer: 2,
-            explanation: 'Acceleration due to gravity is ALWAYS 9.8 m/s² downward during free fall — even at the top. The velocity is zero at the top, but the acceleration never changes.'
+            explanation: 'Acceleration due to gravity is ALWAYS 9.8 $m/s^{2}$ downward during free fall — even at the top. The velocity is zero at the top, but the acceleration never changes.'
           },
           {
             question: 'Two balls are dropped from the same height — one has mass 1 kg, the other 5 kg. Ignoring air resistance, which hits the ground first?',
@@ -138,7 +138,7 @@ A ball is thrown upward at 19.6 m/s:
               'It depends on their size'
             ],
             correctAnswer: 2,
-            explanation: 'In free fall (no air resistance), all objects fall with the same acceleration $g = 9.8$ m/s², regardless of mass. This was Galileo\'s great insight.'
+            explanation: 'In free fall (no air resistance), all objects fall with the same acceleration $g = 9.8$ $m/s^{2}$, regardless of mass. This was Galileo\'s great insight.'
           },
           {
             question: 'A ball is thrown upward at 30 m/s. How fast is it moving when it returns to the same height? (Ignore air resistance)',
@@ -160,7 +160,7 @@ A ball is thrown upward at 19.6 m/s:
       content: `
 **Free Fall Calculations** 🧮
 
-Use $g = 9.8$ m/s².
+Use $g = 9.8$ $m/s^{2}$.
 
 1) A ball is dropped from a height of 19.6 m. How long does it take to hit the ground? (in seconds)
 
@@ -195,9 +195,9 @@ Use $g = 9.8$ m/s².
           },
           {
             label: 'During free fall, the acceleration is:',
-            options: ['zero at the top', 'always 9.8 m/s² downward', 'depends on mass', 'increasing'],
+            options: ['zero at the top', 'always 9.8 $m/s^{2}$ downward', 'depends on mass', 'increasing'],
             correctIndex: 1,
-            explanation: 'Acceleration due to gravity is constant at 9.8 m/s² downward throughout the entire free fall, including at the top.'
+            explanation: 'Acceleration due to gravity is constant at 9.8 $m/s^{2}$ downward throughout the entire free fall, including at the top.'
           },
           {
             label: 'The time for a ball to go up equals the time to come down when:',
@@ -217,7 +217,7 @@ Use $g = 9.8$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A ball is thrown upward at 14.7 m/s. What is the total time it spends in the air before returning to the launch height? (Use $g = 9.8$ m/s²)',
+            question: 'A ball is thrown upward at 14.7 m/s. What is the total time it spends in the air before returning to the launch height? (Use $g = 9.8$ $m/s^{2}$)',
             options: [
               '1.5 s',
               '2.0 s',
@@ -228,7 +228,7 @@ Use $g = 9.8$ m/s².
             explanation: '$t_{\\text{up}} = v_0/g = 14.7/9.8 = 1.5$ s. Total time $= 2 \\times 1.5 = 3.0$ s.'
           },
           {
-            question: 'An object is dropped from 80 m. What is its speed just before hitting the ground? (Use $g = 10$ m/s² for simplicity)',
+            question: 'An object is dropped from 80 m. What is its speed just before hitting the ground? (Use $g = 10$ $m/s^{2}$ for simplicity)',
             options: [
               '20 m/s',
               '28 m/s',

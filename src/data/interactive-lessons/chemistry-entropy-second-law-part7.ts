@@ -82,20 +82,20 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             question: 'Which of the following processes has a NEGATIVE ΔS?',
             options: [
               'Evaporation of ethanol',
-              '2NO₂(g) → N₂O₄(g)',
+              '$2NO_{2}(g)$ → $N_{2}O_{4}(g)$',
               'Dissolving sugar in water',
-              'CaCO₃(s) → CaO(s) + CO₂(g)'
+              '$CaCO_{3}(s)$ → CaO(s) + $CO_{2}(g)$'
             ],
             correctAnswer: 1,
             explanation: '$2\\text{NO}_2(g) \\rightarrow \\text{N}_2\\text{O}_4(g)$: $\\Delta n_{\\text{gas}} = 1 - 2 = -1$. Fewer moles of gas = lower entropy. All other options increase entropy.'
           },
           {
-            question: 'The standard molar entropy of N₂(g) is 191.6 J/(mol·K). This value is NOT zero because:',
+            question: 'The standard molar entropy of $N_{2}(g)$ is 191.6 J/(mol·K). This value is NOT zero because:',
             options: [
-              'N₂ has a very high molar mass',
-              'N₂ is not in its standard state',
+              '$N_{2}$ has a very high molar mass',
+              '$N_{2}$ is not in its standard state',
               'All substances have S° > 0 at temperatures above 0 K',
-              'N₂ is a molecule, not an atom'
+              '$N_{2}$ is a molecule, not an atom'
             ],
             correctAnswer: 2,
             explanation: 'By the Third Law, S = 0 only at 0 K for a perfect crystal. At any temperature above 0 K (including standard 298 K), all substances have positive entropy. This is true for elements AND compounds alike.'

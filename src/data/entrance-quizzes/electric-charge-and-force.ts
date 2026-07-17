@@ -27,7 +27,7 @@ const questions: EntranceQuizQuestion[] = [
     question: "Coulomb's law states that the force between two charges is:",
     options: ['$F = kq_1q_2/r$', '$F = kq_1q_2/r^2$', '$F = kq_1q_2 r^2$', '$F = kq_1q_2 r$'],
     correctIndex: 1,
-    explanation: '$F = k|q_1 q_2|/r^2$, where $k = 8.99 \\times 10^9$ N·m²/C². Force is inversely proportional to $r^2$.',
+    explanation: '$F = k|q_1 q_2|/r^2$, where $k = 8.99 \\times 10^9$ $N\\cdot m^{2}/C^{2}$. Force is inversely proportional to $r^2$.',
     partNumber: 2,
     partTitle: "Coulomb's Law",
   },

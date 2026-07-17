@@ -135,13 +135,13 @@ Let's make sure you've mastered the basics before moving forward!
           {
             question: "What is the speed of light in a vacuum?",
             options: [
-              "3.0 × 10⁸ m/s",
-              "3.0 × 10⁶ m/s",
-              "3.0 × 10¹⁰ m/s",
-              "1.5 × 10⁸ m/s"
+              "$3.0 \\times 10^{8}$ m/s",
+              "$3.0 \\times 10^{6}$ m/s",
+              "$3.0 \\times 10^{10}$ m/s",
+              "$1.5 \\times 10^{8}$ m/s"
             ],
             correctAnswer: 0,
-            explanation: "The speed of light in vacuum is c = 3.0 × 10⁸ m/s (300,000 km/s), fast enough to circle Earth 7.5 times per second!"
+            explanation: "The speed of light in vacuum is c = $3.0 \\times 10^{8}$ m/s (300,000 km/s), fast enough to circle Earth 7.5 times per second!"
           },
           {
             question: "In a uniform medium like air, how does light travel?",

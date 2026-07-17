@@ -91,7 +91,7 @@ const questions: EntranceQuizQuestion[] = [
       '92% of variation is explained by x'
     ],
     correctIndex: 1,
-    explanation: 'r = 0.92 is close to 1, indicating a strong positive linear association. Note: r² (not r) gives the percent of variation explained.',
+    explanation: 'r = 0.92 is close to 1, indicating a strong positive linear association. Note: $r^{2}$ (not r) gives the percent of variation explained.',
     partNumber: 3,
     partTitle: 'Correlation Coefficient'
   },

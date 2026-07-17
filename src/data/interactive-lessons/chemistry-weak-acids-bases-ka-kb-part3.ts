@@ -227,10 +227,10 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
           },
           {
             label: 'To find pH of a weak base, you first calculate',
-            options: ['[H⁺] directly', '[OH⁻] from ICE table', 'Kₐ of the base', 'nothing — same as strong base']
+            options: ['[$H^{+}$] directly', '[$OH^{-}$] from ICE table', '$K_{a}$ of the base', 'nothing — same as strong base']
           }
         ],
-        correctAnswers: ['acidic', 'negligibly weak', '[OH⁻] from ICE table'],
+        correctAnswers: ['acidic', 'negligibly weak', '[$OH^{-}$] from ICE table'],
         hint1: '$NH_4^+$ is the conjugate acid of the weak base $NH_3$.',
         hint2: 'Strong acids dissociate completely; their conjugate bases don\'t react with water.',
         hint3: 'Weak bases produce $OH^-$, so start with $[OH^-]$.',

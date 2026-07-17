@@ -33,7 +33,7 @@ $$\\frac{Q}{t} = \\frac{kA\\Delta T}{L}$$
 Where:
 - $Q/t$ = rate of heat flow (W = J/s)
 - $k$ = thermal conductivity (W/(m·K))
-- $A$ = cross-sectional area perpendicular to heat flow (m²)
+- $A$ = cross-sectional area perpendicular to heat flow $(m^{2})$
 - $\\Delta T$ = temperature difference across the material (K or °C)
 - $L$ = thickness of the material (m)
 
@@ -101,9 +101,9 @@ $$P = \\sigma \\varepsilon A T^4$$
 
 Where:
 - $P$ = radiated power (W)
-- $\\sigma = 5.67 \\times 10^{-8}$ W/(m²·K⁴) — Stefan-Boltzmann constant
+- $\\sigma = 5.67 \\times 10^{-8}$ $W/(m^{2}\\cdot K^{4})$ — Stefan-Boltzmann constant
 - $\\varepsilon$ = emissivity (0 to 1, dimensionless)
-- $A$ = surface area (m²)
+- $A$ = surface area $(m^{2})$
 - $T$ = absolute temperature (K — must use kelvins!)
 
 ### Emissivity

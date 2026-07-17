@@ -31,17 +31,17 @@ export const chemPhotoelectronSpectroscopyPart4Data = {
       type: 'text' as const,
       content: `## 🧪 Example: Silicon (Si, Z = 14)
 
-Electron configuration: 1s² 2s² 2p⁶ 3s² 3p²
+Electron configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{2}$
 
 PES spectrum (left to right):
 
 | Peak | Height | Subshell | Type | Binding Energy |
 |------|--------|----------|------|---------------|
-| 1 | 2 | 1s² | Core | ~189 MJ/mol |
-| 2 | 2 | 2s² | Core | ~17 MJ/mol |
-| 3 | 6 | 2p⁶ | Core | ~13 MJ/mol |
-| 4 | 2 | 3s² | Valence | ~1.1 MJ/mol |
-| 5 | 2 | 3p² | Valence | ~0.8 MJ/mol |
+| 1 | 2 | $1s^{2}$ | Core | ~189 MJ/mol |
+| 2 | 2 | $2s^{2}$ | Core | ~17 MJ/mol |
+| 3 | 6 | $2p^{6}$ | Core | ~13 MJ/mol |
+| 4 | 2 | $3s^{2}$ | Valence | ~1.1 MJ/mol |
+| 5 | 2 | $3p^{2}$ | Valence | ~0.8 MJ/mol |
 
 **Key observations:**
 - The **core electrons** (1s, 2s, 2p) have binding energies ranging from ~13 to ~189 MJ/mol
@@ -81,7 +81,7 @@ In a PES spectrum, where do valence electrons appear?`,
 As you move across a period (e.g., Na → Ar), the number of **core electrons stays the same** while the number of **valence electrons increases**.
 
 For Period 3 elements:
-- All have the same core: 1s² 2s² 2p⁶ (10 core electrons)
+- All have the same core: $1s^{2}$ $2s^{2}$ $2p^{6}$ (10 core electrons)
 - Valence electrons increase: Na (1) → Mg (2) → Al (3) → Si (4) → P (5) → S (6) → Cl (7) → Ar (8)
 
 On PES spectra for these elements:
@@ -106,7 +106,7 @@ On PES spectra for these elements:
               '18'
             ],
             correctAnswer: 2,
-            explanation: 'The peaks correspond to 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁶(6). This is argon (18 electrons). The valence shell is n = 3, so the valence electrons are in the 3s and 3p subshells: 2 + 6 = 8 valence electrons. The core electrons (1s² 2s² 2p⁶) total 10.'
+            explanation: 'The peaks correspond to $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$. This is argon (18 electrons). The valence shell is n = 3, so the valence electrons are in the 3s and 3p subshells: 2 + 6 = 8 valence electrons. The core electrons $(1s^{2} 2s^{2} 2p^{6})$ total 10.'
           }
         ]
       }
@@ -122,17 +122,17 @@ On PES spectra for these elements:
           {
             label: 'How many core electrons does this atom have?',
             correctAnswer: '10',
-            explanation: 'The core electrons are in the high-binding-energy cluster: 1s²(2) + 2s²(2) + 2p⁶(6) = 10 core electrons.'
+            explanation: 'The core electrons are in the high-binding-energy cluster: $1s^{2}(2)$ + $2s^{2}(2)$ + $2p^{6}(6)$ = 10 core electrons.'
           },
           {
             label: 'How many valence electrons does this atom have?',
             correctAnswer: '5',
-            explanation: 'The valence electrons are in the low-binding-energy peaks: 3s²(2) + 3p³(3) = 5 valence electrons.'
+            explanation: 'The valence electrons are in the low-binding-energy peaks: $3s^{2}(2)$ + $3p^{3}(3)$ = 5 valence electrons.'
           },
           {
             label: 'What element is this? (chemical symbol)',
             correctAnswer: 'P',
-            explanation: 'Total electrons = 10 + 5 = 15 → phosphorus (P). Configuration: 1s² 2s² 2p⁶ 3s² 3p³.'
+            explanation: 'Total electrons = 10 + 5 = 15 → phosphorus (P). Configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$.'
           }
         ]
       }
@@ -142,7 +142,7 @@ On PES spectra for these elements:
       type: 'dropdown-select' as const,
       content: `### ✏️ Conceptual Understanding
 
-Consider the PES spectrum of oxygen (O, Z = 8) with configuration 1s² 2s² 2p⁴.`,
+Consider the PES spectrum of oxygen (O, Z = 8) with configuration $1s^{2}$ $2s^{2}$ $2p^{4}$.`,
       exercise: {
         dropdowns: [
           {
@@ -155,7 +155,7 @@ Consider the PES spectrum of oxygen (O, Z = 8) with configuration 1s² 2s² 2p�
             text: 'Which electrons in oxygen are classified as core electrons?',
             options: ['1s only', '1s and 2s', '2s and 2p', '1s, 2s, and 2p'],
             correctIndex: 0,
-            explanation: 'For oxygen in Period 2, the core electrons are only the 1s² electrons. The 2s² and 2p⁴ electrons are all valence electrons because they are in the outermost principal energy level (n = 2).'
+            explanation: 'For oxygen in Period 2, the core electrons are only the $1s^{2}$ electrons. The $2s^{2}$ and $2p^{4}$ electrons are all valence electrons because they are in the outermost principal energy level (n = 2).'
           },
           {
             text: 'Which peak would be the tallest?',
@@ -185,11 +185,11 @@ Consider the PES spectrum of oxygen (O, Z = 8) with configuration 1s² 2s² 2p�
 
 ### 📌 Core Electrons by Period
 
-| Period | Core Configuration | # Core e⁻ |
+| Period | Core Configuration | # Core $e^{-}$ |
 |--------|-------------------|------------|
-| 2 | 1s² | 2 |
-| 3 | 1s² 2s² 2p⁶ | 10 |
-| 4 | 1s² 2s² 2p⁶ 3s² 3p⁶ | 18 |
+| 2 | $1s^{2}$ | 2 |
+| 3 | $1s^{2}$ $2s^{2}$ $2p^{6}$ | 10 |
+| 4 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ | 18 |
 
 > 💡 A **large gap** in binding energy on the spectrum often marks the boundary between core and valence electrons.
 

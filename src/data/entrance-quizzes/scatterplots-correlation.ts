@@ -42,7 +42,7 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'Mean, median, mode, and range',
       'Direction, form, strength, and unusual features',
-      'Slope, intercept, and r²',
+      'Slope, intercept, and $r^{2}$',
       'Hypotheses and p-value'
     ],
     correctIndex: 1,
@@ -143,7 +143,7 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'A larger sample size',
       'A well-designed controlled experiment',
-      'A regression analysis with r² > 0.90',
+      'A regression analysis with $r^{2}$ > 0.90',
       'Replication of the correlation study'
     ],
     correctIndex: 1,
@@ -168,7 +168,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'sc-ent-6b',
-    question: 'If r² = 0.81, how do you interpret this value?',
+    question: 'If $r^{2}$ = 0.81, how do you interpret this value?',
     options: [
       '81% of the data points fall on the regression line',
       'The correlation is 0.81',
@@ -176,7 +176,7 @@ const questions: EntranceQuizQuestion[] = [
       'The slope of the regression line is 0.81'
     ],
     correctIndex: 2,
-    explanation: 'r² = 0.81 means approximately 81% of the variability in the response variable y is accounted for by the linear relationship with the explanatory variable x.',
+    explanation: '$r^{2}$ = 0.81 means approximately 81% of the variability in the response variable y is accounted for by the linear relationship with the explanatory variable x.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },

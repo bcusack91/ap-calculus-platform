@@ -235,7 +235,7 @@ For: $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, 
       exercise: {
         questions: [
           {
-            question: 'In the Haber process ($\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$, $\\Delta H = -92$ kJ), what conditions favor maximum NH₃ yield?',
+            question: 'In the Haber process ($\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3$, $\\Delta H = -92$ kJ), what conditions favor maximum $NH_{3}$ yield?',
             options: [
               'High pressure, high temperature',
               'High pressure, low temperature',
@@ -243,7 +243,7 @@ For: $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, 
               'Low pressure, low temperature'
             ],
             correctAnswer: 1,
-            explanation: 'High pressure shifts right (4 mol gas → 2 mol gas). Low temperature shifts right (exothermic → heat is a product, removing heat favors products). So high P + low T maximizes NH₃.'
+            explanation: 'High pressure shifts right (4 mol gas → 2 mol gas). Low temperature shifts right (exothermic → heat is a product, removing heat favors products). So high P + low T maximizes $NH_{3}$.'
           },
           {
             question: 'If volume is halved for $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, the equilibrium:',

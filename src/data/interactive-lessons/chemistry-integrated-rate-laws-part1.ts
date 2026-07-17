@@ -87,10 +87,10 @@ $$y = mx + b$$
               'ln[A] vs t',
               '1/[A] vs t',
               '[A] vs t',
-              '[A]² vs t'
+              '[A]$ {}^{2}$ vs t'
             ],
             correctAnswer: 2,
-            explanation: 'The zero-order integrated rate law is [A] = −kt + [A]₀, which is linear in [A] vs t. The slope gives −k.'
+            explanation: 'The zero-order integrated rate law is [A] = −kt + [A]$ {}_{0}$, which is linear in [A] vs t. The slope gives −k.'
           },
           {
             question: 'The slope of the [A] vs t plot for a zero-order reaction is:',
@@ -101,7 +101,7 @@ $$y = mx + b$$
               '−1/k'
             ],
             correctAnswer: 1,
-            explanation: '[A] = −kt + [A]₀ has slope = −k. Since k is always positive, the slope is always negative (concentration decreases).'
+            explanation: '[A] = −kt + [A]$ {}_{0}$ has slope = −k. Since k is always positive, the slope is always negative (concentration decreases).'
           },
           {
             question: 'A zero-order reaction has [A] = 0.80 M at t = 0 and [A] = 0.40 M at t = 100 s. What is k?',
@@ -109,10 +109,10 @@ $$y = mx + b$$
               '0.004 M/s',
               '0.008 M/s',
               '0.40 M/s',
-              '4.0 × 10⁻³ s⁻¹'
+              '$4.0 \\times 10^{-3}$ $s^{-1}$'
             ],
             correctAnswer: 0,
-            explanation: '[A] = −kt + [A]₀. 0.40 = −k(100) + 0.80. k(100) = 0.40. k = 0.004 M/s. Note the units are M/s for zero-order.'
+            explanation: '[A] = −kt + [A]$ {}_{0}$. 0.40 = −k(100) + 0.80. k(100) = 0.40. k = 0.004 M/s. Note the units are M/s for zero-order.'
           }
         ]
       }
@@ -174,7 +174,7 @@ Each successive half-life is exactly **half** the duration of the previous one.
             options: ['the same', 'longer', 'shorter', 'impossible to predict']
           },
           {
-            label: 'A zero-order reaction with [A]₀ = 1.0 M and k = 0.10 M/s reaches [A] = 0 at',
+            label: 'A zero-order reaction with [A]$ {}_{0}$ = 1.0 M and k = 0.10 M/s reaches [A] = 0 at',
             options: ['t = 5 s', 't = 10 s', 't = 20 s', 'never']
           },
           {
@@ -183,10 +183,10 @@ Each successive half-life is exactly **half** the duration of the previous one.
           }
         ],
         correctAnswers: ['doubles the half-life', 'shorter', 't = 10 s', 'a catalyst surface is saturated'],
-        hint1: 't₁/₂ = [A]₀/(2k) — directly proportional to [A]₀.',
+        hint1: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ — directly proportional to [A]$ {}_{0}$.',
         hint2: 'Each successive half-life starts with half the concentration.',
-        hint3: 't = [A]₀/k = 1.0/0.10 = 10 s.',
-        explanation: 'Zero-order: t₁/₂ ∝ [A]₀, so doubling [A]₀ doubles t₁/₂. Each successive half-life is shorter. Complete consumption: t = [A]₀/k = 10 s. Zero-order occurs when enzyme/catalyst sites are saturated.'
+        hint3: 't = [A]$ {}_{0}/k$ = 1.0/0.10 = 10 s.',
+        explanation: 'Zero-order: $t_{1}/_{2}$ ∝ [A]$ {}_{0}$, so doubling [A]$ {}_{0}$ doubles $t_{1}/_{2}$. Each successive half-life is shorter. Complete consumption: t = [A]$ {}_{0}/k$ = 10 s. Zero-order occurs when enzyme/catalyst sites are saturated.'
       }
     },
     {
@@ -206,10 +206,10 @@ A zero-order reaction has $k = 5.0 \\times 10^{-3}$ M/s and $[A]_0 = 0.60$ M.
       exercise: {
         boxes: 3,
         correctAnswers: ['0.40', '60', '120'],
-        hint1: '[A] = −kt + [A]₀ = −(5.0e-3)(40) + 0.60 = −0.20 + 0.60 = 0.40.',
-        hint2: 't₁/₂ = [A]₀/(2k) = 0.60/(2 × 5.0e-3) = 0.60/0.010 = 60 s.',
-        hint3: 't = [A]₀/k = 0.60/5.0e-3 = 120 s.',
-        explanation: '1) [A] = −(0.005)(40) + 0.60 = 0.40 M. 2) t₁/₂ = 0.60/(2 × 0.005) = 60 s. 3) t = 0.60/0.005 = 120 s.'
+        hint1: '[A] = −kt + [A]$ {}_{0}$ = −(5.0e-3)(40) + 0.60 = −0.20 + 0.60 = 0.40.',
+        hint2: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ = 0.60/(2 × 5.0e-3) = 0.60/0.010 = 60 s.',
+        hint3: 't = [A]$ {}_{0}/k$ = 0.60/5.0e-3 = 120 s.',
+        explanation: '1) [A] = −(0.005)(40) + 0.60 = 0.40 M. 2) $t_{1}/_{2}$ = 0.60/(2 × 0.005) = 60 s. 3) t = 0.60/0.005 = 120 s.'
       }
     },
     {
@@ -235,7 +235,7 @@ For zero-order, the $[A]$ vs $t$ plot will be linear with slope $= -k$.
 
 ### Data Test
 
-| $t$ (s) | $[A]$ (M) | $\\ln[A]$ | $1/[A]$ (M⁻¹) |
+| $t$ (s) | $[A]$ (M) | $\\ln[A]$ | $1/[A]$ $(M^{-1})$ |
 |---------|----------|---------|--------------|
 | 0 | 0.500 | −0.693 | 2.00 |
 | 10 | 0.450 | −0.799 | 2.22 |
@@ -256,7 +256,7 @@ $k = 0.050/10 = 0.005$ M/s
       exercise: {
         questions: [
           {
-            question: 'A zero-order reaction has k = 0.020 M/s and [A]₀ = 1.00 M. After 20 s, [A] is:',
+            question: 'A zero-order reaction has k = 0.020 M/s and [A]$ {}_{0}$ = 1.00 M. After 20 s, [A] is:',
             options: [
               '0.20 M',
               '0.40 M',
@@ -264,7 +264,7 @@ $k = 0.050/10 = 0.005$ M/s
               '0.80 M'
             ],
             correctAnswer: 2,
-            explanation: '[A] = −kt + [A]₀ = −(0.020)(20) + 1.00 = −0.40 + 1.00 = 0.60 M.'
+            explanation: '[A] = −kt + [A]$ {}_{0}$ = −(0.020)(20) + 1.00 = −0.40 + 1.00 = 0.60 M.'
           },
           {
             question: 'Which statement about zero-order reactions is TRUE?',
@@ -275,7 +275,7 @@ $k = 0.050/10 = 0.005$ M/s
               'Rate increases as concentration decreases'
             ],
             correctAnswer: 2,
-            explanation: 'Zero-order: [A] decreases linearly until it hits zero at t = [A]₀/k. This is unique — first and second-order reactions theoretically never reach [A] = 0.'
+            explanation: 'Zero-order: [A] decreases linearly until it hits zero at t = [A]$ {}_{0}/k$. This is unique — first and second-order reactions theoretically never reach [A] = 0.'
           }
         ]
       }

@@ -121,7 +121,7 @@ $$\\boxed{K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b}$$
               '$\\frac{[\\text{Ag}^+]^2[\\text{CrO}_4^{2-}]}{[\\text{Ag}_2\\text{CrO}_4]}$'
             ],
             correctAnswer: 1,
-            explanation: '$K_{sp} = [\\text{Ag}^+]^2[\\text{CrO}_4^{2-}]$. The coefficient 2 for Ag⁺ becomes an exponent. The solid is excluded.'
+            explanation: '$K_{sp} = [\\text{Ag}^+]^2[\\text{CrO}_4^{2-}]$. The coefficient 2 for $Ag^{+}$ becomes an exponent. The solid is excluded.'
           },
           {
             question: 'If $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$ and $K_{sp}(\\text{AgBr}) = 5.0 \\times 10^{-13}$, which is more soluble?',
@@ -156,7 +156,7 @@ Write the $K_{sp}$ expression for each compound. Count the total number of ion c
         correctAnswers: ['2', '2', '2'],
         hint1: '$K_{sp} = [\\text{Ba}^{2+}][\\text{SO}_4^{2-}]$ — two terms.',
         hint2: '$K_{sp} = [\\text{Pb}^{2+}][\\text{IO}_3^-]^2$ — exponent matches the coefficient.',
-        hint3: '$K_{sp} = [\\text{Bi}^{3+}]^2[\\text{S}^{2-}]^3$ — 2 Bi³⁺ ions produced.',
+        hint3: '$K_{sp} = [\\text{Bi}^{3+}]^2[\\text{S}^{2-}]^3$ — 2 $Bi^{3+}$ ions produced.',
         explanation: '1) $K_{sp} = [\\text{Ba}^{2+}][\\text{SO}_4^{2-}]$ has 2 ion terms. 2) The coefficient 2 becomes exponent 2 on $[\\text{IO}_3^-]$. 3) The coefficient 2 becomes exponent 2 on $[\\text{Bi}^{3+}]$.'
       }
     },
@@ -214,7 +214,7 @@ Write the $K_{sp}$ expression for each compound. Count the total number of ion c
               '$\\frac{[\\text{Ca}^{2+}][\\text{OH}^-]^2}{[\\text{Ca(OH)}_2]}$'
             ],
             correctAnswer: 1,
-            explanation: '$K_{sp} = [\\text{Ca}^{2+}][\\text{OH}^-]^2$. The coefficient 2 for OH⁻ becomes an exponent. The solid is excluded.'
+            explanation: '$K_{sp} = [\\text{Ca}^{2+}][\\text{OH}^-]^2$. The coefficient 2 for $OH^{-}$ becomes an exponent. The solid is excluded.'
           },
           {
             question: 'Which statement about $K_{sp}$ is FALSE?',

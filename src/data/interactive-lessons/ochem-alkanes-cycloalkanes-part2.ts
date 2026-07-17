@@ -97,12 +97,12 @@ When the rotating bond carries larger groups, **steric strain** joins torsional 
 
 As we rotate the back carbon through $360^\\circ$, four named conformers recur:
 
-| Conformer | Dihedral (CH₃–CH₃) | Strain present | Relative energy |
+| Conformer | Dihedral ($CH_{3}$–$CH_{3}$) | Strain present | Relative energy |
 |-----------|--------------------|----------------|-----------------|
 | **Anti** | $180^\\circ$ | none (global minimum) | $0$ |
 | **Gauche** | $60^\\circ$ | steric (methyls close) | $\\approx 0.9\\;\\text{kcal/mol}$ |
-| **Eclipsed** (CH₃/H) | $120^\\circ$ | torsional | $\\approx 3.4\\;\\text{kcal/mol}$ |
-| **Totally eclipsed** (CH₃/CH₃) | $0^\\circ$ | torsional + steric | $\\approx 4.5\\text{–}6\\;\\text{kcal/mol}$ |
+| **Eclipsed** $(CH_{3}/H)$ | $120^\\circ$ | torsional | $\\approx 3.4\\;\\text{kcal/mol}$ |
+| **Totally eclipsed** $(CH_{3}/CH_{3})$ | $0^\\circ$ | torsional + steric | $\\approx 4.5\\text{–}6\\;\\text{kcal/mol}$ |
 
 **Anti** ($180^\\circ$) is the most stable: the two methyl groups are as far apart as possible (staggered *and* anti), so neither steric nor torsional strain is significant.
 

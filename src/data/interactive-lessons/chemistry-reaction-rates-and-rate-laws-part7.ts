@@ -78,16 +78,16 @@ The decomposition of $\\text{N}_2\\text{O}_5$ was studied at 45°C:
 
 $2\\text{N}_2\\text{O}_5(g) \\rightarrow 4\\text{NO}_2(g) + \\text{O}_2(g)$
 
-| Exp | [N₂O₅]₀ (M) | Initial Rate (M/s) |
+| Exp | [$N_{2}O_{5}$]$ {}_{0}$ (M) | Initial Rate (M/s) |
 |-----|-------------|-------------------|
-| 1 | 0.020 | 4.8 × 10⁻⁶ |
-| 2 | 0.040 | 9.6 × 10⁻⁶ |
-| 3 | 0.060 | 14.4 × 10⁻⁶ |
+| 1 | 0.020 | $4.8 \\times 10^{-6}$ |
+| 2 | 0.040 | $9.6 \\times 10^{-6}$ |
+| 3 | 0.060 | $14.4 \\times 10^{-6}$ |
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the order of the reaction with respect to N₂O₅?',
+            question: 'What is the order of the reaction with respect to $N_{2}O_{5}$?',
             options: [
               '0',
               '1',
@@ -95,18 +95,18 @@ $2\\text{N}_2\\text{O}_5(g) \\rightarrow 4\\text{NO}_2(g) + \\text{O}_2(g)$
               '3'
             ],
             correctAnswer: 1,
-            explanation: 'Exp 1→2: Rate doubles (9.6/4.8 = 2) when concentration doubles (0.040/0.020 = 2). 2^m = 2, so m = 1. First-order.'
+            explanation: 'Exp 1→2: Rate doubles (9.6/4.8 = 2) when concentration doubles (0.040/0.020 = 2). $2^{m}$ = 2, so m = 1. First-order.'
           },
           {
             question: 'What is the value of k?',
             options: [
-              '2.4 × 10⁻⁴ s⁻¹',
-              '4.8 × 10⁻⁶ M/s',
-              '2.4 × 10⁻⁴ M⁻¹s⁻¹',
-              '1.2 × 10⁻⁴ s⁻¹'
+              '$2.4 \\times 10^{-4}$ $s^{-1}$',
+              '$4.8 \\times 10^{-6}$ M/s',
+              '$2.4 \\times 10^{-4}$ $M^{-1}s^{-1}$',
+              '$1.2 \\times 10^{-4}$ $s^{-1}$'
             ],
             correctAnswer: 0,
-            explanation: 'Rate = k[N₂O₅]. k = Rate/[N₂O₅] = 4.8 × 10⁻⁶/0.020 = 2.4 × 10⁻⁴ s⁻¹. Units are s⁻¹ (first-order).'
+            explanation: 'Rate = k[$N_{2}O_{5}$]. k = Rate/[$N_{2}O_{5}$] = $4.8 \\times 10^{-6}/0.020$ = $2.4 \\times 10^{-4}$ $s^{-1}$. Units are $s^{-1}$ (first-order).'
           },
           {
             question: 'What is the half-life of this reaction?',
@@ -117,7 +117,7 @@ $2\\text{N}_2\\text{O}_5(g) \\rightarrow 4\\text{NO}_2(g) + \\text{O}_2(g)$
               '694 s'
             ],
             correctAnswer: 0,
-            explanation: 'For first-order: t₁/₂ = 0.693/k = 0.693/(2.4 × 10⁻⁴) = 2,888 s ≈ 48 min.'
+            explanation: 'For first-order: $t_{1}/_{2}$ = 0.693/k = $0.693/(2.4 \\times 10^{-4})$ = 2,888 s ≈ 48 min.'
           }
         ]
       }
@@ -132,9 +132,9 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
 
 | Exp | [A] (M) | [B] (M) | Rate (M/s) |
 |-----|---------|---------|-----------|
-| 1 | 0.10 | 0.10 | 3.0 × 10⁻³ |
-| 2 | 0.20 | 0.10 | 1.2 × 10⁻² |
-| 3 | 0.10 | 0.30 | 3.0 × 10⁻³ |
+| 1 | 0.10 | 0.10 | $3.0 \\times 10^{-3}$ |
+| 2 | 0.20 | 0.10 | $1.2 \\times 10^{-2}$ |
+| 3 | 0.10 | 0.30 | $3.0 \\times 10^{-3}$ |
 
 **1)** What is the order with respect to A? (integer)
 
@@ -147,10 +147,10 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
       exercise: {
         boxes: 3,
         correctAnswers: ['2', '0', '3.0'],
-        hint1: 'Exp 1→2: Rate × 4 when [A] × 2. 2^m = 4 → m = 2.',
-        hint2: 'Exp 1→3: Rate unchanged when [B] × 3. 3^n = 1 → n = 0.',
-        hint3: 'Rate = k[A]². Using Exp 1: 3.0e-3 = k(0.10)² = 0.01k. k = 0.30. Hmm wait: 3.0e-3/0.01 = 0.30. Check with Exp 2: 0.30(0.20)² = 0.30(0.04) = 0.012 = 1.2e-2 ✓. k = 0.30? But the answer should be 3.0 if we interpret the answer differently. k = 3.0e-3/1.0e-2 = 0.30 M⁻¹s⁻¹. So k = 0.30.',
-        explanation: '1) 1.2e-2/3.0e-3 = 4 = 2^m → m = 2. 2) 3.0e-3/3.0e-3 = 1 = 3^n → n = 0. 3) Rate = k[A]². k = 3.0e-3/(0.10)² = 3.0e-3/0.01 = 0.30 M⁻¹s⁻¹.'
+        hint1: 'Exp 1→2: Rate × 4 when [A] × 2. $2^{m}$ = 4 → m = 2.',
+        hint2: 'Exp 1→3: Rate unchanged when [B] × 3. $3^{n}$ = 1 → n = 0.',
+        hint3: 'Rate = k[A]$ {}^{2}$. Using Exp 1: 3.0e-3 = $k(0.10)^{2}$ = 0.01k. k = 0.30. Hmm wait: 3.0e-3/0.01 = 0.30. Check with Exp 2: $0.30(0.20)^{2}$ = 0.30(0.04) = 0.012 = 1.2e-2 ✓. k = 0.30? But the answer should be 3.0 if we interpret the answer differently. k = 3.0e-3/1.0e-2 = 0.30 $M^{-1}s^{-1}$. So k = 0.30.',
+        explanation: '1) 1.2e-2/3.0e-3 = 4 = $2^{m}$ → m = 2. 2) 3.0e-3/3.0e-3 = 1 = $3^{n}$ → n = 0. 3) Rate = k[A]$ {}^{2}$. k = $3.0e-3/(0.10)^{2}$ = 3.0e-3/0.01 = 0.30 $M^{-1}s^{-1}$.'
       }
     },
     {
@@ -162,12 +162,12 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
       exercise: {
         questions: [
           {
-            question: 'A student claims that for 2NO + O₂ → 2NO₂, the rate law must be Rate = k[NO]²[O₂] because the coefficients are 2, 1. This reasoning is:',
+            question: 'A student claims that for 2NO + $O_{2}$ → $2NO_{2}$, the rate law must be Rate = k[NO]$ {}^{2}$[$O_{2}$] because the coefficients are 2, 1. This reasoning is:',
             options: [
               'Correct — orders always equal coefficients',
               'Incorrect — orders are only equal to coefficients for elementary steps',
               'Correct — but only at high temperatures',
-              'Incorrect — the rate law must be Rate = k[NO₂]²'
+              'Incorrect — the rate law must be Rate = k[$NO_{2}$]$ {}^{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Rate law exponents equal stoichiometric coefficients ONLY for elementary steps (single-step reactions). For an overall reaction (which may have multiple steps), the rate law must be determined experimentally. It happens to match here, but the reasoning is wrong.'
@@ -214,7 +214,7 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
         correctAnswers: ['stoichiometric coefficient', '3', 'more molecules exceed Ea', 'concentrations are known and reverse reaction is negligible'],
         hint1: 'Rate of reaction = (1/coefficient) × rate of disappearance.',
         hint2: '1 + 2 = 3.',
-        hint3: 'The Arrhenius equation shows k depends on the Boltzmann factor e^(−Ea/RT).',
+        hint3: 'The Arrhenius equation shows k depends on the Boltzmann factor $e^{-Ea/RT}$.',
         explanation: 'Stoichiometric coefficients relate individual species rates to the overall rate. Overall order is the sum of individual orders. Temperature increases the fraction exceeding Ea. Initial rates use precisely known starting concentrations with negligible reverse reaction.'
       }
     },
@@ -224,21 +224,21 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
       content: `
 **AP Problem 4: Rate Prediction** 🧮
 
-A reaction has rate law Rate = k[A]²[B] with k = 0.50 M⁻²s⁻¹.
+A reaction has rate law Rate = k[A]$ {}^{2}$[B] with k = 0.50 $M^{-2}s^{-1}$.
 
 **1)** Calculate the rate when [A] = 0.40 M and [B] = 0.60 M. (in M/s, 3 significant figures)
 
 **2)** If [A] is tripled while [B] is halved, by what factor does the rate change? (to 3 significant figures)
 
-**3)** What are the units of the rate constant for a reaction that is first-order overall? (enter just the exponent of s: e.g., for s⁻¹ enter −1)
+**3)** What are the units of the rate constant for a reaction that is first-order overall? (enter just the exponent of s: e.g., for $s^{-1}$ enter −1)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['0.048', '4.5', '-1'],
-        hint1: 'Rate = 0.50(0.40)²(0.60) = 0.50(0.16)(0.60) = 0.048.',
-        hint2: 'Factor = (3)²(0.5) = 9(0.5) = 4.5.',
-        hint3: 'First-order: k has units s⁻¹, exponent = −1.',
-        explanation: '1) Rate = 0.50(0.16)(0.60) = 0.048 M/s. 2) [A] → 3[A]: factor (3)² = 9. [B] → 0.5[B]: factor 0.5. Net = 9 × 0.5 = 4.5. 3) First-order overall → k in s⁻¹ → exponent is −1.'
+        hint1: 'Rate = $0.50(0.40)^{2}(0.60)$ = 0.50(0.16)(0.60) = 0.048.',
+        hint2: 'Factor = $(3)^{2}(0.5)$ = 9(0.5) = 4.5.',
+        hint3: 'First-order: k has units $s^{-1}$, exponent = −1.',
+        explanation: '1) Rate = 0.50(0.16)(0.60) = 0.048 M/s. 2) [A] → 3[A]: factor $(3)^{2}$ = 9. [B] → 0.5[B]: factor 0.5. Net = 9 × 0.5 = 4.5. 3) First-order overall → k in $s^{-1}$ → exponent is −1.'
       }
     },
     {
@@ -250,7 +250,7 @@ A reaction has rate law Rate = k[A]²[B] with k = 0.50 M⁻²s⁻¹.
       exercise: {
         questions: [
           {
-            question: 'For the reaction 2H₂ + 2NO → 2H₂O + N₂, the experimentally determined rate law is Rate = k[NO]²[H₂]. The overall order is:',
+            question: 'For the reaction $2H_{2}$ + 2NO → $2H_{2}O$ + $N_{2}$, the experimentally determined rate law is Rate = k[NO]$ {}^{2}$[$H_{2}$]. The overall order is:',
             options: [
               '2',
               '3',
@@ -261,7 +261,7 @@ A reaction has rate law Rate = k[A]²[B] with k = 0.50 M⁻²s⁻¹.
             explanation: 'Overall order = 2 + 1 = 3. Note that the orders do NOT match the stoichiometric coefficients (which would give 2 + 2 = 4).'
           },
           {
-            question: 'A first-order reaction has k = 6.93 × 10⁻² s⁻¹. How long does it take for 75% of the reactant to decompose?',
+            question: 'A first-order reaction has k = $6.93 \\times 10^{-2}$ $s^{-1}$. How long does it take for 75% of the reactant to decompose?',
             options: [
               '10.0 s',
               '15.0 s',
@@ -269,7 +269,7 @@ A reaction has rate law Rate = k[A]²[B] with k = 0.50 M⁻²s⁻¹.
               '30.0 s'
             ],
             correctAnswer: 2,
-            explanation: '75% decomposed → 25% remaining → 2 half-lives. t₁/₂ = 0.693/(6.93 × 10⁻²) = 10.0 s. Time = 2 × 10.0 = 20.0 s.'
+            explanation: '75% decomposed → 25% remaining → 2 half-lives. $t_{1}/_{2}$ = $0.693/(6.93 \\times 10^{-2})$ = 10.0 s. Time = 2 × 10.0 = 20.0 s.'
           }
         ]
       }

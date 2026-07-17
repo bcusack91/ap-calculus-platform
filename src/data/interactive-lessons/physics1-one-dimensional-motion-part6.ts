@@ -37,10 +37,10 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
               '392 m'
             ],
             correctAnswer: 1,
-            explanation: 'First find $a = (28-0)/7 = 4$ m/s². Then $x = v_0t + \\frac{1}{2}at^2 = 0 + \\frac{1}{2}(4)(49) = 98$ m. Or: $x = \\frac{v_0 + v}{2} \\cdot t = \\frac{0+28}{2}(7) = 98$ m.'
+            explanation: 'First find $a = (28-0)/7 = 4$ $m/s^{2}$. Then $x = v_0t + \\frac{1}{2}at^2 = 0 + \\frac{1}{2}(4)(49) = 98$ m. Or: $x = \\frac{v_0 + v}{2} \\cdot t = \\frac{0+28}{2}(7) = 98$ m.'
           },
           {
-            question: 'A train traveling at 40 m/s brakes with $a = -2$ m/s². How far does it travel before stopping?',
+            question: 'A train traveling at 40 m/s brakes with $a = -2$ $m/s^{2}$. How far does it travel before stopping?',
             options: [
               '200 m',
               '400 m',
@@ -51,7 +51,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
             explanation: 'Use $v^2 = v_0^2 + 2a\\Delta x$: $0 = 40^2 + 2(-2)\\Delta x$, so $\\Delta x = 1600/4 = 400$ m.'
           },
           {
-            question: 'A rocket sled accelerates from rest at 50 m/s² for 3 s, then coasts at constant velocity for 2 s. What is the total distance covered?',
+            question: 'A rocket sled accelerates from rest at 50 $m/s^{2}$ for 3 s, then coasts at constant velocity for 2 s. What is the total distance covered?',
             options: [
               '225 m',
               '300 m',
@@ -70,11 +70,11 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       content: `
 **Multi-Step Problems** 🧮
 
-1) A car accelerates from 10 m/s to 30 m/s over 200 m. What is the acceleration? (in m/s²)
+1) A car accelerates from 10 m/s to 30 m/s over 200 m. What is the acceleration? $(in m/s^{2})$
 
-2) A ball is thrown downward from a 50 m building at 5 m/s. How long until it hits the ground? (in seconds, round to 3 significant figures; use $g = 10$ m/s²)
+2) A ball is thrown downward from a 50 m building at 5 m/s. How long until it hits the ground? (in seconds, round to 3 significant figures; use $g = 10$ $m/s^{2}$)
 
-3) A police car starts from rest and accelerates at 3 m/s². A speeder passes at a constant 24 m/s at the same moment. How long until the police car catches the speeder? (in seconds)
+3) A police car starts from rest and accelerates at 3 $m/s^{2}$. A speeder passes at a constant 24 m/s at the same moment. How long until the police car catches the speeder? (in seconds)
       `,
       exercise: {
         boxes: 3,
@@ -82,7 +82,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
         hint1: '$v^2 = v_0^2 + 2a\\Delta x$: $30^2 = 10^2 + 2a(200)$',
         hint2: 'Taking downward as positive: $50 = 5t + \\frac{1}{2}(10)t^2$. Use the quadratic formula.',
         hint3: 'Police: $x_p = \\frac{1}{2}(3)t^2$. Speeder: $x_s = 24t$. Set $x_p = x_s$.',
-        explanation: '1) $900 = 100 + 400a$, so $a = 800/400 = 2$ m/s². 2) $5t^2 + 5t - 50 = 0$, so $t^2 + t - 10 = 0$. $t = (-1 + \\sqrt{1+40})/2 = (-1+\\sqrt{41})/2 \\approx 2.7$ s. 3) $\\frac{3}{2}t^2 = 24t$, so $t(\\frac{3}{2}t - 24) = 0$, giving $t = 16$ s (ignoring $t = 0$).'
+        explanation: '1) $900 = 100 + 400a$, so $a = 800/400 = 2$ $m/s^{2}$. 2) $5t^2 + 5t - 50 = 0$, so $t^2 + t - 10 = 0$. $t = (-1 + \\sqrt{1+40})/2 = (-1+\\sqrt{41})/2 \\approx 2.7$ s. 3) $\\frac{3}{2}t^2 = 24t$, so $t(\\frac{3}{2}t - 24) = 0$, giving $t = 16$ s (ignoring $t = 0$).'
       }
     },
     {
@@ -94,7 +94,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       exercise: {
         questions: [
           {
-            question: 'A ball is thrown upward at 20 m/s from the edge of a 25 m cliff. What is its velocity when it hits the ground below? (Use $g = 10$ m/s²)',
+            question: 'A ball is thrown upward at 20 m/s from the edge of a 25 m cliff. What is its velocity when it hits the ground below? (Use $g = 10$ $m/s^{2}$)',
             options: [
               '−25 m/s',
               '−30 m/s',
@@ -105,7 +105,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
             explanation: 'Taking up as positive with origin at launch: $v^2 = v_0^2 + 2a\\Delta y = 20^2 + 2(-10)(-25) = 400 + 500 = 900$. So $v = -30$ m/s (negative because heading downward).'
           },
           {
-            question: 'A stone is dropped from rest. How far does it fall during the 3rd second of its fall? (Use $g = 10$ m/s²)',
+            question: 'A stone is dropped from rest. How far does it fall during the 3rd second of its fall? (Use $g = 10$ $m/s^{2}$)',
             options: [
               '10 m',
               '25 m',
@@ -124,9 +124,9 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       content: `
 **Challenge Problems** 🏆
 
-1) Two cars start from rest at the same point. Car A accelerates at 2 m/s² and Car B accelerates at 3 m/s². After 10 s, how much farther has Car B traveled than Car A? (in meters)
+1) Two cars start from rest at the same point. Car A accelerates at 2 $m/s^{2}$ and Car B accelerates at 3 $m/s^{2}$. After 10 s, how much farther has Car B traveled than Car A? (in meters)
 
-2) A ball is dropped from 80 m. At the same instant, a ball is thrown upward from the ground at 20 m/s. At what height do they meet? (in meters, use $g = 10$ m/s²; round to 3 significant figures)
+2) A ball is dropped from 80 m. At the same instant, a ball is thrown upward from the ground at 20 m/s. At what height do they meet? (in meters, use $g = 10$ $m/s^{2}$; round to 3 significant figures)
       `,
       exercise: {
         boxes: 2,
@@ -145,7 +145,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       exercise: {
         questions: [
           {
-            question: 'An elevator accelerates upward from rest at 2 m/s² for 5 s, then moves at constant velocity for 10 s. What is the total distance traveled?',
+            question: 'An elevator accelerates upward from rest at 2 $m/s^{2}$ for 5 s, then moves at constant velocity for 10 s. What is the total distance traveled?',
             options: [
               '25 m',
               '100 m',
@@ -156,7 +156,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
             explanation: 'Phase 1: $v = 2(5) = 10$ m/s, $d_1 = \\frac{1}{2}(2)(25) = 25$ m. Phase 2: $d_2 = 10(10) = 100$ m. Total = $25 + 100 = 125$ m.'
           },
           {
-            question: 'A car travels at 15 m/s and then brakes to a stop. If the braking acceleration is $-5$ m/s², what is the stopping distance?',
+            question: 'A car travels at 15 m/s and then brakes to a stop. If the braking acceleration is $-5$ $m/s^{2}$, what is the stopping distance?',
             options: [
               '22.5 m',
               '45 m',

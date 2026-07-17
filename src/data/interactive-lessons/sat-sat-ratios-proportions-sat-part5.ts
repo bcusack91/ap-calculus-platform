@@ -41,13 +41,13 @@ Scale factors appear in:
 
 ### Worked Example 1 — Area from Scale Factor
 
-**Two similar pentagons have perimeters of 20 cm and 30 cm. If the smaller has an area of 50 cm², what is the area of the larger?**
+**Two similar pentagons have perimeters of 20 cm and 30 cm. If the smaller has an area of 50 $cm^{2}$, what is the area of the larger?**
 
 | Step | Work |
 |------|------|
 | Scale factor | $k = 30/20 = 1.5$ |
 | Area factor | $k^2 = 2.25$ |
-| Larger area | $50 × 2.25 = 112.5$ cm² |
+| Larger area | $50 × 2.25 = 112.5$ $cm^{2}$ |
 
 ### Worked Example 2 — Volume from Scale Factor
 
@@ -66,10 +66,10 @@ Scale factors appear in:
       exercise: {
         questions: [
           {
-            question: 'Two similar rectangles have lengths 4 cm and 12 cm. If the area of the smaller is 20 cm², what is the area of the larger?',
-            options: ['$180$ cm²', '$60$ cm²', '$240$ cm²', '$80$ cm²'],
+            question: 'Two similar rectangles have lengths 4 cm and 12 cm. If the area of the smaller is 20 $cm^{2}$, what is the area of the larger?',
+            options: ['$180$ $cm^{2}$', '$60$ $cm^{2}$', '$240$ $cm^{2}$', '$80$ $cm^{2}$'],
             correctAnswer: 0,
-            explanation: 'Scale factor $k = 12/4 = 3$. Area scales by $k^2 = 9$. Larger area $= 20 \\times 9 = 180$ cm².'
+            explanation: 'Scale factor $k = 12/4 = 3$. Area scales by $k^2 = 9$. Larger area $= 20 \\times 9 = 180$ $cm^{2}$.'
           },
           {
             question: 'On a scale model, 2 cm represents 5 meters. If the model building is 14 cm tall, how tall is the actual building?',
@@ -135,10 +135,10 @@ The SAT loves problems where you must first identify similar triangles, then set
             explanation: '$\\frac{h}{21} = \\frac{5}{3}$ → $h = 5 × 7 = 35$ feet.'
           },
           {
-            question: 'Two similar cylinders have heights 4 and 10. If the smaller has surface area 48 cm², what is the larger\'s surface area?',
-            options: ['$300$ cm²', '$120$ cm²', '$192$ cm²', '$750$ cm²'],
+            question: 'Two similar cylinders have heights 4 and 10. If the smaller has surface area 48 $cm^{2}$, what is the larger\'s surface area?',
+            options: ['$300$ $cm^{2}$', '$120$ $cm^{2}$', '$192$ $cm^{2}$', '$750$ $cm^{2}$'],
             correctAnswer: 0,
-            explanation: '$k = 10/4 = 2.5$. Surface area $= 48 × (2.5)^2 = 48 × 6.25 = 300$ cm².'
+            explanation: '$k = 10/4 = 2.5$. Surface area $= 48 × (2.5)^2 = 48 × 6.25 = 300$ $cm^{2}$.'
           },
           {
             question: 'If you double every dimension of a box, by what factor does the volume increase?',
@@ -155,12 +155,12 @@ The SAT loves problems where you must first identify similar triangles, then set
       content: '**What Power of $k$?** 🔍\n\nFor each quantity, decide whether it scales by $k$, $k^2$, or $k^3$.',
       exercise: {
         dropdowns: [
-          { label: 'The perimeter of a similar figure', options: ['k (linear)', 'k² (area)', 'k³ (volume)', 'Does not scale'] },
-          { label: 'The surface area of a similar solid', options: ['k² (area)', 'k (linear)', 'k³ (volume)', 'Does not scale'] },
-          { label: 'The volume of a similar solid', options: ['k³ (volume)', 'k (linear)', 'k² (area)', 'Does not scale'] },
-          { label: 'The angles of a similar figure', options: ['Does not scale (angles are equal)', 'k (linear)', 'k² (area)', 'k³ (volume)'] }
+          { label: 'The perimeter of a similar figure', options: ['k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)', 'Does not scale'] },
+          { label: 'The surface area of a similar solid', options: ['$k^{2}$ (area)', 'k (linear)', '$k^{3}$ (volume)', 'Does not scale'] },
+          { label: 'The volume of a similar solid', options: ['$k^{3}$ (volume)', 'k (linear)', '$k^{2}$ (area)', 'Does not scale'] },
+          { label: 'The angles of a similar figure', options: ['Does not scale (angles are equal)', 'k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)'] }
         ],
-        correctAnswers: ['k (linear)', 'k² (area)', 'k³ (volume)', 'Does not scale (angles are equal)'],
+        correctAnswers: ['k (linear)', '$k^{2}$ (area)', '$k^{3}$ (volume)', 'Does not scale (angles are equal)'],
         hint1: 'Perimeter is a sum of lengths — each length scales by $k$.',
         hint2: 'Surface area is a 2D measurement → $k^2$.',
         hint3: 'Volume is a 3D measurement → $k^3$.',

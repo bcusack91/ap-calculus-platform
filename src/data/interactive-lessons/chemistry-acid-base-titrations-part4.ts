@@ -211,14 +211,14 @@ Three equivalence points (three protons):
           },
           {
             label: 'The pH at the equivalence point of weak acid + strong base is determined by',
-            options: ['excess NaOH', 'hydrolysis of A⁻', 'excess HA', 'the indicator']
+            options: ['excess NaOH', 'hydrolysis of $A^{-}$', 'excess HA', 'the indicator']
           },
           {
             label: 'After the equivalence point, the dominant factor controlling pH is',
             options: ['the conjugate base', 'the weak acid', 'excess strong base', 'the buffer']
           }
         ],
-        correctAnswers: ['two equivalence points', 'hydrolysis of A⁻', 'excess strong base'],
+        correctAnswers: ['two equivalence points', 'hydrolysis of $A^{-}$', 'excess strong base'],
         hint1: 'Each ionizable proton gives one equivalence point.',
         hint2: 'At equivalence, $A^-$ is the only species that reacts with water.',
         hint3: 'The strong base overwhelms the weak base ($A^-$) once in excess.',

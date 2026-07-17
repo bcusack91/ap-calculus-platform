@@ -12,8 +12,8 @@ Water is called the **universal solvent** because it dissolves more substances t
 ### How Water Dissolves Ionic Compounds
 
 When $NaCl$ dissolves:
-1. The δ⁻ oxygen of water surrounds $Na^+$ ions
-2. The δ⁺ hydrogen of water surrounds $Cl^-$ ions
+1. The $\\delta^{-}$ oxygen of water surrounds $Na^+$ ions
+2. The $\\delta^{+}$ hydrogen of water surrounds $Cl^-$ ions
 3. The ions are pulled apart and surrounded by water — they are **hydrated**
 
 ### Hydrophilic vs. Hydrophobic
@@ -36,7 +36,7 @@ Hydrophobic molecules are excluded from the aqueous environment, which is critic
       exercise: {
         questions: [
           {
-            question: 'A solution with pH 4 has how many more H⁺ ions than a solution with pH 7?',
+            question: 'A solution with pH 4 has how many more $H^{+}$ ions than a solution with pH 7?',
             options: [
               '3 times more',
               '30 times more',
@@ -123,8 +123,8 @@ Buffers resist changes in pH by accepting or donating $H^+$ ions.
         correctAnswers: ['hydrophilic', '7.4', 'pH'],
         hint1: 'Hydro = water, philic = loving.',
         hint2: 'Normal blood pH is slightly above neutral.',
-        hint3: 'Buffers accept or donate H⁺ ions.',
-        explanation: 'Hydrophilic means water-loving. Blood pH is tightly regulated near 7.4. Buffers resist pH changes by absorbing or releasing H⁺.'
+        hint3: 'Buffers accept or donate $H^{+}$ ions.',
+        explanation: 'Hydrophilic means water-loving. Blood pH is tightly regulated near 7.4. Buffers resist pH changes by absorbing or releasing $H^{+}$.'
       }
     }
   ]

@@ -102,7 +102,7 @@ $$\\boxed{\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical y
       content: `
 ## 🧪 Worked Example
 
-> **Problem:** In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, a student starts with 54.0 g of Al ($M = 26.98$) and excess Cl₂. The student obtains 200.0 g of AlCl₃ ($M = 133.34$). What is the percent yield?
+> **Problem:** In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, a student starts with 54.0 g of Al ($M = 26.98$) and excess $Cl_{2}$. The student obtains 200.0 g of $AlCl_{3}$ ($M = 133.34$). What is the percent yield?
 
 
 ---
@@ -111,9 +111,9 @@ $$\\boxed{\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical y
 
 Moles Al: $54.0 / 26.98 = 2.001$ mol
 
-Moles AlCl₃ (theoretical): $2.001 \\times \\frac{2}{2} = 2.001$ mol
+Moles $AlCl_{3}$ (theoretical): $2.001 \\times \\frac{2}{2} = 2.001$ mol
 
-Grams AlCl₃ (theoretical): $2.001 \\times 133.34 = 266.8$ g
+Grams $AlCl_{3}$ (theoretical): $2.001 \\times 133.34 = 266.8$ g
 
 
 ---
@@ -247,7 +247,7 @@ This means 75% of the theoretical product was actually recovered. The remaining 
       exercise: {
         questions: [
           {
-            question: 'A student reacts 10.0 g of Mg ($M = 24.31$) with excess HCl. The theoretical yield of MgCl₂ ($M = 95.21$) is 39.2 g, but only 33.3 g are collected. The percent yield is:',
+            question: 'A student reacts 10.0 g of Mg ($M = 24.31$) with excess HCl. The theoretical yield of $MgCl_{2}$ ($M = 95.21$) is 39.2 g, but only 33.3 g are collected. The percent yield is:',
             options: [
               '75.0%',
               '80.0%',
@@ -255,7 +255,7 @@ This means 75% of the theoretical product was actually recovered. The remaining 
               '90.0%'
             ],
             correctAnswer: 2,
-            explanation: '$\\% \\text{ yield} = \\frac{33.3}{39.2} \\times 100 = 85.0\\%$. Verification: $10.0/24.31 = 0.4114$ mol Mg → $0.4114$ mol MgCl₂ → $0.4114 \\times 95.21 = 39.2$ g (theoretical). $33.3/39.2 \\times 100 = 85.0\\%$.'
+            explanation: '$\\% \\text{ yield} = \\frac{33.3}{39.2} \\times 100 = 85.0\\%$. Verification: $10.0/24.31 = 0.4114$ mol Mg → $0.4114$ mol $MgCl_{2}$ → $0.4114 \\times 95.21 = 39.2$ g (theoretical). $33.3/39.2 \\times 100 = 85.0\\%$.'
           },
           {
             question: 'If a reaction has a percent yield of 60% and you need 100 g of product, how many grams of theoretical yield must you aim for?',

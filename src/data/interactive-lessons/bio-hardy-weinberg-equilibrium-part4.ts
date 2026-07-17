@@ -73,7 +73,7 @@ Observed = Expected perfectly → This population is in HW equilibrium for the M
               'Selection does not act on codominant traits'
             ],
             correctAnswer: 1,
-            explanation: 'With codominance, each genotype (AA, AB, BB) produces a distinct phenotype, so you can directly count genotype frequencies without needing to calculate from q². This makes testing HW equilibrium straightforward.'
+            explanation: 'With codominance, each genotype (AA, AB, BB) produces a distinct phenotype, so you can directly count genotype frequencies without needing to calculate from $q^{2}$. This makes testing HW equilibrium straightforward.'
           },
           {
             question: 'In the MN blood group example, how many total alleles are in a sample of 200 diploid individuals?',
@@ -132,7 +132,7 @@ A population of 400 beetles has two color morphs controlled by a single gene wit
         ],
         correctAnswers: ['0.50', '100', 'Yes — observed matches expected'],
         hint1: 'Count R alleles: 2(100) + 1(200) = 400 out of 800 total alleles.',
-        hint2: 'Expected RR = p² × 400 = (0.5)² × 400.',
+        hint2: 'Expected RR = $p^{2}$ × 400 = $(0.5)^{2}$ × 400.',
         hint3: 'Compare observed counts with expected counts for all three genotypes.',
         explanation: 'p = 400/800 = 0.50, q = 0.50. Expected: RR = 0.25 × 400 = 100, RW = 0.50 × 400 = 200, WW = 0.25 × 400 = 100. Observed matches expected perfectly, so the population is in HW equilibrium.'
       }

@@ -20,7 +20,7 @@ export const apesRenewableEnergyPart1Data = {
 | **Hydroelectric** | Falling water spins turbines in dams | ~16% (largest renewable source) |
 | **Biomass** | Burning organic material (wood, crops, waste) | ~2% |
 | **Geothermal** | Heat from Earth interior drives steam turbines | ~0.3% |
-| **Hydrogen fuel cells** | H₂ + O₂ → electricity + H₂O | Emerging technology |
+| **Hydrogen fuel cells** | $H_{2}$ + $O_{2}$ → electricity + $H_{2}O$ | Emerging technology |
 
 ---
 
@@ -63,7 +63,7 @@ export const apesRenewableEnergyPart1Data = {
               'They have unlimited energy storage built in'
             ],
             correctAnswer: 1,
-            explanation: 'Renewables produce little to no CO₂ during operation (some lifecycle emissions from manufacturing). However, intermittency (solar depends on sun, wind on wind) remains a challenge.'
+            explanation: 'Renewables produce little to no $CO_{2}$ during operation (some lifecycle emissions from manufacturing). However, intermittency (solar depends on sun, wind on wind) remains a challenge.'
           }
         ]
       }

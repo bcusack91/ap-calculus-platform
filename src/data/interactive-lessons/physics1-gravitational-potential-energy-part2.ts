@@ -142,7 +142,7 @@ Because friction is non-conservative, **we cannot define a "friction potential e
       content: `
 **Conservative Force Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 3 kg ball is carried from the ground to a height of 5 m via a winding staircase. What is the work done by gravity (in J)?
 

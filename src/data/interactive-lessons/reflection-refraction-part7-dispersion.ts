@@ -156,7 +156,7 @@ Final quiz covering the entire topic!
       exercise: {
         questions: [
           {
-            question: "Light travels at 2.25 × 10⁸ m/s in a material. What is the material's index of refraction?",
+            question: "Light travels at $2.25 \\times 10^{8}$ m/s in a material. What is the material's index of refraction?",
             options: [
               "n = 0.75",
               "n = 1.33",
@@ -164,7 +164,7 @@ Final quiz covering the entire topic!
               "n = 2.25"
             ],
             correctAnswer: 1,
-            explanation: "n = c/v = (3.0 × 10⁸)/(2.25 × 10⁸) = 1.33. This is water! Remember: higher n means light travels slower in the material."
+            explanation: "n = c/v = $(3.0 \\times 10^{8})/(2.25 \\times 10^{8})$ = 1.33. This is water! Remember: higher n means light travels slower in the material."
           },
           {
             question: "Light in glass (n=1.5) hits a glass-air boundary at 25° from normal. What is the refraction angle in air (n=1.0)?",
@@ -175,7 +175,7 @@ Final quiz covering the entire topic!
               "50.0°"
             ],
             correctAnswer: 2,
-            explanation: "Using Snell's Law: (1.5)sin(25°) = (1.0)sin(θ₂). Solving: sin(θ₂) = 0.634, so θ₂ = 39.3°. Light bends AWAY from normal when entering a less dense medium."
+            explanation: "Using Snell's Law: (1.5)sin(25°) = $(1.0)\\sin (\\theta_{2})$. Solving: $\\sin (\\theta_{2})$ = 0.634, so $\\theta_{2}$ = 39.3°. Light bends AWAY from normal when entering a less dense medium."
           },
           {
             question: "What is the critical angle for light going from diamond (n=2.42) to air (n=1.0)?",
@@ -186,7 +186,7 @@ Final quiz covering the entire topic!
               "Cannot be calculated"
             ],
             correctAnswer: 0,
-            explanation: "θc = sin⁻¹(n₂/n₁) = sin⁻¹(1.0/2.42) = 24.4°. This small critical angle is why diamonds sparkle so much - light easily undergoes total internal reflection!"
+            explanation: "θc = $\\sin^{-1}(n_{2}/n_{1})$ = $\\sin^{-1}(1.0/2.42)$ = 24.4°. This small critical angle is why diamonds sparkle so much - light easily undergoes total internal reflection!"
           },
           {
             question: "Light in water (n=1.33) hits the water-air surface at 55° from normal. The critical angle is 48.8°. What happens?",
@@ -222,15 +222,15 @@ Final quiz covering the entire topic!
             explanation: "Red light exits at a larger angle (42°) from the sun-observer line, placing it on the outer arc. Violet exits at 39.5° (smaller angle), placing it on the inner arc. Each color forms its own cone!"
           },
           {
-            question: "A light ray hits a mirror 3 cm to the right of the optical axis and reflects to cross the axis 6 cm to the right. Using Cartesian sign convention with rightward as positive, what is x₂?",
+            question: "A light ray hits a mirror 3 cm to the right of the optical axis and reflects to cross the axis 6 cm to the right. Using Cartesian sign convention with rightward as positive, what is $x_{2}$?",
             options: [
-              "x₂ = -6 cm",
-              "x₂ = -3 cm",
-              "x₂ = +3 cm",
-              "x₂ = +6 cm"
+              "$x_{2}$ = -6 cm",
+              "$x_{2}$ = -3 cm",
+              "$x_{2}$ = +3 cm",
+              "$x_{2}$ = +6 cm"
             ],
             correctAnswer: 3,
-            explanation: "x₂ = +6 cm. Using Cartesian convention: the crossing point is 6 cm to the right of the mirror, and light is traveling right (positive direction), so x₂ is positive."
+            explanation: "$x_{2}$ = +6 cm. Using Cartesian convention: the crossing point is 6 cm to the right of the mirror, and light is traveling right (positive direction), so $x_{2}$ is positive."
           }
         ]
       }

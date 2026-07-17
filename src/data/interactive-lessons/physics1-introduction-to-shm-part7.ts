@@ -94,7 +94,7 @@ $$a = -\\omega^2 x$$
             explanation: '$T = 2\\pi\\sqrt{m/k}$, so $T_1/T_2 = \\sqrt{k_2/k_1} = \\sqrt{3k/k} = \\sqrt{3}$.'
           },
           {
-            question: 'An oscillating object has $v_{\\text{max}} = 2.0$ m/s and $a_{\\text{max}} = 8.0$ m/s². What is the angular frequency?',
+            question: 'An oscillating object has $v_{\\text{max}} = 2.0$ m/s and $a_{\\text{max}} = 8.0$ $m/s^{2}$. What is the angular frequency?',
             options: [
               '$0.25$ rad/s',
               '$2.0$ rad/s',
@@ -113,11 +113,11 @@ $$a = -\\omega^2 x$$
       content: `
 **AP Calculation Practice** 🧮
 
-1) A block-spring system has $v_{\\text{max}} = 3.0$ m/s and $a_{\\text{max}} = 12$ m/s². What is the amplitude? (in m, round to 3 significant figures)
+1) A block-spring system has $v_{\\text{max}} = 3.0$ m/s and $a_{\\text{max}} = 12$ $m/s^{2}$. What is the amplitude? (in m, round to 3 significant figures)
 
 2) A pendulum has $L = 2.5$ m. How many complete oscillations does it make in 60 s? (round to the nearest whole number)
 
-3) A mass on a spring has $k = 50$ N/m and $m = 2.0$ kg. At $x = 0.08$ m, what is the magnitude of the acceleration? (in m/s²)
+3) A mass on a spring has $k = 50$ N/m and $m = 2.0$ kg. At $x = 0.08$ m, what is the magnitude of the acceleration? $(in m/s^{2})$
       `,
       exercise: {
         boxes: 3,
@@ -125,7 +125,7 @@ $$a = -\\omega^2 x$$
         hint1: '$\\omega = a_{\\text{max}}/v_{\\text{max}} = 4.0$. Then $A = v_{\\text{max}}/\\omega$',
         hint2: '$T = 2\\pi\\sqrt{2.5/9.8}$. Number of cycles $= 60/T$',
         hint3: '$a = -(k/m)x = -(50/2.0)(0.08)$',
-        explanation: '1) $\\omega = 12/3.0 = 4.0$ rad/s. $A = 3.0/4.0 = 0.75$ m. 2) $T = 2\\pi\\sqrt{2.5/9.8} = 2\\pi(0.505) = 3.173$ s. Cycles $= 60/3.173 = 18.9 \\approx 19$. 3) $|a| = (k/m)|x| = (50/2.0)(0.08) = 25(0.08) = 2.0$ m/s².'
+        explanation: '1) $\\omega = 12/3.0 = 4.0$ rad/s. $A = 3.0/4.0 = 0.75$ m. 2) $T = 2\\pi\\sqrt{2.5/9.8} = 2\\pi(0.505) = 3.173$ s. Cycles $= 60/3.173 = 18.9 \\approx 19$. 3) $|a| = (k/m)|x| = (50/2.0)(0.08) = 25(0.08) = 2.0$ $m/s^{2}$.'
       }
     },
     {

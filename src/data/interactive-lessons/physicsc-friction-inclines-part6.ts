@@ -24,7 +24,7 @@ This workshop presents AP Physics C–style problems that integrate concepts fro
     {
       id: 'fri6-mcq1',
       type: 'mcq' as const,
-      question: 'A 2 kg block on a $53°$ incline ($\\mu_s = 0.5$, $\\mu_k = 0.4$) is connected to a 1.5 kg hanging mass. Initially at rest. Does the system move, and if so, in which direction? ($g = 10$ m/s², $\\sin 53° \\approx 0.8$, $\\cos 53° \\approx 0.6$)',
+      question: 'A 2 kg block on a $53°$ incline ($\\mu_s = 0.5$, $\\mu_k = 0.4$) is connected to a 1.5 kg hanging mass. Initially at rest. Does the system move, and if so, in which direction? ($g = 10$ $m/s^{2}$, $\\sin 53° \\approx 0.8$, $\\cos 53° \\approx 0.6$)',
       options: [
         'The incline block slides down (gravity on $m_1$ dominates)',
         'The hanging mass descends (gravity on $m_2$ dominates)',

@@ -40,7 +40,7 @@ const longFRQs: PhysicsCEMFRQ[] = [
     unit: 1,
     title: "Gauss's Law — Non-Uniform Spherical Charge",
     prompt:
-      'A solid insulating sphere of radius R carries a volume charge density ρ(r) = ρ₀(r/R), where ρ₀ is a positive constant and r is the distance from the center of the sphere. The sphere is surrounded by vacuum.',
+      'A solid insulating sphere of radius R carries a volume charge density ρ(r) = $\\rho_{0}(r/R)$, where $\\rho_{0}$ is a positive constant and r is the distance from the center of the sphere. The sphere is surrounded by vacuum.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -48,27 +48,27 @@ const longFRQs: PhysicsCEMFRQ[] = [
       {
         label: '(a)',
         prompt:
-          'Using Gauss\'s law, derive an expression for the electric field E(r) for r ≤ R. Express your answer in terms of ρ₀, r, R, and ε₀.',
+          'Using Gauss\'s law, derive an expression for the electric field E(r) for r ≤ R. Express your answer in terms of $\\rho_{0}$, r, R, and $\\varepsilon_{0}$.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'Correctly identifies a spherical Gaussian surface of radius r and writes Gauss\'s law: ∮ E⃗·dA⃗ = Q_enc/ε₀',
+            description: 'Correctly identifies a spherical Gaussian surface of radius r and writes Gauss\'s law: ∮ E⃗·dA⃗ = $Q_{enc}/\\varepsilon_{0}$',
             keywords: ['gaussian surface', 'sphere', 'gauss', 'enclosed charge', 'symmetry']
           },
           {
             points: 1,
-            description: 'Correctly computes Q_enc by integrating ρ(r\') over the volume: Q_enc = ∫₀ʳ ρ₀(r\'/R)·4πr\'² dr\' = πρ₀r⁴/R',
+            description: 'Correctly computes Q_enc by integrating ρ(r\') over the volume: Q_enc = $\\int_{0}^{r}$ $\\rho_{0}$(r\'/R)·4πr\'$ {}^{2}$ dr\' = $\\pi \\rho_{0}r^{4}/R$',
             keywords: ['integral', 'volume', 'charge density', 'r^4', 'ρ₀']
           },
           {
             points: 1,
-            description: 'Solves for E: E(4πr²) = πρ₀r⁴/(Rε₀), giving E = ρ₀r²/(4ε₀R)',
+            description: 'Solves for E: $E(4\\pi r^{2})$ = $\\pi \\rho_{0}r^{4}/(R\\varepsilon_{0})$, giving E = $\\rho_{0}r^{2}/(4\\varepsilon_{0}R)$',
             keywords: ['E =', 'r²', '4ε₀R', 'electric field']
           }
         ],
         sampleAnswer:
-          'Choose a spherical Gaussian surface of radius r (r ≤ R) centered at the sphere.\n\nBy symmetry, E⃗ is radial and constant on this surface:\n∮ E⃗·dA⃗ = E(4πr²)\n\nThe enclosed charge is:\nQ_enc = ∫₀ʳ ρ₀(r\'/R) · 4πr\'² dr\' = (4πρ₀/R) ∫₀ʳ r\'³ dr\' = (4πρ₀/R)(r⁴/4) = πρ₀r⁴/R\n\nApplying Gauss\'s law:\nE(4πr²) = πρ₀r⁴/(Rε₀)\n\nE(r) = ρ₀r²/(4ε₀R)  (directed radially outward)'
+          'Choose a spherical Gaussian surface of radius r (r ≤ R) centered at the sphere.\n\nBy symmetry, E⃗ is radial and constant on this surface:\n∮ E⃗·dA⃗ = $E(4\\pi r^{2})$\n\nThe enclosed charge is:\nQ_enc = $\\int_{0}^{r}$ $\\rho_{0}$(r\'/R) · 4πr\'$ {}^{2}$ dr\' = $(4\\pi \\rho_{0}/R)$ $\\int_{0}^{r}$ r\'$ {}^{3}$ dr\' = $(4\\pi \\rho_{0}/R)(r^{4}/4)$ = $\\pi \\rho_{0}r^{4}/R$\n\nApplying Gauss\'s law:\n$E(4\\pi r^{2})$ = $\\pi \\rho_{0}r^{4}/(R\\varepsilon_{0})$\n\nE(r) = $\\rho_{0}r^{2}/(4\\varepsilon_{0}R)$  (directed radially outward)'
       },
       {
         label: '(b)',
@@ -78,17 +78,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Computes total charge Q_total = πρ₀R³ by integrating ρ(r) over the full sphere',
+            description: 'Computes total charge Q_total = $\\pi \\rho_{0}R^{3}$ by integrating ρ(r) over the full sphere',
             keywords: ['total charge', 'Q_total', 'πρ₀R³', 'integral', 'R']
           },
           {
             points: 1,
-            description: 'Writes E = Q_total/(4πε₀r²) = ρ₀R³/(4ε₀r²)',
+            description: 'Writes E = $Q_{total}/(4\\pi \\varepsilon_{0}r^{2})$ = $\\rho_{0}R^{3}/(4\\varepsilon_{0}r^{2})$',
             keywords: ['1/r²', 'point charge', 'ρ₀R³', 'outside']
           }
         ],
         sampleAnswer:
-          'For r > R, the Gaussian surface encloses the entire sphere.\n\nQ_total = ∫₀ᴿ ρ₀(r\'/R)·4πr\'² dr\' = (4πρ₀/R)(R⁴/4) = πρ₀R³\n\nGauss\'s law: E(4πr²) = πρ₀R³/ε₀\n\nE(r) = ρ₀R³/(4ε₀r²)  (radially outward)\n\nThis is equivalent to a point charge Q = πρ₀R³ at the origin.'
+          'For r > R, the Gaussian surface encloses the entire sphere.\n\nQ_total = $\\int_{0}$ᴿ $\\rho_{0}$(r\'/R)·4πr\'$ {}^{2}$ dr\' = $(4\\pi \\rho_{0}/R)(R^{4}/4)$ = $\\pi \\rho_{0}R^{3}$\n\nGauss\'s law: $E(4\\pi r^{2})$ = $\\pi \\rho_{0}R^{3}/\\varepsilon_{0}$\n\nE(r) = $\\rho_{0}R^{3}/(4\\varepsilon_{0}r^{2})$  (radially outward)\n\nThis is equivalent to a point charge Q = $\\pi \\rho_{0}R^{3}$ at the origin.'
       },
       {
         label: '(c)',
@@ -103,17 +103,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Computes the contribution from ∞ to R: V₁ = ρ₀R²/(4ε₀)',
+            description: 'Computes the contribution from ∞ to R: $V_{1}$ = $\\rho_{0}R^{2}/(4\\varepsilon_{0})$',
             keywords: ['V₁', 'outside', 'ρ₀R²/(4ε₀)']
           },
           {
             points: 1,
-            description: 'Computes the contribution from R to r and combines: V(r) = ρ₀R²/(4ε₀) − ρ₀(r³ − R³)/(12ε₀R) or equivalent simplified form',
+            description: 'Computes the contribution from R to r and combines: V(r) = $\\rho_{0}R^{2}/(4\\varepsilon_{0})$ − $\\rho_{0}(r^{3} - R^{3})/(12\\varepsilon_{0}R)$ or equivalent simplified form',
             keywords: ['inside', 'r³', '12ε₀R', 'combine']
           }
         ],
         sampleAnswer:
-          'V(r) = −∫_∞^r E·dr\' = −∫_∞^R E_outside dr\' − ∫_R^r E_inside dr\'\n\nFirst integral (∞ to R):\n−∫_∞^R [ρ₀R³/(4ε₀r\'²)] dr\' = ρ₀R³/(4ε₀) · [1/r\']_∞^R = ρ₀R²/(4ε₀)\n\nSecond integral (R to r):\n−∫_R^r [ρ₀r\'²/(4ε₀R)] dr\' = −ρ₀/(4ε₀R) · [r\'³/3]_R^r = −ρ₀(r³ − R³)/(12ε₀R)\n\nV(r) = ρ₀R²/(4ε₀) − ρ₀(r³ − R³)/(12ε₀R)\n     = ρ₀/(12ε₀R) [3R³ − r³ + R³]\n     = ρ₀(4R³ − r³)/(12ε₀R)'
+          'V(r) = −∫_∞^r E·dr\' = −∫_∞^R E_outside dr\' − $\\int_{R}^{r}$ E_inside dr\'\n\nFirst integral (∞ to R):\n−∫_∞^R [ρ₀R³/($4\\varepsilon_{0}r$\'$ {}^{2}$)] dr\' = $\\rho_{0}R^{3}/(4\\varepsilon_{0})$ · [1/r\']_∞^R = $\\rho_{0}R^{2}/(4\\varepsilon_{0})$\n\nSecond integral (R to r):\n$-\\int_{R}^{r}$ [$\\rho_{0}r$\'$ {}^{2}/(4\\varepsilon_{0}R)$] dr\' = $-\\rho_{0}/(4\\varepsilon_{0}R)$ · [r\'$ {}^{3}/3$]_$R^{r}$ = $-\\rho_{0}(r^{3} - R^{3})/(12\\varepsilon_{0}R)$\n\nV(r) = $\\rho_{0}R^{2}/(4\\varepsilon_{0})$ − $\\rho_{0}(r^{3} - R^{3})/(12\\varepsilon_{0}R)$\n     = $\\rho_{0}/(12\\varepsilon_{0}R)$ [$3R^{3}$ − $r^{3}$ + $R^{3}$]\n     = $\\rho_{0}(4R^{3} - r^{3})/(12\\varepsilon_{0}R)$'
       },
       {
         label: '(d)',
@@ -123,17 +123,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'E(r): parabolic increase (∝ r²) for r < R, then drops as 1/r² for r > R; continuous at r = R with value ρ₀R/(4ε₀)',
+            description: 'E(r): parabolic increase $(\\propto r^{2})$ for r < R, then drops as $1/r^{2}$ for r > R; continuous at r = R with value $\\rho_{0}R/(4\\varepsilon_{0})$',
             keywords: ['parabola', 'r²', '1/r²', 'continuous', 'maximum at R']
           },
           {
             points: 1,
-            description: 'V(r): monotonically decreasing from V(0) = ρ₀R²/(3ε₀) toward 0 as r → ∞; continuous and smooth at r = R',
+            description: 'V(r): monotonically decreasing from V(0) = $\\rho_{0}R^{2}/(3\\varepsilon_{0})$ toward 0 as r → ∞; continuous and smooth at r = R',
             keywords: ['decreasing', 'continuous', 'V(0)', 'smooth']
           }
         ],
         sampleAnswer:
-          'E(r) vs r:\n• For 0 ≤ r ≤ R: E increases as r² (parabolic), reaching E_max = ρ₀R/(4ε₀) at r = R.\n• For r > R: E decreases as 1/r².\n• E is continuous at r = R.\n\nV(r) vs r:\n• V(0) = ρ₀R²/(3ε₀) (maximum value).\n• V decreases monotonically: for r < R it decreases (cubic shape), for r > R it falls as 1/r.\n• V is continuous and differentiable at r = R.\n• V → 0 as r → ∞.'
+          'E(r) vs r:\n• For 0 ≤ r ≤ R: E increases as $r^{2}$ (parabolic), reaching E_max = $\\rho_{0}R/(4\\varepsilon_{0})$ at r = R.\n• For r > R: E decreases as $1/r^{2}$.\n• E is continuous at r = R.\n\nV(r) vs r:\n• V(0) = $\\rho_{0}R^{2}/(3\\varepsilon_{0})$ (maximum value).\n• V decreases monotonically: for r < R it decreases (cubic shape), for r > R it falls as 1/r.\n• V is continuous and differentiable at r = R.\n• V → 0 as r → ∞.'
       }
     ]
   },
@@ -145,7 +145,7 @@ const longFRQs: PhysicsCEMFRQ[] = [
     unit: 2,
     title: 'Parallel-Plate Capacitor with Dielectric Slab',
     prompt:
-      'A parallel-plate capacitor has plates of area A separated by a distance d. The capacitor is charged to a voltage V₀ by a battery, which is then disconnected. A slab of dielectric material with dielectric constant κ and thickness t (t < d) is then inserted between the plates.',
+      'A parallel-plate capacitor has plates of area A separated by a distance d. The capacitor is charged to a voltage $V_{0}$ by a battery, which is then disconnected. A slab of dielectric material with dielectric constant κ and thickness t (t < d) is then inserted between the plates.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -163,17 +163,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Writes C_dielectric = κε₀A/t and C_air = ε₀A/(d − t)',
+            description: 'Writes C_dielectric = $\\kappa \\varepsilon_{0}A/t$ and C_air = $\\varepsilon_{0}A/(d - t)$',
             keywords: ['κε₀A/t', 'ε₀A/(d−t)', 'capacitance']
           },
           {
             points: 1,
-            description: 'Combines in series: 1/C = t/(κε₀A) + (d−t)/(ε₀A) → C = κε₀A/(κ(d−t)+t)',
+            description: 'Combines in series: 1/C = $t/(\\kappa \\varepsilon_{0}A)$ + $(d-t)/(\\varepsilon_{0}A)$ → C = $\\kappa \\varepsilon_{0}A/(\\kappa (d-t)+t)$',
             keywords: ['1/C', 'series combination', 'κε₀A', 'κ(d−t)+t']
           }
         ],
         sampleAnswer:
-          'Treat the system as two capacitors in series:\n\nC₁ (dielectric slab): C₁ = κε₀A/t\nC₂ (air gap):         C₂ = ε₀A/(d − t)\n\n1/C = 1/C₁ + 1/C₂ = t/(κε₀A) + (d − t)/(ε₀A)\n    = [t + κ(d − t)]/(κε₀A)\n\nC = κε₀A / [κ(d − t) + t]'
+          'Treat the system as two capacitors in series:\n\n$C_{1}$ (dielectric slab): $C_{1}$ = $\\kappa \\varepsilon_{0}A/t$\n$C_{2}$ (air gap):         $C_{2}$ = $\\varepsilon_{0}A/(d - t)$\n\n1/C = $1/C_{1}$ + $1/C_{2}$ = $t/(\\kappa \\varepsilon_{0}A)$ + $(d - t)/(\\varepsilon_{0}A)$\n    = [t + κ(d − t)]/$(\\kappa \\varepsilon_{0}A)$\n\nC = $\\kappa \\varepsilon_{0}A$ / [κ(d − t) + t]'
       },
       {
         label: '(b)',
@@ -183,17 +183,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Recognizes that charge Q is conserved (battery disconnected): Q = C₀V₀ = ε₀AV₀/d',
+            description: 'Recognizes that charge Q is conserved (battery disconnected): Q = $C_{0}V_{0}$ = $\\varepsilon_{0}AV_{0}/d$',
             keywords: ['charge conserved', 'Q = C₀V₀', 'battery disconnected']
           },
           {
             points: 1,
-            description: 'Writes V_new = Q/C_new = V₀[κ(d−t)+t]/(κd)',
+            description: 'Writes V_new = Q/C_new = $V_{0}$[κ(d−t)+t]/(κd)',
             keywords: ['V_new', 'Q/C', 'voltage decreases']
           }
         ],
         sampleAnswer:
-          'Since the battery is disconnected, charge is conserved:\nQ = C₀V₀ = (ε₀A/d)V₀\n\nNew voltage:\nV_new = Q/C_new = (ε₀AV₀/d) · [κ(d−t)+t]/(κε₀A)\n      = V₀[κ(d−t)+t]/(κd)\n\nSince κ > 1 and t < d, V_new < V₀: the voltage decreases.'
+          'Since the battery is disconnected, charge is conserved:\nQ = $C_{0}V_{0}$ = $(\\varepsilon_{0}A/d)V_{0}$\n\nNew voltage:\nV_new = Q/C_new = $(\\varepsilon_{0}AV_{0}/d)$ · [κ(d−t)+t]/$(\\kappa \\varepsilon_{0}A)$\n      = $V_{0}$[κ(d−t)+t]/(κd)\n\nSince κ > 1 and t < d, V_new < $V_{0}$: the voltage decreases.'
       },
       {
         label: '(c)',
@@ -203,12 +203,12 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Before: U₀ = ½C₀V₀² = ε₀AV₀²/(2d)',
+            description: 'Before: $U_{0}$ = $\\tfrac{1}{2} C_{0}V_{0}^{2}$ = $\\varepsilon_{0}AV_{0}^{2}/(2d)$',
             keywords: ['U₀', '½CV²', 'ε₀AV₀²/(2d)', 'before']
           },
           {
             points: 1,
-            description: 'After: U = Q²/(2C_new) and correctly simplifies; U < U₀',
+            description: 'After: U = $Q^{2}/(2C_{new})$ and correctly simplifies; U < $U_{0}$',
             keywords: ['Q²/(2C)', 'U_new', 'energy decreases', 'after']
           },
           {
@@ -218,27 +218,27 @@ const longFRQs: PhysicsCEMFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Before insertion:\nU₀ = ½C₀V₀² = ε₀AV₀²/(2d)\n\nAfter insertion (using U = Q²/(2C) since Q is constant):\nU = Q²/(2C_new) = (ε₀AV₀/d)² / [2 · κε₀A/(κ(d−t)+t)]\n  = ε₀AV₀²[κ(d−t)+t]/(2κd²)\n\nCompare: U/U₀ = [κ(d−t)+t]/(κd)\nSince κ > 1 and t > 0: κ(d−t)+t = κd − (κ−1)t < κd, so U < U₀.\n\nThe energy decreases because the fringe electric field exerts an attractive force on the dielectric, doing positive work pulling it in. This mechanical work done by the field reduces the stored electrical energy.'
+          'Before insertion:\n$U_{0}$ = $\\tfrac{1}{2} C_{0}V_{0}^{2}$ = $\\varepsilon_{0}AV_{0}^{2}/(2d)$\n\nAfter insertion (using U = $Q^{2}/(2C)$ since Q is constant):\nU = $Q^{2}/(2C_{new})$ = $(\\varepsilon_{0}AV_{0}/d)^{2}$ / [2 · $\\kappa \\varepsilon_{0}A/(\\kappa (d-t)+t)$]\n  = $\\varepsilon_{0}AV_{0}^{2}$[κ(d−t)+t]/$(2\\kappa d^{2})$\n\nCompare: $U/U_{0}$ = [κ(d−t)+t]/(κd)\nSince κ > 1 and t > 0: κ(d−t)+t = κd − (κ−1)t < κd, so U < $U_{0}$.\n\nThe energy decreases because the fringe electric field exerts an attractive force on the dielectric, doing positive work pulling it in. This mechanical work done by the field reduces the stored electrical energy.'
       },
       {
         label: '(d)',
         prompt:
-          'Now suppose the battery remains connected (at V₀) when the dielectric is inserted. How does the charge on the plates change? Does the battery do positive or negative work?',
+          'Now suppose the battery remains connected $(at V_{0})$ when the dielectric is inserted. How does the charge on the plates change? Does the battery do positive or negative work?',
         maxPoints: 2,
         rubric: [
           {
             points: 1,
-            description: 'With battery connected, V = V₀ is fixed; C increases so Q = CV₀ increases; additional charge flows from battery',
+            description: 'With battery connected, V = $V_{0}$ is fixed; C increases so Q = $CV_{0}$ increases; additional charge flows from battery',
             keywords: ['voltage fixed', 'charge increases', 'battery connected', 'C increases']
           },
           {
             points: 1,
-            description: 'Battery does positive work: W_batt = ΔQ · V₀ > 0; both stored energy and mechanical work come from the battery',
+            description: 'Battery does positive work: W_batt = ΔQ · $V_{0}$ > 0; both stored energy and mechanical work come from the battery',
             keywords: ['positive work', 'W_batt', 'ΔQ·V₀', 'battery supplies']
           }
         ],
         sampleAnswer:
-          'With the battery connected, V = V₀ remains constant.\n\nNew capacitance C_new > C₀, so:\nQ_new = C_new · V₀ > C₀V₀ = Q₀\n\nThe charge on the plates increases; additional charge ΔQ = (C_new − C₀)V₀ flows from the battery.\n\nThe battery does positive work:\nW_batt = ΔQ · V₀ = (C_new − C₀)V₀² > 0\n\nThis work supplies both the increase in stored energy (ΔU = ½(C_new − C₀)V₀²) and the mechanical work done pulling in the dielectric. Energy is conserved: W_batt = ΔU + W_mech.'
+          'With the battery connected, V = $V_{0}$ remains constant.\n\nNew capacitance C_new > $C_{0}$, so:\nQ_new = C_new · $V_{0}$ > $C_{0}V_{0}$ = $Q_{0}$\n\nThe charge on the plates increases; additional charge ΔQ = $(C_{new} - C_{0})V_{0}$ flows from the battery.\n\nThe battery does positive work:\nW_batt = ΔQ · $V_{0}$ = $(C_{new} - C_{0})V_{0}^{2}$ > 0\n\nThis work supplies both the increase in stored energy (ΔU = ½$(C_{new} - C_{0})V_{0}^{2}$) and the mechanical work done pulling in the dielectric. Energy is conserved: W_batt = ΔU + W_mech.'
       }
     ]
   },
@@ -273,17 +273,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Solves: q(t) = Cε(1 − e^(−t/(RC)))',
+            description: 'Solves: q(t) = $C\\varepsilon (1 - e^{-t/(RC)})$',
             keywords: ['q(t)', 'Cε', '1 − e^(−t/RC)', 'exponential']
           },
           {
             points: 1,
-            description: 'Derives i(t) = dq/dt = (ε/R)e^(−t/(RC))',
+            description: 'Derives i(t) = dq/dt = $(\\varepsilon /R)e^{-t/(RC)}$',
             keywords: ['i(t)', 'ε/R', 'e^(−t/RC)', 'derivative', 'current']
           }
         ],
         sampleAnswer:
-          'Apply Kirchhoff\'s voltage law around the loop:\nε − iR − q/C = 0\n\nSince i = dq/dt:\nε − R(dq/dt) − q/C = 0\ndq/dt + q/(RC) = ε/R\n\nThis is a first-order linear ODE. The integrating factor is e^(t/(RC)).\n\nMultiply: d/dt[q · e^(t/(RC))] = (ε/R)e^(t/(RC))\n\nIntegrate: q · e^(t/(RC)) = Cε · e^(t/(RC)) + A\nWith q(0) = 0: 0 = Cε + A → A = −Cε\n\nq(t) = Cε(1 − e^(−t/(RC)))\n\ni(t) = dq/dt = (ε/R)e^(−t/(RC))\n\nAt t = 0: i = ε/R (maximum). As t → ∞: q → Cε, i → 0.'
+          'Apply Kirchhoff\'s voltage law around the loop:\nε − iR − q/C = 0\n\nSince i = dq/dt:\nε − R(dq/dt) − q/C = 0\ndq/dt + q/(RC) = ε/R\n\nThis is a first-order linear ODE. The integrating factor is $e^{t/(RC)}$.\n\nMultiply: d/dt[q · $e^{t/(RC)}$] = $(\\varepsilon /R)e^{t/(RC)}$\n\nIntegrate: q · $e^{t/(RC)}$ = Cε · $e^{t/(RC)}$ + A\nWith q(0) = 0: 0 = Cε + A → A = −Cε\n\nq(t) = $C\\varepsilon (1 - e^{-t/(RC)})$\n\ni(t) = dq/dt = $(\\varepsilon /R)e^{-t/(RC)}$\n\nAt t = 0: i = ε/R (maximum). As t → ∞: q → Cε, i → 0.'
       },
       {
         label: '(b)',
@@ -298,7 +298,7 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Solves: q(t) = Cε · e^(−t/(RC)), so V_C(t) = ε · e^(−t/(RC))',
+            description: 'Solves: q(t) = Cε · $e^{-t/(RC)}$, so V_C(t) = ε · $e^{-t/(RC)}$',
             keywords: ['exponential decay', 'e^(−t/RC)', 'V_C', 'ε·e^(−t/RC)']
           },
           {
@@ -308,7 +308,7 @@ const longFRQs: PhysicsCEMFRQ[] = [
           }
         ],
         sampleAnswer:
-          'For the discharge circuit (no battery):\nq/C + R(dq/dt) = 0\ndq/dt = −q/(RC)\n\nSeparate and integrate:\n∫ dq/q = −∫ dt/(RC)\nln q = −t/(RC) + const\n\nWith q(0) = Cε:\nq(t) = Cε · e^(−t/(RC))\n\nV_C(t) = q(t)/C = ε · e^(−t/(RC))\n\nThe time constant is τ = RC.\nAt t = τ: V_C = ε · e⁻¹ ≈ 0.368ε (the voltage has dropped to ~36.8% of its initial value).'
+          'For the discharge circuit (no battery):\nq/C + R(dq/dt) = 0\ndq/dt = −q/(RC)\n\nSeparate and integrate:\n∫ dq/q = −∫ dt/(RC)\nln q = −t/(RC) + const\n\nWith q(0) = Cε:\nq(t) = Cε · $e^{-t/(RC)}$\n\nV_C(t) = q(t)/C = ε · $e^{-t/(RC)}$\n\nThe time constant is τ = RC.\nAt t = τ: V_C = ε · $e^{-1}$ ≈ 0.368ε (the voltage has dropped to ~36.8% of its initial value).'
       },
       {
         label: '(c)',
@@ -318,22 +318,22 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Sets up energy dissipated: W_R = ∫₀^∞ i²R dt = ∫₀^∞ (ε²/R)e^(−2t/(RC)) dt',
+            description: 'Sets up energy dissipated: W_R = $\\int_{0}^{\\infty}$ $i^{2}R$ dt = $\\int_{0}^{\\infty}$ $(\\varepsilon^{2}/R)e^{-2t/(RC)}$ dt',
             keywords: ['integral', 'i²R', 'power', 'dissipated']
           },
           {
             points: 1,
-            description: 'Evaluates: W_R = (ε²/R)(RC/2) = ½Cε²',
+            description: 'Evaluates: W_R = $(\\varepsilon^{2}/R)(RC/2)$ = $\\tfrac{1}{2} C\\varepsilon^{2}$',
             keywords: ['½Cε²', 'W_R', 'energy in resistor']
           },
           {
             points: 1,
-            description: 'Notes energy stored U_C = ½Cε², so W_R = U_C; total energy from battery = εQ = Cε² = 2U_C; exactly half is dissipated, half stored',
+            description: 'Notes energy stored U_C = $\\tfrac{1}{2} C\\varepsilon^{2}$, so W_R = U_C; total energy from battery = εQ = $C\\varepsilon^{2}$ = 2U_C; exactly half is dissipated, half stored',
             keywords: ['half', 'battery', 'Cε²', 'conservation', 'equal']
           }
         ],
         sampleAnswer:
-          'Power dissipated in resistor: P = i²R = (ε²/R)e^(−2t/(RC))\n\nTotal energy dissipated:\nW_R = ∫₀^∞ (ε²/R)e^(−2t/(RC)) dt = (ε²/R) · [−RC/2 · e^(−2t/(RC))]₀^∞\n    = (ε²/R)(RC/2) = ½Cε²\n\nEnergy stored in capacitor: U_C = ½Cε²\n\nTotal energy from battery: W_batt = εQ = ε(Cε) = Cε²\n\nCheck: W_R + U_C = ½Cε² + ½Cε² = Cε² = W_batt ✓\n\nExactly half of the energy supplied by the battery is dissipated as heat in the resistor, regardless of the value of R. The other half is stored in the electric field of the capacitor.'
+          'Power dissipated in resistor: P = $i^{2}R$ = $(\\varepsilon^{2}/R)e^{-2t/(RC)}$\n\nTotal energy dissipated:\nW_R = $\\int_{0}^{\\infty}$ $(\\varepsilon^{2}/R)e^{-2t/(RC)}$ dt = $(\\varepsilon^{2}/R)$ · [−RC/2 · $e^{-2t/(RC)}$]$ {}_{0}^{\\infty}$\n    = $(\\varepsilon^{2}/R)(RC/2)$ = $\\tfrac{1}{2} C\\varepsilon^{2}$\n\nEnergy stored in capacitor: U_C = $\\tfrac{1}{2} C\\varepsilon^{2}$\n\nTotal energy from battery: W_batt = εQ = ε(Cε) = $C\\varepsilon^{2}$\n\nCheck: W_R + U_C = $\\tfrac{1}{2} C\\varepsilon^{2}$ + $\\tfrac{1}{2} C\\varepsilon^{2}$ = $C\\varepsilon^{2}$ = W_batt ✓\n\nExactly half of the energy supplied by the battery is dissipated as heat in the resistor, regardless of the value of R. The other half is stored in the electric field of the capacitor.'
       }
     ]
   },
@@ -363,17 +363,17 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Computes enclosed current: I_enc = I(r²/a²) using uniform current density J = I/(πa²)',
+            description: 'Computes enclosed current: I_enc = $I(r^{2}/a^{2})$ using uniform current density J = $I/(\\pi a^{2})$',
             keywords: ['enclosed current', 'r²/a²', 'current density', 'J']
           },
           {
             points: 1,
-            description: 'Solves: B(2πr) = μ₀I(r²/a²) → B = μ₀Ir/(2πa²)',
+            description: 'Solves: B(2πr) = $\\mu_{0}I(r^{2}/a^{2})$ → B = $\\mu_{0}Ir/(2\\pi a^{2})$',
             keywords: ['B =', 'μ₀Ir/(2πa²)', 'linear in r']
           }
         ],
         sampleAnswer:
-          'Choose a circular Amperian loop of radius r < a, coaxial with the cable.\n\nBy symmetry, B⃗ is tangential and constant on this loop:\n∮ B⃗·dl⃗ = B(2πr)\n\nThe current density is J = I/(πa²).\nEnclosed current: I_enc = J · πr² = I(r²/a²)\n\nAmpère\'s law: B(2πr) = μ₀I(r²/a²)\n\nB(r) = μ₀Ir/(2πa²)  (tangential, in the direction given by the right-hand rule)\n\nThe field increases linearly from 0 at r = 0 to μ₀I/(2πa) at r = a.'
+          'Choose a circular Amperian loop of radius r < a, coaxial with the cable.\n\nBy symmetry, B⃗ is tangential and constant on this loop:\n∮ B⃗·dl⃗ = B(2πr)\n\nThe current density is J = $I/(\\pi a^{2})$.\nEnclosed current: I_enc = J · $\\pi r^{2}$ = $I(r^{2}/a^{2})$\n\nAmpère\'s law: B(2πr) = $\\mu_{0}I(r^{2}/a^{2})$\n\nB(r) = $\\mu_{0}Ir/(2\\pi a^{2})$  (tangential, in the direction given by the right-hand rule)\n\nThe field increases linearly from 0 at r = 0 to $\\mu_{0}I/(2\\pi a)$ at r = a.'
       },
       {
         label: '(b)',
@@ -388,12 +388,12 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'B = μ₀I/(2πr)',
+            description: 'B = $\\mu_{0}I/(2\\pi r)$',
             keywords: ['μ₀I/(2πr)', '1/r', 'same as long wire']
           }
         ],
         sampleAnswer:
-          'For a < r < b, the Amperian loop encloses the entire inner conductor (current I out of page) but none of the outer shell.\n\nI_enc = I\n\nB(2πr) = μ₀I\nB(r) = μ₀I/(2πr)\n\nThis is identical to the field of a long straight wire — the field falls off as 1/r.'
+          'For a < r < b, the Amperian loop encloses the entire inner conductor (current I out of page) but none of the outer shell.\n\nI_enc = I\n\nB(2πr) = $\\mu_{0}I$\nB(r) = $\\mu_{0}I/(2\\pi r)$\n\nThis is identical to the field of a long straight wire — the field falls off as 1/r.'
       },
       {
         label: '(c)',
@@ -413,7 +413,7 @@ const longFRQs: PhysicsCEMFRQ[] = [
           }
         ],
         sampleAnswer:
-          'For r > b, the Amperian loop encloses both conductors:\nI_enc = I (out) + I (in) = 0\n\nAmpère\'s law: B(2πr) = μ₀ · 0 = 0\nB(r) = 0\n\nThe equal and opposite currents produce no net magnetic field outside the cable. This is the principle behind coaxial cable shielding — no magnetic (or electric) interference is produced externally.'
+          'For r > b, the Amperian loop encloses both conductors:\nI_enc = I (out) + I (in) = 0\n\nAmpère\'s law: B(2πr) = $\\mu_{0}$ · 0 = 0\nB(r) = 0\n\nThe equal and opposite currents produce no net magnetic field outside the cable. This is the principle behind coaxial cable shielding — no magnetic (or electric) interference is produced externally.'
       },
       {
         label: '(d)',
@@ -423,22 +423,22 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Uses energy density u = B²/(2μ₀) with B = μ₀I/(2πr)',
+            description: 'Uses energy density u = $B^{2}/(2\\mu_{0})$ with B = $\\mu_{0}I/(2\\pi r)$',
             keywords: ['energy density', 'B²/(2μ₀)', 'u']
           },
           {
             points: 1,
-            description: 'Sets up integral: U/L = ∫ₐᵇ [B²/(2μ₀)] · 2πr dr (over cylindrical shell)',
+            description: 'Sets up integral: U/L = $\\int_{a}^{b}$ [$B^{2}/(2\\mu_{0})$] · 2πr dr (over cylindrical shell)',
             keywords: ['integral', '2πr dr', 'cylindrical', 'per unit length']
           },
           {
             points: 1,
-            description: 'Evaluates: U/L = (μ₀I²/(4π)) ln(b/a)',
+            description: 'Evaluates: U/L = $(\\mu_{0}I^{2}/(4\\pi ))$ ln(b/a)',
             keywords: ['μ₀I²/(4π)', 'ln(b/a)', 'logarithm']
           }
         ],
         sampleAnswer:
-          'The magnetic energy density is u = B²/(2μ₀).\n\nIn the region a < r < b: B = μ₀I/(2πr)\nu = μ₀I²/(8π²r²)\n\nFor a cylindrical shell of length L, thickness dr:\ndV = 2πr · L · dr\n\nEnergy per unit length:\nU/L = ∫ₐᵇ u · 2πr dr = ∫ₐᵇ [μ₀I²/(8π²r²)] · 2πr dr\n    = (μ₀I²/(4π)) ∫ₐᵇ dr/r\n    = (μ₀I²/(4π)) ln(b/a)\n\nNote: This can also be written as U/L = ½LI² with inductance per unit length L/L = (μ₀/(2π)) ln(b/a).'
+          'The magnetic energy density is u = $B^{2}/(2\\mu_{0})$.\n\nIn the region a < r < b: B = $\\mu_{0}I/(2\\pi r)$\nu = $\\mu_{0}I^{2}/(8\\pi^{2}r^{2})$\n\nFor a cylindrical shell of length L, thickness dr:\ndV = 2πr · L · dr\n\nEnergy per unit length:\nU/L = $\\int_{a}^{b}$ u · 2πr dr = $\\int_{a}^{b}$ [$\\mu_{0}I^{2}/(8\\pi^{2}r^{2})$] · 2πr dr\n    = $(\\mu_{0}I^{2}/(4\\pi ))$ $\\int_{a}^{b}$ dr/r\n    = $(\\mu_{0}I^{2}/(4\\pi ))$ ln(b/a)\n\nNote: This can also be written as U/L = $\\tfrac{1}{2} LI^{2}$ with inductance per unit length L/L = $(\\mu_{0}/(2\\pi ))$ ln(b/a).'
       }
     ]
   },
@@ -450,7 +450,7 @@ const longFRQs: PhysicsCEMFRQ[] = [
     unit: 5,
     title: "Faraday's Law and Mutual Inductance",
     prompt:
-      'A long solenoid has n turns per unit length, radius R, and carries a time-varying current I(t) = I₀ sin(ωt). A circular conducting loop of radius r (r > R) is placed coaxially around the solenoid in a plane perpendicular to its axis. The loop has total resistance R_loop.',
+      'A long solenoid has n turns per unit length, radius R, and carries a time-varying current I(t) = $I_{0}$ sin(ωt). A circular conducting loop of radius r (r > R) is placed coaxially around the solenoid in a plane perpendicular to its axis. The loop has total resistance R_loop.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -463,22 +463,22 @@ const longFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'States B inside solenoid: B = μ₀nI(t) = μ₀nI₀ sin(ωt); B = 0 outside the solenoid',
+            description: 'States B inside solenoid: B = $\\mu_{0}nI(t)$ = $\\mu_{0}nI_{0}$ sin(ωt); B = 0 outside the solenoid',
             keywords: ['B = μ₀nI', 'solenoid', 'inside', 'outside zero']
           },
           {
             points: 1,
-            description: 'Recognizes that flux through loop uses the solenoid cross-section πR², not the loop area πr²',
+            description: 'Recognizes that flux through loop uses the solenoid cross-section $\\pi R^{2}$, not the loop area $\\pi r^{2}$',
             keywords: ['πR²', 'solenoid area', 'not πr²', 'flux area']
           },
           {
             points: 1,
-            description: 'Φ(t) = μ₀nI₀πR² sin(ωt)',
+            description: 'Φ(t) = $\\mu_{0}nI_{0}\\pi R^{2}$ sin(ωt)',
             keywords: ['Φ(t)', 'μ₀nI₀πR²', 'sin(ωt)']
           }
         ],
         sampleAnswer:
-          'Inside the solenoid: B = μ₀nI(t) = μ₀nI₀ sin(ωt)\nOutside the solenoid: B ≈ 0\n\nThe magnetic flux through the external loop is determined only by the field inside the solenoid cross-section:\n\nΦ(t) = B · πR² = μ₀nI₀πR² sin(ωt)\n\nKey point: we use πR² (solenoid radius), not πr² (loop radius), because B = 0 for r\' > R.'
+          'Inside the solenoid: B = $\\mu_{0}nI(t)$ = $\\mu_{0}nI_{0}$ sin(ωt)\nOutside the solenoid: B ≈ 0\n\nThe magnetic flux through the external loop is determined only by the field inside the solenoid cross-section:\n\nΦ(t) = B · $\\pi R^{2}$ = $\\mu_{0}nI_{0}\\pi R^{2}$ sin(ωt)\n\nKey point: we use $\\pi R^{2}$ (solenoid radius), not $\\pi r^{2}$ (loop radius), because B = 0 for r\' > R.'
       },
       {
         label: '(b)',
@@ -493,12 +493,12 @@ const longFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Differentiates: ε = −μ₀nI₀πR²ω cos(ωt)',
+            description: 'Differentiates: ε = $-\\mu_{0}nI_{0}\\pi R^{2}\\omega$ cos(ωt)',
             keywords: ['cos(ωt)', 'ω', 'derivative', 'μ₀nI₀πR²ω']
           },
           {
             points: 1,
-            description: 'Current: i(t) = ε/R_loop = −μ₀nI₀πR²ω cos(ωt)/R_loop',
+            description: 'Current: i(t) = ε/R_loop = $-\\mu_{0}nI_{0}\\pi R^{2}\\omega$ cos(ωt)/R_loop',
             keywords: ['i(t)', 'ε/R_loop', 'current', 'Ohm']
           },
           {
@@ -508,32 +508,32 @@ const longFRQs: PhysicsCEMFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Faraday\'s law: ε = −dΦ/dt = −d/dt[μ₀nI₀πR² sin(ωt)]\n\nε(t) = −μ₀nI₀πR²ω cos(ωt)\n\nThe magnitude of the peak emf is ε₀ = μ₀nI₀πR²ω.\n\nInduced current:\ni(t) = ε(t)/R_loop = −(μ₀nI₀πR²ω/R_loop) cos(ωt)\n\nBy Lenz\'s law, when the solenoid flux is increasing (dΦ/dt > 0), the induced current flows in the direction to create a flux opposing the increase — i.e., the induced current creates a field opposing B_solenoid through the loop.'
+          'Faraday\'s law: ε = −dΦ/dt = −d/dt[$\\mu_{0}nI_{0}\\pi R^{2}$ sin(ωt)]\n\nε(t) = $-\\mu_{0}nI_{0}\\pi R^{2}\\omega$ cos(ωt)\n\nThe magnitude of the peak emf is $\\varepsilon_{0}$ = $\\mu_{0}nI_{0}\\pi R^{2}\\omega$.\n\nInduced current:\ni(t) = ε(t)/R_loop = $-(\\mu_{0}nI_{0}\\pi R^{2}\\omega /R_{loop})$ cos(ωt)\n\nBy Lenz\'s law, when the solenoid flux is increasing (dΦ/dt > 0), the induced current flows in the direction to create a flux opposing the increase — i.e., the induced current creates a field opposing B_solenoid through the loop.'
       },
       {
         label: '(c)',
         prompt:
-          'Derive the mutual inductance M between the solenoid and the loop. If n = 1000 turns/m, R = 0.03 m, and I₀ = 2 A, calculate M.',
+          'Derive the mutual inductance M between the solenoid and the loop. If n = 1000 turns/m, R = 0.03 m, and $I_{0}$ = 2 A, calculate M.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'Defines M via Φ_loop = MI: so M = Φ/I = μ₀nπR²',
+            description: 'Defines M via Φ_loop = MI: so M = Φ/I = $\\mu_{0}n\\pi R^{2}$',
             keywords: ['M = Φ/I', 'mutual inductance', 'μ₀nπR²']
           },
           {
             points: 1,
-            description: 'Notes M is independent of the loop radius r (as long as r > R) and independent of I₀',
+            description: 'Notes M is independent of the loop radius r (as long as r > R) and independent of $I_{0}$',
             keywords: ['independent', 'loop radius', 'r > R']
           },
           {
             points: 1,
-            description: 'Calculates M = (4π × 10⁻⁷)(1000)π(0.03)² ≈ 3.55 × 10⁻⁶ H ≈ 3.55 μH',
+            description: 'Calculates M = $(4\\pi \\times 10^{-7})(1000)\\pi (0.03)^{2}$ ≈ $3.55 \\times 10^{-6}$ H ≈ 3.55 μH',
             keywords: ['3.55', 'μH', '10⁻⁶', 'calculation']
           }
         ],
         sampleAnswer:
-          'Mutual inductance is defined by Φ_loop = M · I.\n\nM = Φ/I = μ₀nπR²\n\nNote: M depends only on the solenoid geometry (n, R), not on the loop radius r (as long as r > R so the loop encloses all the flux). M is also independent of the current.\n\nNumerical calculation:\nM = (4π × 10⁻⁷ T·m/A)(1000 m⁻¹)π(0.03 m)²\n  = (4π × 10⁻⁴)π(9 × 10⁻⁴)\n  = 4π² × 9 × 10⁻⁸\n  = 36π² × 10⁻⁸\n  ≈ 355.3 × 10⁻⁸ H\n  ≈ 3.55 × 10⁻⁶ H = 3.55 μH'
+          'Mutual inductance is defined by Φ_loop = M · I.\n\nM = Φ/I = $\\mu_{0}n\\pi R^{2}$\n\nNote: M depends only on the solenoid geometry (n, R), not on the loop radius r (as long as r > R so the loop encloses all the flux). M is also independent of the current.\n\nNumerical calculation:\nM = $(4\\pi \\times 10^{-7} T\\cdot m/A)(1000 m^{-1})\\pi (0.03 m)^{2}$\n  = $(4\\pi \\times 10^{-4})\\pi (9 \\times 10^{-4})$\n  = $4\\pi^{2}$ × $9 \\times 10^{-8}$\n  = $36\\pi^{2}$ × $10^{-8}$\n  ≈ $355.3 \\times 10^{-8}$ H\n  ≈ $3.55 \\times 10^{-6}$ H = 3.55 μH'
       }
     ]
   }
@@ -564,17 +564,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Force from +Q at origin: F₁ = kQ²/d² in +x direction (repulsion)',
+            description: 'Force from +Q at origin: $F_{1}$ = $kQ^{2}/d^{2}$ in +x direction (repulsion)',
             keywords: ['kQ²/d²', 'repulsion', '+x', 'origin charge']
           },
           {
             points: 1,
-            description: 'Force from −2Q at 2d: F₂ = 2kQ²/d² in +x direction (attraction toward −2Q). Net = 3kQ²/d² in +x',
+            description: 'Force from −2Q at 2d: $F_{2}$ = $2kQ^{2}/d^{2}$ in +x direction (attraction toward −2Q). Net = $3kQ^{2}/d^{2}$ in +x',
             keywords: ['2kQ²/d²', 'attraction', 'net', '3kQ²/d²', '+x direction']
           }
         ],
         sampleAnswer:
-          'On the charge +Q at x = d:\n\nForce from +Q at x = 0:\nF₁ = kQ·Q/d² = kQ²/d², directed in +x (repulsion pushes it away from origin)\n\nForce from −2Q at x = 2d:\nF₂ = k·Q·2Q/d² = 2kQ²/d², directed in +x (attraction pulls it toward the −2Q charge)\n\nBoth forces point in the +x direction.\n\nF_net = F₁ + F₂ = kQ²/d² + 2kQ²/d² = 3kQ²/d²\n\nDirection: +x (to the right)'
+          'On the charge +Q at x = d:\n\nForce from +Q at x = 0:\n$F_{1}$ = $kQ\\cdot Q/d^{2}$ = $kQ^{2}/d^{2}$, directed in +x (repulsion pushes it away from origin)\n\nForce from −2Q at x = 2d:\n$F_{2}$ = $k\\cdot Q\\cdot 2Q/d^{2}$ = $2kQ^{2}/d^{2}$, directed in +x (attraction pulls it toward the −2Q charge)\n\nBoth forces point in the +x direction.\n\nF_net = $F_{1}$ + $F_{2}$ = $kQ^{2}/d^{2}$ + $2kQ^{2}/d^{2}$ = $3kQ^{2}/d^{2}$\n\nDirection: +x (to the right)'
       },
       {
         label: '(b)',
@@ -589,12 +589,12 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Sets up kQ/x² + kQ/(x+d)² = 2kQ/(x+2d)² (taking x as distance left of origin) or equivalent, and identifies the equation to solve (exact solution not required if method is correct)',
+            description: 'Sets up $kQ/x^{2}$ + $kQ/(x+d)^{2}$ = $2kQ/(x+2d)^{2}$ (taking x as distance left of origin) or equivalent, and identifies the equation to solve (exact solution not required if method is correct)',
             keywords: ['equation', 'superposition', '1/x²', 'solve']
           }
         ],
         sampleAnswer:
-          'Consider a test point at x = −s (where s > 0, to the left of the origin).\n\nE from +Q at x = 0: kQ/s² in −x direction (pointing left, away from +Q)\nE from +Q at x = d: kQ/(s+d)² in −x direction\nE from −2Q at x = 2d: 2kQ/(s+2d)² in +x direction (toward −2Q)\n\nFor E = 0 at this point, the +x component must balance the −x components:\n2kQ/(s+2d)² = kQ/s² + kQ/(s+d)²\n\nSimplify (divide by kQ):\n2/(s+2d)² = 1/s² + 1/(s+d)²\n\nThis transcendental equation has a solution for some positive s. The zero is to the left of the origin because in that region the two +Q fields oppose the −2Q field.\n\n(There is no zero between the charges because the fields from adjacent charges reinforce there.)'
+          'Consider a test point at x = −s (where s > 0, to the left of the origin).\n\nE from +Q at x = 0: $kQ/s^{2}$ in −x direction (pointing left, away from +Q)\nE from +Q at x = d: $kQ/(s+d)^{2}$ in −x direction\nE from −2Q at x = 2d: $2kQ/(s+2d)^{2}$ in +x direction (toward −2Q)\n\nFor E = 0 at this point, the +x component must balance the −x components:\n$_{2}kQ/(s+2d)^{2}$ = $kQ/s^{2}$ + $kQ/(s+d)^{2}$\n\nSimplify (divide by kQ):\n$_{2}/(s+2d)^{2}$ = $1/s^{2}$ + $1/(s+d)^{2}$\n\nThis transcendental equation has a solution for some positive s. The zero is to the left of the origin because in that region the two +Q fields oppose the −2Q field.\n\n(There is no zero between the charges because the fields from adjacent charges reinforce there.)'
       }
     ]
   },
@@ -624,12 +624,12 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'V = kQ/L · ln((L+a)/a) or equivalently (Q/(4πε₀L)) ln(1 + L/a)',
+            description: 'V = kQ/L · ln((L+a)/a) or equivalently $(Q/(4\\pi \\varepsilon_{0}L))$ ln(1 + L/a)',
             keywords: ['ln', '(L+a)/a', 'kQ/L', 'logarithm']
           }
         ],
         sampleAnswer:
-          'Linear charge density: λ = Q/L\n\nAn element dx\' at position x\' (0 ≤ x\' ≤ L) is at distance (x\' + a) from point P.\n\nV = ∫ k dq/r = ∫₀ᴸ k(Q/L) dx\'/(x\' + a)\n  = kQ/L · [ln(x\' + a)]₀ᴸ\n  = kQ/L · [ln(L + a) − ln(a)]\n  = kQ/L · ln((L + a)/a)\n  = Q/(4πε₀L) · ln(1 + L/a)'
+          'Linear charge density: λ = Q/L\n\nAn element dx\' at position x\' (0 ≤ x\' ≤ L) is at distance (x\' + a) from point P.\n\nV = ∫ k dq/r = $\\int_{0}$ᴸ k(Q/L) dx\'/(x\' + a)\n  = kQ/L · [ln(x\' + a)]$ {}_{0}$ᴸ\n  = kQ/L · [ln(L + a) − ln(a)]\n  = kQ/L · ln((L + a)/a)\n  = $Q/(4\\pi \\varepsilon_{0}L)$ · ln(1 + L/a)'
       },
       {
         label: '(b)',
@@ -661,7 +661,7 @@ const shortFRQs: PhysicsCEMFRQ[] = [
     unit: 2,
     title: 'Capacitor with Two Dielectrics',
     prompt:
-      'A parallel-plate capacitor with plate area A and separation d is half-filled with a dielectric of constant κ₁ and half-filled with a dielectric of constant κ₂. The two dielectric slabs are each of thickness d, placed side by side (each covering half the plate area A/2).',
+      'A parallel-plate capacitor with plate area A and separation d is half-filled with a dielectric of constant $\\kappa_{1}$ and half-filled with a dielectric of constant $\\kappa_{2}$. The two dielectric slabs are each of thickness d, placed side by side (each covering half the plate area A/2).',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -679,12 +679,12 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'C = C₁ + C₂ = κ₁ε₀(A/2)/d + κ₂ε₀(A/2)/d = ε₀A(κ₁ + κ₂)/(2d)',
+            description: 'C = $C_{1}$ + $C_{2}$ = $\\kappa_{1}\\varepsilon_{0}(A/2)/d$ + $\\kappa_{2}\\varepsilon_{0}(A/2)/d$ = $\\varepsilon_{0}A(\\kappa_{1} + \\kappa_{2})/(2d)$',
             keywords: ['C₁ + C₂', 'ε₀A(κ₁+κ₂)/(2d)', 'parallel combination']
           }
         ],
         sampleAnswer:
-          'Since the dielectrics are side by side, they have the same potential difference across them (same plate voltage). This is a parallel combination.\n\nC₁ = κ₁ε₀(A/2)/d\nC₂ = κ₂ε₀(A/2)/d\n\nC_eq = C₁ + C₂ = ε₀A/(2d) · (κ₁ + κ₂)'
+          'Since the dielectrics are side by side, they have the same potential difference across them (same plate voltage). This is a parallel combination.\n\n$C_{1}$ = $\\kappa_{1}\\varepsilon_{0}(A/2)/d$\n$C_{2}$ = $\\kappa_{2}\\varepsilon_{0}(A/2)/d$\n\nC_eq = $C_{1}$ + $C_{2}$ = $\\varepsilon_{0}A/(2d)$ · $(\\kappa_{1} + \\kappa_{2})$'
       },
       {
         label: '(b)',
@@ -699,12 +699,12 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: '1/C = 1/C₁ + 1/C₂ with C₁ = κ₁ε₀A/(d/2) = 2κ₁ε₀A/d, giving C = 2ε₀Aκ₁κ₂/[d(κ₁+κ₂)]',
+            description: '1/C = $1/C_{1}$ + $1/C_{2}$ with $C_{1}$ = $\\kappa_{1}\\varepsilon_{0}A/(d/2)$ = $2\\kappa_{1}\\varepsilon_{0}A/d$, giving C = $2\\varepsilon_{0}A\\kappa_{1}\\kappa_{2}$/[$d(\\kappa_{1}+\\kappa_{2})$]',
             keywords: ['1/C₁ + 1/C₂', '2ε₀Aκ₁κ₂', 'd(κ₁+κ₂)', 'series combination']
           }
         ],
         sampleAnswer:
-          'Stacked dielectrics share the same charge → series combination.\n\nC₁ = κ₁ε₀A/(d/2) = 2κ₁ε₀A/d\nC₂ = κ₂ε₀A/(d/2) = 2κ₂ε₀A/d\n\n1/C_eq = 1/C₁ + 1/C₂ = d/(2ε₀A) · [1/κ₁ + 1/κ₂]\n       = d(κ₁ + κ₂)/(2ε₀Aκ₁κ₂)\n\nC_eq = 2ε₀Aκ₁κ₂ / [d(κ₁ + κ₂)]'
+          'Stacked dielectrics share the same charge → series combination.\n\n$C_{1}$ = $\\kappa_{1}\\varepsilon_{0}A/(d/2)$ = $2\\kappa_{1}\\varepsilon_{0}A/d$\n$C_{2}$ = $\\kappa_{2}\\varepsilon_{0}A/(d/2)$ = $2\\kappa_{2}\\varepsilon_{0}A/d$\n\n1/C_eq = $1/C_{1}$ + $1/C_{2}$ = $d/(2\\varepsilon_{0}A)$ · [$1/\\kappa_{1}$ + $1/\\kappa_{2}$]\n       = $d(\\kappa_{1} + \\kappa_{2})/(2\\varepsilon_{0}A\\kappa_{1}\\kappa_{2})$\n\nC_eq = $2\\varepsilon_{0}A\\kappa_{1}\\kappa_{2}$ / [$d(\\kappa_{1} + \\kappa_{2})$]'
       }
     ]
   },
@@ -716,7 +716,7 @@ const shortFRQs: PhysicsCEMFRQ[] = [
     unit: 3,
     title: "Kirchhoff's Laws — Two-Loop Circuit",
     prompt:
-      'A circuit has two loops sharing a common branch. The left loop contains a battery ε₁ = 12 V and resistor R₁ = 4 Ω. The right loop contains a battery ε₂ = 6 V and resistor R₂ = 6 Ω. The shared branch has a resistor R₃ = 3 Ω. Both batteries have their positive terminals at the top.',
+      'A circuit has two loops sharing a common branch. The left loop contains a battery $\\varepsilon_{1}$ = 12 V and resistor $R_{1}$ = 4 Ω. The right loop contains a battery $\\varepsilon_{2}$ = 6 V and resistor $R_{2}$ = 6 Ω. The shared branch has a resistor $R_{3}$ = 3 Ω. Both batteries have their positive terminals at the top.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -729,7 +729,7 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Junction rule: I₁ = I₂ + I₃ (or equivalent with defined current directions)',
+            description: 'Junction rule: $I_{1}$ = $I_{2}$ + $I_{3}$ (or equivalent with defined current directions)',
             keywords: ['junction', 'I₁ = I₂ + I₃', 'node', 'conservation']
           },
           {
@@ -739,7 +739,7 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Define currents: I₁ flows clockwise in the left loop (through ε₁, R₁), I₂ flows clockwise in the right loop (through ε₂, R₂). I₃ flows downward through R₃.\n\nJunction rule (top node):\nI₁ = I₂ + I₃  →  I₃ = I₁ − I₂\n\nLeft loop (clockwise):\nε₁ − I₁R₁ − I₃R₃ = 0\n12 − 4I₁ − 3I₃ = 0\n\nRight loop (clockwise):\nε₂ − I₂R₂ − I₃R₃ = 0\n6 − 6I₂ − 3I₃ = 0'
+          'Define currents: $I_{1}$ flows clockwise in the left loop (through $\\varepsilon_{1}$, $R_{1}$), $I_{2}$ flows clockwise in the right loop (through $\\varepsilon_{2}$, $R_{2}$). $I_{3}$ flows downward through $R_{3}$.\n\nJunction rule (top node):\n$I_{1}$ = $I_{2}$ + $I_{3}$  →  $I_{3}$ = $I_{1}$ − $I_{2}$\n\nLeft loop (clockwise):\n$\\varepsilon_{1}$ − $I_{1}R_{1}$ − $I_{3}R_{3}$ = 0\n12 − $4I_{1}$ − $3I_{3}$ = 0\n\nRight loop (clockwise):\n$\\varepsilon_{2}$ − $I_{2}R_{2}$ − $I_{3}R_{3}$ = 0\n6 − $6I_{2}$ − $3I_{3}$ = 0'
       },
       {
         label: '(b)',
@@ -749,17 +749,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Correctly substitutes I₃ = I₁ − I₂ and solves the 2×2 system',
+            description: 'Correctly substitutes $I_{3}$ = $I_{1}$ − $I_{2}$ and solves the 2×2 system',
             keywords: ['substitute', 'solve', 'system', 'simultaneous']
           },
           {
             points: 1,
-            description: 'Correct numerical answers: I₁ = 2 A, I₂ = 0 A, I₃ = 2 A (or consistent with their sign conventions)',
+            description: 'Correct numerical answers: $I_{1}$ = 2 A, $I_{2}$ = 0 A, $I_{3}$ = 2 A (or consistent with their sign conventions)',
             keywords: ['I₁ = 2', 'I₂ = 0', 'I₃ = 2', 'amperes']
           }
         ],
         sampleAnswer:
-          'Substitute I₃ = I₁ − I₂:\n\nLeft loop: 12 − 4I₁ − 3(I₁ − I₂) = 0 → 12 − 7I₁ + 3I₂ = 0  ... (1)\nRight loop: 6 − 6I₂ − 3(I₁ − I₂) = 0 → 6 − 3I₁ − 3I₂ = 0  ... (2)\n\nFrom (2): I₁ = (6 − 3I₂)/3 = 2 − I₂\nSubstitute into (1): 12 − 7(2 − I₂) + 3I₂ = 0\n12 − 14 + 7I₂ + 3I₂ = 0\n−2 + 10I₂ = 0\nI₂ = 0.2 A\n\nI₁ = 2 − 0.2 = 1.8 A\nI₃ = I₁ − I₂ = 1.6 A\n\nThrough R₁: I₁ = 1.8 A\nThrough R₂: I₂ = 0.2 A\nThrough R₃: I₃ = 1.6 A'
+          'Substitute $I_{3}$ = $I_{1}$ − $I_{2}$:\n\nLeft loop: 12 − $4I_{1}$ − $3(I_{1} - I_{2})$ = 0 → 12 − $7I_{1}$ + $3I_{2}$ = 0  ... (1)\nRight loop: 6 − $6I_{2}$ − $3(I_{1} - I_{2})$ = 0 → 6 − $3I_{1}$ − $3I_{2}$ = 0  ... (2)\n\nFrom (2): $I_{1}$ = $(6 - 3I_{2})/3$ = 2 − $I_{2}$\nSubstitute into (1): 12 − $7(2 - I_{2})$ + $3I_{2}$ = 0\n12 − 14 + $7I_{2}$ + $3I_{2}$ = 0\n−2 + $10I_{2}$ = 0\n$I_{2}$ = 0.2 A\n\n$I_{1}$ = 2 − 0.2 = 1.8 A\n$I_{3}$ = $I_{1}$ − $I_{2}$ = 1.6 A\n\nThrough $R_{1}$: $I_{1}$ = 1.8 A\nThrough $R_{2}$: $I_{2}$ = 0.2 A\nThrough $R_{3}$: $I_{3}$ = 1.6 A'
       }
     ]
   },
@@ -784,17 +784,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Sets up dB = μ₀I dl/(4πR²) with dl = R dφ and |dl⃗ × r̂| = 1 (perpendicular at center)',
+            description: 'Sets up dB = $\\mu_{0}I$ $dl/(4\\pi R^{2})$ with dl = R dφ and |dl⃗ × r̂| = 1 (perpendicular at center)',
             keywords: ['dB', 'μ₀I/(4πR²)', 'dl = Rdφ', 'perpendicular', 'Biot-Savart']
           },
           {
             points: 1,
-            description: 'Integrates: B = μ₀Iθ/(4πR), directed along ẑ (by right-hand rule)',
+            description: 'Integrates: B = $\\mu_{0}I\\theta /(4\\pi R)$, directed along ẑ (by right-hand rule)',
             keywords: ['B = μ₀Iθ/(4πR)', 'integrate', 'ẑ', 'right-hand rule']
           }
         ],
         sampleAnswer:
-          'Biot-Savart law: dB⃗ = (μ₀I/4π) · (dl⃗ × r̂)/r²\n\nFor each element dl on the arc:\n• dl = R dφ\n• r = R (distance to center)\n• dl⃗ × r̂ is perpendicular to the plane (ẑ direction), with |dl⃗ × r̂| = dl\n\ndB = μ₀I R dφ/(4πR²) = μ₀I dφ/(4πR)\n\nIntegrate over angle θ:\nB = ∫₀θ μ₀I dφ/(4πR) = μ₀Iθ/(4πR)\n\nDirection: ẑ (out of page, by right-hand rule for counterclockwise current).\n\nSpecial case: full circle (θ = 2π) gives B = μ₀I/(2R) ✓'
+          'Biot-Savart law: dB⃗ = $(\\mu_{0}I/4\\pi )$ · (dl⃗ × r̂)/$r^{2}$\n\nFor each element dl on the arc:\n• dl = R dφ\n• r = R (distance to center)\n• dl⃗ × r̂ is perpendicular to the plane (ẑ direction), with |dl⃗ × r̂| = dl\n\ndB = $\\mu_{0}I$ R $d\\varphi /(4\\pi R^{2})$ = $\\mu_{0}I$ dφ/(4πR)\n\nIntegrate over angle θ:\nB = $\\int_{0}\\theta$ $\\mu_{0}I$ dφ/(4πR) = $\\mu_{0}I\\theta /(4\\pi R)$\n\nDirection: ẑ (out of page, by right-hand rule for counterclockwise current).\n\nSpecial case: full circle (θ = 2π) gives B = $\\mu_{0}I/(2R)$ ✓'
       },
       {
         label: '(b)',
@@ -804,17 +804,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Computes each field: B₁ = μ₀I(π/2)/(4πR) = μ₀I/(8R) and B₂ = μ₀I(3π/2)/(4πR) = 3μ₀I/(8R)',
+            description: 'Computes each field: $B_{1}$ = $\\mu_{0}I(\\pi /2)/(4\\pi R)$ = $\\mu_{0}I/(8R)$ and $B_{2}$ = $\\mu_{0}I(3\\pi /2)/(4\\pi R)$ = $3\\mu_{0}I/(8R)$',
             keywords: ['μ₀I/(8R)', '3μ₀I/(8R)', 'two arcs', 'components']
           },
           {
             points: 1,
-            description: 'Since fields are perpendicular: |B_total| = √(B₁² + B₂²) = μ₀I√10/(8R)',
+            description: 'Since fields are perpendicular: |B_total| = $\\sqrt{B_{1}^{2} + B_{2}^{2}}$ = $\\mu_{0}I\\sqrt{10}/(8R)$',
             keywords: ['perpendicular', 'Pythagorean', '√(B₁²+B₂²)', '√10', 'magnitude']
           }
         ],
         sampleAnswer:
-          'Arc 1 (xy-plane, angle π/2):\nB₁ = μ₀I(π/2)/(4πR) = μ₀I/(8R), directed along ẑ\n\nArc 2 (xz-plane, angle 3π/2):\nB₂ = μ₀I(3π/2)/(4πR) = 3μ₀I/(8R), directed along ŷ\n\nSince B₁ ⊥ B₂:\n|B_total| = √(B₁² + B₂²) = √[(μ₀I/(8R))² + (3μ₀I/(8R))²]\n          = (μ₀I/(8R))√(1 + 9)\n          = μ₀I√10/(8R)'
+          'Arc 1 (xy-plane, angle π/2):\n$B_{1}$ = $\\mu_{0}I(\\pi /2)/(4\\pi R)$ = $\\mu_{0}I/(8R)$, directed along ẑ\n\nArc 2 (xz-plane, angle 3π/2):\n$B_{2}$ = $\\mu_{0}I(3\\pi /2)/(4\\pi R)$ = $3\\mu_{0}I/(8R)$, directed along ŷ\n\nSince $B_{1}$ ⊥ $B_{2}$:\n|B_total| = $\\sqrt{B_{1}^{2} + B_{2}^{2}}$ = √[$(\\mu_{0}I/(8R))^{2}$ + $(3\\mu_{0}I/(8R))^{2}$]\n          = $(\\mu_{0}I/(8R))\\sqrt{1 + 9}$\n          = $\\mu_{0}I\\sqrt{10}/(8R)$'
       }
     ]
   },
@@ -826,7 +826,7 @@ const shortFRQs: PhysicsCEMFRQ[] = [
     unit: 4,
     title: 'Magnetic Force on a Current-Carrying Wire',
     prompt:
-      'A straight wire of length L carries current I in the +y direction. The wire is in a non-uniform magnetic field B⃗ = B₀(x/a) ẑ, where B₀ and a are positive constants. The wire extends from x = a to x = 3a along a line parallel to the y-axis at some fixed x-coordinate.',
+      'A straight wire of length L carries current I in the +y direction. The wire is in a non-uniform magnetic field B⃗ = $B_{0}(x/a)$ ẑ, where $B_{0}$ and a are positive constants. The wire extends from x = a to x = 3a along a line parallel to the y-axis at some fixed x-coordinate.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -839,37 +839,37 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'At x = 2a: B = B₀(2a/a)ẑ = 2B₀ẑ. Since x is constant along the wire, B is uniform along it.',
+            description: 'At x = 2a: B = $B_{0}(2a/a)$ẑ = $2B_{0}$ẑ. Since x is constant along the wire, B is uniform along it.',
             keywords: ['x = 2a', 'B = 2B₀', 'constant', 'uniform']
           },
           {
             points: 1,
-            description: 'F⃗ = IL⃗ × B⃗ = I(Lŷ) × (2B₀ẑ) = 2ILB₀(ŷ × ẑ) = 2ILB₀x̂',
+            description: 'F⃗ = IL⃗ × B⃗ = I(Lŷ) × ($2B_{0}$ẑ) = $2ILB_{0}$(ŷ × ẑ) = $2ILB_{0}x$̂',
             keywords: ['F = ILB', '2ILB₀', 'x̂', 'cross product', 'ŷ × ẑ']
           }
         ],
         sampleAnswer:
-          'At x = 2a, the field is B⃗ = B₀(2a/a)ẑ = 2B₀ẑ.\n\nSince x does not vary along the wire, B is constant along the wire.\n\nF⃗ = IL⃗ × B⃗ = I(Lŷ) × (2B₀ẑ) = 2ILB₀(ŷ × ẑ) = 2ILB₀ x̂\n\n|F| = 2ILB₀, directed in the +x direction.'
+          'At x = 2a, the field is B⃗ = $B_{0}(2a/a)$ẑ = $2B_{0}$ẑ.\n\nSince x does not vary along the wire, B is constant along the wire.\n\nF⃗ = IL⃗ × B⃗ = I(Lŷ) × ($2B_{0}$ẑ) = $2ILB_{0}$(ŷ × ẑ) = $2ILB_{0}$ x̂\n\n|F| = $2ILB_{0}$, directed in the +x direction.'
       },
       {
         label: '(b)',
         prompt:
-          'Now suppose the wire lies along the x-axis from x = a to x = 3a, carrying current I in the +x direction, in the same field B⃗ = B₀(x/a)ẑ. Find the total force on the wire.',
+          'Now suppose the wire lies along the x-axis from x = a to x = 3a, carrying current I in the +x direction, in the same field B⃗ = $B_{0}(x/a)$ẑ. Find the total force on the wire.',
         maxPoints: 2,
         rubric: [
           {
             points: 1,
-            description: 'Sets up dF⃗ = I(dx x̂) × B₀(x/a)ẑ = −IB₀(x/a)dx ŷ (using x̂ × ẑ = −ŷ)',
+            description: 'Sets up dF⃗ = I(dx x̂) × $B_{0}(x/a)$ẑ = $-IB_{0}(x/a)dx$ ŷ (using x̂ × ẑ = −ŷ)',
             keywords: ['dF', 'integral', 'x̂ × ẑ', '−ŷ', 'dx']
           },
           {
             points: 1,
-            description: 'Integrates: F = −(IB₀/a)∫ₐ³ᵃ x dx = −(IB₀/a)(4a²) = −4IB₀a ŷ',
+            description: 'Integrates: F = $-(IB_{0}/a)\\int_{a}^{3a}$ x dx = $-(IB_{0}/a)(4a^{2})$ = $-4IB_{0}a$ ŷ',
             keywords: ['integrate', '4IB₀a', '−ŷ direction', 'x dx']
           }
         ],
         sampleAnswer:
-          'Now x varies along the wire, so we must integrate.\n\ndl⃗ = dx x̂\ndF⃗ = I(dx x̂) × B₀(x/a)ẑ = IB₀(x/a)(x̂ × ẑ) dx = −IB₀(x/a) dx ŷ\n\n(Using x̂ × ẑ = −ŷ)\n\nF⃗ = −(IB₀/a)ŷ ∫ₐ³ᵃ x dx = −(IB₀/a)ŷ · [x²/2]ₐ³ᵃ\n   = −(IB₀/a)ŷ · (9a² − a²)/2\n   = −(IB₀/a)ŷ · 4a²\n   = −4IB₀a ŷ\n\n|F| = 4IB₀a, directed in the −y direction.'
+          'Now x varies along the wire, so we must integrate.\n\ndl⃗ = dx x̂\ndF⃗ = I(dx x̂) × $B_{0}(x/a)$ẑ = $IB_{0}(x/a)$(x̂ × ẑ) dx = $-IB_{0}(x/a)$ dx ŷ\n\n(Using x̂ × ẑ = −ŷ)\n\nF⃗ = $-(IB_{0}/a)$ŷ $\\int_{a}^{3a}$ x dx = $-(IB_{0}/a)$ŷ · [$x^{2}/2$]$ {}_{a}^{3a}$\n   = $-(IB_{0}/a)$ŷ · $(9a^{2} - a^{2})/2$\n   = $-(IB_{0}/a)$ŷ · $4a^{2}$\n   = $-4IB_{0}a$ ŷ\n\n|F| = $4IB_{0}a$, directed in the −y direction.'
       }
     ]
   },
@@ -899,12 +899,12 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Solution: i(t) = (ε/R)(1 − e^(−Rt/L)) with time constant τ = L/R',
+            description: 'Solution: i(t) = $(\\varepsilon /R)(1 - e^{-Rt/L})$ with time constant τ = L/R',
             keywords: ['i(t)', 'ε/R', '1 − e^(−Rt/L)', 'τ = L/R', 'exponential']
           }
         ],
         sampleAnswer:
-          'KVL around the loop:\nε − iR − L(di/dt) = 0\n\nRearrange:\ndi/dt + (R/L)i = ε/L\n\nThis is a first-order linear ODE. Using integrating factor e^(Rt/L):\n\nd/dt[i · e^(Rt/L)] = (ε/L)e^(Rt/L)\n\nIntegrate:\ni · e^(Rt/L) = (ε/R)e^(Rt/L) + C\n\nWith i(0) = 0: C = −ε/R\n\ni(t) = (ε/R)(1 − e^(−Rt/L))\n\nTime constant: τ = L/R\nAs t → ∞: i → ε/R (steady state)'
+          'KVL around the loop:\nε − iR − L(di/dt) = 0\n\nRearrange:\ndi/dt + (R/L)i = ε/L\n\nThis is a first-order linear ODE. Using integrating factor $e^{Rt/L}$:\n\nd/dt[i · $e^{Rt/L}$] = $(\\varepsilon /L)e^{Rt/L}$\n\nIntegrate:\ni · $e^{Rt/L}$ = $(\\varepsilon /R)e^{Rt/L}$ + C\n\nWith i(0) = 0: C = −ε/R\n\ni(t) = $(\\varepsilon /R)(1 - e^{-Rt/L})$\n\nTime constant: τ = L/R\nAs t → ∞: i → ε/R (steady state)'
       },
       {
         label: '(b)',
@@ -914,17 +914,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'At steady state i = ε/R, so U_L = ½L(ε/R)² = Lε²/(2R²)',
+            description: 'At steady state i = ε/R, so U_L = $\\tfrac{1}{2} L(\\varepsilon /R)^{2}$ = $L\\varepsilon^{2}/(2R^{2})$',
             keywords: ['½Li²', 'Lε²/(2R²)', 'steady state', 'energy stored']
           },
           {
             points: 1,
-            description: 'Total battery energy is infinite (constant current through R dissipates power continuously). At any finite time, W_R = ∫₀ᵗ i²R dt, which grows without bound. The inductor energy is finite; all additional energy goes to R.',
+            description: 'Total battery energy is infinite (constant current through R dissipates power continuously). At any finite time, W_R = $\\int_{0}^{t}$ $i^{2}R$ dt, which grows without bound. The inductor energy is finite; all additional energy goes to R.',
             keywords: ['infinite', 'continuous dissipation', 'power = i²R', 'steady state current']
           }
         ],
         sampleAnswer:
-          'As t → ∞: i → ε/R\n\nEnergy stored in inductor:\nU_L = ½Li² = ½L(ε/R)² = Lε²/(2R²)\n\nThis energy is finite and constant once steady state is reached.\n\nHowever, in steady state the current ε/R flows through R continuously, dissipating power P = (ε/R)²·R = ε²/R.\n\nThe battery delivers power P_batt = εi = ε²/R continuously.\n\nSo the total energy dissipated in R grows without bound: W_R(t) → ∞ as t → ∞.\n\nThe fraction dissipated approaches 1 — essentially all of the battery\'s energy goes to Joule heating; the inductor stores a fixed finite amount Lε²/(2R²).'
+          'As t → ∞: i → ε/R\n\nEnergy stored in inductor:\nU_L = $\\tfrac{1}{2} Li^{2}$ = $\\tfrac{1}{2} L(\\varepsilon /R)^{2}$ = $L\\varepsilon^{2}/(2R^{2})$\n\nThis energy is finite and constant once steady state is reached.\n\nHowever, in steady state the current ε/R flows through R continuously, dissipating power P = $(\\varepsilon /R)^{2}\\cdot R$ = $\\varepsilon^{2}/R$.\n\nThe battery delivers power P_batt = εi = $\\varepsilon^{2}/R$ continuously.\n\nSo the total energy dissipated in R grows without bound: W_R(t) → ∞ as t → ∞.\n\nThe fraction dissipated approaches 1 — essentially all of the battery\'s energy goes to Joule heating; the inductor stores a fixed finite amount $L\\varepsilon^{2}/(2R^{2})$.'
       }
     ]
   },
@@ -949,17 +949,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Writes displacement current: I_d = ε₀ dΦ_E/dt where Φ_E = EA = E(πR²)',
+            description: 'Writes displacement current: I_d = $\\varepsilon_{0}$ dΦ_E/dt where Φ_E = EA = $E(\\pi R^{2})$',
             keywords: ['displacement current', 'ε₀ dΦ_E/dt', 'Φ_E', 'electric flux']
           },
           {
             points: 1,
-            description: 'Uses E = σ/ε₀ = Q/(ε₀πR²), so dΦ_E/dt = (dQ/dt)/(ε₀) = I/ε₀, giving I_d = ε₀(I/ε₀) = I',
+            description: 'Uses E = $\\sigma /\\varepsilon_{0}$ = $Q/(\\varepsilon_{0}\\pi R^{2})$, so dΦ_E/dt = $(dQ/dt)/(\\varepsilon_{0})$ = $I/\\varepsilon_{0}$, giving I_d = $\\varepsilon_{0}(I/\\varepsilon_{0})$ = I',
             keywords: ['I_d = I', 'dQ/dt', 'equals conduction', 'continuity']
           }
         ],
         sampleAnswer:
-          'The electric field between the plates:\nE = σ/ε₀ = Q/(ε₀πR²)\n\nElectric flux:\nΦ_E = E · πR² = Q/ε₀\n\nDisplacement current:\nI_d = ε₀ dΦ_E/dt = ε₀ · d/dt(Q/ε₀) = dQ/dt = I\n\nThe displacement current between the plates equals the conduction current in the wires. This is Maxwell\'s key insight: the changing electric field acts as an effective current source for the magnetic field, ensuring continuity of "current" through the capacitor gap.'
+          'The electric field between the plates:\nE = $\\sigma /\\varepsilon_{0}$ = $Q/(\\varepsilon_{0}\\pi R^{2})$\n\nElectric flux:\nΦ_E = E · $\\pi R^{2}$ = $Q/\\varepsilon_{0}$\n\nDisplacement current:\nI_d = $\\varepsilon_{0}$ dΦ_E/dt = $\\varepsilon_{0}$ · $d/dt(Q/\\varepsilon_{0})$ = dQ/dt = I\n\nThe displacement current between the plates equals the conduction current in the wires. This is Maxwell\'s key insight: the changing electric field acts as an effective current source for the magnetic field, ensuring continuity of "current" through the capacitor gap.'
       },
       {
         label: '(b)',
@@ -969,17 +969,17 @@ const shortFRQs: PhysicsCEMFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Ampère-Maxwell: ∮B⃗·dl⃗ = μ₀I_d,enc = μ₀ε₀(dΦ_E/dt)_enc; only fraction πr²/(πR²) of displacement current is enclosed',
+            description: 'Ampère-Maxwell: ∮B⃗·dl⃗ = $\\mu_{0}I_{d}$,enc = $\\mu_{0}\\varepsilon_{0}(d\\Phi_{E}/dt)_{enc}$; only fraction $\\pi r^{2}/(\\pi R^{2})$ of displacement current is enclosed',
             keywords: ['Ampère-Maxwell', 'enclosed', 'r²/R²', 'fraction']
           },
           {
             points: 1,
-            description: 'B(2πr) = μ₀I(r²/R²), so B = μ₀Ir/(2πR²)',
+            description: 'B(2πr) = $\\mu_{0}I(r^{2}/R^{2})$, so B = $\\mu_{0}Ir/(2\\pi R^{2})$',
             keywords: ['B = μ₀Ir/(2πR²)', 'linear in r', 'inside plates']
           }
         ],
         sampleAnswer:
-          'Apply the Ampère-Maxwell law with a circular Amperian loop of radius r < R between the plates:\n\n∮ B⃗·dl⃗ = μ₀(I_conduction + I_d,enc)\n\nNo conduction current passes through this surface (it\'s between the plates), so:\n∮ B⃗·dl⃗ = μ₀I_d,enc\n\nThe displacement current is uniformly distributed over the plate area πR².\nEnclosed displacement current:\nI_d,enc = I · (πr²)/(πR²) = Ir²/R²\n\nBy symmetry, B is tangential and constant on the loop:\nB(2πr) = μ₀Ir²/R²\n\nB(r) = μ₀Ir/(2πR²)\n\nThe field increases linearly with r inside the plates — the same form as inside a long cylindrical conductor carrying uniform current.'
+          'Apply the Ampère-Maxwell law with a circular Amperian loop of radius r < R between the plates:\n\n∮ B⃗·dl⃗ = $\\mu_{0}$(I_conduction + I_d,enc)\n\nNo conduction current passes through this surface (it\'s between the plates), so:\n∮ B⃗·dl⃗ = $\\mu_{0}I_{d}$,enc\n\nThe displacement current is uniformly distributed over the plate area $\\pi R^{2}$.\nEnclosed displacement current:\nI_d,enc = I · $(\\pi r^{2})/(\\pi R^{2})$ = $Ir^{2}/R^{2}$\n\nBy symmetry, B is tangential and constant on the loop:\nB(2πr) = $\\mu_{0}Ir^{2}/R^{2}$\n\nB(r) = $\\mu_{0}Ir/(2\\pi R^{2})$\n\nThe field increases linearly with r inside the plates — the same form as inside a long cylindrical conductor carrying uniform current.'
       }
     ]
   }

@@ -59,7 +59,7 @@ We measure entropy by carefully adding heat from 0 K and tracking $\\Delta S = q
 |--------|-----------|------------|-----|
 | **Phase** | Solid | Gas | More freedom of motion |
 | **Molar mass** | Light molecules | Heavy molecules | More energy levels accessible |
-| **Complexity** | Simple (e.g., Ar) | Complex (e.g., C₃H₈) | More vibrational modes |
+| **Complexity** | Simple (e.g., Ar) | Complex (e.g., $C_{3}H_{8}$) | More vibrational modes |
 | **Allotrope** | Diamond | Graphite | Graphite layers slide more freely |
 
 
@@ -71,9 +71,9 @@ We measure entropy by carefully adding heat from 0 K and tracking $\\Delta S = q
 |-----------|------|-------|
 | C(diamond) | 2.4 | Rigid 3D network |
 | C(graphite) | 5.7 | Layered, more flexibility |
-| H₂O(l) | 69.9 | Liquid |
-| H₂O(g) | 188.7 | Gas — huge increase |
-| C₃H₈(g) | 270.3 | Large molecule, many vibrations |
+| $H_{2}O(l)$ | 69.9 | Liquid |
+| $H_{2}O(g)$ | 188.7 | Gas — huge increase |
+| $C_{3}H_{8}(g)$ | 270.3 | Large molecule, many vibrations |
       `
     },
     {
@@ -139,8 +139,8 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
             options: ['infinity', 'zero', 'k_B', 'negative']
           },
           {
-            label: 'Between H₂O(l) and H₂O(g), which has higher $S°$?',
-            options: ['H₂O(l)', 'H₂O(g)', 'Same', 'Cannot determine']
+            label: 'Between $H_{2}O(l)$ and $H_{2}O(g)$, which has higher $S°$?',
+            options: ['$H_{2}O(l)$', '$H_{2}O(g)$', 'Same', 'Cannot determine']
           },
           {
             label: 'A reaction producing more gas molecules will likely have $\\Delta S°$',
@@ -151,7 +151,7 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
             options: ['always zero', 'always positive (at T > 0 K)', 'always negative', 'undefined']
           }
         ],
-        correctAnswers: ['zero', 'H₂O(g)', 'positive', 'always positive (at T > 0 K)'],
+        correctAnswers: ['zero', '$H_{2}O(g)$', 'positive', 'always positive (at T > 0 K)'],
         hint1: 'Third Law: $S = k \\ln 1 = 0$.',
         hint2: 'Gases have vastly more microstates.',
         hint3: 'More gas molecules = more microstates.',

@@ -33,7 +33,7 @@ export const bioCellStructurePart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A cell biologist uses autoradiography with tritiated (³H) leucine (a radioactive amino acid) to track protein production. After 5 minutes, radioactivity is concentrated in the rough ER. After 20 minutes, radioactivity is concentrated in the Golgi. After 60 minutes, radioactivity is found outside the cell. This experiment demonstrates:',
+            question: 'A cell biologist uses autoradiography with tritiated $(^{3}H)$ leucine (a radioactive amino acid) to track protein production. After 5 minutes, radioactivity is concentrated in the rough ER. After 20 minutes, radioactivity is concentrated in the Golgi. After 60 minutes, radioactivity is found outside the cell. This experiment demonstrates:',
             options: [
               'Proteins are synthesized in the Golgi and secreted via the ER',
               'The secretory pathway: rough ER → Golgi → secretory vesicles → extracellular space',
@@ -52,7 +52,7 @@ export const bioCellStructurePart7Data = {
               'Switch to photosynthesis for energy production'
             ],
             correctAnswer: 2,
-            explanation: 'Cyanide blocks Complex IV of the ETC, halting electron flow and preventing the H⁺ gradient from being maintained. Without the gradient, ATP synthase cannot produce ATP via oxidative phosphorylation. Glycolysis can still produce a small amount of ATP (2 per glucose), but this is far less than the ~30-34 from oxidative phosphorylation.'
+            explanation: 'Cyanide blocks Complex IV of the ETC, halting electron flow and preventing the $H^{+}$ gradient from being maintained. Without the gradient, ATP synthase cannot produce ATP via oxidative phosphorylation. Glycolysis can still produce a small amount of ATP (2 per glucose), but this is far less than the ~30-34 from oxidative phosphorylation.'
           },
           {
             question: 'Which of the following correctly pairs a cellular structure with the type of cell in which it would be MOST abundant?',
@@ -158,7 +158,7 @@ Enter the correct term for each description.
         hint1: 'The theory that mitochondria and chloroplasts originated from engulfed prokaryotes.',
         hint2: 'Channels through plant cell walls that allow direct cytoplasmic communication between adjacent cells.',
         hint3: 'An organelle that breaks down fatty acids and detoxifies hydrogen peroxide using catalase.',
-        explanation: 'Endosymbiotic theory (Lynn Margulis, 1967) explains the origin of mitochondria and chloroplasts. Plasmodesmata are plant-specific cell junctions. Peroxisomes are single-membrane organelles that oxidize fatty acids and use catalase to convert H₂O₂ to water.'
+        explanation: 'Endosymbiotic theory (Lynn Margulis, 1967) explains the origin of mitochondria and chloroplasts. Plasmodesmata are plant-specific cell junctions. Peroxisomes are single-membrane organelles that oxidize fatty acids and use catalase to convert $H_{2}O_{2}$ to water.'
       }
     },
     {
@@ -189,7 +189,7 @@ Enter the correct term for each description.
               'It is halved'
             ],
             correctAnswer: 1,
-            explanation: 'Original cell: SA = 6(10²) = 600 μm². Each small cell: SA = 6(5²) = 150 μm². Total for 8 cells: 8 × 150 = 1,200 μm². That is exactly double (1,200/600 = 2). This is why dividing into smaller cells increases total surface area available for exchange — a key biological advantage.'
+            explanation: 'Original cell: SA = $6(10^{2})$ = 600 $\\mu m^{2}$. Each small cell: SA = $6(5^{2})$ = 150 $\\mu m^{2}$. Total for 8 cells: 8 × 150 = 1,200 $\\mu m^{2}$. That is exactly double (1,200/600 = 2). This is why dividing into smaller cells increases total surface area available for exchange — a key biological advantage.'
           }
         ]
       }

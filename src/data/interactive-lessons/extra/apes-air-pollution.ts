@@ -44,14 +44,14 @@ Under the U.S. **Clean Air Act**, the EPA sets **National Ambient Air Quality St
 
 | Pollutant | Main Source | Primary Effect |
 |-----------|-------------|----------------|
-| **CO** (carbon monoxide) | Incomplete combustion (cars, furnaces) | Binds hemoglobin → starves tissues of O₂ |
-| **SO₂** (sulfur dioxide) | Burning **coal**, smelting, volcanoes | Acid deposition; respiratory irritation |
-| **NOₓ** (nitrogen oxides: NO, NO₂) | High-temperature combustion (engines, power plants) | Smog + acid deposition |
+| **CO** (carbon monoxide) | Incomplete combustion (cars, furnaces) | Binds hemoglobin → starves tissues of $O_{2}$ |
+| **$SO_{2}$** (sulfur dioxide) | Burning **coal**, smelting, volcanoes | Acid deposition; respiratory irritation |
+| **$NO_{x}$** (nitrogen oxides: NO, $NO_{2}$) | High-temperature combustion (engines, power plants) | Smog + acid deposition |
 | **PM** (particulate matter) | Combustion, dust, construction, fires | Lung damage; reduced visibility (haze) |
-| **O₃** (ground-level ozone) | **Secondary** — formed from NOₓ + VOCs + sunlight | Respiratory damage; harms crops |
+| **$O_{3}$** (ground-level ozone) | **Secondary** — formed from $NO_{x}$ + VOCs + sunlight | Respiratory damage; harms crops |
 | **Pb** (lead) | Formerly leaded gasoline; smelters, batteries | Neurotoxin; developmental harm in children |
 
-> 💡 **Why these six?** They are common, well-studied, and regulated nationwide. Pollutants like CO₂ (a greenhouse gas) and VOCs are important but are **not** criteria pollutants — a classic exam trap.`,
+> 💡 **Why these six?** They are common, well-studied, and regulated nationwide. Pollutants like $CO_{2}$ (a greenhouse gas) and VOCs are important but are **not** criteria pollutants — a classic exam trap.`,
       },
       {
         id: 'apeap1-q-criteria',
@@ -61,15 +61,15 @@ Under the U.S. **Clean Air Act**, the EPA sets **National Ambient Air Quality St
           questions: [
             {
               question: 'Which of the following is NOT one of the six EPA criteria pollutants?',
-              options: ['Carbon dioxide (CO₂)', 'Sulfur dioxide (SO₂)', 'Particulate matter (PM)', 'Lead (Pb)'],
+              options: ['Carbon dioxide $(CO_{2})$', 'Sulfur dioxide $(SO_{2})$', 'Particulate matter (PM)', 'Lead (Pb)'],
               correctAnswer: 0,
-              explanation: 'CO₂ is a greenhouse gas regulated for climate, but it is NOT one of the six NAAQS criteria pollutants. The six are CO, SO₂, NOₓ, PM, ground-level O₃, and Pb.',
+              explanation: '$CO_{2}$ is a greenhouse gas regulated for climate, but it is NOT one of the six NAAQS criteria pollutants. The six are CO, $SO_{2}$, $NO_{x}$, PM, ground-level $O_{3}$, and Pb.',
             },
             {
               question: 'A student feels dizzy after running a gasoline generator in a closed garage. The most likely pollutant responsible is:',
-              options: ['Carbon monoxide (CO)', 'Ground-level ozone (O₃)', 'Lead (Pb)', 'Sulfur dioxide (SO₂)'],
+              options: ['Carbon monoxide (CO)', 'Ground-level ozone $(O_{3})$', 'Lead (Pb)', 'Sulfur dioxide $(SO_{2})$'],
               correctAnswer: 0,
-              explanation: 'Incomplete combustion in an enclosed space produces CO, which binds hemoglobin ~200× more strongly than O₂, reducing oxygen delivery and causing dizziness, headache, and death.',
+              explanation: 'Incomplete combustion in an enclosed space produces CO, which binds hemoglobin ~200× more strongly than $O_{2}$, reducing oxygen delivery and causing dizziness, headache, and death.',
             },
           ],
         },
@@ -81,14 +81,14 @@ Under the U.S. **Clean Air Act**, the EPA sets **National Ambient Air Quality St
 
 | Type | Definition | Examples |
 |------|------------|----------|
-| **Primary** | Emitted **directly** from a source | CO, SO₂, NO, most PM, VOCs, Pb |
-| **Secondary** | **Formed in the atmosphere** by chemical reactions | Ground-level O₃, sulfuric acid (H₂SO₄), nitric acid (HNO₃), some PM |
+| **Primary** | Emitted **directly** from a source | CO, $SO_{2}$, NO, most PM, VOCs, Pb |
+| **Secondary** | **Formed in the atmosphere** by chemical reactions | Ground-level $O_{3}$, sulfuric acid $(H_{2}SO_{4})$, nitric acid $(HNO_{3})$, some PM |
 
 The key word is **formed**. A secondary pollutant did not come out of any tailpipe — it was *built* in the air from primary precursors plus energy (sunlight) or other reactants.
 
 $$\\text{NO}_x + \\text{VOCs} + \\text{sunlight} \\;\\longrightarrow\\; \\text{O}_3 \\text{ (ground-level ozone)}$$
 
-> ⚠️ **The single most-tested idea in this unit:** ground-level **ozone is a secondary pollutant**. It is never emitted directly. If a question says "emitted from car exhaust," the direct emissions are NOₓ and VOCs — the ozone forms *afterward*.`,
+> ⚠️ **The single most-tested idea in this unit:** ground-level **ozone is a secondary pollutant**. It is never emitted directly. If a question says "emitted from car exhaust," the direct emissions are $NO_{x}$ and VOCs — the ozone forms *afterward*.`,
       },
       {
         id: 'apeap1-dd-classify',
@@ -98,16 +98,16 @@ $$\\text{NO}_x + \\text{VOCs} + \\text{sunlight} \\;\\longrightarrow\\; \\text{O
 Decide whether each is a **primary** pollutant (emitted directly) or a **secondary** pollutant (formed in the atmosphere).`,
         exercise: {
           dropdowns: [
-            { label: 'Sulfur dioxide (SO₂) from a coal plant:', options: ['Primary', 'Secondary'] },
-            { label: 'Ground-level ozone (O₃):', options: ['Primary', 'Secondary'] },
+            { label: 'Sulfur dioxide $(SO_{2})$ from a coal plant:', options: ['Primary', 'Secondary'] },
+            { label: 'Ground-level ozone $(O_{3})$:', options: ['Primary', 'Secondary'] },
             { label: 'Nitric oxide (NO) from an engine:', options: ['Primary', 'Secondary'] },
-            { label: 'Sulfuric acid (H₂SO₄) in acid rain:', options: ['Primary', 'Secondary'] },
+            { label: 'Sulfuric acid $(H_{2}SO_{4})$ in acid rain:', options: ['Primary', 'Secondary'] },
           ],
           correctAnswers: ['Primary', 'Secondary', 'Primary', 'Secondary'],
           hint1: 'If it comes straight out of a smokestack or tailpipe, it is primary.',
           hint2: 'Ozone and acids are built in the air from precursors — they are secondary.',
-          hint3: 'SO₂ and NO are emitted directly (primary); O₃ and H₂SO₄ are reaction products (secondary).',
-          explanation: 'SO₂ and NO are emitted directly → primary. O₃ forms from NOₓ + VOCs + sunlight, and H₂SO₄ forms when SO₂ oxidizes and dissolves in water → both secondary.',
+          hint3: '$SO_{2}$ and NO are emitted directly (primary); $O_{3}$ and $H_{2}SO_{4}$ are reaction products (secondary).',
+          explanation: '$SO_{2}$ and NO are emitted directly → primary. $O_{3}$ forms from $NO_{x}$ + VOCs + sunlight, and $H_{2}SO_{4}$ forms when $SO_{2}$ oxidizes and dissolves in water → both secondary.',
         },
       },
       {
@@ -186,10 +186,10 @@ A simplified look at the core reactions:
 
 1. Combustion makes nitric oxide: $\\text{N}_2 + \\text{O}_2 \\rightarrow 2\\,\\text{NO}$
 2. NO oxidizes to brown nitrogen dioxide: $2\\,\\text{NO} + \\text{O}_2 \\rightarrow 2\\,\\text{NO}_2$
-3. Sunlight splits NO₂, freeing an oxygen atom: $\\text{NO}_2 + \\text{UV} \\rightarrow \\text{NO} + \\text{O}$
+3. Sunlight splits $NO_{2}$, freeing an oxygen atom: $\\text{NO}_2 + \\text{UV} \\rightarrow \\text{NO} + \\text{O}$
 4. That free atom makes ozone: $\\text{O} + \\text{O}_2 \\rightarrow \\text{O}_3$
 
-The brown color of smog comes mainly from **NO₂**. The respiratory damage comes mainly from **O₃** and **PANs** (peroxyacetyl nitrates).
+The brown color of smog comes mainly from **$NO_{2}$**. The respiratory damage comes mainly from **$O_{3}$** and **PANs** (peroxyacetyl nitrates).
 
 > 💡 **Memory hook:** *Sun + cars = ozone.* No sunlight, no photochemical smog — which is why it builds through the morning rush hour and peaks in the **mid-afternoon**, not at night.`,
       },
@@ -208,13 +208,13 @@ The brown color of smog comes mainly from **NO₂**. The respiratory damage come
                 'Calm nights with no vehicle traffic',
               ],
               correctAnswer: 0,
-              explanation: 'Photochemical smog needs sunlight (UV) to drive the reactions and traffic to supply NOₓ and VOCs. Heat speeds the chemistry. So it peaks on hot, sunny, high-traffic afternoons.',
+              explanation: 'Photochemical smog needs sunlight (UV) to drive the reactions and traffic to supply $NO_{x}$ and VOCs. Heat speeds the chemistry. So it peaks on hot, sunny, high-traffic afternoons.',
             },
             {
               question: 'The two primary pollutants that act as PRECURSORS to photochemical smog are:',
-              options: ['NOₓ and VOCs', 'CO₂ and CH₄', 'SO₂ and Pb', 'O₃ and PANs'],
+              options: ['$NO_{x}$ and VOCs', '$CO_{2}$ and $CH_{4}$', '$SO_{2}$ and Pb', '$O_{3}$ and PANs'],
               correctAnswer: 0,
-              explanation: 'NOₓ and VOCs are the directly-emitted precursors. Sunlight then converts them into the secondary pollutants O₃ and PANs (which are products, not precursors).',
+              explanation: '$NO_{x}$ and VOCs are the directly-emitted precursors. Sunlight then converts them into the secondary pollutants $O_{3}$ and PANs (which are products, not precursors).',
             },
           ],
         },
@@ -228,7 +228,7 @@ Tracking the chemistry over a single day makes the cause-and-effect obvious:
 
 | Time | What's happening |
 |------|------------------|
-| **Morning rush** | Traffic floods the air with primary NOₓ and VOCs |
+| **Morning rush** | Traffic floods the air with primary $NO_{x}$ and VOCs |
 | **Late morning** | Rising sun supplies UV; reactions begin |
 | **Mid-afternoon** | Sunlight + heat peak → **ozone peaks** |
 | **Evening / night** | No sun → ozone production stops and levels fall |
@@ -243,16 +243,16 @@ Tracking the chemistry over a single day makes the cause-and-effect obvious:
 Walk through how ground-level ozone forms on a sunny afternoon.`,
         exercise: {
           dropdowns: [
-            { label: 'Engines and power plants first emit:', options: ['NOₓ and VOCs', 'O₃ directly', 'Sulfuric acid', 'Lead'] },
+            { label: 'Engines and power plants first emit:', options: ['$NO_{x}$ and VOCs', '$O_{3}$ directly', 'Sulfuric acid', 'Lead'] },
             { label: 'The energy source that drives the reactions is:', options: ['Sunlight (UV)', 'Geothermal heat', 'Lightning only', 'Moonlight'] },
-            { label: 'The harmful secondary pollutant produced is:', options: ['Ground-level ozone (O₃)', 'Carbon monoxide (CO)', 'Radon', 'Carbon dioxide (CO₂)'] },
+            { label: 'The harmful secondary pollutant produced is:', options: ['Ground-level ozone $(O_{3})$', 'Carbon monoxide (CO)', 'Radon', 'Carbon dioxide $(CO_{2})$'] },
             { label: 'Concentrations therefore peak in the:', options: ['Mid-afternoon', 'Middle of the night', 'Pre-dawn hours', 'Winter at midnight'] },
           ],
-          correctAnswers: ['NOₓ and VOCs', 'Sunlight (UV)', 'Ground-level ozone (O₃)', 'Mid-afternoon'],
+          correctAnswers: ['$NO_{x}$ and VOCs', 'Sunlight (UV)', 'Ground-level ozone $(O_{3})$', 'Mid-afternoon'],
           hint1: 'Start with what comes directly out of tailpipes.',
           hint2: '"Photo" means light — the sun supplies the energy.',
           hint3: 'Ozone is the product, and it tracks the sun, peaking in the afternoon.',
-          explanation: 'Primary NOₓ + VOCs absorb UV sunlight and react to form secondary O₃. Because the sun is required, ozone climbs through the day and peaks mid-afternoon.',
+          explanation: 'Primary $NO_{x}$ + VOCs absorb UV sunlight and react to form secondary $O_{3}$. Because the sun is required, ozone climbs through the day and peaks mid-afternoon.',
         },
       },
       {
@@ -260,7 +260,7 @@ Walk through how ground-level ozone forms on a sunny afternoon.`,
         type: 'text' as const,
         content: `## The Ozone Paradox: "Good Up High, Bad Nearby"
 
-The **same molecule (O₃)** is helpful or harmful depending on **altitude**:
+The **same molecule $(O_{3})$** is helpful or harmful depending on **altitude**:
 
 | Location | Role | Verdict |
 |----------|------|---------|
@@ -284,7 +284,7 @@ The **same molecule (O₃)** is helpful or harmful depending on **altitude**:
                 'Ozone is only found in the stratosphere',
               ],
               correctAnswer: 0,
-              explanation: 'Same molecule, opposite roles by altitude: stratospheric O₃ shields life from UV (good), while tropospheric/ground-level O₃ is a smog pollutant that harms lungs and crops (bad).',
+              explanation: 'Same molecule, opposite roles by altitude: stratospheric $O_{3}$ shields life from UV (good), while tropospheric/ground-level $O_{3}$ is a smog pollutant that harms lungs and crops (bad).',
             },
           ],
         },
@@ -315,12 +315,12 @@ The **same molecule (O₃)** is helpful or harmful depending on **altitude**:
 | Feature | Photochemical Smog | Industrial Smog |
 |---------|--------------------|-----------------|
 | Color | Brown | Gray |
-| Main culprits | NOₓ, VOCs, O₃ | **SO₂**, particulates (soot) |
+| Main culprits | $NO_{x}$, VOCs, $O_{3}$ | **$SO_{2}$**, particulates (soot) |
 | Energy source | Sunlight | Just combustion (no sun needed) |
 | Worst conditions | Hot, sunny afternoons | **Cold, damp** mornings; coal burning |
 | Classic example | Los Angeles | London "Great Smog" of 1952 |
 
-The **1952 Great Smog of London** killed thousands when coal smoke + fog (a cold, stagnant air mass) trapped SO₂ and soot for days.
+The **1952 Great Smog of London** killed thousands when coal smoke + fog (a cold, stagnant air mass) trapped $SO_{2}$ and soot for days.
 
 > 💡 **Contrast hook:** Photochemical smog **loves the sun**; industrial smog **loves the cold and coal**. They are opposites in almost every way except that both harm the lungs.`,
       },
@@ -333,19 +333,19 @@ The **1952 Great Smog of London** killed thousands when coal smoke + fog (a cold
             {
               question: 'Industrial (sulfurous) smog differs from photochemical smog primarily because it:',
               options: [
-                'Is dominated by SO₂ and soot from coal burning, and does not require sunlight',
+                'Is dominated by $SO_{2}$ and soot from coal burning, and does not require sunlight',
                 'Requires intense UV sunlight to form',
                 'Is made of ozone and PANs',
                 'Only forms over rural farmland',
               ],
               correctAnswer: 0,
-              explanation: 'Industrial smog is the gray, sulfur-rich smog of coal combustion — dominated by SO₂ and particulates and worst in cold, damp, stagnant air. It needs no sunlight, unlike photochemical smog.',
+              explanation: 'Industrial smog is the gray, sulfur-rich smog of coal combustion — dominated by $SO_{2}$ and particulates and worst in cold, damp, stagnant air. It needs no sunlight, unlike photochemical smog.',
             },
             {
-              question: 'The primary fossil fuel most associated with sulfur dioxide (SO₂) emissions and industrial smog is:',
+              question: 'The primary fossil fuel most associated with sulfur dioxide $(SO_{2})$ emissions and industrial smog is:',
               options: ['Coal', 'Natural gas', 'Solar-charged batteries', 'Hydrogen'],
               correctAnswer: 0,
-              explanation: 'Coal contains sulfur impurities, so burning it releases large amounts of SO₂. Natural gas burns much cleaner and emits little sulfur.',
+              explanation: 'Coal contains sulfur impurities, so burning it releases large amounts of $SO_{2}$. Natural gas burns much cleaner and emits little sulfur.',
             },
           ],
         },
@@ -353,21 +353,21 @@ The **1952 Great Smog of London** killed thousands when coal smoke + fog (a cold
       {
         id: 'apeap3-acid',
         type: 'text' as const,
-        content: `## From SO₂ and NOₓ to Acid Deposition
+        content: `## From $SO_{2}$ and $NO_{x}$ to Acid Deposition
 
-The same SO₂ and NOₓ that cause smog also become **acid deposition** ("acid rain"). In the atmosphere they oxidize and dissolve in water to form strong acids:
+The same $SO_{2}$ and $NO_{x}$ that cause smog also become **acid deposition** ("acid rain"). In the atmosphere they oxidize and dissolve in water to form strong acids:
 
 $$\\text{SO}_2 \\;\\longrightarrow\\; \\text{H}_2\\text{SO}_4 \\quad (\\text{sulfuric acid})$$
 $$\\text{NO}_x \\;\\longrightarrow\\; \\text{HNO}_3 \\quad (\\text{nitric acid})$$
 
-Normal rain is slightly acidic (about **pH 5.6**) because of dissolved CO₂. **Acid rain** is rain with a pH below 5.6 — often **4 to 4.5**, and sometimes lower.
+Normal rain is slightly acidic (about **pH 5.6**) because of dissolved $CO_{2}$. **Acid rain** is rain with a pH below 5.6 — often **4 to 4.5**, and sometimes lower.
 
 | Effect of Acid Deposition | What Happens |
 |---------------------------|--------------|
 | Lakes & streams acidify | Fish eggs and amphibians die below ~pH 5 |
 | Soil nutrients leached | Calcium/magnesium wash out; aluminum mobilized (toxic to roots) |
 | Forests damaged | Especially high-elevation conifers |
-| Buildings & statues | Marble/limestone (CaCO₃) dissolves |
+| Buildings & statues | Marble/limestone $(CaCO_{3})$ dissolves |
 
 > ⚠️ **pH is logarithmic.** A drop from pH 5 to pH 4 is a **10×** increase in acidity, not a 20% change. From pH 6 to pH 4 is **100×**.`,
       },
@@ -376,7 +376,7 @@ Normal rain is slightly acidic (about **pH 5.6**) because of dissolved CO₂. **
         type: 'input-boxes' as const,
         content: `**Acidity Is Logarithmic** 🧮
 
-The pH scale is base-10: each whole-number drop in pH means **10× more** hydrogen-ion (H⁺) concentration.
+The pH scale is base-10: each whole-number drop in pH means **10× more** hydrogen-ion $(H^{+})$ concentration.
 
 **1)** A lake's rainwater goes from pH 6 to pH 4. Acidity increased by a factor of how much? (enter the number)
 **2)** Acid rain at pH 3 is how many times more acidic than normal rainwater at pH 6? (enter the number)`,
@@ -394,7 +394,7 @@ The pH scale is base-10: each whole-number drop in pH means **10× more** hydrog
         type: 'text' as const,
         content: `## Acid Rain Travels Downwind
 
-Because SO₂ and NOₓ ride the wind while they slowly convert to acids, the damage often lands **far from the source**. Tall smokestacks built to improve *local* air quality actually push emissions higher into the wind stream, exporting acid deposition across state and national borders.
+Because $SO_{2}$ and $NO_{x}$ ride the wind while they slowly convert to acids, the damage often lands **far from the source**. Tall smokestacks built to improve *local* air quality actually push emissions higher into the wind stream, exporting acid deposition across state and national borders.
 
 | Source region | Downwind victim |
 |---------------|------------------|
@@ -409,15 +409,15 @@ Because SO₂ and NOₓ ride the wind while they slowly convert to acids, the da
         content: `**Match the Chemistry** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'SO₂ in the atmosphere forms:', options: ['Sulfuric acid (H₂SO₄)', 'Nitric acid (HNO₃)', 'Carbonic acid only', 'Ozone'] },
-            { label: 'NOₓ in the atmosphere forms:', options: ['Nitric acid (HNO₃)', 'Sulfuric acid (H₂SO₄)', 'Methane', 'Lead oxide'] },
+            { label: '$SO_{2}$ in the atmosphere forms:', options: ['Sulfuric acid $(H_{2}SO_{4})$', 'Nitric acid $(HNO_{3})$', 'Carbonic acid only', 'Ozone'] },
+            { label: '$NO_{x}$ in the atmosphere forms:', options: ['Nitric acid $(HNO_{3})$', 'Sulfuric acid $(H_{2}SO_{4})$', 'Methane', 'Lead oxide'] },
             { label: 'The approximate pH of "normal," unpolluted rain is:', options: ['5.6', '7.0', '2.0', '9.0'] },
           ],
-          correctAnswers: ['Sulfuric acid (H₂SO₄)', 'Nitric acid (HNO₃)', '5.6'],
+          correctAnswers: ['Sulfuric acid $(H_{2}SO_{4})$', 'Nitric acid $(HNO_{3})$', '5.6'],
           hint1: 'Sulfur (S) makes a sulfur-based acid.',
           hint2: 'Nitrogen (N) makes a nitrogen-based acid.',
-          hint3: 'Normal rain is slightly acidic (~5.6) because of dissolved CO₂, not neutral 7.0.',
-          explanation: 'SO₂ → H₂SO₄ and NOₓ → HNO₃. Even clean rain is mildly acidic (~pH 5.6) from dissolved atmospheric CO₂ forming carbonic acid; "acid rain" is below 5.6.',
+          hint3: 'Normal rain is slightly acidic (~5.6) because of dissolved $CO_{2}$, not neutral 7.0.',
+          explanation: '$SO_{2}$ → $H_{2}SO_{4}$ and $NO_{x}$ → $HNO_{3}$. Even clean rain is mildly acidic (~pH 5.6) from dissolved atmospheric $CO_{2}$ forming carbonic acid; "acid rain" is below 5.6.',
         },
       },
     ],
@@ -580,15 +580,15 @@ Use $\\text{Concentration} \\approx \\dfrac{\\text{Emission rate}}{\\text{Wind s
 
 | Pollutant | Key Health / Environmental Effect |
 |-----------|------------------------------------|
-| **PM₂.₅** (fine particulates) | Penetrate deep into the lungs and bloodstream; heart and lung disease — the **deadliest** pollutant globally |
-| **Ground-level O₃** | Inflames airways; triggers asthma; reduces lung function and crop yields |
+| **$PM_{2}._{5}$** (fine particulates) | Penetrate deep into the lungs and bloodstream; heart and lung disease — the **deadliest** pollutant globally |
+| **Ground-level $O_{3}$** | Inflames airways; triggers asthma; reduces lung function and crop yields |
 | **CO** | Binds hemoglobin; reduces oxygen delivery; deadly indoors |
-| **SO₂ / NOₓ** | Respiratory irritation; acid deposition |
+| **$SO_{2}$ / $NO_{x}$** | Respiratory irritation; acid deposition |
 | **Pb** | Neurotoxin; lowers IQ and harms development in children |
 
 **Most sensitive groups:** children, the elderly, pregnant people, and those with asthma or heart/lung disease.
 
-> 💡 **Why PM₂.₅ is special:** Its diameter is ≤ 2.5 micrometers — small enough to slip past the body's defenses, lodge deep in the alveoli, and even cross into the blood. PM₁₀ (coarser) is filtered out higher in the airway.`,
+> 💡 **Why $PM_{2}._{5}$ is special:** Its diameter is ≤ 2.5 micrometers — small enough to slip past the body's defenses, lodge deep in the alveoli, and even cross into the blood. $PM_{10}$ (coarser) is filtered out higher in the airway.`,
       },
       {
         id: 'apeap5-q-health',
@@ -597,7 +597,7 @@ Use $\\text{Concentration} \\approx \\dfrac{\\text{Emission rate}}{\\text{Wind s
         exercise: {
           questions: [
             {
-              question: 'Why is fine particulate matter (PM₂.₅) considered especially dangerous to human health?',
+              question: 'Why is fine particulate matter $(PM_{2}._{5})$ considered especially dangerous to human health?',
               options: [
                 'It is small enough to penetrate deep into the lungs and enter the bloodstream',
                 'It is the only pollutant that causes acid rain',
@@ -605,7 +605,7 @@ Use $\\text{Concentration} \\approx \\dfrac{\\text{Emission rate}}{\\text{Wind s
                 'It is filtered out completely by the nose and throat',
               ],
               correctAnswer: 0,
-              explanation: 'At ≤2.5 micrometers, PM₂.₅ bypasses the upper-airway defenses, lodges deep in the alveoli, and can cross into the bloodstream, driving heart and lung disease. It is the deadliest air pollutant worldwide.',
+              explanation: 'At ≤2.5 micrometers, $PM_{2}._{5}$ bypasses the upper-airway defenses, lodges deep in the alveoli, and can cross into the bloodstream, driving heart and lung disease. It is the deadliest air pollutant worldwide.',
             },
             {
               question: 'Which group is generally MOST vulnerable to harm from air pollution?',
@@ -639,7 +639,7 @@ The AQI runs 0–500. **Higher = worse.** Each band has a color and a health mes
 
 The reported AQI for an area is set by **whichever pollutant is worst** at that time (the "dominant pollutant").
 
-> ⚠️ **Don't average pollutants.** If PM₂.₅ gives AQI 70 but ozone gives AQI 160, the reported AQI is **160** (the maximum), and the dominant pollutant is ozone.`,
+> ⚠️ **Don't average pollutants.** If $PM_{2}._{5}$ gives AQI 70 but ozone gives AQI 160, the reported AQI is **160** (the maximum), and the dominant pollutant is ozone.`,
       },
       {
         id: 'apeap5-dd-aqi',
@@ -677,8 +677,8 @@ $$\\text{Reported AQI} = \\max(\\text{AQI}_{\\text{PM}}, \\;\\text{AQI}_{\\text{
 The reported AQI for a city is the **maximum** of the individual pollutant AQIs (never the average).
 
 A monitoring station reports these sub-index values for one afternoon:
-- PM₂.₅: AQI 88
-- Ozone (O₃): AQI 142
+- $PM_{2}._{5}$: AQI 88
+- Ozone $(O_{3})$: AQI 142
 - CO: AQI 35
 
 **1)** What single AQI value should the city report? (enter the number)`,
@@ -857,9 +857,9 @@ You now know the pollutants, the two smogs, acid deposition, inversions, the AQI
 
 | Device | Removes | How |
 |--------|---------|-----|
-| **Catalytic converter** | CO, NOₓ, VOCs (in car exhaust) | Catalysts convert them to CO₂, N₂, and H₂O |
+| **Catalytic converter** | CO, $NO_{x}$, VOCs (in car exhaust) | Catalysts convert them to $CO_{2}$, $N_{2}$, and $H_{2}O$ |
 | **Electrostatic precipitator** | Particulate matter (smokestacks) | Charges particles, then collects them on plates |
-| **Scrubber** (flue-gas desulfurization) | **SO₂** | Sprays a wet limestone/lime slurry that neutralizes SO₂ |
+| **Scrubber** (flue-gas desulfurization) | **$SO_{2}$** | Sprays a wet limestone/lime slurry that neutralizes $SO_{2}$ |
 | **Baghouse filter** | Particulates | Fabric bags physically trap particles |
 
 The cleanest strategies, though, are **prevention** at the source: switching coal → natural gas or renewables, improving efficiency, and reformulating fuels (e.g., **removing lead** and sulfur).
@@ -875,10 +875,10 @@ The cleanest strategies, though, are **prevention** at the source: switching coa
 |-----------|--------------|
 | **NAAQS** | Sets national limits for the six criteria pollutants |
 | **New Source Review** | Requires controls on new/expanded plants |
-| **Cap-and-trade for SO₂** (1990 amendments) | Market-based system that cut acid-rain pollution cheaply |
+| **Cap-and-trade for $SO_{2}$** (1990 amendments) | Market-based system that cut acid-rain pollution cheaply |
 | **Phase-out of leaded gasoline** | Eliminated airborne lead |
 
-The **1990 SO₂ cap-and-trade program** is the classic success story: it set a national cap, let plants buy/sell allowances, and cut SO₂ emissions faster and cheaper than expected — sharply reducing acid rain.
+The **1990 $SO_{2}$ cap-and-trade program** is the classic success story: it set a national cap, let plants buy/sell allowances, and cut $SO_{2}$ emissions faster and cheaper than expected — sharply reducing acid rain.
 
 Internationally, the **Montreal Protocol (1987)** phased out **CFCs** to heal the *stratospheric* ozone layer — a separate issue from ground-level smog, but a model of effective global cooperation.
 
@@ -889,8 +889,8 @@ Internationally, the **Montreal Protocol (1987)** phased out **CFCs** to heal th
         type: 'input-boxes' as const,
         content: `**Emission-Reduction Math** 🧮
 
-**1)** A coal plant emits 8000 tons of SO₂ per year. After installing a scrubber that removes 90% of SO₂, how many tons per year are still emitted? (enter the number)
-**2)** A city's vehicle fleet emits 50,000 tons of NOₓ per year. A new standard cuts emissions to 35,000 tons. What is the percent reduction? (enter just the number, e.g. 30 for 30%)`,
+**1)** A coal plant emits 8000 tons of $SO_{2}$ per year. After installing a scrubber that removes 90% of $SO_{2}$, how many tons per year are still emitted? (enter the number)
+**2)** A city's vehicle fleet emits 50,000 tons of $NO_{x}$ per year. A new standard cuts emissions to 35,000 tons. What is the percent reduction? (enter just the number, e.g. 30 for 30%)`,
         exercise: {
           boxes: 2,
           correctAnswers: ['800', '30'],
@@ -912,7 +912,7 @@ The math above shows control technology works, but each device only catches a *f
 | **Capture** (end-of-pipe) | Scrubbers, precipitators, converters | Treats pollution after it's made |
 | **Prevention** (source) | Switch coal → gas/renewables; efficiency; remove lead/sulfur | Stops pollution from forming |
 
-> 💡 Prevention also avoids the "co-pollutant" problem: switching a coal plant to wind power eliminates SO₂, NOₓ, PM, **and** CO₂ all at once, whereas a scrubber only removes SO₂.`,
+> 💡 Prevention also avoids the "co-pollutant" problem: switching a coal plant to wind power eliminates $SO_{2}$, $NO_{x}$, PM, **and** $CO_{2}$ all at once, whereas a scrubber only removes $SO_{2}$.`,
       },
       {
         id: 'apeap7-dd-controls',
@@ -920,8 +920,8 @@ The math above shows control technology works, but each device only catches a *f
         content: `**Match Control to Pollutant** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'Removes SO₂ from a coal smokestack:', options: ['Scrubber', 'Catalytic converter', 'Reforestation', 'Radon vent'] },
-            { label: 'Cleans CO, NOₓ, and VOCs from car exhaust:', options: ['Catalytic converter', 'Electrostatic precipitator', 'Scrubber', 'Baghouse filter'] },
+            { label: 'Removes $SO_{2}$ from a coal smokestack:', options: ['Scrubber', 'Catalytic converter', 'Reforestation', 'Radon vent'] },
+            { label: 'Cleans CO, $NO_{x}$, and VOCs from car exhaust:', options: ['Catalytic converter', 'Electrostatic precipitator', 'Scrubber', 'Baghouse filter'] },
             { label: 'Best removes fine particulates from flue gas:', options: ['Electrostatic precipitator', 'Catalytic converter', 'Cap-and-trade', 'Open windows'] },
             { label: 'Law that set U.S. limits on criteria pollutants:', options: ['Clean Air Act', 'Montreal Protocol', 'Endangered Species Act', 'Kyoto Protocol'] },
           ],
@@ -929,7 +929,7 @@ The math above shows control technology works, but each device only catches a *f
           hint1: 'A "scrubber" sprays a slurry to grab sulfur dioxide.',
           hint2: 'Catalytic converters live in car exhaust systems.',
           hint3: 'Electrostatic precipitators charge and collect particles; the Clean Air Act sets NAAQS.',
-          explanation: 'Scrubber → SO₂; catalytic converter → CO/NOₓ/VOCs in exhaust; electrostatic precipitator → particulates; the Clean Air Act sets the NAAQS for criteria pollutants. (Montreal Protocol = CFCs/stratospheric ozone.)',
+          explanation: 'Scrubber → $SO_{2}$; catalytic converter → $CO/NO_{x}/VOCs$ in exhaust; electrostatic precipitator → particulates; the Clean Air Act sets the NAAQS for criteria pollutants. (Montreal Protocol = CFCs/stratospheric ozone.)',
         },
       },
       {
@@ -939,15 +939,15 @@ The math above shows control technology works, but each device only catches a *f
 
 | Concept | Key fact |
 |---------|----------|
-| Six criteria pollutants | CO, SO₂, NOₓ, PM, ground-level O₃, Pb |
-| Secondary pollutant | Formed in air (O₃, H₂SO₄, HNO₃) — not emitted directly |
-| Photochemical smog | NOₓ + VOCs + **sunlight** → O₃ (brown, hot afternoons) |
-| Industrial smog | **SO₂** + soot from coal (gray, cold, damp) |
-| Acid deposition | SO₂ → H₂SO₄, NOₓ → HNO₃; "normal" rain ≈ pH 5.6 |
+| Six criteria pollutants | CO, $SO_{2}$, $NO_{x}$, PM, ground-level $O_{3}$, Pb |
+| Secondary pollutant | Formed in air ($O_{3}$, $H_{2}SO_{4}$, $HNO_{3}$) — not emitted directly |
+| Photochemical smog | $NO_{x}$ + VOCs + **sunlight** → $O_{3}$ (brown, hot afternoons) |
+| Industrial smog | **$SO_{2}$** + soot from coal (gray, cold, damp) |
+| Acid deposition | $SO_{2}$ → $H_{2}SO_{4}$, $NO_{x}$ → $HNO_{3}$; "normal" rain ≈ pH 5.6 |
 | Thermal inversion | Warm air caps cool air → pollutants trapped |
 | AQI | 0–500, higher = worse; report the **max** sub-index |
 | Worst indoor risks | Radon, CO, VOCs (developed); cookfire smoke (developing) |
-| Controls | Scrubber→SO₂, converter→CO/NOₓ/VOCs, precipitator→PM |
+| Controls | Scrubber→$SO_{2}$, converter→$CO/NO_{x}/VOCs$, precipitator→PM |
 | Policy | Clean Air Act/NAAQS (smog); Montreal Protocol (CFCs/stratosphere) |
 
 > ⚠️ Top traps: ozone is **secondary**; "good ozone" (stratosphere) ≠ "bad ozone" (ground); pH is **logarithmic**; report the **maximum** AQI, never the average.`,
@@ -961,19 +961,19 @@ The math above shows control technology works, but each device only catches a *f
             {
               question: 'Which pairing of smog type and dominant pollutant is correct?',
               options: [
-                'Photochemical smog → ozone (O₃); industrial smog → sulfur dioxide (SO₂)',
-                'Photochemical smog → SO₂; industrial smog → O₃',
+                'Photochemical smog → ozone $(O_{3})$; industrial smog → sulfur dioxide $(SO_{2})$',
+                'Photochemical smog → $SO_{2}$; industrial smog → $O_{3}$',
                 'Both are dominated by carbon dioxide',
                 'Both are dominated by radon',
               ],
               correctAnswer: 0,
-              explanation: 'Photochemical (brown, sunny-city) smog is dominated by ozone formed from NOₓ + VOCs + sunlight. Industrial (gray, coal) smog is dominated by SO₂ and soot.',
+              explanation: 'Photochemical (brown, sunny-city) smog is dominated by ozone formed from $NO_{x}$ + VOCs + sunlight. Industrial (gray, coal) smog is dominated by $SO_{2}$ and soot.',
             },
             {
               question: 'A scrubber on a power plant is designed mainly to remove which pollutant?',
-              options: ['SO₂', 'CO₂', 'Radon', 'Ground-level ozone'],
+              options: ['$SO_{2}$', '$CO_{2}$', 'Radon', 'Ground-level ozone'],
               correctAnswer: 0,
-              explanation: 'Flue-gas scrubbers spray a limestone/lime slurry that neutralizes and removes SO₂, reducing acid deposition. They are not designed for CO₂ capture.',
+              explanation: 'Flue-gas scrubbers spray a limestone/lime slurry that neutralizes and removes $SO_{2}$, reducing acid deposition. They are not designed for $CO_{2}$ capture.',
             },
           ],
         },
@@ -989,13 +989,13 @@ Answer all three to finish the lesson.`,
             {
               question: 'Ground-level ozone is classified as a SECONDARY pollutant because it:',
               options: [
-                'Forms in the atmosphere from NOₓ and VOCs reacting in sunlight',
+                'Forms in the atmosphere from $NO_{x}$ and VOCs reacting in sunlight',
                 'Is emitted directly from car tailpipes',
                 'Comes straight from volcanic eruptions',
                 'Is mined from uranium-bearing rock',
               ],
               correctAnswer: 0,
-              explanation: 'Secondary pollutants are not emitted directly; they form via atmospheric reactions. Ozone forms when primary NOₓ and VOCs react under UV sunlight.',
+              explanation: 'Secondary pollutants are not emitted directly; they form via atmospheric reactions. Ozone forms when primary $NO_{x}$ and VOCs react under UV sunlight.',
             },
             {
               question: 'During a thermal inversion in a mountain-ringed basin, smog worsens because:',
@@ -1011,13 +1011,13 @@ Answer all three to finish the lesson.`,
             {
               question: 'Which control or policy is correctly matched to its target?',
               options: [
-                'Scrubber → removes SO₂ from smokestacks',
+                'Scrubber → removes $SO_{2}$ from smokestacks',
                 'Catalytic converter → removes radon from basements',
                 'Montreal Protocol → set NAAQS for ground-level ozone',
-                'Electrostatic precipitator → removes dissolved CO₂ from water',
+                'Electrostatic precipitator → removes dissolved $CO_{2}$ from water',
               ],
               correctAnswer: 0,
-              explanation: 'Scrubbers remove SO₂ from flue gas. Catalytic converters treat vehicle exhaust (not radon); the Montreal Protocol phased out CFCs (stratospheric ozone), not NAAQS; precipitators capture airborne particulates, not dissolved CO₂.',
+              explanation: 'Scrubbers remove $SO_{2}$ from flue gas. Catalytic converters treat vehicle exhaust (not radon); the Montreal Protocol phased out CFCs (stratospheric ozone), not NAAQS; precipitators capture airborne particulates, not dissolved $CO_{2}$.',
             },
           ],
         },

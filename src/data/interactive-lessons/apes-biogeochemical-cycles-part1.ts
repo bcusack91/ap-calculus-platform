@@ -15,14 +15,14 @@ export const apesBiogeochemicalCyclesPart1Data = {
 
 | Process | Direction | Description |
 |---------|-----------|-----------|
-| **Photosynthesis** | Atmosphere → Biosphere | Plants absorb CO₂ and convert to organic carbon |
-| **Cellular respiration** | Biosphere → Atmosphere | Organisms release CO₂ by burning glucose |
+| **Photosynthesis** | Atmosphere → Biosphere | Plants absorb $CO_{2}$ and convert to organic carbon |
+| **Cellular respiration** | Biosphere → Atmosphere | Organisms release $CO_{2}$ by burning glucose |
 | **Combustion** | Lithosphere → Atmosphere | Burning fossil fuels releases stored carbon |
-| **Decomposition** | Biosphere → Soil/Atmosphere | Dead organisms broken down, releasing CO₂ |
-| **Ocean absorption** | Atmosphere → Hydrosphere | Oceans absorb ~25% of atmospheric CO₂ |
+| **Decomposition** | Biosphere → Soil/Atmosphere | Dead organisms broken down, releasing $CO_{2}$ |
+| **Ocean absorption** | Atmosphere → Hydrosphere | Oceans absorb ~25% of atmospheric $CO_{2}$ |
 | **Fossilization** | Biosphere → Lithosphere | Dead organisms become fossil fuels over millions of years |
 
-> 🔑 **Human Impact:** Burning fossil fuels releases carbon that was stored underground for millions of years, increasing atmospheric CO₂ from ~280 ppm (pre-industrial) to ~420 ppm today.
+> 🔑 **Human Impact:** Burning fossil fuels releases carbon that was stored underground for millions of years, increasing atmospheric $CO_{2}$ from ~280 ppm (pre-industrial) to ~420 ppm today.
 
 ---
 
@@ -30,11 +30,11 @@ export const apesBiogeochemicalCyclesPart1Data = {
 
 | Process | What Happens | Organisms Involved |
 |---------|-------------|-------------------|
-| **Nitrogen fixation** | N₂ → NH₃ (ammonia) | Rhizobium bacteria in legume roots; lightning |
-| **Nitrification** | NH₃ → NO₂⁻ → NO₃⁻ (nitrate) | Nitrifying bacteria |
-| **Assimilation** | Plants absorb NO₃⁻ from soil | Plants, then consumers eat plants |
-| **Ammonification** | Dead organisms → NH₃ | Decomposer bacteria |
-| **Denitrification** | NO₃⁻ → N₂ (back to atmosphere) | Denitrifying bacteria |
+| **Nitrogen fixation** | $N_{2}$ → $NH_{3}$ (ammonia) | Rhizobium bacteria in legume roots; lightning |
+| **Nitrification** | $NH_{3}$ → $NO_{2}^{-}$ → $NO_{3}^{-}$ (nitrate) | Nitrifying bacteria |
+| **Assimilation** | Plants absorb $NO_{3}^{-}$ from soil | Plants, then consumers eat plants |
+| **Ammonification** | Dead organisms → $NH_{3}$ | Decomposer bacteria |
+| **Denitrification** | $NO_{3}^{-}$ → $N_{2}$ (back to atmosphere) | Denitrifying bacteria |
       `
     },
     {
@@ -46,7 +46,7 @@ export const apesBiogeochemicalCyclesPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which process converts atmospheric nitrogen (N₂) into a form usable by plants?',
+            question: 'Which process converts atmospheric nitrogen $(N_{2})$ into a form usable by plants?',
             options: [
               'Denitrification',
               'Nitrogen fixation',
@@ -54,18 +54,18 @@ export const apesBiogeochemicalCyclesPart1Data = {
               'Ammonification'
             ],
             correctAnswer: 1,
-            explanation: 'Nitrogen fixation converts atmospheric N₂ into ammonia (NH₃), which can then be converted to nitrate (NO₃⁻) by nitrifying bacteria and absorbed by plants.'
+            explanation: 'Nitrogen fixation converts atmospheric $N_{2}$ into ammonia $(NH_{3})$, which can then be converted to nitrate $(NO_{3}^{-})$ by nitrifying bacteria and absorbed by plants.'
           },
           {
             question: 'Burning fossil fuels affects the carbon cycle by:',
             options: [
               'Removing carbon from the atmosphere',
               'Releasing stored carbon from the lithosphere into the atmosphere',
-              'Converting CO₂ into oxygen',
+              'Converting $CO_{2}$ into oxygen',
               'Increasing carbon fixation by plants'
             ],
             correctAnswer: 1,
-            explanation: 'Fossil fuels are carbon stored in the lithosphere over millions of years. Combustion releases this ancient carbon as CO₂ into the atmosphere, increasing the greenhouse effect.'
+            explanation: 'Fossil fuels are carbon stored in the lithosphere over millions of years. Combustion releases this ancient carbon as $CO_{2}$ into the atmosphere, increasing the greenhouse effect.'
           }
         ]
       }
@@ -80,7 +80,7 @@ export const apesBiogeochemicalCyclesPart1Data = {
 |---------|--------|
 | **Reservoir** | Rocks and sediments (NO atmospheric phase) |
 | **Release** | Weathering of phosphate-containing rocks |
-| **Uptake** | Plants absorb phosphate (PO₄³⁻) from soil |
+| **Uptake** | Plants absorb phosphate $(PO_{4}^{3-})$ from soil |
 | **Transfer** | Passed through food chain; returned via decomposition |
 | **Long-term storage** | Ocean sediments → new rocks (takes millions of years) |
 
@@ -90,7 +90,7 @@ export const apesBiogeochemicalCyclesPart1Data = {
 
 | Cycle | Human Disruption | Environmental Effect |
 |-------|-----------------|---------------------|
-| **Carbon** | Fossil fuel combustion, deforestation | Increased atmospheric CO₂, climate change |
+| **Carbon** | Fossil fuel combustion, deforestation | Increased atmospheric $CO_{2}$, climate change |
 | **Nitrogen** | Fertilizer use, fossil fuel burning | Eutrophication, dead zones, acid rain |
 | **Phosphorus** | Mining phosphate rock, fertilizer runoff | Eutrophication, algal blooms |
 | **Water** | Irrigation, dam building, deforestation | Altered water tables, reduced streamflow |
@@ -113,7 +113,7 @@ export const apesBiogeochemicalCyclesPart1Data = {
 
 2) When excess nutrients cause algal blooms and oxygen depletion in water, this is called _______.
 
-3) The bacteria that convert atmospheric N₂ to ammonia are called nitrogen-_______ bacteria.
+3) The bacteria that convert atmospheric $N_{2}$ to ammonia are called nitrogen-_______ bacteria.
       `,
       exercise: {
         boxes: 3,
@@ -121,7 +121,7 @@ export const apesBiogeochemicalCyclesPart1Data = {
         hint1: 'It cycles through rocks, soil, and water only.',
         hint2: 'Nutrient enrichment of water bodies.',
         hint3: 'They "fix" nitrogen from the air.',
-        explanation: 'Phosphorus has no gas phase. Eutrophication = nutrient enrichment → algal bloom → oxygen depletion. Nitrogen-fixing bacteria convert N₂ to NH₃.'
+        explanation: 'Phosphorus has no gas phase. Eutrophication = nutrient enrichment → algal bloom → oxygen depletion. Nitrogen-fixing bacteria convert $N_{2}$ to $NH_{3}$.'
       }
     },
     {
@@ -133,11 +133,11 @@ export const apesBiogeochemicalCyclesPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'Plants absorbing CO₂ and converting it to glucose is ___',
+            label: 'Plants absorbing $CO_{2}$ and converting it to glucose is ___',
             options: ['Photosynthesis', 'Cellular respiration', 'Decomposition', 'Combustion']
           },
           {
-            label: 'Bacteria converting NO₃⁻ back to atmospheric N₂ is ___',
+            label: 'Bacteria converting $NO_{3}^{-}$ back to atmospheric $N_{2}$ is ___',
             options: ['Denitrification', 'Nitrogen fixation', 'Nitrification', 'Ammonification']
           },
           {
@@ -146,10 +146,10 @@ export const apesBiogeochemicalCyclesPart1Data = {
           }
         ],
         correctAnswers: ['Photosynthesis', 'Denitrification', 'Eutrophication from nitrogen and phosphorus pollution'],
-        hint1: 'CO₂ + H₂O + sunlight → glucose + O₂.',
+        hint1: '$CO_{2}$ + $H_{2}O$ + sunlight → glucose + $O_{2}$.',
         hint2: 'The reverse of nitrogen fixation.',
         hint3: 'Nutrient pollution in water.',
-        explanation: 'Photosynthesis = CO₂ → glucose. Denitrification = NO₃⁻ → N₂. Fertilizer runoff → eutrophication → dead zones.'
+        explanation: 'Photosynthesis = $CO_{2}$ → glucose. Denitrification = $NO_{3}^{-}$ → $N_{2}$. Fertilizer runoff → eutrophication → dead zones.'
       }
     },
     {
@@ -182,7 +182,7 @@ export const apesBiogeochemicalCyclesPart1Data = {
               'Clover prevents all water from entering the soil'
             ],
             correctAnswer: 1,
-            explanation: 'Legumes like clover have symbiotic Rhizobium bacteria in their root nodules that fix atmospheric N₂ into ammonia (NH₃), naturally fertilizing the soil without synthetic fertilizer.'
+            explanation: 'Legumes like clover have symbiotic Rhizobium bacteria in their root nodules that fix atmospheric $N_{2}$ into ammonia $(NH_{3})$, naturally fertilizing the soil without synthetic fertilizer.'
           },
           {
             question: 'A large dead zone forms in the Gulf of Mexico each summer. The MOST likely cause is:',

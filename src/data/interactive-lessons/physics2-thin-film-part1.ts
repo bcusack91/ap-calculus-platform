@@ -50,7 +50,7 @@ Every thin film problem involves **three media** stacked:
 | Layer | Example 1 (Soap Bubble) | Example 2 (Oil on Water) | Example 3 (Coating on Glass) |
 |-------|------------------------|--------------------------|------------------------------|
 | Top | Air ($n = 1.00$) | Air ($n = 1.00$) | Air ($n = 1.00$) |
-| Film | Soap ($n = 1.33$) | Oil ($n \\approx 1.4$) | MgF₂ ($n = 1.38$) |
+| Film | Soap ($n = 1.33$) | Oil ($n \\approx 1.4$) | $MgF_{2}$ ($n = 1.38$) |
 | Bottom | Air ($n = 1.00$) | Water ($n = 1.33$) | Glass ($n = 1.52$) |
 | Top reflection | low→high: **shift** | low→high: **shift** | low→high: **shift** |
 | Bottom reflection | high→low: **no shift** | high→low: **no shift** | low→high: **shift** |

@@ -85,12 +85,12 @@ $$I = nAv_d e$$
 
 | Symbol | Meaning |
 |--------|---------|
-| $n$ | Number density of charge carriers (electrons/m³) |
+| $n$ | Number density of charge carriers $(electrons/m^{3})$ |
 | $A$ | Cross-sectional area of the wire |
 | $v_d$ | Drift velocity |
 | $e$ | Charge per carrier ($1.6 \\times 10^{-19}$ C) |
 
-For copper: $n \\approx 8.5 \\times 10^{28}$ electrons/m³
+For copper: $n \\approx 8.5 \\times 10^{28}$ $electrons/m^{3}$
       `
     },
     {
@@ -147,7 +147,7 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ electrons/m³
 
 2) A lightning bolt transfers 5.0 C of charge in $2.0 \\times 10^{-3}$ s. What is the average current? (in A)
 
-3) A copper wire (cross-section $1.0 \\times 10^{-6}$ m², $n = 8.5 \\times 10^{28}$ m⁻³) carries 2.0 A. What is the drift velocity? (in m/s, use scientific notation like 1.5e-4)
+3) A copper wire (cross-section $1.0 \\times 10^{-6}$ $m^{2}$, $n = 8.5 \\times 10^{28}$ $m^{-3}$) carries 2.0 A. What is the drift velocity? (in m/s, use scientific notation like 1.5e-4)
 
 *Round all answers to 3 significant figures.*
       `,

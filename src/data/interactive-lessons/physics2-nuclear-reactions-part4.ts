@@ -14,7 +14,7 @@ export const physics2NuclearPart4Data = {
 
 $$\\boxed{E = mc^2}$$
 
-Mass and energy are two forms of the same thing. A small amount of mass corresponds to an enormous amount of energy because $c^2 = (3 \\times 10^8)^2 = 9 \\times 10^{16}$ m²/s².
+Mass and energy are two forms of the same thing. A small amount of mass corresponds to an enormous amount of energy because $c^2 = (3 \\times 10^8)^2 = 9 \\times 10^{16}$ $m^{2}/s^{2}$.
 
 ### Useful Conversions
 

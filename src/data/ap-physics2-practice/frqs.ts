@@ -43,7 +43,7 @@ A 12 V battery (negligible internal resistance) is connected to a circuit consis
     stimulus: `**Q2 — Translation Between Representations (Thermodynamics)**
 
 An ideal monatomic gas is taken through the cycle A → B → C → A:
-- A → B: Isobaric expansion at $P = 2 \\times 10^5$ Pa from $V_A = 1 \\times 10^{-3}$ m³ to $V_B = 3 \\times 10^{-3}$ m³.
+- A → B: Isobaric expansion at $P = 2 \\times 10^5$ Pa from $V_A = 1 \\times 10^{-3}$ $m^{3}$ to $V_B = 3 \\times 10^{-3}$ $m^{3}$.
 - B → C: Isochoric (constant volume) cooling, pressure drops to $P_C = 1 \\times 10^5$ Pa.
 - C → A: Isothermal compression back to state A.`,
     parts: [
@@ -103,7 +103,7 @@ A square conducting loop of side $L = 0.20$ m and resistance $R = 4.0$ Ω is pos
     parts: [
       {
         prompt: '**(a)** Calculate the magnitude of the EMF induced in the loop during this time.',
-        rubric: '$\\varepsilon = -d\\Phi/dt = -A(dB/dt)$. $A = (0.20)^2 = 0.04$ m². $dB/dt = 2.0/5.0 = 0.4$ T/s. $|\\varepsilon| = (0.04)(0.4) = 0.016$ V.',
+        rubric: '$\\varepsilon = -d\\Phi/dt = -A(dB/dt)$. $A = (0.20)^2 = 0.04$ $m^{2}$. $dB/dt = 2.0/5.0 = 0.4$ T/s. $|\\varepsilon| = (0.04)(0.4) = 0.016$ V.',
       },
       {
         prompt: '**(b)** Calculate the magnitude of the induced current in the loop.',

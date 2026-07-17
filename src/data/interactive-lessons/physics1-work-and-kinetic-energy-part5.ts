@@ -142,7 +142,7 @@ $$\\text{efficiency} = \\frac{800}{1000} \\times 100\\% = 80\\%$$
       content: `
 **Power Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A crane lifts a 500 kg load 20 m in 25 s. What is the average power output (in W)?
 
@@ -177,7 +177,7 @@ Use $g = 10$ m/s².
             label: 'Unit of energy commonly used in electricity bills:',
             options: ['Watt', 'Kilowatt', 'Kilowatt-hour', 'Joule per second'],
             correctIndex: 2,
-            explanation: 'kWh = power × time = energy. 1 kWh = 3.6 × 10⁶ J. Watts and kilowatts are units of power.'
+            explanation: 'kWh = power × time = energy. 1 kWh = $3.6 \\times 10^{6}$ J. Watts and kilowatts are units of power.'
           },
           {
             label: 'At constant power, as a car accelerates, the force from the engine:',
@@ -203,7 +203,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 70 kg person runs up a 5 m staircase in 4 s. Their average power output is approximately ($g = 10$ m/s²):',
+            question: 'A 70 kg person runs up a 5 m staircase in 4 s. Their average power output is approximately ($g = 10$ $m/s^{2}$):',
             options: [
               '350 W',
               '700 W',

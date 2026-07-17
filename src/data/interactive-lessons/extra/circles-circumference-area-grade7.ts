@@ -260,7 +260,7 @@ The $7$ in the radius cancels the $7$ in the denominator — no decimals needed!
             },
             {
               question: 'Using $\\pi \\approx \\dfrac{22}{7}$, the circumference of a circle with radius $r = 14$ m is:',
-              options: ['$88$ m', '$44$ m', '$88$ m²', '$616$ m'],
+              options: ['$88$ m', '$44$ m', '$88$ $m^{2}$', '$616$ m'],
               correctAnswer: 0,
               explanation: '$C = 2\\pi r = 2 \\times \\frac{22}{7} \\times 14 = 2 \\times 22 \\times 2 = 88$ m. Circumference uses plain (non-squared) units.',
             },
@@ -333,16 +333,16 @@ Step by step:
 
 Use $\\pi \\approx 3.14$. Square the radius first!
 
-**1)** $r = 2$ cm: $\\;A = \\,?$  (cm²)
-**2)** $r = 3$ m: $\\;A = \\,?$  (m²)
-**3)** $r = 10$ ft: $\\;A = \\,?$  (ft²)`,
+**1)** $r = 2$ cm: $\\;A = \\,?$  $(cm^{2})$
+**2)** $r = 3$ m: $\\;A = \\,?$  $(m^{2})$
+**3)** $r = 10$ ft: $\\;A = \\,?$  $(ft^{2})$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['12.56', '28.26', '314'],
           hint1: '$A = 3.14 \\times 2^2 = 3.14 \\times 4$.',
           hint2: '$A = 3.14 \\times 3^2 = 3.14 \\times 9$.',
           hint3: '$A = 3.14 \\times 10^2 = 3.14 \\times 100$.',
-          explanation: '1) $3.14 \\times 4 = 12.56$ cm².  2) $3.14 \\times 9 = 28.26$ m².  3) $3.14 \\times 100 = 314$ ft².',
+          explanation: '1) $3.14 \\times 4 = 12.56$ $cm^{2}$.  2) $3.14 \\times 9 = 28.26$ $m^{2}$.  3) $3.14 \\times 100 = 314$ $ft^{2}$.',
         },
       },
       {
@@ -375,8 +375,8 @@ A circle has **diameter** $d = 8$ cm. Step through finding the area. Use $\\pi \
           correctAnswers: ['$r = 4$', '$4^2 = 16$', '$3.14 \\times 16 = 50.24$'],
           hint1: 'Radius is half the diameter: $r = 8 \\div 2 = 4$.',
           hint2: 'Square the **radius** ($4$), not the diameter: $4^2 = 16$.',
-          hint3: 'Finish with $A = \\pi r^2 = 3.14 \\times 16 = 50.24$ cm².',
-          explanation: '$d = 8 \\Rightarrow r = 4 \\Rightarrow r^2 = 16 \\Rightarrow A = 3.14 \\times 16 = 50.24$ cm². Halving the diameter first is essential.',
+          hint3: 'Finish with $A = \\pi r^2 = 3.14 \\times 16 = 50.24$ $cm^{2}$.',
+          explanation: '$d = 8 \\Rightarrow r = 4 \\Rightarrow r^2 = 16 \\Rightarrow A = 3.14 \\times 16 = 50.24$ $cm^{2}$. Halving the diameter first is essential.',
         },
       },
     ],
@@ -446,7 +446,7 @@ $$C = 2\\pi r \\approx 2 \\times \\frac{22}{7} \\times 7 = 44 \\text{ m}$$
 That's the area. Using $\\pi \\approx \\dfrac{22}{7}$:
 $$A = \\pi r^2 \\approx \\frac{22}{7} \\times 7^2 = \\frac{22}{7} \\times 49 = 22 \\times 7 = 154 \\text{ m}^2$$
 
-> 🔑 **Same circle, two questions.** The path (around) is a length, $44$ m. The surface (inside) is an area, $154$ m². Notice the squared units flag it as area.`,
+> 🔑 **Same circle, two questions.** The path (around) is a length, $44$ m. The surface (inside) is an area, $154$ $m^{2}$. Notice the squared units flag it as area.`,
       },
       {
         id: 'circ4-semicircle',
@@ -470,16 +470,16 @@ $$A = \\frac{1}{2} \\times 3.14 \\times 4^2 = \\frac{1}{2} \\times 3.14 \\times 
 
 Use $\\pi \\approx 3.14$. Read carefully — around or inside?
 
-**1)** A round trampoline has radius $5$ ft. How much netting covers the jumping surface? $A = \\,?$ ft²
+**1)** A round trampoline has radius $5$ ft. How much netting covers the jumping surface? $A = \\,?$ $ft^{2}$
 **2)** A circular running track has diameter $80$ m. How far is one lap around it? $C = \\,?$ m
-**3)** A semicircular rug has radius $2$ m. What is its area? $A = \\,?$ m²`,
+**3)** A semicircular rug has radius $2$ m. What is its area? $A = \\,?$ $m^{2}$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['78.5', '251.2', '6.28'],
           hint1: 'Surface = area: $A = 3.14 \\times 5^2 = 3.14 \\times 25$.',
           hint2: 'One lap = circumference: $C = \\pi d = 3.14 \\times 80$.',
           hint3: 'Semicircle area is half: $A = \\frac{1}{2} \\times 3.14 \\times 2^2 = \\frac{1}{2} \\times 3.14 \\times 4$.',
-          explanation: '1) $3.14 \\times 25 = 78.5$ ft² (area).  2) $3.14 \\times 80 = 251.2$ m (circumference, a length — plain units, not squared).  3) $\\frac{1}{2} \\times 3.14 \\times 4 = 6.28$ m² (half-circle area).',
+          explanation: '1) $3.14 \\times 25 = 78.5$ $ft^{2}$ (area).  2) $3.14 \\times 80 = 251.2$ m (circumference, a length — plain units, not squared).  3) $\\frac{1}{2} \\times 3.14 \\times 4 = 6.28$ $m^{2}$ (half-circle area).',
         },
       },
       {
@@ -547,15 +547,15 @@ You can now (1) name the parts of a circle, (2) find circumference with $C = \\p
 Use $\\pi \\approx 3.14$ (round to the nearest hundredth if needed).
 
 **1)** $r = 8$ m: circumference $C = \\,?$ m
-**2)** $r = 8$ m: area $A = \\,?$ m²
-**3)** $d = 4$ cm: area $A = \\,?$ cm²`,
+**2)** $r = 8$ m: area $A = \\,?$ $m^{2}$
+**3)** $d = 4$ cm: area $A = \\,?$ $cm^{2}$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['50.24', '200.96', '12.56'],
           hint1: '$C = 2\\pi r = 2 \\times 3.14 \\times 8$.',
           hint2: '$A = \\pi r^2 = 3.14 \\times 8^2 = 3.14 \\times 64$.',
           hint3: 'First halve: $r = 4 \\div 2 = 2$. Then $A = 3.14 \\times 2^2 = 3.14 \\times 4$.',
-          explanation: '1) $2 \\times 3.14 \\times 8 = 50.24$ m.  2) $3.14 \\times 64 = 200.96$ m².  3) $r = 2$, so $A = 3.14 \\times 4 = 12.56$ cm².',
+          explanation: '1) $2 \\times 3.14 \\times 8 = 50.24$ m.  2) $3.14 \\times 64 = 200.96$ $m^{2}$.  3) $r = 2$, so $A = 3.14 \\times 4 = 12.56$ $cm^{2}$.',
         },
       },
       {
@@ -566,9 +566,9 @@ Use $\\pi \\approx 3.14$ (round to the nearest hundredth if needed).
           questions: [
             {
               question: 'A circular clock face has a radius of $15$ cm. About how much area does the face cover? (Use $\\pi \\approx 3.14$.)',
-              options: ['$706.5$ cm²', '$94.2$ cm²', '$47.1$ cm²', '$2826$ cm²'],
+              options: ['$706.5$ $cm^{2}$', '$94.2$ $cm^{2}$', '$47.1$ $cm^{2}$', '$2826$ $cm^{2}$'],
               correctAnswer: 0,
-              explanation: '$A = \\pi r^2 = 3.14 \\times 15^2 = 3.14 \\times 225 = 706.5$ cm².',
+              explanation: '$A = \\pi r^2 = 3.14 \\times 15^2 = 3.14 \\times 225 = 706.5$ $cm^{2}$.',
             },
             {
               question: 'Which describes the perimeter of a **semicircle** with radius $r$?',
@@ -600,17 +600,17 @@ Answer all three to finish the lesson.`,
             },
             {
               question: 'What is the area of a circle with radius $6$ m? (Use $\\pi \\approx 3.14$.)',
-              options: ['$113.04$ m²', '$37.68$ m²', '$18.84$ m²', '$113.04$ m'],
+              options: ['$113.04$ $m^{2}$', '$37.68$ $m^{2}$', '$18.84$ $m^{2}$', '$113.04$ m'],
               correctAnswer: 0,
-              explanation: '$A = \\pi r^2 = 3.14 \\times 6^2 = 3.14 \\times 36 = 113.04$ m². Square the radius first, and use square units.',
+              explanation: '$A = \\pi r^2 = 3.14 \\times 6^2 = 3.14 \\times 36 = 113.04$ $m^{2}$. Square the radius first, and use square units.',
             },
             {
               question: 'A gardener needs edging to go around a circular flower bed with radius $5$ ft. Which calculation is correct? (Use $\\pi \\approx 3.14$.)',
               options: [
                 '$C = 2 \\times 3.14 \\times 5 = 31.4$ ft',
-                '$A = 3.14 \\times 5^2 = 78.5$ ft²',
+                '$A = 3.14 \\times 5^2 = 78.5$ $ft^{2}$',
                 '$C = 3.14 \\times 5 = 15.7$ ft',
-                '$A = 3.14 \\times 5 = 15.7$ ft²',
+                '$A = 3.14 \\times 5 = 15.7$ $ft^{2}$',
               ],
               correctAnswer: 0,
               explanation: 'Edging goes *around* the edge, so it is circumference. With the radius given, $C = 2\\pi r = 2 \\times 3.14 \\times 5 = 31.4$ ft.',

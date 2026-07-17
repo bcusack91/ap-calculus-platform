@@ -4,7 +4,7 @@ export const physCEMEnergyDenPart2Data = {
     {
       id: 'eden2-intro',
       type: 'text' as const,
-      content: `# Energy Density — Part 2: Energy Density u = ½ε₀E²
+      content: `# Energy Density — Part 2: Energy Density u = $\\tfrac{1}{2} \\varepsilon_{0}E^{2}$
 
 The energy stored in a capacitor is actually stored **in the electric field itself**. We can define an energy per unit volume — the **energy density**.
 
@@ -23,13 +23,13 @@ This is **universal** — it applies to any electric field, not just parallel pl
       type: 'mcq' as const,
       question: 'What is the energy density in a region where $E = 10^4$ V/m? ($\\varepsilon_0 = 8.85 \\times 10^{-12}$)',
       options: [
-        '$4.43 \\times 10^{-4}$ J/m³',
-        '$8.85 \\times 10^{-4}$ J/m³',
-        '$4.43 \\times 10^{-8}$ J/m³',
-        '$0.5$ J/m³'
+        '$4.43 \\times 10^{-4}$ $J/m^{3}$',
+        '$8.85 \\times 10^{-4}$ $J/m^{3}$',
+        '$4.43 \\times 10^{-8}$ $J/m^{3}$',
+        '$0.5$ $J/m^{3}$'
       ],
       correctAnswer: 0,
-      explanation: '$u = \\frac{1}{2}\\varepsilon_0 E^2 = \\frac{1}{2}(8.85 \\times 10^{-12})(10^8) = 4.425 \\times 10^{-4}$ J/m³.'
+      explanation: '$u = \\frac{1}{2}\\varepsilon_0 E^2 = \\frac{1}{2}(8.85 \\times 10^{-12})(10^8) = 4.425 \\times 10^{-4}$ $J/m^{3}$.'
     },
     {
       id: 'eden2-general',
@@ -59,13 +59,13 @@ $$[u] = \\frac{\\text{C}^2}{\\text{N}\\cdot\\text{m}^2} \\cdot \\frac{\\text{V}^
       type: 'mcq' as const,
       question: 'A parallel-plate capacitor has $E = 5000$ V/m and is filled with dielectric $\\kappa = 4$. What is the energy density?',
       options: [
-        '$4.43 \\times 10^{-4}$ J/m³',
-        '$1.11 \\times 10^{-4}$ J/m³',
-        '$2.21 \\times 10^{-4}$ J/m³',
-        '$8.85 \\times 10^{-4}$ J/m³'
+        '$4.43 \\times 10^{-4}$ $J/m^{3}$',
+        '$1.11 \\times 10^{-4}$ $J/m^{3}$',
+        '$2.21 \\times 10^{-4}$ $J/m^{3}$',
+        '$8.85 \\times 10^{-4}$ $J/m^{3}$'
       ],
       correctAnswer: 0,
-      explanation: '$u = \\frac{1}{2}\\kappa\\varepsilon_0 E^2 = \\frac{1}{2}(4)(8.85 \\times 10^{-12})(25 \\times 10^6) = \\frac{1}{2}(8.85 \\times 10^{-4}) = 4.43 \\times 10^{-4}$ J/m³.'
+      explanation: '$u = \\frac{1}{2}\\kappa\\varepsilon_0 E^2 = \\frac{1}{2}(4)(8.85 \\times 10^{-12})(25 \\times 10^6) = \\frac{1}{2}(8.85 \\times 10^{-4}) = 4.43 \\times 10^{-4}$ $J/m^{3}$.'
     },
     {
       id: 'eden2-verify',

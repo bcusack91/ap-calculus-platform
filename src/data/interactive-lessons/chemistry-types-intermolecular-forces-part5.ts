@@ -34,7 +34,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'What is the strongest intermolecular force experienced by CH₃OH (methanol)?',
+            question: 'What is the strongest intermolecular force experienced by $CH_{3}OH$ (methanol)?',
             options: [
               'London Dispersion Forces',
               'Dipole-dipole forces',
@@ -42,10 +42,10 @@ export const chemTypesIntermolecularForcesPart5Data = {
               'Ion-dipole forces'
             ],
             correctAnswer: 2,
-            explanation: 'Methanol (CH₃OH) has an O–H bond, meeting the requirement for hydrogen bonding (H bonded to N, O, or F). Hydrogen bonding is the strongest IMF it experiences. It also has dipole-dipole forces and LDF, but hydrogen bonding is dominant.'
+            explanation: 'Methanol $(CH_{3}OH)$ has an O–H bond, meeting the requirement for hydrogen bonding (H bonded to N, O, or F). Hydrogen bonding is the strongest IMF it experiences. It also has dipole-dipole forces and LDF, but hydrogen bonding is dominant.'
           },
           {
-            question: 'What is the strongest intermolecular force experienced by CH₃Cl (chloromethane)?',
+            question: 'What is the strongest intermolecular force experienced by $CH_{3}Cl$ (chloromethane)?',
             options: [
               'London Dispersion Forces only',
               'Dipole-dipole forces',
@@ -53,10 +53,10 @@ export const chemTypesIntermolecularForcesPart5Data = {
               'Ionic bonding'
             ],
             correctAnswer: 1,
-            explanation: 'CH₃Cl is a polar molecule (the C–Cl bond creates a net dipole), so it has dipole-dipole forces. It does NOT have hydrogen bonding because there is no H bonded to N, O, or F. Chlorine is not one of the three required atoms for H-bonding.'
+            explanation: '$CH_{3}Cl$ is a polar molecule (the C–Cl bond creates a net dipole), so it has dipole-dipole forces. It does NOT have hydrogen bonding because there is no H bonded to N, O, or F. Chlorine is not one of the three required atoms for H-bonding.'
           },
           {
-            question: 'What is the strongest intermolecular force experienced by CCl₄ (carbon tetrachloride)?',
+            question: 'What is the strongest intermolecular force experienced by $CCl_{4}$ (carbon tetrachloride)?',
             options: [
               'London Dispersion Forces only',
               'Dipole-dipole forces',
@@ -64,7 +64,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
               'Ion-dipole forces'
             ],
             correctAnswer: 0,
-            explanation: 'CCl₄ has a symmetric tetrahedral geometry, so the four polar C–Cl bond dipoles cancel out. The molecule is nonpolar and only experiences London Dispersion Forces.'
+            explanation: '$CCl_{4}$ has a symmetric tetrahedral geometry, so the four polar C–Cl bond dipoles cancel out. The molecule is nonpolar and only experiences London Dispersion Forces.'
           }
         ]
       }
@@ -81,14 +81,14 @@ export const chemTypesIntermolecularForcesPart5Data = {
             label: '$\\text{H}_2\\text{O}$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 2,
-            explanation: 'H₂O has O–H bonds, so it exhibits hydrogen bonding — the strongest IMF between neutral molecules of this size.'
+            explanation: '$H_{2}O$ has O–H bonds, so it exhibits hydrogen bonding — the strongest IMF between neutral molecules of this size.'
           },
           {
             id: 'rank-co2',
             label: '$\\text{CO}_2$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 0,
-            explanation: 'CO₂ is linear and symmetric. The two C=O bond dipoles cancel, making CO₂ nonpolar. It only experiences LDF.'
+            explanation: '$CO_{2}$ is linear and symmetric. The two C=O bond dipoles cancel, making $CO_{2}$ nonpolar. It only experiences LDF.'
           },
           {
             id: 'rank-hf',
@@ -102,7 +102,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
             label: 'NaCl dissolved in water',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 3,
-            explanation: 'NaCl dissociates into Na⁺ and Cl⁻ ions in water. The interaction between these ions and polar water molecules is ion-dipole.'
+            explanation: 'NaCl dissociates into $Na^{+}$ and $Cl^{-}$ ions in water. The interaction between these ions and polar water molecules is ion-dipole.'
           }
         ]
       }
@@ -111,7 +111,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
       id: 'if-rank-comparison',
       type: 'text',
       title: 'Comparing Molecules: A Worked Example',
-      content: `> **Problem:** Rank the following in order of increasing boiling point:\n> $\\text{CH}_4$, $\\text{CH}_3\\text{Cl}$, $\\text{CH}_3\\text{OH}$, $\\text{CH}_3\\text{CH}_3$\n\n> **Solution:**\n\n| Molecule | Molar Mass | Polar? | H-bonding? | Dominant IMF |\n|----------|-----------|--------|------------|-------------|\n| CH₄ | 16 g/mol | No | No | LDF only |\n| CH₃CH₃ | 30 g/mol | No | No | LDF only |\n| CH₃Cl | 50 g/mol | Yes | No | Dipole-dipole + LDF |\n| CH₃OH | 32 g/mol | Yes | Yes (O–H) | H-bonding + DD + LDF |\n\n**Ranking (lowest to highest BP):**\n$$\\boxed{\\text{CH}_4 < \\text{CH}_3\\text{CH}_3 < \\text{CH}_3\\text{Cl} < \\text{CH}_3\\text{OH}}$$\n\n- CH₄ < CH₃CH₃: Both LDF only, but CH₃CH₃ has higher molar mass\n- CH₃CH₃ < CH₃Cl: CH₃Cl has dipole-dipole forces in addition to LDF\n- CH₃Cl < CH₃OH: CH₃OH has hydrogen bonding, the strongest IMF here (even though CH₃Cl has a higher molar mass)`
+      content: `> **Problem:** Rank the following in order of increasing boiling point:\n> $\\text{CH}_4$, $\\text{CH}_3\\text{Cl}$, $\\text{CH}_3\\text{OH}$, $\\text{CH}_3\\text{CH}_3$\n\n> **Solution:**\n\n| Molecule | Molar Mass | Polar? | H-bonding? | Dominant IMF |\n|----------|-----------|--------|------------|-------------|\n| $CH_{4}$ | 16 g/mol | No | No | LDF only |\n| $CH_{3}CH_{3}$ | 30 g/mol | No | No | LDF only |\n| $CH_{3}Cl$ | 50 g/mol | Yes | No | Dipole-dipole + LDF |\n| $CH_{3}OH$ | 32 g/mol | Yes | Yes (O–H) | H-bonding + DD + LDF |\n\n**Ranking (lowest to highest BP):**\n$$\\boxed{\\text{CH}_4 < \\text{CH}_3\\text{CH}_3 < \\text{CH}_3\\text{Cl} < \\text{CH}_3\\text{OH}}$$\n\n- $CH_{4}$ < $CH_{3}CH_{3}$: Both LDF only, but $CH_{3}CH_{3}$ has higher molar mass\n- $CH_{3}CH_{3}$ < $CH_{3}Cl$: $CH_{3}Cl$ has dipole-dipole forces in addition to LDF\n- $CH_{3}Cl$ < $CH_{3}OH$: $CH_{3}OH$ has hydrogen bonding, the strongest IMF here (even though $CH_{3}Cl$ has a higher molar mass)`
     },
     {
       id: 'if-rank-practice2',
@@ -125,19 +125,19 @@ export const chemTypesIntermolecularForcesPart5Data = {
             options: [
               'Ne (MW = 20, nonpolar)',
               'HF (MW = 20, hydrogen bonding)',
-              'N₂ (MW = 28, nonpolar)',
+              '$N_{2}$ (MW = 28, nonpolar)',
               'CO (MW = 28, polar)'
             ],
             correctAnswer: 1,
-            explanation: 'HF exhibits hydrogen bonding (H bonded to F), which is much stronger than the dipole-dipole forces in CO or the LDF in Ne and N₂. Despite having one of the lowest molar masses, HF has the highest boiling point (19.5°C vs. well below 0°C for the others).'
+            explanation: 'HF exhibits hydrogen bonding (H bonded to F), which is much stronger than the dipole-dipole forces in CO or the LDF in Ne and $N_{2}$. Despite having one of the lowest molar masses, HF has the highest boiling point (19.5°C vs. well below 0°C for the others).'
           },
           {
             question: 'Which substance has the LOWEST boiling point?',
             options: [
-              'H₂O (MW = 18, hydrogen bonding)',
+              '$H_{2}O$ (MW = 18, hydrogen bonding)',
               'HF (MW = 20, hydrogen bonding)',
               'He (MW = 4, LDF only)',
-              'CH₃OH (MW = 32, hydrogen bonding)'
+              '$CH_{3}OH$ (MW = 32, hydrogen bonding)'
             ],
             correctAnswer: 2,
             explanation: 'He is a noble gas with no bonds and very few electrons. It only has extremely weak LDF and has the lowest boiling point of all elements (-269°C, or 4 K).'
@@ -153,7 +153,7 @@ export const chemTypesIntermolecularForcesPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'Octane (C₈H₁₈, MW = 114, nonpolar) boils at 126°C. Acetone (CH₃COCH₃, MW = 58, polar) boils at 56°C. Why does octane boil higher despite being nonpolar?',
+            question: 'Octane ($C_{8}H_{18}$, MW = 114, nonpolar) boils at 126°C. Acetone ($CH_{3}COCH_{3}$, MW = 58, polar) boils at 56°C. Why does octane boil higher despite being nonpolar?',
             options: [
               'Octane has hydrogen bonding',
               'Octane has dipole-dipole forces',

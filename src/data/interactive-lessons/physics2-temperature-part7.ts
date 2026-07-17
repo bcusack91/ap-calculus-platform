@@ -60,7 +60,7 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
       exercise: {
         questions: [
           {
-            question: 'A copper plate has a circular hole of diameter 5.00 cm at 20°C. When heated to 220°C, the diameter of the hole (α_Cu = 17 × 10⁻⁶ /°C):',
+            question: 'A copper plate has a circular hole of diameter 5.00 cm at 20°C. When heated to 220°C, the diameter of the hole (α_Cu = $17 \\times 10^{-6}$ /°C):',
             options: [
               'Decreases because the surrounding copper expands inward',
               'Stays exactly the same',
@@ -170,10 +170,10 @@ Here is the type of multi-part question you might see on the AP Physics 2 exam:
           {
             question: 'A gas is at 300 K. Its molecules have average KE of $6.21 \\times 10^{-21}$ J. If the temperature is raised to 600 K, the new average KE and new rms speed are:',
             options: [
-              'KE doubles to 12.42 × 10⁻²¹ J; speed doubles',
-              'KE doubles to 12.42 × 10⁻²¹ J; speed increases by factor √2',
-              'KE increases by √2; speed doubles',
-              'Both KE and speed increase by √2'
+              'KE doubles to $12.42 \\times 10^{-21}$ J; speed doubles',
+              'KE doubles to $12.42 \\times 10^{-21}$ J; speed increases by factor $\\sqrt{2}$',
+              'KE increases by $\\sqrt{2}$; speed doubles',
+              'Both KE and speed increase by $\\sqrt{2}$'
             ],
             correctAnswer: 1,
             explanation: '$KE \\propto T$, so doubling $T$ doubles KE to $12.42 \\times 10^{-21}$ J. But $v_{\\text{rms}} \\propto \\sqrt{T}$, so doubling $T$ increases speed by only $\\sqrt{2} \\approx 1.41$.'
@@ -181,16 +181,16 @@ Here is the type of multi-part question you might see on the AP Physics 2 exam:
           {
             question: 'An engineer needs a material for a precision measuring device that must maintain its dimensions across a wide temperature range. The best choice is:',
             options: [
-              'Aluminum (α = 23 × 10⁻⁶ /°C)',
-              'Brass (α = 19 × 10⁻⁶ /°C)',
-              'Steel (α = 12 × 10⁻⁶ /°C)',
-              'Invar (α = 0.9 × 10⁻⁶ /°C)'
+              'Aluminum (α = $23 \\times 10^{-6}$ /°C)',
+              'Brass (α = $19 \\times 10^{-6}$ /°C)',
+              'Steel (α = $12 \\times 10^{-6}$ /°C)',
+              'Invar (α = $0.9 \\times 10^{-6}$ /°C)'
             ],
             correctAnswer: 3,
             explanation: 'Invar has the smallest coefficient of linear expansion ($\\alpha = 0.9 \\times 10^{-6}$ /°C), meaning it changes dimensions the least with temperature. Invar was specifically engineered for precision instruments, clock pendulums, and scientific equipment.'
           },
           {
-            question: 'An aluminum ring (α = 23 × 10⁻⁶ /°C) is heated and placed around a glass rod (α = 9 × 10⁻⁶ /°C). As the system cools back to room temperature:',
+            question: 'An aluminum ring (α = $23 \\times 10^{-6}$ /°C) is heated and placed around a glass rod (α = $9 \\times 10^{-6}$ /°C). As the system cools back to room temperature:',
             options: [
               'The ring loosens because aluminum contracts more than glass',
               'The ring tightens because aluminum contracts more than glass, gripping the rod',

@@ -27,8 +27,8 @@ Volume flow rate $Q = Av$ assumes incompressible flow. For gases or any case whe
 $$\\dot m = \\rho\\, A\\, v$$
 
 - $\\dot m$: mass flow rate (kg/s)
-- $\\rho$: fluid density (kg/m³)
-- $A$: cross-sectional area (m²)
+- $\\rho$: fluid density $(kg/m^{3})$
+- $A$: cross-sectional area $(m^{2})$
 - $v$: speed (m/s)
 
 ### General Continuity (covers compressible flow too)
@@ -60,9 +60,9 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
         questions: [
           {
             question: 'Mass flow rate $\\dot m$ has units of:',
-            options: ['m³/s', 'kg/s', 'N/s', 'm/s'],
+            options: ['$m^{3}/s$', 'kg/s', 'N/s', 'm/s'],
             correctAnswer: 1,
-            explanation: '$\\dot m = \\rho A v$ → kg/m³ × m² × m/s = kg/s.'
+            explanation: '$\\dot m = \\rho A v$ → $kg/m^{3}$ × $m^{2}$ × m/s = kg/s.'
           },
           {
             question: 'For an incompressible fluid, mass flow rate equals:',
@@ -76,7 +76,7 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
             explanation: '$\\dot m = \\rho A v = \\rho Q$.'
           },
           {
-            question: 'A pipe carries water at $Q = 0.020$ m³/s. The mass flow rate is:',
+            question: 'A pipe carries water at $Q = 0.020$ $m^{3}/s$. The mass flow rate is:',
             options: [
               '0.020 kg/s',
               '20 kg/s',
@@ -95,11 +95,11 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
       content: `
 **Mass Flow Calculations** 🧮 ($\\rho_w = 1000$, $\\rho_{oil} = 850$)
 
-1) Pipe area $A = 0.0040$ m², $v = 5.0$ m/s carries water. $\\dot m$ (kg/s)?
+1) Pipe area $A = 0.0040$ $m^{2}$, $v = 5.0$ m/s carries water. $\\dot m$ (kg/s)?
 
 2) Same pipe carrying oil instead. $\\dot m$ (kg/s)?
 
-3) A 0.50 m² pipe with $v = 2.0$ m/s carries air ($\\rho = 1.2$). $\\dot m$ (kg/s)?
+3) A 0.50 $m^{2}$ pipe with $v = 2.0$ m/s carries air ($\\rho = 1.2$). $\\dot m$ (kg/s)?
       `,
       exercise: {
         boxes: 3,
@@ -137,10 +137,10 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
             explanation: 'For incompressible fluids, $\\dot m$ and $Q$ conservation say the same thing (since $\\rho$ is constant).'
           },
           {
-            label: 'A liquid pipeline delivers 50 kg/s of water. The volume flow rate (m³/s) is:',
+            label: 'A liquid pipeline delivers 50 kg/s of water. The volume flow rate $(m^{3}/s)$ is:',
             options: ['0.05', '0.5', '5', '50'],
             correctIndex: 0,
-            explanation: '$Q = \\dot m/\\rho = 50/1000 = 0.05$ m³/s = 50 L/s.'
+            explanation: '$Q = \\dot m/\\rho = 50/1000 = 0.05$ $m^{3}/s$ = 50 L/s.'
           }
         ]
       }
@@ -154,7 +154,7 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
       exercise: {
         questions: [
           {
-            question: 'A pipe carries oil ($\\rho = 850$ kg/m³) at $v = 3.0$ m/s through cross-section $A = 0.020$ m². Mass flow rate?',
+            question: 'A pipe carries oil ($\\rho = 850$ $kg/m^{3}$) at $v = 3.0$ m/s through cross-section $A = 0.020$ $m^{2}$. Mass flow rate?',
             options: [
               '5.1 kg/s',
               '17 kg/s',
@@ -165,7 +165,7 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
             explanation: '$\\dot m = 850 \\times 0.020 \\times 3.0 = 51$ kg/s.'
           },
           {
-            question: 'A fan moves air ($\\rho = 1.2$ kg/m³) through a 0.40 m² duct at 5 m/s. Mass flow rate?',
+            question: 'A fan moves air ($\\rho = 1.2$ $kg/m^{3}$) through a 0.40 $m^{2}$ duct at 5 m/s. Mass flow rate?',
             options: [
               '0.24 kg/s',
               '2.4 kg/s',

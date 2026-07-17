@@ -153,10 +153,10 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
           {
             question: 'Which has the highest entropy?',
             options: [
-              '1 mol H₂O(s) at 0°C',
-              '1 mol H₂O(l) at 25°C',
-              '1 mol H₂O(g) at 100°C',
-              '1 mol H₂O(l) at 0°C'
+              '1 mol $H_{2}O(s)$ at 0°C',
+              '1 mol $H_{2}O(l)$ at 25°C',
+              '1 mol $H_{2}O(g)$ at 100°C',
+              '1 mol $H_{2}O(l)$ at 0°C'
             ],
             correctAnswer: 2,
             explanation: 'Gases have far more microstates than liquids or solids. Water vapor at 100°C has the most freedom of motion and the highest entropy of the choices.'
@@ -167,7 +167,7 @@ Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar e
               'kJ/mol',
               'J/K or J/(mol·K)',
               'atm·L',
-              'kg·m/s²'
+              '$kg\\cdot m/s^{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Entropy has units of J/K (or J/(mol·K) for molar entropy). Note: joules, not kilojoules! This is a common AP exam unit trap.'

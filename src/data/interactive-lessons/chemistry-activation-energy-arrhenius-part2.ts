@@ -86,7 +86,7 @@ $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\t
 - Products are less stable (higher energy)
 - $E_a(\\text{forward}) > E_a(\\text{reverse})$
 - Energy is **absorbed** from surroundings
-- Example: Dissolving NH₄NO₃
+- Example: Dissolving $NH_{4}NO_{3}$
 
 $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\text{Products (higher energy)}$$
 
@@ -137,7 +137,7 @@ $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\t
               'The same as a reaction intermediate'
             ],
             correctAnswer: 1,
-            explanation: 'The transition state is the highest energy configuration along the reaction path. It exists for only ~10⁻¹³ s and cannot be isolated. It is NOT an intermediate (which sits in an energy valley between two peaks).'
+            explanation: 'The transition state is the highest energy configuration along the reaction path. It exists for only ~$10^{-13}$ s and cannot be isolated. It is NOT an intermediate (which sits in an energy valley between two peaks).'
           }
         ]
       }
@@ -173,7 +173,7 @@ In the transition state, both O−C and C−Br bonds are partial.
 |---------|-----------------|-------------|
 | Energy | Maximum (peak) | Minimum (valley between peaks) |
 | Stability | Unstable | Somewhat stable |
-| Lifetime | ~10⁻¹³ s | Can sometimes be detected |
+| Lifetime | ~$10^{-13}$ s | Can sometimes be detected |
 | On diagram | Top of a hill | Bottom of a valley |
       `
     },

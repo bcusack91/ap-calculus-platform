@@ -27,7 +27,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       kind: 'line',
       xLabel: 'Substrate concentration [S]',
       xUnit: 'mM',
-      yLabel: 'Initial velocity v₀',
+      yLabel: 'Initial velocity $v_{0}$',
       yUnit: 'µmol/min',
       seriesLabel: 'Condition A (no additive)',
       xValues: [0, 0.25, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0, 8.0],
@@ -136,7 +136,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['1.8', '4.7', '7.0', '9.3'],
         correctAnswer: 1,
         explanation:
-          'When [A−] = [HA], the log term is zero and pH = pKa. pKa = −log(1.8 × 10⁻⁵) ≈ 4.7. The 7.0 trap assumes neutrality; 1.8 confuses Ka’s coefficient with pH; 9.3 is roughly 14 − pKa (the pKb region), not this solution.',
+          'When [A−] = [HA], the log term is zero and pH = pKa. pKa = $-\\log (1.8 \\times 10^{-5})$ ≈ 4.7. The 7.0 trap assumes neutrality; 1.8 confuses Ka’s coefficient with pH; 9.3 is roughly 14 − pKa (the pKb region), not this solution.',
         skill: 'Buffers',
       },
       {
@@ -196,7 +196,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     passageText:
       'A student assembled a Daniell cell to study how a spontaneous redox reaction can drive an electric current. One half-cell held a zinc electrode in 1.0 M $\\text{ZnSO}_4$; the other held a copper electrode in 1.0 M $\\text{CuSO}_4$. A salt bridge connected the two solutions, and the electrodes were wired through an external resistor.\n\nThe relevant standard reduction potentials are $E^\\circ(\\text{Cu}^{2+}/\\text{Cu}) = +0.34\\ \\text{V}$ and $E^\\circ(\\text{Zn}^{2+}/\\text{Zn}) = -0.76\\ \\text{V}$. Under standard conditions the cell delivered a measured open-circuit voltage close to the value predicted from these potentials. The student then connected external resistors and recorded the current, treating the cell’s standard potential as an ideal EMF and neglecting internal resistance for the calculations below.\n\nAs the cell discharged, the mass of one electrode increased while the other decreased, and the blue color of the copper solution faded over time. The student noted that the salt bridge was essential: without it, charge accumulated and the current stopped almost immediately. Cations and anions migrated through the bridge to keep each half-cell electrically neutral.',
     figure:
-      '**Figure 1. Standard cell components**\n\n| Half-cell | Electrode | Solution | $E^\\circ$ (V) |\n|-----------|-----------|----------|----------------|\n| Left | Zn | 1.0 M ZnSO₄ | −0.76 |\n| Right | Cu | 1.0 M CuSO₄ | +0.34 |\n\nOverall reaction: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$',
+      '**Figure 1. Standard cell components**\n\n| Half-cell | Electrode | Solution | $E^\\circ$ (V) |\n|-----------|-----------|----------|----------------|\n| Left | Zn | 1.0 M $ZnSO_{4}$ | −0.76 |\n| Right | Cu | 1.0 M $CuSO_{4}$ | +0.34 |\n\nOverall reaction: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$',
     questions: [
       {
         question: 'The standard cell potential ($E^\\circ_{cell}$) is:',
@@ -269,10 +269,10 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     passageText:
       'A student was given a dichloromethane ($\\text{CH}_2\\text{Cl}_2$) solution containing a mixture of benzoic acid (a carboxylic acid), aniline (an aromatic amine), and naphthalene (a neutral aromatic hydrocarbon). The goal was to isolate pure benzoic acid using a liquid–liquid extraction in a separatory funnel, exploiting differences in acid–base behavior to selectively move compounds between the organic and aqueous layers.\n\nThe student first shook the organic solution with aqueous $\\text{NaHCO}_3$. The aqueous layer was separated, then carefully acidified with concentrated $\\text{HCl}$, producing a white precipitate that was collected by filtration. The recovered solid was characterized by infrared (IR) spectroscopy. The IR spectrum showed a very broad absorption from roughly 2500–3300 $\\text{cm}^{-1}$ overlapping the C–H stretches, and a strong, sharp band near 1690 $\\text{cm}^{-1}$.\n\nDichloromethane is denser than water, so in the separatory funnel the organic layer sits below the aqueous layer. The student recorded that benzoic acid has a $\\text{p}K_a$ near 4, aniline’s conjugate acid (anilinium) has a $\\text{p}K_a$ near 5, and naphthalene has no acidic or basic proton in this range. Carbonic acid (from $\\text{NaHCO}_3$) has a first $\\text{p}K_a$ near 6.',
     figure:
-      '**Figure 1. Key IR absorptions of the isolated white solid**\n\n| Wavenumber (cm⁻¹) | Appearance | Likely assignment |\n|---------------------|------------|-------------------|\n| 2500–3300 | Very broad | O–H stretch (carboxylic acid) |\n| ~3030 | Weak | sp² C–H stretch |\n| ~1690 | Strong, sharp | C=O stretch |',
+      '**Figure 1. Key IR absorptions of the isolated white solid**\n\n| Wavenumber $(cm^{-1})$ | Appearance | Likely assignment |\n|---------------------|------------|-------------------|\n| 2500–3300 | Very broad | O–H stretch (carboxylic acid) |\n| ~3030 | Weak | $sp^{2}$ C–H stretch |\n| ~1690 | Strong, sharp | C=O stretch |',
     questions: [
       {
-        question: 'When the mixture is shaken with aqueous NaHCO₃, which component moves into the aqueous layer?',
+        question: 'When the mixture is shaken with aqueous $NaHCO_{3}$, which component moves into the aqueous layer?',
         options: [
           'Naphthalene, as the neutral hydrocarbon',
           'Aniline, deprotonated to its conjugate base',
@@ -314,7 +314,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       },
       {
         question:
-          'The very broad 2500–3300 cm⁻¹ absorption together with the strong 1690 cm⁻¹ band is most diagnostic of:',
+          'The very broad 2500–3300 $cm^{-1}$ absorption together with the strong 1690 $cm^{-1}$ band is most diagnostic of:',
         options: [
           'A primary amine (N–H) and an alkene (C=C)',
           'An alcohol (O–H) and an aldehyde (C=O)',
@@ -323,14 +323,14 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 2,
         explanation:
-          'A carboxylic acid shows a characteristically very broad O–H stretch spanning ~2500–3300 cm⁻¹ (hydrogen-bonded dimer) plus a strong C=O stretch near 1690–1710 cm⁻¹. A simple alcohol O–H is broad but centered higher (~3200–3550) and narrower; amine N–H bands are sharper and often doubled. The data and the chemistry both point to benzoic acid.',
+          'A carboxylic acid shows a characteristically very broad O–H stretch spanning ~2500–3300 $cm^{-1}$ (hydrogen-bonded dimer) plus a strong C=O stretch near 1690–1710 $cm^{-1}$. A simple alcohol O–H is broad but centered higher (~3200–3550) and narrower; amine N–H bands are sharper and often doubled. The data and the chemistry both point to benzoic acid.',
         skill: 'IR spectroscopy',
       },
       {
         question:
           'To then isolate pure aniline from the remaining organic layer, the best next wash is:',
         options: [
-          'Aqueous NaHCO₃ again',
+          'Aqueous $NaHCO_{3}$ again',
           'Aqueous NaOH',
           'Aqueous HCl',
           'Pure water',
@@ -367,7 +367,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 2,
         explanation:
-          'By continuity, A1v1 = A2v2. Area scales with r², so halving the radius gives one-quarter the area. To keep Q constant, velocity must rise by 4×. The "twice" trap scales velocity with radius rather than area.',
+          'By continuity, A1v1 = A2v2. Area scales with $r^{2}$, so halving the radius gives one-quarter the area. To keep Q constant, velocity must rise by 4×. The "twice" trap scales velocity with radius rather than area.',
         skill: 'Continuity',
       },
       {
@@ -389,7 +389,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['2', '4', '8', '16'],
         correctAnswer: 3,
         explanation:
-          'Poiseuille flow scales as r⁴. (1/2)⁴ = 1/16, so the flow capacity falls to one-sixteenth — a factor of 16 reduction. The factor-of-4 trap uses area (r²) instead of the fourth-power dependence.',
+          'Poiseuille flow scales as $r^{4}$. $(1/2)^{4}$ = 1/16, so the flow capacity falls to one-sixteenth — a factor of 16 reduction. The factor-of-4 trap uses area $(r^{2})$ instead of the fourth-power dependence.',
         skill: 'Poiseuille',
       },
       {
@@ -398,7 +398,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['1.3 kPa', '13 kPa', '130 kPa', '1300 kPa'],
         correctAnswer: 1,
         explanation:
-          'P = ρgh = (1.05 × 10³)(10)(1.2) ≈ 1.26 × 10⁴ Pa ≈ 13 kPa. The 1.3 kPa trap drops a power of ten; 130 kPa adds one. (For reference, ~13 kPa ≈ 95 mmHg, the well-known boost in foot arterial pressure on standing.)',
+          'P = ρgh = $(1.05 \\times 10^{3})(10)(1.2)$ ≈ $1.26 \\times 10^{4}$ Pa ≈ 13 kPa. The 1.3 kPa trap drops a power of ten; 130 kPa adds one. (For reference, ~13 kPa ≈ 95 mmHg, the well-known boost in foot arterial pressure on standing.)',
         skill: 'Hydrostatics',
       },
       {
@@ -429,7 +429,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     passageText:
       'The first step of glycolysis phosphorylates glucose to glucose-6-phosphate (G6P). On its own, the direct reaction of glucose with inorganic phosphate is thermodynamically unfavorable. Cells circumvent this by coupling the reaction to the hydrolysis of ATP, catalyzed by hexokinase.\n\nA biochemistry class examined the standard free-energy changes ($\\Delta G^\\circ{}′$) for the relevant reactions, listed in Figure 1. They treated the coupled reaction as the algebraic sum of the two half-reactions sharing the phosphate. The class also reviewed the master relationship $\\Delta G = \\Delta H - T\\Delta S$ and the link between standard free energy and equilibrium, $\\Delta G^\\circ = -RT\\ln K_{eq}$, noting that a negative $\\Delta G^\\circ$ corresponds to $K_{eq} > 1$.\n\nThe instructor emphasized the distinction between $\\Delta G^\\circ$ (standard conditions, all species at 1 M) and the actual $\\Delta G$, which depends on the real intracellular concentrations of reactants and products. In a resting cell the ATP/ADP ratio is held far above its equilibrium value, making the actual $\\Delta G$ of ATP hydrolysis substantially more negative than the standard value. ATP hydrolysis is also exothermic and proceeds with an increase in entropy, as a single reactant yields multiple products.',
     figure:
-      '**Figure 1. Standard free-energy changes ($\\Delta G^\\circ{}′$, pH 7, 25 °C)**\n\n| Reaction | $\\Delta G^\\circ{}′$ (kJ/mol) |\n|----------|------------------------------|\n| Glucose + Pᵢ → G6P + H₂O | +13.8 |\n| ATP + H₂O → ADP + Pᵢ | −30.5 |\n| **Coupled: Glucose + ATP → G6P + ADP** | **?** |',
+      '**Figure 1. Standard free-energy changes ($\\Delta G^\\circ{}′$, pH 7, 25 °C)**\n\n| Reaction | $\\Delta G^\\circ{}′$ (kJ/mol) |\n|----------|------------------------------|\n| Glucose + Pᵢ → G6P + $H_{2}O$ | +13.8 |\n| ATP + $H_{2}O$ → ADP + Pᵢ | −30.5 |\n| **Coupled: Glucose + ATP → G6P + ADP** | **?** |',
     questions: [
       {
         question: 'The standard free-energy change of the coupled reaction (glucose + ATP → G6P + ADP) is:',
@@ -504,14 +504,14 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     passageText:
       'A chemist studied the rate of the reaction $\\text{A} + \\text{B} \\rightarrow \\text{products}$ by the method of initial rates. The concentrations of the two reactants were varied independently, and the initial rate of product formation was measured in each trial under identical temperature and solvent conditions. The data are collected in Figure 1.\n\nFrom these trials the chemist determined the order of the reaction with respect to each reactant and wrote the overall rate law, $\\text{rate} = k[\\text{A}]^m[\\text{B}]^n$. The chemist then explored the temperature dependence of the rate constant, noting that increasing the temperature raised $k$ and recalling the Arrhenius relationship between $k$, the activation energy, and temperature. A catalyst was later added in a separate experiment.\n\nThe chemist was careful to use INITIAL rates so that the reverse reaction and product accumulation could be neglected, and to change only one concentration at a time between comparison trials. All concentrations are in mol/L and rates in $\\text{mol}\\,\\text{L}^{-1}\\text{s}^{-1}$.',
     figure:
-      '**Figure 1. Method of initial rates**\n\n| Trial | [A] (M) | [B] (M) | Initial rate (M/s) |\n|-------|---------|---------|--------------------|\n| 1 | 0.10 | 0.10 | 2.0 × 10⁻³ |\n| 2 | 0.20 | 0.10 | 4.0 × 10⁻³ |\n| 3 | 0.10 | 0.20 | 8.0 × 10⁻³ |',
+      '**Figure 1. Method of initial rates**\n\n| Trial | [A] (M) | [B] (M) | Initial rate (M/s) |\n|-------|---------|---------|--------------------|\n| 1 | 0.10 | 0.10 | $2.0 \\times 10^{-3}$ |\n| 2 | 0.20 | 0.10 | $4.0 \\times 10^{-3}$ |\n| 3 | 0.10 | 0.20 | $8.0 \\times 10^{-3}$ |',
     questions: [
       {
         question: 'What is the order of the reaction with respect to A?',
         options: ['Zero order', 'First order', 'Second order', 'Third order'],
         correctAnswer: 1,
         explanation:
-          'Compare trials 1 and 2 ([B] held constant): doubling [A] (0.10 → 0.20) doubles the rate (2.0 → 4.0 × 10⁻³). Rate ∝ [A]¹, so the reaction is first order in A. A doubling-for-doubling response is the definition of first order.',
+          'Compare trials 1 and 2 ([B] held constant): doubling [A] (0.10 → 0.20) doubles the rate (2.0 → $4.0 \\times 10^{-3}$). Rate ∝ [A]$ {}^{1}$, so the reaction is first order in A. A doubling-for-doubling response is the definition of first order.',
         skill: 'Rate laws',
       },
       {
@@ -519,15 +519,15 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['Zero order', 'First order', 'Second order', 'Third order'],
         correctAnswer: 2,
         explanation:
-          'Compare trials 1 and 3 ([A] held constant): doubling [B] (0.10 → 0.20) quadruples the rate (2.0 → 8.0 × 10⁻³). A 4× change for a 2× concentration change (2² = 4) means second order in B.',
+          'Compare trials 1 and 3 ([A] held constant): doubling [B] (0.10 → 0.20) quadruples the rate (2.0 → $8.0 \\times 10^{-3}$). A 4× change for a 2× concentration change ($2^{2}$ = 4) means second order in B.',
         skill: 'Rate laws',
       },
       {
         question: 'The value of the rate constant k is closest to:',
-        options: ['0.2 M⁻² s⁻¹', '2.0 M⁻² s⁻¹', '20 M⁻² s⁻¹', '200 M⁻² s⁻¹'],
+        options: ['0.2 $M^{-2}$ $s^{-1}$', '2.0 $M^{-2}$ $s^{-1}$', '20 $M^{-2}$ $s^{-1}$', '200 $M^{-2}$ $s^{-1}$'],
         correctAnswer: 1,
         explanation:
-          'rate = k[A][B]². Using trial 1: 2.0 × 10⁻³ = k(0.10)(0.10)² = k(0.10)(0.010) = k(1.0 × 10⁻³). So k = 2.0 M⁻² s⁻¹. The units (third-order overall → M⁻² s⁻¹) confirm the setup; the other options are power-of-ten errors.',
+          'rate = k[A][B]$ {}^{2}$. Using trial 1: $2.0 \\times 10^{-3}$ = $k(0.10)(0.10)^{2}$ = k(0.10)(0.010) = $k(1.0 \\times 10^{-3})$. So k = 2.0 $M^{-2}$ $s^{-1}$. The units (third-order overall → $M^{-2}$ $s^{-1}$) confirm the setup; the other options are power-of-ten errors.',
         skill: 'Rate constant',
       },
       {
@@ -535,7 +535,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['First', 'Second', 'Third', 'Fourth'],
         correctAnswer: 2,
         explanation:
-          'Overall order = m + n = 1 (in A) + 2 (in B) = 3. The reaction is third order overall, consistent with the M⁻² s⁻¹ units of k.',
+          'Overall order = m + n = 1 (in A) + 2 (in B) = 3. The reaction is third order overall, consistent with the $M^{-2}$ $s^{-1}$ units of k.',
         skill: 'Rate laws',
       },
       {
@@ -549,7 +549,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'A catalyst provides an alternative pathway with a lower activation energy; via the Arrhenius relation (k = Ae^{−Ea/RT}), lowering Ea raises k and thus the rate at fixed T. Catalysts do not raise Ea, change reactant concentrations, or shift the equilibrium position (they speed forward and reverse equally).',
+          'A catalyst provides an alternative pathway with a lower activation energy; via the Arrhenius relation (k = $Ae^{-Ea/RT}$), lowering Ea raises k and thus the rate at fixed T. Catalysts do not raise Ea, change reactant concentrations, or shift the equilibrium position (they speed forward and reverse equally).',
         skill: 'Catalysis',
       },
       {
@@ -682,11 +682,11 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
           'Because copper is a noble metal',
           'Because both half-cells use the same electrode and same redox couple, so the standard reduction potentials cancel',
           'Because the salt bridge cancels the voltage',
-          'Because Cu²⁺ does not undergo reduction',
+          'Because $Cu^{2+}$ does not undergo reduction',
         ],
         correctAnswer: 1,
         explanation:
-          'E°cell = E°cathode − E°anode. Both half-cells are Cu²⁺/Cu with the identical standard reduction potential, so the difference is zero. Any voltage then comes only from the concentration term in the Nernst equation. The salt bridge maintains neutrality but does not set E° (option C), and Cu²⁺ is certainly reduced at the cathode (option D).',
+          'E°cell = E°cathode − E°anode. Both half-cells are $Cu^{2+}/Cu$ with the identical standard reduction potential, so the difference is zero. Any voltage then comes only from the concentration term in the Nernst equation. The salt bridge maintains neutrality but does not set E° (option C), and $Cu^{2+}$ is certainly reduced at the cathode (option D).',
         skill: 'Concentration cells',
       },
       {
@@ -722,13 +722,13 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         question: 'Which change would INCREASE the voltage of the cell in trial 1?',
         options: [
           'Diluting the dilute (anode) half-cell further',
-          'Adding more CuSO₄ to the dilute (anode) half-cell',
+          'Adding more $CuSO_{4}$ to the dilute (anode) half-cell',
           'Diluting the concentrated (cathode) half-cell',
           'Adding water equally to both half-cells',
         ],
         correctAnswer: 0,
         explanation:
-          'Voltage grows as the concentration ratio (cathode/anode) grows, i.e. as Q = anode/cathode shrinks. Diluting the anode side lowers [Cu²⁺]anode, decreasing Q and raising E. Adding CuSO₄ to the anode (B) or diluting the cathode (C) shrinks the ratio and lowers E; adding water equally leaves the ratio unchanged.',
+          'Voltage grows as the concentration ratio (cathode/anode) grows, i.e. as Q = anode/cathode shrinks. Diluting the anode side lowers [$Cu^{2+}$]anode, decreasing Q and raising E. Adding $CuSO_{4}$ to the anode (B) or diluting the cathode (C) shrinks the ratio and lowers E; adding water equally leaves the ratio unchanged.',
         skill: 'Nernst equation',
       },
       {
@@ -737,7 +737,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['0', '1', '2', '10'],
         correctAnswer: 1,
         explanation:
-          'E = 0 requires log Q = 0, i.e. Q = 1, meaning the two Cu²⁺ concentrations are equal. (Equivalently, since E°cell = 0, the equilibrium constant K = 1.) Q = 0 would require zero ion concentration; Q = 10 would give a nonzero voltage.',
+          'E = 0 requires log Q = 0, i.e. Q = 1, meaning the two $Cu^{2+}$ concentrations are equal. (Equivalently, since E°cell = 0, the equilibrium constant K = 1.) Q = 0 would require zero ion concentration; Q = 10 would give a nonzero voltage.',
         skill: 'Equilibrium',
       },
     ],
@@ -754,7 +754,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     passageText:
       'The reduced cofactor NADH absorbs ultraviolet light strongly at 340 nm, whereas its oxidized form $\\text{NAD}^+$ does not. Biochemists exploit this to follow dehydrogenase reactions in real time. A student measured NADH concentrations using the Beer–Lambert law, $A = \\varepsilon b c$, where $A$ is the (unitless) absorbance, $\\varepsilon$ is the molar absorptivity, $b$ is the path length, and $c$ is the molar concentration.\n\nFor NADH at 340 nm, $\\varepsilon = 6{,}200\\ \\text{M}^{-1}\\text{cm}^{-1}$. The student used a cuvette with a standard 1.0 cm path length and first confirmed the spectrophotometer was blanked against buffer alone. Absorbance is related to the fraction of light transmitted, $T$, by $A = -\\log_{10} T$; an absorbance of 1.0 therefore means only 10% of the incident light passes through.\n\nThe student prepared a dilution series of pure NADH and recorded the absorbance of each, then used an enzyme assay in which NADH is consumed, watching the 340 nm signal fall over time. The student verified that all samples fell within the linear range of the instrument (absorbance below about 1.0), where absorbance is directly proportional to concentration, before quantifying any unknown.',
     chart: {
-      title: 'Figure 1. Beer–Lambert calibration of NADH at 340 nm (ε = 6200 M⁻¹cm⁻¹, b = 1.0 cm)',
+      title: 'Figure 1. Beer–Lambert calibration of NADH at 340 nm (ε = 6200 $M^{-1}cm^{-1}$, b = 1.0 cm)',
       kind: 'line',
       xLabel: 'NADH concentration',
       xUnit: 'µM',
@@ -775,7 +775,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['$1.0 \\times 10^{-5}$ M', '$5.0 \\times 10^{-5}$ M', '$1.0 \\times 10^{-4}$ M', '$6.2 \\times 10^{-4}$ M'],
         correctAnswer: 2,
         explanation:
-          'c = A/(εb) = 0.62 / (6200 × 1.0) = 1.0 × 10⁻⁴ M (= 100 µM), matching sample 2. The 5.0 × 10⁻⁵ trap uses A = 0.31; 6.2 × 10⁻⁴ misplaces a factor of ten.',
+          'c = A/(εb) = 0.62 / (6200 × 1.0) = $1.0 \\times 10^{-4}$ M (= 100 µM), matching sample 2. The $5.0 \\times 10^{-5}$ trap uses A = 0.31; $6.2 \\times 10^{-4}$ misplaces a factor of ten.',
         skill: "Beer's law",
       },
       {
@@ -783,7 +783,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['25 µM', '50 µM', '100 µM', '150 µM'],
         correctAnswer: 1,
         explanation:
-          'Within the linear range, A ∝ c. Sample 1 (50 µM) gave A = 0.31, and the unknown also reads 0.31, so it is 50 µM. Equivalently c = 0.31/(6200 × 1.0) = 5.0 × 10⁻⁵ M = 50 µM.',
+          'Within the linear range, A ∝ c. Sample 1 (50 µM) gave A = 0.31, and the unknown also reads 0.31, so it is 50 µM. Equivalently c = 0.31/(6200 × 1.0) = $5.0 \\times 10^{-5}$ M = 50 µM.',
         skill: "Beer's law",
       },
       {
@@ -792,21 +792,21 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
         options: ['100%', '50%', '10%', '1%'],
         correctAnswer: 2,
         explanation:
-          'A = −log₁₀ T, so T = 10^(−A) = 10^(−1.0) = 0.10, i.e. 10% transmitted (90% absorbed). The 1% answer corresponds to A = 2.0; 50% would be A ≈ 0.30.',
+          'A = $-\\log_{10}$ T, so T = $10^{-A}$ = $10^{-1.0}$ = 0.10, i.e. 10% transmitted (90% absorbed). The 1% answer corresponds to A = 2.0; 50% would be A ≈ 0.30.',
         skill: 'Absorbance vs transmittance',
       },
       {
         question:
           'During the enzyme assay, the 340 nm absorbance falls steadily over time. This indicates that:',
         options: [
-          'NAD⁺ is being converted to NADH',
-          'NADH is being consumed (oxidized to NAD⁺)',
+          '$NAD^{+}$ is being converted to NADH',
+          'NADH is being consumed (oxidized to $NAD^{+}$)',
           'The path length is increasing',
           'The molar absorptivity is decreasing',
         ],
         correctAnswer: 1,
         explanation:
-          'Only NADH absorbs at 340 nm; a falling absorbance means [NADH] is decreasing as it is oxidized to non-absorbing NAD⁺. Producing NADH (option A) would raise absorbance. Path length and ε are fixed properties of the cuvette and molecule, not time-dependent here.',
+          'Only NADH absorbs at 340 nm; a falling absorbance means [NADH] is decreasing as it is oxidized to non-absorbing $NAD^{+}$. Producing NADH (option A) would raise absorbance. Path length and ε are fixed properties of the cuvette and molecule, not time-dependent here.',
         skill: 'Enzyme assays',
       },
       {
@@ -850,7 +850,7 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     options: ['1', '3', '7', '11'],
     correctAnswer: 1,
     explanation:
-      'HCl is a strong acid, so [H+] = 1 × 10⁻³ M and pH = −log(10⁻³) = 3. The pH 11 trap is the pOH; pH 1 would require a 0.1 M solution.',
+      'HCl is a strong acid, so [H+] = $1 \\times 10^{-3}$ M and pH = $-\\log (10^{-3})$ = 3. The pH 11 trap is the pOH; pH 1 would require a 0.1 M solution.',
     skill: 'pH',
   },
   {
@@ -862,7 +862,7 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     options: ['10 m', '20 m', '40 m', '80 m'],
     correctAnswer: 1,
     explanation:
-      'd = ½gt² = ½(10)(2.0)² = ½(10)(4) = 20 m. The 40 m trap forgets the factor of ½; 10 m uses t instead of t².',
+      'd = $\\tfrac{1}{2} gt^{2}$ = $\\tfrac{1}{2} (10)(2.0)^{2}$ = ½(10)(4) = 20 m. The 40 m trap forgets the factor of ½; 10 m uses t instead of $t^{2}$.',
     skill: 'Kinematics',
   },
   {
@@ -883,7 +883,7 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     discipline: 'general chemistry',
     question:
       'In the reaction $\\text{Zn} + \\text{Cu}^{2+} \\rightarrow \\text{Zn}^{2+} + \\text{Cu}$, which species is the oxidizing agent?',
-    options: ['Zn', 'Zn²⁺', 'Cu²⁺', 'Cu'],
+    options: ['Zn', '$Zn^{2+}$', '$Cu^{2+}$', 'Cu'],
     correctAnswer: 2,
     explanation:
       'The oxidizing agent is itself reduced. Cu2+ gains electrons (Cu2+ + 2e− → Cu), so Cu2+ is reduced and is the oxidizing agent. Zn is oxidized, making it the reducing agent — the common reversal trap.',
@@ -944,7 +944,7 @@ export const CHEM_PHYS_DISCRETES: MCATDiscreteQuestion[] = [
     options: ['1.5 W', '6.0 W', '12 W', '18 W'],
     correctAnswer: 2,
     explanation:
-      'Power dissipated in a resistor is P = I²R = (2.0)²(3.0) = (4.0)(3.0) = 12 W. The 6.0 W trap uses P = IR (wrong formula); 1.5 W uses I/R. Equivalently V = IR = 6.0 V and P = IV = 12 W.',
+      'Power dissipated in a resistor is P = $I^{2}R$ = $(2.0)^{2}(3.0)$ = (4.0)(3.0) = 12 W. The 6.0 W trap uses P = IR (wrong formula); 1.5 W uses I/R. Equivalently V = IR = 6.0 V and P = IV = 12 W.',
     skill: 'Electric power',
   },
 ]

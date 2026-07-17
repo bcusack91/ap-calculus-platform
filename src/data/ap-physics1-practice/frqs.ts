@@ -15,7 +15,7 @@ export const FRQS: SAQItem[] = [
     topic: 'frq-mathematical-routines',
     stimulus: `**Q1 — Mathematical Routines (Mechanics: Energy + Forces)**
 
-A 2.0 kg block is released from rest at the top of a frictionless ramp of height $h = 1.5$ m and angle 30° above the horizontal. At the bottom of the ramp, it slides onto a horizontal surface where the coefficient of kinetic friction with the block is $\\mu_k = 0.25$. Use $g = 10$ m/s².`,
+A 2.0 kg block is released from rest at the top of a frictionless ramp of height $h = 1.5$ m and angle 30° above the horizontal. At the bottom of the ramp, it slides onto a horizontal surface where the coefficient of kinetic friction with the block is $\\mu_k = 0.25$. Use $g = 10$ $m/s^{2}$.`,
     parts: [
       {
         prompt: '**(a)** Find the speed of the block at the bottom of the ramp. Show your work.',
@@ -23,7 +23,7 @@ A 2.0 kg block is released from rest at the top of a frictionless ramp of height
       },
       {
         prompt: '**(b)** Find the deceleration of the block on the rough horizontal surface.',
-        rubric: '$f_k = \\mu_k mg = 0.25(2)(10) = 5$ N. $a = f_k/m = 5/2 = 2.5$ m/s² (deceleration).',
+        rubric: '$f_k = \\mu_k mg = 0.25(2)(10) = 5$ N. $a = f_k/m = 5/2 = 2.5$ $m/s^{2}$ (deceleration).',
       },
       {
         prompt: '**(c)** How far does the block slide on the horizontal surface before stopping?',
@@ -49,7 +49,7 @@ A cart moves along a straight horizontal track. Its velocity-time graph consists
     parts: [
       {
         prompt: '**(a)** Sketch the corresponding acceleration-time graph for $0 \\le t \\le 12$ s. Indicate values.',
-        rubric: 'On $[0, 4]$: $a = 2$ m/s². On $[4, 8]$: $a = 0$. On $[8, 12]$: $a = -2$ m/s². Step graph with three horizontal segments.',
+        rubric: 'On $[0, 4]$: $a = 2$ $m/s^{2}$. On $[4, 8]$: $a = 0$. On $[8, 12]$: $a = -2$ $m/s^{2}$. Step graph with three horizontal segments.',
       },
       {
         prompt: '**(b)** Calculate the total displacement of the cart from $t = 0$ to $t = 12$ s.',
@@ -83,7 +83,7 @@ A student wants to experimentally determine the spring constant $k$ of an unknow
         rubric: 'Graph: straight line through origin with positive slope. Hooke\'s law: $F = kx$, so the slope of the best-fit line equals $k$.',
       },
       {
-        prompt: '**(c)** A student\'s data:\n\n| Mass (kg) | Stretch (m) |\n|---|---|\n| 0.10 | 0.025 |\n| 0.20 | 0.052 |\n| 0.50 | 0.124 |\n| 1.00 | 0.250 |\n\nUse two well-separated points to estimate $k$ (use $g = 10$ m/s²).',
+        prompt: '**(c)** A student\'s data:\n\n| Mass (kg) | Stretch (m) |\n|---|---|\n| 0.10 | 0.025 |\n| 0.20 | 0.052 |\n| 0.50 | 0.124 |\n| 1.00 | 0.250 |\n\nUse two well-separated points to estimate $k$ (use $g = 10$ $m/s^{2}$).',
         rubric: 'Use endpoints (0.10, 0.025) and (1.00, 0.250). Forces: $F_1 = 1$ N, $F_2 = 10$ N. Slope $= (10 - 1)/(0.250 - 0.025) = 9/0.225 = 40$ N/m. So $k \\approx 40$ N/m.',
       },
       {

@@ -97,7 +97,7 @@ This is one of the **most heavily tested topics** on the AP Biology exam. You mu
 2. **First endosymbiosis (mitochondria)**:
    - Host engulfs an aerobic alpha-proteobacterium
    - Instead of being digested, the bacterium survives inside
-   - Bacterium provides **aerobic respiration** (ATP production using O₂)
+   - Bacterium provides **aerobic respiration** (ATP production using $O_{2}$)
    - Host provides **protection and nutrients**
    - Over time, many bacterial genes transfer to the host nucleus → organelle becomes dependent on host
    - Result: **all eukaryotes have mitochondria** (or reduced versions called hydrogenosomes/mitosomes)
@@ -144,7 +144,7 @@ Because the mitochondrial endosymbiosis occurred **first** and is found in **all
         correctAnswers: ['70S', 'bacterial', 'cyanobacteria', 'binary fission'],
         hint1: 'Eukaryotic cytoplasmic ribosomes are 80S; organellar ribosomes match the prokaryotic size.',
         hint2: 'When a cell engulfs another by phagocytosis, the engulfed cell retains its own membrane and gains a second from the host vesicle.',
-        hint3: 'These are the prokaryotes responsible for oxygenic photosynthesis — they produced Earth\'s O₂.',
+        hint3: 'These are the prokaryotes responsible for oxygenic photosynthesis — they produced Earth\'s $O_{2}$.',
         hint4: 'This is the asexual reproductive method used by prokaryotes — no spindle apparatus involved.',
         explanation: 'Mitochondria and chloroplasts retain 70S ribosomes, have double membranes (inner = original bacterial membrane), descended from alpha-proteobacteria and cyanobacteria respectively, and divide by binary fission — all hallmarks of their prokaryotic ancestry.'
       }

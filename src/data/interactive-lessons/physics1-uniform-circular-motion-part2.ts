@@ -87,13 +87,13 @@ $$a_c = 4\\pi^2 r f^2$$
           {
             question: 'An object moves in a circle of radius 2 m with period 4 s. Its centripetal acceleration is closest to:',
             options: [
-              '$2.5$ m/s²',
-              '$5$ m/s²',
-              '$10$ m/s²',
-              '$20$ m/s²'
+              '$2.5$ $m/s^{2}$',
+              '$5$ $m/s^{2}$',
+              '$10$ $m/s^{2}$',
+              '$20$ $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a_c = 4\\pi^2 r/T^2 = 4(9.87)(2)/16 = 78.96/16 \\approx 4.9$ m/s² $\\approx 5$ m/s².'
+            explanation: '$a_c = 4\\pi^2 r/T^2 = 4(9.87)(2)/16 = 78.96/16 \\approx 4.9$ $m/s^{2}$ $\\approx 5$ $m/s^{2}$.'
           }
         ]
       }
@@ -104,11 +104,11 @@ $$a_c = 4\\pi^2 r f^2$$
       content: `
 **Centripetal Acceleration Calculations** 🧮
 
-1) A car rounds a curve of radius 50 m at 20 m/s. What is the centripetal acceleration (in m/s²)?
+1) A car rounds a curve of radius 50 m at 20 m/s. What is the centripetal acceleration $(in m/s^{2})$?
 
-2) A record player rotates at 45 RPM. A coin is placed 10 cm from the center. What is the centripetal acceleration of the coin (in m/s², round to 3 significant figures)?
+2) A record player rotates at 45 RPM. A coin is placed 10 cm from the center. What is the centripetal acceleration of the coin (in $m/s^{2}$, round to 3 significant figures)?
 
-3) A ball on a string moves in a circle at $v = 6$ m/s with $a_c = 18$ m/s². What is the radius of the circle (in m)?
+3) A ball on a string moves in a circle at $v = 6$ m/s with $a_c = 18$ $m/s^{2}$. What is the radius of the circle (in m)?
       `,
       exercise: {
         boxes: 3,
@@ -116,7 +116,7 @@ $$a_c = 4\\pi^2 r f^2$$
         hint1: '$a_c = v^2/r = 400/50$.',
         hint2: 'Convert 45 RPM to Hz: $f = 45/60 = 0.75$ Hz. Then $a_c = 4\\pi^2 rf^2$.',
         hint3: '$r = v^2/a_c$.',
-        explanation: '1) $a_c = 20^2/50 = 400/50 = 8$ m/s². 2) $f = 0.75$ Hz. $a_c = 4\\pi^2(0.10)(0.75)^2 = 4(9.87)(0.10)(0.5625) = 2.22 \\times 10 = 22.2$ m/s². Wait: $4(9.87)(0.10)(0.5625) = 4 \\times 0.987 \\times 0.5625 = 2.22$ — let me recalculate. $4\\pi^2(0.10)(0.5625) = 39.48 \\times 0.05625 = 2.22$ m/s². Hmm that seems low. Actually: $4\\pi^2 = 39.48$. $39.48 \\times 0.10 = 3.948$. $3.948 \\times 0.5625 = 2.22$ m/s². Alternative: $v = 2\\pi(0.10)(0.75) = 0.471$ m/s. $a_c = 0.471^2/0.10 = 0.222/0.10 = 2.22$ m/s². So answer is 2.2 m/s². 3) $r = 36/18 = 2$ m.'
+        explanation: '1) $a_c = 20^2/50 = 400/50 = 8$ $m/s^{2}$. 2) $f = 0.75$ Hz. $a_c = 4\\pi^2(0.10)(0.75)^2 = 4(9.87)(0.10)(0.5625) = 2.22 \\times 10 = 22.2$ $m/s^{2}$. Wait: $4(9.87)(0.10)(0.5625) = 4 \\times 0.987 \\times 0.5625 = 2.22$ — let me recalculate. $4\\pi^2(0.10)(0.5625) = 39.48 \\times 0.05625 = 2.22$ $m/s^{2}$. Hmm that seems low. Actually: $4\\pi^2 = 39.48$. $39.48 \\times 0.10 = 3.948$. $3.948 \\times 0.5625 = 2.22$ $m/s^{2}$. Alternative: $v = 2\\pi(0.10)(0.75) = 0.471$ m/s. $a_c = 0.471^2/0.10 = 0.222/0.10 = 2.22$ $m/s^{2}$. So answer is 2.2 $m/s^{2}$. 3) $r = 36/18 = 2$ m.'
       }
     },
     {
@@ -159,16 +159,16 @@ $$a_c = 4\\pi^2 r f^2$$
           {
             question: 'The Moon orbits Earth at $v \\approx 1000$ m/s with orbital radius $r \\approx 3.8 \\times 10^8$ m. Its centripetal acceleration is approximately:',
             options: [
-              '$0.003$ m/s²',
-              '$0.03$ m/s²',
-              '$0.3$ m/s²',
-              '$3$ m/s²'
+              '$0.003$ $m/s^{2}$',
+              '$0.03$ $m/s^{2}$',
+              '$0.3$ $m/s^{2}$',
+              '$3$ $m/s^{2}$'
             ],
             correctAnswer: 0,
-            explanation: '$a_c = v^2/r = (1000)^2/(3.8 \\times 10^8) = 10^6/3.8 \\times 10^8 = 2.6 \\times 10^{-3} \\approx 0.003$ m/s².'
+            explanation: '$a_c = v^2/r = (1000)^2/(3.8 \\times 10^8) = 10^6/3.8 \\times 10^8 = 2.6 \\times 10^{-3} \\approx 0.003$ $m/s^{2}$.'
           },
           {
-            question: 'A centrifuge spins a sample at 3000 RPM in a circle of radius 0.15 m. The centripetal acceleration (in terms of $g = 10$ m/s²) is approximately:',
+            question: 'A centrifuge spins a sample at 3000 RPM in a circle of radius 0.15 m. The centripetal acceleration (in terms of $g = 10$ $m/s^{2}$) is approximately:',
             options: [
               '100$g$',
               '500$g$',
@@ -176,7 +176,7 @@ $$a_c = 4\\pi^2 r f^2$$
               '3000$g$'
             ],
             correctAnswer: 2,
-            explanation: '$f = 3000/60 = 50$ Hz. $a_c = 4\\pi^2(0.15)(50)^2 = 4(9.87)(0.15)(2500) = 14,805$ m/s² $\\approx 1480g \\approx 1500g$.'
+            explanation: '$f = 3000/60 = 50$ Hz. $a_c = 4\\pi^2(0.15)(50)^2 = 4(9.87)(0.15)(2500) = 14,805$ $m/s^{2}$ $\\approx 1480g \\approx 1500g$.'
           }
         ]
       }

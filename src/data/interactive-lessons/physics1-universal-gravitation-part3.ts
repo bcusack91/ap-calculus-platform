@@ -112,7 +112,7 @@ Total energy is **negative** (bound orbit) and equals half the PE.
       content: `
 **Orbital Calculations** 🧮
 
-Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $M_E = 5.97 \\times 10^{24}$ kg, $R_E = 6.37 \\times 10^6$ m.
+Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $M_E = 5.97 \\times 10^{24}$ kg, $R_E = 6.37 \\times 10^6$ m.
 
 1) What is the orbital speed of the ISS at altitude 400 km above Earth's surface (in m/s, round to nearest 100)? Hint: $r = R_E + h$.
 

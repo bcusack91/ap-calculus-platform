@@ -34,7 +34,7 @@ $$x(t) = x_0 + \\int_0^t v(t')\\,dt'$$`
     {
       id: 'varaccel1-mcq1',
       type: 'mcq' as const,
-      question: 'A particle has $a(t) = 12t$ m/s² with $v(0) = 5$ m/s. What is $v(3)$?',
+      question: 'A particle has $a(t) = 12t$ $m/s^{2}$ with $v(0) = 5$ m/s. What is $v(3)$?',
       options: ['$59$ m/s', '$36$ m/s', '$41$ m/s', '$54$ m/s'],
       correctAnswer: 0,
       explanation: '$v(t) = 5 + \\int_0^t 12t\'\\,dt\' = 5 + 6t^2$. At $t = 3$: $v(3) = 5 + 6(9) = 5 + 54 = 59$ m/s.'
@@ -85,7 +85,7 @@ When $a(t) = a_0\\sin(\\omega t)$ (or cosine), the motion is oscillatory.
 
 ### Worked Example
 
-$a(t) = 10\\sin(2t)$ m/s², $v(0) = 0$, $x(0) = 0$.
+$a(t) = 10\\sin(2t)$ $m/s^{2}$, $v(0) = 0$, $x(0) = 0$.
 
 $$v(t) = \\int_0^t 10\\sin(2t')\\,dt' = 10\\left[-\\frac{\\cos(2t')}{2}\\right]_0^t = -5\\cos(2t) + 5 = 5[1 - \\cos(2t)]$$
 
@@ -116,7 +116,7 @@ Exponentially decaying acceleration models many real systems (e.g., drag-limited
 
 ### Example: Decaying Thrust
 
-A rocket has $a(t) = 20e^{-t/5}$ m/s², $v(0) = 0$.
+A rocket has $a(t) = 20e^{-t/5}$ $m/s^{2}$, $v(0) = 0$.
 
 $$v(t) = \\int_0^t 20e^{-t'/5}\\,dt' = 20(-5)\\left[e^{-t'/5}\\right]_0^t = -100(e^{-t/5} - 1) = 100(1 - e^{-t/5})$$
 

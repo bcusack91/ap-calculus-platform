@@ -38,7 +38,7 @@ Since the block is fully submerged: $V_{\\text{oil}} + V_{\\text{water}} = V_{\\
 
 ### Worked Example
 
-A cube (side 10 cm, $\\rho = 850$ kg/m³) in oil ($\\rho_{\\text{oil}} = 700$ kg/m³) over water ($\\rho_w = 1000$ kg/m³):
+A cube (side 10 cm, $\\rho = 850$ $kg/m^{3}$) in oil ($\\rho_{\\text{oil}} = 700$ $kg/m^{3}$) over water ($\\rho_w = 1000$ $kg/m^{3}$):
 
 $$850 V = 700 V_{\\text{oil}} + 1000 V_{\\text{water}}$$
 
@@ -60,7 +60,7 @@ Half the cube is in water, half in oil.
       exercise: {
         questions: [
           {
-            question: 'A block ($\\rho = 920$ kg/m³) floats at the interface of oil ($\\rho = 800$ kg/m³) and water ($\\rho = 1000$ kg/m³). What fraction is in water?',
+            question: 'A block ($\\rho = 920$ $kg/m^{3}$) floats at the interface of oil ($\\rho = 800$ $kg/m^{3}$) and water ($\\rho = 1000$ $kg/m^{3}$). What fraction is in water?',
             options: [
               '40%',
               '50%',
@@ -71,7 +71,7 @@ Half the cube is in water, half in oil.
             explanation: '$920 = 800(1-f) + 1000f = 800 + 200f$. $f = 120/200 = 0.60 = 60\\%$. 60% of the block sits in the water layer.'
           },
           {
-            question: 'A sphere ($\\rho = 750$ kg/m³) is placed in a tank with oil ($\\rho = 700$ kg/m³) on top of water. The sphere will:',
+            question: 'A sphere ($\\rho = 750$ $kg/m^{3}$) is placed in a tank with oil ($\\rho = 700$ $kg/m^{3}$) on top of water. The sphere will:',
             options: [
               'Float on top of the oil',
               'Float at the oil-water interface',
@@ -120,9 +120,9 @@ $$T + F_B = W \\implies T = W - F_B$$
       id: 'bu5-connected-drill',
       type: 'input-boxes' as const,
       content: `
-**Connected Object Problems** (use $g = 10$ m/s², $\\rho_w = 1000$ kg/m³)
+**Connected Object Problems** (use $g = 10$ $m/s^{2}$, $\\rho_w = 1000$ $kg/m^{3}$)
 
-A wooden ball ($\\rho = 500$ kg/m³, $V = 0.002$ m³) is tied to the bottom of a pool by a string.
+A wooden ball ($\\rho = 500$ $kg/m^{3}$, $V = 0.002$ $m^{3}$) is tied to the bottom of a pool by a string.
 
 1) Weight of the ball (in N)
 
@@ -159,11 +159,11 @@ The first block sinks deeper to support the extra weight.
 
 ### Example
 
-Block 1: 2.0 kg, volume 0.003 m³. Block 2: 0.5 kg placed on top.
+Block 1: 2.0 kg, volume 0.003 $m^{3}$. Block 2: 0.5 kg placed on top.
 
 $$V_{\\text{sub}} = \\frac{2.0 + 0.5}{1000} = 0.0025 \\text{ m}^3$$
 
-Since $V_{\\text{sub}} = 0.0025 < V_1 = 0.003$ m³, the stack still floats (part of block 1 above water).
+Since $V_{\\text{sub}} = 0.0025 < V_1 = 0.003$ $m^{3}$, the stack still floats (part of block 1 above water).
       `
     },
     {

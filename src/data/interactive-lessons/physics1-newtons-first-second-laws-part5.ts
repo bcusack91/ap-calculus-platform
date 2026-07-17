@@ -25,7 +25,7 @@ $$W = mg$$
 | Property | Detail |
 |----------|--------|
 | Direction | Always straight **down** (toward Earth\'s center) |
-| Magnitude | $mg$ where $g = 9.8$ m/s² |
+| Magnitude | $mg$ where $g = 9.8$ $m/s^{2}$ |
 | Type | Non-contact force (acts even without touching) |
 | Depends on | Mass of object and local $g$ |
 
@@ -33,7 +33,7 @@ $$W = mg$$
 
 Since $g$ varies by location:
 
-| Location | $g$ (m/s²) | Weight of 80 kg person |
+| Location | $g$ $(m/s^{2})$ | Weight of 80 kg person |
 |----------|-----------|----------------------|
 | Earth | 9.8 | 784 N |
 | Moon | 1.6 | 128 N |
@@ -134,7 +134,7 @@ This is why they float — not because there\'s no gravity, but because there\'s
               'The ISS shields them from gravity'
             ],
             correctAnswer: 2,
-            explanation: 'The ISS orbits at ~400 km where $g \\approx 8.7$ m/s² — gravity is very much present! But the station and astronauts are in free fall together, so there\'s no contact force between them. $N = 0$ means they feel weightless.'
+            explanation: 'The ISS orbits at ~400 km where $g \\approx 8.7$ $m/s^{2}$ — gravity is very much present! But the station and astronauts are in free fall together, so there\'s no contact force between them. $N = 0$ means they feel weightless.'
           },
           {
             question: 'The normal force is always:',
@@ -156,9 +156,9 @@ This is why they float — not because there\'s no gravity, but because there\'s
       content: `
 **Weight and Normal Force Calculations** 🧮
 
-1) What is the weight of a 25 kg object on Earth (in N)? Use $g = 9.8$ m/s².
+1) What is the weight of a 25 kg object on Earth (in N)? Use $g = 9.8$ $m/s^{2}$.
 
-2) A 50 kg person stands on a scale in an elevator accelerating upward at 2 m/s². What does the scale read (in N)?
+2) A 50 kg person stands on a scale in an elevator accelerating upward at 2 $m/s^{2}$. What does the scale read (in N)?
 
 3) A 40 kg child stands on a scale in an elevator in free fall. What does the scale read (in N)?
       `,

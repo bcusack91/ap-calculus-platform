@@ -65,9 +65,9 @@ $g = \\frac{(6.674 \\times 10^{-11})(5.97 \\times 10^{24})}{(6.37 \\times 10^6)^
           },
           {
             question: 'The gravitational field has units of:',
-            options: ['N', 'N/kg', 'kg·m/s²', 'J/kg'],
+            options: ['N', 'N/kg', '$kg\\cdot m/s^{2}$', 'J/kg'],
             correctAnswer: 1,
-            explanation: 'Gravitational field is force per unit mass = N/kg, which is dimensionally equivalent to m/s².'
+            explanation: 'Gravitational field is force per unit mass = N/kg, which is dimensionally equivalent to $m/s^{2}$.'
           },
           {
             question: 'A planet has twice Earth\'s mass and twice Earth\'s radius. Its surface gravity is:',

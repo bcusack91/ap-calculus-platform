@@ -67,7 +67,7 @@ $\log_3(27) + \log_3(9) = 3 + 2 = 5 = \log_3(243)$ ✅
         correctAnswers: ["605","125","3"],
         hint1: "500 × 1.21.",
         hint2: "1000 × 0.125.",
-        hint3: "3³ = 27.",
+        hint3: "$3^{3}$ = 27.",
         explanation: "1) 605. 2) 125. 3) 3."
       }
     },
@@ -81,7 +81,7 @@ $\log_3(27) + \log_3(9) = 3 + 2 = 5 = \log_3(243)$ ✅
         dropdowns: [{"label":"$b > 1$ in $y = ab^x$ means","options":["Exponential growth","Exponential decay","Linear growth","No change"]},{"label":"$\\log_b(b) =$","options":["1","0","b","Undefined"]}],
         correctAnswers: ["Exponential growth","1"],
         hint1: "b > 1 → growing.",
-        hint2: "b¹ = b.",
+        hint2: "$b^{1}$ = b.",
         explanation: "b>1 → growth. log_b(b) = 1."
       }
     },
@@ -93,9 +93,9 @@ $\log_3(27) + \log_3(9) = 3 + 2 = 5 = \log_3(243)$ ✅
 
 | # | Type | Problem |
 |---|------|---------|
-| 1 | Growth | 500(1.1)² |
-| 2 | Decay | 1000(0.5)³ |
-| 3 | Log | log₃(27) |
+| 1 | Growth | $500(1.1)^{2}$ |
+| 2 | Decay | $1000(0.5)^{3}$ |
+| 3 | Log | $\\log_{3}(27)$ |
     
     `
     },

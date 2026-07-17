@@ -148,10 +148,10 @@ If dimensions are scaled by factor $k$:
           'Sphere with r = 3: Volume = → [36π|27π|108π|12π]'
         ],
         correctAnswers: ['1/3', '8', '150', '36π'],
-        hint1: 'Cone = (1/3)πr²h vs. Cylinder = πr²h.',
-        hint2: 'Volume scales as k³. When k = 2, k³ = 8.',
-        hint3: 'Cube surface area = 6s². Sphere volume = (4/3)πr³.',
-        explanation: 'Cone is 1/3 of cylinder. Volume scales as 2³ = 8. Cube SA = 6(25) = 150. Sphere V = (4/3)π(27) = 36π.'
+        hint1: 'Cone = $(1/3)\\pi r^{2}h$ vs. Cylinder = $\\pi r^{2}h$.',
+        hint2: 'Volume scales as $k^{3}$. When k = 2, $k^{3}$ = 8.',
+        hint3: 'Cube surface area = $6s^{2}$. Sphere volume = $(4/3)\\pi r^{3}$.',
+        explanation: 'Cone is 1/3 of cylinder. Volume scales as $2^{3}$ = 8. Cube SA = 6(25) = 150. Sphere V = (4/3)π(27) = 36π.'
       }
     },
     {

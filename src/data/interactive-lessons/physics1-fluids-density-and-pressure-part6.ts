@@ -15,7 +15,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
 1. Identify the fluid's $\\rho$ and the relevant depth $h$.
 2. Decide gauge or absolute (does the problem care about $P_{atm}$?).
 3. For hydraulic problems, set $P$ equal at both pistons.
-4. Always check units: kg/m³, m, Pa, N.
+4. Always check units: $kg/m^{3}$, m, Pa, N.
       `
     },
     {
@@ -79,9 +79,9 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
       content: `
 **Workshop Calculations** 🧮 (g = 10, $\\rho_{water} = 1000$, $P_{atm} = 1.0\\times10^{5}$ Pa)
 
-1) A pool 4 m deep, bottom area 8 m². Force from gauge water pressure on the bottom (N)?
+1) A pool 4 m deep, bottom area 8 $m^{2}$. Force from gauge water pressure on the bottom (N)?
 
-2) Hydraulic lift: input piston 0.005 m², output piston 0.10 m², input force 75 N. Output force (N)?
+2) Hydraulic lift: input piston 0.005 $m^{2}$, output piston 0.10 $m^{2}$, input force 75 N. Output force (N)?
 
 3) A vertical rectangular tank wall 2 m wide and 3 m tall (full to the top). Total horizontal force from water on the wall (N)? Use average-pressure method.
       `,
@@ -91,7 +91,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
         hint1: '$P_{gauge} = \\rho g h$; $F = PA$.',
         hint2: '$F_2 = F_1 (A_2/A_1)$.',
         hint3: '$P_{avg} = \\rho g h / 2$. $F = P_{avg} \\cdot A_{wall}$.',
-        explanation: '1) $P = 40{,}000$ Pa, $F = 40{,}000 \\times 8 = 3.2\\times10^{5}$ N. 2) $F_2 = 75 \\times 20 = 1500$ N. 3) $P_{avg} = 1000(10)(3)/2 = 15{,}000$ Pa; $A = 2 \\times 3 = 6$ m²; $F = 15{,}000 \\times 6 = 9.0\\times10^{4}$ N.'
+        explanation: '1) $P = 40{,}000$ Pa, $F = 40{,}000 \\times 8 = 3.2\\times10^{5}$ N. 2) $F_2 = 75 \\times 20 = 1500$ N. 3) $P_{avg} = 1000(10)(3)/2 = 15{,}000$ Pa; $A = 2 \\times 3 = 6$ $m^{2}$; $F = 15{,}000 \\times 6 = 9.0\\times10^{4}$ N.'
       }
     },
     {
@@ -146,10 +146,10 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
               '~25 kN'
             ],
             correctAnswer: 0,
-            explanation: '$P_{avg}$ at depth $(2.0+2.5)/2 = 2.25$ m: $P = 1000(10)(2.25) = 22{,}500$ Pa. $A = 0.25$ m². $F = 22{,}500 \\times 0.25 = 5625$ N ≈ 5.6 kN.'
+            explanation: '$P_{avg}$ at depth $(2.0+2.5)/2 = 2.25$ m: $P = 1000(10)(2.25) = 22{,}500$ Pa. $A = 0.25$ $m^{2}$. $F = 22{,}500 \\times 0.25 = 5625$ N ≈ 5.6 kN.'
           },
           {
-            question: 'A hydraulic jack has small piston area $5\\times10^{-4}$ m² and large piston area $2.5\\times10^{-2}$ m². You push the small piston down 20 cm with 40 N. The work you do equals the work done lifting the load — the load rises:',
+            question: 'A hydraulic jack has small piston area $5\\times10^{-4}$ $m^{2}$ and large piston area $2.5\\times10^{-2}$ $m^{2}$. You push the small piston down 20 cm with 40 N. The work you do equals the work done lifting the load — the load rises:',
             options: [
               '20 cm',
               '4 cm',

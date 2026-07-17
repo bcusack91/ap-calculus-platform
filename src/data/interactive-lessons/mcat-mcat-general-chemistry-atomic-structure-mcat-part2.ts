@@ -123,9 +123,9 @@ Generally becomes more negative (more exothermic) across a period and up a group
 | Property | Across Period (→) | Down Group (↓) | Reason |
 |----------|------------------|----------------|--------|
 | Atomic radius | Decreases | Increases | $Z_{eff}$ vs. more shells |
-| 1st Ionization Energy | Increases* | Decreases | Harder to remove e⁻ from higher $Z_{eff}$; farther e⁻ easier to remove |
+| 1st Ionization Energy | Increases* | Decreases | Harder to remove $e^{-}$ from higher $Z_{eff}$; farther $e^{-}$ easier to remove |
 | Electronegativity | Increases | Decreases | Same logic as IE |
-| Electron Affinity | More negative* | Less negative | Higher $Z_{eff}$ attracts added e⁻ more |
+| Electron Affinity | More negative* | Less negative | Higher $Z_{eff}$ attracts added $e^{-}$ more |
 | Metallic character | Decreases | Increases | Inversely related to IE |
 
 *With minor exceptions as discussed above.

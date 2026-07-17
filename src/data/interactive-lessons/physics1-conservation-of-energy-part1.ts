@@ -103,7 +103,7 @@ $$KE_i + PE_i = KE_f + PE_f$$
       content: `
 ## Worked Example: Free Fall
 
-A 2 kg ball is dropped from 5 m. Find its speed just before hitting the ground ($g = 10$ m/s²).
+A 2 kg ball is dropped from 5 m. Find its speed just before hitting the ground ($g = 10$ $m/s^{2}$).
 
 **Define**: $i$ = top, $f$ = bottom. Set $h = 0$ at bottom.
 
@@ -124,7 +124,7 @@ Notice: **mass canceled!** The speed is independent of mass.
       content: `
 **Practice Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 3 kg ball is dropped from 20 m. What is its speed just before hitting the ground (in m/s)?
 
@@ -181,7 +181,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A ball is launched at 20 m/s from ground level on a frictionless track. It reaches a maximum height of ($g = 10$ m/s²):',
+            question: 'A ball is launched at 20 m/s from ground level on a frictionless track. It reaches a maximum height of ($g = 10$ $m/s^{2}$):',
             options: [
               '10 m',
               '20 m',

@@ -12,15 +12,15 @@ export const mcatBioBasisBehaviorPart2Data = {
 
 $$\\text{AP at terminal} \\to \\text{voltage-gated } Ca^{2+} \\text{ IN} \\to \\text{vesicle fusion} \\to \\text{NT release} \\to \\text{receptor binding} \\to \\text{postsynaptic potential}$$
 
-- Ca²⁺ influx is the trigger for vesicle exocytosis.
+- $Ca^{2+}$ influx is the trigger for vesicle exocytosis.
 - Signal terminated by **reuptake** (transporters), **enzymatic degradation**, or **diffusion**.
 
 ### EPSPs vs. IPSPs
 
 | Potential | Ion movement | Effect |
 |-----------|--------------|--------|
-| **EPSP** (excitatory) | Na⁺ in (depolarize) | Toward threshold |
-| **IPSP** (inhibitory) | Cl⁻ in / K⁺ out (hyperpolarize) | Away from threshold |
+| **EPSP** (excitatory) | $Na^{+}$ in (depolarize) | Toward threshold |
+| **IPSP** (inhibitory) | $Cl^{-}$ in / $K^{+}$ out (hyperpolarize) | Away from threshold |
 
 **Summation:** temporal (rapid succession from one input) + spatial (many inputs at once) determine whether the axon hillock reaches threshold.
 
@@ -50,9 +50,9 @@ $$\\text{AP at terminal} \\to \\text{voltage-gated } Ca^{2+} \\text{ IN} \\to \\
         questions: [
           {
             question: `The immediate trigger for neurotransmitter vesicle release at the axon terminal is the influx of:`,
-            options: [`Ca²⁺ through voltage-gated calcium channels`, `Na⁺ through leak channels`, `K⁺ through voltage-gated channels`, `Cl⁻ through ligand-gated channels`],
+            options: [`$Ca^{2+}$ through voltage-gated calcium channels`, `$Na^{+}$ through leak channels`, `$K^{+}$ through voltage-gated channels`, `$Cl^{-}$ through ligand-gated channels`],
             correctAnswer: 0,
-            explanation: `When the action potential reaches the terminal, voltage-gated Ca²⁺ channels open and Ca²⁺ enters. The rise in intracellular Ca²⁺ triggers synaptic vesicles to fuse with the membrane and release neurotransmitter by exocytosis. Na⁺ drives the AP itself, but Ca²⁺ couples it to release.`
+            explanation: `When the action potential reaches the terminal, voltage-gated $Ca^{2+}$ channels open and $Ca^{2+}$ enters. The rise in intracellular $Ca^{2+}$ triggers synaptic vesicles to fuse with the membrane and release neurotransmitter by exocytosis. $Na^{+}$ drives the AP itself, but $Ca^{2+}$ couples it to release.`
           },
           {
             question: `An SSRI antidepressant blocks the serotonin reuptake transporter. The net effect at the synapse is:`,
@@ -62,9 +62,9 @@ $$\\text{AP at terminal} \\to \\text{voltage-gated } Ca^{2+} \\text{ IN} \\to \\
           },
           {
             question: `Benzodiazepines enhance the effect of GABA, the brain's main inhibitory neurotransmitter. This produces:`,
-            options: [`Increased Cl⁻ influx and hyperpolarization (sedation/anxiolysis)`, `Increased neuronal firing`, `Depolarization toward threshold`, `Blockade of glutamate receptors`],
+            options: [`Increased $Cl^{-}$ influx and hyperpolarization (sedation/anxiolysis)`, `Increased neuronal firing`, `Depolarization toward threshold`, `Blockade of glutamate receptors`],
             correctAnswer: 0,
-            explanation: `GABA-A receptors are Cl⁻ channels; opening them lets Cl⁻ in, hyperpolarizing the neuron (an IPSP) and reducing excitability. Benzodiazepines are positive modulators that enhance this Cl⁻ influx, yielding sedation and anxiolysis — the opposite of an excitatory effect.`
+            explanation: `GABA-A receptors are $Cl^{-}$ channels; opening them lets $Cl^{-}$ in, hyperpolarizing the neuron (an IPSP) and reducing excitability. Benzodiazepines are positive modulators that enhance this $Cl^{-}$ influx, yielding sedation and anxiolysis — the opposite of an excitatory effect.`
           }
         ]
       }
@@ -117,8 +117,8 @@ $$\\text{AP at terminal} \\to \\text{voltage-gated } Ca^{2+} \\text{ IN} \\to \\
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- AP → Ca²⁺ influx → vesicle fusion → NT release; cleared by reuptake, enzymes, or diffusion.
-- EPSP (Na⁺ in, depolarize) vs. IPSP (Cl⁻ in / K⁺ out, hyperpolarize); summed at the axon hillock.
+- AP → $Ca^{2+}$ influx → vesicle fusion → NT release; cleared by reuptake, enzymes, or diffusion.
+- EPSP ($Na^{+}$ in, depolarize) vs. IPSP ($Cl^{-}$ in / $K^{+}$ out, hyperpolarize); summed at the axon hillock.
 - Know the NTs: ACh (muscle/memory; Alzheimer's), dopamine (reward/movement; Parkinson's, schizophrenia), serotonin (mood; SSRIs), GABA (main inhibitory; benzos), glutamate (main excitatory; LTP).
 - Agonist mimics/enhances; antagonist blocks; reuptake/enzyme inhibitors act as indirect agonists.`
     }

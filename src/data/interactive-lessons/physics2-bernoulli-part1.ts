@@ -42,7 +42,7 @@ $$P_1 + \\frac{1}{2}\\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2}\\rho v_2^2 + 
 | $\\frac{1}{2}\\rho v^2$ | Dynamic pressure (kinetic energy density) | Pa |
 | $\\rho g h$ | Hydrostatic pressure (potential energy density) | Pa |
 
-All three terms have units of pressure (Pa = N/m² = J/m³).
+All three terms have units of pressure (Pa = $N/m^{2}$ = $J/m^{3}$).
       `
     },
     {
@@ -125,7 +125,7 @@ At any point open to air, $P = P_{\\text{atm}}$ (atmospheric pressure).
       id: 'be1-basic-drill',
       type: 'input-boxes' as const,
       content: `
-**Bernoulli Basics** ($\\rho_w = 1000$ kg/m³, $g = 10$ m/s²)
+**Bernoulli Basics** ($\\rho_w = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$)
 
 Water flows horizontally through a pipe. At point 1: $P_1 = 200{,}000$ Pa, $v_1 = 3.0$ m/s. At point 2 (same height): $v_2 = 5.0$ m/s.
 

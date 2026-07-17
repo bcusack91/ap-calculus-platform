@@ -82,7 +82,7 @@ $$\\boxed{s = \\sqrt{K_{sp}} = \\sqrt{1.8 \\times 10^{-10}} = 1.3 \\times 10^{-5
 
 ---
 
-> **Problem:** Find the molar solubility of PbCl₂ ($K_{sp} = 1.7 \\times 10^{-5}$).
+> **Problem:** Find the molar solubility of $PbCl_{2}$ ($K_{sp} = 1.7 \\times 10^{-5}$).
 
 > **Solution:**
 
@@ -133,11 +133,11 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
             options: [
               'Yes — AgCl has larger $K_{sp}$ so it\'s more soluble',
               'No — they have different formula types, so you must compare molar solubilities',
-              'Yes — Ag₂CrO₄ is always more soluble',
+              'Yes — $Ag_{2}CrO_{4}$ is always more soluble',
               'No — you need temperature data'
             ],
             correctAnswer: 1,
-            explanation: 'AgCl is 1:1 ($K_{sp} = s^2$) and Ag₂CrO₄ is 2:1 ($K_{sp} = 4s^3$). Different formula types require calculating and comparing actual molar solubilities.'
+            explanation: 'AgCl is 1:1 ($K_{sp} = s^2$) and $Ag_{2}CrO_{4}$ is 2:1 ($K_{sp} = 4s^3$). Different formula types require calculating and comparing actual molar solubilities.'
           }
         ]
       }
@@ -152,7 +152,7 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
 
 **2)** $\\text{Ca(OH)}_2$, $K_{sp} = 5.0 \\times 10^{-6}$. ($K_{sp} = 4s^3$) What is the molar solubility? (Round to 3 significant figures, e.g. 0.01)
 
-**3)** For the BaSO₄ solution above, what is $[\\text{Ba}^{2+}]$? (Enter in same format as answer 1)
+**3)** For the $BaSO_{4}$ solution above, what is $[\\text{Ba}^{2+}]$? (Enter in same format as answer 1)
       `,
       exercise: {
         boxes: 3,
@@ -160,7 +160,7 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
         hint1: '$s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5}$',
         hint2: '$s = \\sqrt[3]{5.0 \\times 10^{-6}/4} = \\sqrt[3]{1.25 \\times 10^{-6}}$',
         hint3: 'For a 1:1 salt, $[\\text{Ba}^{2+}] = s$.',
-        explanation: '1) $s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5} \\approx 1.0 \\times 10^{-5}$ M. 2) $s = \\sqrt[3]{1.25 \\times 10^{-6}} = 1.08 \\times 10^{-2} \\approx 0.01$ M. 3) For BaSO₄, $[\\text{Ba}^{2+}] = s = 1.0 \\times 10^{-5}$ M.'
+        explanation: '1) $s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5} \\approx 1.0 \\times 10^{-5}$ M. 2) $s = \\sqrt[3]{1.25 \\times 10^{-6}} = 1.08 \\times 10^{-2} \\approx 0.01$ M. 3) For $BaSO_{4}$, $[\\text{Ba}^{2+}] = s = 1.0 \\times 10^{-5}$ M.'
       }
     },
     {
@@ -173,11 +173,11 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
         dropdowns: [
           {
             label: 'For a 1:1 salt, K_sp = ',
-            options: ['s', 's²', '4s³', '27s⁴']
+            options: ['s', '$s^{2}$', '$4s^{3}$', '$27s^{4}$']
           },
           {
-            label: 'For a 1:2 salt (MX₂), K_sp = ',
-            options: ['s²', '2s³', '4s³', '8s³']
+            label: 'For a 1:2 salt $(MX_{2})$, K_sp = ',
+            options: ['$s^{2}$', '$2s^{3}$', '$4s^{3}$', '$8s^{3}$']
           },
           {
             label: 'Molar solubility is defined as',
@@ -189,8 +189,8 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
           }
         ],
         correctAnswers: [
-          's²',
-          '4s³',
+          '$s^{2}$',
+          '$4s^{3}$',
           'moles dissolved per liter in a saturated solution',
           'compounds with the same formula type'
         ],
@@ -228,7 +228,7 @@ $$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times
               '$3.9 \\times 10^{-11}$ M'
             ],
             correctAnswer: 1,
-            explanation: '$\\text{CaF}_2 \\rightleftharpoons \\text{Ca}^{2+} + 2\\,\\text{F}^-$. Each formula unit produces 2 F⁻ ions. $[\\text{F}^-] = 2s = 2(2.1 \\times 10^{-4}) = 4.2 \\times 10^{-4}$ M.'
+            explanation: '$\\text{CaF}_2 \\rightleftharpoons \\text{Ca}^{2+} + 2\\,\\text{F}^-$. Each formula unit produces 2 $F^{-}$ ions. $[\\text{F}^-] = 2s = 2(2.1 \\times 10^{-4}) = 4.2 \\times 10^{-4}$ M.'
           }
         ]
       }

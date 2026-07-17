@@ -16,7 +16,7 @@ $$\\Phi_B = \\int \\vec{B} \\cdot d\\vec{A}$$
 
 For uniform $B$ through flat surface: $\\Phi_B = BA\\cos\\theta$
 
-Units: Weber (Wb) = T·m²
+Units: Weber (Wb) = $T\\cdot m^{2}$
 
 ---
 
@@ -79,7 +79,7 @@ $\\Phi_B = \\frac{\\mu_0 I \\ell}{2\\pi}\\int_a^{a+b}\\frac{dr}{r} = \\frac{\\mu
             explanation: 'Flux is measured in webers ($1\\text{ Wb} = 1\\text{ T}\\cdot\\text{m}^2$). The tesla is the unit of $B$.'
           },
           {
-            question: 'A flat 0.020 m² coil is in a 0.50 T uniform field. The flux is maximum when the coil’s plane is:',
+            question: 'A flat 0.020 $m^{2}$ coil is in a 0.50 T uniform field. The flux is maximum when the coil’s plane is:',
             options: ['Parallel to $\\vec{B}$', 'Perpendicular to $\\vec{B}$ (normal along $\\vec{B}$)', 'At 45° to $\\vec{B}$', 'Irrelevant — flux is constant'],
             correctAnswer: 1,
             explanation: '$\\Phi_B = BA\\cos\\theta$ where $\\theta$ is between the normal and $\\vec{B}$. Flux is maximal when the normal is along $\\vec{B}$ — i.e., the plane is perpendicular to $\\vec{B}$ — giving $\\Phi_B = (0.50)(0.020) = 0.010$ Wb.'

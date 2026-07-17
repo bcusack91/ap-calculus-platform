@@ -521,7 +521,7 @@ A particle has position $s(t) = t^3 - 6t^2 + 9t$ (from the worked example).
           hint1: `$v(t) = 3t^2 - 12t + 9$, so $v(0) = 9$.`,
           hint2: `$a(t) = 6t - 12$, so $a(2) = 6(2) - 12 = 0$.`,
           hint3: `$a(t) = 6t - 12 \\Rightarrow j(t) = a'(t) = 6$, a constant.`,
-          explanation: `1) $v(0) = 9$ m/s.  2) $a(2) = 0$ m/s² (acceleration is momentarily zero).  3) Jerk $= s'''(t) = 6$ m/s³, constant for a cubic position.`,
+          explanation: `1) $v(0) = 9$ m/s.  2) $a(2) = 0$ $m/s^{2}$ (acceleration is momentarily zero).  3) Jerk $= s'''(t) = 6$ $m/s^{3}$, constant for a cubic position.`,
         },
       },
     ],

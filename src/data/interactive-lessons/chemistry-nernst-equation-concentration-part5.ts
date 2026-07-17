@@ -94,10 +94,10 @@ export const chemNernstEquationConcentrationPart5Data = {
 |---------|--------|
 | **Voltage** | $E \\approx 3.7$ V per cell (highest of common rechargeables!) |
 | **Uses** | Phones, laptops, electric vehicles, power tools |
-| **Mechanism** | Li⁺ shuttles between graphite anode and metal oxide cathode |
+| **Mechanism** | $Li^{+}$ shuttles between graphite anode and metal oxide cathode |
 | **Energy density** | Very high — lightweight yet powerful |
 
-> 🔑 **Key term — Intercalation:** Li⁺ ions slip *between* layers of the electrode material without breaking the crystal structure. This is what makes Li-ion reversible and long-lasting.
+> 🔑 **Key term — Intercalation:** $Li^{+}$ ions slip *between* layers of the electrode material without breaking the crystal structure. This is what makes Li-ion reversible and long-lasting.
 
 ---
 
@@ -186,7 +186,7 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
               'It does not use electrodes'
             ],
             correctAnswer: 1,
-            explanation: 'A fuel cell\'s reactants (e.g., H₂ and O₂) are continuously fed in from external tanks, unlike a battery where reactants are sealed inside.'
+            explanation: 'A fuel cell\'s reactants (e.g., $H_{2}$ and $O_{2}$) are continuously fed in from external tanks, unlike a battery where reactants are sealed inside.'
           },
           {
             question: 'A 12 V car battery contains how many lead-acid cells in series?',
@@ -216,10 +216,10 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
           },
           {
             label: 'The product of a hydrogen fuel cell is',
-            options: ['CO₂', 'H₂O', 'H₂SO₄', 'NaOH']
+            options: ['$CO_{2}$', '$H_{2}O$', '$H_{2}SO_{4}$', 'NaOH']
           },
           {
-            label: 'In a lithium-ion battery, Li⁺ ions move by',
+            label: 'In a lithium-ion battery, $Li^{+}$ ions move by',
             options: ['melting', 'intercalation', 'precipitation', 'sublimation']
           },
           {
@@ -227,11 +227,11 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
             options: ['replacing the electrodes', 'applying external voltage to reverse the reaction', 'adding more electrolyte', 'connecting to a primary battery']
           }
         ],
-        correctAnswers: ['primary (non-rechargeable) battery', 'H₂O', 'intercalation', 'applying external voltage to reverse the reaction'],
+        correctAnswers: ['primary (non-rechargeable) battery', '$H_{2}O$', 'intercalation', 'applying external voltage to reverse the reaction'],
         hint1: 'Alkaline batteries (AA, AAA) are not rechargeable.',
-        hint2: '2H₂ + O₂ → 2H₂O',
-        hint3: 'Li⁺ inserts into layered structures in both electrodes.',
-        explanation: 'Alkaline = primary. Fuel cell product = H₂O (clean!). Li-ion uses intercalation. Recharging = external voltage reverses the cell reaction (electrolysis).'
+        hint2: '$2H_{2}$ + $O_{2}$ → $2H_{2}O$',
+        hint3: '$Li^{+}$ inserts into layered structures in both electrodes.',
+        explanation: 'Alkaline = primary. Fuel cell product = $H_{2}O$ (clean!). Li-ion uses intercalation. Recharging = external voltage reverses the cell reaction (electrolysis).'
       }
     },
     {
@@ -246,7 +246,7 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
             question: 'As a lead-acid car battery discharges, what happens to the sulfuric acid concentration?',
             options: [
               'It increases',
-              'It decreases (both reactions consume SO₄²⁻)',
+              'It decreases (both reactions consume $SO_{4}^{2-}$)',
               'It stays the same',
               'It increases at the anode, decreases at the cathode'
             ],
@@ -257,7 +257,7 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
             question: 'Why are fuel cells considered more environmentally friendly than combustion engines?',
             options: [
               'They produce more energy per gram of fuel',
-              'They produce water as the main product (no CO₂)',
+              'They produce water as the main product $(no CO_{2})$',
               'They operate at higher temperatures',
               'They use cheaper materials'
             ],

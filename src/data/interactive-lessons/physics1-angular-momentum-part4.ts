@@ -57,7 +57,7 @@ $$I_1\\omega_1 + I_2\\omega_2 = (I_1 + I_2)\\omega_f$$
 
 ### Example
 
-A disk ($I_1 = 2$ kg·m², $\\omega_1 = 10$ rad/s) has a ring ($I_2 = 3$ kg·m², initially at rest) dropped on top:
+A disk ($I_1 = 2$ $kg\\cdot m^{2}$, $\\omega_1 = 10$ rad/s) has a ring ($I_2 = 3$ $kg\\cdot m^{2}$, initially at rest) dropped on top:
 
 $$2(10) + 3(0) = (2 + 3)\\omega_f$$
 $$\\omega_f = 20/5 = 4 \\text{ rad/s}$$
@@ -85,7 +85,7 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
             explanation: 'Conservation of angular momentum requires zero net external torque. Forces can still act — they just must not produce a net torque about the chosen axis.'
           },
           {
-            question: 'A rotating platform has $I = 10$ kg·m² and $\\omega = 5$ rad/s. A person on the platform pulls weights inward, reducing $I$ to 6 kg·m². The new $\\omega$ is:',
+            question: 'A rotating platform has $I = 10$ $kg\\cdot m^{2}$ and $\\omega = 5$ rad/s. A person on the platform pulls weights inward, reducing $I$ to 6 $kg\\cdot m^{2}$. The new $\\omega$ is:',
             options: [
               '3 rad/s',
               '5 rad/s',
@@ -115,16 +115,16 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
       content: `
 **Conservation Calculations** 🧮
 
-1) A turntable ($I = 0.5$ kg·m²) spins at 8 rad/s. A 2 kg block of clay ($I = mr^2$, $r = 0.3$ m) is dropped on it. What is the final $\\omega$? (in rad/s, round to 3 significant figures)
+1) A turntable ($I = 0.5$ $kg\\cdot m^{2}$) spins at 8 rad/s. A 2 kg block of clay ($I = mr^2$, $r = 0.3$ m) is dropped on it. What is the final $\\omega$? (in rad/s, round to 3 significant figures)
 
-2) A skater with $I = 4$ kg·m² and $\\omega = 6$ rad/s pulls in her arms to $I = 1.5$ kg·m². What is her new $\\omega$? (in rad/s)
+2) A skater with $I = 4$ $kg\\cdot m^{2}$ and $\\omega = 6$ rad/s pulls in her arms to $I = 1.5$ $kg\\cdot m^{2}$. What is her new $\\omega$? (in rad/s)
 
 3) In problem 2, by what factor does her KE increase? (round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['5.97', '16', '2.7'],
-        hint1: '$I_{\\text{clay}} = mr^2 = 2(0.09) = 0.18$ kg·m². $(0.5)(8) = (0.5 + 0.18)\\omega_f$',
+        hint1: '$I_{\\text{clay}} = mr^2 = 2(0.09) = 0.18$ $kg\\cdot m^{2}$. $(0.5)(8) = (0.5 + 0.18)\\omega_f$',
         hint2: '$(4)(6) = (1.5)\\omega_f$',
         hint3: '$KE_f/KE_i = I_i/I_f = 4/1.5$',
         explanation: '1) $(0.5)(8) = (0.68)\\omega_f$. $\\omega_f = 4/0.68 \\approx 5.88$ rad/s. Actually: $I_{\\text{clay}} = 2(0.3)^2 = 0.18$. $I_f = 0.5 + 0.18 = 0.68$. $\\omega_f = 4.0/0.68 = 5.88$. Let me re-examine: $0.5 \\times 8 = 4.0$. $4.0/0.68 = 5.88$. Answer should be 5.88 but let me recheck. $(0.5)(8) = 4$. $(0.68)\\omega_f = 4$. $\\omega_f = 5.88$. 2) $\\omega_f = 24/1.5 = 16$ rad/s. 3) $KE_f/KE_i = 4/1.5 = 2.67 \\approx 2.7$.'
@@ -168,7 +168,7 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
       exercise: {
         questions: [
           {
-            question: 'Two disks ($I_1 = 3$ kg·m², $\\omega_1 = 8$ rad/s and $I_2 = 5$ kg·m², $\\omega_2 = -2$ rad/s) are pressed together. Their final common $\\omega$ is:',
+            question: 'Two disks ($I_1 = 3$ $kg\\cdot m^{2}$, $\\omega_1 = 8$ rad/s and $I_2 = 5$ $kg\\cdot m^{2}$, $\\omega_2 = -2$ rad/s) are pressed together. Their final common $\\omega$ is:',
             options: [
               '1.75 rad/s',
               '2.0 rad/s',
@@ -176,7 +176,7 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
               '5.0 rad/s'
             ],
             correctAnswer: 0,
-            explanation: '$L_i = (3)(8) + (5)(-2) = 24 - 10 = 14$ kg·m²/s. $L_f = (3 + 5)\\omega_f = 8\\omega_f$. $\\omega_f = 14/8 = 1.75$ rad/s.'
+            explanation: '$L_i = (3)(8) + (5)(-2) = 24 - 10 = 14$ $kg\\cdot m^{2}/s$. $L_f = (3 + 5)\\omega_f = 8\\omega_f$. $\\omega_f = 14/8 = 1.75$ rad/s.'
           },
           {
             question: 'A child stands at the edge of a spinning merry-go-round and walks to the center. The merry-go-round:',

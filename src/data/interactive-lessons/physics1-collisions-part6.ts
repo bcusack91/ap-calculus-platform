@@ -79,7 +79,7 @@ A 0.015 kg bullet at 600 m/s embeds in a 3.0 kg block at rest.
 
 2) What fraction of the bullet\'s kinetic energy is lost? (as a percentage, round to 3 significant figures)
 
-3) If the block+bullet slides on a surface with $\\mu_k = 0.30$, how far does it slide? (in m, to 3 significant figures, use $g = 10$ m/s²)
+3) If the block+bullet slides on a surface with $\\mu_k = 0.30$, how far does it slide? (in m, to 3 significant figures, use $g = 10$ $m/s^{2}$)
       `,
       exercise: {
         boxes: 3,
@@ -208,7 +208,7 @@ A 5 kg ball at +4 m/s and a 3 kg ball at −6 m/s collide. The 5 kg ball moves a
             explanation: 'Momentum: $v_2 = (20-8)/2 = 6$ m/s. $KE_i = \\frac{1}{2}(2)(100) = 100$ J. $KE_f = \\frac{1}{2}(2)(16) + \\frac{1}{2}(2)(36) = 16 + 36 = 52$ J. $KE_f < KE_i$, so it\'s inelastic. (For elastic: Ball 1 would stop and Ball 2 would move at 10 m/s.)'
           },
           {
-            question: 'A 3 kg block at 5 m/s hits a 1 kg block at rest. They stick together and slide on a surface ($\\mu_k = 0.25$). How far do they slide? (Use $g = 10$ m/s²)',
+            question: 'A 3 kg block at 5 m/s hits a 1 kg block at rest. They stick together and slide on a surface ($\\mu_k = 0.25$). How far do they slide? (Use $g = 10$ $m/s^{2}$)',
             options: [
               '0.56 m',
               '1.13 m',

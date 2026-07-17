@@ -18,7 +18,7 @@ export const chemStoichiometryLimitingReactantsPart2Data = {
 | The Three Steps |
 | Combined Formula |
 | 🧪 Worked Example 1 |
-| Step 1: Grams CH₄ → Moles CH₄ |
+| Step 1: Grams $CH_{4}$ → Moles $CH_{4}$ |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -75,30 +75,30 @@ $$\\boxed{\\text{grams B} = \\text{grams A} \\times \\frac{1}{M_A} \\times \\fra
 > **Solution:**
 $$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$$
 
-**Molar masses:** CH₄ = 16.04 g/mol, H₂O = 18.02 g/mol
+**Molar masses:** $CH_{4}$ = 16.04 g/mol, $H_{2}O$ = 18.02 g/mol
 
 
 ---
 
-### Step 1: Grams CH₄ → Moles CH₄
+### Step 1: Grams $CH_{4}$ → Moles $CH_{4}$
 $$n_{\\text{CH}_4} = 32.0 \; \\cancel{\\text{g CH}_4} \\times \\frac{1 \\text{ mol CH}_4}{16.04 \; \\cancel{\\text{g CH}_4}} = 1.995 \\text{ mol CH}_4$$
 
 
 ---
 
-### Step 2: Moles CH₄ → Moles H₂O
+### Step 2: Moles $CH_{4}$ → Moles $H_{2}O$
 $$n_{\\text{H}_2\\text{O}} = 1.995 \; \\cancel{\\text{mol CH}_4} \\times \\frac{2 \\text{ mol H}_2\\text{O}}{1 \; \\cancel{\\text{mol CH}_4}} = 3.990 \\text{ mol H}_2\\text{O}$$
 
 
 ---
 
-### Step 3: Moles H₂O → Grams H₂O
+### Step 3: Moles $H_{2}O$ → Grams $H_{2}O$
 $$m_{\\text{H}_2\\text{O}} = 3.990 \; \\cancel{\\text{mol H}_2\\text{O}} \\times \\frac{18.02 \\text{ g H}_2\\text{O}}{1 \; \\cancel{\\text{mol H}_2\\text{O}}} = 71.9 \\text{ g H}_2\\text{O}$$
 
 
 ---
 
-### Answer: 71.9 g of H₂O
+### Answer: 71.9 g of $H_{2}O$
       `
     },
     {
@@ -113,18 +113,18 @@ $$m_{\\text{H}_2\\text{O}} = 3.990 \; \\cancel{\\text{mol H}_2\\text{O}} \\times
 
 $$4\\text{Al} + 3\\text{O}_2 \\rightarrow 2\\text{Al}_2\\text{O}_3$$
 
-**Molar masses:** Al = 26.98 g/mol, Al₂O₃ = 101.96 g/mol
+**Molar masses:** Al = 26.98 g/mol, $Al_{2}O_{3}$ = 101.96 g/mol
 
 
 ---
 
-### Step 1: Grams Al₂O₃ → Moles Al₂O₃
+### Step 1: Grams $Al_{2}O_{3}$ → Moles $Al_{2}O_{3}$
 $$n_{\\text{Al}_2\\text{O}_3} = 51.0 \; \\cancel{\\text{g Al}_2\\text{O}_3} \\times \\frac{1 \\text{ mol Al}_2\\text{O}_3}{101.96 \; \\cancel{\\text{g Al}_2\\text{O}_3}} = 0.5002 \\text{ mol Al}_2\\text{O}_3$$
 
 
 ---
 
-### Step 2: Moles Al₂O₃ → Moles Al
+### Step 2: Moles $Al_{2}O_{3}$ → Moles Al
 $$n_{\\text{Al}} = 0.5002 \; \\cancel{\\text{mol Al}_2\\text{O}_3} \\times \\frac{4 \\text{ mol Al}}{2 \; \\cancel{\\text{mol Al}_2\\text{O}_3}} = 1.000 \\text{ mol Al}$$
 
 
@@ -198,21 +198,21 @@ $$51.0 \\; \\cancel{\\text{g Al}_2\\text{O}_3} \\times \\frac{1 \\; \\cancel{\\t
 
 Use the equation: $\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2$
 
-Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂ = 44.01 g/mol
+Molar masses: $Fe_{2}O_{3}$ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, $CO_{2}$ = 44.01 g/mol
 
-**1)** How many grams of Fe are produced from 159.7 g of Fe₂O₃? (to 3 significant figures)
+**1)** How many grams of Fe are produced from 159.7 g of $Fe_{2}O_{3}$? (to 3 significant figures)
 
-**2)** How many grams of CO are needed to react with 79.85 g of Fe₂O₃? (to 3 significant figures)
+**2)** How many grams of CO are needed to react with 79.85 g of $Fe_{2}O_{3}$? (to 3 significant figures)
 
-**3)** How many grams of CO₂ are produced from 84.03 g of CO? (to 3 significant figures)
+**3)** How many grams of $CO_{2}$ are produced from 84.03 g of CO? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['111.7', '42.0', '132.0'],
-        hint1: '159.7 g Fe₂O₃ = 1.000 mol → 2.000 mol Fe → ? g Fe.',
-        hint2: '79.85 g Fe₂O₃ = 0.500 mol → 1.500 mol CO → ? g CO.',
-        hint3: '84.03 g CO = 3.000 mol → 3.000 mol CO₂ → ? g CO₂.',
-        explanation: '1) 159.7/159.7 = 1.000 mol Fe₂O₃ × (2/1) = 2.000 mol Fe × 55.85 = 111.7 g Fe. 2) 79.85/159.7 = 0.500 mol Fe₂O₃ × (3/1) = 1.500 mol CO × 28.01 = 42.0 g CO. 3) 84.03/28.01 = 3.000 mol CO × (3/3) = 3.000 mol CO₂ × 44.01 = 132.0 g CO₂.'
+        hint1: '159.7 g $Fe_{2}O_{3}$ = 1.000 mol → 2.000 mol Fe → ? g Fe.',
+        hint2: '79.85 g $Fe_{2}O_{3}$ = 0.500 mol → 1.500 mol CO → ? g CO.',
+        hint3: '84.03 g CO = 3.000 mol → 3.000 mol $CO_{2}$ → ? g $CO_{2}$.',
+        explanation: '1) 159.7/159.7 = 1.000 mol $Fe_{2}O_{3}$ × (2/1) = 2.000 mol Fe × 55.85 = 111.7 g Fe. 2) 79.85/159.7 = 0.500 mol $Fe_{2}O_{3}$ × (3/1) = 1.500 mol CO × 28.01 = 42.0 g CO. 3) 84.03/28.01 = 3.000 mol CO × (3/3) = 3.000 mol $CO_{2}$ × 44.01 = 132.0 g $CO_{2}$.'
       }
     },
     {
@@ -256,7 +256,7 @@ Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂
       exercise: {
         questions: [
           {
-            question: 'Given $\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$, how many grams of CaO are produced from 200.0 g of CaCO₃? ($M_{\\text{CaCO}_3}$ = 100.09, $M_{\\text{CaO}}$ = 56.08)',
+            question: 'Given $\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$, how many grams of CaO are produced from 200.0 g of $CaCO_{3}$? ($M_{\\text{CaCO}_3}$ = 100.09, $M_{\\text{CaO}}$ = 56.08)',
             options: [
               '56.1 g',
               '87.9 g',
@@ -264,10 +264,10 @@ Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂
               '112.1 g'
             ],
             correctAnswer: 3,
-            explanation: 'Moles CaCO₃: 200.0/100.09 = 1.998 mol. Mole ratio: 1:1 → 1.998 mol CaO. Grams CaO: 1.998 × 56.08 = 112.1 g.'
+            explanation: 'Moles $CaCO_{3}$: 200.0/100.09 = 1.998 mol. Mole ratio: 1:1 → 1.998 mol CaO. Grams CaO: 1.998 × 56.08 = 112.1 g.'
           },
           {
-            question: 'In the reaction $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, if 4.04 g of H₂ reacts completely, how many grams of O₂ are consumed? ($M_{\\text{H}_2}$ = 2.016, $M_{\\text{O}_2}$ = 32.00)',
+            question: 'In the reaction $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, if 4.04 g of $H_{2}$ reacts completely, how many grams of $O_{2}$ are consumed? ($M_{\\text{H}_2}$ = 2.016, $M_{\\text{O}_2}$ = 32.00)',
             options: [
               '16.0 g',
               '32.0 g',
@@ -275,7 +275,7 @@ Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂
               '8.0 g'
             ],
             correctAnswer: 1,
-            explanation: 'Moles H₂: 4.04/2.016 = 2.00 mol. Ratio: 1 mol O₂ / 2 mol H₂ → 1.00 mol O₂. Grams: 1.00 × 32.00 = 32.0 g O₂.'
+            explanation: 'Moles $H_{2}$: 4.04/2.016 = 2.00 mol. Ratio: 1 mol $O_{2}$ / 2 mol $H_{2}$ → 1.00 mol $O_{2}$. Grams: 1.00 × 32.00 = 32.0 g $O_{2}$.'
           }
         ]
       }

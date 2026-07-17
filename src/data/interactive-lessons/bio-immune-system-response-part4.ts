@@ -10,8 +10,8 @@ export const bioImmuneSystemResponsePart4Data = {
 While humoral immunity uses antibodies to fight extracellular pathogens, **cell-mediated immunity** uses **T lymphocytes** to destroy infected cells, cancer cells, and transplanted tissue. This branch is essential for fighting intracellular pathogens like viruses.
 
 ### What You'll Learn
-- Helper T cells (CD4⁺) and their role as immune coordinators
-- Cytotoxic T cells (CD8⁺) and how they kill target cells
+- Helper T cells $(CD4^{+})$ and their role as immune coordinators
+- Cytotoxic T cells $(CD8^{+})$ and how they kill target cells
 - Antigen presentation via MHC I vs MHC II
 - Mechanisms of apoptosis induction
       `
@@ -20,13 +20,13 @@ While humoral immunity uses antibodies to fight extracellular pathogens, **cell-
       id: 'imm4-helper',
       type: 'text' as const,
       content: `
-## Helper T Cells (CD4⁺): The Coordinators
+## Helper T Cells $(CD4^{+})$: The Coordinators
 
 Helper T cells are often called the **"quarterbacks"** of the immune system because they coordinate both humoral and cell-mediated responses.
 
 ### Activation
 1. **Antigen-presenting cell (APC)** — a dendritic cell, macrophage, or B cell — displays antigen on **MHC Class II**
-2. The **T cell receptor (TCR)** on a CD4⁺ cell recognizes the antigen-MHC II complex
+2. The **T cell receptor (TCR)** on a $CD4^{+}$ cell recognizes the antigen-MHC II complex
 3. Co-stimulatory signals (e.g., CD28-B7 interaction) confirm activation
 4. Helper T cell becomes activated and begins releasing **cytokines**
 
@@ -40,7 +40,7 @@ Helper T cells are often called the **"quarterbacks"** of the immune system beca
 | **IFN-γ** | Macrophages | Enhances microbicidal activity |
 | **IL-10** | Immune cells | Anti-inflammatory; prevents overactivation |
 
-> 🔑 Without helper T cells, neither humoral nor cell-mediated immunity can function effectively. This is why HIV (which destroys CD4⁺ cells) is so devastating.
+> 🔑 Without helper T cells, neither humoral nor cell-mediated immunity can function effectively. This is why HIV (which destroys $CD4^{+}$ cells) is so devastating.
       `
     },
     {
@@ -58,18 +58,18 @@ Helper T cells are often called the **"quarterbacks"** of the immune system beca
               'Complement proteins'
             ],
             correctAnswer: 1,
-            explanation: 'CD4⁺ helper T cells specifically recognize antigen fragments displayed on MHC Class II molecules, which are found only on professional antigen-presenting cells (dendritic cells, macrophages, B cells).'
+            explanation: '$CD4^{+}$ helper T cells specifically recognize antigen fragments displayed on MHC Class II molecules, which are found only on professional antigen-presenting cells (dendritic cells, macrophages, B cells).'
           },
           {
             question: 'Why does HIV infection lead to immunodeficiency?',
             options: [
               'HIV destroys B cells, preventing antibody production',
-              'HIV destroys CD4⁺ helper T cells, crippling immune coordination',
+              'HIV destroys $CD4^{+}$ helper T cells, crippling immune coordination',
               'HIV attacks neutrophils, eliminating innate immunity',
               'HIV prevents the production of complement proteins'
             ],
             correctAnswer: 1,
-            explanation: 'HIV specifically infects and destroys CD4⁺ helper T cells. Since these cells coordinate both humoral and cell-mediated immunity, their loss leads to severe immunodeficiency (AIDS).'
+            explanation: 'HIV specifically infects and destroys $CD4^{+}$ helper T cells. Since these cells coordinate both humoral and cell-mediated immunity, their loss leads to severe immunodeficiency (AIDS).'
           }
         ]
       }
@@ -78,7 +78,7 @@ Helper T cells are often called the **"quarterbacks"** of the immune system beca
       id: 'imm4-cytotoxic',
       type: 'text' as const,
       content: `
-## Cytotoxic T Cells (CD8⁺): The Killers
+## Cytotoxic T Cells $(CD8^{+})$: The Killers
 
 Cytotoxic T lymphocytes (CTLs) directly destroy infected, cancerous, or foreign cells.
 
@@ -86,7 +86,7 @@ Cytotoxic T lymphocytes (CTLs) directly destroy infected, cancerous, or foreign 
 
 | Step | Process |
 |------|---------|
-| **1. Antigen recognition** | CD8⁺ T cell recognizes foreign antigen on **MHC Class I** of an infected cell |
+| **1. Antigen recognition** | $CD8^{+}$ T cell recognizes foreign antigen on **MHC Class I** of an infected cell |
 | **2. Co-stimulation** | Requires cytokines from helper T cells (especially IL-2) |
 | **3. Clonal expansion** | Activated CTL divides to produce army of identical killers |
 | **4. Target binding** | CTL binds tightly to the infected cell |
@@ -112,7 +112,7 @@ Cytotoxic T lymphocytes (CTLs) directly destroy infected, cancerous, or foreign 
 | **Source of antigen** | Intracellular (synthesized within the cell) | Extracellular (phagocytosed from outside) |
 | **Processing** | Proteasome degrades cytoplasmic proteins | Lysosome degrades phagocytosed material |
 | **Displayed on** | All nucleated cells | APCs only (dendritic cells, macrophages, B cells) |
-| **Recognized by** | CD8⁺ cytotoxic T cells | CD4⁺ helper T cells |
+| **Recognized by** | $CD8^{+}$ cytotoxic T cells | $CD4^{+}$ helper T cells |
 | **Response** | Kill the infected cell | Activate and coordinate immune response |
 | **Example** | Virus-infected cell displays viral peptides | Macrophage displays bacterial peptides after phagocytosis |
 
@@ -148,7 +148,7 @@ Cytotoxic T lymphocytes (CTLs) directly destroy infected, cancerous, or foreign 
           }
         ],
         correctAnswers: ['CD8', 'pores', 'apoptosis', 'intracellular'],
-        hint1: 'CTLs are also called CD8⁺ T cells — the number refers to their co-receptor.',
+        hint1: 'CTLs are also called $CD8^{+}$ T cells — the number refers to their co-receptor.',
         hint2: 'Perforin works similarly to the membrane attack complex (MAC) of complement.',
         hint3: 'Apoptosis is programmed, controlled cell death — no inflammatory spillage.',
         explanation: 'CD8 is the co-receptor on cytotoxic T cells that binds MHC Class I. Perforin punches pores in membranes, allowing granzymes to enter and activate caspases that trigger apoptosis. MHC I displays peptides from proteins made inside the cell (intracellular), which is how virus-infected cells are detected.'
@@ -169,7 +169,7 @@ Cytotoxic T lymphocytes (CTLs) directly destroy infected, cancerous, or foreign 
               'Toll-like receptors'
             ],
             correctAnswer: 1,
-            explanation: 'Virus-infected cells produce viral proteins internally. The proteasome degrades these proteins into peptides, which are loaded onto MHC Class I and displayed on the cell surface for recognition by CD8⁺ cytotoxic T cells.'
+            explanation: 'Virus-infected cells produce viral proteins internally. The proteasome degrades these proteins into peptides, which are loaded onto MHC Class I and displayed on the cell surface for recognition by $CD8^{+}$ cytotoxic T cells.'
           },
           {
             question: 'Which of the following correctly describes the Fas-FasL pathway?',

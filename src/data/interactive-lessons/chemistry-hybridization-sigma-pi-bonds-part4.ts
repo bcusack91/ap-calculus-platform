@@ -53,10 +53,10 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
 | Steric Number | Hybridization | Geometry |
 |--------------|---------------|----------|
 | 2 | sp | Linear (180°) |
-| 3 | sp² | Trigonal planar (120°) |
-| 4 | sp³ | Tetrahedral (109.5°) |
+| 3 | $sp^{2}$ | Trigonal planar (120°) |
+| 4 | $sp^{3}$ | Tetrahedral (109.5°) |
 
-> ⚠️ **Warning:** Lone pairs count as electron domains! An atom with 2 bonds and 2 lone pairs has steric number 4 → sp³ (not sp).`
+> ⚠️ **Warning:** Lone pairs count as electron domains! An atom with 2 bonds and 2 lone pairs has steric number 4 → $sp^{3}$ (not sp).`
     },
     {
       id: 'hy-4-3',
@@ -64,29 +64,29 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
       title: 'Worked Examples',
       content: `## Worked Examples
 
-> **Problem:** Determine the hybridization of oxygen in water (H₂O).
+> **Problem:** Determine the hybridization of oxygen in water $(H_{2}O)$.
 
 > **Solution:**
 > - O has 2 bonds + 2 lone pairs = **4 electron domains**
-> - Steric number = 4 → **sp³**
+> - Steric number = 4 → **$sp^{3}$**
 > - Electron geometry: tetrahedral
 > - Molecular geometry: bent (because 2 lone pairs are "invisible")
 > - Bond angle: ~104.5° (less than 109.5° due to lone pair compression)
 
 ---
 
-> **Problem:** Determine the hybridization of the central oxygen in ozone (O₃).
+> **Problem:** Determine the hybridization of the central oxygen in ozone $(O_{3})$.
 
 > **Solution:**
 > - Central O has 1 single bond + 1 double bond + 1 lone pair = **3 electron domains**
-> - Steric number = 3 → **sp²**
+> - Steric number = 3 → **$sp^{2}$**
 > - Electron geometry: trigonal planar
 > - Molecular geometry: bent
 > - Bond angle: ~117° (lone pair compresses slightly from 120°)
 
 ---
 
-> **Problem:** Determine the hybridization of carbon in the cyanide ion (CN⁻).
+> **Problem:** Determine the hybridization of carbon in the cyanide ion $(CN^{-})$.
 
 > **Solution:**
 > - Carbon has 1 triple bond to nitrogen + 1 lone pair = **2 electron domains**
@@ -95,12 +95,12 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
 
 ---
 
-> **Problem:** Determine the hybridization of nitrogen in ammonia (NH₃).
+> **Problem:** Determine the hybridization of nitrogen in ammonia $(NH_{3})$.
 
 > **Solution:**
 > - N has 3 bonds + 1 lone pair = **4 electron domains**
-> - Steric number = 4 → **sp³**
-> - Even though NH₃ has a trigonal pyramidal *molecular* shape, the nitrogen is still sp³ hybridized`
+> - Steric number = 4 → **$sp^{3}$**
+> - Even though $NH_{3}$ has a trigonal pyramidal *molecular* shape, the nitrogen is still $sp^{3}$ hybridized`
     },
     {
       id: 'hy-4-4',
@@ -110,22 +110,22 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
       exercise: {
         questions: [
           {
-            question: 'What is the hybridization of oxygen in water (H₂O)? (2 bonds, 2 lone pairs)',
-            options: ['sp', 'sp²', 'sp³', 'unhybridized'],
+            question: 'What is the hybridization of oxygen in water $(H_{2}O)$? (2 bonds, 2 lone pairs)',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 2,
-            explanation: 'Oxygen in H₂O has 2 bonds + 2 lone pairs = 4 electron domains. Steric number 4 → sp³ hybridization.'
+            explanation: 'Oxygen in $H_{2}O$ has 2 bonds + 2 lone pairs = 4 electron domains. Steric number 4 → $sp^{3}$ hybridization.'
           },
           {
-            question: 'What is the hybridization of the central carbon in CO₃²⁻? (3 resonance positions, 0 lone pairs)',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            question: 'What is the hybridization of the central carbon in $CO_{3}^{2-}$? (3 resonance positions, 0 lone pairs)',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctAnswer: 1,
-            explanation: 'Carbon in CO₃²⁻ has 3 electron domains (bonded to 3 oxygen atoms, regardless of resonance) → sp² hybridization.'
+            explanation: 'Carbon in $CO_{3}^{2-}$ has 3 electron domains (bonded to 3 oxygen atoms, regardless of resonance) → $sp^{2}$ hybridization.'
           },
           {
-            question: 'What is the hybridization of nitrogen in NO₂⁻? (1 single bond + 1 double bond + 1 lone pair)',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            question: 'What is the hybridization of nitrogen in $NO_{2}^{-}$? (1 single bond + 1 double bond + 1 lone pair)',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctAnswer: 1,
-            explanation: 'Nitrogen in NO₂⁻ has 3 electron domains (1 single bond + 1 double bond + 1 lone pair) → sp² hybridization.'
+            explanation: 'Nitrogen in $NO_{2}^{-}$ has 3 electron domains (1 single bond + 1 double bond + 1 lone pair) → $sp^{2}$ hybridization.'
           },
           {
             question: 'A central atom has 2 bonded atoms and 0 lone pairs. What is the bond angle?',
@@ -144,24 +144,24 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
       exercise: {
         inputs: [
           {
-            label: 'Steric number of sulfur in SO₂ (2 bonded atoms + 1 lone pair)',
+            label: 'Steric number of sulfur in $SO_{2}$ (2 bonded atoms + 1 lone pair)',
             correctAnswer: '3',
-            explanation: 'Sulfur in SO₂ has 2 bonds to oxygen + 1 lone pair = 3 electron domains. Steric number = 3.'
+            explanation: 'Sulfur in $SO_{2}$ has 2 bonds to oxygen + 1 lone pair = 3 electron domains. Steric number = 3.'
           },
           {
-            label: 'Hybridization of sulfur in SO₂ (enter sp, sp2, or sp3)',
+            label: 'Hybridization of sulfur in $SO_{2}$ (enter sp, sp2, or sp3)',
             correctAnswer: 'sp2',
-            explanation: 'Steric number 3 → sp² hybridization. The molecule has a bent molecular geometry.'
+            explanation: 'Steric number 3 → $sp^{2}$ hybridization. The molecule has a bent molecular geometry.'
           },
           {
-            label: 'Steric number of carbon in CH₂O (formaldehyde: 2 H atoms + 1 double bond to O, 0 lone pairs)',
+            label: 'Steric number of carbon in $CH_{2}O$ (formaldehyde: 2 H atoms + 1 double bond to O, 0 lone pairs)',
             correctAnswer: '3',
             explanation: 'Carbon has 2 single bonds to H + 1 double bond to O = 3 electron domains. Steric number = 3.'
           },
           {
-            label: 'Bond angle (degrees) predicted for an sp²-hybridized atom with no lone pairs',
+            label: 'Bond angle (degrees) predicted for an $sp^{2}$-hybridized atom with no lone pairs',
             correctAnswer: '120',
-            explanation: 'sp² hybridization with no lone pairs gives an ideal trigonal planar geometry with 120° bond angles.'
+            explanation: '$sp^{2}$ hybridization with no lone pairs gives an ideal trigonal planar geometry with 120° bond angles.'
           }
         ]
       }
@@ -173,8 +173,8 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
       content: `## Common Mistakes to Avoid
 
 > ⚠️ **Warning:** Hybridization ≠ molecular geometry! The shape you "see" may differ from what hybridization implies:
-> - H₂O is **bent** but oxygen is **sp³**
-> - NH₃ is **trigonal pyramidal** but nitrogen is **sp³**
+> - $H_{2}O$ is **bent** but oxygen is **$sp^{3}$**
+> - $NH_{3}$ is **trigonal pyramidal** but nitrogen is **$sp^{3}$**
 >
 > Hybridization depends on the **total** number of electron domains (steric number), not just the bonding arrangement.
 
@@ -201,31 +201,31 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
         dropdowns: [
           {
             id: 'hy-4-7-dd1',
-            label: 'sp³ hybridization gives an ideal bond angle of',
+            label: '$sp^{3}$ hybridization gives an ideal bond angle of',
             options: ['109.5°', '120°', '180°', '90°'],
             correctIndex: 0,
-            explanation: 'sp³ hybridization gives an ideal bond angle of 109.5° (tetrahedral geometry).'
+            explanation: '$sp^{3}$ hybridization gives an ideal bond angle of 109.5° (tetrahedral geometry).'
           },
           {
             id: 'hy-4-7-dd2',
             label: 'An atom with 3 bonds and 1 lone pair has steric number 4 → _______ hybridization',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctIndex: 2,
-            explanation: 'An atom with 3 bonds and 1 lone pair has steric number 4 → sp³ hybridization. The lone pair counts!'
+            explanation: 'An atom with 3 bonds and 1 lone pair has steric number 4 → $sp^{3}$ hybridization. The lone pair counts!'
           },
           {
             id: 'hy-4-7-dd3',
-            label: 'Steric number 3 with 0 lone pairs → sp² → _______ electron and molecular',
+            label: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → _______ electron and molecular',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Bent'],
             correctIndex: 1,
-            explanation: 'Steric number 3 with 0 lone pairs → sp² → trigonal planar electron and molecular geometry.'
+            explanation: 'Steric number 3 with 0 lone pairs → $sp^{2}$ → trigonal planar electron and molecular geometry.'
           },
           {
             id: 'hy-4-7-dd4',
             label: 'Adding a lone pair changes the steric number from 3 to 4',
-            options: ['Stays sp²', 'Changes to sp³', 'Changes to sp', 'Becomes unhybridized'],
+            options: ['Stays $sp^{2}$', 'Changes to $sp^{3}$', 'Changes to sp', 'Becomes unhybridized'],
             correctIndex: 1,
-            explanation: 'Adding a lone pair changes the steric number from 3 to 4, changing the hybridization from sp² to sp³.'
+            explanation: 'Adding a lone pair changes the steric number from 3 to 4, changing the hybridization from $sp^{2}$ to $sp^{3}$.'
           }
         ]
       }
@@ -238,14 +238,14 @@ $$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
       exercise: {
         questions: [
           {
-            question: 'In the molecule H₂C=CH–CH₃ (propene), what is the hybridization of the middle carbon?',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            question: 'In the molecule $H_{2}C$=CH–$CH_{3}$ (propene), what is the hybridization of the middle carbon?',
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctAnswer: 1,
-            explanation: 'The middle carbon has 3 electron domains: 1 C=C double bond + 1 C–C single bond + 1 C–H bond. Steric number = 3 → sp².'
+            explanation: 'The middle carbon has 3 electron domains: 1 C=C double bond + 1 C–C single bond + 1 C–H bond. Steric number = 3 → $sp^{2}$.'
           },
           {
             question: 'In carbon monoxide (CO, which has a triple bond and a lone pair on C), what is the hybridization of carbon?',
-            options: ['sp', 'sp²', 'sp³', 'unhybridized'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', 'unhybridized'],
             correctAnswer: 0,
             explanation: 'Carbon in CO has 1 triple bond + 1 lone pair = 2 electron domains. Steric number = 2 → sp hybridization.'
           }

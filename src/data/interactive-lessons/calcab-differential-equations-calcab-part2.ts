@@ -136,7 +136,7 @@ Dividing by $y(3-y)$ loses $y = 0$ and $y = 3$ — these ARE constant solutions 
       type: 'input-box' as const,
       content: '**Solve a separable IVP.** ✍️',
       exercise: {
-        question: 'Solve $\\frac{dy}{dx} = \\frac{2x}{y}$ with $y(0) = 4$. Find $y(3)$.\n\n(Enter an exact value. If irrational, use sqrt notation like sqrt(N).)',
+        question: 'Solve $\\frac{dy}{dx} = \\frac{2x}{y}$ with $y(0) = 4$. Find $y(3)$.\n\n(Enter an exact value. If irrational, use sqrt notation like $\\sqrt{N}$.)',
         correctAnswer: 'sqrt(34)',
         acceptableAnswers: ['sqrt(34)', 'sqrt34', '√34'],
         hints: [

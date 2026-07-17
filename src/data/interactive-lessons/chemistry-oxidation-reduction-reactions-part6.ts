@@ -34,9 +34,9 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 1. **Assign oxidation states** — find which atoms change
 2. **Write half-reactions** — one for oxidation, one for reduction
 3. **Check the medium:**
-   - Acidic → use H₂O and H⁺
-   - Basic → balance in acid first, then add OH⁻
-4. **Balance each half-reaction** (atoms, then charge with e⁻)
+   - Acidic → use $H_{2}O$ and $H^{+}$
+   - Basic → balance in acid first, then add $OH^{-}$
+4. **Balance each half-reaction** (atoms, then charge with $e^{-}$)
 5. **Equalize and add** — cancel electrons
 6. **Verify** — atoms AND charge must balance
 
@@ -51,12 +51,12 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 | Species | Typical Behavior | Product |
 |---------|-----------------|---------|
-| MnO₄⁻ (acidic) | Strong oxidizer | Mn²⁺ |
-| MnO₄⁻ (basic) | Moderate oxidizer | MnO₂ |
-| Cr₂O₇²⁻ (acidic) | Strong oxidizer | Cr³⁺ |
-| NO₃⁻ (acidic, dilute) | Oxidizer | NO |
-| NO₃⁻ (acidic, conc.) | Oxidizer | NO₂ |
-| H₂O₂ | Can oxidize or reduce | O₂ or H₂O |
+| $MnO_{4}^{-}$ (acidic) | Strong oxidizer | $Mn^{2+}$ |
+| $MnO_{4}^{-}$ (basic) | Moderate oxidizer | $MnO_{2}$ |
+| $Cr_{2}O_{7}^{2-}$ (acidic) | Strong oxidizer | $Cr^{3+}$ |
+| $NO_{3}^{-}$ (acidic, dilute) | Oxidizer | NO |
+| $NO_{3}^{-}$ (acidic, conc.) | Oxidizer | $NO_{2}$ |
+| $H_{2}O_{2}$ | Can oxidize or reduce | $O_{2}$ or $H_{2}O$ |
       `
     },
     {
@@ -68,7 +68,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'Balance in acidic solution: Cr₂O₇²⁻ + I⁻ → Cr³⁺ + I₂. What is the coefficient of I⁻?',
+            question: 'Balance in acidic solution: $Cr_{2}O_{7}^{2-}$ + $I^{-}$ → $Cr^{3+}$ + $I_{2}$. What is the coefficient of $I^{-}$?',
             options: [
               '2',
               '3',
@@ -76,10 +76,10 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '7'
             ],
             correctAnswer: 2,
-            explanation: 'Reduction: Cr₂O₇²⁻ → 2Cr³⁺ (gain 6e⁻). Oxidation: 2I⁻ → I₂ (lose 2e⁻). Equalize: multiply oxidation by 3 → 6I⁻ → 3I₂ + 6e⁻. Balanced: Cr₂O₇²⁻ + 6I⁻ + 14H⁺ → 2Cr³⁺ + 3I₂ + 7H₂O.'
+            explanation: 'Reduction: $Cr_{2}O_{7}^{2-}$ → $2Cr^{3+}$ $(gain 6e^{-})$. Oxidation: $2I^{-}$ → $I_{2}$ $(lose 2e^{-})$. Equalize: multiply oxidation by 3 → $6I^{-}$ → $3I_{2}$ + $6e^{-}$. Balanced: $Cr_{2}O_{7}^{2-}$ + $6I^{-}$ + $14H^{+}$ → $2Cr^{3+}$ + $3I_{2}$ + $7H_{2}O$.'
           },
           {
-            question: 'In the balanced equation above, the coefficient of H⁺ is:',
+            question: 'In the balanced equation above, the coefficient of $H^{+}$ is:',
             options: [
               '6',
               '7',
@@ -87,10 +87,10 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '14'
             ],
             correctAnswer: 3,
-            explanation: 'The reduction half-reaction: 6e⁻ + 14H⁺ + Cr₂O₇²⁻ → 2Cr³⁺ + 7H₂O. There are 7 O atoms on the left → 7H₂O on the right → 14H needed → 14H⁺ on the left.'
+            explanation: 'The reduction half-reaction: $6e^{-}$ + $14H^{+}$ + $Cr_{2}O_{7}^{2-}$ → $2Cr^{3+}$ + $7H_{2}O$. There are 7 O atoms on the left → $7H_{2}O$ on the right → 14H needed → $14H^{+}$ on the left.'
           },
           {
-            question: 'Balance in acidic solution: H₂O₂ + Fe²⁺ → H₂O + Fe³⁺. What is the coefficient of Fe²⁺?',
+            question: 'Balance in acidic solution: $H_{2}O_{2}$ + $Fe^{2+}$ → $H_{2}O$ + $Fe^{3+}$. What is the coefficient of $Fe^{2+}$?',
             options: [
               '1',
               '2',
@@ -98,7 +98,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '4'
             ],
             correctAnswer: 1,
-            explanation: 'Reduction: H₂O₂ + 2H⁺ + 2e⁻ → 2H₂O (O goes from −1 to −2, gaining 2e⁻ total). Oxidation: Fe²⁺ → Fe³⁺ + e⁻. Equalize: multiply oxidation by 2. Result: H₂O₂ + 2Fe²⁺ + 2H⁺ → 2H₂O + 2Fe³⁺.'
+            explanation: 'Reduction: $H_{2}O_{2}$ + $2H^{+}$ + $2e^{-}$ → $2H_{2}O$ (O goes from −1 to −2, gaining $2e^{-}$ total). Oxidation: $Fe^{2+}$ → $Fe^{3+}$ + $e^{-}$. Equalize: multiply oxidation by 2. Result: $H_{2}O_{2}$ + $2Fe^{2+}$ + $2H^{+}$ → $2H_{2}O$ + $2Fe^{3+}$.'
           }
         ]
       }
@@ -112,18 +112,18 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'Balance in basic solution: MnO₄⁻ + CN⁻ → MnO₂ + CNO⁻. After converting to basic, which species appear in the final equation?',
+            question: 'Balance in basic solution: $MnO_{4}^{-}$ + $CN^{-}$ → $MnO_{2}$ + $CNO^{-}$. After converting to basic, which species appear in the final equation?',
             options: [
-              'H⁺ and H₂O only',
-              'OH⁻ and H₂O only',
-              'H⁺, OH⁻, and H₂O',
+              '$H^{+}$ and $H_{2}O$ only',
+              '$OH^{-}$ and $H_{2}O$ only',
+              '$H^{+}$, $OH^{-}$, and $H_{2}O$',
               'None of these — only the redox species'
             ],
             correctAnswer: 1,
-            explanation: 'In basic solution, after converting from acidic form, the equation contains OH⁻ and H₂O but NO H⁺. All H⁺ ions have been neutralized by adding OH⁻.'
+            explanation: 'In basic solution, after converting from acidic form, the equation contains $OH^{-}$ and $H_{2}O$ but NO $H^{+}$. All $H^{+}$ ions have been neutralized by adding $OH^{-}$.'
           },
           {
-            question: 'In basic solution: Al(s) + MnO₄⁻ → Al(OH)₄⁻ + MnO₂. How many electrons does each Al atom lose?',
+            question: 'In basic solution: Al(s) + $MnO_{4}^{-}$ → $Al(OH)_{4}^{-}$ + $MnO_{2}$. How many electrons does each Al atom lose?',
             options: [
               '1',
               '2',
@@ -131,18 +131,18 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '4'
             ],
             correctAnswer: 2,
-            explanation: 'Al goes from 0 (in Al metal) to +3 (in Al(OH)₄⁻, since 4 OH⁻ contributes −4 charge and the ion is −1, so Al = +3). That\'s a loss of 3 electrons per Al atom.'
+            explanation: 'Al goes from 0 (in Al metal) to +3 (in $Al(OH)_{4}^{-}$, since 4 $OH^{-}$ contributes −4 charge and the ion is −1, so Al = +3). That\'s a loss of 3 electrons per Al atom.'
           },
           {
-            question: 'When balancing CrO₄²⁻ + S²⁻ → Cr(OH)₃ + S in basic solution, the final balanced equation will have:',
+            question: 'When balancing $CrO_{4}^{2-}$ + $S^{2-}$ → $Cr(OH)_{3}$ + S in basic solution, the final balanced equation will have:',
             options: [
-              'H⁺ on the reactant side',
-              'OH⁻ on the reactant side',
-              'OH⁻ on the product side',
-              'No H₂O or OH⁻'
+              '$H^{+}$ on the reactant side',
+              '$OH^{-}$ on the reactant side',
+              '$OH^{-}$ on the product side',
+              'No $H_{2}O$ or $OH^{-}$'
             ],
             correctAnswer: 1,
-            explanation: 'In basic solution, after fully balancing, OH⁻ typically appears. For this equation, OH⁻ and H₂O appear on specific sides depending on the balance. After converting from acidic, OH⁻ ends up on the reactant side with H₂O on the product side.'
+            explanation: 'In basic solution, after fully balancing, $OH^{-}$ typically appears. For this equation, $OH^{-}$ and $H_{2}O$ appear on specific sides depending on the balance. After converting from acidic, $OH^{-}$ ends up on the reactant side with $H_{2}O$ on the product side.'
           }
         ]
       }
@@ -164,10 +164,10 @@ Determine the oxidation state change for the underlined element in each half-rea
       exercise: {
         boxes: 3,
         correctAnswers: ['+6', '0', '+4'],
-        hint1: 'In Cr₂O₇²⁻: 2(Cr) + 7(−2) = −2 → 2Cr = +12 → Cr = ?',
-        hint2: 'I₂ is a free element — what is the oxidation state of a free element?',
-        hint3: 'In SO₃²⁻: S + 3(−2) = −2 → S − 6 = −2 → S = ?',
-        explanation: '1) In Cr₂O₇²⁻: 2Cr + 7(−2) = −2 → 2Cr = +12 → Cr = +6. Each Cr goes from +6 to +3. 2) I₂ is a free element: oxidation state = 0. Each I goes from −1 to 0. 3) In SO₃²⁻: S + 3(−2) = −2 → S = +4. S goes from +4 to +6.'
+        hint1: 'In $Cr_{2}O_{7}^{2-}$: 2(Cr) + 7(−2) = −2 → 2Cr = +12 → Cr = ?',
+        hint2: '$I_{2}$ is a free element — what is the oxidation state of a free element?',
+        hint3: 'In $SO_{3}^{2-}$: S + 3(−2) = −2 → S − 6 = −2 → S = ?',
+        explanation: '1) In $Cr_{2}O_{7}^{2-}$: 2Cr + 7(−2) = −2 → 2Cr = +12 → Cr = +6. Each Cr goes from +6 to +3. 2) $I_{2}$ is a free element: oxidation state = 0. Each I goes from −1 to 0. 3) In $SO_{3}^{2-}$: S + 3(−2) = −2 → S = +4. S goes from +4 to +6.'
       }
     },
     {
@@ -179,27 +179,27 @@ Determine the oxidation state change for the underlined element in each half-rea
       exercise: {
         dropdowns: [
           {
-            label: 'MnO₄⁻ in acidic solution typically gets reduced to',
-            options: ['MnO₂', 'Mn²⁺', 'Mn', 'MnO₃⁻']
+            label: '$MnO_{4}^{-}$ in acidic solution typically gets reduced to',
+            options: ['$MnO_{2}$', '$Mn^{2+}$', 'Mn', '$MnO_{3}^{-}$']
           },
           {
-            label: 'MnO₄⁻ in basic or neutral solution typically gets reduced to',
-            options: ['MnO₂', 'Mn²⁺', 'Mn', 'MnO₃⁻']
+            label: '$MnO_{4}^{-}$ in basic or neutral solution typically gets reduced to',
+            options: ['$MnO_{2}$', '$Mn^{2+}$', 'Mn', '$MnO_{3}^{-}$']
           },
           {
-            label: 'H₂O₂ acting as a reducing agent is oxidized to',
-            options: ['H₂O', 'O₂', 'OH⁻', 'H₂']
+            label: '$H_{2}O_{2}$ acting as a reducing agent is oxidized to',
+            options: ['$H_{2}O$', '$O_{2}$', '$OH^{-}$', '$H_{2}$']
           },
           {
             label: 'The number of electrons transferred must be equal in both half-reactions because',
             options: ['it makes the math easier', 'electrons cannot be created or destroyed', 'it balances hydrogen', 'it balances oxygen']
           }
         ],
-        correctAnswers: ['Mn²⁺', 'MnO₂', 'O₂', 'electrons cannot be created or destroyed'],
+        correctAnswers: ['$Mn^{2+}$', '$MnO_{2}$', '$O_{2}$', 'electrons cannot be created or destroyed'],
         hint1: 'Acidic conditions allow Mn to be fully reduced to +2.',
-        hint2: 'In basic/neutral, MnO₄⁻ is partially reduced (Mn goes from +7 to +4).',
-        hint3: 'When H₂O₂ is oxidized, O goes from −1 to 0.',
-        explanation: 'MnO₄⁻ → Mn²⁺ in acid (complete reduction). MnO₄⁻ → MnO₂ in basic/neutral. H₂O₂ oxidized → O₂ (O: −1 → 0). Electron conservation: e⁻ lost must equal e⁻ gained.'
+        hint2: 'In basic/neutral, $MnO_{4}^{-}$ is partially reduced (Mn goes from +7 to +4).',
+        hint3: 'When $H_{2}O_{2}$ is oxidized, O goes from −1 to 0.',
+        explanation: '$MnO_{4}^{-}$ → $Mn^{2+}$ in acid (complete reduction). $MnO_{4}^{-}$ → $MnO_{2}$ in basic/neutral. $H_{2}O_{2}$ oxidized → $O_{2}$ (O: −1 → 0). Electron conservation: $e^{-}$ lost must equal $e^{-}$ gained.'
       }
     },
     {
@@ -211,7 +211,7 @@ Determine the oxidation state change for the underlined element in each half-rea
       exercise: {
         questions: [
           {
-            question: 'Balance in acidic solution: MnO₄⁻ + C₂O₄²⁻ → Mn²⁺ + CO₂. The coefficient of MnO₄⁻ is:',
+            question: 'Balance in acidic solution: $MnO_{4}^{-}$ + $C_{2}O_{4}^{2-}$ → $Mn^{2+}$ + $CO_{2}$. The coefficient of $MnO_{4}^{-}$ is:',
             options: [
               '2',
               '3',
@@ -219,7 +219,7 @@ Determine the oxidation state change for the underlined element in each half-rea
               '5'
             ],
             correctAnswer: 0,
-            explanation: 'Reduction: MnO₄⁻ → Mn²⁺ gains 5e⁻. Oxidation: C₂O₄²⁻ → 2CO₂ loses 2e⁻. LCM(5,2) = 10. Multiply: 2MnO₄⁻ (10e⁻) and 5C₂O₄²⁻ (10e⁻). Balanced: 2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂ + 8H₂O.'
+            explanation: 'Reduction: $MnO_{4}^{-}$ → $Mn^{2+}$ gains $5e^{-}$. Oxidation: $C_{2}O_{4}^{2-}$ → $2CO_{2}$ loses $2e^{-}$. LCM(5,2) = 10. Multiply: $2MnO_{4}^{-}$ $(10e^{-})$ and $5C_{2}O_{4}^{2-}$ $(10e^{-})$. Balanced: $2MnO_{4}^{-}$ + $5C_{2}O_{4}^{2-}$ + $16H^{+}$ → $2Mn^{2+}$ + $10CO_{2}$ + $8H_{2}O$.'
           },
           {
             question: 'In the balanced equation above, the total charge on the reactant side is:',

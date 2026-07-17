@@ -18,7 +18,7 @@ export const chemMolesMolarMassPart2Data = {
 | For Elements |
 | Key Insight |
 | 📌 Molar Mass of Compounds |
-| Example 1: Water (H₂O) |
+| Example 1: Water $(H_{2}O)$ |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -77,9 +77,9 @@ For a compound, add up the molar masses of all atoms in the formula.
 
 ---
 
-### Example 1: Water (H₂O)
+### Example 1: Water $(H_{2}O)$
 
-> **Problem:** What is the molar mass of water (H₂O)?
+> **Problem:** What is the molar mass of water $(H_{2}O)$?
 
 **Solution:**
 
@@ -99,9 +99,9 @@ $$M_{\\text{NaCl}} = 22.99 + 35.45 = 58.44 \\text{ g/mol}$$
 
 ---
 
-### Example 3: Calcium Carbonate (CaCO₃)
+### Example 3: Calcium Carbonate $(CaCO_{3})$
 
-> **Problem:** What is the molar mass of calcium carbonate (CaCO₃)?
+> **Problem:** What is the molar mass of calcium carbonate $(CaCO_{3})$?
 
 **Solution:**
 
@@ -110,9 +110,9 @@ $$M_{\\text{CaCO}_3} = 40.08 + 12.01 + 3(16.00) = 40.08 + 12.01 + 48.00 = 100.09
 
 ---
 
-### Example 4: Glucose (C₆H₁₂O₆)
+### Example 4: Glucose $(C_{6}H_{12}O_{6})$
 
-> **Problem:** What is the molar mass of glucose (C₆H₁₂O₆)?
+> **Problem:** What is the molar mass of glucose $(C_{6}H_{12}O_{6})$?
 
 **Solution:**
 
@@ -123,9 +123,9 @@ $$M_{\\text{C}_6\\text{H}_{12}\\text{O}_6} = 6(12.01) + 12(1.008) + 6(16.00) = 7
 
 ### 💡 Watch for Parentheses!
 
-> 💡 **Tip:** When parentheses appear in a formula like Ca(OH)₂, the subscript outside multiplies **everything** inside — both the O and the H.
+> 💡 **Tip:** When parentheses appear in a formula like $Ca(OH)_{2}$, the subscript outside multiplies **everything** inside — both the O and the H.
 
-> **Problem:** What is the molar mass of calcium hydroxide, Ca(OH)₂?
+> **Problem:** What is the molar mass of calcium hydroxide, $Ca(OH)_{2}$?
 
 **Solution:**
 
@@ -152,7 +152,7 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
             explanation: 'The atomic mass (in amu) on the periodic table equals the molar mass in g/mol. For example, carbon has an atomic mass of 12.01 amu and a molar mass of 12.01 g/mol.'
           },
           {
-            question: 'What is the molar mass of sulfuric acid (H₂SO₄)? (H = 1.008, S = 32.07, O = 16.00)',
+            question: 'What is the molar mass of sulfuric acid $(H_{2}SO_{4})$? (H = 1.008, S = 32.07, O = 16.00)',
             options: [
               '49.08 g/mol',
               '82.08 g/mol',
@@ -165,10 +165,10 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
           {
             question: 'Which compound has the greatest molar mass?',
             options: [
-              'H₂O',
-              'CO₂',
+              '$H_{2}O$',
+              '$CO_{2}$',
               'NaCl',
-              'C₆H₁₂O₆'
+              '$C_{6}H_{12}O_{6}$'
             ],
             correctAnswer: 3,
             explanation: 'Glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) has the greatest molar mass at 180.16 g/mol because it contains the most atoms and includes heavy carbon and oxygen atoms.'
@@ -192,11 +192,11 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
 > |---|---|---|---|---|
 > | 32.07 | 35.45 | 39.10 | 40.08 | 55.85 |
 
-**1)** Calculate the molar mass of ammonia (NH₃) in g/mol. (to 3 significant figures)
+**1)** Calculate the molar mass of ammonia $(NH_{3})$ in g/mol. (to 3 significant figures)
 
-**2)** Calculate the molar mass of potassium permanganate (KMnO₄) in g/mol. (Mn = 54.94; to 3 significant figures)
+**2)** Calculate the molar mass of potassium permanganate $(KMnO_{4})$ in g/mol. (Mn = 54.94; to 3 significant figures)
 
-**3)** Calculate the molar mass of iron(III) oxide (Fe₂O₃) in g/mol. (to 3 significant figures)
+**3)** Calculate the molar mass of iron(III) oxide $(Fe_{2}O_{3})$ in g/mol. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -228,15 +228,15 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
             options: ['multiply', 'add', 'divide', 'subtract']
           },
           {
-            label: 'The molar mass of O₂ is ______ the molar mass of O',
+            label: 'The molar mass of $O_{2}$ is ______ the molar mass of O',
             options: ['equal to', 'half', 'double', 'triple']
           }
         ],
         correctAnswers: ['g/mol', '12 g', 'add', 'double'],
         hint1: 'Molar mass = mass in grams per mole.',
-        hint2: 'The mole is defined so that 1 mol of ¹²C = 12 g exactly.',
+        hint2: 'The mole is defined so that 1 mol of $ {}^{12}C$ = 12 g exactly.',
         hint3: 'You sum all the individual atomic molar masses.',
-        explanation: 'Molar mass is in g/mol. 1 mol of C-12 = 12 g by definition. You add individual atomic masses to get the compound molar mass. O₂ has 2 oxygen atoms, so its molar mass ($32.00$) is double that of a single O atom ($16.00$).'
+        explanation: 'Molar mass is in g/mol. 1 mol of C-12 = 12 g by definition. You add individual atomic masses to get the compound molar mass. $O_{2}$ has 2 oxygen atoms, so its molar mass ($32.00$) is double that of a single O atom ($16.00$).'
       }
     },
     {
@@ -248,7 +248,7 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
       exercise: {
         questions: [
           {
-            question: 'What is the molar mass of aluminum sulfate, Al₂(SO₄)₃? (Al = 26.98, S = 32.07, O = 16.00)',
+            question: 'What is the molar mass of aluminum sulfate, $Al_{2}(SO_{4})_{3}$? (Al = 26.98, S = 32.07, O = 16.00)',
             options: [
               '150.17 g/mol',
               '278.03 g/mol',

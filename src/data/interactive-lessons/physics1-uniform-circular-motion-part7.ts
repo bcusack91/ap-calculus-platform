@@ -121,9 +121,9 @@ This final lesson brings together all circular motion concepts for AP exam prepa
 
 1) Mars orbits the Sun at $r = 2.28 \\times 10^{11}$ m with period $T = 687$ days. What is Mars\'s orbital speed (in m/s, round to nearest 100)?
 
-2) A coin sits on a turntable 12 cm from the center, spinning at 78 RPM. What is the centripetal acceleration of the coin (in m/s², round to 3 significant figures)?
+2) A coin sits on a turntable 12 cm from the center, spinning at 78 RPM. What is the centripetal acceleration of the coin (in $m/s^{2}$, round to 3 significant figures)?
 
-3) A space station creates artificial gravity by spinning. If the station has radius 50 m, what angular velocity $\\omega$ is needed to produce $g = 10$ m/s² at the rim (in rad/s, round to 3 significant figures)?
+3) A space station creates artificial gravity by spinning. If the station has radius 50 m, what angular velocity $\\omega$ is needed to produce $g = 10$ $m/s^{2}$ at the rim (in rad/s, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
@@ -131,7 +131,7 @@ This final lesson brings together all circular motion concepts for AP exam prepa
         hint1: 'Convert days to seconds: $T = 687 \\times 24 \\times 3600$. Then $v = 2\\pi r/T$.',
         hint2: 'Convert 78 RPM to Hz. Then $a_c = 4\\pi^2 rf^2$.',
         hint3: '$a_c = r\\omega^2 \\Rightarrow \\omega = \\sqrt{a_c/r}$.',
-        explanation: '1) $T = 687 \\times 86400 = 5.935 \\times 10^7$ s. $v = 2\\pi(2.28 \\times 10^{11})/(5.935 \\times 10^7) = 1.433 \\times 10^{12}/5.935 \\times 10^7 = 24{,}140 \\approx 24{,}100$ m/s. 2) $f = 78/60 = 1.3$ Hz. $a_c = 4\\pi^2(0.12)(1.3)^2 = 39.48(0.12)(1.69) = 8.01$ m/s². Hmm, let me redo: $4(9.87)(0.12)(1.69) = 4 \\times 0.12 \\times 9.87 \\times 1.69 = 7.99 \\approx 8.0$. Actually $4\\pi^2 \\times 0.12 \\times 1.69 = 39.48 \\times 0.2028 = 8.01$ m/s². 3) $\\omega = \\sqrt{10/50} = \\sqrt{0.2} = 0.447 \\approx 0.45$ rad/s.'
+        explanation: '1) $T = 687 \\times 86400 = 5.935 \\times 10^7$ s. $v = 2\\pi(2.28 \\times 10^{11})/(5.935 \\times 10^7) = 1.433 \\times 10^{12}/5.935 \\times 10^7 = 24{,}140 \\approx 24{,}100$ m/s. 2) $f = 78/60 = 1.3$ Hz. $a_c = 4\\pi^2(0.12)(1.3)^2 = 39.48(0.12)(1.69) = 8.01$ $m/s^{2}$. Hmm, let me redo: $4(9.87)(0.12)(1.69) = 4 \\times 0.12 \\times 9.87 \\times 1.69 = 7.99 \\approx 8.0$. Actually $4\\pi^2 \\times 0.12 \\times 1.69 = 39.48 \\times 0.2028 = 8.01$ $m/s^{2}$. 3) $\\omega = \\sqrt{10/50} = \\sqrt{0.2} = 0.447 \\approx 0.45$ rad/s.'
       }
     },
     {

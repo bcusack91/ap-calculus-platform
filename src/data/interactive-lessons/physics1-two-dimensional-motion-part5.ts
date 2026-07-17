@@ -49,7 +49,7 @@ $$\\theta = \\tan^{-1}\\left(\\frac{v_y}{v_x}\\right)$$
       content: `
 **Problem 1 — Horizontal Launch** 🏀
 
-A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground. Use $g = 10$ m/s².
+A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground. Use $g = 10$ $m/s^{2}$.
 
 1) Time to hit the ground (in seconds)
 

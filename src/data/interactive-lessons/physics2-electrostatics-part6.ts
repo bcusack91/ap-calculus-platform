@@ -153,7 +153,7 @@ Enter:
         correctAnswers: ['0.9', '0.9', '0'],
         hint1: '$F = k|q_1 q_3|/r^2 = (9 \\times 10^9)(4 \\times 10^{-6})(1 \\times 10^{-6})/(0.2)^2$.',
         hint2: 'By symmetry, both forces have equal magnitude.',
-        hint3: 'Equal charges equidistant from q₃ → forces are equal and opposite → they cancel!',
+        hint3: 'Equal charges equidistant from $q_{3}$ → forces are equal and opposite → they cancel!',
         explanation: 'At the midpoint between two equal charges, forces cancel perfectly. Net force = 0. This is an equilibrium point!'
       }
     },
@@ -180,12 +180,12 @@ Enter:
             question: 'A charge $q_3$ is in equilibrium between $q_1 = +4q$ and $q_2 = +q$. Where is $q_3$?',
             options: [
               'At the exact midpoint',
-              'Closer to the larger charge q₁',
-              'Closer to the smaller charge q₂',
+              'Closer to the larger charge $q_{1}$',
+              'Closer to the smaller charge $q_{2}$',
               'Outside the two charges'
             ],
             correctAnswer: 2,
-            explanation: 'The equilibrium point is closer to the smaller charge. It needs less distance to match the larger charge\'s stronger pull. Specifically, since q₁ = 4q₂, the distance ratio is 2:1 (closer to q₂).'
+            explanation: 'The equilibrium point is closer to the smaller charge. It needs less distance to match the larger charge\'s stronger pull. Specifically, since $q_{1}$ = $4q_{2}$, the distance ratio is 2:1 (closer to $q_{2}$).'
           },
           {
             question: 'In superposition, does the presence of a third charge affect the Coulomb force between two specific charges?',

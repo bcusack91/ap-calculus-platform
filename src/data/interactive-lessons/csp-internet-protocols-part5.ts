@@ -41,7 +41,7 @@ The Internet has grown from a few thousand devices to tens of billions. The prin
               "DNS+"
             ],
             correctAnswer: 1,
-            explanation: "IPv6 uses 128-bit addresses (~3.4 × 10³⁸), enough for every device for the foreseeable future."
+            explanation: "IPv6 uses 128-bit addresses (~$3.4 \\times 10^{38}$), enough for every device for the foreseeable future."
           },
           {
             question: "A Content Delivery Network (CDN) reduces page-load times by ___",
@@ -63,7 +63,7 @@ The Internet has grown from a few thousand devices to tens of billions. The prin
       content: `
 ## Address Exhaustion And IPv6
 
-IPv4 addresses are 32 bits → 2³² ≈ 4.3 billion. With smartphones, IoT, and rapid global growth, this isn't enough. **IPv6** uses 128-bit addresses → vastly more than the number of atoms on Earth's surface.
+IPv4 addresses are 32 bits → $2^{32}$ ≈ 4.3 billion. With smartphones, IoT, and rapid global growth, this isn't enough. **IPv6** uses 128-bit addresses → vastly more than the number of atoms on Earth's surface.
 
 Workarounds during transition: NAT (Network Address Translation) lets one public IP serve many devices behind a router.
 

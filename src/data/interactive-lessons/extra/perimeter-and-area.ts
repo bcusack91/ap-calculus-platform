@@ -86,7 +86,7 @@ $$P = 4s$$
             },
             {
               question: 'Perimeter is always measured in:',
-              options: ['units (like cm or ft)', 'square units (like cm²)', 'cubic units (like cm³)', 'degrees'],
+              options: ['units (like cm or ft)', 'square units $(like cm^{2})$', 'cubic units $(like cm^{3})$', 'degrees'],
               correctAnswer: 0,
               explanation: 'Perimeter is a distance, so it uses plain length units. Square units are for area; cubic units are for volume.',
             },

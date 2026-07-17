@@ -49,14 +49,14 @@ $$\\boxed{\\text{Bond angle} = 120°}$$
 
 | Molecule | Central Atom | Electron Domains | Lone Pairs | Geometry |
 |----------|-------------|------------------|------------|----------|
-| BF₃ | B | 3 (single bonds) | 0 | Trigonal planar |
-| H₂C=O | C | 3 (2 single + 1 double) | 0 | Trigonal planar |
-| NO₃⁻ | N | 3 (resonance) | 0 | Trigonal planar |
-| SO₃ | S | 3 (resonance) | 0 | Trigonal planar |
+| $BF_{3}$ | B | 3 (single bonds) | 0 | Trigonal planar |
+| $H_{2}C$=O | C | 3 (2 single + 1 double) | 0 | Trigonal planar |
+| $NO_{3}^{-}$ | N | 3 (resonance) | 0 | Trigonal planar |
+| $SO_{3}$ | S | 3 (resonance) | 0 | Trigonal planar |
 
 ### Important: Boron is Special
 
-Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it naturally trigonal planar. BF₃ has only 6 electrons around B — it is an **electron-deficient** compound (an exception to the octet rule).
+Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it naturally trigonal planar. $BF_{3}$ has only 6 electrons around B — it is an **electron-deficient** compound (an exception to the octet rule).
 
 ---`
     },
@@ -75,15 +75,15 @@ Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it natur
           },
           {
             question: 'Which molecule has a linear geometry?',
-            options: ['H₂O', 'NH₃', 'CO₂', 'CH₄'],
+            options: ['$H_{2}O$', '$NH_{3}$', '$CO_{2}$', '$CH_{4}$'],
             correctAnswer: 2,
-            explanation: 'CO₂ has 2 electron domains (two double bonds) around carbon with no lone pairs, giving it a linear geometry with 180° bond angle.'
+            explanation: '$CO_{2}$ has 2 electron domains (two double bonds) around carbon with no lone pairs, giving it a linear geometry with 180° bond angle.'
           },
           {
-            question: 'In BF₃, boron has only 6 electrons in its valence shell. What geometry does BF₃ adopt?',
+            question: 'In $BF_{3}$, boron has only 6 electrons in its valence shell. What geometry does $BF_{3}$ adopt?',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Bent'],
             correctAnswer: 1,
-            explanation: 'BF₃ has 3 bonding electron domains and 0 lone pairs on boron. With a steric number of 3, it adopts trigonal planar geometry with 120° bond angles.'
+            explanation: '$BF_{3}$ has 3 bonding electron domains and 0 lone pairs on boron. With a steric number of 3, it adopts trigonal planar geometry with 120° bond angles.'
           }
         ]
       }
@@ -113,12 +113,12 @@ $$\\boxed{\\cos(109.5°) = -\\frac{1}{3}}$$
 
 | Molecule | Central Atom | Electron Domains | Lone Pairs | Geometry |
 |----------|-------------|------------------|------------|----------|
-| CH₄ | C | 4 (single bonds) | 0 | Tetrahedral |
-| CCl₄ | C | 4 (single bonds) | 0 | Tetrahedral |
-| SiH₄ | Si | 4 (single bonds) | 0 | Tetrahedral |
-| NH₄⁺ | N | 4 (single bonds) | 0 | Tetrahedral |
+| $CH_{4}$ | C | 4 (single bonds) | 0 | Tetrahedral |
+| $CCl_{4}$ | C | 4 (single bonds) | 0 | Tetrahedral |
+| $SiH_{4}$ | Si | 4 (single bonds) | 0 | Tetrahedral |
+| $NH_{4}^{+}$ | N | 4 (single bonds) | 0 | Tetrahedral |
 
-The tetrahedral geometry is extremely common in organic chemistry — every sp³-hybridized carbon is tetrahedral.
+The tetrahedral geometry is extremely common in organic chemistry — every $sp^{3}$-hybridized carbon is tetrahedral.
 
 ---`
     },
@@ -158,7 +158,7 @@ The tetrahedral geometry is extremely common in organic chemistry — every sp³
 | Steric Number | 2 | 3 | 4 |
 | Bond Angle | 180° | 120° | 109.5° |
 | Dimensional | 1D (line) | 2D (flat) | 3D |
-| Hybridization | sp | sp² | sp³ |
+| Hybridization | sp | $sp^{2}$ | $sp^{3}$ |
 
 ### The Pattern
 
@@ -171,12 +171,12 @@ As the steric number increases:
 
 ### Hybridization Connection
 
-> 💡 **Tip:** Each base geometry maps to a specific hybridization — sp (linear), sp² (trigonal planar), sp³ (tetrahedral). Knowing one tells you the other.
+> 💡 **Tip:** Each base geometry maps to a specific hybridization — sp (linear), $sp^{2}$ (trigonal planar), $sp^{3}$ (tetrahedral). Knowing one tells you the other.
 
 Each geometry corresponds to a specific hybridization of the central atom:
 - **sp** → linear (2 hybrid orbitals)
-- **sp²** → trigonal planar (3 hybrid orbitals)
-- **sp³** → tetrahedral (4 hybrid orbitals)
+- **$sp^{2}$** → trigonal planar (3 hybrid orbitals)
+- **$sp^{3}$** → tetrahedral (4 hybrid orbitals)
 
 This connection between VSEPR geometry and orbital hybridization is fundamental to understanding bonding in organic and inorganic chemistry.`
     },
@@ -189,29 +189,29 @@ This connection between VSEPR geometry and orbital hybridization is fundamental 
         dropdowns: [
           {
             id: 'vg-2-7-dd1',
-            label: 'CS₂ has 2 double bonds around carbon (steric number 2), giving a _______',
+            label: '$CS_{2}$ has 2 double bonds around carbon (steric number 2), giving a _______',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal bipyramidal'],
             correctIndex: 0,
-            explanation: 'CS₂ has 2 double bonds around carbon (steric number 2), giving a linear geometry.'
+            explanation: '$CS_{2}$ has 2 double bonds around carbon (steric number 2), giving a linear geometry.'
           },
           {
             id: 'vg-2-7-dd2',
-            label: 'CH₄ has 4 single bonds and no lone pairs on carbon (steric number 4), giving a',
+            label: '$CH_{4}$ has 4 single bonds and no lone pairs on carbon (steric number 4), giving a',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Octahedral'],
             correctIndex: 2,
-            explanation: 'CH₄ has 4 single bonds and no lone pairs on carbon (steric number 4), giving a tetrahedral geometry.'
+            explanation: '$CH_{4}$ has 4 single bonds and no lone pairs on carbon (steric number 4), giving a tetrahedral geometry.'
           },
           {
             id: 'vg-2-7-dd3',
-            label: 'SO₃ has 3 electron domains (steric number 3) → trigonal planar geometry',
+            label: '$SO_{3}$ has 3 electron domains (steric number 3) → trigonal planar geometry',
             options: ['90°', '109.5°', '120°', '180°'],
             correctIndex: 2,
-            explanation: 'SO₃ has 3 electron domains (steric number 3) → trigonal planar geometry → 120° bond angles.'
+            explanation: '$SO_{3}$ has 3 electron domains (steric number 3) → trigonal planar geometry → 120° bond angles.'
           },
           {
             id: 'vg-2-7-dd4',
             label: 'A linear molecule with steric number 2 has _______ hybridization',
-            options: ['sp', 'sp²', 'sp³', 'sp³d'],
+            options: ['sp', '$sp^{2}$', '$sp^{3}$', '$sp^{3}d$'],
             correctIndex: 0,
             explanation: 'A linear molecule with steric number 2 has sp hybridization.'
           }
@@ -237,7 +237,7 @@ This connection between VSEPR geometry and orbital hybridization is fundamental 
             explanation: 'The tetrahedral angle (109.5°) is the smallest, followed by trigonal planar (120°), and linear is the largest (180°).'
           },
           {
-            question: 'A molecule has the formula AX₃ with no lone pairs on atom A. What is its electron domain geometry?',
+            question: 'A molecule has the formula $AX_{3}$ with no lone pairs on atom A. What is its electron domain geometry?',
             options: [
               'Linear',
               'Bent',
@@ -245,7 +245,7 @@ This connection between VSEPR geometry and orbital hybridization is fundamental 
               'Tetrahedral'
             ],
             correctAnswer: 2,
-            explanation: 'AX₃ with no lone pairs has 3 electron domains (steric number 3), which corresponds to trigonal planar geometry with 120° bond angles.'
+            explanation: '$AX_{3}$ with no lone pairs has 3 electron domains (steric number 3), which corresponds to trigonal planar geometry with 120° bond angles.'
           }
         ]
       }

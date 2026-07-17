@@ -161,9 +161,9 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
         boxes: 3,
         correctAnswers: ['2', '1', '-791.4'],
         hint1: 'The target has 2S, but reaction (1) has only 1S. How do you fix that?',
-        hint2: 'Reaction (2) already has 2SO₃ as products — matches the target.',
+        hint2: 'Reaction (2) already has $2SO_{3}$ as products — matches the target.',
         hint3: '$\\Delta H = 2(-296.8) + 1(-197.8)$.',
-        explanation: '1) Multiply (1) by 2: $2\\text{S} + 2\\text{O}_2 \\rightarrow 2\\text{SO}_2$, $\\Delta H = 2(-296.8) = -593.6$ kJ. 2) Keep (2) as is (coefficient = 1). 3) Add: $-593.6 + (-197.8) = -791.4$ kJ. The SO₂ produced in step 1 is consumed in step 2.'
+        explanation: '1) Multiply (1) by 2: $2\\text{S} + 2\\text{O}_2 \\rightarrow 2\\text{SO}_2$, $\\Delta H = 2(-296.8) = -593.6$ kJ. 2) Keep (2) as is (coefficient = 1). 3) Add: $-593.6 + (-197.8) = -791.4$ kJ. The $SO_{2}$ produced in step 1 is consumed in step 2.'
       }
     },
     {
@@ -207,7 +207,7 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
       exercise: {
         questions: [
           {
-            question: 'Given: (1) A → B, ΔH₁ = −100 kJ and (2) B → C, ΔH₂ = +50 kJ. What is ΔH for A → C?',
+            question: 'Given: (1) A → B, $\\Delta H_{1}$ = −100 kJ and (2) B → C, $\\Delta H_{2}$ = +50 kJ. What is ΔH for A → C?',
             options: [
               '−150 kJ',
               '−50 kJ',
@@ -218,7 +218,7 @@ Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_
             explanation: 'By Hess\'s Law: $\\Delta H = \\Delta H_1 + \\Delta H_2 = (-100) + (+50) = -50$ kJ. The intermediate B cancels out.'
           },
           {
-            question: 'Given: C₂H₄(g) + 3O₂(g) → 2CO₂(g) + 2H₂O(l), ΔH = −1411 kJ. What is ΔH for the reverse reaction: 2CO₂(g) + 2H₂O(l) → C₂H₄(g) + 3O₂(g)?',
+            question: 'Given: $C_{2}H_{4}(g)$ + $3O_{2}(g)$ → $2CO_{2}(g)$ + $2H_{2}O(l)$, ΔH = −1411 kJ. What is ΔH for the reverse reaction: $2CO_{2}(g)$ + $2H_{2}O(l)$ → $C_{2}H_{4}(g)$ + $3O_{2}(g)$?',
             options: [
               '−1411 kJ',
               '+1411 kJ',

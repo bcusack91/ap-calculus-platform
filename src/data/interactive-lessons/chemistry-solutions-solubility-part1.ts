@@ -40,7 +40,7 @@ A **solution** is a homogeneous mixture of two or more substances.
 | Term | Definition | Example (Saltwater) |
 |------|-----------|-------------------|
 | **Solute** | The substance being dissolved (lesser amount) | NaCl (salt) |
-| **Solvent** | The substance doing the dissolving (greater amount) | H₂O (water) |
+| **Solvent** | The substance doing the dissolving (greater amount) | $H_{2}O$ (water) |
 | **Solution** | The resulting homogeneous mixture | Saltwater |
 
 
@@ -166,9 +166,9 @@ Dissolving occurs when solute-solvent interactions are strong enough to overcome
 
 | Solute Type | Solvent Type | Dissolves? | Example |
 |-------------|-------------|-----------|---------|
-| Ionic / Polar | Polar (H₂O) | ✅ Yes | NaCl in water |
+| Ionic / Polar | Polar $(H_{2}O)$ | ✅ Yes | NaCl in water |
 | Nonpolar | Nonpolar (hexane) | ✅ Yes | Oil in hexane |
-| Nonpolar | Polar (H₂O) | ❌ No | Oil in water |
+| Nonpolar | Polar $(H_{2}O)$ | ❌ No | Oil in water |
 | Ionic | Nonpolar | ❌ No | NaCl in hexane |
 
 
@@ -178,8 +178,8 @@ Dissolving occurs when solute-solvent interactions are strong enough to overcome
 
 When NaCl dissolves in water:
 1. Water molecules surround ions — **hydration** (or solvation)
-2. The partially negative oxygen of H₂O attracts Na⁺
-3. The partially positive hydrogens attract Cl⁻
+2. The partially negative oxygen of $H_{2}O$ attracts $Na^{+}$
+3. The partially positive hydrogens attract $Cl^{-}$
 4. Ion-dipole forces pull ions away from the crystal lattice
 
 The energy released by hydration must be comparable to the lattice energy for dissolution to occur.
@@ -196,7 +196,7 @@ Use the "like dissolves like" principle to predict whether each solute dissolves
       exercise: {
         dropdowns: [
           {
-            label: 'Ethanol (CH₃CH₂OH, polar) in water (polar)',
+            label: 'Ethanol ($CH_{3}CH_{2}OH$, polar) in water (polar)',
             options: ['Soluble', 'Insoluble', 'Cannot determine']
           },
           {
@@ -204,7 +204,7 @@ Use the "like dissolves like" principle to predict whether each solute dissolves
             options: ['Soluble', 'Insoluble', 'Cannot determine']
           },
           {
-            label: 'I₂ (nonpolar) in CCl₄ (nonpolar)',
+            label: '$I_{2}$ (nonpolar) in $CCl_{4}$ (nonpolar)',
             options: ['Soluble', 'Insoluble', 'Cannot determine']
           },
           {
@@ -212,7 +212,7 @@ Use the "like dissolves like" principle to predict whether each solute dissolves
             options: ['Soluble', 'Insoluble', 'Cannot determine']
           },
           {
-            label: 'Glucose (C₆H₁₂O₆, many -OH groups, polar) in water (polar)',
+            label: 'Glucose ($C_{6}H_{12}O_{6}$, many -OH groups, polar) in water (polar)',
             options: ['Soluble', 'Insoluble', 'Cannot determine']
           }
         ],
@@ -220,7 +220,7 @@ Use the "like dissolves like" principle to predict whether each solute dissolves
         hint1: 'Polar dissolves in polar; nonpolar dissolves in nonpolar.',
         hint2: 'Oil is nonpolar and water is polar — they don\'t mix.',
         hint3: 'Ionic compounds require a polar solvent to stabilize the separated ions.',
-        explanation: 'Ethanol is polar and miscible with water. Oil is nonpolar and immiscible with polar water. I₂ is nonpolar and dissolves in nonpolar CCl₄. KBr is ionic and needs a polar solvent — it won\'t dissolve in hexane. Glucose has many hydroxyl groups that hydrogen-bond with water, making it very soluble.'
+        explanation: 'Ethanol is polar and miscible with water. Oil is nonpolar and immiscible with polar water. $I_{2}$ is nonpolar and dissolves in nonpolar $CCl_{4}$. KBr is ionic and needs a polar solvent — it won\'t dissolve in hexane. Glucose has many hydroxyl groups that hydrogen-bond with water, making it very soluble.'
       }
     },
     {
@@ -238,11 +238,11 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
 
 | Ion | Soluble? | Exceptions |
 |-----|----------|-----------|
-| Na⁺, K⁺, NH₄⁺ | Always soluble | None |
-| NO₃⁻ (nitrate) | Always soluble | None |
-| CH₃COO⁻ (acetate) | Always soluble | None |
-| Cl⁻, Br⁻, I⁻ | Usually soluble | Except with Ag⁺, Pb²⁺, Hg₂²⁺ |
-| SO₄²⁻ | Usually soluble | Except with Ba²⁺, Pb²⁺, Ca²⁺, Sr²⁺ |
+| $Na^{+}$, $K^{+}$, $NH_{4}^{+}$ | Always soluble | None |
+| $NO_{3}^{-}$ (nitrate) | Always soluble | None |
+| $CH_{3}COO^{-}$ (acetate) | Always soluble | None |
+| $Cl^{-}$, $Br^{-}$, $I^{-}$ | Usually soluble | Except with $Ag^{+}$, $Pb^{2+}$, $Hg_{2}^{2+}$ |
+| $SO_{4}^{2-}$ | Usually soluble | Except with $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, $Sr^{2+}$ |
 
 
 ---
@@ -251,9 +251,9 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
 
 | Ion | Soluble? | Exceptions |
 |-----|----------|-----------|
-| OH⁻ | Usually insoluble | Except with Na⁺, K⁺, Ba²⁺, Ca²⁺ (slightly) |
-| S²⁻ | Usually insoluble | Except with Na⁺, K⁺, NH₄⁺, Group 2 |
-| CO₃²⁻, PO₄³⁻ | Usually insoluble | Except with Na⁺, K⁺, NH₄⁺ |
+| $OH^{-}$ | Usually insoluble | Except with $Na^{+}$, $K^{+}$, $Ba^{2+}$, $Ca^{2+}$ (slightly) |
+| $S^{2-}$ | Usually insoluble | Except with $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, Group 2 |
+| $CO_{3}^{2-}$, $PO_{4}^{3-}$ | Usually insoluble | Except with $Na^{+}$, $K^{+}$, $NH_{4}^{+}$ |
 
 
 ---
@@ -274,33 +274,33 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
             options: [
               'NaCl',
               'AgCl',
-              'KNO₃',
-              'NH₄Br'
+              '$KNO_{3}$',
+              '$NH_{4}Br$'
             ],
             correctAnswer: 1,
-            explanation: 'Chlorides are generally soluble, EXCEPT with Ag⁺, Pb²⁺, and Hg₂²⁺. AgCl is one of the classic insoluble salts and forms a white precipitate.'
+            explanation: 'Chlorides are generally soluble, EXCEPT with $Ag^{+}$, $Pb^{2+}$, and $Hg_{2}^{2+}$. AgCl is one of the classic insoluble salts and forms a white precipitate.'
           },
           {
             question: 'Which compound is SOLUBLE in water?',
             options: [
-              'BaSO₄',
-              'PbCl₂',
-              'CaCO₃',
-              'Na₂CO₃'
+              '$BaSO_{4}$',
+              '$PbCl_{2}$',
+              '$CaCO_{3}$',
+              '$Na_{2}CO_{3}$'
             ],
             correctAnswer: 3,
-            explanation: 'Carbonates are generally insoluble, EXCEPT with Na⁺, K⁺, and NH₄⁺. Na₂CO₃ is soluble because sodium salts are always soluble.'
+            explanation: 'Carbonates are generally insoluble, EXCEPT with $Na^{+}$, $K^{+}$, and $NH_{4}^{+}$. $Na_{2}CO_{3}$ is soluble because sodium salts are always soluble.'
           },
           {
-            question: 'When solutions of Pb(NO₃)₂ and KI are mixed, a yellow precipitate forms. The precipitate is:',
+            question: 'When solutions of $Pb(NO_{3})_{2}$ and KI are mixed, a yellow precipitate forms. The precipitate is:',
             options: [
-              'KNO₃',
-              'PbI₂',
-              'Pb(NO₃)₂',
+              '$KNO_{3}$',
+              '$PbI_{2}$',
+              '$Pb(NO_{3})_{2}$',
               'KI'
             ],
             correctAnswer: 1,
-            explanation: 'Iodides are generally soluble except with Ag⁺, Pb²⁺, and Hg₂²⁺. PbI₂ is insoluble and precipitates as a bright yellow solid. KNO₃ remains in solution (nitrates are always soluble).'
+            explanation: 'Iodides are generally soluble except with $Ag^{+}$, $Pb^{2+}$, and $Hg_{2}^{2+}$. $PbI_{2}$ is insoluble and precipitates as a bright yellow solid. $KNO_{3}$ remains in solution (nitrates are always soluble).'
           }
         ]
       }

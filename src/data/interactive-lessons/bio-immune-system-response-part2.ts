@@ -82,7 +82,7 @@ Both B and T lymphocytes originate from **hematopoietic stem cells** in the bone
 | **Maturation site** | Bone marrow | Thymus |
 | **Receptor** | B cell receptor (BCR) / membrane-bound antibody | T cell receptor (TCR) |
 | **Antigen recognition** | Binds free (soluble) antigens directly | Binds antigen fragments presented on MHC |
-| **Main subtypes** | Plasma cells, memory B cells | Helper T (CD4⁺), Cytotoxic T (CD8⁺), Regulatory T |
+| **Main subtypes** | Plasma cells, memory B cells | Helper T $(CD4^{+})$, Cytotoxic T $(CD8^{+})$, Regulatory T |
 | **Primary function** | Produce antibodies (humoral immunity) | Cell-mediated immunity; activate other immune cells |
 
 ### Lymphocyte Development
@@ -105,7 +105,7 @@ Both B and T lymphocytes originate from **hematopoietic stem cells** in the bone
 |---------|------------|-------------|
 | **Found on** | All nucleated cells | Antigen-presenting cells (APCs): dendritic cells, macrophages, B cells |
 | **Displays** | Intracellular antigen fragments (from within the cell) | Extracellular antigen fragments (from phagocytosed pathogens) |
-| **Recognized by** | CD8⁺ cytotoxic T cells | CD4⁺ helper T cells |
+| **Recognized by** | $CD8^{+}$ cytotoxic T cells | $CD4^{+}$ helper T cells |
 | **Function** | Flags infected or abnormal cells for killing | Activates helper T cells to coordinate immune response |
 
 ### Self vs Non-Self Recognition
@@ -169,7 +169,7 @@ Both B and T lymphocytes originate from **hematopoietic stem cells** in the bone
               'Neither — macrophages do not present antigens'
             ],
             correctAnswer: 1,
-            explanation: 'Macrophages are professional antigen-presenting cells (APCs) that display fragments of phagocytosed extracellular pathogens on MHC Class II molecules, which are then recognized by CD4⁺ helper T cells.'
+            explanation: 'Macrophages are professional antigen-presenting cells (APCs) that display fragments of phagocytosed extracellular pathogens on MHC Class II molecules, which are then recognized by $CD4^{+}$ helper T cells.'
           }
         ]
       }

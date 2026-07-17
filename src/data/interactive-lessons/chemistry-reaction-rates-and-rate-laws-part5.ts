@@ -39,7 +39,7 @@ Start from the general rate law:
 
 $$\\text{Rate} = k[A]^m[B]^n$$
 
-Rate always has units of **M/s** (or mol·L⁻¹·s⁻¹). Concentration has units of **M** (mol/L).
+Rate always has units of **M/s** $(or mol\\cdot L^{-1}\\cdot s^{-1})$. Concentration has units of **M** (mol/L).
 
 Solving for $k$:
 
@@ -54,10 +54,10 @@ $$\\boxed{\\text{Units of } k = \\frac{\\text{M/s}}{\\text{M}^{m+n}} = \\text{M}
 
 | Overall Order | Units of $k$ | Example |
 |--------------|-------------|---------|
-| 0 | M·s⁻¹ (or M/s) | $k = \\frac{\\text{M/s}}{\\text{M}^0} = \\text{M/s}$ |
-| 1 | s⁻¹ | $k = \\frac{\\text{M/s}}{\\text{M}^1} = \\text{s}^{-1}$ |
-| 2 | M⁻¹·s⁻¹ | $k = \\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$ |
-| 3 | M⁻²·s⁻¹ | $k = \\frac{\\text{M/s}}{\\text{M}^3} = \\text{M}^{-2}\\text{s}^{-1}$ |
+| 0 | $M\\cdot s^{-1}$ (or M/s) | $k = \\frac{\\text{M/s}}{\\text{M}^0} = \\text{M/s}$ |
+| 1 | $s^{-1}$ | $k = \\frac{\\text{M/s}}{\\text{M}^1} = \\text{s}^{-1}$ |
+| 2 | $M^{-1}\\cdot s^{-1}$ | $k = \\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$ |
+| 3 | $M^{-2}\\cdot s^{-1}$ | $k = \\frac{\\text{M/s}}{\\text{M}^3} = \\text{M}^{-2}\\text{s}^{-1}$ |
 
 
 ---
@@ -80,18 +80,18 @@ where $n$ = overall order. As order increases by 1, the power of M decreases by 
       exercise: {
         questions: [
           {
-            question: 'A reaction has Rate = k[A]². What are the units of k?',
+            question: 'A reaction has Rate = k[A]$ {}^{2}$. What are the units of k?',
             options: [
               'M/s',
-              's⁻¹',
-              'M⁻¹s⁻¹',
-              'M⁻²s⁻¹'
+              '$s^{-1}$',
+              '$M^{-1}s^{-1}$',
+              '$M^{-2}s^{-1}$'
             ],
             correctAnswer: 2,
-            explanation: 'Overall order = 2. Units of k = M^(1−2)·s⁻¹ = M⁻¹·s⁻¹. You can verify: k × M² = M⁻¹s⁻¹ × M² = M·s⁻¹ = M/s ✓'
+            explanation: 'Overall order = 2. Units of k = $M^{1-2}\\cdot s^{-1}$ = $M^{-1}\\cdot s^{-1}$. You can verify: k × $M^{2}$ = $M^{-1}s^{-1}$ × $M^{2}$ = $M\\cdot s^{-1}$ = M/s ✓'
           },
           {
-            question: 'If the units of k are s⁻¹, the overall order of the reaction is:',
+            question: 'If the units of k are $s^{-1}$, the overall order of the reaction is:',
             options: [
               '0',
               '1',
@@ -99,18 +99,18 @@ where $n$ = overall order. As order increases by 1, the power of M decreases by 
               '3'
             ],
             correctAnswer: 1,
-            explanation: 's⁻¹ = M⁰·s⁻¹ = M^(1−n)·s⁻¹. So 1 − n = 0, n = 1. This is a first-order reaction.'
+            explanation: '$s^{-1}$ = $M^{0}\\cdot s^{-1}$ = $M^{1-n}\\cdot s^{-1}$. So 1 − n = 0, n = 1. This is a first-order reaction.'
           },
           {
             question: 'A zero-order reaction has Rate = k. What are the units of k?',
             options: [
-              's⁻¹',
-              'M·s⁻¹',
-              'M⁻¹·s⁻¹',
+              '$s^{-1}$',
+              '$M\\cdot s^{-1}$',
+              '$M^{-1}\\cdot s^{-1}$',
               'dimensionless'
             ],
             correctAnswer: 1,
-            explanation: 'For zero-order: Rate = k, so k has the same units as rate: M/s or M·s⁻¹.'
+            explanation: 'For zero-order: Rate = k, so k has the same units as rate: M/s or $M\\cdot s^{-1}$.'
           }
         ]
       }
@@ -142,7 +142,7 @@ Zero-order kinetics often occur when:
 
 ### Example
 
-Decomposition of NH₃ on a hot tungsten surface: Rate = k. The tungsten surface is saturated with NH₃, so adding more does not increase the rate.
+Decomposition of $NH_{3}$ on a hot tungsten surface: Rate = k. The tungsten surface is saturated with $NH_{3}$, so adding more does not increase the rate.
       `
     },
     {
@@ -155,7 +155,7 @@ Decomposition of NH₃ on a hot tungsten surface: Rate = k. The tungsten surface
 
 $$\\boxed{\\text{Rate} = k[A]}$$
 
-- Units of $k$: **s⁻¹**
+- Units of $k$: **$s^{-1}$**
 - Half-life: $\\boxed{t_{1/2} = \\frac{0.693}{k}}$ (**independent** of concentration!)
 - Examples: Radioactive decay, many decomposition reactions
 
@@ -168,7 +168,7 @@ $$\\boxed{\\text{Rate} = k[A]}$$
 
 $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}$$
 
-- Units of $k$: **M⁻¹s⁻¹** (for both cases)
+- Units of $k$: **$M^{-1}s^{-1}$** (for both cases)
 - Half-life: $t_{1/2} = \\frac{1}{k[A]_0}$ (depends on concentration)
 - Example: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
 
@@ -194,14 +194,14 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
         dropdowns: [
           {
             label: 'For a first-order reaction, the half-life',
-            options: ['depends on [A]₀', 'is independent of [A]₀', 'increases with [A]₀', 'equals [A]₀/2k']
+            options: ['depends on [A]$ {}_{0}$', 'is independent of [A]$ {}_{0}$', 'increases with [A]$ {}_{0}$', 'equals [A]$ {}_{0}/2k$']
           },
           {
-            label: 'The units M⁻¹s⁻¹ correspond to overall order',
+            label: 'The units $M^{-1}s^{-1}$ correspond to overall order',
             options: ['0', '1', '2', '3']
           },
           {
-            label: 'A reaction with k = 0.045 s⁻¹ is',
+            label: 'A reaction with k = 0.045 $s^{-1}$ is',
             options: ['zero-order', 'first-order', 'second-order', 'third-order']
           },
           {
@@ -209,11 +209,11 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
             options: ['increases with concentration', 'decreases with concentration', 'is constant', 'equals k[A]']
           }
         ],
-        correctAnswers: ['is independent of [A]₀', '2', 'first-order', 'is constant'],
-        hint1: 'First-order: t₁/₂ = 0.693/k — no [A]₀ in the formula.',
-        hint2: 'M^(1−n)s⁻¹ = M⁻¹s⁻¹ → 1 − n = −1 → n = 2.',
-        hint3: 'Units s⁻¹ → first-order.',
-        explanation: 'First-order half-life depends only on k. M⁻¹s⁻¹ → order 2. Units s⁻¹ → first-order. Zero-order: Rate = k (constant).'
+        correctAnswers: ['is independent of [A]$ {}_{0}$', '2', 'first-order', 'is constant'],
+        hint1: 'First-order: $t_{1}/_{2}$ = 0.693/k — no [A]$ {}_{0}$ in the formula.',
+        hint2: '$M^{1-n}s^{-1}$ = $M^{-1}s^{-1}$ → 1 − n = −1 → n = 2.',
+        hint3: 'Units $s^{-1}$ → first-order.',
+        explanation: 'First-order half-life depends only on k. $M^{-1}s^{-1}$ → order 2. Units $s^{-1}$ → first-order. Zero-order: Rate = k (constant).'
       }
     },
     {
@@ -222,19 +222,19 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
       content: `
 **Units and k Calculations** 🧮
 
-**1)** A third-order reaction has Rate = k[A][B][C]. What is the power of M in the units of k? (e.g., for M⁻¹, enter −1)
+**1)** A third-order reaction has Rate = k[A][B][C]. What is the power of M in the units of k? (e.g., for $M^{-1}$, enter −1)
 
-**2)** A first-order reaction has k = 0.0250 s⁻¹. What is the half-life in seconds? (3 significant figures)
+**2)** A first-order reaction has k = 0.0250 $s^{-1}$. What is the half-life in seconds? (3 significant figures)
 
-**3)** A zero-order reaction has k = 0.0040 M/s and [A]₀ = 0.80 M. What is the half-life in seconds? (whole number)
+**3)** A zero-order reaction has k = 0.0040 M/s and [A]$ {}_{0}$ = 0.80 M. What is the half-life in seconds? (whole number)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['-2', '27.7', '100'],
-        hint1: 'Units of k = M^(1−n)s⁻¹. For n = 3: 1 − 3 = −2.',
-        hint2: 't₁/₂ = 0.693/k = 0.693/0.0250.',
-        hint3: 't₁/₂ = [A]₀/(2k) = 0.80/(2 × 0.0040).',
-        explanation: '1) M^(1−3) = M⁻², power is −2. 2) t₁/₂ = 0.693/0.0250 = 27.72 ≈ 27.7 s. 3) t₁/₂ = 0.80/(2 × 0.0040) = 0.80/0.008 = 100 s.'
+        hint1: 'Units of k = $M^{1-n}s^{-1}$. For n = 3: 1 − 3 = −2.',
+        hint2: '$t_{1}/_{2}$ = 0.693/k = 0.693/0.0250.',
+        hint3: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ = 0.80/(2 × 0.0040).',
+        explanation: '1) $M^{1-3}$ = $M^{-2}$, power is −2. 2) $t_{1}/_{2}$ = 0.693/0.0250 = 27.72 ≈ 27.7 s. 3) $t_{1}/_{2}$ = 0.80/(2 × 0.0040) = 0.80/0.008 = 100 s.'
       }
     },
     {
@@ -246,15 +246,15 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
       exercise: {
         questions: [
           {
-            question: 'A reaction has the rate law Rate = k[X]²[Y]. What are the units of k?',
+            question: 'A reaction has the rate law Rate = k[X]$ {}^{2}$[Y]. What are the units of k?',
             options: [
-              'M⁻¹s⁻¹',
-              'M⁻²s⁻¹',
-              'M⁻³s⁻¹',
-              's⁻¹'
+              '$M^{-1}s^{-1}$',
+              '$M^{-2}s^{-1}$',
+              '$M^{-3}s^{-1}$',
+              '$s^{-1}$'
             ],
             correctAnswer: 1,
-            explanation: 'Overall order = 2 + 1 = 3. Units = M^(1−3)s⁻¹ = M⁻²s⁻¹.'
+            explanation: 'Overall order = 2 + 1 = 3. Units = $M^{1-3}s^{-1}$ = $M^{-2}s^{-1}$.'
           },
           {
             question: 'Which reaction order has a half-life that is independent of the initial concentration?',
@@ -265,7 +265,7 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
               'Third-order'
             ],
             correctAnswer: 1,
-            explanation: 'First-order: t₁/₂ = 0.693/k. The initial concentration does not appear, so the half-life is the same regardless of how much reactant you start with.'
+            explanation: 'First-order: $t_{1}/_{2}$ = 0.693/k. The initial concentration does not appear, so the half-life is the same regardless of how much reactant you start with.'
           }
         ]
       }

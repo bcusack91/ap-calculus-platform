@@ -17,8 +17,8 @@ $$\\vec{E} = \\frac{1}{4\\pi\\epsilon_0}\\int \\frac{dq}{r^2}\\hat{r}$$
 | Geometry | Symbol | Definition | Units |
 |:---:|:---:|:---:|:---:|
 | Line | $\\lambda$ | $dq = \\lambda\\,dl$ | C/m |
-| Surface | $\\sigma$ | $dq = \\sigma\\,dA$ | C/m² |
-| Volume | $\\rho$ | $dq = \\rho\\,dV$ | C/m³ |
+| Surface | $\\sigma$ | $dq = \\sigma\\,dA$ | $C/m^{2}$ |
+| Volume | $\\rho$ | $dq = \\rho\\,dV$ | $C/m^{3}$ |
 
 ### Integration Strategy
 1. Choose a coordinate system exploiting symmetry.

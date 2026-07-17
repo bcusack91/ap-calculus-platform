@@ -173,7 +173,7 @@ $$\\Delta H_{\\text{reverse}} = -\\Delta H_{\\text{forward}}$$
             explanation: 'A state function depends only on the initial and final states, not on the path taken. This is why Hess\'s Law works — you can add up steps and get the same total ΔH.'
           },
           {
-            question: 'If ΔH for 2H₂(g) + O₂(g) → 2H₂O(l) is −484 kJ, what is ΔH for H₂(g) + ½O₂(g) → H₂O(l)?',
+            question: 'If ΔH for $2H_{2}(g)$ + $O_{2}(g)$ → $2H_{2}O(l)$ is −484 kJ, what is ΔH for $H_{2}(g)$ + $\\tfrac{1}{2} O_{2}(g)$ → $H_{2}O(l)$?',
             options: [
               '−484 kJ',
               '−242 kJ',
@@ -189,7 +189,7 @@ $$\\Delta H_{\\text{reverse}} = -\\Delta H_{\\text{forward}}$$
               'C(g)',
               'C(s, diamond)',
               'C(s, graphite)',
-              'CO₂(g)'
+              '$CO_{2}(g)$'
             ],
             correctAnswer: 2,
             explanation: 'The standard state is the most stable form at 1 atm. Graphite is more stable than diamond under standard conditions, so C(s, graphite) is the standard state.'
@@ -234,7 +234,7 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
           },
           {
             label: 'The standard state of bromine at 25°C is',
-            options: ['Br₂(g)', 'Br₂(l)', 'Br(g)', 'Br₂(s)']
+            options: ['$Br_{2}(g)$', '$Br_{2}(l)$', 'Br(g)', '$Br_{2}(s)$']
           },
           {
             label: 'Tripling a reaction multiplies ΔH by',
@@ -245,11 +245,11 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
             options: ['initial state', 'final state', 'the reaction pathway', 'temperature']
           }
         ],
-        correctAnswers: ['heat transferred', 'Br₂(l)', '3', 'the reaction pathway'],
+        correctAnswers: ['heat transferred', '$Br_{2}(l)$', '3', 'the reaction pathway'],
         hint1: '$\\Delta H = q_p$ — enthalpy change equals heat at constant pressure.',
         hint2: 'Bromine is a liquid at room temperature and 1 atm.',
         hint3: 'ΔH scales linearly with the stoichiometric coefficients.',
-        explanation: 'At constant pressure, ΔH = qₚ. Bromine is liquid at standard conditions. Scaling a reaction by factor n scales ΔH by n. As a state function, ΔH is path-independent.'
+        explanation: 'At constant pressure, ΔH = $q_{p}$. Bromine is liquid at standard conditions. Scaling a reaction by factor n scales ΔH by n. As a state function, ΔH is path-independent.'
       }
     },
     {
@@ -272,7 +272,7 @@ Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\
             explanation: 'ΔH is a state function and does NOT depend on the mechanism or pathway. It depends only on the identity and states of reactants and products. All other statements are true.'
           },
           {
-            question: 'Given: C(s) + O₂(g) → CO₂(g), ΔH = −393.5 kJ. What is ΔH for 3C(s) + 3O₂(g) → 3CO₂(g)?',
+            question: 'Given: C(s) + $O_{2}(g)$ → $CO_{2}(g)$, ΔH = −393.5 kJ. What is ΔH for 3C(s) + $3O_{2}(g)$ → $3CO_{2}(g)$?',
             options: [
               '−393.5 kJ',
               '−787.0 kJ',

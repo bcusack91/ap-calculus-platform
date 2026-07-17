@@ -86,7 +86,7 @@ $N = 6mg$ — the rider feels **6g** at the bottom!
       content: `
 **Multi-Step Problems** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 2 kg block slides from rest down a frictionless ramp of height 8 m and enters a circular loop of radius 2 m. What is the block's speed at the top of the loop (in m/s, round to 3 significant figures)?
 
@@ -112,7 +112,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A car goes over a circular hill (radius 50 m) at 25 m/s. A 1 kg package sits on the car roof. The normal force on the package at the top of the hill is ($g = 10$ m/s²):',
+            question: 'A car goes over a circular hill (radius 50 m) at 25 m/s. A 1 kg package sits on the car roof. The normal force on the package at the top of the hill is ($g = 10$ $m/s^{2}$):',
             options: [
               '2.5 N',
               '5 N',
@@ -153,7 +153,7 @@ Use $g = 10$ m/s².
       content: `
 **Challenge Problems** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 1500 kg car travels at 20 m/s over a circular dip in the road (radius 80 m). What is the normal force at the bottom of the dip (in N)?
 

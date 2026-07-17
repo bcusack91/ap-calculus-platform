@@ -161,10 +161,10 @@ Answer: $3x - 1 = 0$. No need to find $x$ at all!
         dropdowns: [
           { label: '$4x^2 - 25$', options: ['Difference of squares', 'Perfect square trinomial', 'Factor by grouping', 'Sum of cubes'] },
           { label: '$x^3 + 2x^2 - 3x - 6$', options: ['Factor by grouping', 'Difference of squares', 'Trinomial factoring', 'GCF only'] },
-          { label: '$x^6 - 7x^3 + 12$', options: ['Disguised quadratic (u = x³)', 'Difference of cubes', 'Factor by grouping', 'GCF first'] },
+          { label: '$x^6 - 7x^3 + 12$', options: ['Disguised quadratic (u = $x^{3}$)', 'Difference of cubes', 'Factor by grouping', 'GCF first'] },
           { label: '$16x^2 + 24x + 9$', options: ['Perfect square trinomial', 'Difference of squares', 'AC method', 'Not factorable'] }
         ],
-        correctAnswers: ['Difference of squares', 'Factor by grouping', 'Disguised quadratic (u = x³)', 'Perfect square trinomial'],
+        correctAnswers: ['Difference of squares', 'Factor by grouping', 'Disguised quadratic (u = $x^{3}$)', 'Perfect square trinomial'],
         hint1: '$4x^2 - 25 = (2x)^2 - 5^2$ — what pattern is that?',
         hint2: 'Four terms with no common factor → try grouping in pairs.',
         hint3: '$x^6 = (x^3)^2$ — so it\'s a quadratic in $x^3$. And $16x^2 + 24x + 9$: check if $\\sqrt{16x^2} = 4x$ and $\\sqrt{9} = 3$...',

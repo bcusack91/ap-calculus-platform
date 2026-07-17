@@ -121,7 +121,7 @@ Start with the tenths: $4 + 8 = 12$ tenths. That is **more than 9**, so we write
 Then the ones: $1 + 5 + 3 = 9$.
 
 \`\`\`
-   ¹
+   $ {}^{1}$
   5.4
 + 3.8
 -----

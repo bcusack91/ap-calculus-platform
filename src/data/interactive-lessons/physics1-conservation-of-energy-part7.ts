@@ -211,7 +211,7 @@ The sum of all initial bars must equal the sum of all final bars (including ther
             explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh}$. Mass cancels! Both blocks reach the same speed.'
           },
           {
-            question: 'A 1 kg ball swings on a string from height $h = 0.8$ m. At the bottom of the swing, the speed is measured to be 3 m/s (use $g = 10$ m/s²). This means:',
+            question: 'A 1 kg ball swings on a string from height $h = 0.8$ m. At the bottom of the swing, the speed is measured to be 3 m/s (use $g = 10$ $m/s^{2}$). This means:',
             options: [
               'Energy was conserved perfectly',
               'The ball gained energy from the string',
@@ -230,7 +230,7 @@ The sum of all initial bars must equal the sum of all final bars (including ther
       content: `
 **AP-Style Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 0.5 kg ball is dropped from 20 m onto a spring ($k = 500$ N/m). Find the maximum compression of the spring (in m, to 3 significant figures). Hint: the ball falls an extra distance $x$ below the spring\'s natural length.
 

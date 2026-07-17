@@ -76,7 +76,7 @@ $m_1 = 2$ kg, $m_2 = 8$ kg, $F = 50$ N
 
 - Pushing $m_1$: Contact = $\\frac{8}{10}(50) = 40$ N
 - Pushing $m_2$: Contact = $\\frac{2}{10}(50) = 10$ N
-- Acceleration either way: $a = 50/10 = 5$ m/s²
+- Acceleration either way: $a = 50/10 = 5$ $m/s^{2}$
       `
     },
     {
@@ -130,7 +130,7 @@ If the applied force produces an acceleration greater than $\\mu_s g$, block A s
               '25 N'
             ],
             correctAnswer: 1,
-            explanation: '$a = F/(m_1 + m_2) = 50/10 = 5$ m/s². Contact force = $m_2 \\times a = 7 \\times 5 = 35$ N.'
+            explanation: '$a = F/(m_1 + m_2) = 50/10 = 5$ $m/s^{2}$. Contact force = $m_2 \\times a = 7 \\times 5 = 35$ N.'
           },
           {
             question: 'In the same setup, if the 50 N force is instead applied to $m_2$, the contact force becomes:',
@@ -141,10 +141,10 @@ If the applied force produces an acceleration greater than $\\mu_s g$, block A s
               '25 N'
             ],
             correctAnswer: 0,
-            explanation: 'Same acceleration ($5$ m/s²), but now the contact force pushes $m_1$: $F_{\\text{contact}} = m_1 \\times a = 3 \\times 5 = 15$ N.'
+            explanation: 'Same acceleration ($5$ $m/s^{2}$), but now the contact force pushes $m_1$: $F_{\\text{contact}} = m_1 \\times a = 3 \\times 5 = 15$ N.'
           },
           {
-            question: 'Block A (2 kg) sits on block B (8 kg) on a frictionless surface. $\\mu_s = 0.40$ between A and B. What is the maximum force that can be applied to B without A sliding off? ($g = 10$ m/s²)',
+            question: 'Block A (2 kg) sits on block B (8 kg) on a frictionless surface. $\\mu_s = 0.40$ between A and B. What is the maximum force that can be applied to B without A sliding off? ($g = 10$ $m/s^{2}$)',
             options: [
               '8 N',
               '32 N',
@@ -152,7 +152,7 @@ If the applied force produces an acceleration greater than $\\mu_s g$, block A s
               '80 N'
             ],
             correctAnswer: 2,
-            explanation: '$a_{\\max} = \\mu_s g = 0.40 \\times 10 = 4$ m/s². $F_{\\max} = (m_A + m_B) \\times a_{\\max} = 10 \\times 4 = 40$ N.'
+            explanation: '$a_{\\max} = \\mu_s g = 0.40 \\times 10 = 4$ $m/s^{2}$. $F_{\\max} = (m_A + m_B) \\times a_{\\max} = 10 \\times 4 = 40$ N.'
           }
         ]
       }
@@ -165,7 +165,7 @@ If the applied force produces an acceleration greater than $\\mu_s g$, block A s
 
 Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ kg. A force of 30 N is applied horizontally to $m_1$.
 
-1) What is the acceleration of the system (in m/s²)?
+1) What is the acceleration of the system $(in m/s^{2})$?
 
 2) What is the contact force between the blocks (in N)?
 
@@ -177,7 +177,7 @@ Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ 
         hint1: '$a = F/(m_1 + m_2) = 30/10$.',
         hint2: 'The contact force accelerates $m_2$: $F_{\\text{contact}} = m_2 a$.',
         hint3: 'Now the contact force accelerates $m_1$: $F_{\\text{contact}} = m_1 a$.',
-        explanation: '1) $a = 30/10 = 3$ m/s². 2) $F_{\\text{contact}} = m_2 a = 6 \\times 3 = 18$ N. 3) $F_{\\text{contact}} = m_1 a = 4 \\times 3 = 12$ N.'
+        explanation: '1) $a = 30/10 = 3$ $m/s^{2}$. 2) $F_{\\text{contact}} = m_2 a = 6 \\times 3 = 18$ N. 3) $F_{\\text{contact}} = m_1 a = 4 \\times 3 = 12$ N.'
       }
     },
     {
@@ -232,18 +232,18 @@ Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ 
               '100 N'
             ],
             correctAnswer: 1,
-            explanation: '$a = 25/5 = 5$ m/s². Force on B = $m_B \\times a = 4 \\times 5 = 20$ N. Force on A from B (Third Law) = 20 N backward.'
+            explanation: '$a = 25/5 = 5$ $m/s^{2}$. Force on B = $m_B \\times a = 4 \\times 5 = 20$ N. Force on A from B (Third Law) = 20 N backward.'
           },
           {
-            question: 'A 3 kg block sits on a 5 kg block on a frictionless floor. $\\mu_s = 0.50$ between blocks. The maximum acceleration without sliding is ($g = 10$ m/s²):',
+            question: 'A 3 kg block sits on a 5 kg block on a frictionless floor. $\\mu_s = 0.50$ between blocks. The maximum acceleration without sliding is ($g = 10$ $m/s^{2}$):',
             options: [
-              '2 m/s²',
-              '5 m/s²',
-              '8 m/s²',
-              '10 m/s²'
+              '2 $m/s^{2}$',
+              '5 $m/s^{2}$',
+              '8 $m/s^{2}$',
+              '10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a_{\\max} = \\mu_s g = 0.50 \\times 10 = 5$ m/s². If the system accelerates faster than this, the friction can\'t keep the top block in place.'
+            explanation: '$a_{\\max} = \\mu_s g = 0.50 \\times 10 = 5$ $m/s^{2}$. If the system accelerates faster than this, the friction can\'t keep the top block in place.'
           }
         ]
       }

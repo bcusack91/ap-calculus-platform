@@ -97,7 +97,7 @@ Goal: average the largest n values in list.
       RETURN FALSE
     }
 
-**Efficiency note:** this is O(n²). With a hash/dictionary it can become O(n) — a common AP exam upgrade question.
+**Efficiency note:** this is $O(n^{2})$. With a hash/dictionary it can become O(n) — a common AP exam upgrade question.
       `
     },
     {
@@ -108,7 +108,7 @@ Goal: average the largest n values in list.
 
 1) For "first occurrence" problems, the loop body should _______ on first match.
 
-2) For O(n²) duplicate detection, an upgrade to O(n) uses a _______ to remember seen values.
+2) For $O(n^{2})$ duplicate detection, an upgrade to O(n) uses a _______ to remember seen values.
 
 3) When dividing by n, you must guard against n equal to _______.
       `,
@@ -182,7 +182,7 @@ Goal: average the largest n values in list.
             explanation: "The hash-set approach is O(n) and correct for distinct-pair sum."
           },
           {
-            question: "A procedure mostFrequent(list) returns the element that appears most often. The student writes a doubly-nested loop that for every element counts its occurrences, tracking the max. This is O(n²). For n = 100,000 it times out. The most appropriate fix is to ___",
+            question: "A procedure mostFrequent(list) returns the element that appears most often. The student writes a doubly-nested loop that for every element counts its occurrences, tracking the max. This is $O(n^{2})$. For n = 100,000 it times out. The most appropriate fix is to ___",
             options: [
               "replace the nested loop with a single pass that builds a frequency dictionary, then a single pass over the dictionary to find the max.",
               "switch to a faster computer with a higher clock speed and rerun the same doubly-nested loop on the larger input list.",

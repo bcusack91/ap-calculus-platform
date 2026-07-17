@@ -118,7 +118,7 @@ This is analogous to $P = Fv$ in linear motion.
       content: `
 **Rotational KE Calculations** 🧮
 
-1) A wheel ($I = 4$ kg·m²) spins at 10 rad/s. What is its rotational KE? (in J)
+1) A wheel ($I = 4$ $kg\\cdot m^{2}$) spins at 10 rad/s. What is its rotational KE? (in J)
 
 2) A solid sphere (mass 3 kg, radius 0.1 m) spins at 20 rad/s (not translating). What is its rotational KE? (in J, round to 3 significant figures)
 
@@ -128,9 +128,9 @@ This is analogous to $P = Fv$ in linear motion.
         boxes: 3,
         correctAnswers: ['200', '0.48', '200'],
         hint1: '$KE = \\frac{1}{2}I\\omega^2 = \\frac{1}{2}(4)(100)$',
-        hint2: '$I = \\frac{2}{5}MR^2 = \\frac{2}{5}(3)(0.01) = 0.012$ kg·m². $KE = \\frac{1}{2}(0.012)(400)$',
+        hint2: '$I = \\frac{2}{5}MR^2 = \\frac{2}{5}(3)(0.01) = 0.012$ $kg\\cdot m^{2}$. $KE = \\frac{1}{2}(0.012)(400)$',
         hint3: '$W = \\tau\\theta = (8)(25)$',
-        explanation: '1) $KE = \\frac{1}{2}(4)(100) = 200$ J. 2) $I = 0.012$ kg·m². $KE = \\frac{1}{2}(0.012)(400) = 2.4$ J. Hmm, let me recalculate: $I = \\frac{2}{5}(3)(0.01) = 0.012$. $KE = \\frac{1}{2}(0.012)(400) = 2.4$ J. Actually the answer should be 2.40, let me re-examine. $\\frac{2}{5}(3)(0.01) = 0.012$. $\\frac{1}{2}(0.012)(400) = 2.4$ J. The answer is 2.40. 3) $W = 200$ J.'
+        explanation: '1) $KE = \\frac{1}{2}(4)(100) = 200$ J. 2) $I = 0.012$ $kg\\cdot m^{2}$. $KE = \\frac{1}{2}(0.012)(400) = 2.4$ J. Hmm, let me recalculate: $I = \\frac{2}{5}(3)(0.01) = 0.012$. $KE = \\frac{1}{2}(0.012)(400) = 2.4$ J. Actually the answer should be 2.40, let me re-examine. $\\frac{2}{5}(3)(0.01) = 0.012$. $\\frac{1}{2}(0.012)(400) = 2.4$ J. The answer is 2.40. 3) $W = 200$ J.'
       }
     },
     {
@@ -143,7 +143,7 @@ This is analogous to $P = Fv$ in linear motion.
         dropdowns: [
           {
             label: 'The formula for rotational kinetic energy is:',
-            options: ['½mv²', '½Iω²', 'Iω', 'τθ'],
+            options: ['$\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} I\\omega^{2}$', 'Iω', 'τθ'],
             correctIndex: 1,
             explanation: 'Rotational kinetic energy is $\\frac{1}{2}I\\omega^2$.'
           },
@@ -171,7 +171,7 @@ This is analogous to $P = Fv$ in linear motion.
       exercise: {
         questions: [
           {
-            question: 'A solid sphere ($M = 2$ kg, $R = 0.1$ m) rolls without slipping down a ramp of height $h = 5$ m. Its speed at the bottom is closest to: (use $g = 10$ m/s²)',
+            question: 'A solid sphere ($M = 2$ kg, $R = 0.1$ m) rolls without slipping down a ramp of height $h = 5$ m. Its speed at the bottom is closest to: (use $g = 10$ $m/s^{2}$)',
             options: [
               '7.1 m/s',
               '8.5 m/s',

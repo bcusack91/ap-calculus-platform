@@ -11,7 +11,7 @@ export const mcatKineticsPart5Data = {
 ## High-Yield Checklist
 
 - ✅ **Rate law:** experimentally determined; rate = $k[\\text{A}]^m[\\text{B}]^n$
-- ✅ **Units of $k$:** 0th order = M/s; 1st order = s⁻¹; 2nd order = M⁻¹s⁻¹
+- ✅ **Units of $k$:** 0th order = M/s; 1st order = $s^{-1}$; 2nd order = $M^{-1}s^{-1}$
 - ✅ **Integrated rate laws:** 0th ($[A]$ vs $t$), 1st ($\\ln[A]$ vs $t$), 2nd ($1/[A]$ vs $t$)
 - ✅ **First-order half-life:** $t_{1/2} = 0.693/k$ (constant)
 - ✅ **Arrhenius:** $k = Ae^{-E_a/RT}$; higher $T$ or lower $E_a$ → larger $k$
@@ -30,10 +30,10 @@ export const mcatKineticsPart5Data = {
           {
             question: `The rate law for a reaction is rate = $k[\\text{A}]^2[\\text{B}]$. The initial concentrations are $[\\text{A}] = 0.4$ M and $[\\text{B}] = 0.2$ M; rate = $1.6 \\times 10^{-3}$ M/s. What is $k$?`,
             options: [
-              `$5.0 \\times 10^{-2}$ M⁻²s⁻¹`,
-              `$1.25 \\times 10^{-1}$ M⁻²s⁻¹`,
-              `$2.0 \\times 10^{-2}$ M⁻²s⁻¹`,
-              `$5.0 \\times 10^{-3}$ M⁻²s⁻¹`
+              `$5.0 \\times 10^{-2}$ $M^{-2}s^{-1}$`,
+              `$1.25 \\times 10^{-1}$ $M^{-2}s^{-1}$`,
+              `$2.0 \\times 10^{-2}$ $M^{-2}s^{-1}$`,
+              `$5.0 \\times 10^{-3}$ $M^{-2}s^{-1}$`
             ],
             correctAnswer: 0,
             explanation: `$k = \\text{rate}/([\\text{A}]^2[\\text{B}]) = (1.6 \\times 10^{-3})/((0.4)^2(0.2)) = (1.6 \\times 10^{-3})/(0.032) = \\mathbf{5.0 \\times 10^{-2}}\\text{ M}^{-2}\\text{s}^{-1}$.`

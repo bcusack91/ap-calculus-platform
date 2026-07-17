@@ -152,8 +152,8 @@ All processes are isobaric (constant pressure). Give magnitude and correct sign.
         correctAnswers: ['500', '-1500', '3'],
         hint1: '$W = P\\Delta V = (100{,}000)(0.005) = 500$ J.',
         hint2: '$W = P\\Delta V = (250{,}000)(0.004 - 0.010) = (250{,}000)(-0.006) = -1500$ J. Negative because compression.',
-        hint3: '$\\Delta V = W/P = 450/150{,}000 = 0.003$ m³ $= 3$ L.',
-        explanation: 'Use $W = P\\Delta V$ with volumes in m³ (1 L = 0.001 m³). Sign follows from whether the gas expands (+) or compresses (−).'
+        hint3: '$\\Delta V = W/P = 450/150{,}000 = 0.003$ $m^{3}$ $= 3$ L.',
+        explanation: 'Use $W = P\\Delta V$ with volumes in $m^{3}$ (1 L = 0.001 $m^{3}$). Sign follows from whether the gas expands (+) or compresses (−).'
       }
     }
   ]

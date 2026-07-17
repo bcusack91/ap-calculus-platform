@@ -202,12 +202,12 @@ Use that skeleton on every "explain" prompt.
             question: "An FRQ asks: *Explain ONE reason* the U.S. has lower agricultural density than Vietnam. Which response would earn the point?",
             options: [
               "The U.S. produces more food than Vietnam.",
-              "U.S. farms use heavy mechanization (combines, GPS-guided tractors), so fewer farmers are needed per arable km², while Vietnamese rice paddies remain labor-intensive.",
+              "U.S. farms use heavy mechanization (combines, GPS-guided tractors), so fewer farmers are needed per arable $km^{2}$, while Vietnamese rice paddies remain labor-intensive.",
               "Agricultural density measures farmers per arable land.",
               "The U.S. has larger arable land than Vietnam."
             ],
             correctAnswer: 1,
-            explanation: "Only option B provides cause→effect: mechanization replaces labor → fewer farmers per arable km². Defining the term or stating a fact does not satisfy the *explain* verb."
+            explanation: "Only option B provides cause→effect: mechanization replaces labor → fewer farmers per arable $km^{2}$. Defining the term or stating a fact does not satisfy the *explain* verb."
           }
         ]
       }

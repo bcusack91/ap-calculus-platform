@@ -41,10 +41,10 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     type: 'multiple-choice',
     category: 'sign-convention',
     difficulty: 'medium',
-    question: 'Light traveling rightward hits a mirror at x = 10 cm and reflects to cross the axis at x = 20 cm. What is x₂ in Cartesian convention?',
+    question: 'Light traveling rightward hits a mirror at x = 10 cm and reflects to cross the axis at x = 20 cm. What is $x_{2}$ in Cartesian convention?',
     options: ['-20 cm', '-10 cm', '+10 cm', '+20 cm'],
     correctAnswer: 3,
-    explanation: 'After reflection, light is still traveling right (positive direction), and the crossing point is 20 cm to the right, so x₂ = +20 cm.'
+    explanation: 'After reflection, light is still traveling right (positive direction), and the crossing point is 20 cm to the right, so $x_{2}$ = +20 cm.'
   },
   {
     id: 'sign-3',
@@ -151,10 +151,10 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         .map(v => `n = ${v}`)
       
       return {
-        question: `Light travels at ${speed} × 10⁸ m/s in a material. What is its index of refraction?`,
+        question: `Light travels at ${speed} × $10^{8}$ m/s in a material. What is its index of refraction?`,
         options,
         correctAnswer: options.indexOf(`n = ${n}`),
-        explanation: `n = c/v = (3.0 × 10⁸)/(${speed} × 10⁸) = ${n}`
+        explanation: `n = c/v = $(3.0 \\times 10^{8})$/(${speed} × $10^{8}$) = ${n}`
       }
     }
   },
@@ -221,8 +221,8 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
       return {
         question: `A material has index of refraction n = ${n}. At what speed does light travel in this material?`,
         options,
-        correctAnswer: options.indexOf(`${speed} × 10⁸ m/s`),
-        explanation: `v = c/n = (3.0 × 10⁸)/${n} = ${speed} × 10⁸ m/s`
+        correctAnswer: options.indexOf(`${speed} × $10^{8}$ m/s`),
+        explanation: `v = c/n = $(3.0 \\times 10^{8})$/${n} = ${speed} × $10^{8}$ m/s`
       }
     }
   },
@@ -269,7 +269,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         question: `Light in air (n=1.0) hits ${material} (n=${n2}) at ${theta1}° from normal. What is the refraction angle?`,
         options,
         correctAnswer: options.indexOf(`${theta2}°`),
-        explanation: `Using Snell's Law: (1.0)sin(${theta1}°) = (${n2})sin(θ₂). Solving: sin(θ₂) = ${sinTheta2.toFixed(3)}, so θ₂ = ${theta2}°. Light bends toward normal when entering denser medium.`
+        explanation: `Using Snell's Law: (1.0)sin(${theta1}°) = (${n2})$\\sin (\\theta_{2})$. Solving: $\\sin (\\theta_{2})$ = ${sinTheta2.toFixed(3)}, so $\\theta_{2}$ = ${theta2}°. Light bends toward normal when entering denser medium.`
       }
     }
   },
@@ -301,7 +301,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         question: `Light in glass (n=${n1}) exits to air (n=1.0) at ${theta1}° from normal. What is the refraction angle in air?`,
         options,
         correctAnswer: options.indexOf(`${theta2}°`),
-        explanation: `Using Snell's Law: (${n1})sin(${theta1}°) = (1.0)sin(θ₂). Solving: θ₂ = ${theta2}°. Light bends AWAY from normal when entering less dense medium.`
+        explanation: `Using Snell's Law: (${n1})sin(${theta1}°) = $(1.0)\\sin (\\theta_{2})$. Solving: $\\theta_{2}$ = ${theta2}°. Light bends AWAY from normal when entering less dense medium.`
       }
     }
   },
@@ -363,7 +363,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         question: `Light goes from medium A (n=${n1}) to medium B (n=${n2}) at ${theta1}° from normal. Find the refraction angle.`,
         options,
         correctAnswer: options.indexOf(`${theta2}°`),
-        explanation: `Snell's Law: (${n1})sin(${theta1}°) = (${n2})sin(θ₂). Result: θ₂ = ${theta2}°. Higher n₂ means light bends toward normal.`
+        explanation: `Snell's Law: (${n1})sin(${theta1}°) = (${n2})$\\sin (\\theta_{2})$. Result: $\\theta_{2}$ = ${theta2}°. Higher $n_{2}$ means light bends toward normal.`
       }
     }
   },
@@ -372,10 +372,10 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     type: 'multiple-choice',
     category: 'snell',
     difficulty: 'medium',
-    question: 'What happens if you try to solve Snell\'s Law and get sin(θ₂) > 1?',
-    options: ['θ₂ = 90°', 'No refraction occurs', 'Total internal reflection occurs', 'You made an algebra mistake'],
+    question: 'What happens if you try to solve Snell\'s Law and get $\\sin (\\theta_{2})$ > 1?',
+    options: ['$\\theta_{2}$ = 90°', 'No refraction occurs', 'Total internal reflection occurs', 'You made an algebra mistake'],
     correctAnswer: 2,
-    explanation: 'sin(θ₂) > 1 has no real solution, meaning the light cannot refract into the second medium. Total internal reflection occurs instead.'
+    explanation: '$\\sin (\\theta_{2})$ > 1 has no real solution, meaning the light cannot refract into the second medium. Total internal reflection occurs instead.'
   },
   {
     id: 'snell-8',
@@ -401,10 +401,10 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         .map(v => `n = ${v}`)
       
       return {
-        question: `Light enters medium 2 (n=${n2}) from medium 1 at ${theta1}°. If it refracts to ${theta2}°, what is n₁?`,
+        question: `Light enters medium 2 (n=${n2}) from medium 1 at ${theta1}°. If it refracts to ${theta2}°, what is $n_{1}$?`,
         options,
         correctAnswer: options.indexOf(`n = ${n1}`),
-        explanation: `From n₁sin(${theta1}°) = ${n2}sin(${theta2}°), we get n₁ = ${n2}×sin(${theta2}°)/sin(${theta1}°) = ${n1}.`
+        explanation: `From $n_{1}\\sin$(${theta1}°) = ${n2}sin(${theta2}°), we get $n_{1}$ = ${n2}×sin(${theta2}°)/sin(${theta1}°) = ${n1}.`
       }
     }
   },
@@ -416,7 +416,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     question: 'A laser pointer in water (n=1.33) shines up at the surface. At what minimum angle from vertical will the light escape to air?',
     options: ['0° (always escapes)', '42°', '48.8°', '90°'],
     correctAnswer: 2,
-    explanation: 'This is asking for angles LESS than the critical angle. θc = sin⁻¹(1.0/1.33) = 48.8°. At angles > 48.8° from vertical (normal), TIR occurs.'
+    explanation: 'This is asking for angles LESS than the critical angle. θc = $\\sin^{-1}(1.0/1.33)$ = 48.8°. At angles > 48.8° from vertical (normal), TIR occurs.'
   },
   {
     id: 'snell-10',
@@ -424,9 +424,9 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     category: 'snell',
     difficulty: 'easy',
     question: 'Which equation correctly represents Snell\'s Law?',
-    options: ['n₁/n₂ = sin(θ₂)/sin(θ₁)', 'n₁sin(θ₁) = n₂sin(θ₂)', 'n₁θ₁ = n₂θ₂', 'n₁ + θ₁ = n₂ + θ₂'],
+    options: ['$n_{1}/n_{2}$ = $\\sin (\\theta_{2})/\\sin (\\theta_{1})$', '$n_{1}\\sin (\\theta_{1})$ = $n_{2}\\sin (\\theta_{2})$', '$n_{1}\\theta_{1}$ = $n_{2}\\theta_{2}$', '$n_{1}$ + $\\theta_{1}$ = $n_{2}$ + $\\theta_{2}$'],
     correctAnswer: 1,
-    explanation: 'Snell\'s Law: n₁sin(θ₁) = n₂sin(θ₂). Note it involves SINE of angles, not angles directly!'
+    explanation: 'Snell\'s Law: $n_{1}\\sin (\\theta_{1})$ = $n_{2}\\sin (\\theta_{2})$. Note it involves SINE of angles, not angles directly!'
   },
 
   // ========== TOTAL INTERNAL REFLECTION & CRITICAL ANGLE (10) ==========
@@ -460,7 +460,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         question: `What is the critical angle for light going from ${material} (n=${n1}) to air (n=1.0)?`,
         options,
         correctAnswer: options.indexOf(`${thetaC}°`),
-        explanation: `θc = sin⁻¹(n₂/n₁) = sin⁻¹(1.0/${n1}) = ${thetaC}°. At angles greater than this, total internal reflection occurs.`
+        explanation: `θc = $\\sin^{-1}(n_{2}/n_{1})$ = $\\sin^{-1}$(1.0/${n1}) = ${thetaC}°. At angles greater than this, total internal reflection occurs.`
       }
     }
   },
@@ -488,7 +488,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
           `No, because ${theta}° > ${thetaC}° (critical angle)`
         ],
         correctAnswer: occurs ? 0 : 1,
-        explanation: `Critical angle θc = sin⁻¹(1.0/${n1}) = ${thetaC}°. Since ${theta}° ${occurs ? '>' : '<'} ${thetaC}°, TIR ${occurs ? 'DOES' : 'does NOT'} occur.`
+        explanation: `Critical angle θc = $\\sin^{-1}$(1.0/${n1}) = ${thetaC}°. Since ${theta}° ${occurs ? '>' : '<'} ${thetaC}°, TIR ${occurs ? 'DOES' : 'does NOT'} occur.`
       }
     }
   },
@@ -500,7 +500,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     question: 'Total internal reflection can only occur when light travels from:',
     options: ['Low n to high n', 'High n to low n', 'Any two different materials', 'Air to water only'],
     correctAnswer: 1,
-    explanation: 'TIR only occurs when going from high n to low n (e.g., glass to air). The critical angle formula requires n₁ > n₂.'
+    explanation: 'TIR only occurs when going from high n to low n (e.g., glass to air). The critical angle formula requires $n_{1}$ > $n_{2}$.'
   },
   {
     id: 'tir-4',
@@ -510,7 +510,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     question: 'At the critical angle, the refracted ray travels:',
     options: ['Back into the first medium', 'Along the boundary (90° from normal)', 'Straight through', 'At 45° to the normal'],
     correctAnswer: 1,
-    explanation: 'At θc, the refracted ray grazes along the boundary surface (θ₂ = 90°). Beyond θc, total internal reflection occurs.'
+    explanation: 'At θc, the refracted ray grazes along the boundary surface ($\\theta_{2}$ = 90°). Beyond θc, total internal reflection occurs.'
   },
   {
     id: 'tir-5',
@@ -528,9 +528,9 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
     category: 'tir',
     difficulty: 'medium',
     question: 'Why is the critical angle for diamond (n=2.42) so small (24.4°)?',
-    options: ['Diamonds are very dense', 'n is very high, making n₂/n₁ small', 'Diamonds absorb light', 'Diamond has low n'],
+    options: ['Diamonds are very dense', 'n is very high, making $n_{2}/n_{1}$ small', 'Diamonds absorb light', 'Diamond has low n'],
     correctAnswer: 1,
-    explanation: 'θc = sin⁻¹(n₂/n₁) = sin⁻¹(1.0/2.42) = 24.4°. High n₁ makes the ratio small, giving a small critical angle. This is why diamonds sparkle!'
+    explanation: 'θc = $\\sin^{-1}(n_{2}/n_{1})$ = $\\sin^{-1}(1.0/2.42)$ = 24.4°. High $n_{1}$ makes the ratio small, giving a small critical angle. This is why diamonds sparkle!'
   },
   {
     id: 'tir-7',
@@ -560,7 +560,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
           question: `Can TIR occur when light goes from material A (n=${n1}) to material B (n=${n2})?`,
           options: ['Yes', 'No', 'Only at 45°', 'Only perpendicular'],
           correctAnswer: 1,
-          explanation: `No! TIR requires n₁ > n₂. Since ${n1} < ${n2}, light is entering a denser medium, so TIR cannot occur.`
+          explanation: `No! TIR requires $n_{1}$ > $n_{2}$. Since ${n1} < ${n2}, light is entering a denser medium, so TIR cannot occur.`
         }
       }
       
@@ -570,7 +570,7 @@ export const reflectionRefractionQuestions: CompetitiveQuestion[] = [
         question: `Light goes from n=${n1} to n=${n2}. What is the critical angle?`,
         options: [`${thetaC}°`, `${(90-thetaC).toFixed(1)}°`, `${(thetaC/2).toFixed(1)}°`, 'No critical angle exists'],
         correctAnswer: 0,
-        explanation: `θc = sin⁻¹(${n2}/${n1}) = ${thetaC}°. TIR occurs because n₁ > n₂.`
+        explanation: `θc = $\\sin^{-1}$(${n2}/${n1}) = ${thetaC}°. TIR occurs because $n_{1}$ > $n_{2}$.`
       }
     }
   },

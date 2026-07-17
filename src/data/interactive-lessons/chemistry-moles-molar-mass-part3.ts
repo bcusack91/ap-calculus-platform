@@ -48,7 +48,7 @@ where $n$ = moles, $m$ = mass in grams, $M$ = molar mass in g/mol.
 
 ### Example 1
 
-> **Problem:** How many moles are in 36.04 g of water (H₂O)?
+> **Problem:** How many moles are in 36.04 g of water $(H_{2}O)$?
 
 **Solution:**
 
@@ -102,7 +102,7 @@ $$\\text{particles} \\xrightarrow{\\div N_A} \\text{moles} \\xrightarrow{\\times
 
 ### Example: Grams → Particles
 
-> **Problem:** How many molecules are in 9.01 g of H₂O?
+> **Problem:** How many molecules are in 9.01 g of $H_{2}O$?
 
 **Solution:**
 
@@ -152,7 +152,7 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
             explanation: '$n = m / M$. Dividing mass by molar mass gives moles. Think of units: $\\text{g} \\div \\text{g/mol} = \\text{mol}$.'
           },
           {
-            question: 'How many grams are in 3.00 mol of CO₂ ($M = 44.01$ g/mol)?',
+            question: 'How many grams are in 3.00 mol of $CO_{2}$ ($M = 44.01$ g/mol)?',
             options: [
               '14.67 g',
               '44.01 g',
@@ -188,11 +188,11 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
 > |---|---|---|---|---|---|
 > | 1.008 | 12.01 | 16.00 | 22.99 | 35.45 | 40.08 |
 
-**1)** How many moles are in 25.0 g of CaCO₃ ($M = 100.09$ g/mol)? (to 3 significant figures)
+**1)** How many moles are in 25.0 g of $CaCO_{3}$ ($M = 100.09$ g/mol)? (to 3 significant figures)
 
 **2)** What is the mass (in grams) of 0.400 mol of NaCl ($M = 58.44$ g/mol)? (to 3 significant figures)
 
-**3)** How many molecules are in 5.00 g of CO₂ ($M = 44.01$ g/mol)? Express as $a \\times 10^{22}$ — enter $a$ (to 3 significant figures).
+**3)** How many molecules are in 5.00 g of $CO_{2}$ ($M = 44.01$ g/mol)? Express as $a \\times 10^{22}$ — enter $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,
@@ -213,11 +213,11 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
         dropdowns: [
           {
             label: 'To go from grams to moles, the conversion factor is',
-            options: ['multiply by M', 'divide by M', 'multiply by Nₐ', 'divide by Nₐ']
+            options: ['multiply by M', 'divide by M', 'multiply by $N_{a}$', 'divide by $N_{a}$']
           },
           {
             label: 'To go from moles to particles, the conversion factor is',
-            options: ['multiply by M', 'divide by M', 'multiply by Nₐ', 'divide by Nₐ']
+            options: ['multiply by M', 'divide by M', 'multiply by $N_{a}$', 'divide by $N_{a}$']
           },
           {
             label: 'To go from particles to grams requires ______ conversion step(s)',
@@ -228,7 +228,7 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
             options: ['stays the same', 'doubles', 'halves', 'quadruples']
           }
         ],
-        correctAnswers: ['divide by M', 'multiply by Nₐ', 'two', 'doubles'],
+        correctAnswers: ['divide by M', 'multiply by $N_{a}$', 'two', 'doubles'],
         hint1: '$n = m/M$ means you divide mass by molar mass.',
         hint2: 'Number of particles = $n \\times N_A$.',
         hint3: 'Particles → moles → grams: that is two steps.',
@@ -244,7 +244,7 @@ $$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\
       exercise: {
         questions: [
           {
-            question: 'A student has 90.08 g of water (H₂O, $M = 18.02$ g/mol). How many moles and how many molecules does this represent?',
+            question: 'A student has 90.08 g of water ($H_{2}O$, $M = 18.02$ g/mol). How many moles and how many molecules does this represent?',
             options: [
               '5.00 mol, $3.011 \\times 10^{24}$ molecules',
               '4.00 mol, $2.409 \\times 10^{24}$ molecules',

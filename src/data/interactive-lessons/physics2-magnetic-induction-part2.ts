@@ -60,7 +60,7 @@ The negative sign encodes **Lenz's Law** (covered in Part 3): the induced EMF al
 
 ### Worked Example
 
-**A coil of 50 turns and area 0.04 m² is in a field that drops from 0.6 T to 0.2 T in 0.1 s. Find the average induced EMF.**
+**A coil of 50 turns and area 0.04 $m^{2}$ is in a field that drops from 0.6 T to 0.2 T in 0.1 s. Find the average induced EMF.**
 
 $$|\\mathcal{E}| = N\\frac{|\\Delta\\Phi|}{\\Delta t} = N \\cdot \\frac{|\\Delta B| \\cdot A}{\\Delta t} = 50 \\cdot \\frac{0.4 \\times 0.04}{0.1} = 50 \\times 1.6 = 8.0 \\text{ V}$$
 
@@ -76,7 +76,7 @@ Note: $\\Delta B = 0.2 - 0.6 = -0.4$ T. The sign just tells us about direction (
       exercise: {
         questions: [
           {
-            question: 'A single loop in a field that increases from 0 to 0.5 T in 2 s. Area = 0.1 m². Average EMF:',
+            question: 'A single loop in a field that increases from 0 to 0.5 T in 2 s. Area = 0.1 $m^{2}$. Average EMF:',
             options: ['0.025 V', '0.25 V', '0.05 V', '1.0 V'],
             correctAnswer: 0,
             explanation: '$|\\mathcal{E}| = \\Delta\\Phi / \\Delta t = (0.5 \\times 0.1) / 2 = 0.05/2 = 0.025$ V.'
@@ -113,7 +113,7 @@ Note: $\\Delta B = 0.2 - 0.6 = -0.4$ T. The sign just tells us about direction (
       content: `
 **Faraday's Law Calculations** 🧮
 
-A coil of 200 turns, area 0.03 m², rotates in a 0.4 T field. The flux drops from maximum to zero in 0.05 s.
+A coil of 200 turns, area 0.03 $m^{2}$, rotates in a 0.4 T field. The flux drops from maximum to zero in 0.05 s.
 
 **1)** Maximum flux per turn? (Wb)
 

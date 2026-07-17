@@ -12,7 +12,7 @@ export const bioOriginsOfLifePart6Data = {
 After the origin of life and the emergence of eukaryotic cells, several **transformative events** reshaped Earth's biosphere. Understanding this timeline is essential for AP Biology because exam questions frequently ask you to connect environmental changes to evolutionary consequences.
 
 ### Key terms for this part
-- **Great Oxidation Event (GOE)** — dramatic rise in atmospheric O₂ (~2.4 Ga) driven by cyanobacterial photosynthesis
+- **Great Oxidation Event (GOE)** — dramatic rise in atmospheric $O_{2}$ (~2.4 Ga) driven by cyanobacterial photosynthesis
 - **Cambrian explosion** — rapid diversification of animal phyla (~541–530 Ma)
 - **mass extinction** — event in which >75% of species go extinct in a geologically short time
 - **adaptive radiation** — rapid diversification of a lineage to fill available ecological niches
@@ -30,13 +30,13 @@ After the origin of life and the emergence of eukaryotic cells, several **transf
           {
             question: 'What caused the Great Oxidation Event (~2.4 Ga)?',
             options: [
-              'Oxygenic photosynthesis by cyanobacteria released O₂ that accumulated in the atmosphere',
-              'Volcanic eruptions released massive amounts of O₂',
+              'Oxygenic photosynthesis by cyanobacteria released $O_{2}$ that accumulated in the atmosphere',
+              'Volcanic eruptions released massive amounts of $O_{2}$',
               'The breakdown of water by UV radiation produced free oxygen',
-              'Aerobic organisms consumed CO₂ and released O₂'
+              'Aerobic organisms consumed $CO_{2}$ and released $O_{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'Cyanobacteria evolved oxygenic photosynthesis (using H₂O as an electron donor, releasing O₂). Over hundreds of millions of years, O₂ accumulated — first oxidizing dissolved iron in the oceans (forming banded iron formations), then building up in the atmosphere.'
+            explanation: 'Cyanobacteria evolved oxygenic photosynthesis (using $H_{2}O$ as an electron donor, releasing $O_{2}$). Over hundreds of millions of years, $O_{2}$ accumulated — first oxidizing dissolved iron in the oceans (forming banded iron formations), then building up in the atmosphere.'
           },
           {
             question: 'The Cambrian explosion (~541 Ma) is characterized by:',
@@ -47,7 +47,7 @@ After the origin of life and the emergence of eukaryotic cells, several **transf
               'The colonization of land by plants'
             ],
             correctAnswer: 0,
-            explanation: 'The Cambrian explosion (~541–530 Ma) marks the geologically sudden appearance of most major animal body plans (phyla) in the fossil record. The causes likely include rising O₂ levels, the evolution of eyes, and ecological arms races.'
+            explanation: 'The Cambrian explosion (~541–530 Ma) marks the geologically sudden appearance of most major animal body plans (phyla) in the fossil record. The causes likely include rising $O_{2}$ levels, the evolution of eyes, and ecological arms races.'
           }
         ]
       }
@@ -61,7 +61,7 @@ After the origin of life and the emergence of eukaryotic cells, several **transf
 | Time | Event | Significance |
 |---|---|---|
 | **~3.5 Ga** | Oldest microfossils (stromatolites) | First evidence of prokaryotic life |
-| **~2.7 Ga** | Cyanobacteria evolve oxygenic photosynthesis | Begin producing O₂ |
+| **~2.7 Ga** | Cyanobacteria evolve oxygenic photosynthesis | Begin producing $O_{2}$ |
 | **~2.4 Ga** | **Great Oxidation Event (GOE)** | Atmosphere shifts from reducing to oxidizing; mass extinction of obligate anaerobes |
 | **~2.1 Ga** | Oldest eukaryotic fossils | Cells with nuclei and organelles (post-endosymbiosis) |
 | **~1.2 Ga** | Oldest multicellular algae | Multicellularity evolves |
@@ -87,10 +87,10 @@ After each mass extinction, surviving lineages undergo **adaptive radiation** �
 
 The Great Oxidation Event was both a **catastrophe** and an **opportunity**:
 
-- **Catastrophe**: O₂ was toxic to obligate anaerobes — it caused the first mass extinction
-- **Opportunity**: O₂ enabled **aerobic respiration**, which yields ~30–32 ATP per glucose vs. ~2 ATP from fermentation
+- **Catastrophe**: $O_{2}$ was toxic to obligate anaerobes — it caused the first mass extinction
+- **Opportunity**: $O_{2}$ enabled **aerobic respiration**, which yields ~30–32 ATP per glucose vs. ~2 ATP from fermentation
 - More energy → larger cells → more complex organisms → multicellularity
-- O₂ also formed the **ozone layer (O₃)**, protecting surface life from UV radiation
+- $O_{2}$ also formed the **ozone layer $(O_{3})$**, protecting surface life from UV radiation
 
 ### 2. Colonization of Land
 
@@ -156,9 +156,9 @@ Earth has experienced **five major mass extinctions** (the "Big Five"):
       content: `
 ## Summary — Part 6
 
-- **Great Oxidation Event** (~2.4 Ga): cyanobacterial O₂ transformed Earth's atmosphere, caused the first mass extinction of anaerobes, and enabled aerobic respiration
+- **Great Oxidation Event** (~2.4 Ga): cyanobacterial $O_{2}$ transformed Earth's atmosphere, caused the first mass extinction of anaerobes, and enabled aerobic respiration
 - **Ozone layer** formation protected surface life from UV radiation
-- **Cambrian explosion** (~541 Ma): most animal phyla appeared rapidly, likely driven by rising O₂, predator-prey arms races, and Hox gene innovation
+- **Cambrian explosion** (~541 Ma): most animal phyla appeared rapidly, likely driven by rising $O_{2}$, predator-prey arms races, and Hox gene innovation
 - **Colonization of land** required key adaptations (cuticle, vascular tissue, lungs, amniotic egg)
 - **Five major mass extinctions** shaped the tree of life; each was followed by **adaptive radiation**
 - The Permian-Triassic ("The Great Dying") was the largest; the K-Pg extinction cleared the way for mammalian dominance

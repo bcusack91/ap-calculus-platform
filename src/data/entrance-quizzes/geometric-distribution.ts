@@ -41,19 +41,19 @@ const questions: EntranceQuizQuestion[] = [
     id: 'geo-ent-2a',
     question: 'What is the formula for the geometric probability P(X = k)?',
     options: [
-      'p^k · (1−p)',
-      '(1−p)^(k−1) · p',
-      'C(n,k) · p^k · (1−p)^(n−k)',
-      'p · (1−p)^k'
+      '$p^{k}$ · (1−p)',
+      '$(1-p)^{k-1}$ · p',
+      'C(n,k) · $p^{k}$ · $(1-p)^{n-k}$',
+      'p · $(1-p)^{k}$'
     ],
     correctIndex: 1,
-    explanation: 'P(X = k) = (1−p)^(k−1) · p, where k = 1, 2, 3, ... This represents k−1 failures followed by a success.',
+    explanation: 'P(X = k) = $(1-p)^{k-1}$ · p, where k = 1, 2, 3, ... This represents k−1 failures followed by a success.',
     partNumber: 2,
     partTitle: 'Geometric Probability'
   },
   {
     id: 'geo-ent-2b',
-    question: 'What does P(X > k) = (1−p)^k represent in a geometric distribution?',
+    question: 'What does P(X > k) = $(1-p)^{k}$ represent in a geometric distribution?',
     options: [
       'The probability of exactly k successes',
       'The probability of at least k successes',
@@ -61,7 +61,7 @@ const questions: EntranceQuizQuestion[] = [
       'The probability that success occurs on trial k'
     ],
     correctIndex: 2,
-    explanation: 'P(X > k) = (1−p)^k gives the probability that the first k trials are all failures, meaning the first success has not yet occurred.',
+    explanation: 'P(X > k) = $(1-p)^{k}$ gives the probability that the first k trials are all failures, meaning the first success has not yet occurred.',
     partNumber: 2,
     partTitle: 'Geometric Probability'
   },
@@ -167,7 +167,7 @@ const questions: EntranceQuizQuestion[] = [
       '0.3000'
     ],
     correctIndex: 1,
-    explanation: 'P(X = 4) = (1−0.3)³ × 0.3 = (0.7)³ × 0.3 = 0.343 × 0.3 = 0.1029.',
+    explanation: 'P(X = 4) = $(1-0.3)^{3}$ × 0.3 = $(0.7)^{3}$ × 0.3 = 0.343 × 0.3 = 0.1029.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },

@@ -57,11 +57,11 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'The sample data only',
       'The population proportion before the experiment',
-      'Assuming H₀ is true',
+      'Assuming $H_{0}$ is true',
       'The difference from zero'
     ],
     correctIndex: 2,
-    explanation: 'Expected counts are calculated assuming H₀ (the hypothesized relationship or independence) is true. They show what we would see if H₀ held.',
+    explanation: 'Expected counts are calculated assuming $H_{0}$ (the hypothesized relationship or independence) is true. They show what we would see if $H_{0}$ held.',
     partNumber: 2,
     partTitle: 'Expected vs Observed Counts'
   },
@@ -71,13 +71,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'inchi-ent-3a',
     question: 'The chi-square test statistic is calculated as:',
     options: [
-      'χ² = Σ(E − O)² / O',
-      'χ² = Σ(O − E)² / E',
-      'χ² = (O − E) / E',
-      'χ² = Σ(O − E)'
+      '$\\chi^{2}$ = $\\Sigma (E - O)^{2}$ / O',
+      '$\\chi^{2}$ = $\\Sigma (O - E)^{2}$ / E',
+      '$\\chi^{2}$ = (O − E) / E',
+      '$\\chi^{2}$ = Σ(O − E)'
     ],
     correctIndex: 1,
-    explanation: 'χ² = Σ[(O − E)² / E]. This compares observed and expected counts, with larger differences contributing more to the statistic.',
+    explanation: '$\\chi^{2}$ = Σ[$(O - E)^{2}$ / E]. This compares observed and expected counts, with larger differences contributing more to the statistic.',
     partNumber: 3,
     partTitle: 'Chi-Square Statistic and Concept'
   },
@@ -86,12 +86,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'A large chi-square statistic suggests:',
     options: [
       'The data match the hypothesized distribution well',
-      'The observed and expected counts are very different, providing evidence against H₀',
+      'The observed and expected counts are very different, providing evidence against $H_{0}$',
       'The sample size is too small',
       'All expected counts are too low'
     ],
     correctIndex: 1,
-    explanation: 'A large χ² means observed counts deviate greatly from expected. This is evidence against H₀. A small χ² means observed and expected are similar.',
+    explanation: 'A large $\\chi^{2}$ means observed counts deviate greatly from expected. This is evidence against $H_{0}$. A small $\\chi^{2}$ means observed and expected are similar.',
     partNumber: 3,
     partTitle: 'Chi-Square Statistic and Concept'
   },
@@ -117,7 +117,7 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       'As a sample size requirement before collecting data',
       'As a condition for the chi-square approximation to be valid',
-      'As a threshold for rejecting H₀',
+      'As a threshold for rejecting $H_{0}$',
       'Only in goodness-of-fit tests, not independence tests'
     ],
     correctIndex: 1,

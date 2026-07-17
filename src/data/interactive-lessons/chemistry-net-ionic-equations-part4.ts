@@ -16,7 +16,7 @@ export const chemNetIonicEquationsPart4Data = {
 |---------|
 | ⚗️ Predicting Precipitation Reactions |
 | Strategy: The Ion-Swap Method |
-| Example: Mix AgNO₃(aq) and NaCl(aq) |
+| Example: Mix $AgNO_{3}(aq)$ and NaCl(aq) |
 | 📌 Common Precipitates on the AP Exam |
 | Net Ionic Patterns |
 
@@ -47,13 +47,13 @@ When two ionic compounds in solution are mixed:
 
 ---
 
-### Example: Mix AgNO₃(aq) and NaCl(aq)
+### Example: Mix $AgNO_{3}(aq)$ and NaCl(aq)
 
-**Ions present:** Ag⁺, NO₃⁻, Na⁺, Cl⁻
+**Ions present:** $Ag^{+}$, $NO_{3}^{-}$, $Na^{+}$, $Cl^{-}$
 
 **Possible new combinations:**
-- Ag⁺ + Cl⁻ → AgCl — **Check:** Cl⁻ with Ag⁺ is an exception → **insoluble** ✓
-- Na⁺ + NO₃⁻ → NaNO₃ — **Check:** Na⁺ always soluble → **soluble**
+- $Ag^{+}$ + $Cl^{-}$ → AgCl — **Check:** $Cl^{-}$ with $Ag^{+}$ is an exception → **insoluble** ✓
+- $Na^{+}$ + $NO_{3}^{-}$ → $NaNO_{3}$ — **Check:** $Na^{+}$ always soluble → **soluble**
 
 **Result:** AgCl precipitates!
 
@@ -71,13 +71,13 @@ $$\\boxed{\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)}$$
 | Silver chloride | AgCl | White |
 | Silver bromide | AgBr | Pale yellow |
 | Silver iodide | AgI | Yellow |
-| Lead(II) iodide | PbI₂ | Bright yellow |
-| Lead(II) chloride | PbCl₂ | White |
-| Barium sulfate | BaSO₄ | White |
-| Lead(II) sulfate | PbSO₄ | White |
-| Calcium carbonate | CaCO₃ | White |
-| Iron(III) hydroxide | Fe(OH)₃ | Rust brown |
-| Copper(II) hydroxide | Cu(OH)₂ | Blue |
+| Lead(II) iodide | $PbI_{2}$ | Bright yellow |
+| Lead(II) chloride | $PbCl_{2}$ | White |
+| Barium sulfate | $BaSO_{4}$ | White |
+| Lead(II) sulfate | $PbSO_{4}$ | White |
+| Calcium carbonate | $CaCO_{3}$ | White |
+| Iron(III) hydroxide | $Fe(OH)_{3}$ | Rust brown |
+| Copper(II) hydroxide | $Cu(OH)_{2}$ | Blue |
 | Iron(II) sulfide | FeS | Black |
 
 
@@ -106,14 +106,14 @@ $$\\boxed{\\text{cation}(aq) + \\text{anion}(aq) \\rightarrow \\text{insoluble s
 ---
 
 ### Step 1: Identify ions
-Fe³⁺, Cl⁻, Na⁺, OH⁻
+$Fe^{3+}$, $Cl^{-}$, $Na^{+}$, $OH^{-}$
 
 
 ---
 
 ### Step 2: Swap partners
-- Fe³⁺ + OH⁻ → Fe(OH)₃ — Solubility? OH⁻ insoluble with most metals → **insoluble**
-- Na⁺ + Cl⁻ → NaCl — Solubility? Na⁺ always soluble → **soluble**
+- $Fe^{3+}$ + $OH^{-}$ → $Fe(OH)_{3}$ — Solubility? $OH^{-}$ insoluble with most metals → **insoluble**
+- $Na^{+}$ + $Cl^{-}$ → NaCl — Solubility? $Na^{+}$ always soluble → **soluble**
 
 
 ---
@@ -150,16 +150,16 @@ $$\\boxed{\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(
           {
             question: 'Which pair of solutions will produce a precipitate when mixed?',
             options: [
-              'NaCl(aq) + KNO₃(aq)',
-              'AgNO₃(aq) + KBr(aq)',
+              'NaCl(aq) + $KNO_{3}(aq)$',
+              '$AgNO_{3}(aq)$ + KBr(aq)',
               'NaOH(aq) + KCl(aq)',
-              'NH₄Cl(aq) + NaNO₃(aq)'
+              '$NH_{4}Cl(aq)$ + $NaNO_{3}(aq)$'
             ],
             correctAnswer: 1,
-            explanation: 'AgNO₃ + KBr: Ag⁺ + Br⁻ → AgBr, which is insoluble (halides with Ag⁺ are exceptions). The other pairs all produce soluble products only.'
+            explanation: '$AgNO_{3}$ + KBr: $Ag^{+}$ + $Br^{-}$ → AgBr, which is insoluble (halides with $Ag^{+}$ are exceptions). The other pairs all produce soluble products only.'
           },
           {
-            question: 'What is the net ionic equation when BaCl₂(aq) is mixed with K₂SO₄(aq)?',
+            question: 'What is the net ionic equation when $BaCl_{2}(aq)$ is mixed with $K_{2}SO_{4}(aq)$?',
             options: [
               '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
               '$\\text{Ba}^{2+}(aq) + 2\\text{Cl}^-(aq) + 2\\text{K}^+(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{KCl}(aq)$',
@@ -167,18 +167,18 @@ $$\\boxed{\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(
               'No reaction occurs'
             ],
             correctAnswer: 0,
-            explanation: 'Ba²⁺ + SO₄²⁻ → BaSO₄(s) is insoluble. K⁺ and Cl⁻ are spectators. Net ionic: Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s). Charge: (+2) + (−2) = 0 = 0 ✓.'
+            explanation: '$Ba^{2+}$ + $SO_{4}^{2-}$ → $BaSO_{4}(s)$ is insoluble. $K^{+}$ and $Cl^{-}$ are spectators. Net ionic: $Ba^{2+}(aq)$ + $SO_{4}^{2-}(aq)$ → $BaSO_{4}(s)$. Charge: (+2) + (−2) = 0 = 0 ✓.'
           },
           {
-            question: 'When Pb(NO₃)₂(aq) is mixed with Na₂S(aq), the precipitate formed is:',
+            question: 'When $Pb(NO_{3})_{2}(aq)$ is mixed with $Na_{2}S(aq)$, the precipitate formed is:',
             options: [
-              'NaNO₃',
+              '$NaNO_{3}$',
               'PbS',
-              'Pb(NO₃)₂',
-              'Na₂S'
+              '$Pb(NO_{3})_{2}$',
+              '$Na_{2}S$'
             ],
             correctAnswer: 1,
-            explanation: 'Pb²⁺ + S²⁻ → PbS. Sulfides are generally insoluble except with Group 1 metals and NH₄⁺. Lead is not an exception, so PbS is a black precipitate.'
+            explanation: '$Pb^{2+}$ + $S^{2-}$ → PbS. Sulfides are generally insoluble except with Group 1 metals and $NH_{4}^{+}$. Lead is not an exception, so PbS is a black precipitate.'
           }
         ]
       }
@@ -200,10 +200,10 @@ For each pair of solutions mixed, write the formula of the precipitate that form
       exercise: {
         boxes: 3,
         correctAnswers: ['CaCO3', 'NR', 'Cu(OH)2'],
-        hint1: 'Ca²⁺ + CO₃²⁻ → CaCO₃. Is it soluble or insoluble?',
-        hint2: 'Possible products: KBr and NaNO₃. Are either insoluble?',
-        hint3: 'Cu²⁺ + OH⁻ → Cu(OH)₂. Check solubility of hydroxides with transition metals.',
-        explanation: '1) CaCO₃ — carbonates are insoluble except with Group 1/NH₄⁺. Ca is Group 2 → precipitate. 2) NR — KBr and NaNO₃ are both soluble. No driving force. 3) Cu(OH)₂ — hydroxides are insoluble with most metals. Cu is not an exception → blue precipitate.'
+        hint1: '$Ca^{2+}$ + $CO_{3}^{2-}$ → $CaCO_{3}$. Is it soluble or insoluble?',
+        hint2: 'Possible products: KBr and $NaNO_{3}$. Are either insoluble?',
+        hint3: '$Cu^{2+}$ + $OH^{-}$ → $Cu(OH)_{2}$. Check solubility of hydroxides with transition metals.',
+        explanation: '1) $CaCO_{3}$ — carbonates are insoluble except with Group $1/NH_{4}^{+}$. Ca is Group 2 → precipitate. 2) NR — KBr and $NaNO_{3}$ are both soluble. No driving force. 3) $Cu(OH)_{2}$ — hydroxides are insoluble with most metals. Cu is not an exception → blue precipitate.'
       }
     },
     {
@@ -215,27 +215,27 @@ For each pair of solutions mixed, write the formula of the precipitate that form
       exercise: {
         dropdowns: [
           {
-            label: 'AgNO₃(aq) + NaI(aq) produces a precipitate of',
-            options: ['NaNO₃', 'AgI', 'AgNa', 'No precipitate']
+            label: '$AgNO_{3}(aq)$ + NaI(aq) produces a precipitate of',
+            options: ['$NaNO_{3}$', 'AgI', 'AgNa', 'No precipitate']
           },
           {
             label: 'All nitrate salts are',
             options: ['insoluble', 'slightly soluble', 'soluble', 'gases']
           },
           {
-            label: 'PbCl₂ is an exception to the rule that chlorides are generally',
+            label: '$PbCl_{2}$ is an exception to the rule that chlorides are generally',
             options: ['insoluble', 'soluble', 'gaseous', 'acidic']
           },
           {
-            label: 'The spectator ions in the reaction AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq) are',
-            options: ['Ag⁺ and Cl⁻', 'Na⁺ and NO₃⁻', 'Ag⁺ and Na⁺', 'Cl⁻ and NO₃⁻']
+            label: 'The spectator ions in the reaction $AgNO_{3}(aq)$ + NaCl(aq) → AgCl(s) + $NaNO_{3}(aq)$ are',
+            options: ['$Ag^{+}$ and $Cl^{-}$', '$Na^{+}$ and $NO_{3}^{-}$', '$Ag^{+}$ and $Na^{+}$', '$Cl^{-}$ and $NO_{3}^{-}$']
           }
         ],
-        correctAnswers: ['AgI', 'soluble', 'soluble', 'Na⁺ and NO₃⁻'],
-        hint1: 'Ag⁺ + I⁻ → ? Halides with Ag⁺ are insoluble.',
-        hint2: 'NO₃⁻ has no exceptions in the solubility rules.',
-        hint3: 'Chlorides are generally _____, but Pb²⁺ is an exception.',
-        explanation: 'AgI precipitates (halides with Ag⁺ are insoluble). All nitrates are soluble without exception. Chlorides are generally soluble, with Pb²⁺, Ag⁺, and Hg₂²⁺ as exceptions. Na⁺ and NO₃⁻ don\'t change → spectators.'
+        correctAnswers: ['AgI', 'soluble', 'soluble', '$Na^{+}$ and $NO_{3}^{-}$'],
+        hint1: '$Ag^{+}$ + $I^{-}$ → ? Halides with $Ag^{+}$ are insoluble.',
+        hint2: '$NO_{3}^{-}$ has no exceptions in the solubility rules.',
+        hint3: 'Chlorides are generally _____, but $Pb^{2+}$ is an exception.',
+        explanation: 'AgI precipitates (halides with $Ag^{+}$ are insoluble). All nitrates are soluble without exception. Chlorides are generally soluble, with $Pb^{2+}$, $Ag^{+}$, and $Hg_{2}^{2+}$ as exceptions. $Na^{+}$ and $NO_{3}^{-}$ don\'t change → spectators.'
       }
     },
     {
@@ -255,18 +255,18 @@ For each pair of solutions mixed, write the formula of the precipitate that form
               '$3\\text{Na}^+(aq) + 3\\text{Cl}^-(aq) \\rightarrow 3\\text{NaCl}(s)$'
             ],
             correctAnswer: 0,
-            explanation: 'Fe³⁺ + 3OH⁻ → Fe(OH)₃(s). Fe(OH)₃ is insoluble (rust-brown precipitate). Na⁺ and Cl⁻ are spectators. Charge check: (+3) + 3(−1) = 0 on left; 0 on right ✓.'
+            explanation: '$Fe^{3+}$ + $3OH^{-}$ → $Fe(OH)_{3}(s)$. $Fe(OH)_{3}$ is insoluble (rust-brown precipitate). $Na^{+}$ and $Cl^{-}$ are spectators. Charge check: (+3) + 3(−1) = 0 on left; 0 on right ✓.'
           },
           {
-            question: 'A student mixes Ca(NO₃)₂(aq) with Na₂SO₄(aq). What happens?',
+            question: 'A student mixes $Ca(NO_{3})_{2}(aq)$ with $Na_{2}SO_{4}(aq)$. What happens?',
             options: [
               'No reaction — both products are soluble',
-              'CaSO₄ precipitates — sulfates with Ca²⁺ are insoluble',
-              'NaNO₃ precipitates — nitrates with Na⁺ are insoluble',
-              'Ca(NO₃)₂ decomposes into CaO and NO₂'
+              '$CaSO_{4}$ precipitates — sulfates with $Ca^{2+}$ are insoluble',
+              '$NaNO_{3}$ precipitates — nitrates with $Na^{+}$ are insoluble',
+              '$Ca(NO_{3})_{2}$ decomposes into CaO and $NO_{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'CaSO₄ is one of the exceptions to sulfate solubility (along with BaSO₄, PbSO₄, SrSO₄). It forms a white precipitate. The net ionic equation is Ca²⁺(aq) + SO₄²⁻(aq) → CaSO₄(s).'
+            explanation: '$CaSO_{4}$ is one of the exceptions to sulfate solubility (along with $BaSO_{4}$, $PbSO_{4}$, $SrSO_{4}$). It forms a white precipitate. The net ionic equation is $Ca^{2+}(aq)$ + $SO_{4}^{2-}(aq)$ → $CaSO_{4}(s)$.'
           }
         ]
       }

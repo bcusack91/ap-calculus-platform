@@ -20,7 +20,7 @@ A "fast enough" algorithm at n = 100 may be unusable at n = 10,000,000. The AP e
 | Constant | 1× | Instant regardless of size. |
 | Logarithmic | adds a constant | Scales beautifully. |
 | Linear | 2× | Reasonable. |
-| Quadratic | 4× | Painful past ~10⁴. |
+| Quadratic | 4× | Painful past ~$10^{4}$. |
 | Exponential | huge multiplier | Infeasible past tiny inputs. |
       `
     },
@@ -65,10 +65,10 @@ A "fast enough" algorithm at n = 100 may be unusable at n = 10,000,000. The AP e
 
 The CED uses two key terms:
 
-- **Reasonable**: time grows polynomially (constant, log, linear, n², n³, …).
-- **Unreasonable**: time grows exponentially (2ⁿ, n!, …) — quickly impossible to run.
+- **Reasonable**: time grows polynomially (constant, log, linear, $n^{2}$, $n^{3}$, …).
+- **Unreasonable**: time grows exponentially ($2^{n}$, n!, …) — quickly impossible to run.
 
-A 30-element problem that needs to try every subset (2³⁰ ≈ 1 billion) is borderline. At 50 elements (2⁵⁰ ≈ 10¹⁵), no realistic computer finishes in your lifetime.
+A 30-element problem that needs to try every subset $(2^{30} \\approx 1 billion)$ is borderline. At 50 elements $(2^{50} \\approx 10^{15})$, no realistic computer finishes in your lifetime.
 
 ## Heuristics: When Exact Is Too Slow
 
@@ -116,7 +116,7 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
       exercise: {
         dropdowns: [
           {
-            label: "A 2ⁿ algorithm on n = 60 is best described as ___",
+            label: "A $2^{n}$ algorithm on n = 60 is best described as ___",
             options: ["Reasonable", "Unreasonable", "Linear", "Logarithmic"]
           },
           {
@@ -124,14 +124,14 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
             options: ["the optimal answer", "a good answer in less time", "no answer", "exponential time"]
           },
           {
-            label: "Doubling the input of an O(n²) algorithm makes it ___ as long",
+            label: "Doubling the input of an $O(n^{2})$ algorithm makes it ___ as long",
             options: ["twice", "four times", "the same length of", "half"]
           }
         ],
         correctAnswers: ["Unreasonable", "a good answer in less time", "four times"],
-        hint1: "2⁶⁰ is astronomical.",
+        hint1: "$2^{60}$ is astronomical.",
         hint2: "It is a speed/optimality trade.",
-        hint3: "(2n)² = 4n².",
+        hint3: "$(2n)^{2}$ = $4n^{2}$.",
         explanation: "Exponential time is unreasonable. Heuristics trade optimality for speed. Quadratic scaling is 4× per input doubling."
       }
     },
@@ -141,7 +141,7 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
       content: `
 ## AP Exam Strategy: Scaling Questions
 
-- For "how long does it take on 10× input?" multiply by the growth factor: linear → 10×, n² → 100×, log → tiny constant change.
+- For "how long does it take on 10× input?" multiply by the growth factor: linear → 10×, $n^{2}$ → 100×, log → tiny constant change.
 - "Reasonable" = polynomial. "Unreasonable" = exponential.
 - A heuristic ≠ a guarantee. If the answer must be optimal, a heuristic alone can't promise it.
 - The Halting Problem is the canonical undecidable problem the exam might mention.
@@ -156,7 +156,7 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
       exercise: {
         questions: [
           {
-            question: "A genetics lab has an exact algorithm that finds the best protein folding for n amino acids in time proportional to 2ⁿ. For n = 50 the run is estimated at 35 years. Which is the best practical response?",
+            question: "A genetics lab has an exact algorithm that finds the best protein folding for n amino acids in time proportional to $2^{n}$. For n = 50 the run is estimated at 35 years. Which is the best practical response?",
             options: [
               "Wait the projected 35 years for the exact algorithm to terminate and report the optimal protein folding.",
               "Run the same exponential algorithm on a slightly faster computer in the hope that it finishes much sooner.",
@@ -175,7 +175,7 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
               "100"
             ],
             correctAnswer: 2,
-            explanation: "log₂(10⁶) ≈ 20."
+            explanation: "$\\log_{2}(10^{6})$ ≈ 20."
           }
         ]
       }

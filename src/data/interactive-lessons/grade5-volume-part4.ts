@@ -81,11 +81,11 @@ $V = 24 + 12 = 36$ cubic units ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Composite shapes are solved by","options":["Breaking into simpler shapes and adding volumes","Using one formula for the whole shape","Measuring water displacement only","Guessing"]},{"label":"If one part has V=20 cm³ and another has V=15 cm³, total is","options":["35 cm³","300 cm³","5 cm³","20 cm³"]}],
-        correctAnswers: ["Breaking into simpler shapes and adding volumes","35 cm³"],
+        dropdowns: [{"label":"Composite shapes are solved by","options":["Breaking into simpler shapes and adding volumes","Using one formula for the whole shape","Measuring water displacement only","Guessing"]},{"label":"If one part has V=20 $cm^{3}$ and another has V=15 $cm^{3}$, total is","options":["35 $cm^{3}$","300 $cm^{3}$","5 $cm^{3}$","20 $cm^{3}$"]}],
+        correctAnswers: ["Breaking into simpler shapes and adding volumes","35 $cm^{3}$"],
         hint1: "Decompose, then add.",
         hint2: "Add them.",
-        explanation: "Split and add. 20 + 15 = 35 cm³."
+        explanation: "Split and add. 20 + 15 = 35 $cm^{3}$."
       }
     },
     {

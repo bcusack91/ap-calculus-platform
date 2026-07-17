@@ -51,13 +51,13 @@ export const MCQS: MCQItem[] = [
     question: 'A peptide bond between two amino acids forms between:',
     options: [
       'The R group of one amino acid and the alpha-carbon of another.',
-      'The amino (–NH₂) group of one amino acid and the carboxyl (–COOH) group of another, releasing water.',
+      'The amino (–$NH_{2}$) group of one amino acid and the carboxyl (–COOH) group of another, releasing water.',
       'Two R groups via disulfide bonding.',
       'Two phosphate groups via condensation.',
     ],
     correctAnswer: 1,
     explanation:
-      'A peptide bond forms by dehydration synthesis between the amino group of one amino acid and the carboxyl group of the next, releasing H₂O.',
+      'A peptide bond forms by dehydration synthesis between the amino group of one amino acid and the carboxyl group of the next, releasing $H_{2}O$.',
   },
   {
     type: 'mcq',
@@ -175,7 +175,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'Active transport uses energy (commonly ATP) to move substances against their gradients via membrane proteins (e.g., Na⁺/K⁺ pump). Facilitated diffusion is passive and goes WITH the gradient.',
+      'Active transport uses energy (commonly ATP) to move substances against their gradients via membrane proteins (e.g., $Na^{+}/K^{+}$ pump). Facilitated diffusion is passive and goes WITH the gradient.',
   },
   {
     type: 'mcq',
@@ -189,7 +189,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'The hydrophobic core of the bilayer freely admits small nonpolar molecules (O₂, CO₂) but blocks ions and large polar molecules, which require channel or transporter proteins.',
+      'The hydrophobic core of the bilayer freely admits small nonpolar molecules ($O_{2}$, $CO_{2}$) but blocks ions and large polar molecules, which require channel or transporter proteins.',
   },
   {
     type: 'mcq',
@@ -226,7 +226,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-3-cellular-energetics',
-    question: 'The function of NADH and FADH₂ in cellular respiration is to:',
+    question: 'The function of NADH and $FADH_{2}$ in cellular respiration is to:',
     options: [
       'Serve as substrates for ATP synthase.',
       'Carry high-energy electrons to the electron transport chain.',
@@ -235,7 +235,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'NADH and FADH₂ are electron carriers. They donate electrons to the ETC, where the energy released pumps protons and ultimately powers ATP synthesis.',
+      'NADH and $FADH_{2}$ are electron carriers. They donate electrons to the ETC, where the energy released pumps protons and ultimately powers ATP synthesis.',
   },
   {
     type: 'mcq',
@@ -260,7 +260,7 @@ export const MCQS: MCQItem[] = [
     options: [
       'Power the Calvin cycle by directly providing energy to RuBisCO.',
       'Excite electrons in chlorophyll, which are then used to generate ATP and NADPH.',
-      'Split CO₂ into carbon and oxygen.',
+      'Split $CO_{2}$ into carbon and oxygen.',
       'Activate ATP synthase by directly binding to it.',
     ],
     correctAnswer: 1,
@@ -272,14 +272,14 @@ export const MCQS: MCQItem[] = [
     topic: 'unit-3-cellular-energetics',
     question: 'Which of the following best summarizes the inputs and outputs of the Calvin cycle (per molecule of glucose synthesized)?',
     options: [
-      'Inputs: light, water, CO₂; Outputs: O₂, ATP, NADPH.',
-      'Inputs: 6 CO₂, 18 ATP, 12 NADPH; Outputs: 1 G3P (× 2 → glucose), 18 ADP, 12 NADP⁺.',
-      'Inputs: oxygen, glucose; Outputs: CO₂, water, ATP.',
+      'Inputs: light, water, $CO_{2}$; Outputs: $O_{2}$, ATP, NADPH.',
+      'Inputs: 6 $CO_{2}$, 18 ATP, 12 NADPH; Outputs: 1 G3P (× 2 → glucose), 18 ADP, 12 NADP$ {}^{+}$.',
+      'Inputs: oxygen, glucose; Outputs: $CO_{2}$, water, ATP.',
       'Inputs: chlorophyll, water; Outputs: light, oxygen.',
     ],
     correctAnswer: 1,
     explanation:
-      'The Calvin cycle (light-independent) uses CO₂, ATP, and NADPH from the light reactions to fix carbon into G3P (precursor to glucose), regenerating ADP and NADP⁺.',
+      'The Calvin cycle (light-independent) uses $CO_{2}$, ATP, and NADPH from the light reactions to fix carbon into G3P (precursor to glucose), regenerating ADP and NADP$ {}^{+}$.',
   },
   {
     type: 'mcq',
@@ -287,13 +287,13 @@ export const MCQS: MCQItem[] = [
     question: 'The water molecules split during the light-dependent reactions of photosynthesis serve primarily to:',
     options: [
       'Provide the carbon backbone for glucose.',
-      'Replace electrons lost from chlorophyll in photosystem II and release O₂ as a byproduct.',
+      'Replace electrons lost from chlorophyll in photosystem II and release $O_{2}$ as a byproduct.',
       'Hydrate the thylakoid membranes.',
       'Provide hydrogen for direct ATP synthesis.',
     ],
     correctAnswer: 1,
     explanation:
-      'Photolysis of water at the oxygen-evolving complex of PSII replaces electrons lost from excited chlorophyll, releasing O₂ as a byproduct and contributing protons to the thylakoid lumen gradient.',
+      'Photolysis of water at the oxygen-evolving complex of PSII replaces electrons lost from excited chlorophyll, releasing $O_{2}$ as a byproduct and contributing protons to the thylakoid lumen gradient.',
   },
   {
     type: 'mcq',
@@ -301,13 +301,13 @@ export const MCQS: MCQItem[] = [
     question: 'In the absence of oxygen, many cells continue to produce ATP through fermentation. The primary purpose of fermentation is to:',
     options: [
       'Generate large quantities of ATP through the Krebs cycle.',
-      'Regenerate NAD⁺ so glycolysis can continue producing a small amount of ATP.',
-      'Produce CO₂ for use in the Calvin cycle.',
+      'Regenerate $NAD^{+}$ so glycolysis can continue producing a small amount of ATP.',
+      'Produce $CO_{2}$ for use in the Calvin cycle.',
       'Pump protons across the inner mitochondrial membrane.',
     ],
     correctAnswer: 1,
     explanation:
-      'Fermentation regenerates NAD⁺ from NADH (by reducing pyruvate to lactate or ethanol + CO₂), allowing glycolysis to continue producing 2 ATP per glucose anaerobically.',
+      'Fermentation regenerates $NAD^{+}$ from NADH (by reducing pyruvate to lactate or ethanol + $CO_{2}$), allowing glycolysis to continue producing 2 ATP per glucose anaerobically.',
   },
   {
     type: 'mcq',
@@ -501,7 +501,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'Independent assortment results from the random orientation of each homologous pair at the metaphase I plate, producing 2ⁿ possible combinations of maternal/paternal chromosomes.',
+      'Independent assortment results from the random orientation of each homologous pair at the metaphase I plate, producing $2^{n}$ possible combinations of maternal/paternal chromosomes.',
   },
   {
     type: 'mcq',
@@ -517,7 +517,7 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation:
-      'Father is X^h Y. Mother is X^H X^h. Daughters inherit X^h from father and either X^H or X^h from mother → ½ are X^H X^h (carriers) and ½ are X^h X^h (affected). 50% affected.',
+      'Father is $X^{h}$ Y. Mother is $X^{H}$ $X^{h}$. Daughters inherit $X^{h}$ from father and either $X^{H}$ or $X^{h}$ from mother → ½ are $X^{H}$ $X^{h}$ (carriers) and ½ are $X^{h}$ $X^{h}$ (affected). 50% affected.',
   },
   {
     type: 'mcq',

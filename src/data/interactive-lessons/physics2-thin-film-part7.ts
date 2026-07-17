@@ -40,7 +40,7 @@ export const physics2ThinFilmPart7Data = {
 | Air (1.0) | Soap (1.33) | Air (1.0) | Yes | No | **1** |
 | Air (1.0) | Oil (1.45) | Water (1.33) | Yes | No | **1** |
 | Air (1.0) | Oil (1.40) | Glass (1.52) | Yes | Yes | **2** |
-| Air (1.0) | MgF₂ (1.38) | Glass (1.52) | Yes | Yes | **2** |
+| Air (1.0) | $MgF_{2}$ (1.38) | Glass (1.52) | Yes | Yes | **2** |
 | Glass (1.5) | Air (1.0) | Glass (1.5) | No | Yes | **1** |
 | Glass (1.5) | Film ($n > 1.5$) | Glass (1.5) | Yes | No | **1** |
 | Water (1.33) | Oil (1.45) | Glass (1.52) | Yes | Yes | **2** |

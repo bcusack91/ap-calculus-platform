@@ -26,7 +26,7 @@ $KE_i + U_i + W_{nc} = KE_f + U_f$
       content: `
 ## Worked Example
 
-**A ball is dropped from 20 m. Find its speed at the ground. ($g = 10$ m/s²)**
+**A ball is dropped from 20 m. Find its speed at the ground. ($g = 10$ $m/s^{2}$)**
 
 $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s ✅
     
@@ -60,11 +60,11 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s 
       content: `
 **Conservation of Energy** 🧮
 
-1) A ball falls from 20 m. Speed at the bottom (m/s)? ($g = 10$ m/s²)
+1) A ball falls from 20 m. Speed at the bottom (m/s)? ($g = 10$ $m/s^{2}$)
 
-2) A ball is launched upward at 20 m/s. What speed (m/s) does it have at height 15 m? ($g = 10$ m/s²)
+2) A ball is launched upward at 20 m/s. What speed (m/s) does it have at height 15 m? ($g = 10$ $m/s^{2}$)
 
-3) A ball is thrown upward at 20 m/s. Maximum height reached (m)? ($g = 10$ m/s², answer as integer. Hint: $h = v^2/(2g)$)
+3) A ball is thrown upward at 20 m/s. Maximum height reached (m)? ($g = 10$ $m/s^{2}$, answer as integer. Hint: $h = v^2/(2g)$)
     
     `,
       exercise: {

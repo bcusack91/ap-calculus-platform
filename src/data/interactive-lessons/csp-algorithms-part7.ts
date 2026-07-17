@@ -75,7 +75,7 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 
 - Polynomial = reasonable. Exponential = unreasonable.
 - Linear search: O(n). Binary search (sorted): O(log n).
-- Doubling input on O(n²) → 4×; on O(log n) → +1 step.
+- Doubling input on $O(n^{2})$ → 4×; on O(log n) → +1 step.
       `
     },
     {
@@ -88,15 +88,15 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 
 2) A REPEAT UNTIL loop runs the block at least _______ time(s) before checking the condition.
 
-3) log₂(1,048,576) equals approximately _______.
+3) $\\log_{2}$(1,048,576) equals approximately _______.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["1", "1", "20"],
         hint1: "First element is list[1].",
         hint2: "Post-test loop.",
-        hint3: "2¹⁰ ≈ 1024, 2²⁰ ≈ 1M.",
-        explanation: "1-indexed lists. REPEAT UNTIL is post-test (≥ 1 execution). 2²⁰ = 1,048,576."
+        hint3: "$2^{10}$ ≈ 1024, $2^{20}$ ≈ 1M.",
+        explanation: "1-indexed lists. REPEAT UNTIL is post-test (≥ 1 execution). $2^{20}$ = 1,048,576."
       }
     },
     {
@@ -160,7 +160,7 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
             explanation: "A maintained index turns each query into O(1)."
           },
           {
-            question: "A class debates which algorithm is \"best\". A is correct and runs in O(n²). B is faster (O(n log n)) but produces wrong results on lists with duplicates. The dataset has many duplicates. Which choice is best supported?",
+            question: "A class debates which algorithm is \"best\". A is correct and runs in $O(n^{2})$. B is faster (O(n log n)) but produces wrong results on lists with duplicates. The dataset has many duplicates. Which choice is best supported?",
             options: [
               "Always choose B because it is faster.",
               "Choose A because correctness is a precondition for considering efficiency.",

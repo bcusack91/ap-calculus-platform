@@ -150,9 +150,9 @@ $$\\frac{\\frac{1}{x} + \\frac{1}{y}}{\\frac{1}{x} - \\frac{1}{y}}$$
           { label: '$\\frac{x^2 - 9}{x - 3} = x + 3$', options: ['Valid (factor and cancel)', 'Invalid (can\'t cancel terms)', 'Valid only if x = 3', 'Invalid (sign error)'] },
           { label: '$\\frac{x + 5}{x + 7} = \\frac{5}{7}$', options: ['Invalid (can\'t cancel x)', 'Valid (cancel the x)', 'Valid only if x > 0', 'Invalid (should be 5/7)'] },
           { label: '$\\frac{3x}{6x^2} = \\frac{1}{2x}$', options: ['Valid (cancel 3x)', 'Invalid (can\'t cancel)', 'Valid only if x ≠ 0', 'Invalid (should be 1/2)'] },
-          { label: '$\\frac{x^2 + 4}{x + 2} = x + 2$', options: ['Invalid (x² + 4 doesn\'t factor)', 'Valid (divide)', 'Valid (cancel x + 2)', 'Invalid (need to FOIL)'] }
+          { label: '$\\frac{x^2 + 4}{x + 2} = x + 2$', options: ['Invalid ($x^{2}$ + 4 doesn\'t factor)', 'Valid (divide)', 'Valid (cancel x + 2)', 'Invalid (need to FOIL)'] }
         ],
-        correctAnswers: ['Valid (factor and cancel)', 'Invalid (can\'t cancel x)', 'Valid (cancel 3x)', 'Invalid (x² + 4 doesn\'t factor)'],
+        correctAnswers: ['Valid (factor and cancel)', 'Invalid (can\'t cancel x)', 'Valid (cancel 3x)', 'Invalid ($x^{2}$ + 4 doesn\'t factor)'],
         hint1: 'For the first one, factor the numerator as a difference of squares.',
         hint2: 'Remember: you can only cancel common FACTORS, not individual terms.',
         hint3: '$x^2 + 4$ is a sum of squares — it does NOT factor over the reals.',

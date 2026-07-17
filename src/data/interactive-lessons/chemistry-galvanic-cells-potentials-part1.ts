@@ -115,15 +115,15 @@ Copper gains 2 electrons — oxidation number changes from $+2$ to $0$.
       exercise: {
         questions: [
           {
-            question: 'In the reaction Fe²⁺ + Sn → Fe + Sn²⁺, which species is oxidized?',
+            question: 'In the reaction $Fe^{2+}$ + Sn → Fe + $Sn^{2+}$, which species is oxidized?',
             options: [
-              'Fe²⁺',
+              '$Fe^{2+}$',
               'Sn',
               'Fe',
-              'Sn²⁺'
+              '$Sn^{2+}$'
             ],
             correctAnswer: 1,
-            explanation: 'Sn goes from oxidation state 0 to +2, meaning it loses electrons. Sn is oxidized (and is the reducing agent). Fe²⁺ is reduced (gains electrons).'
+            explanation: 'Sn goes from oxidation state 0 to +2, meaning it loses electrons. Sn is oxidized (and is the reducing agent). $Fe^{2+}$ is reduced (gains electrons).'
           },
           {
             question: 'At which electrode does oxidation occur?',
@@ -137,7 +137,7 @@ Copper gains 2 electrons — oxidation number changes from $+2$ to $0$.
             explanation: 'Oxidation always occurs at the **anode** (AN OX). Reduction occurs at the cathode (RED CAT).'
           },
           {
-            question: 'In the half-reaction Ag⁺(aq) + e⁻ → Ag(s), silver is being:',
+            question: 'In the half-reaction $Ag^{+}(aq)$ + $e^{-}$ → Ag(s), silver is being:',
             options: [
               'Oxidized (losing electrons)',
               'Reduced (gaining electrons)',
@@ -214,18 +214,18 @@ Determine the oxidation state of the underlined element:
       exercise: {
         questions: [
           {
-            question: 'For the reaction 2Fe³⁺ + Sn²⁺ → 2Fe²⁺ + Sn⁴⁺, identify the oxidizing agent.',
+            question: 'For the reaction $2Fe^{3+}$ + $Sn^{2+}$ → $2Fe^{2+}$ + $Sn^{4+}$, identify the oxidizing agent.',
             options: [
-              'Fe³⁺',
-              'Sn²⁺',
-              'Fe²⁺',
-              'Sn⁴⁺'
+              '$Fe^{3+}$',
+              '$Sn^{2+}$',
+              '$Fe^{2+}$',
+              '$Sn^{4+}$'
             ],
             correctAnswer: 0,
-            explanation: 'Fe³⁺ is reduced (Fe³⁺ → Fe²⁺, gains electrons). The species that is reduced is the **oxidizing agent**. Sn²⁺ is oxidized (Sn²⁺ → Sn⁴⁺) and is the reducing agent.'
+            explanation: '$Fe^{3+}$ is reduced ($Fe^{3+}$ → $Fe^{2+}$, gains electrons). The species that is reduced is the **oxidizing agent**. $Sn^{2+}$ is oxidized ($Sn^{2+}$ → $Sn^{4+}$) and is the reducing agent.'
           },
           {
-            question: 'How many electrons are transferred in the balanced reaction: 2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu?',
+            question: 'How many electrons are transferred in the balanced reaction: 2Al + $3Cu^{2+}$ → $2Al^{3+}$ + 3Cu?',
             options: [
               '2',
               '3',
@@ -233,7 +233,7 @@ Determine the oxidation state of the underlined element:
               '12'
             ],
             correctAnswer: 2,
-            explanation: 'Each Al loses 3e⁻: 2 × 3 = 6e⁻ lost. Each Cu²⁺ gains 2e⁻: 3 × 2 = 6e⁻ gained. Total: 6 electrons transferred.'
+            explanation: 'Each Al loses $3e^{-}$: 2 × 3 = $6e^{-}$ lost. Each $Cu^{2+}$ gains $2e^{-}$: 3 × 2 = $6e^{-}$ gained. Total: 6 electrons transferred.'
           }
         ]
       }

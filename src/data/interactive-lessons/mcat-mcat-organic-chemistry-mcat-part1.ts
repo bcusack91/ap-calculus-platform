@@ -112,26 +112,26 @@ On the MCAT, many questions hide stereochemistry inside a passage about receptor
     H | 1-C-2
       | 3
 </pre>
-Where: 1=Cl, 2=CH₃, 3=OH, 4=H
+Where: 1=Cl, 2=$CH_{3}$, 3=OH, 4=H
 
 **Solution:**
-1. Assign atomic numbers: Cl (17) > OH (8) > CH₃ (6) > H (1)
+1. Assign atomic numbers: Cl (17) > OH (8) > $CH_{3}$ (6) > H (1)
    - Priority 1 = Cl
    - Priority 2 = OH
-   - Priority 3 = CH₃
+   - Priority 3 = $CH_{3}$
    - Priority 4 = H
 
 2. Orient H (priority 4) away from viewer ✓ (already shown)
 
 3. Trace 1→2→3:
-   - 1 (Cl) → 2 (OH) → 3 (CH₃)
+   - 1 (Cl) → 2 (OH) → 3 $(CH_{3})$
    - This traces **counterclockwise** = **S-configuration**
 
 **MCAT Strategy:** Draw/mentally rotate to get H in back. Then trace 1→2→3 path. Clockwise=R, counterclockwise=S. Practice this 10× before test day.
 </details>
 
 <details>
-<summary><b>Example 2: Count stereoisomers using the 2^n rule</b></summary>
+<summary><b>Example 2: Count stereoisomers using the $2^{n}$ rule</b></summary>
 
 **Question:** How many stereoisomers exist for 2,3,4-trihydroxybutanal?
 <pre>
@@ -141,7 +141,7 @@ CHOH  ← chiral center 1
 |
 CHOH  ← chiral center 2
 |
-CH₂OH ← NOT chiral (two H atoms)
+$CH_{2}OH$ ← NOT chiral (two H atoms)
 </pre>
 
 **Solution:**
@@ -155,7 +155,7 @@ CH₂OH ← NOT chiral (two H atoms)
 <details>
 <summary><b>Example 3: Distinguish stereoisomer relationships</b></summary>
 
-**Question:** Molecules A and B both have formula C₄H₈Cl₂. A has both Cl atoms on C1 (geminal), and B has Cl atoms on C1 and C2. What is their relationship?
+**Question:** Molecules A and B both have formula $C_{4}H_{8}Cl_{2}$. A has both Cl atoms on C1 (geminal), and B has Cl atoms on C1 and C2. What is their relationship?
 
 **Solution:**
 1. Connectivity differs: A = 1,1-dichlorobutane; B = 1,2-dichlorobutane
@@ -176,7 +176,7 @@ CH₂OH ← NOT chiral (two H atoms)
       |
  Br-C-H
      |
- CH₃-C-CH₃
+ $CH_{3}-C-CH_{3}$
       |
       Br
 </pre>

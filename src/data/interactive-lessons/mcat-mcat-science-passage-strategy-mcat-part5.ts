@@ -82,7 +82,7 @@ A Chem/Phys passage gives initial-rate data for $A \\rightarrow \\text{products}
             question: `For that second-order reaction, the rate constant $k$ must carry units of:`,
             options: [`$\\text{M}^{-1}\\text{s}^{-1}$`, `$\\text{s}^{-1}$`, `$\\text{M}\\,\\text{s}^{-1}$`, `dimensionless`],
             correctAnswer: 0,
-            explanation: `Rate has units M/s and $[A]^2$ has units M². So $k = \\text{rate}/[A]^2$ has units $\\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$. Matching $k$'s units to the order is a quick error check.`
+            explanation: `Rate has units M/s and $[A]^2$ has units $M^{2}$. So $k = \\text{rate}/[A]^2$ has units $\\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$. Matching $k$'s units to the order is a quick error check.`
           }
         ]
       }

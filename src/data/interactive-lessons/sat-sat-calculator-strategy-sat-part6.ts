@@ -35,10 +35,10 @@ Graph \`y = |2x - 6|\` and \`y = 10\`. Click intersections to find that x = -2 a
     {
       id: 'cs6-q1',
       type: 'quiz' as const,
-      question: 'If f(x) = x³ - 4x, what is the fastest way to find f(3) on the SAT?',
+      question: 'If f(x) = $x^{3}$ - 4x, what is the fastest way to find f(3) on the SAT?',
       options: [
         'Compute 27 - 12 = 15 mentally',
-        'Graph y = x³ - 4x and use the table to find y when x = 3',
+        'Graph y = $x^{3}$ - 4x and use the table to find y when x = 3',
         'Both are equally fast; choose based on comfort',
         'Use substitution in the answer choices'
       ],

@@ -149,7 +149,7 @@ When surfaces are stationary relative to each other, microscopic bonds form betw
       content: `
 **Friction Calculations** 🧮
 
-A 20 kg box sits on a horizontal surface. $\\mu_s = 0.50$, $\\mu_k = 0.40$, $g = 10$ m/s².
+A 20 kg box sits on a horizontal surface. $\\mu_s = 0.50$, $\\mu_k = 0.40$, $g = 10$ $m/s^{2}$.
 
 1) What is the maximum static friction force (in N)?
 
@@ -210,7 +210,7 @@ A 20 kg box sits on a horizontal surface. $\\mu_s = 0.50$, $\\mu_k = 0.40$, $g =
       exercise: {
         questions: [
           {
-            question: 'A 10 kg block on a surface has $\\mu_s = 0.6$ and $\\mu_k = 0.4$. You gradually increase the force you apply. The block just begins to slide when the force reaches ($g = 10$ m/s²):',
+            question: 'A 10 kg block on a surface has $\\mu_s = 0.6$ and $\\mu_k = 0.4$. You gradually increase the force you apply. The block just begins to slide when the force reaches ($g = 10$ $m/s^{2}$):',
             options: [
               '40 N',
               '50 N',

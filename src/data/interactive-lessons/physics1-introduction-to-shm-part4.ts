@@ -125,7 +125,7 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
 
 2) What is the maximum speed $v_{\\text{max}} = A\\omega$? (in m/s, round to 3 significant figures)
 
-3) What is the maximum acceleration $a_{\\text{max}} = A\\omega^2$? (in m/s², round to 3 significant figures)
+3) What is the maximum acceleration $a_{\\text{max}} = A\\omega^2$? (in $m/s^{2}$, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -133,7 +133,7 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
         hint1: '$\\omega = 2\\pi/T = 2\\pi/4.0$',
         hint2: '$v_{\\text{max}} = A\\omega = 0.20 \\times 1.57$',
         hint3: '$a_{\\text{max}} = A\\omega^2 = 0.20 \\times (1.57)^2$',
-        explanation: '1) $\\omega = 2\\pi/4.0 = \\pi/2 \\approx 1.57$ rad/s. 2) $v_{\\text{max}} = 0.20(1.57) = 0.314 \\approx 0.31$ m/s. 3) $a_{\\text{max}} = 0.20(1.57)^2 = 0.20(2.47) = 0.493 \\approx 0.49$ m/s².'
+        explanation: '1) $\\omega = 2\\pi/4.0 = \\pi/2 \\approx 1.57$ rad/s. 2) $v_{\\text{max}} = 0.20(1.57) = 0.314 \\approx 0.31$ m/s. 3) $a_{\\text{max}} = 0.20(1.57)^2 = 0.20(2.47) = 0.493 \\approx 0.49$ $m/s^{2}$.'
       }
     },
     {
@@ -176,13 +176,13 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
           {
             question: 'For SHM described by $x = 0.10\\cos(5t)$, the maximum acceleration is:',
             options: [
-              '$0.50$ m/s²',
-              '$2.5$ m/s²',
-              '$5.0$ m/s²',
-              '$25$ m/s²'
+              '$0.50$ $m/s^{2}$',
+              '$2.5$ $m/s^{2}$',
+              '$5.0$ $m/s^{2}$',
+              '$25$ $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$a_{\\text{max}} = A\\omega^2 = 0.10 \\times 5^2 = 0.10 \\times 25 = 2.5$ m/s².'
+            explanation: '$a_{\\text{max}} = A\\omega^2 = 0.10 \\times 5^2 = 0.10 \\times 25 = 2.5$ $m/s^{2}$.'
           },
           {
             question: 'If the displacement graph of SHM looks like a cosine function, the velocity graph looks like:',

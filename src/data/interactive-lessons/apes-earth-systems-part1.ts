@@ -17,7 +17,7 @@ export const apesEarthSystemsPart1Data = {
 |--------|-----------------|-----------------|
 | **Geosphere** | Rocks, minerals, soil, tectonic plates | Provides nutrients through weathering; volcanic activity affects atmosphere |
 | **Hydrosphere** | Oceans, rivers, lakes, groundwater, ice | Water cycle connects all spheres; ocean currents regulate climate |
-| **Atmosphere** | Gases surrounding Earth (N₂ 78%, O₂ 21%, trace gases) | Greenhouse effect; weather; filters UV radiation |
+| **Atmosphere** | Gases surrounding Earth ($N_{2}$ 78%, $O_{2}$ 21%, trace gases) | Greenhouse effect; weather; filters UV radiation |
 | **Biosphere** | All living organisms | Photosynthesis, decomposition, nutrient cycling |
 
 > 🔑 **AP Key Point:** Environmental science studies the **interactions** between these spheres. Most AP questions ask how a change in one sphere affects others.

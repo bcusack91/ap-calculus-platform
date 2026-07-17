@@ -155,7 +155,7 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
             explanation: `Charles's Law: heating the air inside the balloon increases its volume, making it less dense than the surrounding cooler air, so the balloon rises.`
           },
           {
-            question: 'A container at constant T and P holds 2.0 mol of O₂ in 44.8 L. If you add another 1.0 mol of O₂, the volume becomes:',
+            question: 'A container at constant T and P holds 2.0 mol of $O_{2}$ in 44.8 L. If you add another 1.0 mol of $O_{2}$, the volume becomes:',
             options: [
               '22.4 L',
               '44.8 L',

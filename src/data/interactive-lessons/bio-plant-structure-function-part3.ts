@@ -61,7 +61,7 @@ The pressure-flow hypothesis explains how sugars move through phloem by **bulk f
 ### Step-by-Step Mechanism
 
 **At the Source (e.g., mature leaf):**
-1. Companion cells **actively load sucrose** into sieve-tube elements using H⁺ cotransport (requires ATP)
+1. Companion cells **actively load sucrose** into sieve-tube elements using $H^{+}$ cotransport (requires ATP)
 2. High sucrose concentration **lowers water potential** inside sieve tubes
 3. Water enters from nearby xylem by **osmosis**
 4. This creates **high turgor pressure** (positive Ψp) at the source end
@@ -81,7 +81,7 @@ The pressure-flow hypothesis explains how sugars move through phloem by **bulk f
 
 | Type | Mechanism | Energy? |
 |---|---|---|
-| **Apoplastic loading** | Sucrose exits companion cell → enters apoplast → loaded into sieve tube via H⁺/sucrose cotransporter | Active (requires ATP for H⁺ pump) |
+| **Apoplastic loading** | Sucrose exits companion cell → enters apoplast → loaded into sieve tube via $H^{+}/sucrose$ cotransporter | Active (requires ATP for $H^{+}$ pump) |
 | **Symplastic loading** | Sucrose moves through plasmodesmata directly from mesophyll → companion cell → sieve tube | Passive (polymer trapping may be involved) |`
     },
     {
@@ -110,7 +110,7 @@ The pressure-flow hypothesis explains how sugars move through phloem by **bulk f
               'Evaporation of water from stomata'
             ],
             correctAnswer: 1,
-            explanation: 'Apoplastic phloem loading requires ATP to power the H⁺ pump that drives sucrose cotransport into sieve-tube elements. Without ATP, sucrose cannot be actively loaded, disrupting the pressure gradient needed for translocation.'
+            explanation: 'Apoplastic phloem loading requires ATP to power the $H^{+}$ pump that drives sucrose cotransport into sieve-tube elements. Without ATP, sucrose cannot be actively loaded, disrupting the pressure gradient needed for translocation.'
           },
           {
             question: 'Phloem transport differs from xylem transport in that phloem:',
@@ -144,7 +144,7 @@ The pressure-flow hypothesis explains how sugars move through phloem by **bulk f
 ## Experimental Evidence for Pressure-Flow
 
 - **Aphid stylet experiments**: Aphids insert stylets into individual sieve tubes. When the aphid is removed, phloem sap exudes under pressure from the cut stylet — demonstrating positive pressure in phloem
-- **Radioactive tracers**: ¹⁴C-labeled CO₂ fed to a source leaf shows up in sink tissues, confirming directional sugar transport
+- **Radioactive tracers**: $ {}^{14}C$-labeled $CO_{2}$ fed to a source leaf shows up in sink tissues, confirming directional sugar transport
 - **Girdling experiments**: Removing a ring of bark (which includes phloem) causes sugar to accumulate above the girdle, confirming phloem carries sugar downward`
     },
     {

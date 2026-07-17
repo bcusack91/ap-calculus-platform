@@ -22,9 +22,9 @@ export const geometryBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '12',
     options: [
       { label: 'A', value: '12', isCorrect: true },
-      { label: 'B', value: '8', isCorrect: false, explanation: '5² + b² = 13² → 25 + b² = 169 → b² = 144 → b = 12' },
-      { label: 'C', value: '10', isCorrect: false, explanation: 'Use Pythagorean theorem: a² + b² = c²' },
-      { label: 'D', value: '√194', isCorrect: false, explanation: 'You need to subtract, not add: 169 - 25 = 144' },
+      { label: 'B', value: '8', isCorrect: false, explanation: '$5^{2}$ + $b^{2}$ = $13^{2}$ → 25 + $b^{2}$ = 169 → $b^{2}$ = 144 → b = 12' },
+      { label: 'C', value: '10', isCorrect: false, explanation: 'Use Pythagorean theorem: $a^{2}$ + $b^{2}$ = $c^{2}$' },
+      { label: 'D', value: '$\\sqrt{194}$', isCorrect: false, explanation: 'You need to subtract, not add: 169 - 25 = 144' },
     ],
   },
   {
@@ -46,9 +46,9 @@ export const geometryBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '49π',
     options: [
       { label: 'A', value: '49π', isCorrect: true },
-      { label: 'B', value: '14π', isCorrect: false, explanation: '14π is the circumference (2πr). Area = πr² = 49π' },
-      { label: 'C', value: '7π', isCorrect: false, explanation: 'Area = πr² = π(7)² = 49π' },
-      { label: 'D', value: '49', isCorrect: false, explanation: 'Don\'t forget π! Area = πr²' },
+      { label: 'B', value: '14π', isCorrect: false, explanation: '14π is the circumference (2πr). Area = $\\pi r^{2}$ = 49π' },
+      { label: 'C', value: '7π', isCorrect: false, explanation: 'Area = $\\pi r^{2}$ = $\\pi (7)^{2}$ = 49π' },
+      { label: 'D', value: '49', isCorrect: false, explanation: 'Don\'t forget π! Area = $\\pi r^{2}$' },
     ],
   },
   {
@@ -58,7 +58,7 @@ export const geometryBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '50',
     options: [
       { label: 'A', value: '50', isCorrect: true },
-      { label: 'B', value: '100', isCorrect: false, explanation: 'A = ½(b₁+b₂)h = ½(8+12)(5) = ½(20)(5) = 50' },
+      { label: 'B', value: '100', isCorrect: false, explanation: 'A = $\\tfrac{1}{2} (b_{1}+b_{2})h$ = ½(8+12)(5) = ½(20)(5) = 50' },
       { label: 'C', value: '40', isCorrect: false, explanation: 'Use both bases: ½(8+12)×5, not just 8×5' },
       { label: 'D', value: '60', isCorrect: false, explanation: 'A = ½ × (sum of bases) × height = 50' },
     ],
@@ -70,8 +70,8 @@ export const geometryBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '75',
     options: [
       { label: 'A', value: '75', isCorrect: true },
-      { label: 'B', value: '45', isCorrect: false, explanation: 'Area ratio = (scale factor)² = (3/5)² = 9/25. If ABC=27, DEF = 27×25/9 = 75' },
-      { label: 'C', value: '135', isCorrect: false, explanation: 'Ratio of areas is square of ratio of sides: (5/3)² = 25/9' },
+      { label: 'B', value: '45', isCorrect: false, explanation: 'Area ratio = $(scale factor)^{2}$ = $(3/5)^{2}$ = 9/25. If ABC=27, DEF = 27×25/9 = 75' },
+      { label: 'C', value: '135', isCorrect: false, explanation: 'Ratio of areas is square of ratio of sides: $(5/3)^{2}$ = 25/9' },
       { label: 'D', value: '15', isCorrect: false, explanation: '27 × (25/9) = 75, not 27 × (5/9)' },
     ],
   },
@@ -82,9 +82,9 @@ export const geometryBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '5',
     options: [
       { label: 'A', value: '5', isCorrect: true },
-      { label: 'B', value: '7', isCorrect: false, explanation: 'd = √((4-1)² + (6-2)²) = √(9+16) = √25 = 5' },
-      { label: 'C', value: '√7', isCorrect: false, explanation: '(4-1)² = 9, (6-2)² = 16, sum = 25, √25 = 5' },
-      { label: 'D', value: '25', isCorrect: false, explanation: '25 is d², not d. Take the square root' },
+      { label: 'B', value: '7', isCorrect: false, explanation: 'd = $\\sqrt{(4-1)^{2} + (6-2)^{2}}$ = $\\sqrt{9+16}$ = $\\sqrt{25}$ = 5' },
+      { label: 'C', value: '$\\sqrt{7}$', isCorrect: false, explanation: '$(4-1)^{2}$ = 9, $(6-2)^{2}$ = 16, sum = 25, $\\sqrt{25}$ = 5' },
+      { label: 'D', value: '25', isCorrect: false, explanation: '25 is $d^{2}$, not d. Take the square root' },
     ],
   },
   {
@@ -118,21 +118,21 @@ export const geometryBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '10',
     options: [
       { label: 'A', value: '10', isCorrect: true },
-      { label: 'B', value: '5√3', isCorrect: false, explanation: '5√3 is the side opposite 60°. Hypotenuse = 2 × short side = 10' },
-      { label: 'C', value: '5√2', isCorrect: false, explanation: '5√2 is for 45-45-90. In 30-60-90: hyp = 2 × short side' },
-      { label: 'D', value: '15', isCorrect: false, explanation: 'Ratio is 1:√3:2, so hyp = 2×5 = 10' },
+      { label: 'B', value: '$5\\sqrt{3}$', isCorrect: false, explanation: '$5\\sqrt{3}$ is the side opposite 60°. Hypotenuse = 2 × short side = 10' },
+      { label: 'C', value: '$5\\sqrt{2}$', isCorrect: false, explanation: '$5\\sqrt{2}$ is for 45-45-90. In 30-60-90: hyp = 2 × short side' },
+      { label: 'D', value: '15', isCorrect: false, explanation: 'Ratio is 1:$\\sqrt{3}$:2, so hyp = 2×5 = 10' },
     ],
   },
   {
     id: 'geo-10',
     type: 'area-perimeter',
     question: 'A regular hexagon has side length 4. What is its area?',
-    correctAnswer: '24√3',
+    correctAnswer: '$24\\sqrt{3}$',
     options: [
-      { label: 'A', value: '24√3', isCorrect: true },
-      { label: 'B', value: '16√3', isCorrect: false, explanation: 'A = (3√3/2)s² = (3√3/2)(16) = 24√3' },
-      { label: 'C', value: '96', isCorrect: false, explanation: 'Regular hexagon area = (3√3/2)s², not 6s' },
-      { label: 'D', value: '48', isCorrect: false, explanation: 'The formula includes √3: A = (3√3/2)(4²) = 24√3' },
+      { label: 'A', value: '$24\\sqrt{3}$', isCorrect: true },
+      { label: 'B', value: '$16\\sqrt{3}$', isCorrect: false, explanation: 'A = $(3\\sqrt{3}/2)s^{2}$ = $(3\\sqrt{3}/2)(16)$ = $24\\sqrt{3}$' },
+      { label: 'C', value: '96', isCorrect: false, explanation: 'Regular hexagon area = $(3\\sqrt{3}/2)s^{2}$, not 6s' },
+      { label: 'D', value: '48', isCorrect: false, explanation: 'The formula includes $\\sqrt{3}$: A = $(3\\sqrt{3}/2)(4^{2})$ = $24\\sqrt{3}$' },
     ],
   },
 ]

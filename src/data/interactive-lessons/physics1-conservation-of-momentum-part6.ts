@@ -40,7 +40,7 @@ For perfectly inelastic: replace right side with $(m_1 + m_2)v_f$
       content: `
 **Problem 1: Ballistic Pendulum** 🎯
 
-A 0.010 kg bullet embeds in a 2.0 kg wooden block hanging from a string. The block+bullet swings upward to a height of 0.20 m. What was the bullet\'s speed? (Use $g = 10$ m/s²)
+A 0.010 kg bullet embeds in a 2.0 kg wooden block hanging from a string. The block+bullet swings upward to a height of 0.20 m. What was the bullet\'s speed? (Use $g = 10$ $m/s^{2}$)
 
 *Hint: Use two steps — conservation of momentum during collision, then conservation of energy during swing.*
       `,

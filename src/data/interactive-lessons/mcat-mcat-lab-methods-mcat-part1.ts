@@ -54,7 +54,7 @@ $$R_f = \\frac{\\text{distance traveled by spot}}{\\text{distance traveled by so
             question: `You want to purify a His-tagged recombinant protein in a single step from a cell lysate. The best technique is:`,
             options: [`Affinity chromatography with a nickel column`, `Size-exclusion chromatography`, `Thin-layer chromatography`, `Gas chromatography`],
             correctAnswer: 0,
-            explanation: `Affinity chromatography exploits a specific interaction — a His-tag binds immobilized Ni²⁺ ions, while everything else washes through. Eluting with imidazole releases the pure protein. This single-step specificity is why affinity is the go-to for tagged recombinant proteins.`
+            explanation: `Affinity chromatography exploits a specific interaction — a His-tag binds immobilized $Ni^{2+}$ ions, while everything else washes through. Eluting with imidazole releases the pure protein. This single-step specificity is why affinity is the go-to for tagged recombinant proteins.`
           }
         ]
       }

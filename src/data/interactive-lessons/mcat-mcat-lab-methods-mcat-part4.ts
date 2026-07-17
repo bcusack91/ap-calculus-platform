@@ -16,7 +16,7 @@ Spectroscopy measures how molecules absorb/emit electromagnetic radiation. Diffe
 |--------|------------------|--------|-----------|
 | **UV-Vis** | UV/visible | Electronic transitions (π→π*, conjugation) | Concentration, conjugation |
 | **IR** | Infrared | Bond vibrations | Functional groups (C=O ~1700, O–H broad) |
-| **NMR** | Radio waves | Nuclear spin (¹H, ¹³C) | Connectivity, H environments |
+| **NMR** | Radio waves | Nuclear spin ($ {}^{1}H$, $ {}^{13}C$) | Connectivity, H environments |
 | **Mass spec** | (ionization, not absorption) | Mass/charge | Molecular weight, fragments |
 
 ### Beer–Lambert Law
@@ -24,7 +24,7 @@ Spectroscopy measures how molecules absorb/emit electromagnetic radiation. Diffe
 $$A = \\varepsilon \\, l \\, c$$
 
 - $A$ = absorbance (unitless, log scale)
-- $\\varepsilon$ = molar absorptivity (M⁻¹cm⁻¹) — an intrinsic property at a given wavelength
+- $\\varepsilon$ = molar absorptivity $(M^{-1}cm^{-1})$ — an intrinsic property at a given wavelength
 - $l$ = path length (cm)
 - $c$ = concentration (M)
 
@@ -39,8 +39,8 @@ $$A = -\\log_{10}(T) = -\\log_{10}\\!\\left(\\frac{I}{I_0}\\right)$$
 
 ### Biochemistry Hooks
 
-- **A₂₆₀**: nucleic acids (aromatic bases). **A₂₈₀**: proteins (Trp, Tyr).
-- A₂₆₀/A₂₈₀ ratio ≈ 1.8 → pure DNA; ≈ 2.0 → pure RNA; lower → protein contamination.`
+- **$A_{260}$**: nucleic acids (aromatic bases). **$A_{280}$**: proteins (Trp, Tyr).
+- $A_{260}/A_{280}$ ratio ≈ 1.8 → pure DNA; ≈ 2.0 → pure RNA; lower → protein contamination.`
     },
     {
       id: 'lm4-quiz1',
@@ -56,15 +56,15 @@ $$A = -\\log_{10}(T) = -\\log_{10}\\!\\left(\\frac{I}{I_0}\\right)$$
           },
           {
             question: `Which spectroscopic method would BEST confirm the presence of a carbonyl (C=O) group?`,
-            options: [`IR spectroscopy (strong absorption near 1700 cm⁻¹)`, `UV-Vis spectroscopy`, `Size-exclusion chromatography`, `Mass spectrometry alone`],
+            options: [`IR spectroscopy (strong absorption near 1700 $cm^{-1}$)`, `UV-Vis spectroscopy`, `Size-exclusion chromatography`, `Mass spectrometry alone`],
             correctAnswer: 0,
-            explanation: `IR detects bond vibrations; the C=O stretch gives a strong, characteristic band near 1700 cm⁻¹. UV-Vis reports electronic transitions/conjugation, not specific functional groups, and chromatography separates rather than identifies bonds.`
+            explanation: `IR detects bond vibrations; the C=O stretch gives a strong, characteristic band near 1700 $cm^{-1}$. UV-Vis reports electronic transitions/conjugation, not specific functional groups, and chromatography separates rather than identifies bonds.`
           },
           {
-            question: `A purified nucleic-acid sample gives an A₂₆₀/A₂₈₀ ratio of 1.5. This most likely indicates:`,
+            question: `A purified nucleic-acid sample gives an $A_{260}/A_{280}$ ratio of 1.5. This most likely indicates:`,
             options: [`Protein contamination of the sample`, `Pure double-stranded DNA`, `Pure RNA`, `An empty cuvette`],
             correctAnswer: 0,
-            explanation: `Pure DNA gives A₂₆₀/A₂₈₀ ≈ 1.8 and pure RNA ≈ 2.0. Proteins absorb strongly at 280 nm (Trp/Tyr), so contamination raises A₂₈₀ and DROPS the ratio. A value of 1.5 signals significant protein contamination.`
+            explanation: `Pure DNA gives $A_{260}/A_{280}$ ≈ 1.8 and pure RNA ≈ 2.0. Proteins absorb strongly at 280 nm (Trp/Tyr), so contamination raises $A_{280}$ and DROPS the ratio. A value of 1.5 signals significant protein contamination.`
           }
         ]
       }
@@ -77,7 +77,7 @@ $$A = -\\log_{10}(T) = -\\log_{10}\\!\\left(\\frac{I}{I_0}\\right)$$
 <details>
 <summary><b>Example 1: Solve for concentration with Beer's law</b></summary>
 
-**Question:** A dye has $\\varepsilon = 5000$ M⁻¹cm⁻¹ at 500 nm. In a 1 cm cuvette its absorbance is 0.75. Find the concentration.
+**Question:** A dye has $\\varepsilon = 5000$ $M^{-1}cm^{-1}$ at 500 nm. In a 1 cm cuvette its absorbance is 0.75. Find the concentration.
 
 **Solution:**
 $$c = \\frac{A}{\\varepsilon l} = \\frac{0.75}{5000 \\times 1} = 1.5 \\times 10^{-4} \\text{ M} \\checkmark$$
@@ -104,7 +104,7 @@ $$A = -\\log_{10}(T)$$
 **Question:** Standards give A = 0.10, 0.20, 0.30 at c = 2, 4, 6 µM (path 1 cm). An unknown reads A = 0.25. Find its concentration and $\\varepsilon$.
 
 **Solution:**
-1. The data are linear: A/c = 0.10/2 = 0.05 per µM → slope = $\\varepsilon l$. With $l = 1$ cm, $\\varepsilon = 0.05$ µM⁻¹cm⁻¹ = 5×10⁴ M⁻¹cm⁻¹. ✓
+1. The data are linear: A/c = 0.10/2 = 0.05 per µM → slope = $\\varepsilon l$. With $l = 1$ cm, $\\varepsilon = 0.05$ µ$M^{-1}cm^{-1}$ = $5\\times 10^{4}$ $M^{-1}cm^{-1}$. ✓
 2. Unknown: $c = A/\\text{slope} = 0.25/0.05 = 5$ µM. ✓
 
 **Why a standard curve:** It empirically captures $\\varepsilon l$ for your exact instrument and conditions, so you read concentration directly off the line.
@@ -117,8 +117,8 @@ $$A = -\\log_{10}(T)$$
 
 - Beer–Lambert: $A = \\varepsilon l c$. Absorbance ∝ concentration (linear, valid ~A 0.1–1).
 - $A = -\\log_{10}(T)$: T = 10% → A = 1; T = 1% → A = 2 (logarithmic).
-- UV-Vis = electronic/conjugation & quantitation; IR = functional groups (C=O ~1700 cm⁻¹); NMR = H/C environments; MS = molecular weight.
-- A₂₆₀ = nucleic acids, A₂₈₀ = protein; A₂₆₀/A₂₈₀ ≈ 1.8 (DNA), 2.0 (RNA); low = protein contamination.`
+- UV-Vis = electronic/conjugation & quantitation; IR = functional groups (C=O ~1700 $cm^{-1}$); NMR = H/C environments; MS = molecular weight.
+- $A_{260}$ = nucleic acids, $A_{280}$ = protein; $A_{260}/A_{280}$ ≈ 1.8 (DNA), 2.0 (RNA); low = protein contamination.`
     }
   ]
 };

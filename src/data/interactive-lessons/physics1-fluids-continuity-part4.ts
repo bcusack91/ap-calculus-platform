@@ -48,8 +48,8 @@ $$A_1 v_1 + A_2 v_2 = A_3 v_3$$
 
 | Location | Total cross-section | Flow speed |
 |----------|--------------------|-----------| 
-| Aorta | ~3 cm² | ~30 cm/s |
-| All capillaries (combined) | ~3000 cm² | ~0.03 cm/s |
+| Aorta | ~3 $cm^{2}$ | ~30 cm/s |
+| All capillaries (combined) | ~3000 $cm^{2}$ | ~0.03 cm/s |
 
 The huge total capillary area means very slow flow — perfect for nutrient/gas exchange. This is continuity in biology!
       `
@@ -99,11 +99,11 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
       content: `
 **Branching Calculations** 🧮
 
-1) A 0.040 m² pipe splits into two: $A_1 = 0.020$ m² ($v_1 = 4$ m/s) and $A_2 = 0.030$ m² ($v_2 = 2$ m/s). Speed in main pipe (m/s)?
+1) A 0.040 $m^{2}$ pipe splits into two: $A_1 = 0.020$ $m^{2}$ ($v_1 = 4$ m/s) and $A_2 = 0.030$ $m^{2}$ ($v_2 = 2$ m/s). Speed in main pipe (m/s)?
 
-2) Main pipe area 0.020 m², speed 6.0 m/s, splits into two equal-area branches each 0.010 m². If one branch carries 0.040 m³/s, the speed in the other branch (m/s)?
+2) Main pipe area 0.020 $m^{2}$, speed 6.0 m/s, splits into two equal-area branches each 0.010 $m^{2}$. If one branch carries 0.040 $m^{3}/s$, the speed in the other branch (m/s)?
 
-3) Three streams ($Q_1 = 0.050$, $Q_2 = 0.030$, $Q_3 = 0.020$ m³/s) merge into a pipe of area $0.025$ m². Outlet speed (m/s)?
+3) Three streams ($Q_1 = 0.050$, $Q_2 = 0.030$, $Q_3 = 0.020$ $m^{3}/s$) merge into a pipe of area $0.025$ $m^{2}$. Outlet speed (m/s)?
       `,
       exercise: {
         boxes: 3,
@@ -111,7 +111,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
         hint1: '$A_0 v_0 = A_1 v_1 + A_2 v_2$.',
         hint2: 'Other $Q = Q_{main} - Q_{first}$.',
         hint3: '$v = (Q_1+Q_2+Q_3)/A$.',
-        explanation: '1) $Q_{tot} = 0.020(4)+0.030(2) = 0.14$ m³/s. $v_0 = 0.14/0.040 = 3.5$ m/s. 2) $Q_{main} = 0.020(6) = 0.12$ m³/s. $Q_2 = 0.12 - 0.040 = 0.080$ m³/s. $v_2 = 0.080/0.010 = 8$ m/s. 3) $Q_{tot} = 0.10$ m³/s. $v = 0.10/0.025 = 4$ m/s.'
+        explanation: '1) $Q_{tot} = 0.020(4)+0.030(2) = 0.14$ $m^{3}/s$. $v_0 = 0.14/0.040 = 3.5$ m/s. 2) $Q_{main} = 0.020(6) = 0.12$ $m^{3}/s$. $Q_2 = 0.12 - 0.040 = 0.080$ $m^{3}/s$. $v_2 = 0.080/0.010 = 8$ m/s. 3) $Q_{tot} = 0.10$ $m^{3}/s$. $v = 0.10/0.025 = 4$ m/s.'
       }
     },
     {
@@ -158,7 +158,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
       exercise: {
         questions: [
           {
-            question: 'A main pipe of area 0.020 m² delivers 0.060 m³/s of water. It splits into two branches of areas 0.005 m² ($v_a$) and 0.010 m² ($v_b$), with $v_a = 4$ m/s. What is $v_b$?',
+            question: 'A main pipe of area 0.020 $m^{2}$ delivers 0.060 $m^{3}/s$ of water. It splits into two branches of areas 0.005 $m^{2}$ ($v_a$) and 0.010 $m^{2}$ ($v_b$), with $v_a = 4$ m/s. What is $v_b$?',
             options: [
               '2 m/s',
               '4 m/s',
@@ -166,7 +166,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
               '10 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$Q_a = 0.005(4) = 0.020$ m³/s. $Q_b = 0.060 - 0.020 = 0.040$ m³/s. $v_b = 0.040/0.010 = 4$ m/s.'
+            explanation: '$Q_a = 0.005(4) = 0.020$ $m^{3}/s$. $Q_b = 0.060 - 0.020 = 0.040$ $m^{3}/s$. $v_b = 0.040/0.010 = 4$ m/s.'
           },
           {
             question: 'In the human cardiovascular system, the speed of blood in the AORTA vs the COMBINED capillary network is approximately:',

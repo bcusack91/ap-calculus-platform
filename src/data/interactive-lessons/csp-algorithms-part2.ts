@@ -41,7 +41,7 @@ An **algorithm** is a finite, ordered sequence of unambiguous steps. On the AP C
               "12"
             ],
             correctAnswer: 2,
-            explanation: "x doubles each pass: 2 → 4 → 8 → 16. Three doublings of 2 give 2·2³ = 16."
+            explanation: "x doubles each pass: 2 → 4 → 8 → 16. Three doublings of 2 give $2\\cdot 2^{3}$ = 16."
           },
           {
             question: "Which best describes when REPEAT UNTIL (n = 0) stops executing its block?",
@@ -177,7 +177,7 @@ DISPLAY shows **10**.
             explanation: "The classic mistake is comparing the index variable to the target instead of list[i]. AP pseudocode lists are 1-indexed, ruling out option B."
           },
           {
-            question: "Two algorithms produce the same output for every input. Algorithm A uses one loop and runs in time proportional to n. Algorithm B uses two nested loops and runs in time proportional to n². For n = 1000, which statement is best supported?",
+            question: "Two algorithms produce the same output for every input. Algorithm A uses one loop and runs in time proportional to n. Algorithm B uses two nested loops and runs in time proportional to $n^{2}$. For n = 1000, which statement is best supported?",
             options: [
               "Algorithm B is preferred because nested loops are more reliable.",
               "Algorithm A is more efficient; both are correct, so A should be used.",

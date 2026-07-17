@@ -82,7 +82,7 @@ $$x = \\frac{1 \\pm \\sqrt{1 + 400}}{100} = \\frac{1 + 20.02}{100} \\approx 0.21
       exercise: {
         questions: [
           {
-            question: 'A spring ($k = 400$ N/m) compressed 0.1 m launches a 0.2 kg ball straight up. The ball rises ($g = 10$ m/s²):',
+            question: 'A spring ($k = 400$ N/m) compressed 0.1 m launches a 0.2 kg ball straight up. The ball rises ($g = 10$ $m/s^{2}$):',
             options: [
               '0.5 m',
               '1.0 m',
@@ -123,7 +123,7 @@ $$x = \\frac{1 \\pm \\sqrt{1 + 400}}{100} = \\frac{1 + 20.02}{100} \\approx 0.21
       content: `
 **Practice Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A spring ($k = 200$ N/m) compressed 0.3 m launches a 0.5 kg ball straight up. What height does it reach (in m)?
 
@@ -178,7 +178,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A spring ($k = 1000$ N/m) compressed 0.2 m launches a 1 kg ball vertically. The ball\'s speed at height 1 m is ($g = 10$ m/s²):',
+            question: 'A spring ($k = 1000$ N/m) compressed 0.2 m launches a 1 kg ball vertically. The ball\'s speed at height 1 m is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{10}$ m/s',
               '$\\sqrt{20}$ m/s',

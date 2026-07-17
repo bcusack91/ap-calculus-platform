@@ -173,7 +173,7 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
       exercise: {
         questions: [
           {
-            question: 'A 0.25 kg ball is dropped from 5 m above a hard floor. It rebounds to a height of 3.2 m. Taking $g = 10$ m/s², what is the impulse from the floor? (Hint: find speeds using $v = \\sqrt{2gh}$)',
+            question: 'A 0.25 kg ball is dropped from 5 m above a hard floor. It rebounds to a height of 3.2 m. Taking $g = 10$ $m/s^{2}$, what is the impulse from the floor? (Hint: find speeds using $v = \\sqrt{2gh}$)',
             options: [
               '2.5 N·s',
               '4.5 N·s',

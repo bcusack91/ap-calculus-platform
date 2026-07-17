@@ -94,10 +94,10 @@ $$\\boxed{AB \\rightarrow A + B}$$
 
 | Reactant | Products | Balanced Equation |
 |----------|----------|-------------------|
-| Metal carbonate | Metal oxide + CO₂ | $\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$ |
-| Metal hydroxide | Metal oxide + H₂O | $\\text{Ca(OH)}_2 \\rightarrow \\text{CaO} + \\text{H}_2\\text{O}$ |
-| Metal chlorate | Metal chloride + O₂ | $2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$ |
-| Water (electrolysis) | H₂ + O₂ | $2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2 + \\text{O}_2$ |
+| Metal carbonate | Metal oxide + $CO_{2}$ | $\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$ |
+| Metal hydroxide | Metal oxide + $H_{2}O$ | $\\text{Ca(OH)}_2 \\rightarrow \\text{CaO} + \\text{H}_2\\text{O}$ |
+| Metal chlorate | Metal chloride + $O_{2}$ | $2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$ |
+| Water (electrolysis) | $H_{2}$ + $O_{2}$ | $2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2 + \\text{O}_2$ |
 
 
 ---
@@ -165,10 +165,10 @@ These reactions are essentially **reverses** of each other. If a synthesis react
           {
             question: 'When calcium carbonate is heated, it decomposes. Which products form?',
             options: [
-              'Ca + CO₃',
-              'CaO + CO₂',
-              'Ca(OH)₂ + CO₂',
-              'CaO + C + O₂'
+              'Ca + $CO_{3}$',
+              'CaO + $CO_{2}$',
+              '$Ca(OH)_{2}$ + $CO_{2}$',
+              'CaO + C + $O_{2}$'
             ],
             correctAnswer: 1,
             explanation: '$\\text{CaCO}_3 \\xrightarrow{\\Delta} \\text{CaO} + \\text{CO}_2$. Metal carbonates decompose into the metal oxide and carbon dioxide. This is a classic thermal decomposition reaction.'
@@ -218,7 +218,7 @@ For each reaction, type **synthesis** or **decomposition**.
         hint1: 'Two elements combine to form one compound.',
         hint2: 'One compound heated to form two simpler substances.',
         hint3: 'Two elements combine to form ammonia — a single product.',
-        explanation: '1) Two elements (Al + Br₂) → one compound (AlBr₃) = synthesis. 2) One compound (HgO) heated → two products (Hg + O₂) = decomposition. 3) Two elements (N₂ + H₂) → one compound (NH₃) = synthesis (the Haber process).'
+        explanation: '1) Two elements $(Al + Br_{2})$ → one compound $(AlBr_{3})$ = synthesis. 2) One compound (HgO) heated → two products $(Hg + O_{2})$ = decomposition. 3) Two elements $(N_{2} + H_{2})$ → one compound $(NH_{3})$ = synthesis (the Haber process).'
       }
     },
     {
@@ -238,7 +238,7 @@ For each reaction, type **synthesis** or **decomposition**.
             options: ['a catalyst only', 'energy input', 'a second reactant', 'no energy']
           },
           {
-            label: 'The reaction SO₃ + H₂O → H₂SO₄ is an example of',
+            label: 'The reaction $SO_{3}$ + $H_{2}O$ → $H_{2}SO_{4}$ is an example of',
             options: ['decomposition', 'synthesis', 'combustion', 'double replacement']
           },
           {
@@ -250,7 +250,7 @@ For each reaction, type **synthesis** or **decomposition**.
         hint1: 'Synthesis: $A + B \\rightarrow AB$ — how many products?',
         hint2: 'Breaking bonds requires energy.',
         hint3: 'Two reactants forming one product.',
-        explanation: 'Synthesis always produces exactly one product. Decomposition typically needs energy (heat, light, or electricity) to break bonds. SO₃ + H₂O → H₂SO₄ is synthesis (two reactants → one product). The Δ symbol means heat is applied.'
+        explanation: 'Synthesis always produces exactly one product. Decomposition typically needs energy (heat, light, or electricity) to break bonds. $SO_{3}$ + $H_{2}O$ → $H_{2}SO_{4}$ is synthesis (two reactants → one product). The Δ symbol means heat is applied.'
       }
     },
     {
@@ -275,10 +275,10 @@ For each reaction, type **synthesis** or **decomposition**.
           {
             question: 'Predict the product of the synthesis reaction: $\\text{Li} + \\text{F}_2 \\rightarrow ?$',
             options: [
-              'Li₂F',
+              '$Li_{2}F$',
               'LiF',
-              'LiF₂',
-              'Li₂F₂'
+              '$LiF_{2}$',
+              '$Li_{2}F_{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Li (charge +1) combines with F (charge −1) to form the ionic compound LiF. The balanced equation is $2\\text{Li} + \\text{F}_2 \\rightarrow 2\\text{LiF}$.'

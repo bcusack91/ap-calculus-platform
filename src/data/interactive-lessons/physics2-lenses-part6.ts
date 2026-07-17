@@ -78,7 +78,7 @@ $$P = \\frac{1}{f}$$
 
 | Quantity | Unit |
 |:---:|:---:|
-| $P$ (power) | **Diopters** (D) = m⁻¹ |
+| $P$ (power) | **Diopters** (D) = $m^{-1}$ |
 | $f$ (focal length) | **meters** |
 
 - Converging lens: $P > 0$ (positive diopters)

@@ -391,7 +391,7 @@ Will each square root be a whole number, or an irrational decimal?`,
 
 ---
 
-> 🔑 **Big Payoff:** Square roots aren't just abstract — they answer real questions. *"If a square garden has area $64$ ft², how long is each side?"* The answer is $\\sqrt{64} = 8$ ft.`,
+> 🔑 **Big Payoff:** Square roots aren't just abstract — they answer real questions. *"If a square garden has area $64$ $ft^{2}$, how long is each side?"* The answer is $\\sqrt{64} = 8$ ft.`,
       },
       {
         id: 'srps4-area',
@@ -412,9 +412,9 @@ $$s = \\sqrt{81} = 9 \\text{ feet}$$
 
 | Area of square | Side length |
 |----------------|-------------|
-| $25$ ft² | $\\sqrt{25} = 5$ ft |
-| $100$ ft² | $\\sqrt{100} = 10$ ft |
-| $144$ ft² | $\\sqrt{144} = 12$ ft |`,
+| $25$ $ft^{2}$ | $\\sqrt{25} = 5$ ft |
+| $100$ $ft^{2}$ | $\\sqrt{100} = 10$ ft |
+| $144$ $ft^{2}$ | $\\sqrt{144} = 12$ ft |`,
       },
       {
         id: 'srps4-area-drill',
@@ -423,9 +423,9 @@ $$s = \\sqrt{81} = 9 \\text{ feet}$$
 
 Each square has the given area. Find the side length (a whole number of feet).
 
-**1)** Area $= 36$ ft². Side $= \\,?$ ft
-**2)** Area $= 49$ ft². Side $= \\,?$ ft
-**3)** Area $= 121$ ft². Side $= \\,?$ ft`,
+**1)** Area $= 36$ $ft^{2}$. Side $= \\,?$ ft
+**2)** Area $= 49$ $ft^{2}$. Side $= \\,?$ ft
+**3)** Area $= 121$ $ft^{2}$. Side $= \\,?$ ft`,
         exercise: {
           boxes: 3,
           correctAnswers: ['6', '7', '11'],
@@ -467,7 +467,7 @@ $$c = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$
               explanation: '$c = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.',
             },
             {
-              question: 'A square has area $9$ m². What is its perimeter? (Hint: find the side first.)',
+              question: 'A square has area $9$ $m^{2}$. What is its perimeter? (Hint: find the side first.)',
               options: ['$3$ m', '$9$ m', '$12$ m', '$36$ m'],
               correctAnswer: 2,
               explanation: 'Side $= \\sqrt{9} = 3$ m. A square has $4$ equal sides, so perimeter $= 4 \\times 3 = 12$ m.',
@@ -556,7 +556,7 @@ You can now (1) recognize perfect squares, (2) find square roots, (3) estimate r
         content: `**Mixed Drill** 🧮
 
 **1)** $\\sqrt{169} = \\,?$
-**2)** A square has area $100$ m². Its side length is $\\,?$ m.
+**2)** A square has area $100$ $m^{2}$. Its side length is $\\,?$ m.
 **3)** Right triangle legs $5$ and $12$: hypotenuse $= \\sqrt{25 + 144} = \\,?$`,
         exercise: {
           boxes: 3,

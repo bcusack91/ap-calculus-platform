@@ -84,7 +84,7 @@ During a phase change (melting, boiling), temperature stays constant while heat 
             explanation: 'By Kirchhoff\'s law, good emitters are also good absorbers. Asphalt with $\\varepsilon = 0.95$ absorbs 95% of incident radiation, while concrete with $\\varepsilon = 0.30$ absorbs only 30%. The extra absorbed energy raises asphalt\'s temperature more.'
           },
           {
-            question: 'A composite wall has Layer 1 ($R_1 = 0.5$ m²·K/W) and Layer 2 ($R_2 = 2.0$ m²·K/W) in series. If the total temperature difference is 25°C and the wall area is 10 m², the rate of heat flow is:',
+            question: 'A composite wall has Layer 1 ($R_1 = 0.5$ $m^{2}\\cdot K/W$) and Layer 2 ($R_2 = 2.0$ $m^{2}\\cdot K/W$) in series. If the total temperature difference is 25°C and the wall area is 10 $m^{2}$, the rate of heat flow is:',
             options: [
               '50 W',
               '100 W',
@@ -92,7 +92,7 @@ During a phase change (melting, boiling), temperature stays constant while heat 
               '500 W'
             ],
             correctAnswer: 1,
-            explanation: '$R_{\\text{total}} = R_1 + R_2 = 0.5 + 2.0 = 2.5$ m²·K/W. $Q/t = A\\Delta T / R_{\\text{total}} = (10)(25)/2.5 = 100$ W.'
+            explanation: '$R_{\\text{total}} = R_1 + R_2 = 0.5 + 2.0 = 2.5$ $m^{2}\\cdot K/W$. $Q/t = A\\Delta T / R_{\\text{total}} = (10)(25)/2.5 = 100$ W.'
           }
         ]
       }
@@ -180,7 +180,7 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
             explanation: '$c = \\frac{-m_w c_w(T_f - T_{w,i})}{m(T_f - T_i)} = \\frac{-(0.40)(4{,}186)(1)}{(0.10)(-179)} = \\frac{-1{,}674.4}{-17.9} = 93.5$ J/(kg·°C). This is very low — close to gold (129) or lead (128), suggesting a dense metal.'
           },
           {
-            question: 'A double-pane window has two glass layers ($R_1 = R_3 = 0.005$ m²·K/W) with an air gap ($R_2 = 0.40$ m²·K/W). What percentage of the total thermal resistance is provided by the air gap?',
+            question: 'A double-pane window has two glass layers ($R_1 = R_3 = 0.005$ $m^{2}\\cdot K/W$) with an air gap ($R_2 = 0.40$ $m^{2}\\cdot K/W$). What percentage of the total thermal resistance is provided by the air gap?',
             options: [
               '49%',
               '80%',
@@ -188,7 +188,7 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
               '99.5%'
             ],
             correctAnswer: 2,
-            explanation: '$R_{\\text{total}} = 0.005 + 0.40 + 0.005 = 0.41$ m²·K/W. Air gap fraction $= 0.40/0.41 = 0.976 \\approx 98\\%$. The thin air gap provides almost all the insulation.'
+            explanation: '$R_{\\text{total}} = 0.005 + 0.40 + 0.005 = 0.41$ $m^{2}\\cdot K/W$. Air gap fraction $= 0.40/0.41 = 0.976 \\approx 98\\%$. The thin air gap provides almost all the insulation.'
           },
           {
             question: 'Which combination correctly ranks substances from highest to lowest specific heat?',

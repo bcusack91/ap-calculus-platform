@@ -24,7 +24,7 @@ Real rings are not flat (except cyclopropane, which has no choice): cyclobutane,
       id: 'alkan4-combustion',
       type: 'text' as const,
       content: `
-### Measuring Strain: Heat of Combustion per CH₂
+### Measuring Strain: Heat of Combustion per $CH_{2}$
 
 We cannot weigh "strain" directly, but we can measure it through **heats of combustion** ($\\Delta H_{comb}$). Every cycloalkane $C_nH_{2n}$ burns to $CO_2$ and $H_2O$; a strained ring stores extra energy that is released on combustion, so it burns "hotter" per $CH_2$ unit than a strain-free reference.
 
@@ -50,7 +50,7 @@ Dividing $\\Delta H_{comb}$ by the number of $CH_2$ groups gives a per-$CH_2$ va
       exercise: {
         questions: [
           {
-            question: 'Cyclopropane has the highest strain per CH₂ of any cycloalkane. What is the dominant cause?',
+            question: 'Cyclopropane has the highest strain per $CH_{2}$ of any cycloalkane. What is the dominant cause?',
             options: [
               'Steric strain between distant atoms',
               'Severe angle strain — the $60^\\circ$ internal angle is far from the ideal $109.5^\\circ$ (plus torsional strain from eclipsed C–H bonds)',
@@ -63,7 +63,7 @@ Dividing $\\Delta H_{comb}$ by the number of $CH_2$ groups gives a per-$CH_2$ va
           {
             question: 'Why can we use heat of combustion to measure ring strain?',
             options: [
-              'Because strain energy is stored in the molecule and released as extra heat on combustion, raising $\\Delta H_{comb}$ per CH₂ above the strain-free baseline',
+              'Because strain energy is stored in the molecule and released as extra heat on combustion, raising $\\Delta H_{comb}$ per $CH_{2}$ above the strain-free baseline',
               'Because strained rings do not burn',
               'Because combustion creates strain',
               'Because all rings release the same heat'
@@ -95,7 +95,7 @@ Dividing $\\Delta H_{comb}$ by the number of $CH_2$ groups gives a per-$CH_2$ va
 
 **Cyclobutane (still significantly strained).** Internal angle near $90^\\circ$. The ring **puckers** to relieve some torsional strain, leaving substantial angle strain. Total strain is comparable to cyclopropane, but distributed over four carbons.
 
-**Cyclopentane (nearly strain-free).** A flat pentagon would have $108^\\circ$ angles — almost perfect! — but a flat ring eclipses all C–H bonds. To dodge that torsional strain it adopts a puckered **"envelope"** (one carbon out of plane) or twist conformation. Net strain is small (~6.5 kcal/mol total, ~1.3 per CH₂).
+**Cyclopentane (nearly strain-free).** A flat pentagon would have $108^\\circ$ angles — almost perfect! — but a flat ring eclipses all C–H bonds. To dodge that torsional strain it adopts a puckered **"envelope"** (one carbon out of plane) or twist conformation. Net strain is small (~6.5 kcal/mol total, ~1.3 per $CH_{2}$).
 
 **Cyclohexane (strain-free).** The chair achieves $\\approx 109.5^\\circ$ angles *and* fully staggered bonds simultaneously. Essentially zero strain. This is why six-membered rings are by far the most common ring size in nature and pharmaceuticals.
 
@@ -157,7 +157,7 @@ Dividing $\\Delta H_{comb}$ by the number of $CH_2$ groups gives a per-$CH_2$ va
       exercise: {
         questions: [
           {
-            question: 'Rank cyclopropane, cyclopentane, and cyclohexane by strain per CH₂, from most to least.',
+            question: 'Rank cyclopropane, cyclopentane, and cyclohexane by strain per $CH_{2}$, from most to least.',
             options: [
               'Cyclopropane > cyclopentane > cyclohexane',
               'Cyclohexane > cyclopentane > cyclopropane',
@@ -171,7 +171,7 @@ Dividing $\\Delta H_{comb}$ by the number of $CH_2$ groups gives a per-$CH_2$ va
             question: 'Two molecules have similar TOTAL ring strain (~26–27 kcal/mol): cyclopropane and cyclobutane. Why is cyclopropane nonetheless considered more strained?',
             options: [
               'Cyclobutane has no strain',
-              'On a per-CH₂ basis cyclopropane is more strained, since its similar total strain is spread over only three carbons instead of four',
+              'On a $per-CH_{2}$ basis cyclopropane is more strained, since its similar total strain is spread over only three carbons instead of four',
               'Cyclopropane has more carbons',
               'They are equally strained in every sense'
             ],

@@ -67,7 +67,7 @@ export const macroUnemploymentInflationPart1Data = {
 | 2021 | $10,300 | 103 | 3.0% |
 | 2022 | $10,800 | 108 | 4.9% |
 
-**Inflation Rate = [(CPI₂ − CPI₁) ÷ CPI₁] × 100**
+**Inflation Rate = [$(CPI_{2} - CPI_{1})$ ÷ $CPI_{1}$] × 100**
 
 ### Winners and Losers from Unexpected Inflation
 
@@ -80,7 +80,7 @@ export const macroUnemploymentInflationPart1Data = {
 > 🔑 **AP Connection:** The AP exam tests who benefits and who is hurt by **unexpected** inflation. Key insight: inflation benefits borrowers and hurts lenders because the real value of debt decreases. Expected inflation that is built into contracts does not redistribute wealth as much.
 `},
     {id:'macroune1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
-      {question:'If the CPI was 120 last year and 126 this year, what is the inflation rate?',options:['6.0% — calculated as the raw difference between this year\'s CPI and last year\'s CPI','5.0% — calculated as [(126 − 120) ÷ 120] × 100','26.0% — calculated as [(126 − 100) ÷ 100] × 100 using the base year CPI of 100','105.0% — calculated by dividing this year\'s CPI by last year\'s CPI'],correctAnswer:1,explanation:'Inflation Rate = [(CPI₂ − CPI₁) ÷ CPI₁] × 100 = [(126 − 120) ÷ 120] × 100 = [6 ÷ 120] × 100 = **5.0%**. \nA common mistake is subtracting CPI values and treating the difference as the inflation rate (6% would be wrong). The rate must be calculated as a percentage change from the previous period\'s CPI, not as a raw point difference.'},
+      {question:'If the CPI was 120 last year and 126 this year, what is the inflation rate?',options:['6.0% — calculated as the raw difference between this year\'s CPI and last year\'s CPI','5.0% — calculated as [(126 − 120) ÷ 120] × 100','26.0% — calculated as [(126 − 100) ÷ 100] × 100 using the base year CPI of 100','105.0% — calculated by dividing this year\'s CPI by last year\'s CPI'],correctAnswer:1,explanation:'Inflation Rate = [$(CPI_{2} - CPI_{1})$ ÷ $CPI_{1}$] × 100 = [(126 − 120) ÷ 120] × 100 = [6 ÷ 120] × 100 = **5.0%**. \nA common mistake is subtracting CPI values and treating the difference as the inflation rate (6% would be wrong). The rate must be calculated as a percentage change from the previous period\'s CPI, not as a raw point difference.'},
       {question:'Who is most likely to BENEFIT from unexpected inflation?',options:['A retiree on a fixed pension with no cost-of-living adjustment','A person who lent $100,000 at a fixed 3% interest rate for 20 years','A homeowner who borrowed $300,000 on a fixed-rate 30-year mortgage','A person who keeps all their savings in a bank account earning 1% interest'],correctAnswer:2,explanation:'Borrowers benefit from unexpected inflation because they repay loans with dollars that are worth LESS in real purchasing power than when they borrowed. The homeowner\'s mortgage payment stays fixed in nominal terms, but inflation erodes the real burden of the debt. Conversely, the lender receives payments that buy fewer goods and services, and the saver\'s purchasing power declines.'}
     ]}}
   ]

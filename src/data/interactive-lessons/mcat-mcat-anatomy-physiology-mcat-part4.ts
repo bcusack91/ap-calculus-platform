@@ -43,7 +43,7 @@ export const mcatAnatPhysPart4Data = {
 | Protection | Keratin/corneum barrier vs. pathogens & water loss; melanin absorbs UV |
 | Thermoregulation | Sweat (evaporative cooling); cutaneous vasodilation/vasoconstriction |
 | Sensation | Mechanoreceptors (Meissner, Pacinian), thermoreceptors, nociceptors |
-| Vitamin D synthesis | UV-B converts 7-dehydrocholesterol → cholecalciferol (vit D₃) |
+| Vitamin D synthesis | UV-B converts 7-dehydrocholesterol → cholecalciferol $(vit D_{3})$ |
 | Excretion | Sweat removes small amounts of water, salts, urea |
 
 ### Thermoregulation (a negative-feedback loop)

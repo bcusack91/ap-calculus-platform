@@ -59,7 +59,7 @@ $$\\dot{m} = \\rho A v \\quad \\text{(Mass flow rate)}$$
       exercise: {
         questions: [
           {
-            question: 'Water flows at 4 m/s through a pipe of area 10 cm². The pipe widens to area 40 cm² and then narrows to area 5 cm². The speed at the narrowest point is:',
+            question: 'Water flows at 4 m/s through a pipe of area 10 $cm^{2}$. The pipe widens to area 40 $cm^{2}$ and then narrows to area 5 $cm^{2}$. The speed at the narrowest point is:',
             options: [
               '2 m/s',
               '4 m/s',
@@ -67,7 +67,7 @@ $$\\dot{m} = \\rho A v \\quad \\text{(Mass flow rate)}$$
               '16 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$Q = (10)(4) = 40$ cm² · m/s. At the narrowest: $v = Q/A = 40/5 = 8$ m/s. The speed doubles because the area halved compared to the original section.'
+            explanation: '$Q = (10)(4) = 40$ $cm^{2}$ · m/s. At the narrowest: $v = Q/A = 40/5 = 8$ m/s. The speed doubles because the area halved compared to the original section.'
           },
           {
             question: 'Streamlines around an airplane wing are closer together above the wing than below. This means:',
@@ -81,7 +81,7 @@ $$\\dot{m} = \\rho A v \\quad \\text{(Mass flow rate)}$$
             explanation: 'Closely spaced streamlines → higher velocity. This faster-moving air above the wing creates lower pressure (by Bernoulli — which we\'ll study next!), generating lift.'
           },
           {
-            question: 'A pipe system has water entering at the left at 3 m/s through area 20 cm². It exits through two pipes: one with area 10 cm² at 2 m/s, and one with area 15 cm². The speed in the second exit is:',
+            question: 'A pipe system has water entering at the left at 3 m/s through area 20 $cm^{2}$. It exits through two pipes: one with area 10 $cm^{2}$ at 2 m/s, and one with area 15 $cm^{2}$. The speed in the second exit is:',
             options: [
               '2.0 m/s',
               '2.67 m/s',
@@ -116,7 +116,7 @@ A water tower supplies water through a pipe of diameter 10 cm at 2.0 m/s. The pi
         hint1: '$Q = \\pi(0.05)^2(2.0)$. Convert to L/s.',
         hint2: 'Equal flow: $Q_A = Q/2$. $v_A = Q_A/(\\pi r_A^2) = Q_A/(\\pi(0.03)^2)$.',
         hint3: '$Q_B = Q/2$. $v_B = Q_B/(\\pi(0.04)^2)$.',
-        explanation: '$Q = \\pi(0.05)^2(2.0) = 1.57 \\times 10^{-2}$ m³/s = 15.7 L/s. $Q_A = Q_B = 7.85 \\times 10^{-3}$ m³/s. $v_A = 7.85 \\times 10^{-3}/(\\pi(0.03)^2) = 2.78$ m/s. $v_B = 7.85 \\times 10^{-3}/(\\pi(0.04)^2) = 1.56$ m/s.'
+        explanation: '$Q = \\pi(0.05)^2(2.0) = 1.57 \\times 10^{-2}$ $m^{3}/s$ = 15.7 L/s. $Q_A = Q_B = 7.85 \\times 10^{-3}$ $m^{3}/s$. $v_A = 7.85 \\times 10^{-3}/(\\pi(0.03)^2) = 2.78$ m/s. $v_B = 7.85 \\times 10^{-3}/(\\pi(0.04)^2) = 1.56$ m/s.'
       }
     },
     {
@@ -127,7 +127,7 @@ A water tower supplies water through a pipe of diameter 10 cm at 2.0 m/s. The pi
 
 ### Typical Exam Setup
 
-*A horizontal pipe has a cross-sectional area that varies along its length. At point 1, the area is $A_1 = 40$ cm² and the water speed is $v_1 = 2.5$ m/s. At point 2, the area is $A_2 = 10$ cm².*
+*A horizontal pipe has a cross-sectional area that varies along its length. At point 1, the area is $A_1 = 40$ $cm^{2}$ and the water speed is $v_1 = 2.5$ m/s. At point 2, the area is $A_2 = 10$ $cm^{2}$.*
 
 **(a)** Find the water speed at point 2.
 

@@ -147,10 +147,10 @@ A single worked thread shows the concepts reinforcing one another.
           {
             question: 'You need a clean, single monohalogenation product at the 3° carbon of 2-methylpropane (isobutane). What reagent, and which mechanistic feature ensures success?',
             options: [
-              'Cl₂/hν; the high selectivity of chlorine favors 3°',
-              'Br₂/hν; bromine is highly selective (late, product-like transition state) and preferentially abstracts the most stable 3° hydrogen',
-              'O₂; combustion installs the halogen',
-              'Br₂ in the dark; no initiation needed'
+              '$Cl_{2}/h\\nu$; the high selectivity of chlorine favors 3°',
+              '$Br_{2}/h\\nu$; bromine is highly selective (late, product-like transition state) and preferentially abstracts the most stable 3° hydrogen',
+              '$O_{2}$; combustion installs the halogen',
+              '$Br_{2}$ in the dark; no initiation needed'
             ],
             correctAnswer: 1,
             explanation: 'Br2/hν is correct: bromination has a late transition state that strongly reflects radical stability (3° ≫ 2° ≫ 1°, ~1640:82:1), so it cleanly targets the lone 3° H to give mostly tert-butyl bromide. Cl2 is UNselective (mixtures); combustion destroys the skeleton; light (hν) is required for initiation.'
@@ -167,7 +167,7 @@ A single worked thread shows the concepts reinforcing one another.
             explanation: 'The two propagation steps are H-abstraction ($\\text{Cl}\\cdot + CH_4 \\rightarrow HCl + \\text{CH}_3\\cdot$) and product formation with regeneration of the carrier ($\\text{CH}_3\\cdot + Cl_2 \\rightarrow CH_3Cl + \\text{Cl}\\cdot$). Because Cl- is regenerated, the chain self-sustains. Option 1 mixes in initiation/termination; option 3 is termination; option 4 ignores the radical mechanism.'
           },
           {
-            question: 'Which single principle best unifies "anti beats gauche," "equatorial beats axial," and "3° halogenation beats 1° (with Br₂)"?',
+            question: 'Which single principle best unifies "anti beats gauche," "equatorial beats axial," and "3° halogenation beats 1° $(with Br_{2})$"?',
             options: [
               'Maximize molecular weight',
               'Systems favor the lowest-energy (least-strained / most-stabilized) arrangement — minimizing steric/torsional strain or maximizing radical stability',

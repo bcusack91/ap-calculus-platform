@@ -68,7 +68,7 @@ $2(3)^2 - 5 = 2(9) - 5 = 18 - 5 = 13$ ✅
         boxes: 3,
         correctAnswers: ["13","27","5"],
         hint1: "4(3) + 1.",
-        hint2: "5² + 2.",
+        hint2: "$5^{2}$ + 2.",
         hint3: "3(4) − 7.",
         explanation: "1) 13. 2) 27. 3) 5."
       }
@@ -80,11 +80,11 @@ $2(3)^2 - 5 = 2(9) - 5 = 18 - 5 = 13$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"To evaluate means to","options":["Find the value by substituting","Simplify without values","Guess the answer","Skip the variable"]},{"label":"When x=2, x² means","options":["2² = 4","2×2 = 4","2+2 = 4","All of these are equivalent"]}],
+        dropdowns: [{"label":"To evaluate means to","options":["Find the value by substituting","Simplify without values","Guess the answer","Skip the variable"]},{"label":"When x=2, $x^{2}$ means","options":["$2^{2}$ = 4","2×2 = 4","2+2 = 4","All of these are equivalent"]}],
         correctAnswers: ["Find the value by substituting","All of these are equivalent"],
         hint1: "Substitute and calculate.",
-        hint2: "x²=x×x.",
-        explanation: "Evaluate: plug in and compute. x²=x×x."
+        hint2: "$x^{2}$=x×x.",
+        explanation: "Evaluate: plug in and compute. $x^{2}$=x×x."
       }
     },
     {
@@ -96,7 +96,7 @@ $2(3)^2 - 5 = 2(9) - 5 = 18 - 5 = 13$ ✅
 | # | Expression | x | Value |
 |---|-----------|---|-------|
 | 1 | 4x + 1 | 3 | 13 |
-| 2 | x² + 2 | 5 | 27 |
+| 2 | $x^{2}$ + 2 | 5 | 27 |
 | 3 | 3x − 7 | 4 | 5 |
     
     `

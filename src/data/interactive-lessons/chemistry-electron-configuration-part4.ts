@@ -16,9 +16,9 @@ Writing out full configurations gets long fast:
 
 | Element | Z | Full Configuration | That's a lot... |
 |---------|---|--------------------|-----------------|
-| Na | 11 | 1s² 2s² 2p⁶ 3s¹ | 4 subshells |
-| Fe | 26 | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ | 7 subshells |
-| Br | 35 | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ | 8 subshells |
+| Na | 11 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$ | 4 subshells |
+| Fe | 26 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{6}$ | 7 subshells |
+| Br | 35 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$ $4p^{5}$ | 8 subshells |
 
 ### The Solution
 
@@ -26,9 +26,9 @@ Replace the inner-shell electrons with the **preceding noble gas in brackets**:
 
 | Element | Full Configuration | → | Shorthand |
 |---------|--------------------|----|-----------|
-| Na | 1s² 2s² 2p⁶ 3s¹ | → | **[Ne] 3s¹** |
-| Fe | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ | → | **[Ar] 4s² 3d⁶** |
-| Br | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ | → | **[Ar] 4s² 3d¹⁰ 4p⁵** |
+| Na | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$ | → | **[Ne] $3s^{1}$** |
+| Fe | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{6}$ | → | **[Ar] $4s^{2}$ $3d^{6}$** |
+| Br | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$ $4p^{5}$ | → | **[Ar] $4s^{2}$ $3d^{10}$ $4p^{5}$** |
 
 > 🔑 **Why this matters:** Noble gas shorthand lets you focus on the **valence electrons** — the ones that actually determine chemical behavior and bonding.
 
@@ -46,12 +46,12 @@ Replace the inner-shell electrons with the **preceding noble gas in brackets**:
 
 | Noble Gas | Symbol | Atomic Number | Full Configuration |
 |-----------|--------|---------------|--------------------|
-| Helium | He | 2 | 1s² |
-| Neon | Ne | 10 | 1s² 2s² 2p⁶ |
-| Argon | Ar | 18 | 1s² 2s² 2p⁶ 3s² 3p⁶ |
-| Krypton | Kr | 36 | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ |
-| Xenon | Xe | 54 | [Kr] 4d¹⁰ 5s² 5p⁶ |
-| Radon | Rn | 86 | [Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ |
+| Helium | He | 2 | $1s^{2}$ |
+| Neon | Ne | 10 | $1s^{2}$ $2s^{2}$ $2p^{6}$ |
+| Argon | Ar | 18 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ |
+| Krypton | Kr | 36 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$ $4p^{6}$ |
+| Xenon | Xe | 54 | [Kr] $4d^{10}$ $5s^{2}$ $5p^{6}$ |
+| Radon | Rn | 86 | [Xe] $4f^{14}$ $5d^{10}$ $6s^{2}$ $6p^{6}$ |
 
 To use shorthand notation:
 1. Find the **noble gas** that comes just before your element in the periodic table.
@@ -69,14 +69,14 @@ To use shorthand notation:
 
 | Step | Action | Result |
 |------|--------|--------|
-| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s¹ |
+| 1 | Write the full configuration | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$ |
 | 2 | Identify the preceding noble gas | Neon (Ne, Z = 10) |
-| 3 | Ne accounts for: | 1s² 2s² 2p⁶ (10 electrons) |
-| 4 | Remaining electrons: 11 − 10 = 1 | 3s¹ |
+| 3 | Ne accounts for: | $1s^{2}$ $2s^{2}$ $2p^{6}$ (10 electrons) |
+| 4 | Remaining electrons: 11 − 10 = 1 | $3s^{1}$ |
 
-**Shorthand: [Ne] 3s¹**
+**Shorthand: [Ne] $3s^{1}$**
 
-> 🔑 The single 3s¹ electron is sodium's **valence electron** — the one it loses to form Na⁺.
+> 🔑 The single $3s^{1}$ electron is sodium's **valence electron** — the one it loses to form $Na^{+}$.
 
 ---
 
@@ -86,12 +86,12 @@ To use shorthand notation:
 
 | Step | Action | Result |
 |------|--------|--------|
-| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ |
+| 1 | Write the full configuration | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{6}$ |
 | 2 | Identify the preceding noble gas | Argon (Ar, Z = 18) |
-| 3 | Ar accounts for: | 1s² 2s² 2p⁶ 3s² 3p⁶ (18 electrons) |
-| 4 | Remaining electrons: 26 − 18 = 8 | 4s² 3d⁶ |
+| 3 | Ar accounts for: | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ (18 electrons) |
+| 4 | Remaining electrons: 26 − 18 = 8 | $4s^{2}$ $3d^{6}$ |
 
-**Shorthand: [Ar] 4s² 3d⁶**
+**Shorthand: [Ar] $4s^{2}$ $3d^{6}$**
 
 > ⚠️ **Why not [Kr]?** Krypton has Z = 36, which is **more** than 26. Always use the noble gas that comes **before** your element.
 
@@ -103,14 +103,14 @@ To use shorthand notation:
 
 | Step | Action | Result |
 |------|--------|--------|
-| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ |
+| 1 | Write the full configuration | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$ $4p^{5}$ |
 | 2 | Identify the preceding noble gas | Argon (Ar, Z = 18) |
-| 3 | Ar accounts for: | 1s² 2s² 2p⁶ 3s² 3p⁶ (18 electrons) |
-| 4 | Remaining electrons: 35 − 18 = 17 | 4s² 3d¹⁰ 4p⁵ |
+| 3 | Ar accounts for: | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ (18 electrons) |
+| 4 | Remaining electrons: 35 − 18 = 17 | $4s^{2}$ $3d^{10}$ $4p^{5}$ |
 
-**Shorthand: [Ar] 4s² 3d¹⁰ 4p⁵**
+**Shorthand: [Ar] $4s^{2}$ $3d^{10}$ $4p^{5}$**
 
-> 💡 Notice how the shorthand cuts a **8-subshell** configuration down to just **3 subshells** — and immediately shows the 7 valence electrons (4s² + 4p⁵) that determine bromine's chemistry.`
+> 💡 Notice how the shorthand cuts a **8-subshell** configuration down to just **3 subshells** — and immediately shows the 7 valence electrons $(4s^{2} + 4p^{5})$ that determine bromine's chemistry.`
     },
     {
       id: 'ec4-quiz-identify-core',
@@ -124,7 +124,7 @@ Which noble gas core would you use for the shorthand notation of Selenium (Se, Z
             question: 'Noble gas core for Se:',
             options: ['[Ne]', '[Ar]', '[Kr]', '[Xe]'],
             correctAnswer: 1,
-            explanation: 'Selenium (Z = 34) comes after Argon (Z = 18) and before Krypton (Z = 36). The preceding noble gas is Argon, so we use [Ar] as the core. The shorthand is [Ar] 4s² 3d¹⁰ 4p⁴.'
+            explanation: 'Selenium (Z = 34) comes after Argon (Z = 18) and before Krypton (Z = 36). The preceding noble gas is Argon, so we use [Ar] as the core. The shorthand is [Ar] $4s^{2}$ $3d^{10}$ $4p^{4}$.'
           }
         ]
       }
@@ -140,13 +140,13 @@ What is the correct noble gas shorthand notation for phosphorus (P, Z = 15)?`,
           {
             question: 'Noble gas shorthand for P:',
             options: [
-              '[He] 2s² 2p⁶ 3s² 3p³',
-              '[Ne] 3s² 3p³',
-              '[Ne] 3s² 3p⁵',
-              '[Ar] 3s² 3p³'
+              '[He] $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{3}$',
+              '[Ne] $3s^{2}$ $3p^{3}$',
+              '[Ne] $3s^{2}$ $3p^{5}$',
+              '[Ar] $3s^{2}$ $3p^{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Phosphorus (Z = 15) uses [Ne] (Z = 10) as its core. The remaining 5 electrons: 3s² 3p³. So the answer is [Ne] 3s² 3p³. While option A is technically correct, [Ne] is the most appropriate (closest) noble gas core.'
+            explanation: 'Phosphorus (Z = 15) uses [Ne] (Z = 10) as its core. The remaining 5 electrons: $3s^{2}$ $3p^{3}$. So the answer is [Ne] $3s^{2}$ $3p^{3}$. While option A is technically correct, [Ne] is the most appropriate (closest) noble gas core.'
           }
         ]
       }
@@ -162,12 +162,12 @@ Convert the following full electron configurations to noble gas shorthand (e.g.,
           {
             label: 'Chlorine — Full: 1s2 2s2 2p6 3s2 3p5',
             correctAnswer: '[Ne] 3s2 3p5',
-            explanation: 'Neon accounts for the first 10 electrons (1s² 2s² 2p⁶). The remaining 7 electrons are 3s² 3p⁵, giving [Ne] 3s² 3p⁵.'
+            explanation: 'Neon accounts for the first 10 electrons $(1s^{2} 2s^{2} 2p^{6})$. The remaining 7 electrons are $3s^{2}$ $3p^{5}$, giving [Ne] $3s^{2}$ $3p^{5}$.'
           },
           {
             label: 'Titanium — Full: 1s2 2s2 2p6 3s2 3p6 4s2 3d2',
             correctAnswer: '[Ar] 4s2 3d2',
-            explanation: 'Argon accounts for the first 18 electrons (through 3p⁶). The remaining 4 electrons are 4s² 3d², giving [Ar] 4s² 3d².'
+            explanation: 'Argon accounts for the first 18 electrons $(through 3p^{6})$. The remaining 4 electrons are $4s^{2}$ $3d^{2}$, giving [Ar] $4s^{2}$ $3d^{2}$.'
           }
         ]
       }
@@ -182,15 +182,15 @@ Match each element with its correct shorthand electron configuration.`,
         dropdowns: [
           {
             label: 'Potassium (K, Z = 19):',
-            options: ['[Ar] 3d¹', '[Ar] 4s¹', '[Ne] 3s² 3p⁶ 4s¹', '[Kr] 4s¹'],
+            options: ['[Ar] $3d^{1}$', '[Ar] $4s^{1}$', '[Ne] $3s^{2}$ $3p^{6}$ $4s^{1}$', '[Kr] $4s^{1}$'],
             correctIndex: 1,
-            explanation: 'Potassium: [Ar] 4s¹. After the argon core (18 electrons), the 19th electron goes into 4s, not 3d.'
+            explanation: 'Potassium: [Ar] $4s^{1}$. After the argon core (18 electrons), the 19th electron goes into 4s, not 3d.'
           },
           {
             label: 'Gallium (Ga, Z = 31):',
-            options: ['[Ar] 4s² 3d¹⁰ 4p¹', '[Kr] 4p¹', '[Ar] 3d¹³', '[Ar] 4s² 4p¹¹'],
+            options: ['[Ar] $4s^{2}$ $3d^{10}$ $4p^{1}$', '[Kr] $4p^{1}$', '[Ar] $3d^{13}$', '[Ar] $4s^{2}$ $4p^{11}$'],
             correctIndex: 0,
-            explanation: 'Gallium: [Ar] 4s² 3d¹⁰ 4p¹. After argon (18), add 4s² (20), 3d¹⁰ (30), 4p¹ (31). Total = 31 ✓.'
+            explanation: 'Gallium: [Ar] $4s^{2}$ $3d^{10}$ $4p^{1}$. After argon (18), add $4s^{2}$ (20), $3d^{10}$ (30), $4p^{1}$ (31). Total = 31 ✓.'
           }
         ]
       }
@@ -206,11 +206,11 @@ Match each element with its correct shorthand electron configuration.`,
 
 | Step | Action | Example (Bromine, Z = 35) |
 |------|--------|---------------------------|
-| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ |
+| 1 | Write the full configuration | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{10}$ $4p^{5}$ |
 | 2 | Find the preceding noble gas | Argon (Ar, Z = 18) |
 | 3 | Replace the noble gas core with brackets | [Ar] |
-| 4 | Write the remaining subshells | 4s² 3d¹⁰ 4p⁵ |
-| **Result** | **Noble gas shorthand** | **[Ar] 4s² 3d¹⁰ 4p⁵** |
+| 4 | Write the remaining subshells | $4s^{2}$ $3d^{10}$ $4p^{5}$ |
+| **Result** | **Noble gas shorthand** | **[Ar] $4s^{2}$ $3d^{10}$ $4p^{5}$** |
 
 ---
 

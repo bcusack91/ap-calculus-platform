@@ -81,7 +81,7 @@ Drugs and toxins can alter synaptic transmission at multiple points. Understandi
 | **Curare** | Blocks ACh receptors at neuromuscular junction (antagonist) | Paralysis — muscles cannot contract |
 | **Nerve gas (sarin)** | Inhibits acetylcholinesterase (AChE inhibitor) | ACh accumulates → continuous muscle stimulation → paralysis, death |
 | **Botulinum toxin (Botox)** | Prevents ACh vesicle release from presynaptic terminal | Muscle paralysis (blocks release) |
-| **Tetrodotoxin (TTX)** | Blocks voltage-gated Na⁺ channels on axons | Blocks action potential propagation → paralysis |
+| **Tetrodotoxin (TTX)** | Blocks voltage-gated $Na^{+}$ channels on axons | Blocks action potential propagation → paralysis |
 | **SSRIs (e.g., Prozac)** | Block serotonin reuptake transporters | Serotonin stays in cleft longer → enhanced serotonin signaling |
 | **Cocaine** | Blocks dopamine reuptake transporters | Dopamine accumulates in cleft → intense pleasure/reward |
 | **Nicotine** | Binds to and activates ACh receptors (agonist) | Mimics ACh → stimulation of CNS and sympathetic pathways |

@@ -140,12 +140,12 @@ $1000 \\cdot 2^{t/5} = 8000$ → $2^{t/5} = 8 = 2^3$ → $t/5 = 3$ → $t = 15$ 
       content: '**Match the Base** 🔍\n\nRewrite each number as a power of 2 or 3.',
       exercise: {
         dropdowns: [
-          { label: '$64$ as a power of 2', options: ['2^6', '2^5', '2^8', '2^4'] },
-          { label: '$\\frac{1}{27}$ as a power of 3', options: ['3^(-3)', '3^(-2)', '3^3', '(-3)^3'] },
-          { label: '$\\sqrt{8}$ as a power of 2', options: ['2^(3/2)', '2^(1/2)', '2^3', '2^(2/3)'] },
+          { label: '$64$ as a power of 2', options: ['$2^{6}$', '$2^{5}$', '$2^{8}$', '$2^{4}$'] },
+          { label: '$\\frac{1}{27}$ as a power of 3', options: ['$3^{-3}$', '$3^{-2}$', '$3^{3}$', '$(-3)^{3}$'] },
+          { label: '$\\sqrt{8}$ as a power of 2', options: ['$2^{3/2}$', '$2^{1/2}$', '$2^{3}$', '$2^{2/3}$'] },
           { label: '$16^{1/2}$ simplified', options: ['4', '8', '2', '256'] }
         ],
-        correctAnswers: ['2^6', '3^(-3)', '2^(3/2)', '4'],
+        correctAnswers: ['$2^{6}$', '$3^{-3}$', '$2^{3/2}$', '4'],
         hint1: '$64 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2$.',
         hint2: '$\\frac{1}{27} = \\frac{1}{3^3} = 3^{-3}$.',
         hint3: '$\\sqrt{8} = 8^{1/2} = (2^3)^{1/2} = 2^{3/2}$.',

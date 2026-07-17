@@ -35,7 +35,7 @@ Since it's a ratio, **SG has no units**.
 
 ### Quick Trick
 
-In CGS units (g/cm³), the numerical value of density equals the specific gravity! Water has $\\rho = 1.00$ g/cm³, so SG = density in g/cm³.
+In CGS units $(g/cm^{3})$, the numerical value of density equals the specific gravity! Water has $\\rho = 1.00$ $g/cm^{3}$, so SG = density in $g/cm^{3}$.
       `
     },
     {
@@ -96,11 +96,11 @@ $$\\frac{V_{\\text{submerged}}}{V_{\\text{total}}} = \\frac{\\rho_{\\text{object
       id: 'dp6-synthesis-drill',
       type: 'input-boxes' as const,
       content: `
-**Synthesis Drill** (use $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa)
+**Synthesis Drill** (use $g = 10$ $m/s^{2}$, $P_{\\text{atm}} = 10^5$ Pa)
 
-A U-tube has water ($\\rho = 1000$ kg/m³) in the left arm and oil (SG = 0.80) in the right arm. The water surface is 0.20 m above the oil-water interface.
+A U-tube has water ($\\rho = 1000$ $kg/m^{3}$) in the left arm and oil (SG = 0.80) in the right arm. The water surface is 0.20 m above the oil-water interface.
 
-1) Density of the oil (in kg/m³)
+1) Density of the oil $(in kg/m^{3})$
 
 2) Height of oil above the interface (in m)
 
@@ -114,7 +114,7 @@ A U-tube has water ($\\rho = 1000$ kg/m³) in the left arm and oil (SG = 0.80) i
         hint1: '$\\rho_{\\text{oil}} = \\text{SG} \\times 1000 = 0.80 \\times 1000$.',
         hint2: 'At the interface, pressures must be equal: $\\rho_w g h_w = \\rho_{\\text{oil}} g h_{\\text{oil}}$. Solve for $h_{\\text{oil}}$.',
         hint3: 'Oil column is 0.25 m, water column is 0.20 m. Oil surface is $0.25 - 0.20 = 0.05$ m higher.',
-        explanation: '$\\rho_{\\text{oil}} = 800$ kg/m³. Equal pressure at interface: $(1000)(10)(0.20) = (800)(10)(h_{\\text{oil}})$, so $h_{\\text{oil}} = 0.25$ m. The oil surface is 0.05 m higher than the water surface (because oil is less dense, it needs a taller column for the same pressure).'
+        explanation: '$\\rho_{\\text{oil}} = 800$ $kg/m^{3}$. Equal pressure at interface: $(1000)(10)(0.20) = (800)(10)(h_{\\text{oil}})$, so $h_{\\text{oil}} = 0.25$ m. The oil surface is 0.05 m higher than the water surface (because oil is less dense, it needs a taller column for the same pressure).'
       }
     },
     {
@@ -128,13 +128,13 @@ A U-tube has water ($\\rho = 1000$ kg/m³) in the left arm and oil (SG = 0.80) i
           {
             question: 'An object floats in water with 40% of its volume above the surface. Its density is:',
             options: [
-              '400 kg/m³',
-              '600 kg/m³',
-              '1000 kg/m³',
-              '1400 kg/m³'
+              '400 $kg/m^{3}$',
+              '600 $kg/m^{3}$',
+              '1000 $kg/m^{3}$',
+              '1400 $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: '40% above → 60% submerged. $\\rho_{\\text{obj}} = 0.60 \\times 1000 = 600$ kg/m³.'
+            explanation: '40% above → 60% submerged. $\\rho_{\\text{obj}} = 0.60 \\times 1000 = 600$ $kg/m^{3}$.'
           },
           {
             question: 'A hydrometer (a floating instrument that measures liquid density) floats higher in a denser liquid. Why?',

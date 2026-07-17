@@ -49,7 +49,7 @@ $3^? = 81$. Since $3^4 = 81$, $\log_3(81) = 4$ ✅
                               "16"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "2⁴ = 16, so log₂(16) = 4."
+                    "explanation": "$2^{4}$ = 16, so $\\log_{2}(16)$ = 4."
           }
 ]
       }
@@ -73,7 +73,7 @@ $3^? = 81$. Since $3^4 = 81$, $\log_3(81) = 4$ ✅
         hint1: "2 to what power = 16?",
         hint2: "5 to what power = 25?",
         hint3: "10 to what power = 1000?",
-        explanation: "1) 2⁴=16→4. 2) 5²=25→2. 3) 10³=1000→3."
+        explanation: "1) $2^{4}$=16→4. 2) $5^{2}$=25→2. 3) $10^{3}$=1000→3."
       }
     },
     {
@@ -86,7 +86,7 @@ $3^? = 81$. Since $3^4 = 81$, $\log_3(81) = 4$ ✅
         dropdowns: [{"label":"A logarithm is the inverse of","options":["An exponential","Addition","Multiplication","A polynomial"]},{"label":"$\\log_b(1) =$","options":["0","1","b","Undefined"]}],
         correctAnswers: ["An exponential","0"],
         hint1: "Logs undo exponentials.",
-        hint2: "b⁰ = 1 for any b.",
+        hint2: "$b^{0}$ = 1 for any b.",
         explanation: "Logs are inverse of exponentials. log_b(1) = 0."
       }
     },
@@ -121,7 +121,7 @@ $3^? = 81$. Since $3^4 = 81$, $\log_3(81) = 4$ ✅
                               "$b^x = y$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Log definition: b^y = x."
+                    "explanation": "Log definition: $b^{y}$ = x."
           }
 ]
       }

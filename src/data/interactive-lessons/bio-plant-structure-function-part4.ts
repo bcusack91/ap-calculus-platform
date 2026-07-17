@@ -80,7 +80,7 @@ This dual response explains **gravitropism**: auxin accumulates on the lower sid
       type: 'text' as const,
       content: `## Gibberellins (GA)
 
-Gibberellins promote **growth and elongation**. Over 100 forms exist, but GA₃ is the most studied.
+Gibberellins promote **growth and elongation**. Over 100 forms exist, but $GA_{3}$ is the most studied.
 
 ### Key Effects
 - **Stem elongation**: Stimulate cell elongation and division in stems
@@ -148,7 +148,7 @@ This principle is fundamental to **plant tissue culture** and genetic engineerin
       type: 'text' as const,
       content: `## Ethylene
 
-Ethylene is unique among plant hormones — it's a **gas** (C₂H₄). It is produced by ripening fruits, senescing tissues, and stressed plants.
+Ethylene is unique among plant hormones — it's a **gas** $(C_{2}H_{4})$. It is produced by ripening fruits, senescing tissues, and stressed plants.
 
 ### Key Effects
 - **Fruit ripening**: Triggers color change, softening, sugar production, and aroma
@@ -166,7 +166,7 @@ Ethylene is unique among plant hormones — it's a **gas** (C₂H₄). It is pro
 Despite its name, ABA is NOT primarily involved in abscission (that's ethylene). ABA is the **stress response hormone**.
 
 ### Key Effects
-- **Stomatal closure**: ABA released during drought causes guard cells to lose K⁺ → water exits → stomata close → reduces water loss
+- **Stomatal closure**: ABA released during drought causes guard cells to lose $K^{+}$ → water exits → stomata close → reduces water loss
 - **Seed dormancy**: Maintains dormancy until conditions are favorable; must be overcome by gibberellins or cold treatment (stratification) for germination
 - **Inhibits growth**: Slows growth during stress conditions
 
@@ -206,7 +206,7 @@ The balance between ABA and GA determines whether a seed remains dormant or germ
         hint1: 'This term describes auxin from the tip suppressing side branches.',
         hint2: 'This enzyme breaks down starch reserves in the aleurone layer of cereal seeds.',
         hint3: 'This hormone is unique because it exists as a gas at room temperature.',
-        explanation: 'Apical dominance is auxin-mediated suppression of lateral bud growth. Gibberellins trigger α-amylase production to mobilize starch reserves for germination. Ethylene (C₂H₄) is the only gaseous plant hormone. Abscisic acid (ABA) is the primary drought-response hormone, causing stomatal closure.'
+        explanation: 'Apical dominance is auxin-mediated suppression of lateral bud growth. Gibberellins trigger α-amylase production to mobilize starch reserves for germination. Ethylene $(C_{2}H_{4})$ is the only gaseous plant hormone. Abscisic acid (ABA) is the primary drought-response hormone, causing stomatal closure.'
       }
     }
   ]

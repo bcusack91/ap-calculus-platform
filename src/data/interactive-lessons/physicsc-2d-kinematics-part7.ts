@@ -65,16 +65,16 @@ $$|\\vec{a}| = R\\omega^2 = \\frac{v^2}{R}$$
       id: '2dkin7-mcq2',
       type: 'mcq' as const,
       question: 'A car moves around a circular track of radius $50$ m at $10$ m/s. The magnitude of the centripetal acceleration is:',
-      options: ['$2$ m/s²', '$5$ m/s²', '$0.2$ m/s²', '$200$ m/s²'],
+      options: ['$2$ $m/s^{2}$', '$5$ $m/s^{2}$', '$0.2$ $m/s^{2}$', '$200$ $m/s^{2}$'],
       correctAnswer: 0,
-      explanation: '$a_c = v^2/R = 100/50 = 2$ m/s².'
+      explanation: '$a_c = v^2/R = 100/50 = 2$ $m/s^{2}$.'
     },
     {
       id: '2dkin7-ap-style',
       type: 'text' as const,
       content: `## AP-Style Free Response
 
-**Problem:** A particle moves in the $xy$-plane with acceleration $\\vec{a} = -2\\,\\hat{j}$ m/s². At $t = 0$, the position is $\\vec{r}_0 = 3\\,\\hat{i}$ m and velocity is $\\vec{v}_0 = 4\\,\\hat{i} + 6\\,\\hat{j}$ m/s.
+**Problem:** A particle moves in the $xy$-plane with acceleration $\\vec{a} = -2\\,\\hat{j}$ $m/s^{2}$. At $t = 0$, the position is $\\vec{r}_0 = 3\\,\\hat{i}$ m and velocity is $\\vec{v}_0 = 4\\,\\hat{i} + 6\\,\\hat{j}$ m/s.
 
 **(a)** Find $\\vec{v}(t)$ and $\\vec{r}(t)$.
 

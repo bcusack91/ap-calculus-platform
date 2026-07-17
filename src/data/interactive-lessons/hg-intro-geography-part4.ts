@@ -29,9 +29,9 @@ export const hgIntroGeographyPart4Data = {
 
 | Type | Formula | What It Tells You | Example |
 |------|---------|-------------------|---------|
-| **Arithmetic density** | Total population ÷ total land area | Crude crowding | Bangladesh ≈ 1,265/km² (very crowded); Mongolia ≈ 2/km² |
-| **Physiological density** | Population ÷ **arable** land area | Pressure on farmland | Egypt's arithmetic ≈ 100/km², but physiological > 2,500/km² because the Nile valley is the only arable land |
-| **Agricultural density** | Number of **farmers** ÷ arable land | Mechanization & development level | U.S. agricultural density is *low* (few farmers per arable km²) → highly mechanized; Vietnam's is high → labor-intensive |
+| **Arithmetic density** | Total population ÷ total land area | Crude crowding | Bangladesh ≈ 1,$265/km^{2}$ (very crowded); Mongolia ≈ $2/km^{2}$ |
+| **Physiological density** | Population ÷ **arable** land area | Pressure on farmland | Egypt's arithmetic ≈ $100/km^{2}$, but physiological > 2,$500/km^{2}$ because the Nile valley is the only arable land |
+| **Agricultural density** | Number of **farmers** ÷ arable land | Mechanization & development level | U.S. agricultural density is *low* (few farmers per arable $km^{2}$) → highly mechanized; Vietnam's is high → labor-intensive |
 
 > ⚠️ **AP Trap:** A *low* agricultural density is a sign of a **more developed** economy (machines replaced farmers). Students often reverse this.
 
@@ -46,7 +46,7 @@ export const hgIntroGeographyPart4Data = {
 | **Centralized** pattern | Around a node | Suburbs ringing Atlanta |
 | **Geometric** pattern | Grid / radial / hexagonal | Manhattan grid; Washington DC radial avenues |
 
-Two settlements can have **the same density** but **different concentrations** — picture 1,000 people scattered evenly across 10 km² versus 1,000 people packed into one corner. Density identical; concentration radically different.
+Two settlements can have **the same density** but **different concentrations** — picture 1,000 people scattered evenly across 10 $km^{2}$ versus 1,000 people packed into one corner. Density identical; concentration radically different.
       `
     },
     {
@@ -58,7 +58,7 @@ Two settlements can have **the same density** but **different concentrations** �
       exercise: {
         questions: [
           {
-            question: "Egypt has an arithmetic density of about 100 people per km², but a physiological density above 2,500 per km². The gap is BEST explained by:",
+            question: "Egypt has an arithmetic density of about 100 people per $km^{2}$, but a physiological density above 2,500 per $km^{2}$. The gap is BEST explained by:",
             options: [
               "Egypt's high birth rate concentrated in cities",
               "Most of Egypt is desert; nearly all population and farmland are confined to the Nile valley",
@@ -69,7 +69,7 @@ Two settlements can have **the same density** but **different concentrations** �
             explanation: "Physiological density divides population by **arable** land. Egypt's arable land (the Nile valley + delta) is a tiny slice of national territory, so the ratio explodes even though arithmetic density is moderate."
           },
           {
-            question: "Country A has 5 farmers per arable km²; Country B has 200 farmers per arable km². The MOST defensible inference is that:",
+            question: "Country A has 5 farmers per arable $km^{2}$; Country B has 200 farmers per arable $km^{2}$. The MOST defensible inference is that:",
             options: [
               "Country A has more fertile soil than Country B",
               "Country A is more economically developed and more mechanized than Country B",
@@ -188,7 +188,7 @@ Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
       exercise: {
         questions: [
           {
-            question: "A planner reports that the population of two suburbs (each 10 km²) is identical at 5,000 people, but Suburb A's residents are packed into a single high-rise district while Suburb B's homes are spread evenly. The two suburbs differ in:",
+            question: "A planner reports that the population of two suburbs $(each 10 km^{2})$ is identical at 5,000 people, but Suburb A's residents are packed into a single high-rise district while Suburb B's homes are spread evenly. The two suburbs differ in:",
             options: [
               "Arithmetic density",
               "Concentration",

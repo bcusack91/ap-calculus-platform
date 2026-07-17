@@ -53,15 +53,15 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'mcb-ent-2b',
-    question: 'The Na⁺/K⁺-ATPase pump moves 3 Na⁺ out and 2 K⁺ in per ATP hydrolyzed. This transport is best classified as:',
+    question: 'The $Na^{+}/K^{+}$-ATPase pump moves 3 $Na^{+}$ out and 2 $K^{+}$ in per ATP hydrolyzed. This transport is best classified as:',
     options: [
       'Primary active transport, because it directly uses ATP hydrolysis.',
-      'Secondary active transport, because Na⁺ gradient drives K⁺ movement.',
+      'Secondary active transport, because $Na^{+}$ gradient drives $K^{+}$ movement.',
       'Facilitated diffusion, because ions move down their electrochemical gradients.',
       'Simple diffusion, because ions cross the membrane freely.'
     ],
     correctIndex: 0,
-    explanation: 'Primary active transport uses energy from direct ATP hydrolysis to move solutes against their gradients. The Na⁺/K⁺-ATPase is the classic MCAT example, pumping both ions against their concentration gradients.',
+    explanation: 'Primary active transport uses energy from direct ATP hydrolysis to move solutes against their gradients. The $Na^{+}/K^{+}$-ATPase is the classic MCAT example, pumping both ions against their concentration gradients.',
     partNumber: 2,
     partTitle: 'Membrane Transport'
   },

@@ -46,9 +46,9 @@ Complete ionic equation:
 
 $$\\text{Ag}^+(aq) + \\underset{\\text{spectator}}{\\text{NO}_3^-(aq)} + \\underset{\\text{spectator}}{\\text{Na}^+(aq)} + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s) + \\underset{\\text{spectator}}{\\text{Na}^+(aq)} + \\underset{\\text{spectator}}{\\text{NO}_3^-(aq)}$$
 
-- **Na⁺** appears on both sides → spectator
-- **NO₃⁻** appears on both sides → spectator
-- **Ag⁺** reacts with Cl⁻ to form AgCl(s) → NOT spectators
+- **$Na^{+}$** appears on both sides → spectator
+- **$NO_{3}^{-}$** appears on both sides → spectator
+- **$Ag^{+}$** reacts with $Cl^{-}$ to form AgCl(s) → NOT spectators
 
 
 ---
@@ -94,9 +94,9 @@ A reaction occurs (and a net ionic equation exists) when at least one of these f
 
 | Driving Force | Example |
 |---------------|---------|
-| **Precipitate** (insoluble solid) | AgCl(s), BaSO₄(s) |
-| **Water** (from acid-base) | H₂O(l) |
-| **Gas** | CO₂(g), H₂S(g) |
+| **Precipitate** (insoluble solid) | AgCl(s), $BaSO_{4}(s)$ |
+| **Water** (from acid-base) | $H_{2}O(l)$ |
+| **Gas** | $CO_{2}(g)$, $H_{2}S(g)$ |
 
 > 🔑 **Key Concept:** If none of these forms, there is **no reaction** (NR) and all ions are spectators.
       `
@@ -107,13 +107,13 @@ A reaction occurs (and a net ionic equation exists) when at least one of these f
       content: `
 ## 🧪 Worked Example: No Reaction
 
-> **Problem:** Mix NaCl(aq) and KNO₃(aq). Write the net ionic equation.
+> **Problem:** Mix NaCl(aq) and $KNO_{3}(aq)$. Write the net ionic equation.
 
 > **Solution:**
 
-**Step 1 — Predict products:** Swapping ions gives NaNO₃ and KCl.
+**Step 1 — Predict products:** Swapping ions gives $NaNO_{3}$ and KCl.
 
-**Step 2 — Check solubility:** NaNO₃ is soluble. KCl is soluble. No precipitate forms!
+**Step 2 — Check solubility:** $NaNO_{3}$ is soluble. KCl is soluble. No precipitate forms!
 
 **Step 3 — Complete ionic equation:**
 
@@ -149,7 +149,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
             explanation: 'Spectator ions appear in the same form on both sides of the complete ionic equation. They do not participate in the net reaction and are canceled when writing the net ionic equation.'
           },
           {
-            question: 'What is the net ionic equation for: Ba(NO₃)₂(aq) + Na₂SO₄(aq) → BaSO₄(s) + 2NaNO₃(aq)?',
+            question: 'What is the net ionic equation for: $Ba(NO_{3})_{2}(aq)$ + $Na_{2}SO_{4}(aq)$ → $BaSO_{4}(s)$ + $2NaNO_{3}(aq)$?',
             options: [
               '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
               '$\\text{Ba}^{2+}(aq) + \\text{Na}_2\\text{SO}_4(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{Na}^+(aq)$',
@@ -157,7 +157,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
               '$2\\text{Na}^+(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{Na}_2\\text{SO}_4(s)$'
             ],
             correctAnswer: 0,
-            explanation: 'Na⁺ and NO₃⁻ are spectators (they appear on both sides). Removing them leaves: Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s). This is the net ionic equation.'
+            explanation: '$Na^{+}$ and $NO_{3}^{-}$ are spectators (they appear on both sides). Removing them leaves: $Ba^{2+}(aq)$ + $SO_{4}^{2-}(aq)$ → $BaSO_{4}(s)$. This is the net ionic equation.'
           },
           {
             question: 'Which of the following is a driving force for a reaction to occur?',
@@ -205,10 +205,10 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
       exercise: {
         boxes: 3,
         correctAnswers: ['Cl, Na', '0', '0'],
-        hint1: 'Which ions appear in the same form on both sides? Na⁺ and Cl⁻ don\'t change.',
-        hint2: 'Ca²⁺ has +2 charge, CO₃²⁻ has −2 charge. What is (+2) + (−2)?',
-        hint3: 'CaCO₃(s) is a neutral solid compound. What is its charge?',
-        explanation: '1) Na⁺ and Cl⁻ appear on both sides → spectators. 2) Reactant charges: (+2) + (−2) = 0. 3) Product CaCO₃(s) is a neutral compound with charge 0. Charge is balanced: 0 = 0. ✓'
+        hint1: 'Which ions appear in the same form on both sides? $Na^{+}$ and $Cl^{-}$ don\'t change.',
+        hint2: '$Ca^{2+}$ has +2 charge, $CO_{3}^{2-}$ has −2 charge. What is (+2) + (−2)?',
+        hint3: '$CaCO_{3}(s)$ is a neutral solid compound. What is its charge?',
+        explanation: '1) $Na^{+}$ and $Cl^{-}$ appear on both sides → spectators. 2) Reactant charges: (+2) + (−2) = 0. 3) Product $CaCO_{3}(s)$ is a neutral compound with charge 0. Charge is balanced: 0 = 0. ✓'
       }
     },
     {
@@ -224,7 +224,7 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
             options: ['are aqueous', 'actually participate in the reaction', 'are spectator ions', 'are on the product side']
           },
           {
-            label: 'Mixing KCl(aq) and NaNO₃(aq) results in',
+            label: 'Mixing KCl(aq) and $NaNO_{3}(aq)$ results in',
             options: ['a precipitate forming', 'a gas evolving', 'no reaction', 'an acid-base reaction']
           },
           {
@@ -238,9 +238,9 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
         ],
         correctAnswers: ['actually participate in the reaction', 'no reaction', 'balanced (equal on both sides)', 'ions forming a solid product'],
         hint1: 'Spectator ions are removed — what remains?',
-        hint2: 'Check: are KNO₃ and NaCl both soluble?',
+        hint2: 'Check: are $KNO_{3}$ and NaCl both soluble?',
         hint3: 'Just like atoms, charges must balance.',
-        explanation: 'Net ionic equations show only species that change (participate). KCl + NaNO₃ → KNO₃ + NaCl: all soluble, no driving force, NR. Charges must be balanced on both sides. Precipitation net ionic equations show ions combining into a solid.'
+        explanation: 'Net ionic equations show only species that change (participate). KCl + $NaNO_{3}$ → $KNO_{3}$ + NaCl: all soluble, no driving force, NR. Charges must be balanced on both sides. Precipitation net ionic equations show ions combining into a solid.'
       }
     },
     {
@@ -252,7 +252,7 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
       exercise: {
         questions: [
           {
-            question: 'What is the net ionic equation for: Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq)?',
+            question: 'What is the net ionic equation for: $Pb(NO_{3})_{2}(aq)$ + 2KI(aq) → $PbI_{2}(s)$ + $2KNO_{3}(aq)$?',
             options: [
               '$\\text{Pb}^{2+}(aq) + 2\\text{I}^-(aq) \\rightarrow \\text{PbI}_2(s)$',
               '$\\text{Pb}^{2+}(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{K}^+(aq)$',
@@ -260,18 +260,18 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
               '$\\text{Pb(NO}_3)_2(aq) + 2\\text{I}^-(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{NO}_3^-(aq)$'
             ],
             correctAnswer: 0,
-            explanation: 'K⁺ and NO₃⁻ are spectators. Removing them: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s). Charge check: (+2) + 2(−1) = 0 on left; 0 on right ✓.'
+            explanation: '$K^{+}$ and $NO_{3}^{-}$ are spectators. Removing them: $Pb^{2+}(aq)$ + $2I^{-}(aq)$ → $PbI_{2}(s)$. Charge check: (+2) + 2(−1) = 0 on left; 0 on right ✓.'
           },
           {
-            question: 'How many spectator ions are in the complete ionic equation for: 2AgNO₃(aq) + Na₂CrO₄(aq) → Ag₂CrO₄(s) + 2NaNO₃(aq)?',
+            question: 'How many spectator ions are in the complete ionic equation for: $2AgNO_{3}(aq)$ + $Na_{2}CrO_{4}(aq)$ → $Ag_{2}CrO_{4}(s)$ + $2NaNO_{3}(aq)$?',
             options: [
-              '1 (only Na⁺)',
-              '2 (Na⁺ and NO₃⁻)',
-              '3 (Na⁺, NO₃⁻, and CrO₄²⁻)',
-              '4 (Na⁺, NO₃⁻, Ag⁺, and CrO₄²⁻)'
+              '1 $(only Na^{+})$',
+              '2 $(Na^{+} and NO_{3}^{-})$',
+              '3 ($Na^{+}$, $NO_{3}^{-}$, and $CrO_{4}^{2-}$)',
+              '4 ($Na^{+}$, $NO_{3}^{-}$, $Ag^{+}$, and $CrO_{4}^{2-}$)'
             ],
             correctAnswer: 1,
-            explanation: 'Na⁺ and NO₃⁻ appear on both sides and do not participate in the reaction — they are the 2 spectator ions. Ag⁺ and CrO₄²⁻ form the precipitate Ag₂CrO₄(s), so they are NOT spectators.'
+            explanation: '$Na^{+}$ and $NO_{3}^{-}$ appear on both sides and do not participate in the reaction — they are the 2 spectator ions. $Ag^{+}$ and $CrO_{4}^{2-}$ form the precipitate $Ag_{2}CrO_{4}(s)$, so they are NOT spectators.'
           }
         ]
       }

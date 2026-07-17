@@ -14,9 +14,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'am-ent-1b',
     question: 'The SI unit of angular momentum is:',
-    options: ['kg·m/s', 'kg·m²/s', 'N·m', 'J·s'],
+    options: ['kg·m/s', '$kg\\cdot m^{2}/s$', 'N·m', 'J·s'],
     correctIndex: 1,
-    explanation: 'From $L = I\\omega$: units are (kg·m²)(rad/s) = kg·m²/s.',
+    explanation: 'From $L = I\\omega$: units are $(kg\\cdot m^{2})(rad/s)$ = $kg\\cdot m^{2}/s$.',
     partNumber: 1,
     partTitle: 'Definition of Angular Momentum',
   },
@@ -34,9 +34,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'am-ent-2b',
     question: 'A $2$ kg ball moves at $3$ m/s in a circle of radius $0.5$ m. Its angular momentum is:',
-    options: ['$1$ kg·m²/s', '$1.5$ kg·m²/s', '$3$ kg·m²/s', '$6$ kg·m²/s'],
+    options: ['$1$ $kg\\cdot m^{2}/s$', '$1.5$ $kg\\cdot m^{2}/s$', '$3$ $kg\\cdot m^{2}/s$', '$6$ $kg\\cdot m^{2}/s$'],
     correctIndex: 2,
-    explanation: 'For circular motion, $\\vec{v} \\perp \\vec{r}$, so $L = mvr = 2(3)(0.5) = 3$ kg·m²/s.',
+    explanation: 'For circular motion, $\\vec{v} \\perp \\vec{r}$, so $L = mvr = 2(3)(0.5) = 3$ $kg\\cdot m^{2}/s$.',
     partNumber: 2,
     partTitle: 'Angular Momentum of a Particle',
   },
@@ -64,7 +64,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 4: Changing Moment of Inertia
   {
     id: 'am-ent-4a',
-    question: 'A spinning disk with $I = 4$ kg·m² at $\\omega = 6$ rad/s has a mass added so $I$ becomes $8$ kg·m². The new $\\omega$ is:',
+    question: 'A spinning disk with $I = 4$ $kg\\cdot m^{2}$ at $\\omega = 6$ rad/s has a mass added so $I$ becomes $8$ $kg\\cdot m^{2}$. The new $\\omega$ is:',
     options: ['$12$ rad/s', '$6$ rad/s', '$3$ rad/s', '$1.5$ rad/s'],
     correctIndex: 2,
     explanation: '$L = I_1\\omega_1 = I_2\\omega_2$. $4(6) = 8\\omega_2$. $\\omega_2 = 3$ rad/s.',
@@ -99,9 +99,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'am-ent-5b',
     question: 'A constant torque of $6$ N·m acts on a wheel for $2$ s. The change in angular momentum is:',
-    options: ['$3$ kg·m²/s', '$6$ kg·m²/s', '$12$ kg·m²/s', '$36$ kg·m²/s'],
+    options: ['$3$ $kg\\cdot m^{2}/s$', '$6$ $kg\\cdot m^{2}/s$', '$12$ $kg\\cdot m^{2}/s$', '$36$ $kg\\cdot m^{2}/s$'],
     correctIndex: 2,
-    explanation: '$\\Delta L = \\tau \\Delta t = 6 \\times 2 = 12$ kg·m²/s.',
+    explanation: '$\\Delta L = \\tau \\Delta t = 6 \\times 2 = 12$ $kg\\cdot m^{2}/s$.',
     partNumber: 5,
     partTitle: 'Torque & Angular Momentum',
   },

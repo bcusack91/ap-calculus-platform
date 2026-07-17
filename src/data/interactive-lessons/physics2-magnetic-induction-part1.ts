@@ -16,9 +16,9 @@ $$\\Phi_B = \\vec{B} \\cdot \\vec{A} = BA\\cos\\theta$$
 
 | Symbol | Meaning | SI Unit |
 |--------|---------|---------|
-| $\\Phi_B$ | Magnetic flux | Wb (Weber) = T·m² |
+| $\\Phi_B$ | Magnetic flux | Wb (Weber) = $T\\cdot m^{2}$ |
 | $B$ | Magnetic field strength | T (Tesla) |
-| $A$ | Area of loop | m² |
+| $A$ | Area of loop | $m^{2}$ |
 | $\\theta$ | Angle between $\\vec{B}$ and the area normal $\\hat{n}$ | rad or degrees |
 
 > 🔑 **Critical distinction:** $\\theta$ is the angle between the field and the **normal** to the surface — NOT the angle between the field and the surface itself.
@@ -59,7 +59,7 @@ Think of flux as the amount of "rain" passing through a hoop:
       exercise: {
         questions: [
           {
-            question: 'A circular loop of area 0.05 m² is in a uniform 0.3 T field with $\\vec{B}$ perpendicular to the loop plane. The flux is:',
+            question: 'A circular loop of area 0.05 $m^{2}$ is in a uniform 0.3 T field with $\\vec{B}$ perpendicular to the loop plane. The flux is:',
             options: ['0.015 Wb', '0.15 Wb', '6 Wb', '0.15 T'],
             correctAnswer: 0,
             explanation: '$\\Phi = BA\\cos 0° = 0.3 \\times 0.05 \\times 1 = 0.015$ Wb. Field perpendicular to the loop plane means $\\theta = 0°$ (parallel to the normal).'
@@ -83,9 +83,9 @@ Think of flux as the amount of "rain" passing through a hoop:
           },
           {
             question: 'What are the SI units of magnetic flux?',
-            options: ['Tesla (T)', 'Weber (Wb) = T·m²', 'Henry (H)', 'Volt (V)'],
+            options: ['Tesla (T)', 'Weber (Wb) = $T\\cdot m^{2}$', 'Henry (H)', 'Volt (V)'],
             correctAnswer: 1,
-            explanation: '1 Weber = 1 Tesla × 1 m². Named after Wilhelm Weber. Note: 1 Wb = 1 V·s (this connects to Faraday\'s law, where EMF = $\\Delta\\Phi / \\Delta t$ in V = Wb/s).'
+            explanation: '1 Weber = 1 Tesla × 1 $m^{2}$. Named after Wilhelm Weber. Note: 1 Wb = 1 V·s (this connects to Faraday\'s law, where EMF = $\\Delta\\Phi / \\Delta t$ in V = Wb/s).'
           }
         ]
       }
@@ -98,7 +98,7 @@ Think of flux as the amount of "rain" passing through a hoop:
 
 A rectangular coil (20 turns, 0.1 m × 0.2 m) is in a $B = 0.5$ T field.
 
-**1)** Area of one loop? (m²)
+**1)** Area of one loop? $(m^{2})$
 
 **2)** Maximum total flux linkage through all 20 turns? (Wb)
 
@@ -110,7 +110,7 @@ A rectangular coil (20 turns, 0.1 m × 0.2 m) is in a $B = 0.5$ T field.
         hint1: '$A = l \\times w$',
         hint2: '$\\Phi_{\\text{total}} = NBA\\cos 0°$',
         hint3: '$\\Phi = NBA\\cos 30° = 0.2 \\times 0.866$',
-        explanation: '1) $A = 0.1 \\times 0.2 = 0.02$ m². 2) $\\Phi = 20 \\times 0.5 \\times 0.02 = 0.2$ Wb (at $\\theta = 0°$). 3) $\\Phi = 0.2 \\times \\cos 30° = 0.2 \\times 0.866 = 0.173$ Wb.'
+        explanation: '1) $A = 0.1 \\times 0.2 = 0.02$ $m^{2}$. 2) $\\Phi = 20 \\times 0.5 \\times 0.02 = 0.2$ Wb (at $\\theta = 0°$). 3) $\\Phi = 0.2 \\times \\cos 30° = 0.2 \\times 0.866 = 0.173$ Wb.'
       }
     }
   ]

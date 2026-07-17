@@ -172,11 +172,11 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
         dropdowns: [
           {
             label: 'The Henderson-Hasselbalch equation is derived from',
-            options: ['the K_w expression', 'the Kₐ expression', 'the K_b expression only', 'the ideal gas law']
+            options: ['the K_w expression', 'the $K_{a}$ expression', 'the K_b expression only', 'the ideal gas law']
           },
           {
             label: 'A buffer with $[A^-] = 10[HA]$ has pH =',
-            options: ['pKₐ', 'pKₐ + 1', 'pKₐ - 1', 'pKₐ + 10']
+            options: ['$pK_{a}$', '$pK_{a}$ + 1', '$pK_{a}$ - 1', '$pK_{a}$ + 10']
           },
           {
             label: 'The best buffer has a $pK_a$ that is',
@@ -187,7 +187,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
             options: ['pH', 'capacity', 'both pH and capacity', 'neither']
           }
         ],
-        correctAnswers: ['the Kₐ expression', 'pKₐ + 1', 'exactly equal to the target pH', 'capacity'],
+        correctAnswers: ['the $K_{a}$ expression', '$pK_{a}$ + 1', 'exactly equal to the target pH', 'capacity'],
         hint1: 'Start from $K_a = [H^+][A^-]/[HA]$ and take $-\\log$.',
         hint2: '$\\log(10) = 1$.',
         hint3: 'At $pH = pK_a$, the ratio is 1:1 — maximum capacity.',

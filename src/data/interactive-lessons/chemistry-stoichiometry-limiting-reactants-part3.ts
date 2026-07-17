@@ -71,15 +71,15 @@ If you have **10 slices of bread** and **7 slices of cheese**:
 
 $$2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$$
 
-Given: 3.0 mol H₂ and 2.0 mol O₂. Which is limiting?
+Given: 3.0 mol $H_{2}$ and 2.0 mol $O_{2}$. Which is limiting?
 
-**From H₂:** $3.0 \\text{ mol H}_2 \\times \\frac{2 \\text{ mol H}_2\\text{O}}{2 \\text{ mol H}_2} = 3.0 \\text{ mol H}_2\\text{O}$
+**From $H_{2}$:** $3.0 \\text{ mol H}_2 \\times \\frac{2 \\text{ mol H}_2\\text{O}}{2 \\text{ mol H}_2} = 3.0 \\text{ mol H}_2\\text{O}$
 
-**From O₂:** $2.0 \\text{ mol O}_2 \\times \\frac{2 \\text{ mol H}_2\\text{O}}{1 \\text{ mol O}_2} = 4.0 \\text{ mol H}_2\\text{O}$
+**From $O_{2}$:** $2.0 \\text{ mol O}_2 \\times \\frac{2 \\text{ mol H}_2\\text{O}}{1 \\text{ mol O}_2} = 4.0 \\text{ mol H}_2\\text{O}$
 
-H₂ produces less → **H₂ is the limiting reactant**
+$H_{2}$ produces less → **$H_{2}$ is the limiting reactant**
 
-Maximum H₂O produced = **3.0 mol** (from the limiting reactant)
+Maximum $H_{2}O$ produced = **3.0 mol** (from the limiting reactant)
 
 > 💡 **Tip:** Always calculate how much product each reactant could produce separately. The one that gives **less product** is the limiting reactant — it’s not necessarily the one with fewer moles!
       `
@@ -99,13 +99,13 @@ Maximum H₂O produced = **3.0 mol** (from the limiting reactant)
 
 $$2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$$
 
-H₂ is limiting (3.0 mol). How much O₂ is left over?
+$H_{2}$ is limiting (3.0 mol). How much $O_{2}$ is left over?
 
-**Step 1:** How much O₂ is consumed?
+**Step 1:** How much $O_{2}$ is consumed?
 
 $$\\text{mol O}_2 \\text{ consumed} = 3.0 \\text{ mol H}_2 \\times \\frac{1 \\text{ mol O}_2}{2 \\text{ mol H}_2} = 1.5 \\text{ mol O}_2$$
 
-**Step 2:** How much O₂ remains?
+**Step 2:** How much $O_{2}$ remains?
 
 $$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
 
@@ -116,9 +116,9 @@ $$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
 
 | Substance | Initial | Consumed | Remaining |
 |-----------|---------|----------|-----------|
-| H₂ (limiting) | 3.0 mol | 3.0 mol | 0 mol |
-| O₂ (excess) | 2.0 mol | 1.5 mol | 0.5 mol |
-| H₂O (product) | 0 mol | — | 3.0 mol |
+| $H_{2}$ (limiting) | 3.0 mol | 3.0 mol | 0 mol |
+| $O_{2}$ (excess) | 2.0 mol | 1.5 mol | 0.5 mol |
+| $H_{2}O$ (product) | 0 mol | — | 3.0 mol |
       `
     },
     {
@@ -130,15 +130,15 @@ $$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
       exercise: {
         questions: [
           {
-            question: 'In the reaction $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, if you have 1 mol N₂ and 2 mol H₂, the limiting reactant is:',
+            question: 'In the reaction $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, if you have 1 mol $N_{2}$ and 2 mol $H_{2}$, the limiting reactant is:',
             options: [
-              'N₂',
-              'H₂',
-              'NH₃',
+              '$N_{2}$',
+              '$H_{2}$',
+              '$NH_{3}$',
               'Both are limiting'
             ],
             correctAnswer: 1,
-            explanation: 'From N₂: 1 mol × 2/1 = 2 mol NH₃. From H₂: 2 mol × 2/3 = 1.33 mol NH₃. H₂ produces less product, so H₂ is the limiting reactant.'
+            explanation: 'From $N_{2}$: 1 mol × 2/1 = 2 mol $NH_{3}$. From $H_{2}$: 2 mol × 2/3 = 1.33 mol $NH_{3}$. $H_{2}$ produces less product, so $H_{2}$ is the limiting reactant.'
           },
           {
             question: 'The limiting reactant is the one that:',
@@ -152,15 +152,15 @@ $$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
             explanation: 'The limiting reactant is defined as the one that produces the least amount of product when you calculate how much each reactant could produce. It\'s not necessarily the one with the smallest mass or fewest moles — the mole ratio matters!'
           },
           {
-            question: 'In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, if you have 4.0 mol Al and 3.0 mol Cl₂, the limiting reactant is:',
+            question: 'In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, if you have 4.0 mol Al and 3.0 mol $Cl_{2}$, the limiting reactant is:',
             options: [
               'Al — because 4.0 > 3.0',
-              'Cl₂ — because it produces fewer moles of product',
+              '$Cl_{2}$ — because it produces fewer moles of product',
               'Al — because it produces fewer moles of product',
               'Neither — they are in perfect ratio'
             ],
             correctAnswer: 1,
-            explanation: 'From Al: 4.0 × 2/2 = 4.0 mol AlCl₃. From Cl₂: 3.0 × 2/3 = 2.0 mol AlCl₃. Cl₂ produces less product, so Cl₂ is the limiting reactant.'
+            explanation: 'From Al: 4.0 × 2/2 = 4.0 mol $AlCl_{3}$. From $Cl_{2}$: 3.0 × 2/3 = 2.0 mol $AlCl_{3}$. $Cl_{2}$ produces less product, so $Cl_{2}$ is the limiting reactant.'
           }
         ]
       }
@@ -173,21 +173,21 @@ $$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
 
 Given: $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
 
-You start with **2.0 mol N₂** and **5.0 mol H₂**.
+You start with **2.0 mol $N_{2}$** and **5.0 mol $H_{2}$**.
 
-**1)** How many moles of NH₃ could N₂ produce? (to 3 significant figures)
+**1)** How many moles of $NH_{3}$ could $N_{2}$ produce? (to 3 significant figures)
 
-**2)** How many moles of NH₃ could H₂ produce? (to 3 significant figures)
+**2)** How many moles of $NH_{3}$ could $H_{2}$ produce? (to 3 significant figures)
 
 **3)** Which is limiting? Type **N2** or **H2**.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['4.0', '3.3', 'H2'],
-        hint1: '2.0 mol N₂ × (2 mol NH₃ / 1 mol N₂).',
-        hint2: '5.0 mol H₂ × (2 mol NH₃ / 3 mol H₂).',
-        hint3: 'Which reactant produces less NH₃?',
-        explanation: '1) From N₂: 2.0 × 2/1 = 4.0 mol NH₃. 2) From H₂: 5.0 × 2/3 = 3.33 ≈ 3.3 mol NH₃. 3) H₂ produces less (3.3 < 4.0), so H₂ is the limiting reactant.'
+        hint1: '2.0 mol $N_{2}$ × (2 mol $NH_{3}$ / 1 mol $N_{2}$).',
+        hint2: '5.0 mol $H_{2}$ × (2 mol $NH_{3}$ / 3 mol $H_{2}$).',
+        hint3: 'Which reactant produces less $NH_{3}$?',
+        explanation: '1) From $N_{2}$: 2.0 × 2/1 = 4.0 mol $NH_{3}$. 2) From $H_{2}$: 5.0 × 2/3 = 3.33 ≈ 3.3 mol $NH_{3}$. 3) $H_{2}$ produces less (3.3 < 4.0), so $H_{2}$ is the limiting reactant.'
       }
     },
     {
@@ -231,18 +231,18 @@ You start with **2.0 mol N₂** and **5.0 mol H₂**.
       exercise: {
         questions: [
           {
-            question: 'In the reaction $2\\text{Fe} + 3\\text{Cl}_2 \\rightarrow 2\\text{FeCl}_3$, if 56.0 g of Fe ($M = 55.85$) reacts with 142 g of Cl₂ ($M = 70.90$), the limiting reactant is:',
+            question: 'In the reaction $2\\text{Fe} + 3\\text{Cl}_2 \\rightarrow 2\\text{FeCl}_3$, if 56.0 g of Fe ($M = 55.85$) reacts with 142 g of $Cl_{2}$ ($M = 70.90$), the limiting reactant is:',
             options: [
               'Fe',
-              'Cl₂',
-              'FeCl₃',
+              '$Cl_{2}$',
+              '$FeCl_{3}$',
               'They are in exact stoichiometric ratio'
             ],
             correctAnswer: 0,
-            explanation: 'Moles Fe: 56.0/55.85 = 1.003 mol. Moles Cl₂: 142/70.90 = 2.003 mol. From Fe: 1.003 × 2/2 = 1.003 mol FeCl₃. From Cl₂: 2.003 × 2/3 = 1.335 mol FeCl₃. Fe produces less product → Fe is the limiting reactant.'
+            explanation: 'Moles Fe: 56.0/55.85 = 1.003 mol. Moles $Cl_{2}$: 142/70.90 = 2.003 mol. From Fe: 1.003 × 2/2 = 1.003 mol $FeCl_{3}$. From $Cl_{2}$: 2.003 × 2/3 = 1.335 mol $FeCl_{3}$. Fe produces less product → Fe is the limiting reactant.'
           },
           {
-            question: 'Given $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$, if 16.04 g of CH₄ ($M = 16.04$) reacts with 48.00 g of O₂ ($M = 32.00$), what mass of CO₂ ($M = 44.01$) is produced?',
+            question: 'Given $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$, if 16.04 g of $CH_{4}$ ($M = 16.04$) reacts with 48.00 g of $O_{2}$ ($M = 32.00$), what mass of $CO_{2}$ ($M = 44.01$) is produced?',
             options: [
               '22.0 g',
               '33.0 g',
@@ -250,7 +250,7 @@ You start with **2.0 mol N₂** and **5.0 mol H₂**.
               '66.0 g'
             ],
             correctAnswer: 1,
-            explanation: 'Moles CH₄: 16.04/16.04 = 1.000 mol. Moles O₂: 48.00/32.00 = 1.500 mol. From CH₄: 1.000 × 1 = 1.000 mol CO₂. From O₂: 1.500 × 1/2 = 0.750 mol CO₂. O₂ produces less → O₂ is limiting. CO₂ produced: 0.750 × 44.01 = 33.0 g.'
+            explanation: 'Moles $CH_{4}$: 16.04/16.04 = 1.000 mol. Moles $O_{2}$: 48.00/32.00 = 1.500 mol. From $CH_{4}$: 1.000 × 1 = 1.000 mol $CO_{2}$. From $O_{2}$: 1.500 × 1/2 = 0.750 mol $CO_{2}$. $O_{2}$ produces less → $O_{2}$ is limiting. $CO_{2}$ produced: 0.750 × 44.01 = 33.0 g.'
           }
         ]
       }

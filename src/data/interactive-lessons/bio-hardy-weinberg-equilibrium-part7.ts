@@ -65,7 +65,7 @@ This is a general principle: for rare recessive disorders, **most copies of the 
               '0.97'
             ],
             correctAnswer: 1,
-            explanation: 'Among healthy individuals (PP + Pp), the probability of being a carrier is 2pq / (p² + 2pq) = 0.0582 / (0.9409 + 0.0582) = 0.0582/0.9991 ≈ 0.0584, or about 1 in 17.'
+            explanation: 'Among healthy individuals (PP + Pp), the probability of being a carrier is 2pq / $(p^{2} + 2pq)$ = 0.0582 / (0.9409 + 0.0582) = 0.0582/0.9991 ≈ 0.0584, or about 1 in 17.'
           }
         ]
       }
@@ -179,7 +179,7 @@ Three island populations of a lizard species are sampled for a tail-length gene 
               '0.51'
             ],
             correctAnswer: 2,
-            explanation: 'On Island C: p = 0.3, q = 0.7. Long-tailed lizards are LL or Ll. P(LL) = p² = 0.09, P(Ll) = 2pq = 0.42. Among long-tailed lizards: P(Ll | long-tailed) = 0.42/(0.09 + 0.42) = 0.42/0.51 ≈ 0.82. About 82% of long-tailed lizards on Island C are heterozygous.'
+            explanation: 'On Island C: p = 0.3, q = 0.7. Long-tailed lizards are LL or Ll. P(LL) = $p^{2}$ = 0.09, P(Ll) = 2pq = 0.42. Among long-tailed lizards: P(Ll | long-tailed) = 0.42/(0.09 + 0.42) = 0.42/0.51 ≈ 0.82. About 82% of long-tailed lizards on Island C are heterozygous.'
           }
         ]
       }

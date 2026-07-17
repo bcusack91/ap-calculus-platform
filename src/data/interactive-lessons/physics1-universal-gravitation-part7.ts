@@ -64,7 +64,7 @@ On the AP exam, most gravitation questions test **proportional reasoning** — n
 - $g$ — local gravitational field strength, varies with location
 
 ### Mistake 3: Thinking astronauts are "outside gravity"
-- The ISS at 400 km altitude: $g \\approx 8.7$ m/s² (only 11% less than surface!)
+- The ISS at 400 km altitude: $g \\approx 8.7$ $m/s^{2}$ (only 11% less than surface!)
 - Astronauts float because they\'re in **free fall**, not because gravity is absent
 
 ### Mistake 4: Wrong proportional reasoning with $v$ and $T$

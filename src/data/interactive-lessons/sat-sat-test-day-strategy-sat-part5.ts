@@ -57,7 +57,7 @@ If you must guess randomly on multiple questions, pick the same letter for all o
 
 | Step | Work |
 |---|---|
-| **Problem** | "A rectangle's area is 84 cm². Its length is 5 more than its width. What is the width?" |
+| **Problem** | "A rectangle's area is 84 $cm^{2}$. Its length is 5 more than its width. What is the width?" |
 | **Choices** | A) 5 B) 7 C) 12 D) 17 |
 | **Estimate** | Width × (width + 5) = 84. Width ≈ $\\sqrt{84}$ ≈ 9. So width < 9. |
 | **Eliminate** | C) 12 and D) 17 are too large ❌ |

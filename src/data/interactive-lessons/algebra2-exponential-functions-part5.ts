@@ -45,7 +45,7 @@ Check: $4 \\times 8 = 32 = 2^5$ ✅
                               "32"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "2+3=5. Or log₂(32)=5."
+                    "explanation": "2+3=5. Or $\\log_{2}(32)$=5."
           }
 ]
       }

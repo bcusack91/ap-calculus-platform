@@ -8,7 +8,7 @@ export const mcatGenChemPart7Data = {
 
 **Part 7 of 7 — Electrochemistry & Redox**
 
-Electrochemistry bridges general chemistry, biochemistry, and physiology. The MCAT tests galvanic cells, electrolytic cells, the Nernst equation, and — critically — biological redox: electron transport chain, NADH/FADH₂ as electron carriers, and oxidation state assignments in metabolic intermediates.
+Electrochemistry bridges general chemistry, biochemistry, and physiology. The MCAT tests galvanic cells, electrolytic cells, the Nernst equation, and — critically — biological redox: electron transport chain, $NADH/FADH_{2}$ as electron carriers, and oxidation state assignments in metabolic intermediates.
 `
     },
     {
@@ -36,8 +36,8 @@ $2x + 7(-2) = -2$ → $2x = 12$ → $x = +6$ (Cr is +6, a strong oxidizing agent
 |------|-----------|
 | Oxidation | Loss of electrons; increase in oxidation state |
 | Reduction | Gain of electrons; decrease in oxidation state |
-| Oxidizing agent | Gets reduced (accepts e⁻); is itself oxidized |
-| Reducing agent | Gets oxidized (donates e⁻); is itself reduced |
+| Oxidizing agent | Gets reduced $(accepts e^{-})$; is itself oxidized |
+| Reducing agent | Gets oxidized $(donates e^{-})$; is itself reduced |
 
 ### Balancing Redox Half-Reactions (Acidic Solution)
 
@@ -80,7 +80,7 @@ The half-reaction with the **more positive** standard reduction potential is the
 | $\\text{Cu}^{2+} + 2e^- \\to \\text{Cu}$ | $+0.34$ |
 | $\\text{Zn}^{2+} + 2e^- \\to \\text{Zn}$ | $-0.76$ |
 
-Cu²⁺ has higher $E°$ → cathode (reduced). Zn → anode (oxidized).
+$Cu^{2+}$ has higher $E°$ → cathode (reduced). Zn → anode (oxidized).
 
 $$E°_{cell} = 0.34 - (-0.76) = +1.10\\text{ V}$$
 
@@ -141,7 +141,7 @@ Also: $\\Delta G° = -RT\\ln K$, so a positive $E°_{cell}$ → $K > 1$ → prod
               `The catalyst`
             ],
             correctAnswer: 1,
-            explanation: `Mg goes from 0 to +2: loss of electrons = oxidation. Mg is oxidized → it is the reducing agent (reduces $\\text{Cu}^{2+}$ to Cu). Cu²⁺ is the oxidizing agent.`
+            explanation: `Mg goes from 0 to +2: loss of electrons = oxidation. Mg is oxidized → it is the reducing agent (reduces $\\text{Cu}^{2+}$ to Cu). $Cu^{2+}$ is the oxidizing agent.`
           },
           {
             question: `If $E°_{cell}$ is positive under standard conditions, which statement is true?`,
@@ -254,7 +254,7 @@ This is electrochemistry at its most biological: ETC = a series of redox couples
 - **$\\Delta G° = -nFE°$:** positive $E°$ → negative $\\Delta G°$ → $K > 1$.
 - **Nernst equation:** more product ($Q$ ↑) → lower cell potential; at equilibrium $E = 0$.
 - **Oxidizing agent** gets reduced; **reducing agent** gets oxidized.
-- **ETC connection:** NADH (reducing agent) → Complex I → O₂ (final oxidizing agent) → H₂O.
+- **ETC connection:** NADH (reducing agent) → Complex I → $O_{2}$ (final oxidizing agent) → $H_{2}O$.
 `
     }
   ]

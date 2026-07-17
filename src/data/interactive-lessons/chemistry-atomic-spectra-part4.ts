@@ -131,7 +131,7 @@ In the far ultraviolet — invisible to the eye, but the strongest line in the S
       content: `
 **Rydberg Formula Drill** 🧮
 
-Use $R_H = 1.097 \\times 10^{7}$ m⁻¹.
+Use $R_H = 1.097 \\times 10^{7}$ $m^{-1}$.
 
 **1)** Find the wavelength (in nm, nearest whole) of the Balmer line for $n_i = 4 \\to n_f = 2$.
 
@@ -145,7 +145,7 @@ Use $R_H = 1.097 \\times 10^{7}$ m⁻¹.
         hint1: '$1/\\lambda = R_H(1/4 - 1/16) = R_H(0.1875)$. Convert m to nm.',
         hint2: '$1/\\lambda = R_H(1/1 - 1/9) = R_H(0.8889)$.',
         hint3: '$1/\\lambda = R_H(1/9 - 1/16) = R_H(0.04861)$.',
-        explanation: '1) $1/\\lambda = (1.097 \\times 10^7)(0.1875) = 2.057 \\times 10^6$ m⁻¹ → $\\lambda = 486$ nm (H-β). 2) $1/\\lambda = (1.097 \\times 10^7)(0.8889) = 9.751 \\times 10^6$ m⁻¹ → $\\lambda = 103$ nm (UV). 3) $1/\\lambda = (1.097 \\times 10^7)(0.04861) = 5.333 \\times 10^5$ m⁻¹ → $\\lambda = 1875$ nm (IR Paschen-α).'
+        explanation: '1) $1/\\lambda = (1.097 \\times 10^7)(0.1875) = 2.057 \\times 10^6$ $m^{-1}$ → $\\lambda = 486$ nm (H-β). 2) $1/\\lambda = (1.097 \\times 10^7)(0.8889) = 9.751 \\times 10^6$ $m^{-1}$ → $\\lambda = 103$ nm (UV). 3) $1/\\lambda = (1.097 \\times 10^7)(0.04861) = 5.333 \\times 10^5$ $m^{-1}$ → $\\lambda = 1875$ nm (IR Paschen-α).'
       }
     },
     {
@@ -179,7 +179,7 @@ Use $R_H = 1.097 \\times 10^{7}$ m⁻¹.
             explanation: '410 nm is the violet H-δ line in the Balmer series, corresponding to $n=6 \\to n=2$.'
           },
           {
-            question: 'How does the He⁺ ion compare to hydrogen in its line spectrum?',
+            question: 'How does the $He^{+}$ ion compare to hydrogen in its line spectrum?',
             options: [
               'Identical pattern',
               'No spectral lines (no electron)',
@@ -187,7 +187,7 @@ Use $R_H = 1.097 \\times 10^{7}$ m⁻¹.
               'Similar pattern but at LONGER wavelengths'
             ],
             correctAnswer: 2,
-            explanation: 'He⁺ is a "hydrogenic" one-electron ion. Its energies scale as $Z^2 = 4$, so transitions release 4× the energy and lines appear at 1/4 the wavelength.'
+            explanation: '$He^{+}$ is a "hydrogenic" one-electron ion. Its energies scale as $Z^2 = 4$, so transitions release 4× the energy and lines appear at 1/4 the wavelength.'
           }
         ]
       }

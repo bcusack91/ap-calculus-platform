@@ -190,14 +190,14 @@ The weak acid **consumes** the added $OH^-$, converting it to conjugate base. Ag
           },
           {
             label: 'The blood buffer system uses',
-            options: ['HCl/NaCl', 'H₂CO₃/HCO₃⁻', 'NaOH/NaCl', 'H₂SO₄/NaHSO₄']
+            options: ['HCl/NaCl', '$H_{2}CO_{3}/HCO_{3}^{-}$', 'NaOH/NaCl', '$H_{2}SO_{4}/NaHSO_{4}$']
           },
           {
             label: 'A buffer works best when $[HA]$ and $[A^-]$ are',
             options: ['very different', 'approximately equal', 'both very small', 'both zero']
           }
         ],
-        correctAnswers: ['buffer', 'weak acid', 'H₂CO₃/HCO₃⁻', 'approximately equal'],
+        correctAnswers: ['buffer', 'weak acid', '$H_{2}CO_{3}/HCO_{3}^{-}$', 'approximately equal'],
         hint1: '$HF$ is a weak acid; $F^-$ (from $NaF$) is its conjugate base.',
         hint2: 'The weak acid neutralizes added base.',
         hint3: 'The carbonic acid/bicarbonate system is the primary blood buffer.',

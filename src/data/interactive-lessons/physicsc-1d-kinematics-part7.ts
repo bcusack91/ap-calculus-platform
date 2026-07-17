@@ -51,7 +51,7 @@ $$d = \\frac{v_0^2}{2|a|}$$
 
 Stopping distance is proportional to $v_0^2$. **Doubling the speed quadruples the stopping distance.**
 
-| Speed | Stopping Distance (if $|a| = 8$ m/s²) |
+| Speed | Stopping Distance (if $|a| = 8$ $m/s^{2}$) |
 |:---:|:---:|
 | $20$ m/s | $25$ m |
 | $30$ m/s | $56.25$ m |
@@ -86,7 +86,7 @@ $v(t) = 3(t^2 - 4t + 3) = 3(t-1)(t-3) = 0$ at $t = 1$ and $t = 3$.
 
 **(b)** Find the acceleration at each rest time.
 
-$a(t) = 6t - 12$. $a(1) = -6$ m/s², $a(3) = 6$ m/s².
+$a(t) = 6t - 12$. $a(1) = -6$ $m/s^{2}$, $a(3) = 6$ $m/s^{2}$.
 
 **(c)** Find the position at $t = 3$.
 
@@ -116,7 +116,7 @@ Distance $= |6-2| + |2-6| = 4 + 4 = 8$ m.`
     {
       id: '1dkin7-mcq4',
       type: 'mcq' as const,
-      question: 'A ball is thrown vertically upward from the ground. The positions at $t = 1$ s and $t = 3$ s are equal. What is the initial velocity? (Use $g = 10$ m/s².)',
+      question: 'A ball is thrown vertically upward from the ground. The positions at $t = 1$ s and $t = 3$ s are equal. What is the initial velocity? (Use $g = 10$ $m/s^{2}$.)',
       options: ['$20$ m/s', '$15$ m/s', '$30$ m/s', '$25$ m/s'],
       correctAnswer: 0,
       explanation: '$y(t) = v_0 t - 5t^2$. Setting $y(1) = y(3)$: $v_0 - 5 = 3v_0 - 45 \\implies -2v_0 = -40 \\implies v_0 = 20$ m/s. (Alternatively: by symmetry, peak at $t = 2$, so $v_0 = g \\cdot 2 = 20$ m/s.)'

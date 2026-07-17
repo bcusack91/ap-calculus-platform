@@ -16,7 +16,7 @@ The rate at which electromagnetic energy flows through space is described by the
 
 $$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$$
 
-$|\\vec{S}|$ has units of W/m² — it represents the power per unit area carried by the EM wave.
+$|\\vec{S}|$ has units of $W/m^{2}$ — it represents the power per unit area carried by the EM wave.
 
 ### Energy conservation (Poynting's theorem)
 
@@ -29,13 +29,13 @@ The decrease in EM energy density equals the outflow of energy ($\\nabla\\cdot\\
       type: 'mcq' as const,
       question: 'In an EM wave in vacuum, $E_0 = 600$ V/m. What is the time-averaged energy density? ($\\varepsilon_0 = 8.85 \\times 10^{-12}$)',
       options: [
-        '$\\approx 1.6 \\times 10^{-6}$ J/m³',
-        '$\\approx 3.2 \\times 10^{-6}$ J/m³',
-        '$\\approx 8 \\times 10^{-7}$ J/m³',
-        '$\\approx 6.4 \\times 10^{-6}$ J/m³'
+        '$\\approx 1.6 \\times 10^{-6}$ $J/m^{3}$',
+        '$\\approx 3.2 \\times 10^{-6}$ $J/m^{3}$',
+        '$\\approx 8 \\times 10^{-7}$ $J/m^{3}$',
+        '$\\approx 6.4 \\times 10^{-6}$ $J/m^{3}$'
       ],
       correctAnswer: 0,
-      explanation: 'In an EM wave, $u_E = u_B$, so $\\langle u \\rangle = 2\\langle u_E \\rangle = 2 \\cdot \\frac{1}{2}\\varepsilon_0 \\langle E^2 \\rangle = \\varepsilon_0 E_0^2/2 = (8.85 \\times 10^{-12})(3.6 \\times 10^5)/2 \\approx 1.6 \\times 10^{-6}$ J/m³.'
+      explanation: 'In an EM wave, $u_E = u_B$, so $\\langle u \\rangle = 2\\langle u_E \\rangle = 2 \\cdot \\frac{1}{2}\\varepsilon_0 \\langle E^2 \\rangle = \\varepsilon_0 E_0^2/2 = (8.85 \\times 10^{-12})(3.6 \\times 10^5)/2 \\approx 1.6 \\times 10^{-6}$ $J/m^{3}$.'
     },
     {
       id: 'eden5-intensity',
@@ -63,7 +63,7 @@ $$P_{\\text{rad}} = \\begin{cases} I/c & \\text{(total absorption)} \\\\ 2I/c & 
     {
       id: 'eden5-mcq2',
       type: 'mcq' as const,
-      question: 'Sunlight has intensity $I \\approx 1400$ W/m². What is the radiation pressure on a perfectly absorbing surface?',
+      question: 'Sunlight has intensity $I \\approx 1400$ $W/m^{2}$. What is the radiation pressure on a perfectly absorbing surface?',
       options: [
         '$\\approx 4.7 \\times 10^{-6}$ Pa',
         '$\\approx 9.4 \\times 10^{-6}$ Pa',

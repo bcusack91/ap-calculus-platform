@@ -108,7 +108,7 @@ So $\\omega = a_{\\text{max}}/v_{\\text{max}}$ — a useful relationship for AP 
             explanation: '$v_{\\text{max}} = A\\omega = A(2\\pi f)$. Double $A$ and double $f$: $v_{\\text{max}} \\to (2A)(2 \\times 2\\pi f) = 4A\\omega$. It quadruples.'
           },
           {
-            question: 'An oscillator has $v_{\\text{max}} = 3.0$ m/s and $a_{\\text{max}} = 18$ m/s². The amplitude is:',
+            question: 'An oscillator has $v_{\\text{max}} = 3.0$ m/s and $a_{\\text{max}} = 18$ $m/s^{2}$. The amplitude is:',
             options: [
               '$0.17$ m',
               '$0.50$ m',
@@ -160,13 +160,13 @@ So $\\omega = a_{\\text{max}}/v_{\\text{max}}$ — a useful relationship for AP 
           },
           {
             label: 'The maximum speed of an object in SHM is given by v_max =',
-            options: ['Aω', 'Aω²', 'A/ω', '½Aω²'],
+            options: ['Aω', '$A\\omega^{2}$', 'A/ω', '$\\tfrac{1}{2} A\\omega^{2}$'],
             correctIndex: 0,
             explanation: '$v_{\\text{max}} = A\\omega$. This combines the amplitude and angular frequency.'
           },
           {
             label: 'If the spring constant is doubled (same mass and amplitude), the maximum speed:',
-            options: ['doubles', 'quadruples', 'stays the same', 'increases by √2'],
+            options: ['doubles', 'quadruples', 'stays the same', 'increases by $\\sqrt{2}$'],
             correctIndex: 3,
             explanation: 'Doubling $k$ with same $m$: $\\omega = \\sqrt{k/m} \\to \\sqrt{2k/m} = \\sqrt{2}\\omega$. So $v_{\\text{max}} = A\\omega \\to A\\sqrt{2}\\omega$, increasing by $\\sqrt{2}$.'
           }

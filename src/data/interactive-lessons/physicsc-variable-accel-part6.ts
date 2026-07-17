@@ -119,7 +119,7 @@ Variable acceleration problems are prone to algebra errors. Use **dimensional an
 
 ### Rules
 
-- $[a] = $ m/s²
+- $[a] = $ $m/s^{2}$
 - $[v] = $ m/s
 - $[x] = $ m
 - $[t] = $ s

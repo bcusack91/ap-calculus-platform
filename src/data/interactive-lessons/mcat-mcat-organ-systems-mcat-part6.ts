@@ -23,22 +23,22 @@ The membrane potential trace over time:
 
 | Phase | Channel event | Ion movement | $V_m$ effect |
 |---|---|---|---|
-| **Resting (~$-70$ mV)** | Na⁺/K⁺ ATPase + K⁺ leak | 3 Na⁺ out / 2 K⁺ in | Stable, polarized |
-| **Threshold (~$-55$ mV)** | Voltage-gated Na⁺ channels open | Na⁺ rushes IN | Rapid rise |
-| **Depolarization (→ +30 mV)** | Na⁺ channels fully open | Na⁺ IN | Overshoot positive |
-| **Repolarization** | Na⁺ channels inactivate, K⁺ channels open | K⁺ OUT | Falls back |
-| **Hyperpolarization** | K⁺ channels slow to close | K⁺ OUT (overshoot) | Below $-70$ mV |
+| **Resting (~$-70$ mV)** | $Na^{+}/K^{+}$ ATPase + $K^{+}$ leak | 3 $Na^{+}$ out / 2 $K^{+}$ in | Stable, polarized |
+| **Threshold (~$-55$ mV)** | Voltage-gated $Na^{+}$ channels open | $Na^{+}$ rushes IN | Rapid rise |
+| **Depolarization (→ +30 mV)** | $Na^{+}$ channels fully open | $Na^{+}$ IN | Overshoot positive |
+| **Repolarization** | $Na^{+}$ channels inactivate, $K^{+}$ channels open | $K^{+}$ OUT | Falls back |
+| **Hyperpolarization** | $K^{+}$ channels slow to close | $K^{+}$ OUT (overshoot) | Below $-70$ mV |
 
 **All-or-none:** once threshold is reached the spike is fixed in amplitude; stimulus strength is encoded by **frequency**, not size. The **Nernst equation** sets each ion's equilibrium potential:
 
 $$E_{ion} = \\frac{61}{z} \\log\\frac{[\\text{ion}]_{out}}{[\\text{ion}]_{in}} \\;\\text{mV}$$
 
-$E_{K} \\approx -90$ mV and $E_{Na} \\approx +60$ mV; resting $V_m$ sits near $E_K$ because the membrane is most permeable to K⁺ at rest.
+$E_{K} \\approx -90$ mV and $E_{Na} \\approx +60$ mV; resting $V_m$ sits near $E_K$ because the membrane is most permeable to $K^{+}$ at rest.
 
 ### Refractory Periods (Why APs Go One Way)
 
-- **Absolute refractory period**: Na⁺ channels inactivated → no new AP regardless of stimulus. Ensures unidirectional propagation and caps maximum firing rate.
-- **Relative refractory period**: some Na⁺ channels recovered, but K⁺ efflux makes threshold harder → only a strong stimulus fires.
+- **Absolute refractory period**: $Na^{+}$ channels inactivated → no new AP regardless of stimulus. Ensures unidirectional propagation and caps maximum firing rate.
+- **Relative refractory period**: some $Na^{+}$ channels recovered, but $K^{+}$ efflux makes threshold harder → only a strong stimulus fires.
 
 ### Saltatory Conduction
 
@@ -48,7 +48,7 @@ Myelin (Schwann cells in PNS, oligodendrocytes in CNS) insulates axons; APs rege
 
 $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Vesicle fusion} \\to \\text{NT release} \\to \\text{Binds receptor}$$
 
-- **EPSP** (e.g., glutamate → Na⁺ in) depolarizes; **IPSP** (e.g., GABA → Cl⁻ in / K⁺ out) hyperpolarizes.
+- **EPSP** (e.g., glutamate → $Na^{+}$ in) depolarizes; **IPSP** (e.g., GABA → $Cl^{-}$ in / $K^{+}$ out) hyperpolarizes.
 - **Summation**: temporal (rapid repeats from one synapse) + spatial (many synapses at once) determine whether threshold is reached at the axon hillock.
 
 ### Key Neurotransmitters
@@ -57,7 +57,7 @@ $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Ve
 - **Norepinephrine**: Sympathetic postganglionic
 - **Dopamine**: Reward, movement (low in Parkinson's)
 - **Serotonin**: Mood, sleep (targeted by SSRIs)
-- **GABA**: Main inhibitory NT in brain (Cl⁻ channels)
+- **GABA**: Main inhibitory NT in brain $(Cl^{-} channels)$
 - **Glutamate**: Main excitatory NT in brain`
     },
     {
@@ -73,16 +73,16 @@ $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Ve
             explanation: `Myelin insulates axons, enabling saltatory conduction (the AP jumps between nodes of Ranvier). Without myelin, current leaks across the membrane and conduction slows dramatically or fails, causing motor and sensory deficits. Demyelination never speeds conduction (option 2) and MS specifically targets CNS myelin made by oligodendrocytes.`
           },
           {
-            question: `A neurotoxin blocks voltage-gated Na⁺ channels (like tetrodotoxin). What is the direct effect on neurons?`,
+            question: `A neurotoxin blocks voltage-gated $Na^{+}$ channels (like tetrodotoxin). What is the direct effect on neurons?`,
             options: [`Action potentials cannot fire because depolarization to threshold is blocked`, `Neurons fire continuously because they cannot repolarize`, `Resting potential becomes more negative than $E_K$`, `Only the relative refractory period is affected`],
             correctAnswer: 0,
-            explanation: `The rising phase of the AP depends on voltage-gated Na⁺ influx. Block those channels and the membrane cannot depolarize to +30 mV, so no AP fires → paralysis. Option 2 describes a channel that fails to inactivate (the opposite). Resting potential is set mainly by K⁺ leak, not these channels (option 3), and the entire spike — not just the relative refractory period — is abolished.`
+            explanation: `The rising phase of the AP depends on voltage-gated $Na^{+}$ influx. Block those channels and the membrane cannot depolarize to +30 mV, so no AP fires → paralysis. Option 2 describes a channel that fails to inactivate (the opposite). Resting potential is set mainly by $K^{+}$ leak, not these channels (option 3), and the entire spike — not just the relative refractory period — is abolished.`
           },
           {
-            question: `An inhibitory interneuron releases GABA onto a postsynaptic cell, opening Cl⁻ channels. How does this make the postsynaptic neuron less likely to fire?`,
-            options: [`Cl⁻ influx hyperpolarizes the cell (IPSP), moving $V_m$ further from threshold`, `Cl⁻ efflux depolarizes the cell toward threshold`, `It triggers Ca²⁺ influx and immediate vesicle release`, `It permanently inactivates the Na⁺/K⁺ ATPase`],
+            question: `An inhibitory interneuron releases GABA onto a postsynaptic cell, opening $Cl^{-}$ channels. How does this make the postsynaptic neuron less likely to fire?`,
+            options: [`$Cl^{-}$ influx hyperpolarizes the cell (IPSP), moving $V_m$ further from threshold`, `$Cl^{-}$ efflux depolarizes the cell toward threshold`, `It triggers $Ca^{2+}$ influx and immediate vesicle release`, `It permanently inactivates the $Na^{+}/K^{+}$ ATPase`],
             correctAnswer: 0,
-            explanation: `Opening Cl⁻ channels drives Cl⁻ into the neuron (its equilibrium is near/below rest), hyperpolarizing the membrane — an inhibitory postsynaptic potential (IPSP). This moves $V_m$ away from the $-55$ mV threshold, so more excitatory input is needed to fire. Cl⁻ enters (not exits) and the effect is inhibitory, ruling out options 2–4.`
+            explanation: `Opening $Cl^{-}$ channels drives $Cl^{-}$ into the neuron (its equilibrium is near/below rest), hyperpolarizing the membrane — an inhibitory postsynaptic potential (IPSP). This moves $V_m$ away from the $-55$ mV threshold, so more excitatory input is needed to fire. $Cl^{-}$ enters (not exits) and the effect is inhibitory, ruling out options 2–4.`
           }
         ]
       }
@@ -95,13 +95,13 @@ $$\\text{AP reaches terminal} \\to \\text{Ca}^{2+}\\text{ influx} \\to \\text{Ve
 <details>
 <summary><b>Example 1: Compute an equilibrium potential with the Nernst equation</b></summary>
 
-**Question:** Extracellular [K⁺] = 5 mM, intracellular [K⁺] = 140 mM, at body temperature. Estimate $E_K$.
+**Question:** Extracellular [$K^{+}$] = 5 mM, intracellular [$K^{+}$] = 140 mM, at body temperature. Estimate $E_K$.
 
 **Solution:**
 $$E_K = \\frac{61}{+1}\\log\\frac{[K^+]_{out}}{[K^+]_{in}} = 61\\log\\frac{5}{140} = 61\\log(0.0357)$$
 $$= 61 \\times (-1.45) \\approx \\textbf{-88 mV} \\;✓$$
 
-**MCAT note:** Resting $V_m$ (~$-70$ mV) sits close to $E_K$ because the membrane is most K⁺-permeable at rest. **Hyperkalemia** (raised external K⁺) makes $E_K$ less negative → resting cells partially depolarize → dangerous cardiac arrhythmias.
+**MCAT note:** Resting $V_m$ (~$-70$ mV) sits close to $E_K$ because the membrane is most $K^{+}$-permeable at rest. **Hyperkalemia** (raised external $K^{+}$) makes $E_K$ less negative → resting cells partially depolarize → dangerous cardiac arrhythmias.
 </details>
 
 <details>
@@ -139,7 +139,7 @@ $$= 61 \\times (-1.45) \\approx \\textbf{-88 mV} \\;✓$$
 - Action potential: resting → depolarization (Na$^+$ in) → repolarization (K$^+$ out); all-or-none, frequency-coded
 - Resting $V_m$ sits near $E_K$ (~$-90$ mV by Nernst); refractory periods enforce one-way propagation
 - Myelin enables saltatory conduction (faster signaling); MS demyelinates CNS axons
-- Synapse: Ca²⁺ influx → vesicle fusion → NT release; EPSP/IPSP summation decides firing`
+- Synapse: $Ca^{2+}$ influx → vesicle fusion → NT release; EPSP/IPSP summation decides firing`
     }
   ]
 };

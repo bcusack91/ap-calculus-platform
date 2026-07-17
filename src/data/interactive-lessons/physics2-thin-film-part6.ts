@@ -52,12 +52,12 @@ export const physics2ThinFilmPart6Data = {
       type: 'text' as const,
       content: `### 🔍 Worked Problem 2: Coating on Glass
 
-**Problem:** A MgF₂ coating ($n = 1.38$) on crown glass ($n = 1.52$) is designed to minimize reflection of $\\lambda = 550$ nm light. Find the minimum coating thickness.
+**Problem:** A $MgF_{2}$ coating ($n = 1.38$) on crown glass ($n = 1.52$) is designed to minimize reflection of $\\lambda = 550$ nm light. Find the minimum coating thickness.
 
 | Step | Work |
 |------|------|
-| Media | Air (1.00) → MgF₂ (1.38) → Glass (1.52) |
-| Phase changes | Air→MgF₂: low→high → **shift**. MgF₂→Glass: low→high → **shift** |
+| Media | Air (1.00) → $MgF_{2}$ (1.38) → Glass (1.52) |
+| Phase changes | Air→$MgF_{2}$: low→high → **shift**. $MgF_{2}$→Glass: low→high → **shift** |
 | Total shifts | **2** (even) |
 | Destructive | $2nt = (m + 1/2)\\lambda$ |
 | Min ($m = 0$) | $t = \\lambda/(4n) = 550/(4 \\times 1.38) = 99.6$ nm |

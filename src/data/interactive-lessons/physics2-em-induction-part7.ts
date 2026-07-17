@@ -78,7 +78,7 @@ All of electromagnetic induction flows from one principle: **a changing magnetic
       exercise: {
         questions: [
           {
-            question: 'A 500-turn coil of area 0.02 m² is in a field that changes from 0.4 T to 0 T in 0.1 s. A 10 Ω resistor is connected across the coil. The average current through the resistor is:',
+            question: 'A 500-turn coil of area 0.02 $m^{2}$ is in a field that changes from 0.4 T to 0 T in 0.1 s. A 10 Ω resistor is connected across the coil. The average current through the resistor is:',
             options: [
               '0.4 A',
               '4 A',
@@ -199,7 +199,7 @@ Test your understanding of the entire electromagnetic induction unit.
               '12.6 mA'
             ],
             correctAnswer: 1,
-            explanation: '$A = \\pi(0.1)^2 = 0.0314$ m². $|\\varepsilon| = A \\cdot dB/dt = (0.0314)(0.2) = 6.28 \\times 10^{-3}$ V. $I = \\varepsilon/R = 6.28 \\times 10^{-3}/5 = 1.26 \\times 10^{-3}$ A = 1.26 mA.'
+            explanation: '$A = \\pi(0.1)^2 = 0.0314$ $m^{2}$. $|\\varepsilon| = A \\cdot dB/dt = (0.0314)(0.2) = 6.28 \\times 10^{-3}$ V. $I = \\varepsilon/R = 6.28 \\times 10^{-3}/5 = 1.26 \\times 10^{-3}$ A = 1.26 mA.'
           },
           {
             question: 'An RL circuit has $L = 50$ mH and $R = 100\\;\\Omega$. How long does it take the current to reach approximately 63% of its maximum value?',

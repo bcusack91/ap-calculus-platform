@@ -19,11 +19,11 @@ The conservation of angular momentum produces some of nature's most dramatic phe
 ## The Figure Skater
 
 A figure skater begins a spin with arms extended:
-- $I_i = 4.0$ kg·m², $\\omega_i = 3$ rad/s
-- $L = I_i\\omega_i = 12$ kg·m²/s
+- $I_i = 4.0$ $kg\\cdot m^{2}$, $\\omega_i = 3$ rad/s
+- $L = I_i\\omega_i = 12$ $kg\\cdot m^{2}/s$
 
 She pulls her arms in:
-- $I_f = 1.2$ kg·m²
+- $I_f = 1.2$ $kg\\cdot m^{2}$
 - $\\omega_f = L/I_f = 12/1.2 = 10$ rad/s
 
 ### Speed increase: $\\omega_f/\\omega_i = 10/3 \\approx 3.3\\times$ faster!
@@ -115,19 +115,19 @@ The period goes from ~30 days to **milliseconds**! This explains why pulsars (ro
       content: `
 **Application Calculations** 🧮
 
-1) A diver ($I = 14$ kg·m² extended) rotates at 2 rad/s. She tucks to $I = 3.5$ kg·m². What is her angular velocity while tucked? (in rad/s)
+1) A diver ($I = 14$ $kg\\cdot m^{2}$ extended) rotates at 2 rad/s. She tucks to $I = 3.5$ $kg\\cdot m^{2}$. What is her angular velocity while tucked? (in rad/s)
 
 2) What is the ratio of her tucked KE to her extended KE?
 
-3) A merry-go-round ($I = 800$ kg·m², $\\omega = 2$ rad/s) has a 40 kg child ($r = 2$ m from center) jump off tangentially. What is the new $\\omega$? (in rad/s, round to 3 significant figures)
+3) A merry-go-round ($I = 800$ $kg\\cdot m^{2}$, $\\omega = 2$ rad/s) has a 40 kg child ($r = 2$ m from center) jump off tangentially. What is the new $\\omega$? (in rad/s, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['8', '4', '2.44'],
         hint1: '$I_i\\omega_i = I_f\\omega_f$: $(14)(2) = (3.5)\\omega_f$',
         hint2: '$KE_f/KE_i = I_i/I_f$',
-        hint3: 'Child\'s $I = mr^2 = 40(4) = 160$ kg·m². Before: $L = (800 + 160)(2) = 1920$. After (child gone): $L_{\\text{MGR}} = 800\\omega_f$. But wait — angular momentum includes the child\'s $L$ after jumping. If child jumps off tangentially at the current tangential velocity $v = r\\omega = 2(2) = 4$ m/s, the child keeps $L_{\\text{child}} = mvr = 40(4)(2) = 320$. So $1920 - 320 = 800\\omega_f$.',
-        explanation: '1) $\\omega_f = 28/3.5 = 8$ rad/s. 2) $KE_f/KE_i = I_i/I_f = 14/3.5 = 4$. 3) $L_{\\text{total}} = (800 + 160)(2) = 1920$ kg·m²/s. Child leaves with $L = mvr = 40(4)(2) = 320$. Remaining: $800\\omega_f = 1920 - 320 = 1600$. $\\omega_f = 1600/800 = 2.0$ rad/s. Hmm, but if the child jumps off tangentially at the current velocity, the child\'s angular momentum is: $L = mvr = 40 \\times r\\omega \\times r = 40(2)(2)(2) = 320$. $\\omega_f = (1920 - 320)/800 = 2.0$. Actually let me reconsider: $L_{child} = I_{child}\\omega = 160(2) = 320$. $L_{MGR} = 1920 - 320 = 1600$. $\\omega_f = 1600/800 = 2.0$. The merry-go-round keeps the same angular velocity since the child departed with exactly its share of angular momentum.'
+        hint3: 'Child\'s $I = mr^2 = 40(4) = 160$ $kg\\cdot m^{2}$. Before: $L = (800 + 160)(2) = 1920$. After (child gone): $L_{\\text{MGR}} = 800\\omega_f$. But wait — angular momentum includes the child\'s $L$ after jumping. If child jumps off tangentially at the current tangential velocity $v = r\\omega = 2(2) = 4$ m/s, the child keeps $L_{\\text{child}} = mvr = 40(4)(2) = 320$. So $1920 - 320 = 800\\omega_f$.',
+        explanation: '1) $\\omega_f = 28/3.5 = 8$ rad/s. 2) $KE_f/KE_i = I_i/I_f = 14/3.5 = 4$. 3) $L_{\\text{total}} = (800 + 160)(2) = 1920$ $kg\\cdot m^{2}/s$. Child leaves with $L = mvr = 40(4)(2) = 320$. Remaining: $800\\omega_f = 1920 - 320 = 1600$. $\\omega_f = 1600/800 = 2.0$ rad/s. Hmm, but if the child jumps off tangentially at the current velocity, the child\'s angular momentum is: $L = mvr = 40 \\times r\\omega \\times r = 40(2)(2)(2) = 320$. $\\omega_f = (1920 - 320)/800 = 2.0$. Actually let me reconsider: $L_{child} = I_{child}\\omega = 160(2) = 320$. $L_{MGR} = 1920 - 320 = 1600$. $\\omega_f = 1600/800 = 2.0$. The merry-go-round keeps the same angular velocity since the child departed with exactly its share of angular momentum.'
       }
     },
     {
@@ -168,7 +168,7 @@ The period goes from ~30 days to **milliseconds**! This explains why pulsars (ro
       exercise: {
         questions: [
           {
-            question: 'A pottery wheel ($I = 5$ kg·m², $\\omega = 10$ rad/s) has a lump of clay ($I = 1$ kg·m²) dropped on it. The final angular velocity is:',
+            question: 'A pottery wheel ($I = 5$ $kg\\cdot m^{2}$, $\\omega = 10$ rad/s) has a lump of clay ($I = 1$ $kg\\cdot m^{2}$) dropped on it. The final angular velocity is:',
             options: [
               '6 rad/s',
               '8 rad/s',
@@ -176,7 +176,7 @@ The period goes from ~30 days to **milliseconds**! This explains why pulsars (ro
               '10 rad/s'
             ],
             correctAnswer: 2,
-            explanation: '$L_i = (5)(10) = 50$ kg·m²/s. $L_f = (5 + 1)\\omega_f$. $\\omega_f = 50/6 = 8.33$ rad/s.'
+            explanation: '$L_i = (5)(10) = 50$ $kg\\cdot m^{2}/s$. $L_f = (5 + 1)\\omega_f$. $\\omega_f = 50/6 = 8.33$ rad/s.'
           },
           {
             question: 'A gyroscope maintains its orientation in space because:',

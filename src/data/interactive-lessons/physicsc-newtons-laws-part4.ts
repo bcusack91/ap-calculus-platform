@@ -62,11 +62,11 @@ $f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
       content: `
 **Friction Forces** 🧮
 
-1) A 10 kg block on a flat surface has $\mu_k = 0.3$. Kinetic friction force (N)? (Use $g = 10$ m/s²)
+1) A 10 kg block on a flat surface has $\mu_k = 0.3$. Kinetic friction force (N)? (Use $g = 10$ $m/s^{2}$)
 
-2) A 5 kg block requires 20 N to start sliding on a flat surface. What is $\mu_s$? (Use $g = 10$ m/s²)
+2) A 5 kg block requires 20 N to start sliding on a flat surface. What is $\mu_s$? (Use $g = 10$ $m/s^{2}$)
 
-3) A 10 kg block is on a surface with $\mu_k = 0.5$. What horizontal force (N) is needed to move it at constant velocity? (Use $g = 10$ m/s²)
+3) A 10 kg block is on a surface with $\mu_k = 0.5$. What horizontal force (N) is needed to move it at constant velocity? (Use $g = 10$ $m/s^{2}$)
     
     `,
       exercise: {

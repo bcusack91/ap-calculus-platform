@@ -475,7 +475,7 @@ const researchDesignFRQs: PsychFRQ[] = [
         prompt: "Explain ONE statistical effect-size or precision metric the researcher should report and why it matters more than a p-value alone.",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "Names a specific effect-size metric (Pearson r, R², standardized regression β, Cohen's d) or 95% CI and explains why APA Publication Manual / Cumming 2014 / ASA 2016 recommend reporting it", keywords: ["effect size", "Pearson r", "R-squared", "beta", "Cohen's d", "95% confidence interval", "Cumming", "2014", "New Statistics", "APA Publication Manual", "ASA", "2016"] }
+          { points: 1, description: "Names a specific effect-size metric (Pearson r, $R^{2}$, standardized regression β, Cohen's d) or 95% CI and explains why APA Publication Manual / Cumming 2014 / ASA 2016 recommend reporting it", keywords: ["effect size", "Pearson r", "R-squared", "beta", "Cohen's d", "95% confidence interval", "Cumming", "2014", "New Statistics", "APA Publication Manual", "ASA", "2016"] }
         ],
         sampleAnswer: "Beyond a p-value, the researcher should report standardized effect sizes (Pearson r or standardized β from her panel models) and their 95% confidence intervals. Geoff Cumming's *New Statistics* program (2014, Psychological Science) and the American Statistical Association's 2016 statement on p-values both argue effect sizes and intervals communicate practical magnitude and uncertainty in a way p-values alone do not — relevant here because the published literature (Orben & Przybylski 2019) reports very small r ≈ 0.05 effects that are statistically significant but explain less than 1% of variance.",
       }
@@ -607,7 +607,7 @@ const researchDesignFRQs: PsychFRQ[] = [
         rubric: [
           { points: 1, description: "Names a mixed-design ANOVA or linear mixed-effects model with condition × time interaction; explains the interaction tests differential change", keywords: ["mixed ANOVA", "linear mixed-effects model", "lme4", "Bates", "2015", "interaction", "condition by time", "differential change", "intent-to-treat"] }
         ],
-        sampleAnswer: "A mixed-design ANOVA (or linear mixed-effects model — e.g., lme4 in R; Bates et al., Journal of Statistical Software, 2015) with one between-subjects factor (MBSR vs. control) and one within-subjects factor (baseline, mid-trial, post-trial cortisol AUC) tests for a condition-by-time *interaction*. A significant interaction would mean cortisol declined differentially between conditions — the central test of the hypothesis. Reporting an effect size (η²p) and 95% CI alongside the F statistic, and using intent-to-treat analysis with multiple imputation for missing data, are best practice.",
+        sampleAnswer: "A mixed-design ANOVA (or linear mixed-effects model — e.g., lme4 in R; Bates et al., Journal of Statistical Software, 2015) with one between-subjects factor (MBSR vs. control) and one within-subjects factor (baseline, mid-trial, post-trial cortisol AUC) tests for a condition-by-time *interaction*. A significant interaction would mean cortisol declined differentially between conditions — the central test of the hypothesis. Reporting an effect size $(\\eta^{2}p)$ and 95% CI alongside the F statistic, and using intent-to-treat analysis with multiple imputation for missing data, are best practice.",
       },
       {
         label: "(f)",

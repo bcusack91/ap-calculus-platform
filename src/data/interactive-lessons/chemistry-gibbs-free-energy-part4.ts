@@ -137,7 +137,7 @@ So: $\\Delta G° = -2.303 RT \\log K$
             explanation: 'Negative ΔG° means $\\ln K > 0$, so $K > 1$. The more negative ΔG°, the larger K, meaning products are strongly favored at equilibrium.'
           },
           {
-            question: 'If K = 10⁻⁵ for a reaction, ΔG° is:',
+            question: 'If K = $10^{-5}$ for a reaction, ΔG° is:',
             options: [
               'Large and negative',
               'Small and negative',
@@ -186,7 +186,7 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
             options: ['positive', 'negative', 'zero', 'undefined']
           },
           {
-            label: 'A reaction with K = 10⁸ has ΔG° that is',
+            label: 'A reaction with K = $10^{8}$ has ΔG° that is',
             options: ['large positive', 'large negative', 'zero', 'small positive']
           },
           {
@@ -202,7 +202,7 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
         hint1: '$\\Delta G° = -RT\\ln 1 = -RT(0) = 0$.',
         hint2: 'Large K → products very favored → very negative ΔG°.',
         hint3: 'ΔG° is in J/mol, so R must be in J/(mol·K).',
-        explanation: 'K = 1 → ΔG° = 0. K = 10⁸ → large negative ΔG°. R = 8.314 J/(mol·K) for energy calculations. ΔG° is about equilibrium position; ΔG is about the direction of spontaneous change from non-standard conditions.'
+        explanation: 'K = 1 → ΔG° = 0. K = $10^{8}$ → large negative ΔG°. R = 8.314 J/(mol·K) for energy calculations. ΔG° is about equilibrium position; ΔG is about the direction of spontaneous change from non-standard conditions.'
       }
     },
     {
@@ -225,7 +225,7 @@ Use $R = 8.314$ J/(mol·K), $T = 298$ K
             explanation: '$K = e^{40000/(8.314 \\times 298)} = e^{16.1} \\approx 10^7$. Products are very strongly favored at equilibrium. But it does NOT go to completion — some reactants remain.'
           },
           {
-            question: 'At 298 K, a reaction has K = 1.0 × 10⁻³. ΔG° is approximately:',
+            question: 'At 298 K, a reaction has K = $1.0 \\times 10^{-3}$. ΔG° is approximately:',
             options: [
               '−17.1 kJ/mol',
               '+17.1 kJ/mol',

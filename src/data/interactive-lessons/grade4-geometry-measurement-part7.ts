@@ -25,7 +25,7 @@ export const g4GeoMeasurePart7Data = {
 
 **Rectangle 9 × 6 m.**
 
-$P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ m² ✅
+$P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ $m^{2}$ ✅
     
     `
     },
@@ -57,9 +57,9 @@ $P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ m² ✅
       content: `
 **Review** 🧮
 
-1) Square, side 6 cm. Area (cm²)?
+1) Square, side 6 cm. Area $(cm^{2})$?
 
-2) Rectangle 12 × 5 m. Area (m²)?
+2) Rectangle 12 × 5 m. Area $(m^{2})$?
 
 3) An octagon has how many sides?
     
@@ -67,7 +67,7 @@ $P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ m² ✅
       exercise: {
         boxes: 3,
         correctAnswers: ["36","60","8"],
-        hint1: "A = s² = 6².",
+        hint1: "A = $s^{2}$ = $6^{2}$.",
         hint2: "A = 12 × 5.",
         hint3: "\"Oct\" = eight.",
         explanation: "1) 36. 2) 60. 3) 8."
@@ -80,7 +80,7 @@ $P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ m² ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Area of rectangle formula","options":["A = l × w","A = 2l + 2w","A = s²","A = ½bh"]},{"label":"Supplementary angles sum to","options":["180°","90°","360°","270°"]}],
+        dropdowns: [{"label":"Area of rectangle formula","options":["A = l × w","A = 2l + 2w","A = $s^{2}$","A = ½bh"]},{"label":"Supplementary angles sum to","options":["180°","90°","360°","270°"]}],
         correctAnswers: ["A = l × w","180°"],
         hint1: "Area = product of sides.",
         hint2: "What do supplementary angles add to?",
@@ -110,7 +110,7 @@ $P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ m² ✅
       exercise: {
         questions: [
           {
-                    "question": "Rectangle area 48 cm², length 8 cm. Perimeter?",
+                    "question": "Rectangle area 48 $cm^{2}$, length 8 cm. Perimeter?",
                     "options": [
                               "28 cm",
                               "14 cm",

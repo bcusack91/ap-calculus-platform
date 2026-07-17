@@ -150,19 +150,19 @@ A 2.0 kg block on a spring ($k = 200$ N/m) oscillates with amplitude $A = 0.20$ 
         dropdowns: [
           {
             label: 'The correct energy conservation equation at any position x in SHM is:',
-            options: ['½kA² = ½kx² + ½mv²', '½kA² = ½mv²', '½kx² = ½mv²', 'kA = mv'],
+            options: ['$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} kx^{2}$ + $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kx^{2}$ = $\\tfrac{1}{2} mv^{2}$', 'kA = mv'],
             correctIndex: 0,
             explanation: 'The energy conservation equation at any position is $\\frac{1}{2}kA^2 = \\frac{1}{2}kx^2 + \\frac{1}{2}mv^2$.'
           },
           {
             label: 'The kinetic energy equals the potential energy at a displacement of:',
-            options: ['x = A/2', 'x = A/√2', 'x = A√3/2', 'x = 0'],
+            options: ['x = A/2', 'x = $A/\\sqrt{2}$', 'x = $A\\sqrt{3}/2$', 'x = 0'],
             correctIndex: 1,
             explanation: 'KE = PE when $\\frac{1}{2}kx^2 = \\frac{1}{2}k(A^2 - x^2)$, giving $x = A/\\sqrt{2}$.'
           },
           {
             label: 'As displacement from equilibrium increases, the potential energy:',
-            options: ['decreases linearly', 'increases linearly', 'decreases as x²', 'increases as x²'],
+            options: ['decreases linearly', 'increases linearly', 'decreases as $x^{2}$', 'increases as $x^{2}$'],
             correctIndex: 3,
             explanation: 'The PE increases as $x^2$: $PE = \\frac{1}{2}kx^2$, which is a parabolic (quadratic) increase.'
           }

@@ -89,7 +89,7 @@ A pendulum bob ($m = 0.50$ kg) swings through its lowest point with a speed of 1
 
 1) What is the kinetic energy at the lowest point? (in J, round to 3 significant figures)
 
-2) What is the maximum height above the lowest point? (in m, round to 3 significant figures, use $g = 9.8$ m/s²)
+2) What is the maximum height above the lowest point? (in m, round to 3 significant figures, use $g = 9.8$ $m/s^{2}$)
 
 3) What is the total mechanical energy of the system? (in J, round to 3 significant figures)
       `,

@@ -22,7 +22,7 @@ export const physCCircMotionPart6Data = {
     {
       id: 'cm6-mcq1',
       type: 'mcq' as const,
-      question: 'A 1000 kg car rounds an unbanked curve of radius 80 m at 25 m/s. If $\\mu_s = 0.9$, what is the ratio of the required centripetal force to the maximum static friction? ($g = 10$ m/s²)',
+      question: 'A 1000 kg car rounds an unbanked curve of radius 80 m at 25 m/s. If $\\mu_s = 0.9$, what is the ratio of the required centripetal force to the maximum static friction? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\approx 0.87$ (the car is close to skidding)',
         '$\\approx 0.50$ (comfortably within the limit)',

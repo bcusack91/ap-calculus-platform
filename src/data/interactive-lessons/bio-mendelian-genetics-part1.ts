@@ -203,10 +203,10 @@ Mendel happened to choose seven pea traits that each show **complete dominance**
 
 **The diagnostic difference between 3:1 and 1:2:1.** Under incomplete dominance and codominance, every genotype produces a *distinct* phenotype, so the phenotypic ratio **equals** the genotypic ratio (1:2:1). The "collapse" of three genotype classes into two phenotype classes — which gives 3:1 — happens *only* under complete dominance.
 
-**Worked micro-example (incomplete dominance).** In snapdragons, red (*C^R*) and white (*C^W*) flowers cross to give all-pink F1 (*C^R C^W*). Self-crossing the pink F1 gives an F2 of:
-- $\\frac{1}{4}$ red (*C^R C^R*)
-- $\\frac{1}{2}$ pink (*C^R C^W*)
-- $\\frac{1}{4}$ white (*C^W C^W*)
+**Worked micro-example (incomplete dominance).** In snapdragons, red $(\\cdot C^{R}\\cdot )$ and white $(\\cdot C^{W}\\cdot )$ flowers cross to give all-pink F1 $(\\cdot C^{R} C^{W}\\cdot )$. Self-crossing the pink F1 gives an F2 of:
+- $\\frac{1}{4}$ red $(\\cdot C^{R} C^{R}\\cdot )$
+- $\\frac{1}{2}$ pink $(\\cdot C^{R} C^{W}\\cdot )$
+- $\\frac{1}{4}$ white $(\\cdot C^{W} C^{W}\\cdot )$
 
 That is **1 red : 2 pink : 1 white** — a 1:2:1 *phenotypic* ratio, the visual fingerprint of incomplete dominance. If you ever see a 1:2:1 phenotype ratio reported, suspect that dominance is incomplete (or codominant), not complete.
 
@@ -230,7 +230,7 @@ That is **1 red : 2 pink : 1 white** — a 1:2:1 *phenotypic* ratio, the visual 
               'Red and white blended permanently, disproving Mendel'
             ],
             correctAnswer: 0,
-            explanation: 'The pink heterozygote and the 1:2:1 phenotypic ratio are the signature of incomplete dominance — each genotype produces a distinct phenotype, so phenotype ratio equals genotype ratio. Segregation is NOT violated: the C^R and C^W alleles still separated into gametes normally, which is exactly why the F2 genotypes appear in the Mendelian 1:2:1 proportions. Option D misreads this as permanent blending — but the red and white phenotypes REAPPEAR cleanly in the F2, which blending could never explain.'
+            explanation: 'The pink heterozygote and the 1:2:1 phenotypic ratio are the signature of incomplete dominance — each genotype produces a distinct phenotype, so phenotype ratio equals genotype ratio. Segregation is NOT violated: the $C^{R}$ and $C^{W}$ alleles still separated into gametes normally, which is exactly why the F2 genotypes appear in the Mendelian 1:2:1 proportions. Option D misreads this as permanent blending — but the red and white phenotypes REAPPEAR cleanly in the F2, which blending could never explain.'
           },
           {
             question: 'A diploid organism is heterozygous Aa. Considering the chromosomal basis of Mendel\'s laws, which statement correctly links the cellular event to the genetic outcome?',

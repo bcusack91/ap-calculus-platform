@@ -28,7 +28,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       type: 'text' as const,
       content: `## 🔗 Connecting PES to Ionization Energy
 
-The **first ionization energy (IE₁)** of an element is directly related to the PES spectrum:
+The **first ionization energy $(IE_{1})$** of an element is directly related to the PES spectrum:
 
 $$\\boxed{IE_1 = \\text{binding energy of the outermost (valence) electron}}$$
 
@@ -40,8 +40,8 @@ The **rightmost peak** on a PES spectrum (lowest binding energy) corresponds to 
 ---
 
 ### Example:
-- Sodium (Na): The rightmost peak is the 3s¹ peak with BE ≈ 0.50 MJ/mol → IE₁ ≈ 0.50 MJ/mol ≈ 496 kJ/mol
-- Chlorine (Cl): The rightmost peak is the 3p⁵ peak with BE ≈ 1.25 MJ/mol → IE₁ ≈ 1.25 MJ/mol ≈ 1251 kJ/mol
+- Sodium (Na): The rightmost peak is the $3s^{1}$ peak with BE ≈ 0.50 MJ/mol → $IE_{1}$ ≈ 0.50 MJ/mol ≈ 496 kJ/mol
+- Chlorine (Cl): The rightmost peak is the $3p^{5}$ peak with BE ≈ 1.25 MJ/mol → $IE_{1}$ ≈ 1.25 MJ/mol ≈ 1251 kJ/mol
 
 
 ---
@@ -127,7 +127,7 @@ PES data can also help explain **successive ionization energies**. The large jum
               'Cannot be determined from PES data alone'
             ],
             correctAnswer: 0,
-            explanation: 'Element X has 2+2+6+2+3 = 15 electrons (phosphorus, P) and Element Y has 2+2+6+2+4 = 16 electrons (sulfur, S). Although Zeff increases from P to S, phosphorus actually has a higher first ionization energy than sulfur. This is because P has a half-filled 3p³ subshell (extra stability), while S has a 3p⁴ configuration with one paired electron that experiences electron-electron repulsion, making it easier to remove. This P > S exception is a classic AP Chemistry topic.'
+            explanation: 'Element X has 2+2+6+2+3 = 15 electrons (phosphorus, P) and Element Y has 2+2+6+2+4 = 16 electrons (sulfur, S). Although Zeff increases from P to S, phosphorus actually has a higher first ionization energy than sulfur. This is because P has a half-filled $3p^{3}$ subshell (extra stability), while S has a $3p^{4}$ configuration with one paired electron that experiences electron-electron repulsion, making it easier to remove. This P > S exception is a classic AP Chemistry topic.'
           }
         ]
       }
@@ -150,11 +150,11 @@ PES data can also help explain **successive ionization energies**. The large jum
             options: [
               'Lithium (Z = 3) because it has 3 peaks',
               'Boron (Z = 5) because it has 2 + 2 + 3 = 7 electrons total',
-              'Nitrogen (Z = 7) because it has 2 + 2 + 3 = 7 electrons and configuration 1s² 2s² 2p³',
+              'Nitrogen (Z = 7) because it has 2 + 2 + 3 = 7 electrons and configuration $1s^{2}$ $2s^{2}$ $2p^{3}$',
               'Carbon (Z = 6) because the third peak has 3 electrons'
             ],
             correctAnswer: 2,
-            explanation: 'Total electrons = 2 + 2 + 3 = 7, which corresponds to nitrogen (Z = 7). The three peaks correspond to 1s² (2 electrons, highest BE), 2s² (2 electrons, middle BE), and 2p³ (3 electrons, lowest BE). This matches nitrogen\'s electron configuration of 1s² 2s² 2p³.'
+            explanation: 'Total electrons = 2 + 2 + 3 = 7, which corresponds to nitrogen (Z = 7). The three peaks correspond to $1s^{2}$ (2 electrons, highest BE), $2s^{2}$ (2 electrons, middle BE), and $2p^{3}$ (3 electrons, lowest BE). This matches nitrogen\'s electron configuration of $1s^{2}$ $2s^{2}$ $2p^{3}$.'
           }
         ]
       }
@@ -181,7 +181,7 @@ PES data can also help explain **successive ionization energies**. The large jum
           {
             label: 'What element is this? (chemical symbol)',
             correctAnswer: 'Si',
-            explanation: 'Peak heights: 2 + 2 + 6 + 2 + 2 = 14 electrons → silicon (Si, Z = 14). Configuration: 1s²(A), 2s²(B), 2p⁶(C), 3s²(D), 3p²(E).'
+            explanation: 'Peak heights: 2 + 2 + 6 + 2 + 2 = 14 electrons → silicon (Si, Z = 14). Configuration: $1s^{2}(A)$, $2s^{2}(B)$, $2p^{6}(C)$, $3s^{2}(D)$, $3p^{2}(E)$.'
           },
           {
             label: 'What is the first ionization energy (in MJ/mol) based on the PES data?',
@@ -191,7 +191,7 @@ PES data can also help explain **successive ionization energies**. The large jum
           {
             label: 'How many core electrons does this atom have?',
             correctAnswer: '10',
-            explanation: 'The core electrons are those in the inner shells: 1s²(2) + 2s²(2) + 2p⁶(6) = 10 core electrons. The valence electrons in 3s² and 3p² total 4.'
+            explanation: 'The core electrons are those in the inner shells: $1s^{2}(2)$ + $2s^{2}(2)$ + $2p^{6}(6)$ = 10 core electrons. The valence electrons in $3s^{2}$ and $3p^{2}$ total 4.'
           }
         ]
       }
@@ -202,13 +202,13 @@ PES data can also help explain **successive ionization energies**. The large jum
       content: `### ✏️ AP Review Question 5
 
 Consider the successive ionization energies of magnesium (Mg):
-IE₁ = 0.74 MJ/mol, IE₂ = 1.45 MJ/mol, IE₃ = 7.73 MJ/mol
+$IE_{1}$ = 0.74 MJ/mol, $IE_{2}$ = 1.45 MJ/mol, $IE_{3}$ = 7.73 MJ/mol
 
-There is a large jump between IE₂ and IE₃.`,
+There is a large jump between $IE_{2}$ and $IE_{3}$.`,
       exercise: {
         dropdowns: [
           {
-            text: 'What does this large jump in IE indicate about the electron being removed for IE₃?',
+            text: 'What does this large jump in IE indicate about the electron being removed for $IE_{3}$?',
             options: [
               'It is a valence electron in the 3s subshell',
               'It is a core electron in the 2p subshell',
@@ -216,7 +216,7 @@ There is a large jump between IE₂ and IE₃.`,
               'It indicates a change in orbital shape'
             ],
             correctIndex: 1,
-            explanation: 'Magnesium has configuration 1s² 2s² 2p⁶ 3s². The first two electrons removed are the 3s² valence electrons (IE₁ and IE₂). The third electron must come from the 2p⁶ core, which has a much higher binding energy. This large jump from ~1.45 to ~7.73 MJ/mol corresponds to crossing from valence to core electrons — clearly visible as the gap between the 3s and 2p peaks on a PES spectrum.'
+            explanation: 'Magnesium has configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$. The first two electrons removed are the $3s^{2}$ valence electrons $(IE_{1} and IE_{2})$. The third electron must come from the $2p^{6}$ core, which has a much higher binding energy. This large jump from ~1.45 to ~7.73 MJ/mol corresponds to crossing from valence to core electrons — clearly visible as the gap between the 3s and 2p peaks on a PES spectrum.'
           },
           {
             text: 'On a PES spectrum for Mg, which peak corresponds to the first ionization energy?',
@@ -244,7 +244,7 @@ There is a large jump between IE₂ and IE₃.`,
               'Nickel (Ni) — it is magnetic'
             ],
             correctAnswer: 0,
-            explanation: 'Peaks: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁶(6), 4s²(2), 3d¹⁰(10). Total = 2 + 2 + 6 + 2 + 6 + 2 + 10 = 30 electrons → zinc (Zn, Z = 30). Zinc is notable for having a completely filled 3d subshell (3d¹⁰), giving it unique stability among the transition metals.'
+            explanation: 'Peaks: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $4s^{2}(2)$, $3d^{10}(10)$. Total = 2 + 2 + 6 + 2 + 6 + 2 + 10 = 30 electrons → zinc (Zn, Z = 30). Zinc is notable for having a completely filled 3d subshell $(3d^{10})$, giving it unique stability among the transition metals.'
           }
         ]
       }

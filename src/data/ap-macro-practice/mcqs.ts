@@ -478,7 +478,7 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-4-financial-sector',
     stimulus:
-      'Diagram (described): The money market shows nominal money supply (vertical) at MS₀ intersecting money demand (downward sloping) at nominal interest rate i₀. The Fed conducts an open-market sale of Treasury securities.',
+      'Diagram (described): The money market shows nominal money supply (vertical) at $MS_{0}$ intersecting money demand (downward sloping) at nominal interest rate $i_{0}$. The Fed conducts an open-market sale of Treasury securities.',
     question: 'In the short run, this Fed action will cause:',
     options: [
       'MS to shift right and the nominal interest rate to fall.',

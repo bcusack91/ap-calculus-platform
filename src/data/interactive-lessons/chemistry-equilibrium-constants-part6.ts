@@ -116,7 +116,7 @@ $Q = 3.33 < K = 5.10$
 
 **Step 3: Predict the shift**
 
-Since $Q < K$, the reaction shifts **right** (forward) to produce more CO₂ and H₂.
+Since $Q < K$, the reaction shifts **right** (forward) to produce more $CO_{2}$ and $H_{2}$.
 
 
 ---

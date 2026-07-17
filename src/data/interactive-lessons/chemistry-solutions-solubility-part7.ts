@@ -68,37 +68,37 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       exercise: {
         questions: [
           {
-            question: 'Equal masses of NaCl ($M = 58.44$, $i = 2$) and CaCl₂ ($M = 110.98$, $i = 3$) are each dissolved in 1.00 kg of water. Which solution has the lower freezing point?',
+            question: 'Equal masses of NaCl ($M = 58.44$, $i = 2$) and $CaCl_{2}$ ($M = 110.98$, $i = 3$) are each dissolved in 1.00 kg of water. Which solution has the lower freezing point?',
             options: [
               'The NaCl solution',
-              'The CaCl₂ solution',
+              'The $CaCl_{2}$ solution',
               'They are the same',
               'Cannot be determined without knowing the exact mass'
             ],
             correctAnswer: 0,
-            explanation: 'Let the equal mass be $m$ grams. NaCl: $im = 2 \\times m/58.44 = 0.0342m$. CaCl₂: $im = 3 \\times m/110.98 = 0.0270m$. NaCl produces a larger $im$ product, giving a greater $\\Delta T_f$ and a lower freezing point.'
+            explanation: 'Let the equal mass be $m$ grams. NaCl: $im = 2 \\times m/58.44 = 0.0342m$. $CaCl_{2}$: $im = 3 \\times m/110.98 = 0.0270m$. NaCl produces a larger $im$ product, giving a greater $\\Delta T_f$ and a lower freezing point.'
           },
           {
             question: 'A student dissolves a solid in water and the resulting solution does not conduct electricity. Which of the following could be the solute?',
             options: [
               'NaCl',
-              'KNO₃',
-              'C₆H₁₂O₆ (glucose)',
+              '$KNO_{3}$',
+              '$C_{6}H_{12}O_{6}$ (glucose)',
               'HCl'
             ],
             correctAnswer: 2,
-            explanation: 'A solution that does not conduct electricity contains no ions — the solute is a nonelectrolyte. Glucose dissolves as intact molecules and does not ionize. NaCl, KNO₃, and HCl all produce ions in water.'
+            explanation: 'A solution that does not conduct electricity contains no ions — the solute is a nonelectrolyte. Glucose dissolves as intact molecules and does not ionize. NaCl, $KNO_{3}$, and HCl all produce ions in water.'
           },
           {
-            question: 'When Ba(NO₃)₂(aq) is mixed with Na₂SO₄(aq), a precipitate forms. The precipitate is:',
+            question: 'When $Ba(NO_{3})_{2}(aq)$ is mixed with $Na_{2}SO_{4}(aq)$, a precipitate forms. The precipitate is:',
             options: [
-              'NaNO₃',
-              'BaSO₄',
-              'Ba(NO₃)₂',
-              'Na₂SO₄'
+              '$NaNO_{3}$',
+              '$BaSO_{4}$',
+              '$Ba(NO_{3})_{2}$',
+              '$Na_{2}SO_{4}$'
             ],
             correctAnswer: 1,
-            explanation: 'By solubility rules, sulfates are generally soluble EXCEPT with Ba²⁺, Pb²⁺, Ca²⁺, and Sr²⁺. BaSO₄ is insoluble and precipitates. NaNO₃ is soluble (all nitrates and all sodium salts are soluble).'
+            explanation: 'By solubility rules, sulfates are generally soluble EXCEPT with $Ba^{2+}$, $Pb^{2+}$, $Ca^{2+}$, and $Sr^{2+}$. $BaSO_{4}$ is insoluble and precipitates. $NaNO_{3}$ is soluble (all nitrates and all sodium salts are soluble).'
           }
         ]
       }
@@ -112,7 +112,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       exercise: {
         questions: [
           {
-            question: 'Rank the following 0.10 m aqueous solutions from lowest to highest freezing point: I. C₆H₁₂O₆ ($i = 1$), II. NaCl ($i = 2$), III. CaCl₂ ($i = 3$)',
+            question: 'Rank the following 0.10 m aqueous solutions from lowest to highest freezing point: I. $C_{6}H_{12}O_{6}$ ($i = 1$), II. NaCl ($i = 2$), III. $CaCl_{2}$ ($i = 3$)',
             options: [
               'I < II < III',
               'III < II < I',
@@ -120,7 +120,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
               'II < III < I'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta T_f = iK_fm$. Larger $i$ → larger $\\Delta T_f$ → lower freezing point. CaCl₂ ($i = 3$) has the lowest freezing point, then NaCl ($i = 2$), then glucose ($i = 1$) has the highest. Order from lowest to highest: III < II < I.'
+            explanation: '$\\Delta T_f = iK_fm$. Larger $i$ → larger $\\Delta T_f$ → lower freezing point. $CaCl_{2}$ ($i = 3$) has the lowest freezing point, then NaCl ($i = 2$), then glucose ($i = 1$) has the highest. Order from lowest to highest: III < II < I.'
           },
           {
             question: '250.0 mL of 0.400 M HCl is diluted to 1.000 L. What is the pH of the resulting solution?',
@@ -134,15 +134,15 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
             explanation: '$M_2 = M_1V_1/V_2 = (0.400)(0.250)/(1.000) = 0.100$ M. HCl is a strong acid, so $[\\text{H}^+] = 0.100$ M. $\\text{pH} = -\\log(0.100) = 1.00$.'
           },
           {
-            question: 'A lab determines that an unknown nonelectrolyte has a molar mass of 180 g/mol and the empirical formula CH₂O. The molecular formula is:',
+            question: 'A lab determines that an unknown nonelectrolyte has a molar mass of 180 g/mol and the empirical formula $CH_{2}O$. The molecular formula is:',
             options: [
-              'CH₂O',
-              'C₂H₄O₂',
-              'C₆H₁₂O₆',
-              'C₃H₆O₃'
+              '$CH_{2}O$',
+              '$C_{2}H_{4}O_{2}$',
+              '$C_{6}H_{12}O_{6}$',
+              '$C_{3}H_{6}O_{3}$'
             ],
             correctAnswer: 2,
-            explanation: 'Empirical formula mass of CH₂O: $12 + 2(1) + 16 = 30$ g/mol. Ratio: $180/30 = 6$. Molecular formula: $6 \\times$ CH₂O = C₆H₁₂O₆ (glucose).'
+            explanation: 'Empirical formula mass of $CH_{2}O$: $12 + 2(1) + 16 = 30$ g/mol. Ratio: $180/30 = 6$. Molecular formula: $6 \\times$ $CH_{2}O$ = $C_{6}H_{12}O_{6}$ (glucose).'
           }
         ]
       }
@@ -155,7 +155,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
 
 > **Given:** $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
 
-**1)** An aqueous solution of MgCl₂ ($i = 3$, $M = 95.21$ g/mol) is made by dissolving 9.52 g in 200.0 g of water. What is the freezing point of the solution? (in °C, to 3 significant figures)
+**1)** An aqueous solution of $MgCl_{2}$ ($i = 3$, $M = 95.21$ g/mol) is made by dissolving 9.52 g in 200.0 g of water. What is the freezing point of the solution? (in °C, to 3 significant figures)
 
 **2)** How many mL of 12.0 M HCl must be diluted to prepare 500.0 mL of 0.600 M HCl? (to 3 significant figures)
 
@@ -179,7 +179,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       exercise: {
         dropdowns: [
           {
-            label: 'A compound is soluble if it contains the cation Na⁺. This is because sodium salts are',
+            label: 'A compound is soluble if it contains the cation $Na^{+}$. This is because sodium salts are',
             options: ['Always soluble', 'Soluble only with halides', 'Generally insoluble', 'Soluble only in organic solvents']
           },
           {
@@ -191,19 +191,19 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
             options: ['Doubles', 'Quadruples', 'Stays the same', 'Is halved']
           },
           {
-            label: 'When mixing Pb(NO₃)₂(aq) and KI(aq), the spectator ions are',
-            options: ['Pb²⁺ and I⁻', 'K⁺ and NO₃⁻', 'Pb²⁺ and K⁺', 'NO₃⁻ and I⁻']
+            label: 'When mixing $Pb(NO_{3})_{2}(aq)$ and KI(aq), the spectator ions are',
+            options: ['$Pb^{2+}$ and $I^{-}$', '$K^{+}$ and $NO_{3}^{-}$', '$Pb^{2+}$ and $K^{+}$', '$NO_{3}^{-}$ and $I^{-}$']
           },
           {
             label: 'For a 1.0 m NaCl solution, the measured freezing point depression is slightly less than 3.72°C because',
             options: ['NaCl does not fully dissolve', 'Ion pairing reduces the effective i', 'K_f changes with concentration', 'Water evaporates']
           }
         ],
-        correctAnswers: ['Always soluble', 'Osmotic pressure', 'Quadruples', 'K⁺ and NO₃⁻', 'Ion pairing reduces the effective i'],
-        hint1: 'Na⁺, K⁺, and NH₄⁺ salts have no exceptions in the solubility rules.',
+        correctAnswers: ['Always soluble', 'Osmotic pressure', 'Quadruples', '$K^{+}$ and $NO_{3}^{-}$', 'Ion pairing reduces the effective i'],
+        hint1: '$Na^{+}$, $K^{+}$, and $NH_{4}^{+}$ salts have no exceptions in the solubility rules.',
         hint2: 'Large molecules at low concentrations produce tiny $\\Delta T_f$ but measurable $\\Pi$.',
         hint3: '$\\Delta T_f = iK_fm$. If both $i$ and $m$ double: $\\Delta T_f$ = $(2i)(K_f)(2m) = 4iK_fm$.',
-        explanation: 'Sodium salts are always soluble. Osmotic pressure is the most sensitive colligative property. $\\Delta T_f \\propto i \\times m$, so doubling both gives 4× the effect. PbI₂ is the precipitate, so K⁺ and NO₃⁻ are spectators. In real solutions, ion pairing reduces the effective $i$ below the theoretical value.'
+        explanation: 'Sodium salts are always soluble. Osmotic pressure is the most sensitive colligative property. $\\Delta T_f \\propto i \\times m$, so doubling both gives 4× the effect. $PbI_{2}$ is the precipitate, so $K^{+}$ and $NO_{3}^{-}$ are spectators. In real solutions, ion pairing reduces the effective $i$ below the theoretical value.'
       }
     },
     {
@@ -230,7 +230,7 @@ $$n = m \\times \\text{kg solvent} = 0.400 \\times 0.0500 = 0.0200 \\text{ mol}$
 
 $$M = \\frac{2.56}{0.0200} = 128 \\text{ g/mol}$$
 
-**(d)** The compound is known to be naphthalene (C₁₀H₈, actual $M = 128.17$ g/mol). Is this consistent? **Yes** — the experimental value matches the actual molar mass, confirming $i = 1$ (naphthalene is a nonelectrolyte).
+**(d)** The compound is known to be naphthalene ($C_{10}H_{8}$, actual $M = 128.17$ g/mol). Is this consistent? **Yes** — the experimental value matches the actual molar mass, confirming $i = 1$ (naphthalene is a nonelectrolyte).
 
 **(e)** If the compound were actually an electrolyte with $i = 2$, what would the molar mass be?
 
@@ -268,7 +268,7 @@ $$m = \\frac{0.744}{(2)(1.86)} = 0.200 \\; m, \\quad n = 0.200 \\times 0.0500 = 
             explanation: 'For accurate solution preparation, the bottom of the meniscus must be aligned with the calibration mark on the volumetric flask. Reading above or below introduces systematic error in concentration.'
           },
           {
-            question: 'A 0.100 M Al(NO₃)₃ solution ($i = 4$) at 25°C has an osmotic pressure closest to:',
+            question: 'A 0.100 M $Al(NO_{3})_{3}$ solution ($i = 4$) at 25°C has an osmotic pressure closest to:',
             options: [
               '2.4 atm',
               '4.9 atm',
@@ -276,7 +276,7 @@ $$m = \\frac{0.744}{(2)(1.86)} = 0.200 \\; m, \\quad n = 0.200 \\times 0.0500 = 
               '9.8 atm'
             ],
             correctAnswer: 3,
-            explanation: '$\\Pi = iMRT = (4)(0.100)(0.08206)(298) = 9.78 \\approx 9.8$ atm. Al(NO₃)₃ produces 4 ions: Al³⁺ + 3NO₃⁻.'
+            explanation: '$\\Pi = iMRT = (4)(0.100)(0.08206)(298) = 9.78 \\approx 9.8$ atm. $Al(NO_{3})_{3}$ produces 4 ions: $Al^{3+}$ + $3NO_{3}^{-}$.'
           }
         ]
       }

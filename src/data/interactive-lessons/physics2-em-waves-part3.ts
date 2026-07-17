@@ -106,14 +106,14 @@ $$I_0 \\xrightarrow{\\text{unpolarized}} \\frac{I_0}{2} \\xrightarrow{\\theta_1}
       content: `
 **Polarization Problems** 🧮
 
-Unpolarized light with $I_0 = 200$ W/m² passes through two polarizers.
+Unpolarized light with $I_0 = 200$ $W/m^{2}$ passes through two polarizers.
 
 First polarizer: transmits in vertical direction.
 Second polarizer: at 30° from vertical.
 
-**1)** Intensity after first polarizer? (W/m²)
+**1)** Intensity after first polarizer? $(W/m^{2})$
 
-**2)** Intensity after second polarizer? (W/m²)
+**2)** Intensity after second polarizer? $(W/m^{2})$
 
 **3)** What angle between two polarizers gives zero transmission?
       `,
@@ -123,7 +123,7 @@ Second polarizer: at 30° from vertical.
         hint1: 'Unpolarized through first polarizer → $I_0/2$',
         hint2: '$100 \\cos^2(30°) = 100(3/4)$',
         hint3: '$\\cos^2(\\theta) = 0$ when $\\theta = ?$',
-        explanation: '1) $200/2 = 100$ W/m² (first polarizer always halves unpolarized light). 2) $100 \\cos^2(30°) = 100(0.75) = 75$ W/m². 3) 90° — crossed polarizers transmit nothing.'
+        explanation: '1) $200/2 = 100$ $W/m^{2}$ (first polarizer always halves unpolarized light). 2) $100 \\cos^2(30°) = 100(0.75) = 75$ $W/m^{2}$. 3) 90° — crossed polarizers transmit nothing.'
       }
     },
     {

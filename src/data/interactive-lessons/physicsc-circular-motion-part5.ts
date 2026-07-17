@@ -36,15 +36,15 @@ $$\\alpha = \\frac{d\\omega}{dt} = \\frac{d^2\\theta}{dt^2}$$`
     {
       id: 'cm5-mcq1',
       type: 'mcq' as const,
-      question: 'A car moves around a circular track of radius 50 m. At one instant, its speed is 20 m/s and it is accelerating at 3 m/s² tangentially. What is the magnitude of its total acceleration?',
+      question: 'A car moves around a circular track of radius 50 m. At one instant, its speed is 20 m/s and it is accelerating at 3 $m/s^{2}$ tangentially. What is the magnitude of its total acceleration?',
       options: [
-        '$\\sqrt{(v^2/r)^2 + a_t^2} = \\sqrt{64 + 9} \\approx 8.54$ m/s²',
-        '$v^2/r = 8$ m/s²',
-        '$3$ m/s²',
-        '$11$ m/s²'
+        '$\\sqrt{(v^2/r)^2 + a_t^2} = \\sqrt{64 + 9} \\approx 8.54$ $m/s^{2}$',
+        '$v^2/r = 8$ $m/s^{2}$',
+        '$3$ $m/s^{2}$',
+        '$11$ $m/s^{2}$'
       ],
       correctAnswer: 0,
-      explanation: '$a_c = v^2/r = 400/50 = 8$ m/s². $|\\vec{a}| = \\sqrt{8^2 + 3^2} = \\sqrt{73} \\approx 8.54$ m/s².'
+      explanation: '$a_c = v^2/r = 400/50 = 8$ $m/s^{2}$. $|\\vec{a}| = \\sqrt{8^2 + 3^2} = \\sqrt{73} \\approx 8.54$ $m/s^{2}$.'
     },
     {
       id: 'cm5-polar',
@@ -63,7 +63,7 @@ where $\\omega = \\dot{\\theta}$ and $\\alpha = \\ddot{\\theta}$.
 
 ### Example: Constant Angular Acceleration
 
-A disk starts from rest and accelerates at $\\alpha = 2$ rad/s². At $t = 3$ s, a point at $r = 0.5$ m from the center has:
+A disk starts from rest and accelerates at $\\alpha = 2$ $rad/s^{2}$. At $t = 3$ s, a point at $r = 0.5$ m from the center has:
 
 $$\\omega = \\alpha t = 6 \\text{ rad/s}$$
 $$v = r\\omega = 3 \\text{ m/s}$$

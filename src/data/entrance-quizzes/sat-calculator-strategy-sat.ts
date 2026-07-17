@@ -12,7 +12,7 @@ const questions: EntranceQuizQuestion[] = [
     question:
       'On the SAT Math section, which type of problem is generally BEST solved without a calculator?',
     options: [
-      'Finding the decimal value of √157 to four decimal places.',
+      'Finding the decimal value of $\\sqrt{157}$ to four decimal places.',
       'Solving 2x + 6 = 14 for x.',
       'Calculating 17.3% of 842.',
       'Evaluating sin(47°) to three decimal places.',
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-2a',
     question:
-      'You graph y = x² − 4x − 5 on your calculator. What feature of the graph helps you find the x-intercepts (roots) most directly?',
+      'You graph y = $x^{2}$ − 4x − 5 on your calculator. What feature of the graph helps you find the x-intercepts (roots) most directly?',
     options: [
       'The y-intercept',
       'The vertex (minimum point)',
@@ -60,16 +60,16 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-2b',
     question:
-      'When using a graphing calculator to find the intersection of y = 2x + 1 and y = x² − 3, what does the intersection point represent?',
+      'When using a graphing calculator to find the intersection of y = 2x + 1 and y = $x^{2}$ − 3, what does the intersection point represent?',
     options: [
       'The vertex of the parabola.',
       'The x-value where both functions equal zero.',
-      'The point(s) where the two equations have the same x and y values—i.e., the solution(s) to 2x + 1 = x² − 3.',
+      'The point(s) where the two equations have the same x and y values—i.e., the solution(s) to 2x + 1 = $x^{2}$ − 3.',
       'The average of the two functions.',
     ],
     correctIndex: 2,
     explanation:
-      'The intersection of two graphs represents the point(s) where both equations are simultaneously satisfied. Finding intersections graphically is equivalent to solving the system algebraically: 2x + 1 = x² − 3.',
+      'The intersection of two graphs represents the point(s) where both equations are simultaneously satisfied. Finding intersections graphically is equivalent to solving the system algebraically: 2x + 1 = $x^{2}$ − 3.',
     partNumber: 2,
     partTitle: 'Graphing Functions',
   },
@@ -78,16 +78,16 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-3a',
     question:
-      'To solve the equation x³ − 3x = 2 using a graphing calculator, which strategy is most effective?',
+      'To solve the equation $x^{3}$ − 3x = 2 using a graphing calculator, which strategy is most effective?',
     options: [
-      'Graph y = x³ − 3x − 2 and find where it crosses the x-axis.',
-      'Graph y = x³ and y = 3x + 2 and find their intersection.',
-      'Evaluate x³ − 3x for x = 1, 2, 3 until you find 2.',
+      'Graph y = $x^{3}$ − 3x − 2 and find where it crosses the x-axis.',
+      'Graph y = $x^{3}$ and y = 3x + 2 and find their intersection.',
+      'Evaluate $x^{3}$ − 3x for x = 1, 2, 3 until you find 2.',
       'Both A and B are equally valid strategies.',
     ],
     correctIndex: 3,
     explanation:
-      'Both strategies work: (A) graph f(x) = x³ − 3x − 2 and find x-intercepts (zeros); or (B) graph y = x³ − 3x and y = 2 and find where they intersect. Both give the same solutions. Option D correctly recognizes that either approach is valid.',
+      'Both strategies work: (A) graph f(x) = $x^{3}$ − 3x − 2 and find x-intercepts (zeros); or (B) graph y = $x^{3}$ − 3x and y = 2 and find where they intersect. Both give the same solutions. Option D correctly recognizes that either approach is valid.',
     partNumber: 3,
     partTitle: 'Solving Equations Graphically',
   },
@@ -162,7 +162,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-5b',
     question:
-      'Without using a calculator, estimate which of the following is closest to √50.',
+      'Without using a calculator, estimate which of the following is closest to $\\sqrt{50}$.',
     options: [
       '6',
       '7',
@@ -171,7 +171,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      '6² = 36 and 7² = 49 and 8² = 64. Since 49 < 50 < 64, √50 is slightly above 7. Among the choices, 7 is the closest estimate to √50 ≈ 7.07.',
+      '$6^{2}$ = 36 and $7^{2}$ = 49 and $8^{2}$ = 64. Since 49 < 50 < 64, $\\sqrt{50}$ is slightly above 7. Among the choices, 7 is the closest estimate to $\\sqrt{50}$ ≈ 7.07.',
     partNumber: 5,
     partTitle: 'Estimation Strategies',
   },
@@ -180,7 +180,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-6a',
     question:
-      'A student needs to find all x-values where f(x) = x³ − 6x² + 9x equals zero. She graphs the function. The graph touches the x-axis at x = 0 and x = 3 but does not cross at x = 3. What does this tell her?',
+      'A student needs to find all x-values where f(x) = $x^{3}$ − $6x^{2}$ + 9x equals zero. She graphs the function. The graph touches the x-axis at x = 0 and x = 3 but does not cross at x = 3. What does this tell her?',
     options: [
       'x = 3 is not actually a root.',
       'x = 3 is a root of multiplicity 2 (a repeated root), and the graph is tangent to the x-axis there.',
@@ -189,7 +189,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Factor: x³ − 6x² + 9x = x(x² − 6x + 9) = x(x − 3)². The factor (x − 3)² creates a repeated root at x = 3, causing the graph to "bounce" off (touch without crossing) the x-axis at that point. x = 0 is a simple root where the graph does cross.',
+      'Factor: $x^{3}$ − $6x^{2}$ + 9x = $x(x^{2} - 6x + 9)$ = $x(x - 3)^{2}$. The factor $(x - 3)^{2}$ creates a repeated root at x = 3, causing the graph to "bounce" off (touch without crossing) the x-axis at that point. x = 0 is a simple root where the graph does cross.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -230,16 +230,16 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-7b',
     question:
-      'A student uses her calculator to solve 3x² + 7x − 6 = 0 graphically and finds x ≈ 0.667. How can she verify this is a reasonable answer?',
+      'A student uses her calculator to solve $3x^{2}$ + 7x − 6 = 0 graphically and finds x ≈ 0.667. How can she verify this is a reasonable answer?',
     options: [
-      'Substitute x = 0.667 back into 3x² + 7x − 6 and check if the result is approximately 0.',
+      'Substitute x = 0.667 back into $3x^{2}$ + 7x − 6 and check if the result is approximately 0.',
       'Check that 0.667 appears in the table of values as a y-value.',
       'Confirm that 0.667 × 3 = 2 exactly.',
       'Verify that the discriminant is negative.',
     ],
     correctIndex: 0,
     explanation:
-      'Substituting x ≈ 0.667 into 3(0.667)² + 7(0.667) − 6 ≈ 3(0.445) + 4.669 − 6 ≈ 1.335 + 4.669 − 6 ≈ 0.004 ≈ 0 ✓. This confirms the answer is correct to three decimal places. Note: the exact root is x = 2/3.',
+      'Substituting x ≈ 0.667 into $3(0.667)^{2}$ + 7(0.667) − 6 ≈ 3(0.445) + 4.669 − 6 ≈ 1.335 + 4.669 − 6 ≈ 0.004 ≈ 0 ✓. This confirms the answer is correct to three decimal places. Note: the exact root is x = 2/3.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

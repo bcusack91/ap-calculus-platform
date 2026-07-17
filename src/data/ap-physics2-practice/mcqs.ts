@@ -18,10 +18,10 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-1-fluids',
-    question: 'A solid object floats with 80% of its volume submerged in water ($\\rho_{water} = 1000$ kg/m³). The density of the object is',
-    options: ['200 kg/m³', '500 kg/m³', '800 kg/m³', '1250 kg/m³'],
+    question: 'A solid object floats with 80% of its volume submerged in water ($\\rho_{water} = 1000$ $kg/m^{3}$). The density of the object is',
+    options: ['200 $kg/m^{3}$', '500 $kg/m^{3}$', '800 $kg/m^{3}$', '1250 $kg/m^{3}$'],
     correctAnswer: 2,
-    explanation: 'Floating: $\\rho_{obj}/\\rho_{fluid} = $ submerged fraction $= 0.80 \\Rightarrow \\rho_{obj} = 800$ kg/m³.',
+    explanation: 'Floating: $\\rho_{obj}/\\rho_{fluid} = $ submerged fraction $= 0.80 \\Rightarrow \\rho_{obj} = 800$ $kg/m^{3}$.',
   },
   {
     type: 'mcq',
@@ -39,7 +39,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-1-fluids',
-    question: 'A hydraulic lift uses incompressible fluid. A 100 N force on the small piston (area 0.01 m²) lifts a load on the large piston (area 0.10 m²). Maximum load is',
+    question: 'A hydraulic lift uses incompressible fluid. A 100 N force on the small piston $(area 0.01 m^{2})$ lifts a load on the large piston $(area 0.10 m^{2})$. Maximum load is',
     options: ['10 N', '100 N', '1000 N', '10000 N'],
     correctAnswer: 2,
     explanation: 'Pascal: $F_2 = F_1(A_2/A_1) = 100(10) = 1000$ N.',
@@ -47,7 +47,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-1-fluids',
-    question: 'A tank of water has a hole at depth 5 m below the surface. The exit speed of water (use $g = 10$ m/s²) is',
+    question: 'A tank of water has a hole at depth 5 m below the surface. The exit speed of water (use $g = 10$ $m/s^{2}$) is',
     options: ['5 m/s', '10 m/s', '50 m/s', '100 m/s'],
     correctAnswer: 1,
     explanation: 'Torricelli: $v = \\sqrt{2gh} = \\sqrt{100} = 10$ m/s.',
@@ -117,7 +117,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-3-electric-forces-fields-potential',
-    question: 'Two point charges of $+2$ μC and $-3$ μC are 0.30 m apart. The magnitude of the electric force between them is (use $k = 9 \\times 10^9$ N·m²/C²)',
+    question: 'Two point charges of $+2$ μC and $-3$ μC are 0.30 m apart. The magnitude of the electric force between them is (use $k = 9 \\times 10^9$ $N\\cdot m^{2}/C^{2}$)',
     options: ['$0.06$ N', '$0.6$ N', '$6$ N', '$60$ N'],
     correctAnswer: 1,
     explanation: '$F = k|q_1 q_2|/r^2 = 9 \\times 10^9 (2 \\times 10^{-6})(3 \\times 10^{-6})/(0.09) = 9 \\times 10^9 \\cdot 6 \\times 10^{-12}/0.09 = 0.6$ N.',
@@ -262,7 +262,7 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-5-magnetism-induction',
-    question: 'A 0.10 m² coil with 50 turns has its plane perpendicular to a magnetic field that increases uniformly from 0 to 0.40 T in 2.0 s. The induced EMF is',
+    question: 'A 0.10 $m^{2}$ coil with 50 turns has its plane perpendicular to a magnetic field that increases uniformly from 0 to 0.40 T in 2.0 s. The induced EMF is',
     options: ['0.04 V', '0.20 V', '1.0 V', '4.0 V'],
     correctAnswer: 2,
     explanation: '$\\varepsilon = -N \\, d\\Phi/dt = N A (dB/dt) = 50(0.10)(0.40/2.0) = 50(0.10)(0.20) = 1.0$ V.',

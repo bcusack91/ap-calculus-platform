@@ -62,7 +62,7 @@ A free body diagram:
 
 $$W = mg$$
 
-where $g = 9.8$ m/s² (or $\\approx 10$ m/s² for quick estimates).
+where $g = 9.8$ $m/s^{2}$ (or $\\approx 10$ $m/s^{2}$ for quick estimates).
 
 Weight always points **straight down**, regardless of the surface orientation.
       `
@@ -151,11 +151,11 @@ That\'s it! No normal force, no tension — just gravity.
 
 Consider a 5 kg block resting on a horizontal surface.
 
-1) What is the magnitude of the weight force (in N)? Use $g = 9.8$ m/s².
+1) What is the magnitude of the weight force (in N)? Use $g = 9.8$ $m/s^{2}$.
 
 2) The block is in equilibrium on the surface. What is the magnitude of the normal force (in N)?
 
-3) A person pushes the block to the right with 20 N on a frictionless surface. What is the acceleration (in m/s²)?
+3) A person pushes the block to the right with 20 N on a frictionless surface. What is the acceleration $(in m/s^{2})$?
       `,
       exercise: {
         boxes: 3,
@@ -163,7 +163,7 @@ Consider a 5 kg block resting on a horizontal surface.
         hint1: '$W = mg = 5 \\times 9.8$',
         hint2: 'In vertical equilibrium, $N = W$.',
         hint3: '$a = F_{\\text{net}}/m = 20/5$. On a frictionless surface, the only horizontal force is the push.',
-        explanation: '1) $W = mg = 5 \\times 9.8 = 49$ N. 2) Since the block doesn\'t accelerate vertically, $N = W = 49$ N. 3) $a = F/m = 20/5 = 4$ m/s². The net horizontal force is just the 20 N push (no friction).'
+        explanation: '1) $W = mg = 5 \\times 9.8 = 49$ N. 2) Since the block doesn\'t accelerate vertically, $N = W = 49$ N. 3) $a = F/m = 20/5 = 4$ $m/s^{2}$. The net horizontal force is just the 20 N push (no friction).'
       }
     },
     {

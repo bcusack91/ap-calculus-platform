@@ -24,13 +24,13 @@ Your circulatory system is a masterpiece of fluid dynamics:
 
 | Vessel | Radius | Total Area | Speed |
 |:---:|:---:|:---:|:---:|
-| Aorta | ~1.2 cm | ~4.5 cm² | ~40 cm/s |
-| Arteries | ~2 mm | ~20 cm² | ~10 cm/s |
-| Arterioles | ~30 μm | ~400 cm² | ~0.5 cm/s |
-| Capillaries | ~4 μm | ~4000 cm² | ~0.05 cm/s |
-| Venules | ~20 μm | ~500 cm² | ~0.3 cm/s |
-| Veins | ~2.5 mm | ~40 cm² | ~5 cm/s |
-| Vena cava | ~1.5 cm | ~7 cm² | ~25 cm/s |
+| Aorta | ~1.2 cm | ~4.5 $cm^{2}$ | ~40 cm/s |
+| Arteries | ~2 mm | ~20 $cm^{2}$ | ~10 cm/s |
+| Arterioles | ~30 μm | ~400 $cm^{2}$ | ~0.5 cm/s |
+| Capillaries | ~4 μm | ~4000 $cm^{2}$ | ~0.05 cm/s |
+| Venules | ~20 μm | ~500 $cm^{2}$ | ~0.3 cm/s |
+| Veins | ~2.5 mm | ~40 $cm^{2}$ | ~5 cm/s |
+| Vena cava | ~1.5 cm | ~7 $cm^{2}$ | ~25 cm/s |
 
 ### Continuity in Action
 
@@ -69,7 +69,7 @@ Blood slows down dramatically in capillaries because the total cross-sectional a
               '1800 cm/s'
             ],
             correctAnswer: 0,
-            explanation: '$Q = 5$ L/min = $8.33 \\times 10^{-5}$ m³/s. $A = \\pi(0.012)^2 = 4.52 \\times 10^{-4}$ m². $v = Q/A = 0.184$ m/s ≈ 18 cm/s. (This is the average resting value; speed is higher during exercise.)'
+            explanation: '$Q = 5$ L/min = $8.33 \\times 10^{-5}$ $m^{3}/s$. $A = \\pi(0.012)^2 = 4.52 \\times 10^{-4}$ $m^{2}$. $v = Q/A = 0.184$ m/s ≈ 18 cm/s. (This is the average resting value; speed is higher during exercise.)'
           }
         ]
       }
@@ -86,9 +86,9 @@ A city water main (diameter 60 cm) supplies a neighborhood. Each house has a 2-c
 
 If the main carries water at 1.5 m/s, how many houses can it supply at 0.5 m/s each?
 
-$Q_{\\text{main}} = \\pi(0.30)^2(1.5) = 0.424$ m³/s
+$Q_{\\text{main}} = \\pi(0.30)^2(1.5) = 0.424$ $m^{3}/s$
 
-$Q_{\\text{house}} = \\pi(0.01)^2(0.5) = 1.57 \\times 10^{-4}$ m³/s
+$Q_{\\text{house}} = \\pi(0.01)^2(0.5) = 1.57 \\times 10^{-4}$ $m^{3}/s$
 
 $N = Q_{\\text{main}}/Q_{\\text{house}} = 0.424/(1.57 \\times 10^{-4}) ≈ 2700$ houses
 
@@ -128,7 +128,7 @@ A sprinkler system has one main pipe (radius 2.0 cm, speed 3.0 m/s) that feeds 8
         hint1: '$Q = \\pi r^2 v = \\pi(0.02)^2(3.0)$. Convert to L/s.',
         hint2: '$Q_{\\text{each}} = Q_{\\text{total}}/8$.',
         hint3: '$v = Q_{\\text{each}} / (\\pi r_{\\text{head}}^2)$. Watch units!',
-        explanation: '$Q = \\pi(0.02)^2(3.0) = 3.77 \\times 10^{-3}$ m³/s = 3.77 L/s. Per head: $3.77/8 = 0.471$ L/s = $4.71 \\times 10^{-4}$ m³/s. $v = 4.71 \\times 10^{-4}/(\\pi(0.003)^2) = 16.7$ m/s.'
+        explanation: '$Q = \\pi(0.02)^2(3.0) = 3.77 \\times 10^{-3}$ $m^{3}/s$ = 3.77 L/s. Per head: $3.77/8 = 0.471$ L/s = $4.71 \\times 10^{-4}$ $m^{3}/s$. $v = 4.71 \\times 10^{-4}/(\\pi(0.003)^2) = 16.7$ m/s.'
       }
     },
     {

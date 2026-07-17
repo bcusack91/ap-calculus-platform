@@ -58,7 +58,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         questions: [
           {
-            question: 'For the cell Zn | Zn²⁺(0.10 M) || Cu²⁺(1.5 M) | Cu, E° = 1.10 V, n = 2. E at 25°C is approximately:',
+            question: 'For the cell Zn | $Zn^{2+}(0.10 M)$ || $Cu^{2+}(1.5 M)$ | Cu, E° = 1.10 V, n = 2. E at 25°C is approximately:',
             options: [
               '1.07 V',
               '1.13 V',
@@ -69,7 +69,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             explanation: '$Q = [\\text{Zn}^{2+}]/[\\text{Cu}^{2+}] = 0.10/1.5 = 0.0667$. $E = 1.10 - (0.0296)\\log(0.0667) = 1.10 - (0.0296)(-1.18) = 1.10 + 0.035 = 1.13$ V.'
           },
           {
-            question: 'A concentration cell has [Ag⁺] = 0.0001 M and 1.0 M. n = 1. E is:',
+            question: 'A concentration cell has [$Ag^{+}$] = 0.0001 M and 1.0 M. n = 1. E is:',
             options: [
               '0.0592 V',
               '0.1184 V',
@@ -82,10 +82,10 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'A cell has E° = 0.20 V and n = 1. K at 25°C is approximately:',
             options: [
-              '10³·⁴ ≈ 2500',
-              '10⁶·⁸ ≈ 6 × 10⁶',
-              '10¹·⁷ ≈ 50',
-              '10⁰·² ≈ 1.6'
+              '$10^{3}\\cdot^{4}$ ≈ 2500',
+              '$10^{6}\\cdot^{8}$ ≈ $6 \\times 10^{6}$',
+              '$10^{1}\\cdot^{7}$ ≈ 50',
+              '$10^{0}\\cdot^{2}$ ≈ 1.6'
             ],
             correctAnswer: 0,
             explanation: '$\\log K = (1)(0.20)/0.0592 = 3.38$. $K = 10^{3.38} \\approx 2400 \\approx 2500$.'
@@ -168,13 +168,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'Which change would INCREASE the cell voltage of a Zn-Cu cell?',
             options: [
-              'Increase [Zn²⁺] (product)',
-              'Decrease [Cu²⁺] (reactant)',
-              'Increase [Cu²⁺] (reactant)',
+              'Increase [$Zn^{2+}$] (product)',
+              'Decrease [$Cu^{2+}$] (reactant)',
+              'Increase [$Cu^{2+}$] (reactant)',
               'Add more Zn solid'
             ],
             correctAnswer: 2,
-            explanation: 'Increasing [Cu²⁺] (a reactant in the cathode) decreases Q, which increases E. Adding solid Zn does not affect Q (solids are not in Q). Increasing products or decreasing reactants would increase Q and decrease E.'
+            explanation: 'Increasing [$Cu^{2+}$] (a reactant in the cathode) decreases Q, which increases E. Adding solid Zn does not affect Q (solids are not in Q). Increasing products or decreasing reactants would increase Q and decrease E.'
           }
         ]
       }

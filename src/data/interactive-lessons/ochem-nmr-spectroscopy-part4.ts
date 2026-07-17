@@ -166,11 +166,11 @@ Carbon shifts respond to the same factors as proton shifts — electronegativity
 
 | Carbon type | Typical $\\delta$ ($\\text{ppm}$) |
 |------|------|
-| Alkyl $\\text{C}$ (sp³, C/H only) | $5\\text{–}45$ |
+| Alkyl $\\text{C}$ ($sp^{3}$, C/H only) | $5\\text{–}45$ |
 | $\\text{C-N}$ (amine) | $30\\text{–}65$ |
 | $\\text{C-O}$ (alcohol, ether, ester $\\alpha$) | $50\\text{–}90$ |
 | Alkyne $\\text{C}\\equiv\\text{C}$ (sp) | $65\\text{–}90$ |
-| Alkene / aromatic $\\text{C}$ (sp²) | $100\\text{–}150$ |
+| Alkene / aromatic $\\text{C}$ $(sp^{2})$ | $100\\text{–}150$ |
 | Nitrile $\\text{C}\\equiv\\text{N}$ | $115\\text{–}120$ |
 | Ester / acid / amide carbonyl $\\text{C=O}$ | $160\\text{–}185$ |
 | Aldehyde / ketone carbonyl $\\text{C=O}$ | $190\\text{–}220$ |
@@ -178,7 +178,7 @@ Carbon shifts respond to the same factors as proton shifts — electronegativity
 Two regions resolve ambiguities that proton NMR cannot:
 
 - A line at **$160\\text{–}220\\ \\text{ppm}$** is essentially always a **carbonyl carbon** — and its sub-region distinguishes acid/ester/amide ($160\\text{–}185$) from aldehyde/ketone ($190\\text{–}220$). Proton NMR cannot see a carbonyl carbon directly; $^{13}\\text{C}$ pinpoints it.
-- The **$100\\text{–}150\\ \\text{ppm}$** window flags **sp² carbons** (alkene or aromatic), confirming unsaturation.
+- The **$100\\text{–}150\\ \\text{ppm}$** window flags **$sp^{2}$ carbons** (alkene or aromatic), confirming unsaturation.
 
 > **The trap to name:** mapping $^{13}\\text{C}$ values onto the $^1\\text{H}$ scale. A carbonyl *carbon* sits near $200\\ \\text{ppm}$, but no *proton* ever appears at $200\\ \\text{ppm}$ — the $^1\\text{H}$ scale stops around $12$. Keep the two scales mentally separate; they measure different nuclei and span different ranges.
       `
@@ -194,7 +194,7 @@ Two regions resolve ambiguities that proton NMR cannot:
           {
             question: 'A $^{13}\\text{C}$ spectrum shows a peak at $\\delta = 205\\ \\text{ppm}$ that is absent in DEPT-135. What carbon does this indicate?',
             options: [
-              'An sp³ alkyl $\\text{CH}_3$ carbon',
+              'An $sp^{3}$ alkyl $\\text{CH}_3$ carbon',
               'A ketone or aldehyde carbonyl carbon (quaternary at this shift means a ketone)',
               'An aromatic $\\text{CH}$ carbon',
               'A carbon bonded to oxygen in an ether'

@@ -69,7 +69,7 @@ At some point, the extra points from another hour of studying aren't worth the e
 
 To maximize total satisfaction, a consumer should allocate their budget so that:
 
-**MUₐ / Pₐ = MUᵦ / Pᵦ = MUc / Pc = ...**
+**$MU_{a}$ / $P_{a}$ = MUᵦ / Pᵦ = MUc / Pc = ...**
 
 (Marginal Utility per dollar spent is EQUAL across all goods)
 
@@ -87,7 +87,7 @@ To maximize total satisfaction, a consumer should allocate their budget so that:
 ### Why This Works
 If MU per dollar is higher for one good, you get more satisfaction per dollar from that good → shift spending toward it. As you consume more, diminishing marginal utility reduces MU → MU/$ falls. Eventually, all goods provide equal MU per dollar → you can't do better.
 
-> 🔑 **AP Connection:** The utility-maximizing rule (MU/P equal across goods) is tested frequently. If MUₐ/Pₐ > MUᵦ/Pᵦ, the consumer should buy **more of A** and **less of B**.
+> 🔑 **AP Connection:** The utility-maximizing rule (MU/P equal across goods) is tested frequently. If $MU_{a}/P_{a}$ > MUᵦ/Pᵦ, the consumer should buy **more of A** and **less of B**.
 `},
     {id:'microscar1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
       {question:'A consumer finds that the marginal utility per dollar of Good X is 8 and the marginal utility per dollar of Good Y is 5. To maximize utility, the consumer should:',options:['Buy equal quantities of both goods to maintain balanced consumption','Buy more of Good X and less of Good Y — Good X provides more satisfaction per dollar spent','Buy more of Good Y and less of Good X — the lower ratio indicates better value per dollar','Stop buying both goods because diminishing marginal utility means additional purchases decrease total satisfaction'],correctAnswer:1,explanation:'When MU/P is higher for Good X (8 > 5), each dollar spent on X provides more satisfaction than a dollar spent on Y. The consumer should shift spending toward X. As more X is consumed, its MU falls (diminishing MU) and MU/P decreases. As less Y is consumed, its MU rises and MU/P increases. The consumer reaches an optimum when MU/P is equal for both goods.'},

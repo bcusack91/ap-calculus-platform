@@ -79,7 +79,7 @@ $$D = \\sigma_f \\implies E = \\frac{\\sigma_f}{\\kappa \\varepsilon_0}$$`
     {
       id: 'dielec1-mcq3',
       type: 'mcq' as const,
-      question: 'A parallel-plate capacitor has free surface charge density $\\sigma_f = 8.85 \\times 10^{-9}$ C/m² and is filled with a dielectric ($\\kappa = 2$). What is $E$ inside the dielectric? (Use $\\varepsilon_0 = 8.85 \\times 10^{-12}$ C²/(N·m²).)',
+      question: 'A parallel-plate capacitor has free surface charge density $\\sigma_f = 8.85 \\times 10^{-9}$ $C/m^{2}$ and is filled with a dielectric ($\\kappa = 2$). What is $E$ inside the dielectric? (Use $\\varepsilon_0 = 8.85 \\times 10^{-12}$ $C^{2}/(N\\cdot m^{2})$.)',
       options: ['$500$ V/m', '$1000$ V/m', '$250$ V/m', '$2000$ V/m'],
       correctAnswer: 0,
       explanation: '$E = \\sigma_f/(\\kappa\\varepsilon_0) = (8.85 \\times 10^{-9})/(2 \\times 8.85 \\times 10^{-12}) = 10^3/2 = 500$ V/m.'

@@ -40,7 +40,7 @@ $$F\\cos\\theta - \\mu_k(mg - F\\sin\\theta) = ma$$
 
 ### Example
 
-Pull a 20 kg box with 80 N at 30° ($\\mu_k = 0.25$, $g = 10$ m/s²):
+Pull a 20 kg box with 80 N at 30° ($\\mu_k = 0.25$, $g = 10$ $m/s^{2}$):
 
 $N = 200 - 80\\sin 30° = 200 - 40 = 160$ N
 
@@ -48,7 +48,7 @@ $f_k = 0.25 \\times 160 = 40$ N
 
 $F_x = 80\\cos 30° = 69.3$ N
 
-$a = (69.3 - 40)/20 = 29.3/20 = 1.47$ m/s²
+$a = (69.3 - 40)/20 = 29.3/20 = 1.47$ $m/s^{2}$
       `
     },
     {
@@ -162,13 +162,13 @@ This means pulling at about 22° above horizontal requires the **least force** t
       content: `
 **Angled Force Calculations** 🧮
 
-A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g = 10$ m/s².
+A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g = 10$ $m/s^{2}$.
 
 1) If pulled horizontally, what is the friction force (in N)?
 
 2) If pulled at 37° above horizontal ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$), what is the normal force (in N)?
 
-3) For the 37° pull, what is the acceleration (in m/s²)?
+3) For the 37° pull, what is the acceleration $(in m/s^{2})$?
 
 *Round all answers to 3 significant figures.*
       `,
@@ -178,7 +178,7 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
         hint1: '$f_k = \\mu_k mg = 0.40 \\times 100$.',
         hint2: '$N = mg - F\\sin 37° = 100 - 50(0.60)$.',
         hint3: '$f_k = \\mu_k N = 0.40 \\times 70 = 28$ N. $F_x = 50(0.80) = 40$ N. $a = (40 - 28)/10$.',
-        explanation: '1) $f_k = 0.40 \\times 100 = 40$ N. 2) $N = 100 - 30 = 70$ N. 3) $f_k = 0.40 \\times 70 = 28$ N. $F_x = 40$ N. $a = (40 - 28)/10 = 12/10 = 1.2$ m/s².'
+        explanation: '1) $f_k = 0.40 \\times 100 = 40$ N. 2) $N = 100 - 30 = 70$ N. 3) $f_k = 0.40 \\times 70 = 28$ N. $F_x = 40$ N. $a = (40 - 28)/10 = 12/10 = 1.2$ $m/s^{2}$.'
       }
     },
     {
@@ -219,7 +219,7 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
       exercise: {
         questions: [
           {
-            question: 'A 20 kg box is pushed at 53° below horizontal with 100 N across a rough floor ($\\mu_k = 0.30$, $g = 10$ m/s²). The normal force is ($\\sin 53° = 0.80$):',
+            question: 'A 20 kg box is pushed at 53° below horizontal with 100 N across a rough floor ($\\mu_k = 0.30$, $g = 10$ $m/s^{2}$). The normal force is ($\\sin 53° = 0.80$):',
             options: [
               '120 N',
               '200 N',
@@ -230,15 +230,15 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
             explanation: '$N = mg + F\\sin 53° = 200 + 100(0.80) = 200 + 80 = 280$ N.'
           },
           {
-            question: 'A 15 kg box is pulled at 37° above horizontal with 60 N across a rough floor ($\\mu_k = 0.25$, $g = 10$ m/s², $\\sin 37° = 0.60$, $\\cos 37° = 0.80$). The acceleration is:',
+            question: 'A 15 kg box is pulled at 37° above horizontal with 60 N across a rough floor ($\\mu_k = 0.25$, $g = 10$ $m/s^{2}$, $\\sin 37° = 0.60$, $\\cos 37° = 0.80$). The acceleration is:',
             options: [
-              '0.5 m/s²',
-              '1.4 m/s²',
-              '2.0 m/s²',
-              '3.2 m/s²'
+              '0.5 $m/s^{2}$',
+              '1.4 $m/s^{2}$',
+              '2.0 $m/s^{2}$',
+              '3.2 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$N = mg - F\\sin 37° = 150 - 36 = 114$ N. $f_k = 0.25 \\times 114 = 28.5$ N. $F_x = 60\\cos 37° = 48$ N. $a = (48 - 28.5)/15 = 19.5/15 = 1.3$ m/s² $\\approx 1.4$ m/s².'
+            explanation: '$N = mg - F\\sin 37° = 150 - 36 = 114$ N. $f_k = 0.25 \\times 114 = 28.5$ N. $F_x = 60\\cos 37° = 48$ N. $a = (48 - 28.5)/15 = 19.5/15 = 1.3$ $m/s^{2}$ $\\approx 1.4$ $m/s^{2}$.'
           }
         ]
       }

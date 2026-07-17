@@ -74,7 +74,7 @@ Many axons are wrapped in a **myelin sheath** — a fatty, insulating layer that
 
 ### Structure of the Myelin Sheath
 - Myelin is composed of ~80% lipid and ~20% protein, making it an excellent electrical insulator.
-- The sheath is interrupted at regular intervals by gaps called **nodes of Ranvier**, where the axon membrane is exposed and rich in voltage-gated Na⁺ channels.
+- The sheath is interrupted at regular intervals by gaps called **nodes of Ranvier**, where the axon membrane is exposed and rich in voltage-gated $Na^{+}$ channels.
 - Signal conduction in myelinated axons is called **saltatory conduction** — the action potential "jumps" from node to node, greatly increasing speed.
 
 ### Clinical Connection
@@ -152,7 +152,7 @@ Many axons are wrapped in a **myelin sheath** — a fatty, insulating layer that
 1. Neurons have three main regions: **dendrites** (receive), **cell body** (integrate), and **axon** (transmit).
 2. The **axon hillock** is the trigger zone for action potential initiation.
 3. **Schwann cells** (PNS) and **oligodendrocytes** (CNS) produce the myelin sheath.
-4. **Nodes of Ranvier** are gaps in myelin where voltage-gated Na⁺ channels cluster, enabling saltatory conduction.
+4. **Nodes of Ranvier** are gaps in myelin where voltage-gated $Na^{+}$ channels cluster, enabling saltatory conduction.
 5. Three functional neuron types: **sensory (afferent)**, **motor (efferent)**, and **interneurons**.
 
 ### AP Exam Connection

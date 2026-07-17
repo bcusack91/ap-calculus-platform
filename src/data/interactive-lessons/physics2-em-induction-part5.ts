@@ -68,7 +68,7 @@ $$\\varepsilon(t) = \\varepsilon_0 \\sin(\\omega t)$$
             explanation: 'EMF $= NBA\\omega\\sin(\\omega t)$. This is max when $\\sin(\\omega t) = 1$, i.e., when the coil plane is parallel to $\\vec{B}$. At that instant, the flux is zero but is changing most rapidly — and it\'s the **rate of change** of flux that determines EMF.'
           },
           {
-            question: 'A generator coil has 100 turns, area 0.04 m², in a 0.5 T field, rotating at 60 Hz. The peak EMF is:',
+            question: 'A generator coil has 100 turns, area 0.04 $m^{2}$, in a 0.5 T field, rotating at 60 Hz. The peak EMF is:',
             options: [
               '12 V',
               '120 V',

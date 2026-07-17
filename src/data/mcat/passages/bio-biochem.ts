@@ -37,7 +37,7 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       kind: 'line',
       xLabel: '[pNPP]',
       xUnit: 'mM',
-      yLabel: 'Initial velocity (v₀)',
+      yLabel: 'Initial velocity $(v_{0})$',
       yUnit: 'µmol/min',
       seriesLabel: 'Exp 1: substrate alone (Km 0.10, Vmax 50)',
       xValues: [0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
@@ -528,11 +528,11 @@ export const BIO_BIOCHEM_PASSAGES: MCATPassage[] = [
       'A control with no antibiotic confirmed normal growth, and a sterile, uninoculated medium blank showed no ' +
       'increase in $\\text{OD}_{600}$.',
     chart: {
-      title: 'Figure 1. Bacterial growth (OD₆₀₀) over time: untreated control vs. antibiotic X vs. antibiotic Y',
+      title: 'Figure 1. Bacterial growth $(OD_{600})$ over time: untreated control vs. antibiotic X vs. antibiotic Y',
       kind: 'line',
       xLabel: 'Time',
       xUnit: 'h',
-      yLabel: 'Optical density (OD₆₀₀)',
+      yLabel: 'Optical density $(OD_{600})$',
       seriesLabel: 'Control (untreated)',
       xValues: [0, 2, 4, 6, 8],
       yValues: [0.05, 0.2, 0.6, 1.1, 1.2],

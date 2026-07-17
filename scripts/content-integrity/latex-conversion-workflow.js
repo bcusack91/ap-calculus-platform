@@ -1,0 +1,26 @@
+export const meta = {
+  name: 'latex-conversion',
+  description: 'Wave 1: convert 47k plain-text math occurrences to LaTeX across all content families (data-only; every renderer already supports KaTeX)',
+  phases: [{ title: 'Converter' }, { title: 'Convert' }, { title: 'Verify' }],
+}
+const S = { type: 'object', additionalProperties: false, required: ['summary'], properties: { summary: { type: 'string' } } }
+const SCRATCH = '/private/tmp/claude-501/-Users-brendancusack-Desktop-AP-Calculus-Website---Ad-Revenue-Based/4be8135c-1de7-4df1-99d2-0a1e85fd5c91/scratchpad'
+const RULES = `Repo = cwd. Scanner: ${SCRATCH}/math_notation_scan.py (+ scan_results.json = per-file worklist). SAFETY INVARIANTS (absolute): never change correctIndex/correctAnswer/ids/keys/option ORDER or string-array lengths; never alter TS structure/quotes beyond the string CONTENT; never touch code (^ as XOR in CS content, PRNG utils, code fences in lessons); never double-wrap text already inside $...$ or \\(...\\); preserve currency $. Only rewrite math NOTATION into LaTeX wrapped in $...$ (unicode supers/subs -> ^{}/_{}, √ -> \\sqrt{}, caret x^2 -> $x^{2}$, e^(−t/RC) -> $e^{-t/RC}$, ×10⁻⁴ -> \\times 10^{-4}, ∫₁^∞, Greek/∝ inside math). In TS single-quoted strings backslashes must be doubled (\\\\sqrt). After your pass: re-run the scanner scoped to your files (report before/after counts), then npx tsc --noEmit (ignore .next/) must be clean. Report via summary with counts + 3 before/after examples.`
+
+phase('Converter')
+const conv = await agent(`Repo = cwd. Author ${SCRATCH}/latex_convert.py: a conservative plain-text-math -> LaTeX converter driven by ${SCRATCH}/scan_results.json worklists. Requirements: mask existing $...$/\\(...\\) spans + // and /* comments + fenced code blocks; skip files under _shared and any obviously-code context (line contains 'Math.' or 'function' etc.); transforms per ${RULES.replace(/`/g,"'")}. Include --family <dir-substring> and --dry-run modes, and a unified-diff preview option. VALIDATE on 3 representative files (a slice of competitive-questions/ap-physics2-bank.ts, one chemistry interactive-lesson with electron configs, exit-quizzes/ap-physics-c-em.ts) using --dry-run; iterate until diffs are correct (show 5 example line diffs in your summary); do NOT write repo files. tsc not needed (no repo edits).`, { label: 'build-converter', phase: 'Converter', schema: S, effort: 'high' })
+
+phase('Convert')
+const conv2 = `A vetted converter exists: ${SCRATCH}/latex_convert.py (see its --help; validated by a prior agent: ${JSON.stringify((conv?.summary || '').slice(0, 1200))}). ${RULES}`
+const fams = [
+  { label: 'competitive', text: `${conv2}\nYOUR FILES: src/data/competitive-questions/** (19 flagged files, ~19,688 occ; 8 STEM banks dominate). Run the converter family-by-family with --dry-run review first, then apply. These banks are AUTO-GRADED — spot-check 10 random converted questions per big bank for intactness (options count, correctAnswer untouched).` },
+  { label: 'lessons', text: `${conv2}\nYOUR FILES: src/data/interactive-lessons/** (943 flagged, ~14,857 occ — mostly unicode; chemistry hotspot). Exclude CS lessons from caret conversion (csa-*, csp-* files: unicode-only transforms there). Lessons render markdown+KaTeX; keep markdown tables/headings intact. Spot-check 12 files across chem/physics/math.` },
+  { label: 'quizzes-frq', text: `${conv2}\nYOUR FILES: src/data/exit-quizzes/** (38 flagged) + src/data/*-frq/** (12 flagged). NOTE: exit-quiz content is hashed for server-side regrade ids (content changes just regenerate ids — safe, no action needed). Apply + spot-check the physics-C/calc/chem/stats files.` },
+  { label: 'entrance-diag', text: `${conv2}\nYOUR FILES: src/data/entrance-quizzes/** (132 flagged; sat-exponents-radicals-sat.ts is ALREADY converted — skip it) + diagnostics: src/data/*diagnostic*.ts + src/data/diagnostics/** (13 flagged, incl. ap-precalculus-diagnostic.ts 703 occ).` },
+  { label: 'tails', text: `${conv2}\nYOUR FILES: src/data/mini-boss-questions/** (11 files; factoring bosses use caret; keep boss narrative prose untouched), src/data/*-practice/** (29 flagged), src/data/*-daily-question.ts (5), MCAT files (3), and hand-fix src/data/ap-reference-sheets.ts (404 occ formula sheet: x̄, Σ, √ -> proper LaTeX).` },
+]
+const done = await parallel(fams.map(f => () => agent(f.text, { label: f.label, phase: 'Convert', schema: S, effort: 'high' })))
+
+phase('Verify')
+const v = await agent(`Repo = cwd. Re-run ${SCRATCH}/math_notation_scan.py --json ${SCRATCH}/rescan.json across src/data/**. Compare vs the original 47,179 baseline: report per-family residual counts and classify residuals (legit code/prose vs missed math). Then run npx tsc --noEmit (ignore .next/) and report. Spot-check 6 converted files across families for broken LaTeX (unbalanced braces/$, double-wrapping). NO fixes — report only.`, { label: 'rescan-verify', phase: 'Verify', schema: S, effort: 'high' })
+return { converter: conv, families: done.filter(Boolean), verify: v }

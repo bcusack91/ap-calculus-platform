@@ -139,16 +139,16 @@ In "shaded region" problems, make sure you subtract the RIGHT shape. Draw the ov
       content: '**Choose the Right Formula** — Select the correct area formula for each shape.',
       exercise: {
         dropdowns: [
-          'Triangle with base b and height h → [½bh|bh|½(b₁ + b₂)h|s²]',
-          'Parallelogram with base b and height h → [bh|½bh|2(b + h)|b²]',
-          'Trapezoid with parallel sides b₁, b₂ and height h → [½(b₁ + b₂)h|b₁ × b₂ × h|bh|(b₁ + b₂)h]',
+          'Triangle with base b and height h → [½bh|bh|$\\tfrac{1}{2} (b_{1} + b_{2})h$|$s^{2}$]',
+          'Parallelogram with base b and height h → [bh|½bh|2(b + h)|$b^{2}$]',
+          'Trapezoid with parallel sides $b_{1}$, $b_{2}$ and height h → [$\\tfrac{1}{2} (b_{1} + b_{2})h$|$b_{1}$ × $b_{2}$ × h|bh|$(b_{1} + b_{2})h$]',
           'Shaded region (large shape minus small shape) → [Total − Unshaded|Total + Unshaded|Total × Unshaded|Total ÷ Unshaded]'
         ],
-        correctAnswers: ['½bh', 'bh', '½(b₁ + b₂)h', 'Total − Unshaded'],
+        correctAnswers: ['½bh', 'bh', '$\\tfrac{1}{2} (b_{1} + b_{2})h$', 'Total − Unshaded'],
         hint1: 'Triangle area always has the ½ factor.',
         hint2: 'Parallelogram is like a rectangle — base times height.',
         hint3: 'Trapezoid averages the two parallel bases, then multiplies by height.',
-        explanation: 'Triangle: ½bh. Parallelogram: bh (not ½bh). Trapezoid: ½(b₁ + b₂)h — think of it as average base × height. Shaded region: always subtract the unshaded part from the total.'
+        explanation: 'Triangle: ½bh. Parallelogram: bh (not ½bh). Trapezoid: $\\tfrac{1}{2} (b_{1} + b_{2})h$ — think of it as average base × height. Shaded region: always subtract the unshaded part from the total.'
       }
     },
     {

@@ -93,7 +93,7 @@ const physics1FRQs: Physics1FRQ[] = [
           },
         ],
         sampleAnswer:
-          'Plot sliding distance $d$ (m) on the vertical axis vs. spring compression squared $x^2$ (m²) on the horizontal axis. The graph should be a straight line through the origin. From $\\frac{1}{2}kx^2 = \\mu_k m g d$, we get $d = \\frac{k}{2\\mu_k m g} x^2$. The slope is $\\frac{k}{2\\mu_k m g}$, so $\\mu_k = \\frac{k}{2mg \\cdot \\text{slope}}$.',
+          'Plot sliding distance $d$ (m) on the vertical axis vs. spring compression squared $x^2$ $(m^{2})$ on the horizontal axis. The graph should be a straight line through the origin. From $\\frac{1}{2}kx^2 = \\mu_k m g d$, we get $d = \\frac{k}{2\\mu_k m g} x^2$. The slope is $\\frac{k}{2\\mu_k m g}$, so $\\mu_k = \\frac{k}{2mg \\cdot \\text{slope}}$.',
       },
       {
         label: '(c)',

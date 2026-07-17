@@ -41,7 +41,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'In a paired t-test, what is the first step after collecting paired observations?',
     options: [
       'Pool the two sample standard deviations',
-      'Compute the difference d = x₁ − x₂ for each pair, then perform a one-sample t-test on the d values',
+      'Compute the difference d = $x_{1}$ − $x_{2}$ for each pair, then perform a one-sample t-test on the d values',
       'Compare the sample means directly using a two-sample t-test',
       'Check whether σ is known for both populations'
     ],
@@ -54,13 +54,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'pd-ent-2b',
     question: 'The test statistic for a paired t-test is given by:',
     options: [
-      't = (x̄₁ − x̄₂) / √(s₁²/n₁ + s₂²/n₂)',
-      't = d̄ / (s_d / √n), where n = number of pairs',
+      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
+      't = d̄ / $(s_{d} / \\sqrt{n})$, where n = number of pairs',
       't = d̄ / σ_d',
-      't = (x̄₁ − x̄₂) / s_pooled'
+      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / s_pooled'
     ],
     correctIndex: 1,
-    explanation: 'The paired t-statistic is t = d̄ / (s_d / √n), where d̄ is the mean of the differences, s_d is the standard deviation of the differences, and n is the number of pairs.',
+    explanation: 'The paired t-statistic is t = d̄ / $(s_{d} / \\sqrt{n})$, where d̄ is the mean of the differences, s_d is the standard deviation of the differences, and n is the number of pairs.',
     partNumber: 2,
     partTitle: 'Paired t-Test'
   },

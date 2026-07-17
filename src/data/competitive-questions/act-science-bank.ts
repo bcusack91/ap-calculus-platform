@@ -283,7 +283,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'What process do plants use to convert sunlight into energy?',
     options: ['Photosynthesis', 'Cellular respiration', 'Fermentation', 'Osmosis'],
     correctAnswer: 0,
-    explanation: 'Photosynthesis converts light energy, water, and CO₂ into glucose and oxygen.',
+    explanation: 'Photosynthesis converts light energy, water, and $CO_{2}$ into glucose and oxygen.',
     difficulty: 'easy',
   },
   {
@@ -345,9 +345,9 @@ const allQuestions: ActScienceQuestion[] = [
   {
     id: 42,
     question: 'What is the chemical formula for water?',
-    options: ['H₂O', 'CO₂', 'NaCl', 'O₂'],
+    options: ['$H_{2}O$', '$CO_{2}$', 'NaCl', '$O_{2}$'],
     correctAnswer: 0,
-    explanation: 'Water is composed of two hydrogen atoms and one oxygen atom: H₂O.',
+    explanation: 'Water is composed of two hydrogen atoms and one oxygen atom: $H_{2}O$.',
     difficulty: 'easy',
   },
   {
@@ -388,7 +388,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'In a pH scale, a solution with a pH of 3 is how many times more acidic than a solution with a pH of 5?',
     options: ['100 times', '10 times', '2 times', '1,000 times'],
     correctAnswer: 0,
-    explanation: 'Each pH unit represents a tenfold change, so 2 units = 10² = 100 times more acidic.',
+    explanation: 'Each pH unit represents a tenfold change, so 2 units = $10^{2}$ = 100 times more acidic.',
     difficulty: 'medium',
   },
   {
@@ -442,7 +442,7 @@ const allQuestions: ActScienceQuestion[] = [
   {
     id: 54,
     question: 'In an ecosystem, what role do decomposers play?',
-    options: ['They break down dead organisms and recycle nutrients', 'They produce energy from sunlight', 'They hunt and consume other animals', 'They convert CO₂ to oxygen'],
+    options: ['They break down dead organisms and recycle nutrients', 'They produce energy from sunlight', 'They hunt and consume other animals', 'They convert $CO_{2}$ to oxygen'],
     correctAnswer: 0,
     explanation: 'Decomposers break down dead organisms, returning nutrients to the soil.',
     difficulty: 'medium',
@@ -644,7 +644,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'In the carbon cycle, which process releases carbon dioxide back into the atmosphere?',
     options: ['Cellular respiration', 'Photosynthesis', 'Nitrogen fixation', 'Transpiration'],
     correctAnswer: 0,
-    explanation: 'Cellular respiration breaks down glucose and releases CO₂ as a byproduct.',
+    explanation: 'Cellular respiration breaks down glucose and releases $CO_{2}$ as a byproduct.',
     difficulty: 'medium',
   },
   {
@@ -754,8 +754,8 @@ const allQuestions: ActScienceQuestion[] = [
   },
   {
     id: 93,
-    question: 'A graph shows CO₂ concentration over 800,000 years using ice core data. The CO₂ levels cycle between 180–280 ppm, but current levels are 420 ppm. What does this suggest?',
-    options: ['Current CO₂ levels are unprecedented in the recent geological record', 'CO₂ levels have always been this high', 'Ice core data is unreliable', 'The graph shows no trend'],
+    question: 'A graph shows $CO_{2}$ concentration over 800,000 years using ice core data. The $CO_{2}$ levels cycle between 180–280 ppm, but current levels are 420 ppm. What does this suggest?',
+    options: ['Current $CO_{2}$ levels are unprecedented in the recent geological record', '$CO_{2}$ levels have always been this high', 'Ice core data is unreliable', 'The graph shows no trend'],
     correctAnswer: 0,
     explanation: 'The current level of 420 ppm far exceeds the natural range shown in 800,000 years of ice core data.',
     difficulty: 'hard',
@@ -786,8 +786,8 @@ const allQuestions: ActScienceQuestion[] = [
   },
   {
     id: 97,
-    question: 'An experiment measures the rate of cellular respiration in yeast at 20°C, 30°C, and 40°C by tracking CO₂ production. The highest CO₂ output is at 30°C. What most likely happened at 40°C?',
-    options: ['Enzymes began to denature, reducing metabolic activity', 'Yeast reproduced faster', 'CO₂ dissolved into the water', 'The yeast ran out of glucose'],
+    question: 'An experiment measures the rate of cellular respiration in yeast at 20°C, 30°C, and 40°C by tracking $CO_{2}$ production. The highest $CO_{2}$ output is at 30°C. What most likely happened at 40°C?',
+    options: ['Enzymes began to denature, reducing metabolic activity', 'Yeast reproduced faster', '$CO_{2}$ dissolved into the water', 'The yeast ran out of glucose'],
     correctAnswer: 0,
     explanation: 'Enzyme denaturation at elevated temperatures reduces cellular respiration rates.',
     difficulty: 'hard',
@@ -859,14 +859,14 @@ const allQuestions: ActScienceQuestion[] = [
   {
     id: 106,
     question: 'An experiment measures photosynthesis rate by counting oxygen bubbles at different light intensities. At very high intensities, bubble count plateaus. What factor is most likely limiting?',
-    options: ['CO₂ concentration or temperature', 'Water availability', 'Gravity', 'The observer\'s counting speed'],
+    options: ['$CO_{2}$ concentration or temperature', 'Water availability', 'Gravity', 'The observer\'s counting speed'],
     correctAnswer: 0,
-    explanation: 'When light is saturating, another factor (CO₂ or temperature) becomes rate-limiting.',
+    explanation: 'When light is saturating, another factor ($CO_{2}$ or temperature) becomes rate-limiting.',
     difficulty: 'hard',
   },
   {
     id: 107,
-    question: 'A scientist measures the gravitational acceleration on a planet and finds it is 4.9 m/s². If Earth\'s gravity is 9.8 m/s², a 10 kg object on this planet weighs:',
+    question: 'A scientist measures the gravitational acceleration on a planet and finds it is 4.9 $m/s^{2}$. If Earth\'s gravity is 9.8 $m/s^{2}$, a 10 kg object on this planet weighs:',
     options: ['49 N', '98 N', '10 N', '4.9 N'],
     correctAnswer: 0,
     explanation: 'Weight = mass × gravity = 10 × 4.9 = 49 N.',
@@ -949,7 +949,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'A PCR (polymerase chain reaction) experiment amplifies a specific DNA segment. After 10 cycles, approximately how many copies of the target sequence exist (starting from 1)?',
     options: ['1,024', '10', '100', '20'],
     correctAnswer: 0,
-    explanation: 'PCR doubles DNA each cycle. After 10 cycles: 2¹⁰ = 1,024 copies.',
+    explanation: 'PCR doubles DNA each cycle. After 10 cycles: $2^{10}$ = 1,024 copies.',
     difficulty: 'hard',
   },
   {
@@ -981,13 +981,13 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'A buffer solution resists changes in pH when small amounts of acid or base are added because:',
     options: ['It contains a weak acid/base pair that neutralizes additions', 'It contains a strong acid', 'It has no dissolved salts', 'It is always at pH 7'],
     correctAnswer: 0,
-    explanation: 'Buffers contain a weak acid-conjugate base pair that absorbs H⁺ or OH⁻ additions.',
+    explanation: 'Buffers contain a weak acid-conjugate base pair that absorbs $H^{+}$ or $OH^{-}$ additions.',
     difficulty: 'hard',
   },
   {
     id: 122,
-    question: 'A graph tracks atmospheric CO₂ and global temperature over 400,000 years. The two variables rise and fall together. A scientist concludes CO₂ causes temperature increase. What is a valid critique?',
-    options: ['Correlation does not prove causation — a third variable could drive both', 'The time scale is too long', 'CO₂ and temperature cannot be plotted together', 'The data is from only one location'],
+    question: 'A graph tracks atmospheric $CO_{2}$ and global temperature over 400,000 years. The two variables rise and fall together. A scientist concludes $CO_{2}$ causes temperature increase. What is a valid critique?',
+    options: ['Correlation does not prove causation — a third variable could drive both', 'The time scale is too long', '$CO_{2}$ and temperature cannot be plotted together', 'The data is from only one location'],
     correctAnswer: 0,
     explanation: 'Observing two variables moving together does not establish a causal relationship.',
     difficulty: 'hard',
@@ -1058,10 +1058,10 @@ const allQuestions: ActScienceQuestion[] = [
   },
   {
     id: 131,
-    question: 'In cellular respiration, glucose (C₆H₁₂O₆) is broken down. What are the final products?',
-    options: ['CO₂, H₂O, and ATP', 'O₂ and glucose', 'CO₂ and glucose', 'H₂O and O₂'],
+    question: 'In cellular respiration, glucose $(C_{6}H_{12}O_{6})$ is broken down. What are the final products?',
+    options: ['$CO_{2}$, $H_{2}O$, and ATP', '$O_{2}$ and glucose', '$CO_{2}$ and glucose', '$H_{2}O$ and $O_{2}$'],
     correctAnswer: 0,
-    explanation: 'Cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP.',
+    explanation: 'Cellular respiration: $C_{6}H_{12}O_{6}$ + $6O_{2}$ → $6CO_{2}$ + $6H_{2}O$ + ATP.',
     difficulty: 'hard',
   },
   {
@@ -1074,10 +1074,10 @@ const allQuestions: ActScienceQuestion[] = [
   },
   {
     id: 133,
-    question: 'During the Krebs cycle, each molecule of acetyl-CoA produces how many molecules of CO₂?',
+    question: 'During the Krebs cycle, each molecule of acetyl-CoA produces how many molecules of $CO_{2}$?',
     options: ['2', '1', '3', '6'],
     correctAnswer: 0,
-    explanation: 'Each acetyl-CoA (2 carbons) that enters the Krebs cycle results in 2 CO₂ molecules.',
+    explanation: 'Each acetyl-CoA (2 carbons) that enters the Krebs cycle results in 2 $CO_{2}$ molecules.',
     difficulty: 'hard',
   },
   {
@@ -1114,10 +1114,10 @@ const allQuestions: ActScienceQuestion[] = [
   },
   {
     id: 138,
-    question: 'A student sets up two identical plant experiments, but one is placed in a high-CO₂ environment. After a week, the high-CO₂ plant has grown more. This supports the claim that:',
-    options: ['Increased CO₂ enhances photosynthesis up to a saturation point', 'CO₂ is toxic to plants', 'Plants do not use CO₂', 'Temperature is the only factor affecting growth'],
+    question: 'A student sets up two identical plant experiments, but one is placed in a $high-CO_{2}$ environment. After a week, the $high-CO_{2}$ plant has grown more. This supports the claim that:',
+    options: ['Increased $CO_{2}$ enhances photosynthesis up to a saturation point', '$CO_{2}$ is toxic to plants', 'Plants do not use $CO_{2}$', 'Temperature is the only factor affecting growth'],
     correctAnswer: 0,
-    explanation: 'CO₂ is a reactant in photosynthesis — more CO₂ increases the rate until other factors become limiting.',
+    explanation: '$CO_{2}$ is a reactant in photosynthesis — more $CO_{2}$ increases the rate until other factors become limiting.',
     difficulty: 'hard',
   },
   {
@@ -1171,9 +1171,9 @@ const allQuestions: ActScienceQuestion[] = [
   {
     id: 145,
     question: 'In an action potential, the rapid influx of which ion causes depolarization of the neuron?',
-    options: ['Sodium (Na⁺)', 'Potassium (K⁺)', 'Chloride (Cl⁻)', 'Calcium (Ca²⁺)'],
+    options: ['Sodium $(Na^{+})$', 'Potassium $(K^{+})$', 'Chloride $(Cl^{-})$', 'Calcium $(Ca^{2+})$'],
     correctAnswer: 0,
-    explanation: 'Depolarization is caused by the rapid influx of Na⁺ through voltage-gated sodium channels.',
+    explanation: 'Depolarization is caused by the rapid influx of $Na^{+}$ through voltage-gated sodium channels.',
     difficulty: 'hard',
   },
   {
@@ -1213,7 +1213,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'An experiment shows that a reaction rate doubles when the temperature increases by 10°C. If the rate at 20°C is 4 mol/L·min, the rate at 50°C is approximately:',
     options: ['32 mol/L·min', '12 mol/L·min', '16 mol/L·min', '64 mol/L·min'],
     correctAnswer: 0,
-    explanation: '50°C − 20°C = 30°C = 3 increments of 10°C. Rate = 4 × 2³ = 4 × 8 = 32 mol/L·min.',
+    explanation: '50°C − 20°C = 30°C = 3 increments of 10°C. Rate = 4 × $2^{3}$ = 4 × 8 = 32 mol/L·min.',
     difficulty: 'hard',
   },
   {
@@ -1325,7 +1325,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'What is the SI unit of force?',
     options: ['Newton (N)', 'Joule (J)', 'Watt (W)', 'Pascal (Pa)'],
     correctAnswer: 0,
-    explanation: 'The newton is the SI unit of force (1 N = 1 kg·m/s²).',
+    explanation: 'The newton is the SI unit of force (1 N = 1 $kg\\cdot m/s^{2}$).',
     difficulty: 'easy',
   },
   {
@@ -1333,7 +1333,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'Which process converts nitrogen gas from the atmosphere into a form usable by plants?',
     options: ['Nitrogen fixation', 'Denitrification', 'Transpiration', 'Carbon fixation'],
     correctAnswer: 0,
-    explanation: 'Nitrogen fixation, often by bacteria, converts atmospheric N₂ into ammonia (NH₃) that plants can use.',
+    explanation: 'Nitrogen fixation, often by bacteria, converts atmospheric $N_{2}$ into ammonia $(NH_{3})$ that plants can use.',
     difficulty: 'medium',
   },
   {
@@ -1419,9 +1419,9 @@ const allQuestions: ActScienceQuestion[] = [
   {
     id: 176,
     question: 'What is the main function of stomata in plants?',
-    options: ['Gas exchange (CO₂ in, O₂ out) and transpiration', 'Absorbing water from soil', 'Producing seeds', 'Storing glucose'],
+    options: ['Gas exchange ($CO_{2}$ in, $O_{2}$ out) and transpiration', 'Absorbing water from soil', 'Producing seeds', 'Storing glucose'],
     correctAnswer: 0,
-    explanation: 'Stomata are pores on leaves that allow CO₂ in for photosynthesis and release O₂ and water vapor.',
+    explanation: 'Stomata are pores on leaves that allow $CO_{2}$ in for photosynthesis and release $O_{2}$ and water vapor.',
     difficulty: 'medium',
   },
   {
@@ -1442,10 +1442,10 @@ const allQuestions: ActScienceQuestion[] = [
   },
   {
     id: 179,
-    question: 'A solution has an H⁺ concentration of 10⁻⁹ M. What is its pH?',
+    question: 'A solution has an $H^{+}$ concentration of $10^{-9}$ M. What is its pH?',
     options: ['9', '5', '7', '3'],
     correctAnswer: 0,
-    explanation: 'pH = -log[H⁺] = -log(10⁻⁹) = 9 (basic solution).',
+    explanation: 'pH = -log[$H^{+}$] = $-\\log (10^{-9})$ = 9 (basic solution).',
     difficulty: 'medium',
   },
   {
@@ -1557,7 +1557,7 @@ const allQuestions: ActScienceQuestion[] = [
     question: 'What happens to the volume of a gas if the pressure is doubled at constant temperature (Boyle\'s Law)?',
     options: ['The volume is halved', 'The volume doubles', 'The volume stays the same', 'The volume is quadrupled'],
     correctAnswer: 0,
-    explanation: 'Boyle\'s Law: P₁V₁ = P₂V₂. If pressure doubles, volume halves (inverse relationship).',
+    explanation: 'Boyle\'s Law: $P_{1}V_{1}$ = $P_{2}V_{2}$. If pressure doubles, volume halves (inverse relationship).',
     difficulty: 'medium',
   },
   {

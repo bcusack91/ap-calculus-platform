@@ -25,7 +25,7 @@ export const physCFrictionPart7Data = {
     {
       id: 'fri7-mcq1',
       type: 'mcq' as const,
-      question: 'A box is pushed at constant velocity across a floor by a force $F$ at $20°$ below horizontal. If $\\mu_k = 0.3$ and $m = 10$ kg, what is $F$? ($g = 10$ m/s²)',
+      question: 'A box is pushed at constant velocity across a floor by a force $F$ at $20°$ below horizontal. If $\\mu_k = 0.3$ and $m = 10$ kg, what is $F$? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\approx 35.1$ N',
         '$30$ N',
@@ -73,7 +73,7 @@ Since $\\mu_s > \\mu_k$, ABS gives shorter stopping distances.`
     {
       id: 'fri7-mcq2',
       type: 'mcq' as const,
-      question: 'A car traveling 30 m/s brakes on a $10°$ downhill with $\\mu_k = 0.7$. Stopping distance? ($g = 10$ m/s²)',
+      question: 'A car traveling 30 m/s brakes on a $10°$ downhill with $\\mu_k = 0.7$. Stopping distance? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\approx 78.5$ m',
         '$\\approx 65$ m',

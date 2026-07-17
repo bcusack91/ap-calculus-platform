@@ -44,7 +44,7 @@ The fraction submerged equals the density ratio.
 
 ### Examples
 
-| Object | $\\rho_{obj}$ (kg/m³) | Fraction in fresh water |
+| Object | $\\rho_{obj}$ $(kg/m^{3})$ | Fraction in fresh water |
 |--------|---------------------|-------------------------|
 | Cork | 240 | 0.24 (24% submerged) |
 | Wood (oak) | 700 | 0.70 (70%) |
@@ -78,21 +78,21 @@ A coin (solid steel) has no air → density = 7800 → sinks.
             explanation: '$\\rho_{obj} < \\rho_{fluid}$ ⇒ object floats.'
           },
           {
-            question: 'Ice has density 917 kg/m³. The fraction of an iceberg submerged in fresh water is approximately:',
+            question: 'Ice has density 917 $kg/m^{3}$. The fraction of an iceberg submerged in fresh water is approximately:',
             options: ['8%', '50%', '92%', '100%'],
             correctAnswer: 2,
             explanation: '$V_{sub}/V_{obj} = 917/1000 ≈ 0.92$ — the famous "92% below the surface."'
           },
           {
-            question: 'A hollow sphere weighing 5 N has volume 0.001 m³. In water (g = 10):',
+            question: 'A hollow sphere weighing 5 N has volume 0.001 $m^{3}$. In water (g = 10):',
             options: [
               'It sinks',
               'It floats half-submerged',
               'It floats fully submerged just below surface',
-              'It floats with $V_{sub} = 0.0005$ m³'
+              'It floats with $V_{sub} = 0.0005$ $m^{3}$'
             ],
             correctAnswer: 3,
-            explanation: '$\\rho_{avg} = m/V = 0.5/0.001 = 500$ kg/m³ < 1000. Floats. Submerged fraction = 0.5 → $V_{sub} = 0.0005$ m³.'
+            explanation: '$\\rho_{avg} = m/V = 0.5/0.001 = 500$ $kg/m^{3}$ < 1000. Floats. Submerged fraction = 0.5 → $V_{sub} = 0.0005$ $m^{3}$.'
           }
         ]
       }
@@ -103,9 +103,9 @@ A coin (solid steel) has no air → density = 7800 → sinks.
       content: `
 **Floating Calculations** 🧮 (g = 10, $\\rho_w = 1000$, $\\rho_{sw} = 1030$)
 
-1) An object of density 600 kg/m³ floats in water. Fraction submerged (decimal)?
+1) An object of density 600 $kg/m^{3}$ floats in water. Fraction submerged (decimal)?
 
-2) A 0.20 m³ block of density 800 kg/m³ floats in water. Volume submerged (m³)?
+2) A 0.20 $m^{3}$ block of density 800 $kg/m^{3}$ floats in water. Volume submerged $(m^{3})$?
 
 3) Same block in seawater. Fraction submerged (decimal, 4 sig figs)?
       `,
@@ -115,7 +115,7 @@ A coin (solid steel) has no air → density = 7800 → sinks.
         hint1: 'Fraction = $\\rho_{obj}/\\rho_{fluid}$.',
         hint2: '$V_{sub} = (\\rho_{obj}/\\rho_{fluid}) V_{obj}$.',
         hint3: '$\\rho_{obj}/\\rho_{sw} = 800/1030$.',
-        explanation: '1) $0.600$. 2) $0.80 \\times 0.20 = 0.16$ m³. 3) $800/1030 = 0.7767$.'
+        explanation: '1) $0.600$. 2) $0.80 \\times 0.20 = 0.16$ $m^{3}$. 3) $800/1030 = 0.7767$.'
       }
     },
     {
@@ -164,21 +164,21 @@ A coin (solid steel) has no air → density = 7800 → sinks.
           {
             question: 'A wooden raft floats with 65% of its volume submerged in fresh water. Its density is approximately:',
             options: [
-              '350 kg/m³',
-              '650 kg/m³',
-              '1538 kg/m³',
-              '1000 kg/m³'
+              '350 $kg/m^{3}$',
+              '650 $kg/m^{3}$',
+              '1538 $kg/m^{3}$',
+              '1000 $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Fraction submerged = $\\rho_{obj}/\\rho_{fluid}$ → $\\rho_{obj} = 0.65 \\times 1000 = 650$ kg/m³.'
+            explanation: 'Fraction submerged = $\\rho_{obj}/\\rho_{fluid}$ → $\\rho_{obj} = 0.65 \\times 1000 = 650$ $kg/m^{3}$.'
           },
           {
-            question: 'In which fluid will the SAME wooden block (density 700 kg/m³) sit highest above the water line?',
+            question: 'In which fluid will the SAME wooden block $(density 700 kg/m^{3})$ sit highest above the water line?',
             options: [
-              'Fresh water (1000 kg/m³)',
-              'Sea water (1030 kg/m³)',
-              'Mercury (13,600 kg/m³)',
-              'Cooking oil (920 kg/m³)'
+              'Fresh water $(1000 kg/m^{3})$',
+              'Sea water $(1030 kg/m^{3})$',
+              'Mercury (13,600 $kg/m^{3}$)',
+              'Cooking oil $(920 kg/m^{3})$'
             ],
             correctAnswer: 2,
             explanation: 'Highest above = smallest fraction submerged = largest $\\rho_{fluid}$. Mercury wins by a huge margin (700/13600 ≈ 5%).'

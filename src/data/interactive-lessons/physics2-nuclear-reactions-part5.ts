@@ -110,12 +110,12 @@ Example: $^{238}\\text{U} \\to \\text{(14 decays)} \\to ^{206}\\text{Pb}$ (stabl
             question: 'A nucleus has $Z = 25$, $N = 35$. It most likely undergoes:',
             options: [
               'Alpha decay (too heavy)',
-              'Beta⁻ decay (too many neutrons, converts $n \\to p$)',
-              'Beta⁺ decay (too many protons)',
+              'Beta$ {}^{-}$ decay (too many neutrons, converts $n \\to p$)',
+              'Beta$ {}^{+}$ decay (too many protons)',
               'It is stable'
             ],
             correctAnswer: 1,
-            explanation: '$N/Z = 35/25 = 1.4$. For $A = 60$, the stable ratio is about 1.1–1.2. Too many neutrons → beta⁻ decay converts a neutron to a proton, moving closer to the stability band.'
+            explanation: '$N/Z = 35/25 = 1.4$. For $A = 60$, the stable ratio is about 1.1–1.2. Too many neutrons → beta$ {}^{-}$ decay converts a neutron to a proton, moving closer to the stability band.'
           },
           {
             question: 'He-4 has an unusually high BE/nucleon for its size because:',

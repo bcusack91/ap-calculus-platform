@@ -99,7 +99,7 @@ Minimum speed (when $T = 0$): $v_{min} = \\sqrt{gr}$ — same result!
       exercise: {
         questions: [
           {
-            question: 'A roller coaster has a loop of radius 10 m. The minimum speed at the top of the loop is ($g = 10$ m/s²):',
+            question: 'A roller coaster has a loop of radius 10 m. The minimum speed at the top of the loop is ($g = 10$ $m/s^{2}$):',
             options: [
               '5 m/s',
               '10 m/s',
@@ -110,7 +110,7 @@ Minimum speed (when $T = 0$): $v_{min} = \\sqrt{gr}$ — same result!
             explanation: '$v_{min} = \\sqrt{gr} = \\sqrt{10 \\times 10} = \\sqrt{100} = 10$ m/s.'
           },
           {
-            question: 'A 50 kg person is on a roller coaster at the bottom of a loop ($r = 20$ m, $v = 15$ m/s). The normal force on the person is ($g = 10$ m/s²):',
+            question: 'A 50 kg person is on a roller coaster at the bottom of a loop ($r = 20$ m, $v = 15$ m/s). The normal force on the person is ($g = 10$ $m/s^{2}$):',
             options: [
               '62.5 N',
               '500 N',
@@ -140,7 +140,7 @@ Minimum speed (when $T = 0$): $v_{min} = \\sqrt{gr}$ — same result!
       content: `
 **Vertical Circle Calculations** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 0.5 kg ball on a 1 m string is swung in a vertical circle at 5 m/s at the bottom. What is the string tension at the bottom (in N)?
 
@@ -203,7 +203,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A ball on a string moves in a vertical circle of radius 0.5 m. The minimum speed at the top is ($g = 10$ m/s²):',
+            question: 'A ball on a string moves in a vertical circle of radius 0.5 m. The minimum speed at the top is ($g = 10$ $m/s^{2}$):',
             options: [
               '$\\sqrt{5} \\approx 2.24$ m/s',
               '$\\sqrt{10} \\approx 3.16$ m/s',

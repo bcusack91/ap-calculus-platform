@@ -125,7 +125,7 @@ Read the final question carefully:
           'Three consecutive integers sum to 51 → [n + (n+1) + (n+2) = 51|3n = 51|n × (n+1) × (n+2) = 51|n + n + n = 51]',
           'Father is 3x daughter\'s age, in 10 years he\'ll be 2x her age → [3d + 10 = 2(d + 10)|3d = 2(d + 10)|3(d + 10) = 2d|d + 10 = 3(2d)]',
           'Two-digit number, tens digit t, units digit u. Value = [10t + u|t + u|tu|t × 10 + u × 10]',
-          'Consecutive odds that multiply to 143 → [n(n + 2) = 143|n(n + 1) = 143|n² = 143|(n+1)(n+3) = 143]'
+          'Consecutive odds that multiply to 143 → [n(n + 2) = 143|n(n + 1) = 143|$n^{2}$ = 143|(n+1)(n+3) = 143]'
         ],
         correctAnswers: ['n + (n+1) + (n+2) = 51', '3d + 10 = 2(d + 10)', '10t + u', 'n(n + 2) = 143'],
         hint1: 'Consecutive integers differ by 1.',

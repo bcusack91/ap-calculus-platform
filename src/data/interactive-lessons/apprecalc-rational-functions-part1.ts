@@ -73,7 +73,7 @@ Find where denominator = 0:
         correctAnswers: ["5","-2","2"],
         hint1: "x−5=0.",
         hint2: "x+2=0.",
-        hint3: "x²−4=(x−2)(x+2)=0.",
+        hint3: "$x^{2}-4$=(x−2)(x+2)=0.",
         explanation: "1) 5. 2) −2. 3) 2 (also −2)."
       }
     },
@@ -114,7 +114,7 @@ Find where denominator = 0:
       exercise: {
         questions: [
           {
-                    "question": "How many restrictions for 1/(x²−4)?",
+                    "question": "How many restrictions for $1/(x^{2}-4)$?",
                     "options": [
                               "2",
                               "1",
@@ -122,7 +122,7 @@ Find where denominator = 0:
                               "4"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "x²−4=0 → x=±2."
+                    "explanation": "$x^{2}-4$=0 → x=±2."
           }
 ]
       }

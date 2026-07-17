@@ -16,8 +16,8 @@ export const chemPhotoelectronSpectroscopyPart5Data = {
 |---------|
 | 📊 Effective Nuclear Charge |
 | Example: Period 2 First Ionization Energies and 1s Binding Energies |
-| Sodium (Na, Z = 11): 1s² 2s² 2p⁶ 3s¹ |
-| Magnesium (Mg, Z = 12): 1s² 2s² 2p⁶ 3s² |
+| Sodium (Na, Z = 11): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$ |
+| Magnesium (Mg, Z = 12): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ |
 | Key Comparisons: |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
@@ -95,16 +95,16 @@ When comparing PES spectra of adjacent elements in the same period, you should n
 
 ---
 
-### Sodium (Na, Z = 11): 1s² 2s² 2p⁶ 3s¹
+### Sodium (Na, Z = 11): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$
 - Five peaks with heights: 2, 2, 6, 1 (but 2s and 2p show as separate peaks)
-- Rightmost peak (3s¹): height 1, lowest BE
+- Rightmost peak $(3s^{1})$: height 1, lowest BE
 
 
 ---
 
-### Magnesium (Mg, Z = 12): 1s² 2s² 2p⁶ 3s²
+### Magnesium (Mg, Z = 12): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$
 - Same number of peaks as Na (four peaks)
-- Rightmost peak (3s²): height 2, slightly higher BE than Na's 3s peak
+- Rightmost peak $(3s^{2})$: height 2, slightly higher BE than Na's 3s peak
 - ALL peaks shift slightly **left** (higher BE) compared to Na
 
 
@@ -182,7 +182,7 @@ Use your knowledge of periodic trends and effective nuclear charge to answer the
               'Boron is a larger atom'
             ],
             correctIndex: 1,
-            explanation: 'Beryllium\'s electron configuration is 1s² 2s², while boron\'s is 1s² 2s² 2p¹. The 2p subshell is higher in energy than 2s, so the outermost electron in boron is easier to remove. This causes the slight dip in ionization energy (and valence binding energy) from Be to B, which is visible on PES spectra.'
+            explanation: 'Beryllium\'s electron configuration is $1s^{2}$ $2s^{2}$, while boron\'s is $1s^{2}$ $2s^{2}$ $2p^{1}$. The 2p subshell is higher in energy than 2s, so the outermost electron in boron is easier to remove. This causes the slight dip in ionization energy (and valence binding energy) from Be to B, which is visible on PES spectra.'
           }
         ]
       }
@@ -208,7 +208,7 @@ where $Z$ = atomic number (# protons) and $S$ = shielding (# core electrons)
 |-------------|-----|------------|
 | $Z_{eff}$ increases | More protons, same shielding | All peaks shift **left** (higher BE) |
 | **All** electrons affected | Nuclear charge pulls entire cloud tighter | Core AND valence BEs increase |
-| IE generally increases | Harder to remove valence e⁻ | Rightmost peak moves left |
+| IE generally increases | Harder to remove valence $e^{-}$ | Rightmost peak moves left |
 
 ---
 
@@ -216,8 +216,8 @@ where $Z$ = atomic number (# protons) and $S$ = shielding (# core electrons)
 
 | Transition | What Happens | Why |
 |-----------|-------------|-----|
-| Be → B | IE **drops** | B removes a 2p e⁻ (higher energy than Be's 2s) |
-| N → O | IE **drops** | O has a paired 2p e⁻; electron-electron repulsion |
+| Be → B | IE **drops** | B removes a 2p $e^{-}$ (higher energy than Be's 2s) |
+| N → O | IE **drops** | O has a paired 2p $e^{-}$; electron-electron repulsion |
 
 ---
 

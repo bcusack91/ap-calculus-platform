@@ -40,9 +40,9 @@ Let's tackle the full-blown Bernoulli problems that combine continuity + Bernoul
       id: 'be5-problem1',
       type: 'input-boxes' as const,
       content: `
-**Problem 1: Pipe with Height Change** ($\\rho = 1000$ kg/m³, $g = 10$ m/s²)
+**Problem 1: Pipe with Height Change** ($\\rho = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$)
 
-Water flows through a pipe that rises 8.0 m. At the bottom: area $A_1 = 40$ cm², speed $v_1 = 5.0$ m/s, pressure $P_1 = 300{,}000$ Pa. At the top: area $A_2 = 20$ cm².
+Water flows through a pipe that rises 8.0 m. At the bottom: area $A_1 = 40$ $cm^{2}$, speed $v_1 = 5.0$ m/s, pressure $P_1 = 300{,}000$ Pa. At the top: area $A_2 = 20$ $cm^{2}$.
 
 1) Speed at the top, $v_2$ (in m/s)
 
@@ -60,7 +60,7 @@ Water flows through a pipe that rises 8.0 m. At the bottom: area $A_1 = 40$ cm²
       id: 'be5-problem2',
       type: 'input-boxes' as const,
       content: `
-**Problem 2: Pitot Tube** ($\\rho_{\\text{air}} = 1.2$ kg/m³)
+**Problem 2: Pitot Tube** ($\\rho_{\\text{air}} = 1.2$ $kg/m^{3}$)
 
 A Pitot tube on an airplane measures the stagnation pressure (air brought to rest) and the static pressure. Stagnation pressure: 102,000 Pa. Static pressure: 100,000 Pa.
 
@@ -118,20 +118,20 @@ A Pitot tube on an airplane measures the stagnation pressure (air brought to res
       id: 'be5-challenging-drill',
       type: 'input-boxes' as const,
       content: `
-**Challenge Problem** ($\\rho = 1000$ kg/m³, $g = 10$ m/s², $P_{\\text{atm}} = 100{,}000$ Pa)
+**Challenge Problem** ($\\rho = 1000$ $kg/m^{3}$, $g = 10$ $m/s^{2}$, $P_{\\text{atm}} = 100{,}000$ Pa)
 
 A large open tank has water 10 m deep. A pipe at the bottom carries water horizontally to a nozzle that is 3.0 m above the bottom of the tank. The nozzle exit area is very small (open to atmosphere).
 
 1) Speed of water exiting the nozzle (in m/s)
 
-2) If the nozzle area is $1.0 \\times 10^{-4}$ m², the flow rate (in L/s)
+2) If the nozzle area is $1.0 \\times 10^{-4}$ $m^{2}$, the flow rate (in L/s)
       `,
       exercise: {
         boxes: 2,
         correctAnswers: ['11.8', '1.18'],
         hint1: 'Height of water above nozzle = $10 - 3 = 7$ m. Use Torricelli: $v = \\sqrt{2gh}$.',
-        hint2: '$Q = Av$. Convert m³/s to L/s.',
-        explanation: 'The nozzle is 7 m below the water surface (10 m tank, nozzle at 3 m height → 7 m of water above). $v = \\sqrt{2(10)(7)} = \\sqrt{140} = 11.83$ m/s. $Q = (10^{-4})(11.83) = 1.18 \\times 10^{-3}$ m³/s = 1.18 L/s.'
+        hint2: '$Q = Av$. Convert $m^{3}/s$ to L/s.',
+        explanation: 'The nozzle is 7 m below the water surface (10 m tank, nozzle at 3 m height → 7 m of water above). $v = \\sqrt{2(10)(7)} = \\sqrt{140} = 11.83$ m/s. $Q = (10^{-4})(11.83) = 1.18 \\times 10^{-3}$ $m^{3}/s$ = 1.18 L/s.'
       }
     },
     {

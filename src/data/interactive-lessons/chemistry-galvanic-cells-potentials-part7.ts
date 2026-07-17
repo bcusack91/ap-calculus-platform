@@ -76,12 +76,12 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
       content: `
 **Comprehensive AP Review** 🎯
 
-> **Given:** Zn²⁺/Zn = −0.76 V, Cu²⁺/Cu = +0.34 V, Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.44 V
+> **Given:** $Zn^{2+}/Zn$ = −0.76 V, $Cu^{2+}/Cu$ = +0.34 V, $Ag^{+}/Ag$ = +0.80 V, $Fe^{2+}/Fe$ = −0.44 V
       `,
       exercise: {
         questions: [
           {
-            question: 'Can Cu²⁺ spontaneously oxidize Fe? Calculate $E^\\circ_{\\text{cell}}$ to verify.',
+            question: 'Can $Cu^{2+}$ spontaneously oxidize Fe? Calculate $E^\\circ_{\\text{cell}}$ to verify.',
             options: [
               'No — $E^\\circ = -0.10$ V',
               'Yes — $E^\\circ = +0.78$ V',
@@ -89,7 +89,7 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
               'Yes — $E^\\circ = +0.10$ V'
             ],
             correctAnswer: 1,
-            explanation: 'Cu²⁺ is reduced (cathode, +0.34 V), Fe is oxidized (anode, −0.44 V). $E^\\circ = 0.34 - (-0.44) = +0.78$ V. Positive → spontaneous. Yes, Cu²⁺ can oxidize Fe.'
+            explanation: '$Cu^{2+}$ is reduced (cathode, +0.34 V), Fe is oxidized (anode, −0.44 V). $E^\\circ = 0.34 - (-0.44) = +0.78$ V. Positive → spontaneous. Yes, $Cu^{2+}$ can oxidize Fe.'
           },
           {
             question: 'For the Zn-Cu cell ($E^\\circ = 1.10$ V, $n = 2$), $\\Delta G^\\circ$ is approximately:',
@@ -103,15 +103,15 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
             explanation: '$\\Delta G^\\circ = -nFE^\\circ = -(2)(96{,}485)(1.10) = -212{,}267$ J $\\approx -212$ kJ.'
           },
           {
-            question: 'In the cell notation Pt | H₂(g) | H⁺(aq) || Cu²⁺(aq) | Cu(s), the Pt electrode is:',
+            question: 'In the cell notation Pt | $H_{2}(g)$ | $H^{+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s), the Pt electrode is:',
             options: [
-              'The cathode where Cu²⁺ is reduced',
+              'The cathode where $Cu^{2+}$ is reduced',
               'The anode — an inert electrode for the hydrogen half-reaction',
               'The salt bridge',
               'Not needed'
             ],
             correctAnswer: 1,
-            explanation: 'Pt is on the left (anode). It provides an inert surface for the oxidation of H₂: $\\text{H}_2 \\rightarrow 2\\text{H}^+ + 2e^-$.'
+            explanation: 'Pt is on the left (anode). It provides an inert surface for the oxidation of $H_{2}$: $\\text{H}_2 \\rightarrow 2\\text{H}^+ + 2e^-$.'
           }
         ]
       }

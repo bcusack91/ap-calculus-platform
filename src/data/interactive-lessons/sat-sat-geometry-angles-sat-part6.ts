@@ -149,14 +149,14 @@ To find the perpendicular bisector of segment $\\overline{AB}$:
         dropdowns: [
           'Midpoint of (0, 0) and (8, 6) → [(4, 3)|(4, 6)|(8, 3)|(3, 4)]',
           'Slope of line perpendicular to slope 4 → [-1/4|1/4|-4|4]',
-          'Circle (x - 2)² + (y + 5)² = 49, center = [(2, -5)|(-2, 5)|(2, 5)|(-2, -5)]',
-          'Distance from (0, 0) to (5, 12) = [13|17|7|√17]'
+          'Circle $(x - 2)^{2}$ + $(y + 5)^{2}$ = 49, center = [(2, -5)|(-2, 5)|(2, 5)|(-2, -5)]',
+          'Distance from (0, 0) to (5, 12) = [13|17|7|$\\sqrt{17}$]'
         ],
         correctAnswers: ['(4, 3)', '-1/4', '(2, -5)', '13'],
         hint1: 'Midpoint: average the x\'s and average the y\'s.',
         hint2: 'Perpendicular slope = negative reciprocal.',
-        hint3: 'In (x - h)², the center coordinate is +h. In (y + 5)², think (y - (-5))².',
-        explanation: 'Midpoint: ((0+8)/2, (0+6)/2) = (4,3). Perpendicular to 4: -1/4. Circle center: (2, -5) since (y+5) = (y-(-5)). Distance: √(25+144) = √169 = 13 (5-12-13 triple).'
+        hint3: 'In $(x - h)^{2}$, the center coordinate is +h. In $(y + 5)^{2}$, think $(y - (-5))^{2}$.',
+        explanation: 'Midpoint: ((0+8)/2, (0+6)/2) = (4,3). Perpendicular to 4: -1/4. Circle center: (2, -5) since (y+5) = (y-(-5)). Distance: $\\sqrt{25+144}$ = $\\sqrt{169}$ = 13 (5-12-13 triple).'
       }
     },
     {

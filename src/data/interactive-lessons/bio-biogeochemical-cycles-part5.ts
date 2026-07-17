@@ -6,14 +6,14 @@ export const bioBiogeochemicalCyclesPart5Data = {
       type: 'text' as const,
       content: `# Human Impacts on Biogeochemical Cycles 🏭
 
-Human activities have dramatically altered every major biogeochemical cycle. Since the Industrial Revolution (~1750), we have increased CO₂ by 50%, doubled reactive nitrogen inputs, and tripled phosphorus mobilization. These changes have consequences that cascade through interconnected Earth systems.
+Human activities have dramatically altered every major biogeochemical cycle. Since the Industrial Revolution (~1750), we have increased $CO_{2}$ by 50%, doubled reactive nitrogen inputs, and tripled phosphorus mobilization. These changes have consequences that cascade through interconnected Earth systems.
 
 ## Summary of Human Impacts
 
 | Cycle | Major Human Perturbation | Consequence |
 |-------|------------------------|-------------|
 | **Carbon** | Fossil fuel burning, deforestation | Climate change, ocean acidification |
-| **Nitrogen** | Fertilizer production (Haber-Bosch), fossil fuel combustion | Eutrophication, dead zones, N₂O emissions |
+| **Nitrogen** | Fertilizer production (Haber-Bosch), fossil fuel combustion | Eutrophication, dead zones, $N_{2}O$ emissions |
 | **Phosphorus** | Mining phosphate rock, fertilizer runoff | Eutrophication, freshwater dead zones |
 | **Water** | Dam construction, irrigation, deforestation | Altered river flow, groundwater depletion |
 
@@ -26,7 +26,7 @@ Human activities have dramatically altered every major biogeochemical cycle. Sin
       exercise: {
         questions: [
           {
-            question: 'Since the Industrial Revolution, atmospheric CO₂ has increased from ~280 ppm to over 420 ppm. The primary cause is:',
+            question: 'Since the Industrial Revolution, atmospheric $CO_{2}$ has increased from ~280 ppm to over 420 ppm. The primary cause is:',
             options: [
               'Increased volcanic activity',
               'Burning fossil fuels and deforestation',
@@ -34,7 +34,7 @@ Human activities have dramatically altered every major biogeochemical cycle. Sin
               'Increased animal respiration from livestock'
             ],
             correctAnswer: 1,
-            explanation: 'The ~50% increase in atmospheric CO₂ is primarily due to burning fossil fuels (~75% of the increase) and deforestation/land use change (~25%). These activities release carbon that was stored for millions of years (fossil fuels) or decades to centuries (forests) back into the atmosphere over a very short time.'
+            explanation: 'The ~50% increase in atmospheric $CO_{2}$ is primarily due to burning fossil fuels (~75% of the increase) and deforestation/land use change (~25%). These activities release carbon that was stored for millions of years (fossil fuels) or decades to centuries (forests) back into the atmosphere over a very short time.'
           },
           {
             question: 'The Haber-Bosch process has allowed humans to:',
@@ -57,9 +57,9 @@ Human activities have dramatically altered every major biogeochemical cycle. Sin
 
 ### How Deforestation Disrupts the Carbon Cycle
 
-1. **Direct carbon release** — Trees store carbon in biomass; clearing and burning releases CO₂
+1. **Direct carbon release** — Trees store carbon in biomass; clearing and burning releases $CO_{2}$
    - Tropical deforestation releases ~1.5 GtC/year
-2. **Lost carbon sink** — Fewer trees = less photosynthetic CO₂ removal
+2. **Lost carbon sink** — Fewer trees = less photosynthetic $CO_{2}$ removal
 3. **Soil carbon release** — Disturbed soils release stored organic carbon
 4. **Reduced transpiration** — Less moisture recycling → less rainfall → potential desertification
 
@@ -76,8 +76,8 @@ Human activities have dramatically altered every major biogeochemical cycle. Sin
 
 Fossil fuels represent **millions of years** of photosynthetically captured carbon. Burning them releases this stored carbon in decades:
 
-- Current emissions: **~36 billion tons CO₂/year** (9.5 GtC/year)
-- Coal: ~40% of CO₂ emissions from fuel combustion
+- Current emissions: **~36 billion tons $CO_{2}/year$** (9.5 GtC/year)
+- Coal: ~40% of $CO_{2}$ emissions from fuel combustion
 - Oil: ~34%
 - Natural gas: ~20%
 - Cement production: ~4%
@@ -91,7 +91,7 @@ Fossil fuels represent **millions of years** of photosynthetically captured carb
 
 ### The Eutrophication Process
 
-When excess nitrogen (NO₃⁻) and phosphorus (PO₄³⁻) from agricultural runoff enter waterways:
+When excess nitrogen $(NO_{3}^{-})$ and phosphorus $(PO_{4}^{3-})$ from agricultural runoff enter waterways:
 
 **Stage 1: Nutrient Input**
 - Fertilizer applied to crops → rain washes excess N and P into streams/rivers
@@ -112,14 +112,14 @@ When excess nitrogen (NO₃⁻) and phosphorus (PO₄³⁻) from agricultural ru
 
 **Stage 5: Ecosystem Collapse**
 - Fish, crustaceans, and invertebrates die or flee
-- Only anaerobic bacteria survive → produce toxic H₂S (rotten egg smell)
+- Only anaerobic bacteria survive → produce toxic $H_{2}S$ (rotten egg smell)
 
 ### Notorious Dead Zones
 
 | Location | Size | Primary Cause |
 |----------|------|---------------|
-| Gulf of Mexico | ~16,000 km² | Mississippi River agricultural runoff |
-| Baltic Sea | ~60,000 km² | Agricultural and industrial runoff |
+| Gulf of Mexico | ~16,000 $km^{2}$ | Mississippi River agricultural runoff |
+| Baltic Sea | ~60,000 $km^{2}$ | Agricultural and industrial runoff |
 | Chesapeake Bay | Variable | Agricultural and urban runoff |
 | Lake Erie | Seasonal | Phosphorus from agriculture |
 
@@ -129,8 +129,8 @@ $$CO_2 + H_2O \\rightarrow H_2CO_3 \\rightarrow HCO_3^- + H^+$$
 
 - Ocean pH has dropped from **8.2 → 8.1** since pre-industrial times
 - A 0.1 pH drop = **30% increase** in hydrogen ion concentration (logarithmic scale!)
-- **Coral**, **mollusks**, and **foraminifera** struggle to build CaCO₃ shells/skeletons
-- Projected: pH may drop to **7.8 by 2100** (150% increase in H⁺)`
+- **Coral**, **mollusks**, and **foraminifera** struggle to build $CaCO_{3}$ shells/skeletons
+- Projected: pH may drop to **7.8 by 2100** (150% increase in $H^{+}$)`
     },
     {
       id: 'bgc5-quiz2',
@@ -147,18 +147,18 @@ $$CO_2 + H_2O \\rightarrow H_2CO_3 \\rightarrow HCO_3^- + H^+$$
               'Fish populations increase and use more oxygen'
             ],
             correctAnswer: 1,
-            explanation: 'When the algal bloom dies, the massive amount of dead organic matter is decomposed by aerobic bacteria. These decomposers consume the dissolved oxygen in the water, creating hypoxic conditions (< 2 mg/L O₂). This is called biological oxygen demand (BOD).'
+            explanation: 'When the algal bloom dies, the massive amount of dead organic matter is decomposed by aerobic bacteria. These decomposers consume the dissolved oxygen in the water, creating hypoxic conditions (< 2 mg/L $O_{2}$). This is called biological oxygen demand (BOD).'
           },
           {
             question: 'Ocean pH has dropped by 0.1 units since pre-industrial times. This represents:',
             options: [
-              'A 0.1% increase in H⁺ concentration',
-              'A 1% increase in H⁺ concentration',
-              'A 10% increase in H⁺ concentration',
-              'A ~30% increase in H⁺ concentration'
+              'A 0.1% increase in $H^{+}$ concentration',
+              'A 1% increase in $H^{+}$ concentration',
+              'A 10% increase in $H^{+}$ concentration',
+              'A ~30% increase in $H^{+}$ concentration'
             ],
             correctAnswer: 3,
-            explanation: 'pH is a logarithmic scale: pH = -log[H⁺]. A decrease of 0.1 pH units means H⁺ concentration increased by a factor of 10^0.1 ≈ 1.26, or about a 26–30% increase. This seemingly small pH change has significant impacts on calcifying organisms.'
+            explanation: 'pH is a logarithmic scale: pH = -log[$H^{+}$]. A decrease of 0.1 pH units means $H^{+}$ concentration increased by a factor of $10^{0.1}$ ≈ 1.26, or about a 26–30% increase. This seemingly small pH change has significant impacts on calcifying organisms.'
           }
         ]
       }
@@ -179,18 +179,18 @@ $$CO_2 + H_2O \\rightarrow H_2CO_3 \\rightarrow HCO_3^- + H^+$$
           },
           {
             label: 'Ocean acidification threatens organisms that build ___ shells or skeletons',
-            options: ['silica (SiO₂)', 'calcium carbonate (CaCO₃)', 'calcium phosphate', 'iron oxide']
+            options: ['silica $(SiO_{2})$', 'calcium carbonate $(CaCO_{3})$', 'calcium phosphate', 'iron oxide']
           },
           {
             label: 'The Gulf of Mexico dead zone is primarily caused by ___ from the Mississippi River watershed',
             options: ['industrial chemicals', 'oil spills', 'agricultural fertilizer runoff', 'thermal pollution']
           }
         ],
-        correctAnswers: ['cattle ranching and soy farming', 'dead zones', 'calcium carbonate (CaCO₃)', 'agricultural fertilizer runoff'],
+        correctAnswers: ['cattle ranching and soy farming', 'dead zones', 'calcium carbonate $(CaCO_{3})$', 'agricultural fertilizer runoff'],
         hint1: 'Brazil\'s Amazon deforestation is driven by agriculture — especially beef and soy exports.',
         hint2: 'When dissolved oxygen drops below 2 mg/L, most aquatic organisms cannot survive.',
-        hint3: 'CO₂ dissolving in ocean water makes it harder for organisms to precipitate CaCO₃.',
-        explanation: 'Amazon deforestation is primarily driven by cattle ranching (~80%) and soy farming. Eutrophication creates hypoxic dead zones where most aquatic life cannot survive. Ocean acidification dissolves calcium carbonate (CaCO₃) structures like coral reefs and mollusk shells. The Gulf of Mexico dead zone (~16,000 km²) is one of the largest in the world, fed by agricultural runoff from the vast Mississippi watershed.'
+        hint3: '$CO_{2}$ dissolving in ocean water makes it harder for organisms to precipitate $CaCO_{3}$.',
+        explanation: 'Amazon deforestation is primarily driven by cattle ranching (~80%) and soy farming. Eutrophication creates hypoxic dead zones where most aquatic life cannot survive. Ocean acidification dissolves calcium carbonate $(CaCO_{3})$ structures like coral reefs and mollusk shells. The Gulf of Mexico dead zone (~16,000 $km^{2}$) is one of the largest in the world, fed by agricultural runoff from the vast Mississippi watershed.'
       }
     }
   ]

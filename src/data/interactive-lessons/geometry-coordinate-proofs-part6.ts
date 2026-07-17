@@ -74,7 +74,7 @@ Midpoint of (0,0) and (6,4):
         correctAnswers: ["3","2","5"],
         hint1: "(0+6)/2.",
         hint2: "(0+4)/2.",
-        hint3: "√(9+16).",
+        hint3: "$\\sqrt{9+16}$.",
         explanation: "1) 3. 2) 2. 3) 5."
       }
     },
@@ -123,7 +123,7 @@ Midpoint of (0,0) and (6,4):
                               "3.5"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "√(9+16) = √25 = 5."
+                    "explanation": "$\\sqrt{9+16}$ = $\\sqrt{25}$ = 5."
           }
 ]
       }

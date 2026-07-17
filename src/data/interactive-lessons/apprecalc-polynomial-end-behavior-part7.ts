@@ -95,9 +95,9 @@ Degree 3, LC = 2 (odd+pos → left↓ right↑), $f(0)=0$ ✅
 
 | # | Concept | Answer |
 |---|---------|--------|
-| 1 | Degree of 4x⁵ | 5 |
+| 1 | Degree of $4x^{5}$ | 5 |
 | 2 | Max turning points for degree 5 | 4 |
-| 3 | y-int of 3x²−7 | −7 |
+| 3 | y-int of $3x^{2}-7$ | −7 |
     
     `
     },
@@ -110,7 +110,7 @@ Degree 3, LC = 2 (odd+pos → left↓ right↑), $f(0)=0$ ✅
       exercise: {
         questions: [
           {
-                    "question": "y-intercept of 3x²−7?",
+                    "question": "y-intercept of $3x^{2}-7$?",
                     "options": [
                               "−7",
                               "3",

@@ -40,7 +40,7 @@ A computer represents every kind of data — numbers, text, images, sound — us
               "256"
             ],
             correctAnswer: 3,
-            explanation: "2⁸ = 256."
+            explanation: "$2^{8}$ = 256."
           },
           {
             question: "What is the decimal value of the 8-bit binary number 00010110?",
@@ -85,7 +85,7 @@ Convert **45**:
 
 Result: **00101101** (8 bits).
 
-## Why "n bits = 2ⁿ values"
+## Why "n bits = $2^{n}$ values"
 
 Each new bit doubles the patterns:
 
@@ -98,7 +98,7 @@ Each new bit doubles the patterns:
 | 16 | 65,536 |
 | 32 | ~4.3 billion |
 
-Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exam.
+Memorize $2^{8}$ = 256 and $2^{16}$ = 65,536 — both appear constantly on the AP exam.
       `
     },
     {
@@ -119,7 +119,7 @@ Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exa
         hint1: "Short for \"binary digit\".",
         hint2: "The exponent equals the number of bits.",
         hint3: "4 + 1 with place values 8, 4, 2, 1.",
-        explanation: "Bit = binary digit. n bits → 2ⁿ patterns. 5 = 4 + 1 = 0101."
+        explanation: "Bit = binary digit. n bits → $2^{n}$ patterns. 5 = 4 + 1 = 0101."
       }
     },
     {
@@ -135,7 +135,7 @@ Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exa
             options: ["96", "128", "192", "224"]
           },
           {
-            label: "2¹⁰ equals ___",
+            label: "$2^{10}$ equals ___",
             options: ["100", "256", "1024", "2048"]
           },
           {
@@ -146,8 +146,8 @@ Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exa
         correctAnswers: ["192", "1024", "16"],
         hint1: "128 + 64.",
         hint2: "About 1000 — the \"kilo\" of computing.",
-        hint3: "2⁴.",
-        explanation: "11000000 = 128 + 64 = 192. 2¹⁰ = 1024 (the \"k\" in KiB). 2⁴ = 16."
+        hint3: "$2^{4}$.",
+        explanation: "11000000 = 128 + 64 = 192. $2^{10}$ = 1024 (the \"k\" in KiB). $2^{4}$ = 16."
       }
     },
     {
@@ -157,9 +157,9 @@ Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exa
 ## AP Exam Strategy: Binary Conversions
 
 - Write the place-value row first; then plug in the bits.
-- Memorize: 2⁰=1, 2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2⁶=64, 2⁷=128, 2⁸=256, 2¹⁰=1024.
+- Memorize: $2^{0}$=1, $2^{1}$=2, $2^{2}$=4, $2^{3}$=8, $2^{4}$=16, $2^{5}$=32, $2^{6}$=64, $2^{7}$=128, $2^{8}$=256, $2^{10}$=1024.
 - Decimal → binary: greedy subtraction by largest power of 2.
-- For "how many bits do I need to represent N values?" use ⌈log₂ N⌉.
+- For "how many bits do I need to represent N values?" use ⌈$\\log_{2}$ N⌉.
       `
     },
     {
@@ -179,7 +179,7 @@ Memorize 2⁸ = 256 and 2¹⁶ = 65,536 — both appear constantly on the AP exa
               "12"
             ],
             correctAnswer: 2,
-            explanation: "2⁹ = 512 < 600; 2¹⁰ = 1024 ≥ 600. So 10 bits."
+            explanation: "$2^{9}$ = 512 < 600; $2^{10}$ = 1024 ≥ 600. So 10 bits."
           },
           {
             question: "A device samples sensor values from 0 to 7 and stores each in the smallest number of bits possible. After 1,000,000 samples, total storage is ___",

@@ -71,10 +71,10 @@ const questions: EntranceQuizQuestion[] = [
     id: 'cip-ent-3a',
     question: 'The formula for a one-proportion z-interval is:',
     options: [
-      'x̄ ± z*(σ/√n)',
+      'x̄ ± $z\\cdot (\\sigma /\\sqrt{n})$',
       'p̂ ± z*√[p̂(1−p̂)/n]',
       'p ± z*√[p(1−p)/n]',
-      'p̂ ± t*(s/√n)'
+      'p̂ ± $t\\cdot (s/\\sqrt{n})$'
     ],
     correctIndex: 1,
     explanation: 'One-proportion z-interval: p̂ ± z*√[p̂(1−p̂)/n]. Conditions: random sample, 10% condition, np̂ ≥ 10 and n(1−p̂) ≥ 10.',
@@ -102,26 +102,26 @@ const questions: EntranceQuizQuestion[] = [
     question: 'The two-proportion z-interval estimates:',
     options: [
       'The common proportion of two groups',
-      'The difference p₁ − p₂ between two population proportions',
-      'The ratio p₁/p₂',
-      'The sum p₁ + p₂'
+      'The difference $p_{1}$ − $p_{2}$ between two population proportions',
+      'The ratio $p_{1}/p_{2}$',
+      'The sum $p_{1}$ + $p_{2}$'
     ],
     correctIndex: 1,
-    explanation: 'The two-proportion z-interval: (p̂₁ − p̂₂) ± z*√[p̂₁(1−p̂₁)/n₁ + p̂₂(1−p̂₂)/n₂] estimates the difference p₁ − p₂.',
+    explanation: 'The two-proportion z-interval: (p̂$ {}_{1}$ − p̂$ {}_{2}$) ± z*√[p̂$ {}_{1}$(1−p̂$ {}_{1}$)/n₁ + p̂$ {}_{2}$(1−p̂$ {}_{2}$)/n₂] estimates the difference $p_{1}$ − $p_{2}$.',
     partNumber: 4,
     partTitle: 'Two-Sample z-Interval'
   },
   {
     id: 'cip-ent-4b',
-    question: 'If a 95% confidence interval for (p₁ − p₂) is (−0.05, 0.12), what can you conclude?',
+    question: 'If a 95% confidence interval for $(p_{1} - p_{2})$ is (−0.05, 0.12), what can you conclude?',
     options: [
-      'p₁ is definitely greater than p₂',
-      'p₂ is definitely greater than p₁',
+      '$p_{1}$ is definitely greater than $p_{2}$',
+      '$p_{2}$ is definitely greater than $p_{1}$',
       'There is no convincing evidence of a difference because the interval contains 0',
       'The confidence level is too low to draw conclusions'
     ],
     correctIndex: 2,
-    explanation: 'If the CI for (p₁ − p₂) contains 0, there is no convincing evidence of a difference between the two proportions.',
+    explanation: 'If the CI for $(p_{1} - p_{2})$ contains 0, there is no convincing evidence of a difference between the two proportions.',
     partNumber: 4,
     partTitle: 'Two-Sample z-Interval'
   },
@@ -129,7 +129,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5: Sample Size Calculations
   {
     id: 'cip-ent-5a',
-    question: 'To determine the sample size needed for a desired margin of error ME, you use n = (z*/ME)² · p*(1−p*). What value of p* gives the largest (most conservative) sample size?',
+    question: 'To determine the sample size needed for a desired margin of error ME, you use n = $(z\\cdot /ME)^{2}$ · p*(1−p*). What value of p* gives the largest (most conservative) sample size?',
     options: [
       'p* = 0',
       'p* = 0.1',
@@ -151,7 +151,7 @@ const questions: EntranceQuizQuestion[] = [
       'Use a higher confidence level'
     ],
     correctIndex: 2,
-    explanation: 'Since ME ∝ 1/√n, to halve the margin of error you need to quadruple the sample size (√4 = 2).',
+    explanation: 'Since ME ∝ $1/\\sqrt{n}$, to halve the margin of error you need to quadruple the sample size ($\\sqrt{4}$ = 2).',
     partNumber: 5,
     partTitle: 'Sample Size Calculations'
   },
@@ -167,7 +167,7 @@ const questions: EntranceQuizQuestion[] = [
       '(0.40, 0.70)'
     ],
     correctIndex: 1,
-    explanation: 'p̂ = 220/400 = 0.55. 95% CI: 0.55 ± 1.96√(0.55 × 0.45/400) ≈ 0.55 ± 0.049 ≈ (0.501, 0.599).',
+    explanation: 'p̂ = 220/400 = 0.55. 95% CI: 0.55 ± $1.96\\sqrt{0.55 \\times 0.45/400}$ ≈ 0.55 ± 0.049 ≈ (0.501, 0.599).',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },

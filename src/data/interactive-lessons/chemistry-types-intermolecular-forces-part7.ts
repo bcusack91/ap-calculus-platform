@@ -70,7 +70,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             explanation: 'From HCl to HI, molar mass increases significantly. The increasing number of electrons leads to stronger LDF. Even though the polarity decreases (Cl is more electronegative than I), the much stronger LDF in HBr and HI dominate, causing the boiling point to increase. HF is an outlier due to hydrogen bonding.'
           },
           {
-            question: 'A student claims that CH₃CH₂CH₂CH₃ (butane) should have a higher boiling point than CH₃OH (methanol) because butane has a higher molar mass. Is this correct?',
+            question: 'A student claims that $CH_{3}CH_{2}CH_{2}CH_{3}$ (butane) should have a higher boiling point than $CH_{3}OH$ (methanol) because butane has a higher molar mass. Is this correct?',
             options: [
               'Yes — higher molar mass always means higher boiling point',
               'No — methanol has hydrogen bonding, which is stronger than the LDF in butane, giving methanol a higher BP despite its lower molar mass',
@@ -91,15 +91,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         questions: [
           {
-            question: 'NaCl dissolves readily in water but not in hexane (C₆H₁₄). Which explanation is most accurate?',
+            question: 'NaCl dissolves readily in water but not in hexane $(C_{6}H_{14})$. Which explanation is most accurate?',
             options: [
               'Hexane is too small to dissolve NaCl',
-              'Water forms ion-dipole forces with Na⁺ and Cl⁻ that compensate for breaking the ionic lattice; hexane is nonpolar and cannot form these forces',
+              'Water forms ion-dipole forces with $Na^{+}$ and $Cl^{-}$ that compensate for breaking the ionic lattice; hexane is nonpolar and cannot form these forces',
               'NaCl forms covalent bonds with water',
               'Hexane has stronger IMFs than water'
             ],
             correctAnswer: 1,
-            explanation: 'Water is polar and forms strong ion-dipole forces with Na⁺ and Cl⁻ ions. These ion-dipole forces provide enough energy to compensate for breaking the ionic lattice. Hexane is nonpolar and cannot form ion-dipole forces with ions, so it cannot stabilize the separated ions.'
+            explanation: 'Water is polar and forms strong ion-dipole forces with $Na^{+}$ and $Cl^{-}$ ions. These ion-dipole forces provide enough energy to compensate for breaking the ionic lattice. Hexane is nonpolar and cannot form ion-dipole forces with ions, so it cannot stabilize the separated ions.'
           }
         ]
       }
@@ -116,35 +116,35 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
             label: '$\\text{CH}_4$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 0,
-            explanation: 'CH₄ is nonpolar (symmetric tetrahedral). It only experiences London Dispersion Forces.'
+            explanation: '$CH_{4}$ is nonpolar (symmetric tetrahedral). It only experiences London Dispersion Forces.'
           },
           {
             id: 'ap-nh3',
             label: '$\\text{NH}_3$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 2,
-            explanation: 'NH₃ has N–H bonds (H bonded to N), so it exhibits hydrogen bonding.'
+            explanation: '$NH_{3}$ has N–H bonds (H bonded to N), so it exhibits hydrogen bonding.'
           },
           {
             id: 'ap-so2',
             label: '$\\text{SO}_2$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 1,
-            explanation: 'SO₂ is polar (bent geometry), so it has dipole-dipole forces. It has no H bonded to N, O, or F, so no hydrogen bonding.'
+            explanation: '$SO_{2}$ is polar (bent geometry), so it has dipole-dipole forces. It has no H bonded to N, O, or F, so no hydrogen bonding.'
           },
           {
             id: 'ap-kcl-in-water',
             label: 'KCl dissolved in water',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 3,
-            explanation: 'KCl dissociates into K⁺ and Cl⁻ ions in water. The interaction between ions and polar water molecules is ion-dipole.'
+            explanation: 'KCl dissociates into $K^{+}$ and $Cl^{-}$ ions in water. The interaction between ions and polar water molecules is ion-dipole.'
           },
           {
             id: 'ap-ch3f',
             label: '$\\text{CH}_3\\text{F}$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 1,
-            explanation: 'CH₃F is polar (the C–F bond creates a net dipole) but it does NOT have hydrogen bonding because there is no H bonded directly to F (the H atoms are bonded to C). Its strongest IMF is dipole-dipole.'
+            explanation: '$CH_{3}F$ is polar (the C–F bond creates a net dipole) but it does NOT have hydrogen bonding because there is no H bonded directly to F (the H atoms are bonded to C). Its strongest IMF is dipole-dipole.'
           }
         ]
       }
@@ -157,7 +157,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
       exercise: {
         questions: [
           {
-            question: 'CH₃F (fluoromethane) contains fluorine. Does it exhibit hydrogen bonding?',
+            question: '$CH_{3}F$ (fluoromethane) contains fluorine. Does it exhibit hydrogen bonding?',
             options: [
               'Yes — it contains fluorine, one of the FON atoms',
               'No — the hydrogen atoms are bonded to carbon, not fluorine. H must be bonded DIRECTLY to N, O, or F for hydrogen bonding',
@@ -165,15 +165,15 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               'No — fluorine cannot participate in hydrogen bonding'
             ],
             correctAnswer: 1,
-            explanation: 'This is a classic AP trap! CH₃F has fluorine, but the H atoms are bonded to C, not to F. Hydrogen bonding requires H bonded DIRECTLY to N, O, or F. Since CH₃F has C–H bonds (not F–H bonds), it does NOT form hydrogen bonds. It only has dipole-dipole forces + LDF.'
+            explanation: 'This is a classic AP trap! $CH_{3}F$ has fluorine, but the H atoms are bonded to C, not to F. Hydrogen bonding requires H bonded DIRECTLY to N, O, or F. Since $CH_{3}F$ has C–H bonds (not F–H bonds), it does NOT form hydrogen bonds. It only has dipole-dipole forces + LDF.'
           },
           {
-            question: 'When comparing CH₃OCH₃ (dimethyl ether, MW = 46) and CH₃CH₂OH (ethanol, MW = 46), which has the higher boiling point?',
+            question: 'When comparing $CH_{3}OCH_{3}$ (dimethyl ether, MW = 46) and $CH_{3}CH_{2}OH$ (ethanol, MW = 46), which has the higher boiling point?',
             options: [
-              'CH₃OCH₃ — it has more oxygen lone pairs',
+              '$CH_{3}OCH_{3}$ — it has more oxygen lone pairs',
               'They have the same boiling point because they have the same molar mass and formula',
-              'CH₃CH₂OH — it has an O–H bond allowing hydrogen bonding; dimethyl ether cannot hydrogen bond with itself',
-              'CH₃OCH₃ — ethers always boil higher than alcohols'
+              '$CH_{3}CH_{2}OH$ — it has an O–H bond allowing hydrogen bonding; dimethyl ether cannot hydrogen bond with itself',
+              '$CH_{3}OCH_{3}$ — ethers always boil higher than alcohols'
             ],
             correctAnswer: 2,
             explanation: 'Ethanol has an O–H bond and can form hydrogen bonds with other ethanol molecules (both donor and acceptor). Dimethyl ether has oxygen with lone pairs (acceptor) but no O–H, N–H, or F–H bond (no donor), so it CANNOT hydrogen bond with itself. Ethanol (BP = 78°C) boils much higher than dimethyl ether (BP = -25°C).'

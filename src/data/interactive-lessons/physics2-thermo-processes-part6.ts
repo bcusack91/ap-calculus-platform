@@ -38,7 +38,7 @@ export const physics2ThermoProcPart6Data = {
 | 2 | **List known quantities** — $P$, $V$, $T$, $n$, $Q$, $W$, $\\Delta U$ |
 | 3 | **Apply the constraint** — what is constant? What is zero? |
 | 4 | **Write the first law** — $\\Delta U = Q - W$ and substitute the constraint |
-| 5 | **Check units** — Kelvin for $T$, Pa for $P$, m³ for $V$, J for energy |
+| 5 | **Check units** — Kelvin for $T$, Pa for $P$, $m^{3}$ for $V$, J for energy |
 | 6 | **Verify with sanity checks** — Does the sign make sense? |
 
 ---
@@ -64,9 +64,9 @@ export const physics2ThermoProcPart6Data = {
 
 **Problem:** A monatomic ideal gas ($n = 1$ mol) undergoes a rectangular cycle on a PV diagram:
 
-- A → B: Isobaric expansion at $P = 3 \\times 10^5$ Pa from $V = 0.01$ m³ to $V = 0.03$ m³
-- B → C: Isochoric cooling at $V = 0.03$ m³ from $P = 3 \\times 10^5$ Pa to $P = 1 \\times 10^5$ Pa
-- C → D: Isobaric compression at $P = 1 \\times 10^5$ Pa from $V = 0.03$ m³ to $V = 0.01$ m³
+- A → B: Isobaric expansion at $P = 3 \\times 10^5$ Pa from $V = 0.01$ $m^{3}$ to $V = 0.03$ $m^{3}$
+- B → C: Isochoric cooling at $V = 0.03$ $m^{3}$ from $P = 3 \\times 10^5$ Pa to $P = 1 \\times 10^5$ Pa
+- C → D: Isobaric compression at $P = 1 \\times 10^5$ Pa from $V = 0.03$ $m^{3}$ to $V = 0.01$ $m^{3}$
 - D → A: Isochoric heating
 
 Find the work done, heat absorbed, and efficiency.

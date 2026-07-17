@@ -69,7 +69,7 @@ It's just **energy conservation per unit volume** of fluid.
               'Definition of pressure'
             ],
             correctAnswer: 1,
-            explanation: 'Each term has units of Pa = J/m³ = energy per unit volume. Sum is constant along a streamline.'
+            explanation: 'Each term has units of Pa = $J/m^{3}$ = energy per unit volume. Sum is constant along a streamline.'
           },
           {
             question: 'Bernoulli\'s equation requires the fluid to be:',
@@ -131,7 +131,7 @@ Calculate each TERM of Bernoulli at the given point — answer in pascals.
             label: 'In Bernoulli, the units of every term are:',
             options: ['Joules', 'Newtons', 'Pascals', 'Watts'],
             correctIndex: 2,
-            explanation: 'Each term is energy per unit volume = J/m³ = Pa.'
+            explanation: 'Each term is energy per unit volume = $J/m^{3}$ = Pa.'
           },
           {
             label: 'For Bernoulli to apply, the flow must be:',

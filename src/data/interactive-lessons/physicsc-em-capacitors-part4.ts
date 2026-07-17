@@ -13,7 +13,7 @@ $U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C} = \\frac{1}{2}QV$
 
 The energy is stored in the **electric field** between the plates.
 
-Energy density: $u = \\frac{1}{2}\epsilon_0 E^2$ (J/m³)
+Energy density: $u = \\frac{1}{2}\epsilon_0 E^2$ $(J/m^{3})$
     
     `
     },

@@ -162,7 +162,7 @@ Match each phenomenon with its primary physics principle:
         hint1: 'Water evaporating from skin absorbs latent heat from your body.',
         hint2: 'Boiling occurs when vapor pressure equals external pressure. Less external pressure → lower boiling point.',
         hint3: 'Frost forms when water vapor goes directly to ice crystals. Dry ice goes directly from solid to gas.',
-        explanation: 'Pool chill = evaporative cooling. High-altitude boiling = lower atmospheric pressure. Frost = deposition. Dry ice = sublimation (its triple point is above 1 atm, so liquid CO₂ cannot exist at atmospheric pressure).'
+        explanation: 'Pool chill = evaporative cooling. High-altitude boiling = lower atmospheric pressure. Frost = deposition. Dry ice = sublimation (its triple point is above 1 atm, so liquid $CO_{2}$ cannot exist at atmospheric pressure).'
       }
     }
   ]

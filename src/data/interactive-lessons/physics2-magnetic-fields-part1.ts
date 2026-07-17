@@ -211,8 +211,8 @@ This constant appears in all formulas for magnetic fields produced by currents, 
         correctAnswers: ['closed loops', 'Tesla', '10,000 Gauss', '50 μT'],
         hint1: 'Magnetic monopoles have never been found — lines must close.',
         hint2: 'The SI unit is named after Nikola Tesla.',
-        hint3: 'Remember: 1 T = 10⁴ G. Earth\'s field is very weak.',
-        explanation: 'Magnetic field lines always form closed loops (no monopoles), are measured in Tesla (SI) or Gauss (CGS) with 1 T = 10⁴ G, and Earth\'s surface field is roughly 50 μT.'
+        hint3: 'Remember: 1 T = $10^{4}$ G. Earth\'s field is very weak.',
+        explanation: 'Magnetic field lines always form closed loops (no monopoles), are measured in Tesla (SI) or Gauss (CGS) with 1 T = $10^{4}$ G, and Earth\'s surface field is roughly 50 μT.'
       }
     }
   ]

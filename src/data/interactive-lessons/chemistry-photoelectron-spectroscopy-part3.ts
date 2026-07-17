@@ -51,12 +51,12 @@ To identify an element from its PES spectrum:
 
 ### Example: Four peaks with heights 2, 2, 6, 2
 
-- Peak 1 (height 2) → 1s²
-- Peak 2 (height 2) → 2s²
-- Peak 3 (height 6) → 2p⁶
-- Peak 4 (height 2) → 3s²
+- Peak 1 (height 2) → $1s^{2}$
+- Peak 2 (height 2) → $2s^{2}$
+- Peak 3 (height 6) → $2p^{6}$
+- Peak 4 (height 2) → $3s^{2}$
 
-Electron configuration: 1s² 2s² 2p⁶ 3s²
+Electron configuration: $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$
 Total electrons: 2 + 2 + 6 + 2 = 12 → **Magnesium (Mg)**
 
 > 🔑 **Key Concept:** Each PES peak maps directly to one subshell in the electron configuration. Reading peaks left-to-right gives you the configuration from innermost to outermost subshell.`
@@ -80,7 +80,7 @@ Total electrons: 2 + 2 + 6 + 2 = 12 → **Magnesium (Mg)**
               'Bromine (Br)'
             ],
             correctAnswer: 2,
-            explanation: 'The peaks correspond to: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁵(5). Total = 2 + 2 + 6 + 2 + 5 = 17 electrons. Element with Z = 17 is chlorine (Cl).'
+            explanation: 'The peaks correspond to: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{5}(5)$. Total = 2 + 2 + 6 + 2 + 5 = 17 electrons. Element with Z = 17 is chlorine (Cl).'
           }
         ]
       }
@@ -133,13 +133,13 @@ The binding energies of subshells follow predictable patterns:
           {
             text: 'The electron configuration is:',
             options: [
-              '1s² 2s² 2p⁶ 3s² 3p⁶',
-              '1s² 2s² 2p⁶ 3s² 3p⁶ 4s²',
-              '1s² 2s² 2p⁶ 3s² 3p⁴ 3d²',
-              '1s² 2s² 2p⁶ 3s² 3p⁶ 3d²'
+              '$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$',
+              '$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$',
+              '$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{4}$ $3d^{2}$',
+              '$1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $3d^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Six peaks with heights 2, 2, 6, 2, 6, 2 correspond to: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁶(6), 4s²(2). Total = 20 electrons = calcium (Ca). The 4s subshell fills before 3d.'
+            explanation: 'Six peaks with heights 2, 2, 6, 2, 6, 2 correspond to: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $4s^{2}(2)$. Total = 20 electrons = calcium (Ca). The 4s subshell fills before 3d.'
           }
         ]
       }
@@ -166,7 +166,7 @@ The binding energies of subshells follow predictable patterns:
           {
             label: 'What is the chemical symbol for this element?',
             correctAnswer: 'S',
-            explanation: 'With 16 electrons (Z = 16), the element is sulfur (S). Its electron configuration is 1s² 2s² 2p⁶ 3s² 3p⁴.'
+            explanation: 'With 16 electrons (Z = 16), the element is sulfur (S). Its electron configuration is $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{4}$.'
           }
         ]
       }
@@ -183,13 +183,13 @@ An atom has the PES peaks: 2, 2, 6, 2, 6, 2, 1 (from highest to lowest binding e
             text: 'What subshell does the 7th peak (height 1) correspond to?',
             options: ['3p', '3d', '4s', '4p'],
             correctIndex: 1,
-            explanation: 'The seven peaks correspond to: 1s²(2), 2s²(2), 2p⁶(6), 3s²(2), 3p⁶(6), 4s²(2), 3d¹(1). After the 4s subshell fills, the next subshell to fill is 3d. Note: in PES, 3d appears after 4s because 3d has a higher binding energy position relative to 4s in transition metals — but the filling order puts 4s before 3d. On the PES spectrum for scandium, the 3d peak appears to the left of 4s because 3d electrons have higher binding energy.'
+            explanation: 'The seven peaks correspond to: $1s^{2}(2)$, $2s^{2}(2)$, $2p^{6}(6)$, $3s^{2}(2)$, $3p^{6}(6)$, $4s^{2}(2)$, $3d^{1}(1)$. After the 4s subshell fills, the next subshell to fill is 3d. Note: in PES, 3d appears after 4s because 3d has a higher binding energy position relative to 4s in transition metals — but the filling order puts 4s before 3d. On the PES spectrum for scandium, the 3d peak appears to the left of 4s because 3d electrons have higher binding energy.'
           },
           {
             text: 'What element is this?',
             options: ['Potassium (K)', 'Calcium (Ca)', 'Scandium (Sc)', 'Titanium (Ti)'],
             correctIndex: 2,
-            explanation: 'Total electrons = 2 + 2 + 6 + 2 + 6 + 2 + 1 = 21. This is scandium (Sc, Z = 21) with configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹.'
+            explanation: 'Total electrons = 2 + 2 + 6 + 2 + 6 + 2 + 1 = 21. This is scandium (Sc, Z = 21) with configuration $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ $4s^{2}$ $3d^{1}$.'
           }
         ]
       }

@@ -54,7 +54,7 @@ $\\text{CH}_4\\text{(g)} + \\text{2 O}_2\\text{(g)} \\to \\text{CO}_2\\text{(g)}
 
 Given: $\\Delta H° = -802$ kJ/mol, $T = 298$ K
 
-$S°$ values (J/(mol·K)): CH₄ = 186.3, O₂ = 205.0, CO₂ = 213.7, H₂O(g) = 188.7
+$S°$ values (J/(mol·K)): $CH_{4}$ = 186.3, $O_{2}$ = 205.0, $CO_{2}$ = 213.7, $H_{2}O(g)$ = 188.7
 
 **1)** Calculate $\\Delta S°_{\\text{sys}}$ in J/(mol·K). Round to 1 decimal.
 

@@ -101,16 +101,16 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
       },
       {
         label: '(d)',
-        prompt: 'A customer asks the research group to predict the highway MPG of a 25-year-old car of this model. Explain why this prediction may not be reliable, even though R² = 95.4%.',
+        prompt: 'A customer asks the research group to predict the highway MPG of a 25-year-old car of this model. Explain why this prediction may not be reliable, even though $R^{2}$ = 95.4%.',
         maxPoints: 1,
         rubric: [
           {
             points: 1,
-            description: 'Identifies extrapolation beyond the range of data and explains why R² does not justify predictions outside the observed range.',
+            description: 'Identifies extrapolation beyond the range of data and explains why $R^{2}$ does not justify predictions outside the observed range.',
             keywords: ['extrapolation', 'beyond the range', '1 to 15 years', 'unreliable', 'relationship may not hold']
           }
         ],
-        sampleAnswer: 'Predicting the MPG for a 25-year-old car would be extrapolation because 25 years is well beyond the range of ages in the sample (1 to 15 years). Even though R² = 95.4% indicates a strong linear relationship within the observed data, the linear trend may not continue beyond that range. The model predicts ŷ = 35.082 − 0.912(25) = 12.28 mpg, but the actual relationship between age and MPG could be nonlinear for very old cars, making this prediction unreliable.'
+        sampleAnswer: 'Predicting the MPG for a 25-year-old car would be extrapolation because 25 years is well beyond the range of ages in the sample (1 to 15 years). Even though $R^{2}$ = 95.4% indicates a strong linear relationship within the observed data, the linear trend may not continue beyond that range. The model predicts ŷ = 35.082 − 0.912(25) = 12.28 mpg, but the actual relationship between age and MPG could be nonlinear for very old cars, making this prediction unreliable.'
       }
     ]
   },
@@ -137,7 +137,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['H₀: p = 0.72', 'Hₐ: p > 0.72', 'proportion', 'one-sided']
           }
         ],
-        sampleAnswer: 'H₀: p = 0.72 (the player\'s true free-throw proportion in this game is equal to her season average of 0.72)\nHₐ: p > 0.72 (the player\'s true free-throw proportion in this game is greater than her season average of 0.72)'
+        sampleAnswer: '$H_{0}$: p = 0.72 (the player\'s true free-throw proportion in this game is equal to her season average of 0.72)\n$H_{a}$: p > 0.72 (the player\'s true free-throw proportion in this game is greater than her season average of 0.72)'
       },
       {
         label: '(b)',
@@ -163,7 +163,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['14/200 = 0.07', 'p-value ≈ 0.07', 'greater than 0.05', 'fail to reject', 'not convincing evidence']
           }
         ],
-        sampleAnswer: 'The estimated p-value is 14/200 = 0.07. Since the p-value of 0.07 is greater than α = 0.05, we fail to reject H₀. There is not convincing evidence at the 5% significance level that the player\'s true free-throw percentage in this game is higher than her season average of 72%. The result of 9 out of 10 could reasonably occur by chance when p = 0.72.'
+        sampleAnswer: 'The estimated p-value is 14/200 = 0.07. Since the p-value of 0.07 is greater than α = 0.05, we fail to reject $H_{0}$. There is not convincing evidence at the 5% significance level that the player\'s true free-throw percentage in this game is higher than her season average of 72%. The result of 9 out of 10 could reasonably occur by chance when p = 0.72.'
       },
       {
         label: '(d)',
@@ -176,7 +176,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['0.07 vs 0.0811', 'reasonably close', 'simulation variability', 'more trials', 'both fail to reject']
           }
         ],
-        sampleAnswer: 'The simulation estimate of 0.07 is reasonably close to the exact binomial probability of 0.0811. Both values lead to the same conclusion: fail to reject H₀ at α = 0.05. However, the simulation estimate varies from sample to sample due to randomness. With only 200 trials, the simulation estimate has a margin of error of roughly ±√(0.07 × 0.93/200) ≈ ±0.018. Increasing the number of simulated trials (e.g., 1000 or more) would produce a more precise estimate. In this case, 200 trials was sufficient because both estimates agree on the conclusion, but if the p-value were closer to α, more trials would be needed for a reliable decision.'
+        sampleAnswer: 'The simulation estimate of 0.07 is reasonably close to the exact binomial probability of 0.0811. Both values lead to the same conclusion: fail to reject $H_{0}$ at α = 0.05. However, the simulation estimate varies from sample to sample due to randomness. With only 200 trials, the simulation estimate has a margin of error of roughly $\\pm \\sqrt{0.07 \\times 0.93/200}$ ≈ ±0.018. Increasing the number of simulated trials (e.g., 1000 or more) would produce a more precise estimate. In this case, 200 trials was sufficient because both estimates agree on the conclusion, but if the p-value were closer to α, more trials would be needed for a reliable decision.'
       }
     ]
   },
@@ -395,7 +395,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['0.58 ± 1.96(0.0233)', '(0.534, 0.626)', 'z* = 1.96']
           }
         ],
-        sampleAnswer: 'Conditions: (1) Random: stated as a random sample. (2) 10% condition: 450 is less than 10% of all registered voters in the district (assumed). (3) Large counts: np̂ = 261 ≥ 10 and n(1 − p̂) = 189 ≥ 10. ✓\n\np̂ = 261/450 ≈ 0.58\nSE = √(0.58 × 0.42 / 450) ≈ 0.02328\n95% CI: 0.58 ± 1.96(0.02328) = 0.58 ± 0.04563 = (0.534, 0.626)\n\nWe are 95% confident that the true proportion of registered voters who support the bond measure is between 0.534 and 0.626.'
+        sampleAnswer: 'Conditions: (1) Random: stated as a random sample. (2) 10% condition: 450 is less than 10% of all registered voters in the district (assumed). (3) Large counts: np̂ = 261 ≥ 10 and n(1 − p̂) = 189 ≥ 10. ✓\n\np̂ = 261/450 ≈ 0.58\nSE = $\\sqrt{0.58 \\times 0.42 / 450}$ ≈ 0.02328\n95% CI: 0.58 ± 1.96(0.02328) = 0.58 ± 0.04563 = (0.534, 0.626)\n\nWe are 95% confident that the true proportion of registered voters who support the bond measure is between 0.534 and 0.626.'
       },
       {
         label: '(b)',
@@ -435,7 +435,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['H₀: μ = 48', 'Hₐ: μ < 48', 'one-sided', 'left-tailed']
           }
         ],
-        sampleAnswer: 'H₀: μ = 48 hours (the true mean battery life is 48 hours)\nHₐ: μ < 48 hours (the true mean battery life is less than 48 hours)'
+        sampleAnswer: '$H_{0}$: μ = 48 hours (the true mean battery life is 48 hours)\n$H_{a}$: μ < 48 hours (the true mean battery life is less than 48 hours)'
       },
       {
         label: '(b)',
@@ -453,7 +453,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['p-value ≈ 0.0477', 'between 0.025 and 0.05', 'tcdf', 'left tail']
           }
         ],
-        sampleAnswer: 'Test statistic: t = (x̄ − μ₀)/(s/√n) = (46.8 − 48)/(4.2/√36) = −1.2/0.7 = −1.714\nDegrees of freedom: df = 36 − 1 = 35\np-value: P(t < −1.714 | df = 35) ≈ 0.0477 (using t-distribution table or calculator)'
+        sampleAnswer: 'Test statistic: t = (x̄ − $\\mu_{0}$)/(s/√n) = $(46.8 - 48)/(4.2/\\sqrt{36})$ = −1.2/0.7 = −1.714\nDegrees of freedom: df = 36 − 1 = 35\np-value: P(t < −1.714 | df = 35) ≈ 0.0477 (using t-distribution table or calculator)'
       },
       {
         label: '(c)',
@@ -466,7 +466,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['random sample', 'n = 36 ≥ 30', 'reject H₀', 'convincing evidence', 'less than 48 hours']
           }
         ],
-        sampleAnswer: 'Conditions: (1) Random: stated as a random sample. (2) Normal: n = 36 ≥ 30, so by the Central Limit Theorem the sampling distribution of x̄ is approximately normal. (3) 10% condition: 36 batteries is less than 10% of all batteries produced. ✓\n\nSince the p-value (≈ 0.0477) is less than α = 0.05, we reject H₀. There is convincing evidence that the true mean battery life is less than 48 hours. The manufacturer\'s claim appears to be overstated.'
+        sampleAnswer: 'Conditions: (1) Random: stated as a random sample. (2) Normal: n = 36 ≥ 30, so by the Central Limit Theorem the sampling distribution of x̄ is approximately normal. (3) 10% condition: 36 batteries is less than 10% of all batteries produced. ✓\n\nSince the p-value (≈ 0.0477) is less than α = 0.05, we reject $H_{0}$. There is convincing evidence that the true mean battery life is less than 48 hours. The manufacturer\'s claim appears to be overstated.'
       }
     ]
   },
@@ -498,7 +498,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['H₀: distribution matches', 'claimed proportions', 'Hₐ: at least one proportion differs', 'goodness of fit']
           }
         ],
-        sampleAnswer: 'H₀: The true distribution of candy colors matches the company\'s claimed distribution (30% red, 25% blue, 20% green, 15% yellow, 10% orange).\nHₐ: The true distribution of candy colors does not match the company\'s claimed distribution (at least one proportion is different).'
+        sampleAnswer: '$H_{0}$: The true distribution of candy colors matches the company\'s claimed distribution (30% red, 25% blue, 20% green, 15% yellow, 10% orange).\n$H_{a}$: The true distribution of candy colors does not match the company\'s claimed distribution (at least one proportion is different).'
       },
       {
         label: '(b)',
@@ -516,7 +516,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['2.4 + 2.0 + 0.1 + 0.533 + 0.8', 'χ² = 5.833', 'χ² ≈ 5.83']
           }
         ],
-        sampleAnswer: 'χ² = Σ(O − E)²/E\n= (72 − 60)²/60 + (40 − 50)²/50 + (38 − 40)²/40 + (34 − 30)²/30 + (16 − 20)²/20\n= 144/60 + 100/50 + 4/40 + 16/30 + 16/20\n= 2.4 + 2.0 + 0.1 + 0.533 + 0.8\n= 5.833'
+        sampleAnswer: '$\\chi^{2}$ = $\\Sigma (O - E)^{2}/E$\n= $(72 - 60)^{2}/60$ + $(40 - 50)^{2}/50$ + $(38 - 40)^{2}/40$ + $(34 - 30)^{2}/30$ + $(16 - 20)^{2}/20$\n= 144/60 + 100/50 + 4/40 + 16/30 + 16/20\n= 2.4 + 2.0 + 0.1 + 0.533 + 0.8\n= 5.833'
       },
       {
         label: '(c)',
@@ -529,7 +529,7 @@ S = 0.7364   R-Sq = 95.4%   R-Sq(adj) = 95.0%
             keywords: ['all expected counts ≥ 5', 'fail to reject', 'p-value 0.212 > 0.05', 'not convincing evidence', 'consistent with claimed']
           }
         ],
-        sampleAnswer: 'Conditions: (1) The sample is assumed to be a random selection of candies from the company\'s production. (2) All expected counts are at least 5 (smallest is 20). ✓\n\nSince the p-value (0.212) is greater than α = 0.05, we fail to reject H₀. There is not convincing evidence that the true distribution of candy colors differs from the company\'s claimed distribution. The observed counts are consistent with the claimed percentages.'
+        sampleAnswer: 'Conditions: (1) The sample is assumed to be a random selection of candies from the company\'s production. (2) All expected counts are at least 5 (smallest is 20). ✓\n\nSince the p-value (0.212) is greater than α = 0.05, we fail to reject $H_{0}$. There is not convincing evidence that the true distribution of candy colors differs from the company\'s claimed distribution. The observed counts are consistent with the claimed percentages.'
       }
     ]
   }

@@ -91,7 +91,7 @@ $$\\boxed{\\text{Rate} = k[\\text{NO}_2]^2}$$
 Step 2 is the RDS:
 $$\\text{Rate} = k_2[\\text{NOBr}_2][\\text{NO}]$$
 
-NOBr₂ is an intermediate! Eliminate it using Step 1 equilibrium:
+$NOBr_{2}$ is an intermediate! Eliminate it using Step 1 equilibrium:
 
 $$K_{eq} = \\frac{[\\text{NOBr}_2]}{[\\text{NO}][\\text{Br}_2]}$$
 
@@ -115,18 +115,18 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
       exercise: {
         questions: [
           {
-            question: 'Mechanism:\nStep 1: Cl₂ ⇌ 2Cl (fast)\nStep 2: Cl + CHCl₃ → CCl₄ + H (slow)\nStep 3: H + Cl → HCl (fast)\nWhat is the rate law?',
+            question: 'Mechanism:\nStep 1: $Cl_{2}$ ⇌ 2Cl (fast)\nStep 2: Cl + $CHCl_{3}$ → $CCl_{4}$ + H (slow)\nStep 3: H + Cl → HCl (fast)\nWhat is the rate law?',
             options: [
-              'rate = k[Cl₂][CHCl₃]',
-              'rate = k[Cl][CHCl₃]',
-              'rate = k[Cl₂]^(1/2)[CHCl₃]',
-              'rate = k[Cl₂]²[CHCl₃]'
+              'rate = k[$Cl_{2}$][$CHCl_{3}$]',
+              'rate = k[Cl][$CHCl_{3}$]',
+              'rate = k[$Cl_{2}$]^(1/2)[$CHCl_{3}$]',
+              'rate = k[$Cl_{2}$]$ {}^{2}$[$CHCl_{3}$]'
             ],
             correctAnswer: 2,
-            explanation: 'Step 2 (slow): rate = k₂[Cl][CHCl₃]. Cl is intermediate. From Step 1: Keq = [Cl]²/[Cl₂] → [Cl] = (Keq[Cl₂])^(1/2) = Keq^(1/2)[Cl₂]^(1/2). Rate = k₂Keq^(1/2)[Cl₂]^(1/2)[CHCl₃] = k_obs[Cl₂]^(1/2)[CHCl₃].'
+            explanation: 'Step 2 (slow): rate = $k_{2}$[Cl][$CHCl_{3}$]. Cl is intermediate. From Step 1: Keq = [Cl]$ {}^{2}$/[$Cl_{2}$] → [Cl] = (Keq[$Cl_{2}$])^(1/2) = $Keq^{1/2}$[$Cl_{2}$]^(1/2). Rate = $k_{2}Keq^{1/2}$[$Cl_{2}$]^(1/2)[$CHCl_{3}$] = k_obs[$Cl_{2}$]^(1/2)[$CHCl_{3}$].'
           },
           {
-            question: 'In the NO₂ + CO example, why doesn\'t [CO] appear in the rate law?',
+            question: 'In the $NO_{2}$ + CO example, why doesn\'t [CO] appear in the rate law?',
             options: [
               'CO is a catalyst',
               'CO reacts only in the fast step, after the RDS',
@@ -149,19 +149,19 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
 - Step 1: $\\text{A} + \\text{B} \\rightleftharpoons \\text{C}$ (fast, $K_{eq}$)
 - Step 2: $\\text{C} + \\text{A} \\rightarrow \\text{D}$ (slow)
 
-**1)** The rate law from the slow step is Rate = k₂[?][?]. Which species are in the rate law? (enter two formulas separated by a comma, alphabetically)
+**1)** The rate law from the slow step is Rate = $k_{2}$[?][?]. Which species are in the rate law? (enter two formulas separated by a comma, alphabetically)
 
 **2)** The intermediate is eliminated by writing [C] = Keq × [?] × [?]. Fill in the species. (enter two formulas separated by a comma, alphabetically)
 
-**3)** The final rate law is Rate = k_obs[A]ⁿ[B]ᵐ. What are n and m? (enter as: n,m)
+**3)** The final rate law is Rate = k_obs[A]$ {}^{n}$[B]$ {}^{m}$. What are n and m? (enter as: n,m)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['A,C', 'A,B', '2,1'],
-        hint1: 'Step 2: C + A → D. Rate = k₂[C][A]. The species are A and C.',
+        hint1: 'Step 2: C + A → D. Rate = $k_{2}$[C][A]. The species are A and C.',
         hint2: 'From Step 1 equilibrium: Keq = [C]/([A][B]). So [C] = Keq[A][B].',
-        hint3: 'Rate = k₂ × Keq[A][B] × [A] = k_obs[A]²[B]. So n = 2, m = 1.',
-        explanation: '1) Rate = k₂[C][A] → species: A, C. 2) [C] = Keq[A][B]. 3) Rate = k₂Keq[A]²[B] → n = 2, m = 1.'
+        hint3: 'Rate = $k_{2}$ × Keq[A][B] × [A] = k_obs[A]$ {}^{2}$[B]. So n = 2, m = 1.',
+        explanation: '1) Rate = $k_{2}$[C][A] → species: A, C. 2) [C] = Keq[A][B]. 3) Rate = $k_{2}Keq$[A]$ {}^{2}$[B] → n = 2, m = 1.'
       }
     },
     {
@@ -181,19 +181,19 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
             options: ['the reaction is zero order', 'a pre-equilibrium produces a dissociated species', 'temperature is very high', 'a catalyst is used']
           },
           {
-            label: 'If the observed rate law is rate = k[A]² but the overall equation is A + B → C, this suggests',
+            label: 'If the observed rate law is rate = k[A]$ {}^{2}$ but the overall equation is A + B → C, this suggests',
             options: ['the mechanism is one step', 'B reacts after the RDS', 'B is a catalyst', 'A is an intermediate']
           },
           {
             label: 'k_obs in a derived rate law typically equals',
-            options: ['k₁ only', 'k₂ only', 'k₂ × Keq', 'k₁ + k₂']
+            options: ['$k_{1}$ only', '$k_{2}$ only', '$k_{2}$ × Keq', '$k_{1}$ + $k_{2}$']
           }
         ],
-        correctAnswers: ['the rate-determining step', 'a pre-equilibrium produces a dissociated species', 'B reacts after the RDS', 'k₂ × Keq'],
+        correctAnswers: ['the rate-determining step', 'a pre-equilibrium produces a dissociated species', 'B reacts after the RDS', '$k_{2}$ × Keq'],
         hint1: 'The slow step controls the rate.',
-        hint2: 'For example, Cl₂ ⇌ 2Cl gives [Cl] = (Keq[Cl₂])^(1/2), producing a 1/2 order.',
+        hint2: 'For example, $Cl_{2}$ ⇌ 2Cl gives [Cl] = (Keq[$Cl_{2}$])^(1/2), producing a 1/2 order.',
         hint3: 'B not in rate law → B must react in a step after the RDS.',
-        explanation: 'Rate law from RDS. Fractional orders from dissociation equilibria. Missing reactant → reacts after RDS. k_obs = k₂ × Keq when pre-equilibrium is used.'
+        explanation: 'Rate law from RDS. Fractional orders from dissociation equilibria. Missing reactant → reacts after RDS. k_obs = $k_{2}$ × Keq when pre-equilibrium is used.'
       }
     },
     {
@@ -210,18 +210,18 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
               'rate = k[B][C]',
               'rate = k[A]^(1/2)[C]',
               'rate = k[A][C]',
-              'rate = k[A]²[C]'
+              'rate = k[A]$ {}^{2}$[C]'
             ],
             correctAnswer: 1,
-            explanation: 'Step 2: rate = k₂[B][C]. B is intermediate. Step 1: Keq = [B]²/[A] → [B] = (Keq[A])^(1/2). Rate = k₂(Keq[A])^(1/2)[C] = k_obs[A]^(1/2)[C].'
+            explanation: 'Step 2: rate = $k_{2}$[B][C]. B is intermediate. Step 1: Keq = [B]$ {}^{2}$/[A] → [B] = (Keq[A])^(1/2). Rate = $k_{2}$(Keq[A])^(1/2)[C] = k_obs[A]^(1/2)[C].'
           },
           {
             question: 'Which rate law is consistent with a single bimolecular elementary step for A + B → products?',
             options: [
-              'rate = k[A]²',
+              'rate = k[A]$ {}^{2}$',
               'rate = k[A][B]',
               'rate = k[A]',
-              'rate = k[A][B]²'
+              'rate = k[A][B]$ {}^{2}$'
             ],
             correctAnswer: 1,
             explanation: 'For a single bimolecular step A + B → products, the rate law comes directly from stoichiometry: rate = k[A][B]. If the experimental rate law is different, the mechanism must be multi-step.'

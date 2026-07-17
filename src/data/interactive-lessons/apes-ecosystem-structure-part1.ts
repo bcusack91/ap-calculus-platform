@@ -169,15 +169,15 @@ export const apesEcosystemStructurePart1Data = {
       exercise: {
         questions: [
           {
-            question: 'An ecosystem has producers with a GPP of 5,000 kcal/m²/yr and plant respiration of 3,000 kcal/m²/yr. The NPP is:',
+            question: 'An ecosystem has producers with a GPP of 5,000 $kcal/m^{2}/yr$ and plant respiration of 3,000 $kcal/m^{2}/yr$. The NPP is:',
             options: [
-              '8,000 kcal/m²/yr',
-              '5,000 kcal/m²/yr',
-              '2,000 kcal/m²/yr',
-              '500 kcal/m²/yr'
+              '8,000 $kcal/m^{2}/yr$',
+              '5,000 $kcal/m^{2}/yr$',
+              '2,000 $kcal/m^{2}/yr$',
+              '500 $kcal/m^{2}/yr$'
             ],
             correctAnswer: 2,
-            explanation: 'NPP = GPP - Respiration = 5,000 - 3,000 = 2,000 kcal/m²/yr. This is the energy actually available to herbivores and the rest of the food web.'
+            explanation: 'NPP = GPP - Respiration = 5,000 - 3,000 = 2,000 $kcal/m^{2}/yr$. This is the energy actually available to herbivores and the rest of the food web.'
           },
           {
             question: 'Why does eating lower on the food chain (e.g., grain instead of beef) require less land and energy?',

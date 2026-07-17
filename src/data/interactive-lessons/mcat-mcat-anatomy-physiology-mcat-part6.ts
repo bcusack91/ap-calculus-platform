@@ -13,25 +13,25 @@ export const mcatAnatPhysPart6Data = {
 | Component | % of Blood | Key facts |
 |-----------|-----------|-----------|
 | Plasma | ~55% | Water, proteins (albumin, fibrinogen, antibodies), electrolytes, hormones |
-| RBCs (erythrocytes) | ~45% | O₂ transport via **hemoglobin**; biconcave, **anucleate**, no mitochondria (glycolysis only) |
+| RBCs (erythrocytes) | ~45% | $O_{2}$ transport via **hemoglobin**; biconcave, **anucleate**, no mitochondria (glycolysis only) |
 | WBCs (leukocytes) | <1% | Immune defense (neutrophils, lymphocytes, monocytes, eosinophils, basophils) |
 | Platelets (thrombocytes) | <1% | Cell fragments from megakaryocytes; clotting |
 
 - **Serum** = plasma with clotting factors (esp. fibrinogen) removed.
 
-### Hemoglobin & the O₂–Dissociation Curve
+### Hemoglobin & the $O_{2}$–Dissociation Curve
 
-Hemoglobin (4 subunits, 4 heme groups) binds O₂ **cooperatively** → sigmoidal curve.
+Hemoglobin (4 subunits, 4 heme groups) binds $O_{2}$ **cooperatively** → sigmoidal curve.
 
-| Shift | Cause (mnemonic: "exercising muscle") | Effect on O₂ affinity |
+| Shift | Cause (mnemonic: "exercising muscle") | Effect on $O_{2}$ affinity |
 |-------|----------------------------------------|------------------------|
-| **Right** | ↑ CO₂, ↑ H⁺ (↓ pH), ↑ temperature, ↑ 2,3-BPG | **Lower** affinity → unloads O₂ to tissues |
-| **Left** | ↓ CO₂, ↓ H⁺ (↑ pH), ↓ temp, ↓ 2,3-BPG, **fetal Hb (HbF)** | **Higher** affinity → loads O₂ |
+| **Right** | ↑ $CO_{2}$, ↑ $H^{+}$ (↓ pH), ↑ temperature, ↑ 2,3-BPG | **Lower** affinity → unloads $O_{2}$ to tissues |
+| **Left** | ↓ $CO_{2}$, ↓ $H^{+}$ (↑ pH), ↓ temp, ↓ 2,3-BPG, **fetal Hb (HbF)** | **Higher** affinity → loads $O_{2}$ |
 
-- **Bohr effect:** ↑ CO₂/H⁺ in metabolizing tissue → rightward shift → O₂ delivered where needed.
-- **Fetal hemoglobin (HbF)** binds 2,3-BPG poorly → left-shifted → pulls O₂ from maternal blood across the placenta.
+- **Bohr effect:** ↑ $CO_{2}/H^{+}$ in metabolizing tissue → rightward shift → $O_{2}$ delivered where needed.
+- **Fetal hemoglobin (HbF)** binds 2,3-BPG poorly → left-shifted → pulls $O_{2}$ from maternal blood across the placenta.
 
-### CO₂ Transport (3 forms)
+### $CO_{2}$ Transport (3 forms)
 
 $$\\text{CO}_2 + \\text{H}_2\\text{O} \\xrightarrow{\\text{carbonic anhydrase}} \\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$$
 
@@ -60,7 +60,7 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
 | AB | A & B | none | **Universal recipient** |
 | O | none | anti-A & anti-B | O only (**universal donor**) |
 
-- **Rh:** Rh⁻ mother + Rh⁺ fetus → maternal anti-Rh after sensitization → **erythroblastosis fetalis** in a later Rh⁺ pregnancy (prevented by RhoGAM).
+- **Rh:** $Rh^{-}$ mother + $Rh^{+}$ fetus → maternal anti-Rh after sensitization → **erythroblastosis fetalis** in a later $Rh^{+}$ pregnancy (prevented by RhoGAM).
 
 ### Lymphatic System
 
@@ -76,15 +76,15 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
         questions: [
           {
             question: `A physiologist measures the oxygen-hemoglobin dissociation curve of blood sampled from an actively contracting skeletal muscle and compares it to resting arterial blood. Relative to rest, the curve from exercising muscle is shifted, and this shift is adaptive because:`,
-            options: [`Shifted right — higher CO₂, H⁺, and temperature lower Hb affinity, promoting O₂ unloading to the active tissue`, `Shifted left — lower pH raises Hb affinity, helping Hb hold onto O₂`, `Shifted right — higher pH lowers Hb affinity, promoting O₂ loading in the lungs`, `Unchanged — Hb affinity is fixed and independent of local conditions`],
+            options: [`Shifted right — higher $CO_{2}$, $H^{+}$, and temperature lower Hb affinity, promoting $O_{2}$ unloading to the active tissue`, `Shifted left — lower pH raises Hb affinity, helping Hb hold onto $O_{2}$`, `Shifted right — higher pH lowers Hb affinity, promoting $O_{2}$ loading in the lungs`, `Unchanged — Hb affinity is fixed and independent of local conditions`],
             correctAnswer: 0,
-            explanation: `Active muscle produces CO₂, H⁺ (lactic acid), and heat, all of which lower hemoglobin's O₂ affinity — a RIGHTWARD shift (Bohr effect). This makes Hb release more O₂ precisely where metabolic demand is highest. Option B has the right direction confused (low pH shifts RIGHT, not left, and lowers affinity). Option C says higher pH, but exercising tissue is more acidic. Option D ignores the well-established modulation by local chemistry.`
+            explanation: `Active muscle produces $CO_{2}$, $H^{+}$ (lactic acid), and heat, all of which lower hemoglobin's $O_{2}$ affinity — a RIGHTWARD shift (Bohr effect). This makes Hb release more $O_{2}$ precisely where metabolic demand is highest. Option B has the right direction confused (low pH shifts RIGHT, not left, and lowers affinity). Option C says higher pH, but exercising tissue is more acidic. Option D ignores the well-established modulation by local chemistry.`
           },
           {
             question: `Compared with adult hemoglobin (HbA), fetal hemoglobin (HbF) binds 2,3-bisphosphoglycerate (2,3-BPG) much more weakly. The functional consequence at the placenta is that HbF:`,
-            options: [`Has a higher O₂ affinity (left-shifted curve), allowing it to pull O₂ from maternal HbA`, `Has a lower O₂ affinity, allowing the fetus to dump O₂ into maternal blood`, `Has the same O₂ affinity as HbA, so transfer depends only on the pressure gradient`, `Cannot bind O₂ until after birth when 2,3-BPG levels fall`],
+            options: [`Has a higher $O_{2}$ affinity (left-shifted curve), allowing it to pull $O_{2}$ from maternal HbA`, `Has a lower $O_{2}$ affinity, allowing the fetus to dump $O_{2}$ into maternal blood`, `Has the same $O_{2}$ affinity as HbA, so transfer depends only on the pressure gradient`, `Cannot bind $O_{2}$ until after birth when 2,3-BPG levels fall`],
             correctAnswer: 0,
-            explanation: `2,3-BPG binds in the central cavity of hemoglobin and STABILIZES the low-affinity (T) state. Because HbF binds 2,3-BPG poorly, it is locked toward the high-affinity (R) state → LEFT-shifted curve → higher O₂ affinity than maternal HbA. This affinity gradient lets the fetus extract O₂ across the placenta. Option B reverses the direction of transfer; option D is false (HbF carries O₂ throughout fetal life).`
+            explanation: `2,3-BPG binds in the central cavity of hemoglobin and STABILIZES the low-affinity (T) state. Because HbF binds 2,3-BPG poorly, it is locked toward the high-affinity (R) state → LEFT-shifted curve → higher $O_{2}$ affinity than maternal HbA. This affinity gradient lets the fetus extract $O_{2}$ across the placenta. Option B reverses the direction of transfer; option D is false (HbF carries $O_{2}$ throughout fetal life).`
           },
           {
             question: `A trauma patient with unknown blood type needs an emergency transfusion before cross-matching can be completed. Which donor red-cell type is safest to give, and why?`,
@@ -106,7 +106,7 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
 **Question:** A mountaineer spends 3 weeks at 4,000 m altitude. (a) What happens to hematocrit and why? (b) Separately, a different patient is acutely dehydrated — how does THEIR hematocrit change, and is the mechanism the same?
 
 **Solution:**
-1. **Altitude:** low ambient PO₂ → kidney releases **erythropoietin (EPO)** → bone marrow makes MORE RBCs → **absolute** rise in RBC mass → hematocrit ↑ (true/absolute polycythemia). ✓
+1. **Altitude:** low ambient $PO_{2}$ → kidney releases **erythropoietin (EPO)** → bone marrow makes MORE RBCs → **absolute** rise in RBC mass → hematocrit ↑ (true/absolute polycythemia). ✓
 2. **Dehydration:** plasma volume FALLS while RBC number is unchanged. Hematocrit = RBC vol / total blood vol, so the ratio rises → hematocrit ↑ — but this is **relative** polycythemia (no new RBCs). ✓
 3. Same direction (↑), different mechanism: one adds cells, the other removes plasma.
 
@@ -127,17 +127,17 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
 </details>
 
 <details>
-<summary><b>Example 3: Track CO₂ in the blood</b></summary>
+<summary><b>Example 3: Track $CO_{2}$ in the blood</b></summary>
 
-**Question:** In a systemic capillary, CO₂ produced by tissue enters an RBC. Trace the chemistry and name the ion movement that follows.
+**Question:** In a systemic capillary, $CO_{2}$ produced by tissue enters an RBC. Trace the chemistry and name the ion movement that follows.
 
 **Solution:**
-1. CO₂ diffuses into the RBC; **carbonic anhydrase** catalyzes $\\text{CO}_2 + \\text{H}_2\\text{O} \\to \\text{H}_2\\text{CO}_3$. ✓
-2. $\\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$. The H⁺ binds hemoglobin (buffering; also drives the Bohr right-shift).
-3. $\\text{HCO}_3^-$ exits the RBC in exchange for Cl⁻ entering — the **chloride shift** — so most CO₂ travels as plasma bicarbonate. ✓
-4. In the lungs the whole process reverses, releasing CO₂ for exhalation.
+1. $CO_{2}$ diffuses into the RBC; **carbonic anhydrase** catalyzes $\\text{CO}_2 + \\text{H}_2\\text{O} \\to \\text{H}_2\\text{CO}_3$. ✓
+2. $\\text{H}_2\\text{CO}_3 \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$. The $H^{+}$ binds hemoglobin (buffering; also drives the Bohr right-shift).
+3. $\\text{HCO}_3^-$ exits the RBC in exchange for $Cl^{-}$ entering — the **chloride shift** — so most $CO_{2}$ travels as plasma bicarbonate. ✓
+4. In the lungs the whole process reverses, releasing $CO_{2}$ for exhalation.
 
-**Key idea:** ~70% of CO₂ is carried as bicarbonate; carbonic anhydrase + the chloride shift make this possible.
+**Key idea:** ~70% of $CO_{2}$ is carried as bicarbonate; carbonic anhydrase + the chloride shift make this possible.
 </details>`
     },
     {
@@ -146,8 +146,8 @@ Normal ~45%. ↑ in dehydration or polycythemia (more EPO at altitude); ↓ in a
       content: `### Key Takeaways — Part 6
 
 - Blood: ~55% plasma + ~45% RBCs (hematocrit) + <1% WBCs/platelets.
-- Bohr effect: ↑CO₂/H⁺/temp/2,3-BPG → RIGHT shift → O₂ unloading. HbF is left-shifted.
-- CO₂ travels mostly as bicarbonate (carbonic anhydrase + chloride shift).
+- Bohr effect: ↑$CO_{2}/H^{+}/temp/2$,3-BPG → RIGHT shift → $O_{2}$ unloading. HbF is left-shifted.
+- $CO_{2}$ travels mostly as bicarbonate (carbonic anhydrase + chloride shift).
 - Clotting: vascular spasm → platelet plug → fibrin (cascade; vitamin K for II, VII, IX, X).
 - Type O = universal RBC donor; type AB = universal recipient.
 - Lymphatics return interstitial fluid, absorb fats (lacteals), and filter pathogens.`

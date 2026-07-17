@@ -106,7 +106,7 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
       exercise: {
         questions: [
           {
-            question: 'A mixture contains dissolved NaCl and dissolved KNO₃ in water. Which method is BEST for separating them?',
+            question: 'A mixture contains dissolved NaCl and dissolved $KNO_{3}$ in water. Which method is BEST for separating them?',
             options: [
               'Filtration',
               'Simple distillation',
@@ -117,7 +117,7 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
             explanation: 'Both salts are dissolved (filtration won\'t work) and both are non-volatile (distillation gives only water). Fractional crystallization exploits differences in solubility at different temperatures to crystallize one salt at a time.'
           },
           {
-            question: 'A student needs to determine the concentration of Cu²⁺ ions in a blue solution. The best method is:',
+            question: 'A student needs to determine the concentration of $Cu^{2+}$ ions in a blue solution. The best method is:',
             options: [
               'Filtration and weighing',
               'Spectroscopy using Beer\'s Law',
@@ -125,18 +125,18 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
               'Simple distillation'
             ],
             correctAnswer: 1,
-            explanation: 'Cu²⁺ solutions are blue (absorb orange light). Using a spectrophotometer and Beer\'s Law ($A = \\varepsilon bc$) with a calibration curve is the most efficient and accurate method.'
+            explanation: '$Cu^{2+}$ solutions are blue (absorb orange light). Using a spectrophotometer and Beer\'s Law ($A = \\varepsilon bc$) with a calibration curve is the most efficient and accurate method.'
           },
           {
-            question: 'To determine the percentage of CaCO₃ in an antacid tablet, a back titration is preferred because:',
+            question: 'To determine the percentage of $CaCO_{3}$ in an antacid tablet, a back titration is preferred because:',
             options: [
-              'CaCO₃ is colored',
-              'CaCO₃ is a strong acid',
-              'CaCO₃ is insoluble and reacts slowly with acid',
-              'CaCO₃ is volatile'
+              '$CaCO_{3}$ is colored',
+              '$CaCO_{3}$ is a strong acid',
+              '$CaCO_{3}$ is insoluble and reacts slowly with acid',
+              '$CaCO_{3}$ is volatile'
             ],
             correctAnswer: 2,
-            explanation: 'CaCO₃ is insoluble and dissolves slowly in acid, making direct titration impractical. In a back titration, excess acid is added first, then the unreacted acid is titrated with a base.'
+            explanation: '$CaCO_{3}$ is insoluble and dissolves slowly in acid, making direct titration impractical. In a back titration, excess acid is added first, then the unreacted acid is titrated with a base.'
           }
         ]
       }
@@ -221,7 +221,7 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
       exercise: {
         questions: [
           {
-            question: 'A calibration curve for Cu²⁺ has equation $A = 12.0c$ (b = 1.00 cm). A sample is diluted 10× and gives $A = 0.360$. The original [Cu²⁺] is:',
+            question: 'A calibration curve for $Cu^{2+}$ has equation $A = 12.0c$ (b = 1.00 cm). A sample is diluted 10× and gives $A = 0.360$. The original [$Cu^{2+}$] is:',
             options: [
               '0.0030 M',
               '0.030 M',

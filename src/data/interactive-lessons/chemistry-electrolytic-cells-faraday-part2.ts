@@ -248,7 +248,7 @@ Answer with "galvanic" or "electrolytic":
               'The salt bridge'
             ],
             correctAnswer: 1,
-            explanation: 'During charging, the reaction reverses: PbSO₄ is reduced back to Pb. Since reduction occurs at the cathode, the Pb electrode becomes the cathode during charging.'
+            explanation: 'During charging, the reaction reverses: $PbSO_{4}$ is reduced back to Pb. Since reduction occurs at the cathode, the Pb electrode becomes the cathode during charging.'
           }
         ]
       }

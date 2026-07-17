@@ -39,7 +39,7 @@ $$T - mg\\cos\\theta = \\frac{mv^2}{r}$$`
     {
       id: 'cm4-mcq1',
       type: 'mcq' as const,
-      question: 'A 0.5 kg ball on a 1 m string moves at 5 m/s at the bottom of a vertical circle. What is the tension? ($g = 10$ m/s²)',
+      question: 'A 0.5 kg ball on a 1 m string moves at 5 m/s at the bottom of a vertical circle. What is the tension? ($g = 10$ $m/s^{2}$)',
       options: [
         '$17.5$ N',
         '$12.5$ N',
@@ -87,7 +87,7 @@ This result is independent of the speed — the tension difference is always $6m
     {
       id: 'cm4-mcq2',
       type: 'mcq' as const,
-      question: 'What minimum speed at the bottom of a vertical loop of radius 5 m allows a ball on a string to complete the loop? ($g = 10$ m/s²)',
+      question: 'What minimum speed at the bottom of a vertical loop of radius 5 m allows a ball on a string to complete the loop? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{5(10)(5)} = \\sqrt{250} \\approx 15.8$ m/s',
         '$\\sqrt{(10)(5)} = \\sqrt{50} \\approx 7.07$ m/s',
@@ -144,7 +144,7 @@ For $N \\geq 0$: $h \\geq 5r/2$. This means the starting height must be at least
     {
       id: 'cm4-mcq3',
       type: 'mcq' as const,
-      question: 'A car crests a hill of radius $r = 40$ m. At what speed does the driver feel "weightless" (normal force = 0)? ($g = 10$ m/s²)',
+      question: 'A car crests a hill of radius $r = 40$ m. At what speed does the driver feel "weightless" (normal force = 0)? ($g = 10$ $m/s^{2}$)',
       options: [
         '$20$ m/s',
         '$10$ m/s',

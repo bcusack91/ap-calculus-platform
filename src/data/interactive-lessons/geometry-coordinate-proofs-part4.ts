@@ -70,8 +70,8 @@ All angles 90° → **Rectangle** ✅
         correctAnswers: ["4","3","5"],
         hint1: "|4−0|.",
         hint2: "|3−0|.",
-        hint3: "√(16+9).",
-        explanation: "1) 4. 2) 3. 3) √25=5."
+        hint3: "$\\sqrt{16+9}$.",
+        explanation: "1) 4. 2) 3. 3) $\\sqrt{25}$=5."
       }
     },
     {

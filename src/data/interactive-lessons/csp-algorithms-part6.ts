@@ -165,7 +165,7 @@ Goal: return TRUE if a list contains two consecutive equal elements.
               "Run the same nested-loop code on more powerful server hardware with faster CPU clock speeds and more RAM."
             ],
             correctAnswer: 0,
-            explanation: "Algorithmic fix: O(n²) → O(n) by counting frequencies in one pass."
+            explanation: "Algorithmic fix: $O(n^{2})$ → O(n) by counting frequencies in one pass."
           },
           {
             question: "A procedure should return TRUE if at least one element of list is greater than every element of other. Which structure is most efficient and correct?",

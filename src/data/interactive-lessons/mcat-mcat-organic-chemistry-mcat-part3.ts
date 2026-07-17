@@ -107,23 +107,23 @@ Recognizing whether a leaving group is present is often enough to choose the mec
 <pre>
        O           O
        ‖           ‖
-   CH₃-C-CH₂-C-OCH₃
+   $CH_{3}-C-CH_{2}-C-OCH_{3}$
 </pre>
 Which reagent should you use?
 
-**Options**: NaBH₄ / LiAlH₄ / H₂SO₄ / Zn/HCl
+**Options**: $NaBH_{4}$ / $LiAlH_{4}$ / $H_{2}SO_{4}$ / Zn/HCl
 
 **Solution**:
-1. Identify functional groups: ketone (left C=O) and ester (right C=O with OCH₃)
+1. Identify functional groups: ketone (left C=O) and ester (right C=O with $OCH_{3}$)
 2. Goal: Reduce only ketone to 2° alcohol
-3. **NaBH₄**: Reduces aldehydes & ketones → leaves esters alone ✓
-4. **LiAlH₄**: Reduces BOTH ketones AND esters → not selective
-5. **H₂SO₄**: Catalyst for esterification, not reduction
+3. **$NaBH_{4}$**: Reduces aldehydes & ketones → leaves esters alone ✓
+4. **$LiAlH_{4}$**: Reduces BOTH ketones AND esters → not selective
+5. **$H_{2}SO_{4}$**: Catalyst for esterification, not reduction
 6. **Zn/HCl**: Wolff-Kishner reduction (specific for ketones to alkanes)
 
-**Answer**: **NaBH₄** (selective for ketone)
+**Answer**: **$NaBH_{4}$** (selective for ketone)
 
-**MCAT Strategy**: Always memorize: NaBH₄ = selective for aldehydes/ketones. LiAlH₄ = no selectivity (overkill). This question pattern appears every 3-4 years on the MCAT.
+**MCAT Strategy**: Always memorize: $NaBH_{4}$ = selective for aldehydes/ketones. $LiAlH_{4}$ = no selectivity (overkill). This question pattern appears every 3-4 years on the MCAT.
 </details>
 
 <details>
@@ -131,14 +131,14 @@ Which reagent should you use?
 
 **Question:** Start with 1-pentanol. You want to make pentanal (not pentanoic acid). Which oxidizing agent is correct?
 <pre>
-CH₃CH₂CH₂CH₂-CH₂-OH  →  CH₃CH₂CH₂CH₂-CHO
+$CH_{3}CH_{2}CH_{2}CH_{2}-CH_{2}-OH$  →  $CH_{3}CH_{2}CH_{2}CH_{2}-CHO$
    1-pentanol            pentanal
 </pre>
 
 **Solution**:
 1. **Target**: 1° alcohol → aldehyde (oxidation level +1)
-2. **Wrong**: Jones/CrO₃ (over-oxidizes to carboxylic acid)
-3. **Wrong**: KMnO₄ (too strong, over-oxidizes)
+2. **Wrong**: $Jones/CrO_{3}$ (over-oxidizes to carboxylic acid)
+3. **Wrong**: $KMnO_{4}$ (too strong, over-oxidizes)
 4. **Correct**: **PCC** (pyridinium chlorochromate) — stops at aldehyde
 5. Alternative: DMP (Dess-Martin Periodinane), IBX, Swern oxidation — all work
 
@@ -146,7 +146,7 @@ CH₃CH₂CH₂CH₂-CH₂-OH  →  CH₃CH₂CH₂CH₂-CHO
 - Mild oxidation (PCC) → Aldehyde
 - Strong oxidation (Jones) → Carboxylic acid
 
-**Product**: Pentanal (CH₃CH₂CH₂CH₂CHO) with no over-oxidation
+**Product**: Pentanal $(CH_{3}CH_{2}CH_{2}CH_{2}CHO)$ with no over-oxidation
 
 **MCAT Strategy**: "1° alcohol needs to be an aldehyde" → **PCC is your friend**. Practice this memorization: 1° → aldehyde (PCC), 2° → ketone (any oxidizing agent), carboxylic acid (strong oxidation or Jones).
 </details>
@@ -154,23 +154,23 @@ CH₃CH₂CH₂CH₂-CH₂-OH  →  CH₃CH₂CH₂CH₂-CHO
 <details>
 <summary><b>Example 3: Predict aldol condensation product</b></summary>
 
-**Question:** What is the major product when acetaldehyde (CH₃CHO) undergoes an aldol condensation followed by dehydration?
+**Question:** What is the major product when acetaldehyde $(CH_{3}CHO)$ undergoes an aldol condensation followed by dehydration?
 <pre>
        O                    O
        ‖                    ‖
-    CH₃-C-H  (aldehyde with α-H's on the methyl)
+    $CH_{3}-C-H$  (aldehyde with α-H's on the methyl)
 </pre>
 
 **Solution**:
-1. **Enolate formation**: α-H on acetaldehyde deprotonated by base → enolate (CH₂=CHO⁻)
+1. **Enolate formation**: α-H on acetaldehyde deprotonated by base → enolate ($CH_{2}$=$CHO^{-}$)
 2. **Nucleophilic attack**: Enolate attacks the carbonyl carbon of a second acetaldehyde molecule
 3. **Aldol adduct**: 
    <pre>
-   CH₃-CHOH-CH₂-CHO
+   $CH_{3}-CHOH-CH_{2}-CHO$
    (3-hydroxybutanal / aldol adduct)
    </pre>
 4. **Dehydration** (heat + acid): Water leaves from aldol adduct
-5. **Final product**: **2-butenal (crotonaldehyde)**, CH₃-CH=CH-CHO (α,β-unsaturated aldehyde)
+5. **Final product**: **2-butenal (crotonaldehyde)**, $CH_{3}-CH$=CH-CHO (α,β-unsaturated aldehyde)
 
 **Key**: The double bond forms between the α-carbon and the carbonyl-bearing carbon
 
@@ -180,25 +180,25 @@ CH₃CH₂CH₂CH₂-CH₂-OH  →  CH₃CH₂CH₂CH₂-CHO
 <details>
 <summary><b>Example 4: Nucleophilic addition vs. acyl substitution mechanism choice</b></summary>
 
-**Question:** Predict whether acetone (CH₃COCH₃) reacts via nucleophilic addition (NA) or nucleophilic acyl substitution (NAS) when treated with methylamine (CH₃NH₂):
+**Question:** Predict whether acetone $(CH_{3}COCH_{3})$ reacts via nucleophilic addition (NA) or nucleophilic acyl substitution (NAS) when treated with methylamine $(CH_{3}NH_{2})$:
 
 **Solution**:
 1. **Structure of acetone**: $CH_3-C(=O)-CH_3$
 2. **Key question**: Is there a leaving group on the carbonyl carbon?
-   - CHO carbon is bonded to: C, C, O (no leaving group like Cl, OCH₃, OAc, etc.)
+   - CHO carbon is bonded to: C, C, O (no leaving group like Cl, $OCH_{3}$, OAc, etc.)
 3. **Answer**: **Nucleophilic addition** (NA)
 4. **Mechanism**:
    - Methylamine acts as nucleophile, attacks C=O
    - Intermediate: C-OH tetrahedral intermediate
    - Lone pair on N attacks C, OH leaves
-   - Product: **Imine** (CH₃-N=C(CH₃)₂ or iminium salt initially)
+   - Product: **Imine** ($CH_{3}-N$=$C(CH_{3})_{2}$ or iminium salt initially)
 5. **Final product**: N-methylpropan-2-imine or acetone methyl imine
 
 **Compare to acyl substitution**:
 <pre>
-If you had: CH₃-C(=O)-OCH₃  (methyl ester — HAS leaving group OCH₃)
+If you had: $CH_{3}-C$(=O)$-OCH_{3}$  (methyl ester — HAS leaving group $OCH_{3}$)
 Then: Nucleophilic ACYL substitution occurs
-Product: CH₃-C(=O)-NHCH₃ (amide, with OCH₃ leaving as methoxide)
+Product: $CH_{3}-C$(=O)$-NHCH_{3}$ (amide, with $OCH_{3}$ leaving as methoxide)
 </pre>
 
 **MCAT Strategy**: Ketones/aldehydes → NA (no leaving group). Esters/acid halides/anhydrides → NAS (leaving group present). This is a fundamental distinction tested every year.

@@ -75,13 +75,13 @@ $$V_1 = \\frac{M_2 V_2}{M_1} = \\frac{0.50 \\times 0.250}{12} = 0.0104 \\text{ L
 
 ### Solubility Rules (MCAT High-Yield)
 
-**Always soluble:** all Na⁺, K⁺, NH₄⁺, NO₃⁻, C₂H₃O₂⁻ salts
+**Always soluble:** all $Na^{+}$, $K^{+}$, $NH_{4}^{+}$, $NO_{3}^{-}$, $C_{2}H_{3}O_{2}^{-}$ salts
 
-**Usually soluble:** halides (Cl⁻, Br⁻, I⁻) **except** AgX, PbX₂, Hg₂X₂
+**Usually soluble:** halides ($Cl^{-}$, $Br^{-}$, $I^{-}$) **except** AgX, $PbX_{2}$, $Hg_{2}X_{2}$
 
-**Usually insoluble:** carbonates (CO₃²⁻), phosphates (PO₄³⁻), hydroxides (OH⁻) **except** Group IA + Ba²⁺
+**Usually insoluble:** carbonates $(CO_{3}^{2-})$, phosphates $(PO_{4}^{3-})$, hydroxides $(OH^{-})$ **except** Group IA + $Ba^{2+}$
 
-**Usually insoluble:** sulfates (SO₄²⁻) **except** MgSO₄, CaSO₄ (slightly), BaSO₄ (insoluble)
+**Usually insoluble:** sulfates $(SO_{4}^{2-})$ **except** $MgSO_{4}$, $CaSO_{4}$ (slightly), $BaSO_{4}$ (insoluble)
 `
     },
     {
@@ -93,16 +93,16 @@ $$V_1 = \\frac{M_2 V_2}{M_1} = \\frac{0.50 \\times 0.250}{12} = 0.0104 \\text{ L
           {
             question: `In the reaction $2\\text{H}_2 + \\text{O}_2 \\to 2\\text{H}_2\\text{O}$, if 4.0 g of $\\text{H}_2$ and 32.0 g of $\\text{O}_2$ are mixed, which is the limiting reagent? ($\\text{H}_2$ = 2 g/mol, $\\text{O}_2$ = 32 g/mol)`,
             options: [
-              `$\\text{H}_2$ (2 mol available, needs 2 mol per mol O₂)`,
+              `$\\text{H}_2$ (2 mol available, needs 2 mol per mol $O_{2}$)`,
               `$\\text{O}_2$ (exactly 1 mol available, stoichiometrically balanced)`,
               `Neither — exact stoichiometric amounts are present`,
               `Both are limiting reagents simultaneously`
             ],
             correctAnswer: 2,
-            explanation: `mol H₂ = 4.0/2 = 2.0 mol; mol O₂ = 32.0/32 = 1.0 mol. Ratio check: H₂/2 = 1.0; O₂/1 = 1.0. Equal ratios → exact stoichiometric amounts → neither is limiting, and 2.0 mol H₂O is produced.`
+            explanation: `mol $H_{2}$ = 4.0/2 = 2.0 mol; mol $O_{2}$ = 32.0/32 = 1.0 mol. Ratio check: $H_{2}/2$ = 1.0; $O_{2}/1$ = 1.0. Equal ratios → exact stoichiometric amounts → neither is limiting, and 2.0 mol $H_{2}O$ is produced.`
           },
           {
-            question: `A researcher dissolves 0.10 mol NaCl in water to make 500 mL of solution. What is the molarity of Na⁺ ions?`,
+            question: `A researcher dissolves 0.10 mol NaCl in water to make 500 mL of solution. What is the molarity of $Na^{+}$ ions?`,
             options: [
               `0.20 M`,
               `0.10 M`,
@@ -110,7 +110,7 @@ $$V_1 = \\frac{M_2 V_2}{M_1} = \\frac{0.50 \\times 0.250}{12} = 0.0104 \\text{ L
               `0.050 M`
             ],
             correctAnswer: 0,
-            explanation: `M = 0.10 mol / 0.500 L = 0.20 M for NaCl. Since NaCl is a strong electrolyte that fully dissociates, [Na⁺] = [Cl⁻] = 0.20 M.`
+            explanation: `M = 0.10 mol / 0.500 L = 0.20 M for NaCl. Since NaCl is a strong electrolyte that fully dissociates, [$Na^{+}$] = [$Cl^{-}$] = 0.20 M.`
           },
           {
             question: `How many milliliters of 12 M HCl are needed to prepare 250 mL of 0.50 M HCl?`,
@@ -143,7 +143,7 @@ $$V_1 = \\frac{M_2 V_2}{M_1} = \\frac{0.50 \\times 0.250}{12} = 0.0104 \\text{ L
               `0.20 mol`
             ],
             correctAnswer: 1,
-            explanation: `Moles CaCO₃ = 5.0/100 = 0.050 mol. The 1:1 mole ratio of CaCO₃ to CO₂ gives 0.050 mol CO₂.`
+            explanation: `Moles $CaCO_{3}$ = 5.0/100 = 0.050 mol. The 1:1 mole ratio of $CaCO_{3}$ to $CO_{2}$ gives 0.050 mol $CO_{2}$.`
           }
         ]
       }
@@ -250,7 +250,7 @@ Adding a nonvolatile solute always **lowers** vapor pressure.
 - **Dilution:** $M_1V_1 = M_2V_2$ — moles of solute are conserved.
 - **Colligative properties** depend on particle count ($i$): more particles = greater effect.
 - **Osmosis:** water moves toward higher solute concentration (lower water potential).
-- **Key solubility rules:** all NO₃⁻ soluble; AgCl insoluble; BaSO₄ insoluble.
+- **Key solubility rules:** all $NO_{3}^{-}$ soluble; AgCl insoluble; $BaSO_{4}$ insoluble.
 `
     }
   ]

@@ -62,7 +62,7 @@ This pressure difference can be measured with a U-tube manometer connected betwe
             explanation: 'Continuity: narrower → faster. Bernoulli: faster → lower pressure. The narrow section has high speed and low pressure.'
           },
           {
-            question: 'A pipe narrows from area 20 cm² to 5 cm². If the speed in the wide section is 2 m/s and the pressure is 150 kPa, the pressure in the narrow section is: ($\\rho = 1000$ kg/m³)',
+            question: 'A pipe narrows from area 20 $cm^{2}$ to 5 $cm^{2}$. If the speed in the wide section is 2 m/s and the pressure is 150 kPa, the pressure in the narrow section is: ($\\rho = 1000$ $kg/m^{3}$)',
             options: [
               '150 kPa',
               '138 kPa',
@@ -106,7 +106,7 @@ By measuring the pressure drop between wide and narrow sections, you can calcula
       id: 'be2-venturi-drill',
       type: 'input-boxes' as const,
       content: `
-**Venturi Tube Drill** ($\\rho_w = 1000$ kg/m³)
+**Venturi Tube Drill** ($\\rho_w = 1000$ $kg/m^{3}$)
 
 A horizontal Venturi tube has wide diameter 8.0 cm and narrow diameter 4.0 cm. The pressure difference between the two sections is 9000 Pa.
 
@@ -124,7 +124,7 @@ A horizontal Venturi tube has wide diameter 8.0 cm and narrow diameter 4.0 cm. T
         hint1: '$A_1/A_2 = (d_1/d_2)^2 = (8/4)^2$.',
         hint2: '$v_2 = 4v_1$. $\\Delta P = \\frac{1}{2}\\rho(v_2^2 - v_1^2) = \\frac{1}{2}\\rho(16v_1^2 - v_1^2) = \\frac{15}{2}\\rho v_1^2$. Solve: $v_1 = \\sqrt{2\\Delta P/(15\\rho)}$.',
         hint3: '$Q = A_1 v_1 = \\pi(0.04)^2(1.1)$. Convert to L/s.',
-        explanation: 'Ratio = 4. $v_1 = \\sqrt{2(9000)/(15 \\times 1000)} = \\sqrt{1.2} = 1.095 ≈ 1.1$ m/s. $Q = \\pi(0.04)^2(1.1) = 5.53 \\times 10^{-3}$ m³/s ≈ 5.5 L/s.'
+        explanation: 'Ratio = 4. $v_1 = \\sqrt{2(9000)/(15 \\times 1000)} = \\sqrt{1.2} = 1.095 ≈ 1.1$ m/s. $Q = \\pi(0.04)^2(1.1) = 5.53 \\times 10^{-3}$ $m^{3}/s$ ≈ 5.5 L/s.'
       }
     },
     {

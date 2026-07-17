@@ -37,7 +37,7 @@ $$\\sum F_{\\parallel} = ma$$
 
 ### Worked Example
 
-A 12 kg block is pulled up a 30° rough incline ($\\mu_k = 0.20$) by a rope parallel to the surface with 100 N ($g = 10$ m/s²).
+A 12 kg block is pulled up a 30° rough incline ($\\mu_k = 0.20$) by a rope parallel to the surface with 100 N ($g = 10$ $m/s^{2}$).
 
 **Normal force:** $N = mg\\cos 30° = 120 \\times 0.866 = 103.9$ N
 
@@ -69,7 +69,7 @@ $$a = 1.6 \\text{ m/s}^2$$
             explanation: 'The block slides if $\\tan\\theta > \\mu_s$. Here $\\tan 45° = 1.0 > 0.50 = \\mu_s$. The incline is too steep for static friction to hold.'
           },
           {
-            question: 'A force is applied parallel to a 37° incline to push a 10 kg block up at constant velocity ($\\mu_k = 0.25$, $g = 10$ m/s²). The force is:',
+            question: 'A force is applied parallel to a 37° incline to push a 10 kg block up at constant velocity ($\\mu_k = 0.25$, $g = 10$ $m/s^{2}$). The force is:',
             options: [
               '60 N',
               '80 N',
@@ -99,9 +99,9 @@ $$a = 1.6 \\text{ m/s}^2$$
       content: `
 **Workshop Calculations** 🧮
 
-1) A 5 kg block slides from rest down a 53° incline with $\\mu_k = 0.30$ for 2 seconds. What is its final speed (in m/s)? ($g = 10$ m/s², $\\sin 53° = 0.80$, $\\cos 53° = 0.60$)
+1) A 5 kg block slides from rest down a 53° incline with $\\mu_k = 0.30$ for 2 seconds. What is its final speed (in m/s)? ($g = 10$ $m/s^{2}$, $\\sin 53° = 0.80$, $\\cos 53° = 0.60$)
 
-2) A 10 kg block on a frictionless 30° incline is connected to a 4 kg hanging mass. What is the acceleration (in m/s²)? ($\\sin 30° = 0.50$)
+2) A 10 kg block on a frictionless 30° incline is connected to a 4 kg hanging mass. What is the acceleration $(in m/s^{2})$? ($\\sin 30° = 0.50$)
 
 3) What minimum $\\mu_s$ is needed to keep a block stationary on a 60° incline? ($\\tan 60° = 1.73$)
 
@@ -110,10 +110,10 @@ $$a = 1.6 \\text{ m/s}^2$$
       exercise: {
         boxes: 3,
         correctAnswers: ['12.4', '0.71', '1.73'],
-        hint1: '$a = 10(0.80 - 0.30 \\times 0.60) = 10(0.62) = 6.2$ m/s². $v = at = 6.2 \\times 2$.',
+        hint1: '$a = 10(0.80 - 0.30 \\times 0.60) = 10(0.62) = 6.2$ $m/s^{2}$. $v = at = 6.2 \\times 2$.',
         hint2: 'Net force $= m_1 g\\sin 30° - m_2 g = 50 - 40 = 10$ N. $a = 10/14$.',
         hint3: '$\\mu_s \\geq \\tan\\theta$.',
-        explanation: '1) $a = 6.2$ m/s². $v = 12.4$ m/s. 2) $m_1$ slides down: $a = (50 - 40)/14 \\approx 0.71$ m/s². 3) $\\mu_s = \\tan 60° = 1.73$.'
+        explanation: '1) $a = 6.2$ $m/s^{2}$. $v = 12.4$ m/s. 2) $m_1$ slides down: $a = (50 - 40)/14 \\approx 0.71$ $m/s^{2}$. 3) $\\mu_s = \\tan 60° = 1.73$.'
       }
     },
     {
@@ -154,7 +154,7 @@ $$a = 1.6 \\text{ m/s}^2$$
       exercise: {
         questions: [
           {
-            question: 'A 8 kg block on a 37° incline ($\\mu_k = 0.50$, $g = 10$ m/s²) is given an initial push of 6 m/s up the slope. How far up does it travel? ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$)',
+            question: 'A 8 kg block on a 37° incline ($\\mu_k = 0.50$, $g = 10$ $m/s^{2}$) is given an initial push of 6 m/s up the slope. How far up does it travel? ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$)',
             options: [
               '1.0 m',
               '1.8 m',
@@ -162,18 +162,18 @@ $$a = 1.6 \\text{ m/s}^2$$
               '3.6 m'
             ],
             correctAnswer: 1,
-            explanation: 'Going up: $a = g(\\sin 37° + \\mu_k\\cos 37°) = 10(0.60 + 0.40) = 10$ m/s². $0 = 36 - 2(10)d$. $d = 36/20 = 1.8$ m.'
+            explanation: 'Going up: $a = g(\\sin 37° + \\mu_k\\cos 37°) = 10(0.60 + 0.40) = 10$ $m/s^{2}$. $0 = 36 - 2(10)d$. $d = 36/20 = 1.8$ m.'
           },
           {
-            question: 'A 6 kg block on a frictionless 30° incline is connected to a 6 kg hanging mass. The acceleration of the system is ($g = 10$ m/s²):',
+            question: 'A 6 kg block on a frictionless 30° incline is connected to a 6 kg hanging mass. The acceleration of the system is ($g = 10$ $m/s^{2}$):',
             options: [
-              '0 m/s²',
-              '2.5 m/s²',
-              '5.0 m/s²',
-              '10 m/s²'
+              '0 $m/s^{2}$',
+              '2.5 $m/s^{2}$',
+              '5.0 $m/s^{2}$',
+              '10 $m/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: 'Net force = $m_2 g - m_1 g\\sin 30° = 60 - 30 = 30$ N. Total mass = 12 kg. $a = 30/12 = 2.5$ m/s².'
+            explanation: 'Net force = $m_2 g - m_1 g\\sin 30° = 60 - 30 = 30$ N. Total mass = 12 kg. $a = 30/12 = 2.5$ $m/s^{2}$.'
           }
         ]
       }

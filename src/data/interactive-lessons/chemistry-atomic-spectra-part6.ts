@@ -22,7 +22,7 @@ export const chemAtomicSpectraPart6Data = {
 > 🛠️ **Reference equations:**  
 > $c = \\lambda \\nu, \\quad E = h\\nu = hc/\\lambda$  
 > $E_n = -2.18 \\times 10^{-18}/n^2$ J (hydrogen)  
-> $1/\\lambda = R_H (1/n_f^2 - 1/n_i^2), \\quad R_H = 1.097 \\times 10^{7}$ m⁻¹  
+> $1/\\lambda = R_H (1/n_f^2 - 1/n_i^2), \\quad R_H = 1.097 \\times 10^{7}$ $m^{-1}$  
 > $BE = h\\nu - KE$  
 > Constants: $h = 6.626 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s, $N_A = 6.022 \\times 10^{23}$`
     },
@@ -139,7 +139,7 @@ This matches $|E_1| = 2.18 \\times 10^{-18}$ J $= 13.6$ eV exactly — H's groun
         hint2: '$\\lambda = hc/E$.',
         hint3: '$1/\\lambda = R_H(1 - 1/n_i^2)$ with $\\lambda = 9.5 \\times 10^{-8}$ m.',
         hint4: 'Higher energy by factor 4 → wavelength shorter by factor 4: $486/4 = 121.5$ nm.',
-        explanation: '1) $E_{\\text{ph}} = 2.18 \\times 10^{-18} + 5.45 \\times 10^{-19} = 2.725 \\times 10^{-18}$ J ≈ $2.72 \\times 10^{-18}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.725 \\times 10^{-18}) = 7.30 \\times 10^{-8}$ m = 73 nm. 3) $1/(9.5\\times 10^{-8}) = 1.053 \\times 10^7$ m⁻¹. $1/n_i^2 = 1 - 1.053\\times 10^7/1.097\\times 10^7 = 0.04$ → $n_i = 5$. 4) $\\lambda = 486/4 = 121.5 ≈ 122$ nm.'
+        explanation: '1) $E_{\\text{ph}} = 2.18 \\times 10^{-18} + 5.45 \\times 10^{-19} = 2.725 \\times 10^{-18}$ J ≈ $2.72 \\times 10^{-18}$ J. 2) $\\lambda = (6.626 \\times 10^{-34})(3 \\times 10^8)/(2.725 \\times 10^{-18}) = 7.30 \\times 10^{-8}$ m = 73 nm. 3) $1/(9.5\\times 10^{-8}) = 1.053 \\times 10^7$ $m^{-1}$. $1/n_i^2 = 1 - 1.053\\times 10^7/1.097\\times 10^7 = 0.04$ → $n_i = 5$. 4) $\\lambda = 486/4 = 121.5 ≈ 122$ nm.'
       }
     },
     {

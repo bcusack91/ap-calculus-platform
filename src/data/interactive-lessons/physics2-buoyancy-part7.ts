@@ -66,7 +66,7 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
             explanation: 'If $F_B > W$, the container would float up! It cannot sit on the bottom unless held down. The normal force cannot pull downward. This is a trick — the scenario is physically impossible without the container being anchored.'
           },
           {
-            question: 'A cube of ice ($\\rho = 917$ kg/m³) floats in a glass of water. As the ice melts, the water level:',
+            question: 'A cube of ice ($\\rho = 917$ $kg/m^{3}$) floats in a glass of water. As the ice melts, the water level:',
             options: [
               'Rises (liquid water takes more space)',
               'Falls (ice is less dense)',
@@ -94,11 +94,11 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
       id: 'bu7-mixed-drill',
       type: 'input-boxes' as const,
       content: `
-**Mixed Problem Drill** (use $g = 10$ m/s², $\\rho_w = 1000$ kg/m³)
+**Mixed Problem Drill** (use $g = 10$ $m/s^{2}$, $\\rho_w = 1000$ $kg/m^{3}$)
 
-An object has mass 2.0 kg and volume $8.0 \\times 10^{-4}$ m³.
+An object has mass 2.0 kg and volume $8.0 \\times 10^{-4}$ $m^{3}$.
 
-1) Density of the object (in kg/m³)
+1) Density of the object $(in kg/m^{3})$
 
 2) Will it sink or float in water? (type "sink" or "float")
 
@@ -110,7 +110,7 @@ An object has mass 2.0 kg and volume $8.0 \\times 10^{-4}$ m³.
         hint1: '$\\rho = m/V = 2.0 / (8.0 \\times 10^{-4})$.',
         hint2: 'Compare $\\rho_{\\text{obj}}$ to $\\rho_w$. If $\\rho_{\\text{obj}} > \\rho_w$, it sinks.',
         hint3: '$W_{\\text{app}} = W - F_B = mg - \\rho_w V g = (2.0)(10) - (1000)(8 \\times 10^{-4})(10)$.',
-        explanation: '$\\rho = 2500$ kg/m³ (like glass). Since $2500 > 1000$, it sinks. $W_{\\text{app}} = 20 - 8 = 12$ N.'
+        explanation: '$\\rho = 2500$ $kg/m^{3}$ (like glass). Since $2500 > 1000$, it sinks. $W_{\\text{app}} = 20 - 8 = 12$ N.'
       }
     },
     {
@@ -125,13 +125,13 @@ A cylindrical cup (mass 0.15 kg, outer radius 4.0 cm, height 10.0 cm) floats upr
 
 **(a)** With no pellets, how deep does the cup float?
 
-$V_{\\text{sub}} = m/\\rho_w = 0.15/1000 = 1.5 \\times 10^{-4}$ m³
+$V_{\\text{sub}} = m/\\rho_w = 0.15/1000 = 1.5 \\times 10^{-4}$ $m^{3}$
 
 $V_{\\text{sub}} = \\pi r^2 d$ → $d = V/(\\pi r^2) = 1.5 \\times 10^{-4}/(\\pi (0.04)^2) = 0.030$ m = **3.0 cm**
 
 **(b)** What mass of pellets makes the cup sink to 8.0 cm?
 
-$V_{\\text{sub}} = \\pi (0.04)^2 (0.08) = 4.02 \\times 10^{-4}$ m³
+$V_{\\text{sub}} = \\pi (0.04)^2 (0.08) = 4.02 \\times 10^{-4}$ $m^{3}$
 
 $m_{\\text{total}} = \\rho_w V_{\\text{sub}} = 1000 \\times 4.02 \\times 10^{-4} = 0.402$ kg
 
@@ -139,7 +139,7 @@ $m_{\\text{pellets}} = 0.402 - 0.15 = 0.252$ kg ≈ **0.25 kg**
 
 **(c)** At what pellet mass does the cup just go under?
 
-$V_{\\text{max}} = \\pi (0.04)^2 (0.10) = 5.03 \\times 10^{-4}$ m³
+$V_{\\text{max}} = \\pi (0.04)^2 (0.10) = 5.03 \\times 10^{-4}$ $m^{3}$
 
 $m_{\\text{max}} = 1000 \\times 5.03 \\times 10^{-4} = 0.503$ kg
 

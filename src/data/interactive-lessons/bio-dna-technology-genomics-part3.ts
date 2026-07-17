@@ -50,7 +50,7 @@ A cloning plasmid typically contains:
 **Transformation** = uptake of foreign DNA by a cell.
 
 Methods:
-- **Heat shock**: Briefly heat CaCl₂-treated *E. coli* to 42°C → membrane becomes transiently permeable
+- **Heat shock**: Briefly heat $CaCl_{2}$-treated *E. coli* to 42°C → membrane becomes transiently permeable
 - **Electroporation**: Short electrical pulse creates temporary pores in the membrane
 - For eukaryotes: **lipofection**, **microinjection**, or **gene guns** (biolistics)
 

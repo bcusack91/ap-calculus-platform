@@ -42,10 +42,10 @@ A **sigma bond** forms when two orbitals overlap **end-to-end** (head-on), with 
 
 | Overlap Type | Example |
 |-------------|---------|
-| s–s | H–H in H₂ |
-| s–sp³ | H–C in CH₄ |
-| sp³–sp³ | C–C in ethane |
-| sp²–sp² | C–C sigma in ethene |
+| s–s | H–H in $H_{2}$ |
+| s–$sp^{3}$ | H–C in $CH_{4}$ |
+| $sp^{3}$–$sp^{3}$ | C–C in ethane |
+| $sp^{2}$–$sp^{2}$ | C–C sigma in ethene |
 | sp–sp | C–C sigma in acetylene |
 
 ### Key Properties of Sigma Bonds
@@ -147,7 +147,7 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
    - For double bonds: the second line = 1 pi bond
    - For triple bonds: the second and third lines = 2 pi bonds
 
-> **Problem:** Count all σ and π bonds in ethene (C₂H₄), structure H₂C=CH₂.
+> **Problem:** Count all σ and π bonds in ethene $(C_{2}H_{4})$, structure $H_{2}C$=$CH_{2}$.
 
 > **Solution:**
 > - 4 C–H single bonds → 4σ
@@ -156,7 +156,7 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
 
 ---
 
-> **Problem:** Count all σ and π bonds in acetylene (C₂H₂), structure HC≡CH.
+> **Problem:** Count all σ and π bonds in acetylene $(C_{2}H_{2})$, structure HC≡CH.
 
 > **Solution:**
 > - 2 C–H single bonds → 2σ
@@ -180,29 +180,29 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
       exercise: {
         inputs: [
           {
-            label: 'Total sigma (σ) bonds in ethane (C₂H₆): H₃C–CH₃',
+            label: 'Total sigma (σ) bonds in ethane $(C_{2}H_{6})$: $H_{3}C$–$CH_{3}$',
             correctAnswer: '7',
             explanation: 'Ethane has 6 C–H single bonds (6σ) + 1 C–C single bond (1σ) = 7 sigma bonds total.'
           },
           {
-            label: 'Total pi (π) bonds in ethane (C₂H₆)',
+            label: 'Total pi (π) bonds in ethane $(C_{2}H_{6})$',
             correctAnswer: '0',
             explanation: 'Ethane has only single bonds. Single bonds are all sigma bonds with no pi bonds.'
           },
           {
-            label: 'Total sigma (σ) bonds in CO₂ (O=C=O)',
+            label: 'Total sigma (σ) bonds in $CO_{2}$ (O=C=O)',
             correctAnswer: '2',
-            explanation: 'CO₂ has 2 double bonds. Each double bond contains 1 sigma bond. Total: 2σ.'
+            explanation: '$CO_{2}$ has 2 double bonds. Each double bond contains 1 sigma bond. Total: 2σ.'
           },
           {
-            label: 'Total pi (π) bonds in CO₂ (O=C=O)',
+            label: 'Total pi (π) bonds in $CO_{2}$ (O=C=O)',
             correctAnswer: '2',
-            explanation: 'CO₂ has 2 double bonds. Each double bond contains 1 pi bond. Total: 2π.'
+            explanation: '$CO_{2}$ has 2 double bonds. Each double bond contains 1 pi bond. Total: 2π.'
           },
           {
-            label: 'Total sigma (σ) bonds in N₂ (N≡N)',
+            label: 'Total sigma (σ) bonds in $N_{2}$ (N≡N)',
             correctAnswer: '1',
-            explanation: 'N₂ has 1 triple bond. A triple bond = 1σ + 2π. So there is 1 sigma bond.'
+            explanation: '$N_{2}$ has 1 triple bond. A triple bond = 1σ + 2π. So there is 1 sigma bond.'
           }
         ]
       }
@@ -253,7 +253,7 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
       exercise: {
         questions: [
           {
-            question: 'How many sigma and pi bonds are in acetic acid (CH₃COOH) if the structure is: H₃C–C(=O)–O–H? (3 C–H bonds, 1 C–C bond, 1 C=O, 1 C–O bond, 1 O–H bond)',
+            question: 'How many sigma and pi bonds are in acetic acid $(CH_{3}COOH)$ if the structure is: $H_{3}C$–C(=O)–O–H? (3 C–H bonds, 1 C–C bond, 1 C=O, 1 C–O bond, 1 O–H bond)',
             options: [
               '6σ, 0π',
               '7σ, 1π',
@@ -264,7 +264,7 @@ $$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
             explanation: 'Count each bond: 3 C–H (3σ) + 1 C–C (1σ) + 1 C=O (1σ + 1π) + 1 C–O (1σ) + 1 O–H (1σ) = 7σ + 1π.'
           },
           {
-            question: 'Ethene (C₂H₄) is a planar molecule because:',
+            question: 'Ethene $(C_{2}H_{4})$ is a planar molecule because:',
             options: [
               'All bonds are sigma bonds',
               'The pi bond prevents rotation, locking atoms in a plane',

@@ -26,7 +26,7 @@ Triangle: A = ½bh.
             question: 'Which of the following correctly describes Rectangle?',
             options: [
               'Composite figures: break into simple shapes, add/subtract areas.',
-              'Circle: A = πr², C = 2πr.',
+              'Circle: A = $\\pi r^{2}$, C = 2πr.',
               'A = lw, P = 2l + 2w.',
               'A = ½bh.'
             ],
@@ -38,11 +38,11 @@ Triangle: A = ½bh.
             options: [
               'A = lw, P = 2l + 2w.',
               'Composite figures: break into simple shapes, add/subtract areas.',
-              'Circle: A = πr², C = 2πr.',
+              'Circle: A = $\\pi r^{2}$, C = 2πr.',
               'A = ½bh.'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Key Insight: Circle: A = πr², C = 2πr. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Correct — Key Insight: Circle: A = $\\pi r^{2}$, C = 2πr. Be careful to distinguish between the different concepts in this topic.'
           }
         ]
       }
@@ -51,7 +51,7 @@ Triangle: A = ½bh.
       id: 'act-p7-detail',
       type: 'text' as const,
       content: `
-**Key Insight:** Circle: A = πr², C = 2πr.
+**Key Insight:** Circle: A = $\\pi r^{2}$, C = 2πr.
 
 **ACT Tip:** Composite figures: break into simple shapes, add/subtract areas.
       `
@@ -69,7 +69,7 @@ Triangle: A = ½bh.
             options: [
               'A = ½bh.',
               'Composite figures: break into simple shapes, add/subtract areas.',
-              'Circle: A = πr², C = 2πr.',
+              'Circle: A = $\\pi r^{2}$, C = 2πr.',
               'A = lw, P = 2l + 2w.'
             ],
             correctAnswer: 1,
@@ -88,22 +88,22 @@ Triangle: A = ½bh.
         dropdowns: [
           {
             label: 'Rectangle',
-            options: ['Composite figures: break into simple shapes, add/subtract areas.', 'A = ½bh.', 'Circle: A = πr², C = 2πr.', 'A = lw, P = 2l + 2w.']
+            options: ['Composite figures: break into simple shapes, add/subtract areas.', 'A = ½bh.', 'Circle: A = $\\pi r^{2}$, C = 2πr.', 'A = lw, P = 2l + 2w.']
           },
           {
             label: 'Triangle',
-            options: ['Circle: A = πr², C = 2πr.', 'A = ½bh.', 'A = lw, P = 2l + 2w.', 'Composite figures: break into simple shapes, add/subtract areas.']
+            options: ['Circle: A = $\\pi r^{2}$, C = 2πr.', 'A = ½bh.', 'A = lw, P = 2l + 2w.', 'Composite figures: break into simple shapes, add/subtract areas.']
           },
           {
             label: 'Key Insight',
-            options: ['Circle: A = πr², C = 2πr.', 'Composite figures: break into simple shapes, add/subtract areas.', 'A = ½bh.', 'A = lw, P = 2l + 2w.']
+            options: ['Circle: A = $\\pi r^{2}$, C = 2πr.', 'Composite figures: break into simple shapes, add/subtract areas.', 'A = ½bh.', 'A = lw, P = 2l + 2w.']
           }
         ],
-        correctAnswers: ['A = lw, P = 2l + 2w.', 'A = ½bh.', 'Circle: A = πr², C = 2πr.'],
+        correctAnswers: ['A = lw, P = 2l + 2w.', 'A = ½bh.', 'Circle: A = $\\pi r^{2}$, C = 2πr.'],
         hint1: 'Think about what each concept specifically describes in Review & Applications.',
         hint2: 'Look for key terms that distinguish each concept from the others.',
         hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Review & Applications describes a specific idea. Rectangle: A = lw, P = 2l + 2w. Triangle: A = ½bh. Key Insight: Circle: A = πr², C = 2πr.'
+        explanation: 'Each concept in Review & Applications describes a specific idea. Rectangle: A = lw, P = 2l + 2w. Triangle: A = ½bh. Key Insight: Circle: A = $\\pi r^{2}$, C = 2πr.'
       }
     }
   ]

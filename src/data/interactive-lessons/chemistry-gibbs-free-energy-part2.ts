@@ -249,7 +249,7 @@ For each combination, type "always", "never", "low T", or "high T" for when the 
       exercise: {
         questions: [
           {
-            question: 'The decomposition of CaCO₃(s) has ΔH° = +178 kJ and ΔS° = +161 J/K. At what temperature does decomposition become spontaneous?',
+            question: 'The decomposition of $CaCO_{3}(s)$ has ΔH° = +178 kJ and ΔS° = +161 J/K. At what temperature does decomposition become spontaneous?',
             options: [
               '554 K',
               '835 K',

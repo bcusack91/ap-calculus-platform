@@ -56,8 +56,8 @@ where $\\gamma = C_p/C_v$ is the **heat capacity ratio** (also called adiabatic 
 | Gas Type | $\\gamma$ | Example |
 |----------|---------|---------|
 | Monatomic | $5/3 \\approx 1.67$ | He, Ar, Ne |
-| Diatomic (room temp) | $7/5 = 1.40$ | N₂, O₂, air |
-| Polyatomic | $\\approx 1.3$ | CO₂, H₂O vapor |`
+| Diatomic (room temp) | $7/5 = 1.40$ | $N_{2}$, $O_{2}$, air |
+| Polyatomic | $\\approx 1.3$ | $CO_{2}$, $H_{2}O$ vapor |`
     },
     {
       id: 'thermodynamicprocesses-p2-adiabatic',

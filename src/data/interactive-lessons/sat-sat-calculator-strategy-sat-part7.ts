@@ -48,12 +48,12 @@ export const satCalcStrategyPart7Data = {
       question: 'Which of these SAT Math problems would take the LONGEST to solve without a calculator?',
       options: [
         'What is 15% of 200?',
-        'Find the intersection of y = x² - 3x + 1 and y = 2x - 3',
+        'Find the intersection of y = $x^{2}$ - 3x + 1 and y = 2x - 3',
         'Solve: 7x = 49',
         'What is the slope of the line through (0, 3) and (4, 11)?'
       ],
       correctAnswer: 1,
-      explanation: 'Finding the intersection of a quadratic and a line requires setting x² - 3x + 1 = 2x - 3, solving x² - 5x + 4 = 0, factoring, and finding y-values. With Desmos, graph both and click — done in 10 seconds.'
+      explanation: 'Finding the intersection of a quadratic and a line requires setting $x^{2}$ - 3x + 1 = 2x - 3, solving $x^{2}$ - 5x + 4 = 0, factoring, and finding y-values. With Desmos, graph both and click — done in 10 seconds.'
     },
     {
       id: 'cs7-text2',

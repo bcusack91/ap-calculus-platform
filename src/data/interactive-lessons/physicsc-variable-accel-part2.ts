@@ -25,7 +25,7 @@ $$v(t) = v(t_0) + \\int_{t_0}^t a(t')\\,dt'$$
     {
       id: 'varaccel2-mcq1',
       type: 'mcq' as const,
-      question: 'A particle has $a(t) = 6 - 4t$ m/s² and $v(0) = 2$ m/s. At what time does the particle reach maximum velocity?',
+      question: 'A particle has $a(t) = 6 - 4t$ $m/s^{2}$ and $v(0) = 2$ m/s. At what time does the particle reach maximum velocity?',
       options: ['$t = 1.5$ s', '$t = 3$ s', '$t = 0.5$ s', '$t = 2$ s'],
       correctAnswer: 0,
       explanation: 'Maximum $v$ occurs when $a(t) = 0$: $6 - 4t = 0 \\implies t = 1.5$ s. Since $a$ goes from positive to negative, $v$ has a maximum here.'
@@ -64,7 +64,7 @@ As $t \\to \\infty$: $v \\to 9$ m/s (terminal velocity).`
     {
       id: 'varaccel2-mcq2',
       type: 'mcq' as const,
-      question: 'An object starts with $v(0) = -10$ m/s and has $a(t) = 4$ m/s² (constant). When does it first stop?',
+      question: 'An object starts with $v(0) = -10$ m/s and has $a(t) = 4$ $m/s^{2}$ (constant). When does it first stop?',
       options: ['$t = 2.5$ s', '$t = 5$ s', '$t = 10$ s', '$t = 0.4$ s'],
       correctAnswer: 0,
       explanation: '$v(t) = -10 + 4t = 0 \\implies t = 10/4 = 2.5$ s.'
@@ -81,8 +81,8 @@ $$\\Delta v = \\int_{t_1}^{t_2} a\\,dt = \\text{area under } a\\text{-}t \\text{
 ### Example: Piecewise Linear Acceleration
 
 Suppose the $a$-$t$ graph shows:
-- $a = 4$ m/s² for $0 \\le t \\le 3$
-- $a = -2$ m/s² for $3 < t \\le 9$
+- $a = 4$ $m/s^{2}$ for $0 \\le t \\le 3$
+- $a = -2$ $m/s^{2}$ for $3 < t \\le 9$
 
 With $v(0) = 0$:
 
@@ -101,7 +101,7 @@ $$\\Delta v \\approx \\sum_{i} \\frac{a_i + a_{i+1}}{2} \\Delta t_i$$`
     {
       id: 'varaccel2-mcq3',
       type: 'mcq' as const,
-      question: 'The acceleration of a particle is given in the table below. If $v(0) = 5$ m/s, estimate $v(4)$ using the trapezoidal rule.\n\n| $t$ (s) | 0 | 1 | 2 | 3 | 4 |\n|:---:|:---:|:---:|:---:|:---:|:---:|\n| $a$ (m/s²) | 2 | 4 | 3 | 1 | 0 |',
+      question: 'The acceleration of a particle is given in the table below. If $v(0) = 5$ m/s, estimate $v(4)$ using the trapezoidal rule.\n\n| $t$ (s) | 0 | 1 | 2 | 3 | 4 |\n|:---:|:---:|:---:|:---:|:---:|:---:|\n| $a$ $(m/s^{2})$ | 2 | 4 | 3 | 1 | 0 |',
       options: ['$15$ m/s', '$10$ m/s', '$5$ m/s', '$20$ m/s'],
       correctAnswer: 0,
       explanation: '$\\Delta v \\approx \\frac{1}{2}[(2+4) + (4+3) + (3+1) + (1+0)] \\cdot 1 = \\frac{1}{2}(6+7+4+1) = 9$. Wait: $\\frac{1}{2}(18) = 9$. But actually each trapezoid: $(2+4)/2 + (4+3)/2 + (3+1)/2 + (1+0)/2 = 3 + 3.5 + 2 + 0.5 = 9$. Hmm, that gives $\\Delta v = 9$, not $10$. Let me recheck: the areas are $\\frac{1}{2}(2+4)(1) + \\frac{1}{2}(4+3)(1) + \\frac{1}{2}(3+1)(1) + \\frac{1}{2}(1+0)(1) = 3 + 3.5 + 2 + 0.5 = 9$. So $v(4) = 5 + 9 = 14$. Hmm, none matches exactly. Let me recalculate: $3+3.5+2+0.5 = 9$. $v(4) = 14$. The closest answer should be... Actually the answer options I gave have $15$. Let me fix: using left-endpoint Riemann: $(2+4+3+1)(1) = 10$, giving $v(4) = 15$. With trapezoidal: $v(4) = 14$. The answer $15$ corresponds to left Riemann sum.'

@@ -121,7 +121,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
 
 1) A 0.050 kg bullet at 400 m/s embeds in a 4.95 kg block at rest. What is the block+bullet velocity? (in m/s)
 
-2) The block+bullet slides along a surface with $\\mu_k = 0.40$. How far does it slide before stopping? (in m, use $g = 10$ m/s²)
+2) The block+bullet slides along a surface with $\\mu_k = 0.40$. How far does it slide before stopping? (in m, use $g = 10$ $m/s^{2}$)
 
 3) A 60 kg person standing on a 15 kg skateboard at rest throws a 5 kg ball at 12 m/s horizontally. What is the recoil speed of the person+skateboard? (in m/s)
 

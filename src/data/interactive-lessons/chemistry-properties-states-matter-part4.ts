@@ -67,7 +67,7 @@ For water: $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol vs. $\\Delta H_{\\text{vap}} 
       exercise: {
         questions: [
           {
-            question: 'Dry ice (solid CO₂) converts directly to CO₂ gas at room temperature. This process is called:',
+            question: 'Dry ice $(solid CO_{2})$ converts directly to $CO_{2}$ gas at room temperature. This process is called:',
             options: [
               'Vaporization',
               'Deposition',
@@ -294,7 +294,7 @@ A **cooling curve** is the reverse of a heating curve — it plots temperature v
           {
             label: 'The direct conversion of a solid to a gas is called _____ (one word)',
             correctAnswer: 'sublimation',
-            explanation: 'Sublimation is the phase transition from solid directly to gas, skipping the liquid phase. Example: dry ice (CO₂) sublimes at −78°C.'
+            explanation: 'Sublimation is the phase transition from solid directly to gas, skipping the liquid phase. Example: dry ice $(CO_{2})$ sublimes at −78°C.'
           },
           {
             label: 'During a phase change, the temperature _____ (increases/decreases/remains constant)',

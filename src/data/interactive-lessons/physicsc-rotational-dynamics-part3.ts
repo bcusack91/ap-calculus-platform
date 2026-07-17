@@ -61,7 +61,7 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
 
 1) A 10 N force acts at the end of a 0.5 m wrench (perpendicular). Torque (N·m)?
 
-2) A torque of 12 N·m acts on an object with $I = 2$ kg·m². Angular acceleration (rad/s²)?
+2) A torque of 12 N·m acts on an object with $I = 2$ $kg\\cdot m^{2}$. Angular acceleration $(rad/s^{2})$?
 
 3) Two forces create torques of +7 N·m and -3 N·m. Net torque (N·m)?
     
@@ -72,7 +72,7 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
         hint1: "$\\tau = rF$ when perpendicular.",
         hint2: "$\\alpha = \\tau / I$.",
         hint3: "Add the torques (watch the signs).",
-        explanation: "1) $0.5 \\times 10 = 5$ N·m. 2) $\\alpha = 12/2 = 6$ rad/s². 3) $7 + (-3) = 4$ N·m."
+        explanation: "1) $0.5 \\times 10 = 5$ N·m. 2) $\\alpha = 12/2 = 6$ $rad/s^{2}$. 3) $7 + (-3) = 4$ N·m."
       }
     },
     {
@@ -82,7 +82,7 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The SI unit of torque is","options":["N·m","J","W","kg·m²"]},{"label":"A force applied at the pivot creates","options":["Zero torque","Maximum torque","Infinite torque","Negative torque"]}],
+        dropdowns: [{"label":"The SI unit of torque is","options":["N·m","J","W","$kg\\cdot m^{2}$"]},{"label":"A force applied at the pivot creates","options":["Zero torque","Maximum torque","Infinite torque","Negative torque"]}],
         correctAnswers: ["N·m","Zero torque"],
         hint1: "Torque = force × distance.",
         hint2: "If $r = 0$...",

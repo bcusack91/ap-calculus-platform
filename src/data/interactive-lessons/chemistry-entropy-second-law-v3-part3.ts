@@ -26,7 +26,7 @@ $$\\Delta S_{\\text{surr}} = \\frac{-\\Delta H_{\\text{sys}}}{T}$$
 | − | + | Always | Combustion |
 | + | − | Never | Electrolysis of water (requires input) |
 | − | − | Low T only | Freezing water |
-| + | + | High T only | Dissolving NH₄NO₃ |
+| + | + | High T only | Dissolving $NH_{4}NO_{3}$ |
     ` },
     { id: 'en3v3-practice', type: 'input-boxes' as const, content: `
 **Second Law Calculations** 🧮

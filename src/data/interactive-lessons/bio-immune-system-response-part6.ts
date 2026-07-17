@@ -96,9 +96,9 @@ Immunodeficiency means the immune system is weakened or absent, leaving the body
 
 **AIDS (Acquired Immunodeficiency Syndrome)**
 - Caused by **HIV (Human Immunodeficiency Virus)**
-- HIV infects and destroys **CD4⁺ helper T cells**
-- Progressive loss of CD4⁺ cells → collapse of adaptive immunity
-- Normal CD4⁺ count: ~1000 cells/μL → AIDS diagnosis: <200 cells/μL
+- HIV infects and destroys **$CD4^{+}$ helper T cells**
+- Progressive loss of $CD4^{+}$ cells → collapse of adaptive immunity
+- Normal $CD4^{+}$ count: ~1000 cells/μL → AIDS diagnosis: <200 cells/μL
 - Patients die from opportunistic infections (e.g., Pneumocystis pneumonia, Kaposi's sarcoma)
 
 > 🔑 HIV is a retrovirus — it uses reverse transcriptase to integrate its RNA genome into the host's DNA, making it extremely difficult to eliminate.
@@ -150,7 +150,7 @@ An **allergy** is an exaggerated immune response to a normally harmless substanc
           },
           {
             label: 'HIV specifically targets and destroys ___ cells',
-            options: ['CD8⁺ cytotoxic T', 'CD4⁺ helper T', 'B', 'NK']
+            options: ['$CD8^{+}$ cytotoxic T', '$CD4^{+}$ helper T', 'B', 'NK']
           },
           {
             label: 'The emergency treatment for anaphylaxis is ___',
@@ -161,11 +161,11 @@ An **allergy** is an exaggerated immune response to a normally harmless substanc
             options: ['insulin', 'myelin', 'DNA and proteins', 'red blood cells']
           }
         ],
-        correctAnswers: ['IgE', 'CD4⁺ helper T', 'epinephrine', 'DNA and proteins'],
+        correctAnswers: ['IgE', '$CD4^{+}$ helper T', 'epinephrine', 'DNA and proteins'],
         hint1: 'IgE binds to mast cells and triggers degranulation upon allergen re-exposure.',
         hint2: 'The loss of these "coordinator" cells explains why AIDS destroys adaptive immunity.',
         hint3: 'Epinephrine reverses the cardiovascular collapse and bronchoconstriction of anaphylaxis.',
-        explanation: 'IgE mediates Type I hypersensitivity (allergies). HIV targets CD4⁺ helper T cells, which coordinate the entire adaptive immune response. Epinephrine (adrenaline) is the first-line treatment for anaphylaxis because it rapidly constricts blood vessels and relaxes airway smooth muscle. Lupus is characterized by anti-nuclear antibodies that attack the body\'s own DNA and nuclear proteins.'
+        explanation: 'IgE mediates Type I hypersensitivity (allergies). HIV targets $CD4^{+}$ helper T cells, which coordinate the entire adaptive immune response. Epinephrine (adrenaline) is the first-line treatment for anaphylaxis because it rapidly constricts blood vessels and relaxes airway smooth muscle. Lupus is characterized by anti-nuclear antibodies that attack the body\'s own DNA and nuclear proteins.'
       }
     }
   ]

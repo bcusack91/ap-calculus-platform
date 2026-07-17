@@ -13,7 +13,7 @@ Density is the most fundamental fluid property. Whether an object floats or sink
 
 **In this lesson you will learn:**
 - The definition $\\rho = m/V$
-- SI units (kg/m³) and common conversions (g/cm³ ↔ kg/m³)
+- SI units $(kg/m^{3})$ and common conversions ($g/cm^{3}$ ↔ $kg/m^{3}$)
 - Densities of common fluids (water, air, mercury)
 - How density connects to mass and volume in problem solving
       `
@@ -27,12 +27,12 @@ Density is the most fundamental fluid property. Whether an object floats or sink
 $$\\rho = \\frac{m}{V}$$
 
 - $m$: mass (kg)
-- $V$: volume (m³)
-- $\\rho$: density (kg/m³, read "rho")
+- $V$: volume $(m^{3})$
+- $\\rho$: density ($kg/m^{3}$, read "rho")
 
 ### Reference Densities (memorize for AP)
 
-| Substance | Density (kg/m³) |
+| Substance | Density $(kg/m^{3})$ |
 |-----------|-----------------|
 | Air (sea level) | ~1.2 |
 | Wood (avg) | ~600–800 |
@@ -47,7 +47,7 @@ $$\\rho = \\frac{m}{V}$$
 
 $$1 \\text{ g/cm}^3 = 1000 \\text{ kg/m}^3$$
 
-So water = 1.00 g/cm³ = 1000 kg/m³.
+So water = 1.00 $g/cm^{3}$ = 1000 $kg/m^{3}$.
 
 ### Why Density Matters
 - Floats vs sinks → compare $\\rho_{obj}$ to $\\rho_{fluid}$
@@ -88,13 +88,13 @@ So water = 1.00 g/cm³ = 1000 kg/m³.
           {
             question: 'Which density value is closest to that of fresh water?',
             options: [
-              '1 kg/m³',
-              '100 kg/m³',
-              '1000 kg/m³',
-              '10,000 kg/m³'
+              '1 $kg/m^{3}$',
+              '100 $kg/m^{3}$',
+              '1000 $kg/m^{3}$',
+              '10,000 $kg/m^{3}$'
             ],
             correctAnswer: 2,
-            explanation: 'Fresh water = 1000 kg/m³ (or 1.00 g/cm³). Memorize this — it shows up in nearly every fluids problem.'
+            explanation: 'Fresh water = 1000 $kg/m^{3}$ $(or 1.00 g/cm^{3})$. Memorize this — it shows up in nearly every fluids problem.'
           }
         ]
       }
@@ -107,11 +107,11 @@ So water = 1.00 g/cm³ = 1000 kg/m³.
 
 Use SI units throughout.
 
-1) A 6.0 kg block has volume $2.0\\times10^{-3}$ m³. Density (kg/m³)?
+1) A 6.0 kg block has volume $2.0\\times10^{-3}$ $m^{3}$. Density $(kg/m^{3})$?
 
-2) A cube of metal with side length 0.10 m has mass 7.8 kg. Density (kg/m³)?
+2) A cube of metal with side length 0.10 m has mass 7.8 kg. Density $(kg/m^{3})$?
 
-3) A 500 mL container is filled with mercury. Mass (kg)? (Hint: 500 mL = $5.0\\times10^{-4}$ m³, $\\rho_{Hg} = 13{,}600$ kg/m³)
+3) A 500 mL container is filled with mercury. Mass (kg)? (Hint: 500 mL = $5.0\\times10^{-4}$ $m^{3}$, $\\rho_{Hg} = 13{,}600$ $kg/m^{3}$)
       `,
       exercise: {
         boxes: 3,
@@ -119,7 +119,7 @@ Use SI units throughout.
         hint1: '$\\rho = m/V$.',
         hint2: 'Volume of cube $= s^3$.',
         hint3: '$m = \\rho V$.',
-        explanation: '1) $\\rho = 6.0/2.0\\times10^{-3} = 3000$ kg/m³. 2) $V = (0.10)^3 = 1.0\\times10^{-3}$ m³, $\\rho = 7.8/1.0\\times10^{-3} = 7800$ kg/m³ (steel/iron). 3) $m = 13{,}600 \\times 5.0\\times10^{-4} = 6.8$ kg.'
+        explanation: '1) $\\rho = 6.0/2.0\\times10^{-3} = 3000$ $kg/m^{3}$. 2) $V = (0.10)^3 = 1.0\\times10^{-3}$ $m^{3}$, $\\rho = 7.8/1.0\\times10^{-3} = 7800$ $kg/m^{3}$ (steel/iron). 3) $m = 13{,}600 \\times 5.0\\times10^{-4} = 6.8$ kg.'
       }
     },
     {
@@ -134,25 +134,25 @@ Use SI units throughout.
             label: 'A 1 kg block of feathers and a 1 kg block of iron — which has greater density?',
             options: ['Feathers', 'Iron', 'Same', 'Cannot tell'],
             correctIndex: 1,
-            explanation: 'Same mass; iron occupies far less volume → much greater density (~7800 vs ~80 kg/m³).'
+            explanation: 'Same mass; iron occupies far less volume → much greater density (~7800 vs ~80 $kg/m^{3}$).'
           },
           {
-            label: 'Ice (917 kg/m³) is placed in fresh water (1000 kg/m³). It will:',
+            label: 'Ice $(917 kg/m^{3})$ is placed in fresh water $(1000 kg/m^{3})$. It will:',
             options: ['Sink immediately', 'Float partially submerged', 'Float fully out of water', 'Dissolve'],
             correctIndex: 1,
             explanation: 'Ice is less dense than water → floats. About 92% submerged (since 917/1000 ≈ 0.92).'
           },
           {
             label: 'Density has SI units of:',
-            options: ['kg', 'kg/m', 'kg/m²', 'kg/m³'],
+            options: ['kg', 'kg/m', '$kg/m^{2}$', '$kg/m^{3}$'],
             correctIndex: 3,
-            explanation: 'Density is mass per unit volume → kg/m³.'
+            explanation: 'Density is mass per unit volume → $kg/m^{3}$.'
           },
           {
-            label: '1.0 g/cm³ in SI units is:',
-            options: ['1.0 kg/m³', '10 kg/m³', '100 kg/m³', '1000 kg/m³'],
+            label: '1.0 $g/cm^{3}$ in SI units is:',
+            options: ['1.0 $kg/m^{3}$', '10 $kg/m^{3}$', '100 $kg/m^{3}$', '1000 $kg/m^{3}$'],
             correctIndex: 3,
-            explanation: '$1\\text{ g/cm}^3 \\times (10^{-3}\\text{ kg/g}) / (10^{-6}\\text{ m}^3/\\text{cm}^3) = 1000$ kg/m³.'
+            explanation: '$1\\text{ g/cm}^3 \\times (10^{-3}\\text{ kg/g}) / (10^{-6}\\text{ m}^3/\\text{cm}^3) = 1000$ $kg/m^{3}$.'
           }
         ]
       }
@@ -166,26 +166,26 @@ Use SI units throughout.
       exercise: {
         questions: [
           {
-            question: 'A 4 kg object has volume $5.0\\times10^{-3}$ m³. Its density is:',
+            question: 'A 4 kg object has volume $5.0\\times10^{-3}$ $m^{3}$. Its density is:',
             options: [
-              '$200$ kg/m³',
-              '$800$ kg/m³',
-              '$1250$ kg/m³',
-              '$0.0125$ kg/m³'
+              '$200$ $kg/m^{3}$',
+              '$800$ $kg/m^{3}$',
+              '$1250$ $kg/m^{3}$',
+              '$0.0125$ $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\rho = m/V = 4 / 5.0\\times10^{-3} = 800$ kg/m³ (typical for soft wood).'
+            explanation: '$\\rho = m/V = 4 / 5.0\\times10^{-3} = 800$ $kg/m^{3}$ (typical for soft wood).'
           },
           {
-            question: 'A piece of brass (density 8500 kg/m³) has mass 1.7 kg. Its volume is:',
+            question: 'A piece of brass $(density 8500 kg/m^{3})$ has mass 1.7 kg. Its volume is:',
             options: [
-              '$2.0\\times10^{-4}$ m³',
-              '$5.0\\times10^{-4}$ m³',
-              '$2.0\\times10^{-3}$ m³',
-              '$8.5\\times10^{-3}$ m³'
+              '$2.0\\times10^{-4}$ $m^{3}$',
+              '$5.0\\times10^{-4}$ $m^{3}$',
+              '$2.0\\times10^{-3}$ $m^{3}$',
+              '$8.5\\times10^{-3}$ $m^{3}$'
             ],
             correctAnswer: 0,
-            explanation: '$V = m/\\rho = 1.7 / 8500 = 2.0\\times10^{-4}$ m³.'
+            explanation: '$V = m/\\rho = 1.7 / 8500 = 2.0\\times10^{-4}$ $m^{3}$.'
           }
         ]
       }

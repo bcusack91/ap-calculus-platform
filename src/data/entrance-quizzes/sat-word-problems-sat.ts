@@ -69,7 +69,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Let r = original speed. Time at original speed: 240/r. Time at r + 20: 240/(r + 20). Setting up: 240/r − 240/(r + 20) = 1. Multiply through: 240(r + 20) − 240r = r(r + 20) → 4800 = r² + 20r → r² + 20r − 4800 = 0 → (r − 60)(r + 80) = 0 → r = 60 mph.',
+      'Let r = original speed. Time at original speed: 240/r. Time at r + 20: 240/(r + 20). Setting up: 240/r − 240/(r + 20) = 1. Multiply through: 240(r + 20) − 240r = r(r + 20) → 4800 = $r^{2}$ + 20r → $r^{2}$ + 20r − 4800 = 0 → (r − 60)(r + 80) = 0 → r = 60 mph.',
     partNumber: 2,
     partTitle: 'Rate Problems',
   },
@@ -137,7 +137,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 3,
     explanation:
-      'Pool radius = 10 ft; outer radius = 10 + 5 = 15 ft. Outer circle area: 3.14 × 15² = 3.14 × 225 = 706.5 sq ft. Pool area: 3.14 × 10² = 314 sq ft. Deck area = 706.5 − 314 = 392.5 sq ft.',
+      'Pool radius = 10 ft; outer radius = 10 + 5 = 15 ft. Outer circle area: 3.14 × $15^{2}$ = 3.14 × 225 = 706.5 sq ft. Pool area: $3.14 \\times 10^{2}$ = 314 sq ft. Deck area = 706.5 − 314 = 392.5 sq ft.',
     partNumber: 4,
     partTitle: 'Geometry Word Problems',
   },
@@ -189,7 +189,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Let t₁ = time for first leg (hours). Then t₂ = 2.5 − t₁. Distance: 40t₁ + 60(2.5 − t₁) = 120 → 40t₁ + 150 − 60t₁ = 120 → −20t₁ = −30 → t₁ = 1.5 hours.',
+      'Let $t_{1}$ = time for first leg (hours). Then $t_{2}$ = 2.5 − $t_{1}$. Distance: $40t_{1}$ + $60(2.5 - t_{1})$ = 120 → $40t_{1}$ + 150 − $60t_{1}$ = 120 → $-20t_{1}$ = −30 → $t_{1}$ = 1.5 hours.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },

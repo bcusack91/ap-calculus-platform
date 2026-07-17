@@ -12,7 +12,7 @@ export const physics2EmWavesPart2Data = {
 
 ### Intensity
 
-Intensity is the **power per unit area** carried by the wave, measured in W/m²:
+Intensity is the **power per unit area** carried by the wave, measured in $W/m^{2}$:
 
 $$I = \\frac{P}{A} = \\frac{P}{4\\pi r^2}$$
 
@@ -61,7 +61,7 @@ Light exerts pressure on surfaces! This is because EM waves carry **momentum** a
 | **Perfectly absorbing** | $P_{rad} = I/c$ | Photon stops → $\\Delta p = p$ |
 | **Perfectly reflecting** | $P_{rad} = 2I/c$ | Photon bounces → $\\Delta p = 2p$ |
 
-> 🔑 **Real-world:** Radiation pressure is tiny for everyday light, but it's the principle behind **solar sails** for spacecraft propulsion. A 1 km² sail near Earth feels ~9 N from sunlight ($I \\approx 1400$ W/m²).
+> 🔑 **Real-world:** Radiation pressure is tiny for everyday light, but it's the principle behind **solar sails** for spacecraft propulsion. A 1 $km^{2}$ sail near Earth feels ~9 N from sunlight ($I \\approx 1400$ $W/m^{2}$).
 
 ### The Poynting Vector
 
@@ -117,11 +117,11 @@ $$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$$
 
 A 100 W light bulb radiates uniformly.
 
-**1)** Intensity at 2 m distance? (in W/m², round to 1 decimal)
+**1)** Intensity at 2 m distance? (in $W/m^{2}$, round to 1 decimal)
 
-**2)** At what distance is intensity 1 W/m²? (in meters, round to 1 decimal)
+**2)** At what distance is intensity 1 $W/m^{2}$? (in meters, round to 1 decimal)
 
-**3)** If intensity is 500 W/m² and light is fully absorbed, radiation pressure? (answer in scientific notation like 1.67e-6)
+**3)** If intensity is 500 $W/m^{2}$ and light is fully absorbed, radiation pressure? (answer in scientific notation like 1.67e-6)
       `,
       exercise: {
         boxes: 3,
@@ -129,7 +129,7 @@ A 100 W light bulb radiates uniformly.
         hint1: '$I = P/(4\\pi r^2) = 100/(4\\pi \\cdot 4)$',
         hint2: '$r = \\sqrt{P/(4\\pi I)}$',
         hint3: '$P_{rad} = I/c$',
-        explanation: '1) $100/(16\\pi) \\approx 2.0$ W/m². 2) $\\sqrt{100/(4\\pi)} \\approx 2.8$ m. 3) $500/(3 \\times 10^8) \\approx 1.67 \\times 10^{-6}$ Pa.'
+        explanation: '1) $100/(16\\pi) \\approx 2.0$ $W/m^{2}$. 2) $\\sqrt{100/(4\\pi)} \\approx 2.8$ m. 3) $500/(3 \\times 10^8) \\approx 1.67 \\times 10^{-6}$ Pa.'
       }
     },
     {
@@ -152,10 +152,10 @@ A 100 W light bulb radiates uniformly.
             explanation: '$\\pi r^2$ is the area of a flat disk. A point source radiates in ALL directions — the light spreads over the surface of a sphere: $A = 4\\pi r^2$. This is one of the most common errors on AP Physics 2.'
           },
           {
-            question: 'Sunlight intensity at Earth is ~1400 W/m². At Mars (1.5 AU from Sun), it is approximately:',
-            options: ['1400 W/m²', '933 W/m²', '622 W/m²', '700 W/m²'],
+            question: 'Sunlight intensity at Earth is ~1400 $W/m^{2}$. At Mars (1.5 AU from Sun), it is approximately:',
+            options: ['1400 $W/m^{2}$', '933 $W/m^{2}$', '622 $W/m^{2}$', '700 $W/m^{2}$'],
             correctAnswer: 2,
-            explanation: 'Inverse-square law: $I_{Mars} = I_{Earth} \\times (1/1.5)^2 = 1400/2.25 \\approx 622$ W/m². This is why Mars receives less solar energy and is colder.'
+            explanation: 'Inverse-square law: $I_{Mars} = I_{Earth} \\times (1/1.5)^2 = 1400/2.25 \\approx 622$ $W/m^{2}$. This is why Mars receives less solar energy and is colder.'
           }
         ]
       }

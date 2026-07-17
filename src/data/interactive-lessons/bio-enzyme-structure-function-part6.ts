@@ -81,7 +81,7 @@ A student adds increasing amounts of substrate to an enzyme-catalyzed reaction. 
       exercise: {
         questions: [
           {
-            question: 'Mercury ions (Hg²⁺) permanently inactivate enzymes by disrupting disulfide bonds. This is an example of:',
+            question: 'Mercury ions $(Hg^{2+})$ permanently inactivate enzymes by disrupting disulfide bonds. This is an example of:',
             options: [
               'Competitive inhibition',
               'Noncompetitive inhibition',

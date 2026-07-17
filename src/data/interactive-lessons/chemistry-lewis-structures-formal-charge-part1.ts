@@ -5,7 +5,7 @@ export const chemLewisStructuresFormalChargePart1Data = {
       id: 'ls-1-1',
       type: 'text',
       title: '⚛️ What Are Valence Electrons?',
-      content: `Valence electrons are the electrons in the outermost energy level (shell) of an atom. These are the electrons that participate in chemical bonding and determine an element\'s chemical properties.\n\nFor **main group elements** (Groups 1, 2, and 13–18), the number of valence electrons equals the group number:\n\n| Group | Valence e⁻ | Examples |\n|-------|-----------|----------|\n| 1 | 1 | H, Li, Na |\n| 2 | 2 | Be, Mg, Ca |\n| 13 | 3 | B, Al |\n| 14 | 4 | C, Si |\n| 15 | 5 | N, P |\n| 16 | 6 | O, S |\n| 17 | 7 | F, Cl, Br |\n| 18 | 8 | Ne, Ar (except He = 2) |\n\nKnowing the number of valence electrons is the **first step** in drawing any Lewis structure.
+      content: `Valence electrons are the electrons in the outermost energy level (shell) of an atom. These are the electrons that participate in chemical bonding and determine an element\'s chemical properties.\n\nFor **main group elements** (Groups 1, 2, and 13–18), the number of valence electrons equals the group number:\n\n| Group | Valence $e^{-}$ | Examples |\n|-------|-----------|----------|\n| 1 | 1 | H, Li, Na |\n| 2 | 2 | Be, Mg, Ca |\n| 13 | 3 | B, Al |\n| 14 | 4 | C, Si |\n| 15 | 5 | N, P |\n| 16 | 6 | O, S |\n| 17 | 7 | F, Cl, Br |\n| 18 | 8 | Ne, Ar (except He = 2) |\n\nKnowing the number of valence electrons is the **first step** in drawing any Lewis structure.
 
 **Part 1 of 7 — Drawing Lewis Structures**
 
@@ -53,7 +53,7 @@ export const chemLewisStructuresFormalChargePart1Data = {
             question: 'How many additional electrons does chlorine (Cl, Group 17) need to complete its octet?',
             options: ['1', '2', '3', '7'],
             correctAnswer: 0,
-            explanation: 'Chlorine has 7 valence electrons (Group 17) and needs 8 − 7 = 1 more electron to complete its octet. This is why chlorine commonly forms one covalent bond or gains one electron to become Cl⁻.'
+            explanation: 'Chlorine has 7 valence electrons (Group 17) and needs 8 − 7 = 1 more electron to complete its octet. This is why chlorine commonly forms one covalent bond or gains one electron to become $Cl^{-}$.'
           }
         ]
       }
@@ -62,7 +62,7 @@ export const chemLewisStructuresFormalChargePart1Data = {
       id: 'ls-1-5',
       type: 'text',
       title: '🧮 Counting Total Valence Electrons in a Molecule',
-      content: `Before drawing a Lewis structure, you must count the **total number of valence electrons** in the molecule or ion.\n\n**Steps:**\n1. Count the valence electrons for each atom\n2. Add them all together\n3. For **anions** (negative charge): add electrons equal to the charge\n4. For **cations** (positive charge): subtract electrons equal to the charge\n\n---\n\n**Example 1: H₂O**\n- H: 1 valence e⁻ × 2 atoms = 2\n- O: 6 valence e⁻ × 1 atom = 6\n- Total = 2 + 6 = **8 valence electrons**\n\n**Example 2: CO₃²⁻ (carbonate ion)**\n- C: 4 valence e⁻ × 1 = 4\n- O: 6 valence e⁻ × 3 = 18\n- Add 2 for the 2− charge = +2\n- Total = 4 + 18 + 2 = **24 valence electrons**`
+      content: `Before drawing a Lewis structure, you must count the **total number of valence electrons** in the molecule or ion.\n\n**Steps:**\n1. Count the valence electrons for each atom\n2. Add them all together\n3. For **anions** (negative charge): add electrons equal to the charge\n4. For **cations** (positive charge): subtract electrons equal to the charge\n\n---\n\n**Example 1: $H_{2}O$**\n- H: 1 valence $e^{-}$ × 2 atoms = 2\n- O: 6 valence $e^{-}$ × 1 atom = 6\n- Total = 2 + 6 = **8 valence electrons**\n\n**Example 2: $CO_{3}^{2-}$ (carbonate ion)**\n- C: 4 valence $e^{-}$ × 1 = 4\n- O: 6 valence $e^{-}$ × 3 = 18\n- Add 2 for the 2− charge = +2\n- Total = 4 + 18 + 2 = **24 valence electrons**`
     },
     {
       id: 'ls-1-6',
@@ -72,17 +72,17 @@ export const chemLewisStructuresFormalChargePart1Data = {
       exercise: {
         inputs: [
           {
-            label: '**1.** Total valence electrons in NH₃ (nitrogen has 5, each hydrogen has 1)',
+            label: '**1.** Total valence electrons in $NH_{3}$ (nitrogen has 5, each hydrogen has 1)',
             correctAnswer: '8',
-            explanation: 'N contributes 5 valence e⁻ and each H contributes 1. Total = 5 + 3(1) = 8 valence electrons.'
+            explanation: 'N contributes 5 valence $e^{-}$ and each H contributes 1. Total = 5 + 3(1) = 8 valence electrons.'
           },
           {
-            label: '**2.** Total valence electrons in CO₂ (carbon has 4, each oxygen has 6)',
+            label: '**2.** Total valence electrons in $CO_{2}$ (carbon has 4, each oxygen has 6)',
             correctAnswer: '16',
-            explanation: 'C contributes 4 valence e⁻ and each O contributes 6. Total = 4 + 2(6) = 4 + 12 = 16 valence electrons.'
+            explanation: 'C contributes 4 valence $e^{-}$ and each O contributes 6. Total = 4 + 2(6) = 4 + 12 = 16 valence electrons.'
           },
           {
-            label: '**3.** Total valence electrons in OH⁻ (oxygen has 6, hydrogen has 1, plus 1 for the negative charge)',
+            label: '**3.** Total valence electrons in $OH^{-}$ (oxygen has 6, hydrogen has 1, plus 1 for the negative charge)',
             correctAnswer: '8',
             explanation: 'O contributes 6, H contributes 1, and we add 1 for the negative charge. Total = 6 + 1 + 1 = 8 valence electrons.'
           }
@@ -128,10 +128,10 @@ export const chemLewisStructuresFormalChargePart1Data = {
       exercise: {
         questions: [
           {
-            question: 'How many total valence electrons are in the ammonium ion, NH₄⁺?',
+            question: 'How many total valence electrons are in the ammonium ion, $NH_{4}^{+}$?',
             options: ['8', '9', '10', '7'],
             correctAnswer: 0,
-            explanation: 'N has 5 valence e⁻, each H has 1 (4 × 1 = 4), and we subtract 1 for the positive charge. Total = 5 + 4 − 1 = 8 valence electrons.'
+            explanation: 'N has 5 valence $e^{-}$, each H has 1 (4 × 1 = 4), and we subtract 1 for the positive charge. Total = 5 + 4 − 1 = 8 valence electrons.'
           }
         ]
       }

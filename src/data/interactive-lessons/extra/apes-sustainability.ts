@@ -361,9 +361,9 @@ Humanity's global ecological footprint exceeding Earth's biocapacity is the plan
 | **Wind** | Turbines convert wind kinetic energy | No emissions in use; cheap per kWh | Intermittent; bird/bat strikes; siting |
 | **Hydroelectric** | Dams convert falling water's energy | Reliable; storable | Floods land; blocks fish; disrupts rivers |
 | **Geothermal** | Earth's internal heat drives turbines | Steady ("baseload"); small footprint | Location-limited to hot zones |
-| **Biomass** | Burning plant matter / biofuels | Uses waste; "carbon-neutral" *in theory* | Emits PM/CO₂; competes with food land |
+| **Biomass** | Burning plant matter / biofuels | Uses waste; "carbon-neutral" *in theory* | Emits $PM/CO_{2}$; competes with food land |
 
-> 💡 **Carbon-neutral, not carbon-free:** Burning biomass releases CO₂, but regrowing the plants reabsorbs it — so it is roughly **carbon-neutral** over a full cycle, *not* zero-emission. Solar and wind, by contrast, emit essentially nothing while operating.`,
+> 💡 **Carbon-neutral, not carbon-free:** Burning biomass releases $CO_{2}$, but regrowing the plants reabsorbs it — so it is roughly **carbon-neutral** over a full cycle, *not* zero-emission. Solar and wind, by contrast, emit essentially nothing while operating.`,
       },
       {
         id: 'apsus3-q-sources',
@@ -376,7 +376,7 @@ Humanity's global ecological footprint exceeding Earth's biocapacity is the plan
               options: [
                 'Intermittent — output varies with sunlight and wind, so it must be stored or backed up',
                 'Nonrenewable and will run out within decades',
-                'Major direct emitters of CO₂ during operation',
+                'Major direct emitters of $CO_{2}$ during operation',
                 'More expensive than fossil fuels in every case',
               ],
               correctAnswer: 0,
@@ -430,7 +430,7 @@ The sun sets and the wind drops, but demand for electricity does not. Bridging t
         type: 'text' as const,
         content: `## Where Nuclear Fits
 
-**Nuclear power** is a special case. It is **low-carbon** (almost no CO₂ during operation) and provides steady baseload power, but it is **not renewable** — it relies on finite uranium — and it raises issues of **radioactive waste**, high upfront cost, and accident risk.
+**Nuclear power** is a special case. It is **low-carbon** (almost no $CO_{2}$ during operation) and provides steady baseload power, but it is **not renewable** — it relies on finite uranium — and it raises issues of **radioactive waste**, high upfront cost, and accident risk.
 
 | Feature | Nuclear |
 |---------|---------|
@@ -452,11 +452,11 @@ The sun sets and the wind drops, but demand for electricity does not. Bridging t
               options: [
                 'Low-carbon but NONrenewable, with concerns about radioactive waste and accidents',
                 'A renewable resource with no waste concerns',
-                'A major direct emitter of CO₂ during normal operation',
+                'A major direct emitter of $CO_{2}$ during normal operation',
                 'Identical to solar power in every respect',
               ],
               correctAnswer: 0,
-              explanation: 'Nuclear emits very little CO₂ during operation (low-carbon) and provides reliable baseload power, but it relies on finite uranium (nonrenewable) and produces long-lived radioactive waste with accident risk. Low-carbon ≠ renewable.',
+              explanation: 'Nuclear emits very little $CO_{2}$ during operation (low-carbon) and provides reliable baseload power, but it relies on finite uranium (nonrenewable) and produces long-lived radioactive waste with accident risk. Low-carbon ≠ renewable.',
             },
           ],
         },
@@ -726,9 +726,9 @@ Modern landfills capture **methane** (from anaerobic decomposition) and can burn
             { label: 'The MOST preferred action in the waste hierarchy:', options: ['Reduce', 'Reuse', 'Recycle', 'Landfill'] },
             { label: 'The LEAST preferred of the three R’s:', options: ['Recycle', 'Reduce', 'Reuse', 'Compost'] },
             { label: 'Take → Make → Dispose describes a(n):', options: ['Linear economy', 'Circular economy', 'Closed loop', 'Compost cycle'] },
-            { label: 'Greenhouse gas released by organic waste decomposing in landfills:', options: ['Methane (CH₄)', 'Oxygen (O₂)', 'Nitrogen (N₂)', 'Argon'] },
+            { label: 'Greenhouse gas released by organic waste decomposing in landfills:', options: ['Methane $(CH_{4})$', 'Oxygen $(O_{2})$', 'Nitrogen $(N_{2})$', 'Argon'] },
           ],
-          correctAnswers: ['Reduce', 'Recycle', 'Linear economy', 'Methane (CH₄)'],
+          correctAnswers: ['Reduce', 'Recycle', 'Linear economy', 'Methane $(CH_{4})$'],
           hint1: 'The order is Reduce > Reuse > Recycle.',
           hint2: 'Recycle is third (least preferred of the three).',
           hint3: '"Take-make-dispose" is the linear model; landfills emit methane.',
@@ -904,7 +904,7 @@ Ecologist **Garrett Hardin** described the **tragedy of the commons**: when a sh
 | Commons | Individual incentive | Collective result |
 |---------|----------------------|-------------------|
 | Ocean fisheries | Catch more fish now | Stock collapses (e.g., cod) |
-| Atmosphere | Emit CO₂ for free | Climate change for all |
+| Atmosphere | Emit $CO_{2}$ for free | Climate change for all |
 | Aquifer | Pump more groundwater | Aquifer depletes for everyone |
 
 **Solutions** generally fall into a few categories:
@@ -955,7 +955,7 @@ A **negative externality** is a cost of an activity borne by **third parties** (
 
 | Tool | How it works |
 |------|--------------|
-| **Carbon tax** | Charge per ton of CO₂ → makes polluting fuels cost their true price |
+| **Carbon tax** | Charge per ton of $CO_{2}$ → makes polluting fuels cost their true price |
 | **Cap-and-trade** | Set a total cap; let firms buy/sell emission allowances |
 | **Subsidies** | Lower the cost of clean tech (solar, EVs) to speed adoption |
 | **Removing fossil-fuel subsidies** | Stop artificially cheapening pollution |
@@ -969,15 +969,15 @@ International cooperation is essential for global commons. Key agreements:
 | **Kyoto Protocol (1997)** | First binding greenhouse-gas targets (developed nations) |
 | **Paris Agreement (2015)** | Nearly all nations pledge to limit warming (voluntary national targets) |
 
-> ⚠️ **Classic distinction:** **Montreal Protocol = CFCs / ozone layer**; **Paris Agreement = CO₂ / climate change**. Don't swap them. Montreal is celebrated because nearly universal participation actually shrank the ozone hole.`,
+> ⚠️ **Classic distinction:** **Montreal Protocol = CFCs / ozone layer**; **Paris Agreement = $CO_{2}$ / climate change**. Don't swap them. Montreal is celebrated because nearly universal participation actually shrank the ozone hole.`,
       },
       {
         id: 'apsus7-input-tax',
         type: 'input-boxes' as const,
         content: `**Carbon-Pricing Math** 🧮
 
-**1)** A carbon tax is set at \\$50 per ton of CO₂. A factory emits 2,000 tons of CO₂ per year. What is its annual carbon-tax bill, in dollars? (enter just the number)
-**2)** The factory then cuts emissions by 30%. How many tons of CO₂ does it now emit per year? (enter the number)`,
+**1)** A carbon tax is set at \\$50 per ton of $CO_{2}$. A factory emits 2,000 tons of $CO_{2}$ per year. What is its annual carbon-tax bill, in dollars? (enter just the number)
+**2)** The factory then cuts emissions by 30%. How many tons of $CO_{2}$ does it now emit per year? (enter the number)`,
         exercise: {
           boxes: 2,
           correctAnswers: ['100000', '1400'],
@@ -1021,7 +1021,7 @@ The encouraging news is that solutions exist and are being deployed: renewable c
           correctAnswers: ['Negative externality', 'Cap-and-trade', 'Montreal Protocol', 'Paris Agreement'],
           hint1: 'A pollution cost paid by others is a negative externality.',
           hint2: 'Cap the total, then trade allowances = cap-and-trade.',
-          hint3: 'Montreal = CFCs/ozone; Paris (2015) = climate/CO₂.',
+          hint3: 'Montreal = CFCs/ozone; Paris (2015) = $climate/CO_{2}$.',
           explanation: 'Pollution is a negative externality; cap-and-trade caps total emissions and lets firms trade allowances; the Montreal Protocol phased out CFCs (ozone layer); and the 2015 Paris Agreement is the near-universal climate pledge.',
         },
       },
@@ -1043,7 +1043,7 @@ The encouraging news is that solutions exist and are being deployed: renewable c
 | Efficiency | The cheapest "first fuel"; watch the rebound effect |
 | Tragedy of the commons | Shared resource → individual overuse → collapse |
 | Externalities | Internalize via carbon tax / cap-and-trade |
-| Treaties | Montreal = CFCs/ozone; Paris = CO₂/climate |
+| Treaties | Montreal = CFCs/ozone; Paris = $CO_{2}/climate$ |
 
 > ⚠️ Top traps: renewable ≠ automatically sustainable; nuclear is low-carbon but **nonrenewable**; **Reduce** beats recycle; report the footprint as **demand vs. biocapacity**; Montreal (ozone) ≠ Paris (climate).`,
       },
@@ -1068,7 +1068,7 @@ The encouraging news is that solutions exist and are being deployed: renewable c
               question: 'Which correctly pairs an environmental treaty with its target?',
               options: [
                 'Montreal Protocol → phased out CFCs to protect the ozone layer',
-                'Montreal Protocol → set binding CO₂ targets for climate',
+                'Montreal Protocol → set binding $CO_{2}$ targets for climate',
                 'Paris Agreement → banned ozone-depleting CFCs',
                 'Kyoto Protocol → created Marine Protected Areas',
               ],

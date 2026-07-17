@@ -69,7 +69,7 @@ $V = \\pi(16)(10) = 160\\pi \\approx 502.4$ ✅
         correctAnswers: ["108","20","216"],
         hint1: "180 − 72.",
         hint2: "½(8)(5).",
-        hint3: "6³.",
+        hint3: "$6^{3}$.",
         explanation: "1) 108. 2) 20. 3) 216."
       }
     },
@@ -80,11 +80,11 @@ $V = \\pi(16)(10) = 160\\pi \\approx 502.4$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"V = πr²h is the formula for a","options":["Cylinder","Cube","Sphere","Cone"]},{"label":"SA of a cube with side s","options":["6s²","s³","4s²","s²"]}],
-        correctAnswers: ["Cylinder","6s²"],
+        dropdowns: [{"label":"V = $\\pi r^{2}h$ is the formula for a","options":["Cylinder","Cube","Sphere","Cone"]},{"label":"SA of a cube with side s","options":["$6s^{2}$","$s^{3}$","$4s^{2}$","$s^{2}$"]}],
+        correctAnswers: ["Cylinder","$6s^{2}$"],
         hint1: "Circular base × height.",
-        hint2: "6 faces, each s².",
-        explanation: "πr²h = cylinder. SA cube = 6s²."
+        hint2: "6 faces, each $s^{2}$.",
+        explanation: "$\\pi r^{2}h$ = cylinder. SA cube = $6s^{2}$."
       }
     },
     {
@@ -118,7 +118,7 @@ $V = \\pi(16)(10) = 160\\pi \\approx 502.4$ ✅
                               "108"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "6³ = 216."
+                    "explanation": "$6^{3}$ = 216."
           }
 ]
       }

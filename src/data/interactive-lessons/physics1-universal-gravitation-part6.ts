@@ -53,7 +53,7 @@ Time to tackle complex gravitation problems that combine multiple concepts: Newt
 
 Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\times 10^6$ m.
 
-1) A satellite orbits Earth at twice Earth's radius from Earth's center. What is the gravitational field strength at that location (in m/s², round to 3 significant figures)?
+1) A satellite orbits Earth at twice Earth's radius from Earth's center. What is the gravitational field strength at that location (in $m/s^{2}$, round to 3 significant figures)?
 
 2) What is the orbital speed at that altitude (in m/s, round to nearest 100)?
 
@@ -65,7 +65,7 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
         hint1: '$g = GM/(2R_E)^2 = GM/(4R_E^2) = g_0/4$.',
         hint2: '$v = \\sqrt{GM/r} = \\sqrt{GM/(2R_E)}$.',
         hint3: '$T = 2\\pi r/v$. Convert to hours.',
-        explanation: '1) $g = 10/4 = 2.5$ m/s². 2) $v = \\sqrt{6.67 \\times 10^{-11} \\times 6.0 \\times 10^{24}/(1.28 \\times 10^7)} = \\sqrt{4.0 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590 \\approx 5600$ m/s. 3) $T = 2\\pi(1.28 \\times 10^7)/5590 = 8.04 \\times 10^7/5590 = 14{,}384$ s $/3600 = 4.0$ hours. Hmm, let me recalculate: $2\\pi \\times 1.28 \\times 10^7 = 8.04 \\times 10^7$. $T = 8.04 \\times 10^7/5590 = 14{,}383$ s $= 4.0$ h. That seems low — actually the ISS at $r = R_E$ would be about 84 min, so at $2R_E$: $T \\propto r^{3/2}$, $T = 84 \\times 2^{3/2} = 84 \\times 2.83 = 238$ min $= 3.96$ h. So about 4.0 h. Let me recalculate: $2R_E = 1.28 \\times 10^7$. $v = \\sqrt{4 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590$. $T = 2\\pi(1.28 \\times 10^7)/5590 = 14383$ s $= 4.0$ hours.'
+        explanation: '1) $g = 10/4 = 2.5$ $m/s^{2}$. 2) $v = \\sqrt{6.67 \\times 10^{-11} \\times 6.0 \\times 10^{24}/(1.28 \\times 10^7)} = \\sqrt{4.0 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590 \\approx 5600$ m/s. 3) $T = 2\\pi(1.28 \\times 10^7)/5590 = 8.04 \\times 10^7/5590 = 14{,}384$ s $/3600 = 4.0$ hours. Hmm, let me recalculate: $2\\pi \\times 1.28 \\times 10^7 = 8.04 \\times 10^7$. $T = 8.04 \\times 10^7/5590 = 14{,}383$ s $= 4.0$ h. That seems low — actually the ISS at $r = R_E$ would be about 84 min, so at $2R_E$: $T \\propto r^{3/2}$, $T = 84 \\times 2^{3/2} = 84 \\times 2.83 = 238$ min $= 3.96$ h. So about 4.0 h. Let me recalculate: $2R_E = 1.28 \\times 10^7$. $v = \\sqrt{4 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590$. $T = 2\\pi(1.28 \\times 10^7)/5590 = 14383$ s $= 4.0$ hours.'
       }
     },
     {
@@ -120,7 +120,7 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
 
 Use $G = 6.67 \\times 10^{-11}$.
 
-1) A planet has surface gravity $g = 20$ m/s² and radius $R = 8 \\times 10^6$ m. What is the planet's mass (in kg, express as $X \\times 10^{25}$ — give $X$ to 3 significant figures)?
+1) A planet has surface gravity $g = 20$ $m/s^{2}$ and radius $R = 8 \\times 10^6$ m. What is the planet's mass (in kg, express as $X \\times 10^{25}$ — give $X$ to 3 significant figures)?
 
 2) Using the planet from problem 1, what is the escape velocity from its surface (in km/s, round to 3 significant figures)?
 

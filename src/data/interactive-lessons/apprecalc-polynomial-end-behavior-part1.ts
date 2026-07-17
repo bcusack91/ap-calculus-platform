@@ -38,7 +38,7 @@ Degree = 3, Leading coefficient = 5 ✅
       exercise: {
         questions: [
           {
-                    "question": "Degree of 7x⁴ − 3x + 2?",
+                    "question": "Degree of $7x^{4}$ − 3x + 2?",
                     "options": [
                               "4",
                               "7",
@@ -68,8 +68,8 @@ Degree = 3, Leading coefficient = 5 ✅
         boxes: 3,
         correctAnswers: ["5","2","4"],
         hint1: "Highest exponent.",
-        hint2: "Highest power is x².",
-        hint3: "Coefficient of the x³ term.",
+        hint2: "Highest power is $x^{2}$.",
+        hint3: "Coefficient of the $x^{3}$ term.",
         explanation: "1) 5. 2) 2. 3) 4."
       }
     },
@@ -110,7 +110,7 @@ Degree = 3, Leading coefficient = 5 ✅
       exercise: {
         questions: [
           {
-                    "question": "Leading coefficient of −2x³ + 5x?",
+                    "question": "Leading coefficient of $-2x^{3}$ + 5x?",
                     "options": [
                               "−2",
                               "5",
@@ -118,7 +118,7 @@ Degree = 3, Leading coefficient = 5 ✅
                               "−3"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Coefficient of x³ term."
+                    "explanation": "Coefficient of $x^{3}$ term."
           }
 ]
       }

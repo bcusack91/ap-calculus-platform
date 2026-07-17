@@ -125,7 +125,7 @@ So **about 20 cycles** exceed one million copies ($2^{20} \\approx 1.05 \\times 
       content: `### Key Takeaways — Part 5 (and Suite Review)
 
 - Blots: Southern = DNA, Northern = RNA, Western = protein (SNoW DRoP); ELISA = antibody-based quantitation.
-- PCR amplifies DNA exponentially: copies = N₀ × 2ⁿ; steps = denature/anneal/extend; RT-PCR starts from RNA.
+- PCR amplifies DNA exponentially: copies = $N_{0}$ × $2^{n}$; steps = denature/anneal/extend; RT-PCR starts from RNA.
 - Match the molecule to the method: MW → SDS-PAGE; specific protein → Western/ELISA; amplify DNA → PCR; mRNA level → RT-qPCR; concentration → UV-Vis.
 - Detection assays (ELISA, UV-Vis) report concentration via signal proportional to amount (Beer's law).`
     }

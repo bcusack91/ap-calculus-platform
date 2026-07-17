@@ -19,7 +19,7 @@ PCR is a technique that amplifies a specific DNA sequence **exponentially**, pro
 | **Primers** | Short synthetic oligonucleotides (~18–25 nt) complementary to flanking regions |
 | **Taq polymerase** | Heat-stable DNA polymerase from *Thermus aquaticus* |
 | **dNTPs** | Free deoxynucleotide triphosphates (dATP, dTTP, dGTP, dCTP) |
-| **Buffer + Mg²⁺** | Maintains optimal pH and cofactor concentration |
+| **Buffer + $Mg^{2+}$** | Maintains optimal pH and cofactor concentration |
 
 ### Why Taq Polymerase?
 
@@ -90,13 +90,13 @@ where $N_0$ is the initial number of template molecules.
           {
             question: 'A PCR reaction begins with 1 copy of template DNA. After 20 cycles, approximately how many copies of the target sequence are present?',
             options: [
-              'About 1 million (2²⁰ = 1,048,576)',
+              'About 1 million ($2^{20}$ = 1,048,576)',
               'About 20 (one per cycle)',
               'About 40 (two per cycle)',
-              'About 1 billion (2³⁰)'
+              'About 1 billion $(2^{30})$'
             ],
             correctAnswer: 0,
-            explanation: 'PCR amplification is exponential. After n cycles, the number of copies = 2ⁿ. After 20 cycles: 2²⁰ = 1,048,576 ≈ 1 million copies.'
+            explanation: 'PCR amplification is exponential. After n cycles, the number of copies = $2^{n}$. After 20 cycles: $2^{20}$ = 1,048,576 ≈ 1 million copies.'
           }
         ]
       }
@@ -158,8 +158,8 @@ where $N_0$ is the initial number of template molecules.
         correctAnswers: ['hydrogen', 'annealing', "5′→3′", '1 billion'],
         hint1: 'The bonds holding the two DNA strands together are not covalent — they are weaker interactions between bases.',
         hint2: 'Each PCR cycle has three named steps: denaturation, annealing, and extension.',
-        hint3: 'All known DNA polymerases synthesize in one direction only. 2³⁰ ≈ 1.07 × 10⁹.',
-        explanation: 'Denaturation breaks hydrogen bonds between base pairs. Primers anneal (bind) during the annealing step at lower temperature. Taq polymerase, like all DNA polymerases, synthesizes 5′→3′. After 30 cycles: 2³⁰ ≈ 1 billion copies.'
+        hint3: 'All known DNA polymerases synthesize in one direction only. $2^{30}$ ≈ $1.07 \\times 10^{9}$.',
+        explanation: 'Denaturation breaks hydrogen bonds between base pairs. Primers anneal (bind) during the annealing step at lower temperature. Taq polymerase, like all DNA polymerases, synthesizes 5′→3′. After 30 cycles: $2^{30}$ ≈ 1 billion copies.'
       }
     },
     {

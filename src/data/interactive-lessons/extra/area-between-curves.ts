@@ -650,7 +650,7 @@ $$\\text{net} = \\int_0^4 (8 - 2t)\\,dt = \\big[8t - t^2\\big]_0^4 = 32 - 16 = 1
         type: 'input-boxes' as const,
         content: `**Net Change from Rates** 🧮
 
-A balloon is inflated at $R(t) = 12$ cm³/s and deflated at $S(t) = 3t$ cm³/s, for $0 \\le t \\le 4$.
+A balloon is inflated at $R(t) = 12$ $cm^{3}/s$ and deflated at $S(t) = 3t$ $cm^{3}/s$, for $0 \\le t \\le 4$.
 
 **1)** At what time $t$ do the rates balance ($R = S$)?
 **2)** Net volume change over $[0, 4]$: evaluate $\\int_0^4 (12 - 3t)\\,dt$. *(enter the number)*`,
@@ -660,7 +660,7 @@ A balloon is inflated at $R(t) = 12$ cm³/s and deflated at $S(t) = 3t$ cm³/s, 
           hint1: 'Balance when $12 = 3t$, so $t = 4$.',
           hint2: 'Antiderivative of $12 - 3t$ is $12t - \\frac{3t^2}{2}$.',
           hint3: 'At $t = 4$: $12(4) - \\frac{3(16)}{2} = 48 - 24 = 24$.',
-          explanation: 'Rates balance at $t = 4$. Net change $= \\int_0^4 (12 - 3t)\\,dt = [12t - \\frac{3t^2}{2}]_0^4 = 48 - 24 = 24$ cm³.',
+          explanation: 'Rates balance at $t = 4$. Net change $= \\int_0^4 (12 - 3t)\\,dt = [12t - \\frac{3t^2}{2}]_0^4 = 48 - 24 = 24$ $cm^{3}$.',
         },
       },
       {

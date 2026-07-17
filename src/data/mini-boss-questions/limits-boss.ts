@@ -18,11 +18,11 @@ export const limitsBossQuestions: MiniBossQuestion[] = [
   {
     id: 'lim-1',
     type: 'factoring',
-    question: 'Evaluate: lim(x→3) [(x² - 9)/(x - 3)]',
+    question: 'Evaluate: lim(x→3) [$(x^{2} - 9)/(x - 3)$]',
     correctAnswer: '6',
     options: [
       { label: 'A', value: '6', isCorrect: true },
-      { label: 'B', value: '0', isCorrect: false, explanation: 'Factor: (x²-9)/(x-3) = (x+3)(x-3)/(x-3) = x+3 → 6' },
+      { label: 'B', value: '0', isCorrect: false, explanation: 'Factor: $(x^{2}-9)/(x-3)$ = (x+3)(x-3)/(x-3) = x+3 → 6' },
       { label: 'C', value: '3', isCorrect: false, explanation: 'After canceling, substitute x=3 into x+3 = 6' },
       { label: 'D', value: 'DNE', isCorrect: false, explanation: 'The limit exists after factoring — the hole is removable' },
     ],
@@ -30,31 +30,31 @@ export const limitsBossQuestions: MiniBossQuestion[] = [
   {
     id: 'lim-2',
     type: 'factoring',
-    question: 'Evaluate: lim(x→-2) [(x³ + 8)/(x + 2)]',
+    question: 'Evaluate: lim(x→-2) [$(x^{3} + 8)/(x + 2)$]',
     correctAnswer: '12',
     options: [
       { label: 'A', value: '12', isCorrect: true },
-      { label: 'B', value: '0', isCorrect: false, explanation: 'x³+8 = (x+2)(x²-2x+4), cancel (x+2), then sub x=-2: 4+4+4=12' },
-      { label: 'C', value: '4', isCorrect: false, explanation: 'After canceling: x²-2x+4 at x=-2 = 4+4+4 = 12' },
-      { label: 'D', value: '-8', isCorrect: false, explanation: 'Sum of cubes: a³+b³ = (a+b)(a²-ab+b²)' },
+      { label: 'B', value: '0', isCorrect: false, explanation: '$x^{3}+8$ = $(x+2)(x^{2}-2x+4)$, cancel (x+2), then sub x=-2: 4+4+4=12' },
+      { label: 'C', value: '4', isCorrect: false, explanation: 'After canceling: $x^{2}-2x+4$ at x=-2 = 4+4+4 = 12' },
+      { label: 'D', value: '-8', isCorrect: false, explanation: 'Sum of cubes: $a^{3}+b^{3}$ = $(a+b)(a^{2}-ab+b^{2})$' },
     ],
   },
   {
     id: 'lim-3',
     type: 'rationalize',
-    question: 'Evaluate: lim(x→0) [(√(x+4) - 2)/x]',
+    question: 'Evaluate: lim(x→0) [$(\\sqrt{x+4} - 2)/x$]',
     correctAnswer: '1/4',
     options: [
       { label: 'A', value: '1/4', isCorrect: true },
-      { label: 'B', value: '0', isCorrect: false, explanation: 'Rationalize: multiply by (√(x+4)+2)/(√(x+4)+2), get x/(x(√(x+4)+2))=1/(√(x+4)+2)→1/4' },
-      { label: 'C', value: '1/2', isCorrect: false, explanation: 'As x→0: 1/(√(0+4)+2) = 1/(2+2) = 1/4' },
+      { label: 'B', value: '0', isCorrect: false, explanation: 'Rationalize: multiply by $(\\sqrt{x+4}+2)/(\\sqrt{x+4}+2)$, get $x/(x(\\sqrt{x+4}+2))$=$1/(\\sqrt{x+4}+2)$→1/4' },
+      { label: 'C', value: '1/2', isCorrect: false, explanation: 'As x→0: $1/(\\sqrt{0+4}+2)$ = 1/(2+2) = 1/4' },
       { label: 'D', value: 'DNE', isCorrect: false, explanation: 'The limit exists — rationalize the numerator' },
     ],
   },
   {
     id: 'lim-4',
     type: 'infinity',
-    question: 'Evaluate: lim(x→∞) [(3x² + 2x)/(5x² - 1)]',
+    question: 'Evaluate: lim(x→∞) [$(3x^{2} + 2x)/(5x^{2} - 1)$]',
     correctAnswer: '3/5',
     options: [
       { label: 'A', value: '3/5', isCorrect: true },
@@ -66,13 +66,13 @@ export const limitsBossQuestions: MiniBossQuestion[] = [
   {
     id: 'lim-5',
     type: 'infinity',
-    question: 'Evaluate: lim(x→∞) [(2x + 1)/(x³ + 4)]',
+    question: 'Evaluate: lim(x→∞) [$(2x + 1)/(x^{3} + 4)$]',
     correctAnswer: '0',
     options: [
       { label: 'A', value: '0', isCorrect: true },
       { label: 'B', value: '2', isCorrect: false, explanation: 'Numerator degree (1) < denominator degree (3), so limit is 0' },
       { label: 'C', value: '∞', isCorrect: false, explanation: 'When numerator grows slower than denominator, the ratio → 0' },
-      { label: 'D', value: '1/2', isCorrect: false, explanation: 'Divide all terms by x³: (2/x²+1/x³)/(1+4/x³) → 0/1 = 0' },
+      { label: 'D', value: '1/2', isCorrect: false, explanation: 'Divide all terms by $x^{3}$: $(2/x^{2}+1/x^{3})/(1+4/x^{3})$ → 0/1 = 0' },
     ],
   },
   {
@@ -90,23 +90,23 @@ export const limitsBossQuestions: MiniBossQuestion[] = [
   {
     id: 'lim-7',
     type: 'lhopital',
-    question: 'Evaluate: lim(x→0) [(e^x - 1)/x]',
+    question: 'Evaluate: lim(x→0) [$(e^{x} - 1)/x$]',
     correctAnswer: '1',
     options: [
       { label: 'A', value: '1', isCorrect: true },
-      { label: 'B', value: '0', isCorrect: false, explanation: 'L\'Hôpital: d/dx[e^x-1]/d/dx[x] = e^x/1 → e^0 = 1' },
-      { label: 'C', value: 'e', isCorrect: false, explanation: 'At x=0: e^0/1 = 1/1 = 1' },
+      { label: 'B', value: '0', isCorrect: false, explanation: 'L\'Hôpital: d/dx[$e^{x}-1$]/d/dx[x] = $e^{x}/1$ → $e^{0}$ = 1' },
+      { label: 'C', value: 'e', isCorrect: false, explanation: 'At x=0: $e^{0}/1$ = 1/1 = 1' },
       { label: 'D', value: 'DNE', isCorrect: false, explanation: '0/0 indeterminate form — use L\'Hôpital\'s Rule' },
     ],
   },
   {
     id: 'lim-8',
     type: 'piecewise',
-    question: 'For f(x) = {x² if x < 1, 2x-1 if x ≥ 1}, find lim(x→1) f(x)',
+    question: 'For f(x) = {$x^{2}$ if x < 1, 2x-1 if x ≥ 1}, find lim(x→1) f(x)',
     correctAnswer: '1',
     options: [
       { label: 'A', value: '1', isCorrect: true },
-      { label: 'B', value: 'DNE', isCorrect: false, explanation: 'Left limit: 1²=1, Right limit: 2(1)-1=1. Both equal, so limit = 1' },
+      { label: 'B', value: 'DNE', isCorrect: false, explanation: 'Left limit: $1^{2}$=1, Right limit: 2(1)-1=1. Both equal, so limit = 1' },
       { label: 'C', value: '2', isCorrect: false, explanation: 'Right limit: 2(1)-1 = 1, not 2' },
       { label: 'D', value: '0', isCorrect: false, explanation: 'Evaluate both sides at x=1: both give 1' },
     ],
@@ -114,13 +114,13 @@ export const limitsBossQuestions: MiniBossQuestion[] = [
   {
     id: 'lim-9',
     type: 'infinity',
-    question: 'Evaluate: lim(x→-∞) [e^x]',
+    question: 'Evaluate: lim(x→-∞) [$e^{x}$]',
     correctAnswer: '0',
     options: [
       { label: 'A', value: '0', isCorrect: true },
-      { label: 'B', value: '-∞', isCorrect: false, explanation: 'e^x > 0 for all x, so it cannot be negative' },
-      { label: 'C', value: '1', isCorrect: false, explanation: 'e^0 = 1, but as x → -∞, e^x → 0' },
-      { label: 'D', value: 'DNE', isCorrect: false, explanation: 'The limit exists: e^x approaches 0 from the positive side' },
+      { label: 'B', value: '-∞', isCorrect: false, explanation: '$e^{x}$ > 0 for all x, so it cannot be negative' },
+      { label: 'C', value: '1', isCorrect: false, explanation: '$e^{0}$ = 1, but as x → -∞, $e^{x}$ → 0' },
+      { label: 'D', value: 'DNE', isCorrect: false, explanation: 'The limit exists: $e^{x}$ approaches 0 from the positive side' },
     ],
   },
   {

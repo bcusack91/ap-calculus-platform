@@ -63,9 +63,9 @@ $$\\boxed{\\text{Zn}(s) \\mid \\text{Zn}^{2+}(aq) \\| \\text{Cu}^{2+}(aq) \\mid 
 **Read left to right:**
 1. Zn solid electrode (anode)
 2. Phase boundary
-3. Zn²⁺ ions in solution
+3. $Zn^{2+}$ ions in solution
 4. Salt bridge
-5. Cu²⁺ ions in solution
+5. $Cu^{2+}$ ions in solution
 6. Phase boundary
 7. Cu solid electrode (cathode)
       `
@@ -143,15 +143,15 @@ For reactions involving gases, the gas contacts the Pt electrode and is separate
             explanation: 'The double line ($\\|$) represents the salt bridge. A single line ($\\mid$) represents a phase boundary.'
           },
           {
-            question: 'For the cell: Pt | Fe²⁺(aq), Fe³⁺(aq) || Cu²⁺(aq) | Cu(s), why is Pt used?',
+            question: 'For the cell: Pt | $Fe^{2+}(aq)$, $Fe^{3+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s), why is Pt used?',
             options: [
               'Pt is always required in galvanic cells',
-              'There is no solid metal for the Fe²⁺/Fe³⁺ half-reaction',
+              'There is no solid metal for the $Fe^{2+}/Fe^{3+}$ half-reaction',
               'Pt provides the voltage',
               'Pt acts as the salt bridge'
             ],
             correctAnswer: 1,
-            explanation: 'The Fe²⁺/Fe³⁺ half-reaction involves only aqueous ions — no solid metal to serve as an electrode. An inert conductor (Pt) provides a surface for electron transfer without participating in the reaction.'
+            explanation: 'The $Fe^{2+}/Fe^{3+}$ half-reaction involves only aqueous ions — no solid metal to serve as an electrode. An inert conductor (Pt) provides a surface for electron transfer without participating in the reaction.'
           }
         ]
       }
@@ -168,15 +168,15 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
 
 **2)** Which metal is the cathode? (element symbol)
 
-**3)** How many electrons are transferred in the balanced reaction? (Al³⁺ needs 3e⁻, Ni²⁺ needs 2e⁻)
+**3)** How many electrons are transferred in the balanced reaction? ($Al^{3+}$ needs $3e^{-}$, $Ni^{2+}$ needs $2e^{-}$)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['Al', 'Ni', '6'],
         hint1: 'The anode is always on the left in cell notation.',
         hint2: 'The cathode is always on the right in cell notation.',
-        hint3: 'LCM of 3 and 2 is 6: 2Al → 2Al³⁺ + 6e⁻, 3Ni²⁺ + 6e⁻ → 3Ni.',
-        explanation: '1) Al is on the left → anode. 2) Ni is on the right → cathode. 3) To balance electrons: 2 × 3e⁻ = 3 × 2e⁻ = 6 electrons transferred.'
+        hint3: 'LCM of 3 and 2 is 6: 2Al → $2Al^{3+}$ + $6e^{-}$, $3Ni^{2+}$ + $6e^{-}$ → 3Ni.',
+        explanation: '1) Al is on the left → anode. 2) Ni is on the right → cathode. 3) To balance electrons: 2 × $3e^{-}$ = 3 × $2e^{-}$ = 6 electrons transferred.'
       }
     },
     {
@@ -192,8 +192,8 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
             options: ['salt bridge', 'phase boundary', 'external wire', 'inert electrode']
           },
           {
-            label: 'In notation: Sn(s) | Sn²⁺(aq) || Ag⁺(aq) | Ag(s), the species being oxidized is',
-            options: ['Sn(s)', 'Sn²⁺(aq)', 'Ag⁺(aq)', 'Ag(s)']
+            label: 'In notation: Sn(s) | $Sn^{2+}(aq)$ || $Ag^{+}(aq)$ | Ag(s), the species being oxidized is',
+            options: ['Sn(s)', '$Sn^{2+}(aq)$', '$Ag^{+}(aq)$', 'Ag(s)']
           },
           {
             label: 'An inert electrode is needed when',
@@ -208,7 +208,7 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
         hint1: 'Single line = phase change, double line = salt bridge.',
         hint2: 'The left side is the anode where oxidation occurs.',
         hint3: 'When all species in a half-reaction are dissolved ions, we need Pt or C.',
-        explanation: 'Single line = phase boundary. Sn is on the left (anode, oxidized). Inert electrodes are needed when no solid metal participates. Commas separate species in the same phase (e.g., Fe²⁺, Fe³⁺ both in solution).'
+        explanation: 'Single line = phase boundary. Sn is on the left (anode, oxidized). Inert electrodes are needed when no solid metal participates. Commas separate species in the same phase (e.g., $Fe^{2+}$, $Fe^{3+}$ both in solution).'
       }
     },
     {
@@ -220,18 +220,18 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
       exercise: {
         questions: [
           {
-            question: 'Write the cell notation for a cell where Mg is oxidized and Fe²⁺ is reduced.',
+            question: 'Write the cell notation for a cell where Mg is oxidized and $Fe^{2+}$ is reduced.',
             options: [
-              'Fe(s) | Fe²⁺(aq) || Mg²⁺(aq) | Mg(s)',
-              'Mg(s) | Mg²⁺(aq) || Fe²⁺(aq) | Fe(s)',
-              'Mg²⁺(aq) | Mg(s) || Fe(s) | Fe²⁺(aq)',
-              'Fe²⁺(aq) | Fe(s) || Mg(s) | Mg²⁺(aq)'
+              'Fe(s) | $Fe^{2+}(aq)$ || $Mg^{2+}(aq)$ | Mg(s)',
+              'Mg(s) | $Mg^{2+}(aq)$ || $Fe^{2+}(aq)$ | Fe(s)',
+              '$Mg^{2+}(aq)$ | Mg(s) || Fe(s) | $Fe^{2+}(aq)$',
+              '$Fe^{2+}(aq)$ | Fe(s) || Mg(s) | $Mg^{2+}(aq)$'
             ],
             correctAnswer: 1,
-            explanation: 'Anode (oxidation, Mg) on the left: Mg(s) | Mg²⁺(aq). Salt bridge: ||. Cathode (reduction, Fe) on the right: Fe²⁺(aq) | Fe(s). Complete: Mg(s) | Mg²⁺(aq) || Fe²⁺(aq) | Fe(s).'
+            explanation: 'Anode (oxidation, Mg) on the left: Mg(s) | $Mg^{2+}(aq)$. Salt bridge: ||. Cathode (reduction, Fe) on the right: $Fe^{2+}(aq)$ | Fe(s). Complete: Mg(s) | $Mg^{2+}(aq)$ || $Fe^{2+}(aq)$ | Fe(s).'
           },
           {
-            question: 'For the notation: Pt | Cl₂(g) | Cl⁻(aq) || MnO₄⁻(aq), Mn²⁺(aq) | Pt, the Pt electrode on the left is the:',
+            question: 'For the notation: Pt | $Cl_{2}(g)$ | $Cl^{-}(aq)$ || $MnO_{4}^{-}(aq)$, $Mn^{2+}(aq)$ | Pt, the Pt electrode on the left is the:',
             options: [
               'Cathode — reduction occurs there',
               'Anode — oxidation occurs there',
@@ -239,7 +239,7 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
               'Spectator'
             ],
             correctAnswer: 1,
-            explanation: 'The left side is always the anode. Cl₂ is being produced from Cl⁻ (oxidation). Pt provides the electrode surface since the reactant is a gas/solution.'
+            explanation: 'The left side is always the anode. $Cl_{2}$ is being produced from $Cl^{-}$ (oxidation). Pt provides the electrode surface since the reactant is a gas/solution.'
           }
         ]
       }

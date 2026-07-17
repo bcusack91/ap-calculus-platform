@@ -16,7 +16,7 @@ Phosphorus (P) is essential for **DNA**, **RNA**, **ATP**, **phospholipids** (ce
 | **Speed** | Very slow (geological time) | Faster (biological cycling) |
 | **Primary source** | Weathering of rocks | Atmosphere |
 | **Limiting nutrient** | Often in freshwater | Less often limiting |
-| **Chemical form** | PO₄³⁻ (phosphate) | CO₂, N₂, NH₄⁺, NO₃⁻ |
+| **Chemical form** | $PO_{4}^{3-}$ (phosphate) | $CO_{2}$, $N_{2}$, $NH_{4}^{+}$, $NO_{3}^{-}$ |
 
 > 🔬 **AP Key Point:** Because phosphorus has no gas phase, it cycles much more slowly than carbon or nitrogen. It is often the **limiting nutrient** in freshwater ecosystems.`
     },
@@ -35,7 +35,7 @@ Phosphorus (P) is essential for **DNA**, **RNA**, **ATP**, **phospholipids** (ce
               'Phosphorus is only found in marine environments'
             ],
             correctAnswer: 1,
-            explanation: 'The phosphorus cycle lacks a significant atmospheric/gas phase. Phosphorus moves through rocks, water, soil, and organisms but not through the atmosphere. This makes it cycle much more slowly and limits long-distance transport compared to carbon (CO₂) or nitrogen (N₂).'
+            explanation: 'The phosphorus cycle lacks a significant atmospheric/gas phase. Phosphorus moves through rocks, water, soil, and organisms but not through the atmosphere. This makes it cycle much more slowly and limits long-distance transport compared to carbon $(CO_{2})$ or nitrogen $(N_{2})$.'
           },
           {
             question: 'Which biological molecules contain phosphorus?',
@@ -67,7 +67,7 @@ Phosphorus (P) is essential for **DNA**, **RNA**, **ATP**, **phospholipids** (ce
     <h3 class="mt-0 mb-2 text-xl font-extrabold text-stone-900 dark:text-stone-100">1) Weathering of Phosphate Rocks</h3>
     <ul class="my-0 space-y-1.5 text-stone-900 dark:text-stone-100">
       <li>Phosphorus begins in apatite-rich rocks</li>
-      <li>Weathering releases PO₄³⁻ into soil and water</li>
+      <li>Weathering releases $PO_{4}^{3-}$ into soil and water</li>
       <li>This is the rate-limiting step on geologic time scales</li>
     </ul>
   </div>
@@ -75,7 +75,7 @@ Phosphorus (P) is essential for **DNA**, **RNA**, **ATP**, **phospholipids** (ce
   <div class="rounded-2xl border border-lime-200 dark:border-lime-700/60 bg-gradient-to-br from-lime-50 to-green-50 dark:from-lime-950/30 dark:to-green-950/30 p-5 shadow-md">
     <h3 class="mt-0 mb-2 text-xl font-extrabold text-lime-900 dark:text-lime-100">2) Soil Absorption and Plant Uptake</h3>
     <ul class="my-0 space-y-1.5 text-lime-900 dark:text-lime-100">
-      <li>Plants absorb dissolved PO₄³⁻ through roots</li>
+      <li>Plants absorb dissolved $PO_{4}^{3-}$ through roots</li>
       <li>Availability depends strongly on soil pH</li>
       <li>pH 6-7 generally maximizes uptake</li>
     </ul>
@@ -93,7 +93,7 @@ Phosphorus (P) is essential for **DNA**, **RNA**, **ATP**, **phospholipids** (ce
   <div class="rounded-2xl border border-emerald-200 dark:border-emerald-700/60 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 p-5 shadow-md">
     <h3 class="mt-0 mb-2 text-xl font-extrabold text-emerald-900 dark:text-emerald-100">4) Decomposition and Return</h3>
     <ul class="my-0 space-y-1.5 text-emerald-900 dark:text-emerald-100">
-      <li>Decomposers return PO₄³⁻ to soils and waters</li>
+      <li>Decomposers return $PO_{4}^{3-}$ to soils and waters</li>
       <li>Waste products (including guano) are phosphorus-rich</li>
     </ul>
   </div>
@@ -121,7 +121,7 @@ The growth of organisms is limited by whichever essential nutrient is in **short
 
 | Ecosystem Type | Typical Limiting Nutrient | Why? |
 |---------------|--------------------------|------|
-| **Freshwater lakes** | Phosphorus | N₂ fixation adds nitrogen; no P gas phase |
+| **Freshwater lakes** | Phosphorus | $N_{2}$ fixation adds nitrogen; no P gas phase |
 | **Open ocean** | Nitrogen (or iron) | Phosphorus supplied by river/upwelling |
 | **Tropical soils** | Phosphorus | Heavy rainfall leaches P from soil |
 | **Temperate soils** | Nitrogen | P released from weathering is adequate |
@@ -133,7 +133,7 @@ When excess phosphorus enters waterways (from fertilizer, sewage, detergents):
 1. **Algal bloom** — algae proliferate rapidly
 2. **Light blocked** — submerged plants die
 3. **Algae die** — massive organic matter accumulation
-4. **Decomposers consume O₂** — dissolved oxygen plummets
+4. **Decomposers consume $O_{2}$** — dissolved oxygen plummets
 5. **Hypoxia/anoxia** — fish and invertebrates die
 6. **Dead zone** — ecosystem collapse
 
@@ -154,7 +154,7 @@ When excess phosphorus enters waterways (from fertilizer, sewage, detergents):
               'Freshwater organisms do not require phosphorus'
             ],
             correctAnswer: 1,
-            explanation: 'In freshwater systems, cyanobacteria can fix atmospheric N₂ to meet nitrogen demands, but there is no equivalent process for phosphorus. Since phosphorus has no gas phase and enters primarily through slow rock weathering, it tends to be the nutrient in shortest supply relative to biological demand.'
+            explanation: 'In freshwater systems, cyanobacteria can fix atmospheric $N_{2}$ to meet nitrogen demands, but there is no equivalent process for phosphorus. Since phosphorus has no gas phase and enters primarily through slow rock weathering, it tends to be the nutrient in shortest supply relative to biological demand.'
           },
           {
             question: 'The rate-limiting step of the phosphorus cycle is:',
@@ -178,7 +178,7 @@ When excess phosphorus enters waterways (from fertilizer, sewage, detergents):
         dropdowns: [
           {
             label: 'The biologically usable form of phosphorus is ___ ions',
-            options: ['PO₄³⁻ (phosphate)', 'NO₃⁻ (nitrate)', 'SO₄²⁻ (sulfate)', 'CO₃²⁻ (carbonate)']
+            options: ['$PO_{4}^{3-}$ (phosphate)', '$NO_{3}^{-}$ (nitrate)', '$SO_{4}^{2-}$ (sulfate)', '$CO_{3}^{2-}$ (carbonate)']
           },
           {
             label: 'Phosphorus is often the limiting nutrient in ___ ecosystems',
@@ -193,11 +193,11 @@ When excess phosphorus enters waterways (from fertilizer, sewage, detergents):
             options: ['desertification', 'eutrophication', 'acidification', 'salinization']
           }
         ],
-        correctAnswers: ['PO₄³⁻ (phosphate)', 'freshwater', 'weathering of rocks', 'eutrophication'],
+        correctAnswers: ['$PO_{4}^{3-}$ (phosphate)', 'freshwater', 'weathering of rocks', 'eutrophication'],
         hint1: 'Phosphorus is absorbed by plants in its oxidized ionic form.',
         hint2: 'Freshwater systems lack nitrogen fixation balance — phosphorus limits growth.',
         hint3: 'No gas phase means no atmospheric source — rocks are the origin.',
-        explanation: 'Phosphate (PO₄³⁻) is the biologically available form of phosphorus. It is typically limiting in freshwater because nitrogen fixation can compensate for N shortages but nothing compensates for P shortages. Rock weathering is the primary natural source. Excess P causes eutrophication — algal blooms followed by oxygen depletion and ecosystem collapse.'
+        explanation: 'Phosphate $(PO_{4}^{3-})$ is the biologically available form of phosphorus. It is typically limiting in freshwater because nitrogen fixation can compensate for N shortages but nothing compensates for P shortages. Rock weathering is the primary natural source. Excess P causes eutrophication — algal blooms followed by oxygen depletion and ecosystem collapse.'
       }
     }
   ]

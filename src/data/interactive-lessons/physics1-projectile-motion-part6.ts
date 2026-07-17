@@ -47,7 +47,7 @@ This workshop takes you through **complete projectile motion problems** from sta
       content: `
 **Problem 1 — Horizontal Launch from a Building** 🏢
 
-A stone is thrown horizontally at 15 m/s from the roof of a 45 m tall building. Use $g = 10$ m/s².
+A stone is thrown horizontally at 15 m/s from the roof of a 45 m tall building. Use $g = 10$ $m/s^{2}$.
 
 1) Time to hit the ground (in seconds)
 
@@ -70,7 +70,7 @@ A stone is thrown horizontally at 15 m/s from the roof of a 45 m tall building. 
       content: `
 **Problem 2 — Ground-to-Ground Angled Launch** ⚽
 
-A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Use $g = 10$ m/s², $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
+A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Use $g = 10$ $m/s^{2}$, $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
 
 1) Maximum height (in meters)
 
@@ -133,7 +133,7 @@ A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Us
       exercise: {
         dropdowns: [
           {
-            label: 'A ball is thrown at 20 m/s at 53° ($v_{0y} = 16$ m/s). At $t = 1$ s, $v_y$ is (use $g = 10$ m/s²):',
+            label: 'A ball is thrown at 20 m/s at 53° ($v_{0y} = 16$ m/s). At $t = 1$ s, $v_y$ is (use $g = 10$ $m/s^{2}$):',
             options: ['16 m/s', '6 m/s', '0 m/s', '-4 m/s'],
             correctIndex: 1,
             explanation: '$v_y = v_{0y} - gt = 16 - 10(1) = 6$ m/s. Still moving upward.'
@@ -159,7 +159,7 @@ A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Us
       content: `
 **Problem 5 — Cliff Drop** 🪂
 
-A ball is thrown at 30 m/s horizontally from the top of a 125 m cliff. Use $g = 10$ m/s².
+A ball is thrown at 30 m/s horizontally from the top of a 125 m cliff. Use $g = 10$ $m/s^{2}$.
 
 1) Time to hit the ground (in seconds)
 

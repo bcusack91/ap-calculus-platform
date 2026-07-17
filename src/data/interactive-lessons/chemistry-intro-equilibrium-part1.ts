@@ -39,8 +39,8 @@ Consider the reaction:
 
 $$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$$
 
-- The **forward reaction**: N₂O₄ decomposes into NO₂
-- The **reverse reaction**: NO₂ molecules recombine to form N₂O₄
+- The **forward reaction**: $N_{2}O_{4}$ decomposes into $NO_{2}$
+- The **reverse reaction**: $NO_{2}$ molecules recombine to form $N_{2}O_{4}$
 
 Initially, only the forward reaction occurs. As products build up, the reverse reaction begins and accelerates. Eventually, both reactions proceed at the **same rate**.
 
@@ -120,15 +120,15 @@ $$\\boxed{\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}}$$
             explanation: 'Any observable property (color, pressure, etc.) becoming constant over time can indicate equilibrium. Both a stable color and cessation of bubble formation (if gas is a product) could signal that concentrations are no longer changing.'
           },
           {
-            question: 'A sealed container holds N₂O₄ and NO₂ at equilibrium. If you could tag individual molecules, you would observe:',
+            question: 'A sealed container holds $N_{2}O_{4}$ and $NO_{2}$ at equilibrium. If you could tag individual molecules, you would observe:',
             options: [
               'No molecules changing identity',
-              'Only N₂O₄ breaking apart',
-              'Only NO₂ combining',
-              'Both N₂O₄ breaking apart and NO₂ combining at equal rates'
+              'Only $N_{2}O_{4}$ breaking apart',
+              'Only $NO_{2}$ combining',
+              'Both $N_{2}O_{4}$ breaking apart and $NO_{2}$ combining at equal rates'
             ],
             correctAnswer: 3,
-            explanation: 'Dynamic equilibrium means both forward (N₂O₄ → 2 NO₂) and reverse (2 NO₂ → N₂O₄) reactions continue. Individual molecules constantly interconvert, but the overall amounts stay the same.'
+            explanation: 'Dynamic equilibrium means both forward ($N_{2}O_{4}$ → 2 $NO_{2}$) and reverse (2 $NO_{2}$ → $N_{2}O_{4}$) reactions continue. Individual molecules constantly interconvert, but the overall amounts stay the same.'
           }
         ]
       }
@@ -229,8 +229,8 @@ At a certain temperature, the following data are collected at equilibrium:
 
 | Species | Concentration (M) |
 |---------|-------------------|
-| H₂ | 0.10 |
-| I₂ | 0.20 |
+| $H_{2}$ | 0.10 |
+| $I_{2}$ | 0.20 |
 | HI | 0.40 |
 
 **1)** What is the rate of the forward reaction compared to the reverse reaction at equilibrium? (Enter "equal")

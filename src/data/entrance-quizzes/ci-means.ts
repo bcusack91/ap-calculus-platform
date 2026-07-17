@@ -71,13 +71,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'cim-ent-3a',
     question: 'The formula for a one-sample t-interval for a population mean is:',
     options: [
-      'x̄ ± z* · (σ/√n)',
-      'x̄ ± t* · (s/√n)',
+      'x̄ ± z* · $(\\sigma /\\sqrt{n})$',
+      'x̄ ± t* · $(s/\\sqrt{n})$',
       'p̂ ± z* · √[p̂(1−p̂)/n]',
-      's ± t* · (x̄/√n)'
+      's ± t* · (x̄/$\\sqrt{n}$)'
     ],
     correctIndex: 1,
-    explanation: 'The one-sample t-interval is x̄ ± t* · (s/√n). Conditions required: random sample, independence (10% condition), and approximately normal population or large n.',
+    explanation: 'The one-sample t-interval is x̄ ± t* · $(s/\\sqrt{n})$. Conditions required: random sample, independence (10% condition), and approximately normal population or large n.',
     partNumber: 3,
     partTitle: 'One-Sample t-Interval'
   },
@@ -99,15 +99,15 @@ const questions: EntranceQuizQuestion[] = [
   // Part 4: Two-Sample t-Interval
   {
     id: 'cim-ent-4a',
-    question: 'The two-sample t-interval for (μ₁ − μ₂) is:',
+    question: 'The two-sample t-interval for $(\\mu_{1} - \\mu_{2})$ is:',
     options: [
-      'x̄₁ ± t* · (s₁/√n₁)',
-      '(x̄₁ − x̄₂) ± t* · √(s₁²/n₁ + s₂²/n₂)',
-      '(x̄₁ + x̄₂) ± z* · √(s₁²/n₁ + s₂²/n₂)',
-      'x̄₁ − x̄₂ ± t* · (s_pooled/√n)'
+      'x̄$ {}_{1}$ ± t* · $(s_{1}/\\sqrt{n}_{1})$',
+      '(x̄$ {}_{1}$ − x̄$ {}_{2}$) ± t* · $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
+      '(x̄$ {}_{1}$ + x̄$ {}_{2}$) ± z* · $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
+      'x̄$ {}_{1}$ − x̄$ {}_{2}$ ± t* · $(s_{pooled}/\\sqrt{n})$'
     ],
     correctIndex: 1,
-    explanation: 'The two-sample t-interval is (x̄₁ − x̄₂) ± t* · √(s₁²/n₁ + s₂²/n₂). This estimates the difference between two population means.',
+    explanation: 'The two-sample t-interval is (x̄$ {}_{1}$ − x̄$ {}_{2}$) ± t* · $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$. This estimates the difference between two population means.',
     partNumber: 4,
     partTitle: 'Two-Sample t-Interval'
   },
@@ -132,12 +132,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'In a paired t-interval, what is the first step in the analysis?',
     options: [
       'Pool the two sample standard deviations',
-      'Compute differences d = x₁ − x₂ for each pair, then perform a one-sample t-procedure on the differences',
+      'Compute differences d = $x_{1}$ − $x_{2}$ for each pair, then perform a one-sample t-procedure on the differences',
       'Calculate separate confidence intervals for each sample',
       'Use a z-procedure because paired data are always normal'
     ],
     correctIndex: 1,
-    explanation: 'For a paired t-interval, compute the differences d = x₁ − x₂ for each pair, then treat them as a single sample and apply a one-sample t-procedure to the differences.',
+    explanation: 'For a paired t-interval, compute the differences d = $x_{1}$ − $x_{2}$ for each pair, then treat them as a single sample and apply a one-sample t-procedure to the differences.',
     partNumber: 5,
     partTitle: 'Paired t-Interval'
   },
@@ -167,7 +167,7 @@ const questions: EntranceQuizQuestion[] = [
       '(62.00, 82.00)'
     ],
     correctIndex: 1,
-    explanation: '72 ± 2.064 × (10/√25) = 72 ± 2.064 × 2 = 72 ± 4.128 = (67.87, 76.13).',
+    explanation: '72 ± 2.064 × $(10/\\sqrt{25})$ = 72 ± 2.064 × 2 = 72 ± 4.128 = (67.87, 76.13).',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },

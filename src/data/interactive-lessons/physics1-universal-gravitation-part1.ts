@@ -31,7 +31,7 @@ $$F = \\frac{Gm_1 m_2}{r^2}$$
 | Symbol | Meaning | Value/Units |
 |--------|---------|-------------|
 | $F$ | Gravitational force | Newtons (N) |
-| $G$ | Universal gravitational constant | $6.67 \\times 10^{-11}$ N·m²/kg² |
+| $G$ | Universal gravitational constant | $6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$ |
 | $m_1, m_2$ | Masses of the two objects | kg |
 | $r$ | Distance between **centers** of the objects | m |
 
@@ -104,21 +104,21 @@ $G$ is incredibly small: $6.67 \\times 10^{-11}$. Two 100 kg people standing 1 m
       content: `
 **Gravitational Force Calculations** 🧮
 
-Use $G = 6.67 \\times 10^{-11}$ N·m²/kg².
+Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$.
 
 1) Find the gravitational force between Earth ($5.97 \\times 10^{24}$ kg) and the Moon ($7.35 \\times 10^{22}$ kg) separated by $3.84 \\times 10^8$ m. Express in scientific notation as $X \\times 10^{20}$ N. What is $X$ (round to 3 significant figures)?
 
 2) Two 70 kg people stand 2 m apart. What is the gravitational force between them (in N, express in scientific notation, give the coefficient to 3 significant figures, e.g., "8.17" for $8.17 \\times 10^{-8}$ N)?
 
-3) At Earth's surface, $r = 6.37 \\times 10^6$ m. Calculate $g = GM/r^2$ where $M = 5.97 \\times 10^{24}$ kg. What value do you get (in m/s², round to 3 significant figures)?
+3) At Earth's surface, $r = 6.37 \\times 10^6$ m. Calculate $g = GM/r^2$ where $M = 5.97 \\times 10^{24}$ kg. What value do you get (in $m/s^{2}$, round to 3 significant figures)?
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['1.98', '8.17', '9.8'],
         hint1: '$F = Gm_1m_2/r^2$. Compute numerator and denominator separately.',
         hint2: '$F = G(70)(70)/4$.',
-        hint3: '$g = GM/r^2$. This should give the familiar $9.8$ m/s²!',
-        explanation: '1) $F = 6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24} \\times 7.35 \\times 10^{22} / (3.84 \\times 10^8)^2 = 6.67 \\times 5.97 \\times 7.35 / 14.75 \\times 10^{-11+24+22-16} = 292.6/14.75 \\times 10^{19} = 19.8 \\times 10^{19} = 1.98 \\times 10^{20}$. 2) $F = 6.67 \\times 10^{-11}(4900)/4 = 6.67 \\times 1225 \\times 10^{-11} = 8171 \\times 10^{-11} = 8.17 \\times 10^{-8}$ N. 3) $g = 6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24} / (6.37 \\times 10^6)^2 = 3.98 \\times 10^{14}/4.06 \\times 10^{13} = 9.81 \\approx 9.8$ m/s².'
+        hint3: '$g = GM/r^2$. This should give the familiar $9.8$ $m/s^{2}$!',
+        explanation: '1) $F = 6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24} \\times 7.35 \\times 10^{22} / (3.84 \\times 10^8)^2 = 6.67 \\times 5.97 \\times 7.35 / 14.75 \\times 10^{-11+24+22-16} = 292.6/14.75 \\times 10^{19} = 19.8 \\times 10^{19} = 1.98 \\times 10^{20}$. 2) $F = 6.67 \\times 10^{-11}(4900)/4 = 6.67 \\times 1225 \\times 10^{-11} = 8171 \\times 10^{-11} = 8.17 \\times 10^{-8}$ N. 3) $g = 6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24} / (6.37 \\times 10^6)^2 = 3.98 \\times 10^{14}/4.06 \\times 10^{13} = 9.81 \\approx 9.8$ $m/s^{2}$.'
       }
     },
     {
@@ -175,7 +175,7 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg².
               'Different on every planet',
               'The same everywhere in the universe',
               'Only valid near Earth\'s surface',
-              'Equal to $9.8$ m/s²'
+              'Equal to $9.8$ $m/s^{2}$'
             ],
             correctAnswer: 1,
             explanation: '$G$ is a universal constant — the same value everywhere. It should not be confused with $g$ (gravitational field strength), which varies from place to place.'

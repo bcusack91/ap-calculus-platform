@@ -51,7 +51,7 @@ The STM tip is positioned ~1 nm from a surface. Tunneling current:
 
 $$I \\propto e^{-2\\kappa d}$$
 
-With $\\kappa \\sim 10^{10}$ m⁻¹ for typical metals:
+With $\\kappa \\sim 10^{10}$ $m^{-1}$ for typical metals:
 - Moving the tip 0.1 nm closer → current changes by factor $e^2 ≈ 7.4$
 - This extreme sensitivity allows **atomic-resolution imaging**
 - Lateral resolution: ~0.1 nm, vertical: ~0.01 nm
@@ -157,7 +157,7 @@ Lasers require **population inversion** — more atoms in excited state than gro
 
 **1)** A blue LED has $\\lambda = 470$ nm. Band gap energy? (in eV, round to 2 decimal places)
 
-**2)** An STM tip is 1 nm from the surface with $\\kappa = 10^{10}$ m⁻¹. What is $2\\kappa d$?
+**2)** An STM tip is 1 nm from the surface with $\\kappa = 10^{10}$ $m^{-1}$. What is $2\\kappa d$?
 
 **3)** If the tip moves to 1.1 nm, by what factor does the current drop? ($e^{-2} ≈ 0.135$)
 

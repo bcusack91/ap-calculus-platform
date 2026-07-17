@@ -93,7 +93,7 @@ Starting with one double-stranded DNA molecule where BOTH strands are labeled wi
               '10 total, 5 intermediate'
             ],
             correctAnswer: 1,
-            explanation: 'After 5 generations: 2^5 = 32 total molecules. The two original 15N strands are each paired with a 14N strand = 2 intermediate molecules. The remaining 30 molecules are all-14N (light). The number of intermediate molecules is always exactly 2.'
+            explanation: 'After 5 generations: $2^{5}$ = 32 total molecules. The two original 15N strands are each paired with a 14N strand = 2 intermediate molecules. The remaining 30 molecules are all-14N (light). The number of intermediate molecules is always exactly 2.'
           }
         ]
       }

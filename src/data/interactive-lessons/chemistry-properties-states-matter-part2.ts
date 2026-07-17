@@ -97,7 +97,7 @@ export const chemPropertiesStatesMatterPart2Data = {
 - **Conduct electricity when melted or dissolved** in water (ions free to move)
 - Many are **soluble in polar solvents** like water
 
-**Examples:** NaCl (801°C mp), MgO (2852°C mp), CaF₂
+**Examples:** NaCl (801°C mp), MgO (2852°C mp), $CaF_{2}$
 
 ### Why is MgO\'s melting point so much higher than NaCl\'s?
 
@@ -123,7 +123,7 @@ MgO has 2+/2− charges vs. NaCl\'s 1+/1−, and smaller ions, giving MgO much s
 - **Do not conduct electricity** in any phase (no free ions or delocalized electrons)
 - Solubility follows "like dissolves like"
 
-**Examples:** Ice (H₂O, 0°C mp), dry ice (CO₂, sublimes at −78°C), sugar (C₁₂H₂₂O₁₁), I₂
+**Examples:** Ice ($H_{2}O$, 0°C mp), dry ice ($CO_{2}$, sublimes at −78°C), sugar $(C_{12}H_{22}O_{11})$, $I_{2}$
 
 ---
 
@@ -172,7 +172,7 @@ When layers of a metal are displaced, the delocalized electrons shift to maintai
 
 **Examples:**
 - **Diamond** (C, mp 3550°C) — each carbon bonded to 4 others in a tetrahedral network
-- **Silicon dioxide / Quartz** (SiO₂, mp 1713°C) — Si and O atoms in a 3D network
+- **Silicon dioxide / Quartz** ($SiO_{2}$, mp 1713°C) — Si and O atoms in a 3D network
 - **Silicon carbide** (SiC, mp 2730°C)
 - **Graphite** (C) — carbon atoms in 2D sheets with delocalized electrons between layers; conducts electricity!
 
@@ -203,7 +203,7 @@ Both are pure carbon, but:
               'Network covalent solid'
             ],
             correctAnswer: 3,
-            explanation: 'Network covalent solids (like diamond or SiO₂) have extremely high melting points due to strong covalent bonds, are very hard, and generally do not conduct electricity. Ionic solids also have high melting points but are brittle and conduct when dissolved.'
+            explanation: 'Network covalent solids (like diamond or $SiO_{2}$) have extremely high melting points due to strong covalent bonds, are very hard, and generally do not conduct electricity. Ionic solids also have high melting points but are brittle and conduct when dissolved.'
           },
           {
             question: 'A solid conducts electricity both as a solid and when melted, is malleable, and is lustrous. What type of solid is it?',
@@ -239,17 +239,17 @@ Both are pure carbon, but:
         dropdowns: [
           {
             id: 'sm2-dd1',
-            label: 'Ice (H₂O) is composed of discrete water molecules held together by hydrogen',
+            label: 'Ice $(H_{2}O)$ is composed of discrete water molecules held together by hydrogen',
             options: ['Ionic', 'Molecular', 'Metallic', 'Network covalent'],
             correctIndex: 1,
-            explanation: 'Ice (H₂O) is composed of discrete water molecules held together by hydrogen bonds — a molecular solid with a low melting point of 0°C.'
+            explanation: 'Ice $(H_{2}O)$ is composed of discrete water molecules held together by hydrogen bonds — a molecular solid with a low melting point of 0°C.'
           },
           {
             id: 'sm2-dd2',
-            label: 'NaCl is composed of Na⁺ and Cl⁻ ions in a crystal lattice — an _______ solid',
+            label: 'NaCl is composed of $Na^{+}$ and $Cl^{-}$ ions in a crystal lattice — an _______ solid',
             options: ['Ionic', 'Molecular', 'Metallic', 'Network covalent'],
             correctIndex: 0,
-            explanation: 'NaCl is composed of Na⁺ and Cl⁻ ions in a crystal lattice — an ionic solid with a high melting point of 801°C.'
+            explanation: 'NaCl is composed of $Na^{+}$ and $Cl^{-}$ ions in a crystal lattice — an ionic solid with a high melting point of 801°C.'
           },
           {
             id: 'sm2-dd3',
@@ -294,7 +294,7 @@ $$\\boxed{\\text{Molecular} < \\text{Metallic (varies)} < \\text{Ionic} < \\text
 - Tungsten (W, 3422°C) ≫ Sodium (Na, 98°C)
 
 **Network covalent solids:** Shorter, stronger covalent bonds → higher mp
-- Diamond (C–C bonds, 3550°C) > SiC (2730°C) > SiO₂ (1713°C)
+- Diamond (C–C bonds, 3550°C) > SiC (2730°C) > $SiO_{2}$ (1713°C)
       `
     },
     {
@@ -305,15 +305,15 @@ $$\\boxed{\\text{Molecular} < \\text{Metallic (varies)} < \\text{Ionic} < \\text
       exercise: {
         questions: [
           {
-            question: 'Rank the following from lowest to highest melting point: NaCl, CO₂, SiO₂, Cu',
+            question: 'Rank the following from lowest to highest melting point: NaCl, $CO_{2}$, $SiO_{2}$, Cu',
             options: [
-              'CO₂ < Cu < NaCl < SiO₂',
-              'Cu < CO₂ < NaCl < SiO₂',
-              'NaCl < CO₂ < Cu < SiO₂',
-              'CO₂ < NaCl < Cu < SiO₂'
+              '$CO_{2}$ < Cu < NaCl < $SiO_{2}$',
+              'Cu < $CO_{2}$ < NaCl < $SiO_{2}$',
+              'NaCl < $CO_{2}$ < Cu < $SiO_{2}$',
+              '$CO_{2}$ < NaCl < Cu < $SiO_{2}$'
             ],
             correctAnswer: 3,
-            explanation: 'CO₂ is a molecular solid (sublimes at −78°C, weakest forces). NaCl is ionic (mp 801°C). Cu is a metallic solid (mp 1085°C). SiO₂ is network covalent (mp 1713°C, strongest forces). Correct order: CO₂ (−78°C) < NaCl (801°C) < Cu (1085°C) < SiO₂ (1713°C).'
+            explanation: '$CO_{2}$ is a molecular solid (sublimes at −78°C, weakest forces). NaCl is ionic (mp 801°C). Cu is a metallic solid (mp 1085°C). $SiO_{2}$ is network covalent (mp 1713°C, strongest forces). Correct order: $CO_{2}$ (−78°C) < NaCl (801°C) < Cu (1085°C) < $SiO_{2}$ (1713°C).'
           }
         ]
       }

@@ -39,7 +39,7 @@ export const satProbSolvDataPart7Data = {
         '21.5%'
       ],
       correctAnswer: 0,
-      explanation: '1,000 × r² = 1,210 → r² = 1.21 → r = 1.1 → 10% annual growth. Check: 1,000 × 1.1 = 1,100. Then 1,100 × 1.1 = 1,210. ✓ Note: it\'s NOT 21%/2 = 10.5% — growth compounds.'
+      explanation: '1,000 × $r^{2}$ = 1,210 → $r^{2}$ = 1.21 → r = 1.1 → 10% annual growth. Check: 1,000 × 1.1 = 1,100. Then 1,100 × 1.1 = 1,210. ✓ Note: it\'s NOT 21%/2 = 10.5% — growth compounds.'
     },
     {
       id: 'psd7-q2',

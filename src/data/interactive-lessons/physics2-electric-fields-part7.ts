@@ -242,7 +242,7 @@ A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d =
 2. **Forgetting direction** — E points high V → low V; positive charges accelerate in that direction; electrons go the other way
 3. **Ignoring signs in PE** — $U = kq_1 q_2/r$ keeps the signs; $F = k|q_1 q_2|/r^2$ uses absolute values
 4. **Dielectric scenarios** — Always ask: "Is the battery connected?" This determines what stays constant ($V$ or $Q$)
-5. **Units** — V/m = N/C (both valid for E). J/C = V (voltage). C²/(N·m²) = F (capacitance).
+5. **Units** — V/m = N/C (both valid for E). J/C = V (voltage). $C^{2}/(N\\cdot m^{2})$ = F (capacitance).
 
 ### Free-Response Strategy
 
@@ -250,7 +250,7 @@ A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d =
 2. **State your approach** — "I'll use conservation of energy" or "I'll find the net field using superposition"
 3. **Show the equation** before substituting numbers
 4. **Check the sign and direction** of your answer
-5. **Verify reasonableness** — lab-scale E ≈ 10²–10⁶ V/m, V ≈ 1–10⁴ V
+5. **Verify reasonableness** — lab-scale E ≈ $10^{2}$–$10^{6}$ V/m, V ≈ 1–$10^{4}$ V
 
 ### You're Ready!
 

@@ -7,7 +7,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
   // Part 1
-  { id: 'nucl-eq-1a', question: 'What are the three main components of a nucleotide?', options: ['Phosphate group, nitrogenous base, and pentose sugar', 'Nitrogen, hydrogen, and oxygen atoms', 'Amino acid, phosphate, and carbohydrate', 'Ribose, deoxyribose, and glucose'], correctIndex: 0, explanation: 'A nucleotide consists of three components: a phosphate group (PO₄³⁻), a nitrogenous base (purine or pyrimidine), and a pentose sugar (ribose in RNA, deoxyribose in DNA).', partNumber: 1, partTitle: 'Nucleotide Structure' },
+  { id: 'nucl-eq-1a', question: 'What are the three main components of a nucleotide?', options: ['Phosphate group, nitrogenous base, and pentose sugar', 'Nitrogen, hydrogen, and oxygen atoms', 'Amino acid, phosphate, and carbohydrate', 'Ribose, deoxyribose, and glucose'], correctIndex: 0, explanation: 'A nucleotide consists of three components: a phosphate group $(PO_{4}^{3-})$, a nitrogenous base (purine or pyrimidine), and a pentose sugar (ribose in RNA, deoxyribose in DNA).', partNumber: 1, partTitle: 'Nucleotide Structure' },
   { id: 'nucl-eq-1b', question: 'Which sugar is found in DNA, and which in RNA?', options: ['Glucose in both; no difference', 'Deoxyribose in DNA; ribose in RNA', 'Ribose in DNA; deoxyribose in RNA', 'Maltose in DNA; sucrose in RNA'], correctIndex: 1, explanation: 'DNA contains deoxyribose (lacks one oxygen atom at the 2\' carbon), while RNA contains ribose. This difference contributes to RNA\'s greater chemical reactivity.', partNumber: 1, partTitle: 'Nucleotide Structure' },
 
   // Part 2
@@ -20,7 +20,7 @@ const questions: EntranceQuizQuestion[] = [
 
   // Part 4
   { id: 'nucl-eq-4a', question: 'How are adjacent nucleotides connected in a DNA strand?', options: ['By peptide bonds between amino acids', 'By hydrogen bonds between any available atoms', 'By phosphodiester bonds linking the phosphate of one nucleotide to the sugar of the next', 'By hydrophobic interactions between bases'], correctIndex: 2, explanation: 'Nucleotides form a sugar-phosphate backbone through phosphodiester bonds: the phosphate group of one nucleotide bonds covalently to the 3\'-hydroxyl carbon of the previous sugar.', partNumber: 4, partTitle: 'Backbone and Polymers' },
-  { id: 'nucl-eq-4b', question: 'Nucleic acids are polymers formed by dehydration synthesis. What is removed during this process?', options: ['Nitrogen atoms from the bases', 'Water molecules (H₂O) between nucleotides', 'Phosphate groups from the sugar backbone', 'Hydrogen atoms only'], correctIndex: 1, explanation: 'During dehydration synthesis, a water molecule (H₂O) is released when nucleotides link via phosphodiester bonds. This condensation reaction polymerizes nucleotides into DNA or RNA.', partNumber: 4, partTitle: 'Backbone and Polymers' },
+  { id: 'nucl-eq-4b', question: 'Nucleic acids are polymers formed by dehydration synthesis. What is removed during this process?', options: ['Nitrogen atoms from the bases', 'Water molecules $(H_{2}O)$ between nucleotides', 'Phosphate groups from the sugar backbone', 'Hydrogen atoms only'], correctIndex: 1, explanation: 'During dehydration synthesis, a water molecule $(H_{2}O)$ is released when nucleotides link via phosphodiester bonds. This condensation reaction polymerizes nucleotides into DNA or RNA.', partNumber: 4, partTitle: 'Backbone and Polymers' },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {

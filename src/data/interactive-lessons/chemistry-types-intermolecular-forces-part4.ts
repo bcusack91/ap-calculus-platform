@@ -34,7 +34,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'When NaCl dissolves in water, what type of force attracts Na⁺ ions to water molecules?',
+            question: 'When NaCl dissolves in water, what type of force attracts $Na^{+}$ ions to water molecules?',
             options: [
               'London Dispersion Forces',
               'Hydrogen bonding',
@@ -42,10 +42,10 @@ export const chemTypesIntermolecularForcesPart4Data = {
               'Covalent bonding'
             ],
             correctAnswer: 2,
-            explanation: 'Na⁺ is a cation (full positive charge) and water is a polar molecule (has a dipole). The attraction between them is an ion-dipole force. The δ- oxygen end of water is attracted to the positive Na⁺ ion.'
+            explanation: '$Na^{+}$ is a cation (full positive charge) and water is a polar molecule (has a dipole). The attraction between them is an ion-dipole force. The δ- oxygen end of water is attracted to the positive $Na^{+}$ ion.'
           },
           {
-            question: 'When Cl⁻ is dissolved in water, which part of the water molecule is oriented toward the Cl⁻ ion?',
+            question: 'When $Cl^{-}$ is dissolved in water, which part of the water molecule is oriented toward the $Cl^{-}$ ion?',
             options: [
               'The oxygen (δ-) end',
               'The hydrogen (δ+) end',
@@ -53,7 +53,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
               'The lone pairs on oxygen'
             ],
             correctAnswer: 1,
-            explanation: 'Cl⁻ is a negative ion, so it attracts the positive end of the water dipole. The δ+ hydrogen atoms of water orient toward the Cl⁻ ion, forming ion-dipole attractions.'
+            explanation: '$Cl^{-}$ is a negative ion, so it attracts the positive end of the water dipole. The δ+ hydrogen atoms of water orient toward the $Cl^{-}$ ion, forming ion-dipole attractions.'
           }
         ]
       }
@@ -70,14 +70,14 @@ export const chemTypesIntermolecularForcesPart4Data = {
             label: 'A cation ($+$) attracts which end of water?',
             options: ['The δ+ hydrogen end', 'The δ- oxygen end', 'Neither end'],
             correctIndex: 1,
-            explanation: 'Cations (positive ions like Na⁺, K⁺, Ca²⁺) attract the δ- oxygen end of water because opposite charges attract.'
+            explanation: 'Cations (positive ions like $Na^{+}$, $K^{+}$, $Ca^{2+}$) attract the δ- oxygen end of water because opposite charges attract.'
           },
           {
             id: 'id-anion',
             label: 'An anion ($-$) attracts which end of water?',
             options: ['The δ+ hydrogen end', 'The δ- oxygen end', 'Neither end'],
             correctIndex: 0,
-            explanation: 'Anions (negative ions like Cl⁻, Br⁻, NO₃⁻) attract the δ+ hydrogen end of water because opposite charges attract.'
+            explanation: 'Anions (negative ions like $Cl^{-}$, $Br^{-}$, $NO_{3}^{-}$) attract the δ+ hydrogen end of water because opposite charges attract.'
           }
         ]
       }
@@ -86,7 +86,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
       id: 'if-id-strength-factors',
       type: 'text',
       title: 'Factors Affecting Ion-Dipole Strength',
-      content: `The strength of ion-dipole forces depends on two main factors:\n\n**1. Charge of the ion**\nHigher charge $\\rightarrow$ stronger ion-dipole force\n- $\\text{Mg}^{2+}$ creates stronger ion-dipole forces than $\\text{Na}^+$\n- $\\text{Al}^{3+}$ creates even stronger ion-dipole forces\n\n**2. Size of the ion**\nSmaller ion $\\rightarrow$ higher charge density $\\rightarrow$ stronger ion-dipole force\n- $\\text{Li}^+$ (small) creates stronger ion-dipole forces than $\\text{K}^+$ (larger)\n- Both have +1 charge, but Li⁺ concentrates that charge in a smaller volume\n\n**Charge density** = charge / volume\n\nThe combination of high charge and small size gives the highest charge density and the strongest ion-dipole interactions.\n\nThis is why salts of small, highly charged ions (like $\\text{MgCl}_2$) tend to have very exothermic heats of hydration.\n\n> 💡 **Tip:** Remember — higher charge AND smaller size = higher charge density = stronger ion-dipole forces.`
+      content: `The strength of ion-dipole forces depends on two main factors:\n\n**1. Charge of the ion**\nHigher charge $\\rightarrow$ stronger ion-dipole force\n- $\\text{Mg}^{2+}$ creates stronger ion-dipole forces than $\\text{Na}^+$\n- $\\text{Al}^{3+}$ creates even stronger ion-dipole forces\n\n**2. Size of the ion**\nSmaller ion $\\rightarrow$ higher charge density $\\rightarrow$ stronger ion-dipole force\n- $\\text{Li}^+$ (small) creates stronger ion-dipole forces than $\\text{K}^+$ (larger)\n- Both have +1 charge, but $Li^{+}$ concentrates that charge in a smaller volume\n\n**Charge density** = charge / volume\n\nThe combination of high charge and small size gives the highest charge density and the strongest ion-dipole interactions.\n\nThis is why salts of small, highly charged ions (like $\\text{MgCl}_2$) tend to have very exothermic heats of hydration.\n\n> 💡 **Tip:** Remember — higher charge AND smaller size = higher charge density = stronger ion-dipole forces.`
     },
     {
       id: 'if-id-strength-q',
@@ -98,24 +98,24 @@ export const chemTypesIntermolecularForcesPart4Data = {
           {
             question: 'Which ion would form the STRONGEST ion-dipole interactions with water?',
             options: [
-              'K⁺ (charge +1, radius 138 pm)',
-              'Na⁺ (charge +1, radius 102 pm)',
-              'Mg²⁺ (charge +2, radius 72 pm)',
-              'Cs⁺ (charge +1, radius 167 pm)'
+              '$K^{+}$ (charge +1, radius 138 pm)',
+              '$Na^{+}$ (charge +1, radius 102 pm)',
+              '$Mg^{2+}$ (charge +2, radius 72 pm)',
+              '$Cs^{+}$ (charge +1, radius 167 pm)'
             ],
             correctAnswer: 2,
-            explanation: 'Mg²⁺ has both the highest charge (+2) and a small radius (72 pm), giving it the highest charge density. High charge density means the strongest ion-dipole interactions with water molecules.'
+            explanation: '$Mg^{2+}$ has both the highest charge (+2) and a small radius (72 pm), giving it the highest charge density. High charge density means the strongest ion-dipole interactions with water molecules.'
           },
           {
-            question: 'Among the alkali metal cations Li⁺, Na⁺, K⁺, and Rb⁺ (all +1 charge), which has the most exothermic hydration enthalpy?',
+            question: 'Among the alkali metal cations $Li^{+}$, $Na^{+}$, $K^{+}$, and $Rb^{+}$ (all +1 charge), which has the most exothermic hydration enthalpy?',
             options: [
-              'Rb⁺ — largest ion',
-              'K⁺ — medium-large ion',
-              'Na⁺ — medium ion',
-              'Li⁺ — smallest ion'
+              '$Rb^{+}$ — largest ion',
+              '$K^{+}$ — medium-large ion',
+              '$Na^{+}$ — medium ion',
+              '$Li^{+}$ — smallest ion'
             ],
             correctAnswer: 3,
-            explanation: 'Li⁺ is the smallest of these cations, so it has the highest charge density. It forms the strongest ion-dipole interactions with water, releasing the most energy upon hydration (most exothermic hydration enthalpy).'
+            explanation: '$Li^{+}$ is the smallest of these cations, so it has the highest charge density. It forms the strongest ion-dipole interactions with water, releasing the most energy upon hydration (most exothermic hydration enthalpy).'
           }
         ]
       }

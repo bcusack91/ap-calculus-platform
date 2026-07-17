@@ -90,11 +90,11 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
       content: `
 **AP-Style Calculations** 📝
 
-1) A 6 kg block slides with $\\mu_k = 0.30$ on a horizontal surface. What is the magnitude of its deceleration (m/s²)? ($g = 10$ m/s²)
+1) A 6 kg block slides with $\\mu_k = 0.30$ on a horizontal surface. What is the magnitude of its deceleration $(m/s^{2})$? ($g = 10$ $m/s^{2}$)
 
 2) A block on a flat surface requires 24 N to start moving and 18 N to keep it moving at constant velocity. The block weighs 60 N. What is $\\mu_s$?
 
-3) A 50 N horizontal force pushes a 10 kg block at constant velocity. What is $\\mu_k$? ($g = 10$ m/s²)
+3) A 50 N horizontal force pushes a 10 kg block at constant velocity. What is $\\mu_k$? ($g = 10$ $m/s^{2}$)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -104,7 +104,7 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
         hint1: 'On a flat surface with only friction, $a = \\mu_k g$.',
         hint2: '$\\mu_s = F_{\\text{start}} / N$. What is the normal force for a block on a flat surface?',
         hint3: 'Constant velocity means net force is zero, so $F_{\\text{applied}} = f_k = \\mu_k N$. Solve for $\\mu_k$.',
-        explanation: '1) $a = 0.30 \\times 10 = 3$ m/s². 2) $\\mu_s = 24/60 = 0.4$. 3) $\\mu_k = 50/100 = 0.5$.'
+        explanation: '1) $a = 0.30 \\times 10 = 3$ $m/s^{2}$. 2) $\\mu_s = 24/60 = 0.4$. 3) $\\mu_k = 50/100 = 0.5$.'
       }
     },
     {
@@ -129,7 +129,7 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
           },
           {
             label: 'Static friction is a "reactive" force, meaning it:',
-            options: ['Always equals μₛN', 'Adjusts its magnitude to prevent motion', 'Only acts when objects are moving', 'Is always greater than kinetic friction'],
+            options: ['Always equals $\\mu_{s}N$', 'Adjusts its magnitude to prevent motion', 'Only acts when objects are moving', 'Is always greater than kinetic friction'],
             correctIndex: 1,
             explanation: 'Static friction adjusts from 0 up to $\\mu_s N$ to match the applied force and prevent sliding. It\'s reactive — it only provides as much force as needed.'
           }
@@ -145,7 +145,7 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
       exercise: {
         questions: [
           {
-            question: 'A 5 kg block on a surface ($\\mu_s = 0.60$, $\\mu_k = 0.40$) is pushed with 35 N horizontally ($g = 10$ m/s²). What is the friction force on the block?',
+            question: 'A 5 kg block on a surface ($\\mu_s = 0.60$, $\\mu_k = 0.40$) is pushed with 35 N horizontally ($g = 10$ $m/s^{2}$). What is the friction force on the block?',
             options: [
               '20 N',
               '30 N',

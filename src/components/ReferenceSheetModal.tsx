@@ -3,6 +3,21 @@
 import { useState, useMemo } from 'react'
 import FocusTrapDialog from './FocusTrapDialog'
 import { getReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
+import { MathText } from './MathText'
+
+/**
+ * Renders a reference-sheet formula string as a list item. Items mix prose
+ * annotations with inline ($...$) LaTeX, so we delegate to MathText, which
+ * lazily loads KaTeX and re-renders once it's ready (leaving non-math text
+ * untouched and falling back to the raw span if KaTeX can't parse it).
+ */
+function FormulaItem({ text, className }: { text: string; className?: string }) {
+  return (
+    <li className={className}>
+      <MathText inline text={text} />
+    </li>
+  )
+}
 
 interface ReferenceSheetModalProps {
   open: boolean
@@ -57,12 +72,11 @@ export default function ReferenceSheetModal({ open, onClose, courseSlug, topicSl
               </h3>
               <ul className="space-y-1.5">
                 {section.items.map((item, i) => (
-                  <li
+                  <FormulaItem
                     key={i}
-                    className="text-sm text-gray-800 dark:text-gray-200 font-mono bg-gray-50 dark:bg-gray-900/40 rounded px-3 py-1.5"
-                  >
-                    {item}
-                  </li>
+                    text={item}
+                    className="text-sm text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900/40 rounded px-3 py-1.5"
+                  />
                 ))}
               </ul>
             </div>
@@ -164,94 +178,94 @@ const CHEM_EQUATION_SECTIONS: { title: string; items: string[] }[] = [
   {
     title: 'Atomic Structure',
     items: [
-      'E = hν',
-      'c = λν',
-      'E = −2.178 × 10⁻¹⁸ / n² J  (hydrogen atom)',
+      '$E = h\\nu$',
+      '$c = \\lambda\\nu$',
+      '$E = -2.178 \\times 10^{-18} / n^2$ J  (hydrogen atom)',
     ],
   },
   {
     title: 'Equilibrium',
     items: [
-      'Kc = [products]^coeff / [reactants]^coeff',
-      'Kp = Kc(RT)^Δn',
-      'Q  (reaction quotient, same form as K)',
-      'Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴  (at 25 °C)',
-      'Ka × Kb = Kw',
-      'Ksp = [cation]^m [anion]^n',
+      '$K_c = [\\text{products}]^{coeff} / [\\text{reactants}]^{coeff}$',
+      '$K_p = K_c(RT)^{\\Delta n}$',
+      '$Q$  (reaction quotient, same form as K)',
+      '$K_w = [\\text{H}^+][\\text{OH}^-] = 1.0 \\times 10^{-14}$  (at 25 °C)',
+      '$K_a \\times K_b = K_w$',
+      '$K_{sp} = [\\text{cation}]^m [\\text{anion}]^n$',
     ],
   },
   {
     title: 'Acids & Bases',
     items: [
-      'pH = −log[H⁺]',
-      'pOH = −log[OH⁻]',
+      'pH = $-\\log[\\text{H}^+]$',
+      'pOH = $-\\log[\\text{OH}^-]$',
       'pH + pOH = 14  (at 25 °C)',
-      'pKa = −log Ka   ;   pKb = −log Kb',
-      'Henderson-Hasselbalch:  pH = pKa + log([A⁻]/[HA])',
+      '$pK_a = -\\log K_a$   ;   $pK_b = -\\log K_b$',
+      'Henderson-Hasselbalch:  pH = $pK_a + \\log([\\text{A}^-]/[\\text{HA}])$',
     ],
   },
   {
     title: 'Thermodynamics',
     items: [
-      'ΔG° = ΔH° − TΔS°',
-      'ΔG° = −RT ln K',
-      'ΔG° = −nFE°',
-      'ΔG = ΔG° + RT ln Q',
-      'q = mcΔT',
-      'q = nCΔT  (molar heat capacity)',
-      'ΔH°rxn = Σ ΔH°f(products) − Σ ΔH°f(reactants)',
-      'ΔS°rxn = Σ S°(products) − Σ S°(reactants)',
-      'ΔH°rxn ≈ Σ(bonds broken) − Σ(bonds formed)',
-      'S = kB ln W  (Boltzmann)',
+      '$\\Delta G^{\\circ} = \\Delta H^{\\circ} - T\\Delta S^{\\circ}$',
+      '$\\Delta G^{\\circ} = -RT\\ln K$',
+      '$\\Delta G^{\\circ} = -nFE^{\\circ}$',
+      '$\\Delta G = \\Delta G^{\\circ} + RT\\ln Q$',
+      '$q = mc\\Delta T$',
+      '$q = nC\\Delta T$  (molar heat capacity)',
+      '$\\Delta H^{\\circ}_{rxn} = \\Sigma\\, \\Delta H^{\\circ}_f(\\text{products}) - \\Sigma\\, \\Delta H^{\\circ}_f(\\text{reactants})$',
+      '$\\Delta S^{\\circ}_{rxn} = \\Sigma\\, S^{\\circ}(\\text{products}) - \\Sigma\\, S^{\\circ}(\\text{reactants})$',
+      '$\\Delta H^{\\circ}_{rxn} \\approx \\Sigma(\\text{bonds broken}) - \\Sigma(\\text{bonds formed})$',
+      '$S = k_B\\ln W$  (Boltzmann)',
     ],
   },
   {
     title: 'Kinetics',
     items: [
-      'rate = k[A]^m[B]^n',
-      'Zero order:  [A] = [A]₀ − kt  ;  t₁/₂ = [A]₀ / 2k',
-      'First order:  ln[A] = ln[A]₀ − kt  ;  t₁/₂ = 0.693 / k',
-      'Second order:  1/[A] = 1/[A]₀ + kt  ;  t₁/₂ = 1 / (k[A]₀)',
-      'Arrhenius:  k = Ae^(−Ea/RT)',
-      'ln(k₁/k₂) = (Ea/R)(1/T₂ − 1/T₁)',
+      'rate = $k[\\text{A}]^m[\\text{B}]^n$',
+      'Zero order:  $[\\text{A}] = [\\text{A}]_0 - kt$  ;  $t_{1/2} = [\\text{A}]_0 / 2k$',
+      'First order:  $\\ln[\\text{A}] = \\ln[\\text{A}]_0 - kt$  ;  $t_{1/2} = 0.693 / k$',
+      'Second order:  $1/[\\text{A}] = 1/[\\text{A}]_0 + kt$  ;  $t_{1/2} = 1 / (k[\\text{A}]_0)$',
+      'Arrhenius:  $k = Ae^{-E_a/RT}$',
+      '$\\ln(k_1/k_2) = (E_a/R)(1/T_2 - 1/T_1)$',
     ],
   },
   {
     title: 'Gas Laws',
     items: [
-      'PV = nRT',
-      'Ptotal = P₁ + P₂ + P₃ + …  (Dalton\'s Law)',
-      'P₁V₁ = P₂V₂  (Boyle)',
-      'V₁/T₁ = V₂/T₂  (Charles)',
-      'n₁/V₁ = n₂/V₂  (Avogadro)',
-      'KE_avg = (3/2)kBT  per molecule',
-      'u_rms = √(3RT/M)',
+      '$PV = nRT$',
+      '$P_{total} = P_1 + P_2 + P_3 + \\ldots$  (Dalton\'s Law)',
+      '$P_1V_1 = P_2V_2$  (Boyle)',
+      '$V_1/T_1 = V_2/T_2$  (Charles)',
+      '$n_1/V_1 = n_2/V_2$  (Avogadro)',
+      '$KE_{avg} = \\frac{3}{2}k_B T$  per molecule',
+      '$u_{rms} = \\sqrt{3RT/M}$',
     ],
   },
   {
     title: 'Electrochemistry',
     items: [
-      'E°cell = E°cathode − E°anode',
-      'ΔG° = −nFE°cell',
-      'Nernst:  E = E° − (RT / nF) ln Q',
-      'At 25 °C:  E = E° − (0.0592 / n) log Q',
-      'q = It  (charge = current × time)',
-      'moles e⁻ = q / F',
+      '$E^{\\circ}_{cell} = E^{\\circ}_{cathode} - E^{\\circ}_{anode}$',
+      '$\\Delta G^{\\circ} = -nFE^{\\circ}_{cell}$',
+      'Nernst:  $E = E^{\\circ} - (RT / nF)\\ln Q$',
+      'At 25 °C:  $E = E^{\\circ} - (0.0592 / n)\\log Q$',
+      '$q = It$  (charge = current × time)',
+      'moles $e^-$ = $q / F$',
     ],
   },
   {
     title: 'Constants',
     items: [
-      'R = 8.314 J mol⁻¹ K⁻¹  =  0.08206 L atm mol⁻¹ K⁻¹',
+      '$R = 8.314$ J mol⁻¹ K⁻¹ = 0.08206 L atm mol⁻¹ K⁻¹',
       'F = 96 485 C mol⁻¹',
-      'NA = 6.022 × 10²³ mol⁻¹',
-      'h = 6.626 × 10⁻³⁴ J s',
-      'c = 2.998 × 10⁸ m s⁻¹',
-      'kB = 1.381 × 10⁻²³ J K⁻¹',
+      '$N_A = 6.022 \\times 10^{23}$ mol⁻¹',
+      '$h = 6.626 \\times 10^{-34}$ J s',
+      '$c = 2.998 \\times 10^8$ m s⁻¹',
+      '$k_B = 1.381 \\times 10^{-23}$ J K⁻¹',
       '1 atm = 760 mmHg = 101.325 kPa',
       '0 °C = 273.15 K',
-      'Kw = 1.0 × 10⁻¹⁴  (at 25 °C)',
-      '1 eV = 1.602 × 10⁻¹⁹ J',
+      '$K_w = 1.0 \\times 10^{-14}$  (at 25 °C)',
+      '1 eV = $1.602 \\times 10^{-19}$ J',
     ],
   },
 ]
@@ -351,12 +365,11 @@ function ChemEquationsView() {
           </h3>
           <ul className="space-y-1.5">
             {section.items.map((item, i) => (
-              <li
+              <FormulaItem
                 key={i}
-                className="text-sm text-gray-800 dark:text-gray-200 font-mono bg-gray-50 dark:bg-gray-900/40 rounded px-3 py-1.5"
-              >
-                {item}
-              </li>
+                text={item}
+                className="text-sm text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900/40 rounded px-3 py-1.5"
+              />
             ))}
           </ul>
         </div>

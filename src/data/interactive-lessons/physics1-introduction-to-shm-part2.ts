@@ -155,7 +155,7 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
           },
           {
             label: 'The effective spring constant for two springs in parallel is:',
-            options: ['k₁ + k₂', '1/(1/k₁ + 1/k₂)', 'k₁k₂', 'k₁ - k₂'],
+            options: ['$k_{1}$ + $k_{2}$', '$1/(1/k_{1} + 1/k_{2})$', '$k_{1}k_{2}$', '$k_{1}$ - $k_{2}$'],
             correctIndex: 0,
             explanation: 'Springs in parallel: $k_{\\text{eff}} = k_1 + k_2$. They share the displacement.'
           }

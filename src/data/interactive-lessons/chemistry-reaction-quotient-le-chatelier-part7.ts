@@ -93,15 +93,15 @@ $$\\boxed{Q < K \\to \\text{shift right} \\quad|\\quad Q > K \\to \\text{shift l
             explanation: 'Only temperature changes K. All other stresses shift the equilibrium position but leave K unchanged.'
           },
           {
-            question: 'For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$, $\\Delta H > 0$. Adding more CaCO₃(s) will:',
+            question: 'For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$, $\\Delta H > 0$. Adding more $CaCO_{3}(s)$ will:',
             options: [
-              'Shift right, producing more CO₂',
-              'Shift left, consuming CO₂',
-              'Have no effect — CaCO₃ is a solid',
+              'Shift right, producing more $CO_{2}$',
+              'Shift left, consuming $CO_{2}$',
+              'Have no effect — $CaCO_{3}$ is a solid',
               'Increase K'
             ],
             correctAnswer: 2,
-            explanation: 'CaCO₃ is a solid. Solids don\'t appear in the Q expression. Adding more solid doesn\'t change Q and therefore doesn\'t shift the equilibrium.'
+            explanation: '$CaCO_{3}$ is a solid. Solids don\'t appear in the Q expression. Adding more solid doesn\'t change Q and therefore doesn\'t shift the equilibrium.'
           }
         ]
       }
@@ -123,7 +123,7 @@ $$\\boxed{Q < K \\to \\text{shift right} \\quad|\\quad Q > K \\to \\text{shift l
               'Shift right; K decreases'
             ],
             correctAnswer: 1,
-            explanation: 'Exothermic: heat is a product. Cooling removes heat → shift right (toward more N₂O₄). For an exothermic reaction, cooling increases K.'
+            explanation: 'Exothermic: heat is a product. Cooling removes heat → shift right (toward more $N_{2}O_{4}$). For an exothermic reaction, cooling increases K.'
           },
           {
             question: 'For $\\text{A}(g) + \\text{B}(g) \\rightleftharpoons 2\\,\\text{C}(g)$, a catalyst is introduced to a system NOT yet at equilibrium. The catalyst will:',
@@ -223,7 +223,7 @@ Current concentrations: $[\\text{PCl}_5] = 0.50$, $[\\text{PCl}_3] = 0.10$, $[\\
             explanation: 'Catalysts speed up both forward and reverse reactions equally by lowering the activation energy for both directions. There is no net shift in equilibrium position.'
           },
           {
-            question: 'For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, $\\Delta H = -92$ kJ. Which set of conditions maximizes NH₃ at equilibrium?',
+            question: 'For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, $\\Delta H = -92$ kJ. Which set of conditions maximizes $NH_{3}$ at equilibrium?',
             options: [
               'High temperature, low pressure, with catalyst',
               'Low temperature, high pressure, with catalyst',

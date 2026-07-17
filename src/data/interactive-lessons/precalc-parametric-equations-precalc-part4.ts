@@ -15,7 +15,7 @@ An object launched at angle $\\alpha$ with initial speed $v_0$ from height $h_0$
 
 $$x = (v_0\\cos\\alpha)\\,t, \\quad y = h_0 + (v_0\\sin\\alpha)\\,t - \\frac{1}{2}gt^2$$
 
-where $g \\approx 9.8$ m/s² or $32$ ft/s².
+where $g \\approx 9.8$ $m/s^{2}$ or $32$ $ft/s^{2}$.
 
 ### Key Quantities
 
@@ -113,7 +113,7 @@ The shape depends on the frequency ratio $a:b$ and phase shift $\\delta$.
       content: `
 **Projectile Calculations** 🧮
 
-A ball is launched at $v_0 = 80$ ft/s at $\\alpha = 45°$ from ground level ($h_0 = 0$, $g = 32$ ft/s²).
+A ball is launched at $v_0 = 80$ ft/s at $\\alpha = 45°$ from ground level ($h_0 = 0$, $g = 32$ $ft/s^{2}$).
 
 **1)** The horizontal component of velocity $v_0\\cos 45°$ = ? (Enter like "40sqrt2")
 

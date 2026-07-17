@@ -127,11 +127,11 @@ Thomas Hunt Morgan used the fruit fly *Drosophila melanogaster* as a model organ
 Morgan crossed a **white-eyed male** fly with a **red-eyed (wild-type) female**:
 
 **P cross**: ♀ red-eyed × ♂ white-eyed
-**F₁**: All red-eyed (red is dominant)
+**$F_{1}$**: All red-eyed (red is dominant)
 
-**F₁ × F₁ cross**:
-- F₂ females: **all red-eyed**
-- F₂ males: **½ red-eyed, ½ white-eyed**
+**$F_{1}$ × $F_{1}$ cross**:
+- $F_{2}$ females: **all red-eyed**
+- $F_{2}$ males: **½ red-eyed, ½ white-eyed**
 
 ### Morgan's Conclusion
 
@@ -150,15 +150,15 @@ This was the **first gene mapped to a specific chromosome**, directly supporting
       exercise: {
         questions: [
           {
-            question: 'In Morgan\'s experiment, F₂ white-eyed flies were:',
+            question: 'In Morgan\'s experiment, $F_{2}$ white-eyed flies were:',
             options: [
               'All male',
               'All female',
               'Both male and female in equal numbers',
-              'Only found in the F₃ generation'
+              'Only found in the $F_{3}$ generation'
             ],
             correctAnswer: 0,
-            explanation: 'Because the white-eye allele is X-linked recessive, only males (XʷY) expressed the white-eye phenotype in the F₂ generation. F₂ females were either homozygous red (X⁺X⁺) or heterozygous carriers (X⁺Xʷ).'
+            explanation: 'Because the white-eye allele is X-linked recessive, only males $(X^{w}Y)$ expressed the white-eye phenotype in the $F_{2}$ generation. $F_{2}$ females were either homozygous red $(X^{+}X^{+})$ or heterozygous carriers $(X^{+}X^{w})$.'
           },
           {
             question: 'Why is Drosophila melanogaster an ideal organism for genetics research?',

@@ -93,7 +93,7 @@ $$\\boxed{\\text{Elementary step: Rate law exponents} = \\text{stoichiometric co
       exercise: {
         questions: [
           {
-            question: 'The elementary step NO₂ + CO → NO + CO₂ is:',
+            question: 'The elementary step $NO_{2}$ + CO → NO + $CO_{2}$ is:',
             options: [
               'Unimolecular',
               'Bimolecular',
@@ -101,18 +101,18 @@ $$\\boxed{\\text{Elementary step: Rate law exponents} = \\text{stoichiometric co
               'Cannot determine without data'
             ],
             correctAnswer: 1,
-            explanation: 'Two reactant molecules (NO₂ and CO) collide, so this is bimolecular. For this elementary step, rate = k[NO₂][CO].'
+            explanation: 'Two reactant molecules ($NO_{2}$ and CO) collide, so this is bimolecular. For this elementary step, rate = k[$NO_{2}$][CO].'
           },
           {
-            question: 'For the elementary step O₃ → O₂ + O, the rate law is:',
+            question: 'For the elementary step $O_{3}$ → $O_{2}$ + O, the rate law is:',
             options: [
-              'rate = k[O₂][O]',
-              'rate = k[O₃]',
-              'rate = k[O₃]²',
+              'rate = k[$O_{2}$][O]',
+              'rate = k[$O_{3}$]',
+              'rate = k[$O_{3}$]$ {}^{2}$',
               'Cannot write from stoichiometry'
             ],
             correctAnswer: 1,
-            explanation: 'This is a unimolecular decomposition (one reactant molecule). For an elementary step, the rate law comes directly from stoichiometry: rate = k[O₃].'
+            explanation: 'This is a unimolecular decomposition (one reactant molecule). For an elementary step, the rate law comes directly from stoichiometry: rate = k[$O_{3}$].'
           },
           {
             question: 'Why are termolecular elementary steps so rare?',
@@ -187,14 +187,14 @@ $$\\boxed{2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}}$$ ✓
           },
           {
             label: 'If 2A → products is an elementary step, the rate law is',
-            options: ['rate = k[A]', 'rate = k[A]²', 'rate = 2k[A]', 'rate = k[A]^(1/2)']
+            options: ['rate = k[A]', 'rate = k[A]$ {}^{2}$', 'rate = 2k[A]', 'rate = k[A]^(1/2)']
           }
         ],
-        correctAnswers: ['stoichiometric coefficients', 'series of elementary steps', 'elementary steps', 'rate = k[A]²'],
+        correctAnswers: ['stoichiometric coefficients', 'series of elementary steps', 'elementary steps', 'rate = k[A]$ {}^{2}$'],
         hint1: 'For elementary steps (and only elementary steps), rate law exponents = coefficients.',
         hint2: 'A mechanism is the sequence of elementary steps that make up the overall reaction.',
         hint3: 'Molecularity describes a single molecular event — an elementary step.',
-        explanation: 'For elementary steps: exponents = stoichiometric coefficients. A mechanism is a series of elementary steps. Molecularity applies only to elementary steps. 2A → products (elementary): rate = k[A]².'
+        explanation: 'For elementary steps: exponents = stoichiometric coefficients. A mechanism is a series of elementary steps. Molecularity applies only to elementary steps. 2A → products (elementary): rate = k[A]$ {}^{2}$.'
       }
     },
     {
@@ -216,10 +216,10 @@ Consider the mechanism:
       exercise: {
         boxes: 3,
         correctAnswers: ['2', '2', '1'],
-        hint1: 'Step 1 has two reactants (H₂O₂ + I⁻) → bimolecular = 2.',
-        hint2: 'Step 2 has two reactants (H₂O₂ + IO⁻) → bimolecular = 2.',
-        hint3: 'IO⁻ is produced in Step 1 and consumed in Step 2. I⁻ is a catalyst (regenerated). The intermediate is IO⁻.',
-        explanation: '1) Step 1: H₂O₂ + I⁻ → 2 reactant particles → bimolecular (2). 2) Step 2: H₂O₂ + IO⁻ → 2 reactant particles → bimolecular (2). 3) IO⁻ is the only intermediate (produced then consumed). I⁻ is a catalyst (present initially and regenerated).'
+        hint1: 'Step 1 has two reactants $(H_{2}O_{2} + I^{-})$ → bimolecular = 2.',
+        hint2: 'Step 2 has two reactants $(H_{2}O_{2} + IO^{-})$ → bimolecular = 2.',
+        hint3: '$IO^{-}$ is produced in Step 1 and consumed in Step 2. $I^{-}$ is a catalyst (regenerated). The intermediate is $IO^{-}$.',
+        explanation: '1) Step 1: $H_{2}O_{2}$ + $I^{-}$ → 2 reactant particles → bimolecular (2). 2) Step 2: $H_{2}O_{2}$ + $IO^{-}$ → 2 reactant particles → bimolecular (2). 3) $IO^{-}$ is the only intermediate (produced then consumed). $I^{-}$ is a catalyst (present initially and regenerated).'
       }
     },
     {
@@ -250,7 +250,7 @@ Consider the mechanism:
               'Has no activation energy'
             ],
             correctAnswer: 1,
-            explanation: 'If it were a single elementary step, the rate law would be rate = k[A][B]² (from stoichiometry). Since the experimental rate law is rate = k[A][B], the reaction must have a multi-step mechanism.'
+            explanation: 'If it were a single elementary step, the rate law would be rate = k[A][B]$ {}^{2}$ (from stoichiometry). Since the experimental rate law is rate = k[A][B], the reaction must have a multi-step mechanism.'
           }
         ]
       }

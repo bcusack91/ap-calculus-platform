@@ -37,7 +37,7 @@ The filling order **does not** follow simple numerical order — 4s fills before
 
 The **principal quantum number (n)** describes the main energy level of an electron:
 
-| n | Name | Max Electrons (2n²) |
+| n | Name | Max Electrons $(2n^{2})$ |
 |---|------|---------------------|
 | 1 | First shell | 2 |
 | 2 | Second shell | 8 |
@@ -158,12 +158,12 @@ Use the formula $2n^2$ to determine the maximum number of electrons in a princip
           {
             label: 'Maximum electrons in n = 3:',
             correctAnswer: '18',
-            explanation: 'Using 2n² = 2(3²) = 2(9) = 18. Level 3 has subshells 3s (2), 3p (6), and 3d (10): 2 + 6 + 10 = 18. ✓'
+            explanation: 'Using $2n^{2}$ = $2(3^{2})$ = 2(9) = 18. Level 3 has subshells 3s (2), 3p (6), and 3d (10): 2 + 6 + 10 = 18. ✓'
           },
           {
             label: 'Maximum electrons in n = 4:',
             correctAnswer: '32',
-            explanation: 'Using 2n² = 2(4²) = 2(16) = 32. Level 4 has subshells 4s (2), 4p (6), 4d (10), and 4f (14): 2 + 6 + 10 + 14 = 32. ✓'
+            explanation: 'Using $2n^{2}$ = $2(4^{2})$ = 2(16) = 32. Level 4 has subshells 4s (2), 4p (6), 4d (10), and 4f (14): 2 + 6 + 10 + 14 = 32. ✓'
           }
         ]
       }

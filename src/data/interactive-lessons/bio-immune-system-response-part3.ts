@@ -27,7 +27,7 @@ export const bioImmuneSystemResponsePart3Data = {
 **T-dependent activation** (most common):
 1. B cell receptor (BCR) binds a specific antigen → B cell internalizes and processes it
 2. B cell displays antigen fragments on **MHC Class II**
-3. A **helper T cell (CD4⁺)** recognizes the antigen-MHC II complex
+3. A **helper T cell $(CD4^{+})$** recognizes the antigen-MHC II complex
 4. Helper T cell releases **cytokines** (e.g., IL-4, IL-5)
 5. Cytokines stimulate B cell proliferation and differentiation
 
@@ -55,13 +55,13 @@ export const bioImmuneSystemResponsePart3Data = {
           {
             question: 'In T-dependent B cell activation, which cell provides the critical co-stimulatory signal?',
             options: [
-              'Cytotoxic T cell (CD8⁺)',
-              'Helper T cell (CD4⁺)',
+              'Cytotoxic T cell $(CD8^{+})$',
+              'Helper T cell $(CD4^{+})$',
               'Natural killer cell',
               'Dendritic cell'
             ],
             correctAnswer: 1,
-            explanation: 'Helper T cells (CD4⁺) recognize antigens displayed on MHC II of the B cell and release cytokines that drive B cell activation, proliferation, and differentiation into plasma cells.'
+            explanation: 'Helper T cells $(CD4^{+})$ recognize antigens displayed on MHC II of the B cell and release cytokines that drive B cell activation, proliferation, and differentiation into plasma cells.'
           },
           {
             question: 'According to clonal selection theory, what determines which B cells will proliferate?',

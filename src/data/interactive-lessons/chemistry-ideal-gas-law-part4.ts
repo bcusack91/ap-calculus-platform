@@ -56,7 +56,7 @@ $$T = 100 + 273.15 = 373.15 \\text{ K}, \\quad V = 0.225 \\text{ L}$$
 
 $$M = \\frac{(0.325)(0.0821)(373.15)}{(0.960)(0.225)} = \\frac{9.957}{0.216} = 46.1 \\text{ g/mol}$$
 
-This matches ethanol (C₂H₅OH), which has $M = 46.07$ g/mol.
+This matches ethanol $(C_{2}H_{5}OH)$, which has $M = 46.07$ g/mol.
 
 
 ---
@@ -98,7 +98,7 @@ $$\\boxed{d = \\frac{PM}{RT}}$$
 
 ### Example
 
-> **Problem:** What is the density of O₂ ($M = 32.00$ g/mol) at STP?
+> **Problem:** What is the density of $O_{2}$ ($M = 32.00$ g/mol) at STP?
 
 > **Solution:**
 
@@ -131,18 +131,18 @@ $$\\frac{d_1}{d_2} = \\frac{M_1}{M_2}$$
               '58.1 g/mol'
             ],
             correctAnswer: 2,
-            explanation: 'At STP, $M = d \\times V_m = 1.96 \\times 22.4 = 43.9$ g/mol. Alternatively: $M = dRT/P = (1.96)(0.0821)(273.15)/1.00 = 43.9$ g/mol. This could be CO₂ (44.01 g/mol).'
+            explanation: 'At STP, $M = d \\times V_m = 1.96 \\times 22.4 = 43.9$ g/mol. Alternatively: $M = dRT/P = (1.96)(0.0821)(273.15)/1.00 = 43.9$ g/mol. This could be $CO_{2}$ (44.01 g/mol).'
           },
           {
             question: 'Which gas is denser at the same temperature and pressure?',
             options: [
               'He (M = 4.00 g/mol)',
-              'N₂ (M = 28.0 g/mol)',
+              '$N_{2}$ (M = 28.0 g/mol)',
               'Ar (M = 39.9 g/mol)',
-              'CO₂ (M = 44.0 g/mol)'
+              '$CO_{2}$ (M = 44.0 g/mol)'
             ],
             correctAnswer: 3,
-            explanation: '$d = PM/(RT)$. At the same T and P, the gas with the largest molar mass has the highest density. CO₂ (44.0 g/mol) is the heaviest of the options.'
+            explanation: '$d = PM/(RT)$. At the same T and P, the gas with the largest molar mass has the highest density. $CO_{2}$ (44.0 g/mol) is the heaviest of the options.'
           },
           {
             question: 'A gas has a density of 2.86 g/L at STP. If the temperature is doubled (to 546.3 K) at constant pressure, the new density will be:',
@@ -168,7 +168,7 @@ Use $R = 0.0821$ L·atm/(mol·K).
 
 **1)** A 1.56 g sample of gas occupies 1.00 L at 27°C and 1.00 atm. What is the molar mass? (in g/mol, to 3 significant figures)
 
-**2)** What is the density of N₂ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 3 significant figures)
+**2)** What is the density of $N_{2}$ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 3 significant figures)
 
 **3)** A gas has a density of 3.17 g/L at STP. What is its molar mass? (in g/mol, to 3 significant figures)
       `,
@@ -177,17 +177,17 @@ Use $R = 0.0821$ L·atm/(mol·K).
           {
             label: 'Molar mass (g/mol)',
             correctAnswer: '38.4',
-            explanation: '$T = 300.15$ K. $M = mRT/(PV) = (1.56)(0.0821)(300.15)/((1.00)(1.00)) = 38.4$ g/mol (close to F₂ at 38.00 g/mol).'
+            explanation: '$T = 300.15$ K. $M = mRT/(PV) = (1.56)(0.0821)(300.15)/((1.00)(1.00)) = 38.4$ g/mol (close to $F_{2}$ at 38.00 g/mol).'
           },
           {
-            label: 'Density of N₂ (g/L)',
+            label: 'Density of $N_{2}$ (g/L)',
             correctAnswer: '1.15',
             explanation: '$T = 298.15$ K. $d = PM/(RT) = (1.00)(28.02)/((0.0821)(298.15)) = 28.02/24.47 = 1.145 \\approx 1.15$ g/L.'
           },
           {
             label: 'Molar mass from density (g/mol)',
             correctAnswer: '71.0',
-            explanation: 'At STP: $M = d \\times 22.4 = 3.17 \\times 22.4 = 71.0$ g/mol (close to Cl₂ at 70.90 g/mol).'
+            explanation: 'At STP: $M = d \\times 22.4 = 3.17 \\times 22.4 = 71.0$ g/mol (close to $Cl_{2}$ at 70.90 g/mol).'
           }
         ]
       }
@@ -223,10 +223,10 @@ Use $R = 0.0821$ L·atm/(mol·K).
           },
           {
             id: 'gl4-dd4',
-            label: 'CO₂ (M = 44 g/mol) is ___ (M ≈ 29 g/mol)',
+            label: '$CO_{2}$ (M = 44 g/mol) is ___ (M ≈ 29 g/mol)',
             options: ['lighter than air', 'heavier than air', 'the same as air'],
             correctIndex: 1,
-            explanation: 'CO₂ has M = 44 g/mol, which is heavier than air (≈29 g/mol). This is why CO₂ sinks and can accumulate in low-lying areas.'
+            explanation: '$CO_{2}$ has M = 44 g/mol, which is heavier than air (≈29 g/mol). This is why $CO_{2}$ sinks and can accumulate in low-lying areas.'
           }
         ]
       }
@@ -262,7 +262,7 @@ Use $R = 0.0821$ L·atm/(mol·K).
             explanation: 'At constant T and P: $d_A/d_B = M_A/M_B$. If $d_A = 2d_B$, then $M_A = 2M_B$. Gas A has twice the molar mass.'
           },
           {
-            question: 'What is the density of O₂ (M = 32.0 g/mol) at STP?',
+            question: 'What is the density of $O_{2}$ (M = 32.0 g/mol) at STP?',
             options: [
               '0.714 g/L',
               '1.43 g/L',
@@ -287,12 +287,12 @@ Use $R = 0.0821$ L·atm/(mol·K).
             question: 'Which gas has the greatest density at STP?',
             options: [
               'He (M = 4 g/mol)',
-              'N₂ (M = 28 g/mol)',
-              'O₂ (M = 32 g/mol)',
-              'CO₂ (M = 44 g/mol)'
+              '$N_{2}$ (M = 28 g/mol)',
+              '$O_{2}$ (M = 32 g/mol)',
+              '$CO_{2}$ (M = 44 g/mol)'
             ],
             correctAnswer: 3,
-            explanation: 'At STP (same T and P), density is proportional to molar mass: $d = PM/(RT)$. CO₂ has the largest M, so it has the greatest density.'
+            explanation: 'At STP (same T and P), density is proportional to molar mass: $d = PM/(RT)$. $CO_{2}$ has the largest M, so it has the greatest density.'
           },
           {
             question: 'A vapor has a mass of 0.800 g and occupies 400 mL at 100°C and 1.00 atm. The molar mass is closest to:',

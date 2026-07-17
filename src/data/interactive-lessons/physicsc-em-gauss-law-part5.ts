@@ -9,7 +9,7 @@ export const physCEMGaussPart5Data = {
 
 **Part 5 of 7 — Planar Symmetry**
 
-For an infinite plane of surface charge density $\\sigma$ (C/m²):
+For an infinite plane of surface charge density $\\sigma$ $(C/m^{2})$:
 
 $E = \\frac{\\sigma}{2\epsilon_0}$
 
@@ -25,7 +25,7 @@ $E = \\frac{\\sigma}{2\epsilon_0}$
       content: `
 ## Worked Example
 
-**An infinite sheet has $\\sigma = 4 \\times 10^{-9}$ C/m². Find $E$.**
+**An infinite sheet has $\\sigma = 4 \\times 10^{-9}$ $C/m^{2}$. Find $E$.**
 
 $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) \\approx 226$ N/C ✅
     
@@ -59,7 +59,7 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
       content: `
 **Planar Symmetry** 🧮
 
-1) $\\sigma = 4 \\times 10^{-9}$ C/m². $E$ (N/C)? (round to nearest integer, $\epsilon_0 \\approx 8.85 \\times 10^{-12}$)
+1) $\\sigma = 4 \\times 10^{-9}$ $C/m^{2}$. $E$ (N/C)? (round to nearest integer, $\epsilon_0 \\approx 8.85 \\times 10^{-12}$)
 
 2) A conducting surface has $E = \\sigma/\epsilon_0$. This is ___ times the field of a single sheet. (Give as integer.)
 

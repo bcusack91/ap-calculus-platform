@@ -42,7 +42,7 @@ Real-world problems rarely involve a single force. Objects are typically acted o
       content: `
 ## Example: Box on a Horizontal Surface
 
-A 10 kg box is pulled 8 m across a floor by a 60 N force at $30°$ above horizontal. The coefficient of kinetic friction is $\\mu_k = 0.3$. ($g = 10$ m/s²)
+A 10 kg box is pulled 8 m across a floor by a 60 N force at $30°$ above horizontal. The coefficient of kinetic friction is $\\mu_k = 0.3$. ($g = 10$ $m/s^{2}$)
 
 ### Step 1: Identify Forces
 - Applied force $F = 60$ N at $30°$
@@ -139,7 +139,7 @@ When an object moves along an incline at angle $\\phi$:
       content: `
 **Multi-Force Work Problems** 🧮
 
-Use $g = 10$ m/s².
+Use $g = 10$ $m/s^{2}$.
 
 1) A 5 kg box is pushed 4 m across a floor by a horizontal force of 30 N. Kinetic friction is 10 N. What is the net work done (in J)?
 
@@ -200,7 +200,7 @@ Use $g = 10$ m/s².
       exercise: {
         questions: [
           {
-            question: 'A 4 kg block is pushed 3 m up a frictionless $30°$ incline by a force of 40 N parallel to the incline. The net work done is ($g = 10$ m/s²):',
+            question: 'A 4 kg block is pushed 3 m up a frictionless $30°$ incline by a force of 40 N parallel to the incline. The net work done is ($g = 10$ $m/s^{2}$):',
             options: [
               '60 J',
               '80 J',

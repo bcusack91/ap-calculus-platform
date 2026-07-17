@@ -44,7 +44,7 @@ Electroplating is the process of coating an object with a thin layer of metal us
 
 - **Cathode**: the object to be plated (e.g., a spoon)
 - **Anode**: a piece of the plating metal (e.g., silver)
-- **Electrolyte**: a solution of the plating metal ions (e.g., AgNO₃)
+- **Electrolyte**: a solution of the plating metal ions (e.g., $AgNO_{3}$)
 
 > 🔑 **Key Rule:** The object you want to coat is ALWAYS the cathode (where metal deposits). The plating metal is the anode (where it dissolves).
 
@@ -54,7 +54,7 @@ Electroplating is the process of coating an object with a thin layer of metal us
 ### How It Works
 
 1. At the anode: plating metal dissolves → $\\text{Ag}(s) \\rightarrow \\text{Ag}^+(aq) + e^-$
-2. Ag⁺ ions migrate through solution
+2. $Ag^{+}$ ions migrate through solution
 3. At the cathode: metal ions deposit → $\\text{Ag}^+(aq) + e^- \\rightarrow \\text{Ag}(s)$
 
 The object at the cathode gets coated with a layer of silver!
@@ -93,7 +93,7 @@ The thickness of the coating depends on:
 
 $$2\\text{Al}_2\\text{O}_3(l) \\rightarrow 4\\text{Al}(l) + 3\\text{O}_2(g)$$
 
-- Al₂O₃ is dissolved in molten cryolite ($\\text{Na}_3\\text{AlF}_6$) to lower the melting point
+- $Al_{2}O_{3}$ is dissolved in molten cryolite ($\\text{Na}_3\\text{AlF}_6$) to lower the melting point
 - Enormous current (100,000+ A!)
 - Carbon anodes are consumed: $\\text{C} + \\text{O}^{2-} \\rightarrow \\text{CO}_2 + e^-$
 - Produces ~65 million tonnes of Al per year worldwide
@@ -117,7 +117,7 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
 ### 3. Electrorefining of Copper
 
 - Impure Cu = anode; pure Cu = cathode
-- Cu²⁺ from impure anode deposits as pure Cu on cathode
+- $Cu^{2+}$ from impure anode deposits as pure Cu on cathode
 - Impurities fall to the bottom ("anode mud") — contains Ag, Au, Pt!
 - Produces 99.99% pure copper for electrical wiring
 
@@ -152,18 +152,18 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
               'Salt bridge'
             ],
             correctAnswer: 1,
-            explanation: 'Impure Cu is the anode: it dissolves (oxidizes) into solution. Cu²⁺ ions then deposit as pure Cu on the cathode. Noble metal impurities fall as "anode mud."'
+            explanation: 'Impure Cu is the anode: it dissolves (oxidizes) into solution. $Cu^{2+}$ ions then deposit as pure Cu on the cathode. Noble metal impurities fall as "anode mud."'
           },
           {
             question: 'The Hall-Héroult process produces aluminum from:',
             options: [
-              'Aqueous AlCl₃',
-              'Molten Al₂O₃ dissolved in cryolite',
+              'Aqueous $AlCl_{3}$',
+              'Molten $Al_{2}O_{3}$ dissolved in cryolite',
               'Solid aluminum ore directly',
-              'Aqueous Al₂(SO₄)₃'
+              'Aqueous $Al_{2}(SO_{4})_{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Al₂O₃ cannot be electrolyzed from aqueous solution (water would be reduced instead). It is dissolved in molten cryolite (Na₃AlF₆) to lower the melting point from 2072°C to ~960°C.'
+            explanation: '$Al_{2}O_{3}$ cannot be electrolyzed from aqueous solution (water would be reduced instead). It is dissolved in molten cryolite $(Na_{3}AlF_{6})$ to lower the melting point from 2072°C to ~960°C.'
           }
         ]
       }
@@ -210,18 +210,18 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
           },
           {
             label: 'Aluminum cannot be produced from aqueous solution because',
-            options: ['Al is too expensive', 'water would be reduced instead of Al³⁺', 'Al₂O₃ does not dissolve in water', 'the voltage is too low']
+            options: ['Al is too expensive', 'water would be reduced instead of $Al^{3+}$', '$Al_{2}O_{3}$ does not dissolve in water', 'the voltage is too low']
           },
           {
             label: 'In copper electrorefining, the anode mud contains',
             options: ['copper oxide', 'aluminum', 'precious metals (Ag, Au, Pt)', 'salt']
           }
         ],
-        correctAnswers: ['the plating metal', 'aqueous NaCl (brine)', 'water would be reduced instead of Al³⁺', 'precious metals (Ag, Au, Pt)'],
+        correctAnswers: ['the plating metal', 'aqueous NaCl (brine)', 'water would be reduced instead of $Al^{3+}$', 'precious metals (Ag, Au, Pt)'],
         hint1: 'The anode dissolves to provide metal ions for plating.',
         hint2: 'The chlor-alkali process uses dissolved salt.',
-        hint3: 'Al³⁺ has E° = −1.66 V, far below water (−0.83 V).',
-        explanation: 'Anode = plating metal (dissolves). Chlor-alkali uses brine. Al³⁺ cannot be reduced from water (E° too negative). Anode mud contains noble metals that do not dissolve.'
+        hint3: '$Al^{3+}$ has E° = −1.66 V, far below water (−0.83 V).',
+        explanation: 'Anode = plating metal (dissolves). Chlor-alkali uses brine. $Al^{3+}$ cannot be reduced from water (E° too negative). Anode mud contains noble metals that do not dissolve.'
       }
     },
     {
@@ -247,12 +247,12 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
             question: 'Why does the Hall-Héroult process use carbon anodes?',
             options: [
               'Carbon is the cheapest conductor',
-              'Carbon reacts with O²⁻ ions, reducing the required voltage',
+              'Carbon reacts with $O^{2-}$ ions, reducing the required voltage',
               'Carbon does not conduct electricity',
               'Carbon is required for Al production'
             ],
             correctAnswer: 1,
-            explanation: 'Carbon anodes react with O²⁻ to form CO₂, which is less energy-intensive than producing pure O₂. This reduces the overall voltage needed, saving energy. The carbon anodes are consumed and must be replaced.'
+            explanation: 'Carbon anodes react with $O^{2-}$ to form $CO_{2}$, which is less energy-intensive than producing pure $O_{2}$. This reduces the overall voltage needed, saving energy. The carbon anodes are consumed and must be replaced.'
           }
         ]
       }

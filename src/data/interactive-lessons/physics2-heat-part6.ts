@@ -81,7 +81,7 @@ A good thermos can keep coffee hot for 12+ hours because all three pathways are 
 
 2. **Earth re-radiates** energy as infrared radiation (long wavelength) — because Earth is much cooler than the Sun
 
-3. **Greenhouse gases** (CO₂, H₂O, CH₄, N₂O) absorb and re-emit infrared radiation in all directions
+3. **Greenhouse gases** ($CO_{2}$, $H_{2}O$, $CH_{4}$, $N_{2}O$) absorb and re-emit infrared radiation in all directions
 
 4. Some re-emitted IR goes back toward Earth's surface, **trapping** energy in the atmosphere
 
@@ -91,10 +91,10 @@ Without greenhouse gases, Earth's average temperature would be about $-18$°C (0
 
 ### Why It's Getting Stronger
 
-Human activities (burning fossil fuels, deforestation) increase CO₂ concentration:
-- Pre-industrial: ~280 ppm CO₂
-- Current: ~420 ppm CO₂
-- More CO₂ → more IR absorption → more energy trapped → higher temperatures
+Human activities (burning fossil fuels, deforestation) increase $CO_{2}$ concentration:
+- Pre-industrial: ~280 ppm $CO_{2}$
+- Current: ~420 ppm $CO_{2}$
+- More $CO_{2}$ → more IR absorption → more energy trapped → higher temperatures
 
 ### The Stefan-Boltzmann Connection
 

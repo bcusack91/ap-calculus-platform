@@ -323,7 +323,7 @@ A circle has circumference $C = 31.4$ (use $\\pi \\approx 3.14$).`,
 
 $$A = \\pi r^2$$
 
-The radius is **squared**, and the units are **square** units (cm², in², m²).
+The radius is **squared**, and the units are **square** units ($cm^{2}$, $in^{2}$, $m^{2}$).
 
 > ⚠️ **Radius, not diameter!** If you're given the diameter, first cut it in half to get $r$, *then* square it. Forgetting to halve first is the #1 area mistake.
 

@@ -15,13 +15,13 @@ export const apesAtmosphereClimatePart1Data = {
 
 | Gas | Percentage | Role |
 |-----|-----------|------|
-| **Nitrogen (N₂)** | 78% | Inert; cycled through nitrogen cycle |
-| **Oxygen (O₂)** | 21% | Respiration; product of photosynthesis |
+| **Nitrogen $(N_{2})$** | 78% | Inert; cycled through nitrogen cycle |
+| **Oxygen $(O_{2})$** | 21% | Respiration; product of photosynthesis |
 | **Argon (Ar)** | 0.93% | Inert noble gas |
-| **Carbon dioxide (CO₂)** | 0.042% (420 ppm) | Major greenhouse gas; rising from fossil fuels |
-| **Methane (CH₄)** | Trace (~1.9 ppm) | 80x stronger GHG than CO₂ over 20 years |
-| **Nitrous oxide (N₂O)** | Trace (~0.33 ppm) | GHG from agriculture and fossil fuels |
-| **Water vapor (H₂O)** | Variable (0-4%) | Strongest natural greenhouse gas |
+| **Carbon dioxide $(CO_{2})$** | 0.042% (420 ppm) | Major greenhouse gas; rising from fossil fuels |
+| **Methane $(CH_{4})$** | Trace (~1.9 ppm) | 80x stronger GHG than $CO_{2}$ over 20 years |
+| **Nitrous oxide $(N_{2}O)$** | Trace (~0.33 ppm) | GHG from agriculture and fossil fuels |
+| **Water vapor $(H_{2}O)$** | Variable (0-4%) | Strongest natural greenhouse gas |
 
 ---
 
@@ -35,7 +35,7 @@ export const apesAtmosphereClimatePart1Data = {
 | 4 | Greenhouse gases absorb and re-emit infrared radiation |
 | 5 | Heat is trapped, warming the lower atmosphere |
 
-> 🔑 **The greenhouse effect is natural and necessary** — without it, Earth would average -18C instead of +15C. The PROBLEM is the **enhanced greenhouse effect** from human emissions of CO₂, CH₄, and N₂O.
+> 🔑 **The greenhouse effect is natural and necessary** — without it, Earth would average -18C instead of +15C. The PROBLEM is the **enhanced greenhouse effect** from human emissions of $CO_{2}$, $CH_{4}$, and $N_{2}O$.
       `
     },
     {
@@ -49,13 +49,13 @@ export const apesAtmosphereClimatePart1Data = {
           {
             question: 'Which greenhouse gas is the MOST potent per molecule over a 20-year period?',
             options: [
-              'Carbon dioxide (CO₂)',
-              'Methane (CH₄)',
-              'Nitrogen (N₂)',
-              'Oxygen (O₂)'
+              'Carbon dioxide $(CO_{2})$',
+              'Methane $(CH_{4})$',
+              'Nitrogen $(N_{2})$',
+              'Oxygen $(O_{2})$'
             ],
             correctAnswer: 1,
-            explanation: 'Methane (CH₄) is approximately 80 times more effective at trapping heat than CO₂ over 20 years. However, CO₂ persists much longer in the atmosphere, so it is the primary driver of long-term warming.'
+            explanation: 'Methane $(CH_{4})$ is approximately 80 times more effective at trapping heat than $CO_{2}$ over 20 years. However, $CO_{2}$ persists much longer in the atmosphere, so it is the primary driver of long-term warming.'
           },
           {
             question: 'The greenhouse effect works by:',
@@ -85,18 +85,18 @@ export const apesAtmosphereClimatePart1Data = {
 | **Arctic sea ice decline** | 13% decrease per decade since 1979 |
 | **Ocean acidification** | pH decreased by 0.1 units (30% more acidic) |
 | **Extreme weather** | More intense hurricanes, heat waves, droughts |
-| **CO₂ levels** | 280 ppm (pre-industrial) to 420+ ppm (current) |
+| **$CO_{2}$ levels** | 280 ppm (pre-industrial) to 420+ ppm (current) |
 
 ## Feedback Loops
 
 | Type | Definition | Example |
 |------|-----------|---------|
 | **Positive feedback** | Change amplifies itself | Ice melting → less reflection → more absorption → more melting |
-| **Negative feedback** | Change reduces itself | More CO₂ → more plant growth → more CO₂ absorbed |
+| **Negative feedback** | Change reduces itself | More $CO_{2}$ → more plant growth → more $CO_{2}$ absorbed |
 
 ### Key Positive Feedback Loops
 1. **Ice-albedo feedback:** Melting ice exposes dark water/land → absorbs more heat → more melting
-2. **Permafrost-methane feedback:** Warming thaws permafrost → releases CH₄ → more warming → more thawing
+2. **Permafrost-methane feedback:** Warming thaws permafrost → releases $CH_{4}$ → more warming → more thawing
 3. **Water vapor feedback:** Warming evaporates more water → water vapor traps more heat → more warming
       `
     },
@@ -106,19 +106,19 @@ export const apesAtmosphereClimatePart1Data = {
       content: `
 **Applied Recall** ✍️
 
-1) Pre-industrial CO₂ levels were approximately _______ ppm; today they exceed 420 ppm.
+1) Pre-industrial $CO_{2}$ levels were approximately _______ ppm; today they exceed 420 ppm.
 
 2) A feedback loop where change amplifies itself (like melting ice causing more warming) is called a _______ feedback loop.
 
-3) Oceans absorbing excess CO₂ causes ocean _______, which harms coral reefs and shellfish.
+3) Oceans absorbing excess $CO_{2}$ causes ocean _______, which harms coral reefs and shellfish.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['280', 'positive', 'acidification'],
         hint1: 'Roughly two hundred and eighty.',
         hint2: 'The change makes itself stronger.',
-        hint3: 'CO₂ + H₂O forms carbonic acid.',
-        explanation: 'Pre-industrial CO₂ = ~280 ppm. Positive feedback = self-amplifying. CO₂ dissolving in oceans = acidification (lower pH).'
+        hint3: '$CO_{2}$ + $H_{2}O$ forms carbonic acid.',
+        explanation: 'Pre-industrial $CO_{2}$ = ~280 ppm. Positive feedback = self-amplifying. $CO_{2}$ dissolving in oceans = acidification (lower pH).'
       }
     },
     {
@@ -135,7 +135,7 @@ export const apesAtmosphereClimatePart1Data = {
           },
           {
             label: 'The natural greenhouse effect keeps Earth at +15C instead of -18C. This is ___',
-            options: ['Beneficial and necessary for life', 'A recent human-caused phenomenon', 'Only caused by CO₂ emissions', 'The same as global warming']
+            options: ['Beneficial and necessary for life', 'A recent human-caused phenomenon', 'Only caused by $CO_{2}$ emissions', 'The same as global warming']
           },
           {
             label: 'Sea level rise is caused by thermal expansion AND ___',
@@ -157,8 +157,8 @@ export const apesAtmosphereClimatePart1Data = {
 
 - Know the difference between the **natural greenhouse effect** and the **enhanced greenhouse effect**
 - **Positive vs negative feedback** — be able to identify and explain examples
-- Understand that CO₂ is the primary long-term driver even though CH₄ is more potent per molecule
-- **Ocean acidification** (CO₂ + H₂O → carbonic acid) is a commonly tested topic separate from warming
+- Understand that $CO_{2}$ is the primary long-term driver even though $CH_{4}$ is more potent per molecule
+- **Ocean acidification** ($CO_{2}$ + $H_{2}O$ → carbonic acid) is a commonly tested topic separate from warming
 - Ice-albedo feedback is the most commonly tested positive feedback loop
 - Know the difference between **weather** (short-term) and **climate** (long-term patterns)
       `
@@ -191,7 +191,7 @@ export const apesAtmosphereClimatePart1Data = {
               'Melting ice directly crushes coral reefs'
             ],
             correctAnswer: 0,
-            explanation: 'Coral bleaching occurs when warmer water stresses corals, causing them to expel zooxanthellae (symbiotic algae). Additionally, ocean acidification (from dissolved CO₂) makes it harder for corals to build calcium carbonate skeletons.'
+            explanation: 'Coral bleaching occurs when warmer water stresses corals, causing them to expel zooxanthellae (symbiotic algae). Additionally, ocean acidification (from dissolved $CO_{2}$) makes it harder for corals to build calcium carbonate skeletons.'
           }
         ]
       }

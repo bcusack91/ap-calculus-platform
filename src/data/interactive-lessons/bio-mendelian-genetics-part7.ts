@@ -121,15 +121,15 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
       exercise: {
         questions: [
           {
-            question: 'A researcher tests a 9:3:3:1 prediction in a dihybrid cross and calculates χ² = 9.10. The cross has 4 phenotype classes (df = 3), and the critical value at p = 0.05 for df = 3 is 7.81. What should the researcher conclude?',
+            question: 'A researcher tests a 9:3:3:1 prediction in a dihybrid cross and calculates $\\chi^{2}$ = 9.10. The cross has 4 phenotype classes (df = 3), and the critical value at p = 0.05 for df = 3 is 7.81. What should the researcher conclude?',
             options: [
               'Fail to reject the null; the data fit the 9:3:3:1 ratio well',
               'Reject the null; the deviation from 9:3:3:1 is larger than expected by chance, suggesting the model may be wrong',
-              'The χ² value is too small to interpret',
+              'The $\\chi^{2}$ value is too small to interpret',
               'The genes must be assorting independently'
             ],
             correctAnswer: 1,
-            explanation: 'Because χ² = 9.10 EXCEEDS the critical value of 7.81 (for df = 3), the deviation from the expected 9:3:3:1 ratio is too large to attribute to chance, so the researcher rejects the null hypothesis. Option A has the decision rule backwards: you fail to reject only when χ² is BELOW the critical value. Here the large χ² signals the data do NOT fit the simple independent-assortment model (linkage or another factor may be involved).'
+            explanation: 'Because $\\chi^{2}$ = 9.10 EXCEEDS the critical value of 7.81 (for df = 3), the deviation from the expected 9:3:3:1 ratio is too large to attribute to chance, so the researcher rejects the null hypothesis. Option A has the decision rule backwards: you fail to reject only when $\\chi^{2}$ is BELOW the critical value. Here the large $\\chi^{2}$ signals the data do NOT fit the simple independent-assortment model (linkage or another factor may be involved).'
           },
           {
             question: 'A pedigree shows a rare trait appearing in every generation, transmitted from affected parents to roughly half their children, with males and females affected equally. The trait never skips a generation. Which conclusion is best supported, and which common misconception does it correct?',
@@ -146,12 +146,12 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
             question: 'Two parents heterozygous for an autosomal recessive disorder (Aa × Aa) have four children, and the disorder appears in NONE of them. A relative concludes "the gene must not be in this family after all." Which statement best corrects this reasoning?',
             options: [
               'The relative is correct; four unaffected children prove neither parent carries the allele',
-              'Each child independently had a 3/4 chance of being unaffected, and (3/4)⁴ ≈ 0.32 — so four unaffected children is fairly likely even though both parents are carriers',
+              'Each child independently had a 3/4 chance of being unaffected, and $(3/4)^{4}$ ≈ 0.32 — so four unaffected children is fairly likely even though both parents are carriers',
               'The disorder must have changed to dominant',
               'The expected 3:1 ratio guarantees exactly one of four children is affected'
             ],
             correctAnswer: 1,
-            explanation: 'Each child of an Aa × Aa cross has a 1/4 chance of being affected and 3/4 unaffected, independently. The probability that all four are unaffected is (3/4)⁴ ≈ 0.32 — about a 1-in-3 outcome, entirely consistent with both parents being carriers. Option D embodies the core misconception: the 3:1 ratio is a long-run expectation over many offspring, NOT a guarantee that a small sibship of four contains exactly one affected child. Small samples deviate from expected ratios all the time.'
+            explanation: 'Each child of an Aa × Aa cross has a 1/4 chance of being affected and 3/4 unaffected, independently. The probability that all four are unaffected is $(3/4)^{4}$ ≈ 0.32 — about a 1-in-3 outcome, entirely consistent with both parents being carriers. Option D embodies the core misconception: the 3:1 ratio is a long-run expectation over many offspring, NOT a guarantee that a small sibship of four contains exactly one affected child. Small samples deviate from expected ratios all the time.'
           }
         ]
       }

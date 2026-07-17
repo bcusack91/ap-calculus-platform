@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'mg-ent-3a',
     question: 'On a velocity-time graph, a horizontal line at $v = 5$ m/s represents:',
-    options: ['An object at rest', 'Constant acceleration of $5$ m/s²', 'Constant velocity of $5$ m/s', 'Decreasing velocity'],
+    options: ['An object at rest', 'Constant acceleration of $5$ $m/s^{2}$', 'Constant velocity of $5$ m/s', 'Decreasing velocity'],
     correctIndex: 2,
     explanation: 'A horizontal line on a velocity-time graph means velocity is constant (not changing). The object moves at a steady $5$ m/s with zero acceleration.',
     partNumber: 3,
@@ -113,7 +113,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'mg-ent-5b',
-    question: 'An acceleration-time graph shows a constant value of $3$ m/s² for $4$ s. If the initial velocity was $2$ m/s, what is the final velocity?',
+    question: 'An acceleration-time graph shows a constant value of $3$ $m/s^{2}$ for $4$ s. If the initial velocity was $2$ m/s, what is the final velocity?',
     options: ['$14$ m/s', '$12$ m/s', '$10$ m/s', '$6$ m/s'],
     correctIndex: 0,
     explanation: '$\\Delta v = a \\times t = 3 \\times 4 = 12$ m/s. Final velocity = $2 + 12 = 14$ m/s.',

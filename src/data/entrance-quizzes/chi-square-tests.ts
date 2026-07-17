@@ -60,7 +60,7 @@ const questions: EntranceQuizQuestion[] = [
       'df = 6'
     ],
     correctIndex: 1,
-    explanation: 'For a goodness of fit test, df = number of categories − 1. With 5 categories, df = 5 − 1 = 4. The test statistic is χ² = Σ[(O − E)² / E].',
+    explanation: 'For a goodness of fit test, df = number of categories − 1. With 5 categories, df = 5 − 1 = 4. The test statistic is $\\chi^{2}$ = Σ[$(O - E)^{2}$ / E].',
     partNumber: 2,
     partTitle: 'Goodness of Fit Test'
   },
@@ -83,10 +83,10 @@ const questions: EntranceQuizQuestion[] = [
     id: 'chi-ent-3b',
     question: 'In a chi-square test of independence, what are the hypotheses?',
     options: [
-      'H₀: μ₁ = μ₂; Hₐ: μ₁ ≠ μ₂',
-      'H₀: the two variables are independent; Hₐ: the two variables are NOT independent (associated)',
-      'H₀: p₁ = p₂; Hₐ: p₁ ≠ p₂',
-      'H₀: the distribution fits; Hₐ: the distribution does not fit'
+      '$H_{0}$: $\\mu_{1}$ = $\\mu_{2}$; $H_{a}$: $\\mu_{1}$ ≠ $\\mu_{2}$',
+      '$H_{0}$: the two variables are independent; $H_{a}$: the two variables are NOT independent (associated)',
+      '$H_{0}$: $p_{1}$ = $p_{2}$; $H_{a}$: $p_{1}$ ≠ $p_{2}$',
+      '$H_{0}$: the distribution fits; $H_{a}$: the distribution does not fit'
     ],
     correctIndex: 1,
     explanation: 'The null hypothesis states the two categorical variables are independent (no association). The alternative states they are not independent — they are associated.',
@@ -154,15 +154,15 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Problem-Solving Workshop
   {
     id: 'chi-ent-6a',
-    question: 'You calculate χ² = 15.3 with df = 4. The critical value at α = 0.01 is 13.28. What do you conclude?',
+    question: 'You calculate $\\chi^{2}$ = 15.3 with df = 4. The critical value at α = 0.01 is 13.28. What do you conclude?',
     options: [
-      'Fail to reject H₀ because χ² < critical value',
-      'Reject H₀ because χ² = 15.3 > 13.28, providing evidence that the distribution differs from expected',
-      'Reject H₀ only if using α = 0.05',
-      'The test is invalid because χ² is too large'
+      'Fail to reject $H_{0}$ because $\\chi^{2}$ < critical value',
+      'Reject $H_{0}$ because $\\chi^{2}$ = 15.3 > 13.28, providing evidence that the distribution differs from expected',
+      'Reject $H_{0}$ only if using α = 0.05',
+      'The test is invalid because $\\chi^{2}$ is too large'
     ],
     correctIndex: 1,
-    explanation: 'A large χ² value (exceeding the critical value) means a small p-value, providing evidence that the observed distribution differs significantly from the expected distribution.',
+    explanation: 'A large $\\chi^{2}$ value (exceeding the critical value) means a small p-value, providing evidence that the observed distribution differs significantly from the expected distribution.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -170,13 +170,13 @@ const questions: EntranceQuizQuestion[] = [
     id: 'chi-ent-6b',
     question: 'Why is the chi-square test always right-tailed?',
     options: [
-      'Because negative χ² values are possible but rare',
-      'Because larger χ² values indicate more departure from H₀, and χ² is always non-negative',
+      'Because negative $\\chi^{2}$ values are possible but rare',
+      'Because larger $\\chi^{2}$ values indicate more departure from $H_{0}$, and $\\chi^{2}$ is always non-negative',
       'Because the alternative hypothesis is always one-sided',
       'Because left-tailed tests are used only for t-tests'
     ],
     correctIndex: 1,
-    explanation: 'The chi-square statistic is a sum of squared terms, so it is always ≥ 0. Larger values indicate greater departure from what is expected under H₀, making the test always right-tailed.',
+    explanation: 'The chi-square statistic is a sum of squared terms, so it is always ≥ 0. Larger values indicate greater departure from what is expected under $H_{0}$, making the test always right-tailed.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop'
   },
@@ -186,7 +186,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'On the AP exam, which steps should you show when performing a chi-square test?',
     options: [
       'Only the p-value and conclusion',
-      'Show the formula, calculate χ², state df, find the p-value, and conclude in context',
+      'Show the formula, calculate $\\chi^{2}$, state df, find the p-value, and conclude in context',
       'Only the hypotheses and conclusion',
       'Only the expected counts table'
     ],
@@ -205,7 +205,7 @@ const questions: EntranceQuizQuestion[] = [
       'That the p-value is small'
     ],
     correctIndex: 2,
-    explanation: 'Chi-square tests tell you that a difference exists but do NOT identify where the difference is. To explore which cells contribute most, examine the individual (O − E)² / E terms.',
+    explanation: 'Chi-square tests tell you that a difference exists but do NOT identify where the difference is. To explore which cells contribute most, examine the individual $(O - E)^{2}$ / E terms.',
     partNumber: 7,
     partTitle: 'AP Review & Applications'
   }

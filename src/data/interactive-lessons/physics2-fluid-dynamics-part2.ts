@@ -97,9 +97,9 @@ This is why:
 
 Water flows through a circular pipe of radius 3.0 cm at 2.0 m/s. The pipe narrows to a radius of 1.0 cm.
 
-1) Area of the wide section (in cm²)
+1) Area of the wide section $(in cm^{2})$
 
-2) Area of the narrow section (in cm²)
+2) Area of the narrow section $(in cm^{2})$
 
 3) Speed in the narrow section (in m/s)
 
@@ -108,10 +108,10 @@ Water flows through a circular pipe of radius 3.0 cm at 2.0 m/s. The pipe narrow
       exercise: {
         boxes: 3,
         correctAnswers: ['28.3', '3.14', '18'],
-        hint1: '$A = \\pi r^2 = \\pi (3.0)^2$ (keep in cm²).',
+        hint1: '$A = \\pi r^2 = \\pi (3.0)^2$ (keep in $cm^{2}$).',
         hint2: '$A = \\pi (1.0)^2$.',
         hint3: '$v_2 = (A_1/A_2) v_1 = (28.3/3.14)(2.0)$.',
-        explanation: '$A_1 = 9\\pi = 28.3$ cm². $A_2 = \\pi = 3.14$ cm². Ratio = 9. $v_2 = 9 \\times 2.0 = 18$ m/s.'
+        explanation: '$A_1 = 9\\pi = 28.3$ $cm^{2}$. $A_2 = \\pi = 3.14$ $cm^{2}$. Ratio = 9. $v_2 = 9 \\times 2.0 = 18$ m/s.'
       }
     },
     {
@@ -124,13 +124,13 @@ Water flows through a circular pipe of radius 3.0 cm at 2.0 m/s. The pipe narrow
 
 The aorta (radius ≈ 1 cm) carries blood at ≈ 30 cm/s. Capillaries (radius ≈ 4 μm each) carry blood at ≈ 0.05 cm/s.
 
-Total capillary area: $A_{\\text{cap}} = A_{\\text{aorta}} \\times v_{\\text{aorta}} / v_{\\text{cap}} = \\pi(0.01)^2 \\times 30/0.05 \\approx 0.19$ m²
+Total capillary area: $A_{\\text{cap}} = A_{\\text{aorta}} \\times v_{\\text{aorta}} / v_{\\text{cap}} = \\pi(0.01)^2 \\times 30/0.05 \\approx 0.19$ $m^{2}$
 
 That's about **6 billion** capillaries! Continuity works even in biology.
 
 ### 🚿 Nozzle Design
 
-Fire hose nozzles are narrow to increase exit speed: if the hose has $A = 50$ cm² and the nozzle has $A = 5$ cm², the exit speed is 10× the hose speed.
+Fire hose nozzles are narrow to increase exit speed: if the hose has $A = 50$ $cm^{2}$ and the nozzle has $A = 5$ $cm^{2}$, the exit speed is 10× the hose speed.
 
 ### 🏞️ River Flow
 

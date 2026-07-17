@@ -196,7 +196,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
         dropdowns: [
           {
             label: 'To find pH of a salt of weak acid + strong base, you need',
-            options: ['Kₐ of the weak acid (to find K_b of conjugate base)', 'Kₐ of the salt', 'only the salt concentration', 'K_w only']
+            options: ['$K_{a}$ of the weak acid (to find K_b of conjugate base)', '$K_{a}$ of the salt', 'only the salt concentration', 'K_w only']
           },
           {
             label: 'If the 5% approximation gives exactly 5.5% ionization, your answer is',
@@ -207,7 +207,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
             options: ['lower pH', 'higher pH', 'the same pH', 'pH = 7']
           }
         ],
-        correctAnswers: ['Kₐ of the weak acid (to find K_b of conjugate base)', 'close but slightly off — consider quadratic', 'higher pH'],
+        correctAnswers: ['$K_{a}$ of the weak acid (to find K_b of conjugate base)', 'close but slightly off — consider quadratic', 'higher pH'],
         hint1: '$K_b = K_w/K_a$ for the conjugate base.',
         hint2: '5.5% is slightly above the 5% threshold.',
         hint3: 'Smaller $K_a$ → less $[H^+]$ → higher pH.',

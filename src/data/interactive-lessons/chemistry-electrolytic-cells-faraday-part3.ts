@@ -66,10 +66,10 @@ In a molten salt, there are **only two ions** present. The prediction is straigh
 
 | Salt | Cathode Product | Anode Product |
 |------|----------------|---------------|
-| NaCl | Na(l) | Cl₂(g) |
-| MgCl₂ | Mg(l) | Cl₂(g) |
-| Al₂O₃ | Al(l) | O₂(g) |
-| CaBr₂ | Ca(l) | Br₂(g) |
+| NaCl | Na(l) | $Cl_{2}(g)$ |
+| $MgCl_{2}$ | Mg(l) | $Cl_{2}(g)$ |
+| $Al_{2}O_{3}$ | Al(l) | $O_{2}(g)$ |
+| $CaBr_{2}$ | Ca(l) | $Br_{2}(g)$ |
       `
     },
     {
@@ -108,8 +108,8 @@ Water's reduction potential is $E° = -0.83$ V. Compare the metal ion to this be
 
 | Metal Ion $E°$ | What Happens | Examples |
 |:--------------:|:------------:|----------|
-| $> -0.83$ V | **Metal deposits** | Cu²⁺, Ag⁺, Au³⁺, Ni²⁺ |
-| $< -0.83$ V | **H₂ gas forms** | Na⁺, K⁺, Al³⁺ |
+| $> -0.83$ V | **Metal deposits** | $Cu^{2+}$, $Ag^{+}$, $Au^{3+}$, $Ni^{2+}$ |
+| $< -0.83$ V | **$H_{2}$ gas forms** | $Na^{+}$, $K^{+}$, $Al^{3+}$ |
 
 ---
 
@@ -119,10 +119,10 @@ Water's oxidation potential is $E° = +1.23$ V.
 
 | Anion Type | What Happens | Examples |
 |:----------:|:------------:|----------|
-| Simple halides | **Anion is oxidized** | Cl⁻ → Cl₂, Br⁻ → Br₂, I⁻ → I₂ |
-| Oxyanions or F⁻ | **Water is oxidized → O₂** | SO₄²⁻, NO₃⁻, F⁻ |
+| Simple halides | **Anion is oxidized** | $Cl^{-}$ → $Cl_{2}$, $Br^{-}$ → $Br_{2}$, $I^{-}$ → $I_{2}$ |
+| Oxyanions or $F^{-}$ | **Water is oxidized → $O_{2}$** | $SO_{4}^{2-}$, $NO_{3}^{-}$, $F^{-}$ |
 
-> ⚠️ **Why do halides win even though their $E°$ is less favorable?** Overpotential! The kinetic barrier for O₂ production is high, so in practice, halides get oxidized first.
+> ⚠️ **Why do halides win even though their $E°$ is less favorable?** Overpotential! The kinetic barrier for $O_{2}$ production is high, so in practice, halides get oxidized first.
 
 ---
 
@@ -131,8 +131,8 @@ Water's oxidation potential is $E° = +1.23$ V.
 | Step | Question | If YES | If NO |
 |:----:|----------|--------|-------|
 | **1** | Is it a molten salt? | Cation → metal, Anion → nonmetal | Go to step 2 |
-| **2** | Cathode: Is metal $E°$ above $-0.83$ V? | Metal deposits | H₂ forms |
-| **3** | Anode: Is anion a simple halide? | Halide is oxidized | O₂ forms |
+| **2** | Cathode: Is metal $E°$ above $-0.83$ V? | Metal deposits | $H_{2}$ forms |
+| **3** | Anode: Is anion a simple halide? | Halide is oxidized | $O_{2}$ forms |
       `
     },
     {
@@ -147,54 +147,54 @@ Water's oxidation potential is $E° = +1.23$ V.
 >
 > | Ion | $E°$ (V) | Ion | $E°$ (V) |
 > |-----|:--------:|-----|:--------:|
-> | Au³⁺ | +1.50 | Zn²⁺ | −0.76 |
-> | Ag⁺ | +0.80 | Al³⁺ | −1.66 |
-> | Cu²⁺ | +0.34 | Na⁺ | −2.71 |
-> | Ni²⁺ | −0.26 | K⁺ | −2.93 |
+> | $Au^{3+}$ | +1.50 | $Zn^{2+}$ | −0.76 |
+> | $Ag^{+}$ | +0.80 | $Al^{3+}$ | −1.66 |
+> | $Cu^{2+}$ | +0.34 | $Na^{+}$ | −2.71 |
+> | $Ni^{2+}$ | −0.26 | $K^{+}$ | −2.93 |
 >
 > **Oxidation potentials (anode):**
 >
 > | Half-reaction | $E°$ (V) |
 > |--------------|:--------:|
-> | 2Cl⁻ → Cl₂ + 2e⁻ | +1.36 |
-> | 2Br⁻ → Br₂ + 2e⁻ | +1.07 |
-> | 2I⁻ → I₂ + 2e⁻ | +0.54 |
-> | 2H₂O → O₂ + 4H⁺ + 4e⁻ | +1.23 |
+> | $2Cl^{-}$ → $Cl_{2}$ + $2e^{-}$ | +1.36 |
+> | $2Br^{-}$ → $Br_{2}$ + $2e^{-}$ | +1.07 |
+> | $2I^{-}$ → $I_{2}$ + $2e^{-}$ | +0.54 |
+> | $2H_{2}O$ → $O_{2}$ + $4H^{+}$ + $4e^{-}$ | +1.23 |
       `,
       exercise: {
         questions: [
           {
             question: 'In the electrolysis of molten NaCl, the product at the cathode is:',
             options: [
-              'Cl₂ gas',
+              '$Cl_{2}$ gas',
               'Na metal',
-              'H₂ gas',
-              'O₂ gas'
+              '$H_{2}$ gas',
+              '$O_{2}$ gas'
             ],
             correctAnswer: 1,
-            explanation: 'In molten NaCl, Na⁺ is the only cation. It is reduced at the cathode: Na⁺ + e⁻ → Na. There is no water present to compete.'
+            explanation: 'In molten NaCl, $Na^{+}$ is the only cation. It is reduced at the cathode: $Na^{+}$ + $e^{-}$ → Na. There is no water present to compete.'
           },
           {
             question: 'In the electrolysis of aqueous NaCl, the product at the cathode is:',
             options: [
               'Na metal',
-              'H₂ gas',
-              'Cl₂ gas',
-              'O₂ gas'
+              '$H_{2}$ gas',
+              '$Cl_{2}$ gas',
+              '$O_{2}$ gas'
             ],
             correctAnswer: 1,
-            explanation: 'Na⁺ has a very negative E° (−2.71 V), much lower than water (−0.83 V). Water is reduced instead: 2H₂O + 2e⁻ → H₂ + 2OH⁻. You cannot deposit sodium metal from water.'
+            explanation: '$Na^{+}$ has a very negative E° (−2.71 V), much lower than water (−0.83 V). Water is reduced instead: $2H_{2}O$ + $2e^{-}$ → $H_{2}$ + $2OH^{-}$. You cannot deposit sodium metal from water.'
           },
           {
-            question: 'In the electrolysis of aqueous CuSO₄, what forms at the cathode?',
+            question: 'In the electrolysis of aqueous $CuSO_{4}$, what forms at the cathode?',
             options: [
-              'H₂ gas (water is reduced)',
-              'Cu metal (Cu²⁺ is reduced)',
-              'O₂ gas',
-              'SO₂ gas'
+              '$H_{2}$ gas (water is reduced)',
+              'Cu metal ($Cu^{2+}$ is reduced)',
+              '$O_{2}$ gas',
+              '$SO_{2}$ gas'
             ],
             correctAnswer: 1,
-            explanation: 'Cu²⁺ has $E° = +0.34$ V, which is more positive than water ($-0.83$ V). Cu²⁺ is preferentially reduced: Cu²⁺ + 2e⁻ → Cu. Copper metal deposits on the cathode.'
+            explanation: '$Cu^{2+}$ has $E° = +0.34$ V, which is more positive than water ($-0.83$ V). $Cu^{2+}$ is preferentially reduced: $Cu^{2+}$ + $2e^{-}$ → Cu. Copper metal deposits on the cathode.'
           }
         ]
       }
@@ -209,39 +209,39 @@ Water's oxidation potential is $E° = +1.23$ V.
 >
 > | Ion | $E°$ (V) | Ion | $E°$ (V) |
 > |-----|:--------:|-----|:--------:|
-> | Au³⁺ | +1.50 | Zn²⁺ | −0.76 |
-> | Ag⁺ | +0.80 | Al³⁺ | −1.66 |
-> | Cu²⁺ | +0.34 | Na⁺ | −2.71 |
-> | Ni²⁺ | −0.26 | K⁺ | −2.93 |
+> | $Au^{3+}$ | +1.50 | $Zn^{2+}$ | −0.76 |
+> | $Ag^{+}$ | +0.80 | $Al^{3+}$ | −1.66 |
+> | $Cu^{2+}$ | +0.34 | $Na^{+}$ | −2.71 |
+> | $Ni^{2+}$ | −0.26 | $K^{+}$ | −2.93 |
 >
-> **Anode:** 2Cl⁻ → Cl₂ (+1.36 V) | 2Br⁻ → Br₂ (+1.07 V) | 2I⁻ → I₂ (+0.54 V) | H₂O → O₂ (+1.23 V)
+> **Anode:** $2Cl^{-}$ → $Cl_{2}$ (+1.36 V) | $2Br^{-}$ → $Br_{2}$ (+1.07 V) | $2I^{-}$ → $I_{2}$ (+0.54 V) | $H_{2}O$ → $O_{2}$ (+1.23 V)
 >
-> **Rules:** Metal $E°$ above −0.83 V → metal deposits. Below → H₂. Simple halides → oxidized. Oxyanions → O₂.
+> **Rules:** Metal $E°$ above −0.83 V → metal deposits. Below → $H_{2}$. Simple halides → oxidized. Oxyanions → $O_{2}$.
       `,
       exercise: {
         dropdowns: [
           {
             label: 'Electrolysis of aqueous NaBr at the anode produces',
-            options: ['Na metal', 'Br₂', 'O₂', 'H₂']
+            options: ['Na metal', '$Br_{2}$', '$O_{2}$', '$H_{2}$']
           },
           {
             label: 'Electrolysis of aqueous NaBr at the cathode produces',
-            options: ['Na metal', 'Br₂', 'O₂', 'H₂']
+            options: ['Na metal', '$Br_{2}$', '$O_{2}$', '$H_{2}$']
           },
           {
-            label: 'Electrolysis of aqueous CuCl₂ at the cathode produces',
-            options: ['Cu metal', 'H₂', 'O₂', 'Cl₂']
+            label: 'Electrolysis of aqueous $CuCl_{2}$ at the cathode produces',
+            options: ['Cu metal', '$H_{2}$', '$O_{2}$', '$Cl_{2}$']
           },
           {
-            label: 'Electrolysis of aqueous Na₂SO₄ at the anode produces',
-            options: ['Na metal', 'SO₂', 'O₂', 'H₂']
+            label: 'Electrolysis of aqueous $Na_{2}SO_{4}$ at the anode produces',
+            options: ['Na metal', '$SO_{2}$', '$O_{2}$', '$H_{2}$']
           }
         ],
-        correctAnswers: ['Br₂', 'H₂', 'Cu metal', 'O₂'],
-        hint1: 'Br⁻ is a simple halide — it gets oxidized.',
-        hint2: 'Na⁺ is too reactive to deposit from water → H₂ forms.',
-        hint3: 'Cu²⁺ has E° > −0.83 V, so Cu deposits.',
-        explanation: 'NaBr: anode = Br₂ (halide oxidized), cathode = H₂ (Na too reactive). CuCl₂: cathode = Cu (E° = +0.34 V beats water). Na₂SO₄: anode = O₂ (SO₄²⁻ is an oxyanion, water oxidized instead).'
+        correctAnswers: ['$Br_{2}$', '$H_{2}$', 'Cu metal', '$O_{2}$'],
+        hint1: '$Br^{-}$ is a simple halide — it gets oxidized.',
+        hint2: '$Na^{+}$ is too reactive to deposit from water → $H_{2}$ forms.',
+        hint3: '$Cu^{2+}$ has E° > −0.83 V, so Cu deposits.',
+        explanation: 'NaBr: anode = $Br_{2}$ (halide oxidized), cathode = $H_{2}$ (Na too reactive). $CuCl_{2}$: cathode = Cu (E° = +0.34 V beats water). $Na_{2}SO_{4}$: anode = $O_{2}$ ($SO_{4}^{2-}$ is an oxyanion, water oxidized instead).'
       }
     },
     {
@@ -250,25 +250,25 @@ Water's oxidation potential is $E° = +1.23$ V.
       content: `
 **Product Identification** 🧮
 
-> 📋 **Reference:** Ag⁺ $E°$ = +0.80 V | Cu²⁺ = +0.34 V | Ni²⁺ = −0.26 V | Zn²⁺ = −0.76 V | Water cathode = −0.83 V | Na⁺ = −2.71 V | K⁺ = −2.93 V | Mg²⁺ = −2.37 V
+> 📋 **Reference:** $Ag^{+}$ $E°$ = +0.80 V | $Cu^{2+}$ = +0.34 V | $Ni^{2+}$ = −0.26 V | $Zn^{2+}$ = −0.76 V | Water cathode = −0.83 V | $Na^{+}$ = −2.71 V | $K^{+}$ = −2.93 V | $Mg^{2+}$ = −2.37 V
 >
-> **Anode:** Halides (Cl⁻, Br⁻, I⁻) → oxidized. Oxyanions (NO₃⁻, SO₄²⁻) → O₂ forms.
+> **Anode:** Halides ($Cl^{-}$, $Br^{-}$, $I^{-}$) → oxidized. Oxyanions ($NO_{3}^{-}$, $SO_{4}^{2-}$) → $O_{2}$ forms.
 
 What gas or metal is produced at the cathode during electrolysis of:
 
-**1)** Molten MgCl₂ (cathode product)?
+**1)** Molten $MgCl_{2}$ (cathode product)?
 
-**2)** Aqueous AgNO₃ (cathode product — is Ag⁺ or H₂O reduced)?
+**2)** Aqueous $AgNO_{3}$ (cathode product — is $Ag^{+}$ or $H_{2}O$ reduced)?
 
-**3)** Aqueous KI (anode product — is I⁻ or H₂O oxidized)?
+**3)** Aqueous KI (anode product — is $I^{-}$ or $H_{2}O$ oxidized)?
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['Mg', 'Ag', 'I2'],
-        hint1: 'Molten: only Mg²⁺ and Cl⁻ present. Cation → cathode.',
-        hint2: 'Ag⁺ has E° = +0.80 V (more positive than water at −0.83 V).',
-        hint3: 'I⁻ is a simple halide — preferentially oxidized over water.',
-        explanation: '1) Mg is deposited (molten: only Mg²⁺ available for reduction). 2) Ag deposits (E° = +0.80 V >> −0.83 V for water). 3) I₂ forms (I⁻ is a halide, oxidized before water).'
+        hint1: 'Molten: only $Mg^{2+}$ and $Cl^{-}$ present. Cation → cathode.',
+        hint2: '$Ag^{+}$ has E° = +0.80 V (more positive than water at −0.83 V).',
+        hint3: '$I^{-}$ is a simple halide — preferentially oxidized over water.',
+        explanation: '1) Mg is deposited (molten: only $Mg^{2+}$ available for reduction). 2) Ag deposits (E° = +0.80 V >> −0.83 V for water). 3) $I_{2}$ forms ($I^{-}$ is a halide, oxidized before water).'
       }
     },
     {
@@ -283,23 +283,23 @@ What gas or metal is produced at the cathode during electrolysis of:
             question: 'Why can sodium metal be produced from molten NaCl but NOT from aqueous NaCl?',
             options: [
               'NaCl does not dissolve in water',
-              'In aqueous solution, water is reduced instead of Na⁺ (water has higher E°)',
+              'In aqueous solution, water is reduced instead of $Na^{+}$ (water has higher E°)',
               'Sodium reacts with chlorine in water',
               'The salt bridge prevents it'
             ],
             correctAnswer: 1,
-            explanation: 'Na⁺ has $E° = -2.71$ V, far below water\'s $E° = -0.83$ V. Water is preferentially reduced in aqueous solution, producing H₂ gas instead of Na metal. In molten NaCl, there is no water to compete.'
+            explanation: '$Na^{+}$ has $E° = -2.71$ V, far below water\'s $E° = -0.83$ V. Water is preferentially reduced in aqueous solution, producing $H_{2}$ gas instead of Na metal. In molten NaCl, there is no water to compete.'
           },
           {
-            question: 'In aqueous electrolysis, when does O₂ form at the anode instead of the anion?',
+            question: 'In aqueous electrolysis, when does $O_{2}$ form at the anode instead of the anion?',
             options: [
-              'When the anion is a simple halide (Cl⁻, Br⁻, I⁻)',
-              'When the anion is an oxyanion (SO₄²⁻, NO₃⁻) or F⁻',
-              'O₂ always forms at the anode',
-              'O₂ never forms — only the anion is oxidized'
+              'When the anion is a simple halide ($Cl^{-}$, $Br^{-}$, $I^{-}$)',
+              'When the anion is an oxyanion ($SO_{4}^{2-}$, $NO_{3}^{-}$) or $F^{-}$',
+              '$O_{2}$ always forms at the anode',
+              '$O_{2}$ never forms — only the anion is oxidized'
             ],
             correctAnswer: 1,
-            explanation: 'Oxyanions (SO₄²⁻, NO₃⁻) and F⁻ are very difficult to oxidize. Water is oxidized instead: 2H₂O → O₂ + 4H⁺ + 4e⁻. Simple halides (Cl⁻, Br⁻, I⁻) are oxidized preferentially.'
+            explanation: 'Oxyanions ($SO_{4}^{2-}$, $NO_{3}^{-}$) and $F^{-}$ are very difficult to oxidize. Water is oxidized instead: $2H_{2}O$ → $O_{2}$ + $4H^{+}$ + $4e^{-}$. Simple halides ($Cl^{-}$, $Br^{-}$, $I^{-}$) are oxidized preferentially.'
           }
         ]
       }

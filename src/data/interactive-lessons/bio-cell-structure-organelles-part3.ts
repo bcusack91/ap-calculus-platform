@@ -132,7 +132,7 @@ The ER is the largest membrane system in the cell — a network of interconnecte
 |---------|--------|
 | **Appearance** | No ribosomes attached; tubular network |
 | **Functions** | Lipid synthesis, steroid hormone production, detoxification, calcium storage |
-| **Rich in** | Liver cells (detox), ovary/testes cells (steroids), muscle cells (Ca²⁺ as sarcoplasmic reticulum) |
+| **Rich in** | Liver cells (detox), ovary/testes cells (steroids), muscle cells ($Ca^{2+}$ as sarcoplasmic reticulum) |
 
 > 🔑 **Key connection:** Rough ER → makes proteins. Smooth ER → makes lipids and detoxifies. Both contribute to building new cell membranes.
       `

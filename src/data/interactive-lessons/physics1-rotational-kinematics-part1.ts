@@ -84,7 +84,7 @@ $$\\alpha = \\frac{\\Delta\\omega}{\\Delta t}$$
 
 | Quantity | Linear | Angular |
 |----------|--------|---------|
-| Acceleration | $a$ (m/s²) | $\\alpha$ (rad/s²) |
+| Acceleration | $a$ $(m/s^{2})$ | $\\alpha$ $(rad/s^{2})$ |
 
 ### Key Analogies
 
@@ -155,7 +155,7 @@ $$\\alpha = \\frac{\\Delta\\omega}{\\Delta t}$$
 
 2) A merry-go-round completes one revolution in 8 seconds. What is its angular velocity? (in rad/s, round to 3 significant figures)
 
-3) A fan blade accelerates from rest to 600 RPM in 10 seconds. What is the angular acceleration? (in rad/s², round to 3 significant figures, use $\\pi \\approx 3.14$)
+3) A fan blade accelerates from rest to 600 RPM in 10 seconds. What is the angular acceleration? (in $rad/s^{2}$, round to 3 significant figures, use $\\pi \\approx 3.14$)
       `,
       exercise: {
         boxes: 3,
@@ -163,7 +163,7 @@ $$\\alpha = \\frac{\\Delta\\omega}{\\Delta t}$$
         hint1: '$\\theta = 90 \\times \\pi/180 = \\pi/2$',
         hint2: '$\\omega = 2\\pi/T = 2\\pi/8$',
         hint3: '$\\omega_f = 600 \\times 2\\pi/60 = 20\\pi$ rad/s. $\\alpha = \\omega_f/t = 20\\pi/10$',
-        explanation: '1) $90 \\times \\pi/180 = \\pi/2 \\approx 1.57$ rad. 2) $\\omega = 2\\pi/8 = \\pi/4 \\approx 0.79$ rad/s. 3) $\\omega_f = 600 \\times 2\\pi/60 = 20\\pi \\approx 62.8$ rad/s. $\\alpha = 62.8/10 = 6.28 \\approx 6.3$ rad/s².'
+        explanation: '1) $90 \\times \\pi/180 = \\pi/2 \\approx 1.57$ rad. 2) $\\omega = 2\\pi/8 = \\pi/4 \\approx 0.79$ rad/s. 3) $\\omega_f = 600 \\times 2\\pi/60 = 20\\pi \\approx 62.8$ rad/s. $\\alpha = 62.8/10 = 6.28 \\approx 6.3$ $rad/s^{2}$.'
       }
     },
     {
@@ -217,13 +217,13 @@ $$\\alpha = \\frac{\\Delta\\omega}{\\Delta t}$$
           {
             question: 'A wheel\'s angular velocity changes from $10$ rad/s to $30$ rad/s in 5 seconds. The angular acceleration is:',
             options: [
-              '2 rad/s²',
-              '4 rad/s²',
-              '6 rad/s²',
-              '8 rad/s²'
+              '2 $rad/s^{2}$',
+              '4 $rad/s^{2}$',
+              '6 $rad/s^{2}$',
+              '8 $rad/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\alpha = \\Delta\\omega/\\Delta t = (30 - 10)/5 = 20/5 = 4$ rad/s².'
+            explanation: '$\\alpha = \\Delta\\omega/\\Delta t = (30 - 10)/5 = 20/5 = 4$ $rad/s^{2}$.'
           }
         ]
       }

@@ -79,7 +79,7 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
               'Changes Ea'
             ],
             correctAnswer: 1,
-            explanation: 'As T increases, Ea/(RT) decreases, so e^(−Ea/RT) increases, making k larger. Higher temperature → larger rate constant → faster reaction.'
+            explanation: 'As T increases, Ea/(RT) decreases, so $e^{-Ea/RT}$ increases, making k larger. Higher temperature → larger rate constant → faster reaction.'
           },
           {
             question: 'If Ea = 0 (no activation barrier), then k equals:',
@@ -90,7 +90,7 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
               'Infinity'
             ],
             correctAnswer: 1,
-            explanation: 'If Ea = 0: k = Ae^(0) = A × 1 = A. Every collision with correct orientation leads to reaction.'
+            explanation: 'If Ea = 0: k = $Ae^{0}$ = A × 1 = A. Every collision with correct orientation leads to reaction.'
           },
           {
             question: 'Two reactions have the same A value. Reaction 1 has Ea = 40 kJ/mol, Reaction 2 has Ea = 80 kJ/mol. At the same temperature:',
@@ -101,7 +101,7 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
               'Cannot determine without knowing T'
             ],
             correctAnswer: 0,
-            explanation: 'Lower Ea means a larger Boltzmann factor (e^(−Ea/RT)), which gives a larger k, and therefore a faster reaction.'
+            explanation: 'Lower Ea means a larger Boltzmann factor $(e^{-Ea/RT})$, which gives a larger k, and therefore a faster reaction.'
           }
         ]
       }
@@ -150,17 +150,17 @@ Only a 30% increase — much less sensitive.
 
 **1)** Calculate $E_a/(RT)$ for $E_a = 75.0$ kJ/mol at $T = 500$ K. ($R = 8.314$ J/(mol·K); to 3 significant figures)
 
-**2)** A reaction has $A = 1.0 \\times 10^{13}$ s⁻¹ and $E_a = 100$ kJ/mol. Calculate $k$ at 300 K. (in s⁻¹, to 1 significant figure in scientific notation: e.g., 3e-5)
+**2)** A reaction has $A = 1.0 \\times 10^{13}$ $s^{-1}$ and $E_a = 100$ kJ/mol. Calculate $k$ at 300 K. (in $s^{-1}$, to 1 significant figure in scientific notation: e.g., 3e-5)
 
-**3)** If $k = 0.010$ s⁻¹ at 300 K and $k = 0.040$ s⁻¹ at 310 K, by what factor does k increase? (to 3 significant figures)
+**3)** If $k = 0.010$ $s^{-1}$ at 300 K and $k = 0.040$ $s^{-1}$ at 310 K, by what factor does k increase? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['18.0', '2e-9', '4.0'],
         hint1: 'Ea/(RT) = 75,000/(8.314 × 500) = 75,000/4157 = 18.04 ≈ 18.0.',
-        hint2: 'k = 1.0e13 × e^(−100,000/(8.314×300)) = 1.0e13 × e^(−40.1) = 1.0e13 × 3.7e-18... Hmm: e^(−40.1) ≈ 3.7 × 10⁻¹⁸. k = 1.0e13 × 3.7e-18 = 3.7e-5. Wait, let me recalculate: Ea/RT = 100,000/(8.314×300) = 100,000/2494 = 40.1. e^(−40.1) ≈ 3.7 × 10⁻¹⁸. k = 1.0e13 × 3.7e-18 = 3.7e-5.',
+        hint2: 'k = 1.0e13 × e^(−100,000/(8.314×300)) = 1.0e13 × $e^{-40.1}$ = 1.0e13 × 3.7e-18... Hmm: $e^{-40.1}$ ≈ $3.7 \\times 10^{-18}$. k = 1.0e13 × 3.7e-18 = 3.7e-5. Wait, let me recalculate: Ea/RT = 100,000/(8.314×300) = 100,000/2494 = 40.1. $e^{-40.1}$ ≈ $3.7 \\times 10^{-18}$. k = 1.0e13 × 3.7e-18 = 3.7e-5.',
         hint3: '0.040/0.010 = 4.0.',
-        explanation: '1) 75,000/(8.314 × 500) = 18.0. 2) Ea/(RT) = 100,000/2494 = 40.1; e^(−40.1) = 3.7 × 10⁻¹⁸; k = 1.0 × 10¹³ × 3.7 × 10⁻¹⁸ = 3.7 × 10⁻⁵ s⁻¹. 3) k₂/k₁ = 0.040/0.010 = 4.0.'
+        explanation: '1) 75,000/(8.314 × 500) = 18.0. 2) Ea/(RT) = 100,000/2494 = 40.1; $e^{-40.1}$ = $3.7 \\times 10^{-18}$; k = $1.0 \\times 10^{13}$ × $3.7 \\times 10^{-18}$ = $3.7 \\times 10^{-5}$ $s^{-1}$. 3) $k_{2}/k_{1}$ = 0.040/0.010 = 4.0.'
       }
     },
     {
@@ -178,8 +178,8 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
 
 | Reaction Type | Typical $A$ | Why |
 |--------------|------------|-----|
-| Gas-phase, simple molecules | $10^{10}$–$10^{14}$ s⁻¹ | High collision frequency |
-| Solution-phase | $10^{8}$–$10^{12}$ s⁻¹ | Solvent cage effects |
+| Gas-phase, simple molecules | $10^{10}$–$10^{14}$ $s^{-1}$ | High collision frequency |
+| Solution-phase | $10^{8}$–$10^{12}$ $s^{-1}$ | Solvent cage effects |
 | Reactions needing precise orientation | Lower $A$ | Small steric factor $p$ |
 
 
@@ -216,8 +216,8 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
           }
         ],
         correctAnswers: ['A', 'slow at low T, faster at high T', 'k', 'Kelvin'],
-        hint1: 'As T → ∞: Ea/(RT) → 0, e^0 = 1, k → A.',
-        hint2: 'High Ea means e^(−Ea/RT) is small at low T but increases at high T.',
+        hint1: 'As T → ∞: Ea/(RT) → 0, $e^{0}$ = 1, k → A.',
+        hint2: 'High Ea means $e^{-Ea/RT}$ is small at low T but increases at high T.',
         hint3: 'k = A × (dimensionless), so A has units of k.',
         explanation: 'As T → ∞, k → A. High Ea reactions are very temperature-sensitive. A has same units as k. Temperature must be in Kelvin (absolute scale).'
       }
@@ -239,7 +239,7 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
               'A parabola'
             ],
             correctAnswer: 2,
-            explanation: 'k = Ae^(−Ea/RT). As T increases, k increases exponentially. The k vs T graph curves upward — it is NOT linear.'
+            explanation: 'k = $Ae^{-Ea/RT}$. As T increases, k increases exponentially. The k vs T graph curves upward — it is NOT linear.'
           },
           {
             question: 'At very low temperatures (T → 0), the Arrhenius equation predicts k →',
@@ -250,7 +250,7 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
               'Ea/R'
             ],
             correctAnswer: 0,
-            explanation: 'As T → 0: Ea/(RT) → ∞, e^(−∞) = 0, so k → 0. At absolute zero, no molecules have enough energy to overcome the activation barrier.'
+            explanation: 'As T → 0: Ea/(RT) → ∞, $e^{-\\infty}$ = 0, so k → 0. At absolute zero, no molecules have enough energy to overcome the activation barrier.'
           }
         ]
       }

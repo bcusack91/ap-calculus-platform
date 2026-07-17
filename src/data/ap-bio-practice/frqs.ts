@@ -18,8 +18,8 @@ export const FRQS: SAQItem[] = [
     topic: 'unit-3-cellular-energetics',
     prompt:
       'FRQ 1 — Long: Interpreting Experimental Results.\n\n' +
-      'Researchers studied the activity of the enzyme catalase, which catalyzes the breakdown of hydrogen peroxide (H₂O₂) into water and oxygen gas. Five test tubes were set up, each containing the same concentration of catalase and H₂O₂. Each tube was placed at a different temperature, and the rate of O₂ production (mL O₂/min) was measured.\n\n' +
-      '   Tube   Temperature (°C)   O₂ produced (mL/min)\n' +
+      'Researchers studied the activity of the enzyme catalase, which catalyzes the breakdown of hydrogen peroxide $(H_{2}O_{2})$ into water and oxygen gas. Five test tubes were set up, each containing the same concentration of catalase and $H_{2}O_{2}$. Each tube was placed at a different temperature, and the rate of $O_{2}$ production $(mL O_{2}/min)$ was measured.\n\n' +
+      '   Tube   Temperature (°C)   $O_{2}$ produced (mL/min)\n' +
       '    A           5                    1.0\n' +
       '    B          25                    4.5\n' +
       '    C          37                    8.0  (peak)\n' +
@@ -31,8 +31,8 @@ export const FRQS: SAQItem[] = [
         question:
           '(i) Identify the INDEPENDENT and DEPENDENT variables in this experiment. (ii) Identify ONE controlled variable.',
         rubric: [
-          { id: 'a1', label: '1 pt — IV = temperature; DV = rate of O₂ produced (mL O₂/min)', description: 'Both correctly identified.' },
-          { id: 'a2', label: '1 pt — Controlled variable (e.g., catalase concentration, H₂O₂ concentration, reaction time, pH, volume of solution)', description: 'Any reasonable controlled variable.' },
+          { id: 'a1', label: '1 pt — IV = temperature; DV = rate of $O_{2}$ produced $(mL O_{2}/min)$', description: 'Both correctly identified.' },
+          { id: 'a2', label: '1 pt — Controlled variable (e.g., catalase concentration, $H_{2}O_{2}$ concentration, reaction time, pH, volume of solution)', description: 'Any reasonable controlled variable.' },
         ],
       },
       {
@@ -40,7 +40,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Describe how to construct a graph of the data and identify the optimum temperature for catalase. Justify your identification of the optimum temperature.',
         rubric: [
-          { id: 'b1', label: '1 pt — Graph: temperature on x-axis, O₂ rate on y-axis; properly labeled with units; data plotted as line/scatter; appropriate scale', description: 'Standard scientific graph conventions.' },
+          { id: 'b1', label: '1 pt — Graph: temperature on x-axis, $O_{2}$ rate on y-axis; properly labeled with units; data plotted as line/scatter; appropriate scale', description: 'Standard scientific graph conventions.' },
           { id: 'b2', label: '1 pt — Optimum temperature ≈ 37 °C, justified by maximum reaction rate (8.0 mL/min) at that temperature', description: 'Must explicitly identify 37 °C as optimum AND cite the highest rate.' },
         ],
       },
@@ -55,10 +55,10 @@ export const FRQS: SAQItem[] = [
       {
         letter: 'D',
         question:
-          'A student hypothesizes that adding a competitive inhibitor (which competes with H₂O₂ for the active site) at 37 °C will decrease the reaction rate. Predict the effect on reaction rate at 37 °C and explain how the rate could be RESTORED to its uninhibited value.',
+          'A student hypothesizes that adding a competitive inhibitor (which competes with $H_{2}O_{2}$ for the active site) at 37 °C will decrease the reaction rate. Predict the effect on reaction rate at 37 °C and explain how the rate could be RESTORED to its uninhibited value.',
         rubric: [
           { id: 'd1', label: '1 pt — Reaction rate decreases when a competitive inhibitor is added', description: 'Must state inhibitor reduces rate.' },
-          { id: 'd2', label: '1 pt — Rate can be restored by adding more H₂O₂ (substrate) — competitive inhibition is overcome by increasing substrate concentration', description: 'Must specifically identify increasing substrate concentration.' },
+          { id: 'd2', label: '1 pt — Rate can be restored by adding more $H_{2}O_{2}$ (substrate) — competitive inhibition is overcome by increasing substrate concentration', description: 'Must specifically identify increasing substrate concentration.' },
         ],
       },
       {
@@ -66,7 +66,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Catalase activity is found in nearly all aerobic organisms. Propose ONE evolutionary advantage of producing catalase in cells that perform aerobic respiration.',
         rubric: [
-          { id: 'e1', label: '1 pt — Catalase neutralizes the toxic byproduct H₂O₂ (a reactive oxygen species) generated during aerobic metabolism, protecting cells from oxidative damage', description: 'Must connect H₂O₂ as a toxic byproduct of aerobic metabolism with a fitness/survival benefit.' },
+          { id: 'e1', label: '1 pt — Catalase neutralizes the toxic byproduct $H_{2}O_{2}$ (a reactive oxygen species) generated during aerobic metabolism, protecting cells from oxidative damage', description: 'Must connect $H_{2}O_{2}$ as a toxic byproduct of aerobic metabolism with a fitness/survival benefit.' },
         ],
       },
       {
@@ -79,12 +79,12 @@ export const FRQS: SAQItem[] = [
       },
     ],
     sampleResponse:
-      '(A) IV = temperature (°C); DV = rate of O₂ produced (mL/min). Controlled variables include catalase concentration, H₂O₂ concentration, reaction time, pH, and total reaction volume.\n\n' +
-      '(B) Plot temperature on the x-axis (°C) and O₂ rate on the y-axis (mL/min). The curve rises from 5 to 37 °C, peaks at 37 °C, then falls sharply. Optimum temperature is 37 °C because the rate is highest (8.0 mL/min) at that temperature.\n\n' +
+      '(A) IV = temperature (°C); DV = rate of $O_{2}$ produced (mL/min). Controlled variables include catalase concentration, $H_{2}O_{2}$ concentration, reaction time, pH, and total reaction volume.\n\n' +
+      '(B) Plot temperature on the x-axis (°C) and $O_{2}$ rate on the y-axis (mL/min). The curve rises from 5 to 37 °C, peaks at 37 °C, then falls sharply. Optimum temperature is 37 °C because the rate is highest (8.0 mL/min) at that temperature.\n\n' +
       '(C) Above ~50 °C, the increased thermal energy disrupts the noncovalent bonds (H bonds, ionic interactions, hydrophobic interactions) that maintain catalase\'s tertiary structure. The enzyme denatures, the active site distorts, and substrate binding is lost — sharply reducing rate by 70 °C.\n\n' +
-      '(D) A competitive inhibitor at 37 °C will DECREASE the reaction rate by occupying the active site. The rate can be restored by increasing the substrate (H₂O₂) concentration: with abundant substrate, H₂O₂ will out-compete the inhibitor for the active site, returning Vmax to near-uninhibited levels.\n\n' +
-      '(E) H₂O₂ is a toxic reactive oxygen species generated as a byproduct of aerobic metabolism. Cells that produce catalase quickly convert H₂O₂ to harmless H₂O and O₂, protecting macromolecules (DNA, membranes, proteins) from oxidative damage — a clear fitness advantage.\n\n' +
-      '(F) Repeat each temperature with multiple replicates (n ≥ 3) and run a "no enzyme" negative control to confirm O₂ production is enzyme-dependent. Statistical analysis (e.g., standard error bars, ANOVA) would establish significance.',
+      '(D) A competitive inhibitor at 37 °C will DECREASE the reaction rate by occupying the active site. The rate can be restored by increasing the substrate $(H_{2}O_{2})$ concentration: with abundant substrate, $H_{2}O_{2}$ will out-compete the inhibitor for the active site, returning Vmax to near-uninhibited levels.\n\n' +
+      '(E) $H_{2}O_{2}$ is a toxic reactive oxygen species generated as a byproduct of aerobic metabolism. Cells that produce catalase quickly convert $H_{2}O_{2}$ to harmless $H_{2}O$ and $O_{2}$, protecting macromolecules (DNA, membranes, proteins) from oxidative damage — a clear fitness advantage.\n\n' +
+      '(F) Repeat each temperature with multiple replicates (n ≥ 3) and run a "no enzyme" negative control to confirm $O_{2}$ production is enzyme-dependent. Statistical analysis (e.g., standard error bars, ANOVA) would establish significance.',
   },
 
   /* ---------- FRQ 2 — LONG (Hardy-Weinberg / evolution data) ---------- */
@@ -111,7 +111,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Determine whether this population is in Hardy-Weinberg equilibrium for fur color. Show your work and justify your conclusion.',
         rubric: [
-          { id: 'b1', label: '1 pt — Calculates expected genotype frequencies: DD = p² = 0.36 → 144; Dd = 2pq = 0.48 → 192; dd = q² = 0.16 → 64', description: 'Must show expected counts.' },
+          { id: 'b1', label: '1 pt — Calculates expected genotype frequencies: DD = $p^{2}$ = 0.36 → 144; Dd = 2pq = 0.48 → 192; dd = $q^{2}$ = 0.16 → 64', description: 'Must show expected counts.' },
           { id: 'b2', label: '1 pt — Concludes population IS in Hardy-Weinberg equilibrium because observed = expected', description: 'Conclusion must be supported by the comparison.' },
         ],
       },
@@ -136,7 +136,7 @@ export const FRQS: SAQItem[] = [
       {
         letter: 'E',
         question:
-          'After many generations of predation, the recessive dd phenotype is reduced to 1% (q² = 0.01). Calculate the new allele frequencies and the percentage of HETEROZYGOUS carriers in the population.',
+          'After many generations of predation, the recessive dd phenotype is reduced to 1% ($q^{2}$ = 0.01). Calculate the new allele frequencies and the percentage of HETEROZYGOUS carriers in the population.',
         rubric: [
           { id: 'e1', label: '1 pt — q = 0.1, p = 0.9, heterozygotes = 2pq = 2(0.9)(0.1) = 0.18 = 18%', description: 'Must show all three values.' },
         ],
@@ -152,10 +152,10 @@ export const FRQS: SAQItem[] = [
     ],
     sampleResponse:
       '(A) Total alleles = 2 × 400 = 800. D-alleles: 2(144) + 192 = 480 → p = 480/800 = 0.6. d-alleles: 2(64) + 192 = 320 → q = 320/800 = 0.4.\n\n' +
-      '(B) Expected: DD = p² × 400 = (0.36)(400) = 144; Dd = 2pq × 400 = (0.48)(400) = 192; dd = q² × 400 = (0.16)(400) = 64. Observed = expected for all three genotypes → population IS in HW equilibrium.\n\n' +
+      '(B) Expected: DD = $p^{2}$ × 400 = (0.36)(400) = 144; Dd = 2pq × 400 = (0.48)(400) = 192; dd = $q^{2}$ × 400 = (0.16)(400) = 64. Observed = expected for all three genotypes → population IS in HW equilibrium.\n\n' +
       '(C) Light (dd) mice are preferentially preyed upon, lowering the frequency of d (q DECREASES) and raising the frequency of D (p INCREASES) over generations. This is DIRECTIONAL selection favoring the dark phenotype.\n\n' +
       '(D) (1) "No selection" is violated — predation is a form of natural selection acting on the recessive (dd) phenotype. (2) The assumption of a "large population with no genetic drift" may also be challenged because differential mortality reduces effective population size. (Equivalently, students may argue non-random mating if dark coloration is associated with mate choice.)\n\n' +
-      '(E) q² = 0.01 → q = √0.01 = 0.1. p = 1 − 0.1 = 0.9. Heterozygote frequency = 2pq = 2(0.9)(0.1) = 0.18 = 18%.\n\n' +
+      '(E) $q^{2}$ = 0.01 → q = $\\sqrt{0.01}$ = 0.1. p = 1 − 0.1 = 0.9. Heterozygote frequency = 2pq = 2(0.9)(0.1) = 0.18 = 18%.\n\n' +
       '(F) Recessive alleles persist because they are masked in heterozygotes (Dd). Heterozygotes display the dominant phenotype and are not removed by selection. As long as Dd carriers continue to reproduce, they pass d alleles on — selection cannot eliminate d unless every dd individual is removed AND no carriers reproduce.',
   },
 
@@ -220,7 +220,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Define "semiconservative replication" and explain what experiment first demonstrated it.',
         rubric: [
-          { id: 'a1', label: '1 pt — Each daughter DNA molecule contains ONE original (parental) strand and ONE newly synthesized strand. Demonstrated by Meselson and Stahl using nitrogen isotopes (¹⁵N → ¹⁴N density-gradient experiment)', description: 'Must include both the definition AND the Meselson-Stahl experiment.' },
+          { id: 'a1', label: '1 pt — Each daughter DNA molecule contains ONE original (parental) strand and ONE newly synthesized strand. Demonstrated by Meselson and Stahl using nitrogen isotopes ($ {}^{15}N$ → $ {}^{14}N$ density-gradient experiment)', description: 'Must include both the definition AND the Meselson-Stahl experiment.' },
         ],
       },
       {
@@ -249,7 +249,7 @@ export const FRQS: SAQItem[] = [
       },
     ],
     sampleResponse:
-      '(A) Semiconservative replication: each new DNA molecule is composed of one parental strand and one newly synthesized strand. Meselson and Stahl (1958) grew bacteria in heavy ¹⁵N, switched them to light ¹⁴N, and used cesium chloride density-gradient centrifugation across generations. The intermediate-density band after one generation (and the appearance of light + intermediate bands after two) ruled out conservative and dispersive models in favor of semiconservative replication.\n\n' +
+      '(A) Semiconservative replication: each new DNA molecule is composed of one parental strand and one newly synthesized strand. Meselson and Stahl (1958) grew bacteria in heavy $ {}^{15}N$, switched them to light $ {}^{14}N$, and used cesium chloride density-gradient centrifugation across generations. The intermediate-density band after one generation (and the appearance of light + intermediate bands after two) ruled out conservative and dispersive models in favor of semiconservative replication.\n\n' +
       '(B) DNA polymerase can only add nucleotides to a free 3\' hydroxyl, so synthesis proceeds 5\'→3\'. Because the two strands of the parental DNA are antiparallel, only one strand (leading) has a template oriented to allow continuous 5\'→3\' synthesis toward the replication fork. The lagging strand template runs in the opposite direction, so polymerase synthesizes short Okazaki fragments AWAY from the fork as the helix unwinds.\n\n' +
       '(C) DNA ligase seals the gaps between Okazaki fragments on the lagging strand by catalyzing the formation of phosphodiester bonds between adjacent fragments, producing a continuous strand.\n\n' +
       '(D) Loss of 3\'→5\' exonuclease (proofreading) activity dramatically increases the replication error rate. Mutations accumulate every cell division and cannot be corrected during replication. Over time, this leads to a higher rate of damaging mutations, increasing the risk of cancer (loss of tumor suppressors / activation of oncogenes) and other genetic diseases.',

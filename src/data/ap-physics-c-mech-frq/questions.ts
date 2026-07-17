@@ -40,7 +40,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
     unit: 1,
     title: 'Variable-Force Kinematics on an Inclined Track',
     prompt:
-      'A block of mass m = 2.0 kg is released from rest at the top of a frictionless incline of length L = 5.0 m that makes an angle θ = 30° with the horizontal. A position-dependent braking force F(x) = −βx² acts on the block along the incline, where β = 0.80 N/m² and x is measured from the release point down the incline.',
+      'A block of mass m = 2.0 kg is released from rest at the top of a frictionless incline of length L = 5.0 m that makes an angle θ = 30° with the horizontal. A position-dependent braking force F(x) = $-\\beta x^{2}$ acts on the block along the incline, where β = 0.80 $N/m^{2}$ and x is measured from the release point down the incline.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -53,22 +53,22 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Identify the net force along the incline: mg sin θ − βx²',
+            description: 'Identify the net force along the incline: mg sin θ − $\\beta x^{2}$',
             keywords: ['mg sin', 'βx²', 'net force', 'along the incline']
           },
           {
             points: 1,
-            description: 'Apply Newton\'s second law: ma = mg sin θ − βx²',
+            description: 'Apply Newton\'s second law: ma = mg sin θ − $\\beta x^{2}$',
             keywords: ['ma', 'newton', 'second law', 'F = ma']
           },
           {
             points: 1,
-            description: 'Write as differential equation: m(d²x/dt²) = mg sin θ − βx²',
+            description: 'Write as differential equation: $m(d^{2}x/dt^{2})$ = mg sin θ − $\\beta x^{2}$',
             keywords: ['d²x/dt²', 'differential equation', 'acceleration']
           }
         ],
         sampleAnswer:
-          'The forces along the incline are the gravitational component mg sin θ (down the incline) and the braking force −βx² (opposing motion, up the incline). By Newton\'s second law:\n\nm(d²x/dt²) = mg sin θ − βx²\n\nSubstituting values: 2.0(d²x/dt²) = 2.0(9.8)(sin 30°) − 0.80x² = 9.8 − 0.80x²'
+          'The forces along the incline are the gravitational component mg sin θ (down the incline) and the braking force $-\\beta x^{2}$ (opposing motion, up the incline). By Newton\'s second law:\n\n$m(d^{2}x/dt^{2})$ = mg sin θ − $\\beta x^{2}$\n\nSubstituting values: $2.0(d^{2}x/dt^{2})$ = 2.0(9.8)(sin 30°) − $0.80x^{2}$ = 9.8 − $0.80x^{2}$'
       },
       {
         label: '(b)',
@@ -83,7 +83,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'Integrate: ∫v dv = ∫(g sin θ − (β/m)x²) dx to get v²/2 = g sin θ · x − (β/3m)x³',
+            description: 'Integrate: ∫v dv = $\\int (g \\sin \\theta - (\\beta /m)x^{2})$ dx to get $v^{2}/2$ = g sin θ · x − $(\\beta /3m)x^{3}$',
             keywords: ['integrate', 'v²/2', 'x³', 'antiderivative']
           },
           {
@@ -93,27 +93,27 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Using a = v(dv/dx):\n\nmv(dv/dx) = mg sin θ − βx²\n\n∫₀ᵛ v dv = ∫₀ˣ [g sin θ − (β/m)x²] dx\n\nv²/2 = g sin θ · x − (β)/(3m) · x³\n\nv² = 2g sin θ · x − (2β)/(3m) · x³\n\nAt x = 2.0 m:\nv² = 2(9.8)(0.5)(2.0) − 2(0.80)/(3·2.0)(2.0)³ = 19.6 − 2.133 = 17.467\nv = √17.467 ≈ 4.18 m/s'
+          'Using a = v(dv/dx):\n\nmv(dv/dx) = mg sin θ − $\\beta x^{2}$\n\n$\\int_{0}^{v}$ v dv = $\\int_{0}^{x}$ [g sin θ − $(\\beta /m)x^{2}$] dx\n\n$v^{2}/2$ = g sin θ · x − (β)/(3m) · $x^{3}$\n\n$v^{2}$ = 2g sin θ · x − (2β)/(3m) · $x^{3}$\n\nAt x = 2.0 m:\n$v^{2}$ = 2(9.8)(0.5)(2.0) − $2(0.80)/(3\\cdot 2.0)(2.0)^{3}$ = 19.6 − 2.133 = 17.467\nv = $\\sqrt{17.467}$ ≈ 4.18 m/s'
       },
       {
         label: '(c)',
         prompt:
-          'Determine the position x₀ at which the block reaches its maximum velocity. Express your answer both symbolically and numerically.',
+          'Determine the position $x_{0}$ at which the block reaches its maximum velocity. Express your answer both symbolically and numerically.',
         maxPoints: 2,
         rubric: [
           {
             points: 1,
-            description: 'Set dv/dx = 0, which means a = 0, so mg sin θ = βx₀²',
+            description: 'Set dv/dx = 0, which means a = 0, so mg sin θ = $\\beta x_{0}^{2}$',
             keywords: ['dv/dx = 0', 'acceleration = 0', 'maximum velocity']
           },
           {
             points: 1,
-            description: 'Solve x₀ = √(mg sin θ / β) and evaluate numerically',
+            description: 'Solve $x_{0}$ = $\\sqrt{mg \\sin \\theta / \\beta}$ and evaluate numerically',
             keywords: ['√', 'square root', 'x₀', 'mg sin θ / β']
           }
         ],
         sampleAnswer:
-          'Maximum velocity occurs when acceleration = 0:\n\nmg sin θ − βx₀² = 0\nx₀² = mg sin θ / β\nx₀ = √(mg sin θ / β) = √(2.0 · 9.8 · 0.5 / 0.80) = √(12.25) ≈ 3.50 m'
+          'Maximum velocity occurs when acceleration = 0:\n\nmg sin θ − $\\beta x_{0}^{2}$ = 0\n$x_{0}^{2}$ = mg sin θ / β\n$x_{0}$ = $\\sqrt{mg \\sin \\theta / \\beta}$ = $\\sqrt{2.0 \\cdot 9.8 \\cdot 0.5 / 0.80}$ = $\\sqrt{12.25}$ ≈ 3.50 m'
       },
       {
         label: '(d)',
@@ -123,17 +123,17 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Set up the integral W = −∫₀³ βx² dx',
+            description: 'Set up the integral W = $-\\int_{0}^{3}$ $\\beta x^{2}$ dx',
             keywords: ['integral', '∫', 'βx²', 'work']
           },
           {
             points: 1,
-            description: 'Evaluate: W = −β(x³/3)|₀³ = −0.80(27/3) = −7.2 J',
+            description: 'Evaluate: W = $-\\beta (x^{3}/3)$|$ {}_{0}^{3}$ = −0.80(27/3) = −7.2 J',
             keywords: ['−7.2', 'joules', 'x³/3', 'negative']
           }
         ],
         sampleAnswer:
-          'W = ∫₀³ F(x) dx = −∫₀³ βx² dx = −β[x³/3]₀³ = −0.80(3.0³/3) = −0.80(9.0) = −7.2 J\n\nThe braking force does −7.2 J of work on the block.'
+          'W = $\\int_{0}^{3}$ F(x) dx = $-\\int_{0}^{3}$ $\\beta x^{2}$ dx = −β[$x^{3}/3$]$ {}_{0}^{3}$ = $-0.80(3.0^{3}/3)$ = −0.80(9.0) = −7.2 J\n\nThe braking force does −7.2 J of work on the block.'
       }
     ]
   },
@@ -145,7 +145,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
     unit: 3,
     title: 'Variable Spring and Energy Dissipation',
     prompt:
-      'A nonlinear spring exerts a restoring force F(x) = −kx − αx³ on a block of mass m = 1.5 kg, where k = 40 N/m, α = 8.0 N/m³, and x is the displacement from equilibrium. The block is pushed to compress the spring by x₀ = 0.50 m and released from rest on a horizontal surface with kinetic friction coefficient μₖ = 0.10.',
+      'A nonlinear spring exerts a restoring force F(x) = −kx − $\\alpha x^{3}$ on a block of mass m = 1.5 kg, where k = 40 N/m, α = 8.0 $N/m^{3}$, and x is the displacement from equilibrium. The block is pushed to compress the spring by $x_{0}$ = 0.50 m and released from rest on a horizontal surface with kinetic friction coefficient $\\mu_{k}$ = 0.10.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -153,17 +153,17 @@ const longFRQs: PhysicsCMechFRQ[] = [
       {
         label: '(a)',
         prompt:
-          'Derive an expression for the potential energy U(x) stored in the nonlinear spring. Evaluate U(x₀).',
+          'Derive an expression for the potential energy U(x) stored in the nonlinear spring. Evaluate $U(x_{0})$.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'Set up U(x) = −∫₀ˣ F dx = ∫₀ˣ (kx + αx³) dx',
+            description: 'Set up U(x) = $-\\int_{0}^{x}$ F dx = $\\int_{0}^{x}$ $(kx + \\alpha x^{3})$ dx',
             keywords: ['U(x)', '−∫F dx', 'potential energy', 'integral']
           },
           {
             points: 1,
-            description: 'Integrate to get U(x) = kx²/2 + αx⁴/4',
+            description: 'Integrate to get U(x) = $kx^{2}/2$ + $\\alpha x^{4}/4$',
             keywords: ['kx²/2', 'αx⁴/4', 'antiderivative']
           },
           {
@@ -173,7 +173,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'U(x) = −∫₀ˣ F(x\') dx\' = ∫₀ˣ (kx\' + αx\'³) dx\' = kx²/2 + αx⁴/4\n\nU(0.50) = 40(0.50)²/2 + 8.0(0.50)⁴/4 = 40(0.25)/2 + 8.0(0.0625)/4 = 5.0 + 0.125 = 5.125 J'
+          'U(x) = $-\\int_{0}^{x}$ F(x\') dx\' = $\\int_{0}^{x}$ (kx\' + αx\'$ {}^{3}$) dx\' = $kx^{2}/2$ + $\\alpha x^{4}/4$\n\nU(0.50) = $40(0.50)^{2}/2$ + $8.0(0.50)^{4}/4$ = 40(0.25)/2 + 8.0(0.0625)/4 = 5.0 + 0.125 = 5.125 J'
       },
       {
         label: '(b)',
@@ -183,7 +183,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Apply W_net = ΔKE: U(x₀) − μₖmg·x₀ = ½mv²',
+            description: 'Apply W_net = ΔKE: $U(x_{0})$ − $\\mu_{k}mg\\cdot x_{0}$ = $\\tfrac{1}{2} mv^{2}$',
             keywords: ['work-energy', 'ΔKE', 'friction work', '½mv²']
           },
           {
@@ -193,12 +193,12 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Energy conservation with friction:\n½mv² = U(x₀) − μₖmg·x₀\n½(1.5)v² = 5.125 − 0.10(1.5)(9.8)(0.50)\n0.75v² = 5.125 − 0.735 = 4.39\nv² = 5.853\nv ≈ 2.42 m/s'
+          'Energy conservation with friction:\n$\\tfrac{1}{2} mv^{2}$ = $U(x_{0})$ − $\\mu_{k}mg\\cdot x_{0}$\n$\\tfrac{1}{2} (1.5)v^{2}$ = 5.125 − 0.10(1.5)(9.8)(0.50)\n$0.75v^{2}$ = 5.125 − 0.735 = 4.39\n$v^{2}$ = 5.853\nv ≈ 2.42 m/s'
       },
       {
         label: '(c)',
         prompt:
-          'Write a differential equation relating the block\'s velocity v to its position x as it moves from x = −x₀ toward equilibrium. Use the chain rule a = v(dv/dx).',
+          'Write a differential equation relating the block\'s velocity v to its position x as it moves from x = $-x_{0}$ toward equilibrium. Use the chain rule a = v(dv/dx).',
         maxPoints: 3,
         rubric: [
           {
@@ -208,17 +208,17 @@ const longFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'Write ma = −kx − αx³ − μₖmg (friction opposes motion toward +x)',
+            description: 'Write ma = −kx − $\\alpha x^{3}$ − $\\mu_{k}mg$ (friction opposes motion toward +x)',
             keywords: ['ma =', 'net force', 'direction', 'opposes motion']
           },
           {
             points: 1,
-            description: 'Substitute a = v(dv/dx) to get mv(dv/dx) = −kx − αx³ − μₖmg',
+            description: 'Substitute a = v(dv/dx) to get mv(dv/dx) = −kx − $\\alpha x^{3}$ − $\\mu_{k}mg$',
             keywords: ['v dv/dx', 'chain rule', 'differential equation']
           }
         ],
         sampleAnswer:
-          'As the block moves from −x₀ toward equilibrium (positive direction), friction opposes the motion (acts in −x direction):\n\nma = −kx − αx³ − μₖmg\n\nUsing a = v(dv/dx):\n\nmv(dv/dx) = −kx − αx³ − μₖmg\n\nThis is a first-order ODE in v(x).'
+          'As the block moves from $-x_{0}$ toward equilibrium (positive direction), friction opposes the motion (acts in −x direction):\n\nma = −kx − $\\alpha x^{3}$ − $\\mu_{k}mg$\n\nUsing a = v(dv/dx):\n\nmv(dv/dx) = −kx − $\\alpha x^{3}$ − $\\mu_{k}mg$\n\nThis is a first-order ODE in v(x).'
       },
       {
         label: '(d)',
@@ -228,17 +228,17 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Set up energy equation: U(x₀) = U(x_max) + μₖmg(x₀ + x_max) with v = 0 at x_max',
+            description: 'Set up energy equation: $U(x_{0})$ = U(x_max) + $\\mu_{k}mg(x_{0} + x_{max})$ with v = 0 at x_max',
             keywords: ['U(x_max)', 'v = 0', 'energy conservation', 'friction']
           },
           {
             points: 1,
-            description: 'Recognize quartic equation: kx_max²/2 + αx_max⁴/4 + μₖmg·x_max = U(x₀) − μₖmg·x₀, requires numerical solution',
+            description: 'Recognize quartic equation: $kx_{max}^{2}/2$ + $\\alpha x_{max}^{4}/4$ + $\\mu_{k}mg\\cdot x_{max}$ = $U(x_{0})$ − $\\mu_{k}mg\\cdot x_{0}$, requires numerical solution',
             keywords: ['quartic', 'numerical', 'no closed form', 'transcendental']
           }
         ],
         sampleAnswer:
-          'At maximum extension v = 0. Energy conservation:\n\nU(x₀) = U(x_max) + μₖmg(x₀ + x_max)\n\nkx₀²/2 + αx₀⁴/4 = kx_max²/2 + αx_max⁴/4 + μₖmg(x₀ + x_max)\n\n5.125 = 20x_max² + 2x_max⁴ + 1.47(0.50 + x_max)\n\nThis is a quartic equation in x_max. No simple closed-form solution exists; it must be solved numerically. Using iteration or a calculator: x_max ≈ 0.46 m.'
+          'At maximum extension v = 0. Energy conservation:\n\n$U(x_{0})$ = U(x_max) + $\\mu_{k}mg(x_{0} + x_{max})$\n\n$kx_{0}^{2}/2$ + $\\alpha x_{0}^{4}/4$ = $kx_{max}^{2}/2$ + $\\alpha x_{max}^{4}/4$ + $\\mu_{k}mg(x_{0} + x_{max})$\n\n5.125 = $20x_{max}^{2}$ + $2x_{max}^{4}$ + 1.47(0.50 + x_max)\n\nThis is a quartic equation in x_max. No simple closed-form solution exists; it must be solved numerically. Using iteration or a calculator: x_max ≈ 0.46 m.'
       }
     ]
   },
@@ -250,7 +250,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
     unit: 5,
     title: 'Pulley System with Rotational Inertia',
     prompt:
-      'A uniform solid disk of mass M = 4.0 kg and radius R = 0.25 m is mounted on a frictionless axle. A light, inextensible string is wrapped around the rim. A hanging block of mass m = 2.0 kg is attached to the free end of the string and released from rest. The disk has moment of inertia I = ½MR².',
+      'A uniform solid disk of mass M = 4.0 kg and radius R = 0.25 m is mounted on a frictionless axle. A light, inextensible string is wrapped around the rim. A hanging block of mass m = 2.0 kg is attached to the free end of the string and released from rest. The disk has moment of inertia I = $\\tfrac{1}{2} MR^{2}$.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -273,7 +273,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'Torque equation for disk: τ = TR = Iα = (½MR²)(a/R)',
+            description: 'Torque equation for disk: τ = TR = Iα = $(\\tfrac{1}{2} MR^{2})(a/R)$',
             keywords: ['τ = Iα', 'torque', 'TR', 'α = a/R']
           },
           {
@@ -283,7 +283,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Block FBD: mg downward, T upward.\nDisk: T tangential at rim, normal force and weight at axle.\n\nBlock: mg − T = ma … (1)\nDisk: τ = Iα → TR = (½MR²)(a/R) → T = ½Ma … (2)\n\nSubstitute (2) into (1):\nmg − ½Ma = ma\nmg = a(m + M/2)\na = mg/(m + M/2) = 2.0(9.8)/(2.0 + 2.0) = 4.9 m/s²\n\nT = ½Ma = ½(4.0)(4.9) = 9.8 N'
+          'Block FBD: mg downward, T upward.\nDisk: T tangential at rim, normal force and weight at axle.\n\nBlock: mg − T = ma … (1)\nDisk: τ = Iα → TR = $(\\tfrac{1}{2} MR^{2})(a/R)$ → T = ½Ma … (2)\n\nSubstitute (2) into (1):\nmg − ½Ma = ma\nmg = a(m + M/2)\na = mg/(m + M/2) = 2.0(9.8)/(2.0 + 2.0) = 4.9 $m/s^{2}$\n\nT = ½Ma = ½(4.0)(4.9) = 9.8 N'
       },
       {
         label: '(b)',
@@ -298,7 +298,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'θ(t) = ½αt² = (a/2R)t²',
+            description: 'θ(t) = $\\tfrac{1}{2} \\alpha t^{2}$ = $(a/2R)t^{2}$',
             keywords: ['θ(t)', '½αt²', 'angular displacement']
           },
           {
@@ -308,7 +308,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'α = a/R = 4.9/0.25 = 19.6 rad/s²\n\nω(t) = αt = 19.6t rad/s\nθ(t) = ½αt² = 9.8t² rad\n\nAt t = 2.0 s:\nθ = 9.8(4.0) = 39.2 rad\nRevolutions = 39.2/(2π) ≈ 6.24 revolutions'
+          'α = a/R = 4.9/0.25 = 19.6 $rad/s^{2}$\n\nω(t) = αt = 19.6t rad/s\nθ(t) = $\\tfrac{1}{2} \\alpha t^{2}$ = $9.8t^{2}$ rad\n\nAt t = 2.0 s:\nθ = 9.8(4.0) = 39.2 rad\nRevolutions = 39.2/(2π) ≈ 6.24 revolutions'
       },
       {
         label: '(c)',
@@ -318,22 +318,22 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Energy conservation: mgh = ½mv² + ½Iω² with ω = v/R',
+            description: 'Energy conservation: mgh = $\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{2} I\\omega^{2}$ with ω = v/R',
             keywords: ['energy conservation', 'mgh', '½mv²', '½Iω²']
           },
           {
             points: 1,
-            description: 'Simplify to mgh = ½(m + M/2)v² and solve for v',
+            description: 'Simplify to mgh = $\\tfrac{1}{2} (m + M/2)v^{2}$ and solve for v',
             keywords: ['½(m + M/2)v²', 'effective mass', 'simplify']
           },
           {
             points: 1,
-            description: 'Verify v² = 2ah gives same result',
+            description: 'Verify $v^{2}$ = 2ah gives same result',
             keywords: ['v² = 2ah', 'consistent', 'verify', 'kinematic']
           }
         ],
         sampleAnswer:
-          'Energy conservation:\nmgh = ½mv² + ½Iω² = ½mv² + ½(½MR²)(v/R)² = ½mv² + ¼Mv² = ½(m + M/2)v²\n\nv² = 2mgh/(m + M/2) = 2(2.0)(9.8)(1.5)/(2.0 + 2.0) = 14.7\nv = √14.7 ≈ 3.83 m/s\n\nKinematic check: v² = 2ah = 2(4.9)(1.5) = 14.7 ✓\nBoth methods agree.'
+          'Energy conservation:\nmgh = $\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{2} I\\omega^{2}$ = $\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{2} (\\tfrac{1}{2} MR^{2})(v/R)^{2}$ = $\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{4} Mv^{2}$ = $\\tfrac{1}{2} (m + M/2)v^{2}$\n\n$v^{2}$ = 2mgh/(m + M/2) = 2(2.0)(9.8)(1.5)/(2.0 + 2.0) = 14.7\nv = $\\sqrt{14.7}$ ≈ 3.83 m/s\n\nKinematic check: $v^{2}$ = 2ah = 2(4.9)(1.5) = 14.7 ✓\nBoth methods agree.'
       }
     ]
   },
@@ -345,7 +345,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
     unit: 4,
     title: 'Two-Dimensional Collision with Impulse Analysis',
     prompt:
-      'A ball of mass m₁ = 0.50 kg moves with velocity v₁ = 6.0 m/s in the +x direction and collides with a stationary ball of mass m₂ = 0.30 kg. After the collision, m₁ moves at 4.0 m/s at 30° above the +x axis. The collision lasts Δt = 8.0 ms.',
+      'A ball of mass $m_{1}$ = 0.50 kg moves with velocity $v_{1}$ = 6.0 m/s in the +x direction and collides with a stationary ball of mass $m_{2}$ = 0.30 kg. After the collision, $m_{1}$ moves at 4.0 m/s at 30° above the +x axis. The collision lasts Δt = 8.0 ms.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -353,27 +353,27 @@ const longFRQs: PhysicsCMechFRQ[] = [
       {
         label: '(a)',
         prompt:
-          'Using conservation of momentum in both x and y directions, determine the velocity (magnitude and direction) of m₂ after the collision.',
+          'Using conservation of momentum in both x and y directions, determine the velocity (magnitude and direction) of $m_{2}$ after the collision.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'x-momentum: m₁v₁ = m₁v₁\'cos30° + m₂v₂ₓ',
+            description: 'x-momentum: $m_{1}v_{1}$ = $m_{1}v_{1}$\'cos30° + $m_{2}v_{2x}$',
             keywords: ['x-momentum', 'conservation', 'cos 30', 'v₂ₓ']
           },
           {
             points: 1,
-            description: 'y-momentum: 0 = m₁v₁\'sin30° − m₂v₂ᵧ',
+            description: 'y-momentum: 0 = $m_{1}v_{1}$\'sin30° − $m_{2}v_{2}$ᵧ',
             keywords: ['y-momentum', 'sin 30', 'v₂ᵧ', '= 0']
           },
           {
             points: 1,
-            description: 'Correct magnitude and direction of v₂',
+            description: 'Correct magnitude and direction of $v_{2}$',
             keywords: ['magnitude', 'direction', 'angle', 'v₂']
           }
         ],
         sampleAnswer:
-          'x-momentum: 0.50(6.0) = 0.50(4.0)cos30° + 0.30v₂ₓ\n3.0 = 1.732 + 0.30v₂ₓ → v₂ₓ = 4.227 m/s\n\ny-momentum: 0 = 0.50(4.0)sin30° − 0.30v₂ᵧ\n0 = 1.0 − 0.30v₂ᵧ → v₂ᵧ = 3.333 m/s\n\nv₂ = √(4.227² + 3.333²) = √(17.87 + 11.11) = √28.98 ≈ 5.38 m/s\nφ = arctan(3.333/4.227) ≈ 38.3° below the +x axis'
+          'x-momentum: 0.50(6.0) = 0.50(4.0)cos30° + $0.30v_{2x}$\n3.0 = 1.732 + $0.30v_{2x}$ → $v_{2x}$ = 4.227 m/s\n\ny-momentum: 0 = 0.50(4.0)sin30° − $0.30v_{2}$ᵧ\n0 = 1.0 − $0.30v_{2}$ᵧ → $v_{2}$ᵧ = 3.333 m/s\n\n$v_{2}$ = $\\sqrt{4.227^{2} + 3.333^{2}}$ = $\\sqrt{17.87 + 11.11}$ = $\\sqrt{28.98}$ ≈ 5.38 m/s\nφ = arctan(3.333/4.227) ≈ 38.3° below the +x axis'
       },
       {
         label: '(b)',
@@ -393,22 +393,22 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'KE_before = ½(0.50)(6.0²) = 9.0 J\nKE_after = ½(0.50)(4.0²) + ½(0.30)(5.38²) = 4.0 + 4.34 = 8.34 J\n\nKE_after < KE_before (8.34 J < 9.0 J), and the objects separate.\nThis is an inelastic collision. Energy lost = 0.66 J.'
+          'KE_before = $\\tfrac{1}{2} (0.50)(6.0^{2})$ = 9.0 J\nKE_after = $\\tfrac{1}{2} (0.50)(4.0^{2})$ + $\\tfrac{1}{2} (0.30)(5.38^{2})$ = 4.0 + 4.34 = 8.34 J\n\nKE_after < KE_before (8.34 J < 9.0 J), and the objects separate.\nThis is an inelastic collision. Energy lost = 0.66 J.'
       },
       {
         label: '(c)',
         prompt:
-          'Calculate the impulse vector J delivered to m₂. Then determine the average force exerted on m₂ during the collision.',
+          'Calculate the impulse vector J delivered to $m_{2}$. Then determine the average force exerted on $m_{2}$ during the collision.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'J = m₂v₂_final − m₂v₂_initial = m₂v₂ (since initially at rest)',
+            description: 'J = $m_{2}v_{2,\\text{final}}$ − $m_{2}v_{2,\\text{initial}}$ = $m_{2}v_{2}$ (since initially at rest)',
             keywords: ['impulse', 'Δp', 'J =', 'm₂v₂']
           },
           {
             points: 1,
-            description: 'Correct impulse components: Jₓ = m₂v₂ₓ, Jᵧ = −m₂v₂ᵧ',
+            description: 'Correct impulse components: $J_{x}$ = $m_{2}v_{2x}$, Jᵧ = $-m_{2}v_{2}$ᵧ',
             keywords: ['Jₓ', 'Jᵧ', 'components', 'impulse vector']
           },
           {
@@ -418,27 +418,27 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'J = m₂v₂_f = 0.30(4.227 x̂ − 3.333 ŷ) = (1.268 x̂ − 1.000 ŷ) N·s\n|J| = √(1.268² + 1.000²) = √(2.608) ≈ 1.615 N·s\n\nF_avg = J/Δt = 1.615/(0.008) ≈ 201.9 N\nDirection: 38.3° below +x axis'
+          'J = $m_{2}v_{2f}$ = 0.30(4.227 x̂ − 3.333 ŷ) = (1.268 x̂ − 1.000 ŷ) N·s\n|J| = $\\sqrt{1.268^{2} + 1.000^{2}}$ = $\\sqrt{2.608}$ ≈ 1.615 N·s\n\nF_avg = J/Δt = 1.615/(0.008) ≈ 201.9 N\nDirection: 38.3° below +x axis'
       },
       {
         label: '(d)',
         prompt:
-          'If the force on m₂ varies as F(t) = F₀ sin(πt/Δt) during the collision, determine F₀ such that the impulse magnitude matches part (c).',
+          'If the force on $m_{2}$ varies as F(t) = $F_{0}$ sin(πt/Δt) during the collision, determine $F_{0}$ such that the impulse magnitude matches part (c).',
         maxPoints: 2,
         rubric: [
           {
             points: 1,
-            description: 'Set up integral: |J| = ∫₀^Δt F₀ sin(πt/Δt) dt',
+            description: 'Set up integral: |J| = $\\int_{0}^{\\Delta}t$ $F_{0}$ sin(πt/Δt) dt',
             keywords: ['integral', '∫', 'sin', 'impulse integral']
           },
           {
             points: 1,
-            description: 'Evaluate integral: |J| = F₀(2Δt/π) → F₀ = π|J|/(2Δt)',
+            description: 'Evaluate integral: |J| = $F_{0}(2\\Delta t/\\pi )$ → $F_{0}$ = π|J|/(2Δt)',
             keywords: ['F₀ =', '2Δt/π', 'evaluate', 'peak force']
           }
         ],
         sampleAnswer:
-          '|J| = ∫₀^Δt F₀ sin(πt/Δt) dt\n\nLet u = πt/Δt, du = π/Δt dt:\n= F₀(Δt/π)∫₀^π sin u du = F₀(Δt/π)[−cos u]₀^π = F₀(Δt/π)(2) = 2F₀Δt/π\n\nF₀ = π|J|/(2Δt) = π(1.615)/(2 × 0.008) ≈ 317 N'
+          '|J| = $\\int_{0}^{\\Delta}t$ $F_{0}$ sin(πt/Δt) dt\n\nLet u = πt/Δt, du = π/Δt dt:\n= $F_{0}(\\Delta t/\\pi )\\int_{0}^{\\pi}$ sin u du = $F_{0}(\\Delta t/\\pi )$[−cos u]$ {}_{0}^{\\pi}$ = $F_{0}(\\Delta t/\\pi )(2)$ = $2F_{0}\\Delta t/\\pi$\n\n$F_{0}$ = π|J|/(2Δt) = π(1.615)/(2 × 0.008) ≈ 317 N'
       }
     ]
   },
@@ -450,7 +450,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
     unit: 6,
     title: 'Damped Oscillation and Energy Decay',
     prompt:
-      'A block of mass m = 0.80 kg is attached to a spring (k = 50 N/m) on a horizontal surface. The block experiences a velocity-dependent damping force F_d = −bv, where b = 0.40 kg/s. The block is displaced A₀ = 0.20 m from equilibrium and released from rest.',
+      'A block of mass m = 0.80 kg is attached to a spring (k = 50 N/m) on a horizontal surface. The block experiences a velocity-dependent damping force F_d = −bv, where b = 0.40 kg/s. The block is displaced $A_{0}$ = 0.20 m from equilibrium and released from rest.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -463,42 +463,42 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Net force: F = −kx − bv → m(d²x/dt²) + b(dx/dt) + kx = 0',
+            description: 'Net force: F = −kx − bv → $m(d^{2}x/dt^{2})$ + b(dx/dt) + kx = 0',
             keywords: ['d²x/dt²', 'dx/dt', 'differential equation', 'damped']
           },
           {
             points: 1,
-            description: 'Standard form: d²x/dt² + (b/m)(dx/dt) + (k/m)x = 0',
+            description: 'Standard form: $d^{2}x/dt^{2}$ + (b/m)(dx/dt) + (k/m)x = 0',
             keywords: ['standard form', 'b/m', 'k/m', 'second order']
           },
           {
             points: 1,
-            description: 'Calculate γ = b/(2m) and ω₀ = √(k/m)',
+            description: 'Calculate γ = b/(2m) and $\\omega_{0}$ = $\\sqrt{k/m}$',
             keywords: ['γ', 'ω₀', 'b/(2m)', '√(k/m)', 'damping coefficient']
           },
           {
             points: 1,
-            description: 'Compare γ < ω₀ to classify as underdamped',
+            description: 'Compare γ < $\\omega_{0}$ to classify as underdamped',
             keywords: ['underdamped', 'γ < ω₀', 'oscillatory']
           }
         ],
         sampleAnswer:
-          'Equation of motion:\nm(d²x/dt²) + b(dx/dt) + kx = 0\n0.80(d²x/dt²) + 0.40(dx/dt) + 50x = 0\n\nDividing by m:\nd²x/dt² + 0.50(dx/dt) + 62.5x = 0\n\nγ = b/(2m) = 0.40/(2 × 0.80) = 0.25 s⁻¹\nω₀ = √(k/m) = √(50/0.80) = √62.5 ≈ 7.91 rad/s\n\nSince γ = 0.25 ≪ ω₀ = 7.91, the system is underdamped (γ < ω₀). The block oscillates with decreasing amplitude.'
+          'Equation of motion:\n$m(d^{2}x/dt^{2})$ + b(dx/dt) + kx = 0\n$0.80(d^{2}x/dt^{2})$ + 0.40(dx/dt) + 50x = 0\n\nDividing by m:\n$d^{2}x/dt^{2}$ + 0.50(dx/dt) + 62.5x = 0\n\nγ = b/(2m) = 0.40/(2 × 0.80) = 0.25 $s^{-1}$\n$\\omega_{0}$ = $\\sqrt{k/m}$ = $\\sqrt{50/0.80}$ = $\\sqrt{62.5}$ ≈ 7.91 rad/s\n\nSince γ = 0.25 ≪ $\\omega_{0}$ = 7.91, the system is underdamped (γ < $\\omega_{0}$). The block oscillates with decreasing amplitude.'
       },
       {
         label: '(b)',
         prompt:
-          'Write the general solution x(t) for the underdamped case. Determine all coefficients using the initial conditions x(0) = A₀ and v(0) = 0.',
+          'Write the general solution x(t) for the underdamped case. Determine all coefficients using the initial conditions x(0) = $A_{0}$ and v(0) = 0.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'General solution: x(t) = A₀e^(−γt)cos(ωd·t + φ) with ωd = √(ω₀² − γ²)',
+            description: 'General solution: x(t) = $A_{0}e^{-\\gamma t}\\cos (\\omega d\\cdot t + \\varphi )$ with ωd = $\\sqrt{\\omega_{0}^{2} - \\gamma^{2}}$',
             keywords: ['e^(−γt)', 'cos', 'ωd', 'general solution', 'damped frequency']
           },
           {
             points: 1,
-            description: 'Calculate ωd = √(ω₀² − γ²) numerically',
+            description: 'Calculate ωd = $\\sqrt{\\omega_{0}^{2} - \\gamma^{2}}$ numerically',
             keywords: ['ωd', 'damped angular frequency', '√(ω₀² − γ²)']
           },
           {
@@ -508,7 +508,7 @@ const longFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'General solution: x(t) = Ce^(−γt)cos(ωd·t + φ)\n\nωd = √(ω₀² − γ²) = √(62.5 − 0.0625) = √62.4375 ≈ 7.902 rad/s\n\nIC 1: x(0) = A₀ → C cos φ = 0.20\nIC 2: v(0) = 0 → dx/dt|₀ = −γC cos φ − ωd C sin φ = 0\n\nFrom IC 2: −γ cos φ = ωd sin φ → tan φ = −γ/ωd = −0.25/7.902 ≈ −0.0316\nφ ≈ −0.0316 rad (very small, nearly zero)\n\nC = A₀/cos φ ≈ 0.200 m\n\nx(t) ≈ 0.200 e^(−0.25t) cos(7.902t − 0.032) m'
+          'General solution: x(t) = $Ce^{-\\gamma t}\\cos (\\omega d\\cdot t + \\varphi )$\n\nωd = $\\sqrt{\\omega_{0}^{2} - \\gamma^{2}}$ = $\\sqrt{62.5 - 0.0625}$ = $\\sqrt{62.4375}$ ≈ 7.902 rad/s\n\nIC 1: x(0) = $A_{0}$ → C cos φ = 0.20\nIC 2: v(0) = 0 → dx/dt|$ {}_{0}$ = −γC cos φ − ωd C sin φ = 0\n\nFrom IC 2: −γ cos φ = ωd sin φ → tan φ = −γ/ωd = −0.25/7.902 ≈ −0.0316\nφ ≈ −0.0316 rad (very small, nearly zero)\n\nC = $A_{0}/\\cos$ φ ≈ 0.200 m\n\nx(t) ≈ 0.200 $e^{-0.25t}$ cos(7.902t − 0.032) m'
       },
       {
         label: '(c)',
@@ -518,22 +518,22 @@ const longFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'E(t) ≈ ½kA₀²e^(−2γt) using the slowly varying amplitude approximation',
+            description: 'E(t) ≈ $\\tfrac{1}{2} kA_{0}^{2}e^{-2\\gamma t}$ using the slowly varying amplitude approximation',
             keywords: ['E(t)', '½kA²', 'e^(−2γt)', 'energy decay']
           },
           {
             points: 1,
-            description: 'E₀ = ½kA₀² = ½(50)(0.04) = 1.0 J',
+            description: '$E_{0}$ = $\\tfrac{1}{2} kA_{0}^{2}$ = ½(50)(0.04) = 1.0 J',
             keywords: ['E₀', '1.0 J', 'initial energy']
           },
           {
             points: 1,
-            description: 'Set e^(−2γt) = 1/e → t = 1/(2γ) = 2.0 s',
+            description: 'Set $e^{-2\\gamma t}$ = 1/e → t = 1/(2γ) = 2.0 s',
             keywords: ['1/e', 't =', '1/(2γ)', 'time constant']
           }
         ],
         sampleAnswer:
-          'The amplitude decays as A(t) = A₀e^(−γt). The total mechanical energy (when averaged over one cycle):\n\nE(t) = ½kA(t)² = ½kA₀²e^(−2γt)\n\nE₀ = ½(50)(0.20²) = 1.0 J\n\nFor E = E₀/e:\ne^(−2γt) = e⁻¹\n−2γt = −1\nt = 1/(2γ) = 1/(2 × 0.25) = 2.0 s\n\nThe energy decays to 1/e of its initial value at t = 2.0 s.'
+          'The amplitude decays as A(t) = $A_{0}e^{-\\gamma t}$. The total mechanical energy (when averaged over one cycle):\n\nE(t) = $\\tfrac{1}{2} kA(t)^{2}$ = $\\tfrac{1}{2} kA_{0}^{2}e^{-2\\gamma t}$\n\n$E_{0}$ = $\\tfrac{1}{2} (50)(0.20^{2})$ = 1.0 J\n\nFor E = $E_{0}/e$:\n$e^{-2\\gamma t}$ = $e^{-1}$\n−2γt = −1\nt = 1/(2γ) = 1/(2 × 0.25) = 2.0 s\n\nThe energy decays to 1/e of its initial value at t = 2.0 s.'
       }
     ]
   }
@@ -551,7 +551,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
     unit: 1,
     title: 'Variable Acceleration from a Time-Dependent Force',
     prompt:
-      'A 3.0 kg object moves along the x-axis under the influence of a single force F(t) = 6t² N, where t is in seconds. The object starts from rest at x = 0 at t = 0.',
+      'A 3.0 kg object moves along the x-axis under the influence of a single force F(t) = $6t^{2}$ N, where t is in seconds. The object starts from rest at x = 0 at t = 0.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -564,17 +564,17 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'v(t) = ∫a dt = ∫(2t²)dt = (2/3)t³',
+            description: 'v(t) = ∫a dt = $\\int (2t^{2})dt$ = $(2/3)t^{3}$',
             keywords: ['v(t)', 'integrate', '(2/3)t³', 'velocity']
           },
           {
             points: 1,
-            description: 'x(t) = ∫v dt = (1/6)t⁴',
+            description: 'x(t) = ∫v dt = $(1/6)t^{4}$',
             keywords: ['x(t)', 'integrate', 't⁴/6', 'position']
           }
         ],
         sampleAnswer:
-          'a(t) = F(t)/m = 6t²/3 = 2t² m/s²\n\nv(t) = ∫₀ᵗ 2t\'² dt\' = (2/3)t³ m/s\n\nx(t) = ∫₀ᵗ (2/3)t\'³ dt\' = (2/3)(t⁴/4) = t⁴/6 m'
+          'a(t) = F(t)/m = $6t^{2}/3$ = $2t^{2}$ $m/s^{2}$\n\nv(t) = $\\int_{0}^{t}$ 2t\'$ {}^{2}$ dt\' = $(2/3)t^{3}$ m/s\n\nx(t) = $\\int_{0}^{t}$ (2/3)t\'$ {}^{3}$ dt\' = $(2/3)(t^{4}/4)$ = $t^{4}/6$ m'
       },
       {
         label: '(b)',
@@ -594,7 +594,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'v(3.0) = (2/3)(3.0)³ = (2/3)(27) = 18 m/s\n\nx(3.0) = (3.0)⁴/6 = 81/6 = 13.5 m'
+          'v(3.0) = $(2/3)(3.0)^{3}$ = (2/3)(27) = 18 m/s\n\nx(3.0) = $(3.0)^{4}/6$ = 81/6 = 13.5 m'
       }
     ]
   },
@@ -606,7 +606,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
     unit: 2,
     title: 'Block on a Rough Incline with Applied Force',
     prompt:
-      'A block of mass m = 5.0 kg rests on an incline of angle θ = 37° with coefficient of static friction μₛ = 0.45. A horizontal force F is applied to the block.',
+      'A block of mass m = 5.0 kg rests on an incline of angle θ = 37° with coefficient of static friction $\\mu_{s}$ = 0.45. A horizontal force F is applied to the block.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -624,12 +624,12 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'Along incline: F cos θ = mg sin θ + μₛN (for sliding up)',
+            description: 'Along incline: F cos θ = mg sin θ + $\\mu_{s}N$ (for sliding up)',
             keywords: ['F cos θ', 'mg sin θ', 'μₛN', 'equilibrium', 'along incline']
           }
         ],
         sampleAnswer:
-          'Axes: parallel and perpendicular to incline.\n\nPerpendicular equilibrium: N = mg cos θ + F sin θ\n\nParallel (verge of sliding up): F cos θ = mg sin θ + μₛN\nF cos θ = mg sin θ + μₛ(mg cos θ + F sin θ)\nF cos θ − μₛ F sin θ = mg sin θ + μₛ mg cos θ\nF(cos θ − μₛ sin θ) = mg(sin θ + μₛ cos θ)'
+          'Axes: parallel and perpendicular to incline.\n\nPerpendicular equilibrium: N = mg cos θ + F sin θ\n\nParallel (verge of sliding up): F cos θ = mg sin θ + $\\mu_{s}N$\nF cos θ = mg sin θ + $\\mu_{s}(mg \\cos \\theta + F \\sin \\theta )$\nF cos θ − $\\mu_{s}$ F sin θ = mg sin θ + $\\mu_{s}$ mg cos θ\nF(cos θ − $\\mu_{s}$ sin θ) = mg(sin θ + $\\mu_{s}$ cos θ)'
       },
       {
         label: '(b)',
@@ -639,7 +639,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Correctly isolate F: F = mg(sin θ + μₛ cos θ)/(cos θ − μₛ sin θ)',
+            description: 'Correctly isolate F: F = mg(sin θ + $\\mu_{s}$ cos θ)/(cos θ − $\\mu_{s}$ sin θ)',
             keywords: ['F =', 'sin θ + μₛ cos θ', 'cos θ − μₛ sin θ', 'isolate']
           },
           {
@@ -649,7 +649,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'F = mg(sin θ + μₛ cos θ)/(cos θ − μₛ sin θ)\n\nsin 37° ≈ 0.6018, cos 37° ≈ 0.7986\n\nNumerator: 5.0(9.8)(0.6018 + 0.45 × 0.7986) = 49(0.6018 + 0.3594) = 49(0.9612) = 47.10\nDenominator: 0.7986 − 0.45(0.6018) = 0.7986 − 0.2708 = 0.5278\n\nF = 47.10/0.5278 ≈ 89.2 N\n\nWait — let me recompute carefully:\nF = mg(sin θ + μₛ cos θ)/(cos θ − μₛ sin θ)\n= 5.0(9.8)(0.6018 + 0.45 × 0.7986)/(0.7986 − 0.45 × 0.6018)\n= 49(0.9612)/(0.5278)\n= 47.10/0.5278\n≈ 89.2 N'
+          'F = mg(sin θ + $\\mu_{s}$ cos θ)/(cos θ − $\\mu_{s}$ sin θ)\n\nsin 37° ≈ 0.6018, cos 37° ≈ 0.7986\n\nNumerator: 5.0(9.8)(0.6018 + 0.45 × 0.7986) = 49(0.6018 + 0.3594) = 49(0.9612) = 47.10\nDenominator: 0.7986 − 0.45(0.6018) = 0.7986 − 0.2708 = 0.5278\n\nF = 47.10/0.5278 ≈ 89.2 N\n\nWait — let me recompute carefully:\nF = mg(sin θ + $\\mu_{s}$ cos θ)/(cos θ − $\\mu_{s}$ sin θ)\n= 5.0(9.8)(0.6018 + 0.45 × 0.7986)/(0.7986 − 0.45 × 0.6018)\n= 49(0.9612)/(0.5278)\n= 47.10/0.5278\n≈ 89.2 N'
       }
     ]
   },
@@ -674,17 +674,17 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'F(x) = −dU/dx = −12x³ + 16x = −4x(3x² − 4)',
+            description: 'F(x) = −dU/dx = $-12x^{3}$ + 16x = $-4x(3x^{2} - 4)$',
             keywords: ['−dU/dx', 'derivative', '−12x³', '16x', 'force']
           },
           {
             points: 1,
-            description: 'Equilibrium at x = 0 (unstable, d²U/dx² < 0) and x = ±√(4/3) (stable, d²U/dx² > 0)',
+            description: 'Equilibrium at x = 0 (unstable, $d^{2}U/dx^{2}$ < 0) and x = $\\pm \\sqrt{4/3}$ (stable, $d^{2}U/dx^{2}$ > 0)',
             keywords: ['equilibrium', 'x = 0', 'unstable', 'stable', '±√(4/3)', 'd²U/dx²']
           }
         ],
         sampleAnswer:
-          'F(x) = −dU/dx = −(12x³ − 16x) = −12x³ + 16x\n\nEquilibrium: F = 0 → −4x(3x² − 4) = 0\nx = 0 or x = ±√(4/3) = ±2/√3 ≈ ±1.155 m\n\nd²U/dx² = 36x² − 16\n\nAt x = 0: d²U/dx² = −16 < 0 → concave down → unstable\nAt x = ±2/√3: d²U/dx² = 36(4/3) − 16 = 48 − 16 = 32 > 0 → concave up → stable'
+          'F(x) = −dU/dx = $-(12x^{3} - 16x)$ = $-12x^{3}$ + 16x\n\nEquilibrium: F = 0 → $-4x(3x^{2} - 4)$ = 0\nx = 0 or x = $\\pm \\sqrt{4/3}$ = $\\pm 2/\\sqrt{3}$ ≈ ±1.155 m\n\n$d^{2}U/dx^{2}$ = $36x^{2}$ − 16\n\nAt x = 0: $d^{2}U/dx^{2}$ = −16 < 0 → concave down → unstable\nAt x = $\\pm 2/\\sqrt{3}$: $d^{2}U/dx^{2}$ = 36(4/3) − 16 = 48 − 16 = 32 > 0 → concave up → stable'
       },
       {
         label: '(b)',
@@ -694,7 +694,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Energy conservation: ½mv² = U(2.0) − U(2/√3)',
+            description: 'Energy conservation: $\\tfrac{1}{2} mv^{2}$ = U(2.0) − $U(2/\\sqrt{3})$',
             keywords: ['energy conservation', 'U(2.0)', 'U(2/√3)', 'ΔU']
           },
           {
@@ -704,7 +704,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'U(2.0) = 3(16) − 8(4) + 2 = 48 − 32 + 2 = 18 J\nU(2/√3) = 3(4/3)² − 8(4/3) + 2 = 3(16/9) − 32/3 + 2 = 16/3 − 32/3 + 2 = −16/3 + 2 = −10/3 ≈ −3.333 J\n\n½mv² = U(2.0) − U(2/√3) = 18 − (−3.333) = 21.333 J\nv² = 2(21.333)/2.0 = 21.333\nv ≈ 4.62 m/s'
+          'U(2.0) = 3(16) − 8(4) + 2 = 48 − 32 + 2 = 18 J\n$U(2/\\sqrt{3})$ = $3(4/3)^{2}$ − 8(4/3) + 2 = 3(16/9) − 32/3 + 2 = 16/3 − 32/3 + 2 = −16/3 + 2 = −10/3 ≈ −3.333 J\n\n$\\tfrac{1}{2} mv^{2}$ = U(2.0) − $U(2/\\sqrt{3})$ = 18 − (−3.333) = 21.333 J\n$v^{2}$ = 2(21.333)/2.0 = 21.333\nv ≈ 4.62 m/s'
       }
     ]
   },
@@ -716,7 +716,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
     unit: 4,
     title: 'Center of Mass of a Non-Uniform Rod',
     prompt:
-      'A thin rod of length L = 2.0 m has a linear mass density that varies as λ(x) = λ₀(1 + x/L), where λ₀ = 3.0 kg/m and x is measured from one end.',
+      'A thin rod of length L = 2.0 m has a linear mass density that varies as λ(x) = $\\lambda_{0}(1 + x/L)$, where $\\lambda_{0}$ = 3.0 kg/m and x is measured from one end.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -729,17 +729,17 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Set up M = ∫₀ᴸ λ₀(1 + x/L) dx',
+            description: 'Set up M = $\\int_{0}$ᴸ $\\lambda_{0}(1 + x/L)$ dx',
             keywords: ['∫', 'integral', 'λ₀(1 + x/L)', 'mass']
           },
           {
             points: 1,
-            description: 'Evaluate: M = λ₀(L + L/2) = λ₀(3L/2) = 9.0 kg',
+            description: 'Evaluate: M = $\\lambda_{0}(L + L/2)$ = $\\lambda_{0}(3L/2)$ = 9.0 kg',
             keywords: ['9.0', 'kg', '3L/2', 'total mass']
           }
         ],
         sampleAnswer:
-          'M = ∫₀ᴸ λ(x) dx = ∫₀ᴸ λ₀(1 + x/L) dx = λ₀[x + x²/(2L)]₀ᴸ = λ₀(L + L/2) = 3λ₀L/2\n\nM = 3(3.0)(2.0)/2 = 9.0 kg'
+          'M = $\\int_{0}$ᴸ λ(x) dx = $\\int_{0}$ᴸ $\\lambda_{0}(1 + x/L)$ dx = $\\lambda_{0}$[x + $x^{2}/(2L)$]$ {}_{0}$ᴸ = $\\lambda_{0}(L + L/2)$ = $3\\lambda_{0}L/2$\n\nM = 3(3.0)(2.0)/2 = 9.0 kg'
       },
       {
         label: '(b)',
@@ -749,17 +749,17 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'Set up x_cm = (1/M)∫₀ᴸ xλ(x) dx = (1/M)∫₀ᴸ λ₀x(1 + x/L) dx',
+            description: 'Set up x_cm = $(1/M)\\int_{0}$ᴸ xλ(x) dx = $(1/M)\\int_{0}$ᴸ $\\lambda_{0}x(1 + x/L)$ dx',
             keywords: ['x_cm', '∫xλ', 'center of mass integral']
           },
           {
             points: 1,
-            description: 'Evaluate: x_cm = (λ₀/M)(L²/2 + L²/3) = (λ₀/M)(5L²/6)',
+            description: 'Evaluate: x_cm = $(\\lambda_{0}/M)(L^{2}/2 + L^{2}/3)$ = $(\\lambda_{0}/M)(5L^{2}/6)$',
             keywords: ['x_cm =', '5L²/6', 'numerical', 'center of mass']
           }
         ],
         sampleAnswer:
-          'x_cm = (1/M)∫₀ᴸ xλ₀(1 + x/L) dx = (λ₀/M)∫₀ᴸ (x + x²/L) dx\n\n= (λ₀/M)[x²/2 + x³/(3L)]₀ᴸ = (λ₀/M)(L²/2 + L²/3) = (λ₀/M)(5L²/6)\n\nx_cm = (3.0)(5 × 4/6)/9.0 = (3.0)(20/6)/9.0 = 10/9.0 ≈ 1.11 m\n\nThe center of mass is at x_cm ≈ 1.11 m from the lighter end, past the midpoint as expected.'
+          'x_cm = $(1/M)\\int_{0}$ᴸ $x\\lambda_{0}(1 + x/L)$ dx = $(\\lambda_{0}/M)\\int_{0}$ᴸ $(x + x^{2}/L)$ dx\n\n= $(\\lambda_{0}/M)$[$x^{2}/2$ + $x^{3}/(3L)$]$ {}_{0}$ᴸ = $(\\lambda_{0}/M)(L^{2}/2 + L^{2}/3)$ = $(\\lambda_{0}/M)(5L^{2}/6)$\n\nx_cm = (3.0)(5 × 4/6)/9.0 = (3.0)(20/6)/9.0 = 10/9.0 ≈ 1.11 m\n\nThe center of mass is at x_cm ≈ 1.11 m from the lighter end, past the midpoint as expected.'
       }
     ]
   },
@@ -789,7 +789,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'The hole has radius R/2, so its area is π(R/2)² = πR²/4.\nOriginal area = πR².\nBy uniform density: m_hole = M × (πR²/4)/(πR²) = M/4 = 0.75 kg\nRemaining mass = M − M/4 = 3M/4 = 2.25 kg'
+          'The hole has radius R/2, so its area is $\\pi (R/2)^{2}$ = $\\pi R^{2}/4$.\nOriginal area = $\\pi R^{2}$.\nBy uniform density: m_hole = M × $(\\pi R^{2}/4)/(\\pi R^{2})$ = M/4 = 0.75 kg\nRemaining mass = M − M/4 = 3M/4 = 2.25 kg'
       },
       {
         label: '(b)',
@@ -799,22 +799,22 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'I_full = ½MR² for the complete disk',
+            description: 'I_full = $\\tfrac{1}{2} MR^{2}$ for the complete disk',
             keywords: ['½MR²', 'full disk', 'moment of inertia']
           },
           {
             points: 1,
-            description: 'I_hole about original center: ½(M/4)(R/2)² + (M/4)(R/2)² = (M/4)(R²/8 + R²/4) = 3MR²/32 using parallel axis theorem',
+            description: 'I_hole about original center: $\\tfrac{1}{2} (M/4)(R/2)^{2}$ + $(M/4)(R/2)^{2}$ = $(M/4)(R^{2}/8 + R^{2}/4)$ = $3MR^{2}/32$ using parallel axis theorem',
             keywords: ['parallel axis', 'I_hole', '3MR²/32', 'md²']
           },
           {
             points: 1,
-            description: 'I_remaining = I_full − I_hole = ½MR² − 3MR²/32 = 13MR²/32',
+            description: 'I_remaining = I_full − I_hole = $\\tfrac{1}{2} MR^{2}$ − $3MR^{2}/32$ = $13MR^{2}/32$',
             keywords: ['subtraction', '13MR²/32', 'I_remaining', 'final']
           }
         ],
         sampleAnswer:
-          'I_full = ½MR² = ½(3.0)(0.40²) = 0.240 kg·m²\n\nFor the hole (disk of mass M/4, radius R/2) about its own center:\nI_hole,cm = ½(M/4)(R/2)² = MR²/32\n\nUsing parallel axis theorem to shift to original center (distance d = R/2):\nI_hole = MR²/32 + (M/4)(R/2)² = MR²/32 + MR²/16 = 3MR²/32\n\nI_remaining = I_full − I_hole = MR²/2 − 3MR²/32 = 16MR²/32 − 3MR²/32 = 13MR²/32\n\n= 13(3.0)(0.16)/32 = 6.24/32 = 0.195 kg·m²'
+          'I_full = $\\tfrac{1}{2} MR^{2}$ = $\\tfrac{1}{2} (3.0)(0.40^{2})$ = 0.240 $kg\\cdot m^{2}$\n\nFor the hole (disk of mass M/4, radius R/2) about its own center:\nI_hole,cm = $\\tfrac{1}{2} (M/4)(R/2)^{2}$ = $MR^{2}/32$\n\nUsing parallel axis theorem to shift to original center (distance d = R/2):\nI_hole = $MR^{2}/32$ + $(M/4)(R/2)^{2}$ = $MR^{2}/32$ + $MR^{2}/16$ = $3MR^{2}/32$\n\nI_remaining = I_full − I_hole = $MR^{2}/2$ − $3MR^{2}/32$ = $16MR^{2}/32$ − $3MR^{2}/32$ = $13MR^{2}/32$\n\n= 13(3.0)(0.16)/32 = 6.24/32 = 0.195 $kg\\cdot m^{2}$'
       }
     ]
   },
@@ -826,7 +826,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
     unit: 6,
     title: 'Simple Harmonic Motion from a Potential Well',
     prompt:
-      'A particle of mass m = 0.50 kg moves in a potential U(x) = U₀(x²/a² − 1)², where U₀ = 20 J and a = 1.0 m. The particle oscillates with small amplitude about one of the stable equilibrium points.',
+      'A particle of mass m = 0.50 kg moves in a potential U(x) = $U_{0}(x^{2}/a^{2} - 1)^{2}$, where $U_{0}$ = 20 J and a = 1.0 m. The particle oscillates with small amplitude about one of the stable equilibrium points.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -834,7 +834,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
       {
         label: '(a)',
         prompt:
-          'Find the stable equilibrium positions by setting dU/dx = 0. Then compute d²U/dx² at a stable equilibrium to find the effective spring constant k_eff.',
+          'Find the stable equilibrium positions by setting dU/dx = 0. Then compute $d^{2}U/dx^{2}$ at a stable equilibrium to find the effective spring constant k_eff.',
         maxPoints: 2,
         rubric: [
           {
@@ -844,12 +844,12 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'k_eff = d²U/dx²|_{x=a} = 8U₀/a² = 160 N/m',
+            description: 'k_eff = $d^{2}U/dx^{2}$|_{x=a} = $8U_{0}/a^{2}$ = 160 N/m',
             keywords: ['d²U/dx²', 'k_eff', '8U₀/a²', '160']
           }
         ],
         sampleAnswer:
-          'U(x) = U₀(x²/a² − 1)². Let u = x²/a² − 1.\ndU/dx = 2U₀(x²/a² − 1)(2x/a²) = 4U₀x(x² − a²)/a⁴\n\nSetting dU/dx = 0: x = 0 or x = ±a\n\nd²U/dx² = (4U₀/a⁴)[3x² − a²] ... evaluated more carefully:\nExpand: U = U₀(x⁴/a⁴ − 2x²/a² + 1)\ndU/dx = U₀(4x³/a⁴ − 4x/a²)\nd²U/dx² = U₀(12x²/a⁴ − 4/a²)\n\nAt x = ±a: d²U/dx² = U₀(12a²/a⁴ − 4/a²) = U₀(12/a² − 4/a²) = 8U₀/a²\n\nk_eff = 8U₀/a² = 8(20)/(1.0²) = 160 N/m'
+          'U(x) = $U_{0}(x^{2}/a^{2} - 1)^{2}$. Let u = $x^{2}/a^{2}$ − 1.\ndU/dx = $2U_{0}(x^{2}/a^{2} - 1)(2x/a^{2})$ = $4U_{0}x(x^{2} - a^{2})/a^{4}$\n\nSetting dU/dx = 0: x = 0 or x = ±a\n\n$d^{2}U/dx^{2}$ = $(4U_{0}/a^{4})$[$3x^{2}$ − $a^{2}$] ... evaluated more carefully:\nExpand: U = $U_{0}(x^{4}/a^{4} - 2x^{2}/a^{2} + 1)$\ndU/dx = $U_{0}(4x^{3}/a^{4} - 4x/a^{2})$\n$d^{2}U/dx^{2}$ = $U_{0}(12x^{2}/a^{4} - 4/a^{2})$\n\nAt x = ±a: $d^{2}U/dx^{2}$ = $U_{0}(12a^{2}/a^{4} - 4/a^{2})$ = $U_{0}(12/a^{2} - 4/a^{2})$ = $8U_{0}/a^{2}$\n\nk_eff = $8U_{0}/a^{2}$ = $8(20)/(1.0^{2})$ = 160 N/m'
       },
       {
         label: '(b)',
@@ -859,7 +859,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'ω = √(k_eff/m) = √(160/0.50) = √320 ≈ 17.9 rad/s',
+            description: 'ω = $\\sqrt{k_{eff}/m}$ = $\\sqrt{160/0.50}$ = $\\sqrt{320}$ ≈ 17.9 rad/s',
             keywords: ['ω', '√(k_eff/m)', '17.9', 'angular frequency']
           },
           {
@@ -869,7 +869,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'ω = √(k_eff/m) = √(160/0.50) = √320 ≈ 17.9 rad/s\n\nT = 2π/ω = 2π/17.9 ≈ 0.351 s'
+          'ω = $\\sqrt{k_{eff}/m}$ = $\\sqrt{160/0.50}$ = $\\sqrt{320}$ ≈ 17.9 rad/s\n\nT = 2π/ω = 2π/17.9 ≈ 0.351 s'
       }
     ]
   },
@@ -881,7 +881,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
     unit: 7,
     title: 'Satellite Orbit Mechanics',
     prompt:
-      'A satellite of mass m orbits Earth (mass M_E = 5.97 × 10²⁴ kg, radius R_E = 6.37 × 10⁶ m) in a circular orbit at altitude h = 400 km above the surface.',
+      'A satellite of mass m orbits Earth (mass M_E = $5.97 \\times 10^{24}$ kg, radius R_E = $6.37 \\times 10^{6}$ m) in a circular orbit at altitude h = 400 km above the surface.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -894,7 +894,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'GMm/r² = mv²/r → v = √(GM/r) with r = R_E + h',
+            description: '$GMm/r^{2}$ = $mv^{2}/r$ → v = $\\sqrt{GM/r}$ with r = R_E + h',
             keywords: ['GMm/r²', 'mv²/r', '√(GM/r)', 'centripetal', 'gravitational']
           },
           {
@@ -904,7 +904,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'Setting gravitational force = centripetal force:\nGM_E m/r² = mv²/r → v² = GM_E/r\n\nr = R_E + h = 6.37 × 10⁶ + 4.0 × 10⁵ = 6.77 × 10⁶ m\n\nv = √(GM_E/r) = √(6.674 × 10⁻¹¹ × 5.97 × 10²⁴ / 6.77 × 10⁶)\n= √(3.986 × 10¹⁴/6.77 × 10⁶) = √(5.888 × 10⁷) ≈ 7674 m/s ≈ 7.67 km/s'
+          'Setting gravitational force = centripetal force:\nGM_E $m/r^{2}$ = $mv^{2}/r$ → $v^{2}$ = GM_E/r\n\nr = R_E + h = $6.37 \\times 10^{6}$ + $4.0 \\times 10^{5}$ = $6.77 \\times 10^{6}$ m\n\nv = $\\sqrt{GM_{E}/r}$ = $\\sqrt{6.674 \\times 10^{-11} \\times 5.97 \\times 10^{24} / 6.77 \\times 10^{6}}$\n= $\\sqrt{3.986 \\times 10^{14}/6.77 \\times 10^{6}}$ = $\\sqrt{5.888 \\times 10^{7}}$ ≈ 7674 m/s ≈ 7.67 km/s'
       },
       {
         label: '(b)',
@@ -914,7 +914,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'E = KE + PE = ½mv² − GMm/r = −GMm/(2r)',
+            description: 'E = KE + PE = $\\tfrac{1}{2} mv^{2}$ − GMm/r = −GMm/(2r)',
             keywords: ['E = −GMm/(2r)', 'total energy', 'KE + PE', 'negative']
           },
           {
@@ -924,7 +924,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           }
         ],
         sampleAnswer:
-          'KE = ½mv² = ½m(GM_E/r) = GM_E m/(2r)\nPE = −GM_E m/r\n\nE_total = KE + PE = GM_E m/(2r) − GM_E m/r = −GM_E m/(2r)\n\nTo escape to infinity (E_final = 0):\nΔE = 0 − (−GM_E m/(2r)) = GM_E m/(2r)\n\n= (6.674 × 10⁻¹¹)(5.97 × 10²⁴)m / (2 × 6.77 × 10⁶)\n= 2.944 × 10⁷ m  joules (where m is satellite mass in kg)'
+          'KE = $\\tfrac{1}{2} mv^{2}$ = ½m(GM_E/r) = GM_E m/(2r)\nPE = −GM_E m/r\n\nE_total = KE + PE = GM_E m/(2r) − GM_E m/r = −GM_E m/(2r)\n\nTo escape to infinity (E_final = 0):\nΔE = 0 − (−GM_E m/(2r)) = GM_E m/(2r)\n\n= $(6.674 \\times 10^{-11})(5.97 \\times 10^{24})m$ / $(2 \\times 6.77 \\times 10^{6})$\n= $2.944 \\times 10^{7}$ m  joules (where m is satellite mass in kg)'
       }
     ]
   },
@@ -936,7 +936,7 @@ const shortFRQs: PhysicsCMechFRQ[] = [
     unit: 5,
     title: 'Angular Momentum Conservation with a Collapsing System',
     prompt:
-      'A small puck of mass m = 0.25 kg moves in a circle of radius r₁ = 0.80 m on a frictionless table. The puck is attached to a string that passes through a hole in the center of the table. The string is pulled from below, reducing the radius to r₂ = 0.30 m. The initial speed of the puck is v₁ = 2.0 m/s.',
+      'A small puck of mass m = 0.25 kg moves in a circle of radius $r_{1}$ = 0.80 m on a frictionless table. The puck is attached to a string that passes through a hole in the center of the table. The string is pulled from below, reducing the radius to $r_{2}$ = 0.30 m. The initial speed of the puck is $v_{1}$ = 2.0 m/s.',
     totalPoints: 4,
     timeRecommendation: 10,
     calculatorAllowed: true,
@@ -944,22 +944,22 @@ const shortFRQs: PhysicsCMechFRQ[] = [
       {
         label: '(a)',
         prompt:
-          'Using conservation of angular momentum, find the final speed v₂ of the puck.',
+          'Using conservation of angular momentum, find the final speed $v_{2}$ of the puck.',
         maxPoints: 2,
         rubric: [
           {
             points: 1,
-            description: 'L = mvr = const → mv₁r₁ = mv₂r₂',
+            description: 'L = mvr = const → $mv_{1}r_{1}$ = $mv_{2}r_{2}$',
             keywords: ['angular momentum', 'conservation', 'mvr', 'L = const']
           },
           {
             points: 1,
-            description: 'v₂ = v₁r₁/r₂ = 2.0(0.80)/0.30 ≈ 5.33 m/s',
+            description: '$v_{2}$ = $v_{1}r_{1}/r_{2}$ = 2.0(0.80)/0.30 ≈ 5.33 m/s',
             keywords: ['v₂', '5.33', 'v₁r₁/r₂', 'm/s']
           }
         ],
         sampleAnswer:
-          'No external torque acts about the central axis (the string force is radial), so angular momentum is conserved:\n\nL₁ = L₂\nmv₁r₁ = mv₂r₂\nv₂ = v₁r₁/r₂ = 2.0(0.80)/0.30 = 5.33 m/s'
+          'No external torque acts about the central axis (the string force is radial), so angular momentum is conserved:\n\n$L_{1}$ = $L_{2}$\n$mv_{1}r_{1}$ = $mv_{2}r_{2}$\n$v_{2}$ = $v_{1}r_{1}/r_{2}$ = 2.0(0.80)/0.30 = 5.33 m/s'
       },
       {
         label: '(b)',
@@ -969,17 +969,17 @@ const shortFRQs: PhysicsCMechFRQ[] = [
         rubric: [
           {
             points: 1,
-            description: 'W = ΔKE = ½mv₂² − ½mv₁²',
+            description: 'W = ΔKE = $\\tfrac{1}{2} mv_{2}^{2}$ − $\\tfrac{1}{2} mv_{1}^{2}$',
             keywords: ['W = ΔKE', '½mv₂²', '½mv₁²', 'work-energy']
           },
           {
             points: 1,
-            description: 'W = ½(0.25)(5.33² − 4.0) = ½(0.25)(28.44 − 4.0) ≈ 3.06 J',
+            description: 'W = $\\tfrac{1}{2} (0.25)(5.33^{2} - 4.0)$ = ½(0.25)(28.44 − 4.0) ≈ 3.06 J',
             keywords: ['3.06', 'joules', 'work', 'numerical']
           }
         ],
         sampleAnswer:
-          'W = ΔKE = ½mv₂² − ½mv₁² = ½(0.25)(5.33² − 2.0²)\n= 0.125(28.41 − 4.0) = 0.125(24.41) ≈ 3.05 J\n\nThe string does approximately 3.05 J of work on the puck.'
+          'W = ΔKE = $\\tfrac{1}{2} mv_{2}^{2}$ − $\\tfrac{1}{2} mv_{1}^{2}$ = $\\tfrac{1}{2} (0.25)(5.33^{2} - 2.0^{2})$\n= 0.125(28.41 − 4.0) = 0.125(24.41) ≈ 3.05 J\n\nThe string does approximately 3.05 J of work on the puck.'
       }
     ]
   }

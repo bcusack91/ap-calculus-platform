@@ -161,13 +161,13 @@ If the graph is a hyperbola ($y = k/x$), it's inverse variation.`
           { label: 'More workers → less time to complete a job', options: ['Inverse variation', 'Direct variation', 'Neither', 'Joint variation'] },
           { label: 'More hours worked → more money earned', options: ['Direct variation', 'Inverse variation', 'Neither', 'Joint variation'] },
           { label: 'Higher speed → less time for same trip', options: ['Inverse variation', 'Direct variation', 'Neither', 'Joint variation'] },
-          { label: 'Doubling side length → quadrupling area', options: ['Neither (it\'s quadratic: A = s²)', 'Direct variation', 'Inverse variation', 'Joint variation'] }
+          { label: 'Doubling side length → quadrupling area', options: ['Neither (it\'s quadratic: A = $s^{2}$)', 'Direct variation', 'Inverse variation', 'Joint variation'] }
         ],
-        correctAnswers: ['Inverse variation', 'Direct variation', 'Inverse variation', 'Neither (it\'s quadratic: A = s²)'],
+        correctAnswers: ['Inverse variation', 'Direct variation', 'Inverse variation', 'Neither (it\'s quadratic: A = $s^{2}$)'],
         hint1: 'When one goes up and the other goes down (with constant product), it\'s inverse.',
         hint2: 'Hours and pay increase together — that\'s direct.',
         hint3: 'Area varies with the *square* of the side, not linearly — so it\'s not simple direct variation.',
-        explanation: 'Workers × time = constant work → inverse. Pay = rate × hours → direct. Distance = speed × time → inverse (for fixed distance). Area = s² is not linear direct variation.'
+        explanation: 'Workers × time = constant work → inverse. Pay = rate × hours → direct. Distance = speed × time → inverse (for fixed distance). Area = $s^{2}$ is not linear direct variation.'
       }
     },
     {

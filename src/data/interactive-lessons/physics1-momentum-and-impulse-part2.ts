@@ -180,7 +180,7 @@ NOT $|20 - 15| = 5$ m/s! Always use signed velocities.
           },
           {
             label: 'The SI unit of impulse is:',
-            options: ['N/s', 'N·s', 'kg·m/s²', 'J/s'],
+            options: ['N/s', 'N·s', '$kg\\cdot m/s^{2}$', 'J/s'],
             correctIndex: 1,
             explanation: 'Impulse has units of N·s, which is equivalent to kg·m/s — the same units as momentum.'
           },

@@ -94,13 +94,13 @@ Notice: $v_{\\text{return}} < v_0$ because friction dissipated energy.`
       type: 'mcq' as const,
       question: 'A block slides down a rough $45°$ incline with $\\mu_k = 0.3$. What is its acceleration?',
       options: [
-        '$g(\\sin 45° - 0.3\\cos 45°) \\approx 4.95$ m/s²',
-        '$g\\sin 45° \\approx 7.07$ m/s²',
-        '$g(\\sin 45° + 0.3\\cos 45°) \\approx 9.19$ m/s²',
-        '$g\\cos 45° \\approx 7.07$ m/s²'
+        '$g(\\sin 45° - 0.3\\cos 45°) \\approx 4.95$ $m/s^{2}$',
+        '$g\\sin 45° \\approx 7.07$ $m/s^{2}$',
+        '$g(\\sin 45° + 0.3\\cos 45°) \\approx 9.19$ $m/s^{2}$',
+        '$g\\cos 45° \\approx 7.07$ $m/s^{2}$'
       ],
       correctAnswer: 0,
-      explanation: 'Sliding down: gravity pulls down ramp, friction opposes motion (up ramp). $a = g(\\sin\\theta - \\mu_k\\cos\\theta) = 10(0.707 - 0.212) = 4.95$ m/s².'
+      explanation: 'Sliding down: gravity pulls down ramp, friction opposes motion (up ramp). $a = g(\\sin\\theta - \\mu_k\\cos\\theta) = 10(0.707 - 0.212) = 4.95$ $m/s^{2}$.'
     },
     {
       id: 'fri3-energy',
@@ -134,7 +134,7 @@ where $d = \\frac{v_0^2}{2g(\\sin\\theta + \\mu_k\\cos\\theta)}$ is the distance
     {
       id: 'fri3-mcq3',
       type: 'mcq' as const,
-      question: 'A 2 kg block slides 5 m down a rough $30°$ ramp ($\\mu_k = 0.2$) from rest. What is its final speed? ($g = 10$ m/s²)',
+      question: 'A 2 kg block slides 5 m down a rough $30°$ ramp ($\\mu_k = 0.2$) from rest. What is its final speed? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\sqrt{2(10)(5)(\\sin 30° - 0.2\\cos 30°)} \\approx 5.66$ m/s',
         '$\\sqrt{2(10)(5)\\sin 30°} \\approx 7.07$ m/s',

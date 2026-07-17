@@ -69,7 +69,7 @@ $(-2)^2 = 4$. Then $4(4) = 16$. Then $-3 + 16 = 13$ ✅
         correctAnswers: ["14","20","4"],
         hint1: "Multiply before adding.",
         hint2: "Parentheses first.",
-        hint3: "Exponent first: 3² = 9.",
+        hint3: "Exponent first: $3^{2}$ = 9.",
         explanation: "1) 2+12=14. 2) 5×4=20. 3) −5+9=4."
       }
     },
@@ -118,7 +118,7 @@ $(-2)^2 = 4$. Then $4(4) = 16$. Then $-3 + 16 = 13$ ✅
                               "22"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "3² = 9. −5 + 9 = 4."
+                    "explanation": "$3^{2}$ = 9. −5 + 9 = 4."
           }
 ]
       }

@@ -17,8 +17,8 @@ export const chemOxidationReductionReactionsPart1Data = {
 | 📏 Rules for Assigning Oxidation States |
 | Rule 6 Is Your Calculation Tool |
 | 🧪 Worked Examples |
-| Example 1: H₂SO₄ |
-| Example 2: MnO₄⁻ (permanganate ion) |
+| Example 1: $H_{2}SO_{4}$ |
+| Example 2: $MnO_{4}^{-}$ (permanganate ion) |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -41,12 +41,12 @@ Apply these rules **in order of priority** (Rule 1 overrides Rule 2, etc.):
 
 | Rule | Description | Example |
 |------|-------------|---------|
-| 1 | Free elements have oxidation state **0** | Fe(s) = 0, O₂(g) = 0 |
-| 2 | Monoatomic ions = their charge | Na⁺ = +1, Cl⁻ = −1, Fe³⁺ = +3 |
+| 1 | Free elements have oxidation state **0** | Fe(s) = 0, $O_{2}(g)$ = 0 |
+| 2 | Monoatomic ions = their charge | $Na^{+}$ = +1, $Cl^{-}$ = −1, $Fe^{3+}$ = +3 |
 | 3 | **Fluorine** is always **−1** | HF: F = −1 |
-| 4 | **Oxygen** is usually **−2** | H₂O: O = −2 |
-| | Exception: peroxides (−1) | H₂O₂: O = −1 |
-| | Exception: OF₂ (+2) | OF₂: O = +2 |
+| 4 | **Oxygen** is usually **−2** | $H_{2}O$: O = −2 |
+| | Exception: peroxides (−1) | $H_{2}O_{2}$: O = −1 |
+| | Exception: $OF_{2}$ (+2) | $OF_{2}$: O = +2 |
 | 5 | **Hydrogen** is usually **+1** | HCl: H = +1 |
 | | Exception: metal hydrides (−1) | NaH: H = −1 |
 | 6 | Sum of oxidation states = **charge of species** | Neutral compound: sum = 0 |
@@ -70,9 +70,9 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
       content: `
 ## 🧪 Worked Examples
 
-### Example 1: H₂SO₄
+### Example 1: $H_{2}SO_{4}$
 
-> **Problem:** Find the oxidation state of sulfur in H₂SO₄.
+> **Problem:** Find the oxidation state of sulfur in $H_{2}SO_{4}$.
 
 > **Solution:**
 > - H = +1 (Rule 5), O = −2 (Rule 4)
@@ -83,9 +83,9 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
 
 ---
 
-### Example 2: MnO₄⁻ (permanganate ion)
+### Example 2: $MnO_{4}^{-}$ (permanganate ion)
 
-> **Problem:** Find the oxidation state of manganese in MnO₄⁻.
+> **Problem:** Find the oxidation state of manganese in $MnO_{4}^{-}$.
 
 > **Solution:**
 > - O = −2 (Rule 4)
@@ -96,9 +96,9 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
 
 ---
 
-### Example 3: Cr₂O₇²⁻ (dichromate ion)
+### Example 3: $Cr_{2}O_{7}^{2-}$ (dichromate ion)
 
-> **Problem:** Find the oxidation state of chromium in Cr₂O₇²⁻.
+> **Problem:** Find the oxidation state of chromium in $Cr_{2}O_{7}^{2-}$.
 
 > **Solution:**
 > - O = −2 (Rule 4)
@@ -110,7 +110,7 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
 
 ---
 
-### Example 4: Na₂O₂ (sodium peroxide)
+### Example 4: $Na_{2}O_{2}$ (sodium peroxide)
 
 > ⚠️ **Warning:** Peroxides are a common exception — oxygen is −1, not −2!
 
@@ -128,7 +128,7 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
       exercise: {
         questions: [
           {
-            question: 'What is the oxidation state of nitrogen in NO₃⁻?',
+            question: 'What is the oxidation state of nitrogen in $NO_{3}^{-}$?',
             options: [
               '+3',
               '+4',
@@ -136,10 +136,10 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
               '+6'
             ],
             correctAnswer: 2,
-            explanation: 'In NO₃⁻: O = −2 (Rule 4). N + 3(−2) = −1 (charge of ion). N − 6 = −1. N = +5.'
+            explanation: 'In $NO_{3}^{-}$: O = −2 (Rule 4). N + 3(−2) = −1 (charge of ion). N − 6 = −1. N = +5.'
           },
           {
-            question: 'What is the oxidation state of chromium in K₂Cr₂O₇?',
+            question: 'What is the oxidation state of chromium in $K_{2}Cr_{2}O_{7}$?',
             options: [
               '+3',
               '+6',
@@ -152,16 +152,16 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
           {
             question: 'In which compound does oxygen NOT have an oxidation state of −2?',
             options: [
-              'H₂O',
-              'CO₂',
-              'H₂O₂',
+              '$H_{2}O$',
+              '$CO_{2}$',
+              '$H_{2}O_{2}$',
               'MgO'
             ],
             correctAnswer: 2,
-            explanation: 'In H₂O₂ (hydrogen peroxide), oxygen has an oxidation state of −1. This is the peroxide exception. In all the other compounds, oxygen is −2.'
+            explanation: 'In $H_{2}O_{2}$ (hydrogen peroxide), oxygen has an oxidation state of −1. This is the peroxide exception. In all the other compounds, oxygen is −2.'
           },
           {
-            question: 'What is the oxidation state of each atom in Fe₂O₃?',
+            question: 'What is the oxidation state of each atom in $Fe_{2}O_{3}$?',
             options: [
               'Fe = +2, O = −2',
               'Fe = +3, O = −2',
@@ -169,7 +169,7 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
               'Fe = +6, O = −2'
             ],
             correctAnswer: 1,
-            explanation: 'O = −2 (Rule 4). 2(Fe) + 3(−2) = 0 → 2Fe = 6 → Fe = +3. Iron is in the +3 oxidation state in Fe₂O₃.'
+            explanation: 'O = −2 (Rule 4). 2(Fe) + 3(−2) = 0 → 2Fe = 6 → Fe = +3. Iron is in the +3 oxidation state in $Fe_{2}O_{3}$.'
           }
         ]
       }
@@ -182,11 +182,11 @@ $$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
 
 Find the oxidation state of the underlined element. Give your answer as a number with sign (e.g., +5 or -2).
 
-**1)** Sulfur in SO₄²⁻
+**1)** Sulfur in $SO_{4}^{2-}$
 
-**2)** Phosphorus in H₃PO₄
+**2)** Phosphorus in $H_{3}PO_{4}$
 
-**3)** Manganese in MnO₂
+**3)** Manganese in $MnO_{2}$
       `,
       exercise: {
         boxes: 3,
@@ -223,9 +223,9 @@ Find the oxidation state of the underlined element. Give your answer as a number
           }
         ],
         correctAnswers: ['0', '−1', 'metals (metal hydrides)', 'the charge of the ion'],
-        hint1: 'Fe(s), O₂(g), N₂(g) — what do they all have in common?',
+        hint1: 'Fe(s), $O_{2}(g)$, $N_{2}(g)$ — what do they all have in common?',
         hint2: 'Fluorine is the most electronegative element.',
-        hint3: 'NaH, CaH₂ — H bonded to metals takes electrons.',
+        hint3: 'NaH, $CaH_{2}$ — H bonded to metals takes electrons.',
         explanation: 'Free elements = 0 (Rule 1). F is always −1 (most electronegative). H = −1 in metal hydrides like NaH. For polyatomic ions, oxidation states sum to the ion\'s charge.'
       }
     },
@@ -238,7 +238,7 @@ Find the oxidation state of the underlined element. Give your answer as a number
       exercise: {
         questions: [
           {
-            question: 'What is the oxidation state of carbon in Na₂CO₃?',
+            question: 'What is the oxidation state of carbon in $Na_{2}CO_{3}$?',
             options: [
               '+2',
               '+3',
@@ -251,13 +251,13 @@ Find the oxidation state of the underlined element. Give your answer as a number
           {
             question: 'In which species does chlorine have the highest oxidation state?',
             options: [
-              'Cl₂',
+              '$Cl_{2}$',
               'HCl',
-              'ClO₃⁻',
-              'ClO₄⁻'
+              '$ClO_{3}^{-}$',
+              '$ClO_{4}^{-}$'
             ],
             correctAnswer: 3,
-            explanation: 'Cl₂: Cl = 0. HCl: Cl = −1. ClO₃⁻: Cl + 3(−2) = −1 → Cl = +5. ClO₄⁻: Cl + 4(−2) = −1 → Cl = +7. The highest is +7 in ClO₄⁻ (perchlorate).'
+            explanation: '$Cl_{2}$: Cl = 0. HCl: Cl = −1. $ClO_{3}^{-}$: Cl + 3(−2) = −1 → Cl = +5. $ClO_{4}^{-}$: Cl + 4(−2) = −1 → Cl = +7. The highest is +7 in $ClO_{4}^{-}$ (perchlorate).'
           }
         ]
       }

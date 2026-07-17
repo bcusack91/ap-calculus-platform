@@ -7,7 +7,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
   // Part 1
-  { id: 'carb-eq-1a', question: 'What is the general formula for monosaccharides?', options: ['CₙH₂ₙO', '(CH₂O)ₙ where n is typically 3 to 7', 'C₆H₁₂O₆ exclusively', 'CₓHᵧOᵧ with no standard ratio'], correctIndex: 1, explanation: 'Monosaccharides follow the general formula (CH₂O)ₙ, where n is typically 3 to 7. Glucose is C₆H₁₂O₆ (n=6); ribose is C₅H₁₀O₅ (n=5).', partNumber: 1, partTitle: 'Monosaccharides' },
+  { id: 'carb-eq-1a', question: 'What is the general formula for monosaccharides?', options: ['$C_{n}H_{2n}O$', '$(CH_{2}O)_{n}$ where n is typically 3 to 7', '$C_{6}H_{12}O_{6}$ exclusively', '$C_{x}H$ᵧOᵧ with no standard ratio'], correctIndex: 1, explanation: 'Monosaccharides follow the general formula $(CH_{2}O)_{n}$, where n is typically 3 to 7. Glucose is $C_{6}H_{12}O_{6}$ (n=6); ribose is $C_{5}H_{10}O_{5}$ (n=5).', partNumber: 1, partTitle: 'Monosaccharides' },
   { id: 'carb-eq-1b', question: 'What type of sugar structure does glucose have?', options: ['A linear chain of 5 carbons with an aldehyde group', 'A 6-carbon ring structure with an aldehyde group', 'A 6-carbon ring structure where the aldehyde folds into a hemiacetal (the normal form in solution)', 'A 7-carbon branched chain'], correctIndex: 2, explanation: 'Glucose is a hexose (6-carbon monosaccharide). Although it contains an aldehyde group in its open-chain form, in aqueous solution it typically exists as a cyclic hemiacetal ring structure.', partNumber: 1, partTitle: 'Monosaccharides' },
 
   // Part 2

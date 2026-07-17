@@ -70,7 +70,7 @@ So $D \\approx 0.64$. Interpretation: there is about a 64% chance that two rando
       exercise: {
         questions: [
           {
-            question: 'A pond sample contains 3 species: 80 Daphnia, 10 copepods, and 10 rotifers (100 total). Using Simpson\'s index D = 1 - Σ(pi)², what is D?',
+            question: 'A pond sample contains 3 species: 80 Daphnia, 10 copepods, and 10 rotifers (100 total). Using Simpson\'s index D = 1 - $\\Sigma (pi)^{2}$, what is D?',
             options: [
               'D = 0.66',
               'D = 0.34',
@@ -78,18 +78,18 @@ So $D \\approx 0.64$. Interpretation: there is about a 64% chance that two rando
               'D = 0.18'
             ],
             correctAnswer: 1,
-            explanation: 'Proportions: 0.80, 0.10, 0.10. Squares: 0.64 + 0.01 + 0.01 = 0.66. D = 1 - 0.66 = 0.34. The trap "D = 0.66" reports Σ(pi)² itself — the probability two individuals are the SAME species — without subtracting from 1. The whole point of the "1 −" step is to convert that into the probability of being DIFFERENT species, so you must finish the subtraction.'
+            explanation: 'Proportions: 0.80, 0.10, 0.10. Squares: 0.64 + 0.01 + 0.01 = 0.66. D = 1 - 0.66 = 0.34. The trap "D = 0.66" reports $\\Sigma (pi)^{2}$ itself — the probability two individuals are the SAME species — without subtracting from 1. The whole point of the "1 −" step is to convert that into the probability of being DIFFERENT species, so you must finish the subtraction.'
           },
           {
             question: 'Forest X and Forest Y each contain exactly 5 tree species. In Forest X one species makes up 90% of trees; in Forest Y the five species are nearly equal in abundance. Which has higher Simpson\'s diversity, and why?',
             options: [
               'Forest X, because it has the same richness and one clearly dominant species',
-              'Forest Y, because higher evenness lowers Σ(pi)² and therefore raises D',
+              'Forest Y, because higher evenness lowers $\\Sigma (pi)^{2}$ and therefore raises D',
               'They are identical because richness (5 species) is the same',
               'Forest X, because Simpson\'s index depends only on species number'
             ],
             correctAnswer: 1,
-            explanation: 'With equal richness, the more EVEN community (Forest Y) has smaller Σ(pi)² and thus larger D. The trap "they are identical because richness is the same" ignores evenness — Simpson\'s index responds to BOTH components, so a community dominated by one species (Forest X, where one pi² ≈ 0.81 inflates the sum) scores much lower despite equal species counts.'
+            explanation: 'With equal richness, the more EVEN community (Forest Y) has smaller $\\Sigma (pi)^{2}$ and thus larger D. The trap "they are identical because richness is the same" ignores evenness — Simpson\'s index responds to BOTH components, so a community dominated by one species (Forest X, where one $pi^{2}$ ≈ 0.81 inflates the sum) scores much lower despite equal species counts.'
           }
         ]
       }

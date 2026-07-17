@@ -26,7 +26,7 @@ $$KE = \\frac{1}{2}mv^2$$
 
 | Property | Detail |
 |----------|--------|
-| **Units** | Joules (J) = kg·m²/s² |
+| **Units** | Joules (J) = $kg\\cdot m^{2}/s^{2}$ |
 | **Sign** | Always $\\geq 0$ (mass and $v^2$ are both non-negative) |
 | **Scalar** | Not a vector — depends on speed, not direction |
 | **Zero when** | $v = 0$ (object is at rest) |
@@ -188,7 +188,7 @@ Unlike total energy, kinetic energy alone is **not necessarily conserved**. It c
           },
           {
             label: 'The SI unit of kinetic energy is the Joule, which equals:',
-            options: ['kg·m/s', 'kg·m²/s²', 'N·s', 'kg·m/s²'],
+            options: ['kg·m/s', '$kg\\cdot m^{2}/s^{2}$', 'N·s', '$kg\\cdot m/s^{2}$'],
             correctIndex: 1,
             explanation: '$[KE] = \\text{kg} \\cdot (\\text{m/s})^2 = \\text{kg} \\cdot \\text{m}^2/\\text{s}^2 = $ J.'
           }

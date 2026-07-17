@@ -20,13 +20,13 @@ When reading an action potential graph (voltage vs. time), identify these phases
 
 | Phase | Voltage Range | What's Happening |
 |---|---|---|
-| **Resting** | −70 mV (flat) | K⁺ leak channels maintain resting potential |
-| **Depolarization** | −70 → +30 mV (rapid rise) | Voltage-gated Na⁺ channels open; Na⁺ rushes in |
-| **Repolarization** | +30 → −70 mV (rapid fall) | Na⁺ channels inactivate; K⁺ channels open; K⁺ rushes out |
-| **Hyperpolarization** | −70 → −80 mV (undershoot) | K⁺ channels slow to close; excess K⁺ exits |
-| **Return to rest** | −80 → −70 mV | Na⁺/K⁺ ATPase restores gradients; K⁺ channels close |
+| **Resting** | −70 mV (flat) | $K^{+}$ leak channels maintain resting potential |
+| **Depolarization** | −70 → +30 mV (rapid rise) | Voltage-gated $Na^{+}$ channels open; $Na^{+}$ rushes in |
+| **Repolarization** | +30 → −70 mV (rapid fall) | $Na^{+}$ channels inactivate; $K^{+}$ channels open; $K^{+}$ rushes out |
+| **Hyperpolarization** | −70 → −80 mV (undershoot) | $K^{+}$ channels slow to close; excess $K^{+}$ exits |
+| **Return to rest** | −80 → −70 mV | $Na^{+}/K^{+}$ ATPase restores gradients; $K^{+}$ channels close |
 
-> **Tip:** If the exam asks you to identify what ion is moving at a specific time point on the graph, look at whether the voltage is increasing (Na⁺ in) or decreasing (K⁺ out).
+> **Tip:** If the exam asks you to identify what ion is moving at a specific time point on the graph, look at whether the voltage is increasing $(Na^{+} in)$ or decreasing $(K^{+} out)$.
 `
     },
     {
@@ -38,24 +38,24 @@ When reading an action potential graph (voltage vs. time), identify these phases
           {
             question: 'A graph shows a neuron\'s membrane potential over time. At time point X, the voltage rapidly changes from −70 mV to +30 mV. Which of the following best explains the ion movement at time point X?',
             options: [
-              'K⁺ is exiting the cell through voltage-gated channels',
-              'Na⁺ is entering the cell through voltage-gated channels, driven by its electrochemical gradient',
-              'Ca²⁺ is entering the cell to trigger neurotransmitter release',
-              'Cl⁻ is entering the cell through ligand-gated channels'
+              '$K^{+}$ is exiting the cell through voltage-gated channels',
+              '$Na^{+}$ is entering the cell through voltage-gated channels, driven by its electrochemical gradient',
+              '$Ca^{2+}$ is entering the cell to trigger neurotransmitter release',
+              '$Cl^{-}$ is entering the cell through ligand-gated channels'
             ],
             correctAnswer: 1,
-            explanation: 'The rapid rise from −70 mV to +30 mV represents depolarization, caused by Na⁺ rushing into the cell through voltage-gated Na⁺ channels. Na⁺ moves inward because of both its concentration gradient (high outside, low inside) and the electrical gradient (negative inside attracts positive ions).'
+            explanation: 'The rapid rise from −70 mV to +30 mV represents depolarization, caused by $Na^{+}$ rushing into the cell through voltage-gated $Na^{+}$ channels. $Na^{+}$ moves inward because of both its concentration gradient (high outside, low inside) and the electrical gradient (negative inside attracts positive ions).'
           },
           {
             question: 'On the same graph, at time point Y the voltage drops from +30 mV back to −70 mV. At time point Z, the voltage briefly reaches −80 mV before returning to −70 mV. Which statement correctly describes both events?',
             options: [
-              'Point Y: Na⁺ channels reopen; Point Z: Na⁺/K⁺ pump reverses direction',
-              'Point Y: K⁺ exits through voltage-gated channels (repolarization); Point Z: K⁺ channels close slowly, causing transient hyperpolarization',
-              'Point Y: Cl⁻ enters to restore resting potential; Point Z: Ca²⁺ is released from internal stores',
-              'Point Y: Na⁺ is actively pumped out; Point Z: K⁺ leak channels close temporarily'
+              'Point Y: $Na^{+}$ channels reopen; Point Z: $Na^{+}/K^{+}$ pump reverses direction',
+              'Point Y: $K^{+}$ exits through voltage-gated channels (repolarization); Point Z: $K^{+}$ channels close slowly, causing transient hyperpolarization',
+              'Point Y: $Cl^{-}$ enters to restore resting potential; Point Z: $Ca^{2+}$ is released from internal stores',
+              'Point Y: $Na^{+}$ is actively pumped out; Point Z: $K^{+}$ leak channels close temporarily'
             ],
             correctAnswer: 1,
-            explanation: 'Point Y (repolarization): Na⁺ channels inactivate and voltage-gated K⁺ channels open, allowing K⁺ to flow out of the cell, returning the membrane to −70 mV. Point Z (hyperpolarization/undershoot): K⁺ channels are slow to close, so K⁺ continues to exit beyond the resting potential, briefly reaching −80 mV before the channels fully close and the Na⁺/K⁺ pump restores resting conditions.'
+            explanation: 'Point Y (repolarization): $Na^{+}$ channels inactivate and voltage-gated $K^{+}$ channels open, allowing $K^{+}$ to flow out of the cell, returning the membrane to −70 mV. Point Z (hyperpolarization/undershoot): $K^{+}$ channels are slow to close, so $K^{+}$ continues to exit beyond the resting potential, briefly reaching −80 mV before the channels fully close and the $Na^{+}/K^{+}$ pump restores resting conditions.'
           }
         ]
       }
@@ -87,10 +87,10 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
 
 | Experimental Manipulation | Expected Result |
 |---|---|
-| Block Na⁺ channels on the axon | No action potential propagation; no signal reaches axon terminal |
-| Block Ca²⁺ channels at axon terminal | Action potential reaches terminal but no neurotransmitter release |
+| Block $Na^{+}$ channels on the axon | No action potential propagation; no signal reaches axon terminal |
+| Block $Ca^{2+}$ channels at axon terminal | Action potential reaches terminal but no neurotransmitter release |
 | Apply an AChE inhibitor | ACh accumulates → sustained muscle contraction |
-| Increase K⁺ concentration outside the cell | Resting potential depolarizes (less negative); neuron more excitable |
+| Increase $K^{+}$ concentration outside the cell | Resting potential depolarizes (less negative); neuron more excitable |
 | Block GABA receptors | Loss of inhibition → increased neural activity → potential seizures |
 `
     },
@@ -101,7 +101,7 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
       exercise: {
         questions: [
           {
-            question: 'A scientist applies tetrodotoxin (TTX), which blocks voltage-gated Na⁺ channels, to a neuron. Which of the following graphs would best represent the membrane potential over time after a stimulus is applied?',
+            question: 'A scientist applies tetrodotoxin (TTX), which blocks voltage-gated $Na^{+}$ channels, to a neuron. Which of the following graphs would best represent the membrane potential over time after a stimulus is applied?',
             options: [
               'A normal action potential graph with depolarization to +30 mV',
               'A flat line at −70 mV with no depolarization, because the neuron cannot generate an action potential',
@@ -109,18 +109,18 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
               'A graph showing continuous depolarization without repolarization'
             ],
             correctAnswer: 1,
-            explanation: 'Tetrodotoxin (TTX) blocks voltage-gated Na⁺ channels, preventing Na⁺ influx during depolarization. Without this Na⁺ influx, the neuron cannot generate an action potential. The membrane would remain at or near the resting potential (−70 mV) regardless of stimulus strength.'
+            explanation: 'Tetrodotoxin (TTX) blocks voltage-gated $Na^{+}$ channels, preventing $Na^{+}$ influx during depolarization. Without this $Na^{+}$ influx, the neuron cannot generate an action potential. The membrane would remain at or near the resting potential (−70 mV) regardless of stimulus strength.'
           },
           {
-            question: 'Researchers increase the extracellular K⁺ concentration around a neuron from 5 mM to 20 mM. What is the most likely effect on the neuron?',
+            question: 'Researchers increase the extracellular $K^{+}$ concentration around a neuron from 5 mM to 20 mM. What is the most likely effect on the neuron?',
             options: [
-              'The equilibrium potential for K⁺ becomes more negative, hyperpolarizing the cell',
+              'The equilibrium potential for $K^{+}$ becomes more negative, hyperpolarizing the cell',
               'The resting membrane potential becomes less negative (depolarizes), making the neuron more excitable',
-              'The Na⁺/K⁺ pump reverses direction, moving K⁺ out of the cell',
+              'The $Na^{+}/K^{+}$ pump reverses direction, moving $K^{+}$ out of the cell',
               'The neuron becomes completely unable to fire action potentials'
             ],
             correctAnswer: 1,
-            explanation: 'Increasing extracellular K⁺ reduces the K⁺ concentration gradient across the membrane. Less K⁺ leaks out through K⁺ leak channels, so the resting potential becomes less negative (depolarized). This brings the membrane closer to threshold, making the neuron more excitable and easier to trigger.'
+            explanation: 'Increasing extracellular $K^{+}$ reduces the $K^{+}$ concentration gradient across the membrane. Less $K^{+}$ leaks out through $K^{+}$ leak channels, so the resting potential becomes less negative (depolarized). This brings the membrane closer to threshold, making the neuron more excitable and easier to trigger.'
           }
         ]
       }
@@ -145,13 +145,13 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
           {
             question: 'In an experiment, a drug is applied to a synapse. Post-drug, action potentials still propagate normally along the axon, but the postsynaptic neuron shows no response. The drug most likely:',
             options: [
-              'Blocks voltage-gated Na⁺ channels on the axon',
-              'Blocks voltage-gated Ca²⁺ channels at the axon terminal or postsynaptic receptors',
-              'Increases K⁺ leak channel activity in the presynaptic neuron',
-              'Enhances the activity of the Na⁺/K⁺ ATPase pump'
+              'Blocks voltage-gated $Na^{+}$ channels on the axon',
+              'Blocks voltage-gated $Ca^{2+}$ channels at the axon terminal or postsynaptic receptors',
+              'Increases $K^{+}$ leak channel activity in the presynaptic neuron',
+              'Enhances the activity of the $Na^{+}/K^{+}$ ATPase pump'
             ],
             correctAnswer: 1,
-            explanation: 'Since action potentials propagate normally along the axon (Na⁺ channels are functioning), the block must occur at the synapse. The drug could either (1) block Ca²⁺ entry at the terminal (preventing neurotransmitter release) or (2) block postsynaptic receptors (preventing neurotransmitter binding). Both scenarios would allow normal axonal conduction but eliminate the postsynaptic response.'
+            explanation: 'Since action potentials propagate normally along the axon ($Na^{+}$ channels are functioning), the block must occur at the synapse. The drug could either (1) block $Ca^{2+}$ entry at the terminal (preventing neurotransmitter release) or (2) block postsynaptic receptors (preventing neurotransmitter binding). Both scenarios would allow normal axonal conduction but eliminate the postsynaptic response.'
           }
         ]
       }
@@ -164,7 +164,7 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
         dropdowns: [
           {
             label: 'During the depolarization phase of an action potential, ___ channels open and ___ rushes INTO the cell.',
-            options: ['K⁺; K⁺', 'Na⁺; Na⁺', 'Ca²⁺; Ca²⁺', 'Cl⁻; Cl⁻']
+            options: ['$K^{+}$; $K^{+}$', '$Na^{+}$; $Na^{+}$', '$Ca^{2+}$; $Ca^{2+}$', '$Cl^{-}$; $Cl^{-}$']
           },
           {
             label: 'A drug that blocks the enzyme acetylcholinesterase would cause ACh to ___ in the synaptic cleft.',
@@ -175,15 +175,15 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
             options: ['temporal', 'spatial', 'saltatory', 'absolute']
           },
           {
-            label: 'If extracellular K⁺ concentration is increased, the resting membrane potential will become ___ negative (depolarize).',
+            label: 'If extracellular $K^{+}$ concentration is increased, the resting membrane potential will become ___ negative (depolarize).',
             options: ['more', 'less', 'equally', 'infinitely']
           }
         ],
-        correctAnswers: ['Na⁺; Na⁺', 'accumulate', 'spatial', 'less'],
-        hint1: 'Na⁺ is the depolarizing ion — it is concentrated outside and rushes in when voltage-gated Na⁺ channels open.',
+        correctAnswers: ['$Na^{+}$; $Na^{+}$', 'accumulate', 'spatial', 'less'],
+        hint1: '$Na^{+}$ is the depolarizing ion — it is concentrated outside and rushes in when voltage-gated $Na^{+}$ channels open.',
         hint2: 'If the enzyme that breaks down ACh is blocked, ACh cannot be removed from the cleft.',
         hint3: 'Spatial = multiple sources at once. Temporal = one source, multiple times rapidly.',
-        explanation: 'Depolarization = Na⁺ influx through voltage-gated Na⁺ channels. Blocking AChE prevents ACh breakdown, causing accumulation and continuous receptor activation. Spatial summation involves multiple presynaptic neurons. Increasing extracellular K⁺ reduces the concentration gradient, decreasing K⁺ efflux and making the resting potential less negative.'
+        explanation: 'Depolarization = $Na^{+}$ influx through voltage-gated $Na^{+}$ channels. Blocking AChE prevents ACh breakdown, causing accumulation and continuous receptor activation. Spatial summation involves multiple presynaptic neurons. Increasing extracellular $K^{+}$ reduces the concentration gradient, decreasing $K^{+}$ efflux and making the resting potential less negative.'
       }
     },
     {
@@ -192,20 +192,20 @@ When the AP exam presents an unfamiliar drug or toxin scenario, use this systema
       content: `## Part 7 Summary — AP Exam Practice
 
 ### Key Test-Taking Strategies
-1. **Action potential graphs:** Identify phases by voltage direction — rising = Na⁺ in; falling = K⁺ out; undershoot = K⁺ channels slow to close.
+1. **Action potential graphs:** Identify phases by voltage direction — rising = $Na^{+}$ in; falling = $K^{+}$ out; undershoot = $K^{+}$ channels slow to close.
 2. **Drug problems:** Use the 4-step framework: target → action → pathway → outcome.
 3. **Summation problems:** Add all EPSPs (positive) and IPSPs (negative); compare the sum + resting potential to threshold.
 4. **Experimental scenarios:** Determine WHERE in the signaling pathway the manipulation acts, then trace downstream effects.
 
 ### Complete Signaling Pathway Review
 
-**Stimulus → dendrites → cell body → axon hillock (threshold?) → action potential along axon → Ca²⁺ entry at terminal → neurotransmitter release → crosses cleft → binds receptor → EPSP or IPSP → summation at next neuron's axon hillock → response**
+**Stimulus → dendrites → cell body → axon hillock (threshold?) → action potential along axon → $Ca^{2+}$ entry at terminal → neurotransmitter release → crosses cleft → binds receptor → EPSP or IPSP → summation at next neuron's axon hillock → response**
 
 ### High-Yield Topics for the AP Exam
-- Na⁺/K⁺ pump stoichiometry (3 Na⁺ out, 2 K⁺ in)
+- $Na^{+}/K^{+}$ pump stoichiometry (3 $Na^{+}$ out, 2 $K^{+}$ in)
 - All-or-none principle and how intensity is coded by frequency
 - Saltatory vs. continuous conduction
-- Ca²⁺ as the trigger for neurotransmitter release
+- $Ca^{2+}$ as the trigger for neurotransmitter release
 - EPSP/IPSP summation and integration
 - Drug effects on specific steps of synaptic transmission
 - Refractory periods and unidirectional propagation

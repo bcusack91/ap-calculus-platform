@@ -132,7 +132,7 @@ That $33\\,^{\\circ}\\text{C}$ of natural warming is what makes liquid water —
 
 > ⚠️ **Exam trap:** The greenhouse effect is **not** "bad." It is natural and necessary. The *problem* is the **enhanced** greenhouse effect: humans adding extra greenhouse gases, which pushes the natural warming higher than ecosystems and civilization are adapted to.
 
-> 💡 The greenhouse effect is **not** the same as ozone depletion. Ozone depletion is a stratospheric problem caused by CFCs; the greenhouse effect is a tropospheric heat-trapping problem caused mostly by CO₂, CH₄, N₂O, and water vapor. Keep these two issues in separate boxes.`,
+> 💡 The greenhouse effect is **not** the same as ozone depletion. Ozone depletion is a stratospheric problem caused by CFCs; the greenhouse effect is a tropospheric heat-trapping problem caused mostly by $CO_{2}$, $CH_{4}$, $N_{2}O$, and water vapor. Keep these two issues in separate boxes.`,
       },
       {
         id: 'apecc1-ib-deltaT',
@@ -178,15 +178,15 @@ Use Earth's effective (no-atmosphere) temperature of $-18\\,^{\\circ}\\text{C}$ 
 
 | Gas | Main Human Sources | Atmospheric Lifetime | GWP (100-yr) |
 |-----|--------------------|----------------------|--------------|
-| **Water vapor (H₂O)** | Not directly emitted; a **feedback** | Days | — (feedback) |
-| **Carbon dioxide (CO₂)** | Burning fossil fuels, deforestation, cement | 100s–1000s of years | **1** (the reference) |
-| **Methane (CH₄)** | Livestock, rice paddies, landfills, leaks | ~12 years | ~**28** |
-| **Nitrous oxide (N₂O)** | Synthetic fertilizers, manure, combustion | ~120 years | ~**265** |
+| **Water vapor $(H_{2}O)$** | Not directly emitted; a **feedback** | Days | — (feedback) |
+| **Carbon dioxide $(CO_{2})$** | Burning fossil fuels, deforestation, cement | 100s–1000s of years | **1** (the reference) |
+| **Methane $(CH_{4})$** | Livestock, rice paddies, landfills, leaks | ~12 years | ~**28** |
+| **Nitrous oxide $(N_{2}O)$** | Synthetic fertilizers, manure, combustion | ~120 years | ~**265** |
 | **CFCs / HFCs** | Old refrigerants, foams, aerosols | Decades–centuries | **1,000s–10,000s** |
 
-> 💡 **GWP** measures how much heat a mass of gas traps over a set period (usually 100 years) **relative to the same mass of CO₂**, which is defined as $1$. A GWP of $28$ means one kilogram of that gas traps $28\\times$ as much heat as one kilogram of CO₂ over a century.
+> 💡 **GWP** measures how much heat a mass of gas traps over a set period (usually 100 years) **relative to the same mass of $CO_{2}$**, which is defined as $1$. A GWP of $28$ means one kilogram of that gas traps $28\\times$ as much heat as one kilogram of $CO_{2}$ over a century.
 
-> ⚠️ **Why CO₂ still dominates** despite a GWP of only $1$: we emit *enormous* quantities of it, and it persists for centuries. CH₄ is far stronger per molecule but is emitted in smaller amounts and breaks down in roughly a decade. **Quantity × potency × lifetime** is what matters.`,
+> ⚠️ **Why $CO_{2}$ still dominates** despite a GWP of only $1$: we emit *enormous* quantities of it, and it persists for centuries. $CH_{4}$ is far stronger per molecule but is emitted in smaller amounts and breaks down in roughly a decade. **Quantity × potency × lifetime** is what matters.`,
       },
       {
         id: 'apecc2-q-gases',
@@ -197,16 +197,16 @@ Use Earth's effective (no-atmosphere) temperature of $-18\\,^{\\circ}\\text{C}$ 
             {
               question: 'A Global Warming Potential (GWP) of 28 for methane means that, per unit mass over 100 years, methane traps:',
               options: [
-                '28 times as much heat as the same mass of CO₂',
-                '28% as much heat as CO₂',
+                '28 times as much heat as the same mass of $CO_{2}$',
+                '28% as much heat as $CO_{2}$',
                 '28 times as much heat as water vapor',
-                '28 ppm more than CO₂',
+                '28 ppm more than $CO_{2}$',
               ],
               correctAnswer: 0,
-              explanation: 'GWP is measured relative to CO₂ (defined as 1). A GWP of 28 means methane traps 28× the heat of an equal mass of CO₂ over 100 years.',
+              explanation: 'GWP is measured relative to $CO_{2}$ (defined as 1). A GWP of 28 means methane traps 28× the heat of an equal mass of $CO_{2}$ over 100 years.',
             },
             {
-              question: 'Why is CO₂ considered the most important driver of human-caused warming even though its GWP is only 1?',
+              question: 'Why is $CO_{2}$ considered the most important driver of human-caused warming even though its GWP is only 1?',
               options: [
                 'It is emitted in huge quantities and persists in the atmosphere for centuries',
                 'It absorbs every wavelength of incoming sunlight',
@@ -214,7 +214,7 @@ Use Earth's effective (no-atmosphere) temperature of $-18\\,^{\\circ}\\text{C}$ 
                 'It is the only gas that traps infrared radiation',
               ],
               correctAnswer: 0,
-              explanation: 'Total impact = amount emitted × potency × lifetime. CO₂\'s sheer volume and century-plus residence time make it the dominant forcing agent despite its low per-molecule potency.',
+              explanation: 'Total impact = amount emitted × potency × lifetime. $CO_{2}$\'s sheer volume and century-plus residence time make it the dominant forcing agent despite its low per-molecule potency.',
             },
             {
               question: 'Water vapor is described as a "feedback" rather than a direct forcing because:',
@@ -222,10 +222,10 @@ Use Earth's effective (no-atmosphere) temperature of $-18\\,^{\\circ}\\text{C}$ 
                 'Its concentration is controlled by temperature, not directly by human emissions',
                 'It does not absorb infrared radiation',
                 'It is not a greenhouse gas at all',
-                'Humans emit more water vapor than CO₂',
+                'Humans emit more water vapor than $CO_{2}$',
               ],
               correctAnswer: 0,
-              explanation: 'Warmer air holds more water vapor, which traps more heat, which warms the air further — a feedback. We don\'t set its level directly the way we set CO₂ through emissions.',
+              explanation: 'Warmer air holds more water vapor, which traps more heat, which warms the air further — a feedback. We don\'t set its level directly the way we set $CO_{2}$ through emissions.',
             },
           ],
         },
@@ -233,17 +233,17 @@ Use Earth's effective (no-atmosphere) temperature of $-18\\,^{\\circ}\\text{C}$ 
       {
         id: 'apecc2-co2-sources',
         type: 'text' as const,
-        content: `## Where the CO₂ Comes From
+        content: `## Where the $CO_{2}$ Comes From
 
-The dominant human source of CO₂ is **burning fossil fuels** (coal, oil, natural gas) for electricity, transportation, and industry. The combustion reaction releases carbon that had been locked underground for millions of years:
+The dominant human source of $CO_{2}$ is **burning fossil fuels** (coal, oil, natural gas) for electricity, transportation, and industry. The combustion reaction releases carbon that had been locked underground for millions of years:
 
 $$\\text{CH}_4 + 2\\,\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\,\\text{H}_2\\text{O}$$
 
-(burning methane/natural gas — every hydrocarbon combustion produces CO₂)
+(burning methane/natural gas — every hydrocarbon combustion produces $CO_{2}$)
 
-**Deforestation** is the second major source: trees store carbon, so cutting and burning them releases CO₂ *and* removes a future carbon sink. **Cement production** also releases CO₂ when limestone (CaCO₃) is heated.
+**Deforestation** is the second major source: trees store carbon, so cutting and burning them releases $CO_{2}$ *and* removes a future carbon sink. **Cement production** also releases $CO_{2}$ when limestone $(CaCO_{3})$ is heated.
 
-> 🔑 **Fossil-fuel ranking by CO₂ per unit energy:** **coal > oil > natural gas**. Coal is the most carbon-intensive fuel; natural gas (mostly CH₄) releases the least CO₂ per unit of energy because more of its energy comes from hydrogen, not carbon. This is why switching from coal to natural gas lowers CO₂ emissions per kWh.`,
+> 🔑 **Fossil-fuel ranking by $CO_{2}$ per unit energy:** **coal > oil > natural gas**. Coal is the most carbon-intensive fuel; natural gas $(mostly CH_{4})$ releases the least $CO_{2}$ per unit of energy because more of its energy comes from hydrogen, not carbon. This is why switching from coal to natural gas lowers $CO_{2}$ emissions per kWh.`,
       },
       {
         id: 'apecc2-dd-sources',
@@ -253,35 +253,35 @@ $$\\text{CH}_4 + 2\\,\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\,\\text{H}_2\\te
 Choose the best answer for each.`,
         exercise: {
           dropdowns: [
-            { label: 'Single largest human source of CO₂:', options: ['Burning fossil fuels', 'Cattle digestion', 'Rice paddies', 'Refrigerant leaks'] },
-            { label: 'Greenhouse gas most associated with livestock and landfills:', options: ['Methane (CH₄)', 'Carbon dioxide (CO₂)', 'Nitrous oxide (N₂O)', 'Ozone (O₃)'] },
-            { label: 'Greenhouse gas most associated with synthetic fertilizer use:', options: ['Nitrous oxide (N₂O)', 'Methane (CH₄)', 'Carbon dioxide (CO₂)', 'Water vapor'] },
-            { label: 'Fossil fuel that releases the MOST CO₂ per unit of energy:', options: ['Coal', 'Natural gas', 'Oil', 'They are identical'] },
+            { label: 'Single largest human source of $CO_{2}$:', options: ['Burning fossil fuels', 'Cattle digestion', 'Rice paddies', 'Refrigerant leaks'] },
+            { label: 'Greenhouse gas most associated with livestock and landfills:', options: ['Methane $(CH_{4})$', 'Carbon dioxide $(CO_{2})$', 'Nitrous oxide $(N_{2}O)$', 'Ozone $(O_{3})$'] },
+            { label: 'Greenhouse gas most associated with synthetic fertilizer use:', options: ['Nitrous oxide $(N_{2}O)$', 'Methane $(CH_{4})$', 'Carbon dioxide $(CO_{2})$', 'Water vapor'] },
+            { label: 'Fossil fuel that releases the MOST $CO_{2}$ per unit of energy:', options: ['Coal', 'Natural gas', 'Oil', 'They are identical'] },
           ],
-          correctAnswers: ['Burning fossil fuels', 'Methane (CH₄)', 'Nitrous oxide (N₂O)', 'Coal'],
-          hint1: 'Most CO₂ comes from energy and transportation, not agriculture.',
-          hint2: 'Cows and decomposing trash in landfills release CH₄; fertilizer chemistry releases N₂O.',
+          correctAnswers: ['Burning fossil fuels', 'Methane $(CH_{4})$', 'Nitrous oxide $(N_{2}O)$', 'Coal'],
+          hint1: 'Most $CO_{2}$ comes from energy and transportation, not agriculture.',
+          hint2: 'Cows and decomposing trash in landfills release $CH_{4}$; fertilizer chemistry releases $N_{2}O$.',
           hint3: 'Carbon-intensity ranking: coal > oil > natural gas.',
-          explanation: 'Fossil-fuel combustion is the top CO₂ source. Methane comes from livestock/landfills/rice; N₂O comes mainly from fertilizers; and coal is the most carbon-intensive fuel per unit energy.',
+          explanation: 'Fossil-fuel combustion is the top $CO_{2}$ source. Methane comes from livestock/landfills/rice; $N_{2}O$ comes mainly from fertilizers; and coal is the most carbon-intensive fuel per unit energy.',
         },
       },
       {
         id: 'apecc2-ib-co2equiv',
         type: 'input-boxes' as const,
-        content: `**CO₂-Equivalent Practice** 🧮
+        content: `**$CO_{2}$-Equivalent Practice** 🧮
 
-We compare emissions using **CO₂-equivalents**: $\\text{mass} \\times \\text{GWP}$.
+We compare emissions using **$CO_{2}$-equivalents**: $\\text{mass} \\times \\text{GWP}$.
 
-**1)** A farm releases $10$ kg of methane (GWP $= 28$). How many kg of CO₂-equivalents is that?
+**1)** A farm releases $10$ kg of methane (GWP $= 28$). How many kg of $CO_{2}$-equivalents is that?
 
-**2)** Releasing $2$ kg of nitrous oxide (GWP $= 265$) equals how many kg of CO₂-equivalents?`,
+**2)** Releasing $2$ kg of nitrous oxide (GWP $= 265$) equals how many kg of $CO_{2}$-equivalents?`,
         exercise: {
           boxes: 2,
           correctAnswers: ['280', '530'],
-          hint1: 'CO₂-equivalent = mass of the gas × its GWP.',
+          hint1: '$CO_{2}$-equivalent = mass of the gas × its GWP.',
           hint2: 'Part 1: $10 \\times 28$.',
           hint3: 'Part 2: $2 \\times 265$.',
-          explanation: '1) $10\\text{ kg} \\times 28 = 280$ kg CO₂-eq. 2) $2\\text{ kg} \\times 265 = 530$ kg CO₂-eq. GWP lets us put very different gases on one common scale.',
+          explanation: '1) $10\\text{ kg} \\times 28 = 280$ kg $CO_{2}-eq$. 2) $2\\text{ kg} \\times 265 = 530$ kg $CO_{2}-eq$. GWP lets us put very different gases on one common scale.',
         },
       },
     ],
@@ -311,14 +311,14 @@ No single graph proves climate change; the case rests on many datasets that agre
 
 | Evidence | What It Shows |
 |----------|---------------|
-| **Keeling Curve** | Direct CO₂ measurements (Mauna Loa) rising from ~315 ppm (1958) to >420 ppm today |
-| **Ice cores** | Trapped air bubbles record CO₂ and temperature back ~800,000 years; today's CO₂ is far above the natural range |
+| **Keeling Curve** | Direct $CO_{2}$ measurements (Mauna Loa) rising from ~315 ppm (1958) to >420 ppm today |
+| **Ice cores** | Trapped air bubbles record $CO_{2}$ and temperature back ~800,000 years; today's $CO_{2}$ is far above the natural range |
 | **Instrumental temperature record** | Global average surface temperature up ~1.1–1.2 °C since pre-industrial times |
 | **Shrinking ice & glaciers** | Arctic sea ice, ice sheets, and mountain glaciers losing mass |
 | **Sea-level rise** | From thermal expansion + melting land ice |
-| **Isotopic "fingerprint"** | The added CO₂ is depleted in ¹³C and ¹⁴C — the signature of ancient **fossil** carbon, not volcanoes |
+| **Isotopic "fingerprint"** | The added $CO_{2}$ is depleted in $ {}^{13}C$ and $ {}^{14}C$ — the signature of ancient **fossil** carbon, not volcanoes |
 
-> 💡 **The Keeling Curve** also has an annual **saw-tooth wiggle**: CO₂ dips each Northern Hemisphere summer (plants photosynthesize and pull down CO₂) and rises each winter (decomposition + less photosynthesis). The "breathing of the biosphere" rides on top of the steady upward human-caused trend.`,
+> 💡 **The Keeling Curve** also has an annual **saw-tooth wiggle**: $CO_{2}$ dips each Northern Hemisphere summer (plants photosynthesize and pull down $CO_{2}$) and rises each winter (decomposition + less photosynthesis). The "breathing of the biosphere" rides on top of the steady upward human-caused trend.`,
       },
       {
         id: 'apecc3-q-evidence',
@@ -327,26 +327,26 @@ No single graph proves climate change; the case rests on many datasets that agre
         exercise: {
           questions: [
             {
-              question: 'The Keeling Curve shows a steady long-term rise in atmospheric CO₂ with a small annual zig-zag. What causes the annual zig-zag?',
+              question: 'The Keeling Curve shows a steady long-term rise in atmospheric $CO_{2}$ with a small annual zig-zag. What causes the annual zig-zag?',
               options: [
-                'Seasonal photosynthesis: plants pull down CO₂ in summer and release it in winter',
+                'Seasonal photosynthesis: plants pull down $CO_{2}$ in summer and release it in winter',
                 'Yearly changes in the Sun\'s output',
                 'Volcanic eruptions every spring',
                 'Measurement errors at Mauna Loa',
               ],
               correctAnswer: 0,
-              explanation: 'The saw-tooth reflects the Northern Hemisphere growing season: summer photosynthesis lowers CO₂, winter decomposition raises it. The overall upward trend is the human signal.',
+              explanation: 'The saw-tooth reflects the Northern Hemisphere growing season: summer photosynthesis lowers $CO_{2}$, winter decomposition raises it. The overall upward trend is the human signal.',
             },
             {
-              question: 'How do ice cores let scientists reconstruct ancient atmospheric CO₂ levels?',
+              question: 'How do ice cores let scientists reconstruct ancient atmospheric $CO_{2}$ levels?',
               options: [
                 'Tiny air bubbles trapped in the ice preserve samples of the ancient atmosphere',
-                'The ice changes color in proportion to CO₂',
-                'CO₂ is dissolved uniformly throughout solid ice',
+                'The ice changes color in proportion to $CO_{2}$',
+                '$CO_{2}$ is dissolved uniformly throughout solid ice',
                 'They measure the radioactivity of the ice',
               ],
               correctAnswer: 0,
-              explanation: 'As snow compacts into glacial ice, it traps bubbles of air. Analyzing those bubbles gives a direct record of past CO₂ — extending the record back ~800,000 years.',
+              explanation: 'As snow compacts into glacial ice, it traps bubbles of air. Analyzing those bubbles gives a direct record of past $CO_{2}$ — extending the record back ~800,000 years.',
             },
           ],
         },
@@ -356,39 +356,39 @@ No single graph proves climate change; the case rests on many datasets that agre
         type: 'text' as const,
         content: `## The Carbon Cycle: Sources and Sinks
 
-Carbon constantly moves among reservoirs. A **source** adds CO₂ to the atmosphere; a **sink** removes it.
+Carbon constantly moves among reservoirs. A **source** adds $CO_{2}$ to the atmosphere; a **sink** removes it.
 
-**Natural sinks (remove CO₂):**
-- **Photosynthesis** — plants and phytoplankton convert CO₂ into biomass
-- **Ocean uptake** — CO₂ dissolves into seawater (the ocean is the largest active sink)
+**Natural sinks $(remove CO_{2})$:**
+- **Photosynthesis** — plants and phytoplankton convert $CO_{2}$ into biomass
+- **Ocean uptake** — $CO_{2}$ dissolves into seawater (the ocean is the largest active sink)
 - **Sedimentation** — carbon locked into rocks and deep-sea sediments over geologic time
 
-**Natural sources (add CO₂):**
+**Natural sources $(add CO_{2})$:**
 - **Cellular respiration** and **decomposition**
 - **Volcanic outgassing** (small compared to human emissions)
 
-> 🔑 **The human perturbation:** Burning fossil fuels and deforestation move carbon from **long-term storage** (underground, in forests) into the atmosphere **faster than the sinks can absorb it**. The imbalance — emissions exceeding uptake — is exactly why atmospheric CO₂ is climbing. About half of our emissions are taken up by ocean and land sinks; the rest accumulates.
+> 🔑 **The human perturbation:** Burning fossil fuels and deforestation move carbon from **long-term storage** (underground, in forests) into the atmosphere **faster than the sinks can absorb it**. The imbalance — emissions exceeding uptake — is exactly why atmospheric $CO_{2}$ is climbing. About half of our emissions are taken up by ocean and land sinks; the rest accumulates.
 
-> ⚠️ **Deforestation is a double hit:** it releases stored carbon *and* eliminates the trees that would have absorbed future CO₂.`,
+> ⚠️ **Deforestation is a double hit:** it releases stored carbon *and* eliminates the trees that would have absorbed future $CO_{2}$.`,
       },
       {
         id: 'apecc3-dd-carbon',
         type: 'dropdown-select' as const,
         content: `**Source or Sink?** 🔽
 
-Classify each process by its effect on atmospheric CO₂.`,
+Classify each process by its effect on atmospheric $CO_{2}$.`,
         exercise: {
           dropdowns: [
-            { label: 'Photosynthesis by a forest:', options: ['Carbon sink (removes CO₂)', 'Carbon source (adds CO₂)', 'No effect on CO₂', 'Reverses the greenhouse effect'] },
-            { label: 'Burning coal in a power plant:', options: ['Carbon source (adds CO₂)', 'Carbon sink (removes CO₂)', 'No effect on CO₂', 'Increases albedo'] },
-            { label: 'CO₂ dissolving into the ocean:', options: ['Carbon sink (removes CO₂)', 'Carbon source (adds CO₂)', 'No effect on CO₂', 'A greenhouse gas feedback'] },
-            { label: 'Cutting and burning a tropical rainforest:', options: ['Carbon source (adds CO₂)', 'Carbon sink (removes CO₂)', 'No net effect', 'Lowers global temperature'] },
+            { label: 'Photosynthesis by a forest:', options: ['Carbon sink $(removes CO_{2})$', 'Carbon source $(adds CO_{2})$', 'No effect on $CO_{2}$', 'Reverses the greenhouse effect'] },
+            { label: 'Burning coal in a power plant:', options: ['Carbon source $(adds CO_{2})$', 'Carbon sink $(removes CO_{2})$', 'No effect on $CO_{2}$', 'Increases albedo'] },
+            { label: '$CO_{2}$ dissolving into the ocean:', options: ['Carbon sink $(removes CO_{2})$', 'Carbon source $(adds CO_{2})$', 'No effect on $CO_{2}$', 'A greenhouse gas feedback'] },
+            { label: 'Cutting and burning a tropical rainforest:', options: ['Carbon source $(adds CO_{2})$', 'Carbon sink $(removes CO_{2})$', 'No net effect', 'Lowers global temperature'] },
           ],
-          correctAnswers: ['Carbon sink (removes CO₂)', 'Carbon source (adds CO₂)', 'Carbon sink (removes CO₂)', 'Carbon source (adds CO₂)'],
-          hint1: 'A sink removes CO₂ from the air; a source adds it.',
-          hint2: 'Plants and the ocean pull CO₂ out; combustion puts it in.',
+          correctAnswers: ['Carbon sink $(removes CO_{2})$', 'Carbon source $(adds CO_{2})$', 'Carbon sink $(removes CO_{2})$', 'Carbon source $(adds CO_{2})$'],
+          hint1: 'A sink removes $CO_{2}$ from the air; a source adds it.',
+          hint2: 'Plants and the ocean pull $CO_{2}$ out; combustion puts it in.',
           hint3: 'Deforestation both releases stored carbon and destroys a sink — net source.',
-          explanation: 'Photosynthesis and ocean uptake are sinks; burning fossil fuels and burning forests are sources. Deforestation is doubly harmful — it adds CO₂ and removes future absorption capacity.',
+          explanation: 'Photosynthesis and ocean uptake are sinks; burning fossil fuels and burning forests are sources. Deforestation is doubly harmful — it adds $CO_{2}$ and removes future absorption capacity.',
         },
       },
       {
@@ -403,18 +403,18 @@ Climate has always changed. The major **natural** drivers:
 - **Volcanic eruptions** — large eruptions inject sulfate aerosols that **cool** the planet for a few years by reflecting sunlight (raising albedo).
 - **Ocean oscillations** — El Niño / La Niña (ENSO) shift heat and cause year-to-year swings.
 
-> ⚠️ **Why these don't explain current warming:** Milankovitch cycles operate over **tens of thousands of years** — far too slow for a change over ~150 years. The Sun's output has been **flat to slightly declining** in recent decades while temperatures rose. And the isotopic fingerprint of the added CO₂ matches **fossil** carbon, not volcanic CO₂. The rapid, decadal warming tracks our emissions — not any natural cycle.
+> ⚠️ **Why these don't explain current warming:** Milankovitch cycles operate over **tens of thousands of years** — far too slow for a change over ~150 years. The Sun's output has been **flat to slightly declining** in recent decades while temperatures rose. And the isotopic fingerprint of the added $CO_{2}$ matches **fossil** carbon, not volcanic $CO_{2}$. The rapid, decadal warming tracks our emissions — not any natural cycle.
 
 > 💡 Volcanoes and El Niño cause *short-term wiggles*; they are the "weather" of the climate record, not the long-term *trend*.`,
       },
       {
         id: 'apecc3-ib-ppm',
         type: 'input-boxes' as const,
-        content: `**Read the CO₂ Record** 🧮
+        content: `**Read the $CO_{2}$ Record** 🧮
 
-Pre-industrial atmospheric CO₂ was about $280$ ppm. Today it is about $420$ ppm.
+Pre-industrial atmospheric $CO_{2}$ was about $280$ ppm. Today it is about $420$ ppm.
 
-**1)** By how many ppm has atmospheric CO₂ increased since pre-industrial times?
+**1)** By how many ppm has atmospheric $CO_{2}$ increased since pre-industrial times?
 
 **2)** What is that increase as a percentage of the pre-industrial value? Round to the nearest whole percent. (Enter just the number.)`,
         exercise: {
@@ -423,7 +423,7 @@ Pre-industrial atmospheric CO₂ was about $280$ ppm. Today it is about $420$ pp
           hint1: 'Part 1: subtract $280$ from $420$.',
           hint2: 'Part 2: percent increase $= \\dfrac{\\text{increase}}{\\text{original}} \\times 100$.',
           hint3: '$\\dfrac{140}{280} \\times 100 = 50\\%$.',
-          explanation: '1) $420 - 280 = 140$ ppm of increase. 2) $\\frac{140}{280}\\times 100 = 50\\%$ — atmospheric CO₂ is now about 50% above its pre-industrial level.',
+          explanation: '1) $420 - 280 = 140$ ppm of increase. 2) $\\frac{140}{280}\\times 100 = 50\\%$ — atmospheric $CO_{2}$ is now about 50% above its pre-industrial level.',
         },
       },
     ],
@@ -457,14 +457,14 @@ Pre-industrial atmospheric CO₂ was about $280$ ppm. Today it is about $420$ pp
 |----------|-----------|
 | **Ice–albedo** | Warming melts bright, reflective ice → exposes dark ocean/land → lower albedo → more absorption → more warming |
 | **Water-vapor** | Warmer air holds more water vapor (a greenhouse gas) → more warming |
-| **Permafrost / methane** | Thawing Arctic permafrost releases CH₄ and CO₂ → more warming |
+| **Permafrost / methane** | Thawing Arctic permafrost releases $CH_{4}$ and $CO_{2}$ → more warming |
 | **Forest dieback / wildfire** | Warming → drought, fires, tree death → stored carbon released |
 
 **Negative (stabilizing) feedbacks:**
 
 | Feedback | Mechanism |
 |----------|-----------|
-| **CO₂ fertilization (partial)** | More CO₂ can boost some plant growth → more CO₂ uptake |
+| **$CO_{2}$ fertilization (partial)** | More $CO_{2}$ can boost some plant growth → more $CO_{2}$ uptake |
 | **Some cloud effects** | More low clouds can raise albedo and reflect sunlight |
 
 > 💡 The dominant feedbacks in today's climate are **positive**, which is why warming tends to **accelerate** rather than self-correct.`,
@@ -480,13 +480,13 @@ Label each loop as a positive (amplifying) or negative (stabilizing) feedback.`,
             { label: 'Melting sea ice exposes dark ocean, which absorbs more heat:', options: ['Positive (amplifying)', 'Negative (stabilizing)'] },
             { label: 'Thawing permafrost releases methane, warming the planet further:', options: ['Positive (amplifying)', 'Negative (stabilizing)'] },
             { label: 'Warmer air holds more water vapor, trapping more heat:', options: ['Positive (amplifying)', 'Negative (stabilizing)'] },
-            { label: 'More CO₂ boosts plant growth, increasing CO₂ uptake:', options: ['Negative (stabilizing)', 'Positive (amplifying)'] },
+            { label: 'More $CO_{2}$ boosts plant growth, increasing $CO_{2}$ uptake:', options: ['Negative (stabilizing)', 'Positive (amplifying)'] },
           ],
           correctAnswers: ['Positive (amplifying)', 'Positive (amplifying)', 'Positive (amplifying)', 'Negative (stabilizing)'],
           hint1: 'Positive = the change feeds on itself and grows. Negative = the change is counteracted.',
           hint2: 'Ice–albedo, permafrost methane, and water vapor all *amplify* warming.',
-          hint3: 'Extra plant growth that pulls CO₂ back out *opposes* the warming — that\'s stabilizing.',
-          explanation: 'Ice–albedo, permafrost-methane, and water-vapor loops all amplify warming (positive). CO₂ fertilization removes some CO₂, opposing the change (negative/stabilizing).',
+          hint3: 'Extra plant growth that pulls $CO_{2}$ back out *opposes* the warming — that\'s stabilizing.',
+          explanation: 'Ice–albedo, permafrost-methane, and water-vapor loops all amplify warming (positive). $CO_{2}$ fertilization removes some $CO_{2}$, opposing the change (negative/stabilizing).',
         },
       },
       {
@@ -515,7 +515,7 @@ So when bright ice is replaced by dark water, the surface flips from *reflecting
               question: 'In the ice–albedo feedback, why does melting sea ice accelerate warming?',
               options: [
                 'Dark open ocean has a lower albedo than ice, so it absorbs more sunlight',
-                'Melting ice releases large amounts of CO₂',
+                'Melting ice releases large amounts of $CO_{2}$',
                 'Open ocean reflects more sunlight than ice',
                 'Liquid water cannot absorb infrared radiation',
               ],
@@ -525,13 +525,13 @@ So when bright ice is replaced by dark water, the surface flips from *reflecting
             {
               question: 'Why is a thawing-permafrost feedback especially concerning?',
               options: [
-                'It can release stored methane and CO₂, which cause still more warming and more thawing',
+                'It can release stored methane and $CO_{2}$, which cause still more warming and more thawing',
                 'It permanently raises Earth\'s albedo',
                 'It removes greenhouse gases from the atmosphere',
                 'It only affects weather, not climate',
               ],
               correctAnswer: 0,
-              explanation: 'Permafrost stores vast amounts of carbon. As it thaws, it releases CH₄ and CO₂, amplifying warming — a self-reinforcing (positive) feedback that is difficult to reverse.',
+              explanation: 'Permafrost stores vast amounts of carbon. As it thaws, it releases $CH_{4}$ and $CO_{2}$, amplifying warming — a self-reinforcing (positive) feedback that is difficult to reverse.',
             },
           ],
         },
@@ -545,7 +545,7 @@ A **tipping point** is a threshold beyond which a change becomes **self-sustaini
 
 Commonly cited tipping elements:
 - **Collapse of major ice sheets** (Greenland, West Antarctica) → multi-meter sea-level rise over centuries
-- **Large-scale permafrost thaw** → a big methane/CO₂ release
+- **Large-scale permafrost thaw** → a big $methane/CO_{2}$ release
 - **Amazon rainforest dieback** → forest flips from carbon sink to carbon source
 - **Disruption of ocean circulation** (e.g., the AMOC, which moves heat through the Atlantic)
 
@@ -636,17 +636,17 @@ Global sea level is rising for **two** distinct reasons — know both:
       {
         id: 'apecc5-ocean-chem',
         type: 'text' as const,
-        content: `## Ocean Acidification: The "Other CO₂ Problem"
+        content: `## Ocean Acidification: The "Other $CO_{2}$ Problem"
 
-The ocean absorbs roughly a quarter of the CO₂ we emit. That's good for the atmosphere but bad for ocean chemistry:
+The ocean absorbs roughly a quarter of the $CO_{2}$ we emit. That's good for the atmosphere but bad for ocean chemistry:
 
 $$\\text{CO}_2 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{CO}_3 \\rightarrow \\text{H}^+ + \\text{HCO}_3^-$$
 
-Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ means a **lower pH** — the ocean becomes more acidic. Surface-ocean pH has already dropped from about **8.2 to ~8.1** since pre-industrial times (a ~30% increase in H⁺, because pH is logarithmic).
+Dissolved $CO_{2}$ forms **carbonic acid**, releasing **$H^{+}$** ions. More $H^{+}$ means a **lower pH** — the ocean becomes more acidic. Surface-ocean pH has already dropped from about **8.2 to ~8.1** since pre-industrial times (a ~30% increase in $H^{+}$, because pH is logarithmic).
 
-> ⚠️ **Why it harms life:** Extra H⁺ ions tie up **carbonate ($\\text{CO}_3^{2-}$)** that organisms like **corals, oysters, clams, and pteropods** need to build calcium-carbonate (CaCO₃) shells and skeletons. Acidification makes shell-building harder and can dissolve existing shells.
+> ⚠️ **Why it harms life:** Extra $H^{+}$ ions tie up **carbonate ($\\text{CO}_3^{2-}$)** that organisms like **corals, oysters, clams, and pteropods** need to build calcium-carbonate $(CaCO_{3})$ shells and skeletons. Acidification makes shell-building harder and can dissolve existing shells.
 
-> 💡 **Separate from warming:** Ocean acidification is caused by CO₂ chemistry, **not** by temperature. It would happen even if CO₂ trapped no heat at all. Don't confuse it with **coral bleaching**, which is driven by *warming* water stressing corals into expelling their symbiotic algae.`,
+> 💡 **Separate from warming:** Ocean acidification is caused by $CO_{2}$ chemistry, **not** by temperature. It would happen even if $CO_{2}$ trapped no heat at all. Don't confuse it with **coral bleaching**, which is driven by *warming* water stressing corals into expelling their symbiotic algae.`,
       },
       {
         id: 'apecc5-dd-impacts',
@@ -654,16 +654,16 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
         content: `**Match Cause to Effect** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'Ocean absorbs CO₂ → forms carbonic acid →', options: ['ocean pH drops (acidification)', 'ocean pH rises', 'sea level falls', 'albedo increases'] },
+            { label: 'Ocean absorbs $CO_{2}$ → forms carbonic acid →', options: ['ocean pH drops (acidification)', 'ocean pH rises', 'sea level falls', 'albedo increases'] },
             { label: 'Warmer water stresses corals → algae expelled →', options: ['coral bleaching', 'ocean acidification', 'thermal expansion', 'permafrost thaw'] },
             { label: 'Sea level rises along the coast →', options: ['saltwater intrusion into aquifers', 'more freshwater inland', 'higher albedo', 'cooler oceans'] },
             { label: 'Warming shifts climate zones poleward → species:', options: ['ranges shift toward the poles / higher elevations', 'all go extinct instantly', 'ranges shift toward the equator', 'stop reproducing entirely'] },
           ],
           correctAnswers: ['ocean pH drops (acidification)', 'coral bleaching', 'saltwater intrusion into aquifers', 'ranges shift toward the poles / higher elevations'],
-          hint1: 'Carbonic acid releases H⁺ ions, which lower pH.',
+          hint1: 'Carbonic acid releases $H^{+}$ ions, which lower pH.',
           hint2: 'Bleaching is a *temperature* effect; acidification is a *chemistry* effect.',
           hint3: 'As regions warm, suitable habitat moves toward cooler poles and higher elevations.',
-          explanation: 'CO₂ → carbonic acid → lower pH (acidification). Warming → bleaching. Higher seas → saltwater intrusion. Warming shifts species ranges poleward and upslope, chasing tolerable temperatures.',
+          explanation: '$CO_{2}$ → carbonic acid → lower pH (acidification). Warming → bleaching. Higher seas → saltwater intrusion. Warming shifts species ranges poleward and upslope, chasing tolerable temperatures.',
         },
       },
       {
@@ -707,7 +707,7 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
                 'The communities least responsible for emissions often suffer the worst impacts and have the fewest resources to adapt',
                 'Wealthy nations always experience the most severe damage',
                 'Climate impacts are distributed perfectly evenly worldwide',
-                'Only the people who emit the most CO₂ are harmed by it',
+                'Only the people who emit the most $CO_{2}$ are harmed by it',
               ],
               correctAnswer: 0,
               explanation: 'Low-income communities and small island nations contribute little to global emissions yet face severe impacts and have limited adaptive capacity — an unequal burden, hence an environmental-justice concern.',
@@ -744,7 +744,7 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
 | **Tackles** | The *cause* | The *consequences* |
 | **Examples** | Renewable energy, efficiency, reforestation, carbon capture, electric vehicles | Sea walls, drought-resistant crops, early-warning systems, managed retreat from coasts |
 
-> 💡 **Quick test:** If an action **lowers emissions or pulls CO₂ out of the air**, it's mitigation. If it **helps people/ecosystems cope with warming that's already locked in**, it's adaptation. Building a sea wall doesn't reduce CO₂ — it's adaptation. Switching a grid to solar is mitigation.`,
+> 💡 **Quick test:** If an action **lowers emissions or pulls $CO_{2}$ out of the air**, it's mitigation. If it **helps people/ecosystems cope with warming that's already locked in**, it's adaptation. Building a sea wall doesn't reduce $CO_{2}$ — it's adaptation. Switching a grid to solar is mitigation.`,
       },
       {
         id: 'apecc6-dd-mitadapt',
@@ -754,13 +754,13 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
           dropdowns: [
             { label: 'Replacing a coal plant with wind turbines:', options: ['Mitigation', 'Adaptation'] },
             { label: 'Building sea walls to protect a coastal city:', options: ['Adaptation', 'Mitigation'] },
-            { label: 'Planting trees to absorb CO₂ (reforestation):', options: ['Mitigation', 'Adaptation'] },
+            { label: 'Planting trees to absorb $CO_{2}$ (reforestation):', options: ['Mitigation', 'Adaptation'] },
             { label: 'Breeding drought-tolerant crop varieties:', options: ['Adaptation', 'Mitigation'] },
-            { label: 'Capturing CO₂ from a smokestack and storing it underground:', options: ['Mitigation', 'Adaptation'] },
+            { label: 'Capturing $CO_{2}$ from a smokestack and storing it underground:', options: ['Mitigation', 'Adaptation'] },
           ],
           correctAnswers: ['Mitigation', 'Adaptation', 'Mitigation', 'Adaptation', 'Mitigation'],
-          hint1: 'Mitigation attacks the cause (emissions/CO₂); adaptation manages the consequences.',
-          hint2: 'Sea walls and drought-tolerant crops cope with impacts — they don\'t cut CO₂.',
+          hint1: 'Mitigation attacks the cause $(emissions/CO_{2})$; adaptation manages the consequences.',
+          hint2: 'Sea walls and drought-tolerant crops cope with impacts — they don\'t cut $CO_{2}$.',
           hint3: 'Wind, reforestation, and carbon capture all reduce or remove greenhouse gases.',
           explanation: 'Wind power, reforestation, and carbon capture reduce/remove greenhouse gases (mitigation). Sea walls and drought-tolerant crops help us live with impacts already underway (adaptation).',
         },
@@ -771,20 +771,20 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
         content: `## Mitigation Strategies in Detail
 
 **Decarbonize energy** (the biggest lever, since fossil fuels are the top source):
-- **Renewables** — solar, wind, hydro, geothermal: little to no operating CO₂.
+- **Renewables** — solar, wind, hydro, geothermal: little to no operating $CO_{2}$.
 - **Nuclear** — low-carbon but raises waste and safety concerns.
 - **Energy efficiency** — the cheapest "source" of all; the cleanest kWh is the one you never use.
 
 **Manage carbon:**
 - **Reforestation / afforestation** — grow new carbon sinks.
-- **Carbon capture and storage (CCS)** — trap CO₂ before it enters the air and store it underground.
-- **Reduce CH₄ and N₂O** — fix gas leaks, manage livestock and manure, use fertilizer efficiently.
+- **Carbon capture and storage (CCS)** — trap $CO_{2}$ before it enters the air and store it underground.
+- **Reduce $CH_{4}$ and $N_{2}O$** — fix gas leaks, manage livestock and manure, use fertilizer efficiently.
 
 **Policy tools (put a price on carbon):**
 
 | Tool | How It Works |
 |------|--------------|
-| **Carbon tax** | A fee per ton of CO₂ emitted — makes polluting more expensive |
+| **Carbon tax** | A fee per ton of $CO_{2}$ emitted — makes polluting more expensive |
 | **Cap-and-trade** | A government **cap** on total emissions; companies **trade** permits, so cuts happen where they're cheapest |
 | **Subsidies / standards** | Support clean tech (tax credits) and set efficiency/emission rules |
 
@@ -808,7 +808,7 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
               explanation: 'Cap-and-trade caps total emissions and lets firms trade permits. Companies that can cut cheaply do so and sell permits; the market drives reductions at the lowest overall cost.',
             },
             {
-              question: 'Which strategy is the most effective single lever for reducing CO₂ emissions, given the largest source?',
+              question: 'Which strategy is the most effective single lever for reducing $CO_{2}$ emissions, given the largest source?',
               options: [
                 'Transitioning electricity and transportation away from fossil fuels',
                 'Building taller smokestacks',
@@ -816,7 +816,7 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
                 'Painting roofs white',
               ],
               correctAnswer: 0,
-              explanation: 'Burning fossil fuels is the dominant CO₂ source, so decarbonizing energy and transport addresses the cause most directly. The other options are minor or are adaptation, not mitigation.',
+              explanation: 'Burning fossil fuels is the dominant $CO_{2}$ source, so decarbonizing energy and transport addresses the cause most directly. The other options are minor or are adaptation, not mitigation.',
             },
             {
               question: 'The 2015 Paris Agreement is best described as:',
@@ -837,9 +837,9 @@ Dissolved CO₂ forms **carbonic acid**, releasing **H⁺** ions. More H⁺ mean
         type: 'input-boxes' as const,
         content: `**Emissions-Reduction Math** 🧮
 
-**1)** A power company emits $500{,}000$ tons of CO₂ per year and pledges a $40\\%$ reduction. How many tons will it emit per year after the cut?
+**1)** A power company emits $500{,}000$ tons of $CO_{2}$ per year and pledges a $40\\%$ reduction. How many tons will it emit per year after the cut?
 
-**2)** A \\$50-per-ton carbon tax is applied to a factory that emits $2{,}000$ tons of CO₂. What is the annual tax bill, in dollars? (Enter just the number.)`,
+**2)** A \\$50-per-ton carbon tax is applied to a factory that emits $2{,}000$ tons of $CO_{2}$. What is the annual tax bill, in dollars? (Enter just the number.)`,
         exercise: {
           boxes: 2,
           correctAnswers: ['300000', '100000'],
@@ -876,12 +876,12 @@ You now understand the full arc: the **energy balance** and natural greenhouse e
 |---------|----------------------|
 | **Greenhouse effect** | Atmosphere lets shortwave sunlight in, traps outgoing longwave IR |
 | **Natural vs. enhanced** | Natural keeps us +33 °C; humans *enhance* it with extra GHGs |
-| **GWP** | Heat trapped per mass over 100 yr, relative to CO₂ = 1 |
-| **Top CO₂ source** | Burning fossil fuels (coal > oil > gas in carbon intensity) |
-| **Carbon sink vs. source** | Sink removes CO₂ (forests, oceans); source adds it (combustion) |
+| **GWP** | Heat trapped per mass over 100 yr, relative to $CO_{2}$ = 1 |
+| **Top $CO_{2}$ source** | Burning fossil fuels (coal > oil > gas in carbon intensity) |
+| **Carbon sink vs. source** | Sink removes $CO_{2}$ (forests, oceans); source adds it (combustion) |
 | **Ice–albedo feedback** | Melting ice → darker surface → more absorption → more warming (positive) |
 | **Sea-level rise** | Thermal expansion + melting *land* ice (not floating sea ice) |
-| **Ocean acidification** | CO₂ → carbonic acid → lower pH → harder shell-building |
+| **Ocean acidification** | $CO_{2}$ → carbonic acid → lower pH → harder shell-building |
 | **Mitigation vs. adaptation** | Mitigation cuts the cause; adaptation manages the harm |
 
 > ⚠️ **The five most common exam traps:** (1) confusing weather with climate, (2) thinking the greenhouse effect is inherently bad, (3) confusing greenhouse warming with ozone depletion, (4) thinking melting *sea* ice raises sea level, and (5) confusing acidification (chemistry) with bleaching (temperature). Master these five and you've beaten most of the unit's tricks.`,
@@ -895,13 +895,13 @@ You now understand the full arc: the **energy balance** and natural greenhouse e
             {
               question: 'A student claims, "The hole in the ozone layer is what causes global warming." What is the best correction?',
               options: [
-                'These are different problems: ozone depletion (CFCs in the stratosphere) is distinct from the greenhouse effect (CO₂ and other GHGs trapping heat)',
+                'These are different problems: ozone depletion (CFCs in the stratosphere) is distinct from the greenhouse effect ($CO_{2}$ and other GHGs trapping heat)',
                 'They are exactly the same process',
                 'Ozone depletion cools the planet, which causes warming',
                 'Global warming is caused only by the ozone layer thinning',
               ],
               correctAnswer: 0,
-              explanation: 'Ozone depletion (stratospheric, caused by CFCs) and the greenhouse effect (tropospheric heat-trapping, mostly CO₂) are separate issues. They share CFCs as a connection but are not the same mechanism.',
+              explanation: 'Ozone depletion (stratospheric, caused by CFCs) and the greenhouse effect (tropospheric heat-trapping, mostly $CO_{2}$) are separate issues. They share CFCs as a connection but are not the same mechanism.',
             },
             {
               question: 'Which sequence correctly describes the ice–albedo positive feedback?',
@@ -923,7 +923,7 @@ You now understand the full arc: the **energy balance** and natural greenhouse e
                 'All three are adaptation',
               ],
               correctAnswer: 0,
-              explanation: 'A sea wall manages an impact (rising seas) without reducing emissions — adaptation. Electric buses and reforestation cut/remove CO₂ — mitigation.',
+              explanation: 'A sea wall manages an impact (rising seas) without reducing emissions — adaptation. Electric buses and reforestation cut/remove $CO_{2}$ — mitigation.',
             },
           ],
         },
@@ -933,7 +933,7 @@ You now understand the full arc: the **energy balance** and natural greenhouse e
         type: 'input-boxes' as const,
         content: `**Synthesis Numbers** 🧮
 
-**1)** Pre-industrial CO₂ was $280$ ppm; a future scenario projects $560$ ppm. By what factor (× the pre-industrial value) would CO₂ have increased? Enter a number.
+**1)** Pre-industrial $CO_{2}$ was $280$ ppm; a future scenario projects $560$ ppm. By what factor (× the pre-industrial value) would $CO_{2}$ have increased? Enter a number.
 
 **2)** Surface-ocean pH has fallen from about $8.2$ to about $8.1$. Enter the size of that pH drop (a positive decimal).`,
         exercise: {
@@ -942,7 +942,7 @@ You now understand the full arc: the **energy balance** and natural greenhouse e
           hint1: 'Part 1: divide the future value by the pre-industrial value, $560 \\div 280$.',
           hint2: '$560 / 280 = 2$ — a doubling.',
           hint3: 'Part 2: $8.2 - 8.1$.',
-          explanation: '1) $560 \\div 280 = 2$, a doubling of pre-industrial CO₂. 2) $8.2 - 8.1 = 0.1$ pH-unit drop — which, because pH is logarithmic, is roughly a 30% rise in H⁺ concentration.',
+          explanation: '1) $560 \\div 280 = 2$, a doubling of pre-industrial $CO_{2}$. 2) $8.2 - 8.1 = 0.1$ pH-unit drop — which, because pH is logarithmic, is roughly a 30% rise in $H^{+}$ concentration.',
         },
       },
       {
@@ -965,7 +965,7 @@ Answer all three to finish the lesson.`,
               explanation: 'By Archimedes\' principle, floating ice already displaces its own weight, so melting it doesn\'t change sea level. Land-based ice (Greenland, glaciers) adds new water, raising sea level.',
             },
             {
-              question: 'Despite having a Global Warming Potential of only 1, CO₂ is the dominant driver of human-caused warming primarily because:',
+              question: 'Despite having a Global Warming Potential of only 1, $CO_{2}$ is the dominant driver of human-caused warming primarily because:',
               options: [
                 'It is emitted in enormous quantities and remains in the atmosphere for centuries',
                 'It has the highest GWP of all greenhouse gases',
@@ -973,7 +973,7 @@ Answer all three to finish the lesson.`,
                 'It directly destroys stratospheric ozone',
               ],
               correctAnswer: 0,
-              explanation: 'Total forcing = amount × potency × lifetime. CO₂\'s vast emissions volume and century-plus residence time outweigh its low per-molecule potency.',
+              explanation: 'Total forcing = amount × potency × lifetime. $CO_{2}$\'s vast emissions volume and century-plus residence time outweigh its low per-molecule potency.',
             },
             {
               question: 'A new policy charges companies $\\$40$ per ton of CO₂ they emit. This is an example of:',

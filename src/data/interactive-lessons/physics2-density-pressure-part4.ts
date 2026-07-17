@@ -26,7 +26,7 @@ Every fluid statics problem follows this pattern:
 
 **Step 3 — Apply** $P_2 = P_1 + \\rho g \\Delta h$ moving downward (pressure increases with depth)
 
-**Step 4 — Watch units!** Convert cm → m, g/cm³ → kg/m³ before plugging in
+**Step 4 — Watch units!** Convert cm → m, $g/cm^{3}$ → $kg/m^{3}$ before plugging in
 
 ### Common Traps
 
@@ -48,7 +48,7 @@ $$P_{\\text{bottom}} = P_{\\text{atm}} + \\rho_1 g h_1 + \\rho_2 g h_2$$
 
 ### Worked Example
 
-A tank has 0.5 m of oil ($\\rho = 800$ kg/m³) floating on 2.0 m of water ($\\rho = 1000$ kg/m³). Find the absolute pressure at the bottom.
+A tank has 0.5 m of oil ($\\rho = 800$ $kg/m^{3}$) floating on 2.0 m of water ($\\rho = 1000$ $kg/m^{3}$). Find the absolute pressure at the bottom.
 
 $$P = P_{\\text{atm}} + \\rho_{\\text{oil}} g h_{\\text{oil}} + \\rho_{\\text{water}} g h_{\\text{water}}$$
 
@@ -63,12 +63,12 @@ $$P = 1.24 \\text{ atm}$$
       id: 'dp4-multi-layer-drill',
       type: 'input-boxes' as const,
       content: `
-**Layered Fluid Drill** (use $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa)
+**Layered Fluid Drill** (use $g = 10$ $m/s^{2}$, $P_{\\text{atm}} = 10^5$ Pa)
 
 A container has three layers:
-- Top: 0.3 m of gasoline ($\\rho = 680$ kg/m³)
-- Middle: 1.0 m of water ($\\rho = 1000$ kg/m³)
-- Bottom: 0.1 m of mercury ($\\rho = 13{,}600$ kg/m³)
+- Top: 0.3 m of gasoline ($\\rho = 680$ $kg/m^{3}$)
+- Middle: 1.0 m of water ($\\rho = 1000$ $kg/m^{3}$)
+- Bottom: 0.1 m of mercury ($\\rho = 13{,}600$ $kg/m^{3}$)
 
 1) Gauge pressure at the bottom of the gasoline layer (in Pa)
 
@@ -135,7 +135,7 @@ A container has three layers:
       content: `
 ## AP-Style Problem: The U-Tube
 
-A U-tube contains mercury ($\\rho = 13{,}600$ kg/m³). Water ($\\rho = 1000$ kg/m³) is poured into the left side to a height of 27.2 cm above the mercury surface.
+A U-tube contains mercury ($\\rho = 13{,}600$ $kg/m^{3}$). Water ($\\rho = 1000$ $kg/m^{3}$) is poured into the left side to a height of 27.2 cm above the mercury surface.
 
 **Question:** How far does the mercury level on the right side rise above the mercury level on the left?
 
@@ -161,7 +161,7 @@ The mercury on the right rises **2.0 cm** above the mercury on the left. The tot
       exercise: {
         questions: [
           {
-            question: 'A hydraulic brake system has a master cylinder with area 2 cm² and a wheel cylinder with area 20 cm². If you push with 50 N on the brake pedal:',
+            question: 'A hydraulic brake system has a master cylinder with area 2 $cm^{2}$ and a wheel cylinder with area 20 $cm^{2}$. If you push with 50 N on the brake pedal:',
             options: [
               'The wheel gets 5 N of force',
               'The wheel gets 50 N of force',
@@ -174,10 +174,10 @@ The mercury on the right rises **2.0 cm** above the mercury on the left. The tot
           {
             question: 'At the bottom of the ocean (depth ~11 km), the gauge pressure is approximately:',
             options: [
-              '1.1 × 10⁵ Pa (about 1 atm)',
-              '1.1 × 10⁷ Pa (about 100 atm)',
-              '1.1 × 10⁸ Pa (about 1100 atm)',
-              '1.1 × 10¹⁰ Pa'
+              '$1.1 \\times 10^{5}$ Pa (about 1 atm)',
+              '$1.1 \\times 10^{7}$ Pa (about 100 atm)',
+              '$1.1 \\times 10^{8}$ Pa (about 1100 atm)',
+              '$1.1 \\times 10^{10}$ Pa'
             ],
             correctAnswer: 2,
             explanation: '$P = \\rho g h = (1000)(10)(11{,}000) = 1.1 \\times 10^8$ Pa ≈ 1100 atm. The pressure is enormous — about 1100 times atmospheric!'

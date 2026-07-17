@@ -54,7 +54,7 @@ $$\\Delta v = a \\times \\Delta t$$
 
 ### Example
 
-An $a$-$t$ graph shows $a = 3$ m/s² from $t = 0$ to $t = 5$ s. If $v_0 = 2$ m/s:
+An $a$-$t$ graph shows $a = 3$ $m/s^{2}$ from $t = 0$ to $t = 5$ s. If $v_0 = 2$ m/s:
 
 $$\\Delta v = (3)(5) = 15 \\text{ m/s}$$
 $$v_f = v_0 + \\Delta v = 2 + 15 = 17 \\text{ m/s}$$
@@ -62,7 +62,7 @@ $$v_f = v_0 + \\Delta v = 2 + 15 = 17 \\text{ m/s}$$
 ### Free Fall on an $a$-$t$ Graph
 
 For an object in free fall (taking up as positive):
-- The $a$-$t$ graph is a horizontal line at $a = -9.8$ m/s²
+- The $a$-$t$ graph is a horizontal line at $a = -9.8$ $m/s^{2}$
 - It stays constant the entire time the object is in the air
       `
     },
@@ -80,7 +80,7 @@ When acceleration changes with time:
 
 ### Example
 
-If acceleration increases linearly from 0 to 6 m/s² over 4 s:
+If acceleration increases linearly from 0 to 6 $m/s^{2}$ over 4 s:
 
 $$\\Delta v = \\text{area of triangle} = \\frac{1}{2}(4)(6) = 12 \\text{ m/s}$$
 
@@ -107,7 +107,7 @@ $$\\Delta v = \\text{area of triangle} = \\frac{1}{2}(4)(6) = 12 \\text{ m/s}$$
             explanation: 'The area under an $a$-$t$ graph equals $\\int a \\, dt = \\Delta v$ (the change in velocity).'
           },
           {
-            question: 'An $a$-$t$ graph shows a constant value of $-2$ m/s² for 5 s. If $v_0 = +10$ m/s, what is the final velocity?',
+            question: 'An $a$-$t$ graph shows a constant value of $-2$ $m/s^{2}$ for 5 s. If $v_0 = +10$ m/s, what is the final velocity?',
             options: [
               '0 m/s',
               '+12 m/s',
@@ -121,12 +121,12 @@ $$\\Delta v = \\text{area of triangle} = \\frac{1}{2}(4)(6) = 12 \\text{ m/s}$$
             question: 'For an object in free fall (upward positive), the $a$-$t$ graph is:',
             options: [
               'A line sloping downward',
-              'A horizontal line at $a = +9.8$ m/s²',
-              'A horizontal line at $a = -9.8$ m/s²',
+              'A horizontal line at $a = +9.8$ $m/s^{2}$',
+              'A horizontal line at $a = -9.8$ $m/s^{2}$',
               'A parabola'
             ],
             correctAnswer: 2,
-            explanation: 'In free fall, $a = -g = -9.8$ m/s² is constant, so the $a$-$t$ graph is a horizontal line at $-9.8$ m/s².'
+            explanation: 'In free fall, $a = -g = -9.8$ $m/s^{2}$ is constant, so the $a$-$t$ graph is a horizontal line at $-9.8$ $m/s^{2}$.'
           }
         ]
       }
@@ -137,13 +137,13 @@ $$\\Delta v = \\text{area of triangle} = \\frac{1}{2}(4)(6) = 12 \\text{ m/s}$$
       content: `
 **$a$-$t$ Graph Calculations** 🧮
 
-An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ to $a = 8$ m/s² at $t = 4$ s. The initial velocity is $v_0 = 5$ m/s.
+An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ to $a = 8$ $m/s^{2}$ at $t = 4$ s. The initial velocity is $v_0 = 5$ m/s.
 
 1) What is the change in velocity from $t = 0$ to $t = 4$ s? (in m/s)
 
 2) What is the velocity at $t = 4$ s? (in m/s)
 
-3) If the acceleration then remains constant at 8 m/s² for another 3 s (from $t = 4$ to $t = 7$ s), what is $\\Delta v$ during that interval? (in m/s)
+3) If the acceleration then remains constant at 8 $m/s^{2}$ for another 3 s (from $t = 4$ to $t = 7$ s), what is $\\Delta v$ during that interval? (in m/s)
       `,
       exercise: {
         boxes: 3,
@@ -192,7 +192,7 @@ An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ 
       exercise: {
         questions: [
           {
-            question: 'An $a$-$t$ graph shows $a = +4$ m/s² from $t = 0$ to $t = 3$ s, then $a = -2$ m/s² from $t = 3$ to $t = 6$ s. If $v_0 = 0$, what is $v$ at $t = 6$ s?',
+            question: 'An $a$-$t$ graph shows $a = +4$ $m/s^{2}$ from $t = 0$ to $t = 3$ s, then $a = -2$ $m/s^{2}$ from $t = 3$ to $t = 6$ s. If $v_0 = 0$, what is $v$ at $t = 6$ s?',
             options: [
               '6 m/s',
               '12 m/s',

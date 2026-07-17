@@ -25,7 +25,7 @@ export const mcatOrganSysPart5Data = {
 
 | Class | Examples | Solubility | Receptor location | Speed/Duration |
 |---|---|---|---|---|
-| **Peptide** | Insulin, glucagon, ADH, GH | Hydrophilic | Cell-surface (→ cAMP/IP₃ second messengers) | Fast, short |
+| **Peptide** | Insulin, glucagon, ADH, GH | Hydrophilic | Cell-surface (→ $cAMP/IP_{3}$ second messengers) | Fast, short |
 | **Steroid** | Cortisol, aldosterone, sex hormones | Lipophilic | Intracellular/nuclear (→ alter gene transcription) | Slow, long |
 | **Amino-acid-derived** | T3/T4 (lipophilic), epinephrine (hydrophilic) | Mixed | T3/T4 nuclear; catecholamines surface | Varies |
 
@@ -52,9 +52,9 @@ Cortisol exerts **negative feedback** on BOTH the hypothalamus (↓CRH) and pitu
 
 ### Calcium Regulation (Antagonistic Feedback)
 
-- **PTH**: ↑ bone resorption, ↑ renal Ca²⁺ reabsorption, ↑ activation of vitamin D (→ ↑ gut Ca²⁺ absorption) → **raises** Ca²⁺.
-- **Calcitonin**: inhibits osteoclasts → **lowers** Ca²⁺ (minor in humans).
-- Low serum Ca²⁺ → PTH release → restores Ca²⁺ (classic negative-feedback loop).
+- **PTH**: ↑ bone resorption, ↑ renal $Ca^{2+}$ reabsorption, ↑ activation of vitamin D (→ ↑ gut $Ca^{2+}$ absorption) → **raises** $Ca^{2+}$.
+- **Calcitonin**: inhibits osteoclasts → **lowers** $Ca^{2+}$ (minor in humans).
+- Low serum $Ca^{2+}$ → PTH release → restores $Ca^{2+}$ (classic negative-feedback loop).
 
 ### Feedback Loops Summary
 
@@ -122,13 +122,13 @@ Cortisol exerts **negative feedback** on BOTH the hypothalamus (↓CRH) and pitu
 <details>
 <summary><b>Example 3: Reason through a calcium feedback loop</b></summary>
 
-**Question:** A patient's parathyroid glands are accidentally removed during thyroid surgery. Predict the change in serum Ca²⁺ and the symptom.
+**Question:** A patient's parathyroid glands are accidentally removed during thyroid surgery. Predict the change in serum $Ca^{2+}$ and the symptom.
 
 **Solution:**
-1. No PTH → loss of bone resorption, less renal Ca²⁺ reabsorption, less vitamin-D activation → **serum Ca²⁺ falls** (hypocalcemia). ✓
-2. Low Ca²⁺ increases neuromuscular excitability → **tetany** (muscle cramps/spasms, e.g., Chvostek/Trousseau signs).
+1. No PTH → loss of bone resorption, less renal $Ca^{2+}$ reabsorption, less vitamin-D activation → **serum $Ca^{2+}$ falls** (hypocalcemia). ✓
+2. Low $Ca^{2+}$ increases neuromuscular excitability → **tetany** (muscle cramps/spasms, e.g., Chvostek/Trousseau signs).
 
-**High-yield connection:** PTH is the dominant minute-to-minute Ca²⁺ regulator. Without it, calcitonin cannot compensate (calcitonin only lowers Ca²⁺), so hypocalcemia results. Hyperparathyroidism does the opposite: bone pain, kidney stones, "stones, bones, groans."
+**High-yield connection:** PTH is the dominant minute-to-minute $Ca^{2+}$ regulator. Without it, calcitonin cannot compensate (calcitonin only lowers $Ca^{2+}$), so hypocalcemia results. Hyperparathyroidism does the opposite: bone pain, kidney stones, "stones, bones, groans."
 </details>`
     },
     {

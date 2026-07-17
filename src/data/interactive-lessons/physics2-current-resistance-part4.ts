@@ -26,7 +26,7 @@ $$\\rho = \\rho_0 \\bigl(1 + \\alpha \\Delta T\\bigr)$$
 |--------|---------|
 | $\\rho$ | Resistivity at temperature $T$ |
 | $\\rho_0$ | Resistivity at reference temperature $T_0$ (usually 20°C) |
-| $\\alpha$ | Temperature coefficient of resistivity (°C⁻¹) |
+| $\\alpha$ | Temperature coefficient of resistivity (°$C^{-1}$) |
 | $\\Delta T$ | $T - T_0$ (temperature change) |
 
 Since $R = \\rho L/A$ and the geometry changes are usually negligible:
@@ -35,7 +35,7 @@ $$R = R_0 \\bigl(1 + \\alpha \\Delta T\\bigr)$$
 
 ### Typical Temperature Coefficients
 
-| Material | $\\alpha$ (°C⁻¹) |
+| Material | $\\alpha$ (°$C^{-1}$) |
 |----------|------|
 | Silver | $3.8 \\times 10^{-3}$ |
 | Copper | $3.9 \\times 10^{-3}$ |
@@ -95,7 +95,7 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
       exercise: {
         questions: [
           {
-            question: 'A light bulb filament (tungsten, $\\alpha = 4.5 \\times 10^{-3}$ °C⁻¹) has resistance 20 $\\Omega$ at 20°C. When operating at 2500°C, its resistance is closest to:',
+            question: 'A light bulb filament (tungsten, $\\alpha = 4.5 \\times 10^{-3}$ °$C^{-1}$) has resistance 20 $\\Omega$ at 20°C. When operating at 2500°C, its resistance is closest to:',
             options: [
               '40 $\\Omega$',
               '120 $\\Omega$',
@@ -106,7 +106,7 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
             explanation: '$R = R_0(1 + \\alpha \\Delta T) = 20(1 + 0.0045 \\times 2480) = 20(1 + 11.16) = 20(12.16) = 243$ $\\Omega \\approx 240$ $\\Omega$.'
           },
           {
-            question: 'Nichrome ($\\alpha = 0.4 \\times 10^{-3}$ °C⁻¹) is used in heating elements because:',
+            question: 'Nichrome ($\\alpha = 0.4 \\times 10^{-3}$ °$C^{-1}$) is used in heating elements because:',
             options: [
               'It has very low resistance',
               'Its resistance changes very little with temperature',
@@ -136,11 +136,11 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
       content: `
 **Temperature-Resistance Drill** 🌡️
 
-1) A copper wire ($\\alpha = 3.9 \\times 10^{-3}$ °C⁻¹) has resistance 5.0 $\\Omega$ at 20°C. What is its resistance at 120°C? (in $\\Omega$)
+1) A copper wire ($\\alpha = 3.9 \\times 10^{-3}$ °$C^{-1}$) has resistance 5.0 $\\Omega$ at 20°C. What is its resistance at 120°C? (in $\\Omega$)
 
-2) An aluminum wire ($\\alpha = 3.9 \\times 10^{-3}$ °C⁻¹) has resistance 10.0 $\\Omega$ at 20°C. At what temperature will its resistance be 15.0 $\\Omega$? (in °C)
+2) An aluminum wire ($\\alpha = 3.9 \\times 10^{-3}$ °$C^{-1}$) has resistance 10.0 $\\Omega$ at 20°C. At what temperature will its resistance be 15.0 $\\Omega$? (in °C)
 
-3) A carbon resistor ($\\alpha = -0.5 \\times 10^{-3}$ °C⁻¹) has resistance 1000 $\\Omega$ at 20°C. What is its resistance at 220°C? (in $\\Omega$)
+3) A carbon resistor ($\\alpha = -0.5 \\times 10^{-3}$ °$C^{-1}$) has resistance 1000 $\\Omega$ at 20°C. What is its resistance at 220°C? (in $\\Omega$)
 
 *Round all answers to 3 significant figures.*
       `,

@@ -14,7 +14,7 @@ export const bioNucleicAcidsPart4Data = {
 3. **Chargaff's pairing** — A–T (or A–U), G–C; G–C bonds are stronger (3 H-bonds).
 4. **Antiparallel orientation** enables semiconservative replication and accurate copying.
 5. **Central dogma** — DNA → mRNA → protein (transcription → translation).
-6. **Nucleotides also serve as energy carriers** — ATP, NAD⁺, FAD, cAMP all share a nucleotide backbone.
+6. **Nucleotides also serve as energy carriers** — ATP, $NAD^{+}$, FAD, cAMP all share a nucleotide backbone.
 
 ### Common AP traps
 

@@ -113,7 +113,7 @@ Check: $q' = \\frac{0.4}{1 + 0.4} = \\frac{0.4}{1.4} \\approx 0.286$. ✓ — ma
               '0.99'
             ],
             correctAnswer: 2,
-            explanation: 'q² = 1/10,000 = 0.0001, so q = 0.01 and p = 0.99. Carrier frequency = 2pq = 2(0.99)(0.01) = 0.0198 (about 2%). Option B (0.01) is the trap — that is the ALLELE frequency q, not the carrier (heterozygote) frequency 2pq. Option A (0.0001) is q² (the affected frequency). The carrier frequency (~1 in 50) is far larger than the affected frequency (1 in 10,000).'
+            explanation: '$q^{2}$ = 1/10,000 = 0.0001, so q = 0.01 and p = 0.99. Carrier frequency = 2pq = 2(0.99)(0.01) = 0.0198 (about 2%). Option B (0.01) is the trap — that is the ALLELE frequency q, not the carrier (heterozygote) frequency 2pq. Option A (0.0001) is $q^{2}$ (the affected frequency). The carrier frequency (~1 in 50) is far larger than the affected frequency (1 in 10,000).'
           },
           {
             question: 'A population has q = 0.5 for a recessive allele, and the recessive homozygote is lethal before reproduction (w = 0). Using q\' = q/(1 + q), what is q after one generation of selection?',
@@ -186,15 +186,15 @@ Since $\\chi^2 = 74.2 \\gg 3.84$, we **REJECT** the null hypothesis of Hardy-Wei
       exercise: {
         questions: [
           {
-            question: 'A student performs a chi-square goodness-of-fit test comparing observed genotype counts to Hardy-Weinberg expectations for a locus with two alleles and three genotypes. The calculated χ² = 2.10, and the critical value at df = 1, α = 0.05 is 3.84. What is the correct conclusion?',
+            question: 'A student performs a chi-square goodness-of-fit test comparing observed genotype counts to Hardy-Weinberg expectations for a locus with two alleles and three genotypes. The calculated $\\chi^{2}$ = 2.10, and the critical value at df = 1, α = 0.05 is 3.84. What is the correct conclusion?',
             options: [
               'Reject the null hypothesis; the population is definitely evolving',
               'Fail to reject the null hypothesis; the deviation is small enough to be due to chance, consistent with Hardy-Weinberg equilibrium',
-              'The test is invalid because χ² must be greater than the critical value',
+              'The test is invalid because $\\chi^{2}$ must be greater than the critical value',
               'Accept the null hypothesis as proven true'
             ],
             correctAnswer: 1,
-            explanation: 'Because χ² = 2.10 < 3.84 (critical value), we FAIL TO REJECT the null hypothesis — the observed counts are close enough to expected that the difference could be chance, consistent with equilibrium. Option D is the trap: we never "prove" or "accept" a null hypothesis as true; failing to reject means only that we lack evidence against it. Also note df = 3 genotypes − 2 alleles = 1, which is correct here.'
+            explanation: 'Because $\\chi^{2}$ = 2.10 < 3.84 (critical value), we FAIL TO REJECT the null hypothesis — the observed counts are close enough to expected that the difference could be chance, consistent with equilibrium. Option D is the trap: we never "prove" or "accept" a null hypothesis as true; failing to reject means only that we lack evidence against it. Also note df = 3 genotypes − 2 alleles = 1, which is correct here.'
           },
           {
             question: 'In a Hardy-Weinberg chi-square test with three genotype classes (AA, Aa, aa) where allele frequencies were estimated from the same sample, the correct number of degrees of freedom is:',

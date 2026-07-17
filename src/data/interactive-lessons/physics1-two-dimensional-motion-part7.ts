@@ -92,7 +92,7 @@ Congratulations on completing the Two-Dimensional Motion unit! This final lesson
       content: `
 **AP Calculation Problem** 🧮
 
-A cannon fires a shell at 50 m/s at 53° above horizontal from ground level. Use $g = 10$ m/s², $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
+A cannon fires a shell at 50 m/s at 53° above horizontal from ground level. Use $g = 10$ $m/s^{2}$, $\\cos 53° = 0.6$, $\\sin 53° = 0.8$.
 
 1) Horizontal component of initial velocity (in m/s)
 
@@ -181,7 +181,7 @@ A cannon fires a shell at 50 m/s at 53° above horizontal from ground level. Use
       content: `
 **AP Free-Response Style** 📝
 
-A rescue helicopter hovers at 80 m altitude. It drops a supply package while a person on the ground is 120 m away horizontally. The package must be dropped with a horizontal velocity to reach the person. Use $g = 10$ m/s².
+A rescue helicopter hovers at 80 m altitude. It drops a supply package while a person on the ground is 120 m away horizontally. The package must be dropped with a horizontal velocity to reach the person. Use $g = 10$ $m/s^{2}$.
 
 1) Time for the package to fall 80 m (in seconds)
 
@@ -216,7 +216,7 @@ A rescue helicopter hovers at 80 m altitude. It drops a supply package while a p
             explanation: 'Speed is a scalar (magnitude only). Velocity, displacement, and acceleration are all vectors (magnitude and direction).'
           },
           {
-            question: 'A rock is thrown at 20 m/s at 60° above horizontal from a cliff 30 m high. Using $g = 10$ m/s² and $\\sin 60° \\approx 0.866$, what is $v_{0y}$?',
+            question: 'A rock is thrown at 20 m/s at 60° above horizontal from a cliff 30 m high. Using $g = 10$ $m/s^{2}$ and $\\sin 60° \\approx 0.866$, what is $v_{0y}$?',
             options: [
               '10 m/s',
               '17.3 m/s',
