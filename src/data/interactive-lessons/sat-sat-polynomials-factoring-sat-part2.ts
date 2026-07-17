@@ -77,7 +77,7 @@ $$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$$
             explanation: '$x^2 - 14x + 49 = (x - 7)^2$. Check: $2(x)(7) = 14x$ ✓ and $7^2 = 49$ ✓.'
           },
           {
-            question: 'Factor: $3x^3 - 12x$',
+            question: 'Factor completely: $3x^3 - 12x$',
             options: ['$3x(x + 2)(x - 2)$', '$3x(x^2 - 4)$', '$3(x^3 - 4x)$', '$x(3x^2 - 12)$'],
             correctAnswer: 0,
             explanation: 'GCF first: $3x(x^2 - 4)$. Then difference of squares: $3x(x + 2)(x - 2)$. Always factor completely!'

@@ -339,7 +339,7 @@ A single bacterium has a mass of about $5 \\times 10^{-12}$ g. A scientist has a
         exercise: {
           questions: [
             {
-              question: 'Total mass $= (5 \\times 10^{-12}) \\times (3 \\times 10^{8})$ grams. Which is correct?',
+              question: 'Total mass $= (5 \\times 10^{-12}) \\times (3 \\times 10^{8})$ grams. Which is written correctly in scientific notation?',
               options: [
                 '$15 \\times 10^{-4}$ g',
                 '$1.5 \\times 10^{-3}$ g',

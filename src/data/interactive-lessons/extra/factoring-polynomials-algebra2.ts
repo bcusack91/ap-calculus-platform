@@ -86,7 +86,7 @@ So the GCF is $\\,6x^2$, and $12x^3 + 18x^2 = 6x^2(2x + 3)$.
               explanation: 'GCF of $20$ and $35$ is $5$; the lowest power of $x$ shared by both terms is $x^2$. So the GCF is $5x^2$.',
             },
             {
-              question: 'Which is the correct factored form of $8a^3 - 12a$?',
+              question: 'Which is the correct **completely factored** form of $8a^3 - 12a$?',
               options: ['$4a(2a^2 - 3)$', '$2a(4a^2 - 6)$', '$4a^2(2a - 3)$', '$4(2a^3 - 3a)$'],
               correctAnswer: 0,
               explanation: 'GCF of $8$ and $12$ is $4$; lowest power of $a$ is $a^1$. So $8a^3 - 12a = 4a(2a^2 - 3)$. Option $2a(4a^2-6)$ is true but not *fully* factored — a $2$ remains inside.',

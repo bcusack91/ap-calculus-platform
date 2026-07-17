@@ -387,7 +387,7 @@ const allQuestions: DerivativeQuestion[] = [
   {
     id: 47,
     question: 'If $x = t^2 + 1$ and $y = t^3$, what is $dy/dx$?',
-    options: ['$\\frac{3t}{2}$', '$\\frac{3t^2}{2t}$', '$\\frac{2t}{3t^2}$', '$3t^2$'],
+    options: ['$\\frac{3t}{2}$', '$6t^3$', '$\\frac{2t}{3t^2}$', '$3t^2$'],
     correctAnswer: 0,
     explanation: '$dy/dx = (dy/dt)/(dx/dt) = 3t^2 / 2t = 3t/2$.',
     difficulty: 'hard',

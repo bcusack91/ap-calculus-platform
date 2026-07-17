@@ -74,7 +74,7 @@ $$\\sqrt{-a} = i\\sqrt{a} \\quad (a > 0)$$
             },
             {
               question: 'Simplify $\\sqrt{-18}$ completely.',
-              options: ['$3i\\sqrt{2}$', '$9i\\sqrt{2}$', '$i\\sqrt{18}$', '$3\\sqrt{2}$'],
+              options: ['$3i\\sqrt{2}$', '$9i\\sqrt{2}$', '$-3\\sqrt{2}$', '$3\\sqrt{2}$'],
               correctAnswer: 0,
               explanation: '$\\sqrt{-18} = i\\sqrt{18} = i\\sqrt{9\\cdot 2} = 3i\\sqrt{2}$.',
             },
@@ -241,7 +241,7 @@ $$= 8 + 22i + 15i^2 = 8 + 22i + 15(-1) = 8 + 22i - 15 = -7 + 22i$$
             },
             {
               question: 'Multiply: $4i(2 - 3i)$.',
-              options: ['$12 + 8i$', '$8i - 12i^2$', '$-12 + 8i$', '$8i + 12$'],
+              options: ['$12 + 8i$', '$8i - 12i^2$', '$-12 + 8i$', '$-4i$'],
               correctAnswer: 0,
               explanation: '$4i\\cdot 2 - 4i\\cdot 3i = 8i - 12i^2 = 8i - 12(-1) = 12 + 8i$. The $-12i^2$ becomes $+12$.',
             },

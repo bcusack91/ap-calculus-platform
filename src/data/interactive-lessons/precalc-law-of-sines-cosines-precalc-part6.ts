@@ -192,7 +192,7 @@ This confirms: **In any parallelogram, the sum of the squares of the diagonals e
           {
             question: 'The circumradius of an equilateral triangle with side $s$ is:',
             options: [
-              '$\\frac{s}{\\sqrt{3}}$',
+              '$\\frac{s\\sqrt{3}}{6}$',
               '$\\frac{s\\sqrt{3}}{3}$',
               '$\\frac{s}{2}$',
               '$s$'

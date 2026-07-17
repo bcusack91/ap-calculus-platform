@@ -492,7 +492,7 @@ $$\\frac{dy}{dx} = -\\sin(4x)\\cdot 4 = -4\\sin(4x)$$
             },
             {
               question: 'Differentiate $y = \\ln(7x)$.',
-              options: ['$\\dfrac{1}{x}$', '$\\dfrac{7}{x}$', '$\\dfrac{1}{7x}$', '$\\dfrac{7}{7x}$'],
+              options: ['$\\dfrac{1}{x}$', '$\\dfrac{7}{x}$', '$\\dfrac{1}{7x}$', '$\\dfrac{7}{x^2}$'],
               correctAnswer: 0,
               explanation: "$\\frac{g'}{g}=\\frac{7}{7x}=\\frac{1}{x}$. The $7$s cancel — a nice reminder that $\\ln(7x)=\\ln 7 + \\ln x$ has the same derivative as $\\ln x$.",
             },

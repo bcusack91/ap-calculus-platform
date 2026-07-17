@@ -274,7 +274,7 @@ const allQuestions: IntegralQuestion[] = [
   {
     id: 33,
     question: 'What is $\\int x \\sin x \\, dx$?',
-    options: ['$-x\\cos x + \\sin x + C$', '$x\\cos x + C$', '$-x\\cos x + C$', '$\\sin x - x\\cos x + C$'],
+    options: ['$-x\\cos x + \\sin x + C$', '$x\\cos x + C$', '$-x\\cos x + C$', '$-x\\cos x - \\sin x + C$'],
     correctAnswer: 0,
     explanation: 'By parts: $u=x$, $dv=\\sin x\\,dx$. Get $-x\\cos x + \\int \\cos x\\,dx = -x\\cos x + \\sin x + C$.',
     difficulty: 'medium',

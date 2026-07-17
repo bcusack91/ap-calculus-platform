@@ -203,12 +203,12 @@ A 1.0 kg mass on a spring ($k = 400$ N/m) has total energy $E = 8.0$ J.
             question: 'A block has $v_{\\text{max}} = 6.0$ m/s in SHM. At a point where $KE = PE$, the speed is:',
             options: [
               '$3.0$ m/s',
-              '$3\\sqrt{2}$ m/s',
+              '$6\\sqrt{2}$ m/s',
               '$6.0/\\sqrt{2}$ m/s',
-              '$4.24$ m/s'
+              '$6.0$ m/s'
             ],
             correctAnswer: 2,
-            explanation: '$KE = PE = E/2$. So $\\frac{1}{2}mv^2 = \\frac{1}{2} \\cdot \\frac{1}{2}mv_{\\text{max}}^2$. $v^2 = v_{\\text{max}}^2/2$. $v = 6.0/\\sqrt{2} \\approx 4.24$ m/s. Options B and C are the same value.'
+            explanation: '$KE = PE = E/2$. So $\\frac{1}{2}mv^2 = \\frac{1}{2} \\cdot \\frac{1}{2}mv_{\\text{max}}^2$. $v^2 = v_{\\text{max}}^2/2$. $v = 6.0/\\sqrt{2} \\approx 4.24$ m/s. That is $v_{\\text{max}}/\\sqrt{2}$ — not simply half of $v_{\\text{max}}$.'
           }
         ]
       }

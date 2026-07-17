@@ -209,7 +209,7 @@ $$= \\frac{\\cancel{(x+2)}}{\\cancel{(x-3)}} \\cdot \\frac{\\cancel{(x-3)}\\,\\c
           questions: [
             {
               question: 'Simplify $\\dfrac{3x}{4} \\cdot \\dfrac{8}{9x^2}$.',
-              options: ['$\\dfrac{2}{3x}$', '$\\dfrac{2x}{3}$', '$\\dfrac{3}{2x}$', '$\\dfrac{24x}{36x^2}$'],
+              options: ['$\\dfrac{2}{3x}$', '$\\dfrac{2x}{3}$', '$\\dfrac{3}{2x}$', '$\\dfrac{2}{3}$'],
               correctAnswer: 0,
               explanation: 'Multiply: $\\dfrac{3x \\cdot 8}{4 \\cdot 9x^2} = \\dfrac{24x}{36x^2}$. Cancel $12x$: $\\dfrac{2}{3x}$.',
             },

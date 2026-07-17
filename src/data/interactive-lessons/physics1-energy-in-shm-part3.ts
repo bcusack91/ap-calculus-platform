@@ -107,7 +107,7 @@ At each position, you can draw a bar chart:
               '$0.32$ J',
               '$0.68$ J',
               '$0.36$ J',
-              '$0.68$ J'
+              '$1.04$ J'
             ],
             correctAnswer: 1,
             explanation: '$PE = \\frac{1}{2}(200)(0.06)^2 = 0.36$ J. $E = KE + PE = 0.32 + 0.36 = 0.68$ J.'

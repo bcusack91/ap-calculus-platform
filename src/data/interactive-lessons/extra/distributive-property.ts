@@ -366,7 +366,7 @@ $$6(a+2) - 3(a+1) = (6a + 12) + (-3a - 3) = 3a + 9$$
           questions: [
             {
               question: 'Simplify: $4(x + 2) + 3x$',
-              options: ['$7x + 8$', '$7x + 2$', '$4x + 8 + 3x$', '$12x + 8$'],
+              options: ['$7x + 8$', '$7x + 2$', '$4x + 8$', '$12x + 8$'],
               correctAnswer: 0,
               explanation: '$4x + 8 + 3x = 7x + 8$. Combine the $x$-terms: $4x + 3x = 7x$.',
             },

@@ -362,7 +362,7 @@ $$\\sqrt{50x^3} = \\sqrt{25\\cdot 2 \\cdot x^2 \\cdot x} = \\sqrt{25}\\,\\sqrt{x
           questions: [
             {
               question: 'Simplify $\\sqrt{12x^2}$.',
-              options: ['$2x\\sqrt{3}$', '$2\\sqrt{3x}$', '$x\\sqrt{12}$', '$6x$'],
+              options: ['$2x\\sqrt{3}$', '$2\\sqrt{3x}$', '$2x^2\\sqrt{3}$', '$6x$'],
               correctAnswer: 0,
               explanation: '$12 = 4\\cdot 3$ and $\\sqrt{x^2} = x$, so $\\sqrt{12x^2} = \\sqrt{4}\\,\\sqrt{x^2}\\,\\sqrt{3} = 2x\\sqrt{3}$.',
             },

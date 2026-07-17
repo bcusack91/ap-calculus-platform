@@ -231,7 +231,7 @@ This means: if you can verify that $p(c) = 0$ by substitution, then you know $(x
             explanation: 'Zeros at $-2, 0, 3$ require factors $(x+2)$, $x$, and $(x-3)$. Only $x(x+2)(x-3)$ has all three.'
           },
           {
-            question: 'The polynomial $g(x) = x^3 - x$ factors as:',
+            question: 'The polynomial $g(x) = x^3 - x$ factors **completely** as:',
             options: [
               '$x(x^2 - 1)$',
               '$x(x - 1)(x + 1)$',

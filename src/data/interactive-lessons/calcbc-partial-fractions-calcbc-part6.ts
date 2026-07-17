@@ -72,7 +72,7 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
             options: [
               '$\\ln|x| - \\frac{1}{2}\\ln(x^2+1) + C$',
               '$\\ln|x| + \\arctan x + C$',
-              '$\\frac{1}{2}\\ln\\frac{x^2}{x^2+1} + C$',
+              '$\\ln|x| - \\ln(x^2+1) + C$',
               '$\\ln|x| - \\arctan x + C$'
             ],
             correctAnswer: 0,

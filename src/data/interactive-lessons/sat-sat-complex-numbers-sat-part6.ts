@@ -154,7 +154,7 @@ Remaining: $i^{41} + i^{42} = i + (-1) = i - 1 = -1 + i$.
         questions: [
           {
             question: 'What is the value of $(1+i)(1-i)(1+i)$?',
-            options: ['$2+2i$', '$2-2i$', '$4$', '$2(1+i)$'],
+            options: ['$2+2i$', '$2-2i$', '$4$', '$0$'],
             correctAnswer: 0,
             explanation: 'First: $(1+i)(1-i)=1+1=2$. Then $2(1+i)=2+2i$.'
           },

@@ -38,7 +38,7 @@ $$\\boxed{\\frac{1}{1-x},\\quad e^x,\\quad \\sin x,\\quad \\cos x,\\quad \\ln(1+
           },
           {
             question: 'If $f(x) = \\sum_{n=0}^\\infty c_n x^n$ and $f(0) = 2$, $f\'(0) = -3$, $f\'\'(0) = 10$, then the second-degree Maclaurin polynomial is:',
-            options: ['$2 - 3x + 5x^2$', '$2 - 3x + 10x^2$', '$2 - 3x + 5x^2/2$', '$2 - 3x + 10x^2/2$'],
+            options: ['$2 - 3x + 5x^2$', '$2 - 3x + 10x^2$', '$2 - 3x + 5x^2/2$', '$2 + 3x + 5x^2$'],
             correctAnswer: 0,
             explanation: '$T_2 = f(0) + f\'(0)x + f\'\'(0)x^2/2! = 2 - 3x + 10x^2/2 = 2 - 3x + 5x^2$.'
           },

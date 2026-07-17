@@ -207,12 +207,12 @@ $$\\boxed{3\\ln a - \\frac{1}{2}\\ln b + \\ln c = \\ln\\left(\\frac{a^3 c}{\\sqr
             question: 'Expand completely: $\\ln\\left(\\frac{x^3}{e^2}\\right)$',
             options: [
               '$3\\ln x - 2$',
-              '$3\\ln x - 2\\ln e$',
+              '$3\\ln x + 2$',
               '$\\frac{3\\ln x}{2}$',
               '$3\\ln x - \\ln 2$'
             ],
             correctAnswer: 0,
-            explanation: 'Quotient rule: $\\ln(x^3) - \\ln(e^2)$. Power rule: $3\\ln x - 2\\ln e = 3\\ln x - 2$ (since $\\ln e = 1$). Both A and B are correct, but A is fully simplified.'
+            explanation: 'Quotient rule: $\\ln(x^3) - \\ln(e^2)$. Power rule: $3\\ln x - 2\\ln e = 3\\ln x - 2$ (since $\\ln e = 1$). A quotient becomes subtraction, so $3\\ln x + 2$ (product rule) is wrong.'
           },
           {
             question: 'If $\\log 2 \\approx 0.301$ and $\\log 3 \\approx 0.477$, find $\\log 72$.',
