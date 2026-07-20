@@ -4,7 +4,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
-import { regradeExitQuiz } from '@/lib/exit-quiz-regrade'
+import { regradeExitQuiz, regradeExitQuizSeeded } from '@/lib/exit-quiz-regrade'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 import { satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
@@ -19,6 +19,10 @@ const submitSchema = z.object({
   passed: z.boolean().optional().default(false),
   mustRedoUnit: z.boolean().optional().default(false),
   variant: z.number().int().min(1).max(10).optional(),
+  // Generation seed + difficulty tier the client used. When present, the server
+  // regenerates the identical quiz and grades authoritatively (no client trust).
+  seed: z.number().int().optional(),
+  difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
   timeSpent: z.number().int().min(0).max(36000).optional().default(0),
   answers: z
     .array(
@@ -54,7 +58,7 @@ export async function POST(request: Request) {
         .join('; ')
       return NextResponse.json({ error: message }, { status: 400 })
     }
-    const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant } = parsed.data
+    const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant, seed, difficulty } = parsed.data
     const userId = session.user.id
 
     // Pass/fail and mastery are decided HERE, not by the client. These gate MASTERED
@@ -68,7 +72,13 @@ export async function POST(request: Request) {
     const answers_ = answers || []
     let score: number
     if (answers_.length > 0) {
-      const regrade = await regradeExitQuiz(topicSlug, answers_)
+      // Preferred path: the client sent the generation seed, so regenerate the
+      // exact quiz and grade authoritatively. Falls through to the probe-based
+      // regrade if seeding isn't available or reproduces no key.
+      const seeded = typeof seed === 'number'
+        ? await regradeExitQuizSeeded(topicSlug, answers_, seed, totalQuestions, difficulty)
+        : null
+      const regrade = seeded ?? (await regradeExitQuiz(topicSlug, answers_))
       if (regrade.resolvedCount > 0) {
         // At least one question graded from the bank — trust the server count.
         score = Math.min(regrade.score, totalQuestions)

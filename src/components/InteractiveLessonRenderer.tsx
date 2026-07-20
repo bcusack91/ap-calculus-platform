@@ -451,6 +451,13 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const [showExitQuiz, setShowExitQuiz] = useState(false)
   const [showReference, setShowReference] = useState(false)
   const [exitQuizQuestions, setExitQuizQuestions] = useState<ExitQuizQuestion[]>([])
+  // Seed the quiz generation so the server can regenerate + regrade this exact
+  // quiz authoritatively (see /api/exit-quiz/submit). 31-bit positive int.
+  const [exitQuizSeed, setExitQuizSeed] = useState<number>(0)
+  // Difficulty tier the current exit quiz was generated at. The first (gating)
+  // attempt is mixed (undefined); students can re-open a tiered PRACTICE quiz
+  // from the results screen without weakening the mastery gate.
+  const [exitQuizDifficulty, setExitQuizDifficulty] = useState<'easy' | 'medium' | 'hard' | undefined>(undefined)
   const [exitQuizStatus, setExitQuizStatus] = useState<{
     totalAttempts: number
     hasPassed: boolean
@@ -800,7 +807,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           window.scrollTo({ top: 0, behavior: 'smooth' })
         } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
           // No more unmastered parts — show exit quiz
-          const questions = await generateExitQuiz(topicSlug, 10)
+          const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
+          const questions = await generateExitQuiz(topicSlug, 10, undefined, seed)
+          setExitQuizSeed(seed)
+          setExitQuizDifficulty(undefined)
           setExitQuizQuestions(questions)
           setShowExitQuiz(true)
           window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -808,7 +818,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         }
       } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
         // Show exit quiz regardless of completion destination
-        const questions = await generateExitQuiz(topicSlug, 10)
+        const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
+        const questions = await generateExitQuiz(topicSlug, 10, undefined, seed)
+        setExitQuizSeed(seed)
+        setExitQuizDifficulty(undefined)
         setExitQuizQuestions(questions)
         setShowExitQuiz(true)
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -880,6 +893,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }
 
   // Exit quiz completion handler
+  // Re-open the exit quiz as a tiered PRACTICE run (fresh seed, chosen tier).
+  // Does not gate mastery — it's for "study where you are" drilling.
+  const startExitQuizPractice = async (difficulty: 'easy' | 'medium' | 'hard') => {
+    const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
+    const questions = await generateExitQuiz(topicSlug, 10, difficulty, seed)
+    setExitQuizSeed(seed)
+    setExitQuizDifficulty(difficulty)
+    setExitQuizQuestions(questions)
+    setShowExitQuiz(true)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const handleExitQuizComplete = (score: number, total: number, passed: boolean, mustRedoUnit: boolean, _wrongTopicSlugs?: string[], wrongPartNumbers?: number[]) => {
     setShowExitQuiz(false)
     setExitQuizStatus(prev => ({
@@ -1211,6 +1236,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         topicTitle={lessonTitle}
         courseSlug={courseSlug}
         questions={exitQuizQuestions}
+        seed={exitQuizSeed}
+        difficulty={exitQuizDifficulty}
+        onPracticeAtDifficulty={startExitQuizPractice}
         onComplete={handleExitQuizComplete}
         onCancel={() => setShowExitQuiz(false)}
         previousAttempts={exitQuizStatus.totalAttempts}

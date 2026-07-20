@@ -28,7 +28,7 @@
  */
 
 import { shuffleOptions } from '@/lib/shuffle-options'
-import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
+import { generateExitQuiz, hasExitQuiz, type ExitQuizDifficulty } from '@/data/exit-quizzes'
 
 export interface SubmittedAnswer {
   questionId?: string | number
@@ -132,6 +132,65 @@ function getAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
     answerKeyCache.set(topicSlug, cached)
   }
   return cached
+}
+
+/**
+ * Grade a submitted exit quiz that carried a generation SEED.
+ *
+ * When the client generates a quiz with a seed (and records count + difficulty),
+ * the server can regenerate the byte-identical quiz — same questions, same values,
+ * same option order — and grade the submitted answers authoritatively, with NO
+ * fallback to client-asserted correctness. This closes the score-fabrication hole
+ * for randomized/generative pools (SAT etc.), where the probe path can't build a
+ * stable answer key.
+ *
+ * Returns null if regeneration fails or produced no usable key, so the caller can
+ * fall back to the probe path / legacy behavior.
+ */
+export async function regradeExitQuizSeeded(
+  topicSlug: string,
+  answers: SubmittedAnswer[],
+  seed: number,
+  count: number,
+  difficulty?: ExitQuizDifficulty,
+): Promise<RegradeResult | null> {
+  if (!hasExitQuiz(topicSlug) || !Number.isFinite(seed)) return null
+
+  let questions: Awaited<ReturnType<typeof generateExitQuiz>>
+  try {
+    questions = await generateExitQuiz(topicSlug, count, difficulty, seed)
+  } catch {
+    return null
+  }
+
+  const key: AnswerKey = new Map()
+  for (const q of questions) {
+    if (typeof q?.id === 'string' && Array.isArray(q.options) && typeof q.correctIndex === 'number') {
+      key.set(q.id, {
+        options: q.options,
+        correctIndex: q.correctIndex,
+        question: typeof q.question === 'string' ? q.question : '',
+      })
+    }
+  }
+  if (key.size === 0) return null
+
+  let score = 0
+  let resolvedCount = 0
+  let unresolvedCount = 0
+  for (const answer of answers) {
+    const id = typeof answer.questionId === 'string' ? answer.questionId : undefined
+    const entry = id ? key.get(id) : undefined
+    if (entry && typeof answer.selectedAnswer === 'number') {
+      const { correctIndex } = shuffleOptions(entry.options, entry.correctIndex, id + entry.question)
+      if (answer.selectedAnswer === correctIndex) score++
+      resolvedCount++
+    } else {
+      if (answer.correct === true) score++
+      unresolvedCount++
+    }
+  }
+  return { score, resolvedCount, unresolvedCount, usedFallback: unresolvedCount > 0 }
 }
 
 /**

@@ -33,6 +33,9 @@ interface ExitQuizProps {
   lastScore: number | null
   mustRedoUnit: boolean // from last attempt
   variant?: number // current content variant (1-3)
+  seed?: number // generation seed — lets the server regenerate + regrade this exact quiz
+  difficulty?: 'easy' | 'medium' | 'hard' // tier the quiz was generated at
+  onPracticeAtDifficulty?: (difficulty: 'easy' | 'medium' | 'hard') => void // re-open as tiered practice
 }
 
 // Render text with markdown tables and KaTeX math
@@ -50,7 +53,10 @@ export default function ExitQuiz({
   previousAttempts,
   lastScore: _lastScore,
   mustRedoUnit: _mustRedoUnit,
-  variant
+  variant,
+  seed,
+  difficulty,
+  onPracticeAtDifficulty
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -196,7 +202,9 @@ export default function ExitQuiz({
           mustRedoUnit: quizMustRedoUnit,
           answers,
           timeSpent,
-          variant: variant ?? 1
+          variant: variant ?? 1,
+          ...(typeof seed === 'number' ? { seed } : {}),
+          ...(difficulty ? { difficulty } : {})
         })
       })
     } catch (err) {
@@ -204,7 +212,7 @@ export default function ExitQuiz({
     } finally {
       setSubmitting(false)
     }
-  }, [submitting, startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant])
+  }, [submitting, startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty])
 
   useEffect(() => {
     if (quizComplete) {
@@ -334,6 +342,32 @@ export default function ExitQuiz({
               </button>
             )}
           </div>
+
+          {onPracticeAtDifficulty && (
+            <div className="mt-6 pt-5 border-t border-gray-200 dark:border-gray-700 text-center">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-3">
+                Practice more at your level:
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {([
+                  { d: 'easy' as const, label: 'Easy', cls: 'from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600' },
+                  { d: 'medium' as const, label: 'Medium', cls: 'from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600' },
+                  { d: 'hard' as const, label: 'Hard', cls: 'from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600' },
+                ]).map(({ d, label, cls }) => (
+                  <button
+                    key={d}
+                    onClick={() => onPracticeAtDifficulty(d)}
+                    className={`px-5 py-2 rounded-lg font-semibold text-white text-sm shadow bg-gradient-to-r ${cls} ${difficulty === d ? 'ring-2 ring-offset-2 ring-gray-400 dark:ring-offset-gray-800' : ''}`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                Practice runs don&apos;t change your mastery — just extra reps at the level you choose.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     )

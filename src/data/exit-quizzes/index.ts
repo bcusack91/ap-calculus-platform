@@ -1036,20 +1036,56 @@ function stableQuestionId(topicSlug: string, question: string, options: string[]
 export type ExitQuizDifficulty = 'easy' | 'medium' | 'hard'
 
 /**
+ * mulberry32 — a tiny deterministic PRNG. Seeding it and driving every pool's
+ * randomness from it lets the SERVER regenerate the exact quiz a student saw
+ * (given the same seed + count + difficulty), so exit-quiz scores can be
+ * re-graded authoritatively instead of trusting a client-sent boolean.
+ */
+function mulberry32(seed: number): () => number {
+  let a = seed >>> 0
+  return function () {
+    a |= 0; a = (a + 0x6d2b79f5) | 0
+    let t = Math.imul(a ^ (a >>> 15), 1 | a)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+/**
  * Generate an exit quiz for a given topic slug.
  * Dynamically loads only the requested question pool on demand.
  *
  * `difficulty` filters to a tier where the pool supports it (SAT pools tag
  * every template). Pools that ignore the extra argument behave exactly as
  * before, so passing a difficulty is always safe.
+ *
+ * When `seed` is provided, generation is made deterministic by overriding the
+ * global `Math.random` with a seeded PRNG for the duration of the pool's
+ * synchronous `generateExitQuiz` call (then restoring it). The pools call
+ * `Math.random` only through their local helpers, so this reproduces the exact
+ * question set + values + option order without touching any pool file. The
+ * override/call/restore is fully synchronous, so it can't interleave with other
+ * requests on Node's single thread.
  */
-export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty): Promise<ExitQuizQuestion[]> {
+export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty, seed?: number): Promise<ExitQuizQuestion[]> {
   const loader = quizLoaders[topicSlug]
   if (!loader) {
     throw new Error(`No exit quiz found for topic: ${topicSlug}`)
   }
   const mod = await loader()
-  const questions = mod.generateExitQuiz(count, topicSlug, difficulty)
+  let questions: ReturnType<typeof mod.generateExitQuiz>
+  if (typeof seed === 'number' && Number.isFinite(seed)) {
+    const rng = mulberry32(seed)
+    const realRandom = Math.random
+    Math.random = rng
+    try {
+      questions = mod.generateExitQuiz(count, topicSlug, difficulty)
+    } finally {
+      Math.random = realRandom
+    }
+  } else {
+    questions = mod.generateExitQuiz(count, topicSlug, difficulty)
+  }
   return questions.map((q) => ({
     ...q,
     id: stableQuestionId(
