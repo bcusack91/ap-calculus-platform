@@ -93,7 +93,7 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
     options: [
       'kQ / $(d\\sqrt{d^{2} + L^{2}/4})$',
       'kQ / $d^{2}$',
-      '2kQ / $(d\\sqrt{4d^{2} + L^{2}})$',
+      '2kQ / $(d\\sqrt{d^{2} + L^{2}})$',
       'kQ / $(d^{2} + L^{2}/4)$',
     ],
     correctAnswer: 0,
@@ -533,7 +533,7 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
   {
     question: 'Four charges of +Q are placed at the corners of a square of side a. The work required to bring a fifth charge +Q from infinity to the center of the square is:',
     options: [
-      '$4kQ^{2}/(a/\\sqrt{2})$',
+      '$4kQ^{2}/(a\\sqrt{2})$',
       '$4\\sqrt{2}$ $kQ^{2}/a$',
       '$2kQ^{2}/a$',
       '$4kQ^{2}/a$',

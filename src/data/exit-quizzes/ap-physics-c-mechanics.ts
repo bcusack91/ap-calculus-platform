@@ -522,7 +522,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'For a conical pendulum with string length L and angle θ from vertical, the period is:',
-    options: ['$2\\pi \\sqrt{L/g}$', '$2\\pi \\sqrt{L \\cos \\theta /g}$', '$2\\pi \\sqrt{L \\sin \\theta /g}$', '$2\\pi \\sqrt{L/g \\cos \\theta}$'],
+    options: ['$2\\pi \\sqrt{L/g}$', '$2\\pi \\sqrt{L \\cos \\theta /g}$', '$2\\pi \\sqrt{L \\sin \\theta /g}$', '$2\\pi \\sqrt{L/(g \\cos \\theta)}$'],
     correctAnswer: 1,
     explanation: 'T cos θ = mg, T sin θ = $m\\omega^{2}r$, r = L sin θ. Combining: $\\omega^{2}$ = g/(L cos θ). T = 2π/ω = $2\\pi \\sqrt{L \\cos \\theta /g}$.',
     difficulty: 'hard',
@@ -1858,7 +1858,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A frictionless ramp of height h connects to a circular loop of radius R. What is the minimum h for a ball to complete the loop?',
-    options: ['R', '2R', '5R/2', '2.5R'],
+    options: ['R', '2R', '5R/2', '3R'],
     correctAnswer: 2,
     explanation: 'At top of loop: $v^{2}$ = gR. Energy conservation: mgh = mg(2R) + ½m(gR). h = 2R + R/2 = 5R/2.',
     difficulty: 'hard',

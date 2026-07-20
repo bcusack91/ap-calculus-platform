@@ -714,7 +714,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   // ══════════════════════════════════════════════════════════════════
   {
     question: 'If $f(x) = \\dfrac{x^2 + 1}{x - 1}$, then $f\'(x) = $',
-    options: ['$\\dfrac{x^2 - 2x - 1}{(x-1)^2}$', '$\\dfrac{2x(x-1) - (x^2+1)}{(x-1)^2}$', '$\\dfrac{x^2 + 2x + 1}{(x-1)^2}$', '$2x$'],
+    options: ['$\\dfrac{x^2 - 2x - 1}{(x-1)^2}$', '$\\dfrac{(x^2+1) - 2x(x-1)}{(x-1)^2}$', '$\\dfrac{x^2 + 2x + 1}{(x-1)^2}$', '$2x$'],
     correctAnswer: 0,
     explanation: 'Quotient rule: $\\frac{2x(x-1) - (x^2+1)(1)}{(x-1)^2} = \\frac{2x^2 - 2x - x^2 - 1}{(x-1)^2} = \\frac{x^2 - 2x - 1}{(x-1)^2}$.',
     difficulty: 'medium',

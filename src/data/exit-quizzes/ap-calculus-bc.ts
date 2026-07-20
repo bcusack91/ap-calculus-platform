@@ -509,7 +509,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\frac{2x+1}{x^2+x}\\,dx =$',
-    options: ['$\\ln|x^2+x|+C$', '$\\ln|x|+\\ln|x+1|+C$', '$2\\ln|x|+C$', '$\\frac{1}{x^2+x}+C$'],
+    options: ['$\\ln|x^2+x|+C$', '$\\ln|x|-\\ln|x+1|+C$', '$2\\ln|x|+C$', '$\\frac{1}{x^2+x}+C$'],
     correctAnswer: 0,
     explanation: 'Note 2x+1 = $d/dx(x^{2}+x)$. So $\\int (2x+1)/(x^{2}+x)dx$ = ln|$x^{2}+x$| + C.',
     difficulty: 'easy',
@@ -829,7 +829,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\frac{x+1}{x^2+2x+1}\\,dx =$',
-    options: ['$\\ln|x+1|+C$', '$-\\frac{1}{x+1}+C$', '$\\frac{1}{2}\\ln|x^2+2x+1|+C$', '$\\arctan(x+1)+C$'],
+    options: ['$\\ln|x+1|+C$', '$-\\frac{1}{x+1}+C$', '$\\ln|x^2+2x+1|+C$', '$\\arctan(x+1)+C$'],
     correctAnswer: 0,
     explanation: '$x^{2}+2x+1$ = $(x+1)^{2}$. So $(x+1)/(x+1)^{2}$ = 1/(x+1). ∫1/(x+1)dx = ln|x+1| + C.',
     difficulty: 'easy',

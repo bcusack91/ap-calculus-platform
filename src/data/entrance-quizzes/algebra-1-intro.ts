@@ -28,7 +28,7 @@ const questions: EntranceQuizQuestion[] = [
 
   // Part 6: Polynomials & Factoring
   { id: 'alg1-ent-6a', question: 'Factor completely: $x^{2}$ − 9', options: ['$(x - 3)^{2}$', '(x + 3)(x − 3)', '(x − 9)(x + 1)', '(x + 9)(x − 1)'], correctIndex: 1, explanation: '$x^{2}$ − 9 is a difference of squares: $a^{2}$ − $b^{2}$ = (a + b)(a − b), so $x^{2}$ − 9 = (x + 3)(x − 3).', partNumber: 6, partTitle: 'Polynomials & Factoring' },
-  { id: 'alg1-ent-6b', question: 'Factor: $x^{2}$ + 5x + 6', options: ['(x + 1)(x + 6)', '(x + 2)(x + 3)', '(x + 3)(x + 2)', '(x − 2)(x − 3)'], correctIndex: 1, explanation: 'Find two numbers that multiply to 6 and add to 5: 2 × 3 = 6 and 2 + 3 = 5. So $x^{2}$ + 5x + 6 = (x + 2)(x + 3).', partNumber: 6, partTitle: 'Polynomials & Factoring' },
+  { id: 'alg1-ent-6b', question: 'Factor: $x^{2}$ + 5x + 6', options: ['(x + 1)(x + 6)', '(x + 2)(x + 3)', '(x + 5)(x + 1)', '(x − 2)(x − 3)'], correctIndex: 1, explanation: 'Find two numbers that multiply to 6 and add to 5: 2 × 3 = 6 and 2 + 3 = 5. So $x^{2}$ + 5x + 6 = (x + 2)(x + 3).', partNumber: 6, partTitle: 'Polynomials & Factoring' },
 
   // Part 7: Quadratics & Functions Intro
   { id: 'alg1-ent-7a', question: 'What are the solutions to $x^{2}$ − 5x + 6 = 0?', options: ['x = 1 and x = 6', 'x = 2 and x = 3', 'x = −2 and x = −3', 'x = −1 and x = 6'], correctIndex: 1, explanation: 'Factor: (x − 2)(x − 3) = 0. Set each factor to zero: x = 2 or x = 3.', partNumber: 7, partTitle: 'Quadratics & Functions Intro' },

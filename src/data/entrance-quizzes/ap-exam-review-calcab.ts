@@ -114,7 +114,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ar-ent-6b',
     question: 'If $F(x) = \\int_1^x \\frac{1}{t}\\,dt$, then $F(x) =$',
-    options: ['$\\ln x$', '$\\ln|x|$', '$\\frac{1}{x}$', '$x - 1$'],
+    options: ['$\\ln x$', '$\\ln x - 1$', '$\\frac{1}{x}$', '$x - 1$'],
     correctIndex: 0,
     explanation: '$\\int_1^x \\frac{1}{t}\\,dt = \\ln x$ for $x > 0$.',
     partNumber: 6,
