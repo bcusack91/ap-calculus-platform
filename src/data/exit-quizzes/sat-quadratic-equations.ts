@@ -11,11 +11,13 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: 'easy' | 'medium' | 'hard'
   generate: () => ExitQuizQuestion
 }
 
@@ -38,11 +40,11 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
+function makeOptions(correct: number, spread: number = 2, min?: number): { options: string[]; correctIndex: number } {
   const distractors = new Set<number>()
   while (distractors.size < 3) {
     const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
+    if (d !== correct && (min === undefined || d >= min)) distractors.add(d)
   }
   const all = [correct, ...distractors]
   const shuffled = shuffle(all)
@@ -67,6 +69,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q1',
     category: 'Factoring',
+    difficulty: 'medium',
     generate() {
       const r1 = randInt(-9, 9)
       const r2 = randInt(-9, 9)
@@ -85,6 +88,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q2',
     category: 'Factoring',
+    difficulty: 'medium',
     generate() {
       const r = randInt(2, 12)
       const c = r * r
@@ -100,6 +104,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q3',
     category: 'Factoring',
+    difficulty: 'medium',
     generate() {
       const r1 = randInt(1, 8)
       const r2 = randInt(1, 8)
@@ -116,6 +121,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q4',
     category: 'Factoring',
+    difficulty: 'easy',
     generate() {
       const a = randInt(2, 5)
       const r1 = randInt(-6, 6)
@@ -133,9 +139,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q5',
     category: 'Factoring',
+    difficulty: 'easy',
     generate() {
       const r1 = randInt(1, 7)
-      const r2 = randInt(1, 7)
+      let r2 = randInt(1, 7)
+      while (r2 === r1) r2 = randInt(1, 7)
       const b = r1 + r2
       const c = r1 * r2
       const correct = `$(x - ${r1})(x - ${r2})$`
@@ -154,6 +162,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q6',
     category: 'Factoring',
+    difficulty: 'easy',
     generate() {
       const r = randInt(2, 10)
       const c = r * r
@@ -174,6 +183,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q7',
     category: 'Quadratic Formula',
+    difficulty: 'medium',
     generate() {
       // Ensure integer solutions: a=1, roots r1,r2
       const r1 = randInt(-8, 8)
@@ -193,6 +203,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q8',
     category: 'Quadratic Formula',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 4)
       const b = randInt(-10, 10)
@@ -210,6 +221,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q9',
     category: 'Quadratic Formula',
+    difficulty: 'medium',
     generate() {
       const scenarios = [
         { disc: 'positive', count: 'Two distinct real solutions' },
@@ -242,6 +254,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q10',
     category: 'Quadratic Formula',
+    difficulty: 'easy',
     generate() {
       // ax² + bx + c = 0 with no real solutions
       const a = randInt(1, 3)
@@ -264,6 +277,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q11',
     category: 'Quadratic Formula',
+    difficulty: 'hard',
     generate() {
       const r1 = randInt(-6, 6)
       const r2 = randInt(-6, 6)
@@ -272,15 +286,16 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(product)
       return {
         id: this.id, category: this.category,
-        question: `If the sum of the roots of $x^2 + bx + c = 0$ is $${-sum}$ (so $b = ${sum}$) and one root is $${r1}$, what is $c$?`,
+        question: `If the sum of the roots of $x^2 + bx + c = 0$ is $${sum}$ (so $b = ${-sum}$) and one root is $${r1}$, what is $c$?`,
         options, correctIndex,
-        explanation: `If one root is $${r1}$ and the sum is $${-(sum)}$, the other root is $${r2}$. Then $c = ${r1} \\times ${r2} = ${product}$.`
+        explanation: `If one root is $${r1}$ and the sum is $${sum}$, the other root is $${r2}$. Then $c = ${r1} \\times ${r2} = ${product}$.`
       }
     }
   },
   {
     id: 'sqe-q12',
     category: 'Quadratic Formula',
+    difficulty: 'hard',
     generate() {
       // Which equation has exactly one solution?
       const r = randInt(1, 8)
@@ -308,6 +323,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q13',
     category: 'Vertex Form',
+    difficulty: 'easy',
     generate() {
       const h = randInt(-8, 8)
       const k = randInt(-10, 10)
@@ -324,6 +340,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q14',
     category: 'Vertex Form',
+    difficulty: 'easy',
     generate() {
       const h = randInt(-8, 8)
       const k = randInt(-10, 10)
@@ -339,6 +356,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q15',
     category: 'Vertex Form',
+    difficulty: 'hard',
     generate() {
       // x² + bx + c → complete the square
       const h = randInt(-7, 7)
@@ -358,6 +376,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q16',
     category: 'Vertex Form',
+    difficulty: 'easy',
     generate() {
       const h = randInt(-6, 6)
       const k = randInt(-8, 8)
@@ -374,9 +393,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q17',
     category: 'Vertex Form',
+    difficulty: 'easy',
     generate() {
       const h = randInt(1, 8)
-      const k = randInt(-8, 8)
+      let k = randInt(-8, 8)
+      while (k === 0 || Math.abs(k) === h) k = randInt(-8, 8)
       const correct = `$x = ${h}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$x = ${-h}$`, `$x = ${k}$`, `$x = ${-k}$`
@@ -392,9 +413,10 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q18',
     category: 'Vertex Form',
+    difficulty: 'hard',
     generate() {
-      const h = randInt(-5, 5)
-      const k = randInt(-8, 8)
+      const h = randNonZero(-5, 5)
+      const k = randNonZero(-8, 8)
       const a = randInt(1, 3)
       // Standard form: a(x-h)² + k = ax² - 2ahx + ah² + k
       const bStd = -2 * a * h
@@ -416,6 +438,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q19',
     category: 'Graphing',
+    difficulty: 'easy',
     generate() {
       const a = randNonZero(-5, 5)
       const correct = a > 0 ? 'Upward' : 'Downward'
@@ -433,6 +456,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q20',
     category: 'Graphing',
+    difficulty: 'easy',
     generate() {
       const a = randNonZero(-4, 4)
       const b = randInt(-8, 8)
@@ -449,6 +473,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q21',
     category: 'Graphing',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1, 4)
       const h = randInt(-6, 6)
@@ -468,9 +493,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q22',
     category: 'Graphing',
+    difficulty: 'medium',
     generate() {
       const a = randNonZero(-4, 4)
-      const b = randInt(-10, 10)
+      let b = randNonZero(-10, 10)
+      while (b === -a || b === 2 * a * a || b === -2 * a * a) b = randNonZero(-10, 10)
       const axisNum = -b
       const axisDen = 2 * a
       const g = gcd(Math.abs(axisNum), Math.abs(axisDen))
@@ -478,7 +505,7 @@ const questionPool: QuestionTemplate[] = [
       const sDen = Math.abs(axisDen) / g
       const correct = fmtX(axisNum, axisDen)
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x = ${b}$`, `$x = ${-a}$`, fmtX(b, a)
+        `$x = ${b}$`, `$x = ${-a}$`, fmtX(b, 2 * a)
       ])
       return {
         id: this.id, category: this.category,
@@ -491,11 +518,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q23',
     category: 'Graphing',
+    difficulty: 'medium',
     generate() {
-      const r1 = randInt(-6, 6)
-      const r2 = r1 + randInt(2, 8)
+      let r1 = randInt(-6, 6)
+      let r2 = r1 + 2 * randInt(1, 4)
+      while ([r1, r2, (r1 + r2) / 2].includes(r1 * r2)) { r1 = randInt(-6, 6); r2 = r1 + 2 * randInt(1, 4) }
       const midpoint = (r1 + r2) / 2
-      const correct = Number.isInteger(midpoint) ? `$x = ${midpoint}$` : `$x = ${r1 + r2}/2$`
+      const correct = `$x = ${midpoint}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$x = ${r1}$`, `$x = ${r2}$`, `$x = ${r1 * r2}$`
       ])
@@ -512,6 +541,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q24',
     category: 'Systems',
+    difficulty: 'medium',
     generate() {
       // y = x², y = mx + b with known intersection
       const x1 = randInt(-5, 5)
@@ -530,6 +560,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q25',
     category: 'Systems',
+    difficulty: 'medium',
     generate() {
       // How many intersections: y = x² + k and y = c
       const k = randInt(-5, 5)
@@ -555,6 +586,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q26',
     category: 'Systems',
+    difficulty: 'easy',
     generate() {
       const r = randInt(1, 6)
       const yVal = r * r
@@ -570,12 +602,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q27',
     category: 'Systems',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 3)
       const r1 = randInt(-4, 0)
       const r2 = randInt(1, 5)
       const numSolutions = 2
-      const { options, correctIndex } = makeOptions(numSolutions)
+      const { options, correctIndex } = makeOptions(numSolutions, 2, 0)
       return {
         id: this.id, category: this.category,
         question: `The quadratic $y = ${a}(x - ${r1})(x - ${r2})$ intersects the $x$-axis at how many points?`,
@@ -587,6 +620,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q28',
     category: 'Systems',
+    difficulty: 'medium',
     generate() {
       // y = ax² and y = bx. Intersect at x=0 and x=b/a
       const a = randInt(1, 4)
@@ -606,11 +640,12 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q29',
     category: 'Word Problems',
+    difficulty: 'hard',
     generate() {
-      const v0 = randInt(20, 60) * 2 // even initial velocity
+      const v0 = 8 * randInt(5, 15) // v0²/64 is a whole number
       const timeMax = v0 / 32 // h(t) = v0*t - 16t²
       const maxH = v0 * timeMax - 16 * timeMax * timeMax
-      const { options, correctIndex } = makeOptions(maxH, 20)
+      const { options, correctIndex } = makeOptions(maxH, 20, 1)
       return {
         id: this.id, category: this.category,
         question: `A ball is thrown upward with $h(t) = ${v0}t - 16t^2$ feet. What is the maximum height?`,
@@ -622,10 +657,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q30',
     category: 'Word Problems',
+    difficulty: 'medium',
     generate() {
       const v0 = 16 * randInt(2, 6) // makes time integer
       const tHit = v0 / 16  // h = v0*t - 16t², hits ground at t = v0/16
-      const { options, correctIndex } = makeOptions(tHit)
+      const { options, correctIndex } = makeOptions(tHit, 2, 1)
       return {
         id: this.id, category: this.category,
         question: `A projectile follows $h(t) = ${v0}t - 16t^2$. After how many seconds does it hit the ground?`,
@@ -637,24 +673,25 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q31',
     category: 'Word Problems',
+    difficulty: 'hard',
     generate() {
-      // Revenue: R(x) = px - cx² where p = price, x = quantity
-      const p = randInt(10, 30)
+      // Revenue: R(x) = px - cx² where p = price, x = quantity; p chosen so the vertex is an integer
       const c = randInt(1, 3)
-      const xMax = Math.floor(p / (2 * c))
-      const maxR = p * xMax - c * xMax * xMax
-      const { options, correctIndex: _correctIndex } = makeOptions(maxR, 30)
+      const xMax = randInt(3, 12)
+      const p = 2 * c * xMax
+      const { options, correctIndex } = makeOptions(xMax, 2, 1)
       return {
         id: this.id, category: this.category,
         question: `Revenue is $R(x) = ${p}x - ${c}x^2$. How many units maximize revenue?`,
-        options, correctIndex: makeOptions(xMax).correctIndex,
-        explanation: `$R'(x) = ${p} - ${2 * c}x = 0$ → $x = ${xMax}$. (Or vertex at $x = \\frac{${p}}{${2 * c}} = ${xMax}$).`
+        options, correctIndex,
+        explanation: `The maximum is at the vertex: $x = \\frac{${p}}{2 \\cdot ${c}} = ${xMax}$ units.`
       }
     }
   },
   {
     id: 'sqe-q32',
     category: 'Word Problems',
+    difficulty: 'hard',
     generate() {
       // Two numbers with given sum, maximize product
       const s = randInt(10, 30) * 2 // even sum
@@ -672,11 +709,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q33',
     category: 'Word Problems',
+    difficulty: 'medium',
     generate() {
-      const t = randInt(1, 5)
-      const v0 = randInt(20, 80)
-      const h0 = randInt(0, 20)
-      const h = h0 + v0 * t - 16 * t * t
+      let t = 1, v0 = 20, h0 = 0, h = -1
+      while (h < 0) {
+        t = randInt(1, 5); v0 = randInt(20, 80); h0 = randInt(0, 20)
+        h = h0 + v0 * t - 16 * t * t
+      }
       const { options, correctIndex } = makeOptions(h, 20)
       return {
         id: this.id, category: this.category,
@@ -689,6 +728,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q34',
     category: 'Word Problems',
+    difficulty: 'hard',
     generate() {
       // Rectangle: perimeter P, maximize area
       const P = randInt(10, 30) * 4 // divisible by 4 for nice numbers
@@ -708,6 +748,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q35',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const r1 = randInt(-8, 8)
       const r2 = randInt(-8, 8)
@@ -724,6 +765,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q36',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1, 5)
       const h = randInt(-6, 6)
@@ -741,6 +783,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q37',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const a = randNonZero(-4, 4)
       const correct = a > 0 ? 'Minimum' : 'Maximum'
@@ -758,8 +801,9 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q38',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
-      const k = randInt(1, 10)
+      const k = [2, 3, 5, 6, 7, 8, 10][randInt(0, 6)] // never a perfect square
       const correct = `$x = \\pm\\sqrt{${k}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$x = ${k}$`, `$x = \\pm ${k}$`, `$x = \\sqrt{${k}}$`
@@ -775,6 +819,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q39',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const r1 = randInt(1, 9)
       const r2 = randInt(1, 9)
@@ -794,6 +839,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sqe-q40',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const n = randInt(2, 8)
       const answer = n * n
@@ -822,7 +868,23 @@ function fmtX(num: number, den: number): string {
   return d === 1 ? `$x = ${n}$` : `$x = \\frac{${n}}{${d}}$`
 }
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  if (difficulty) {
+    const fill: Record<'easy' | 'medium' | 'hard', Array<'easy' | 'medium' | 'hard'>> = {
+      easy: ['easy', 'medium', 'hard'],
+      medium: ['medium', 'easy', 'hard'],
+      hard: ['hard', 'medium', 'easy'],
+    }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fill[difficulty]) {
+      if (selected.length >= count) break
+      for (const t of shuffle(questionPool.filter(q => q.difficulty === tier))) {
+        if (selected.length >= count) break
+        selected.push(t)
+      }
+    }
+    return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
@@ -844,5 +906,5 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     if (selected.length >= count) break
     selected.push(q); usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

@@ -8,8 +8,8 @@
  * Domain: Craft and Structure — Words in Context
  */
 
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; difficulty?: 'easy' | 'medium' | 'hard' }
+interface QuestionTemplate { id: string; category: string; difficulty: 'easy' | 'medium' | 'hard'; generate: () => ExitQuizQuestion }
 
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
 
@@ -21,7 +21,7 @@ function makeOptions(correct: string, distractors: string[]) {
 
 const questionPool: QuestionTemplate[] = [
   {
-    id: 'vocab-q1', category: 'Precise Meaning',
+    id: 'vocab-q1', category: 'Precise Meaning', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('eclectic', ['conventional', 'predictable', 'uniform'])
       return { id: this.id, category: this.category,
@@ -32,7 +32,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q2', category: 'Precise Meaning',
+    id: 'vocab-q2', category: 'Precise Meaning', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('exacerbated', ['alleviated', 'resolved', 'initiated'])
       return { id: this.id, category: this.category,
@@ -43,7 +43,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q3', category: 'Precise Meaning',
+    id: 'vocab-q3', category: 'Precise Meaning', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('tenuous', ['robust', 'definitive', 'straightforward'])
       return { id: this.id, category: this.category,
@@ -54,7 +54,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q4', category: 'Precise Meaning',
+    id: 'vocab-q4', category: 'Precise Meaning', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('ubiquitous', ['scarce', 'controversial', 'obsolete'])
       return { id: this.id, category: this.category,
@@ -65,7 +65,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q5', category: 'Precise Meaning',
+    id: 'vocab-q5', category: 'Precise Meaning', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('pragmatic', ['idealistic', 'reckless', 'theoretical'])
       return { id: this.id, category: this.category,
@@ -76,7 +76,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q6', category: 'Tone & Connotation',
+    id: 'vocab-q6', category: 'Tone & Connotation', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('meticulous', ['careless', 'hasty', 'arbitrary'])
       return { id: this.id, category: this.category,
@@ -87,7 +87,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q7', category: 'Tone & Connotation',
+    id: 'vocab-q7', category: 'Tone & Connotation', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('unassuming', ['ostentatious', 'domineering', 'pretentious'])
       return { id: this.id, category: this.category,
@@ -98,7 +98,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q8', category: 'Tone & Connotation',
+    id: 'vocab-q8', category: 'Tone & Connotation', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('dismissive', ['enthusiastic', 'ambivalent', 'receptive'])
       return { id: this.id, category: this.category,
@@ -109,7 +109,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q9', category: 'Academic Vocabulary',
+    id: 'vocab-q9', category: 'Academic Vocabulary', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('corroborates', ['contradicts', 'undermines', 'replaces'])
       return { id: this.id, category: this.category,
@@ -120,7 +120,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q10', category: 'Academic Vocabulary',
+    id: 'vocab-q10', category: 'Academic Vocabulary', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('mitigate', ['amplify', 'disregard', 'guarantee'])
       return { id: this.id, category: this.category,
@@ -131,7 +131,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q11', category: 'Academic Vocabulary',
+    id: 'vocab-q11', category: 'Academic Vocabulary', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('proliferation', ['reduction', 'regulation', 'stagnation'])
       return { id: this.id, category: this.category,
@@ -142,7 +142,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q12', category: 'Academic Vocabulary',
+    id: 'vocab-q12', category: 'Academic Vocabulary', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('unprecedented', ['inevitable', 'predictable', 'insignificant'])
       return { id: this.id, category: this.category,
@@ -153,7 +153,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q13', category: 'Precise Meaning',
+    id: 'vocab-q13', category: 'Precise Meaning', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('ephemeral', ['permanent', 'recurring', 'tangible'])
       return { id: this.id, category: this.category,
@@ -164,7 +164,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q14', category: 'Precise Meaning',
+    id: 'vocab-q14', category: 'Precise Meaning', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('supplanted', ['complemented', 'preceded', 'mimicked'])
       return { id: this.id, category: this.category,
@@ -175,7 +175,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q15', category: 'Tone & Connotation',
+    id: 'vocab-q15', category: 'Tone & Connotation', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('contentious', ['unanimous', 'trivial', 'transparent'])
       return { id: this.id, category: this.category,
@@ -186,7 +186,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q16', category: 'Precise Meaning',
+    id: 'vocab-q16', category: 'Precise Meaning', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('anomalous', ['typical', 'gradual', 'frequent'])
       return { id: this.id, category: this.category,
@@ -197,7 +197,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q17', category: 'Academic Vocabulary',
+    id: 'vocab-q17', category: 'Academic Vocabulary', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('substantiate', ['refute', 'fabricate', 'simplify'])
       return { id: this.id, category: this.category,
@@ -208,7 +208,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q18', category: 'Tone & Connotation',
+    id: 'vocab-q18', category: 'Tone & Connotation', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('austere', ['lavish', 'chaotic', 'welcoming'])
       return { id: this.id, category: this.category,
@@ -219,7 +219,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q19', category: 'Precise Meaning',
+    id: 'vocab-q19', category: 'Precise Meaning', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('galvanized', ['divided', 'confused', 'pacified'])
       return { id: this.id, category: this.category,
@@ -230,7 +230,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q20', category: 'Precise Meaning',
+    id: 'vocab-q20', category: 'Precise Meaning', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('ambiguous', ['explicit', 'irrelevant', 'comprehensive'])
       return { id: this.id, category: this.category,
@@ -241,7 +241,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q21', category: 'Academic Vocabulary',
+    id: 'vocab-q21', category: 'Academic Vocabulary', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('elucidates', ['obscures', 'contradicts', 'oversimplifies'])
       return { id: this.id, category: this.category,
@@ -252,7 +252,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q22', category: 'Precise Meaning',
+    id: 'vocab-q22', category: 'Precise Meaning', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('disparate', ['identical', 'related', 'sequential'])
       return { id: this.id, category: this.category,
@@ -263,7 +263,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q23', category: 'Tone & Connotation',
+    id: 'vocab-q23', category: 'Tone & Connotation', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('skepticism', ['enthusiasm', 'indifference', 'certainty'])
       return { id: this.id, category: this.category,
@@ -274,7 +274,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q24', category: 'Precise Meaning',
+    id: 'vocab-q24', category: 'Precise Meaning', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('circumvent', ['enforce', 'establish', 'endorse'])
       return { id: this.id, category: this.category,
@@ -285,7 +285,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q25', category: 'Academic Vocabulary',
+    id: 'vocab-q25', category: 'Academic Vocabulary', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('posits', ['disproves', 'disregards', 'conceals'])
       return { id: this.id, category: this.category,
@@ -296,7 +296,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q26', category: 'Precise Meaning',
+    id: 'vocab-q26', category: 'Precise Meaning', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('entrenched', ['flexible', 'novel', 'superficial'])
       return { id: this.id, category: this.category,
@@ -307,7 +307,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q27', category: 'Tone & Connotation',
+    id: 'vocab-q27', category: 'Tone & Connotation', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('lauded', ['criticized', 'ignored', 'feared'])
       return { id: this.id, category: this.category,
@@ -318,7 +318,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q28', category: 'Academic Vocabulary',
+    id: 'vocab-q28', category: 'Academic Vocabulary', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('catalyzed', ['delayed', 'predicted', 'trivialized'])
       return { id: this.id, category: this.category,
@@ -329,7 +329,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q29', category: 'Precise Meaning',
+    id: 'vocab-q29', category: 'Precise Meaning', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('commensurate', ['disproportionate', 'unrelated', 'inferior'])
       return { id: this.id, category: this.category,
@@ -340,7 +340,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'vocab-q30', category: 'Precise Meaning',
+    id: 'vocab-q30', category: 'Precise Meaning', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('nascent', ['established', 'declining', 'obsolete'])
       return { id: this.id, category: this.category,
@@ -352,12 +352,22 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+function selectTemplates(count: number, difficulty?: 'easy' | 'medium' | 'hard'): QuestionTemplate[] {
+  if (difficulty) {
+    const fillOrder: Record<'easy' | 'medium' | 'hard', ('easy' | 'medium' | 'hard')[]> = { easy: ['easy', 'medium', 'hard'], medium: ['medium', 'easy', 'hard'], hard: ['hard', 'medium', 'easy'] }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fillOrder[difficulty]) { if (selected.length >= count) break; for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) { if (selected.length >= count) break; selected.push(q) } }
+    return selected
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
-  return shuffle(selected).map(t => t.generate())
+  return selected
+}
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  return shuffle(selectTemplates(count, difficulty)).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

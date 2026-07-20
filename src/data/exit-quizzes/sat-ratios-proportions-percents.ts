@@ -11,11 +11,13 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: 'easy' | 'medium' | 'hard'
   generate: () => ExitQuizQuestion
 }
 
@@ -62,9 +64,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q1',
     category: 'Ratio Basics',
+    difficulty: 'easy',
     generate() {
-      const a = randInt(2, 8)
-      const b = randInt(2, 8)
+      let a = randInt(2, 8)
+      let b = randInt(2, 8)
+      while (a === b || gcd(a, b) === 1) { a = randInt(2, 8); b = randInt(2, 8) }
       const g = gcd(a, b)
       const correct = `$${a / g} : ${b / g}$`
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -83,26 +87,31 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q2',
     category: 'Ratio Basics',
+    difficulty: 'medium',
     generate() {
       const a = randInt(2, 6)
-      const b = randInt(2, 6)
+      let b = randInt(2, 6)
+      while (b === a) b = randInt(2, 6)
       const total = randInt(3, 8) * (a + b)
-      const partA = (total / (a + b)) * a
-      const { options, correctIndex: _correctIndex } = makeOptions(partA, 5)
+      const unit = total / (a + b)
+      const larger = Math.max(a, b) * unit
+      const { options, correctIndex } = makeOptions(larger, 5)
       return {
         id: this.id, category: this.category,
         question: `Two quantities are in the ratio $${a} : ${b}$. If their sum is $${total}$, what is the larger quantity?`,
-        options, correctIndex: makeOptions(Math.max(partA, total - partA), 5).correctIndex,
-        explanation: `Total parts = $${a + b}$. Each part = $${total}/${a + b} = ${total / (a + b)}$. Larger = $${Math.max(a, b)} \\times ${total / (a + b)} = ${Math.max(partA, total - partA)}$.`
+        options, correctIndex,
+        explanation: `Total parts = $${a + b}$. Each part = $${total}/${a + b} = ${unit}$. Larger = $${Math.max(a, b)} \\times ${unit} = ${larger}$.`
       }
     }
   },
   {
     id: 'srp-q3',
     category: 'Ratio Basics',
+    difficulty: 'easy',
     generate() {
-      const boys = randInt(8, 20)
-      const girls = randInt(8, 20)
+      let boys = randInt(8, 20)
+      let girls = randInt(8, 20)
+      while (boys === girls || gcd(boys, girls) === 1) { boys = randInt(8, 20); girls = randInt(8, 20) }
       const g = gcd(boys, girls)
       const correct = `$${boys / g} : ${girls / g}$`
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -121,27 +130,28 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q4',
     category: 'Ratio Basics',
+    difficulty: 'hard',
     generate() {
       const r1 = randInt(1, 4)
       const r2 = randInt(1, 4)
       const r3 = randInt(1, 4)
       const mult = randInt(2, 6)
       const total = (r1 + r2 + r3) * mult
-      const _partA = r1 * mult
-      const partB = r2 * mult
-      const _partC = r3 * mult
-      const { options, correctIndex } = makeOptions(partB, 4)
+      const parts = [r1 * mult, r2 * mult, r3 * mult]
+      const median = [...parts].sort((a, b) => a - b)[1]
+      const { options, correctIndex } = makeOptions(median, 4)
       return {
         id: this.id, category: this.category,
-        question: `Three amounts are in the ratio $${r1} : ${r2} : ${r3}$. If the total is $${total}$, what is the middle amount?`,
+        question: `Three amounts are in the ratio $${r1} : ${r2} : ${r3}$. If the total is $${total}$, what is the median (middle) amount when the three are ordered?`,
         options, correctIndex,
-        explanation: `Each part = $${total}/${r1 + r2 + r3} = ${mult}$. Middle = $${r2} \\times ${mult} = ${partB}$.`
+        explanation: `Each part = $${total}/${r1 + r2 + r3} = ${mult}$. The amounts are $${parts.join(', ')}$; in order, the middle value is $${median}$.`
       }
     }
   },
   {
     id: 'srp-q5',
     category: 'Ratio Basics',
+    difficulty: 'medium',
     generate() {
       const a = randInt(2, 5)
       const b = randInt(2, 5)
@@ -160,6 +170,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q6',
     category: 'Ratio Basics',
+    difficulty: 'medium',
     generate() {
       const a = randInt(3, 10)
       const b = a + randInt(2, 6)
@@ -179,12 +190,8 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q7',
     category: 'Proportions',
+    difficulty: 'easy',
     generate() {
-      const a = randInt(2, 8)
-      const b = randInt(2, 8)
-      const c = randInt(2, 8)
-      const _ans = (b * c) / a
-      // Ensure integer answer
       const realA = randInt(2, 6)
       const realB = randInt(2, 6)
       const m = randInt(2, 5)
@@ -202,6 +209,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q8',
     category: 'Proportions',
+    difficulty: 'medium',
     generate() {
       const items = randInt(3, 8)
       const cost = items * randInt(2, 5)
@@ -220,6 +228,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q9',
     category: 'Proportions',
+    difficulty: 'medium',
     generate() {
       const height = randInt(4, 8)
       const shadow = randInt(2, 6)
@@ -237,6 +246,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q10',
     category: 'Proportions',
+    difficulty: 'easy',
     generate() {
       const mapDist = randInt(2, 8)
       const scale = randInt(5, 15)
@@ -253,6 +263,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q11',
     category: 'Proportions',
+    difficulty: 'easy',
     generate() {
       const cups = randInt(2, 4)
       const servings = randInt(4, 8)
@@ -270,12 +281,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q12',
     category: 'Proportions',
+    difficulty: 'easy',
     generate() {
       const a = randInt(2, 6)
       const b = randInt(2, 6)
       const k = randInt(2, 5)
-      const _correct = a * k === b * k ? 'Yes' : 'No'
-      // Create two fractions that may or may not be proportional
       const c = a * k
       const d = b * k
       const { options, correctIndex } = makeStringOptions('Yes', ['No', 'Cannot determine', 'Only if positive'])
@@ -292,22 +302,24 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q13',
     category: 'Unit Rates',
+    difficulty: 'easy',
     generate() {
-      const miles = randInt(100, 300)
       const hours = randInt(2, 5)
-      const ans = miles / hours
-      const { options, correctIndex } = makeOptions(ans, 10)
+      const speed = randInt(30, 70)
+      const miles = hours * speed
+      const { options, correctIndex } = makeOptions(speed, 10)
       return {
         id: this.id, category: this.category,
         question: `A car travels $${miles}$ miles in $${hours}$ hours. What is the average speed in mph?`,
         options, correctIndex,
-        explanation: `Speed = $\\frac{${miles}}{${hours}} = ${ans}$ mph.`
+        explanation: `Speed = $\\frac{${miles}}{${hours}} = ${speed}$ mph.`
       }
     }
   },
   {
     id: 'srp-q14',
     category: 'Unit Rates',
+    difficulty: 'easy',
     generate() {
       const price = randInt(3, 9)
       const count = randInt(4, 12)
@@ -324,13 +336,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q15',
     category: 'Unit Rates',
+    difficulty: 'hard',
     generate() {
-      const ozA = randInt(8, 16)
-      const priceA = randInt(2, 5)
-      const ozB = randInt(20, 32)
-      const priceB = randInt(4, 8)
-      const rateA = (priceA / ozA).toFixed(2)
-      const rateB = (priceB / ozB).toFixed(2)
+      let ozA = 0; let priceA = 0; let ozB = 0; let priceB = 0; let rateA = ''; let rateB = ''
+      do {
+        ozA = randInt(8, 16); priceA = randInt(2, 5); ozB = randInt(20, 32); priceB = randInt(4, 8)
+        rateA = (priceA / ozA).toFixed(2); rateB = (priceB / ozB).toFixed(2)
+      } while (rateA === rateB || priceA * ozB === priceB * ozA)
       const betterDeal = parseFloat(rateA) < parseFloat(rateB) ? 'Brand A' : 'Brand B'
       const { options, correctIndex } = makeStringOptions(betterDeal, [
         betterDeal === 'Brand A' ? 'Brand B' : 'Brand A',
@@ -348,10 +360,10 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q16',
     category: 'Unit Rates',
+    difficulty: 'medium',
     generate() {
-      const kmPerMile = 1.6
       const miles = randInt(5, 30) * 5
-      const ans = miles * kmPerMile
+      const ans = miles * 8 / 5
       const { options, correctIndex } = makeOptions(ans, 20)
       return {
         id: this.id, category: this.category,
@@ -364,18 +376,20 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q17',
     category: 'Unit Rates',
+    difficulty: 'hard',
     generate() {
       const workers = randInt(3, 8)
-      const days = randInt(4, 10)
       const newWorkers = randInt(workers + 1, workers + 6)
+      const r = randInt(1, 2)
+      const days = newWorkers * r
       const totalWork = workers * days
-      const ans = Math.round(totalWork / newWorkers)
+      const ans = workers * r
       const { options, correctIndex } = makeOptions(ans, 3)
       return {
         id: this.id, category: this.category,
         question: `$${workers}$ workers can finish a job in $${days}$ days. How many days would $${newWorkers}$ workers take (same rate)?`,
         options, correctIndex,
-        explanation: `Total worker-days = $${workers} \\times ${days} = ${totalWork}$. With $${newWorkers}$ workers: $${totalWork}/${newWorkers} \\approx ${ans}$ days.`
+        explanation: `Total worker-days = $${workers} \\times ${days} = ${totalWork}$. With $${newWorkers}$ workers: $${totalWork}/${newWorkers} = ${ans}$ days.`
       }
     }
   },
@@ -384,10 +398,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q18',
     category: 'Percent Problems',
+    difficulty: 'easy',
     generate() {
-      const whole = randInt(50, 500)
-      const pct = randInt(10, 90)
-      const ans = Math.round(whole * pct / 100)
+      const whole = randInt(5, 50) * 10
+      const pct = randInt(1, 9) * 10
+      const ans = whole * pct / 100
       const { options, correctIndex } = makeOptions(ans, 20)
       return {
         id: this.id, category: this.category,
@@ -400,6 +415,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q19',
     category: 'Percent Problems',
+    difficulty: 'medium',
     generate() {
       const part = randInt(10, 80)
       const whole = randInt(part + 20, part + 200)
@@ -416,10 +432,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q20',
     category: 'Percent Problems',
+    difficulty: 'medium',
     generate() {
-      const original = randInt(40, 200)
-      const pctIncrease = randInt(10, 50)
-      const increase = Math.round(original * pctIncrease / 100)
+      const original = randInt(4, 20) * 10
+      const pctIncrease = randInt(1, 5) * 10
+      const increase = original * pctIncrease / 100
       const ans = original + increase
       const { options, correctIndex } = makeOptions(ans, 15)
       return {
@@ -433,6 +450,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q21',
     category: 'Percent Problems',
+    difficulty: 'medium',
     generate() {
       const original = randInt(50, 200)
       const pctOff = [10, 15, 20, 25, 30, 40, 50][randInt(0, 6)]
@@ -450,6 +468,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q22',
     category: 'Percent Problems',
+    difficulty: 'medium',
     generate() {
       const oldVal = randInt(40, 100)
       const newVal = randInt(oldVal + 10, oldVal + 80)
@@ -467,10 +486,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q23',
     category: 'Percent Problems',
+    difficulty: 'hard',
     generate() {
       const pct = [5, 8, 10, 15, 20, 25][randInt(0, 5)]
-      const base = randInt(20, 60) * 10
-      const result = Math.round(base * pct / 100)
+      const base = randInt(2, 6) * 100
+      const result = base * pct / 100
       const ans = base
       const { options, correctIndex } = makeOptions(ans, 50)
       return {
@@ -484,6 +504,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q24',
     category: 'Percent Problems',
+    difficulty: 'medium',
     generate() {
       const price = randInt(20, 50) * 10
       const taxRate = [5, 6, 7, 8, 9, 10][randInt(0, 5)]
@@ -503,6 +524,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q25',
     category: 'Direct & Inverse Variation',
+    difficulty: 'medium',
     generate() {
       const k = randInt(2, 8)
       const x1 = randInt(2, 6)
@@ -521,27 +543,27 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q26',
     category: 'Direct & Inverse Variation',
+    difficulty: 'hard',
     generate() {
-      const k = randInt(20, 100)
+      const m = randInt(2, 4)
+      const y2 = randInt(2, 6)
+      const y1 = m * y2
       const x1 = randInt(2, 10)
-      const y1 = k / x1
-      // Ensure integer results
-      const realK = x1 * y1
-      const x2Choices = [2, 4, 5, 10].filter(v => realK % v === 0 && v !== x1)
-      const x2 = x2Choices.length > 0 ? x2Choices[randInt(0, x2Choices.length - 1)] : x1 * 2
-      const ans = realK / x2
-      const { options, correctIndex } = makeOptions(ans, 5)
+      const k = x1 * y1
+      const x2 = x1 * m
+      const { options, correctIndex } = makeOptions(y2, 5)
       return {
         id: this.id, category: this.category,
         question: `If $y$ varies inversely with $x$, and $y = ${y1}$ when $x = ${x1}$, find $y$ when $x = ${x2}$.`,
         options, correctIndex,
-        explanation: `$k = xy = ${x1} \\times ${y1} = ${realK}$. When $x = ${x2}$: $y = ${realK}/${x2} = ${ans}$.`
+        explanation: `$k = xy = ${x1} \\times ${y1} = ${k}$. When $x = ${x2}$: $y = ${k}/${x2} = ${y2}$.`
       }
     }
   },
   {
     id: 'srp-q27',
     category: 'Direct & Inverse Variation',
+    difficulty: 'easy',
     generate() {
       const correct = '$y = kx$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -558,6 +580,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q28',
     category: 'Direct & Inverse Variation',
+    difficulty: 'easy',
     generate() {
       const k = randInt(2, 6)
       const x = randInt(2, 8)
@@ -574,6 +597,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q29',
     category: 'Direct & Inverse Variation',
+    difficulty: 'medium',
     generate() {
       const scenarios = [
         { desc: 'speed and time to travel a fixed distance', type: 'Inversely' },
@@ -600,6 +624,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q30',
     category: 'Scale Factors',
+    difficulty: 'easy',
     generate() {
       const modelLen = randInt(2, 8)
       const scale = randInt(10, 50)
@@ -616,6 +641,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q31',
     category: 'Scale Factors',
+    difficulty: 'hard',
     generate() {
       const scaleFactor = randInt(2, 5)
       const side = randInt(3, 10)
@@ -635,6 +661,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q32',
     category: 'Scale Factors',
+    difficulty: 'easy',
     generate() {
       const original = randInt(6, 20)
       const scaled = original * randInt(2, 5)
@@ -651,6 +678,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q33',
     category: 'Scale Factors',
+    difficulty: 'hard',
     generate() {
       const k = randInt(2, 4)
       const origVol = randInt(2, 6)
@@ -668,6 +696,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q34',
     category: 'Scale Factors',
+    difficulty: 'easy',
     generate() {
       const mapCm = randInt(3, 12)
       const kmPerCm = randInt(5, 25)
@@ -686,10 +715,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q35',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
-      const original = randInt(60, 150)
-      const pctDown = randInt(10, 40)
-      const sale = Math.round(original * (100 - pctDown) / 100)
+      const original = randInt(6, 15) * 10
+      const pctDown = randInt(1, 4) * 10
+      const sale = original * (100 - pctDown) / 100
       const { options, correctIndex } = makeOptions(sale, 15)
       return {
         id: this.id, category: this.category,
@@ -702,6 +732,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q36',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const a = randInt(2, 6)
       const b = randInt(2, 6)
@@ -720,6 +751,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q37',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const scored = randInt(15, 45)
       const total = randInt(50, 100)
@@ -736,6 +768,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'srp-q38',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const tipRate = [15, 18, 20][randInt(0, 2)]
       const bill = randInt(20, 80)
@@ -744,32 +777,36 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 10)
       return {
         id: this.id, category: this.category,
-        question: `A restaurant bill is $\\$${bill}$. You leave a $${tipRate}\\%$ tip. What is the total?`,
+        question: `A restaurant bill is $\\$${bill}$. You leave a $${tipRate}\\%$ tip (rounded to the nearest dollar). What is the total?`,
         options, correctIndex,
-        explanation: `Tip = $\\$${bill} \\times ${tipRate / 100} = \\$${tip}$. Total = $\\$${bill} + \\$${tip} = \\$${ans}$.`
+        explanation: `Tip = $\\$${bill} \\times ${tipRate / 100} \\approx \\$${tip}$. Total = $\\$${bill} + \\$${tip} = \\$${ans}$.`
       }
     }
   },
   {
     id: 'srp-q39',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const partA = randInt(2, 5)
-      const partB = randInt(2, 5)
-      const total = (partA + partB) * randInt(5, 12)
-      const share = total * partA / (partA + partB)
-      const { options, correctIndex: _correctIndex } = makeOptions(share, 10)
+      let partB = randInt(2, 5)
+      while (partB === partA) partB = randInt(2, 5)
+      const unit = randInt(5, 12)
+      const total = (partA + partB) * unit
+      const smaller = Math.min(partA, partB) * unit
+      const { options, correctIndex } = makeOptions(smaller, 10)
       return {
         id: this.id, category: this.category,
         question: `$\\$${total}$ is split in the ratio $${partA} : ${partB}$. What is the smaller share?`,
-        options, correctIndex: makeOptions(Math.min(share, total - share), 10).correctIndex,
-        explanation: `Total parts = $${partA + partB}$. Smaller = $${Math.min(partA, partB)} \\times \\frac{${total}}{${partA + partB}} = \\$${Math.min(share, total - share)}$.`
+        options, correctIndex,
+        explanation: `Total parts = $${partA + partB}$. Each part = $\\$${total}/${partA + partB} = \\$${unit}$. Smaller = $${Math.min(partA, partB)} \\times \\$${unit} = \\$${smaller}$.`
       }
     }
   },
   {
     id: 'srp-q40',
     category: 'Review',
+    difficulty: 'hard',
     generate() {
       const price = randInt(50, 200)
       const pctDown = randInt(10, 30)
@@ -779,15 +816,29 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(afterUp, 15)
       return {
         id: this.id, category: this.category,
-        question: `A $\\$${price}$ stock drops $${pctDown}\\%$, then rises $${pctUp}\\%$. What is the new price?`,
+        question: `A $\\$${price}$ stock drops $${pctDown}\\%$, then rises $${pctUp}\\%$. What is the new price? (Round to the nearest dollar)`,
         options, correctIndex,
-        explanation: `After drop: $\\$${price} \\times ${(100 - pctDown) / 100} = \\$${afterDown}$. After rise: $\\$${afterDown} \\times ${(100 + pctUp) / 100} \\approx \\$${afterUp}$.`
+        explanation: `After drop: $\\$${price} \\times ${(100 - pctDown) / 100} \\approx \\$${afterDown}$. After rise: $\\$${afterDown} \\times ${(100 + pctUp) / 100} \\approx \\$${afterUp}$.`
       }
     }
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+type Tier = 'easy' | 'medium' | 'hard'
+const tierFallback: Record<Tier, Tier[]> = { easy: ['medium', 'hard'], medium: ['easy', 'hard'], hard: ['medium', 'easy'] }
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  if (difficulty) {
+    const selected = shuffle(questionPool.filter(q => q.difficulty === difficulty)).slice(0, count)
+    for (const tier of tierFallback[difficulty]) {
+      if (selected.length >= count) break
+      for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) {
+        if (selected.length >= count) break
+        selected.push(q)
+      }
+    }
+    return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
@@ -809,5 +860,5 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     if (selected.length >= count) break
     selected.push(q); usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

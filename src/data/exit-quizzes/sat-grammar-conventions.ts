@@ -8,15 +8,15 @@
  * Domain: Standard English Conventions
  */
 
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; difficulty?: 'easy' | 'medium' | 'hard' }
+interface QuestionTemplate { id: string; category: string; difficulty: 'easy' | 'medium' | 'hard'; generate: () => ExitQuizQuestion }
 
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
 
 const questionPool: QuestionTemplate[] = [
   // ─── Comma Usage ───
   {
-    id: 'gc-q1', category: 'Commas',
+    id: 'gc-q1', category: 'Commas', difficulty: 'medium',
     generate() {
       const correct = 'Dr. Elena Voss, a marine biologist at the Scripps Institution of Oceanography, has spent'
       const opts = shuffle([
@@ -33,7 +33,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q2', category: 'Commas',
+    id: 'gc-q2', category: 'Commas', difficulty: 'easy',
     generate() {
       const correct = 'Because the experiment required precise temperature control, the researchers'
       const opts = shuffle([
@@ -50,7 +50,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q3', category: 'Commas',
+    id: 'gc-q3', category: 'Commas', difficulty: 'easy',
     generate() {
       const correct = 'The festival features live music, artisanal food vendors, and interactive art installations.'
       const opts = shuffle([
@@ -68,7 +68,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Semicolons ───
   {
-    id: 'gc-q4', category: 'Semicolons',
+    id: 'gc-q4', category: 'Semicolons', difficulty: 'medium',
     generate() {
       const correct = 'dense; however,'
       const opts = shuffle([correct, 'dense, however,', 'dense however,', 'dense: however,'])
@@ -80,7 +80,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q5', category: 'Semicolons',
+    id: 'gc-q5', category: 'Semicolons', difficulty: 'medium',
     generate() {
       const correct = 'region; its'
       const opts = shuffle([correct, 'region, its', 'region its', 'region: its'])
@@ -93,7 +93,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Colons ───
   {
-    id: 'gc-q6', category: 'Colons',
+    id: 'gc-q6', category: 'Colons', difficulty: 'easy',
     generate() {
       const correct = 'three qualities: intellectual curiosity, emotional resilience, and a willingness to collaborate.'
       const opts = shuffle([
@@ -110,7 +110,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q7', category: 'Colons',
+    id: 'gc-q7', category: 'Colons', difficulty: 'medium',
     generate() {
       const correct = 'conclusion: the proposed tax'
       const opts = shuffle([correct, 'conclusion, the proposed tax', 'conclusion; the proposed tax', 'conclusion the proposed tax'])
@@ -123,7 +123,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Dashes ───
   {
-    id: 'gc-q8', category: 'Dashes',
+    id: 'gc-q8', category: 'Dashes', difficulty: 'hard',
     generate() {
       const correct = 'instruments—including the piano, violin, and cello—before'
       const opts = shuffle([
@@ -140,7 +140,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q9', category: 'Dashes',
+    id: 'gc-q9', category: 'Dashes', difficulty: 'medium',
     generate() {
       const correct = 'single trait—the ability to adapt quickly to changing circumstances.'
       const opts = shuffle([
@@ -158,7 +158,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Apostrophes & Possessives ───
   {
-    id: 'gc-q10', category: 'Possessives',
+    id: 'gc-q10', category: 'Possessives', difficulty: 'easy',
     generate() {
       const correct = "The orchestra's"
       const opts = shuffle([correct, "The orchestras'", 'The orchestras', "The orchestra,s"])
@@ -170,7 +170,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q11', category: 'Possessives',
+    id: 'gc-q11', category: 'Possessives', difficulty: 'medium',
     generate() {
       const correct = "the researchers' findings"
       const opts = shuffle([correct, "the researcher's findings", "the researchers findings", "the researchers's findings"])
@@ -182,7 +182,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q12', category: 'Possessives',
+    id: 'gc-q12', category: 'Possessives', difficulty: 'easy',
     generate() {
       const correct = "its"
       const opts = shuffle([correct, "it's", "its'", "their"])
@@ -195,7 +195,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Sentence Boundaries ───
   {
-    id: 'gc-q13', category: 'Sentence Boundaries',
+    id: 'gc-q13', category: 'Sentence Boundaries', difficulty: 'medium',
     generate() {
       const correct = 'century. The'
       const opts = shuffle([correct, 'century, the', 'century the', 'century, and, the'])
@@ -207,7 +207,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q14', category: 'Sentence Boundaries',
+    id: 'gc-q14', category: 'Sentence Boundaries', difficulty: 'medium',
     generate() {
       const correct = 'results, and she'
       const opts = shuffle([correct, 'results and she', 'results she', 'results, she'])
@@ -220,7 +220,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Restrictive vs. Nonrestrictive Elements ───
   {
-    id: 'gc-q15', category: 'Restrictive/Nonrestrictive',
+    id: 'gc-q15', category: 'Restrictive/Nonrestrictive', difficulty: 'hard',
     generate() {
       const correct = 'Students who complete all required coursework by May 15'
       const opts = shuffle([
@@ -237,7 +237,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q16', category: 'Restrictive/Nonrestrictive',
+    id: 'gc-q16', category: 'Restrictive/Nonrestrictive', difficulty: 'medium',
     generate() {
       const correct = 'The Mona Lisa, which was painted by Leonardo da Vinci in the early sixteenth century, is'
       const opts = shuffle([
@@ -255,7 +255,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Commas ───
   {
-    id: 'gc-q17', category: 'Commas',
+    id: 'gc-q17', category: 'Commas', difficulty: 'easy',
     generate() {
       const correct = 'Although he had never visited Japan, the chef'
       const opts = shuffle([
@@ -273,7 +273,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Semicolons ───
   {
-    id: 'gc-q18', category: 'Semicolons',
+    id: 'gc-q18', category: 'Semicolons', difficulty: 'medium',
     generate() {
       const correct = 'experiment; the results'
       const opts = shuffle([correct, 'experiment, the results', 'experiment the results', 'experiment: the results'])
@@ -286,7 +286,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Possessives ───
   {
-    id: 'gc-q19', category: 'Possessives',
+    id: 'gc-q19', category: 'Possessives', difficulty: 'easy',
     generate() {
       const correct = "children's"
       const opts = shuffle([correct, "childrens'", 'childrens', "children"])
@@ -299,7 +299,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Mixed Review ───
   {
-    id: 'gc-q20', category: 'Mixed Review',
+    id: 'gc-q20', category: 'Mixed Review', difficulty: 'hard',
     generate() {
       const correct = 'world\'s oceans, which cover more than seventy percent of the planet\'s surface, remain'
       const opts = shuffle([
@@ -316,7 +316,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q21', category: 'Commas',
+    id: 'gc-q21', category: 'Commas', difficulty: 'medium',
     generate() {
       const correct = 'the senator, a former civil rights attorney, introduced'
       const opts = shuffle([
@@ -333,7 +333,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q22', category: 'Sentence Boundaries',
+    id: 'gc-q22', category: 'Sentence Boundaries', difficulty: 'easy',
     generate() {
       const correct = 'glucose, but it'
       const opts = shuffle([correct, 'glucose but it', 'glucose it', 'glucose, it'])
@@ -345,7 +345,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q23', category: 'Colons',
+    id: 'gc-q23', category: 'Colons', difficulty: 'hard',
     generate() {
       const correct = 'mandate: every new building'
       const opts = shuffle([correct, 'mandate, every new building', 'mandate; every new building', 'mandate every new building'])
@@ -357,7 +357,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q24', category: 'Dashes',
+    id: 'gc-q24', category: 'Dashes', difficulty: 'hard',
     generate() {
       const correct = 'idea—one that many investors initially dismissed as impractical—eventually'
       const opts = shuffle([
@@ -374,7 +374,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'gc-q25', category: 'Mixed Review',
+    id: 'gc-q25', category: 'Mixed Review', difficulty: 'hard',
     generate() {
       const correct = "The author's latest novel, which has been translated into thirty-two languages, explores"
       const opts = shuffle([
@@ -392,12 +392,22 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+function selectTemplates(count: number, difficulty?: 'easy' | 'medium' | 'hard'): QuestionTemplate[] {
+  if (difficulty) {
+    const fillOrder: Record<'easy' | 'medium' | 'hard', ('easy' | 'medium' | 'hard')[]> = { easy: ['easy', 'medium', 'hard'], medium: ['medium', 'easy', 'hard'], hard: ['hard', 'medium', 'easy'] }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fillOrder[difficulty]) { if (selected.length >= count) break; for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) { if (selected.length >= count) break; selected.push(q) } }
+    return selected
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
-  return shuffle(selected).map(t => t.generate())
+  return selected
+}
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  return shuffle(selectTemplates(count, difficulty)).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

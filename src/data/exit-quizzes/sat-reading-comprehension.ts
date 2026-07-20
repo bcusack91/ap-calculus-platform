@@ -8,15 +8,15 @@
  * Domain: Information and Ideas
  */
 
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; difficulty?: 'easy' | 'medium' | 'hard' }
+interface QuestionTemplate { id: string; category: string; difficulty: 'easy' | 'medium' | 'hard'; generate: () => ExitQuizQuestion }
 
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
 
 const questionPool: QuestionTemplate[] = [
   // ─── Central Ideas and Details ───
   {
-    id: 'rc-q1', category: 'Central Ideas',
+    id: 'rc-q1', category: 'Central Ideas', difficulty: 'easy',
     generate() {
       const correct = 'Coral reefs support a disproportionately large number of marine species relative to the ocean area they occupy.'
       const opts = shuffle([
@@ -33,7 +33,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q2', category: 'Central Ideas',
+    id: 'rc-q2', category: 'Central Ideas', difficulty: 'medium',
     generate() {
       const correct = 'The expansion of railroads in the 1800s transformed the American understanding of time.'
       const opts = shuffle([
@@ -50,7 +50,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q3', category: 'Central Ideas',
+    id: 'rc-q3', category: 'Central Ideas', difficulty: 'easy',
     generate() {
       const correct = 'Fireflies use bioluminescence for species-specific mating communication.'
       const opts = shuffle([
@@ -68,7 +68,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Inferences ───
   {
-    id: 'rc-q4', category: 'Inferences',
+    id: 'rc-q4', category: 'Inferences', difficulty: 'medium',
     generate() {
       const correct = 'The immune system sometimes fails to distinguish between the body\'s own cells and foreign invaders.'
       const opts = shuffle([
@@ -85,7 +85,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q5', category: 'Inferences',
+    id: 'rc-q5', category: 'Inferences', difficulty: 'medium',
     generate() {
       const correct = 'The residents initially viewed the rewilding project with suspicion.'
       const opts = shuffle([
@@ -102,7 +102,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q6', category: 'Inferences',
+    id: 'rc-q6', category: 'Inferences', difficulty: 'hard',
     generate() {
       const correct = 'Traditional economic models may not fully account for how people actually make decisions.'
       const opts = shuffle([
@@ -120,7 +120,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Purpose and Function ───
   {
-    id: 'rc-q7', category: 'Purpose',
+    id: 'rc-q7', category: 'Purpose', difficulty: 'hard',
     generate() {
       const correct = 'To illustrate the practical challenges that the discovery created for established scientific methodology.'
       const opts = shuffle([
@@ -137,7 +137,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q8', category: 'Purpose',
+    id: 'rc-q8', category: 'Purpose', difficulty: 'medium',
     generate() {
       const correct = 'To highlight an unexpected benefit of an organism that is commonly viewed as a nuisance.'
       const opts = shuffle([
@@ -154,7 +154,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q9', category: 'Purpose',
+    id: 'rc-q9', category: 'Purpose', difficulty: 'hard',
     generate() {
       const correct = 'To present a debate about how to interpret a specific set of archaeological findings.'
       const opts = shuffle([
@@ -172,7 +172,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Textual Evidence ───
   {
-    id: 'rc-q10', category: 'Textual Evidence',
+    id: 'rc-q10', category: 'Textual Evidence', difficulty: 'medium',
     generate() {
       const correct = '"Subjects who listened to a ten-minute recording of birdsong showed a measurable decrease in self-reported anxiety and cortisol levels."'
       const opts = shuffle([
@@ -189,7 +189,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q11', category: 'Textual Evidence',
+    id: 'rc-q11', category: 'Textual Evidence', difficulty: 'easy',
     generate() {
       const correct = '"More than sixty percent of surveyed teachers reported spending their own money on classroom supplies at least once per month."'
       const opts = shuffle([
@@ -207,7 +207,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Command of Evidence ───
   {
-    id: 'rc-q12', category: 'Command of Evidence',
+    id: 'rc-q12', category: 'Command of Evidence', difficulty: 'medium',
     generate() {
       const correct = 'Bilingual children scored higher than monolingual children on tasks requiring them to switch between conflicting rules.'
       const opts = shuffle([
@@ -224,7 +224,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q13', category: 'Command of Evidence',
+    id: 'rc-q13', category: 'Command of Evidence', difficulty: 'medium',
     generate() {
       const correct = 'Cities that invested in separated bike lanes saw a statistically significant increase in cycling commuters and a decrease in cyclist injuries.'
       const opts = shuffle([
@@ -242,7 +242,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Text Structure ───
   {
-    id: 'rc-q14', category: 'Text Structure',
+    id: 'rc-q14', category: 'Text Structure', difficulty: 'medium',
     generate() {
       const correct = 'It introduces a phenomenon and then explains the mechanism behind it.'
       const opts = shuffle([
@@ -259,7 +259,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q15', category: 'Text Structure',
+    id: 'rc-q15', category: 'Text Structure', difficulty: 'easy',
     generate() {
       const correct = 'It challenges a common assumption by presenting contradictory evidence.'
       const opts = shuffle([
@@ -277,7 +277,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Cross-Text ───
   {
-    id: 'rc-q16', category: 'Cross-Text Connections',
+    id: 'rc-q16', category: 'Cross-Text Connections', difficulty: 'hard',
     generate() {
       const correct = 'They would likely disagree about whether artificial intelligence threatens the livelihoods of creative professionals.'
       const opts = shuffle([
@@ -294,7 +294,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'rc-q17', category: 'Cross-Text Connections',
+    id: 'rc-q17', category: 'Cross-Text Connections', difficulty: 'hard',
     generate() {
       const correct = 'Text 2 provides a specific example that supports Text 1\'s general claim about urban tree canopy benefits.'
       const opts = shuffle([
@@ -312,7 +312,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Central Ideas ───
   {
-    id: 'rc-q18', category: 'Central Ideas',
+    id: 'rc-q18', category: 'Central Ideas', difficulty: 'hard',
     generate() {
       const correct = 'Standardized testing may not capture the full range of student abilities.'
       const opts = shuffle([
@@ -330,7 +330,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Inferences ───
   {
-    id: 'rc-q19', category: 'Inferences',
+    id: 'rc-q19', category: 'Inferences', difficulty: 'medium',
     generate() {
       const correct = 'Octopuses may be capable of more complex cognition than their invertebrate classification might suggest.'
       const opts = shuffle([
@@ -348,7 +348,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Evidence ───
   {
-    id: 'rc-q20', category: 'Command of Evidence',
+    id: 'rc-q20', category: 'Command of Evidence', difficulty: 'easy',
     generate() {
       const correct = 'Communities that adopted restorative justice programs saw a 30 percent reduction in repeat offenses compared to communities that relied solely on traditional sentencing.'
       const opts = shuffle([
@@ -366,12 +366,22 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+function selectTemplates(count: number, difficulty?: 'easy' | 'medium' | 'hard'): QuestionTemplate[] {
+  if (difficulty) {
+    const fillOrder: Record<'easy' | 'medium' | 'hard', ('easy' | 'medium' | 'hard')[]> = { easy: ['easy', 'medium', 'hard'], medium: ['medium', 'easy', 'hard'], hard: ['hard', 'medium', 'easy'] }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fillOrder[difficulty]) { if (selected.length >= count) break; for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) { if (selected.length >= count) break; selected.push(q) } }
+    return selected
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
-  return shuffle(selected).map(t => t.generate())
+  return selected
+}
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  return shuffle(selectTemplates(count, difficulty)).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

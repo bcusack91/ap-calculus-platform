@@ -16,11 +16,13 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: 'easy' | 'medium' | 'hard'
   generate: () => ExitQuizQuestion
 }
 
@@ -44,6 +46,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q1',
     category: 'Subject-Verb Agreement',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('has demonstrated', ['have demonstrated', 'are demonstrating', 'demonstrate'])
       return {
@@ -57,6 +60,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q2',
     category: 'Subject-Verb Agreement',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
       return {
@@ -70,6 +74,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q3',
     category: 'Subject-Verb Agreement',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('reveals', ['reveal', 'have revealed', 'are revealing'])
       return {
@@ -83,6 +88,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q4',
     category: 'Subject-Verb Agreement',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('has', ['have', 'are having', 'were having'])
       return {
@@ -96,6 +102,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q5',
     category: 'Subject-Verb Agreement',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('suggests', ['suggest', 'are suggesting', 'were suggesting'])
       return {
@@ -109,6 +116,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q6',
     category: 'Subject-Verb Agreement',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('appear', ['appears', 'has appeared', 'is appearing'])
       return {
@@ -122,6 +130,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q7',
     category: 'Subject-Verb Agreement',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('requires', ['require', 'have required', 'are requiring'])
       return {
@@ -135,13 +144,14 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q8',
     category: 'Subject-Verb Agreement',
+    difficulty: 'hard',
     generate() {
-      const { options, correctIndex } = makeOptions('vary', ['varies', 'has varied', 'is varying'])
+      const { options, correctIndex } = makeOptions('varies', ['vary', 'have varied', 'are varying'])
       return {
         id: this.id, category: this.category,
         question: `The Department of Agriculture monitors crop yields across the country. According to the latest report, the number of bushels produced per acre _______ significantly depending on regional climate conditions and soil quality.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
         options, correctIndex,
-        explanation: `When "the number of" is the subject, it takes a singular verb. However, the SAT sometimes tests "a number of" (plural). Here "the number...vary" should be "varies"—but the question tests whether the student identifies the subject correctly.`
+        explanation: `When "the number of" is the subject, it takes a singular verb: "the number of bushels ... varies." (By contrast, "a number of" takes a plural verb.)`
       }
     }
   },
@@ -150,6 +160,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q9',
     category: 'Pronoun Usage',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('who', ['whom', 'which', 'whose'])
       return {
@@ -163,6 +174,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q10',
     category: 'Pronoun Usage',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('whom', ['who', 'which', 'that'])
       return {
@@ -176,6 +188,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q11',
     category: 'Pronoun Usage',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('its', ["it's", 'their', "they're"])
       return {
@@ -189,6 +202,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q12',
     category: 'Pronoun Usage',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('they encounter', ['it encounters', 'one encounters', 'he or she encounters'])
       return {
@@ -202,6 +216,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q13',
     category: 'Pronoun Usage',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('whose', ["who's", 'which', 'that'])
       return {
@@ -217,6 +232,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q14',
     category: 'Verb Tense',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('had already published', ['has already published', 'already published', 'would already publish'])
       return {
@@ -230,6 +246,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q15',
     category: 'Verb Tense',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('have contributed', ['contributed', 'had contributed', 'will contribute'])
       return {
@@ -243,6 +260,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q16',
     category: 'Verb Tense',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('maintained', ['maintains', 'has maintained', 'was maintaining'])
       return {
@@ -256,6 +274,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q17',
     category: 'Verb Tense',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('will have completed', ['will complete', 'has completed', 'completed'])
       return {
@@ -269,6 +288,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q18',
     category: 'Verb Tense',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('is', ['was', 'has been', 'had been'])
       return {
@@ -284,6 +304,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q19',
     category: 'Modifier Placement',
+    difficulty: 'medium',
     generate() {
       const correct = 'Exploring the cave system, the researchers discovered a new species of translucent fish.'
       const { options, correctIndex } = makeOptions(correct, [
@@ -302,6 +323,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q20',
     category: 'Modifier Placement',
+    difficulty: 'medium',
     generate() {
       const correct = 'After reviewing the data carefully, the scientists concluded that the results were inconclusive.'
       const { options, correctIndex } = makeOptions(correct, [
@@ -320,6 +342,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q21',
     category: 'Modifier Placement',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions(
         'Known for her innovative use of recycled materials, artist Neri Oxman exhibited her latest sculptures at the Guggenheim.',
@@ -342,6 +365,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q22',
     category: 'Parallel Structure',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('developing new curricula, training teachers, and expanding access to technology', [
         'developing new curricula, training teachers, and the expansion of access to technology',
@@ -359,6 +383,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q23',
     category: 'Parallel Structure',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('analyzing financial data, advising clients on investment strategies, and preparing quarterly reports', [
         'analyzing financial data, advising clients on investment strategies, and the preparation of quarterly reports',
@@ -376,6 +401,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q24',
     category: 'Parallel Structure',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('not only increased voter turnout but also strengthened community engagement', [
         'not only increased voter turnout but also the strengthening of community engagement',
@@ -395,6 +421,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q25',
     category: 'Conventional Expression',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('regarded as', ['regarded to be', 'regarded for', 'regarded being'])
       return {
@@ -408,6 +435,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q26',
     category: 'Conventional Expression',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('attributed to', ['attributed for', 'attributed with', 'attributed by'])
       return {
@@ -423,6 +451,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q27',
     category: 'Sentence Structure',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions(
         'complex. Because the organisms',
@@ -439,6 +468,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q28',
     category: 'Sentence Structure',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions(
         'techniques; however, recent innovations',
@@ -457,6 +487,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q29',
     category: 'Subject-Verb Agreement',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('were', ['was', 'has been', 'is'])
       return {
@@ -470,6 +501,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q30',
     category: 'Subject-Verb Agreement',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
       return {
@@ -485,6 +517,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q31',
     category: 'Verb Tense',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('wrote', ['writes', 'has written', 'had written'])
       return {
@@ -498,6 +531,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q32',
     category: 'Verb Tense',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('have relied', ['relied', 'had relied', 'rely'])
       return {
@@ -513,6 +547,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q33',
     category: 'Pronoun Usage',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('their', ['its', 'his or her', "one's"])
       return {
@@ -526,6 +561,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q34',
     category: 'Pronoun Usage',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('me', ['I', 'myself', 'mine'])
       return {
@@ -541,6 +577,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q35',
     category: 'Comparisons',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('than that of any other planet', ['than any other planet', 'than any planet', 'compared to any other planet'])
       return {
@@ -554,6 +591,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q36',
     category: 'Comparisons',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('as precisely as', ['as precisely than', 'more precisely as', 'so precisely as'])
       return {
@@ -569,6 +607,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q37',
     category: 'Mixed Review',
+    difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('are', ['is', 'was', 'has been'])
       return {
@@ -582,6 +621,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q38',
     category: 'Mixed Review',
+    difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('whom researchers have long studied', ['who researchers have long studied', 'whom have long been studied by researchers', 'who have long been studied by researchers'])
       return {
@@ -595,6 +635,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q39',
     category: 'Mixed Review',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('has inspired', ['have inspired', 'inspiring', 'were inspiring'])
       return {
@@ -608,6 +649,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'gu-q40',
     category: 'Mixed Review',
+    difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('discovered; the finding', ['discovered, the finding', 'discovered the finding', 'discovered and the finding'])
       return {
@@ -620,7 +662,23 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+function selectTemplates(count: number, difficulty?: 'easy' | 'medium' | 'hard'): QuestionTemplate[] {
+  if (difficulty) {
+    const fillOrder: Record<'easy' | 'medium' | 'hard', ('easy' | 'medium' | 'hard')[]> = {
+      easy: ['easy', 'medium', 'hard'],
+      medium: ['medium', 'easy', 'hard'],
+      hard: ['hard', 'medium', 'easy'],
+    }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fillOrder[difficulty]) {
+      if (selected.length >= count) break
+      for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) {
+        if (selected.length >= count) break
+        selected.push(q)
+      }
+    }
+    return selected
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
@@ -645,5 +703,9 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     selected.push(q)
     usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return selected
+}
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  return shuffle(selectTemplates(count, difficulty)).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

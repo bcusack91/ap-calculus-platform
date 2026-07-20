@@ -7,15 +7,15 @@
  * Domain: Expression of Ideas
  */
 
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; difficulty?: 'easy' | 'medium' | 'hard' }
+interface QuestionTemplate { id: string; category: string; difficulty: 'easy' | 'medium' | 'hard'; generate: () => ExitQuizQuestion }
 
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
 
 const questionPool: QuestionTemplate[] = [
   // ─── Transitions ───
   {
-    id: 'elu-q1', category: 'Transitions',
+    id: 'elu-q1', category: 'Transitions', difficulty: 'medium',
     generate() {
       const correct = 'Nevertheless,'
       const opts = shuffle([correct, 'Therefore,', 'Similarly,', 'Specifically,'])
@@ -27,7 +27,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q2', category: 'Transitions',
+    id: 'elu-q2', category: 'Transitions', difficulty: 'easy',
     generate() {
       const correct = 'For instance,'
       const opts = shuffle([correct, 'In contrast,', 'As a result,', 'Meanwhile,'])
@@ -39,7 +39,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q3', category: 'Transitions',
+    id: 'elu-q3', category: 'Transitions', difficulty: 'easy',
     generate() {
       const correct = 'Consequently,'
       const opts = shuffle([correct, 'However,', 'In other words,', 'Alternatively,'])
@@ -51,7 +51,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q4', category: 'Transitions',
+    id: 'elu-q4', category: 'Transitions', difficulty: 'medium',
     generate() {
       const correct = 'In contrast,'
       const opts = shuffle([correct, 'Furthermore,', 'Accordingly,', 'In addition,'])
@@ -63,7 +63,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q5', category: 'Transitions',
+    id: 'elu-q5', category: 'Transitions', difficulty: 'medium',
     generate() {
       const correct = 'Moreover,'
       const opts = shuffle([correct, 'Instead,', 'Nevertheless,', 'On the other hand,'])
@@ -76,7 +76,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Rhetorical Synthesis ───
   {
-    id: 'elu-q6', category: 'Rhetorical Synthesis',
+    id: 'elu-q6', category: 'Rhetorical Synthesis', difficulty: 'medium',
     generate() {
       const correct = 'While both approaches aim to reduce carbon emissions, cap-and-trade programs set a fixed limit on total emissions, whereas carbon taxes set a fixed price per unit of carbon emitted.'
       const opts = shuffle([
@@ -93,7 +93,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q7', category: 'Rhetorical Synthesis',
+    id: 'elu-q7', category: 'Rhetorical Synthesis', difficulty: 'hard',
     generate() {
       const correct = 'By analyzing tree ring patterns from ancient bristlecone pines, some of which are over 4,000 years old, dendrochronologists can reconstruct past climate conditions with year-by-year precision.'
       const opts = shuffle([
@@ -110,7 +110,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q8', category: 'Rhetorical Synthesis',
+    id: 'elu-q8', category: 'Rhetorical Synthesis', difficulty: 'hard',
     generate() {
       const correct = 'Although Frida Kahlo\'s work was initially overshadowed by that of her husband, muralist Diego Rivera, her deeply personal paintings—many of which explore themes of identity, pain, and Mexican folklore—have since established her as one of the most influential artists of the twentieth century.'
       const opts = shuffle([
@@ -127,7 +127,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q9', category: 'Rhetorical Synthesis',
+    id: 'elu-q9', category: 'Rhetorical Synthesis', difficulty: 'hard',
     generate() {
       const correct = 'The James Webb Space Telescope, which orbits the Sun nearly one million miles from Earth, can detect infrared light from galaxies that formed more than 13 billion years ago—observations that are impossible for ground-based telescopes, whose view is distorted by Earth\'s atmosphere.'
       const opts = shuffle([
@@ -145,7 +145,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Conciseness ───
   {
-    id: 'elu-q10', category: 'Conciseness',
+    id: 'elu-q10', category: 'Conciseness', difficulty: 'easy',
     generate() {
       const correct = 'The study found that sleep deprivation impairs decision-making.'
       const opts = shuffle([
@@ -162,7 +162,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q11', category: 'Conciseness',
+    id: 'elu-q11', category: 'Conciseness', difficulty: 'easy',
     generate() {
       const correct = 'The bridge, completed in 1937, remains an iconic symbol of San Francisco.'
       const opts = shuffle([
@@ -179,7 +179,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q12', category: 'Conciseness',
+    id: 'elu-q12', category: 'Conciseness', difficulty: 'easy',
     generate() {
       const correct = 'Because the soil lacked nitrogen, the crops failed.'
       const opts = shuffle([
@@ -197,7 +197,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Transitions ───
   {
-    id: 'elu-q13', category: 'Transitions',
+    id: 'elu-q13', category: 'Transitions', difficulty: 'hard',
     generate() {
       const correct = 'In fact,'
       const opts = shuffle([correct, 'By contrast,', 'Regardless,', 'Alternatively,'])
@@ -209,7 +209,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q14', category: 'Transitions',
+    id: 'elu-q14', category: 'Transitions', difficulty: 'easy',
     generate() {
       const correct = 'On the other hand,'
       const opts = shuffle([correct, 'In addition,', 'As a result,', 'In summary,'])
@@ -222,7 +222,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Rhetorical Synthesis ───
   {
-    id: 'elu-q15', category: 'Rhetorical Synthesis',
+    id: 'elu-q15', category: 'Rhetorical Synthesis', difficulty: 'hard',
     generate() {
       const correct = 'Although vertical farms use significantly less water and land than traditional agriculture, the high energy costs of artificial lighting currently make them economically viable only for high-value crops such as leafy greens and herbs.'
       const opts = shuffle([
@@ -240,7 +240,7 @@ const questionPool: QuestionTemplate[] = [
   },
   // ─── Additional Conciseness ───
   {
-    id: 'elu-q16', category: 'Conciseness',
+    id: 'elu-q16', category: 'Conciseness', difficulty: 'easy',
     generate() {
       const correct = 'The architect designed the building to maximize natural light.'
       const opts = shuffle([
@@ -257,7 +257,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q17', category: 'Transitions',
+    id: 'elu-q17', category: 'Transitions', difficulty: 'hard',
     generate() {
       const correct = 'Admittedly,'
       const opts = shuffle([correct, 'Undoubtedly,', 'Surprisingly,', 'Coincidentally,'])
@@ -269,7 +269,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q18', category: 'Transitions',
+    id: 'elu-q18', category: 'Transitions', difficulty: 'hard',
     generate() {
       const correct = 'To that end,'
       const opts = shuffle([correct, 'Even so,', 'In retrospect,', 'By comparison,'])
@@ -281,7 +281,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q19', category: 'Rhetorical Synthesis',
+    id: 'elu-q19', category: 'Rhetorical Synthesis', difficulty: 'medium',
     generate() {
       const correct = 'While lab-grown meat could dramatically reduce the environmental footprint of animal agriculture, consumer acceptance remains uncertain: surveys indicate that many people are hesitant to eat meat produced in a laboratory rather than on a farm.'
       const opts = shuffle([
@@ -298,7 +298,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'elu-q20', category: 'Conciseness',
+    id: 'elu-q20', category: 'Conciseness', difficulty: 'medium',
     generate() {
       const correct = 'The experiment confirmed that plants grow faster under blue light than under red light.'
       const opts = shuffle([
@@ -316,12 +316,22 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+function selectTemplates(count: number, difficulty?: 'easy' | 'medium' | 'hard'): QuestionTemplate[] {
+  if (difficulty) {
+    const fillOrder: Record<'easy' | 'medium' | 'hard', ('easy' | 'medium' | 'hard')[]> = { easy: ['easy', 'medium', 'hard'], medium: ['medium', 'easy', 'hard'], hard: ['hard', 'medium', 'easy'] }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fillOrder[difficulty]) { if (selected.length >= count) break; for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) { if (selected.length >= count) break; selected.push(q) } }
+    return selected
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
-  return shuffle(selected).map(t => t.generate())
+  return selected
+}
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  return shuffle(selectTemplates(count, difficulty)).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

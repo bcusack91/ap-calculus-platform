@@ -11,16 +11,24 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: 'easy' | 'medium' | 'hard'
   generate: () => ExitQuizQuestion
 }
 
 function randInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function randNonZero(min: number, max: number): number {
+  let n = 0
+  while (n === 0) n = randInt(min, max)
+  return n
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -56,24 +64,30 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q1',
     category: 'Mean, Median, Mode',
+    difficulty: 'easy',
     generate() {
       const n = 5
-      const vals = Array.from({ length: n }, () => randInt(60, 100))
+      const vals = Array.from({ length: n - 1 }, () => randInt(60, 100))
+      let last = randInt(60, 100)
+      const r = (vals.reduce((a, b) => a + b, 0) + last) % n
+      last -= r
+      if (last < 60) last += n
+      vals.push(last)
       const sum = vals.reduce((a, b) => a + b, 0)
       const mean = sum / n
-      const ans = Math.round(mean * 10) / 10
-      const { options, correctIndex } = makeOptions(Math.round(mean), 3)
+      const { options, correctIndex } = makeOptions(mean, 3)
       return {
         id: this.id, category: this.category,
         question: `Find the mean of: $${vals.join(', ')}$.`,
         options, correctIndex,
-        explanation: `Mean = $\\frac{${vals.join(' + ')}}{${n}} = \\frac{${sum}}{${n}} = ${ans}$.`
+        explanation: `Mean = $\\frac{${vals.join(' + ')}}{${n}} = \\frac{${sum}}{${n}} = ${mean}$.`
       }
     }
   },
   {
     id: 'ssd-q2',
     category: 'Mean, Median, Mode',
+    difficulty: 'easy',
     generate() {
       const n = 7
       const vals = Array.from({ length: n }, () => randInt(10, 50)).sort((a, b) => a - b)
@@ -90,27 +104,31 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q3',
     category: 'Mean, Median, Mode',
+    difficulty: 'medium',
     generate() {
-      // Even number of values → median is average of two middle
-      const vals = Array.from({ length: 6 }, () => randInt(20, 60)).sort((a, b) => a - b)
+      // Even number of values → median is average of two middle (may end in .5)
+      let vals: number[] = []
+      do { vals = Array.from({ length: 6 }, () => randInt(20, 60)).sort((a, b) => a - b) } while (vals[2] === vals[3] || vals[3] - vals[2] === 2)
       const median = (vals[2] + vals[3]) / 2
-      const ans = Math.round(median * 10) / 10
-      const { options, correctIndex } = makeOptions(Math.round(median), 3)
+      const correct = `${median}`
+      const { options, correctIndex } = makeStringOptions(correct, [`${vals[2]}`, `${vals[3]}`, `${median - 1}`])
       return {
         id: this.id, category: this.category,
         question: `Find the median of: $${vals.join(', ')}$.`,
         options, correctIndex,
-        explanation: `6 values → median = average of 3rd and 4th: $\\frac{${vals[2]} + ${vals[3]}}{2} = ${ans}$.`
+        explanation: `6 values → median = average of 3rd and 4th: $\\frac{${vals[2]} + ${vals[3]}}{2} = ${median}$.`
       }
     }
   },
   {
     id: 'ssd-q4',
     category: 'Mean, Median, Mode',
+    difficulty: 'easy',
     generate() {
       const mode = randInt(5, 20)
-      const others = [mode, mode, mode, randInt(1, 25), randInt(1, 25), randInt(1, 25)]
-      const dataset = shuffle(others)
+      const fillerVals = new Set<number>()
+      while (fillerVals.size < 3) { const v = randInt(1, 25); if (v !== mode) fillerVals.add(v) }
+      const dataset = shuffle([mode, mode, mode, ...fillerVals])
       const { options, correctIndex } = makeOptions(mode, 4)
       return {
         id: this.id, category: this.category,
@@ -123,6 +141,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q5',
     category: 'Mean, Median, Mode',
+    difficulty: 'hard',
     generate() {
       // Weighted average
       const scores = [randInt(70, 90), randInt(80, 100), randInt(60, 85)]
@@ -133,7 +152,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 4)
       return {
         id: this.id, category: this.category,
-        question: `Three tests scored $${scores[0]}$, $${scores[1]}$, $${scores[2]}$ with weights $${weights[0]}$, $${weights[1]}$, $${weights[2]}$. Weighted average?`,
+        question: `Three tests scored $${scores[0]}$, $${scores[1]}$, $${scores[2]}$ with weights $${weights[0]}$, $${weights[1]}$, $${weights[2]}$. Weighted average? (Rounded to the nearest whole number)`,
         options, correctIndex,
         explanation: `$\\frac{${scores[0]}(${weights[0]}) + ${scores[1]}(${weights[1]}) + ${scores[2]}(${weights[2]})}{${totalWeight}} = \\frac{${weightedSum}}{${totalWeight}} \\approx ${ans}$.`
       }
@@ -142,6 +161,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q6',
     category: 'Mean, Median, Mode',
+    difficulty: 'hard',
     generate() {
       const n = randInt(4, 8)
       const targetMean = randInt(75, 95)
@@ -159,6 +179,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q7',
     category: 'Mean, Median, Mode',
+    difficulty: 'easy',
     generate() {
       const vals = [randInt(10, 30), randInt(10, 30), randInt(10, 30), randInt(10, 30), randInt(10, 30)]
       const sorted = [...vals].sort((a, b) => a - b)
@@ -177,6 +198,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q8',
     category: 'Spread & Variability',
+    difficulty: 'easy',
     generate() {
       const correct = 'The data values are more spread out from the mean'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -195,6 +217,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q9',
     category: 'Spread & Variability',
+    difficulty: 'easy',
     generate() {
       // IQR = Q3 - Q1
       const q1 = randInt(20, 40)
@@ -212,15 +235,14 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q10',
     category: 'Spread & Variability',
+    difficulty: 'hard',
     generate() {
       const q1 = randInt(20, 40)
-      const q3 = q1 + randInt(15, 30)
+      const q3 = q1 + 2 * randInt(8, 15)
       const iqr = q3 - q1
       const lowerFence = q1 - 1.5 * iqr
       const upperFence = q3 + 1.5 * iqr
-      const _outlier = upperFence + randInt(5, 20)
-      const ans = Math.round(upperFence)
-      const correct = `Above $${ans}$ or below $${Math.round(lowerFence)}$`
+      const correct = `Above $${upperFence}$ or below $${lowerFence}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `Above $${q3}$ or below $${q1}$`,
         `Above $${q3 + iqr}$`,
@@ -230,13 +252,14 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `With $Q_1 = ${q1}$, $Q_3 = ${q3}$, IQR = $${iqr}$, a value is an outlier if it is:`,
         options, correctIndex,
-        explanation: `Outlier if $< Q_1 - 1.5 \\times IQR = ${Math.round(lowerFence)}$ or $> Q_3 + 1.5 \\times IQR = ${ans}$.`
+        explanation: `Outlier if $< Q_1 - 1.5 \\times IQR = ${lowerFence}$ or $> Q_3 + 1.5 \\times IQR = ${upperFence}$.`
       }
     }
   },
   {
     id: 'ssd-q11',
     category: 'Spread & Variability',
+    difficulty: 'easy',
     generate() {
       const setA = [10, 10, 10, 10, 10]
       const setB = [2, 6, 10, 14, 18]
@@ -255,6 +278,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q12',
     category: 'Spread & Variability',
+    difficulty: 'medium',
     generate() {
       const correct = 'Median and IQR'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -275,6 +299,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q13',
     category: 'Two-Way Tables',
+    difficulty: 'easy',
     generate() {
       const a = randInt(15, 30)
       const b = randInt(10, 25)
@@ -293,6 +318,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q14',
     category: 'Two-Way Tables',
+    difficulty: 'medium',
     generate() {
       const a = randInt(20, 40)
       const b = randInt(15, 35)
@@ -303,7 +329,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(pct, 5)
       return {
         id: this.id, category: this.category,
-        question: `Of $${rowTotal}$ males, $${a}$ said Yes and $${b}$ said No. What percent of males said Yes?`,
+        question: `Of $${rowTotal}$ males, $${a}$ said Yes and $${b}$ said No. What percent of males said Yes? (Rounded to the nearest percent)`,
         options, correctIndex,
         explanation: `$\\frac{${a}}{${rowTotal}} \\approx ${pct}\\%$.`
       }
@@ -312,6 +338,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q15',
     category: 'Two-Way Tables',
+    difficulty: 'medium',
     generate() {
       const cat = randInt(10, 25)
       const dog = randInt(15, 30)
@@ -331,6 +358,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q16',
     category: 'Two-Way Tables',
+    difficulty: 'hard',
     generate() {
       const sYes = randInt(30, 50)
       const sNo = randInt(20, 40)
@@ -342,7 +370,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(pct, 5)
       return {
         id: this.id, category: this.category,
-        question: `Seniors: $${sYes}$ yes, $${sNo}$ no. Juniors: $${jYes}$ yes, $${jNo}$ no. What percent of all students said yes?`,
+        question: `Seniors: $${sYes}$ yes, $${sNo}$ no. Juniors: $${jYes}$ yes, $${jNo}$ no. What percent of all students said yes? (Rounded to the nearest percent)`,
         options, correctIndex,
         explanation: `Total yes = $${totalYes}$. Total = $${total}$. $\\frac{${totalYes}}{${total}} \\approx ${pct}\\%$.`
       }
@@ -351,6 +379,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q17',
     category: 'Two-Way Tables',
+    difficulty: 'medium',
     generate() {
       const correct = 'Joint relative frequency'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -371,6 +400,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q18',
     category: 'Scatterplots & Best Fit',
+    difficulty: 'easy',
     generate() {
       const m = randInt(1, 5)
       const b = randInt(10, 50)
@@ -388,6 +418,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q19',
     category: 'Scatterplots & Best Fit',
+    difficulty: 'easy',
     generate() {
       const correct = 'Strong negative linear association'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -406,6 +437,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q20',
     category: 'Scatterplots & Best Fit',
+    difficulty: 'easy',
     generate() {
       const m = randNonZero(-5, 5)
       const b = randInt(10, 60)
@@ -426,6 +458,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q21',
     category: 'Scatterplots & Best Fit',
+    difficulty: 'medium',
     generate() {
       const m = randInt(2, 6)
       const correct = `For each increase of $1$ in $x$, $y$ increases by $${m}$`
@@ -445,6 +478,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q22',
     category: 'Scatterplots & Best Fit',
+    difficulty: 'medium',
     generate() {
       const rChoices = [
         { r: '0.95', desc: 'very strong positive' },
@@ -469,6 +503,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q23',
     category: 'Probability',
+    difficulty: 'easy',
     generate() {
       const total = randInt(20, 50)
       const favorable = randInt(5, total - 5)
@@ -476,7 +511,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(pct, 5)
       return {
         id: this.id, category: this.category,
-        question: `A bag has $${total}$ marbles, $${favorable}$ are red. Probability of drawing red? (as %)`,
+        question: `A bag has $${total}$ marbles, $${favorable}$ are red. Probability of drawing red? (as %, rounded)`,
         options, correctIndex,
         explanation: `$P = \\frac{${favorable}}{${total}} \\approx ${pct}\\%$.`
       }
@@ -485,6 +520,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q24',
     category: 'Probability',
+    difficulty: 'medium',
     generate() {
       const total = randInt(30, 60)
       const eventA = randInt(10, 25)
@@ -493,7 +529,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(pct, 5)
       return {
         id: this.id, category: this.category,
-        question: `$${eventA}$ of $${total}$ students like math. Probability a random student does NOT like math? (as %)`,
+        question: `$${eventA}$ of $${total}$ students like math. Probability a random student does NOT like math? (as %, rounded)`,
         options, correctIndex,
         explanation: `$P(\\text{not math}) = 1 - \\frac{${eventA}}{${total}} = \\frac{${complement}}{${total}} \\approx ${pct}\\%$.`
       }
@@ -502,11 +538,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q25',
     category: 'Probability',
+    difficulty: 'hard',
     generate() {
-      // Two independent events
-      const p1Num = randInt(1, 5)
+      // Two independent events: "shows k or less" has probability k/6
+      const p1Num = randInt(2, 5)
+      let p2Num = randInt(2, 5)
+      while (p1Num === 2 && p2Num === 2) p2Num = randInt(3, 5)
       const p1Den = 6
-      const p2Num = randInt(1, 5)
       const p2Den = 6
       const prodNum = p1Num * p2Num
       const prodDen = p1Den * p2Den
@@ -518,7 +556,7 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `Two dice are rolled. $P(\\text{first shows ${p1Num}+}) = \\frac{${p1Num}}{${p1Den}}$; $P(\\text{second shows ${p2Num}+}) = \\frac{${p2Num}}{${p2Den}}$. Find $P(\\text{both})$.`,
+        question: `Two dice are rolled. $P(\\text{first shows ${p1Num} or less}) = \\frac{${p1Num}}{${p1Den}}$; $P(\\text{second shows ${p2Num} or less}) = \\frac{${p2Num}}{${p2Den}}$. Find $P(\\text{both})$.`,
         options, correctIndex,
         explanation: `Independent events: $P(A \\cap B) = \\frac{${p1Num}}{${p1Den}} \\times \\frac{${p2Num}}{${p2Den}} = \\frac{${prodNum}}{${prodDen}}$.`
       }
@@ -527,12 +565,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q26',
     category: 'Probability',
+    difficulty: 'easy',
     generate() {
       const red = randInt(3, 8)
       const blue = randInt(3, 8)
-      const total = red + blue
-      const _pRed = Math.round((red / total) * 100)
-      const _pBlue = Math.round((blue / total) * 100)
+      const _total = red + blue
       const pRedOrBlue = 100
       const { options, correctIndex } = makeOptions(pRedOrBlue, 10)
       return {
@@ -546,9 +583,10 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q27',
     category: 'Probability',
+    difficulty: 'medium',
     generate() {
       const faces = 6
-      const n = randInt(1, 6)
+      const n = [2, 4][randInt(0, 1)]
       const favorable = faces - n + 1
       const correct = `$\\frac{${favorable}}{${faces}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -567,6 +605,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q28',
     category: 'Probability',
+    difficulty: 'easy',
     generate() {
       const total = 52
       const suit = 13
@@ -587,6 +626,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q29',
     category: 'Study Design',
+    difficulty: 'medium',
     generate() {
       const correct = 'Randomized controlled experiment'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -605,6 +645,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q30',
     category: 'Study Design',
+    difficulty: 'medium',
     generate() {
       const correct = 'Observational study'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -623,6 +664,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q31',
     category: 'Study Design',
+    difficulty: 'medium',
     generate() {
       const correct = 'Bias — the sample is not representative'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -641,6 +683,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q32',
     category: 'Study Design',
+    difficulty: 'medium',
     generate() {
       const correct = 'No — correlation does not imply causation'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -652,13 +695,14 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: 'Ice cream sales and drownings are correlated. Can we conclude ice cream causes drownings?',
         options, correctIndex,
-        explanation: 'Correlation ≠ causation. A confounding variable (hot weather) likely explains both.'
+        explanation: 'Correlation does not imply causation. A confounding variable (hot weather) likely explains both.'
       }
     }
   },
   {
     id: 'ssd-q33',
     category: 'Study Design',
+    difficulty: 'hard',
     generate() {
       const n = randInt(100, 500)
       const margin = randInt(2, 5)
@@ -684,29 +728,33 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q34',
     category: 'Review',
+    difficulty: 'hard',
     generate() {
       const vals = Array.from({ length: 5 }, () => randInt(50, 100))
       const sorted = [...vals].sort((a, b) => a - b)
       const median = sorted[2]
-      const mean = Math.round(vals.reduce((s, v) => s + v, 0) / 5)
-      const _diff = Math.abs(mean - median)
-      const correct = mean > median ? 'Mean is larger' : mean < median ? 'Median is larger' : 'They are equal'
+      const sum = vals.reduce((s, v) => s + v, 0)
+      const meanExact = sum / 5
+      const meanStr = (sum / 5).toFixed(1)
+      const correct = meanExact > median ? 'Mean is larger' : meanExact < median ? 'Median is larger' : 'They are equal'
       const { options, correctIndex } = makeStringOptions(correct, [
-        mean > median ? 'Median is larger' : 'Mean is larger',
+        'Mean is larger',
+        'Median is larger',
         'They are equal',
         'Cannot determine'
       ])
       return {
         id: this.id, category: this.category,
-        question: `Data: $${vals.join(', ')}$. Mean = $${mean}$, Median = $${median}$. Which is larger?`,
+        question: `Data: $${vals.join(', ')}$. Mean = $${meanStr}$, Median = $${median}$. Which is larger?`,
         options, correctIndex,
-        explanation: `Mean = $${mean}$, Median = $${median}$. ${correct}.`
+        explanation: `Mean = $${meanStr}$, Median = $${median}$. ${correct}.`
       }
     }
   },
   {
     id: 'ssd-q35',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const total = randInt(80, 200)
       const eventA = randInt(20, total - 20)
@@ -714,7 +762,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(pct, 5)
       return {
         id: this.id, category: this.category,
-        question: `In a group of $${total}$, $${eventA}$ prefer option A. What is the relative frequency? (as %)`,
+        question: `In a group of $${total}$, $${eventA}$ prefer option A. What is the relative frequency? (as %, rounded)`,
         options, correctIndex,
         explanation: `$\\frac{${eventA}}{${total}} \\approx ${pct}\\%$.`
       }
@@ -723,6 +771,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q36',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const m = randInt(2, 5)
       const b = randInt(5, 30)
@@ -742,6 +791,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q37',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const correct = 'To allow cause-and-effect conclusions'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -760,6 +810,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q38',
     category: 'Review',
+    difficulty: 'hard',
     generate() {
       const n = 5
       const vals = Array.from({ length: n }, () => randInt(10, 40))
@@ -779,6 +830,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q39',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const a = randInt(10, 25)
       const _b = randInt(10, 25)
@@ -789,7 +841,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(conditionalPct, 5)
       return {
         id: this.id, category: this.category,
-        question: `What percent of Group 1 said Yes?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group 1 | ${a} | ${c} |`,
+        question: `What percent of Group 1 said Yes? (Rounded to the nearest percent)\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group 1 | ${a} | ${c} |`,
         options, correctIndex,
         explanation: `$\\frac{${a}}{${a} + ${c}} = \\frac{${a}}{${colTotal}} \\approx ${conditionalPct}\\%$.`
       }
@@ -798,6 +850,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'ssd-q40',
     category: 'Review',
+    difficulty: 'hard',
     generate() {
       const correct = 'Larger samples generally give smaller margins of error'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -809,19 +862,27 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: 'How does sample size affect margin of error?',
         options, correctIndex,
-        explanation: 'Margin of error ∝ $1/\\sqrt{n}$,' + ' so larger samples produce smaller margins.' 
+        explanation: 'Margin of error ∝ $1/\\sqrt{n}$,' + ' so larger samples produce smaller margins.'
       }
     }
   },
 ]
 
-function randNonZero(min: number, max: number): number {
-  let n = 0
-  while (n === 0) n = randInt(min, max)
-  return n
-}
+type Tier = 'easy' | 'medium' | 'hard'
+const tierFallback: Record<Tier, Tier[]> = { easy: ['medium', 'hard'], medium: ['easy', 'hard'], hard: ['medium', 'easy'] }
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  if (difficulty) {
+    const selected = shuffle(questionPool.filter(q => q.difficulty === difficulty)).slice(0, count)
+    for (const tier of tierFallback[difficulty]) {
+      if (selected.length >= count) break
+      for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) {
+        if (selected.length >= count) break
+        selected.push(q)
+      }
+    }
+    return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
@@ -843,5 +904,5 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     if (selected.length >= count) break
     selected.push(q); usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

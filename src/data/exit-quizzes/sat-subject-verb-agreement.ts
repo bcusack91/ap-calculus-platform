@@ -6,8 +6,8 @@
  * subject-verb agreement in context.
  */
 
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; difficulty?: 'easy' | 'medium' | 'hard' }
+interface QuestionTemplate { id: string; category: string; difficulty: 'easy' | 'medium' | 'hard'; generate: () => ExitQuizQuestion }
 
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
 
@@ -19,7 +19,7 @@ function makeOptions(correct: string, distractors: string[]) {
 
 const questionPool: QuestionTemplate[] = [
   {
-    id: 'sva-q1', category: 'Intervening Phrases',
+    id: 'sva-q1', category: 'Intervening Phrases', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
       return { id: this.id, category: this.category,
@@ -30,7 +30,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q2', category: 'Intervening Phrases',
+    id: 'sva-q2', category: 'Intervening Phrases', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('has', ['have', 'are having', 'had'])
       return { id: this.id, category: this.category,
@@ -41,7 +41,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q3', category: 'Indefinite Pronouns',
+    id: 'sva-q3', category: 'Indefinite Pronouns', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('carries', ['carry', 'have carried', 'are carrying'])
       return { id: this.id, category: this.category,
@@ -52,7 +52,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q4', category: 'Indefinite Pronouns',
+    id: 'sva-q4', category: 'Indefinite Pronouns', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('demonstrate', ['demonstrates', 'has demonstrated', 'is demonstrating'])
       return { id: this.id, category: this.category,
@@ -63,7 +63,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q5', category: 'Compound Subjects',
+    id: 'sva-q5', category: 'Compound Subjects', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('require', ['requires', 'has required', 'is requiring'])
       return { id: this.id, category: this.category,
@@ -74,7 +74,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q6', category: 'Compound Subjects',
+    id: 'sva-q6', category: 'Compound Subjects', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('was', ['were', 'have been', 'are'])
       return { id: this.id, category: this.category,
@@ -85,18 +85,18 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q7', category: 'Compound Subjects',
+    id: 'sva-q7', category: 'Compound Subjects', difficulty: 'hard',
     generate() {
-      const { options, correctIndex } = makeOptions('are', ['is', 'was', 'has been'])
+      const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
       return { id: this.id, category: this.category,
         question: `Either the original documents or a certified copy _______ acceptable for completing the application process. Applicants should verify which form of identification the office requires before scheduling an appointment.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
         options, correctIndex,
-        explanation: `With "either...or," the verb agrees with the nearer subject. Wait—"a certified copy" is singular, so "is" would agree. But check: the SAT expects agreement with the nearer noun. Actually, rethinking: "a certified copy is acceptable" is correct for nearer-noun agreement.`
+        explanation: `With "either...or," the verb agrees with the nearer subject. "A certified copy" is singular, so "is" is correct.`
       }
     }
   },
   {
-    id: 'sva-q8', category: 'Inverted Sentences',
+    id: 'sva-q8', category: 'Inverted Sentences', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('lie', ['lies', 'has lain', 'is lying'])
       return { id: this.id, category: this.category,
@@ -107,7 +107,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q9', category: 'Inverted Sentences',
+    id: 'sva-q9', category: 'Inverted Sentences', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('stands', ['stand', 'have stood', 'are standing'])
       return { id: this.id, category: this.category,
@@ -118,7 +118,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q10', category: 'Relative Clauses',
+    id: 'sva-q10', category: 'Relative Clauses', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('challenge', ['challenges', 'has challenged', 'is challenging'])
       return { id: this.id, category: this.category,
@@ -129,7 +129,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q11', category: 'Relative Clauses',
+    id: 'sva-q11', category: 'Relative Clauses', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('explores', ['explore', 'have explored', 'are exploring'])
       return { id: this.id, category: this.category,
@@ -140,7 +140,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q12', category: 'Collective Nouns',
+    id: 'sva-q12', category: 'Collective Nouns', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('has announced', ['have announced', 'are announcing', 'announce'])
       return { id: this.id, category: this.category,
@@ -151,7 +151,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q13', category: 'Collective Nouns',
+    id: 'sva-q13', category: 'Collective Nouns', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
       return { id: this.id, category: this.category,
@@ -162,7 +162,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q14', category: 'Tricky Subjects',
+    id: 'sva-q14', category: 'Tricky Subjects', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('provides', ['provide', 'have provided', 'are providing'])
       return { id: this.id, category: this.category,
@@ -173,7 +173,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q15', category: 'Tricky Subjects',
+    id: 'sva-q15', category: 'Tricky Subjects', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('remains', ['remain', 'have remained', 'are remaining'])
       return { id: this.id, category: this.category,
@@ -184,7 +184,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q16', category: 'Tricky Subjects',
+    id: 'sva-q16', category: 'Tricky Subjects', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('were', ['was', 'has been', 'is'])
       return { id: this.id, category: this.category,
@@ -195,7 +195,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q17', category: 'Intervening Phrases',
+    id: 'sva-q17', category: 'Intervening Phrases', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('influences', ['influence', 'have influenced', 'are influencing'])
       return { id: this.id, category: this.category,
@@ -206,7 +206,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q18', category: 'Indefinite Pronouns',
+    id: 'sva-q18', category: 'Indefinite Pronouns', difficulty: 'easy',
     generate() {
       const { options, correctIndex } = makeOptions('has', ['have', 'are', 'were'])
       return { id: this.id, category: this.category,
@@ -217,7 +217,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q19', category: 'Collective Nouns',
+    id: 'sva-q19', category: 'Collective Nouns', difficulty: 'hard',
     generate() {
       const { options, correctIndex } = makeOptions('disagree', ['disagrees', 'has disagreed', 'is disagreeing'])
       return { id: this.id, category: this.category,
@@ -228,7 +228,7 @@ const questionPool: QuestionTemplate[] = [
     }
   },
   {
-    id: 'sva-q20', category: 'Mixed Review',
+    id: 'sva-q20', category: 'Mixed Review', difficulty: 'medium',
     generate() {
       const { options, correctIndex } = makeOptions('was', ['were', 'have been', 'are'])
       return { id: this.id, category: this.category,
@@ -240,12 +240,22 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+function selectTemplates(count: number, difficulty?: 'easy' | 'medium' | 'hard'): QuestionTemplate[] {
+  if (difficulty) {
+    const fillOrder: Record<'easy' | 'medium' | 'hard', ('easy' | 'medium' | 'hard')[]> = { easy: ['easy', 'medium', 'hard'], medium: ['medium', 'easy', 'hard'], hard: ['hard', 'medium', 'easy'] }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fillOrder[difficulty]) { if (selected.length >= count) break; for (const q of shuffle(questionPool.filter(t => t.difficulty === tier))) { if (selected.length >= count) break; selected.push(q) } }
+    return selected
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
-  return shuffle(selected).map(t => t.generate())
+  return selected
+}
+
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  return shuffle(selectTemplates(count, difficulty)).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

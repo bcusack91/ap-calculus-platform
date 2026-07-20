@@ -11,11 +11,15 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
+
+type Difficulty = 'easy' | 'medium' | 'hard'
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: Difficulty
   generate: () => ExitQuizQuestion
 }
 
@@ -41,11 +45,11 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
+function makeOptions(correct: number, spread: number = 2, min?: number): { options: string[]; correctIndex: number } {
   const distractors = new Set<number>()
   while (distractors.size < 3) {
     const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
+    if (d !== correct && (min === undefined || d >= min)) distractors.add(d)
   }
   const all = [correct, ...distractors]
   const shuffled = shuffle(all)
@@ -65,6 +69,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q1',
     category: 'Circle Equations',
+    difficulty: 'medium',
     generate() {
       const h = randInt(-5, 5)
       const k = randInt(-5, 5)
@@ -74,7 +79,8 @@ const questionPool: QuestionTemplate[] = [
       const kStr = k === 0 ? 'y' : k > 0 ? `(y - ${k})` : `(y + ${-k})`
       const correct = `$(${h}, ${k})$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$(${-h}, ${-k})$`, `$(${k}, ${h})$`, `$(${h + 1}, ${k - 1})$`
+        `$(${-h}, ${-k})$`, `$(${k}, ${h})$`, `$(${h + 1}, ${k - 1})$`,
+        `$(${-h}, ${k})$`, `$(${h}, ${-k})$`, `$(${h + 2}, ${k})$`, `$(${h + 1}, ${k + 1})$`
       ])
       return {
         id: this.id, category: this.category,
@@ -87,15 +93,18 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q2',
     category: 'Circle Equations',
+    difficulty: 'easy',
     generate() {
       const h = randInt(-4, 4)
       const k = randInt(-4, 4)
       const r = randInt(2, 7)
       const r2 = r * r
-      const { options, correctIndex } = makeOptions(r, 2)
+      const hStr = h === 0 ? 'x' : h > 0 ? `(x - ${h})` : `(x + ${-h})`
+      const kStr = k === 0 ? 'y' : k > 0 ? `(y - ${k})` : `(y + ${-k})`
+      const { options, correctIndex } = makeOptions(r, 2, 1)
       return {
         id: this.id, category: this.category,
-        question: `Circle equation: $(x - ${h})^2 + (y - ${k})^2 = ${r2}$. What is the radius?`,
+        question: `Circle equation: $${hStr}^2 + ${kStr}^2 = ${r2}$. What is the radius?`,
         options, correctIndex,
         explanation: `$r^2 = ${r2}$ → $r = \\sqrt{${r2}} = ${r}$.`
       }
@@ -104,6 +113,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q3',
     category: 'Circle Equations',
+    difficulty: 'medium',
     generate() {
       const h = randInt(1, 5)
       const k = randInt(1, 5)
@@ -113,7 +123,8 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeStringOptions(correct, [
         `$(x + ${h})^2 + (y + ${k})^2 = ${r2}$`,
         `$(x - ${h})^2 + (y - ${k})^2 = ${r}$`,
-        `$(x - ${k})^2 + (y - ${h})^2 = ${r2}$`
+        `$(x - ${k})^2 + (y - ${h})^2 = ${r2}$`,
+        `$(x - ${h + 1})^2 + (y - ${k})^2 = ${r2}$`
       ])
       return {
         id: this.id, category: this.category,
@@ -126,6 +137,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q4',
     category: 'Circle Equations',
+    difficulty: 'easy',
     generate() {
       const r = randInt(3, 8)
       const r2 = r * r
@@ -146,56 +158,60 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q5',
     category: 'Circle Equations',
+    difficulty: 'hard',
     generate() {
       // Completing the square: x² + y² + Dx + Ey + F = 0
       const h = randInt(1, 4)
       const k = randInt(1, 4)
       const r = randInt(2, 5)
-      const D = -2 * h
-      const E = -2 * k
       const F = h * h + k * k - r * r
+      const fTerm = F === 0 ? '' : ` ${F > 0 ? '+' : '-'} ${Math.abs(F)}`
       const correct = `$(${h}, ${k})$, $r = ${r}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$(${-h}, ${-k})$, $r = ${r}$`,
         `$(${h}, ${k})$, $r = ${r * r}$`,
-        `$(${D}, ${E})$, $r = ${r}$`
+        `$(${-2 * h}, ${-2 * k})$, $r = ${r}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `$x^2 + y^2 ${D >= 0 ? '+' : ''}${D}x ${E >= 0 ? '+' : ''}${E}y ${F >= 0 ? '+' : ''}${F} = 0$. Find center and radius.`,
+        question: `$x^2 + y^2 - ${2 * h}x - ${2 * k}y${fTerm} = 0$. Find center and radius.`,
         options, correctIndex,
-        explanation: `Complete the square: $(x ${D / 2 >= 0 ? '+' : ''}${D / 2})^2 + (y ${E / 2 >= 0 ? '+' : ''}${E / 2})^2 = ${r * r}$. Center $(${h}, ${k})$, $r = ${r}$.`
+        explanation: `Complete the square: $(x - ${h})^2 + (y - ${k})^2 = ${r * r}$. Center $(${h}, ${k})$, $r = ${r}$.`
       }
     }
   },
   {
     id: 'sct-q6',
     category: 'Circle Equations',
+    difficulty: 'medium',
     generate() {
       const h = randInt(-3, 3)
       const k = randInt(-3, 3)
       const r = randInt(3, 7)
       const px = h + r
       const py = k
+      const hStr = h === 0 ? 'x' : h > 0 ? `(x - ${h})` : `(x + ${-h})`
+      const kStr = k === 0 ? 'y' : k > 0 ? `(y - ${k})` : `(y + ${-k})`
       const correct = 'Yes'
       const { options, correctIndex } = makeStringOptions(correct, [
         'No', 'Cannot determine', 'Only if $r > 5$'
       ])
       return {
         id: this.id, category: this.category,
-        question: `Is $(${px}, ${py})$ on the circle $(x - ${h})^2 + (y - ${k})^2 = ${r * r}$?`,
+        question: `Is $(${px}, ${py})$ on the circle $${hStr}^2 + ${kStr}^2 = ${r * r}$?`,
         options, correctIndex,
-        explanation: `$(${px} - ${h})^2 + (${py} - ${k})^2 = ${r}^2 + 0 = ${r * r}$ ✓. Yes, it's on the circle.`
+        explanation: `$(${px} ${h < 0 ? '+' : '-'} ${Math.abs(h)})^2 + (${py} ${k < 0 ? '+' : '-'} ${Math.abs(k)})^2 = ${r}^2 + 0 = ${r * r}$ ✓. Yes, it's on the circle.`
       }
     }
   },
   {
     id: 'sct-q7',
     category: 'Circle Equations',
+    difficulty: 'easy',
     generate() {
       const r = randInt(3, 8)
       const d = 2 * r
-      const { options, correctIndex } = makeOptions(d, 3)
+      const { options, correctIndex } = makeOptions(d, 3, 1)
       return {
         id: this.id, category: this.category,
         question: `A circle has equation $x^2 + y^2 = ${r * r}$. What is the diameter?`,
@@ -207,13 +223,17 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q8',
     category: 'Circle Equations',
+    difficulty: 'easy',
     generate() {
       const r = randInt(2, 6)
-      const _area = Math.round(Math.PI * r * r)
       const correct = `$${r * r}\\pi$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$${2 * r}\\pi$`, `$${r}\\pi$`, `$${r * r * 2}\\pi$`
-      ])
+      const seen = new Set<number>([r * r])
+      const ds: string[] = []
+      for (const v of [2 * r, r, 2 * r * r, (r + 1) * (r + 1)]) {
+        if (ds.length >= 3) break
+        if (!seen.has(v)) { seen.add(v); ds.push(`$${v}\\pi$`) }
+      }
+      const { options, correctIndex } = makeStringOptions(correct, ds)
       return {
         id: this.id, category: this.category,
         question: `A circle has radius $${r}$. What is its area?`,
@@ -227,6 +247,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q9',
     category: 'Arc Length & Sectors',
+    difficulty: 'easy',
     generate() {
       const r = randInt(3, 10)
       const C = 2 * r
@@ -245,49 +266,59 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q10',
     category: 'Arc Length & Sectors',
+    difficulty: 'hard',
     generate() {
       const r = randInt(4, 12)
       const deg = [60, 90, 120, 180][randInt(0, 3)]
-      const frac = deg / 360
-      const _arcLen = `${frac === 0.5 ? '' : frac === 0.25 ? '\\frac{1}{2}' : `\\frac{${deg}}{360}`}\\cdot 2\\pi(${r})`
-      const _simplified = deg === 180 ? `${r}\\pi` : deg === 90 ? `\\frac{${r}\\pi}{1}` : `${(2 * r * deg / 360)}`
-      // Arc length = (θ/360) × 2πr
-      const numCoeff = 2 * r * deg / 360
-      const correct = Number.isInteger(numCoeff) ? `$${numCoeff}\\pi$` : `$\\frac{${2 * r * deg}}{360}\\pi$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$${r}\\pi$`, `$${2 * r}\\pi$`, `$${Math.round(numCoeff + 2)}\\pi$`
-      ])
+      // Arc length = (θ/360) × 2πr; track values as num/360 to reject equal-value distractors.
+      const num = 2 * r * deg
+      const correct = `$${fmtPi(num, 360)}$`
+      const seen = new Set<number>([num])
+      const ds: string[] = []
+      for (const n of [360 * r, 720 * r, num + 720, 2 * num, 360 * r * r]) {
+        if (ds.length >= 3) break
+        if (!seen.has(n)) { seen.add(n); ds.push(`$${fmtPi(n, 360)}$`) }
+      }
+      const { options, correctIndex } = makeStringOptions(correct, ds)
       return {
         id: this.id, category: this.category,
         question: `Find the arc length for a $${deg}°$ arc on a circle with radius $${r}$.`,
         options, correctIndex,
-        explanation: `Arc = $\\frac{${deg}}{360} \\times 2\\pi(${r}) = ${numCoeff}\\pi$.`
+        explanation: `Arc = $\\frac{${deg}}{360} \\times 2\\pi(${r}) = ${fmtPi(num, 360)}$.`
       }
     }
   },
   {
     id: 'sct-q11',
     category: 'Arc Length & Sectors',
+    difficulty: 'hard',
     generate() {
       const r = randInt(3, 8)
       const deg = [60, 90, 120][randInt(0, 2)]
-      const frac = deg / 360
-      const sectorArea = frac * r * r
-      const correct = `$${Number.isInteger(sectorArea) ? sectorArea : `\\frac{${r * r * deg}}{360}`}\\pi$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$${r * r}\\pi$`, `$${2 * r}\\pi$`, `$${Math.round(sectorArea + 3)}\\pi$`
-      ])
+      // Sector area = (θ/360) × πr²; values tracked as num/360.
+      const num = r * r * deg
+      const correct = `$${fmtPi(num, 360)}$`
+      const seen = new Set<number>([num])
+      const ds: string[] = []
+      // Rich, varied candidate pool so ≥3 survive value-dedup on every draw
+      // (prevents makeStringOptions from padding with filler options).
+      for (const n of [360 * r * r, 720 * r, 2 * num, 3 * num, num + 360, num + 1080, r * r * 30]) {
+        if (ds.length >= 3) break
+        if (!seen.has(n)) { seen.add(n); ds.push(`$${fmtPi(n, 360)}$`) }
+      }
+      const { options, correctIndex } = makeStringOptions(correct, ds)
       return {
         id: this.id, category: this.category,
         question: `Find the sector area for a $${deg}°$ angle in a circle of radius $${r}$.`,
         options, correctIndex,
-        explanation: `Sector area = $\\frac{${deg}}{360} \\times \\pi r^2 = \\frac{${deg}}{360} \\times ${r * r}\\pi = ${sectorArea}\\pi$.`
+        explanation: `Sector area = $\\frac{${deg}}{360} \\times \\pi r^2 = \\frac{${deg}}{360} \\times ${r * r}\\pi = ${fmtPi(num, 360)}$.`
       }
     }
   },
   {
     id: 'sct-q12',
     category: 'Arc Length & Sectors',
+    difficulty: 'easy',
     generate() {
       const correct = '$\\frac{\\theta}{360} \\times \\pi r^2$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -306,6 +337,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q13',
     category: 'Arc Length & Sectors',
+    difficulty: 'medium',
     generate() {
       const degs = [30, 45, 60, 90, 120, 180, 270, 360]
       const deg = degs[randInt(0, degs.length - 1)]
@@ -327,16 +359,29 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q14',
     category: 'Arc Length & Sectors',
+    difficulty: 'hard',
     generate() {
       // Arc length formula in radians: s = rθ
       const r = randInt(3, 10)
       const thetaNum = randInt(1, 3)
       const thetaDen = [2, 3, 4, 6][randInt(0, 3)]
-      const _s = r * thetaNum / thetaDen
+      // s = r·thetaNum/thetaDen; dedupe candidate values (num/den) against the key.
+      const keyVal = r * thetaNum / thetaDen
       const correct = `$${fmtPi(r * thetaNum, thetaDen)}$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$${r}\\pi$`, `$\\frac{${r}\\pi}{${thetaDen + 1}}$`, `$${r * thetaNum}\\pi$`
-      ])
+      const seen = new Set<number>([keyVal])
+      const ds: string[] = []
+      // Rich candidate pool so ≥3 survive value-dedup even at thetaNum=1,thetaDen=2
+      // (otherwise makeStringOptions pads with filler options).
+      const cands: [number, number][] = [
+        [r, 1], [r, thetaDen + 1], [r * thetaNum, 1], [2 * r * thetaNum, thetaDen],
+        [r * (thetaNum + 1), thetaDen], [3 * r * thetaNum, thetaDen], [r * thetaNum, thetaDen + 2],
+      ]
+      for (const [n, d] of cands) {
+        if (ds.length >= 3) break
+        const v = n / d
+        if (!seen.has(v)) { seen.add(v); ds.push(`$${fmtPi(n, d)}$`) }
+      }
+      const { options, correctIndex } = makeStringOptions(correct, ds)
       return {
         id: this.id, category: this.category,
         question: `Arc length on a circle of radius $${r}$, central angle $${fmtPi(thetaNum, thetaDen)}$ radians?`,
@@ -348,9 +393,9 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q15',
     category: 'Arc Length & Sectors',
+    difficulty: 'medium',
     generate() {
       const r = randInt(4, 10)
-      const _semicircleArea = r * r / 2
       const correct = `$\\frac{${r * r}\\pi}{2}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${r * r}\\pi$`, `$${r}\\pi$`, `$\\frac{${r}\\pi}{2}$`
@@ -368,6 +413,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q16',
     category: 'Right Triangle Trig',
+    difficulty: 'easy',
     generate() {
       const correct = '$\\frac{\\text{opposite}}{\\text{hypotenuse}}$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -386,6 +432,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q17',
     category: 'Right Triangle Trig',
+    difficulty: 'easy',
     generate() {
       const correct = '$\\frac{\\text{adjacent}}{\\text{hypotenuse}}$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -404,6 +451,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q18',
     category: 'Right Triangle Trig',
+    difficulty: 'easy',
     generate() {
       const correct = '$\\frac{\\text{opposite}}{\\text{adjacent}}$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -422,27 +470,29 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q19',
     category: 'Right Triangle Trig',
+    difficulty: 'medium',
     generate() {
-      // 3-4-5 or multiples
+      // 3-4-5 or multiples — ratios reduce to the base triple
       const k = randInt(1, 4)
       const a = 3 * k
       const b = 4 * k
       const c = 5 * k
-      const correct = `$\\frac{${a}}{${c}}$`
+      const correct = '$\\frac{3}{5}$'
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$\\frac{${b}}{${c}}$`, `$\\frac{${a}}{${b}}$`, `$\\frac{${c}}{${a}}$`
+        '$\\frac{4}{5}$', '$\\frac{3}{4}$', '$\\frac{5}{3}$'
       ])
       return {
         id: this.id, category: this.category,
         question: `In a right triangle with legs $${a}$ and $${b}$, hypotenuse $${c}$, find $\\sin(\\theta)$ where $\\theta$ is opposite the side of length $${a}$.`,
         options, correctIndex,
-        explanation: `$\\sin(\\theta) = \\frac{\\text{opp}}{\\text{hyp}} = \\frac{${a}}{${c}}$.`
+        explanation: `$\\sin(\\theta) = \\frac{\\text{opp}}{\\text{hyp}} = \\frac{${a}}{${c}} = \\frac{3}{5}$.`
       }
     }
   },
   {
     id: 'sct-q20',
     category: 'Right Triangle Trig',
+    difficulty: 'easy',
     generate() {
       // Special triangle: 30-60-90
       const correct = '$\\frac{1}{2}$'
@@ -460,6 +510,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q21',
     category: 'Right Triangle Trig',
+    difficulty: 'easy',
     generate() {
       const correct = '$\\frac{\\sqrt{2}}{2}$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -476,6 +527,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q22',
     category: 'Right Triangle Trig',
+    difficulty: 'medium',
     generate() {
       const correct = '$\\frac{\\sqrt{3}}{2}$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -492,13 +544,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q23',
     category: 'Right Triangle Trig',
+    difficulty: 'medium',
     generate() {
-      // Find missing side using trig
-      const hyp = randInt(8, 20)
-      const _angle = 30
+      // Find missing side using trig — even hypotenuse keeps the answer an integer
+      const hyp = 2 * randInt(4, 10)
       // sin(30) = opp/hyp → opp = hyp/2
       const opp = hyp / 2
-      const { options, correctIndex } = makeOptions(opp, 3)
+      const { options, correctIndex } = makeOptions(opp, 3, 1)
       return {
         id: this.id, category: this.category,
         question: `In a right triangle, hypotenuse $= ${hyp}$ and one angle is $30°$. What is the side opposite the $30°$ angle?`,
@@ -512,6 +564,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q24',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'easy',
     generate() {
       const correct = '$1$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -528,6 +581,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q25',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'easy',
     generate() {
       const correct = '$(\\cos\\theta, \\sin\\theta)$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -546,6 +600,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q26',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'easy',
     generate() {
       const correct = '$0$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -562,6 +617,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q27',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'easy',
     generate() {
       const correct = '$1$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -578,6 +634,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q28',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'medium',
     generate() {
       const correct = '$-1$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -594,6 +651,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q29',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'easy',
     generate() {
       const correct = '$\\sin^2\\theta + \\cos^2\\theta = 1$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -612,6 +670,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q30',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'easy',
     generate() {
       const correct = '$1$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -628,6 +687,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q31',
     category: 'Unit Circle & Special Angles',
+    difficulty: 'medium',
     generate() {
       const correct = 'Undefined'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -646,6 +706,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q32',
     category: 'Trig Applications & Review',
+    difficulty: 'medium',
     generate() {
       // Using Pythagorean theorem
       const a = randInt(3, 12)
@@ -668,6 +729,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q33',
     category: 'Trig Applications & Review',
+    difficulty: 'hard',
     generate() {
       const triples = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]]
       const t = triples[randInt(0, triples.length - 1)]
@@ -675,7 +737,7 @@ const questionPool: QuestionTemplate[] = [
       const a = t[0] * k
       const c = t[2] * k
       const b = t[1] * k
-      const { options, correctIndex } = makeOptions(b, 3)
+      const { options, correctIndex } = makeOptions(b, 3, 1)
       return {
         id: this.id, category: this.category,
         question: `A right triangle has hypotenuse $${c}$ and one leg $${a}$. Find the other leg.`,
@@ -687,6 +749,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q34',
     category: 'Trig Applications & Review',
+    difficulty: 'medium',
     generate() {
       const angles = [
         { angle: '30°', sin: '\\frac{1}{2}', cos: '\\frac{\\sqrt{3}}{2}' },
@@ -709,6 +772,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q35',
     category: 'Trig Applications & Review',
+    difficulty: 'hard',
     generate() {
       // If sin(θ) = 3/5, find cos(θ)
       const triples = [[3, 4, 5], [5, 12, 13], [8, 15, 17]]
@@ -730,18 +794,21 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q36',
     category: 'Trig Applications & Review',
+    difficulty: 'medium',
     generate() {
       const h = randInt(-4, 4)
       const k = randInt(-4, 4)
       const r = randInt(3, 7)
       const circ = 2 * r
+      const hStr = h === 0 ? 'x' : h > 0 ? `(x - ${h})` : `(x + ${-h})`
+      const kStr = k === 0 ? 'y' : k > 0 ? `(y - ${k})` : `(y + ${-k})`
       const correct = `$${circ}\\pi$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$${r}\\pi$`, `$${r * r}\\pi$`, `$${circ + 2}\\pi$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `$(x - ${h})^2 + (y - ${k})^2 = ${r * r}$. What is the circumference?`,
+        question: `$${hStr}^2 + ${kStr}^2 = ${r * r}$. What is the circumference?`,
         options, correctIndex,
         explanation: `$r = ${r}$. $C = 2\\pi r = ${circ}\\pi$.`
       }
@@ -750,6 +817,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q37',
     category: 'Trig Applications & Review',
+    difficulty: 'hard',
     generate() {
       const height = randInt(5, 20) * 10
       const angle = [30, 45, 60][randInt(0, 2)]
@@ -771,8 +839,8 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q38',
     category: 'Trig Applications & Review',
+    difficulty: 'easy',
     generate() {
-      const _correct = '$\\sin^2(\\theta) + \\cos^2(\\theta)$'
       const { options, correctIndex } = makeStringOptions('$1$', [
         '$0$', '$\\sin(2\\theta)$', '$2\\cos(\\theta)$'
       ])
@@ -787,6 +855,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q39',
     category: 'Trig Applications & Review',
+    difficulty: 'medium',
     generate() {
       const r = randInt(3, 8)
       const r2 = r * r
@@ -805,6 +874,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sct-q40',
     category: 'Trig Applications & Review',
+    difficulty: 'medium',
     generate() {
       // Complementary angles: sin(θ) = cos(90° - θ)
       const ang = [20, 25, 30, 35, 40][randInt(0, 4)]
@@ -823,9 +893,18 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, _topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  let sourcePool = questionPool
+  if (difficulty) {
+    const fillOrder: Record<Difficulty, Difficulty[]> = { easy: ['medium', 'hard'], medium: ['easy', 'hard'], hard: ['medium', 'easy'] }
+    sourcePool = questionPool.filter(q => q.difficulty === difficulty)
+    for (const tier of fillOrder[difficulty]) {
+      if (sourcePool.length >= count) break
+      sourcePool = [...sourcePool, ...shuffle(questionPool.filter(q => q.difficulty === tier)).slice(0, count - sourcePool.length)]
+    }
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
-  for (const q of questionPool) {
+  for (const q of sourcePool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
     byCategory[q.category].push(q)
   }
@@ -839,11 +918,11 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     const q = pool[Math.floor(Math.random() * pool.length)]
     if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) }
   }
-  const remaining = questionPool.filter(q => !usedIds.has(q.id))
+  const remaining = sourcePool.filter(q => !usedIds.has(q.id))
   const shuffledRemaining = shuffle(remaining)
   for (const q of shuffledRemaining) {
     if (selected.length >= count) break
     selected.push(q); usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

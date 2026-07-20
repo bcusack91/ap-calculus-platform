@@ -11,11 +11,13 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: 'easy' | 'medium' | 'hard'
   generate: () => ExitQuizQuestion
 }
 
@@ -32,11 +34,11 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
+function makeOptions(correct: number, spread: number = 2, min?: number): { options: string[]; correctIndex: number } {
   const distractors = new Set<number>()
   while (distractors.size < 3) {
     const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
+    if (d !== correct && (min === undefined || d >= min)) distractors.add(d)
   }
   const all = [correct, ...distractors]
   const shuffled = shuffle(all)
@@ -56,13 +58,14 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q1',
     category: 'Exponential Growth',
+    difficulty: 'medium',
     generate() {
       const a = randInt(50, 500)
       const r = randInt(5, 20)
       const t = randInt(1, 3)
       const base = 1 + r / 100
       const ans = Math.round(a * Math.pow(base, t))
-      const { options, correctIndex } = makeOptions(ans, Math.max(50, Math.round(ans * 0.1)))
+      const { options, correctIndex } = makeOptions(ans, Math.max(50, Math.round(ans * 0.1)), 1)
       return {
         id: this.id, category: this.category,
         question: `A population of $${a}$ grows $${r}\\%$ per year. What is the population after $${t}$ year${t > 1 ? 's' : ''}?`,
@@ -74,6 +77,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q2',
     category: 'Exponential Growth',
+    difficulty: 'medium',
     generate() {
       const a = randInt(100, 1000)
       const r = randInt(5, 25)
@@ -95,6 +99,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q3',
     category: 'Exponential Growth',
+    difficulty: 'hard',
     generate() {
       const initial = randInt(2, 8) * 100
       const doublings = randInt(1, 4)
@@ -113,6 +118,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q4',
     category: 'Exponential Growth',
+    difficulty: 'easy',
     generate() {
       const correct = 'The base $b$ is greater than $1$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -131,6 +137,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q5',
     category: 'Exponential Growth',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1000, 5000)
       const r = randInt(3, 12)
@@ -150,6 +157,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q6',
     category: 'Exponential Growth',
+    difficulty: 'hard',
     generate() {
       const a = randInt(200, 800)
       const r = randInt(10, 30)
@@ -171,16 +179,17 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q7',
     category: 'Exponential Growth',
+    difficulty: 'medium',
     generate() {
-      const a = randInt(50, 200)
-      const r = randInt(5, 15)
-      const ans = r
-      const { options, correctIndex } = makeOptions(ans, 3)
+      const a = 20 * randInt(3, 10) // multiple of 20 so a·r/100 is a whole number
+      const r = 5 * randInt(1, 3)   // 5%, 10%, or 15%
+      const end = a + a * r / 100
+      const { options, correctIndex } = makeOptions(r, 3, 1)
       return {
         id: this.id, category: this.category,
-        question: `A value grows from $${a}$ to $${Math.round(a * (1 + r / 100))}$ in one year. What is the annual growth rate in percent?`,
+        question: `A value grows from $${a}$ to $${end}$ in one year. What is the annual growth rate in percent?`,
         options, correctIndex,
-        explanation: `Growth rate = $\\frac{${Math.round(a * (1 + r / 100))} - ${a}}{${a}} \\times 100 = ${r}\\%$.`
+        explanation: `Growth rate = $\\frac{${end} - ${a}}{${a}} \\times 100 = ${r}\\%$.`
       }
     }
   },
@@ -189,6 +198,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q8',
     category: 'Exponential Decay',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1000, 5000)
       const r = randInt(10, 30)
@@ -207,13 +217,15 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q9',
     category: 'Exponential Decay',
+    difficulty: 'hard',
     generate() {
-      const a = randInt(100, 500)
       const halfLife = randInt(2, 8)
       const halves = randInt(1, 4)
+      const pow = Math.pow(2, halves)
+      const a = pow * randInt(Math.ceil(100 / pow), Math.floor(500 / pow)) // divisible by 2^halves
       const time = halfLife * halves
-      const ans = Math.round(a / Math.pow(2, halves))
-      const { options, correctIndex } = makeOptions(ans, Math.max(10, Math.round(ans * 0.2)))
+      const ans = a / pow
+      const { options, correctIndex } = makeOptions(ans, Math.max(10, Math.round(ans * 0.2)), 1)
       return {
         id: this.id, category: this.category,
         question: `A substance with half-life $${halfLife}$ years starts at $${a}$ g. How much after $${time}$ years?`,
@@ -225,6 +237,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q10',
     category: 'Exponential Decay',
+    difficulty: 'easy',
     generate() {
       const r = randInt(10, 40)
       const base = (100 - r) / 100
@@ -243,6 +256,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q11',
     category: 'Exponential Decay',
+    difficulty: 'easy',
     generate() {
       const eqs = [
         { eq: 'y = 500(0.85)^t', type: 'Decay', rate: '15%' },
@@ -267,6 +281,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q12',
     category: 'Exponential Decay',
+    difficulty: 'medium',
     generate() {
       const a = randInt(500, 2000)
       const r = randInt(5, 20)
@@ -288,6 +303,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q13',
     category: 'Exponential Decay',
+    difficulty: 'easy',
     generate() {
       const correct = 'The function approaches $0$ but never reaches it'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -308,6 +324,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q14',
     category: 'Compound Interest',
+    difficulty: 'hard',
     generate() {
       const P = randInt(5, 20) * 100
       const r = randInt(3, 8)
@@ -325,6 +342,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q15',
     category: 'Compound Interest',
+    difficulty: 'hard',
     generate() {
       const P = 1000
       const r = randInt(4, 10)
@@ -336,7 +354,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeStringOptions(correct, [
         `$\\$${simple.toFixed(2)}$`,
         `$\\$${(P + P * r / 100 * 4).toFixed(2)}$`,
-        `$\\$${Math.round(P * Math.pow(1 + r / 200, 2) * 100 / 100).toFixed(2)}$`
+        `$\\$${(Math.round(P * Math.pow(1 + r / 200, 2) * 100) / 100).toFixed(2)}$`
       ])
       return {
         id: this.id, category: this.category,
@@ -349,6 +367,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q16',
     category: 'Compound Interest',
+    difficulty: 'easy',
     generate() {
       const correct = '$A = P\\left(1 + \\frac{r}{n}\\right)^{nt}$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -367,6 +386,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q17',
     category: 'Compound Interest',
+    difficulty: 'hard',
     generate() {
       const P = randInt(5, 15) * 100
       const r = randInt(4, 10)
@@ -385,6 +405,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q18',
     category: 'Compound Interest',
+    difficulty: 'easy',
     generate() {
       const n = [1, 2, 4, 12][randInt(0, 3)]
       const labels: Record<number, string> = { 1: 'annually', 2: 'semi-annually', 4: 'quarterly', 12: 'monthly' }
@@ -405,6 +426,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q19',
     category: 'Compound Interest',
+    difficulty: 'hard',
     generate() {
       const P = 2000
       const r = 6
@@ -429,10 +451,12 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q20',
     category: 'Graphing Exponentials',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 5)
       const correct = `$(0, ${a})$`
-      const b = [2, 3, 4, 5][randInt(0, 3)]
+      let b = [2, 3, 4, 5][randInt(0, 3)]
+      while (b === a) b = [2, 3, 4, 5][randInt(0, 3)]
       const { options, correctIndex } = makeStringOptions(correct, [
         `$(${a}, 0)$`, `$(0, ${b})$`, `$(1, ${a * b})$`
       ])
@@ -447,6 +471,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q21',
     category: 'Graphing Exponentials',
+    difficulty: 'easy',
     generate() {
       const correct = '$y = 0$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -463,10 +488,12 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q22',
     category: 'Graphing Exponentials',
+    difficulty: 'medium',
     generate() {
       const k = randInt(1, 5)
       const correct = `$y = ${k}$`
-      const b = randInt(2, 4)
+      let b = randInt(2, 4)
+      while (b === k) b = randInt(2, 4)
       const { options, correctIndex } = makeStringOptions(correct, [
         '$y = 0$', `$y = -${k}$`, `$y = ${b}$`
       ])
@@ -481,6 +508,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q23',
     category: 'Graphing Exponentials',
+    difficulty: 'medium',
     generate() {
       const correct = 'Reflected across the $y$-axis'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -499,6 +527,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q24',
     category: 'Graphing Exponentials',
+    difficulty: 'easy',
     generate() {
       const a = randInt(2, 5)
       const b = randInt(2, 4)
@@ -516,6 +545,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q25',
     category: 'Graphing Exponentials',
+    difficulty: 'easy',
     generate() {
       const correct = 'All real numbers'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -534,6 +564,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q26',
     category: 'Graphing Exponentials',
+    difficulty: 'medium',
     generate() {
       const correct = '$(0, \\infty)$ — all positive reals'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -554,6 +585,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q27',
     category: 'Exponential Equations',
+    difficulty: 'easy',
     generate() {
       const base = randInt(2, 5)
       const exp = randInt(2, 5)
@@ -570,6 +602,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q28',
     category: 'Exponential Equations',
+    difficulty: 'medium',
     generate() {
       const base = randInt(2, 4)
       const m = randInt(2, 4)
@@ -586,13 +619,14 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q29',
     category: 'Exponential Equations',
+    difficulty: 'medium',
     generate() {
       // 4^x = 2^? → (2^2)^x = 2^(2x)
       const exp = randInt(1, 4) * 2
       const ans = exp / 2
       const correct = String(ans)
       const { options, correctIndex } = makeStringOptions(correct, [
-        String(exp), String(exp * 2), String(exp - 1)
+        String(exp), String(exp * 2), String(exp + 1)
       ])
       return {
         id: this.id, category: this.category,
@@ -605,6 +639,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q30',
     category: 'Exponential Equations',
+    difficulty: 'medium',
     generate() {
       const base = randInt(2, 5)
       const n = randInt(1, 3)
@@ -622,6 +657,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q31',
     category: 'Exponential Equations',
+    difficulty: 'hard',
     generate() {
       // 9^x = 27 → 3^(2x) = 3^3 → x = 3/2
       const correct = '$\\frac{3}{2}$'
@@ -639,23 +675,25 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q32',
     category: 'Exponential Equations',
+    difficulty: 'medium',
     generate() {
       const base = randInt(2, 5)
       const a = randInt(1, 4)
       const b = randInt(1, 4)
-      const ans = a + b
-      const { options, correctIndex: _correctIndex } = makeOptions(ans)
+      const val = Math.pow(base, a + b)
+      const { options, correctIndex } = makeOptions(val, Math.max(3, Math.round(val * 0.15)), 1)
       return {
         id: this.id, category: this.category,
         question: `If $${base}^a = ${Math.pow(base, a)}$ and $${base}^b = ${Math.pow(base, b)}$, what is $${base}^{a+b}$?`,
-        options, correctIndex: makeOptions(Math.pow(base, a + b), Math.round(Math.pow(base, a + b) * 0.15)).correctIndex,
-        explanation: `$${base}^{a+b} = ${base}^a \\cdot ${base}^b = ${Math.pow(base, a)} \\cdot ${Math.pow(base, b)} = ${Math.pow(base, a + b)}$.`
+        options, correctIndex,
+        explanation: `$${base}^{a+b} = ${base}^a \\cdot ${base}^b = ${Math.pow(base, a)} \\cdot ${Math.pow(base, b)} = ${val}$.`
       }
     }
   },
   {
     id: 'sef-q33',
     category: 'Exponential Equations',
+    difficulty: 'medium',
     generate() {
       // f(x) = a*b^x, find when f(x) = target
       const a = randInt(2, 5)
@@ -676,6 +714,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q34',
     category: 'Applications & Review',
+    difficulty: 'easy',
     generate() {
       const correct = 'Exponential'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -692,6 +731,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q35',
     category: 'Applications & Review',
+    difficulty: 'medium',
     generate() {
       const correct = 'Exponential — it changes by a constant ratio'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -710,6 +750,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q36',
     category: 'Applications & Review',
+    difficulty: 'easy',
     generate() {
       const a = randInt(100, 400)
       const b = [2, 3, 4][randInt(0, 2)]
@@ -730,12 +771,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q37',
     category: 'Applications & Review',
+    difficulty: 'easy',
     generate() {
       const P = randInt(1, 5) * 1000
       const r = [5, 6, 8, 10][randInt(0, 3)]
       // Rule of 72
       const approxDouble = Math.round(72 / r)
-      const { options, correctIndex } = makeOptions(approxDouble, 4)
+      const { options, correctIndex } = makeOptions(approxDouble, 4, 1)
       return {
         id: this.id, category: this.category,
         question: `Using the Rule of 72, about how many years to double $\\$${P}$ at $${r}\\%$ annual compound interest?`,
@@ -747,6 +789,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q38',
     category: 'Applications & Review',
+    difficulty: 'easy',
     generate() {
       const a = randInt(200, 600)
       const r = randInt(5, 15)
@@ -764,6 +807,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q39',
     category: 'Applications & Review',
+    difficulty: 'easy',
     generate() {
       const correct = 'Linear grows by addition; exponential grows by multiplication'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -782,6 +826,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sef-q40',
     category: 'Applications & Review',
+    difficulty: 'hard',
     generate() {
       const a = randInt(2, 6) * 100
       const r = randInt(10, 25)
@@ -799,7 +844,23 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  if (difficulty) {
+    const fill: Record<'easy' | 'medium' | 'hard', Array<'easy' | 'medium' | 'hard'>> = {
+      easy: ['easy', 'medium', 'hard'],
+      medium: ['medium', 'easy', 'hard'],
+      hard: ['hard', 'medium', 'easy'],
+    }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fill[difficulty]) {
+      if (selected.length >= count) break
+      for (const t of shuffle(questionPool.filter(q => q.difficulty === tier))) {
+        if (selected.length >= count) break
+        selected.push(t)
+      }
+    }
+    return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
@@ -821,5 +882,5 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     if (selected.length >= count) break
     selected.push(q); usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }

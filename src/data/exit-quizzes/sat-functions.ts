@@ -11,11 +11,13 @@ export interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  difficulty?: 'easy' | 'medium' | 'hard'
 }
 
 interface QuestionTemplate {
   id: string
   category: string
+  difficulty: 'easy' | 'medium' | 'hard'
   generate: () => ExitQuizQuestion
 }
 
@@ -38,11 +40,11 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
+function makeOptions(correct: number, spread: number = 2, min?: number): { options: string[]; correctIndex: number } {
   const distractors = new Set<number>()
   while (distractors.size < 3) {
     const d = correct + randInt(-spread * 3, spread * 3)
-    if (d !== correct) distractors.add(d)
+    if (d !== correct && (min === undefined || d >= min)) distractors.add(d)
   }
   const all = [correct, ...distractors]
   const shuffled = shuffle(all)
@@ -66,9 +68,16 @@ function coef(m: number): string {
   if (m === -1) return '-'
   return `${m}`
 }
-// "mx + b" with coefficient + sign folding (handles m = ±1 and the constant sign).
+// "mx + b" with coefficient + sign folding (handles m = ±1, b = 0, and the constant sign).
 function linear(m: number, b: number): string {
-  return `${coef(m)}x ${sign(b)}`
+  return b === 0 ? `${coef(m)}x` : `${coef(m)}x ${sign(b)}`
+}
+// "ax^2 + bx + c" with coefficient folding and zero-term skipping.
+function quad(a: number, b: number, c: number): string {
+  let s = `${coef(a)}x^2`
+  if (b !== 0) s += ` ${b > 0 ? '+' : '-'} ${Math.abs(b) === 1 ? '' : Math.abs(b)}x`
+  if (c !== 0) s += ` ${sign(c)}`
+  return s
 }
 
 const questionPool: QuestionTemplate[] = [
@@ -76,6 +85,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q1',
     category: 'Function Notation',
+    difficulty: 'easy',
     generate() {
       const a = randNonZero(-5, 5)
       const b = randInt(-10, 10)
@@ -84,7 +94,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$, what is $f(${x})$?`,
+        question: `If $f(x) = ${linear(a, b)}$, what is $f(${x})$?`,
         options, correctIndex,
         explanation: `$f(${x}) = ${a}(${x}) ${sign(b)} = ${a * x} ${sign(b)} = ${ans}$.`
       }
@@ -93,6 +103,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q2',
     category: 'Function Notation',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1, 4)
       const b = randInt(-6, 6)
@@ -102,7 +113,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 5)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x^2 ${sign(b)}x ${sign(c)}$, find $f(${x})$.`,
+        question: `If $f(x) = ${quad(a, b, c)}$, find $f(${x})$.`,
         options, correctIndex,
         explanation: `$f(${x}) = ${a}(${x})^2 ${sign(b)}(${x}) ${sign(c)} = ${a * x * x} ${sign(b * x)} ${sign(c)} = ${ans}$.`
       }
@@ -111,6 +122,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q3',
     category: 'Function Notation',
+    difficulty: 'medium',
     generate() {
       const a = randNonZero(-4, 4)
       const b = randInt(-8, 8)
@@ -123,23 +135,24 @@ const questionPool: QuestionTemplate[] = [
         const { options, correctIndex } = makeOptions(newAns)
         return {
           id: this.id, category: this.category,
-          question: `If $f(x) = ${a}x ${sign(newB)}$, for what value of $x$ does $f(x) = 0$?`,
+          question: `If $f(x) = ${linear(a, newB)}$, for what value of $x$ does $f(x) = 0$?`,
           options, correctIndex,
-          explanation: `Set $${a}x ${sign(newB)} = 0$ → $x = ${newAns}$.`
+          explanation: `Set $${linear(a, newB)} = 0$ → $x = ${newAns}$.`
         }
       }
       const { options, correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$, for what value of $x$ does $f(x) = 0$?`,
+        question: `If $f(x) = ${linear(a, b)}$, for what value of $x$ does $f(x) = 0$?`,
         options, correctIndex,
-        explanation: `Set $${a}x ${sign(b)} = 0$ → $${a}x = ${-b}$ → $x = ${ans}$.`
+        explanation: `Set $${linear(a, b)} = 0$ → $${coef(a)}x = ${-b}$ → $x = ${ans}$.`
       }
     }
   },
   {
     id: 'sfg-q4',
     category: 'Function Notation',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 5)
       const b = randInt(-5, 5)
@@ -148,7 +161,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 5)
       return {
         id: this.id, category: this.category,
-        question: `Given $g(x) = ${a}x^2 ${sign(b)}$, evaluate $g(${x})$.`,
+        question: `Given $g(x) = ${quad(a, 0, b)}$, evaluate $g(${x})$.`,
         options, correctIndex,
         explanation: `$g(${x}) = ${a}(${x})^2 ${sign(b)} = ${a * x * x} ${sign(b)} = ${ans}$.`
       }
@@ -157,6 +170,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q5',
     category: 'Function Notation',
+    difficulty: 'medium',
     generate() {
       const m = randNonZero(-5, 5)
       const b = randInt(-8, 8)
@@ -168,7 +182,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(diff)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${m}x ${sign(b)}$, what is $f(${x2}) - f(${x1})$?`,
+        question: `If $f(x) = ${linear(m, b)}$, what is $f(${x2}) - f(${x1})$?`,
         options, correctIndex,
         explanation: `$f(${x2}) = ${f2}$, $f(${x1}) = ${f1}$. Difference $= ${f2} - ${f1} = ${diff}$.`
       }
@@ -179,6 +193,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q6',
     category: 'Domain & Range',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 8)
       const correct = `$x \\neq ${a}$`
@@ -196,6 +211,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q7',
     category: 'Domain & Range',
+    difficulty: 'easy',
     generate() {
       const a = randInt(-8, 8)
       const correct = `$x \\geq ${a}$`
@@ -213,15 +229,16 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q8',
     category: 'Domain & Range',
+    difficulty: 'medium',
     generate() {
-      const k = randInt(-8, 8)
+      const k = randNonZero(-8, 8)
       const correct = `$y \\geq ${k}$`
       const { options, correctIndex } = makeStringOptions(correct, [
         `$y \\leq ${k}$`, `$y \\geq 0$`, 'All real numbers'
       ])
       return {
         id: this.id, category: this.category,
-        question: `What is the range of $f(x) = x^2 + ${k}$?`,
+        question: `What is the range of $f(x) = x^2 ${sign(k)}$?`,
         options, correctIndex,
         explanation: `$x^2 \\geq 0$, so $f(x) \\geq ${k}$. Range: $y \\geq ${k}$.`
       }
@@ -230,6 +247,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q9',
     category: 'Domain & Range',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1, 6)
       const b = randInt(1, 6)
@@ -248,6 +266,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q10',
     category: 'Domain & Range',
+    difficulty: 'easy',
     generate() {
       const correct = 'All real numbers'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -266,6 +285,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q11',
     category: 'Transformations',
+    difficulty: 'easy',
     generate() {
       const h = randInt(1, 8)
       const dir = h > 0 ? 'right' : 'left'
@@ -287,6 +307,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q12',
     category: 'Transformations',
+    difficulty: 'easy',
     generate() {
       const k = randInt(1, 10)
       const correct = `Shifts $f(x)$ up by $${k}$ units`
@@ -306,12 +327,13 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q13',
     category: 'Transformations',
+    difficulty: 'easy',
     generate() {
       const correct = 'Reflects $f(x)$ across the $x$-axis'
       const { options, correctIndex } = makeStringOptions(correct, [
         'Reflects $f(x)$ across the $y$-axis',
         'Shifts $f(x)$ down by $1$ unit',
-        'Rotates $f(x)$ by $180°$'
+        'Rotates $f(x)$ by $180^\\circ$'
       ])
       return {
         id: this.id, category: this.category,
@@ -324,6 +346,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q14',
     category: 'Transformations',
+    difficulty: 'easy',
     generate() {
       const a = randInt(2, 5)
       const correct = `Vertical stretch by factor $${a}$`
@@ -343,6 +366,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q15',
     category: 'Transformations',
+    difficulty: 'medium',
     generate() {
       const h = randInt(1, 6)
       const k = randInt(1, 8)
@@ -365,6 +389,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q16',
     category: 'Composition',
+    difficulty: 'medium',
     generate() {
       const a = randNonZero(-4, 4)
       const b = randInt(-6, 6)
@@ -376,7 +401,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 5)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$ and $g(x) = ${c}x ${sign(d)}$, what is $f(g(${x}))$?`,
+        question: `If $f(x) = ${linear(a, b)}$ and $g(x) = ${linear(c, d)}$, what is $f(g(${x}))$?`,
         options, correctIndex,
         explanation: `$g(${x}) = ${c}(${x}) ${sign(d)} = ${gx}$. $f(${gx}) = ${a}(${gx}) ${sign(b)} = ${ans}$.`
       }
@@ -385,6 +410,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q17',
     category: 'Composition',
+    difficulty: 'hard',
     generate() {
       const a = randInt(1, 4)
       const b = randInt(-5, 5)
@@ -394,7 +420,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 5)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$, what is $f(f(${x}))$?`,
+        question: `If $f(x) = ${linear(a, b)}$, what is $f(f(${x}))$?`,
         options, correctIndex,
         explanation: `$f(${x}) = ${fx}$. $f(${fx}) = ${a}(${fx}) ${sign(b)} = ${ans}$.`
       }
@@ -403,6 +429,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q18',
     category: 'Composition',
+    difficulty: 'medium',
     generate() {
       const a = randNonZero(-3, 3)
       const b = randInt(-5, 5)
@@ -412,7 +439,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 10)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$ and $g(x) = x^2$, find $f(g(${x}))$.`,
+        question: `If $f(x) = ${linear(a, b)}$ and $g(x) = x^2$, find $f(g(${x}))$.`,
         options, correctIndex,
         explanation: `$g(${x}) = ${x}^2 = ${gx}$. $f(${gx}) = ${a}(${gx}) ${sign(b)} = ${ans}$.`
       }
@@ -421,6 +448,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q19',
     category: 'Composition',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1, 4)
       const b = randInt(-5, 5)
@@ -430,7 +458,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans, 10)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$ and $g(x) = x^2$, find $g(f(${x}))$.`,
+        question: `If $f(x) = ${linear(a, b)}$ and $g(x) = x^2$, find $g(f(${x}))$.`,
         options, correctIndex,
         explanation: `$f(${x}) = ${fx}$. $g(${fx}) = (${fx})^2 = ${ans}$.`
       }
@@ -439,25 +467,27 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q20',
     category: 'Composition',
+    difficulty: 'hard',
     generate() {
-      const m = randNonZero(-4, 4)
-      const b1 = randInt(-5, 5)
-      const n = randNonZero(-4, 4)
-      const b2 = randInt(-5, 5)
-      // f(g(x)) = m(nx + b2) + b1 = mnx + mb2 + b1
-      const compM = m * n
-      const compB = m * b2 + b1
-      const correct = `$${compM}x ${sign(compB)}$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$${m + n}x ${sign(b1 + b2)}$`,
-        `$${m * n}x ${sign(b1 * b2)}$`,
-        `$${n}x ${sign(compB)}$`
-      ])
+      // f(g(x)) = m(nx + b2) + b1 = mnx + mb2 + b1; redraw until all four options are distinct
+      let m = 1, b1 = 0, n = 1, b2 = 0, compM = 1, compB = 0
+      let correct = '', d1 = '', d2 = '', d3 = ''
+      do {
+        m = randNonZero(-4, 4); b1 = randInt(-5, 5)
+        n = randNonZero(-4, 4); b2 = randInt(-5, 5)
+        compM = m * n
+        compB = m * b2 + b1
+        correct = `$${linear(compM, compB)}$`
+        d1 = `$${linear(m + n, b1 + b2)}$`
+        d2 = `$${linear(m * n, b1 * b2)}$`
+        d3 = `$${linear(n, compB)}$`
+      } while (m + n === 0 || new Set([correct, d1, d2, d3]).size < 4)
+      const { options, correctIndex } = makeStringOptions(correct, [d1, d2, d3])
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${m}x ${sign(b1)}$ and $g(x) = ${n}x ${sign(b2)}$, express $f(g(x))$ in simplified form.`,
+        question: `If $f(x) = ${linear(m, b1)}$ and $g(x) = ${linear(n, b2)}$, express $f(g(x))$ in simplified form.`,
         options, correctIndex,
-        explanation: `$f(g(x)) = ${m}(${n}x ${sign(b2)}) ${sign(b1)} = ${compM}x ${sign(m * b2)} ${sign(b1)} = ${compM}x ${sign(compB)}$.`
+        explanation: `$f(g(x)) = ${m}(${linear(n, b2)}) ${sign(b1)} = ${linear(compM, m * b2)} ${sign(b1)} = ${linear(compM, compB)}$.`
       }
     }
   },
@@ -466,6 +496,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q21',
     category: 'Inverses',
+    difficulty: 'hard',
     generate() {
       const m = randNonZero(-5, 5)
       const b = randInt(-8, 8)
@@ -475,27 +506,28 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${m}x ${sign(b)}$, what is $f^{-1}(${y})$?`,
+        question: `If $f(x) = ${linear(m, b)}$, what is $f^{-1}(${y})$?`,
         options, correctIndex,
-        explanation: `$f^{-1}(x) = \\frac{x - ${b}}{${m}}$. $f^{-1}(${y}) = \\frac{${y} - ${b}}{${m}} = \\frac{${y - b}}{${m}} = ${ans}$.`
+        explanation: `$f^{-1}(x) = \\frac{x ${sign(-b)}}{${m}}$. $f^{-1}(${y}) = \\frac{${y} ${sign(-b)}}{${m}} = \\frac{${y - b}}{${m}} = ${ans}$.`
       }
     }
   },
   {
     id: 'sfg-q22',
     category: 'Inverses',
+    difficulty: 'hard',
     generate() {
       const m = randNonZero(-5, 5)
-      const b = randInt(-8, 8)
+      const b = randNonZero(-8, 8)
       const correct = `$f^{-1}(x) = \\frac{x ${sign(-b)}}{${m}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$f^{-1}(x) = ${m}x ${sign(-b)}$`,
+        `$f^{-1}(x) = ${linear(m, -b)}$`,
         `$f^{-1}(x) = \\frac{${m}}{x ${sign(-b)}}$`,
         `$f^{-1}(x) = \\frac{x ${sign(b)}}{${m}}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `Find the inverse of $f(x) = ${m}x ${sign(b)}$.`,
+        question: `Find the inverse of $f(x) = ${linear(m, b)}$.`,
         options, correctIndex,
         explanation: `Swap $x$ and $y$: $x = ${m}y ${sign(b)}$ → $y = \\frac{x ${sign(-b)}}{${m}}$.`
       }
@@ -504,17 +536,18 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q23',
     category: 'Inverses',
+    difficulty: 'hard',
     generate() {
       const a = randInt(2, 6)
       const b = randInt(-5, 5)
       const x = randInt(-3, 3)
       const fx = a * x + b
-      // f(f⁻¹(x)) = x always
-      const { options, correctIndex: _correctIndex } = makeOptions(fx)
+      // f(f⁻¹(x)) = x always — the answer is x itself, so options must center on x
+      const { options, correctIndex } = makeOptions(x)
       return {
         id: this.id, category: this.category,
         question: `If $f(${x}) = ${fx}$, what is $f^{-1}(${fx})$?`,
-        options, correctIndex: makeOptions(x).correctIndex,
+        options, correctIndex,
         explanation: `Since $f(${x}) = ${fx}$, we know $f^{-1}(${fx}) = ${x}$.`
       }
     }
@@ -522,6 +555,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q24',
     category: 'Inverses',
+    difficulty: 'easy',
     generate() {
       const correct = '$y = x$'
       const { options, correctIndex } = makeStringOptions(correct, [
@@ -538,6 +572,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q25',
     category: 'Inverses',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 5)
       const b = randInt(-5, 5)
@@ -547,7 +582,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(x)
       return {
         id: this.id, category: this.category,
-        question: `If $f(x) = ${a}x ${sign(b)}$, what is $f^{-1}(f(${x}))$?`,
+        question: `If $f(x) = ${linear(a, b)}$, what is $f^{-1}(f(${x}))$?`,
         options, correctIndex,
         explanation: `$f^{-1}(f(x)) = x$ for any $x$ in the domain. So $f^{-1}(f(${x})) = ${x}$.`
       }
@@ -558,6 +593,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q26',
     category: 'Graph Interpretation',
+    difficulty: 'easy',
     generate() {
       const a = randNonZero(-4, 4)
       const b = randInt(-8, 8)
@@ -565,7 +601,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(yInt)
       return {
         id: this.id, category: this.category,
-        question: `What is the $y$-intercept of $f(x) = ${a}x ${sign(b)}$?`,
+        question: `What is the $y$-intercept of $f(x) = ${linear(a, b)}$?`,
         options, correctIndex,
         explanation: `The $y$-intercept occurs at $x = 0$: $f(0) = ${b}$.`
       }
@@ -574,8 +610,9 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q27',
     category: 'Graph Interpretation',
+    difficulty: 'easy',
     generate() {
-      const r1 = randInt(-6, 0)
+      const r1 = randInt(-6, -1)
       const r2 = randInt(1, 6)
       const numZeros = 2
       const { options, correctIndex } = makeOptions(numZeros)
@@ -590,6 +627,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q28',
     category: 'Graph Interpretation',
+    difficulty: 'medium',
     generate() {
       const m = randNonZero(-5, 5)
       const correct = m > 0 ? 'Increasing on its entire domain' : 'Decreasing on its entire domain'
@@ -599,7 +637,7 @@ const questionPool: QuestionTemplate[] = [
       ])
       return {
         id: this.id, category: this.category,
-        question: `The function $f(x) = ${m}x + ${randInt(1, 10)}$ is:`,
+        question: `The function $f(x) = ${linear(m, randInt(1, 10))}$ is:`,
         options, correctIndex,
         explanation: `The slope is $${m}$, which is ${m > 0 ? 'positive → increasing' : 'negative → decreasing'} everywhere.`
       }
@@ -608,6 +646,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q29',
     category: 'Graph Interpretation',
+    difficulty: 'medium',
     generate() {
       const a = randInt(1, 4)
       const h = randInt(-5, 5)
@@ -625,6 +664,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q30',
     category: 'Graph Interpretation',
+    difficulty: 'medium',
     generate() {
       const a = randNonZero(-4, 4)
       const b = randInt(-8, 8)
@@ -632,7 +672,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(slope)
       return {
         id: this.id, category: this.category,
-        question: `What is the average rate of change of $f(x) = ${a}x ${sign(b)}$ over any interval?`,
+        question: `What is the average rate of change of $f(x) = ${linear(a, b)}$ over any interval?`,
         options, correctIndex,
         explanation: `For a linear function $f(x) = mx + b$, the rate of change is the slope $m = ${a}$ everywhere.`
       }
@@ -643,10 +683,11 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q31',
     category: 'Piecewise',
+    difficulty: 'easy',
     generate() {
       const a = randInt(-8, 8)
       const ans = Math.abs(a)
-      const { options, correctIndex } = makeOptions(ans)
+      const { options, correctIndex } = makeOptions(ans, 2, 0)
       return {
         id: this.id, category: this.category,
         question: `What is $|${a}|$?`,
@@ -658,6 +699,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q32',
     category: 'Piecewise',
+    difficulty: 'easy',
     generate() {
       const c = randInt(1, 8)
       const correct = `$x = ${c}$ or $x = ${-c}$`
@@ -675,6 +717,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q33',
     category: 'Piecewise',
+    difficulty: 'medium',
     generate() {
       const a = randNonZero(-5, 5)
       const b = randInt(-8, 8)
@@ -686,15 +729,16 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(numSolns)
       return {
         id: this.id, category: this.category,
-        question: `How many solutions does $|${a}x ${sign(b)}| = ${c}$ have?`,
+        question: `How many solutions does $|${linear(a, b)}| = ${c}$ have?`,
         options, correctIndex,
-        explanation: `Since $${c} > 0$, there are two cases: $${a}x ${sign(b)} = ${c}$ and $${a}x ${sign(b)} = -${c}$. Two solutions.`
+        explanation: `Since $${c} > 0$, there are two cases: $${linear(a, b)} = ${c}$ and $${linear(a, b)} = -${c}$. Two solutions.`
       }
     }
   },
   {
     id: 'sfg-q34',
     category: 'Piecewise',
+    difficulty: 'medium',
     generate() {
       const breakpoint = randInt(-3, 3)
       const a = randNonZero(-4, 4)
@@ -706,7 +750,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
-        question: `$f(x) = \\begin{cases} ${a}x ${sign(b)} & \\text{if } x < ${breakpoint} \\\\ ${c}x ${sign(d)} & \\text{if } x \\geq ${breakpoint} \\end{cases}$. Find $f(${x})$.`,
+        question: `$f(x) = \\begin{cases} ${linear(a, b)} & \\text{if } x < ${breakpoint} \\\\ ${linear(c, d)} & \\text{if } x \\geq ${breakpoint} \\end{cases}$. Find $f(${x})$.`,
         options, correctIndex,
         explanation: `Since $${x} < ${breakpoint}$, use the first piece: $f(${x}) = ${a}(${x}) ${sign(b)} = ${ans}$.`
       }
@@ -715,6 +759,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q35',
     category: 'Piecewise',
+    difficulty: 'medium',
     generate() {
       const h = randNonZero(-5, 5)
       const k = randNonZero(-5, 5)
@@ -736,6 +781,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q36',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const m = randNonZero(-5, 5)
       const b = randInt(-8, 8)
@@ -744,7 +790,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(ans)
       return {
         id: this.id, category: this.category,
-        question: `If $h(x) = ${m}x ${sign(b)}$, calculate $h(${x})$.`,
+        question: `If $h(x) = ${linear(m, b)}$, calculate $h(${x})$.`,
         options, correctIndex,
         explanation: `$h(${x}) = ${m}(${x}) ${sign(b)} = ${ans}$.`
       }
@@ -753,6 +799,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q37',
     category: 'Review',
+    difficulty: 'easy',
     generate() {
       const a = randInt(1, 5)
       const correct = `$x \\geq 0$`
@@ -770,20 +817,22 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q38',
     category: 'Review',
+    difficulty: 'hard',
     generate() {
-      const a = randNonZero(-3, 3)
-      const b = randInt(-6, 6)
-      const c = randNonZero(-3, 3)
-      const d = randInt(-6, 6)
-      // g(f(x)): g(ax+b) = c(ax+b)+d = cax + cb + d
-      const compM = c * a
-      const compB = c * b + d
-      const correct = `$${linear(compM, compB)}$`
-      const { options, correctIndex } = makeStringOptions(correct, [
-        `$${linear(a * c, a * d + b)}$`,
-        `$${linear(a + c, b + d)}$`,
-        `$${linear(a, d)}$`
-      ])
+      // g(f(x)): g(ax+b) = c(ax+b)+d = cax + cb + d; redraw until all four options are distinct
+      let a = 1, b = 0, c = 1, d = 0, compM = 1, compB = 0
+      let correct = '', d1 = '', d2 = '', d3 = ''
+      do {
+        a = randNonZero(-3, 3); b = randInt(-6, 6)
+        c = randNonZero(-3, 3); d = randInt(-6, 6)
+        compM = c * a
+        compB = c * b + d
+        correct = `$${linear(compM, compB)}$`
+        d1 = `$${linear(a * c, a * d + b)}$`
+        d2 = `$${linear(a + c, b + d)}$`
+        d3 = `$${linear(a, d)}$`
+      } while (a + c === 0 || new Set([correct, d1, d2, d3]).size < 4)
+      const { options, correctIndex } = makeStringOptions(correct, [d1, d2, d3])
       return {
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$ and $g(x) = ${linear(c, d)}$, find $g(f(x))$.`,
@@ -795,11 +844,12 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q39',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const c = randInt(2, 10)
-      const correct = 'No solution'
+      const correct = '0'
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$x = ${c}$`, `$x = -${c}$`, `$x = 0$`
+        '1', '2', 'Infinitely many'
       ])
       return {
         id: this.id, category: this.category,
@@ -812,6 +862,7 @@ const questionPool: QuestionTemplate[] = [
   {
     id: 'sfg-q40',
     category: 'Review',
+    difficulty: 'medium',
     generate() {
       const h = randInt(1, 6)
       const k = randInt(1, 8)
@@ -829,7 +880,23 @@ const questionPool: QuestionTemplate[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard'): ExitQuizQuestion[] {
+  if (difficulty) {
+    const fill: Record<'easy' | 'medium' | 'hard', Array<'easy' | 'medium' | 'hard'>> = {
+      easy: ['easy', 'medium', 'hard'],
+      medium: ['medium', 'easy', 'hard'],
+      hard: ['hard', 'medium', 'easy'],
+    }
+    const selected: QuestionTemplate[] = []
+    for (const tier of fill[difficulty]) {
+      if (selected.length >= count) break
+      for (const t of shuffle(questionPool.filter(q => q.difficulty === tier))) {
+        if (selected.length >= count) break
+        selected.push(t)
+      }
+    }
+    return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) {
     if (!byCategory[q.category]) byCategory[q.category] = []
@@ -851,5 +918,5 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
     if (selected.length >= count) break
     selected.push(q); usedIds.add(q.id)
   }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => ({ ...t.generate(), difficulty: t.difficulty }))
 }
