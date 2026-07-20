@@ -336,6 +336,542 @@ const allQuestions: SatPunctuationQuestion[] = [
     explanation: 'Both a colon (introducing an explanation) and a semicolon (joining two independent clauses) work here. The colon emphasizes that the second clause explains the policy; the semicolon simply links two related ideas.',
     difficulty: 'hard',
   },
+  // ─── EASY (added) ──────────────────────────────────────────────────
+  {
+    id: 26,
+    question: 'Which sentence uses commas correctly in a series?',
+    options: [
+      'We bought apples oranges, and pears.',
+      'We bought apples, oranges, and pears.',
+      'We bought, apples oranges and pears.',
+      'We bought apples, oranges and, pears.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Items in a series are separated by commas: apples, oranges, and pears.',
+    difficulty: 'easy',
+  },
+  {
+    id: 27,
+    question: 'Which sentence is a comma splice?',
+    options: [
+      'It rained all day, so we stayed inside.',
+      'It rained all day; we stayed inside.',
+      'It rained all day, we stayed inside.',
+      'It rained all day. We stayed inside.'
+    ],
+    correctAnswer: 2,
+    explanation: 'Joining two independent clauses with only a comma and no conjunction ("It rained all day, we stayed inside") is a comma splice.',
+    difficulty: 'easy',
+  },
+  {
+    id: 28,
+    question: 'Which sentence correctly places a comma after an introductory phrase?',
+    options: [
+      'In the morning, we went jogging.',
+      'In the morning we, went jogging.',
+      'In, the morning we went jogging.',
+      'In the morning we went, jogging.'
+    ],
+    correctAnswer: 0,
+    explanation: 'An introductory phrase ("In the morning") is followed by a comma before the main clause.',
+    difficulty: 'easy',
+  },
+  {
+    id: 29,
+    question: 'Which sentence uses a semicolon correctly?',
+    options: [
+      'The results; were clear the treatment worked.',
+      'The results were clear; but the treatment worked.',
+      'The results were, clear; the treatment worked.',
+      'The results were clear; the treatment worked.'
+    ],
+    correctAnswer: 3,
+    explanation: 'A semicolon joins two related independent clauses with no conjunction: "The results were clear; the treatment worked."',
+    difficulty: 'easy',
+  },
+  {
+    id: 30,
+    question: 'Choose the correctly punctuated sentence.',
+    options: [
+      'The rain stopped, and the sun came out.',
+      'The rain stopped and, the sun came out.',
+      'The rain, stopped and the sun came out.',
+      'The rain stopped, and, the sun came out.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Two independent clauses joined by "and" take a comma before the conjunction.',
+    difficulty: 'easy',
+  },
+  {
+    id: 31,
+    question: 'Which is the best correction of the comma splice "The movie was long, we enjoyed it"?',
+    options: [
+      'The movie was long we enjoyed it.',
+      'The movie was long, but we enjoyed it.',
+      'The movie was, long we enjoyed it.',
+      'The movie was long we, enjoyed it.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Adding the conjunction "but" after the comma correctly joins the two independent clauses.',
+    difficulty: 'easy',
+  },
+  {
+    id: 32,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'He plays soccer and basketball.',
+      'He plays soccer, and basketball.',
+      'He plays, soccer and basketball.',
+      'He plays soccer and, basketball.'
+    ],
+    correctAnswer: 0,
+    explanation: 'When "and" joins only two items, no comma is needed before it.',
+    difficulty: 'easy',
+  },
+  {
+    id: 33,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Because it was late, we went home.',
+      'Because it was late we went home.',
+      'Because, it was late we went home.',
+      'Because it was late we, went home.'
+    ],
+    correctAnswer: 0,
+    explanation: 'An introductory dependent clause ("Because it was late") is followed by a comma.',
+    difficulty: 'easy',
+  },
+  {
+    id: 34,
+    question: 'Which choice correctly punctuates two independent clauses joined without a conjunction?',
+    options: [
+      'The store was closed, we went home.',
+      'The store was closed; we went home.',
+      'The store was closed we went home.',
+      'The store, was closed we went home.'
+    ],
+    correctAnswer: 1,
+    explanation: 'A semicolon joins two independent clauses that are not connected by a conjunction; the comma version is a splice.',
+    difficulty: 'easy',
+  },
+  {
+    id: 35,
+    question: 'Which sentence contains a comma splice?',
+    options: [
+      'The dog barked, the mail carrier left.',
+      'The dog barked, and the mail carrier left.',
+      'The dog barked; the mail carrier left.',
+      'The dog barked. The mail carrier left.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Two independent clauses joined by only a comma form a comma splice.',
+    difficulty: 'easy',
+  },
+  {
+    id: 36,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'I need pens, paper, and glue.',
+      'I need pens paper and glue.',
+      'I need pens, paper and, glue.',
+      'I, need pens paper and glue.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Three items in a series are separated by commas: pens, paper, and glue.',
+    difficulty: 'easy',
+  },
+  {
+    id: 37,
+    question: 'Which sentence uses a comma correctly?',
+    options: [
+      'Yes, I will attend the meeting.',
+      'Yes I will, attend the meeting.',
+      'Yes I will attend, the meeting.',
+      'Yes I, will attend the meeting.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The introductory word "Yes" is set off from the rest of the sentence by a comma.',
+    difficulty: 'easy',
+  },
+  {
+    id: 38,
+    question: 'Choose the correctly punctuated sentence.',
+    options: [
+      'She cooked dinner, and he washed the dishes.',
+      'She cooked dinner and he washed, the dishes.',
+      'She cooked, dinner and he washed the dishes.',
+      'She cooked dinner and, he washed the dishes.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Two independent clauses joined by "and" take a comma before the conjunction.',
+    difficulty: 'easy',
+  },
+  {
+    id: 39,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'I was exhausted; I had run a marathon.',
+      'I was exhausted; because I had run a marathon.',
+      'I was; exhausted I had run a marathon.',
+      'I was exhausted, I had run a marathon.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A semicolon joins two independent clauses. "Because I had run a marathon" is dependent, and the comma version is a splice.',
+    difficulty: 'easy',
+  },
+  // ─── MEDIUM (added) ────────────────────────────────────────────────
+  {
+    id: 40,
+    question: 'Which sentence correctly uses a semicolon with "moreover"?',
+    options: [
+      'The plan was risky; moreover, it was expensive.',
+      'The plan was risky, moreover, it was expensive.',
+      'The plan was risky moreover; it was expensive.',
+      'The plan was risky; moreover it was expensive.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A conjunctive adverb linking two independent clauses takes a semicolon before it and a comma after it.',
+    difficulty: 'medium',
+  },
+  {
+    id: 41,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'My oldest brother, who lives in Denver, is a doctor.',
+      'My oldest brother who lives in Denver, is a doctor.',
+      'My oldest brother, who lives in Denver is a doctor.',
+      'My oldest brother who lives, in Denver is a doctor.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The nonessential clause "who lives in Denver" needs commas on both sides.',
+    difficulty: 'medium',
+  },
+  {
+    id: 42,
+    question: 'Which sentence is INCORRECT because it is a comma splice?',
+    options: [
+      'The experiment succeeded; therefore, we published the results.',
+      'The experiment succeeded, therefore, we published the results.',
+      'The experiment succeeded. Therefore, we published the results.',
+      'The experiment succeeded, so we published the results.'
+    ],
+    correctAnswer: 1,
+    explanation: 'A comma before "therefore" joining two independent clauses creates a comma splice; a semicolon or period is required.',
+    difficulty: 'medium',
+  },
+  {
+    id: 43,
+    question: 'Which sentence uses a colon correctly?',
+    options: [
+      'She had one goal: to win the championship.',
+      'She had one goal; to win the championship.',
+      'She had one goal to win the championship.',
+      'She had one, goal to win the championship.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A colon follows a complete clause to introduce an explanation. "To win the championship" is not independent, so a semicolon is wrong.',
+    difficulty: 'medium',
+  },
+  {
+    id: 44,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The tour visited Rome, Italy, Athens, Greece, and Cairo, Egypt.',
+      'The tour visited Rome, Italy: Athens, Greece: and Cairo, Egypt.',
+      'The tour visited Rome, Italy; Athens, Greece; and Cairo, Egypt.',
+      'The tour visited Rome Italy, Athens Greece, and Cairo Egypt.'
+    ],
+    correctAnswer: 2,
+    explanation: 'When list items contain internal commas (city, country), semicolons separate the items to prevent confusion.',
+    difficulty: 'medium',
+  },
+  {
+    id: 45,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The book that I borrowed is overdue.',
+      'The book, that I borrowed, is overdue.',
+      'The book that I borrowed, is overdue.',
+      'The book, that I borrowed is overdue.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A restrictive "that" clause is essential to the meaning and takes no commas.',
+    difficulty: 'medium',
+  },
+  {
+    id: 46,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'He studied hard, and passed the test.',
+      'He studied, hard and passed the test.',
+      'He studied hard and, passed the test.',
+      'He studied hard and passed the test.'
+    ],
+    correctAnswer: 3,
+    explanation: '"Passed the test" shares the subject "he" (a compound predicate), so no comma goes before "and."',
+    difficulty: 'medium',
+  },
+  {
+    id: 47,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The forecast was grim; heavy snow was expected all week.',
+      'The forecast was grim, heavy snow was expected all week.',
+      'The forecast was grim heavy snow was expected all week.',
+      'The forecast, was grim heavy snow was expected all week.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A semicolon joins the two independent clauses; the comma version is a splice and the third is a run-on.',
+    difficulty: 'medium',
+  },
+  {
+    id: 48,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'My neighbor, a retired teacher, tutors kids for free.',
+      'My neighbor a retired teacher, tutors kids for free.',
+      'My neighbor, a retired teacher tutors kids for free.',
+      'My neighbor a retired teacher tutors kids for free.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The nonessential appositive "a retired teacher" needs commas on both sides.',
+    difficulty: 'medium',
+  },
+  {
+    id: 49,
+    question: 'Which sentence is punctuated INCORRECTLY?',
+    options: [
+      'When the bell rang, the students left.',
+      'The students left when the bell rang.',
+      'When the bell rang the students left.',
+      'After lunch, we returned to class.'
+    ],
+    correctAnswer: 2,
+    explanation: 'An introductory dependent clause ("When the bell rang") must be followed by a comma; that comma is missing.',
+    difficulty: 'medium',
+  },
+  {
+    id: 50,
+    question: 'Which sentence uses commas correctly?',
+    options: [
+      'For the trip we need tickets, passports, and luggage.',
+      'For the trip we need tickets, passports and, luggage.',
+      'For the trip, we need tickets passports, and luggage.',
+      'For the trip we need, tickets passports and luggage.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The three series items are separated by commas: tickets, passports, and luggage.',
+    difficulty: 'medium',
+  },
+  {
+    id: 51,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Three cities hosted the games, they were spread across three continents.',
+      'Three cities hosted the games; they were spread across three continents.',
+      'Three cities hosted the games they were spread across three continents.',
+      'Three, cities hosted the games they were spread across three continents.'
+    ],
+    correctAnswer: 1,
+    explanation: 'A semicolon joins the two independent clauses; the comma version is a splice and the third is a run-on.',
+    difficulty: 'medium',
+  },
+  {
+    id: 52,
+    question: 'Which sentence correctly uses a comma before "and"?',
+    options: [
+      'The chef prepared the meal, and the waiter served it.',
+      'The chef prepared the meal, and served it.',
+      'The chef, prepared the meal and served it.',
+      'The chef prepared, the meal and served it.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A comma before "and" is correct when it joins two independent clauses; "and served it" would be only a compound predicate.',
+    difficulty: 'medium',
+  },
+  {
+    id: 53,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'We were late, consequently we missed the opening.',
+      'We were late consequently; we missed the opening.',
+      'We were late; consequently, we missed the opening.',
+      'We were, late consequently we missed the opening.'
+    ],
+    correctAnswer: 2,
+    explanation: 'The conjunctive adverb "consequently" takes a semicolon before it and a comma after it.',
+    difficulty: 'medium',
+  },
+  // ─── HARD (added) ──────────────────────────────────────────────────
+  {
+    id: 54,
+    question: 'Choose the correct punctuation for the three blanks. "The committee reviewed the proposal ___ which had taken months to prepare ___ and approved it unanimously ___ the chair praised the team\'s effort."',
+    options: [
+      ', / , / ;',
+      ', / , / ,',
+      '; / , / ;',
+      ', / ; / ;'
+    ],
+    correctAnswer: 0,
+    explanation: 'The nonessential clause "which had taken months to prepare" takes paired commas; a semicolon then joins the two independent clauses before "the chair praised."',
+    difficulty: 'hard',
+  },
+  {
+    id: 55,
+    question: 'Which revision correctly fixes the comma splice "The road was icy, the driver slowed down"?',
+    options: [
+      'The road was icy the driver slowed down.',
+      'The road was icy, so the driver slowed down.',
+      'The road was icy, and, the driver slowed down.',
+      'The road, was icy the driver slowed down.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Adding the conjunction "so" after the comma correctly joins the two independent clauses.',
+    difficulty: 'hard',
+  },
+  {
+    id: 56,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The finalists were Ana, a violinist; Ben, a pianist; and Cara, a cellist.',
+      'The finalists were Ana, a violinist, Ben, a pianist, and Cara, a cellist.',
+      'The finalists were Ana a violinist; Ben a pianist; and Cara a cellist.',
+      'The finalists were: Ana, a violinist, Ben, a pianist, and Cara, a cellist.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Because each item contains an internal comma, semicolons separate the items in the series.',
+    difficulty: 'hard',
+  },
+  {
+    id: 57,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Although she was tired she finished the race, and she set a personal record.',
+      'Although she was tired, she finished the race, she set a personal record.',
+      'Although she was tired, she finished the race, and she set a personal record.',
+      'Although she was tired, she finished the race and, she set a personal record.'
+    ],
+    correctAnswer: 2,
+    explanation: 'The introductory clause takes a comma, and the two independent clauses joined by "and" also take a comma before the conjunction.',
+    difficulty: 'hard',
+  },
+  {
+    id: 58,
+    question: 'Choose the correct punctuation for the blanks. "The budget was approved ___ nevertheless ___ several members voiced concerns."',
+    options: [
+      '; nevertheless,',
+      ', nevertheless,',
+      '; nevertheless;',
+      ', nevertheless;'
+    ],
+    correctAnswer: 0,
+    explanation: '"Nevertheless" joins two independent clauses, so it takes a semicolon before it and a comma after it.',
+    difficulty: 'hard',
+  },
+  {
+    id: 59,
+    question: 'Choose the correct punctuation for the blanks. "The recipe calls for three dry ingredients ___ flour ___ sugar ___ and salt."',
+    options: [
+      ': / , / ,',
+      ', / , / ,',
+      ': / ; / ;',
+      '; / , / ,'
+    ],
+    correctAnswer: 0,
+    explanation: '"Three dry ingredients" is a complete clause, so a colon introduces the list; the items have no internal commas, so commas separate them.',
+    difficulty: 'hard',
+  },
+  {
+    id: 60,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'I wanted to help, however, I had no time.',
+      'I wanted to help; however, I had no time.',
+      'I wanted to help however; I had no time.',
+      'I wanted to help, however I had no time.'
+    ],
+    correctAnswer: 1,
+    explanation: 'The conjunctive adverb "however" between two independent clauses takes a semicolon before and a comma after; the comma-only versions are splices.',
+    difficulty: 'hard',
+  },
+  {
+    id: 61,
+    question: 'Which sentence contains no punctuation error?',
+    options: [
+      'The scientists, who had worked for years, celebrated; their discovery changed the field.',
+      'The scientists who had worked for years celebrated, their discovery changed the field.',
+      'The scientists, who had worked for years celebrated; their discovery changed the field.',
+      'The scientists who had worked for years, celebrated their discovery changed the field.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The nonessential clause takes paired commas, and a semicolon joins the two independent clauses.',
+    difficulty: 'hard',
+  },
+  {
+    id: 62,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Some critics loved the film, others found it dull.',
+      'Some critics loved the film others found it dull.',
+      'Some critics loved, the film others found it dull.',
+      'Some critics loved the film; others found it dull.'
+    ],
+    correctAnswer: 3,
+    explanation: 'A semicolon joins the two contrasting independent clauses; the comma version is a splice and the second is a run-on.',
+    difficulty: 'hard',
+  },
+  {
+    id: 63,
+    question: 'Choose the correct punctuation for the five blanks. "The author ___ whose debut novel won several awards ___ published three books ___ a memoir ___ a thriller ___ and a poetry collection."',
+    options: [
+      ', / , / : / , / ,',
+      ', / , / , / , / ,',
+      '; / ; / : / , / ,',
+      ', / , / ; / , / ,'
+    ],
+    correctAnswer: 0,
+    explanation: 'The nonessential clause takes paired commas; "published three books" is a complete clause, so a colon introduces the list, whose items are separated by commas.',
+    difficulty: 'hard',
+  },
+  {
+    id: 64,
+    question: 'Which revision corrects both errors in "Because the flight was delayed we missed our connection, the airline offered vouchers"?',
+    options: [
+      'Because the flight was delayed, we missed our connection; the airline offered vouchers.',
+      'Because the flight was delayed we missed our connection; the airline offered vouchers.',
+      'Because the flight was delayed, we missed our connection, the airline offered vouchers.',
+      'Because the flight was delayed; we missed our connection, the airline offered vouchers.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The introductory clause needs a comma after "delayed," and the comma splice before "the airline" must become a semicolon.',
+    difficulty: 'hard',
+  },
+  {
+    id: 65,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The manager, who oversees hiring reviewed the applications, scheduled interviews, and selected three candidates.',
+      'The manager who oversees hiring, reviewed the applications, scheduled interviews, and selected three candidates.',
+      'The manager who oversees hiring reviewed the applications, scheduled interviews, and selected three candidates.',
+      'The manager who oversees hiring reviewed the applications scheduled interviews and selected three candidates.'
+    ],
+    correctAnswer: 2,
+    explanation: 'The essential clause "who oversees hiring" takes no commas, and the three verb phrases form a series separated by commas.',
+    difficulty: 'hard',
+  },
+  {
+    id: 66,
+    question: 'Choose the correct punctuation for the three blanks. "The novelist spent a decade on the manuscript ___ revising it dozens of times ___ when it was finally published ___ it became an instant bestseller."',
+    options: [
+      ', / ; / ,',
+      ', / , / ,',
+      '; / ; / ,',
+      ', / ; / ;'
+    ],
+    correctAnswer: 0,
+    explanation: 'A comma sets off the participial phrase "revising it dozens of times"; a semicolon joins the two independent clauses; and a comma follows the introductory clause "when it was finally published."',
+    difficulty: 'hard',
+  },
 ]
 
 export function getSatPunctuationQuestions(count: number = 10): SatPunctuationQuestion[] {

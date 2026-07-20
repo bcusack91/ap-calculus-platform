@@ -336,6 +336,542 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     explanation: 'The list is embedded in the middle of the sentence (not at the end), so a colon doesn\'t work (colons don\'t close). Dashes in pairs set off the list as a nonessential element. Commas would also work but could be confusing since the list items contain commas.',
     difficulty: 'hard',
   },
+  // ─── EASY (added) ──────────────────────────────────────────────────
+  {
+    id: 26,
+    question: 'Choose the correct word: "The ___ collar was too tight," referring to one dog.',
+    options: [
+      'dogs',
+      'dogs\'',
+      'dog\'s',
+      'dogss'
+    ],
+    correctAnswer: 2,
+    explanation: 'For a single dog, the singular possessive adds apostrophe + s: dog\'s.',
+    difficulty: 'easy',
+  },
+  {
+    id: 27,
+    question: 'Choose the correct word: "The company increased ___ profits."',
+    options: [
+      'it\'s',
+      'its',
+      'its\'',
+      'it is'
+    ],
+    correctAnswer: 1,
+    explanation: 'The possessive "its" has no apostrophe; "it\'s" means "it is."',
+    difficulty: 'easy',
+  },
+  {
+    id: 28,
+    question: 'Choose the correct word: "___ going to love the new park."',
+    options: [
+      'Their',
+      'There',
+      'Theyre',
+      'They\'re'
+    ],
+    correctAnswer: 3,
+    explanation: '"They\'re" is the contraction of "they are."',
+    difficulty: 'easy',
+  },
+  {
+    id: 29,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'What time does the movie start?',
+      'What time does the movie start.',
+      'What time does the movie start!',
+      'What time does the movie start'
+    ],
+    correctAnswer: 0,
+    explanation: 'A direct question ends with a question mark.',
+    difficulty: 'easy',
+  },
+  {
+    id: 30,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      '"Let\'s go" she said.',
+      '"Let\'s go", she said.',
+      '"Let\'s go," she said.',
+      '"Let\'s go she said."'
+    ],
+    correctAnswer: 2,
+    explanation: 'The comma that separates the quotation from the tag goes inside the closing quotation mark.',
+    difficulty: 'easy',
+  },
+  {
+    id: 31,
+    question: 'Choose the correct word: "The ___ toys were scattered," referring to toys belonging to several children.',
+    options: [
+      'children\'s',
+      'childrens\'',
+      'childrens',
+      'children'
+    ],
+    correctAnswer: 0,
+    explanation: '"Children" is an irregular plural, so the possessive adds apostrophe + s: children\'s.',
+    difficulty: 'easy',
+  },
+  {
+    id: 32,
+    question: 'Which sentence uses a colon correctly?',
+    options: [
+      'He had one wish: to travel the world.',
+      'He had: one wish to travel the world.',
+      'He had one: wish to travel the world.',
+      'He: had one wish to travel the world.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A colon follows a complete clause ("He had one wish") to introduce an explanation.',
+    difficulty: 'easy',
+  },
+  {
+    id: 33,
+    question: 'Choose the correct word: "___ going to need a jacket."',
+    options: [
+      'Your',
+      'Youre',
+      'You\'re',
+      'Yours'
+    ],
+    correctAnswer: 2,
+    explanation: '"You\'re" is the contraction of "you are"; "your" is possessive.',
+    difficulty: 'easy',
+  },
+  {
+    id: 34,
+    question: 'Which sentence uses a dash correctly?',
+    options: [
+      'I finally found—it my missing key.',
+      'I—finally found it my missing key.',
+      'I finally found it my—missing key.',
+      'I finally found it—my missing key.'
+    ],
+    correctAnswer: 3,
+    explanation: 'A dash sets off the added detail "my missing key" from the complete clause before it.',
+    difficulty: 'easy',
+  },
+  {
+    id: 35,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The apples were on sale.',
+      'The apple\'s were on sale.',
+      'The apples\' were on sale.',
+      'The apples\'s were on sale.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A simple plural takes no apostrophe; "apples" is correct.',
+    difficulty: 'easy',
+  },
+  {
+    id: 36,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'She asked, "Are you ready"?',
+      'She asked, "Are you ready?"',
+      'She asked "Are you ready?".',
+      'She asked, Are you ready?'
+    ],
+    correctAnswer: 1,
+    explanation: 'The quoted words form a question, so the question mark belongs inside the quotation marks, and a comma introduces the quote.',
+    difficulty: 'easy',
+  },
+  {
+    id: 37,
+    question: 'Choose the correct possessive: "This is ___ book," referring to James.',
+    options: [
+      'James\'s',
+      'Jame\'s',
+      'Jamess',
+      'Jams\''
+    ],
+    correctAnswer: 0,
+    explanation: 'The singular possessive of James is James\'s.',
+    difficulty: 'easy',
+  },
+  {
+    id: 38,
+    question: 'Choose the correct word: "___ car is parked outside?"',
+    options: [
+      'Whose',
+      'Who\'s',
+      'Whos',
+      'Whose\'s'
+    ],
+    correctAnswer: 0,
+    explanation: '"Whose" is the possessive; "who\'s" means "who is."',
+    difficulty: 'easy',
+  },
+  {
+    id: 39,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'My favorite colors are red, blue, and green.',
+      'My favorite colors are: red, blue, and green.',
+      'My favorite: colors are red, blue, and green.',
+      'My favorite colors: are red, blue, and green.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A colon cannot follow "are" because "My favorite colors are" is not a complete sentence; no colon is needed.',
+    difficulty: 'easy',
+  },
+  // ─── MEDIUM (added) ────────────────────────────────────────────────
+  {
+    id: 40,
+    question: 'Which sentence uses dashes correctly?',
+    options: [
+      'The device—small but powerful—fit in her pocket.',
+      'The device—small but powerful, fit in her pocket.',
+      'The device, small but powerful—fit in her pocket.',
+      'The device—small but powerful; fit in her pocket.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Dashes must come in pairs when setting off a nonessential element; mixing a dash with a comma or semicolon is incorrect.',
+    difficulty: 'medium',
+  },
+  {
+    id: 41,
+    question: 'Choose the correct word: "The ___ locker room was renovated," referring to the room used by the players.',
+    options: [
+      'player\'s',
+      'players',
+      'players\'',
+      'players\'s'
+    ],
+    correctAnswer: 2,
+    explanation: 'The room belongs to multiple players, so the plural possessive "players\'" (apostrophe after the s) is correct.',
+    difficulty: 'medium',
+  },
+  {
+    id: 42,
+    question: 'Which sentence uses a colon correctly?',
+    options: [
+      'The workshop covered three topics: budgeting, saving, and investing.',
+      'The workshop covered: budgeting, saving, and investing.',
+      'The workshop: covered three topics budgeting, saving, and investing.',
+      'The workshop covered three topics; budgeting, saving, and investing.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A colon must follow a complete clause. "The workshop covered three topics" is complete; "The workshop covered" is not.',
+    difficulty: 'medium',
+  },
+  {
+    id: 43,
+    question: 'Which sentence is correct?',
+    options: [
+      'Its clear that the plan has it\'s flaws.',
+      'It\'s clear that the plan has it\'s flaws.',
+      'Its clear that the plan has its flaws.',
+      'It\'s clear that the plan has its flaws.'
+    ],
+    correctAnswer: 3,
+    explanation: '"It\'s" means "it is," and "its" is the possessive. The sentence needs "It\'s" at the start and "its" before "flaws."',
+    difficulty: 'medium',
+  },
+  {
+    id: 44,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      '"I think," he said, "that we should wait."',
+      '"I think" he said "that we should wait."',
+      '"I think," he said "that we should wait."',
+      '"I think" he said, "that we should wait."'
+    ],
+    correctAnswer: 0,
+    explanation: 'When a dialogue tag interrupts a quotation, commas set off the tag and stay inside the quotation marks.',
+    difficulty: 'medium',
+  },
+  {
+    id: 45,
+    question: 'Which sentence uses a colon correctly?',
+    options: [
+      'The kit contained the following items: bandages, tape, and scissors.',
+      'The kit contained the following items; bandages, tape, and scissors.',
+      'The kit contained the following items, bandages, tape, and scissors.',
+      'The kit contained the following items bandages, tape, and scissors.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A colon follows the complete clause "The kit contained the following items" to introduce the list.',
+    difficulty: 'medium',
+  },
+  {
+    id: 46,
+    question: 'Choose the correct word: "The ___ decisions affected everyone," referring to the decisions of two managers.',
+    options: [
+      'manager\'s',
+      'managers\'',
+      'managers',
+      'managers\'s'
+    ],
+    correctAnswer: 1,
+    explanation: 'The decisions belong to two managers, so the plural possessive "managers\'" is correct.',
+    difficulty: 'medium',
+  },
+  {
+    id: 47,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      '"Watch out!" she shouted.',
+      '"Watch out"! she shouted.',
+      '"Watch out!," she shouted.',
+      '"Watch out" she shouted!'
+    ],
+    correctAnswer: 0,
+    explanation: 'The exclamation point belongs to the quoted words, so it stays inside the quotation marks, and no comma is added after it.',
+    difficulty: 'medium',
+  },
+  {
+    id: 48,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'He brought only one thing,—his guitar.',
+      'He brought only one thing—his guitar,.',
+      'He brought—only one thing his guitar.',
+      'He brought only one thing—his guitar.'
+    ],
+    correctAnswer: 3,
+    explanation: 'A single dash sets off the end appositive "his guitar" after the complete clause; it should not be paired with a comma.',
+    difficulty: 'medium',
+  },
+  {
+    id: 49,
+    question: 'Which sentence is correct?',
+    options: [
+      'The city is proud of its new library.',
+      'The city is proud of it\'s new library.',
+      'The city is proud of its\' new library.',
+      'The city is proud of their new library.'
+    ],
+    correctAnswer: 0,
+    explanation: 'Possessive "its" (no apostrophe) is correct, and the singular subject "city" takes "its," not "their."',
+    difficulty: 'medium',
+  },
+  {
+    id: 50,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      '"It\'s the children\'s turn," the coach announced.',
+      '"Its the childrens\' turn," the coach announced.',
+      '"It\'s the childrens turn" the coach announced.',
+      '"Its the children\'s turn", the coach announced.'
+    ],
+    correctAnswer: 0,
+    explanation: '"It\'s" means "it is," "children\'s" is the correct possessive, and the comma before the tag stays inside the quotation marks.',
+    difficulty: 'medium',
+  },
+  {
+    id: 51,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Her explanation—clear and thorough—satisfied everyone.',
+      'Her explanation—clear and thorough, satisfied everyone.',
+      'Her explanation, clear and thorough—satisfied everyone.',
+      'Her explanation—clear and thorough; satisfied everyone.'
+    ],
+    correctAnswer: 0,
+    explanation: 'A pair of dashes sets off the interrupting phrase; mixing a dash with a comma or semicolon is incorrect.',
+    difficulty: 'medium',
+  },
+  {
+    id: 52,
+    question: 'Choose the correct word: "The ___ team won the championship," referring to a team of women.',
+    options: [
+      'womens\'',
+      'womens',
+      'women\'s',
+      'woman\'s'
+    ],
+    correctAnswer: 2,
+    explanation: '"Women" is an irregular plural, so the possessive adds apostrophe + s: women\'s.',
+    difficulty: 'medium',
+  },
+  {
+    id: 53,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'I wonder whether the store is open.',
+      'I wonder whether the store is open?',
+      'I wonder whether the store is open!',
+      'I wonder whether the store is open,'
+    ],
+    correctAnswer: 0,
+    explanation: 'An indirect question is a statement and ends with a period, not a question mark.',
+    difficulty: 'medium',
+  },
+  // ─── HARD (added) ──────────────────────────────────────────────────
+  {
+    id: 54,
+    question: 'Which revision corrects every error in "The teams mascot, a bulldog, energized the crowd its antics delighted fans of all ages"?',
+    options: [
+      'The team\'s mascot, a bulldog, energized the crowd; its antics delighted fans of all ages.',
+      'The teams\' mascot, a bulldog, energized the crowd; it\'s antics delighted fans of all ages.',
+      'The team\'s mascot a bulldog energized the crowd, its antics delighted fans of all ages.',
+      'The team\'s mascot, a bulldog energized the crowd; its antics delighted fans of all ages.'
+    ],
+    correctAnswer: 0,
+    explanation: '"Team\'s" is the singular possessive, the appositive "a bulldog" takes paired commas, a semicolon fixes the run-on, and "its" is the correct possessive.',
+    difficulty: 'hard',
+  },
+  {
+    id: 55,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      '"Success" the coach said "comes from discipline and it\'s constant practice."',
+      '"Success," the coach said, "comes from discipline and its constant practice."',
+      '"Success," the coach said "comes from discipline and its constant practice."',
+      '"Success", the coach said, "comes from discipline and its constant practice."'
+    ],
+    correctAnswer: 1,
+    explanation: 'Commas set off the interrupting tag and stay inside the quotation marks, and "its" is the correct possessive.',
+    difficulty: 'hard',
+  },
+  {
+    id: 56,
+    question: 'Choose the correct answers for the blanks. "The ___(A) lecture ran long ___(B) nevertheless ___(C) the students stayed ___(D) they were fascinated by ___(E) implications."',
+    options: [
+      '(A) professor\'s (B) ; (C) , (D) ; (E) its',
+      '(A) professors (B) , (C) , (D) ; (E) it\'s',
+      '(A) professor\'s (B) ; (C) , (D) , (E) its',
+      '(A) professors\' (B) ; (C) , (D) ; (E) it\'s'
+    ],
+    correctAnswer: 0,
+    explanation: 'Singular possessive "professor\'s"; a semicolon precedes and a comma follows "nevertheless"; a semicolon joins the last two independent clauses; and "its" is the correct possessive.',
+    difficulty: 'hard',
+  },
+  {
+    id: 57,
+    question: 'Choose the correct answers for the blanks. "The ___(A) new headquarters ___(B) which cost millions to build ___(C) opened last spring ___(D) its ___(E) celebrated the move."',
+    options: [
+      '(A) companys (B) , (C) , (D) , (E) employees',
+      '(A) company\'s (B) , (C) , (D) ; (E) employee\'s',
+      '(A) company\'s (B) , (C) , (D) ; (E) employees',
+      '(A) company\'s (B) ; (C) ; (D) ; (E) employees'
+    ],
+    correctAnswer: 2,
+    explanation: 'Singular possessive "company\'s"; the nonessential clause takes paired commas; a semicolon joins the two independent clauses; and "employees" (plural, no apostrophe) is the subject.',
+    difficulty: 'hard',
+  },
+  {
+    id: 58,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'My sister\'s apartment—small but cozy—overlooks the park; it\'s her favorite feature.',
+      'My sisters apartment—small but cozy—overlooks the park; its her favorite feature.',
+      'My sister\'s apartment, small but cozy—overlooks the park; it\'s her favorite feature.',
+      'My sister\'s apartment—small but cozy—overlooks the park, it\'s her favorite feature.'
+    ],
+    correctAnswer: 0,
+    explanation: '"Sister\'s" is possessive, the dashes are paired, a semicolon joins the two independent clauses, and "it\'s" correctly means "it is."',
+    difficulty: 'hard',
+  },
+  {
+    id: 59,
+    question: 'Which revision is punctuated correctly? Original: "The witnesss account—detailed and consistent, helped the jury reach it\'s verdict."',
+    options: [
+      'The witnesss account—detailed and consistent—helped the jury reach its verdict.',
+      'The witness\'s account—detailed and consistent—helped the jury reach its verdict.',
+      'The witness\'s account, detailed and consistent—helped the jury reach it\'s verdict.',
+      'The witness\'s account—detailed and consistent—helped the jury reach it\'s verdict.'
+    ],
+    correctAnswer: 1,
+    explanation: '"Witness\'s" is the correct singular possessive, paired dashes set off the interrupting phrase, and "its" is the possessive (not "it\'s").',
+    difficulty: 'hard',
+  },
+  {
+    id: 60,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Did she really say, "I quit"?',
+      'Did she really say, "I quit?"',
+      'Did she really say "I quit"?',
+      'Did she really say, "I quit."?'
+    ],
+    correctAnswer: 0,
+    explanation: 'The quoted words form a statement, so the question mark for the whole sentence goes outside the quotation marks; a comma introduces the quotation.',
+    difficulty: 'hard',
+  },
+  {
+    id: 61,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'Charles Dickens\' novels remain popular, and his reader\'s devotion endures.',
+      'Charles Dickens novels remain popular, and his readers\' devotion endures.',
+      'Charles Dickens\'s novels remain popular, and his readers\' devotion endures.',
+      'Charles Dickens\'s novels remain popular, and his readers devotion endures.'
+    ],
+    correctAnswer: 2,
+    explanation: '"Dickens\'s" is the singular possessive and "readers\'" is the plural possessive for the devotion of many readers.',
+    difficulty: 'hard',
+  },
+  {
+    id: 62,
+    question: 'Which sentence contains no punctuation error?',
+    options: [
+      'After the storm passed, we surveyed the damage: fallen trees, flooded roads, and downed power lines.',
+      'After the storm passed we surveyed the damage: fallen trees, flooded roads, and downed power lines.',
+      'After the storm passed, we surveyed the damage; fallen trees, flooded roads, and downed power lines.',
+      'After the storm passed, we surveyed the damage, fallen trees, flooded roads, and downed power lines.'
+    ],
+    correctAnswer: 0,
+    explanation: 'The introductory clause takes a comma, and a colon (not a semicolon or comma) introduces the list after the complete clause "we surveyed the damage."',
+    difficulty: 'hard',
+  },
+  {
+    id: 63,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The ingredients, flour, sugar, and eggs, were measured carefully.',
+      'The ingredients: flour, sugar, and eggs: were measured carefully.',
+      'The ingredients—flour, sugar, and eggs, were measured carefully.',
+      'The ingredients—flour, sugar, and eggs—were measured carefully.'
+    ],
+    correctAnswer: 3,
+    explanation: 'Because the interrupting list already contains commas, paired dashes must set it off; commas would blur with the series and a colon cannot close the interruption.',
+    difficulty: 'hard',
+  },
+  {
+    id: 64,
+    question: 'Choose the correct punctuation for the four blanks. "The author\'s memoir ___(A) which took years to write ___(B) finally reached bookstores ___(C) readers praised ___(D) unflinching honesty."',
+    options: [
+      '(A) , (B) , (C) ; (D) its',
+      '(A) , (B) , (C) , (D) its',
+      '(A) , (B) , (C) ; (D) it\'s',
+      '(A) ; (B) ; (C) ; (D) its'
+    ],
+    correctAnswer: 0,
+    explanation: 'The nonessential clause "which took years to write" takes paired commas, a semicolon joins the two independent clauses, and "its" is the correct possessive before "unflinching honesty."',
+    difficulty: 'hard',
+  },
+  {
+    id: 65,
+    question: 'Which sentence is punctuated correctly?',
+    options: [
+      'The teachers advice was memorable: "Never stop asking questions."',
+      'The teacher\'s advice was memorable, "Never stop asking questions."',
+      'The teacher\'s advice was memorable: "Never stop asking questions."',
+      'The teacher\'s advice was memorable; "Never stop asking questions."'
+    ],
+    correctAnswer: 2,
+    explanation: '"Teacher\'s" is the possessive, and a colon correctly follows the complete clause to introduce the quotation.',
+    difficulty: 'hard',
+  },
+  {
+    id: 66,
+    question: 'Which revision produces a fully correct sentence? Original: "Its been a long journey the explorers—exhausted but triumphant reached the summit, they planted their flag."',
+    options: [
+      'It\'s been a long journey; the explorers—exhausted but triumphant—reached the summit, and they planted their flag.',
+      'Its been a long journey; the explorers—exhausted but triumphant—reached the summit, and they planted their flag.',
+      'It\'s been a long journey, the explorers—exhausted but triumphant—reached the summit, and they planted their flag.',
+      'It\'s been a long journey; the explorers, exhausted but triumphant—reached the summit and they planted their flag.'
+    ],
+    correctAnswer: 0,
+    explanation: '"It\'s" means "it has," a semicolon separates the two main statements, paired dashes set off the interrupting phrase, and a comma before "and" joins the two independent clauses.',
+    difficulty: 'hard',
+  },
 ]
 
 export function getSatPunctuationGeneralQuestions(count: number = 10): SatPunctuationGeneralQuestion[] {
