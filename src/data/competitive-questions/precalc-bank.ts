@@ -259,7 +259,7 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 173, question: 'For real-coefficient polynomials, complex roots come in:', options: ['Conjugate pairs', 'Real-imaginary pairs', 'Multiplicity 2 only', 'No pattern'], correctAnswer: 0, explanation: 'If $a + bi$ is a root, so is $a - bi$.', difficulty: 'medium', topicSlug: 'complex-numbers-fundamental-theorem' },
 
   // composite-functions (4 → 10)
-  { id: 174, question: 'For $f(x) = x + 1, g(x) = x^2$, $(f \\circ g)(x) = $?', options: ['$x^2 + 1$', '$(x+1)^2$', '$x^2 + 2x + 1$', '$x + 1$'], correctAnswer: 0, explanation: '$f(g(x)) = g(x) + 1 = x^2 + 1$.', difficulty: 'easy', topicSlug: 'composite-functions' },
+  { id: 174, question: 'For $f(x) = x + 1, g(x) = x^2$, $(f \\circ g)(x) = $?', options: ['$x^2 + 1$', '$(x+1)^2$', '$x^3 + x^2$', '$x + 1$'], correctAnswer: 0, explanation: '$f(g(x)) = g(x) + 1 = x^2 + 1$.', difficulty: 'easy', topicSlug: 'composite-functions' },
   { id: 175, question: 'For the same $f, g$, $(g \\circ f)(x) = $?', options: ['$(x+1)^2$', '$x^2 + 1$', '$x^2 + x$', '$x + 1$'], correctAnswer: 0, explanation: '$g(f(x)) = (x+1)^2$.', difficulty: 'easy', topicSlug: 'composite-functions' },
   { id: 176, question: 'Composition is generally:', options: ['Not commutative', 'Always commutative', 'Always associative AND commutative', 'Only defined for linear functions'], correctAnswer: 0, explanation: '$f \\circ g \\ne g \\circ f$ in general.', difficulty: 'medium', topicSlug: 'composite-functions' },
   { id: 177, question: 'Domain of $f \\circ g$ requires:', options: ['$x$ in domain of $g$, with $g(x)$ in domain of $f$', 'Only $x$ in domain of $f$', 'Any $x$', 'Only $x = 0$'], correctAnswer: 0, explanation: 'Both inputs must be valid.', difficulty: 'medium', topicSlug: 'composite-functions' },
@@ -271,7 +271,7 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 181, question: 'A function has an inverse iff it is:', options: ['One-to-one (passes horizontal line test)', 'Continuous', 'Differentiable', 'Linear'], correctAnswer: 0, explanation: 'Injective ⇒ invertible.', difficulty: 'medium', topicSlug: 'inverse-functions' },
   { id: 182, question: 'Graph of $f^{-1}$ is the reflection of $f$ across:', options: ['$y = x$', '$y$-axis', '$x$-axis', 'Origin'], correctAnswer: 0, explanation: 'Inverse swaps $x$ and $y$.', difficulty: 'easy', topicSlug: 'inverse-functions' },
   { id: 183, question: 'If $f(2) = 7$, then $f^{-1}(7) = $?', options: ['$2$', '$7$', '$1/2$', '$1/7$'], correctAnswer: 0, explanation: 'Inverse undoes the function.', difficulty: 'easy', topicSlug: 'inverse-functions' },
-  { id: 184, question: 'Inverse of $f(x) = e^x$:', options: ['$\\ln x$', '$1/e^x$', '$e^{-x}$', '$x \\ln x$'], correctAnswer: 0, explanation: 'Logarithm is inverse of exponential.', difficulty: 'easy', topicSlug: 'inverse-functions' },
+  { id: 184, question: 'Inverse of $f(x) = e^x$:', options: ['$\\ln x$', '$1/e^x$', '$1/\\ln x$', '$x \\ln x$'], correctAnswer: 0, explanation: 'Logarithm is inverse of exponential.', difficulty: 'easy', topicSlug: 'inverse-functions' },
   { id: 185, question: 'Domain of $f^{-1}$ equals:', options: ['Range of $f$', 'Domain of $f$', '$\\mathbb{R}$', '$[0, \\infty)$'], correctAnswer: 0, explanation: 'Roles of domain and range swap.', difficulty: 'medium', topicSlug: 'inverse-functions' },
 
   // inverse-trig-functions (4 → 10)

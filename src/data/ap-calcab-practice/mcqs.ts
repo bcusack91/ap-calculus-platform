@@ -146,7 +146,7 @@ export const MCQS: MCQItem[] = [
       '$2e^{2x}\\cos(x) - e^{2x}\\sin(x)$',
       '$2e^{2x}\\cos(x) + e^{2x}\\sin(x)$',
       '$-2e^{2x}\\sin(x)$',
-      '$e^{2x}(2\\cos(x) + \\sin(x))$',
+      '$e^{2x}(\\cos(x) - \\sin(x))$',
     ],
     correctAnswer: 0,
     explanation: 'Product + chain: $2e^{2x}\\cos x + e^{2x}(-\\sin x) = 2e^{2x}\\cos x - e^{2x}\\sin x$.',

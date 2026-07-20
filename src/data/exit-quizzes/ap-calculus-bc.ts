@@ -719,7 +719,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x^2-4x+4}\\,dx =$',
-    options: ['$-\\frac{1}{x-2}+C$', '$\\ln|x-2|+C$', '$\\frac{1}{2}\\ln|x^2-4x+4|+C$', '$\\arctan(x-2)+C$'],
+    options: ['$-\\frac{1}{x-2}+C$', '$\\ln|x-2|+C$', '$\\frac{1}{x-2}+C$', '$\\arctan(x-2)+C$'],
     correctAnswer: 0,
     explanation: '$x^{2}-4x+4$ = $(x-2)^{2}$. $\\int (x-2)^{-2}dx$ = $-(x-2)^{-1}$ + C = −1/(x−2) + C.',
     difficulty: 'easy',

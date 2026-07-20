@@ -15,7 +15,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'fact-ent-2b', question: 'Factor: $4x^2 - 49$', options: ['$(2x - 7)(2x + 7)$', '$(4x - 7)(x + 7)$', '$(2x - 49)(2x + 1)$', 'Cannot be factored'], correctIndex: 0, explanation: '$(2x)^2 − 7^2 = (2x − 7)(2x + 7)$.', partNumber: 2, partTitle: 'Difference of Squares' },
 
   // Part 3 — Simple Trinomials
-  { id: 'fact-ent-3a', question: 'Factor: $x^2 + 7x + 12$', options: ['$(x + 1)(x + 12)$', '$(x + 2)(x + 6)$', '$(x + 3)(x + 4)$', '$(x + 6)(x + 2)$'], correctIndex: 2, explanation: 'Find two numbers multiplying to 12 and summing to 7: 3 and 4. So $(x + 3)(x + 4)$.', partNumber: 3, partTitle: 'Simple Trinomials' },
+  { id: 'fact-ent-3a', question: 'Factor: $x^2 + 7x + 12$', options: ['$(x + 1)(x + 12)$', '$(x + 2)(x + 6)$', '$(x + 3)(x + 4)$', '$(x - 3)(x - 4)$'], correctIndex: 2, explanation: 'Find two numbers multiplying to 12 and summing to 7: 3 and 4. So $(x + 3)(x + 4)$.', partNumber: 3, partTitle: 'Simple Trinomials' },
   { id: 'fact-ent-3b', question: 'Factor: $x^2 - 5x + 6$', options: ['$(x - 1)(x - 6)$', '$(x - 2)(x - 3)$', '$(x + 2)(x - 3)$', '$(x + 1)(x - 6)$'], correctIndex: 1, explanation: 'Two numbers that multiply to +6 and sum to −5: −2 and −3. So $(x − 2)(x − 3)$.', partNumber: 3, partTitle: 'Simple Trinomials' },
 
   // Part 4 — Complex Trinomials

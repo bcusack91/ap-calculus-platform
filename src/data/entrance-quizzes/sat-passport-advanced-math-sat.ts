@@ -132,7 +132,7 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       '$3x^{2}$ + 2',
       '$(3x + 2)^{2}$',
-      '$9x^{2}$ + 12x + 4',
+      '$3x^{3}$ + $2x^{2}$',
       '3x + $2x^{2}$',
     ],
     correctIndex: 0,

@@ -4084,7 +4084,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'If $y = x^x$ (for $x > 0$), then $\\dfrac{dy}{dx} = $',
-    options: ['$x \\cdot x^{x-1}$', '$x^x \\ln x$', '$x^x (\\ln x + 1)$', '$x^x$'],
+    options: ['$x \\cdot x^{x-1}$', '$x^x \\ln x$', '$x^x (\\ln x + 1)$', '$\\ln x + 1$'],
     correctAnswer: 2,
     explanation: 'Logarithmic differentiation: $\\ln y = x \\ln x \\Rightarrow y\'/y = \\ln x + 1 \\Rightarrow y\' = x^x(\\ln x + 1)$.',
     difficulty: 'hard', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
@@ -4135,7 +4135,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
   },
   {
     question: 'Given $x^3 + y^3 = 9$, find $\\dfrac{dy}{dx}$.',
-    options: ['$-x^2/y^2$', '$x^2/y^2$', '$-y^2/x^2$', '$3x^2/(3y^2)$'],
+    options: ['$-x^2/y^2$', '$x^2/y^2$', '$-y^2/x^2$', '$-3x^2/y^2$'],
     correctAnswer: 0,
     explanation: '$3x^2 + 3y^2 y\' = 0 \\Rightarrow y\' = -x^2/y^2$.',
     difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',

@@ -118,13 +118,13 @@ $$a(t) = g\\sin\\theta \\cdot e^{-bt/m} = 7.07 e^{-2} = 0.957 \\text{ m/s}^2$$`
       type: 'mcq' as const,
       question: 'For $2\\frac{dv}{dt} = -3v^2$ with $v_0 = 6$ m/s, what is $v(t)$?',
       options: [
-        '$v(t) = \\frac{6}{1 + 9t}$',
+        '$v(t) = \\frac{6}{1 + 18t}$',
         '$v(t) = 6e^{-1.5t}$',
         '$v(t) = 6 - 9t$',
         '$v(t) = \\frac{1}{\\frac{1}{6} + 1.5t}$'
       ],
       correctAnswer: 3,
-      explanation: 'Separating variables: $\\frac{dv}{v^2} = -\\frac{3}{2}dt$. Integrating: $-\\frac{1}{v} = -\\frac{3}{2}t + C$. With $v(0) = 6$: $C = -1/6$. So $\\frac{1}{v} = \\frac{1}{6} + \\frac{3}{2}t$, giving $v = \\frac{1}{1/6 + 1.5t} = \\frac{6}{1 + 9t}$. Both A and D are equivalent!'
+      explanation: 'Separating variables: $\\frac{dv}{v^2} = -\\frac{3}{2}dt$. Integrating: $-\\frac{1}{v} = -\\frac{3}{2}t + C$. With $v(0) = 6$: $C = -1/6$. So $\\frac{1}{v} = \\frac{1}{6} + \\frac{3}{2}t$, which simplifies to $\\frac{6}{1 + 9t}$. (Forgetting to divide the 3 by 2 gives the $1 + 18t$ trap.)'
     },
     {
       id: 'fri6-mcq5',

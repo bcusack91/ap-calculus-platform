@@ -145,9 +145,9 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ec-ent-7a',
     question: 'Which of the following species is isoelectronic with argon ($Z=18$)?',
-    options: ['$Na^+$', '$Ca^{2+}$', '$Cl^-$', '$O^{2-}$'],
+    options: ['$Na^+$', '$Br^-$', '$Cl^-$', '$O^{2-}$'],
     correctIndex: 2,
-    explanation: '$Cl^-$ has 17 + 1 = 18 electrons, the same as argon. $Na^+$ has 10, $Ca^{2+}$ has 18 — actually $Ca^{2+}$ also works, but $Cl^-$ (17+1 = 18) is the classic answer. $Ca^{2+}$ = 20−2 = 18 is also correct. Both $Cl^-$ and $Ca^{2+}$ are isoelectronic with Ar.',
+    explanation: '$Cl^-$ has 17 + 1 = 18 electrons, the same as argon. $Na^+$ has 10 (neon), $Br^-$ has 36 (krypton), and $O^{2-}$ has 10 (neon).',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },

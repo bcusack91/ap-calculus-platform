@@ -662,9 +662,9 @@ const questionPool: QuestionTemplate[] = [
       return {
         id: this.id, category: this.category,
         question: `Which expression is equivalent to $${a}(x + ${b}) + ${c}$?`,
-        options: [expanded, `$${a}x + ${b} + ${c}$`, `$${a}x + ${b + c}$`, `$${a + c}x + ${b}$`].sort(() => Math.random() - 0.5),
+        options: [expanded, `$${a}x + ${b} + ${c}$`, `$${a}x + ${a * b} + ${a * c}$`, `$${a + c}x + ${b}$`].sort(() => Math.random() - 0.5),
         get correctIndex() { return this.options.indexOf(expanded) },
-        explanation: `Distribute: $${a}x + ${a * b} + ${c} = ${a}x + ${a * b + c}$. But as written, the expanded form is $${a}x + ${a * b} + ${c}$.`
+        explanation: `Distribute $${a}$ over $(x + ${b})$ only: $${a}(x + ${b}) + ${c} = ${a}x + ${a * b} + ${c}$. The constant $${c}$ outside the parentheses is not multiplied by $${a}$.`
       }
     }
   },

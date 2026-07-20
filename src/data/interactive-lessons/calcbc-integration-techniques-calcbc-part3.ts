@@ -116,10 +116,10 @@ These let you reduce high powers step by step.
           },
           {
             label: '$\\int \\sec^2 x \\tan x\\,dx =$',
-            options: ['$\\frac{\\tan^2 x}{2} + C$', '$\\frac{\\sec^2 x}{2} + C$', '$\\sec x \\tan x + C$', '$\\ln|\\sec x| + C$'],
+            options: ['$\\frac{\\tan^2 x}{2} + C$', '$\\frac{\\sec^3 x}{3} + C$', '$\\sec x \\tan x + C$', '$\\ln|\\sec x| + C$'],
             correctAnswers: ['$\\frac{\\tan^2 x}{2} + C$'],
             hints: ['Let $u = \\tan x$, $du = \\sec^2 x\\,dx$.'],
-            explanation: '$\\int u\\,du = \\frac{u^2}{2} + C = \\frac{\\tan^2 x}{2} + C$. (Note: $\\frac{\\sec^2 x}{2} + C$ is also correct since they differ by a constant.)'
+            explanation: '$\\int u\\,du = \\frac{u^2}{2} + C = \\frac{\\tan^2 x}{2} + C$ with $u = \\tan x$.'
           }
         ]
       }
