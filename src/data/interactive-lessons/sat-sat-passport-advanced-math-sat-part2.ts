@@ -158,7 +158,7 @@ $(2x^3 - x^2) + (-6x + 3) = x^2(2x - 1) - 3(2x - 1) = (2x - 1)(x^2 - 3)$
           },
           {
             question: 'Which expression is equivalent to $4x^2 - 25$?',
-            options: ['$(2x-5)^2$', '$(4x+5)(x-5)$', '$(2x+5)(2x-5)$', '$(2x-5)(2x-5)$'],
+            options: ['$(2x-5)^2$', '$(4x+5)(x-5)$', '$(2x+5)(2x-5)$', '$(2x+5)^2$'],
             correctAnswer: 2,
             explanation: '$4x^2 - 25 = (2x)^2 - 5^2 = (2x+5)(2x-5)$.'
           }

@@ -26,7 +26,7 @@ export const physCEMCondPart6Data = {
       options: [
         '$0$',
         '$kQ/(2.5R)^2$',
-        '$3kQ/(2.5R)^2$',
+        '$k(2Q)/(2.5R)^2$',
         '$k(3Q)/(2.5R)^2$'
       ],
       correctAnswer: 0,

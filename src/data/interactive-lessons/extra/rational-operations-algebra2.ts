@@ -341,7 +341,7 @@ $$= \\frac{5x - 5}{x-1} = \\frac{5(x-1)}{x-1} = 5$$
           questions: [
             {
               question: 'Simplify $\\dfrac{4x}{x+2} - \\dfrac{x - 6}{x+2}$.',
-              options: ['$\\dfrac{3x + 6}{x+2} = 3$', '$\\dfrac{3x - 6}{x+2}$', '$\\dfrac{5x - 6}{x+2}$', '$\\dfrac{4x - x - 6}{x+2}$'],
+              options: ['$\\dfrac{3x + 6}{x+2} = 3$', '$\\dfrac{5x + 6}{x+2}$', '$\\dfrac{5x - 6}{x+2}$', '$\\dfrac{4x - x - 6}{x+2}$'],
               correctAnswer: 0,
               explanation: 'Subtract the whole numerator: $4x - (x - 6) = 4x - x + 6 = 3x + 6 = 3(x+2)$. Over $x+2$ this is $3$.',
             },
@@ -479,7 +479,7 @@ $$= \\frac{2x + 2 + 3x}{x(x+1)} = \\frac{5x + 2}{x(x+1)}$$
               question: 'Add $\\dfrac{1}{x} + \\dfrac{1}{x+2}$.',
               options: [
                 '$\\dfrac{2x + 2}{x(x+2)}$',
-                '$\\dfrac{2}{2x + 2}$',
+                '$\\dfrac{2}{x(x+2)}$',
                 '$\\dfrac{1}{x(x+2)}$',
                 '$\\dfrac{2}{x + (x+2)}$',
               ],

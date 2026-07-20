@@ -124,7 +124,7 @@ Given this data:
               '0.0010 M/s',
               '0.0010 $s^{-1}$',
               '0.0010 $M^{-1}s^{-1}$',
-              '$1.0 \\times 10^{-3}$ $M^{-1}s^{-1}$'
+              '0.0010 $M^{-2}s^{-1}$'
             ],
             correctAnswer: 0,
             explanation: 'Slope = −k = −0.100/100 = −0.0010. k = 0.0010 M/s. Units M/s confirm zero-order.'

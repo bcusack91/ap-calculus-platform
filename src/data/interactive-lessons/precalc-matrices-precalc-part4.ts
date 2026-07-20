@@ -108,7 +108,7 @@ Start with identity augmented, reduce left side to identity → right side becom
           },
           {
             question: '$(AB)^{-1} = ?$',
-            options: ['$A^{-1}B^{-1}$', '$B^{-1}A^{-1}$', '$(BA)^{-1}$', '$AB^{-1}$'],
+            options: ['$A^{-1}B^{-1}$', '$B^{-1}A^{-1}$', '$A^{-1}B$', '$AB^{-1}$'],
             correctAnswer: 1,
             explanation: 'Reverse order: $(AB)^{-1} = B^{-1}A^{-1}$.'
           }

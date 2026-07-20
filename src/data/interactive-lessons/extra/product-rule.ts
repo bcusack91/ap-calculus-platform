@@ -346,7 +346,7 @@ $$\\frac{dy}{dx} = 3x^2 e^x + x^3 e^x$$
           questions: [
             {
               question: 'Differentiate $y = x^2\\,e^x$.',
-              options: ['$2x e^x + x^2 e^x$', '$2x e^x$', '$2x \\cdot e^x$', '$x^2 e^x$'],
+              options: ['$2x e^x + x^2 e^x$', '$2x e^x$', '$2xe^x + x^2$', '$x^2 e^x$'],
               correctAnswer: 0,
               explanation: "$u=x^2$ ($u'=2x$), $v=e^x$ ($v'=e^x$): $u'v+uv' = 2xe^x + x^2e^x$.",
             },

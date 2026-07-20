@@ -117,8 +117,8 @@ $$(\\sqrt{x} - 2)(\\sqrt{x} + 2) = (\\sqrt{x})^2 - 2^2 = x - 4$$
 First, just *recognize* conjugates. For each expression, choose its conjugate (same terms, middle sign flipped).`,
         exercise: {
           dropdowns: [
-            { label: 'Conjugate of $\\sqrt{x}-6$:', options: ['$\\sqrt{x}+6$', '$\\sqrt{x}-6$', '$-\\sqrt{x}+6$', '$6-\\sqrt{x}$'] },
-            { label: 'Conjugate of $5+\\sqrt{x}$:', options: ['$5-\\sqrt{x}$', '$5+\\sqrt{x}$', '$-5+\\sqrt{x}$', '$\\sqrt{x}-5$'] },
+            { label: 'Conjugate of $\\sqrt{x}-6$:', options: ['$\\sqrt{x}+6$', '$\\sqrt{x}-6$', '$-\\sqrt{x}-6$', '$6-\\sqrt{x}$'] },
+            { label: 'Conjugate of $5+\\sqrt{x}$:', options: ['$5-\\sqrt{x}$', '$5+\\sqrt{x}$', '$-5-\\sqrt{x}$', '$\\sqrt{x}-5$'] },
             { label: 'Conjugate of $\\sqrt{a}+\\sqrt{b}$:', options: ['$\\sqrt{a}-\\sqrt{b}$', '$\\sqrt{a}+\\sqrt{b}$', '$\\sqrt{b}-\\sqrt{a}$', '$-\\sqrt{a}-\\sqrt{b}$'] },
           ],
           correctAnswers: ['$\\sqrt{x}+6$', '$5-\\sqrt{x}$', '$\\sqrt{a}-\\sqrt{b}$'],

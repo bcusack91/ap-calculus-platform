@@ -79,7 +79,7 @@ Check: $4 \\times 8 = 32 = 2^5$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"$\\log(MN) =$","options":["$\\log(M) + \\log(N)$","$\\log(M) \\times \\log(N)$","$\\log(M) - \\log(N)$","$\\log(M^N)$"]},{"label":"$\\log(M/N) =$","options":["$\\log(M) - \\log(N)$","$\\log(M) + \\log(N)$","$\\log(M) / \\log(N)$","$\\log(M \\cdot N)$"]}],
+        dropdowns: [{"label":"$\\log(MN) =$","options":["$\\log(M) + \\log(N)$","$\\log(M) \\times \\log(N)$","$\\log(M) - \\log(N)$","$\\log(M^N)$"]},{"label":"$\\log(M/N) =$","options":["$\\log(M) - \\log(N)$","$\\log(M) + \\log(N)$","$\\log(M) / \\log(N)$","$\\log(M^N)$"]}],
         correctAnswers: ["$\\log(M) + \\log(N)$","$\\log(M) - \\log(N)$"],
         hint1: "Product rule.",
         hint2: "Quotient rule.",

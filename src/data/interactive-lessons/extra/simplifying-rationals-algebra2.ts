@@ -447,7 +447,7 @@ $$\\frac{x-5}{5-x} = \\frac{x-5}{-(x-5)} = \\frac{\\cancel{(x-5)}}{-\\,\\cancel{
         content: `**Opposites & Restrictions** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'Rewrite $3 - x$ using $-1$:', options: ['$-(x-3)$', '$-(3-x)$', '$-(x+3)$', '$(x-3)$'] },
+            { label: 'Rewrite $3 - x$ using $-1$:', options: ['$-(x-3)$', '$-(3-x)$', '$-(x+3)$', '$(x+3)$'] },
             { label: '$\\dfrac{x-7}{7-x}$ simplifies to:', options: ['$-1$', '$1$', '$x-7$', '$0$'] },
             { label: '$\\dfrac{4-x}{x-4}$ simplifies to:', options: ['$-1$', '$1$', '$4-x$', '$x-4$'] },
           ],

@@ -571,7 +571,7 @@ so $\\sqrt{x^2 - a^2} = a\\tan\\theta$.
           questions: [
             {
               question: 'Which radical calls for the secant substitution $x = a\\sec\\theta$?',
-              options: ['$\\sqrt{x^2 - 9}$', '$\\sqrt{9 - x^2}$', '$\\sqrt{9 + x^2}$', '$\\sqrt{x^2 + 9}$'],
+              options: ['$\\sqrt{x^2 - 9}$', '$\\sqrt{9 - x^2}$', '$\\sqrt{4 + x^2}$', '$\\sqrt{x^2 + 9}$'],
               correctAnswer: 0,
               explanation: 'Secant is for $\\sqrt{x^2 - a^2}$ (variable squared minus constant squared). $\\sqrt{9 - x^2}$ is sine, and the two $+$ forms are tangent.',
             },

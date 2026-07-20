@@ -76,7 +76,7 @@ $\\frac{1}{2}\\int u^{1/2}\\,du = \\frac{1}{2} \\cdot \\frac{2}{3}u^{3/2} = \\fr
         questions: [
           {
             question: 'Evaluate $\\int 4x(x^2 + 3)^5\\,dx$.',
-            options: ['$\\frac{(x^2+3)^6}{3} + C$', '$\\frac{(x^2+3)^6}{6} + C$', '$\\frac{2(x^2+3)^6}{3} + C$', '$4 \\cdot \\frac{(x^2+3)^6}{6} + C$'],
+            options: ['$\\frac{(x^2+3)^6}{3} + C$', '$\\frac{(x^2+3)^6}{6} + C$', '$\\frac{(x^2+3)^6}{12} + C$', '$4 \\cdot \\frac{(x^2+3)^6}{6} + C$'],
             correctAnswer: 0,
             explanation: '$u = x^2+3$, $du = 2x\\,dx$, so $4x\\,dx = 2\\,du$. $2\\int u^5\\,du = \\frac{2u^6}{6} = \\frac{(x^2+3)^6}{3} + C$.'
           },

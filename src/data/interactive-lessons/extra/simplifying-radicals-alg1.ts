@@ -236,7 +236,7 @@ $$\\sqrt{18x^{3}} = \\sqrt{9\\cdot 2 \\cdot x^{2}\\cdot x} = \\sqrt{9}\\cdot\\sq
         exercise: {
           dropdowns: [
             { label: '$\\sqrt{x^{8}} =$', options: ['$x^{4}$', '$x^{2}$', '$x^{16}$', '$x^{8}$'] },
-            { label: '$\\sqrt{x^{9}} =$', options: ['$x^{4}\\sqrt{x}$', '$x^{3}\\sqrt{x}$', '$x^{4.5}$', '$x^{9}$'] },
+            { label: '$\\sqrt{x^{9}} =$', options: ['$x^{4}\\sqrt{x}$', '$x^{3}\\sqrt{x}$', '$x^{5}$', '$x^{9}$'] },
             { label: '$\\sqrt{16x^{2}} =$', options: ['$4x$', '$8x$', '$4x^{2}$', '$16x$'] },
           ],
           correctAnswers: ['$x^{4}$', '$x^{4}\\sqrt{x}$', '$4x$'],

@@ -56,7 +56,7 @@ export const complexTrinomialQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '(3x + 2)(x + 3)', isCorrect: true },
       { label: 'B', value: '(3x + 3)(x + 2)', isCorrect: false, explanation: 'This gives $3x^{2}$ + 9x + 6' },
-      { label: 'C', value: '(3x + 6)(x + 1)', isCorrect: false, explanation: '3x + 6 has GCF of 3 - not fully factored' },
+      { label: 'C', value: '(3x + 1)(x + 6)', isCorrect: false, explanation: 'This gives $3x^{2}$ + 19x + 6' },
       { label: 'D', value: '(x + 2)(x + 3)', isCorrect: false, explanation: 'Forgot the leading coefficient of 3' }
     ]
   },
@@ -117,7 +117,7 @@ export const complexTrinomialQuestions: MiniBossQuestion[] = [
       { label: 'A', value: '(3x - 2)(x + 3)', isCorrect: true },
       { label: 'B', value: '(3x + 2)(x - 3)', isCorrect: false, explanation: 'This gives $3x^{2}$ - 7x - 6' },
       { label: 'C', value: '(3x - 6)(x + 1)', isCorrect: false, explanation: '3x - 6 has GCF of 3 - not fully factored' },
-      { label: 'D', value: '(3x + 3)(x - 2)', isCorrect: false, explanation: '3x + 3 has GCF of 3 - not fully factored' }
+      { label: 'D', value: '(3x + 6)(x - 1)', isCorrect: false, explanation: 'This gives $3x^{2}$ + 3x - 6' }
     ]
   },
   {
@@ -205,7 +205,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '2(2x + 1)(2x + 3)', isCorrect: true },
       { label: 'B', value: '2(4x + 1)(x + 3)', isCorrect: false, explanation: 'Incorrect trinomial factoring' },
-      { label: 'C', value: '(8x + 2)(x + 3)', isCorrect: false, explanation: 'Must factor out GCF first' },
+      { label: 'C', value: '(4x + 2)(2x + 3)', isCorrect: false, explanation: 'Must factor out GCF first' },
       { label: 'D', value: '(2x + 1)(2x + 3)', isCorrect: false, explanation: 'Forgot to factor out GCF of 2' }
     ]
   },

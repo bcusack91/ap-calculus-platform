@@ -602,7 +602,7 @@ After choosing $u$, select the correct antiderivative.`,
           dropdowns: [
             { label: '$\\int \\cos u\\,du =$', options: ['$\\sin u + C$', '$-\\sin u + C$', '$-\\cos u + C$', '$\\tan u + C$'] },
             { label: '$\\int \\sin u\\,du =$', options: ['$-\\cos u + C$', '$\\cos u + C$', '$\\sin u + C$', '$-\\sin u + C$'] },
-            { label: '$\\int \\dfrac{1}{u}\\,du =$', options: ['$\\ln\\lvert u\\rvert + C$', '$\\dfrac{1}{u^2} + C$', '$u^{-2} + C$', '$\\ln(u) + C$'] },
+            { label: '$\\int \\dfrac{1}{u}\\,du =$', options: ['$\\ln\\lvert u\\rvert + C$', '$\\dfrac{1}{u^2} + C$', '$-\\dfrac{1}{u} + C$', '$\\ln(u) + C$'] },
             { label: '$\\int e^{u}\\,du =$', options: ['$e^{u} + C$', '$u e^{u} + C$', '$\\dfrac{e^{u}}{u} + C$', '$e^{u-1} + C$'] },
           ],
           correctAnswers: ['$\\sin u + C$', '$-\\cos u + C$', '$\\ln\\lvert u\\rvert + C$', '$e^{u} + C$'],

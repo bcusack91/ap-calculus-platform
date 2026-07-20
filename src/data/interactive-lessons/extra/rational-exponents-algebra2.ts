@@ -73,7 +73,7 @@ So $a^{1/n}$ is exactly the number that gives $a$ when raised to the $n$th power
             },
             {
               question: 'Rewrite $\\sqrt[5]{x}$ using a rational exponent.',
-              options: ['$x^{1/5}$', '$x^5$', '$5^{1/x}$', '$x^{5}$'],
+              options: ['$x^{1/5}$', '$x^5$', '$5^{1/x}$', '$x^{-1/5}$'],
               correctAnswer: 0,
               explanation: 'A fifth root has index $5$, which becomes the denominator: $\\sqrt[5]{x} = x^{1/5}$.',
             },
@@ -236,7 +236,7 @@ Each is a whole number. Take the root first, then the power.
 Choose the equivalent expression.`,
         exercise: {
           dropdowns: [
-            { label: '$a^{2/5}$ in radical form:', options: ['$\\sqrt[5]{a^2}$', '$\\sqrt[2]{a^5}$', '$\\sqrt[5]{a}^{\\,5}$', '$a^{5/2}$'] },
+            { label: '$a^{2/5}$ in radical form:', options: ['$\\sqrt[5]{a^2}$', '$\\sqrt[2]{a^5}$', '$\\sqrt[5]{a}^{\\,5}$', '$\\sqrt[5]{a}$'] },
             { label: '$\\left(\\sqrt[3]{x}\\right)^4$ in exponent form:', options: ['$x^{4/3}$', '$x^{3/4}$', '$x^{12}$', '$x^{7}$'] },
             { label: '$25^{3/2}$ equals:', options: ['$125$', '$75$', '$15$', '$625$'] },
           ],

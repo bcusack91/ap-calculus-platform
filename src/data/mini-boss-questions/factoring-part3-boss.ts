@@ -43,7 +43,7 @@ export const simpleTrinomialQuestions: MiniBossQuestion[] = [
       { label: 'A', value: '(x + 5)(x - 3)', isCorrect: true },
       { label: 'B', value: '(x - 5)(x + 3)', isCorrect: false, explanation: 'This gives $x^{2}$ - 2x - 15' },
       { label: 'C', value: '(x + 15)(x - 1)', isCorrect: false, explanation: '15 + (-1) = 14, not 2' },
-      { label: 'D', value: '(x + 3)(x - 5)', isCorrect: false, explanation: '3 + (-5) = -2, not 2' }
+      { label: 'D', value: '(x + 5)(x + 3)', isCorrect: false, explanation: 'This gives $x^{2}$ + 8x + 15 - the constant term should be -15' }
     ]
   },
   {

@@ -333,7 +333,7 @@ Choose the simplified power (keep it in exponent form).`,
           dropdowns: [
             { label: '$3^2 \\cdot 3^5 =$', options: ['$3^7$', '$3^{10}$', '$9^7$', '$3^3$'] },
             { label: '$\\dfrac{7^8}{7^3} =$', options: ['$7^5$', '$7^{11}$', '$7^{24}$', '$1^5$'] },
-            { label: '$x^4 \\cdot x =$', options: ['$x^5$', '$x^4$', '$x^3$', '$x^{4}$'] },
+            { label: '$x^4 \\cdot x =$', options: ['$x^5$', '$x^4$', '$x^3$', '$x^6$'] },
           ],
           correctAnswers: ['$3^7$', '$7^5$', '$x^5$'],
           hint1: 'Same base, multiplying → **add** exponents: $2 + 5 = 7$, so $3^7$.',

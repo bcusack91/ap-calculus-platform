@@ -90,7 +90,7 @@ $$\\text{pH} = -\\log(1.34 \\times 10^{-3}) = 3 - \\log(1.34) \\approx 2.87$$
           },
           {
             question: `The pH of a solution is 11. What is $[\\text{H}^+]$?`,
-            options: [`$10^{-3}$ M`, `$10^{-11}$ M`, `$10^{-3}$ M`, `$11$ M`],
+            options: [`$10^{-3}$ M`, `$10^{-11}$ M`, `$10^{11}$ M`, `$11$ M`],
             correctAnswer: 1,
             explanation: `$[\\text{H}^+] = 10^{-\\text{pH}} = 10^{-11}\\text{ M}$.`
           },

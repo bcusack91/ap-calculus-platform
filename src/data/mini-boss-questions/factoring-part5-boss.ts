@@ -32,7 +32,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     correctAnswer: '3(x - 2)(x + 2)',
     options: [
       { label: 'A', value: '3(x - 2)(x + 2)', isCorrect: true },
-      { label: 'B', value: '(3x - 6)(x + 2)', isCorrect: false, explanation: 'Must factor out GCF first' },
+      { label: 'B', value: '$3(x - 2)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
       { label: 'C', value: '$3(x^{2} - 4)$', isCorrect: false, explanation: 'Not fully factored - difference of squares' },
       { label: 'D', value: '(x - 2)(x + 2)', isCorrect: false, explanation: 'Forgot to factor out GCF of 3' }
     ]
@@ -68,7 +68,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     correctAnswer: '6(x - 3)(x + 3)',
     options: [
       { label: 'A', value: '6(x - 3)(x + 3)', isCorrect: true },
-      { label: 'B', value: '(6x - 18)(x + 3)', isCorrect: false, explanation: 'Must factor out GCF first' },
+      { label: 'B', value: '$6(x - 3)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
       { label: 'C', value: '$6(x^{2} - 9)$', isCorrect: false, explanation: 'Not fully factored - difference of squares' },
       { label: 'D', value: '(x - 3)(x + 3)', isCorrect: false, explanation: 'Forgot to factor out GCF of 6' }
     ]
@@ -104,7 +104,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     correctAnswer: '7(x - 3)(x + 3)',
     options: [
       { label: 'A', value: '7(x - 3)(x + 3)', isCorrect: true },
-      { label: 'B', value: '(7x - 21)(x + 3)', isCorrect: false, explanation: 'Must factor out GCF first' },
+      { label: 'B', value: '$7(x - 3)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
       { label: 'C', value: '$7(x^{2} - 9)$', isCorrect: false, explanation: 'Not fully factored - difference of squares' },
       { label: 'D', value: '(x - 3)(x + 3)', isCorrect: false, explanation: 'Forgot to factor out GCF of 7' }
     ]

@@ -215,7 +215,7 @@ AP Biology FRQs may ask you to **design or evaluate** a CRISPR experiment. Here 
           },
           {
             label: 'After n cycles of PCR, the number of target copies equals $N_{0}$ × _____.',
-            options: ['$2^{n}$', '$n^{2}$', '2n', 'n × 2']
+            options: ['$2^{n}$', '$n^{2}$', '2n', '$2^{n+1}$']
           },
           {
             label: 'The best negative control for a CRISPR knockout experiment uses Cas9 with a _____ gRNA.',

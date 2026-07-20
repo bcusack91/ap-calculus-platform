@@ -417,7 +417,7 @@ Choose the correct expression for each phrase.`,
           dropdowns: [
             { label: '"5 times the sum of a number and 2"', options: ['$5(n + 2)$', '$5n + 2$', '$5n + 10n$', '$n + 2$'] },
             { label: '"5 times a number, plus 2"', options: ['$5n + 2$', '$5(n + 2)$', '$2(5n)$', '$5 + 2n$'] },
-            { label: '"twice the difference of a number and 7"', options: ['$2(n - 7)$', '$2n - 7$', '$2n - 14$', '$n - 7$'] },
+            { label: '"twice the difference of a number and 7"', options: ['$2(n - 7)$', '$2n - 7$', '$2(n + 7)$', '$n - 7$'] },
           ],
           correctAnswers: ['$5(n + 2)$', '$5n + 2$', '$2(n - 7)$'],
           hint1: '"The sum of ... and ..." is a group, so it gets parentheses.',

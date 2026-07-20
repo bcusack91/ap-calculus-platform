@@ -61,7 +61,7 @@ Always start with GCF — it reveals hidden patterns.
         questions: [
           {
             question: 'Factor completely: $x^4 - 16$',
-            options: ['$(x^2 + 4)(x + 2)(x - 2)$', '$(x^2 + 4)(x^2 - 4)$', '$(x + 2)^2(x - 2)^2$', '$(x^2 - 4)^2$'],
+            options: ['$(x^2 + 4)(x + 2)(x - 2)$', '$(x^2 + 4)(x^2 - 4)$', '$(x^2 + 4)^2$', '$(x^2 - 4)^2$'],
             correctAnswer: 0,
             explanation: '$x^4 - 16 = (x^2)^2 - 4^2 = (x^2 + 4)(x^2 - 4) = (x^2 + 4)(x+2)(x-2)$. Note: $x^2 + 4$ cannot be factored further over the reals.'
           },

@@ -58,7 +58,7 @@ export const derivativeBossQuestions: MiniBossQuestion[] = [
     correctAnswer: '$e^{x}$ · ln(x) + $e^{x}/x$',
     options: [
       { label: 'A', value: '$e^{x}$ · ln(x) + $e^{x}/x$', isCorrect: true },
-      { label: 'B', value: '$e^{x}/x$', isCorrect: false, explanation: 'Product rule: d/dx[$e^{x}$] · ln(x) + $e^{x}$ · d/dx[ln(x)]' },
+      { label: 'B', value: '$e^{x}$ + 1/x', isCorrect: false, explanation: 'This adds the two derivatives; the product rule is f\'g + fg\', not f\' + g\'' },
       { label: 'C', value: '$e^{x}$ · (1/x)', isCorrect: false, explanation: 'Only computed one term of the product rule' },
       { label: 'D', value: '$e^{x}$ · ln(x) + $e^{x}$ · x', isCorrect: false, explanation: 'Derivative of ln(x) is 1/x, not x' },
     ],
@@ -120,7 +120,7 @@ export const derivativeBossQuestions: MiniBossQuestion[] = [
       { label: 'A', value: '$\\sec^{2}(x)$ + sec(x)tan(x)', isCorrect: true },
       { label: 'B', value: '$\\sec^{2}(x)$ + sec(x)', isCorrect: false, explanation: 'Derivative of sec(x) is sec(x)tan(x), not sec(x)' },
       { label: 'C', value: 'cot(x) + csc(x)', isCorrect: false, explanation: 'These are not derivatives of tan and sec' },
-      { label: 'D', value: 'sec(x)tan(x) + $\\sec^{2}(x)$', isCorrect: false, explanation: 'Same as A — this is actually correct too!' },
+      { label: 'D', value: '$-\\csc^{2}(x)$ + sec(x)tan(x)', isCorrect: false, explanation: 'Derivative of tan(x) is $\\sec^{2}(x)$; $-\\csc^{2}(x)$ is the derivative of cot(x)' },
     ],
   },
   {
@@ -144,7 +144,7 @@ export const derivativeBossQuestions: MiniBossQuestion[] = [
       { label: 'A', value: '$(6y - 3x^{2})$ / $(3y^{2} - 6x)$', isCorrect: true },
       { label: 'B', value: '$(3x^{2} - 6y)$ / $(3y^{2} - 6x)$', isCorrect: false, explanation: 'Sign error: $3x^{2}$ + $3y^{2}(dy/dx)$ = 6y + 6x(dy/dx)' },
       { label: 'C', value: '$-x^{2}/y^{2}$', isCorrect: false, explanation: 'Right side uses product rule: d/dx[6xy] = 6y + 6x(dy/dx)' },
-      { label: 'D', value: '$(2y - x^{2})$ / $(y^{2} - 2x)$', isCorrect: true },
+      { label: 'D', value: '$(6y - 3x^{2})$ / $(3y^{2} + 6x)$', isCorrect: false, explanation: 'The 6x(dy/dx) term moves to the left side as -6x, so the denominator is $3y^{2} - 6x$' },
     ],
   },
   {

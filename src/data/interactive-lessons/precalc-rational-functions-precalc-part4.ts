@@ -198,7 +198,7 @@ As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is
               '$1$',
               '$\\frac{x-1}{x+1}$',
               '$\\frac{1}{x+1}$',
-              '$\\frac{(x-1)}{(x+1)}$'
+              '$\\frac{x-3}{x+1}$'
             ],
             correctAnswer: 0,
             explanation: 'Factor: $\\frac{(x-1)(x-3)}{(x-1)(x+1)} \\cdot \\frac{x+1}{x-3}$. Cancel $(x-1)$, $(x+1)$, and $(x-3)$: result is $1$ (with restrictions $x \\neq 1, -1, 3$).'

@@ -45,7 +45,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '5(x - 3)(x + 3)', isCorrect: true },
       { label: 'B', value: '$5(x^{2} - 9)$', isCorrect: false, explanation: 'Not fully factored - difference of squares' },
-      { label: 'C', value: '(5x - 15)(x + 3)', isCorrect: false, explanation: 'Must factor out GCF first; 5x - 15 has GCF of 5' },
+      { label: 'C', value: '5(x + 9)(x - 9)', isCorrect: false, explanation: '$\\sqrt{9}$ = 3, so the factors use 3, not 9' },
       { label: 'D', value: '(x - 3)(x + 3)', isCorrect: false, explanation: 'Forgot to factor out GCF of 5' }
     ]
   },
@@ -57,7 +57,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '4x(x + 2)(x + 4)', isCorrect: true },
       { label: 'B', value: '$4x(x^{2} + 6x + 8)$', isCorrect: false, explanation: 'Not fully factored - trinomial can be factored' },
-      { label: 'C', value: 'x(4x + 8)(x + 4)', isCorrect: false, explanation: '4x + 8 has GCF of 4 - not fully factored' },
+      { label: 'C', value: '4x(x + 6)(x + 8)', isCorrect: false, explanation: 'Find factors of 8 that add to 6: 2 and 4, not 6 and 8' },
       { label: 'D', value: '(x + 2)(x + 4)', isCorrect: false, explanation: 'Forgot to factor out GCF of 4x' }
     ]
   },
@@ -105,7 +105,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '7(x - 2)(x + 2)', isCorrect: true },
       { label: 'B', value: '$7(x^{2} - 4)$', isCorrect: false, explanation: 'Not fully factored - difference of squares' },
-      { label: 'C', value: '(7x - 14)(x + 2)', isCorrect: false, explanation: 'Must factor out GCF first; 7x - 14 has GCF of 7' },
+      { label: 'C', value: '7(x + 4)(x - 4)', isCorrect: false, explanation: '$\\sqrt{4}$ = 2, so the factors use 2, not 4' },
       { label: 'D', value: '(x - 2)(x + 2)', isCorrect: false, explanation: 'Forgot to factor out GCF of 7' }
     ]
   },
@@ -117,7 +117,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '9x(x - 1)(x - 3)', isCorrect: true },
       { label: 'B', value: '$9x(x^{2} - 4x + 3)$', isCorrect: false, explanation: 'Not fully factored - trinomial can be factored' },
-      { label: 'C', value: '3x(3x - 3)(x - 3)', isCorrect: false, explanation: '3x - 3 has GCF of 3 - not fully factored' },
+      { label: 'C', value: '9x(x + 1)(x + 3)', isCorrect: false, explanation: 'Middle term is -4x, so both factors need negative signs' },
       { label: 'D', value: 'x(x - 1)(x - 3)', isCorrect: false, explanation: 'Forgot to factor out coefficient of 9' }
     ]
   },

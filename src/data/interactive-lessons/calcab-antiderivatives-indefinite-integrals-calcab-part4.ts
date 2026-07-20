@@ -142,7 +142,7 @@ Sometimes you need a trig identity before integrating:
           },
           {
             label: '$\\int \\frac{5}{x^3}\\,dx$ — rewrite as:',
-            options: ['$5x^3$', '$5x^{-3}$', '$\\frac{5}{3}\\ln|x|$', '$5 \\cdot \\frac{1}{x^3}$'],
+            options: ['$5x^3$', '$5x^{-3}$', '$\\frac{5}{3}\\ln|x|$', '$\\frac{1}{5}x^{-3}$'],
             correctAnswers: ['$5x^{-3}$'],
             hints: ['Move $x^3$ to the numerator with negative exponent.'],
             explanation: '$\\frac{5}{x^3} = 5x^{-3}$. Then $\\int 5x^{-3}\\,dx = \\frac{5x^{-2}}{-2} + C = -\\frac{5}{2x^2} + C$.'

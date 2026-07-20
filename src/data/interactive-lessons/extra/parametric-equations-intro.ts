@@ -712,7 +712,7 @@ $\\dfrac{dx}{dt} = 2t$ and $\\dfrac{dy}{dt} = 2t - 2 = 2(t-1)$.
             },
             {
               question: 'For $x = t^3$, $y = t^2$, what is $\\frac{dy}{dx}$ in terms of $t$?',
-              options: ['$\\frac{2}{3t}$', '$\\frac{3t}{2}$', '$\\frac{2}{3t^2}$', '$\\frac{3t^2}{2t}$'],
+              options: ['$\\frac{2}{3t}$', '$\\frac{3t}{2}$', '$\\frac{2}{3t^2}$', '$6t^3$'],
               correctAnswer: 0,
               explanation: '$\\frac{dy}{dt} = 2t$, $\\frac{dx}{dt} = 3t^2$, so $\\frac{dy}{dx} = \\frac{2t}{3t^2} = \\frac{2}{3t}$.',
             },

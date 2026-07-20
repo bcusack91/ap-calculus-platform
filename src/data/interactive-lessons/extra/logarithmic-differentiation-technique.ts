@@ -461,7 +461,7 @@ $x^x$ is neither — so we take a log to **break the variable apart** from its e
 For a function $y = (\\text{base})^{(\\text{exponent})}$, the power law gives $\\ln y = (\\text{exponent})\\cdot\\ln(\\text{base})$. Apply it.`,
         exercise: {
           dropdowns: [
-            { label: '$y = x^x \\Rightarrow \\ln y =$', options: ['$x\\ln x$', '$x^2\\ln x$', '$\\ln x$', '$x\\ln(x^x)$'] },
+            { label: '$y = x^x \\Rightarrow \\ln y =$', options: ['$x\\ln x$', '$x^2\\ln x$', '$\\ln x$', '$x + \\ln x$'] },
             { label: '$y = x^{\\sin x} \\Rightarrow \\ln y =$', options: ['$\\sin x\\,\\ln x$', '$x\\ln(\\sin x)$', '$\\ln x\\,\\ln(\\sin x)$', '$\\sin(x\\ln x)$'] },
             { label: '$y = (\\cos x)^{x} \\Rightarrow \\ln y =$', options: ['$x\\ln(\\cos x)$', '$\\cos x\\,\\ln x$', '$\\ln(\\cos x)$', '$x\\cos(\\ln x)$'] },
           ],
@@ -512,7 +512,7 @@ $$\\boxed{\\;\\frac{dy}{dx} = x^x(\\ln x + 1)\\;}$$
             },
             {
               question: 'The derivative of $y = x^x$ is:',
-              options: ['$x^x(\\ln x + 1)$', '$x\\cdot x^{x-1}$', '$x^x\\ln x$', '$x^{x}$'],
+              options: ['$x^x(\\ln x + 1)$', '$x\\cdot x^{x-1}$', '$x^x\\ln x$', '$\\ln x + 1$'],
               correctAnswer: 0,
               explanation: 'From $\\frac1y y\' = \\ln x + 1$, multiply by $y = x^x$: $y\' = x^x(\\ln x + 1)$. The naive $x\\cdot x^{x-1}$ is the power-rule trap.',
             },
@@ -902,7 +902,7 @@ You are differentiating $y = (x+2)^{x}$ (variable base AND exponent).`,
           dropdowns: [
             { label: 'After $\\ln$ + power law:', options: ['$\\ln y = x\\ln(x+2)$', '$\\ln y = (x+2)\\ln x$', '$\\ln y = x + \\ln(x+2)$', '$\\ln y = \\ln x\\cdot\\ln(x+2)$'] },
             { label: 'Differentiate the right side (product rule):', options: ['$\\ln(x+2) + \\dfrac{x}{x+2}$', '$\\dfrac{x}{x+2}$', '$\\ln(x+2)$', '$\\dfrac{1}{x+2}$'] },
-            { label: 'Final derivative:', options: ['$(x+2)^x\\!\\left[\\ln(x+2) + \\dfrac{x}{x+2}\\right]$', '$x(x+2)^{x-1}$', '$(x+2)^x\\ln(x+2)$', '$(x+2)^x\\cdot\\dfrac{x}{x+2}$'] },
+            { label: 'Final derivative:', options: ['$(x+2)^x\\!\\left[\\ln(x+2) + \\dfrac{x}{x+2}\\right]$', '$x(x+2)^{x-1}$', '$(x+2)^x\\ln(x+2)$', '$(x+2)^x\\!\\left[\\ln(x+2) + x\\right]$'] },
           ],
           correctAnswers: ['$\\ln y = x\\ln(x+2)$', '$\\ln(x+2) + \\dfrac{x}{x+2}$', '$(x+2)^x\\!\\left[\\ln(x+2) + \\dfrac{x}{x+2}\\right]$'],
           hint1: 'Power law: the exponent $x$ comes out front times $\\ln$ of the base $(x+2)$.',
@@ -959,7 +959,7 @@ Answer all three to finish the lesson.`,
             },
             {
               question: 'For $y = x^x$, the correct derivative is:',
-              options: ['$x^x(\\ln x + 1)$', '$x\\cdot x^{x-1}$', '$x^x\\ln x$', '$x^{x}$'],
+              options: ['$x^x(\\ln x + 1)$', '$x\\cdot x^{x-1}$', '$x^x\\ln x$', '$\\ln x + 1$'],
               correctAnswer: 0,
               explanation: '$\\ln y = x\\ln x \\Rightarrow \\frac1y y\' = \\ln x + 1 \\Rightarrow y\' = x^x(\\ln x + 1)$.',
             },

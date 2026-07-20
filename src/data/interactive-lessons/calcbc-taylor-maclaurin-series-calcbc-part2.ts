@@ -61,7 +61,7 @@ Notice this looks like $\\cos(x - \\pi/2)$, which makes sense since $\\sin x = \
         questions: [
           {
             question: 'The first three nonzero terms of the Taylor series for $1/x$ at $c = 1$ are:',
-            options: ['$1 - (x-1) + (x-1)^2$', '$1 + (x-1) + (x-1)^2$', '$(x-1) - (x-1)^2/2 + (x-1)^3/3$', '$1 - x + x^2$'],
+            options: ['$1 - (x-1) + (x-1)^2$', '$1 + (x-1) + (x-1)^2$', '$(x-1) - (x-1)^2/2 + (x-1)^3/3$', '$1 - (x-1) + (x-1)^2/2$'],
             correctAnswer: 0,
             explanation: '$f(x) = x^{-1}$: $f(1)=1$, $f\'(1)=-1$, $f\'\'(1)=2$. So $T_2 = 1 - (x-1) + (2/2!)(x-1)^2 = 1 - (x-1) + (x-1)^2$.'
           },

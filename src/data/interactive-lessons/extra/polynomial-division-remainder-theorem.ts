@@ -325,7 +325,7 @@ $$p(2) = 8 - 16 + 12 - 4 = 0 \\;✓$$`,
             },
             {
               question: 'To find $p(-1)$ for $p(x) = 2x^3 - 3x^2 + x - 5$ via the Remainder Theorem, you divide by:',
-              options: ['$x + 1$', '$x - 1$', '$x + 5$', '$x - (-5)$'],
+              options: ['$x + 1$', '$x - 1$', '$x - 5$', '$x - (-5)$'],
               correctAnswer: 0,
               explanation: 'To get $p(c)$ you divide by $x - c$. For $c = -1$, that divisor is $x - (-1) = x + 1$.',
             },

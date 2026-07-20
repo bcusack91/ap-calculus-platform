@@ -94,7 +94,7 @@ Each part is typically worth 2-3 points. Justification language matters — use 
         dropdowns: [
           {
             label: 'An FRQ gives $f\'(0) = 3$, $f\'\'(0) = -4$, $f\'\'\'(0) = 12$, $f(0) = 1$. The $T_3$ is:',
-            options: ['$1 + 3x - 2x^2 + 2x^3$', '$1 + 3x - 4x^2 + 12x^3$', '$1 + 3x - 4x^2/2 + 12x^3/6$', '$3x - 2x^2 + 2x^3$'],
+            options: ['$1 + 3x - 2x^2 + 2x^3$', '$1 + 3x - 4x^2 + 12x^3$', '$1 + 3x - 2x^2 - 2x^3$', '$3x - 2x^2 + 2x^3$'],
             correctAnswers: ['$1 + 3x - 2x^2 + 2x^3$'],
             hints: ['$a_n = f^{(n)}(0)/n!$: $a_0=1$, $a_1=3$, $a_2=-4/2=-2$, $a_3=12/6=2$.'],
             explanation: '$T_3 = 1 + 3x + (-4/2)x^2 + (12/6)x^3 = 1 + 3x - 2x^2 + 2x^3$.'

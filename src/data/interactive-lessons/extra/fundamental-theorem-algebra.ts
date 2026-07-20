@@ -230,7 +230,7 @@ Choose the correct factored form for each expression.`,
           dropdowns: [
             { label: '$x^2 - 9 =$', options: ['$(x - 3)(x + 3)$', '$(x - 3)^2$', '$(x - 9)(x + 1)$', '$(x + 3)^2$'] },
             { label: '$x^2 + 5x + 6 =$', options: ['$(x + 2)(x + 3)$', '$(x + 1)(x + 6)$', '$(x - 2)(x - 3)$', '$(x + 5)(x + 1)$'] },
-            { label: '$2x^2 + 8x =$', options: ['$2x(x + 4)$', '$2(x^2 + 8x)$', '$x(2x + 8x)$', '$2x(x + 8)$'] },
+            { label: '$2x^2 + 8x =$', options: ['$2x(x + 4)$', '$x(x + 8)$', '$x(2x + 8x)$', '$2x(x + 8)$'] },
           ],
           correctAnswers: ['$(x - 3)(x + 3)$', '$(x + 2)(x + 3)$', '$2x(x + 4)$'],
           hint1: '$x^2 - 9$ is a difference of squares: $x^2 - 3^2$.',

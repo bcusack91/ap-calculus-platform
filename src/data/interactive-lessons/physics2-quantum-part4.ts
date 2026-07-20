@@ -117,7 +117,7 @@ For $n = 2$: most likely at $x = L/4$ and $x = 3L/4$, with a **node at the cente
           },
           {
             question: 'For a particle in a box, the ground state energy ($n = 1$) is:',
-            options: ['Zero', '$h^2/(8mL^2)$', '$h^2/(2mL^2)$', '$4h^2/(8mL^2)$'],
+            options: ['Zero', '$h^2/(8mL^2)$', '$9h^2/(8mL^2)$', '$4h^2/(8mL^2)$'],
             correctAnswer: 1,
             explanation: '$E_1 = h^2/(8mL^2)$. The ground state has non-zero energy (zero-point energy) — the particle can never be completely at rest.'
           },

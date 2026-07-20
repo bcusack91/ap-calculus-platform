@@ -146,7 +146,7 @@ Enter in order:
           },
           {
             label: '200 nC in coulombs is',
-            options: ['$2.0 \\times 10^{-5}$ C', '$2.0 \\times 10^{-7}$ C', '$2.0 \\times 10^{-9}$ C', '$200 \\times 10^{-9}$ C']
+            options: ['$2.0 \\times 10^{-5}$ C', '$2.0 \\times 10^{-7}$ C', '$2.0 \\times 10^{-9}$ C', '$200 \\times 10^{-6}$ C']
           }
         ],
         correctAnswers: ['$5.0 \\times 10^{-6}$ C', '0.30 m', '$2.0 \\times 10^{-7}$ C'],

@@ -927,7 +927,7 @@ Answer all three to finish the lesson.`,
           questions: [
             {
               question: '$\\displaystyle\\int \\left(6x^5 - 4\\right)\\,dx = $',
-              options: ['$x^6 - 4x + C$', '$x^6 - 4 + C$', '$30x^4 + C$', '$\\frac{6x^6}{6} - 4 + C$'],
+              options: ['$x^6 - 4x + C$', '$x^6 - 4 + C$', '$30x^4 + C$', '$6x^6 - 4x + C$'],
               correctAnswer: 0,
               explanation: '$6\\cdot\\frac{x^6}{6} - 4x + C = x^6 - 4x + C$. Check: $\\frac{d}{dx}[x^6 - 4x + C] = 6x^5 - 4$ ✓.',
             },

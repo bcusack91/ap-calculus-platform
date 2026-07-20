@@ -785,7 +785,7 @@ The "corner" (vertex) sits where the inside equals zero: $x - 3 = 0 \\Rightarrow
           questions: [
             {
               question: 'Written as a piecewise function, $|x-3|$ equals which rule when $x < 3$?',
-              options: ['$3 - x$', '$x - 3$', '$x + 3$', '$3 + x$'],
+              options: ['$3 - x$', '$x - 3$', '$x + 3$', '$-x - 3$'],
               correctAnswer: 0,
               explanation: 'When $x<3$, the inside $x-3$ is negative, so $|x-3| = -(x-3) = 3-x$. (Check $x=0$: $|0-3|=3$ and $3-0=3$. ✓)',
             },

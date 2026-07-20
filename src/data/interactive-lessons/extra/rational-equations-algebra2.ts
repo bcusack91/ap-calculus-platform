@@ -140,7 +140,7 @@ The **least common denominator** is the smallest expression every denominator di
             },
             {
               question: 'The LCD of $\\dfrac{1}{x^2 - 25}$ and $\\dfrac{3}{x+5}$ is:',
-              options: ['$(x+5)(x-5)$', '$(x+5)^2(x-5)$', '$(x^2-25)(x+5)$', '$x + 5$'],
+              options: ['$(x+5)(x-5)$', '$(x+5)^2(x-5)$', '$(x-5)^2(x+5)$', '$x + 5$'],
               correctAnswer: 0,
               explanation: '$x^2 - 25 = (x+5)(x-5)$. Since $(x+5)$ already appears in that factorization, the LCD is just $(x+5)(x-5)$ — do not repeat the $(x+5)$.',
             },

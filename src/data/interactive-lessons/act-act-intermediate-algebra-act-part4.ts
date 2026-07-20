@@ -124,7 +124,7 @@ $$= \\frac{2}{x+1} \\cdot \\frac{(x+1)^2}{4} = \\frac{2(x+1)}{4} = \\frac{x+1}{2
           },
           {
             label: 'The LCD of $\\frac{1}{x}$ and $\\frac{1}{x+1}$ is …',
-            options: ['$x$', '$x + 1$', '$x(x+1)$', '$x^2 + x$']
+            options: ['$x$', '$x + 1$', '$x(x+1)$', '$2x + 1$']
           },
           {
             label: 'A complex fraction can be simplified by multiplying top and bottom by the …',

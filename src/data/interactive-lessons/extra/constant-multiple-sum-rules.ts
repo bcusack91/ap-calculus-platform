@@ -635,7 +635,7 @@ Differentiate $y = \\sqrt{x} + \\dfrac{2}{x}$. Track each step.`,
         exercise: {
           dropdowns: [
             { label: 'Rewrite $\\sqrt{x}$ as:', options: ['$x^{1/2}$', '$x^{2}$', '$x^{-1/2}$', '$2x$'] },
-            { label: 'Rewrite $\\dfrac{2}{x}$ as:', options: ['$2x^{-1}$', '$2x$', '$\\tfrac{1}{2}x$', '$2x^{1}$'] },
+            { label: 'Rewrite $\\dfrac{2}{x}$ as:', options: ['$2x^{-1}$', '$2x$', '$\\tfrac{1}{2}x$', '$2x^{-2}$'] },
             { label: '$\\dfrac{dy}{dx} = $', options: ['$\\tfrac{1}{2}x^{-1/2} - 2x^{-2}$', '$\\tfrac{1}{2}x^{-1/2} + 2x^{-2}$', '$x^{-1/2} - 2x^{-2}$', '$\\tfrac{1}{2}x^{1/2} - 2x^{-1}$'] },
           ],
           correctAnswers: ['$x^{1/2}$', '$2x^{-1}$', '$\\tfrac{1}{2}x^{-1/2} - 2x^{-2}$'],
@@ -801,7 +801,7 @@ You can now (1) pull constants out front, (2) differentiate sums and differences
           questions: [
             {
               question: 'Differentiate $y = 7x^3 - 2x^2 + 9x - 4$.',
-              options: ['$21x^2 - 4x + 9$', '$21x^2 - 4x + 9 - 4$', '$21x^2 - 2x + 9$', '$21x^2 - 4x + 5$'],
+              options: ['$21x^2 - 4x + 9$', '$21x^2 - 4x + 9 - 4$', '$21x^2 - 2x + 9$', '$21x^2 - 4x$'],
               correctAnswer: 0,
               explanation: '$7\\cdot 3x^2 = 21x^2$; $-2\\cdot 2x = -4x$; $\\frac{d}{dx}[9x] = 9$; $\\frac{d}{dx}[-4] = 0$. Result: $21x^2 - 4x + 9$.',
             },

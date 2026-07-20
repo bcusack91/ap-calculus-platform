@@ -119,7 +119,7 @@ $$\\boxed{\\text{Read} \\to \\text{Rewrite (if needed)} \\to \\text{Recognize th
           },
           {
             label: '$\\int (x^{-3} + x^{2/3})\\,dx$ equals:',
-            options: ['$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$', '$-3x^{-4} + \\frac{2}{3}x^{-1/3} + C$', '$\\frac{x^{-2}}{-2} + \\frac{x^{5/3}}{5/3} + C$', '$-\\frac{1}{2x^2} + \\frac{5}{3}x^{5/3} + C$'],
+            options: ['$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$', '$-3x^{-4} + \\frac{2}{3}x^{-1/3} + C$', '$\\frac{1}{x^2} + \\frac{3}{5}x^{5/3} + C$', '$-\\frac{1}{2x^2} + \\frac{5}{3}x^{5/3} + C$'],
             correctAnswers: ['$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$'],
             hints: ['Power Rule on each term. Remember to divide by the new exponent.'],
             explanation: '$\\int x^{-3} = \\frac{x^{-2}}{-2}$ and $\\int x^{2/3} = \\frac{x^{5/3}}{5/3} = \\frac{3}{5}x^{5/3}$.'

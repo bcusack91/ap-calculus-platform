@@ -1,14 +1,14 @@
 {
  "stats": {
-  "files": 5464,
-  "mcqs": 71753,
-  "options": 286398,
-  "algebraic": 26958,
-  "parsed": 25167,
-  "pairs_tested": 34472,
-  "parse_fail": 1791,
-  "flags": 380,
-  "seconds": 40.1
+  "files": 5465,
+  "mcqs": 73521,
+  "options": 293471,
+  "algebraic": 28537,
+  "parsed": 26607,
+  "pairs_tested": 36494,
+  "parse_fail": 1930,
+  "flags": 253,
+  "seconds": 41.6
  },
  "findings": [
   {
@@ -125,52 +125,6 @@
    ],
    "key": 0,
    "key_in_pair": false
-  },
-  {
-   "file": "ap-precalculus-diagnostic.ts",
-   "family": "ap-precalculus",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "|x|",
-     "line": 315,
-     "norm": "Abs(x)"
-    },
-    {
-     "idx": 1,
-     "raw": "$\\sqrt{x^{2}}$",
-     "line": 315,
-     "norm": "(sqrt(x^(2)))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "ap-precalculus-diagnostic.ts",
-   "family": "ap-precalculus",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "1 \u2212 1/(N+1)",
-     "line": 332,
-     "norm": "1 - 1/(N+1)"
-    },
-    {
-     "idx": 2,
-     "raw": "N/(N+1)",
-     "line": 332,
-     "norm": "N/(N+1)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
   },
   {
    "file": "competitive-questions/algebra-bank.ts",
@@ -518,6 +472,604 @@
    "key_in_pair": true
   },
   {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$2x - 2$",
+     "line": 199,
+     "norm": "2x - 2"
+    },
+    {
+     "idx": 3,
+     "raw": "$(x+1) + (x-3)$",
+     "line": 199,
+     "norm": "(x+1) + (x-3)"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 1,
+     "raw": "$\\frac{3x^2}{3y^2}$",
+     "line": 218,
+     "norm": "((3x^2)/(3y^2))"
+    },
+    {
+     "idx": 2,
+     "raw": "$\\frac{x^2}{y^2}$",
+     "line": 218,
+     "norm": "((x^2)/(y^2))"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$|v(t)|$",
+     "line": 355,
+     "norm": "Abs(v(t))"
+    },
+    {
+     "idx": 1,
+     "raw": "$v(t)$",
+     "line": 355,
+     "norm": "v(t)"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 1,
+     "raw": "$|s(4) - s(0)|$",
+     "line": 357,
+     "norm": "Abs(s(4) - s(0))"
+    },
+    {
+     "idx": 3,
+     "raw": "$s(4)$",
+     "line": 357,
+     "norm": "s(4)"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 1,
+     "raw": "$\\ln(x)+C$",
+     "line": 423,
+     "norm": "log (x)+C"
+    },
+    {
+     "idx": 3,
+     "raw": "$\\ln|x|+C$",
+     "line": 423,
+     "norm": "log Abs(x)+C"
+    }
+   ],
+   "key": 3,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{1}{3}x^{-2/3}$",
+     "line": 468,
+     "norm": "((1)/(3))x^(-2/3)"
+    },
+    {
+     "idx": 3,
+     "raw": "$\\frac{1}{3x^{2/3}}$",
+     "line": 468,
+     "norm": "((1)/(3x^(2/3)))"
+    }
+   ],
+   "key": 3,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 1,
+     "raw": "$15(3x+1)^4$",
+     "line": 479,
+     "norm": "15(3x+1)^4"
+    },
+    {
+     "idx": 2,
+     "raw": "$5(3x+1)^4 \\cdot 3$",
+     "line": 479,
+     "norm": "5(3x+1)^4 * 3"
+    }
+   ],
+   "key": 2,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 2,
+     "raw": "$\\frac{2}{\\sqrt{2x+3}}$",
+     "line": 481,
+     "norm": "((2)/((sqrt(2x+3))))"
+    },
+    {
+     "idx": 3,
+     "raw": "$\\frac{1}{\\sqrt{2x+3}} \\cdot 2$",
+     "line": 481,
+     "norm": "((1)/((sqrt(2x+3)))) * 2"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 2,
+     "raw": "$\\frac{x}{y}$",
+     "line": 621,
+     "norm": "((x)/(y))"
+    },
+    {
+     "idx": 3,
+     "raw": "$\\frac{2x}{2y}$",
+     "line": 621,
+     "norm": "((2x)/(2y))"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{ye^{xy} - 1}{1 - xe^{xy}}$",
+     "line": 622,
+     "norm": "((ye^(xy) - 1)/(1 - xe^(xy)))"
+    },
+    {
+     "idx": 1,
+     "raw": "$\\frac{1 - ye^{xy}}{xe^{xy} - 1}$",
+     "line": 622,
+     "norm": "((1 - ye^(xy))/(xe^(xy) - 1))"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{ye^{x+y} - y}{x - xe^{x+y}}$",
+     "line": 632,
+     "norm": "((ye^(x+y) - y)/(x - xe^(x+y)))"
+    },
+    {
+     "idx": 1,
+     "raw": "$\\frac{y - ye^{x+y}}{xe^{x+y} - x}$",
+     "line": 632,
+     "norm": "((y - ye^(x+y))/(xe^(x+y) - x))"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$2x e^{-x} - x^2 e^{-x}$",
+     "line": 801,
+     "norm": "2x E^(-x) - x^2 E^(-x)"
+    },
+    {
+     "idx": 1,
+     "raw": "$x e^{-x}(2 - x)$",
+     "line": 801,
+     "norm": "x E^(-x)(2 - x)"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$2x e^{-x} - x^2 e^{-x}$",
+     "line": 801,
+     "norm": "2x E^(-x) - x^2 E^(-x)"
+    },
+    {
+     "idx": 3,
+     "raw": "$e^{-x}(2x - x^2)$",
+     "line": 801,
+     "norm": "E^(-x)(2x - x^2)"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 1,
+     "raw": "$x e^{-x}(2 - x)$",
+     "line": 801,
+     "norm": "x E^(-x)(2 - x)"
+    },
+    {
+     "idx": 3,
+     "raw": "$e^{-x}(2x - x^2)$",
+     "line": 801,
+     "norm": "E^(-x)(2x - x^2)"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{3x^2(2x+1) - 2x^3}{(2x+1)^2}$",
+     "line": 802,
+     "norm": "((3x^2(2x+1) - 2x^3)/((2x+1)^2))"
+    },
+    {
+     "idx": 2,
+     "raw": "$\\frac{x^2(4x + 3)}{(2x+1)^2}$",
+     "line": 802,
+     "norm": "((x^2(4x + 3))/((2x+1)^2))"
+    }
+   ],
+   "key": 2,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{1}{1 + \\cos x}$",
+     "line": 804,
+     "norm": "((1)/(1 +  cos x))"
+    },
+    {
+     "idx": 2,
+     "raw": "$\\frac{\\cos x + 1}{(1 + \\cos x)^2}$",
+     "line": 804,
+     "norm": "(( cos x + 1)/((1 +  cos x)^2))"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{1}{1 + \\cos x}$",
+     "line": 804,
+     "norm": "((1)/(1 +  cos x))"
+    },
+    {
+     "idx": 3,
+     "raw": "$\\frac{1 + \\cos x}{(1 + \\cos x)^2}$",
+     "line": 804,
+     "norm": "((1 +  cos x)/((1 +  cos x)^2))"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 2,
+     "raw": "$\\frac{\\cos x + 1}{(1 + \\cos x)^2}$",
+     "line": 804,
+     "norm": "(( cos x + 1)/((1 +  cos x)^2))"
+    },
+    {
+     "idx": 3,
+     "raw": "$\\frac{1 + \\cos x}{(1 + \\cos x)^2}$",
+     "line": 804,
+     "norm": "((1 +  cos x)/((1 +  cos x)^2))"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$e^x \\ln x + x e^x \\ln x + e^x$",
+     "line": 805,
+     "norm": "E^x  log  x + x E^x  log  x + E^x"
+    },
+    {
+     "idx": 2,
+     "raw": "$e^x(\\ln x + x\\ln x + 1)$",
+     "line": 805,
+     "norm": "E^x( log  x + x log  x + 1)"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{e^x(x^2 - 2x + 1)}{(x^2+1)^2}$",
+     "line": 806,
+     "norm": "((E^x(x^2 - 2x + 1))/((x^2+1)^2))"
+    },
+    {
+     "idx": 1,
+     "raw": "$\\frac{e^x(x^2 + 1) - 2x e^x}{(x^2+1)^2}$",
+     "line": 806,
+     "norm": "((E^x(x^2 + 1) - 2x E^x)/((x^2+1)^2))"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "$\\frac{(\\ln x + 1)(x+1) - x\\ln x}{(x+1)^2}$",
+     "line": 810,
+     "norm": "((( log  x + 1)(x+1) - x log  x)/((x+1)^2))"
+    },
+    {
+     "idx": 1,
+     "raw": "$\\frac{\\ln x + x + 1}{(x+1)^2}$",
+     "line": 810,
+     "norm": "(( log  x + x + 1)/((x+1)^2))"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "tan x",
+     "line": 1235,
+     "norm": "tan x"
+    },
+    {
+     "idx": 3,
+     "raw": "sin x / cos x",
+     "line": 1235,
+     "norm": "sin x / cos x"
+    }
+   ],
+   "key": 2,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 1,
+     "raw": "1/x * ln x",
+     "line": 1250,
+     "norm": "1/x * log x"
+    },
+    {
+     "idx": 3,
+     "raw": "ln x / x",
+     "line": 1250,
+     "norm": "log x / x"
+    }
+   ],
+   "key": 2,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": false,
+   "pair": [
+    {
+     "idx": 2,
+     "raw": "$3x(2x + 1)^{3x - 1}$ * 2",
+     "line": 1256,
+     "norm": "3x(2x + 1)^(3x - 1) * 2"
+    },
+    {
+     "idx": 3,
+     "raw": "$(2x + 1)^{3x}$ * 6x/(2x + 1)",
+     "line": 1256,
+     "norm": "(2x + 1)^(3x) * 6x/(2x + 1)"
+    }
+   ],
+   "key": 0,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "(1/x - 1)/(1 - 1/y)",
+     "line": 1259,
+     "norm": "(1/x - 1)/(1 - 1/y)"
+    },
+    {
+     "idx": 2,
+     "raw": "y(x - 1)/(x(1 - y))",
+     "line": 1259,
+     "norm": "y(x - 1)/(x(1 - y))"
+    }
+   ],
+   "key": 2,
+   "key_in_pair": true
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bank 2.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
+   "verdict": "CONFIRMED",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 2,
+     "raw": "$e^{x}$ + $2^{x}$",
+     "line": 1277,
+     "norm": "E^(x) + 2^(x)"
+    },
+    {
+     "idx": 3,
+     "raw": "$e^{x}$ ln e + $2^{x}$",
+     "line": 1277,
+     "norm": "E^(x) log E + 2^(x)"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
    "file": "competitive-questions/ap-calculus-bank.ts",
    "family": "competitive-questions/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -843,6 +1395,29 @@
    "file": "competitive-questions/ap-calculus-bc-bank.ts",
    "family": "competitive-questions/*",
    "kind": "SYMBOLIC-EQUIV",
+   "verdict": "PLAUSIBLE",
+   "equal_everywhere": true,
+   "pair": [
+    {
+     "idx": 0,
+     "raw": "|r(b) \u2212 r(a)|",
+     "line": 52,
+     "norm": "Abs(r(b) - r(a))"
+    },
+    {
+     "idx": 3,
+     "raw": "r(b) \u2212 r(a)",
+     "line": 52,
+     "norm": "r(b) - r(a)"
+    }
+   ],
+   "key": 1,
+   "key_in_pair": false
+  },
+  {
+   "file": "competitive-questions/ap-calculus-bc-bank.ts",
+   "family": "competitive-questions/*",
+   "kind": "SYMBOLIC-EQUIV",
    "verdict": "CONFIRMED",
    "equal_everywhere": false,
    "pair": [
@@ -1139,29 +1714,6 @@
    "key_in_pair": true
   },
   {
-   "file": "entrance-quizzes/algebra-1-intro.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "(x + 2)(x + 3)",
-     "line": 31,
-     "norm": "(x + 2)(x + 3)"
-    },
-    {
-     "idx": 2,
-     "raw": "(x + 3)(x + 2)",
-     "line": 31,
-     "norm": "(x + 3)(x + 2)"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
    "file": "entrance-quizzes/antiderivatives-indefinite-integrals-calcab.ts",
    "family": "entrance-quizzes/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -1179,121 +1731,6 @@
      "raw": "$\\ln |x| + C$",
      "line": 82,
      "norm": "log  Abs(x) + C"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/ap-exam-review-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\ln x$",
-     "line": 117,
-     "norm": "log  x"
-    },
-    {
-     "idx": 1,
-     "raw": "$\\ln|x|$",
-     "line": 117,
-     "norm": "log Abs(x)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/chain-rule-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\frac{2}{x}$",
-     "line": 13,
-     "norm": "((2)/(x))"
-    },
-    {
-     "idx": 2,
-     "raw": "$\\frac{2x}{x^2}$",
-     "line": 13,
-     "norm": "((2x)/(x^2))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/chain-rule-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\frac{2}{\\sqrt{4x+1}}$",
-     "line": 15,
-     "norm": "((2)/((sqrt(4x+1))))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{4}{2\\sqrt{4x+1}}$",
-     "line": 15,
-     "norm": "((4)/(2(sqrt(4x+1))))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/chain-rule-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\frac{-x}{y}$",
-     "line": 16,
-     "norm": "((-x)/(y))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{-2x}{2y}$",
-     "line": 16,
-     "norm": "((-2x)/(2y))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/chain-rule-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$-\\tan x$",
-     "line": 21,
-     "norm": "- tan x"
-    },
-    {
-     "idx": 3,
-     "raw": "$-\\frac{\\sin x}{\\cos x}$",
-     "line": 21,
-     "norm": "-(( sin x)/( cos x))"
     }
    ],
    "key": 1,
@@ -1321,29 +1758,6 @@
    ],
    "key": 0,
    "key_in_pair": false
-  },
-  {
-   "file": "entrance-quizzes/derivatives-exp-log-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$5e^{0.05t}$",
-     "line": 14,
-     "norm": "5E^(0.05t)"
-    },
-    {
-     "idx": 2,
-     "raw": "$0.05 \\cdot 100e^{0.05t}$",
-     "line": 14,
-     "norm": "0.05 * 100E^(0.05t)"
-    }
-   ],
-   "key": 2,
-   "key_in_pair": true
   },
   {
    "file": "entrance-quizzes/factoring-algebra1.ts",
@@ -1599,29 +2013,6 @@
    "key_in_pair": false
   },
   {
-   "file": "entrance-quizzes/implicit-differentiation-calcab.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\frac{2}{x}$",
-     "line": 13,
-     "norm": "((2)/(x))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{2x}{x^2}$",
-     "line": 13,
-     "norm": "((2x)/(x^2))"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
    "file": "entrance-quizzes/integration-applications-calcab.ts",
    "family": "entrance-quizzes/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -1768,29 +2159,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "2i",
-     "line": 14,
-     "norm": "2i"
-    },
-    {
-     "idx": 3,
-     "raw": "0 + 2i",
-     "line": 14,
-     "norm": "0 + 2i"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/sat-complex-numbers-sat.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "(3 + 3i)/2",
      "line": 20,
      "norm": "(3 + 3i)/2"
@@ -1869,29 +2237,6 @@
      "raw": "x(f)",
      "line": 10,
      "norm": "x(f)"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
-   "file": "entrance-quizzes/sat-functions-graphs-sat.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "3x + 12",
-     "line": 18,
-     "norm": "3x + 12"
-    },
-    {
-     "idx": 3,
-     "raw": "3(x + 4)",
-     "line": 18,
-     "norm": "3(x + 4)"
     }
    ],
    "key": 1,
@@ -1990,29 +2335,6 @@
    "key_in_pair": false
   },
   {
-   "file": "entrance-quizzes/sat-polynomials-factoring-sat.ts",
-   "family": "entrance-quizzes/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "(2x \u2212 1)(x + 3)",
-     "line": 14,
-     "norm": "(2x - 1)(x + 3)"
-    },
-    {
-     "idx": 2,
-     "raw": "(x + 3)(2x \u2212 1)",
-     "line": 14,
-     "norm": "(x + 3)(2x - 1)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
    "file": "entrance-quizzes/u-substitution-calcab.ts",
    "family": "entrance-quizzes/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -2034,29 +2356,6 @@
    ],
    "key": 3,
    "key_in_pair": false
-  },
-  {
-   "file": "exit-quizzes/ap-calculus-ab.ts",
-   "family": "exit-quizzes/ap-calculus-ab",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\dfrac{x^2 - 2x - 1}{(x-1)^2}$",
-     "line": 717,
-     "norm": "((x^2 - 2x - 1)/((x-1)^2))"
-    },
-    {
-     "idx": 1,
-     "raw": "$\\dfrac{2x(x-1) - (x^2+1)}{(x-1)^2}$",
-     "line": 717,
-     "norm": "((2x(x-1) - (x^2+1))/((x-1)^2))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
   },
   {
    "file": "exit-quizzes/ap-calculus-ab.ts",
@@ -2131,29 +2430,6 @@
    "file": "exit-quizzes/ap-calculus-bc.ts",
    "family": "exit-quizzes/ap-calculus-bc",
    "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\ln|x^2+x|+C$",
-     "line": 512,
-     "norm": "log Abs(x^2+x)+C"
-    },
-    {
-     "idx": 1,
-     "raw": "$\\ln|x|+\\ln|x+1|+C$",
-     "line": 512,
-     "norm": "log Abs(x)+ log Abs(x+1)+C"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "exit-quizzes/ap-calculus-bc.ts",
-   "family": "exit-quizzes/ap-calculus-bc",
-   "kind": "SYMBOLIC-EQUIV",
    "verdict": "PLAUSIBLE",
    "equal_everywhere": true,
    "pair": [
@@ -2172,121 +2448,6 @@
    ],
    "key": 0,
    "key_in_pair": false
-  },
-  {
-   "file": "exit-quizzes/ap-calculus-bc.ts",
-   "family": "exit-quizzes/ap-calculus-bc",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "PLAUSIBLE",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$\\ln|x+1|+C$",
-     "line": 832,
-     "norm": "log Abs(x+1)+C"
-    },
-    {
-     "idx": 2,
-     "raw": "$\\frac{1}{2}\\ln|x^2+2x+1|+C$",
-     "line": 832,
-     "norm": "((1)/(2)) log Abs(x^2+2x+1)+C"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "exit-quizzes/ap-physics-c-em.ts",
-   "family": "exit-quizzes/ap-physics-c-em",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "kQ / $(d\\sqrt{d^{2} + L^{2}/4})$",
-     "line": 94,
-     "norm": "kQ / (d(sqrt(d^(2) + L^(2)/4)))"
-    },
-    {
-     "idx": 2,
-     "raw": "2kQ / $(d\\sqrt{4d^{2} + L^{2}})$",
-     "line": 96,
-     "norm": "2kQ / (d(sqrt(4d^(2) + L^(2))))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": true
-  },
-  {
-   "file": "exit-quizzes/ap-physics-c-em.ts",
-   "family": "exit-quizzes/ap-physics-c-em",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$4kQ^{2}/(a/\\sqrt{2})$",
-     "line": 536,
-     "norm": "4kQ^(2)/(a/(sqrt(2)))"
-    },
-    {
-     "idx": 1,
-     "raw": "$4\\sqrt{2}$ $kQ^{2}/a$",
-     "line": 537,
-     "norm": "4(sqrt(2)) kQ^(2)/a"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
-   "file": "exit-quizzes/ap-physics-c-mechanics.ts",
-   "family": "exit-quizzes/ap-physics-c-mechanics",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$2\\pi \\sqrt{L \\cos \\theta /g}$",
-     "line": 525,
-     "norm": "2 pi  (sqrt(L  cos  theta  /g))"
-    },
-    {
-     "idx": 3,
-     "raw": "$2\\pi \\sqrt{L/g \\cos \\theta}$",
-     "line": 525,
-     "norm": "2 pi  (sqrt(L/g  cos  theta ))"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
-   "file": "exit-quizzes/ap-physics-c-mechanics.ts",
-   "family": "exit-quizzes/ap-physics-c-mechanics",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "5R/2",
-     "line": 1861,
-     "norm": "5R/2"
-    },
-    {
-     "idx": 3,
-     "raw": "2.5R",
-     "line": 1861,
-     "norm": "2.5R"
-    }
-   ],
-   "key": 2,
-   "key_in_pair": true
   },
   {
    "file": "exit-quizzes/ap-precalculus.ts",
@@ -2450,52 +2611,6 @@
    "key_in_pair": null
   },
   {
-   "file": "interactive-lessons/act-act-intermediate-algebra-act-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$x(x+1)$",
-     "line": 127,
-     "norm": "x(x+1)"
-    },
-    {
-     "idx": 3,
-     "raw": "$x^2 + x$",
-     "line": 127,
-     "norm": "x^2 + x"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/algebra2-exponential-functions-part5.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\log(M) + \\log(N)$",
-     "line": 82,
-     "norm": "logb (M) +  logb (N)"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\log(M \\cdot N)$",
-     "line": 82,
-     "norm": "logb (M * N)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
    "file": "interactive-lessons/bio-chromosomal-inheritance-patterns-part7.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -2517,29 +2632,6 @@
    ],
    "key": 0,
    "key_in_pair": true
-  },
-  {
-   "file": "interactive-lessons/bio-dna-technology-genomics-part7.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "2n",
-     "line": 218,
-     "norm": "2n"
-    },
-    {
-     "idx": 3,
-     "raw": "n \u00d7 2",
-     "line": 218,
-     "norm": "n * 2"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
   },
   {
    "file": "interactive-lessons/bio-mendelian-genetics-part2.ts",
@@ -2586,52 +2678,6 @@
    ],
    "key": 1,
    "key_in_pair": true
-  },
-  {
-   "file": "interactive-lessons/calcab-antiderivatives-indefinite-integrals-calcab-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$5x^{-3}$",
-     "line": 145,
-     "norm": "5x^(-3)"
-    },
-    {
-     "idx": 3,
-     "raw": "$5 \\cdot \\frac{1}{x^3}$",
-     "line": 145,
-     "norm": "5 * ((1)/(x^3))"
-    }
-   ],
-   "key": 20,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/calcab-antiderivatives-indefinite-integrals-calcab-part7.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$",
-     "line": 122,
-     "norm": "-((1)/(2x^2)) + ((3)/(5))x^(5/3) + C"
-    },
-    {
-     "idx": 2,
-     "raw": "$\\frac{x^{-2}}{-2} + \\frac{x^{5/3}}{5/3} + C$",
-     "line": 122,
-     "norm": "((x^(-2))/(-2)) + ((x^(5/3))/(5/3)) + C"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
   },
   {
    "file": "interactive-lessons/calcab-basic-differentiation-rules-calcab-part1.ts",
@@ -2940,29 +2986,6 @@
    "equal_everywhere": true,
    "pair": [
     {
-     "idx": 0,
-     "raw": "$\\frac{x}{y}$",
-     "line": 8,
-     "norm": "((x)/(y))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{2x}{2y}$",
-     "line": 8,
-     "norm": "((2x)/(2y))"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/calcab-implicit-differentiation-calcab-part1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
      "idx": 1,
      "raw": "$\\frac{1}{y}\\frac{dy}{dx}$",
      "line": 18,
@@ -2973,29 +2996,6 @@
      "raw": "$\\frac{1}{x}$",
      "line": 18,
      "norm": "((1)/(x))"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/calcab-integration-applications-calcab-part3.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x^2+1$",
-     "line": 100,
-     "norm": "x^2+1"
-    },
-    {
-     "idx": 3,
-     "raw": "$1+x^2$",
-     "line": 100,
-     "norm": "1+x^2"
     }
    ],
    "key": null,
@@ -3045,144 +3045,6 @@
     }
    ],
    "key": 3,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/calcab-u-substitution-calcab-part1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$\\frac{2(x^2+3)^6}{3} + C$",
-     "line": 79,
-     "norm": "((2(x^2+3)^6)/(3)) + C"
-    },
-    {
-     "idx": 3,
-     "raw": "$4 \\cdot \\frac{(x^2+3)^6}{6} + C$",
-     "line": 79,
-     "norm": "4 * (((x^2+3)^6)/(6)) + C"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/calcbc-taylor-maclaurin-series-calcbc-part2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$1 + (x-1) + (x-1)^2$",
-     "line": 64,
-     "norm": "1 + (x-1) + (x-1)^2"
-    },
-    {
-     "idx": 3,
-     "raw": "$1 - x + x^2$",
-     "line": 64,
-     "norm": "1 - x + x^2"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/calcbc-taylor-maclaurin-series-calcbc-part5.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$1 + 3x - 2x^2 + 2x^3$",
-     "line": 97,
-     "norm": "1 + 3x - 2x^2 + 2x^3"
-    },
-    {
-     "idx": 2,
-     "raw": "$1 + 3x - 4x^2/2 + 12x^3/6$",
-     "line": 97,
-     "norm": "1 + 3x - 4x^2/2 + 12x^3/6"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/chemistry-integrated-rate-laws-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "0.0010 $M^{-1}s^{-1}$",
-     "line": 126,
-     "norm": "0.0010 M^(-1)s^(-1)"
-    },
-    {
-     "idx": 3,
-     "raw": "$1.0 \\times 10^{-3}$ $M^{-1}s^{-1}$",
-     "line": 127,
-     "norm": "1.0 * 10^(-3) M^(-1)s^(-1)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/constant-multiple-sum-rules.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$2x$",
-     "line": 638,
-     "norm": "2x"
-    },
-    {
-     "idx": 3,
-     "raw": "$2x^{1}$",
-     "line": 638,
-     "norm": "2x^(1)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/constant-multiple-sum-rules.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$21x^2 - 4x + 9 - 4$",
-     "line": 804,
-     "norm": "21x^2 - 4x + 9 - 4"
-    },
-    {
-     "idx": 3,
-     "raw": "$21x^2 - 4x + 5$",
-     "line": 804,
-     "norm": "21x^2 - 4x + 5"
-    }
-   ],
-   "key": 0,
    "key_in_pair": false
   },
   {
@@ -3485,98 +3347,6 @@
    "key_in_pair": null
   },
   {
-   "file": "interactive-lessons/extra/exponent-rules-algebra1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$4x$",
-     "line": 136,
-     "norm": "4x"
-    },
-    {
-     "idx": 3,
-     "raw": "$x \\cdot 4$",
-     "line": 136,
-     "norm": "x * 4"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/exponent-rules-algebra1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$x + x + x + x$",
-     "line": 136,
-     "norm": "x + x + x + x"
-    },
-    {
-     "idx": 3,
-     "raw": "$x \\cdot 4$",
-     "line": 136,
-     "norm": "x * 4"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/exponent-rules-algebra1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\dfrac{1}{a^4}$",
-     "line": 384,
-     "norm": "((1)/(a^4))"
-    },
-    {
-     "idx": 3,
-     "raw": "$a^{-4}$",
-     "line": 384,
-     "norm": "a^(-4)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/exponents-prealgebra.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x^4$",
-     "line": 336,
-     "norm": "x^4"
-    },
-    {
-     "idx": 3,
-     "raw": "$x^{4}$",
-     "line": 336,
-     "norm": "x^(4)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
    "file": "interactive-lessons/extra/factoring-polynomials-algebra2.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -3713,29 +3483,6 @@
    ],
    "key": 0,
    "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/factoring-polynomials-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$(2x + 2)(x + 3)$",
-     "line": 391,
-     "norm": "(2x + 2)(x + 3)"
-    },
-    {
-     "idx": 2,
-     "raw": "$(2x + 6)(x + 1)$",
-     "line": 391,
-     "norm": "(2x + 6)(x + 1)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
   },
   {
    "file": "interactive-lessons/extra/factoring-polynomials-algebra2.ts",
@@ -3807,98 +3554,6 @@
    "key_in_pair": true
   },
   {
-   "file": "interactive-lessons/extra/fundamental-theorem-algebra.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$2(x^2 + 8x)$",
-     "line": 233,
-     "norm": "2(x^2 + 8x)"
-    },
-    {
-     "idx": 3,
-     "raw": "$2x(x + 8)$",
-     "line": 233,
-     "norm": "2x(x + 8)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/indefinite-integrals.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x^6 - 4 + C$",
-     "line": 930,
-     "norm": "x^6 - 4 + C"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{6x^6}{6} - 4 + C$",
-     "line": 930,
-     "norm": "((6x^6)/(6)) - 4 + C"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/indeterminate-forms-factoring.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$(x-6)^2$",
-     "line": 263,
-     "norm": "(x-6)^2"
-    },
-    {
-     "idx": 3,
-     "raw": "$(x-6)(x-6)$",
-     "line": 263,
-     "norm": "(x-6)(x-6)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/logarithmic-differentiation-technique.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x^2\\ln x$",
-     "line": 464,
-     "norm": "x^2 log  x"
-    },
-    {
-     "idx": 3,
-     "raw": "$x\\ln(x^x)$",
-     "line": 464,
-     "norm": "x log (x^x)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
    "file": "interactive-lessons/extra/logarithmic-differentiation-technique.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -3922,75 +3577,6 @@
    "key_in_pair": null
   },
   {
-   "file": "interactive-lessons/extra/logarithmic-differentiation-technique.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x\\cdot x^{x-1}$",
-     "line": 515,
-     "norm": "x* x^(x-1)"
-    },
-    {
-     "idx": 3,
-     "raw": "$x^{x}$",
-     "line": 515,
-     "norm": "x^(x)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/logarithmic-differentiation-technique.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x(x+2)^{x-1}$",
-     "line": 905,
-     "norm": "x(x+2)^(x-1)"
-    },
-    {
-     "idx": 3,
-     "raw": "$(x+2)^x\\cdot\\dfrac{x}{x+2}$",
-     "line": 905,
-     "norm": "(x+2)^x*((x)/(x+2))"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/logarithmic-differentiation-technique.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x\\cdot x^{x-1}$",
-     "line": 962,
-     "norm": "x* x^(x-1)"
-    },
-    {
-     "idx": 3,
-     "raw": "$x^{x}$",
-     "line": 962,
-     "norm": "x^(x)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
    "file": "interactive-lessons/extra/parametric-calculus.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -4012,98 +3598,6 @@
    ],
    "key": null,
    "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/parametric-equations-intro.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\frac{3t}{2}$",
-     "line": 715,
-     "norm": "((3t)/(2))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{3t^2}{2t}$",
-     "line": 715,
-     "norm": "((3t^2)/(2t))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/partial-fraction-decomposition.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\dfrac{2}{x} - \\dfrac{2}{x - 4}$",
-     "line": 865,
-     "norm": "((2)/(x)) - ((2)/(x - 4))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\dfrac{-2}{x - 4} + \\dfrac{2}{x}$",
-     "line": 867,
-     "norm": "((-2)/(x - 4)) + ((2)/(x))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/piecewise-functions.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$x + 3$",
-     "line": 788,
-     "norm": "x + 3"
-    },
-    {
-     "idx": 3,
-     "raw": "$3 + x$",
-     "line": 788,
-     "norm": "3 + x"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/polynomial-division-remainder-theorem.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$x + 5$",
-     "line": 328,
-     "norm": "x + 5"
-    },
-    {
-     "idx": 3,
-     "raw": "$x - (-5)$",
-     "line": 328,
-     "norm": "x - (-5)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
   },
   {
    "file": "interactive-lessons/extra/polynomial-long-division.ts",
@@ -4336,52 +3830,6 @@
    "key_in_pair": false
   },
   {
-   "file": "interactive-lessons/extra/product-rule.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$2x e^x$",
-     "line": 349,
-     "norm": "2x E^x"
-    },
-    {
-     "idx": 2,
-     "raw": "$2x \\cdot e^x$",
-     "line": 349,
-     "norm": "2x * E^x"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/quotient-rule.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$-\\sin^2 x + \\cos^2 x$",
-     "line": 351,
-     "norm": "- sin^2 x +  cos^2 x"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\cos^2 x - \\sin^2 x$",
-     "line": 353,
-     "norm": "cos^2 x -  sin^2 x"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
    "file": "interactive-lessons/extra/rates-of-change.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -4405,190 +3853,6 @@
    "key_in_pair": false
   },
   {
-   "file": "interactive-lessons/extra/rational-equations-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$(x+5)^2(x-5)$",
-     "line": 143,
-     "norm": "(x+5)^2(x-5)"
-    },
-    {
-     "idx": 2,
-     "raw": "$(x^2-25)(x+5)$",
-     "line": 143,
-     "norm": "(x^2-25)(x+5)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/rational-exponents-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$x^5$",
-     "line": 76,
-     "norm": "x^5"
-    },
-    {
-     "idx": 3,
-     "raw": "$x^{5}$",
-     "line": 76,
-     "norm": "x^(5)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/rational-exponents-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\sqrt[2]{a^5}$",
-     "line": 239,
-     "norm": "((a^5)**(1/(2)))"
-    },
-    {
-     "idx": 3,
-     "raw": "$a^{5/2}$",
-     "line": 239,
-     "norm": "a^(5/2)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/rational-operations-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\dfrac{3x - 6}{x+2}$",
-     "line": 344,
-     "norm": "((3x - 6)/(x+2))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\dfrac{4x - x - 6}{x+2}$",
-     "line": 344,
-     "norm": "((4x - x - 6)/(x+2))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/rational-operations-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\dfrac{2}{2x + 2}$",
-     "line": 482,
-     "norm": "((2)/(2x + 2))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\dfrac{2}{x + (x+2)}$",
-     "line": 484,
-     "norm": "((2)/(x + (x+2)))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/rationalizing-techniques.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$-\\sqrt{x}+6$",
-     "line": 120,
-     "norm": "-(sqrt(x))+6"
-    },
-    {
-     "idx": 3,
-     "raw": "$6-\\sqrt{x}$",
-     "line": 120,
-     "norm": "6-(sqrt(x))"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/rationalizing-techniques.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$-5+\\sqrt{x}$",
-     "line": 121,
-     "norm": "-5+(sqrt(x))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\sqrt{x}-5$",
-     "line": 121,
-     "norm": "(sqrt(x))-5"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/simplifying-radicals-alg1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "PLAUSIBLE",
-   "equal_everywhere": false,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$x^{4}\\sqrt{x}$",
-     "line": 239,
-     "norm": "x^(4)(sqrt(x))"
-    },
-    {
-     "idx": 2,
-     "raw": "$x^{4.5}$",
-     "line": 239,
-     "norm": "x^(4.5)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
    "file": "interactive-lessons/extra/simplifying-rationals-algebra2.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -4610,98 +3874,6 @@
    ],
    "key": null,
    "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/simplifying-rationals-algebra2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$-(3-x)$",
-     "line": 450,
-     "norm": "-(3-x)"
-    },
-    {
-     "idx": 3,
-     "raw": "$(x-3)$",
-     "line": 450,
-     "norm": "(x-3)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/trig-substitution.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$\\sqrt{9 + x^2}$",
-     "line": 574,
-     "norm": "(sqrt(9 + x^2))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\sqrt{x^2 + 9}$",
-     "line": 574,
-     "norm": "(sqrt(x^2 + 9))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/extra/u-substitution.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\dfrac{1}{u^2} + C$",
-     "line": 605,
-     "norm": "((1)/(u^2)) + C"
-    },
-    {
-     "idx": 2,
-     "raw": "$u^{-2} + C$",
-     "line": 605,
-     "norm": "u^(-2) + C"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/extra/variables-and-expressions.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$25m + 15m$",
-     "line": 613,
-     "norm": "25m + 15m"
-    },
-    {
-     "idx": 3,
-     "raw": "$40m$",
-     "line": 613,
-     "norm": "40m"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": false
   },
   {
    "file": "interactive-lessons/extra/what-is-a-derivative.ts",
@@ -4750,52 +3922,6 @@
    "key_in_pair": null
   },
   {
-   "file": "interactive-lessons/extra/writing-expressions.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$2(n - 7)$",
-     "line": 420,
-     "norm": "2(n - 7)"
-    },
-    {
-     "idx": 2,
-     "raw": "$2n - 14$",
-     "line": 420,
-     "norm": "2n - 14"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/grade5-volume-part3.ts",
-   "family": "interactive-lessons/*",
-   "kind": "IDENTICAL-STRING",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "26 $cm^{3}$",
-     "line": 118,
-     "norm": "26 cm^(3)"
-    },
-    {
-     "idx": 3,
-     "raw": "26 $cm^{3}$",
-     "line": 120,
-     "norm": "26 cm^(3)"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
    "file": "interactive-lessons/grades/operations-scientific-notation.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -4817,121 +3943,6 @@
    ],
    "key": 1,
    "key_in_pair": true
-  },
-  {
-   "file": "interactive-lessons/mcat-mcat-general-chemistry-acid-base-equilibrium-mcat-part1.ts",
-   "family": "interactive-lessons/*",
-   "kind": "IDENTICAL-STRING",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$10^{-3}$ M",
-     "line": 93,
-     "norm": "10^(-3) M"
-    },
-    {
-     "idx": 2,
-     "raw": "$10^{-3}$ M",
-     "line": 93,
-     "norm": "10^(-3) M"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/physics2-electrostatics-part3.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$2.0 \\times 10^{-7}$ C",
-     "line": 149,
-     "norm": "2.0 * 10^(-7) C"
-    },
-    {
-     "idx": 3,
-     "raw": "$200 \\times 10^{-9}$ C",
-     "line": 149,
-     "norm": "200 * 10^(-9) C"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "interactive-lessons/physics2-quantum-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$h^2/(2mL^2)$",
-     "line": 120,
-     "norm": "h^2/(2mL^2)"
-    },
-    {
-     "idx": 3,
-     "raw": "$4h^2/(8mL^2)$",
-     "line": 120,
-     "norm": "4h^2/(8mL^2)"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/physicsc-em-conductors-part6.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$3kQ/(2.5R)^2$",
-     "line": 29,
-     "norm": "3kQ/(2.5R)^2"
-    },
-    {
-     "idx": 3,
-     "raw": "$k(3Q)/(2.5R)^2$",
-     "line": 30,
-     "norm": "k(3Q)/(2.5R)^2"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/physicsc-variable-accel-part5.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$2\\sqrt{2}$ m/s",
-     "line": 107,
-     "norm": "2(sqrt(2)) m/s"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\sqrt{8}$ m/s",
-     "line": 107,
-     "norm": "(sqrt(8)) m/s"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
   },
   {
    "file": "interactive-lessons/precalc-function-composition-inverses-precalc-part1.ts",
@@ -4997,52 +4008,6 @@
      "raw": "$B^{-1}A^{-1}$",
      "line": 111,
      "norm": "B^(-1)A^(-1)"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": true
-  },
-  {
-   "file": "interactive-lessons/precalc-matrices-precalc-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$A^{-1}B^{-1}$",
-     "line": 111,
-     "norm": "A^(-1)B^(-1)"
-    },
-    {
-     "idx": 2,
-     "raw": "$(BA)^{-1}$",
-     "line": 111,
-     "norm": "(BA)^(-1)"
-    }
-   ],
-   "key": 1,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/precalc-matrices-precalc-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$B^{-1}A^{-1}$",
-     "line": 111,
-     "norm": "B^(-1)A^(-1)"
-    },
-    {
-     "idx": 2,
-     "raw": "$(BA)^{-1}$",
-     "line": 111,
-     "norm": "(BA)^(-1)"
     }
    ],
    "key": 1,
@@ -5141,29 +4106,6 @@
    "key_in_pair": true
   },
   {
-   "file": "interactive-lessons/precalc-rational-functions-precalc-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\frac{x-1}{x+1}$",
-     "line": 199,
-     "norm": "((x-1)/(x+1))"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{(x-1)}{(x+1)}$",
-     "line": 201,
-     "norm": "(((x-1))/((x+1)))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
    "file": "interactive-lessons/sat-sat-calculator-strategy-sat-part7.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -5187,29 +4129,6 @@
    "key_in_pair": true
   },
   {
-   "file": "interactive-lessons/sat-sat-complex-numbers-sat-part4.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 2,
-     "raw": "$1+i$",
-     "line": 58,
-     "norm": "1+i"
-    },
-    {
-     "idx": 3,
-     "raw": "$\\frac{13+13i}{13}$",
-     "line": 58,
-     "norm": "((13+13i)/(13))"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
    "file": "interactive-lessons/sat-sat-exponents-radicals-sat-part2.ts",
    "family": "interactive-lessons/*",
    "kind": "SYMBOLIC-EQUIV",
@@ -5230,29 +4149,6 @@
     }
    ],
    "key": 3,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/sat-sat-passport-advanced-math-sat-part2.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 0,
-     "raw": "$(2x-5)^2$",
-     "line": 161,
-     "norm": "(2x-5)^2"
-    },
-    {
-     "idx": 3,
-     "raw": "$(2x-5)(2x-5)$",
-     "line": 161,
-     "norm": "(2x-5)(2x-5)"
-    }
-   ],
-   "key": 2,
    "key_in_pair": false
   },
   {
@@ -5562,29 +4458,6 @@
    "equal_everywhere": true,
    "pair": [
     {
-     "idx": 2,
-     "raw": "$(x + 2)^2(x - 2)^2$",
-     "line": 64,
-     "norm": "(x + 2)^2(x - 2)^2"
-    },
-    {
-     "idx": 3,
-     "raw": "$(x^2 - 4)^2$",
-     "line": 64,
-     "norm": "(x^2 - 4)^2"
-    }
-   ],
-   "key": 0,
-   "key_in_pair": false
-  },
-  {
-   "file": "interactive-lessons/sat-sat-polynomials-factoring-sat-part7.ts",
-   "family": "interactive-lessons/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
      "idx": 0,
      "raw": "$2(x^2 + 4)(x+2)(x-2)$",
      "line": 143,
@@ -5714,75 +4587,6 @@
    ],
    "key": 0,
    "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/derivatives-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$e^{x}/x$",
-     "line": 61,
-     "norm": "E^(x)/x"
-    },
-    {
-     "idx": 6,
-     "raw": "$e^{x}$ \u00b7 (1/x)",
-     "line": 62,
-     "norm": "E^(x) * (1/x)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/derivatives-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$\\sec^{2}(x)$ + sec(x)tan(x)",
-     "line": 120,
-     "norm": "sec^(2)(x) + sec(x)tan(x)"
-    },
-    {
-     "idx": 9,
-     "raw": "sec(x)tan(x) + $\\sec^{2}(x)$",
-     "line": 123,
-     "norm": "sec(x)tan(x) +  sec^(2)(x)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/derivatives-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$(6y - 3x^{2})$ / $(3y^{2} - 6x)$",
-     "line": 144,
-     "norm": "(6y - 3x^(2)) / (3y^(2) - 6x)"
-    },
-    {
-     "idx": 9,
-     "raw": "$(2y - x^{2})$ / $(y^{2} - 2x)$",
-     "line": 147,
-     "norm": "(2y - x^(2)) / (y^(2) - 2x)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
   },
   {
    "file": "mini-boss-questions/factoring-part2-boss.ts",
@@ -5802,52 +4606,6 @@
      "raw": "$6x(2x^{2} + 3x)$",
      "line": 150,
      "norm": "6x(2x^(2) + 3x)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "$6x^{2}(2x + 3)$",
-     "line": 149,
-     "norm": "6x^(2)(2x + 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "$3x^{2}(4x + 6)$",
-     "line": 151,
-     "norm": "3x^(2)(4x + 6)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$6x(2x^{2} + 3x)$",
-     "line": 150,
-     "norm": "6x(2x^(2) + 3x)"
-    },
-    {
-     "idx": 6,
-     "raw": "$3x^{2}(4x + 6)$",
-     "line": 151,
-     "norm": "3x^(2)(4x + 6)"
     }
    ],
    "key": null,
@@ -5908,52 +4666,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "$4a^{2}b(2ab + 3)$",
-     "line": 173,
-     "norm": "4a^(2)b(2ab + 3)"
-    },
-    {
-     "idx": 9,
-     "raw": "$2a^{2}b(4ab + 6)$",
-     "line": 176,
-     "norm": "2a^(2)b(4ab + 6)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$4ab(2a^{2}b + 3a)$",
-     "line": 174,
-     "norm": "4ab(2a^(2)b + 3a)"
-    },
-    {
-     "idx": 9,
-     "raw": "$2a^{2}b(4ab + 6)$",
-     "line": 176,
-     "norm": "2a^(2)b(4ab + 6)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "$7m^{2}(3m^{3} - 2m + 1)$",
      "line": 185,
      "norm": "7m^(2)(3m^(3) - 2m + 1)"
@@ -6000,52 +4712,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "$15x^{4}(2x^{2} + 3)$",
-     "line": 197,
-     "norm": "15x^(4)(2x^(2) + 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "$5x^{4}(6x^{2} + 9)$",
-     "line": 199,
-     "norm": "5x^(4)(6x^(2) + 9)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$15x^{2}(2x^{4} + 3x^{2})$",
-     "line": 198,
-     "norm": "15x^(2)(2x^(4) + 3x^(2))"
-    },
-    {
-     "idx": 6,
-     "raw": "$5x^{4}(6x^{2} + 9)$",
-     "line": 199,
-     "norm": "5x^(4)(6x^(2) + 9)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "$8p^{3}q^{3}(3p - 2q)$",
      "line": 209,
      "norm": "8p^(3)q^(3)(3p - 2q)"
@@ -6069,101 +4735,9 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "$8p^{3}q^{3}(3p - 2q)$",
-     "line": 209,
-     "norm": "8p^(3)q^(3)(3p - 2q)"
-    },
-    {
-     "idx": 9,
-     "raw": "$4p^{3}q^{3}(6p - 4q)$",
-     "line": 212,
-     "norm": "4p^(3)q^(3)(6p - 4q)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$8pq(3p^{3}q^{2} - 2p^{2}q^{3})$",
-     "line": 210,
-     "norm": "8pq(3p^(3)q^(2) - 2p^(2)q^(3))"
-    },
-    {
-     "idx": 9,
-     "raw": "$4p^{3}q^{3}(6p - 4q)$",
-     "line": 212,
-     "norm": "4p^(3)q^(3)(6p - 4q)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "12xy(3x - 4y + 5)",
      "line": 221,
      "norm": "12xy(3x - 4y + 5)"
-    },
-    {
-     "idx": 3,
-     "raw": "6xy(6x - 8y + 10)",
-     "line": 222,
-     "norm": "6xy(6x - 8y + 10)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "12xy(3x - 4y + 5)",
-     "line": 221,
-     "norm": "12xy(3x - 4y + 5)"
-    },
-    {
-     "idx": 9,
-     "raw": "12x(3xy - $4y^{2}$ + 5y)",
-     "line": 224,
-     "norm": "12x(3xy - 4y^(2) + 5y)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "6xy(6x - 8y + 10)",
-     "line": 222,
-     "norm": "6xy(6x - 8y + 10)"
     },
     {
      "idx": 9,
@@ -6207,52 +4781,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "$9r^{5}s^{3}(2r^{2} + 3s^{2})$",
-     "line": 233,
-     "norm": "9r^(5)s^(3)(2r^(2) + 3s^(2))"
-    },
-    {
-     "idx": 6,
-     "raw": "$3r^{5}s^{3}(6r^{2} + 9s^{2})$",
-     "line": 235,
-     "norm": "3r^(5)s^(3)(6r^(2) + 9s^(2))"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$9rs(2r^{6}s^{2} + 3r^{4}s^{4})$",
-     "line": 234,
-     "norm": "9rs(2r^(6)s^(2) + 3r^(4)s^(4))"
-    },
-    {
-     "idx": 6,
-     "raw": "$3r^{5}s^{3}(6r^{2} + 9s^{2})$",
-     "line": 235,
-     "norm": "3r^(5)s^(3)(6r^(2) + 9s^(2))"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "$10x^{3}(2x^{5} - 3x^{2} + 1)$",
      "line": 257,
      "norm": "10x^(3)(2x^(5) - 3x^(2) + 1)"
@@ -6276,75 +4804,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "$10x^{3}(2x^{5} - 3x^{2} + 1)$",
-     "line": 257,
-     "norm": "10x^(3)(2x^(5) - 3x^(2) + 1)"
-    },
-    {
-     "idx": 6,
-     "raw": "$5x^{3}(4x^{5} - 6x^{2} + 2)$",
-     "line": 259,
-     "norm": "5x^(3)(4x^(5) - 6x^(2) + 2)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$10x(2x^{7} - 3x^{4} + x^{2})$",
-     "line": 258,
-     "norm": "10x(2x^(7) - 3x^(4) + x^(2))"
-    },
-    {
-     "idx": 6,
-     "raw": "$5x^{3}(4x^{5} - 6x^{2} + 2)$",
-     "line": 259,
-     "norm": "5x^(3)(4x^(5) - 6x^(2) + 2)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "2(x + 5)(x - 5)",
-     "line": 521,
-     "norm": "2(x + 5)(x - 5)"
-    },
-    {
-     "idx": 3,
-     "raw": "(2x + 10)(x - 5)",
-     "line": 522,
-     "norm": "(2x + 10)(x - 5)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "2(x + 5)(x - 5)",
      "line": 521,
      "norm": "2(x + 5)(x - 5)"
@@ -6368,98 +4827,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "2(x + 5)(x - 5)",
-     "line": 521,
-     "norm": "2(x + 5)(x - 5)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 5)(2x - 10)",
-     "line": 524,
-     "norm": "(x + 5)(2x - 10)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "(2x + 10)(x - 5)",
-     "line": 522,
-     "norm": "(2x + 10)(x - 5)"
-    },
-    {
-     "idx": 6,
-     "raw": "$2(x^{2} - 25)$",
-     "line": 523,
-     "norm": "2(x^(2) - 25)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "(2x + 10)(x - 5)",
-     "line": 522,
-     "norm": "(2x + 10)(x - 5)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 5)(2x - 10)",
-     "line": 524,
-     "norm": "(x + 5)(2x - 10)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "$2(x^{2} - 25)$",
-     "line": 523,
-     "norm": "2(x^(2) - 25)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 5)(2x - 10)",
-     "line": 524,
-     "norm": "(x + 5)(2x - 10)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "3(x + 5)(x - 5)",
      "line": 533,
      "norm": "3(x + 5)(x - 5)"
@@ -6469,121 +4836,6 @@
      "raw": "$3(x^{2} - 25)$",
      "line": 534,
      "norm": "3(x^(2) - 25)"
-    }
-   ],
-   "key": 5,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "3(x + 5)(x - 5)",
-     "line": 533,
-     "norm": "3(x + 5)(x - 5)"
-    },
-    {
-     "idx": 6,
-     "raw": "(3x + 15)(x - 5)",
-     "line": 535,
-     "norm": "(3x + 15)(x - 5)"
-    }
-   ],
-   "key": 5,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "3(x + 5)(x - 5)",
-     "line": 533,
-     "norm": "3(x + 5)(x - 5)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 5)(3x - 15)",
-     "line": 536,
-     "norm": "(x + 5)(3x - 15)"
-    }
-   ],
-   "key": 5,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$3(x^{2} - 25)$",
-     "line": 534,
-     "norm": "3(x^(2) - 25)"
-    },
-    {
-     "idx": 6,
-     "raw": "(3x + 15)(x - 5)",
-     "line": 535,
-     "norm": "(3x + 15)(x - 5)"
-    }
-   ],
-   "key": 5,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$3(x^{2} - 25)$",
-     "line": 534,
-     "norm": "3(x^(2) - 25)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 5)(3x - 15)",
-     "line": 536,
-     "norm": "(x + 5)(3x - 15)"
-    }
-   ],
-   "key": 5,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "(3x + 15)(x - 5)",
-     "line": 535,
-     "norm": "(3x + 15)(x - 5)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 5)(3x - 15)",
-     "line": 536,
-     "norm": "(x + 5)(3x - 15)"
     }
    ],
    "key": 5,
@@ -6621,52 +4873,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "5(x + 3)(x - 3)",
-     "line": 545,
-     "norm": "5(x + 3)(x - 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "(5x + 15)(x - 3)",
-     "line": 547,
-     "norm": "(5x + 15)(x - 3)"
-    }
-   ],
-   "key": 4,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$5(x^{2} - 9)$",
-     "line": 546,
-     "norm": "5(x^(2) - 9)"
-    },
-    {
-     "idx": 6,
-     "raw": "(5x + 15)(x - 3)",
-     "line": 547,
-     "norm": "(5x + 15)(x - 3)"
-    }
-   ],
-   "key": 4,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "4(x + 5)(x - 5)",
      "line": 557,
      "norm": "4(x + 5)(x - 5)"
@@ -6676,121 +4882,6 @@
      "raw": "$4(x^{2} - 25)$",
      "line": 558,
      "norm": "4(x^(2) - 25)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "4(x + 5)(x - 5)",
-     "line": 557,
-     "norm": "4(x + 5)(x - 5)"
-    },
-    {
-     "idx": 6,
-     "raw": "(2x + 10)(2x - 10)",
-     "line": 559,
-     "norm": "(2x + 10)(2x - 10)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "4(x + 5)(x - 5)",
-     "line": 557,
-     "norm": "4(x + 5)(x - 5)"
-    },
-    {
-     "idx": 9,
-     "raw": "2(2x + 10)(x - 5)",
-     "line": 560,
-     "norm": "2(2x + 10)(x - 5)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$4(x^{2} - 25)$",
-     "line": 558,
-     "norm": "4(x^(2) - 25)"
-    },
-    {
-     "idx": 6,
-     "raw": "(2x + 10)(2x - 10)",
-     "line": 559,
-     "norm": "(2x + 10)(2x - 10)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$4(x^{2} - 25)$",
-     "line": 558,
-     "norm": "4(x^(2) - 25)"
-    },
-    {
-     "idx": 9,
-     "raw": "2(2x + 10)(x - 5)",
-     "line": 560,
-     "norm": "2(2x + 10)(x - 5)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "(2x + 10)(2x - 10)",
-     "line": 559,
-     "norm": "(2x + 10)(2x - 10)"
-    },
-    {
-     "idx": 9,
-     "raw": "2(2x + 10)(x - 5)",
-     "line": 560,
-     "norm": "2(2x + 10)(x - 5)"
     }
    ],
    "key": 7,
@@ -6828,52 +4919,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "7(x + 3)(x - 3)",
-     "line": 569,
-     "norm": "7(x + 3)(x - 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "(7x + 21)(x - 3)",
-     "line": 571,
-     "norm": "(7x + 21)(x - 3)"
-    }
-   ],
-   "key": 6,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$7(x^{2} - 9)$",
-     "line": 570,
-     "norm": "7(x^(2) - 9)"
-    },
-    {
-     "idx": 6,
-     "raw": "(7x + 21)(x - 3)",
-     "line": 571,
-     "norm": "(7x + 21)(x - 3)"
-    }
-   ],
-   "key": 6,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "6(x + 4)(x - 4)",
      "line": 581,
      "norm": "6(x + 4)(x - 4)"
@@ -6883,121 +4928,6 @@
      "raw": "$6(x^{2} - 16)$",
      "line": 582,
      "norm": "6(x^(2) - 16)"
-    }
-   ],
-   "key": 8,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "6(x + 4)(x - 4)",
-     "line": 581,
-     "norm": "6(x + 4)(x - 4)"
-    },
-    {
-     "idx": 6,
-     "raw": "2(3x + 12)(x - 4)",
-     "line": 583,
-     "norm": "2(3x + 12)(x - 4)"
-    }
-   ],
-   "key": 8,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "6(x + 4)(x - 4)",
-     "line": 581,
-     "norm": "6(x + 4)(x - 4)"
-    },
-    {
-     "idx": 9,
-     "raw": "(6x + 24)(x - 4)",
-     "line": 584,
-     "norm": "(6x + 24)(x - 4)"
-    }
-   ],
-   "key": 8,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$6(x^{2} - 16)$",
-     "line": 582,
-     "norm": "6(x^(2) - 16)"
-    },
-    {
-     "idx": 6,
-     "raw": "2(3x + 12)(x - 4)",
-     "line": 583,
-     "norm": "2(3x + 12)(x - 4)"
-    }
-   ],
-   "key": 8,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$6(x^{2} - 16)$",
-     "line": 582,
-     "norm": "6(x^(2) - 16)"
-    },
-    {
-     "idx": 9,
-     "raw": "(6x + 24)(x - 4)",
-     "line": 584,
-     "norm": "(6x + 24)(x - 4)"
-    }
-   ],
-   "key": 8,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "2(3x + 12)(x - 4)",
-     "line": 583,
-     "norm": "2(3x + 12)(x - 4)"
-    },
-    {
-     "idx": 9,
-     "raw": "(6x + 24)(x - 4)",
-     "line": 584,
-     "norm": "(6x + 24)(x - 4)"
     }
    ],
    "key": 8,
@@ -7035,121 +4965,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "8(x + 2)(x - 2)",
-     "line": 593,
-     "norm": "8(x + 2)(x - 2)"
-    },
-    {
-     "idx": 6,
-     "raw": "4(2x + 4)(x - 2)",
-     "line": 595,
-     "norm": "4(2x + 4)(x - 2)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "8(x + 2)(x - 2)",
-     "line": 593,
-     "norm": "8(x + 2)(x - 2)"
-    },
-    {
-     "idx": 9,
-     "raw": "(4x + 8)(2x - 4)",
-     "line": 596,
-     "norm": "(4x + 8)(2x - 4)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$8(x^{2} - 4)$",
-     "line": 594,
-     "norm": "8(x^(2) - 4)"
-    },
-    {
-     "idx": 6,
-     "raw": "4(2x + 4)(x - 2)",
-     "line": 595,
-     "norm": "4(2x + 4)(x - 2)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$8(x^{2} - 4)$",
-     "line": 594,
-     "norm": "8(x^(2) - 4)"
-    },
-    {
-     "idx": 9,
-     "raw": "(4x + 8)(2x - 4)",
-     "line": 596,
-     "norm": "(4x + 8)(2x - 4)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "4(2x + 4)(x - 2)",
-     "line": 595,
-     "norm": "4(2x + 4)(x - 2)"
-    },
-    {
-     "idx": 9,
-     "raw": "(4x + 8)(2x - 4)",
-     "line": 596,
-     "norm": "(4x + 8)(2x - 4)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "9(x + 3)(x - 3)",
      "line": 605,
      "norm": "9(x + 3)(x - 3)"
@@ -7159,121 +4974,6 @@
      "raw": "$9(x^{2} - 9)$",
      "line": 606,
      "norm": "9(x^(2) - 9)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "9(x + 3)(x - 3)",
-     "line": 605,
-     "norm": "9(x + 3)(x - 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "3(3x + 9)(x - 3)",
-     "line": 607,
-     "norm": "3(3x + 9)(x - 3)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "9(x + 3)(x - 3)",
-     "line": 605,
-     "norm": "9(x + 3)(x - 3)"
-    },
-    {
-     "idx": 9,
-     "raw": "(3x + 9)(3x - 9)",
-     "line": 608,
-     "norm": "(3x + 9)(3x - 9)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$9(x^{2} - 9)$",
-     "line": 606,
-     "norm": "9(x^(2) - 9)"
-    },
-    {
-     "idx": 6,
-     "raw": "3(3x + 9)(x - 3)",
-     "line": 607,
-     "norm": "3(3x + 9)(x - 3)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$9(x^{2} - 9)$",
-     "line": 606,
-     "norm": "9(x^(2) - 9)"
-    },
-    {
-     "idx": 9,
-     "raw": "(3x + 9)(3x - 9)",
-     "line": 608,
-     "norm": "(3x + 9)(3x - 9)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "3(3x + 9)(x - 3)",
-     "line": 607,
-     "norm": "3(3x + 9)(x - 3)"
-    },
-    {
-     "idx": 9,
-     "raw": "(3x + 9)(3x - 9)",
-     "line": 608,
-     "norm": "(3x + 9)(3x - 9)"
     }
    ],
    "key": 12,
@@ -7311,121 +5011,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "12(x + 2)(x - 2)",
-     "line": 617,
-     "norm": "12(x + 2)(x - 2)"
-    },
-    {
-     "idx": 6,
-     "raw": "4(3x + 6)(x - 2)",
-     "line": 619,
-     "norm": "4(3x + 6)(x - 2)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "12(x + 2)(x - 2)",
-     "line": 617,
-     "norm": "12(x + 2)(x - 2)"
-    },
-    {
-     "idx": 9,
-     "raw": "6(2x + 4)(x - 2)",
-     "line": 620,
-     "norm": "6(2x + 4)(x - 2)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$12(x^{2} - 4)$",
-     "line": 618,
-     "norm": "12(x^(2) - 4)"
-    },
-    {
-     "idx": 6,
-     "raw": "4(3x + 6)(x - 2)",
-     "line": 619,
-     "norm": "4(3x + 6)(x - 2)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$12(x^{2} - 4)$",
-     "line": 618,
-     "norm": "12(x^(2) - 4)"
-    },
-    {
-     "idx": 9,
-     "raw": "6(2x + 4)(x - 2)",
-     "line": 620,
-     "norm": "6(2x + 4)(x - 2)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "4(3x + 6)(x - 2)",
-     "line": 619,
-     "norm": "4(3x + 6)(x - 2)"
-    },
-    {
-     "idx": 9,
-     "raw": "6(2x + 4)(x - 2)",
-     "line": 620,
-     "norm": "6(2x + 4)(x - 2)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "10(x + 4)(x - 4)",
      "line": 629,
      "norm": "10(x + 4)(x - 4)"
@@ -7439,144 +5024,6 @@
    ],
    "key": 10,
    "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "10(x + 4)(x - 4)",
-     "line": 629,
-     "norm": "10(x + 4)(x - 4)"
-    },
-    {
-     "idx": 6,
-     "raw": "5(2x + 8)(x - 4)",
-     "line": 631,
-     "norm": "5(2x + 8)(x - 4)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "10(x + 4)(x - 4)",
-     "line": 629,
-     "norm": "10(x + 4)(x - 4)"
-    },
-    {
-     "idx": 9,
-     "raw": "2(5x + 20)(x - 4)",
-     "line": 632,
-     "norm": "2(5x + 20)(x - 4)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$10(x^{2} - 16)$",
-     "line": 630,
-     "norm": "10(x^(2) - 16)"
-    },
-    {
-     "idx": 6,
-     "raw": "5(2x + 8)(x - 4)",
-     "line": 631,
-     "norm": "5(2x + 8)(x - 4)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$10(x^{2} - 16)$",
-     "line": 630,
-     "norm": "10(x^(2) - 16)"
-    },
-    {
-     "idx": 9,
-     "raw": "2(5x + 20)(x - 4)",
-     "line": 632,
-     "norm": "2(5x + 20)(x - 4)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part2-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "5(2x + 8)(x - 4)",
-     "line": 631,
-     "norm": "5(2x + 8)(x - 4)"
-    },
-    {
-     "idx": 9,
-     "raw": "2(5x + 20)(x - 4)",
-     "line": 632,
-     "norm": "2(5x + 20)(x - 4)"
-    }
-   ],
-   "key": 10,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part3-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "(x - 5)(x + 3)",
-     "line": 44,
-     "norm": "(x - 5)(x + 3)"
-    },
-    {
-     "idx": 9,
-     "raw": "(x + 3)(x - 5)",
-     "line": 46,
-     "norm": "(x + 3)(x - 5)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
   },
   {
    "file": "mini-boss-questions/factoring-part3-boss.ts",
@@ -7770,52 +5217,6 @@
    "equal_everywhere": true,
    "pair": [
     {
-     "idx": 3,
-     "raw": "(3x + 3)(x + 2)",
-     "line": 58,
-     "norm": "(3x + 3)(x + 2)"
-    },
-    {
-     "idx": 6,
-     "raw": "(3x + 6)(x + 1)",
-     "line": 59,
-     "norm": "(3x + 6)(x + 1)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part4-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 6,
-     "raw": "(3x - 6)(x + 1)",
-     "line": 119,
-     "norm": "(3x - 6)(x + 1)"
-    },
-    {
-     "idx": 9,
-     "raw": "(3x + 3)(x - 2)",
-     "line": 120,
-     "norm": "(3x + 3)(x - 2)"
-    }
-   ],
-   "key": null,
-   "key_in_pair": null
-  },
-  {
-   "file": "mini-boss-questions/factoring-part4-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
      "idx": 1,
      "raw": "2(2x + 1)(x + 3)",
      "line": 146,
@@ -7908,16 +5309,16 @@
    "equal_everywhere": true,
    "pair": [
     {
-     "idx": 3,
-     "raw": "2(4x + 1)(x + 3)",
-     "line": 207,
-     "norm": "2(4x + 1)(x + 3)"
+     "idx": 1,
+     "raw": "2(2x + 1)(2x + 3)",
+     "line": 206,
+     "norm": "2(2x + 1)(2x + 3)"
     },
     {
      "idx": 6,
-     "raw": "(8x + 2)(x + 3)",
+     "raw": "(4x + 2)(2x + 3)",
      "line": 208,
-     "norm": "(8x + 2)(x + 3)"
+     "norm": "(4x + 2)(2x + 3)"
     }
    ],
    "key": 5,
@@ -8052,29 +5453,6 @@
      "norm": "3(x - 2)(x + 2)"
     },
     {
-     "idx": 3,
-     "raw": "(3x - 6)(x + 2)",
-     "line": 35,
-     "norm": "(3x - 6)(x + 2)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part5-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "3(x - 2)(x + 2)",
-     "line": 34,
-     "norm": "3(x - 2)(x + 2)"
-    },
-    {
      "idx": 6,
      "raw": "$3(x^{2} - 4)$",
      "line": 36,
@@ -8083,29 +5461,6 @@
    ],
    "key": 3,
    "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part5-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "(3x - 6)(x + 2)",
-     "line": 35,
-     "norm": "(3x - 6)(x + 2)"
-    },
-    {
-     "idx": 6,
-     "raw": "$3(x^{2} - 4)$",
-     "line": 36,
-     "norm": "3(x^(2) - 4)"
-    }
-   ],
-   "key": 3,
-   "key_in_pair": true
   },
   {
    "file": "mini-boss-questions/factoring-part5-boss.ts",
@@ -8144,52 +5499,6 @@
      "norm": "6(x - 3)(x + 3)"
     },
     {
-     "idx": 3,
-     "raw": "(6x - 18)(x + 3)",
-     "line": 71,
-     "norm": "(6x - 18)(x + 3)"
-    }
-   ],
-   "key": 6,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part5-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "6(x - 3)(x + 3)",
-     "line": 70,
-     "norm": "6(x - 3)(x + 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "$6(x^{2} - 9)$",
-     "line": 72,
-     "norm": "6(x^(2) - 9)"
-    }
-   ],
-   "key": 6,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part5-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "(6x - 18)(x + 3)",
-     "line": 71,
-     "norm": "(6x - 18)(x + 3)"
-    },
-    {
      "idx": 6,
      "raw": "$6(x^{2} - 9)$",
      "line": 72,
@@ -8211,52 +5520,6 @@
      "raw": "7(x - 3)(x + 3)",
      "line": 106,
      "norm": "7(x - 3)(x + 3)"
-    },
-    {
-     "idx": 3,
-     "raw": "(7x - 21)(x + 3)",
-     "line": 107,
-     "norm": "(7x - 21)(x + 3)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part5-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "7(x - 3)(x + 3)",
-     "line": 106,
-     "norm": "7(x - 3)(x + 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "$7(x^{2} - 9)$",
-     "line": 108,
-     "norm": "7(x^(2) - 9)"
-    }
-   ],
-   "key": 7,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part5-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "(7x - 21)(x + 3)",
-     "line": 107,
-     "norm": "(7x - 21)(x + 3)"
     },
     {
      "idx": 6,
@@ -8369,52 +5632,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "5(x - 3)(x + 3)",
-     "line": 46,
-     "norm": "5(x - 3)(x + 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "(5x - 15)(x + 3)",
-     "line": 48,
-     "norm": "(5x - 15)(x + 3)"
-    }
-   ],
-   "key": 4,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$5(x^{2} - 9)$",
-     "line": 47,
-     "norm": "5(x^(2) - 9)"
-    },
-    {
-     "idx": 6,
-     "raw": "(5x - 15)(x + 3)",
-     "line": 48,
-     "norm": "(5x - 15)(x + 3)"
-    }
-   ],
-   "key": 4,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "4x(x + 2)(x + 4)",
      "line": 58,
      "norm": "4x(x + 2)(x + 4)"
@@ -8428,52 +5645,6 @@
    ],
    "key": 6,
    "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "4x(x + 2)(x + 4)",
-     "line": 58,
-     "norm": "4x(x + 2)(x + 4)"
-    },
-    {
-     "idx": 6,
-     "raw": "x(4x + 8)(x + 4)",
-     "line": 60,
-     "norm": "x(4x + 8)(x + 4)"
-    }
-   ],
-   "key": 6,
-   "key_in_pair": true
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$4x(x^{2} + 6x + 8)$",
-     "line": 59,
-     "norm": "4x(x^(2) + 6x + 8)"
-    },
-    {
-     "idx": 6,
-     "raw": "x(4x + 8)(x + 4)",
-     "line": 60,
-     "norm": "x(4x + 8)(x + 4)"
-    }
-   ],
-   "key": 6,
-   "key_in_pair": true
   },
   {
    "file": "mini-boss-questions/factoring-part6-boss.ts",
@@ -8576,52 +5747,6 @@
    "pair": [
     {
      "idx": 1,
-     "raw": "7(x - 2)(x + 2)",
-     "line": 106,
-     "norm": "7(x - 2)(x + 2)"
-    },
-    {
-     "idx": 6,
-     "raw": "(7x - 14)(x + 2)",
-     "line": 108,
-     "norm": "(7x - 14)(x + 2)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$7(x^{2} - 4)$",
-     "line": 107,
-     "norm": "7(x^(2) - 4)"
-    },
-    {
-     "idx": 6,
-     "raw": "(7x - 14)(x + 2)",
-     "line": 108,
-     "norm": "(7x - 14)(x + 2)"
-    }
-   ],
-   "key": 9,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
      "raw": "9x(x - 1)(x - 3)",
      "line": 118,
      "norm": "9x(x - 1)(x - 3)"
@@ -8631,52 +5756,6 @@
      "raw": "$9x(x^{2} - 4x + 3)$",
      "line": 119,
      "norm": "9x(x^(2) - 4x + 3)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 1,
-     "raw": "9x(x - 1)(x - 3)",
-     "line": 118,
-     "norm": "9x(x - 1)(x - 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "3x(3x - 3)(x - 3)",
-     "line": 120,
-     "norm": "3x(3x - 3)(x - 3)"
-    }
-   ],
-   "key": 12,
-   "key_in_pair": false
-  },
-  {
-   "file": "mini-boss-questions/factoring-part6-boss.ts",
-   "family": "mini-boss-questions/*",
-   "kind": "SYMBOLIC-EQUIV",
-   "verdict": "CONFIRMED",
-   "equal_everywhere": true,
-   "pair": [
-    {
-     "idx": 3,
-     "raw": "$9x(x^{2} - 4x + 3)$",
-     "line": 119,
-     "norm": "9x(x^(2) - 4x + 3)"
-    },
-    {
-     "idx": 6,
-     "raw": "3x(3x - 3)(x - 3)",
-     "line": 120,
-     "norm": "3x(3x - 3)(x - 3)"
     }
    ],
    "key": 12,

@@ -610,7 +610,7 @@ After $3$ days you have $20 - 4(3) = 20 - 12 = 8$, so \\$8.
           questions: [
             {
               question: 'A gym charges a \\$25 sign-up fee plus \\$15 per month. Which expression gives the total cost for $m$ months?',
-              options: ['$15 + 25m$', '$25 + 15m$', '$25m + 15m$', '$40m$'],
+              options: ['$15 + 25m$', '$25 + 15m$', '$25m + 15m$', '$40$'],
               correctAnswer: 1,
               explanation: 'The \\$25 fee is a one-time constant; the \\$15 repeats each month, so it is the coefficient of $m$: $25 + 15m$.',
             },

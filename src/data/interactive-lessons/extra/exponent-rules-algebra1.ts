@@ -133,7 +133,7 @@ Before moving on, connect each power to what it stands for.`,
         exercise: {
           dropdowns: [
             { label: '$6^2$ means:', options: ['$6 \\cdot 6$', '$6 \\cdot 2$', '$2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2$', '$6 + 6$'] },
-            { label: '$x^4$ means:', options: ['$x \\cdot x \\cdot x \\cdot x$', '$4x$', '$x + x + x + x$', '$x \\cdot 4$'] },
+            { label: '$x^4$ means:', options: ['$x \\cdot x \\cdot x \\cdot x$', '$4x$', '$x + x + x + x$', '$4^x$'] },
             { label: 'The base in $9^5$ is:', options: ['$9$', '$5$', '$45$', '$14$'] },
           ],
           correctAnswers: ['$6 \\cdot 6$', '$x \\cdot x \\cdot x \\cdot x$', '$9$'],
@@ -381,7 +381,7 @@ $$3^{-2} = \\frac{1}{3^2} = \\frac{1}{9} \\qquad x^{-5} = \\frac{1}{x^5} \\qquad
           dropdowns: [
             { label: '$5^{-2} =$', options: ['$\\dfrac{1}{25}$', '$-25$', '$-10$', '$25$'] },
             { label: '$x^{-3} =$', options: ['$\\dfrac{1}{x^3}$', '$-x^3$', '$x^3$', '$-\\dfrac{1}{x^3}$'] },
-            { label: '$\\dfrac{1}{a^{-4}} =$', options: ['$a^4$', '$\\dfrac{1}{a^4}$', '$-a^4$', '$a^{-4}$'] },
+            { label: '$\\dfrac{1}{a^{-4}} =$', options: ['$a^4$', '$\\dfrac{1}{a^4}$', '$-a^4$', '$-\\dfrac{1}{a^4}$'] },
           ],
           correctAnswers: ['$\\dfrac{1}{25}$', '$\\dfrac{1}{x^3}$', '$a^4$'],
           hint1: '$5^{-2} = \\dfrac{1}{5^2} = \\dfrac{1}{25}$ — a positive fraction.',

@@ -55,7 +55,7 @@ $$= \\frac{4(2-i)}{(2+i)(2-i)} = \\frac{8-4i}{4+1} = \\frac{8-4i}{5} = \\frac{8}
         questions: [
           {
             question: 'What is $\\frac{5+i}{2+3i}$ in $a+bi$ form?',
-            options: ['$1 - i$', '$-1 - i$', '$1+i$', '$\\frac{13+13i}{13}$'],
+            options: ['$1 - i$', '$-1 - i$', '$1+i$', '$-1+i$'],
             correctAnswer: 0,
             explanation: 'Multiply by conjugate: $\\frac{(5+i)(2-3i)}{(2+3i)(2-3i)}=\\frac{10-15i+2i-3i^2}{4+9}=\\frac{10-13i+3}{13}=\\frac{13-13i}{13}=1-i$.'
           },

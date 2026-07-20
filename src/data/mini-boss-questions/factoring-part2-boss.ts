@@ -148,7 +148,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '$6x^{2}(2x + 3)$', isCorrect: true },
       { label: 'B', value: '$6x(2x^{2} + 3x)$', isCorrect: false, explanation: 'Didn\'t factor out complete GCF' },
-      { label: 'C', value: '$3x^{2}(4x + 6)$', isCorrect: false, explanation: 'Wrong GCF - should be $6x^{2}$' },
+      { label: 'C', value: '$6x^{2}(2x^{2} + 3)$', isCorrect: false, explanation: 'Dividing $12x^{3}$ by $6x^{2}$ leaves 2x, not $2x^{2}$' },
       { label: 'D', value: '$6x^{2}(2x + 18)$', isCorrect: false, explanation: 'Forgot to divide second term by $6x^{2}$' }
     ]
   },
@@ -173,7 +173,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
       { label: 'A', value: '$4a^{2}b(2ab + 3)$', isCorrect: true },
       { label: 'B', value: '$4ab(2a^{2}b + 3a)$', isCorrect: false, explanation: 'Didn\'t factor out complete GCF' },
       { label: 'C', value: '$4a^{2}b(2ab + 12)$', isCorrect: false, explanation: 'Forgot to divide second term by GCF' },
-      { label: 'D', value: '$2a^{2}b(4ab + 6)$', isCorrect: false, explanation: 'Wrong GCF - should be $4a^{2}b$' }
+      { label: 'D', value: '$4a^{2}b^{2}(2a + 3)$', isCorrect: false, explanation: '$b^{2}$ is not common to both terms - the second term only has b' }
     ]
   },
   {
@@ -196,7 +196,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '$15x^{4}(2x^{2} + 3)$', isCorrect: true },
       { label: 'B', value: '$15x^{2}(2x^{4} + 3x^{2})$', isCorrect: false, explanation: 'Didn\'t factor out complete GCF' },
-      { label: 'C', value: '$5x^{4}(6x^{2} + 9)$', isCorrect: false, explanation: 'Wrong GCF - should be $15x^{4}$' },
+      { label: 'C', value: '$15x^{4}(2x^{2} + 3x)$', isCorrect: false, explanation: 'Dividing $45x^{4}$ by $15x^{4}$ leaves 3, not 3x' },
       { label: 'D', value: '$15x^{4}(2x + 3)$', isCorrect: false, explanation: 'First term should be $2x^{2}$, not 2x' }
     ]
   },
@@ -209,7 +209,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
       { label: 'A', value: '$8p^{3}q^{3}(3p - 2q)$', isCorrect: true },
       { label: 'B', value: '$8pq(3p^{3}q^{2} - 2p^{2}q^{3})$', isCorrect: false, explanation: 'Didn\'t factor out complete GCF' },
       { label: 'C', value: '$8p^{3}q^{3}(3p + 2q)$', isCorrect: false, explanation: 'Sign error - should be subtraction' },
-      { label: 'D', value: '$4p^{3}q^{3}(6p - 4q)$', isCorrect: false, explanation: 'Wrong GCF - should be $8p^{3}q^{3}$' }
+      { label: 'D', value: '$8p^{3}q^{3}(3pq - 2)$', isCorrect: false, explanation: 'After dividing by the GCF, the terms are 3p and 2q, not 3pq and 2' }
     ]
   },
   {
@@ -219,7 +219,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
     correctAnswer: '12xy(3x - 4y + 5)',
     options: [
       { label: 'A', value: '12xy(3x - 4y + 5)', isCorrect: true },
-      { label: 'B', value: '6xy(6x - 8y + 10)', isCorrect: false, explanation: 'Wrong GCF - should be 12xy' },
+      { label: 'B', value: '12xy(3x - 4y)', isCorrect: false, explanation: '60xy ÷ 12xy = 5, not 0 - the third term doesn\'t disappear' },
       { label: 'C', value: '12xy(3x + 4y + 5)', isCorrect: false, explanation: 'Sign error - middle term should be negative' },
       { label: 'D', value: '12x(3xy - $4y^{2}$ + 5y)', isCorrect: false, explanation: 'Didn\'t factor out y from GCF' }
     ]
@@ -232,7 +232,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '$9r^{5}s^{3}(2r^{2} + 3s^{2})$', isCorrect: true },
       { label: 'B', value: '$9rs(2r^{6}s^{2} + 3r^{4}s^{4})$', isCorrect: false, explanation: 'Didn\'t factor out complete GCF' },
-      { label: 'C', value: '$3r^{5}s^{3}(6r^{2} + 9s^{2})$', isCorrect: false, explanation: 'Wrong GCF - should be $9r^{5}s^{3}$' },
+      { label: 'C', value: '$9r^{5}s^{5}(2r^{2} + 3)$', isCorrect: false, explanation: 'Use the smallest power of s that appears: $s^{3}$, not $s^{5}$' },
       { label: 'D', value: '$9r^{5}s^{3}(2r + 3s)$', isCorrect: false, explanation: 'Should be $2r^{2}$ and $3s^{2}$, not 2r and 3s' }
     ]
   },
@@ -256,7 +256,7 @@ export const gcfFactorQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '$10x^{3}(2x^{5} - 3x^{2} + 1)$', isCorrect: true },
       { label: 'B', value: '$10x(2x^{7} - 3x^{4} + x^{2})$', isCorrect: false, explanation: 'Didn\'t factor out complete GCF' },
-      { label: 'C', value: '$5x^{3}(4x^{5} - 6x^{2} + 2)$', isCorrect: false, explanation: 'Wrong GCF - should be $10x^{3}$' },
+      { label: 'C', value: '$10x^{3}(2x^{5} - 3x^{2})$', isCorrect: false, explanation: '$10x^{3}$ ÷ $10x^{3}$ = 1, not 0 - the last term becomes 1' },
       { label: 'D', value: '$10x^{3}(2x^{5} + 3x^{2} + 1)$', isCorrect: false, explanation: 'Sign error - middle term should be negative' }
     ]
   }
@@ -519,9 +519,9 @@ export const combinedQuestions: MiniBossQuestion[] = [
     correctAnswer: '2(x + 5)(x - 5)',
     options: [
       { label: 'A', value: '2(x + 5)(x - 5)', isCorrect: true },
-      { label: 'B', value: '(2x + 10)(x - 5)', isCorrect: false, explanation: 'Factor out GCF first, then use difference of squares' },
+      { label: 'B', value: '$2(x - 5)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
       { label: 'C', value: '$2(x^{2} - 25)$', isCorrect: false, explanation: 'Continue factoring - $x^{2}$ - 25 is difference of squares' },
-      { label: 'D', value: '(x + 5)(2x - 10)', isCorrect: false, explanation: 'Factor out GCF of 2 first' }
+      { label: 'D', value: '2(x + 25)(x - 25)', isCorrect: false, explanation: 'Take the square root of 25, which is 5, not 25' }
     ]
   },
   {
@@ -532,8 +532,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '3(x + 5)(x - 5)', isCorrect: true },
       { label: 'B', value: '$3(x^{2} - 25)$', isCorrect: false, explanation: 'Continue factoring - $x^{2}$ - 25 factors further' },
-      { label: 'C', value: '(3x + 15)(x - 5)', isCorrect: false, explanation: 'Factor out GCF first' },
-      { label: 'D', value: '(x + 5)(3x - 15)', isCorrect: false, explanation: 'Factor out GCF of 3 first' }
+      { label: 'C', value: '$3(x - 5)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
+      { label: 'D', value: '3(x + 25)(x - 25)', isCorrect: false, explanation: 'Take the square root of 25, which is 5, not 25' }
     ]
   },
   {
@@ -544,7 +544,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '5(x + 3)(x - 3)', isCorrect: true },
       { label: 'B', value: '$5(x^{2} - 9)$', isCorrect: false, explanation: 'Not completely factored - continue with difference of squares' },
-      { label: 'C', value: '(5x + 15)(x - 3)', isCorrect: false, explanation: 'Factor out GCF of 5 first' },
+      { label: 'C', value: '5(x + 9)(x - 9)', isCorrect: false, explanation: '$\\sqrt{9}$ = 3, so the factors use 3, not 9' },
       { label: 'D', value: '$5(x - 3)^{2}$', isCorrect: false, explanation: 'This would give $5(x^{2} - 6x + 9)$' }
     ]
   },
@@ -556,8 +556,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '4(x + 5)(x - 5)', isCorrect: true },
       { label: 'B', value: '$4(x^{2} - 25)$', isCorrect: false, explanation: 'Not completely factored' },
-      { label: 'C', value: '(2x + 10)(2x - 10)', isCorrect: false, explanation: 'Factor out GCF of 4 first' },
-      { label: 'D', value: '2(2x + 10)(x - 5)', isCorrect: false, explanation: 'Factor 4, not 2, and simplify properly' }
+      { label: 'C', value: '(2x + 5)(2x - 5)', isCorrect: false, explanation: 'This gives $4x^{2}$ - 25, not $4x^{2}$ - 100' },
+      { label: 'D', value: '$4(x - 5)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' }
     ]
   },
   {
@@ -568,7 +568,7 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '7(x + 3)(x - 3)', isCorrect: true },
       { label: 'B', value: '$7(x^{2} - 9)$', isCorrect: false, explanation: 'Must factor completely' },
-      { label: 'C', value: '(7x + 21)(x - 3)', isCorrect: false, explanation: 'Factor out GCF first' },
+      { label: 'C', value: '7(x + 9)(x - 9)', isCorrect: false, explanation: '$\\sqrt{9}$ = 3, so the factors use 3, not 9' },
       { label: 'D', value: '$7(x - 3)^{2}$', isCorrect: false, explanation: 'Need one + and one -' }
     ]
   },
@@ -580,8 +580,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '6(x + 4)(x - 4)', isCorrect: true },
       { label: 'B', value: '$6(x^{2} - 16)$', isCorrect: false, explanation: 'Continue factoring $x^{2}$ - 16' },
-      { label: 'C', value: '2(3x + 12)(x - 4)', isCorrect: false, explanation: 'Factor out complete GCF of 6' },
-      { label: 'D', value: '(6x + 24)(x - 4)', isCorrect: false, explanation: 'Factor out GCF of 6 first' }
+      { label: 'C', value: '$6(x - 4)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
+      { label: 'D', value: '6(x + 16)(x - 16)', isCorrect: false, explanation: 'Take the square root of 16, which is 4, not 16' }
     ]
   },
   {
@@ -592,8 +592,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '8(x + 2)(x - 2)', isCorrect: true },
       { label: 'B', value: '$8(x^{2} - 4)$', isCorrect: false, explanation: 'Not completely factored' },
-      { label: 'C', value: '4(2x + 4)(x - 2)', isCorrect: false, explanation: 'Factor out complete GCF of 8' },
-      { label: 'D', value: '(4x + 8)(2x - 4)', isCorrect: false, explanation: 'Factor out GCF first' }
+      { label: 'C', value: '$8(x - 2)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
+      { label: 'D', value: '8(x + 4)(x - 4)', isCorrect: false, explanation: '$\\sqrt{4}$ = 2, so the factors use 2, not 4' }
     ]
   },
   {
@@ -604,8 +604,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '9(x + 3)(x - 3)', isCorrect: true },
       { label: 'B', value: '$9(x^{2} - 9)$', isCorrect: false, explanation: 'Must factor $x^{2}$ - 9 further' },
-      { label: 'C', value: '3(3x + 9)(x - 3)', isCorrect: false, explanation: 'Factor out complete GCF of 9' },
-      { label: 'D', value: '(3x + 9)(3x - 9)', isCorrect: false, explanation: 'Factor out GCF of 9 first' }
+      { label: 'C', value: '$9(x - 3)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
+      { label: 'D', value: '9(x + 9)(x - 9)', isCorrect: false, explanation: 'Take the square root of 9, which is 3, not 9' }
     ]
   },
   {
@@ -616,8 +616,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '12(x + 2)(x - 2)', isCorrect: true },
       { label: 'B', value: '$12(x^{2} - 4)$', isCorrect: false, explanation: 'Continue factoring $x^{2}$ - 4' },
-      { label: 'C', value: '4(3x + 6)(x - 2)', isCorrect: false, explanation: 'Factor out complete GCF of 12' },
-      { label: 'D', value: '6(2x + 4)(x - 2)', isCorrect: false, explanation: 'Factor out complete GCF of 12' }
+      { label: 'C', value: '$12(x - 2)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
+      { label: 'D', value: '12(x + 4)(x - 4)', isCorrect: false, explanation: '$\\sqrt{4}$ = 2, so the factors use 2, not 4' }
     ]
   },
   {
@@ -628,8 +628,8 @@ export const combinedQuestions: MiniBossQuestion[] = [
     options: [
       { label: 'A', value: '10(x + 4)(x - 4)', isCorrect: true },
       { label: 'B', value: '$10(x^{2} - 16)$', isCorrect: false, explanation: 'Not completely factored' },
-      { label: 'C', value: '5(2x + 8)(x - 4)', isCorrect: false, explanation: 'Factor out complete GCF of 10' },
-      { label: 'D', value: '2(5x + 20)(x - 4)', isCorrect: false, explanation: 'Factor out complete GCF of 10' }
+      { label: 'C', value: '$10(x - 4)^{2}$', isCorrect: false, explanation: 'Difference of squares gives one + and one - factor' },
+      { label: 'D', value: '10(x + 16)(x - 16)', isCorrect: false, explanation: 'Take the square root of 16, which is 4, not 16' }
     ]
   }
 ]

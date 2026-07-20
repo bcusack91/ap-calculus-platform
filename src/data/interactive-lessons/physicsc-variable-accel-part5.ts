@@ -104,7 +104,7 @@ This problem would be extremely difficult to solve by integrating $a(t)$ directl
       id: 'varaccel5-mcq3',
       type: 'mcq' as const,
       question: 'A particle has $a(x) = 3x^2$ with $v(0) = 0$. What is the speed at $x = 2$?',
-      options: ['$4$ m/s', '$2\\sqrt{2}$ m/s', '$8$ m/s', '$\\sqrt{8}$ m/s'],
+      options: ['$4$ m/s', '$2\\sqrt{2}$ m/s', '$8$ m/s', '$16$ m/s'],
       correctAnswer: 0,
       explanation: '$v^2 = 0 + 2\\int_0^2 3x^2\\,dx = 2[x^3]_0^2 = 2(8) = 16$. So $v = 4$ m/s.'
     },

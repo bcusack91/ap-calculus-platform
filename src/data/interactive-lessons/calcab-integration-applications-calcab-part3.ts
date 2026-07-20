@@ -97,7 +97,7 @@ $V = \\pi\\int_0^1(x^2-x^4)dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\
           },
           {
             label: 'Rotate $y = x$ and $y = x^2$ about $y = -1$ on $[0,1]$. Outer radius:',
-            options: ['$x+1$', '$x^2+1$', '$x-(-1) = x+1$', '$1+x^2$'],
+            options: ['$x+1$', '$x^2+1$', '$x-(-1) = x+1$', '$x$'],
             correctAnswers: ['$x-(-1) = x+1$'],
             hints: ['Outer = farther curve from $y=-1$. On $[0,1]$: $x \\ge x^2$, so $x$ is farther from $y=-1$.'],
             explanation: '$R = x-(-1) = x+1$. $r = x^2+1$.'

@@ -260,7 +260,7 @@ You're evaluating $\\displaystyle\\lim_{x \\to 6} \\frac{x^2 - 36}{x - 6}$. Choo
         exercise: {
           dropdowns: [
             { label: 'Substitute $x = 6$ to check:', options: ['$\\frac{0}{0}$ — indeterminate', '$12$', '$\\frac{12}{0}$ — DNE', '$0$'] },
-            { label: 'Factor the numerator:', options: ['$(x-6)(x+6)$', '$(x-6)^2$', '$(x-36)(x+1)$', '$(x-6)(x-6)$'] },
+            { label: 'Factor the numerator:', options: ['$(x-6)(x+6)$', '$(x-6)^2$', '$(x-36)(x+1)$', '$(x+6)^2$'] },
             { label: 'Cancel the common factor:', options: ['$(x - 6)$', '$(x + 6)$', '$(x^2)$', 'nothing cancels'] },
             { label: 'The limit equals:', options: ['$12$', '$0$', '$6$', '$\\frac{0}{0}$'] },
           ],
