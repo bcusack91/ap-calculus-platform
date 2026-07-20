@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions } from '@/lib/competitive-utils'
+import { generateMatchQuestions, type MatchTier } from '@/lib/competitive-utils'
 import type { Prisma } from '@prisma/client'
 
 /**
@@ -20,6 +20,8 @@ export async function POST(req: NextRequest) {
 
     const body = await req.json()
     const { topicSlug, gameMode, aiDifficulty = 'medium' } = body
+    // Optional question-difficulty tier (distinct from aiDifficulty = bot strength)
+    const tier: MatchTier | undefined = ['easy', 'medium', 'hard'].includes(body.tier) ? body.tier : undefined
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
@@ -90,7 +92,7 @@ export async function POST(req: NextRequest) {
         getOrCreateAIBot('ai-opponent-2@studyai.com', 'AI Opponent 2'),
       ])
 
-      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs, tier)
 
       const team1Players = [user.id, aiTeammate.id]
       const team2Players = [aiOpp1.id, aiOpp2.id]
@@ -134,6 +136,7 @@ export async function POST(req: NextRequest) {
             player2QuestionIndex: 0,
             aiDifficulty,
             isPracticeMatch: true,
+            ...(tier ? { tier } : {}),
           } as unknown as Prisma.InputJsonValue,
         }
       })
@@ -148,7 +151,7 @@ export async function POST(req: NextRequest) {
     // ---- Standard 1v1 match ----
     const aiOpponent = await getOrCreateAIBot('ai-opponent@studyai.com', 'AI Practice Bot')
     const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
-    const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
+    const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
     
     const competitiveMatch = await prisma.competitiveMatch.create({
       data: {
@@ -170,6 +173,7 @@ export async function POST(req: NextRequest) {
           player2QuestionIndex: 0,
           aiDifficulty,
           isPracticeMatch: true,
+          ...(tier ? { tier } : {}),
         } as unknown as Prisma.InputJsonValue,
       }
     })

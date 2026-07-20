@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions } from '@/lib/competitive-utils'
+import { generateMatchQuestions, type MatchTier } from '@/lib/competitive-utils'
 import { Prisma } from '@prisma/client'
 
 /**
@@ -20,6 +20,9 @@ export async function POST(req: NextRequest) {
 
     const body = await req.json()
     const topicSlug = typeof body.topicSlug === 'string' ? body.topicSlug : 'cumulative'
+    // Optional question-difficulty tier — used by the claiming joiner only
+    // (MatchmakingQueue has no tier column; no migration).
+    const tier: MatchTier | undefined = ['easy', 'medium', 'hard'].includes(body.tier) ? body.tier : undefined
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
@@ -101,7 +104,7 @@ export async function POST(req: NextRequest) {
       const team1 = [allPlayers[0], allPlayers[3]] // highest + lowest
       const team2 = [allPlayers[1], allPlayers[2]] // 2nd + 3rd
 
-      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs, tier)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
@@ -141,6 +144,7 @@ export async function POST(req: NextRequest) {
             playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
+            ...(tier ? { tier } : {}),
           } as unknown as Prisma.InputJsonValue,
         },
       })

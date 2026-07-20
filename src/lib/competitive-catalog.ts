@@ -76,6 +76,16 @@ export const COMPETITIVE_COURSE_CATEGORIES: CompetitiveCourseCategory[] = [
       { slug: 'ap-csp', categoryKey: 'ap-csp', emoji: '🖥️', name: 'AP CS Principles', desc: 'Data, Internet & Cybersecurity', gradient: 'from-cyan-500 to-blue-500' },
     ],
   },
+  {
+    id: 'test-prep',
+    label: 'Test Prep',
+    icon: '📝',
+    courses: [
+      // 'sat' has no DB Course row — the course-topics API special-cases it and
+      // returns the 4 SAT competitive banks as synthetic topics.
+      { slug: 'sat', categoryKey: 'sat', emoji: '📝', name: 'SAT Prep', desc: 'Math, Reading & Punctuation', gradient: 'from-blue-600 to-cyan-600' },
+    ],
+  },
 ]
 
 export const COMPETITIVE_COURSES: CompetitiveCourse[] = COMPETITIVE_COURSE_CATEGORIES.flatMap(c => c.courses)

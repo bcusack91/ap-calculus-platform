@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     if (!parsed.success) {
       return NextResponse.json({ error: parsed.error }, { status: 400 })
     }
-    const { topicSlug, gameMode } = parsed.data
+    const { topicSlug, gameMode, tier } = parsed.data
 
     const user = await prisma.user.findUnique({
       where: { email: session.user.email },
@@ -132,7 +132,10 @@ export async function POST(req: NextRequest) {
       // suspenders: scope the delete by id so it only removes the row we locked.)
       await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
 
-      const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
+      // Tier (question-difficulty mix) comes from the claiming joiner — the
+      // MatchmakingQueue row has no tier column (and we don't migrate), so a
+      // waiting opponent's tier preference can't be recalled here.
+      const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,
@@ -151,6 +154,7 @@ export async function POST(req: NextRequest) {
             questions,
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
+            ...(tier ? { tier } : {}),
           } as unknown as Prisma.InputJsonValue,
         },
       })

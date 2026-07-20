@@ -10,6 +10,8 @@ interface AsyncChallengeButtonProps {
   questionCount?: number
   /** Time limit in seconds. Defaults to 300. */
   timeLimit?: number
+  /** Optional question-difficulty tier (bank-backed topics only). */
+  tier?: 'easy' | 'medium' | 'hard'
   /** Optional className overriding the default button gradient. */
   className?: string
   /** Optional helper text rendered below the button. */
@@ -28,6 +30,7 @@ export default function AsyncChallengeButton({
   topicSlug,
   questionCount = 10,
   timeLimit = 300,
+  tier,
   className,
   helperText,
 }: AsyncChallengeButtonProps) {
@@ -43,7 +46,7 @@ export default function AsyncChallengeButton({
       const res = await fetch('/api/competitive/async-challenge', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug, questionCount, timeLimit }),
+        body: JSON.stringify({ topicSlug, questionCount, timeLimit, ...(tier ? { tier } : {}) }),
       })
       const data = await res.json()
       if (!res.ok || !data.challengeId) {

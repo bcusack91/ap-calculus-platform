@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS, type Algebra2Subtopic } from '@/data/competitive-questions/algebra2-bank'
 import { isCompetitiveFullUnlock } from '@/lib/admin-unlock'
+import { satBankSlugsForCourseTopic, type SatBankSlug } from '@/lib/sat-topic-map'
 
 /**
  * Check if user has unlocked competitive mode
@@ -134,6 +135,11 @@ export async function GET() {
       cats.forEach(c => grantedCategories.add(c))
     }
 
+    // SAT: progress on any sat-prep curriculum topic (lesson, exit quiz, …)
+    // unlocks the matching SAT bank category via the shared course-topic map.
+    const satUnlockedViaProgress = (bank: SatBankSlug) =>
+      allProgressSlugs.some(s => (satBankSlugsForCourseTopic(s) ?? []).includes(bank))
+
     // Map topic slugs to competitive categories
     // A competitive category is available if the user has progress in at least one matching topic
     // OR if a teacher granted access to that category
@@ -161,10 +167,10 @@ export async function GET() {
         s.includes('exponential-functions') || s.includes('complex-numbers') ||
         s.includes('logarithm')
       ),
-      'sat-punctuation-commas-semicolons': grantAllCategories || grantedCategories.has('sat-punctuation-commas-semicolons') || allProgressSlugs.some(s =>
+      'sat-punctuation-commas-semicolons': grantAllCategories || grantedCategories.has('sat-punctuation-commas-semicolons') || uniqueDiagnosticSlugs.includes('sat-punctuation') || satUnlockedViaProgress('sat-punctuation-commas-semicolons') || allProgressSlugs.some(s =>
         s.includes('sat-punctuation-commas-semicolons')
       ),
-      'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || uniqueDiagnosticSlugs.includes('sat-punctuation') || allProgressSlugs.some(s =>
+      'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || uniqueDiagnosticSlugs.includes('sat-punctuation') || satUnlockedViaProgress('sat-punctuation') || allProgressSlugs.some(s =>
         s.includes('sat-punctuation')
       ),
       'parametric-equations': grantAllCategories || grantedCategories.has('parametric-equations') || allProgressSlugs.some(s =>
@@ -191,10 +197,10 @@ export async function GET() {
       'ap-physics1': grantAllCategories || grantedCategories.has('ap-physics1') || uniqueDiagnosticSlugs.includes('ap-physics1') || allProgressSlugs.some(s =>
         s.includes('ap-physics') || s.includes('physics1') || s.includes('kinematics') || s.includes('newtons-laws')
       ),
-      'sat-math': grantAllCategories || grantedCategories.has('sat-math') || uniqueDiagnosticSlugs.includes('sat-math') || allProgressSlugs.some(s =>
+      'sat-math': grantAllCategories || grantedCategories.has('sat-math') || uniqueDiagnosticSlugs.includes('sat-math') || satUnlockedViaProgress('sat-math') || allProgressSlugs.some(s =>
         s.includes('sat-math') || s.includes('sat-algebra') || s.includes('sat-problem-solving')
       ),
-      'sat-reading': grantAllCategories || grantedCategories.has('sat-reading') || uniqueDiagnosticSlugs.includes('sat-reading') || allProgressSlugs.some(s =>
+      'sat-reading': grantAllCategories || grantedCategories.has('sat-reading') || uniqueDiagnosticSlugs.includes('sat-reading') || satUnlockedViaProgress('sat-reading') || allProgressSlugs.some(s =>
         s.includes('sat-reading') || s.includes('sat-writing') || s.includes('sat-evidence')
       ),
       'act-math': grantAllCategories || grantedCategories.has('act-math') || uniqueDiagnosticSlugs.includes('act-math') || allProgressSlugs.some(s =>
@@ -267,6 +273,14 @@ export async function GET() {
         s.includes('ap-csp') || s.includes('computer-science-principles') || s.includes('digital-information')
       ),
     }
+
+    // Derived hub-card key: the SAT course card unlocks when ANY of its 4 bank
+    // categories is unlocked (the /competitive/sat page then gates per-bank).
+    competitiveCategories['sat'] =
+      competitiveCategories['sat-math'] ||
+      competitiveCategories['sat-reading'] ||
+      competitiveCategories['sat-punctuation'] ||
+      competitiveCategories['sat-punctuation-commas-semicolons']
 
     // Compute which specific Algebra 2 subtopics are unlocked
     const unlockedAlgebra2Subtopics = isAdminFullUnlock

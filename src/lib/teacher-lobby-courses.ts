@@ -142,6 +142,22 @@ async function getApPsychologyQuestions(count?: number, topicSlug?: string): Pro
   const m = await import('@/data/competitive-questions/ap-psychology-bank')
   return (m.getApPsychologyQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
 }
+async function getSatMathQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/sat-math-bank')
+  return (m.getSatMathQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
+async function getSatReadingQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/sat-reading-bank')
+  return (m.getSatReadingQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
+async function getSatPunctuationQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/sat-punctuation-bank')
+  return (m.getSatPunctuationQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
+async function getSatPunctuationGeneralQuestions(count?: number): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/sat-punctuation-general-bank')
+  return (m.getSatPunctuationGeneralQuestions as (...a: unknown[]) => unknown[])(count) as unknown as AnyQuestion[]
+}
 
 
 /** Wrap a bank getter that supports topicSlug. Passes the slug through. */
@@ -180,6 +196,38 @@ function untagged(
       difficulty: q.difficulty,
       topicSlug: 'general',
     }))
+  }
+}
+
+/**
+ * SAT adapter: combines the 4 SAT banks under one course, tagging each bank's
+ * questions with its competitive pseudo-slug (the banks themselves don't tag a
+ * topicSlug) so the lobby topic picker can offer Math / Reading / Punctuation.
+ */
+const SAT_BANKS: { slug: string; getter: (count?: number) => Promise<AnyQuestion[]> }[] = [
+  { slug: 'sat-math', getter: getSatMathQuestions },
+  { slug: 'sat-reading', getter: getSatReadingQuestions },
+  { slug: 'sat-punctuation-commas-semicolons', getter: getSatPunctuationQuestions },
+  { slug: 'sat-punctuation', getter: getSatPunctuationGeneralQuestions },
+]
+
+function satAdapter(): CourseRegistryEntry['getQuestions'] {
+  return async (count, topic) => {
+    const banks = topic ? SAT_BANKS.filter(b => b.slug === topic) : SAT_BANKS
+    const out: TeacherLobbyQuestion[] = []
+    for (const bank of banks) {
+      const qs = await bank.getter(count)
+      out.push(...qs.map(q => ({
+        id: `${bank.slug}-${q.id}`,
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation,
+        difficulty: q.difficulty,
+        topicSlug: bank.slug,
+      })))
+    }
+    return out.slice(0, Math.max(count, 1))
   }
 }
 
@@ -241,6 +289,9 @@ const COURSES: CourseRegistryEntry[] = [
   // Computer Science
   { slug: 'ap-csa', name: 'AP Computer Science A', getQuestions: topicTagged(getApCSAQuestions) },
   { slug: 'ap-csp', name: 'AP CS Principles', getQuestions: topicTagged(getApCSPQuestions) },
+
+  // Test Prep
+  { slug: 'sat-prep', name: 'SAT Prep', getQuestions: satAdapter() },
 ]
 
 export function listSupportedCourses(): { slug: string; name: string }[] {
@@ -270,8 +321,17 @@ export async function getCourseTopics(slug: string): Promise<{ slug: string; tit
     .sort((a, b) => a.title.localeCompare(b.title))
 }
 
+// Bank pseudo-slugs whose display names aren't derivable from the slug.
+const SPECIAL_TOPIC_TITLES: Record<string, string> = {
+  'sat-math': 'SAT Math',
+  'sat-reading': 'SAT Reading',
+  'sat-punctuation-commas-semicolons': 'SAT Punctuation: Commas & Semicolons',
+  'sat-punctuation': 'SAT Punctuation: All Marks',
+}
+
 function prettifyTopicSlug(slug: string): string {
   if (slug === 'general') return 'All Topics'
+  if (SPECIAL_TOPIC_TITLES[slug]) return SPECIAL_TOPIC_TITLES[slug]
   return slug
     .replace(/-(geometry|algebra1|alg1|geo|calcab|calcbc)$/i, '')
     .split('-')

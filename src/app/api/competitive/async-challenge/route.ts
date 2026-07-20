@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions } from '@/lib/competitive-utils'
+import { generateMatchQuestions, type MatchTier } from '@/lib/competitive-utils'
 
 /**
  * POST — Create a new async challenge (challenger starts playing immediately)
@@ -22,6 +22,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'topicSlug is required' }, { status: 400 })
     }
 
+    // Optional question-difficulty tier. Both players replay the SAME stored
+    // question set, so baking the tier into generation is all the persistence
+    // this flow needs.
+    const tier: MatchTier | undefined = ['easy', 'medium', 'hard'].includes(body.tier) ? body.tier : undefined
+
     // Optional pre-targeted recipient (used by Rematch). Must be a different user.
     let targetRecipientId: string | null = null
     if (recipientId && typeof recipientId === 'string' && recipientId !== session.user.id) {
@@ -33,7 +38,7 @@ export async function POST(request: NextRequest) {
     const safeTimeLimit = Math.min(Math.max(Number(timeLimit) || 300, 60), 900)
 
     // Generate questions (same function used for live matches)
-    const questions = await generateMatchQuestions(safeQuestionCount, topicSlug, [])
+    const questions = await generateMatchQuestions(safeQuestionCount, topicSlug, [], tier)
 
     // Challenge expires in 7 days
     const expiresAt = new Date()

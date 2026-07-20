@@ -7,6 +7,7 @@ import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard
 import { regradeExitQuiz } from '@/lib/exit-quiz-regrade'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
+import { satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
 
 // Bounded payload: quizzes are 10 questions (score = number correct), but allow
 // headroom up to 100. answers mirrors the client shape
@@ -117,20 +118,12 @@ export async function POST(request: Request) {
 
       // If passed, unlock competitive mode for the relevant category
       if (passed) {
-        // Map topic slugs to competitive category slugs
-        const topicToCategoryMap: Record<string, string[]> = {
-          'sat-linear-equations-inequalities': ['algebra'],
-          'sat-quadratic-equations': ['algebra'],
-          'sat-functions': ['advanced-math'],
-          'sat-exponents-radicals': ['advanced-math'],
-          'sat-ratios-proportions-percents': ['problem-solving'],
-          'sat-statistics-data-interpretation': ['problem-solving'],
-          'sat-exponential-functions': ['advanced-math'],
-          'sat-circles': ['additional-topics'],
-          'sat-complex-numbers': ['advanced-math'],
-        }
-
-        const categories = topicToCategoryMap[topicSlug] || []
+        // Map topic slugs to competitive category slugs. SAT topics resolve to
+        // the SAT bank category keys ('sat-math' / 'sat-reading' / the two
+        // punctuation banks) via the shared sat-topic-map — the same keys
+        // unlock-check gates on. (The old inline map pointed SAT topics at
+        // nonexistent categories like 'advanced-math'.)
+        const categories: string[] = satBankSlugsForCourseTopic(topicSlug) ?? []
 
         // Ensure user has a CompetitiveProfile
         await tx.competitiveProfile.upsert({
