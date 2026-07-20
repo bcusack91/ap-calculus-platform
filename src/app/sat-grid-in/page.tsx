@@ -29,9 +29,23 @@ export default function SATGridInPage() {
     return () => { active = false }
   }, [])
 
+  // The real digital SAT accepts fraction entries (e.g. "3/4") for
+  // student-produced responses — parse them instead of letting
+  // parseFloat("3/4") silently truncate to 3.
+  function parseStudentAnswer(raw: string): number {
+    const s = raw.trim()
+    const frac = s.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/)
+    if (frac) {
+      const den = parseFloat(frac[2])
+      if (den === 0) return NaN
+      return parseFloat(frac[1]) / den
+    }
+    return parseFloat(s)
+  }
+
   async function handleSubmit() {
     if (!current || result) return
-    const num = parseFloat(inputValue)
+    const num = parseStudentAnswer(inputValue)
     if (isNaN(num)) return
     const { checkGridInAnswer } = await loadGridIn()
     const isCorrect = checkGridInAnswer(current, num)

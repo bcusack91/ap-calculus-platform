@@ -13,7 +13,7 @@ import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 /* ------------------------------------------------------------------ */
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string) => any[] }>
+type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard') => any[] }>
 
 const quizLoaders: Record<string, QuizLoader> = {
   // Original math
@@ -1033,17 +1033,23 @@ function stableQuestionId(topicSlug: string, question: string, options: string[]
   return `${topicSlug}#${(h >>> 0).toString(36)}`
 }
 
+export type ExitQuizDifficulty = 'easy' | 'medium' | 'hard'
+
 /**
  * Generate an exit quiz for a given topic slug.
  * Dynamically loads only the requested question pool on demand.
+ *
+ * `difficulty` filters to a tier where the pool supports it (SAT pools tag
+ * every template). Pools that ignore the extra argument behave exactly as
+ * before, so passing a difficulty is always safe.
  */
-export async function generateExitQuiz(topicSlug: string, count: number = 10): Promise<ExitQuizQuestion[]> {
+export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty): Promise<ExitQuizQuestion[]> {
   const loader = quizLoaders[topicSlug]
   if (!loader) {
     throw new Error(`No exit quiz found for topic: ${topicSlug}`)
   }
   const mod = await loader()
-  const questions = mod.generateExitQuiz(count, topicSlug)
+  const questions = mod.generateExitQuiz(count, topicSlug, difficulty)
   return questions.map((q) => ({
     ...q,
     id: stableQuestionId(

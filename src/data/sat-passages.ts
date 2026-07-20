@@ -1284,6 +1284,26 @@ export function getPassages(count: number): ReadingPassage[] {
  * Get passages balanced across genres.
  * Returns approximately equal numbers from each genre.
  */
+/**
+ * Returns a copy of the passage with each question's options shuffled and its
+ * correctAnswer index recomputed. The authored bank is heavily biased toward
+ * option B (52 of 62 keys), so serving authored order makes "always pick B"
+ * score ~84% — every graded consumer must go through this.
+ */
+export function withShuffledOptions(p: ReadingPassage): ReadingPassage {
+  return {
+    ...p,
+    questions: p.questions.map((q) => {
+      const order = shuffle(q.options.map((_, i) => i))
+      return {
+        ...q,
+        options: order.map((i) => q.options[i]),
+        correctAnswer: order.indexOf(q.correctAnswer),
+      }
+    }),
+  }
+}
+
 export function getBalancedPassages(count: number): ReadingPassage[] {
   const genres: ReadingPassage['genre'][] = ['literary', 'social-science', 'natural-science', 'historical']
   const perGenre = Math.ceil(count / genres.length)
@@ -1292,5 +1312,5 @@ export function getBalancedPassages(count: number): ReadingPassage[] {
     const pool = shuffle(getPassagesByGenre(genre))
     result.push(...pool.slice(0, perGenre))
   }
-  return shuffle(result).slice(0, count)
+  return shuffle(result).slice(0, count).map(withShuffledOptions)
 }

@@ -567,7 +567,77 @@ async function getApSlugToGetter(): Promise<Map<string, ApBankGetter>> {
   return map
 }
 
-export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): Promise<MatchQuestion[]> {
+export type MatchTier = 'easy' | 'medium' | 'hard'
+
+/**
+ * Difficulty mix per match tier (owner spec): harder tiers include easier
+ * warm-up questions. At 10 questions, hard = 2 easy + 3 medium + 5 hard;
+ * other counts allocate proportionally (largest-remainder, deterministic).
+ */
+const TIER_MIX: Record<MatchTier, { easy: number; medium: number; hard: number }> = {
+  easy: { easy: 1, medium: 0, hard: 0 },
+  medium: { easy: 0.3, medium: 0.7, hard: 0 },
+  hard: { easy: 0.2, medium: 0.3, hard: 0.5 },
+}
+
+// Shortfall spill order: when a tier's pool runs dry, borrow from these.
+const TIER_SPILL: Record<MatchTier, MatchTier[]> = {
+  easy: ['medium', 'hard'],
+  medium: ['easy', 'hard'],
+  hard: ['medium', 'easy'],
+}
+
+function fisherYates<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+/**
+ * Draw `count` questions from `pool` honoring the tier's difficulty mix.
+ * Untagged questions count as medium. Result is ordered as a ramp
+ * (easy → medium → hard) so matches start with warm-ups.
+ */
+export function pickTieredQuestions<T extends { difficulty?: unknown }>(pool: T[], count: number, tier: MatchTier): T[] {
+  const buckets: Record<MatchTier, T[]> = { easy: [], medium: [], hard: [] }
+  for (const q of pool) {
+    const d = q.difficulty === 'easy' || q.difficulty === 'hard' ? q.difficulty : 'medium'
+    buckets[d].push(q)
+  }
+  ;(Object.keys(buckets) as MatchTier[]).forEach((k) => { buckets[k] = fisherYates(buckets[k]) })
+
+  // Largest-remainder allocation of count across the mix weights
+  const weights = TIER_MIX[tier]
+  const alloc = (Object.entries(weights) as [MatchTier, number][]).map(([k, w]) => {
+    const exact = count * w
+    return { k, n: Math.floor(exact), frac: exact - Math.floor(exact) }
+  })
+  let remaining = count - alloc.reduce((s, a) => s + a.n, 0)
+  for (const a of [...alloc].sort((x, y) => y.frac - x.frac)) {
+    if (remaining <= 0) break
+    a.n++
+    remaining--
+  }
+
+  const picked: Record<MatchTier, T[]> = { easy: [], medium: [], hard: [] }
+  for (const { k, n } of alloc) picked[k] = buckets[k].splice(0, n)
+  // Spill shortfalls into adjacent tiers so small banks still fill the match
+  for (const { k, n } of alloc) {
+    let short = n - picked[k].length
+    for (const donor of TIER_SPILL[k]) {
+      if (short <= 0) break
+      const extra = buckets[donor].splice(0, short)
+      picked[k].push(...extra)
+      short -= extra.length
+    }
+  }
+  return [...picked.easy, ...picked.medium, ...picked.hard].slice(0, count)
+}
+
+export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[], tier?: MatchTier): Promise<MatchQuestion[]> {
   // Generic AP per-topic routing (runs first): if the selected slug is a
   // canonical topic of any AP bank, return exactly that topic's questions. This
   // covers every AP course uniformly. Course-level grouping slugs (whole-unit /
@@ -1005,7 +1075,11 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
-    const questions = await mcqBanks[topicSlug](totalQuestions)
+    // With a tier, fetch the whole bank so the difficulty mix can be honored;
+    // without one, behavior is unchanged.
+    const questions = tier
+      ? pickTieredQuestions(await mcqBanks[topicSlug](10000), totalQuestions, tier)
+      : await mcqBanks[topicSlug](totalQuestions)
     return questions.map((q: OptionQuestion, i: number) => {
       const shuffled = shuffleOptions(q)
       return {

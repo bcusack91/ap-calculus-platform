@@ -118,6 +118,7 @@ async function generateSectionQuestions(
   slugs: string[],
   count: number,
   section: SATSectionType,
+  usedQuestionTexts?: Set<string>,
 ): Promise<SATTestQuestion[]> {
   const questionsPerSlug = Math.ceil(count / slugs.length)
   const pool: SATTestQuestion[] = []
@@ -126,6 +127,9 @@ async function generateSectionQuestions(
     try {
       const questions = await generateExitQuiz(slug, questionsPerSlug)
       for (const q of questions) {
+        // Static pools (all R&W) can serve the same item to both modules of a
+        // test — skip anything an earlier module already used.
+        if (usedQuestionTexts?.has(q.question)) continue
         pool.push({
           ...q,
           section,
@@ -137,8 +141,10 @@ async function generateSectionQuestions(
     }
   }
 
-  // Shuffle and take exactly count
-  return shuffle(pool).slice(0, count)
+  // Shuffle, take exactly count, and record what this module consumed
+  const picked = shuffle(pool).slice(0, count)
+  if (usedQuestionTexts) for (const q of picked) usedQuestionTexts.add(q.question)
+  return picked
 }
 
 /**
@@ -177,17 +183,22 @@ function passagesToTestQuestions(passages: ReadingPassage[]): SATTestQuestion[] 
 async function generateRWQuestions(
   count: number,
   passageCount: number,
+  dedupe?: { usedQuestionTexts: Set<string>; usedPassageIds: Set<string> },
 ): Promise<SATTestQuestion[]> {
   const rwSlugs = [...RW_READING_SLUGS, ...RW_WRITING_SLUGS]
 
-  // Get passage-based questions
-  const passages = getBalancedPassages(passageCount)
-  const passageQs = passagesToTestQuestions(passages)
+  // Get passage-based questions. Over-draw so that after excluding passages an
+  // earlier module already used we still have enough (the bank holds 60).
+  const candidates = getBalancedPassages(passageCount * 2 + 4)
+    .filter((p) => !dedupe?.usedPassageIds.has(p.id))
+    .slice(0, passageCount)
+  if (dedupe) for (const p of candidates) dedupe.usedPassageIds.add(p.id)
+  const passageQs = passagesToTestQuestions(candidates)
 
   // Get remaining from exit quiz pools
   const remaining = count - passageQs.length
   const poolQs = remaining > 0
-    ? await generateSectionQuestions(rwSlugs, remaining, 'reading-writing')
+    ? await generateSectionQuestions(rwSlugs, remaining, 'reading-writing', dedupe?.usedQuestionTexts)
     : []
 
   return shuffle([...passageQs, ...poolQs]).slice(0, count)
@@ -306,6 +317,10 @@ export function analyzePerformance(
  * Generate a full-length SAT practice test (98 questions, 134 minutes).
  */
 export async function generateFullTest(testNumber: number): Promise<SATFullTest> {
+  // Shared across all four modules so the same passage or pool question can
+  // never appear twice within one test.
+  const dedupe = { usedQuestionTexts: new Set<string>(), usedPassageIds: new Set<string>() }
+
   // Each R&W module gets ~8 passage-based questions (out of 27)
   const sections: SATTestSection[] = [
     {
@@ -315,7 +330,7 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 1,
       questionCount: 27,
       timeLimitSeconds: 32 * 60, // 32 minutes
-      questions: await generateRWQuestions(27, 8),
+      questions: await generateRWQuestions(27, 8, dedupe),
     },
     {
       id: 'rw-2',
@@ -324,7 +339,7 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 2,
       questionCount: 27,
       timeLimitSeconds: 32 * 60,
-      questions: await generateRWQuestions(27, 8),
+      questions: await generateRWQuestions(27, 8, dedupe),
     },
     {
       id: 'math-1',
@@ -333,7 +348,7 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 1,
       questionCount: 22,
       timeLimitSeconds: 35 * 60, // 35 minutes
-      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math'),
+      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math', dedupe.usedQuestionTexts),
     },
     {
       id: 'math-2',
@@ -342,7 +357,7 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 2,
       questionCount: 22,
       timeLimitSeconds: 35 * 60,
-      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math'),
+      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math', dedupe.usedQuestionTexts),
     },
   ]
 

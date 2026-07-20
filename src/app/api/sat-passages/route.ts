@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { SAT_PASSAGES } from '@/data/sat-passages'
+import { SAT_PASSAGES, withShuffledOptions } from '@/data/sat-passages'
 
 /**
  * GET /api/sat-passages?id=<passageId>
@@ -31,5 +31,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Passage not found' }, { status: 404 })
   }
 
-  return NextResponse.json({ passage }, { headers: CACHE_HEADERS })
+  // Shuffle options server-side: the authored bank keys ~84% of questions to
+  // option B, so serving authored order makes the answer position predictable.
+  // One shuffle per cache period is fine — the goal is breaking the fixed slot.
+  return NextResponse.json({ passage: withShuffledOptions(passage) }, { headers: CACHE_HEADERS })
 }

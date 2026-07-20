@@ -8,22 +8,29 @@
 
 import { generateExitQuiz, type ExitQuizQuestion } from '@/data/exit-quizzes'
 
-// All available SAT exit-quiz slugs, split by section
+// All available SAT exit-quiz slugs, split by section.
+// Every entry MUST exist in the exit-quiz registry (src/data/exit-quizzes/index.ts
+// quizLoaders) — generateExitQuiz throws on unknown slugs.
 const MATH_SLUGS = [
-  'sat-linear-equations',
-  'sat-linear-inequalities',
-  'sat-systems-equations',
+  'sat-linear-equations-inequalities',
+  'sat-linear-inequalities-graphs',
+  'sat-systems-linear-equations',
   'sat-quadratic-equations',
-  'sat-functions-graphs',
+  'sat-functions',
   'sat-exponents-radicals',
+  'sat-exponential-functions',
   'sat-polynomials-factoring',
-  'sat-statistics-data',
+  'sat-polynomial-rational-expressions',
+  'sat-nonlinear-equations-functions',
+  'sat-statistics-data-interpretation',
+  'sat-data-statistics',
+  'sat-scatterplots-line-fit',
+  'sat-probability-two-way-tables',
+  'sat-ratios-proportions-percents',
   'sat-geometry-trigonometry',
-  'sat-circles-complex-numbers',
-  'sat-word-problems',
-  'sat-calculator-strategy',
-  'sat-passport-advanced-math',
-  'sat-problem-solving-data',
+  'sat-geometry-basics',
+  'sat-circles',
+  'sat-complex-numbers',
 ]
 
 const RW_SLUGS = [
@@ -32,20 +39,23 @@ const RW_SLUGS = [
   'sat-sentence-structure',
   'sat-effective-language-use',
   'sat-grammar-conventions',
+  'sat-grammar-usage',
+  'sat-punctuation',
   'sat-punctuation-commas-semicolons',
-  'sat-transitions',
+  'sat-pronoun-agreement',
+  'sat-subject-verb-agreement',
+  'sat-transitions-organization',
+  'sat-conciseness-redundancy',
   'sat-central-ideas-details',
   'sat-command-evidence',
   'sat-finding-textual-evidence',
-  'sat-expression-ideas',
-  'sat-reading-writing-strategy',
 ]
 
+// UTC so the question flips at the same moment as the date the API reports.
 function dayOfYear(): number {
   const now = new Date()
-  const start = new Date(now.getFullYear(), 0, 0)
-  const diff = now.getTime() - start.getTime()
-  return Math.floor(diff / (1000 * 60 * 60 * 24))
+  const startUtc = Date.UTC(now.getUTCFullYear(), 0, 0)
+  return Math.floor((now.getTime() - startUtc) / (1000 * 60 * 60 * 24))
 }
 
 export interface DailyQuestion {
@@ -66,14 +76,14 @@ export const DOMAIN_TO_DAILY_SLUGS: Record<string, { section: 'math' | 'reading-
   comprehension: { section: 'reading-writing', slugs: ['sat-reading-comprehension', 'sat-central-ideas-details'] },
   evidence: { section: 'reading-writing', slugs: ['sat-command-evidence', 'sat-finding-textual-evidence'] },
   vocabulary: { section: 'reading-writing', slugs: ['sat-vocabulary-context'] },
-  grammar: { section: 'reading-writing', slugs: ['sat-grammar-conventions'] },
-  expression: { section: 'reading-writing', slugs: ['sat-effective-language-use', 'sat-transitions', 'sat-expression-ideas'] },
-  punctuation: { section: 'reading-writing', slugs: ['sat-punctuation-commas-semicolons', 'sat-sentence-structure'] },
-  algebra: { section: 'math', slugs: ['sat-linear-equations', 'sat-linear-inequalities', 'sat-systems-equations'] },
-  'advanced-math': { section: 'math', slugs: ['sat-quadratic-equations', 'sat-polynomials-factoring', 'sat-passport-advanced-math'] },
-  functions: { section: 'math', slugs: ['sat-functions-graphs', 'sat-exponents-radicals'] },
-  'problem-solving': { section: 'math', slugs: ['sat-statistics-data', 'sat-problem-solving-data', 'sat-word-problems'] },
-  geometry: { section: 'math', slugs: ['sat-geometry-trigonometry', 'sat-circles-complex-numbers'] },
+  grammar: { section: 'reading-writing', slugs: ['sat-grammar-conventions', 'sat-grammar-usage', 'sat-subject-verb-agreement', 'sat-pronoun-agreement'] },
+  expression: { section: 'reading-writing', slugs: ['sat-effective-language-use', 'sat-transitions-organization', 'sat-conciseness-redundancy'] },
+  punctuation: { section: 'reading-writing', slugs: ['sat-punctuation', 'sat-punctuation-commas-semicolons', 'sat-sentence-structure'] },
+  algebra: { section: 'math', slugs: ['sat-linear-equations-inequalities', 'sat-linear-inequalities-graphs', 'sat-systems-linear-equations'] },
+  'advanced-math': { section: 'math', slugs: ['sat-quadratic-equations', 'sat-polynomials-factoring', 'sat-polynomial-rational-expressions', 'sat-nonlinear-equations-functions'] },
+  functions: { section: 'math', slugs: ['sat-functions', 'sat-exponents-radicals', 'sat-exponential-functions'] },
+  'problem-solving': { section: 'math', slugs: ['sat-statistics-data-interpretation', 'sat-data-statistics', 'sat-scatterplots-line-fit', 'sat-probability-two-way-tables', 'sat-ratios-proportions-percents'] },
+  geometry: { section: 'math', slugs: ['sat-geometry-trigonometry', 'sat-geometry-basics', 'sat-circles', 'sat-complex-numbers'] },
 }
 
 /**
@@ -95,18 +105,26 @@ export async function getDailyQuestions(
   const mathSlug = mathTargeted ? mathPoolSlugs![day % mathPoolSlugs!.length] : MATH_SLUGS[day % MATH_SLUGS.length]
   const rwSlug = rwTargeted ? rwPoolSlugs![day % rwPoolSlugs!.length] : RW_SLUGS[day % RW_SLUGS.length]
 
-  // Generate a small pool and pick deterministically
-  const mathPool = await generateExitQuiz(mathSlug, 5)
-  const rwPool = await generateExitQuiz(rwSlug, 5)
+  // Generate a small pool and pick deterministically. A broken slug must never
+  // take the endpoint down — fall back to the first slug of the section.
+  const safePool = async (slug: string, fallback: string) => {
+    try {
+      return { slug, pool: await generateExitQuiz(slug, 5) }
+    } catch {
+      return { slug: fallback, pool: await generateExitQuiz(fallback, 5) }
+    }
+  }
+  const { slug: mathSlugUsed, pool: mathPool } = await safePool(mathSlug, MATH_SLUGS[0])
+  const { slug: rwSlugUsed, pool: rwPool } = await safePool(rwSlug, RW_SLUGS[0])
 
   const mathQ = mathPool[day % mathPool.length]
   const rwQ = rwPool[day % rwPool.length]
 
   return [
-    { section: 'math', topicSlug: mathSlug, question: mathQ, dayNumber: day, targeted: mathTargeted },
+    { section: 'math', topicSlug: mathSlugUsed, question: mathQ, dayNumber: day, targeted: mathTargeted },
     {
       section: 'reading-writing',
-      topicSlug: rwSlug,
+      topicSlug: rwSlugUsed,
       question: rwQ,
       dayNumber: day,
       targeted: rwTargeted,
