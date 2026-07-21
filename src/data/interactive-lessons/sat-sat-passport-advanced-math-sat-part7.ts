@@ -9,7 +9,7 @@ export const satPassportAdvPart7Data = {
 
 **Part 7 of 7 — Cheat Sheet, Mixed SAT-Style Problems & Exam Strategies**
 
-## Passport to Advanced Math — Cheat Sheet
+## Advanced Math — Cheat Sheet
 
 | Topic | Key Facts |
 |-------|-----------|
@@ -20,7 +20,7 @@ export const satPassportAdvPart7Data = {
 | **Nonlinear Systems** | Substitute linear into quadratic; discriminant tells # of solutions |
 | **Functions** | $f(g(x))$: inside-out; inverse: swap $x$/$y$ & solve; domain/range swap |
 
-**Top 5 SAT Strategies for Passport to Advanced Math:**
+**Top 5 SAT Strategies for Advanced Math:**
 1. **Factor first** — most problems simplify dramatically.
 2. **Check for extraneous solutions** after squaring or multiplying by variables.
 3. **Use the discriminant** $b^2 - 4ac$ to count solutions without solving.

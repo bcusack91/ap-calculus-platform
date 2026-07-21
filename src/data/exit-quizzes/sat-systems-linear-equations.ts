@@ -164,7 +164,7 @@ const questionPool: QuestionTemplate[] = [
       const k = randNonZero(2, 4)
       const ans = 'Infinitely many solutions'
       const { options, correctIndex } = makeStringOptions(ans, ['No solution', 'Exactly one solution', `$x = 0, y = 0$`])
-      return { id: this.id, category: this.category, question: `How many solutions does the system have?\n$${a}x + ${b}y = ${c}$\n$${a * k}x + ${b * k}y = ${c * k}$`, options, correctIndex, explanation: `The second equation is ${k}× the first, so they represent the same line — infinitely many solutions.` }
+      return { id: this.id, category: this.category, question: `How many solutions does the system have?\n$${a}x + ${b}y = ${c}$\n$${a * k}x + ${b * k}y = ${c * k}$`, options, correctIndex, explanation: `The second equation is $${k}\\times$ the first, so they represent the same line — infinitely many solutions.` }
     }
   },
   {

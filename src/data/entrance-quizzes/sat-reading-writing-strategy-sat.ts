@@ -155,7 +155,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      '32 minutes ÷ 27 questions ≈ 1.19 minutes ≈ 1 minute 10 seconds per question. This is tight, so skipping a question and flagging it for review (rather than spending 3+ minutes on one hard item) is a key strategy.',
+      '32 minutes $\\div$ 27 questions $\\approx$ 1.19 minutes $\\approx$ 1 minute 10 seconds per question. This is tight, so skipping a question and flagging it for review (rather than spending 3+ minutes on one hard item) is a key strategy.',
     partNumber: 5,
     partTitle: 'Time Management',
   },

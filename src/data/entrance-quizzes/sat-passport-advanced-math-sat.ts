@@ -87,7 +87,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Factor numerator: $x^{2}$ − 9 = (x + 3)(x − 3). Factor denominator: $x^{2}$ − x − 6 = (x − 3)(x + 2). Cancel (x − 3): result = (x + 3)/(x + 2), valid for x ≠ 3 and x ≠ −2.',
+      'Factor numerator: $x^{2}$ − 9 = (x + 3)(x − 3). Factor denominator: $x^{2}$ − x − 6 = (x − 3)(x + 2). Cancel (x − 3): result = (x + 3)/(x + 2), valid for $x \\ne 3$ and $x \\ne -2$.',
     partNumber: 3,
     partTitle: 'Rational Expressions',
   },
@@ -155,7 +155,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'a = 2, b = 3, c = −5. Discriminant: $b^{2}$ − 4ac = 9 + 40 = 49. x = (−3 ± 7)/4. So x = (−3 + 7)/4 = 1 or x = (−3 − 7)/4 = −10/4 = −2.5.',
+      'a = 2, b = 3, c = −5. Discriminant: $b^{2}$ − 4ac = 9 + 40 = 49. x = $(-3 \\pm 7)/4$. So x = (−3 + 7)/4 = 1 or x = (−3 − 7)/4 = −10/4 = −2.5.',
     partNumber: 5,
     partTitle: 'Advanced Quadratics',
   },
@@ -196,7 +196,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'spam-ent-6b',
     question:
-      'A function is defined by f(x) = $ax^{2}$ + bx + c where a ≠ 0. If the function has exactly one real root, which must be true about the discriminant?',
+      'A function is defined by f(x) = $ax^{2}$ + bx + c where $a \\ne 0$. If the function has exactly one real root, which must be true about the discriminant?',
     options: [
       '$b^{2}$ − 4ac > 0',
       '$b^{2}$ − 4ac < 0',
@@ -223,14 +223,14 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'In vertex form y = $(x - 3)^{2}$ − 4: a = 1 > 0 means opens upward; vertex is at (3, −4). Setting y = 0: $(x - 3)^{2}$ = 4 → x − 3 = ±2 → x = 5 or x = 1. All of these features are captured in option B.',
+      'In vertex form y = $(x - 3)^{2}$ − 4: a = 1 > 0 means opens upward; vertex is at (3, −4). Setting y = 0: $(x - 3)^{2}$ = 4 → x − 3 = $\\pm 2$ → x = 5 or x = 1. All of these features are captured in option B.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },
   {
     id: 'spam-ent-7b',
     question:
-      'Which expression is equivalent to $(x^{2} - 4)/(x - 2)$ for x ≠ 2?',
+      'Which expression is equivalent to $(x^{2} - 4)/(x - 2)$ for $x \\ne 2$?',
     options: [
       'x − 2',
       'x + 2',
@@ -239,7 +239,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Factor the numerator: $x^{2}$ − 4 = (x + 2)(x − 2). Cancel (x − 2) from numerator and denominator (valid for x ≠ 2): result = x + 2.',
+      'Factor the numerator: $x^{2}$ − 4 = (x + 2)(x − 2). Cancel (x − 2) from numerator and denominator (valid for $x \\ne 2$): result = x + 2.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

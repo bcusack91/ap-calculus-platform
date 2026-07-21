@@ -19,7 +19,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'Set up the proportion: 1/25 = 3.5/x → x = 3.5 × 25 = 87.5 miles. Proportional reasoning: multiply the map distance by the scale factor.',
+      'Set up the proportion: 1/25 = 3.5/x → x = $3.5 \\times 25$ = 87.5 miles. Proportional reasoning: multiply the map distance by the scale factor.',
     partNumber: 1,
     partTitle: 'Ratios & Proportions',
   },
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'Total ratio parts = 3 + 5 = 8. Girls = (5/8) × 40 = 25. Boys = (3/8) × 40 = 15. Check: 15 + 25 = 40 ✓.',
+      'Total ratio parts = 3 + 5 = 8. Girls = $(5/8) \\times 40$ = 25. Boys = $(3/8) \\times 40$ = 15. Check: 15 + 25 = 40 ✓.',
     partNumber: 1,
     partTitle: 'Ratios & Proportions',
   },
@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'After first markdown: $\\$80$ × 0.75 = $\\$60$. After second markdown: $\\$60$ × 0.90 = $\\$54$. Note that a 25% + 10% discount does NOT equal a 35% discount—each percentage is applied to the running total.',
+      'After first markdown: $\\$80$ $\\times$ 0.75 = $\\$60$. After second markdown: $\\$60$ $\\times$ 0.90 = $\\$54$. Note that a 25% + 10% discount does NOT equal a 35% discount—each percentage is applied to the running total.',
     partNumber: 2,
     partTitle: 'Percentages & Change',
   },
@@ -69,7 +69,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'Percentage increase = [(New − Old)/Old] × 100 = [(15,600 − 12,000)/12,000] × 100 = (3,600/12,000) × 100 = 30%.',
+      'Percentage increase = [(New − Old)/Old] $\\times$ 100 = [(15,600 − 12,000)/12,000] $\\times$ 100 = (3,600/12,000) $\\times$ 100 = 30%.',
     partNumber: 2,
     partTitle: 'Percentages & Change',
   },
@@ -87,7 +87,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Total students = 60 + 40 + 20 = 120. Percentage preferring English = (40/120) × 100 = 33.3%.',
+      'Total students = 60 + 40 + 20 = 120. Percentage preferring English = $(40/120) \\times 100$ = 33.3%.',
     partNumber: 3,
     partTitle: 'Data Tables',
   },
@@ -205,7 +205,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'The $\\$1{,}200$K outlier dramatically inflates the mean (≈$\\$409$K), making it unrepresentative of the typical home. The median ($\\$215$K) is resistant to outliers and better represents the center of this skewed data set. Range is a measure of spread, not center.',
+      'The $\\$1{,}200$K outlier dramatically inflates the mean ($\\approx \\$409$K), making it unrepresentative of the typical home. The median ($\\$215$K) is resistant to outliers and better represents the center of this skewed data set. Range is a measure of spread, not center.',
     partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
   },
@@ -214,7 +214,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'spsd-ent-7a',
     question:
-      'A poll of 500 randomly selected voters finds that 55% plan to vote for Candidate A, with a margin of error of ±3%. What can you conclude?',
+      'A poll of 500 randomly selected voters finds that 55% plan to vote for Candidate A, with a margin of error of $\\pm 3$%. What can you conclude?',
     options: [
       'Candidate A will definitely win.',
       'Exactly 55% of all voters prefer Candidate A.',
@@ -223,7 +223,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'A margin of error of ±3% means we are confident (at the given confidence level) that the true population percentage falls within 55% ± 3%, i.e., between 52% and 58%. This does not guarantee any specific outcome.',
+      'A margin of error of $\\pm 3$% means we are confident (at the given confidence level) that the true population percentage falls within 55% $\\pm 3$%, i.e., between 52% and 58%. This does not guarantee any specific outcome.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

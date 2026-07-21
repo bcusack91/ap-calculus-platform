@@ -103,7 +103,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'After eliminating one wrong answer, you have 3 remaining choices. The probability of a correct random guess among 3 choices is 1/3 ≈ 33%. Eliminating even one answer significantly improves your odds from 25% to 33%.',
+      'After eliminating one wrong answer, you have 3 remaining choices. The probability of a correct random guess among 3 choices is $1/3 \\approx 33$%. Eliminating even one answer significantly improves your odds from 25% to 33%.',
     partNumber: 3,
     partTitle: 'Guessing Strategy',
   },

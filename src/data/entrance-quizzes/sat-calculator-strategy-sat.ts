@@ -15,7 +15,7 @@ const questions: EntranceQuizQuestion[] = [
       'Finding the decimal value of $\\sqrt{157}$ to four decimal places.',
       'Solving 2x + 6 = 14 for x.',
       'Calculating 17.3% of 842.',
-      'Evaluating sin(47°) to three decimal places.',
+      'Evaluating $\\sin(47^\\circ)$ to three decimal places.',
     ],
     correctIndex: 1,
     explanation:
@@ -26,7 +26,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-1b',
     question:
-      'A student uses a calculator to evaluate (3/7) × (14/9). Which answer would the calculator display, and is it the most efficient method?',
+      'A student uses a calculator to evaluate $(3/7) \\times (14/9)$. Which answer would the calculator display, and is it the most efficient method?',
     options: [
       '0.6667; and yes, a calculator is most efficient here.',
       '2/3; and a calculator is not necessary—mental simplification is faster.',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      '(3/7) × (14/9) = (3 × 14)/(7 × 9) = 42/63 = 2/3. Cross-canceling: 3/9 = 1/3 and 14/7 = 2, so (1/3) × 2 = 2/3. Mental simplification is faster and avoids decimal rounding. The result is exactly 2/3.',
+      '$(3/7) \\times (14/9) = (3 \\times 14)/(7 \\times 9)$ = 42/63 = 2/3. Cross-canceling: 3/9 = 1/3 and 14/7 = 2, so $(1/3) \\times 2$ = 2/3. Mental simplification is faster and avoids decimal rounding. The result is exactly 2/3.',
     partNumber: 1,
     partTitle: 'When to Use a Calculator',
   },
@@ -171,7 +171,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      '$6^{2}$ = 36 and $7^{2}$ = 49 and $8^{2}$ = 64. Since 49 < 50 < 64, $\\sqrt{50}$ is slightly above 7. Among the choices, 7 is the closest estimate to $\\sqrt{50}$ ≈ 7.07.',
+      '$6^{2}$ = 36 and $7^{2}$ = 49 and $8^{2}$ = 64. Since 49 < 50 < 64, $\\sqrt{50}$ is slightly above 7. Among the choices, 7 is the closest estimate to $\\sqrt{50}$ $\\approx$ 7.07.',
     partNumber: 5,
     partTitle: 'Estimation Strategies',
   },
@@ -230,16 +230,16 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'scals-ent-7b',
     question:
-      'A student uses her calculator to solve $3x^{2}$ + 7x − 6 = 0 graphically and finds x ≈ 0.667. How can she verify this is a reasonable answer?',
+      'A student uses her calculator to solve $3x^{2}$ + 7x − 6 = 0 graphically and finds x $\\approx$ 0.667. How can she verify this is a reasonable answer?',
     options: [
       'Substitute x = 0.667 back into $3x^{2}$ + 7x − 6 and check if the result is approximately 0.',
       'Check that 0.667 appears in the table of values as a y-value.',
-      'Confirm that 0.667 × 3 = 2 exactly.',
+      'Confirm that $0.667 \\times 3$ = 2 exactly.',
       'Verify that the discriminant is negative.',
     ],
     correctIndex: 0,
     explanation:
-      'Substituting x ≈ 0.667 into $3(0.667)^{2}$ + 7(0.667) − 6 ≈ 3(0.445) + 4.669 − 6 ≈ 1.335 + 4.669 − 6 ≈ 0.004 ≈ 0 ✓. This confirms the answer is correct to three decimal places. Note: the exact root is x = 2/3.',
+      'Substituting x $\\approx$ 0.667 into $3(0.667)^{2}$ + 7(0.667) − 6 $\\approx$ 3(0.445) + 4.669 − 6 $\\approx$ 1.335 + 4.669 − 6 $\\approx$ 0.004 $\\approx$ 0 ✓. This confirms the answer is correct to three decimal places. Note: the exact root is x = 2/3.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

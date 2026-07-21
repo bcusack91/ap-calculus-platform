@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 0,
     explanation:
-      'Combined rate = 1/4 + 1/6 = 3/12 + 2/12 = 5/12 of the fence per hour. Time = 1 ÷ (5/12) = 12/5 = 2.4 hours. Working-together problems always use combined rates, not averaged times.',
+      'Combined rate = 1/4 + 1/6 = 3/12 + 2/12 = 5/12 of the fence per hour. Time = $1 \\div (5/12)$ = 12/5 = 2.4 hours. Working-together problems always use combined rates, not averaged times.',
     partNumber: 2,
     partTitle: 'Rate Problems',
   },
@@ -103,7 +103,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 2,
     explanation:
-      'Let x = pounds of $\\$8$ coffee; (20 − x) = pounds of $\\$12$ coffee. 8x + 12(20 − x) = 9.50 × 20 → 8x + 240 − 12x = 190 → −4x = −50 → x = 12.5 pounds.',
+      'Let x = pounds of $\\$8$ coffee; (20 − x) = pounds of $\\$12$ coffee. 8x + 12(20 − x) = $9.50 \\times 20$ → 8x + 240 − 12x = 190 → −4x = −50 → x = 12.5 pounds.',
     partNumber: 3,
     partTitle: 'Mixture Problems',
   },
@@ -121,14 +121,14 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Let w = width. Length l = 2w + 4. Perimeter: 2(l + w) = 56 → l + w = 28 → (2w + 4) + w = 28 → 3w = 24 → w = 8 ft. Then l = 2(8) + 4 = 20 ft. Area = 8 × 20 = 160 sq ft.',
+      'Let w = width. Length l = 2w + 4. Perimeter: 2(l + w) = 56 → l + w = 28 → (2w + 4) + w = 28 → 3w = 24 → w = 8 ft. Then l = 2(8) + 4 = 20 ft. Area = $8 \\times 20$ = 160 sq ft.',
     partNumber: 4,
     partTitle: 'Geometry Word Problems',
   },
   {
     id: 'swp-ent-4b',
     question:
-      'A circular swimming pool has a diameter of 20 feet. A concrete deck surrounds the pool, extending 5 feet outward from the edge in all directions. What is the area of the deck alone (not including the pool)? Use π ≈ 3.14.',
+      'A circular swimming pool has a diameter of 20 feet. A concrete deck surrounds the pool, extending 5 feet outward from the edge in all directions. What is the area of the deck alone (not including the pool)? Use $\\pi \\approx 3.14$.',
     options: [
       '314 sq ft',
       '471 sq ft',
@@ -137,7 +137,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 3,
     explanation:
-      'Pool radius = 10 ft; outer radius = 10 + 5 = 15 ft. Outer circle area: 3.14 × $15^{2}$ = 3.14 × 225 = 706.5 sq ft. Pool area: $3.14 \\times 10^{2}$ = 314 sq ft. Deck area = 706.5 − 314 = 392.5 sq ft.',
+      'Pool radius = 10 ft; outer radius = 10 + 5 = 15 ft. Outer circle area: $3.14 \\times 15^{2}$ = $3.14 \\times 225$ = 706.5 sq ft. Pool area: $3.14 \\times 10^{2}$ = 314 sq ft. Deck area = 706.5 − 314 = 392.5 sq ft.',
     partNumber: 4,
     partTitle: 'Geometry Word Problems',
   },
@@ -155,7 +155,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Add back the coupon: $\\$61$ + $\\$5$ = $\\$66$ (pre-coupon total). Cost of 4 plates: 4 × $\\$9$ = $\\$36$. Cost of mugs: $\\$66$ − $\\$36$ = $\\$30$. Number of mugs: $\\$30$ ÷ $\\$6$ = 5 mugs.',
+      'Add back the coupon: $\\$61$ + $\\$5$ = $\\$66$ (pre-coupon total). Cost of 4 plates: 4 $\\times$ $\\$9$ = $\\$36$. Cost of mugs: $\\$66$ − $\\$36$ = $\\$30$. Number of mugs: $\\$30$ $\\div$ $\\$6$ = 5 mugs.',
     partNumber: 5,
     partTitle: 'Multi-Step Problems',
   },
@@ -171,7 +171,7 @@ const questions: EntranceQuizQuestion[] = [
     ],
     correctIndex: 1,
     explanation:
-      'Start with $\\$100$. After 20% increase: $\\$100$ × 1.20 = $\\$120$. After 15% decrease: $\\$120$ × 0.85 = $\\$102$. Net change = ($\\$102$ − $\\$100$)/$\\$100$ = 2%. The answer is +2%. Note: percentage changes are not simply additive—a 20% increase followed by a 15% decrease does not equal a 5% net increase.',
+      'Start with $\\$100$. After 20% increase: $\\$100$ $\\times$ 1.20 = $\\$120$. After 15% decrease: $\\$120$ $\\times$ 0.85 = $\\$102$. Net change = ($\\$102$ − $\\$100$)/$\\$100$ = 2%. The answer is +2%. Note: percentage changes are not simply additive—a 20% increase followed by a 15% decrease does not equal a 5% net increase.',
     partNumber: 5,
     partTitle: 'Multi-Step Problems',
   },
@@ -217,13 +217,13 @@ const questions: EntranceQuizQuestion[] = [
       'An SAT word problem says: "A factory produces widgets at a rate of 200 per hour for the first 4 hours, then 150 per hour for the next 3 hours." What is the best first step to solve a question asking for total production?',
     options: [
       'Guess a reasonable total and check it.',
-      'Calculate separately: (200 × 4) + (150 × 3), then add the results.',
+      'Calculate separately: $(200 \\times 4) + (150 \\times 3)$, then add the results.',
       'Average 200 and 150, then multiply by 7 hours.',
       'Set up an algebraic equation with an unknown.',
     ],
     correctIndex: 1,
     explanation:
-      'Because the rate changes at a specific point, the best strategy is to calculate each segment separately using rate × time, then add: (200 × 4) + (150 × 3) = 800 + 450 = 1,250 widgets. Averaging the rates would be incorrect when the time intervals differ.',
+      'Because the rate changes at a specific point, the best strategy is to calculate each segment separately using rate $\\times$ time, then add: $(200 \\times 4) + (150 \\times 3)$ = 800 + 450 = 1,250 widgets. Averaging the rates would be incorrect when the time intervals differ.',
     partNumber: 7,
     partTitle: 'Review & Applications',
   },

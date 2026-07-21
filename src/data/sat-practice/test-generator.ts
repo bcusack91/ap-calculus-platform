@@ -85,7 +85,6 @@ const MATH_SLUGS = [
   'sat-statistics-data-interpretation',
   'sat-exponential-functions',
   'sat-circles',
-  'sat-complex-numbers',
   'sat-systems-linear-equations',
   'sat-linear-inequalities-graphs',
   'sat-probability-two-way-tables',

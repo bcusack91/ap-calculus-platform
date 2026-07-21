@@ -77,11 +77,11 @@ function genLinearSolve(): Omit<GridInProblem, 'id'> {
   const b = rand(1, 20)
   const c = a * x + b
   return {
-    question: `If ${a}x + ${b} = ${c}, what is the value of x?`,
+    question: `If $${a}x + ${b} = ${c}$, what is the value of $x$?`,
     correctAnswer: x,
     acceptableAnswers: [x],
     tolerance: 0,
-    explanation: `Subtract ${b} from both sides: ${a}x = ${c - b}. Divide by ${a}: x = ${x}.`,
+    explanation: `Subtract ${b} from both sides: $${a}x = ${c - b}$. Divide by ${a}: $x = ${x}$.`,
     category: 'Algebra',
     difficulty: 'easy',
   }
@@ -97,7 +97,7 @@ function genPercentChange(): Omit<GridInProblem, 'id'> {
     correctAnswer: pct,
     acceptableAnswers: [pct],
     tolerance: 0.01,
-    explanation: `Percent increase = ((${newVal} - ${original}) / ${original}) × 100 = (${increase} / ${original}) × 100 = ${pct}%.`,
+    explanation: `Percent increase $= ((${newVal} - ${original}) / ${original}) \\times 100 = (${increase} / ${original}) \\times 100 = ${pct}$%.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -113,7 +113,7 @@ function genMeanCalculation(): Omit<GridInProblem, 'id'> {
     correctAnswer: mean,
     acceptableAnswers: [mean],
     tolerance: 0.1,
-    explanation: `Mean = (${values.join(' + ')}) / ${n} = ${sum} / ${n} = ${mean}.`,
+    explanation: `Mean $= (${values.join(' + ')}) / ${n} = ${sum} / ${n} = ${mean}$.`,
     category: 'Statistics',
     difficulty: 'easy',
   }
@@ -126,11 +126,11 @@ function genQuadraticRoot(): Omit<GridInProblem, 'id'> {
   const b = -(r1 + r2)
   const c = r1 * r2
   return {
-    question: `If x² ${b >= 0 ? '+ ' + b : '- ' + Math.abs(b)}x + ${c} = 0 and x > 0, what is the larger value of x?`,
+    question: `If $x^2 ${b >= 0 ? '+ ' + b : '- ' + Math.abs(b)}x + ${c} = 0$ and $x > 0$, what is the larger value of $x$?`,
     correctAnswer: r2,
     acceptableAnswers: [r1, r2],
     tolerance: 0,
-    explanation: `Factor: (x - ${r1})(x - ${r2}) = 0, so x = ${r1} or x = ${r2}. The larger value is ${r2}.`,
+    explanation: `Factor: $(x - ${r1})(x - ${r2}) = 0$, so $x = ${r1}$ or $x = ${r2}$. The larger value is ${r2}.`,
     category: 'Advanced Math',
     difficulty: 'medium',
   }
@@ -146,11 +146,11 @@ function genSystemsSolve(): Omit<GridInProblem, 'id'> {
   const b2 = rand(1, 4)
   const c2 = a2 * x + b2 * y
   return {
-    question: `In the system of equations ${a1}x + ${b1}y = ${c1} and ${a2}x + ${b2}y = ${c2}, what is the value of x + y?`,
+    question: `In the system of equations $${a1}x + ${b1}y = ${c1}$ and $${a2}x + ${b2}y = ${c2}$, what is the value of $x + y$?`,
     correctAnswer: x + y,
     acceptableAnswers: [x + y],
     tolerance: 0,
-    explanation: `Solving the system: x = ${x}, y = ${y}. Therefore x + y = ${x + y}.`,
+    explanation: `Solving the system: $x = ${x}$, $y = ${y}$. Therefore $x + y = ${x + y}$.`,
     category: 'Algebra',
     difficulty: 'medium',
   }
@@ -162,11 +162,11 @@ function genRatioProblems(): Omit<GridInProblem, 'id'> {
   const total = (a + b) * rand(3, 8)
   const partA = (a / (a + b)) * total
   return {
-    question: `Two numbers are in the ratio ${a}:${b} and their sum is ${total}. What is the smaller number?`,
+    question: `Two numbers are in the ratio $${a}:${b}$ and their sum is ${total}. What is the smaller number?`,
     correctAnswer: Math.min(partA, total - partA),
     acceptableAnswers: [Math.min(partA, total - partA)],
     tolerance: 0,
-    explanation: `Sum of ratio parts = ${a + b}. Each part = ${total} / ${a + b} = ${total / (a + b)}. Smaller number = ${Math.min(a, b)} × ${total / (a + b)} = ${Math.min(partA, total - partA)}.`,
+    explanation: `Sum of ratio parts $= ${a + b}$. Each part $= ${total} / ${a + b} = ${total / (a + b)}$. Smaller number $= ${Math.min(a, b)} \\times ${total / (a + b)} = ${Math.min(partA, total - partA)}$.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -178,11 +178,11 @@ function genExponentSimplify(): Omit<GridInProblem, 'id'> {
   const exp2 = rand(1, 3)
   const result = Math.pow(base, exp1 + exp2)
   return {
-    question: `What is ${base}^${exp1} × ${base}^${exp2}?`,
+    question: `What is $${base}^{${exp1}} \\times ${base}^{${exp2}}$?`,
     correctAnswer: result,
     acceptableAnswers: [result],
     tolerance: 0,
-    explanation: `When multiplying powers with the same base, add exponents: ${base}^(${exp1}+${exp2}) = ${base}^${exp1 + exp2} = ${result}.`,
+    explanation: `When multiplying powers with the same base, add exponents: $${base}^{${exp1}+${exp2}} = ${base}^{${exp1 + exp2}} = ${result}$.`,
     category: 'Advanced Math',
     difficulty: 'easy',
   }
@@ -197,7 +197,7 @@ function genAreaProblems(): Omit<GridInProblem, 'id'> {
     correctAnswer: area,
     acceptableAnswers: [area],
     tolerance: 0,
-    explanation: `Area = ½ × base × height = ½ × ${base} × ${height} = ${area} cm².`,
+    explanation: `Area $= \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times ${base} \\times ${height} = ${area}\\ \\text{cm}^2$.`,
     category: 'Geometry',
     difficulty: 'easy',
   }
@@ -212,11 +212,11 @@ function genSlopeCalculation(): Omit<GridInProblem, 'id'> {
   const run = x2 - x1
   const slope = rise / run
   return {
-    question: `What is the slope of the line passing through (${x1}, ${y1}) and (${x2}, ${y2})?`,
+    question: `What is the slope of the line passing through $(${x1}, ${y1})$ and $(${x2}, ${y2})$?`,
     correctAnswer: slope,
     acceptableAnswers: [slope],
     tolerance: 0.001,
-    explanation: `Slope = (y₂ - y₁) / (x₂ - x₁) = (${y2} - ${y1}) / (${x2} - ${x1}) = ${rise} / ${run} = ${Number(slope.toFixed(3))}.`,
+    explanation: `Slope $= (y_2 - y_1) / (x_2 - x_1) = (${y2} - ${y1}) / (${x2} - ${x1}) = ${rise} / ${run} = ${Number(slope.toFixed(3))}$.`,
     category: 'Algebra',
     difficulty: 'easy',
   }
@@ -228,11 +228,11 @@ function genProportion(): Omit<GridInProblem, 'id'> {
   const c = rand(2, 6) * a
   const answer = (b * c) / a
   return {
-    question: `If ${a}/${b} = ${c}/x, what is the value of x?`,
+    question: `If $${a}/${b} = ${c}/x$, what is the value of $x$?`,
     correctAnswer: answer,
     acceptableAnswers: [answer],
     tolerance: 0.01,
-    explanation: `Cross multiply: ${a}x = ${b} × ${c} = ${b * c}. So x = ${b * c}/${a} = ${answer}.`,
+    explanation: `Cross multiply: $${a}x = ${b} \\times ${c} = ${b * c}$. So $x = ${b * c}/${a} = ${answer}$.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -247,7 +247,7 @@ function genDistanceRate(): Omit<GridInProblem, 'id'> {
     correctAnswer: distance,
     acceptableAnswers: [distance],
     tolerance: 0,
-    explanation: `Distance = rate × time = ${rate} × ${time} = ${distance} miles.`,
+    explanation: `Distance $= \\text{rate} \\times \\text{time} = ${rate} \\times ${time} = ${distance}$ miles.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -260,11 +260,11 @@ function genAbsoluteValue(): Omit<GridInProblem, 'id'> {
   const sol2 = -b / a
   const sum = sol1 + sol2
   return {
-    question: `If |${a}x| = ${b}, what is the sum of all possible values of x?`,
+    question: `If $|${a}x| = ${b}$, what is the sum of all possible values of $x$?`,
     correctAnswer: sum,
     acceptableAnswers: [sum, 0],
     tolerance: 0.001,
-    explanation: `|${a}x| = ${b} gives ${a}x = ${b} or ${a}x = -${b}. So x = ${Number(sol1.toFixed(3))} or x = ${Number(sol2.toFixed(3))}. Sum = ${sum}.`,
+    explanation: `$|${a}x| = ${b}$ gives $${a}x = ${b}$ or $${a}x = -${b}$. So $x = ${Number(sol1.toFixed(3))}$ or $x = ${Number(sol2.toFixed(3))}$. Sum $= ${sum}$.`,
     category: 'Algebra',
     difficulty: 'medium',
   }
@@ -275,11 +275,11 @@ function genTriangleAngle(): Omit<GridInProblem, 'id'> {
   const a2 = rand(20, 90 - a1 + 40)
   const a3 = 180 - a1 - a2
   return {
-    question: `In a triangle, two angles measure ${a1}° and ${a2}°. What is the measure of the third angle in degrees?`,
+    question: `In a triangle, two angles measure $${a1}^\\circ$ and $${a2}^\\circ$. What is the measure of the third angle in degrees?`,
     correctAnswer: a3,
     acceptableAnswers: [a3],
     tolerance: 0,
-    explanation: `The sum of angles in a triangle is 180°. Third angle = 180 - ${a1} - ${a2} = ${a3}°.`,
+    explanation: `The sum of angles in a triangle is $180^\\circ$. Third angle $= 180 - ${a1} - ${a2} = ${a3}^\\circ$.`,
     category: 'Geometry',
     difficulty: 'easy',
   }
@@ -293,7 +293,7 @@ function genCircleArea(): Omit<GridInProblem, 'id'> {
     correctAnswer: area,
     acceptableAnswers: [area],
     tolerance: 0.02,
-    explanation: `Area = πr² = π × ${r}² = π × ${r * r} ≈ ${area}.`,
+    explanation: `Area $= \\pi r^2 = \\pi \\times ${r}^2 = \\pi \\times ${r * r} \\approx ${area}$.`,
     category: 'Geometry',
     difficulty: 'medium',
   }
@@ -304,11 +304,11 @@ function genScientificNotation(): Omit<GridInProblem, 'id'> {
   const exp = rand(3, 6)
   const answer = coeff * Math.pow(10, exp)
   return {
-    question: `What is ${coeff} × 10^${exp} written as a standard number?`,
+    question: `What is $${coeff} \\times 10^{${exp}}$ written as a standard number?`,
     correctAnswer: answer,
     acceptableAnswers: [answer],
     tolerance: 0,
-    explanation: `${coeff} × 10^${exp} = ${answer.toLocaleString()}.`,
+    explanation: `$${coeff} \\times 10^{${exp}} = ${answer.toLocaleString()}$.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -322,7 +322,7 @@ function genUnitConversion(): Omit<GridInProblem, 'id'> {
     correctAnswer: inches,
     acceptableAnswers: [inches],
     tolerance: 0,
-    explanation: `1 foot = 12 inches. ${feet} feet = ${feet} × 12 = ${inches} inches.`,
+    explanation: `1 foot = 12 inches. ${feet} feet $= ${feet} \\times 12 = ${inches}$ inches.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -339,7 +339,7 @@ function genProbability(): Omit<GridInProblem, 'id'> {
     correctAnswer: answer,
     acceptableAnswers: [answer, red / total],
     tolerance: 0.002,
-    explanation: `P(red) = ${red}/${total} ≈ ${answer}.`,
+    explanation: `$P(\\text{red}) = ${red}/${total} \\approx ${answer}$.`,
     category: 'Statistics',
     difficulty: 'medium',
   }
@@ -355,7 +355,7 @@ function genSequenceNthTerm(): Omit<GridInProblem, 'id'> {
     correctAnswer: an,
     acceptableAnswers: [an],
     tolerance: 0,
-    explanation: `aₙ = a₁ + (n-1)d = ${a1} + (${n}-1)(${d}) = ${a1} + ${(n - 1) * d} = ${an}.`,
+    explanation: `$a_n = a_1 + (n-1)d = ${a1} + (${n}-1)(${d}) = ${a1} + ${(n - 1) * d} = ${an}$.`,
     category: 'Advanced Math',
     difficulty: 'medium',
   }
@@ -371,7 +371,7 @@ function genFactoring(): Omit<GridInProblem, 'id'> {
     correctAnswer: Math.max(a, b),
     acceptableAnswers: [Math.max(a, b)],
     tolerance: 0,
-    explanation: `The two numbers are ${a} and ${b} since ${a} × ${b} = ${product} and ${a} + ${b} = ${sum}. The larger is ${Math.max(a, b)}.`,
+    explanation: `The two numbers are ${a} and ${b} since $${a} \\times ${b} = ${product}$ and $${a} + ${b} = ${sum}$. The larger is ${Math.max(a, b)}.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -387,7 +387,7 @@ function genWorkRate(): Omit<GridInProblem, 'id'> {
     correctAnswer: answer,
     acceptableAnswers: [answer, combined],
     tolerance: 0.02,
-    explanation: `Combined rate = 1/${t1} + 1/${t2} = (${t2} + ${t1}) / ${t1 * t2} = ${t1 + t2}/${t1 * t2}. Time = ${t1 * t2}/${t1 + t2} ≈ ${answer} hours.`,
+    explanation: `Combined rate $= 1/${t1} + 1/${t2} = (${t2} + ${t1}) / ${t1 * t2} = ${t1 + t2}/${t1 * t2}$. Time $= ${t1 * t2}/${t1 + t2} \\approx ${answer}$ hours.`,
     category: 'Problem Solving',
     difficulty: 'hard',
   }
@@ -417,7 +417,7 @@ function genCompoundInterest(): Omit<GridInProblem, 'id'> {
     correctAnswer: amount,
     acceptableAnswers: [amount, Math.round(amount)],
     tolerance: 0.01,
-    explanation: `A = ${principal}(1 + ${rate / 100})^${years} = ${principal} × ${Math.pow(1 + rate / 100, years).toFixed(4)} ≈ $${amount}.`,
+    explanation: `A $= ${principal}(1 + ${rate / 100})^{${years}} = ${principal} \\times ${Math.pow(1 + rate / 100, years).toFixed(4)} \\approx$ $${amount}.`,
     category: 'Problem Solving',
     difficulty: 'hard',
   }
@@ -429,11 +429,11 @@ function genVolumeBox(): Omit<GridInProblem, 'id'> {
   const h = rand(2, 10)
   const volume = l * w * h
   return {
-    question: `A rectangular box has dimensions ${l} × ${w} × ${h}. What is its volume?`,
+    question: `A rectangular box has dimensions $${l} \\times ${w} \\times ${h}$. What is its volume?`,
     correctAnswer: volume,
     acceptableAnswers: [volume],
     tolerance: 0,
-    explanation: `Volume = length × width × height = ${l} × ${w} × ${h} = ${volume}.`,
+    explanation: `Volume $= \\text{length} \\times \\text{width} \\times \\text{height} = ${l} \\times ${w} \\times ${h} = ${volume}$.`,
     category: 'Geometry',
     difficulty: 'easy',
   }
@@ -448,7 +448,7 @@ function genPercentOfTotal(): Omit<GridInProblem, 'id'> {
     correctAnswer: answer,
     acceptableAnswers: [answer],
     tolerance: 0,
-    explanation: `${percent}% of ${total} = (${percent}/100) × ${total} = ${answer}.`,
+    explanation: `${percent}% of ${total} $= (${percent}/100) \\times ${total} = ${answer}$.`,
     category: 'Algebra',
     difficulty: 'easy',
   }
@@ -463,7 +463,7 @@ function genMidpointFormula(): Omit<GridInProblem, 'id'> {
     correctAnswer: midX,
     acceptableAnswers: [midX],
     tolerance: 0,
-    explanation: `Midpoint x = (${x1} + ${x2}) / 2 = ${x1 + x2} / 2 = ${midX}.`,
+    explanation: `Midpoint $x = (${x1} + ${x2}) / 2 = ${x1 + x2} / 2 = ${midX}$.`,
     category: 'Geometry',
     difficulty: 'medium',
   }
@@ -474,11 +474,11 @@ function genSimplifyRadical(): Omit<GridInProblem, 'id'> {
   const radicand = base * base * rand(1, 4)
   const outsideRoot = base
   return {
-    question: `Simplify √${radicand}. What is the coefficient outside the radical? (If √${radicand} = a√b, what is a?)`,
+    question: `Simplify $\\sqrt{${radicand}}$. What is the coefficient outside the radical? (If $\\sqrt{${radicand}} = a\\sqrt{b}$, what is $a$?)`,
     correctAnswer: outsideRoot,
     acceptableAnswers: [outsideRoot],
     tolerance: 0,
-    explanation: `√${radicand} = √(${base}² × ${radicand / (base * base)}) = ${base}√${radicand / (base * base)}. The coefficient is ${base}.`,
+    explanation: `$\\sqrt{${radicand}} = \\sqrt{${base}^2 \\times ${radicand / (base * base)}} = ${base}\\sqrt{${radicand / (base * base)}}$. The coefficient is ${base}.`,
     category: 'Algebra',
     difficulty: 'medium',
   }
@@ -495,7 +495,7 @@ function genArithmeticSeries(): Omit<GridInProblem, 'id'> {
     correctAnswer: sum,
     acceptableAnswers: [sum],
     tolerance: 0,
-    explanation: `Last term a_${n} = ${a1} + ${n - 1}(${d}) = ${an}. Sum = ${n}(${a1} + ${an})/2 = ${sum}.`,
+    explanation: `Last term $a_{${n}} = ${a1} + ${n - 1}(${d}) = ${an}$. Sum $= ${n}(${a1} + ${an})/2 = ${sum}$.`,
     category: 'Algebra',
     difficulty: 'hard',
   }
@@ -507,11 +507,11 @@ function genQuadraticVertex(): Omit<GridInProblem, 'id'> {
   const b = -2 * a * h
   const c = rand(-10, 10)
   return {
-    question: `For the parabola y = ${a}x² ${b >= 0 ? '+' : '−'} ${Math.abs(b)}x + ${c}, what is the x-coordinate of the vertex?`,
+    question: `For the parabola $y = ${a}x^2 ${b >= 0 ? '+' : '-'} ${Math.abs(b)}x + ${c}$, what is the x-coordinate of the vertex?`,
     correctAnswer: h,
     acceptableAnswers: [h],
     tolerance: 0,
-    explanation: `x-vertex = -b/(2a) = -(${b})/(2·${a}) = ${-b}/${2 * a} = ${h}.`,
+    explanation: `x-vertex $= -b/(2a) = -(${b})/(2\\cdot${a}) = ${-b}/${2 * a} = ${h}$.`,
     category: 'Algebra',
     difficulty: 'medium',
   }
@@ -527,7 +527,7 @@ function genRemainder(): Omit<GridInProblem, 'id'> {
     correctAnswer: remainder,
     acceptableAnswers: [remainder],
     tolerance: 0,
-    explanation: `${dividend} ÷ ${divisor} = ${quotient} remainder ${remainder}, since ${divisor} × ${quotient} = ${divisor * quotient} and ${dividend} − ${divisor * quotient} = ${remainder}.`,
+    explanation: `$${dividend} \\div ${divisor} = ${quotient}$ remainder ${remainder}, since $${divisor} \\times ${quotient} = ${divisor * quotient}$ and $${dividend} - ${divisor * quotient} = ${remainder}$.`,
     category: 'Problem Solving',
     difficulty: 'easy',
   }
@@ -546,7 +546,7 @@ function genRightTriangleSide(): Omit<GridInProblem, 'id'> {
     correctAnswer: sc,
     acceptableAnswers: [sc],
     tolerance: 0,
-    explanation: `By the Pythagorean theorem: c = √(${sa}² + ${sb}²) = √(${sa * sa} + ${sb * sb}) = √${sc * sc} = ${sc}.`,
+    explanation: `By the Pythagorean theorem: $c = \\sqrt{${sa}^2 + ${sb}^2} = \\sqrt{${sa * sa} + ${sb * sb}} = \\sqrt{${sc * sc}} = ${sc}$.`,
     category: 'Geometry',
     difficulty: 'medium',
   }

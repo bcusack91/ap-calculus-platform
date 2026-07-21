@@ -821,7 +821,7 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions(Math.round(sd), 3)
       return {
         id: this.id, category: this.category,
-        question: `Data: $${vals.join(', ')}$. Mean ≈ $${Math.round(mean * 10) / 10}$. The standard deviation is closest to:`,
+        question: `Data: $${vals.join(', ')}$. Mean $\\approx ${Math.round(mean * 10) / 10}$. The standard deviation is closest to:`,
         options, correctIndex,
         explanation: `$\\sigma = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n}} \\approx ${sd}$.`
       }

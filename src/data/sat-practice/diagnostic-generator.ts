@@ -109,7 +109,7 @@ const DIAGNOSTIC_DOMAINS: DiagnosticDomain[] = [
   // Math domains
   {
     id: 'algebra',
-    name: 'Heart of Algebra',
+    name: 'Algebra',
     section: 'math',
     slugs: ['sat-linear-equations-inequalities', 'sat-systems-linear-equations', 'sat-linear-inequalities-graphs'],
     questionCount: 4,
@@ -139,7 +139,7 @@ const DIAGNOSTIC_DOMAINS: DiagnosticDomain[] = [
     id: 'geometry',
     name: 'Geometry & Trigonometry',
     section: 'math',
-    slugs: ['sat-geometry-basics', 'sat-geometry-trigonometry', 'sat-circles', 'sat-complex-numbers'],
+    slugs: ['sat-geometry-basics', 'sat-geometry-trigonometry', 'sat-circles'],
     questionCount: 2,
   },
 ]
