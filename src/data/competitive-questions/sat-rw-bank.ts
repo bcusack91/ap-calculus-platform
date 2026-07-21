@@ -720,6 +720,230 @@ const allQuestions: SatRwQuestion[] = [
   },
   {
     "id": 51,
+    "question": "The following is a short passage.\n\n\"Honeybees communicate the location of food through a behavior known as the waggle dance. By moving in a figure-eight pattern and vibrating its body, a returning forager conveys both the direction of a flower patch and its distance from the hive. Other bees then use this information to fly directly to the food source.\"\n\nWhich choice best states the main idea of the text?\n",
+    "options": [
+      "Foraging bees vibrate mainly to warn the hive of danger.",
+      "Honeybees prefer flower patches that are close to the hive.",
+      "Honeybees use a specialized dance to share the location of food with other bees.",
+      "The waggle dance is the only method bees have for finding flowers."
+    ],
+    "correctAnswer": 2,
+    "explanation": "The text's central point is that the waggle dance communicates a food source's direction and distance to the hive. The other choices are unstated (danger, preference for nearby patches) or overstated (that it is the only method).",
+    "difficulty": "easy",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 52,
+    "question": "The following is a short passage.\n\n\"The Silk Road was not a single paved road but a vast network of trade routes linking East Asia with the Mediterranean. Along these routes, merchants exchanged not only silk and spices but also ideas, religions, and technologies. Caravans often traveled only a portion of the network, passing goods from one trading city to the next.\"\n\nAccording to the text, goods along the Silk Road were typically transported by\n",
+    "options": [
+      "a single caravan that traveled the entire route from East Asia to the Mediterranean.",
+      "caravans that each covered only part of the network, handing goods off between cities.",
+      "ships that sailed the length of the Mediterranean Sea.",
+      "merchants who dealt exclusively in silk and no other product."
+    ],
+    "correctAnswer": 1,
+    "explanation": "The text states caravans often traveled only a portion of the network, passing goods city to city. The other choices contradict the text (single caravan, silk-only) or introduce unsupported details (ships).",
+    "difficulty": "easy",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 53,
+    "question": "The following is a short passage.\n\n\"In the novel, Mara keeps a locked drawer of unsent letters, each addressed to a person she has quarreled with over the years. She rereads them on sleepless nights, editing lines she will never mail. The narrator observes that Mara finds it far easier to perfect an apology than to deliver one.\"\n\nWhich choice best states the main idea of the text?\n",
+    "options": [
+      "Mara enjoys writing letters purely as a creative hobby.",
+      "Mara has permanently lost touch with everyone she once knew.",
+      "Mara intends to mail all of her stored letters very soon.",
+      "Mara privately rehearses reconciliations she cannot bring herself to complete."
+    ],
+    "correctAnswer": 3,
+    "explanation": "The main idea is captured by the narrator's remark that Mara perfects apologies but never delivers them. The other options are unsupported (hobby, mailing soon) or overstated (lost touch with everyone).",
+    "difficulty": "medium",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 54,
+    "question": "The following is a short passage.\n\n\"Researchers studying urban parks found that residents who lived within a ten-minute walk of green space used it far more often than those who lived farther away. Interestingly, the quality of the park mattered less than its proximity: even small, unremarkable parks nearby drew frequent visitors. The team concluded that access, more than amenities, shaped how often people spent time outdoors.\"\n\nAccording to the text, what most strongly influenced how frequently residents used a park?\n",
+    "options": [
+      "How close the park was to where they lived.",
+      "The number of amenities the park offered.",
+      "The overall size and appearance of the park.",
+      "The ages of the residents who were surveyed."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The text concludes that access, meaning proximity, mattered more than amenities. Amenities and size are explicitly downplayed, and resident age is never mentioned.",
+    "difficulty": "medium",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 55,
+    "question": "The following is a short passage.\n\n\"For decades, biologists assumed that the octopus's remarkable camouflage was directed entirely by its brain. Recent work, however, has revealed that octopus skin contains light-sensitive proteins of the same kind found in eyes. This finding suggests that the skin itself may detect light and adjust color locally, without waiting for instructions from the central nervous system.\"\n\nWhich choice best states the main idea of the text?\n",
+    "options": [
+      "Octopuses have sharper eyesight than most other marine animals.",
+      "New findings suggest octopus skin may sense light and change color on its own, revising an earlier assumption.",
+      "Camouflage in octopuses is now known to be controlled solely by the brain.",
+      "Light-sensitive proteins occur only in the eyes of animals, never elsewhere."
+    ],
+    "correctAnswer": 1,
+    "explanation": "The passage contrasts the old assumption (brain-directed camouflage) with new evidence that skin may sense light locally. Choice C restates the discredited view, while the others are unsupported or contradicted by the finding.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 56,
+    "question": "The following is a short passage.\n\n\"The naturalist John Muir spent months alone in the Sierra Nevada, filling notebooks with careful observations. He later wrote that the mountains restored him, describing the wilderness as more nourishing to him than any comfort a city could offer.\"\n\nA student claims that Muir regarded time in the wilderness as beneficial to his own well-being. Which detail from the text best supports the student's claim?\n",
+    "options": [
+      "Muir spent months alone in the Sierra Nevada.",
+      "Muir filled his notebooks with careful observations.",
+      "Muir described the wilderness as more nourishing to him than any city comfort.",
+      "Muir traveled into the mountains to make his observations."
+    ],
+    "correctAnswer": 2,
+    "explanation": "The claim is about wilderness benefiting Muir's well-being; calling it more nourishing than any city comfort directly supports that. The other details describe what he did, not how it affected him.",
+    "difficulty": "easy",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 57,
+    "question": "The following is a short passage.\n\n\"A team testing a new drought-resistant wheat grew it alongside a standard variety during an unusually dry season. At harvest, they recorded each type's grain yield, water use, and root depth. The researchers hoped to show that the new wheat could maintain its yield even under water stress.\"\n\nWhich finding from the study, if true, would most directly support the researchers' hope?\n",
+    "options": [
+      "The new wheat produced nearly the same yield as the standard variety while using less water.",
+      "The standard wheat grew slightly taller than the new wheat.",
+      "Both varieties were planted in the field on the same day.",
+      "The new wheat developed shallower roots than the standard variety."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The hope is that the new wheat maintains yield under water stress; matching yield while using less water directly supports that. Plant height, planting date, and root depth do not speak to maintained yield under stress.",
+    "difficulty": "medium",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 58,
+    "question": "The following is a short passage.\n\n\"An economist argues that remote work has reshaped small towns by drawing professionals who once clustered in cities. She contends that these newcomers bring spending power that revives struggling local businesses. To test this idea, she examined several towns that gained remote workers between 2019 and 2023.\"\n\nWhich finding would most directly support the economist's argument that remote workers revive local businesses?\n",
+    "options": [
+      "Remote workers often reported feeling isolated after moving to small towns.",
+      "The towns generally had lower housing costs than the nearby cities.",
+      "Towns that gained remote workers saw rising revenue at their local shops and restaurants.",
+      "Some remote workers chose to move back to cities after about a year."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Her argument is that newcomers' spending revives local businesses; rising revenue at local shops and restaurants is the direct evidence. The other findings concern well-being, housing costs, or turnover, none of which shows business revival.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 59,
+    "question": "The following is a short passage.\n\n\"A biologist measured how quickly a lizard's body temperature rose when it moved from shade into sunlight. While in the shade, the lizard's temperature held steady at 22 degrees Celsius. After 5 minutes in sunlight it reached 28 degrees, and after 10 minutes it reached 34 degrees.\"\n\nWhich choice most effectively uses data from the measurements to illustrate how sunlight affected the lizard's body temperature?\n",
+    "options": [
+      "The lizard's temperature rose from 22 degrees in the shade to 34 degrees after 10 minutes in sunlight.",
+      "The lizard appeared to prefer resting in the shade rather than the sun.",
+      "The lizard's temperature stayed at 22 degrees for the entire observation.",
+      "The biologist observed the lizard for well over an hour."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The rise from 22 degrees in shade to 34 degrees after 10 minutes in sun directly illustrates sunlight's warming effect. Choice C contradicts the data, and the others introduce claims the measurements do not report.",
+    "difficulty": "medium",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 60,
+    "question": "The following is a short passage.\n\n\"A survey asked residents of three neighborhoods how satisfied they were with local public transit. In Neighborhood A, 70 percent were satisfied; in Neighborhood B, 45 percent; and in Neighborhood C, 30 percent. Neighborhood A had the most frequent bus service, while Neighborhood C had the least.\"\n\nA city planner claims that more frequent bus service is associated with higher rider satisfaction. Which choice most effectively uses data from the survey to support the planner's claim?\n",
+    "options": [
+      "Neighborhood B, in the middle of the range, reported a satisfaction rate of 45 percent.",
+      "Residents of all three neighborhoods reported at least some satisfaction with transit.",
+      "Residents of Neighborhood C reported that they rarely rode the bus at all.",
+      "Neighborhood A, with the most frequent service, had the highest satisfaction at 70 percent, while Neighborhood C, with the least, had the lowest at 30 percent."
+    ],
+    "correctAnswer": 3,
+    "explanation": "The claim links more frequent service to higher satisfaction; pairing A (most service, 70 percent) against C (least service, 30 percent) shows that association. Choice B cites one figure without the link, and C states ridership the survey never reports.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 61,
+    "question": "The following is a short passage.\n\n\"Researchers compared two protective coatings for solar panels. Panels with Coating X retained 95 percent of their original efficiency after one year, while panels with Coating Y retained only 80 percent. Uncoated panels retained just 68 percent over the same period.\"\n\nThe researchers concluded that Coating X best preserves panel efficiency over time. Which choice most effectively uses data from the study to support this conclusion?\n",
+    "options": [
+      "Coating X panels retained 95 percent of their efficiency after one year, more than Coating Y panels (80 percent) or uncoated panels (68 percent).",
+      "Uncoated panels retained 68 percent of their original efficiency over the year.",
+      "Coating Y panels ended the year performing better than the Coating X panels did.",
+      "All of the panels lost at least some efficiency over the course of the year."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Supporting that Coating X best preserves efficiency requires showing it retained the most, 95 percent versus 80 and 68 percent. Choice C contradicts the data, B reports only one value, and D is true but does not single out Coating X.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 62,
+    "question": "The following is a short passage.\n\n\"When the printing press spread across Europe, the number of books produced multiplied rapidly. Texts that had once taken scribes months to copy by hand could now be printed in a matter of days. As a result, ideas that had previously been confined to a few monasteries ______\"\n\nWhich choice most logically completes the text?\n",
+    "options": [
+      "could reach a far wider audience than ever before.",
+      "became considerably more difficult for readers to obtain.",
+      "were mostly destroyed by the arrival of the new technology.",
+      "remained of interest only to the scribes who once copied them."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Faster, cheaper printing means confined ideas could spread widely, so a wider audience follows logically. The other choices reverse the passage's logic of greater availability and diffusion.",
+    "difficulty": "medium",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 63,
+    "question": "The following is a short passage.\n\n\"Certain desert plants open the pores on their leaves only at night, taking in carbon dioxide when the air is cool and humid. They store this carbon in a chemical form until daylight, when they carry out photosynthesis with their pores sealed shut. This adaptation lets the plants photosynthesize during the day while ______\"\n\nWhich choice most logically completes the text?\n",
+    "options": [
+      "absorbing most of their water directly through their leaves.",
+      "releasing the stored carbon dioxide back into the atmosphere.",
+      "losing as little water as possible to the dry daytime air.",
+      "keeping their leaf pores wide open throughout the afternoon."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Sealing pores by day, after taking in carbon at night, serves to limit water loss in dry daytime air, the logical benefit. Choices B and D contradict the described sealed-pore behavior, and A is unsupported.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 64,
+    "question": "The following is a short passage.\n\n\"Every evening, old Tomas set two cups of tea on the kitchen table, though he had lived alone since his wife passed. He never drank from the second cup; by morning it sat cold and untouched, and he would quietly pour it out before setting a fresh one that night.\"\n\nBased on the text, it can most reasonably be inferred that Tomas\n",
+    "options": [
+      "is expecting a guest to arrive at his home soon.",
+      "still keeps his late wife present in his daily habits.",
+      "has grown to dislike the taste of the tea he makes.",
+      "has forgotten that his wife is no longer living."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Setting and pouring out a second cup each day, knowing he lives alone, suggests he keeps his wife present in habit. He clearly knows she has passed (ruling out D), and a guest or tea dislike is unsupported.",
+    "difficulty": "medium",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 65,
+    "question": "The following is a short passage.\n\n\"In a study of decision-making, shoppers were offered free samples of 24 jams on one day and only 6 jams on another. Far more shoppers stopped to taste when 24 jams were displayed, yet those who saw only 6 were roughly ten times more likely to actually buy a jar. The researchers noted that the smaller display produced more purchases despite drawing fewer tasters.\"\n\nBased on the text, it can most reasonably be inferred that\n",
+    "options": [
+      "offering a greater number of choices does not always lead to more purchases.",
+      "shoppers generally dislike being offered free samples in stores.",
+      "jam is a more popular grocery item than most other products.",
+      "shoppers almost always buy the very first product they taste."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The larger display drew more tasters but fewer buyers, so more choices did not yield more purchases, the reasonable inference. The other options are contradicted or go well beyond what the study shows.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 66,
+    "question": "The following is a short passage.\n\n\"Deep-sea anglerfish live at depths that sunlight never reaches, yet many species possess large, well-developed eyes. Because no sunlight penetrates so deep, the only light present comes from the faint glow that some organisms produce themselves. Scientists therefore suspect that the anglerfish's large eyes are adapted primarily to ______\"\n\nWhich choice most logically completes the text?\n",
+    "options": [
+      "see by the sunlight that filters down from the ocean's surface.",
+      "sense small changes in the temperature of the surrounding water.",
+      "distinguish a wide range of colors under bright conditions.",
+      "detect the dim light generated by other living organisms."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Since the only light at those depths comes from organisms' own glow, large eyes would logically be adapted to detect that faint biological light. Choices A and C assume light the passage says is absent, and B swaps sight for temperature sensing.",
+    "difficulty": "hard",
+    "domain": "information-ideas"
+  },
+  {
+    "id": 67,
     "question": "The volunteers worked ____ through the night, refusing to rest until every family displaced by the flood had a warm place to sleep.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "reluctantly",
@@ -733,7 +957,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 52,
+    "id": 68,
     "question": "Although the instructions looked complicated at first, the guide assured the campers that pitching the tent was actually quite ____.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "simple",
@@ -747,7 +971,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 53,
+    "id": 69,
     "question": "Because the young pianist had practiced the same piece for months, her performance was remarkably ____, with no missed notes.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "hesitant",
@@ -761,7 +985,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 54,
+    "id": 70,
     "question": "The critic called the documentary ____, praising how it presented both sides of the debate without ever taking a side.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "biased",
@@ -775,7 +999,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 55,
+    "id": 71,
     "question": "After the long drought finally ended, the once-brown fields grew ____ again, covered in fresh green grass.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "barren",
@@ -789,7 +1013,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 56,
+    "id": 72,
     "question": "While some reviewers dismissed the artist's later work as repetitive, others admired its ____ consistency, seeing in each nearly identical canvas a deliberate meditation on sameness.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "accidental",
@@ -803,7 +1027,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 57,
+    "id": 73,
     "question": "The senator's speech was praised for its ____ tone: firm in its convictions yet never dismissive of those who disagreed.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "combative",
@@ -817,7 +1041,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 58,
+    "id": 74,
     "question": "Far from being a mere imitation, the young composer's symphony was strikingly ____, weaving folk melodies into forms no one had attempted before.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "derivative",
@@ -831,7 +1055,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 59,
+    "id": 75,
     "question": "Even under intense questioning, the witness remained ____, offering the same account she had given from the very first day.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "consistent",
@@ -845,7 +1069,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 60,
+    "id": 76,
     "question": "The novelist's descriptions are so ____ that readers often feel they can smell the rain and hear the floorboards creak.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "vague",
@@ -859,7 +1083,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 61,
+    "id": 77,
     "question": "Critics initially derided the theory as ____, but decades of accumulating evidence eventually forced even its harshest skeptics to concede its plausibility.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "untenable",
@@ -873,7 +1097,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 62,
+    "id": 78,
     "question": "The essayist's prose, though never showy, achieves a quiet ____: each unassuming clause accretes into an argument of surprising force.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "ostentation",
@@ -887,7 +1111,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 63,
+    "id": 79,
     "question": "Rather than resolving the paradox, the philosopher seemed content to ____ it, turning it over from angle to angle without ever demanding a tidy conclusion.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "dispel",
@@ -901,7 +1125,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 64,
+    "id": 80,
     "question": "The diplomat's famed ____ allowed her to deliver unwelcome news in terms so gracious that adversaries often thanked her for it.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "bluntness",
@@ -915,7 +1139,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 65,
+    "id": 81,
     "question": "The following text is from a science article.\n\nHoneybees communicate the location of food through a \"waggle dance.\" By moving in a figure-eight and vibrating, a returning bee tells others the direction and distance of a flower patch. This behavior lets a whole hive respond quickly to new food sources.\n\nWhat is the main purpose of the text?",
     "options": [
       "To argue that bees are more intelligent than other insects",
@@ -929,7 +1153,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 66,
+    "id": 82,
     "question": "The following text is from a short story.\n\nMara stared at the acceptance letter, reading it three times before she believed it. Then she let out a shout that startled the cat, spun around the kitchen, and immediately dialed her grandmother's number.\n\nWhat function do Mara's actions serve in the text?",
     "options": [
       "To show that Mara doubts the letter is real",
@@ -943,7 +1167,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 67,
+    "id": 83,
     "question": "The following text is from a history textbook.\n\nThe printing press, introduced in Europe in the fifteenth century, made books far cheaper to produce. As a result, ideas spread more quickly than ever before, and literacy rates began to rise across the continent.\n\nWhich choice best describes the overall structure of the text?",
     "options": [
       "It presents a technology and then describes its effects",
@@ -957,7 +1181,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 68,
+    "id": 84,
     "question": "The following text is from a nature essay.\n\nWe tend to picture glaciers as permanent, immovable features of the landscape. Yet a glacier is really a river of ice, creeping downhill grain by grain, grinding valleys into new shapes over centuries.\n\nWhat is the main rhetorical purpose of the second sentence?",
     "options": [
       "To provide statistical evidence about glacier speed",
@@ -971,7 +1195,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 69,
+    "id": 85,
     "question": "The following text is from a literary review.\n\nThe memoir's first half, all sunlit childhood and easy laughter, lulls the reader into comfort. Then, without warning, the tone darkens, and the same house that felt safe becomes a place of dread.\n\nWhich choice best describes the function of the word \"Then\" in the text?",
     "options": [
       "It signals a shift from one emotional register to a contrasting one",
@@ -985,7 +1209,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 70,
+    "id": 86,
     "question": "The following text is from an article about urban design.\n\nCity planners once assumed that wider roads would ease congestion. In practice, though, added lanes often invite more drivers, and traffic swells to fill the new space—a phenomenon researchers call \"induced demand.\"\n\nWhat is the main purpose of the text?",
     "options": [
       "To recommend that cities stop building roads entirely",
@@ -999,7 +1223,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 71,
+    "id": 87,
     "question": "The following text is from an essay on translation.\n\nA translator, we like to imagine, is a pane of glass: the truest one is the one we notice least. But this ideal of invisibility conceals a quiet paradox, for every choice to disappear is itself a choice, an act of shaping as decisive as any the original author made.\n\nWhat is the main rhetorical purpose of the text?",
     "options": [
       "To praise translators who render texts word for word",
@@ -1013,7 +1237,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 72,
+    "id": 88,
     "question": "The following text is from a novel.\n\nHe had rehearsed the apology a hundred times—each word weighed, each pause placed. But standing at last on her doorstep, he found the careful speech dissolving, and what came out instead was a single, graceless \"I'm sorry.\"\n\nWhich choice best describes the function of the second sentence in the text?",
     "options": [
       "It reinforces the impression of control established in the first sentence",
@@ -1027,7 +1251,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 73,
+    "id": 89,
     "question": "The following text is from a critical essay.\n\nThe painting rewards the patient viewer. At a glance it is merely a bowl of fruit; linger, however, and the bruised pear, the fly on the rind, and the light already fading from the window begin to whisper that all this abundance is only borrowed time.\n\nWhat is the main purpose of the text?",
     "options": [
       "To catalog the objects a still-life painter typically includes",
@@ -1041,7 +1265,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 74,
+    "id": 90,
     "question": "The following text is from a science history book.\n\nFor centuries the mapmakers' blank spaces were filled with sea monsters and speculation. It is tempting to mock such flourishes, but they served an honest function: they marked, plainly, the boundary where knowledge ended and imagination began.\n\nWhat is the main rhetorical purpose of the text's second sentence?",
     "options": [
       "To reframe a seemingly foolish practice as meaningful",
@@ -1055,7 +1279,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 75,
+    "id": 91,
     "question": "Text 1\nCommunity gardens are a clear good for cities. They give neighbors fresh vegetables, turn empty lots into green space, and bring people together around a shared project.\n\nText 2\nCommunity gardens sound lovely, but they use land that a growing city badly needs for housing. A single garden may serve a few dozen families; the apartments that could stand there would serve hundreds.\n\nHow would the author of Text 2 most likely respond to the view expressed in Text 1?",
     "options": [
       "By agreeing that gardens should replace all new housing",
@@ -1069,7 +1293,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 76,
+    "id": 92,
     "question": "Text 1\nHomework is essential. Practicing skills at home is how students turn a day's lesson into lasting knowledge.\n\nText 2\nStudents already spend six hours in class. Piling on homework cuts into sleep, family time, and play—the very things young people need to stay healthy.\n\nWhich choice best describes the relationship between the two texts?",
     "options": [
       "Text 2 provides evidence that supports Text 1's claim",
@@ -1083,7 +1307,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 77,
+    "id": 93,
     "question": "Text 1\nZoos play a vital role in conservation. Breeding programs have saved species that were nearly extinct in the wild, and no documentary can match the way a live animal sparks a child's wonder.\n\nText 2\nWe grant that a few breeding programs have succeeded. Still, most zoo animals belong to species in no danger at all, kept in enclosures far too small, chiefly to draw ticket-buying crowds.\n\nHow does Text 2 respond to Text 1?",
     "options": [
       "It rejects Text 1's conservation claim entirely as false",
@@ -1097,7 +1321,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 78,
+    "id": 94,
     "question": "Text 1\nThe new remote-work policy is a triumph. Employees save hours of commuting, report higher satisfaction, and can live wherever they choose.\n\nText 2\nRemote work suits seasoned employees well. But newcomers, denied the casual mentorship that happens in a shared office, often flounder—learning the unwritten rules of a job is far harder over video calls.\n\nWhich choice best states how the author of Text 2 would likely regard Text 1's assessment?",
     "options": [
       "As correct for experienced workers but incomplete regarding newcomers",
@@ -1111,7 +1335,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 79,
+    "id": 95,
     "question": "Text 1\nHistorians should strive for objectivity, setting aside their own sympathies to reconstruct the past as it actually was. Only such discipline separates history from mere opinion.\n\nText 2\nThe dream of the wholly neutral historian is a fond illusion. Every choice—what to include, whether to call an uprising a \"rebellion\" or a \"revolution\"—smuggles in a judgment. Better to name one's commitments openly than to hide behind a false neutrality.\n\nHow would the author of Text 2 most likely characterize the ideal described in Text 1?",
     "options": [
       "As a worthy standard that historians easily achieve",
@@ -1125,7 +1349,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 80,
+    "id": 96,
     "question": "Text 1\nGreat inventions are the work of great individuals. Edison, Bell, the Wright brothers—history advances by the flashes of genius that visit singular minds.\n\nText 2\nEvery \"lone genius\" stood atop a scaffold others built. Edison's lab employed dozens; the Wrights drew on decades of prior aeronautics. The spark may strike one person, but the tinder is always collective.\n\nWhich choice best describes the relationship between the two texts?",
     "options": [
       "Text 2 dismisses the individuals Text 1 names as unimportant",
@@ -1139,7 +1363,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 81,
+    "id": 97,
     "question": "The museum's new exhibit was surprisingly ____: rather than crowding the walls with paintings, the curators left wide, open spaces around each work.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "sparse",
@@ -1153,7 +1377,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 82,
+    "id": 98,
     "question": "Although the recipe seemed intimidating at first glance, the chef reassured the students that its steps were actually quite ____ once they understood the basic technique.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "costly",
@@ -1167,7 +1391,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 83,
+    "id": 99,
     "question": "The coach praised the team's ____ effort: even after they fell behind by twenty points, not a single player stopped hustling.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "careless",
@@ -1181,7 +1405,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 84,
+    "id": 100,
     "question": "The novelist's later works grew increasingly ____: where her early stories spelled out every motive plainly, these demanded that readers assemble meaning from hints and silences.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "oblique",
@@ -1195,7 +1419,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 85,
+    "id": 101,
     "question": "Far from serving as a passive observer, the ambassador took a ____ role in the negotiations, drafting compromises and pressing both delegations toward agreement.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "nominal",
@@ -1209,7 +1433,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 86,
+    "id": 102,
     "question": "The editor's feedback was never wounding; her criticism was so ____ that writers often thanked her even as she flagged their weakest paragraphs.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "blunt",
@@ -1223,7 +1447,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 87,
+    "id": 103,
     "question": "Reviewers admired the memoir's ____ tone: the author recounts even her cruelest setbacks without a trace of self-pity, reporting them as calmly as she might describe the weather.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "callous",
@@ -1237,7 +1461,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 88,
+    "id": 104,
     "question": "The senator's speeches were admired less for their arguments than for their ____ phrasing—lines so memorably compact that reporters quoted them verbatim and voters repeated them for weeks.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "verbose",
@@ -1251,7 +1475,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 89,
+    "id": 105,
     "question": "Although the committee's report ran to hundreds of pages, its conclusions proved disappointingly ____: it restated familiar findings and offered almost no original analysis of its own.\n\nWhich choice completes the text with the most logical and precise word or phrase?",
     "options": [
       "exhaustive",
@@ -1265,7 +1489,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 90,
+    "id": 106,
     "question": "For decades, coral reefs were studied mainly for their beauty and biodiversity. More recently, though, economists have begun to catalog the reefs' hidden financial value: the fisheries they sustain, the tourism they draw, and the coastal storm damage they prevent. A single reef, one analysis estimates, can save a shoreline community millions of dollars each year.\n\nWhich choice best describes the function of the second sentence in the passage?",
     "options": [
       "It marks a shift from valuing reefs aesthetically to valuing them economically.",
@@ -1279,7 +1503,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 91,
+    "id": 107,
     "question": "Advocates of the four-day workweek often cite productivity studies, but those studies vary widely in quality. Some track only a handful of employees; others run for just a few weeks. Until larger and longer trials are conducted, even sympathetic economists urge caution in drawing firm conclusions.\n\nWhat is the main rhetorical purpose of the final sentence?",
     "options": [
       "To dismiss the four-day workweek as impractical",
@@ -1293,7 +1517,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 92,
+    "id": 108,
     "question": "The painter is often celebrated as a pioneer of abstraction, supposedly the first to abandon recognizable subjects entirely. Yet her earliest abstract canvases, recently reexamined under infrared light, still hold faint outlines of flowers and figures beneath their washes of color. The legend of a clean break, it seems, tidies a messier truth.\n\nWhich choice best describes the function of the final sentence of the passage?",
     "options": [
       "It concedes that the painter's reputation is entirely undeserved.",
@@ -1307,7 +1531,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 93,
+    "id": 109,
     "question": "Skeptics of vertical farming stress its steep energy costs: stacking crops indoors means replacing free sunlight with electric lighting. Proponents counter that vertical farms use a fraction of the water and land conventional agriculture demands. Neither figure, however, means much in isolation—the honest comparison depends on which resource a given region can least afford to squander.\n\nWhat is the main rhetorical purpose of the final sentence?",
     "options": [
       "It declares vertical farming clearly superior to conventional agriculture.",
@@ -1321,7 +1545,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 94,
+    "id": 110,
     "question": "Most guidebooks describe the old quarter as quaint and unchanging, a pocket of the past preserved for visitors. The residents tell a different story: rents that climb every year, familiar shops swapped for souvenir stalls, neighbors who can no longer afford to stay. What tourists read as timelessness, the people who live there experience as slow displacement.\n\nWhich choice best describes the function of the second sentence in the passage?",
     "options": [
       "It offers a firsthand counterpoint that complicates the guidebooks' portrayal.",
@@ -1335,7 +1559,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 95,
+    "id": 111,
     "question": "The study's authors are careful to note what their data cannot show. Their surveys captured how often people reported feeling lonely, but not why—whether from isolation, from crowds that felt impersonal, or from causes the questionnaire never named. This caveat, the authors add, does not weaken their findings so much as mark the boundary of what those findings can claim.\n\nWhat is the main rhetorical purpose of the final sentence?",
     "options": [
       "To acknowledge a limitation while affirming the study's core value",
@@ -1349,7 +1573,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 96,
+    "id": 112,
     "question": "Text 1\nMany educators argue that homework reinforces classroom learning. By practicing new skills at home, students move material into long-term memory and arrive better prepared for the next lesson.\n\nText 2\nCritics counter that homework's benefits are unevenly distributed. Students with quiet homes and available tutors gain the most, while those without such support fall further behind—so homework can widen the very gaps schools hope to close.\n\nBased on the texts, how would the author of Text 2 most likely respond to the claim about homework in Text 1?",
     "options": [
       "By agreeing that homework carries no academic value whatsoever",
@@ -1363,7 +1587,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 97,
+    "id": 113,
     "question": "Text 1\nThe biographer treats the inventor's famous notebooks as reliable records of discovery, quoting their dated entries to establish exactly when each breakthrough occurred.\n\nText 2\nRecent archival work complicates any such use of the notebooks. The inventor, it turns out, often rewrote earlier pages years later, backdating ideas to strengthen his position in patent disputes. The dates on the page cannot be taken at face value.\n\nBased on the texts, how would the author of Text 2 most likely respond to the biographer's method described in Text 1?",
     "options": [
       "By endorsing the notebooks as a precise timeline of discovery",
@@ -1377,7 +1601,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 98,
+    "id": 114,
     "question": "Text 1\nEcologists restoring the wetland favor removing the non-native reeds entirely. Native plants, they argue, cannot recover while the aggressive newcomers monopolize sunlight and soil.\n\nText 2\nOther researchers urge caution. In this particular marsh, the non-native reeds have for decades provided the only stable nesting cover for several declining bird species. Stripping them out all at once could doom those birds before native plants mature enough to replace that shelter.\n\nBased on the texts, how would the author of Text 2 most likely respond to the removal strategy proposed in Text 1?",
     "options": [
       "By denying that the non-native reeds compete with native plants at all",
@@ -1391,7 +1615,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 99,
+    "id": 115,
     "question": "Text 1\nThe economist credits the city's falling crime rate to its expanded police force, observing that arrests rose in the same years crime declined.\n\nText 2\nCorrelation of this kind is easy to misread. Over the same period the city also saw rising employment, an aging population, and new streetlights on once-dark blocks—each independently linked to lower crime. Isolating the effect of policing alone would require ruling such factors out, which the available data do not.\n\nBased on the texts, how would the author of Text 2 most likely respond to the economist's explanation in Text 1?",
     "options": [
       "By denying that the city's crime rate fell at all",
@@ -1405,7 +1629,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 100,
+    "id": 116,
     "question": "Text 1\nProponents of open-plan offices claim they foster collaboration: with no walls between desks, employees speak more freely and ideas spread faster.\n\nText 2\nObservation tells a subtler story. When one firm's partitions came down, workers did interact more—but mostly in brief, superficial exchanges. Substantive conversations, the kind that actually generate ideas, dropped sharply as employees retreated behind headphones to escape the constant interruptions.\n\nBased on the texts, how would the author of Text 2 most likely respond to the claim in Text 1 that open-plan offices make ideas spread faster?",
     "options": [
       "By agreeing fully and adding that written communication improved as well",
@@ -1419,7 +1643,231 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "craft-structure"
   },
   {
-    "id": 101,
+    "id": 117,
+    "question": "As used in the following sentence, what does \"secure\" most nearly mean?\n\n\"After hours of climbing, the team paused on a wide ledge to secure their ropes to an iron bolt before continuing upward.\"",
+    "options": [
+      "obtain",
+      "fasten",
+      "promise",
+      "defend"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Attaching ropes to an iron bolt describes fastening or anchoring them firmly in place. \"Obtain,\" \"promise,\" and \"defend\" do not fit the physical action of tying ropes to a fixed point.",
+    "difficulty": "easy",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 118,
+    "question": "Which choice completes the text with the most logical and precise word or phrase?\n\nThe recipe was surprisingly ______: with only four ingredients and a single pot, even a first-time cook could follow it.",
+    "options": [
+      "elaborate",
+      "costly",
+      "simple",
+      "ancient"
+    ],
+    "correctAnswer": 2,
+    "explanation": "\"Only four ingredients and a single pot\" and a first-time cook succeeding both signal ease, so \"simple\" fits. \"Elaborate\" is the opposite, and cost and age are never mentioned.",
+    "difficulty": "easy",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 119,
+    "question": "Which choice best states the main purpose of the text?\n\nSea otters spend much of their day grooming their fur. Unlike most marine mammals, otters have no blubber to keep warm. Instead, they rely on a dense coat that traps a layer of air against the skin. Keeping that coat clean and full of air is a matter of survival, not vanity.",
+    "options": [
+      "To compare the diets of sea otters and other marine mammals",
+      "To argue that sea otters are the cleanest animals in the ocean",
+      "To describe the process by which blubber keeps animals warm",
+      "To explain why a particular animal behavior is essential rather than merely cosmetic"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The text presents otter grooming and ends by stressing it is \"survival, not vanity,\" so its purpose is to show the behavior is necessary. Diet, cleanliness rankings, and blubber are not the focus.",
+    "difficulty": "easy",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 120,
+    "question": "Which choice completes the text with the most logical and precise word or phrase?\n\nAlthough the committee's report ran to hundreds of pages, its central recommendation could be stated ______: fund the repairs now, or pay far more later.",
+    "options": [
+      "succinctly",
+      "reluctantly",
+      "ambiguously",
+      "eloquently"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The contrast with \"hundreds of pages\" and the short either/or statement point to brevity, so \"succinctly\" fits in both meaning and neutral tone. \"Eloquently\" concerns style rather than length, and the others do not match.",
+    "difficulty": "medium",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 121,
+    "question": "Which choice completes the text with the most logical and precise word or phrase?\n\nCritics initially dismissed the painter's later works as careless, but recent scholarship has ______ that view, showing that each apparent smudge followed a deliberate plan.",
+    "options": [
+      "reinforced",
+      "complicated",
+      "ignored",
+      "predicted"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\"But\" marks a shift away from the dismissive view, and evidence of deliberate planning undermines it, so the scholarship has \"complicated\" (challenged) that view. \"Reinforced\" is the opposite; \"ignored\" and \"predicted\" do not fit.",
+    "difficulty": "medium",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 122,
+    "question": "As used in the following sentence, what does \"arrest\" most nearly mean?\n\n\"The unusual silence seemed to arrest the crowd, and for a moment no one in the plaza moved or spoke.\"",
+    "options": [
+      "detain by law",
+      "accuse",
+      "stop",
+      "decorate"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The crowd froze, with no one moving or speaking, so \"arrest\" means to halt or bring to a stop. The context of a silence affecting a crowd rules out the legal senses \"detain by law\" and \"accuse.\"",
+    "difficulty": "medium",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 123,
+    "question": "Which choice best describes the function of the underlined sentence in the text as a whole?\n\nFor decades, engineers assumed that adding more sensors to a bridge would always improve safety monitoring. A 2019 study challenged this assumption. It found that beyond a certain point, extra sensors produced so much conflicting data that inspectors actually missed warning signs they would otherwise have caught.\n\nUnderlined sentence: \"A 2019 study challenged this assumption.\"",
+    "options": [
+      "It provides statistical evidence supporting the engineers' original view.",
+      "It offers a personal anecdote to lighten a technical discussion.",
+      "It defines a term that the rest of the text goes on to illustrate.",
+      "It introduces a finding that reverses the expectation described in the previous sentence."
+    ],
+    "correctAnswer": 3,
+    "explanation": "The sentence pivots from the long-held assumption to a study that undercuts it, setting up the contrary finding that follows. It supplies no statistics, anecdote, or definition.",
+    "difficulty": "medium",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 124,
+    "question": "Which choice best describes the overall structure of the text?\n\nThe idea sounds appealing: plant a trillion trees and offset the world's carbon emissions. And it is true that forests absorb carbon. Yet the math is less reassuring. Even under ideal conditions, newly planted trees would take decades to mature, and the land required exceeds what is realistically available.",
+    "options": [
+      "A proposal is presented, partly conceded, and then qualified by practical objections.",
+      "A historical trend is traced from its origins to the present day.",
+      "Two competing scientific theories are described and then reconciled.",
+      "A personal experience is recounted and used to justify a policy."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The text states the tree-planting proposal, grants that forests absorb carbon (\"it is true\"), then raises objections about time and land. It is not a history, a reconciliation of theories, or a personal narrative.",
+    "difficulty": "medium",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 125,
+    "question": "Text 1\nRemote work, its supporters argue, frees employees from long commutes and lets them structure their days around peak productivity rather than office hours. The result, studies suggest, is happier workers and lower turnover.\n\nText 2\nThe hidden cost of remote work is the erosion of the informal exchange—the hallway chat, the overheard question—through which junior employees once learned their craft. Efficiency metrics may rise even as mentorship quietly disappears.\n\nHow would the author of Text 2 most likely respond to the claim about productivity in Text 1?",
+    "options": [
+      "By denying that remote workers are ever more productive than office workers",
+      "By insisting that long commutes have no effect on employee satisfaction",
+      "By granting that measured output can improve while arguing that harder-to-measure benefits are lost",
+      "By recommending that companies eliminate all in-person meetings"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Text 2 concedes that \"efficiency metrics may rise\" but warns that mentorship \"quietly disappears,\" so it accepts the productivity gain while stressing an unmeasured loss. The other options overstate or contradict Text 2.",
+    "difficulty": "medium",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 126,
+    "question": "Which choice completes the text with the most logical and precise word or phrase?\n\nThe historian's account is admirably thorough, yet its relentless accumulation of dates and figures can ______ the very argument it means to support, burying the reader's attention beneath detail.",
+    "options": [
+      "clarify",
+      "obscure",
+      "summarize",
+      "provoke"
+    ],
+    "correctAnswer": 1,
+    "explanation": "\"Burying the reader's attention beneath detail\" indicates that the mass of detail hides the argument, so \"obscure\" fits. \"Clarify\" is the opposite, and \"summarize\" and \"provoke\" do not match the sense of being buried.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 127,
+    "question": "Which choice completes the text with the most logical and precise word or phrase?\n\nFar from being a passive recorder of events, the memoirist is a ______ curator, choosing which memories to preserve and which to let fade.",
+    "options": [
+      "reckless",
+      "reluctant",
+      "forgetful",
+      "deliberate"
+    ],
+    "correctAnswer": 3,
+    "explanation": "\"Choosing which memories to preserve\" describes intentional selection, set against \"passive recorder,\" so \"deliberate\" fits. \"Reckless,\" \"reluctant,\" and \"forgetful\" all contradict purposeful curation.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 128,
+    "question": "Which choice best describes the overall structure of the text?\n\nIt is tempting to read the poem as a straightforward celebration of spring. The opening stanzas overflow with blossoms and birdsong. But the final couplet, with its abrupt turn to the coming frost, casts a shadow backward over everything that precedes it, so that the earlier joy reads, on a second pass, as something the speaker already knows will not last.",
+    "options": [
+      "An initial interpretation is offered, then shown to be transformed by a later detail.",
+      "A poem's structure is compared unfavorably with that of a rival work.",
+      "A biographical fact is used to explain a poet's recurring themes.",
+      "A general rule about poetry is stated and then applied to several examples."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The text gives a first reading (\"celebration of spring\"), then shows how the final couplet reframes it, casting \"a shadow backward.\" No comparison, biography, or set of examples appears.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 129,
+    "question": "Which choice best describes the main purpose of the text?\n\nPopular histories often credit a single inventor with the light bulb, the telephone, or the airplane. Such stories are satisfying, but they mislead. Nearly every landmark invention emerged from a crowded field of rivals working toward the same goal, and the \"inventor\" we remember is frequently just the one who filed the paperwork first.",
+    "options": [
+      "To celebrate the achievements of a few well-known inventors",
+      "To explain the legal process for obtaining a patent",
+      "To correct a common misconception about how major inventions come about",
+      "To argue that inventions no longer require individual genius"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The text calls the single-inventor narrative misleading and replaces it with a picture of many rivals, so its purpose is corrective. It does not celebrate inventors, detail patent law, or make a claim limited to the present.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 130,
+    "question": "Text 1\nZoos, defenders maintain, have become arks for endangered species. Captive breeding programs have restored animals like the California condor to the wild, achievements that would have been impossible without the resources and expertise that zoos concentrate in one place.\n\nText 2\nNo breeding program can substitute for the thing a wild animal actually needs: habitat. Every dollar and hour devoted to maintaining a species in captivity is one not spent protecting the forests and wetlands where it might otherwise live freely—and to which, if those places vanish, it can never return.\n\nWhich choice best describes how Text 2 responds to the argument in Text 1?",
+    "options": [
+      "It denies that any species has ever been restored to the wild",
+      "It claims that zoos lack the expertise to run breeding programs",
+      "It agrees that habitat protection should be abandoned in favor of captivity",
+      "It grants that captive breeding may work but argues it draws resources away from a more fundamental need"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Text 2 does not dispute the condor-style successes; it argues that captivity consumes money and time that habitat protection—\"the thing a wild animal actually needs\"—requires. The other options contradict Text 2's actual claims.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 131,
+    "question": "Text 1\nThe value of a liberal-arts education, its champions say, lies precisely in its impracticality. Studying philosophy or literature teaches students how to think, not merely what to do—a flexible capacity that outlasts any particular job skill.\n\nText 2\nEmployers today report that they can teach new hires the specific tools of a trade in weeks. What they cannot easily supply is the ability to reason through an unfamiliar problem, weigh competing arguments, and write clearly. Ironically, these \"impractical\" habits of mind have become the most practical qualifications of all.\n\nWhich choice best describes the relationship between the two texts?",
+    "options": [
+      "Text 2 rejects the central claim that Text 1 advances",
+      "Text 2 reframes as practical the very quality that Text 1 defends as impractical",
+      "Text 2 provides a historical origin for the trend Text 1 describes",
+      "Text 2 dismisses liberal-arts education as outdated"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Text 1 praises liberal arts for teaching thinking over job skills, calling it impractical; Text 2 argues those same \"impractical\" habits are now the most practical qualifications. Text 2 recasts, rather than rejects, Text 1's point.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 132,
+    "question": "Text 1\nStandardized tests, whatever their flaws, offer one thing that grades cannot: a common yardstick. A student's A in one school may reflect work that would earn a C in another, but a test score means the same thing everywhere.\n\nText 2\nThe apparent objectivity of a test score is an illusion. Scores track family income almost as faithfully as they track ability, because wealthier families can buy tutoring, test prep, and repeated attempts. A \"common yardstick\" that measures privilege is not common at all.\n\nHow would the author of Text 1 most likely respond to the argument made in Text 2?",
+    "options": [
+      "By agreeing that standardized tests should be eliminated entirely",
+      "By denying that family income has any relationship to test scores",
+      "By conceding that scores are influenced by wealth while maintaining that grades vary even more unpredictably across schools",
+      "By arguing that grades are a more objective measure than test scores"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Text 1's case rests on tests being more comparable than grades, not on their being perfectly fair, so its author could accept the point about wealth yet still hold that grades are even less consistent. The other options abandon or contradict Text 1's position.",
+    "difficulty": "hard",
+    "domain": "craft-structure"
+  },
+  {
+    "id": 133,
     "question": "Sea otters spend nearly all of their lives in the water. ____ they occasionally haul out onto rocks to rest and groom.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "However,",
@@ -1433,7 +1881,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 102,
+    "id": 134,
     "question": "A sudden cold snap damaged much of the region's citrus crop. ____ orange prices climbed sharply at grocery stores the following week.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nevertheless,",
@@ -1447,7 +1895,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 103,
+    "id": 135,
     "question": "Many everyday tools rely on simple machines. A bottle opener, ____ uses a lever to pry the cap off a bottle.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "however,",
@@ -1461,7 +1909,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 104,
+    "id": 136,
     "question": "The new community library offers thousands of print books. ____ it provides free access to a large collection of digital audiobooks.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nevertheless,",
@@ -1475,7 +1923,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 105,
+    "id": 137,
     "question": "Penguins are classified as birds. ____ they are completely unable to fly.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "However,",
@@ -1489,7 +1937,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 106,
+    "id": 138,
     "question": "Maria practiced the violin for two hours every day for a year. ____ she earned first place at the regional competition.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nevertheless,",
@@ -1503,7 +1951,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 107,
+    "id": 139,
     "question": "First, the dough must rest for an hour so that the gluten can relax. ____ the baker rolls it out and cuts it into shapes.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "However,",
@@ -1517,7 +1965,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 108,
+    "id": 140,
     "question": "While researching dog breeds, a student took the following notes:\n- The Akita is a breed of dog.\n- The Akita originated in Japan.\n- Akitas were originally bred to hunt large game.\n- Akitas have thick double coats.\n\nThe student wants to emphasize where the Akita comes from. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The Akita, a breed with a thick double coat, was bred to hunt large game.",
@@ -1531,7 +1979,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 109,
+    "id": 141,
     "question": "A student is writing about two rivers and took the following notes:\n- The Nile flows through Egypt.\n- The Amazon flows through Brazil.\n- Both rivers are among the longest in the world.\n- Both rivers support diverse wildlife.\n\nThe student wants to emphasize a similarity between the two rivers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The Nile flows through Egypt, while the Amazon flows through Brazil.",
@@ -1545,7 +1993,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 110,
+    "id": 142,
     "question": "A student took the following notes about an athlete:\n- Simone Biles is a gymnast.\n- She competed at the 2016 Olympics.\n- She won four gold medals at those Olympics.\n- She is from the United States.\n\nThe student wants to emphasize Biles's achievement at the 2016 Olympics. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Simone Biles, a gymnast from the United States, competed at the 2016 Olympics.",
@@ -1559,7 +2007,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 111,
+    "id": 143,
     "question": "The committee expected the fundraiser to draw a modest crowd. ____ nearly a thousand people showed up, overwhelming the volunteers.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Instead,",
@@ -1573,7 +2021,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 112,
+    "id": 144,
     "question": "The novel's plot is undeniably gripping. Its characters, ____ often feel thin and underdeveloped.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "for example,",
@@ -1587,7 +2035,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 113,
+    "id": 145,
     "question": "Researchers found that the new vaccine remained stable at room temperature for weeks. ____ it could be shipped to remote clinics without costly refrigeration.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nonetheless,",
@@ -1601,7 +2049,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 114,
+    "id": 146,
     "question": "The proposed highway would significantly shorten commute times for suburban drivers. ____ it would ease traffic congestion in the downtown core.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "However,",
@@ -1615,7 +2063,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 115,
+    "id": 147,
     "question": "Some animals have evolved remarkable camouflage to avoid predators. The leaf-tailed gecko, ____ blends almost perfectly with the bark of the trees it rests on.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "nevertheless,",
@@ -1629,7 +2077,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 116,
+    "id": 148,
     "question": "The startup struggled to attract investors during its first two years. ____ after a successful product demonstration, funding began to pour in.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Similarly,",
@@ -1643,7 +2091,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 117,
+    "id": 149,
     "question": "A student is writing about a scientific concept and took the following notes:\n- Bioluminescence is the production of light by living organisms.\n- Fireflies use bioluminescence to attract mates.\n- Many deep-sea creatures are bioluminescent.\n- The light is produced by a chemical reaction inside the organism.\n\nThe student wants to introduce the concept to an audience unfamiliar with the term. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Fireflies use bioluminescence to attract mates.",
@@ -1657,7 +2105,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 118,
+    "id": 150,
     "question": "A student took the following notes about two composers:\n- Bach composed during the Baroque period.\n- Stravinsky composed during the 20th century.\n- Bach's music is known for its intricate counterpoint.\n- Stravinsky's music is known for its bold, driving rhythms.\n\nThe student wants to emphasize a difference between the two composers' musical styles. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Bach composed during the Baroque period, and Stravinsky composed during the 20th century.",
@@ -1671,7 +2119,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 119,
+    "id": 151,
     "question": "A student took the following notes about a research study:\n- Ecologists studied a coral reef off the coast of Australia.\n- The study lasted five years.\n- The goal was to understand how rising ocean temperatures affect coral.\n- The team measured coral bleaching each year.\n\nThe student wants to explain the purpose of the study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The five-year study took place off the coast of Australia.",
@@ -1685,7 +2133,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 120,
+    "id": 152,
     "question": "A student took the following notes about a video game:\n- The game was released in 2011.\n- It was developed by a small studio.\n- By 2020, it had sold over 200 million copies.\n- It lets players build structures out of blocks.\n\nThe student wants to emphasize the game's commercial success. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The game, released in 2011, lets players build structures out of blocks.",
@@ -1699,7 +2147,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 121,
+    "id": 153,
     "question": "The mayor insisted that the new stadium project would have almost no impact on the city budget. ____ it ended up costing taxpayers millions of dollars more than promised.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Likewise,",
@@ -1713,7 +2161,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 122,
+    "id": 154,
     "question": "The experimental treatment did not worsen patients' symptoms, as some physicians had feared. ____ it produced a measurable improvement in nearly every case.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Accordingly,",
@@ -1727,7 +2175,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 123,
+    "id": 155,
     "question": "The engineers concentrated on strengthening the bridge's central span. ____ a separate crew reinforced the support cables at each end.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Consequently,",
@@ -1741,7 +2189,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 124,
+    "id": 156,
     "question": "Hikers on the canyon trail must carry enough water for the entire route. ____ they risk severe dehydration in the desert heat.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Similarly,",
@@ -1755,7 +2203,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 125,
+    "id": 157,
     "question": "A student took the following notes about desert animals:\n- The fennec fox has large ears that release body heat.\n- The jackrabbit also has oversized ears that dissipate heat.\n- Both animals are active mainly at night.\n- Both live in hot desert environments.\n\nThe student wants to emphasize a physical trait the two animals share. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Both the fennec fox and the jackrabbit are active mainly at night.",
@@ -1769,7 +2217,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 126,
+    "id": 158,
     "question": "A student took the following notes:\n- Some plants can survive extreme conditions.\n- The resurrection plant can lose 95 percent of its water and revive.\n- It curls into a dry brown ball during droughts.\n- When water returns, it unfurls and turns green within hours.\n\nThe student wants to present the resurrection plant as an example of a plant that survives extreme conditions. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "During droughts, the resurrection plant curls into a dry brown ball.",
@@ -1783,7 +2231,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 127,
+    "id": 159,
     "question": "A student took the following notes about an experiment:\n- Researchers tested whether background music improves memory.\n- They expected music to help participants recall word lists.\n- Participants who studied in silence actually recalled more words.\n- The silence advantage was strongest with instrumental music playing.\n\nThe student wants to emphasize the surprising outcome of the experiment. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Researchers tested whether background music improves memory.",
@@ -1797,7 +2245,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 128,
+    "id": 160,
     "question": "A student took the following notes:\n- In the 1930s, poor farming practices stripped the Great Plains of native grasses.\n- A severe drought then struck the region.\n- Without deep roots to hold the soil, winds lifted it into massive dust storms.\n- The period became known as the Dust Bowl.\n\nThe student wants to emphasize what caused the dust storms. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The 1930s Dust Bowl was a period of massive dust storms on the Great Plains.",
@@ -1811,7 +2259,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 129,
+    "id": 161,
     "question": "In the northern colony, settlers built their economy around fishing and shipbuilding. In the southern colony, ____ large plantations dominated, relying on cash crops such as tobacco.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "by contrast,",
@@ -1825,7 +2273,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 130,
+    "id": 162,
     "question": "A student took the following notes about the human body:\n- The kidneys are two bean-shaped organs.\n- They are located just below the rib cage.\n- They filter waste products out of the blood.\n- The filtered waste leaves the body as urine.\n\nThe student wants to explain the primary function of the kidneys. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The kidneys are two bean-shaped organs located just below the rib cage.",
@@ -1839,7 +2287,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 131,
+    "id": 163,
     "question": "The bridge had not been inspected in more than a decade, and several of its support cables were visibly frayed. ____ engineers recommended closing it to traffic immediately.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nevertheless,",
@@ -1853,7 +2301,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 132,
+    "id": 164,
     "question": "Regular exercise strengthens the heart and improves circulation. ____ it can lift a person's mood by triggering the release of endorphins.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Additionally,",
@@ -1867,7 +2315,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 133,
+    "id": 165,
     "question": "Solar panels have become far cheaper over the past decade, and installation rates have soared. ____ many homeowners in cloudy regions remain skeptical that the technology will ever pay off for them.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Consequently,",
@@ -1881,7 +2329,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 134,
+    "id": 166,
     "question": "The museum's new wing houses artifacts from cultures rarely represented in Western collections. ____ it displays a set of Nok terracotta figures from ancient Nigeria.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nevertheless,",
@@ -1895,7 +2343,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 135,
+    "id": 167,
     "question": "The company moved all of its data storage to encrypted servers and required two-factor authentication for every account. ____ the number of successful breaches dropped to nearly zero within a year.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Consequently,",
@@ -1909,7 +2357,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 136,
+    "id": 168,
     "question": "Critics praised the novel's inventive structure and lush prose, and it won several major awards. ____ its dense allusions and constantly shifting timelines left many general readers thoroughly bewildered.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "As a result,",
@@ -1923,7 +2371,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 137,
+    "id": 169,
     "question": "The drought did not merely reduce the harvest; it wiped out entire fields that had produced grain for generations. ____ some farmers reported losing every acre they had planted that spring.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nonetheless,",
@@ -1937,7 +2385,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 138,
+    "id": 170,
     "question": "The treaty rests on a principle of reciprocity. ____ each nation agrees to extend to the others exactly the trade privileges it receives from them.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Nevertheless,",
@@ -1951,7 +2399,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 139,
+    "id": 171,
     "question": "The researchers first calibrated the instrument against a sample of known concentration. ____ they measured the unknown solution three times to be sure the readings were consistent.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "As a result,",
@@ -1965,7 +2413,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 140,
+    "id": 172,
     "question": "Supporters argue that the new zoning law will bring badly needed housing to the city center. ____ the law does little to guarantee that any of those new units will be affordable to current residents.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "Still,",
@@ -1979,7 +2427,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 141,
+    "id": 173,
     "question": "Many everyday materials expand when heated and contract when cooled, sometimes with damaging force. ____ the steel rails of a railroad can buckle on an unusually hot afternoon.\n\nWhich choice completes the text with the most logical transition?",
     "options": [
       "For instance,",
@@ -1993,7 +2441,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 142,
+    "id": 174,
     "question": "While researching a topic, a student has taken the following notes:\n\n- The baobab is a tree native to Africa, Madagascar, and Australia.\n- It can store up to 120,000 liters of water in its trunk.\n- Some baobabs live for more than 1,000 years.\n- Local communities use its fruit, bark, and leaves.\n\nThe student wants to introduce the baobab tree to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Some baobabs live for more than 1,000 years, and local communities use the tree's fruit, bark, and leaves.",
@@ -2007,7 +2455,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 143,
+    "id": 175,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Clara Schumann was a 19th-century German pianist and composer.\n- Fanny Mendelssohn was a 19th-century German pianist and composer.\n- Schumann composed a piano concerto at age 16.\n- Mendelssohn wrote more than 450 musical works.\n- Both women performed publicly at a time when few women did.\n\nThe student wants to emphasize a similarity between the two musicians. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Clara Schumann composed a piano concerto at 16, whereas Fanny Mendelssohn wrote more than 450 musical works.",
@@ -2021,7 +2469,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 144,
+    "id": 176,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Boiling water kills most microorganisms by heating it to 100 degrees Celsius.\n- Boiling requires a heat source and fuel.\n- Chlorination adds small amounts of chlorine to water.\n- Chlorination leaves a residual that keeps water safe during storage.\n- Both methods are widely used to make water drinkable.\n\nThe student wants to emphasize a distinction between the two methods. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Both boiling and chlorination are widely used methods for making water drinkable.",
@@ -2035,7 +2483,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 145,
+    "id": 177,
     "question": "While researching a topic, a student has taken the following notes:\n\n- A study tracked 200 office workers for six months.\n- Workers who took a 10-minute walk every afternoon reported less fatigue.\n- They also completed tasks slightly faster than those who did not walk.\n- The effect was strongest among workers over 40.\n\nThe student wants to generalize from the study's specific findings. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "The study suggests that short afternoon walks may help office workers feel less tired and work more efficiently.",
@@ -2049,7 +2497,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 146,
+    "id": 178,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Tardigrades are microscopic animals often called water bears.\n- Scientists long assumed that complex animals could not survive the vacuum of space.\n- In a 2007 experiment, tardigrades were exposed to open space for 10 days.\n- Many of the tardigrades survived and later reproduced.\n- Most were also exposed to high levels of solar radiation.\n\nThe student wants to emphasize why the 2007 result surprised researchers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Tardigrades, microscopic animals often called water bears, were exposed to open space for 10 days in 2007.",
@@ -2063,7 +2511,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 147,
+    "id": 179,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Dendrochronology is the study of tree rings to date past events.\n- Each ring represents one year of a tree's growth.\n- Ring width varies with rainfall and temperature.\n- Researchers used dendrochronology to date the timbers in a medieval cathedral.\n- The timbers were felled around the year 1230.\n\nThe student wants to introduce dendrochronology to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Dendrochronology, the study of the annual rings that trees form as they grow, lets researchers date past events, such as the felling of a medieval cathedral's timbers.",
@@ -2077,7 +2525,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 148,
+    "id": 180,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Both Katsushika Hokusai and Utagawa Hiroshige made Japanese woodblock prints.\n- Hokusai often exaggerated natural forms for dramatic effect.\n- Hiroshige favored calm, atmospheric depictions of everyday scenes.\n- Both artists were active in the 19th century.\n- Both influenced later European painters.\n\nThe student wants to emphasize a distinction between the two artists' techniques. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Both Hokusai and Hiroshige made Japanese woodblock prints that influenced later European painters.",
@@ -2091,7 +2539,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 149,
+    "id": 181,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Coral reefs worldwide have been losing their color, a process called bleaching.\n- Researchers proposed that warmer ocean temperatures trigger bleaching.\n- To test this, they monitored reef temperatures and color for five years.\n- Reefs in the warmest waters bleached most often.\n- The team is now studying whether some corals can adapt.\n\nThe student wants to present the researchers' hypothesis. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "Over the course of five years, the reefs in the warmest waters bleached most often.",
@@ -2105,7 +2553,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 150,
+    "id": 182,
     "question": "While researching a topic, a student has taken the following notes:\n\n- Engineers tested a new self-healing concrete containing dormant bacteria.\n- When cracks let in water, the bacteria activate and produce limestone.\n- The limestone seals the cracks before they can widen.\n- In trials, treated samples sealed cracks up to 0.8 millimeters wide.\n- Untreated concrete cracks often require costly manual repair.\n\nThe student wants to emphasize the significance of the finding for future construction. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
     "options": [
       "By sealing cracks on its own, the self-healing concrete could reduce the costly manual repairs that ordinary concrete requires, making it promising for future construction.",
@@ -2119,7 +2567,231 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "expression"
   },
   {
-    "id": 151,
+    "id": 183,
+    "question": "The city council initially planned to close the old library branch to save money. ______ community members raised enough funds to keep it open for another decade.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Therefore,",
+      "However,",
+      "For example,",
+      "In addition,"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The council planned to close the branch, but the community kept it open instead, so the sentences express a contrast. 'However' signals that reversal; 'Therefore' marks cause/effect, 'For example' introduces an illustration, and 'In addition' adds a similar point, none of which fit.",
+    "difficulty": "easy",
+    "domain": "expression"
+  },
+  {
+    "id": 184,
+    "question": "Maria practiced the violin for three hours every day for a year. ______ she was selected as concertmaster of the youth orchestra.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Nevertheless,",
+      "For instance,",
+      "As a result,",
+      "Meanwhile,"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The extensive practice is the cause and her selection is the effect, so a cause/effect transition is needed. 'As a result' shows that outcome; 'Nevertheless' signals contrast, 'For instance' an example, and 'Meanwhile' simultaneous time, none of which fit.",
+    "difficulty": "easy",
+    "domain": "expression"
+  },
+  {
+    "id": 185,
+    "question": "While studying two species of frogs, a student took these notes:\n- The red-eyed tree frog is active mainly at night.\n- The poison dart frog is active mainly during the day.\n- Both species live in tropical rainforests.\n\nThe student wants to emphasize a difference between the two frog species. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "Both the red-eyed tree frog and the poison dart frog live in tropical rainforests.",
+      "The poison dart frog is active mainly during the day.",
+      "The red-eyed tree frog and the poison dart frog are both frogs.",
+      "The red-eyed tree frog is active mainly at night, whereas the poison dart frog is active mainly during the day."
+    ],
+    "correctAnswer": 3,
+    "explanation": "The goal is to emphasize a DIFFERENCE; only the last choice contrasts one frog's nighttime activity with the other's daytime activity. The first states a similarity, the second gives a single fact, and the third is a generic similarity.",
+    "difficulty": "easy",
+    "domain": "expression"
+  },
+  {
+    "id": 186,
+    "question": "The new fertilizer increased crop yields by nearly twenty percent. ______ it reduced the amount of water the plants needed to thrive.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "In contrast,",
+      "Additionally,",
+      "Consequently,",
+      "Otherwise,"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The second sentence adds a separate benefit of the fertilizer, so an addition transition fits. 'Additionally' adds the point; 'In contrast' signals opposition, 'Consequently' would wrongly claim the water savings resulted from the yield increase, and 'Otherwise' implies an alternative.",
+    "difficulty": "medium",
+    "domain": "expression"
+  },
+  {
+    "id": 187,
+    "question": "Many everyday materials exhibit surprising properties when cooled to extremely low temperatures. ______ certain metals lose all electrical resistance and become superconductors.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Nonetheless,",
+      "Similarly,",
+      "In conclusion,",
+      "For example,"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The second sentence gives a specific instance of the surprising properties mentioned first, so an example transition is needed. 'For example' introduces that instance; 'Nonetheless' signals contrast, 'Similarly' needs a prior comparable case, and 'In conclusion' signals a summary.",
+    "difficulty": "medium",
+    "domain": "expression"
+  },
+  {
+    "id": 188,
+    "question": "The researchers first collected soil samples from each of the forty plots. ______ they analyzed the samples in the laboratory to measure nitrogen content.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Afterward,",
+      "In contrast,",
+      "For example,",
+      "Regardless,"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The word 'first' sets up a sequence of steps, and the analysis follows the collection in time, so a sequence transition fits. 'Afterward' shows the next step; 'In contrast' signals opposition, 'For example' introduces an illustration, and 'Regardless' dismisses a condition.",
+    "difficulty": "medium",
+    "domain": "expression"
+  },
+  {
+    "id": 189,
+    "question": "A student researching two lakes took these notes:\n- Lake Baikal is located in Russia.\n- Lake Tanganyika is located in Africa.\n- Both lakes are among the deepest freshwater lakes on Earth.\n- Both lakes are home to species found nowhere else.\n\nThe student wants to emphasize a similarity between the two lakes. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "Lake Baikal is located in Russia, while Lake Tanganyika is located in Africa.",
+      "Lake Baikal is located in Russia.",
+      "Like Lake Baikal, Lake Tanganyika is home to species found nowhere else on Earth.",
+      "Lake Tanganyika, unlike Lake Baikal, is located in Africa."
+    ],
+    "correctAnswer": 2,
+    "explanation": "The goal is to emphasize a SIMILARITY; only the third choice presents a shared trait, using 'Like' to link both lakes' unique species. The first and fourth stress differences in location, and the second states a single fact.",
+    "difficulty": "medium",
+    "domain": "expression"
+  },
+  {
+    "id": 190,
+    "question": "A student took these notes about a recent study:\n- Researchers studied how sleep affects memory.\n- Participants who slept eight hours recalled 40 percent more words than those who stayed awake.\n- The study was published in 2022.\n\nThe student wants to present the study's main finding to an audience unfamiliar with the research. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "A 2022 study found that participants who slept eight hours recalled 40 percent more words than those who stayed awake.",
+      "The study was published in 2022.",
+      "Researchers studied how sleep affects memory.",
+      "Some participants stayed awake instead of sleeping."
+    ],
+    "correctAnswer": 0,
+    "explanation": "To present the finding to an unfamiliar audience, the choice must state the actual result clearly; the first choice reports the 40 percent difference. The second gives only the date, the third names the topic without the finding, and the fourth is an incidental detail.",
+    "difficulty": "medium",
+    "domain": "expression"
+  },
+  {
+    "id": 191,
+    "question": "While researching how glass bottles are recycled, a student took these notes:\n- Collected bottles are first sorted by color.\n- The sorted glass is then crushed into small pieces called cullet.\n- The cullet is melted in a furnace.\n- The molten glass is shaped into new bottles.\n\nThe student wants to describe what happens to the glass immediately after it is sorted by color. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "The glass is melted in a furnace and shaped into new bottles.",
+      "After being sorted by color, the glass is crushed into small pieces called cullet.",
+      "Collected bottles are first sorted by color.",
+      "The molten glass is shaped into new bottles."
+    ],
+    "correctAnswer": 1,
+    "explanation": "The goal asks for the step immediately after sorting; the notes show that sorted glass is next crushed into cullet, which the second choice states. The first and fourth describe later steps, and the third restates the sorting step itself.",
+    "difficulty": "medium",
+    "domain": "expression"
+  },
+  {
+    "id": 192,
+    "question": "The volunteers did not merely meet their fundraising goal. ______ they exceeded it by more than fifty thousand dollars.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Similarly,",
+      "For example,",
+      "In fact,",
+      "Meanwhile,"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The second sentence intensifies the first, going beyond 'met the goal' to 'exceeded it,' so an emphasis transition is needed. 'In fact' strengthens the point; 'Similarly' needs a comparable case, 'For example' introduces an instance, and 'Meanwhile' signals simultaneous time.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 193,
+    "question": "Solar panels are far more efficient than they were a decade ago. ______ they still cannot generate power on their own at night.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Admittedly,",
+      "Therefore,",
+      "For instance,",
+      "Likewise,"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The sentence concedes a lasting limitation despite the improvement, so a concession transition fits. 'Admittedly' acknowledges the drawback; 'Therefore' marks cause/effect, 'For instance' introduces an example, and 'Likewise' signals similarity.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 194,
+    "question": "Some of the museum's exhibits focus on ancient pottery, while others display modern sculpture and digital art. ______ the collection spans thousands of years of human creativity.\n\nWhich choice completes the text with the most logical transition?",
+    "options": [
+      "Nevertheless,",
+      "For instance,",
+      "Earlier,",
+      "Overall,"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The second sentence draws a broad conclusion that covers the varied exhibits just listed, so a generalizing transition is needed. 'Overall' sums up the whole collection; 'Nevertheless' signals contrast, 'For instance' introduces an example, and 'Earlier' signals time.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 195,
+    "question": "A student studying renewable energy took these notes:\n- Wind farms generate electricity without burning fuel.\n- Solar arrays generate electricity without burning fuel.\n- Hydroelectric dams generate electricity without burning fuel.\n\nThe student wants to make a generalization about these three energy sources. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "Wind farms generate electricity without burning fuel.",
+      "Wind, solar, and hydroelectric power all generate electricity without burning fuel.",
+      "Hydroelectric dams rely on flowing water to spin turbines.",
+      "Solar arrays generate electricity without burning fuel."
+    ],
+    "correctAnswer": 1,
+    "explanation": "A generalization must draw one broad statement covering all three sources; the second choice unites them under the shared trait of generating power without burning fuel. The first and fourth describe only a single source, and the third adds a detail not in the notes.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 196,
+    "question": "While researching a coastal town, a student took these notes:\n- The town's population grew rapidly between 2000 and 2020.\n- A large technology company opened its headquarters there in 2001.\n- The company employs more than ten thousand workers.\n- Many workers moved to the town to be near their jobs.\n\nThe student wants to explain why the town's population grew. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "The town's population grew rapidly between 2000 and 2020.",
+      "A large technology company in the town employs more than ten thousand workers.",
+      "The town's population grew rapidly because a technology company opened its headquarters there, drawing thousands of workers to the area.",
+      "The town is located on the coast."
+    ],
+    "correctAnswer": 2,
+    "explanation": "To explain the cause, the choice must link the growth to a reason; the third connects the population increase to the company that drew workers in. The first states the effect without a cause, the second gives a fact without linking it to growth, and the fourth is irrelevant.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 197,
+    "question": "A student researching two ancient writing systems took these notes:\n- Egyptian hieroglyphs were written using pictorial symbols.\n- Cuneiform was written by pressing a wedge-shaped stylus into clay.\n- Both systems were used more than three thousand years ago.\n- Both systems have been deciphered by modern scholars.\n\nThe student wants to emphasize a difference between the two writing systems. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "Both Egyptian hieroglyphs and cuneiform were used more than three thousand years ago.",
+      "Both writing systems have eventually been deciphered by modern scholars.",
+      "Egyptian hieroglyphs and cuneiform are both ancient writing systems.",
+      "Whereas Egyptian hieroglyphs used pictorial symbols, cuneiform was formed by pressing a wedge-shaped stylus into clay."
+    ],
+    "correctAnswer": 3,
+    "explanation": "The goal is to emphasize a DIFFERENCE; only the last choice contrasts the pictorial symbols of hieroglyphs with the wedge-pressed technique of cuneiform. The first three all state similarities shared by both systems.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 198,
+    "question": "A student took these notes about an experiment:\n- Biologists tested whether background music affects plant growth.\n- One group of bean plants was exposed to classical music for six hours a day.\n- A second group grew in silence.\n- After eight weeks, the two groups showed no measurable difference in height.\n\nThe student wants to present the experiment's conclusion to readers unfamiliar with it. Which choice most effectively uses the notes to accomplish this goal?",
+    "options": [
+      "In an experiment testing whether background music affects plant growth, bean plants exposed to classical music grew no taller than those grown in silence.",
+      "Biologists tested whether background music affects plant growth.",
+      "One group of bean plants was exposed to classical music for six hours a day.",
+      "The experiment lasted eight weeks."
+    ],
+    "correctAnswer": 0,
+    "explanation": "To present the conclusion to an unfamiliar audience, the choice must state the outcome; the first reports that the music-exposed plants grew no taller than the silent ones. The second gives only the question, the third a setup detail, and the fourth a minor fact.",
+    "difficulty": "hard",
+    "domain": "expression"
+  },
+  {
+    "id": 199,
     "question": "The old clock in the hallway finally stopped working, and ____ hands are frozen at noon.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "its",
@@ -2133,7 +2805,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 152,
+    "id": 200,
     "question": "The volunteers packed up ____ supplies before the storm arrived.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "they're",
@@ -2147,7 +2819,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 153,
+    "id": 201,
     "question": "My sister ____ to the gym every morning before work.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "go",
@@ -2161,7 +2833,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 154,
+    "id": 202,
     "question": "The ____ in the parking lot were all covered with a thin layer of frost.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "car's",
@@ -2175,7 +2847,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 155,
+    "id": 203,
     "question": "Please make sure ____ ready to present when the meeting begins.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "you're",
@@ -2189,7 +2861,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 156,
+    "id": 204,
     "question": "Each of the finalists ____ a short speech before the awards were announced.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "give",
@@ -2203,7 +2875,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 157,
+    "id": 205,
     "question": "The author ____ novel won the prize will speak at the library tonight.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "who's",
@@ -2217,7 +2889,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 158,
+    "id": 206,
     "question": "The museum's new exhibit opened last week ____ it has already attracted record crowds.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ", and",
@@ -2231,7 +2903,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 159,
+    "id": 207,
     "question": "The ____ playground was repainted with bright colors over the summer.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "childrens'",
@@ -2245,7 +2917,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 160,
+    "id": 208,
     "question": "Yesterday the technician ____ the printer and replaced the ink cartridge.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "fixes",
@@ -2259,7 +2931,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 161,
+    "id": 209,
     "question": "The experiment produced unexpected results ____ the researchers decided to run it again.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ", so that",
@@ -2273,7 +2945,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 162,
+    "id": 210,
     "question": "The recipe calls for three simple ingredients ____ flour, water, and salt.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ":",
@@ -2287,7 +2959,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 163,
+    "id": 211,
     "question": "The first speaker ran over her allotted time ____ the schedule for the rest of the afternoon had to be revised.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       " so",
@@ -2301,7 +2973,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 164,
+    "id": 212,
     "question": "The novel's protagonist, a disgraced detective ____ spends the story seeking redemption.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "(no punctuation)",
@@ -2315,7 +2987,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 165,
+    "id": 213,
     "question": "The collection of rare stamps ____ displayed in a locked case near the entrance.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "is",
@@ -2329,7 +3001,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 166,
+    "id": 214,
     "question": "The chef prepared each dish so carefully that ____ looked like a work of art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "they",
@@ -2343,7 +3015,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 167,
+    "id": 215,
     "question": "The scientists — whose findings had been questioned for years ____ finally received recognition for their work.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ",",
@@ -2357,7 +3029,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 168,
+    "id": 216,
     "question": "The manager, along with her assistants, ____ attending the conference in Denver.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "are",
@@ -2371,7 +3043,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 169,
+    "id": 217,
     "question": "The batteries were completely drained ____ we had to postpone the demonstration.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ", so",
@@ -2385,8 +3057,8 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 170,
-    "question": "The award recognized ____ groundbreaking research on coral reefs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "id": 218,
+    "question": "The award recognized ____ groundbreaking collaborative research on coral reefs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "Chen's and Alvarez's",
       "Chen and Alvarez",
@@ -2394,12 +3066,12 @@ const allQuestions: SatRwQuestion[] = [
       "Chen and Alvarez's"
     ],
     "correctAnswer": 3,
-    "explanation": "For joint possession of a single body of research, only the last name takes the possessive: \"Chen and Alvarez's research.\" \"Chen's and Alvarez's\" signals separate research, \"Chen and Alvarez\" shows no possession, and \"Chen and Alvarez'\" uses an incorrect apostrophe form.",
+    "explanation": "Because the research is explicitly collaborative — a single shared body — joint possession places the possessive on only the last name: 'Chen and Alvarez's research.' 'Chen's and Alvarez's' would signal separate bodies of research, contradicting 'collaborative'; 'Chen and Alvarez' shows no possession; and 'Chen and Alvarez'' uses an incorrect apostrophe form.",
     "difficulty": "medium",
     "domain": "conventions"
   },
   {
-    "id": 171,
+    "id": 219,
     "question": "The internship taught her to analyze data, to write clear reports, and ____ effectively with clients.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "communicating",
@@ -2413,7 +3085,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 172,
+    "id": 220,
     "question": "Neither the coach nor the players ____ satisfied with the referee's final call.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "were",
@@ -2427,7 +3099,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 173,
+    "id": 221,
     "question": "The bridge ____ was built in 1932, remains the busiest crossing in the region.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       " that",
@@ -2441,7 +3113,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 174,
+    "id": 222,
     "question": "There was only one thing the hikers wanted after the long climb ____ a hot meal and a warm bed.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ";",
@@ -2455,7 +3127,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 175,
+    "id": 223,
     "question": "Walking through the ancient ruins, ____.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "the towering columns amazed the tourists",
@@ -2469,7 +3141,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 176,
+    "id": 224,
     "question": "The relay team included Ana, the anchor ____ Beth, the lead-off runner; and Carla, the second leg.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ";",
@@ -2483,7 +3155,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 177,
+    "id": 225,
     "question": "By the time the firefighters arrived, the flames ____ most of the warehouse.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "consumed",
@@ -2497,7 +3169,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 178,
+    "id": 226,
     "question": "The committee announced ____ decision after three hours of deliberation.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "their",
@@ -2511,7 +3183,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 179,
+    "id": 227,
     "question": "The new policy will not only reduce costs but also ____ efficiency across all departments.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "improving",
@@ -2525,7 +3197,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 180,
+    "id": 228,
     "question": "By the end of the expedition, all six ____ boots were caked with mud.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "hiker's",
@@ -2539,7 +3211,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 181,
+    "id": 229,
     "question": "Each morning, the librarian ____ the returned books before the branch opens to the public.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "sort",
@@ -2553,7 +3225,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 182,
+    "id": 230,
     "question": "By the end of the field trip, all six ____ permission slips had been collected and filed.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "students'",
@@ -2567,7 +3239,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 183,
+    "id": 231,
     "question": "____ the entire class applauded the visiting author for nearly a full minute.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "As the lecture ended",
@@ -2581,7 +3253,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 184,
+    "id": 232,
     "question": "The stack of newspapers near the recycling bins ____ higher every single week.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "grow",
@@ -2595,7 +3267,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 185,
+    "id": 233,
     "question": "The architect ____ design won the international competition will oversee construction of the new library.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "whose",
@@ -2609,7 +3281,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 186,
+    "id": 234,
     "question": "The prototype passed every laboratory test ____ the engineers still refused to approve it for production.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ", nevertheless,",
@@ -2623,7 +3295,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 187,
+    "id": 235,
     "question": "During the retreat, the counselors organized activities such as canoeing, rock climbing, and ____ around the campfire.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "to sing",
@@ -2637,7 +3309,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 188,
+    "id": 236,
     "question": "Each of the volunteers who signed up for the early morning shift ____ expected to arrive by seven o'clock.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "are",
@@ -2651,7 +3323,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 189,
+    "id": 237,
     "question": "The Great Barrier Reef ____ is home to thousands of marine species found nowhere else on Earth.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "which lies off the coast of Australia",
@@ -2665,7 +3337,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 190,
+    "id": 238,
     "question": "There ____ a surprising number of errors in the final draft that the editor had promised was flawless.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "is",
@@ -2679,7 +3351,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 191,
+    "id": 239,
     "question": "Neither the head coach nor the assistant trainers ____ willing to change the team's rigorous practice schedule.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "is",
@@ -2693,7 +3365,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 192,
+    "id": 240,
     "question": "After three days of deliberation, the jury ____ reached a unanimous verdict, and its foreperson read the decision aloud.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "have",
@@ -2707,7 +3379,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 193,
+    "id": 241,
     "question": "Although the new smartphone received glowing reviews, ____ short battery life quickly frustrated many of the customers who bought it.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "their",
@@ -2721,7 +3393,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 194,
+    "id": 242,
     "question": "The judges agreed that no competitor had trained more diligently than ____ over the course of the demanding season.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "her",
@@ -2735,7 +3407,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 195,
+    "id": 243,
     "question": "The exchange students spent the summer in Lisbon, and by August ____ command of Portuguese had improved dramatically.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "there",
@@ -2749,7 +3421,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 196,
+    "id": 244,
     "question": "By the time the paramedics reached the scene, the driver ____ from the overturned vehicle without any assistance.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "had escaped",
@@ -2763,7 +3435,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 197,
+    "id": 245,
     "question": "The trail guide told us to pack only the essentials for the overnight hike ____ a headlamp, a water filter, and a lightweight tent.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       ";",
@@ -2777,7 +3449,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 198,
+    "id": 246,
     "question": "Having rehearsed the speech dozens of times, ____ delivered it flawlessly at the awards ceremony.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "the speech",
@@ -2791,7 +3463,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 199,
+    "id": 247,
     "question": "The renovation was intended not only to modernize the building's appearance but also ____ its energy efficiency.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "increasing",
@@ -2805,7 +3477,7 @@ const allQuestions: SatRwQuestion[] = [
     "domain": "conventions"
   },
   {
-    "id": 200,
+    "id": 248,
     "question": "When given the option, the veteran journalist prefers conducting interviews in person ____ them by email.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
     "options": [
       "than conducting",
@@ -2815,6 +3487,230 @@ const allQuestions: SatRwQuestion[] = [
     ],
     "correctAnswer": 2,
     "explanation": "The Standard English idiom is \"prefer X to Y,\" and parallelism requires the gerund \"conducting,\" so \"to conducting\" is correct; \"prefer\" does not take \"than,\" and \"for conducting\" is not idiomatic.",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 249,
+    "question": "____ the marine biologists tagged dozens of sea turtles and released them back into the lagoon.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "During the three-week expedition the marine biologists",
+      "During, the three-week expedition the marine biologists",
+      "During the three-week expedition, the marine biologists",
+      "During the three-week, expedition the marine biologists"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An introductory prepositional phrase should be followed by a comma that separates it from the main clause: 'During the three-week expedition, the marine biologists...'. Omitting the comma, inserting it after the preposition 'During', or placing it inside the phrase after 'three-week' all violate the convention.",
+    "difficulty": "easy",
+    "domain": "conventions"
+  },
+  {
+    "id": 250,
+    "question": "For the mural, the students blended ____ to capture the colors of the evening sky.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "red, orange, and yellow paint",
+      "red orange and yellow paint",
+      "red, orange and, yellow paint",
+      "red orange, and yellow, paint"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Items in a series are separated by commas, including before the conjunction: 'red, orange, and yellow paint.' Dropping the commas, placing a comma after 'and,' or scattering commas incorrectly all break the convention for a series.",
+    "difficulty": "easy",
+    "domain": "conventions"
+  },
+  {
+    "id": 251,
+    "question": "The theater company announced that ____ planning to stage three new productions this season.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "its",
+      "its'",
+      "it",
+      "it's"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The sentence needs the contraction 'it's' meaning 'it is': 'it's planning to stage three new productions.' The possessive 'its' and the nonstandard 'its'' are not contractions, and the bare pronoun 'it' leaves the clause without a verb.",
+    "difficulty": "easy",
+    "domain": "conventions"
+  },
+  {
+    "id": 252,
+    "question": "The museum's new wing houses suits of medieval armor____older galleries focus on Renaissance paintings.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      ", the",
+      "; the",
+      " the",
+      ": the"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Two independent clauses may be joined by a semicolon: 'medieval armor; the older galleries...'. A comma alone creates a splice, no punctuation creates a fused run-on, and a colon is wrong because the second clause presents a contrasting fact rather than an explanation of the first.",
+    "difficulty": "medium",
+    "domain": "conventions"
+  },
+  {
+    "id": 253,
+    "question": "The novel's protagonist, a disgraced astronomer who flees to a remote island____spends the final chapters rebuilding his shattered telescope.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "— spends",
+      " spends",
+      ", spends",
+      "; spends"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The supplement 'a disgraced astronomer who flees to a remote island' opens with a comma, so it must close with a matching comma: 'island, spends.' A dash mismatches the opening comma, omitting the mark leaves the supplement unclosed, and a semicolon cannot pair with a comma to bracket a nonessential element.",
+    "difficulty": "medium",
+    "domain": "conventions"
+  },
+  {
+    "id": 254,
+    "question": "The lab technicians followed the same protocol for every sample____label it, log its origin, and store it at four degrees Celsius.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      ": label",
+      ", label",
+      "; label",
+      " label"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A colon follows the complete independent clause 'The lab technicians followed the same protocol for every sample' to introduce the list that specifies the protocol. A comma or no punctuation creates a run-on, and a semicolon cannot introduce a list that is not itself an independent clause.",
+    "difficulty": "medium",
+    "domain": "conventions"
+  },
+  {
+    "id": 255,
+    "question": "The stack of overdue library books ____ teetering on the very edge of the circulation counter.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "were",
+      "have been",
+      "are",
+      "was"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The subject is the singular noun 'stack,' not the intervening phrase 'of overdue library books,' so it takes the singular verb 'was.' The plural verbs 'were,' 'have been,' and 'are' incorrectly agree with 'books' rather than with the true subject.",
+    "difficulty": "medium",
+    "domain": "conventions"
+  },
+  {
+    "id": 256,
+    "question": "The hikers were relieved to discover that ____ campsite lay just beyond the next ridge.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "there",
+      "their",
+      "they're",
+      "there's"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A possessive is needed to modify 'campsite': 'their campsite.' 'There' indicates place, 'they're' means 'they are,' and 'there's' means 'there is,' none of which can show possession here.",
+    "difficulty": "medium",
+    "domain": "conventions"
+  },
+  {
+    "id": 257,
+    "question": "By the time the referee blew the final whistle, the underdog team ____ a two-goal lead.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "builds",
+      "has built",
+      "had built",
+      "will build"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The lead was established before the past-tense moment 'blew the final whistle,' so the earlier action takes the past perfect 'had built.' The present 'builds,' present perfect 'has built,' and future 'will build' are all inconsistent with the past-time frame.",
+    "difficulty": "medium",
+    "domain": "conventions"
+  },
+  {
+    "id": 258,
+    "question": "The algorithm sorted the enormous data set in mere seconds____it flagged three anomalies that the researchers had overlooked for weeks.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "; it",
+      ", it",
+      " it",
+      ", and, it"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Two independent clauses require a semicolon (or a period, or a comma plus a conjunction): 'seconds; it flagged...'. A lone comma produces a comma splice, no punctuation produces a fused run-on, and the extra comma after 'and' is not permitted between a conjunction and the clause it introduces.",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 259,
+    "question": "The economist who first proposed the controversial carbon tax model ____ at the international climate conference next spring.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      ", will speak",
+      "will, speak",
+      ", will, speak",
+      "will speak"
+    ],
+    "correctAnswer": 3,
+    "explanation": "No punctuation should separate the subject 'The economist who first proposed the controversial carbon tax model' from its verb 'will speak.' Each of the other choices inserts an unnecessary comma between the subject and verb or inside the verb phrase itself.",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 260,
+    "question": "Neither of the two proposals submitted by the finance team fully addressed ____ long-term impact on the city's operating budget.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "their",
+      "its",
+      "it's",
+      "there"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The pronoun refers to the singular subject 'Neither,' not to the plural phrase 'two proposals,' so the singular possessive 'its' is required. 'Their' disagrees in number, 'it's' is the contraction 'it is,' and 'there' shows place, not possession.",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 261,
+    "question": "The architect ____ bold, glass-heavy design won the international competition will personally oversee the renovation.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "who's",
+      "whos",
+      "whose",
+      "who"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The possessive relative pronoun 'whose' is needed to show that the design belongs to the architect: 'the architect whose bold, glass-heavy design won.' 'Who's' means 'who is,' 'whos' is not a word, and 'who' cannot function as a possessive modifier of 'design.'",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 262,
+    "question": "If the ancient aqueduct ____ still intact today, engineers could study its remarkable design firsthand.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "were",
+      "was",
+      "is",
+      "would be"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A present contrary-to-fact conditional uses the subjunctive 'were' in the if-clause: 'If the ancient aqueduct were still intact.' The indicative 'was' and 'is' fail to signal the hypothetical, and 'would be' belongs in the main clause, not the if-clause.",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 263,
+    "question": "The summer internship taught her how to analyze market trends, draft detailed financial reports, and ____ to a room of skeptical investors.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "pitching promising ideas",
+      "how she might pitch promising ideas",
+      "promising ideas were pitched",
+      "pitch promising ideas"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The series follows the pattern 'how to analyze... draft... and pitch,' so parallel structure requires the base verb phrase 'pitch promising ideas.' The gerund 'pitching,' the added clause 'how she might pitch,' and the passive 'promising ideas were pitched' each break the parallelism.",
+    "difficulty": "hard",
+    "domain": "conventions"
+  },
+  {
+    "id": 264,
+    "question": "Rushing to catch the last train of the night, ____.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+    "options": [
+      "the umbrella was left on the platform by Maria",
+      "Maria left her umbrella on the platform",
+      "there was no time for Maria to grab her umbrella",
+      "Maria's umbrella was forgotten on the platform"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The introductory modifier 'Rushing to catch the last train of the night' must describe the subject that immediately follows, and only a person can be rushing, so 'Maria' must be that subject. The other choices make 'the umbrella,' 'there,' or 'Maria's umbrella' the subject, creating a dangling modifier.",
     "difficulty": "hard",
     "domain": "conventions"
   }
