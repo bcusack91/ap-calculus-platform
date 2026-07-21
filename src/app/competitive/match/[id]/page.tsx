@@ -245,7 +245,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           }
           return <span key={i}>{part}</span>;
         });
-        return <span className="inline-flex flex-wrap items-baseline gap-x-1">{rendered}</span>;
+        // Plain inline flow (NOT inline-flex): flex items wrap as whole units, so a
+        // long text segment after an inline $number$ would drop to the next line en
+        // masse, stranding the number at the end of the prior line. Normal inline
+        // text wraps word-by-word; inline KaTeX spans flow and break at spaces.
+        return <span>{rendered}</span>;
       } catch (e) {
         console.error('KaTeX render error:', e);
       }
