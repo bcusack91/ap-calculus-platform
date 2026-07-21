@@ -41,6 +41,7 @@ interface Question {
   explanation?: string;
   difficulty?: 'easy' | 'medium' | 'hard';
   category?: string;
+  skill?: string; // Official SAT skill this question targets (student-facing)
 }
 
 interface MatchState {
@@ -895,6 +896,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         ) : currentQuestion && (
         <>
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
+          {currentQuestion.skill && (
+            <div className="mb-3 flex justify-center">
+              <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-300" title="The SAT skill this question targets">
+                🎯 {currentQuestion.skill}
+              </span>
+            </div>
+          )}
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt || currentQuestion.question}>
             {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
           </h2>

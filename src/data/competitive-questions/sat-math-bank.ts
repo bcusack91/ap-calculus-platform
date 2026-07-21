@@ -13,6 +13,8 @@ export interface SatMathQuestion {
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
   area: SatMathArea
+  /** Official College Board skill this question targets (student-facing). */
+  skill?: string
 }
 
 const MATH_AREAS: readonly SatMathArea[] = ['algebra', 'advanced', 'problem-solving', 'geometry']
@@ -30,7 +32,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Add $7$ to both sides: $2x = 16$. Divide by $2$: $x = 8$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 2,
@@ -44,7 +47,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "In $y = mx + b$, the slope is $m = \\frac{3}{4}$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 3,
@@ -58,7 +62,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Subtract $11$ from both sides: $x = 4 - 11 = -7$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 4,
@@ -72,7 +77,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "In $y = mx + b$, the $y$-intercept is $b = -3$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 5,
@@ -86,7 +92,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Multiply both sides by $4$: $x = 6 \\times 4 = 24$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 6,
@@ -100,7 +107,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Divide both sides by $5$: $x = 35 \\div 5 = 7$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 7,
@@ -114,7 +122,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Substitute $x = 4$: $f(4) = 2(4) + 1 = 9$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 8,
@@ -128,7 +137,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Divide both sides by $-3$: $x = 12 \\div (-3) = -4$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 9,
@@ -142,7 +152,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "In $y = mx + b$, the slope is $m = -2$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 10,
@@ -156,7 +167,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Add $6$ to both sides: $x = 10 + 6 = 16$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 11,
@@ -170,7 +182,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Subtract $x$ from both sides: $2x + 4 = 12$. Then $2x = 8$, so $x = 4$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 12,
@@ -184,7 +197,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Distribute: $2x - 6 = 10$. Add $6$: $2x = 16$, so $x = 8$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 13,
@@ -198,7 +212,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Add the two equations: $2x = 14$, so $x = 7$ (and $y = 3$).",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 14,
@@ -212,7 +227,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Slope $= \\frac{11 - 2}{4 - 1} = \\frac{9}{3} = 3$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 15,
@@ -226,7 +242,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Multiply by $3$: $2x + 1 = 15$. Then $2x = 14$, so $x = 7$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 16,
@@ -240,7 +257,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The line is $y = 2x - 1$. At $x = 3$: $y = 2(3) - 1 = 5$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 17,
@@ -254,7 +272,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Add $5$: $3x > 12$. Divide by $3$ (positive, keep direction): $x > 4$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 18,
@@ -268,7 +287,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Subtract $3x$: $2x - 2 = 8$. Add $2$: $2x = 10$, so $x = 5$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 19,
@@ -282,7 +302,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Total $= 20 + 5(6) = 20 + 30 = 50$ dollars.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 20,
@@ -296,7 +317,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "At the $x$-intercept, $y = 0$: $2x = 12$, so $x = 6$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 21,
@@ -310,7 +332,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Substitute: $3x + (2x + 1) = 11$, so $5x = 10$ and $x = 2$. Then $y = 2(2) + 1 = 5$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 22,
@@ -324,7 +347,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The coefficient of $m$ is the rate of change of gallons with respect to miles, i.e. gallons used per mile.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 23,
@@ -338,7 +362,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Add $2x$ and $11$: $15 \\geq 5x$. Divide by $5$: $3 \\geq x$, i.e. $x \\leq 3$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 24,
@@ -352,7 +377,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Add the equations: $6x = 18$, so $x = 3$. Then $6 + 3y = 12$ gives $y = 2$, so $x + y = 5$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 25,
@@ -366,7 +392,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The constant term is the charge when $h = 0$, i.e. a fixed fee independent of hours worked.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 26,
@@ -380,7 +407,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Parallel lines share slope $3$, so $y = 3x + b$. Using $(1, 4)$: $4 = 3(1) + b$, so $b = 1$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 27,
@@ -394,7 +422,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Perpendicular slopes are negative reciprocals: the negative reciprocal of $\\frac{1}{2}$ is $-2$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 28,
@@ -408,7 +437,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Let the smaller be $x$; then $x + 2x = 24$, so $x = 8$ and the larger is $2x = 16$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 29,
@@ -422,7 +452,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Solve $25 + 10m = 95$: $10m = 70$, so $m = 7$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 30,
@@ -436,7 +467,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Two lines have no solution when they are parallel: equal slopes but different intercepts. So $k = 4$ (with $-5 \\neq 3$).",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 31,
@@ -450,7 +482,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Subtract $2x$ from both sides to get $3x - 3 = 9$, then add $3$ to get $3x = 12$, so $x = 4$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 32,
@@ -464,7 +497,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The $y$-intercept occurs where $x = 0$. Substituting gives $y = 3(0) + 2 = 2$, so the point is $(0, 2)$. The value $3$ is the slope, not the intercept.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 33,
@@ -478,7 +512,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Divide both sides by $2$ to get $x + 3 = 7$, then subtract $3$ to find $x = 4$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 34,
@@ -492,7 +527,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Subtract the second equation from the first to eliminate $y$: $(5x + 3y) - (x + 3y) = 29 - 13$, which gives $4x = 16$, so $x = 4$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 35,
@@ -506,7 +542,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Cross-multiply: $2(2x + 1) = 3(x - 4)$, so $4x + 2 = 3x - 12$. Subtracting $3x$ and $2$ from both sides gives $x = -14$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 36,
@@ -520,7 +557,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The rate of change is $\\frac{12 - 18}{5 - 2} = -2$ cm per hour. Writing $h(t) = mt + b$ with $m = -2$ and using $h(2) = 18$ gives $18 = -4 + b$, so $b = 22$. The initial height is $22$ cm.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 37,
@@ -534,7 +572,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Let the integers be $n$, $n+2$, and $n+4$. Then $3n + 6 = 84$, so $3n = 78$ and $n = 26$. The largest integer is $n + 4 = 30$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 38,
@@ -548,7 +587,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Expand to get $-3x + 12 \\geq 2x - 3$. Add $3x$ and $3$ to both sides: $15 \\geq 5x$, so $x \\leq 3$. The greatest possible value is $3$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 39,
@@ -562,7 +602,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "No solution means the lines are parallel: the $x$- and $y$-coefficient ratios match but the constant ratio differs. Setting $\\frac{a}{8} = \\frac{3}{6} = \\frac{1}{2}$ gives $a = 4$. Since $\\frac{12}{15} = \\frac{4}{5} \\neq \\frac{1}{2}$, the constants differ, so the system truly has no solution.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 40,
@@ -576,7 +617,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Infinitely many solutions require the second equation to be a scalar multiple of the first. Multiplying $3x - y = 7$ by $3$ gives $9x - 3y = 21$, so $c = 21$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 41,
@@ -590,7 +632,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A system of two lines has exactly one solution when the lines have different slopes, i.e. the coefficient ratios are unequal: $\\frac{k}{3} \\neq \\frac{4}{2} = 2$. This gives $k \\neq 6$. (When $k = 6$ the lines are parallel and share no unique solution.)",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 42,
@@ -604,7 +647,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "No solution means the lines are parallel: equal slopes but different $y$-intercepts. Setting $m + 1 = \\frac{2}{5}$ gives $m = -\\frac{3}{5}$. The intercepts $-3$ and $4$ differ, confirming no solution.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 43,
@@ -618,7 +662,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Infinitely many solutions require the two equations to be scalar multiples. Multiplying $6x + 2y = 8$ by $\\frac{3}{2}$ gives $9x + 3y = 12$, so $t = 12$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 44,
@@ -632,7 +677,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "No solution requires the coefficient ratios to be equal: $\\frac{2}{b} = \\frac{-5}{15} = -\\frac{1}{3}$. Cross-multiplying gives $-b = 6$, so $b = -6$. Since $\\frac{9}{4} \\neq -\\frac{1}{3}$, the constants differ and the lines are parallel with no solution.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 45,
@@ -646,7 +692,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Exactly one solution requires unequal slopes, so the coefficient ratios must differ: $\\frac{c}{2} \\neq \\frac{5}{10} = \\frac{1}{2}$. This gives $c \\neq 1$. (At $c = 1$ the lines are parallel.)",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 46,
@@ -660,7 +707,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Simplify the left side: $4x - 8 + 6 = 4x - 2$. The equation becomes $4x - 2 = 4x + c$, which is true for all $x$ only when $c = -2$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 47,
@@ -674,7 +722,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Expand the left side: $6x + 15 = 6x + d$. The $6x$ terms cancel, leaving $15 = d$. If $d \\neq 15$ the statement is impossible, so there is no solution; if $d = 15$ there are infinitely many.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 48,
@@ -688,7 +737,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Expand the right side: $ax + 12 = 6x + 12$. For the equation to hold for all $x$, the coefficients of $x$ must match, so $a = 6$ (the constants already agree at $12$).",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 49,
@@ -702,7 +752,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Test $(1, 2)$: for the first inequality, $2 > 2(1) - 1 = 1$ is true; for the second, $2 \\leq -1 + 4 = 3$ is true. The other points fail at least one condition (e.g., $(2,3)$ gives $3 > 3$, which is false).",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 50,
@@ -716,7 +767,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The coefficient of $m$ is the slope, representing the rate of change: each additional month adds 25 dollars. The constant $60$ is the one-time fee, and the cost after one month is $25 + 60 = 85$ dollars.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 51,
@@ -730,7 +782,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Rewrite $6x - 2y = 7$ as $y = 3x - \\frac{7}{2}$, so its slope is $3$. Parallel lines have equal slopes, so $2p - 1 = 3$, giving $2p = 4$ and $p = 2$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 52,
@@ -744,7 +797,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Set the costs equal: $40 + 0.12x = 0.20x$. Subtracting $0.12x$ gives $40 = 0.08x$, so $x = \\frac{40}{0.08} = 500$ flyers.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 53,
@@ -758,7 +812,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Divide both sides of $C = 2\\pi r$ by $2\\pi$ to isolate $r$, giving $r = \\frac{C}{2\\pi}$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 54,
@@ -772,7 +827,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "When $m = 0$, $C = 30$. The constant term is the fixed cost incurred regardless of minutes used, while $0.10$ is the cost per minute.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 55,
@@ -786,7 +842,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The output increases by $4$ each time $x$ increases by $1$, so the slope is $4$. Since $f(1) = 5$, the equation $f(x) = 4x + 1$ gives $4(1) + 1 = 5$, matching every row.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 56,
@@ -800,7 +857,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Split into $2x - 3 = 7$, giving $x = 5$, and $2x - 3 = -7$, giving $x = -2$. The solution set is $\\{-2, 5\\}$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 57,
@@ -814,7 +872,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Subtract $1$ from all parts: $-4 < 2x \\leq 6$. Divide by $2$: $-2 < x \\leq 3$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 58,
@@ -828,7 +887,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Let $a$ be adult tickets and $c$ child tickets. Then $a + c = 20$ and $8a + 5c = 136$. Substituting $c = 20 - a$: $8a + 5(20 - a) = 136$, so $3a + 100 = 136$ and $a = 12$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 59,
@@ -842,7 +902,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The coefficient of $t$ is the rate of change. Because it is negative, the height drops by $1.5$ inches for each additional hour the candle burns.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 60,
@@ -856,7 +917,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Adding the equations eliminates $y$: $8x = 24$, so $x = 3$. Then $3(3) + 2y = 19$ gives $2y = 10$ and $y = 5$. Thus $xy = 3 \\cdot 5 = 15$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 61,
@@ -870,7 +932,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "At $x = 2$, the first equation gives $y = 3(2) - 4 = 2$. Substituting into $2x + ay = 10$: $2(2) + a(2) = 10$, so $2a = 6$ and $a = 3$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 62,
@@ -884,7 +947,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Multiply the first equation by $4$: $2x + y = 16$. Subtracting $x + y = 10$ gives $x = 6$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 63,
@@ -898,7 +962,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Each increase of $3$ in $x$ raises $f(x)$ by $9$, so the slope is $3$. Since $f(2) = 3$, the equation is $f(x) = 3x - 3$. Then $f(20) = 3(20) - 3 = 57$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 64,
@@ -912,7 +977,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Case 1: $x - 4 = 2x + 1$ gives $x = -5$, but $|-5 - 4| = 9 \\neq 2(-5) + 1 = -9$, so it is rejected. Case 2: $-(x - 4) = 2x + 1$ gives $x = 1$, and $|1 - 4| = 3 = 2(1) + 1$, which checks. There is exactly one solution.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 65,
@@ -926,7 +992,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Rewrite as $-9 \\leq 3x - 6 \\leq 9$. Add $6$: $-3 \\leq 3x \\leq 15$. Divide by $3$: $-1 \\leq x \\leq 5$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 66,
@@ -940,7 +1007,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Multiply both sides by $\\frac{2}{n}$: $\\frac{2S}{n} = a + l$. Then subtract $a$: $l = \\frac{2S}{n} - a$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 67,
@@ -954,7 +1022,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Let $x$ be mL of the $20\\%$ solution and $y$ of the $50\\%$ solution. Then $x + y = 60$ and $0.20x + 0.50y = 0.30(60) = 18$. Substituting $x = 60 - y$: $0.30y = 6$, so $y = 20$ and $x = 40$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 68,
@@ -968,7 +1037,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The first inequality gives $x > 3$ and the second gives $x < 6$, so $3 < x < 6$. Of the choices, only $5$ lies in this interval.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 69,
@@ -982,7 +1052,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Set $1200 - 45t = 750$, so $45t = 450$ and $t = 10$. Ten years after 2010 is 2020.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 70,
@@ -996,7 +1067,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Substitute $(4, 1)$: $a = 4 + 2(1) = 6$ and $b = 3(4) - 1 = 11$. Therefore $a + b = 17$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 71,
@@ -1010,7 +1082,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The inequality is equivalent to $-4 < x - 3 < 4$, or $-1 < x < 7$. The integers strictly between $-1$ and $7$ are $0, 1, 2, 3, 4, 5, 6$, which is $7$ values.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 72,
@@ -1024,7 +1097,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Let $b$ be the boat's speed and $c$ the current. Downstream speed is $\\frac{24}{2} = 12 = b + c$; upstream speed is $\\frac{24}{3} = 8 = b - c$. Adding gives $2b = 20$, so $b = 10$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 73,
@@ -1038,7 +1112,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Subtract $3$ from both sides to get $5x = 20$, then divide by $5$ to get $x = 4$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 74,
@@ -1052,7 +1127,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The $25 sign-up fee is a one-time constant, and $15 is charged for each of the $m$ months, giving $C = 25 + 15m$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 75,
@@ -1066,7 +1142,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "In slope-intercept form $y = mx + b$, the coefficient of $x$ is the slope. Here that coefficient is $-2$.",
     "difficulty": "easy",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 76,
@@ -1080,7 +1157,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The number $8$ is the slope, the coefficient of $t$. It gives the change in height per week, so the plant's height increases by 8 centimeters each week. The constant $40$ is the starting height.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 77,
@@ -1094,7 +1172,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A line crosses the $x$-axis where $y = 0$. Substituting gives $3x = 12$, so $x = 4$, and the point is $(4, 0)$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 78,
@@ -1108,7 +1187,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Solve for $y$ by subtracting $2x$ from both sides: $y = -2x + 6$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 79,
@@ -1122,7 +1202,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Adding the two equations eliminates $y$: $(x + y) + (x - y) = 10 + 4$, so $2x = 14$ and $x = 7$.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 80,
@@ -1136,7 +1217,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Test each pair. For $(0, 0)$: $0 > 2(0) - 1$ gives $0 > -1$, which is true. The others give $1 > 1$, $2 > 3$, and $7 > 7$, all false.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 81,
@@ -1150,7 +1232,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The total weight is $20r + 15b$. \"At most 500\" means it can equal or be below 500, so $20r + 15b \\leq 500$. The strict inequality $<$ would wrongly exclude exactly 500 pounds.",
     "difficulty": "medium",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear inequalities in one or two variables"
   },
   {
     "id": 82,
@@ -1164,7 +1247,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Let $n$ be the number of items. Then $180 + 12n = 456$, so $12n = 276$ and $n = 23$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in one variable"
   },
   {
     "id": 83,
@@ -1178,7 +1262,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The constant term $300$ is the value of $C$ when $n = 0$. It represents the fixed cost of renting the hall before any per-guest charges. The $45$ is the cost per guest.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 84,
@@ -1192,7 +1277,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The point $(0, 4)$ is the $y$-intercept, so $b = 4$, and the slope is $m = -\\frac{1}{2}$. In slope-intercept form this is $y = -\\frac{1}{2}x + 4$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 85,
@@ -1206,7 +1292,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Substitute $x = y + 3$ into the first equation: $2(y + 3) + 3y = 16$, so $5y + 6 = 16$, giving $5y = 10$ and $y = 2$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Systems of two linear equations in two variables"
   },
   {
     "id": 86,
@@ -1220,7 +1307,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A line through the origin with slope $\\frac{3}{4}$ is $y = \\frac{3}{4}x$. Substituting $x = 8$ gives $y = \\frac{3}{4}(8) = 6$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 87,
@@ -1234,7 +1322,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Setting $W = 0$ gives $0 = 50 - 2.5t$, so $2.5t = 50$ and $t = 20$. This is the time when the tank is empty, 20 minutes after the start.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear functions"
   },
   {
     "id": 88,
@@ -1248,7 +1337,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Multiply every term by the common denominator $6$: $6 \\cdot \\frac{1}{2}x - 6 \\cdot \\frac{1}{3}y = 6 \\cdot 1$, which gives $3x - 2y = 6$.",
     "difficulty": "hard",
-    "area": "algebra"
+    "area": "algebra",
+    "skill": "Linear equations in two variables"
   },
   {
     "id": 89,
@@ -1262,7 +1352,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Factor: $(x-3)(x-4)=0$, so $x=3$ or $x=4$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 90,
@@ -1276,7 +1367,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "When multiplying like bases, add exponents: $x^{5+3}=x^8$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 91,
@@ -1290,7 +1382,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$\\sqrt{72}=\\sqrt{36\\cdot 2}=6\\sqrt{2}$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 92,
@@ -1304,7 +1397,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Difference of squares: $x^2-9=(x-3)(x+3)$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 93,
@@ -1318,7 +1412,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "$f(3)=3^2+2=9+2=11$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 94,
@@ -1332,7 +1427,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "When dividing like bases, subtract exponents: $x^{8-2}=x^6$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 95,
@@ -1346,7 +1442,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Taking the square root gives $x=\\pm 5$, so $x=5$ or $x=-5$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 96,
@@ -1360,7 +1457,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Raising a power to a power multiplies exponents: $x^{3\\cdot 4}=x^{12}$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 97,
@@ -1374,7 +1472,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$8^{2/3}=(\\sqrt[3]{8})^2=2^2=4$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 98,
@@ -1388,7 +1487,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Factor out the common factor $x$: $x^2+5x=x(x+5)$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 99,
@@ -1402,7 +1502,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Factor: $(2x+1)(x-3)=0$, so $x=-\\tfrac{1}{2}$ or $x=3$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 100,
@@ -1416,7 +1517,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "$f(x+1)=(x+1)^2-4(x+1)=x^2+2x+1-4x-4=x^2-2x-3$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 101,
@@ -1430,7 +1532,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Factor the numerator: $\\dfrac{(x-3)(x+3)}{x+3}=x-3$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 102,
@@ -1444,7 +1547,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Doubling each hour means multiply by $2$ each step: $P(t)=50\\cdot 2^t$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 103,
@@ -1458,7 +1562,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "In vertex form $y=(x-h)^2+k$, the vertex is $(h,k)=(2,3)$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 104,
@@ -1472,7 +1577,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Square both sides: $x+4=25$, so $x=21$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 105,
@@ -1486,7 +1592,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$g(3)=9$, then $f(9)=2(9)+1=19$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 106,
@@ -1500,7 +1607,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "For $x^2+bx+c=0$, the product of roots is $c=15$ (roots are $3$ and $5$).",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 107,
@@ -1514,7 +1622,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$\\dfrac{6}{3}=2$ and $x^{-2-(-5)}=x^3$, giving $2x^3$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 108,
@@ -1528,7 +1637,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "$\\dfrac{3^4}{3^2}=3^{4-2}=3^2=9$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 109,
@@ -1542,7 +1652,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "A perfect square $(x+3)^2=x^2+6x+9$, so $c=9$ (half of $6$, squared).",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 110,
@@ -1556,7 +1667,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Set equal: $x^2-1=3x+3$, so $x^2-3x-4=0$, $(x-4)(x+1)=0$, giving $x=4$ or $x=-1$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 111,
@@ -1570,7 +1682,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$x^2-10x+25-25+18=(x-5)^2-7$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 112,
@@ -1584,7 +1697,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Let $y=\\frac{x+2}{3}$, swap and solve: $x=\\frac{y+2}{3}\\Rightarrow 3x=y+2\\Rightarrow y=3x-2$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 113,
@@ -1598,7 +1712,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Decay factor $0.8$ gives $200(0.8)^t$; at $t=2$, $200(0.64)=128$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 114,
@@ -1612,7 +1727,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "One solution means discriminant $k^2-4(16)=0$, so $k^2=64$ and $k=8$ (or $-8$).",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 115,
@@ -1626,7 +1742,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Common denominator $x(x+1)$: $\\dfrac{(x+1)+x}{x(x+1)}=\\dfrac{2x+1}{x(x+1)}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 116,
@@ -1640,7 +1757,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$f(g(x))=g(x)^2+1=x^2-4x+5$ means $g(x)^2=x^2-4x+4=(x-2)^2$, so $g(x)=x-2$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 117,
@@ -1654,7 +1772,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$x=\\dfrac{4\\pm\\sqrt{16-4}}{2}=\\dfrac{4\\pm 2\\sqrt{3}}{2}=2\\pm\\sqrt{3}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 118,
@@ -1668,7 +1787,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Set $h=0$: $-16t^2+32t+48=0\\Rightarrow t^2-2t-3=0\\Rightarrow (t-3)(t+1)=0$, so $t=3$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 119,
@@ -1682,7 +1802,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Factor: $x^2 - 5x + 6 = (x - 2)(x - 3) = 0$, so the solutions are $x = 2$ and $x = 3$. Of the choices, only $x = 2$ works: $(2)^2 - 5(2) + 6 = 4 - 10 + 6 = 0$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 120,
@@ -1696,7 +1817,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Substitute $x = 3$: $f(3) = 2(3)^2 - 3(3) + 1 = 2(9) - 9 + 1 = 18 - 9 + 1 = 10$. Squaring must be done before multiplying by $2$; computing $(2 \\cdot 3)^2$ gives the wrong value $28$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 121,
@@ -1710,7 +1832,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "In vertex form $y = (x - h)^2 + k$, the vertex is $(h, k)$. Here $y = (x - 4)^2 + 3$, so $h = 4$ and $k = 3$, giving the vertex $(4, 3)$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 122,
@@ -1724,7 +1847,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The minimum occurs at the vertex, $x = -\\frac{b}{2a} = -\\frac{6}{2} = -3$. Then $y = (-3)^2 + 6(-3) + 5 = 9 - 18 + 5 = -4$. The minimum value is $-4$ (the input $-3$ is the $x$-coordinate, not the minimum).",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 123,
@@ -1738,7 +1862,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Set the expressions equal: $x^2 = x + 6 \\Rightarrow x^2 - x - 6 = 0 \\Rightarrow (x - 3)(x + 2) = 0$. So $x = 3$ or $x = -2$. For $x = -2$, $y = (-2)^2 = 4$, giving $(-2, 4)$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 124,
@@ -1752,7 +1877,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A decrease of $15\\%$ multiplies by $1 - 0.15 = 0.85$ each year, giving $400(0.85)^t$. Using $1.15$ would be a $15\\%$ increase, and $0.15$ would keep only $15\\%$ of the amount each year.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 125,
@@ -1766,7 +1892,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Work from the inside out: $g(4) = 2(4) = 8$, then $f(8) = 8 + 3 = 11$. Reversing the order gives $g(f(4)) = g(7) = 14$, a common mistake.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 126,
@@ -1780,7 +1907,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Factor: $2x^2 + 7x + 3 = (2x + 1)(x + 3) = 0$, so $x = -\\frac{1}{2}$ or $x = -3$. Only $-\\frac{1}{2}$ appears among the choices: $2\\left(-\\frac{1}{2}\\right)^2 + 7\\left(-\\frac{1}{2}\\right) + 3 = \\frac{1}{2} - \\frac{7}{2} + 3 = 0$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 127,
@@ -1794,7 +1922,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Exactly one real solution means the discriminant is $0$: $k^2 - 4(1)(25) = 0 \\Rightarrow k^2 = 100 \\Rightarrow k = \\pm 10$. The positive value is $k = 10$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 128,
@@ -1808,7 +1937,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Set the discriminant to $0$: $(-8)^2 - 4(1)(k) = 0 \\Rightarrow 64 - 4k = 0 \\Rightarrow k = 16$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 129,
@@ -1822,7 +1952,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "No real solutions requires the discriminant to be negative: $4^2 - 4(1)(c) < 0 \\Rightarrow 16 - 4c < 0 \\Rightarrow c > 4$. Only $c = 5$ satisfies this. ($c = 4$ gives a discriminant of $0$, which is exactly one solution.)",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 130,
@@ -1836,7 +1967,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "No real solutions requires the discriminant to be negative: $6^2 - 4(2)(k) < 0 \\Rightarrow 36 - 8k < 0 \\Rightarrow k > \\frac{36}{8} = \\frac{9}{2}$. (Note: $k=\\frac{9}{2}$ gives a discriminant of $0$ — exactly one solution, not none.)",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 131,
@@ -1850,7 +1982,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Two distinct real solutions require a positive discriminant: $(-6)^2 - 4(1)(k) > 0 \\Rightarrow 36 - 4k > 0 \\Rightarrow k < 9$. Only $k = 8$ works. ($k = 9$ gives a discriminant of $0$, which is a single repeated solution.)",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 132,
@@ -1864,7 +1997,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Tangent means the curves meet at exactly one point. Setting them equal: $x^2 + 2x + 10 = 6x + c \\Rightarrow x^2 - 4x + (10 - c) = 0$. One solution requires the discriminant to be $0$: $(-4)^2 - 4(1)(10 - c) = 0 \\Rightarrow 16 - 40 + 4c = 0 \\Rightarrow 4c = 24 \\Rightarrow c = 6$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 133,
@@ -1878,7 +2012,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Set the expressions equal: $x^2 - 4x + 7 = 2x + k \\Rightarrow x^2 - 6x + (7 - k) = 0$. Tangency means one solution, so the discriminant is $0$: $(-6)^2 - 4(1)(7 - k) = 0 \\Rightarrow 36 - 28 + 4k = 0 \\Rightarrow 4k = -8 \\Rightarrow k = -2$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 134,
@@ -1892,7 +2027,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "For $x^2 + bx + c = 0$, the sum of the roots equals $-b$. Here the roots sum to $2 + 6 = 8$, so $-b = 8 \\Rightarrow b = -8$. (The product $2 \\cdot 6 = 12$ confirms the constant term.)",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 135,
@@ -1906,7 +2042,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The roots sum to $7$, so the other root is $7 - 3 = 4$. For $x^2 - 7x + c = 0$, the product of the roots equals $c$: $c = 3 \\cdot 4 = 12$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 136,
@@ -1920,7 +2057,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Because the coefficient $-2$ is negative, the parabola opens downward and the vertex is a maximum. In vertex form $a(x - h)^2 + k$, the maximum value is $k = 8$ (occurring at $x = 3$).",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 137,
@@ -1934,7 +2072,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "In $y = a \\cdot b^t$, the growth factor $b = 1.4$ corresponds to a percent increase of $b - 1 = 0.4 = 40\\%$ per year. The base $1.4$ itself is not the percent, and $140\\%$ would require a factor of $2.4$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 138,
@@ -1948,7 +2087,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Write $y = 3x - 5$ and solve for $x$: $y + 5 = 3x \\Rightarrow x = \\frac{y + 5}{3}$. Swapping variables gives $f^{-1}(x) = \\frac{x + 5}{3}$. The inverse is not the reciprocal $\\frac{1}{3x - 5}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 139,
@@ -1962,7 +2102,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Multiplying both sides by $x - 3$ gives $x^2 = 9$, so $x = 3$ or $x = -3$. However, $x = 3$ makes the denominator $x - 3$ equal to $0$, so it is extraneous. The only valid solution is $x = -3$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 140,
@@ -1976,7 +2117,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "By the Remainder Theorem, the remainder when dividing by $x - 2$ equals $p(2)$: $p(2) = (2)^3 - 4(2)^2 + 2(2) + 5 = 8 - 16 + 4 + 5 = 1$. Since the remainder is not $0$, $x - 2$ is not a factor.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 141,
@@ -1990,7 +2132,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "This is a difference of squares $a^2 - b^2 = (a-b)(a+b)$ with $a = x$ and $b = 7$, giving $(x-7)(x+7)$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 142,
@@ -2004,7 +2147,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Substitute $x = 4$: $f(4) = 3(4) - 5 = 12 - 5 = 7$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 143,
@@ -2018,7 +2162,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Two distinct real solutions require discriminant $> 0$: $(-8)^2 - 4k > 0 \\Rightarrow 64 > 4k \\Rightarrow k < 16$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 144,
@@ -2032,7 +2177,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Setting $x^2 = 2x + 5$ gives $x^2 - 2x - 5 = 0$. The discriminant is $(-2)^2 - 4(1)(-5) = 4 + 20 = 24 > 0$, so there are two real solutions and thus two intersection points.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 145,
@@ -2046,7 +2192,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The sum of the roots is $3 + (-5) = -2$ and the product is $(3)(-5) = -15$. A monic quadratic is $x^2 - (\\text{sum})x + (\\text{product}) = x^2 + 2x - 15$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 146,
@@ -2060,7 +2207,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "In $t$ years the population doubles $t/6$ times, so the model is $500 \\cdot 2^{t/6}$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 147,
@@ -2074,7 +2222,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "A rational expression is undefined where its denominator is zero: $x^2 - 9 = 0 \\Rightarrow x = \\pm 3$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 148,
@@ -2088,7 +2237,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Exactly one real solution means the discriminant is zero: $4^2 - 4(k)(k) = 16 - 4k^2 = 0 \\Rightarrow k^2 = 4 \\Rightarrow k = \\pm 2$. Of the choices, only $2$ works.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 149,
@@ -2102,7 +2252,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "No real solutions require discriminant $< 0$: $4^2 - 4(2)(c) = 16 - 8c < 0 \\Rightarrow 16 < 8c \\Rightarrow c > 2$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 150,
@@ -2116,7 +2267,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Substituting $y = 5$ gives $x^2 + 25 = 25 \\Rightarrow x^2 = 0 \\Rightarrow x = 0$. The single point $(0, 5)$ is where the line is tangent to the circle.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 151,
@@ -2130,7 +2282,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A shift right by $3$ replaces $x$ with $x - 3$, and a shift down by $4$ subtracts $4$, giving $y = (x-3)^2 - 4$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 152,
@@ -2144,7 +2297,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Recognize a perfect square: $(2x)^2 - 2(2x)(3) + 3^2 = (2x - 3)^2$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 153,
@@ -2158,7 +2312,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Group: $x^2(x-2) - 9(x-2) = (x-2)(x^2 - 9) = (x-2)(x-3)(x+3)$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 154,
@@ -2172,7 +2327,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "In $24$ days there are $24/8 = 3$ half-lives, so the amount remaining is $240 \\cdot \\left(\\tfrac{1}{2}\\right)^3 = \\dfrac{240}{8} = 30$ grams.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 155,
@@ -2186,7 +2342,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Using $A = P\\left(1 + \\tfrac{r}{n}\\right)^{nt}$ with $r = 0.06$, $n = 4$, $t = 5$: $A = 1000\\left(1 + \\tfrac{0.06}{4}\\right)^{4 \\cdot 5} = 1000(1.015)^{20}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 156,
@@ -2200,7 +2357,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Write both sides with base $3$: $3^{2x} = 3^{3(x-1)}$. Equating exponents, $2x = 3x - 3 \\Rightarrow x = 3$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 157,
@@ -2214,7 +2372,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Multiplying by $x$ gives $6 = x^2 - x$, so $x^2 - x - 6 = 0$. By Vieta's formulas the sum of the roots is $-\\tfrac{-1}{1} = 1$ (the roots are $3$ and $-2$).",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 158,
@@ -2228,7 +2387,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The numerator is $\\dfrac{1}{x} - \\dfrac{1}{3} = \\dfrac{3 - x}{3x}$. Dividing by $x - 3$: $\\dfrac{3 - x}{3x(x-3)} = \\dfrac{-(x-3)}{3x(x-3)} = -\\dfrac{1}{3x}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 159,
@@ -2242,7 +2402,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "$g(f(x)) = (2x - 1)^2 + 3 = 4x^2 - 4x + 1 + 3 = 4x^2 - 4x + 4$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 160,
@@ -2256,7 +2417,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Squaring gives $x^2 = x + 6 \\Rightarrow x^2 - x - 6 = 0 \\Rightarrow (x-3)(x+2) = 0$, so $x = 3$ or $x = -2$. Checking, $x = -2$ gives $\\sqrt{4} = 2 \\neq -2$, so it is extraneous; only $x = 3$ is valid.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 161,
@@ -2270,7 +2432,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Distribute $3x$ across both terms: $3x \\cdot x + 3x \\cdot 4 = 3x^2 + 12x$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 162,
@@ -2284,7 +2447,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A square root is a power of one-half: $\\sqrt{x} = x^{1/2}$. The negative exponent $x^{-1/2}$ would mean $\\frac{1}{\\sqrt{x}}$.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 163,
@@ -2298,7 +2462,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The $y$-intercept occurs where $x = 0$: $y = (0)^2 - 4(0) + 7 = 7$. The constant term of a polynomial gives the $y$-intercept.",
     "difficulty": "easy",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 164,
@@ -2312,7 +2477,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Distribute the negative sign and combine like terms: $(3x^2 - x^2) + (2x + 4x) + (-5 - 1) = 2x^2 + 6x - 6$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 165,
@@ -2326,7 +2492,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The graph crosses the $x$-axis where $f(x) = 0$. Setting each factor to zero: $x - 2 = 0 \\Rightarrow x = 2$ and $x + 5 = 0 \\Rightarrow x = -5$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 166,
@@ -2340,7 +2507,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A rational exponent converts to a radical as $x^{m/n} = \\sqrt[n]{x^m}$. Here the denominator $4$ is the index and the numerator $3$ is the power: $x^{3/4} = \\sqrt[4]{x^3}$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 167,
@@ -2354,7 +2522,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The constant term is the value of $h$ at $t = 0$: $h(0) = 5$. This is the height at the moment of release, before any time has elapsed.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 168,
@@ -2368,7 +2537,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Divide both sides by $\\pi$ to get $r^2 = \\dfrac{A}{\\pi}$, then take the positive square root: $r = \\sqrt{\\dfrac{A}{\\pi}}$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 169,
@@ -2382,7 +2552,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The greatest common factor of $2x^2$ and $8x$ is $2x$. Factoring it out gives $2x(x + 4)$, since $2x \\cdot x = 2x^2$ and $2x \\cdot 4 = 8x$.",
     "difficulty": "medium",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 170,
@@ -2396,7 +2567,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Complete the square: half of $8$ is $4$, and $(x + 4)^2 = x^2 + 8x + 16$. To keep the constant at $10$, subtract $6$: $x^2 + 8x + 10 = (x + 4)^2 - 6$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 171,
@@ -2410,7 +2582,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Distribute each term: $2x(x^2 + 4x - 1) = 2x^3 + 8x^2 - 2x$ and $-3(x^2 + 4x - 1) = -3x^2 - 12x + 3$. Adding gives $2x^3 + 5x^2 - 14x + 3$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 172,
@@ -2424,7 +2597,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "End behavior is governed by the leading term $-3x^4$. As $x \\to +\\infty$, $x^4 \\to +\\infty$, so $-3x^4 \\to -\\infty$ and thus $f(x) \\to -\\infty$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 173,
@@ -2438,7 +2612,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Rewrite the exponent using power rules: $3^{t/5} = \\left(3^{1/5}\\right)^t$. Therefore $b = 3^{1/5} = \\sqrt[5]{3}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Equivalent expressions"
   },
   {
     "id": 174,
@@ -2452,7 +2627,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "By the Factor Theorem, $(x - 3)$ is a factor exactly when $P(3) = 0$: $27 - 2(9) + 3k - 3 = 0 \\Rightarrow 27 - 18 + 3k - 3 = 0 \\Rightarrow 6 + 3k = 0 \\Rightarrow k = -2$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 175,
@@ -2466,7 +2642,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Multiply both sides by $3$: $3V = \\pi r^2 h$. Divide by $\\pi h$: $r^2 = \\dfrac{3V}{\\pi h}$. Take the positive square root: $r = \\sqrt{\\dfrac{3V}{\\pi h}}$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear equations in one variable and systems of equations in two variables"
   },
   {
     "id": 176,
@@ -2480,7 +2657,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Because the coefficient $-2$ is negative, the parabola opens downward and the vertex $(25, 800)$ is a maximum. So the greatest daily profit of $\\$800$ occurs at a selling price of $\\$25$.",
     "difficulty": "hard",
-    "area": "advanced"
+    "area": "advanced",
+    "skill": "Nonlinear functions"
   },
   {
     "id": 177,
@@ -2494,7 +2672,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The rate is $150 \\div 5 = 30$ miles per gallon. On $8$ gallons: $30 \\times 8 = 240$ miles.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 178,
@@ -2508,7 +2687,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The scale factor is $12 \\div 3 = 4$. Girls: $4 \\times 4 = 16$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 179,
@@ -2522,7 +2702,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "$15\\%$ of $80$ is $12$. New price: $80 + 12 = 92$ dollars.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 180,
@@ -2536,7 +2717,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The mode is the most frequent value. $4$ appears twice; all others appear once, so the mode is $4$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 181,
@@ -2550,7 +2732,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Multiply the distance by the scale: $3.5 \\times 20 = 70$ miles.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 182,
@@ -2564,7 +2747,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The scale factor is $20 \\div 5 = 4$. Eggs needed: $2 \\times 4 = 8$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 183,
@@ -2578,7 +2762,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Ordered: $5, 8, 12, 15, 20$. The middle value is $12$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 184,
@@ -2592,7 +2777,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$25\\%$ of $60$ is $0.25 \\times 60 = 15$ items.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 185,
@@ -2606,7 +2792,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Speed equals distance over time: $400 \\div 80 = 5$ meters per second.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 186,
@@ -2620,7 +2807,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Probability is favorable over total: $\\frac{10}{50} = \\frac{1}{5}$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 187,
@@ -2634,7 +2822,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Percent change is $\\frac{250 - 200}{200} \\times 100 = \\frac{50}{200} \\times 100 = 25\\%$.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 188,
@@ -2648,7 +2837,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Concentrate is $\\frac{1}{4}$ of the mixture. For $16$ liters: $\\frac{1}{4} \\times 16 = 4$ liters.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 189,
@@ -2662,7 +2852,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "$60$ mph $= \\frac{60 \\times 5280}{3600}$ feet per second $= \\frac{316800}{3600} = 88$ feet per second.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 190,
@@ -2676,7 +2867,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The total sum is $5 \\times 14 = 70$. The four known numbers sum to $56$, so the fifth is $70 - 56 = 14$.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 191,
@@ -2690,7 +2882,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Total respondents: $45 + 30 + 25 = 100$. Coffee percent: $\\frac{30}{100} \\times 100 = 30\\%$.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 192,
@@ -2704,7 +2897,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The sale price is $80\\%$ of the original: $0.80 \\times x = 32$, so $x = 32 \\div 0.80 = 40$ dollars.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 193,
@@ -2718,7 +2912,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Substitute $x = 6$: $y = 5(6) + 60 = 30 + 60 = 90$.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 194,
@@ -2732,7 +2927,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Of the $50$ sport players, $30$ play an instrument: $\\frac{30}{50} = \\frac{3}{5}$.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 195,
@@ -2746,7 +2942,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Standard deviation measures spread. Set B's values are much farther from the mean than Set A's, so Set B has the greater standard deviation.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 196,
@@ -2760,7 +2957,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Sugar per serving is $\\frac{3}{4} \\div 4 = \\frac{3}{16}$ cup. For $10$ servings: $\\frac{3}{16} \\times 10 = \\frac{30}{16} = \\frac{15}{8}$ cups.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 197,
@@ -2774,7 +2972,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "After one hour: $500 \\times 1.10 = 550$. After two hours: $550 \\times 1.10 = 605$. Compound growth, not $500 + 100$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 198,
@@ -2788,7 +2987,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Final factor is $1.20 \\times 0.80 = 0.96$, so the price is $96\\%$ of the original, a $4\\%$ decrease.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 199,
@@ -2802,7 +3002,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Total cat owners: $40 + 20 = 60$. Of those, $40$ own a dog: $\\frac{40}{60} = \\frac{2}{3}$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 200,
@@ -2816,7 +3017,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The slope $8$ is the change in $y$ per unit change in $x$: each extra degree predicts an $8$-dollar rise in sales. The $-40$ is the intercept, not the slope.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 201,
@@ -2830,7 +3032,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Sampling only luxury-store shoppers introduces bias; they are not representative of all residents, so the conclusion cannot be generalized.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Evaluating statistical claims: observational studies and experiments"
   },
   {
     "id": 202,
@@ -2844,7 +3047,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Initial acid: $0.40 \\times 20 = 8$ liters. Adding $x$ liters of acid: $\\frac{8 + x}{20 + x} = 0.50$. Solving, $8 + x = 10 + 0.5x$, so $0.5x = 2$ and $x = 4$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 203,
@@ -2858,7 +3062,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Original sum: $6 \\times 15 = 90$. New sum: $90 + 29 = 119$. New mean: $\\frac{119}{7} = 17$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 204,
@@ -2872,7 +3077,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Year 2: $200{,}000 \\times 1.50 = 300{,}000$. Year 3: $300{,}000 \\times 0.60 = 180{,}000$ dollars.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 205,
@@ -2886,7 +3092,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "First red: $\\frac{4}{10}$. Second red without replacement: $\\frac{3}{9}$. Product: $\\frac{4}{10} \\times \\frac{3}{9} = \\frac{12}{90} = \\frac{2}{15}$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 206,
@@ -2900,7 +3107,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The sample proportion is $\\frac{110}{200} = 55\\%$. With a $\\pm 5$-point margin, the plausible range for true support is $50\\%$ to $60\\%$; the exact value is not known.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Inference from sample statistics and margin of error"
   },
   {
     "id": 207,
@@ -2914,7 +3122,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The rate is $24 \\div 3 = 8$ bottles per minute. In 10 minutes the machine fills $8 \\times 10 = 80$ bottles.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 208,
@@ -2928,7 +3137,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "In $V = a(b)^t$, a base of $0.85$ means each year the value is multiplied by $0.85$, a loss of 15% per year; the starting value is $a = 20000$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 209,
@@ -2942,7 +3152,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "There are 40 walkers out of 100 students, so the probability is $40/100 = 0.4$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 210,
@@ -2956,7 +3167,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Adding a constant amount (50 dollars each month) is linear. A constant percent (3% per year), doubling, or tripling all describe exponential change.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 211,
@@ -2970,7 +3182,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Let $p$ be the original price. Then $1.20p = 60$, so $p = 60 \\div 1.20 = 50$ dollars.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 212,
@@ -2984,7 +3197,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "In $y = 6x + 52$, the slope 6 is the change in $y$ per unit change in $x$: each additional hour studied raises the predicted score by 6. The 52 is the intercept (score at 0 hours).",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 213,
@@ -2998,7 +3212,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Weighted mean $= \\frac{10(70) + 15(80)}{25} = \\frac{1900}{25} = 76$. A plain average of 70 and 80 (which is 75) ignores the different group sizes.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 214,
@@ -3012,7 +3227,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Both sets have mean 50, so center is not the issue. Set B's values sit farther from 50, giving greater spread and thus greater standard deviation.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 215,
@@ -3026,7 +3242,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A random sample lets you generalize to the population, but only approximately: about 4% (6 out of 150) suggests roughly 4% of the day's bulbs are defective, not an exact count.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Inference from sample statistics and margin of error"
   },
   {
     "id": 216,
@@ -3040,7 +3257,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Growth of 8% per year multiplies the population by $1.08$ each year: $500(1.08)^t$. The form $500 + 40t$ would be linear (a constant 40 added per year), not exponential.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 217,
@@ -3054,7 +3272,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The final factor is $1.20 \\times 0.80 = 0.96$, so the price is 96% of the original, that is, 4% less. The percents do not cancel because they apply to different bases.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 218,
@@ -3068,7 +3287,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Let $c$ be the cost. A 30% markup gives $1.30c = 91$, so $c = 91 \\div 1.30 = 70$ dollars.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 219,
@@ -3082,7 +3302,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The intercept 8 is the predicted $y$-value when $x = 0$: about 8 thousand algae at 0 degrees Celsius. The slope $1.5$ (not 8) gives the change per degree.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 220,
@@ -3096,7 +3317,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Residual $=$ actual $-$ predicted $= 265000 - 240000 = 25000 > 0$. A positive residual means the actual value lies above the line.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 221,
@@ -3110,7 +3332,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Standard deviation measures spread about the mean. Set Y's values range widely (from 3 to 40), while set X clusters near 20, so Y has the greater standard deviation.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 222,
@@ -3124,7 +3347,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Adding 90 barely shifts the median (from 15 to 15.5) but pulls the mean sharply upward (from 15 to 27.5). The mean is far more sensitive to an outlier.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 223,
@@ -3138,7 +3362,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "With a margin of error of 3 points around 45%, the plausible range for the true population percentage is $45 \\pm 3$, or 42% to 48%. It does not pin down an exact value.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Inference from sample statistics and margin of error"
   },
   {
     "id": 224,
@@ -3152,7 +3377,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$15$ liters/min $\\times 120$ min $= 1800$ liters. Dividing by 1000 liters per cubic meter gives $1.8$ cubic meters.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 225,
@@ -3166,7 +3392,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Let $x$ be liters of the 40% solution. Then $0.40x + 0.10(30 - x) = 0.20(30)$, so $0.30x = 3$ and $x = 10$ liters.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 226,
@@ -3180,7 +3407,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Condition on the 248 adults who exercise regularly ($168 + 80$). Of these, 80 are age 40 or older, so the probability is $\\frac{80}{248}$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 227,
@@ -3194,7 +3422,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The interquartile range is $Q_3 - Q_1 = 22 - 10 = 12$. The range (maximum minus minimum) would instead be $30 - 4 = 26$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 228,
@@ -3208,7 +3437,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Serving 12 people is $12 \\div 4 = 3$ times the original recipe, so the flour needed is $3 \\times 3 = 9$ cups.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 229,
@@ -3222,7 +3452,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Multiplying every value by 4 multiplies the mean by 4 as well: $20 \\times 4 = 80$.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 230,
@@ -3236,7 +3467,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Since 1 dollar $= 0.90$ euros, dollars $=$ euros $\\div 0.90 = 18 \\div 0.90 = 20$ dollars. Multiplying instead ($18 \\times 0.90 = 16.20$) converts in the wrong direction.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 231,
@@ -3250,7 +3482,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Their combined rate is $\\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}$ job per hour, so together they finish in $2$ hours, faster than either machine alone.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 232,
@@ -3264,7 +3497,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Percent error $= \\frac{|\\text{measured} - \\text{actual}|}{\\text{actual}} \\times 100 = \\frac{|48 - 50|}{50} \\times 100 = 4$%.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 233,
@@ -3278,7 +3512,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The parts total $2 + 3 + 4 = 9$, and the angles of a triangle sum to 180 degrees, so each part is $180 \\div 9 = 20$ degrees. The largest angle is $4 \\times 20 = 80$ degrees.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 234,
@@ -3292,7 +3527,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The value 62 is a high outlier that pulls the mean up (the original mean is $100 \\div 5 = 20$). Removing it drops the mean to $\\frac{8 + 9 + 10 + 11}{4} = 9.5$, a substantial decrease.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 235,
@@ -3306,7 +3542,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Each region is equally likely (probability $\\frac{1}{4}$), so the expected value is $\\frac{1 + 2 + 3 + 6}{4} = \\frac{12}{4} = 3$ dollars.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 236,
@@ -3320,7 +3557,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The combined factor is $1.25 \\times 0.75 = 0.9375$, so the final price is 93.75% of the original, that is, 6.25% less. The two 25% changes do not cancel because they apply to different base prices.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 237,
@@ -3334,7 +3572,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Tip $= 0.20 \\times 50 = 10$ dollars and tax $= 0.06 \\times 50 = 3$ dollars. Since both are based on the 50-dollar price, the total is $50 + 10 + 3 = 63$ dollars.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 238,
@@ -3348,7 +3587,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Use the complement: $P(\\text{at least one heads}) = 1 - P(\\text{no heads}) = 1 - \\left(\\frac{1}{2}\\right)^3 = 1 - \\frac{1}{8} = \\frac{7}{8}$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 239,
@@ -3362,7 +3602,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The draws are dependent (no replacement): $P(\\text{both red}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$. Using $\\frac{5}{8} \\times \\frac{5}{8} = \\frac{25}{64}$ would wrongly treat the draws as independent.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 240,
@@ -3376,7 +3617,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "For a uniformly random landing point, the probability equals the fraction of area covered: $\\frac{\\pi (3)^2}{10^2} = \\frac{28.26}{100} \\approx 0.28$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 241,
@@ -3390,7 +3632,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A percentile gives the percent of the group at or below a value: the 80th percentile means about 80% of test-takers scored at or below this student. It says nothing about the percent of questions answered correctly.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 242,
@@ -3404,7 +3647,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Both medians are 78, so center is equal. Class A's IQR is $84 - 70 = 14$ versus Class B's $82 - 74 = 8$, so Class A's middle 50% of scores is more spread out.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 243,
@@ -3418,7 +3662,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Multiplying every value by a constant $k$ scales the standard deviation by $|k|$: $5 \\times 3 = 15$. (Adding a constant, by contrast, would leave the standard deviation unchanged.)",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "One-variable data: distributions and measures of center and spread"
   },
   {
     "id": 244,
@@ -3432,7 +3677,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Splitting 25 liters in the ratio $3 : 2$ gives red $= 15$ and blue $= 10$. Adding 5 liters of blue makes blue $= 15$, so the new ratio is $15 : 15 = 1 : 1$.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 245,
@@ -3446,7 +3692,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The efficiency is $\\frac{240 \\text{ km}}{15 \\text{ L}} = 16$ km per liter. Converting units: $16 \\times \\frac{0.62 \\text{ mi/km}}{0.26 \\text{ gal/L}} \\approx 38$ miles per gallon.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 246,
@@ -3460,7 +3707,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Consecutive $y$-values are multiplied by a constant factor ($12 \\div 4 = 36 \\div 12 = 108 \\div 36 = 3$), the hallmark of exponential growth. Linear data would add a constant amount rather than multiply.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 247,
@@ -3474,7 +3722,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "To convert meters per second to kilometers per hour, multiply by 3600 seconds per hour and divide by 1000 meters per kilometer, which is the same as multiplying by 3.6. So 8 times 3.6 equals 28.8 km/h.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 248,
@@ -3488,7 +3737,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The pants make up 80 of the 200 items sold. As a percent, 80 divided by 200 equals 0.40, or 40%.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 249,
@@ -3502,7 +3752,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The probability is the number of students who bike divided by the total number of students: 18 divided by 50 equals 0.36.",
     "difficulty": "easy",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 250,
@@ -3516,7 +3767,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Random ASSIGNMENT to the two groups supports a cause-and-effect conclusion for the participants. But because the participants were volunteers rather than a random SELECTION from a larger population, the result may not generalize beyond this group.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Evaluating statistical claims: observational studies and experiments"
   },
   {
     "id": 251,
@@ -3530,7 +3782,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The plausible range for the population value is the estimate plus or minus the margin of error: 52% minus 4% is 48%, and 52% plus 4% is 56%, giving a range of 48% to 56%.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Inference from sample statistics and margin of error"
   },
   {
     "id": 252,
@@ -3544,7 +3797,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Density equals mass divided by volume. So 240 grams divided by 30 cubic centimeters equals 8 grams per cubic centimeter.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 253,
@@ -3558,7 +3812,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The increase is 150 minus 120, which is 30 dollars. As a percent of the jacket's price, 30 divided by 120 equals 0.25, or 25% greater. (Note that 20% is the percent by which the jacket is less than the coat, which is a different comparison.)",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 254,
@@ -3572,7 +3827,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Each value is double the one before it, so the count is multiplied by the constant factor 2 at each interval. A quantity that changes by a constant factor is modeled by an exponential function.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 255,
@@ -3586,7 +3842,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The expected number of red outcomes over many trials is the probability times the number of trials: 0.15 times 300 equals 45.",
     "difficulty": "medium",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Probability and conditional probability"
   },
   {
     "id": 256,
@@ -3600,7 +3857,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Random SELECTION from the population supports generalizing the observed association to that population. But because coffee amounts were not randomly ASSIGNED, this observational study cannot establish a cause-and-effect relationship.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Evaluating statistical claims: observational studies and experiments"
   },
   {
     "id": 257,
@@ -3614,7 +3872,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "A cause-and-effect conclusion requires an experiment with random ASSIGNMENT to the treatment and control conditions, which balances other factors between the groups. The other designs are observational or based on opinion and cannot isolate the effect of the lighting.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Evaluating statistical claims: observational studies and experiments"
   },
   {
     "id": 258,
@@ -3628,7 +3887,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "With the same methods, a larger sample size produces a smaller margin of error. Since Survey B samples more people, it will tend to have a smaller margin of error and a more precise estimate.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Inference from sample statistics and margin of error"
   },
   {
     "id": 259,
@@ -3642,7 +3902,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Substitute $x = 12$ into the model: $y = 2.5(12) + 4 = 30 + 4 = 34$ centimeters.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 260,
@@ -3656,7 +3917,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The height increases to a peak of 9 meters and then decreases in a symmetric pattern. This rise-then-fall behavior with a single maximum is characteristic of a quadratic model.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Two-variable data: models and scatterplots"
   },
   {
     "id": 261,
@@ -3670,7 +3932,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The rate is 240 bottles divided by 8 minutes, which equals 30 bottles per minute. Three hours is 180 minutes, so the machine fills 30 times 180 equals 5400 bottles.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Ratios, rates, proportional relationships, and units"
   },
   {
     "id": 262,
@@ -3684,7 +3947,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Starting from price P, a 20% increase gives 1.2P. A 20% decrease then multiplies by 0.8, giving 1.2 times 0.8 equals 0.96 times P. Since 0.96P is 4% less than P, the final price is 4% less than the original.",
     "difficulty": "hard",
-    "area": "problem-solving"
+    "area": "problem-solving",
+    "skill": "Percentages"
   },
   {
     "id": 263,
@@ -3698,7 +3962,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Angles in a triangle sum to $180^\\circ$: $180 - 50 - 60 = 70^\\circ$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 264,
@@ -3712,7 +3977,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "By the Pythagorean theorem, $c = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 265,
@@ -3726,7 +3992,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Circumference $= 2\\pi r = 2\\pi (5) = 10\\pi$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 266,
@@ -3740,7 +4007,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Area of a rectangle $= \\text{length} \\times \\text{width} = 8 \\times 5 = 40$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 267,
@@ -3754,7 +4022,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Volume of a cube $= s^3 = 4^3 = 64$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 268,
@@ -3768,7 +4037,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{6}{10} = \\frac{3}{5}$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 269,
@@ -3782,7 +4052,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Complementary angles sum to $90^\\circ$: $90 - 35 = 55^\\circ$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 270,
@@ -3796,7 +4067,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A square has $4$ equal sides, so each side $= \\frac{36}{4} = 9$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 271,
@@ -3810,7 +4082,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The radius is half the diameter: $\\frac{14}{2} = 7$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 272,
@@ -3824,7 +4097,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Area of a triangle $= \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2}(10)(6) = 30$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 273,
@@ -3838,7 +4112,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "In a $45$-$45$-$90$ triangle, the hypotenuse equals a leg times $\\sqrt{2}$: $7\\sqrt{2}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 274,
@@ -3852,7 +4127,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "In a $30$-$60$-$90$ triangle, the sides are in ratio $1 : \\sqrt{3} : 2$. The side opposite $60^\\circ$ is $5\\sqrt{3}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 275,
@@ -3866,7 +4142,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Sector area $= \\frac{60}{360} \\times \\pi r^2 = \\frac{1}{6} \\times \\pi (6)^2 = \\frac{1}{6}(36\\pi) = 6\\pi$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 276,
@@ -3880,7 +4157,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Arc length $= \\frac{40}{360} \\times 2\\pi r = \\frac{1}{9} \\times 2\\pi (9) = \\frac{1}{9}(18\\pi) = 2\\pi$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 277,
@@ -3894,7 +4172,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Volume of a cylinder $= \\pi r^2 h = \\pi (3)^2 (10) = 90\\pi$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 278,
@@ -3908,7 +4187,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Set up the proportion $\\frac{2}{5} = \\frac{8}{x}$, so $2x = 40$ and $x = 20$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 279,
@@ -3922,7 +4202,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "With opposite $= 5$ and adjacent $= 12$, the hypotenuse is $\\sqrt{5^2 + 12^2} = 13$. So $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{12}{13}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 280,
@@ -3936,7 +4217,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Multiply by $\\frac{180^\\circ}{\\pi}$: $\\frac{\\pi}{3} \\times \\frac{180^\\circ}{\\pi} = 60^\\circ$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 281,
@@ -3950,7 +4232,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The slant height satisfies $\\ell = \\sqrt{r^2 + h^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 282,
@@ -3964,7 +4247,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "In the form $(x - h)^2 + (y - k)^2 = r^2$, the center is $(h, k) = (3, -2)$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 283,
@@ -3978,7 +4262,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Complete the square: $(x^2 - 6x + 9) + (y^2 + 8y + 16) = -9 + 9 + 16$, giving $(x-3)^2 + (y+4)^2 = 16$. The radius is $\\sqrt{16} = 4$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 284,
@@ -3992,7 +4277,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "By the inscribed-angle theorem, an inscribed angle is half the intercepted arc: $\\frac{110}{2} = 55^\\circ$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 285,
@@ -4006,7 +4292,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "In a right triangle the acute angles are complementary, so $\\cos B = \\sin A = \\frac{7}{25}$ by the complementary-angle identity $\\cos(90^\\circ - A) = \\sin A$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 286,
@@ -4020,7 +4307,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Surface area $= 4\\pi r^2 = 144\\pi$ gives $r^2 = 36$, so $r = 6$. Volume $= \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi (6)^3 = \\frac{4}{3}\\pi (216) = 288\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 287,
@@ -4034,7 +4322,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The area of a regular hexagon with side $s$ is $\\frac{3\\sqrt{3}}{2}s^2 = \\frac{3\\sqrt{3}}{2}(100) = 150\\sqrt{3}$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 288,
@@ -4048,7 +4337,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Cylinder volume $= \\pi (3)^2 (10) = 90\\pi$. Hemisphere volume $= \\frac{1}{2} \\cdot \\frac{4}{3}\\pi (3)^3 = \\frac{2}{3}\\pi (27) = 18\\pi$. Total $= 90\\pi + 18\\pi = 108\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 289,
@@ -4062,7 +4352,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Arc length $s = r\\theta$, so $20 = r(2.5)$, giving $r = \\frac{20}{2.5} = 8$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 290,
@@ -4076,7 +4367,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The side opposite $30^\\circ$ is $\\frac{1}{2}(12) = 6$ and the side opposite $60^\\circ$ is $6\\sqrt{3}$. Area $= \\frac{1}{2}(6)(6\\sqrt{3}) = 18\\sqrt{3}$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 291,
@@ -4090,7 +4382,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "By the intersecting-chords theorem, the products of the segments are equal: $4 \\times 9 = 6 \\times x$, so $36 = 6x$ and $x = 6$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 292,
@@ -4104,7 +4397,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A cone's volume is $\\frac{1}{3}$ that of a cylinder with the same base and height: $\\frac{1}{3}(45\\pi) = 15\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 293,
@@ -4118,7 +4412,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Multiply by $\\frac{180^\\circ}{\\pi}$: $\\frac{\\pi}{6}\\cdot\\frac{180^\\circ}{\\pi} = 30^\\circ$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 294,
@@ -4132,7 +4427,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "By the complementary-angle identity, $\\cos(90^\\circ - x^\\circ) = \\sin(x^\\circ) = 0.8$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 295,
@@ -4146,7 +4442,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The standard form is $(x-h)^2 + (y-k)^2 = r^2$ with center $(h,k)=(2,-3)$ and $r=4$, giving $(x-2)^2 + (y+3)^2 = 16$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 296,
@@ -4160,7 +4457,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Complete the square: $(x-4)^2 + (y+3)^2 = 16 + 9 = 25$, so $r = \\sqrt{25} = 5$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 297,
@@ -4174,7 +4472,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Arc length $= \\frac{40}{360}\\cdot 2\\pi(9) = \\frac{1}{9}\\cdot 18\\pi = 2\\pi$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 298,
@@ -4188,7 +4487,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "An inscribed angle is half the central angle subtending the same arc: $\\frac{1}{2}(80^\\circ) = 40^\\circ$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 299,
@@ -4202,7 +4502,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "This is a $45^\\circ$-$45^\\circ$-$90^\\circ$ triangle, so the hypotenuse is $\\text{leg}\\cdot\\sqrt{2} = 7\\sqrt{2}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 300,
@@ -4216,7 +4517,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Set up the proportion $\\frac{AB}{DE} = \\frac{BC}{EF}$: $\\frac{6}{9} = \\frac{8}{EF}$, so $EF = \\frac{9\\cdot 8}{6} = 12$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 301,
@@ -4230,7 +4532,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Slope $= \\frac{3 - (-1)}{8 - 2} = \\frac{4}{6} = \\frac{2}{3}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 302,
@@ -4244,7 +4547,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Complete the square: $(x+5)^2 + (y-2)^2 = 7 + 25 + 4 = 36$, so the center is $(-5, 2)$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 303,
@@ -4258,7 +4562,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Completing the square gives $(x-3)^2 + (y+4)^2 = 9 + 16 - k = 25 - k$. For radius $3$, $25 - k = 9$, so $k = 16$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 304,
@@ -4272,7 +4577,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Sector area $= \\frac{1}{2}r^2\\theta = \\frac{1}{2}(6)^2\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right) = 6\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 305,
@@ -4286,7 +4592,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Arc length $= r\\theta = 8\\cdot\\frac{3\\pi}{4} = 6\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 306,
@@ -4300,7 +4607,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Since $A + B = 90^\\circ$, angle $B = 90^\\circ - A$, so $\\sin(B) = \\sin(90^\\circ - A) = \\cos(A) = \\frac{7}{25}$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 307,
@@ -4314,7 +4622,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The altitude splits the triangle into two $30^\\circ$-$60^\\circ$-$90^\\circ$ triangles with hypotenuse $12$ and short leg $6$. The altitude is the long leg: $6\\sqrt{3}$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 308,
@@ -4328,7 +4637,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "$\\tan(\\theta) = \\frac{\\text{opposite}}{\\text{adjacent}}$, so opposite $= 8\\cdot\\tan(\\theta) = 8\\cdot\\frac{3}{4} = 6$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 309,
@@ -4342,7 +4652,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Similar triangles give $\\frac{h}{24} = \\frac{6}{4}$, so $h = 24\\cdot\\frac{6}{4} = 36$ feet.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 310,
@@ -4356,7 +4667,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The distance from $P(-1,1)$ to $M(3,4)$ is $\\sqrt{(3-(-1))^2 + (4-1)^2} = \\sqrt{16+9} = 5$. Since $M$ is the midpoint, $PQ = 2(PM) = 10$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 311,
@@ -4370,7 +4682,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Cylinder volume $= \\pi(3)^2(4) = 36\\pi$; cone volume $= \\frac{1}{3}\\pi(3)^2(4) = 12\\pi$. Total $= 36\\pi + 12\\pi = 48\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 312,
@@ -4384,7 +4697,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Volume $= \\pi r^2 h$. Doubling the radius multiplies the volume by $2^2 = 4$, so the new volume is $4(100) = 400$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 313,
@@ -4398,7 +4712,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "A tangent line is perpendicular to the radius drawn to the point of tangency, so the angle between them is $90^\\circ$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 314,
@@ -4412,7 +4727,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "In a $45^\\circ$-$45^\\circ$-$90^\\circ$ triangle the two legs are equal, so $\\tan 45^\\circ = \\frac{\\text{opposite}}{\\text{adjacent}} = 1$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 315,
@@ -4426,7 +4742,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The sum of the interior angles of an $n$-sided polygon is $(n-2)\\cdot 180^\\circ$. For $n=5$: $(5-2)\\cdot 180^\\circ = 540^\\circ$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 316,
@@ -4440,7 +4757,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The height $h$ satisfies $\\tan 30^\\circ = \\frac{h}{50}$, so $h = 50\\tan 30^\\circ = 50\\cdot\\frac{1}{\\sqrt{3}} = \\frac{50\\sqrt{3}}{3}$ feet.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 317,
@@ -4454,7 +4772,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Each interior angle of a regular $n$-gon measures $\\frac{(n-2)\\cdot 180^\\circ}{n}$. For $n=8$: $\\frac{6\\cdot 180^\\circ}{8} = 135^\\circ$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 318,
@@ -4468,7 +4787,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "For similar solids with linear scale factor $k$, the volume ratio is $k^3$. Here $k=3$, so the volume ratio is $3^3 = 27$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 319,
@@ -4482,7 +4802,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The center is the midpoint of the diameter: $\\left(\\frac{-2+4}{2}, \\frac{1+9}{2}\\right) = (1,5)$. The diameter length is $\\sqrt{6^2+8^2}=10$, so the radius is $5$ and $r^2 = 25$, giving $(x-1)^2 + (y-5)^2 = 25$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 320,
@@ -4496,7 +4817,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A point is inside the circle when $(x-3)^2+(y+1)^2 < 25$. For $(5,1)$: $(5-3)^2+(1+1)^2 = 4+4 = 8 < 25$, so it lies inside. The other points give $41$ (outside), $25$ (on the circle), and $36$ (outside).",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 321,
@@ -4510,7 +4832,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Using the base from $(0,0)$ to $(6,0)$ of length $6$ and the corresponding height $5$ (the $y$-coordinate of the third vertex), the area is $\\frac{1}{2}\\cdot 6\\cdot 5 = 15$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 322,
@@ -4524,7 +4847,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "When two chords intersect inside a circle, the products of the two segment lengths are equal: $6\\cdot 4 = 3\\cdot x$, so $24 = 3x$ and $x = 8$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 323,
@@ -4538,7 +4862,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "$\\sin A = \\frac{BC}{AB}$, so $BC = AB\\sin 30^\\circ = 20\\cdot\\frac{1}{2} = 10$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 324,
@@ -4552,7 +4877,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The space diagonal of a box with dimensions $a,b,c$ is $\\sqrt{a^2+b^2+c^2} = \\sqrt{3^2+4^2+12^2} = \\sqrt{9+16+144} = \\sqrt{169} = 13$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 325,
@@ -4566,7 +4892,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The area of a regular polygon is $\\frac{1}{2}\\cdot(\\text{perimeter})\\cdot(\\text{apothem})$. The perimeter is $6\\cdot 6 = 36$, so the area is $\\frac{1}{2}\\cdot 36\\cdot 3\\sqrt{3} = 54\\sqrt{3}$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 326,
@@ -4580,7 +4907,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The exterior angles of any convex polygon sum to $360^\\circ$. For a regular polygon with each exterior angle $24^\\circ$, the number of sides is $\\frac{360^\\circ}{24^\\circ} = 15$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 327,
@@ -4594,7 +4922,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The cube contributes its bottom face and $4$ side faces: $5\\cdot 4^2 = 80$ (the top face is hidden beneath the pyramid). The pyramid contributes $4$ triangles, each of area $\\frac{1}{2}\\cdot 4\\cdot 5 = 10$, totaling $40$. The total surface area is $80 + 40 = 120$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 328,
@@ -4608,7 +4937,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "A plane through the central axis cuts the cylinder in a rectangle whose width equals the diameter $2\\cdot 5 = 10$ and whose height equals $12$. The area is $10\\cdot 12 = 120$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 329,
@@ -4622,7 +4952,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The volume is $V=\\frac{1}{3}\\pi r^2 h$. Replacing $r$ with $2r$ and $h$ with $\\frac{h}{2}$ gives $\\frac{1}{3}\\pi(2r)^2\\left(\\frac{h}{2}\\right) = \\frac{1}{3}\\pi\\cdot 4r^2\\cdot\\frac{h}{2} = 2\\cdot\\frac{1}{3}\\pi r^2 h$, which is $2$ times the original.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 330,
@@ -4636,7 +4967,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The midpoint is $(3,5)$ and the segment's slope is $\\frac{8-2}{5-1}=\\frac{3}{2}$, so the perpendicular bisector has slope $-\\frac{2}{3}$ and passes through $(3,5)$: $y - 5 = -\\frac{2}{3}(x-3)$, which simplifies to $y = -\\frac{2}{3}x + 7$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 331,
@@ -4650,7 +4982,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Reflecting a point $(x,y)$ across the line $y=-x$ maps it to $(-y,-x)$. For $(2,-5)$ this gives $(-(-5),\\,-(2)) = (5,-2)$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 332,
@@ -4664,7 +4997,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Because $DE\\parallel BC$, triangles $ADE$ and $ABC$ are similar with ratio $\\frac{AD}{AB} = \\frac{4}{4+6} = \\frac{2}{5}$. Then $\\frac{DE}{BC} = \\frac{2}{5}$, so $BC = 5\\cdot\\frac{5}{2} = 12.5$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 333,
@@ -4678,7 +5012,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "When two lines intersect, the angles opposite each other (vertical angles) are congruent. So the vertical angle also measures $47^\\circ$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 334,
@@ -4692,7 +5027,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Circumference $= 2\\pi r = 2\\pi(5) = 10\\pi$ units.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 335,
@@ -4706,7 +5042,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The midpoint is $\\left(\\frac{2+8}{2}, \\frac{4+10}{2}\\right) = (5, 7)$.",
     "difficulty": "easy",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 336,
@@ -4720,7 +5057,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "When parallel lines are cut by a transversal, alternate interior angles are congruent. So the alternate interior angle also measures $63^\\circ$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 337,
@@ -4734,7 +5072,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Using $\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}}$: $\\sin 30^\\circ = \\frac{BC}{20}$, so $BC = 20 \\times \\frac{1}{2} = 10$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 338,
@@ -4748,7 +5087,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The arc's fraction of the circumference equals the central angle divided by the full $360^\\circ$: $\\frac{90^\\circ}{360^\\circ} = \\frac{1}{4}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   },
   {
     "id": 339,
@@ -4762,7 +5102,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "By the Pythagorean theorem, the diagonal $= \\sqrt{30^2 + 40^2} = \\sqrt{900 + 1600} = \\sqrt{2500} = 50$ feet.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 340,
@@ -4776,7 +5117,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Substitute: $100\\pi = \\pi (5)^2 h = 25\\pi h$. Dividing both sides by $25\\pi$ gives $h = 4$ centimeters.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 341,
@@ -4790,7 +5132,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Perpendicular lines have slopes that are negative reciprocals. The negative reciprocal of $\\frac{2}{3}$ is $-\\frac{3}{2}$.",
     "difficulty": "medium",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 342,
@@ -4804,7 +5147,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "By the exterior-angle theorem, an exterior angle equals the sum of the two remote interior angles: $35^\\circ + 80^\\circ = 115^\\circ$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 343,
@@ -4818,7 +5162,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "By the triangle inequality, the third side must be greater than $10 - 7 = 3$ and less than $10 + 7 = 17$. Only $4$ falls strictly between $3$ and $17$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 344,
@@ -4832,7 +5177,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{3/5}{4/5} = \\frac{3}{5} \\times \\frac{5}{4} = \\frac{3}{4}$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Right triangles and trigonometry"
   },
   {
     "id": 345,
@@ -4846,7 +5192,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Substitute: $48\\pi = \\frac{1}{3}\\pi r^2 (9) = 3\\pi r^2$. Dividing by $3\\pi$ gives $r^2 = 16$, so $r = 4$ inches.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Area and volume"
   },
   {
     "id": 346,
@@ -4860,7 +5207,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Distance $= \\sqrt{(7-1)^2 + (10-2)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 347,
@@ -4874,7 +5222,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The two base angles of an isosceles triangle are congruent, so both measure $55^\\circ$. The vertex angle is $180^\\circ - 55^\\circ - 55^\\circ = 70^\\circ$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Lines, angles, and triangles"
   },
   {
     "id": 348,
@@ -4888,7 +5237,8 @@ const allQuestions: SatMathQuestion[] = [
     "correctAnswer": 3,
     "explanation": "From $C = 2\\pi r = 12\\pi$, the radius is $r = 6$. Then the area $= \\pi r^2 = \\pi (6)^2 = 36\\pi$.",
     "difficulty": "hard",
-    "area": "geometry"
+    "area": "geometry",
+    "skill": "Circles"
   }
 ]
 

@@ -13,6 +13,8 @@ export interface SatRwQuestion {
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
   domain: SatRwDomain
+  /** Official College Board skill this question targets (student-facing). */
+  skill?: string
 }
 
 const RW_DOMAINS: readonly SatRwDomain[] = ['information-ideas', 'craft-structure', 'expression', 'conventions']
@@ -30,7 +32,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The passage's central point is that the once-green, wet Sahara later dried into desert due to a climate shift.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 2,
@@ -44,7 +47,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The passage explicitly states the duration of the waggle indicates how far away the food is.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 3,
@@ -58,7 +62,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The passage emphasizes both her early algorithm and her insight that such machines could do more than calculate.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 4,
@@ -72,7 +77,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The passage states that many creatures use bioluminescence to lure, or attract, prey.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 5,
@@ -86,7 +92,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The passage corrects the common view by presenting the wall as a varied, multi-dynasty network.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 6,
@@ -100,7 +107,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The passage states that quiet domestic settings conceal intense inner conflict.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 7,
@@ -114,7 +122,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The passage contrasts the reefs' tiny area with the large fraction of marine species they support.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 8,
@@ -128,7 +137,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The passage states literacy spread beyond the small circle of scholars once books became cheaper.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 9,
@@ -142,7 +152,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The passage explicitly attributes their survival to cryptobiosis, a dried-out dormant state.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 10,
@@ -156,7 +167,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The passage centers on Franklin's photographs providing key, once-overlooked evidence for DNA's structure.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 11,
@@ -170,7 +182,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The claim is about practical scientific value; the quotation about drought-resistant crop researchers directly supports that.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 12,
@@ -184,7 +197,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Ortiz warns that isolated stretches strand riders and discourage cycling, so she views them as ineffective without connectivity.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 13,
@@ -198,7 +212,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The four-hour group averaged 310 ms, a longer (slower) reaction time, supporting the claim that sleep loss slows responses.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 14,
@@ -212,7 +227,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The claim is about building atmosphere through accumulation; the sentence about recurring images gradually building a sense of place directly supports it.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 15,
@@ -226,7 +242,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Serving vessels sized for dozens directly supports the conclusion that food was prepared for a larger group.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 16,
@@ -240,7 +257,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "68% versus 41% shows a larger share of express-train users felt less stressed, supporting expansion.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 17,
@@ -254,7 +272,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The detail that distant families heard the same broadcast simultaneously best supports the shared-experience claim.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 18,
@@ -268,7 +287,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "That the frogs called to recordings with no real rain shows they respond to the sound itself, supporting the conclusion.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 19,
@@ -282,7 +302,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Lake A near industry (45 ppb) far exceeded distant Lake B (6 ppb), supporting the association with industry.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 20,
@@ -296,7 +317,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The detail that small changes were made while the core image stayed constant shows a focus on precision, not reinvention.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 21,
@@ -310,7 +332,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "That gardens collapsed when the secretion was absent shows the secretion is essential to maintaining the food supply.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 22,
@@ -324,7 +347,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "An excess of bakers plus weekly bread shipments out of town together imply production for export, not just local use.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 23,
@@ -338,7 +362,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Higher recall in matched settings (30% and 34%) versus a changed room (18%) supports that matching context improves recall.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 24,
@@ -352,7 +377,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "A 22% drop where the store opened versus a 5% rise where none did supports the link between food access and reduced theft.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 25,
@@ -366,7 +392,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "First-person narrators misjudging motives while outside voices are accurate implies deliberate use of unreliable narration to signal limited understanding.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 26,
@@ -380,7 +407,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Greater average height in inoculated seedlings shows a net benefit, supporting the inference despite the sugar cost.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 27,
@@ -394,7 +422,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Because the ash is precisely datable and separates older-below from younger-above fossils, it can establish relative fossil ages against a known date.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 28,
@@ -408,7 +437,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "More frequent washing where sinks were conveniently placed at every doorway supports the inference about placement.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 29,
@@ -422,7 +452,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The pattern of lower defects with more training and spikes after cuts supports the claimed link between training and quality.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 30,
@@ -436,7 +467,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "With total time held equal, higher retention for the daily (spaced) group supports the claim that spacing aids retention.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 31,
@@ -450,7 +482,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The passage's central point is that tardigrades survive extreme conditions by nearly shutting down their metabolism. The other choices are unstated (size, preference for space) or overstated (radiation as the single greatest threat).",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 32,
@@ -464,7 +497,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The passage states her knowledge of the land and languages helped the party navigate and negotiate. The other choices describe roles the passage never assigns to her.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 33,
@@ -478,7 +512,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Companies adding walking paths after the survey implies they see a possible benefit to focus. The others are absolute or unsupported claims the passage never makes.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 34,
@@ -492,7 +527,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Ferns' 250 mL is more than six times succulents' 40 mL, and it is the largest value. The distractors reverse or misstate the figures (succulents 40 < snake plants 60; peace lilies 180 is far from snake plants' 60; snake plants are not the highest).",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 35,
@@ -506,7 +542,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Her silence, the kept sand, and her children's learned caution together suggest the town carries feelings she avoids discussing. The other options add plans, facts, or reactions the passage does not establish.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 36,
@@ -520,7 +557,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "If male bees try to mate with the flowers, the orchid is likely imitating a female bee's scent, directly supporting the hypothesis. Flower count, petal color, and female bees' avoidance do not bear on scent mimicry.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 37,
@@ -534,7 +572,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The passage's point is that factors beyond profit influence choices. The distractors overstate the claim (never, usually mistaken, outweighs in every decision) beyond what the text supports.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 38,
@@ -548,7 +587,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Coral losing color after expelling its algae is exactly what the prediction forecasts. The other findings concern habitat, fish behavior, or algae independence and do not test the color prediction.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 39,
@@ -562,7 +602,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Biking or walking rose from 15 to 30 percent (a doubling) as driving alone fell from 60 to 45 percent. Transit was unchanged; 45 percent is not a majority; and driving alone (45) still exceeded biking or walking (30).",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 40,
@@ -576,7 +617,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The passage links the low-energy strategy to the advantage of scarce prey, supporting that energy-saving hunting matters most where food is limited. The other choices are contradicted (sunlight) or never suggested (only light producer, relative intelligence).",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 41,
@@ -590,7 +632,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The 65-and-older group's 17 books is the highest figure, so it exceeds every younger group. The distractors are false: 30 to 49 read the fewest (9); the 30-to-49 group read fewer than the 18-to-29 group; and the values range widely from 9 to 17.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 42,
@@ -604,7 +647,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The specific claim is about selection determining survival; unprofitable works disappearing while others were reprinted directly demonstrates that. Speed, literacy, and cost are on topic for printing but do not address which ideas survived.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 43,
@@ -618,7 +662,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "If the cactus opens by day whenever it is cool, then blooming is not restricted to darkness and is not driven by avoiding daytime heat, undercutting the hypothesis. The other findings are neutral or actually consistent with night blooming.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 44,
@@ -632,7 +677,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Distant butchers previously faced little competition; the arrival of shipped Chicago beef implies new competitors, so competition likely rose. The other options add claims about cattle survival, later abandonment, or butchers' attitudes that the passage does not support.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 45,
@@ -646,7 +692,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The passage's central claim is that faithful translation still requires reshaping choices because languages differ. The distractors give advice or absolute assertions the passage does not make.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 46,
@@ -660,7 +707,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Adults exceeded teenagers only on news (10 vs. 3); teens led on video (20 vs. 12), music (8 vs. 6), and social media (15 vs. 9). The distractors misread these figures.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 47,
@@ -674,7 +722,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The specific claim is about social interaction, so new friendships among previously unacquainted neighbors supports it directly. Harvest size, property values, and watering logistics are on topic for gardens but not for the interaction claim.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 48,
@@ -688,7 +737,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Immune memory is of a specific form of the pathogen, so a rapidly mutating pathogen may no longer match that memory, implying weaker protection. The other choices are contradicted or unsupported by the passage.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 49,
@@ -702,7 +752,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A path between the sites littered with that same pottery is direct evidence of contact and exchange, supporting trade. Similar clay actually favors independent invention, and size differences or unrelated languages do not support direct trade.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 50,
@@ -716,7 +767,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Setting time fell from 40 to 25 to 15 to 12 minutes as temperature rose, and the drops (15, 10, 3 minutes) shrank, matching the correct choice. The distractors reverse the trend, misidentify the shortest time, or deny any effect.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 51,
@@ -730,7 +782,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The text's central point is that the waggle dance communicates a food source's direction and distance to the hive. The other choices are unstated (danger, preference for nearby patches) or overstated (that it is the only method).",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 52,
@@ -744,7 +797,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The text states caravans often traveled only a portion of the network, passing goods city to city. The other choices contradict the text (single caravan, silk-only) or introduce unsupported details (ships).",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 53,
@@ -758,7 +812,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The main idea is captured by the narrator's remark that Mara perfects apologies but never delivers them. The other options are unsupported (hobby, mailing soon) or overstated (lost touch with everyone).",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 54,
@@ -772,7 +827,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The text concludes that access, meaning proximity, mattered more than amenities. Amenities and size are explicitly downplayed, and resident age is never mentioned.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 55,
@@ -786,7 +842,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The passage contrasts the old assumption (brain-directed camouflage) with new evidence that skin may sense light locally. Choice C restates the discredited view, while the others are unsupported or contradicted by the finding.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Central Ideas and Details"
   },
   {
     "id": 56,
@@ -800,7 +857,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The claim is about wilderness benefiting Muir's well-being; calling it more nourishing than any city comfort directly supports that. The other details describe what he did, not how it affected him.",
     "difficulty": "easy",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 57,
@@ -814,7 +872,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The hope is that the new wheat maintains yield under water stress; matching yield while using less water directly supports that. Plant height, planting date, and root depth do not speak to maintained yield under stress.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 58,
@@ -828,7 +887,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Her argument is that newcomers' spending revives local businesses; rising revenue at local shops and restaurants is the direct evidence. The other findings concern well-being, housing costs, or turnover, none of which shows business revival.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 59,
@@ -842,7 +902,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The rise from 22 degrees in shade to 34 degrees after 10 minutes in sun directly illustrates sunlight's warming effect. Choice C contradicts the data, and the others introduce claims the measurements do not report.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 60,
@@ -856,7 +917,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The claim links more frequent service to higher satisfaction; pairing A (most service, 70 percent) against C (least service, 30 percent) shows that association. Choice B cites one figure without the link, and C states ridership the survey never reports.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 61,
@@ -870,7 +932,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Supporting that Coating X best preserves efficiency requires showing it retained the most, 95 percent versus 80 and 68 percent. Choice C contradicts the data, B reports only one value, and D is true but does not single out Coating X.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Command of Evidence"
   },
   {
     "id": 62,
@@ -884,7 +947,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Faster, cheaper printing means confined ideas could spread widely, so a wider audience follows logically. The other choices reverse the passage's logic of greater availability and diffusion.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 63,
@@ -898,7 +962,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Sealing pores by day, after taking in carbon at night, serves to limit water loss in dry daytime air, the logical benefit. Choices B and D contradict the described sealed-pore behavior, and A is unsupported.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 64,
@@ -912,7 +977,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Setting and pouring out a second cup each day, knowing he lives alone, suggests he keeps his wife present in habit. He clearly knows she has passed (ruling out D), and a guest or tea dislike is unsupported.",
     "difficulty": "medium",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 65,
@@ -926,7 +992,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The larger display drew more tasters but fewer buyers, so more choices did not yield more purchases, the reasonable inference. The other options are contradicted or go well beyond what the study shows.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 66,
@@ -940,7 +1007,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Since the only light at those depths comes from organisms' own glow, large eyes would logically be adapted to detect that faint biological light. Choices A and C assume light the passage says is absent, and B swaps sight for temperature sensing.",
     "difficulty": "hard",
-    "domain": "information-ideas"
+    "domain": "information-ideas",
+    "skill": "Inferences"
   },
   {
     "id": 67,
@@ -954,7 +1022,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "\"Refusing to rest\" signals sustained, energetic effort—\"tirelessly.\" \"Reluctantly\" and \"briefly\" contradict the ongoing work, and \"carelessly\" adds a negative the passage does not support.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 68,
@@ -968,7 +1037,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "\"Although…complicated at first\" sets up a contrast, so the tent must really be easy—\"simple.\" The other choices do not oppose \"complicated.\"",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 69,
@@ -982,7 +1052,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Months of practice and \"no missed notes\" indicate a smooth, refined performance—\"polished.\" \"Hesitant\" is the opposite, and \"brief\" and \"loud\" are unsupported.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 70,
@@ -996,7 +1067,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"Both sides…without ever taking a side\" describes fairness—\"balanced.\" \"Biased\" is the opposite, and the others are not supported.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 71,
@@ -1010,7 +1082,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "\"Fresh green grass\" after the rain describes rich growth—\"lush.\" \"Barren\" is the opposite, and \"silent\" and \"narrow\" do not fit.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 72,
@@ -1024,7 +1097,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The admirers view the repetition as intentional and thoughtful (\"deliberate meditation\"), so the consistency is \"principled.\" \"Accidental\" contradicts \"deliberate,\" and \"chaotic\" contradicts \"consistency.\"",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 73,
@@ -1038,7 +1112,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"Firm…yet never dismissive\" describes controlled, moderate delivery—\"measured.\" \"Combative\" clashes with \"never dismissive,\" and \"apathetic\" clashes with \"firm in its convictions.\"",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 74,
@@ -1052,7 +1127,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "\"Far from…imitation\" and \"no one had attempted before\" signal originality—\"inventive.\" \"Derivative\" and \"conventional\" mean the opposite.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 75,
@@ -1066,7 +1142,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "\"The same account…from the very first day\" indicates steadiness—\"consistent.\" The other three suggest wavering, which the passage rules out.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 76,
@@ -1080,7 +1157,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Sensory immersion (\"smell…hear\") points to lifelike detail—\"vivid.\" \"Vague\" and \"brief\" undercut the richness, and \"clumsy\" adds an unsupported negative.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 77,
@@ -1094,7 +1172,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The theory was mocked yet later vindicated, so critics first thought it indefensible—\"untenable.\" \"Axiomatic\" (self-evidently true) contradicts their derision, and \"meticulous\" and \"provisional\" do not describe an objection.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 78,
@@ -1108,7 +1187,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "\"Argument of surprising force\" built from modest clauses signals understated power—\"potency.\" \"Ostentation\" contradicts \"never showy,\" and \"monotony\" and \"levity\" miss the sense of force.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 79,
@@ -1122,7 +1202,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"Content…without…a tidy conclusion\" and \"turning it over\" suggest dwelling within the paradox—\"inhabit.\" \"Dispel\" and \"refute\" imply resolving it, which he declines, and \"conceal\" is unsupported.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 80,
@@ -1136,7 +1217,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Delivering bad news graciously so adversaries thank her exemplifies sensitivity—\"tact.\" \"Bluntness\" and \"volatility\" are opposite, and \"indifference\" does not explain the graciousness.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 81,
@@ -1150,7 +1232,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The text describes the waggle dance and what it communicates, so its purpose is to explain how bees share information about food. The other choices introduce claims (intelligence, taste, other animals) the text never makes.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 82,
@@ -1164,7 +1247,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Shouting, spinning, and rushing to call her grandmother dramatize joy, so the actions convey excitement. The other options misread the scene.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 83,
@@ -1178,7 +1262,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The text names the printing press, then traces its consequences (cheaper books, faster spread of ideas, rising literacy)—a cause-and-effect structure. It offers no debate, comparison, or personal narrative.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 84,
@@ -1192,7 +1277,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The first sentence states a common belief (\"permanent, immovable\"); the second (\"Yet…\") overturns it by revealing that glaciers move. Its purpose is to correct that misconception, not to give statistics, argue policy, or define a term.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 85,
@@ -1206,7 +1292,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "\"Then\" marks the pivot from the comforting first half to the dread of the second—a shift in emotional register. It does not summarize, concede a flaw, or give a stylistic example.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 86,
@@ -1220,7 +1307,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The text sets up planners' old assumption, then presents the surprising opposite result (induced demand). Its purpose is to introduce that counterintuitive effect; it stops short of a policy recommendation and does not narrate commuting or praise planners.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 87,
@@ -1234,7 +1322,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The passage names the ideal of the invisible translator, then reveals its \"paradox\"—invisibility is still an active choice. The purpose is to complicate that ideal by exposing an internal tension, not to praise literalism, instruct, or seriously compare glassmaking.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 88,
@@ -1248,7 +1337,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The first sentence stresses meticulous rehearsal; the second (\"But…\") shows the plan collapsing into an unrehearsed apology. Its function is to undercut that preparation with an unplanned result, not to reinforce control, give backstory, or summarize the plot.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 89,
@@ -1262,7 +1352,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The essay contrasts the casual \"glance\" with what the patient viewer discovers, arguing the deeper meaning (mortality, \"borrowed time\") surfaces only through lingering. It is not a mere catalog, a ranking of genres, or a technique guide.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 90,
@@ -1276,7 +1367,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The second sentence resists the impulse to \"mock\" and argues instead that the monsters \"served an honest function.\" Its purpose is to reframe an apparently foolish practice as meaningful, not to dismiss, catalog style, or trace tool invention.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 91,
@@ -1290,7 +1382,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Text 2 concedes that gardens \"sound lovely\" but insists housing serves far more people, so its author would say the benefits are outweighed by the housing need. The other options misstate Text 2's position.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 92,
@@ -1304,7 +1397,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Text 1 endorses homework; Text 2 raises concerns (lost sleep, family time, play) that push against it. Text 2 challenges Text 1 rather than supporting, restating, or offering assignment tips.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 93,
@@ -1318,7 +1412,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Text 2 grants (\"We grant\") that some breeding programs work—a concession—then argues most zoo animals are not endangered and are kept for profit, disputing the broad defense. It neither rejects everything nor supports Text 1.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 94,
@@ -1332,7 +1427,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Text 2 says remote work \"suits seasoned employees well\" (agreeing with Text 1 for them) but flags a gap—newcomers lose mentorship—so Text 1 is right for experienced workers yet incomplete. Text 2 does not call it entirely wrong or too pessimistic.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 95,
@@ -1346,7 +1442,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Text 2 calls neutrality \"a fond illusion\" and shows that even naming events (\"rebellion\" vs. \"revolution\") embeds judgment, so the Text 1 ideal is unattainable. Text 2 does not say it is easily achieved, and it is Text 1, not Text 2, that fears opinion.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 96,
@@ -1360,7 +1457,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Text 2 takes Text 1's own examples (Edison, the Wrights) and recasts them—labs of dozens, decades of prior work—to stress collective foundations. It reframes rather than dismisses the individuals and reaches a different conclusion from Text 1.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 97,
@@ -1374,7 +1472,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "\"Wide, open spaces around each work\" and the contrast with \"crowding the walls\" point to an uncrowded display—\"sparse.\" \"Cluttered\" is the opposite, and \"colorful\" and \"expensive\" are not supported.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 98,
@@ -1388,7 +1487,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The contrast with \"intimidating\" calls for a word meaning easy to handle—\"manageable.\" \"Costly,\" \"dangerous,\" and \"famous\" do not oppose \"intimidating\" the way the sentence requires.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 99,
@@ -1402,7 +1502,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "\"Not a single player stopped hustling\" describes sustained, determined effort—\"relentless.\" \"Brief\" is the opposite, \"careless\" adds an unsupported negative, and \"quiet\" is irrelevant.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 100,
@@ -1416,7 +1517,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Requiring readers to \"assemble meaning from hints and silences,\" in contrast to spelling motives out \"plainly,\" describes indirect writing—\"oblique.\" \"Transparent\" is the opposite, and \"tedious\" and \"autobiographical\" are unsupported.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 101,
@@ -1430,7 +1532,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "\"Far from...passive\" plus \"drafting compromises\" and \"pressing both delegations\" signals active initiative—\"proactive.\" \"Nominal\" and \"decorative\" imply an in-name-only role, and \"reluctant\" contradicts her drive.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 102,
@@ -1444,7 +1547,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Criticism that is \"never wounding\" and leaves writers grateful is delivered with care—\"tactful.\" \"Blunt\" is the opposite in tone, while \"vague\" and \"sparse\" describe clarity or amount, not diplomacy.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 103,
@@ -1458,7 +1562,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Reporting painful events 'calmly' and 'without...self-pity' describes composure, not coldness—'dispassionate' means free of distorting emotion while still engaged with the material. 'Callous' and 'indifferent' wrongly imply she does not care about the setbacks, and 'effusive' means gushing with emotion, the opposite of the restrained, unsentimental tone the passage praises.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 104,
@@ -1472,7 +1577,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"Memorably compact\" lines that are \"quoted...verbatim\" are terse and quotable—\"epigrammatic.\" \"Verbose\" and \"ornate\" both imply wordiness or elaborate decoration, the opposite of compact, and \"grandiose\" describes pomposity rather than concision.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 105,
@@ -1486,7 +1592,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "\"Restated familiar findings\" with \"almost no original analysis\" describes unoriginal work—\"derivative.\" \"Exhaustive\" is a tempting trap tied to the report's length, but it praises thoroughness rather than naming the lack of originality; \"concise\" contradicts \"hundreds of pages,\" and \"controversial\" is unsupported.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 106,
@@ -1500,7 +1607,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The second sentence pivots with \"More recently, though\" from beauty and biodiversity to economic value, framing the rest of the passage. Choice B describes the third sentence's dollar figure, not the second; choices C and D name functions the sentence never performs.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 107,
@@ -1514,7 +1622,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The final sentence urges \"caution in drawing firm conclusions\" until better trials exist—restraint about the evidence. It does not reject the workweek itself (A), report what the studies found (C), or offer a new measurement method (D).",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 108,
@@ -1528,7 +1637,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "By saying the \"legend of a clean break...tidies a messier truth,\" the final sentence casts the infrared evidence as a correction to the tidy pioneer narrative. Choice A overstates the point (her reputation is complicated, not erased), B reverses it, and D adds a comparison the passage never makes.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 109,
@@ -1542,7 +1652,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The final sentence says \"neither figure...means much in isolation,\" making the comparison depend on regional priorities—so no single statistic resolves it. It does not crown a winner (A), propose a hybrid method (B), or merely amplify the skeptics' point (C), since it balances both sides.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 110,
@@ -1556,7 +1667,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The second sentence introduces the residents' contrasting account of rising rents and lost shops, complicating the guidebooks' \"quaint and unchanging\" image. It contradicts rather than concedes that image (B), gives concrete examples rather than statistics (C), and makes no prediction of demolition (D).",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 111,
@@ -1570,7 +1682,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The final sentence frames the caveat as one that \"does not weaken their findings so much as mark the boundary\" of their claims—conceding a limit while preserving the study's worth. It does not withdraw the conclusion (B), attack the design, which the authors raise neutrally (C), or launch a new research topic (D).",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 112,
@@ -1584,7 +1697,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Text 2 does not reject practice outright; it argues the benefits Text 1 describes accrue mainly to students with home support. That makes B the fit. A overstates Text 2's position, C is unrelated, and D contradicts nothing Text 2 actually disputes.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 113,
@@ -1598,7 +1712,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Text 2 shows the inventor backdated entries, so its author would warn that the dated evidence the biographer trusts cannot fix the timing of discoveries. A reverses that view, B overreaches beyond anything Text 2 claims, and D mistakes a supporting detail (the disputes) for a judgment about his legacy.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 114,
@@ -1612,7 +1727,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Text 2 accepts that the reeds cause problems but warns that abrupt, total removal could doom birds that nest in them—choice C. It never denies the competition Text 1 cites (A), never calls for leaving the marsh untouched (B), and directly opposes immediate total removal (D).",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 115,
@@ -1626,7 +1742,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Text 2 lists confounding factors—employment, age, lighting—that the data cannot rule out, so its author would call the economist's single-cause claim premature (D). It does not dispute that crime fell (A), affirm policing as the sole cause (B, the opposite), or argue that crime is unmeasurable (C).",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 116,
@@ -1640,7 +1757,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Text 2 concedes that workers interacted more but reports that substantive, idea-generating talk fell—so its author would challenge the \"ideas spread faster\" claim while accepting the rise in casual contact (B). A overstates agreement, C contradicts Text 2's own concession that interaction rose, and D dismisses collaboration in a way Text 2 never does.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 117,
@@ -1654,7 +1772,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Attaching ropes to an iron bolt describes fastening or anchoring them firmly in place. \"Obtain,\" \"promise,\" and \"defend\" do not fit the physical action of tying ropes to a fixed point.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 118,
@@ -1668,7 +1787,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "\"Only four ingredients and a single pot\" and a first-time cook succeeding both signal ease, so \"simple\" fits. \"Elaborate\" is the opposite, and cost and age are never mentioned.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 119,
@@ -1682,7 +1802,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The text presents otter grooming and ends by stressing it is \"survival, not vanity,\" so its purpose is to show the behavior is necessary. Diet, cleanliness rankings, and blubber are not the focus.",
     "difficulty": "easy",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 120,
@@ -1696,7 +1817,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The contrast with \"hundreds of pages\" and the short either/or statement point to brevity, so \"succinctly\" fits in both meaning and neutral tone. \"Eloquently\" concerns style rather than length, and the others do not match.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 121,
@@ -1710,7 +1832,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"But\" marks a shift away from the dismissive view, and evidence of deliberate planning undermines it, so the scholarship has \"complicated\" (challenged) that view. \"Reinforced\" is the opposite; \"ignored\" and \"predicted\" do not fit.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 122,
@@ -1724,7 +1847,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The crowd froze, with no one moving or speaking, so \"arrest\" means to halt or bring to a stop. The context of a silence affecting a crowd rules out the legal senses \"detain by law\" and \"accuse.\"",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 123,
@@ -1738,7 +1862,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The sentence pivots from the long-held assumption to a study that undercuts it, setting up the contrary finding that follows. It supplies no statistics, anecdote, or definition.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 124,
@@ -1752,7 +1877,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The text states the tree-planting proposal, grants that forests absorb carbon (\"it is true\"), then raises objections about time and land. It is not a history, a reconciliation of theories, or a personal narrative.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 125,
@@ -1766,7 +1892,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Text 2 concedes that \"efficiency metrics may rise\" but warns that mentorship \"quietly disappears,\" so it accepts the productivity gain while stressing an unmeasured loss. The other options overstate or contradict Text 2.",
     "difficulty": "medium",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 126,
@@ -1780,7 +1907,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"Burying the reader's attention beneath detail\" indicates that the mass of detail hides the argument, so \"obscure\" fits. \"Clarify\" is the opposite, and \"summarize\" and \"provoke\" do not match the sense of being buried.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 127,
@@ -1794,7 +1922,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "\"Choosing which memories to preserve\" describes intentional selection, set against \"passive recorder,\" so \"deliberate\" fits. \"Reckless,\" \"reluctant,\" and \"forgetful\" all contradict purposeful curation.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Words in Context"
   },
   {
     "id": 128,
@@ -1808,7 +1937,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The text gives a first reading (\"celebration of spring\"), then shows how the final couplet reframes it, casting \"a shadow backward.\" No comparison, biography, or set of examples appears.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 129,
@@ -1822,7 +1952,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The text calls the single-inventor narrative misleading and replaces it with a picture of many rivals, so its purpose is corrective. It does not celebrate inventors, detail patent law, or make a claim limited to the present.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Text Structure and Purpose"
   },
   {
     "id": 130,
@@ -1836,7 +1967,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Text 2 does not dispute the condor-style successes; it argues that captivity consumes money and time that habitat protection—\"the thing a wild animal actually needs\"—requires. The other options contradict Text 2's actual claims.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 131,
@@ -1850,7 +1982,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Text 1 praises liberal arts for teaching thinking over job skills, calling it impractical; Text 2 argues those same \"impractical\" habits are now the most practical qualifications. Text 2 recasts, rather than rejects, Text 1's point.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 132,
@@ -1864,7 +1997,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Text 1's case rests on tests being more comparable than grades, not on their being perfectly fair, so its author could accept the point about wealth yet still hold that grades are even less consistent. The other options abandon or contradict Text 1's position.",
     "difficulty": "hard",
-    "domain": "craft-structure"
+    "domain": "craft-structure",
+    "skill": "Cross-Text Connections"
   },
   {
     "id": 133,
@@ -1878,7 +2012,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The second sentence contrasts the first: otters live almost entirely in water, yet they sometimes climb onto rocks. \"However\" signals this contrast; the other choices signal result, example, or similarity.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 134,
@@ -1892,7 +2027,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The rise in prices is the effect of the damaged crop, so a cause-and-effect transition fits. \"As a result\" conveys this; the others signal contrast or example.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 135,
@@ -1906,7 +2042,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The bottle opener is a specific instance of the general claim about tools using simple machines. \"For example\" introduces that instance; the others signal contrast or result.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 136,
@@ -1920,7 +2057,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The second sentence adds another offering to the first. \"In addition\" signals this addition; the other choices signal contrast, result, or example.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 137,
@@ -1934,7 +2072,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Because birds are typically associated with flight, the fact that penguins cannot fly is a contrast. \"However\" fits; the others signal result, similarity, or example.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 138,
@@ -1948,7 +2087,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "Her win is the result of her dedicated practice, so a cause-and-effect transition fits. \"Consequently\" conveys this; the others signal contrast or example.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 139,
@@ -1962,7 +2102,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The sentences describe steps in a sequence. \"Next\" signals the following step; the other choices signal contrast or example.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 140,
@@ -1976,7 +2117,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The goal is to emphasize the breed's origin. Only the choice whose main point is that the Akita originated in Japan accomplishes this; the others focus on coat or hunting.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 141,
@@ -1990,7 +2132,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The goal is to emphasize a similarity. Only the choice using \"Like\" to note that both are among the longest rivers highlights what they share; the others state differences or single facts.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 142,
@@ -2004,7 +2147,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The goal is to emphasize her achievement. Only the choice stating that she won four gold medals highlights the accomplishment; the others merely note participation or background.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 143,
@@ -2018,7 +2162,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The actual turnout contradicts what was expected, so a contrast transition fits. \"Instead\" signals that reality replaced the expectation; the others signal result, similarity, or addition.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 144,
@@ -2032,7 +2177,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The praise for the plot contrasts with the criticism of the characters. \"However\" signals this contrast; the others signal example, result, or similarity.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 145,
@@ -2046,7 +2192,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The ability to ship without refrigeration follows from the vaccine's stability, a cause-and-effect relationship. \"Thus\" fits; the others signal contrast or example.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 146,
@@ -2060,7 +2207,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The second sentence adds a further benefit to the first. \"Moreover\" signals this addition; the other choices signal contrast or example.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 147,
@@ -2074,7 +2222,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The gecko is a specific instance of animals with remarkable camouflage. \"For instance\" introduces the example; the others signal contrast or result.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 148,
@@ -2088,7 +2237,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The sentences describe a turn that occurs later in time rather than a direct result of the struggle. \"Eventually\" fits the temporal sequence; the others signal similarity, result, or example.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 149,
@@ -2102,7 +2252,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Introducing the term to an unfamiliar audience requires defining it. Only the choice that defines bioluminescence as the production of light by living organisms does so; the others assume the reader already knows the term.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 150,
@@ -2116,7 +2267,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The goal is a difference in musical style. Only the choice contrasting counterpoint with driving rhythms addresses style; the first contrasts time periods, not style, and the others state a similarity or single fact.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 151,
@@ -2130,7 +2282,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The purpose is the study's goal. Only the choice stating that the study aimed to understand how rising temperatures affect coral explains its purpose; the others describe location, method, or duration.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 152,
@@ -2144,7 +2297,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Commercial success is best shown by sales figures. Only the choice noting that it sold over 200 million copies emphasizes success; the others describe gameplay or development.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 153,
@@ -2158,7 +2312,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The second sentence sharply corrects and intensifies against the mayor's claim. \"In fact\" introduces the contradicting reality; the others signal similarity, result, or summary.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 154,
@@ -2172,7 +2327,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Rather than harming patients, the treatment did the opposite by helping them. \"On the contrary\" signals this reversal of the feared outcome; the others signal result, time, or comparison.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 155,
@@ -2186,7 +2342,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The two crews were working at the same time on different parts. \"Meanwhile\" signals this simultaneity; the others signal result, contrast, or example.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 156,
@@ -2200,7 +2357,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The second sentence states what happens if the first condition is not met. \"Otherwise\" signals this conditional consequence; the others signal similarity, addition, or contrast.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 157,
@@ -2214,7 +2372,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The goal is a shared physical trait. Only the choice noting that both have large heat-releasing ears identifies a physical feature; the others describe behavior or habitat.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 158,
@@ -2228,7 +2387,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The goal is to present the plant as an example of the general claim about surviving extreme conditions. Only the choice that ties its water loss and revival directly to that claim does so; the others give isolated details.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 159,
@@ -2242,7 +2402,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The surprise lies in the gap between expectation and result. Only the choice contrasting the expectation with the opposite finding emphasizes the surprising outcome; the others state the setup or a detail.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 160,
@@ -2256,7 +2417,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The goal is to emphasize the cause of the storms. Only the choice using \"Because\" to link the loss of soil-anchoring grasses to the storms conveys causation; the others state facts without connecting cause and effect.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 161,
@@ -2270,7 +2432,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The two colonies had opposite economic foundations. \"By contrast\" signals the difference; the others signal similarity, result, or example.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 162,
@@ -2284,7 +2447,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The primary function is filtering waste from the blood. Only the choice describing that filtering process explains what the kidneys do; the others describe shape, location, or a downstream detail.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 163,
@@ -2298,7 +2462,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The frayed, uninspected cables are the cause and the closure recommendation is the effect, so a cause-effect transition is needed. \"Therefore\" signals result; \"Nevertheless\" and \"In contrast\" mark contrast, and \"For example\" signals illustration.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 164,
@@ -2312,7 +2477,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The second sentence adds another benefit of exercise to the ones in the first, so an additive transition fits. \"Additionally\" adds; \"However\" contrasts, \"As a result\" shows cause-effect, and \"In other words\" restates.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 165,
@@ -2326,7 +2492,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The homeowners' skepticism runs counter to the good news in the first sentence, so a contrast transition is needed. \"Nonetheless\" concedes the contrast; \"Consequently\" is result, \"Likewise\" is similarity, and \"In summary\" signals a conclusion.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 166,
@@ -2340,7 +2507,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The Nok figures are a specific instance of the rarely represented cultures mentioned first, so an exemplifying transition fits. \"For example\" illustrates; the others mark contrast, result, and conclusion.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 167,
@@ -2354,7 +2522,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The stronger security measures are the cause and the drop in breaches the effect, so a result transition is needed. \"Consequently\" shows cause-effect; \"However\" contrasts, \"Similarly\" compares, and \"For instance\" illustrates.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 168,
@@ -2368,7 +2537,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The praise in the first sentence is followed by an acknowledged drawback, a concession, so \"Admittedly\" fits. \"As a result\" is cause-effect, \"Furthermore\" would add another like point, and \"For example\" illustrates.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 169,
@@ -2382,7 +2552,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The second sentence strengthens the first with an even more extreme detail, so an intensifying transition fits. \"Indeed\" intensifies; \"Nonetheless\" and \"In contrast\" mark contrast, and \"Meanwhile\" marks time.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 170,
@@ -2396,7 +2567,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The second sentence restates and defines the principle named in the first rather than offering one example of it, so \"That is\" (elaboration) fits. \"For instance\" would signal an example, and the others mark contrast and result.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 171,
@@ -2410,7 +2582,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The two sentences describe consecutive steps in a procedure rather than a causal link, so a sequence transition fits. \"Next\" marks order; \"As a result\" wrongly implies cause-effect, and the others mark contrast and illustration.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 172,
@@ -2424,7 +2597,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The second sentence raises a limitation that counters the supporters' claim, so a contrast transition is needed. \"Still\" concedes the contrast; \"Accordingly\" is result, \"Likewise\" is similarity, and \"In fact\" would intensify rather than oppose.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 173,
@@ -2438,7 +2612,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The buckling rail is a specific instance of the general phenomenon described first, so an exemplifying transition fits. \"For instance\" illustrates; \"That is\" would signal a restatement rather than an example, and the others mark contrast and result.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 174,
@@ -2452,7 +2627,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The goal is to introduce the tree to people unfamiliar with it, so the best choice identifies what it is and where it grows and adds a striking fact. The other choices assume familiarity, add an unsupported claim, or invent a false cause.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 175,
@@ -2466,7 +2642,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The goal is to emphasize a similarity, and only this choice names a trait the two musicians shared. The others contrast their outputs, describe just one musician, or misstate the notes.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 176,
@@ -2480,7 +2657,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The goal is to emphasize a distinction, and only this choice contrasts the methods, noting that chlorination offers lasting protection while boiling does not. The others stress similarity or misstate the notes.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 177,
@@ -2494,7 +2672,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The goal is to generalize, and only this choice draws a hedged general conclusion from the results. The others report the method, overgeneralize with an absolute claim, or restate a single specific finding.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 178,
@@ -2508,7 +2687,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The result surprised researchers because it defied a prior assumption, so the best choice pairs that assumption with the survival. The others report the event or the conditions without explaining why it was unexpected.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 179,
@@ -2522,7 +2702,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The goal is to introduce dendrochronology to an unfamiliar audience, so the best choice defines the term and gives an application. One distractor assumes the reader already knows the term, one reports only the finding, and one falsely links two notes as cause and effect.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 180,
@@ -2536,7 +2717,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The goal is to emphasize a distinction in technique, and only this choice contrasts Hokusai's exaggeration with Hiroshige's calm scenes. The others stress similarity or misstate Hiroshige's approach.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 181,
@@ -2550,7 +2732,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The goal is to present the hypothesis, the proposed explanation being tested, so the best choice states what the researchers predicted. The others give a result, describe future work, or provide background.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 182,
@@ -2564,7 +2747,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The goal is to emphasize significance for future construction, and only this choice ties the self-sealing property to reduced repair costs. The others describe the mechanism, report a trial result, or provide background.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 183,
@@ -2578,7 +2762,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The council planned to close the branch, but the community kept it open instead, so the sentences express a contrast. 'However' signals that reversal; 'Therefore' marks cause/effect, 'For example' introduces an illustration, and 'In addition' adds a similar point, none of which fit.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 184,
@@ -2592,7 +2777,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The extensive practice is the cause and her selection is the effect, so a cause/effect transition is needed. 'As a result' shows that outcome; 'Nevertheless' signals contrast, 'For instance' an example, and 'Meanwhile' simultaneous time, none of which fit.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 185,
@@ -2606,7 +2792,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The goal is to emphasize a DIFFERENCE; only the last choice contrasts one frog's nighttime activity with the other's daytime activity. The first states a similarity, the second gives a single fact, and the third is a generic similarity.",
     "difficulty": "easy",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 186,
@@ -2620,7 +2807,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The second sentence adds a separate benefit of the fertilizer, so an addition transition fits. 'Additionally' adds the point; 'In contrast' signals opposition, 'Consequently' would wrongly claim the water savings resulted from the yield increase, and 'Otherwise' implies an alternative.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 187,
@@ -2634,7 +2822,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The second sentence gives a specific instance of the surprising properties mentioned first, so an example transition is needed. 'For example' introduces that instance; 'Nonetheless' signals contrast, 'Similarly' needs a prior comparable case, and 'In conclusion' signals a summary.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 188,
@@ -2648,7 +2837,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The word 'first' sets up a sequence of steps, and the analysis follows the collection in time, so a sequence transition fits. 'Afterward' shows the next step; 'In contrast' signals opposition, 'For example' introduces an illustration, and 'Regardless' dismisses a condition.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 189,
@@ -2662,7 +2852,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The goal is to emphasize a SIMILARITY; only the third choice presents a shared trait, using 'Like' to link both lakes' unique species. The first and fourth stress differences in location, and the second states a single fact.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 190,
@@ -2676,7 +2867,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "To present the finding to an unfamiliar audience, the choice must state the actual result clearly; the first choice reports the 40 percent difference. The second gives only the date, the third names the topic without the finding, and the fourth is an incidental detail.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 191,
@@ -2690,7 +2882,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The goal asks for the step immediately after sorting; the notes show that sorted glass is next crushed into cullet, which the second choice states. The first and fourth describe later steps, and the third restates the sorting step itself.",
     "difficulty": "medium",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 192,
@@ -2704,7 +2897,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The second sentence intensifies the first, going beyond 'met the goal' to 'exceeded it,' so an emphasis transition is needed. 'In fact' strengthens the point; 'Similarly' needs a comparable case, 'For example' introduces an instance, and 'Meanwhile' signals simultaneous time.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 193,
@@ -2718,7 +2912,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The sentence concedes a lasting limitation despite the improvement, so a concession transition fits. 'Admittedly' acknowledges the drawback; 'Therefore' marks cause/effect, 'For instance' introduces an example, and 'Likewise' signals similarity.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 194,
@@ -2732,7 +2927,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The second sentence draws a broad conclusion that covers the varied exhibits just listed, so a generalizing transition is needed. 'Overall' sums up the whole collection; 'Nevertheless' signals contrast, 'For instance' introduces an example, and 'Earlier' signals time.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Transitions"
   },
   {
     "id": 195,
@@ -2746,7 +2942,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A generalization must draw one broad statement covering all three sources; the second choice unites them under the shared trait of generating power without burning fuel. The first and fourth describe only a single source, and the third adds a detail not in the notes.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 196,
@@ -2760,7 +2957,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "To explain the cause, the choice must link the growth to a reason; the third connects the population increase to the company that drew workers in. The first states the effect without a cause, the second gives a fact without linking it to growth, and the fourth is irrelevant.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 197,
@@ -2774,7 +2972,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The goal is to emphasize a DIFFERENCE; only the last choice contrasts the pictorial symbols of hieroglyphs with the wedge-pressed technique of cuneiform. The first three all state similarities shared by both systems.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 198,
@@ -2788,7 +2987,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "To present the conclusion to an unfamiliar audience, the choice must state the outcome; the first reports that the music-exposed plants grew no taller than the silent ones. The second gives only the question, the third a setup detail, and the fourth a minor fact.",
     "difficulty": "hard",
-    "domain": "expression"
+    "domain": "expression",
+    "skill": "Rhetorical Synthesis"
   },
   {
     "id": 199,
@@ -2802,7 +3002,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The possessive form of \"it\" is \"its\" (no apostrophe): \"its hands.\" \"It's\" and \"it is\" both mean \"it is,\" which is illogical here, and \"its'\" is not a word.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 200,
@@ -2816,7 +3017,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The possessive pronoun \"their\" is needed to show the supplies belong to the volunteers. \"They're\" means \"they are,\" \"there\" indicates place, and \"theyre\" is a misspelling.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 201,
@@ -2830,7 +3032,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The singular subject \"My sister\" requires the singular present-tense verb \"goes.\" \"Go\" is plural, \"going\" and \"gone\" are non-finite forms that cannot stand alone as the main verb.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 202,
@@ -2844,7 +3047,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The plural verb \"were\" and \"all\" signal a plain plural noun, \"cars\" (no possession). \"Car's\" is singular possessive, \"cars'\" is plural possessive, and singular \"car\" does not agree with \"were.\"",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 203,
@@ -2858,7 +3062,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The contraction \"you're\" (you are) fits: \"make sure you are ready.\" \"Your\" is possessive, \"yours\" is a possessive pronoun, and \"youre\" is a misspelling.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 204,
@@ -2872,7 +3077,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The subject \"Each\" is singular and takes the singular verb \"gives,\" regardless of the intervening phrase \"of the finalists.\" \"Give\" and \"have given\" are plural, and \"giving\" is not a finite verb.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 205,
@@ -2886,7 +3092,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The possessive relative pronoun \"whose\" shows the novel belongs to the author. \"Who's\" means \"who is,\" \"whos\" is a misspelling, and \"whose'\" is not a word.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 206,
@@ -2900,7 +3107,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Two independent clauses joined by the coordinating conjunction \"and\" need a comma before it: \"last week, and it has...\" \", it\" creates a comma splice, \" and\" omits the required comma, and \"and,\" misplaces the comma.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 207,
@@ -2914,7 +3122,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "\"Children\" is already plural, so its possessive is \"children's.\" \"Childrens'\" and \"childrens\" treat \"children\" as if it needed a plural -s, and \"childs'\" is not a valid form.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 208,
@@ -2928,7 +3137,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "\"Yesterday\" and the paired verb \"replaced\" establish the simple past, so \"fixed\" maintains consistent tense and parallelism. \"Fixes\" and \"fix\" are present, and \"will fix\" is future.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 209,
@@ -2942,7 +3152,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Two independent clauses joined by the coordinating conjunction \"so\" require a comma before it: \"results, so the researchers...\" \", so that\" makes the second part a subordinate purpose clause (meaning shift), \" so\" omits the comma, and \"; so\" wrongly pairs a semicolon with a coordinating conjunction.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 210,
@@ -2956,7 +3167,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "A colon follows the complete clause \"The recipe calls for three simple ingredients\" to introduce the list. A semicolon must join two independent clauses, a comma under-punctuates the introduction, and \"and\" produces \"ingredients and flour, water, and salt.\"",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 211,
@@ -2970,7 +3182,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The semicolon correctly joins two independent clauses: \"time; the schedule...had to be revised.\" \" so\" is a run-on missing punctuation, a lone comma creates a splice, and \";,\" is malformed.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 212,
@@ -2984,7 +3197,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The nonrestrictive appositive \"a disgraced detective\" is set off by a pair of commas, so a closing comma is needed before \"spends.\" Omitting it leaves the appositive unbalanced, and a semicolon or colon cannot close an appositive.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 213,
@@ -2998,7 +3212,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The singular subject \"collection\" takes \"is,\" not the plural verbs \"are,\" \"were,\" or \"have been.\" The intervening phrase \"of rare stamps\" does not change the number of the subject.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 214,
@@ -3012,7 +3227,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The antecedent \"each dish\" is singular, so the singular pronoun \"it\" is required. \"They,\" \"them,\" and \"those\" are plural and do not agree with \"each dish.\"",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 215,
@@ -3026,7 +3242,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A parenthetical opened with a dash must be closed with a matching dash: \"— whose findings had been questioned for years — finally received...\" A comma, semicolon, or colon cannot close a dash-opened element.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 216,
@@ -3040,7 +3257,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The subject is the singular \"manager\"; a phrase beginning with \"along with\" does not make the subject plural, so \"is\" is correct. \"Are,\" \"were,\" and \"have been\" are plural.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 217,
@@ -3054,7 +3272,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Two independent clauses joined by the coordinating conjunction \"so\" take a comma before it: \"drained, so we had to postpone.\" \"; so\" wrongly pairs a semicolon with a coordinating conjunction, \" so\" omits the comma, and \", so that\" changes the meaning to a purpose clause.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 218,
@@ -3068,7 +3287,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "Because the research is explicitly collaborative — a single shared body — joint possession places the possessive on only the last name: 'Chen and Alvarez's research.' 'Chen's and Alvarez's' would signal separate bodies of research, contradicting 'collaborative'; 'Chen and Alvarez' shows no possession; and 'Chen and Alvarez'' uses an incorrect apostrophe form.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 219,
@@ -3082,7 +3302,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Parallel structure requires the third item to match the infinitives \"to analyze\" and \"to write,\" so \"to communicate\" is correct. \"Communicating,\" \"communicated,\" and \"she communicated\" break the parallel series.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 220,
@@ -3096,7 +3317,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "In a \"neither...nor\" construction, the verb agrees with the nearer subject, here the plural \"players,\" so \"were\" is correct. \"Was,\" \"has been,\" and \"is\" are singular and disagree with \"players.\"",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 221,
@@ -3110,7 +3332,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The closing comma after \"1932\" shows the clause is nonrestrictive, which requires an opening comma and \"which\": \", which was built in 1932,.\" \"That\" cannot introduce a nonrestrictive clause, and \" which\" without the opening comma leaves the pair unbalanced.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 222,
@@ -3124,7 +3347,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "A colon follows the complete clause to introduce the explanatory phrase \"a hot meal and a warm bed.\" A semicolon must join independent clauses, a comma under-punctuates, and \" being\" creates an ungrammatical phrase.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 223,
@@ -3138,7 +3362,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The introductory modifier \"Walking through the ancient ruins\" must describe the people doing the walking, so \"the tourists\" must be the subject. The other options illogically make the columns, \"there,\" or \"the amazement\" the walkers, creating dangling modifiers.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 224,
@@ -3152,7 +3377,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Because each list item already contains an internal comma, the items must be separated by semicolons, matching the \"; and Carla\" later in the sentence. A comma, a colon, or \" and,\" would blur the boundaries between items.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 225,
@@ -3166,7 +3392,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The past perfect \"had consumed\" shows the burning was completed before the firefighters arrived (another past action). \"Consumed\" loses the sequence, \"have consumed\" is present perfect, and \"consume\" is present tense.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 226,
@@ -3180,7 +3407,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The collective noun \"committee\" acts as a single unit reaching one decision, so the singular possessive \"its\" is correct. \"Their\" treats the singular committee as plural, \"it's\" means \"it is,\" and \"they're\" means \"they are.\"",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 227,
@@ -3194,7 +3422,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The correlative pair \"not only...but also\" must link parallel elements; to match \"reduce,\" the base verb \"improve\" is required. \"Improving,\" \"it improves,\" and \"improved\" break the parallel structure.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 228,
@@ -3208,7 +3437,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "\"All six\" establishes a plural, and the boots belong to them, so the plural possessive \"hikers'\" is correct. \"Hiker's\" is singular (contradicting \"six\"), \"hikers\" shows no possession, and \"hikers's\" is an incorrect form.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 229,
@@ -3222,7 +3452,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The singular subject \"librarian\" requires the singular present-tense verb \"sorts\"; \"sort\" is plural, and \"sorting\" and \"to sort\" are nonfinite forms that cannot serve as the main verb.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 230,
@@ -3236,7 +3467,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "\"Six\" indicates more than one student, and the slips belong to them, so the plural possessive \"students'\" is required; \"student's\" is singular possessive, while \"students\" and \"students's\" are not correct possessive forms.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 231,
@@ -3250,7 +3482,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "An introductory dependent clause should be followed by a comma before the main clause; the comma belongs after \"ended,\" not between the subject and its verb or immediately after \"As.\"",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 232,
@@ -3264,7 +3497,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The singular subject is \"stack\"; the intervening prepositional phrase \"of newspapers near the recycling bins\" does not change the number, so the singular verb \"grows\" is correct.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 233,
@@ -3278,7 +3512,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The possessive relative pronoun \"whose\" is needed to show that the design belongs to the architect; \"who's\" means \"who is,\" \"whom\" is an object pronoun, and \"that's\" means \"that is.\"",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 234,
@@ -3292,7 +3527,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Two independent clauses joined by the conjunctive adverb \"nevertheless\" require a semicolon before it and a comma after it; a comma before the second clause creates a comma splice, and omitting punctuation creates a run-on.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 235,
@@ -3306,7 +3542,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The items in the list are gerunds (\"canoeing,\" \"rock climbing\"), so parallel structure requires the gerund \"singing\"; the infinitive, clause, and past-tense forms all break the parallel pattern.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 236,
@@ -3320,7 +3557,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The subject is the singular indefinite pronoun \"Each,\" which takes a singular verb; the intervening phrase \"of the volunteers who signed up for the early morning shift\" does not affect agreement, so \"is\" is correct.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 237,
@@ -3334,7 +3572,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The clause \"which lies off the coast of Australia\" is nonrestrictive and must be set off by a pair of commas, one before and one after; using only one comma or no commas at all is incorrect.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 238,
@@ -3348,7 +3587,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "In this inverted construction the true subject is \"a number of errors,\" and \"a number of\" is plural, so the plural verb \"are\" is required; \"is,\" \"was,\" and \"has been\" are all singular and do not agree.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 239,
@@ -3362,7 +3602,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "In a \"neither...nor\" construction the verb agrees with the nearer subject, which is the plural \"assistant trainers,\" so the plural verb \"are\" is correct; the singular forms do not agree.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 240,
@@ -3376,7 +3617,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The collective noun \"jury\" acts as a single unit here, confirmed by the singular pronoun \"its,\" so it takes the singular auxiliary \"has\"; \"have\" is plural, and \"were\" and \"are\" cannot correctly form \"reached\" in this active sentence.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 241,
@@ -3390,7 +3632,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The possessive determiner \"its\" is needed to show that the battery life belongs to the singular \"smartphone\"; \"it's\" means \"it is,\" \"their\" is plural, and \"its'\" is not a standard word.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 242,
@@ -3404,7 +3647,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "In formal Standard English \"than\" functions as a conjunction introducing the implied clause \"than she [had trained],\" so the subject pronoun \"she\" is correct; \"her,\" \"hers,\" and \"herself\" cannot serve as the subject of that clause.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 243,
@@ -3418,7 +3662,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The possessive pronoun \"their\" is needed to show that the command of Portuguese belongs to the students; \"there\" refers to place, \"they're\" means \"they are,\" and \"thier\" is a misspelling.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 244,
@@ -3432,7 +3677,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "The escape was completed before the paramedics arrived, so the past perfect \"had escaped\" is needed to show that one past action finished before another; the simple past, present perfect, and present tense fail to establish this sequence.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 245,
@@ -3446,7 +3692,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A colon follows the independent clause and correctly introduces the list; a semicolon requires an independent clause after it, a comma cannot introduce this series, and a period would leave the list as a sentence fragment.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 246,
@@ -3460,7 +3707,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The introductory participial phrase \"Having rehearsed the speech dozens of times\" must modify the noun that follows, and only a person can rehearse; \"Marcus\" is the logical subject, whereas \"the speech,\" \"his delivery,\" and \"there\" create dangling or illogical modifiers.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 247,
@@ -3474,7 +3722,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The correlative conjunction \"not only...but also\" requires parallel grammatical forms; because the first element is the infinitive \"to modernize,\" the second must be the infinitive \"to increase.\"",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 248,
@@ -3488,7 +3737,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The Standard English idiom is \"prefer X to Y,\" and parallelism requires the gerund \"conducting,\" so \"to conducting\" is correct; \"prefer\" does not take \"than,\" and \"for conducting\" is not idiomatic.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 249,
@@ -3502,7 +3752,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "An introductory prepositional phrase should be followed by a comma that separates it from the main clause: 'During the three-week expedition, the marine biologists...'. Omitting the comma, inserting it after the preposition 'During', or placing it inside the phrase after 'three-week' all violate the convention.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 250,
@@ -3516,7 +3767,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Items in a series are separated by commas, including before the conjunction: 'red, orange, and yellow paint.' Dropping the commas, placing a comma after 'and,' or scattering commas incorrectly all break the convention for a series.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 251,
@@ -3530,7 +3782,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The sentence needs the contraction 'it's' meaning 'it is': 'it's planning to stage three new productions.' The possessive 'its' and the nonstandard 'its'' are not contractions, and the bare pronoun 'it' leaves the clause without a verb.",
     "difficulty": "easy",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 252,
@@ -3544,7 +3797,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "Two independent clauses may be joined by a semicolon: 'medieval armor; the older galleries...'. A comma alone creates a splice, no punctuation creates a fused run-on, and a colon is wrong because the second clause presents a contrasting fact rather than an explanation of the first.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 253,
@@ -3558,7 +3812,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The supplement 'a disgraced astronomer who flees to a remote island' opens with a comma, so it must close with a matching comma: 'island, spends.' A dash mismatches the opening comma, omitting the mark leaves the supplement unclosed, and a semicolon cannot pair with a comma to bracket a nonessential element.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 254,
@@ -3572,7 +3827,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "A colon follows the complete independent clause 'The lab technicians followed the same protocol for every sample' to introduce the list that specifies the protocol. A comma or no punctuation creates a run-on, and a semicolon cannot introduce a list that is not itself an independent clause.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 255,
@@ -3586,7 +3842,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The subject is the singular noun 'stack,' not the intervening phrase 'of overdue library books,' so it takes the singular verb 'was.' The plural verbs 'were,' 'have been,' and 'are' incorrectly agree with 'books' rather than with the true subject.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 256,
@@ -3600,7 +3857,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "A possessive is needed to modify 'campsite': 'their campsite.' 'There' indicates place, 'they're' means 'they are,' and 'there's' means 'there is,' none of which can show possession here.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 257,
@@ -3614,7 +3872,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The lead was established before the past-tense moment 'blew the final whistle,' so the earlier action takes the past perfect 'had built.' The present 'builds,' present perfect 'has built,' and future 'will build' are all inconsistent with the past-time frame.",
     "difficulty": "medium",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 258,
@@ -3628,7 +3887,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "Two independent clauses require a semicolon (or a period, or a comma plus a conjunction): 'seconds; it flagged...'. A lone comma produces a comma splice, no punctuation produces a fused run-on, and the extra comma after 'and' is not permitted between a conjunction and the clause it introduces.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 259,
@@ -3642,7 +3902,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "No punctuation should separate the subject 'The economist who first proposed the controversial carbon tax model' from its verb 'will speak.' Each of the other choices inserts an unnecessary comma between the subject and verb or inside the verb phrase itself.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Boundaries"
   },
   {
     "id": 260,
@@ -3656,7 +3917,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The pronoun refers to the singular subject 'Neither,' not to the plural phrase 'two proposals,' so the singular possessive 'its' is required. 'Their' disagrees in number, 'it's' is the contraction 'it is,' and 'there' shows place, not possession.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 261,
@@ -3670,7 +3932,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 2,
     "explanation": "The possessive relative pronoun 'whose' is needed to show that the design belongs to the architect: 'the architect whose bold, glass-heavy design won.' 'Who's' means 'who is,' 'whos' is not a word, and 'who' cannot function as a possessive modifier of 'design.'",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 262,
@@ -3684,7 +3947,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 0,
     "explanation": "A present contrary-to-fact conditional uses the subjunctive 'were' in the if-clause: 'If the ancient aqueduct were still intact.' The indicative 'was' and 'is' fail to signal the hypothetical, and 'would be' belongs in the main clause, not the if-clause.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 263,
@@ -3698,7 +3962,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 3,
     "explanation": "The series follows the pattern 'how to analyze... draft... and pitch,' so parallel structure requires the base verb phrase 'pitch promising ideas.' The gerund 'pitching,' the added clause 'how she might pitch,' and the passive 'promising ideas were pitched' each break the parallelism.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   },
   {
     "id": 264,
@@ -3712,7 +3977,8 @@ const allQuestions: SatRwQuestion[] = [
     "correctAnswer": 1,
     "explanation": "The introductory modifier 'Rushing to catch the last train of the night' must describe the subject that immediately follows, and only a person can be rushing, so 'Maria' must be that subject. The other choices make 'the umbrella,' 'there,' or 'Maria's umbrella' the subject, creating a dangling modifier.",
     "difficulty": "hard",
-    "domain": "conventions"
+    "domain": "conventions",
+    "skill": "Form, Structure, and Sense"
   }
 ]
 

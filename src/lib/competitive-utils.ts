@@ -1102,6 +1102,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
       : await mcqBanks[topicSlug](totalQuestions)
     return questions.map((q: OptionQuestion, i: number) => {
       const shuffled = shuffleOptions(q)
+      const skill = (q as { skill?: string }).skill
       return {
         id: i,
         question: q.question as string,
@@ -1110,7 +1111,9 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
         answerIndex: shuffled.answerIndex,
         explanation: q.explanation as string,
         difficulty: q.difficulty,
-        type: 'multiple-choice'
+        type: 'multiple-choice',
+        // Student-facing skill label (present for SAT area/domain questions).
+        ...(skill ? { skill } : {}),
       } as MatchQuestion
     })
   }
