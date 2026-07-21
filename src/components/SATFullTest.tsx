@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-generator'
+import { gradeGridIn } from '@/data/sat-grid-in'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -12,7 +13,19 @@ import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-gene
 interface QuestionAnswer {
   questionIndex: number
   selectedIndex: number | null
+  /** Typed response for grid-in (SPR) questions; null/'' for MCQ or when blank. */
+  textValue: string | null
   flagged: boolean
+}
+
+/**
+ * A question is "answered" if an MCQ option is selected, or — for a grid-in
+ * (SPR) item — a non-blank value has been typed.
+ */
+function isAnswered(ans: QuestionAnswer | undefined, q: SATTestQuestion | undefined): boolean {
+  if (!ans) return false
+  if (q?.gridIn) return !!(ans.textValue && ans.textValue.trim())
+  return ans.selectedIndex !== null
 }
 
 type TestPhase = 'intro' | 'testing' | 'section-break' | 'review' | 'results'
@@ -27,6 +40,8 @@ interface SectionResult {
   answers: {
     question: SATTestQuestion
     selectedIndex: number | null
+    textValue: string | null
+    answered: boolean
     correct: boolean
   }[]
 }
@@ -97,6 +112,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
       const fresh = Array.from({ length: questionCount }, (_, i) => ({
         questionIndex: i,
         selectedIndex: null,
+        textValue: null,
         flagged: false,
       }))
       setSectionAnswers(prev => new Map(prev).set(sectionId, fresh))
@@ -161,6 +177,24 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
         arr[currentQuestionIndex] = {
           ...arr[currentQuestionIndex],
           selectedIndex: optionIndex,
+        }
+        next.set(currentSection.id, arr)
+        return next
+      })
+    },
+    [currentSection, currentQuestionIndex],
+  )
+
+  // Set a grid-in (SPR) typed answer
+  const setTextAnswer = useCallback(
+    (value: string) => {
+      if (!currentSection) return
+      setSectionAnswers(prev => {
+        const next = new Map(prev)
+        const arr = [...(next.get(currentSection.id) ?? [])]
+        arr[currentQuestionIndex] = {
+          ...arr[currentQuestionIndex],
+          textValue: value,
         }
         next.set(currentSection.id, arr)
         return next
@@ -240,11 +274,16 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
       let correct = 0
       const detailedAnswers = section.questions.map((q, i) => {
         const ans = sectionAns[i]
-        const isCorrect = ans?.selectedIndex === q.correctIndex
+        const answered = isAnswered(ans, q)
+        const isCorrect = q.gridIn
+          ? answered && gradeGridIn(q.gridIn, ans?.textValue ?? '')
+          : ans?.selectedIndex === q.correctIndex
         if (isCorrect) correct++
         return {
           question: q,
           selectedIndex: ans?.selectedIndex ?? null,
+          textValue: ans?.textValue ?? null,
+          answered,
           correct: isCorrect,
         }
       })
@@ -308,10 +347,10 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
       // Analyze strengths and weaknesses
       const allAnswers = allSections.flatMap(s => s.answers)
       const validAnswers = allAnswers
-        .filter(a => a.selectedIndex !== null)
+        .filter(a => a.answered)
         .map(a => ({
           question: a.question,
-          selectedIndex: a.selectedIndex!,
+          selectedIndex: a.selectedIndex ?? -1,
           correct: a.correct,
         }))
       const { weakAreas, strengths } = analyzePerformance(validAnswers)
@@ -341,7 +380,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
   // ----------------------------------------------------------------
   //  Computed values needed by both review and testing phases
   // ----------------------------------------------------------------
-  const answeredCount = answers.filter(a => a.selectedIndex !== null).length
+  const answeredCount = answers.filter(a => isAnswered(a, currentSection?.questions[a.questionIndex])).length
   const flaggedCount = answers.filter(a => a.flagged).length
   const timeWarning = timeRemaining <= 300 // 5 min warning
   const timeCritical = timeRemaining <= 60 // 1 min critical
@@ -501,7 +540,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
   // ----------------------------------------------------------------
   if (phase === 'review') {
     if (!currentSection) return null
-    const unansweredCount = answers.filter(a => a.selectedIndex === null).length
+    const unansweredCount = answers.filter(a => !isAnswered(a, currentSection.questions[a.questionIndex])).length
     const flaggedReview = answers.filter(a => a.flagged)
 
     return (
@@ -546,7 +585,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
               </p>
               <div className="flex flex-wrap gap-2">
                 {answers.map((a, idx) => {
-                  if (a.selectedIndex === null || a.flagged) {
+                  if (!isAnswered(a, currentSection.questions[idx]) || a.flagged) {
                     return (
                       <button
                         key={idx}
@@ -650,20 +689,23 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
               </svg>
             </button>
           )}
-          <button
-            onClick={() => setStrikethroughMode(m => !m)}
-            title="Strikethrough mode — click options to cross them out"
-            className={`rounded-lg border px-3 py-2 text-sm font-medium transition ${
-              strikethroughMode
-                ? 'border-red-400 bg-red-50 text-red-700 dark:border-red-500 dark:bg-red-900/30 dark:text-red-400'
-                : 'border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-          >
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18M5 12h14" />
-              <line x1="4" y1="4" x2="20" y2="20" strokeWidth={2} strokeLinecap="round" stroke="currentColor" />
-            </svg>
-          </button>
+          {/* Strikethrough only applies to multiple-choice options */}
+          {!currentQuestion.gridIn && (
+            <button
+              onClick={() => setStrikethroughMode(m => !m)}
+              title="Strikethrough mode — click options to cross them out"
+              className={`rounded-lg border px-3 py-2 text-sm font-medium transition ${
+                strikethroughMode
+                  ? 'border-red-400 bg-red-50 text-red-700 dark:border-red-500 dark:bg-red-900/30 dark:text-red-400'
+                  : 'border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700'
+              }`}
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18M5 12h14" />
+                <line x1="4" y1="4" x2="20" y2="20" strokeWidth={2} strokeLinecap="round" stroke="currentColor" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
 
@@ -712,7 +754,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
                 className={`relative flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition ${
                   idx === currentQuestionIndex
                     ? 'bg-purple-600 text-white ring-2 ring-purple-300'
-                    : a.selectedIndex !== null
+                    : isAnswered(a, currentSection.questions[idx])
                       ? 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-400'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
                 }`}
@@ -766,47 +808,67 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
           />
         </div>
 
-        {/* Options */}
-        <div className="mb-6 space-y-3">
-          {currentQuestion.options.map((option, idx) => {
-            const letters = ['A', 'B', 'C', 'D']
-            const isSelected = currentAnswer?.selectedIndex === idx
-            const isStruckOut = currentStrikethroughs.has(idx)
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  if (strikethroughMode) {
-                    toggleStrikethrough(idx)
-                  } else {
-                    selectAnswer(idx)
-                  }
-                }}
-                className={`flex w-full items-start gap-3 rounded-xl border-2 p-4 text-left transition ${
-                  isSelected
-                    ? 'border-purple-500 bg-purple-50 dark:border-purple-400 dark:bg-purple-900/20'
-                    : strikethroughMode
-                      ? 'border-gray-200 bg-white hover:border-red-300 hover:bg-red-50/50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-red-500/40'
-                      : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500 dark:hover:bg-gray-700/50'
-                } ${isStruckOut ? 'opacity-50' : ''}`}
-              >
-                <span
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+        {/* Answer input: grid-in (SPR) for typed responses, otherwise A–D options */}
+        {currentQuestion.gridIn ? (
+          <div className="mb-6">
+            <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
+              Enter your answer
+            </label>
+            <input
+              type="text"
+              inputMode="text"
+              autoComplete="off"
+              value={currentAnswer?.textValue ?? ''}
+              onChange={e => setTextAnswer(e.target.value)}
+              placeholder="e.g. 12, 3.5, or 3/4"
+              className="w-full max-w-xs rounded-xl border-2 border-gray-300 bg-white px-4 py-3 text-lg font-semibold text-gray-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:focus:ring-purple-900/40"
+            />
+            <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+              Student-produced response — type a number. Fractions (like 3/4) and decimals are accepted.
+            </p>
+          </div>
+        ) : (
+          <div className="mb-6 space-y-3">
+            {currentQuestion.options.map((option, idx) => {
+              const letters = ['A', 'B', 'C', 'D']
+              const isSelected = currentAnswer?.selectedIndex === idx
+              const isStruckOut = currentStrikethroughs.has(idx)
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    if (strikethroughMode) {
+                      toggleStrikethrough(idx)
+                    } else {
+                      selectAnswer(idx)
+                    }
+                  }}
+                  className={`flex w-full items-start gap-3 rounded-xl border-2 p-4 text-left transition ${
                     isSelected
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
-                  }`}
+                      ? 'border-purple-500 bg-purple-50 dark:border-purple-400 dark:bg-purple-900/20'
+                      : strikethroughMode
+                        ? 'border-gray-200 bg-white hover:border-red-300 hover:bg-red-50/50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-red-500/40'
+                        : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500 dark:hover:bg-gray-700/50'
+                  } ${isStruckOut ? 'opacity-50' : ''}`}
                 >
-                  {letters[idx]}
-                </span>
-                <span
-                  className={`flex-1 pt-1 text-gray-800 dark:text-gray-200 ${isStruckOut ? 'line-through' : ''}`}
-                  dangerouslySetInnerHTML={{ __html: renderLatex(option) }}
-                />
-              </button>
-            )
-          })}
-        </div>
+                  <span
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                      isSelected
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+                    }`}
+                  >
+                    {letters[idx]}
+                  </span>
+                  <span
+                    className={`flex-1 pt-1 text-gray-800 dark:text-gray-200 ${isStruckOut ? 'line-through' : ''}`}
+                    dangerouslySetInnerHTML={{ __html: renderLatex(option) }}
+                  />
+                </button>
+              )
+            })}
+          </div>
+        )}
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 pt-4 dark:border-gray-700">
@@ -894,6 +956,8 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
               answers: s.answers.map(a => ({
                 questionId: a.question.id,
                 selectedIndex: a.selectedIndex,
+                textValue: a.textValue,
+                answered: a.answered,
                 correct: a.correct,
                 category: a.question.category,
                 sourceSlug: a.question.sourceSlug,

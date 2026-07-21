@@ -565,3 +565,42 @@ export function checkGridInAnswer(
     ans => Math.abs(studentAnswer - ans) <= tol,
   )
 }
+
+/** The gradeable core of a grid-in problem, decoupled from generation. */
+export type GridInKey = Pick<GridInProblem, 'correctAnswer' | 'acceptableAnswers' | 'tolerance'>
+
+/**
+ * Parse a student-entered grid-in response into a number.
+ * Accepts integers, decimals, and simple fractions ("3/4"); tolerates a
+ * trailing "%" and surrounding whitespace. Returns null if unparseable
+ * (which the grader treats as incorrect).
+ */
+export function parseGridInInput(raw: string): number | null {
+  const s = raw.trim()
+  if (!s) return null
+  // Simple fraction a/b (either part may be negative).
+  const frac = s.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/)
+  if (frac) {
+    const num = Number(frac[1])
+    const den = Number(frac[2])
+    if (!Number.isFinite(num) || !Number.isFinite(den) || den === 0) return null
+    return num / den
+  }
+  const cleaned = s.replace(/%$/, '').trim()
+  if (!/^-?\d*\.?\d+$/.test(cleaned)) return null
+  const n = Number(cleaned)
+  return Number.isFinite(n) ? n : null
+}
+
+/**
+ * Grade a raw student grid-in response string against a problem's accepted
+ * answers and tolerance. Pure and headless-testable; used by the full-test
+ * runner so SPR items grade the same way as the standalone grid-in page.
+ */
+export function gradeGridIn(key: GridInKey, raw: string): boolean {
+  const val = parseGridInInput(raw)
+  if (val === null) return false
+  const tol = (key.tolerance ?? 0) + 1e-9
+  const candidates = [key.correctAnswer, ...(key.acceptableAnswers ?? [])]
+  return candidates.some(c => Math.abs(val - c) <= tol)
+}

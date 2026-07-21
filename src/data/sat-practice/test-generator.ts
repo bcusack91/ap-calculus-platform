@@ -15,6 +15,7 @@
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
 import { getBalancedPassages, type ReadingPassage } from '../sat-passages'
+import { generateGridInProblems, type GridInProblem } from '../sat-grid-in'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -30,6 +31,16 @@ export interface SATTestQuestion extends ExitQuizQuestion {
     title: string
     genre: string
     text: string
+  }
+  /**
+   * Present only for student-produced-response (grid-in / SPR) items. When set,
+   * this is a typed-answer question: `options` is empty and `correctIndex` is
+   * -1; the runner grades the typed value against these fields instead.
+   */
+  gridIn?: {
+    correctAnswer: number
+    acceptableAnswers: number[]
+    tolerance: number
   }
 }
 
@@ -203,6 +214,46 @@ async function generateRWQuestions(
   return shuffle([...passageQs, ...poolQs]).slice(0, count)
 }
 
+/**
+ * Convert procedurally-generated grid-in (SPR) problems into SATTestQuestions.
+ * SPR items have no answer choices: `options` is empty and `correctIndex` is -1;
+ * the runner grades the typed response against the `gridIn` key.
+ */
+function gridInsToTestQuestions(problems: GridInProblem[]): SATTestQuestion[] {
+  return problems.map((p) => ({
+    id: `sat-gridin-${p.id}`,
+    question: p.question,
+    options: [],
+    correctIndex: -1,
+    explanation: p.explanation,
+    category: p.category,
+    difficulty: p.difficulty,
+    section: 'math' as const,
+    sourceSlug: `grid-in-${p.category.toLowerCase().replace(/\s+/g, '-')}`,
+    gridIn: {
+      correctAnswer: p.correctAnswer,
+      acceptableAnswers: p.acceptableAnswers,
+      tolerance: p.tolerance,
+    },
+  }))
+}
+
+/**
+ * Build one Math module: a block of multiple-choice items followed by
+ * student-produced-response (grid-in) items. On the digital SAT ~25% of Math
+ * questions are SPR and they appear at the end of each module, so grid-ins are
+ * appended after the MCQ block rather than shuffled through it.
+ */
+async function generateMathModule(
+  mcqCount: number,
+  gridInCount: number,
+  usedQuestionTexts?: Set<string>,
+): Promise<SATTestQuestion[]> {
+  const mcq = await generateSectionQuestions(MATH_SLUGS, mcqCount, 'math', usedQuestionTexts)
+  const gridIns = gridInsToTestQuestions(generateGridInProblems(gridInCount))
+  return [...mcq, ...gridIns]
+}
+
 /* ------------------------------------------------------------------ */
 /*  Score Estimation                                                   */
 /* ------------------------------------------------------------------ */
@@ -347,7 +398,8 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 1,
       questionCount: 22,
       timeLimitSeconds: 35 * 60, // 35 minutes
-      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math', dedupe.usedQuestionTexts),
+      // 16 MCQ + 6 grid-in (~27%), matching the digital SAT's SPR share
+      questions: await generateMathModule(16, 6, dedupe.usedQuestionTexts),
     },
     {
       id: 'math-2',
@@ -356,7 +408,7 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 2,
       questionCount: 22,
       timeLimitSeconds: 35 * 60,
-      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math', dedupe.usedQuestionTexts),
+      questions: await generateMathModule(16, 6, dedupe.usedQuestionTexts),
     },
   ]
 
@@ -392,7 +444,7 @@ export async function generateMiniTest(testNumber: number): Promise<SATFullTest>
       moduleNum: 1,
       questionCount: 22,
       timeLimitSeconds: 35 * 60,
-      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math'),
+      questions: await generateMathModule(16, 6),
     },
   ]
 
