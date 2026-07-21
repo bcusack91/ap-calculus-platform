@@ -731,6 +731,10 @@ model MatchmakingQueue {
   topicSlug String
   mmr       Int
   gameMode  String   @default("SPEED_RACE")
+  // Difficulty tier the waiting player selected ('easy'|'medium'|'hard'), so a
+  // later joiner can be paired same-tier and the match runs at that tier. Null
+  // = no preference (matches anyone).
+  tier      String?
   joinedAt  DateTime @default(now())
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 

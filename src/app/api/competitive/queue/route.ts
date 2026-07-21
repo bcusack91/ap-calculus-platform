@@ -107,23 +107,24 @@ export async function POST(req: NextRequest) {
     const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
 
     const claimed = await prisma.$transaction(async (tx) => {
-      // Find a candidate opponent inside the tx.
-      const candidate = await tx.matchmakingQueue.findFirst({
-        where: {
-          topicSlug,
-          userId: { not: user.id },
-          mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
-        },
-        orderBy: { joinedAt: 'asc' },
-        select: { id: true },
-      })
+      // Find a candidate opponent inside the tx. Prefer a same-tier opponent so
+      // both players get the difficulty mix they picked; if none is waiting,
+      // fall back to any opponent (don't starve a thin queue).
+      const baseWhere = {
+        topicSlug,
+        userId: { not: user.id },
+        mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
+      }
+      const candidate =
+        (await tx.matchmakingQueue.findFirst({ where: { ...baseWhere, tier: tier ?? null }, orderBy: { joinedAt: 'asc' }, select: { id: true } }))
+        ?? (await tx.matchmakingQueue.findFirst({ where: baseWhere, orderBy: { joinedAt: 'asc' }, select: { id: true } }))
       if (!candidate) return null
 
       // Lock the candidate's queue row, then re-read it under the lock. If a
       // competing joiner already claimed (deleted) it, FOR UPDATE on a vanished
       // row returns nothing and we bail — no double-booking.
-      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
-        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
+      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number; tier: string | null }>>`
+        SELECT id, "userId", mmr, "tier" FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
       `
       const opponent = locked[0]
       if (!opponent) return null
@@ -132,10 +133,9 @@ export async function POST(req: NextRequest) {
       // suspenders: scope the delete by id so it only removes the row we locked.)
       await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
 
-      // Tier (question-difficulty mix) comes from the claiming joiner — the
-      // MatchmakingQueue row has no tier column (and we don't migrate), so a
-      // waiting opponent's tier preference can't be recalled here.
-      const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
+      // Match tier: the claiming joiner's choice, else the waiting opponent's.
+      const matchTier = (tier ?? opponent.tier ?? undefined) as 'easy' | 'medium' | 'hard' | undefined
+      const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, matchTier)
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,
@@ -154,7 +154,7 @@ export async function POST(req: NextRequest) {
             questions,
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
-            ...(tier ? { tier } : {}),
+            ...(matchTier ? { tier: matchTier } : {}),
           } as unknown as Prisma.InputJsonValue,
         },
       })
@@ -177,6 +177,7 @@ export async function POST(req: NextRequest) {
         topicSlug,
         mmr,
         gameMode: gameMode || 'SPEED_RACE',
+        tier: tier ?? null,
       },
     })
 
@@ -302,21 +303,22 @@ export async function GET() {
     const questionCount = (entry.gameMode as string) === 'ACCURACY_CHALLENGE' ? 20 : 10
 
     const claimed = await prisma.$transaction(async (tx) => {
-      const candidate = await tx.matchmakingQueue.findFirst({
-        where: {
-          topicSlug: entry.topicSlug,
-          userId: { not: user.id },
-          mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
-        },
-        orderBy: { joinedAt: 'asc' },
-        select: { id: true },
-      })
+      // Prefer an opponent who chose the same tier as the waiting player; fall
+      // back to any opponent so a thin queue still pairs.
+      const baseWhere = {
+        topicSlug: entry.topicSlug,
+        userId: { not: user.id },
+        mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
+      }
+      const candidate =
+        (await tx.matchmakingQueue.findFirst({ where: { ...baseWhere, tier: entry.tier ?? null }, orderBy: { joinedAt: 'asc' }, select: { id: true } }))
+        ?? (await tx.matchmakingQueue.findFirst({ where: baseWhere, orderBy: { joinedAt: 'asc' }, select: { id: true } }))
       if (!candidate) return null
 
       // Lock + re-read the candidate. If a competitor already claimed it, the
       // locked read returns nothing and we bail (fall through to "still waiting").
-      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
-        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
+      const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number; tier: string | null }>>`
+        SELECT id, "userId", mmr, "tier" FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
       `
       const opponent = locked[0]
       if (!opponent) return null
@@ -327,7 +329,9 @@ export async function GET() {
       await tx.matchmakingQueue.delete({ where: { id: opponent.id } })
       await tx.matchmakingQueue.deleteMany({ where: { id: entry.id } })
 
-      const questions = await generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs)
+      // Match tier: the waiting player's choice, else the claimed opponent's.
+      const matchTier = (entry.tier ?? opponent.tier ?? undefined) as 'easy' | 'medium' | 'hard' | undefined
+      const questions = await generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs, matchTier)
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,
@@ -346,6 +350,7 @@ export async function GET() {
             questions,
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
+            ...(matchTier ? { tier: matchTier } : {}),
           } as unknown as Prisma.InputJsonValue,
         },
       })
