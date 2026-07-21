@@ -399,14 +399,6 @@ const allQuestions: NegativeNumberQuestion[] = [
     difficulty: 'medium',
   },
   {
-    id: 49,
-    question: 'Which pair of integers has a sum of $0$?',
-    options: ['$7$ and $-7$', '$7$ and $7$', '$0$ and $0$', '$-7$ and $-7$'],
-    correctAnswer: 0,
-    explanation: '$7 + (-7) = 0$. These are additive inverses. ($0 + 0 = 0$ also works, but $7$ and $-7$ is the standard answer.)',
-    difficulty: 'easy',
-  },
-  {
     id: 50,
     question: 'What is $(-2)^5$?',
     options: ['$-32$', '$32$', '$-10$', '$10$'],

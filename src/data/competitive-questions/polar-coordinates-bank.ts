@@ -44,14 +44,6 @@ const allQuestions: PolarQuestion[] = [
     difficulty: 'easy',
   },
   {
-    id: 5,
-    question: 'Convert the rectangular point $(0, -3)$ to polar coordinates.',
-    options: ['$(3, 3\\pi/2)$', '$(3, \\pi/2)$', '$(-3, \\pi/2)$', '$(3, \\pi)$'],
-    correctAnswer: 0,
-    explanation: '$r = \\sqrt{0^2 + (-3)^2} = 3$. The point is on the negative $y$-axis, so $\\theta = 3\\pi/2$.',
-    difficulty: 'easy',
-  },
-  {
     id: 6,
     question: 'The polar equation $\\theta = \\pi/4$ represents a:',
     options: ['Line through the origin at $45°$', 'Circle', 'Spiral', 'Cardioid'],
@@ -139,14 +131,6 @@ const allQuestions: PolarQuestion[] = [
     options: ['Logarithmic spiral', 'Archimedean spiral', 'Fermat spiral', 'Hyperbolic spiral'],
     correctAnswer: 0,
     explanation: '$r = e^{\\theta}$ (equivalently $\\theta = \\ln r$) is a logarithmic (equiangular) spiral.',
-    difficulty: 'hard',
-  },
-  {
-    id: 17,
-    question: 'Find the area inside $r = 2$ and outside $r = 2\\cos\\theta$.',
-    options: ['$\\pi + 2$', '$\\pi$', '$2\\pi$', '$4 - \\pi$'],
-    correctAnswer: 0,
-    explanation: 'The area is $\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}[(2)^2 - (2\\cos\\theta)^2]\\,d\\theta + \\frac{1}{2}\\int_{\\pi/2}^{3\\pi/2}4\\,d\\theta$. After evaluation this yields $\\pi + 2$.',
     difficulty: 'hard',
   },
   {
