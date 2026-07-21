@@ -29,7 +29,8 @@ function numVal(opt) {
 }
 
 function auditPool(items, tagKey, tagVal, label) {
-  if (items.length !== 30) fail(`${label}: expected 30, got ${items.length}`)
+  // Pools may be any size / mix (supplements are hard-weighted); require enough
+  // depth per tier to fill a tier-mixed match, and structural integrity.
   const diff = { easy: 0, medium: 0, hard: 0 }
   for (const [i, q] of items.entries()) {
     const at = `${label}[${q.id ?? i}]`
@@ -45,7 +46,11 @@ function auditPool(items, tagKey, tagVal, label) {
     if (TIERS.includes(q.difficulty)) diff[q.difficulty]++
     else fail(`${at}: bad difficulty ${q.difficulty}`)
   }
-  if (diff.easy !== 10 || diff.medium !== 10 || diff.hard !== 10) fail(`${label}: split ${JSON.stringify(diff)} != 10/10/10`)
+  // Minimums so a 20-question tier-mixed match never runs dry on any tier.
+  if (diff.easy < 4) fail(`${label}: only ${diff.easy} easy (need >=4)`)
+  if (diff.medium < 6) fail(`${label}: only ${diff.medium} medium (need >=6)`)
+  if (diff.hard < 10) fail(`${label}: only ${diff.hard} hard (need >=10)`)
+  console.log(`   ${label.padEnd(20)} easy:${diff.easy} medium:${diff.medium} hard:${diff.hard} total:${items.length}`)
 }
 
 console.log('1. Pool integrity + difficulty split:')
@@ -97,7 +102,9 @@ for (const slug of SLUGS) {
 }
 
 if (failures === 0) {
-  console.log('\n✅ ALL CLEAN — 8 area/domain pools (240 Qs), filters isolated, tier-mix full, dispatch wired.')
+  const mathTotal = MATH_AREAS.reduce((n, a) => n + getSatMathQuestions(1000, a).length, 0)
+  const rwTotal = RW_DOMAINS.reduce((n, d) => n + getSatRwQuestions(1000, d).length, 0)
+  console.log(`\n✅ ALL CLEAN — math ${mathTotal} Qs, R&W ${rwTotal} Qs; filters isolated, tier-mix full, dispatch wired.`)
   process.exit(0)
 } else {
   console.error(`\n❌ ${failures} check(s) failed.`)
