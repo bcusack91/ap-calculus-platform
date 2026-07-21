@@ -748,6 +748,286 @@ const allQuestions: SatMathQuestion[] = [
   },
   {
     "id": 53,
+    "question": "The formula for the circumference of a circle is $C = 2\\pi r$, where $r$ is the radius. Which equation correctly solves for $r$ in terms of $C$?",
+    "options": [
+      "$r = \\frac{2\\pi}{C}$",
+      "$r = 2\\pi C$",
+      "$r = \\frac{C}{2\\pi}$",
+      "$r = \\frac{C}{\\pi}$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Divide both sides of $C = 2\\pi r$ by $2\\pi$ to isolate $r$, giving $r = \\frac{C}{2\\pi}$.",
+    "difficulty": "easy",
+    "area": "algebra"
+  },
+  {
+    "id": 54,
+    "question": "A phone plan's monthly cost is modeled by $C = 30 + 0.10m$, where $C$ is the cost in dollars and $m$ is the number of minutes used. What does the $30$ represent in this model?",
+    "options": [
+      "The fixed monthly cost when no minutes are used",
+      "The cost in dollars for each minute used",
+      "The number of minutes included in the plan",
+      "The total cost of using the plan for 30 minutes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When $m = 0$, $C = 30$. The constant term is the fixed cost incurred regardless of minutes used, while $0.10$ is the cost per minute.",
+    "difficulty": "easy",
+    "area": "algebra"
+  },
+  {
+    "id": 55,
+    "question": "The table shows several values of a linear function $f$. Which equation defines $f(x)$?\n\n| $x$ | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| $f(x)$ | 5 | 9 | 13 | 17 |",
+    "options": [
+      "$f(x) = 4x - 1$",
+      "$f(x) = 3x + 2$",
+      "$f(x) = 5x$",
+      "$f(x) = 4x + 1$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The output increases by $4$ each time $x$ increases by $1$, so the slope is $4$. Since $f(1) = 5$, the equation $f(x) = 4x + 1$ gives $4(1) + 1 = 5$, matching every row.",
+    "difficulty": "medium",
+    "area": "algebra"
+  },
+  {
+    "id": 56,
+    "question": "What is the solution set of the equation $|2x - 3| = 7$?",
+    "options": [
+      "$\\{-2, 5\\}$",
+      "$\\{2, 5\\}$",
+      "$\\{-5, 2\\}$",
+      "$\\{-2, -5\\}$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Split into $2x - 3 = 7$, giving $x = 5$, and $2x - 3 = -7$, giving $x = -2$. The solution set is $\\{-2, 5\\}$.",
+    "difficulty": "medium",
+    "area": "algebra"
+  },
+  {
+    "id": 57,
+    "question": "Which of the following describes all values of $x$ that satisfy the compound inequality $-3 < 2x + 1 \\leq 7$?",
+    "options": [
+      "$-2 \\leq x < 3$",
+      "$-2 < x \\leq 3$",
+      "$-4 < x \\leq 6$",
+      "$-1 < x \\leq 4$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Subtract $1$ from all parts: $-4 < 2x \\leq 6$. Divide by $2$: $-2 < x \\leq 3$.",
+    "difficulty": "medium",
+    "area": "algebra"
+  },
+  {
+    "id": 58,
+    "question": "At a school play, adult tickets cost $\\$8$ each and child tickets cost $\\$5$ each. A total of $20$ tickets were sold for $\\$136$. How many adult tickets were sold?",
+    "options": [
+      "$8$",
+      "$10$",
+      "$12$",
+      "$14$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Let $a$ be adult tickets and $c$ child tickets. Then $a + c = 20$ and $8a + 5c = 136$. Substituting $c = 20 - a$: $8a + 5(20 - a) = 136$, so $3a + 100 = 136$ and $a = 12$.",
+    "difficulty": "medium",
+    "area": "algebra"
+  },
+  {
+    "id": 59,
+    "question": "A candle's height is modeled by $h = 12 - 1.5t$, where $h$ is the height in inches and $t$ is the time in hours after the candle is lit. What does the value $1.5$ represent?",
+    "options": [
+      "The initial height of the candle in inches",
+      "The number of hours the candle burns",
+      "The height increases by 1.5 inches each hour",
+      "The height decreases by 1.5 inches each hour"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The coefficient of $t$ is the rate of change. Because it is negative, the height drops by $1.5$ inches for each additional hour the candle burns.",
+    "difficulty": "medium",
+    "area": "algebra"
+  },
+  {
+    "id": 60,
+    "question": "The system of equations $3x + 2y = 19$ and $5x - 2y = 5$ has solution $(x, y)$. What is the value of $xy$?",
+    "options": [
+      "$8$",
+      "$15$",
+      "$18$",
+      "$12$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Adding the equations eliminates $y$: $8x = 24$, so $x = 3$. Then $3(3) + 2y = 19$ gives $2y = 10$ and $y = 5$. Thus $xy = 3 \\cdot 5 = 15$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 61,
+    "question": "The system of equations $y = 3x - 4$ and $2x + ay = 10$ has a solution in which $x = 2$. What is the value of $a$?",
+    "options": [
+      "$3$",
+      "$2$",
+      "$5$",
+      "$-3$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "At $x = 2$, the first equation gives $y = 3(2) - 4 = 2$. Substituting into $2x + ay = 10$: $2(2) + a(2) = 10$, so $2a = 6$ and $a = 3$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 62,
+    "question": "The system of equations $\\frac{x}{2} + \\frac{y}{4} = 4$ and $x + y = 10$ has solution $(x, y)$. What is the value of $x$?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$2$",
+      "$6$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Multiply the first equation by $4$: $2x + y = 16$. Subtracting $x + y = 10$ gives $x = 6$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 63,
+    "question": "The table gives values of a linear function $f$. What is the value of $f(20)$?\n\n| $x$ | 2 | 5 | 8 | 11 |\n|---|---|---|---|---|\n| $f(x)$ | 3 | 12 | 21 | 30 |",
+    "options": [
+      "$60$",
+      "$54$",
+      "$57$",
+      "$63$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Each increase of $3$ in $x$ raises $f(x)$ by $9$, so the slope is $3$. Since $f(2) = 3$, the equation is $f(x) = 3x - 3$. Then $f(20) = 3(20) - 3 = 57$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 64,
+    "question": "How many real solutions does the equation $|x - 4| = 2x + 1$ have?",
+    "options": [
+      "One",
+      "Two",
+      "Zero",
+      "Infinitely many"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Case 1: $x - 4 = 2x + 1$ gives $x = -5$, but $|-5 - 4| = 9 \\neq 2(-5) + 1 = -9$, so it is rejected. Case 2: $-(x - 4) = 2x + 1$ gives $x = 1$, and $|1 - 4| = 3 = 2(1) + 1$, which checks. There is exactly one solution.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 65,
+    "question": "Which of the following represents all solutions to the inequality $|3x - 6| \\leq 9$?",
+    "options": [
+      "$-3 \\leq x \\leq 5$",
+      "$-1 \\leq x \\leq 5$",
+      "$-1 \\leq x \\leq 3$",
+      "$1 \\leq x \\leq 5$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rewrite as $-9 \\leq 3x - 6 \\leq 9$. Add $6$: $-3 \\leq 3x \\leq 15$. Divide by $3$: $-1 \\leq x \\leq 5$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 66,
+    "question": "The sum of an arithmetic series is given by $S = \\frac{n}{2}(a + l)$, where $n$ is the number of terms, $a$ is the first term, and $l$ is the last term. Which expression gives $l$ in terms of $S$, $n$, and $a$?",
+    "options": [
+      "$l = \\frac{2S - a}{n}$",
+      "$l = \\frac{2S}{n} + a$",
+      "$l = \\frac{2S}{n} - a$",
+      "$l = \\frac{S}{2n} - a$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Multiply both sides by $\\frac{2}{n}$: $\\frac{2S}{n} = a + l$. Then subtract $a$: $l = \\frac{2S}{n} - a$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 67,
+    "question": "A chemist mixes a $20\\%$ acid solution with a $50\\%$ acid solution to produce $60$ mL of a $30\\%$ acid solution. How many milliliters of the $20\\%$ solution are used?",
+    "options": [
+      "$20$",
+      "$30$",
+      "$45$",
+      "$40$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Let $x$ be mL of the $20\\%$ solution and $y$ of the $50\\%$ solution. Then $x + y = 60$ and $0.20x + 0.50y = 0.30(60) = 18$. Substituting $x = 60 - y$: $0.30y = 6$, so $y = 20$ and $x = 40$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 68,
+    "question": "Which value of $x$ satisfies both inequalities $2x - 1 > 5$ and $3x + 2 < 20$?",
+    "options": [
+      "$5$",
+      "$3$",
+      "$6$",
+      "$7$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The first inequality gives $x > 3$ and the second gives $x < 6$, so $3 < x < 6$. Of the choices, only $5$ lies in this interval.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 69,
+    "question": "A fish population is modeled by $P = 1200 - 45t$, where $P$ is the population and $t$ is the number of years since 2010. According to the model, in what year will the population first reach $750$?",
+    "options": [
+      "$2025$",
+      "$2020$",
+      "$2015$",
+      "$2018$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Set $1200 - 45t = 750$, so $45t = 450$ and $t = 10$. Ten years after 2010 is 2020.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 70,
+    "question": "The system of equations $x + 2y = a$ and $3x - y = b$ has the solution $(4, 1)$. What is the value of $a + b$?",
+    "options": [
+      "$15$",
+      "$13$",
+      "$17$",
+      "$18$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Substitute $(4, 1)$: $a = 4 + 2(1) = 6$ and $b = 3(4) - 1 = 11$. Therefore $a + b = 17$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 71,
+    "question": "How many integer values of $x$ satisfy the inequality $|x - 3| < 4$?",
+    "options": [
+      "$6$",
+      "$8$",
+      "$9$",
+      "$7$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The inequality is equivalent to $-4 < x - 3 < 4$, or $-1 < x < 7$. The integers strictly between $-1$ and $7$ are $0, 1, 2, 3, 4, 5, 6$, which is $7$ values.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 72,
+    "question": "A motorboat travels $24$ km downstream in $2$ hours and the same $24$ km upstream in $3$ hours. What is the speed of the boat in still water, in kilometers per hour?",
+    "options": [
+      "$10$",
+      "$8$",
+      "$12$",
+      "$6$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Let $b$ be the boat's speed and $c$ the current. Downstream speed is $\\frac{24}{2} = 12 = b + c$; upstream speed is $\\frac{24}{3} = 8 = b - c$. Adding gives $2b = 20$, so $b = 10$.",
+    "difficulty": "hard",
+    "area": "algebra"
+  },
+  {
+    "id": 73,
     "question": "What are the solutions to $x^2 - 7x + 12 = 0$?",
     "options": [
       "$x = -3$ and $x = -4$",
@@ -761,7 +1041,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 54,
+    "id": 74,
     "question": "Simplify $x^5 \\cdot x^3$.",
     "options": [
       "$x^{15}$",
@@ -775,7 +1055,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 55,
+    "id": 75,
     "question": "Simplify $\\sqrt{72}$.",
     "options": [
       "$6\\sqrt{2}$",
@@ -789,7 +1069,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 56,
+    "id": 76,
     "question": "Factor $x^2 - 9$.",
     "options": [
       "$(x-3)^2$",
@@ -803,7 +1083,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 57,
+    "id": 77,
     "question": "If $f(x) = x^2 + 2$, what is $f(3)$?",
     "options": [
       "$8$",
@@ -817,7 +1097,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 58,
+    "id": 78,
     "question": "Simplify $\\dfrac{x^8}{x^2}$.",
     "options": [
       "$x^4$",
@@ -831,7 +1111,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 59,
+    "id": 79,
     "question": "What are the solutions to $x^2 = 25$?",
     "options": [
       "$x = 5$ only",
@@ -845,7 +1125,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 60,
+    "id": 80,
     "question": "Simplify $(x^3)^4$.",
     "options": [
       "$x^7$",
@@ -859,7 +1139,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 61,
+    "id": 81,
     "question": "What is the value of $8^{2/3}$?",
     "options": [
       "$4$",
@@ -873,7 +1153,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 62,
+    "id": 82,
     "question": "Factor $x^2 + 5x$.",
     "options": [
       "$x(x+5)$",
@@ -887,7 +1167,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 63,
+    "id": 83,
     "question": "What are the solutions to $2x^2 - 5x - 3 = 0$?",
     "options": [
       "$x = 3$ and $x = -\\dfrac{1}{2}$",
@@ -901,7 +1181,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 64,
+    "id": 84,
     "question": "If $f(x) = x^2 - 4x$, what is $f(x+1)$?",
     "options": [
       "$x^2 - 4x + 1$",
@@ -915,7 +1195,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 65,
+    "id": 85,
     "question": "Simplify $\\dfrac{x^2 - 9}{x + 3}$ for $x \\neq -3$.",
     "options": [
       "$x + 3$",
@@ -929,7 +1209,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 66,
+    "id": 86,
     "question": "A population of bacteria doubles every hour. If it starts at $50$, which function gives the count after $t$ hours?",
     "options": [
       "$P(t) = 50 + 2t$",
@@ -943,7 +1223,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 67,
+    "id": 87,
     "question": "What is the vertex of the parabola $y = (x - 2)^2 + 3$?",
     "options": [
       "$(2, 3)$",
@@ -957,7 +1237,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 68,
+    "id": 88,
     "question": "Solve $\\sqrt{x + 4} = 5$.",
     "options": [
       "$x = 1$",
@@ -971,7 +1251,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 69,
+    "id": 89,
     "question": "If $f(x) = 2x + 1$ and $g(x) = x^2$, what is $f(g(3))$?",
     "options": [
       "$19$",
@@ -985,7 +1265,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 70,
+    "id": 90,
     "question": "The product of the roots of $x^2 - 8x + 15 = 0$ is:",
     "options": [
       "$8$",
@@ -999,7 +1279,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 71,
+    "id": 91,
     "question": "Simplify $\\dfrac{6x^{-2}}{3x^{-5}}$.",
     "options": [
       "$2x^3$",
@@ -1013,7 +1293,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 72,
+    "id": 92,
     "question": "For $f(x) = 3^x$, what is $\\dfrac{f(4)}{f(2)}$?",
     "options": [
       "$3$",
@@ -1027,7 +1307,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 73,
+    "id": 93,
     "question": "The quadratic $x^2 + 6x + c$ is a perfect square trinomial. What is $c$?",
     "options": [
       "$3$",
@@ -1041,7 +1321,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 74,
+    "id": 94,
     "question": "Solve the system $y = x^2 - 1$ and $y = 3x + 3$. What are the $x$-values of the solutions?",
     "options": [
       "$x = -1$ and $x = 4$",
@@ -1055,7 +1335,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 75,
+    "id": 95,
     "question": "By completing the square, write $x^2 - 10x + 18$ in vertex form.",
     "options": [
       "$(x - 5)^2 - 7$",
@@ -1069,7 +1349,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 76,
+    "id": 96,
     "question": "If $f(x) = \\dfrac{x + 2}{3}$, what is the inverse $f^{-1}(x)$?",
     "options": [
       "$3x - 2$",
@@ -1083,7 +1363,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 77,
+    "id": 97,
     "question": "A value decays so that it is multiplied by $0.8$ each year, starting at $200$. Which expression gives the value after $t$ years, and what is it after $2$ years?",
     "options": [
       "$200(0.8)^t$; $128$",
@@ -1097,7 +1377,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 78,
+    "id": 98,
     "question": "The equation $x^2 + kx + 16 = 0$ has exactly one real solution. What is a possible value of $k$?",
     "options": [
       "$4$",
@@ -1111,7 +1391,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 79,
+    "id": 99,
     "question": "Simplify $\\dfrac{1}{x} + \\dfrac{1}{x + 1}$.",
     "options": [
       "$\\dfrac{2}{2x + 1}$",
@@ -1125,7 +1405,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 80,
+    "id": 100,
     "question": "If $f(x) = x^2 + 1$ and $f(g(x)) = x^2 - 4x + 5$, which of the following is $g(x)$?",
     "options": [
       "$x - 2$",
@@ -1139,7 +1419,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 81,
+    "id": 101,
     "question": "Using the quadratic formula, what are the solutions to $x^2 - 4x + 1 = 0$?",
     "options": [
       "$2 \\pm \\sqrt{3}$",
@@ -1153,7 +1433,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 82,
+    "id": 102,
     "question": "The function $h(t) = -16t^2 + 32t + 48$ models height in feet. At what time $t > 0$ (seconds) does the object hit the ground?",
     "options": [
       "$t = 2$",
@@ -1167,7 +1447,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 83,
+    "id": 103,
     "question": "Which of the following is a solution to $x^2 - 5x + 6 = 0$?",
     "options": [
       "$-2$",
@@ -1181,7 +1461,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 84,
+    "id": 104,
     "question": "If $f(x) = 2x^2 - 3x + 1$, what is the value of $f(3)$?",
     "options": [
       "$10$",
@@ -1195,7 +1475,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 85,
+    "id": 105,
     "question": "The graph of $y = (x - 4)^2 + 3$ is a parabola in the $xy$-plane. What are the coordinates of its vertex?",
     "options": [
       "$(-4, 3)$",
@@ -1209,7 +1489,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 86,
+    "id": 106,
     "question": "What is the minimum value of $y = x^2 + 6x + 5$?",
     "options": [
       "$5$",
@@ -1223,7 +1503,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 87,
+    "id": 107,
     "question": "One solution to the system $y = x^2$ and $y = x + 6$ is $(3, 9)$. What is the other solution?",
     "options": [
       "$(-2, 4)$",
@@ -1237,7 +1517,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 88,
+    "id": 108,
     "question": "A quantity starts at $400$ and decreases by $15\\%$ each year. Which equation models the quantity after $t$ years?",
     "options": [
       "$400(1.15)^t$",
@@ -1251,7 +1531,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 89,
+    "id": 109,
     "question": "If $f(x) = x + 3$ and $g(x) = 2x$, what is the value of $f(g(4))$?",
     "options": [
       "$14$",
@@ -1265,7 +1545,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 90,
+    "id": 110,
     "question": "Which of the following is a solution to $2x^2 + 7x + 3 = 0$?",
     "options": [
       "$\\frac{1}{2}$",
@@ -1279,7 +1559,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 91,
+    "id": 111,
     "question": "The equation $x^2 + kx + 25 = 0$ has exactly one real solution. What is the positive value of $k$?",
     "options": [
       "$10$",
@@ -1293,7 +1573,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 92,
+    "id": 112,
     "question": "The equation $x^2 - 8x + k = 0$ has exactly one real solution. What is the value of $k$?",
     "options": [
       "$4$",
@@ -1307,7 +1587,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 93,
+    "id": 113,
     "question": "For which value of $c$ does the equation $x^2 + 4x + c = 0$ have no real solutions?",
     "options": [
       "$3$",
@@ -1321,7 +1601,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 94,
+    "id": 114,
     "question": "The equation $2x^2 + 6x + k = 0$ has no real solutions. Which of the following must be true about $k$?",
     "options": [
       "$k > \\frac{9}{2}$",
@@ -1335,7 +1615,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 95,
+    "id": 115,
     "question": "For which value of $k$ does the equation $x^2 - 6x + k = 0$ have two distinct real solutions?",
     "options": [
       "$9$",
@@ -1349,7 +1629,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 96,
+    "id": 116,
     "question": "The line $y = 6x + c$ is tangent to the parabola $y = x^2 + 2x + 10$. What is the value of $c$?",
     "options": [
       "$-6$",
@@ -1363,7 +1643,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 97,
+    "id": 117,
     "question": "The line $y = 2x + k$ is tangent to the curve $y = x^2 - 4x + 7$. What is the value of $k$?",
     "options": [
       "$2$",
@@ -1377,7 +1657,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 98,
+    "id": 118,
     "question": "The solutions to $x^2 + bx + 12 = 0$ are $2$ and $6$. What is the value of $b$?",
     "options": [
       "$8$",
@@ -1391,7 +1671,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 99,
+    "id": 119,
     "question": "In the equation $x^2 - 7x + c = 0$, the two solutions have a sum of $7$, and one of the solutions is $3$. What is the value of $c$?",
     "options": [
       "$21$",
@@ -1405,7 +1685,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 100,
+    "id": 120,
     "question": "The function $f(x) = -2(x - 3)^2 + 8$ models the height, in feet, of a projectile. What is the maximum value of $f$?",
     "options": [
       "$3$",
@@ -1419,7 +1699,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 101,
+    "id": 121,
     "question": "The number of insects in a colony is modeled by $y = 250(1.4)^t$, where $t$ is the number of years. Which statement best describes the model?",
     "options": [
       "The colony increases by $140\\%$ each year.",
@@ -1433,7 +1713,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 102,
+    "id": 122,
     "question": "If $f(x) = 3x - 5$, which of the following is $f^{-1}(x)$, the inverse of $f$?",
     "options": [
       "$\\frac{x - 5}{3}$",
@@ -1447,7 +1727,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 103,
+    "id": 123,
     "question": "What is the solution to the equation $\\frac{x^2}{x - 3} = \\frac{9}{x - 3}$?",
     "options": [
       "$x = -3$",
@@ -1461,7 +1741,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 104,
+    "id": 124,
     "question": "When the polynomial $p(x) = x^3 - 4x^2 + 2x + 5$ is divided by $x - 2$, what is the remainder?",
     "options": [
       "$5$",
@@ -1475,7 +1755,287 @@ const allQuestions: SatMathQuestion[] = [
     "area": "advanced"
   },
   {
-    "id": 105,
+    "id": 125,
+    "question": "Which of the following is the complete factorization of $x^2 - 49$?",
+    "options": [
+      "$(x-7)^2$",
+      "$(x-7)(x+7)$",
+      "$(x+7)^2$",
+      "$(x-49)(x+1)$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "This is a difference of squares $a^2 - b^2 = (a-b)(a+b)$ with $a = x$ and $b = 7$, giving $(x-7)(x+7)$.",
+    "difficulty": "easy",
+    "area": "advanced"
+  },
+  {
+    "id": 126,
+    "question": "If $f(x) = 3x - 5$, what is the value of $f(4)$?",
+    "options": [
+      "$7$",
+      "$12$",
+      "$17$",
+      "$2$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Substitute $x = 4$: $f(4) = 3(4) - 5 = 12 - 5 = 7$.",
+    "difficulty": "easy",
+    "area": "advanced"
+  },
+  {
+    "id": 127,
+    "question": "For what values of $k$ does $x^2 - 8x + k = 0$ have two distinct real solutions?",
+    "options": [
+      "$k > 16$",
+      "$k = 16$",
+      "$k < -16$",
+      "$k < 16$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Two distinct real solutions require discriminant $> 0$: $(-8)^2 - 4k > 0 \\Rightarrow 64 > 4k \\Rightarrow k < 16$.",
+    "difficulty": "medium",
+    "area": "advanced"
+  },
+  {
+    "id": 128,
+    "question": "At how many points do the line $y = 2x + 5$ and the parabola $y = x^2$ intersect?",
+    "options": [
+      "$1$",
+      "$2$",
+      "$0$",
+      "$3$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Setting $x^2 = 2x + 5$ gives $x^2 - 2x - 5 = 0$. The discriminant is $(-2)^2 - 4(1)(-5) = 4 + 20 = 24 > 0$, so there are two real solutions and thus two intersection points.",
+    "difficulty": "medium",
+    "area": "advanced"
+  },
+  {
+    "id": 129,
+    "question": "Which quadratic equation has roots $x = 3$ and $x = -5$?",
+    "options": [
+      "$x^2 + 2x - 15 = 0$",
+      "$x^2 - 2x - 15 = 0$",
+      "$x^2 + 2x + 15 = 0$",
+      "$x^2 - 8x + 15 = 0$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The sum of the roots is $3 + (-5) = -2$ and the product is $(3)(-5) = -15$. A monic quadratic is $x^2 - (\\text{sum})x + (\\text{product}) = x^2 + 2x - 15$.",
+    "difficulty": "medium",
+    "area": "advanced"
+  },
+  {
+    "id": 130,
+    "question": "A population of $500$ doubles every $6$ years. Which expression gives the population after $t$ years?",
+    "options": [
+      "$500 \\cdot 2^{6t}$",
+      "$500 \\cdot 6^{t/2}$",
+      "$500 \\cdot 2^{t/6}$",
+      "$500 \\cdot 2^{t} \\cdot 6$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "In $t$ years the population doubles $t/6$ times, so the model is $500 \\cdot 2^{t/6}$.",
+    "difficulty": "medium",
+    "area": "advanced"
+  },
+  {
+    "id": 131,
+    "question": "For which value(s) of $x$ is the expression $\\dfrac{x+2}{x^2 - 9}$ undefined?",
+    "options": [
+      "$x = -2$",
+      "$x = 9 \\text{ or } x = -9$",
+      "$x = 3 \\text{ or } x = -3$",
+      "$x = 3 \\text{ only}$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A rational expression is undefined where its denominator is zero: $x^2 - 9 = 0 \\Rightarrow x = \\pm 3$.",
+    "difficulty": "medium",
+    "area": "advanced"
+  },
+  {
+    "id": 132,
+    "question": "The equation $kx^2 + 4x + k = 0$ (with $k \\neq 0$) has exactly one real solution. What is a possible value of $k$?",
+    "options": [
+      "$4$",
+      "$2$",
+      "$1$",
+      "$8$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Exactly one real solution means the discriminant is zero: $4^2 - 4(k)(k) = 16 - 4k^2 = 0 \\Rightarrow k^2 = 4 \\Rightarrow k = \\pm 2$. Of the choices, only $2$ works.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 133,
+    "question": "For what values of $c$ does $2x^2 + 4x + c = 0$ have no real solutions?",
+    "options": [
+      "$c < 2$",
+      "$c = 2$",
+      "$c > 2$",
+      "$c > -2$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "No real solutions require discriminant $< 0$: $4^2 - 4(2)(c) = 16 - 8c < 0 \\Rightarrow 16 < 8c \\Rightarrow c > 2$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 134,
+    "question": "At how many points do the circle $x^2 + y^2 = 25$ and the line $y = 5$ intersect?",
+    "options": [
+      "$0$",
+      "$2$",
+      "$1$",
+      "Infinitely many"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Substituting $y = 5$ gives $x^2 + 25 = 25 \\Rightarrow x^2 = 0 \\Rightarrow x = 0$. The single point $(0, 5)$ is where the line is tangent to the circle.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 135,
+    "question": "The parabola $y = x^2$ is shifted $3$ units to the right and $4$ units down. What is the equation of the new parabola?",
+    "options": [
+      "$y = (x+3)^2 - 4$",
+      "$y = (x-3)^2 + 4$",
+      "$y = (x-4)^2 - 3$",
+      "$y = (x-3)^2 - 4$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A shift right by $3$ replaces $x$ with $x - 3$, and a shift down by $4$ subtracts $4$, giving $y = (x-3)^2 - 4$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 136,
+    "question": "Which expression is equivalent to $4x^2 - 12x + 9$?",
+    "options": [
+      "$(2x-3)^2$",
+      "$(2x+3)^2$",
+      "$(4x-3)(x-3)$",
+      "$(2x-3)(2x+3)$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Recognize a perfect square: $(2x)^2 - 2(2x)(3) + 3^2 = (2x - 3)^2$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 137,
+    "question": "Factor $x^3 - 2x^2 - 9x + 18$ completely.",
+    "options": [
+      "$(x+2)(x-3)(x+3)$",
+      "$(x-2)(x-3)(x+3)$",
+      "$(x-2)(x-3)^2$",
+      "$(x-2)(x+3)^2$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Group: $x^2(x-2) - 9(x-2) = (x-2)(x^2 - 9) = (x-2)(x-3)(x+3)$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 138,
+    "question": "A radioactive sample has a half-life of $8$ days. If $240$ grams are present initially, how much remains after $24$ days?",
+    "options": [
+      "$60$ grams",
+      "$15$ grams",
+      "$80$ grams",
+      "$30$ grams"
+    ],
+    "correctAnswer": 3,
+    "explanation": "In $24$ days there are $24/8 = 3$ half-lives, so the amount remaining is $240 \\cdot \\left(\\tfrac{1}{2}\\right)^3 = \\dfrac{240}{8} = 30$ grams.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 139,
+    "question": "An investment of $\\$1000$ earns $6\\%$ annual interest compounded quarterly. Which expression gives its value after $5$ years?",
+    "options": [
+      "$1000(1.06)^5$",
+      "$1000(1.015)^{20}$",
+      "$1000(1.06)^{20}$",
+      "$1000(1.24)^5$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Using $A = P\\left(1 + \\tfrac{r}{n}\\right)^{nt}$ with $r = 0.06$, $n = 4$, $t = 5$: $A = 1000\\left(1 + \\tfrac{0.06}{4}\\right)^{4 \\cdot 5} = 1000(1.015)^{20}$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 140,
+    "question": "Solve $9^x = 27^{x-1}$ for $x$.",
+    "options": [
+      "$1$",
+      "$9$",
+      "$3$",
+      "$6$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Write both sides with base $3$: $3^{2x} = 3^{3(x-1)}$. Equating exponents, $2x = 3x - 3 \\Rightarrow x = 3$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 141,
+    "question": "What is the sum of all solutions to $\\dfrac{6}{x} = x - 1$?",
+    "options": [
+      "$-1$",
+      "$5$",
+      "$6$",
+      "$1$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Multiplying by $x$ gives $6 = x^2 - x$, so $x^2 - x - 6 = 0$. By Vieta's formulas the sum of the roots is $-\\tfrac{-1}{1} = 1$ (the roots are $3$ and $-2$).",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 142,
+    "question": "Simplify the compound fraction $\\dfrac{\\frac{1}{x} - \\frac{1}{3}}{x - 3}$.",
+    "options": [
+      "$-\\dfrac{1}{3x}$",
+      "$\\dfrac{1}{3x}$",
+      "$\\dfrac{1}{3x(x-3)}$",
+      "$-\\dfrac{1}{3x^2}$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The numerator is $\\dfrac{1}{x} - \\dfrac{1}{3} = \\dfrac{3 - x}{3x}$. Dividing by $x - 3$: $\\dfrac{3 - x}{3x(x-3)} = \\dfrac{-(x-3)}{3x(x-3)} = -\\dfrac{1}{3x}$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 143,
+    "question": "If $f(x) = 2x - 1$ and $g(x) = x^2 + 3$, what is $g(f(x))$?",
+    "options": [
+      "$2x^2 + 5$",
+      "$4x^2 + 4$",
+      "$4x^2 - 4x + 2$",
+      "$4x^2 - 4x + 4$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "$g(f(x)) = (2x - 1)^2 + 3 = 4x^2 - 4x + 1 + 3 = 4x^2 - 4x + 4$.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 144,
+    "question": "What is the only valid solution to $x = \\sqrt{x + 6}$?",
+    "options": [
+      "$x = -2$",
+      "$x = 3 \\text{ or } x = -2$",
+      "$x = 3$",
+      "No real solution"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Squaring gives $x^2 = x + 6 \\Rightarrow x^2 - x - 6 = 0 \\Rightarrow (x-3)(x+2) = 0$, so $x = 3$ or $x = -2$. Checking, $x = -2$ gives $\\sqrt{4} = 2 \\neq -2$, so it is extraneous; only $x = 3$ is valid.",
+    "difficulty": "hard",
+    "area": "advanced"
+  },
+  {
+    "id": 145,
     "question": "A car travels $150$ miles using $5$ gallons of gas. At this rate, how many miles can it travel on $8$ gallons?",
     "options": [
       "$120$",
@@ -1489,7 +2049,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 106,
+    "id": 146,
     "question": "The ratio of boys to girls in a class is $3:4$. If there are $12$ boys, how many girls are there?",
     "options": [
       "$9$",
@@ -1503,7 +2063,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 107,
+    "id": 147,
     "question": "A jacket priced at $80$ dollars is marked up by $15\\%$. What is the new price in dollars?",
     "options": [
       "$95$",
@@ -1517,7 +2077,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 108,
+    "id": 148,
     "question": "The data set $\\{4, 7, 9, 4, 6\\}$ has what mode?",
     "options": [
       "$6$",
@@ -1531,7 +2091,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 109,
+    "id": 149,
     "question": "A map has a scale where $1$ inch represents $20$ miles. How many miles do $3.5$ inches represent?",
     "options": [
       "$60$",
@@ -1545,7 +2105,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 110,
+    "id": 150,
     "question": "A recipe requires $2$ eggs for every $5$ pancakes. How many eggs are needed for $20$ pancakes?",
     "options": [
       "$4$",
@@ -1559,7 +2119,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 111,
+    "id": 151,
     "question": "What is the median of the data set $\\{12, 5, 8, 20, 15\\}$?",
     "options": [
       "$8$",
@@ -1573,7 +2133,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 112,
+    "id": 152,
     "question": "A store sells $60$ items in one day. If $25\\%$ of them are returned, how many items are returned?",
     "options": [
       "$15$",
@@ -1587,7 +2147,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 113,
+    "id": 153,
     "question": "A runner completes a $400$-meter lap in $80$ seconds. What is her average speed in meters per second?",
     "options": [
       "$4$",
@@ -1601,7 +2161,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 114,
+    "id": 154,
     "question": "In a bag of $50$ marbles, $10$ are red. What is the probability of drawing a red marble at random?",
     "options": [
       "$\\frac{1}{10}$",
@@ -1615,7 +2175,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 115,
+    "id": 155,
     "question": "A quantity increases from $200$ to $250$. What is the percent increase?",
     "options": [
       "$20\\%$",
@@ -1629,7 +2189,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 116,
+    "id": 156,
     "question": "A solution is made by mixing $3$ liters of water with $1$ liter of juice concentrate. To make $16$ liters of the same solution, how many liters of concentrate are needed?",
     "options": [
       "$12$",
@@ -1643,7 +2203,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 117,
+    "id": 157,
     "question": "A car travels at $60$ miles per hour. How many feet does it travel in one second? (Use $1$ mile $= 5280$ feet.)",
     "options": [
       "$72$",
@@ -1657,7 +2217,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 118,
+    "id": 158,
     "question": "The mean of five numbers is $14$. Four of the numbers are $10, 12, 16,$ and $18$. What is the fifth number?",
     "options": [
       "$16$",
@@ -1671,7 +2231,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 119,
+    "id": 159,
     "question": "A table shows survey responses: $45$ people prefer tea, $30$ prefer coffee, and $25$ prefer water. What percent of respondents prefer coffee?",
     "options": [
       "$25\\%$",
@@ -1685,7 +2245,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 120,
+    "id": 160,
     "question": "A shirt's price is reduced by $20\\%$, and the new price is $32$ dollars. What was the original price in dollars?",
     "options": [
       "$38.40$",
@@ -1699,7 +2259,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 121,
+    "id": 161,
     "question": "A scatterplot of study hours versus test scores has a line of best fit $y = 5x + 60$, where $x$ is hours studied and $y$ is the score. What score does the model predict for a student who studies $6$ hours?",
     "options": [
       "$66$",
@@ -1713,7 +2273,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 122,
+    "id": 162,
     "question": "A two-way table shows that of $80$ students, $50$ play a sport and, of those, $30$ also play an instrument. What fraction of the sport-playing students also play an instrument?",
     "options": [
       "$\\frac{3}{8}$",
@@ -1727,7 +2287,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 123,
+    "id": 163,
     "question": "Two data sets have the same mean of $50$. Set A is $\\{48, 49, 50, 51, 52\\}$ and Set B is $\\{30, 40, 50, 60, 70\\}$. Which statement is true?",
     "options": [
       "Set A has a greater standard deviation",
@@ -1741,7 +2301,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 124,
+    "id": 164,
     "question": "A recipe for $4$ servings uses $\\frac{3}{4}$ cup of sugar. How much sugar is needed for $10$ servings?",
     "options": [
       "$\\frac{3}{2}$ cups",
@@ -1755,7 +2315,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 125,
+    "id": 165,
     "question": "A population of bacteria grows by $10\\%$ each hour. If it starts at $500$, what is the population after $2$ hours?",
     "options": [
       "$600$",
@@ -1769,7 +2329,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 126,
+    "id": 166,
     "question": "An item's price increases by $20\\%$, then the new price decreases by $20\\%$. Compared to the original, the final price is:",
     "options": [
       "The same",
@@ -1783,7 +2343,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 127,
+    "id": 167,
     "question": "A two-way table shows $120$ people: $70$ own a dog and $40$ of the dog owners also own a cat; $20$ of the non-dog owners own a cat. If a randomly chosen person owns a cat, what is the probability they also own a dog?",
     "options": [
       "$\\frac{4}{7}$",
@@ -1797,7 +2357,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 128,
+    "id": 168,
     "question": "In a scatterplot relating temperature (degrees) to ice cream sales (dollars), the line of best fit is $y = 8x - 40$. What is the best interpretation of the slope?",
     "options": [
       "Each additional degree is associated with an $8$-dollar increase in predicted sales",
@@ -1811,7 +2371,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 129,
+    "id": 169,
     "question": "A city surveys shoppers exiting a luxury store and concludes the average city resident spends $300$ dollars per week on clothing. Why is this inference likely invalid?",
     "options": [
       "The sample size is too large",
@@ -1825,7 +2385,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 130,
+    "id": 170,
     "question": "A mixture is $40\\%$ acid. How many liters of pure acid must be added to $20$ liters of this mixture to make it $50\\%$ acid?",
     "options": [
       "$2$",
@@ -1839,7 +2399,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 131,
+    "id": 171,
     "question": "The mean of a data set of $6$ values is $15$. If a seventh value of $29$ is added, what is the new mean?",
     "options": [
       "$16$",
@@ -1853,7 +2413,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 132,
+    "id": 172,
     "question": "A store's revenue rose $50\\%$ from Year 1 to Year 2, then fell $40\\%$ from Year 2 to Year 3. If Year 1 revenue was $200{,}000$ dollars, what was Year 3 revenue in dollars?",
     "options": [
       "$220{,}000$",
@@ -1867,7 +2427,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 133,
+    "id": 173,
     "question": "A bag has $4$ red and $6$ blue marbles. Two marbles are drawn without replacement. What is the probability both are red?",
     "options": [
       "$\\frac{4}{25}$",
@@ -1881,7 +2441,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 134,
+    "id": 174,
     "question": "A researcher randomly samples $200$ voters and finds $110$ support a measure, with a reported margin of error of $\\pm 5$ percentage points. Which conclusion is most appropriate?",
     "options": [
       "Exactly $55\\%$ of all voters support the measure",
@@ -1895,7 +2455,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 135,
+    "id": 175,
     "question": "A machine fills 24 bottles in 3 minutes at a constant rate. At this rate, how many bottles does it fill in 10 minutes?",
     "options": [
       "80",
@@ -1909,7 +2469,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 136,
+    "id": 176,
     "question": "The value of a car is modeled by $V = 20000(0.85)^t$, where $t$ is the number of years after purchase. Which statement is true?",
     "options": [
       "The car loses 85% of its value each year.",
@@ -1923,7 +2483,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 137,
+    "id": 177,
     "question": "A survey of 100 students recorded how they travel to school: 40 walk and 60 ride the bus. If one of the 100 students is chosen at random, what is the probability that the student walks to school?",
     "options": [
       "0.6",
@@ -1937,7 +2497,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 138,
+    "id": 178,
     "question": "Which of the following situations is best modeled by a linear function?",
     "options": [
       "A savings account that increases by 3% each year.",
@@ -1951,7 +2511,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 139,
+    "id": 179,
     "question": "After a 20% increase, the price of a jacket is 60 dollars. What was the original price?",
     "options": [
       "48 dollars",
@@ -1965,7 +2525,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 140,
+    "id": 180,
     "question": "A line of best fit relating hours studied $x$ to a test score $y$ is $y = 6x + 52$. Which is the best interpretation of the number 6 in this model?",
     "options": [
       "The predicted increase in test score for each additional hour studied.",
@@ -1979,7 +2539,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 141,
+    "id": 181,
     "question": "In a class, 10 students scored an average of 70 on a test and 15 students scored an average of 80. What is the average score of all 25 students?",
     "options": [
       "75",
@@ -1993,7 +2553,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 142,
+    "id": 182,
     "question": "Data set A is {50, 50, 50, 50, 50} and data set B is {30, 40, 50, 60, 70}. Both have a mean of 50. Which statement correctly compares their standard deviations?",
     "options": [
       "Data set A has the greater standard deviation because it has identical values.",
@@ -2007,7 +2567,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 143,
+    "id": 183,
     "question": "A quality inspector randomly selects 150 light bulbs from a factory's daily production of 12,000 bulbs and finds that 6 are defective. Which is the most reasonable conclusion?",
     "options": [
       "Exactly 480 bulbs produced that day are defective.",
@@ -2021,7 +2581,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 144,
+    "id": 184,
     "question": "A town's population is currently 500 and grows by 8% each year. Which expression gives the population $t$ years from now?",
     "options": [
       "$500(1.08)^t$",
@@ -2035,7 +2595,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 145,
+    "id": 185,
     "question": "The price of a stock increased by 20% one day and then decreased by 20% the next day. Compared to its original price, the stock's final price is:",
     "options": [
       "exactly equal to the original price.",
@@ -2049,7 +2609,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 146,
+    "id": 186,
     "question": "A store sells an item for 91 dollars after adding a 30% markup to the price it paid for the item. How much did the store pay for the item?",
     "options": [
       "63.70 dollars",
@@ -2063,7 +2623,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 147,
+    "id": 187,
     "question": "A biologist models the relationship between water temperature $x$ (in degrees Celsius) and the number of algae $y$ (in thousands) in a pond as $y = 1.5x + 8$. What does the value 8 represent in this model?",
     "options": [
       "The predicted increase in algae (in thousands) for each 1 degree increase in temperature.",
@@ -2077,7 +2637,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 148,
+    "id": 188,
     "question": "A line of best fit predicts that a house of a certain size will sell for 240,000 dollars. The house actually sold for 265,000 dollars. What is true about the residual for this data point?",
     "options": [
       "The residual is positive because the actual price is greater than the predicted price.",
@@ -2091,7 +2651,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 149,
+    "id": 189,
     "question": "Two data sets each contain 6 values. Data set X is {19, 20, 20, 21, 20, 20} and data set Y is {5, 35, 18, 3, 40, 19}. Which data set has the greater standard deviation, and why?",
     "options": [
       "Data set X, because its values are clustered close together.",
@@ -2105,7 +2665,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 150,
+    "id": 190,
     "question": "A data set consists of the values {12, 14, 15, 16, 18}. A new value, 90, is added to the data set. Which statement best describes the effect on the mean and the median?",
     "options": [
       "Both the mean and the median remain unchanged.",
@@ -2119,7 +2679,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 151,
+    "id": 191,
     "question": "In a study, 45% of a random sample of voters favored a proposal, with a margin of error of 3 percentage points. Which statement best describes what this margin of error indicates?",
     "options": [
       "Exactly 3% of the surveyed voters were undecided.",
@@ -2133,7 +2693,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 152,
+    "id": 192,
     "question": "A pump moves water at a constant rate of 15 liters per minute. There are 1000 liters in one cubic meter. At this rate, how many cubic meters of water does the pump move in 2 hours?",
     "options": [
       "1.8",
@@ -2147,7 +2707,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 153,
+    "id": 193,
     "question": "A chemist mixes a solution that is 40% acid with a solution that is 10% acid to make 30 liters of a solution that is 20% acid. How many liters of the 40% acid solution are used?",
     "options": [
       "20 liters",
@@ -2161,7 +2721,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 154,
+    "id": 194,
     "question": "A study recorded the exercise habits of 400 adults. Among the 240 adults under age 40, 168 exercise regularly and 72 do not. Among the 160 adults age 40 or older, 80 exercise regularly and 80 do not. If an adult who exercises regularly is selected at random, what is the probability that the adult is age 40 or older?",
     "options": [
       "$\\frac{80}{160}$",
@@ -2175,7 +2735,287 @@ const allQuestions: SatMathQuestion[] = [
     "area": "problem-solving"
   },
   {
-    "id": 155,
+    "id": 195,
+    "question": "A data set is summarized by the five-number summary: minimum 4, first quartile ($Q_1$) 10, median 15, third quartile ($Q_3$) 22, maximum 30. What is the interquartile range (IQR) of the data set?",
+    "options": [
+      "26",
+      "7",
+      "12",
+      "15"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The interquartile range is $Q_3 - Q_1 = 22 - 10 = 12$. The range (maximum minus minimum) would instead be $30 - 4 = 26$.",
+    "difficulty": "easy",
+    "area": "problem-solving"
+  },
+  {
+    "id": 196,
+    "question": "A recipe that serves 4 people requires 3 cups of flour. Keeping the same ratio of ingredients, how many cups of flour are needed to serve 12 people?",
+    "options": [
+      "6 cups",
+      "36 cups",
+      "11 cups",
+      "9 cups"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Serving 12 people is $12 \\div 4 = 3$ times the original recipe, so the flour needed is $3 \\times 3 = 9$ cups.",
+    "difficulty": "easy",
+    "area": "problem-solving"
+  },
+  {
+    "id": 197,
+    "question": "Every value in a data set is multiplied by 4. If the original mean was 20, what is the mean of the new data set?",
+    "options": [
+      "24",
+      "80",
+      "20",
+      "5"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Multiplying every value by 4 multiplies the mean by 4 as well: $20 \\times 4 = 80$.",
+    "difficulty": "easy",
+    "area": "problem-solving"
+  },
+  {
+    "id": 198,
+    "question": "A souvenir in a European shop is priced at 18 euros. If 1 US dollar is worth 0.90 euros, what is the price of the souvenir in US dollars?",
+    "options": [
+      "16.20 dollars",
+      "18.90 dollars",
+      "20 dollars",
+      "22 dollars"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Since 1 dollar $= 0.90$ euros, dollars $=$ euros $\\div 0.90 = 18 \\div 0.90 = 20$ dollars. Multiplying instead ($18 \\times 0.90 = 16.20$) converts in the wrong direction.",
+    "difficulty": "medium",
+    "area": "problem-solving"
+  },
+  {
+    "id": 199,
+    "question": "Working alone, machine A can complete a job in 6 hours and machine B can complete the same job in 3 hours. Working together at their constant rates, how long will the two machines take to complete the job?",
+    "options": [
+      "4.5 hours",
+      "9 hours",
+      "1.5 hours",
+      "2 hours"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Their combined rate is $\\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}$ job per hour, so together they finish in $2$ hours, faster than either machine alone.",
+    "difficulty": "medium",
+    "area": "problem-solving"
+  },
+  {
+    "id": 200,
+    "question": "A student measured the mass of an object as 48 grams, but its actual mass is 50 grams. What is the percent error of the measurement?",
+    "options": [
+      "4%",
+      "2%",
+      "5%",
+      "96%"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Percent error $= \\frac{|\\text{measured} - \\text{actual}|}{\\text{actual}} \\times 100 = \\frac{|48 - 50|}{50} \\times 100 = 4$%.",
+    "difficulty": "medium",
+    "area": "problem-solving"
+  },
+  {
+    "id": 201,
+    "question": "The measures of the three angles of a triangle are in the ratio $2 : 3 : 4$. What is the measure of the largest angle?",
+    "options": [
+      "40 degrees",
+      "80 degrees",
+      "60 degrees",
+      "90 degrees"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The parts total $2 + 3 + 4 = 9$, and the angles of a triangle sum to 180 degrees, so each part is $180 \\div 9 = 20$ degrees. The largest angle is $4 \\times 20 = 80$ degrees.",
+    "difficulty": "medium",
+    "area": "problem-solving"
+  },
+  {
+    "id": 202,
+    "question": "A data set is {8, 9, 10, 11, 62}. If the value 62 is removed from the data set, what happens to the mean?",
+    "options": [
+      "The mean increases substantially.",
+      "The mean stays the same.",
+      "The mean decreases substantially.",
+      "The mean decreases only slightly."
+    ],
+    "correctAnswer": 2,
+    "explanation": "The value 62 is a high outlier that pulls the mean up (the original mean is $100 \\div 5 = 20$). Removing it drops the mean to $\\frac{8 + 9 + 10 + 11}{4} = 9.5$, a substantial decrease.",
+    "difficulty": "medium",
+    "area": "problem-solving"
+  },
+  {
+    "id": 203,
+    "question": "A spinner has four equal-sized regions labeled 1 dollar, 2 dollars, 3 dollars, and 6 dollars. A player spins once and wins the amount shown. What is the expected (average) winning per spin?",
+    "options": [
+      "3.50 dollars",
+      "6 dollars",
+      "2 dollars",
+      "3 dollars"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Each region is equally likely (probability $\\frac{1}{4}$), so the expected value is $\\frac{1 + 2 + 3 + 6}{4} = \\frac{12}{4} = 3$ dollars.",
+    "difficulty": "medium",
+    "area": "problem-solving"
+  },
+  {
+    "id": 204,
+    "question": "A store increases the price of a coat by 25%, and later reduces that new price by 25%. Compared with the original price, the final price is:",
+    "options": [
+      "6.25% less than the original price.",
+      "equal to the original price.",
+      "6.25% more than the original price.",
+      "25% less than the original price."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The combined factor is $1.25 \\times 0.75 = 0.9375$, so the final price is 93.75% of the original, that is, 6.25% less. The two 25% changes do not cancel because they apply to different base prices.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 205,
+    "question": "A meal is listed at 50 dollars. A 20% tip is calculated on the 50-dollar meal price, and a 6% sales tax is also calculated on the 50-dollar meal price. What is the total amount paid?",
+    "options": [
+      "66 dollars",
+      "63 dollars",
+      "60 dollars",
+      "63.60 dollars"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tip $= 0.20 \\times 50 = 10$ dollars and tax $= 0.06 \\times 50 = 3$ dollars. Since both are based on the 50-dollar price, the total is $50 + 10 + 3 = 63$ dollars.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 206,
+    "question": "A fair coin is flipped 3 times. What is the probability of getting at least one heads?",
+    "options": [
+      "$\\frac{1}{8}$",
+      "$\\frac{3}{8}$",
+      "$\\frac{7}{8}$",
+      "$\\frac{1}{2}$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Use the complement: $P(\\text{at least one heads}) = 1 - P(\\text{no heads}) = 1 - \\left(\\frac{1}{2}\\right)^3 = 1 - \\frac{1}{8} = \\frac{7}{8}$.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 207,
+    "question": "A bag contains 5 red marbles and 3 blue marbles. Two marbles are drawn at random without replacement. What is the probability that both marbles are red?",
+    "options": [
+      "$\\frac{25}{64}$",
+      "$\\frac{5}{16}$",
+      "$\\frac{2}{7}$",
+      "$\\frac{5}{14}$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The draws are dependent (no replacement): $P(\\text{both red}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$. Using $\\frac{5}{8} \\times \\frac{5}{8} = \\frac{25}{64}$ would wrongly treat the draws as independent.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 208,
+    "question": "A square dartboard measures 10 inches on each side. A circle of radius 3 inches is painted at its center. Assuming a dart lands at a uniformly random point on the board, what is the probability that it lands inside the circle? (Use $\\pi \\approx 3.14$.)",
+    "options": [
+      "about 0.09",
+      "about 0.28",
+      "about 0.19",
+      "about 0.57"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For a uniformly random landing point, the probability equals the fraction of area covered: $\\frac{\\pi (3)^2}{10^2} = \\frac{28.26}{100} \\approx 0.28$.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 209,
+    "question": "On a standardized test, a student's score is at the 80th percentile. Which statement is the correct interpretation?",
+    "options": [
+      "The student answered 80% of the questions correctly.",
+      "About 80% of test-takers scored higher than the student.",
+      "The student's score was 80 points.",
+      "About 80% of test-takers scored at or below the student's score."
+    ],
+    "correctAnswer": 3,
+    "explanation": "A percentile gives the percent of the group at or below a value: the 80th percentile means about 80% of test-takers scored at or below this student. It says nothing about the percent of questions answered correctly.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 210,
+    "question": "Two classes took the same exam. On the box plot for Class A, the box spans from 70 to 84 with a median of 78. On the box plot for Class B, the box spans from 74 to 82 with a median of 78. Which conclusion is best supported?",
+    "options": [
+      "Class B's scores are higher on average than Class A's.",
+      "Class A's median score is higher than Class B's.",
+      "Class A's middle 50% of scores is more spread out than Class B's.",
+      "The two classes have identical score distributions."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Both medians are 78, so center is equal. Class A's IQR is $84 - 70 = 14$ versus Class B's $82 - 74 = 8$, so Class A's middle 50% of scores is more spread out.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 211,
+    "question": "Every value in a data set with a standard deviation of 5 is multiplied by 3. What is the standard deviation of the resulting data set?",
+    "options": [
+      "15",
+      "5",
+      "8",
+      "45"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Multiplying every value by a constant $k$ scales the standard deviation by $|k|$: $5 \\times 3 = 15$. (Adding a constant, by contrast, would leave the standard deviation unchanged.)",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 212,
+    "question": "A mixture contains red and blue paint in the ratio $3 : 2$, with a total volume of 25 liters. If 5 liters of blue paint are added, what is the new ratio of red paint to blue paint?",
+    "options": [
+      "$3 : 4$",
+      "$1 : 1$",
+      "$15 : 10$",
+      "$5 : 6$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Splitting 25 liters in the ratio $3 : 2$ gives red $= 15$ and blue $= 10$. Adding 5 liters of blue makes blue $= 15$, so the new ratio is $15 : 15 = 1 : 1$.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 213,
+    "question": "A car travels 240 kilometers using 15 liters of fuel. Given that 1 kilometer $\\approx 0.62$ miles and 1 liter $\\approx 0.26$ gallons, which is closest to the car's fuel efficiency in miles per gallon?",
+    "options": [
+      "about 38 miles per gallon",
+      "about 16 miles per gallon",
+      "about 25 miles per gallon",
+      "about 61 miles per gallon"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The efficiency is $\\frac{240 \\text{ km}}{15 \\text{ L}} = 16$ km per liter. Converting units: $16 \\times \\frac{0.62 \\text{ mi/km}}{0.26 \\text{ gal/L}} \\approx 38$ miles per gallon.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 214,
+    "question": "A biologist records a quantity $y$ at times $x = 0, 1, 2, 3$ and obtains $y = 4, 12, 36, 108$. Which type of function best models this data?",
+    "options": [
+      "A linear function, because $y$ increases by a constant amount.",
+      "A quadratic function, because the second differences are constant.",
+      "An exponential function, because each $y$-value is 3 times the previous one.",
+      "A linear function, because the ratio of consecutive $y$-values is constant."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Consecutive $y$-values are multiplied by a constant factor ($12 \\div 4 = 36 \\div 12 = 108 \\div 36 = 3$), the hallmark of exponential growth. Linear data would add a constant amount rather than multiply.",
+    "difficulty": "hard",
+    "area": "problem-solving"
+  },
+  {
+    "id": 215,
     "question": "A triangle has two angles measuring $50^\\circ$ and $60^\\circ$. What is the measure of the third angle?",
     "options": [
       "$80^\\circ$",
@@ -2189,7 +3029,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 156,
+    "id": 216,
     "question": "A right triangle has legs of length $3$ and $4$. What is the length of the hypotenuse?",
     "options": [
       "$5$",
@@ -2203,7 +3043,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 157,
+    "id": 217,
     "question": "A circle has radius $5$. What is its circumference?",
     "options": [
       "$25\\pi$",
@@ -2217,7 +3057,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 158,
+    "id": 218,
     "question": "A rectangle has length $8$ and width $5$. What is its area?",
     "options": [
       "$13$",
@@ -2231,7 +3071,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 159,
+    "id": 219,
     "question": "A cube has an edge length of $4$. What is its volume?",
     "options": [
       "$16$",
@@ -2245,7 +3085,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 160,
+    "id": 220,
     "question": "In a right triangle, the angle $\\theta$ has an opposite side of length $6$ and a hypotenuse of length $10$. What is $\\sin\\theta$?",
     "options": [
       "$\\frac{3}{5}$",
@@ -2259,7 +3099,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 161,
+    "id": 221,
     "question": "Two angles are complementary. If one angle measures $35^\\circ$, what is the measure of the other?",
     "options": [
       "$145^\\circ$",
@@ -2273,7 +3113,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 162,
+    "id": 222,
     "question": "A square has a perimeter of $36$. What is the length of one side?",
     "options": [
       "$6$",
@@ -2287,7 +3127,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 163,
+    "id": 223,
     "question": "A circle has a diameter of $14$. What is its radius?",
     "options": [
       "$28$",
@@ -2301,7 +3141,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 164,
+    "id": 224,
     "question": "A triangle has a base of $10$ and a height of $6$. What is its area?",
     "options": [
       "$60$",
@@ -2315,7 +3155,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 165,
+    "id": 225,
     "question": "In a $45^\\circ$-$45^\\circ$-$90^\\circ$ right triangle, each leg has length $7$. What is the length of the hypotenuse?",
     "options": [
       "$7\\sqrt{2}$",
@@ -2329,7 +3169,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 166,
+    "id": 226,
     "question": "In a $30^\\circ$-$60^\\circ$-$90^\\circ$ right triangle, the side opposite the $30^\\circ$ angle has length $5$. What is the length of the side opposite the $60^\\circ$ angle?",
     "options": [
       "$5\\sqrt{2}$",
@@ -2343,7 +3183,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 167,
+    "id": 227,
     "question": "A sector of a circle of radius $6$ has a central angle of $60^\\circ$. What is the area of the sector?",
     "options": [
       "$6\\pi$",
@@ -2357,7 +3197,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 168,
+    "id": 228,
     "question": "An arc of a circle of radius $9$ subtends a central angle of $40^\\circ$. What is the arc length?",
     "options": [
       "$18\\pi$",
@@ -2371,7 +3211,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 169,
+    "id": 229,
     "question": "A right circular cylinder has radius $3$ and height $10$. What is its volume?",
     "options": [
       "$30\\pi$",
@@ -2385,7 +3225,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 170,
+    "id": 230,
     "question": "Two similar triangles have corresponding sides in the ratio $2:5$. If a side of the smaller triangle is $8$, what is the length of the corresponding side of the larger triangle?",
     "options": [
       "$16$",
@@ -2399,7 +3239,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 171,
+    "id": 231,
     "question": "In a right triangle, $\\tan\\theta = \\frac{5}{12}$. What is $\\cos\\theta$?",
     "options": [
       "$\\frac{5}{13}$",
@@ -2413,7 +3253,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 172,
+    "id": 232,
     "question": "An angle measures $\\frac{\\pi}{3}$ radians. What is its measure in degrees?",
     "options": [
       "$45^\\circ$",
@@ -2427,7 +3267,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 173,
+    "id": 233,
     "question": "A right circular cone has radius $6$ and height $8$. What is the slant height of the cone?",
     "options": [
       "$10$",
@@ -2441,7 +3281,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 174,
+    "id": 234,
     "question": "A circle is defined by the equation $(x - 3)^2 + (y + 2)^2 = 25$. What is the center of the circle?",
     "options": [
       "$(-3, 2)$",
@@ -2455,7 +3295,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 175,
+    "id": 235,
     "question": "A circle has the equation $x^2 + y^2 - 6x + 8y + 9 = 0$. What is the radius of the circle?",
     "options": [
       "$3$",
@@ -2469,7 +3309,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 176,
+    "id": 236,
     "question": "An inscribed angle in a circle intercepts an arc of $110^\\circ$. What is the measure of the inscribed angle?",
     "options": [
       "$220^\\circ$",
@@ -2483,7 +3323,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 177,
+    "id": 237,
     "question": "In a right triangle, angles $A$ and $B$ are the two acute angles. If $\\sin A = \\frac{7}{25}$, what is $\\cos B$?",
     "options": [
       "$\\frac{7}{25}$",
@@ -2497,7 +3337,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 178,
+    "id": 238,
     "question": "A sphere has a surface area of $144\\pi$. What is the volume of the sphere?",
     "options": [
       "$288\\pi$",
@@ -2511,7 +3351,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 179,
+    "id": 239,
     "question": "A regular hexagon has a side length of $10$. What is its area?",
     "options": [
       "$150\\sqrt{3}$",
@@ -2525,7 +3365,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 180,
+    "id": 240,
     "question": "A solid consists of a cylinder of radius $3$ and height $10$ with a hemisphere of radius $3$ attached on top. What is the total volume of the solid?",
     "options": [
       "$90\\pi$",
@@ -2539,7 +3379,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 181,
+    "id": 241,
     "question": "A central angle of a circle measures $2.5$ radians and subtends an arc of length $20$. What is the radius of the circle?",
     "options": [
       "$50$",
@@ -2553,7 +3393,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 182,
+    "id": 242,
     "question": "In a right triangle, one acute angle is $30^\\circ$ and the hypotenuse has length $12$. What is the area of the triangle?",
     "options": [
       "$36$",
@@ -2567,7 +3407,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 183,
+    "id": 243,
     "question": "Two chords of a circle intersect inside the circle. One chord is divided into segments of length $4$ and $9$; the other chord is divided into a segment of length $6$ and an unknown segment $x$. What is $x$?",
     "options": [
       "$6$",
@@ -2581,7 +3421,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 184,
+    "id": 244,
     "question": "A cone and a cylinder have the same radius $r$ and the same height $h$. If the volume of the cylinder is $45\\pi$, what is the volume of the cone?",
     "options": [
       "$45\\pi$",
@@ -2595,7 +3435,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 185,
+    "id": 245,
     "question": "An angle measures $\\frac{\\pi}{6}$ radians. What is the measure of this angle in degrees?",
     "options": [
       "$15^\\circ$",
@@ -2609,7 +3449,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 186,
+    "id": 246,
     "question": "In a right triangle, one acute angle has measure $x^\\circ$ and $\\sin(x^\\circ) = 0.8$. What is the value of $\\cos(90^\\circ - x^\\circ)$?",
     "options": [
       "$0.2$",
@@ -2623,7 +3463,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 187,
+    "id": 247,
     "question": "A circle in the $xy$-plane has center $(2, -3)$ and radius $4$. Which equation represents this circle?",
     "options": [
       "$(x-2)^2 + (y+3)^2 = 16$",
@@ -2637,7 +3477,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 188,
+    "id": 248,
     "question": "A circle in the $xy$-plane is given by $x^2 + y^2 - 8x + 6y = 0$. What is the radius of the circle?",
     "options": [
       "$5$",
@@ -2651,7 +3491,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 189,
+    "id": 249,
     "question": "A circle has radius $9$. A central angle of $40^\\circ$ intercepts an arc of the circle. What is the length of that arc?",
     "options": [
       "$4\\pi$",
@@ -2665,7 +3505,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 190,
+    "id": 250,
     "question": "In a circle, a central angle and an inscribed angle both intercept the same arc. If the central angle measures $80^\\circ$, what is the measure of the inscribed angle?",
     "options": [
       "$40^\\circ$",
@@ -2679,7 +3519,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 191,
+    "id": 251,
     "question": "A right triangle has two legs, each of length $7$, meeting at the right angle. What is the length of the hypotenuse?",
     "options": [
       "$14$",
@@ -2693,7 +3533,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 192,
+    "id": 252,
     "question": "Triangle $ABC$ is similar to triangle $DEF$, with $AB$ corresponding to $DE$ and $BC$ corresponding to $EF$. If $AB = 6$, $DE = 9$, and $BC = 8$, what is the length of $EF$?",
     "options": [
       "$10$",
@@ -2707,7 +3547,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 193,
+    "id": 253,
     "question": "In the $xy$-plane, a line passes through the points $(2, -1)$ and $(8, 3)$. What is the slope of the line?",
     "options": [
       "$\\frac{3}{2}$",
@@ -2721,7 +3561,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 194,
+    "id": 254,
     "question": "A circle in the $xy$-plane is given by $x^2 + y^2 + 10x - 4y - 7 = 0$. What are the coordinates of the center of the circle?",
     "options": [
       "$(5, -2)$",
@@ -2735,7 +3575,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 195,
+    "id": 255,
     "question": "In the $xy$-plane, the graph of $x^2 + y^2 - 6x + 8y + k = 0$ is a circle of radius $3$. What is the value of $k$?",
     "options": [
       "$9$",
@@ -2749,7 +3589,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 196,
+    "id": 256,
     "question": "A circle has radius $6$. A sector of the circle is formed by a central angle of $\\frac{\\pi}{3}$ radians. What is the area of the sector?",
     "options": [
       "$12\\pi$",
@@ -2763,7 +3603,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 197,
+    "id": 257,
     "question": "A circle has radius $8$. An arc of the circle is intercepted by a central angle of $\\frac{3\\pi}{4}$ radians. What is the length of the arc?",
     "options": [
       "$24\\pi$",
@@ -2777,7 +3617,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 198,
+    "id": 258,
     "question": "In right triangle $ABC$, the right angle is at $C$, so angles $A$ and $B$ are complementary. If $\\cos(A) = \\frac{7}{25}$, what is the value of $\\sin(B)$?",
     "options": [
       "$\\frac{24}{25}$",
@@ -2791,7 +3631,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 199,
+    "id": 259,
     "question": "An equilateral triangle has side length $12$. What is the length of an altitude of the triangle (the segment from one vertex perpendicular to the opposite side)?",
     "options": [
       "$12\\sqrt{3}$",
@@ -2805,7 +3645,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 200,
+    "id": 260,
     "question": "In a right triangle, one acute angle $\\theta$ satisfies $\\tan(\\theta) = \\frac{3}{4}$, and the side adjacent to $\\theta$ has length $8$. What is the length of the side opposite $\\theta$?",
     "options": [
       "$\\frac{32}{3}$",
@@ -2819,7 +3659,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 201,
+    "id": 261,
     "question": "A vertical tree casts a shadow $24$ feet long. At the same time, a nearby vertical pole $6$ feet tall casts a shadow $4$ feet long. The tree, its shadow, the pole, and its shadow form similar right triangles. What is the height of the tree, in feet?",
     "options": [
       "$16$",
@@ -2833,7 +3673,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 202,
+    "id": 262,
     "question": "In the $xy$-plane, point $M(3, 4)$ is the midpoint of segment $PQ$. If $P = (-1, 1)$, what is the length of segment $PQ$?",
     "options": [
       "$5$",
@@ -2847,7 +3687,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 203,
+    "id": 263,
     "question": "A solid is formed by placing a cone directly on top of a cylinder so their circular faces coincide. The cylinder has radius $3$ and height $4$, and the cone has radius $3$ and height $4$. What is the total volume of the solid?",
     "options": [
       "$36\\pi$",
@@ -2861,7 +3701,7 @@ const allQuestions: SatMathQuestion[] = [
     "area": "geometry"
   },
   {
-    "id": 204,
+    "id": 264,
     "question": "A right circular cylinder has volume $100$. A second cylinder has the same height but twice the radius of the first. What is the volume of the second cylinder?",
     "options": [
       "$200$",
@@ -2871,6 +3711,286 @@ const allQuestions: SatMathQuestion[] = [
     ],
     "correctAnswer": 3,
     "explanation": "Volume $= \\pi r^2 h$. Doubling the radius multiplies the volume by $2^2 = 4$, so the new volume is $4(100) = 400$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 265,
+    "question": "In the $xy$-plane, line $\\ell$ is tangent to a circle at point $P$, and $\\overline{OP}$ is the radius drawn from center $O$ to the point of tangency $P$. What is the measure of the angle between line $\\ell$ and radius $\\overline{OP}$?",
+    "options": [
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$90^\\circ$",
+      "$180^\\circ$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A tangent line is perpendicular to the radius drawn to the point of tangency, so the angle between them is $90^\\circ$.",
+    "difficulty": "easy",
+    "area": "geometry"
+  },
+  {
+    "id": 266,
+    "question": "What is the exact value of $\\tan 45^\\circ$?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$\\sqrt{3}$",
+      "$\\frac{\\sqrt{3}}{2}$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In a $45^\\circ$-$45^\\circ$-$90^\\circ$ triangle the two legs are equal, so $\\tan 45^\\circ = \\frac{\\text{opposite}}{\\text{adjacent}} = 1$.",
+    "difficulty": "easy",
+    "area": "geometry"
+  },
+  {
+    "id": 267,
+    "question": "What is the sum of the measures of the interior angles of a pentagon (a five-sided polygon)?",
+    "options": [
+      "$360^\\circ$",
+      "$450^\\circ$",
+      "$540^\\circ$",
+      "$720^\\circ$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The sum of the interior angles of an $n$-sided polygon is $(n-2)\\cdot 180^\\circ$. For $n=5$: $(5-2)\\cdot 180^\\circ = 540^\\circ$.",
+    "difficulty": "easy",
+    "area": "geometry"
+  },
+  {
+    "id": 268,
+    "question": "From a point on level ground $50$ feet from the base of a vertical flagpole, the angle of elevation to the top of the pole is $30^\\circ$. What is the height of the flagpole, in feet?",
+    "options": [
+      "$\\frac{50\\sqrt{3}}{3}$",
+      "$50\\sqrt{3}$",
+      "$25\\sqrt{3}$",
+      "$\\frac{50}{3}$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The height $h$ satisfies $\\tan 30^\\circ = \\frac{h}{50}$, so $h = 50\\tan 30^\\circ = 50\\cdot\\frac{1}{\\sqrt{3}} = \\frac{50\\sqrt{3}}{3}$ feet.",
+    "difficulty": "medium",
+    "area": "geometry"
+  },
+  {
+    "id": 269,
+    "question": "What is the measure of each interior angle of a regular octagon (a regular eight-sided polygon)?",
+    "options": [
+      "$120^\\circ$",
+      "$135^\\circ$",
+      "$144^\\circ$",
+      "$108^\\circ$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Each interior angle of a regular $n$-gon measures $\\frac{(n-2)\\cdot 180^\\circ}{n}$. For $n=8$: $\\frac{6\\cdot 180^\\circ}{8} = 135^\\circ$.",
+    "difficulty": "medium",
+    "area": "geometry"
+  },
+  {
+    "id": 270,
+    "question": "Two spheres are similar. The radius of the larger sphere is $3$ times the radius of the smaller sphere. The volume of the larger sphere is how many times the volume of the smaller sphere?",
+    "options": [
+      "$3$",
+      "$9$",
+      "$27$",
+      "$81$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "For similar solids with linear scale factor $k$, the volume ratio is $k^3$. Here $k=3$, so the volume ratio is $3^3 = 27$.",
+    "difficulty": "medium",
+    "area": "geometry"
+  },
+  {
+    "id": 271,
+    "question": "A circle in the $xy$-plane has a diameter with endpoints $(-2, 1)$ and $(4, 9)$. Which equation represents this circle?",
+    "options": [
+      "$(x-1)^2 + (y-5)^2 = 25$",
+      "$(x-1)^2 + (y-5)^2 = 100$",
+      "$(x+1)^2 + (y+5)^2 = 25$",
+      "$(x-1)^2 + (y-5)^2 = 5$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The center is the midpoint of the diameter: $\\left(\\frac{-2+4}{2}, \\frac{1+9}{2}\\right) = (1,5)$. The diameter length is $\\sqrt{6^2+8^2}=10$, so the radius is $5$ and $r^2 = 25$, giving $(x-1)^2 + (y-5)^2 = 25$.",
+    "difficulty": "medium",
+    "area": "geometry"
+  },
+  {
+    "id": 272,
+    "question": "A circle in the $xy$-plane is defined by $(x-3)^2 + (y+1)^2 = 25$. Which of the following points lies inside the circle?",
+    "options": [
+      "$(8, 3)$",
+      "$(5, 1)$",
+      "$(-2, -1)$",
+      "$(3, 5)$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A point is inside the circle when $(x-3)^2+(y+1)^2 < 25$. For $(5,1)$: $(5-3)^2+(1+1)^2 = 4+4 = 8 < 25$, so it lies inside. The other points give $41$ (outside), $25$ (on the circle), and $36$ (outside).",
+    "difficulty": "medium",
+    "area": "geometry"
+  },
+  {
+    "id": 273,
+    "question": "A triangle has vertices at $(0, 0)$, $(6, 0)$, and $(2, 5)$. What is the area of the triangle?",
+    "options": [
+      "$12.5$",
+      "$15$",
+      "$20$",
+      "$30$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Using the base from $(0,0)$ to $(6,0)$ of length $6$ and the corresponding height $5$ (the $y$-coordinate of the third vertex), the area is $\\frac{1}{2}\\cdot 6\\cdot 5 = 15$.",
+    "difficulty": "medium",
+    "area": "geometry"
+  },
+  {
+    "id": 274,
+    "question": "Two chords of a circle intersect at a point inside the circle. The first chord is divided by the intersection point into segments of length $6$ and $4$. The second chord is divided into segments of length $3$ and $x$. What is the value of $x$?",
+    "options": [
+      "$8$",
+      "$2$",
+      "$12$",
+      "$18$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When two chords intersect inside a circle, the products of the two segment lengths are equal: $6\\cdot 4 = 3\\cdot x$, so $24 = 3x$ and $x = 8$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 275,
+    "question": "In right triangle $ABC$, the right angle is at $C$, angle $A$ measures $30^\\circ$, and the hypotenuse $AB$ has length $20$. What is the length of side $BC$, which is opposite angle $A$?",
+    "options": [
+      "$5$",
+      "$10$",
+      "$20$",
+      "$10\\sqrt{3}$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "$\\sin A = \\frac{BC}{AB}$, so $BC = AB\\sin 30^\\circ = 20\\cdot\\frac{1}{2} = 10$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 276,
+    "question": "A rectangular box (rectangular prism) has dimensions $3$ by $4$ by $12$. What is the length of the interior diagonal connecting two opposite vertices of the box?",
+    "options": [
+      "$13$",
+      "$12$",
+      "$\\sqrt{19}$",
+      "$19$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The space diagonal of a box with dimensions $a,b,c$ is $\\sqrt{a^2+b^2+c^2} = \\sqrt{3^2+4^2+12^2} = \\sqrt{9+16+144} = \\sqrt{169} = 13$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 277,
+    "question": "A regular hexagon has a side length of $6$ and an apothem of length $3\\sqrt{3}$. What is the area of the hexagon?",
+    "options": [
+      "$18\\sqrt{3}$",
+      "$27\\sqrt{3}$",
+      "$54\\sqrt{3}$",
+      "$108\\sqrt{3}$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The area of a regular polygon is $\\frac{1}{2}\\cdot(\\text{perimeter})\\cdot(\\text{apothem})$. The perimeter is $6\\cdot 6 = 36$, so the area is $\\frac{1}{2}\\cdot 36\\cdot 3\\sqrt{3} = 54\\sqrt{3}$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 278,
+    "question": "Each exterior angle of a certain regular polygon measures $24^\\circ$. How many sides does the polygon have?",
+    "options": [
+      "$12$",
+      "$15$",
+      "$18$",
+      "$24$"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The exterior angles of any convex polygon sum to $360^\\circ$. For a regular polygon with each exterior angle $24^\\circ$, the number of sides is $\\frac{360^\\circ}{24^\\circ} = 15$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 279,
+    "question": "A solid is formed by placing a square pyramid on top of a cube so that the pyramid's square base exactly coincides with the top face of the cube. The cube has edge length $4$, and each of the pyramid's four triangular faces has a slant height of $5$. What is the total surface area of the solid, including its bottom face?",
+    "options": [
+      "$96$",
+      "$104$",
+      "$120$",
+      "$136$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The cube contributes its bottom face and $4$ side faces: $5\\cdot 4^2 = 80$ (the top face is hidden beneath the pyramid). The pyramid contributes $4$ triangles, each of area $\\frac{1}{2}\\cdot 4\\cdot 5 = 10$, totaling $40$. The total surface area is $80 + 40 = 120$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 280,
+    "question": "A right circular cylinder has a radius of $5$ and a height of $12$. A plane slices through the cylinder along its central axis (perpendicular to the two circular bases). What is the area of the resulting cross-section?",
+    "options": [
+      "$60$",
+      "$100$",
+      "$120$",
+      "$25\\pi$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A plane through the central axis cuts the cylinder in a rectangle whose width equals the diameter $2\\cdot 5 = 10$ and whose height equals $12$. The area is $10\\cdot 12 = 120$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 281,
+    "question": "A right circular cone has base radius $r$ and height $h$. If the radius is doubled and the height is halved, the volume of the new cone is how many times the volume of the original cone?",
+    "options": [
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$2$",
+      "$4$"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The volume is $V=\\frac{1}{3}\\pi r^2 h$. Replacing $r$ with $2r$ and $h$ with $\\frac{h}{2}$ gives $\\frac{1}{3}\\pi(2r)^2\\left(\\frac{h}{2}\\right) = \\frac{1}{3}\\pi\\cdot 4r^2\\cdot\\frac{h}{2} = 2\\cdot\\frac{1}{3}\\pi r^2 h$, which is $2$ times the original.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 282,
+    "question": "What is the equation of the perpendicular bisector of the segment with endpoints $(1, 2)$ and $(5, 8)$?",
+    "options": [
+      "$y = -\\frac{2}{3}x + 7$",
+      "$y = \\frac{3}{2}x + \\frac{1}{2}$",
+      "$y = -\\frac{2}{3}x + 5$",
+      "$y = \\frac{2}{3}x + 3$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The midpoint is $(3,5)$ and the segment's slope is $\\frac{8-2}{5-1}=\\frac{3}{2}$, so the perpendicular bisector has slope $-\\frac{2}{3}$ and passes through $(3,5)$: $y - 5 = -\\frac{2}{3}(x-3)$, which simplifies to $y = -\\frac{2}{3}x + 7$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 283,
+    "question": "Point $P(2, -5)$ is reflected across the line $y = -x$. What are the coordinates of its image?",
+    "options": [
+      "$(5, -2)$",
+      "$(-5, 2)$",
+      "$(-2, 5)$",
+      "$(5, 2)$"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reflecting a point $(x,y)$ across the line $y=-x$ maps it to $(-y,-x)$. For $(2,-5)$ this gives $(-(-5),\\,-(2)) = (5,-2)$.",
+    "difficulty": "hard",
+    "area": "geometry"
+  },
+  {
+    "id": 284,
+    "question": "In triangle $ABC$, point $D$ lies on side $AB$ and point $E$ lies on side $AC$ so that segment $DE$ is parallel to side $BC$. Given $AD = 4$, $DB = 6$, and $DE = 5$, what is the length of $BC$?",
+    "options": [
+      "$7.5$",
+      "$8$",
+      "$10$",
+      "$12.5$"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Because $DE\\parallel BC$, triangles $ADE$ and $ABC$ are similar with ratio $\\frac{AD}{AB} = \\frac{4}{4+6} = \\frac{2}{5}$. Then $\\frac{DE}{BC} = \\frac{2}{5}$, so $BC = 5\\cdot\\frac{5}{2} = 12.5$.",
     "difficulty": "hard",
     "area": "geometry"
   }
