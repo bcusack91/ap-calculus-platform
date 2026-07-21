@@ -98,3 +98,16 @@ export function satBankSlugsForCourseTopic(topicSlug: string): SatBankSlug[] | n
   if (SAT_PUNCTUATION_TOPICS.has(topicSlug)) return ['sat-punctuation', 'sat-punctuation-commas-semicolons']
   return null
 }
+
+/**
+ * Competitive matches can be played on granular SAT slugs — the 4 math areas
+ * ('sat-math-algebra', …) and the 4 R&W domains ('sat-rw-conventions', …),
+ * plus the mixed 'sat-rw'. Collapse any of these to the canonical bank slug used
+ * for assignment auto-completion. Non-SAT / already-canonical slugs pass through.
+ */
+export function canonicalSatBankSlug(slug: string): string {
+  if (slug === 'sat-math' || slug.startsWith('sat-math-')) return 'sat-math'
+  if (slug === 'sat-rw-conventions') return 'sat-punctuation'
+  if (slug === 'sat-rw' || slug.startsWith('sat-rw-')) return 'sat-reading'
+  return slug
+}

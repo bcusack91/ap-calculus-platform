@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import type { AssignmentType } from '@prisma/client'
-import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
+import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug } from '@/lib/sat-topic-map'
 
 /**
  * Server-side assignment auto-completion.
@@ -31,15 +31,17 @@ function slugMatches(assignment: { topicSlug: string | null; topicSlugs: unknown
   if (assignment.topicSlug === topicSlug) return true
   const many = assignment.topicSlugs
   if (Array.isArray(many) && many.includes(topicSlug)) return true
-  // SAT competitive matches are played on the 4 bank pseudo-slugs ('sat-math',
-  // 'sat-reading', the 2 punctuation banks) while sat-prep COMPETITIVE_PRACTICE
-  // assignments name curriculum topic slugs (e.g. 'sat-quadratic-equations').
-  // Bridge the two: a bank match completes any assignment whose topics belong
-  // to that bank's section of the course.
-  if ((SAT_BANK_SLUGS as readonly string[]).includes(topicSlug)) {
+  // SAT competitive matches are played on bank pseudo-slugs ('sat-math',
+  // 'sat-reading', the 2 punctuation banks) OR the finer area/domain slugs
+  // ('sat-math-algebra', 'sat-rw-conventions', …), while sat-prep
+  // COMPETITIVE_PRACTICE assignments name curriculum topic slugs (e.g.
+  // 'sat-quadratic-equations'). Collapse the granular slug to its canonical bank,
+  // then complete any assignment whose topics belong to that bank's section.
+  const satBank = canonicalSatBankSlug(topicSlug)
+  if ((SAT_BANK_SLUGS as readonly string[]).includes(satBank)) {
     const assigned = [assignment.topicSlug, ...(Array.isArray(many) ? many : [])]
       .filter((t): t is string => typeof t === 'string')
-    return assigned.some(t => ((satBankSlugsForCourseTopic(t) ?? []) as string[]).includes(topicSlug))
+    return assigned.some(t => ((satBankSlugsForCourseTopic(t) ?? []) as string[]).includes(satBank))
   }
   return false
 }

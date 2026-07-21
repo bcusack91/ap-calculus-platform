@@ -17,16 +17,22 @@ const SAT_SECTIONS: { name: string; emoji: string; topics: { slug: string; title
     name: 'Math',
     emoji: '🧮',
     topics: [
-      { slug: 'sat-math', title: 'Math', desc: 'Algebra, Advanced Math, Problem Solving & Geometry' },
+      { slug: 'sat-math', title: 'Mixed — All Areas', desc: 'A blend of all four math areas' },
+      { slug: 'sat-math-algebra', title: 'Algebra', desc: 'Linear equations, inequalities & systems' },
+      { slug: 'sat-math-advanced', title: 'Advanced Math', desc: 'Quadratics, polynomials, exponentials & functions' },
+      { slug: 'sat-math-problem-solving', title: 'Problem-Solving & Data Analysis', desc: 'Ratios, percents, statistics & probability' },
+      { slug: 'sat-math-geometry', title: 'Geometry & Trigonometry', desc: 'Angles, triangles, circles & trig' },
     ],
   },
   {
     name: 'Reading & Writing',
     emoji: '📖',
     topics: [
-      { slug: 'sat-reading', title: 'Reading', desc: 'Evidence, Main Ideas & Vocabulary in Context' },
-      { slug: 'sat-punctuation-commas-semicolons', title: 'Punctuation: Commas & Semicolons', desc: 'Comma & semicolon rules' },
-      { slug: 'sat-punctuation', title: 'Punctuation: All Marks', desc: 'Commas, dashes, colons, apostrophes & more' },
+      { slug: 'sat-rw', title: 'Mixed — All Domains', desc: 'A blend of all four R&W domains' },
+      { slug: 'sat-rw-information-ideas', title: 'Information & Ideas', desc: 'Central ideas, evidence & inferences' },
+      { slug: 'sat-rw-craft-structure', title: 'Craft & Structure', desc: 'Words in context, purpose & cross-text' },
+      { slug: 'sat-rw-expression', title: 'Expression of Ideas', desc: 'Transitions & rhetorical synthesis' },
+      { slug: 'sat-rw-conventions', title: 'Standard English Conventions', desc: 'Punctuation, grammar & sentence structure' },
     ],
   },
 ]

@@ -28,6 +28,17 @@ async function getApStatisticsQuestions(count?: number, topicSlug?: string): Pro
 async function getApPhysics1Questions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-physics1-bank'); return m.getApPhysics1Questions(count ?? 10, topicSlug) }
 async function getSatMathQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-math-bank'); return m.getSatMathQuestions(count ?? 10) }
 async function getSatReadingQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-reading-bank'); return m.getSatReadingQuestions(count ?? 10) }
+// SAT Math — 4 area-filtered pools (draw only from that area of sat-math-bank)
+async function getSatMathAlgebra(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-math-bank'); return m.getSatMathQuestions(count ?? 10, 'algebra') }
+async function getSatMathAdvanced(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-math-bank'); return m.getSatMathQuestions(count ?? 10, 'advanced') }
+async function getSatMathProblemSolving(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-math-bank'); return m.getSatMathQuestions(count ?? 10, 'problem-solving') }
+async function getSatMathGeometry(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-math-bank'); return m.getSatMathQuestions(count ?? 10, 'geometry') }
+// SAT Reading & Writing — mixed + 4 domain-filtered pools (sat-rw-bank)
+async function getSatRwQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-rw-bank'); return m.getSatRwQuestions(count ?? 10) }
+async function getSatRwInfoIdeas(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-rw-bank'); return m.getSatRwQuestions(count ?? 10, 'information-ideas') }
+async function getSatRwCraftStructure(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-rw-bank'); return m.getSatRwQuestions(count ?? 10, 'craft-structure') }
+async function getSatRwExpression(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-rw-bank'); return m.getSatRwQuestions(count ?? 10, 'expression') }
+async function getSatRwConventions(count?: number): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/sat-rw-bank'); return m.getSatRwQuestions(count ?? 10, 'conventions') }
 async function getActMathQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/act-math-bank'); return m.getActMathQuestions(count ?? 10) }
 async function getActScienceQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/act-science-bank'); return m.getActScienceQuestions(count ?? 10) }
 async function getOChemQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ochem-bank'); return m.getOChemQuestions(count ?? 10) }
@@ -1009,7 +1020,16 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     'ap-statistics': getApStatisticsQuestions,
     'ap-physics1': getApPhysics1Questions,
     'sat-math': getSatMathQuestions,
+    'sat-math-algebra': getSatMathAlgebra,
+    'sat-math-advanced': getSatMathAdvanced,
+    'sat-math-problem-solving': getSatMathProblemSolving,
+    'sat-math-geometry': getSatMathGeometry,
     'sat-reading': getSatReadingQuestions,
+    'sat-rw': getSatRwQuestions,
+    'sat-rw-information-ideas': getSatRwInfoIdeas,
+    'sat-rw-craft-structure': getSatRwCraftStructure,
+    'sat-rw-expression': getSatRwExpression,
+    'sat-rw-conventions': getSatRwConventions,
     'act-math': getActMathQuestions,
     'act-science': getActScienceQuestions,
     'ochem': getOChemQuestions,

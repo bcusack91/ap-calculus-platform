@@ -274,7 +274,25 @@ export async function GET() {
       ),
     }
 
-    // Derived hub-card key: the SAT course card unlocks when ANY of its 4 bank
+    // SAT sub-area (math) / sub-domain (R&W) categories inherit their parent
+    // bank's unlock — the /competitive/sat page lists these finer buckets.
+    const satMathUnlocked = competitiveCategories['sat-math']
+    const satReadingUnlocked = competitiveCategories['sat-reading']
+    const satConventionsUnlocked =
+      competitiveCategories['sat-punctuation'] || competitiveCategories['sat-punctuation-commas-semicolons']
+    competitiveCategories['sat-math-algebra'] = satMathUnlocked
+    competitiveCategories['sat-math-advanced'] = satMathUnlocked
+    competitiveCategories['sat-math-problem-solving'] = satMathUnlocked
+    competitiveCategories['sat-math-geometry'] = satMathUnlocked
+    // Mixed R&W and the three reading-side domains follow the reading unlock;
+    // Standard English Conventions follows the punctuation/grammar unlock.
+    competitiveCategories['sat-rw'] = satReadingUnlocked || satConventionsUnlocked
+    competitiveCategories['sat-rw-information-ideas'] = satReadingUnlocked
+    competitiveCategories['sat-rw-craft-structure'] = satReadingUnlocked
+    competitiveCategories['sat-rw-expression'] = satReadingUnlocked || satConventionsUnlocked
+    competitiveCategories['sat-rw-conventions'] = satConventionsUnlocked || satReadingUnlocked
+
+    // Derived hub-card key: the SAT course card unlocks when ANY of its bank
     // categories is unlocked (the /competitive/sat page then gates per-bank).
     competitiveCategories['sat'] =
       competitiveCategories['sat-math'] ||
