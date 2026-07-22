@@ -19,10 +19,20 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: validated.error }, { status: 400 });
     }
 
+    // v2 (DiceBear) avatars: the client submits params only; the SVG is
+    // generated HERE from the allowlisted style + seed and stored alongside
+    // them. Never accept SVG from the client — the stored markup renders on
+    // other users' screens (leaderboard, matches), so it must stay trusted.
+    let toStore: object = validated.data;
+    if (validated.kind === 'v2') {
+      const { generateAvatarSvg } = await import('@/lib/avatar-styles');
+      toStore = { ...validated.data, svg: generateAvatarSvg(validated.data) };
+    }
+
     // Update user's avatar
     const user = await prisma.user.update({
       where: { id: session.user.id },
-      data: { avatarData: validated.data },
+      data: { avatarData: toStore },
     });
 
     return NextResponse.json({ success: true, avatarData: user.avatarData });

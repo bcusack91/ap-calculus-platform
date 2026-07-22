@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import AvatarBuilder from '@/components/AvatarBuilder';
 import ColorSchemeSelector from '@/components/ColorSchemeSelector';
-import { AvatarData } from '@/types/avatar';
+import { AnyAvatarData } from '@/types/avatar';
 import { StudyHeatmap } from '@/components/StudyHeatmap';
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate';
 import { MilestonesList } from '@/components/MilestoneCelebrations';
@@ -16,7 +16,7 @@ import DeleteAccountDialog from '@/components/DeleteAccountDialog';
 export default function ProfilePage() {
   const { data: session, status } = useSession();
   const router = useRouter();
-  const [avatarData, setAvatarData] = useState<AvatarData | null>(null);
+  const [avatarData, setAvatarData] = useState<AnyAvatarData | null>(null);
   const [loading, setLoading] = useState(true);
   const [saveMessage, setSaveMessage] = useState('');
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function ProfilePage() {
     }
   };
 
-  const handleSaveAvatar = async (newAvatarData: AvatarData) => {
+  const handleSaveAvatar = async (newAvatarData: AnyAvatarData) => {
     try {
       const response = await fetch('/api/user/avatar', {
         method: 'POST',
@@ -53,7 +53,10 @@ export default function ProfilePage() {
       });
 
       if (response.ok) {
-        setAvatarData(newAvatarData);
+        // Use the server's copy: for v2 (DiceBear) avatars it carries the
+        // server-generated SVG the client payload doesn't have.
+        const data = await response.json();
+        setAvatarData(data.avatarData ?? newAvatarData);
         setSaveMessage('Avatar saved successfully! ✓');
         setTimeout(() => setSaveMessage(''), 3000);
       } else {

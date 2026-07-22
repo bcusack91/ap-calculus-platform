@@ -51,13 +51,18 @@ export async function POST(request: Request) {
 
     // avatarData is republished on the public leaderboard — enforce the same
     // strict schema + size cap as /api/user/avatar (optional at signup).
-    let validatedAvatarData = null
+    let validatedAvatarData: object | null = null
     if (avatarData !== undefined && avatarData !== null) {
       const validated = validateAvatarData(avatarData)
       if (!validated.ok) {
         return NextResponse.json({ error: validated.error }, { status: 400 })
       }
       validatedAvatarData = validated.data
+      // v2 (DiceBear) avatars store a server-generated SVG (see /api/user/avatar).
+      if (validated.kind === 'v2') {
+        const { generateAvatarSvg } = await import('@/lib/avatar-styles')
+        validatedAvatarData = { ...validated.data, svg: generateAvatarSvg(validated.data) }
+      }
     }
 
     // Validate email format

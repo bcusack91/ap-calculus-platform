@@ -1,8 +1,14 @@
 import React from 'react';
-import { AvatarData, DEFAULT_AVATAR, AVATAR_OPTIONS, AvatarEmotion } from '@/types/avatar';
+import {
+  AnyAvatarData,
+  DEFAULT_AVATAR,
+  AVATAR_OPTIONS,
+  AvatarEmotion,
+  isDiceBearAvatar,
+} from '@/types/avatar';
 
 interface AvatarDisplayProps {
-  avatarData?: AvatarData | null;
+  avatarData?: AnyAvatarData | null;
   size?: number;
   className?: string;
   emotion?: AvatarEmotion;
@@ -18,14 +24,45 @@ const PRESET_EMOTIONS: Record<string, Record<AvatarEmotion, string>> = {
   owl: { neutral: '🦉', happy: '🤓', sad: '😪' },
 };
 
-export default function AvatarDisplay({ 
-  avatarData, 
+export default function AvatarDisplay({
+  avatarData,
   size = 80,
   className = '',
   emotion = 'neutral'
 }: AvatarDisplayProps) {
-  const avatar = avatarData || DEFAULT_AVATAR;
-  
+  // v2 DiceBear avatar: render the server-generated SVG. The <img> data-URI
+  // keeps the markup inert, and display surfaces never load @dicebear itself.
+  if (isDiceBearAvatar(avatarData) && avatarData.svg) {
+    const src = `data:image/svg+xml;utf8,${encodeURIComponent(avatarData.svg)}`;
+    return (
+      <div
+        className={`relative inline-block rounded-full ${className}`}
+        style={{ width: size, height: size }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element -- local data URI; next/image adds nothing */}
+        <img
+          src={src}
+          width={size}
+          height={size}
+          alt=""
+          draggable={false}
+          className={`w-full h-full rounded-full select-none ${emotion === 'sad' ? 'saturate-50' : ''}`}
+        />
+        {emotion !== 'neutral' && (
+          <span
+            aria-hidden
+            className={`absolute -bottom-1 -right-1 leading-none select-none ${emotion === 'happy' ? 'animate-bounce' : ''}`}
+            style={{ fontSize: Math.max(12, size * 0.28) }}
+          >
+            {emotion === 'happy' ? '🎉' : '💧'}
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  const avatar = (avatarData as typeof DEFAULT_AVATAR | null) || DEFAULT_AVATAR;
+
   // If it's a preset avatar, show emoji with emotion
   if (avatar.isPreset && avatar.preset) {
     const emoji = PRESET_EMOTIONS[avatar.preset]?.[emotion] || PRESET_EMOTIONS[avatar.preset]?.neutral || '🙂';

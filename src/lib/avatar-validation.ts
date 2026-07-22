@@ -18,17 +18,44 @@ export const avatarDataSchema = z
   })
   .strict()
 
+/**
+ * v2 avatars: DiceBear params only. Clients NEVER submit SVG — the server
+ * generates it from these validated params (the stored SVG is republished on
+ * the public leaderboard, so accepting client SVG would be an XSS vector).
+ */
+export const diceBearAvatarSchema = z
+  .object({
+    v: z.literal(2),
+    style: z.enum([
+      'adventurer',
+      'big-smile',
+      'lorelei',
+      'micah',
+      'open-peeps',
+      'bottts',
+      'fun-emoji',
+    ]),
+    seed: z.string().regex(/^[A-Za-z0-9 _.\-]{1,64}$/, 'Invalid seed'),
+    backgroundColor: z.string().regex(/^[0-9a-fA-F]{6}$/).optional(),
+  })
+  .strict()
+
 export type ValidatedAvatarData = z.infer<typeof avatarDataSchema>
+export type ValidatedDiceBearAvatar = z.infer<typeof diceBearAvatarSchema>
 
 /** Maximum serialized size for an avatar payload (bytes). */
 export const MAX_AVATAR_JSON_BYTES = 2048
 
 /**
- * Validate an unknown avatar payload. Returns the parsed data or an error message.
+ * Validate an unknown avatar payload (legacy v1 face/preset OR v2 DiceBear
+ * params). Returns the parsed data or an error message.
  */
 export function validateAvatarData(
   payload: unknown
-): { ok: true; data: ValidatedAvatarData } | { ok: false; error: string } {
+):
+  | { ok: true; kind: 'v1'; data: ValidatedAvatarData }
+  | { ok: true; kind: 'v2'; data: ValidatedDiceBearAvatar }
+  | { ok: false; error: string } {
   try {
     if (Buffer.byteLength(JSON.stringify(payload) ?? '', 'utf8') > MAX_AVATAR_JSON_BYTES) {
       return { ok: false, error: 'Avatar data is too large' }
@@ -37,9 +64,17 @@ export function validateAvatarData(
     return { ok: false, error: 'Avatar data is not serializable' }
   }
 
+  if (payload && typeof payload === 'object' && (payload as { v?: unknown }).v === 2) {
+    const v2 = diceBearAvatarSchema.safeParse(payload)
+    if (!v2.success) {
+      return { ok: false, error: 'Invalid avatar data' }
+    }
+    return { ok: true, kind: 'v2', data: v2.data }
+  }
+
   const result = avatarDataSchema.safeParse(payload)
   if (!result.success) {
     return { ok: false, error: 'Invalid avatar data' }
   }
-  return { ok: true, data: result.data }
+  return { ok: true, kind: 'v1', data: result.data }
 }

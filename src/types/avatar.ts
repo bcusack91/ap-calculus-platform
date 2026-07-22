@@ -14,6 +14,57 @@ export interface AvatarData {
   preset?: string;
 }
 
+// ---- v2: DiceBear-illustrated avatars ------------------------------------
+// Professionally drawn styles generated locally via @dicebear (no network
+// calls). Clients only ever submit {v, style, seed, backgroundColor}; the
+// SERVER generates and stores the `svg` (never accepted from clients — the
+// stored SVG is republished on the leaderboard, so it must stay trusted).
+
+export const DICEBEAR_STYLE_IDS = [
+  'adventurer',
+  'big-smile',
+  'lorelei',
+  'micah',
+  'open-peeps',
+  'bottts',
+  'fun-emoji',
+] as const;
+export type DiceBearStyleId = (typeof DICEBEAR_STYLE_IDS)[number];
+
+export interface DiceBearAvatarData {
+  v: 2;
+  style: DiceBearStyleId;
+  seed: string;
+  /** 6-digit hex WITHOUT '#', e.g. 'b6e3f4'. Omitted = transparent. */
+  backgroundColor?: string;
+  /** Server-generated SVG markup (trusted). */
+  svg?: string;
+}
+
+export type AnyAvatarData = AvatarData | DiceBearAvatarData;
+
+export function isDiceBearAvatar(
+  d: AnyAvatarData | null | undefined
+): d is DiceBearAvatarData {
+  return !!d && (d as DiceBearAvatarData).v === 2;
+}
+
+/** Soft pastel backgrounds offered in the builder (hex without '#'). */
+export const AVATAR_BACKGROUNDS = [
+  'b6e3f4', // sky
+  'c0aede', // lavender
+  'd1d4f9', // periwinkle
+  'ffd5dc', // pink
+  'ffdfbf', // peach
+  'c8f7c5', // mint
+  'fff3b0', // lemon
+] as const;
+
+/** Fun starter seeds shown as one-tap presets in the builder. */
+export const AVATAR_SEED_PRESETS = [
+  'Comet', 'Nova', 'Pixel', 'Ace', 'Luna', 'Turbo', 'Echo', 'Mochi',
+] as const;
+
 export const AVATAR_OPTIONS = {
   skinTones: [
     { id: 'light', color: '#FFE0BD' },
