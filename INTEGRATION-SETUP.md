@@ -6,15 +6,20 @@ _Everything below is the account/key/DNS side that Claude can't do for you. All 
 
 **How to verify afterward:** sign in as an admin → **/admin → 🩺 System tab**. Each service shows 🟢 Ready / 🟡 Needs setup / ⚪ Off, and exactly which variables are still missing. That page reads the *running* deployment, so check it after redeploying.
 
-Priority order: **1 (email) → 2 (monitoring) → 3 (privacy alias) → 4 (Stripe, when you're ready to charge) → 5 (parent emails).**
+Priority order: **1 (email — likely already done, verify) → 2 (monitoring) → 3 (privacy alias) → 4 (Stripe, when you're ready to charge) → 5 (parent emails).**
 
 ---
 
-## 1. 🔴 Email (Resend) — do this first; password reset is currently broken
+## 1. ✅ Email (Resend) — you already set this up (~early July 2026); just verify
 
-Right now, with no email provider configured, a student who clicks "Forgot password" gets an **error**, and email verification / digests / parent emails never send. This is the highest user-impact fix.
+**Correction:** an earlier version of this guide said email was broken. That was wrong — it came from a stale checklist (frozen June 28, before you configured Resend), not a live check. Your `SMTP_FROM` is `Study Mondo <brendan@cusackprep.com>`, so **cusackprep.com** is your verified Resend domain, and the `RESEND_API_KEY` lives in Vercel prod (not in local `.env`, which is correct for a secret).
 
-### Steps
+### Verify it's healthy (2 minutes)
+- **/admin → 🩺 System tab** → **Email delivery** should show 🟢 Ready (this reads production's real env).
+- **Functional test:** on the live site, go to the forgot-password page, enter your own email, and confirm the reset email arrives from `brendan@cusackprep.com`.
+- If either fails, the usual causes are: the `cusackprep.com` domain verification lapsed in Resend (Resend → Domains — re-verify the DNS records), the free-tier send cap was hit (Resend → Usage), or the API key was rotated. Fix in the Resend dashboard, then confirm on the System tab.
+
+### Original setup steps (for reference / if you ever re-provision)
 1. Create an account at **https://resend.com** (free tier = 3,000 emails/mo, 100/day — fine to start).
 2. **Add your domain:** Resend dashboard → **Domains → Add Domain**. Use a **subdomain** for sending, e.g. `send.studymondo.com` (keeps your main domain's email reputation separate — recommended).
 3. Resend shows you **DNS records** (SPF/`MX`, `DKIM`, and usually a `DMARC` record). Add these in **GoDaddy** (your DNS host): productivity.godaddy.com isn't it — go to **dcc.godaddy.com** → your domain → **DNS → Add** each record exactly as Resend lists. Then click **Verify** in Resend (propagation is usually minutes, sometimes up to an hour).

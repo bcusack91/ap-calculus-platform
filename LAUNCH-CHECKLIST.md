@@ -38,7 +38,7 @@ These need **you** — an account, a signature, a dashboard setting, or a secret
 Set these for **Production** (and Preview if you test there). Never commit them to git.
 
 - [x] 🟠 `ANTHROPIC_API_KEY` — **added.** Student AI tutor (Haiku 4.5), teacher AI flashcard generation, and AI free-response grading are live.
-- [ ] 🔴 `RESEND_API_KEY` + verified sending domain — **emails (password reset, email verification, weekly digests, parent emails) silently fail without this.** Plus `SMTP_FROM` (e.g. `Study Mondo <noreply@send.studymondo.com>`) matching the verified domain. See the RESEND setup steps. Confirm `AUTH_SECRET`/`NEXTAUTH_SECRET` is set too (signs unsubscribe/confirm links).
+- [x] 🔴 `RESEND_API_KEY` + verified sending domain — **DONE (owner configured ~early July 2026, tested working).** `SMTP_FROM="Study Mondo <brendan@cusackprep.com>"`, so **cusackprep.com** is the verified Resend domain. Key lives in Vercel prod env only (not in `.env` — correct for a secret). `AUTH_SECRET`/`NEXTAUTH_SECRET` also set. _Verify live state anytime via `/admin` → 🩺 System tab, not this line._
 - [ ] 🟠 `STRIPE_SECRET_KEY` — Premium checkout returns HTTP 503 ("checkout isn't switched on yet") until this is set. **(Currently in Stripe TEST mode — intentional.)**
 - [ ] 🟠 `STRIPE_WEBHOOK_SECRET` — from the Stripe webhook endpoint you create (see 1d).
 - [ ] 🟠 `STRIPE_PREMIUM_PRICE_ID` — the monthly price ID (`price_…`) from Stripe.
