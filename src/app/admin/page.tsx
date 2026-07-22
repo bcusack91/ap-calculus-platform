@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { DistrictRollup } from '@/components/admin/DistrictRollup'
 import { ImpactAnalytics } from '@/components/admin/ImpactAnalytics'
 import { SchoolsAdmin } from '@/components/admin/SchoolsAdmin'
+import { SystemHealth } from '@/components/admin/SystemHealth'
 
 interface UserResult {
   id: string
@@ -160,7 +161,7 @@ const ROLES = [
 export default function AdminPanel() {
   const router = useRouter()
   const { status } = useSession()
-  const [tab, setTab] = useState<'analytics' | 'districts' | 'impact' | 'schools' | 'users'>('analytics')
+  const [tab, setTab] = useState<'analytics' | 'districts' | 'impact' | 'schools' | 'users' | 'system'>('analytics')
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
   const [analyticsLoading, setAnalyticsLoading] = useState(true)
   const [retention, setRetention] = useState<RetentionData | null>(null)
@@ -379,7 +380,7 @@ export default function AdminPanel() {
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 overflow-x-auto">
-          {(['analytics', 'districts', 'impact', 'schools', 'users'] as const).map((t) => (
+          {(['analytics', 'districts', 'impact', 'schools', 'users', 'system'] as const).map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -389,7 +390,7 @@ export default function AdminPanel() {
                   : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100'
               }`}
             >
-              {t === 'analytics' ? '📊 Analytics' : t === 'districts' ? '🏙️ Districts' : t === 'impact' ? '📈 Impact' : t === 'schools' ? '🏫 Schools' : '👥 Users'}
+              {t === 'analytics' ? '📊 Analytics' : t === 'districts' ? '🏙️ Districts' : t === 'impact' ? '📈 Impact' : t === 'schools' ? '🏫 Schools' : t === 'users' ? '👥 Users' : '🩺 System'}
             </button>
           ))}
         </div>
@@ -993,6 +994,8 @@ export default function AdminPanel() {
         {tab === 'impact' && <ImpactAnalytics />}
 
         {tab === 'schools' && <SchoolsAdmin />}
+
+        {tab === 'system' && <SystemHealth />}
 
         {tab === 'users' && (
           <div>
