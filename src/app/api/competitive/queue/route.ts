@@ -114,6 +114,11 @@ export async function POST(req: NextRequest) {
         topicSlug,
         userId: { not: user.id },
         mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
+        // Hard filter: only pair players who queued the SAME game mode. (This
+        // also fixes a latent bug where a Speed Race joiner could claim an
+        // Accuracy waiter; critical for CHAOS, which must never leak power-ups
+        // into a ranked opponent's match.)
+        gameMode: gameMode || 'SPEED_RACE',
       }
       const candidate =
         (await tx.matchmakingQueue.findFirst({ where: { ...baseWhere, tier: tier ?? null }, orderBy: { joinedAt: 'asc' }, select: { id: true } }))
@@ -309,6 +314,8 @@ export async function GET() {
         topicSlug: entry.topicSlug,
         userId: { not: user.id },
         mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
+        // Same-mode pairing only (mirrors the POST handler's hard filter).
+        gameMode: entry.gameMode || 'SPEED_RACE',
       }
       const candidate =
         (await tx.matchmakingQueue.findFirst({ where: { ...baseWhere, tier: entry.tier ?? null }, orderBy: { joinedAt: 'asc' }, select: { id: true } }))
@@ -336,7 +343,7 @@ export async function GET() {
         data: {
           player1Id: opponent.userId,
           player2Id: user.id,
-          gameMode: (entry.gameMode as 'SPEED_RACE') || 'SPEED_RACE',
+          gameMode: (entry.gameMode as 'SPEED_RACE' | 'ACCURACY_CHALLENGE' | 'CHAOS') || 'SPEED_RACE',
           topicSlug: entry.topicSlug,
           player1MMRBefore: opponent.mmr,
           player2MMRBefore: entry.mmr,

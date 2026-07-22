@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma';
 import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
 import { answerSubmissionSchema, parseBody } from '@/lib/validations';
 import { recordCompetitiveAssignment } from '@/lib/assignment-autocomplete';
+import { emptyPlayerPowerUps, rollPowerUpDrop, MAX_INVENTORY, type PowerUpsState, type PowerUpId } from '@/lib/chaos-powerups';
 import type { Prisma } from '@prisma/client';
 
 interface MatchGameData {
@@ -14,6 +15,8 @@ interface MatchGameData {
   player2Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
   aiDifficulty?: 'easy' | 'medium' | 'hard';
   isPracticeMatch?: boolean;
+  lobbyCode?: string;
+  powerUps?: PowerUpsState;
 }
 
 export async function POST(
@@ -321,12 +324,27 @@ export async function POST(
       };
     }
 
-    // ---- Standard SPEED_RACE mode (first to 10) ----
+    // ---- Standard SPEED_RACE / CHAOS mode (first to 10) ----
+    // CHAOS plays by Speed Race rules plus power-ups: a consumed Double Points
+    // makes the next correct answer worth 2, and every answered question rolls
+    // for an item drop with Mario Kart-style rubber-banding (the trailing
+    // player draws more often and from a stronger table).
+    const isChaos = match.gameMode === 'CHAOS';
+    if (isChaos && !gameData.powerUps) {
+      gameData.powerUps = { player1: emptyPlayerPowerUps(), player2: emptyPlayerPowerUps() };
+    }
+    const myPowerUps = isChaos
+      ? (isPlayer1 ? gameData.powerUps!.player1 : gameData.powerUps!.player2)
+      : null;
+
     if (isCorrect) {
+      // Double Points (CHAOS): consume the buff, score 2 instead of 1.
+      const points = myPowerUps?.doubleNext ? 2 : 1;
+      if (myPowerUps?.doubleNext) myPowerUps.doubleNext = false;
       if (isPlayer1) {
-        player1Score += 1;
+        player1Score += points;
       } else {
-        player2Score += 1;
+        player2Score += points;
       }
     } else {
       if (isPlayer1) {
@@ -337,6 +355,17 @@ export async function POST(
     }
 
     const matchComplete = player1Score >= 10 || player2Score >= 10;
+
+    // CHAOS item drop (only while the match continues): roll from the
+    // rubber-banded table using the post-answer standings.
+    let droppedPowerUp: PowerUpId | null = null;
+    if (isChaos && myPowerUps && !matchComplete && !deadlinePassed) {
+      const deficit = isPlayer1 ? player2Score - player1Score : player1Score - player2Score;
+      if (myPowerUps.inventory.length < MAX_INVENTORY) {
+        droppedPowerUp = rollPowerUpDrop(deficit);
+        if (droppedPowerUp) myPowerUps.inventory.push(droppedPowerUp);
+      }
+    }
     let winnerId = match.winnerId;
     let completedAt = match.completedAt;
 
@@ -366,8 +395,10 @@ export async function POST(
       const player1Won = winnerId === match.player1Id;
       const player2Won = winnerId === match.player2Id;
 
-      const player1MMRChange = calculateMMRChange(player1MMR, player2MMR, player1Won, player1TotalMatches);
-      const player2MMRChange = calculateMMRChange(player2MMR, player1MMR, player2Won, player2TotalMatches);
+      // CHAOS matches are UNRANKED: power-ups (50/50, double points, attacks)
+      // would distort MMR, so no rating movement at all.
+      const player1MMRChange = isChaos ? 0 : calculateMMRChange(player1MMR, player2MMR, player1Won, player1TotalMatches);
+      const player2MMRChange = isChaos ? 0 : calculateMMRChange(player2MMR, player1MMR, player2Won, player2TotalMatches);
 
       const player1MMRAfter = player1MMR + player1MMRChange;
       const player2MMRAfter = player2MMR + player2MMRChange;
@@ -380,14 +411,15 @@ export async function POST(
           completedAt,
           player1Score,
           player2Score,
+          // Spread the full gameData so mode-specific keys (powerUps,
+          // lobbyCode, ...) survive the write.
           gameData: {
+            ...gameData,
             questions,
             player1QuestionIndex,
             player2QuestionIndex,
             player1Answers: gameData.player1Answers || [],
             player2Answers: gameData.player2Answers || [],
-            ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
-            ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           } as unknown as Prisma.InputJsonValue,
           player1MMRAfter,
           player2MMRAfter,
@@ -396,7 +428,8 @@ export async function POST(
 
       // Practice (vs-AI) matches finalize the RECORD only — skip all ranked
       // stat / MMR-history writes so wins/MMR can't be farmed vs a bot (#2).
-      if (!gameData.isPracticeMatch) {
+      // CHAOS matches are likewise unranked: no profile stats, no MMR history.
+      if (!gameData.isPracticeMatch && !isChaos) {
         await tx.competitiveProfile.update({
           where: { userId: match.player1Id },
           data: {
@@ -483,14 +516,15 @@ export async function POST(
         data: {
           player1Score,
           player2Score,
+          // Spread the full gameData so mode-specific keys (powerUps,
+          // lobbyCode, ...) survive the write.
           gameData: {
+            ...gameData,
             questions,
             player1QuestionIndex,
             player2QuestionIndex,
             player1Answers: gameData.player1Answers || [],
             player2Answers: gameData.player2Answers || [],
-            ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
-            ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           } as unknown as Prisma.InputJsonValue,
         },
       });
@@ -502,6 +536,9 @@ export async function POST(
           matchComplete: false,
           currentScore: isPlayer1 ? player1Score : player2Score,
           opponentScore: isPlayer1 ? player2Score : player1Score,
+          // CHAOS: the item this answer earned (null if none) — lets the
+          // client toast the drop immediately instead of waiting for a poll.
+          ...(isChaos ? { drop: droppedPowerUp } : {}),
         },
         status: 200,
       };

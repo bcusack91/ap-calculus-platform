@@ -1,12 +1,22 @@
 'use client';
 
-import { useEffect, useState, use, useCallback, useRef } from 'react';
+import { useEffect, useState, use, useCallback, useMemo, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import AvatarDisplay from '@/components/AvatarDisplay';
 import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
+import { POWER_UPS, activeEffects, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
+import {
+  PowerUpBar,
+  InkSplatOverlay,
+  ReducedMotionCover,
+  ChaosToasts,
+  useChaosNow,
+  usePrefersReducedMotion,
+  type ChaosToast,
+} from '@/components/ChaosMode';
 import 'katex/dist/katex.min.css';
 
 const CompetitiveUnitCircle = dynamic(
@@ -67,6 +77,7 @@ interface MatchState {
     player1Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
     player2Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
     lobbyCode?: string;
+    powerUps?: PowerUpsState;
     [key: string]: unknown;
   };
   status: 'IN_PROGRESS' | 'COMPLETED' | 'PENDING';
@@ -123,6 +134,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [showReview, setShowReview] = useState(false);
   const matchStateRef = useRef<MatchState | null>(null);
   const [accuracyTimer, setAccuracyTimer] = useState<number | null>(null);
+
+  // ---- Chaos Mode state ----
+  const [chaosToasts, setChaosToasts] = useState<ChaosToast[]>([]);
+  const [fiftyFiftyElim, setFiftyFiftyElim] = useState<{ questionIndex: number; eliminated: number[] } | null>(null);
+  const [displayOrder, setDisplayOrder] = useState<number[] | null>(null);
+  const [usingPowerUp, setUsingPowerUp] = useState(false);
+  const seenEffectIds = useRef<Set<string>>(new Set());
+  const reducedMotion = usePrefersReducedMotion();
 
   // Pre-load KaTeX lazily on mount
   useEffect(() => { preloadKatex() }, []);
@@ -204,6 +223,136 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [matchState?.startedAt, matchState?.gameMode, matchState?.status, matchId, fetchMatchState]);
+
+  // ---- Chaos Mode derivations + effects ----
+  const isChaosMode = matchState?.gameMode === 'CHAOS';
+  const amPlayer1 = !!matchState && currentUserId === matchState.player1Id;
+  const myPowerUps = isChaosMode
+    ? (amPlayer1 ? matchState?.gameData?.powerUps?.player1 : matchState?.gameData?.powerUps?.player2)
+    : undefined;
+  const chaosNow = useChaosNow(myPowerUps?.effects);
+  const myEffectsList = myPowerUps?.effects;
+  const myActiveEffects = useMemo(
+    () => (isChaosMode ? activeEffects(myEffectsList, chaosNow) : []),
+    [isChaosMode, myEffectsList, chaosNow]
+  );
+  const flipActive = myActiveEffects.some((e) => e.type === 'screen-flip');
+  const fogActive = myActiveEffects.some((e) => e.type === 'fog');
+  const slipperyActive = myActiveEffects.some((e) => e.type === 'slippery');
+  const inkEffect = myActiveEffects.find((e) => e.type === 'ink-splat') || null;
+
+  const myQuestionIndexLive = matchState
+    ? (amPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex)
+    : 0;
+  const myCurrentOptionCount = matchState?.questions?.[myQuestionIndexLive]?.options?.length ?? 0;
+
+  const addChaosToast = useCallback((text: string) => {
+    const id = `${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+    setChaosToasts((t) => [...t, { id, text }]);
+    setTimeout(() => setChaosToasts((t) => t.filter((x) => x.id !== id)), 2600);
+  }, []);
+
+  // Toast attacks as they arrive via polling (each effect id toasts once).
+  useEffect(() => {
+    for (const e of myActiveEffects) {
+      if (!seenEffectIds.current.has(e.id)) {
+        seenEffectIds.current.add(e.id);
+        const def = POWER_UPS[e.type];
+        addChaosToast(`${def.icon} ${def.name} from ${e.from}!`);
+      }
+    }
+  }, [myActiveEffects, addChaosToast]);
+
+  // Slippery Answers: re-shuffle the DISPLAYED option order every 800ms while
+  // active. Presentation-only — submissions always use the original index.
+  useEffect(() => {
+    if (!slipperyActive || reducedMotion || myCurrentOptionCount < 2) {
+      setDisplayOrder(null);
+      return;
+    }
+    const shuffle = () =>
+      setDisplayOrder(() => {
+        const a = Array.from({ length: myCurrentOptionCount }, (_, i) => i);
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      });
+    shuffle();
+    const t = setInterval(shuffle, 800);
+    return () => {
+      clearInterval(t);
+      setDisplayOrder(null);
+    };
+  }, [slipperyActive, reducedMotion, myCurrentOptionCount]);
+
+  // Reset per-question chaos state when advancing to the next question.
+  useEffect(() => {
+    setFiftyFiftyElim(null);
+    setDisplayOrder(null);
+  }, [myQuestionIndexLive]);
+
+  const useChaosPowerUp = useCallback(async (id: PowerUpId) => {
+    if (usingPowerUp) return;
+    setUsingPowerUp(true);
+    try {
+      const res = await fetch(`/api/competitive/match/${matchId}/powerup`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ powerUpId: id }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        addChaosToast(`⚠️ ${data?.error || "Couldn't use power-up"}`);
+        return;
+      }
+      if (data.fiftyFifty) setFiftyFiftyElim(data.fiftyFifty);
+      const def = POWER_UPS[id];
+      if (data.outcome === 'blocked') addChaosToast('🛡️ Blocked by their shield!');
+      else if (def.kind === 'attack') addChaosToast(`${def.icon} ${def.name} launched!`);
+      else if (id === 'shield') addChaosToast('🛡️ Shield armed!');
+      else if (id === 'double-points') addChaosToast('⚡ Double points armed!');
+      await fetchMatchState();
+    } catch {
+      addChaosToast("⚠️ Couldn't use power-up");
+    } finally {
+      setUsingPowerUp(false);
+    }
+  }, [matchId, usingPowerUp, addChaosToast, fetchMatchState]);
+
+  // Practice-bot mischief: in chaos vs-AI matches the bot occasionally fires
+  // its own items back at the player (client-driven, like its answers).
+  const botIsPlayer1 = !!matchState?.player1IsAI;
+  const botIsPlayer2 = !!matchState?.player2IsAI;
+  const chaosBotActive = !!(
+    isChaosMode &&
+    matchState?.status === 'IN_PROGRESS' &&
+    matchState?.gameData?.isPracticeMatch &&
+    (botIsPlayer1 || botIsPlayer2)
+  );
+  useEffect(() => {
+    if (!chaosBotActive) return;
+    const t = setInterval(async () => {
+      const st = matchStateRef.current;
+      if (!st || st.status !== 'IN_PROGRESS') return;
+      const botPU = botIsPlayer1 ? st.gameData?.powerUps?.player1 : st.gameData?.powerUps?.player2;
+      const inv = botPU?.inventory || [];
+      if (inv.length === 0 || Math.random() > 0.45) return;
+      const pick = inv[Math.floor(Math.random() * inv.length)];
+      const botId = botIsPlayer1 ? st.player1Id : st.player2Id;
+      try {
+        await fetch(`/api/competitive/match/${matchId}/powerup`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ powerUpId: pick, playerId: botId }),
+        });
+      } catch {
+        /* bot mischief is best-effort */
+      }
+    }, 7000);
+    return () => clearInterval(t);
+  }, [chaosBotActive, botIsPlayer1, botIsPlayer2, matchId]);
 
   // Render math in prompt (for both unit circle and multiple-choice)
   // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
@@ -417,6 +566,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
       const data = await response.json();
 
+      // CHAOS: toast the item this answer earned (server rolls the drop).
+      if (typeof data.drop === 'string' && POWER_UPS[data.drop as PowerUpId]) {
+        const def = POWER_UPS[data.drop as PowerUpId];
+        addChaosToast(`🎁 You got ${def.icon} ${def.name}!`);
+      }
+
       // The correct index for THIS question comes back from the answer POST
       // (the GET no longer leaks it for ranked matches — see #1). Fall back to
       // the question's own answerIndex for AI practice matches, where it's still
@@ -566,6 +721,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             }`}>
               {isTie ? "It's a Tie!" : isWinner ? 'Victory!' : 'Defeat'}
             </h1>
+
+            {matchState.gameMode === 'CHAOS' && (
+              <p className="mb-4 text-sm font-semibold text-purple-500 dark:text-purple-400">
+                🎲 Chaos Mode — unranked match (no MMR change)
+              </p>
+            )}
 
             {/* MMR Change Display */}
             {mmrChange !== 0 && (
@@ -827,7 +988,18 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     : `${matchState.player2Score}/10`;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8">
+    <div className={`min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-24' : ''}`}>
+      {/* Chaos Mode HUD extras: drop/attack toasts + floating inventory bar */}
+      <ChaosToasts toasts={chaosToasts} />
+      {isChaosMode && matchState.status === 'IN_PROGRESS' && (
+        <PowerUpBar
+          inventory={myPowerUps?.inventory || []}
+          shield={myPowerUps?.shield}
+          doubleNext={myPowerUps?.doubleNext}
+          disabled={usingPowerUp}
+          onUse={useChaosPowerUp}
+        />
+      )}
       <div className="max-w-7xl mx-auto">
         {/* Mobile battle HUD — replaces the two side panels on small screens so the
             question is visible without scrolling and the opponent stays in view.
@@ -947,6 +1119,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           </div>
         )}
+        {/* Chaos effect layer: flip rotates the whole play area; ink splats
+            overlay it; reduced-motion users get a static cover instead. */}
+        <div className={`relative transition-transform duration-500 ${flipActive && !reducedMotion ? 'rotate-180' : ''}`}>
+          {inkEffect && <InkSplatOverlay effect={inkEffect} now={chaosNow} />}
+          {(flipActive || slipperyActive) && reducedMotion && <ReducedMotionCover label="⚡ Chaos incoming!" />}
         {/* Question prompt */}
         {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
@@ -968,7 +1145,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           )}
           {/* overflow-x-auto keeps wide KaTeX scrollable instead of blowing out the phone viewport */}
-          <h2 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto" key={currentQuestion.prompt || currentQuestion.question}>
+          <h2 className={`text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
             {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
           </h2>
 
@@ -997,7 +1174,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         {currentQuestion.type === 'multiple-choice' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8">
             <div className="space-y-3 max-w-2xl mx-auto">
-              {currentQuestion.options?.map((option, index) => {
+              {/* Slippery Answers reorders the DISPLAYED sequence only — `index`
+                  is always the question's ORIGINAL option index, so styling and
+                  submissions stay correct while buttons jump around. */}
+              {(displayOrder ?? currentQuestion.options?.map((_, i) => i) ?? []).map((index) => {
+                const option = currentQuestion.options?.[index];
+                if (option === undefined) return null;
                 const isSelected = selectedPosition === index;
                 // The correct index is learned from the answer POST response
                 // (correctAnswerIndex state) for ranked matches; fall back to the
@@ -1007,12 +1189,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 const isCorrect = knownCorrectIndex !== undefined && index === knownCorrectIndex;
                 const showCorrect = isFeedbackCurrent && isCorrect;
                 const showIncorrect = isFeedbackCurrent && isSelected && !isCorrect;
-                
+                // 50/50: wrong options the server told THIS player to eliminate.
+                const ffElim = fiftyFiftyElim && fiftyFiftyElim.questionIndex === playerQuestionIndex
+                  ? fiftyFiftyElim.eliminated
+                  : (myPowerUps?.fiftyFifty && myPowerUps.fiftyFifty.questionIndex === playerQuestionIndex
+                      ? myPowerUps.fiftyFifty.eliminated
+                      : []);
+                const isEliminated = ffElim.includes(index);
+
                 return (
                   <button
                     key={index}
                     onClick={() => handleOptionSelect(index)}
-                    disabled={isSubmitting || isFeedbackCurrent}
+                    disabled={isSubmitting || isFeedbackCurrent || isEliminated}
                     className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
                       showCorrect
                         ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
@@ -1022,7 +1211,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                         ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
                         : 'border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600'
                     } ${
-                      isSubmitting || isFeedbackCurrent
+                      isEliminated
+                        ? 'cursor-not-allowed opacity-30'
+                        : isSubmitting || isFeedbackCurrent
                         ? 'cursor-not-allowed opacity-75'
                         : 'cursor-pointer hover:shadow-md active:scale-[0.99] active:bg-purple-50 dark:active:bg-purple-900/20'
                     }`}
@@ -1084,6 +1275,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         )}
       </>
       )}
+        </div>
+        {/* end chaos effect layer */}
       </div>
 
           {/* Right Panel - Player 2 (desktop only; mobile uses the HUD above) */}

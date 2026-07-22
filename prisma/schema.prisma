@@ -929,6 +929,7 @@ enum CompetitiveMode {
   SURVIVAL
   MIXED
   TEAM_BATTLE
+  CHAOS
 }
 
 enum MatchStatus {

@@ -13,7 +13,7 @@ export type AnswerSubmission = z.infer<typeof answerSubmissionSchema>
 // ─── Competitive Queue ─────────────────────────────────────────────────
 export const queueJoinSchema = z.object({
   topicSlug: z.string().min(1).max(200),
-  gameMode: z.enum(['SPEED_RACE', 'ACCURACY_CHALLENGE', 'SURVIVAL', 'MIXED']).optional(),
+  gameMode: z.enum(['SPEED_RACE', 'ACCURACY_CHALLENGE', 'SURVIVAL', 'MIXED', 'CHAOS']).optional(),
   tier: z.enum(['easy', 'medium', 'hard']).optional(),
 })
 

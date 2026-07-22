@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { GAME_MODE_CARDS } from '@/lib/competitive-modes';
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
@@ -146,8 +147,8 @@ export default function APCalculusABCompetitivePage() {
           <>
             <div className="mb-8">
               <h2 className="text-xl font-bold text-center text-gray-900 dark:text-white mb-4">Choose Game Mode</h2>
-              <div className="grid sm:grid-cols-3 gap-4">
-                {[{ key: 'SPEED_RACE', icon: '⚡', title: 'Speed Race', desc: 'First to 10 correct wins!' }, { key: 'ACCURACY_CHALLENGE', icon: '🎯', title: 'Accuracy', desc: 'Highest accuracy on 20 wins!' }, { key: 'TEAM_BATTLE', icon: '👥', title: 'Team 2v2', desc: 'First team to 15 wins!' }].map(mode => (
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                {GAME_MODE_CARDS.map(mode => (
                   <button key={mode.key} onClick={() => setSelectedMode(mode.key)} className={`p-5 rounded-xl border transition-all text-left ${selectedMode === mode.key ? 'ring-2 ring-red-500 border-red-300 dark:border-red-600 bg-white dark:bg-gray-800 shadow-lg' : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md'}`}>
                     <h3 className="text-lg font-bold mb-1">{mode.icon} {mode.title}</h3><p className="text-xs text-gray-600 dark:text-gray-400">{mode.desc}</p>
                   </button>

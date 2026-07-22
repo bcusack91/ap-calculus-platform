@@ -10,6 +10,7 @@ interface MatchGameData {
   player2QuestionIndex?: number;
   questions?: Array<Record<string, unknown>>;
   isPracticeMatch?: boolean;
+  powerUps?: unknown;
   [key: string]: unknown;
 }
 
@@ -120,6 +121,24 @@ export async function GET(
     // safe to forward. But `gameData.questions` would re-expose the answers, so
     // overwrite it with the scrubbed copy in the forwarded gameData too.
     const safeGameData = { ...gameData, questions: safeQuestions };
+
+    // CHAOS: a player's 50/50 result (two eliminated WRONG indices) is answer
+    // intel for a question the OTHER player may later see (both cycle the same
+    // pool) — scrub it from the copy of powerUps sent to their opponent.
+    // (Everything else in powerUps — inventories, effects, shields — is fair
+    // for both sides to see.)
+    if (!matchOver && safeGameData.powerUps && typeof safeGameData.powerUps === 'object') {
+      const pu = safeGameData.powerUps as {
+        player1?: { fiftyFifty?: unknown };
+        player2?: { fiftyFifty?: unknown };
+      };
+      const viewerIsPlayer1 = session.user.id === match.player1Id;
+      safeGameData.powerUps = {
+        ...pu,
+        player1: pu.player1 && !viewerIsPlayer1 ? { ...pu.player1, fiftyFifty: undefined } : pu.player1,
+        player2: pu.player2 && viewerIsPlayer1 ? { ...pu.player2, fiftyFifty: undefined } : pu.player2,
+      } as typeof safeGameData.powerUps;
+    }
 
     // Format response
     const response = {

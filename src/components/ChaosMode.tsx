@@ -1,0 +1,169 @@
+'use client';
+
+/**
+ * Chaos Mode client pieces: the floating power-up inventory bar, the ink-splat
+ * overlay, and small helpers. Effects arrive via the match page's 500ms
+ * gameData polling and are rendered by the match page using these building
+ * blocks. Respects prefers-reduced-motion (motion effects degrade to a static
+ * dim overlay of the same duration).
+ */
+
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
+import { POWER_UPS, type ActiveEffect, type PowerUpId } from '@/lib/chaos-powerups';
+
+/** Re-render ticker while any effect is live so overlays expire on time. */
+export function useChaosNow(effects: ActiveEffect[] | undefined): number {
+  const [now, setNow] = useState(() => Date.now());
+  const anyActive = (effects || []).some((e) => e.startedAt + e.durationMs > now);
+  useEffect(() => {
+    if (!anyActive) return;
+    const t = setInterval(() => setNow(Date.now()), 250);
+    return () => clearInterval(t);
+  }, [anyActive]);
+  return now;
+}
+
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+const subscribeReducedMotion = (cb: () => void) => {
+  const mq = window.matchMedia(REDUCED_MOTION_QUERY);
+  mq.addEventListener('change', cb);
+  return () => mq.removeEventListener('change', cb);
+};
+const getReducedMotion = () => window.matchMedia(REDUCED_MOTION_QUERY).matches;
+const getReducedMotionServer = () => false;
+
+export function usePrefersReducedMotion(): boolean {
+  return useSyncExternalStore(subscribeReducedMotion, getReducedMotion, getReducedMotionServer);
+}
+
+// Deterministic pseudo-random blob placement per effect id (stable across renders).
+function hashStr(s: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+/** Ink blobs covering the play area; pointer-events-none so play continues. */
+export function InkSplatOverlay({ effect, now }: { effect: ActiveEffect; now: number }) {
+  const blobs = useMemo(() => {
+    const seed = hashStr(effect.id);
+    const rand = (i: number) => ((Math.imul(seed + i * 2654435761, 1103515245) >>> 8) % 1000) / 1000;
+    return Array.from({ length: 5 }, (_, i) => ({
+      left: 5 + rand(i * 3) * 70,
+      top: 5 + rand(i * 3 + 1) * 65,
+      size: 90 + rand(i * 3 + 2) * 130,
+      rotate: rand(i * 7) * 360,
+    }));
+  }, [effect.id]);
+
+  // Fade out over the final second.
+  const remaining = effect.startedAt + effect.durationMs - now;
+  const opacity = Math.max(0, Math.min(1, remaining / 1000));
+
+  return (
+    <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden" style={{ opacity }} aria-hidden>
+      {blobs.map((b, i) => (
+        <svg
+          key={i}
+          viewBox="0 0 100 100"
+          className="absolute"
+          style={{
+            left: `${b.left}%`,
+            top: `${b.top}%`,
+            width: b.size,
+            height: b.size,
+            transform: `rotate(${b.rotate}deg)`,
+          }}
+        >
+          <path
+            d="M50 8 C68 4 88 16 90 34 C92 48 84 52 88 64 C92 78 78 92 62 90 C50 88 48 94 38 92 C22 90 8 78 12 62 C15 52 8 46 12 34 C16 18 34 12 50 8 Z"
+            fill="#1e1b4b"
+            opacity="0.92"
+          />
+          <circle cx="20" cy="20" r="7" fill="#1e1b4b" opacity="0.9" />
+          <circle cx="84" cy="76" r="5" fill="#1e1b4b" opacity="0.9" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+/** Static dim cover used as the reduced-motion stand-in for flip/slippery. */
+export function ReducedMotionCover({ label }: { label: string }) {
+  return (
+    <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center rounded-xl bg-gray-900/40" aria-hidden>
+      <span className="text-white text-lg font-bold drop-shadow">{label}</span>
+    </div>
+  );
+}
+
+/** Floating inventory bar. Renders nothing when the player holds no items and no status buffs. */
+export function PowerUpBar({
+  inventory,
+  shield,
+  doubleNext,
+  disabled,
+  onUse,
+}: {
+  inventory: PowerUpId[];
+  shield?: boolean;
+  doubleNext?: boolean;
+  disabled?: boolean;
+  onUse: (id: PowerUpId) => void;
+}) {
+  if (inventory.length === 0 && !shield && !doubleNext) return null;
+  return (
+    <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-30">
+      <div className="flex items-center gap-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-full shadow-xl border border-purple-200 dark:border-purple-800 px-3 py-2">
+        {shield && (
+          <span className="text-lg" title="Shield armed — blocks the next attack">🛡️</span>
+        )}
+        {doubleNext && (
+          <span className="text-lg animate-pulse" title="Double points armed — next correct answer counts twice">⚡</span>
+        )}
+        {(shield || doubleNext) && inventory.length > 0 && (
+          <span className="w-px h-6 bg-gray-300 dark:bg-gray-600" />
+        )}
+        {inventory.map((id, i) => {
+          const def = POWER_UPS[id];
+          return (
+            <button
+              key={`${id}-${i}`}
+              onClick={() => onUse(id)}
+              disabled={disabled}
+              title={`${def.name}: ${def.description}`}
+              className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/50 dark:to-blue-900/50 border-2 border-purple-300 dark:border-purple-700 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {def.icon}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/** Lightweight toast stack for drops / incoming attacks. */
+export interface ChaosToast {
+  id: string;
+  text: string;
+}
+
+export function ChaosToasts({ toasts }: { toasts: ChaosToast[] }) {
+  if (toasts.length === 0) return null;
+  return (
+    <div className="fixed top-16 left-1/2 -translate-x-1/2 z-40 space-y-2 pointer-events-none">
+      {toasts.map((t) => (
+        <div
+          key={t.id}
+          className="bg-gray-900/90 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg animate-bounce"
+        >
+          {t.text}
+        </div>
+      ))}
+    </div>
+  );
+}

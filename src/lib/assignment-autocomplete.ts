@@ -168,9 +168,12 @@ export async function recordCompetitiveAssignment(matchId: string): Promise<void
   try {
     const match = await prisma.competitiveMatch.findUnique({
       where: { id: matchId },
-      select: { status: true, topicSlug: true, player1Id: true, player2Id: true, gameData: true },
+      select: { status: true, topicSlug: true, player1Id: true, player2Id: true, gameData: true, gameMode: true },
     })
     if (!match || match.status !== 'COMPLETED' || !match.topicSlug) return
+    // Chaos Mode matches include answer-help power-ups (50/50, double points),
+    // so they must never complete graded COMPETITIVE_PRACTICE assignments.
+    if (match.gameMode === 'CHAOS') return
     const gd = (match.gameData && typeof match.gameData === 'object' ? match.gameData : {}) as {
       questions?: unknown[]
       player1Answers?: Array<{ correct: boolean }>
