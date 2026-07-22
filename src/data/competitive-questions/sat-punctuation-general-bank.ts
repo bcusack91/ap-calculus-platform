@@ -205,33 +205,7 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     explanation: 'A comma should never be placed between a verb ("explained") and a "that" clause ("that the deadline had been extended"). This is a common SAT trap.',
     difficulty: 'medium',
   },
-  {
-    id: 16,
-    question: 'The three capitals we visited were ___ Paris, France ___ London, England ___ and Tokyo, Japan. Fill in the correct punctuation.',
-    options: [
-      ': / , / ,',
-      ': / ; / ;',
-      ', / , / ,',
-      '; / ; / ;'
-    ],
-    correctAnswer: 1,
-    explanation: 'A colon introduces the list after a complete sentence. The list items contain internal commas (city, country), so semicolons separate the items to avoid confusion.',
-    difficulty: 'medium',
-  },
   // ─── HARD ──────────────────────────────────────────────────────────
-  {
-    id: 17,
-    question: 'The gallery displayed works by several renowned artists ___ among them Frida Kahlo ___ a Mexican painter known for her self-portraits ___ and Claude Monet ___ a founder of the Impressionist movement. Choose the best punctuation for all four blanks.',
-    options: [
-      ', / , / , / ,',
-      ': / , / , / ,',
-      '; / , / , / ,',
-      ', / — / — / ,'
-    ],
-    correctAnswer: 1,
-    explanation: '"The gallery displayed works by several renowned artists" is a complete sentence → colon introduces the list. The appositives (describing Kahlo and Monet) are nonessential and set off with commas.',
-    difficulty: 'hard',
-  },
   {
     id: 18,
     question: 'Which sentence is completely free of punctuation errors?',
@@ -259,19 +233,6 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     difficulty: 'hard',
   },
   {
-    id: 20,
-    question: 'Select the ONLY sentence where every punctuation mark is used correctly.',
-    options: [
-      'The scientist whose research changed the field, published her memoirs—a candid account of her struggles and triumphs.',
-      'The scientist, whose research changed the field published her memoirs—a candid account of her struggles and triumphs.',
-      'The scientist, whose research changed the field, published her memoirs—a candid account of her struggles and triumphs.',
-      'The scientist whose research changed the field published her memoirs, a candid account of her struggles and triumphs.'
-    ],
-    correctAnswer: 2,
-    explanation: '"Whose research changed the field" is nonrestrictive → paired commas. The em dash introduces the emphatic appositive at the end. Option D uses a comma instead of a dash (acceptable but less emphatic), however the "whose" clause is restrictive in D (no commas), which changes the meaning.',
-    difficulty: 'hard',
-  },
-  {
     id: 21,
     question: 'The new regulation—introduced without public comment—affected three industries __(F)__ banking, healthcare, and real estate __(G)__ critics argued that the rule was too broad __(H)__ supporters, however, claimed it was necessary. Choose the correct punctuation for (F), (G), and (H).',
     options: [
@@ -282,45 +243,6 @@ const allQuestions: SatPunctuationGeneralQuestion[] = [
     ],
     correctAnswer: 0,
     explanation: '(F) Colon introduces the list after a complete sentence. (G) Period ends the first sentence. (H) Semicolon joins the two independent clauses about critics and supporters.',
-    difficulty: 'hard',
-  },
-  {
-    id: 22,
-    question: 'Which revision eliminates ALL errors? Original: "The teams captain, who was the youngest player on the roster led them to victory, the fans were ecstatic."',
-    options: [
-      'The team\'s captain, who was the youngest player on the roster, led them to victory; the fans were ecstatic.',
-      'The teams\' captain, who was the youngest player on the roster, led them to victory, the fans were ecstatic.',
-      'The team\'s captain who was the youngest player on the roster, led them to victory; the fans were ecstatic.',
-      'The team\'s captain, who was the youngest player on the roster, led them to victory, and the fans were ecstatic.'
-    ],
-    correctAnswer: 0,
-    explanation: '"Team\'s" (singular possessive). "Who was the youngest player on the roster" is nonrestrictive → paired commas. Semicolon fixes the comma splice before "the fans." Option D also works grammatically but A is more precise.',
-    difficulty: 'hard',
-  },
-  {
-    id: 23,
-    question: 'After reviewing the data ___ which spanned ten years ___ the committee reached its conclusion ___ the program should be expanded. Choose the best punctuation.',
-    options: [
-      ', / , / :',
-      ', / , / ;',
-      '— / — / :',
-      ', / , / ,'
-    ],
-    correctAnswer: 0,
-    explanation: '"Which spanned ten years" is nonrestrictive → paired commas. "The committee reached its conclusion" is a complete sentence → colon introduces the explanation. Option C (dashes) is valid for the nonrestrictive element but changes the style; commas + colon is the clearest answer.',
-    difficulty: 'hard',
-  },
-  {
-    id: 24,
-    question: 'Whose responsibility is it to ensure that ___ rules are followed?',
-    options: [
-      'whose / the company\'s',
-      'who\'s / the companies',
-      'whose / the companies\'',
-      'who\'s / the company\'s'
-    ],
-    correctAnswer: 0,
-    explanation: '"Whose" is the possessive (not "who\'s" = "who is"). "The company\'s rules" uses singular possessive correctly.',
     difficulty: 'hard',
   },
   {
