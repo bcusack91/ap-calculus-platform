@@ -133,6 +133,15 @@ export async function GET() {
     vars: [envVar('ANTHROPIC_API_KEY', true)],
   })
 
+  const cron = build({
+    key: 'cron',
+    label: 'Scheduled jobs (Cron)',
+    icon: '⏰',
+    optional: false,
+    summary: 'Weekly student digests, parent/guardian progress emails, streak reminders, and funnel alerts. Every cron endpoint rejects all requests unless this shared secret is set — so if it is missing, none of the scheduled emails send.',
+    vars: [envVar('CRON_SECRET', true)],
+  })
+
   const microsoftSso = build({
     key: 'microsoft-sso',
     label: 'Microsoft SSO',
@@ -158,7 +167,7 @@ export async function GET() {
     ],
   })
 
-  const integrations: Integration[] = [core, email, payments, monitoring, ai, microsoftSso, rostering]
+  const integrations: Integration[] = [core, email, payments, monitoring, ai, cron, microsoftSso, rostering]
 
   const summary = {
     ready: integrations.filter((i) => i.status === 'ready').length,
