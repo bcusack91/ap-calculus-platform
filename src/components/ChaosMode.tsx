@@ -4,11 +4,13 @@
  * Chaos Mode client pieces: the floating power-up inventory bar, the ink-splat
  * overlay, and small helpers. Effects arrive via the match page's 500ms
  * gameData polling and are rendered by the match page using these building
- * blocks. Respects prefers-reduced-motion (motion effects degrade to a static
- * dim overlay of the same duration).
+ * blocks. Gameplay effects always apply regardless of prefers-reduced-motion —
+ * only decorative animation is suppressed (via Tailwind motion-reduce:
+ * variants), so reduced-motion players are neither immune to attacks nor
+ * shown a placeholder instead of the real effect.
  */
 
-import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { POWER_UPS, type ActiveEffect, type PowerUpId } from '@/lib/chaos-powerups';
 
 /** Re-render ticker while any effect is live so overlays expire on time. */
@@ -21,19 +23,6 @@ export function useChaosNow(effects: ActiveEffect[] | undefined): number {
     return () => clearInterval(t);
   }, [anyActive]);
   return now;
-}
-
-const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
-const subscribeReducedMotion = (cb: () => void) => {
-  const mq = window.matchMedia(REDUCED_MOTION_QUERY);
-  mq.addEventListener('change', cb);
-  return () => mq.removeEventListener('change', cb);
-};
-const getReducedMotion = () => window.matchMedia(REDUCED_MOTION_QUERY).matches;
-const getReducedMotionServer = () => false;
-
-export function usePrefersReducedMotion(): boolean {
-  return useSyncExternalStore(subscribeReducedMotion, getReducedMotion, getReducedMotionServer);
 }
 
 // Deterministic pseudo-random blob placement per effect id (stable across renders).
@@ -91,15 +80,6 @@ export function InkSplatOverlay({ effect, now }: { effect: ActiveEffect; now: nu
   );
 }
 
-/** Static dim cover used as the reduced-motion stand-in for flip/slippery. */
-export function ReducedMotionCover({ label }: { label: string }) {
-  return (
-    <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center rounded-xl bg-gray-900/40" aria-hidden>
-      <span className="text-white text-lg font-bold drop-shadow">{label}</span>
-    </div>
-  );
-}
-
 /** Floating inventory bar. Renders nothing when the player holds no items and no status buffs. */
 export function PowerUpBar({
   inventory,
@@ -122,7 +102,7 @@ export function PowerUpBar({
           <span className="text-lg" title="Shield armed — blocks the next attack">🛡️</span>
         )}
         {doubleNext && (
-          <span className="text-lg animate-pulse" title="Double points armed — next correct answer counts twice">⚡</span>
+          <span className="text-lg animate-pulse motion-reduce:animate-none" title="Double points armed — next correct answer counts twice">⚡</span>
         )}
         {(shield || doubleNext) && inventory.length > 0 && (
           <span className="w-px h-6 bg-gray-300 dark:bg-gray-600" />
@@ -135,7 +115,7 @@ export function PowerUpBar({
               onClick={() => onUse(id)}
               disabled={disabled}
               title={`${def.name}: ${def.description}`}
-              className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/50 dark:to-blue-900/50 border-2 border-purple-300 dark:border-purple-700 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/50 dark:to-blue-900/50 border-2 border-purple-300 dark:border-purple-700 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {def.icon}
             </button>
@@ -159,7 +139,7 @@ export function ChaosToasts({ toasts }: { toasts: ChaosToast[] }) {
       {toasts.map((t) => (
         <div
           key={t.id}
-          className="bg-gray-900/90 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg animate-bounce"
+          className="bg-gray-900/90 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg animate-bounce motion-reduce:animate-none"
         >
           {t.text}
         </div>

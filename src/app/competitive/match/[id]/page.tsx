@@ -11,10 +11,8 @@ import { POWER_UPS, activeEffects, type PowerUpId, type PowerUpsState } from '@/
 import {
   PowerUpBar,
   InkSplatOverlay,
-  ReducedMotionCover,
   ChaosToasts,
   useChaosNow,
-  usePrefersReducedMotion,
   type ChaosToast,
 } from '@/components/ChaosMode';
 import 'katex/dist/katex.min.css';
@@ -141,7 +139,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [displayOrder, setDisplayOrder] = useState<number[] | null>(null);
   const [usingPowerUp, setUsingPowerUp] = useState(false);
   const seenEffectIds = useRef<Set<string>>(new Set());
-  const reducedMotion = usePrefersReducedMotion();
 
   // Pre-load KaTeX lazily on mount
   useEffect(() => { preloadKatex() }, []);
@@ -266,7 +263,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   // Slippery Answers: re-shuffle the DISPLAYED option order every 800ms while
   // active. Presentation-only — submissions always use the original index.
   useEffect(() => {
-    if (!slipperyActive || reducedMotion || myCurrentOptionCount < 2) {
+    if (!slipperyActive || myCurrentOptionCount < 2) {
       setDisplayOrder(null);
       return;
     }
@@ -285,7 +282,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       clearInterval(t);
       setDisplayOrder(null);
     };
-  }, [slipperyActive, reducedMotion, myCurrentOptionCount]);
+  }, [slipperyActive, myCurrentOptionCount]);
 
   // Reset per-question chaos state when advancing to the next question.
   useEffect(() => {
@@ -1120,10 +1117,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           </div>
         )}
         {/* Chaos effect layer: flip rotates the whole play area; ink splats
-            overlay it; reduced-motion users get a static cover instead. */}
-        <div className={`relative transition-transform duration-500 ${flipActive && !reducedMotion ? 'rotate-180' : ''}`}>
+            overlay it. Effects always land — prefers-reduced-motion only cuts
+            the animated transition (the flip snaps instead of spinning). */}
+        <div className={`relative transition-transform duration-500 motion-reduce:transition-none ${flipActive ? 'rotate-180' : ''}`}>
           {inkEffect && <InkSplatOverlay effect={inkEffect} now={chaosNow} />}
-          {(flipActive || slipperyActive) && reducedMotion && <ReducedMotionCover label="⚡ Chaos incoming!" />}
         {/* Question prompt */}
         {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
