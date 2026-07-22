@@ -556,10 +556,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const totalCorrect = Array.from(answersByQuestion.values()).filter(a => a.correct).length;
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center" role="status" aria-live="polite">
-            <h1 className={`text-4xl font-bold mb-4 ${
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-5 sm:p-8 text-center" role="status" aria-live="polite">
+            <h1 className={`text-3xl sm:text-4xl font-bold mb-4 ${
               isTie ? 'text-gray-600 dark:text-gray-400' :
               isWinner ? 'text-green-600 dark:text-green-400' : 
               'text-red-600 dark:text-red-400'
@@ -628,7 +628,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               {missedQuestions.length > 0 && (
                 <button
                   onClick={() => setShowReview(!showReview)}
-                  className="px-8 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 font-semibold flex items-center gap-2"
+                  className="px-5 sm:px-8 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 font-semibold flex items-center gap-2"
                 >
                   <span>📝</span>
                   {showReview ? 'Hide Review' : `Review Mistakes (${missedQuestions.length})`}
@@ -637,7 +637,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               {missedQuestions.length === 0 && totalAnswered > 0 && (
                 <button
                   onClick={() => setShowReview(!showReview)}
-                  className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 font-semibold flex items-center gap-2"
+                  className="px-5 sm:px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 font-semibold flex items-center gap-2"
                 >
                   <span>✨</span>
                   {showReview ? 'Hide Review' : 'Review All Questions'}
@@ -645,21 +645,21 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               )}
               <button
                 onClick={() => router.push(lobbyPath)}
-                className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold"
+                className="px-5 sm:px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold"
               >
                 Back to Competitive
               </button>
               {matchState.gameData?.lobbyCode ? (
                 <button
                   onClick={() => router.push(`/competitive/lobby/${matchState.gameData?.lobbyCode}`)}
-                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 font-semibold"
+                  className="px-5 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 font-semibold"
                 >
                   Return to Lobby →
                 </button>
               ) : (
                 <button
                   onClick={() => router.push(lobbyPath)}
-                  className="px-8 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold"
+                  className="px-5 sm:px-8 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold"
                 >
                   Find New Match
                 </button>
@@ -718,7 +718,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                                 </span>
                               )}
                             </p>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto">
                               {renderPrompt(question.prompt || question.question || '')}
                             </h3>
                           </div>
@@ -726,7 +726,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
                         {/* Multiple choice options */}
                         {isMultipleChoice && question.options && (
-                          <div className="ml-11 space-y-2 mb-3">
+                          <div className="ml-4 sm:ml-11 space-y-2 mb-3">
                             {question.options.map((option, optIdx) => {
                               const isUserAnswer = answer.answerIndex === optIdx;
                               const isCorrectAnswer = question.answerIndex === optIdx;
@@ -772,7 +772,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
                         {/* Unit circle answer display */}
                         {!isMultipleChoice && !wasCorrect && (
-                          <div className="ml-11 mb-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-sm">
+                          <div className="ml-4 sm:ml-11 mb-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-sm">
                             <p className="text-gray-900 dark:text-white">
                               <span className="text-red-600 dark:text-red-400 font-semibold">Your answer: </span>
                               {UNIT_CIRCLE_POSITIONS[answer.answerIndex]
@@ -790,11 +790,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
                         {/* Explanation */}
                         {question.explanation && !wasCorrect && (
-                          <div className="ml-11 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                          <div className="ml-4 sm:ml-11 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                             <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-1">
                               💡 Explanation
                             </p>
-                            <div className="text-sm text-blue-800 dark:text-blue-400">
+                            <div className="text-sm text-blue-800 dark:text-blue-400 overflow-x-auto">
                               {renderPrompt(question.explanation)}
                             </div>
                           </div>
@@ -811,12 +811,76 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     );
   }
 
+  // Shared progress math for the desktop bars and the mobile HUD.
+  const totalQuestions = matchState.questions.length || 1;
+  const p1Progress = matchState.gameMode === 'ACCURACY_CHALLENGE'
+    ? ((matchState.gameData?.player1Answers?.length || 0) / totalQuestions) * 100
+    : (matchState.player1Score / 10) * 100;
+  const p2Progress = matchState.gameMode === 'ACCURACY_CHALLENGE'
+    ? ((matchState.gameData?.player2Answers?.length || 0) / totalQuestions) * 100
+    : (matchState.player2Score / 10) * 100;
+  const p1ProgressLabel = matchState.gameMode === 'ACCURACY_CHALLENGE'
+    ? `${matchState.gameData?.player1Answers?.length || 0}/${matchState.questions.length}`
+    : `${matchState.player1Score}/10`;
+  const p2ProgressLabel = matchState.gameMode === 'ACCURACY_CHALLENGE'
+    ? `${matchState.gameData?.player2Answers?.length || 0}/${matchState.questions.length}`
+    : `${matchState.player2Score}/10`;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8">
       <div className="max-w-7xl mx-auto">
+        {/* Mobile battle HUD — replaces the two side panels on small screens so the
+            question is visible without scrolling and the opponent stays in view.
+            Desktop keeps the original 3-column layout below. */}
+        <div className="md:hidden sticky top-2 z-20 mb-3">
+          <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-xl shadow-lg px-3 py-2">
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+              {/* Player 1 */}
+              <div className={`flex items-center gap-2 min-w-0 rounded-lg p-1 ${isPlayer1 ? 'ring-2 ring-purple-400/70' : ''}`}>
+                <AvatarDisplay avatarData={matchState.player1Avatar} size={40} emotion={player1Emotion} className="flex-shrink-0" />
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-bold text-gray-900 dark:text-white truncate">
+                    {matchState.player1Name}{isPlayer1 ? ' (You)' : ''}
+                  </p>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-sm font-bold text-purple-600 dark:text-purple-400">{matchState.player1Score}</span>
+                    <div className="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-purple-600 to-purple-400 transition-all duration-500 rounded-full" style={{ width: `${Math.min(p1Progress, 100)}%` }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Center: VS + accuracy timer */}
+              <div className="text-center px-1">
+                <p className="text-xs font-extrabold text-gray-400 dark:text-gray-500">VS</p>
+                {matchState.gameMode === 'ACCURACY_CHALLENGE' && accuracyTimer !== null && (
+                  <p className={`text-sm font-mono font-bold ${accuracyTimer <= 60 ? 'text-red-600 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
+                    {Math.floor(accuracyTimer / 60)}:{String(accuracyTimer % 60).padStart(2, '0')}
+                  </p>
+                )}
+              </div>
+              {/* Player 2 */}
+              <div className={`flex items-center gap-2 min-w-0 flex-row-reverse rounded-lg p-1 ${!isPlayer1 ? 'ring-2 ring-purple-400/70' : ''}`}>
+                <AvatarDisplay avatarData={matchState.player2Avatar} size={40} emotion={player2Emotion} className="flex-shrink-0" />
+                <div className="min-w-0 flex-1 text-right">
+                  <p className="text-xs font-bold text-gray-900 dark:text-white truncate">
+                    {matchState.player2Name}{!isPlayer1 ? ' (You)' : ''}
+                  </p>
+                  <div className="flex items-center gap-1.5 flex-row-reverse">
+                    <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{matchState.player2Score}</span>
+                    <div className="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-blue-600 to-blue-400 transition-all duration-500 rounded-full ml-auto" style={{ width: `${Math.min(p2Progress, 100)}%` }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_200px] gap-3 md:gap-6">
-          {/* Left Panel - Player 1 */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
+          {/* Left Panel - Player 1 (desktop only; mobile uses the HUD above) */}
+          <div className="hidden md:block bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
             <div className="text-center">
               <AvatarDisplay 
                 avatarData={matchState.player1Avatar}
@@ -844,20 +908,20 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             <div className="mt-6 flex flex-col items-center">
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
-                <div 
+                <div
                   className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-600 to-purple-400 transition-all duration-500 rounded-full"
-                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player1Answers?.length || 0) / matchState.questions.length) * 100 : (matchState.player1Score / 10) * 100}%` }}
+                  style={{ height: `${Math.min(p1Progress, 100)}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player1Answers?.length || 0}/${matchState.questions.length}` : `${matchState.player1Score}/10`}</p>
+              <p className="text-xs text-gray-500 mt-2">{p1ProgressLabel}</p>
             </div>
           </div>
 
           {/* Center - Game Area */}
           <div className="space-y-6">
-        {/* Accuracy Mode Header */}
+        {/* Accuracy Mode Header (desktop; the mobile HUD carries the timer) */}
         {matchState.gameMode === 'ACCURACY_CHALLENGE' && matchState.status === 'IN_PROGRESS' && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 flex items-center justify-between">
+          <div className="hidden md:flex bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 items-center justify-between">
             <div className="flex items-center gap-3">
               <span className="text-lg">🎯</span>
               <div>
@@ -903,7 +967,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               </span>
             </div>
           )}
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt || currentQuestion.question}>
+          {/* overflow-x-auto keeps wide KaTeX scrollable instead of blowing out the phone viewport */}
+          <h2 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto" key={currentQuestion.prompt || currentQuestion.question}>
             {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
           </h2>
 
@@ -930,7 +995,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
         {/* Unit Circle or Multiple Choice */}
         {currentQuestion.type === 'multiple-choice' ? (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8">
             <div className="space-y-3 max-w-2xl mx-auto">
               {currentQuestion.options?.map((option, index) => {
                 const isSelected = selectedPosition === index;
@@ -959,11 +1024,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                     } ${
                       isSubmitting || isFeedbackCurrent
                         ? 'cursor-not-allowed opacity-75'
-                        : 'cursor-pointer hover:shadow-md'
+                        : 'cursor-pointer hover:shadow-md active:scale-[0.99] active:bg-purple-50 dark:active:bg-purple-900/20'
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold ${
+                      <div className={`w-8 h-8 flex-shrink-0 rounded-full border-2 flex items-center justify-center font-bold ${
                         showCorrect
                           ? 'border-green-500 text-green-600 dark:text-green-400'
                           : showIncorrect
@@ -974,7 +1039,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                       }`}>
                         {String.fromCharCode(65 + index)}
                       </div>
-                      <div className="flex-1 text-gray-900 dark:text-white">
+                      <div className="flex-1 min-w-0 overflow-x-auto text-gray-900 dark:text-white">
                         {renderPrompt(option)}
                       </div>
                       {showCorrect && (
@@ -994,7 +1059,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-2">
                   Explanation:
                 </p>
-                <div className="text-sm text-blue-800 dark:text-blue-400">
+                <div className="text-sm text-blue-800 dark:text-blue-400 overflow-x-auto">
                   {renderPrompt(currentQuestion.explanation)}
                 </div>
               </div>
@@ -1021,8 +1086,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       )}
       </div>
 
-          {/* Right Panel - Player 2 */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
+          {/* Right Panel - Player 2 (desktop only; mobile uses the HUD above) */}
+          <div className="hidden md:block bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
             <div className="text-center">
               <AvatarDisplay 
                 avatarData={matchState.player2Avatar}
@@ -1050,12 +1115,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             <div className="mt-6 flex flex-col items-center">
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
-                <div 
+                <div
                   className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-400 transition-all duration-500 rounded-full"
-                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player2Answers?.length || 0) / matchState.questions.length) * 100 : (matchState.player2Score / 10) * 100}%` }}
+                  style={{ height: `${Math.min(p2Progress, 100)}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player2Answers?.length || 0}/${matchState.questions.length}` : `${matchState.player2Score}/10`}</p>
+              <p className="text-xs text-gray-500 mt-2">{p2ProgressLabel}</p>
             </div>
           </div>
         </div>
