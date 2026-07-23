@@ -38,6 +38,7 @@ import type { McatBankQuestion } from './mcat-question-types'
 import { chemistryQuestions } from './mcat-questions-chemistry'
 import { chemistryQuestions2 } from './mcat-questions-chemistry-2'
 import { physicsQuestions } from './mcat-questions-physics'
+import { physicsQuestions2 } from './mcat-questions-physics-2'
 import { biologyQuestions } from './mcat-questions-biology'
 import { behavioralQuestions } from './mcat-questions-behavioral'
 import { behavioralQuestions2 } from './mcat-questions-behavioral-2'
@@ -46,6 +47,7 @@ const AUTHORED: McatBankQuestion[] = [
   ...chemistryQuestions,
   ...chemistryQuestions2,
   ...physicsQuestions,
+  ...physicsQuestions2,
   ...biologyQuestions,
   ...behavioralQuestions,
   ...behavioralQuestions2,
