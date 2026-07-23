@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
+import { ClipboardList, FileText } from 'lucide-react'
 
 interface ClassroomSummary {
   id: string
@@ -206,7 +207,7 @@ export default function TeacherDashboard() {
                   )}
                   <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
                     <span>👤 {cls._count.members} students</span>
-                    <span>📋 {cls._count.assignments} assignments</span>
+                    <span><ClipboardList className="inline w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden />{cls._count.assignments} assignments</span>
                     <span>⚔️ {cls._count.competitions} competitions</span>
                   </div>
                 </Link>
@@ -219,7 +220,7 @@ export default function TeacherDashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Upcoming Assignments */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">📋 Upcoming Assignments</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Upcoming Assignments</h2>
             {data.upcomingAssignments.length === 0 ? (
               <p className="text-gray-500 dark:text-gray-400 text-center py-6">No upcoming assignments</p>
             ) : (
@@ -255,7 +256,7 @@ export default function TeacherDashboard() {
 
           {/* Recent Submissions */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">📝 Recent Submissions</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white"><FileText className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Recent Submissions</h2>
             {data.recentSubmissions.length === 0 ? (
               <p className="text-gray-500 dark:text-gray-400 text-center py-6">No submissions yet</p>
             ) : (

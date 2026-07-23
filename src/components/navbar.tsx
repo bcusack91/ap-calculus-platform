@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useEffectiveRole } from '@/lib/use-effective-role'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
+import { Gamepad2, Trophy, Users, Info, Mail } from 'lucide-react'
 import { AvatarData } from '@/types/avatar'
 import { NavMobileMenu } from './NavMobileMenu'
 import { NavUserMenu } from './NavUserMenu'
@@ -308,7 +309,7 @@ export function Navbar() {
               Flashcards
             </Link>
             <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-accent dark:text-accent-muted font-semibold">
-              🎮 Competitive
+              <Gamepad2 className="inline w-4 h-4 mr-1 -mt-0.5" aria-hidden /> Competitive
             </Link>
             {/* More Dropdown */}
             <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
@@ -324,16 +325,16 @@ export function Navbar() {
               {moreOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
                   <Link href="/leaderboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
-                    🏆 Leaderboard
+                    <Trophy className="w-4 h-4 text-amber-500" aria-hidden /> Leaderboard
                   </Link>
                   <Link href="/study-groups" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
-                    👥 Study Groups
+                    <Users className="w-4 h-4 text-accent" aria-hidden /> Study Groups
                   </Link>
                   <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
-                    ℹ️ About
+                    <Info className="w-4 h-4 text-accent" aria-hidden /> About
                   </Link>
                   <Link href="/contact" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
-                    ✉️ Contact
+                    <Mail className="w-4 h-4 text-accent" aria-hidden /> Contact
                   </Link>
                 </div>
               )}

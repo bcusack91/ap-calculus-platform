@@ -8,6 +8,17 @@ import { DistrictRollup } from '@/components/admin/DistrictRollup'
 import { ImpactAnalytics } from '@/components/admin/ImpactAnalytics'
 import { SchoolsAdmin } from '@/components/admin/SchoolsAdmin'
 import { SystemHealth } from '@/components/admin/SystemHealth'
+import { BarChart3, Building2, TrendingUp, School, Users as UsersIcon, Activity } from 'lucide-react'
+
+// Tab chrome: lucide icons instead of emoji (consistent cross-platform rendering).
+const ADMIN_TABS = {
+  analytics: { label: 'Analytics', Icon: BarChart3 },
+  districts: { label: 'Districts', Icon: Building2 },
+  impact: { label: 'Impact', Icon: TrendingUp },
+  schools: { label: 'Schools', Icon: School },
+  users: { label: 'Users', Icon: UsersIcon },
+  system: { label: 'System', Icon: Activity },
+} as const
 
 interface UserResult {
   id: string
@@ -390,7 +401,9 @@ export default function AdminPanel() {
                   : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100'
               }`}
             >
-              {t === 'analytics' ? '📊 Analytics' : t === 'districts' ? '🏙️ Districts' : t === 'impact' ? '📈 Impact' : t === 'schools' ? '🏫 Schools' : t === 'users' ? '👥 Users' : '🩺 System'}
+              <span className="inline-flex items-center gap-1.5">
+                {(() => { const { label, Icon } = ADMIN_TABS[t]; return (<><Icon className="w-4 h-4" aria-hidden />{label}</>) })()}
+              </span>
             </button>
           ))}
         </div>

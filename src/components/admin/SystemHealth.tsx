@@ -1,6 +1,20 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { KeyRound, Mail, CreditCard, Activity, Bot, Clock, LogIn, School, RefreshCw, type LucideIcon } from 'lucide-react'
+
+// Client-side icon map keyed by integration key; falls back to the server-sent
+// emoji for any key added to the API before this map learns about it.
+const INTEGRATION_ICONS: Record<string, LucideIcon> = {
+  core: KeyRound,
+  email: Mail,
+  payments: CreditCard,
+  monitoring: Activity,
+  ai: Bot,
+  cron: Clock,
+  'microsoft-sso': LogIn,
+  rostering: School,
+}
 
 type IntegrationStatus = 'ready' | 'partial' | 'off'
 
@@ -47,13 +61,14 @@ const STATUS_META: Record<IntegrationStatus, { dot: string; label: string; badge
 
 function IntegrationCard({ integration }: { integration: Integration }) {
   const meta = STATUS_META[integration.status]
+  const Icon = INTEGRATION_ICONS[integration.key]
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5">
       <div className="flex items-start justify-between gap-3 mb-2">
         <div className="flex items-center gap-2 min-w-0">
           <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${meta.dot}`} aria-hidden />
-          <h3 className="font-bold text-gray-900 dark:text-white truncate">
-            {integration.icon} {integration.label}
+          <h3 className="font-bold text-gray-900 dark:text-white truncate flex items-center gap-1.5">
+            {Icon ? <Icon className="w-4 h-4 text-accent flex-shrink-0" aria-hidden /> : integration.icon} {integration.label}
           </h3>
         </div>
         <span className={`px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ${meta.badge}`}>
@@ -151,7 +166,7 @@ export function SystemHealth() {
           onClick={refresh}
           className="text-sm font-medium text-accent dark:text-accent-muted hover:underline whitespace-nowrap"
         >
-          ↻ Refresh
+          <RefreshCw className="inline w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden />Refresh
         </button>
       </div>
 

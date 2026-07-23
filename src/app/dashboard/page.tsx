@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -92,10 +93,10 @@ interface DashboardData {
 }
 
 const DASHBOARD_TABS = [
-  ['overview', '📋 Overview'],
-  ['progress', '📈 Progress'],
-  ['practice', '🎯 Practice'],
-  ['extras', '✨ Extras'],
+  ['overview', 'Overview'],
+  ['progress', 'Progress'],
+  ['practice', 'Practice'],
+  ['extras', 'Extras'],
 ] as const
 
 type DashboardTab = (typeof DASHBOARD_TABS)[number][0]
@@ -610,11 +611,11 @@ function DashboardContent() {
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
             {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length) ? (
               <div className="space-y-4">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">📋 Your Study Plans</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your Study Plans</h2>
                 {mcatPlanStatus?.recommendedTopics && mcatPlanStatus.recommendedTopics.length > 0 && (
                   <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-emerald-300 dark:border-emerald-700 p-5 shadow-sm">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white">🩺 MCAT Remediation Plan</h3>
+                      <h3 className="font-bold text-gray-900 dark:text-white"><Stethoscope className="inline w-4 h-4 mr-1 -mt-0.5 text-emerald-600 dark:text-emerald-400" aria-hidden /> MCAT Remediation Plan</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
                           {mcatPlanStatus.pendingTopics.length === 0 ? 'All recommended modules complete' : `${mcatPlanStatus.pendingTopics.length} module${mcatPlanStatus.pendingTopics.length === 1 ? '' : 's'} left`}
@@ -645,7 +646,7 @@ function DashboardContent() {
                 {apChemDiagnostic?.recommendedTopics && apChemDiagnostic.recommendedTopics.length > 0 && (
                   <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-orange-300 dark:border-orange-700 p-5 shadow-sm">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-gray-900 dark:text-white">🧪 AP Chemistry</h3>
+                      <h3 className="font-bold text-gray-900 dark:text-white"><FlaskConical className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> AP Chemistry</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">Score: {apChemDiagnostic.estimatedAPScore}/5 ({apChemDiagnostic.percentage}%)</span>
                         <Link href="/ap-chem-diagnostic" className="text-xs text-orange-600 hover:underline dark:text-orange-400">Retake →</Link>
@@ -718,7 +719,7 @@ function DashboardContent() {
                 give the promised "start your study path" entry point. */}
             {courseProgress.length === 0 && pathTopic && (
               <div className="bg-gradient-to-r from-accent to-accent-secondary rounded-xl p-6 shadow-sm text-white">
-                <h2 className="text-xl font-bold mb-1">🚀 Start your study path</h2>
+                <h2 className="text-xl font-bold mb-1"><Rocket className="inline w-5 h-5 mr-1.5 -mt-1" aria-hidden /> Start your study path</h2>
                 <p className="text-sm text-accent-light mb-4">
                   Your course is ready — jump into your first topic and your progress will show up here.
                 </p>
@@ -734,7 +735,7 @@ function DashboardContent() {
             {/* Course Progress */}
             {courseProgress.length > 0 && (
               <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📚 Course Progress</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4"><BookOpen className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Course Progress</h2>
                 <div className="space-y-4">
                   {courseProgress.map((course) => {
                     const total = course.completed + course.mastered + course.inProgress
@@ -760,7 +761,7 @@ function DashboardContent() {
           {/* Overview sidebar — quick actions + what's weak */}
           <div className="space-y-6">
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-4"><Zap className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Quick Actions</h3>
               <div className="space-y-3">
                 <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border border-accent-light dark:border-accent-hover hover:border-accent-muted transition-colors group">
                   <span className="text-2xl">🎴</span>
@@ -805,7 +806,7 @@ function DashboardContent() {
             {/* Achievements */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">🏆 Achievements</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white"><Trophy className="inline w-5 h-5 mr-1.5 -mt-1 text-amber-500" aria-hidden /> Achievements</h2>
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-gray-500 dark:text-gray-400">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
                   <Link href="/achievements" className="text-sm font-semibold text-accent hover:text-accent-hover">View All →</Link>
@@ -835,7 +836,7 @@ function DashboardContent() {
 
             {/* Recent Activity */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🕐 Recent Activity</h2>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4"><Clock className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Recent Activity</h2>
               {recentActivity.length === 0 ? (
                 <div className="text-center py-8">
                   <div className="text-4xl mb-3">📖</div>
@@ -870,14 +871,14 @@ function DashboardContent() {
                 topicSlug="all" aggregates the user's results across every topic. */}
             {session?.user?.id && (
               <div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-3">📈 Performance Analytics</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-3"><TrendingUp className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Performance Analytics</h3>
                 <SixSigmaDashboard topicSlug="all" userId={session.user.id} />
               </div>
             )}
 
             {/* Study Stats */}
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-4">📊 Study Stats</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-4"><BarChart3 className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Study Stats</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600 dark:text-gray-400">Topics Started</span>
@@ -926,7 +927,7 @@ function DashboardContent() {
             {/* Bookmarks (server-synced) */}
             {bookmarks.length > 0 && (
               <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-4">🔖 Saved Lessons</h3>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-4"><Bookmark className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> Saved Lessons</h3>
                 <div className="space-y-2">
                   {bookmarks.slice(0, 5).map((bookmark) => (
                     <Link
