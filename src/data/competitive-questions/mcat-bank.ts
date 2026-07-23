@@ -32,6 +32,28 @@ import { generateExitQuiz as geneticsQuiz } from '../exit-quizzes/mcat-genetics-
 import { generateExitQuiz as organsQuiz } from '../exit-quizzes/mcat-organ-systems'
 import { generateExitQuiz as psychSocQuiz } from '../exit-quizzes/mcat-psychology-sociology'
 import { generateExitQuiz as carsQuiz } from '../exit-quizzes/mcat-cars'
+// Competitive-specific question sets (authored for head-to-head play). Merged
+// with the exit-quiz pools so every subtopic has a full match's worth.
+import type { McatBankQuestion } from './mcat-question-types'
+import { chemistryQuestions } from './mcat-questions-chemistry'
+import { physicsQuestions } from './mcat-questions-physics'
+import { biologyQuestions } from './mcat-questions-biology'
+import { behavioralQuestions } from './mcat-questions-behavioral'
+
+const AUTHORED: McatBankQuestion[] = [
+  ...chemistryQuestions,
+  ...physicsQuestions,
+  ...biologyQuestions,
+  ...behavioralQuestions,
+]
+
+/** Authored questions indexed by subtopic slug (built once). */
+const AUTHORED_BY_SUBTOPIC = new Map<string, McatBankQuestion[]>()
+for (const q of AUTHORED) {
+  const list = AUTHORED_BY_SUBTOPIC.get(q.subtopicSlug) ?? []
+  list.push(q)
+  AUTHORED_BY_SUBTOPIC.set(q.subtopicSlug, list)
+}
 
 export interface McatCompetitiveQuestion {
   id: number
@@ -171,11 +193,39 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-biochemistry-bioenergetics-mcat', 'Bioenergetics'),
         ],
       },
-      // These three pools aren't subtopic-tagged upstream, so the area itself is
-      // the finest selectable unit (the picker renders them as single chips).
-      { slug: 'mcat-area-biology', title: 'Cell & Molecular Biology', emoji: '🦠', subtopics: [] },
-      { slug: 'mcat-area-genetics-evolution', title: 'Genetics & Evolution', emoji: '🧬', subtopics: [] },
-      { slug: 'mcat-area-organ-systems', title: 'Organ Systems', emoji: '🫀', subtopics: [] },
+      {
+        slug: 'mcat-area-biology',
+        title: 'Cell & Molecular Biology',
+        emoji: '🦠',
+        subtopics: [
+          sub('mcat-biology-cell-structure-mcat', 'Cell Structure & Transport'),
+          sub('mcat-biology-cell-cycle-mcat', 'Cell Cycle, Mitosis & Meiosis'),
+          sub('mcat-biology-molecular-biology-mcat', 'DNA, Transcription & Translation'),
+          sub('mcat-biology-microbiology-mcat', 'Microbiology & Viruses'),
+        ],
+      },
+      {
+        slug: 'mcat-area-genetics-evolution',
+        title: 'Genetics & Evolution',
+        emoji: '🧬',
+        subtopics: [
+          sub('mcat-genetics-mendelian-mcat', 'Mendelian Genetics'),
+          sub('mcat-genetics-molecular-mcat', 'Molecular Genetics & Mutations'),
+          sub('mcat-genetics-evolution-mcat', 'Evolution & Population Genetics'),
+        ],
+      },
+      {
+        slug: 'mcat-area-organ-systems',
+        title: 'Organ Systems',
+        emoji: '🫀',
+        subtopics: [
+          sub('mcat-organ-systems-nervous-mcat', 'Nervous System'),
+          sub('mcat-organ-systems-cardio-resp-mcat', 'Cardiovascular & Respiratory'),
+          sub('mcat-organ-systems-endocrine-mcat', 'Endocrine System'),
+          sub('mcat-organ-systems-digestive-renal-mcat', 'Digestive & Renal'),
+          sub('mcat-organ-systems-immune-musculoskeletal-mcat', 'Immune & Musculoskeletal'),
+        ],
+      },
     ],
   },
   {
@@ -185,7 +235,19 @@ export const MCAT_SECTIONS: McatSection[] = [
     emoji: '🧠',
     gradient: 'from-purple-500 to-pink-500',
     areas: [
-      { slug: 'mcat-area-psychology-sociology', title: 'Psychology & Sociology', emoji: '🧠', subtopics: [] },
+      {
+        slug: 'mcat-area-psychology-sociology',
+        title: 'Psychology & Sociology',
+        emoji: '🧠',
+        subtopics: [
+          sub('mcat-psych-sensation-perception-mcat', 'Sensation & Perception'),
+          sub('mcat-psych-learning-memory-mcat', 'Learning & Memory'),
+          sub('mcat-psych-cognition-language-mcat', 'Cognition & Language'),
+          sub('mcat-psych-motivation-emotion-personality-mcat', 'Motivation, Emotion & Personality'),
+          sub('mcat-psych-social-psychology-mcat', 'Social Psychology'),
+          sub('mcat-psych-sociology-social-structure-mcat', 'Sociology & Social Structure'),
+        ],
+      },
     ],
   },
   {
@@ -195,7 +257,15 @@ export const MCAT_SECTIONS: McatSection[] = [
     emoji: '📖',
     gradient: 'from-amber-500 to-orange-500',
     areas: [
-      { slug: 'mcat-area-cars', title: 'Critical Analysis & Reasoning', emoji: '📖', subtopics: [] },
+      {
+        slug: 'mcat-area-cars',
+        title: 'Critical Analysis & Reasoning',
+        emoji: '📖',
+        subtopics: [
+          sub('mcat-cars-reasoning-within-text-mcat', 'Reasoning Within the Text'),
+          sub('mcat-cars-reasoning-beyond-text-mcat', 'Reasoning Beyond the Text'),
+        ],
+      },
     ],
   },
 ]
@@ -248,26 +318,59 @@ export function expandMcatSlug(slug: string): string[] {
 
 function pull(areaSlugOrKey: string, count: number, subtopicSlug?: string): McatCompetitiveQuestion[] {
   const key = areaKey(areaSlugOrKey)
-  const fn = AREA_SOURCE[key]
-  if (!fn) return []
   const entry = AREA_BY_SLUG.get(`mcat-area-${key}`)
   const sectionSlug = entry?.section.slug ?? ''
   const areaSlug = `mcat-area-${key}`
-  // Ask for far more than needed so we get the whole pool, then filter.
-  const raw = fn(500, subtopicSlug)
-  const filtered = subtopicSlug ? raw.filter((q) => q.category === subtopicSlug) : raw
-  const source = filtered.length > 0 ? filtered : raw
-  return source.map((q, i) => ({
-    id: i,
-    question: q.question,
-    options: q.options,
-    correctAnswer: q.correctIndex,
-    explanation: q.explanation ?? '',
-    difficulty: (q.difficulty as 'easy' | 'medium' | 'hard') ?? 'medium',
-    topicSlug: subtopicSlug ?? q.category ?? areaSlug,
-    areaSlug,
-    sectionSlug,
-  }))
+
+  // 1. Exit-quiz-sourced questions (the original MCAT content).
+  const fn = AREA_SOURCE[key]
+  const fromQuiz: McatCompetitiveQuestion[] = []
+  if (fn) {
+    // Ask for far more than needed so we get the whole pool, then filter.
+    const raw = fn(500, subtopicSlug)
+    // Only strict-filter when the upstream pool actually carries this tag;
+    // areas whose subtopics are defined solely by authored questions would
+    // otherwise wrongly fall back to the entire untagged pool.
+    const tagged = raw.filter((q) => q.category === subtopicSlug)
+    const source = subtopicSlug ? tagged : raw
+    for (const [i, q] of source.entries()) {
+      fromQuiz.push({
+        id: i,
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctIndex,
+        explanation: q.explanation ?? '',
+        difficulty: (q.difficulty as 'easy' | 'medium' | 'hard') ?? 'medium',
+        topicSlug: subtopicSlug ?? q.category ?? areaSlug,
+        areaSlug,
+        sectionSlug,
+      })
+    }
+  }
+
+  // 2. Authored competitive questions for this subtopic (or every subtopic in
+  //    the area when no subtopic was requested).
+  const authoredSlugs = subtopicSlug
+    ? [subtopicSlug]
+    : (entry?.area.subtopics.map((t) => t.slug) ?? [])
+  const fromAuthored: McatCompetitiveQuestion[] = []
+  for (const slug of authoredSlugs) {
+    for (const [i, q] of (AUTHORED_BY_SUBTOPIC.get(slug) ?? []).entries()) {
+      fromAuthored.push({
+        id: fromQuiz.length + fromAuthored.length + i,
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation,
+        difficulty: q.difficulty,
+        topicSlug: slug,
+        areaSlug,
+        sectionSlug,
+      })
+    }
+  }
+
+  return [...fromQuiz, ...fromAuthored]
 }
 
 /**
