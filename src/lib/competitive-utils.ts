@@ -124,6 +124,11 @@ export const UNIT_CIRCLE_POSITIONS: UnitCirclePosition[] = [
   { angle: 330, x: Math.sqrt(3)/2, y: -0.5, label: '330°' },
 ];
 
+// Every slug that should serve the unit-circle click game. The live routes queue
+// these matches under 'the-unit-circle'; 'unit-circle' is the historical bare
+// form. Anything else falls back to cumulative MCQs (see generateMatchQuestions).
+const UNIT_CIRCLE_SLUGS = new Set(['unit-circle', 'the-unit-circle']);
+
 /**
  * Shuffle the options array of an MCQ question so the correct answer
  * doesn't always appear at the same index. Returns a new object with
@@ -1283,63 +1288,53 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     return await generateCumulativeQuestions(totalQuestions, completedTopics)
   }
 
-  // If a topicSlug was provided but matched none of the routes/banks above,
-  // fall back to cumulative MCQs rather than silently returning unit-circle
-  // click-the-angle drills (which leaked unit-circle questions into AP Calc
-  // and other courses whose lesson slugs don't match bank topic slugs).
-  if (topicSlug && topicSlug !== 'unit-circle') {
+  // If a topicSlug was provided but is not a unit-circle slug, fall back to
+  // cumulative MCQs rather than silently returning unit-circle click-the-angle
+  // drills (which leaked unit-circle questions into AP Calc and other courses
+  // whose lesson slugs don't match bank topic slugs). NOTE both spellings: the
+  // live routes queue matches under 'the-unit-circle', which previously slipped
+  // through this guard and served cumulative calculus MCQs instead of the game.
+  if (topicSlug && !UNIT_CIRCLE_SLUGS.has(topicSlug)) {
     return await generateCumulativeQuestions(totalQuestions, completedTopics)
   }
 
-  // Default (no topicSlug, or explicit 'unit-circle'): unit circle questions
-  const questions: Question[] = [];
-  const usedIndices = new Set<number>();
+  // Default (no topicSlug, or a unit-circle slug): the click-the-position game.
+  //
+  // There are 16 positions × 2 prompt types (find-angle / find-coordinate) = 32
+  // distinct questions. Build the full set, shuffle, and take what's asked, so a
+  // match never repeats a question until all 32 are exhausted — which never
+  // happens in a first-to-10 game. Only a request beyond 32 wraps with reuse.
+  // (The old version deduped on POSITION only, so it could still serve the exact
+  // same question twice once 16 positions were used, and drew a fresh random set
+  // each call with no upper bound on repeats.)
+  type UnitCircleType = 'find-angle' | 'find-coordinate'
+  const promptFor = (position: UnitCirclePosition, type: UnitCircleType): string =>
+    type === 'find-angle'
+      ? `Click the position for angle ${position.angle}°`
+      : `Click the position for coordinate ${formatCoordinate(position.x, position.y)}`
 
-  // Ensure we have a mix of question types
-  const questionTypes: ('find-angle' | 'find-coordinate')[] = [];
-  for (let i = 0; i < totalQuestions; i++) {
-    questionTypes.push(i % 2 === 0 ? 'find-angle' : 'find-coordinate');
-  }
-  
-  // Shuffle question types
-  for (let i = questionTypes.length - 1; i > 0; i--) {
+  // answerIndex is the position's index in UNIT_CIRCLE_POSITIONS — the client
+  // clicks a position and submits that index, which the answer route compares
+  // against this. Do not change without updating both sides.
+  const pool: Question[] = []
+  UNIT_CIRCLE_POSITIONS.forEach((position, idx) => {
+    for (const type of ['find-angle', 'find-coordinate'] as UnitCircleType[]) {
+      pool.push({ id: 0, type, target: position, prompt: promptFor(position, type), answerIndex: idx })
+    }
+  })
+  for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [questionTypes[i], questionTypes[j]] = [questionTypes[j], questionTypes[i]];
+    [pool[i], pool[j]] = [pool[j], pool[i]];
   }
 
-  for (let i = 0; i < totalQuestions; i++) {
-    // Pick a random position, allowing reuse when totalQuestions > available positions
-    let randomIndex: number;
-    if (usedIndices.size >= UNIT_CIRCLE_POSITIONS.length) {
-      // All positions used, allow reuse
-      randomIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
-    } else {
-      do {
-        randomIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
-      } while (usedIndices.has(randomIndex));
-    }
-    
-    usedIndices.add(randomIndex);
-    const position = UNIT_CIRCLE_POSITIONS[randomIndex];
-    const type = questionTypes[i];
-
-    let prompt: string;
-    if (type === 'find-angle') {
-      // Given coordinate, find angle
-      prompt = `Click the position for angle ${position.angle}°`;
-    } else {
-      // Given angle, find coordinate
-      const coord = formatCoordinate(position.x, position.y);
-      prompt = `Click the position for coordinate ${coord}`;
-    }
-
-    questions.push({
-      id: i,
-      type,
-      target: position,
-      prompt,
-      answerIndex: randomIndex, // Store the correct answer index
-    });
+  // Cap at the full distinct set (32): the speed-race buffer is 40, but storing
+  // more than 32 would just repeat questions inside gameData. The answer route
+  // cycles this buffer with a modulo index, and a first-to-10 game never reaches
+  // 32 answers, so a player never sees a repeat.
+  const count = Math.min(totalQuestions, pool.length)
+  const questions: Question[] = []
+  for (let i = 0; i < count; i++) {
+    questions.push({ ...pool[i], id: i })
   }
 
   return questions as unknown as MatchQuestion[];
