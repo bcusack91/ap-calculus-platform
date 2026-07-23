@@ -44,6 +44,8 @@ import { biologyQuestions2 } from './mcat-questions-biology-2'
 import { biologyQuestions3 } from './mcat-questions-biology-3'
 import { behavioralQuestions } from './mcat-questions-behavioral'
 import { behavioralQuestions2 } from './mcat-questions-behavioral-2'
+import { gapsChemPhysQuestions } from './mcat-questions-gaps-chemphys'
+import { gapsBioPsychQuestions } from './mcat-questions-gaps-biopsych'
 
 const AUTHORED: McatBankQuestion[] = [
   ...chemistryQuestions,
@@ -55,6 +57,8 @@ const AUTHORED: McatBankQuestion[] = [
   ...biologyQuestions3,
   ...behavioralQuestions,
   ...behavioralQuestions2,
+  ...gapsChemPhysQuestions,
+  ...gapsBioPsychQuestions,
 ]
 
 /** Authored questions indexed by subtopic slug (built once). */
@@ -144,6 +148,7 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-general-chemistry-thermodynamics-mcat', 'Thermodynamics'),
           sub('mcat-general-chemistry-kinetics-mcat', 'Kinetics'),
           sub('mcat-general-chemistry-acid-base-equilibrium-mcat', 'Acid–Base & Equilibrium'),
+          sub('mcat-general-chemistry-solubility-ions-mcat', 'Solubility & Ions in Solution'),
         ],
       },
       {
@@ -180,6 +185,18 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-physics-electricity-magnetism-mcat', 'Magnetism'),
           sub('mcat-physics-electricity-optics-mcat', 'Optics'),
           sub('mcat-physics-electricity-electrochemistry-mcat', 'Electrochemistry'),
+        ],
+      },
+      {
+        // AAMC content category 5C plus the cross-cutting Scientific Inquiry
+        // and Reasoning Skills, which are tested in EVERY science section but
+        // had no home in the original hierarchy.
+        slug: 'mcat-area-lab-data',
+        title: 'Lab Techniques & Data Analysis',
+        emoji: '🧰',
+        subtopics: [
+          sub('mcat-lab-separations-mcat', 'Separations & Purification'),
+          sub('mcat-research-methods-biostats-mcat', 'Research Methods & Biostatistics'),
         ],
       },
     ],
@@ -234,6 +251,8 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-organ-systems-endocrine-mcat', 'Endocrine System'),
           sub('mcat-organ-systems-digestive-renal-mcat', 'Digestive & Renal'),
           sub('mcat-organ-systems-immune-musculoskeletal-mcat', 'Immune & Musculoskeletal'),
+          sub('mcat-organ-systems-reproductive-mcat', 'Reproductive System'),
+          sub('mcat-organ-systems-embryology-mcat', 'Embryology & Development'),
         ],
       },
     ],
@@ -256,6 +275,11 @@ export const MCAT_SECTIONS: McatSection[] = [
           sub('mcat-psych-motivation-emotion-personality-mcat', 'Motivation, Emotion & Personality'),
           sub('mcat-psych-social-psychology-mcat', 'Social Psychology'),
           sub('mcat-psych-sociology-social-structure-mcat', 'Sociology & Social Structure'),
+          sub('mcat-psych-consciousness-sleep-mcat', 'Consciousness & Sleep'),
+          sub('mcat-psych-identity-self-concept-mcat', 'Identity & Self-Concept'),
+          // AAMC Foundational Concept 10 — previously unrepresented entirely.
+          sub('mcat-psych-social-inequality-mcat', 'Social Inequality & Health Disparities'),
+          sub('mcat-psych-demographics-social-change-mcat', 'Demographics & Social Change'),
         ],
       },
     ],
@@ -272,6 +296,8 @@ export const MCAT_SECTIONS: McatSection[] = [
         title: 'Critical Analysis & Reasoning',
         emoji: '📖',
         subtopics: [
+          // The three AAMC CARS skills. Foundations of Comprehension was missing.
+          sub('mcat-cars-foundations-comprehension-mcat', 'Foundations of Comprehension'),
           sub('mcat-cars-reasoning-within-text-mcat', 'Reasoning Within the Text'),
           sub('mcat-cars-reasoning-beyond-text-mcat', 'Reasoning Beyond the Text'),
         ],

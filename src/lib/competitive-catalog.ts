@@ -96,7 +96,7 @@ export const COMPETITIVE_COURSE_CATEGORIES: CompetitiveCourseCategory[] = [
       { slug: 'sat', categoryKey: 'sat', emoji: '📝', name: 'SAT Prep', desc: 'Math, Reading & Punctuation', gradient: 'from-blue-600 to-cyan-600' },
       // MCAT has its own section → area → subtopic picker at /competitive/mcat
       // (no DB Course row needed — the hierarchy comes from the MCAT bank).
-      { slug: 'mcat', categoryKey: 'mcat', emoji: '🩺', name: 'MCAT Prep', desc: 'All 4 sections · 45 subtopics', gradient: 'from-emerald-600 to-teal-600' },
+      { slug: 'mcat', categoryKey: 'mcat', emoji: '🩺', name: 'MCAT Prep', desc: 'All 4 sections · 55 subtopics', gradient: 'from-emerald-600 to-teal-600' },
     ],
   },
 ]

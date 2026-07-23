@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import type { AssignmentType } from '@prisma/client'
 import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug } from '@/lib/sat-topic-map'
 import { isMultiSlug, parseMultiSlug } from '@/lib/competitive-utils'
+import { isMcatTopicSlug, bankPlayCoversCurriculumTopic } from '@/lib/mcat-topic-map'
 
 /**
  * Server-side assignment auto-completion.
@@ -46,6 +47,23 @@ function slugMatches(assignment: { topicSlug: string | null; topicSlugs: unknown
     if (assigned.some((s) => s === topicSlug)) return true
     if (assigned.length > 0 && assigned.every((s) => played.has(s))) return true
   }
+  // MCAT competitive matches are played on BANK subtopic slugs (55 pools sized
+  // to fill a match), while assignments name CURRICULUM topic slugs (101 lesson
+  // topics). The two vocabularies deliberately differ — see mcat-topic-map.ts.
+  // Translate so assigning "Reproductive System" is satisfied by playing the
+  // bank subtopic whose question pool covers it.
+  if (isMcatTopicSlug(topicSlug) || isMultiSlug(topicSlug)) {
+    const played = isMultiSlug(topicSlug) ? parseMultiSlug(topicSlug) : [topicSlug]
+    const playedMcat = new Set(played.filter(isMcatTopicSlug))
+    if (playedMcat.size > 0) {
+      const assigned = [assignment.topicSlug, ...(Array.isArray(many) ? (many as unknown[]) : [])]
+        .filter((s): s is string => typeof s === 'string' && s.length > 0)
+      // Every assigned topic must be covered — a single-topic match must not
+      // complete a 6-topic assignment the student only partially practiced.
+      if (assigned.length > 0 && assigned.every((s) => bankPlayCoversCurriculumTopic(s, playedMcat))) return true
+    }
+  }
+
   // SAT competitive matches are played on bank pseudo-slugs ('sat-math',
   // 'sat-reading', the 2 punctuation banks) OR the finer area/domain slugs
   // ('sat-math-algebra', 'sat-rw-conventions', …), while sat-prep
