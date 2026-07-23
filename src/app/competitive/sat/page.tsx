@@ -154,11 +154,53 @@ function SatCompetitiveInner() {
    */
   const isUnlocked = useCallback((domainSlug: string) => !!categories?.[domainSlug], [categories])
 
+  /**
+   * For any node, the set of slugs it is "family" with — itself plus its
+   * ancestors and descendants across section → domain → skill.
+   *
+   * Selecting a node must clear its family so the selection never mixes levels.
+   * Without this, tapping the "Math" quick-start card (selects `sat-math`) and
+   * then a skill chip (`sat-skill-circles`) produced `multi:sat-math,
+   * sat-skill-circles` — a match that drew HALF its questions from the whole
+   * math section, which is exactly the "unrelated topics" a circles game showed.
+   */
+  const familyOf = useMemo(() => {
+    const parent = new Map<string, string>()   // domain→section, skill→domain
+    const children = new Map<string, string[]>() // section→domains, domain→skills
+    for (const s of data?.sections ?? []) {
+      children.set(s.slug, s.domains.map(d => d.slug))
+      for (const d of s.domains) {
+        parent.set(d.slug, s.slug)
+        children.set(d.slug, d.skills.map(k => k.slug))
+        for (const k of d.skills) parent.set(k.slug, d.slug)
+      }
+    }
+    return (slug: string): Set<string> => {
+      const fam = new Set<string>([slug])
+      // ancestors
+      let up = parent.get(slug)
+      while (up) { fam.add(up); up = parent.get(up) }
+      // descendants (BFS)
+      const queue = [...(children.get(slug) ?? [])]
+      while (queue.length) {
+        const cur = queue.shift()!
+        if (fam.has(cur)) continue
+        fam.add(cur)
+        queue.push(...(children.get(cur) ?? []))
+      }
+      return fam
+    }
+  }, [data])
+
   const toggle = (slug: string) => {
     setSelected(prev => {
       if (prev.includes(slug)) return prev.filter(s => s !== slug)
-      if (prev.length >= MAX_TOPICS) return prev
-      return [...prev, slug]
+      // Drop any already-selected ancestor/descendant, then add — keeping the
+      // selection to one coherent level and preventing redundant multi-slugs.
+      const fam = familyOf(slug)
+      const cleaned = prev.filter(s => !fam.has(s))
+      if (cleaned.length >= MAX_TOPICS) return cleaned
+      return [...cleaned, slug]
     })
   }
 

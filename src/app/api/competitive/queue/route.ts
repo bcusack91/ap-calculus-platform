@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions } from '@/lib/competitive-utils'
+import { generateMatchQuestions, matchQuestionCount } from '@/lib/competitive-utils'
 import { queueJoinSchema, parseBody } from '@/lib/validations'
 import { sweepStaleMatchesForUser } from '../_lib/sweep-stale-matches'
 import type { Prisma } from '@prisma/client'
@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
     // sees the row already gone and falls through to enqueue itself.
     const mmrRange = 50
     const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
-    const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
+    const questionCount = matchQuestionCount(gameMode)
 
     const claimed = await prisma.$transaction(async (tx) => {
       // Find a candidate opponent inside the tx. Prefer a same-tier opponent so
@@ -305,7 +305,7 @@ export async function GET() {
     // candidate's row, re-check it's still queued, then delete-claim both the
     // opponent's entry AND our own entry inside one transaction.
     const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
-    const questionCount = (entry.gameMode as string) === 'ACCURACY_CHALLENGE' ? 20 : 10
+    const questionCount = matchQuestionCount(entry.gameMode as string)
 
     const claimed = await prisma.$transaction(async (tx) => {
       // Prefer an opponent who chose the same tier as the waiting player; fall

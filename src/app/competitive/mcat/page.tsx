@@ -115,11 +115,44 @@ function McatCompetitiveInner() {
     return n
   }, [selected, data])
 
+  // For any node, the slugs it is redundant with — itself, its ancestors, and
+  // its descendants across section → area → subtopic. Selecting a node clears
+  // its family so the selection never mixes levels; without this, picking a
+  // whole section/area AND a subtopic inside it builds a multi-slug that draws
+  // half its questions from the broad bucket (the SAT picker had the same bug).
+  const familyOf = useMemo(() => {
+    const parent = new Map<string, string>()
+    const children = new Map<string, string[]>()
+    for (const s of data?.sections ?? []) {
+      children.set(s.slug, s.areas.map((a) => a.slug))
+      for (const a of s.areas) {
+        parent.set(a.slug, s.slug)
+        children.set(a.slug, a.subtopics.map((t) => t.slug))
+        for (const t of a.subtopics) parent.set(t.slug, a.slug)
+      }
+    }
+    return (slug: string): Set<string> => {
+      const fam = new Set<string>([slug])
+      let up = parent.get(slug)
+      while (up) { fam.add(up); up = parent.get(up) }
+      const queue = [...(children.get(slug) ?? [])]
+      while (queue.length) {
+        const cur = queue.shift()!
+        if (fam.has(cur)) continue
+        fam.add(cur)
+        queue.push(...(children.get(cur) ?? []))
+      }
+      return fam
+    }
+  }, [data])
+
   const toggle = (slug: string) => {
     setSelected((prev) => {
       if (prev.includes(slug)) return prev.filter((s) => s !== slug)
-      if (prev.length >= MAX_TOPICS) return prev
-      return [...prev, slug]
+      const fam = familyOf(slug)
+      const cleaned = prev.filter((s) => !fam.has(s))
+      if (cleaned.length >= MAX_TOPICS) return cleaned
+      return [...cleaned, slug]
     })
   }
 

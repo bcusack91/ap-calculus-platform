@@ -675,6 +675,28 @@ export function parseMultiSlug(slug: string): string[] {
   return slug.slice(MULTI_SLUG_PREFIX.length).split(',').map((s) => s.trim()).filter(Boolean)
 }
 
+/**
+ * How many questions to load into a match's gameData for a given mode.
+ *
+ * ACCURACY_CHALLENGE is scored as correct/answered over a FIXED set, so its
+ * length is the scoring denominator and must stay stable (20).
+ *
+ * SPEED_RACE / CHAOS (and any other live mode) are first-to-10-CORRECT — the
+ * question array is only a buffer the player cycles through with a modulo index
+ * (see the answer route). At 10 it repeated the same 10 as soon as a player
+ * needed an 11th question; a deeper buffer means someone answering well past 10
+ * keeps getting fresh questions. The win condition is score-based, so a larger
+ * pool never changes match length, and building it is free — tiered draws
+ * already materialise the whole pool before sampling.
+ *
+ * Async challenges are NOT routed here: both players must receive the SAME
+ * fixed question set, so that flow keeps its own explicit count.
+ */
+export const SPEED_RACE_POOL_SIZE = 40
+export function matchQuestionCount(gameMode: string | undefined | null): number {
+  return gameMode === 'ACCURACY_CHALLENGE' ? 20 : SPEED_RACE_POOL_SIZE
+}
+
 export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[], tier?: MatchTier): Promise<MatchQuestion[]> {
   // Multi-topic composite: recursively resolve each constituent slug, then
   // interleave round-robin so every selected topic is represented (rather than

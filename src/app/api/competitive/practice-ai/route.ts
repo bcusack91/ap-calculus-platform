@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions, type MatchTier } from '@/lib/competitive-utils'
+import { generateMatchQuestions, matchQuestionCount, type MatchTier } from '@/lib/competitive-utils'
 import type { Prisma } from '@prisma/client'
 
 /**
@@ -150,7 +150,7 @@ export async function POST(req: NextRequest) {
 
     // ---- Standard 1v1 match ----
     const aiOpponent = await getOrCreateAIBot('ai-opponent@studyai.com', 'AI Practice Bot')
-    const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
+    const questionCount = matchQuestionCount(gameMode)
     const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
     
     const competitiveMatch = await prisma.competitiveMatch.create({
