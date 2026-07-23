@@ -71,8 +71,17 @@ function getActionUrl(a: AssignmentItem): string {
       return slug ? `/flashcards/${slug}` : '/flashcards'
     case 'QUIZ':
       return slug ? `/topics/${slug}` : '/topics'
-    case 'COMPETITIVE_PRACTICE':
-      return '/competitive'
+    case 'COMPETITIVE_PRACTICE': {
+      // Carry the assigned topic set through to the picker so the student
+      // doesn't have to re-find them. MCAT has its own hierarchical picker;
+      // everything else goes to the hub (already-supported ?topic= deep-link).
+      const all = a.topicSlugs && a.topicSlugs.length > 0 ? a.topicSlugs : (slug ? [slug] : [])
+      if (all.length === 0) return '/competitive'
+      if (all.every((s) => s.startsWith('mcat'))) {
+        return `/competitive/mcat?topics=${encodeURIComponent(all.join(','))}`
+      }
+      return all.length === 1 ? `/competitive?topic=${encodeURIComponent(all[0])}` : '/competitive'
+    }
     default:
       return '/topics'
   }

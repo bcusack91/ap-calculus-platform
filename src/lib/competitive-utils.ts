@@ -648,7 +648,89 @@ export function pickTieredQuestions<T extends { difficulty?: unknown }>(pool: T[
   return [...picked.easy, ...picked.medium, ...picked.hard].slice(0, count)
 }
 
+/**
+ * Composite multi-topic slug: `multi:slugA,slugB,slugC`.
+ *
+ * Lets ONE match draw from several topics — and, deliberately, from several
+ * COURSES at once (a teacher can assign "derivatives + kinematics"). Encoding
+ * the set in the existing topicSlug string means the whole pipeline (queue
+ * pairing, match rows, assignment matching) works unchanged: two students who
+ * pick the same set produce the same slug and therefore pair with each other.
+ */
+export const MULTI_SLUG_PREFIX = 'multi:'
+/** Bounded so the composite always fits the 200-char topicSlug column/validator. */
+export const MULTI_SLUG_MAX_TOPICS = 12
+
+export function buildMultiSlug(slugs: string[]): string {
+  const unique = [...new Set(slugs.map((s) => s.trim()).filter(Boolean))].sort()
+  return MULTI_SLUG_PREFIX + unique.slice(0, MULTI_SLUG_MAX_TOPICS).join(',')
+}
+
+export function isMultiSlug(slug: string | undefined | null): boolean {
+  return typeof slug === 'string' && slug.startsWith(MULTI_SLUG_PREFIX)
+}
+
+export function parseMultiSlug(slug: string): string[] {
+  if (!isMultiSlug(slug)) return []
+  return slug.slice(MULTI_SLUG_PREFIX.length).split(',').map((s) => s.trim()).filter(Boolean)
+}
+
 export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[], tier?: MatchTier): Promise<MatchQuestion[]> {
+  // Multi-topic composite: recursively resolve each constituent slug, then
+  // interleave round-robin so every selected topic is represented (rather than
+  // the first topic filling the whole match), and finally shuffle.
+  if (topicSlug && isMultiSlug(topicSlug)) {
+    const parts = parseMultiSlug(topicSlug)
+    if (parts.length > 0) {
+      const perTopic = Math.max(1, Math.ceil(totalQuestions / parts.length) + 2)
+      const pools = await Promise.all(
+        parts.map((s) => generateMatchQuestions(perTopic, s, completedTopics, tier).catch(() => [] as MatchQuestion[]))
+      )
+      const interleaved: MatchQuestion[] = []
+      for (let i = 0; interleaved.length < totalQuestions; i++) {
+        let progressed = false
+        for (const pool of pools) {
+          if (i < pool.length) {
+            interleaved.push(pool[i])
+            progressed = true
+            if (interleaved.length >= totalQuestions) break
+          }
+        }
+        if (!progressed) break
+      }
+      // Shuffle so the round-robin order isn't visible, then re-id sequentially.
+      for (let i = interleaved.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[interleaved[i], interleaved[j]] = [interleaved[j], interleaved[i]]
+      }
+      return interleaved.slice(0, totalQuestions).map((q, i) => ({ ...q, id: i }))
+    }
+  }
+
+  // MCAT: the one course with a section → area → subtopic hierarchy. Any slug
+  // in that tree (including the broad section/whole-exam buckets) routes here.
+  if (topicSlug) {
+    const { isMcatSlug, getMcatQuestions } = await import('@/data/competitive-questions/mcat-bank')
+    if (isMcatSlug(topicSlug)) {
+      const qs = getMcatQuestions(totalQuestions, topicSlug)
+      if (qs.length > 0) {
+        return qs.map((q, i) => {
+          const shuffled = shuffleOptions(q)
+          return {
+            id: i,
+            question: q.question,
+            options: shuffled.options,
+            correctAnswer: shuffled.correctAnswer,
+            answerIndex: shuffled.answerIndex,
+            explanation: q.explanation,
+            difficulty: q.difficulty,
+            type: 'multiple-choice',
+          } as MatchQuestion
+        })
+      }
+    }
+  }
+
   // Generic AP per-topic routing (runs first): if the selected slug is a
   // canonical topic of any AP bank, return exactly that topic's questions. This
   // covers every AP course uniformly. Course-level grouping slugs (whole-unit /

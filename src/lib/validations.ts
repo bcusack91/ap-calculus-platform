@@ -12,6 +12,9 @@ export type AnswerSubmission = z.infer<typeof answerSubmissionSchema>
 
 // ─── Competitive Queue ─────────────────────────────────────────────────
 export const queueJoinSchema = z.object({
+  // Accepts a plain topic slug OR a `multi:a,b,c` composite (multi-topic /
+  // multi-course matches). 200 chars bounds the composite; buildMultiSlug caps
+  // the topic count so it always fits.
   topicSlug: z.string().min(1).max(200),
   gameMode: z.enum(['SPEED_RACE', 'ACCURACY_CHALLENGE', 'SURVIVAL', 'MIXED', 'CHAOS']).optional(),
   tier: z.enum(['easy', 'medium', 'hard']).optional(),

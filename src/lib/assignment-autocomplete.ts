@@ -2,6 +2,7 @@ import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import type { AssignmentType } from '@prisma/client'
 import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug } from '@/lib/sat-topic-map'
+import { isMultiSlug, parseMultiSlug } from '@/lib/competitive-utils'
 
 /**
  * Server-side assignment auto-completion.
@@ -31,6 +32,20 @@ function slugMatches(assignment: { topicSlug: string | null; topicSlugs: unknown
   if (assignment.topicSlug === topicSlug) return true
   const many = assignment.topicSlugs
   if (Array.isArray(many) && many.includes(topicSlug)) return true
+
+  // Multi-topic match (`multi:a,b,c`): the match was played across a SET of
+  // topics, so it completes an assignment that covers that set. Require the
+  // assignment's topics to be a subset of what was actually played — otherwise
+  // a 2-topic match would complete a 10-topic assignment the student only
+  // partially practiced.
+  if (isMultiSlug(topicSlug)) {
+    const played = new Set(parseMultiSlug(topicSlug))
+    const assigned = [assignment.topicSlug, ...(Array.isArray(many) ? (many as unknown[]) : [])]
+      .filter((s): s is string => typeof s === 'string' && s.length > 0)
+    // An assignment stored as the same composite slug matches exactly.
+    if (assigned.some((s) => s === topicSlug)) return true
+    if (assigned.length > 0 && assigned.every((s) => played.has(s))) return true
+  }
   // SAT competitive matches are played on bank pseudo-slugs ('sat-math',
   // 'sat-reading', the 2 punctuation banks) OR the finer area/domain slugs
   // ('sat-math-algebra', 'sat-rw-conventions', …), while sat-prep
