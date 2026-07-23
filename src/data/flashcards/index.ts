@@ -7,12 +7,14 @@ import { mcatChemPhysFlashcards } from './mcat-chemphys'
 import { mcatBioBiochemFlashcards } from './mcat-biobiochem'
 import { mcatPsychSocCarsFlashcards } from './mcat-psychsoc-cars'
 import { mcatStrategyFlashcards } from './mcat-strategy'
+import { apesFlashcards } from './apes'
 
 export const SEED_FLASHCARDS: FlashcardsByTopic = {
   ...mcatChemPhysFlashcards,
   ...mcatBioBiochemFlashcards,
   ...mcatPsychSocCarsFlashcards,
   ...mcatStrategyFlashcards,
+  ...apesFlashcards,
 }
 
 export type { SeedFlashcard, FlashcardsByTopic } from './types'
