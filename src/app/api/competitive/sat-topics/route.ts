@@ -28,7 +28,10 @@ export async function GET() {
       questionCount: satQuestionCount(domain.slug),
       skills: domain.skills.map((s) => ({
         slug: s.slug,
+        // `short` labels the chip; `title` is the full College Board name and
+        // becomes the tooltip. See SatSkill in sat-bank.ts.
         title: s.title,
+        short: s.short,
         questionCount: satQuestionCount(s.slug),
       })),
     })),

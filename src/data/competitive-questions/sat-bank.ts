@@ -41,8 +41,18 @@ import { satRwQuestions } from './sat-questions-rw'
 export interface SatSkill {
   /** Competitive slug — 'sat-skill-<key>'. */
   slug: string
-  /** Student-facing title. */
+  /**
+   * The full name — the official College Board wording for official skills.
+   * Shown as a tooltip in the picker, and kept verbatim for blueprint fidelity.
+   */
   title: string
+  /**
+   * Short label for the picker UI. College Board's official names run up to 77
+   * characters ("Nonlinear equations in one variable and systems of equations
+   * in two variables"), which turn the skill picker into a wall of prose. The
+   * picker shows this; `title` remains the authoritative name.
+   */
+  short: string
   /**
    * Exact `skill` tag(s) used in sat-math-bank / sat-rw-bank. Questions are
    * pulled by matching this string, so it must stay in sync with the banks —
@@ -83,16 +93,18 @@ export interface SatSection {
   domains: SatDomain[]
 }
 
-const skill = (key: string, title: string, tags?: string[]): SatSkill => ({
+const skill = (key: string, title: string, short: string, tags?: string[]): SatSkill => ({
   slug: `sat-skill-${key}`,
   title,
+  short,
   tags: tags ?? [title],
 })
 
 /** A finer practice pool sitting under an official College Board skill. */
-const sub = (key: string, title: string, officialSkill: string): SatSkill => ({
+const sub = (key: string, title: string, short: string, officialSkill: string): SatSkill => ({
   slug: `sat-skill-${key}`,
   title,
+  short,
   tags: [],
   officialSkill,
 })
@@ -108,16 +120,16 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Algebra',
         emoji: '📊',
         skills: [
-          skill('linear-equations-one-var', 'Linear equations in one variable'),
-          skill('linear-equations-two-var', 'Linear equations in two variables'),
-          skill('linear-functions', 'Linear functions'),
-          skill('systems-linear-equations', 'Systems of two linear equations in two variables'),
-          skill('linear-inequalities', 'Linear inequalities in one or two variables'),
+          skill('linear-equations-one-var', 'Linear equations in one variable', 'Linear Equations'),
+          skill('linear-equations-two-var', 'Linear equations in two variables', 'Two-Variable Equations'),
+          skill('linear-functions', 'Linear functions', 'Linear Functions'),
+          skill('systems-linear-equations', 'Systems of two linear equations in two variables', 'Systems of Equations'),
+          skill('linear-inequalities', 'Linear inequalities in one or two variables', 'Linear Inequalities'),
           // Systems of inequalities (shaded-region problems) and reading linear
           // relationships off a graph are heavily tested but had ~1 and ~22
           // questions respectively across the whole math bank.
-          sub('systems-inequalities', 'Systems of Inequalities & Regions', 'Linear inequalities in one or two variables'),
-          sub('graphing-linear', 'Graphing Linear Relationships', 'Linear equations in two variables'),
+          sub('systems-inequalities', 'Systems of Inequalities & Regions', 'Systems of Inequalities', 'Linear inequalities in one or two variables'),
+          sub('graphing-linear', 'Graphing Linear Relationships', 'Graphing Lines', 'Linear equations in two variables'),
         ],
       },
       {
@@ -125,18 +137,18 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Advanced Math',
         emoji: '🧮',
         skills: [
-          skill('equivalent-expressions', 'Equivalent expressions'),
-          skill('nonlinear-equations', 'Nonlinear equations in one variable and systems of equations in two variables'),
-          skill('nonlinear-functions', 'Nonlinear functions'),
+          skill('equivalent-expressions', 'Equivalent expressions', 'Equivalent Expressions'),
+          skill('nonlinear-equations', 'Nonlinear equations in one variable and systems of equations in two variables', 'Nonlinear Equations'),
+          skill('nonlinear-functions', 'Nonlinear functions', 'Nonlinear Functions'),
           // Practice subdivisions — see SatSkill.officialSkill. Advanced Math is
           // ~35% of the math section but the official taxonomy names only 3
           // skills for it, so these break the grab-bags into playable pools.
-          sub('quadratic-equations', 'Quadratic Equations & the Quadratic Formula', 'Nonlinear equations in one variable and systems of equations in two variables'),
-          sub('quadratic-graphs', 'Quadratic Graphs & Vertex Form', 'Nonlinear functions'),
-          sub('exponential-functions', 'Exponential Functions & Growth/Decay', 'Nonlinear functions'),
-          sub('polynomial-rational', 'Polynomials & Rational Expressions', 'Equivalent expressions'),
-          sub('radicals-absolute-complex', 'Radicals, Absolute Value & Complex Numbers', 'Nonlinear equations in one variable and systems of equations in two variables'),
-          sub('function-notation-transformations', 'Function Notation, Composition & Transformations', 'Nonlinear functions'),
+          sub('quadratic-equations', 'Quadratic Equations & the Quadratic Formula', 'Quadratic Equations', 'Nonlinear equations in one variable and systems of equations in two variables'),
+          sub('quadratic-graphs', 'Quadratic Graphs & Vertex Form', 'Quadratic Graphs', 'Nonlinear functions'),
+          sub('exponential-functions', 'Exponential Functions & Growth/Decay', 'Exponentials', 'Nonlinear functions'),
+          sub('polynomial-rational', 'Polynomials & Rational Expressions', 'Polynomials & Rationals', 'Equivalent expressions'),
+          sub('radicals-absolute-complex', 'Radicals, Absolute Value & Complex Numbers', 'Radicals & Complex', 'Nonlinear equations in one variable and systems of equations in two variables'),
+          sub('function-notation-transformations', 'Function Notation, Composition & Transformations', 'Functions & Transformations', 'Nonlinear functions'),
         ],
       },
       {
@@ -144,13 +156,13 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Problem-Solving & Data Analysis',
         emoji: '📈',
         skills: [
-          skill('ratios-rates-units', 'Ratios, rates, proportional relationships, and units'),
-          skill('percentages', 'Percentages'),
-          skill('one-variable-data', 'One-variable data: distributions and measures of center and spread'),
-          skill('two-variable-data', 'Two-variable data: models and scatterplots'),
-          skill('probability', 'Probability and conditional probability'),
-          skill('sample-inference', 'Inference from sample statistics and margin of error'),
-          skill('statistical-claims', 'Evaluating statistical claims: observational studies and experiments'),
+          skill('ratios-rates-units', 'Ratios, rates, proportional relationships, and units', 'Ratios & Rates'),
+          skill('percentages', 'Percentages', 'Percentages'),
+          skill('one-variable-data', 'One-variable data: distributions and measures of center and spread', 'One-Variable Data'),
+          skill('two-variable-data', 'Two-variable data: models and scatterplots', 'Scatterplots & Models'),
+          skill('probability', 'Probability and conditional probability', 'Probability'),
+          skill('sample-inference', 'Inference from sample statistics and margin of error', 'Sampling & Margin of Error'),
+          skill('statistical-claims', 'Evaluating statistical claims: observational studies and experiments', 'Study Design & Claims'),
         ],
       },
       {
@@ -158,10 +170,10 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Geometry & Trigonometry',
         emoji: '📏',
         skills: [
-          skill('area-volume', 'Area and volume'),
-          skill('lines-angles-triangles', 'Lines, angles, and triangles'),
-          skill('right-triangles-trig', 'Right triangles and trigonometry'),
-          skill('circles', 'Circles'),
+          skill('area-volume', 'Area and volume', 'Area & Volume'),
+          skill('lines-angles-triangles', 'Lines, angles, and triangles', 'Lines, Angles & Triangles'),
+          skill('right-triangles-trig', 'Right triangles and trigonometry', 'Right Triangles & Trig'),
+          skill('circles', 'Circles', 'Circles'),
         ],
       },
     ],
@@ -176,9 +188,9 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Information & Ideas',
         emoji: '🔍',
         skills: [
-          skill('central-ideas-details', 'Central Ideas and Details'),
-          skill('inferences', 'Inferences'),
-          skill('command-of-evidence', 'Command of Evidence'),
+          skill('central-ideas-details', 'Central Ideas and Details', 'Central Ideas'),
+          skill('inferences', 'Inferences', 'Inferences'),
+          skill('command-of-evidence', 'Command of Evidence', 'Command of Evidence'),
         ],
       },
       {
@@ -186,9 +198,9 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Craft & Structure',
         emoji: '🎨',
         skills: [
-          skill('words-in-context', 'Words in Context'),
-          skill('text-structure-purpose', 'Text Structure and Purpose'),
-          skill('cross-text-connections', 'Cross-Text Connections'),
+          skill('words-in-context', 'Words in Context', 'Words in Context'),
+          skill('text-structure-purpose', 'Text Structure and Purpose', 'Text Structure'),
+          skill('cross-text-connections', 'Cross-Text Connections', 'Cross-Text Links'),
         ],
       },
       {
@@ -196,8 +208,8 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Expression of Ideas',
         emoji: '✍️',
         skills: [
-          skill('rhetorical-synthesis', 'Rhetorical Synthesis'),
-          skill('transitions', 'Transitions'),
+          skill('rhetorical-synthesis', 'Rhetorical Synthesis', 'Rhetorical Synthesis'),
+          skill('transitions', 'Transitions', 'Transitions'),
         ],
       },
       {
@@ -205,8 +217,8 @@ export const SAT_SECTIONS: SatSection[] = [
         title: 'Standard English Conventions',
         emoji: '📝',
         skills: [
-          skill('boundaries', 'Boundaries'),
-          skill('form-structure-sense', 'Form, Structure, and Sense'),
+          skill('boundaries', 'Boundaries', 'Boundaries'),
+          skill('form-structure-sense', 'Form, Structure, and Sense', 'Form & Structure'),
         ],
       },
     ],
