@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions, type MatchTier } from '@/lib/competitive-utils'
+import { generateMatchQuestions, SPEED_RACE_POOL_SIZE, type MatchTier } from '@/lib/competitive-utils'
 import { Prisma } from '@prisma/client'
 
 /**
@@ -104,7 +104,11 @@ export async function POST(req: NextRequest) {
       const team1 = [allPlayers[0], allPlayers[3]] // highest + lowest
       const team2 = [allPlayers[1], allPlayers[2]] // 2nd + 3rd
 
-      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs, tier)
+      // Team battles are first-to-15 (WIN_SCORE) and cycle questions with a
+      // modulo index, so a 15-question buffer repeated once an active player
+      // passed it. A deeper pool keeps questions fresh; match length is unchanged
+      // (score-based completion).
+      const questions = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
@@ -316,7 +320,7 @@ export async function GET() {
       const team1 = [allPlayers[0], allPlayers[3]]
       const team2 = [allPlayers[1], allPlayers[2]]
 
-      const questions = await generateMatchQuestions(15, entry.topicSlug, completedTopicSlugs)
+      const questions = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, entry.topicSlug, completedTopicSlugs)
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)

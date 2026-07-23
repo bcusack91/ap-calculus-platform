@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions } from '@/lib/competitive-utils'
+import { generateMatchQuestions, matchQuestionCount } from '@/lib/competitive-utils'
 import { normalizeLobbyCode } from '@/lib/lobby-codes'
 import type { Prisma, CompetitiveMode } from '@prisma/client'
 
@@ -56,7 +56,10 @@ export async function POST(
   const hostMMR = lobby.host.competitiveProfile?.overallMMR ?? 1000
   const guestMMR = lobby.guest.competitiveProfile?.overallMMR ?? 1000
 
-  const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
+  // Private-lobby matches run through the standard match/answer route, which
+  // cycles questions with a modulo index — a shallow buffer repeated the same
+  // 10 as soon as a player passed question 10. See matchQuestionCount.
+  const questionCount = matchQuestionCount(gameMode)
   const questions = await generateMatchQuestions(questionCount, topicSlug, [])
 
   const match = await prisma.competitiveMatch.create({

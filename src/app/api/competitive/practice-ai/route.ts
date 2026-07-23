@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions, matchQuestionCount, type MatchTier } from '@/lib/competitive-utils'
+import { generateMatchQuestions, matchQuestionCount, SPEED_RACE_POOL_SIZE, type MatchTier } from '@/lib/competitive-utils'
 import type { Prisma } from '@prisma/client'
 
 /**
@@ -92,7 +92,9 @@ export async function POST(req: NextRequest) {
         getOrCreateAIBot('ai-opponent-2@studyai.com', 'AI Opponent 2'),
       ])
 
-      const questions = await generateMatchQuestions(15, topicSlug, completedTopicSlugs, tier)
+      // AI team battle uses the same team-match route (modulo cycling, first-to-15),
+      // so it gets the same deep buffer as live team battles.
+      const questions = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
 
       const team1Players = [user.id, aiTeammate.id]
       const team2Players = [aiOpp1.id, aiOpp2.id]
