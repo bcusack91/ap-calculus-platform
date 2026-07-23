@@ -146,6 +146,21 @@ export function Navbar() {
       .catch(err => console.error('Error fetching navbar data:', err))
   }, [session])
 
+  // Update the top-right avatar the instant it's changed on the profile page,
+  // rather than waiting out the 30-minute sessionStorage cache. The profile save
+  // dispatches 'avatar-updated' with the freshly stored avatarData.
+  useEffect(() => {
+    const onAvatarUpdated = (e: Event) => {
+      const next = (e as CustomEvent).detail ?? null
+      setAvatarData(next)
+      try {
+        sessionStorage.setItem('navData-auth', JSON.stringify({ avatarData: next, _ts: Date.now() }))
+      } catch { /* storage unavailable — non-fatal */ }
+    }
+    window.addEventListener('avatar-updated', onAvatarUpdated)
+    return () => window.removeEventListener('avatar-updated', onAvatarUpdated)
+  }, [])
+
   // Close dropdowns on outside click or Escape
   useEffect(() => {
     function handleClick(e: MouseEvent) {

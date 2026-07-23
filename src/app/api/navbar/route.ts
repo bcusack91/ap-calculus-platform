@@ -37,7 +37,9 @@ export async function GET() {
           return user?.avatarData ?? null
         },
         [`navbar-avatar-${session.user.id}`],
-        { revalidate: 1800 }
+        // Tagged so the avatar-save route can bust this 30-minute server cache
+        // immediately (otherwise a fresh tab / reload showed the old avatar).
+        { revalidate: 1800, tags: [`avatar-${session.user.id}`] }
       )
       avatarData = await getCachedAvatar(session.user.id)
     }

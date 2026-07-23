@@ -56,7 +56,15 @@ export default function ProfilePage() {
         // Use the server's copy: for v2 (DiceBear) avatars it carries the
         // server-generated SVG the client payload doesn't have.
         const data = await response.json();
-        setAvatarData(data.avatarData ?? newAvatarData);
+        const saved = data.avatarData ?? newAvatarData;
+        setAvatarData(saved);
+        // The navbar caches the avatar in sessionStorage (30 min) and shows it
+        // top-right; without this it kept displaying the old icon until the
+        // cache expired. Clear that cache and notify the navbar to swap live.
+        try {
+          sessionStorage.removeItem('navData-auth');
+          window.dispatchEvent(new CustomEvent('avatar-updated', { detail: saved }));
+        } catch { /* SSR / storage unavailable — non-fatal */ }
         setSaveMessage('Avatar saved successfully! ✓');
         setTimeout(() => setSaveMessage(''), 3000);
       } else {

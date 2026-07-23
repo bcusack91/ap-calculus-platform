@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidateTag } from 'next/cache';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { validateAvatarData } from '@/lib/avatar-validation';
@@ -47,6 +48,11 @@ export async function POST(request: Request) {
       where: { id: session.user.id },
       data: { avatarData: toStore },
     });
+
+    // Bust the navbar's server-side avatar cache so a fresh tab or reload picks
+    // up the new avatar right away instead of after its 30-minute revalidate.
+    // (Live match screens read avatarData directly and were already current.)
+    revalidateTag(`avatar-${session.user.id}`);
 
     return NextResponse.json({ success: true, avatarData: user.avatarData });
   } catch (error) {
