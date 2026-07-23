@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { COURSE_COUNT } from '@/lib/site-stats'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
-import { courseMeta, defaultCourseMeta, getCourseHref, sectionOrder } from '@/data/course-metadata'
+import { courseMeta, defaultCourseMeta, getCourseHref, sectionOrder, sectionAnchor } from '@/data/course-metadata'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -55,7 +55,10 @@ export default async function TopicsPage() {
 
         {orderedSections.map(([sectionName, sectionCourses], sectionIdx) => (
           <div key={sectionName} className={sectionIdx > 0 ? 'mt-16' : 'mt-8'}>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-accent-light dark:border-accent-light">
+            <h2
+              id={sectionAnchor(sectionName)}
+              className="scroll-mt-24 text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-accent-light dark:border-accent-light"
+            >
               {sectionName}
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

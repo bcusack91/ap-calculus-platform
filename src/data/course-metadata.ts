@@ -65,6 +65,14 @@ export const sectionOrder = [
 ]
 
 /**
+ * Stable anchor id for a section heading — used by the homepage goal tiles to
+ * deep-link into /topics#<anchor>. Keep in sync with the ids /topics renders.
+ */
+export function sectionAnchor(section: string): string {
+  return section.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+/**
  * Get metadata for a given course slug, falling back to defaults.
  */
 export function getCourseMetadata(slug: string) {
