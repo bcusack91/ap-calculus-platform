@@ -5277,6 +5277,32 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     setCosineAnswers(newAnswers)
   }
 
+  // Insert a symbol (√) at the caret of a specific sine/cosine input. Students
+  // otherwise had to know to type "sqrt(2)/2"; a tappable √ makes the notation
+  // discoverable. The answer checker already accepts √, sqrt2, and sqrt(2).
+  const insertSymbol = (rowType: 'sine' | 'cosine', index: number, symbol: string) => {
+    const refs = rowType === 'sine' ? sineRefs : cosineRefs
+    const answers = rowType === 'sine' ? sineAnswers : cosineAnswers
+    const setAnswers = rowType === 'sine' ? setSineAnswers : setCosineAnswers
+    const el = refs.current[index]
+    const current = answers[index]
+    // Insert at the caret if the input is focused, else append.
+    const caret = el && el.selectionStart !== null ? el.selectionStart : current.length
+    const next = current.slice(0, caret) + symbol + current.slice(caret)
+    const newAnswers = [...answers]
+    newAnswers[index] = next
+    setAnswers(newAnswers)
+    // Restore focus and place the caret just after the inserted symbol.
+    requestAnimationFrame(() => {
+      const node = refs.current[index]
+      if (node) {
+        node.focus()
+        const pos = caret + symbol.length
+        node.setSelectionRange(pos, pos)
+      }
+    })
+  }
+
   const resetPractice = () => {
     setCurrentRow('theta')
     setThetaAnswers(['', '', '', '', ''])
@@ -5301,6 +5327,9 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
           </h1>
           <p className="text-xl text-foreground">
             Fill in each row of the table for the first quadrant angles
+          </p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Tip: tap the <span className="font-semibold text-accent-hover dark:text-accent-muted">√</span> button to enter a square root — e.g. <span className="font-mono">√2/2</span>.
           </p>
         </div>
 
@@ -5392,14 +5421,26 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                           value={sineAnswers[i]}
                           onChange={(e) => handleSineChange(i, e.target.value)}
                           className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-accent ${
-                            sineValidation[i] === null 
-                              ? 'border-accent' 
-                              : sineValidation[i] 
-                                ? 'border-green-500' 
+                            sineValidation[i] === null
+                              ? 'border-accent'
+                              : sineValidation[i]
+                                ? 'border-green-500'
                                 : 'border-red-500'
                           }`}
                           placeholder="e.g. 1/2"
                         />
+                        {/* Tap to insert a square root — onMouseDown preventDefault
+                            keeps the input from blurring before the click fires. */}
+                        <button
+                          type="button"
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => insertSymbol('sine', i, '√')}
+                          className="px-2 py-0.5 text-sm font-semibold rounded-md border border-accent-muted text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors"
+                          aria-label="Insert square root symbol"
+                          title="Insert √"
+                        >
+                          √
+                        </button>
                       </div>
                     ) : currentRow === 'cosine' || currentRow === 'complete' ? (
                       <div className="w-24 h-16 mx-auto flex items-center justify-center text-lg font-bold text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-lg border-2 border-green-500">
@@ -5457,14 +5498,25 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                           value={cosineAnswers[i]}
                           onChange={(e) => handleCosineChange(i, e.target.value)}
                           className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-accent ${
-                            cosineValidation[i] === null 
-                              ? 'border-accent' 
-                              : cosineValidation[i] 
-                                ? 'border-green-500' 
+                            cosineValidation[i] === null
+                              ? 'border-accent'
+                              : cosineValidation[i]
+                                ? 'border-green-500'
                                 : 'border-red-500'
                           }`}
                           placeholder="e.g. 1/2"
                         />
+                        {/* Tap to insert a square root (see sine row). */}
+                        <button
+                          type="button"
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => insertSymbol('cosine', i, '√')}
+                          className="px-2 py-0.5 text-sm font-semibold rounded-md border border-accent-muted text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors"
+                          aria-label="Insert square root symbol"
+                          title="Insert √"
+                        >
+                          √
+                        </button>
                       </div>
                     ) : currentRow === 'complete' ? (
                       <div className="w-24 h-16 mx-auto flex items-center justify-center text-lg font-bold text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-lg border-2 border-green-500">
