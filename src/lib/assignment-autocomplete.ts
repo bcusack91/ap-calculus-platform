@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import type { AssignmentType } from '@prisma/client'
-import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug } from '@/lib/sat-topic-map'
+import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug, skillPlayCoversCourseTopic } from '@/lib/sat-topic-map'
 import { isMultiSlug, parseMultiSlug } from '@/lib/competitive-utils'
 import { isMcatTopicSlug, bankPlayCoversCurriculumTopic } from '@/lib/mcat-topic-map'
 
@@ -61,6 +61,22 @@ function slugMatches(assignment: { topicSlug: string | null; topicSlugs: unknown
       // Every assigned topic must be covered — a single-topic match must not
       // complete a 6-topic assignment the student only partially practiced.
       if (assigned.length > 0 && assigned.every((s) => bankPlayCoversCurriculumTopic(s, playedMcat))) return true
+    }
+  }
+
+  // SAT skill tier: matches played on 'sat-skill-<key>' slugs (one official
+  // College Board skill each, individually or combined via `multi:`) complete
+  // assignments naming the curriculum topics those skills cover. Falls through
+  // to the coarser bank matching below when no skill mapping applies.
+  {
+    const played = isMultiSlug(topicSlug) ? parseMultiSlug(topicSlug) : [topicSlug]
+    const playedSkills = new Set(played.filter(s => s.startsWith('sat-skill-')))
+    if (playedSkills.size > 0) {
+      const assigned = [assignment.topicSlug, ...(Array.isArray(many) ? (many as unknown[]) : [])]
+        .filter((s): s is string => typeof s === 'string' && s.length > 0)
+      // Every assigned topic must be covered, so a single-skill match cannot
+      // complete a multi-topic assignment the student only partly practiced.
+      if (assigned.length > 0 && assigned.every(s => skillPlayCoversCourseTopic(s, playedSkills))) return true
     }
   }
 

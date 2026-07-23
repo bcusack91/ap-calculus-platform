@@ -91,9 +91,9 @@ export const COMPETITIVE_COURSE_CATEGORIES: CompetitiveCourseCategory[] = [
     label: 'Test Prep',
     icon: '📝',
     courses: [
-      // 'sat' has no DB Course row — the course-topics API special-cases it and
-      // returns the 4 SAT competitive banks as synthetic topics.
-      { slug: 'sat', categoryKey: 'sat', emoji: '📝', name: 'SAT Prep', desc: 'Math, Reading & Punctuation', gradient: 'from-blue-600 to-cyan-600' },
+      // SAT has its own section → domain → skill picker at /competitive/sat
+      // (no DB Course row needed — the hierarchy comes from the SAT bank).
+      { slug: 'sat', categoryKey: 'sat', emoji: '📝', name: 'SAT Prep', desc: 'Both sections · 29 skills', gradient: 'from-blue-600 to-cyan-600' },
       // MCAT has its own section → area → subtopic picker at /competitive/mcat
       // (no DB Course row needed — the hierarchy comes from the MCAT bank).
       { slug: 'mcat', categoryKey: 'mcat', emoji: '🩺', name: 'MCAT Prep', desc: 'All 4 sections · 55 subtopics', gradient: 'from-emerald-600 to-teal-600' },

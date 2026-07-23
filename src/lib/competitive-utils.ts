@@ -707,6 +707,43 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     }
   }
 
+  // SAT: section → domain → skill hierarchy (see sat-bank.ts). Covers 'sat'
+  // (whole test), the 2 section slugs, the 8 domain slugs, and the 29 skill
+  // slugs. The bank is a strict SUPERSET of what the old per-slug handlers
+  // returned — it ingests the same sat-math-bank / sat-rw-bank questions, adds
+  // the competitive-authored ones, and round-robins across skills so a domain
+  // match stays balanced instead of over-drawing the deepest skill.
+  //
+  // The legacy bank slugs 'sat-reading' and the two 'sat-punctuation*' pools are
+  // deliberately NOT in the hierarchy, so they keep their original handlers and
+  // saved matches on those slugs resolve exactly as before.
+  if (topicSlug && topicSlug.startsWith('sat')) {
+    const { isSatHierarchySlug, getSatQuestions } = await import('@/data/competitive-questions/sat-bank')
+    if (isSatHierarchySlug(topicSlug)) {
+      // The SAT picker offers an easy/medium/hard tier, so draw the whole pool
+      // and let pickTieredQuestions apply the difficulty mix — the same handling
+      // the coarser SAT bank slugs get further down.
+      const qs = tier
+        ? pickTieredQuestions(getSatQuestions(100000, topicSlug), totalQuestions, tier)
+        : getSatQuestions(totalQuestions, topicSlug)
+      if (qs.length > 0) {
+        return qs.map((q, i) => {
+          const shuffled = shuffleOptions(q)
+          return {
+            id: i,
+            question: q.question,
+            options: shuffled.options,
+            correctAnswer: shuffled.correctAnswer,
+            answerIndex: shuffled.answerIndex,
+            explanation: q.explanation,
+            difficulty: q.difficulty,
+            type: 'multiple-choice',
+          } as MatchQuestion
+        })
+      }
+    }
+  }
+
   // MCAT: the one course with a section → area → subtopic hierarchy. Any slug
   // in that tree (including the broad section/whole-exam buckets) routes here.
   if (topicSlug) {

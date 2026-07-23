@@ -106,8 +106,129 @@ export function satBankSlugsForCourseTopic(topicSlug: string): SatBankSlug[] | n
  * for assignment auto-completion. Non-SAT / already-canonical slugs pass through.
  */
 export function canonicalSatBankSlug(slug: string): string {
+  // Skill-tier slugs ('sat-skill-<key>') are the newest and finest level; map
+  // each to the canonical bank of its section so existing sat-prep assignments
+  // keyed to the 4 legacy banks still auto-complete.
+  if (slug.startsWith('sat-skill-')) {
+    return CONVENTIONS_SKILLS.has(slug) ? 'sat-punctuation'
+      : MATH_SKILLS.has(slug) ? 'sat-math'
+      : 'sat-reading'
+  }
   if (slug === 'sat-math' || slug.startsWith('sat-math-')) return 'sat-math'
   if (slug === 'sat-rw-conventions') return 'sat-punctuation'
   if (slug === 'sat-rw' || slug.startsWith('sat-rw-')) return 'sat-reading'
   return slug
+}
+
+// ---------------------------------------------------------------------------
+// Curriculum topic ↔ competitive SKILL alignment
+// ---------------------------------------------------------------------------
+//
+// Same problem the MCAT has (see mcat-topic-map.ts): the DB has 35 sat-prep
+// curriculum topics organized for STUDYING, while the competitive bank has 29
+// official College Board skills sized so each holds a full match. Renaming
+// either side would break saved matches, progress, and assignments, so this map
+// translates instead. A teacher who assigns the curriculum topic "Quadratic
+// Equations" has that assignment satisfied by a match on the skills whose
+// question pools cover it.
+
+/** The 19 math skill slugs (used by canonicalSatBankSlug). */
+const MATH_SKILLS = new Set([
+  'sat-skill-linear-equations-one-var', 'sat-skill-linear-equations-two-var',
+  'sat-skill-linear-functions', 'sat-skill-systems-linear-equations',
+  'sat-skill-linear-inequalities', 'sat-skill-equivalent-expressions',
+  'sat-skill-nonlinear-equations', 'sat-skill-nonlinear-functions',
+  'sat-skill-ratios-rates-units', 'sat-skill-percentages',
+  'sat-skill-one-variable-data', 'sat-skill-two-variable-data',
+  'sat-skill-probability', 'sat-skill-sample-inference',
+  'sat-skill-statistical-claims', 'sat-skill-area-volume',
+  'sat-skill-lines-angles-triangles', 'sat-skill-right-triangles-trig',
+  'sat-skill-circles',
+])
+
+/** The 2 Standard English Conventions skills. */
+const CONVENTIONS_SKILLS = new Set(['sat-skill-boundaries', 'sat-skill-form-structure-sense'])
+
+/** Curriculum topic slug → competitive skill slug(s) covering it. */
+const CURRICULUM_TO_SKILLS: Record<string, string[]> = {
+  // --- Math: Heart of Algebra / linear ---
+  'sat-heart-of-algebra': ['sat-skill-linear-equations-one-var', 'sat-skill-linear-equations-two-var'],
+  'sat-linear-equations-inequalities': ['sat-skill-linear-equations-one-var', 'sat-skill-linear-equations-two-var', 'sat-skill-linear-inequalities'],
+  'sat-linear-inequalities-graphs': ['sat-skill-linear-inequalities'],
+  'sat-systems-equations': ['sat-skill-systems-linear-equations'],
+  'sat-systems-linear-equations': ['sat-skill-systems-linear-equations'],
+  'sat-functions': ['sat-skill-linear-functions', 'sat-skill-nonlinear-functions'],
+
+  // --- Math: Advanced Math ---
+  'sat-nonlinear-equations-functions': ['sat-skill-nonlinear-equations', 'sat-skill-nonlinear-functions'],
+  'sat-passport-advanced-math': ['sat-skill-equivalent-expressions', 'sat-skill-nonlinear-equations'],
+  'sat-quadratic-equations': ['sat-skill-nonlinear-equations'],
+  'sat-exponents-radicals': ['sat-skill-equivalent-expressions'],
+  'sat-exponential-functions': ['sat-skill-nonlinear-functions'],
+  'sat-polynomials-factoring': ['sat-skill-equivalent-expressions'],
+  'sat-polynomial-rational-expressions': ['sat-skill-equivalent-expressions'],
+  'sat-complex-numbers': ['sat-skill-nonlinear-equations'],
+
+  // --- Math: Problem-Solving & Data Analysis ---
+  'sat-problem-solving-data': ['sat-skill-ratios-rates-units', 'sat-skill-percentages'],
+  'sat-ratios-proportions-percents': ['sat-skill-ratios-rates-units', 'sat-skill-percentages'],
+  'sat-data-statistics': ['sat-skill-one-variable-data', 'sat-skill-statistical-claims'],
+  'sat-statistics-data-interpretation': ['sat-skill-one-variable-data', 'sat-skill-sample-inference'],
+  'sat-scatterplots-line-fit': ['sat-skill-two-variable-data'],
+  'sat-probability-two-way-tables': ['sat-skill-probability'],
+
+  // --- Math: Geometry & Trigonometry ---
+  'sat-additional-topics': ['sat-skill-area-volume', 'sat-skill-circles'],
+  'sat-circles': ['sat-skill-circles'],
+  'sat-geometry-basics': ['sat-skill-lines-angles-triangles', 'sat-skill-area-volume'],
+  'sat-geometry-trigonometry': ['sat-skill-right-triangles-trig', 'sat-skill-lines-angles-triangles'],
+
+  // --- Reading & Writing: Information and Ideas ---
+  'sat-reading-writing': ['sat-skill-central-ideas-details', 'sat-skill-words-in-context'],
+  // The DB has no dedicated Craft & Structure topic, so the general reading
+  // topic carries text-structure and cross-text work as well.
+  'sat-reading-comprehension': ['sat-skill-central-ideas-details', 'sat-skill-inferences', 'sat-skill-text-structure-purpose', 'sat-skill-cross-text-connections'],
+  'sat-reading-info-ideas': ['sat-skill-central-ideas-details', 'sat-skill-inferences', 'sat-skill-command-of-evidence'],
+  'sat-central-ideas-details': ['sat-skill-central-ideas-details'],
+  'sat-command-evidence': ['sat-skill-command-of-evidence'],
+  'sat-finding-textual-evidence': ['sat-skill-command-of-evidence'],
+
+  // --- Reading & Writing: Craft and Structure ---
+  'sat-craft-structure': ['sat-skill-words-in-context', 'sat-skill-text-structure-purpose', 'sat-skill-cross-text-connections'],
+  'sat-vocabulary-context': ['sat-skill-words-in-context'],
+
+  // --- Reading & Writing: Expression of Ideas ---
+  'sat-expression-ideas': ['sat-skill-rhetorical-synthesis', 'sat-skill-transitions'],
+  'sat-transitions-organization': ['sat-skill-transitions'],
+  'sat-conciseness-redundancy': ['sat-skill-rhetorical-synthesis'],
+  'sat-effective-language-use': ['sat-skill-rhetorical-synthesis', 'sat-skill-words-in-context'],
+
+  // --- Reading & Writing: Standard English Conventions ---
+  'sat-punctuation': ['sat-skill-boundaries'],
+  'sat-punctuation-commas-semicolons': ['sat-skill-boundaries'],
+  'sat-english-conventions': ['sat-skill-boundaries', 'sat-skill-form-structure-sense'],
+  'sat-grammar-conventions': ['sat-skill-form-structure-sense'],
+  'sat-grammar-usage': ['sat-skill-form-structure-sense'],
+  'sat-sentence-structure': ['sat-skill-form-structure-sense', 'sat-skill-boundaries'],
+  'sat-subject-verb-agreement': ['sat-skill-form-structure-sense'],
+  'sat-pronoun-agreement': ['sat-skill-form-structure-sense'],
+
+  // NOT mapped by design: 'sat-time-management' and other strategy-only topics
+  // have no question pool, so no amount of play should complete them.
+}
+
+/** Competitive skill slugs that cover a curriculum topic ([] if none). */
+export function skillSlugsForCourseTopic(topicSlug: string): string[] {
+  return CURRICULUM_TO_SKILLS[topicSlug] ?? []
+}
+
+/**
+ * Does playing `playedSkillSlugs` cover the curriculum topic `assignedSlug`?
+ * True when ANY skill pool covering that topic was played.
+ */
+export function skillPlayCoversCourseTopic(assignedSlug: string, playedSkillSlugs: Iterable<string>): boolean {
+  const covering = skillSlugsForCourseTopic(assignedSlug)
+  if (covering.length === 0) return false
+  const played = playedSkillSlugs instanceof Set ? playedSkillSlugs : new Set(playedSkillSlugs)
+  return covering.some(s => played.has(s))
 }
