@@ -14,15 +14,43 @@ interface AvatarDisplayProps {
   emotion?: AvatarEmotion;
 }
 
-// Emoji mappings for preset avatars with different emotions
-const PRESET_EMOTIONS: Record<string, Record<AvatarEmotion, string>> = {
-  cat: { neutral: '🐱', happy: '😸', sad: '😿' },
-  dog: { neutral: '🐶', happy: '😃', sad: '😢' },
-  panda: { neutral: '🐼', happy: '😊', sad: '😔' },
-  fox: { neutral: '🦊', happy: '😁', sad: '😞' },
-  koala: { neutral: '🐨', happy: '😄', sad: '😥' },
-  owl: { neutral: '🦉', happy: '🤓', sad: '😪' },
+/**
+ * Base emoji per preset. Deliberately ONE emoji per animal across all emotions.
+ *
+ * This used to map each emotion to a different emoji (owl: 🦉 → 🤓 when happy),
+ * which replaced the character instead of making it react — your owl became a
+ * nerd face for a moment and then flipped back. Unicode has no smiling-owl (or
+ * smiling-panda/koala) glyph, so there is no emoji swap that preserves identity.
+ * Emoji avatars therefore keep their face and express through motion plus a
+ * small reaction badge; DiceBear avatars get a genuinely different face from the
+ * stored svgHappy/svgSad variants.
+ */
+const PRESET_EMOJI: Record<string, string> = {
+  cat: '🐱',
+  dog: '🐶',
+  panda: '🐼',
+  fox: '🦊',
+  koala: '🐨',
+  owl: '🦉',
 };
+
+/** Small badge shown beside a reacting avatar. */
+const REACTION_BADGE: Record<Exclude<AvatarEmotion, 'neutral'>, string> = {
+  happy: '✨',
+  sad: '💧',
+};
+
+/**
+ * Shared reaction chrome so every avatar type animates identically: a spring
+ * pop on a correct answer, a subtle dip on a wrong one. Respects reduced-motion
+ * via the `motion-reduce:` variants — the badge still appears, it just holds
+ * still.
+ */
+function reactionClasses(emotion: AvatarEmotion): string {
+  if (emotion === 'happy') return 'scale-110 motion-reduce:scale-100';
+  if (emotion === 'sad') return 'scale-95 saturate-50 motion-reduce:scale-100';
+  return '';
+}
 
 export default function AvatarDisplay({
   avatarData,
@@ -33,7 +61,15 @@ export default function AvatarDisplay({
   // v2 DiceBear avatar: render the server-generated SVG. The <img> data-URI
   // keeps the markup inert, and display surfaces never load @dicebear itself.
   if (isDiceBearAvatar(avatarData) && avatarData.svg) {
-    const src = `data:image/svg+xml;utf8,${encodeURIComponent(avatarData.svg)}`;
+    // Prefer a real expression variant when the style could produce one; fall
+    // back to the neutral face (styles like Adventurer / Open Peeps have no
+    // semantically-named mouth option, so no smile can be picked safely).
+    const variant =
+      (emotion === 'happy' && avatarData.svgHappy) ||
+      (emotion === 'sad' && avatarData.svgSad) ||
+      avatarData.svg;
+    const expressed = variant !== avatarData.svg;
+    const src = `data:image/svg+xml;utf8,${encodeURIComponent(variant)}`;
     return (
       <div
         className={`relative inline-block rounded-full ${className}`}
@@ -46,15 +82,16 @@ export default function AvatarDisplay({
           height={size}
           alt=""
           draggable={false}
-          className={`w-full h-full rounded-full select-none ${emotion === 'sad' ? 'saturate-50' : ''}`}
+          className={`w-full h-full rounded-full select-none transition-transform duration-200 ease-out ${reactionClasses(emotion)}`}
         />
-        {emotion !== 'neutral' && (
+        {/* When the face itself changed, the badge would be redundant noise. */}
+        {emotion !== 'neutral' && !expressed && (
           <span
             aria-hidden
-            className={`absolute -bottom-1 -right-1 leading-none select-none ${emotion === 'happy' ? 'animate-bounce' : ''}`}
+            className={`absolute -bottom-1 -right-1 leading-none select-none ${emotion === 'happy' ? 'animate-bounce motion-reduce:animate-none' : ''}`}
             style={{ fontSize: Math.max(12, size * 0.28) }}
           >
-            {emotion === 'happy' ? '🎉' : '💧'}
+            {REACTION_BADGE[emotion]}
           </span>
         )}
       </div>
@@ -63,15 +100,31 @@ export default function AvatarDisplay({
 
   const avatar = (avatarData as typeof DEFAULT_AVATAR | null) || DEFAULT_AVATAR;
 
-  // If it's a preset avatar, show emoji with emotion
+  // Preset (emoji) avatar. The emoji NEVER changes with emotion — the owl stays
+  // an owl — so the reaction reads as your character responding rather than
+  // being swapped out. Emotion is carried by the pop/dip and the badge.
   if (avatar.isPreset && avatar.preset) {
-    const emoji = PRESET_EMOTIONS[avatar.preset]?.[emotion] || PRESET_EMOTIONS[avatar.preset]?.neutral || '🙂';
+    const emoji = PRESET_EMOJI[avatar.preset] || '🙂';
     return (
-      <div 
-        className={`flex items-center justify-center ${className}`}
-        style={{ width: size, height: size, fontSize: size * 0.8 }}
+      <div
+        className={`relative inline-flex items-center justify-center ${className}`}
+        style={{ width: size, height: size }}
       >
-        {emoji}
+        <span
+          className={`leading-none select-none transition-transform duration-200 ease-out ${reactionClasses(emotion)}`}
+          style={{ fontSize: size * 0.8 }}
+        >
+          {emoji}
+        </span>
+        {emotion !== 'neutral' && (
+          <span
+            aria-hidden
+            className={`absolute -bottom-0.5 -right-0.5 leading-none select-none ${emotion === 'happy' ? 'animate-bounce motion-reduce:animate-none' : ''}`}
+            style={{ fontSize: Math.max(12, size * 0.28) }}
+          >
+            {REACTION_BADGE[emotion]}
+          </span>
+        )}
       </div>
     );
   }

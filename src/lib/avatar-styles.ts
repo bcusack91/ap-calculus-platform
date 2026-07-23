@@ -71,15 +71,65 @@ export const DICEBEAR_STYLES: Record<
   },
 };
 
-/** Generate the SVG for a validated v2 avatar. Deterministic per (style, seed, bg). */
+/**
+ * Per-style option overrides that make an avatar genuinely change expression,
+ * rather than keeping one face and slapping a 🎉 next to it.
+ *
+ * Only styles whose option values are SEMANTICALLY NAMED are listed. Adventurer
+ * and Open Peeps expose opaque values (`variant01`…`variant30`) or no mouth
+ * option at all, so there is no safe way to pick a smile without guessing —
+ * those styles fall back to the animated reaction in AvatarDisplay instead.
+ */
+const EMOTION_OPTIONS: Partial<
+  Record<DiceBearStyleId, { happy: Record<string, string[]>; sad: Record<string, string[]> }>
+> = {
+  'big-smile': {
+    happy: { mouth: ['openedSmile'], eyes: ['cheery'] },
+    sad: { mouth: ['openSad'], eyes: ['sad'] },
+  },
+  lorelei: {
+    happy: { mouth: ['happy01'] },
+    sad: { mouth: ['sad01'] },
+  },
+  micah: {
+    happy: { mouth: ['laughing'], eyes: ['smiling'] },
+    sad: { mouth: ['sad'], eyes: ['eyes'] },
+  },
+  bottts: {
+    happy: { mouth: ['smile01'], eyes: ['happy'] },
+    sad: { mouth: ['bite'], eyes: ['dizzy'] },
+  },
+  'fun-emoji': {
+    happy: { mouth: ['wideSmile'], eyes: ['cute'] },
+    sad: { mouth: ['sad'], eyes: ['tearDrop'] },
+  },
+};
+
+/** True when this style can render a real happy/sad face. */
+export function styleSupportsEmotion(style: DiceBearStyleId): boolean {
+  return !!EMOTION_OPTIONS[style];
+}
+
+/**
+ * Generate the SVG for a validated v2 avatar. Deterministic per
+ * (style, seed, bg, emotion).
+ *
+ * `emotion` overrides the mouth/eyes so the stored variant is a genuinely
+ * different face. Returns the neutral avatar for styles that cannot express.
+ */
 export function generateAvatarSvg(params: {
   style: DiceBearStyleId;
   seed: string;
   backgroundColor?: string;
+  emotion?: 'neutral' | 'happy' | 'sad';
 }): string {
   const entry = DICEBEAR_STYLES[params.style];
+  const emotion = params.emotion ?? 'neutral';
+  const overrides =
+    emotion === 'neutral' ? undefined : EMOTION_OPTIONS[params.style]?.[emotion];
   return createAvatar(entry.style, {
     seed: params.seed,
     ...(params.backgroundColor ? { backgroundColor: [params.backgroundColor] } : {}),
+    ...(overrides ?? {}),
   }).toString();
 }

@@ -85,6 +85,8 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
   const [answers, setAnswers] = useState<Array<{ questionIndex: number; answerIndex: number; timeMs: number }>>([])
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showFeedback, setShowFeedback] = useState(false)
+  // Avatar reaction to your own answer — mirrors the live 1v1 match.
+  const [selfEmotion, setSelfEmotion] = useState<'neutral' | 'happy' | 'sad'>('neutral')
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [, setTotalElapsed] = useState(0)
   const startTimeRef = useRef<number>(0)
@@ -193,6 +195,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     const correctIdx = q.answerIndex ?? q.correctAnswer ?? -1
     const isCorrect = answerIndex === correctIdx
     if (isCorrect) setLiveScore(prev => prev + 1)
+    setSelfEmotion(isCorrect ? 'happy' : 'sad')
 
     const timeMs = Date.now() - questionStartRef.current
 
@@ -202,6 +205,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     setTimeout(() => {
       setShowFeedback(false)
       setSelectedAnswer(null)
+      setSelfEmotion('neutral')
 
       if (currentQuestion + 1 < challenge.questions!.length) {
         setCurrentQuestion(prev => prev + 1)
@@ -471,8 +475,17 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
         <div className="max-w-2xl mx-auto pt-4">
           {/* Top bar */}
           <div className="flex items-center justify-between mb-6">
-            <div className="text-white font-semibold">
-              Q{currentQuestion + 1}/{challenge.questions.length}
+            <div className="flex items-center gap-2.5 min-w-0">
+              {/* Your avatar reacts to each answer, same as in a live match. */}
+              <AvatarDisplay
+                avatarData={(challenge.isChallenger ? challenge.challenger.avatarData : challenge.recipient?.avatarData) as AvatarData}
+                size={36}
+                emotion={selfEmotion}
+                className="flex-shrink-0"
+              />
+              <div className="text-white font-semibold">
+                Q{currentQuestion + 1}/{challenge.questions.length}
+              </div>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-emerald-400 font-bold">{liveScore} correct</span>

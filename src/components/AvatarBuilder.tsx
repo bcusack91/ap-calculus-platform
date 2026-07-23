@@ -169,10 +169,22 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-accent-muted'
                   }`}
                 >
-                  {lib ? `${lib.DICEBEAR_STYLES[id].icon} ${lib.DICEBEAR_STYLES[id].label}` : id}
+                  <span className="flex items-center justify-between gap-1">
+                    <span className="truncate">
+                      {lib ? `${lib.DICEBEAR_STYLES[id].icon} ${lib.DICEBEAR_STYLES[id].label}` : id}
+                    </span>
+                    {/* Styles that can genuinely smile/frown during a match get a
+                        marker, so the choice is visible before you commit to it. */}
+                    {lib?.styleSupportsEmotion(id) && (
+                      <span title="Smiles and frowns during matches" aria-label="Expresses emotion">😊</span>
+                    )}
+                  </span>
                 </button>
               ))}
             </div>
+            <p className="-mt-4 mb-6 text-xs text-gray-500 dark:text-gray-400">
+              😊 = this style changes expression when you answer during a match.
+            </p>
 
             {/* Quick picks */}
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

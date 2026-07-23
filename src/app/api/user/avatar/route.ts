@@ -25,8 +25,21 @@ export async function POST(request: Request) {
     // other users' screens (leaderboard, matches), so it must stay trusted.
     let toStore: object = validated.data;
     if (validated.kind === 'v2') {
-      const { generateAvatarSvg } = await import('@/lib/avatar-styles');
-      toStore = { ...validated.data, svg: generateAvatarSvg(validated.data) };
+      const { generateAvatarSvg, styleSupportsEmotion } = await import('@/lib/avatar-styles');
+      // Expression variants are baked at SAVE time, so match screens can swap to
+      // a genuinely smiling face instantly without shipping @dicebear to the
+      // client or re-generating per answer.
+      const expressive = styleSupportsEmotion(validated.data.style);
+      toStore = {
+        ...validated.data,
+        svg: generateAvatarSvg(validated.data),
+        ...(expressive
+          ? {
+              svgHappy: generateAvatarSvg({ ...validated.data, emotion: 'happy' }),
+              svgSad: generateAvatarSvg({ ...validated.data, emotion: 'sad' }),
+            }
+          : {}),
+      };
     }
 
     // Update user's avatar

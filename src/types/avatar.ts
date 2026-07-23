@@ -39,6 +39,14 @@ export interface DiceBearAvatarData {
   backgroundColor?: string;
   /** Server-generated SVG markup (trusted). */
   svg?: string;
+  /**
+   * Server-generated expression variants — the SAME avatar with a smiling or
+   * downcast face. Present only for styles whose options are semantically
+   * named (see EMOTION_OPTIONS in avatar-styles.ts); styles that cannot express
+   * omit these and fall back to an animated reaction on the neutral face.
+   */
+  svgHappy?: string;
+  svgSad?: string;
 }
 
 export type AnyAvatarData = AvatarData | DiceBearAvatarData;
