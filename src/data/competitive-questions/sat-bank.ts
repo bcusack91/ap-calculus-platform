@@ -6,7 +6,8 @@
  *
  *   SECTION (2, the scored sections)
  *     └── DOMAIN (8 — 4 math, 4 reading & writing)
- *           └── SKILL (29 — the official "skill/knowledge testing points")
+ *           └── SKILL (37 — the 29 official "skill/knowledge testing points"
+ *                      plus 8 finer practice pools; see SatSkill.officialSkill)
  *
  * Questions are NOT duplicated here. The existing sat-math-bank and sat-rw-bank
  * already tag every question with its official College Board `skill` string, so
@@ -30,7 +31,9 @@ import { getSatPunctuationQuestions } from './sat-punctuation-bank'
 import { getSatPunctuationGeneralQuestions } from './sat-punctuation-general-bank'
 import type { SatBankQuestion } from './sat-question-types'
 import { satMathAlgebraQuestions } from './sat-questions-math-algebra'
+import { satMathAlgebra2Questions } from './sat-questions-math-algebra-2'
 import { satMathAdvancedQuestions } from './sat-questions-math-advanced'
+import { satMathAdvanced2Questions } from './sat-questions-math-advanced-2'
 import { satMathProblemSolvingQuestions } from './sat-questions-math-problem-solving'
 import { satMathGeometryQuestions } from './sat-questions-math-geometry'
 import { satRwQuestions } from './sat-questions-rw'
@@ -38,14 +41,31 @@ import { satRwQuestions } from './sat-questions-rw'
 export interface SatSkill {
   /** Competitive slug — 'sat-skill-<key>'. */
   slug: string
-  /** Student-facing title (the official College Board skill name). */
+  /** Student-facing title. */
   title: string
   /**
    * Exact `skill` tag(s) used in sat-math-bank / sat-rw-bank. Questions are
    * pulled by matching this string, so it must stay in sync with the banks —
    * scripts/verify-sat-questions.ts fails the build if a tag stops matching.
+   * Empty for practice subdivisions, whose questions are all authored.
    */
   tags: string[]
+  /**
+   * The official College Board skill this belongs to, when this entry is a
+   * PRACTICE SUBDIVISION rather than an official skill itself.
+   *
+   * College Board's taxonomy is uneven: "Nonlinear functions" is one named
+   * skill covering quadratic graphs, exponentials, polynomial/rational
+   * behavior, and transformations, while Algebra splits comparable content
+   * across five. Treating that as one playable pool under-serves Advanced Math,
+   * which carries ~35% of the math section — the same weight as Algebra.
+   *
+   * So the official skills remain (blueprint fidelity, and they keep the
+   * bank-tagged questions), and finer pools sit alongside them for practice.
+   * Pools intentionally OVERLAP in content; they are practice sets, not a
+   * partition of the question bank.
+   */
+  officialSkill?: string
 }
 
 export interface SatDomain {
@@ -69,6 +89,14 @@ const skill = (key: string, title: string, tags?: string[]): SatSkill => ({
   tags: tags ?? [title],
 })
 
+/** A finer practice pool sitting under an official College Board skill. */
+const sub = (key: string, title: string, officialSkill: string): SatSkill => ({
+  slug: `sat-skill-${key}`,
+  title,
+  tags: [],
+  officialSkill,
+})
+
 export const SAT_SECTIONS: SatSection[] = [
   {
     slug: 'sat-math',
@@ -85,6 +113,11 @@ export const SAT_SECTIONS: SatSection[] = [
           skill('linear-functions', 'Linear functions'),
           skill('systems-linear-equations', 'Systems of two linear equations in two variables'),
           skill('linear-inequalities', 'Linear inequalities in one or two variables'),
+          // Systems of inequalities (shaded-region problems) and reading linear
+          // relationships off a graph are heavily tested but had ~1 and ~22
+          // questions respectively across the whole math bank.
+          sub('systems-inequalities', 'Systems of Inequalities & Regions', 'Linear inequalities in one or two variables'),
+          sub('graphing-linear', 'Graphing Linear Relationships', 'Linear equations in two variables'),
         ],
       },
       {
@@ -95,6 +128,15 @@ export const SAT_SECTIONS: SatSection[] = [
           skill('equivalent-expressions', 'Equivalent expressions'),
           skill('nonlinear-equations', 'Nonlinear equations in one variable and systems of equations in two variables'),
           skill('nonlinear-functions', 'Nonlinear functions'),
+          // Practice subdivisions — see SatSkill.officialSkill. Advanced Math is
+          // ~35% of the math section but the official taxonomy names only 3
+          // skills for it, so these break the grab-bags into playable pools.
+          sub('quadratic-equations', 'Quadratic Equations & the Quadratic Formula', 'Nonlinear equations in one variable and systems of equations in two variables'),
+          sub('quadratic-graphs', 'Quadratic Graphs & Vertex Form', 'Nonlinear functions'),
+          sub('exponential-functions', 'Exponential Functions & Growth/Decay', 'Nonlinear functions'),
+          sub('polynomial-rational', 'Polynomials & Rational Expressions', 'Equivalent expressions'),
+          sub('radicals-absolute-complex', 'Radicals, Absolute Value & Complex Numbers', 'Nonlinear equations in one variable and systems of equations in two variables'),
+          sub('function-notation-transformations', 'Function Notation, Composition & Transformations', 'Nonlinear functions'),
         ],
       },
       {
@@ -203,7 +245,9 @@ for (const s of SAT_SKILLS) for (const t of s.tags) SLUG_BY_TAG.set(t, s.slug)
 const AUTHORED_BY_SKILL = new Map<string, SatBankQuestion[]>()
 for (const q of [
   ...satMathAlgebraQuestions,
+  ...satMathAlgebra2Questions,
   ...satMathAdvancedQuestions,
+  ...satMathAdvanced2Questions,
   ...satMathProblemSolvingQuestions,
   ...satMathGeometryQuestions,
   ...satRwQuestions,

@@ -125,14 +125,15 @@ export function canonicalSatBankSlug(slug: string): string {
 // ---------------------------------------------------------------------------
 //
 // Same problem the MCAT has (see mcat-topic-map.ts): the DB has 35 sat-prep
-// curriculum topics organized for STUDYING, while the competitive bank has 29
-// official College Board skills sized so each holds a full match. Renaming
+// curriculum topics organized for STUDYING, while the competitive bank has 37
+// playable skills (29 official + 8 practice subdivisions) sized so each holds a
+// full match. Renaming
 // either side would break saved matches, progress, and assignments, so this map
 // translates instead. A teacher who assigns the curriculum topic "Quadratic
 // Equations" has that assignment satisfied by a match on the skills whose
 // question pools cover it.
 
-/** The 19 math skill slugs (used by canonicalSatBankSlug). */
+/** Every math skill slug (used by canonicalSatBankSlug). */
 const MATH_SKILLS = new Set([
   'sat-skill-linear-equations-one-var', 'sat-skill-linear-equations-two-var',
   'sat-skill-linear-functions', 'sat-skill-systems-linear-equations',
@@ -144,6 +145,11 @@ const MATH_SKILLS = new Set([
   'sat-skill-statistical-claims', 'sat-skill-area-volume',
   'sat-skill-lines-angles-triangles', 'sat-skill-right-triangles-trig',
   'sat-skill-circles',
+  // Practice subdivisions (see SatSkill.officialSkill in sat-bank.ts).
+  'sat-skill-systems-inequalities', 'sat-skill-graphing-linear',
+  'sat-skill-quadratic-equations', 'sat-skill-quadratic-graphs',
+  'sat-skill-exponential-functions', 'sat-skill-polynomial-rational',
+  'sat-skill-radicals-absolute-complex', 'sat-skill-function-notation-transformations',
 ])
 
 /** The 2 Standard English Conventions skills. */
@@ -154,20 +160,20 @@ const CURRICULUM_TO_SKILLS: Record<string, string[]> = {
   // --- Math: Heart of Algebra / linear ---
   'sat-heart-of-algebra': ['sat-skill-linear-equations-one-var', 'sat-skill-linear-equations-two-var'],
   'sat-linear-equations-inequalities': ['sat-skill-linear-equations-one-var', 'sat-skill-linear-equations-two-var', 'sat-skill-linear-inequalities'],
-  'sat-linear-inequalities-graphs': ['sat-skill-linear-inequalities'],
+  'sat-linear-inequalities-graphs': ['sat-skill-linear-inequalities', 'sat-skill-systems-inequalities', 'sat-skill-graphing-linear'],
   'sat-systems-equations': ['sat-skill-systems-linear-equations'],
   'sat-systems-linear-equations': ['sat-skill-systems-linear-equations'],
-  'sat-functions': ['sat-skill-linear-functions', 'sat-skill-nonlinear-functions'],
+  'sat-functions': ['sat-skill-linear-functions', 'sat-skill-nonlinear-functions', 'sat-skill-function-notation-transformations'],
 
   // --- Math: Advanced Math ---
   'sat-nonlinear-equations-functions': ['sat-skill-nonlinear-equations', 'sat-skill-nonlinear-functions'],
   'sat-passport-advanced-math': ['sat-skill-equivalent-expressions', 'sat-skill-nonlinear-equations'],
-  'sat-quadratic-equations': ['sat-skill-nonlinear-equations'],
-  'sat-exponents-radicals': ['sat-skill-equivalent-expressions'],
-  'sat-exponential-functions': ['sat-skill-nonlinear-functions'],
-  'sat-polynomials-factoring': ['sat-skill-equivalent-expressions'],
-  'sat-polynomial-rational-expressions': ['sat-skill-equivalent-expressions'],
-  'sat-complex-numbers': ['sat-skill-nonlinear-equations'],
+  'sat-quadratic-equations': ['sat-skill-nonlinear-equations', 'sat-skill-quadratic-equations', 'sat-skill-quadratic-graphs'],
+  'sat-exponents-radicals': ['sat-skill-equivalent-expressions', 'sat-skill-radicals-absolute-complex'],
+  'sat-exponential-functions': ['sat-skill-nonlinear-functions', 'sat-skill-exponential-functions'],
+  'sat-polynomials-factoring': ['sat-skill-equivalent-expressions', 'sat-skill-polynomial-rational'],
+  'sat-polynomial-rational-expressions': ['sat-skill-equivalent-expressions', 'sat-skill-polynomial-rational'],
+  'sat-complex-numbers': ['sat-skill-nonlinear-equations', 'sat-skill-radicals-absolute-complex'],
 
   // --- Math: Problem-Solving & Data Analysis ---
   'sat-problem-solving-data': ['sat-skill-ratios-rates-units', 'sat-skill-percentages'],

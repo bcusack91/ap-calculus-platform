@@ -14,7 +14,9 @@ import { SAT_SECTIONS, SAT_SKILLS, questionsForSkill } from '../src/data/competi
 import { getSatMathQuestions } from '../src/data/competitive-questions/sat-math-bank'
 import { getSatRwQuestions } from '../src/data/competitive-questions/sat-rw-bank'
 import { satMathAlgebraQuestions } from '../src/data/competitive-questions/sat-questions-math-algebra'
+import { satMathAlgebra2Questions } from '../src/data/competitive-questions/sat-questions-math-algebra-2'
 import { satMathAdvancedQuestions } from '../src/data/competitive-questions/sat-questions-math-advanced'
+import { satMathAdvanced2Questions } from '../src/data/competitive-questions/sat-questions-math-advanced-2'
 import { satMathProblemSolvingQuestions } from '../src/data/competitive-questions/sat-questions-math-problem-solving'
 import { satMathGeometryQuestions } from '../src/data/competitive-questions/sat-questions-math-geometry'
 import { satRwQuestions } from '../src/data/competitive-questions/sat-questions-rw'
@@ -58,7 +60,9 @@ function checkMath(text: string, where: string) {
 const validSkillSlugs = new Set(SAT_SKILLS.map(s => s.slug))
 const authored = [
   ...satMathAlgebraQuestions,
+  ...satMathAlgebra2Questions,
   ...satMathAdvancedQuestions,
+  ...satMathAdvanced2Questions,
   ...satMathProblemSolvingQuestions,
   ...satMathGeometryQuestions,
   ...satRwQuestions,
