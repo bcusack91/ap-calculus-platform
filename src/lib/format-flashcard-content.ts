@@ -79,9 +79,30 @@ function convertToLatex(eq: string): string {
   // Replace subscript notation like _0, _i
   latex = latex.replace(/_([a-zA-Z0-9])\b/g, '_{$1}')
 
-  // Replace ² ³ with ^2 ^3
-  latex = latex.replace(/²/g, '^{2}')
-  latex = latex.replace(/³/g, '^{3}')
+  // Replace unicode superscript RUNS with a single ^{...} group. Doing the
+  // whole run at once (not char-by-char) is what keeps 10⁻¹² from becoming
+  // the KaTeX-invalid 10⁻¹^{2} ("double superscript") we shipped before.
+  // Combining macron (x̄, sampling-distribution notation) → \bar{x} BEFORE
+  // subscript handling so μ_x̄ becomes μ_{\bar{x}} instead of a stray mark.
+  // Combining macron/overline (U+0304/U+0305) after a letter → \bar{...}.
+  latex = latex.replace(/([A-Za-z])[\u0304\u0305]/g, '\\bar{$1}')
+  // Subscript-x + macron (`μₓ̄`, sampling-distribution notation) — must run
+  // BEFORE the subscript-run conversion below, or the mark strands outside
+  // the braces (`_{x}̄`) and KaTeX rejects it.
+  latex = latex.replace(/\u2093[\u0304\u0305]/g, '_{\\bar{x}}')
+
+  const SUP: Record<string, string> = { '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4', '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9', '⁻': '-', '⁺': '+', 'ⁿ': 'n', 'ᵐ': 'm', 'ˣ': 'x', 'ⁱ': 'i', 'ᵗ': 't', 'ᵏ': 'k', 'ᵃ': 'a', 'ᵇ': 'b', 'ᵖ': 'p', 'ʸ': 'y', 'ʳ': 'r', 'ˢ': 's', 'ᵈ': 'd', 'ᵉ': 'e', 'ᶜ': 'c', 'ᵘ': 'u', 'ᵛ': 'v', 'ʷ': 'w', 'ᶻ': 'z', 'ʰ': 'h', 'ᵍ': 'g', 'ᵒ': 'o', 'ˡ': 'l', 'ʲ': 'j' }
+  latex = latex.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺ⁿᵐˣⁱᵗᵏᵃᵇᵖʸʳˢᵈᵉᶜᵘᵛʷᶻʰᵍᵒˡʲ]+/g, (run) => `^{${run.split('').map((c) => SUP[c] ?? c).join('')}}`)
+  // A unicode run followed by an explicit ^{...} (mixed notation in the same
+  // number, e.g. `10⁻¹^{2}` in source data) merges into one exponent.
+  latex = latex.replace(/\^\{([^}]*)\}\^\{([^}]*)\}/g, '^{$1$2}')
+
+  // Unicode subscript runs → _{...}
+  const SUB: Record<string, string> = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '₊': '+', '₋': '-', 'ₙ': 'n', 'ₘ': 'm', 'ₓ': 'x', 'ᵢ': 'i', 'ₜ': 't', 'ₖ': 'k', 'ₐ': 'a', 'ₑ': 'e' }
+  latex = latex.replace(/[₀₁₂₃₄₅₆₇₈₉₊₋ₙₘₓᵢₜₖₐₑ]+/g, (run) => `_{${run.split('').map((c) => SUB[c] ?? c).join('')}}`)
+
+  // Escape bare ampersands (E&M, R&D) — `&` is a column separator in KaTeX.
+  latex = latex.replace(/(?<!\\)&/g, '\\& ')
 
   // Replace × with \times
   latex = latex.replace(/×/g, '\\times ')
