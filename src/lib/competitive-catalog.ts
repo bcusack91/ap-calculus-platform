@@ -1,5 +1,13 @@
 // Catalog of courses that support competitive head-to-head play.
-// Used by /competitive (course grid) and /competitive/lobby/[code] (private lobby topic picker).
+//
+// SINGLE SOURCE OF TRUTH. /competitive (course grid) and
+// /competitive/lobby/[code] (private lobby topic picker) both import this.
+// It previously existed twice — an inline copy in /competitive/page.tsx and
+// this file — and the copies drifted (the page had algebra-1 + geometry, this
+// file had mcat, so MCAT never appeared on the hub). Add courses HERE only.
+//
+// Adding a course also requires a matching `categoryKey` entry in
+// /api/competitive/unlock-check, or the card renders permanently locked.
 
 export interface CompetitiveCourse {
   /** URL slug used by /competitive/{slug} and the course-topics API. */
@@ -25,9 +33,11 @@ export const COMPETITIVE_COURSE_CATEGORIES: CompetitiveCourseCategory[] = [
     label: 'Math',
     icon: '📐',
     courses: [
-      { slug: 'ap-calculus-ab', categoryKey: 'ap-calculus-ab', emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals', gradient: 'from-indigo-500 to-purple-500' },
-      { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-purple-500 to-pink-500' },
+      { slug: 'ap-calculus-ab', categoryKey: 'ap-calculus-ab', emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals', gradient: 'from-indigo-500 to-accent' },
+      { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-accent to-pink-500' },
       { slug: 'ap-precalculus', categoryKey: 'ap-precalculus', emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling', gradient: 'from-blue-500 to-indigo-500' },
+      { slug: 'algebra-1', categoryKey: 'algebra', emoji: '🧮', name: 'Algebra 1', desc: 'Equations, Functions & Polynomials', gradient: 'from-blue-500 to-cyan-500' },
+      { slug: 'geometry', categoryKey: 'geometry', emoji: '📐', name: 'Geometry', desc: 'Angles, Triangles, Circles & Proofs', gradient: 'from-emerald-500 to-teal-500' },
     ],
   },
   {
@@ -63,7 +73,7 @@ export const COMPETITIVE_COURSE_CATEGORIES: CompetitiveCourseCategory[] = [
     label: 'English',
     icon: '📚',
     courses: [
-      { slug: 'ap-english-lit', categoryKey: 'ap-english-lit', emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis', gradient: 'from-purple-600 to-fuchsia-600' },
+      { slug: 'ap-english-lit', categoryKey: 'ap-english-lit', emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis', gradient: 'from-accent to-fuchsia-600' },
       { slug: 'ap-english-lang', categoryKey: 'ap-english-lang', emoji: '✍️', name: 'AP English Language', desc: 'Rhetoric, Argument & Synthesis', gradient: 'from-fuchsia-500 to-pink-500' },
     ],
   },
@@ -86,7 +96,7 @@ export const COMPETITIVE_COURSE_CATEGORIES: CompetitiveCourseCategory[] = [
       { slug: 'sat', categoryKey: 'sat', emoji: '📝', name: 'SAT Prep', desc: 'Math, Reading & Punctuation', gradient: 'from-blue-600 to-cyan-600' },
       // MCAT has its own section → area → subtopic picker at /competitive/mcat
       // (no DB Course row needed — the hierarchy comes from the MCAT bank).
-      { slug: 'mcat', categoryKey: 'mcat', emoji: '🩺', name: 'MCAT Prep', desc: 'All 4 sections · 25 subtopics', gradient: 'from-emerald-600 to-teal-600' },
+      { slug: 'mcat', categoryKey: 'mcat', emoji: '🩺', name: 'MCAT Prep', desc: 'All 4 sections · 45 subtopics', gradient: 'from-emerald-600 to-teal-600' },
     ],
   },
 ]

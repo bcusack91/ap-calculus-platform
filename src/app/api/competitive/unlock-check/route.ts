@@ -266,6 +266,13 @@ export async function GET() {
       'ap-enviro': grantAllCategories || grantedCategories.has('ap-enviro') || uniqueDiagnosticSlugs.includes('ap-environmental-science') || allProgressSlugs.some(s =>
         s.includes('ap-enviro') || s.includes('environmental-science') || s.includes('ecosystems')
       ),
+      // MCAT: every mcat-prep topic slug is prefixed 'mcat-', so any MCAT
+      // lesson progress or the MCAT diagnostic unlocks the whole course card.
+      // (The /competitive/mcat picker then offers all sections; unlike the
+      // AP courses there is no per-unit gating below this.)
+      'mcat': grantAllCategories || grantedCategories.has('mcat') || uniqueDiagnosticSlugs.some(s => s.startsWith('mcat')) || allProgressSlugs.some(s =>
+        s.startsWith('mcat')
+      ),
       'ap-csa': grantAllCategories || grantedCategories.has('ap-csa') || uniqueDiagnosticSlugs.includes('ap-computer-science-a') || allProgressSlugs.some(s =>
         s.includes('ap-csa') || s.includes('computer-science-a') || s.includes('classes-objects')
       ),
