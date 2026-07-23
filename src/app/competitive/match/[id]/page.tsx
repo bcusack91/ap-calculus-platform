@@ -139,6 +139,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [displayOrder, setDisplayOrder] = useState<number[] | null>(null);
   const [usingPowerUp, setUsingPowerUp] = useState(false);
   const seenEffectIds = useRef<Set<string>>(new Set());
+  // Practice-bot power-up pacing: `botFireLock` is a timestamp the bot won't
+  // fire before (covers the in-flight request + the 500ms poll catching up, so
+  // one drop can't be spent twice); `botFailed` backs off items the server
+  // rejected (e.g. 50/50 on a question with too few options gets refunded).
+  const botFireLockRef = useRef<number>(0);
+  const botFailedRef = useRef<Map<PowerUpId, number>>(new Map());
 
   // Pre-load KaTeX lazily on mount
   useEffect(() => { preloadKatex() }, []);
@@ -318,8 +324,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     }
   }, [matchId, usingPowerUp, addChaosToast, fetchMatchState]);
 
-  // Practice-bot mischief: in chaos vs-AI matches the bot occasionally fires
-  // its own items back at the player (client-driven, like its answers).
+  // Practice-bot power-up use: in chaos vs-AI matches the bot deploys items
+  // PROMPTLY as it receives them rather than hoarding, preferring attacks so the
+  // player actually feels the chaos. (Hoarding also starved the bot: inventory
+  // caps at MAX_INVENTORY, and a full inventory blocks further drops.)
+  // Client-driven, like its answers.
   const botIsPlayer1 = !!matchState?.player1IsAI;
   const botIsPlayer2 = !!matchState?.player2IsAI;
   const chaosBotActive = !!(
@@ -333,21 +342,38 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const t = setInterval(async () => {
       const st = matchStateRef.current;
       if (!st || st.status !== 'IN_PROGRESS') return;
+      // Hold off while a use is in flight and the next poll lands.
+      if (Date.now() < botFireLockRef.current) return;
+
       const botPU = botIsPlayer1 ? st.gameData?.powerUps?.player1 : st.gameData?.powerUps?.player2;
       const inv = botPU?.inventory || [];
-      if (inv.length === 0 || Math.random() > 0.45) return;
-      const pick = inv[Math.floor(Math.random() * inv.length)];
+      if (inv.length === 0) return;
+
+      // Drop items the server just rejected out of the running for a bit.
+      const now = Date.now();
+      const usable = inv.filter((id) => (botFailedRef.current.get(id) ?? 0) < now);
+      if (usable.length === 0) return;
+
+      // Attacks first — that's what the player actually sees and feels.
+      const attacks = usable.filter((id) => POWER_UPS[id]?.kind === 'attack');
+      const pool = attacks.length > 0 ? attacks : usable;
+      const pick = pool[pool.length - 1]; // newest drop first
+
       const botId = botIsPlayer1 ? st.player1Id : st.player2Id;
+      botFireLockRef.current = now + 5000; // in-flight guard
       try {
-        await fetch(`/api/competitive/match/${matchId}/powerup`, {
+        const res = await fetch(`/api/competitive/match/${matchId}/powerup`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ powerUpId: pick, playerId: botId }),
         });
+        if (!res.ok) botFailedRef.current.set(pick, Date.now() + 20000);
       } catch {
         /* bot mischief is best-effort */
       }
-    }, 7000);
+      // Space consecutive deployments so two items never land at once.
+      botFireLockRef.current = Date.now() + 1800 + Math.random() * 1600;
+    }, 1000);
     return () => clearInterval(t);
   }, [chaosBotActive, botIsPlayer1, botIsPlayer2, matchId]);
 
@@ -985,7 +1011,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     : `${matchState.player2Score}/10`;
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-24' : ''}`}>
+    // pb-28 (not pb-24) reserves room for the floating power-up bar once the
+    // iPhone safe-area inset pushes it up, so it never covers the answers.
+    <div className={`min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-28' : ''}`}>
       {/* Chaos Mode HUD extras: drop/attack toasts + floating inventory bar */}
       <ChaosToasts toasts={chaosToasts} />
       {isChaosMode && matchState.status === 'IN_PROGRESS' && (

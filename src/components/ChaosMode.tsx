@@ -96,7 +96,12 @@ export function PowerUpBar({
 }) {
   if (inventory.length === 0 && !shield && !doubleNext) return null;
   return (
-    <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-30">
+    // Sits above the iPhone home indicator — without the safe-area inset the
+    // bar tucks under it on notched devices and the buttons get hard to tap.
+    <div
+      className="fixed left-1/2 -translate-x-1/2 z-30"
+      style={{ bottom: 'calc(0.75rem + env(safe-area-inset-bottom, 0px))' }}
+    >
       <div className="flex items-center gap-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-full shadow-xl border border-purple-200 dark:border-purple-800 px-3 py-2">
         {shield && (
           <span className="text-lg" title="Shield armed — blocks the next attack">🛡️</span>
@@ -135,11 +140,13 @@ export interface ChaosToast {
 export function ChaosToasts({ toasts }: { toasts: ChaosToast[] }) {
   if (toasts.length === 0) return null;
   return (
-    <div className="fixed top-16 left-1/2 -translate-x-1/2 z-40 space-y-2 pointer-events-none">
+    // top-24 on mobile clears the sticky battle HUD (which occupies roughly the
+    // first 88px); md+ has no mobile HUD, so it can sit higher.
+    <div className="fixed top-24 md:top-16 left-1/2 -translate-x-1/2 z-40 space-y-2 pointer-events-none flex flex-col items-center w-full px-3">
       {toasts.map((t) => (
         <div
           key={t.id}
-          className="bg-gray-900/90 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg animate-bounce motion-reduce:animate-none"
+          className="bg-gray-900/90 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg animate-bounce motion-reduce:animate-none max-w-full text-center"
         >
           {t.text}
         </div>
