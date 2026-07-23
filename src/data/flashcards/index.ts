@@ -10,6 +10,8 @@ import { mcatStrategyFlashcards } from './mcat-strategy'
 import { apesFlashcards } from './apes'
 import { mathHsFlashcards } from './math-hs'
 import { mathElementaryFlashcards } from './math-elementary'
+import { chemCsFlashcards } from './chem-cs'
+import { humanitiesFlashcards } from './humanities'
 
 export const SEED_FLASHCARDS: FlashcardsByTopic = {
   ...mcatChemPhysFlashcards,
@@ -19,6 +21,8 @@ export const SEED_FLASHCARDS: FlashcardsByTopic = {
   ...apesFlashcards,
   ...mathHsFlashcards,
   ...mathElementaryFlashcards,
+  ...chemCsFlashcards,
+  ...humanitiesFlashcards,
 }
 
 export type { SeedFlashcard, FlashcardsByTopic } from './types'
