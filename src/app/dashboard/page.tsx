@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark } from 'lucide-react'
+import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -608,6 +608,46 @@ function DashboardContent() {
         {tab === 'overview' && (
         <div role="tabpanel" id="dashboard-tabpanel-overview" aria-labelledby="dashboard-tab-overview" className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-8">
+            {/* Continue where you left off — THE single next action, derived from
+                the most recent topic activity. The one gradient-prominent card on
+                the page; everything else stays neutral so this reads first.
+                (New users with no activity get the cold-start card below instead.) */}
+            {recentActivity.length > 0 && (
+              <div className="rounded-2xl bg-gradient-to-r from-accent to-accent-secondary p-6 sm:p-7 text-white shadow-lg">
+                <p className="text-xs font-bold uppercase tracking-wider text-white/80 mb-2">
+                  Continue where you left off
+                </p>
+                <h2 className="text-2xl font-bold mb-1 truncate">{recentActivity[0].topicTitle}</h2>
+                <p className="text-sm text-white/85 mb-4">
+                  {recentActivity[0].courseName}
+                  {typeof recentActivity[0].masteryLevel === 'number' && recentActivity[0].masteryLevel > 0 && (
+                    <> · {Math.round(recentActivity[0].masteryLevel * 100)}% mastery</>
+                  )}
+                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Link
+                    href={`/topics/${recentActivity[0].topicSlug}`}
+                    className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-accent-hover shadow hover:bg-white/90 transition-colors"
+                  >
+                    <Play className="w-4 h-4" aria-hidden /> Continue topic
+                  </Link>
+                  {(overview?.dueFlashcards ?? 0) > 0 && (
+                    <Link
+                      href="/flashcards"
+                      className="inline-flex items-center gap-2 rounded-lg border border-white/40 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+                    >
+                      <Layers className="w-4 h-4" aria-hidden /> Review {overview!.dueFlashcards} due card{overview!.dueFlashcards === 1 ? '' : 's'}
+                    </Link>
+                  )}
+                  {(streak?.current ?? 0) > 0 && (
+                    <span className="ml-auto text-sm font-semibold text-white/90" title="Current daily streak">
+                      🔥 {streak!.current}-day streak
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
             {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length) ? (
               <div className="space-y-4">

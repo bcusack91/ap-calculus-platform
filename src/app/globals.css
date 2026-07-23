@@ -33,6 +33,24 @@
   --color-accent-ring: var(--accent-ring);
 }
 
+/* ===== Sanctioned gradients =====
+   The design language allows exactly these gradient roles — don't invent new
+   from-X to-Y combos in components:
+   1. BRAND (interactive: primary CTAs, hero buttons, the one prominent card):
+      `bg-brand-gradient` below, or `from-accent to-accent-secondary` (+
+      `hover:from-accent-hover hover:to-accent-secondary-hover`) when Tailwind
+      stops are needed. Theme-aware — follows the user's accent scheme.
+   2. COURSE IDENTITY (decorative: course cards/tiles): the per-course
+      `gradient` in src/data/course-metadata.ts. Fixed per course, deliberately
+      varied — these do NOT follow the theme.
+   3. STATUS: green/emerald for success, amber/orange for warning — sparingly. */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(to right, var(--accent), var(--accent-secondary));
+}
+@utility bg-brand-gradient-br {
+  background-image: linear-gradient(to bottom right, var(--accent), var(--accent-secondary));
+}
+
 /* ===== Default scheme (Purple/Blue) — Light ===== */
 :root {
   --background: #ffffff;
