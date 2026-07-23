@@ -13,7 +13,7 @@ import { MCAT_SECTIONS, getMcatQuestions, mcatQuestionCount, MCAT_ALL_SLUG } fro
 
 let errors = 0
 let checked = 0
-const MATCH_SIZE = 10
+const MATCH_SIZE = 40  // target depth per subtopic (4 full matches, no repeats)
 
 function checkMath(text: string, where: string) {
   // Inline `$…$` segments, mirroring how the match page renders prompts.

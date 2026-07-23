@@ -39,12 +39,14 @@ import { chemistryQuestions } from './mcat-questions-chemistry'
 import { physicsQuestions } from './mcat-questions-physics'
 import { biologyQuestions } from './mcat-questions-biology'
 import { behavioralQuestions } from './mcat-questions-behavioral'
+import { behavioralQuestions2 } from './mcat-questions-behavioral-2'
 
 const AUTHORED: McatBankQuestion[] = [
   ...chemistryQuestions,
   ...physicsQuestions,
   ...biologyQuestions,
   ...behavioralQuestions,
+  ...behavioralQuestions2,
 ]
 
 /** Authored questions indexed by subtopic slug (built once). */
