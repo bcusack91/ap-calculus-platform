@@ -76,8 +76,8 @@ const COURSE_CATEGORIES: CourseCategory[] = [
     label: 'Math',
     icon: '📐',
     courses: [
-      { slug: 'ap-calculus-ab', categoryKey: 'ap-calculus-ab', emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals', gradient: 'from-indigo-500 to-purple-500' },
-      { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-purple-500 to-pink-500' },
+      { slug: 'ap-calculus-ab', categoryKey: 'ap-calculus-ab', emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals', gradient: 'from-indigo-500 to-accent' },
+      { slug: 'ap-calculus-bc', categoryKey: 'ap-calculus-bc', emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar', gradient: 'from-accent to-pink-500' },
       { slug: 'ap-precalculus', categoryKey: 'ap-precalculus', emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling', gradient: 'from-blue-500 to-indigo-500' },
       { slug: 'algebra-1', categoryKey: 'algebra', emoji: '🧮', name: 'Algebra 1', desc: 'Equations, Functions & Polynomials', gradient: 'from-blue-500 to-cyan-500' },
       { slug: 'geometry', categoryKey: 'geometry', emoji: '📐', name: 'Geometry', desc: 'Angles, Triangles, Circles & Proofs', gradient: 'from-emerald-500 to-teal-500' },
@@ -116,7 +116,7 @@ const COURSE_CATEGORIES: CourseCategory[] = [
     label: 'English',
     icon: '📚',
     courses: [
-      { slug: 'ap-english-lit', categoryKey: 'ap-english-lit', emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis', gradient: 'from-purple-600 to-fuchsia-600' },
+      { slug: 'ap-english-lit', categoryKey: 'ap-english-lit', emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis', gradient: 'from-accent to-fuchsia-600' },
       { slug: 'ap-english-lang', categoryKey: 'ap-english-lang', emoji: '✍️', name: 'AP English Language', desc: 'Rhetoric, Argument & Synthesis', gradient: 'from-fuchsia-500 to-pink-500' },
     ],
   },
@@ -125,7 +125,7 @@ const COURSE_CATEGORIES: CourseCategory[] = [
     label: 'Computer Science',
     icon: '💻',
     courses: [
-      { slug: 'ap-csa', categoryKey: 'ap-csa', emoji: '☕', name: 'AP Computer Science A', desc: 'Java OOP, Arrays & Algorithms', gradient: 'from-slate-600 to-gray-700' },
+      { slug: 'ap-csa', categoryKey: 'ap-csa', emoji: '☕', name: 'AP Computer Science A', desc: 'Java OOP, Arrays & Algorithms', gradient: 'from-gray-600 to-gray-700' },
       { slug: 'ap-csp', categoryKey: 'ap-csp', emoji: '🖥️', name: 'AP CS Principles', desc: 'Data, Internet & Cybersecurity', gradient: 'from-cyan-500 to-blue-500' },
     ],
   },
@@ -231,11 +231,11 @@ export default function CompetitivePage() {
                     <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
                       Best Progress: {topicTitle}
                     </span>
-                    <span className="text-sm font-semibold text-purple-600">{masteryPercent}%</span>
+                    <span className="text-sm font-semibold text-accent">{masteryPercent}%</span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6">
                     <div
-                      className="bg-gradient-to-r from-purple-500 to-blue-500 h-4 rounded-full transition-all duration-500"
+                      className="bg-gradient-to-r from-accent to-blue-500 h-4 rounded-full transition-all duration-500"
                       style={{ width: `${masteryPercent}%` }}
                     />
                   </div>
@@ -287,14 +287,14 @@ export default function CompetitivePage() {
             {currentTopic ? (
               <button
                 onClick={() => router.push(`/topics/${currentTopic}/interactive`)}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
+                className="w-full bg-gradient-to-r from-accent to-accent-secondary text-white font-bold py-4 rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg"
               >
                 Continue Learning: {topicTitle}
               </button>
             ) : (
               <button
                 onClick={() => router.push('/topics')}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
+                className="w-full bg-gradient-to-r from-accent to-accent-secondary text-white font-bold py-4 rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg"
               >
                 Browse Topics
               </button>
@@ -313,7 +313,7 @@ export default function CompetitivePage() {
   const totalCourses = COURSE_CATEGORIES.reduce((sum, cat) => sum + cat.courses.length, 0)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4 py-6 sm:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4 py-6 sm:p-6">
       {showUnlockBanner && (
         <AchievementBanner
           name="Competitive Mode Unlocked!"
@@ -327,12 +327,12 @@ export default function CompetitivePage() {
         <div className="text-center mb-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mb-4">
             <div className="hidden sm:block w-40" />
-            <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
               Competitive Mode
             </h1>
             <button
               onClick={() => router.push('/profile')}
-              className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors text-sm font-semibold w-40"
+              className="px-4 py-2 bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors text-sm font-semibold w-40"
             >
               ✏️ Customize Avatar
             </button>
@@ -354,7 +354,7 @@ export default function CompetitivePage() {
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Current Rank</p>
               </div>
               <div>
-                <div className="text-2xl sm:text-4xl font-bold text-purple-600 dark:text-purple-400">
+                <div className="text-2xl sm:text-4xl font-bold text-accent dark:text-accent-muted">
                   {profile.overallMMR}
                 </div>
                 <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">MMR Rating</p>
@@ -439,7 +439,7 @@ export default function CompetitivePage() {
         {profile && (
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
-              <div className="text-3xl font-bold text-purple-600">{profile.totalMatches}</div>
+              <div className="text-3xl font-bold text-accent">{profile.totalMatches}</div>
               <p className="text-gray-600 dark:text-gray-400">Total Matches</p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-center">
@@ -454,7 +454,7 @@ export default function CompetitivePage() {
         )}
 
         {/* Private Lobby — play head-to-head with a friend */}
-        <div className="mt-8 rounded-2xl border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-blue-50 p-5 sm:p-6 shadow-xl dark:border-purple-800 dark:from-purple-900/20 dark:to-blue-900/20">
+        <div className="mt-8 rounded-2xl border-2 border-accent-light bg-gradient-to-r from-accent-subtle to-blue-50 p-5 sm:p-6 shadow-xl dark:border-accent-light dark:from-accent-light/20 dark:to-blue-900/20">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">🎮 Private Lobby</h3>
@@ -464,7 +464,7 @@ export default function CompetitivePage() {
             </div>
             <Link
               href="/competitive/lobby"
-              className="shrink-0 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
+              className="shrink-0 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
               Open Lobby →
             </Link>

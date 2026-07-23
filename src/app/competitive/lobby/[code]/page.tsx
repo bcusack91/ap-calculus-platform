@@ -180,7 +180,7 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
     lobby.status === 'IN_MATCH' && lastMatch && lastMatch.status === 'COMPLETED'
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-8 px-3 sm:px-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-blue-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-8 px-3 sm:px-4">
       <div className="mx-auto max-w-3xl space-y-5">
         {/* Header / code */}
         <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-xl dark:border-gray-700 dark:bg-gray-800">
@@ -304,7 +304,7 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
               <button
                 onClick={startMatch}
                 disabled={!lobby.guest || !selectedTopic || starting}
-                className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 font-bold text-white shadow-lg transition hover:shadow-xl disabled:opacity-50"
+                className="w-full rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-lg transition hover:shadow-xl disabled:opacity-50"
               >
                 {starting ? 'Starting…' : !lobby.guest ? 'Waiting for opponent…' : !selectedTopic ? 'Pick a topic to start' : 'Start Match'}
               </button>
@@ -334,7 +334,7 @@ function PlayerCard({ label, player, isYou, placeholder }: { label: string; play
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
       <div className="flex items-center gap-3">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-blue-500 text-xl font-bold text-white shrink-0">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-accent to-blue-500 text-xl font-bold text-white shrink-0">
           {player?.name?.[0]?.toUpperCase() || (label === 'Host' ? 'H' : '?')}
         </div>
         <div className="min-w-0">
@@ -378,7 +378,7 @@ function MatchResultBanner({ match, me, host, guest, onContinue, youAreHost }: {
           <Link href={`/competitive/match/${match.id}`} className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700">
             View results
           </Link>
-          <button onClick={onContinue} className="rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow hover:shadow-lg">
+          <button onClick={onContinue} className="rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-4 py-2 text-sm font-semibold text-white shadow hover:shadow-lg">
             {youAreHost ? 'Pick another challenge' : 'Back to lobby'}
           </button>
         </div>

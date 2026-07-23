@@ -13,10 +13,10 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 dark:from-purple-950 dark:via-gray-900 dark:to-blue-950 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-accent-subtle via-blue-50 to-cyan-50 dark:from-accent-subtle dark:via-gray-900 dark:to-blue-950 py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-accent via-blue-600 to-cyan-600">
               Get In Touch
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">

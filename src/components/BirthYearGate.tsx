@@ -90,7 +90,7 @@ export default function BirthYearGate() {
           onChange={(e) => setBirthYear(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Enter') submit() }}
           autoFocus
-          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
           placeholder="e.g. 2012"
         />
         {error && (
@@ -99,7 +99,7 @@ export default function BirthYearGate() {
         <button
           onClick={submit}
           disabled={submitting}
-          className="mt-5 w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-5 w-full px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? 'Saving…' : 'Continue'}
         </button>

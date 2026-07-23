@@ -35,10 +35,10 @@ function PremiumSuccess() {
   }, [])
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-12">
       <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 text-center">
         <div className="text-6xl mb-4">🎉</div>
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-3">
           Welcome to Premium!
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
@@ -51,11 +51,11 @@ function PremiumSuccess() {
         <div className="flex flex-col gap-3">
           <Link
             href="/dashboard"
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg"
+            className="px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg"
           >
             Go to Dashboard
           </Link>
-          <Link href="/" className="text-purple-600 dark:text-purple-400 hover:underline text-sm">
+          <Link href="/" className="text-accent dark:text-accent-muted hover:underline text-sm">
             Back to home
           </Link>
         </div>

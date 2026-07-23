@@ -54,9 +54,9 @@ export default function QualityGate({
                 {(currentAccuracy * 100).toFixed(0)}%
               </div>
             </div>
-            <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 text-center">
-              <div className="text-sm text-purple-700 dark:text-purple-300 mb-2">Required</div>
-              <div className="text-4xl font-bold text-purple-900 dark:text-purple-100">
+            <div className="bg-accent-subtle dark:bg-accent-light/20 rounded-lg p-6 text-center">
+              <div className="text-sm text-accent-hover dark:text-accent-muted mb-2">Required</div>
+              <div className="text-4xl font-bold text-accent-dark dark:text-accent-dark">
                 {(requiredAccuracy * 100).toFixed(0)}%
               </div>
             </div>
@@ -133,14 +133,14 @@ export default function QualityGate({
           </div>
 
           {/* Six Sigma Context */}
-          <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4 text-sm">
+          <div className="bg-accent-subtle dark:bg-accent-light/20 rounded-lg p-4 text-sm">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-lg">📊</span>
-              <div className="font-semibold text-purple-900 dark:text-purple-200">
+              <div className="font-semibold text-accent-dark dark:text-accent-dark">
                 Six Sigma Quality Standards
               </div>
             </div>
-            <div className="text-purple-800 dark:text-purple-300">
+            <div className="text-accent-dark dark:text-accent-muted">
               Like in manufacturing, we use progressive quality gates to ensure each step builds a solid foundation. 
               Meeting these standards means you&apos;re ready for the next level of complexity!
             </div>

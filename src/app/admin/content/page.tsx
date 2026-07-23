@@ -43,7 +43,7 @@ export default async function AdminContentPage() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Database content</h1>
         <Link
           href="/admin/content/new"
-          className="rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-purple-700"
+          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover"
         >
           + New item
         </Link>
@@ -81,7 +81,7 @@ export default async function AdminContentPage() {
                     <tr key={it.id} className="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-800 dark:hover:bg-gray-800/40">
                       <td className="px-4 py-2 text-gray-900 dark:text-gray-200">{it.courseSlug}</td>
                       <td className="px-4 py-2 font-mono">
-                        <Link href={`/admin/content/${it.id}`} className="text-purple-600 hover:underline dark:text-purple-400">
+                        <Link href={`/admin/content/${it.id}`} className="text-accent hover:underline dark:text-accent-muted">
                           {it.key}
                         </Link>
                       </td>

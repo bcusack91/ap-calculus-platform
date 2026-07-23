@@ -77,7 +77,7 @@ export default function NightModeScheduler({ onScheduleChange }: NightSchedulePr
         <button
           onClick={() => save(!enabled, startTime, endTime)}
           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-            enabled ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
+            enabled ? 'bg-accent' : 'bg-gray-300 dark:bg-gray-600'
           }`}
           role="switch"
           aria-checked={enabled}

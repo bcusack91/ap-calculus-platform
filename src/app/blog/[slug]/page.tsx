@@ -78,7 +78,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
       />
       <div className="mx-auto max-w-3xl">
         <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="/blog" className="hover:text-purple-600 transition-colors">
+          <Link href="/blog" className="hover:text-accent transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -103,7 +103,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                 {post.data.tags.map((tag: string) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300"
+                    className="text-xs px-2 py-1 rounded-full bg-accent-light text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted"
                   >
                     {tag}
                   </span>

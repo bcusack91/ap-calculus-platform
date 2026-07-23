@@ -20,7 +20,7 @@ const rankColors: Record<string, string> = {
   Gold: 'text-yellow-700 bg-yellow-100',
   Platinum: 'text-cyan-700 bg-cyan-100',
   Diamond: 'text-blue-700 bg-blue-100',
-  Master: 'text-purple-700 bg-purple-100',
+  Master: 'text-accent-hover bg-accent-light',
   Grandmaster: 'text-red-700 bg-red-100',
 }
 
@@ -79,7 +79,7 @@ export default async function LeaderboardPage() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-10 text-center">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-3">
             🏆 Competitive Leaderboard
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -87,7 +87,7 @@ export default async function LeaderboardPage() {
           </p>
           <Link
             href="/competitive"
-            className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all"
+            className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-lg font-semibold hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
           >
             🎮 Play Competitive
           </Link>
@@ -102,7 +102,7 @@ export default async function LeaderboardPage() {
             </p>
             <Link
               href="/competitive"
-              className="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-all"
+              className="inline-block px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover transition-all"
             >
               Start Competing
             </Link>
@@ -154,7 +154,7 @@ export default async function LeaderboardPage() {
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm">
+                    <tr className="bg-gradient-to-r from-accent to-accent-secondary text-white text-sm">
                       <th className="px-4 py-3 text-left font-semibold">#</th>
                       <th className="px-4 py-3 text-left font-semibold">Player</th>
                       <th className="px-4 py-3 text-left font-semibold">Rank</th>
@@ -169,7 +169,7 @@ export default async function LeaderboardPage() {
                     {entries.map((entry) => (
                       <tr
                         key={entry.position}
-                        className={`border-t border-gray-100 dark:border-gray-700 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors ${
+                        className={`border-t border-gray-100 dark:border-gray-700 hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors ${
                           entry.position <= 3 ? 'bg-yellow-50/50 dark:bg-yellow-900/10' : ''
                         }`}
                       >
@@ -190,7 +190,7 @@ export default async function LeaderboardPage() {
                             {rankEmoji[entry.rank] || ''} {entry.rank}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-right font-mono font-semibold text-purple-700 dark:text-purple-400">
+                        <td className="px-4 py-3 text-right font-mono font-semibold text-accent-hover dark:text-accent-muted">
                           {entry.mmr}
                         </td>
                         <td className="px-4 py-3 text-right text-sm">

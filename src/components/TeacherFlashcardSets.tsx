@@ -188,7 +188,7 @@ export function TeacherFlashcardSets() {
               ['import', '📋', 'Import / paste', 'Paste from Quizlet or a spreadsheet (term, definition per line).'],
               ['manual', '✏️', 'Create manually', 'Type each card yourself.'],
             ] as [Mode, string, string, string][]).map(([m, icon, label, desc]) => (
-              <button key={m} onClick={() => chooseMode(m)} className="text-left p-5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-600 bg-white dark:bg-gray-800 transition-all">
+              <button key={m} onClick={() => chooseMode(m)} className="text-left p-5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-accent-muted dark:hover:border-accent bg-white dark:bg-gray-800 transition-all">
                 <div className="text-2xl mb-2">{icon}</div>
                 <div className="font-semibold text-gray-900 dark:text-white">{label}</div>
                 <div className="text-xs text-gray-500 mt-1">{desc}</div>
@@ -203,7 +203,7 @@ export function TeacherFlashcardSets() {
               <input value={aiTopic} onChange={(e) => setAiTopic(e.target.value)} placeholder="Topic, e.g. Limits and continuity" className="px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl dark:bg-gray-700 dark:text-white" />
               <input type="number" min={3} max={40} value={aiCount} onChange={(e) => setAiCount(e.target.value)} title="Number of cards" className="w-24 px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl dark:bg-gray-700 dark:text-white" />
             </div>
-            <button onClick={runGenerate} disabled={generating || !aiTopic.trim()} className="px-5 py-2.5 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 disabled:opacity-50">
+            <button onClick={runGenerate} disabled={generating || !aiTopic.trim()} className="px-5 py-2.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover disabled:opacity-50">
               {generating ? 'Generating…' : '✨ Generate cards'}
             </button>
             <p className="text-xs text-gray-400">Review and edit everything before saving — AI can make mistakes.</p>
@@ -214,7 +214,7 @@ export function TeacherFlashcardSets() {
           <div className="space-y-3 p-5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Paste cards — one per line, term and definition separated by a tab or comma</label>
             <textarea value={pasteText} onChange={(e) => setPasteText(e.target.value)} rows={6} placeholder={'derivative\tinstantaneous rate of change\nintegral, area under a curve'} className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-mono text-sm dark:bg-gray-700 dark:text-white" />
-            <button onClick={runImport} disabled={!pasteText.trim()} className="px-5 py-2.5 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 disabled:opacity-50">Preview cards</button>
+            <button onClick={runImport} disabled={!pasteText.trim()} className="px-5 py-2.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover disabled:opacity-50">Preview cards</button>
           </div>
         )}
 
@@ -233,7 +233,7 @@ export function TeacherFlashcardSets() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{cards.length} card{cards.length !== 1 ? 's' : ''}</span>
-                <button onClick={() => setCards((c) => [...c, { front: '', back: '' }])} className="text-sm text-purple-600 hover:text-purple-800 font-medium">+ Add card</button>
+                <button onClick={() => setCards((c) => [...c, { front: '', back: '' }])} className="text-sm text-accent hover:text-accent-dark font-medium">+ Add card</button>
               </div>
               {cards.map((c, i) => (
                 <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr,1fr,auto] gap-2 items-start">
@@ -258,7 +258,7 @@ export function TeacherFlashcardSets() {
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-bold text-gray-900 dark:text-white">Flashcard sets</h2>
-        <button onClick={() => { resetBuilder(); setView('create') }} className="px-4 py-2 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 text-sm">+ New set</button>
+        <button onClick={() => { resetBuilder(); setView('create') }} className="px-4 py-2 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover text-sm">+ New set</button>
       </div>
 
       {loading ? (
@@ -277,7 +277,7 @@ export function TeacherFlashcardSets() {
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <h4 className="font-semibold text-gray-900 dark:text-white truncate">{s.title}</h4>
-                    <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">{s.source}</span>
+                    <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded bg-accent-light dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted">{s.source}</span>
                   </div>
                   <p className="text-xs text-gray-500">
                     {s._count.cards} card{s._count.cards !== 1 ? 's' : ''}{s.subject ? ` · ${s.subject}` : ''}

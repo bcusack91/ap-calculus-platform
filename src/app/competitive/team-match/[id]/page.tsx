@@ -209,7 +209,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4" />
           <p className="text-white text-xl">Loading Team Battle...</p>
@@ -220,12 +220,12 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   if (error || !matchState) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-8 text-center">
           <p className="text-red-500 text-lg mb-4">{error || 'Match not found'}</p>
           <button
             onClick={() => router.push(lobbyPath)}
-            className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+            className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover"
           >
             Back to Lobby
           </button>
@@ -246,7 +246,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       : matchState.team2.score >= 15
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 p-4">
         <div className="max-w-3xl mx-auto pt-10">
           {/* Victory / Defeat */}
           <div className={`text-center mb-8 ${myTeamWon ? 'text-yellow-400' : 'text-red-400'}`}>
@@ -262,7 +262,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-8 mb-6">
             <div className="grid grid-cols-3 gap-1.5 sm:gap-4 items-center text-center">
               <div>
-                <p className="text-purple-300 text-sm font-semibold mb-2">
+                <p className="text-accent-muted text-sm font-semibold mb-2">
                   {matchState.myTeam === 1 ? 'YOUR TEAM' : 'OPPONENT TEAM'}
                 </p>
                 <p className="text-white text-sm">
@@ -286,7 +286,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
           <div className="text-center">
             <button
               onClick={() => router.push(lobbyPath)}
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg text-lg hover:from-purple-700 hover:to-blue-700"
+              className="px-8 py-4 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg text-lg hover:from-accent-hover hover:to-accent-secondary-hover"
             >
               Back to Lobby
             </button>
@@ -298,13 +298,13 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   // ---- IN-PROGRESS STATE ----
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-dark via-blue-900 to-indigo-900 p-4">
       <div className="max-w-4xl mx-auto">
         {/* Score Header */}
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 mb-6">
           <div className="grid grid-cols-3 gap-1.5 sm:gap-4 items-center text-center">
             <div>
-              <p className="text-purple-300 text-xs font-semibold uppercase tracking-wider">Your Team</p>
+              <p className="text-accent-muted text-xs font-semibold uppercase tracking-wider">Your Team</p>
               <p className="text-white text-sm mt-1">
                 {myTeam.players.map(p => p.id === currentUserId ? `${p.name} (you)` : p.name).join(' & ')}
               </p>
@@ -327,7 +327,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
           <div className="mt-4 flex gap-2">
             <div className="flex-1 bg-gray-700 rounded-full h-3 overflow-hidden">
               <div
-                className="bg-purple-500 h-3 rounded-full transition-all duration-300"
+                className="bg-accent h-3 rounded-full transition-all duration-300"
                 style={{ width: `${Math.min(100, (myTeam.score / 15) * 100)}%` }}
               />
             </div>
@@ -342,8 +342,8 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
         {/* Teammate Banner */}
         {teammate && (
-          <div className="bg-purple-500/20 border border-purple-500/30 rounded-xl p-3 mb-4 text-center">
-            <p className="text-purple-200 text-sm">
+          <div className="bg-accent/20 border border-accent/30 rounded-xl p-3 mb-4 text-center">
+            <p className="text-accent-light text-sm">
               🤝 Teamed with <strong className="text-white">{teammate.name}</strong> — both your answers count toward the team score!
             </p>
           </div>
@@ -381,8 +381,8 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
                     ? 'bg-green-100 dark:bg-green-900/40 border-green-500'
                     : 'bg-red-100 dark:bg-red-900/40 border-red-500'
                   : isSelected
-                    ? 'bg-purple-100 dark:bg-purple-900/40 border-purple-500'
-                    : 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:border-purple-300'
+                    ? 'bg-accent-light dark:bg-accent-light/40 border-accent'
+                    : 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:bg-accent-subtle dark:hover:bg-accent-light/20 hover:border-accent-muted'
 
                 return (
                   <button
@@ -391,7 +391,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
                     disabled={submitting}
                     className={`w-full text-left p-4 rounded-xl border-2 transition-all ${bgClass} ${submitting ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
                   >
-                    <span className="font-semibold text-purple-600 dark:text-purple-400 mr-3">
+                    <span className="font-semibold text-accent dark:text-accent-muted mr-3">
                       {String.fromCharCode(65 + idx)}.
                     </span>
                     <span

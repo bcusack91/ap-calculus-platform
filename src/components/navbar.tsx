@@ -253,14 +253,14 @@ export function Navbar() {
                       <>
                         {testPrepCourses.length > 0 && (
                           <div className="px-2 pb-2 mb-2 border-b border-gray-100 dark:border-gray-700">
-                            <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-purple-600 dark:text-purple-300">
+                            <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-accent dark:text-accent-muted">
                               Test Prep
                             </div>
                             {testPrepCourses.map(course => (
                               <Link
                                 key={course.slug}
                                 href={getCourseHref(course.slug)}
-                                className="flex items-center gap-2 px-2 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+                                className="flex items-center gap-2 px-2 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 hover:text-accent-hover dark:hover:text-accent-muted transition-colors"
                                 onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
                               >
                                 <span>{course.icon || '📚'}</span>
@@ -288,7 +288,7 @@ export function Navbar() {
                                 <Link
                                   key={course.slug}
                                   href={getCourseHref(course.slug)}
-                                  className="flex items-center gap-2 pl-6 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+                                  className="flex items-center gap-2 pl-6 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 hover:text-accent-hover dark:hover:text-accent-muted transition-colors"
                                   onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
                                 >
                                   <span>{course.icon || '📚'}</span>
@@ -307,7 +307,7 @@ export function Navbar() {
             <Link href="/flashcards" className="transition-colors hover:text-foreground/80">
               Flashcards
             </Link>
-            <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-purple-600 dark:text-purple-400 font-semibold">
+            <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-accent dark:text-accent-muted font-semibold">
               🎮 Competitive
             </Link>
             {/* More Dropdown */}
@@ -323,16 +323,16 @@ export function Navbar() {
               </button>
               {moreOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
-                  <Link href="/leaderboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/leaderboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     🏆 Leaderboard
                   </Link>
-                  <Link href="/study-groups" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/study-groups" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     👥 Study Groups
                   </Link>
-                  <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ℹ️ About
                   </Link>
-                  <Link href="/contact" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/contact" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ✉️ Contact
                   </Link>
                 </div>
@@ -376,7 +376,7 @@ export function Navbar() {
                 </Link>
                 <Link
                   href="/auth/signup"
-                  className="rounded-md px-4 py-2 text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
+                  className="rounded-md px-4 py-2 text-sm font-medium bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
                 >
                   Sign Up
                 </Link>

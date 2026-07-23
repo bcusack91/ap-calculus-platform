@@ -37,10 +37,10 @@ export default async function TopicHubPage({ params }: HubPageProps) {
   if (!hub) notFound()
 
   const similar = topicHubs.filter((item) => item.exam === hub.exam && item.slug !== hub.slug).slice(0, 4)
-  const gradient = examColors[hub.exam] ?? 'from-purple-600 to-indigo-600'
+  const gradient = examColors[hub.exam] ?? 'from-accent to-indigo-600'
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
       {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
@@ -61,8 +61,8 @@ export default async function TopicHubPage({ params }: HubPageProps) {
           <p className="mt-3 text-white/90">{hub.description}</p>
         </div>
 
-        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Start Here</h2>
+        <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white">Start Here</h2>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {hub.links.map((link) => (
               <TrackedLink
@@ -76,7 +76,7 @@ export default async function TopicHubPage({ params }: HubPageProps) {
                   destination: link.href,
                   cta_type: link.type,
                 }}
-                className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-slate-500"
+                className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-gray-400 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-gray-500"
               >
                 {link.label}
               </TrackedLink>
@@ -85,14 +85,14 @@ export default async function TopicHubPage({ params }: HubPageProps) {
         </section>
 
         {similar.length > 0 && (
-          <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white">More {hub.exam} Hubs</h2>
+          <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">More {hub.exam} Hubs</h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {similar.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/hubs/${item.slug}`}
-                  className="rounded-xl border border-slate-200 px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-indigo-400 hover:text-indigo-700 dark:border-slate-700 dark:text-slate-300 dark:hover:border-indigo-500 dark:hover:text-indigo-300"
+                  className="rounded-xl border border-gray-200 px-4 py-3 text-sm font-medium text-gray-700 transition hover:border-indigo-400 hover:text-indigo-700 dark:border-gray-700 dark:text-gray-300 dark:hover:border-indigo-500 dark:hover:text-indigo-300"
                 >
                   {item.title}
                 </Link>

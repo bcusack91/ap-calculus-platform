@@ -83,7 +83,7 @@ export default function LobbyHomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-3 sm:px-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-blue-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-8 px-3 sm:px-4">
       <div className="mx-auto max-w-2xl space-y-6">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">🎮 Private Lobby</h1>
@@ -106,7 +106,7 @@ export default function LobbyHomePage() {
           <button
             onClick={create}
             disabled={busy}
-            className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl disabled:opacity-50"
+            className="w-full rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl disabled:opacity-50"
           >
             {busy ? 'Creating…' : 'Create Lobby'}
           </button>

@@ -40,7 +40,7 @@ export default function FlashcardReviewDashboard() {
     return (
       <div className="container py-10">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
           <p className="mt-4 text-muted-foreground">Loading...</p>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function FlashcardReviewDashboard() {
           </p>
           <Link
             href="/auth/signin"
-            className="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700"
+            className="inline-block px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
           >
             Sign In
           </Link>
@@ -76,11 +76,11 @@ export default function FlashcardReviewDashboard() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-300 rounded-xl p-6 text-center">
-            <div className="text-4xl font-bold text-purple-900 mb-2">
+          <div className="bg-gradient-to-br from-accent-subtle to-accent-light border-2 border-accent-muted rounded-xl p-6 text-center">
+            <div className="text-4xl font-bold text-accent-dark mb-2">
               {stats?.total || 0}
             </div>
-            <div className="text-sm font-semibold text-purple-700">Total Cards</div>
+            <div className="text-sm font-semibold text-accent-hover">Total Cards</div>
           </div>
 
           <div className="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-300 rounded-xl p-6 text-center">
@@ -107,7 +107,7 @@ export default function FlashcardReviewDashboard() {
 
         {/* Action Buttons */}
         {stats && stats.due > 0 ? (
-          <div className="bg-gradient-to-r from-purple-100 to-blue-100 border-2 border-purple-300 rounded-xl p-8 mb-8">
+          <div className="bg-gradient-to-r from-accent-light to-blue-100 border-2 border-accent-muted rounded-xl p-8 mb-8">
             <div className="text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 🎯 Ready to Review!
@@ -117,7 +117,7 @@ export default function FlashcardReviewDashboard() {
               </p>
               <Link
                 href="/flashcards/review/start"
-                className="inline-block px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white text-lg font-bold rounded-lg shadow-lg transition-all"
+                className="inline-block px-8 py-4 bg-accent hover:bg-accent-hover text-white text-lg font-bold rounded-lg shadow-lg transition-all"
               >
                 Start Review Session
               </Link>
@@ -143,7 +143,7 @@ export default function FlashcardReviewDashboard() {
           
           <div className="space-y-6">
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
                 1
               </div>
               <div>
@@ -155,7 +155,7 @@ export default function FlashcardReviewDashboard() {
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
                 2
               </div>
               <div>
@@ -167,7 +167,7 @@ export default function FlashcardReviewDashboard() {
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
                 3
               </div>
               <div>
@@ -179,7 +179,7 @@ export default function FlashcardReviewDashboard() {
             </div>
 
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
                 4
               </div>
               <div>
@@ -208,7 +208,7 @@ export default function FlashcardReviewDashboard() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link
             href="/flashcards"
-            className="block p-6 bg-white border-2 border-gray-200 hover:border-purple-300 rounded-xl transition-all"
+            className="block p-6 bg-white border-2 border-gray-200 hover:border-accent-muted rounded-xl transition-all"
           >
             <div className="text-2xl mb-2">📚</div>
             <h3 className="font-bold text-gray-900 mb-1">Browse All Flashcards</h3>
@@ -217,7 +217,7 @@ export default function FlashcardReviewDashboard() {
 
           <Link
             href="/topics"
-            className="block p-6 bg-white border-2 border-gray-200 hover:border-purple-300 rounded-xl transition-all"
+            className="block p-6 bg-white border-2 border-gray-200 hover:border-accent-muted rounded-xl transition-all"
           >
             <div className="text-2xl mb-2">🎯</div>
             <h3 className="font-bold text-gray-900 mb-1">Continue Learning</h3>

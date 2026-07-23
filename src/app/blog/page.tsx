@@ -73,7 +73,7 @@ export default function BlogPage() {
                       day: 'numeric',
                     })}
                   </time>
-                  <h2 className="text-2xl font-bold mt-1 mb-2 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                  <h2 className="text-2xl font-bold mt-1 mb-2 text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -84,7 +84,7 @@ export default function BlogPage() {
                       {post.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300"
+                          className="text-xs px-2 py-1 rounded-full bg-accent-light text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted"
                         >
                           {tag}
                         </span>

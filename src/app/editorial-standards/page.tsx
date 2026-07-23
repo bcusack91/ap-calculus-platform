@@ -125,7 +125,7 @@ export default function EditorialStandardsPage() {
             We work hard to be accurate, but no resource is perfect. If you spot
             an error — a typo, an incorrect solution, or anything unclear — please
             tell us through our{" "}
-            <Link href="/contact" className="text-purple-700 hover:underline dark:text-purple-300">
+            <Link href="/contact" className="text-accent-hover hover:underline dark:text-accent-muted">
               contact page
             </Link>
             . We review every report and correct verified issues promptly, then
@@ -140,7 +140,7 @@ export default function EditorialStandardsPage() {
             ads. Our funding model never influences the substance of our educational content —
             lessons and problems are written purely to help students learn. You can read more about
             how we handle data in our{" "}
-            <Link href="/privacy" className="text-purple-700 hover:underline dark:text-purple-300">
+            <Link href="/privacy" className="text-accent-hover hover:underline dark:text-accent-muted">
               Privacy Policy
             </Link>
             .

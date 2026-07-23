@@ -522,7 +522,7 @@ export function DiagnosticResultsView({
           <p className="text-sm font-medium text-gray-500 uppercase dark:text-gray-400">
             Estimated SAT Score
           </p>
-          <p className="text-5xl font-black text-purple-600 dark:text-purple-400">
+          <p className="text-5xl font-black text-accent dark:text-accent-muted">
             {results.estimatedScore}
           </p>
           <div className="mt-2 flex justify-center gap-6 text-sm">

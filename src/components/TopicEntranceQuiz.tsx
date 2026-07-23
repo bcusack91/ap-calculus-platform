@@ -157,17 +157,17 @@ export default function TopicEntranceQuiz({
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
           <div className="text-5xl mb-4">📝</div>
           <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">{topicTitle}</h2>
-          <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-4">Entrance Quiz</h3>
+          <h3 className="text-lg font-semibold text-accent dark:text-accent-muted mb-4">Entrance Quiz</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
             This quiz has <strong>{totalQuestions} questions</strong> covering all {partTitles.length} parts of this lesson.
             If you get all questions correct for a specific part, you&apos;ll be able to <strong>skip</strong> that part entirely.
           </p>
-          <div className="bg-purple-50 dark:bg-purple-900/30 rounded-xl p-4 mb-6 text-left">
-            <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-2">Parts covered:</p>
+          <div className="bg-accent-subtle dark:bg-accent-light/30 rounded-xl p-4 mb-6 text-left">
+            <p className="text-sm font-semibold text-accent-hover dark:text-accent-muted mb-2">Parts covered:</p>
             <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
               {partTitles.map(pt => (
                 <li key={pt.partNumber} className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-300 text-xs font-bold flex items-center justify-center">
+                  <span className="w-5 h-5 rounded-full bg-accent-light dark:bg-accent-light text-accent-hover dark:text-accent-muted text-xs font-bold flex items-center justify-center">
                     {pt.partNumber}
                   </span>
                   <span dangerouslySetInnerHTML={{ __html: renderLatex(pt.partTitle) }} />
@@ -184,7 +184,7 @@ export default function TopicEntranceQuiz({
             </button>
             <button
               onClick={() => setPhase('quiz')}
-              className="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-colors shadow-lg"
+              className="px-6 py-3 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-colors shadow-lg"
             >
               Take Entrance Quiz
             </button>
@@ -215,14 +215,14 @@ export default function TopicEntranceQuiz({
           {/* Progress bar */}
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-6">
             <div
-              className="bg-purple-600 h-2 rounded-full transition-all duration-300"
+              className="bg-accent h-2 rounded-full transition-all duration-300"
               style={{ width: `${((currentQuestion + (showExplanation ? 1 : 0)) / totalQuestions) * 100}%` }}
             />
           </div>
 
           {/* Part badge */}
           <div className="mb-3">
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-accent-light dark:bg-accent-light/40 text-accent-hover dark:text-accent-muted">
               Part {question.partNumber}: <span dangerouslySetInnerHTML={{ __html: renderLatex(question.partTitle) }} />
             </span>
           </div>
@@ -267,8 +267,8 @@ export default function TopicEntranceQuiz({
                   textColor = 'text-red-800 dark:text-red-200'
                 }
               } else if (isSelected) {
-                borderColor = 'border-purple-500'
-                bgColor = 'bg-purple-50 dark:bg-purple-900/20'
+                borderColor = 'border-accent'
+                bgColor = 'bg-accent-subtle dark:bg-accent-light/20'
               }
 
               return (
@@ -280,7 +280,7 @@ export default function TopicEntranceQuiz({
                     aria-checked={isSelected}
                     aria-disabled={showExplanation || isEliminated}
                     className={`w-full text-left p-3 sm:p-4 pr-10 rounded-xl border-2 transition-all break-words ${borderColor} ${bgColor} ${textColor} ${
-                      !showExplanation && !isEliminated ? 'hover:border-purple-400 cursor-pointer' : 'cursor-default'
+                      !showExplanation && !isEliminated ? 'hover:border-accent-muted cursor-pointer' : 'cursor-default'
                     } ${isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
                   >
                     <span className="font-semibold mr-2">{optionLetters[idx]}.</span>
@@ -341,7 +341,7 @@ export default function TopicEntranceQuiz({
                 <button
                   onClick={handleConfirm}
                   disabled={selectedAnswer === null}
-                  className="flex-1 py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="flex-1 py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   Confirm Answer
                 </button>
@@ -349,7 +349,7 @@ export default function TopicEntranceQuiz({
             ) : (
               <button
                 onClick={handleNext}
-                className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors"
+                className="w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors"
               >
                 {currentQuestion < totalQuestions - 1 ? 'Next Question →' : 'See Results'}
               </button>
@@ -468,7 +468,7 @@ export default function TopicEntranceQuiz({
             </button>
             <button
               onClick={() => handleFinish('course')}
-              className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-lg"
+              className="w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors shadow-lg"
             >
               📚 Return to {courseSlug ? courseSlug.replace(/-/g, ' ').replace(/\bap\b/g, 'AP').replace(/\b\w/g, l => l.toUpperCase()) : 'Course'}
             </button>
@@ -482,7 +482,7 @@ export default function TopicEntranceQuiz({
         ) : (
           <button
             onClick={() => handleFinish()}
-            className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-lg"
+            className="w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors shadow-lg"
           >
             {masteredParts.size > 0
               ? <span>Start with Part {partsToStudy[0]?.partNumber}: <span dangerouslySetInnerHTML={{ __html: renderLatex(partsToStudy[0]?.partTitle || '') }} /> →</span>

@@ -110,7 +110,7 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
   if (phase === 'loading') {
     return (
       <div className="flex flex-col items-center justify-center py-20 space-y-4">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
         <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">Preparing your entrance quiz...</p>
       </div>
     )
@@ -183,9 +183,9 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
               <Link
                 key={topic.id}
                 href={`/topics/${topic.slug}/interactive`}
-                className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
+                className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-accent-muted dark:hover:border-accent hover:shadow-md transition-all"
               >
-                <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
+                <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors mb-2">
                   {topic.title}
                 </h3>
                 {topic.description && (
@@ -203,7 +203,7 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
       ))}
 
       {/* Final Exit Quiz Button */}
-      <div className="rounded-2xl border-2 border-purple-300 dark:border-purple-700 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 p-8 text-center shadow-sm">
+      <div className="rounded-2xl border-2 border-accent-muted dark:border-accent-hover bg-gradient-to-r from-accent-subtle to-indigo-50 dark:from-accent-light/20 dark:to-indigo-900/20 p-8 text-center shadow-sm">
         <span className="text-4xl block mb-3">🎓</span>
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Ready to prove your mastery?</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
@@ -211,7 +211,7 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
         </p>
         <button
           onClick={handleFinalQuizStart}
-          className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700 shadow-lg transition-all"
+          className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-indigo-600 text-white hover:from-accent-hover hover:to-indigo-700 shadow-lg transition-all"
         >
           📝 Take Final Exit Quiz
         </button>

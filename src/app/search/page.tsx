@@ -141,7 +141,7 @@ function SearchContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <div className="container py-12">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Search</h1>
@@ -162,7 +162,7 @@ function SearchContent() {
               onFocus={() => setShowRecent(true)}
               onBlur={() => setTimeout(() => setShowRecent(false), 200)}
               placeholder="Search courses, topics, categories..."
-              className="w-full pl-12 pr-12 py-4 text-lg border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white shadow-sm"
+              className="w-full pl-12 pr-12 py-4 text-lg border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-800 dark:text-white shadow-sm"
               autoFocus
               role="combobox"
               aria-expanded={results.length > 0}
@@ -184,7 +184,7 @@ function SearchContent() {
                 </button>
               )}
               {loading && (
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600" />
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-accent" />
               )}
             </div>
 
@@ -206,7 +206,7 @@ function SearchContent() {
                     key={i}
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => { setQuery(s); doSearch(s); setShowRecent(false) }}
-                    className="w-full text-left px-4 py-2.5 hover:bg-purple-50 dark:hover:bg-purple-900/20 flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 transition-colors"
+                    className="w-full text-left px-4 py-2.5 hover:bg-accent-subtle dark:hover:bg-accent-light/20 flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 transition-colors"
                   >
                     <svg className="h-4 w-4 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -255,15 +255,15 @@ function SearchContent() {
                     aria-selected={highlightIndex === i}
                     className={`block bg-white dark:bg-gray-800 border rounded-xl p-5 hover:shadow-md transition-all group ${
                       highlightIndex === i
-                        ? 'border-purple-400 dark:border-purple-500 ring-2 ring-purple-200 dark:ring-purple-800 shadow-md'
-                        : 'border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600'
+                        ? 'border-accent-muted dark:border-accent ring-2 ring-accent-light dark:ring-accent-light shadow-md'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-accent-muted dark:hover:border-accent'
                     }`}
                   >
                     <div className="flex items-start gap-3">
                       <span className="text-xl flex-shrink-0 mt-0.5">{typeIcon(result.type)}</span>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors truncate">
+                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors truncate">
                             {highlightMatch(result.title, query)}
                           </h3>
                           <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 flex-shrink-0">
@@ -271,7 +271,7 @@ function SearchContent() {
                           </span>
                         </div>
                         {result.context && (
-                          <p className="text-xs text-purple-600 dark:text-purple-400 mb-1">{result.context}</p>
+                          <p className="text-xs text-accent dark:text-accent-muted mb-1">{result.context}</p>
                         )}
                         {result.description && (
                           <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{highlightMatch(result.description, query)}</p>
@@ -313,7 +313,7 @@ export default function SearchPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
           <div className="container py-12">
             <div className="mx-auto max-w-3xl">
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Search</h1>

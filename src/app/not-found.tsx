@@ -14,13 +14,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/"
-            className="rounded-lg px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg transition-all"
+            className="rounded-lg px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover shadow-lg transition-all"
           >
             Go Home
           </Link>
           <Link
             href="/topics"
-            className="rounded-lg px-6 py-3 text-base font-semibold text-purple-700 dark:text-purple-300 bg-white dark:bg-gray-800 border border-purple-200 dark:border-purple-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
+            className="rounded-lg px-6 py-3 text-base font-semibold text-accent-hover dark:text-accent-muted bg-white dark:bg-gray-800 border border-accent-light dark:border-accent-light hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
           >
             Browse Topics
           </Link>
@@ -28,7 +28,7 @@ export default function NotFound() {
         <div className="mt-12">
           <Link
             href="/search"
-            className="text-sm text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            className="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-muted transition-colors"
           >
             Or try searching for what you need →
           </Link>

@@ -64,7 +64,7 @@ export function ErrorState({
       {onRetry && (
         <button
           onClick={onRetry}
-          className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-sm"
+          className="px-5 py-2.5 bg-gradient-to-r from-accent to-accent-secondary text-white font-medium rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-sm"
         >
           Try Again
         </button>
@@ -96,7 +96,7 @@ export function EmptyState({
       {action && (
         <a
           href={action.href}
-          className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-sm"
+          className="px-5 py-2.5 bg-gradient-to-r from-accent to-accent-secondary text-white font-medium rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-sm"
         >
           {action.label}
         </a>
@@ -108,7 +108,7 @@ export function EmptyState({
 export function LoadingState({ message = 'Loading...' }: { message?: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-4">
-      <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-purple-600 mb-4" />
+      <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-accent mb-4" />
       <p className="text-sm text-gray-500 dark:text-gray-400">{message}</p>
     </div>
   )

@@ -92,10 +92,10 @@ function ChallengeContent() {
 
   if (accepted) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-lg w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 text-center">
           <div className="text-6xl mb-4">🎉</div>
-          <h1 className="text-3xl font-bold mb-3 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold mb-3 bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             Challenge Accepted!
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
@@ -110,11 +110,11 @@ function ChallengeContent() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-lg w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8">
         <div className="text-center mb-6">
           <div className="text-6xl mb-4">⚔️</div>
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             You&apos;ve Been Challenged!
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -154,7 +154,7 @@ function ChallengeContent() {
         <button
           onClick={acceptChallenge}
           disabled={accepting}
-          className="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold text-lg rounded-xl transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-4 bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover text-white font-bold text-lg rounded-xl transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {accepting ? 'Accepting...' : 'Accept Challenge'}
         </button>

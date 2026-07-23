@@ -15,7 +15,7 @@ export default function InteractiveError({
   }, [error])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-pink-50 to-blue-50 dark:from-gray-900 dark:via-accent-light/20 dark:to-gray-900 flex items-center justify-center">
       <div className="max-w-md mx-auto text-center p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-xl">
         <div className="text-6xl mb-4">⚠️</div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
@@ -27,7 +27,7 @@ export default function InteractiveError({
         <div className="flex flex-col gap-3">
           <button
             onClick={reset}
-            className="px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 transition-colors"
+            className="px-6 py-3 bg-accent text-white rounded-xl font-semibold hover:bg-accent-hover transition-colors"
           >
             Try Again
           </button>

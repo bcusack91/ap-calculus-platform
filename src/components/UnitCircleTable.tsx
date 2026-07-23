@@ -58,7 +58,7 @@ export default function UnitCircleTable() {
       <div className="inline-block min-w-full align-middle">
         <div className="overflow-hidden border-2 border-blue-300 rounded-xl shadow-lg">
           <table className="min-w-full divide-y-2 divide-blue-200">
-            <thead className="bg-gradient-to-r from-blue-600 to-purple-600">
+            <thead className="bg-gradient-to-r from-blue-600 to-accent">
               <tr>
                 <th className="px-6 py-4 text-left text-sm font-bold text-white uppercase tracking-wider">
                   Degrees
@@ -91,7 +91,7 @@ export default function UnitCircleTable() {
                   <td className="px-6 py-4 whitespace-nowrap text-base font-semibold text-blue-900">
                     {angle.degrees}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-base font-mono text-purple-700">
+                  <td className="px-6 py-4 whitespace-nowrap text-base font-mono text-accent-hover">
                     {angle.radians}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-base font-mono text-gray-700">

@@ -234,7 +234,7 @@ export default function TwoDigitMultiplicationAnimation({
   const showFinalAnswer = currentStepData?.subStep === 'complete'
 
   return (
-    <div className="my-8 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border-2 border-blue-200">
+    <div className="my-8 p-6 bg-gradient-to-br from-blue-50 to-accent-subtle rounded-lg border-2 border-blue-200">
       <h3 className="text-lg font-bold text-blue-900 mb-4">
         Step-by-Step Two-Digit Multiplication
       </h3>
@@ -262,7 +262,7 @@ export default function TwoDigitMultiplicationAnimation({
                     key={i} 
                     className={`inline-block w-12 text-right text-sm transition-all duration-500 relative ${
                       isHighlightedCarry 
-                        ? 'text-purple-600 bg-purple-100 rounded scale-110' 
+                        ? 'text-accent bg-accent-light rounded scale-110' 
                         : 'text-blue-600'
                     }`}
                   >
@@ -349,7 +349,7 @@ export default function TwoDigitMultiplicationAnimation({
 
         {/* Floating calculation display */}
         {currentStepData && currentStepData.multiplierRow >= 0 && (currentStepData.subStep === 'multiply' || currentStepData.subStep === 'colorize') && (
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border-4 border-purple-400 rounded-lg p-6 shadow-2xl z-10 animate-fadeIn">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white border-4 border-accent-muted rounded-lg p-6 shadow-2xl z-10 animate-fadeIn">
             <div className="text-center text-3xl font-bold">
               {currentStepData.subStep === 'multiply' ? (
                 <span>
@@ -359,7 +359,7 @@ export default function TwoDigitMultiplicationAnimation({
                   {currentStepData.previousCarry > 0 && (
                     <>
                       {' + '}
-                      <span className="text-purple-600 bg-purple-100 px-2 rounded">{currentStepData.previousCarry}</span>
+                      <span className="text-accent bg-accent-light px-2 rounded">{currentStepData.previousCarry}</span>
                     </>
                   )}
                   {' = '}
@@ -373,7 +373,7 @@ export default function TwoDigitMultiplicationAnimation({
                   {currentStepData.previousCarry > 0 && (
                     <>
                       {' + '}
-                      <span className="text-purple-600 bg-purple-100 px-2 rounded">{currentStepData.previousCarry}</span>
+                      <span className="text-accent bg-accent-light px-2 rounded">{currentStepData.previousCarry}</span>
                     </>
                   )}
                   {' = '}

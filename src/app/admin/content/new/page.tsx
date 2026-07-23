@@ -48,7 +48,7 @@ export default function NewContentPage() {
 
   return (
     <div className="container max-w-3xl py-10">
-      <Link href="/admin/content" className="mb-4 inline-block text-sm text-purple-600 hover:underline dark:text-purple-400">
+      <Link href="/admin/content" className="mb-4 inline-block text-sm text-accent hover:underline dark:text-accent-muted">
         ← Back to content
       </Link>
       <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">New content item</h1>
@@ -90,7 +90,7 @@ export default function NewContentPage() {
       <button
         onClick={create}
         disabled={saving}
-        className="mt-6 rounded-lg bg-purple-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-purple-700 disabled:opacity-50"
+        className="mt-6 rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover disabled:opacity-50"
       >
         {saving ? 'Creating…' : 'Create'}
       </button>

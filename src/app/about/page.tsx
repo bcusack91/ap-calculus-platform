@@ -19,10 +19,10 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 dark:from-purple-950 dark:via-gray-900 dark:to-blue-950 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-accent-subtle via-blue-50 to-cyan-50 dark:from-accent-subtle dark:via-gray-900 dark:to-blue-950 py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-accent via-blue-600 to-cyan-600">
               About Study Mondo
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
@@ -109,8 +109,8 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{COURSE_COUNT} Courses We Cover</h2>
               <div className="space-y-6">
                 {courseList.map((section) => (
-                  <div key={section.section} className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/50 dark:to-blue-950/50 rounded-2xl p-6">
-                    <h3 className="text-lg font-bold text-purple-900 dark:text-purple-300 mb-3">{section.section}</h3>
+                  <div key={section.section} className="bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-accent-subtle/50 dark:to-blue-950/50 rounded-2xl p-6">
+                    <h3 className="text-lg font-bold text-accent-dark dark:text-accent-muted mb-3">{section.section}</h3>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                       {section.courses.map((course) => (
                         <div key={course.name} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
@@ -135,7 +135,7 @@ export default function AboutPage() {
                   { step: 4, title: "Track Your Progress", desc: "Monitor your mastery, maintain streaks, and watch your understanding grow" },
                 ].map(({ step, title, desc }) => (
                   <div key={step} className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-full flex items-center justify-center font-bold">
                       {step}
                     </div>
                     <div>
@@ -191,7 +191,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-lg shadow-lg transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover rounded-lg shadow-lg transition-all"
               >
                 Contact Us
               </Link>
@@ -200,25 +200,25 @@ export default function AboutPage() {
             {/* Stats */}
             <div className="grid sm:grid-cols-4 gap-6 text-center">
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
                   {COURSE_COUNT}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Courses</div>
               </div>
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
                   {TOPIC_COUNT_LABEL}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Topics</div>
               </div>
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
                   1000+
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Practice Problems</div>
               </div>
               <div className="p-6">
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-secondary">
                   $0
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 mt-2">Free to start</div>

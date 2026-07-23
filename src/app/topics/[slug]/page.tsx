@@ -97,7 +97,7 @@ const MarkdownComponents = {
     <h1 className="text-3xl font-bold mb-6 mt-8 text-gray-900 dark:text-gray-100">{children}</h1>
   ),
   h2: ({ children }: MarkdownChildrenProps) => (
-    <h2 className="text-2xl font-bold mb-4 mt-8 text-gray-800 dark:text-gray-100 border-l-4 border-purple-500 pl-4 bg-purple-50 dark:bg-purple-900/30 py-2 rounded-r">{children}</h2>
+    <h2 className="text-2xl font-bold mb-4 mt-8 text-gray-800 dark:text-gray-100 border-l-4 border-accent pl-4 bg-accent-subtle dark:bg-accent-light/30 py-2 rounded-r">{children}</h2>
   ),
   h3: ({ children }: MarkdownChildrenProps) => (
     <h3 className="text-xl font-semibold mb-3 mt-6 text-gray-700 dark:text-gray-200">{children}</h3>
@@ -117,7 +117,7 @@ const MarkdownComponents = {
   blockquote: ({ children }: MarkdownChildrenProps) => (
     <MarkdownCallout
       fallback={(c) => (
-        <blockquote className="!border-l-4 !border-purple-500 dark:!border-purple-400 !bg-gradient-to-r !from-purple-50 !to-transparent dark:!from-purple-900/20 dark:!to-transparent !pl-4 !py-3 !mb-4 italic !rounded-r !shadow-none">
+        <blockquote className="!border-l-4 !border-accent dark:!border-accent-muted !bg-gradient-to-r !from-accent-subtle !to-transparent dark:!from-accent-dark/20 dark:!to-transparent !pl-4 !py-3 !mb-4 italic !rounded-r !shadow-none">
           {c}
         </blockquote>
       )}
@@ -127,7 +127,7 @@ const MarkdownComponents = {
   ),
   code: ({ inline, children }: MarkdownCodeProps) => 
     inline ? (
-      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-purple-700 dark:text-purple-300">{children}</code>
+      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-accent-hover dark:text-accent-muted">{children}</code>
     ) : (
       <code className="block bg-gray-900 dark:bg-gray-950 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
     ),
@@ -145,7 +145,7 @@ const MarkdownComponents = {
     </div>
   ),
   thead: ({ children }: MarkdownChildrenProps) => (
-    <thead className="bg-purple-50 dark:bg-purple-900/30">
+    <thead className="bg-accent-subtle dark:bg-accent-light/30">
       {children}
     </thead>
   ),
@@ -236,7 +236,7 @@ export default async function TopicPage(props: TopicPageProps) {
               practice in this subject — full content for this topic is coming soon.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href={`/categories/${topic.category.slug}`} className="inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-3 text-base font-semibold text-white hover:bg-purple-700">
+              <Link href={`/categories/${topic.category.slug}`} className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover">
                 Browse {topic.category.name}
               </Link>
               <Link href="/topics" className="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-gray-600 px-6 py-3 text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">
@@ -255,9 +255,9 @@ export default async function TopicPage(props: TopicPageProps) {
     return (
       <div className="container py-10">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-lg border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-blue-50 p-8 text-center shadow-lg">
+          <div className="rounded-lg border-2 border-accent-muted bg-gradient-to-br from-accent-subtle to-blue-50 p-8 text-center shadow-lg">
             <div className="text-6xl mb-4">🌟</div>
-            <h1 className="text-3xl font-bold mb-4 text-purple-900">Premium Content</h1>
+            <h1 className="text-3xl font-bold mb-4 text-accent-dark">Premium Content</h1>
             <p className="text-lg mb-6 text-gray-700">
               This topic is part of our Premium content. Upgrade to access:
             </p>
@@ -278,7 +278,7 @@ export default async function TopicPage(props: TopicPageProps) {
             <div>
               <Link
                 href="/premium"
-                className="inline-flex items-center justify-center rounded-md bg-purple-600 px-8 py-3 text-base font-semibold text-white hover:bg-purple-700 shadow-md transition-all"
+                className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-base font-semibold text-white hover:bg-accent-hover shadow-md transition-all"
               >
                 Upgrade to Premium
               </Link>
@@ -370,13 +370,13 @@ export default async function TopicPage(props: TopicPageProps) {
           <div className="flex-1 max-w-4xl">
             {/* Breadcrumb */}
             <nav className="mb-4 text-sm text-muted-foreground">
-              <Link href="/topics" className="hover:text-purple-600 transition-colors">Topics</Link>
+              <Link href="/topics" className="hover:text-accent transition-colors">Topics</Link>
               {' / '}
-              <Link href={`/categories/${topic.category.slug}`} className="hover:text-purple-600 transition-colors">{topic.category.name}</Link>
+              <Link href={`/categories/${topic.category.slug}`} className="hover:text-accent transition-colors">{topic.category.name}</Link>
               {topic.parentTopic && (
                 <>
                   {' / '}
-                  <Link href={`/topics/${topic.parentTopic.slug}`} className="hover:text-purple-600 transition-colors">{topic.parentTopic.title}</Link>
+                  <Link href={`/topics/${topic.parentTopic.slug}`} className="hover:text-accent transition-colors">{topic.parentTopic.title}</Link>
                 </>
               )}
               {' / '}
@@ -384,12 +384,12 @@ export default async function TopicPage(props: TopicPageProps) {
             </nav>
 
             {/* Header with gradient background */}
-            <div className="mb-8 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg shadow-lg">
+            <div className="mb-8 bg-gradient-to-r from-accent to-accent-secondary text-white p-8 rounded-lg shadow-lg">
               <h1 className="text-4xl font-bold tracking-tight mb-4">{topic.title}</h1>
-              <p className="text-lg text-purple-100">{topic.description}</p>
+              <p className="text-lg text-accent-light">{topic.description}</p>
               {/* Temporarily hidden for free tier launch
               {topic.isPremium && (
-                <span className="inline-flex items-center px-3 py-1 mt-3 text-xs font-semibold rounded-full bg-yellow-400 text-purple-900">
+                <span className="inline-flex items-center px-3 py-1 mt-3 text-xs font-semibold rounded-full bg-yellow-400 text-accent-dark">
                   ⭐ Premium Content
                 </span>
               )}
@@ -418,7 +418,7 @@ export default async function TopicPage(props: TopicPageProps) {
             {/* Subtopics Grid — shown when this topic has child topics */}
             {topic.subtopics.length > 0 && (
               <div className="mb-10">
-                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-5 rounded-t-lg">
+                <div className="bg-gradient-to-r from-indigo-600 to-accent text-white p-5 rounded-t-lg">
                   <h2 className="text-2xl font-bold flex items-center gap-2">
                     <span className="text-3xl">📂</span> Subtopics in {topic.title}
                   </h2>
@@ -429,14 +429,14 @@ export default async function TopicPage(props: TopicPageProps) {
                     <Link
                       key={sub.slug}
                       href={`/topics/${sub.slug}`}
-                      className="group block bg-white dark:bg-gray-900 rounded-lg border-2 border-indigo-200 dark:border-indigo-700 p-5 hover:border-purple-400 hover:shadow-lg transition-all"
+                      className="group block bg-white dark:bg-gray-900 rounded-lg border-2 border-indigo-200 dark:border-indigo-700 p-5 hover:border-accent-muted hover:shadow-lg transition-all"
                     >
                       <div className="flex items-start gap-3">
                         <span className="flex-shrink-0 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
                           {idx + 1}
                         </span>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-1">
+                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors mb-1">
                             {sub.title}
                           </h3>
                           <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
@@ -448,7 +448,7 @@ export default async function TopicPage(props: TopicPageProps) {
                             </span>
                           )}
                         </div>
-                        <span className="text-gray-400 group-hover:text-purple-500 transition-colors text-lg">→</span>
+                        <span className="text-gray-400 group-hover:text-accent transition-colors text-lg">→</span>
                       </div>
                     </Link>
                   ))}
@@ -457,21 +457,21 @@ export default async function TopicPage(props: TopicPageProps) {
             )}
 
             {/* Interactive Lesson Banner - Show for all topics */}
-            <div className="mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg border-2 border-yellow-400">
+            <div className="mb-8 bg-gradient-to-r from-pink-500 via-accent to-indigo-500 text-white p-6 rounded-lg shadow-lg border-2 border-yellow-400">
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-3xl">🎯</span>
-                    <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-yellow-400 text-purple-900">
+                    <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-yellow-400 text-accent-dark">
                       ⭐ INTERACTIVE LESSON
                     </span>
                   </div>
                   <h3 className="text-xl font-bold mb-1">Try the Interactive Version!</h3>
-                  <p className="text-purple-100">Learn step-by-step with practice exercises built right in.</p>
+                  <p className="text-accent-light">Learn step-by-step with practice exercises built right in.</p>
                 </div>
                 <Link
                   href={`/topics/${topic.slug}/interactive`}
-                  className="px-6 py-3 bg-white text-purple-700 rounded-lg font-bold hover:bg-yellow-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="px-6 py-3 bg-white text-accent-hover rounded-lg font-bold hover:bg-yellow-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Start Interactive Lesson →
                 </Link>
@@ -480,8 +480,8 @@ export default async function TopicPage(props: TopicPageProps) {
 
             {/* Video - Temporarily hidden for free tier launch
             {topic.videoUrl && (
-              <div className="mb-8 rounded-lg overflow-hidden bg-gray-100 shadow-lg border-2 border-purple-200">
-                <div className="bg-purple-600 text-white px-4 py-2 font-semibold flex items-center gap-2">
+              <div className="mb-8 rounded-lg overflow-hidden bg-gray-100 shadow-lg border-2 border-accent-light">
+                <div className="bg-accent text-white px-4 py-2 font-semibold flex items-center gap-2">
                   <span className="text-xl">🎥</span> Video Explanation
                 </div>
                 <div className="aspect-video">
@@ -558,7 +558,7 @@ export default async function TopicPage(props: TopicPageProps) {
                         </h3>
                         {/* Temporarily hidden for free tier launch
                         {problem.isPremium && (
-                          <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
+                          <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-accent-light text-accent-dark">
                             Premium
                           </span>
                         )}
@@ -578,10 +578,10 @@ export default async function TopicPage(props: TopicPageProps) {
 
                       {/* Show solution for all problems in free tier launch */}
                       <details className="mt-4">
-                        <summary className="cursor-pointer font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600 bg-purple-50 dark:bg-purple-900/30 p-3 rounded border-2 border-purple-200 dark:border-purple-700 transition-colors">
+                        <summary className="cursor-pointer font-semibold text-gray-900 dark:text-gray-100 hover:text-accent bg-accent-subtle dark:bg-accent-light/30 p-3 rounded border-2 border-accent-light dark:border-accent-hover transition-colors">
                           💡 Show Solution
                         </summary>
-                        <div className="mt-4 prose max-w-none bg-purple-50 dark:bg-purple-900/20 p-4 rounded border-l-4 border-purple-500">
+                        <div className="mt-4 prose max-w-none bg-accent-subtle dark:bg-accent-light/20 p-4 rounded border-l-4 border-accent">
                           <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
                             {escapeCurrencyMath(problem.solution)}
                           </ReactMarkdown>
@@ -614,10 +614,10 @@ export default async function TopicPage(props: TopicPageProps) {
                 {prevTopic ? (
                   <Link
                     href={`/topics/${prevTopic.slug}`}
-                    className="flex-1 block rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 hover:border-purple-400 hover:shadow-md transition-all group"
+                    className="flex-1 block rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 hover:border-accent-muted hover:shadow-md transition-all group"
                   >
                     <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">← Previous Topic</div>
-                    <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
+                    <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-accent-hover dark:group-hover:text-accent-muted transition-colors">
                       {prevTopic.title}
                     </div>
                   </Link>
@@ -627,10 +627,10 @@ export default async function TopicPage(props: TopicPageProps) {
                 {nextTopic ? (
                   <Link
                     href={`/topics/${nextTopic.slug}`}
-                    className="flex-1 block rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 hover:border-purple-400 hover:shadow-md transition-all text-right group"
+                    className="flex-1 block rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 hover:border-accent-muted hover:shadow-md transition-all text-right group"
                   >
                     <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Next Topic →</div>
-                    <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
+                    <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-accent-hover dark:group-hover:text-accent-muted transition-colors">
                       {nextTopic.title}
                     </div>
                   </Link>
@@ -656,13 +656,13 @@ export default async function TopicPage(props: TopicPageProps) {
               </Link>
               <Link
                 href="/topics"
-                className="block rounded-lg border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-pink-50 p-6 hover:shadow-lg transition-all hover:border-purple-400"
+                className="block rounded-lg border-2 border-accent-muted bg-gradient-to-br from-accent-subtle to-pink-50 p-6 hover:shadow-lg transition-all hover:border-accent-muted"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-3xl">📖</span>
-                  <h3 className="font-semibold text-purple-900">Browse All Topics</h3>
+                  <h3 className="font-semibold text-accent-dark">Browse All Topics</h3>
                 </div>
-                <p className="text-sm text-purple-700">
+                <p className="text-sm text-accent-hover">
                   Explore more {topic.category.course.name} topics
                 </p>
               </Link>
@@ -687,9 +687,9 @@ export default async function TopicPage(props: TopicPageProps) {
                         cta_type: 'related_topic_card',
                         location: 'topic_related_section',
                       }}
-                      className="block rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-purple-400 hover:shadow-md transition-all group"
+                      className="block rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-accent-muted hover:shadow-md transition-all group"
                     >
-                      <span className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
+                      <span className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-accent-hover dark:group-hover:text-accent-muted transition-colors">
                         {rt.title}
                       </span>
                     </TrackedLink>
@@ -738,21 +738,21 @@ export default async function TopicPage(props: TopicPageProps) {
           <aside className="hidden lg:block w-80 flex-shrink-0">
             <div className="sticky top-4 space-y-6">
               {/* Quick Links Card */}
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-4">
-                <h3 className="font-bold text-purple-900 mb-3 flex items-center gap-2">
+              <div className="bg-gradient-to-br from-accent-subtle to-blue-50 border-2 border-accent-light rounded-lg p-4">
+                <h3 className="font-bold text-accent-dark mb-3 flex items-center gap-2">
                   <span>🎯</span> Quick Navigation
                 </h3>
                 <div className="space-y-2 text-sm">
-                  <Link href="/" className="block text-purple-700 hover:text-purple-900 hover:underline">
+                  <Link href="/" className="block text-accent-hover hover:text-accent-dark hover:underline">
                     ← All Courses
                   </Link>
-                  <Link href={`/courses/${topic.category.course.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                  <Link href={`/courses/${topic.category.course.slug}`} className="block text-accent-hover hover:text-accent-dark hover:underline">
                     📚 {topic.category.course.name}
                   </Link>
-                  <Link href={`/categories/${topic.category.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                  <Link href={`/categories/${topic.category.slug}`} className="block text-accent-hover hover:text-accent-dark hover:underline">
                     📂 {topic.category.name}
                   </Link>
-                  <Link href={`/flashcards/${topic.slug}`} className="block text-purple-700 hover:text-purple-900 hover:underline">
+                  <Link href={`/flashcards/${topic.slug}`} className="block text-accent-hover hover:text-accent-dark hover:underline">
                     🎴 Flashcards
                   </Link>
                 </div>

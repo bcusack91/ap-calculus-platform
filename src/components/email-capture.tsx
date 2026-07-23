@@ -84,7 +84,7 @@ export function EmailCapture({
 
   return (
     <div
-      className={`rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 dark:border-purple-800 dark:from-purple-900/20 dark:to-blue-900/20 ${compact ? 'p-4' : 'p-6'}`}
+      className={`rounded-xl border border-accent-light bg-gradient-to-br from-accent-subtle to-blue-50 dark:border-accent-light dark:from-accent-light/20 dark:to-blue-900/20 ${compact ? 'p-4' : 'p-6'}`}
     >
       <h3
         className={`font-bold text-gray-900 dark:text-white ${compact ? 'text-base mb-1' : 'text-lg mb-2'}`}
@@ -111,12 +111,12 @@ export function EmailCapture({
             placeholder="you@example.com"
             required
             aria-describedby={errorMsg ? `email-error-${source}` : undefined}
-            className={`w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-base text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:focus:ring-purple-800 ${compact ? 'mb-2' : 'mb-2 sm:mb-0 sm:flex-1'}`}
+            className={`w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-base text-gray-900 placeholder-gray-400 focus:border-accent focus:ring-2 focus:ring-accent-light dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:focus:ring-accent-light ${compact ? 'mb-2' : 'mb-2 sm:mb-0 sm:flex-1'}`}
           />
           <button
             type="submit"
             disabled={status === 'loading'}
-            className={`w-full rounded-lg bg-purple-600 px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-purple-700 focus:ring-2 focus:ring-purple-200 disabled:opacity-60 dark:focus:ring-purple-800 ${compact ? '' : 'sm:w-auto'}`}
+            className={`w-full rounded-lg bg-accent px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-accent-hover focus:ring-2 focus:ring-accent-light disabled:opacity-60 dark:focus:ring-accent-light ${compact ? '' : 'sm:w-auto'}`}
           >
             {status === 'loading' ? 'Subscribing…' : buttonText}
           </button>

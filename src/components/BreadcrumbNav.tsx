@@ -16,7 +16,7 @@ export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
     <nav aria-label="Breadcrumb" className="mb-4">
       <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
         <li>
-          <Link href="/" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+          <Link href="/" className="hover:text-accent dark:hover:text-accent-muted transition-colors">
             Home
           </Link>
         </li>
@@ -24,7 +24,7 @@ export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
           <li key={i} className="flex items-center gap-1">
             <span className="mx-1 select-none">/</span>
             {item.href ? (
-              <Link href={item.href} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+              <Link href={item.href} className="hover:text-accent dark:hover:text-accent-muted transition-colors">
                 {item.label}
               </Link>
             ) : (

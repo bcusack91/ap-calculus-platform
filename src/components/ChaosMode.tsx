@@ -102,7 +102,7 @@ export function PowerUpBar({
       className="fixed left-1/2 -translate-x-1/2 z-30"
       style={{ bottom: 'calc(0.75rem + env(safe-area-inset-bottom, 0px))' }}
     >
-      <div className="flex items-center gap-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-full shadow-xl border border-purple-200 dark:border-purple-800 px-3 py-2">
+      <div className="flex items-center gap-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-full shadow-xl border border-accent-light dark:border-accent-light px-3 py-2">
         {shield && (
           <span className="text-lg" title="Shield armed — blocks the next attack">🛡️</span>
         )}
@@ -120,7 +120,7 @@ export function PowerUpBar({
               onClick={() => onUse(id)}
               disabled={disabled}
               title={`${def.name}: ${def.description}`}
-              className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/50 dark:to-blue-900/50 border-2 border-purple-300 dark:border-purple-700 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-11 h-11 rounded-full bg-gradient-to-br from-accent-light to-blue-100 dark:from-accent-light/50 dark:to-blue-900/50 border-2 border-accent-muted dark:border-accent-hover text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {def.icon}
             </button>

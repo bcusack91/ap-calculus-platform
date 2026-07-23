@@ -36,7 +36,7 @@ export default function ForgotPasswordPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
         <div className="max-w-md w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl text-center">
           <div className="text-5xl mb-4">📧</div>
           <h1 className="text-2xl font-bold mb-3">Check Your Email</h1>
@@ -45,7 +45,7 @@ export default function ForgotPasswordPage() {
           </p>
           <Link
             href="/auth/signin"
-            className="text-purple-600 hover:text-purple-700 font-semibold"
+            className="text-accent hover:text-accent-hover font-semibold"
           >
             ← Back to Sign In
           </Link>
@@ -55,10 +55,10 @@ export default function ForgotPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
       <div className="max-w-md w-full space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             Forgot Password?
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
@@ -77,7 +77,7 @@ export default function ForgotPasswordPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               placeholder="you@example.com"
             />
           </div>
@@ -91,13 +91,13 @@ export default function ForgotPasswordPage() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? 'Sending...' : 'Send Reset Link'}
           </button>
 
           <div className="text-center">
-            <Link href="/auth/signin" className="text-purple-600 hover:text-purple-700 font-semibold text-sm">
+            <Link href="/auth/signin" className="text-accent hover:text-accent-hover font-semibold text-sm">
               ← Back to Sign In
             </Link>
           </div>

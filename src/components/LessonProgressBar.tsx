@@ -23,7 +23,7 @@ export default function LessonProgressBar({
     <>
       {/* Fixed bar — always flush below navbar */}
       <div
-        className="fixed top-16 left-0 right-0 z-30 backdrop-blur-md border-b py-1.5 px-4 bg-white/95 dark:bg-gray-900/95 border-purple-200/60 dark:border-purple-700/40 shadow-[0_1px_3px_rgba(0,0,0,0.06)]"
+        className="fixed top-16 left-0 right-0 z-30 backdrop-blur-md border-b py-1.5 px-4 bg-white/95 dark:bg-gray-900/95 border-accent-light/60 dark:border-accent-hover/40 shadow-[0_1px_3px_rgba(0,0,0,0.06)]"
       >
         <div className="max-w-4xl mx-auto">
           {/* Step counter and title */}
@@ -31,7 +31,7 @@ export default function LessonProgressBar({
             <span className="text-gray-500 dark:text-gray-400">
               Section {currentStep + 1} of {totalSteps}
               {partNumber && totalParts && totalParts > 1 && (
-                <span className="ml-2 text-purple-600 dark:text-purple-400 font-medium">
+                <span className="ml-2 text-accent dark:text-accent-muted font-medium">
                   · Part {partNumber}/{totalParts}
                 </span>
               )}

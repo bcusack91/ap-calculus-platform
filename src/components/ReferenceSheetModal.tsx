@@ -67,7 +67,7 @@ export default function ReferenceSheetModal({ open, onClose, courseSlug, topicSl
         <div className="space-y-5 max-h-[70vh] overflow-y-auto pr-2">
           {refSheet.sections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-sm font-bold text-purple-700 dark:text-purple-300 mb-2 uppercase tracking-wide">
+              <h3 className="text-sm font-bold text-accent-hover dark:text-accent-muted mb-2 uppercase tracking-wide">
                 {section.title}
               </h3>
               <ul className="space-y-1.5">
@@ -86,7 +86,7 @@ export default function ReferenceSheetModal({ open, onClose, courseSlug, topicSl
         <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
           <button
             onClick={() => window.print()}
-            className="text-sm text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium print:hidden"
+            className="text-sm text-accent dark:text-accent-muted hover:text-accent-hover dark:hover:text-accent-muted font-medium print:hidden"
           >
             🖨️ Print Reference Sheet
           </button>
@@ -290,7 +290,7 @@ function APChemContent({ open, onClose }: { open: boolean; onClose: () => void }
             onClick={() => setTab('periodic')}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
               tab === 'periodic'
-                ? 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300'
+                ? 'bg-accent-light dark:bg-accent-light/40 text-accent-hover dark:text-accent-muted'
                 : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
           >
@@ -300,7 +300,7 @@ function APChemContent({ open, onClose }: { open: boolean; onClose: () => void }
             onClick={() => setTab('equations')}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
               tab === 'equations'
-                ? 'bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300'
+                ? 'bg-accent-light dark:bg-accent-light/40 text-accent-hover dark:text-accent-muted'
                 : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
           >
@@ -327,7 +327,7 @@ function PeriodicTableView() {
         {PT.map((el) => (
           <div
             key={el.z}
-            className="border border-gray-300 dark:border-gray-600 rounded p-[2px] text-center leading-tight bg-white dark:bg-gray-800 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors"
+            className="border border-gray-300 dark:border-gray-600 rounded p-[2px] text-center leading-tight bg-white dark:bg-gray-800 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors"
             style={{ gridRow: el.row, gridColumn: el.col }}
           >
             <div className="text-[9px] text-gray-400 dark:text-gray-500">{el.z}</div>
@@ -360,7 +360,7 @@ function ChemEquationsView() {
     <div className="space-y-5 max-h-[60vh] overflow-y-auto pr-2">
       {CHEM_EQUATION_SECTIONS.map((section) => (
         <div key={section.title}>
-          <h3 className="text-sm font-bold text-purple-700 dark:text-purple-300 mb-2 uppercase tracking-wide">
+          <h3 className="text-sm font-bold text-accent-hover dark:text-accent-muted mb-2 uppercase tracking-wide">
             {section.title}
           </h3>
           <ul className="space-y-1.5">

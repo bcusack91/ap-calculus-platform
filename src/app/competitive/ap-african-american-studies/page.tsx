@@ -12,9 +12,9 @@ interface TopicsResponse { units: UnitInfo[]; totalTopics: number; completedCoun
 interface QueueStatus { status: string; matchId?: string; position?: number; estimatedWait?: number; [key: string]: unknown }
 
 const UNIT_COLORS = [
-  { bg: 'bg-purple-500', light: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-700', text: 'text-purple-700 dark:text-purple-300' },
+  { bg: 'bg-accent', light: 'bg-accent-subtle dark:bg-accent-light/20', border: 'border-accent-light dark:border-accent-hover', text: 'text-accent-hover dark:text-accent-muted' },
   { bg: 'bg-violet-500', light: 'bg-violet-50 dark:bg-violet-900/20', border: 'border-violet-200 dark:border-violet-700', text: 'text-violet-700 dark:text-violet-300' },
-  { bg: 'bg-slate-500', light: 'bg-slate-50 dark:bg-slate-900/20', border: 'border-slate-200 dark:border-slate-700', text: 'text-slate-700 dark:text-slate-300' },
+  { bg: 'bg-gray-500', light: 'bg-gray-50 dark:bg-gray-900/20', border: 'border-gray-200 dark:border-gray-700', text: 'text-gray-700 dark:text-gray-300' },
   { bg: 'bg-violet-500', light: 'bg-violet-50 dark:bg-violet-900/20', border: 'border-violet-200 dark:border-violet-700', text: 'text-violet-700 dark:text-violet-300' },
   { bg: 'bg-teal-500', light: 'bg-teal-50 dark:bg-teal-900/20', border: 'border-teal-200 dark:border-teal-700', text: 'text-teal-700 dark:text-teal-300' },
   { bg: 'bg-pink-500', light: 'bg-pink-50 dark:bg-pink-900/20', border: 'border-pink-200 dark:border-pink-700', text: 'text-pink-700 dark:text-pink-300' },
@@ -91,22 +91,22 @@ export default function ApAfricanAmericanStudiesCompetitivePage() {
     } catch (err) { console.error('Error:', err) }
   }
 
-  if (status === 'loading' || loading) return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-violet-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"><div className="animate-pulse text-xl text-gray-500">Loading AP African American Studies Competitive Mode…</div></div>)
+  if (status === 'loading' || loading) return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle via-white to-violet-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"><div className="animate-pulse text-xl text-gray-500">Loading AP African American Studies Competitive Mode…</div></div>)
   if (!session) return null
-  if (!topicsData) return (<div className="min-h-screen flex items-center justify-center px-4"><div className="text-center"><p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Could not load AP African American Studies topics.</p><button onClick={() => router.push('/ap-african-american-studies')} className="text-purple-600 hover:underline">← Back to AP African American Studies</button></div></div>)
+  if (!topicsData) return (<div className="min-h-screen flex items-center justify-center px-4"><div className="text-center"><p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Could not load AP African American Studies topics.</p><button onClick={() => router.push('/ap-african-american-studies')} className="text-accent hover:underline">← Back to AP African American Studies</button></div></div>)
 
   const anyCompleted = topicsData.hasAnyCompleted
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-violet-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-violet-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="max-w-5xl mx-auto px-4 py-8">
-        <button onClick={() => router.push('/ap-african-american-studies')} className="inline-flex items-center gap-1 text-sm text-purple-600 dark:text-purple-400 hover:underline mb-6">← Back to AP African American Studies</button>
+        <button onClick={() => router.push('/ap-african-american-studies')} className="inline-flex items-center gap-1 text-sm text-accent dark:text-accent-muted hover:underline mb-6">← Back to AP African American Studies</button>
         <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900 dark:text-white mb-2">AP African American Studies{' '}<span className="bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-transparent">Competitive Mode</span></h1>
+          <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900 dark:text-white mb-2">AP African American Studies{' '}<span className="bg-gradient-to-r from-accent to-violet-500 bg-clip-text text-transparent">Competitive Mode</span></h1>
           <p className="text-gray-600 dark:text-gray-400">Select a topic you&apos;ve completed, choose your game mode, and challenge other students!</p>
           <div className="mt-4 max-w-md mx-auto">
             <div className="flex justify-between text-xs text-gray-500 mb-1"><span>{topicsData.completedCount} / {topicsData.totalTopics} topics completed</span><span>{Math.round((topicsData.completedCount / topicsData.totalTopics) * 100)}%</span></div>
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div className="bg-gradient-to-r from-purple-500 to-violet-500 h-2.5 rounded-full transition-all" style={{ width: `${(topicsData.completedCount / topicsData.totalTopics) * 100}%` }} /></div>
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div className="bg-gradient-to-r from-accent to-violet-500 h-2.5 rounded-full transition-all" style={{ width: `${(topicsData.completedCount / topicsData.totalTopics) * 100}%` }} /></div>
           </div>
         </div>
 
@@ -128,7 +128,7 @@ export default function ApAfricanAmericanStudiesCompetitivePage() {
                           <h3 className={`font-semibold text-sm ${isCompleted ? 'text-gray-900 dark:text-white' : 'text-gray-400 dark:text-gray-500'}`}>{topic.title}</h3>
                           {isCompleted ? (<span className="flex-shrink-0 ml-2 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 flex items-center justify-center text-xs">✓</span>) : (<span className="flex-shrink-0 ml-2 w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-400 flex items-center justify-center text-xs">🔒</span>)}
                         </div>
-                        {isCompleted && (<div className="mt-1.5 flex items-center gap-2"><div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5"><div className="bg-purple-500 h-1.5 rounded-full" style={{ width: `${Math.round(topic.masteryLevel * 100)}%` }} /></div><span className="text-xs text-gray-500">{Math.round(topic.masteryLevel * 100)}%</span></div>)}
+                        {isCompleted && (<div className="mt-1.5 flex items-center gap-2"><div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5"><div className="bg-accent h-1.5 rounded-full" style={{ width: `${Math.round(topic.masteryLevel * 100)}%` }} /></div><span className="text-xs text-gray-500">{Math.round(topic.masteryLevel * 100)}%</span></div>)}
                         {!isCompleted && (<p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Complete the interactive lesson to unlock</p>)}
                       </button>
                     )
@@ -154,7 +154,7 @@ export default function ApAfricanAmericanStudiesCompetitivePage() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 text-center">
               {!inQueue ? (
                 <>
-                  <button onClick={joinQueue} className="px-10 py-4 bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white font-bold rounded-xl text-xl transition-all shadow-lg hover:shadow-xl">Find Match</button>
+                  <button onClick={joinQueue} className="px-10 py-4 bg-gradient-to-r from-accent to-violet-500 hover:from-accent hover:to-violet-600 text-white font-bold rounded-xl text-xl transition-all shadow-lg hover:shadow-xl">Find Match</button>
                   <div className="mt-5 pt-5 border-t border-gray-200 dark:border-gray-700">
                     <button onClick={() => setShowAIOptions(!showAIOptions)} className="px-6 py-2.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-semibold rounded-lg transition-all text-sm">🤖 Practice vs AI</button>
                     {showAIOptions && (<div className="mt-4 flex justify-center gap-3"><button onClick={() => startAIPractice('easy')} className="px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg text-sm">Easy</button><button onClick={() => startAIPractice('medium')} className="px-5 py-2.5 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg text-sm">Medium</button><button onClick={() => startAIPractice('hard')} className="px-5 py-2.5 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg text-sm">Hard</button></div>)}
@@ -178,7 +178,7 @@ export default function ApAfricanAmericanStudiesCompetitivePage() {
             <div className="text-5xl mb-4">🔒</div>
             <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Complete a Lesson to Unlock</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">Finish any AP African American Studies interactive lesson with 80%+ mastery to start competing.</p>
-            <button onClick={() => router.push('/ap-african-american-studies')} className="px-8 py-3 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all">Browse AP African American Studies Lessons</button>
+            <button onClick={() => router.push('/ap-african-american-studies')} className="px-8 py-3 bg-gradient-to-r from-accent to-violet-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all">Browse AP African American Studies Lessons</button>
           </div>
         )}
       </div>

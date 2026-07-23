@@ -134,7 +134,7 @@ export function CookieConsent() {
               <button
                 ref={acceptAllRef}
                 onClick={acceptAll}
-                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg shadow-sm transition-all whitespace-nowrap"
+                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-accent hover:from-blue-700 hover:to-accent-hover rounded-lg shadow-sm transition-all whitespace-nowrap"
               >
                 Accept All Cookies
               </button>

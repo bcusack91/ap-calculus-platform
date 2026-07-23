@@ -40,7 +40,7 @@ export function ViewAsToggle() {
             aria-pressed={current === o.key}
             className={`flex-1 rounded-md px-2 py-1 text-xs font-medium transition-colors ${
               current === o.key
-                ? 'bg-purple-600 text-white'
+                ? 'bg-accent text-white'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
             }`}
           >

@@ -143,13 +143,13 @@ export default function OnboardingPage() {
   if (status === 'loading') {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container max-w-3xl py-12 px-4">
         {/* Progress Indicator */}
         <div className="flex items-center justify-center gap-2 mb-12">
@@ -158,14 +158,14 @@ export default function OnboardingPage() {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all ${
                   step >= s
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
+                    ? 'bg-gradient-to-r from-accent to-accent-secondary text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-500'
                 }`}
               >
                 {step > s ? '✓' : s}
               </div>
               {s < 3 && (
-                <div className={`w-16 h-1 rounded-full ${step > s ? 'bg-purple-500' : 'bg-gray-200 dark:bg-gray-700'}`} />
+                <div className={`w-16 h-1 rounded-full ${step > s ? 'bg-accent' : 'bg-gray-200 dark:bg-gray-700'}`} />
               )}
             </div>
           ))}
@@ -190,8 +190,8 @@ export default function OnboardingPage() {
                   }}
                   className={`p-6 rounded-2xl border-2 text-left transition-all hover:shadow-lg hover:scale-[1.02] ${
                     selectedGoal === goal.id
-                      ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-                      : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-purple-300'
+                      ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
+                      : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-accent-muted'
                   }`}
                 >
                   <div className="text-3xl mb-3">{goal.icon}</div>
@@ -200,7 +200,7 @@ export default function OnboardingPage() {
                 </button>
               ))}
             </div>
-            <Link href="/dashboard" className="inline-block mt-8 text-sm text-gray-500 dark:text-gray-400 hover:text-purple-600">
+            <Link href="/dashboard" className="inline-block mt-8 text-sm text-gray-500 dark:text-gray-400 hover:text-accent">
               Skip for now →
             </Link>
           </div>
@@ -209,7 +209,7 @@ export default function OnboardingPage() {
         {/* Step 2: Pick your course */}
         {step === 2 && (
           <div>
-            <button onClick={() => setStep(1)} className="text-sm text-purple-600 hover:underline mb-6 flex items-center gap-1">
+            <button onClick={() => setStep(1)} className="text-sm text-accent hover:underline mb-6 flex items-center gap-1">
               ← Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 text-center">
@@ -234,8 +234,8 @@ export default function OnboardingPage() {
                         }}
                         className={`p-4 rounded-xl border-2 text-left transition-all hover:shadow-md ${
                           selectedCourse?.slug === course.slug
-                            ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-                            : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-purple-300'
+                            ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
+                            : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-accent-muted'
                         }`}
                       >
                         <div className="flex items-center gap-3">
@@ -252,7 +252,7 @@ export default function OnboardingPage() {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Link href="/dashboard" className="text-sm text-gray-500 dark:text-gray-400 hover:text-purple-600">
+              <Link href="/dashboard" className="text-sm text-gray-500 dark:text-gray-400 hover:text-accent">
                 Skip for now →
               </Link>
             </div>
@@ -262,7 +262,7 @@ export default function OnboardingPage() {
         {/* Step 3: Confirm & Go */}
         {step === 3 && selectedCourse && (
           <div className="text-center">
-            <button onClick={() => setStep(2)} className="text-sm text-purple-600 hover:underline mb-6 flex items-center gap-1 mx-auto">
+            <button onClick={() => setStep(2)} className="text-sm text-accent hover:underline mb-6 flex items-center gap-1 mx-auto">
               ← Change course
             </button>
             <div className="text-6xl mb-6">{selectedCourse.icon}</div>
@@ -270,7 +270,7 @@ export default function OnboardingPage() {
               You&apos;re all set!
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
-              Starting with <span className="font-semibold text-purple-600">{selectedCourse.name}</span>
+              Starting with <span className="font-semibold text-accent">{selectedCourse.name}</span>
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-10">
               We&apos;ll guide you through the material step by step.
@@ -281,7 +281,7 @@ export default function OnboardingPage() {
             <button
               onClick={handleComplete}
               disabled={saving}
-              className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50"
+              className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-accent to-accent-secondary rounded-xl hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg hover:shadow-xl disabled:opacity-50"
             >
               {saving ? 'Setting up...' : 'Start Learning →'}
             </button>

@@ -109,7 +109,7 @@ export default function DiagnosticReview({ questions, answers, domainNames, acce
             onClick={() => { setFilter(tab.key); setExpandedIndex(null) }}
             className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
               filter === tab.key
-                ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300'
+                ? 'bg-accent-light text-accent-hover dark:bg-accent-light/40 dark:text-accent-muted'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
             }`}
           >

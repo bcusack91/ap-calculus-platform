@@ -93,7 +93,7 @@ export default function TeacherContentPage() {
 
   if (status === 'loading' || loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container py-8">
           <div className="w-48 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-6" />
           <div className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-6" />
@@ -108,7 +108,7 @@ export default function TeacherContentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link href="/teacher" className="text-sm text-blue-600 hover:underline">← Teacher Dashboard</Link>

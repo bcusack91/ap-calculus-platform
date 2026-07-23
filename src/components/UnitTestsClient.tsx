@@ -163,7 +163,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
 
   const bgGradient =
     theme?.bgGradient ??
-    'bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900'
+    'bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900'
   const badgeClass =
     theme?.badgeClass ??
     'bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300'

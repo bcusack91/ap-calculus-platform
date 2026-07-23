@@ -169,7 +169,7 @@ export default function MCATPassageRunner({
   // ---------- Results screen ----------
   if (submitted && report) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container max-w-3xl">
           <h1 className="mb-1 text-2xl font-black text-gray-900 dark:text-white">{title} — Results</h1>
           {mode === 'exam' && (
@@ -298,7 +298,7 @@ export default function MCATPassageRunner({
   const ss = String(secondsLeft % 60).padStart(2, '0')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       {/* top bar */}
       <div className="sticky top-0 z-10 border-b border-gray-200 bg-white/90 backdrop-blur dark:border-gray-700 dark:bg-gray-900/90">
         <div className="container flex items-center justify-between py-3">

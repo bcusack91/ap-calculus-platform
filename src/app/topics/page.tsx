@@ -55,7 +55,7 @@ export default async function TopicsPage() {
 
         {orderedSections.map(([sectionName, sectionCourses], sectionIdx) => (
           <div key={sectionName} className={sectionIdx > 0 ? 'mt-16' : 'mt-8'}>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-purple-200 dark:border-purple-800">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-accent-light dark:border-accent-light">
               {sectionName}
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

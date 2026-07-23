@@ -132,7 +132,7 @@ export function TopicContentTools({ topicTitle, topicSlug, courseName }: {
       <div className="rounded-lg border-2 border-indigo-200 dark:border-indigo-700 overflow-hidden">
         <button
           onClick={() => setShowPracticeLab(!showPracticeLab)}
-          className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-5 py-3 flex items-center justify-between hover:from-indigo-600 hover:to-purple-600 transition-all"
+          className="w-full bg-gradient-to-r from-indigo-500 to-accent text-white px-5 py-3 flex items-center justify-between hover:from-indigo-600 hover:to-accent transition-all"
         >
           <div className="flex items-center gap-2">
             <span className="text-xl">🧪</span>

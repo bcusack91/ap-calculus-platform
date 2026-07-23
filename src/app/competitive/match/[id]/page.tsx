@@ -676,9 +676,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-accent mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading match...</p>
         </div>
       </div>
@@ -687,12 +687,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   if (!matchState) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-600 dark:text-red-400">Match not found</p>
           <button
             onClick={() => router.push(lobbyPath)}
-            className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+            className="mt-4 px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
           >
             Back to Competitive
           </button>
@@ -734,7 +734,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const totalCorrect = Array.from(answersByQuestion.values()).filter(a => a.correct).length;
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-5 sm:p-8 text-center" role="status" aria-live="polite">
             <h1 className={`text-3xl sm:text-4xl font-bold mb-4 ${
@@ -746,7 +746,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </h1>
 
             {matchState.gameMode === 'CHAOS' && (
-              <p className="mb-4 text-sm font-semibold text-purple-500 dark:text-purple-400">
+              <p className="mb-4 text-sm font-semibold text-accent dark:text-accent-muted">
                 🎲 Chaos Mode — unranked match (no MMR change)
               </p>
             )}
@@ -768,7 +768,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 my-8">
               <div className={`p-6 rounded-xl ${
-                isPlayer1 ? 'bg-purple-100 dark:bg-purple-900/30 ring-2 ring-purple-500' : 
+                isPlayer1 ? 'bg-accent-light dark:bg-accent-light/30 ring-2 ring-accent' : 
                 'bg-gray-100 dark:bg-gray-700'
               }`}>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -777,7 +777,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                   {matchState.player1Name}
                 </p>
-                <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
+                <p className="text-4xl font-bold text-accent dark:text-accent-muted">
                   {matchState.player1Score}
                 </p>
                 {matchState.gameMode === 'ACCURACY_CHALLENGE' && (
@@ -788,7 +788,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               </div>
 
               <div className={`p-6 rounded-xl ${
-                !isPlayer1 ? 'bg-purple-100 dark:bg-purple-900/30 ring-2 ring-purple-500' : 
+                !isPlayer1 ? 'bg-accent-light dark:bg-accent-light/30 ring-2 ring-accent' : 
                 'bg-gray-100 dark:bg-gray-700'
               }`}>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -797,7 +797,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                   {matchState.player2Name}
                 </p>
-                <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
+                <p className="text-4xl font-bold text-accent dark:text-accent-muted">
                   {matchState.player2Score}
                 </p>
                 {matchState.gameMode === 'ACCURACY_CHALLENGE' && (
@@ -829,14 +829,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               )}
               <button
                 onClick={() => router.push(lobbyPath)}
-                className="px-5 sm:px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold"
+                className="px-5 sm:px-8 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover font-semibold"
               >
                 Back to Competitive
               </button>
               {matchState.gameData?.lobbyCode ? (
                 <button
                   onClick={() => router.push(`/competitive/lobby/${matchState.gameData?.lobbyCode}`)}
-                  className="px-5 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 font-semibold"
+                  className="px-5 sm:px-8 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover font-semibold"
                 >
                   Return to Lobby →
                 </button>
@@ -1013,7 +1013,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   return (
     // pb-28 (not pb-24) reserves room for the floating power-up bar once the
     // iPhone safe-area inset pushes it up, so it never covers the answers.
-    <div className={`min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-28' : ''}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-28' : ''}`}>
       {/* Chaos Mode HUD extras: drop/attack toasts + floating inventory bar */}
       <ChaosToasts toasts={chaosToasts} />
       {isChaosMode && matchState.status === 'IN_PROGRESS' && (
@@ -1033,16 +1033,16 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-xl shadow-lg px-3 py-2">
             <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
               {/* Player 1 */}
-              <div className={`flex items-center gap-2 min-w-0 rounded-lg p-1 ${isPlayer1 ? 'ring-2 ring-purple-400/70' : ''}`}>
+              <div className={`flex items-center gap-2 min-w-0 rounded-lg p-1 ${isPlayer1 ? 'ring-2 ring-accent-muted/70' : ''}`}>
                 <AvatarDisplay avatarData={matchState.player1Avatar} size={40} emotion={player1Emotion} className="flex-shrink-0" />
                 <div className="min-w-0 flex-1">
                   <p className="text-xs font-bold text-gray-900 dark:text-white truncate">
                     {matchState.player1Name}{isPlayer1 ? ' (You)' : ''}
                   </p>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm font-bold text-purple-600 dark:text-purple-400">{matchState.player1Score}</span>
+                    <span className="text-sm font-bold text-accent dark:text-accent-muted">{matchState.player1Score}</span>
                     <div className="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-purple-600 to-purple-400 transition-all duration-500 rounded-full" style={{ width: `${Math.min(p1Progress, 100)}%` }} />
+                      <div className="h-full bg-gradient-to-r from-accent to-accent-muted transition-all duration-500 rounded-full" style={{ width: `${Math.min(p1Progress, 100)}%` }} />
                     </div>
                   </div>
                 </div>
@@ -1057,7 +1057,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 )}
               </div>
               {/* Player 2 */}
-              <div className={`flex items-center gap-2 min-w-0 flex-row-reverse rounded-lg p-1 ${!isPlayer1 ? 'ring-2 ring-purple-400/70' : ''}`}>
+              <div className={`flex items-center gap-2 min-w-0 flex-row-reverse rounded-lg p-1 ${!isPlayer1 ? 'ring-2 ring-accent-muted/70' : ''}`}>
                 <AvatarDisplay avatarData={matchState.player2Avatar} size={40} emotion={player2Emotion} className="flex-shrink-0" />
                 <div className="min-w-0 flex-1 text-right">
                   <p className="text-xs font-bold text-gray-900 dark:text-white truncate">
@@ -1089,12 +1089,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 {isPlayer1 ? <CosmeticNameplate name={matchState.player1Name} /> : matchState.player1Name}
               </p>
               {isPlayer1 && (
-                <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
+                <span className="text-xs bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted px-2 py-1 rounded">
                   You
                 </span>
               )}
               <div className="mt-4 mb-2">
-                <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                <p className="text-2xl font-bold text-accent dark:text-accent-muted">
                   {matchState.player1Score}
                 </p>
                 <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
@@ -1106,7 +1106,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
                 <div
-                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-600 to-purple-400 transition-all duration-500 rounded-full"
+                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-accent to-accent-muted transition-all duration-500 rounded-full"
                   style={{ height: `${Math.min(p1Progress, 100)}%` }}
                 />
               </div>
@@ -1133,7 +1133,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             )}
             <div className="text-right">
               <p className="text-xs text-gray-500">Your accuracy</p>
-              <p className="font-bold text-purple-600">
+              <p className="font-bold text-accent">
                 {(() => {
                   const answers = isPlayer1 ? matchState.gameData?.player1Answers : matchState.gameData?.player2Answers;
                   const total = answers?.length || 0;
@@ -1155,8 +1155,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             <div className="text-5xl mb-4">✅</div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">All Questions Answered!</h2>
             <p className="text-gray-500">Waiting for your opponent to finish...</p>
-            <div className="mt-4 animate-pulse text-purple-500">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
+            <div className="mt-4 animate-pulse text-accent">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-accent" />
             </div>
           </div>
         ) : currentQuestion && (
@@ -1164,7 +1164,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
           {currentQuestion.skill && (
             <div className="mb-3 flex justify-center">
-              <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-300" title="The SAT skill this question targets">
+              <span className="inline-flex items-center gap-1 rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-accent-hover dark:bg-accent-light/40 dark:text-accent-muted" title="The SAT skill this question targets">
                 🎯 {currentQuestion.skill}
               </span>
             </div>
@@ -1181,8 +1181,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           )}
 
           {isSubmitting && (
-            <div className="flex items-center justify-center gap-2 text-purple-600">
-              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-purple-600"></div>
+            <div className="flex items-center justify-center gap-2 text-accent">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-accent"></div>
               <p className="font-semibold">Submitting answer...</p>
             </div>
           )}
@@ -1233,14 +1233,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                         : showIncorrect
                         ? 'border-red-500 bg-red-50 dark:bg-red-900/20'
                         : isSelected
-                        ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-                        : 'border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600'
+                        ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-accent-muted dark:hover:border-accent'
                     } ${
                       isEliminated
                         ? 'cursor-not-allowed opacity-30'
                         : isSubmitting || isFeedbackCurrent
                         ? 'cursor-not-allowed opacity-75'
-                        : 'cursor-pointer hover:shadow-md active:scale-[0.99] active:bg-purple-50 dark:active:bg-purple-900/20'
+                        : 'cursor-pointer hover:shadow-md active:scale-[0.99] active:bg-accent-subtle dark:active:bg-accent-light/20'
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -1250,7 +1250,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                           : showIncorrect
                           ? 'border-red-500 text-red-600 dark:text-red-400'
                           : isSelected
-                          ? 'border-purple-500 text-purple-600 dark:text-purple-400'
+                          ? 'border-accent text-accent dark:text-accent-muted'
                           : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400'
                       }`}>
                         {String.fromCharCode(65 + index)}
@@ -1317,12 +1317,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 {!isPlayer1 ? <CosmeticNameplate name={matchState.player2Name} /> : matchState.player2Name}
               </p>
               {!isPlayer1 && (
-                <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 px-2 py-1 rounded">
+                <span className="text-xs bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted px-2 py-1 rounded">
                   You
                 </span>
               )}
               <div className="mt-4 mb-2">
-                <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                <p className="text-2xl font-bold text-accent dark:text-accent-muted">
                   {matchState.player2Score}
                 </p>
                 <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>

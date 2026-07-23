@@ -114,7 +114,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
           </p>
           <Link 
             href={`/topics/${topic.slug}`}
-            className="inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-3 text-base font-semibold text-white hover:bg-purple-700"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover"
           >
             View Standard Lesson
           </Link>
@@ -124,7 +124,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-pink-50 to-blue-50 dark:from-gray-900 dark:via-accent-light/20 dark:to-gray-900">
       <div className="container pt-4 pb-10">
         {/* Load KaTeX from CDN */}
         <Script 
@@ -135,30 +135,30 @@ export default async function InteractivePage(props: InteractivePageProps) {
         <div className="mx-auto max-w-4xl">
         {/* Breadcrumb */}
         <nav className="mb-4 text-sm text-muted-foreground">
-          <Link href="/topics" className="hover:text-purple-600 transition-colors">Topics</Link>
+          <Link href="/topics" className="hover:text-accent transition-colors">Topics</Link>
           {' / '}
-          <Link href={`/categories/${topic.category.slug}`} className="hover:text-purple-600 transition-colors">{topic.category.name}</Link>
+          <Link href={`/categories/${topic.category.slug}`} className="hover:text-accent transition-colors">{topic.category.name}</Link>
           {' / '}
-          <Link href={`/topics/${topic.slug}`} className="hover:text-purple-600 transition-colors">{topic.title}</Link>
+          <Link href={`/topics/${topic.slug}`} className="hover:text-accent transition-colors">{topic.title}</Link>
           {' / '}
           <span className="text-foreground font-medium">Interactive</span>
         </nav>
 
         {/* Header with special interactive badge */}
-        <div className="mb-4 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 text-white p-6 rounded-2xl shadow-2xl relative overflow-hidden">
+        <div className="mb-4 bg-gradient-to-br from-accent via-pink-600 to-blue-600 text-white p-6 rounded-2xl shadow-2xl relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-400/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-muted/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
           
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-3">
             <span className="text-4xl">🎯</span>
-            <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-yellow-400 text-purple-900">
+            <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-yellow-400 text-accent-dark">
               ⭐ INTERACTIVE LESSON
             </span>
           </div>
             <h1 className="text-4xl font-bold tracking-tight mb-4">{topic.title}</h1>
-            <p className="text-lg text-purple-100">Learn step-by-step with interactive practice!</p>
+            <p className="text-lg text-accent-light">Learn step-by-step with interactive practice!</p>
           </div>
         </div>
 
@@ -205,7 +205,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
         <div className="mt-8 text-center">
           <Link 
             href={`/topics/${topic.slug}`}
-            className="text-purple-600 hover:text-purple-700 underline"
+            className="text-accent hover:text-accent-hover underline"
           >
             ← Back to Standard Lesson
           </Link>

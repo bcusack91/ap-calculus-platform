@@ -158,11 +158,11 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
   // Map course colors to Tailwind classes
   const colorMap: Record<string, { bg: string; gradient: string }> = {
-    purple: { bg: 'from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30', gradient: 'from-purple-600 to-blue-600' },
+    purple: { bg: 'from-accent-subtle to-accent-light dark:from-accent-light/30 dark:to-accent-light/30', gradient: 'from-accent to-accent-secondary' },
     blue: { bg: 'from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30', gradient: 'from-blue-600 to-cyan-600' },
     green: { bg: 'from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30', gradient: 'from-green-600 to-emerald-600' },
     teal: { bg: 'from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/30', gradient: 'from-teal-600 to-cyan-600' },
-    indigo: { bg: 'from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30', gradient: 'from-indigo-600 to-purple-600' },
+    indigo: { bg: 'from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30', gradient: 'from-indigo-600 to-accent' },
     violet: { bg: 'from-violet-50 to-violet-100 dark:from-violet-900/30 dark:to-violet-800/30', gradient: 'from-violet-600 to-fuchsia-600' },
     orange: { bg: 'from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30', gradient: 'from-orange-600 to-red-600' },
     rose: { bg: 'from-rose-50 to-rose-100 dark:from-rose-900/30 dark:to-rose-800/30', gradient: 'from-rose-600 to-pink-600' },
@@ -403,7 +403,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
         {/* Cram Plans & Study Guides — links to /courses/[slug]/cram/[plan] pages */}
         {isCramPlanCourse(slug) && (
-          <section className="mt-8 mb-12 rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-8 shadow-sm dark:border-indigo-800 dark:from-indigo-950/40 dark:via-gray-900 dark:to-purple-950/40">
+          <section className="mt-8 mb-12 rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 via-white to-accent-subtle p-8 shadow-sm dark:border-indigo-800 dark:from-indigo-950/40 dark:via-gray-900 dark:to-accent-subtle/40">
             <div className="mb-5 flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
@@ -507,14 +507,14 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
             {abCategories.length > 0 && (
               <>
                 <div className="flex items-center gap-4" id="ab-foundation">
-                  <div className="flex items-center gap-3 bg-purple-50 dark:bg-purple-900/30 rounded-full px-6 py-2 border border-purple-200 dark:border-purple-700">
+                  <div className="flex items-center gap-3 bg-accent-subtle dark:bg-accent-light/30 rounded-full px-6 py-2 border border-accent-light dark:border-accent-hover">
                     <span className="text-2xl">∫</span>
-                    <h2 className="text-xl font-bold text-purple-700 dark:text-purple-300">Calculus AB Foundation</h2>
+                    <h2 className="text-xl font-bold text-accent-hover dark:text-accent-muted">Calculus AB Foundation</h2>
                   </div>
-                  <div className="flex-1 h-px bg-purple-200 dark:bg-purple-800" />
+                  <div className="flex-1 h-px bg-accent-light dark:bg-accent-light" />
                 </div>
                 {abCategories.map((category) => (
-                  <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm ring-1 ring-purple-100 dark:ring-purple-900/50">
+                  <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm ring-1 ring-accent-light dark:ring-accent-light/50">
                     <div className="flex items-center justify-between gap-4 mb-6">
                       <div className="flex items-center gap-3 min-w-0">
                         <CategoryGlyph icon={category.icon} name={category.name} gradient={colors.gradient} />
@@ -522,11 +522,11 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                           <div className="flex flex-wrap items-center gap-2">
                             <Link
                               href={`/categories/${category.slug}`}
-                              className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                              className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-muted transition-colors"
                             >
                               {category.name}
                             </Link>
-                            <span className="shrink-0 rounded-full bg-purple-50 dark:bg-purple-900/30 px-2 py-0.5 text-xs font-medium text-purple-600 dark:text-purple-400">AB</span>
+                            <span className="shrink-0 rounded-full bg-accent-subtle dark:bg-accent-light/30 px-2 py-0.5 text-xs font-medium text-accent dark:text-accent-muted">AB</span>
                           </div>
                           {category.description && (
                             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
@@ -535,7 +535,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                       </div>
                       <Link
                         href={`/categories/${category.slug}`}
-                        className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-purple-600 transition hover:border-purple-300 hover:bg-purple-50 dark:border-gray-700 dark:text-purple-400 dark:hover:bg-purple-900/20"
+                        className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent-muted hover:bg-accent-subtle dark:border-gray-700 dark:text-accent-muted dark:hover:bg-accent-light/20"
                       >
                         View All →
                       </Link>
@@ -547,13 +547,13 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                           <Link
                             key={topic.id}
                             href={`/topics/${topic.slug}`}
-                            className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-purple-600"
+                            className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-accent-muted hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-accent"
                           >
                             <div className="flex items-start justify-between gap-2 mb-2">
-                              <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                              <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors">
                                 {topic.title}
                               </h3>
-                              <span aria-hidden="true" className="shrink-0 text-purple-400 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
+                              <span aria-hidden="true" className="shrink-0 text-accent-muted opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
                             </div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                               {topic.description}
@@ -594,7 +594,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                       <div className="flex flex-wrap items-center gap-2">
                         <Link
                           href={`/categories/${category.slug}`}
-                          className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                          className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-muted transition-colors"
                         >
                           {category.name}
                         </Link>
@@ -609,7 +609,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                   </div>
                   <Link
                     href={`/categories/${category.slug}`}
-                    className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-purple-600 transition hover:border-purple-300 hover:bg-purple-50 dark:border-gray-700 dark:text-purple-400 dark:hover:bg-purple-900/20"
+                    className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent-muted hover:bg-accent-subtle dark:border-gray-700 dark:text-accent-muted dark:hover:bg-accent-light/20"
                   >
                     View All →
                   </Link>
@@ -621,13 +621,13 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                       <Link
                         key={topic.id}
                         href={`/topics/${topic.slug}`}
-                        className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-purple-300 hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-purple-600"
+                        className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-accent-muted hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-accent"
                       >
                         <div className="flex items-start justify-between gap-2 mb-2">
-                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors">
                             {topic.title}
                           </h3>
-                          <span aria-hidden="true" className="shrink-0 text-purple-400 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
+                          <span aria-hidden="true" className="shrink-0 text-accent-muted opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
                         </div>
                         <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                           {topic.description}
@@ -658,7 +658,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
             </p>
             <Link
               href="/"
-              className="inline-block rounded-md bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-purple-700"
+              className="inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover"
             >
               Explore Other Courses
             </Link>

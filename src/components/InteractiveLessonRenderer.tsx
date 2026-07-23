@@ -337,7 +337,7 @@ function renderMarkdownH3({ children }: { children?: React.ReactNode }) {
 
   if (isNumberedSubsection) {
     return (
-      <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-6 rounded-xl border border-sky-200 bg-gradient-to-br from-sky-50 to-white px-4 py-3 text-sky-900 shadow-sm dark:border-sky-700/70 dark:from-sky-900/30 dark:to-slate-900 dark:text-sky-100">
+      <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-6 rounded-xl border border-sky-200 bg-gradient-to-br from-sky-50 to-white px-4 py-3 text-sky-900 shadow-sm dark:border-sky-700/70 dark:from-sky-900/30 dark:to-gray-900 dark:text-sky-100">
         {children}
       </h3>
     )
@@ -1158,7 +1158,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             <button
               onClick={handleStartEntranceQuiz}
               disabled={entranceQuizLoading}
-              className="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 disabled:opacity-50 transition-colors shadow-lg"
+              className="px-6 py-3 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover disabled:opacity-50 transition-colors shadow-lg"
             >
               {entranceQuizLoading ? 'Loading Quiz...' : 'Take Entrance Quiz'}
             </button>
@@ -1280,11 +1280,11 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons (hide if only 1 unmastered part remains) */}
       {preloadedParts.length > 1 && (preloadedParts.length - entranceQuizMasteredParts.size) > 1 && (
-        <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
+        <div className="bg-gradient-to-r from-indigo-100/80 via-accent-light/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-accent-light/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
           {/* Variant indicator */}
           {variant > 1 && totalVariants > 1 && (
-            <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-purple-700 dark:text-purple-400">
-              <span className="bg-purple-200 dark:bg-purple-800 px-2 py-0.5 rounded-full">
+            <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-accent-hover dark:text-accent-muted">
+              <span className="bg-accent-light dark:bg-accent-light px-2 py-0.5 rounded-full">
                 Attempt {variant} of {totalVariants}
               </span>
               {failedExitParts && failedExitParts.length < totalParts && (
@@ -1312,9 +1312,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                       disabled={!isUnlocked}
                       className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                         lessonPart === partNumber
-                          ? 'bg-purple-600 text-white shadow-lg'
+                          ? 'bg-accent text-white shadow-lg'
                           : isUnlocked
-                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                          ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-accent-light dark:hover:bg-accent-light/30'
                           : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-400 cursor-not-allowed opacity-50'
                       }`}
                     >
@@ -1325,7 +1325,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400">
-            Currently viewing: <span className="font-bold text-purple-700 dark:text-purple-400">
+            Currently viewing: <span className="font-bold text-accent-hover dark:text-accent-muted">
               Part {lessonPart}
             </span>
           </div>
@@ -1334,7 +1334,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       )}
       
       {/* Progress Bar */}
-      <div className="space-y-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-purple-100/50 dark:border-purple-500/20 shadow-md">
+      <div className="space-y-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-accent-light/50 dark:border-accent/20 shadow-md">
         <div className="bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 rounded-full h-4 overflow-hidden shadow-inner">
           <div 
             className="h-full transition-all duration-500 ease-out shadow-md animate-gradient"
@@ -1349,7 +1349,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           <span className="text-gray-600 dark:text-gray-400 font-medium">
             Section {currentSectionIndex + 1} of {sections.length}
           </span>
-          <span className="text-purple-700 dark:text-purple-400 font-bold">
+          <span className="text-accent-hover dark:text-accent-muted font-bold">
             {Math.round(progress)}% Complete
           </span>
         </div>
@@ -1375,7 +1375,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       {courseSlug && <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={courseSlug} />}
 
       {/* Current Section Content */}
-      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30" style={{ zoom: 'var(--content-zoom, 1)' }}>
+      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-accent-light/50 dark:border-accent/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-accent-light/70 dark:hover:border-accent-muted/30" style={{ zoom: 'var(--content-zoom, 1)' }}>
         <SectionRenderer 
           key={`${currentSection.id}-retry${retryCounts[currentSectionIndex] || 0}`}
           section={currentSection as unknown as Section} 
@@ -1388,7 +1388,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           <div className="mt-6 text-center">
             <button
               onClick={handleRetrySection}
-              className="px-6 py-3 rounded-xl font-semibold text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-900/30 border-2 border-purple-200 dark:border-purple-700 hover:bg-purple-100 dark:hover:bg-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-200"
+              className="px-6 py-3 rounded-xl font-semibold text-accent-hover dark:text-accent-muted bg-accent-subtle dark:bg-accent-light/30 border-2 border-accent-light dark:border-accent-hover hover:bg-accent-light dark:hover:bg-accent-light/50 hover:border-accent-muted dark:hover:border-accent transition-all duration-200"
             >
               🔄 Try Again
             </button>
@@ -1416,7 +1416,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
               key={index}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 index === currentSectionIndex 
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 w-8 sm:w-10 shadow-md' 
+                  ? 'bg-gradient-to-r from-accent to-pink-600 w-8 sm:w-10 shadow-md' 
                   : completedSections.has(index)
                   ? 'bg-green-500 w-2.5 shadow-sm'
                   : 'bg-gray-300 dark:bg-gray-600 w-2.5'
@@ -1428,7 +1428,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         <button
           onClick={handleNext}
           disabled={!canProceedToNext}
-          className="group shrink-0 px-3 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl disabled:hover:shadow-lg border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
+          className="group shrink-0 px-3 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg hover:shadow-xl disabled:hover:shadow-lg border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
         >
           {currentSectionIndex !== sections.length - 1
             ? (<><span className="hidden sm:inline">Next </span><span>→</span></>)
@@ -1502,7 +1502,7 @@ function SectionRenderer({
 }) {
   if (section.type === 'text') {
     return (
-      <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-3xl sm:prose-h1:text-5xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight prose-h1:text-gray-900 dark:prose-h1:text-white prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg prose-strong:text-purple-700 dark:prose-strong:text-purple-400 prose-strong:font-semibold prose-a:text-purple-600 dark:prose-a:text-purple-400 prose-a:no-underline hover:prose-a:underline prose-code:text-purple-600 dark:prose-code:text-purple-400 prose-code:bg-purple-50 dark:prose-code:bg-purple-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-ul:my-6 prose-ul:space-y-2 prose-li:my-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg">
+      <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-3xl sm:prose-h1:text-5xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight prose-h1:text-gray-900 dark:prose-h1:text-white prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg prose-strong:text-accent-hover dark:prose-strong:text-accent-muted prose-strong:font-semibold prose-a:text-accent dark:prose-a:text-accent-muted prose-a:no-underline hover:prose-a:underline prose-code:text-accent dark:prose-code:text-accent-muted prose-code:bg-accent-subtle dark:prose-code:bg-accent-light/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-ul:my-6 prose-ul:space-y-2 prose-li:my-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg">
         <style jsx>{`
           :global(.prose h1) {
             font-size: 1.875rem !important;
@@ -1766,11 +1766,11 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     <div className="space-y-6">
       <FadeInText content={section.content} onComplete={() => {}} />
       
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-8 border-2 border-purple-300 dark:border-purple-700">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-8 border-2 border-accent-muted dark:border-accent-hover">
         {/* Progress */}
         <div className="mb-6 text-center">
-          <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-3">
-            <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+          <div className="inline-block bg-accent-light dark:bg-accent-light/40 rounded-full px-6 py-3">
+            <span className="text-2xl font-bold text-accent-hover dark:text-accent-muted">
               Correct Streak: {correctStreak}/5
             </span>
           </div>
@@ -1781,7 +1781,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
           <p className="text-xl mb-4 text-gray-700 dark:text-gray-300">
             What is the reference angle for:
           </p>
-          <div className="text-4xl sm:text-6xl font-bold text-purple-700 dark:text-purple-400 mb-6">
+          <div className="text-4xl sm:text-6xl font-bold text-accent-hover dark:text-accent-muted mb-6">
             {currentAngle}°
           </div>
 
@@ -1792,7 +1792,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
-              className="w-32 h-16 text-center text-2xl font-bold border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              className="w-32 h-16 text-center text-2xl font-bold border-2 border-accent rounded-lg focus:ring-2 focus:ring-accent focus:outline-none"
               placeholder="?"
               disabled={feedbackType === 'correct'}
             />
@@ -1803,7 +1803,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
           <button
             onClick={handleSubmit}
             disabled={feedbackType === 'correct' || showingAnswer}
-            className="px-4 sm:px-8 py-3 sm:py-4 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
+            className="px-4 sm:px-8 py-3 sm:py-4 bg-accent hover:bg-accent-hover disabled:bg-gray-400 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
           >
             Check Answer
           </button>
@@ -1854,7 +1854,7 @@ function SineTable() {
   return (
     <div className="overflow-x-auto my-8">
       <table className="w-full border-collapse rounded-xl overflow-hidden shadow-2xl">
-        <thead className="bg-gradient-to-r from-purple-600 to-purple-800">
+        <thead className="bg-gradient-to-r from-accent to-accent-dark">
           <tr>
             <th className="px-6 py-4 text-center text-white text-xl font-bold border-b-4 border-white/30">
               θ (theta)
@@ -1864,7 +1864,7 @@ function SineTable() {
             </th>
           </tr>
         </thead>
-        <tbody className="bg-gradient-to-b from-purple-500 to-purple-700">
+        <tbody className="bg-gradient-to-b from-accent to-accent-hover">
           {data.map((row, i) => (
             <tr key={i} className={i % 2 === 0 ? 'bg-white/5' : 'bg-white/10'}>
               <td className="px-6 py-4 text-center text-white text-2xl font-semibold border-b border-white/10">
@@ -1949,7 +1949,7 @@ function CosineTable() {
 function UnitCircleDiagram() {
   return (
     <div className="my-8 flex justify-center">
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 sm:p-8 border-2 border-purple-200 dark:border-purple-700">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 sm:p-8 border-2 border-accent-light dark:border-accent-hover">
         <svg width="500" height="500" viewBox="-260 -260 520 520" className="max-w-full h-auto">
           {/* Grid lines */}
           <g stroke="#e5e7eb" strokeWidth="1" opacity="0.3">
@@ -2249,7 +2249,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
   return (
     <div className="my-8 flex justify-center">
-      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-2xl p-4 sm:p-8 border-2 border-indigo-300 dark:border-indigo-700 max-w-5xl w-full">
+      <div className="bg-gradient-to-br from-indigo-50 to-accent-subtle dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-2xl p-4 sm:p-8 border-2 border-indigo-300 dark:border-indigo-700 max-w-5xl w-full">
         <h3 className="text-2xl font-bold text-center mb-4 text-indigo-900 dark:text-indigo-200">
           🎮 Fill in the First Quadrant!
         </h3>
@@ -2579,7 +2579,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
   return (
     <div className="my-8">
-      <div className="max-w-7xl mx-auto bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border-2 border-purple-300 dark:border-purple-700">
+      <div className="max-w-7xl mx-auto bg-gradient-to-br from-blue-50 to-accent-subtle dark:from-blue-950/30 dark:to-accent-subtle/30 rounded-lg p-8 border-2 border-accent-muted dark:border-accent-hover">
         {allCorrect && (
           <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border-2 border-green-500 rounded-lg text-center">
             <p className="text-2xl font-bold text-green-700 dark:text-green-300">🎉 Perfect! You&apos;ve mastered the complete unit circle! 🎉</p>
@@ -2893,15 +2893,15 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                   h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
                   h3: renderMarkdownH3,
                   p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
-                  strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+                  strong: ({ children }) => <strong className="font-bold text-accent-hover dark:text-accent-muted">{children}</strong>,
                   ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
                   li: ({ children }) => <li className="text-lg">{children}</li>,
-                  table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
-                  thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+                  table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-accent-muted dark:border-accent-hover">{children}</table></div>,
+                  thead: ({ children }) => <thead className="bg-accent-light dark:bg-accent-light/40">{children}</thead>,
                   tbody: ({ children }) => <tbody>{children}</tbody>,
-                  tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
-                  th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
-                  td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+                  tr: ({ children }) => <tr className="border-b border-accent-light dark:border-accent-light">{children}</tr>,
+                  th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-accent-dark dark:text-accent-dark border border-accent-muted dark:border-accent-hover">{children}</th>,
+                  td: ({ children }) => <td className="px-6 py-4 text-lg border border-accent-light dark:border-accent-light">{children}</td>,
                   img: ({ src, alt }) => {
                     const altText = alt || (src ? src.split('/').pop()?.replace(/[-_]/g, ' ').replace(/\.[^.]+$/, '') || 'Lesson image' : 'Lesson image')
                     const isSvg = src?.endsWith('.svg')
@@ -2933,20 +2933,20 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
             h3: renderMarkdownH3,
             p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
-            strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+            strong: ({ children }) => <strong className="font-bold text-accent-hover dark:text-accent-muted">{children}</strong>,
             ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
             li: ({ children }) => <li className="text-lg">{children}</li>,
             blockquote: ({ children }) => (
-              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
+              <blockquote className="border-l-4 border-accent pl-6 py-3 bg-accent-subtle dark:bg-accent-light/20 rounded-r-lg text-lg font-semibold">
                 {children}
               </blockquote>
             ),
-            table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
-            thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+            table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-accent-muted dark:border-accent-hover">{children}</table></div>,
+            thead: ({ children }) => <thead className="bg-accent-light dark:bg-accent-light/40">{children}</thead>,
             tbody: ({ children }) => <tbody>{children}</tbody>,
-            tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
-            th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
-            td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+            tr: ({ children }) => <tr className="border-b border-accent-light dark:border-accent-light">{children}</tr>,
+            th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-accent-dark dark:text-accent-dark border border-accent-muted dark:border-accent-hover">{children}</th>,
+            td: ({ children }) => <td className="px-6 py-4 text-lg border border-accent-light dark:border-accent-light">{children}</td>,
           }}
         >
           {content}
@@ -2966,21 +2966,21 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
             h3: renderMarkdownH3,
             p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
-            strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+            strong: ({ children }) => <strong className="font-bold text-accent-hover dark:text-accent-muted">{children}</strong>,
             ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
             li: ({ children }) => <li className="text-lg">{children}</li>,
             blockquote: ({ children }) => (
-              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
+              <blockquote className="border-l-4 border-accent pl-6 py-3 bg-accent-subtle dark:bg-accent-light/20 rounded-r-lg text-lg font-semibold">
                 {children}
               </blockquote>
             ),
-            hr: () => <hr className="my-8 border-t-2 border-purple-100 dark:border-purple-800/50" />,
-            table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
-            thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+            hr: () => <hr className="my-8 border-t-2 border-accent-light dark:border-accent-light/50" />,
+            table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-accent-muted dark:border-accent-hover">{children}</table></div>,
+            thead: ({ children }) => <thead className="bg-accent-light dark:bg-accent-light/40">{children}</thead>,
             tbody: ({ children }) => <tbody>{children}</tbody>,
-            tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
-            th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
-            td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+            tr: ({ children }) => <tr className="border-b border-accent-light dark:border-accent-light">{children}</tr>,
+            th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-accent-dark dark:text-accent-dark border border-accent-muted dark:border-accent-hover">{children}</th>,
+            td: ({ children }) => <td className="px-6 py-4 text-lg border border-accent-light dark:border-accent-light">{children}</td>,
             img: ({ src, alt }) => {
               const altText = alt || (src ? src.split('/').pop()?.replace(/[-_]/g, ' ').replace(/\.[^.]+$/, '') || 'Lesson image' : 'Lesson image')
               const isSvg = src?.endsWith('.svg')
@@ -3005,21 +3005,21 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
           h3: renderMarkdownH3,
           p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
-          strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
+          strong: ({ children }) => <strong className="font-bold text-accent-hover dark:text-accent-muted">{children}</strong>,
           ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
           li: ({ children }) => <li className="text-lg">{children}</li>,
           blockquote: ({ children }) => (
-            <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
+            <blockquote className="border-l-4 border-accent pl-6 py-3 bg-accent-subtle dark:bg-accent-light/20 rounded-r-lg text-lg font-semibold">
               {children}
             </blockquote>
           ),
-          hr: () => <hr className="my-8 border-t-2 border-purple-100 dark:border-purple-800/50" />,
-          table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700">{children}</table></div>,
-          thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
+          hr: () => <hr className="my-8 border-t-2 border-accent-light dark:border-accent-light/50" />,
+          table: ({ children }) => <div className="overflow-x-auto my-6"><table className="min-w-full border-collapse border-2 border-accent-muted dark:border-accent-hover">{children}</table></div>,
+          thead: ({ children }) => <thead className="bg-accent-light dark:bg-accent-light/40">{children}</thead>,
           tbody: ({ children }) => <tbody>{children}</tbody>,
-          tr: ({ children }) => <tr className="border-b border-purple-200 dark:border-purple-800">{children}</tr>,
-          th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
-          td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
+          tr: ({ children }) => <tr className="border-b border-accent-light dark:border-accent-light">{children}</tr>,
+          th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-accent-dark dark:text-accent-dark border border-accent-muted dark:border-accent-hover">{children}</th>,
+          td: ({ children }) => <td className="px-6 py-4 text-lg border border-accent-light dark:border-accent-light">{children}</td>,
         }}
       >
         {content}
@@ -3452,7 +3452,7 @@ function MiniBossBattle({
   // Entrance Animation
   if (gameState === 'entrance') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-900 via-red-900 to-black">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent-dark via-red-900 to-black">
         <div className="text-center">
           <div className={`text-7xl sm:text-9xl mb-8 transition-all duration-1000 ${entranceAnimComplete ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
             ⚔️
@@ -3500,7 +3500,7 @@ function MiniBossBattle({
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
                   onClick={() => onComplete()}
-                  className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
+                  className="px-12 py-4 bg-white hover:bg-gray-100 text-accent-hover font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
                 >
                   Continue
                 </button>
@@ -3512,7 +3512,7 @@ function MiniBossBattle({
                       window.location.href = '/competitive'
                     }, 100)
                   }}
-                  className="px-12 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl flex items-center gap-2"
+                  className="px-12 py-4 bg-gradient-to-r from-accent to-indigo-600 hover:from-accent-hover hover:to-indigo-700 text-white font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl flex items-center gap-2"
                 >
                   🎮 Enter Competitive Mode
                 </button>
@@ -3524,7 +3524,7 @@ function MiniBossBattle({
               <div className="text-4xl sm:text-6xl mb-8">⭐ ⭐ ⭐</div>
               <button
                 onClick={() => onComplete()}
-                className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
+                className="px-12 py-4 bg-white hover:bg-gray-100 text-accent-hover font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
               >
                 Continue
               </button>
@@ -3569,7 +3569,7 @@ function MiniBossBattle({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-900 to-indigo-900 py-4 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-accent-dark to-indigo-900 py-4 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Score Display - More Compact */}
         <div className="grid grid-cols-2 gap-4 mb-4">
@@ -3594,8 +3594,8 @@ function MiniBossBattle({
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border-2 border-yellow-500">
           {/* Question Header */}
           <div className="flex items-center justify-between mb-4">
-            <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-4 py-1">
-              <span className="text-sm font-bold text-purple-700 dark:text-purple-400">
+            <div className="inline-block bg-accent-light dark:bg-accent-light/40 rounded-full px-4 py-1">
+              <span className="text-sm font-bold text-accent-hover dark:text-accent-muted">
                 Question {(currentQuestionIndex % questionTypes.length) + 1}
               </span>
             </div>
@@ -3616,7 +3616,7 @@ function MiniBossBattle({
               {currentQuestion.type === 'combined' && 'Factor COMPLETELY:'}
             </p>
             <div 
-              className="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-4 py-2"
+              className="text-3xl font-bold text-accent-hover dark:text-accent-muted mb-4 py-2"
               dangerouslySetInnerHTML={{
                 __html: renderKatexSync(currentQuestion.question, {
                   throwOnError: false,
@@ -3642,14 +3642,14 @@ function MiniBossBattle({
                         ? option.isCorrect
                           ? 'border-green-500 bg-green-100 dark:bg-green-900/30'
                           : 'border-red-500 bg-red-100 dark:bg-red-900/30'
-                        : 'border-purple-500 bg-purple-100 dark:bg-purple-900/30'
+                        : 'border-accent bg-accent-light dark:bg-accent-light/30'
                       : showFeedback && option.isCorrect
                         ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
-                        : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-purple-400'
+                        : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-accent-muted'
                   } ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+                    <span className="text-2xl font-bold text-accent-hover dark:text-accent-muted">
                       {option.label}
                     </span>
                     <div
@@ -3695,7 +3695,7 @@ function MiniBossBattle({
               <button
                 onClick={handleSubmit}
                 disabled={!selectedAnswer}
-                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold text-lg rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                className="px-8 py-3 bg-accent hover:bg-accent-hover disabled:bg-gray-400 text-white font-bold text-lg rounded-lg transition-all transform hover:scale-105 shadow-lg"
               >
                 Submit Answer
               </button>
@@ -3872,11 +3872,11 @@ function FactoringPractice({
     <div className="space-y-6">
       <FadeInText content={section.content} onComplete={() => {}} />
       
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-8 border-2 border-purple-300 dark:border-purple-700">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 sm:p-8 border-2 border-accent-muted dark:border-accent-hover">
         {/* Progress */}
         <div className="mb-6 text-center">
-          <div className="inline-block bg-purple-100 dark:bg-purple-900/40 rounded-full px-6 py-3">
-            <span className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+          <div className="inline-block bg-accent-light dark:bg-accent-light/40 rounded-full px-6 py-3">
+            <span className="text-2xl font-bold text-accent-hover dark:text-accent-muted">
               Correct Streak: {correctStreak}/{requiredStreak}
             </span>
           </div>
@@ -3888,7 +3888,7 @@ function FactoringPractice({
             {section.problemType === 'gcf-identify' ? 'Identify the GCF (Greatest Common Factor):' : 'Factor completely:'}
           </p>
           <div 
-            className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-6"
+            className="text-4xl font-bold text-accent-hover dark:text-accent-muted mb-6"
             dangerouslySetInnerHTML={{
               __html: renderKatexSync(currentProblem.problem, {
                 throwOnError: false,
@@ -3904,7 +3904,7 @@ function FactoringPractice({
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
-              className="w-full max-w-md h-16 text-center text-xl font-mono border-2 border-purple-500 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none px-4"
+              className="w-full max-w-md h-16 text-center text-xl font-mono border-2 border-accent rounded-lg focus:ring-2 focus:ring-accent focus:outline-none px-4"
               placeholder={section.problemType === 'gcf-identify' ? 'Enter GCF (e.g., 3x^2)' : 'Enter factored form'}
               disabled={feedbackType === 'correct'}
             />
@@ -3914,7 +3914,7 @@ function FactoringPractice({
               <div className="w-full max-w-md">
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Your answer:</p>
                 <div 
-                  className="text-2xl p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-300 dark:border-purple-700"
+                  className="text-2xl p-3 bg-accent-subtle dark:bg-accent-light/20 rounded-lg border border-accent-muted dark:border-accent-hover"
                   dangerouslySetInnerHTML={{
                     __html: renderKatexSync(convertToLatex(userAnswer), {
                       throwOnError: false,
@@ -3937,7 +3937,7 @@ function FactoringPractice({
             <button
               onClick={handleSubmit}
               disabled={!userAnswer.trim() || feedbackType === 'correct'}
-              className="px-8 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold rounded-lg transition-colors text-lg"
+              className="px-8 py-3 bg-accent hover:bg-accent-hover disabled:bg-gray-400 text-white font-bold rounded-lg transition-colors text-lg"
             >
               Check Answer
             </button>
@@ -4136,7 +4136,7 @@ function InputBoxExercise({
                   type="text"
                   value={answers[index]}
                   onChange={(e) => handleInputChange(index, e.target.value)}
-                  className={`${isEConfig ? 'w-full sm:w-64' : 'w-full sm:w-32'} px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
+                  className={`${isEConfig ? 'w-full sm:w-64' : 'w-full sm:w-32'} px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-accent focus:ring-2 focus:ring-accent-light bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
                   disabled={isComplete || showAnswer}
                   placeholder={isEConfig ? 'e.g. [Ne]3s23p5' : '?'}
                 />
@@ -4166,13 +4166,13 @@ function InputBoxExercise({
             const needsWideBox = correctAnswersList.some((ans: string) => ans.length > 2)
             return (
               <div key={index} className="flex flex-col items-center gap-2">
-                <span className="text-base font-bold text-purple-600 dark:text-purple-400">Q{index + 1}</span>
+                <span className="text-base font-bold text-accent dark:text-accent-muted">Q{index + 1}</span>
                 <input
                   ref={(el) => { inputRefs.current[index] = el }}
                   type="text"
                   value={answers[index]}
                   onChange={(e) => handleInputChange(index, e.target.value)}
-                  className={`${needsWideBox ? 'w-36 h-14 text-lg' : 'w-20 h-20 text-3xl'} text-center border-2 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 ${
+                  className={`${needsWideBox ? 'w-36 h-14 text-lg' : 'w-20 h-20 text-3xl'} text-center border-2 rounded-lg focus:border-accent focus:ring-2 focus:ring-accent-light ${
                     boxCorrect === true
                       ? 'border-green-500 bg-green-50 dark:bg-green-900/30'
                       : boxCorrect === false
@@ -4193,7 +4193,7 @@ function InputBoxExercise({
       {!isComplete && !showAnswer && (
         <button
           onClick={handleSubmit}
-          className="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-lg transition-colors"
+          className="w-full py-3 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg text-lg transition-colors"
         >
           Check Answer
         </button>
@@ -4420,22 +4420,22 @@ function DropdownExercise({
               ? 'border-green-300 bg-green-50/60 dark:border-green-700/60 dark:bg-green-900/15'
               : 'border-red-300 bg-red-50/60 dark:border-red-700/60 dark:bg-red-900/15'
             : isAnswered
-              ? 'border-purple-300 bg-purple-50/40 dark:border-purple-700/50 dark:bg-purple-900/10'
-              : 'border-gray-200 bg-white hover:border-purple-200 hover:bg-purple-50/30 dark:border-gray-700 dark:bg-gray-800/40 dark:hover:border-purple-700/50 dark:hover:bg-purple-900/10'
+              ? 'border-accent-muted bg-accent-subtle/40 dark:border-accent-hover/50 dark:bg-accent-light/10'
+              : 'border-gray-200 bg-white hover:border-accent-light hover:bg-accent-subtle/30 dark:border-gray-700 dark:bg-gray-800/40 dark:hover:border-accent-hover/50 dark:hover:bg-accent-light/10'
 
           const badgeStateClass = showFeedback
             ? isCorrect
               ? 'bg-green-500 text-white ring-green-200 dark:ring-green-900/40'
               : 'bg-red-500 text-white ring-red-200 dark:ring-red-900/40'
             : isAnswered
-              ? 'bg-purple-600 text-white ring-purple-200 dark:ring-purple-900/40'
+              ? 'bg-accent text-white ring-accent-light dark:ring-accent-light/40'
               : 'bg-gray-100 text-gray-600 ring-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:ring-gray-700'
 
           const selectStateClass = showFeedback
             ? isCorrect
               ? 'border-green-400 bg-white text-green-900 focus:ring-green-200 dark:bg-gray-900 dark:text-green-200 dark:border-green-600'
               : 'border-red-400 bg-white text-red-900 focus:ring-red-200 dark:bg-gray-900 dark:text-red-200 dark:border-red-600'
-            : 'border-gray-300 bg-white text-gray-900 focus:ring-purple-200 focus:border-purple-500 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-600 dark:focus:border-purple-400'
+            : 'border-gray-300 bg-white text-gray-900 focus:ring-accent-light focus:border-accent dark:bg-gray-900 dark:text-gray-100 dark:border-gray-600 dark:focus:border-accent-muted'
 
           return (
             <div
@@ -4458,7 +4458,7 @@ function DropdownExercise({
                     {hadBlank && (
                       <span
                         aria-hidden="true"
-                        className="mx-2 inline-block h-[3px] w-14 rounded-full bg-gradient-to-r from-purple-400 to-purple-300 dark:from-purple-500 dark:to-purple-600 sm:w-16"
+                        className="mx-2 inline-block h-[3px] w-14 rounded-full bg-gradient-to-r from-accent-muted to-accent-muted dark:from-accent dark:to-accent sm:w-16"
                         style={{ verticalAlign: '-0.15em' }}
                       />
                     )}
@@ -4512,7 +4512,7 @@ function DropdownExercise({
               {dropdowns.map((_, i) => (
                 <span
                   key={i}
-                  className={`h-1.5 w-6 rounded-full transition-colors ${answers[i] ? 'bg-purple-500' : 'bg-gray-200 dark:bg-gray-700'}`}
+                  className={`h-1.5 w-6 rounded-full transition-colors ${answers[i] ? 'bg-accent' : 'bg-gray-200 dark:bg-gray-700'}`}
                 />
               ))}
             </div>
@@ -4520,7 +4520,7 @@ function DropdownExercise({
           <button
             onClick={handleSubmit}
             disabled={!allFilled}
-            className={`w-full rounded-lg py-3 text-lg font-bold text-white shadow-md transition-all ${allFilled ? 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 hover:shadow-lg active:scale-[0.99]' : 'cursor-not-allowed bg-gray-300 dark:bg-gray-700'}`}
+            className={`w-full rounded-lg py-3 text-lg font-bold text-white shadow-md transition-all ${allFilled ? 'bg-gradient-to-r from-accent to-accent-hover hover:from-accent-hover hover:to-accent-dark hover:shadow-lg active:scale-[0.99]' : 'cursor-not-allowed bg-gray-300 dark:bg-gray-700'}`}
           >
             {allFilled ? 'Check Answers' : `Pick all ${dropdowns.length} to continue`}
           </button>
@@ -4851,7 +4851,7 @@ function IndependentPracticeMode({ onBack, onComplete }: { onBack: () => void, o
           ← Back to Lesson
         </button>
 
-        <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
           🎯 Independent Practice
         </h1>
 
@@ -5296,7 +5296,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     <div className="max-w-5xl mx-auto p-6">
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 sm:p-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             Complete the Unit Circle Table
           </h1>
           <p className="text-xl text-foreground">
@@ -5307,7 +5307,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
         {/* The Table */}
         <div className="overflow-x-auto my-8">
           <table className="w-full border-collapse rounded-xl overflow-hidden shadow-xl">
-            <thead className="bg-gradient-to-r from-indigo-600 to-purple-600">
+            <thead className="bg-gradient-to-r from-indigo-600 to-accent">
               <tr>
                 <th className="px-4 py-4 text-left text-white text-lg font-bold border-r border-white/30">
                   
@@ -5321,8 +5321,8 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
             </thead>
             <tbody>
               {/* Theta Row */}
-              <tr className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border-b-2 border-gray-300 dark:border-gray-600">
-                <td className="px-4 py-6 font-bold text-lg text-purple-700 dark:text-purple-400 border-r border-gray-300 dark:border-gray-600">
+              <tr className="bg-gradient-to-r from-indigo-50 to-accent-subtle dark:from-indigo-900/20 dark:to-accent-light/20 border-b-2 border-gray-300 dark:border-gray-600">
+                <td className="px-4 py-6 font-bold text-lg text-accent-hover dark:text-accent-muted border-r border-gray-300 dark:border-gray-600">
                   θ (theta)
                 </td>
                 {[0, 1, 2, 3, 4].map((i) => (
@@ -5333,9 +5333,9 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                         type="text"
                         value={thetaAnswers[i]}
                         onChange={(e) => handleThetaChange(i, e.target.value)}
-                        className={`w-20 h-16 text-center text-xl font-bold border-2 rounded-lg focus:ring-2 focus:ring-purple-500 ${
+                        className={`w-20 h-16 text-center text-xl font-bold border-2 rounded-lg focus:ring-2 focus:ring-accent ${
                           thetaValidation[i] === null 
-                            ? 'border-purple-500 focus:border-purple-500' 
+                            ? 'border-accent focus:border-accent' 
                             : thetaValidation[i] 
                               ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' 
                               : 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400'
@@ -5352,8 +5352,8 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
               </tr>
 
               {/* Sine Row */}
-              <tr className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border-b-2 border-gray-300 dark:border-gray-600">
-                <td className="px-4 py-6 font-bold text-lg text-purple-700 dark:text-purple-400 border-r border-gray-300 dark:border-gray-600">
+              <tr className="bg-gradient-to-r from-accent-subtle to-pink-50 dark:from-accent-light/20 dark:to-pink-900/20 border-b-2 border-gray-300 dark:border-gray-600">
+                <td className="px-4 py-6 font-bold text-lg text-accent-hover dark:text-accent-muted border-r border-gray-300 dark:border-gray-600">
                   sin(θ)
                 </td>
                 {[0, 1, 2, 3, 4].map((i) => (
@@ -5363,7 +5363,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                         {/* KaTeX Preview */}
                         <div className={`w-24 h-12 flex items-center justify-center border-2 rounded-lg ${
                           sineValidation[i] === null 
-                            ? 'border-purple-300 bg-purple-50 dark:bg-purple-900/20' 
+                            ? 'border-accent-muted bg-accent-subtle dark:bg-accent-light/20' 
                             : sineValidation[i] 
                               ? 'border-green-500 bg-green-50 dark:bg-green-900/20' 
                               : 'border-red-500 bg-red-50 dark:bg-red-900/20'
@@ -5391,9 +5391,9 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                           type="text"
                           value={sineAnswers[i]}
                           onChange={(e) => handleSineChange(i, e.target.value)}
-                          className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-purple-500 ${
+                          className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-accent ${
                             sineValidation[i] === null 
-                              ? 'border-purple-500' 
+                              ? 'border-accent' 
                               : sineValidation[i] 
                                 ? 'border-green-500' 
                                 : 'border-red-500'
@@ -5418,7 +5418,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
 
               {/* Cosine Row */}
               <tr className="bg-gradient-to-r from-pink-50 to-red-50 dark:from-pink-900/20 dark:to-red-900/20">
-                <td className="px-4 py-6 font-bold text-lg text-purple-700 dark:text-purple-400 border-r border-gray-300 dark:border-gray-600">
+                <td className="px-4 py-6 font-bold text-lg text-accent-hover dark:text-accent-muted border-r border-gray-300 dark:border-gray-600">
                   cos(θ)
                 </td>
                 {[0, 1, 2, 3, 4].map((i) => (
@@ -5428,7 +5428,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                         {/* KaTeX Preview */}
                         <div className={`w-24 h-12 flex items-center justify-center border-2 rounded-lg ${
                           cosineValidation[i] === null 
-                            ? 'border-purple-300 bg-purple-50 dark:bg-purple-900/20' 
+                            ? 'border-accent-muted bg-accent-subtle dark:bg-accent-light/20' 
                             : cosineValidation[i] 
                               ? 'border-green-500 bg-green-50 dark:bg-green-900/20' 
                               : 'border-red-500 bg-red-50 dark:bg-red-900/20'
@@ -5456,9 +5456,9 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                           type="text"
                           value={cosineAnswers[i]}
                           onChange={(e) => handleCosineChange(i, e.target.value)}
-                          className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-purple-500 ${
+                          className={`w-24 h-10 text-center text-sm border-2 rounded-lg focus:ring-2 focus:ring-accent ${
                             cosineValidation[i] === null 
-                              ? 'border-purple-500' 
+                              ? 'border-accent' 
                               : cosineValidation[i] 
                                 ? 'border-green-500' 
                                 : 'border-red-500'
@@ -5489,7 +5489,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
           <div className="text-center mt-8">
             <button
               onClick={() => checkRow(currentRow)}
-              className="px-12 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+              className="px-12 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
             >
               Check {currentRow === 'theta' ? 'θ' : currentRow === 'sine' ? 'sin(θ)' : 'cos(θ)'} Row
             </button>
@@ -5520,7 +5520,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
             <div className="flex gap-4 justify-center flex-wrap">
               <button
                 onClick={resetPractice}
-                className="px-4 sm:px-8 py-3 sm:py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
+                className="px-4 sm:px-8 py-3 sm:py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg text-xl transition-all shadow-lg hover:shadow-xl"
               >
                 🔄 Try Again
               </button>

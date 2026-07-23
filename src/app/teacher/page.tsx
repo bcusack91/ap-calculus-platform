@@ -127,7 +127,7 @@ export default function TeacherDashboard() {
   if (!data) return null
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
@@ -157,8 +157,8 @@ export default function TeacherDashboard() {
             <div className="text-4xl font-bold text-green-600">{data.stats.totalStudents}</div>
             <div className="text-gray-600 dark:text-gray-400 mt-1">Total Students</div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-purple-100 dark:border-purple-900/30">
-            <div className="text-4xl font-bold text-purple-600">{data.stats.avgMastery}%</div>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-accent-light dark:border-accent-light/30">
+            <div className="text-4xl font-bold text-accent">{data.stats.avgMastery}%</div>
             <div className="text-gray-600 dark:text-gray-400 mt-1">Avg Student Mastery</div>
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function TeacherDashboard() {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
                       {cls.name}
                       {cls.coTaught && (
-                        <span className="ml-2 align-middle px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-[10px] font-semibold rounded-full">
+                        <span className="ml-2 align-middle px-2 py-0.5 bg-accent-light dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted text-[10px] font-semibold rounded-full">
                           Co-teacher
                         </span>
                       )}
@@ -291,7 +291,7 @@ export default function TeacherDashboard() {
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">⚔️ Upcoming Competitions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {data.upcomingCompetitions.map((c) => (
-                <div key={c.id} className="p-4 rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/10">
+                <div key={c.id} className="p-4 rounded-xl border border-accent-light dark:border-accent-light bg-accent-subtle dark:bg-accent-light/10">
                   <div className="flex justify-between items-start">
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white">{c.title}</h4>

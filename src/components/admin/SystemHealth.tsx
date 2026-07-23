@@ -130,7 +130,7 @@ export function SystemHealth() {
     return (
       <div className="space-y-3">
         <p className="text-sm text-red-600 dark:text-red-400">Could not load integration health.</p>
-        <button onClick={refresh} className="text-sm font-medium text-purple-600 hover:underline">
+        <button onClick={refresh} className="text-sm font-medium text-accent hover:underline">
           Retry
         </button>
       </div>
@@ -149,7 +149,7 @@ export function SystemHealth() {
         </p>
         <button
           onClick={refresh}
-          className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline whitespace-nowrap"
+          className="text-sm font-medium text-accent dark:text-accent-muted hover:underline whitespace-nowrap"
         >
           ↻ Refresh
         </button>

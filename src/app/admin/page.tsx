@@ -153,7 +153,7 @@ interface MonthlyOpsDigest {
 
 const ROLES = [
   { value: 'FREE', label: 'Free', color: 'bg-gray-100 text-gray-700' },
-  { value: 'PREMIUM', label: 'Premium', color: 'bg-purple-100 text-purple-700' },
+  { value: 'PREMIUM', label: 'Premium', color: 'bg-accent-light text-accent-hover' },
   { value: 'TEACHER', label: 'Teacher', color: 'bg-blue-100 text-blue-700' },
   { value: 'ADMIN', label: 'Admin', color: 'bg-red-100 text-red-700' },
 ]
@@ -176,7 +176,7 @@ export default function AdminPanel() {
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState<{ text: string; type: 'success' | 'error' } | null>(null)
 
-  const trendColors = ['bg-red-500', 'bg-blue-500', 'bg-emerald-500', 'bg-purple-500']
+  const trendColors = ['bg-red-500', 'bg-blue-500', 'bg-emerald-500', 'bg-accent']
 
   const loadAnalytics = async () => {
     setAnalyticsLoading(true)
@@ -1088,7 +1088,7 @@ function MetricCard({ label, value, color }: { label: string; value: number; col
   const colors: Record<string, string> = {
     green: 'text-green-600 dark:text-green-400',
     blue: 'text-blue-600 dark:text-blue-400',
-    purple: 'text-purple-600 dark:text-purple-400',
+    purple: 'text-accent dark:text-accent-muted',
   }
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm">

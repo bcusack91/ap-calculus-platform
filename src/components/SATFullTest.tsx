@@ -393,7 +393,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
       <div className="mx-auto max-w-3xl">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
           <div className="mb-6 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-accent">
               <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
@@ -414,7 +414,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
                 className="flex items-center justify-between rounded-xl bg-gray-50 p-4 dark:bg-gray-700/50"
               >
                 <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-sm font-bold text-purple-700 dark:bg-purple-900/50 dark:text-purple-300">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-light text-sm font-bold text-accent-hover dark:bg-accent-light/50 dark:text-accent-muted">
                     {i + 1}
                   </span>
                   <div>
@@ -454,7 +454,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
             </button>
             <button
               onClick={() => startSection(0)}
-              className="flex-1 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+              className="flex-1 rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
               Begin Test
             </button>
@@ -512,7 +512,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
 
           <button
             onClick={() => startSection(nextIdx)}
-            className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+            className="w-full rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
           >
             Continue to Next Section
           </button>
@@ -528,7 +528,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
     return (
       <div className="flex min-h-[400px] items-center justify-center">
         <div className="text-center">
-          <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-purple-200 border-t-purple-600" />
+          <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-accent-light border-t-accent" />
           <p className="text-gray-600 dark:text-gray-400">Calculating your results...</p>
         </div>
       </div>
@@ -753,7 +753,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
                 onClick={() => goToQuestion(idx)}
                 className={`relative flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition ${
                   idx === currentQuestionIndex
-                    ? 'bg-purple-600 text-white ring-2 ring-purple-300'
+                    ? 'bg-accent text-white ring-2 ring-accent-muted'
                     : isAnswered(a, currentSection.questions[idx])
                       ? 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-400'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
@@ -776,7 +776,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
               <span className="inline-block h-3 w-3 rounded bg-gray-100 dark:bg-gray-700" /> Unanswered
             </span>
             <span className="flex items-center gap-1">
-              <span className="inline-block h-3 w-3 rounded bg-purple-600" /> Current
+              <span className="inline-block h-3 w-3 rounded bg-accent" /> Current
             </span>
           </div>
         </div>
@@ -785,7 +785,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
       {/* Progress Bar */}
       <div className="mb-4 h-2 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300"
+          className="h-full rounded-full bg-gradient-to-r from-accent to-pink-500 transition-all duration-300"
           style={{ width: `${((currentQuestionIndex + 1) / currentSection.questionCount) * 100}%` }}
         />
       </div>
@@ -795,7 +795,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
         {/* Question Text */}
         <div className="mb-6">
           <div className="mb-2 flex items-center gap-2">
-            <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-900/50 dark:text-purple-300">
+            <span className="rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-accent-hover dark:bg-accent-light/50 dark:text-accent-muted">
               Q{currentQuestionIndex + 1}
             </span>
             <span className="text-xs text-gray-400 dark:text-gray-400">
@@ -821,7 +821,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
               value={currentAnswer?.textValue ?? ''}
               onChange={e => setTextAnswer(e.target.value)}
               placeholder="e.g. 12, 3.5, or 3/4"
-              className="w-full max-w-xs rounded-xl border-2 border-gray-300 bg-white px-4 py-3 text-lg font-semibold text-gray-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:focus:ring-purple-900/40"
+              className="w-full max-w-xs rounded-xl border-2 border-gray-300 bg-white px-4 py-3 text-lg font-semibold text-gray-900 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-light dark:border-gray-600 dark:bg-gray-900 dark:text-white dark:focus:ring-accent-light/40"
             />
             <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
               Student-produced response — type a number. Fractions (like 3/4) and decimals are accepted.
@@ -845,7 +845,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
                   }}
                   className={`flex w-full items-start gap-3 rounded-xl border-2 p-4 text-left transition ${
                     isSelected
-                      ? 'border-purple-500 bg-purple-50 dark:border-purple-400 dark:bg-purple-900/20'
+                      ? 'border-accent bg-accent-subtle dark:border-accent-muted dark:bg-accent-light/20'
                       : strikethroughMode
                         ? 'border-gray-200 bg-white hover:border-red-300 hover:bg-red-50/50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-red-500/40'
                         : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500 dark:hover:bg-gray-700/50'
@@ -854,7 +854,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
                   <span
                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
                       isSelected
-                        ? 'bg-purple-600 text-white'
+                        ? 'bg-accent text-white'
                         : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
                     }`}
                   >
@@ -906,7 +906,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
             ) : (
               <button
                 onClick={nextQuestion}
-                className="rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg"
+                className="rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg"
               >
                 Next →
               </button>
@@ -1013,7 +1013,7 @@ function SATResultsView({
       <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
         {/* Header */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500">
+          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-r from-accent to-pink-500">
             <svg className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
@@ -1050,14 +1050,14 @@ function SATResultsView({
               {results.rwCorrect}/{results.rwTotal} correct
             </p>
           </div>
-          <div className="rounded-xl bg-purple-50 p-5 text-center dark:bg-purple-900/20">
-            <p className="text-xs font-medium text-purple-600 uppercase dark:text-purple-400">
+          <div className="rounded-xl bg-accent-subtle p-5 text-center dark:bg-accent-light/20">
+            <p className="text-xs font-medium text-accent uppercase dark:text-accent-muted">
               Math
             </p>
             <p className={`text-3xl font-bold ${scoreColor(results.mathScore)}`}>
               {results.mathScore}
             </p>
-            <p className="mt-1 text-sm text-purple-500 dark:text-purple-400">
+            <p className="mt-1 text-sm text-accent dark:text-accent-muted">
               {results.mathCorrect}/{results.mathTotal} correct
             </p>
           </div>
@@ -1142,7 +1142,7 @@ function SATResultsView({
         <div className="flex gap-4">
           <button
             onClick={onCancel}
-            className="flex-1 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+            className="flex-1 rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
           >
             Back to Practice Tests
           </button>

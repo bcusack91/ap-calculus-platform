@@ -100,7 +100,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
           onClick={() => setTab('styles')}
           className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
             tab === 'styles'
-              ? 'bg-purple-600 text-white shadow'
+              ? 'bg-accent text-white shadow'
               : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700'
           }`}
         >
@@ -110,7 +110,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
           onClick={() => setTab('classic')}
           className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
             tab === 'classic'
-              ? 'bg-purple-600 text-white shadow'
+              ? 'bg-accent text-white shadow'
               : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700'
           }`}
         >
@@ -144,7 +144,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
               <button
                 onClick={() => setSeed(randomSeed())}
                 disabled={!lib}
-                className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 font-semibold disabled:opacity-50"
+                className="px-5 py-2.5 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover font-semibold disabled:opacity-50"
               >
                 🎲 Randomize
               </button>
@@ -165,8 +165,8 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                   onClick={() => setStyle(id)}
                   className={`px-3 py-2 rounded-lg border-2 text-sm font-medium transition-all text-left ${
                     style === id
-                      ? 'border-purple-600 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
-                      : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-purple-300'
+                      ? 'border-accent bg-accent-subtle dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted'
+                      : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-accent-muted'
                   }`}
                 >
                   {lib ? `${lib.DICEBEAR_STYLES[id].icon} ${lib.DICEBEAR_STYLES[id].label}` : id}
@@ -187,8 +187,8 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       title={p.seed}
                       className={`rounded-full border-2 overflow-hidden transition-all ${
                         seed === p.seed
-                          ? 'border-purple-600 scale-105'
-                          : 'border-gray-200 dark:border-gray-600 hover:border-purple-300'
+                          ? 'border-accent scale-105'
+                          : 'border-gray-200 dark:border-gray-600 hover:border-accent-muted'
                       }`}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element -- local data URI thumbnail */}
@@ -209,7 +209,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                 onClick={() => setBackgroundColor(undefined)}
                 title="None"
                 className={`w-10 h-10 rounded-full border-2 text-xs text-gray-500 ${
-                  backgroundColor === undefined ? 'border-purple-600 scale-110' : 'border-gray-300 dark:border-gray-600'
+                  backgroundColor === undefined ? 'border-accent scale-110' : 'border-gray-300 dark:border-gray-600'
                 }`}
               >
                 ∅
@@ -219,7 +219,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                   key={hex}
                   onClick={() => setBackgroundColor(hex)}
                   className={`w-10 h-10 rounded-full border-2 transition-all ${
-                    backgroundColor === hex ? 'border-purple-600 scale-110' : 'border-gray-300 dark:border-gray-600'
+                    backgroundColor === hex ? 'border-accent scale-110' : 'border-gray-300 dark:border-gray-600'
                   }`}
                   style={{ backgroundColor: `#${hex}` }}
                 />
@@ -229,7 +229,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
             <button
               onClick={handleSave}
               disabled={isSaving || !lib}
-              className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed font-semibold transition-colors"
+              className="w-full px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover disabled:bg-gray-400 disabled:cursor-not-allowed font-semibold transition-colors"
             >
               {isSaving ? 'Saving...' : 'Save Avatar'}
             </button>
@@ -275,7 +275,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       onClick={() => setAvatarData({ ...avatarData, skinTone: tone.id })}
                       className={`w-12 h-12 rounded-full border-4 transition-all ${
                         avatarData.skinTone === tone.id
-                          ? 'border-purple-600 scale-110'
+                          ? 'border-accent scale-110'
                           : 'border-gray-300 dark:border-gray-600'
                       }`}
                       style={{ backgroundColor: tone.color }}
@@ -296,7 +296,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       onClick={() => setAvatarData({ ...avatarData, faceShape: shape.id })}
                       className={`px-4 py-2 rounded-lg border-2 transition-all ${
                         avatarData.faceShape === shape.id
-                          ? 'border-purple-600 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                          ? 'border-accent bg-accent-subtle dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted'
                           : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
                       }`}
                     >
@@ -318,7 +318,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       onClick={() => setAvatarData({ ...avatarData, hairStyle: hairStyle.id })}
                       className={`px-4 py-2 rounded-lg border-2 transition-all text-sm ${
                         avatarData.hairStyle === hairStyle.id
-                          ? 'border-purple-600 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                          ? 'border-accent bg-accent-subtle dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted'
                           : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
                       }`}
                     >
@@ -340,7 +340,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       onClick={() => setAvatarData({ ...avatarData, hairColor: color.id })}
                       className={`w-12 h-12 rounded-full border-4 transition-all ${
                         avatarData.hairColor === color.id
-                          ? 'border-purple-600 scale-110'
+                          ? 'border-accent scale-110'
                           : 'border-gray-300 dark:border-gray-600'
                       }`}
                       style={{ backgroundColor: color.color }}
@@ -361,7 +361,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       onClick={() => setAvatarData({ ...avatarData, eyeColor: color.id })}
                       className={`w-12 h-12 rounded-full border-4 transition-all ${
                         avatarData.eyeColor === color.id
-                          ? 'border-purple-600 scale-110'
+                          ? 'border-accent scale-110'
                           : 'border-gray-300 dark:border-gray-600'
                       }`}
                       style={{ backgroundColor: color.color }}
@@ -382,7 +382,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
                       onClick={() => setAvatarData({ ...avatarData, accessory: accessory.id })}
                       className={`px-4 py-2 rounded-lg border-2 transition-all text-sm ${
                         avatarData.accessory === accessory.id
-                          ? 'border-purple-600 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                          ? 'border-accent bg-accent-subtle dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted'
                           : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
                       }`}
                     >
@@ -396,7 +396,7 @@ export default function AvatarBuilder({ initialAvatar, onSave }: AvatarBuilderPr
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed font-semibold transition-colors"
+                className="w-full px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover disabled:bg-gray-400 disabled:cursor-not-allowed font-semibold transition-colors"
               >
                 {isSaving ? 'Saving...' : 'Save Avatar'}
               </button>

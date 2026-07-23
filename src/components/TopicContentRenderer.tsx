@@ -51,12 +51,12 @@ const MarkdownComponents = {
   ),
   code: ({ inline, children }: MarkdownCodeProps) => 
     inline ? (
-      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-purple-700">{children}</code>
+      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-accent-hover">{children}</code>
     ) : (
       <code className="block bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto">{children}</code>
     ),
   strong: ({ children }: MarkdownChildrenProps) => (
-    <strong className="font-bold text-purple-700">{children}</strong>
+    <strong className="font-bold text-accent-hover">{children}</strong>
   ),
 }
 

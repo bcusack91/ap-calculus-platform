@@ -12,11 +12,11 @@ export function UpgradeBanner({ feature, className = '' }: { feature?: string; c
   if (!session || session.user?.role === 'PREMIUM' || session.user?.role === 'ADMIN') return null
 
   return (
-    <div className={`bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-5 text-white ${className}`}>
+    <div className={`bg-gradient-to-r from-accent to-accent-secondary rounded-xl p-5 text-white ${className}`}>
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <div className="flex-1">
           <h3 className="font-bold text-lg">⭐ Upgrade to Premium</h3>
-          <p className="text-sm text-purple-100 mt-1">
+          <p className="text-sm text-accent-light mt-1">
             {feature
               ? `Unlock ${feature} and get access to all premium features.`
               : 'Get unlimited access to all courses, quizzes, and advanced analytics.'}
@@ -24,7 +24,7 @@ export function UpgradeBanner({ feature, className = '' }: { feature?: string; c
         </div>
         <Link
           href="/pricing"
-          className="px-5 py-2.5 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-colors flex-shrink-0"
+          className="px-5 py-2.5 bg-white text-accent-hover font-semibold rounded-lg hover:bg-accent-subtle transition-colors flex-shrink-0"
         >
           View Plans
         </Link>
@@ -53,7 +53,7 @@ export function PremiumLock({ children, className = '' }: { children?: React.Rea
           <p className="text-sm text-gray-500 mt-1 mb-3">Upgrade to access this feature</p>
           <Link
             href="/pricing"
-            className="inline-flex px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 text-sm"
+            className="inline-flex px-4 py-2 bg-gradient-to-r from-accent to-accent-secondary text-white font-medium rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover text-sm"
           >
             Upgrade Now
           </Link>
@@ -71,14 +71,14 @@ export function InlineUpgradePrompt({ message }: { message?: string }) {
   if (!session || session.user?.role === 'PREMIUM' || session.user?.role === 'ADMIN') return null
 
   return (
-    <div className="flex items-center gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-lg">
+    <div className="flex items-center gap-3 p-3 bg-accent-subtle dark:bg-accent-light/20 border border-accent-light dark:border-accent-hover rounded-lg">
       <span className="text-xl">⭐</span>
-      <p className="text-sm text-purple-800 dark:text-purple-200 flex-1">
+      <p className="text-sm text-accent-dark dark:text-accent-dark flex-1">
         {message || 'Want unlimited access? Upgrade to Premium!'}
       </p>
       <Link
         href="/pricing"
-        className="text-sm font-semibold text-purple-700 dark:text-purple-300 hover:underline flex-shrink-0"
+        className="text-sm font-semibold text-accent-hover dark:text-accent-muted hover:underline flex-shrink-0"
       >
         Upgrade →
       </Link>

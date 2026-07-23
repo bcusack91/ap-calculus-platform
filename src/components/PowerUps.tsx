@@ -30,7 +30,7 @@ export const COSMETICS: Cosmetic[] = [
   { id: 'flame-aura', name: 'Flame Aura', description: 'A flickering flame aura around your name.', icon: '🔥', rarity: 'rare', cost: 150,
     nameplateClass: 'text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.9)]' },
   { id: 'galaxy', name: 'Galaxy Arena', description: 'A cosmic gradient sweeps across your name.', icon: '🌌', rarity: 'epic', cost: 200,
-    nameplateClass: 'bg-gradient-to-r from-indigo-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent font-extrabold' },
+    nameplateClass: 'bg-gradient-to-r from-indigo-400 via-accent-muted to-fuchsia-400 bg-clip-text text-transparent font-extrabold' },
   { id: 'champion-crown', name: 'Champion Crown', description: 'A crown sits beside your name.', icon: '👑', rarity: 'epic', cost: 300,
     nameplateClass: 'text-amber-400 font-extrabold' },
 ]
@@ -82,7 +82,7 @@ export function useCosmetics() {
 }
 
 const rarityChip: Record<Cosmetic['rarity'], string> = {
-  epic: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
+  epic: 'bg-accent-light text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted',
   rare: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
   common: 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400',
 }

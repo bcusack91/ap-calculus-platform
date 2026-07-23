@@ -33,7 +33,7 @@ export default function DynamicStats() {
     return (
       <div className="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto">
         <div>
-          <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">{COURSE_COUNT}</div>
+          <div className="text-2xl font-bold text-accent-hover dark:text-accent-muted">{COURSE_COUNT}</div>
           <div className="text-xs text-gray-500 dark:text-gray-400">Courses</div>
         </div>
         <div>
@@ -51,7 +51,7 @@ export default function DynamicStats() {
   return (
     <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto">
       <div>
-        <div className="text-2xl font-bold text-purple-700 dark:text-purple-400">{formatNumber(stats.students)}</div>
+        <div className="text-2xl font-bold text-accent-hover dark:text-accent-muted">{formatNumber(stats.students)}</div>
         <div className="text-xs text-gray-500 dark:text-gray-400">Students</div>
       </div>
       <div>

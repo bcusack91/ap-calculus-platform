@@ -178,7 +178,7 @@ export default async function CramPlanPage(props: PageProps) {
 
       <div className="mx-auto max-w-3xl">
         <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-          <Link href={`/courses/${slug}`} className="hover:text-purple-600 transition-colors">
+          <Link href={`/courses/${slug}`} className="hover:text-accent transition-colors">
             ← Back to {courseName}
           </Link>
         </nav>
@@ -199,7 +199,7 @@ export default async function CramPlanPage(props: PageProps) {
           </div>
         </header>
 
-        <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-a:text-purple-600 dark:prose-a:text-purple-400 prose-a:no-underline hover:prose-a:underline">
+        <article className="prose prose-lg dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-a:text-accent dark:prose-a:text-accent-muted prose-a:no-underline hover:prose-a:underline">
           <MdxContent />
         </article>
 
@@ -208,7 +208,7 @@ export default async function CramPlanPage(props: PageProps) {
             href={`/courses/${slug}`}
             className="block rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 hover:shadow-md transition-shadow"
           >
-            <div className="text-xs font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400 mb-1">
+            <div className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted mb-1">
               Start studying
             </div>
             <div className="font-semibold text-gray-900 dark:text-white">
@@ -222,7 +222,7 @@ export default async function CramPlanPage(props: PageProps) {
             href={`/courses/${slug}#diagnostic`}
             className="block rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 hover:shadow-md transition-shadow"
           >
-            <div className="text-xs font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400 mb-1">
+            <div className="text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted mb-1">
               Find weak spots
             </div>
             <div className="font-semibold text-gray-900 dark:text-white">
@@ -246,7 +246,7 @@ export default async function CramPlanPage(props: PageProps) {
                 <Link
                   key={p.slug}
                   href={`/courses/${slug}/cram/${p.slug}`}
-                  className="flex items-start gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-purple-400 dark:hover:border-purple-500 transition-colors"
+                  className="flex items-start gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-accent-muted dark:hover:border-accent transition-colors"
                 >
                   <span className="text-2xl">{p.icon}</span>
                   <span>

@@ -14,7 +14,7 @@ const UNIT_COLORS = [
   { bg: 'bg-teal-500', light: 'bg-teal-50 dark:bg-teal-900/20', border: 'border-teal-200 dark:border-teal-700', text: 'text-teal-700 dark:text-teal-300' },
   { bg: 'bg-blue-500', light: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-700', text: 'text-blue-700 dark:text-blue-300' },
   { bg: 'bg-indigo-500', light: 'bg-indigo-50 dark:bg-indigo-900/20', border: 'border-indigo-200 dark:border-indigo-700', text: 'text-indigo-700 dark:text-indigo-300' },
-  { bg: 'bg-purple-500', light: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-700', text: 'text-purple-700 dark:text-purple-300' },
+  { bg: 'bg-accent', light: 'bg-accent-subtle dark:bg-accent-light/20', border: 'border-accent-light dark:border-accent-hover', text: 'text-accent-hover dark:text-accent-muted' },
   { bg: 'bg-violet-500', light: 'bg-violet-50 dark:bg-violet-900/20', border: 'border-violet-200 dark:border-violet-700', text: 'text-violet-700 dark:text-violet-300' },
   { bg: 'bg-rose-500', light: 'bg-rose-50 dark:bg-rose-900/20', border: 'border-rose-200 dark:border-rose-700', text: 'text-rose-700 dark:text-rose-300' },
 ]
@@ -88,13 +88,13 @@ export default function APPhysicsCEMCompetitivePage() {
     } catch (err) { console.error('Error starting AI practice:', err) }
   }
 
-  if (status === 'loading' || loading) return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"><div className="animate-pulse text-xl text-gray-500">Loading AP Physics C: E&amp;M Competitive Mode…</div></div>)
+  if (status === 'loading' || loading) return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-violet-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"><div className="animate-pulse text-xl text-gray-500">Loading AP Physics C: E&amp;M Competitive Mode…</div></div>)
   if (!session) return null
   if (!topicsData) return (<div className="min-h-screen flex items-center justify-center px-4"><div className="text-center"><p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Could not load AP Physics C: E&amp;M topics.</p><button onClick={() => router.push('/ap-physics-c-em')} className="text-violet-600 hover:underline">← Back to AP Physics C: E&amp;M</button></div></div>)
 
   const anyCompleted = topicsData.hasAnyCompleted
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="max-w-5xl mx-auto px-4 py-8">
         <button onClick={() => router.push('/ap-physics-c-em')} className="inline-flex items-center gap-1 text-sm text-violet-600 dark:text-violet-400 hover:underline mb-6">← Back to AP Physics C: E&amp;M</button>
         <div className="text-center mb-8">
@@ -102,7 +102,7 @@ export default function APPhysicsCEMCompetitivePage() {
           <p className="text-gray-600 dark:text-gray-400">Select a topic you&apos;ve completed, choose your game mode, and challenge other students!</p>
           <div className="mt-4 max-w-md mx-auto">
             <div className="flex justify-between text-xs text-gray-500 mb-1"><span>{topicsData.completedCount} / {topicsData.totalTopics} topics completed</span><span>{Math.round((topicsData.completedCount / topicsData.totalTopics) * 100)}%</span></div>
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div className="bg-gradient-to-r from-violet-500 to-purple-500 h-2.5 rounded-full transition-all" style={{ width: `${(topicsData.completedCount / topicsData.totalTopics) * 100}%` }} /></div>
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div className="bg-gradient-to-r from-violet-500 to-accent h-2.5 rounded-full transition-all" style={{ width: `${(topicsData.completedCount / topicsData.totalTopics) * 100}%` }} /></div>
           </div>
         </div>
 
@@ -182,7 +182,7 @@ export default function APPhysicsCEMCompetitivePage() {
             <div className="text-5xl mb-4">🔒</div>
             <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Complete a Lesson to Unlock</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">Finish any AP Physics C: E&amp;M interactive lesson with 80%+ mastery to start competing.</p>
-            <button onClick={() => router.push('/courses/ap-physics-c-em')} className="px-8 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all">Browse AP Physics C: E&amp;M Lessons</button>
+            <button onClick={() => router.push('/courses/ap-physics-c-em')} className="px-8 py-3 bg-gradient-to-r from-violet-600 to-accent text-white font-semibold rounded-xl hover:shadow-lg transition-all">Browse AP Physics C: E&amp;M Lessons</button>
           </div>
         )}
       </div>

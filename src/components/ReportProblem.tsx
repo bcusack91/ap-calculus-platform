@@ -74,7 +74,7 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
             onClick={() => setCategory(cat)}
             className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
               category === cat
-                ? 'bg-purple-600 text-white'
+                ? 'bg-accent text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-600'
             }`}
           >
@@ -87,7 +87,7 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
         onChange={e => setDescription(e.target.value)}
         placeholder="Describe the issue..."
         rows={2}
-        className="w-full text-xs rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-2 py-1.5 focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+        className="w-full text-xs rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-2 py-1.5 focus:ring-2 focus:ring-accent focus:border-transparent resize-none"
         maxLength={500}
       />
       {error && <p className="text-xs text-red-600 dark:text-red-400">{error}</p>}
@@ -95,7 +95,7 @@ export default function ReportProblem({ questionId, topicSlug, context }: Report
         <button
           onClick={handleSubmit}
           disabled={!category || !description.trim() || submitting}
-          className="px-3 py-1 text-xs font-medium bg-purple-600 text-white rounded-md hover:bg-purple-700 disabled:opacity-50 transition-colors"
+          className="px-3 py-1 text-xs font-medium bg-accent text-white rounded-md hover:bg-accent-hover disabled:opacity-50 transition-colors"
         >
           {submitting ? 'Sending...' : 'Submit'}
         </button>

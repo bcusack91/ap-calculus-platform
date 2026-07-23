@@ -92,7 +92,7 @@ export default function ChallengesWidget() {
         <div className="text-center py-6">
           <div className="text-3xl mb-2">⚠️</div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">{error}</p>
-          <button onClick={loadChallenges} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+          <button onClick={loadChallenges} className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors text-sm font-medium">
             Retry
           </button>
         </div>
@@ -114,7 +114,7 @@ export default function ChallengesWidget() {
                 onClick={() => setFilter(f)}
                 className={`px-2.5 py-1 text-xs rounded-full transition-colors ${
                   filter === f
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-accent text-white'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
                 }`}
               >
@@ -172,7 +172,7 @@ export default function ChallengesWidget() {
                       <div className="h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
                         <div
                           className={`h-full rounded-full transition-all ${
-                            c.userCompleted ? 'bg-green-500' : 'bg-purple-500'
+                            c.userCompleted ? 'bg-green-500' : 'bg-accent'
                           }`}
                           style={{ width: `${Math.min((c.userProgress / c.requirement) * 100, 100)}%` }}
                         />
@@ -189,7 +189,7 @@ export default function ChallengesWidget() {
                     {!c.userJoined && (
                       <button
                         onClick={() => joinChallenge(c.id)}
-                        className="text-xs bg-purple-600 text-white px-3 py-1.5 rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                        className="text-xs bg-accent text-white px-3 py-1.5 rounded-lg hover:bg-accent-hover transition-colors font-medium"
                       >
                         Join
                       </button>

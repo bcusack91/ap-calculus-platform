@@ -329,7 +329,7 @@ export default function ExitQuiz({
             ) : quizMustRedoUnit ? (
               <button
                 onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs, wrongPartNumbers)}
-                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
+                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"
               >
                 📚 Review This Section
               </button>
@@ -406,7 +406,7 @@ export default function ExitQuiz({
           </span>
           <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
             <div
-              className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all"
+              className="bg-gradient-to-r from-accent to-pink-500 h-2 rounded-full transition-all"
               style={{ width: `${((currentQuestion + (showExplanation ? 1 : 0)) / totalQuestions) * 100}%` }}
             />
           </div>
@@ -417,7 +417,7 @@ export default function ExitQuiz({
 
         {/* Category tag */}
         <div className="mb-4">
-          <span className="text-xs font-medium px-2 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400">
+          <span className="text-xs font-medium px-2 py-1 rounded-full bg-accent-light dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted">
             {question.category}
           </span>
         </div>
@@ -448,7 +448,7 @@ export default function ExitQuiz({
             const isSelected = selectedAnswer === i
             const isCorrect = i === shuffled.correctIndex
             const isEliminated = eliminatedOptions.has(i)
-            let style = 'border-gray-200 dark:border-gray-600 hover:border-purple-400 dark:hover:border-purple-500 cursor-pointer'
+            let style = 'border-gray-200 dark:border-gray-600 hover:border-accent-muted dark:hover:border-accent cursor-pointer'
 
             if (showExplanation) {
               if (isCorrect) {
@@ -459,7 +459,7 @@ export default function ExitQuiz({
                 style = 'border-gray-200 dark:border-gray-700 opacity-50'
               }
             } else if (isSelected) {
-              style = 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 dark:border-purple-500 ring-2 ring-purple-300 dark:ring-purple-600'
+              style = 'border-accent bg-accent-subtle dark:bg-accent-light/20 dark:border-accent ring-2 ring-accent-muted dark:ring-accent'
             }
 
             return (
@@ -478,7 +478,7 @@ export default function ExitQuiz({
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
                       showExplanation && isCorrect ? 'bg-green-500 text-white' :
                       showExplanation && isSelected && !isCorrect ? 'bg-red-500 text-white' :
-                      isSelected ? 'bg-purple-500 text-white' :
+                      isSelected ? 'bg-accent text-white' :
                       'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
                     }`}>
                       {String.fromCharCode(65 + i)}
@@ -540,7 +540,7 @@ export default function ExitQuiz({
               <button
                 onClick={handleConfirm}
                 disabled={selectedAnswer === null}
-                className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
+                className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
               >
                 Confirm Answer
               </button>
@@ -548,7 +548,7 @@ export default function ExitQuiz({
           ) : (
             <button
               onClick={handleNext}
-              className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
+              className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"
             >
               {currentQuestion < totalQuestions - 1 ? 'Next Question →' : 'See Results'}
             </button>

@@ -81,7 +81,7 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -156,11 +156,11 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
           </div>
 
           {/* Premium plan */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-purple-500 p-8 relative">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-accent p-8 relative">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Premium</h2>
             <p className="text-gray-500 dark:text-gray-400 mb-6">The complete study experience</p>
             <div className="mb-6">
-              <span className="text-4xl font-bold text-purple-600">${price.toFixed(2)}</span>
+              <span className="text-4xl font-bold text-accent">${price.toFixed(2)}</span>
               <span className="text-gray-500 dark:text-gray-400">/month</span>
               {billing === 'annual' && (
                 <p className="text-xs text-gray-400 mt-1">Billed annually (${(annualPrice * 12).toFixed(2)}/year)</p>
@@ -169,7 +169,7 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
             <ul className="space-y-3 mb-8">
               {PREMIUM_FEATURES.map((f) => (
                 <li key={f} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                  <svg className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {f}
@@ -188,7 +188,7 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
               <button
                 onClick={handleUpgrade}
                 disabled={loading}
-                className="w-full py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-colors disabled:opacity-50"
+                className="w-full py-3 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-colors disabled:opacity-50"
               >
                 {loading ? 'Loading...' : 'Upgrade to Premium'}
               </button>
@@ -213,11 +213,11 @@ export default function PricingPageClient({ annualEnabled = false }: { annualEna
                 a: (
                   <>
                     Teacher tools are free — classrooms, the gradebook, and standards mastery tracking all cost nothing. Head to{' '}
-                    <Link href="/for-teachers" className="text-purple-600 dark:text-purple-400 underline hover:no-underline">
+                    <Link href="/for-teachers" className="text-accent dark:text-accent-muted underline hover:no-underline">
                       For Teachers
                     </Link>{' '}
                     to set up your class, and see our{' '}
-                    <Link href="/dpa" className="text-purple-600 dark:text-purple-400 underline hover:no-underline">
+                    <Link href="/dpa" className="text-accent dark:text-accent-muted underline hover:no-underline">
                       DPA page
                     </Link>{' '}
                     if your school or district needs a data privacy agreement.

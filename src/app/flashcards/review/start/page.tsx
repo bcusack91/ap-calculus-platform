@@ -114,7 +114,7 @@ export default function FlashcardReviewPage() {
     return (
       <div className="container py-10">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
           <p className="mt-4 text-muted-foreground">Loading your flashcards...</p>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default function FlashcardReviewPage() {
           </p>
           <Link
             href="/auth/signin"
-            className="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700"
+            className="inline-block px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
           >
             Sign In
           </Link>
@@ -154,7 +154,7 @@ export default function FlashcardReviewPage() {
             {stats && (
               <div className="grid grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
                 <div className="bg-white rounded-lg p-4 border border-gray-200">
-                  <div className="text-3xl font-bold text-purple-600">{stats.total}</div>
+                  <div className="text-3xl font-bold text-accent">{stats.total}</div>
                   <div className="text-sm text-gray-600">Total Cards</div>
                 </div>
                 <div className="bg-white rounded-lg p-4 border border-gray-200">
@@ -167,13 +167,13 @@ export default function FlashcardReviewPage() {
             <div className="flex gap-4 justify-center">
               <Link
                 href="/flashcards"
-                className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700"
+                className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover"
               >
                 Browse All Flashcards
               </Link>
               <Link
                 href="/topics"
-                className="px-6 py-3 bg-white border border-purple-600 text-purple-900 rounded-lg font-semibold hover:bg-purple-50"
+                className="px-6 py-3 bg-white border border-accent text-accent-dark rounded-lg font-semibold hover:bg-accent-subtle"
               >
                 Continue Learning
               </Link>
@@ -193,7 +193,7 @@ export default function FlashcardReviewPage() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-6">
-          <Link href="/flashcards/review" className="text-purple-600 hover:underline mb-2 inline-block">
+          <Link href="/flashcards/review" className="text-accent hover:underline mb-2 inline-block">
             ← Back to Review Dashboard
           </Link>
           <h1 className="text-3xl font-bold mb-2">Flashcard Review</h1>
@@ -206,7 +206,7 @@ export default function FlashcardReviewPage() {
         <div className="mb-8">
           <div className="w-full bg-gray-200 rounded-full h-3">
             <div
-              className="bg-gradient-to-r from-purple-600 to-blue-600 h-3 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-accent to-accent-secondary h-3 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -244,8 +244,8 @@ export default function FlashcardReviewPage() {
                     }`}
                     style={{ backfaceVisibility: 'hidden' }}
                   >
-                    <div className="border-2 border-purple-300 rounded-xl p-10 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[350px] flex flex-col justify-center">
-                      <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
+                    <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[350px] flex flex-col justify-center">
+                      <div className="text-sm text-accent-dark font-semibold mb-4">QUESTION</div>
                       <div className="text-xl prose prose-purple max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(formatFlashcardContent(currentCard.flashcard.front))}
@@ -285,7 +285,7 @@ export default function FlashcardReviewPage() {
               {!showHint ? (
                 <button
                   onClick={() => setShowHint(true)}
-                  className="text-sm text-purple-900 hover:underline font-semibold"
+                  className="text-sm text-accent-dark hover:underline font-semibold"
                 >
                   💡 Show Hint
                 </button>

@@ -298,8 +298,8 @@ function QuizBlock({
                 : submitted && i === selected && !isCorrect
                   ? 'bg-red-100 dark:bg-red-900/30 border-red-500'
                   : selected === i
-                    ? 'bg-purple-100 dark:bg-purple-900/30 border-purple-500'
-                    : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600 hover:border-purple-300'
+                    ? 'bg-accent-light dark:bg-accent-light/30 border-accent'
+                    : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600 hover:border-accent-muted'
             } ${submitted ? 'pointer-events-none' : 'cursor-pointer'}`}
           >
             <input
@@ -307,7 +307,7 @@ function QuizBlock({
               name={`quiz-${sectionId}`}
               checked={selected === i}
               onChange={() => !submitted && setSelected(i)}
-              className="w-4 h-4 text-purple-600"
+              className="w-4 h-4 text-accent"
               disabled={submitted}
             />
             <span className="text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: renderRichText(option) }} />
@@ -340,7 +340,7 @@ function QuizBlock({
           </div>
           <button
             onClick={handleTryAgain}
-            className="px-6 py-2.5 rounded-xl font-semibold bg-purple-600 hover:bg-purple-700 text-white transition-all shadow-md"
+            className="px-6 py-2.5 rounded-xl font-semibold bg-accent hover:bg-accent-hover text-white transition-all shadow-md"
           >
             Try Again
           </button>
@@ -375,7 +375,7 @@ const markdownComponents = {
     <p className="text-lg leading-relaxed mb-4">{children}</p>
   ),
   strong: ({ children }: any) => (
-    <strong className="font-bold text-purple-700 dark:text-purple-400">
+    <strong className="font-bold text-accent-hover dark:text-accent-muted">
       {children}
     </strong>
   ),
@@ -384,31 +384,31 @@ const markdownComponents = {
   ),
   li: ({ children }: any) => <li className="text-lg">{children}</li>,
   blockquote: ({ children }: any) => (
-    <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
+    <blockquote className="border-l-4 border-accent pl-6 py-3 bg-accent-subtle dark:bg-accent-light/20 rounded-r-lg text-lg font-semibold">
       {children}
     </blockquote>
   ),
   table: ({ children }: any) => (
-    <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">
+    <table className="min-w-full border-collapse border-2 border-accent-muted dark:border-accent-hover my-6">
       {children}
     </table>
   ),
   thead: ({ children }: any) => (
-    <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>
+    <thead className="bg-accent-light dark:bg-accent-light/40">{children}</thead>
   ),
   tbody: ({ children }: any) => <tbody>{children}</tbody>,
   tr: ({ children }: any) => (
-    <tr className="border-b border-purple-200 dark:border-purple-800">
+    <tr className="border-b border-accent-light dark:border-accent-light">
       {children}
     </tr>
   ),
   th: ({ children }: any) => (
-    <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">
+    <th className="px-6 py-3 text-left text-lg font-bold text-accent-dark dark:text-accent-dark border border-accent-muted dark:border-accent-hover">
       {children}
     </th>
   ),
   td: ({ children }: any) => (
-    <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">
+    <td className="px-6 py-4 text-lg border border-accent-light dark:border-accent-light">
       {children}
     </td>
   ),
@@ -664,7 +664,7 @@ export default function DynamicInteractiveLessonRenderer({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/competitive"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-accent to-pink-600 hover:from-accent-hover hover:to-pink-700 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
             >
               <span className="text-xl">⚔️</span>
               Go to Competitive Mode
@@ -701,7 +701,7 @@ export default function DynamicInteractiveLessonRenderer({
     <div className="space-y-6">
       {/* Section titles nav */}
       {sections.length > 1 && (
-        <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
+        <div className="bg-gradient-to-r from-indigo-100/80 via-accent-light/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-accent-light/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 mr-1">
               Sections:
@@ -712,10 +712,10 @@ export default function DynamicInteractiveLessonRenderer({
                 onClick={() => setCurrentSectionIndex(index)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all truncate max-w-[180px] ${
                   currentSectionIndex === index
-                    ? 'bg-purple-600 text-white shadow-lg'
+                    ? 'bg-accent text-white shadow-lg'
                     : completedSections.has(index)
                       ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 hover:bg-green-200'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-accent-light dark:hover:bg-accent-light/30'
                 }`}
                 title={sec.title}
               >
@@ -730,7 +730,7 @@ export default function DynamicInteractiveLessonRenderer({
       )}
 
       {/* Progress Bar */}
-      <div className="space-y-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-purple-100/50 dark:border-purple-500/20 shadow-md">
+      <div className="space-y-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border border-accent-light/50 dark:border-accent/20 shadow-md">
         <div className="bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 rounded-full h-4 overflow-hidden shadow-inner">
           <div
             className="h-full transition-all duration-500 ease-out shadow-md"
@@ -746,14 +746,14 @@ export default function DynamicInteractiveLessonRenderer({
           <span className="text-gray-600 dark:text-gray-400 font-medium">
             Section {currentSectionIndex + 1} of {sections.length}
           </span>
-          <span className="text-purple-700 dark:text-purple-400 font-bold">
+          <span className="text-accent-hover dark:text-accent-muted font-bold">
             {Math.round(progress)}% Complete
           </span>
         </div>
       </div>
 
       {/* Section Content + Understanding Check */}
-      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30">
+      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-accent-light/50 dark:border-accent/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-accent-light/70 dark:hover:border-accent-muted/30">
         <div
           key={currentSection.id}
           className="animate-fade-in prose prose-lg max-w-none dark:prose-invert"
@@ -805,7 +805,7 @@ export default function DynamicInteractiveLessonRenderer({
               key={index}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 index === currentSectionIndex
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 w-10 shadow-md'
+                  ? 'bg-gradient-to-r from-accent to-pink-600 w-10 shadow-md'
                   : completedSections.has(index)
                     ? 'bg-green-500 w-2.5 shadow-sm'
                     : 'bg-gray-300 dark:bg-gray-600 w-2.5'
@@ -817,7 +817,7 @@ export default function DynamicInteractiveLessonRenderer({
         <button
           onClick={handleNext}
           disabled={!canProceed}
-          className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
+          className="group px-8 py-4 rounded-xl font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg hover:shadow-xl border-2 border-transparent hover:scale-[1.02] disabled:hover:scale-100"
         >
           {currentSectionIndex !== sections.length - 1
             ? 'Next \u2192'

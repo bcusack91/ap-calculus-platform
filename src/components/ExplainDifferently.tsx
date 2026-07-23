@@ -64,7 +64,7 @@ export default function ExplainDifferently({ concept, topicSlug }: ExplainDiffer
             onClick={() => { setStyle(s.key); if (explanation) explain() }}
             className={`px-2.5 py-1 rounded-full text-xs font-medium transition-colors ${
               style === s.key
-                ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
+                ? 'bg-accent-light text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted'
                 : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400'
             }`}
           >
@@ -87,11 +87,11 @@ export default function ExplainDifferently({ concept, topicSlug }: ExplainDiffer
       )}
 
       {upgradeMsg && (
-        <div className="mt-3 flex flex-col gap-2 rounded-lg border border-purple-200 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-purple-800 dark:text-purple-200">{upgradeMsg}</p>
+        <div className="mt-3 flex flex-col gap-2 rounded-lg border border-accent-light bg-accent-subtle p-4 dark:border-accent-hover dark:bg-accent-light/20 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-accent-dark dark:text-accent-dark">{upgradeMsg}</p>
           <Link
             href="/pricing"
-            className="flex-shrink-0 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:from-purple-700 hover:to-blue-700"
+            className="flex-shrink-0 rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-4 py-2 text-xs font-semibold text-white transition-colors hover:from-accent-hover hover:to-accent-secondary-hover"
           >
             Upgrade to Premium
           </Link>

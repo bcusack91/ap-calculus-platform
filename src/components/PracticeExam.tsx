@@ -58,8 +58,8 @@ const T: Record<AccentColor, {
     cta: 'bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400',
   },
   indigo: {
-    pageBg: 'from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
-    gradient: 'from-indigo-600 to-purple-600',
+    pageBg: 'from-indigo-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
+    gradient: 'from-indigo-600 to-accent',
     text: 'text-indigo-600 dark:text-indigo-400',
     sel: 'border-indigo-500 bg-indigo-50 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 dark:border-indigo-500',
     hover: 'hover:border-indigo-300 hover:bg-indigo-50/50 dark:hover:border-indigo-500',
@@ -112,8 +112,8 @@ const T: Record<AccentColor, {
     cta: 'bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400',
   },
   violet: {
-    pageBg: 'from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
-    gradient: 'from-violet-600 to-purple-600',
+    pageBg: 'from-violet-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
+    gradient: 'from-violet-600 to-accent',
     text: 'text-violet-600 dark:text-violet-400',
     sel: 'border-violet-500 bg-violet-50 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-500',
     hover: 'hover:border-violet-300 hover:bg-violet-50/50 dark:hover:border-violet-500',
@@ -317,7 +317,7 @@ export default function PracticeExam(config: PracticeExamConfig) {
     // Assertive at the final 5 minutes (and 1 minute), polite otherwise.
     const timeLiveLevel = timeLow ? 'assertive' : 'polite'
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
           {/* Header bar */}
           <div className="mb-6 flex items-center justify-between">

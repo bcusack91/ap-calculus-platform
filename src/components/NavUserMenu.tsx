@@ -46,11 +46,11 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
           {session.user?.name || session.user?.email}
         </span>
         {isPremium && (
-          <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 dark:from-purple-900 dark:to-blue-900 dark:text-purple-200">
+          <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-gradient-to-r from-accent-light to-blue-100 text-accent-hover dark:from-accent-light dark:to-blue-900 dark:text-accent-dark">
             ✨ PRO
           </span>
         )}
-        <AvatarDisplay avatarData={avatarData} size={34} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
+        <AvatarDisplay avatarData={avatarData} size={34} className="ring-2 ring-accent dark:ring-accent-muted rounded-full" />
       </button>
       {isOpen && (
         <div role="menu" className="absolute top-full right-0 mt-2 w-56 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
@@ -60,10 +60,10 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
             <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{session.user?.email}</p>
           </div>
 
-          <Link href="/dashboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={onClose}>
+          <Link href="/dashboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
             📊 Dashboard
           </Link>
-          <Link href="/profile" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={onClose}>
+          <Link href="/profile" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-accent-subtle dark:hover:bg-accent-light/30 transition-colors" onClick={onClose}>
             👤 Profile
           </Link>
 

@@ -613,7 +613,7 @@ function RematchPanel({
   }
 
   return (
-    <div className="mt-6 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/30 rounded-2xl p-6">
+    <div className="mt-6 bg-gradient-to-br from-indigo-900/40 to-accent-dark/40 border border-indigo-500/30 rounded-2xl p-6">
       {!open ? (
         <div className="text-center">
           <h3 className="text-lg font-bold text-white mb-1">Get them back?</h3>
@@ -622,7 +622,7 @@ function RematchPanel({
           </p>
           <button
             onClick={handleOpen}
-            className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold rounded-xl text-lg shadow-lg transition-all"
+            className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-accent hover:from-indigo-600 hover:to-accent text-white font-bold rounded-xl text-lg shadow-lg transition-all"
           >
             🔁 Rematch {publicDisplayName(opponent.name, 'them').split(' ')[0]}
           </button>
@@ -678,7 +678,7 @@ function RematchPanel({
           <button
             onClick={handleSend}
             disabled={!selected || submitting}
-            className="mt-5 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            className="mt-5 w-full py-3 bg-gradient-to-r from-indigo-500 to-accent hover:from-indigo-600 hover:to-accent text-white font-bold rounded-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all"
           >
             {submitting ? 'Creating rematch…' : selected ? 'Send Rematch →' : 'Pick a topic'}
           </button>

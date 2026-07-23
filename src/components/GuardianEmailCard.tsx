@@ -71,12 +71,12 @@ export function GuardianEmailCard() {
           onChange={(e) => setValue(e.target.value)}
           placeholder="parent@example.com"
           disabled={loading}
-          className="flex-1 px-4 py-2.5 border-2 border-gray-200 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:outline-none dark:bg-gray-700 dark:text-white text-sm"
+          className="flex-1 px-4 py-2.5 border-2 border-gray-200 dark:border-gray-600 rounded-lg focus:border-accent focus:outline-none dark:bg-gray-700 dark:text-white text-sm"
         />
         <button
           onClick={save}
           disabled={saving || loading}
-          className="px-4 py-2.5 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 disabled:opacity-50 transition-colors text-sm"
+          className="px-4 py-2.5 bg-accent text-white font-semibold rounded-lg hover:bg-accent-hover disabled:opacity-50 transition-colors text-sm"
         >
           {saving ? 'Saving…' : 'Save'}
         </button>

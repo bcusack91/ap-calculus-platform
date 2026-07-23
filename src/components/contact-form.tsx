@@ -224,7 +224,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-lg shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover rounded-lg shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === "submitting" ? (
               <span className="flex items-center justify-center gap-2">

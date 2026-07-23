@@ -125,7 +125,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
           <div className="text-3xl mb-2">⚠️</div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">{error}</p>
-          <button onClick={loadSession} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+          <button onClick={loadSession} className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors text-sm font-medium">
             Retry
           </button>
         </div>
@@ -157,9 +157,9 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
                 <p className="text-2xl font-bold text-red-600">{total - correct}</p>
                 <p className="text-xs text-red-600">Again</p>
               </div>
-              <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-4">
-                <p className="text-2xl font-bold text-purple-600">{retention}%</p>
-                <p className="text-xs text-purple-600">Retention</p>
+              <div className="bg-accent-subtle dark:bg-accent-light/20 rounded-xl p-4">
+                <p className="text-2xl font-bold text-accent">{retention}%</p>
+                <p className="text-xs text-accent">Retention</p>
               </div>
             </div>
           )}
@@ -182,7 +182,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
 
           <button
             onClick={onComplete}
-            className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+            className="bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-hover transition-colors"
           >
             Done
           </button>
@@ -202,7 +202,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         </span>
         <div className="flex-1 mx-4 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
           <div
-            className="h-full bg-purple-600 rounded-full transition-all duration-300"
+            className="h-full bg-accent rounded-full transition-all duration-300"
             style={{ width: `${((currentIndex + 1) / cards.length) * 100}%` }}
           />
         </div>
@@ -224,7 +224,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         }`}
       >
         {card.topicTitle && (
-          <p className="text-xs text-purple-600 dark:text-purple-400 mb-3 uppercase tracking-wider">{card.topicTitle}</p>
+          <p className="text-xs text-accent dark:text-accent-muted mb-3 uppercase tracking-wider">{card.topicTitle}</p>
         )}
         <p
           className="text-lg text-center text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap"

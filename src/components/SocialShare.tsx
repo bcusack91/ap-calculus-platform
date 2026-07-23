@@ -101,7 +101,7 @@ export function SocialShare({ url, title, description }: SocialShareProps) {
       <button
         onClick={handleCopy}
         title="Copy link"
-        className="inline-flex items-center justify-center h-8 w-8 rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-purple-600 hover:text-white transition-all"
+        className="inline-flex items-center justify-center h-8 w-8 rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-accent hover:text-white transition-all"
       >
         {copied ? (
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -691,7 +691,7 @@ export default function ClassroomDetailPage() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center gap-3 mb-2">
@@ -736,7 +736,7 @@ export default function ClassroomDetailPage() {
             </button>
             <button
               onClick={() => setShowQR(!showQR)}
-              className="px-3 py-2 text-xs font-medium bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors"
+              className="px-3 py-2 text-xs font-medium bg-accent-subtle dark:bg-accent-light/30 text-accent dark:text-accent-muted rounded-lg hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
               title="Show QR code for students to scan"
             >
               📱 QR Code
@@ -826,7 +826,7 @@ export default function ClassroomDetailPage() {
                         }
                       }
                     }}
-                    className="text-xs font-medium px-3 py-1.5 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors"
+                    className="text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-light dark:bg-accent-light/30 text-accent-hover dark:text-accent-muted hover:bg-accent-light dark:hover:bg-accent-light/50 transition-colors"
                   >
                     {activeMembers.every(m => competitiveGrants[m.user.id]) ? '⚔️ Revoke All Competitive' : '⚔️ Grant All Competitive'}
                   </button>
@@ -880,7 +880,7 @@ export default function ClassroomDetailPage() {
                         className={`text-xs font-medium px-3 py-1.5 rounded-lg transition-colors ${
                           competitiveGrants[m.user.id]
                             ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50'
-                            : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-400'
+                            : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-accent-light dark:hover:bg-accent-light/30 hover:text-accent-hover dark:hover:text-accent-muted'
                         }`}
                         title={competitiveGrants[m.user.id] ? 'Click to revoke competitive access' : 'Grant competitive mode access (bypasses mastery requirement)'}
                       >
@@ -991,7 +991,7 @@ export default function ClassroomDetailPage() {
                     setScheduleError('')
                     setShowScheduleModal(true)
                   }}
-                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-all text-sm"
+                  className="px-4 py-2 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover transition-all text-sm"
                   title="Put a live game on the calendar — students see it on their assignments page"
                 >
                   📅 Schedule live game
@@ -1021,7 +1021,7 @@ export default function ClassroomDetailPage() {
                 {classroom.competitions.map((c) => (
                   <div
                     key={c.id}
-                    className="p-4 rounded-xl border border-purple-100 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/10"
+                    className="p-4 rounded-xl border border-accent-light dark:border-accent-light bg-accent-subtle dark:bg-accent-light/10"
                   >
                     <div className="flex justify-between items-start">
                       <div>
@@ -1112,8 +1112,8 @@ export default function ClassroomDetailPage() {
                     <div className="text-2xl font-bold text-green-600">{perfData.classSummary.totalTopicsCompleted}</div>
                     <div className="text-xs text-gray-500">Topics Completed</div>
                   </div>
-                  <div className="p-4 rounded-xl bg-purple-50 dark:bg-purple-900/10 text-center">
-                    <div className="text-2xl font-bold text-purple-600">{perfData.classSummary.avgAssignmentScore}%</div>
+                  <div className="p-4 rounded-xl bg-accent-subtle dark:bg-accent-light/10 text-center">
+                    <div className="text-2xl font-bold text-accent">{perfData.classSummary.avgAssignmentScore}%</div>
                     <div className="text-xs text-gray-500">Avg Assignment Score</div>
                   </div>
                   <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-900/10 text-center">
@@ -1748,7 +1748,7 @@ export default function ClassroomDetailPage() {
             <button
               onClick={submitSchedule}
               disabled={!scheduleForm.title.trim() || !scheduleForm.topicSlug || !scheduleForm.scheduledAt || schedulingComp}
-              className="flex-1 px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              className="flex-1 px-6 py-3 bg-accent text-white font-semibold rounded-xl hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {schedulingComp ? 'Scheduling…' : 'Schedule'}
             </button>

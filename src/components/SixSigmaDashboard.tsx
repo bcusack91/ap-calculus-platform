@@ -37,7 +37,7 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
   // see an upgrade prompt instead of the dashboard (the API enforces this too).
   if (!premium) {
     return (
-      <div className="rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 p-8 text-center dark:border-purple-800 dark:from-purple-900/20 dark:to-blue-900/20">
+      <div className="rounded-xl border border-accent-light bg-gradient-to-br from-accent-subtle to-blue-50 p-8 text-center dark:border-accent-light dark:from-accent-light/20 dark:to-blue-900/20">
         <span className="text-4xl">📊</span>
         <h3 className="mt-2 text-xl font-bold text-gray-900 dark:text-white">Advanced Analytics is a Premium feature</h3>
         <p className="mx-auto mt-2 max-w-md text-sm text-gray-600 dark:text-gray-400">
@@ -45,7 +45,7 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
         </p>
         <Link
           href="/pricing"
-          className="mt-5 inline-flex rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-2.5 font-semibold text-white transition hover:from-purple-700 hover:to-blue-700"
+          className="mt-5 inline-flex rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-6 py-2.5 font-semibold text-white transition hover:from-accent-hover hover:to-accent-secondary-hover"
         >
           Upgrade to Premium
         </Link>
@@ -79,9 +79,9 @@ export default function SixSigmaDashboard({ topicSlug, userId }: SixSigmaDashboa
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white">
+      <div className="bg-gradient-to-r from-accent to-accent-secondary rounded-xl p-8 text-white">
         <h2 className="text-3xl font-bold mb-2">📊 Six Sigma Performance Analytics</h2>
-        <p className="text-purple-100">Statistical Process Control for Your Learning Journey</p>
+        <p className="text-accent-light">Statistical Process Control for Your Learning Journey</p>
       </div>
 
       {/* Tab Navigation */}
@@ -130,7 +130,7 @@ function TabButton({ active, onClick, children }: { active: boolean; onClick: ()
       onClick={onClick}
       className={`flex-1 px-6 py-4 font-semibold transition-colors ${
         active
-          ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400 border-b-4 border-purple-600'
+          ? 'bg-accent-subtle dark:bg-accent-light/20 text-accent-hover dark:text-accent-muted border-b-4 border-accent'
           : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50'
       }`}
     >
@@ -263,11 +263,11 @@ function ParetoTab({ analytics }: { analytics: SixSigmaAnalytics }) {
 
   return (
     <div className="space-y-6">
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6">
-        <h3 className="text-xl font-bold mb-2 text-purple-900 dark:text-purple-300">
+      <div className="bg-accent-subtle dark:bg-accent-light/20 rounded-lg p-6">
+        <h3 className="text-xl font-bold mb-2 text-accent-dark dark:text-accent-muted">
           📊 Pareto Principle (80/20 Rule)
         </h3>
-        <p className="text-purple-800 dark:text-purple-200">
+        <p className="text-accent-dark dark:text-accent-dark">
           Typically, 80% of your errors come from 20% of error types. Focus on fixing these critical
           errors first for maximum improvement.
         </p>
@@ -366,9 +366,9 @@ function RecommendationsTab({ analytics }: { analytics: SixSigmaAnalytics }) {
             {improvements.focusAreas.map(area => (
               <div
                 key={area}
-                className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4 border border-purple-200 dark:border-purple-700"
+                className="bg-accent-subtle dark:bg-accent-light/20 rounded-lg p-4 border border-accent-light dark:border-accent-hover"
               >
-                <div className="font-semibold text-purple-900 dark:text-purple-200">
+                <div className="font-semibold text-accent-dark dark:text-accent-dark">
                   {formatProblemType(area)}
                 </div>
               </div>
@@ -388,7 +388,7 @@ function RecommendationsTab({ analytics }: { analytics: SixSigmaAnalytics }) {
               key={index}
               className="flex items-start gap-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4"
             >
-              <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">
+              <div className="flex-shrink-0 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center font-bold">
                 {index + 1}
               </div>
               <div className="flex-1 text-gray-700 dark:text-gray-300">
@@ -414,7 +414,7 @@ function MetricCard({ title, value, subtitle, color }: {
     green: 'from-green-500 to-emerald-600',
     blue: 'from-blue-500 to-cyan-600',
     yellow: 'from-yellow-500 to-orange-600',
-    purple: 'from-purple-500 to-pink-600',
+    purple: 'from-accent to-pink-600',
     red: 'from-red-500 to-rose-600'
   }
 

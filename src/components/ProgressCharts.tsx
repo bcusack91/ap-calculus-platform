@@ -46,7 +46,7 @@ export default function ProgressCharts() {
         <div className="text-center py-8">
           <div className="text-3xl mb-2">⚠️</div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">{error}</p>
-          <button onClick={loadData} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+          <button onClick={loadData} className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors text-sm font-medium">
             Retry
           </button>
         </div>
@@ -74,7 +74,7 @@ export default function ProgressCharts() {
               onClick={() => setActiveTab(tab.key)}
               className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                 activeTab === tab.key
-                  ? 'bg-purple-600 text-white'
+                  ? 'bg-accent text-white'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -108,7 +108,7 @@ function MasteryChart({ data }: { data: ChartData['masteryTimeline'] }) {
               <span className="text-xs text-gray-500 dark:text-gray-400">{week.avgMastery}%</span>
               <div className="w-full bg-gray-100 dark:bg-gray-700 rounded-t relative" style={{ height: '100%' }}>
                 <div
-                  className="absolute bottom-0 w-full bg-gradient-to-t from-purple-600 to-purple-400 rounded-t transition-all duration-500"
+                  className="absolute bottom-0 w-full bg-gradient-to-t from-accent to-accent-muted rounded-t transition-all duration-500"
                   style={{ height: `${height}%` }}
                 />
               </div>
@@ -213,7 +213,7 @@ function SubjectBreakdown({ data }: { data: ChartData['subjectBreakdown'] }) {
               </div>
               <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-accent to-accent rounded-full transition-all duration-500"
                   style={{ width: `${pct}%` }}
                 />
               </div>

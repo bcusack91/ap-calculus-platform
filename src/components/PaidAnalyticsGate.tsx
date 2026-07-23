@@ -14,7 +14,7 @@ export function PaidAnalyticsGate({ children, label = 'Advanced analytics' }: { 
   if (isPaid) return <>{children}</>
 
   return (
-    <div className="rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 p-6 text-center dark:border-purple-700 dark:from-purple-900/20 dark:to-blue-900/20">
+    <div className="rounded-xl border border-accent-light bg-gradient-to-br from-accent-subtle to-blue-50 p-6 text-center dark:border-accent-hover dark:from-accent-light/20 dark:to-blue-900/20">
       <span className="text-3xl">📈</span>
       <h3 className="mt-2 font-bold text-gray-900 dark:text-white">{label} is a Premium feature</h3>
       <p className="mx-auto mt-1 max-w-md text-sm text-gray-600 dark:text-gray-400">
@@ -22,7 +22,7 @@ export function PaidAnalyticsGate({ children, label = 'Advanced analytics' }: { 
       </p>
       <Link
         href="/pricing"
-        className="mt-4 inline-flex rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-2 text-sm font-semibold text-white transition hover:from-purple-700 hover:to-blue-700"
+        className="mt-4 inline-flex rounded-lg bg-gradient-to-r from-accent to-accent-secondary px-5 py-2 text-sm font-semibold text-white transition hover:from-accent-hover hover:to-accent-secondary-hover"
       >
         Upgrade to Premium
       </Link>

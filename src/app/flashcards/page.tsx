@@ -54,7 +54,7 @@ export default async function FlashcardsPage({
             : 'Review concepts with our Anki-style spaced repetition system!'}
         </p>
         {courseName && (
-          <Link href="/flashcards" className="text-sm text-purple-600 hover:underline mb-4 inline-block">
+          <Link href="/flashcards" className="text-sm text-accent hover:underline mb-4 inline-block">
             ← View all flashcard categories
           </Link>
         )}
@@ -63,7 +63,7 @@ export default async function FlashcardsPage({
         <div className="mb-8">
           <Link
             href="/flashcards/review"
-            className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-lg transition-all"
+            className="inline-block px-6 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg shadow-lg transition-all"
           >
             🎯 Start Review Session
           </Link>
@@ -87,15 +87,15 @@ export default async function FlashcardsPage({
                     <Link
                       key={topic.id}
                       href={`/flashcards/${topic.slug}`}
-                      className="block group rounded-lg border p-6 hover:shadow-lg transition-all hover:border-purple-300"
+                      className="block group rounded-lg border p-6 hover:shadow-lg transition-all hover:border-accent-muted"
                     >
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="font-semibold group-hover:text-purple-600 transition-colors">
+                        <h3 className="font-semibold group-hover:text-accent transition-colors">
                           {topic.title}
                         </h3>
                         {/* Temporarily hidden for free tier launch
                         {topic.isPremium && (
-                          <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
+                          <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-accent-light text-accent-dark">
                             Premium
                           </span>
                         )}
@@ -104,7 +104,7 @@ export default async function FlashcardsPage({
                       <p className="text-sm text-muted-foreground">
                         {topic._count.flashcards} {topic._count.flashcards === 1 ? 'card' : 'cards'}
                       </p>
-                      <div className="mt-4 text-sm text-purple-600 group-hover:underline">
+                      <div className="mt-4 text-sm text-accent group-hover:underline">
                         Study now →
                       </div>
                     </Link>
@@ -119,14 +119,14 @@ export default async function FlashcardsPage({
         <InArticleAd />
 
         {/* Temporarily hidden for free tier launch
-        <div className="mt-12 p-6 rounded-lg bg-purple-50 border border-purple-200">
+        <div className="mt-12 p-6 rounded-lg bg-accent-subtle border border-accent-light">
           <h3 className="text-xl font-bold mb-2">🌟 Upgrade for Spaced Repetition</h3>
           <p className="text-muted-foreground mb-4">
             Premium members get Anki-style spaced repetition flashcards that adapt to your memory. Never forget what you've learned!
           </p>
           <Link
             href="/premium"
-            className="inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-2 text-sm font-semibold text-white hover:bg-purple-700"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-2 text-sm font-semibold text-white hover:bg-accent-hover"
           >
             Learn More
           </Link>

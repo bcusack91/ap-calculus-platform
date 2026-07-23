@@ -59,7 +59,7 @@ export default function DashboardTutorial() {
             <div
               key={i}
               className={`w-2 h-2 rounded-full transition-colors ${
-                i === step ? 'bg-purple-600' : i < step ? 'bg-purple-300' : 'bg-gray-300 dark:bg-gray-600'
+                i === step ? 'bg-accent' : i < step ? 'bg-accent-muted' : 'bg-gray-300 dark:bg-gray-600'
               }`}
             />
           ))}
@@ -83,7 +83,7 @@ export default function DashboardTutorial() {
             )}
             <button
               onClick={next}
-              className="px-6 py-2 text-sm font-semibold rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+              className="px-6 py-2 text-sm font-semibold rounded-lg bg-accent text-white hover:bg-accent-hover transition-colors"
             >
               {step >= STEPS.length - 1 ? 'Get Started!' : 'Next'}
             </button>

@@ -90,9 +90,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   // Map course colors to Tailwind classes
   const colorMap: Record<string, { bg: string; gradient: string; border: string }> = {
     purple: { 
-      bg: 'from-purple-50 to-purple-100', 
-      gradient: 'from-purple-600 to-blue-600',
-      border: 'border-purple-300'
+      bg: 'from-accent-subtle to-accent-light', 
+      gradient: 'from-accent to-accent-secondary',
+      border: 'border-accent-muted'
     },
     blue: { 
       bg: 'from-blue-50 to-blue-100', 
@@ -111,7 +111,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     },
     indigo: { 
       bg: 'from-indigo-50 to-indigo-100', 
-      gradient: 'from-indigo-600 to-purple-600',
+      gradient: 'from-indigo-600 to-accent',
       border: 'border-indigo-300'
     },
     violet: { 
@@ -165,9 +165,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <div className="mx-auto max-w-6xl">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm text-muted-foreground">
-          <Link href="/" className="hover:text-purple-600 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-accent transition-colors">Home</Link>
           {' / '}
-          <Link href={`/courses/${category.course.slug}`} className="hover:text-purple-600 transition-colors">
+          <Link href={`/courses/${category.course.slug}`} className="hover:text-accent transition-colors">
             {category.course.name}
           </Link>
           {' / '}
@@ -186,7 +186,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               <div className="flex items-center gap-3 mb-3">
                 <Link 
                   href={`/courses/${category.course.slug}`}
-                  className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-purple-600 transition-colors"
+                  className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-accent transition-colors"
                 >
                   {category.course.icon} {category.course.name}
                 </Link>
@@ -258,7 +258,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   href={`/topics/${topic.slug}`}
                   className={`group block p-6 rounded-xl border-2 ${colors.border} hover:shadow-lg transition-all bg-white dark:bg-gray-900`}
                 >
-                  <h3 className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-purple-600 transition-colors mb-3">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-accent transition-colors mb-3">
                     {topic.title}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-4">
@@ -298,7 +298,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <div className="mt-12 text-center">
           <Link
             href={`/courses/${category.course.slug}`}
-            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-medium transition-colors"
           >
             ← Back to {category.course.name}
           </Link>

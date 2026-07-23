@@ -136,7 +136,7 @@ export default function PomodoroTimer() {
           className={`px-6 py-2 rounded-lg font-semibold text-sm transition-colors ${
             running
               ? 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300'
-              : 'bg-purple-600 text-white hover:bg-purple-700'
+              : 'bg-accent text-white hover:bg-accent-hover'
           }`}
         >
           {running ? 'Pause' : 'Start'}

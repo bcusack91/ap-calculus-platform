@@ -69,11 +69,11 @@ export default function ReviewPlanPage() {
   const days = Array.from({ length: PLAN_DAYS }, (_, i) => i + 1).filter(d => plan.some(p => p.day === d))
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-indigo-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Link
           href="/dashboard"
-          className="inline-flex items-center gap-1 text-sm text-purple-600 dark:text-purple-400 hover:underline mb-6"
+          className="inline-flex items-center gap-1 text-sm text-accent dark:text-accent-muted hover:underline mb-6"
         >
           ← Back to Dashboard
         </Link>
@@ -81,7 +81,7 @@ export default function ReviewPlanPage() {
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900 dark:text-white mb-2">
             Your{' '}
-            <span className="bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-accent to-indigo-500 bg-clip-text text-transparent">
               Review Plan
             </span>
           </h1>
@@ -108,13 +108,13 @@ export default function ReviewPlanPage() {
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/topics"
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold hover:shadow-lg transition"
+                className="px-6 py-3 rounded-xl bg-gradient-to-r from-accent to-indigo-600 text-white font-semibold hover:shadow-lg transition"
               >
                 Browse Topics
               </Link>
               <Link
                 href="/competitive"
-                className="px-6 py-3 rounded-xl border-2 border-purple-300 dark:border-purple-600 text-purple-700 dark:text-purple-400 font-semibold hover:bg-purple-50 dark:hover:bg-purple-900/20 transition"
+                className="px-6 py-3 rounded-xl border-2 border-accent-muted dark:border-accent text-accent-hover dark:text-accent-muted font-semibold hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition"
               >
                 Competitive Mode
               </Link>
@@ -125,7 +125,7 @@ export default function ReviewPlanPage() {
             {days.map(day => (
               <div key={day}>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-purple-600 text-white text-sm font-bold">
+                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-accent text-white text-sm font-bold">
                     {day}
                   </span>
                   Day {day}
@@ -155,20 +155,20 @@ export default function ReviewPlanPage() {
                           </div>
                           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-3">
                             <div
-                              className="bg-gradient-to-r from-purple-500 to-indigo-500 h-1.5 rounded-full"
+                              className="bg-gradient-to-r from-accent to-indigo-500 h-1.5 rounded-full"
                               style={{ width: `${Math.min(100, Math.max(2, topic.masteryLevel))}%` }}
                             />
                           </div>
                           <div className="flex flex-wrap gap-2">
                             <Link
                               href={`/topics/${topic.slug}`}
-                              className="px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium transition"
+                              className="px-4 py-2 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-medium transition"
                             >
                               Study Lesson
                             </Link>
                             <Link
                               href={`/topics/${topic.slug}/interactive`}
-                              className="px-4 py-2 rounded-lg border border-purple-300 dark:border-purple-600 text-purple-700 dark:text-purple-400 text-sm font-medium hover:bg-purple-50 dark:hover:bg-purple-900/20 transition"
+                              className="px-4 py-2 rounded-lg border border-accent-muted dark:border-accent text-accent-hover dark:text-accent-muted text-sm font-medium hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition"
                             >
                               Interactive Practice
                             </Link>

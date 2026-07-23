@@ -206,7 +206,7 @@ export function GraphingQuestion({
 
   return (
     <div className="my-6 rounded-lg border-2 border-fuchsia-300 dark:border-fuchsia-700 overflow-hidden">
-      <div className="bg-gradient-to-r from-fuchsia-500 to-purple-500 text-white px-5 py-3">
+      <div className="bg-gradient-to-r from-fuchsia-500 to-accent text-white px-5 py-3">
         <h3 className="font-bold text-lg flex items-center gap-2">
           <span>📈</span> Graphing: {title}
         </h3>

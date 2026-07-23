@@ -60,8 +60,8 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         <div className="px-3 py-2">
           <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>
           {testPrepCourses.length > 0 && (
-            <div className="mb-2 rounded-md border border-purple-100 dark:border-purple-800/50 p-2">
-              <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-purple-600 dark:text-purple-300">
+            <div className="mb-2 rounded-md border border-accent-light dark:border-accent-light/50 p-2">
+              <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-accent dark:text-accent-muted">
                 Test Prep
               </div>
               {testPrepCourses.map(course => (
@@ -105,7 +105,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           Flashcards
         </Link>
-        <Link href="/competitive" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md" onClick={onClose}>
+        <Link href="/competitive" className="block px-3 py-2 text-base font-medium text-accent dark:text-accent-muted hover:bg-accent rounded-md" onClick={onClose}>
           🎮 Competitive Mode
         </Link>
         <Link href="/leaderboard" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
@@ -125,7 +125,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         <div className="pt-4 border-t mt-2">
           {session ? (
             <div className="space-y-2">
-              <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md" onClick={onClose}>
+              <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-accent dark:text-accent-muted hover:bg-accent rounded-md" onClick={onClose}>
                 📊 Dashboard
               </Link>
               <Link href="/profile" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
@@ -142,7 +142,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
                 </Link>
               )}
               <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent rounded-md" onClick={onClose}>
-                <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
+                <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-accent dark:ring-accent-muted rounded-full" />
                 <div className="text-sm text-gray-700 dark:text-gray-300">
                   {session.user?.name || session.user?.email}
                 </div>
@@ -165,7 +165,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
               </Link>
               <Link
                 href="/auth/signup"
-                className="block px-3 py-2 text-base font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-md text-center"
+                className="block px-3 py-2 text-base font-medium bg-gradient-to-r from-accent to-accent-secondary text-white rounded-md text-center"
                 onClick={onClose}
               >
                 Sign Up

@@ -135,7 +135,7 @@ export default function FlashcardStudyPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl font-bold mb-4">Flashcards Not Found</h1>
           <p className="text-muted-foreground mb-6">{error || 'The requested flashcards could not be found.'}</p>
-          <Link href="/flashcards" className="text-purple-600 hover:underline">
+          <Link href="/flashcards" className="text-accent hover:underline">
             ← Back to Flashcards
           </Link>
         </div>
@@ -149,7 +149,7 @@ export default function FlashcardStudyPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl font-bold mb-4">{topic.title}</h1>
           <p className="text-muted-foreground mb-6">No flashcards available for this topic yet.</p>
-          <Link href="/flashcards" className="text-purple-600 hover:underline">
+          <Link href="/flashcards" className="text-accent hover:underline">
             ← Back to Flashcards
           </Link>
         </div>
@@ -165,7 +165,7 @@ export default function FlashcardStudyPage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-6">
-          <Link href={`/topics/${topic.slug}`} className="text-purple-600 hover:underline mb-4 inline-block">
+          <Link href={`/topics/${topic.slug}`} className="text-accent hover:underline mb-4 inline-block">
             ← Back to Topic
           </Link>
           <h1 className="text-3xl font-bold mb-2">{topic.title} - Flashcards</h1>
@@ -178,7 +178,7 @@ export default function FlashcardStudyPage() {
             <div className="mb-8">
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-purple-600 h-2 rounded-full transition-all duration-300"
+                  className="bg-accent h-2 rounded-full transition-all duration-300"
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -206,8 +206,8 @@ export default function FlashcardStudyPage() {
                     }`}
                     style={{ backfaceVisibility: 'hidden' }}
                   >
-                    <div className="border-2 border-purple-300 rounded-lg p-8 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[300px] flex flex-col justify-center">
-                      <div className="text-sm text-purple-900 font-semibold mb-4">QUESTION</div>
+                    <div className="border-2 border-accent-muted rounded-lg p-8 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[300px] flex flex-col justify-center">
+                      <div className="text-sm text-accent-dark font-semibold mb-4">QUESTION</div>
                       <div className="text-lg prose prose-purple max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                           {escapeCurrencyMath(formatFlashcardContent(currentCard.front))}
@@ -250,7 +250,7 @@ export default function FlashcardStudyPage() {
                   {!showHint ? (
                     <button
                       onClick={() => setShowHint(true)}
-                      className="text-sm text-purple-900 hover:underline font-semibold"
+                      className="text-sm text-accent-dark hover:underline font-semibold"
                     >
                       💡 Show Hint
                     </button>
@@ -280,7 +280,7 @@ export default function FlashcardStudyPage() {
 
               <button
                 onClick={handleFlip}
-                className="px-6 py-3 rounded-lg font-semibold bg-purple-600 hover:bg-purple-700 text-white transition-all"
+                className="px-6 py-3 rounded-lg font-semibold bg-accent hover:bg-accent-hover text-white transition-all"
               >
                 {isFlipped ? 'Show Question' : 'Show Answer'}
               </button>
@@ -337,24 +337,24 @@ export default function FlashcardStudyPage() {
             </div>
 
             {/* Quick Navigation */}
-            <div className="mt-8 bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-6">
-              <h3 className="font-bold text-purple-900 mb-4 flex items-center gap-2">
+            <div className="mt-8 bg-gradient-to-br from-accent-subtle to-blue-50 border-2 border-accent-light rounded-lg p-6">
+              <h3 className="font-bold text-accent-dark mb-4 flex items-center gap-2">
                 <span>🎯</span> Quick Navigation
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <Link href="/" className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                <Link href="/" className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">🏠</div>
                   <div className="text-sm font-semibold">All Courses</div>
                 </Link>
-                <Link href={`/courses/${topic.category.course.slug}`} className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                <Link href={`/courses/${topic.category.course.slug}`} className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">📚</div>
                   <div className="text-sm font-semibold">{topic.category.course.name}</div>
                 </Link>
-                <Link href={`/categories/${topic.category.slug}`} className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                <Link href={`/categories/${topic.category.slug}`} className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">📂</div>
                   <div className="text-sm font-semibold">{topic.category.name}</div>
                 </Link>
-                <Link href={`/topics/${topic.slug}`} className="text-center p-3 bg-white rounded-lg border border-purple-200 text-purple-700 hover:text-purple-900 hover:border-purple-400 transition-all">
+                <Link href={`/topics/${topic.slug}`} className="text-center p-3 bg-white rounded-lg border border-accent-light text-accent-hover hover:text-accent-dark hover:border-accent-muted transition-all">
                   <div className="text-2xl mb-1">📖</div>
                   <div className="text-sm font-semibold">Topic Page</div>
                 </Link>

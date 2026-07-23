@@ -61,18 +61,18 @@ export default function WeakTopicsDashboard() {
               <span className="text-sm font-bold text-red-600 dark:text-red-400">{topic.masteryLevel}%</span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-gray-900 dark:text-white truncate group-hover:text-purple-600 dark:group-hover:text-purple-400">
+              <p className="text-sm font-medium text-gray-900 dark:text-white truncate group-hover:text-accent dark:group-hover:text-accent-muted">
                 {topic.title}
               </p>
               <p className="text-xs text-gray-500 dark:text-gray-400">{topic.courseName} · Avg quiz: {topic.quizAvgScore}%</p>
             </div>
-            <span className="text-gray-400 group-hover:text-purple-600">→</span>
+            <span className="text-gray-400 group-hover:text-accent">→</span>
           </Link>
         ))}
       </div>
       <Link
         href="/dashboard/review-plan"
-        className="block mt-4 text-center text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
+        className="block mt-4 text-center text-sm font-medium text-accent dark:text-accent-muted hover:underline"
       >
         Create a review plan →
       </Link>

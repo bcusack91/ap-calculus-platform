@@ -160,7 +160,7 @@ export default function StudyPlanner() {
         <div className="text-center py-6">
           <div className="text-3xl mb-2">⚠️</div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">{error}</p>
-          <button onClick={loadPlans} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium">
+          <button onClick={loadPlans} className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors text-sm font-medium">
             Retry
           </button>
         </div>
@@ -178,7 +178,7 @@ export default function StudyPlanner() {
         </h2>
         <button
           onClick={() => setShowCreate(!showCreate)}
-          className="text-sm bg-purple-600 text-white px-3 py-1.5 rounded-lg hover:bg-purple-700 transition-colors"
+          className="text-sm bg-accent text-white px-3 py-1.5 rounded-lg hover:bg-accent-hover transition-colors"
         >
           + New Plan
         </button>
@@ -186,7 +186,7 @@ export default function StudyPlanner() {
 
       {/* Create form */}
       {showCreate && (
-        <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border-b border-gray-200 dark:border-gray-700">
+        <div className="p-4 bg-accent-subtle dark:bg-accent-light/20 border-b border-gray-200 dark:border-gray-700">
           <input
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)}
@@ -213,7 +213,7 @@ export default function StudyPlanner() {
             </select>
             <button
               onClick={createPlan}
-              className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 text-sm font-medium"
+              className="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent-hover text-sm font-medium"
             >
               Create
             </button>
@@ -230,7 +230,7 @@ export default function StudyPlanner() {
               onClick={() => setActivePlan(p.id)}
               className={`px-3 py-1.5 text-sm rounded-lg whitespace-nowrap transition-colors ${
                 activePlan === p.id
-                  ? 'bg-purple-600 text-white'
+                  ? 'bg-accent text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200'
               }`}
             >
@@ -245,7 +245,7 @@ export default function StudyPlanner() {
         <div className="p-4">
           {/* Countdown */}
           {plan.examDate && (
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-4 mb-4 text-white">
+            <div className="bg-gradient-to-r from-accent to-indigo-600 rounded-xl p-4 mb-4 text-white">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm opacity-80">{plan.goalType.replace('_', ' ')}</p>
@@ -304,7 +304,7 @@ export default function StudyPlanner() {
                     className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
                       task.completed
                         ? 'bg-green-500 border-green-500 text-white'
-                        : 'border-gray-300 dark:border-gray-500 hover:border-purple-500'
+                        : 'border-gray-300 dark:border-gray-500 hover:border-accent'
                     }`}
                   >
                     {task.completed && (
@@ -323,7 +323,7 @@ export default function StudyPlanner() {
                     {task.topicPath ? (
                       <Link
                         href={task.topicPath}
-                        className="hover:text-purple-600 dark:hover:text-purple-400 hover:underline"
+                        className="hover:text-accent dark:hover:text-accent-muted hover:underline"
                       >
                         {task.title} →
                       </Link>

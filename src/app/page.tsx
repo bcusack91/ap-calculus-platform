@@ -54,7 +54,7 @@ export default async function Home() {
       {/* JSON-LD structured data is already injected globally via layout.tsx — no duplicates needed here */}
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 dark:from-purple-950 dark:via-gray-900 dark:to-blue-950 py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-accent-subtle via-blue-50 to-cyan-50 dark:from-accent-subtle dark:via-gray-900 dark:to-blue-950 py-20 sm:py-32">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <span className="flex justify-center mb-6">
@@ -75,10 +75,10 @@ export default async function Home() {
                 <path d="M27 39 Q32 42.5 37 39" stroke="#7C3AED" strokeWidth="1.5" fill="none"/>
               </svg>
             </span>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl gradient-text-accessible bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl gradient-text-accessible bg-gradient-to-r from-accent via-blue-600 to-cyan-600">
               Master Math & Science
             </h1>
-            <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700 dark:text-purple-400">
+            <p className="mt-4 text-base font-semibold tracking-wide uppercase text-accent-hover dark:text-accent-muted">
               Grade 4 → AP · SAT · ACT · MCAT
             </p>
             <p className="mt-3 text-lg leading-8 text-gray-600 dark:text-gray-400">
@@ -93,7 +93,7 @@ export default async function Home() {
                 href="/topics"
                 eventName="homepage_cta_click"
                 eventParams={{ destination: '/topics', cta_name: 'get_started_free', cta_type: 'primary', page_template: 'homepage', location: 'hero' }}
-                className="rounded-lg px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all"
+                className="rounded-lg px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover shadow-lg hover:shadow-xl transition-all"
               >
                 Get Started Free
               </TrackedLink>
@@ -101,7 +101,7 @@ export default async function Home() {
                 href="/about"
                 eventName="homepage_cta_click"
                 eventParams={{ destination: '/about', cta_name: 'learn_more', cta_type: 'secondary', page_template: 'homepage', location: 'hero' }}
-                className="rounded-lg px-6 py-3 text-base font-semibold text-purple-700 dark:text-purple-300 bg-white/70 dark:bg-gray-800/70 border border-purple-200 dark:border-purple-800 hover:bg-white dark:hover:bg-gray-800 transition-all"
+                className="rounded-lg px-6 py-3 text-base font-semibold text-accent-hover dark:text-accent-muted bg-white/70 dark:bg-gray-800/70 border border-accent-light dark:border-accent-light hover:bg-white dark:hover:bg-gray-800 transition-all"
               >
                 Learn More
               </TrackedLink>
@@ -127,7 +127,7 @@ export default async function Home() {
           <div className="mx-auto max-w-7xl">
             {orderedSections.map(([sectionName, courses], sectionIdx) => (
               <div key={sectionName} className={sectionIdx > 0 ? 'mt-20' : ''}>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-purple-200 dark:border-purple-800">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b-2 border-accent-light dark:border-accent-light">
                   {sectionName}
                 </h3>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -190,7 +190,7 @@ export default async function Home() {
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
               <div className="flex flex-col">
                 <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
+                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
                     <span className="text-white text-xl">📝</span>
                   </div>
                   Comprehensive Notes
@@ -202,7 +202,7 @@ export default async function Home() {
 
               <div className="flex flex-col">
                 <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
+                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
                     <span className="text-white text-xl">🎯</span>
                   </div>
                   Practice Problems
@@ -214,7 +214,7 @@ export default async function Home() {
 
               <div className="flex flex-col">
                 <dt className="text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
+                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
                     <span className="text-white text-xl">🎴</span>
                   </div>
                   Flashcards

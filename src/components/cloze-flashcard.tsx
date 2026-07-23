@@ -60,7 +60,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             return (
               <span
                 key={index}
-                className="inline-block border-b-2 border-dashed border-purple-400 mx-1"
+                className="inline-block border-b-2 border-dashed border-accent-muted mx-1"
                 style={{ minWidth: `${blankLength}px`, height: '1.5rem' }}
               />
             )
@@ -74,8 +74,8 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
     <div className="max-w-3xl mx-auto">
       {/* Cloze Card */}
       <div className="mb-8">
-        <div className="border-2 border-purple-300 rounded-xl p-10 bg-gradient-to-br from-purple-50 to-blue-50 min-h-[350px] flex flex-col justify-center">
-          <div className="text-sm text-purple-900 font-semibold mb-6">COMPLETE THE SENTENCE</div>
+        <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[350px] flex flex-col justify-center">
+          <div className="text-sm text-accent-dark font-semibold mb-6">COMPLETE THE SENTENCE</div>
           
           {renderCloze()}
           
@@ -83,7 +83,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
             <div className="mt-8 text-center">
               <button
                 onClick={() => setIsRevealed(true)}
-                className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover transition-colors"
               >
                 Show Answer
               </button>
@@ -113,7 +113,7 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
           {!showHint ? (
             <button
               onClick={() => setShowHint(true)}
-              className="text-sm text-purple-900 hover:underline font-semibold"
+              className="text-sm text-accent-dark hover:underline font-semibold"
             >
               💡 Show Hint
             </button>

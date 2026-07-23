@@ -32,7 +32,7 @@ export default function ShareScoreCard({ score, total, subject, type }: ShareSco
   const emoji = pct >= 90 ? '🏆' : pct >= 70 ? '🌟' : pct >= 50 ? '💪' : '📈'
 
   return (
-    <div className="mt-6 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20">
+    <div className="mt-6 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-r from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20">
       <div className="text-center mb-3">
         <span className="text-3xl">{emoji}</span>
         <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-1">Share your score!</p>

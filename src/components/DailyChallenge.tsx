@@ -90,7 +90,7 @@ export function DailyChallenge() {
   }, [data, answers, submitting])
 
   const cardClass =
-    'bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-800 rounded-xl border border-indigo-200 dark:border-indigo-800 p-6'
+    'bg-gradient-to-br from-indigo-50 to-accent-subtle dark:from-gray-800 dark:to-gray-800 rounded-xl border border-indigo-200 dark:border-indigo-800 p-6'
 
   if (loadError) {
     return (

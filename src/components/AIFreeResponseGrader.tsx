@@ -84,14 +84,14 @@ export function AIFreeResponseGrader() {
         <textarea value={answer} onChange={(e) => setAnswer(e.target.value)} rows={5} placeholder="Paste the student's response here…" className="w-full px-3 py-2 text-sm border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
       </div>
 
-      <button onClick={grade} disabled={loading || !question.trim() || !answer.trim()} className="px-5 py-2.5 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 disabled:opacity-50">
+      <button onClick={grade} disabled={loading || !question.trim() || !answer.trim()} className="px-5 py-2.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover disabled:opacity-50">
         {loading ? 'Grading…' : '✨ Grade with AI'}
       </button>
 
       {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
 
       {result && (
-        <div className="mt-2 p-4 rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/10 space-y-3">
+        <div className="mt-2 p-4 rounded-xl border border-accent-light dark:border-accent-light bg-accent-subtle dark:bg-accent-light/10 space-y-3">
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-500">Suggested score</span>
             <span className={`text-2xl font-bold ${scoreColor(result.suggestedScore, result.maxPoints)}`}>

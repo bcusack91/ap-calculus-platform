@@ -41,15 +41,15 @@ export default function AchievementsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 mb-2">
-          <Link href="/dashboard" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
+          <Link href="/dashboard" className="text-accent hover:text-accent-hover text-sm font-medium">
             ← Dashboard
           </Link>
         </div>
         <div className="mb-6">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             Achievements & Milestones
           </h1>
           <p className="text-gray-600 dark:text-gray-400 mt-1">
@@ -64,7 +64,7 @@ export default function AchievementsPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 activeTab === tab
-                  ? 'bg-purple-600 text-white shadow-lg'
+                  ? 'bg-accent text-white shadow-lg'
                   : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 shadow'
               }`}
             >

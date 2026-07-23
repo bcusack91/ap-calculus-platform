@@ -148,10 +148,10 @@ function SignUpForm() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 py-12">
       <div className="max-w-2xl w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
             {step === 1 ? 'Create Account' : 'Choose Your Avatar'}
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
@@ -160,8 +160,8 @@ function SignUpForm() {
           
           {/* Step indicator */}
           <div className="flex justify-center gap-2 mt-4">
-            <div className={`h-2 w-20 rounded-full ${step === 1 ? 'bg-purple-600' : 'bg-purple-200 dark:bg-purple-900'}`} />
-            <div className={`h-2 w-20 rounded-full ${step === 2 ? 'bg-purple-600' : 'bg-purple-200 dark:bg-purple-900'}`} />
+            <div className={`h-2 w-20 rounded-full ${step === 1 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
+            <div className={`h-2 w-20 rounded-full ${step === 2 ? 'bg-accent' : 'bg-accent-light dark:bg-accent-light'}`} />
           </div>
         </div>
 
@@ -181,7 +181,7 @@ function SignUpForm() {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="John Doe"
                 />
               </div>
@@ -198,7 +198,7 @@ function SignUpForm() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="you@example.com"
                 />
               </div>
@@ -217,7 +217,7 @@ function SignUpForm() {
                   required
                   value={birthYear}
                   onChange={(e) => setBirthYear(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="e.g. 2012"
                 />
                 <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
@@ -237,7 +237,7 @@ function SignUpForm() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="••••••••"
                 />
                 <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
@@ -257,7 +257,7 @@ function SignUpForm() {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="••••••••"
                 />
               </div>
@@ -273,7 +273,7 @@ function SignUpForm() {
                     onClick={() => setSelectedAvatar({ ...preset.data, isPreset: true, preset: preset.id })}
                     className={`p-4 rounded-xl border-4 transition-all hover:scale-105 ${
                       selectedAvatar?.preset === preset.id
-                        ? 'border-purple-600 bg-purple-50 dark:bg-purple-900/30'
+                        ? 'border-accent bg-accent-subtle dark:bg-accent-light/30'
                         : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
                     }`}
                   >
@@ -291,7 +291,7 @@ function SignUpForm() {
                   type="button"
                   onClick={() => createAccount(null)}
                   disabled={isLoading}
-                  className="text-purple-600 dark:text-purple-400 hover:underline text-sm disabled:opacity-50"
+                  className="text-accent dark:text-accent-muted hover:underline text-sm disabled:opacity-50"
                 >
                   Skip for now — create my account →
                 </button>
@@ -310,7 +310,7 @@ function SignUpForm() {
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="flex-1 px-6 py-3 border-2 border-purple-600 text-purple-600 font-bold rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all"
+                className="flex-1 px-6 py-3 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-all"
               >
                 Back
               </button>
@@ -318,7 +318,7 @@ function SignUpForm() {
             <button
               type="submit"
               disabled={isLoading}
-              className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? 'Creating account...' : step === 1 ? 'Next' : 'Create Account'}
             </button>
@@ -358,7 +358,7 @@ function SignUpForm() {
                       ? `/auth/signin?callbackUrl=${encodeURIComponent(safeCallback)}`
                       : '/auth/signin'
                   }
-                  className="text-purple-600 hover:text-purple-700 font-semibold"
+                  className="text-accent hover:text-accent-hover font-semibold"
                 >
                   Sign in
                 </Link>

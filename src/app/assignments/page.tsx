@@ -147,14 +147,14 @@ export default function StudentAssignmentsPage() {
 
   if (authStatus === 'loading' || loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12 max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
@@ -176,7 +176,7 @@ export default function StudentAssignmentsPage() {
 
         {/* Upcoming live games — read-only heads-up so students know to be in class */}
         {upcomingCompetitions.length > 0 && (
-          <div className="mb-8 bg-white dark:bg-gray-800 rounded-xl shadow-md border border-purple-200 dark:border-purple-800 p-5">
+          <div className="mb-8 bg-white dark:bg-gray-800 rounded-xl shadow-md border border-accent-light dark:border-accent-light p-5">
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-1">📅 Upcoming live games</h2>
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
               Your teacher will start these in class — be there and ready to join!
@@ -185,13 +185,13 @@ export default function StudentAssignmentsPage() {
               {upcomingCompetitions.map((c) => (
                 <div
                   key={c.id}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 rounded-lg bg-purple-50 dark:bg-purple-900/10"
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 rounded-lg bg-accent-subtle dark:bg-accent-light/10"
                 >
                   <div className="min-w-0">
                     <p className="font-semibold text-gray-900 dark:text-white truncate">⚔️ {c.title}</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">{c.classroom.name}</p>
                   </div>
-                  <div className="text-sm text-purple-700 dark:text-purple-300 font-medium whitespace-nowrap">
+                  <div className="text-sm text-accent-hover dark:text-accent-muted font-medium whitespace-nowrap">
                     {new Date(c.scheduledAt).toLocaleString(undefined, {
                       weekday: 'short',
                       month: 'short',
@@ -233,7 +233,7 @@ export default function StudentAssignmentsPage() {
             {classrooms.length === 0 && (
               <Link
                 href="/join-class"
-                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all"
+                className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-semibold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
               >
                 Join a Class
               </Link>
@@ -326,7 +326,7 @@ export default function StudentAssignmentsPage() {
                             className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all ${
                               a.submission.status === 'COMPLETED'
                                 ? 'border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
-                                : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                                : 'bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover'
                             }`}
                           >
                             {getActionLabel(a)}

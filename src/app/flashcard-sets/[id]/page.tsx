@@ -90,7 +90,7 @@ function FlashcardSetViewerInner() {
   const card = set.cards[index]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-6">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">{set.title}</h1>
@@ -103,7 +103,7 @@ function FlashcardSetViewerInner() {
         <button
           type="button"
           onClick={() => setFlipped((f) => !f)}
-          className="w-full min-h-[16rem] rounded-2xl border-2 border-purple-200 dark:border-purple-800 bg-white dark:bg-gray-800 shadow-lg p-8 flex flex-col items-center justify-center text-center transition-all hover:shadow-xl"
+          className="w-full min-h-[16rem] rounded-2xl border-2 border-accent-light dark:border-accent-light bg-white dark:bg-gray-800 shadow-lg p-8 flex flex-col items-center justify-center text-center transition-all hover:shadow-xl"
           aria-label="Flip card"
         >
           <span className="text-xs uppercase tracking-wide text-gray-400 mb-3">
@@ -124,7 +124,7 @@ function FlashcardSetViewerInner() {
           </button>
           <button
             onClick={() => setFlipped((f) => !f)}
-            className="px-5 py-2.5 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-all"
+            className="px-5 py-2.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-all"
           >
             Flip
           </button>

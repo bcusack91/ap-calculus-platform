@@ -107,7 +107,7 @@ function isDashboardTab(value: string | null): value is DashboardTab {
 /** Skeleton shown while session/dashboard data load (also used as the Suspense fallback). */
 function DashboardSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
@@ -442,7 +442,7 @@ function DashboardContent() {
     : 0
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       {newAchievements.length > 0 && (
         <AchievementToast achievements={newAchievements} onDismiss={() => setNewAchievements([])} />
       )}
@@ -451,7 +451,7 @@ function DashboardContent() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-4">
-            <AvatarDisplay avatarData={avatarData} size={56} className="ring-2 ring-purple-500 rounded-full" />
+            <AvatarDisplay avatarData={avatarData} size={56} className="ring-2 ring-accent rounded-full" />
             <div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
                 Welcome back, {session.user?.name || 'Student'}!
@@ -460,13 +460,13 @@ function DashboardContent() {
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href="/join-class" className="px-4 py-2 text-sm font-medium rounded-lg border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors text-purple-700 dark:text-purple-300">
+            <Link href="/join-class" className="px-4 py-2 text-sm font-medium rounded-lg border border-accent-muted dark:border-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors text-accent-hover dark:text-accent-muted">
               🏫 Join a Class
             </Link>
             <Link href="/profile" className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               Edit Profile
             </Link>
-            <Link href="/flashcards/review" className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all">
+            <Link href="/flashcards/review" className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all">
               Review Flashcards {overview && overview.dueFlashcards > 0 && (
                 <span className="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs">{overview.dueFlashcards} due</span>
               )}
@@ -536,7 +536,7 @@ function DashboardContent() {
           </p>
           <button
             onClick={retryFetch}
-            className="px-5 py-2.5 text-sm font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
+            className="px-5 py-2.5 text-sm font-semibold rounded-lg bg-gradient-to-r from-accent to-accent-secondary text-white hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
           >
             Retry
           </button>
@@ -571,7 +571,7 @@ function DashboardContent() {
 
         {/* Pending Assignments */}
         {pendingAssignments > 0 && (
-          <Link href="/assignments" className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group">
+          <Link href="/assignments" className="mb-8 flex items-center justify-between bg-gradient-to-r from-blue-50 to-accent-subtle dark:from-blue-900/20 dark:to-accent-light/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 hover:shadow-md transition-all group">
             <div className="flex items-center gap-3">
               <span className="text-2xl">📋</span>
               <div>
@@ -579,7 +579,7 @@ function DashboardContent() {
                 <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
               </div>
             </div>
-            <span className="text-purple-600 font-semibold group-hover:translate-x-1 transition-transform">View →</span>
+            <span className="text-accent font-semibold group-hover:translate-x-1 transition-transform">View →</span>
           </Link>
         )}
 
@@ -596,7 +596,7 @@ function DashboardContent() {
               tabIndex={tab === key ? 0 : -1}
               onClick={() => selectTab(key)}
               onKeyDown={(e) => handleTabKeyDown(e, index)}
-              className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold transition-colors ${tab === key ? 'border-purple-600 text-purple-700 dark:text-purple-400' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
+              className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold transition-colors ${tab === key ? 'border-accent text-accent-hover dark:text-accent-muted' : 'border-transparent text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'}`}
             >
               {label}
             </button>
@@ -666,23 +666,23 @@ function DashboardContent() {
                   </div>
                 )}
                 {calcABDiagnostic?.recommendedTopics && calcABDiagnostic.recommendedTopics.length > 0 && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-purple-300 dark:border-purple-700 p-5 shadow-sm">
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-accent-muted dark:border-accent-hover p-5 shadow-sm">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="font-bold text-gray-900 dark:text-white">∫ AP Calculus AB</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">Score: {calcABDiagnostic.estimatedAPScore}/5 ({calcABDiagnostic.percentage}%)</span>
-                        <Link href="/ap-calcab-diagnostic" className="text-xs text-purple-600 hover:underline dark:text-purple-400">Retake →</Link>
+                        <Link href="/ap-calcab-diagnostic" className="text-xs text-accent hover:underline dark:text-accent-muted">Retake →</Link>
                       </div>
                     </div>
                     <div className="space-y-1.5">
                       {calcABDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-lg border border-purple-200 dark:border-purple-700 bg-purple-50 dark:bg-purple-900/20 px-3 py-2 hover:border-purple-400 transition-colors group">
+                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-lg border border-accent-light dark:border-accent-hover bg-accent-subtle dark:bg-accent-light/20 px-3 py-2 hover:border-accent-muted transition-colors group">
                           <div className="flex items-center gap-2">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/50 text-[10px] font-bold text-purple-700 dark:text-purple-300">{i + 1}</span>
-                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-400">{topic.name}</span>
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent-light dark:bg-accent-light/50 text-[10px] font-bold text-accent-hover dark:text-accent-muted">{i + 1}</span>
+                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-hover dark:group-hover:text-accent-muted">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
                           </div>
-                          <span className="text-purple-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
+                          <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
                       ))}
                     </div>
@@ -717,14 +717,14 @@ function DashboardContent() {
             {/* Cold start: onboarding picked a course but nothing studied yet —
                 give the promised "start your study path" entry point. */}
             {courseProgress.length === 0 && pathTopic && (
-              <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 shadow-sm text-white">
+              <div className="bg-gradient-to-r from-accent to-accent-secondary rounded-xl p-6 shadow-sm text-white">
                 <h2 className="text-xl font-bold mb-1">🚀 Start your study path</h2>
-                <p className="text-sm text-purple-100 mb-4">
+                <p className="text-sm text-accent-light mb-4">
                   Your course is ready — jump into your first topic and your progress will show up here.
                 </p>
                 <Link
                   href={`/topics/${pathTopic}`}
-                  className="inline-block px-5 py-2.5 bg-white text-purple-700 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
+                  className="inline-block px-5 py-2.5 bg-white text-accent-hover font-semibold rounded-lg hover:bg-accent-subtle transition-colors"
                 >
                   Start your first topic →
                 </Link>
@@ -743,11 +743,11 @@ function DashboardContent() {
                     return (
                       <Link key={course.slug} href={`/courses/${course.slug}`} className="block group">
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 transition-colors">{course.name}</span>
+                          <span className="font-medium text-gray-900 dark:text-white group-hover:text-accent transition-colors">{course.name}</span>
                           <span className="text-sm text-gray-500 dark:text-gray-400">{done}/{total} topics · {pct}%</span>
                         </div>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                          <div className="bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full transition-all" style={{ width: `${pct}%` }} />
+                          <div className="bg-gradient-to-r from-accent to-blue-500 h-2.5 rounded-full transition-all" style={{ width: `${pct}%` }} />
                         </div>
                       </Link>
                     )
@@ -762,11 +762,11 @@ function DashboardContent() {
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
               <h3 className="font-bold text-gray-900 dark:text-white mb-4">⚡ Quick Actions</h3>
               <div className="space-y-3">
-                <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 hover:border-purple-300 transition-colors group">
+                <Link href="/flashcards/review/start" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-accent-subtle to-blue-50 dark:from-accent-light/20 dark:to-blue-900/20 border border-accent-light dark:border-accent-hover hover:border-accent-muted transition-colors group">
                   <span className="text-2xl">🎴</span>
                   <div>
-                    <p className="font-medium text-purple-900 dark:text-purple-200">Review Flashcards</p>
-                    <p className="text-xs text-purple-600 dark:text-purple-400">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
+                    <p className="font-medium text-accent-dark dark:text-accent-dark">Review Flashcards</p>
+                    <p className="text-xs text-accent dark:text-accent-muted">{overview && overview.dueFlashcards > 0 ? `${overview.dueFlashcards} cards due` : 'All caught up!'}</p>
                   </div>
                 </Link>
                 <Link href="/competitive" className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 hover:border-green-300 transition-colors group">
@@ -808,7 +808,7 @@ function DashboardContent() {
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">🏆 Achievements</h2>
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-gray-500 dark:text-gray-400">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
-                  <Link href="/achievements" className="text-sm font-semibold text-purple-600 hover:text-purple-700">View All →</Link>
+                  <Link href="/achievements" className="text-sm font-semibold text-accent hover:text-accent-hover">View All →</Link>
                 </div>
               </div>
               {achievements.length === 0 ? (
@@ -821,7 +821,7 @@ function DashboardContent() {
                       title={`${a.name}: ${a.description}${a.unlocked ? '' : ' (Locked)'}`}
                       aria-label={`${a.name}: ${a.description}${a.unlocked ? '' : ' (locked)'}`}
                       className={`flex flex-col items-center p-2 rounded-lg transition-all ${
-                        a.unlocked ? 'bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700' : 'opacity-40 grayscale'
+                        a.unlocked ? 'bg-accent-subtle dark:bg-accent-light/20 border border-accent-light dark:border-accent-hover' : 'opacity-40 grayscale'
                       }`}
                     >
                       <span className="text-2xl" aria-hidden="true">{a.icon}</span>
@@ -840,14 +840,14 @@ function DashboardContent() {
                 <div className="text-center py-8">
                   <div className="text-4xl mb-3">📖</div>
                   <p className="text-gray-500 dark:text-gray-400 mb-4">No activity yet! Start learning to see your progress here.</p>
-                  <Link href="/" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all">Browse Courses →</Link>
+                  <Link href="/" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-lg font-medium hover:from-accent-hover hover:to-accent-secondary-hover transition-all">Browse Courses →</Link>
                 </div>
               ) : (
                 <div className="divide-y divide-gray-100 dark:divide-gray-700">
                   {recentActivity.map((activity, i) => (
                     <Link key={i} href={`/topics/${activity.topicSlug}`} className="flex items-center justify-between py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 -mx-2 px-2 rounded-lg transition-colors group">
                       <div className="min-w-0">
-                        <p className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 truncate transition-colors">{activity.topicTitle}</p>
+                        <p className="font-medium text-gray-900 dark:text-white group-hover:text-accent truncate transition-colors">{activity.topicTitle}</p>
                         <p className="text-xs text-gray-500 dark:text-gray-400">{activity.courseName}</p>
                       </div>
                       <div className="flex items-center gap-3 flex-shrink-0 ml-3">
@@ -932,9 +932,9 @@ function DashboardContent() {
                     <Link
                       key={`${bookmark.topicSlug}-${bookmark.part}`}
                       href={`/topics/${bookmark.topicSlug}?part=${bookmark.part}`}
-                      className="flex items-center justify-between p-2 -mx-2 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors group"
+                      className="flex items-center justify-between p-2 -mx-2 rounded-lg hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors group"
                     >
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-600 truncate">{bookmark.title}</span>
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-accent truncate">{bookmark.title}</span>
                       <button
                         onClick={(e) => { e.preventDefault(); removeBookmark(bookmark.topicSlug, bookmark.part) }}
                         className="text-gray-500 hover:text-red-500 dark:text-gray-400 transition-colors ml-2 flex-shrink-0"

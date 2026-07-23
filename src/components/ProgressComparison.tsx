@@ -22,7 +22,7 @@ export default function ProgressComparison() {
   if (!data) return null
 
   return (
-    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-5 text-white">
+    <div className="bg-gradient-to-r from-indigo-500 to-accent rounded-xl p-5 text-white">
       <h3 className="font-bold text-sm mb-3">📊 How You Compare</h3>
       <div className="grid grid-cols-2 gap-4">
         <div className="text-center">

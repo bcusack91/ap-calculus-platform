@@ -19,7 +19,7 @@ export default function GlobalError({
       <body>
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950 px-4">
           <div className="text-center max-w-md">
-            <h1 className="text-6xl font-bold text-purple-600 dark:text-purple-400 mb-4">Oops!</h1>
+            <h1 className="text-6xl font-bold text-accent dark:text-accent-muted mb-4">Oops!</h1>
             <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-2">Something went wrong</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               We&apos;ve been notified and are working on a fix.
@@ -28,14 +28,14 @@ export default function GlobalError({
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={reset}
-                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                className="bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-hover transition-colors"
               >
                 Try Again
               </button>
               {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- global-error can't use next/link */}
               <a
                 href="/"
-                className="border border-purple-600 text-purple-600 dark:border-purple-400 dark:text-purple-400 px-6 py-3 rounded-lg font-medium hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors"
+                className="border border-accent text-accent dark:border-accent-muted dark:text-accent-muted px-6 py-3 rounded-lg font-medium hover:bg-accent-subtle dark:hover:bg-accent-subtle transition-colors"
               >
                 Go Home
               </a>

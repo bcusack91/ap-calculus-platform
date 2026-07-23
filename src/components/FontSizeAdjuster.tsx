@@ -44,7 +44,7 @@ export default function FontSizeAdjuster() {
             onClick={() => changeSize(s.value)}
             className={`px-2.5 py-1 text-xs font-medium transition-colors ${
               size === s.value
-                ? 'bg-purple-600 text-white'
+                ? 'bg-accent text-white'
                 : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
             }`}
             aria-label={`Font size ${s.label}`}

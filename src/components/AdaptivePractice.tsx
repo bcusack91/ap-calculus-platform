@@ -47,7 +47,7 @@ export function AdaptivePractice({
   if (!currentQuestion) {
     const score = history.filter((h) => h.correct).length
     return (
-      <div className="my-6 rounded-lg border-2 border-purple-300 dark:border-purple-700 p-6 bg-purple-50 dark:bg-purple-900/10 text-center">
+      <div className="my-6 rounded-lg border-2 border-accent-muted dark:border-accent-hover p-6 bg-accent-subtle dark:bg-accent-light/10 text-center">
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
           Practice Complete!
         </h3>
@@ -93,8 +93,8 @@ export function AdaptivePractice({
   const difficultyColor = ['', 'text-green-600', 'text-blue-600', 'text-yellow-600', 'text-orange-600', 'text-red-600'][currentQuestion.difficulty]
 
   return (
-    <div className="my-6 rounded-lg border-2 border-purple-300 dark:border-purple-700 overflow-hidden">
-      <div className="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-5 py-3">
+    <div className="my-6 rounded-lg border-2 border-accent-muted dark:border-accent-hover overflow-hidden">
+      <div className="bg-gradient-to-r from-accent to-fuchsia-600 text-white px-5 py-3">
         <div className="flex items-center justify-between">
           <h3 className="font-bold text-lg flex items-center gap-2">
             <span>🎯</span> Adaptive {subject} Practice
@@ -108,7 +108,7 @@ export function AdaptivePractice({
         </div>
         {/* Difficulty bar */}
         <div className="mt-2 flex items-center gap-2">
-          <span className="text-xs text-purple-200">Difficulty:</span>
+          <span className="text-xs text-accent-light">Difficulty:</span>
           <div className="flex gap-1">
             {[1, 2, 3, 4, 5].map((n) => (
               <div
@@ -121,12 +121,12 @@ export function AdaptivePractice({
               />
             ))}
           </div>
-          <span className="text-xs text-purple-200">{difficultyLabel}</span>
+          <span className="text-xs text-accent-light">{difficultyLabel}</span>
         </div>
       </div>
 
-      <div className="p-5 bg-purple-50 dark:bg-purple-900/10">
-        <div className="bg-white dark:bg-gray-900 rounded-lg p-5 border border-purple-200 dark:border-purple-700">
+      <div className="p-5 bg-accent-subtle dark:bg-accent-light/10">
+        <div className="bg-white dark:bg-gray-900 rounded-lg p-5 border border-accent-light dark:border-accent-hover">
           <div className="flex items-center gap-2 mb-3">
             <span className={`text-xs font-semibold ${difficultyColor}`}>
               {difficultyLabel}
@@ -140,7 +140,7 @@ export function AdaptivePractice({
 
           <div className="space-y-2">
             {currentQuestion.options.map((opt, oIdx) => {
-              let cls = 'border-gray-200 dark:border-gray-700 hover:border-purple-400 cursor-pointer'
+              let cls = 'border-gray-200 dark:border-gray-700 hover:border-accent-muted cursor-pointer'
               if (showResult) {
                 if (oIdx === currentQuestion.correctAnswer)
                   cls = 'border-green-500 bg-green-50 dark:bg-green-900/20'
@@ -148,7 +148,7 @@ export function AdaptivePractice({
                   cls = 'border-red-500 bg-red-50 dark:bg-red-900/20'
                 else cls = 'border-gray-200 dark:border-gray-700 opacity-50'
               } else if (oIdx === selected) {
-                cls = 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
+                cls = 'border-accent bg-accent-subtle dark:bg-accent-light/20'
               }
               return (
                 <button
@@ -184,14 +184,14 @@ export function AdaptivePractice({
               <button
                 onClick={handleAnswer}
                 disabled={selected === null}
-                className="px-6 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-6 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 Submit
               </button>
             ) : (
               <button
                 onClick={nextQuestion}
-                className="px-6 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="px-6 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-accent-hover transition-colors"
               >
                 Next Question →
               </button>

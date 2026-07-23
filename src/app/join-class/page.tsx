@@ -51,21 +51,21 @@ function JoinClassContent() {
   if (status === 'loading') {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
       </div>
     )
   }
 
   if (!session) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4">
         <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
           <div className="text-5xl mb-4">🔒</div>
           <h1 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Sign in to join a class</h1>
           <p className="text-gray-500 mb-6">You need an account to join a classroom.</p>
           <Link
             href={`/auth/signin?callbackUrl=${encodeURIComponent(joinCode ? `/join-class?code=${joinCode}` : '/join-class')}`}
-            className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all"
+            className="inline-block px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-semibold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all"
           >
             Sign In
           </Link>
@@ -106,7 +106,7 @@ function JoinClassContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-4 py-12">
       <div className="max-w-md mx-auto">
         {/* Back link */}
         <Link
@@ -124,7 +124,7 @@ function JoinClassContent() {
                 You&apos;re in!
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mb-1">
-                You joined <span className="font-semibold text-purple-600">{success.name}</span>
+                You joined <span className="font-semibold text-accent">{success.name}</span>
               </p>
               <p className="text-sm text-gray-500 mb-6">
                 Teacher: {success.teacher}
@@ -132,7 +132,7 @@ function JoinClassContent() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/dashboard"
-                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all text-center"
+                  className="px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-semibold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all text-center"
                 >
                   Go to Dashboard
                 </Link>
@@ -174,7 +174,7 @@ function JoinClassContent() {
                     }}
                     placeholder="Enter class code (e.g. ABC123)"
                     maxLength={10}
-                    className="w-full text-center text-2xl font-mono tracking-widest px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
+                    className="w-full text-center text-2xl font-mono tracking-widest px-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all"
                     autoFocus
                     autoComplete="off"
                   />
@@ -189,7 +189,7 @@ function JoinClassContent() {
                 <button
                   type="submit"
                   disabled={loading || joinCode.trim().length === 0}
-                  className="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-lg"
+                  className="w-full py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-semibold rounded-xl hover:from-accent-hover hover:to-accent-secondary-hover disabled:opacity-50 disabled:cursor-not-allowed transition-all text-lg"
                 >
                   {loading ? (
                     <span className="inline-flex items-center gap-2">
@@ -213,7 +213,7 @@ export default function JoinClassPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
       </div>
     }>
       <JoinClassContent />

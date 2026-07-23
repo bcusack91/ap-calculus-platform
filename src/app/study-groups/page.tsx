@@ -84,7 +84,7 @@ export default function StudyGroupsPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-2">Study Groups</h1>
           <p className="text-gray-600 dark:text-gray-400 mb-4">Sign in to create or join study groups</p>
-          <Link href="/auth/signin" className="px-6 py-2 bg-purple-600 text-white rounded-lg font-medium">
+          <Link href="/auth/signin" className="px-6 py-2 bg-accent text-white rounded-lg font-medium">
             Sign In
           </Link>
         </div>
@@ -93,7 +93,7 @@ export default function StudyGroupsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12 max-w-4xl">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">📚 Study Groups</h1>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
@@ -122,7 +122,7 @@ export default function StudyGroupsPage() {
               <button
                 onClick={createGroup}
                 disabled={creating || !newName.trim()}
-                className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 disabled:opacity-50"
+                className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-medium hover:bg-accent-hover disabled:opacity-50"
               >
                 {creating ? '...' : 'Create'}
               </button>
@@ -167,7 +167,7 @@ export default function StudyGroupsPage() {
           <div className="space-y-3">
             {groups.map(group => (
               <div key={group.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center text-xl">
+                <div className="w-12 h-12 rounded-full bg-accent-light dark:bg-accent-light/40 flex items-center justify-center text-xl">
                   👥
                 </div>
                 <div className="flex-1 min-w-0">
@@ -178,7 +178,7 @@ export default function StudyGroupsPage() {
                 </div>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   group.role === 'TEACHER'
-                    ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
+                    ? 'bg-accent-light text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted'
                     : 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
                 }`}>
                   {group.role === 'TEACHER' ? 'Owner' : 'Member'}

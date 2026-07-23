@@ -134,13 +134,13 @@ export interface FullLengthExamConfig {
 
 const TOKENS: Record<AccentColor, { pageBg: string; gradient: string; text: string; sel: string; hover: string; badge: string }> = {
   blue:    { pageBg: 'from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-blue-600 to-indigo-600', text: 'text-blue-600 dark:text-blue-400', sel: 'border-blue-500 bg-blue-50 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300', hover: 'hover:border-blue-300 hover:bg-blue-50/50 dark:hover:border-blue-500', badge: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' },
-  indigo:  { pageBg: 'from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-indigo-600 to-purple-600', text: 'text-indigo-600 dark:text-indigo-400', sel: 'border-indigo-500 bg-indigo-50 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300', hover: 'hover:border-indigo-300 hover:bg-indigo-50/50 dark:hover:border-indigo-500', badge: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400' },
+  indigo:  { pageBg: 'from-indigo-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-indigo-600 to-accent', text: 'text-indigo-600 dark:text-indigo-400', sel: 'border-indigo-500 bg-indigo-50 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300', hover: 'hover:border-indigo-300 hover:bg-indigo-50/50 dark:hover:border-indigo-500', badge: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400' },
   emerald: { pageBg: 'from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-emerald-600 to-teal-600', text: 'text-emerald-600 dark:text-emerald-400', sel: 'border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300', hover: 'hover:border-emerald-300 hover:bg-emerald-50/50 dark:hover:border-emerald-500', badge: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' },
   green:   { pageBg: 'from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-green-600 to-emerald-600', text: 'text-green-600 dark:text-green-400', sel: 'border-green-500 bg-green-50 text-green-800 dark:bg-green-900/30 dark:text-green-300', hover: 'hover:border-green-300 hover:bg-green-50/50 dark:hover:border-green-500', badge: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' },
   rose:    { pageBg: 'from-rose-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-rose-600 to-pink-600', text: 'text-rose-600 dark:text-rose-400', sel: 'border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-900/30 dark:text-rose-300', hover: 'hover:border-rose-300 hover:bg-rose-50/50 dark:hover:border-rose-500', badge: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400' },
   cyan:    { pageBg: 'from-cyan-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-cyan-600 to-blue-600', text: 'text-cyan-600 dark:text-cyan-400', sel: 'border-cyan-500 bg-cyan-50 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300', hover: 'hover:border-cyan-300 hover:bg-cyan-50/50 dark:hover:border-cyan-500', badge: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400' },
   amber:   { pageBg: 'from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-amber-600 to-orange-600', text: 'text-amber-600 dark:text-amber-400', sel: 'border-amber-500 bg-amber-50 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300', hover: 'hover:border-amber-300 hover:bg-amber-50/50 dark:hover:border-amber-500', badge: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' },
-  violet:  { pageBg: 'from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-violet-600 to-purple-600', text: 'text-violet-600 dark:text-violet-400', sel: 'border-violet-500 bg-violet-50 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300', hover: 'hover:border-violet-300 hover:bg-violet-50/50 dark:hover:border-violet-500', badge: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400' },
+  violet:  { pageBg: 'from-violet-50 via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-violet-600 to-accent', text: 'text-violet-600 dark:text-violet-400', sel: 'border-violet-500 bg-violet-50 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300', hover: 'hover:border-violet-300 hover:bg-violet-50/50 dark:hover:border-violet-500', badge: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400' },
   red:     { pageBg: 'from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-red-600 to-rose-600', text: 'text-red-600 dark:text-red-400', sel: 'border-red-500 bg-red-50 text-red-800 dark:bg-red-900/30 dark:text-red-300', hover: 'hover:border-red-300 hover:bg-red-50/50 dark:hover:border-red-500', badge: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' },
   sky:     { pageBg: 'from-sky-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-sky-600 to-blue-600', text: 'text-sky-600 dark:text-sky-400', sel: 'border-sky-500 bg-sky-50 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300', hover: 'hover:border-sky-300 hover:bg-sky-50/50 dark:hover:border-sky-500', badge: 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400' },
 }
@@ -460,7 +460,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   /* ---------- MCQ rendering ---------- */
   if (item.type === 'mcq' && ans?.type === 'mcq') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
           {header}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -492,7 +492,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   /* ---------- SAQ rendering ---------- */
   if (item.type === 'saq' && ans?.type === 'saq') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -561,7 +561,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   /* ---------- DBQ rendering ---------- */
   if (item.type === 'dbq' && ans?.type === 'dbq') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -626,7 +626,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
     const chosenPrompt = item.promptOptions[ans.chosenPromptIndex]
     if (!chosenPrompt) return null
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container"><div className="mx-auto max-w-3xl">
           {header}
           <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

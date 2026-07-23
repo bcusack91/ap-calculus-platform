@@ -31,14 +31,14 @@ const CALLOUT_STYLES: Record<string, CalloutStyle> = {
   KEY: {
     title: 'Key Takeaway',
     icon: '🔑',
-    container: 'border-purple-400 bg-purple-50 dark:border-purple-500 dark:bg-purple-900/20',
-    heading: 'text-purple-800 dark:text-purple-200',
+    container: 'border-accent-muted bg-accent-subtle dark:border-accent dark:bg-accent-light/20',
+    heading: 'text-accent-dark dark:text-accent-dark',
   },
   IMPORTANT: {
     title: 'Key Takeaway',
     icon: '🔑',
-    container: 'border-purple-400 bg-purple-50 dark:border-purple-500 dark:bg-purple-900/20',
-    heading: 'text-purple-800 dark:text-purple-200',
+    container: 'border-accent-muted bg-accent-subtle dark:border-accent dark:bg-accent-light/20',
+    heading: 'text-accent-dark dark:text-accent-dark',
   },
   TIP: {
     title: 'Tip',

@@ -57,7 +57,7 @@ function AuthErrorContent() {
   const errorInfo = ERROR_MESSAGES[errorCode] || ERROR_MESSAGES.Default
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-subtle to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4">
       <div className="max-w-md w-full space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl text-center">
         {/* Error icon */}
         <div className="mx-auto w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
@@ -84,7 +84,7 @@ function AuthErrorContent() {
         <div className="flex flex-col gap-3 pt-2">
           <Link
             href="/auth/signin"
-            className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+            className="w-full px-6 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover transition-all shadow-lg hover:shadow-xl"
           >
             Try Again
           </Link>
@@ -104,7 +104,7 @@ export default function AuthErrorPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-accent" />
       </div>
     }>
       <AuthErrorContent />

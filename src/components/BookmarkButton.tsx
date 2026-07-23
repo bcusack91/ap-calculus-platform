@@ -73,8 +73,8 @@ export default function BookmarkButton({ lessonId, lessonTitle, variant = 'full'
         <svg
           className={`h-5 w-5 transition-colors ${
             saved
-              ? 'text-purple-600 dark:text-purple-400 fill-current'
-              : 'text-gray-400 group-hover:text-purple-500'
+              ? 'text-accent dark:text-accent-muted fill-current'
+              : 'text-gray-400 group-hover:text-accent'
           }`}
           fill={saved ? 'currentColor' : 'none'}
           viewBox="0 0 24 24"
@@ -91,8 +91,8 @@ export default function BookmarkButton({ lessonId, lessonTitle, variant = 'full'
       onClick={toggle}
       className={`flex items-center gap-1.5 text-sm transition-colors ${
         saved
-          ? 'text-purple-600 dark:text-purple-400 font-medium'
-          : 'text-gray-500 hover:text-purple-600 dark:hover:text-purple-400'
+          ? 'text-accent dark:text-accent-muted font-medium'
+          : 'text-gray-500 hover:text-accent dark:hover:text-accent-muted'
       }`}
       aria-label={saved ? 'Remove bookmark' : 'Bookmark this lesson'}
     >
