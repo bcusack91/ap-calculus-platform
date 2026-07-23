@@ -8,6 +8,8 @@ import { mcatBioBiochemFlashcards } from './mcat-biobiochem'
 import { mcatPsychSocCarsFlashcards } from './mcat-psychsoc-cars'
 import { mcatStrategyFlashcards } from './mcat-strategy'
 import { apesFlashcards } from './apes'
+import { mathHsFlashcards } from './math-hs'
+import { mathElementaryFlashcards } from './math-elementary'
 
 export const SEED_FLASHCARDS: FlashcardsByTopic = {
   ...mcatChemPhysFlashcards,
@@ -15,6 +17,8 @@ export const SEED_FLASHCARDS: FlashcardsByTopic = {
   ...mcatPsychSocCarsFlashcards,
   ...mcatStrategyFlashcards,
   ...apesFlashcards,
+  ...mathHsFlashcards,
+  ...mathElementaryFlashcards,
 }
 
 export type { SeedFlashcard, FlashcardsByTopic } from './types'
