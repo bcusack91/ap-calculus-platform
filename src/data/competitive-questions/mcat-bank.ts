@@ -40,6 +40,8 @@ import { chemistryQuestions2 } from './mcat-questions-chemistry-2'
 import { physicsQuestions } from './mcat-questions-physics'
 import { physicsQuestions2 } from './mcat-questions-physics-2'
 import { biologyQuestions } from './mcat-questions-biology'
+import { biologyQuestions2 } from './mcat-questions-biology-2'
+import { biologyQuestions3 } from './mcat-questions-biology-3'
 import { behavioralQuestions } from './mcat-questions-behavioral'
 import { behavioralQuestions2 } from './mcat-questions-behavioral-2'
 
@@ -49,6 +51,8 @@ const AUTHORED: McatBankQuestion[] = [
   ...physicsQuestions,
   ...physicsQuestions2,
   ...biologyQuestions,
+  ...biologyQuestions2,
+  ...biologyQuestions3,
   ...behavioralQuestions,
   ...behavioralQuestions2,
 ]
