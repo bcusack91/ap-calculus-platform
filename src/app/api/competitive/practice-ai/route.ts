@@ -154,7 +154,13 @@ export async function POST(req: NextRequest) {
     const aiOpponent = await getOrCreateAIBot('ai-opponent@studyai.com', 'AI Practice Bot')
     const questionCount = matchQuestionCount(gameMode)
     const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
-    
+
+    // Give the bot a fresh name + avatar for THIS match so it reads as a new
+    // opponent. Stored in gameData (not on the shared bot user) and swapped in
+    // by the match GET for the bot's slot.
+    const { makeRandomAIIdentity } = await import('@/lib/ai-opponent-identity')
+    const aiIdentity = await makeRandomAIIdentity()
+
     const competitiveMatch = await prisma.competitiveMatch.create({
       data: {
         player1Id: user.id,
@@ -175,6 +181,8 @@ export async function POST(req: NextRequest) {
           player2QuestionIndex: 0,
           aiDifficulty,
           isPracticeMatch: true,
+          aiName: aiIdentity.name,
+          aiAvatar: aiIdentity.avatar,
           ...(tier ? { tier } : {}),
         } as unknown as Prisma.InputJsonValue,
       }
@@ -186,7 +194,7 @@ export async function POST(req: NextRequest) {
       isTeamMatch: false,
       opponent: {
         id: aiOpponent.id,
-        name: 'AI Practice Bot',
+        name: aiIdentity.name,
         isAI: true,
         difficulty: aiDifficulty
       }

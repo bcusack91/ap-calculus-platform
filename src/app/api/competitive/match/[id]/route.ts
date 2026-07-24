@@ -11,6 +11,9 @@ interface MatchGameData {
   questions?: Array<Record<string, unknown>>;
   isPracticeMatch?: boolean;
   powerUps?: unknown;
+  // Per-match disguise for the AI practice bot (see ai-opponent-identity.ts).
+  aiName?: string;
+  aiAvatar?: unknown;
   [key: string]: unknown;
 }
 
@@ -120,7 +123,12 @@ export async function GET(
     // does NOT contain the correct index — only what was submitted — so it is
     // safe to forward. But `gameData.questions` would re-expose the answers, so
     // overwrite it with the scrubbed copy in the forwarded gameData too.
-    const safeGameData = { ...gameData, questions: safeQuestions };
+    // Also drop the bot's stored avatar/name from the client copy: it's already
+    // surfaced at the top level (player2Avatar/Name), and the SVG is several KB
+    // that would otherwise ship on every 500ms poll for no reason.
+    const { aiAvatar: _aiAvatar, aiName: _aiName, ...gameDataForClient } = gameData;
+    void _aiAvatar; void _aiName;
+    const safeGameData = { ...gameDataForClient, questions: safeQuestions };
 
     // CHAOS: a player's 50/50 result (two eliminated WRONG indices) is answer
     // intel for a question the OTHER player may later see (both cycle the same
@@ -140,6 +148,14 @@ export async function GET(
       } as typeof safeGameData.powerUps;
     }
 
+    // The AI practice bot is a single shared user, so its stored name/avatar
+    // are identical every match. Swap in this match's random disguise (from
+    // gameData) for whichever slot is the bot, so it reads as a new opponent.
+    const p1IsAI = isAIOpponent(match.player1Id, match.player1.email);
+    const p2IsAI = isAIOpponent(match.player2Id, match.player2.email);
+    const aiName = typeof gameData.aiName === 'string' ? gameData.aiName : null;
+    const aiAvatar = gameData.aiAvatar ?? null;
+
     // Format response
     const response = {
       match: {
@@ -148,15 +164,15 @@ export async function GET(
         player2Id: match.player2Id,
         // Stranger matchups: never expose a full real name to a ranked opponent.
         // First-name + last-initial only (publicDisplayName); emails never leak.
-        player1Name: publicDisplayName(match.player1.name, 'Player 1'),
-        player2Name: publicDisplayName(match.player2.name, 'Player 2'),
+        player1Name: p1IsAI && aiName ? aiName : publicDisplayName(match.player1.name, 'Player 1'),
+        player2Name: p2IsAI && aiName ? aiName : publicDisplayName(match.player2.name, 'Player 2'),
         // Booleans instead of raw emails (#6): the client only needs to know
         // whether each side is an AI bot (to drive the local bot simulation).
         // Leaking a stranger's email to their ranked opponent is not acceptable.
-        player1IsAI: isAIOpponent(match.player1Id, match.player1.email),
-        player2IsAI: isAIOpponent(match.player2Id, match.player2.email),
-        player1Avatar: match.player1.avatarData,
-        player2Avatar: match.player2.avatarData,
+        player1IsAI: p1IsAI,
+        player2IsAI: p2IsAI,
+        player1Avatar: p1IsAI && aiAvatar ? aiAvatar : match.player1.avatarData,
+        player2Avatar: p2IsAI && aiAvatar ? aiAvatar : match.player2.avatarData,
         player1QuestionIndex: gameData?.player1QuestionIndex ?? 0,
         player2QuestionIndex: gameData?.player2QuestionIndex ?? 0,
         questions: safeQuestions,
