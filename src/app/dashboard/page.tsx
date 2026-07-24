@@ -53,6 +53,7 @@ interface NoteEntry {
   topicSlug: string
   topicTitle: string
   content: string
+  drawing?: string | null
   updatedAt: string
 }
 
@@ -1019,7 +1020,7 @@ function DashboardContent() {
                       className="block p-2 -mx-2 rounded-lg hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors group"
                     >
                       <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-accent truncate">{note.topicTitle}</span>
-                      <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{note.content.replace(/\s+/g, ' ').trim().slice(0, 90) || 'Empty note'}</span>
+                      <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{note.content.replace(/\s+/g, ' ').trim().slice(0, 90) || (note.drawing ? '🖊️ Hand-drawn sketch' : 'Empty note')}</span>
                     </Link>
                   ))}
                   {notes.length > 5 && <p className="text-xs text-gray-500 dark:text-gray-400 pt-1">+{notes.length - 5} more</p>}

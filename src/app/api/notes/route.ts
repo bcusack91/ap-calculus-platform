@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
       where: { userId: session.user.id },
       orderBy: { updatedAt: 'desc' },
       take: 50,
-      select: { topicSlug: true, content: true, updatedAt: true },
+      select: { topicSlug: true, content: true, drawing: true, updatedAt: true },
     })
     const slugs = [...new Set(notes.map((n) => n.topicSlug))]
     const topics = slugs.length
@@ -64,12 +64,16 @@ export async function PUT(req: NextRequest) {
       return NextResponse.json({ error: parsed.error }, { status: 400 })
     }
 
-    const { topicSlug, content } = parsed.data
+    const { topicSlug, content, drawing } = parsed.data
+
+    // `drawing` is optional: when the key is present (string or null) we set it;
+    // when omitted entirely we leave any existing sketch untouched.
+    const drawingSet = drawing !== undefined ? { drawing: drawing ?? null } : {}
 
     const note = await prisma.studentNote.upsert({
       where: { userId_topicSlug: { userId: session.user.id, topicSlug } },
-      create: { userId: session.user.id, topicSlug, content },
-      update: { content },
+      create: { userId: session.user.id, topicSlug, content, drawing: drawing ?? null },
+      update: { content, ...drawingSet },
     })
 
     return NextResponse.json({ note })

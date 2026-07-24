@@ -124,6 +124,9 @@ export const updateChallengeProgressSchema = z.object({
 export const upsertNoteSchema = z.object({
   topicSlug: z.string().min(1, 'Topic slug is required'),
   content: z.string().max(50_000, 'Note too long (max 50,000 chars)'),
+  // Optional freeform sketch, serialized JSON strokes (see src/lib/drawing.ts).
+  // `null` explicitly clears any saved drawing.
+  drawing: z.string().max(300_000, 'Drawing too large').nullable().optional(),
 })
 
 // ─── Bookmark Schemas ──────────────────────────────────────────────────
