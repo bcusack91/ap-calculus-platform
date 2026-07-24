@@ -1,17 +1,32 @@
 import { MetadataRoute } from 'next'
 
+// Auth-walled / sensitive sections that crawlers should not spend budget on and
+// that should never appear in results (they just redirect to sign-in). Kept in
+// one place so every crawler rule stays consistent — previously /admin/ was only
+// disallowed for the wildcard rule, not for Googlebot/Bingbot.
+const DISALLOWED = [
+  '/api/',
+  '/auth/',
+  '/admin/',
+  '/dashboard/',
+  '/profile/',
+  '/teacher/',
+  '/onboarding/',
+  '/competitive/', // the /competitive hub (no trailing slash) stays crawlable
+]
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/auth/', '/competitive/'],
+        disallow: DISALLOWED,
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/auth/', '/competitive/'],
+        disallow: DISALLOWED,
       },
       {
         userAgent: 'AhrefsBot',
@@ -32,7 +47,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/auth/', '/admin/', '/competitive/'],
+        disallow: DISALLOWED,
       },
     ],
     sitemap: 'https://www.studymondo.com/sitemap.xml',

@@ -186,7 +186,7 @@ Let's make sure you've mastered the basics before moving forward!
 # Real-World Example #1: Fiber Optic Internet 🌐
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="/optics/fiber-optics-example.png" alt="Fiber optic cable showing light traveling through total internal reflection" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  <img loading="lazy" src="/optics/fiber-optics-example.png" alt="Fiber optic cable showing light traveling through total internal reflection" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
 > ## 🎯 The Challenge
@@ -220,7 +220,7 @@ Let's make sure you've mastered the basics before moving forward!
 # Real-World Example #2: Diamond Sparkle 💎
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="/optics/diamond-sparkle-example.png" alt="Diamond showing light refraction and internal reflection creating sparkle" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  <img loading="lazy" src="/optics/diamond-sparkle-example.png" alt="Diamond showing light refraction and internal reflection creating sparkle" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
 > ## 💬 The Question
@@ -254,7 +254,7 @@ Let's make sure you've mastered the basics before moving forward!
 # Real-World Example #3: Underwater Vision 🏊‍♀️
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="/optics/underwater-vision-example.png" alt="Light refracting at water surface creating optical illusion" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  <img loading="lazy" src="/optics/underwater-vision-example.png" alt="Light refracting at water surface creating optical illusion" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
 > ## 👀 Ever Noticed?
@@ -288,7 +288,7 @@ Let's make sure you've mastered the basics before moving forward!
 # Real-World Example #4: Rainbow Formation 🌈
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="/optics/rainbow-formation-example.png" alt="Rainbow formation through refraction and reflection in raindrops" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  <img loading="lazy" src="/optics/rainbow-formation-example.png" alt="Rainbow formation through refraction and reflection in raindrops" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
 > ## ✨ The Magic

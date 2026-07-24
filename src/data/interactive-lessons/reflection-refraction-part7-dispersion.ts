@@ -47,7 +47,7 @@ Notice: $n$ increases as wavelength **decreases**!
 ## White Light Through a Prism
 
 <div style="text-align: center; margin: 20px 0;">
-  <img src="/optics/prism-dispersion.svg" alt="White light dispersing through a prism" style="max-width: 100%; height: auto;" />
+  <img loading="lazy" src="/optics/prism-dispersion.svg" alt="White light dispersing through a prism" style="max-width: 100%; height: auto;" />
 </div>
 
 **Each color refracts at a slightly different angle!**
@@ -81,7 +81,7 @@ Rainbows combine refraction, dispersion, and total internal reflection!
 ## How Rainbows Form
 
 <div style="text-align: center; margin: 20px 0;">
-  <img src="/optics/rainbow-raindrop.svg" alt="Light path through a raindrop creating a rainbow" style="max-width: 100%; height: auto;" />
+  <img loading="lazy" src="/optics/rainbow-raindrop.svg" alt="Light path through a raindrop creating a rainbow" style="max-width: 100%; height: auto;" />
 </div>
 
 **1. Refraction (entering drop)**
@@ -118,7 +118,7 @@ You see a rainbow when:
 All raindrops at 42° from the sun-you line form a circle!
 
 <div style="text-align: center; margin: 20px 0;">
-  <img src="/optics/rainbow-geometry.svg" alt="Why rainbows form circular arcs" style="max-width: 100%; height: auto;" />
+  <img loading="lazy" src="/optics/rainbow-geometry.svg" alt="Why rainbows form circular arcs" style="max-width: 100%; height: auto;" />
 </div>
 
 ## Double Rainbows 🌈🌈

@@ -30,7 +30,7 @@ $$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$
 
 This powerful equation predicts exactly how much light will bend at any interface.
 
-<img src="/optics/snells-law-diagram.svg" alt="Snell's Law Refraction Diagram" style="max-width: 600px; margin: 20px auto; display: block;" />
+<img loading="lazy" src="/optics/snells-law-diagram.svg" alt="Snell's Law Refraction Diagram" style="max-width: 600px; margin: 20px auto; display: block;" />
 
 **What you see:**
 - Light traveling from air (less dense) into water (more dense)
@@ -102,7 +102,7 @@ Let's see this in action with visual examples...
 
 When light enters a **denser medium** (higher index of refraction), it slows down and bends **toward the normal**.
 
-<img src="/optics/bending-toward-normal.svg" alt="Light bending toward normal" style="max-width: 500px; margin: 20px auto; display: block;" />
+<img loading="lazy" src="/optics/bending-toward-normal.svg" alt="Light bending toward normal" style="max-width: 500px; margin: 20px auto; display: block;" />
 
 ### Key Observations:
 
@@ -128,7 +128,7 @@ When light enters a **denser medium** (higher index of refraction), it slows dow
 
 When light enters a **less dense medium** (lower index of refraction), it speeds up and bends **away from the normal**.
 
-<img src="/optics/bending-away-normal.svg" alt="Light bending away from normal" style="max-width: 500px; margin: 20px auto; display: block;" />
+<img loading="lazy" src="/optics/bending-away-normal.svg" alt="Light bending away from normal" style="max-width: 500px; margin: 20px auto; display: block;" />
 
 ### Key Observations:
 
@@ -198,7 +198,7 @@ $$\\theta_2 = \\sin^{-1}(0.531) = 32.1°$$
 
 ## Visual Result:
 
-<img src="/optics/snell-example1-air-water.svg" alt="Snell's Law Example: Air to Water" style="max-width: 500px; margin: 20px auto; display: block;" />
+<img loading="lazy" src="/optics/snell-example1-air-water.svg" alt="Snell's Law Example: Air to Water" style="max-width: 500px; margin: 20px auto; display: block;" />
 
 The light ray bends toward the normal when entering water!
       `
@@ -255,7 +255,7 @@ $$\\theta_2 = \\sin^{-1}(0.665) = 41.7°$$
 
 ## Visual Result:
 
-<img src="/optics/snell-example2-water-air.svg" alt="Snell's Law Example: Water to Air" style="max-width: 500px; margin: 20px auto; display: block;" />
+<img loading="lazy" src="/optics/snell-example2-water-air.svg" alt="Snell's Law Example: Water to Air" style="max-width: 500px; margin: 20px auto; display: block;" />
 
 The light ray bends away from the normal when exiting water!
 
