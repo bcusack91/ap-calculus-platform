@@ -23,6 +23,16 @@ export default function StudyNotes({ topicSlug }: { topicSlug: string }) {
   const lastSaved = useRef('')
   const contentRef = useRef('')
   contentRef.current = content
+  const taRef = useRef<HTMLTextAreaElement>(null)
+
+  // Grow the box to fit what's written (min ~7 lines, then scroll past a cap),
+  // so a long note isn't trapped in a tiny scroll area on a phone.
+  const autosize = useCallback(() => {
+    const el = taRef.current
+    if (!el) return
+    el.style.height = 'auto'
+    el.style.height = `${Math.min(Math.max(el.scrollHeight, 160), 520)}px`
+  }, [])
 
   // Load the existing note.
   useEffect(() => {
@@ -70,6 +80,10 @@ export default function StudyNotes({ topicSlug }: { topicSlug: string }) {
     if (saveTimer.current) clearTimeout(saveTimer.current)
     saveTimer.current = setTimeout(() => save(text.slice(0, MAX_CHARS)), SAVE_DEBOUNCE_MS)
   }
+
+  // Resize whenever the text or the panel's open state changes (opening it, or
+  // loading an existing note, needs a fit after the textarea is in the DOM).
+  useEffect(() => { if (open) autosize() }, [content, open, autosize])
 
   const onBlur = () => {
     if (saveTimer.current) clearTimeout(saveTimer.current)
@@ -135,13 +149,22 @@ export default function StudyNotes({ topicSlug }: { topicSlug: string }) {
           ) : (
             <>
               <textarea
+                ref={taRef}
                 value={content}
                 onChange={(e) => onChange(e.target.value)}
                 onBlur={onBlur}
                 disabled={status === 'loading'}
-                rows={6}
+                rows={7}
+                // Typing aids for prose notes; these also leave iPadOS Scribble
+                // (Apple Pencil handwriting → text) working, since it operates on
+                // standard text inputs.
+                autoCapitalize="sentences"
+                autoCorrect="on"
+                spellCheck
                 placeholder="Write your own notes on this topic — key formulas, tricky points, reminders. Saved automatically."
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 p-3 text-sm text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-accent resize-y disabled:opacity-60"
+                // text-base = 16px: below 16px iOS Safari zooms the page on focus.
+                // Comfortable line-height and touch padding across phone/tablet.
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 p-3 sm:p-4 text-base leading-relaxed text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-accent resize-y disabled:opacity-60"
               />
               <div className="mt-1 flex items-center justify-between text-xs text-gray-400">
                 <a href="/notes" className="text-accent hover:underline">View all my notes →</a>

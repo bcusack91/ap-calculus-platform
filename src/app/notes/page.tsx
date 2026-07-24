@@ -117,16 +117,16 @@ export default function NotesPage() {
                               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">{note.content.replace(/\s+/g, ' ').trim() || 'Empty note'}</p>
                             )}
                           </button>
-                          <button onClick={() => remove(note.topicSlug)} title="Delete note" aria-label={`Delete note for ${note.topicTitle}`} className="flex-shrink-0 p-1.5 text-gray-400 hover:text-red-500 transition-colors">
+                          <button onClick={() => remove(note.topicSlug)} title="Delete note" aria-label={`Delete note for ${note.topicTitle}`} className="flex-shrink-0 grid place-items-center w-10 h-10 -mr-1 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
                             <Trash2 className="w-4 h-4" aria-hidden />
                           </button>
                         </div>
                         {isOpen && (
                           <div className="px-4 pb-4">
-                            <div className="rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-3 text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap break-words max-h-80 overflow-y-auto">
+                            <div className="rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-3 sm:p-4 text-[15px] leading-relaxed text-gray-800 dark:text-gray-200 whitespace-pre-wrap break-words max-h-80 overflow-y-auto">
                               {note.content.trim() || 'This note is empty.'}
                             </div>
-                            <div className="mt-2 flex gap-4 text-xs">
+                            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
                               <Link href={`/topics/${note.topicSlug}/interactive`} className="text-accent font-medium hover:underline">Open lesson</Link>
                               <Link href={`/topics/${note.topicSlug}`} className="text-accent font-medium hover:underline">Edit on topic page</Link>
                             </div>
