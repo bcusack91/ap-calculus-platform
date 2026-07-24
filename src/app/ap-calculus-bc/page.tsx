@@ -156,7 +156,7 @@ export default function APCalculusBCHub() {
             140+ interactive lessons covering all AB content plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ap-calcbc-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
+            <Link href="/calcbc-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
             <Link href="/courses/ap-calculus-bc" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
           </div>
         </div>
@@ -227,7 +227,7 @@ export default function APCalculusBCHub() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <Link href="/ap-calcbc-diagnostic" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg">
+            <Link href="/calcbc-diagnostic" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg">
               Get Started Free
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </Link>

@@ -14,6 +14,7 @@ import {
   courseFlashcardMap,
   courseFRQMap,
   coursePracticeTestMap,
+  courseUnitTestsMap,
   courseScorePredictorMap,
   courseStudyPlanMap,
 } from '@/data/course-feature-config'
@@ -363,37 +364,38 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
           )
         })()}
 
-        {/* Extra feature links — shown when course has practice test, FRQ, study plans, or flashcards */}
+        {/* Study tools — rendered in a FIXED order for every course so the page
+            reads the same site-wide. Tools a course genuinely doesn't have are
+            omitted individually rather than collapsing the whole section, and
+            the section header only disappears if a course has none at all. */}
         {(() => {
-          const practice = coursePracticeTestMap[slug]
-          const frq = courseFRQMap[slug]
-          const studyPlan = courseStudyPlanMap[slug]
-          const flashcards = courseFlashcardMap[slug]
-          const links = [practice, frq, studyPlan, flashcards].filter(Boolean)
-          if (links.length === 0) return null
+          const tools = [
+            { key: 'practice_test', icon: '📝', cfg: coursePracticeTestMap[slug] },
+            { key: 'unit_tests', icon: '🎯', cfg: courseUnitTestsMap[slug] },
+            { key: 'frq', icon: '✍️', cfg: courseFRQMap[slug] },
+            { key: 'study_plans', icon: '📅', cfg: courseStudyPlanMap[slug] },
+            { key: 'flashcards', icon: '🃏', cfg: courseFlashcardMap[slug] },
+          ].filter((t) => t.cfg)
+          if (tools.length === 0) return null
           const btnClass = 'inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-800 shadow-sm transition hover:border-indigo-400 hover:bg-indigo-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/20'
           return (
-            <div className="flex flex-wrap gap-3 mb-8">
-              {practice && (
-                <TrackedLink href={practice.href} eventName="course_cta_click" eventParams={{ course_slug: slug, course_name: course.name, page_template: 'course_page', cta_type: 'practice_test', destination: practice.href, location: 'course_feature_links' }} className={btnClass}>
-                  📝 {practice.label}
-                </TrackedLink>
-              )}
-              {frq && (
-                <TrackedLink href={frq.href} eventName="course_cta_click" eventParams={{ course_slug: slug, course_name: course.name, page_template: 'course_page', cta_type: 'frq', destination: frq.href, location: 'course_feature_links' }} className={btnClass}>
-                  ✍️ {frq.label}
-                </TrackedLink>
-              )}
-              {studyPlan && (
-                <TrackedLink href={studyPlan.href} eventName="course_cta_click" eventParams={{ course_slug: slug, course_name: course.name, page_template: 'course_page', cta_type: 'study_plans', destination: studyPlan.href, location: 'course_feature_links' }} className={btnClass}>
-                  📅 {studyPlan.label}
-                </TrackedLink>
-              )}
-              {flashcards && (
-                <TrackedLink href={flashcards.href} eventName="course_cta_click" eventParams={{ course_slug: slug, course_name: course.name, page_template: 'course_page', cta_type: 'flashcards', destination: flashcards.href, location: 'course_feature_links' }} className={btnClass}>
-                  🃏 {flashcards.label}
-                </TrackedLink>
-              )}
+            <div className="mb-8">
+              <h2 className="text-sm font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+                Study tools
+              </h2>
+              <div className="flex flex-wrap gap-3">
+                {tools.map((t) => (
+                  <TrackedLink
+                    key={t.key}
+                    href={t.cfg!.href}
+                    eventName="course_cta_click"
+                    eventParams={{ course_slug: slug, course_name: course.name, page_template: 'course_page', cta_type: t.key, destination: t.cfg!.href, location: 'course_feature_links' }}
+                    className={btnClass}
+                  >
+                    {t.icon} {t.cfg!.label}
+                  </TrackedLink>
+                ))}
+              </div>
             </div>
           )
         })()}

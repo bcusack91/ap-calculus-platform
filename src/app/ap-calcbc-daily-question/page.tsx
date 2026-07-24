@@ -130,7 +130,7 @@ function APCalcBCDailyQuestionPageInner() {
             Want more practice? Try a full diagnostic or explore all topics.
           </p>
           <div className="flex justify-center gap-3">
-            <Link href="/ap-calcbc-diagnostic" className="rounded-lg bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400">
+            <Link href="/calcbc-diagnostic" className="rounded-lg bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400">
               Diagnostic Test
             </Link>
             <Link href="/ap-calculus-bc" className="rounded-lg bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400">

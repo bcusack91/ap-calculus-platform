@@ -131,7 +131,7 @@ function APCalcABDailyQuestionPageInner() {
             Want more practice? Try a full diagnostic or explore all topics.
           </p>
           <div className="flex justify-center gap-3">
-            <Link href="/ap-calcab-diagnostic" className="rounded-lg bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400">
+            <Link href="/calcab-diagnostic" className="rounded-lg bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400">
               Diagnostic Test
             </Link>
             <Link href="/ap-calculus-ab" className="rounded-lg bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 transition hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-400">

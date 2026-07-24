@@ -616,6 +616,14 @@ function DashboardContent() {
               {label}
             </button>
           ))}
+          {/* Full cross-activity history lives on its own page — link it from the
+              tab strip so the dashboard stays a summary, not a dumping ground. */}
+          <Link
+            href="/progress"
+            className="-mb-px ml-auto border-b-2 border-transparent px-4 py-2.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
+          >
+            My Progress →
+          </Link>
         </div>
 
         {/* ============ OVERVIEW: what to study now ============ */}
@@ -726,7 +734,7 @@ function DashboardContent() {
                       <h3 className="font-bold text-gray-900 dark:text-white">∫ AP Calculus AB</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">Score: {calcABDiagnostic.estimatedAPScore}/5 ({calcABDiagnostic.percentage}%)</span>
-                        <Link href="/ap-calcab-diagnostic" className="text-xs text-accent hover:underline dark:text-accent-muted">Retake →</Link>
+                        <Link href="/calcab-diagnostic" className="text-xs text-accent hover:underline dark:text-accent-muted">Retake →</Link>
                       </div>
                     </div>
                     <div className="space-y-1.5">
@@ -749,7 +757,7 @@ function DashboardContent() {
                       <h3 className="font-bold text-gray-900 dark:text-white">∬ AP Calculus BC</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">BC: {calcBCDiagnostic.estimatedAPScore}/5, AB: {calcBCDiagnostic.abSubscore}/5</span>
-                        <Link href="/ap-calcbc-diagnostic" className="text-xs text-violet-600 hover:underline dark:text-violet-400">Retake →</Link>
+                        <Link href="/calcbc-diagnostic" className="text-xs text-violet-600 hover:underline dark:text-violet-400">Retake →</Link>
                       </div>
                     </div>
                     <div className="space-y-1.5">
