@@ -17,6 +17,7 @@ import { latexToPlain } from '@/lib/latex-to-plain'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
+import StudyNotes from '@/components/StudyNotes'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
@@ -1469,8 +1470,12 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         <BookmarkButton lessonId={`${topicSlug}-part${lessonPart}`} lessonTitle={lessonTitle} />
         <KeyboardShortcutHint />
       </div>
+
+      {/* Personal notes while studying — same server-synced note as the topic
+          page (keyed by topicSlug, shared across all parts of this lesson). */}
+      <StudyNotes topicSlug={topicSlug} />
     </div>
-    
+
     {/* Flashcard Notification */}
     {flashcardNotificationData && (
       <FlashcardNotification

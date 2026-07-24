@@ -12,6 +12,8 @@ const DISALLOWED = [
   '/profile/',
   '/teacher/',
   '/onboarding/',
+  '/notes', // personal notes collection — auth-gated, nothing to index
+
   '/competitive/', // the /competitive hub (no trailing slash) stays crawlable
 ]
 

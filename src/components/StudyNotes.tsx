@@ -21,6 +21,8 @@ export default function StudyNotes({ topicSlug }: { topicSlug: string }) {
   const [open, setOpen] = useState(false)
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const lastSaved = useRef('')
+  const contentRef = useRef('')
+  contentRef.current = content
 
   // Load the existing note.
   useEffect(() => {
@@ -74,8 +76,23 @@ export default function StudyNotes({ topicSlug }: { topicSlug: string }) {
     if (status !== 'signedout') void save(content)
   }
 
-  // Flush a pending save if the component unmounts (e.g. navigating away).
-  useEffect(() => () => { if (saveTimer.current) clearTimeout(saveTimer.current) }, [])
+  // On unmount (e.g. switching lesson parts or navigating away), cancel the
+  // debounce and flush any unsaved edit. `keepalive` lets the request finish
+  // even as the component/page tears down. If signed out, content stays '' so
+  // there's nothing to flush.
+  useEffect(() => {
+    return () => {
+      if (saveTimer.current) clearTimeout(saveTimer.current)
+      if (contentRef.current !== lastSaved.current) {
+        fetch('/api/notes', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicSlug, content: contentRef.current }),
+          keepalive: true,
+        }).catch(() => {})
+      }
+    }
+  }, [topicSlug])
 
   const statusLabel = {
     loading: '',
@@ -127,9 +144,10 @@ export default function StudyNotes({ topicSlug }: { topicSlug: string }) {
                 className="w-full rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 p-3 text-sm text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent focus:border-accent resize-y disabled:opacity-60"
               />
               <div className="mt-1 flex items-center justify-between text-xs text-gray-400">
-                <span>{status === 'error' ? <span className="text-red-500">{statusLabel}</span> : 'Auto-saved to your account'}</span>
+                <a href="/notes" className="text-accent hover:underline">View all my notes →</a>
                 <span>{content.length.toLocaleString()} / {MAX_CHARS.toLocaleString()}</span>
               </div>
+              {status === 'error' && <p className="mt-1 text-xs text-red-500">{statusLabel}</p>}
             </>
           )}
         </div>

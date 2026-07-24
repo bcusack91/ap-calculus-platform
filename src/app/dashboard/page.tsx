@@ -1007,7 +1007,10 @@ function DashboardContent() {
             {/* My Notes (server-synced per-topic notes) */}
             {notes.length > 0 && (
               <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-4"><NotebookPen className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> My Notes</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-bold text-gray-900 dark:text-white"><NotebookPen className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> My Notes</h3>
+                  <Link href="/notes" className="text-xs font-medium text-accent hover:underline">View all →</Link>
+                </div>
                 <div className="space-y-2">
                   {notes.slice(0, 5).map((note) => (
                     <Link
