@@ -11,6 +11,8 @@ import { POWER_UPS, activeEffects, type PowerUpId, type PowerUpsState } from '@/
 import {
   PowerUpBar,
   InkSplatOverlay,
+  DarkOverlay,
+  StormOverlay,
   ChaosToasts,
   useChaosNow,
   type ChaosToast,
@@ -239,10 +241,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     () => (isChaosMode ? activeEffects(myEffectsList, chaosNow) : []),
     [isChaosMode, myEffectsList, chaosNow]
   );
+  const stormEffect = myActiveEffects.find((e) => e.type === 'chaos-storm') || null;
   const flipActive = myActiveEffects.some((e) => e.type === 'screen-flip');
   const fogActive = myActiveEffects.some((e) => e.type === 'fog');
   const slipperyActive = myActiveEffects.some((e) => e.type === 'slippery');
   const inkEffect = myActiveEffects.find((e) => e.type === 'ink-splat') || null;
+  const blackoutEffect = myActiveEffects.find((e) => e.type === 'blackout') || null;
+  // Earthquake and the Chaos Storm super both shake the game area.
+  const shakeActive = myActiveEffects.some((e) => e.type === 'earthquake' || e.type === 'chaos-storm');
 
   const myQuestionIndexLive = matchState
     ? (amPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex)
@@ -313,8 +319,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       if (data.fiftyFifty) setFiftyFiftyElim(data.fiftyFifty);
       const def = POWER_UPS[id];
       if (data.outcome === 'blocked') addChaosToast('🛡️ Blocked by their shield!');
+      else if (data.outcome === 'reflected') addChaosToast('🪞 Reflected back at you!');
       else if (def.kind === 'attack') addChaosToast(`${def.icon} ${def.name} launched!`);
       else if (id === 'shield') addChaosToast('🛡️ Shield armed!');
+      else if (id === 'reflect') addChaosToast('🪞 Reflect armed!');
       else if (id === 'double-points') addChaosToast('⚡ Double points armed!');
       await fetchMatchState();
     } catch {
@@ -1020,6 +1028,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         <PowerUpBar
           inventory={myPowerUps?.inventory || []}
           shield={myPowerUps?.shield}
+          reflect={myPowerUps?.reflect}
           doubleNext={myPowerUps?.doubleNext}
           disabled={usingPowerUp}
           onUse={useChaosPowerUp}
@@ -1147,8 +1156,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         {/* Chaos effect layer: flip rotates the whole play area; ink splats
             overlay it. Effects always land — prefers-reduced-motion only cuts
             the animated transition (the flip snaps instead of spinning). */}
-        <div className={`relative transition-transform duration-500 motion-reduce:transition-none ${flipActive ? 'rotate-180' : ''}`}>
+        <div className={`relative transition-transform duration-500 motion-reduce:transition-none ${flipActive ? 'rotate-180' : ''} ${shakeActive ? 'chaos-shake' : ''}`}>
           {inkEffect && <InkSplatOverlay effect={inkEffect} now={chaosNow} />}
+          {blackoutEffect && <DarkOverlay effect={blackoutEffect} now={chaosNow} intensity={0.85} />}
+          {stormEffect && <StormOverlay effect={stormEffect} now={chaosNow} />}
         {/* Question prompt */}
         {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">

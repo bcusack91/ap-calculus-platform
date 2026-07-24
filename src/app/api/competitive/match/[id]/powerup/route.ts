@@ -19,7 +19,11 @@ const powerUpUseSchema = z.object({
     'screen-flip',
     'slippery',
     'fog',
+    'earthquake',
+    'blackout',
+    'chaos-storm',
     'shield',
+    'reflect',
     'fifty-fifty',
     'double-points',
   ]),
@@ -107,31 +111,40 @@ export async function POST(
 
       const def = POWER_UPS[powerUpId as PowerUpId];
       const now = Date.now();
-      let outcome: 'applied' | 'blocked' = 'applied';
+      let outcome: 'applied' | 'blocked' | 'reflected' = 'applied';
       let fiftyFifty: { questionIndex: number; eliminated: number[] } | null = null;
+
+      const myName = isPlayer1
+        ? publicDisplayName(match.player1.name, 'Opponent')
+        : publicDisplayName(match.player2.name, 'Opponent');
+      const theirName = isPlayer1
+        ? publicDisplayName(match.player2.name, 'Opponent')
+        : publicDisplayName(match.player1.name, 'Opponent');
+      const makeEffect = (from: string) => ({
+        id: `${powerUpId}-${now}-${Math.random().toString(36).slice(2, 8)}`,
+        type: def.id,
+        from,
+        startedAt: now,
+        durationMs: def.durationMs ?? 3000,
+      });
 
       if (def.kind === 'attack') {
         if (theirs.shield) {
           // Shield eats the attack.
           theirs.shield = false;
           outcome = 'blocked';
+        } else if (theirs.reflect) {
+          // Reflect bounces it straight back onto the attacker's own screen.
+          theirs.reflect = false;
+          mine.effects = [...pruneEffects(mine.effects, now), makeEffect(theirName)];
+          outcome = 'reflected';
         } else {
-          const attackerName = isPlayer1
-            ? publicDisplayName(match.player1.name, 'Opponent')
-            : publicDisplayName(match.player2.name, 'Opponent');
-          theirs.effects = [
-            ...pruneEffects(theirs.effects, now),
-            {
-              id: `${powerUpId}-${now}-${Math.random().toString(36).slice(2, 8)}`,
-              type: def.id,
-              from: attackerName,
-              startedAt: now,
-              durationMs: def.durationMs ?? 3000,
-            },
-          ];
+          theirs.effects = [...pruneEffects(theirs.effects, now), makeEffect(myName)];
         }
       } else if (powerUpId === 'shield') {
         mine.shield = true;
+      } else if (powerUpId === 'reflect') {
+        mine.reflect = true;
       } else if (powerUpId === 'double-points') {
         mine.doubleNext = true;
       } else if (powerUpId === 'fifty-fifty') {

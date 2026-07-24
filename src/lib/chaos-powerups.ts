@@ -17,7 +17,11 @@ export type PowerUpId =
   | 'screen-flip'
   | 'slippery'
   | 'fog'
+  | 'earthquake'
+  | 'blackout'
+  | 'chaos-storm'
   | 'shield'
+  | 'reflect'
   | 'fifty-fifty'
   | 'double-points';
 
@@ -31,6 +35,8 @@ export interface PowerUpDef {
   description: string;
   /** Visual-effect duration for attacks (ms). Self items are instant. */
   durationMs?: number;
+  /** Rare, dramatic "super" item — styled specially in the inventory bar. */
+  super?: boolean;
 }
 
 export const POWER_UPS: Record<PowerUpId, PowerUpDef> = {
@@ -66,12 +72,44 @@ export const POWER_UPS: Record<PowerUpId, PowerUpDef> = {
     description: "Blurs your opponent's question for 2.5 seconds.",
     durationMs: 2500,
   },
+  earthquake: {
+    id: 'earthquake',
+    kind: 'attack',
+    name: 'Earthquake',
+    icon: '🫨',
+    description: "Violently shakes your opponent's screen for 3 seconds.",
+    durationMs: 3000,
+  },
+  blackout: {
+    id: 'blackout',
+    kind: 'attack',
+    name: 'Blackout',
+    icon: '🌑',
+    description: "Plunges your opponent's screen into darkness for 3 seconds.",
+    durationMs: 3000,
+  },
+  'chaos-storm': {
+    id: 'chaos-storm',
+    kind: 'attack',
+    name: 'Chaos Storm',
+    icon: '🌪️',
+    description: 'THE SUPER: a 5-second storm of darkness, lightning, and quaking. Rare — only the trailing player can find it.',
+    durationMs: 5000,
+    super: true,
+  },
   shield: {
     id: 'shield',
     kind: 'self',
     name: 'Shield',
     icon: '🛡️',
     description: 'Blocks the next attack thrown at you.',
+  },
+  reflect: {
+    id: 'reflect',
+    kind: 'self',
+    name: 'Reflect',
+    icon: '🪞',
+    description: 'Bounces the next attack back at whoever threw it.',
   },
   'fifty-fifty': {
     id: 'fifty-fifty',
@@ -102,6 +140,8 @@ export interface PlayerPowerUpState {
   inventory: PowerUpId[];
   effects: ActiveEffect[];
   shield?: boolean;
+  /** Reflect: the next incoming attack bounces back onto the attacker. */
+  reflect?: boolean;
   doubleNext?: boolean;
   /** 50/50: wrong options grayed out for a specific question (self-visible only). */
   fiftyFifty?: { questionIndex: number; eliminated: number[] };
@@ -132,21 +172,24 @@ export function rollPowerUpDrop(deficit: number, rng: () => number = Math.random
 
   let table: Array<[PowerUpId, number]>;
   if (deficit >= 3) {
-    // Far behind: comeback kit.
+    // Far behind: comeback kit — the only place the Chaos Storm super drops, and
+    // rarely (weight 6), so it feels like a genuine turnaround moment.
     table = [
-      ['ink-splat', 22], ['screen-flip', 18], ['double-points', 20],
-      ['fifty-fifty', 20], ['slippery', 12], ['shield', 8],
+      ['ink-splat', 16], ['screen-flip', 12], ['double-points', 16],
+      ['fifty-fifty', 16], ['slippery', 10], ['earthquake', 12],
+      ['blackout', 10], ['reflect', 8], ['chaos-storm', 6], ['shield', 6],
     ];
   } else if (deficit >= 1) {
-    // Slightly behind: balanced.
+    // Slightly behind: balanced, with the new attacks in the mix.
     table = [
-      ['ink-splat', 14], ['screen-flip', 12], ['double-points', 12],
-      ['fifty-fifty', 14], ['slippery', 18], ['fog', 16], ['shield', 14],
+      ['ink-splat', 12], ['screen-flip', 10], ['double-points', 10],
+      ['fifty-fifty', 12], ['slippery', 14], ['fog', 12], ['earthquake', 10],
+      ['blackout', 10], ['reflect', 10], ['shield', 10],
     ];
   } else {
-    // Even or leading: mild utility, no heavy hitters.
+    // Even or leading: mild utility only, no heavy hitters (rubber-banding).
     table = [
-      ['fog', 35], ['slippery', 25], ['shield', 30], ['fifty-fifty', 10],
+      ['fog', 28], ['slippery', 22], ['shield', 24], ['reflect', 12], ['fifty-fifty', 14],
     ];
   }
 

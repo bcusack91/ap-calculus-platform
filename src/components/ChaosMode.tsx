@@ -84,17 +84,20 @@ export function InkSplatOverlay({ effect, now }: { effect: ActiveEffect; now: nu
 export function PowerUpBar({
   inventory,
   shield,
+  reflect,
   doubleNext,
   disabled,
   onUse,
 }: {
   inventory: PowerUpId[];
   shield?: boolean;
+  reflect?: boolean;
   doubleNext?: boolean;
   disabled?: boolean;
   onUse: (id: PowerUpId) => void;
 }) {
-  if (inventory.length === 0 && !shield && !doubleNext) return null;
+  if (inventory.length === 0 && !shield && !reflect && !doubleNext) return null;
+  const armed = shield || reflect || doubleNext;
   return (
     // Sits above the iPhone home indicator — without the safe-area inset the
     // bar tucks under it on notched devices and the buttons get hard to tap.
@@ -106,26 +109,71 @@ export function PowerUpBar({
         {shield && (
           <span className="text-lg" title="Shield armed — blocks the next attack">🛡️</span>
         )}
+        {reflect && (
+          <span className="text-lg" title="Reflect armed — bounces the next attack back">🪞</span>
+        )}
         {doubleNext && (
           <span className="text-lg animate-pulse motion-reduce:animate-none" title="Double points armed — next correct answer counts twice">⚡</span>
         )}
-        {(shield || doubleNext) && inventory.length > 0 && (
+        {armed && inventory.length > 0 && (
           <span className="w-px h-6 bg-gray-300 dark:bg-gray-600" />
         )}
         {inventory.map((id, i) => {
           const def = POWER_UPS[id];
+          // The super item gets a distinct look + pulsing glow so it stands out.
+          const cls = def.super
+            ? 'w-11 h-11 rounded-full bg-gradient-to-br from-fuchsia-500 to-indigo-600 border-2 border-fuchsia-300 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed chaos-super-glow motion-reduce:animate-none'
+            : 'w-11 h-11 rounded-full bg-gradient-to-br from-accent-light to-blue-100 dark:from-accent-light/50 dark:to-blue-900/50 border-2 border-accent-muted dark:border-accent-hover text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed';
           return (
             <button
               key={`${id}-${i}`}
               onClick={() => onUse(id)}
               disabled={disabled}
               title={`${def.name}: ${def.description}`}
-              className="w-11 h-11 rounded-full bg-gradient-to-br from-accent-light to-blue-100 dark:from-accent-light/50 dark:to-blue-900/50 border-2 border-accent-muted dark:border-accent-hover text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className={cls}
             >
               {def.icon}
             </button>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Dark-overlay attack (Blackout, and the base layer of the Chaos Storm super).
+ * The darkness is what disrupts, so it "lands" even under reduced motion where
+ * the animated pieces are collapsed. Fades out over the final second.
+ */
+export function DarkOverlay({ effect, now, intensity = 0.8 }: { effect: ActiveEffect; now: number; intensity?: number }) {
+  const remaining = effect.startedAt + effect.durationMs - now;
+  const fade = Math.max(0, Math.min(1, remaining / 800));
+  return (
+    <div
+      className="absolute inset-0 z-20 pointer-events-none"
+      style={{ backgroundColor: `rgba(2, 2, 12, ${intensity * fade})` }}
+      aria-hidden
+    />
+  );
+}
+
+/**
+ * Chaos Storm super overlay: darkness + lightning flashes on top of the shake
+ * (the shake is applied to the game container, like the flip). The dark layer
+ * is the part that reliably disrupts; lightning is flashy decoration.
+ */
+export function StormOverlay({ effect, now }: { effect: ActiveEffect; now: number }) {
+  const remaining = effect.startedAt + effect.durationMs - now;
+  const fade = Math.max(0, Math.min(1, remaining / 800));
+  return (
+    <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden" style={{ opacity: fade }} aria-hidden>
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(2, 2, 12, 0.82)' }} />
+      {/* Lightning: two offset flashers so strikes feel irregular. */}
+      <div className="absolute inset-0 bg-white animate-chaos-lightning motion-reduce:hidden" />
+      <div className="absolute inset-0 bg-indigo-200 animate-chaos-lightning motion-reduce:hidden" style={{ animationDelay: '1.1s' }} />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-4xl sm:text-6xl drop-shadow-[0_0_12px_rgba(168,85,247,0.9)] animate-pulse motion-reduce:animate-none">🌪️</span>
       </div>
     </div>
   );
