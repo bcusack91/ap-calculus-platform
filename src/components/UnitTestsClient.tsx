@@ -157,7 +157,9 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
     (topicSlug: string) =>
       config.reviewHrefForTopic
         ? config.reviewHrefForTopic(topicSlug)
-        : `/courses/${config.courseSlug}/${topicSlug}`,
+        : config.reviewHrefBase
+          ? config.reviewHrefBase
+          : `/courses/${config.courseSlug}/${topicSlug}`,
     [config],
   )
 

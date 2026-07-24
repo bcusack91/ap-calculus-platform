@@ -182,6 +182,8 @@ export const courseFRQMap: Record<string, SimpleLinkConfig> = {
 
 export const courseStudyPlanMap: Record<string, SimpleLinkConfig> = {
   'act': { href: '/act-study-plans', label: 'Study Plans' },
+  'algebra-1': { href: '/algebra1-study-plans', label: 'Study Plans' },
+  'algebra-2': { href: '/algebra2-study-plans', label: 'Study Plans' },
   'ap-african-american-studies': { href: '/ap-african-american-studies-study-plans', label: 'Study Plans' },
   'ap-biology': { href: '/ap-bio-study-plans', label: 'Study Plans' },
   'ap-calculus-ab': { href: '/ap-calcab-study-plans', label: 'Study Plans' },
@@ -205,11 +207,16 @@ export const courseStudyPlanMap: Record<string, SimpleLinkConfig> = {
   'ap-us-government': { href: '/ap-us-gov-study-plans', label: 'Study Plans' },
   'ap-us-history': { href: '/ap-us-history-study-plans', label: 'Study Plans' },
   'ap-world-history': { href: '/ap-world-history-study-plans', label: 'Study Plans' },
+  'geometry': { href: '/geometry-study-plans', label: 'Study Plans' },
+  'grade-8-math': { href: '/grade8-math-study-plans', label: 'Study Plans' },
   'mcat': { href: '/mcat-study-plans', label: 'Study Plans' },
+  'pre-algebra': { href: '/prealgebra-study-plans', label: 'Study Plans' },
+  'precalculus': { href: '/precalc-study-plans', label: 'Study Plans' },
   'sat': { href: '/sat-study-plans', label: 'Study Plans' },
 }
 
 export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
+  'algebra-1': { href: '/algebra1-unit-tests', label: 'Unit Tests' },
   'ap-african-american-studies': { href: '/ap-aas-unit-tests', label: 'Unit Tests' },
   'ap-biology': { href: '/ap-bio-unit-tests', label: 'Unit Tests' },
   'ap-calculus-ab': { href: '/ap-calcab-unit-tests', label: 'Unit Tests' },
@@ -225,12 +232,17 @@ export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
   'ap-microeconomics': { href: '/ap-micro-unit-tests', label: 'Unit Tests' },
   'ap-physics-1': { href: '/ap-physics1-unit-tests', label: 'Unit Tests' },
   'ap-physics-2': { href: '/ap-physics2-unit-tests', label: 'Unit Tests' },
+  'ap-physics-c-em': { href: '/ap-physics-c-em-unit-tests', label: 'Unit Tests' },
+  'ap-physics-c-mechanics': { href: '/ap-physics-c-mech-unit-tests', label: 'Unit Tests' },
   'ap-precalculus': { href: '/ap-precalc-unit-tests', label: 'Unit Tests' },
   'ap-psychology': { href: '/ap-psych-unit-tests', label: 'Unit Tests' },
   'ap-statistics': { href: '/ap-stats-unit-tests', label: 'Unit Tests' },
   'ap-us-government': { href: '/ap-us-gov-unit-tests', label: 'Unit Tests' },
   'ap-us-history': { href: '/ap-us-history-unit-tests', label: 'Unit Tests' },
   'ap-world-history': { href: '/ap-world-history-unit-tests', label: 'Unit Tests' },
+  'geometry': { href: '/geometry-unit-tests', label: 'Unit Tests' },
+  'mcat': { href: '/mcat-unit-tests', label: 'Unit Tests' },
+  'sat': { href: '/sat-unit-tests', label: 'Unit Tests' },
 }
 
 export const courseFlashcardMap: Record<string, SimpleLinkConfig> = {

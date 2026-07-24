@@ -328,6 +328,13 @@ const allQuestions: GeometryQuestion[] = [
   { id: 300, question: 'A ladder of length 10 ft makes angle $60°$ with ground. Height reached:', options: ['$5\\sqrt{3}$ ft', '$5$ ft', '$10$ ft', '$10\\sqrt{3}$ ft'], correctAnswer: 0, explanation: '$10 \\sin 60° = 5\\sqrt{3}$.', difficulty: 'hard', topicSlug: 'trigonometric-ratios-geo' },
 ]
 
+/**
+ * Raw, UNSHUFFLED bank. The competitive getters above shuffle randomly, which
+ * would break the unit-test engine's seeded (deterministic) variants — so the
+ * unit-test configs consume this ordered array instead.
+ */
+export const geometryQuestionBank: GeometryQuestion[] = allQuestions
+
 export function getGeometryQuestions(count: number = 10, topicSlug?: string): GeometryQuestion[] {
   let pool = allQuestions
   if (topicSlug) {

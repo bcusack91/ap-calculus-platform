@@ -41,6 +41,14 @@ export interface CourseUnitTestConfig {
   timeLimitMinutesPerQuestion?: number // default 1.5 (90 s)
   /** Optional review path builder. Defaults to /courses/{courseSlug}/{topicSlug}. */
   reviewHrefForTopic?: (topicSlug: string) => string
+  /**
+   * Serializable alternative to `reviewHrefForTopic`: send every review link to
+   * this one URL. Needed for configs consumed by a Client Component (a function
+   * can't cross the server/client boundary), and for courses whose pool is
+   * tagged with bank slugs rather than curriculum topic slugs — where a
+   * per-topic review URL would 404. Takes precedence over the default path.
+   */
+  reviewHrefBase?: string
 }
 
 export interface UnitTestQuestion {

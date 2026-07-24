@@ -964,6 +964,13 @@ const allQuestions: Algebra1Question[] = [
   { id: 900, question: 'A "robust" measure of center is:', options: ['Median', 'Mean', 'Range', 'Variance'], correctAnswer: 0, explanation: 'Resistant to outliers.', difficulty: 'easy', topicSlug: 'outliers-in-data' },
 ]
 
+/**
+ * Raw, UNSHUFFLED bank. The competitive getters above shuffle randomly, which
+ * would break the unit-test engine's seeded (deterministic) variants — so the
+ * unit-test configs consume this ordered array instead.
+ */
+export const algebra1QuestionBank: Algebra1Question[] = allQuestions
+
 export function getAlgebra1Questions(count: number = 10, topicSlug?: string): Algebra1Question[] {
   let pool = allQuestions
   if (topicSlug) {

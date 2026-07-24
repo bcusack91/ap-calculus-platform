@@ -58,18 +58,25 @@ const NOT_APPLICABLE: Record<string, string[]> = {
   // is an empty parent shell (superseded by -1/-2) and `precalculus` is the
   // non-AP variant, whose cards live under ap-precalculus.
   precalculus: ['frq', 'flashcards'],
-  'organic-chemistry': ['frq', 'flashcards'],
+  // `organic-chemistry` is an empty parent shell (0 topics in the DB) kept only
+  // so its legacy URL resolves; the real courses are organic-chemistry-1 and -2.
+  // Building assessments against a course with no curriculum is meaningless.
+  'organic-chemistry': ['frq', 'flashcards', 'practice', 'unitTests', 'studyPlan'],
 }
 
 // Alternate historical prefixes for the same course (naming drift).
 const ALIASES: Record<string, string[]> = {
   'ap-precalculus': ['ap-precalc'],
   'ap-african-american-studies': ['ap-aas'],
-  'ap-calculus-ab': ['ap-calc-ab'],
-  'ap-calculus-bc': ['ap-calc-bc'],
+  // The canonical diagnostic URL is /calcab-diagnostic, so the derived prefix is
+  // `calcab` — but every other Calc tool lives under `ap-calcab-*`.
+  'ap-calculus-ab': ['ap-calcab', 'ap-calc-ab'],
+  'ap-calculus-bc': ['ap-calcbc', 'ap-calc-bc'],
   'organic-chemistry-1': ['ochem1', 'ochem'],
   'organic-chemistry-2': ['ochem2', 'ochem'],
   'organic-chemistry': ['ochem'],
+  // Precalculus study plans ship under the `precalc` prefix like its other tools.
+  precalculus: ['precalc'],
 }
 
 const pageExists = (p: string) => fs.existsSync(`src/app/${p}/page.tsx`)
