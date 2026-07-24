@@ -54,7 +54,7 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
 // (webhooks, cron) and authenticate via signature / Bearer secret instead of
 // session cookies — so they are inherently immune to CSRF and exempt from the
 // Origin check below.
-const CSRF_EXEMPT_PREFIXES = ['/api/stripe/webhook', '/api/cron/', '/api/email/']
+const CSRF_EXEMPT_PREFIXES = ['/api/stripe/webhook', '/api/cron/']
 
 function getClientIp(request: NextRequest): string {
   return (

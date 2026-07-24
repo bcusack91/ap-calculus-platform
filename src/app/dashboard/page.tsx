@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers } from 'lucide-react'
+import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -47,6 +47,13 @@ interface BookmarkEntry {
   title: string
   part: number
   createdAt: string
+}
+
+interface NoteEntry {
+  topicSlug: string
+  topicTitle: string
+  content: string
+  updatedAt: string
 }
 
 interface AchievementData {
@@ -168,6 +175,7 @@ function DashboardContent() {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
   const [bookmarks, setBookmarks] = useState<BookmarkEntry[]>([])
+  const [notes, setNotes] = useState<NoteEntry[]>([])
   const [verificationSent, setVerificationSent] = useState(false)
   const [sendingVerification, setSendingVerification] = useState(false)
   const [verificationError, setVerificationError] = useState(false)
@@ -258,13 +266,14 @@ function DashboardContent() {
   }
 
   const fetchAll = async () => {
-    const [dashRes, avatarRes, assignRes, bookmarkRes, achieveRes, onboardRes] = await Promise.allSettled([
+    const [dashRes, avatarRes, assignRes, bookmarkRes, achieveRes, onboardRes, notesRes] = await Promise.allSettled([
       fetch('/api/dashboard'),
       fetch('/api/user/avatar'),
       fetch('/api/student/assignments'),
       fetch('/api/bookmarks'),
       fetch('/api/achievements'),
       fetch('/api/onboarding'),
+      fetch('/api/notes'),
     ])
 
     if (dashRes.status === 'fulfilled' && dashRes.value.ok) {
@@ -291,6 +300,10 @@ function DashboardContent() {
     if (bookmarkRes.status === 'fulfilled' && bookmarkRes.value.ok) {
       const d = await bookmarkRes.value.json()
       setBookmarks(d.bookmarks || [])
+    }
+    if (notesRes.status === 'fulfilled' && notesRes.value.ok) {
+      const d = await notesRes.value.json()
+      setNotes(d.notes || [])
     }
     if (achieveRes.status === 'fulfilled' && achieveRes.value.ok) {
       const d = await achieveRes.value.json()
@@ -987,6 +1000,26 @@ function DashboardContent() {
                     </Link>
                   ))}
                   {bookmarks.length > 5 && <p className="text-xs text-gray-500 dark:text-gray-400 pt-1">+{bookmarks.length - 5} more saved</p>}
+                </div>
+              </div>
+            )}
+
+            {/* My Notes (server-synced per-topic notes) */}
+            {notes.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm">
+                <h3 className="font-bold text-gray-900 dark:text-white mb-4"><NotebookPen className="inline w-4 h-4 mr-1 -mt-0.5 text-accent" aria-hidden /> My Notes</h3>
+                <div className="space-y-2">
+                  {notes.slice(0, 5).map((note) => (
+                    <Link
+                      key={note.topicSlug}
+                      href={`/topics/${note.topicSlug}`}
+                      className="block p-2 -mx-2 rounded-lg hover:bg-accent-subtle dark:hover:bg-accent-light/20 transition-colors group"
+                    >
+                      <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-accent truncate">{note.topicTitle}</span>
+                      <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{note.content.replace(/\s+/g, ' ').trim().slice(0, 90) || 'Empty note'}</span>
+                    </Link>
+                  ))}
+                  {notes.length > 5 && <p className="text-xs text-gray-500 dark:text-gray-400 pt-1">+{notes.length - 5} more</p>}
                 </div>
               </div>
             )}

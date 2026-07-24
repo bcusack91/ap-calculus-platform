@@ -25,6 +25,7 @@ import type { ReactNode } from 'react'
 import { SocialShare } from '@/components/SocialShare'
 import { ArticleByline } from '@/components/ArticleByline'
 import { TopicContentTools } from '@/components/TopicContentTools'
+import StudyNotes from '@/components/StudyNotes'
 import TrackedLink from '@/components/TrackedLink'
 import { getTopicAdVariant } from '@/lib/experiments'
 
@@ -607,6 +608,9 @@ export default async function TopicPage(props: TopicPageProps) {
               topicSlug={topic.slug}
               courseName={topic.category.course.name}
             />
+
+            {/* Personal study notes (server-persisted, per topic) */}
+            <StudyNotes topicSlug={topic.slug} />
 
             {/* Next / Previous Topic Navigation */}
             {(prevTopic || nextTopic) && (
