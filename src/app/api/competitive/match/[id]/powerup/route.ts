@@ -21,11 +21,13 @@ const powerUpUseSchema = z.object({
     'fog',
     'earthquake',
     'blackout',
+    'freeze',
     'chaos-storm',
     'shield',
     'reflect',
     'fifty-fifty',
     'double-points',
+    'time-warp',
   ]),
   // Only honored in AI practice matches (lets the client fire the bot's items,
   // mirroring the answer route's playerId rule).
@@ -145,6 +147,11 @@ export async function POST(
         mine.shield = true;
       } else if (powerUpId === 'reflect') {
         mine.reflect = true;
+      } else if (powerUpId === 'time-warp') {
+        // Self super: a 5-second window where every correct answer counts double.
+        // Stored as a self-effect (from='') so the client renders the warp visual
+        // and the answer route reads the same window for scoring.
+        mine.effects = [...pruneEffects(mine.effects, now), makeEffect('')];
       } else if (powerUpId === 'double-points') {
         mine.doubleNext = true;
       } else if (powerUpId === 'fifty-fifty') {

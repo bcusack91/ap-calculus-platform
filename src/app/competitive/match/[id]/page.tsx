@@ -13,6 +13,8 @@ import {
   InkSplatOverlay,
   DarkOverlay,
   StormOverlay,
+  FrostOverlay,
+  TimeWarpOverlay,
   ChaosToasts,
   useChaosNow,
   type ChaosToast,
@@ -247,6 +249,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const slipperyActive = myActiveEffects.some((e) => e.type === 'slippery');
   const inkEffect = myActiveEffects.find((e) => e.type === 'ink-splat') || null;
   const blackoutEffect = myActiveEffects.find((e) => e.type === 'blackout') || null;
+  const freezeEffect = myActiveEffects.find((e) => e.type === 'freeze') || null;
+  const timeWarpEffect = myActiveEffects.find((e) => e.type === 'time-warp') || null;
+  // Freeze locks the player out of answering for its duration.
+  const frozenActive = !!freezeEffect;
   // Earthquake and the Chaos Storm super both shake the game area.
   const shakeActive = myActiveEffects.some((e) => e.type === 'earthquake' || e.type === 'chaos-storm');
 
@@ -261,13 +267,15 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     setTimeout(() => setChaosToasts((t) => t.filter((x) => x.id !== id)), 2600);
   }, []);
 
-  // Toast attacks as they arrive via polling (each effect id toasts once).
+  // Toast INCOMING ATTACKS as they arrive via polling (each effect id toasts
+  // once). Self-buff effects (e.g. Time Warp) are skipped here — their toast is
+  // fired by the use-handler instead ("from" would be the player themselves).
   useEffect(() => {
     for (const e of myActiveEffects) {
       if (!seenEffectIds.current.has(e.id)) {
         seenEffectIds.current.add(e.id);
         const def = POWER_UPS[e.type];
-        addChaosToast(`${def.icon} ${def.name} from ${e.from}!`);
+        if (def.kind === 'attack') addChaosToast(`${def.icon} ${def.name} from ${e.from}!`);
       }
     }
   }, [myActiveEffects, addChaosToast]);
@@ -323,6 +331,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       else if (def.kind === 'attack') addChaosToast(`${def.icon} ${def.name} launched!`);
       else if (id === 'shield') addChaosToast('🛡️ Shield armed!');
       else if (id === 'reflect') addChaosToast('🪞 Reflect armed!');
+      else if (id === 'time-warp') addChaosToast('⏳ TIME WARP! Double points for 5s!');
       else if (id === 'double-points') addChaosToast('⚡ Double points armed!');
       await fetchMatchState();
     } catch {
@@ -485,7 +494,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     // For multiple-choice physics questions, increase timing by 50%
     const minTime = isMultipleChoice ? settings.min * 1.5 : settings.min;
     const maxTime = isMultipleChoice ? settings.max * 1.5 : settings.max;
-    const delay = minTime + Math.random() * (maxTime - minTime);
+    let delay = minTime + Math.random() * (maxTime - minTime);
+
+    // If the bot is currently Frozen, it can't answer until the ice clears —
+    // wait out the remaining freeze so the player's Freeze actually lands on it.
+    const botPU = isPlayer1 ? activeMatch.gameData?.powerUps?.player2 : activeMatch.gameData?.powerUps?.player1;
+    const nowMs = Date.now();
+    const freezeRemaining = Math.max(
+      0,
+      ...((botPU?.effects || [])
+        .filter((e) => e.type === 'freeze')
+        .map((e) => e.startedAt + e.durationMs - nowMs)),
+    );
+    if (freezeRemaining > 0) delay += freezeRemaining;
     
     // Schedule AI answer
     const timeoutId = setTimeout(async () => {
@@ -1160,6 +1181,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           {inkEffect && <InkSplatOverlay effect={inkEffect} now={chaosNow} />}
           {blackoutEffect && <DarkOverlay effect={blackoutEffect} now={chaosNow} intensity={0.85} />}
           {stormEffect && <StormOverlay effect={stormEffect} now={chaosNow} />}
+          {freezeEffect && <FrostOverlay effect={freezeEffect} now={chaosNow} />}
+          {timeWarpEffect && <TimeWarpOverlay effect={timeWarpEffect} now={chaosNow} />}
         {/* Question prompt */}
         {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
@@ -1237,7 +1260,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   <button
                     key={index}
                     onClick={() => handleOptionSelect(index)}
-                    disabled={isSubmitting || isFeedbackCurrent || isEliminated}
+                    disabled={isSubmitting || isFeedbackCurrent || isEliminated || frozenActive}
                     className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
                       showCorrect
                         ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
@@ -1304,7 +1327,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   (feedback === 'correct' ? selectedPosition : null)
                 }
                 showFeedback={isFeedbackCurrent}
-                disabled={isSubmitting}
+                disabled={isSubmitting || frozenActive}
               />
             </div>
           </div>

@@ -179,6 +179,76 @@ export function StormOverlay({ effect, now }: { effect: ActiveEffect; now: numbe
   );
 }
 
+/**
+ * Freeze attack: encases the opponent's play area in ice. The icy tint + frost
+ * vignette is what obscures the screen (it lands under reduced motion, where the
+ * drifting snow is collapsed); answering is separately disabled while frozen.
+ */
+export function FrostOverlay({ effect, now }: { effect: ActiveEffect; now: number }) {
+  const remaining = effect.startedAt + effect.durationMs - now;
+  const fade = Math.max(0, Math.min(1, remaining / 700));
+  const flakes = useMemo(() => {
+    const seed = hashStr(effect.id);
+    const rand = (i: number) => ((Math.imul(seed + i * 2654435761, 1103515245) >>> 8) % 1000) / 1000;
+    return Array.from({ length: 14 }, (_, i) => ({
+      left: rand(i * 2) * 100,
+      size: 10 + rand(i * 2 + 1) * 18,
+      dur: 2 + rand(i * 3) * 2.5,
+      delay: rand(i * 5) * 2,
+    }));
+  }, [effect.id]);
+
+  return (
+    <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden" style={{ opacity: fade }} aria-hidden>
+      {/* Icy tint */}
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(186, 230, 253, 0.42)' }} />
+      {/* Frost creeping in from the edges */}
+      <div
+        className="absolute inset-0"
+        style={{ background: 'radial-gradient(ellipse at center, rgba(255,255,255,0) 35%, rgba(224,242,254,0.85) 100%)' }}
+      />
+      {/* Frosted border */}
+      <div className="absolute inset-0" style={{ boxShadow: 'inset 0 0 40px 14px rgba(255,255,255,0.9)' }} />
+      {/* Drifting snowflakes */}
+      {flakes.map((f, i) => (
+        <span
+          key={i}
+          className="absolute top-0 animate-chaos-snow motion-reduce:hidden"
+          style={{ left: `${f.left}%`, fontSize: f.size, animationDuration: `${f.dur}s`, animationDelay: `${f.delay}s` }}
+        >
+          ❄️
+        </span>
+      ))}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-3xl sm:text-5xl font-black tracking-wider text-sky-700/90 drop-shadow-[0_2px_6px_rgba(255,255,255,0.9)]">
+          🧊 FROZEN
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Time Warp super (self-buff): a golden ring + banner around the player's own
+ * play area for 5 seconds. Deliberately edge-only — no darkening or blur — so
+ * the player can still read and answer fast to cash in the double points.
+ */
+export function TimeWarpOverlay({ effect, now }: { effect: ActiveEffect; now: number }) {
+  const remaining = Math.max(0, effect.startedAt + effect.durationMs - now);
+  const secs = Math.ceil(remaining / 1000);
+  const fade = Math.min(1, remaining / 500);
+  return (
+    <div className="absolute inset-0 z-20 pointer-events-none" style={{ opacity: fade }} aria-hidden>
+      <div className="absolute inset-0 rounded-xl chaos-timewarp-ring motion-reduce:animate-none" />
+      <div className="absolute top-2 left-1/2 -translate-x-1/2">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-amber-400 to-orange-600 text-white text-xs sm:text-sm font-black px-3 py-1 shadow-lg animate-pulse motion-reduce:animate-none">
+          ⏳ 2× TIME WARP · {secs}s
+        </span>
+      </div>
+    </div>
+  );
+}
+
 /** Lightweight toast stack for drops / incoming attacks. */
 export interface ChaosToast {
   id: string;

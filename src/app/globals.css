@@ -411,6 +411,27 @@ html {
   animation: chaos-super-glow 1.2s ease-in-out infinite;
 }
 
+/* Freeze: drifting snowflakes. The icy tint/frost is static (lands under
+   reduced motion, where input is disabled regardless), this is just decoration. */
+@keyframes chaos-snow {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: translateY(110%) rotate(220deg); opacity: 0.9; }
+}
+.animate-chaos-snow {
+  animation: chaos-snow linear infinite;
+}
+
+/* Time Warp super: pulsing golden ring around the play area (self-buff; must not
+   obscure the center — the player still needs to read and answer). */
+@keyframes chaos-timewarp-ring {
+  0%, 100% { box-shadow: inset 0 0 22px 6px rgba(251, 191, 36, 0.55); }
+  50% { box-shadow: inset 0 0 40px 12px rgba(217, 119, 6, 0.85); }
+}
+.chaos-timewarp-ring {
+  animation: chaos-timewarp-ring 1s ease-in-out infinite;
+}
+
 /* Improved focus states for accessibility */
 button:focus-visible,
 a:focus-visible {

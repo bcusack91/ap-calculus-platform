@@ -19,11 +19,13 @@ export type PowerUpId =
   | 'fog'
   | 'earthquake'
   | 'blackout'
+  | 'freeze'
   | 'chaos-storm'
   | 'shield'
   | 'reflect'
   | 'fifty-fifty'
-  | 'double-points';
+  | 'double-points'
+  | 'time-warp';
 
 export type PowerUpKind = 'attack' | 'self';
 
@@ -88,6 +90,14 @@ export const POWER_UPS: Record<PowerUpId, PowerUpDef> = {
     description: "Plunges your opponent's screen into darkness for 3 seconds.",
     durationMs: 3000,
   },
+  freeze: {
+    id: 'freeze',
+    kind: 'attack',
+    name: 'Freeze',
+    icon: '🧊',
+    description: "Encases your opponent's screen in ice for 2.5 seconds — they can't answer while frozen.",
+    durationMs: 2500,
+  },
   'chaos-storm': {
     id: 'chaos-storm',
     kind: 'attack',
@@ -110,6 +120,15 @@ export const POWER_UPS: Record<PowerUpId, PowerUpDef> = {
     name: 'Reflect',
     icon: '🪞',
     description: 'Bounces the next attack back at whoever threw it.',
+  },
+  'time-warp': {
+    id: 'time-warp',
+    kind: 'self',
+    name: 'Time Warp',
+    icon: '⏳',
+    description: 'THE SUPER: for 5 seconds, EVERY correct answer counts double. Race the clock! Rare — only the trailing player can find it.',
+    durationMs: 5000,
+    super: true,
   },
   'fifty-fifty': {
     id: 'fifty-fifty',
@@ -172,19 +191,21 @@ export function rollPowerUpDrop(deficit: number, rng: () => number = Math.random
 
   let table: Array<[PowerUpId, number]>;
   if (deficit >= 3) {
-    // Far behind: comeback kit — the only place the Chaos Storm super drops, and
-    // rarely (weight 6), so it feels like a genuine turnaround moment.
+    // Far behind: comeback kit — the only place the two supers (Chaos Storm,
+    // Time Warp) drop, and rarely (weight 6 each), so they feel like genuine
+    // turnaround moments.
     table = [
-      ['ink-splat', 16], ['screen-flip', 12], ['double-points', 16],
-      ['fifty-fifty', 16], ['slippery', 10], ['earthquake', 12],
-      ['blackout', 10], ['reflect', 8], ['chaos-storm', 6], ['shield', 6],
+      ['ink-splat', 14], ['screen-flip', 10], ['double-points', 12],
+      ['fifty-fifty', 12], ['slippery', 8], ['earthquake', 10],
+      ['blackout', 8], ['freeze', 12], ['reflect', 8], ['shield', 6],
+      ['chaos-storm', 6], ['time-warp', 6],
     ];
   } else if (deficit >= 1) {
     // Slightly behind: balanced, with the new attacks in the mix.
     table = [
       ['ink-splat', 12], ['screen-flip', 10], ['double-points', 10],
-      ['fifty-fifty', 12], ['slippery', 14], ['fog', 12], ['earthquake', 10],
-      ['blackout', 10], ['reflect', 10], ['shield', 10],
+      ['fifty-fifty', 12], ['slippery', 12], ['fog', 12], ['earthquake', 10],
+      ['blackout', 10], ['freeze', 12], ['reflect', 10], ['shield', 10],
     ];
   } else {
     // Even or leading: mild utility only, no heavy hitters (rubber-banding).

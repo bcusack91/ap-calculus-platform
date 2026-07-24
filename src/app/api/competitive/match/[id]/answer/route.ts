@@ -338,8 +338,13 @@ export async function POST(
       : null;
 
     if (isCorrect) {
-      // Double Points (CHAOS): consume the buff, score 2 instead of 1.
-      const points = myPowerUps?.doubleNext ? 2 : 1;
+      // Double Points (one-shot) OR an active Time Warp super (a 5-second window,
+      // stored as a self-effect) → score 2 instead of 1.
+      const nowMs = Date.now();
+      const timeWarpActive = !!myPowerUps?.effects?.some(
+        (e) => e.type === 'time-warp' && e.startedAt + e.durationMs > nowMs
+      );
+      const points = (myPowerUps?.doubleNext || timeWarpActive) ? 2 : 1;
       if (myPowerUps?.doubleNext) myPowerUps.doubleNext = false;
       if (isPlayer1) {
         player1Score += points;
