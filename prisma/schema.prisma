@@ -31,7 +31,6 @@ model User {
   diagnosticTests        DiagnosticTest[]
   flashcardProgress      FlashcardProgress[]
   learningPath           LearningPath?
-  quizAttempts           QuizAttempt[]
   sessions               Session[]
   topicProgress          TopicProgress[]
   school                 School?                       @relation(fields: [schoolId], references: [id])
@@ -321,7 +320,6 @@ model Topic {
   updatedAt       DateTime         @updatedAt
   exampleProblems ExampleProblem[]
   flashcards      Flashcard[]
-  quizzes         Quiz[]
   category        Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   parentTopic     Topic?           @relation("TopicSubtopics", fields: [parentTopicId], references: [id])
   subtopics       Topic[]          @relation("TopicSubtopics")
@@ -430,77 +428,6 @@ model FlashcardSetCard {
   set   FlashcardSet @relation(fields: [setId], references: [id], onDelete: Cascade)
 
   @@index([setId])
-}
-
-model Quiz {
-  id           String         @id @default(cuid())
-  topicId      String
-  title        String
-  description  String?
-  timeLimit    Int?
-  isPremium    Boolean        @default(false)
-  isDiagnostic Boolean        @default(false)
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
-  topic        Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
-  attempts     QuizAttempt[]
-  questions    QuizQuestion[]
-
-  @@index([topicId])
-}
-
-model QuizQuestion {
-  id             String       @id @default(cuid())
-  quizId         String
-  question       String
-  type           QuestionType
-  order          Int
-  points         Int          @default(1)
-  options        String?
-  correctAnswer  String?
-  correctAnswers String?
-  explanation    String
-  createdAt      DateTime     @default(now())
-  updatedAt      DateTime     @updatedAt
-  answers        QuizAnswer[]
-  quiz           Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
-
-  // Postgres doesn't auto-index FKs: relation loads and Quiz cascade deletes
-  // were sequential-scanning this table.
-  @@index([quizId])
-}
-
-model QuizAttempt {
-  id          String       @id @default(cuid())
-  userId      String
-  quizId      String
-  score       Float
-  maxScore    Float
-  timeSpent   Int?
-  completed   Boolean      @default(false)
-  startedAt   DateTime     @default(now())
-  completedAt DateTime?
-  answers     QuizAnswer[]
-  quiz        Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-  @@index([quizId])
-}
-
-model QuizAnswer {
-  id           String       @id @default(cuid())
-  attemptId    String
-  questionId   String
-  answer       String
-  isCorrect    Boolean
-  pointsEarned Float
-  createdAt    DateTime     @default(now())
-  attempt      QuizAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  question     QuizQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
-
-  @@index([attemptId])
-  @@index([questionId])
 }
 
 model TopicProgress {
@@ -672,12 +599,6 @@ enum Difficulty {
   MEDIUM
   HARD
   EXPERT
-}
-
-enum QuestionType {
-  MULTIPLE_CHOICE
-  FREE_RESPONSE
-  TRUE_FALSE
 }
 
 enum ProgressStatus {
@@ -1177,19 +1098,19 @@ model Assignment {
 }
 
 model AssignmentSubmission {
-  id           String           @id @default(cuid())
-  assignmentId String
-  studentId    String
-  status       AssignmentStatus @default(NOT_STARTED)
-  score        Float? // 0-1 mastery/score achieved
-  attempts     Int              @default(0)
-  timeSpent    Int              @default(0) // seconds
-  startedAt    DateTime?
-  completedAt  DateTime?
-  feedback     String? // teacher feedback
-  gradedManually Boolean        @default(false) // teacher-entered grade — auto-grading must not touch
-  createdAt    DateTime         @default(now())
-  updatedAt    DateTime         @updatedAt
+  id             String           @id @default(cuid())
+  assignmentId   String
+  studentId      String
+  status         AssignmentStatus @default(NOT_STARTED)
+  score          Float? // 0-1 mastery/score achieved
+  attempts       Int              @default(0)
+  timeSpent      Int              @default(0) // seconds
+  startedAt      DateTime?
+  completedAt    DateTime?
+  feedback       String? // teacher feedback
+  gradedManually Boolean          @default(false) // teacher-entered grade — auto-grading must not touch
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
 
   assignment Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
   student    User       @relation(fields: [studentId], references: [id], onDelete: Cascade)

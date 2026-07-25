@@ -113,21 +113,6 @@ async function main() {
     });
     console.log(`\n  🃏 Flashcards studied: ${santiagoFlashcards}`);
 
-    // Check quiz attempts
-    const santiagoQuizzes = await prisma.quizAttempt.findMany({
-      where: { userId: santiago.id },
-      include: { quiz: { select: { title: true } } },
-      orderBy: { startedAt: 'desc' },
-    });
-    if (santiagoQuizzes.length > 0) {
-      console.log(`  📝 Quiz Attempts:`);
-      for (const qa of santiagoQuizzes) {
-        console.log(`     - ${qa.quiz?.title || qa.quizId}: ${qa.score}/${qa.maxScore}`);
-      }
-    } else {
-      console.log(`  📝 No quiz attempts`);
-    }
-
     // Check exit quiz attempts
     const santiagoExitQuizzes = await prisma.exitQuizAttempt.findMany({
       where: { userId: santiago.id },

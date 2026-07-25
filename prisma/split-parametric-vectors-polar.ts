@@ -49,7 +49,6 @@ async function splitTopics(categoryId: string) {
     // Delete related data first
     await prisma.exampleProblem.deleteMany({ where: { topicId: oldTopic.id } })
     await prisma.flashcard.deleteMany({ where: { topicId: oldTopic.id } })
-    await prisma.quiz.deleteMany({ where: { topicId: oldTopic.id } })
     await prisma.topic.delete({ where: { id: oldTopic.id } })
     console.log('  🗑️  Deleted old combined topic: parametric-equations-vectors-precalc')
   }

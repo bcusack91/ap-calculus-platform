@@ -49,8 +49,7 @@ export async function GET(req: NextRequest) {
       include: { topic: { select: { title: true, slug: true, category: { select: { course: { select: { name: true } } } } } } },
       orderBy: { lastAccessed: 'desc' },
     }),
-    // Quiz attempts (last 30). QuizAttempt is a dead table (never written);
-    // ExitQuizAttempt is the only real quiz activity.
+    // Quiz attempts (last 30), from ExitQuizAttempt.
     prisma.exitQuizAttempt.findMany({
       where: { userId: studentId },
       select: { score: true, totalQuestions: true, topicSlug: true, completedAt: true },

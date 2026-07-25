@@ -73,23 +73,6 @@ async function main() {
       console.log(`    📚 No topics accessed`);
     }
 
-    // Quiz attempts
-    const quizAttempts = await prisma.quizAttempt.findMany({
-      where: { userId: user.id },
-      include: { quiz: { select: { title: true } } },
-      orderBy: { startedAt: 'desc' },
-    });
-
-    if (quizAttempts.length > 0) {
-      const avgScore = quizAttempts.reduce((sum, qa) => sum + (qa.score / qa.maxScore), 0) / quizAttempts.length;
-      console.log(`    📝 Quiz attempts: ${quizAttempts.length} (avg score: ${(avgScore * 100).toFixed(1)}%)`);
-      for (const qa of quizAttempts.slice(0, 3)) {
-        console.log(`       - ${qa.quiz?.title || qa.quizId}: ${qa.score}/${qa.maxScore} (${qa.completed ? 'completed' : 'incomplete'})`);
-      }
-    } else {
-      console.log(`    📝 No quizzes attempted`);
-    }
-
     // Exit quiz attempts
     const exitQuizzes = await prisma.exitQuizAttempt.findMany({
       where: { userId: user.id },
@@ -179,7 +162,7 @@ async function main() {
     }
 
     // Check if user has done basically nothing
-    const totalActivity = topicProgress.length + quizAttempts.length + exitQuizzes.length + 
+    const totalActivity = topicProgress.length + exitQuizzes.length +
                           flashcardCount + diagnostics.length + matches + satAttempts + mcatAttempts;
     if (totalActivity === 0) {
       console.log(`    ⚠️  No activity recorded — user signed up but hasn't engaged`);
@@ -192,10 +175,6 @@ async function main() {
 
   const activeTopicProgress = await prisma.topicProgress.count({
     where: { lastAccessed: { gte: oneWeekAgo } },
-  });
-
-  const activeQuizAttempts = await prisma.quizAttempt.count({
-    where: { startedAt: { gte: oneWeekAgo } },
   });
 
   const activeExitQuizzes = await prisma.exitQuizAttempt.count({
@@ -219,7 +198,6 @@ async function main() {
 
   console.log(`  Active users (by topic access): ${activeUsers.length}`);
   console.log(`  Topic progress updates: ${activeTopicProgress}`);
-  console.log(`  Quiz attempts: ${activeQuizAttempts}`);
   console.log(`  Exit quiz attempts: ${activeExitQuizzes}`);
   console.log(`  Flashcard reviews: ${activeFlashcards}`);
   console.log(`  Competitive matches: ${activeMatches}`);

@@ -105,8 +105,7 @@ const getCachedAnalytics = unstable_cache(
     prisma.topicProgress.count({ where: { lastAccessed: { gte: today } } }),
     prisma.topic.count(),
     prisma.flashcard.count(),
-    // QuizAttempt is a dead table (never written). Exit quizzes are the only
-    // real quiz attempts, so report ExitQuizAttempt as the source of truth.
+    // ExitQuizAttempt is the source of truth for quiz activity.
     prisma.exitQuizAttempt.count(),
     prisma.exitQuizAttempt.count({ where: { completedAt: { gte: today } } }),
     prisma.user.groupBy({ by: ['role'], _count: { id: true } }),
@@ -119,8 +118,7 @@ const getCachedAnalytics = unstable_cache(
       ORDER BY date ASC
     `,
     // Single raw SQL query replaces 8 separate findMany+distinct calls.
-    // QuizAttempt is a dead table (never written), so the "quiz takers" funnel
-    // stage is sourced from ExitQuizAttempt — the only real quiz attempts.
+    // The "quiz takers" funnel stage is sourced from ExitQuizAttempt.
     prisma.$queryRaw<[{
       active_curr: bigint
       quiz_curr: bigint

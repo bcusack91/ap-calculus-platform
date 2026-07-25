@@ -123,12 +123,6 @@ async function main() {
       }
     }
 
-    // Move quizzes
-    await prisma.quiz.updateMany({
-      where: { topicId: sysTopic2.id },
-      data: { topicId: sysTopic1.id },
-    })
-
     // Move flashcards
     await prisma.flashcard.updateMany({
       where: { topicId: sysTopic2.id },

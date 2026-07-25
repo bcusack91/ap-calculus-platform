@@ -50,7 +50,6 @@ async function main() {
     const [
       topicProgress,
       flashcardProgress,
-      quizAttempts,
       exitQuizAttempts,
       diagnosticTests,
       satAttempts,
@@ -67,10 +66,6 @@ async function main() {
       prisma.flashcardProgress.findMany({
         where: { userId: { in: userIds } },
         select: { userId: true, lastReviewed: true },
-      }),
-      prisma.quizAttempt.findMany({
-        where: { userId: { in: userIds } },
-        select: { userId: true, startedAt: true },
       }),
       prisma.exitQuizAttempt.findMany({
         where: { userId: { in: userIds } },
@@ -108,7 +103,6 @@ async function main() {
 
     for (const row of topicProgress) addDate(activeDatesByUser, row.userId, row.lastAccessed)
     for (const row of flashcardProgress) addDate(activeDatesByUser, row.userId, row.lastReviewed)
-    for (const row of quizAttempts) addDate(activeDatesByUser, row.userId, row.startedAt)
     for (const row of exitQuizAttempts) {
       addDate(activeDatesByUser, row.userId, row.startedAt)
       addDate(activeDatesByUser, row.userId, row.completedAt)

@@ -36,8 +36,7 @@ export async function GET() {
       },
     })
 
-    // Get quiz scores for these topics. QuizAttempt is a dead table (never written);
-    // ExitQuizAttempt is the only real quiz activity and is keyed by topicSlug.
+    // Get quiz scores for these topics. ExitQuizAttempt is keyed by topicSlug.
     const topicSlugs = weakProgress.map(p => p.topic.slug)
     const quizAttempts = await prisma.exitQuizAttempt.findMany({
       where: {

@@ -615,10 +615,10 @@ const allQuestions: ActMathQuestion[] = [
   },
   {
     id: 76,
-    question: 'Simplify: $\\sqrt{50}$',
-    options: ['$5\\sqrt{2}$', '$25\\sqrt{2}$', '$10\\sqrt{5}$', '$2\\sqrt{5}$'],
+    question: 'Simplify: $\\sqrt{72}$',
+    options: ['$6\\sqrt{2}$', '$36\\sqrt{2}$', '$2\\sqrt{6}$', '$12\\sqrt{6}$'],
     correctAnswer: 0,
-    explanation: '$\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$.',
+    explanation: '$\\sqrt{72} = \\sqrt{36 \\cdot 2} = 6\\sqrt{2}$.',
     difficulty: 'medium',
   },
   {
@@ -1619,7 +1619,7 @@ const allQuestions: ActMathQuestion[] = [
   {"id":203,"question":"In an arithmetic sequence, the first term is $4$ and the common difference is $5$. What is the fourth term?","options":["$14$","$24$","$19$","$9$"],"correctAnswer":2,"explanation":"The terms are $4, 9, 14, 19$. The fourth term is $4 + 3(5) = 19$.","difficulty":"easy"},
   {"id":204,"question":"What is the mean of the numbers $4$, $8$, $10$, and $6$?","options":["$8$","$6$","$9$","$7$"],"correctAnswer":3,"explanation":"Sum $= 4 + 8 + 10 + 6 = 28$, and $28 \\div 4 = 7$.","difficulty":"easy"},
   {"id":205,"question":"Solve for $x$: $3x - 5 = 16$.","options":["$7$","$\\frac{11}{3}$","$-7$","$3$"],"correctAnswer":0,"explanation":"$3x - 5 = 16 \\Rightarrow 3x = 21 \\Rightarrow x = 7$.","difficulty":"easy"},
-  {"id":206,"question":"What is the area of a triangle with base $10$ and height $6$?","options":["$60$","$30$","$16$","$15$"],"correctAnswer":1,"explanation":"Area $= \\frac{1}{2}(10)(6) = 30$.","difficulty":"easy"},
+  {"id":206,"question":"What is the area of a triangle with base $14$ and height $9$?","options":["$126$","$63$","$23$","$46$"],"correctAnswer":1,"explanation":"Area $= \\frac{1}{2}(14)(9) = 63$.","difficulty":"easy"},
   {"id":207,"question":"What is the value of $i^{23}$, where $i = \\sqrt{-1}$?","options":["$i$","$1$","$-i$","$-1$"],"correctAnswer":2,"explanation":"Powers of $i$ cycle every 4: $i^{23} = i^{23 \\bmod 4} = i^3 = -i$.","difficulty":"medium"},
   {"id":208,"question":"What is the determinant of the matrix $\\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}$?","options":["$14$","$10$","$11$","$-10$"],"correctAnswer":1,"explanation":"The determinant of a $2\\times 2$ matrix is $ad - bc = (3)(4) - (2)(1) = 12 - 2 = 10$.","difficulty":"medium"},
   {"id":209,"question":"What is the value of $\\log_2 32$?","options":["$4$","$6$","$5$","$16$"],"correctAnswer":2,"explanation":"$\\log_2 32 = 5$ because $2^5 = 32$.","difficulty":"medium"},
