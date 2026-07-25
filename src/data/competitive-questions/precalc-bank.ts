@@ -392,6 +392,12 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 270, question: 'Two vectors are perpendicular iff:', options: ['Their dot product is $0$', 'Their magnitudes are equal', 'They are parallel', 'Their sum is zero'], correctAnswer: 0, explanation: '$\\cos(90°) = 0$.', difficulty: 'medium', topicSlug: 'vectors-in-two-dimensions' },
 ]
 
+/**
+ * Raw, UNSHUFFLED bank — the getter above shuffles randomly, which would break
+ * the unit-test engine's seeded (deterministic) variants.
+ */
+export const precalcQuestionBank: PreCalcQuestion[] = allQuestions
+
 export function getPreCalcQuestions(count: number = 10, topicSlug?: string): PreCalcQuestion[] {
   let pool = allQuestions
   if (topicSlug) {

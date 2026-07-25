@@ -128,6 +128,7 @@ export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
 
 export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
   'act': { href: '/act-practice', label: 'Practice Test' },
+  'algebra-1': { href: '/algebra1-practice', label: 'Practice Test' },
   'ap-african-american-studies': { href: '/ap-african-american-studies-practice', label: 'Practice Test' },
   'ap-biology': { href: '/ap-bio-practice', label: 'Practice Test' },
   'ap-calculus-ab': { href: '/ap-calcab-practice', label: 'Practice Test' },
@@ -151,7 +152,9 @@ export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
   'ap-us-government': { href: '/ap-us-gov-practice', label: 'Practice Test' },
   'ap-us-history': { href: '/ap-us-history-practice', label: 'Practice Test' },
   'ap-world-history': { href: '/ap-world-history-practice', label: 'Practice Test' },
+  'geometry': { href: '/geometry-practice', label: 'Practice Test' },
   'mcat': { href: '/mcat-practice', label: 'Practice Test' },
+  'precalculus': { href: '/precalc-practice', label: 'Practice Test' },
   'sat': { href: '/sat-practice', label: 'Practice Test' },
 }
 
@@ -242,6 +245,7 @@ export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
   'ap-world-history': { href: '/ap-world-history-unit-tests', label: 'Unit Tests' },
   'geometry': { href: '/geometry-unit-tests', label: 'Unit Tests' },
   'mcat': { href: '/mcat-unit-tests', label: 'Unit Tests' },
+  'precalculus': { href: '/precalc-unit-tests', label: 'Unit Tests' },
   'sat': { href: '/sat-unit-tests', label: 'Unit Tests' },
 }
 
