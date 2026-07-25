@@ -13,6 +13,7 @@ export interface SimpleLinkConfig {
 }
 
 export const courseDiagnosticMap: Record<string, DiagnosticConfig> = {
+  'psat': { href: '/sat-diagnostic', icon: '📘', description: 'The PSAT tests the same skills as the Digital SAT, so the SAT diagnostic maps your PSAT readiness across all eight domains.', borderColor: 'border-indigo-300 dark:border-indigo-700', bgGradient: 'from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20', btnGradient: 'from-indigo-600 to-blue-600' },
   'act': { href: '/act-diagnostic', icon: '🎯', description: 'Take a diagnostic test to benchmark ACT performance and build a focused plan for your weakest domains.', borderColor: 'border-red-300 dark:border-red-700', bgGradient: 'from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20', btnGradient: 'from-red-600 to-orange-600' },
   'sat': { href: '/sat-diagnostic', icon: '📝', description: 'Take a SAT diagnostic to estimate your baseline score and identify the reading, writing, and math skills to prioritize.', borderColor: 'border-indigo-300 dark:border-indigo-700', bgGradient: 'from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20', btnGradient: 'from-indigo-600 to-blue-600' },
   'mcat': { href: '/mcat-diagnostic', icon: '🩺', description: 'Take an MCAT diagnostic to find your strongest and weakest content areas and target your prep efficiently.', borderColor: 'border-cyan-300 dark:border-cyan-700', bgGradient: 'from-cyan-50 to-sky-50 dark:from-cyan-900/20 dark:to-sky-900/20', btnGradient: 'from-cyan-600 to-sky-600' },
@@ -50,6 +51,7 @@ export const courseDiagnosticMap: Record<string, DiagnosticConfig> = {
 }
 
 export const courseScorePredictorMap: Record<string, SimpleLinkConfig> = {
+  'psat': { href: '/sat-score-predictor', label: 'View Score Predictor' },
   'act': { href: '/act-score-predictor', label: 'View Score Predictor' },
   'sat': { href: '/sat-score-predictor', label: 'View Score Predictor' },
   'mcat': { href: '/mcat-score-predictor', label: 'View Score Predictor' },
@@ -87,6 +89,7 @@ export const courseScorePredictorMap: Record<string, SimpleLinkConfig> = {
 }
 
 export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
+  'psat': { href: '/sat-daily-question', label: 'Today\'s Question' },
   'act': { href: '/act-daily-question', label: 'Today\'s Question' },
   'sat': { href: '/sat-daily-question', label: 'Today\'s Question' },
   'mcat': { href: '/mcat-daily-question', label: 'Today\'s Question' },
@@ -157,6 +160,7 @@ export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
   'organic-chemistry-2': { href: '/ochem2-practice', label: 'Practice Test' },
   'pre-algebra': { href: '/prealgebra-practice', label: 'Practice Test' },
   'precalculus': { href: '/precalc-practice', label: 'Practice Test' },
+  'psat': { href: '/psat-practice', label: 'Full-Length Practice Test' },
   'sat': { href: '/sat-practice', label: 'Practice Test' },
 }
 
@@ -219,6 +223,7 @@ export const courseStudyPlanMap: Record<string, SimpleLinkConfig> = {
   'organic-chemistry-2': { href: '/ochem2-study-plans', label: 'Study Plans' },
   'pre-algebra': { href: '/prealgebra-study-plans', label: 'Study Plans' },
   'precalculus': { href: '/precalc-study-plans', label: 'Study Plans' },
+  'psat': { href: '/psat-study-plans', label: 'Study Plans' },
   'sat': { href: '/sat-study-plans', label: 'Study Plans' },
 }
 
@@ -256,10 +261,12 @@ export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
   'organic-chemistry-2': { href: '/ochem2-unit-tests', label: 'Unit Tests' },
   'pre-algebra': { href: '/prealgebra-unit-tests', label: 'Unit Tests' },
   'precalculus': { href: '/precalc-unit-tests', label: 'Unit Tests' },
+  'psat': { href: '/psat-unit-tests', label: 'Unit Tests' },
   'sat': { href: '/sat-unit-tests', label: 'Unit Tests' },
 }
 
 export const courseFlashcardMap: Record<string, SimpleLinkConfig> = {
+  'psat': { href: '/flashcards?course=sat-prep', label: 'Flashcards' },
   'act': { href: '/flashcards?course=act-prep', label: 'Flashcards' },
   'algebra-1': { href: '/flashcards?course=algebra-1', label: 'Flashcards' },
   'algebra-2': { href: '/flashcards?course=algebra-2', label: 'Flashcards' },

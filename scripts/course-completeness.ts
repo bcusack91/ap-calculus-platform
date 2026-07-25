@@ -46,8 +46,10 @@ const TOOLS: Tool[] = [
 const NOT_APPLICABLE: Record<string, string[]> = {
   // College Board replaced CSP's FRQ with the Create Performance Task.
   'ap-computer-science-principles': ['frq'],
-  // Digital SAT/ACT/MCAT are section-based; no AP-style FRQ.
+  // Digital SAT/PSAT/ACT/MCAT are section-based and entirely multiple choice;
+  // there is no AP-style free-response component to build.
   sat: ['frq'],
+  psat: ['frq'],
   act: ['frq'],
   mcat: ['frq'],
   // Non-AP math courses have no free-response exam component.

@@ -120,6 +120,39 @@ export default function PsatHubPage() {
           </p>
         </div>
       </section>
+      <section className="container pb-16">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
+          <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">About the Digital PSAT/NMSQT</h2>
+          <div className="grid gap-6 text-sm text-gray-600 sm:grid-cols-2 dark:text-gray-400">
+            <div>
+              <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
+              <ul className="space-y-1">
+                <li>&bull; Reading &amp; Writing: 54 questions, 64 min</li>
+                <li>&bull; Math: 44 questions, 70 min</li>
+                <li>&bull; Two adaptive modules per section</li>
+                <li>&bull; Total testing time: 2 hours 14 minutes</li>
+                <li>&bull; Calculator allowed on all math questions</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Scoring</h4>
+              <ul className="space-y-1">
+                <li>&bull; Score range: 320&ndash;1520</li>
+                <li>&bull; Each section scored 160&ndash;760</li>
+                <li>&bull; No penalty for guessing</li>
+                <li>&bull; Junior-year scores qualify for National Merit</li>
+                <li>&bull; Same skills as the Digital SAT</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/psat-practice" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg">
+              Take a Full-Length Practice Test
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
       <CourseToolGrid courseSlug="psat" />
     </div>
   )
