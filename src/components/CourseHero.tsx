@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 
 /**
@@ -17,20 +18,31 @@ import Link from 'next/link'
 export type HeroAccent =
   | 'green' | 'emerald' | 'teal' | 'cyan' | 'sky' | 'blue' | 'indigo' | 'violet'
   | 'purple' | 'fuchsia' | 'pink' | 'rose' | 'red' | 'orange' | 'amber' | 'lime'
+  | 'yellow'
 
 export interface CourseHeroProps {
   /** Rendered after "Master " in the gradient span, e.g. "AP Biology". */
-  courseName: string
-  /** Supporting line under the title. */
-  tagline: string
+  courseName: ReactNode
+  /** Supporting line under the title. Accepts markup for <strong>/&amp; etc. */
+  tagline: ReactNode
   primaryCta: { href: string; label: string }
-  secondaryCta?: { href: string; label: string }
+  secondaryCta?: { href: string; label: string; accent?: HeroAccent }
+  /**
+   * Further outline CTAs rendered in the same row. Each may carry its own
+   * accent so a page can colour-code destinations (Organic Chemistry 1 tints
+   * its score-predictor and lessons buttons differently).
+   */
+  extraCtas?: { href: string; label: string; accent?: HeroAccent }[]
+  /** Rendered under the CTA row — cross-links, notes, anything page-specific. */
+  children?: ReactNode
   /** Gradient start colour; also drives the badge and outline button. */
   accentFrom: HeroAccent
   /** Gradient end colour. */
   accentTo: HeroAccent
   /** Defaults to the site-wide "Free for All Students". */
-  badgeLabel?: string
+  badgeLabel?: ReactNode
+  /** Defaults to the lightning glyph; pass an emoji or node to override. */
+  badgeIcon?: ReactNode
   /** Verb before the course name. Defaults to "Master". */
   leadWord?: string
 }
@@ -57,6 +69,7 @@ const BADGE: Record<HeroAccent, string> = {
   orange: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300',
   amber: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
   lime: 'bg-lime-100 text-lime-700 dark:bg-lime-900/40 dark:text-lime-300',
+  yellow: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300',
 }
 
 const GRADIENT: Record<HeroAccent, string> = {
@@ -65,7 +78,7 @@ const GRADIENT: Record<HeroAccent, string> = {
   indigo: 'from-indigo-600', violet: 'from-violet-600', purple: 'from-purple-600',
   fuchsia: 'from-fuchsia-600', pink: 'from-pink-600', rose: 'from-rose-600',
   red: 'from-red-600', orange: 'from-orange-600', amber: 'from-amber-600',
-  lime: 'from-lime-600',
+  lime: 'from-lime-600', yellow: 'from-yellow-600',
 }
 
 const GRADIENT_TO: Record<HeroAccent, string> = {
@@ -74,7 +87,7 @@ const GRADIENT_TO: Record<HeroAccent, string> = {
   indigo: 'to-indigo-600', violet: 'to-violet-600', purple: 'to-purple-600',
   fuchsia: 'to-fuchsia-600', pink: 'to-pink-600', rose: 'to-rose-600',
   red: 'to-red-600', orange: 'to-orange-600', amber: 'to-amber-600',
-  lime: 'to-lime-600',
+  lime: 'to-lime-600', yellow: 'to-yellow-600',
 }
 
 const OUTLINE: Record<HeroAccent, string> = {
@@ -94,6 +107,7 @@ const OUTLINE: Record<HeroAccent, string> = {
   orange: 'border-orange-300 text-orange-700 hover:bg-orange-50 dark:border-orange-600 dark:text-orange-400 dark:hover:bg-orange-900/20',
   amber: 'border-amber-300 text-amber-700 hover:bg-amber-50 dark:border-amber-600 dark:text-amber-400 dark:hover:bg-amber-900/20',
   lime: 'border-lime-300 text-lime-700 hover:bg-lime-50 dark:border-lime-600 dark:text-lime-400 dark:hover:bg-lime-900/20',
+  yellow: 'border-yellow-300 text-yellow-700 hover:bg-yellow-50 dark:border-yellow-600 dark:text-yellow-400 dark:hover:bg-yellow-900/20',
 }
 
 export default function CourseHero({
@@ -101,9 +115,12 @@ export default function CourseHero({
   tagline,
   primaryCta,
   secondaryCta,
+  extraCtas,
+  children,
   accentFrom,
   accentTo,
   badgeLabel = 'Free for All Students',
+  badgeIcon,
   leadWord = 'Master',
 }: CourseHeroProps) {
   const gradient = `bg-gradient-to-r ${GRADIENT[accentFrom]} ${GRADIENT_TO[accentTo]}`
@@ -114,9 +131,11 @@ export default function CourseHero({
         <div
           className={`mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold ${BADGE[accentFrom]}`}
         >
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+          {badgeIcon ?? (
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          )}
           {badgeLabel}
         </div>
         <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
@@ -134,12 +153,22 @@ export default function CourseHero({
           {secondaryCta && (
             <Link
               href={secondaryCta.href}
-              className={`rounded-xl border-2 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold transition ${OUTLINE[accentFrom]}`}
+              className={`rounded-xl border-2 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold transition ${OUTLINE[secondaryCta.accent ?? accentFrom]}`}
             >
               {secondaryCta.label}
             </Link>
           )}
+          {extraCtas?.map(cta => (
+            <Link
+              key={cta.href}
+              href={cta.href}
+              className={`rounded-xl border-2 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold transition ${OUTLINE[cta.accent ?? accentFrom]}`}
+            >
+              {cta.label}
+            </Link>
+          ))}
         </div>
+        {children}
       </div>
     </section>
   )

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { InArticleAd } from '@/components/ad-banner'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import { courseJsonLd } from '@/lib/jsonld'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'PSAT/NMSQT Prep | Free Practice & Study Tools',
@@ -76,28 +77,14 @@ export default function PsatHubPage() {
           canonicalPath: '/psat',
         })) }}
       />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Get a head start on the <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">PSAT/NMSQT</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            The PSAT tests the same Reading &amp; Writing and Math skills as the Digital SAT — so every minute here builds <strong>both</strong> scores. Start with a diagnostic and follow your plan.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/sat-diagnostic" className="rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">
-              Start with the Diagnostic
-            </Link>
-            <Link href="/psat-practice" className="rounded-xl border-2 border-indigo-500 px-8 py-3.5 text-lg font-semibold text-indigo-600 transition hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-900/20">
-              Take a Practice Test
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='the PSAT/NMSQT'
+        tagline={<>The PSAT tests the same Reading &amp; Writing and Math skills as the Digital SAT &mdash; so every minute here builds <strong>both</strong> scores. Start with a diagnostic and follow your plan.</>}
+        primaryCta={{ href: '/sat-diagnostic', label: 'Start with the Diagnostic' }}
+        secondaryCta={{ href: '/psat-practice', label: 'Take a Practice Test' }}
+        accentFrom="indigo"
+        accentTo="blue"
+      />
 
       <section className="container pb-16">
         <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">

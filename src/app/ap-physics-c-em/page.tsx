@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'AP Physics C: Electricity & Magnetism | Free Practice & Review',
@@ -197,32 +198,14 @@ export default function APPhysicsCEMHub() {
       })) }}
     />
       <CourseUniqueIntro slug="ap-physics-c-em" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1.5 text-sm font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master{' '}
-            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-              AP Physics C: E&amp;M
-            </span>
-          </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-300">
-            Calculus-based electricity &amp; magnetism — from electrostatics and circuits to magnetic fields and electromagnetic induction.
-            Diagnostics, FRQ practice, daily questions, and competitive mode.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/ap-physics-c-em-diagnostic" className="rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 px-6 py-3 font-semibold text-white shadow-lg hover:shadow-xl transition">
-              Take Diagnostic
-            </Link>
-            <Link href="/ap-physics-c-em-frq" className="rounded-xl border-2 border-amber-300 px-6 py-3 font-semibold text-amber-700 hover:bg-amber-50 dark:border-amber-700 dark:text-amber-300 dark:hover:bg-amber-900/30 transition">
-              FRQ Practice
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='AP Physics C: E&amp;M'
+        tagline='Calculus-based electricity &amp; magnetism — from electrostatics and circuits to magnetic fields and electromagnetic induction. Diagnostics, FRQ practice, daily questions, and competitive mode.'
+        primaryCta={{ href: '/ap-physics-c-em-diagnostic', label: 'Take Diagnostic' }}
+        secondaryCta={{ href: '/ap-physics-c-em-frq', label: 'FRQ Practice' }}
+        accentFrom="amber"
+        accentTo="orange"
+      />
 
       {/* Features */}
       <section className="container pb-16">

@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import { courseJsonLd } from '@/lib/jsonld'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'SAT Prep | Free Digital SAT Practice',
@@ -166,40 +167,15 @@ export default function SATLandingPage() {
       />
       {/* Hero */}
       <CourseUniqueIntro slug="sat" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-1.5 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Ace the{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Digital SAT
-            </span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            Full-length practice tests, diagnostic assessments, 35+ topic quizzes,
-            interactive lessons, and a personalized score predictor.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/sat-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Start with Diagnostic
-            </Link>
-            <Link
-              href="/sat-practice"
-              className="rounded-xl border-2 border-purple-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-600 dark:text-purple-400 dark:hover:bg-purple-900/20"
-            >
-              Take Practice Test
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='Digital SAT'
+        tagline='Full-length practice tests, diagnostic assessments, 35+ topic quizzes, interactive lessons, and a personalized score predictor.'
+        primaryCta={{ href: '/sat-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/sat-practice', label: 'Take Practice Test' }}
+        accentFrom="purple"
+        accentTo="pink"
+        leadWord='Ace the'
+      />
 
       {/* Features Grid */}
       <section className="container pb-12">

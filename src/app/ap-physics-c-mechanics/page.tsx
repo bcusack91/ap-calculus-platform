@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'AP Physics C: Mechanics | Free Practice & Review',
@@ -211,32 +212,14 @@ export default function APPhysicsCMechanicsHub() {
       })) }}
     />
       <CourseUniqueIntro slug="ap-physics-c-mechanics" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              AP Physics C: Mechanics
-            </span>
-          </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-300">
-            Calculus-based mechanics — from kinematics and Newton&apos;s laws to rotation, oscillations, and gravitation.
-            Diagnostics, FRQ practice, daily questions, and competitive mode.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/ap-physics-c-mech-diagnostic" className="rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg hover:shadow-xl transition">
-              Take Diagnostic
-            </Link>
-            <Link href="/ap-physics-c-mech-frq" className="rounded-xl border-2 border-blue-300 px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/30 transition">
-              FRQ Practice
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='AP Physics C: Mechanics'
+        tagline='Calculus-based mechanics — from kinematics and Newton&apos;s laws to rotation, oscillations, and gravitation. Diagnostics, FRQ practice, daily questions, and competitive mode.'
+        primaryCta={{ href: '/ap-physics-c-mech-diagnostic', label: 'Take Diagnostic' }}
+        secondaryCta={{ href: '/ap-physics-c-mech-frq', label: 'FRQ Practice' }}
+        accentFrom="blue"
+        accentTo="indigo"
+      />
 
       {/* Features */}
       <section className="container pb-16">

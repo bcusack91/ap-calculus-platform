@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'Organic Chemistry 1 | Free OChem 1 Practice & Score Predictor',
@@ -55,28 +56,24 @@ export default function OrganicChemistry1Hub() {
         })) }}
       />
       <CourseUniqueIntro slug="organic-chemistry-1" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-lime-100 px-4 py-1.5 text-sm font-semibold text-lime-700 dark:bg-lime-900/40 dark:text-lime-300">
-            <span>🎓</span> First-semester organic chemistry · AP-equivalent rigor
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master <span className="bg-gradient-to-r from-lime-600 to-emerald-600 bg-clip-text text-transparent">Organic Chemistry 1</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            First-semester organic chemistry at AP-equivalent rigor — structure & bonding, stereochemistry, substitution & elimination,
-            alkene/alkyne/radical reactions, alcohols, and 1D spectroscopy. Includes a <strong>1–5 AP-equivalent score predictor</strong>.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ochem-diagnostic" className="rounded-xl bg-gradient-to-r from-lime-600 to-emerald-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/ochem1-score-predictor" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">View 1–5 Score Predictor</Link>
-            <Link href="/courses/organic-chemistry-1" className="rounded-xl border-2 border-lime-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-lime-700 transition hover:bg-lime-50 dark:border-lime-600 dark:text-lime-400 dark:hover:bg-lime-900/20">Browse Lessons</Link>
-          </div>
-          <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-            Continuing the sequence? <Link href="/organic-chemistry-2" className="font-semibold text-emerald-600 underline hover:text-emerald-700 dark:text-emerald-400">Jump to Organic Chemistry 2 →</Link>
-          </div>
+      <CourseHero
+        courseName='Organic Chemistry 1'
+        tagline={<>Structure and bonding, stereochemistry, substitution and elimination, alkene/alkyne/radical reactions, alcohols, and 1D spectroscopy. Includes a <strong>1&ndash;5 AP-equivalent score predictor</strong>.</>}
+        badgeIcon={<span>🎓</span>}
+        badgeLabel='First-semester organic chemistry · AP-equivalent rigor'
+        primaryCta={{ href: '/ochem-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/ochem1-score-predictor', label: 'View 1\u20135 Score Predictor', accent: 'emerald' }}
+        extraCtas={[{ href: '/courses/organic-chemistry-1', label: 'Browse Lessons', accent: 'lime' }]}
+        accentFrom="lime"
+        accentTo="emerald"
+      >
+        <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+          Continuing the sequence?{' '}
+          <Link href="/organic-chemistry-2" className="font-semibold text-emerald-600 underline hover:text-emerald-700 dark:text-emerald-400">
+            Jump to Organic Chemistry 2 &rarr;
+          </Link>
         </div>
-      </section>
+      </CourseHero>
 
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl"><div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

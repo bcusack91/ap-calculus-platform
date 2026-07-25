@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'AP US Government | Free Practice & Review',
@@ -181,39 +182,14 @@ export default function ApUsGovernmentHub() {
     />
       {/* Hero */}
       <CourseUniqueIntro slug="ap-us-government" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              AP US Government
-            </span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            Interactive lessons covering the Constitution, civil liberties, political parties, voting, and all AP Gov units.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/ap-us-gov-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Start with Diagnostic
-            </Link>
-            <Link
-              href="/courses/ap-us-government"
-              className="rounded-xl border-2 border-blue-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-600 dark:text-blue-400 dark:hover:bg-blue-900/20"
-            >
-              Browse Lessons
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='AP US Government'
+        tagline='Interactive lessons covering the Constitution, civil liberties, political parties, voting, and all AP Gov units.'
+        primaryCta={{ href: '/ap-us-gov-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/ap-us-government', label: 'Browse Lessons' }}
+        accentFrom="blue"
+        accentTo="indigo"
+      />
 
       {/* Features Grid */}
       <section className="container pb-12">

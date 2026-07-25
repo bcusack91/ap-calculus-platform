@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'AP Calculus BC | Free AP Calc BC Practice & Review',
@@ -144,25 +145,14 @@ export default function APCalculusBCHub() {
       })) }}
     />
       <CourseUniqueIntro slug="ap-calculus-bc" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master{' '}
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">AP Calculus BC</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            140+ interactive lessons covering all AB content plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/calcbc-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/courses/ap-calculus-bc" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='AP Calculus BC'
+        tagline='140+ interactive lessons covering all AB content plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.'
+        primaryCta={{ href: '/calcbc-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/ap-calculus-bc', label: 'Browse Lessons' }}
+        accentFrom="emerald"
+        accentTo="teal"
+      />
 
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl"><div className="grid gap-6 sm:grid-cols-2">

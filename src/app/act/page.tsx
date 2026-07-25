@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import { courseJsonLd } from '@/lib/jsonld'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'ACT Prep | Free ACT Practice & Review',
@@ -170,46 +171,15 @@ export default function ACTLandingPage() {
       />
       {/* Hero */}
       <CourseUniqueIntro slug="act" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red-100 px-4 py-1.5 text-sm font-semibold text-red-700 dark:bg-red-900/40 dark:text-red-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Ace the{' '}
-            <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-              ACT
-            </span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            Interactive lessons, daily practice, flashcards, and competitive challenges across
-            all four ACT sections — English, Math, Reading, and Science.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/act-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-red-600 to-orange-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Start with Diagnostic
-            </Link>
-            <Link
-              href="/courses/act-prep"
-              className="rounded-xl border-2 border-red-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
-            >
-              Browse Lessons
-            </Link>
-            <Link
-              href="/competitive"
-              className="rounded-xl border-2 border-red-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
-            >
-              Competitive Mode
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='ACT'
+        tagline='Interactive lessons, daily practice, flashcards, and competitive challenges across all four ACT sections — English, Math, Reading, and Science.'
+        primaryCta={{ href: '/act-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/act-prep', label: 'Browse Lessons' }}
+        accentFrom="red"
+        accentTo="orange"
+        leadWord='Ace the'
+      />
 
       {/* Features Grid */}
       <section className="container pb-12">

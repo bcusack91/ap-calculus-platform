@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'Organic Chemistry 2 | Free OChem 2 Practice & Score Predictor',
@@ -56,29 +57,24 @@ export default function OrganicChemistry2Hub() {
         })) }}
       />
       <CourseUniqueIntro slug="organic-chemistry-2" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
-            <span>🎓</span> Second-semester organic chemistry · AP-equivalent rigor
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Organic Chemistry 2</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            Second-semester organic chemistry at AP-equivalent rigor — pericyclic reactions, the full aromatic/carbonyl/acyl-substitution
-            machinery, enolate condensations, biomolecules, advanced 2D NMR, and full retrosynthetic planning. Includes a
-            <strong> 1–5 AP-equivalent score predictor</strong>.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ochem-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/ochem2-score-predictor" className="rounded-xl border-2 border-teal-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-600 dark:text-teal-400 dark:hover:bg-teal-900/20">View 1–5 Score Predictor</Link>
-            <Link href="/courses/organic-chemistry-2" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
-          </div>
-          <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-            Need to review fundamentals? <Link href="/organic-chemistry-1" className="font-semibold text-lime-600 underline hover:text-lime-700 dark:text-lime-400">← Back to Organic Chemistry 1</Link>
-          </div>
+      <CourseHero
+        courseName='Organic Chemistry 2'
+        badgeIcon={<span>🎓</span>}
+        badgeLabel='Second-semester organic chemistry · AP-equivalent rigor'
+        tagline={<>Second-semester organic chemistry at AP-equivalent rigor &mdash; pericyclic reactions, the full aromatic/carbonyl/acyl-substitution machinery, enolate condensations, biomolecules, advanced 2D NMR, and full retrosynthetic planning. Includes a <strong>1&ndash;5 AP-equivalent score predictor</strong>.</>}
+        primaryCta={{ href: '/ochem-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/ochem2-score-predictor', label: 'View 1\u20135 Score Predictor', accent: 'teal' }}
+        extraCtas={[{ href: '/courses/organic-chemistry-2', label: 'Browse Lessons', accent: 'emerald' }]}
+        accentFrom="emerald"
+        accentTo="teal"
+      >
+        <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+          Need to review fundamentals?{' '}
+          <Link href="/organic-chemistry-1" className="font-semibold text-lime-600 underline hover:text-lime-700 dark:text-lime-400">
+            &larr; Back to Organic Chemistry 1
+          </Link>
         </div>
-      </section>
+      </CourseHero>
 
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl"><div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

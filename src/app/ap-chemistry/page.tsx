@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'AP Chemistry | Free AP Chem Practice & Review',
@@ -194,25 +195,14 @@ export default function APChemistryHub() {
       })) }}
     />
       <CourseUniqueIntro slug="ap-chemistry" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-100 px-4 py-1.5 text-sm font-semibold text-teal-700 dark:bg-teal-900/40 dark:text-teal-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master{' '}
-            <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">AP Chemistry</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            245+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/ap-chem-diagnostic" className="rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
-            <Link href="/courses/ap-chemistry" className="rounded-xl border-2 border-teal-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-600 dark:text-teal-400 dark:hover:bg-teal-900/20">Browse Lessons</Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName='AP Chemistry'
+        tagline='245+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
+        primaryCta={{ href: '/ap-chem-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/ap-chemistry', label: 'Browse Lessons' }}
+        accentFrom="teal"
+        accentTo="cyan"
+      />
 
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl"><div className="grid gap-6 sm:grid-cols-2">
