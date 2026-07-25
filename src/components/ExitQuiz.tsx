@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo , useRef } from 'react'
 import ReportProblem from '@/components/ReportProblem'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
@@ -65,6 +65,8 @@ export default function ExitQuiz({
   const [quizComplete, setQuizComplete] = useState(false)
   const [startTime] = useState(Date.now())
   const [submitting, setSubmitting] = useState(false)
+  // One submission per mounted quiz, ever.
+  const hasSubmittedRef = useRef(false)
   const [katexReady, setKatexReady] = useState(false)
   const [showReference, setShowReference] = useState(false)
   const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>>(new Set())
@@ -186,8 +188,17 @@ export default function ExitQuiz({
     return Array.from(wrongParts).sort((a, b) => a - b)
   }, [answers, questions])
 
+  // Guard with a ref, not `submitting` state. `submitting` cannot be a
+  // dependency of this callback: setSubmitting changes it, which gives the
+  // callback a new identity, which re-fires the effect below that depends on
+  // it — and because `finally` resets the flag to false, the guard is already
+  // open again by the time the effect re-runs. That fed back on itself at one
+  // POST per round-trip until the user navigated away, writing thousands of
+  // duplicate attempts per quiz. A ref is read at call time and never
+  // participates in identity, so it cannot re-trigger the effect.
   const submitResults = useCallback(async () => {
-    if (submitting) return
+    if (hasSubmittedRef.current) return
+    hasSubmittedRef.current = true
     setSubmitting(true)
     try {
       const timeSpent = Math.round((Date.now() - startTime) / 1000)
@@ -212,7 +223,7 @@ export default function ExitQuiz({
     } finally {
       setSubmitting(false)
     }
-  }, [submitting, startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty])
+  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty])
 
   useEffect(() => {
     if (quizComplete) {

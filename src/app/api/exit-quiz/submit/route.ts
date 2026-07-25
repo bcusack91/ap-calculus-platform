@@ -105,6 +105,27 @@ export async function POST(request: Request) {
     const passed = score >= Math.ceil(totalQuestions * EXIT_QUIZ_PASS_FRACTION)
     const mustRedoUnit = score < Math.ceil(totalQuestions * EXIT_QUIZ_REDO_FRACTION)
 
+    // Idempotency guard. A client bug once re-POSTed the same completed result
+    // once per round-trip until the user navigated away, writing thousands of
+    // duplicate rows per quiz and inflating every engagement metric roughly
+    // 100x. The client is fixed, but this table is the source of truth for
+    // analytics, mastery and streaks, so the server refuses to record the same
+    // user + topic + score again within a short window rather than trusting any
+    // client to behave. A genuine retake takes far longer than 30 seconds.
+    const duplicate = await prisma.exitQuizAttempt.findFirst({
+      where: {
+        userId,
+        topicSlug,
+        score,
+        totalQuestions,
+        startedAt: { gte: new Date(Date.now() - 30_000) },
+      },
+      select: { id: true },
+    })
+    if (duplicate) {
+      return NextResponse.json({ ok: true, attemptId: duplicate.id, deduplicated: true })
+    }
+
     // All writes (attempt + streak + unlock/progress or flashcards) commit or
     // roll back together so a partial failure can't leave inconsistent state.
     const result = await prisma.$transaction(async (tx) => {
