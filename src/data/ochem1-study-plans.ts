@@ -137,7 +137,7 @@ export const OCHEM1_PLANS: StudyPlanTemplate[] = [sprint, standard]
 export const config: StudyPlanSelectorConfig = {
   subject: 'Organic Chemistry 1',
   description: 'Choose a study schedule for Organic Chemistry 1 covering structure and bonding, stereochemistry, substitution and elimination, alkenes and alkynes, and introductory spectroscopy.',
-  backLink: { href: '/courses/organic-chemistry-1', label: 'Organic Chemistry 1' },
+  backLink: { href: '/organic-chemistry-1', label: 'Organic Chemistry 1' },
   apiEndpoint: '/api/ochem1-study-plans',
   accent: 'emerald',
   examLabel: 'Target Exam Date',

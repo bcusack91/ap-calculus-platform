@@ -2,6 +2,7 @@ import Link from 'next/link'
 import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'ACT Prep | Free ACT Practice & Review',
@@ -304,6 +305,7 @@ export default function ACTLandingPage() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="act-prep" />
     </div>
   )
 }

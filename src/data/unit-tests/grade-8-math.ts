@@ -280,7 +280,7 @@ export const GRADE_8_UNITS: UnitDef[] = [
 
 export const GRADE_8_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseSlug: 'grade-8-math',
-  courseHubHref: '/courses/grade-8-math',
+  courseHubHref: '/grade-8-math',
   courseTitle: 'Grade 8 Math',
   unitTestRoute: '/grade8-math-unit-tests',
   units: GRADE_8_UNITS,

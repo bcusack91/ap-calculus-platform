@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import MCATRecommendedModules from '@/components/MCATRecommendedModules'
 import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
 import { InArticleAd } from '@/components/ad-banner'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'MCAT Prep | Free MCAT Practice & Review',
@@ -411,6 +412,7 @@ export default function MCATLandingPage() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="mcat-prep" />
     </div>
   )
 }

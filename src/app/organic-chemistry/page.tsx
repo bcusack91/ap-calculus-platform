@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'Organic Chemistry — OChem 1 & 2 with AP-Equivalent Score Predictor',
@@ -102,6 +103,7 @@ export default function OrganicChemistryChooser() {
           </ul>
         </div>
       </section>
+      <CourseToolGrid courseSlug="organic-chemistry" />
     </div>
   )
 }

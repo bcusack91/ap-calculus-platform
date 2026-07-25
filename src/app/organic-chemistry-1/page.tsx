@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'Organic Chemistry 1 | Free OChem 1 Practice & Score Predictor',
@@ -17,12 +18,12 @@ export const metadata: Metadata = {
 }
 
 const features = [
-  { title: 'Interactive Lessons', description: 'Step-by-step coverage of all 13 OChem 1 topics with mechanism walkthroughs and worked examples.', href: '/courses/organic-chemistry', stats: '5 units · 13 topics', color: 'from-lime-500 to-emerald-500', icon: '📘' },
+  { title: 'Interactive Lessons', description: 'Step-by-step coverage of all 13 OChem 1 topics with mechanism walkthroughs and worked examples.', href: '/courses/organic-chemistry-1', stats: '5 units · 13 topics', color: 'from-lime-500 to-emerald-500', icon: '📘' },
   { title: 'Diagnostic Test', description: 'Benchmark your performance across the OChem 1 curriculum and surface the topics to prioritize.', href: '/ochem-diagnostic', stats: '~30 questions · 25 min', color: 'from-blue-500 to-indigo-500', icon: '🎯' },
   { title: 'AP-Equivalent Score Predictor', description: 'Convert your quiz performance and topic mastery into an AP-equivalent 1–5 score, the way AP Chemistry students are scored.', href: '/ochem1-score-predictor', stats: '1–5 scale · live updates', color: 'from-emerald-500 to-teal-500', icon: '⭐' },
   { title: 'Flashcards', description: 'Reagents, named reactions, and key spectroscopy data for OChem 1.', href: '/flashcards?course=organic-chemistry-1', stats: 'Reagents · Named reactions', color: 'from-purple-500 to-pink-500', icon: '🃏' },
   { title: 'Daily Question', description: 'A fresh organic question every day — keep mechanisms sharp.', href: '/ochem-daily-question', stats: 'New daily', color: 'from-rose-500 to-pink-500', icon: '📅' },
-  { title: 'Exit Quizzes', description: 'Per-lesson assessments confirm mastery before you advance.', href: '/courses/organic-chemistry', stats: 'Per topic · Instant feedback', color: 'from-cyan-500 to-blue-500', icon: '✅' },
+  { title: 'Exit Quizzes', description: 'Per-lesson assessments confirm mastery before you advance.', href: '/courses/organic-chemistry-1', stats: 'Per topic · Instant feedback', color: 'from-cyan-500 to-blue-500', icon: '✅' },
 ]
 
 const units = [
@@ -68,7 +69,7 @@ export default function OrganicChemistry1Hub() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/ochem-diagnostic" className="rounded-xl bg-gradient-to-r from-lime-600 to-emerald-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
             <Link href="/ochem1-score-predictor" className="rounded-xl border-2 border-emerald-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">View 1–5 Score Predictor</Link>
-            <Link href="/courses/organic-chemistry" className="rounded-xl border-2 border-lime-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-lime-700 transition hover:bg-lime-50 dark:border-lime-600 dark:text-lime-400 dark:hover:bg-lime-900/20">Browse Lessons</Link>
+            <Link href="/courses/organic-chemistry-1" className="rounded-xl border-2 border-lime-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-lime-700 transition hover:bg-lime-50 dark:border-lime-600 dark:text-lime-400 dark:hover:bg-lime-900/20">Browse Lessons</Link>
           </div>
           <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
             Continuing the sequence? <Link href="/organic-chemistry-2" className="font-semibold text-emerald-600 underline hover:text-emerald-700 dark:text-emerald-400">Jump to Organic Chemistry 2 →</Link>
@@ -133,6 +134,7 @@ export default function OrganicChemistry1Hub() {
           </ul>
         </div>
       </section>
+      <CourseToolGrid courseSlug="organic-chemistry-1" />
     </div>
   )
 }

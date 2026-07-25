@@ -330,7 +330,7 @@ export const ALGEBRA_2_UNITS: UnitDef[] = [
 
 export const ALGEBRA_2_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseSlug: 'algebra-2',
-  courseHubHref: '/courses/algebra-2',
+  courseHubHref: '/algebra-2',
   courseTitle: 'Algebra 2',
   unitTestRoute: '/algebra2-unit-tests',
   units: ALGEBRA_2_UNITS,

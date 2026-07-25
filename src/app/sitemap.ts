@@ -297,7 +297,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Grade-level / foundational math hub pages
     ...([
       'grade-4-math', 'grade-5-math', 'grade-6-math', 'grade-7-math', 'grade-8-math',
-      'pre-algebra', 'geometry', 'algebra-1', 'algebra-2',
+      'pre-algebra', 'geometry', 'algebra-1', 'algebra-2', 'precalculus',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}`,
       lastModified: new Date(),

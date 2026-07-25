@@ -84,7 +84,7 @@ const pool: UnitPoolQuestion[] = algebra1QuestionBank
 
 export const ALGEBRA_1_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseSlug: 'algebra-1',
-  courseHubHref: '/courses/algebra-1',
+  courseHubHref: '/algebra-1',
   courseTitle: 'Algebra 1',
   unitTestRoute: '/algebra1-unit-tests',
   units: ALGEBRA_1_UNITS,

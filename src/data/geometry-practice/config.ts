@@ -15,7 +15,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Geometry',
   description:
     'A full-length, timed Geometry practice test: 40 multiple-choice questions spanning every unit of the course. Review explanations for each answer when you finish.',
-  backLink: { href: '/courses/geometry', label: 'Geometry' },
+  backLink: { href: '/geometry', label: 'Geometry' },
   ctaLinks: [
     { href: '/geometry-diagnostic', label: 'Diagnostic Test' },
     { href: '/geometry-unit-tests', label: 'Unit Tests' },

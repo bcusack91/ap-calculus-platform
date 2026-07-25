@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'AP Psychology | Free AP Psych Practice & Review',
@@ -246,6 +247,7 @@ export default function APPsychologyHub() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="ap-psychology" />
     </div>
   )
 }

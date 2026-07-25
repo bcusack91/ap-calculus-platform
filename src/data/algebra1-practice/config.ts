@@ -15,7 +15,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Algebra 1',
   description:
     'A full-length, timed Algebra 1 practice test: 40 multiple-choice questions spanning every unit of the course. Review explanations for each answer when you finish.',
-  backLink: { href: '/courses/algebra-1', label: 'Algebra 1' },
+  backLink: { href: '/algebra-1', label: 'Algebra 1' },
   ctaLinks: [
     { href: '/algebra1-diagnostic', label: 'Diagnostic Test' },
     { href: '/algebra1-unit-tests', label: 'Unit Tests' },

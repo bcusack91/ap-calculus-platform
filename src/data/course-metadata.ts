@@ -15,6 +15,7 @@ export const courseMeta: Record<
   'algebra-1': { icon: '📊', description: 'Linear equations, functions, quadratics', gradient: 'from-sky-600 to-blue-600', section: 'High School Math (Grades 9-12)' },
   'geometry': { icon: '📐', description: 'Shapes, angles, proofs, spatial reasoning', gradient: 'from-emerald-600 to-green-600', section: 'High School Math (Grades 9-12)' },
   'algebra-2': { icon: '🔣', description: 'Advanced functions, exponentials, logs', gradient: 'from-cyan-600 to-teal-600', section: 'High School Math (Grades 9-12)' },
+  'precalculus': { icon: '🧭', description: 'Functions, trig, vectors, sequences', gradient: 'from-fuchsia-600 to-purple-600', section: 'High School Math (Grades 9-12)' },
   'ap-precalculus': { icon: '📈', description: 'Functions, trig, vectors, matrices', gradient: 'from-blue-600 to-indigo-600', section: 'High School Math (Grades 9-12)' },
   'ap-calculus-ab': { icon: '∫', description: 'Limits, derivatives, integrals, applications', gradient: 'from-purple-600 to-violet-600', section: 'High School Math (Grades 9-12)' },
   'ap-calculus-bc': { icon: '∬', description: 'Series, parametric, polar, advanced integration', gradient: 'from-violet-600 to-purple-600', section: 'High School Math (Grades 9-12)' },
@@ -112,6 +113,7 @@ export const courseHubPaths: Record<string, string> = {
   // Math courses
   'algebra-1': '/algebra-1',
   'algebra-2': '/algebra-2',
+  'precalculus': '/precalculus',
   'geometry': '/geometry',
   'pre-algebra': '/pre-algebra',
   'grade-4-math': '/grade-4-math',

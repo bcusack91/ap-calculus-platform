@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'AP Physics 1 | Free AP Physics Practice & Review',
@@ -266,6 +267,7 @@ export default function APPhysics1Hub() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="ap-physics-1" />
     </div>
   )
 }

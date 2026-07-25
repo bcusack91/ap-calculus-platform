@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { CourseHub, type HubFeature, type HubUnit } from '@/components/CourseHub'
 import { InArticleAd } from '@/components/ad-banner'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'Pre-Algebra | Free Pre-Algebra Practice & Review',
@@ -106,6 +107,7 @@ export default function PreAlgebraHub() {
       {/* In-article ad — single placement; the hub body is owned by the shared
           <CourseHub/> component (no mid-page slot), so the ad follows it. */}
       <InArticleAd />
+      <CourseToolGrid courseSlug="pre-algebra" />
     </>
   )
 }

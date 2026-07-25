@@ -329,6 +329,7 @@ export default function TeacherDashboard() {
               { icon: '✍️', label: 'FRQ Grader', href: '/teacher/tools?tab=frq-grader' },
               { icon: '🃏', label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
               { icon: '⚔️', label: 'Class Lobby', href: '/teacher/lobby' },
+              { icon: '📖', label: 'Content Library', href: '/teacher/content' },
             ].map((tool) => (
               <Link
                 key={tool.label}

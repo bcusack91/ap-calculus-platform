@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Grade 8 Math',
   description:
     'A full-length, timed Grade 8 Math practice test: 40 multiple-choice questions spanning every unit of the course, with an explanation for every answer.',
-  backLink: { href: '/courses/grade-8-math', label: 'Grade 8 Math' },
+  backLink: { href: '/grade-8-math', label: 'Grade 8 Math' },
   ctaLinks: [
     { href: '/grade8-math-diagnostic', label: 'Diagnostic Test' },
     { href: '/grade8-math-unit-tests', label: 'Unit Tests' },

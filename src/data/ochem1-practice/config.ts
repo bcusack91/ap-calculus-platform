@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Organic Chemistry 1',
   description:
     'A full-length, timed Organic Chemistry 1 practice test: 40 multiple-choice questions spanning every unit of the course, with an explanation for every answer.',
-  backLink: { href: '/courses/organic-chemistry-1', label: 'Organic Chemistry 1' },
+  backLink: { href: '/organic-chemistry-1', label: 'Organic Chemistry 1' },
   ctaLinks: [
     { href: '/ochem1-diagnostic', label: 'Diagnostic Test' },
     { href: '/ochem1-unit-tests', label: 'Unit Tests' },

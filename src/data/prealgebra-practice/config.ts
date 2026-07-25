@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Pre-Algebra',
   description:
     'A full-length, timed Pre-Algebra practice test: 40 multiple-choice questions spanning every unit of the course, with an explanation for every answer.',
-  backLink: { href: '/courses/pre-algebra', label: 'Pre-Algebra' },
+  backLink: { href: '/pre-algebra', label: 'Pre-Algebra' },
   ctaLinks: [
     { href: '/prealgebra-diagnostic', label: 'Diagnostic Test' },
     { href: '/prealgebra-unit-tests', label: 'Unit Tests' },

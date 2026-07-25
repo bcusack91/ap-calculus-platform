@@ -278,7 +278,7 @@ export const OCHEM_1_UNITS: UnitDef[] = [
 
 export const OCHEM_1_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseSlug: 'organic-chemistry-1',
-  courseHubHref: '/courses/organic-chemistry-1',
+  courseHubHref: '/organic-chemistry-1',
   courseTitle: 'Organic Chemistry 1',
   unitTestRoute: '/ochem1-unit-tests',
   units: OCHEM_1_UNITS,

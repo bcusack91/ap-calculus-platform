@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { CourseHub, type HubFeature, type HubUnit } from '@/components/CourseHub'
 import { InArticleAd } from '@/components/ad-banner'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'Grade 4 Math | Free 4th Grade Math Practice',
@@ -82,6 +83,7 @@ export default function Grade4MathHub() {
       {/* In-article ad — single placement; the hub body is owned by the shared
           <CourseHub/> component (no mid-page slot), so the ad follows it. */}
       <InArticleAd />
+      <CourseToolGrid courseSlug="grade-4-math" />
     </>
   )
 }

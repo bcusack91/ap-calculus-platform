@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Organic Chemistry 2',
   description:
     'A full-length, timed Organic Chemistry 2 practice test: 40 multiple-choice questions spanning every unit of the course, with an explanation for every answer.',
-  backLink: { href: '/courses/organic-chemistry-2', label: 'Organic Chemistry 2' },
+  backLink: { href: '/organic-chemistry-2', label: 'Organic Chemistry 2' },
   ctaLinks: [
     { href: '/ochem2-diagnostic', label: 'Diagnostic Test' },
     { href: '/ochem2-unit-tests', label: 'Unit Tests' },

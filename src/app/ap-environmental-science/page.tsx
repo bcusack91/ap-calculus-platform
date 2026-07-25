@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'AP Environmental Science | Free Practice & Review',
@@ -308,6 +309,7 @@ export default function ApEnvironmentalScienceHub() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="ap-environmental-science" />
     </div>
   )
 }

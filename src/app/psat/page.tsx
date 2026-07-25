@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { InArticleAd } from '@/components/ad-banner'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'PSAT/NMSQT Prep | Free Practice & Study Tools',
@@ -122,6 +123,7 @@ export default function PsatHubPage() {
           </p>
         </div>
       </section>
+      <CourseToolGrid courseSlug="psat" />
     </div>
   )
 }

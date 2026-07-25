@@ -44,7 +44,7 @@ const pool: UnitPoolQuestion[] = geometryQuestionBank
 
 export const GEOMETRY_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseSlug: 'geometry',
-  courseHubHref: '/courses/geometry',
+  courseHubHref: '/geometry',
   courseTitle: 'Geometry',
   unitTestRoute: '/geometry-unit-tests',
   units: GEOMETRY_UNITS,

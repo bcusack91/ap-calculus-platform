@@ -2,6 +2,7 @@ import Link from 'next/link'
 import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'SAT Prep | Free Digital SAT Practice',
@@ -318,6 +319,7 @@ export default function SATLandingPage() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="sat-prep" />
     </div>
   )
 }

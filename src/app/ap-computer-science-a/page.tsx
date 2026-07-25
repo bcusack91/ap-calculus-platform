@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'AP Computer Science A | Free Practice & Review',
@@ -308,6 +309,7 @@ export default function ApComputerScienceAHub() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="ap-computer-science-a" />
     </div>
   )
 }

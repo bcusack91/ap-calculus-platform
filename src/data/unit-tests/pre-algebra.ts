@@ -334,7 +334,7 @@ export const PRE_ALGEBRA_UNITS: UnitDef[] = [
 
 export const PRE_ALGEBRA_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseSlug: 'pre-algebra',
-  courseHubHref: '/courses/pre-algebra',
+  courseHubHref: '/pre-algebra',
   courseTitle: 'Pre-Algebra',
   unitTestRoute: '/prealgebra-unit-tests',
   units: PRE_ALGEBRA_UNITS,

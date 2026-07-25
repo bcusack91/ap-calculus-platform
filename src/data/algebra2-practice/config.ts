@@ -12,7 +12,7 @@ export const config: FullLengthExamConfig = {
   subject: 'Algebra 2',
   description:
     'A full-length, timed Algebra 2 practice test: 40 multiple-choice questions spanning every unit of the course, with an explanation for every answer.',
-  backLink: { href: '/courses/algebra-2', label: 'Algebra 2' },
+  backLink: { href: '/algebra-2', label: 'Algebra 2' },
   ctaLinks: [
     { href: '/algebra2-diagnostic', label: 'Diagnostic Test' },
     { href: '/algebra2-unit-tests', label: 'Unit Tests' },

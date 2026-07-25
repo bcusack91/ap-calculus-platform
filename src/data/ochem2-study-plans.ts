@@ -137,7 +137,7 @@ export const OCHEM2_PLANS: StudyPlanTemplate[] = [sprint, standard]
 export const config: StudyPlanSelectorConfig = {
   subject: 'Organic Chemistry 2',
   description: 'Choose a study schedule for Organic Chemistry 2 covering aromatics, carbonyl chemistry, carboxylic acid derivatives, enolate condensations, amines, and biomolecules.',
-  backLink: { href: '/courses/organic-chemistry-2', label: 'Organic Chemistry 2' },
+  backLink: { href: '/organic-chemistry-2', label: 'Organic Chemistry 2' },
   apiEndpoint: '/api/ochem2-study-plans',
   accent: 'amber',
   examLabel: 'Target Exam Date',

@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'AP Calculus BC | Free AP Calc BC Practice & Review',
@@ -234,6 +235,7 @@ export default function APCalculusBCHub() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="ap-calculus-bc" />
     </div>
   )
 }

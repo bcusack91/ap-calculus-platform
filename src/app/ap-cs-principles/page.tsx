@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
+import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'AP CS Principles | Free Practice & Review',
@@ -297,6 +298,7 @@ export default function ApCsPrinciplesHub() {
           </div>
         </div>
       </section>
+      <CourseToolGrid courseSlug="ap-computer-science-principles" />
     </div>
   )
 }
