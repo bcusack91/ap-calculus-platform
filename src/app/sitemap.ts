@@ -239,6 +239,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'sat', 'mcat', 'act',
       // Non-AP math course plans
       'algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra', 'precalc',
+      // Organic chemistry
+      'ochem1', 'ochem2',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-study-plans`,
       lastModified: new Date(),
@@ -255,6 +257,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'sat', 'mcat', 'act', 'psat',
       // Non-AP math practice tests
       'algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra', 'precalc',
+      // Organic chemistry
+      'ochem1', 'ochem2',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-practice`,
       lastModified: new Date(),
@@ -283,6 +287,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       // Newly added: Physics C, non-AP math, and the two flagship test-prep tracks
       'ap-physics-c-mech', 'ap-physics-c-em', 'algebra1', 'algebra2', 'geometry',
       'grade8-math', 'prealgebra', 'precalc', 'sat', 'mcat', 'act',
+      'ochem1', 'ochem2',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-unit-tests`,
       lastModified: new Date(),
