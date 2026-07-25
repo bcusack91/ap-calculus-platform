@@ -1649,6 +1649,9 @@ const allQuestions: ActScienceQuestion[] = [
   {"id":230,"question":"A researcher wants to know whether a fish's swimming speed depends on water temperature, but she worries that oxygen level (which normally changes with temperature) might be the real cause. Which experimental design best isolates the effect of temperature alone?","options":["Vary temperature while keeping oxygen level constant by adding oxygen as needed","Vary both temperature and oxygen level together","Keep temperature constant and vary only oxygen level","Measure swimming speed at only one temperature"],"correctAnswer":0,"explanation":"To isolate temperature, oxygen level must be held constant so it cannot influence the result. Varying temperature while controlling oxygen lets her attribute any speed change to temperature alone.","difficulty":"hard"},
 ]
 
+/** Raw, UNSHUFFLED bank (the getter shuffles, breaking seeded variants). */
+export const actScienceQuestionBank: ActScienceQuestion[] = allQuestions
+
 export function getActScienceQuestions(count: number = 10): ActScienceQuestion[] {
   const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))

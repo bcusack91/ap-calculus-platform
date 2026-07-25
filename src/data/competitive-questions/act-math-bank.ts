@@ -1646,6 +1646,9 @@ const allQuestions: ActMathQuestion[] = [
   {"id":230,"question":"The quantity $y$ varies inversely as the square of $x$. If $y = 8$ when $x = 2$, what is $y$ when $x = 4$?","options":["$4$","$\\frac{1}{2}$","$32$","$2$"],"correctAnswer":3,"explanation":"Inverse-square variation: $y = \\frac{k}{x^2}$. From $8 = \\frac{k}{4}$, $k = 32$. Then $y = \\frac{32}{4^2} = \\frac{32}{16} = 2$.","difficulty":"hard"},
 ]
 
+/** Raw, UNSHUFFLED bank (the getter shuffles, breaking seeded variants). */
+export const actMathQuestionBank: ActMathQuestion[] = allQuestions
+
 export function getActMathQuestions(count: number = 10): ActMathQuestion[] {
   const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))

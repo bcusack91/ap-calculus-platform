@@ -254,7 +254,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
       'sat', 'mcat', 'act', 'psat',
       // Non-AP math practice tests
-      'algebra1', 'geometry', 'precalc',
+      'algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra', 'precalc',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-practice`,
       lastModified: new Date(),
@@ -281,7 +281,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-macro', 'ap-micro', 'ap-physics1', 'ap-physics2', 'ap-precalc',
       'ap-psych', 'ap-stats', 'ap-us-gov', 'ap-us-history', 'ap-world-history',
       // Newly added: Physics C, non-AP math, and the two flagship test-prep tracks
-      'ap-physics-c-mech', 'ap-physics-c-em', 'algebra1', 'geometry', 'sat', 'mcat', 'precalc',
+      'ap-physics-c-mech', 'ap-physics-c-em', 'algebra1', 'algebra2', 'geometry',
+      'grade8-math', 'prealgebra', 'precalc', 'sat', 'mcat', 'act',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-unit-tests`,
       lastModified: new Date(),

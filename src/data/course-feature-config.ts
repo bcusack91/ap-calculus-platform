@@ -129,6 +129,7 @@ export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
 export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
   'act': { href: '/act-practice', label: 'Practice Test' },
   'algebra-1': { href: '/algebra1-practice', label: 'Practice Test' },
+  'algebra-2': { href: '/algebra2-practice', label: 'Practice Test' },
   'ap-african-american-studies': { href: '/ap-african-american-studies-practice', label: 'Practice Test' },
   'ap-biology': { href: '/ap-bio-practice', label: 'Practice Test' },
   'ap-calculus-ab': { href: '/ap-calcab-practice', label: 'Practice Test' },
@@ -153,7 +154,9 @@ export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
   'ap-us-history': { href: '/ap-us-history-practice', label: 'Practice Test' },
   'ap-world-history': { href: '/ap-world-history-practice', label: 'Practice Test' },
   'geometry': { href: '/geometry-practice', label: 'Practice Test' },
+  'grade-8-math': { href: '/grade8-math-practice', label: 'Practice Test' },
   'mcat': { href: '/mcat-practice', label: 'Practice Test' },
+  'pre-algebra': { href: '/prealgebra-practice', label: 'Practice Test' },
   'precalculus': { href: '/precalc-practice', label: 'Practice Test' },
   'sat': { href: '/sat-practice', label: 'Practice Test' },
 }
@@ -219,7 +222,9 @@ export const courseStudyPlanMap: Record<string, SimpleLinkConfig> = {
 }
 
 export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
+  'act': { href: '/act-unit-tests', label: 'Unit Tests' },
   'algebra-1': { href: '/algebra1-unit-tests', label: 'Unit Tests' },
+  'algebra-2': { href: '/algebra2-unit-tests', label: 'Unit Tests' },
   'ap-african-american-studies': { href: '/ap-aas-unit-tests', label: 'Unit Tests' },
   'ap-biology': { href: '/ap-bio-unit-tests', label: 'Unit Tests' },
   'ap-calculus-ab': { href: '/ap-calcab-unit-tests', label: 'Unit Tests' },
@@ -244,7 +249,9 @@ export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
   'ap-us-history': { href: '/ap-us-history-unit-tests', label: 'Unit Tests' },
   'ap-world-history': { href: '/ap-world-history-unit-tests', label: 'Unit Tests' },
   'geometry': { href: '/geometry-unit-tests', label: 'Unit Tests' },
+  'grade-8-math': { href: '/grade8-math-unit-tests', label: 'Unit Tests' },
   'mcat': { href: '/mcat-unit-tests', label: 'Unit Tests' },
+  'pre-algebra': { href: '/prealgebra-unit-tests', label: 'Unit Tests' },
   'precalculus': { href: '/precalc-unit-tests', label: 'Unit Tests' },
   'sat': { href: '/sat-unit-tests', label: 'Unit Tests' },
 }

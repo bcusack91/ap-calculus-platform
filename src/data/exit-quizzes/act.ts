@@ -13,7 +13,7 @@ interface ActExitQuestion {
   formSet: 'A' | 'B'
 }
 
-const actQuestionPool: ActExitQuestion[] = [
+export const actQuestionPool: ActExitQuestion[] = [
   // ═══════════════════════════════════════════════════════════════
   // MATH — 16 questions
   // ═══════════════════════════════════════════════════════════════
