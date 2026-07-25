@@ -48,6 +48,23 @@ export async function POST(req: Request) {
     const rw = clampCount(rwCorrect, rwTotal)
     const math = clampCount(mathCorrect, mathTotal)
 
+    // Idempotency guard (same class of bug as the exit-quiz submission loop,
+    // fixed in dbf64d31): a re-POST of an identical just-submitted result must
+    // not create a second attempt. A genuine retake of a full-length test
+    // cannot happen within 30 seconds.
+    const duplicate = await prisma.satTestAttempt.findFirst({
+      where: {
+        userId: session.user.id,
+        testNumber,
+        totalScore: safeTotal,
+        startedAt: { gte: new Date(Date.now() - 30_000) },
+      },
+      select: { id: true },
+    })
+    if (duplicate) {
+      return NextResponse.json({ success: true, attemptId: duplicate.id, deduplicated: true })
+    }
+
     const attempt = await prisma.satTestAttempt.create({
       data: {
         userId: session.user.id,

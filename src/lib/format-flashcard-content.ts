@@ -25,6 +25,31 @@ export function formatFlashcardContent(content: string): string {
     const hasFractions = /\(1\/[a-z]\)/.test(part) || /\b\d+\/\d+\b/.test(part)
     const hasExponents = /\^[\-+]?\d+|\^[a-z]/.test(part)
 
+    // Prose guard. The wrap-the-whole-part branches below were built for
+    // standalone chemistry/physics equations ("Rate = -(1/a)Δ[A]/Δt = ..."),
+    // where the only word is something like "Rate". Elementary-math cards are
+    // SENTENCES that merely contain arithmetic — "Multiply the ones place:
+    // 4 × 5 = 20, write 0 and carry 2" — and wrapping the whole sentence in
+    // $...$ typesets every letter as a separate math identifier and eats the
+    // spaces (the "M u l t i p l y" rendering bug). If the part reads like
+    // prose, wrap only the arithmetic runs and leave the words alone.
+    const proseWordCount = (part.match(/[A-Za-z]{3,}/g) || []).length
+    const looksLikeProse = proseWordCount >= 4
+
+    if (looksLikeProse) {
+      // Wrap contiguous arithmetic runs: numbers joined by ×÷+−*/= operators
+      // ("4 × 5 = 20", "30 × 5 = 150", "34 × 5"). Everything else stays text.
+      return part.replace(
+        /\d[\d.,]*(?:\s*[×÷+*/=\-]\s*\d[\d.,]*)+/g,
+        (run) => {
+          // Sentence punctuation trailing the arithmetic ("= 20,") belongs to
+          // the prose, not the math span.
+          const m = run.match(/^(.*?)([.,]*)$/) as RegExpMatchArray
+          return '$' + convertToLatex(m[1].trim()) + '$' + m[2]
+        }
+      )
+    }
+
     // If it looks like a standalone equation (multiple = or = with math notation), wrap as display equation
     if (equalsCount >= 2 && (hasMathChars || hasBrackets || hasFractions)) {
       // Convert the equation to proper LaTeX

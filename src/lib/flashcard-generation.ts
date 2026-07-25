@@ -140,6 +140,28 @@ export function extractConcepts(content: string): FlashcardCandidate[] {
 /**
  * Main function to auto-generate flashcards from topic content
  */
+/**
+ * Reject extraction artifacts that are not self-contained answers.
+ *
+ * The regex extractors work on raw lesson markdown, and their "header followed
+ * by first paragraph" pattern happily captures whatever the next block is — a
+ * sub-heading ("## The Standard Algorithm"), a lone list bullet, or a lead-in
+ * that ends with a colon ("Round factors to estimate:"). Those shipped to
+ * production as answer sides of cards, e.g. "What is Multi-Digit
+ * Multiplication?" → "## The Standard Algorithm". A card back must be a
+ * sentence that answers the front on its own.
+ */
+function isViableCard(card: FlashcardCandidate): boolean {
+  const back = card.back.trim()
+  if (back.length < 15) return false          // fragment, not an answer
+  if (/^#{1,6}\s/.test(back)) return false     // markdown heading
+  if (/^[-*+]\s/.test(back)) return false      // lone list bullet
+  if (/^\|/.test(back)) return false           // table row
+  if (/[:;,]$/.test(back)) return false        // truncated lead-in
+  if (/^!\[/.test(back)) return false          // image reference
+  return true
+}
+
 export function generateFlashcardsFromContent(content: string): FlashcardCandidate[] {
   const allFlashcards: FlashcardCandidate[] = []
   
@@ -148,6 +170,12 @@ export function generateFlashcardsFromContent(content: string): FlashcardCandida
   allFlashcards.push(...extractConstants(content))
   allFlashcards.push(...extractDefinitions(content))
   allFlashcards.push(...extractConcepts(content))
+
+  // Drop extraction artifacts before dedupe so a rejected fragment can't
+  // shadow a good card in the front/back-similarity filter.
+  const viable = allFlashcards.filter(isViableCard)
+  allFlashcards.length = 0
+  allFlashcards.push(...viable)
   
   // Remove duplicates based on front/back similarity
   const uniqueFlashcards = allFlashcards.filter((card, index, self) => 

@@ -26,6 +26,23 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    // Idempotency guard (same class of bug as the exit-quiz submission loop,
+    // fixed in dbf64d31): a re-POST of an identical just-submitted result must
+    // not create a second attempt. A genuine retake of a full section cannot
+    // happen within 30 seconds.
+    const duplicate = await prisma.mcatTestAttempt.findFirst({
+      where: {
+        userId: session.user.id,
+        sectionId,
+        percentage,
+        startedAt: { gte: new Date(Date.now() - 30_000) },
+      },
+      select: { id: true },
+    })
+    if (duplicate) {
+      return NextResponse.json({ success: true, attemptId: duplicate.id, deduplicated: true })
+    }
+
     const attempt = await prisma.mcatTestAttempt.create({
       data: {
         userId: session.user.id,

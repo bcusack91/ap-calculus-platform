@@ -17,6 +17,14 @@ A fresh 9-agent audit (full site + mobile) found 6 critical launch blockers; all
 6. Schedule Competition UI removed (no student surface existed).
 Remaining from that audit: HIGH tier (join-class callback loss, OG image social proof, report-a-problem, onboarding gaps) + a full mobile batch (match screen unusable on phones, nav scroll, KaTeX on daily-question pages, numeric keyboards) — see the audit report in session history.
 
+## 0b. Data-integrity & flashcard-quality fixes — 2026-07-25
+
+1. **Exit-quiz runaway submission loop FIXED** (dbf64d31 + follow-ups): a React dependency cycle re-POSTed each completed quiz every ~400ms. 17,379 of 17,583 ExitQuizAttempt rows are loop junk — every engagement metric was ~100× inflated. Client fixed; server idempotency guards added to exit-quiz, SAT, and MCAT submit routes (daily-challenge already had one).
+   - [ ] 🔴 **Owner: run `npx tsx scripts/cleanup-exit-quiz-loop-rows.ts --execute`** to purge the junk rows (dry-run verified: deletes 17,379, keeps 204 genuine attempts; writes a backup JSON first). Until then every dashboard/analytics number is fiction.
+2. **Flashcard letter-splitting bug FIXED** (`format-flashcard-content.ts`): prose sentences containing arithmetic ("Multiply the ones place: 4 × 5 = 20 …") were wrapped whole in KaTeX math mode, rendering one letter per line. Prose now keeps only its arithmetic runs in math.
+3. **Flashcard fragment-generator FIXED** (`flashcard-generation.ts`): the auto-generator was shipping markdown fragments as answers ("What is Multi-Digit Multiplication?" → "## The Standard Algorithm"). Candidates that aren't self-contained answers are now rejected at generation time.
+4. **Full 5,982-card audit** run via multi-agent review (formatting + coherence + labeling + factual accuracy, every finding adversarially verified) — results + DB fixes tracked in the session notes.
+
 ## 0. Content-review remediation — SHIPPED 2026-07-01
 
 A 7-dimension end-to-end review ran (overall B‑: strong engine, unfinished finish). P0 + P1 fixes shipped (commits be5c9431, 57175612, eee11650):
