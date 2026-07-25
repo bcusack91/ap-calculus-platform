@@ -166,6 +166,7 @@ export default function APPhysics2Hub() {
         title: 'AP Physics 2',
         description: metadata.description as string,
         slug: 'ap-physics-2',
+        canonicalPath: '/ap-physics-2',
       })) }}
     />
       <CourseUniqueIntro slug="ap-physics-2" />

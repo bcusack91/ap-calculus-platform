@@ -4,6 +4,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import CourseHero from '@/components/CourseHero'
 
 export const metadata: Metadata = {
   title: 'AP World History | Free Practice & Review',
@@ -211,43 +212,19 @@ export default function ApWorldHistoryHub() {
         title: 'AP World History',
         description: metadata.description as string,
         slug: 'ap-world-history',
+        canonicalPath: '/ap-world-history',
       })) }}
     />
       {/* Hero */}
       <CourseUniqueIntro slug="ap-world-history" />
-      <section className="container py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-1.5 text-sm font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            Free for All Students
-          </div>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-            Master{' '}
-            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-              AP World History
-            </span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl dark:text-gray-400">
-            From ancient civilizations to modern globalization — interactive lessons covering every AP World History period.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/ap-world-history-diagnostic"
-              className="rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Start with Diagnostic
-            </Link>
-            <Link
-              href="/courses/ap-world-history"
-              className="rounded-xl border-2 border-amber-300 px-5 sm:px-8 py-3 sm:py-3.5 text-base sm:text-lg font-semibold text-amber-700 transition hover:bg-amber-50 dark:border-amber-600 dark:text-amber-400 dark:hover:bg-amber-900/20"
-            >
-              Browse Lessons
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        courseName="AP World History"
+        tagline='From ancient civilizations to modern globalization — interactive lessons covering every AP World History period.'
+        primaryCta={{ href: '/ap-world-history-diagnostic', label: 'Start with Diagnostic' }}
+        secondaryCta={{ href: '/courses/ap-world-history', label: 'Browse Lessons' }}
+        accentFrom="amber"
+        accentTo="orange"
+      />
 
       {/* Features Grid */}
       <section className="container pb-12">

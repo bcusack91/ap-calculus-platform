@@ -152,6 +152,7 @@ export default function APCalculusABHub() {
         title: 'AP Calculus AB',
         description: metadata.description as string,
         slug: 'ap-calculus-ab',
+        canonicalPath: '/ap-calculus-ab',
       })) }}
     />
       <CourseUniqueIntro slug="ap-calculus-ab" />

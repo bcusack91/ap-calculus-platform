@@ -49,13 +49,21 @@ export function courseJsonLd(course: {
   description: string
   slug: string
   topicCount?: number
+  /**
+   * Canonical path for this course, e.g. '/ap-biology'. Courses with a
+   * dedicated hub page canonical to the hub, not to /courses/<slug>, so the
+   * schema `url` has to follow or it points at a page search engines were
+   * explicitly told to ignore. Defaults to /courses/<slug> for the catalog
+   * view, which is self-canonical.
+   */
+  canonicalPath?: string
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: course.title,
     description: course.description,
-    url: `${SITE_URL}/courses/${course.slug}`,
+    url: `${SITE_URL}${course.canonicalPath ?? `/courses/${course.slug}`}`,
     provider: {
       '@type': 'EducationalOrganization',
       name: SITE_NAME,

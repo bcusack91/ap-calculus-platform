@@ -140,6 +140,7 @@ export default function APCalculusBCHub() {
         title: 'AP Calculus BC',
         description: metadata.description as string,
         slug: 'ap-calculus-bc',
+        canonicalPath: '/ap-calculus-bc',
       })) }}
     />
       <CourseUniqueIntro slug="ap-calculus-bc" />

@@ -190,6 +190,7 @@ export default function APChemistryHub() {
         title: 'AP Chemistry',
         description: metadata.description as string,
         slug: 'ap-chemistry',
+        canonicalPath: '/ap-chemistry',
       })) }}
     />
       <CourseUniqueIntro slug="ap-chemistry" />

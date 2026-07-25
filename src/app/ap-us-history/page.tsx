@@ -176,6 +176,7 @@ export default function ApUsHistoryHub() {
         title: 'AP US History',
         description: metadata.description as string,
         slug: 'ap-us-history',
+        canonicalPath: '/ap-us-history',
       })) }}
     />
       {/* Hero */}

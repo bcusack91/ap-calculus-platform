@@ -176,6 +176,7 @@ export default function ApEnvironmentalScienceHub() {
         title: 'AP Environmental Science',
         description: metadata.description as string,
         slug: 'ap-environmental-science',
+        canonicalPath: '/ap-environmental-science',
       })) }}
     />
       {/* Hero */}

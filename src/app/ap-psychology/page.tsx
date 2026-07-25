@@ -152,6 +152,7 @@ export default function APPsychologyHub() {
         title: 'AP Psychology',
         description: metadata.description as string,
         slug: 'ap-psychology',
+        canonicalPath: '/ap-psychology',
       })) }}
     />
       <CourseUniqueIntro slug="ap-psychology" />

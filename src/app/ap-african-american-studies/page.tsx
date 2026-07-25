@@ -176,6 +176,7 @@ export default function ApAfricanAmericanStudiesHub() {
         title: 'AP African American Studies',
         description: metadata.description as string,
         slug: 'ap-african-american-studies',
+        canonicalPath: '/ap-african-american-studies',
       })) }}
     />
       {/* Hero */}

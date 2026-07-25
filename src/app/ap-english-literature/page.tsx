@@ -211,6 +211,7 @@ export default function ApEnglishLiteratureHub() {
         title: 'AP English Literature',
         description: metadata.description as string,
         slug: 'ap-english-literature',
+        canonicalPath: '/ap-english-literature',
       })) }}
     />
       {/* Hero */}

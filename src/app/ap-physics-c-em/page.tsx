@@ -193,6 +193,7 @@ export default function APPhysicsCEMHub() {
         title: 'AP Physics C: E&M',
         description: metadata.description as string,
         slug: 'ap-physics-c-em',
+        canonicalPath: '/ap-physics-c-em',
       })) }}
     />
       <CourseUniqueIntro slug="ap-physics-c-em" />
@@ -263,6 +264,39 @@ export default function APPhysicsCEMHub() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="container pb-16">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 sm:p-8 dark:border-gray-700 dark:bg-gray-800">
+          <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">About the AP Physics C: E&amp;M Exam</h2>
+          <div className="grid gap-6 text-sm text-gray-600 sm:grid-cols-2 dark:text-gray-400">
+            <div>
+              <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
+              <ul className="space-y-1">
+                <li>• Section I: 40 MCQs in 80 minutes</li>
+                <li>• Section II: 4 FRQs in 100 minutes</li>
+                <li>• Calculus-based</li>
+                <li>• Total exam time: 3 hours</li>
+                <li>• Graphing calculator allowed</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Scoring</h4>
+              <ul className="space-y-1">
+                <li>• Score range: 1&ndash;5</li>
+                <li>• 5 = Extremely well qualified</li>
+                <li>• Typically taken after Mechanics</li>
+                <li>• No penalty for guessing</li>
+                <li>• Most colleges accept 4+</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/ap-physics-c-em-diagnostic" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg">
+              Get Started Free
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </Link>
           </div>
         </div>
       </section>

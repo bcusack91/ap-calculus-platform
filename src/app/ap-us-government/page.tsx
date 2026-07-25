@@ -176,6 +176,7 @@ export default function ApUsGovernmentHub() {
         title: 'AP US Government',
         description: metadata.description as string,
         slug: 'ap-us-government',
+        canonicalPath: '/ap-us-government',
       })) }}
     />
       {/* Hero */}

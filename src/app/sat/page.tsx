@@ -3,6 +3,7 @@ import CourseUniqueIntro from '@/components/CourseUniqueIntro'
 import { InArticleAd } from '@/components/ad-banner'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import { courseJsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'SAT Prep | Free Digital SAT Practice',
@@ -154,6 +155,15 @@ const sections = [
 export default function SATLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd({
+          title: 'SAT Prep',
+          description: metadata.description as string,
+          slug: 'sat-prep',
+          canonicalPath: '/sat',
+        })) }}
+      />
       {/* Hero */}
       <CourseUniqueIntro slug="sat" />
       <section className="container py-12 sm:py-20">

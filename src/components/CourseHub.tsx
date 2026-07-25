@@ -12,6 +12,7 @@
  */
 import Link from 'next/link'
 import { courseJsonLd } from '@/lib/jsonld'
+import { courseHubPaths } from '@/data/course-metadata'
 
 export type HubIconName =
   | 'lessons'
@@ -431,6 +432,7 @@ export function CourseHub(props: CourseHubProps) {
               title: props.courseName,
               description: props.courseDescription,
               slug: props.courseSlug,
+              canonicalPath: courseHubPaths[props.courseSlug],
             }),
           ),
         }}

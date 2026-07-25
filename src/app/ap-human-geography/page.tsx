@@ -176,6 +176,7 @@ export default function ApHumanGeographyHub() {
         title: 'AP Human Geography',
         description: metadata.description as string,
         slug: 'ap-human-geography',
+        canonicalPath: '/ap-human-geography',
       })) }}
     />
       {/* Hero */}

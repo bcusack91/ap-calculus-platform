@@ -52,6 +52,7 @@ export default function OrganicChemistry2Hub() {
           title: 'Organic Chemistry 2',
           description: metadata.description as string,
           slug: 'organic-chemistry-2',
+          canonicalPath: '/organic-chemistry-2',
         })) }}
       />
       <CourseUniqueIntro slug="organic-chemistry-2" />

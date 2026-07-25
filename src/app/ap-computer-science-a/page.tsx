@@ -176,6 +176,7 @@ export default function ApComputerScienceAHub() {
         title: 'AP Computer Science A',
         description: metadata.description as string,
         slug: 'ap-computer-science-a',
+        canonicalPath: '/ap-computer-science-a',
       })) }}
     />
       {/* Hero */}

@@ -211,6 +211,7 @@ export default function ApEnglishLanguageHub() {
         title: 'AP English Language',
         description: metadata.description as string,
         slug: 'ap-english-language',
+        canonicalPath: '/ap-english-language',
       })) }}
     />
       {/* Hero */}

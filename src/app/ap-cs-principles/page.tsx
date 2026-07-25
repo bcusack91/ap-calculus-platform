@@ -165,6 +165,7 @@ export default function ApCsPrinciplesHub() {
         title: 'AP CS Principles',
         description: metadata.description as string,
         slug: 'ap-cs-principles',
+        canonicalPath: '/ap-cs-principles',
       })) }}
     />
       {/* Hero */}

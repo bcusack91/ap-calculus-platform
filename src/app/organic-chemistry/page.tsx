@@ -25,6 +25,7 @@ export default function OrganicChemistryChooser() {
           title: 'Organic Chemistry — OChem 1 & 2',
           description: metadata.description as string,
           slug: 'organic-chemistry',
+          canonicalPath: '/organic-chemistry',
         })) }}
       />
 

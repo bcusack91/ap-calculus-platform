@@ -176,6 +176,7 @@ export default function ApMicroeconomicsHub() {
         title: 'AP Microeconomics',
         description: metadata.description as string,
         slug: 'ap-microeconomics',
+        canonicalPath: '/ap-microeconomics',
       })) }}
     />
       {/* Hero */}

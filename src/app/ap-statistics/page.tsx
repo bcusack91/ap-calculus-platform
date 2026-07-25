@@ -164,6 +164,7 @@ export default function APStatisticsHub() {
         title: 'AP Statistics',
         description: metadata.description as string,
         slug: 'ap-statistics',
+        canonicalPath: '/ap-statistics',
       })) }}
     />
       <CourseUniqueIntro slug="ap-statistics" />

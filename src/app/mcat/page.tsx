@@ -5,6 +5,7 @@ import MCATRecommendedModules from '@/components/MCATRecommendedModules'
 import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
 import { InArticleAd } from '@/components/ad-banner'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import { courseJsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'MCAT Prep | Free MCAT Practice & Review',
@@ -247,6 +248,15 @@ const sectionColorMap: Record<string, { heading: string; icon: string }> = {
 export default function MCATLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd({
+          title: 'MCAT Prep',
+          description: metadata.description as string,
+          slug: 'mcat-prep',
+          canonicalPath: '/mcat',
+        })) }}
+      />
       {/* Hero */}
       <CourseUniqueIntro slug="mcat" />
       <section className="container py-12 sm:py-20">
