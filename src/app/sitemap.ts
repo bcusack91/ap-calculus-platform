@@ -171,7 +171,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geography', 'ap-us-government', 'ap-world-history', 'ap-us-history',
       'ap-macroeconomics', 'ap-microeconomics', 'ap-african-american-studies',
       'ap-english-literature', 'ap-english-language', 'ap-environmental-science',
-      'ap-computer-science-a', 'ap-cs-principles', 'organic-chemistry',
+      'ap-computer-science-a', 'ap-cs-principles',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}`,
       lastModified: new Date(),

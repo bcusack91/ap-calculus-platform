@@ -27,7 +27,6 @@ export const courseMeta: Record<
   'ap-chemistry': { icon: '🧪', description: 'Atomic structure, bonding, equilibrium', gradient: 'from-orange-600 to-red-600', section: 'AP Sciences' },
   'ap-biology': { icon: '🧬', description: 'Cells, genetics, evolution, ecology', gradient: 'from-rose-600 to-pink-600', section: 'AP Sciences' },
   'ap-psychology': { icon: '🧠', description: 'Behavior, cognition, development, disorders', gradient: 'from-amber-600 to-orange-600', section: 'AP Sciences' },
-  'organic-chemistry': { icon: '⚗️', description: 'Structure, reactions, synthesis, spectroscopy', gradient: 'from-lime-600 to-green-600', section: 'AP Sciences' },
   'organic-chemistry-1': { icon: '⚗️', description: 'First-semester organic: structure, stereochem, SN/E, alkenes, spectroscopy', gradient: 'from-lime-600 to-emerald-600', section: 'AP Sciences' },
   'organic-chemistry-2': { icon: '🧪', description: 'Second-semester organic: aromatics, carbonyls, biomolecules, retrosynthesis', gradient: 'from-emerald-600 to-teal-600', section: 'AP Sciences' },
   'ap-environmental-science': { icon: '🌍', description: 'Ecosystems, biodiversity, pollution, sustainability', gradient: 'from-green-600 to-teal-600', section: 'AP Sciences' },
@@ -122,7 +121,6 @@ export const courseHubPaths: Record<string, string> = {
   'grade-7-math': '/grade-7-math',
   'grade-8-math': '/grade-8-math',
   // Other
-  'organic-chemistry': '/organic-chemistry',
   'organic-chemistry-1': '/organic-chemistry-1',
   'organic-chemistry-2': '/organic-chemistry-2',
   'sat-prep': '/sat',

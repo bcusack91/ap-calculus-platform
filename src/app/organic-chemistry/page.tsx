@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { InArticleAd } from '@/components/ad-banner'
-import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
-import CourseToolGrid from '@/components/CourseToolGrid'
 
 export const metadata: Metadata = {
   title: 'Organic Chemistry — OChem 1 & 2 with AP-Equivalent Score Predictor',
@@ -16,19 +14,20 @@ export const metadata: Metadata = {
   },
 }
 
+/**
+ * Chooser for the two-course Organic Chemistry sequence.
+ *
+ * There is deliberately no `organic-chemistry` course any more — it was an empty
+ * shell with 0 categories and 0 topics that showed up as a redundant third
+ * Organic Chemistry entry in the catalog. This page survives it because
+ * "organic chemistry" is the valuable generic search term: rather than 404 or
+ * redirect arbitrarily to one semester, it routes visitors to OChem 1 or 2.
+ * It carries no Course schema and no tool grid, because it is a signpost
+ * rather than a course.
+ */
 export default function OrganicChemistryChooser() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd({
-          title: 'Organic Chemistry — OChem 1 & 2',
-          description: metadata.description as string,
-          slug: 'organic-chemistry',
-          canonicalPath: '/organic-chemistry',
-        })) }}
-      />
-
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-lime-100 px-4 py-1.5 text-sm font-semibold text-lime-700 dark:bg-lime-900/40 dark:text-lime-300">
@@ -104,7 +103,6 @@ export default function OrganicChemistryChooser() {
           </ul>
         </div>
       </section>
-      <CourseToolGrid courseSlug="organic-chemistry" />
     </div>
   )
 }
