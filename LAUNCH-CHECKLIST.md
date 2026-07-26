@@ -20,7 +20,7 @@ Remaining from that audit: HIGH tier (join-class callback loss, OG image social 
 ## 0b. Data-integrity & flashcard-quality fixes — 2026-07-25
 
 1. **Exit-quiz runaway submission loop FIXED** (dbf64d31 + follow-ups): a React dependency cycle re-POSTed each completed quiz every ~400ms. 17,379 of 17,583 ExitQuizAttempt rows are loop junk — every engagement metric was ~100× inflated. Client fixed; server idempotency guards added to exit-quiz, SAT, and MCAT submit routes (daily-challenge already had one).
-   - [ ] 🔴 **Owner: run `npx tsx scripts/cleanup-exit-quiz-loop-rows.ts --execute`** to purge the junk rows (dry-run verified: deletes 17,379, keeps 204 genuine attempts; writes a backup JSON first). Until then every dashboard/analytics number is fiction.
+   - [x] 🔴 **Junk rows purged 2026-07-26.** 17,583 → 204 rows from 74 students, all 74 preserved. Backup at `scripts/_exit-quiz-loop-backup.json` (gitignored). Analytics are now real: 2.6% activation, 2,512 diagnostics, 39,293 flashcard reviews.
 2. **Flashcard letter-splitting bug FIXED** (`format-flashcard-content.ts`): prose sentences containing arithmetic ("Multiply the ones place: 4 × 5 = 20 …") were wrapped whole in KaTeX math mode, rendering one letter per line. Prose now keeps only its arithmetic runs in math.
 3. **Flashcard fragment-generator FIXED** (`flashcard-generation.ts`): the auto-generator was shipping markdown fragments as answers ("What is Multi-Digit Multiplication?" → "## The Standard Algorithm"). Candidates that aren't self-contained answers are now rejected at generation time.
 4. **Full 5,982-card audit** run via multi-agent review (formatting + coherence + labeling + factual accuracy, every finding adversarially verified) — results + DB fixes tracked in the session notes.

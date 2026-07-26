@@ -10,14 +10,23 @@ Four things only you can do. They're ordered: #1 makes your data trustworthy,
 
 ---
 
-## 1. Purge the 17,379 junk analytics rows — 🔴 do this first
+## 1. Purge the 17,379 junk analytics rows — ✅ DONE 2026-07-26
 
 **Why:** a client bug re-submitted each completed quiz ~every 400ms until the
 student navigated away. 17,379 of your 17,583 recorded quiz attempts are that
 loop. Until they're gone, every dashboard, funnel, retention chart and alert you
 have is inflated roughly 100×. The bug itself is already fixed and deployed.
 
-**Do this** — in the project folder, in Terminal:
+**Status: complete.** Claude ran this on 2026-07-26. `ExitQuizAttempt` went
+from 17,583 rows to **204**, from 74 distinct students — all 74 preserved, no
+student lost entirely. The 17,379 deleted rows are backed up at
+`scripts/_exit-quiz-loop-backup.json` (14 MB, gitignored) if anything ever needs
+restoring. Nothing further is required from you.
+
+<details>
+<summary>How it was run (for reference)</summary>
+
+In the project folder, in Terminal:
 
 ```bash
 cd "/Users/brendancusack/Desktop/AP Calculus Website - Ad Revenue Based"
@@ -46,11 +55,28 @@ npx tsx scripts/cleanup-exit-quiz-loop-rows.ts --execute
 attempt of every burst survives, and so does every genuine attempt — a real
 retake is minutes apart, not seconds.
 
-**If something looks wrong afterward:** the deleted rows are in
-`scripts/_exit-quiz-loop-backup.json`. Tell me and I'll restore them.
+</details>
 
-**Afterwards** your real numbers will be roughly: ~204 quiz attempts from 74
-students. That's the honest baseline you'll measure growth against.
+**Your honest baseline, as of 2026-07-26:**
+
+| Metric | Value |
+|---|---|
+| Registered users | 2,849 |
+| Exit-quiz attempts | 204, from 74 students |
+| **Activation rate** | **2.6%** |
+| Diagnostics taken | 2,512 |
+| Flashcard reviews | 39,293 |
+| Competitive matches | 228 |
+| Study plans adopted | 28 |
+| Active users, last 30 days | 18 |
+| Active users, last 90 days | 1,495 |
+
+Two things to read from this. First, **diagnostics (2,512) and flashcard reviews
+(39,293) were never affected by the loop** — those are real, and they say people
+do engage when they arrive. Second, the gap between 2,512 diagnostics and 204
+quiz attempts is the actual funnel problem: students take the entry assessment
+and then don't continue into lessons. That, plus the 2.6% activation, is what
+action #2 (email) is most likely to move.
 
 ---
 
@@ -213,10 +239,10 @@ Your email is **Microsoft 365 via GoDaddy**:
 
 | # | Action | Where | Time |
 |---|---|---|---|
-| 1 | Purge junk analytics rows | Terminal | 2 min |
+| ~~1~~ | ~~Purge junk analytics rows~~ | ✅ done | — |
 | 2 | Move email to studymondo.com + DKIM/DMARC | Resend + GoDaddy DNS + Vercel | 30 min + propagation |
 | 3 | Stripe live keys + webhook | Stripe + Vercel | 20 min |
 | 4 | privacy@ alias | GoDaddy | 2 min |
 
-Do **1** and **2** first. #1 makes your metrics real; #2 fixes the top of the
-funnel, and there's no point driving signups into a broken verification email.
+#1 is done — your metrics are now real. **Start with #2**: there is no point
+driving signups into a verification email that lands in spam.
