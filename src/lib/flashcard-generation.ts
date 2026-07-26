@@ -153,12 +153,17 @@ export function extractConcepts(content: string): FlashcardCandidate[] {
  */
 function isViableCard(card: FlashcardCandidate): boolean {
   const back = card.back.trim()
+  const lines = back.split('\n').filter((l) => l.trim())
   if (back.length < 15) return false          // fragment, not an answer
   if (/^#{1,6}\s/.test(back)) return false     // markdown heading
-  if (/^[-*+]\s/.test(back)) return false      // lone list bullet
-  if (/^\|/.test(back)) return false           // table row
-  if (/[:;,]$/.test(back)) return false        // truncated lead-in
   if (/^!\[/.test(back)) return false          // image reference
+  if (/[:;,]$/.test(back)) return false        // truncated lead-in
+  // A LONE bullet or table row is a fragment, but a complete bulleted list or a
+  // full markdown table is a perfectly good answer — the unit-circle values
+  // card is a table, and several transformation cards are bullet lists. Only
+  // reject when the whole answer is a single such line.
+  if (lines.length === 1 && /^[-*+]\s/.test(back)) return false
+  if (lines.length === 1 && /^\|/.test(back)) return false
   return true
 }
 
