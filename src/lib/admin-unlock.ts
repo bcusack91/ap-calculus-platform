@@ -1,9 +1,17 @@
 /**
  * Admin emails that get every Competitive section/topic auto-unlocked.
+ *
+ * Sourced from the ADMIN_UNLOCK_EMAILS env var (comma-separated) so no personal
+ * address is hardcoded in the repo. Falls back to the studymondo.com owner
+ * address if unset, because an empty allowlist would silently remove the
+ * owner's admin unlock — set the env var in Vercel and this fallback is inert.
  */
-export const ADMIN_FULL_UNLOCK_EMAILS = new Set<string>([
-  'brendan@cusackprep.com',
-])
+export const ADMIN_FULL_UNLOCK_EMAILS = new Set<string>(
+  (process.env.ADMIN_UNLOCK_EMAILS ?? 'brendan@studymondo.com')
+    .split(',')
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean)
+)
 
 /**
  * When true, EVERY signed-in user has Competitive Mode fully unlocked

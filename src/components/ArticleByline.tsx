@@ -4,8 +4,9 @@ import Link from 'next/link'
  * Editorial byline shown on content pages (topics, categories, courses).
  *
  * Provides the author/reviewer + "last updated" E-E-A-T signals that readers
- * (and ad-network reviewers) look for. Content is created and reviewed by
- * Brendan Cusack with the Study Mondo Education Team.
+ * look for. Attribution is to the Study Mondo Education Team as a whole — the
+ * team is the publishing entity of record, and /editorial-standards documents
+ * who writes the material and how it is reviewed.
  */
 export function ArticleByline({
   updatedAt,
@@ -31,11 +32,10 @@ export function ArticleByline({
           aria-hidden="true"
           className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-secondary text-xs font-bold text-white"
         >
-          BC
+          SM
         </span>
         <span>
-          Written and reviewed by{' '}
-          <span className="font-medium text-gray-800 dark:text-gray-200">Brendan Cusack</span>,{' '}
+          Written and reviewed by the{' '}
           <Link
             href="/editorial-standards"
             className="font-medium text-accent-hover hover:underline dark:text-accent-muted"

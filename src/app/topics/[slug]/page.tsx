@@ -323,13 +323,14 @@ export default async function TopicPage(props: TopicPageProps) {
             dateModified: topic.updatedAt,
             datePublished: topic.createdAt,
             author: {
-              '@type': 'Person',
-              name: 'Brendan Cusack',
-              url: 'https://www.studymondo.com/about',
+              '@type': 'Organization',
+              name: 'Study Mondo Education Team',
+              url: 'https://www.studymondo.com/editorial-standards',
             },
             reviewedBy: {
-              '@type': 'Person',
-              name: 'Brendan Cusack',
+              '@type': 'Organization',
+              name: 'Study Mondo Education Team',
+              url: 'https://www.studymondo.com/editorial-standards',
             },
             provider: {
               '@type': 'Organization',

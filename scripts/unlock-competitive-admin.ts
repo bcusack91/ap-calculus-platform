@@ -4,7 +4,8 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  const email = 'brendan@cusackprep.com'
+  // Pass the account explicitly, or set ADMIN_EMAIL — no address is hardcoded.
+  const email = process.argv[2] ?? process.env.ADMIN_EMAIL ?? 'brendan@studymondo.com'
   
   const user = await prisma.user.findUnique({
     where: { email },

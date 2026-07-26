@@ -4,7 +4,7 @@ import '../src/lib/load-env' // load .env.local first so local runs never hit th
  *
  * Usage:
  *   npx tsx scripts/broadcast-competitive-announcement.ts                # dry-run (default, no emails sent)
- *   npx tsx scripts/broadcast-competitive-announcement.ts --preview      # send only to brendan@cusackprep.com
+ *   npx tsx scripts/broadcast-competitive-announcement.ts --preview      # send only to PREVIEW_TO (default brendan@studymondo.com)
  *   npx tsx scripts/broadcast-competitive-announcement.ts --send         # actually send (resumes from sent.log)
  *
  * Audience: All Users with a non-null email, deduped case-insensitively,
@@ -26,7 +26,7 @@ const prisma = new PrismaClient()
 const args = new Set(process.argv.slice(2))
 const PREVIEW = args.has('--preview')
 const SEND = args.has('--send')
-const PREVIEW_TO = 'brendan@cusackprep.com'
+const PREVIEW_TO = process.env.PREVIEW_TO ?? 'brendan@studymondo.com'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
 const APP_URL = getPublicAppUrl()

@@ -15,7 +15,7 @@ export default function EditorialStandardsPage() {
     <div className="container max-w-4xl py-12">
       <h1 className="text-4xl font-bold mb-4">Editorial Standards &amp; Content Methodology</h1>
       <p className="text-muted-foreground mb-8">
-        <strong>Maintained by:</strong> Brendan Cusack, Study Mondo Education Team ·{" "}
+        <strong>Maintained by:</strong> the Study Mondo Education Team ·{" "}
         <strong>Last updated:</strong> June 5, 2026
       </p>
 
@@ -32,9 +32,8 @@ export default function EditorialStandardsPage() {
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">Who Writes Our Content</h2>
           <p>
-            All content on Study Mondo is created and reviewed by{" "}
-            <strong>Brendan Cusack</strong> together with the Study Mondo
-            Education Team. Our material draws on years of experience studying
+            All content on Study Mondo is created and reviewed by the{" "}
+            <strong>Study Mondo Education Team</strong>. Our material draws on years of experience studying
             and tutoring advanced mathematics and science, and is written
             specifically for students preparing for standardized and
             college-level exams. Every topic page is attributed with an author
