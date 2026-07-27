@@ -64,7 +64,9 @@ function validate(front: string, back: string): string | null {
   for (const span of spans) {
     const inner = span.slice(1, -1)
     if (!/^\d/.test(inner)) continue                 // not a currency-shaped opener
-    if (/[\\^_{}]/.test(inner)) continue             // contains LaTeX — it is math
+    // Math-structure chars mirror looksLikeCurrencyProse() exactly: the first
+    // version omitted = < > and wrongly rejected "$2 + x = 6$" and "$0 < b < 1$".
+    if (/[\\=^_{}<>]/.test(inner)) continue          // contains math structure
     if (/\s[a-z]/.test(inner)) return 'currency-shaped $ pairing across prose (escape as \\$)'
   }
   return null
