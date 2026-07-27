@@ -7,7 +7,7 @@ lands in spam.
 
 | # | Action | Where | Time |
 |---|---|---|---|
-| 1 | Email → studymondo.com, with DKIM + DMARC | Resend · GoDaddy DNS · Vercel | 30 min + propagation |
+| 1 | Email deliverability — **DNS is done; just test it** | Resend · Vercel | 5 min |
 | 2 | Stripe live keys + webhook | Stripe · Vercel | 20 min |
 | 3 | `privacy@` alias | GoDaddy | 2 min |
 
@@ -24,9 +24,9 @@ exactly as told. This is very likely a major reason only **2.6%** of your 2,849
 signups ever completed a single quiz: a large share never received a working
 verification email.
 
-Because Cusack Prep is being retired, this moves sending to `studymondo.com`
-rather than repairing the old domain — fixing deliverability and the branding in
-one pass, and putting `privacy@` (action #3) on the same domain.
+**Status: the DNS work is done.** Verified live — DKIM, the return-path
+subdomain and its SPF all resolve for `send.studymondo.com`. Steps 1a–1c below
+are kept for reference; what is actually left is **1e, the test.**
 
 ### 1a. Add the domain to Resend
 
@@ -95,16 +95,47 @@ DMARC will pass.
 > Optional, later: if you want to see the authentication reports yourself, you
 > can append your own address to the `rua=` list. Not required.
 
-### 1d. Verify and switch over
+### 1d. SMTP_FROM — keep the `send` subdomain
 
-1. Back in Resend, click **Verify DNS Records**. Propagation takes 15 minutes to
-   a few hours. Green checkmarks on all three = done.
-2. **Vercel** → project → **Settings** → **Environment Variables** → set:
-   ```
-   SMTP_FROM = Study Mondo <noreply@studymondo.com>
-   ```
-3. **Redeploy** (Deployments → ⋯ on the latest → Redeploy). Env changes don't
-   take effect until you do.
+**This corrects an earlier version of these instructions**, which told you to set
+`SMTP_FROM` to `noreply@studymondo.com`. Your current value is better — leave it
+alone:
+
+```
+SMTP_FROM = Study Mondo <noreply@send.studymondo.com>     ← keep this
+```
+
+Both domains are verified in Resend and both authenticate correctly, so this is
+not a pass/fail question — it is a reputation question, and the subdomain wins:
+
+**Your root domain is your business inbox.** `brendan@studymondo.com` runs on
+Microsoft 365, and it is how you will reach school districts about DPAs — the
+adoption channel that matters most. Sending bulk app mail from the same domain
+puts that at risk. You have 2,849 signups, most from AP season, many never
+verified; blasting verification mail at a list that stale will produce bounces
+and spam complaints. On `send.studymondo.com` that damage is quarantined to a
+subdomain nobody replies to. On the root domain it would follow you into a
+district's inbox.
+
+Isolating bulk mail on a subdomain is also the standard recommendation from
+Resend and every other ESP, for exactly this reason.
+
+Authentication checks out either way — worth stating precisely, since the
+subdomain looks like it should be weaker and isn't:
+
+- **DKIM** signs with `d=send.studymondo.com`, which is an *exact* match for the
+  From domain — stricter alignment than DMARC requires.
+- **SPF** return-path sits at `send.send.studymondo.com`, which relaxed-aligns
+  (`aspf=r`) to the organizational domain.
+- **DMARC** — there is no `_dmarc.send.studymondo.com`, and the root record sets
+  no `sp=`, so the subdomain inherits `p=quarantine`. Correct and intended.
+
+The only cost is cosmetic, and small: recipients see the display name **Study
+Mondo** in nearly every mail client, not the address.
+
+> Nothing to change. If `SMTP_FROM` was edited recently, **Redeploy** in Vercel
+> (Deployments → ⋯ on the latest → Redeploy) — env changes don't take effect
+> until you do.
 
 ### 1e. Prove it works
 
