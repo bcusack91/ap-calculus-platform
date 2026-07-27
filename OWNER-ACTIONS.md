@@ -15,11 +15,13 @@ lands in spam.
 
 ## 1. Fix email deliverability 🔴
 
-**Why:** your verification and password-reset emails are landing in spam. The
-sending domain has no DKIM, no return-path subdomain, and no DMARC record —
-Gmail and Yahoo have spam-foldered unauthenticated bulk mail since February
-2024. This is very likely a major reason only **2.6%** of your 2,849 signups
-ever completed a single quiz: a large share never received a working
+**Why:** your verification and password-reset emails are landing in spam.
+Verified against your live DNS: `studymondo.com` has **no Resend DKIM key** and
+**no `send` return-path subdomain**, while its DMARC policy is already
+`p=quarantine` — which explicitly instructs receivers to spam-folder anything
+that fails authentication. Unsigned app mail fails, so it gets quarantined
+exactly as told. This is very likely a major reason only **2.6%** of your 2,849
+signups ever completed a single quiz: a large share never received a working
 verification email.
 
 Because Cusack Prep is being retired, this moves sending to `studymondo.com`
@@ -34,32 +36,64 @@ one pass, and putting `privacy@` (action #3) on the same domain.
 
 ### 1b. Add those records at GoDaddy
 
-**godaddy.com** → **My Products** → studymondo.com → **DNS** → **Manage Zones**
+Your nameservers are confirmed to be at GoDaddy (`ns55/ns56.domaincontrol.com`),
+so GoDaddy is the right place. **"Manage Zones" no longer exists** — GoDaddy
+renamed it. Use this instead:
 
-The records will look like this:
+**Fastest way — paste this straight into your browser:**
 
-| Type | Name | Value |
-|---|---|---|
-| `MX` | `send` | `feedback-smtp.us-east-1.amazonses.com` (priority `10`) |
-| `TXT` | `send` | `v=spf1 include:amazonses.com ~all` |
-| `TXT` | `resend._domainkey` | `p=MIGfMA0GCSq...` (long key) |
+```
+https://dcc.godaddy.com/manage/studymondo.com/dns
+```
 
-⚠️ **Copy the actual values from your Resend page, not from this table** — the
-DKIM key is unique to you and the region may differ.
+That lands you directly on the DNS records table.
 
-⚠️ GoDaddy sometimes appends the domain automatically. If it turns `send` into
-`send.studymondo.com.studymondo.com`, enter just `send`.
+**If you'd rather click through:**
 
-### 1c. Add DMARC
+1. Sign in at **godaddy.com**
+2. Click the **person icon** (top right) → **My Products**
+3. Scroll to the **Domains** section
+4. Find **studymondo.com** — on the right of that row, either:
+   - click the **three dots (⋮)** → **Edit DNS**, or
+   - click the domain name → then the **DNS** tab
+5. You'll see a table of records with an **Add New Record** button
 
-Still in GoDaddy DNS, add one more record:
+You're in the right place when you see rows of `A`, `CNAME`, `MX`, and `TXT`
+records — including an `MX` pointing at `...mail.protection.outlook.com` (your
+Microsoft 365 inbox) and a `CNAME` for `www` pointing at Vercel.
 
-| Type | Name | Value |
-|---|---|---|
-| `TXT` | `_dmarc` | `v=DMARC1; p=none; rua=mailto:brendan@studymondo.com; fo=1` |
+Now add the three records Resend gave you. In GoDaddy, "Name" is the **Host**
+field.
 
-`p=none` means "monitor, don't reject" — the safe starting point. After a few
-weeks of clean reports you can tighten it to `p=quarantine`.
+⚠️ GoDaddy appends the domain automatically. Type just `send` and just
+`resend._domainkey` — **not** `send.studymondo.com`. If you see
+`send.studymondo.com.studymondo.com` in the saved record, that's the mistake.
+
+### 1c. DMARC — you already have one. Do NOT add another.
+
+**This corrects an earlier version of these instructions.** I checked your live
+DNS: a DMARC record already exists, created by GoDaddy:
+
+```
+v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;
+```
+
+**Adding a second `_dmarc` record would break DMARC completely** — the spec says
+a domain publishing two DMARC records fails validation entirely, which would
+make deliverability worse, not better. So skip adding one.
+
+The existing record is also *stricter* than what I originally suggested, and
+that's the real story behind your spam problem: `p=quarantine` tells receivers
+to spam-folder anything that fails authentication. Right now your app mail has
+no DKIM signature for this domain, so it fails — and gets quarantined exactly as
+instructed. Adding the Resend records in step 1b is what makes it start passing.
+
+You don't need to change anything here. Once DKIM is live it will align
+(`adkim=r` is relaxed), the `send` subdomain's SPF will align too (`aspf=r`), and
+DMARC will pass.
+
+> Optional, later: if you want to see the authentication reports yourself, you
+> can append your own address to the `rua=` list. Not required.
 
 ### 1d. Verify and switch over
 
