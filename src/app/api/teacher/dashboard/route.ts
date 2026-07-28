@@ -44,8 +44,8 @@ export async function GET() {
       completedAt: { not: null },
     },
     include: {
-      student: { select: { name: true, email: true } },
-      assignment: { select: { title: true, type: true, classroomId: true } },
+      student: { select: { id: true, name: true, email: true } },
+      assignment: { select: { id: true, title: true, type: true, classroomId: true } },
     },
     orderBy: { completedAt: 'desc' },
     take: 20,
@@ -62,7 +62,7 @@ export async function GET() {
     include: {
       _count: { select: { submissions: true } },
       submissions: { where: { status: 'COMPLETED' }, select: { id: true } },
-      classroom: { select: { name: true } },
+      classroom: { select: { id: true, name: true } },
     },
     orderBy: { dueDate: 'asc' },
     take: 10,
@@ -95,6 +95,122 @@ export async function GET() {
     avgMastery = Math.round((progressAgg._avg.masteryLevel || 0) * 100)
   }
 
+  /**
+   * Students needing attention.
+   *
+   * A class average answers "how are we doing" — which is not a question a
+   * teacher can act on, and it actively hides the students who need help. This
+   * names them instead, with the reason, so the dashboard points at work.
+   *
+   * Three signals, cheapest first, deliberately conservative so the list stays
+   * short enough to actually be worked through:
+   *   failing   — a graded submission below the assignment's required score
+   *   overdue   — an assignment past due with nothing submitted
+   *   inactive  — no lesson activity in 14 days (only counted for students who
+   *               have been active at some point, so a class that has not
+   *               started yet does not light up red on day one)
+   */
+  const attentionSince = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000)
+  const [failingSubs, overdueAssignments, recentActivity] = await Promise.all([
+    prisma.assignmentSubmission.findMany({
+      where: {
+        assignment: { classroomId: { in: classroomIds } },
+        status: 'COMPLETED',
+        score: { not: null },
+      },
+      select: {
+        score: true,
+        student: { select: { id: true, name: true, email: true } },
+        assignment: { select: { title: true, requiredScore: true, classroomId: true } },
+      },
+      orderBy: { completedAt: 'desc' },
+      take: 200,
+    }),
+    prisma.assignment.findMany({
+      where: { classroomId: { in: classroomIds }, isActive: true, dueDate: { lt: now } },
+      select: {
+        id: true,
+        title: true,
+        classroomId: true,
+        submissions: { select: { studentId: true, status: true } },
+      },
+      take: 50,
+    }),
+    prisma.topicProgress.findMany({
+      where: { userId: { in: uniqueStudentIds }, lastAccessed: { gte: attentionSince } },
+      select: { userId: true },
+      distinct: ['userId'],
+    }),
+  ])
+
+  type Attention = {
+    studentId: string; studentName: string; classroomId: string
+    reasons: string[]; severity: number
+  }
+  const attention = new Map<string, Attention>()
+  const noteAttention = (
+    studentId: string, studentName: string, classroomId: string, reason: string, weight: number
+  ) => {
+    const prev = attention.get(studentId)
+    if (prev) {
+      if (!prev.reasons.includes(reason)) prev.reasons.push(reason)
+      prev.severity += weight
+    } else {
+      attention.set(studentId, { studentId, studentName, classroomId, reasons: [reason], severity: weight })
+    }
+  }
+
+  for (const sub of failingSubs) {
+    // requiredScore is a percentage; submission score is a 0-1 fraction.
+    const required = sub.assignment.requiredScore ?? 70
+    if (sub.score !== null && sub.score * 100 < required) {
+      noteAttention(
+        sub.student.id, sub.student.name || sub.student.email || 'Student',
+        sub.assignment.classroomId, `scored below target on "${sub.assignment.title}"`, 3
+      )
+    }
+  }
+
+  const membersByClassroom = new Map<string, string[]>()
+  for (const m of allMembers) {
+    const list = membersByClassroom.get(m.classroomId) ?? []
+    list.push(m.userId)
+    membersByClassroom.set(m.classroomId, list)
+  }
+  const studentNameById = new Map(
+    (await prisma.user.findMany({
+      where: { id: { in: uniqueStudentIds } },
+      select: { id: true, name: true, email: true },
+    })).map((u) => [u.id, u.name || u.email || 'Student'])
+  )
+
+  for (const a of overdueAssignments) {
+    const submitted = new Set(a.submissions.filter((s) => s.status === 'COMPLETED').map((s) => s.studentId))
+    for (const studentId of membersByClassroom.get(a.classroomId) ?? []) {
+      if (!submitted.has(studentId)) {
+        noteAttention(studentId, studentNameById.get(studentId) ?? 'Student', a.classroomId, `has not submitted "${a.title}"`, 2)
+      }
+    }
+  }
+
+  const activeRecently = new Set(recentActivity.map((r) => r.userId))
+  const everActive = new Set(
+    (await prisma.topicProgress.findMany({
+      where: { userId: { in: uniqueStudentIds } },
+      select: { userId: true },
+      distinct: ['userId'],
+    })).map((r) => r.userId)
+  )
+  for (const m of allMembers) {
+    if (everActive.has(m.userId) && !activeRecently.has(m.userId)) {
+      noteAttention(m.userId, studentNameById.get(m.userId) ?? 'Student', m.classroomId, 'no activity in 14 days', 1)
+    }
+  }
+
+  const needsAttention = [...attention.values()]
+    .sort((a, b) => b.severity - a.severity)
+    .slice(0, 12)
+
   return NextResponse.json({
     // coTaught flag lets the UI badge classes the teacher co-teaches (vs owns).
     classrooms: classrooms.map((c) => ({ ...c, coTaught: c.teacherId !== teacherId })),
@@ -102,17 +218,26 @@ export async function GET() {
       totalClassrooms: classrooms.length,
       totalStudents,
       avgMastery,
+      needsAttentionCount: needsAttention.length,
     },
+    // IDs are included so the dashboard can link each row straight to the place
+    // a teacher acts on it, rather than making them navigate back down the tree.
     recentSubmissions: recentSubmissions.map((s) => ({
+      submissionId: s.id,
+      studentId: s.student.id,
       studentName: s.student.name || s.student.email,
+      classroomId: s.assignment.classroomId,
+      assignmentId: s.assignment.id,
       assignmentTitle: s.assignment.title,
       type: s.assignment.type,
       score: s.score !== null ? Math.round((s.score || 0) * 100) : null,
+      feedback: s.feedback,
       completedAt: s.completedAt,
     })),
     upcomingAssignments: upcomingAssignments.map((a) => ({
       id: a.id,
       title: a.title,
+      classroomId: a.classroom.id,
       classroom: a.classroom.name,
       dueDate: a.dueDate,
       totalStudents: a._count.submissions,
@@ -120,6 +245,7 @@ export async function GET() {
       isOverdue: a.dueDate ? a.dueDate < now : false,
     })),
     upcomingCompetitions,
+    needsAttention,
   })
   } catch (error) {
     console.error('[GET /api/teacher/dashboard]', error)

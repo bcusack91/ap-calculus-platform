@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { useRouter, useParams } from 'next/navigation'
+import { useRouter, useParams, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
@@ -9,6 +9,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import Gradebook from '@/components/Gradebook'
 import { StandardsMastery } from '@/components/StandardsMastery'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
+import StudentReportModal from '@/components/StudentReportModal'
 
 interface Member {
   id: string
@@ -128,7 +129,32 @@ export default function ClassroomDetailPage() {
 
   const [classroom, setClassroom] = useState<ClassroomDetail | null>(null)
   const [loading, setLoading] = useState(true)
-  const [activeTab, setActiveTab] = useState<TabType>('members')
+  // Tab state lives in the URL so a teacher can be linked straight to the view
+  // that matters — the dashboard points at ?tab=performance for remediation and
+  // ?tab=gradebook for grading, and back/forward behave as expected.
+  const searchParams = useSearchParams()
+  const tabParam = searchParams.get('tab')
+  const isTab = (v: string | null): v is TabType =>
+    !!v && ['members', 'assignments', 'gradebook', 'performance', 'standards', 'announcements', 'competitions', 'settings'].includes(v)
+  const [activeTab, setActiveTabState] = useState<TabType>(isTab(tabParam) ? tabParam : 'members')
+  // Roster rows open the student's full report — the roster is where a teacher
+  // is already looking when they wonder how someone is doing.
+  const [reportFor, setReportFor] = useState<{ id: string; name: string } | null>(null)
+
+  // Keep the URL in step with the tab, without pushing a history entry per click.
+  const setActiveTab = useCallback((tab: TabType) => {
+    setActiveTabState(tab)
+    const url = new URL(window.location.href)
+    if (tab === 'members') url.searchParams.delete('tab')
+    else url.searchParams.set('tab', tab)
+    window.history.replaceState(null, '', url.toString())
+  }, [])
+
+  // Follow back/forward and in-app links that change ?tab= while mounted.
+  useEffect(() => {
+    if (isTab(tabParam) && tabParam !== activeTab) setActiveTabState(tabParam)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tabParam])
   const [copiedCode, setCopiedCode] = useState(false)
 
   // Assignment creation
@@ -863,12 +889,16 @@ export default function ClassroomDetailPage() {
                           {(m.user.name || m.user.email || '?')[0].toUpperCase()}
                         </div>
                       )}
-                      <div className="min-w-0">
-                        <p className="font-medium text-gray-900 dark:text-white">
+                      <button
+                        onClick={() => setReportFor({ id: m.user.id, name: m.user.name || m.user.email || 'Student' })}
+                        className="min-w-0 text-left group"
+                        title="View full student report"
+                      >
+                        <p className="font-medium text-gray-900 dark:text-white group-hover:text-accent-hover group-hover:underline">
                           {m.user.name || 'Unnamed Student'}
                         </p>
                         <p className="text-xs text-gray-500 truncate">{m.user.email}</p>
-                      </div>
+                      </button>
                     </div>
                     <div className="flex flex-wrap items-center gap-3 gap-y-2">
                       <span className="text-xs text-gray-400">
@@ -1831,6 +1861,14 @@ export default function ClassroomDetailPage() {
           </div>
         </div>
       </FocusTrapDialog>
+
+      <StudentReportModal
+        open={!!reportFor}
+        onClose={() => setReportFor(null)}
+        studentId={reportFor?.id ?? null}
+        classroomId={classroomId}
+        studentName={reportFor?.name}
+      />
     </div>
   )
 }

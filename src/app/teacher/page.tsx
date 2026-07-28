@@ -5,7 +5,9 @@ import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
-import { ClipboardList, FileText } from 'lucide-react'
+import { ClipboardList, FileText, AlertTriangle } from 'lucide-react'
+import StudentReportModal from '@/components/StudentReportModal'
+import SubmissionFeedbackModal from '@/components/SubmissionFeedbackModal'
 
 interface ClassroomSummary {
   id: string
@@ -22,17 +24,30 @@ interface ClassroomSummary {
 
 interface DashboardData {
   classrooms: ClassroomSummary[]
-  stats: { totalClassrooms: number; totalStudents: number; avgMastery: number }
-  recentSubmissions: {
+  stats: { totalClassrooms: number; totalStudents: number; avgMastery: number; needsAttentionCount: number }
+  needsAttention: {
+    studentId: string
     studentName: string
+    classroomId: string
+    reasons: string[]
+    severity: number
+  }[]
+  recentSubmissions: {
+    submissionId: string
+    studentId: string
+    studentName: string
+    classroomId: string
+    assignmentId: string
     assignmentTitle: string
     type: string
     score: number | null
+    feedback: string | null
     completedAt: string
   }[]
   upcomingAssignments: {
     id: string
     title: string
+    classroomId: string
     classroom: string
     dueDate: string | null
     totalStudents: number
@@ -55,6 +70,13 @@ export default function TeacherDashboard() {
   const router = useRouter()
   const { data: session, status } = useSession()
   const [data, setData] = useState<DashboardData | null>(null)
+  // Drill-in state. The dashboard is a work surface: every row opens the thing
+  // you act on, rather than making the teacher navigate back down the tree.
+  const [reportFor, setReportFor] = useState<{ studentId: string; classroomId: string; name: string } | null>(null)
+  const [feedbackFor, setFeedbackFor] = useState<{
+    submissionId: string; studentName: string; assignmentTitle: string
+    score: number | null; feedback: string | null
+  } | null>(null)
   const [loading, setLoading] = useState(true)
   const [showCreateModal, setShowCreateModal] = useState(false)
   const [newClass, setNewClass] = useState({ name: '', subject: '', grade: '', section: '', description: '', schoolId: '' })
@@ -158,11 +180,54 @@ export default function TeacherDashboard() {
             <div className="text-4xl font-bold text-green-600">{data.stats.totalStudents}</div>
             <div className="text-gray-600 dark:text-gray-400 mt-1">Total Students</div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-accent-light dark:border-accent-light/30">
-            <div className="text-4xl font-bold text-accent">{data.stats.avgMastery}%</div>
-            <div className="text-gray-600 dark:text-gray-400 mt-1">Avg Student Mastery</div>
+          <div
+            className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border ${
+              data.stats.needsAttentionCount > 0
+                ? 'border-amber-200 dark:border-amber-800'
+                : 'border-green-100 dark:border-green-900/30'
+            }`}
+          >
+            <div className={`text-4xl font-bold ${data.stats.needsAttentionCount > 0 ? 'text-amber-600' : 'text-green-600'}`}>
+              {data.stats.needsAttentionCount}
+            </div>
+            <div className="text-gray-600 dark:text-gray-400 mt-1">
+              {data.stats.needsAttentionCount === 1 ? 'Student needs attention' : 'Students need attention'}
+            </div>
+            <div className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+              Class average {data.stats.avgMastery}% mastery
+            </div>
           </div>
         </div>
+
+        {/* Needs attention — the dashboard's answer to "what do I do today" */}
+        {data.needsAttention.length > 0 && (
+          <div className="mb-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-amber-200 dark:border-amber-800">
+            <h2 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">
+              <AlertTriangle className="inline w-5 h-5 mr-1.5 -mt-1 text-amber-500" aria-hidden /> Needs attention
+            </h2>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+              Click a student to see their full report.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {data.needsAttention.map((n) => (
+                <button
+                  key={n.studentId}
+                  onClick={() => setReportFor({ studentId: n.studentId, classroomId: n.classroomId, name: n.studentName })}
+                  className="text-left p-3 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/30 hover:border-amber-400 transition-colors group"
+                >
+                  <p className="font-semibold text-sm text-gray-900 dark:text-white group-hover:underline truncate">
+                    {n.studentName}
+                  </p>
+                  <ul className="mt-1 space-y-0.5">
+                    {n.reasons.slice(0, 3).map((r, i) => (
+                      <li key={i} className="text-xs text-gray-600 dark:text-gray-400">• {r}</li>
+                    ))}
+                  </ul>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Classrooms Grid */}
         <div className="mb-8">
@@ -226,9 +291,10 @@ export default function TeacherDashboard() {
             ) : (
               <div className="space-y-3">
                 {data.upcomingAssignments.map((a) => (
-                  <div
+                  <Link
                     key={a.id}
-                    className={`p-4 rounded-xl border ${
+                    href={`/teacher/classroom/${a.classroomId}?tab=assignments`}
+                    className={`block p-4 rounded-xl border transition-colors hover:border-accent ${
                       a.isOverdue
                         ? 'border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/10'
                         : 'border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30'
@@ -248,7 +314,7 @@ export default function TeacherDashboard() {
                         {a.isOverdue ? 'OVERDUE' : 'Due'}: {new Date(a.dueDate).toLocaleDateString()}
                       </p>
                     )}
-                  </div>
+                  </Link>
                 ))}
               </div>
             )}
@@ -261,13 +327,18 @@ export default function TeacherDashboard() {
               <p className="text-gray-500 dark:text-gray-400 text-center py-6">No submissions yet</p>
             ) : (
               <div className="space-y-3">
-                {data.recentSubmissions.slice(0, 8).map((s, i) => (
-                  <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-700/30">
-                    <div>
-                      <p className="font-medium text-sm text-gray-900 dark:text-white">{s.studentName}</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">{s.assignmentTitle}</p>
-                    </div>
-                    <div className="text-right">
+                {data.recentSubmissions.slice(0, 8).map((s) => (
+                  <div key={s.submissionId} className="flex items-center justify-between gap-2 p-3 rounded-xl bg-gray-50 dark:bg-gray-700/30">
+                    <button
+                      onClick={() => setReportFor({ studentId: s.studentId, classroomId: s.classroomId, name: s.studentName })}
+                      className="min-w-0 flex-1 text-left group"
+                    >
+                      <p className="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-accent-hover group-hover:underline">
+                        {s.studentName}
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{s.assignmentTitle}</p>
+                    </button>
+                    <div className="text-right shrink-0">
                       {s.score !== null && (
                         <span className={`text-sm font-bold ${s.score >= 80 ? 'text-green-600' : s.score >= 60 ? 'text-yellow-600' : 'text-red-600'}`}>
                           {s.score}%
@@ -279,6 +350,16 @@ export default function TeacherDashboard() {
                         </p>
                       )}
                     </div>
+                    <button
+                      onClick={() => setFeedbackFor({
+                        submissionId: s.submissionId, studentName: s.studentName,
+                        assignmentTitle: s.assignmentTitle, score: s.score, feedback: s.feedback,
+                      })}
+                      className="shrink-0 px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-accent hover:text-accent-hover transition-colors"
+                      title={s.feedback ? 'Edit feedback' : 'Leave feedback'}
+                    >
+                      {s.feedback ? '✓ Feedback' : 'Feedback'}
+                    </button>
                   </div>
                 ))}
               </div>
@@ -480,6 +561,25 @@ export default function TeacherDashboard() {
           </div>
         </div>
       </FocusTrapDialog>
+
+      <StudentReportModal
+        open={!!reportFor}
+        onClose={() => setReportFor(null)}
+        studentId={reportFor?.studentId ?? null}
+        classroomId={reportFor?.classroomId ?? null}
+        studentName={reportFor?.name}
+      />
+
+      <SubmissionFeedbackModal
+        open={!!feedbackFor}
+        onClose={() => setFeedbackFor(null)}
+        submissionId={feedbackFor?.submissionId ?? null}
+        studentName={feedbackFor?.studentName}
+        assignmentTitle={feedbackFor?.assignmentTitle}
+        currentScore={feedbackFor?.score ?? null}
+        currentFeedback={feedbackFor?.feedback ?? null}
+        onSaved={loadDashboard}
+      />
     </div>
   )
 }

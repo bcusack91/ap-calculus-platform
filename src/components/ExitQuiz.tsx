@@ -64,7 +64,6 @@ export default function ExitQuiz({
   const [answers, setAnswers] = useState<{ questionId: string; selectedAnswer: number; correct: boolean }[]>([])
   const [quizComplete, setQuizComplete] = useState(false)
   const [startTime] = useState(Date.now())
-  const [submitting, setSubmitting] = useState(false)
   // One submission per mounted quiz, ever.
   const hasSubmittedRef = useRef(false)
   const [katexReady, setKatexReady] = useState(false)
@@ -188,18 +187,16 @@ export default function ExitQuiz({
     return Array.from(wrongParts).sort((a, b) => a - b)
   }, [answers, questions])
 
-  // Guard with a ref, not `submitting` state. `submitting` cannot be a
-  // dependency of this callback: setSubmitting changes it, which gives the
-  // callback a new identity, which re-fires the effect below that depends on
-  // it — and because `finally` resets the flag to false, the guard is already
-  // open again by the time the effect re-runs. That fed back on itself at one
-  // POST per round-trip until the user navigated away, writing thousands of
-  // duplicate attempts per quiz. A ref is read at call time and never
+  // Guard with a ref, never state. A `submitting` state flag cannot be a
+  // dependency of this callback: setting it gives the callback a new identity,
+  // which re-fires the effect below that depends on it — and resetting the flag
+  // in `finally` reopens the guard before that re-run. That fed back on itself
+  // at one POST per round-trip until the user navigated away, writing thousands
+  // of duplicate attempts per quiz. A ref is read at call time and never
   // participates in identity, so it cannot re-trigger the effect.
   const submitResults = useCallback(async () => {
     if (hasSubmittedRef.current) return
     hasSubmittedRef.current = true
-    setSubmitting(true)
     try {
       const timeSpent = Math.round((Date.now() - startTime) / 1000)
       await fetch('/api/exit-quiz/submit', {
@@ -220,8 +217,6 @@ export default function ExitQuiz({
       })
     } catch (err) {
       console.error('Failed to submit exit quiz:', err)
-    } finally {
-      setSubmitting(false)
     }
   }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty])
 
