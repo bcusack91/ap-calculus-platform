@@ -17,6 +17,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -541,6 +542,8 @@ export default function APBioDiagnosticPage() {
                 </div>
               </div>
             )}
+
+            <StartStudyPlanButton diagnosticPath="/ap-bio-diagnostic" className="mb-8" />
 
             {/* Next steps explanation */}
             <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">

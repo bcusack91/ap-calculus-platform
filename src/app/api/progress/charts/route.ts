@@ -30,8 +30,12 @@ export async function GET() {
         },
         orderBy: { lastAccessed: 'desc' },
       }),
+      // repetitions > 0 only. A FlashcardProgress row is pre-seeded when a deck
+      // is generated, carrying a lastReviewed timestamp from creation — counting
+      // those lit up the student's own study heatmap on days they never studied
+      // and inflated "total reviews" (39,293 rows platform-wide vs 136 genuine).
       prisma.flashcardProgress.findMany({
-        where: { userId },
+        where: { userId, repetitions: { gt: 0 } },
         select: { lastReviewed: true, repetitions: true },
         orderBy: { lastReviewed: 'desc' },
       }),

@@ -17,6 +17,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -324,6 +325,8 @@ export default function APPhysicsCEMDiagnosticPage() {
               </div>
             </div>
           )}
+
+            <StartStudyPlanButton diagnosticPath="/ap-physics-c-em-diagnostic" className="mb-8" />
           <div className="mb-8 rounded-2xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-800 dark:bg-amber-900/20">
             <h4 className="mb-2 font-semibold text-amber-800 dark:text-amber-300">🔄 How This Cycle Works</h4>
             <ol className="space-y-2 text-sm text-amber-700 dark:text-amber-400 list-decimal list-inside">

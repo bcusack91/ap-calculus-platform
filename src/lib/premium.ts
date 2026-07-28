@@ -44,8 +44,30 @@ export function isPaidRole(role?: string | null): boolean {
  */
 export const VIEW_AS_COOKIE = 'mondo_view_as'
 
-/** Free users get a personalized study plan for this many diagnostics; the next requires Premium. */
-export const FREE_DIAGNOSTIC_PLANS = 1
+/**
+ * Free users get a personalized study plan for this many diagnostics.
+ *
+ * This was 1, which put the gate directly on the loop the product instructs
+ * users to run — the results screen tells them to review the recommended
+ * modules, retake the diagnostic, and "repeat until you're scoring 4+". They hit
+ * the paywall on iteration two. Observed behaviour matched exactly: 1,811
+ * students took a diagnostic and averaged 1.4 each, while only 281 ever opened a
+ * lesson.
+ *
+ * The retake cycle is the core free experience and the thing that makes the
+ * product work; Premium should gate depth (AI tutor, advanced analytics), not
+ * the loop itself.
+ */
+export const FREE_DIAGNOSTIC_PLANS = 5
+
+/**
+ * Is paid checkout actually configured? When it isn't, "Upgrade to Premium"
+ * leads to a 503, so any paywall is pure blockage with no way through and no
+ * revenue upside. Gates consult this and stay open until Stripe is live.
+ */
+export function checkoutIsConfigured(): boolean {
+  return Boolean(process.env.STRIPE_SECRET_KEY && process.env.STRIPE_PREMIUM_PRICE_ID)
+}
 
 /**
  * Resolve the *effective* role: an ADMIN with a valid View-as override sees that

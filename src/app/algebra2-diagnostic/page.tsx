@@ -17,6 +17,7 @@ import {
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -309,6 +310,8 @@ export default function Algebra2DiagnosticPage() {
               </div>
             </div>
           )}
+
+            <StartStudyPlanButton diagnosticPath="/algebra2-diagnostic" className="mb-8" />
           <div className="mb-8 rounded-2xl border border-orange-200 bg-orange-50 p-5 dark:border-orange-800 dark:bg-orange-900/20">
             <h4 className="mb-2 font-semibold text-orange-800 dark:text-orange-300">🔄 How This Cycle Works</h4>
             <ol className="space-y-2 text-sm text-orange-700 dark:text-orange-400 list-decimal list-inside">

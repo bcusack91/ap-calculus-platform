@@ -16,6 +16,7 @@ import {
 } from '@/data/ap-precalculus-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -282,6 +283,8 @@ export default function APPrecalculusDiagnosticPage() {
               </div>
             </div>
           )}
+
+            <StartStudyPlanButton diagnosticPath="/ap-precalculus-diagnostic" className="mb-8" />
           <div className="mb-8 rounded-2xl border border-cyan-200 bg-cyan-50 p-5 dark:border-cyan-800 dark:bg-cyan-900/20">
             <h4 className="mb-2 font-semibold text-cyan-800 dark:text-cyan-300">🔄 How This Cycle Works</h4>
             <ol className="space-y-2 text-sm text-cyan-700 dark:text-cyan-400 list-decimal list-inside">

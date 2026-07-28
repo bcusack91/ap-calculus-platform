@@ -20,6 +20,7 @@ import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -565,6 +566,8 @@ export default function APChemDiagnosticPage() {
                 </div>
               </div>
             )}
+
+            <StartStudyPlanButton diagnosticPath="/ap-chem-diagnostic" className="mb-8" />
 
             {/* Next steps explanation */}
             <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">

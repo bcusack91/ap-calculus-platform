@@ -19,6 +19,7 @@ import {
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 function renderLatex(text: string): string {
   try {
@@ -447,6 +448,8 @@ export default function CalcBCDiagnosticPage() {
                 </div>
               </div>
             )}
+
+            <StartStudyPlanButton diagnosticPath="/calcbc-diagnostic" className="mb-8" />
 
             {/* Cycle explanation */}
             <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">

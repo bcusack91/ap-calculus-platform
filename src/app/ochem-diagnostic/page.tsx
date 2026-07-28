@@ -17,6 +17,7 @@ import {
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -319,6 +320,8 @@ export default function OChemDiagnosticPage() {
               </div>
             </div>
           )}
+
+            <StartStudyPlanButton diagnosticPath="/ochem-diagnostic" className="mb-8" />
 
           <div className="mb-8 rounded-2xl border border-fuchsia-200 bg-fuchsia-50 p-5 dark:border-fuchsia-800 dark:bg-fuchsia-900/20">
             <h4 className="mb-2 font-semibold text-fuchsia-800 dark:text-fuchsia-300">🔄 How This Cycle Works</h4>

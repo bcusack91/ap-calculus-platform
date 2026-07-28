@@ -203,8 +203,11 @@ async function getRetentionData() {
         where: { userId: { in: userIds } },
         select: { userId: true, lastAccessed: true },
       }),
+      // Only graded cards count as activity — a pre-seeded row has a
+      // lastReviewed timestamp from creation, which would otherwise register as
+      // a study session the student never had.
       prisma.flashcardProgress.findMany({
-        where: { userId: { in: userIds } },
+        where: { userId: { in: userIds }, repetitions: { gt: 0 } },
         select: { userId: true, lastReviewed: true },
       }),
       // QuizAttempt is a dead table (never written); ExitQuizAttempt is the only

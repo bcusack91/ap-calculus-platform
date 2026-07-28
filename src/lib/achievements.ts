@@ -38,7 +38,9 @@ export async function checkAndAwardAchievements(userId: string): Promise<string[
         },
       },
     }),
-    prisma.flashcardProgress.count({ where: { userId } }),
+    // repetitions > 0 = actually reviewed. Rows are pre-seeded when a deck is
+    // generated, so a plain count credits the student for cards never studied.
+    prisma.flashcardProgress.count({ where: { userId, repetitions: { gt: 0 } } }),
     prisma.dailyStreak.findUnique({ where: { userId } }),
     prisma.competitiveProfile.findUnique({ where: { userId } }),
     prisma.classroomMember.count({ where: { userId, isActive: true } }),

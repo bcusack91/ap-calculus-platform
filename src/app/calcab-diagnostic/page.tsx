@@ -11,6 +11,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import {
   generateCalcABDiagnosticTest,
   scoreCalcABDiagnostic,
@@ -438,6 +439,8 @@ export default function CalcABDiagnosticPage() {
                 </div>
               </div>
             )}
+
+            <StartStudyPlanButton diagnosticPath="/calcab-diagnostic" className="mb-8" />
 
             {/* Cycle explanation */}
             <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">

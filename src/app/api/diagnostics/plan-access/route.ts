@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { effectiveIsPremium } from '@/lib/effective-role'
-import { FREE_DIAGNOSTIC_PLANS } from '@/lib/premium'
+import { FREE_DIAGNOSTIC_PLANS, checkoutIsConfigured } from '@/lib/premium'
 
 /**
  * Whether the current user may see a personalized diagnostic study plan.
@@ -20,6 +20,11 @@ export async function GET() {
     }
     if (await effectiveIsPremium(session.user.role)) {
       return NextResponse.json({ canAccess: true, used: 0, limit: FREE_DIAGNOSTIC_PLANS, premium: true })
+    }
+    // With checkout switched off there is nothing to upgrade to — blocking here
+    // would strand the user with a dead "Upgrade" button.
+    if (!checkoutIsConfigured()) {
+      return NextResponse.json({ canAccess: true, used: 0, limit: FREE_DIAGNOSTIC_PLANS, premium: false })
     }
     const used = await prisma.diagnosticTest.count({ where: { userId: session.user.id } })
     return NextResponse.json({
