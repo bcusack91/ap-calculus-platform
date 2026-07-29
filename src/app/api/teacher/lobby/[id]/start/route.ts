@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { requireLobbyHost } from '@/lib/teacher-auth'
 import { buildQuestionPool, getCourseEntry } from '@/lib/teacher-lobby-courses'
 import { snakeDraftTeams } from '@/lib/teacher-lobby'
+import type { MatchTier } from '@/lib/competitive-utils'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -84,7 +85,10 @@ export async function POST(_req: NextRequest, { params }: Ctx) {
   }
 
   const topicSlugs = Array.isArray(lobby.topicSlugs) ? (lobby.topicSlugs as string[]) : []
-  const pool = await buildQuestionPool(lobby.courseSlug, topicSlugs, 200)
+  const tier = (['easy', 'medium', 'hard'].includes(lobby.difficulty ?? '')
+    ? lobby.difficulty
+    : undefined) as MatchTier | undefined
+  const pool = await buildQuestionPool(lobby.courseSlug, topicSlugs, 200, tier)
   if (pool.length === 0) {
     return NextResponse.json(
       { error: 'No questions found for the chosen course/topics.' },

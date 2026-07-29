@@ -27,6 +27,9 @@ interface LobbyState {
   guest: PlayerInfo | null
   currentMatch: CurrentMatch | null
   lastMatchId: string | null
+  topicSlug?: string | null
+  gameMode?: string | null
+  difficulty?: string | null
   closedAt: string | null
 }
 
@@ -37,6 +40,15 @@ interface CourseTopicsResponse { courseSlug: string; courseName: string; units: 
 const GAME_MODES = [
   { id: 'SPEED_RACE', label: '⚡ Speed Race', desc: 'First to 10 correct wins' },
   { id: 'ACCURACY_CHALLENGE', label: '🎯 Accuracy Challenge', desc: 'Highest accuracy in 5 minutes' },
+  // CHAOS is unranked by construction — the match engine skips MMR and profile
+  // stats for chaos matches — so friends can spam power-ups with nothing at stake.
+  { id: 'CHAOS', label: '🌀 Chaos Mode', desc: 'Power-ups & mayhem · does NOT affect MMR' },
+] as const
+
+const DIFFICULTIES = [
+  { id: 'easy', label: '🟢 Easy', desc: 'All easy questions' },
+  { id: 'medium', label: '🟡 Medium', desc: 'A few easy, then medium' },
+  { id: 'hard', label: '🔴 Hard', desc: 'Warm-up, then mostly hard' },
 ] as const
 
 export default function LobbyRoomPage({ params }: { params: Promise<{ code: string }> }) {
@@ -53,6 +65,11 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
   const [topicsLoading, setTopicsLoading] = useState(false)
   const [selectedTopic, setSelectedTopic] = useState<string>('')
   const [gameMode, setGameMode] = useState<typeof GAME_MODES[number]['id']>('SPEED_RACE')
+  const [difficulty, setDifficulty] = useState<typeof DIFFICULTIES[number]['id']>('medium')
+  // Prefill pickers ONCE from the lobby's advertised settings (set when the
+  // lobby was created from the open-lobby browser). After that the host's
+  // in-room choices win — the poll must not keep resetting them.
+  const [prefilled, setPrefilled] = useState(false)
   const [starting, setStarting] = useState(false)
 
   const fetchLobby = useCallback(async () => {
@@ -75,6 +92,18 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
     const id = setInterval(fetchLobby, 2500)
     return () => clearInterval(id)
   }, [fetchLobby, authStatus])
+
+  useEffect(() => {
+    if (prefilled || !lobby) return
+    if (lobby.topicSlug) setSelectedTopic(lobby.topicSlug)
+    if (lobby.gameMode && GAME_MODES.some(m => m.id === lobby.gameMode)) {
+      setGameMode(lobby.gameMode as typeof GAME_MODES[number]['id'])
+    }
+    if (lobby.difficulty && DIFFICULTIES.some(d => d.id === lobby.difficulty)) {
+      setDifficulty(lobby.difficulty as typeof DIFFICULTIES[number]['id'])
+    }
+    setPrefilled(true)
+  }, [lobby, prefilled])
 
   // If a match starts (or we discover one in progress), redirect both players to the match page
   useEffect(() => {
@@ -102,7 +131,7 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
       const res = await fetch(`/api/competitive/lobby/${code}/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug: selectedTopic, gameMode }),
+        body: JSON.stringify({ topicSlug: selectedTopic, gameMode, difficulty }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data?.error || 'Could not start match')
@@ -252,6 +281,16 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
                 ))}
               </select>
 
+              {selectedTopic && !selectedCourse && (
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  Playing the advertised topic:{' '}
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    {selectedTopic.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+                  </span>{' '}
+                  — pick a course above to change it.
+                </p>
+              )}
+
               {/* Topic picker */}
               {selectedCourse && (
                 <>
@@ -283,7 +322,7 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
 
               {/* Mode picker */}
               <label className="mb-1 block text-sm font-semibold text-gray-700 dark:text-gray-300">Game Mode</label>
-              <div className="mb-5 grid gap-2 sm:grid-cols-2">
+              <div className="mb-5 grid gap-2 sm:grid-cols-3">
                 {GAME_MODES.map(m => (
                   <button
                     key={m.id}
@@ -297,6 +336,26 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
                   >
                     <div className="font-semibold text-gray-900 dark:text-white">{m.label}</div>
                     <div className="text-xs text-gray-600 dark:text-gray-400">{m.desc}</div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Difficulty picker */}
+              <label className="mb-1 block text-sm font-semibold text-gray-700 dark:text-gray-300">Difficulty</label>
+              <div className="mb-5 grid gap-2 sm:grid-cols-3">
+                {DIFFICULTIES.map(d => (
+                  <button
+                    key={d.id}
+                    type="button"
+                    onClick={() => setDifficulty(d.id)}
+                    className={`rounded-lg border-2 p-3 text-left transition ${
+                      difficulty === d.id
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
+                        : 'border-gray-200 hover:border-blue-300 dark:border-gray-700'
+                    }`}
+                  >
+                    <div className="font-semibold text-gray-900 dark:text-white">{d.label}</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">{d.desc}</div>
                   </button>
                 ))}
               </div>

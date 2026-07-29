@@ -30,6 +30,7 @@ interface OpenLobby {
   isMine: boolean
   topicSlug?: string | null
   gameMode?: string
+  difficulty?: string | null
   courseSlug?: string | null
   courseName?: string | null
   topicSlugs?: string[]
@@ -45,6 +46,13 @@ const FORMAT_META: Record<OpenLobby['format'], { icon: string; label: string; bl
   TEAM_2V2: { icon: '👥', label: '2v2 Team Battle', blurb: 'MMR-balanced teams · casual' },
   RACE_FFA: { icon: '🏁', label: 'Free-for-All Race', blurb: 'Up to 8 players · casual' },
 }
+
+const DIFFICULTIES = [
+  { id: 'easy', label: '🟢 Easy', desc: 'All easy questions' },
+  { id: 'medium', label: '🟡 Medium', desc: 'A few easy, then medium' },
+  { id: 'hard', label: '🔴 Hard', desc: 'Warm-up, then mostly hard' },
+] as const
+type Difficulty = typeof DIFFICULTIES[number]['id']
 
 const prettify = (slug: string) =>
   slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
@@ -201,6 +209,8 @@ export default function OpenLobbiesPage() {
                       <p className="text-xs text-gray-400 dark:text-gray-500">
                         {l.hostName}
                         {l.format === 'DUEL_1V1' && typeof l.hostMMR === 'number' && ` · ${l.hostMMR} MMR`}
+                        {l.gameMode === 'CHAOS' && ' · 🌀 Chaos (no MMR)'}
+                        {l.difficulty && ` · ${l.difficulty[0].toUpperCase()}${l.difficulty.slice(1)}`}
                         {' · '}{timeAgo(l.createdAt)}
                       </p>
                     </div>
@@ -238,6 +248,7 @@ export default function OpenLobbiesPage() {
 /* ── Create dialog ─────────────────────────────────────────────────────── */
 
 interface TopicOption { slug: string; title: string }
+interface TopicUnit { name: string; slug: string; topics: TopicOption[] }
 
 function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
   const router = useRouter()
@@ -247,9 +258,10 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
 
   // Duel pickers (competitive catalog + course-topics endpoint)
   const [duelCourse, setDuelCourse] = useState('')
-  const [duelTopics, setDuelTopics] = useState<TopicOption[] | null>(null)
+  const [duelUnits, setDuelUnits] = useState<TopicUnit[] | null>(null)
   const [duelTopic, setDuelTopic] = useState('')
-  const [duelMode, setDuelMode] = useState<'SPEED_RACE' | 'ACCURACY_CHALLENGE'>('SPEED_RACE')
+  const [duelMode, setDuelMode] = useState<'SPEED_RACE' | 'ACCURACY_CHALLENGE' | 'CHAOS'>('SPEED_RACE')
+  const [difficulty, setDifficulty] = useState<Difficulty>('medium')
 
   // Race pickers (teacher-lobby course registry — plain-auth endpoint)
   const [raceCourses, setRaceCourses] = useState<{ slug: string; name: string }[] | null>(null)
@@ -271,12 +283,16 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
   }, [open, format, raceCourses])
 
   useEffect(() => {
-    if (!duelCourse) { setDuelTopics(null); setDuelTopic(''); return }
-    setDuelTopics(null)
+    if (!duelCourse) { setDuelUnits(null); setDuelTopic(''); return }
+    setDuelUnits(null)
+    setDuelTopic('')
+    // Response shape is { units: [{ name, topics: [...] }] } — grouped by unit,
+    // NOT a flat topics array (which is what the race endpoint returns; reading
+    // .topics here is the bug that left the 1v1 dropdown empty).
     fetch(`/api/competitive/course-topics?course=${encodeURIComponent(duelCourse)}`, { cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setDuelTopics(d?.topics ?? []))
-      .catch(() => setDuelTopics([]))
+      .then((d) => setDuelUnits(d?.units ?? []))
+      .catch(() => setDuelUnits([]))
   }, [duelCourse])
 
   useEffect(() => {
@@ -295,12 +311,13 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
     try {
       const body =
         format === 'DUEL_1V1'
-          ? { format, topicSlug: duelTopic, gameMode: duelMode }
+          ? { format, topicSlug: duelTopic, gameMode: duelMode, difficulty }
           : {
               format,
               courseSlug: raceCourse,
               topicSlugs: raceSelected,
               durationSec: durationMin * 60,
+              difficulty,
               ...(format === 'RACE_FFA' ? { maxPlayers: ffaMax } : {}),
             }
       const res = await fetch('/api/competitive/open-lobbies', {
@@ -366,8 +383,10 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
             {duelCourse && (
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">Topic</label>
-                {duelTopics === null ? (
+                {duelUnits === null ? (
                   <p className="text-sm text-gray-500">Loading topics…</p>
+                ) : duelUnits.length === 0 ? (
+                  <p className="text-sm text-gray-500">No topics available for this course yet.</p>
                 ) : (
                   <select
                     value={duelTopic}
@@ -375,8 +394,12 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                     className="w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
                   >
                     <option value="">Choose a topic…</option>
-                    {duelTopics.map((t) => (
-                      <option key={t.slug} value={t.slug}>{t.title}</option>
+                    {duelUnits.map((u) => (
+                      <optgroup key={u.slug} label={u.name}>
+                        {u.topics.map((t) => (
+                          <option key={t.slug} value={t.slug}>{t.title}</option>
+                        ))}
+                      </optgroup>
                     ))}
                   </select>
                 )}
@@ -384,8 +407,8 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
             )}
             <div>
               <p className="mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Mode</p>
-              <div className="flex gap-2">
-                {([['SPEED_RACE', '⚡ Speed Race'], ['ACCURACY_CHALLENGE', '🎯 Accuracy']] as const).map(([id, label]) => (
+              <div className="flex flex-wrap gap-2">
+                {([['SPEED_RACE', '⚡ Speed Race'], ['ACCURACY_CHALLENGE', '🎯 Accuracy'], ['CHAOS', '🌀 Chaos']] as const).map(([id, label]) => (
                   <button
                     key={id}
                     onClick={() => setDuelMode(id)}
@@ -399,6 +422,11 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
                   </button>
                 ))}
               </div>
+              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {duelMode === 'CHAOS'
+                  ? '🌀 Power-ups on, mayhem allowed — chaos duels are casual and never affect MMR.'
+                  : 'Ranked — the result affects both players\u2019 MMR.'}
+              </p>
             </div>
           </>
         ) : (
@@ -480,6 +508,26 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
             </p>
           </>
         )}
+
+        <div>
+          <p className="mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Question difficulty</p>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {DIFFICULTIES.map((d) => (
+              <button
+                key={d.id}
+                onClick={() => setDifficulty(d.id)}
+                className={`rounded-xl border-2 p-2.5 text-left transition ${
+                  difficulty === d.id
+                    ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
+                    : 'border-gray-200 hover:border-orange-300 dark:border-gray-700'
+                }`}
+              >
+                <div className="text-sm font-bold text-gray-900 dark:text-white">{d.label}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">{d.desc}</div>
+              </button>
+            ))}
+          </div>
+        </div>
 
         {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
 

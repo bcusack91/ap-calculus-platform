@@ -5,6 +5,8 @@
 // synthetic 'general' topic so the lobby UI still has at least one selectable
 // option and the API doesn't 404.
 
+import { pickTieredQuestions, type MatchTier } from '@/lib/competitive-utils'
+
 
 export interface TeacherLobbyQuestion {
   id: number | string
@@ -350,6 +352,7 @@ export async function buildQuestionPool(
   courseSlug: string,
   topicSlugs: string[],
   target: number,
+  tier?: MatchTier,
 ): Promise<TeacherLobbyQuestion[]> {
   const entry = getCourseEntry(courseSlug)
   if (!entry) return []
@@ -376,8 +379,14 @@ export async function buildQuestionPool(
     ;[pool[i], pool[j]] = [pool[j], pool[i]]
   }
 
-  // 3) Cap, then shuffle each question's options so correctAnswer != 0 always.
-  const capped = pool.slice(0, Math.max(target, 1))
+  // 3) Cap — honoring the host's difficulty tier when one was chosen
+  // (TIER_MIX: easy = all easy; medium = a few easy then medium; hard = a
+  // couple easy, a few medium, the rest hard; shortfalls spill to adjacent
+  // tiers so thin banks still fill the pool) — then shuffle each question's
+  // options so correctAnswer != 0 always.
+  const capped = tier
+    ? pickTieredQuestions(pool, Math.max(target, 1), tier)
+    : pool.slice(0, Math.max(target, 1))
   return capped.map(q => shuffleQuestionOptions(q))
 }
 

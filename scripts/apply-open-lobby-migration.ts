@@ -18,9 +18,9 @@ const p = new PrismaClient()
   for (const st of stmts) { await p.$executeRawUnsafe(st); console.log('  ✓', st.slice(0, 72).replace(/\n/g, ' ')) }
   const cols = await p.$queryRaw<{ table_name: string; column_name: string }[]>`
     SELECT table_name, column_name FROM information_schema.columns
-    WHERE (table_name = 'CompetitiveLobby' AND column_name IN ('isPublic','topicSlug','gameMode'))
-       OR (table_name = 'TeacherLobby' AND column_name IN ('studentHosted','isPublic','maxPlayers','format'))
+    WHERE (table_name = 'CompetitiveLobby' AND column_name IN ('isPublic','topicSlug','gameMode','difficulty'))
+       OR (table_name = 'TeacherLobby' AND column_name IN ('studentHosted','isPublic','maxPlayers','format','difficulty'))
     ORDER BY 1, 2`
-  console.log(`\nverified ${cols.length}/7 columns present`)
+  console.log(`\nverified ${cols.length}/9 columns present`)
   process.exit(0)
 })()

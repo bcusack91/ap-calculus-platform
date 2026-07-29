@@ -742,6 +742,7 @@ model CompetitiveLobby {
   isPublic       Boolean     @default(false)
   topicSlug      String?
   gameMode       String?
+  difficulty     String?
   status         LobbyStatus @default(WAITING)
   currentMatchId String?
   lastMatchId    String?
@@ -786,6 +787,7 @@ model TeacherLobby {
   isPublic      Boolean            @default(false)
   maxPlayers    Int?
   format        String?
+  difficulty    String?
   status        TeacherLobbyStatus @default(OPEN)
   createdAt     DateTime           @default(now())
   startedAt     DateTime?

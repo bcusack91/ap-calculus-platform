@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { generateMatchQuestions, matchQuestionCount } from '@/lib/competitive-utils'
+import { generateMatchQuestions, matchQuestionCount, type MatchTier } from '@/lib/competitive-utils'
 import { normalizeLobbyCode } from '@/lib/lobby-codes'
 import type { Prisma, CompetitiveMode } from '@prisma/client'
 
@@ -23,7 +23,10 @@ export async function POST(
   const body = await req.json().catch(() => ({}))
   const topicSlug: string = typeof body?.topicSlug === 'string' ? body.topicSlug : ''
   const gameModeRaw: string = typeof body?.gameMode === 'string' ? body.gameMode : 'SPEED_RACE'
-  const allowedModes: CompetitiveMode[] = ['SPEED_RACE', 'ACCURACY_CHALLENGE']
+  // CHAOS is allowed here because the match engine already treats it as
+  // unranked — the answer/complete routes skip MMR and profile stats for CHAOS,
+  // so a chaos lobby duel is power-ups-on, rating-off by construction.
+  const allowedModes: CompetitiveMode[] = ['SPEED_RACE', 'ACCURACY_CHALLENGE', 'CHAOS']
   const gameMode = (allowedModes as string[]).includes(gameModeRaw)
     ? (gameModeRaw as CompetitiveMode)
     : 'SPEED_RACE'
@@ -60,7 +63,17 @@ export async function POST(
   // cycles questions with a modulo index — a shallow buffer repeated the same
   // 10 as soon as a player passed question 10. See matchQuestionCount.
   const questionCount = matchQuestionCount(gameMode)
-  const questions = await generateMatchQuestions(questionCount, topicSlug, [])
+  // Host-chosen difficulty tier (falls back to the lobby's advertised setting).
+  // TIER_MIX semantics: easy = all easy; medium = a few easy then medium;
+  // hard = a couple easy, a few medium, the rest hard.
+  const diffRaw = typeof body?.difficulty === 'string' ? body.difficulty : ''
+  const tier: MatchTier | undefined = (['easy', 'medium', 'hard'].includes(diffRaw)
+    ? diffRaw
+    : lobby.difficulty && ['easy', 'medium', 'hard'].includes(lobby.difficulty)
+      ? lobby.difficulty
+      : undefined) as MatchTier | undefined
+
+  const questions = await generateMatchQuestions(questionCount, topicSlug, [], tier)
 
   const match = await prisma.competitiveMatch.create({
     data: {
@@ -85,7 +98,15 @@ export async function POST(
 
   await prisma.competitiveLobby.update({
     where: { id: lobby.id },
-    data: { status: 'IN_MATCH', currentMatchId: match.id },
+    // Persist what was actually played so a public listing (and the next
+    // rematch's prefill) reflect the host's real settings, not stale ones.
+    data: {
+      status: 'IN_MATCH',
+      currentMatchId: match.id,
+      topicSlug,
+      gameMode,
+      difficulty: tier ?? null,
+    },
   })
 
   return NextResponse.json({ matchId: match.id, status: 'started' })

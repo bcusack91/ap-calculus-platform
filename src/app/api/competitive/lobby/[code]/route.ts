@@ -68,6 +68,7 @@ export async function GET(
     isPublic: lobby.isPublic,
     topicSlug: lobby.topicSlug,
     gameMode: lobby.gameMode,
+    difficulty: lobby.difficulty,
     youAreHost: lobby.hostId === userId,
     host: lobby.host,
     guest: lobby.guest,

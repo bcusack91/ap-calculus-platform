@@ -90,6 +90,7 @@ export async function GET() {
         isMine: d.hostId === session.user!.id,
         topicSlug: d.topicSlug,
         gameMode: d.gameMode || 'SPEED_RACE',
+        difficulty: d.difficulty,
         players: 1,
         maxPlayers: 2,
         createdAt: d.createdAt.toISOString(),
@@ -105,6 +106,7 @@ export async function GET() {
         courseSlug: r.courseSlug,
         courseName: r.courseSlug ? (getCourseEntry(r.courseSlug)?.name ?? r.courseSlug) : null,
         topicSlugs: Array.isArray(r.topicSlugs) ? (r.topicSlugs as string[]) : [],
+        difficulty: r.difficulty,
         durationSec: r.durationSec,
         players: r.participants.length,
         maxPlayers: r.maxPlayers ?? 8,
@@ -124,9 +126,15 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}))
   const format = typeof body?.format === 'string' ? body.format : ''
 
+  const difficultyRaw = typeof body?.difficulty === 'string' ? body.difficulty : ''
+  const difficulty = ['easy', 'medium', 'hard'].includes(difficultyRaw) ? difficultyRaw : null
+
   if (format === 'DUEL_1V1') {
     const topicSlug = typeof body?.topicSlug === 'string' && body.topicSlug ? body.topicSlug : null
-    const gameMode = typeof body?.gameMode === 'string' && body.gameMode ? body.gameMode : 'SPEED_RACE'
+    // CHAOS is a first-class lobby mode: power-ups on, and the match engine
+    // already treats CHAOS as unranked (no MMR, no profile stats).
+    const gameModeRaw = typeof body?.gameMode === 'string' && body.gameMode ? body.gameMode : 'SPEED_RACE'
+    const gameMode = ['SPEED_RACE', 'ACCURACY_CHALLENGE', 'CHAOS'].includes(gameModeRaw) ? gameModeRaw : 'SPEED_RACE'
     if (!topicSlug) {
       return NextResponse.json({ error: 'Pick a subject for your duel' }, { status: 400 })
     }
@@ -146,7 +154,7 @@ export async function POST(req: NextRequest) {
       code = generateLobbyCode()
     }
     const lobby = await prisma.competitiveLobby.create({
-      data: { code, hostId: userId, isPublic: true, topicSlug, gameMode, status: 'WAITING' },
+      data: { code, hostId: userId, isPublic: true, topicSlug, gameMode, difficulty, status: 'WAITING' },
     })
     return NextResponse.json({ kind: 'duel', code: lobby.code, href: `/competitive/lobby/${lobby.code}` })
   }
@@ -195,6 +203,7 @@ export async function POST(req: NextRequest) {
         isPublic: true,
         maxPlayers,
         format,
+        difficulty,
         status: 'OPEN',
         participants: {
           create: { userId, mmrAtJoin: profile.overallMMR },
