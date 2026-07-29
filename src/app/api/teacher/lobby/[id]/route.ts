@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { requireTeacher } from '@/lib/teacher-auth'
+import { requireTeacher, requireLobbyHost } from '@/lib/teacher-auth'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -40,14 +40,11 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
 // PATCH — teacher updates name/topic/numTeams (while OPEN)
 export async function PATCH(req: NextRequest, { params }: Ctx) {
   const { id } = await params
-  const result = await requireTeacher()
-  if ('error' in result && result.error) return result.error
-
-  const lobby = await prisma.teacherLobby.findUnique({ where: { id } })
-  if (!lobby) return NextResponse.json({ error: 'Not found' }, { status: 404 })
-  if (lobby.teacherId !== result.user!.id) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-  }
+  // Host-based guard: teachers for teacher lobbies, the student host for
+  // student-hosted open lobbies. See requireLobbyHost.
+  const result = await requireLobbyHost(id)
+  if ('error' in result) return result.error
+  const lobby = result.lobby
   if (lobby.status !== 'OPEN') {
     return NextResponse.json({ error: 'Lobby is not editable' }, { status: 400 })
   }

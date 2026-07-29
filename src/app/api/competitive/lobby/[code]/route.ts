@@ -65,6 +65,9 @@ export async function GET(
   return NextResponse.json({
     code: lobby.code,
     status: lobby.status,
+    isPublic: lobby.isPublic,
+    topicSlug: lobby.topicSlug,
+    gameMode: lobby.gameMode,
     youAreHost: lobby.hostId === userId,
     host: lobby.host,
     guest: lobby.guest,

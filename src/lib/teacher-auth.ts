@@ -99,3 +99,35 @@ export function generateJoinCode(): string {
   }
   return code
 }
+
+/**
+ * Authorize managing a specific TeacherLobby (start / balance / close / edit).
+ *
+ * Historically these routes required the TEACHER role AND lobby ownership.
+ * Student-hosted open lobbies (studentHosted=true) put a student's id in
+ * teacherId, so the rule becomes: you must be the lobby's host, and either hold
+ * the TEACHER/ADMIN role or be hosting a student lobby. A student can therefore
+ * manage exactly the lobbies they themselves created, and teacher lobbies are
+ * exactly as reachable as before.
+ */
+export async function requireLobbyHost(lobbyId: string) {
+  const session = await auth()
+  if (!session?.user?.id) {
+    return { error: NextResponse.json({ error: 'Unauthorized' }, { status: 401 }) } as const
+  }
+  const lobby = await prisma.teacherLobby.findUnique({
+    where: { id: lobbyId },
+    include: { participants: true },
+  })
+  if (!lobby) {
+    return { error: NextResponse.json({ error: 'Not found' }, { status: 404 }) } as const
+  }
+  if (lobby.teacherId !== session.user.id) {
+    return { error: NextResponse.json({ error: 'Forbidden' }, { status: 403 }) } as const
+  }
+  const role = session.user.role
+  if (!lobby.studentHosted && role !== 'TEACHER' && role !== 'ADMIN') {
+    return { error: NextResponse.json({ error: 'Forbidden' }, { status: 403 }) } as const
+  }
+  return { user: session.user, lobby } as const
+}

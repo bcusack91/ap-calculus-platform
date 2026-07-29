@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { requireTeacher } from '@/lib/teacher-auth'
+import { requireLobbyHost } from '@/lib/teacher-auth'
 import { snakeDraftTeams, summarizeTeams } from '@/lib/teacher-lobby'
 
 interface Ctx { params: Promise<{ id: string }> }
@@ -8,17 +8,11 @@ interface Ctx { params: Promise<{ id: string }> }
 // POST /api/teacher/lobby/[id]/balance — assign teams using snake-draft by MMR
 export async function POST(_req: NextRequest, { params }: Ctx) {
   const { id } = await params
-  const result = await requireTeacher()
-  if ('error' in result && result.error) return result.error
-
-  const lobby = await prisma.teacherLobby.findUnique({
-    where: { id },
-    include: { participants: true },
-  })
-  if (!lobby) return NextResponse.json({ error: 'Not found' }, { status: 404 })
-  if (lobby.teacherId !== result.user!.id) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-  }
+  // Host-based guard: teachers for teacher lobbies, the student host for
+  // student-hosted open lobbies. See requireLobbyHost.
+  const result = await requireLobbyHost(id)
+  if ('error' in result) return result.error
+  const lobby = result.lobby
   if (lobby.participants.length < lobby.numTeams) {
     return NextResponse.json(
       { error: `Need at least ${lobby.numTeams} participants to balance` },

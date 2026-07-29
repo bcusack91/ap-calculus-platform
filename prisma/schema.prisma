@@ -736,6 +736,12 @@ model CompetitiveLobby {
   code           String      @unique
   hostId         String
   guestId        String?
+  // Open-lobby discovery: public lobbies appear in the /competitive/lobbies
+  // browser so strangers can join without a code. topicSlug/gameMode are the
+  // host's advertised intent (they still confirm per-match inside the lobby).
+  isPublic       Boolean     @default(false)
+  topicSlug      String?
+  gameMode       String?
   status         LobbyStatus @default(WAITING)
   currentMatchId String?
   lastMatchId    String?
@@ -748,6 +754,7 @@ model CompetitiveLobby {
   @@index([hostId])
   @@index([guestId])
   @@index([status])
+  @@index([isPublic, status])
 }
 
 enum LobbyStatus {
@@ -758,23 +765,31 @@ enum LobbyStatus {
 
 // Teacher-created multi-student lobby with MMR-balanced team formation
 model TeacherLobby {
-  id           String             @id @default(cuid())
-  joinCode     String             @unique
-  teacherId    String
-  classroomId  String?
-  name         String
-  topicSlug    String?
-  courseSlug   String?
-  topicSlugs   Json               @default("[]")
-  durationSec  Int                @default(600)
-  endsAt       DateTime?
-  questionPool Json?
-  gameMode     String             @default("competitive")
-  numTeams     Int                @default(2)
-  status       TeacherLobbyStatus @default(OPEN)
-  createdAt    DateTime           @default(now())
-  startedAt    DateTime?
-  closedAt     DateTime?
+  id            String             @id @default(cuid())
+  joinCode      String             @unique
+  teacherId     String
+  classroomId   String?
+  name          String
+  topicSlug     String?
+  courseSlug    String?
+  topicSlugs    Json               @default("[]")
+  durationSec   Int                @default(600)
+  endsAt        DateTime?
+  questionPool  Json?
+  gameMode      String             @default("competitive")
+  numTeams      Int                @default(2)
+  // Student-hosted open lobbies run on this same engine: the host is a student
+  // (teacherId holds their id), plays as a participant, and the lobby can be
+  // publicly listed. format: TEAM_2V2 (cap 4, MMR-balanced) or RACE_FFA
+  // (cap maxPlayers, every player their own team, assigned at start).
+  studentHosted Boolean            @default(false)
+  isPublic      Boolean            @default(false)
+  maxPlayers    Int?
+  format        String?
+  status        TeacherLobbyStatus @default(OPEN)
+  createdAt     DateTime           @default(now())
+  startedAt     DateTime?
+  closedAt      DateTime?
 
   teacher      User                      @relation("TeacherLobbyTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
   classroom    Classroom?                @relation("TeacherLobbyClassroom", fields: [classroomId], references: [id], onDelete: SetNull)
@@ -784,6 +799,7 @@ model TeacherLobby {
   @@index([classroomId])
   @@index([joinCode])
   @@index([status])
+  @@index([isPublic, status])
 }
 
 model TeacherLobbyParticipant {

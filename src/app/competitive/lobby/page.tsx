@@ -87,6 +87,9 @@ export default function LobbyHomePage() {
       <div className="mx-auto max-w-2xl space-y-6">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">🎮 Private Lobby</h1>
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          Looking for someone to play? <Link href="/competitive/lobbies" className="font-semibold text-orange-600 underline dark:text-orange-400">Browse open lobbies</Link> instead.
+        </p>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Play head-to-head with a friend. Create a lobby, share the code, and pick any challenge together.
           </p>

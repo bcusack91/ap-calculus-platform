@@ -32,6 +32,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Lobby is no longer accepting joiners' }, { status: 400 })
   }
 
+  // Open lobbies advertise a capacity (2v2 = 4, FFA = up to 8). Teacher lobbies
+  // set no maxPlayers and are unaffected.
+  if (lobby.maxPlayers && lobby.participants.length >= lobby.maxPlayers) {
+    return NextResponse.json({ error: 'Lobby is full' }, { status: 400 })
+  }
+
   // Snapshot the student's overall MMR at join time
   const profile = await prisma.competitiveProfile.findUnique({
     where: { userId },

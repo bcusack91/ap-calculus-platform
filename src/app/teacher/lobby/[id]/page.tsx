@@ -31,6 +31,9 @@ interface LobbyDetail {
   courseSlug: string | null
   topicSlugs: string[]
   durationSec: number
+  studentHosted?: boolean
+  format?: string | null
+  maxPlayers?: number | null
   teacher: { id: string; name: string | null; email: string | null }
   classroom: { id: string; name: string } | null
   participants: Participant[]
@@ -112,7 +115,9 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
 
   // Redirect non-teacher participants into the play view once the match starts
   useEffect(() => {
-    if (lobby?.status === 'IN_PROGRESS' && !isTeacher) {
+    // A student host plays their own game — unlike a teacher, who referees
+    // from this control view, they follow everyone else into /play on start.
+    if (lobby?.status === 'IN_PROGRESS' && (!isTeacher || lobby.studentHosted)) {
       router.replace(`/teacher/lobby/${id}/play`)
     }
   }, [lobby?.status, isTeacher, router, id])
