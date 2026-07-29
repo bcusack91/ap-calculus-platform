@@ -743,6 +743,10 @@ model CompetitiveLobby {
   topicSlug      String?
   gameMode       String?
   difficulty     String?
+  // Heartbeat: the host's room page refreshes this while open. Public lobbies
+  // whose host hasn't been seen for 10 minutes are closed by the sweep in the
+  // open-lobbies listing, so abandoned lobbies can't sit in the browser.
+  hostLastSeenAt DateTime    @default(now())
   status         LobbyStatus @default(WAITING)
   currentMatchId String?
   lastMatchId    String?
@@ -788,6 +792,7 @@ model TeacherLobby {
   maxPlayers    Int?
   format        String?
   difficulty    String?
+  hostLastSeenAt DateTime          @default(now())
   status        TeacherLobbyStatus @default(OPEN)
   createdAt     DateTime           @default(now())
   startedAt     DateTime?

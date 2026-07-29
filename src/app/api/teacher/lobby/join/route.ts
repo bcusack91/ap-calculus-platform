@@ -32,6 +32,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Lobby is no longer accepting joiners' }, { status: 400 })
   }
 
+  // Student-hosted open lobbies die with their host: 10 quiet minutes closes
+  // the lobby at the door. Teacher lobbies are exempt — a teacher may prep a
+  // lobby well before class without keeping the tab open.
+  if (
+    lobby.studentHosted &&
+    lobby.isPublic &&
+    Date.now() - lobby.hostLastSeenAt.getTime() > 10 * 60 * 1000
+  ) {
+    await prisma.teacherLobby.update({
+      where: { id: lobby.id },
+      data: { status: 'CLOSED', closedAt: new Date() },
+    })
+    return NextResponse.json({ error: 'That lobby has closed — its host left' }, { status: 410 })
+  }
+
   // Open lobbies advertise a capacity (2v2 = 4, FFA = up to 8). Teacher lobbies
   // set no maxPlayers and are unaffected.
   if (lobby.maxPlayers && lobby.participants.length >= lobby.maxPlayers) {

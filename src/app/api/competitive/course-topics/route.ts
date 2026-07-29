@@ -18,31 +18,33 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'course query param is required' }, { status: 400 })
     }
 
-    // SAT competitive play runs on the 4 SAT question banks, not DB curriculum
-    // topics — there is no Course row with slug 'sat'. Return the bank
-    // pseudo-slugs (the same slugs competitive-utils mcqBanks dispatches on).
+    // SAT competitive play runs on the SAT hierarchy bank, not DB curriculum
+    // topics — there is no Course row with slug 'sat'. This used to return a
+    // 4-entry stub ("Math", "Reading"…), which capped lobby topic selection at
+    // whole sections. The bank actually models section → domain → 37 skills,
+    // and generateMatchQuestions resolves every level of that hierarchy
+    // (including difficulty tiers), so expose the real tree: one unit per
+    // domain, an "All of <domain>" entry first, then the individual skills.
     if (courseSlug === 'sat') {
+      const { SAT_SECTIONS } = await import('@/data/competitive-questions/sat-bank')
       return NextResponse.json({
         courseSlug: 'sat',
         courseName: 'SAT Prep',
-        units: [
-          {
-            name: 'Math',
-            slug: 'sat-math-section',
+        units: SAT_SECTIONS.flatMap((section) =>
+          section.domains.map((domain) => ({
+            name: `${section.emoji} ${section.title} — ${domain.title}`,
+            slug: domain.slug,
             topics: [
-              { slug: 'sat-math', title: 'Math', completed: true, masteryLevel: 0 },
+              { slug: domain.slug, title: `All of ${domain.title}`, completed: true, masteryLevel: 0 },
+              ...domain.skills.map((sk) => ({
+                slug: sk.slug,
+                title: sk.short || sk.title,
+                completed: true,
+                masteryLevel: 0,
+              })),
             ],
-          },
-          {
-            name: 'Reading & Writing',
-            slug: 'sat-reading-writing-section',
-            topics: [
-              { slug: 'sat-reading', title: 'Reading', completed: true, masteryLevel: 0 },
-              { slug: 'sat-punctuation-commas-semicolons', title: 'Punctuation: Commas & Semicolons', completed: true, masteryLevel: 0 },
-              { slug: 'sat-punctuation', title: 'Punctuation: All Marks', completed: true, masteryLevel: 0 },
-            ],
-          },
-        ],
+          }))
+        ),
       }, { headers: { 'Cache-Control': 'private, no-store' } })
     }
 

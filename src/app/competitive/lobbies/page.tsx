@@ -4,8 +4,8 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { COMPETITIVE_COURSE_CATEGORIES } from '@/lib/competitive-catalog'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
+import CompetitiveTopicPicker, { composeTopicSlug, describeTopicSlug } from '@/components/CompetitiveTopicPicker'
 
 /**
  * Open-lobby browser — the liquidity answer to the ranked queue.
@@ -185,7 +185,7 @@ export default function OpenLobbiesPage() {
               const full = l.players >= l.maxPlayers
               const subject =
                 l.kind === 'duel'
-                  ? prettify(l.topicSlug || 'Any topic')
+                  ? describeTopicSlug(l.topicSlug)
                   : [l.courseName, ...(l.topicSlugs || []).slice(0, 3).map(prettify)]
                       .filter(Boolean)
                       .join(' · ') || 'Mixed topics'
@@ -248,7 +248,6 @@ export default function OpenLobbiesPage() {
 /* ── Create dialog ─────────────────────────────────────────────────────── */
 
 interface TopicOption { slug: string; title: string }
-interface TopicUnit { name: string; slug: string; topics: TopicOption[] }
 
 function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
   const router = useRouter()
@@ -256,10 +255,9 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
   const [creating, setCreating] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  // Duel pickers (competitive catalog + course-topics endpoint)
-  const [duelCourse, setDuelCourse] = useState('')
-  const [duelUnits, setDuelUnits] = useState<TopicUnit[] | null>(null)
-  const [duelTopic, setDuelTopic] = useState('')
+  // Duel topics: multi-select — one slug plays directly, several compose into
+  // a multi: slug the match engine mixes round-robin (cross-course allowed).
+  const [duelTopics, setDuelTopics] = useState<string[]>([])
   const [duelMode, setDuelMode] = useState<'SPEED_RACE' | 'ACCURACY_CHALLENGE' | 'CHAOS'>('SPEED_RACE')
   const [difficulty, setDifficulty] = useState<Difficulty>('medium')
 
@@ -283,19 +281,6 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
   }, [open, format, raceCourses])
 
   useEffect(() => {
-    if (!duelCourse) { setDuelUnits(null); setDuelTopic(''); return }
-    setDuelUnits(null)
-    setDuelTopic('')
-    // Response shape is { units: [{ name, topics: [...] }] } — grouped by unit,
-    // NOT a flat topics array (which is what the race endpoint returns; reading
-    // .topics here is the bug that left the 1v1 dropdown empty).
-    fetch(`/api/competitive/course-topics?course=${encodeURIComponent(duelCourse)}`, { cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => setDuelUnits(d?.units ?? []))
-      .catch(() => setDuelUnits([]))
-  }, [duelCourse])
-
-  useEffect(() => {
     if (!raceCourse) { setRaceTopics(null); setRaceSelected([]); return }
     setRaceTopics(null)
     setRaceSelected([])
@@ -311,7 +296,7 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
     try {
       const body =
         format === 'DUEL_1V1'
-          ? { format, topicSlug: duelTopic, gameMode: duelMode, difficulty }
+          ? { format, topicSlug: composeTopicSlug(duelTopics), gameMode: duelMode, difficulty }
           : {
               format,
               courseSlug: raceCourse,
@@ -335,7 +320,7 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
   }
 
   const canCreate =
-    format === 'DUEL_1V1' ? !!duelTopic : !!raceCourse
+    format === 'DUEL_1V1' ? duelTopics.length > 0 : !!raceCourse
 
   return (
     <FocusTrapDialog open={open} onClose={onClose} title="Host a lobby">
@@ -364,47 +349,12 @@ function CreateLobbyDialog({ open, onClose }: { open: boolean; onClose: () => vo
         {format === 'DUEL_1V1' ? (
           <>
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">Course</label>
-              <select
-                value={duelCourse}
-                onChange={(e) => setDuelCourse(e.target.value)}
-                className="w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-              >
-                <option value="">Choose a course…</option>
-                {COMPETITIVE_COURSE_CATEGORIES.map((cat) => (
-                  <optgroup key={cat.id} label={cat.label}>
-                    {cat.courses.map((c) => (
-                      <option key={c.slug} value={c.slug}>{c.name}</option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
+              <p className="mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                Topics <span className="font-normal text-gray-400">(pick one or several — even across courses)</span>
+              </p>
+              <CompetitiveTopicPicker selected={duelTopics} onChange={setDuelTopics} accent="orange" />
             </div>
-            {duelCourse && (
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">Topic</label>
-                {duelUnits === null ? (
-                  <p className="text-sm text-gray-500">Loading topics…</p>
-                ) : duelUnits.length === 0 ? (
-                  <p className="text-sm text-gray-500">No topics available for this course yet.</p>
-                ) : (
-                  <select
-                    value={duelTopic}
-                    onChange={(e) => setDuelTopic(e.target.value)}
-                    className="w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-                  >
-                    <option value="">Choose a topic…</option>
-                    {duelUnits.map((u) => (
-                      <optgroup key={u.slug} label={u.name}>
-                        {u.topics.map((t) => (
-                          <option key={t.slug} value={t.slug}>{t.title}</option>
-                        ))}
-                      </optgroup>
-                    ))}
-                  </select>
-                )}
-              </div>
-            )}
+
             <div>
               <p className="mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Mode</p>
               <div className="flex flex-wrap gap-2">

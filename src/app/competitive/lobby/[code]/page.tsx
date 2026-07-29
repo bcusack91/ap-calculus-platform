@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback, use } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { COMPETITIVE_COURSE_CATEGORIES, COMPETITIVE_COURSES } from '@/lib/competitive-catalog'
+import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog'
+import CompetitiveTopicPicker, { composeTopicSlug, decomposeTopicSlug } from '@/components/CompetitiveTopicPicker'
 
 interface PlayerInfo { id: string; name: string | null; image: string | null }
 interface CurrentMatch {
@@ -33,9 +34,6 @@ interface LobbyState {
   closedAt: string | null
 }
 
-interface UnitTopic { slug: string; title: string; completed: boolean; masteryLevel: number }
-interface Unit { name: string; slug: string; topics: UnitTopic[] }
-interface CourseTopicsResponse { courseSlug: string; courseName: string; units: Unit[] }
 
 const GAME_MODES = [
   { id: 'SPEED_RACE', label: '⚡ Speed Race', desc: 'First to 10 correct wins' },
@@ -60,10 +58,7 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
   const [loaded, setLoaded] = useState(false)
 
   // Topic picker state
-  const [selectedCourse, setSelectedCourse] = useState<string>('')
-  const [topics, setTopics] = useState<CourseTopicsResponse | null>(null)
-  const [topicsLoading, setTopicsLoading] = useState(false)
-  const [selectedTopic, setSelectedTopic] = useState<string>('')
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([])
   const [gameMode, setGameMode] = useState<typeof GAME_MODES[number]['id']>('SPEED_RACE')
   const [difficulty, setDifficulty] = useState<typeof DIFFICULTIES[number]['id']>('medium')
   // Prefill pickers ONCE from the lobby's advertised settings (set when the
@@ -95,7 +90,7 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
 
   useEffect(() => {
     if (prefilled || !lobby) return
-    if (lobby.topicSlug) setSelectedTopic(lobby.topicSlug)
+    if (lobby.topicSlug) setSelectedTopics(decomposeTopicSlug(lobby.topicSlug))
     if (lobby.gameMode && GAME_MODES.some(m => m.id === lobby.gameMode)) {
       setGameMode(lobby.gameMode as typeof GAME_MODES[number]['id'])
     }
@@ -105,6 +100,21 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
     setPrefilled(true)
   }, [lobby, prefilled])
 
+  // Close the lobby the moment the host actually leaves an EMPTY waiting room
+  // (tab close / navigation away — SPA navigation into a match does not fire
+  // pagehide). Only when no guest has joined: with an opponent present, a
+  // refresh must not destroy the pair, so the 10-minute heartbeat sweep owns
+  // that case. The leave endpoint closes host-owned lobbies.
+  useEffect(() => {
+    const onPageHide = () => {
+      if (lobby?.youAreHost && lobby.status === 'WAITING' && !lobby.guest) {
+        navigator.sendBeacon(`/api/competitive/lobby/${code}/leave`)
+      }
+    }
+    window.addEventListener('pagehide', onPageHide)
+    return () => window.removeEventListener('pagehide', onPageHide)
+  }, [lobby?.youAreHost, lobby?.status, lobby?.guest, code])
+
   // If a match starts (or we discover one in progress), redirect both players to the match page
   useEffect(() => {
     if (lobby?.status === 'IN_MATCH' && lobby.currentMatch && lobby.currentMatch.status === 'IN_PROGRESS') {
@@ -112,26 +122,17 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
     }
   }, [lobby, router])
 
-  // Load topics when a course is picked
-  useEffect(() => {
-    if (!selectedCourse) { setTopics(null); return }
-    setTopicsLoading(true)
-    setSelectedTopic('')
-    fetch(`/api/competitive/course-topics?course=${encodeURIComponent(selectedCourse)}`, { cache: 'no-store' })
-      .then(r => r.json())
-      .then((data: CourseTopicsResponse) => { setTopics(data); setTopicsLoading(false) })
-      .catch(() => { setTopics(null); setTopicsLoading(false) })
-  }, [selectedCourse])
+
 
   const startMatch = async () => {
-    if (!selectedTopic) return
+    if (selectedTopics.length === 0) return
     setStarting(true)
     setError(null)
     try {
       const res = await fetch(`/api/competitive/lobby/${code}/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug: selectedTopic, gameMode, difficulty }),
+        body: JSON.stringify({ topicSlug: composeTopicSlug(selectedTopics), gameMode, difficulty }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data?.error || 'Could not start match')
@@ -265,60 +266,12 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
               )}
 
               {/* Course picker */}
-              <label className="mb-1 block text-sm font-semibold text-gray-700 dark:text-gray-300">Course</label>
-              <select
-                value={selectedCourse}
-                onChange={(e) => setSelectedCourse(e.target.value)}
-                className="mb-4 w-full rounded-lg border-2 border-gray-300 bg-white px-3 py-2 dark:border-gray-600 dark:bg-gray-900 dark:text-white"
-              >
-                <option value="">Select a course…</option>
-                {COMPETITIVE_COURSE_CATEGORIES.map(cat => (
-                  <optgroup key={cat.id} label={`${cat.icon} ${cat.label}`}>
-                    {cat.courses.map(c => (
-                      <option key={c.slug} value={c.slug}>{c.emoji} {c.name}</option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
-
-              {selectedTopic && !selectedCourse && (
-                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                  Playing the advertised topic:{' '}
-                  <span className="font-semibold text-gray-900 dark:text-white">
-                    {selectedTopic.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
-                  </span>{' '}
-                  — pick a course above to change it.
-                </p>
-              )}
-
-              {/* Topic picker */}
-              {selectedCourse && (
-                <>
-                  <label className="mb-1 block text-sm font-semibold text-gray-700 dark:text-gray-300">Topic</label>
-                  {topicsLoading ? (
-                    <div className="mb-4 text-sm text-gray-500">Loading topics…</div>
-                  ) : topics && topics.units.length > 0 ? (
-                    <select
-                      value={selectedTopic}
-                      onChange={(e) => setSelectedTopic(e.target.value)}
-                      className="mb-4 w-full rounded-lg border-2 border-gray-300 bg-white px-3 py-2 dark:border-gray-600 dark:bg-gray-900 dark:text-white"
-                    >
-                      <option value="">Select a topic…</option>
-                      {topics.units.map(u => (
-                        <optgroup key={u.slug} label={u.name}>
-                          {u.topics.map(t => (
-                            <option key={t.slug} value={t.slug}>
-                              {t.completed ? '✓ ' : ''}{t.title}
-                            </option>
-                          ))}
-                        </optgroup>
-                      ))}
-                    </select>
-                  ) : (
-                    <div className="mb-4 text-sm text-gray-500">No topics available for this course yet.</div>
-                  )}
-                </>
-              )}
+              <label className="mb-1 block text-sm font-semibold text-gray-700 dark:text-gray-300">
+                Topics <span className="font-normal text-gray-400">(one or several — questions get mixed)</span>
+              </label>
+              <div className="mb-5">
+                <CompetitiveTopicPicker selected={selectedTopics} onChange={setSelectedTopics} accent="blue" />
+              </div>
 
               {/* Mode picker */}
               <label className="mb-1 block text-sm font-semibold text-gray-700 dark:text-gray-300">Game Mode</label>
@@ -362,10 +315,10 @@ export default function LobbyRoomPage({ params }: { params: Promise<{ code: stri
 
               <button
                 onClick={startMatch}
-                disabled={!lobby.guest || !selectedTopic || starting}
+                disabled={!lobby.guest || selectedTopics.length === 0 || starting}
                 className="w-full rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-lg transition hover:shadow-xl disabled:opacity-50"
               >
-                {starting ? 'Starting…' : !lobby.guest ? 'Waiting for opponent…' : !selectedTopic ? 'Pick a topic to start' : 'Start Match'}
+                {starting ? 'Starting…' : !lobby.guest ? 'Waiting for opponent…' : selectedTopics.length === 0 ? 'Pick a topic to start' : 'Start Match'}
               </button>
             </div>
           ) : (

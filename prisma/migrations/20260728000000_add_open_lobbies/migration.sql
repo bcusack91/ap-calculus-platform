@@ -16,3 +16,7 @@ CREATE INDEX IF NOT EXISTS "TeacherLobby_isPublic_status_idx" ON "TeacherLobby"(
 -- Host-chosen question difficulty (easy | medium | hard); null = mixed/default.
 ALTER TABLE "CompetitiveLobby" ADD COLUMN IF NOT EXISTS "difficulty" TEXT;
 ALTER TABLE "TeacherLobby" ADD COLUMN IF NOT EXISTS "difficulty" TEXT;
+
+-- Host heartbeat for abandoned-lobby cleanup (10-minute sweep).
+ALTER TABLE "CompetitiveLobby" ADD COLUMN IF NOT EXISTS "hostLastSeenAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "TeacherLobby" ADD COLUMN IF NOT EXISTS "hostLastSeenAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;

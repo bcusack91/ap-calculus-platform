@@ -30,6 +30,20 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
 
+  // Heartbeat for student-hosted open lobbies (the 10-minute abandoned-lobby
+  // sweep keys off this). Teacher lobbies aren't swept, so no writes for them.
+  if (
+    isTeacher &&
+    lobby.studentHosted &&
+    lobby.status === 'OPEN' &&
+    Date.now() - lobby.hostLastSeenAt.getTime() > 30_000
+  ) {
+    await prisma.teacherLobby.update({
+      where: { id: lobby.id },
+      data: { hostLastSeenAt: new Date() },
+    })
+  }
+
   // Never leak questionPool (contains correctAnswer indices) over this endpoint —
   // students fetch the safe version from /play.
   const { questionPool: _omit, ...safeLobby } = lobby

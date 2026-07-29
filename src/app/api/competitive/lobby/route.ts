@@ -25,6 +25,20 @@ export async function POST(req: NextRequest) {
       if (!lobby || lobby.status === 'CLOSED') {
         return NextResponse.json({ error: 'Lobby not found' }, { status: 404 })
       }
+      // A public lobby whose host hasn't heartbeated in 10 minutes is abandoned
+      // — close it on contact instead of letting the joiner into an empty room.
+      if (
+        lobby.isPublic &&
+        lobby.status === 'WAITING' &&
+        lobby.hostId !== userId &&
+        Date.now() - lobby.hostLastSeenAt.getTime() > 10 * 60 * 1000
+      ) {
+        await prisma.competitiveLobby.update({
+          where: { id: lobby.id },
+          data: { status: 'CLOSED', closedAt: new Date() },
+        })
+        return NextResponse.json({ error: 'That lobby has closed — its host left' }, { status: 410 })
+      }
       if (lobby.hostId === userId) {
         return NextResponse.json({ code: lobby.code, lobbyId: lobby.id, role: 'host' })
       }

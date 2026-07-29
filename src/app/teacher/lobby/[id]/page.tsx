@@ -113,14 +113,33 @@ export default function TeacherLobbyDetailPage({ params }: { params: Promise<{ i
     }
   }, [status, load])
 
-  // Redirect non-teacher participants into the play view once the match starts
+  // Student-hosted open lobbies close when the host abandons an empty waiting
+  // room (nobody in it but themselves). Teacher lobbies are exempt, and a
+  // lobby with other players present survives a host refresh — the 10-minute
+  // heartbeat sweep handles a genuinely vanished host there.
+  useEffect(() => {
+    const onPageHide = () => {
+      if (
+        isTeacher &&
+        lobby?.studentHosted &&
+        lobby.status === 'OPEN' &&
+        lobby.participants.length <= 1
+      ) {
+        navigator.sendBeacon(`/api/teacher/lobby/${id}/close`)
+      }
+    }
+    window.addEventListener('pagehide', onPageHide)
+    return () => window.removeEventListener('pagehide', onPageHide)
+  }, [isTeacher, lobby?.studentHosted, lobby?.status, lobby?.participants.length, id])
+
+  // Redirect participants into the play view once the match starts.
   useEffect(() => {
     // A student host plays their own game — unlike a teacher, who referees
     // from this control view, they follow everyone else into /play on start.
     if (lobby?.status === 'IN_PROGRESS' && (!isTeacher || lobby.studentHosted)) {
       router.replace(`/teacher/lobby/${id}/play`)
     }
-  }, [lobby?.status, isTeacher, router, id])
+  }, [lobby?.status, lobby?.studentHosted, isTeacher, router, id])
 
   // Initialize settings UI from lobby once loaded
   useEffect(() => {

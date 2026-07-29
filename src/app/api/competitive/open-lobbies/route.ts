@@ -29,7 +29,8 @@ import { getCourseEntry } from '@/lib/teacher-lobby-courses'
  *        durationSec?, name?, maxPlayers? }
  */
 
-const STALE_MS = 2 * 60 * 60 * 1000 // lobbies idle this long are pruned from discovery
+const STALE_MS = 2 * 60 * 60 * 1000 // absolute backstop: lobbies this old are pruned regardless
+const HOST_IDLE_MS = 10 * 60 * 1000 // host unseen this long -> lobby is abandoned
 
 export async function GET() {
   const session = await auth()
@@ -37,14 +38,27 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
   const cutoff = new Date(Date.now() - STALE_MS)
+  // Hosts' room pages heartbeat hostLastSeenAt while open; ten quiet minutes
+  // means the host left (tab closed, crashed, walked away) and the lobby is
+  // dead — close it rather than let joiners walk into an empty room.
+  const heartbeatCutoff = new Date(Date.now() - HOST_IDLE_MS)
 
   // Prune-on-read keeps abandoned lobbies from accumulating as OPEN rows.
   await prisma.competitiveLobby.updateMany({
-    where: { isPublic: true, status: 'WAITING', createdAt: { lt: cutoff } },
+    where: {
+      isPublic: true,
+      status: 'WAITING',
+      OR: [{ createdAt: { lt: cutoff } }, { hostLastSeenAt: { lt: heartbeatCutoff } }],
+    },
     data: { status: 'CLOSED', closedAt: new Date() },
   })
   await prisma.teacherLobby.updateMany({
-    where: { isPublic: true, studentHosted: true, status: 'OPEN', createdAt: { lt: cutoff } },
+    where: {
+      isPublic: true,
+      studentHosted: true,
+      status: 'OPEN',
+      OR: [{ createdAt: { lt: cutoff } }, { hostLastSeenAt: { lt: heartbeatCutoff } }],
+    },
     data: { status: 'CLOSED', closedAt: new Date() },
   })
 

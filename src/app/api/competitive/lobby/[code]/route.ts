@@ -31,6 +31,21 @@ export async function GET(
     return NextResponse.json({ error: 'Not a participant' }, { status: 403 })
   }
 
+  // Heartbeat: the host's room page polls this endpoint, so "host is here" is
+  // exactly "the host recently hit this route". The open-lobby sweep closes
+  // public lobbies whose host hasn't been seen for 10 minutes. Throttled to
+  // one write per 30s so the 2.5s poll doesn't write on every tick.
+  if (
+    lobby.hostId === userId &&
+    lobby.status === 'WAITING' &&
+    Date.now() - lobby.hostLastSeenAt.getTime() > 30_000
+  ) {
+    await prisma.competitiveLobby.update({
+      where: { id: lobby.id },
+      data: { hostLastSeenAt: new Date() },
+    })
+  }
+
   let currentMatch: {
     id: string
     status: string
