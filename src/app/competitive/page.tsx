@@ -284,6 +284,27 @@ export default function CompetitivePage() {
           </div>
         )}
 
+        {/* Open Lobbies — first thing after the profile: joining a live game
+            beats queueing when traffic is thin, so it gets the top slot */}
+        <div className="mb-8 rounded-2xl border-2 border-orange-200 bg-gradient-to-r from-orange-50 to-red-50 p-5 sm:p-6 shadow-xl dark:border-orange-800 dark:from-orange-900/20 dark:to-red-900/20">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">🎮 Open Lobbies</h3>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                Jump into a game that&apos;s waiting for players — 1v1 ranked duels, 2v2 team
+                battles, and free-for-all races up to 8 — or host your own and let
+                challengers come to you.
+              </p>
+            </div>
+            <Link
+              href="/competitive/lobbies"
+              className="shrink-0 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
+            >
+              Browse Lobbies →
+            </Link>
+          </div>
+        </div>
+
         {/* Course Selection — categorized cards */}
         <div className="space-y-8 mb-10">
           {COURSE_CATEGORIES.map(category => (
@@ -369,26 +390,6 @@ export default function CompetitivePage() {
             </div>
           </div>
         )}
-
-        {/* Open Lobbies — browse and join games waiting for players */}
-        <div className="mt-4 rounded-2xl border-2 border-orange-200 bg-gradient-to-r from-orange-50 to-red-50 p-5 sm:p-6 shadow-xl dark:border-orange-800 dark:from-orange-900/20 dark:to-red-900/20">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="min-w-0">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">🎮 Open Lobbies</h3>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                Nobody in your queue? Browse games waiting for players — 1v1 ranked duels,
-                2v2 team battles, and free-for-all races up to 8 — or host your own and
-                let challengers come to you.
-              </p>
-            </div>
-            <Link
-              href="/competitive/lobbies"
-              className="shrink-0 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              Browse Lobbies →
-            </Link>
-          </div>
-        </div>
 
         {/* Private Lobby — play head-to-head with a friend */}
         <div className="mt-8 rounded-2xl border-2 border-accent-light bg-gradient-to-r from-accent-subtle to-blue-50 p-5 sm:p-6 shadow-xl dark:border-accent-light dark:from-accent-light/20 dark:to-blue-900/20">
