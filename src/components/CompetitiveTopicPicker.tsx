@@ -40,6 +40,7 @@ export function decomposeTopicSlug(slug: string | null | undefined): string[] {
 export function topicSlugLabel(slug: string): string {
   return slug
     .replace(/^sat-skill-/, '')
+    .replace(/^sat-topic-/, '')
     .replace(/^sat-/, 'SAT ')
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())

@@ -100,15 +100,32 @@ export function satBankSlugsForCourseTopic(topicSlug: string): SatBankSlug[] | n
 }
 
 /**
+ * Lesson-aligned challenge slugs ('sat-topic-<key>', see sat-bank.ts) are the
+ * sat-prep curriculum topic slug with the 'sat-' prefix swapped for
+ * 'sat-topic-'. Recover the curriculum slug, or null for non-challenge slugs.
+ */
+export function satChallengeCurriculumSlug(slug: string): string | null {
+  return slug.startsWith('sat-topic-') ? `sat-${slug.slice('sat-topic-'.length)}` : null
+}
+
+/**
  * Competitive matches can be played on granular SAT slugs — the 4 math areas
  * ('sat-math-algebra', …) and the 4 R&W domains ('sat-rw-conventions', …),
  * plus the mixed 'sat-rw'. Collapse any of these to the canonical bank slug used
  * for assignment auto-completion. Non-SAT / already-canonical slugs pass through.
  */
 export function canonicalSatBankSlug(slug: string): string {
-  // Skill-tier slugs ('sat-skill-<key>') are the newest and finest level; map
-  // each to the canonical bank of its section so existing sat-prep assignments
-  // keyed to the 4 legacy banks still auto-complete.
+  // Challenge-tier slugs are named after curriculum topics, so the curriculum →
+  // bank map answers directly (punctuation topics map to 2 banks; either works
+  // as canonical — pick the first).
+  const curriculum = satChallengeCurriculumSlug(slug)
+  if (curriculum) {
+    const banks = satBankSlugsForCourseTopic(curriculum)
+    if (banks && banks.length > 0) return banks[0]
+  }
+  // Skill-tier slugs ('sat-skill-<key>') map to the canonical bank of their
+  // section so existing sat-prep assignments keyed to the 4 legacy banks still
+  // auto-complete.
   if (slug.startsWith('sat-skill-')) {
     return CONVENTIONS_SKILLS.has(slug) ? 'sat-punctuation'
       : MATH_SKILLS.has(slug) ? 'sat-math'

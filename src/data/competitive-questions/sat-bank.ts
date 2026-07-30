@@ -1,29 +1,49 @@
 /**
- * SAT competitive question bank — section → domain → skill hierarchy.
+ * SAT competitive question bank — section → category → challenge → pool.
  *
- * Mirrors the MCAT bank's three-level shape, but follows the official College
- * Board Digital SAT blueprint:
+ * TWO trees share this file, and the distinction is the whole design:
  *
- *   SECTION (2, the scored sections)
- *     └── DOMAIN (8 — 4 math, 4 reading & writing)
- *           └── SKILL (37 — the 29 official "skill/knowledge testing points"
- *                      plus 8 finer practice pools; see SatSkill.officialSkill)
+ *  - SAT_POOL_SECTIONS (internal tier) follows the official College Board
+ *    Digital SAT blueprint: 2 sections → 8 domains → 37 POOLS (the 29 official
+ *    "skill/knowledge testing points" plus 8 finer practice pools). Questions
+ *    are tagged at this tier and its slugs are what already-saved matches,
+ *    lobbies, and assignments reference — never rename or remove them.
+ *
+ *  - SAT_SECTIONS (display tier) mirrors the sat-prep CURRICULUM instead: the
+ *    same 8 domains retitled to the lesson category names students study under
+ *    ("Heart of Algebra", "Passport to Advanced Math", …), each containing
+ *    CHALLENGES whose slug and title are copied verbatim from the interactive
+ *    lesson topics (DB course `sat-prep`). A challenge draws from one or more
+ *    pools via `members` — competitive is more granular than the curriculum, so
+ *    several pools combine into one lesson-named challenge. This is what every
+ *    picker shows, so what students battle on is named exactly like what they
+ *    study. Challenges deliberately may exceed 40 questions.
  *
  * Questions are NOT duplicated here. The existing sat-math-bank and sat-rw-bank
  * already tag every question with its official College Board `skill` string, so
  * this file only groups and filters them, merged with competitive-specific
- * questions authored to bring every skill up to a full match's worth.
+ * questions authored to bring every pool up to a full match's worth.
  *
- * Slug rules (what CompetitiveMatch.topicSlug stores) — the top two levels are
- * the slugs that ALREADY shipped, so existing matches, assignments, and unlock
- * records keep resolving unchanged. Only the skill tier is new:
- *   - skill    → 'sat-skill-<key>'   (e.g. sat-skill-linear-equations-one-var)
+ * Slug rules (what CompetitiveMatch.topicSlug stores) — every tier resolves,
+ * old and new, so nothing saved ever breaks:
+ *   - challenge → 'sat-topic-<key>'  where 'sat-<key>' is the sat-prep lesson
+ *                 topic slug (e.g. sat-topic-quadratic-equations ↔ the lesson
+ *                 'sat-quadratic-equations'). The 'sat-topic-' namespace avoids
+ *                 colliding with the legacy bank pseudo-slug 'sat-punctuation'.
+ *   - pool     → 'sat-skill-<key>'   (e.g. sat-skill-linear-equations-one-var)
  *   - domain   → 'sat-math-algebra', 'sat-rw-conventions', …  (pre-existing)
  *   - section  → 'sat-math', 'sat-rw'                          (pre-existing)
  *   - whole test → 'sat'
- * Multi-skill selections use the generic `multi:` composite slug from
+ * Multi-topic selections use the generic `multi:` composite slug from
  * competitive-utils, which is what lets a teacher assign mixed practice drawn
- * from several skills — or from SAT plus another course entirely.
+ * from several challenges — or from SAT plus another course entirely.
+ *
+ * Lesson topics with no matching challenge (deliberate): strategy-only topics
+ * (Test-Taking Strategies), retired content ("Complex Numbers on the SAT" —
+ * the Digital SAT does not test complex numbers), and legacy duplicates whose
+ * pool already appears under the current name ("Finding Textual Evidence" ≡
+ * Command of Evidence, "Conciseness and Redundancy" ≡ Effective Language Use,
+ * and 5 of the 7 conventions lessons, which all share the 2 conventions pools).
  */
 import { getSatMathQuestions, type SatMathQuestion } from './sat-math-bank'
 import { getSatRwQuestions, type SatRwQuestion } from './sat-rw-bank'
@@ -39,25 +59,26 @@ import { satMathGeometryQuestions } from './sat-questions-math-geometry'
 import { satRwQuestions } from './sat-questions-rw'
 
 export interface SatSkill {
-  /** Competitive slug — 'sat-skill-<key>'. */
+  /** Competitive slug — 'sat-skill-<key>' for pools, 'sat-topic-<key>' for challenges. */
   slug: string
   /**
-   * The full name — the official College Board wording for official skills.
-   * Shown as a tooltip in the picker, and kept verbatim for blueprint fidelity.
+   * The full name. For pools this is the official College Board wording, kept
+   * verbatim for blueprint fidelity; for challenges it is the interactive
+   * lesson's title, kept verbatim for curriculum congruence.
    */
   title: string
   /**
    * Short label for the picker UI. College Board's official names run up to 77
-   * characters ("Nonlinear equations in one variable and systems of equations
-   * in two variables"), which turn the skill picker into a wall of prose. The
-   * picker shows this; `title` remains the authoritative name.
+   * characters, which turn the picker into a wall of prose. Challenges use the
+   * lesson title itself — that's the point of them.
    */
   short: string
   /**
    * Exact `skill` tag(s) used in sat-math-bank / sat-rw-bank. Questions are
    * pulled by matching this string, so it must stay in sync with the banks —
    * scripts/verify-sat-questions.ts fails the build if a tag stops matching.
-   * Empty for practice subdivisions, whose questions are all authored.
+   * Empty for practice subdivisions and challenges, whose questions come from
+   * authored files / member pools respectively.
    */
   tags: string[]
   /**
@@ -76,6 +97,14 @@ export interface SatSkill {
    * partition of the question bank.
    */
   officialSkill?: string
+  /**
+   * CHALLENGE entries only: the pool slugs this challenge draws questions from.
+   * Pools never overlap in questions (each question belongs to exactly one
+   * pool), so a challenge's union is duplicate-free. Two challenges MAY share a
+   * member pool — like the practice subdivisions, challenges are study surfaces
+   * mirroring the lesson catalog, not a partition of the bank.
+   */
+  members?: string[]
 }
 
 export interface SatDomain {
@@ -109,7 +138,25 @@ const sub = (key: string, title: string, short: string, officialSkill: string): 
   officialSkill,
 })
 
-export const SAT_SECTIONS: SatSection[] = [
+/**
+ * A lesson-aligned challenge. `lessonSlug` is the sat-prep DB topic slug
+ * verbatim (so the two systems stay keyed 1:1); the competitive slug swaps the
+ * 'sat-' prefix for 'sat-topic-'.
+ */
+const challenge = (lessonSlug: string, title: string, members: string[]): SatSkill => ({
+  slug: `sat-topic-${lessonSlug.replace(/^sat-/, '')}`,
+  title,
+  short: title,
+  tags: [],
+  members: members.map(m => `sat-skill-${m}`),
+})
+
+/**
+ * QUESTION-POOL tier — official College Board Digital SAT blueprint. Slugs and
+ * tags are load-bearing (saved matches + bank question tags); display surfaces
+ * should use SAT_SECTIONS below instead.
+ */
+export const SAT_POOL_SECTIONS: SatSection[] = [
   {
     slug: 'sat-math',
     title: 'Math',
@@ -225,6 +272,137 @@ export const SAT_SECTIONS: SatSection[] = [
   },
 ]
 
+/**
+ * DISPLAY tier — what every picker renders. Same 8 domains (same slugs, so
+ * "All of <domain>" selections keep resolving), retitled to the sat-prep lesson
+ * CATEGORY names, each holding lesson-named challenges. The member keys below
+ * are pool keys ('sat-skill-' is prefixed by the helper).
+ */
+export const SAT_SECTIONS: SatSection[] = [
+  {
+    slug: 'sat-math',
+    title: 'Math',
+    emoji: '📐',
+    domains: [
+      {
+        slug: 'sat-math-algebra',
+        title: 'Heart of Algebra',
+        emoji: '📊',
+        skills: [
+          challenge('sat-linear-equations-inequalities', 'Linear Equations and Inequalities',
+            ['linear-equations-one-var', 'linear-equations-two-var', 'linear-inequalities']),
+          challenge('sat-functions', 'Functions',
+            ['linear-functions', 'function-notation-transformations']),
+          challenge('sat-systems-linear-equations', 'Systems of Linear Equations',
+            ['systems-linear-equations']),
+          challenge('sat-linear-inequalities-graphs', 'Linear Inequalities and Graphs',
+            ['linear-inequalities', 'systems-inequalities', 'graphing-linear']),
+        ],
+      },
+      {
+        slug: 'sat-math-problem-solving',
+        title: 'Problem Solving and Data Analysis',
+        emoji: '📈',
+        skills: [
+          challenge('sat-ratios-proportions-percents', 'Ratios, Proportions, and Percents',
+            ['ratios-rates-units', 'percentages']),
+          challenge('sat-statistics-data-interpretation', 'Statistics and Data Interpretation',
+            ['one-variable-data', 'sample-inference']),
+          challenge('sat-probability-two-way-tables', 'Probability and Two-Way Tables',
+            ['probability']),
+          challenge('sat-scatterplots-line-fit', 'Scatterplots and Line of Best Fit',
+            ['two-variable-data']),
+          challenge('sat-data-statistics', 'Data Collection and Statistics',
+            ['statistical-claims', 'sample-inference']),
+        ],
+      },
+      {
+        slug: 'sat-math-advanced',
+        title: 'Passport to Advanced Math',
+        emoji: '🧮',
+        skills: [
+          challenge('sat-quadratic-equations', 'Quadratic Equations',
+            ['quadratic-equations', 'quadratic-graphs']),
+          challenge('sat-exponents-radicals', 'Exponents and Radicals',
+            ['radicals-absolute-complex']),
+          challenge('sat-polynomial-rational-expressions', 'Polynomial and Rational Expressions',
+            ['polynomial-rational']),
+          challenge('sat-nonlinear-equations-functions', 'Nonlinear Equations and Functions',
+            ['nonlinear-equations', 'nonlinear-functions']),
+          challenge('sat-exponential-functions', 'Exponential Functions',
+            ['exponential-functions']),
+          challenge('sat-polynomials-factoring', 'Polynomials and Factoring',
+            ['equivalent-expressions']),
+        ],
+      },
+      {
+        slug: 'sat-math-geometry',
+        title: 'Additional Topics in Math',
+        emoji: '📏',
+        skills: [
+          challenge('sat-geometry-basics', 'Geometry Basics',
+            ['lines-angles-triangles', 'area-volume']),
+          challenge('sat-geometry-trigonometry', 'Geometry and Trigonometry',
+            ['right-triangles-trig', 'lines-angles-triangles']),
+          challenge('sat-circles', 'Circles',
+            ['circles']),
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'sat-rw',
+    title: 'Reading & Writing',
+    emoji: '📖',
+    domains: [
+      {
+        slug: 'sat-rw-information-ideas',
+        title: 'Information and Ideas',
+        emoji: '🔍',
+        skills: [
+          challenge('sat-reading-comprehension', 'Reading Comprehension Strategies',
+            ['central-ideas-details', 'inferences', 'text-structure-purpose', 'cross-text-connections']),
+          challenge('sat-central-ideas-details', 'Central Ideas and Details',
+            ['central-ideas-details']),
+          challenge('sat-command-evidence', 'Command of Evidence',
+            ['command-of-evidence']),
+        ],
+      },
+      {
+        slug: 'sat-rw-craft-structure',
+        title: 'Craft and Structure',
+        emoji: '🎨',
+        skills: [
+          challenge('sat-vocabulary-context', 'Vocabulary in Context',
+            ['words-in-context']),
+        ],
+      },
+      {
+        slug: 'sat-rw-expression',
+        title: 'Expression of Ideas',
+        emoji: '✍️',
+        skills: [
+          challenge('sat-effective-language-use', 'Effective Language Use',
+            ['rhetorical-synthesis']),
+          challenge('sat-transitions-organization', 'Transitions and Organization',
+            ['transitions']),
+        ],
+      },
+      {
+        slug: 'sat-rw-conventions',
+        title: 'Standard English Conventions',
+        emoji: '📝',
+        skills: [
+          challenge('sat-punctuation', 'Punctuation',
+            ['boundaries']),
+          challenge('sat-grammar-conventions', 'Grammar and Conventions',
+            ['form-structure-sense']),
+        ],
+      },
+    ],
+  },
+]
+
 export interface SatCompetitiveQuestion {
   id: number
   question: string
@@ -232,7 +410,7 @@ export interface SatCompetitiveQuestion {
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
-  /** Finest tag available: the skill slug. */
+  /** Finest tag available: the pool slug. */
   topicSlug: string
 }
 
@@ -240,20 +418,32 @@ export interface SatCompetitiveQuestion {
 // Indexes (built once at module load)
 // ---------------------------------------------------------------------------
 
+/** The 37 question pools (tag tier) — what questions are actually keyed by. */
+export const SAT_POOLS: SatSkill[] = SAT_POOL_SECTIONS.flatMap(s => s.domains.flatMap(d => d.skills))
+/** The lesson-aligned challenges (display tier). */
 export const SAT_SKILLS: SatSkill[] = SAT_SECTIONS.flatMap(s => s.domains.flatMap(d => d.skills))
 export const SAT_DOMAINS: SatDomain[] = SAT_SECTIONS.flatMap(s => s.domains)
 
-/** skill slug → skill. */
-const SKILL_BY_SLUG = new Map(SAT_SKILLS.map(s => [s.slug, s]))
-/** domain slug → its skill slugs. */
-const DOMAIN_SKILLS = new Map(SAT_DOMAINS.map(d => [d.slug, d.skills.map(s => s.slug)]))
-/** section slug → its skill slugs. */
-const SECTION_SKILLS = new Map(SAT_SECTIONS.map(s => [s.slug, s.domains.flatMap(d => d.skills.map(k => k.slug))]))
-/** College Board skill tag → skill slug. */
-const SLUG_BY_TAG = new Map<string, string>()
-for (const s of SAT_SKILLS) for (const t of s.tags) SLUG_BY_TAG.set(t, s.slug)
+/** Pools belonging to a domain (unit tests draw these — disjoint, unlike challenges). */
+export function poolsForDomain(domainSlug: string): SatSkill[] {
+  return SAT_POOL_SECTIONS.flatMap(s => s.domains).find(d => d.slug === domainSlug)?.skills ?? []
+}
 
-/** Authored competitive questions indexed by skill slug. */
+/** Any resolvable leaf entry (pool or challenge) by slug. */
+const SKILL_BY_SLUG = new Map([...SAT_POOLS, ...SAT_SKILLS].map(s => [s.slug, s]))
+/** domain slug → its POOL slugs (original blueprint grouping — saved domain matches rely on it). */
+const DOMAIN_SKILLS = new Map(
+  SAT_POOL_SECTIONS.flatMap(s => s.domains).map(d => [d.slug, d.skills.map(k => k.slug)]),
+)
+/** section slug → its POOL slugs. */
+const SECTION_SKILLS = new Map(
+  SAT_POOL_SECTIONS.map(s => [s.slug, s.domains.flatMap(d => d.skills.map(k => k.slug))]),
+)
+/** College Board skill tag → pool slug. */
+const SLUG_BY_TAG = new Map<string, string>()
+for (const s of SAT_POOLS) for (const t of s.tags) SLUG_BY_TAG.set(t, s.slug)
+
+/** Authored competitive questions indexed by pool slug. */
 const AUTHORED_BY_SKILL = new Map<string, SatBankQuestion[]>()
 for (const q of [
   ...satMathAlgebraQuestions,
@@ -269,7 +459,7 @@ for (const q of [
   AUTHORED_BY_SKILL.set(q.skillSlug, list)
 }
 
-/** Existing-bank questions indexed by skill slug (via their College Board tag). */
+/** Existing-bank questions indexed by pool slug (via their College Board tag). */
 const BANK_BY_SKILL = new Map<string, SatCompetitiveQuestion[]>()
 {
   const push = (slug: string, q: Omit<SatCompetitiveQuestion, 'topicSlug' | 'id'>) => {
@@ -300,17 +490,25 @@ const BANK_BY_SKILL = new Map<string, SatCompetitiveQuestion[]>()
   }
 }
 
-/** Every question available for a single skill (existing bank + authored). */
-export function questionsForSkill(skillSlug: string): SatCompetitiveQuestion[] {
-  const fromBank = BANK_BY_SKILL.get(skillSlug) ?? []
-  const authored = (AUTHORED_BY_SKILL.get(skillSlug) ?? []).map((q, i) => ({
+/**
+ * Every question available for a single pool or challenge. Challenges return
+ * the union of their member pools (pools are disjoint in questions, so the
+ * union is duplicate-free), re-numbered for stable per-call ids.
+ */
+export function questionsForSkill(slug: string): SatCompetitiveQuestion[] {
+  const entry = SKILL_BY_SLUG.get(slug)
+  if (entry?.members) {
+    return entry.members.flatMap(m => questionsForSkill(m)).map((q, i) => ({ ...q, id: i }))
+  }
+  const fromBank = BANK_BY_SKILL.get(slug) ?? []
+  const authored = (AUTHORED_BY_SKILL.get(slug) ?? []).map((q, i) => ({
     id: fromBank.length + i,
     question: q.question,
     options: q.options,
     correctAnswer: q.correctAnswer,
     explanation: q.explanation,
     difficulty: q.difficulty,
-    topicSlug: skillSlug,
+    topicSlug: slug,
   }))
   return [...fromBank, ...authored]
 }
@@ -323,10 +521,11 @@ export function satQuestionCount(slug: string): number {
   return skillSlugsFor(slug).reduce((n, s) => n + questionsForSkill(s).length, 0)
 }
 
-/** Skill slugs covered by any level of the hierarchy, or [] if not an SAT slug. */
+/** POOL slugs covered by any level of the hierarchy, or [] if not an SAT slug. */
 export function skillSlugsFor(slug: string): string[] {
-  if (slug === 'sat') return SAT_SKILLS.map(s => s.slug)
-  if (SKILL_BY_SLUG.has(slug)) return [slug]
+  if (slug === 'sat') return SAT_POOLS.map(s => s.slug)
+  const entry = SKILL_BY_SLUG.get(slug)
+  if (entry) return entry.members ?? [slug]
   const domain = DOMAIN_SKILLS.get(slug)
   if (domain) return domain
   const section = SECTION_SKILLS.get(slug)
@@ -341,8 +540,11 @@ export function isSatHierarchySlug(slug: string): boolean {
 
 /**
  * Draw `count` questions for any SAT hierarchy slug. Broader slugs round-robin
- * across their skills so a domain or whole-section match stays balanced instead
- * of over-drawing from whichever skill happens to have the deepest pool.
+ * across their pools so a challenge, domain, or whole-section match stays
+ * balanced instead of over-drawing from whichever pool happens to be deepest.
+ * Every pool is shuffled first and the result is re-shuffled, so selection is
+ * random on every call; difficulty mixing happens downstream (the caller feeds
+ * the full draw through pickTieredQuestions when a tier is chosen).
  */
 export function getSatQuestions(count: number, slug: string): SatCompetitiveQuestion[] {
   const skills = skillSlugsFor(slug)

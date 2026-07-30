@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import type { AssignmentType } from '@prisma/client'
-import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug, skillPlayCoversCourseTopic } from '@/lib/sat-topic-map'
+import { SAT_BANK_SLUGS, satBankSlugsForCourseTopic, canonicalSatBankSlug, skillPlayCoversCourseTopic, skillSlugsForCourseTopic, satChallengeCurriculumSlug } from '@/lib/sat-topic-map'
 import { isMultiSlug, parseMultiSlug } from '@/lib/competitive-utils'
 import { isMcatTopicSlug, bankPlayCoversCurriculumTopic } from '@/lib/mcat-topic-map'
 
@@ -64,13 +64,20 @@ function slugMatches(assignment: { topicSlug: string | null; topicSlugs: unknown
     }
   }
 
-  // SAT skill tier: matches played on 'sat-skill-<key>' slugs (one official
-  // College Board skill each, individually or combined via `multi:`) complete
-  // assignments naming the curriculum topics those skills cover. Falls through
-  // to the coarser bank matching below when no skill mapping applies.
+  // SAT skill/challenge tier: matches played on 'sat-skill-<key>' pool slugs or
+  // 'sat-topic-<key>' lesson-aligned challenge slugs (individually or combined
+  // via `multi:`) complete assignments naming the curriculum topics they cover.
+  // A challenge is NAMED after a curriculum topic, so it expands to that topic's
+  // covering skills — playing "Quadratic Equations" completes an assignment on
+  // 'sat-quadratic-equations' (and any other topic those skills cover). Falls
+  // through to the coarser bank matching below when no skill mapping applies.
   {
     const played = isMultiSlug(topicSlug) ? parseMultiSlug(topicSlug) : [topicSlug]
     const playedSkills = new Set(played.filter(s => s.startsWith('sat-skill-')))
+    for (const s of played) {
+      const curriculum = satChallengeCurriculumSlug(s)
+      if (curriculum) for (const k of skillSlugsForCourseTopic(curriculum)) playedSkills.add(k)
+    }
     if (playedSkills.size > 0) {
       const assigned = [assignment.topicSlug, ...(Array.isArray(many) ? (many as unknown[]) : [])]
         .filter((s): s is string => typeof s === 'string' && s.length > 0)

@@ -10,7 +10,7 @@
  *   npx tsx scripts/verify-sat-questions.ts
  */
 import katex from 'katex'
-import { SAT_SECTIONS, SAT_SKILLS, questionsForSkill } from '../src/data/competitive-questions/sat-bank'
+import { SAT_SECTIONS, SAT_POOLS, SAT_SKILLS, questionsForSkill } from '../src/data/competitive-questions/sat-bank'
 import { getSatMathQuestions } from '../src/data/competitive-questions/sat-math-bank'
 import { getSatRwQuestions } from '../src/data/competitive-questions/sat-rw-bank'
 import { satMathAlgebraQuestions } from '../src/data/competitive-questions/sat-questions-math-algebra'
@@ -57,7 +57,7 @@ function checkMath(text: string, where: string) {
   }
 }
 
-const validSkillSlugs = new Set(SAT_SKILLS.map(s => s.slug))
+const validSkillSlugs = new Set(SAT_POOLS.map(s => s.slug))
 const authored = [
   ...satMathAlgebraQuestions,
   ...satMathAlgebra2Questions,
@@ -80,8 +80,25 @@ for (const [i, q] of authored.entries()) {
   checkMath(q.explanation, `${where} explanation`)
 }
 
+// Challenge tier integrity: every member must name a real pool, and every pool
+// should be reachable through at least one lesson-aligned challenge (otherwise
+// its questions only surface via "All of <domain>" draws).
+const memberSlugs = new Set(SAT_SKILLS.flatMap(c => c.members ?? []))
+for (const c of SAT_SKILLS) {
+  if (!c.members || c.members.length === 0) problems.push(`challenge ${c.slug} has no member pools`)
+  for (const m of c.members ?? []) {
+    if (!validSkillSlugs.has(m)) problems.push(`challenge ${c.slug}: unknown member pool "${m}"`)
+  }
+}
+const orphanPools = SAT_POOLS.filter(p => !memberSlugs.has(p.slug))
+if (orphanPools.length > 0) {
+  console.log(`⚠ ${orphanPools.length} pool(s) not in any challenge (reachable only via domain draws):`)
+  for (const p of orphanPools) console.log(`   ${p.slug}`)
+  console.log()
+}
+
 // Every College Board tag in the source banks must land somewhere in the tree.
-const knownTags = new Set(SAT_SKILLS.flatMap(s => s.tags))
+const knownTags = new Set(SAT_POOLS.flatMap(s => s.tags))
 const seenTags = new Map<string, number>()
 for (const q of [...getSatMathQuestions(100000), ...getSatRwQuestions(100000)]) {
   const tag = (q as { skill?: string }).skill
@@ -92,7 +109,8 @@ for (const q of [...getSatMathQuestions(100000), ...getSatRwQuestions(100000)]) 
 const untagged = seenTags.get('(untagged)') ?? 0
 if (untagged > 0) console.log(`⚠ ${untagged} source-bank questions carry no skill tag and are unreachable by skill.\n`)
 
-// Depth report.
+// Depth report — displayed (lesson-aligned) tree; totals count distinct
+// questions once via the pool tree below.
 let total = 0
 const thin: string[] = []
 for (const section of SAT_SECTIONS) {
@@ -103,15 +121,25 @@ for (const section of SAT_SECTIONS) {
     console.log(`   ${domain.title}: ${domainTotal}`)
     for (const s of domain.skills) {
       const n = questionsForSkill(s.slug).length
-      total += n
       if (n < MATCH_SIZE) thin.push(`      ${String(n).padStart(3)}  ${s.title} (${s.slug})`)
     }
   }
 }
 
-// Duplicate stems (across the whole bank).
+for (const p of SAT_POOLS) total += questionsForSkill(p.slug).length
+
+// Pool-tier depth (the disjoint question tier saved matches still play on).
+const thinPools = SAT_POOLS
+  .map(p => ({ p, n: questionsForSkill(p.slug).length }))
+  .filter(({ n }) => n < MATCH_SIZE)
+if (thinPools.length > 0) {
+  console.log(`\n⚠ ${thinPools.length} pool(s) below ${MATCH_SIZE} questions (challenges combining them stay full):`)
+  for (const { p, n } of thinPools) console.log(`   ${String(n).padStart(3)}  ${p.slug}`)
+}
+
+// Duplicate stems (across the whole bank — pools are the disjoint tier).
 const stems = new Map<string, number>()
-for (const s of SAT_SKILLS) {
+for (const s of SAT_POOLS) {
   for (const q of questionsForSkill(s.slug)) {
     const k = q.question.trim().toLowerCase()
     stems.set(k, (stems.get(k) ?? 0) + 1)
@@ -124,7 +152,7 @@ if (dupes.length > 0) {
   // repeated stem is only a defect when the OPTIONS also match.
   const realDupes = dupes.filter(([stem]) => {
     const variants = new Set(
-      SAT_SKILLS.flatMap(s => questionsForSkill(s.slug))
+      SAT_POOLS.flatMap(s => questionsForSkill(s.slug))
         .filter(q => q.question.trim().toLowerCase() === stem)
         .map(q => q.options.join('|')),
     )
@@ -138,14 +166,14 @@ if (dupes.length > 0) {
 }
 
 console.log(`\nTotal questions: ${total}`)
-console.log(`Skills: ${SAT_SKILLS.length}`)
+console.log(`Challenges: ${SAT_SKILLS.length} (display tier) / Pools: ${SAT_POOLS.length}`)
 console.log(`Math segments KaTeX-compiled: ${mathSegments}`)
 
 if (thin.length > 0) {
-  console.log(`\n✗ ${thin.length} skill(s) below ${MATCH_SIZE} questions:`)
+  console.log(`\n✗ ${thin.length} challenge(s) below ${MATCH_SIZE} questions:`)
   for (const t of thin) console.log(t)
 } else {
-  console.log(`\n✓ Every skill has at least ${MATCH_SIZE} questions (a full match).`)
+  console.log(`\n✓ Every challenge has at least ${MATCH_SIZE} questions (a full match).`)
 }
 
 if (problems.length > 0) {

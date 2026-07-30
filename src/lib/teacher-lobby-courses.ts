@@ -213,8 +213,36 @@ const SAT_BANKS: { slug: string; getter: (count?: number) => Promise<AnyQuestion
   { slug: 'sat-punctuation', getter: getSatPunctuationGeneralQuestions },
 ]
 
+/** djb2 — stable id from a question stem so overlapping SAT challenges dedupe. */
+function stemHash(text: string): string {
+  let h = 5381
+  const s = text.trim().toLowerCase()
+  for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0
+  return (h >>> 0).toString(36)
+}
+
 function satAdapter(): CourseRegistryEntry['getQuestions'] {
   return async (count, topic) => {
+    // Lesson-aligned hierarchy slugs — the 'sat-topic-*' challenges plus the
+    // domain/section levels (see sat-bank.ts) — resolve through the SAT bank.
+    // Question ids are stem hashes because two challenges may share a member
+    // pool, and buildQuestionPool dedupes selected topics by id.
+    if (topic && !SAT_BANKS.some(b => b.slug === topic)) {
+      const m = await import('@/data/competitive-questions/sat-bank')
+      if (m.isSatHierarchySlug(topic)) {
+        return m.getSatQuestions(Math.max(count, 1), topic).map(q => ({
+          id: `sat-${stemHash(q.question)}`,
+          question: q.question,
+          options: q.options,
+          correctAnswer: q.correctAnswer,
+          explanation: q.explanation,
+          difficulty: q.difficulty,
+          topicSlug: topic,
+        }))
+      }
+    }
+    // The 4 legacy pseudo-slug banks — existing lobbies store these, so they
+    // resolve exactly as before (and no-topic draws keep pulling all 4).
     const banks = topic ? SAT_BANKS.filter(b => b.slug === topic) : SAT_BANKS
     const out: TeacherLobbyQuestion[] = []
     for (const bank of banks) {
@@ -312,6 +340,20 @@ export function getCourseEntry(slug: string): CourseRegistryEntry | null {
 export async function getCourseTopics(slug: string): Promise<{ slug: string; title: string; count: number }[]> {
   const entry = getCourseEntry(slug)
   if (!entry) return []
+  // SAT lists the lesson-aligned hierarchy (an "All <category>" entry per
+  // domain, then its challenges) in curriculum order rather than deriving
+  // topics from bank tags — so lobby pickers offer the same names as the
+  // interactive lessons. The legacy 4-bank slugs stay resolvable above but are
+  // no longer offered for new lobbies.
+  if (slug === 'sat-prep') {
+    const m = await import('@/data/competitive-questions/sat-bank')
+    return m.SAT_SECTIONS.flatMap(section =>
+      section.domains.flatMap(d => [
+        { slug: d.slug, title: `All ${d.title}`, count: m.satQuestionCount(d.slug) },
+        ...d.skills.map(c => ({ slug: c.slug, title: c.title, count: m.satQuestionCount(c.slug) })),
+      ])
+    )
+  }
   const all = await entry.getQuestions(100000)
   const counts = new Map<string, number>()
   for (const q of all) {

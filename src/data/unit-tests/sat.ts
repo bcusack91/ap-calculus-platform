@@ -1,14 +1,15 @@
-import { SAT_SECTIONS, questionsForSkill } from '@/data/competitive-questions/sat-bank'
+import { SAT_SECTIONS, poolsForDomain, questionsForSkill } from '@/data/competitive-questions/sat-bank'
 import type { CourseUnitTestConfig, UnitDef, UnitPoolQuestion } from '@/lib/unit-tests/engine'
 
 /**
- * SAT unit tests — one "unit" per official College Board DOMAIN (8 total:
- * 4 Math, 4 Reading & Writing).
+ * SAT unit tests — one "unit" per domain (8 total: 4 Math, 4 Reading &
+ * Writing), titled with the sat-prep lesson CATEGORY names so unit tests match
+ * what students study (SAT_SECTIONS is the lesson-aligned display tree).
  *
- * The SAT competitive bank is already organized section → domain → skill, so a
- * domain maps onto a unit test directly. Questions are pulled per skill and
+ * Questions are pulled per POOL (the disjoint question tier — the displayed
+ * challenges may share pools, which would duplicate questions here) and
  * stamped with their domain id, giving each unit test a deep pool drawn from
- * every skill in that domain.
+ * every pool in that domain.
  */
 
 const DOMAIN_META: Record<string, { icon: string; color: string; weight: string }> = {
@@ -32,23 +33,23 @@ export const SAT_UNITS: UnitDef[] = domains.map(({ section, domain }, i) => {
     name: `${section.title}: ${domain.title}`,
     shortName: domain.title,
     description: `${domain.skills.map((k) => k.short).join(' · ')}.`,
-    topicSlugs: domain.skills.map((k) => k.slug),
+    topicSlugs: poolsForDomain(domain.slug).map((k) => k.slug),
     exam_weight: meta.weight,
     color: meta.color,
     icon: meta.icon,
   }
 })
 
-/** Every skill's questions, stamped with the parent domain the engine filters on. */
+/** Every pool's questions, stamped with the parent domain the engine filters on. */
 const pool: UnitPoolQuestion[] = domains.flatMap(({ domain }) =>
-  domain.skills.flatMap((skill) =>
-    questionsForSkill(skill.slug).map((q) => ({
+  poolsForDomain(domain.slug).flatMap((p) =>
+    questionsForSkill(p.slug).map((q) => ({
       question: q.question,
       options: q.options,
       correctAnswer: q.correctAnswer,
       explanation: q.explanation,
       domain: domain.slug,
-      topicSlug: skill.slug,
+      topicSlug: p.slug,
     }))
   )
 )

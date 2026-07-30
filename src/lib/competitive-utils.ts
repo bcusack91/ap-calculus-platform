@@ -713,15 +713,26 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
       const pools = await Promise.all(
         parts.map((s) => generateMatchQuestions(perTopic, s, completedTopics, tier).catch(() => [] as MatchQuestion[]))
       )
+      // Constituent topics may overlap in content (SAT lesson-aligned
+      // challenges share member pools), so dedupe by stem while interleaving —
+      // the same question must not appear twice in one match.
       const interleaved: MatchQuestion[] = []
+      const seenStems = new Set<string>()
       for (let i = 0; interleaved.length < totalQuestions; i++) {
         let progressed = false
         for (const pool of pools) {
-          if (i < pool.length) {
-            interleaved.push(pool[i])
-            progressed = true
-            if (interleaved.length >= totalQuestions) break
+          const q = i < pool.length ? pool[i] : undefined
+          if (!q) continue
+          progressed = true
+          // Question text can be absent (non-text modes) — only those with a
+          // stem can be recognized as repeats.
+          const stem = typeof q.question === 'string' ? q.question.trim().toLowerCase() : ''
+          if (stem) {
+            if (seenStems.has(stem)) continue
+            seenStems.add(stem)
           }
+          interleaved.push(q)
+          if (interleaved.length >= totalQuestions) break
         }
         if (!progressed) break
       }
@@ -734,8 +745,9 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     }
   }
 
-  // SAT: section → domain → skill hierarchy (see sat-bank.ts). Covers 'sat'
-  // (whole test), the 2 section slugs, the 8 domain slugs, and the 29 skill
+  // SAT: section → domain → challenge → pool hierarchy (see sat-bank.ts).
+  // Covers 'sat' (whole test), the 2 section slugs, the 8 domain slugs, the
+  // lesson-aligned 'sat-topic-*' challenges, and the 'sat-skill-*' pool
   // slugs. The bank is a strict SUPERSET of what the old per-slug handlers
   // returned — it ingests the same sat-math-bank / sat-rw-bank questions, adds
   // the competitive-authored ones, and round-robins across skills so a domain
