@@ -1010,6 +1010,7 @@ model Classroom {
   teacher           User                   @relation("ClassroomTeacher", fields: [teacherId], references: [id], onDelete: Cascade)
   school            School?                @relation(fields: [schoolId], references: [id])
   members           ClassroomMember[]
+  courses           ClassroomCourse[]
   assignments       Assignment[]
   competitions      ScheduledCompetition[]
   competitiveGrants CompetitiveGrant[]
@@ -1022,6 +1023,23 @@ model Classroom {
 
   @@index([teacherId])
   @@index([joinCode])
+}
+
+// The courses a classroom actually teaches — Khan Academy's class-course model.
+// Assignment creation filters its topic picker to these, replacing a single
+// dropdown of every topic on the platform (~1,000 options) with only the
+// classroom's own material. Managed in the classroom Settings tab.
+model ClassroomCourse {
+  id          String    @id @default(cuid())
+  classroomId String
+  // Course slug, or 'mcat-competitive' for the competitive-bank pseudo-course
+  // that /api/teacher/topics exposes alongside DB courses.
+  courseSlug  String
+  createdAt   DateTime  @default(now())
+  classroom   Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+
+  @@unique([classroomId, courseSlug])
+  @@index([classroomId])
 }
 
 // Co-teachers: teachers (other than the owner) granted access to a classroom.

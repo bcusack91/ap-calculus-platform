@@ -67,6 +67,7 @@ interface TopicOption {
 }
 
 interface CourseGroup {
+  courseSlug: string
   courseTitle: string
   topics: TopicOption[]
 }
@@ -140,6 +141,12 @@ export default function ClassroomDetailPage() {
   // Roster rows open the student's full report — the roster is where a teacher
   // is already looking when they wonder how someone is doing.
   const [reportFor, setReportFor] = useState<{ id: string; name: string } | null>(null)
+  // The classroom's attached courses (Khan-style). null = not loaded yet;
+  // [] = explicitly none configured, which keeps the full-catalog fallback.
+  const [classCourses, setClassCourses] = useState<string[] | null>(null)
+  const [savingCourses, setSavingCourses] = useState(false)
+  // Course the teacher is currently browsing in the assignment modal.
+  const [assignCourse, setAssignCourse] = useState('')
 
   // Keep the URL in step with the tab, without pushing a history entry per click.
   const setActiveTab = useCallback((tab: TabType) => {
@@ -255,10 +262,39 @@ export default function ClassroomDetailPage() {
     }
   }, [refreshClassroom])
 
+  // The Settings tab's course checkboxes and the assignment modal both need
+  // the catalog + attachments; load them when either surface opens.
+  useEffect(() => {
+    if (activeTab === 'settings') void loadTopics()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeTab])
+
   const loadTopics = async () => {
-    if (courses.length > 0) return
-    const res = await fetch('/api/teacher/topics')
-    if (res.ok) setCourses(await res.json())
+    if (courses.length === 0) {
+      const res = await fetch('/api/teacher/topics')
+      if (res.ok) setCourses(await res.json())
+    }
+    if (classCourses === null) {
+      const res = await fetch(`/api/teacher/classrooms/${classroomId}/courses`)
+      if (res.ok) {
+        const j = await res.json()
+        setClassCourses(Array.isArray(j.courseSlugs) ? j.courseSlugs : [])
+      }
+    }
+  }
+
+  const saveClassCourses = async (slugs: string[]) => {
+    setSavingCourses(true)
+    setClassCourses(slugs) // optimistic — checkbox flips immediately
+    try {
+      await fetch(`/api/teacher/classrooms/${classroomId}/courses`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ courseSlugs: slugs }),
+      })
+    } finally {
+      setSavingCourses(false)
+    }
   }
 
   const loadPerformance = async () => {
@@ -1496,6 +1532,49 @@ export default function ClassroomDetailPage() {
                 </div>
               )}
 
+              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1">
+                  📚 Class courses
+                  {savingCourses && <span className="ml-2 text-xs font-normal text-gray-400">saving…</span>}
+                </h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                  Pick the courses this class uses. Assignment creation shows these first
+                  instead of every course on the platform.
+                </p>
+                {courses.length === 0 ? (
+                  <p className="text-sm text-gray-400">Loading courses…</p>
+                ) : (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 max-h-64 overflow-y-auto pr-1">
+                    {courses.map((c) => {
+                      const checked = (classCourses ?? []).includes(c.courseSlug)
+                      return (
+                        <label
+                          key={c.courseSlug}
+                          className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm cursor-pointer transition ${
+                            checked
+                              ? 'border-blue-400 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-200'
+                              : 'border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-blue-300'
+                          }`}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={() => {
+                              const cur = classCourses ?? []
+                              saveClassCourses(
+                                checked ? cur.filter((x) => x !== c.courseSlug) : [...cur, c.courseSlug]
+                              )
+                            }}
+                            className="accent-blue-600"
+                          />
+                          <span className="truncate">{c.courseTitle}</span>
+                        </label>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+
               {classroom.isOwner !== false && (
                 <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                   <h3 className="text-sm font-bold text-red-600 dark:text-red-400 mb-1">Danger Zone</h3>
@@ -1565,26 +1644,68 @@ export default function ClassroomDetailPage() {
               >
                 Topics
               </label>
-              <select
-                id="assignment-topic"
-                value=""
-                onChange={(e) => {
-                  const slug = e.target.value
-                  if (slug && !assignmentForm.topicSlugs.includes(slug)) {
-                    setAssignmentForm({ ...assignmentForm, topicSlugs: [...assignmentForm.topicSlugs, slug] })
-                  }
-                }}
-                className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
-              >
-                <option value="">+ Add a topic…</option>
-                {courses.map((c) => (
-                  <optgroup key={c.courseTitle} label={c.courseTitle}>
-                    {c.topics.map((t) => (
-                      <option key={t.slug} value={t.slug} disabled={assignmentForm.topicSlugs.includes(t.slug)}>{t.title}</option>
-                    ))}
-                  </optgroup>
-                ))}
-              </select>
+              {/* Two-step picker: course first, then only that course's topics.
+                  Attached class courses (Settings) lead the list; the full
+                  catalog stays reachable so nothing is ever unassignable. */}
+              {(() => {
+                const attached = classCourses ?? []
+                const pinned = courses.filter((c) => attached.includes(c.courseSlug))
+                const rest = courses.filter((c) => !attached.includes(c.courseSlug))
+                const activeGroup = courses.find((c) => c.courseSlug === assignCourse)
+                // Group the chosen course's topics by category for a readable list
+                const byCategory = new Map<string, TopicOption[]>()
+                for (const t of activeGroup?.topics ?? []) {
+                  const list = byCategory.get(t.category) ?? []
+                  list.push(t)
+                  byCategory.set(t.category, list)
+                }
+                return (
+                  <div className="space-y-2">
+                    <select
+                      id="assignment-topic"
+                      value={assignCourse}
+                      onChange={(e) => setAssignCourse(e.target.value)}
+                      className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                    >
+                      <option value="">Choose a course…</option>
+                      {pinned.length > 0 && (
+                        <optgroup label="★ Your class courses">
+                          {pinned.map((c) => (
+                            <option key={c.courseSlug} value={c.courseSlug}>{c.courseTitle}</option>
+                          ))}
+                        </optgroup>
+                      )}
+                      <optgroup label={pinned.length > 0 ? 'All courses' : 'All courses (tip: pin your class courses in Settings)'}>
+                        {rest.map((c) => (
+                          <option key={c.courseSlug} value={c.courseSlug}>{c.courseTitle}</option>
+                        ))}
+                      </optgroup>
+                    </select>
+                    {activeGroup && (
+                      <select
+                        aria-label={`Topics in ${activeGroup.courseTitle}`}
+                        value=""
+                        onChange={(e) => {
+                          const slug = e.target.value
+                          if (slug && !assignmentForm.topicSlugs.includes(slug)) {
+                            setAssignmentForm({ ...assignmentForm, topicSlugs: [...assignmentForm.topicSlugs, slug] })
+                          }
+                        }}
+                        className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+                      >
+                        <option value="">+ Add a topic from {activeGroup.courseTitle}…</option>
+                        {[...byCategory.entries()].map(([cat, ts]) => (
+                          <optgroup key={cat} label={cat}>
+                            {ts.map((t) => (
+                              <option key={t.slug} value={t.slug} disabled={assignmentForm.topicSlugs.includes(t.slug)}>{t.title}</option>
+                            ))}
+                          </optgroup>
+                        ))}
+                      </select>
+                    )}
+                  </div>
+                )
+              })()}
               {assignmentForm.topicSlugs.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-2">
                   {assignmentForm.topicSlugs.map((slug) => (

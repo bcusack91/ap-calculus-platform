@@ -28,6 +28,7 @@ export async function GET() {
 
     // Transform to the shape the client expects: { courseTitle, topics[] }
     const grouped = courses.map((c) => ({
+      courseSlug: c.slug,
       courseTitle: c.name,
       topics: c.categories.flatMap((cat) =>
         cat.topics.map((t) => ({ slug: t.slug, title: t.title, category: cat.name }))
@@ -39,6 +40,9 @@ export async function GET() {
     // them to assign MCAT competitive practice (individually or mixed with
     // other courses' topics in one multi-topic assignment).
     const mcatCompetitive = {
+      // Pseudo-course: competitive-bank topics with no DB Course row. The slug
+      // is only an identity key for classroom-course attachment.
+      courseSlug: 'mcat-competitive',
       courseTitle: 'MCAT Prep (Competitive)',
       topics: MCAT_SECTIONS.flatMap((section) => [
         { slug: section.slug, title: `${section.short} — whole section`, category: section.title },
