@@ -190,16 +190,44 @@ function canonicalizeSlug(slug: string): string {
 }
 
 /**
+ * Approximate questions each diagnostic domain represents on a FULL digital
+ * SAT (54 R&W + 44 Math = 98 scored questions), from the College Board
+ * blueprint: R&W — Information & Ideas ~26%, Craft & Structure ~28%,
+ * Expression of Ideas ~20%, Standard English Conventions ~26%; Math — Algebra
+ * ~35%, Advanced Math ~35%, Problem-Solving & Data Analysis ~15%, Geometry &
+ * Trigonometry ~15%. Our diagnostic domains don't map 1:1 onto the blueprint
+ * (comprehension absorbs Craft & Structure's text-structure work; functions
+ * straddles Algebra and Advanced Math), so these are sensible splits of the
+ * official shares, not exact figures. Used to rank recommendations by how many
+ * real-test questions a domain is worth.
+ */
+const FULL_TEST_WEIGHT: Record<string, number> = {
+  comprehension: 11,
+  evidence: 6,
+  vocabulary: 8,
+  grammar: 7,
+  expression: 11,
+  punctuation: 7,
+  algebra: 12,
+  'advanced-math': 12,
+  functions: 6,
+  'problem-solving': 7,
+  geometry: 7,
+}
+
+/**
  * Rebuild recommendedTopics from stored domain results.
  * Used to reconstruct full DiagnosticResults from history entries
- * that may not have stored recommendedTopics.
+ * that may not have stored recommendedTopics. Domain-level only — the
+ * per-question answers aren't stored, so this can't rank by actual misses the
+ * way analyzeDiagnosticResults does.
  */
 export function rebuildRecommendedTopics(
   domains: DomainResult[],
 ): DiagnosticResults['recommendedTopics'] {
   const MAX_RECOMMENDED = 5
-  // Prioritize by exam weight (questionCount) so highest-impact topics surface first.
-  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(d => d.id === id)?.questionCount ?? 0
+  // Prioritize by full-test exam weight so highest-impact topics surface first.
+  const examWeight = (id: string) => FULL_TEST_WEIGHT[id] ?? 0
   const recommendedTopics: DiagnosticResults['recommendedTopics'] = []
   const addedSlugs = new Set<string>()
   const weakDomains = [...domains.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
@@ -370,34 +398,95 @@ export function analyzeDiagnosticResults(
   const moderateAreas = domains.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domains.filter(d => d.level === 'strong').map(d => d.domainName)
 
-  // Build recommended topics - weak domains first, then moderate, capped at 5 and prioritized by exam weight
+  // Build recommended topics — the 5 highest-impact things to study, ranked by
+  // expected payoff on a REAL test: (full-test weight of the domain) × (how
+  // badly the student missed it). Driven by the actual questions missed, not
+  // just domain averages.
   const MAX_RECOMMENDED = 5
-  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(d => d.id === id)?.questionCount ?? 0
+  const examWeight = (id: string) => FULL_TEST_WEIGHT[id] ?? 0
+
+  // Per-topic tallies from the student's answers. Passage questions carry a
+  // pseudo sourceSlug ('passage-<genre>'), so route them to the topic their
+  // domain studies before tallying. Blank answers count as misses — on the
+  // real (no-penalty) SAT a blank is a lost question all the same.
+  const PASSAGE_TOPIC: Record<string, string> = {
+    evidence: 'sat-command-evidence',
+    vocabulary: 'sat-vocabulary-context',
+    comprehension: 'sat-reading-comprehension',
+  }
+  const tallies = new Map<string, { asked: number; missed: number; domainId: string }>()
+  for (let i = 0; i < questions.length; i++) {
+    const q = questions[i]
+    const raw = q.sourceSlug.startsWith('passage-') ? PASSAGE_TOPIC[q.domain] : q.sourceSlug
+    if (!raw) continue
+    const slug = canonicalizeSlug(raw)
+    const t = tallies.get(slug) ?? { asked: 0, missed: 0, domainId: q.domain }
+    t.asked++
+    if (answers.find(a => a.questionIndex === i)?.selectedIndex !== q.correctIndex) t.missed++
+    tallies.set(slug, t)
+  }
+
+  const domainById = new Map(domains.map(d => [d.domainId, d]))
+  const domainMissRate = (id: string) => {
+    const d = domainById.get(id)
+    return d && d.total > 0 ? 1 - d.correct / d.total : 0
+  }
+
+  // A topic is only sampled 1–3 times, so shrink its raw miss rate toward the
+  // domain's rate in proportion to how much evidence there is. gain ≈ how many
+  // full-test questions studying this topic can win back.
+  const candidates = [...tallies.entries()]
+    .filter(([, t]) => t.missed > 0)
+    .map(([slug, t]) => {
+      const topicRate = t.missed / t.asked
+      const shrink = t.asked / (t.asked + 1)
+      const blended = shrink * topicRate + (1 - shrink) * domainMissRate(t.domainId)
+      return {
+        slug,
+        domainId: t.domainId,
+        gain: examWeight(t.domainId) * blended,
+        priority: (domainById.get(t.domainId)?.level === 'weak' || topicRate === 1
+          ? 'high'
+          : 'medium') as 'high' | 'medium',
+      }
+    })
+    .sort((a, b) => b.gain - a.gain)
+
+  // At most 2 topics per domain, so a student who bombed everywhere gets a
+  // list spanning their weak areas instead of 5 entries from the two
+  // heaviest-weighted domains.
+  const MAX_PER_DOMAIN = 2
+  const perDomain = new Map<string, number>()
   const recommendedTopics: DiagnosticResults['recommendedTopics'] = []
   const addedSlugs = new Set<string>()
+  for (const c of candidates) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
+    if (addedSlugs.has(c.slug)) continue
+    if ((perDomain.get(c.domainId) ?? 0) >= MAX_PER_DOMAIN) continue
+    addedSlugs.add(c.slug)
+    perDomain.set(c.domainId, (perDomain.get(c.domainId) ?? 0) + 1)
+    recommendedTopics.push({ slug: c.slug, name: slugToName(c.slug), priority: c.priority })
+  }
+
+  // If misses alone don't fill 5 slots (strong students), top up from weak
+  // then moderate domains in full-test-weight order so the study list is
+  // always complete.
   const weakDomainResults = [...domains.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
   const moderateDomainResults = [...domains.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
-  for (const domain of weakDomainResults) {
-    if (recommendedTopics.length >= MAX_RECOMMENDED) break
-    const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
-    for (const slug of domainDef.slugs) {
+  for (const { list, priority } of [
+    { list: weakDomainResults, priority: 'high' as const },
+    { list: moderateDomainResults, priority: 'medium' as const },
+  ]) {
+    for (const domain of list) {
       if (recommendedTopics.length >= MAX_RECOMMENDED) break
-      const canonical = canonicalizeSlug(slug)
-      if (!addedSlugs.has(canonical)) {
-        addedSlugs.add(canonical)
-        recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority: 'high' })
-      }
-    }
-  }
-  for (const domain of moderateDomainResults) {
-    if (recommendedTopics.length >= MAX_RECOMMENDED) break
-    const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
-    for (const slug of domainDef.slugs) {
-      if (recommendedTopics.length >= MAX_RECOMMENDED) break
-      const canonical = canonicalizeSlug(slug)
-      if (!addedSlugs.has(canonical)) {
-        addedSlugs.add(canonical)
-        recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority: 'medium' })
+      const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
+      for (const slug of domainDef.slugs) {
+        if (recommendedTopics.length >= MAX_RECOMMENDED) break
+        const canonical = canonicalizeSlug(slug)
+        if (!addedSlugs.has(canonical)) {
+          addedSlugs.add(canonical)
+          recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority })
+        }
       }
     }
   }

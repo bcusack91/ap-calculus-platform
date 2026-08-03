@@ -600,9 +600,12 @@ export function DiagnosticResultsView({
         {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
         {results.recommendedTopics.length > 0 && planAccess.canAccess && (
           <div className="mb-8">
-            <h3 className="mb-3 font-semibold text-gray-800 dark:text-gray-200">
-              Recommended Study Topics
+            <h3 className="mb-1 font-semibold text-gray-800 dark:text-gray-200">
+              Your Top {Math.min(results.recommendedTopics.length, 5)} Study Priorities
             </h3>
+            <p className="mb-3 text-xs text-gray-500 dark:text-gray-400">
+              Ranked by what you missed and how much of a real SAT each topic covers — start at the top.
+            </p>
             <div className="space-y-2">
               {results.recommendedTopics.slice(0, 8).map(t => (
                 <a
