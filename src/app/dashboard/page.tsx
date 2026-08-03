@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen } from 'lucide-react'
+import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, GraduationCap } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -204,6 +204,12 @@ function DashboardContent() {
     form?: string
     recommendedTopics?: { slug: string; name: string; priority: string }[]
   } | null>(null)
+  const [satDiagnostic, setSatDiagnostic] = useState<{
+    estimatedScore?: number
+    rwScore?: number
+    mathScore?: number
+    recommendedTopics?: { slug: string; name: string; priority: string }[]
+  } | null>(null)
   const [mcatPlanStatus, setMcatPlanStatus] = useState<{
     hasDiagnostic: boolean
     canRetakeDiagnostic: boolean
@@ -353,6 +359,18 @@ function DashboardContent() {
         if (bcData.attempts?.length > 0) {
           const latest = bcData.attempts[0].results as Record<string, unknown>
           setCalcBCDiagnostic(latest)
+        }
+      }
+    } catch { /* silent */ }
+
+    // Fetch SAT diagnostic recommendations
+    try {
+      const satRes = await fetch('/api/sat-diagnostic/history')
+      if (satRes.ok) {
+        const satData = await satRes.json()
+        if (satData.attempts?.length > 0) {
+          const latest = satData.attempts[0].results as Record<string, unknown>
+          setSatDiagnostic(latest)
         }
       }
     } catch { /* silent */ }
@@ -671,7 +689,7 @@ function DashboardContent() {
             )}
 
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
-            {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length) ? (
+            {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length || satDiagnostic?.recommendedTopics?.length) ? (
               <div className="space-y-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white"><ClipboardList className="inline w-5 h-5 mr-1.5 -mt-1 text-accent" aria-hidden /> Your Study Plans</h2>
                 {mcatPlanStatus?.recommendedTopics && mcatPlanStatus.recommendedTopics.length > 0 && (
@@ -746,6 +764,29 @@ function DashboardContent() {
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
                           </div>
                           <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {satDiagnostic?.recommendedTopics && satDiagnostic.recommendedTopics.length > 0 && (
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-green-300 dark:border-green-700 p-5 shadow-sm">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-bold text-gray-900 dark:text-white"><GraduationCap className="inline w-4 h-4 mr-1 -mt-0.5 text-green-600 dark:text-green-400" aria-hidden /> SAT</h3>
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs text-gray-500 dark:text-gray-400">Score: {satDiagnostic.estimatedScore} (R&W {satDiagnostic.rwScore} · Math {satDiagnostic.mathScore})</span>
+                        <Link href="/sat-diagnostic" className="text-xs text-green-600 hover:underline dark:text-green-400">Retake →</Link>
+                      </div>
+                    </div>
+                    <div className="space-y-1.5">
+                      {satDiagnostic.recommendedTopics.slice(0, 5).map((topic, i) => (
+                        <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20 px-3 py-2 hover:border-green-400 transition-colors group">
+                          <div className="flex items-center gap-2">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50 text-[10px] font-bold text-green-700 dark:text-green-300">{i + 1}</span>
+                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-green-700 dark:group-hover:text-green-400">{topic.name}</span>
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                          </div>
+                          <span className="text-green-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
                       ))}
                     </div>

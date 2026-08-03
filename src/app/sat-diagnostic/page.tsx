@@ -324,6 +324,12 @@ export default function SATDiagnosticPage() {
 
   // Menu
   const lastResult = history.length > 0 ? (history[0].results as unknown as Record<string, unknown> ?? {}) : null
+  // Stored since the recommendations feature shipped; rebuilt (domain-level)
+  // for older attempts so returning students always see a study plan.
+  const lastRecommendedTopics = lastResult
+    ? ((lastResult.recommendedTopics as DiagnosticResults['recommendedTopics'] | undefined) ??
+       (Array.isArray(lastResult.domains) ? rebuildRecommendedTopics(lastResult.domains as DomainResult[]) : []))
+    : []
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -368,8 +374,37 @@ export default function SATDiagnosticPage() {
                 onClick={() => setViewingHistory(true)}
                 className="mt-4 w-full rounded-xl border border-purple-300 bg-purple-50 px-4 py-2.5 text-sm font-semibold text-purple-700 transition hover:bg-purple-100 dark:border-purple-700 dark:bg-purple-900/30 dark:text-purple-300 dark:hover:bg-purple-900/50"
               >
-                View Your Study Plan &amp; Results
+                View Your Full Results
               </button>
+            </div>
+          )}
+
+          {/* Current study plan — the last diagnostic's top priorities, right on
+              the menu so returning students see them without any clicks. */}
+          {lastRecommendedTopics.length > 0 && (
+            <div className="mb-6 rounded-2xl border-2 border-green-300 bg-green-50 p-6 dark:border-green-700 dark:bg-green-900/20">
+              <h3 className="mb-1 text-base font-bold text-green-800 dark:text-green-300">🎯 Your Current Study Plan</h3>
+              <p className="mb-3 text-sm text-green-600 dark:text-green-400">
+                Your top {lastRecommendedTopics.length} priorities from your last diagnostic — ranked by what you missed and how much of a real SAT each topic covers. Work through them, then retake the test:
+              </p>
+              <div className="space-y-2">
+                {lastRecommendedTopics.slice(0, 5).map((topic, i) => (
+                  <Link
+                    key={topic.slug}
+                    href={`/topics/${topic.slug}/interactive`}
+                    className="flex items-center justify-between rounded-xl border border-green-200 bg-white px-4 py-3 transition hover:border-green-400 hover:shadow-sm dark:border-green-700 dark:bg-gray-800 group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700 dark:bg-green-900/50 dark:text-green-300">{i + 1}</span>
+                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-green-700 dark:group-hover:text-green-400">{topic.name}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                        {topic.priority === 'high' ? 'High' : 'Medium'}
+                      </span>
+                    </div>
+                    <span className="text-green-500 group-hover:translate-x-1 transition-transform">→</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
 
