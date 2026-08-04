@@ -54,6 +54,9 @@ const nextConfig: NextConfig = {
       'https://cdn.jsdelivr.net',
       'https://www.clarity.ms',
       'https://*.clarity.ms',
+      // JaaS external_api.js — loaded by the embedded conference room in live
+      // class sessions (see src/app/live/[id]/page.tsx).
+      'https://8x8.vc',
     ]
       .filter(Boolean)
       .join(' ')
@@ -83,8 +86,23 @@ const nextConfig: NextConfig = {
             value: 'strict-origin-when-cross-origin'
           },
           {
+            // Camera/mic/screen-share stay OFF for our own origin and everyone
+            // else; they are delegated ONLY to the JaaS video origin, which is
+            // the embedded conference room in live class sessions (8x8.vc sets
+            // the matching `allow` attributes on the iframe it creates).
+            // autoplay/fullscreen are delegated to the video embeds so the
+            // webcast player and conference behave normally.
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(self)'
+            value: [
+              'camera=("https://8x8.vc")',
+              'microphone=("https://8x8.vc")',
+              'display-capture=("https://8x8.vc")',
+              'autoplay=(self "https://8x8.vc" "https://www.youtube-nocookie.com" "https://www.youtube.com")',
+              'fullscreen=(self "https://8x8.vc" "https://www.youtube-nocookie.com" "https://www.youtube.com")',
+              'geolocation=()',
+              'interest-cohort=()',
+              'payment=(self)',
+            ].join(', ')
           },
           {
             key: 'Content-Security-Policy',
@@ -94,8 +112,11 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
-              "connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms",
-              "frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://tpc.googlesyndication.com https://ep2.adtrafficquality.google",
+              "connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc",
+              // Live class sessions frame video: YouTube for webcast mode,
+              // 8x8.vc for the embedded JaaS conference room. Without these the
+              // browser refuses the iframe ("This content is blocked").
+              "frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://tpc.googlesyndication.com https://ep2.adtrafficquality.google https://www.youtube-nocookie.com https://www.youtube.com https://8x8.vc",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
