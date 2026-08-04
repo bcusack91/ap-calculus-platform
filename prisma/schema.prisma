@@ -1016,6 +1016,7 @@ model Classroom {
   competitiveGrants CompetitiveGrant[]
   announcements     Announcement[]
   teacherLobbies    TeacherLobby[]         @relation("TeacherLobbyClassroom")
+  liveSessions      LiveSession[]
 
   curriculumPlans CurriculumPlan[]
   flashcardSets   FlashcardSet[]
@@ -1423,4 +1424,45 @@ model EmailSubscriber {
 
   @@index([email])
   @@index([source])
+}
+
+// ---------------------------------------------------------------------------
+// Live class sessions — teacher-run video sessions for a classroom.
+// CONFERENCE = everyone in an embedded Jitsi/JaaS room (small groups);
+// WEBCAST   = teacher streams one-way (unlisted YouTube embed) and students
+//             interact through the built-in chat, so viewer count is unlimited
+//             and costs nothing. See src/lib/live-session.ts.
+// ---------------------------------------------------------------------------
+
+model LiveSession {
+  id           String    @id @default(cuid())
+  classroomId  String
+  teacherId    String
+  mode         String // 'CONFERENCE' | 'WEBCAST'
+  status       String    @default("LIVE") // 'LIVE' | 'ENDED'
+  roomName     String // unguessable Jitsi room slug (conference mode)
+  streamVideoId String? // YouTube video id (webcast mode)
+  mutedUserIds Json? // string[] of userIds muted in this session's chat
+  startedAt    DateTime  @default(now())
+  endedAt      DateTime?
+
+  classroom Classroom            @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  messages  LiveSessionMessage[]
+
+  @@index([classroomId, status])
+  @@index([status])
+}
+
+model LiveSessionMessage {
+  id        String   @id @default(cuid())
+  sessionId String
+  userId    String
+  userName  String // denormalized display name — chat renders without N user lookups
+  body      String
+  hidden    Boolean  @default(false) // moderated away by the teacher
+  createdAt DateTime @default(now())
+
+  session LiveSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId, createdAt])
 }

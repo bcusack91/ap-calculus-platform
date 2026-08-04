@@ -236,3 +236,35 @@ are built and linked in the footer; they tell districts how to start. What's
 left is the human signature: sign their agreement, or the SDPC / NDPA national
 template (privacy.a4l.org). You can optionally register on the SDPC proactively
 so districts can find you.
+
+## Live class sessions — two one-time setups (both free)
+
+The "Go Live" button on each classroom page works today, but each mode gets
+better with a one-time setup:
+
+**Webcast mode (do this first — 10 minutes + a 24h wait):**
+1. On youtube.com (signed into the channel you'll teach from): profile photo →
+   Settings → Channel → Feature eligibility → enable features that require
+   phone verification. Then Create → Go live. The FIRST activation takes ~24
+   hours, so do it the day before your first class.
+2. Each class: Create → Go live → "Streaming from webcam" is fine → set
+   visibility to **Unlisted** → copy the link → paste it into the Go Live →
+   Webcast box on your classroom page. Students watch inside StudyMondo and
+   chat there; nobody needs a YouTube account.
+
+**Conference mode (optional upgrade — embeds the video room in-site):**
+Without this, conference mode still works: it opens a private Jitsi room in a
+new tab (sign in when Jitsi asks, that makes you moderator). To embed the room
+inside StudyMondo with automatic moderator/student roles and names:
+1. Create a free account at jaas.8x8.vc (free tier: unlimited minutes, up to
+   25 distinct participants/month — enough for one teacher's small groups).
+2. In the JaaS console: note your **App ID** (looks like
+   `vpaas-magic-cookie-…`), then API Keys → Add key → let it generate a
+   keypair and download the **private key**.
+3. In Vercel → Project → Settings → Environment Variables (Production), add:
+   - `JAAS_APP_ID` — the App ID
+   - `JAAS_API_KEY` — the key id shown for the key you created (kid)
+   - `JAAS_PRIVATE_KEY` — the private key PEM, base64-encoded
+     (`base64 -i Key.pk` in Terminal, paste the output)
+4. Redeploy. Conference mode switches to embedded automatically — no code
+   change.

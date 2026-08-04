@@ -9,6 +9,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import Gradebook from '@/components/Gradebook'
 import { StandardsMastery } from '@/components/StandardsMastery'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
+import LiveSessionTeacherCard from '@/components/LiveSessionTeacherCard'
 import StudentReportModal from '@/components/StudentReportModal'
 
 interface Member {
@@ -829,6 +830,9 @@ export default function ClassroomDetailPage() {
             </button>
           </div>
         )}
+
+        {/* Live class sessions — conference or webcast, see LiveSessionTeacherCard */}
+        <LiveSessionTeacherCard classroomId={classroomId} />
 
         {/* Tabs */}
         <div className="flex gap-1 mb-6 bg-white dark:bg-gray-800 rounded-xl p-1 shadow overflow-x-auto">

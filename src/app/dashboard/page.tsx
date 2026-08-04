@@ -9,6 +9,7 @@ import { ClipboardList, Stethoscope, FlaskConical, Rocket, BookOpen, Zap, Trophy
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
+import LiveNowBanner from '@/components/LiveNowBanner'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
@@ -601,6 +602,9 @@ function DashboardContent() {
             <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Day Streak</div>
           </div>
         </div>
+
+        {/* Live class sessions — shows only while an enrolled class is live */}
+        <LiveNowBanner />
 
         {/* Pending Assignments */}
         {pendingAssignments > 0 && (

@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
+import LiveNowBanner from '@/components/LiveNowBanner'
 
 interface AssignmentItem {
   id: string
@@ -165,6 +166,9 @@ export default function StudentAssignmentsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container py-8 sm:py-12 max-w-4xl mx-auto px-4">
+        {/* Live class sessions — shows only while an enrolled class is live */}
+        <LiveNowBanner />
+
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
           <div>
