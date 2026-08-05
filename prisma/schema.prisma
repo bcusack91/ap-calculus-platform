@@ -1443,11 +1443,14 @@ model LiveSession {
   roomName     String // unguessable Jitsi room slug (conference mode)
   streamVideoId String? // YouTube video id (webcast mode)
   mutedUserIds Json? // string[] of userIds muted in this session's chat
+  boardMode    String    @default("OFF") // class whiteboard: 'OFF' | 'TEACHER' (students watch) | 'SHARED' (students draw too)
+  padsEnabled  Boolean   @default(false) // per-student pads + teacher gallery
   startedAt    DateTime  @default(now())
   endedAt      DateTime?
 
   classroom Classroom            @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   messages  LiveSessionMessage[]
+  boards    LiveBoard[]
 
   @@index([classroomId, status])
   @@index([status])
@@ -1465,4 +1468,23 @@ model LiveSessionMessage {
   session LiveSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 
   @@index([sessionId, createdAt])
+}
+
+// A whiteboard scene in a live session. ownerKey 'class' = the shared class
+// board; otherwise the owning student's userId (their personal pad). scene is
+// { elements: ExcalidrawElement[], files: BinaryFiles } — merged element-wise
+// on write (see src/lib/board-merge.ts), so concurrent drawers converge.
+model LiveBoard {
+  id        String   @id @default(cuid())
+  sessionId String
+  ownerKey  String // 'class' | userId
+  ownerName String // denormalized display name for the teacher's pad gallery
+  scene     Json
+  rev       Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  session LiveSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, ownerKey])
+  @@index([sessionId, updatedAt])
 }

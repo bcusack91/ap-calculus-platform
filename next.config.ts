@@ -121,6 +121,9 @@ const nextConfig: NextConfig = {
               // 8x8.vc for the embedded JaaS conference room. Without these the
               // browser refuses the iframe ("This content is blocked").
               "frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://tpc.googlesyndication.com https://ep2.adtrafficquality.google https://www.youtube-nocookie.com https://www.youtube.com https://8x8.vc",
+              // Excalidraw (live-session whiteboards) spawns same-origin/blob
+              // web workers; without this they fall back to default-src.
+              "worker-src 'self' blob:",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",

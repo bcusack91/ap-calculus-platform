@@ -57,6 +57,8 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
     endedAt: live.endedAt,
     classroomId: live.classroom.id,
     classroomName: live.classroom.name,
+    boardMode: live.boardMode,
+    padsEnabled: live.padsEnabled,
     youAreTeacher: isTeacher,
     youAreMuted: mutedList(live.mutedUserIds).includes(userId),
     displayName,

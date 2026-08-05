@@ -4,6 +4,13 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import nextDynamic from 'next/dynamic'
+
+// Whiteboards pull in Excalidraw (~a MB) — load only when a session page opens.
+const BoardSection = nextDynamic(() => import('@/components/LiveBoards'), {
+  ssr: false,
+  loading: () => null,
+})
 
 /**
  * Live class session page — /live/[id].
@@ -31,6 +38,8 @@ interface SessionInfo {
   startedAt: string
   classroomId: string
   classroomName: string
+  boardMode: 'OFF' | 'TEACHER' | 'SHARED'
+  padsEnabled: boolean
   youAreTeacher: boolean
   youAreMuted: boolean
   displayName: string
@@ -190,6 +199,15 @@ export default function LiveSessionPage() {
           <ChatPanel sessionId={session.id} youAreTeacher={session.youAreTeacher} initiallyMuted={session.youAreMuted} onSessionEnded={load} />
         </div>
       )}
+
+      {/* Whiteboards — class board + student pads, teacher-controlled. Renders
+          nothing for students until the teacher turns a board on. */}
+      <BoardSection
+        sessionId={session.id}
+        youAreTeacher={session.youAreTeacher}
+        initialBoardMode={session.boardMode ?? 'OFF'}
+        initialPadsEnabled={session.padsEnabled ?? false}
+      />
     </Shell>
   )
 }

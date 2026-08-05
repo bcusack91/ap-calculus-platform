@@ -6,8 +6,11 @@ import { mutedList } from '@/lib/live-session'
 interface Ctx { params: Promise<{ id: string }> }
 
 /**
- * POST /api/live-sessions/[id]/moderate — teacher-only chat moderation.
- * body: { action: 'hide'|'unhide', messageId } or { action: 'mute'|'unmute', userId }
+ * POST /api/live-sessions/[id]/moderate — teacher-only session controls.
+ * body: { action: 'hide'|'unhide', messageId }
+ *     | { action: 'mute'|'unmute', userId }
+ *     | { action: 'board-mode', mode: 'OFF'|'TEACHER'|'SHARED' }   (class whiteboard)
+ *     | { action: 'pads', enabled: boolean }                        (per-student pads)
  */
 export async function POST(req: NextRequest, { params }: Ctx) {
   const { id } = await params
@@ -55,6 +58,21 @@ export async function POST(req: NextRequest, { params }: Ctx) {
       data: { mutedUserIds: [...current] },
     })
     return NextResponse.json({ ok: true, muted: [...current] })
+  }
+
+  if (action === 'board-mode') {
+    const mode = body?.mode
+    if (mode !== 'OFF' && mode !== 'TEACHER' && mode !== 'SHARED') {
+      return NextResponse.json({ error: 'mode must be OFF, TEACHER, or SHARED' }, { status: 400 })
+    }
+    await prisma.liveSession.update({ where: { id }, data: { boardMode: mode } })
+    return NextResponse.json({ ok: true, boardMode: mode })
+  }
+
+  if (action === 'pads') {
+    const enabled = body?.enabled === true
+    await prisma.liveSession.update({ where: { id }, data: { padsEnabled: enabled } })
+    return NextResponse.json({ ok: true, padsEnabled: enabled })
   }
 
   return NextResponse.json({ error: 'Unknown action' }, { status: 400 })
