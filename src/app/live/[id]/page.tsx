@@ -63,7 +63,12 @@ export default function LiveSessionPage() {
       .then(async (r) => {
         const d = await r.json().catch(() => ({}))
         if (!r.ok) throw new Error(d.error || 'Could not load this session')
-        setSession(d.session)
+        // Keep the conference config we already have. Every GET mints a FRESH
+        // jwt, so replacing it wholesale on each status poll changed the props
+        // feeding the embedded room and tore the whole conference down and
+        // rebuilt it — killing any in-flight camera/mic permission prompt. The
+        // room never changes for a given session id, so the first copy stands.
+        setSession((prev) => (prev?.conference ? { ...d.session, conference: prev.conference } : d.session))
         setError(null)
       })
       .catch((e) => setError(e instanceof Error ? e.message : 'Could not load this session'))
@@ -197,6 +202,36 @@ function Shell({ children, wide = false }: { children: React.ReactNode; wide?: b
   )
 }
 
+/**
+ * Loads the JaaS external_api.js once per app id, shared across mounts.
+ * Appending a fresh <script> per mount raced with itself on client-side
+ * navigation (the tag was never cleaned up), which is why a soft navigation
+ * could fail while a hard refresh worked.
+ */
+const jitsiScriptLoads = new Map<string, Promise<void>>()
+
+function loadJitsiScript(appId: string): Promise<void> {
+  if (window.JitsiMeetExternalAPI) return Promise.resolve()
+  const existing = jitsiScriptLoads.get(appId)
+  if (existing) return existing
+  const load = new Promise<void>((resolve, reject) => {
+    const src = `https://8x8.vc/${appId}/external_api.js`
+    const already = document.querySelector<HTMLScriptElement>(`script[src="${src}"]`)
+    const script = already ?? document.createElement('script')
+    script.addEventListener('load', () => resolve())
+    script.addEventListener('error', () => reject(new Error('external_api.js failed to load')))
+    if (!already) {
+      script.src = src
+      script.async = true
+      document.body.appendChild(script)
+    }
+  })
+  // A failure must not be cached forever, or a retry could never succeed.
+  jitsiScriptLoads.set(appId, load)
+  load.catch(() => jitsiScriptLoads.delete(appId))
+  return load
+}
+
 /** Embedded JaaS conference. The JWT already encodes moderator vs participant. */
 function JitsiEmbed({
   conference,
@@ -207,6 +242,19 @@ function JitsiEmbed({
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [failed, setFailed] = useState(false)
+  // Read through refs so a re-render with a freshly minted jwt can never
+  // retrigger the mount effect: rebuilding the room mid-call drops the
+  // participant and cancels any camera/mic prompt they were answering. The
+  // initial values come from useRef itself, so the first mount is correct even
+  // before the sync effect below runs.
+  const jwtRef = useRef(conference.jwt)
+  const nameRef = useRef(displayName)
+  useEffect(() => {
+    jwtRef.current = conference.jwt
+    nameRef.current = displayName
+  }, [conference.jwt, displayName])
+
+  const { domain, appId, room } = conference
 
   useEffect(() => {
     const node = containerRef.current
@@ -214,37 +262,39 @@ function JitsiEmbed({
     let api: { dispose: () => void } | null = null
     let cancelled = false
 
-    const mount = () => {
-      if (cancelled || !window.JitsiMeetExternalAPI) return
-      api = new window.JitsiMeetExternalAPI(conference.domain, {
-        roomName: conference.room,
-        jwt: conference.jwt,
-        parentNode: node,
-        userInfo: { displayName },
-        configOverwrite: { prejoinConfig: { enabled: true }, disableDeepLinking: true },
+    loadJitsiScript(appId)
+      .then(() => {
+        if (cancelled || !window.JitsiMeetExternalAPI) return
+        api = new window.JitsiMeetExternalAPI(domain, {
+          roomName: room,
+          jwt: jwtRef.current,
+          parentNode: node,
+          userInfo: { displayName: nameRef.current },
+          configOverwrite: { prejoinConfig: { enabled: true }, disableDeepLinking: true },
+        })
       })
-    }
+      .catch(() => { if (!cancelled) setFailed(true) })
 
-    if (window.JitsiMeetExternalAPI) {
-      mount()
-    } else {
-      const script = document.createElement('script')
-      script.src = `https://8x8.vc/${conference.appId}/external_api.js`
-      script.async = true
-      script.onload = mount
-      script.onerror = () => { if (!cancelled) setFailed(true) }
-      document.body.appendChild(script)
-    }
     return () => {
       cancelled = true
       api?.dispose()
     }
-  }, [conference.domain, conference.appId, conference.room, conference.jwt, displayName])
+    // Mount once per room — jwt/displayName deliberately excluded (see refs).
+  }, [domain, appId, room])
 
   if (failed) {
     return (
-      <div className="rounded-2xl border border-red-200 bg-white p-8 text-center text-sm text-red-700 dark:border-red-800 dark:bg-gray-800 dark:text-red-300">
-        The video service failed to load — check your connection (or a school network filter) and refresh.
+      <div className="rounded-2xl border border-red-200 bg-white p-8 text-center dark:border-red-800 dark:bg-gray-800">
+        <p className="mb-1 font-semibold text-gray-900 dark:text-white">The video room couldn&apos;t load</p>
+        <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+          Usually a stale page or a browser extension blocking scripts (ad blockers, privacy blockers, or a school network filter).
+        </p>
+        <button
+          onClick={() => window.location.reload()}
+          className="rounded-xl bg-accent px-6 py-2.5 font-semibold text-white shadow transition hover:opacity-90"
+        >
+          Reload the page
+        </button>
       </div>
     )
   }
