@@ -86,17 +86,21 @@ const nextConfig: NextConfig = {
             value: 'strict-origin-when-cross-origin'
           },
           {
-            // Camera/mic/screen-share stay OFF for our own origin and everyone
-            // else; they are delegated ONLY to the JaaS video origin, which is
-            // the embedded conference room in live class sessions (8x8.vc sets
-            // the matching `allow` attributes on the iframe it creates).
+            // Camera/mic/screen-share are for the embedded JaaS conference room
+            // (8x8.vc) in live class sessions. `self` MUST be in these
+            // allowlists: Chrome treats delegation as a chain, so a feature the
+            // top-level document is not allowed for its own origin is disabled
+            // for every child frame too — allow attributes notwithstanding.
+            // Delegation-only lists like camera=("https://8x8.vc") silently
+            // deny the camera INSIDE the 8x8 iframe with no prompt (Safari
+            // doesn't enforce this header, which is how the gap hid).
             // autoplay/fullscreen are delegated to the video embeds so the
             // webcast player and conference behave normally.
             key: 'Permissions-Policy',
             value: [
-              'camera=("https://8x8.vc")',
-              'microphone=("https://8x8.vc")',
-              'display-capture=("https://8x8.vc")',
+              'camera=(self "https://8x8.vc")',
+              'microphone=(self "https://8x8.vc")',
+              'display-capture=(self "https://8x8.vc")',
               'autoplay=(self "https://8x8.vc" "https://www.youtube-nocookie.com" "https://www.youtube.com")',
               'fullscreen=(self "https://8x8.vc" "https://www.youtube-nocookie.com" "https://www.youtube.com")',
               'geolocation=()',
