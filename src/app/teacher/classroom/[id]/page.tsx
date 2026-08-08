@@ -10,6 +10,7 @@ import Gradebook from '@/components/Gradebook'
 import { StandardsMastery } from '@/components/StandardsMastery'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 import LiveSessionTeacherCard from '@/components/LiveSessionTeacherCard'
+import MCATClassPlan from '@/components/MCATClassPlan'
 import StudentReportModal from '@/components/StudentReportModal'
 
 interface Member {
@@ -121,7 +122,7 @@ interface AssignmentCreateBody {
   topicSlug?: string
 }
 
-type TabType = 'members' | 'assignments' | 'announcements' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'settings'
+type TabType = 'members' | 'assignments' | 'announcements' | 'competitions' | 'performance' | 'gradebook' | 'standards' | 'mcatplan' | 'settings'
 
 export default function ClassroomDetailPage() {
   const router = useRouter()
@@ -137,7 +138,7 @@ export default function ClassroomDetailPage() {
   const searchParams = useSearchParams()
   const tabParam = searchParams.get('tab')
   const isTab = (v: string | null): v is TabType =>
-    !!v && ['members', 'assignments', 'gradebook', 'performance', 'standards', 'announcements', 'competitions', 'settings'].includes(v)
+    !!v && ['members', 'assignments', 'gradebook', 'performance', 'standards', 'announcements', 'competitions', 'mcatplan', 'settings'].includes(v)
   const [activeTab, setActiveTabState] = useState<TabType>(isTab(tabParam) ? tabParam : 'members')
   // Roster rows open the student's full report — the roster is where a teacher
   // is already looking when they wonder how someone is doing.
@@ -742,6 +743,7 @@ export default function ClassroomDetailPage() {
     { key: 'performance', label: 'Performance', icon: '📊' },
     { key: 'gradebook', label: 'Gradebook', icon: '📒' },
     { key: 'standards', label: 'Standards', icon: '🎯' },
+    { key: 'mcatplan', label: 'MCAT Plan', icon: '🩺' },
     { key: 'settings', label: 'Settings', icon: '⚙️' },
   ]
 
@@ -1362,6 +1364,8 @@ export default function ClassroomDetailPage() {
         )}
 
         {/* Announcements Tab */}
+        {activeTab === 'mcatplan' && <MCATClassPlan classroomId={classroomId} />}
+
         {activeTab === 'announcements' && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Announcements</h2>
