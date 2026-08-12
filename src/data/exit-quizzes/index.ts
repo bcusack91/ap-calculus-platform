@@ -108,15 +108,51 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-cell-biology-mcat': () => import('./mcat-biology'), // alias
   'mcat-molecular-biology-mcat': () => import('./mcat-biology'), // alias
   'mcat-microbiology-mcat': () => import('./mcat-biology'), // alias
+  // Subtopic aliases → the shared bio pool, so the diagnostic's specific
+  // recommendations (see mcat-practice/subtopic-map.ts) have a working exit
+  // quiz and the remediation credit loop can clear them — the same pattern
+  // the general-chemistry subtopics above already use.
+  'mcat-cell-biology-organelles-mcat': () => import('./mcat-biology'),
+  'mcat-cell-biology-membrane-transport-mcat': () => import('./mcat-biology'),
+  'mcat-cell-biology-signaling-mcat': () => import('./mcat-biology'),
+  'mcat-cell-biology-cell-cycle-mcat': () => import('./mcat-biology'),
+  'mcat-molecular-biology-dna-replication-mcat': () => import('./mcat-biology'),
+  'mcat-molecular-biology-transcription-mcat': () => import('./mcat-biology'),
+  'mcat-molecular-biology-translation-mcat': () => import('./mcat-biology'),
+  'mcat-molecular-biology-biotechnology-mcat': () => import('./mcat-biology'),
+  'mcat-microbiology-bacteria-mcat': () => import('./mcat-biology'),
+  'mcat-microbiology-viruses-mcat': () => import('./mcat-biology'),
+  'mcat-microbiology-genetics-mcat': () => import('./mcat-biology'),
+  'mcat-microbiology-antimicrobials-mcat': () => import('./mcat-biology'),
   'mcat-organ-systems': () => import('./mcat-organ-systems'),
   'mcat-organ-systems-mcat': () => import('./mcat-organ-systems'), // alias
   'mcat-anatomy-physiology-mcat': () => import('./mcat-organ-systems'), // alias
+  'mcat-organ-systems-cardiovascular-mcat': () => import('./mcat-organ-systems'),
+  'mcat-organ-systems-respiratory-mcat': () => import('./mcat-organ-systems'),
+  'mcat-organ-systems-renal-mcat': () => import('./mcat-organ-systems'),
+  'mcat-organ-systems-endocrine-nervous-mcat': () => import('./mcat-organ-systems'),
+  'mcat-anatomy-physiology-musculoskeletal-mcat': () => import('./mcat-organ-systems'),
+  'mcat-anatomy-physiology-reproductive-mcat': () => import('./mcat-organ-systems'),
+  'mcat-anatomy-physiology-sensory-mcat': () => import('./mcat-organ-systems'),
+  'mcat-anatomy-physiology-embryology-mcat': () => import('./mcat-organ-systems'),
   'mcat-genetics-evolution': () => import('./mcat-genetics-evolution'),
   'mcat-genetics-evolution-mcat': () => import('./mcat-genetics-evolution'), // alias
+  'mcat-genetics-evolution-mendelian-mcat': () => import('./mcat-genetics-evolution'),
+  'mcat-genetics-evolution-population-genetics-mcat': () => import('./mcat-genetics-evolution'),
+  'mcat-genetics-evolution-natural-selection-mcat': () => import('./mcat-genetics-evolution'),
+  'mcat-genetics-evolution-immunology-mcat': () => import('./mcat-genetics-evolution'),
   // Psych/Soc
   'mcat-psychology-sociology': () => import('./mcat-psychology-sociology'),
   'mcat-psychology-behavior-mcat': () => import('./mcat-psychology-sociology'), // alias
   'mcat-sociology-mcat': () => import('./mcat-psychology-sociology'), // alias
+  'mcat-psychology-behavior-sensation-perception-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-psychology-behavior-learning-memory-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-psychology-behavior-cognition-language-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-psychology-behavior-development-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-sociology-structure-stratification-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-sociology-culture-socialization-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-sociology-groups-interaction-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-sociology-health-disparities-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-science-passage-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
   'mcat-test-day-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
 

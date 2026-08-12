@@ -6,6 +6,7 @@
  */
 
 import { generateExitQuiz } from '../exit-quizzes'
+import { matchSubtopic } from './subtopic-map'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -1888,7 +1889,41 @@ export function scoreMCATDiagnostic(
     'mcat-psychology-sociology': 'mcat-psychology-behavior-mcat',
   }
   const canonicalizeTopicSlug = (s: string) => CANONICAL_TOPIC_MAP[s] ?? s
-  const recommendedTopics = domainResults
+
+  // SPECIFIC recommendations first: attribute each missed question to a
+  // concrete curriculum topic ("Thermodynamics", "Membrane Transport") via
+  // the per-domain concept map, so students are told exactly what to study
+  // instead of just "work on Chemistry". Misses vote for their topic; topics
+  // from weaker domains rank first, then by vote count.
+  const missVotes = new Map<string, { slug: string; name: string; domainId: string; count: number }>()
+  questions.forEach((q, i) => {
+    const answer = answers[i]
+    const missed = answer === undefined || answer !== q.correctAnswer
+    if (!missed) return
+    const rule = matchSubtopic(q.domain, q.question, q.options, q.explanation)
+    if (!rule) return
+    const entry = missVotes.get(rule.slug) ?? { slug: rule.slug, name: rule.title, domainId: q.domain, count: 0 }
+    entry.count++
+    missVotes.set(rule.slug, entry)
+  })
+  const levelRank = (id: string) => {
+    const level = domainResults.find(d => d.domainId === id)?.level
+    return level === 'weak' ? 0 : level === 'moderate' ? 1 : 2
+  }
+  const specificTopics = [...missVotes.values()]
+    .sort((a, b) =>
+      levelRank(a.domainId) - levelRank(b.domainId) ||
+      b.count - a.count ||
+      examWeight(b.domainId) - examWeight(a.domainId))
+    .map(t => ({
+      slug: t.slug,
+      name: t.name,
+      priority: levelRank(t.domainId) === 0 || t.count >= 2 ? 'high' as const : 'medium' as const,
+    }))
+
+  // Domain-level fallback (previous behavior) fills any remaining slots —
+  // never wrong, just less specific than a direct miss attribution.
+  const domainTopics = domainResults
     .filter(d => d.level === 'weak' || d.level === 'moderate')
     .sort((a, b) => {
       if (a.level !== b.level) return a.level === 'weak' ? -1 : 1
@@ -1902,7 +1937,9 @@ export function scoreMCATDiagnostic(
         priority: d.level === 'weak' ? 'high' as const : 'medium' as const,
       }))
     })
-    // Dedupe: multiple legacy slugs can canonicalize to the same topic.
+
+  const recommendedTopics = [...specificTopics, ...domainTopics]
+    // Dedupe: multiple sources can produce the same topic.
     .filter((t, i, arr) => arr.findIndex(x => x.slug === t.slug) === i)
 
   const feedbackLoopQuestions = questions
