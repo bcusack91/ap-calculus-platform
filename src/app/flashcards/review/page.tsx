@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 
 interface ReviewStats {
   total: number
@@ -73,6 +74,9 @@ export default function FlashcardReviewDashboard() {
         <p className="text-lg text-muted-foreground mb-8">
           Master your knowledge with Anki-style spaced repetition
         </p>
+
+        {/* Deck scope — switching modes swaps the whole deck, so refetch */}
+        <StudyModeSwitcher onChanged={() => { setLoading(true); void loadStats() }} />
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">

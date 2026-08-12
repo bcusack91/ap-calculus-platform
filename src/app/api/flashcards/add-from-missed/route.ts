@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { getActiveStudyContext } from '@/lib/study-context'
 
 /**
  * POST /api/flashcards/add-from-missed
@@ -109,9 +110,13 @@ export async function POST(request: Request) {
     if (flashcardIds.length > 0) {
       // Fetch all existing progress rows for this user/flashcard set in one
       // query, then batch-create only the missing ones.
+      // Cards join the deck of the ACTIVE study mode — a diagnostic taken in
+      // MCAT class mode feeds the MCAT deck, not the personal one.
+      const context = await getActiveStudyContext(session.user.id)
       const existing = await prisma.flashcardProgress.findMany({
         where: {
           userId: session.user.id,
+          context,
           flashcardId: { in: flashcardIds },
         },
         select: { flashcardId: true },
@@ -124,6 +129,7 @@ export async function POST(request: Request) {
         .map(flashcardId => ({
           userId: session.user.id,
           flashcardId,
+          context,
           easeFactor: 2.5,
           interval: 0,
           repetitions: 0,

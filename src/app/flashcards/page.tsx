@@ -3,6 +3,7 @@ import { COURSE_COUNT, TOPIC_COUNT_LABEL } from '@/lib/site-stats'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
+import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -58,6 +59,8 @@ export default async function FlashcardsPage({
             ← View all flashcard categories
           </Link>
         )}
+
+        <StudyModeSwitcher />
 
         {/* Quick Action Button */}
         <div className="mb-8">

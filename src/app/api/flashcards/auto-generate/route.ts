@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getActiveStudyContext } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 
 /**
@@ -29,6 +30,9 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // Progress lands in the ACTIVE study mode's deck.
+    const context = await getActiveStudyContext(session.user.id)
+
     // Get the topic with its content
     const topic = await prisma.topic.findUnique({
       where: { id: topicId },
@@ -51,14 +55,16 @@ export async function POST(req: NextRequest) {
       for (const flashcard of topic.flashcards) {
         await prisma.flashcardProgress.upsert({
           where: {
-            userId_flashcardId: {
+            userId_flashcardId_context: {
               userId: session.user.id,
-              flashcardId: flashcard.id
+              flashcardId: flashcard.id,
+              context
             }
           },
           create: {
             userId: session.user.id,
             flashcardId: flashcard.id,
+            context,
             easeFactor: 2.5,
             interval: 0,
             repetitions: 0,
@@ -111,6 +117,7 @@ export async function POST(req: NextRequest) {
           data: {
             userId: session.user.id,
             flashcardId: flashcard.id,
+            context,
             easeFactor: 2.5,
             interval: 0,
             repetitions: 0,

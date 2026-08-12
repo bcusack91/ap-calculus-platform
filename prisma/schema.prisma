@@ -16,6 +16,7 @@ model User {
   image                  String?
   password               String?
   role                   UserRole                      @default(FREE)
+  studyContext           String                        @default("personal") // active flashcard study mode — see src/lib/study-context.ts
   stripeCustomerId       String?                       @unique
   stripeSubscriptionId   String?                       @unique
   stripePriceId          String?
@@ -382,6 +383,11 @@ model FlashcardProgress {
   id               String    @id @default(cuid())
   userId           String
   flashcardId      String
+  /// Study context this progress belongs to: 'personal' (default deck),
+  /// 'class:<classroomId>' (a class the student joined), or
+  /// 'course:<courseSlug>' (a self-created course study mode). Each context is
+  /// an independent deck — same card, separate SRS state. See src/lib/study-context.ts.
+  context          String    @default("personal")
   easeFactor       Float     @default(2.5)
   interval         Int       @default(0)
   isMinuteInterval Boolean   @default(false) // True if interval is in minutes, false if in days
@@ -392,8 +398,9 @@ model FlashcardProgress {
   flashcard        Flashcard @relation(fields: [flashcardId], references: [id], onDelete: Cascade)
   user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([userId, flashcardId])
+  @@unique([userId, flashcardId, context])
   @@index([userId, nextReview])
+  @@index([userId, context, nextReview])
 }
 
 // Teacher-authored flashcard sets (manual, CSV/paste import, or AI-generated).

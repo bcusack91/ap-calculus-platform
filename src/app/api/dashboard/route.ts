@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getActiveStudyContext } from '@/lib/study-context'
 import { cached, dashboardCacheKey } from '@/lib/redis'
 import { displayStreak } from '@/lib/streak'
 
@@ -100,10 +101,13 @@ async function buildDashboard(userId: string) {
       }),
     ])
 
-    // Compute due flashcards count
+    // Compute due flashcards count — scoped to the active study mode, since
+    // this number is the "go review now" prompt. (The lifetime studied stat
+    // above deliberately stays global across modes.)
     const dueFlashcards = await prisma.flashcardProgress.count({
       where: {
         userId,
+        context: await getActiveStudyContext(userId),
         nextReview: { lte: new Date() },
       },
     })

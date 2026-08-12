@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getActiveStudyContext } from '@/lib/study-context'
 import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
 import { progressSaveSchema, parseBody } from '@/lib/validations'
 import { invalidateCache, dashboardCacheKey } from '@/lib/redis'
@@ -74,6 +75,9 @@ export async function POST(request: Request) {
 
     const topicDbId = topic.id
     const userId = session.user.id
+    // Lesson-completion flashcard unlocks land in the ACTIVE study mode's deck
+    // (finish a lesson in MCAT class mode -> MCAT deck gets the cards).
+    const studyContext = await getActiveStudyContext(userId)
 
     // All progress + flashcard writes commit or roll back together. The
     // never-downgrade resolution happens INSIDE the transaction behind a row
@@ -212,6 +216,7 @@ export async function POST(request: Request) {
               data: createdFlashcards.map((fc) => ({
                 userId,
                 flashcardId: fc.id,
+                context: studyContext,
                 easeFactor: 2.5,
                 interval: 0,
                 repetitions: 0,
@@ -252,6 +257,7 @@ export async function POST(request: Request) {
           const existingProgress = await tx.flashcardProgress.findMany({
             where: {
               userId,
+              context: studyContext,
               flashcard: {
                 topicId: fullTopic.id
               }
@@ -276,6 +282,7 @@ export async function POST(request: Request) {
               data: uninitializedCards.map((flashcard) => ({
                 userId,
                 flashcardId: flashcard.id,
+                context: studyContext,
                 easeFactor: 2.5,
                 interval: 0,
                 repetitions: 0,

@@ -5,6 +5,7 @@ import { prisma } from '@/lib/prisma'
 import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
 import { flashcardReviewSchema, parseBody } from '@/lib/validations'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
+import { getActiveStudyContext } from '@/lib/study-context'
 
 /**
  * POST /api/flashcards/review
@@ -31,12 +32,17 @@ export async function POST(req: NextRequest) {
     }
     const { flashcardId, rating } = parsed.data
 
+    // Reviews accrue to the user's ACTIVE study mode (personal / class /
+    // course) — resolved server-side so each mode is an independent deck.
+    const context = await getActiveStudyContext(session.user.id)
+
     // Get current progress (may not exist yet for a brand-new card)
     const progress = await prisma.flashcardProgress.findUnique({
       where: {
-        userId_flashcardId: {
+        userId_flashcardId_context: {
           userId: session.user.id,
-          flashcardId: flashcardId
+          flashcardId: flashcardId,
+          context
         }
       }
     })
@@ -65,14 +71,16 @@ export async function POST(req: NextRequest) {
     // Upsert progress: create the row on a first review, update it otherwise.
     const updatedProgress = await prisma.flashcardProgress.upsert({
       where: {
-        userId_flashcardId: {
+        userId_flashcardId_context: {
           userId: session.user.id,
-          flashcardId: flashcardId
+          flashcardId: flashcardId,
+          context
         }
       },
       create: {
         userId: session.user.id,
         flashcardId: flashcardId,
+        context,
         easeFactor: result.easeFactor,
         interval: result.interval,
         isMinuteInterval: result.isMinuteInterval,
@@ -144,10 +152,14 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url)
     const topicId = searchParams.get('topicId')
 
+    // The review queue shows only the ACTIVE study mode's deck.
+    const context = await getActiveStudyContext(session.user.id)
+
     // Build query
     const now = new Date()
     const where: Prisma.FlashcardProgressWhereInput = {
       userId: session.user.id,
+      context,
       nextReview: {
         lte: now // Cards due now or in the past
       }
@@ -183,7 +195,8 @@ export async function GET(req: NextRequest) {
     // Calculate stats
     const totalCards = await prisma.flashcardProgress.count({
       where: {
-        userId: session.user.id
+        userId: session.user.id,
+        context
       }
     })
 
