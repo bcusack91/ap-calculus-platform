@@ -4,17 +4,21 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 
 /**
- * "MCAT Plan" tab on the teacher classroom page — the class-level half of the
- * weekly MCAT loop. Students take the weekly diagnostic and study their
- * personal top-5 as homework (the retake gate enforces it); this panel pools
- * every student's latest attempt and ranks what the CLASS most needs, sized to
- * the week's four 45-minute teaching blocks (2 meetings x 90 min).
+ * "Class Plan" tab on the teacher classroom page — works for any course with
+ * a diagnostic (MCAT, SAT, every AP, core math). Students take the course
+ * diagnostic and study their personal recommendations as homework; this panel
+ * pools every student's latest attempt and ranks what the CLASS most needs,
+ * sized to four 45-minute teaching blocks (2 meetings x 90 min).
  *
- * The top 4 are highlighted as this week's blocks; ranks 5-8 are listed so the
- * teacher can overrule the arithmetic. Each block links the lesson (present it
- * over a live session) and one-click-assigns exit-quiz practice at the same
- * 80% bar the retake gate uses.
+ * The course selector only offers courses this roster actually has attempts
+ * for; it auto-picks the one with the most. Top 4 topics are this week's
+ * blocks; ranks 5-8 are swap candidates. Each block links the lesson (present
+ * it over a live session) and one-click-assigns exit-quiz practice at 80%.
+ * For the MCAT (gated), the roster also shows whether each student's next
+ * weekly diagnostic is unlocked — homework completion IS the unlock.
  */
+
+interface AvailableCourse { key: string; label: string; gated: boolean; studentsWithAttempts: number }
 
 interface ClassTopic {
   slug: string
@@ -31,28 +35,46 @@ interface StudentRow {
   name: string
   takenAt: string | null
   stale: boolean
-  estimatedScore: number | null
-  percentage: number | null
+  scoreLabel: string | null
   recommendedCount: number
   pendingCount: number
   canRetake: boolean
 }
 
 interface PlanData {
+  course: { key: string; label: string; gated: boolean }
   classTopics: ClassTopic[]
   students: StudentRow[]
   studentsWithAttempts: number
   totalStudents: number
 }
 
-export default function MCATClassPlan({ classroomId }: { classroomId: string }) {
+export default function ClassPlan({ classroomId }: { classroomId: string }) {
+  const [available, setAvailable] = useState<AvailableCourse[] | null>(null)
+  const [courseKey, setCourseKey] = useState<string | null>(null)
   const [data, setData] = useState<PlanData | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [assigned, setAssigned] = useState<Set<string>>(new Set())
   const [assigning, setAssigning] = useState<string | null>(null)
 
-  const load = useCallback(() => {
-    fetch(`/api/teacher/classrooms/${classroomId}/mcat-class-plan`, { cache: 'no-store' })
+  // Discover which courses this roster has diagnostic data for.
+  useEffect(() => {
+    let active = true
+    fetch(`/api/teacher/classrooms/${classroomId}/class-plan`, { cache: 'no-store' })
+      .then(async (r) => {
+        const d = await r.json().catch(() => ({}))
+        if (!r.ok) throw new Error(d.error || 'Could not load the class plan')
+        if (!active) return
+        setAvailable(d.availableCourses ?? [])
+        if (d.availableCourses?.length > 0) setCourseKey((k) => k ?? d.availableCourses[0].key)
+      })
+      .catch((e) => { if (active) setError(e instanceof Error ? e.message : 'Could not load the class plan') })
+    return () => { active = false }
+  }, [classroomId])
+
+  const loadPlan = useCallback(() => {
+    if (!courseKey) return
+    fetch(`/api/teacher/classrooms/${classroomId}/class-plan?course=${encodeURIComponent(courseKey)}`, { cache: 'no-store' })
       .then(async (r) => {
         const d = await r.json().catch(() => ({}))
         if (!r.ok) throw new Error(d.error || 'Could not load the class plan')
@@ -60,11 +82,12 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
         setError(null)
       })
       .catch((e) => setError(e instanceof Error ? e.message : 'Could not load the class plan'))
-  }, [classroomId])
+  }, [classroomId, courseKey])
 
-  useEffect(() => { load() }, [load])
+  useEffect(() => { loadPlan() }, [loadPlan])
 
   const assignPractice = async (topic: ClassTopic) => {
+    if (!data) return
     setAssigning(topic.slug)
     try {
       const due = new Date()
@@ -74,11 +97,11 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: `Practice: ${topic.name}`,
-          description: 'Assigned from this week’s MCAT class plan — pass the exit quiz to complete.',
+          description: `Assigned from this week’s ${data.course.label} class plan — pass the exit quiz to complete.`,
           type: 'QUIZ',
           topicSlug: topic.slug,
           dueDate: due.toISOString(),
-          requiredScore: 0.8, // same bar as the diagnostic retake gate
+          requiredScore: 0.8,
         }),
       })
       if (r.ok) setAssigned(prev => new Set(prev).add(topic.slug))
@@ -90,7 +113,7 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
   if (error) {
     return <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 text-sm text-red-600 dark:text-red-400">{error}</div>
   }
-  if (!data) {
+  if (available === null || (courseKey && !data)) {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 space-y-3">
         <div className="h-6 w-64 animate-pulse rounded bg-gray-200 dark:bg-gray-700" />
@@ -99,15 +122,15 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
     )
   }
 
-  if (data.studentsWithAttempts === 0) {
+  if (available.length === 0 || !data) {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
-        <p className="mb-2 text-3xl">🩺</p>
-        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">No MCAT diagnostics yet</h2>
+        <p className="mb-2 text-3xl">🗓️</p>
+        <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">No diagnostics yet</h2>
         <p className="mx-auto max-w-md text-sm text-gray-500 dark:text-gray-400">
-          Once your students take the <Link href="/mcat-diagnostic" className="text-blue-600 hover:underline dark:text-blue-400">MCAT diagnostic</Link>,
-          this tab pools everyone&apos;s results and ranks the topics your class collectively needs — sized to four
-          45-minute teaching blocks per week. Have each student take it before your first meeting.
+          Once your students take their course&apos;s diagnostic test (MCAT, SAT, or any AP course), this tab pools
+          everyone&apos;s results and ranks the topics your class collectively needs — sized to four 45-minute
+          teaching blocks per week. Have each student take their diagnostic before your first meeting.
         </p>
       </div>
     )
@@ -115,17 +138,35 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
 
   const blocks = data.classTopics.slice(0, 4)
   const alsoSurfaced = data.classTopics.slice(4)
+  const gated = data.course.gated
 
   return (
     <div className="space-y-6">
       {/* This week's blocks */}
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
         <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white">🗓️ This week&apos;s class plan</h2>
-          <button onClick={load} className="text-xs font-medium text-blue-600 hover:underline dark:text-blue-400">↻ Refresh</button>
+          <div className="flex items-center gap-3">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">🗓️ This week&apos;s class plan</h2>
+            {available.length > 1 ? (
+              <select
+                value={data.course.key}
+                onChange={(e) => { setData(null); setCourseKey(e.target.value) }}
+                className="rounded-lg border border-gray-300 bg-white px-2 py-1 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              >
+                {available.map(c => (
+                  <option key={c.key} value={c.key}>{c.label} ({c.studentsWithAttempts})</option>
+                ))}
+              </select>
+            ) : (
+              <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+                {data.course.label}
+              </span>
+            )}
+          </div>
+          <button onClick={loadPlan} className="text-xs font-medium text-blue-600 hover:underline dark:text-blue-400">↻ Refresh</button>
         </div>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-          Ranked from your students&apos; latest diagnostics ({data.studentsWithAttempts} of {data.totalStudents} have
+          Ranked from your students&apos; latest {data.course.label} diagnostics ({data.studentsWithAttempts} of {data.totalStudents} have
           taken one) — high-priority needs count double. Four blocks ≈ two 90-minute meetings.
         </p>
         <div className="grid gap-3 md:grid-cols-2">
@@ -176,7 +217,7 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
           </div>
         )}
         <p className="mt-3 text-xs text-gray-400 dark:text-gray-500">
-          Teach a block live: classroom page → Go Live → share your screen or the whiteboard while walking through the lesson.
+          Teach a block live: Go Live above → share your screen or the whiteboard while walking through the lesson.
         </p>
       </div>
 
@@ -184,7 +225,8 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
         <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">Students</h2>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-          Homework = their personal 5 modules; clearing all 5 (exit quiz ≥80% or entrance mastery) unlocks their next weekly diagnostic.
+          Homework = their personal recommended modules (exit quiz ≥80% or entrance mastery clears one).
+          {gated && ' For the MCAT, clearing all of them unlocks their next weekly diagnostic.'}
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -192,9 +234,9 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
               <tr className="border-b border-gray-200 text-left text-xs uppercase text-gray-500 dark:border-gray-700 dark:text-gray-400">
                 <th className="py-2 pr-4">Student</th>
                 <th className="py-2 pr-4">Last diagnostic</th>
-                <th className="py-2 pr-4">Est. score</th>
+                <th className="py-2 pr-4">Score</th>
                 <th className="py-2 pr-4">Homework</th>
-                <th className="py-2">Next test</th>
+                {gated && <th className="py-2">Next test</th>}
               </tr>
             </thead>
             <tbody>
@@ -211,19 +253,21 @@ export default function MCATClassPlan({ classroomId }: { classroomId: string }) 
                       <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/40 dark:text-red-300">never taken</span>
                     )}
                   </td>
-                  <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">{s.estimatedScore ?? '—'}</td>
+                  <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">{s.scoreLabel ?? '—'}</td>
                   <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
                     {s.recommendedCount === 0 ? '—' : `${s.recommendedCount - s.pendingCount}/${s.recommendedCount} modules`}
                   </td>
-                  <td className="py-2">
-                    {s.takenAt === null ? (
-                      <span className="text-xs text-gray-400">ready</span>
-                    ) : s.canRetake ? (
-                      <span className="text-xs font-medium text-green-600 dark:text-green-400">✓ unlocked</span>
-                    ) : (
-                      <span className="text-xs font-medium text-amber-600 dark:text-amber-400">🔒 {s.pendingCount} module{s.pendingCount === 1 ? '' : 's'} left</span>
-                    )}
-                  </td>
+                  {gated && (
+                    <td className="py-2">
+                      {s.takenAt === null ? (
+                        <span className="text-xs text-gray-400">ready</span>
+                      ) : s.canRetake ? (
+                        <span className="text-xs font-medium text-green-600 dark:text-green-400">✓ unlocked</span>
+                      ) : (
+                        <span className="text-xs font-medium text-amber-600 dark:text-amber-400">🔒 {s.pendingCount} module{s.pendingCount === 1 ? '' : 's'} left</span>
+                      )}
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
