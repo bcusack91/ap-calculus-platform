@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { mutedList } from '@/lib/live-session'
+import { mutedList, touchAttendance } from '@/lib/live-session'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -44,6 +44,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   const access = await sessionAccess(id, session.user.id)
   if (!access) return NextResponse.json({ error: 'Not enrolled' }, { status: 403 })
+  if (access.live.status === 'LIVE') void touchAttendance(id, session.user.id)
 
   const afterParam = req.nextUrl.searchParams.get('after')
   const after = afterParam ? new Date(afterParam) : null

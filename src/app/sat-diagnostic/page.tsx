@@ -37,6 +37,9 @@ export default function SATDiagnosticPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const challengeToken = searchParams.get('challenge')
+  // Assigned class diagnostic — load the teacher's frozen test so the whole
+  // class answers identical questions.
+  const assignedId = searchParams.get('assigned')
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<DiagnosticTestData | null>(null)
@@ -113,6 +116,7 @@ export default function SATDiagnosticPage() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             category: 'sat-full-diagnostic',
+            classDiagnosticId: assignedId || undefined,
             results: JSON.stringify({
               review: testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
               totalCorrect: diagnosticResults.totalCorrect,
@@ -163,7 +167,7 @@ export default function SATDiagnosticPage() {
         // Silent fail
       }
     },
-    [challengeToken, testData],
+    [challengeToken, testData, assignedId],
   )
 
   if (status === 'loading') {
@@ -181,8 +185,17 @@ export default function SATDiagnosticPage() {
 
   if (phase === 'testing') {
     if (!testData) {
-      // Load test data asynchronously
-      generateDiagnosticTest().then(data => {
+      // Load test data asynchronously — the teacher's frozen assigned test
+      // when ?assigned= is present, a fresh generated one otherwise.
+      const loadTest = async (): Promise<DiagnosticTestData> => {
+        if (assignedId) {
+          const r = await fetch(`/api/class-diagnostics/${assignedId}`, { cache: 'no-store' })
+          if (r.ok) return (await r.json()).diagnostic.testData as DiagnosticTestData
+          // Assignment unavailable — fall back to a normal generated test.
+        }
+        return generateDiagnosticTest()
+      }
+      loadTest().then(data => {
         data.questions.forEach(q => {
           const s = shuffleOptions(q.options, q.correctIndex, q.question)
           q.options = s.options

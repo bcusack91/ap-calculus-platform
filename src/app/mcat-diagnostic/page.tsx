@@ -232,6 +232,9 @@ export default function MCATDiagnosticPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const challengeToken = searchParams.get('challenge')
+  // Assigned class diagnostic: load the teacher's frozen test instead of
+  // generating, so the whole class answers identical questions.
+  const assignedId = searchParams.get('assigned')
   // MCAT has a single form — challengeForm not used
 
   type PlanTopicStatus = {
@@ -311,6 +314,29 @@ export default function MCATDiagnosticPage() {
   }, [phase])
 
   const startTest = useCallback(async () => {
+    if (assignedId) {
+      const r = await fetch(`/api/class-diagnostics/${assignedId}`, { cache: 'no-store' })
+      if (r.ok) {
+        const d = await r.json()
+        const data = d.diagnostic.testData as Awaited<ReturnType<typeof generateMCATDiagnosticTest>>
+        // Option order still shuffles per student; the QUESTIONS are identical.
+        data.questions.forEach((q) => {
+          const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+          q.options = s.options
+          q.correctAnswer = s.correctIndex
+        })
+        setTestData(data)
+        setCurrentIndex(0)
+        setAnswers(new Array(data.questions.length).fill(null))
+        setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
+        setTimeRemaining(data.timeLimitMinutes * 60)
+        setChallengeSubmitted(false)
+        setPhase('testing')
+        return
+      }
+      // Assignment unavailable (deleted / not enrolled) — fall through to a
+      // normal generated diagnostic rather than dead-ending the student.
+    }
     let seenQuestionIds = new Set<string>()
     if (typeof window !== 'undefined') {
       try {
@@ -346,7 +372,7 @@ export default function MCATDiagnosticPage() {
     setTimeRemaining(data.timeLimitMinutes * 60)
     setChallengeSubmitted(false)
     setPhase('testing')
-  }, [])
+  }, [assignedId])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -393,6 +419,7 @@ export default function MCATDiagnosticPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           category: 'mcat-full-diagnostic',
+          classDiagnosticId: assignedId || undefined,
           results: JSON.stringify({
             review: { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map((d: { id: string; name: string }) => [d.id, d.name])) },
             totalCorrect: diagnosticResults.totalCorrect,
@@ -436,7 +463,7 @@ export default function MCATDiagnosticPage() {
     } catch {
       // Silent fail
     }
-  }, [testData, answers, challengeToken])
+  }, [testData, answers, challengeToken, assignedId])
 
   // Loading state
   if (status === 'loading') {

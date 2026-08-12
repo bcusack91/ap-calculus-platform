@@ -469,18 +469,21 @@ model LearningPath {
 }
 
 model DiagnosticTest {
-  id        String   @id @default(cuid())
-  userId    String
-  category  String
-  results   Json
-  weakAreas Json?
-  strengths String?
-  createdAt DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                String   @id @default(cuid())
+  userId            String
+  category          String
+  results           Json
+  weakAreas         Json?
+  strengths         String?
+  classDiagnosticId String? // set when this attempt answered an assigned class diagnostic
+  createdAt         DateTime @default(now())
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  classDiagnostic   ClassDiagnostic? @relation(fields: [classDiagnosticId], references: [id], onDelete: SetNull)
 
   // Hot path: every diagnostic history/latest-attempt lookup filters on
   // (userId, category) ordered by createdAt desc.
   @@index([userId, category, createdAt])
+  @@index([classDiagnosticId])
 }
 
 model DailyChallengeResult {
@@ -1024,6 +1027,7 @@ model Classroom {
   announcements     Announcement[]
   teacherLobbies    TeacherLobby[]         @relation("TeacherLobbyClassroom")
   liveSessions      LiveSession[]
+  classDiagnostics  ClassDiagnostic[]
 
   curriculumPlans CurriculumPlan[]
   flashcardSets   FlashcardSet[]
@@ -1455,9 +1459,10 @@ model LiveSession {
   startedAt    DateTime  @default(now())
   endedAt      DateTime?
 
-  classroom Classroom            @relation(fields: [classroomId], references: [id], onDelete: Cascade)
-  messages  LiveSessionMessage[]
-  boards    LiveBoard[]
+  classroom  Classroom               @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  messages   LiveSessionMessage[]
+  boards     LiveBoard[]
+  attendance LiveSessionAttendance[]
 
   @@index([classroomId, status])
   @@index([status])
@@ -1494,4 +1499,43 @@ model LiveBoard {
 
   @@unique([sessionId, ownerKey])
   @@index([sessionId, updatedAt])
+}
+
+// ---------------------------------------------------------------------------
+// Assigned class diagnostics — one generated test, identical for the whole
+// roster (owner decision: comparable results; generated ONCE at assign time
+// and stored, rather than per-student). Students take it through the course's
+// normal diagnostic page (?assigned=<id>), so scoring, recommendations, the
+// retake gate, and the class plan all keep working unchanged.
+// ---------------------------------------------------------------------------
+
+model ClassDiagnostic {
+  id          String    @id @default(cuid())
+  classroomId String
+  courseKey   String // class-plan-config key: 'mcat', 'sat', …
+  title       String // "Diagnostic 1" — auto-numbered per classroom+course
+  testData    Json // the frozen generated test (questions, domains, time limit)
+  dueDate     DateTime?
+  createdAt   DateTime  @default(now())
+
+  classroom Classroom        @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  attempts  DiagnosticTest[]
+
+  @@index([classroomId, courseKey, createdAt])
+}
+
+// Live-session attendance — who was in the room and for how long. Row is
+// created when a student loads the session page; lastSeenAt advances on their
+// chat/board/status polls, so minutes ≈ lastSeenAt - joinedAt.
+model LiveSessionAttendance {
+  id         String   @id @default(cuid())
+  sessionId  String
+  userId     String
+  joinedAt   DateTime @default(now())
+  lastSeenAt DateTime @default(now())
+
+  session LiveSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, userId])
+  @@index([sessionId])
 }

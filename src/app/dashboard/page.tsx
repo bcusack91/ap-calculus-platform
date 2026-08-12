@@ -10,6 +10,7 @@ import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
 import LiveNowBanner from '@/components/LiveNowBanner'
+import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
@@ -605,6 +606,9 @@ function DashboardContent() {
 
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />
+
+        {/* Assigned class diagnostics not yet taken */}
+        <ClassDiagnosticBanner />
 
         {/* Pending Assignments */}
         {pendingAssignments > 0 && (

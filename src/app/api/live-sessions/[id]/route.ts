@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { buildJaasJwt, jaasConfigured, mutedList } from '@/lib/live-session'
+import { buildJaasJwt, jaasConfigured, mutedList, touchAttendance } from '@/lib/live-session'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -47,6 +47,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       return NextResponse.json({ error: 'You are not enrolled in this class.' }, { status: 403 })
     }
   }
+
+  // Attendance: loading the join info marks presence (fire-and-forget).
+  if (live.status === 'LIVE') void touchAttendance(live.id, userId)
 
   const displayName = user?.name || 'Student'
   const base = {

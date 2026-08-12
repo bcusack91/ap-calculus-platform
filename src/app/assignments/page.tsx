@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
 import LiveNowBanner from '@/components/LiveNowBanner'
+import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
 
 interface AssignmentItem {
   id: string
@@ -168,6 +169,9 @@ export default function StudentAssignmentsPage() {
       <div className="container py-8 sm:py-12 max-w-4xl mx-auto px-4">
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />
+
+        {/* Assigned class diagnostics not yet taken */}
+        <ClassDiagnosticBanner />
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
+import ClassDiagnosticsPanel from '@/components/ClassDiagnosticsPanel'
 
 /**
  * "Class Plan" tab on the teacher classroom page — works for any course with
@@ -124,6 +125,8 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
 
   if (available.length === 0 || !data) {
     return (
+      <div className="space-y-6">
+      <ClassDiagnosticsPanel classroomId={classroomId} />
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
         <p className="mb-2 text-3xl">🗓️</p>
         <h2 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">No diagnostics yet</h2>
@@ -132,6 +135,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
           everyone&apos;s results and ranks the topics your class collectively needs — sized to four 45-minute
           teaching blocks per week. Have each student take their diagnostic before your first meeting.
         </p>
+      </div>
       </div>
     )
   }
@@ -142,6 +146,8 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
 
   return (
     <div className="space-y-6">
+      <ClassDiagnosticsPanel classroomId={classroomId} />
+
       {/* This week's blocks */}
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
         <div className="mb-1 flex flex-wrap items-center justify-between gap-2">

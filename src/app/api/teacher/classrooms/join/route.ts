@@ -50,6 +50,12 @@ export async function POST(req: NextRequest) {
       where: { id: existing.id },
       data: { isActive: true },
     })
+    // Rejoining a class re-enters its study mode unless the student has
+    // explicitly chosen another non-personal mode.
+    await prisma.user.updateMany({
+      where: { id: user.id, studyContext: 'personal' },
+      data: { studyContext: `class:${classroom.id}` },
+    })
     return NextResponse.json({
       success: true,
       classroom: { name: classroom.name, teacher: classroom.teacher?.name },
@@ -61,6 +67,14 @@ export async function POST(req: NextRequest) {
       classroomId: classroom.id,
       userId: user.id,
     },
+  })
+
+  // Joining a class makes it the active flashcard study mode by default, so
+  // lesson unlocks and reviews land in the class deck without any setup —
+  // unless the student already chose a non-personal mode deliberately.
+  await prisma.user.updateMany({
+    where: { id: user.id, studyContext: 'personal' },
+    data: { studyContext: `class:${classroom.id}` },
   })
 
   return NextResponse.json({

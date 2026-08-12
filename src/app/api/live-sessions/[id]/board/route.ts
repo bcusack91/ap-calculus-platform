@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { asScene, mergeScenes, MAX_SCENE_BYTES, EMPTY_SCENE } from '@/lib/board-merge'
+import { touchAttendance } from '@/lib/live-session'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -53,6 +54,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   const access = await sessionAccess(id, session.user.id)
   if (!access) return NextResponse.json({ error: 'Not enrolled' }, { status: 403 })
   const { live, isTeacher } = access
+  if (live.status === 'LIVE') void touchAttendance(id, session.user.id)
 
   const owner = req.nextUrl.searchParams.get('owner') ?? 'class'
   const settings = { boardMode: live.boardMode, padsEnabled: live.padsEnabled, sessionStatus: live.status }

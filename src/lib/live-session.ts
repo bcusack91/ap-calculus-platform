@@ -117,3 +117,37 @@ export function parseYouTubeVideoId(input: string): string | null {
 export function mutedList(mutedUserIds: unknown): string[] {
   return Array.isArray(mutedUserIds) ? mutedUserIds.filter((x): x is string => typeof x === 'string') : []
 }
+
+/**
+ * Attendance capture. A row appears when someone loads the session page and
+ * lastSeenAt advances while their polls keep arriving (chat/board/status), so
+ * minutes-in-session ≈ lastSeenAt − joinedAt. Writes are throttled to ~1/min
+ * per attendee and always fire-and-forget — attendance must never break a
+ * session surface. Import prisma lazily to keep this file importable anywhere.
+ */
+export async function touchAttendance(sessionId: string, userId: string): Promise<void> {
+  try {
+    const { prisma } = await import('@/lib/prisma')
+    const staleBefore = new Date(Date.now() - 60_000)
+    const updated = await prisma.liveSessionAttendance.updateMany({
+      where: { sessionId, userId, lastSeenAt: { lt: staleBefore } },
+      data: { lastSeenAt: new Date() },
+    })
+    if (updated.count === 0) {
+      // Either fresh (< 60s) — nothing to do — or no row yet. Cheap indexed
+      // existence check before creating, so fresh-window polls don't hammer
+      // the unique constraint with doomed inserts.
+      const exists = await prisma.liveSessionAttendance.findUnique({
+        where: { sessionId_userId: { sessionId, userId } },
+        select: { id: true },
+      })
+      if (!exists) {
+        await prisma.liveSessionAttendance
+          .create({ data: { sessionId, userId } })
+          .catch(() => {}) // concurrent-create race — the other poll won
+      }
+    }
+  } catch {
+    /* never let attendance bookkeeping break the session */
+  }
+}

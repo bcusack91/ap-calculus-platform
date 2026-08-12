@@ -35,7 +35,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { category, results, weakAreas, strengths } = await req.json()
+    const { category, results, weakAreas, strengths, classDiagnosticId } = await req.json()
 
     if (!category || !results) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
