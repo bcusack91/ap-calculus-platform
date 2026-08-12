@@ -955,6 +955,56 @@ export default function MCATDiagnosticPage() {
             </div>
           )}
 
+          {/* Current study plan — the last diagnostic's recommended modules
+              with live cleared/pending status, always visible on the menu
+              (previously the list only appeared while the retake gate was
+              locked, so a returning student couldn't review what was
+              recommended). */}
+          {planStatus?.hasDiagnostic && planStatus.recommendedTopics.length > 0 && (
+            <div className="mb-6 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-6 dark:border-emerald-700 dark:bg-emerald-900/20">
+              <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-base font-bold text-emerald-800 dark:text-emerald-300">🎯 Your Current Study Plan</h3>
+                {planStatus.summary && (
+                  <span className={`rounded-full px-3 py-1 text-xs font-semibold ${planStatus.canRetakeDiagnostic ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300'}`}>
+                    {planStatus.summary.completed}/{planStatus.summary.totalRecommended} complete
+                    {planStatus.canRetakeDiagnostic ? ' — next diagnostic unlocked' : ''}
+                  </span>
+                )}
+              </div>
+              <p className="mb-3 text-sm text-emerald-700 dark:text-emerald-400">
+                From your last diagnostic — based on the questions you missed. Clear each module
+                (100% entrance quiz, or ≥{planStatus.requiredScorePercent}% exit quiz) to unlock your next diagnostic.
+              </p>
+              <div className="space-y-2">
+                {planStatus.recommendedTopics.map((topic, i) => (
+                  <Link
+                    key={topic.slug}
+                    href={`${topic.topicPath}/interactive`}
+                    className="flex items-center justify-between rounded-xl border border-emerald-200 bg-white px-4 py-3 transition hover:border-emerald-400 hover:shadow-sm dark:border-emerald-700 dark:bg-gray-800 group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300">{i + 1}</span>
+                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400">{topic.name}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                        {topic.priority === 'high' ? 'High' : 'Medium'}
+                      </span>
+                    </div>
+                    <span className="flex items-center gap-2 text-xs">
+                      {topic.isSatisfied ? (
+                        <span className="font-semibold text-green-600 dark:text-green-400">✓ complete</span>
+                      ) : topic.bestExitScorePercent !== null ? (
+                        <span className="text-gray-500 dark:text-gray-400">best exit {topic.bestExitScorePercent}%</span>
+                      ) : (
+                        <span className="text-gray-400">not started</span>
+                      )}
+                      <span className="text-emerald-500 group-hover:translate-x-1 transition-transform">→</span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Start card */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
