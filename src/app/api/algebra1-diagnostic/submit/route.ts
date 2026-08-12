@@ -21,7 +21,21 @@ export async function POST(req: Request) {
     let parsedWeakAreas: Prisma.InputJsonValue | typeof Prisma.JsonNull
     try {
       parsedResults = typeof results === 'string' ? JSON.parse(results) : results
-      parsedWeakAreas = weakAreas ? (typeof weakAreas === 'string' ? JSON.parse(weakAreas) : weakAreas) : Prisma.JsonNull
+      // weakAreas arrives as an ARRAY from most diagnostic pages but as a
+      // comma-joined STRING from the SAT/MCAT pages. JSON.parse("Algebra,
+      // Geometry") throws — which silently 400'd (and discarded) every
+      // submission from a student who actually HAD weak areas, while perfect
+      // scorers (empty string) sailed through. A bare string is a valid Json
+      // value, so store it as-is when it isn't JSON.
+      if (weakAreas) {
+        if (typeof weakAreas === 'string') {
+          try { parsedWeakAreas = JSON.parse(weakAreas) } catch { parsedWeakAreas = weakAreas }
+        } else {
+          parsedWeakAreas = weakAreas
+        }
+      } else {
+        parsedWeakAreas = Prisma.JsonNull
+      }
     } catch {
       return NextResponse.json({ error: 'Invalid results format' }, { status: 400 })
     }
