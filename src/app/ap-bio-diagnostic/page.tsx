@@ -18,6 +18,7 @@ import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
+import { MathText } from '@/components/MathText'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -261,9 +262,10 @@ export default function APBioDiagnosticPage() {
 
             {/* Question */}
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
-                {q.question}
-              </p>
+              <MathText
+                text={q.question}
+                className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200"
+              />
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = answers[currentIndex] === i
@@ -283,7 +285,7 @@ export default function APBioDiagnosticPage() {
                     >
                       <div className="flex items-center justify-between gap-3">
                       <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
-                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><MathText inline text={opt} />
                       </span>
                       <span
                         role="button"

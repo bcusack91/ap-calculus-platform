@@ -12,6 +12,7 @@ import {
 } from '@/data/mcat-practice/diagnostic-generator'
 import { trackCustomEvent } from '@/lib/analytics'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import { MathText } from '@/components/MathText'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
@@ -551,9 +552,12 @@ export default function MCATDiagnosticPage() {
                   <DataVisual data={q.visual} />
                 </div>
               )}
-              <p className="mb-6 whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">
-                {q.question}
-              </p>
+              {/* Bank-sourced questions carry $…$ LaTeX (ions, formulas) — render
+                  through the shared MathText pipeline like every other surface. */}
+              <MathText
+                text={q.question}
+                className="mb-6 whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200"
+              />
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = answers[currentIndex] === i
@@ -573,7 +577,8 @@ export default function MCATDiagnosticPage() {
                     >
                       <div className="flex items-center justify-between gap-3">
                       <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
-                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>
+                        <MathText inline text={opt} />
                       </span>
                       <span
                         role="button"
