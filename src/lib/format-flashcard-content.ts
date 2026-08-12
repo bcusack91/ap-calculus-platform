@@ -86,6 +86,22 @@ function convertToLatex(eq: string): string {
   // Replace remaining Δ with \Delta
   latex = latex.replace(/Δ/g, '\\Delta ')
 
+  // Percent inside math mode starts a LaTeX COMMENT — everything after it in
+  // the formula silently disappears ("… × 100%." rendered as "… ×"). Escape.
+  latex = latex.replace(/(?<!\\)%/g, '\\%')
+
+  // Characters KaTeX has no metrics/symbol for (strict-mode warnings, render
+  // in a fallback font or as empty boxes): vulgar fractions, the radical sign,
+  // and the combining vector arrow. Convert to real LaTeX.
+  latex = latex.replace(/½/g, '\\frac{1}{2}')
+  latex = latex.replace(/¼/g, '\\frac{1}{4}')
+  latex = latex.replace(/¾/g, '\\frac{3}{4}')
+  latex = latex.replace(/√\(([^()]+)\)/g, '\\sqrt{$1}')
+  latex = latex.replace(/√\[([^[\]]+)\]/g, '\\sqrt{$1}')
+  latex = latex.replace(/√([A-Za-z0-9.]+)/g, '\\sqrt{$1}')
+  latex = latex.replace(/√/g, '\\sqrt{\\,}')
+  latex = latex.replace(/([A-Za-z])⃗/g, '\\vec{$1}')
+
   // Replace [X] concentration notation with \text{[X]} or just [X] in math mode
   // In LaTeX, brackets need to be explicit
   latex = latex.replace(/\[([A-Z][a-z]*(?:\d*[+\-]*)?)\]/g, '[\\text{$1}]')

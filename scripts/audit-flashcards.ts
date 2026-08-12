@@ -60,7 +60,12 @@ function auditSide(card: { id: string }, meta: { course: string; category: strin
     issues.push({ cardId: card.id, ...meta, side, kind, detail, excerpt: ex(excerpt) })
 
   if (!raw || !raw.trim()) { push('empty', 'empty side'); return }
-  if (/undefined|\[object Object\]/.test(raw)) push('placeholder', 'contains "undefined"/[object Object]')
+  // "undefined" alone is legitimate math vocabulary ("slope is undefined");
+  // only flag interpolation accidents: [object Object], glued
+  // "undefinedundefined", or a side that IS just "undefined".
+  if (/\[object Object\]|undefinedundefined/.test(raw) || raw.trim().toLowerCase() === 'undefined') {
+    push('placeholder', 'template interpolation accident')
+  }
   if (raw.includes('�')) push('mojibake', 'contains U+FFFD replacement char')
   if (/\\n/.test(raw) && !/\\ne|\\nu|\\nabla|\\not|\\neq|\\newline/.test(raw)) push('literal-backslash-n', 'literal \\n in text')
   if (/<\/?(div|span|p|br|table|img|b|i)\b/i.test(raw)) push('html-tag', 'raw HTML tag in markdown card')
@@ -82,11 +87,19 @@ function auditSide(card: { id: string }, meta: { course: string; category: strin
 
   // KaTeX-compile every segment exactly as rehype-katex would
   for (const [i, seg] of [...display, ...inline].entries()) {
+    const strictWarnings: string[] = []
     try {
-      katex.renderToString(seg, { throwOnError: true, displayMode: i < display.length })
+      katex.renderToString(seg, {
+        throwOnError: true,
+        displayMode: i < display.length,
+        // Unicode with no KaTeX metrics (½ √ ⃗ …) and %-comment eating render
+        // DEGRADED without throwing — capture strict warnings as issues too.
+        strict: (_code: string, msg: string) => { strictWarnings.push(msg); return 'ignore' },
+      } as never)
     } catch (e) {
       push('katex-error', (e as Error).message.split('\n')[0].slice(0, 140), seg)
     }
+    if (strictWarnings.length > 0) push('katex-strict-warning', strictWarnings[0].slice(0, 120), seg)
   }
 
   // LaTeX commands left OUTSIDE math mode → render as literal backslash text
@@ -104,7 +117,7 @@ function auditSide(card: { id: string }, meta: { course: string; category: strin
 const BLEED_RULES: { pattern: RegExp; belongsTo: RegExp; label: string }[] = [
   { pattern: /\bgeographers?\b|\bhuman geography\b/i, belongsTo: /geo/i, label: 'geography term' },
   { pattern: /\bphotosynthesis\b|\bmitochondri/i, belongsTo: /bio|mcat|enviro|chem/i, label: 'biology term' },
-  { pattern: /\bderivative\b|\bantiderivative\b|\bintegral\b/i, belongsTo: /calc|math|precalc|mcat|physics|stat|econ|chem/i, label: 'calculus term' },
+  { pattern: /\bderivative\b|\bantiderivative\b|\bintegral\b(?!\s*(?:\/|proteins?\b|membrane\b))/i, belongsTo: /calc|math|precalc|mcat|physics|stat|econ|chem|bio/i, label: 'calculus term' },
   { pattern: /\bthe supreme court\b|\bfederalis[mt]\b/i, belongsTo: /gov|history|african/i, label: 'civics term' },
   { pattern: /\bnucleophile\b|\belectrophile\b/i, belongsTo: /chem|ochem|organic|mcat/i, label: 'ochem term' },
   { pattern: /\boperant conditioning\b|\bclassical conditioning\b/i, belongsTo: /psych|mcat/i, label: 'psychology term' },
