@@ -258,11 +258,14 @@ export default function BoardSection({
   youAreTeacher,
   initialBoardMode,
   initialPadsEnabled,
+  onBoardActive,
 }: {
   sessionId: string
   youAreTeacher: boolean
   initialBoardMode: 'OFF' | 'TEACHER' | 'SHARED'
   initialPadsEnabled: boolean
+  /** Fires when a board surface turns on/off — the page minimizes the video. */
+  onBoardActive?: (active: boolean) => void
 }) {
   const [settings, setSettings] = useState<Settings>({ boardMode: initialBoardMode, padsEnabled: initialPadsEnabled })
   const [tab, setTab] = useState<'class' | 'pads' | 'mypad'>('class')
@@ -271,6 +274,11 @@ export default function BoardSection({
   }, [])
 
   const { boardMode, padsEnabled } = settings
+
+  // Tell the page when a board becomes the main event (video → corner).
+  useEffect(() => {
+    onBoardActive?.(boardMode !== 'OFF' || padsEnabled)
+  }, [boardMode, padsEnabled, onBoardActive])
   const showClass = youAreTeacher || boardMode !== 'OFF'
   const showMyPad = !youAreTeacher && padsEnabled
   const anythingVisible = youAreTeacher || showClass || showMyPad

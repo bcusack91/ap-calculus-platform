@@ -1463,6 +1463,7 @@ model LiveSession {
   messages   LiveSessionMessage[]
   boards     LiveBoard[]
   attendance LiveSessionAttendance[]
+  decks      SlideDeck[]
 
   @@index([classroomId, status])
   @@index([status])
@@ -1538,4 +1539,44 @@ model LiveSessionAttendance {
 
   @@unique([sessionId, userId])
   @@index([sessionId])
+}
+
+// ---------------------------------------------------------------------------
+// In-class slide presentations. A deck is auto-generated from a topic's lesson
+// content (content slides) interleaved with poll slides drawn from the topic's
+// exit-quiz pool, presented inside a live session: the teacher advances
+// slides, students' views follow, poll answers aggregate live. See
+// src/lib/slide-deck.ts and the DeckSection on /live/[id].
+// ---------------------------------------------------------------------------
+
+model SlideDeck {
+  id           String   @id @default(cuid())
+  sessionId    String
+  topicSlug    String
+  title        String
+  slides       Json // Slide[] — see src/lib/slide-deck.ts
+  currentSlide Int      @default(0)
+  revealed     Json? // number[] — poll slide indexes whose answers are revealed
+  status       String   @default("ACTIVE") // ACTIVE | ENDED
+  createdAt    DateTime @default(now())
+
+  session   LiveSession     @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  responses SlideResponse[]
+
+  @@index([sessionId, status])
+}
+
+model SlideResponse {
+  id          String   @id @default(cuid())
+  deckId      String
+  slideIndex  Int
+  userId      String
+  userName    String // denormalized for the teacher's responder list
+  answerIndex Int
+  createdAt   DateTime @default(now())
+
+  deck SlideDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  @@unique([deckId, slideIndex, userId])
+  @@index([deckId, slideIndex])
 }

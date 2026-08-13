@@ -11,6 +11,10 @@ const BoardSection = nextDynamic(() => import('@/components/LiveBoards'), {
   ssr: false,
   loading: () => null,
 })
+const SlideDeckSection = nextDynamic(() => import('@/components/SlideDeckSection'), {
+  ssr: false,
+  loading: () => null,
+})
 
 /**
  * Live class session page — /live/[id].
@@ -62,6 +66,18 @@ export default function LiveSessionPage() {
   const [session, setSession] = useState<SessionInfo | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [ending, setEnding] = useState(false)
+  // Picture-in-picture: when a whiteboard or slide deck is the main event,
+  // the video shrinks to a corner window so students see both at once.
+  // Class swaps only — the video iframe node itself is never remounted.
+  const [videoMini, setVideoMini] = useState(false)
+  const boardWasActive = useRef(false)
+  const handleBoardActive = useCallback((active: boolean) => {
+    if (active && !boardWasActive.current) setVideoMini(true)
+    boardWasActive.current = active
+  }, [])
+  const handleDeckActive = useCallback((active: boolean) => {
+    setVideoMini(active || boardWasActive.current)
+  }, [])
 
   useEffect(() => {
     if (authStatus === 'unauthenticated') router.push(`/auth/signin?callbackUrl=/live/${id}`)
@@ -162,7 +178,19 @@ export default function LiveSessionPage() {
 
       {session.mode === 'CONFERENCE' ? (
         session.conference?.embed ? (
-          <JitsiEmbed conference={session.conference} displayName={session.displayName} />
+          <div className={videoMini
+            ? 'fixed bottom-4 right-4 z-40 h-44 w-72 overflow-hidden rounded-xl border-2 border-gray-300 bg-black shadow-2xl sm:h-56 sm:w-96 dark:border-gray-600'
+            : 'relative'}
+          >
+            <button
+              onClick={() => setVideoMini(v => !v)}
+              className="absolute right-2 top-2 z-50 rounded-lg bg-black/60 px-2 py-1 text-xs font-semibold text-white backdrop-blur transition hover:bg-black/80"
+              title={videoMini ? 'Expand video' : 'Minimize video to corner'}
+            >
+              {videoMini ? '⤢ Expand' : '◱ Minimize'}
+            </button>
+            <JitsiEmbed conference={session.conference} displayName={session.displayName} mini={videoMini} />
+          </div>
         ) : (
           <div className="mx-auto max-w-lg rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <p className="mb-2 text-3xl">🎥</p>
@@ -184,8 +212,18 @@ export default function LiveSessionPage() {
           </div>
         )
       ) : (
-        <div className="grid gap-4 lg:grid-cols-[2fr_1fr]">
-          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-black shadow-sm dark:border-gray-700">
+        <div className={videoMini ? 'grid gap-4' : 'grid gap-4 lg:grid-cols-[2fr_1fr]'}>
+          <div className={videoMini
+            ? 'fixed bottom-4 right-4 z-40 w-72 overflow-hidden rounded-xl border-2 border-gray-300 bg-black shadow-2xl sm:w-96 dark:border-gray-600'
+            : 'relative overflow-hidden rounded-2xl border border-gray-200 bg-black shadow-sm dark:border-gray-700'}
+          >
+            <button
+              onClick={() => setVideoMini(v => !v)}
+              className="absolute right-2 top-2 z-50 rounded-lg bg-black/60 px-2 py-1 text-xs font-semibold text-white backdrop-blur transition hover:bg-black/80"
+              title={videoMini ? 'Expand video' : 'Minimize video to corner'}
+            >
+              {videoMini ? '⤢ Expand' : '◱ Minimize'}
+            </button>
             <div className="aspect-video">
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${session.streamVideoId}?autoplay=1&rel=0`}
@@ -200,6 +238,15 @@ export default function LiveSessionPage() {
         </div>
       )}
 
+      {/* In-class presentation — teacher-driven synced slides with live polls.
+          Renders nothing until a deck is active (teacher gets the launcher). */}
+      <SlideDeckSection
+        sessionId={session.id}
+        youAreTeacher={session.youAreTeacher}
+        classroomId={session.classroomId}
+        onActiveChange={handleDeckActive}
+      />
+
       {/* Whiteboards — class board + student pads, teacher-controlled. Renders
           nothing for students until the teacher turns a board on. */}
       <BoardSection
@@ -207,6 +254,7 @@ export default function LiveSessionPage() {
         youAreTeacher={session.youAreTeacher}
         initialBoardMode={session.boardMode ?? 'OFF'}
         initialPadsEnabled={session.padsEnabled ?? false}
+        onBoardActive={handleBoardActive}
       />
     </Shell>
   )
@@ -254,9 +302,11 @@ function loadJitsiScript(appId: string): Promise<void> {
 function JitsiEmbed({
   conference,
   displayName,
+  mini = false,
 }: {
   conference: { domain: string; appId: string; room: string; jwt: string }
   displayName: string
+  mini?: boolean
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [failed, setFailed] = useState(false)
@@ -316,7 +366,14 @@ function JitsiEmbed({
       </div>
     )
   }
-  return <div ref={containerRef} className="h-[75vh] overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700" />
+  return (
+    <div
+      ref={containerRef}
+      className={mini
+        ? 'h-full w-full'
+        : 'h-[75vh] overflow-hidden rounded-2xl border border-gray-200 shadow-sm dark:border-gray-700'}
+    />
+  )
 }
 
 /** DB-backed chat with 4s polling; the teacher gets hide + mute controls. */
