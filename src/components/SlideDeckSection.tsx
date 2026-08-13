@@ -343,9 +343,9 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
         }
 
         // Full pre-generated catalog for the course, grouped by category —
-        // any topic is presentable, not just this week's plan.
-        const COURSE_SLUG: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep' }
-        const courseSlug = courseKey ? COURSE_SLUG[courseKey] : undefined
+        // any topic is presentable, not just this week's plan. The course slug
+        // rides on the class-plan discovery response (class-plan-config).
+        const courseSlug: string | undefined = d?.availableCourses?.[0]?.courseSlug ?? undefined
         if (courseSlug) {
           const lib = await fetch(`/api/teacher/slide-library?course=${encodeURIComponent(courseSlug)}`, { cache: 'no-store' })
           if (lib.ok && active) {

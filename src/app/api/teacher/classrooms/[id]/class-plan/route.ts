@@ -80,7 +80,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     const available = [...studentsPerCourse.entries()]
       .map(([key, set]) => {
         const c = classPlanCourse(key)!
-        return { key, label: c.label, gated: !!c.gated, studentsWithAttempts: set.size }
+        return { key, label: c.label, gated: !!c.gated, courseSlug: c.courseSlug ?? null, studentsWithAttempts: set.size }
       })
       .sort((a, b) => b.studentsWithAttempts - a.studentsWithAttempts || a.label.localeCompare(b.label))
     return NextResponse.json(
