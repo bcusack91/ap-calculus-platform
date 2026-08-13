@@ -95,11 +95,18 @@ export async function middleware(request: NextRequest) {
 
     const ip = getClientIp(request)
 
-    // Competitive gameplay (match polling, answer submission, queue polling) is
-    // high-frequency by design and shared across a classroom's single IP. Limit
-    // it per authenticated USER with a generous budget so a shared IP isn't
-    // throttled mid-match, while a single user still can't hammer it.
-    if (nextUrl.pathname.startsWith('/api/competitive/') && gameRatelimit) {
+    // High-frequency-by-design endpoints shared across a classroom's single
+    // IP: competitive gameplay (match/queue polling), live class sessions
+    // (chat every 4s, whiteboard sync every 3s, slide-deck sync every 2.5s —
+    // one participant is ~60-85 req/min, at the IP limit ALONE), and teacher
+    // lobby gameplay. Limit these per authenticated USER with a generous
+    // budget so a shared school IP isn't throttled mid-class, while a single
+    // user still can't hammer the API.
+    const isHighFrequency =
+      nextUrl.pathname.startsWith('/api/competitive/') ||
+      nextUrl.pathname.startsWith('/api/live-sessions/') ||
+      nextUrl.pathname.startsWith('/api/teacher/lobby/')
+    if (isHighFrequency && gameRatelimit) {
       try {
         const secureCookie = nextUrl.protocol === 'https:'
         const cookieName = secureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
