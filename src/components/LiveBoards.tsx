@@ -294,6 +294,7 @@ export default function BoardSection({
         .then(d => { if (active && d) onSettings({ boardMode: d.boardMode, padsEnabled: d.padsEnabled }) })
         .catch(() => {})
     }
+    check() // immediate — don't make students wait a full interval
     const t = setInterval(check, 5000)
     return () => { active = false; clearInterval(t) }
   }, [anythingVisible, sessionId, onSettings])

@@ -2,7 +2,17 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { Excalidraw, CaptureUpdateAction } from '@excalidraw/excalidraw'
+import '@excalidraw/excalidraw/index.css'
 import { MathText } from '@/components/MathText'
+import { asScene, sceneVersion, type BoardScene, type BoardElement } from '@/lib/board-merge'
+
+declare global {
+  interface Window { EXCALIDRAW_ASSET_PATH?: string }
+}
+if (typeof window !== 'undefined') {
+  window.EXCALIDRAW_ASSET_PATH = '/excalidraw-assets/'
+}
 
 /**
  * The in-class presentation on /live/[id] — auto-generated slide deck with
@@ -34,6 +44,7 @@ interface DeckState {
   revealed: number[]
   status: string
   poll: PollState | null
+  annotation?: { rev: number; scene?: unknown }
   youAreTeacher: boolean
   currentReveal?: { correctIndex: number; explanation: string } | null
   slides?: Slide[]
@@ -56,6 +67,12 @@ export default function SlideDeckSection({
   const slidesForRef = useRef<string | null>(null)
   const [busy, setBusy] = useState(false)
   const activeRef = useRef(false)
+  // Teacher pen: toggles an interactive transparent canvas over the slide.
+  const [annotating, setAnnotating] = useState(false)
+  // Latest annotation scene for the CURRENT slide (rev-gated via the poll).
+  const [annScene, setAnnScene] = useState<{ key: string; rev: number; scene: BoardScene } | null>(null)
+  const annRevRef = useRef(-1)
+  const annSlideRef = useRef<string>('')
 
   const control = useCallback(async (payload: Record<string, unknown>) => {
     const r = await fetch(`/api/live-sessions/${sessionId}/deck`, {
@@ -71,10 +88,28 @@ export default function SlideDeckSection({
     let active = true
     const poll = async () => {
       try {
-        const r = await fetch(`/api/live-sessions/${sessionId}/deck`, { cache: 'no-store' })
+        const r = await fetch(`/api/live-sessions/${sessionId}/deck?annRev=${annRevRef.current}`, { cache: 'no-store' })
         if (!r.ok || !active) return
         const d = (await r.json()).deck as DeckState | null
         setDeck(d)
+        if (d) {
+          const slideKey = `${d.id}:${d.currentSlide}`
+          if (annSlideRef.current !== slideKey) {
+            // New slide — forget the old slide's annotation state and refetch.
+            annSlideRef.current = slideKey
+            annRevRef.current = -1
+            setAnnScene(null)
+          }
+          if (d.annotation) {
+            if (d.annotation.scene !== undefined) {
+              annRevRef.current = d.annotation.rev
+              setAnnScene({ key: slideKey, rev: d.annotation.rev, scene: asScene(d.annotation.scene) })
+            } else if (d.annotation.rev !== annRevRef.current && d.annotation.rev < annRevRef.current) {
+              // Rev went backwards (deck restarted) — resync next poll.
+              annRevRef.current = -1
+            }
+          }
+        }
         const nowActive = !!d
         if (nowActive !== activeRef.current) {
           activeRef.current = nowActive
@@ -139,6 +174,13 @@ export default function SlideDeckSection({
               disabled={deck.currentSlide >= deck.slideCount - 1}
               className="rounded-lg bg-indigo-600 px-4 py-1 text-sm font-semibold text-white disabled:opacity-40"
             >Next ▶</button>
+            <button
+              onClick={() => setAnnotating(v => !v)}
+              className={`rounded-lg px-3 py-1 text-sm font-semibold ${annotating ? 'bg-amber-500 text-white' : 'border border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300'}`}
+              title={annotating ? 'Stop annotating (buttons become clickable again)' : 'Draw on this slide — students see your strokes live'}
+            >
+              {annotating ? '✅ Done' : '✏️ Annotate'}
+            </button>
             {slide.kind === 'poll' && !isRevealed && (
               <button
                 onClick={() => void control({ action: 'reveal', index: deck.currentSlide })}
@@ -153,8 +195,15 @@ export default function SlideDeckSection({
         )}
       </div>
 
-      {/* Slide body */}
-      <div className="min-h-[45vh] px-6 py-8 sm:px-10">
+      {/* Slide body — relative so annotation layers can sit exactly on top */}
+      <div className="relative min-h-[45vh] px-6 py-8 sm:px-10">
+        <AnnotationLayer
+          key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : 'view'}`}
+          sessionId={sessionId}
+          slideIndex={deck.currentSlide}
+          canDraw={youAreTeacher && annotating}
+          remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
+        />
         {slide.kind === 'title' && (
           <div className="flex min-h-[38vh] flex-col items-center justify-center text-center">
             <h2 className="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">{slide.title}</h2>
@@ -334,6 +383,109 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
         ~20 slides from the lesson with live polls every few slides — students&apos; screens follow yours.
       </span>
       {error && <span className="text-xs text-red-600 dark:text-red-400">{error}</span>}
+    </div>
+  )
+}
+
+/* Structural slice of ExcalidrawImperativeAPI — just what the sync uses. */
+interface ExcalApi {
+  updateScene: (scene: { elements: BoardElement[]; captureUpdate?: unknown }) => void
+  addFiles: (files: unknown[]) => void
+  getSceneElementsIncludingDeleted: () => readonly BoardElement[]
+  getFiles: () => Record<string, unknown>
+}
+
+/**
+ * The pen layer over a slide. One component, two personalities:
+ *
+ *  canDraw (teacher, Annotate mode) — an interactive Excalidraw with a
+ *  transparent background covering the slide; strokes push every ~2s via the
+ *  deck route's `annotate` action (element-merged server-side, so co-teachers
+ *  converge). Remounted per slide via the parent's key, with the slide's
+ *  stored strokes as initial data.
+ *
+ *  view (students + teacher when not annotating) — the same canvas in view
+ *  mode with pointer-events disabled: purely visual, coordinates identical to
+ *  the teacher's canvas (same size, same origin), updated as the state poll
+ *  delivers new revisions. Renders nothing until the slide has strokes.
+ */
+function AnnotationLayer({
+  sessionId,
+  slideIndex,
+  canDraw,
+  remote,
+}: {
+  sessionId: string
+  slideIndex: number
+  canDraw: boolean
+  remote: { rev: number; scene: BoardScene } | null
+}) {
+  const apiRef = useRef<ExcalApi | null>(null)
+  const lastSentRef = useRef(0)
+  const appliedRevRef = useRef(-1)
+  // Captured once at mount (the parent remounts this layer per slide/mode via
+  // key) — a useState initializer, not a ref, so render never reads a ref.
+  const [initialElements] = useState<BoardElement[]>(() => (canDraw ? (remote?.scene.elements ?? []) : []))
+
+  // Teacher push loop.
+  useEffect(() => {
+    if (!canDraw) return
+    let active = true
+    const push = async () => {
+      const api = apiRef.current
+      if (!api || !active) return
+      const scene: BoardScene = { elements: [...api.getSceneElementsIncludingDeleted()], files: api.getFiles() }
+      const v = sceneVersion(scene)
+      if (v === lastSentRef.current) return
+      try {
+        const r = await fetch(`/api/live-sessions/${sessionId}/deck`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'annotate', slideIndex, scene }),
+        })
+        if (r.ok) lastSentRef.current = v
+      } catch { /* retried next tick */ }
+    }
+    const t = setInterval(push, 2000)
+    return () => { active = false; clearInterval(t); void push() }
+  }, [canDraw, sessionId, slideIndex])
+
+  // Viewer: apply newly delivered revisions.
+  useEffect(() => {
+    if (canDraw || !remote) return
+    const api = apiRef.current
+    if (!api || remote.rev === appliedRevRef.current) return
+    appliedRevRef.current = remote.rev
+    api.updateScene({ elements: remote.scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
+    const files = Object.values(remote.scene.files)
+    if (files.length > 0) api.addFiles(files)
+  }, [canDraw, remote])
+
+  // Nothing drawn on this slide and not drawing — no layer at all.
+  const hasStrokes = (remote?.scene.elements ?? []).some(el => !el.isDeleted)
+  if (!canDraw && !hasStrokes) return null
+
+  return (
+    <div className={`absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`}>
+      <Excalidraw
+        excalidrawAPI={(api) => {
+          apiRef.current = api as unknown as ExcalApi
+          // Viewer instances mount with whatever strokes are already known.
+          if (!canDraw && remote) {
+            appliedRevRef.current = remote.rev
+            ;(api as unknown as ExcalApi).updateScene({ elements: remote.scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
+            const files = Object.values(remote.scene.files)
+            if (files.length > 0) (api as unknown as ExcalApi).addFiles(files)
+          }
+        }}
+        initialData={{
+          elements: initialElements as never[],
+          appState: { viewBackgroundColor: 'transparent', currentItemStrokeColor: '#e03131' },
+        }}
+        viewModeEnabled={!canDraw}
+        zenModeEnabled={canDraw}
+        UIOptions={{ canvasActions: { toggleTheme: false, changeViewBackgroundColor: false } }}
+      />
     </div>
   )
 }

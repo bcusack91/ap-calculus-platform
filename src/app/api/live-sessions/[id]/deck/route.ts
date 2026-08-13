@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateSlideDeck, revealedList, type Slide } from '@/lib/slide-deck'
 import { touchAttendance } from '@/lib/live-session'
+import { asScene, mergeScenes } from '@/lib/board-merge'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -78,6 +79,18 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     }
   }
 
+  // Teacher pen strokes over the current slide (an Excalidraw scene stored in
+  // LiveBoard under a per-slide key). Scene ships only when the client's known
+  // annotation rev is stale — usually this is just a cheap rev echo.
+  const annRevKnown = Number(req.nextUrl.searchParams.get('annRev') ?? '-1')
+  const annRow = await prisma.liveBoard.findUnique({
+    where: { sessionId_ownerKey: { sessionId: id, ownerKey: `deck:${deck.id}:${deck.currentSlide}` } },
+    select: { rev: true, scene: true },
+  })
+  const annotation = annRow
+    ? { rev: annRow.rev, scene: annRow.rev > annRevKnown ? annRow.scene : undefined }
+    : { rev: 0, scene: undefined }
+
   const base = {
     id: deck.id,
     title: deck.title,
@@ -87,6 +100,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     revealed,
     status: deck.status,
     poll,
+    annotation,
     youAreTeacher: access.isTeacher,
   }
   if (req.nextUrl.searchParams.get('full') === '1') {
@@ -179,6 +193,29 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     revealed.add(index)
     await prisma.slideDeck.update({ where: { id: deck.id }, data: { revealed: [...revealed] } })
     return NextResponse.json({ ok: true })
+  }
+
+  if (action === 'annotate') {
+    const slideIndex = Number(body?.slideIndex)
+    if (!Number.isInteger(slideIndex) || slideIndex < 0 || slideIndex >= slides.length) {
+      return NextResponse.json({ error: 'Invalid slide index' }, { status: 400 })
+    }
+    const incoming = asScene(body?.scene)
+    const ownerKey = `deck:${deck.id}:${slideIndex}`
+    // Merge (not overwrite) so co-teachers annotating together converge, same
+    // as the whiteboards.
+    const existing = await prisma.liveBoard.findUnique({
+      where: { sessionId_ownerKey: { sessionId: id, ownerKey } },
+      select: { scene: true },
+    })
+    const merged = existing ? mergeScenes(asScene(existing.scene), incoming) : incoming
+    const saved = await prisma.liveBoard.upsert({
+      where: { sessionId_ownerKey: { sessionId: id, ownerKey } },
+      create: { sessionId: id, ownerKey, ownerName: 'Slide annotation', scene: merged as object, rev: 1 },
+      update: { scene: merged as object, rev: { increment: 1 } },
+      select: { rev: true },
+    })
+    return NextResponse.json({ rev: saved.rev })
   }
 
   if (action === 'end') {
