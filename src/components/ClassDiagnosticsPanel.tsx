@@ -10,7 +10,16 @@ import { useCallback, useEffect, useState } from 'react'
  * weakest domains, per-student scores.
  */
 
-interface DiagStudent { userId: string; name: string; takenAt: string | null; scoreLabel: string | null; percentage: number | null }
+interface DiagStudent {
+  userId: string
+  name: string
+  takenAt: string | null
+  scoreLabel: string | null
+  percentage: number | null
+  estimatedScore: number | null
+  mathScore: number | null
+  rwScore: number | null
+}
 interface Diag {
   id: string
   courseKey: string
@@ -21,6 +30,7 @@ interface Diag {
   takenCount: number
   totalStudents: number
   avgPercentage: number | null
+  scoreAverages: { overall: number | null; math: number | null; rw: number | null }
   domainAverages: { name: string; avg: number }[]
   students: DiagStudent[]
 }
@@ -130,7 +140,15 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
                   <span className={`font-medium ${d.takenCount === d.totalStudents ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}`}>
                     {d.takenCount}/{d.totalStudents} taken
                   </span>
-                  {d.avgPercentage !== null && <span className="text-gray-500 dark:text-gray-400">class avg {d.avgPercentage}%</span>}
+                  {d.scoreAverages?.overall !== null && d.scoreAverages?.overall !== undefined ? (
+                    <span className="text-gray-500 dark:text-gray-400">
+                      class avg <span className="font-semibold text-gray-700 dark:text-gray-200">{d.scoreAverages.overall}</span>
+                      {d.scoreAverages.math !== null && d.scoreAverages.rw !== null &&
+                        ` (Math ${d.scoreAverages.math} · R&W ${d.scoreAverages.rw})`}
+                    </span>
+                  ) : d.avgPercentage !== null ? (
+                    <span className="text-gray-500 dark:text-gray-400">class avg {d.avgPercentage}%</span>
+                  ) : null}
                 </span>
               </button>
               {expanded === d.id && (
@@ -153,7 +171,10 @@ export default function ClassDiagnosticsPanel({ classroomId }: { classroomId: st
                         <span className="font-medium text-gray-800 dark:text-gray-200">{s.name}</span>
                         {s.takenAt ? (
                           <span className="text-gray-600 dark:text-gray-400">
-                            {s.scoreLabel ?? '—'}{s.percentage !== null && ` (${s.percentage}%)`}
+                            {s.scoreLabel ?? '—'}
+                            {s.mathScore !== null && s.rwScore !== null
+                              ? ` (M ${s.mathScore} · RW ${s.rwScore})`
+                              : s.percentage !== null ? ` (${s.percentage}%)` : ''}
                           </span>
                         ) : (
                           <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/40 dark:text-red-300">not taken</span>

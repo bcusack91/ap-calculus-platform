@@ -55,13 +55,16 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       }
       const students = members.map(m => {
         const attempt = firstByUser.get(m.userId)
-        const results = attempt?.results as { percentage?: unknown; domains?: unknown } | undefined
+        const results = attempt?.results as { percentage?: unknown; estimatedScore?: unknown; mathScore?: unknown; rwScore?: unknown } | undefined
         return {
           userId: m.userId,
           name: nameOf.get(m.userId) ?? 'Student',
           takenAt: attempt?.createdAt ?? null,
           scoreLabel: attempt ? scoreLabelFromResults(attempt.results) : null,
           percentage: typeof results?.percentage === 'number' ? results.percentage : null,
+          estimatedScore: typeof results?.estimatedScore === 'number' ? results.estimatedScore : null,
+          mathScore: typeof results?.mathScore === 'number' ? results.mathScore : null,
+          rwScore: typeof results?.rwScore === 'number' ? results.rwScore : null,
         }
       }).sort((a, b) => a.name.localeCompare(b.name))
 
@@ -82,6 +85,18 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       const avgPercentage = taken.length > 0
         ? Math.round(taken.reduce((s, x) => s + (x.percentage ?? 0), 0) / taken.length)
         : null
+      // Real test-scale averages (owner request): SAT reports 400–1600 with
+      // Math and R&W section scores; MCAT reports 472–528. Averages only over
+      // attempts that actually carry the field.
+      const avgOf = (vals: (number | null)[]) => {
+        const nums = vals.filter((v): v is number => typeof v === 'number')
+        return nums.length > 0 ? Math.round(nums.reduce((a, b) => a + b, 0) / nums.length) : null
+      }
+      const scoreAverages = {
+        overall: avgOf(taken.map(x => x.estimatedScore)),
+        math: avgOf(taken.map(x => x.mathScore)),
+        rw: avgOf(taken.map(x => x.rwScore)),
+      }
 
       return {
         id: d.id,
@@ -93,6 +108,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
         takenCount: taken.length,
         totalStudents: members.length,
         avgPercentage,
+        scoreAverages,
         domainAverages: [...domainTotals.entries()]
           .map(([name, t]) => ({ name, avg: Math.round(t.sum / t.n) }))
           .sort((a, b) => a.avg - b.avg),
