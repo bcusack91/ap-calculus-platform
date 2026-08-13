@@ -199,6 +199,13 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                     📖 Present lesson
                   </Link>
                 )}
+                <Link
+                  href={`/teacher/slides?topic=${encodeURIComponent(t.slug)}`}
+                  target="_blank"
+                  className="rounded-lg border border-emerald-300 px-3 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/30"
+                >
+                  🖥️ Slides
+                </Link>
                 <button
                   onClick={() => void assignPractice(t)}
                   disabled={assigning === t.slug || assigned.has(t.slug)}

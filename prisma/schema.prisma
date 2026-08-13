@@ -1580,3 +1580,20 @@ model SlideResponse {
   @@unique([deckId, slideIndex, userId])
   @@index([deckId, slideIndex])
 }
+
+// Pre-generated slide decks per curriculum topic (owner request: slides "made"
+// for every MCAT and SAT subtopic, browsable before class). Presenting uses
+// the stored deck when one exists; scripts/generate-topic-slide-decks.ts
+// (re)builds them from lesson content + flashcards + exit-quiz polls.
+model TopicSlideDeck {
+  id          String   @id @default(cuid())
+  topicSlug   String   @unique
+  courseSlug  String
+  title       String
+  slides      Json
+  slideCount  Int
+  pollCount   Int
+  generatedAt DateTime @default(now())
+
+  @@index([courseSlug])
+}

@@ -159,11 +159,19 @@ export async function POST(req: NextRequest, { params }: Ctx) {
   if (action === 'start') {
     const topicSlug = typeof body?.topicSlug === 'string' ? body.topicSlug : ''
     if (!topicSlug) return NextResponse.json({ error: 'topicSlug required' }, { status: 400 })
-    let generated
-    try {
-      generated = await generateSlideDeck(topicSlug)
-    } catch (e) {
-      return NextResponse.json({ error: (e as Error).message }, { status: 400 })
+    // Pre-generated decks (scripts/generate-topic-slide-decks.ts) start
+    // instantly and are what the teacher previewed in the slide library;
+    // topics without one still generate live.
+    let generated: { title: string; slides: Slide[] }
+    const stored = await prisma.topicSlideDeck.findUnique({ where: { topicSlug } })
+    if (stored) {
+      generated = { title: stored.title, slides: stored.slides as unknown as Slide[] }
+    } else {
+      try {
+        generated = await generateSlideDeck(topicSlug)
+      } catch (e) {
+        return NextResponse.json({ error: (e as Error).message }, { status: 400 })
+      }
     }
     await prisma.slideDeck.updateMany({ where: { sessionId: id, status: 'ACTIVE' }, data: { status: 'ENDED' } })
     const deck = await prisma.slideDeck.create({

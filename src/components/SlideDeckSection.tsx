@@ -315,7 +315,8 @@ export default function SlideDeckSection({
  * this week's class-plan topics and start the auto-generated deck.
  */
 function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroomId: string }) {
-  const [topics, setTopics] = useState<{ slug: string; name: string }[]>([])
+  const [recommended, setRecommended] = useState<{ slug: string; name: string }[]>([])
+  const [catalog, setCatalog] = useState<{ name: string; topics: { slug: string; title: string; slideCount: number; pollCount: number }[] }[]>([])
   const [pick, setPick] = useState('')
   const [starting, setStarting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -325,25 +326,41 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
     const load = async () => {
       try {
         const disc = await fetch(`/api/teacher/classrooms/${classroomId}/class-plan`, { cache: 'no-store' })
-        if (!disc.ok) return
-        const d = await disc.json()
-        const course = d.availableCourses?.[0]?.key
-        if (!course) return
-        const plan = await fetch(`/api/teacher/classrooms/${classroomId}/class-plan?course=${encodeURIComponent(course)}`, { cache: 'no-store' })
-        if (!plan.ok || !active) return
-        const pd = await plan.json()
-        const list = (pd.classTopics ?? [])
-          .filter((t: { lessonPath: string | null }) => t.lessonPath)
-          .map((t: { slug: string; name: string }) => ({ slug: t.slug, name: t.name }))
-        setTopics(list)
-        if (list.length > 0) setPick(list[0].slug)
+        const d = disc.ok ? await disc.json() : null
+        const courseKey: string | undefined = d?.availableCourses?.[0]?.key
+
+        // ⭐ This week's class-plan topics float to the top of the picker.
+        if (courseKey) {
+          const plan = await fetch(`/api/teacher/classrooms/${classroomId}/class-plan?course=${encodeURIComponent(courseKey)}`, { cache: 'no-store' })
+          if (plan.ok && active) {
+            const pd = await plan.json()
+            const list = (pd.classTopics ?? [])
+              .filter((t: { lessonPath: string | null }) => t.lessonPath)
+              .map((t: { slug: string; name: string }) => ({ slug: t.slug, name: t.name }))
+            setRecommended(list)
+            if (list.length > 0) setPick(list[0].slug)
+          }
+        }
+
+        // Full pre-generated catalog for the course, grouped by category —
+        // any topic is presentable, not just this week's plan.
+        const COURSE_SLUG: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep' }
+        const courseSlug = courseKey ? COURSE_SLUG[courseKey] : undefined
+        if (courseSlug) {
+          const lib = await fetch(`/api/teacher/slide-library?course=${encodeURIComponent(courseSlug)}`, { cache: 'no-store' })
+          if (lib.ok && active) {
+            const ld = await lib.json()
+            setCatalog(ld.categories ?? [])
+            setPick(prev => prev || ld.categories?.[0]?.topics?.[0]?.slug || '')
+          }
+        }
       } catch { /* launcher just stays hidden */ }
     }
     void load()
     return () => { active = false }
   }, [classroomId])
 
-  if (topics.length === 0) return null
+  if (recommended.length === 0 && catalog.length === 0) return null
 
   const start = async () => {
     setStarting(true)
@@ -368,9 +385,18 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
       <select
         value={pick}
         onChange={e => setPick(e.target.value)}
-        className="rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+        className="max-w-xs rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
       >
-        {topics.map(t => <option key={t.slug} value={t.slug}>{t.name}</option>)}
+        {recommended.length > 0 && (
+          <optgroup label="⭐ Recommended this week">
+            {recommended.map(t => <option key={`rec-${t.slug}`} value={t.slug}>{t.name}</option>)}
+          </optgroup>
+        )}
+        {catalog.map(cat => (
+          <optgroup key={cat.name} label={cat.name}>
+            {cat.topics.map(t => <option key={t.slug} value={t.slug}>{t.title} ({t.slideCount} slides)</option>)}
+          </optgroup>
+        ))}
       </select>
       <button
         onClick={() => void start()}

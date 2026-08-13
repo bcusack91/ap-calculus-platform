@@ -75,11 +75,42 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string): { kind: 'co
 export async function generateSlideDeck(topicSlug: string): Promise<{ title: string; slides: Slide[] }> {
   const topic = await prisma.topic.findUnique({
     where: { slug: topicSlug },
-    select: { title: true, textContent: true, category: { select: { course: { select: { name: true } } } } },
+    select: {
+      title: true, textContent: true,
+      category: { select: { course: { select: { name: true } } } },
+      flashcards: { select: { front: true, back: true }, take: 12 },
+      exampleProblems: { select: { question: true, solution: true }, take: 2 },
+    },
   })
   if (!topic) throw new Error(`Unknown topic: ${topicSlug}`)
 
   const content = contentSlidesFrom(topic.textContent ?? '', topic.title)
+
+  // Thin lessons (several MCAT subtopics carry boilerplate study-checklist
+  // markdown) get supplemented from material every topic reliably has: the
+  // audited flashcard bank (key concepts, ~3 per slide) and worked examples.
+  // Rich lessons skip this — their own content is better slide material.
+  if (content.length < 6) {
+    for (const ex of topic.exampleProblems) {
+      if (content.length >= MAX_CONTENT_SLIDES) break
+      content.push({
+        kind: 'content',
+        title: 'Worked Example',
+        blocks: [ex.question, `Solution: ${ex.solution}`],
+      })
+    }
+    const cards = topic.flashcards
+    for (let i = 0; i < cards.length && content.length < MAX_CONTENT_SLIDES; i += 3) {
+      const chunk = cards.slice(i, i + 3)
+      if (chunk.length === 0) break
+      content.push({
+        kind: 'content',
+        title: cards.length > 3 ? `Key Concepts (${Math.floor(i / 3) + 1})` : 'Key Concepts',
+        blocks: chunk.flatMap(c => [`• ${c.front}`, `→ ${c.back}`]),
+      })
+      if (content.length >= 9) break // enough for a full block; keep pace brisk
+    }
+  }
 
   // Polls from the topic's exit-quiz pool. Deduplicate stems; tolerate pools
   // that are thin or missing (deck simply has fewer/no polls).
