@@ -6,8 +6,14 @@ import { getActiveStudyContext } from '@/lib/study-context'
 
 /**
  * POST /api/flashcards/add-from-missed
- * Add flashcards to a user's deck when they miss questions on
- * SAT/ACT diagnostic tests, entrance quizzes, or exit quizzes.
+ * Manually add a topic's flashcards to the user's active deck.
+ *
+ * LEGACY (Aug 2026): no first-party flow calls this anymore. Diagnostic pages
+ * and the lesson renderer used to push cards from here, but the owner's unlock
+ * rule is now lesson-done + exit-quiz-submitted, enforced server-side in
+ * src/lib/flashcard-unlock.ts. Do NOT re-wire diagnostics to this route.
+ * Kept because it's harmless (auth'd, self-only) and useful for a future
+ * explicit "add these cards" button.
  *
  * Body: { topicSlugs: string[] }
  */

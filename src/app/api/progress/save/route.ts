@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { getActiveStudyContext } from '@/lib/study-context'
-import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
 import { progressSaveSchema, parseBody } from '@/lib/validations'
 import { invalidateCache, dashboardCacheKey } from '@/lib/redis'
 import { touchDailyStreak } from '@/lib/streak'
@@ -43,13 +42,13 @@ export async function POST(request: Request) {
     if (topicId) {
       topic = await prisma.topic.findUnique({
         where: { id: topicId },
-        select: { id: true },
+        select: { id: true, slug: true },
       })
     } else {
       // Get topic ID from slug (fallback)
       topic = await prisma.topic.findUnique({
         where: { slug: topicSlug },
-        select: { id: true },
+        select: { id: true, slug: true },
       })
     }
 
@@ -75,9 +74,6 @@ export async function POST(request: Request) {
 
     const topicDbId = topic.id
     const userId = session.user.id
-    // Lesson-completion flashcard unlocks land in the ACTIVE study mode's deck
-    // (finish a lesson in MCAT class mode -> MCAT deck gets the cards).
-    const studyContext = await getActiveStudyContext(userId)
 
     // All progress + flashcard writes commit or roll back together. The
     // never-downgrade resolution happens INSIDE the transaction behind a row
@@ -144,181 +140,23 @@ export async function POST(request: Request) {
       // Saving progress is study activity — advance the daily streak
       await touchDailyStreak(tx, userId)
 
-      // 🎴 AUTO-GENERATE/INITIALIZE FLASHCARDS as user progresses through topic
-      let flashcardsCreated = false
-      let flashcardCount = 0
-      let flashcardTopicTitle = ''
-      let totalActiveFlashcards = 0
-      let totalFlashcards = 0
-
-      // Initialize flashcards ONLY when completing a part, not during progress checkpoints
-      // This prevents flashcards from appearing when navigating between sections
-      const shouldInitializeFlashcards = (
-        isPartCompletion && (
-          status === 'COMPLETED' ||
-          status === 'MASTERED' ||
-          (status === 'IN_PROGRESS' && lessonPart && lessonPart >= 1)
-        )
-      )
-
-      if (shouldInitializeFlashcards) {
-        // Get the full topic with content
-        const fullTopic = await tx.topic.findUnique({
-          where: { id: topicDbId },
-          select: {
-            id: true,
-            title: true,
-            textContent: true,
-            flashcards: {
-              select: { id: true, lessonPart: true },
-            },
-            exampleProblems: {
-              select: { question: true, solution: true },
-            },
-          },
-        })
-
-        if (fullTopic && fullTopic.flashcards.length === 0) {
-          // Generate flashcards from content
-          const candidates = generateFlashcardsFromContent(fullTopic.textContent)
-
-          // Also analyze example problems
-          const problemText = fullTopic.exampleProblems
-            .map(p => `${p.question}\n${p.solution}`)
-            .join('\n\n')
-
-          if (problemText) {
-            const problemCandidates = generateFlashcardsFromContent(problemText)
-            candidates.push(...problemCandidates)
-          }
-
-          // Get top flashcards
-          const topFlashcards = getTopFlashcards(candidates, 8)
-
-          if (topFlashcards.length > 0) {
-            // Create flashcards, then initialize progress in a batch
-            const createdFlashcards: { id: string }[] = []
-            for (const card of topFlashcards) {
-              const fc = await tx.flashcard.create({
-                data: {
-                  topicId: fullTopic.id,
-                  front: card.front,
-                  back: card.back,
-                  hint: card.hint,
-                  isPremium: false,
-                },
-                select: { id: true },
-              })
-              createdFlashcards.push(fc)
-            }
-
-            await tx.flashcardProgress.createMany({
-              data: createdFlashcards.map((fc) => ({
-                userId,
-                flashcardId: fc.id,
-                context: studyContext,
-                easeFactor: 2.5,
-                interval: 0,
-                repetitions: 0,
-                nextReview: new Date(),
-                lastReviewed: new Date(),
-                reviewCount: 0,
-              })),
-            })
-
-            flashcardsCreated = true
-            flashcardCount = topFlashcards.length
-            flashcardTopicTitle = fullTopic.title
-          }
-        } else if (fullTopic && fullTopic.flashcards.length > 0) {
-          // LESSON PART-BASED INITIALIZATION: Only initialize flashcards tagged for completed parts
-          // This ensures flashcards match the actual content covered
-
-          // Determine which flashcards to initialize based on lesson part and MASTERED/COMPLETED status
-          let flashcardsToConsider: typeof fullTopic.flashcards = []
-
-          if (status === 'MASTERED' || status === 'COMPLETED') {
-            // When topic is completed/mastered, initialize ALL flashcards (regardless of lessonPart tag)
-            flashcardsToConsider = fullTopic.flashcards
-
-          } else if (lessonPart) {
-            // During progress: ONLY initialize flashcards tagged for completed parts
-            // Cards without lessonPart tags will NOT be initialized during progress
-            flashcardsToConsider = fullTopic.flashcards.filter(fc =>
-              fc.lessonPart !== null && fc.lessonPart !== undefined && fc.lessonPart <= lessonPart
-            )
-
-          } else {
-            // No lesson part specified, use all flashcards
-            flashcardsToConsider = fullTopic.flashcards
-          }
-
-          // Check how many are already initialized
-          const existingProgress = await tx.flashcardProgress.findMany({
-            where: {
-              userId,
-              context: studyContext,
-              flashcard: {
-                topicId: fullTopic.id
-              }
-            },
-            select: {
-              flashcardId: true
-            }
-          })
-
-          const initializedIds = new Set(existingProgress.map(p => p.flashcardId))
-
-          // Find flashcards that should be active but aren't yet initialized
-          const uninitializedCards = flashcardsToConsider.filter(fc => !initializedIds.has(fc.id))
-
-          // Store total counts for notification
-          totalActiveFlashcards = initializedIds.size
-          totalFlashcards = fullTopic.flashcards.length
-
-          if (uninitializedCards.length > 0) {
-            // Initialize all cards in a single batch query
-            await tx.flashcardProgress.createMany({
-              data: uninitializedCards.map((flashcard) => ({
-                userId,
-                flashcardId: flashcard.id,
-                context: studyContext,
-                easeFactor: 2.5,
-                interval: 0,
-                repetitions: 0,
-                nextReview: new Date(),
-                lastReviewed: new Date(),
-                reviewCount: 0,
-              })),
-              skipDuplicates: true,
-            })
-
-            flashcardsCreated = true
-            flashcardCount = uninitializedCards.length
-            flashcardTopicTitle = fullTopic.title
-            totalActiveFlashcards = initializedIds.size + uninitializedCards.length
-
-          } else if (initializedIds.size > 0) {
-            // Even if no new cards added, show notification about existing cards
-            flashcardsCreated = true
-            flashcardCount = 0 // No new cards
-            flashcardTopicTitle = fullTopic.title
-
-          }
-        }
-      }
-
-      return {
-        progress,
-        flashcardsCreated,
-        flashcardCount,
-        flashcardTopicTitle,
-        totalActiveFlashcards,
-        totalFlashcards,
-      }
+      return { progress }
     })
 
-    const { progress, flashcardsCreated, flashcardCount, flashcardTopicTitle, totalActiveFlashcards, totalFlashcards } = txResult
+    const { progress } = txResult
+
+    // Flashcard unlock rule: lesson done + exit quiz submitted (see
+    // flashcard-unlock.ts). Completing the lesson may complete the pair (the
+    // student took the exit quiz on an earlier failed run, or in class), so
+    // check on part completions that finish the topic. Best-effort.
+    let unlock: Awaited<ReturnType<typeof maybeUnlockFlashcards>> | null = null
+    if (isPartCompletion && (progress.status === 'COMPLETED' || progress.status === 'MASTERED')) {
+      try {
+        unlock = await maybeUnlockFlashcards(userId, topic.slug)
+      } catch (unlockError) {
+        console.error('progress-save flashcard unlock failed (non-fatal):', unlockError)
+      }
+    }
 
     // Progress changed — drop the user's cached dashboard so their next
     // dashboard load reflects this update immediately rather than after the TTL.
@@ -341,12 +179,12 @@ export async function POST(request: Request) {
         status: progress.status,
         masteryLevel: progress.masteryLevel,
       },
-      flashcards: flashcardsCreated ? {
+      flashcards: unlock?.unlocked && unlock.newCards > 0 ? {
         created: true,
-        newCards: flashcardCount, // Number of NEW cards just added
-        totalActive: totalActiveFlashcards, // Total cards now available
-        totalPossible: totalFlashcards, // Total cards in topic
-        topicTitle: flashcardTopicTitle
+        newCards: unlock.newCards, // Number of NEW cards just added
+        totalActive: unlock.totalActive, // Total cards now available
+        totalPossible: unlock.totalCards, // Total cards in topic
+        topicTitle: unlock.topicTitle
       } : undefined
     })
   } catch (error) {

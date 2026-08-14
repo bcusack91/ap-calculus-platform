@@ -136,17 +136,6 @@ export default function SATDiagnosticPage() {
           }),
         })
 
-        // Add flashcards for recommended (weak/moderate) topics
-        if (diagnosticResults.recommendedTopics.length > 0) {
-          fetch('/api/flashcards/add-from-missed', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              topicSlugs: diagnosticResults.recommendedTopics.map(t => t.slug),
-            }),
-          }).catch(() => {})
-        }
-
         if (challengeToken) {
           const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
             method: 'POST',

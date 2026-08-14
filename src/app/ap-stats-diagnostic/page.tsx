@@ -168,13 +168,6 @@ export default function APStatsDiagnosticPage() {
         }
       }
 
-      if (diagnosticResults.recommendedTopics.length > 0) {
-        fetch('/api/flashcards/add-from-missed', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ topicSlugs: diagnosticResults.recommendedTopics.map((t: { slug: string }) => t.slug) }),
-        }).catch(() => {})
-      }
     } catch {
       // Silent fail
     }

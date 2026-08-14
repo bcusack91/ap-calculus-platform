@@ -191,7 +191,7 @@ export function QuizSlideView({ title, palette, children }: { title: string; pal
       <p className="relative mb-3 text-4xl">🎯</p>
       <h2 className="relative mb-3 text-2xl font-bold sm:text-3xl">Your turn: {title}</h2>
       <p className="relative mb-6 max-w-md text-white/85">
-        Take the exit quiz to lock in what we covered — passing it counts toward homework and unlocks this topic&apos;s flashcards.
+        Take the exit quiz to lock in what we covered — it unlocks this topic&apos;s flashcards, and passing counts toward homework.
       </p>
       <div className="relative">{children}</div>
     </div>

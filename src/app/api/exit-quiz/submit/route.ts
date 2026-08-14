@@ -3,7 +3,7 @@ import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
-import { generateFlashcardsFromContent, getTopFlashcards } from '@/lib/flashcard-generation'
+import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
 import { regradeExitQuiz, regradeExitQuizSeeded } from '@/lib/exit-quiz-regrade'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
@@ -204,56 +204,6 @@ export async function POST(request: Request) {
         }
       }
 
-      // Not passed — seed flashcards for review
-      const topic = await tx.topic.findUnique({
-        where: { slug: topicSlug },
-        include: { flashcards: true, exampleProblems: true },
-      })
-
-      if (topic) {
-        // Auto-generate flashcards if none exist
-        if (topic.flashcards.length === 0) {
-          const candidates = generateFlashcardsFromContent(topic.textContent)
-          const problemText = topic.exampleProblems
-            .map(p => `${p.question}\n${p.solution}`)
-            .join('\n\n')
-          if (problemText) {
-            candidates.push(...generateFlashcardsFromContent(problemText))
-          }
-          const topFlashcards = getTopFlashcards(candidates, 8)
-          for (const card of topFlashcards) {
-            const fc = await tx.flashcard.create({
-              data: {
-                topicId: topic.id,
-                front: card.front,
-                back: card.back,
-                hint: card.hint,
-                isPremium: false,
-              },
-            })
-            topic.flashcards.push(fc as typeof topic.flashcards[number])
-          }
-        }
-
-        // Add FlashcardProgress entries for the user (skipDuplicates keeps the
-        // old upsert-with-empty-update semantics: existing rows are untouched)
-        if (topic.flashcards.length > 0) {
-          await tx.flashcardProgress.createMany({
-            data: topic.flashcards.map((flashcard) => ({
-              userId,
-              flashcardId: flashcard.id,
-              easeFactor: 2.5,
-              interval: 0,
-              repetitions: 0,
-              nextReview: new Date(),
-              lastReviewed: new Date(),
-              reviewCount: 0,
-            })),
-            skipDuplicates: true,
-          })
-        }
-      }
-
       return {
         attempt,
         passed: false as const,
@@ -304,7 +254,24 @@ export async function POST(request: Request) {
       score: totalQuestions > 0 ? score / totalQuestions : 0,
     })
 
-    return NextResponse.json(result)
+    // Flashcard unlock rule: lesson done (self-paced or in-class) + exit quiz
+    // submitted. Submitting the quiz may complete the pair, so check here.
+    // Best-effort — an unlock failure must never fail the submission.
+    let flashcards: { newCards: number; totalActive: number; topicTitle: string } | undefined
+    try {
+      const unlock = await maybeUnlockFlashcards(userId, topicSlug)
+      if (unlock.unlocked && unlock.newCards > 0) {
+        flashcards = {
+          newCards: unlock.newCards,
+          totalActive: unlock.totalActive,
+          topicTitle: unlock.topicTitle,
+        }
+      }
+    } catch (unlockError) {
+      console.error('exit-quiz flashcard unlock failed (non-fatal):', unlockError)
+    }
+
+    return NextResponse.json({ ...result, flashcards })
 
   } catch (error) {
     console.error('Error submitting exit quiz:', error)
