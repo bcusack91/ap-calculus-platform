@@ -4,6 +4,7 @@ import { Suspense, useCallback, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { MathText } from '@/components/MathText'
+import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideView, QuizSlideView, OptionBadge } from '@/components/SlideVisuals'
 
 /**
  * Teacher slide library — /teacher/slides[?topic=<slug>].
@@ -74,6 +75,7 @@ function SlideLibrary() {
   }, [deepLinkTopic, openPreview])
 
   const slide = preview?.slides[slideIdx]
+  const palette = deckPalette(preview?.title ?? 'deck')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -146,33 +148,26 @@ function SlideLibrary() {
                     >▶</button>
                   </div>
                 </div>
-                <div className="min-h-[45vh] px-6 py-8 sm:px-10">
+                <SlideMotionStyles />
+                <div key={slideIdx} className="min-h-[45vh] px-6 py-8 sm:px-10">
                   {slide?.kind === 'title' && (
-                    <div className="flex min-h-[38vh] flex-col items-center justify-center text-center">
-                      <h2 className="mb-3 text-3xl font-bold text-gray-900 dark:text-white">{slide.title}</h2>
-                      <p className="text-lg text-gray-500 dark:text-gray-400">{slide.subtitle}</p>
-                    </div>
+                    <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
                   )}
                   {slide?.kind === 'content' && (
-                    <div>
-                      <h2 className="mb-5 text-2xl font-bold text-gray-900 dark:text-white">{slide.title}</h2>
-                      <div className="space-y-3">
-                        {slide.blocks.map((b, i) => (
-                          <MathText key={i} text={b.replace(/^[-*]\s+/, '• ').replace(/\*\*([^*]+)\*\*/g, '$1')} className="text-lg leading-relaxed text-gray-800 dark:text-gray-200" />
-                        ))}
-                      </div>
-                    </div>
+                    <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} />
                   )}
                   {slide?.kind === 'poll' && (
-                    <div>
-                      <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-indigo-500">📊 Poll (answer shown — this is your prep view)</p>
+                    <div style={SLIDE_IN}>
+                      <p className={`mb-2 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${palette.chip}`}>
+                        📊 Poll · answer shown (prep view)
+                      </p>
                       <MathText text={slide.question} className="mb-5 text-xl font-semibold text-gray-900 dark:text-white" />
                       <div className="space-y-2">
                         {slide.options.map((opt, i) => (
-                          <div key={i} className={`rounded-xl border-2 px-4 py-2.5 text-sm ${i === slide.correctIndex ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-gray-200 dark:border-gray-600'}`}>
-                            <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>
+                          <div key={i} className={`flex items-center gap-2.5 rounded-xl border-2 px-4 py-2.5 text-sm ${i === slide.correctIndex ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-gray-200 dark:border-gray-600'}`}>
+                            <OptionBadge index={i} active={i === slide.correctIndex} palette={palette} />
                             <MathText inline text={opt} />
-                            {i === slide.correctIndex && <span className="ml-2 text-xs font-semibold text-green-600 dark:text-green-400">✓</span>}
+                            {i === slide.correctIndex && <span className="ml-1 text-xs font-semibold text-green-600 dark:text-green-400">✓ correct</span>}
                           </div>
                         ))}
                       </div>
@@ -182,13 +177,7 @@ function SlideLibrary() {
                     </div>
                   )}
                   {slide?.kind === 'quiz' && (
-                    <div className="flex min-h-[38vh] flex-col items-center justify-center text-center">
-                      <p className="mb-2 text-3xl">🎯</p>
-                      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Exit-quiz handoff: {slide.title}</h2>
-                      <p className="mt-2 max-w-md text-sm text-gray-500 dark:text-gray-400">
-                        In class, students click through to the exit quiz from this slide — passing it credits homework and unlocks flashcards.
-                      </p>
-                    </div>
+                    <QuizSlideView title={slide.title} palette={palette} />
                   )}
                 </div>
               </div>

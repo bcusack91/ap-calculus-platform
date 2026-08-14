@@ -6,6 +6,7 @@ import { Excalidraw, CaptureUpdateAction } from '@excalidraw/excalidraw'
 import '@excalidraw/excalidraw/index.css'
 import { MathText } from '@/components/MathText'
 import { asScene, sceneVersion, type BoardScene, type BoardElement } from '@/lib/board-merge'
+import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideView, QuizSlideView, OptionBadge } from '@/components/SlideVisuals'
 
 declare global {
   interface Window { EXCALIDRAW_ASSET_PATH?: string }
@@ -139,6 +140,7 @@ export default function SlideDeckSection({
   }
   const slide = slides[deck.currentSlide]
   if (!slide) return null
+  const palette = deckPalette(deck.title)
   const isRevealed = deck.revealed.includes(deck.currentSlide)
   const reveal = deck.youAreTeacher && slide.kind === 'poll'
     ? { correctIndex: slide.correctIndex, explanation: slide.explanation }
@@ -196,7 +198,8 @@ export default function SlideDeckSection({
       </div>
 
       {/* Slide body — relative so annotation layers can sit exactly on top */}
-      <div className="relative min-h-[45vh] px-6 py-8 sm:px-10">
+      <SlideMotionStyles />
+      <div key={deck.currentSlide} className="relative min-h-[45vh] px-6 py-8 sm:px-10">
         <AnnotationLayer
           key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : 'view'}`}
           sessionId={sessionId}
@@ -205,30 +208,16 @@ export default function SlideDeckSection({
           remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
         />
         {slide.kind === 'title' && (
-          <div className="flex min-h-[38vh] flex-col items-center justify-center text-center">
-            <h2 className="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">{slide.title}</h2>
-            <p className="text-lg text-gray-500 dark:text-gray-400">{slide.subtitle}</p>
-          </div>
+          <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
         )}
 
         {slide.kind === 'content' && (
-          <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">{slide.title}</h2>
-            <div className="space-y-4">
-              {slide.blocks.map((b, i) => (
-                <MathText
-                  key={i}
-                  text={b.replace(/^[-*]\s+/, '• ').replace(/\*\*([^*]+)\*\*/g, '$1')}
-                  className="text-lg leading-relaxed text-gray-800 sm:text-xl dark:text-gray-200"
-                />
-              ))}
-            </div>
-          </div>
+          <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} />
         )}
 
         {slide.kind === 'poll' && (
-          <div>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-indigo-500">
+          <div style={SLIDE_IN}>
+            <p className={`mb-1 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${palette.chip}`}>
               📊 Quick check {isRevealed ? '· answer revealed' : deck.poll ? `· ${deck.poll.total} answered` : ''}
             </p>
             <MathText text={slide.question} className="mb-6 text-xl font-semibold leading-relaxed text-gray-900 sm:text-2xl dark:text-white" />
@@ -249,19 +238,19 @@ export default function SlideDeckSection({
                       isCorrect
                         ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
                         : mine
-                        ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
-                        : 'border-gray-200 hover:border-indigo-300 dark:border-gray-600'
+                        ? palette.ring
+                        : 'border-gray-200 hover:border-gray-300 dark:border-gray-600'
                     } ${youAreTeacher ? 'cursor-default' : ''}`}
                   >
                     {showBars && (
                       <div
-                        className={`absolute inset-y-0 left-0 transition-all ${isCorrect ? 'bg-green-200/60 dark:bg-green-800/30' : 'bg-indigo-100/60 dark:bg-indigo-800/20'}`}
+                        className={`absolute inset-y-0 left-0 transition-all duration-500 ${isCorrect ? 'bg-green-200/60 dark:bg-green-800/30' : palette.barFill}`}
                         style={{ width: `${pct}%` }}
                       />
                     )}
                     <span className="relative flex items-center justify-between gap-3">
-                      <span className="flex items-center gap-2 text-sm sm:text-base">
-                        <span className="font-bold">{String.fromCharCode(65 + i)}.</span>
+                      <span className="flex items-center gap-2.5 text-sm sm:text-base">
+                        <OptionBadge index={i} active={mine || !!isCorrect} palette={palette} />
                         <MathText inline text={opt} />
                         {mine && <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">(your answer)</span>}
                         {isCorrect && <span className="text-xs font-semibold text-green-600 dark:text-green-400">✓ correct</span>}
@@ -289,20 +278,15 @@ export default function SlideDeckSection({
         )}
 
         {slide.kind === 'quiz' && (
-          <div className="flex min-h-[38vh] flex-col items-center justify-center text-center">
-            <p className="mb-2 text-3xl">🎯</p>
-            <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">Your turn: {slide.title}</h2>
-            <p className="mb-6 max-w-md text-gray-600 dark:text-gray-400">
-              Take the exit quiz to lock in what we just covered — passing it counts toward your homework and unlocks this topic&apos;s flashcards.
-            </p>
+          <QuizSlideView title={slide.title} palette={palette}>
             <Link
               href={`/topics/${slide.topicSlug}`}
               target="_blank"
-              className="rounded-xl bg-indigo-600 px-8 py-3 font-semibold text-white shadow-lg transition hover:bg-indigo-700"
+              className="inline-block rounded-xl bg-white px-8 py-3 font-semibold text-gray-900 shadow-lg transition hover:bg-gray-100"
             >
               Open the exit quiz →
             </Link>
-          </div>
+          </QuizSlideView>
         )}
       </div>
     </div>
