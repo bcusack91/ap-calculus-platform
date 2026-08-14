@@ -168,6 +168,13 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string): { kind: 'co
  * [~3 content, 1 poll] → closing exit-quiz slide.
  */
 export async function generateSlideDeck(topicSlug: string): Promise<{ title: string; slides: Slide[] }> {
+  // Owner-reviewed decks override auto-generation entirely.
+  try {
+    const { CURATED_DECKS } = await import('@/data/curated-decks')
+    const curated = CURATED_DECKS[topicSlug]
+    if (curated) return curated
+  } catch { /* registry unavailable — fall through to generation */ }
+
   const topic = await prisma.topic.findUnique({
     where: { slug: topicSlug },
     select: {
