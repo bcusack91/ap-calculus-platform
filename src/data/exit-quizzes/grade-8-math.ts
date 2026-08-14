@@ -2,6 +2,7 @@
  * Exit Quiz — Grade 8 Math
  * 40 randomized questions covering number system, expressions, functions, geometry, statistics, ratios
  */
+import { textMatchesSlug } from './relevance-fallback'
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
 function randInt(a: number, b: number) { return Math.floor(Math.random() * (b - a + 1)) + a }
@@ -61,12 +62,18 @@ const questionPool: QuestionTemplate[] = [
   { id: 'g8-q40', category: 'Expressions & Equations', generate() { const a = randInt(2, 5); const b = randInt(1, 8); const { options, correctIndex } = makeStringOptions('Infinitely many solutions', ['No solution', 'One solution', 'Two solutions']); return { id: this.id, category: this.category, question: `$${a}x + ${b} = ${a}x + ${b}$ has:`, options, correctIndex, explanation: `Both sides are identical. True for all $x$ → infinitely many solutions.` } } },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
+  let sourcePool = questionPool
+  if (topicSlug) {
+    // Match templates to the topic by category + a sample generation's text.
+    const matched = questionPool.filter(t => { const s = t.generate(); return textMatchesSlug(`${t.category} ${s.question} ${s.explanation}`, topicSlug) })
+    if (matched.length >= 3) sourcePool = matched
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
-  for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
+  for (const q of sourcePool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
-  const remaining = questionPool.filter(q => !usedIds.has(q.id))
+  const remaining = sourcePool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
   return shuffle(selected).map(t => t.generate())
 }

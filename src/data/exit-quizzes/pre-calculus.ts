@@ -2,6 +2,7 @@
  * Exit Quiz — Pre-Calculus
  * 40 randomized questions covering functions, polynomials, exponentials, logs, trig, analytic trig, sequences, polar
  */
+import { textMatchesSlug } from './relevance-fallback'
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
 function randInt(a: number, b: number) { return Math.floor(Math.random() * (b - a + 1)) + a }
@@ -66,12 +67,18 @@ const questionPool: QuestionTemplate[] = [
   { id: 'pc-q40', category: 'Exponential & Log', generate() { const a = randInt(2, 4); const b = randInt(2, 4); const { options, correctIndex } = makeStringOptions(`$\\log_{${a}} ${b}$`, [`$\\frac{\\ln ${a}}{\\ln ${b}}$`, `$\\ln(${a} \\cdot ${b})$`, `$\\frac{${a}}{${b}}$`]); return { id: this.id, category: this.category, question: `Change of base: $\\frac{\\ln ${b}}{\\ln ${a}} = ?$`, options, correctIndex, explanation: `$\\frac{\\ln ${b}}{\\ln ${a}} = \\log_{${a}} ${b}$ (change of base formula).` } } },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
+export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
+  let sourcePool = questionPool
+  if (topicSlug) {
+    // Match templates to the topic by category + a sample generation's text.
+    const matched = questionPool.filter(t => { const s = t.generate(); return textMatchesSlug(`${t.category} ${s.question} ${s.explanation}`, topicSlug) })
+    if (matched.length >= 3) sourcePool = matched
+  }
   const byCategory: Record<string, QuestionTemplate[]> = {}
-  for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
+  for (const q of sourcePool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
   const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
-  const remaining = questionPool.filter(q => !usedIds.has(q.id))
+  const remaining = sourcePool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
   return shuffle(selected).map(t => t.generate())
 }

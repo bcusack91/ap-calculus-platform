@@ -3,6 +3,7 @@
  * ~150 questions across 5 CED-aligned domains
  */
 
+import { relevantPool } from './relevance-fallback'
 export interface USGovQuestion {
   question: string
   options: string[]
@@ -122,10 +123,7 @@ export const usGovQuestionPool: USGovQuestion[] = [
 
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }[] {
   let pool = usGovQuestionPool
-  if (topicSlug) {
-    const filtered = pool.filter(q => q.topicSlug === topicSlug)
-    pool = filtered.length > 0 ? filtered : pool
-  }
+  if (topicSlug) pool = relevantPool(pool, topicSlug)
   return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
     id: `${q.topicSlug}-q${i}`,
     question: q.question,

@@ -2,6 +2,7 @@
  * ACT Exit Quiz — 64-question pool across all four ACT domains
  */
 
+import { relevantPool } from './relevance-fallback'
 interface ActExitQuestion {
   question: string
   options: string[]
@@ -858,10 +859,7 @@ export const actQuestionPool: ActExitQuestion[] = [
 
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug: string }[] {
   let pool = actQuestionPool
-  if (topicSlug) {
-    const filtered = pool.filter(q => q.topicSlug === topicSlug)
-    pool = filtered.length > 0 ? filtered : pool
-  }
+  if (topicSlug) pool = relevantPool(pool, topicSlug)
   return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
     id: `${q.topicSlug}-q${i}`,
     question: q.question,

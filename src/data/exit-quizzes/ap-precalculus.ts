@@ -14,6 +14,7 @@
  * (matches the lesson topic slug used by the lesson router).
  */
 
+import { relevantPool } from './relevance-fallback'
 export interface APPrecalcQuestion {
   question: string
   options: string[]
@@ -164,10 +165,7 @@ export const apPrecalcQuestionPool: APPrecalcQuestion[] = [
  */
 export function generateExitQuiz(count = 10, topicSlug?: string) {
   let pool = apPrecalcQuestionPool
-  if (topicSlug) {
-    const filtered = pool.filter((q) => q.topicSlug === topicSlug)
-    pool = filtered.length > 0 ? filtered : pool
-  }
+  if (topicSlug) pool = relevantPool(pool, topicSlug)
   return [...pool]
     .sort(() => Math.random() - 0.5)
     .slice(0, count)

@@ -3,6 +3,7 @@
  * Covers: reading comprehension, reasoning, argument analysis, inference
  */
 
+import { mcatSubtopicPool } from './mcat-subtopic-pool'
 import type { MCATQuizQuestion } from './mcat-general-chemistry'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
@@ -107,8 +108,9 @@ const questionPool: MCATQuizQuestion[] = [
   },
 ]
 
-export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
-  const shuffled = [...questionPool].sort(() => Math.random() - 0.5)
+export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
+  const source = topicSlug ? mcatSubtopicPool(questionPool, 'cars', topicSlug) : questionPool
+  const shuffled = [...source].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `cars-${i}`,
     question: q.question,

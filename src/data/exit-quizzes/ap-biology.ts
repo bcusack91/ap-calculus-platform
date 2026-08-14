@@ -9,6 +9,7 @@
  *  - `difficulty` : 'easy' | 'medium' | 'hard'
  */
 
+import { relevantPool } from './relevance-fallback'
 export interface ExitQuizQuestion {
   id: string
   question: string
@@ -52,6 +53,19 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 const questionPool: BioQuestionTemplate[] = [
+  // — Biological macromolecules: per-topic questions (owner alignment fix Aug 2026;
+  //   these slugs previously fell back to random whole-course questions) —
+  { id: 'bio-q324', topicSlug: 'lipids', category: 'Biological Macromolecules', question: 'Lipids are grouped together as a macromolecule class primarily because they are:', options: ['Built from repeating monomers', 'Hydrophobic (nonpolar)', 'Always energy-storage molecules', 'Composed of amino acids'], correctIndex: 1, explanation: 'Unlike true polymers, lipids are defined by their hydrophobic character, not a shared monomer.' },
+  { id: 'bio-q325', topicSlug: 'lipids', category: 'Biological Macromolecules', question: 'A triglyceride is composed of:', options: ['Three glycerols and one fatty acid', 'One glycerol and three fatty acids', 'Two fatty acids and a phosphate group', 'Three amino acids and a glycerol'], correctIndex: 1, explanation: 'Glycerol + three fatty acids joined by ester linkages via dehydration synthesis.' },
+  { id: 'bio-q326', topicSlug: 'lipids', category: 'Biological Macromolecules', question: 'Saturated fatty acids are solid at room temperature because they:', options: ['Contain double bonds that kink the chains', 'Have straight chains that pack tightly', 'Are shorter than unsaturated fatty acids', 'Contain more oxygen atoms'], correctIndex: 1, explanation: 'No C=C double bonds → straight chains → tight packing → higher melting point (e.g., butter vs. oil).' },
+  { id: 'bio-q327', topicSlug: 'lipids', category: 'Biological Macromolecules', question: 'Phospholipids form bilayers in water because:', options: ['They are entirely hydrophobic', 'Their heads are hydrophilic and their tails are hydrophobic', 'They are attracted to cholesterol', 'They form covalent bonds with water'], correctIndex: 1, explanation: 'Amphipathic structure: phosphate heads face water, fatty-acid tails hide inside — the basis of every cell membrane.' },
+  { id: 'bio-q328', topicSlug: 'lipids', category: 'Biological Macromolecules', question: 'Which of the following is a steroid?', options: ['Glycogen', 'Cholesterol', 'Cellulose', 'Keratin'], correctIndex: 1, explanation: 'Steroids have a four-fused-ring structure; cholesterol is the membrane steroid and hormone precursor.' },
+  { id: 'bio-q329', topicSlug: 'lipids', category: 'Biological Macromolecules', question: 'Gram for gram, fats store about how much energy compared to carbohydrates?', options: ['Half as much', 'About the same', 'Twice as much', 'Ten times as much'], correctIndex: 2, explanation: 'Fats yield ~9 kcal/g vs ~4 kcal/g for carbohydrates — highly reduced C–H bonds hold more energy.' },
+  { id: 'bio-q330', topicSlug: 'carbohydrates', category: 'Biological Macromolecules', question: 'The monomer of carbohydrates is the:', options: ['Amino acid', 'Fatty acid', 'Monosaccharide', 'Nucleotide'], correctIndex: 2, explanation: 'Simple sugars (glucose, fructose) are the monosaccharide building blocks of all carbohydrates.' },
+  { id: 'bio-q331', topicSlug: 'carbohydrates', category: 'Biological Macromolecules', question: 'Two monosaccharides join to form a disaccharide via:', options: ['Hydrolysis', 'Dehydration synthesis (glycosidic linkage)', 'Peptide bonding', 'Ester linkage'], correctIndex: 1, explanation: 'A water molecule is removed as the glycosidic bond forms (e.g., glucose + fructose → sucrose).' },
+  { id: 'bio-q332', topicSlug: 'carbohydrates', category: 'Biological Macromolecules', question: 'Which polysaccharide stores energy in animals?', options: ['Starch', 'Cellulose', 'Glycogen', 'Chitin'], correctIndex: 2, explanation: 'Glycogen (highly branched glucose polymer) is stored in liver and muscle; starch is the plant analog.' },
+  { id: 'bio-q333', topicSlug: 'carbohydrates', category: 'Biological Macromolecules', question: 'Humans cannot digest cellulose because:', options: ['It contains no glucose', 'We lack enzymes for its β-glycosidic linkages', 'It is hydrophobic', 'It denatures in the stomach'], correctIndex: 1, explanation: 'Cellulose uses β-1,4 linkages; human amylase only cleaves the α linkages found in starch — so cellulose passes as fiber.' },
+  { id: 'bio-q334', topicSlug: 'carbohydrates', category: 'Biological Macromolecules', question: 'Which pair correctly matches a polysaccharide with its function?', options: ['Chitin — plant cell walls', 'Starch — energy storage in plants', 'Glycogen — structural support in insects', 'Cellulose — energy storage in animals'], correctIndex: 1, explanation: 'Starch stores energy in plants; cellulose is plant structure, chitin is arthropod/fungal structure, glycogen is animal storage.' },
   { id: 'bio-q1', topicSlug: 'ap-bio-chemistry-of-life', category: 'Chemistry of Life', question: 'Water is an excellent solvent primarily because it is:', options: ['Nonpolar', 'Polar', 'Acidic', 'Ionic'], correctIndex: 1, explanation: 'Water has partial positive and negative ends, so it can surround ions and other polar molecules.' },
   { id: 'bio-q2', topicSlug: 'ap-bio-chemistry-of-life', category: 'Chemistry of Life', question: 'Which macromolecule stores genetic information?', options: ['Carbohydrate', 'Lipid', 'Protein', 'Nucleic acid'], correctIndex: 3, explanation: 'DNA and RNA are nucleic acids that carry hereditary information.' },
   { id: 'bio-q3', topicSlug: 'ap-bio-cell-structure-function', category: 'Cell Structure', question: 'Which organelle modifies and packages proteins for secretion?', options: ['Ribosome', 'Golgi apparatus', 'Lysosome', 'Nucleus'], correctIndex: 1, explanation: 'The Golgi apparatus modifies, sorts, and packages proteins into vesicles.' },
@@ -470,11 +484,7 @@ export const apBioQuestionPool: APBioQuestion[] = questionPool.map((q, i) => ({
 /* ------------------------------------------------------------------ */
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
-  const pool = topicSlug
-    ? questionPool.filter((q) => q.topicSlug === topicSlug)
-    : questionPool
-
-  const source = pool.length > 0 ? pool : questionPool
+  const source = topicSlug ? relevantPool(questionPool, topicSlug) : questionPool
   return shuffle(source)
     .slice(0, count)
     .map((q) => ({

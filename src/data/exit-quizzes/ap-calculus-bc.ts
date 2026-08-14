@@ -14,6 +14,7 @@
  *  - `formSet`   : 'A' | 'B' | 'both'
  */
 
+import { relevantPool } from './relevance-fallback'
 export interface CalcBCQuestion {
   question: string
   options: string[]
@@ -3849,10 +3850,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
 /** Generate an exit quiz for a specific BC topic (used by exit quiz system) */
 export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string }[] {
   let pool = calcBCQuestionPool
-  if (topicSlug) {
-    const filtered = pool.filter(q => q.topicSlug === topicSlug)
-    pool = filtered.length > 0 ? filtered : pool
-  }
+  if (topicSlug) pool = relevantPool(pool, topicSlug)
   return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
     id: `${q.topicSlug}-q${i}`,
     question: q.question,
