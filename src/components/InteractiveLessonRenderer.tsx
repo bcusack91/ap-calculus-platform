@@ -748,6 +748,29 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       }
     }
     fetchStatus()
+  }, [topicHasExitQuiz, session?.user, topicSlug])
+
+  // Deep link from in-class slide decks: ?exitQuiz=1 jumps straight into the
+  // graded exit quiz. Students arrive here from the presentation's closing
+  // slide — their "lesson" was the live class, so no self-paced parts are
+  // required first (the unlock rule credits live-session attendance).
+  const exitQuizDeepLinkFired = useRef(false)
+  useEffect(() => {
+    if (exitQuizDeepLinkFired.current || !topicHasExitQuiz) return
+    if (typeof window === 'undefined') return
+    if (!new URLSearchParams(window.location.search).has('exitQuiz')) return
+    exitQuizDeepLinkFired.current = true
+    const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
+    generateExitQuiz(topicSlug, 10, undefined, seed)
+      .then((questions) => {
+        if (questions.length === 0) return
+        setExitQuizSeed(seed)
+        setExitQuizDifficulty(undefined)
+        setExitQuizQuestions(questions)
+        setShowExitQuiz(true)
+        window.scrollTo({ top: 0 })
+      })
+      .catch(() => { /* topic without a quiz pool — stay on the lesson */ })
   }, [topicHasExitQuiz, topicSlug, session?.user])
 
   const sections = lessonData?.sections ?? []
@@ -1127,6 +1150,30 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Lesson title for progress bar and bookmark
   const lessonTitle = preloadedParts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
 
+  // Show exit quiz overlay. Checked BEFORE the entrance-quiz phases: a
+  // deep-linked student ("Open the exit quiz" on a presentation's last slide)
+  // may be brand new to this lesson, and the entrance-quiz choice screen must
+  // not shadow the quiz they were sent to take.
+  if (showExitQuiz && exitQuizQuestions.length > 0) {
+    return (
+      <ExitQuiz
+        topicSlug={topicSlug}
+        topicTitle={lessonTitle}
+        courseSlug={courseSlug}
+        questions={exitQuizQuestions}
+        seed={exitQuizSeed}
+        difficulty={exitQuizDifficulty}
+        onPracticeAtDifficulty={startExitQuizPractice}
+        onComplete={handleExitQuizComplete}
+        onCancel={() => setShowExitQuiz(false)}
+        previousAttempts={exitQuizStatus.totalAttempts}
+        lastScore={exitQuizStatus.lastScore}
+        mustRedoUnit={exitQuizStatus.mustRedoUnit}
+        variant={variant}
+      />
+    )
+  }
+
   // Entrance quiz: show choice or quiz before lesson starts
   if (entranceQuizPhase === 'choice') {
     const topicTitle = preloadedParts[0]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
@@ -1216,27 +1263,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     
     // Parts 3 and 4 don't have practice modes yet
     setShowPracticeMode(false)
-  }
-
-  // Show exit quiz overlay
-  if (showExitQuiz && exitQuizQuestions.length > 0) {
-    return (
-      <ExitQuiz
-        topicSlug={topicSlug}
-        topicTitle={lessonTitle}
-        courseSlug={courseSlug}
-        questions={exitQuizQuestions}
-        seed={exitQuizSeed}
-        difficulty={exitQuizDifficulty}
-        onPracticeAtDifficulty={startExitQuizPractice}
-        onComplete={handleExitQuizComplete}
-        onCancel={() => setShowExitQuiz(false)}
-        previousAttempts={exitQuizStatus.totalAttempts}
-        lastScore={exitQuizStatus.lastScore}
-        mustRedoUnit={exitQuizStatus.mustRedoUnit}
-        variant={variant}
-      />
-    )
   }
 
   if (!currentSection) {

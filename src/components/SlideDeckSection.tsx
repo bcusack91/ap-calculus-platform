@@ -280,7 +280,7 @@ export default function SlideDeckSection({
         {slide.kind === 'quiz' && (
           <QuizSlideView title={slide.title} palette={palette}>
             <Link
-              href={`/topics/${slide.topicSlug}`}
+              href={`/topics/${slide.topicSlug}/interactive?exitQuiz=1`}
               target="_blank"
               className="inline-block rounded-xl bg-white px-8 py-3 font-semibold text-gray-900 shadow-lg transition hover:bg-gray-100"
             >
