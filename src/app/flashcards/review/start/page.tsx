@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
+import { previewIntervals, formatIntervalShort } from '@/lib/spaced-repetition'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
@@ -28,6 +29,7 @@ interface FlashcardProgress {
   easeFactor: number
   interval: number
   repetitions: number
+  isMinuteInterval?: boolean
   nextReview: Date
   reviewCount: number
   flashcard: Flashcard
@@ -221,6 +223,12 @@ export default function FlashcardReviewPage() {
             topicTitle={currentCard.flashcard.topic.title}
             onRate={handleRating}
             reviewing={reviewing}
+            intervals={previewIntervals(
+              currentCard.easeFactor,
+              currentCard.interval,
+              currentCard.repetitions,
+              currentCard.isMinuteInterval ?? false,
+            )}
           />
         ) : (
           <>
@@ -303,46 +311,38 @@ export default function FlashcardReviewPage() {
           )}
         </div>
 
-        {/* Rating Buttons - Anki Style */}
-        {isFlipped && (
-          <div className="grid grid-cols-4 gap-3">
-            <button
-              onClick={() => handleRating('again')}
-              disabled={reviewing}
-              className="px-4 py-6 rounded-lg bg-red-100 hover:bg-red-200 border-2 border-red-300 text-red-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <div className="text-sm mb-1">Again</div>
-              <div className="text-xs opacity-75">1 min</div>
-            </button>
-            
-            <button
-              onClick={() => handleRating('hard')}
-              disabled={reviewing}
-              className="px-4 py-6 rounded-lg bg-orange-100 hover:bg-orange-200 border-2 border-orange-300 text-orange-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <div className="text-sm mb-1">Hard</div>
-              <div className="text-xs opacity-75">3 min</div>
-            </button>
-            
-            <button
-              onClick={() => handleRating('good')}
-              disabled={reviewing}
-              className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <div className="text-sm mb-1">Good</div>
-              <div className="text-xs opacity-75">5 min</div>
-            </button>
-            
-            <button
-              onClick={() => handleRating('easy')}
-              disabled={reviewing}
-              className="px-4 py-6 rounded-lg bg-blue-100 hover:bg-blue-200 border-2 border-blue-300 text-blue-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <div className="text-sm mb-1">Easy</div>
-              <div className="text-xs opacity-75">1 day</div>
-            </button>
-          </div>
-        )}
+        {/* Rating Buttons - Anki Style. Times are the REAL schedule each
+            rating would produce for this card's current state (they grow as
+            the card matures, like Anki), not static labels. */}
+        {isFlipped && (() => {
+          const preview = previewIntervals(
+            currentCard.easeFactor,
+            currentCard.interval,
+            currentCard.repetitions,
+            currentCard.isMinuteInterval ?? false,
+          )
+          const buttons = [
+            { key: 'again' as const, label: 'Again', time: preview.again, cls: 'bg-red-100 hover:bg-red-200 border-red-300 text-red-900' },
+            { key: 'hard' as const, label: 'Hard', time: preview.hard, cls: 'bg-orange-100 hover:bg-orange-200 border-orange-300 text-orange-900' },
+            { key: 'good' as const, label: 'Good', time: preview.good, cls: 'bg-green-100 hover:bg-green-200 border-green-300 text-green-900' },
+            { key: 'easy' as const, label: 'Easy', time: preview.easy, cls: 'bg-blue-100 hover:bg-blue-200 border-blue-300 text-blue-900' },
+          ]
+          return (
+            <div className="grid grid-cols-4 gap-3">
+              {buttons.map((b) => (
+                <button
+                  key={b.key}
+                  onClick={() => handleRating(b.key)}
+                  disabled={reviewing}
+                  className={`px-4 py-6 rounded-lg border-2 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed ${b.cls}`}
+                >
+                  <div className="text-sm mb-1">{b.label}</div>
+                  <div className="text-xs opacity-75">{b.time}</div>
+                </button>
+              ))}
+            </div>
+          )
+        })()}
           </>
         )}
 
@@ -383,7 +383,7 @@ export default function FlashcardReviewPage() {
             </div>
             <div>
               <div className="font-semibold text-gray-900">Interval</div>
-              <div className="text-gray-600">{currentCard.interval} days</div>
+              <div className="text-gray-600">{formatIntervalShort(currentCard.interval, currentCard.isMinuteInterval ?? false)}</div>
             </div>
           </div>
         </div>

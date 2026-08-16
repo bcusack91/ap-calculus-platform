@@ -126,6 +126,46 @@ export function calculateNextReview(
   }
 }
 
+/** Compact interval label for rating buttons: "1m", "6d", "2mo", "1.5y". */
+export function formatIntervalShort(interval: number, isMinuteInterval: boolean): string {
+  if (isMinuteInterval) return interval < 60 ? `${interval}m` : `${Math.round(interval / 60)}h`
+  if (interval < 30) return `${interval}d`
+  if (interval < 365) return `${Math.round(interval / 30)}mo`
+  const years = interval / 365
+  return `${years >= 3 ? Math.round(years) : Math.round(years * 10) / 10}y`
+}
+
+export interface ButtonIntervalPreview {
+  again: string
+  hard: string
+  good: string
+  easy: string
+}
+
+/**
+ * Anki-style button previews: what each rating would schedule for THIS card in
+ * its current state. Runs the real SM-2 calculation per button, so the times
+ * grow as the card matures (Good: 5m on a new card → 6d → ~2wk → …) and shrink
+ * on lapses — exactly what the student will actually get when they press it.
+ */
+export function previewIntervals(
+  easeFactor: number = 2.5,
+  interval: number = 0,
+  repetitions: number = 0,
+  isMinuteInterval: boolean = false,
+): ButtonIntervalPreview {
+  const forQuality = (quality: number): string => {
+    const r = calculateNextReview(quality, easeFactor, interval, repetitions, isMinuteInterval)
+    return formatIntervalShort(r.interval, r.isMinuteInterval)
+  }
+  return {
+    again: forQuality(buttonToQuality('again')),
+    hard: forQuality(buttonToQuality('hard')),
+    good: forQuality(buttonToQuality('good')),
+    easy: forQuality(buttonToQuality('easy')),
+  }
+}
+
 /**
  * Determine if a flashcard is due for review
  */

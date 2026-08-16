@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { renderRichText } from '@/lib/render-rich-text'
+import { previewIntervals } from '@/lib/spaced-repetition'
 
 interface SessionCard {
   id: string
@@ -9,7 +10,7 @@ interface SessionCard {
   back: string
   topicSlug?: string
   topicTitle?: string
-  progress: { repetitions: number; easeFactor: number; interval: number } | null
+  progress: { repetitions: number; easeFactor: number; interval: number; isMinuteInterval?: boolean } | null
 }
 
 interface SessionStats {
@@ -240,27 +241,37 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         )}
       </div>
 
-      {/* Rating buttons */}
-      {flipped && (
-        <div className="grid grid-cols-4 gap-2 mt-4">
-          {[
-            { key: 'again' as const, label: 'Again', color: 'bg-red-500 hover:bg-red-600', kbd: '1' },
-            { key: 'hard' as const, label: 'Hard', color: 'bg-orange-500 hover:bg-orange-600', kbd: '2' },
-            { key: 'good' as const, label: 'Good', color: 'bg-green-500 hover:bg-green-600', kbd: '3' },
-            { key: 'easy' as const, label: 'Easy', color: 'bg-blue-500 hover:bg-blue-600', kbd: '4' },
-          ].map((btn) => (
-            <button
-              key={btn.key}
-              onClick={() => handleRating(btn.key)}
-              className={`${btn.color} text-white py-3 rounded-xl font-medium transition-colors text-sm`}
-            >
-              {btn.label}
-              <br />
-              <kbd className="text-xs opacity-70">{btn.kbd}</kbd>
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Rating buttons — times are the real schedule each rating would set
+          for this card's current state (Anki-style: they grow as it matures) */}
+      {flipped && (() => {
+        const preview = previewIntervals(
+          card.progress?.easeFactor ?? 2.5,
+          card.progress?.interval ?? 0,
+          card.progress?.repetitions ?? 0,
+          card.progress?.isMinuteInterval ?? false,
+        )
+        return (
+          <div className="grid grid-cols-4 gap-2 mt-4">
+            {[
+              { key: 'again' as const, label: 'Again', time: preview.again, color: 'bg-red-500 hover:bg-red-600', kbd: '1' },
+              { key: 'hard' as const, label: 'Hard', time: preview.hard, color: 'bg-orange-500 hover:bg-orange-600', kbd: '2' },
+              { key: 'good' as const, label: 'Good', time: preview.good, color: 'bg-green-500 hover:bg-green-600', kbd: '3' },
+              { key: 'easy' as const, label: 'Easy', time: preview.easy, color: 'bg-blue-500 hover:bg-blue-600', kbd: '4' },
+            ].map((btn) => (
+              <button
+                key={btn.key}
+                onClick={() => handleRating(btn.key)}
+                className={`${btn.color} text-white py-3 rounded-xl font-medium transition-colors text-sm`}
+              >
+                {btn.label}
+                <br />
+                <span className="text-xs opacity-80">{btn.time}</span>
+                <kbd className="ml-1 text-xs opacity-60">{btn.kbd}</kbd>
+              </button>
+            ))}
+          </div>
+        )
+      })()}
     </div>
   )
 }

@@ -14,10 +14,11 @@ interface ClozeFlashcardProps {
   hint?: string
   topicTitle: string
   onRate: (rating: 'again' | 'hard' | 'good' | 'easy') => void
+  intervals?: { again: string; hard: string; good: string; easy: string }
   reviewing: boolean
 }
 
-export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewing }: ClozeFlashcardProps) {
+export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewing, intervals }: ClozeFlashcardProps) {
   const [isRevealed, setIsRevealed] = useState(false)
   const [showHint, setShowHint] = useState(false)
   
@@ -130,41 +131,26 @@ export function ClozeFlashcard({ front, back, hint, topicTitle, onRate, reviewin
         </div>
       )}
 
-      {/* Rating Buttons - Show after reveal */}
+      {/* Rating Buttons - Show after reveal. Times = the real schedule each
+          rating would produce for this card (grow as the card matures). */}
       {isRevealed && (
         <div className="grid grid-cols-4 gap-3">
-          <button
-            onClick={() => onRate('again')}
-            disabled={reviewing}
-            className="px-4 py-6 rounded-lg bg-red-100 hover:bg-red-200 border-2 border-red-300 text-red-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <div className="text-sm mb-1">Again</div>
-            <div className="text-xs opacity-75">1 min</div>
-          </button>
-          <button
-            onClick={() => onRate('hard')}
-            disabled={reviewing}
-            className="px-4 py-6 rounded-lg bg-orange-100 hover:bg-orange-200 border-2 border-orange-300 text-orange-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <div className="text-sm mb-1">Hard</div>
-            <div className="text-xs opacity-75">3 min</div>
-          </button>
-          <button
-            onClick={() => onRate('good')}
-            disabled={reviewing}
-            className="px-4 py-6 rounded-lg bg-green-100 hover:bg-green-200 border-2 border-green-300 text-green-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <div className="text-sm mb-1">Good</div>
-            <div className="text-xs opacity-75">5 min</div>
-          </button>
-          <button
-            onClick={() => onRate('easy')}
-            disabled={reviewing}
-            className="px-4 py-6 rounded-lg bg-blue-100 hover:bg-blue-200 border-2 border-blue-300 text-blue-900 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <div className="text-sm mb-1">Easy</div>
-            <div className="text-xs opacity-75">1 day</div>
-          </button>
+          {([
+            { key: 'again', label: 'Again', time: intervals?.again ?? '1m', cls: 'bg-red-100 hover:bg-red-200 border-red-300 text-red-900' },
+            { key: 'hard', label: 'Hard', time: intervals?.hard ?? '3m', cls: 'bg-orange-100 hover:bg-orange-200 border-orange-300 text-orange-900' },
+            { key: 'good', label: 'Good', time: intervals?.good ?? '5m', cls: 'bg-green-100 hover:bg-green-200 border-green-300 text-green-900' },
+            { key: 'easy', label: 'Easy', time: intervals?.easy ?? '1d', cls: 'bg-blue-100 hover:bg-blue-200 border-blue-300 text-blue-900' },
+          ] as const).map((b) => (
+            <button
+              key={b.key}
+              onClick={() => onRate(b.key)}
+              disabled={reviewing}
+              className={`px-4 py-6 rounded-lg border-2 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed ${b.cls}`}
+            >
+              <div className="text-sm mb-1">{b.label}</div>
+              <div className="text-xs opacity-75">{b.time}</div>
+            </button>
+          ))}
         </div>
       )}
     </div>

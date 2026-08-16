@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
           topic: { select: { slug: true, title: true } },
           progress: {
             where: { userId, context },
-            select: { flashcardId: true, nextReview: true, repetitions: true, easeFactor: true, interval: true },
+            select: { flashcardId: true, nextReview: true, repetitions: true, easeFactor: true, interval: true, isMinuteInterval: true },
             take: 1,
           },
         },
