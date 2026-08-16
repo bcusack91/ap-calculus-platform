@@ -351,7 +351,7 @@ export default function FlashcardReviewPage() {
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm text-blue-900">
               <strong>How it works:</strong> Study the question, then click to reveal the answer. 
-              Rate your recall — each answer schedules the card's next review at the right moment.
+              Rate your recall — each answer schedules the card&apos;s next review at the right moment.
             </p>
           </div>
         )}

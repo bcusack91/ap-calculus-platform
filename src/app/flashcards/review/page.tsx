@@ -177,7 +177,7 @@ export default function FlashcardReviewDashboard() {
               <div>
                 <h3 className="font-bold text-gray-900 mb-2">Smart Scheduling</h3>
                 <p className="text-gray-600">
-                  The system schedules each card at gradually growing intervals, timed to when you're about to forget it. Cards you find easy appear less often, while difficult cards come back sooner.
+                  The system schedules each card at gradually growing intervals, timed to when you&apos;re about to forget it. Cards you find easy appear less often, while difficult cards come back sooner.
                 </p>
               </div>
             </div>
