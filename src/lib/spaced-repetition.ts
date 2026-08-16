@@ -1,15 +1,31 @@
 /**
- * Spaced Repetition System (SM-2 Algorithm with Short Initial Intervals)
- * Based on SuperMemo 2 algorithm for optimal flashcard scheduling
- * 
- * Initial intervals for new cards:
- * - Again (quality 1): 1 minute
- * - Hard (quality 3): 3 minutes  
- * - Good (quality 4): 5 minutes
- * - Easy (quality 5): 1 day
- * 
- * After first successful review, switches to day-based intervals
+ * Spaced Repetition System — Fibonacci ladder with short learning steps
+ * (owner decision Aug 2026: the old SM-2 ease multiplication jumped
+ * 5 minutes → 6 days on the second Good, far too aggressive).
+ *
+ * Learning phase (first sighting of a card):
+ * - Again: 1 minute · Hard: 3 minutes · Good: 5 minutes · Easy: 1 day
+ * - On the next review after a minute step: Good graduates to 1 DAY
+ *   (Hard repeats a 10-minute step, Easy jumps to 3 days).
+ *
+ * Day phase — intervals walk a Fibonacci ladder (1, 2, 3, 5, 8, 13, 21,
+ * 34, 55, 89, 144, 233, 365 days, capped at a year):
+ * - Good: climb one rung (~1.6x growth — gentler than SM-2's ~2.5x)
+ * - Easy: skip a rung
+ * - Hard: hold the current rung
+ * - Again: lapse — back to a 1-minute learning step
+ *
+ * easeFactor is still tracked per card for retention analytics, but no
+ * longer drives the interval (the ladder does).
  */
+
+/** Day-phase interval ladder. Good = next rung, Easy = skip a rung. */
+const FIB_DAYS = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 365]
+const MAX_INTERVAL_DAYS = 365
+
+function nextRung(aboveDays: number): number {
+  return FIB_DAYS.find((f) => f > aboveDays) ?? MAX_INTERVAL_DAYS
+}
 
 export interface ReviewResult {
   quality: number // 0-5 rating (0=complete blackout, 5=perfect recall)
@@ -80,29 +96,32 @@ export function calculateNextReview(
         isMinuteInterval = false
       }
       repetitions = 1
-    } else if (repetitions === 1 && wasMinuteInterval) {
-      // Second review after a minute interval - graduate to days
+    } else if (wasMinuteInterval) {
+      // Review after a minute step — graduate conservatively
       if (quality === 3) {
-        interval = 1 // Hard: 1 day
+        interval = 10 // Hard: one more learning step (10 minutes)
+        isMinuteInterval = true
       } else if (quality === 4) {
-        interval = 6 // Good: 6 days
+        interval = 1 // Good: graduate to 1 day
+        isMinuteInterval = false
       } else if (quality === 5) {
-        interval = 10 // Easy: 10 days
+        interval = 3 // Easy: 3 days
+        isMinuteInterval = false
       }
-      isMinuteInterval = false
-      repetitions = 2
+      repetitions = repetitions + 1
     } else {
-      // Already graduated to days - use standard SM-2
+      // Day phase — walk the Fibonacci ladder
       if (quality === 3) {
-        // Hard: slightly less than normal interval
-        interval = Math.max(1, Math.round(previousInterval * easeFactor * 0.8))
+        // Hard: hold the current rung
+        interval = Math.max(1, previousInterval)
       } else if (quality === 4) {
-        // Good: normal interval
-        interval = Math.round(previousInterval * easeFactor)
+        // Good: climb one rung (1 → 2 → 3 → 5 → 8 → 13 → …)
+        interval = nextRung(previousInterval)
       } else if (quality === 5) {
-        // Easy: longer interval
-        interval = Math.round(previousInterval * easeFactor * 1.3)
+        // Easy: skip a rung
+        interval = nextRung(nextRung(previousInterval))
       }
+      interval = Math.min(interval, MAX_INTERVAL_DAYS)
       isMinuteInterval = false
       repetitions = repetitions + 1
     }
