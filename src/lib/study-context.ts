@@ -77,10 +77,15 @@ export interface StudyContextOption {
 
 /**
  * Every context available to this user: personal, their active classes, and
- * course modes they've already started (distinct course: keys in progress).
+ * course modes they've already started (distinct course: keys in progress) —
+ * PLUS the currently ACTIVE course mode even when it has no progress rows yet.
+ * Without that last rule a freshly created course mode (zero cards studied)
+ * was missing from this list, so the switcher's <select> couldn't display the
+ * active value and silently showed "Personal" while the deck was actually
+ * scoped to the new mode.
  */
 export async function listStudyContexts(userId: string): Promise<StudyContextOption[]> {
-  const [memberships, teaching, coTeaching, usedContexts] = await Promise.all([
+  const [memberships, teaching, coTeaching, usedContexts, user] = await Promise.all([
     prisma.classroomMember.findMany({
       where: { userId, isActive: true, classroom: { isActive: true } },
       select: { classroom: { select: { id: true, name: true } } },
@@ -98,6 +103,7 @@ export async function listStudyContexts(userId: string): Promise<StudyContextOpt
       where: { userId },
       _count: { _all: true },
     }),
+    prisma.user.findUnique({ where: { id: userId }, select: { studyContext: true } }),
   ])
 
   const countByKey = new Map(usedContexts.map(u => [u.context, u._count._all]))
@@ -113,8 +119,14 @@ export async function listStudyContexts(userId: string): Promise<StudyContextOpt
     options.push({ key: `class:${id}`, label: name, kind: 'class', cardCount: countByKey.get(`class:${id}`) ?? 0 })
   }
 
-  // Course modes already in use (started via the switcher at some point).
-  const courseSlugs = [...countByKey.keys()].filter(isCourseContext).map(k => k.slice('course:'.length))
+  // Course modes already in use (started via the switcher at some point),
+  // plus the active one even if it's brand new with no progress rows.
+  const courseSlugSet = new Set(
+    [...countByKey.keys()].filter(isCourseContext).map(k => k.slice('course:'.length)),
+  )
+  const activeKey = user?.studyContext ?? ''
+  if (isCourseContext(activeKey)) courseSlugSet.add(activeKey.slice('course:'.length))
+  const courseSlugs = [...courseSlugSet]
   if (courseSlugs.length > 0) {
     const courses = await prisma.course.findMany({
       where: { slug: { in: courseSlugs } },
