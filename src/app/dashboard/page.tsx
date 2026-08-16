@@ -212,6 +212,8 @@ function DashboardContent() {
     mathScore?: number
     recommendedTopics?: { slug: string; name: string; priority: string }[]
   } | null>(null)
+  // slug -> cleared (entrance mastery or exit >= 80%) for study-plan Done badges
+  const [clearedModules, setClearedModules] = useState<Record<string, boolean>>({})
   const [mcatPlanStatus, setMcatPlanStatus] = useState<{
     hasDiagnostic: boolean
     canRetakeDiagnostic: boolean
@@ -329,6 +331,13 @@ function DashboardContent() {
       if (d.learningPath?.currentTopic) setPathTopic(d.learningPath.currentTopic)
     }
 
+    // Collect every recommended slug across plans for one Done-status lookup
+    const planSlugs = new Set<string>()
+    const collectSlugs = (results: Record<string, unknown>) => {
+      const recs = (results as { recommendedTopics?: { slug?: string }[] }).recommendedTopics
+      for (const t of recs ?? []) if (typeof t?.slug === 'string') planSlugs.add(t.slug)
+    }
+
     // Fetch AP Chem diagnostic recommendations
     try {
       const chemRes = await fetch('/api/ap-chem-diagnostic/history')
@@ -337,6 +346,7 @@ function DashboardContent() {
         if (chemData.attempts?.length > 0) {
           const latest = chemData.attempts[0].results as Record<string, unknown>
           setApChemDiagnostic(latest)
+          collectSlugs(latest)
         }
       }
     } catch { /* silent */ }
@@ -349,6 +359,7 @@ function DashboardContent() {
         if (abData.attempts?.length > 0) {
           const latest = abData.attempts[0].results as Record<string, unknown>
           setCalcABDiagnostic(latest)
+          collectSlugs(latest)
         }
       }
     } catch { /* silent */ }
@@ -361,6 +372,7 @@ function DashboardContent() {
         if (bcData.attempts?.length > 0) {
           const latest = bcData.attempts[0].results as Record<string, unknown>
           setCalcBCDiagnostic(latest)
+          collectSlugs(latest)
         }
       }
     } catch { /* silent */ }
@@ -373,6 +385,7 @@ function DashboardContent() {
         if (satData.attempts?.length > 0) {
           const latest = satData.attempts[0].results as Record<string, unknown>
           setSatDiagnostic(latest)
+          collectSlugs(latest)
         }
       }
     } catch { /* silent */ }
@@ -384,6 +397,17 @@ function DashboardContent() {
         const mcatData = await mcatRes.json()
         if (mcatData?.hasDiagnostic) {
           setMcatPlanStatus(mcatData)
+        }
+      }
+    } catch { /* silent */ }
+
+    // One lookup for all plan Done badges
+    try {
+      if (planSlugs.size > 0) {
+        const ms = await fetch(`/api/progress/module-status?slugs=${encodeURIComponent([...planSlugs].join(','))}`)
+        if (ms.ok) {
+          const d = await ms.json()
+          setClearedModules(d.cleared ?? {})
         }
       }
     } catch { /* silent */ }
@@ -716,11 +740,14 @@ function DashboardContent() {
                     </p>
                     <div className="space-y-1.5">
                       {mcatPlanStatus.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={topic.topicPath} className="flex items-center justify-between rounded-lg border border-emerald-200 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-2 hover:border-emerald-400 transition-colors group">
+                        <Link key={topic.slug} href={topic.topicPath} className={`flex items-center justify-between rounded-lg border border-emerald-200 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-2 hover:border-emerald-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
                           <div className="flex items-center gap-2">
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-[10px] font-bold text-emerald-700 dark:text-emerald-300">{i + 1}</span>
                             <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                            {clearedModules[topic.slug] && (
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
+                            )}
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.isSatisfied ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300'}`}>
                               {topic.isSatisfied ? 'Complete' : 'Pending'}
                             </span>
@@ -742,11 +769,14 @@ function DashboardContent() {
                     </div>
                     <div className="space-y-1.5">
                       {apChemDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-lg border border-orange-200 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20 px-3 py-2 hover:border-orange-400 transition-colors group">
+                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className={`flex items-center justify-between rounded-lg border border-orange-200 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20 px-3 py-2 hover:border-orange-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
                           <div className="flex items-center gap-2">
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/50 text-[10px] font-bold text-orange-700 dark:text-orange-300">{i + 1}</span>
                             <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-orange-700 dark:group-hover:text-orange-400">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                            {clearedModules[topic.slug] && (
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
+                            )}
                           </div>
                           <span className="text-orange-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
@@ -765,11 +795,14 @@ function DashboardContent() {
                     </div>
                     <div className="space-y-1.5">
                       {calcABDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-lg border border-accent-light dark:border-accent-hover bg-accent-subtle dark:bg-accent-light/20 px-3 py-2 hover:border-accent-muted transition-colors group">
+                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className={`flex items-center justify-between rounded-lg border border-accent-light dark:border-accent-hover bg-accent-subtle dark:bg-accent-light/20 px-3 py-2 hover:border-accent-muted transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
                           <div className="flex items-center gap-2">
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent-light dark:bg-accent-light/50 text-[10px] font-bold text-accent-hover dark:text-accent-muted">{i + 1}</span>
                             <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-hover dark:group-hover:text-accent-muted">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                            {clearedModules[topic.slug] && (
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
+                            )}
                           </div>
                           <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
@@ -788,11 +821,14 @@ function DashboardContent() {
                     </div>
                     <div className="space-y-1.5">
                       {satDiagnostic.recommendedTopics.slice(0, 5).map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20 px-3 py-2 hover:border-green-400 transition-colors group">
+                        <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className={`flex items-center justify-between rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20 px-3 py-2 hover:border-green-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
                           <div className="flex items-center gap-2">
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50 text-[10px] font-bold text-green-700 dark:text-green-300">{i + 1}</span>
                             <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-green-700 dark:group-hover:text-green-400">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                            {clearedModules[topic.slug] && (
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
+                            )}
                           </div>
                           <span className="text-green-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
@@ -811,11 +847,14 @@ function DashboardContent() {
                     </div>
                     <div className="space-y-1.5">
                       {calcBCDiagnostic.recommendedTopics.map((topic, i) => (
-                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-lg border border-violet-200 dark:border-violet-700 bg-violet-50 dark:bg-violet-900/20 px-3 py-2 hover:border-violet-400 transition-colors group">
+                        <Link key={topic.slug} href={`/topics/${topic.slug}`} className={`flex items-center justify-between rounded-lg border border-violet-200 dark:border-violet-700 bg-violet-50 dark:bg-violet-900/20 px-3 py-2 hover:border-violet-400 transition-colors group ${clearedModules[topic.slug] ? 'opacity-60' : ''}`}>
                           <div className="flex items-center gap-2">
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-900/50 text-[10px] font-bold text-violet-700 dark:text-violet-300">{i + 1}</span>
                             <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-violet-700 dark:group-hover:text-violet-400">{topic.name}</span>
                             <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                            {clearedModules[topic.slug] && (
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">✓ Done</span>
+                            )}
                           </div>
                           <span className="text-violet-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
