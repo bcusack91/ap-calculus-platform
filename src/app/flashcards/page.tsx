@@ -51,8 +51,8 @@ export default async function FlashcardsPage({
         </h1>
         <p className="text-lg text-muted-foreground mb-4">
           {courseName
-            ? `Review ${courseName} concepts with our Anki-style spaced repetition system!`
-            : 'Review concepts with our Anki-style spaced repetition system!'}
+            ? `Review ${courseName} concepts with our smart spaced-repetition system!`
+            : 'Review concepts with our smart spaced-repetition system!'}
         </p>
         {courseName && (
           <Link href="/flashcards" className="text-sm text-accent hover:underline mb-4 inline-block">
@@ -125,7 +125,7 @@ export default async function FlashcardsPage({
         <div className="mt-12 p-6 rounded-lg bg-accent-subtle border border-accent-light">
           <h3 className="text-xl font-bold mb-2">🌟 Upgrade for Spaced Repetition</h3>
           <p className="text-muted-foreground mb-4">
-            Premium members get Anki-style spaced repetition flashcards that adapt to your memory. Never forget what you've learned!
+            Premium members get smart spaced-repetition flashcards that adapt to your memory. Never forget what you've learned!
           </p>
           <Link
             href="/premium"

@@ -311,9 +311,9 @@ export default function FlashcardReviewPage() {
           )}
         </div>
 
-        {/* Rating Buttons - Anki Style. Times are the REAL schedule each
+        {/* Rating Buttons. Times are the REAL schedule each
             rating would produce for this card's current state (they grow as
-            the card matures, like Anki), not static labels. */}
+            the card matures), not static labels. */}
         {isFlipped && (() => {
           const preview = previewIntervals(
             currentCard.easeFactor,
@@ -351,7 +351,7 @@ export default function FlashcardReviewPage() {
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm text-blue-900">
               <strong>How it works:</strong> Study the question, then click to reveal the answer. 
-              Rate your recall to schedule the next review using Anki&apos;s spaced repetition algorithm.
+              Rate your recall — each answer schedules the card's next review at the right moment.
             </p>
           </div>
         )}

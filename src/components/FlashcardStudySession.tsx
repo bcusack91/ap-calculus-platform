@@ -242,7 +242,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
       </div>
 
       {/* Rating buttons — times are the real schedule each rating would set
-          for this card's current state (Anki-style: they grow as it matures) */}
+          for this card's current state: they grow as the card matures */}
       {flipped && (() => {
         const preview = previewIntervals(
           card.progress?.easeFactor ?? 2.5,

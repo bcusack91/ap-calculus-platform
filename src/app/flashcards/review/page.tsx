@@ -72,7 +72,7 @@ export default function FlashcardReviewDashboard() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-2">Flashcard Review</h1>
         <p className="text-lg text-muted-foreground mb-8">
-          Master your knowledge with Anki-style spaced repetition
+          Master your knowledge with smart spaced repetition
         </p>
 
         {/* Deck scope — switching modes swaps the whole deck, so refetch */}
@@ -177,7 +177,7 @@ export default function FlashcardReviewDashboard() {
               <div>
                 <h3 className="font-bold text-gray-900 mb-2">Smart Scheduling</h3>
                 <p className="text-gray-600">
-                  The system uses the SM-2 algorithm (same as Anki) to schedule reviews at optimal intervals. Cards you find easy appear less often, while difficult cards come back sooner.
+                  The system schedules each card at gradually growing intervals, timed to when you're about to forget it. Cards you find easy appear less often, while difficult cards come back sooner.
                 </p>
               </div>
             </div>

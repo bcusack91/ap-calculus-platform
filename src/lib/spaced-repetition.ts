@@ -9,22 +9,29 @@
  *   (Hard repeats a 10-minute step, Easy jumps to 3 days).
  *
  * Day phase — intervals walk a Fibonacci ladder (1, 2, 3, 5, 8, 13, 21,
- * 34, 55, 89, 144, 233, 365 days, capped at a year):
- * - Good: climb one rung (~1.6x growth — gentler than SM-2's ~2.5x)
- * - Easy: skip a rung
- * - Hard: hold the current rung
+ * 34 days) until they reach ~a month, then growth switches to a gentle
+ * fixed multiplier (owner decision: Fibonacci's ~1.6x is right early on
+ * but too steep for mature cards):
+ * - Good: next rung; past 34 days, x1.25 (34 → 43 → 53 → 67 → 84 → …)
+ * - Easy: skip a rung; past 34 days, x1.5
+ * - Hard: hold the current interval
  * - Again: lapse — back to a 1-minute learning step
+ * Everything caps at 365 days (exam prep, not lifetime maintenance).
  *
  * easeFactor is still tracked per card for retention analytics, but no
  * longer drives the interval (the ladder does).
  */
 
-/** Day-phase interval ladder. Good = next rung, Easy = skip a rung. */
-const FIB_DAYS = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 365]
+/** Early day-phase interval ladder. Good = next rung, Easy = skip a rung. */
+const FIB_DAYS = [1, 2, 3, 5, 8, 13, 21, 34]
+/** At/after this interval, growth switches from the ladder to multipliers. */
+const LADDER_MAX = 34
+const MATURE_GOOD_MULTIPLIER = 1.25
+const MATURE_EASY_MULTIPLIER = 1.5
 const MAX_INTERVAL_DAYS = 365
 
 function nextRung(aboveDays: number): number {
-  return FIB_DAYS.find((f) => f > aboveDays) ?? MAX_INTERVAL_DAYS
+  return FIB_DAYS.find((f) => f > aboveDays) ?? LADDER_MAX
 }
 
 export interface ReviewResult {
@@ -110,16 +117,17 @@ export function calculateNextReview(
       }
       repetitions = repetitions + 1
     } else {
-      // Day phase — walk the Fibonacci ladder
+      // Day phase — Fibonacci ladder while young, fixed multiplier once mature
+      const mature = previousInterval >= LADDER_MAX
       if (quality === 3) {
-        // Hard: hold the current rung
+        // Hard: hold the current interval
         interval = Math.max(1, previousInterval)
       } else if (quality === 4) {
-        // Good: climb one rung (1 → 2 → 3 → 5 → 8 → 13 → …)
-        interval = nextRung(previousInterval)
+        // Good: climb one rung (1 → 2 → 3 → 5 → 8 → 13 → 21 → 34), then x1.25
+        interval = mature ? Math.round(previousInterval * MATURE_GOOD_MULTIPLIER) : nextRung(previousInterval)
       } else if (quality === 5) {
-        // Easy: skip a rung
-        interval = nextRung(nextRung(previousInterval))
+        // Easy: skip a rung while young, x1.5 once mature
+        interval = mature ? Math.round(previousInterval * MATURE_EASY_MULTIPLIER) : nextRung(nextRung(previousInterval))
       }
       interval = Math.min(interval, MAX_INTERVAL_DAYS)
       isMinuteInterval = false
