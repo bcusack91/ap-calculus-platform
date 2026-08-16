@@ -71,13 +71,13 @@ A **squinting modifier** is ambiguously placed between two things it could modif
       exercise: {
         questions: [
           {
-            question: '**Hoping to improve her grades,** the tutor was hired by Maria. \nWhat is the error?',
+            question: '<u>Hoping to improve her grades,</u> the tutor was hired by Maria. \nWhat is the error?',
             options: ['Comma splice', 'Dangling modifier — "Hoping to improve" should modify Maria, not "the tutor"', 'Subject-verb disagreement', 'No error'],
             correctAnswer: 1,
             explanation: 'The introductory phrase "Hoping to improve her grades" must be followed by the person doing the hoping: Maria. Corrected: "Hoping to improve her grades, Maria hired a tutor."'
           },
           {
-            question: 'The dog bit the mail carrier **running across the yard**. Who was running?',
+            question: 'The dog bit the mail carrier <u>running across the yard</u>. Who was running?',
             options: ['The dog', 'The mail carrier', 'It is ambiguous', 'Neither — the phrase is a fragment'],
             correctAnswer: 2,
             explanation: 'The modifier "running across the yard" is misplaced — it could describe either the dog or the mail carrier. This is ambiguous and needs to be rewritten.'
@@ -145,13 +145,13 @@ Type "dangling," "misplaced," "squinting," or "correct" for each sentence.
       exercise: {
         questions: [
           {
-            question: '**Having studied all night,** the exam seemed easy to Marcus. \nWhich revision best corrects the error?',
+            question: '<u>Having studied all night,</u> the exam seemed easy to Marcus. \nWhich revision best corrects the error?',
             options: ['Having studied all night, the exam was easy for Marcus.', 'Having studied all night, Marcus found the exam easy.', 'Having studied all night, it seemed easy to Marcus, the exam.', 'No change needed.'],
             correctAnswer: 1,
             explanation: 'The introductory phrase "Having studied all night" must be followed by the person who studied: Marcus. "Marcus found the exam easy" correctly places Marcus as the subject.'
           },
           {
-            question: 'The gallery displayed paintings by local artists **that were recently restored**. \nWhat does "that were recently restored" most likely modify?',
+            question: 'The gallery displayed paintings by local artists <u>that were recently restored</u>. \nWhat does "that were recently restored" most likely modify?',
             options: ['The gallery', 'Paintings', 'Local artists', 'It is ambiguous and should be clarified'],
             correctAnswer: 3,
             explanation: 'The modifier "that were recently restored" could describe the paintings or the artists (though artists aren\'t "restored"). In context it means the paintings, but the placement creates ambiguity. Better: "The gallery displayed recently restored paintings by local artists."'

@@ -144,13 +144,13 @@ Rewrite ONLY the underlined/incorrect element to make each sentence parallel.
       exercise: {
         questions: [
           {
-            question: 'The volunteers were praised for **their enthusiasm, their dependability, and they were always willing to help**. \nWhich revision fixes the parallelism error?',
+            question: 'The volunteers were praised for <u>their enthusiasm, their dependability, and they were always willing to help</u>. \nWhich revision fixes the parallelism error?',
             options: ['their enthusiasm, their dependability, and their willingness to help', 'their enthusiasm, their dependability, and for being always willing to help', 'their enthusiasm, dependability, and they were willing to help', 'No change needed'],
             correctAnswer: 0,
             explanation: 'The list should contain three parallel noun phrases: "their enthusiasm, their dependability, and their willingness to help."'
           },
           {
-            question: 'The salary of a software engineer in San Francisco is significantly higher than **a teacher in rural Iowa**. \nWhich revision fixes the comparison?',
+            question: 'The salary of a software engineer in San Francisco is significantly higher than <u>a teacher in rural Iowa</u>. \nWhich revision fixes the comparison?',
             options: ['that of a teacher in rural Iowa', 'a teacher in rural Iowa is', 'teachers from rural Iowa', 'No change needed'],
             correctAnswer: 0,
             explanation: 'You must compare salary to salary. "That of a teacher in rural Iowa" refers back to "the salary of," making the comparison logical.'

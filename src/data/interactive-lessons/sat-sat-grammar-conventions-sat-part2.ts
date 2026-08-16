@@ -139,13 +139,13 @@ Type the correct pronoun for each blank.
       exercise: {
         questions: [
           {
-            question: 'When the officer stopped the driver, **they** asked for identification. \nWhat is the problem with this sentence?',
+            question: 'When the officer stopped the driver, <u>they</u> asked for identification. \nWhat is the problem with this sentence?',
             options: ['The pronoun "they" is ambiguous — it could refer to the officer or the driver', 'The verb "asked" should be "ask"', '"Identification" should be "an identification"', 'No error'],
             correctAnswer: 0,
             explanation: '"They" could refer to either "the officer" or "the driver." The sentence should be revised to clarify: "the officer asked for identification."'
           },
           {
-            question: 'Each student must make sure that **they have** all necessary materials before the exam. \nWhich revision is best?',
+            question: 'Each student must make sure that <u>they have</u> all necessary materials before the exam. \nWhich revision is best?',
             options: ['they has', 'he or she has', 'we have', 'No change needed'],
             correctAnswer: 1,
             explanation: '"Each" is singular, so the pronoun should be singular: "he or she has." On the SAT, formal pronoun agreement is tested.'

@@ -137,13 +137,13 @@ Type the correct form of the verb in parentheses.
       exercise: {
         questions: [
           {
-            question: 'The news about the budget cuts **have** alarmed many employees. \nWhich correction should be made?',
+            question: 'The news about the budget cuts <u>have</u> alarmed many employees. \nWhich correction should be made?',
             options: ['Change "have" to "has"', 'Change "have" to "had"', 'Change "alarmed" to "alarming"', 'No change needed'],
             correctAnswer: 0,
             explanation: '"News" is a singular noun (even though it ends in -s). The correct verb is "has alarmed."'
           },
           {
-            question: 'A number of residents **has** voiced their concerns about the new policy. \nWhich correction should be made?',
+            question: 'A number of residents <u>has</u> voiced their concerns about the new policy. \nWhich correction should be made?',
             options: ['No change needed', 'Change "has" to "have"', 'Change "their" to "its"', 'Change "voiced" to "voicing"'],
             correctAnswer: 1,
             explanation: '"A number of" is an idiomatic expression that takes a plural verb. "A number of residents have voiced…" is correct. (Compare with "The number of residents is…" which is singular.)'

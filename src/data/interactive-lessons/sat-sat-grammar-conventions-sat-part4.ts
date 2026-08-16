@@ -147,7 +147,7 @@ Type "fragment," "run-on," "comma splice," or "correct" for each sentence.
       exercise: {
         questions: [
           {
-            question: 'The orchestra performed brilliantly, earning a standing ovation, **they** had rehearsed every day for three months. \nWhich revision best fixes the error?',
+            question: 'The orchestra performed brilliantly, earning a standing ovation, <u>they</u> had rehearsed every day for three months. \nWhich revision best fixes the error?',
             options: ['brilliantly, earning a standing ovation they', 'brilliantly and earned a standing ovation, they', 'brilliantly, earning a standing ovation; they', 'brilliantly. Earning a standing ovation, they'],
             correctAnswer: 2,
             explanation: 'The original has a comma splice between "ovation" and "they." A semicolon correctly separates the two independent clauses.'

@@ -142,13 +142,13 @@ Used for wishes, demands, suggestions, and hypothetical situations:
       exercise: {
         questions: [
           {
-            question: 'The scientist conducted the experiment in March and **will publish** the results in the same journal two months later. \nWhich correction should be made?',
+            question: 'The scientist conducted the experiment in March and <u>will publish</u> the results in the same journal two months later. \nWhich correction should be made?',
             options: ['Change "will publish" to "published"', 'Change "conducted" to "conducts"', 'Change "will publish" to "has published"', 'No change needed'],
             correctAnswer: 0,
             explanation: 'Both actions are in the past ("in March" and "two months later"). Using "will publish" is an inappropriate tense shift. "Published" keeps the tense consistent.'
           },
           {
-            question: 'If the budget **was** larger, the school could hire more teachers. \nWhich correction should be made?',
+            question: 'If the budget <u>was</u> larger, the school could hire more teachers. \nWhich correction should be made?',
             options: ['Change "was" to "were"', 'Change "could hire" to "can hire"', 'Change "was" to "is"', 'No change needed'],
             correctAnswer: 0,
             explanation: 'This is a hypothetical (contrary-to-fact) statement. The subjunctive requires "were," not "was."'

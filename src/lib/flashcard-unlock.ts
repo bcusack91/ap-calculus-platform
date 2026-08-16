@@ -45,6 +45,7 @@ export async function maybeUnlockFlashcards(
       textContent: true,
       flashcards: { select: { id: true } },
       exampleProblems: { select: { question: true, solution: true } },
+      category: { select: { course: { select: { slug: true } } } },
     },
   })
   if (!topic) return LOCKED
@@ -101,28 +102,52 @@ export async function maybeUnlockFlashcards(
   if (cardIds.length === 0) return LOCKED
 
   const context = await getActiveStudyContext(userId)
+
+  // Unlock into the active mode — and ALSO into the topic's course study mode
+  // when the student already has one (owner report: passed the SAT grammar
+  // exit quiz in Personal mode, then opened their "SAT Prep" course mode and
+  // found nothing — the unlock had landed only in the mode active at submit).
+  // A course mode "exists" if it's their stored mode or already holds cards.
+  const contexts = new Set([context])
+  const courseSlug = topic.category?.course?.slug
+  if (courseSlug) {
+    const courseKey = `course:${courseSlug}`
+    if (!contexts.has(courseKey)) {
+      const [user, inUse] = await Promise.all([
+        prisma.user.findUnique({ where: { id: userId }, select: { studyContext: true } }),
+        prisma.flashcardProgress.findFirst({ where: { userId, context: courseKey }, select: { id: true } }),
+      ])
+      if (user?.studyContext === courseKey || inUse) contexts.add(courseKey)
+    }
+  }
+
   const now = new Date()
-  const created = await prisma.flashcardProgress.createMany({
-    data: cardIds.map((flashcardId) => ({
-      userId,
-      flashcardId,
-      context,
-      easeFactor: 2.5,
-      interval: 0,
-      repetitions: 0,
-      nextReview: now,
-      lastReviewed: now,
-      reviewCount: 0,
-    })),
-    skipDuplicates: true,
-  })
+  let newInActive = 0
+  for (const ctx of contexts) {
+    const res = await prisma.flashcardProgress.createMany({
+      data: cardIds.map((flashcardId) => ({
+        userId,
+        flashcardId,
+        context: ctx,
+        easeFactor: 2.5,
+        interval: 0,
+        repetitions: 0,
+        nextReview: now,
+        lastReviewed: now,
+        reviewCount: 0,
+      })),
+      skipDuplicates: true,
+    })
+    // The result (toast copy etc.) describes the ACTIVE deck only.
+    if (ctx === context) newInActive = res.count
+  }
   const totalActive = await prisma.flashcardProgress.count({
     where: { userId, context, flashcard: { topicId: topic.id } },
   })
 
   return {
     unlocked: true,
-    newCards: created.count,
+    newCards: newInActive,
     totalActive,
     totalCards: cardIds.length,
     topicTitle: topic.title,

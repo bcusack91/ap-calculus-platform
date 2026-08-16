@@ -57,6 +57,23 @@ function containsMarkdownTable(text: string): boolean {
 }
 
 // Helper component to render inline LaTeX within text strings
+/**
+ * Lightweight inline markup for lesson text rendered outside markdown:
+ * `**bold**` and `<u>underline</u>` (the SAT convention — grammar questions
+ * underline the error span being tested). Only these two markers are parsed;
+ * everything else stays literal text (no raw-HTML injection).
+ */
+function formatInlineMarkers(text: string): React.ReactNode {
+  const segs = text.split(/(\*\*[^*]+\*\*|<u>[\s\S]+?<\/u>)/g)
+  if (segs.length === 1) return text
+  return segs.map((seg, i) => {
+    if (/^\*\*[^*]+\*\*$/.test(seg)) return <strong key={i}>{seg.slice(2, -2)}</strong>
+    const u = seg.match(/^<u>([\s\S]+?)<\/u>$/)
+    if (u) return <u key={i} className="underline decoration-2 underline-offset-4">{u[1]}</u>
+    return <span key={i}>{seg}</span>
+  })
+}
+
 // Parses $...$ and $$...$$ delimiters and renders via KaTeX
 function InlineLatex({ text, className }: { text: string; className?: string }) {
   // Markdown pipe-tables can't be tokenized by the inline LaTeX splitter below,
@@ -72,7 +89,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
   }
 
   if (!text || (!text.includes('$') && !text.includes('\\('))) {
-    return <span className={className}>{text}</span>
+    return <span className={className}>{formatInlineMarkers(text)}</span>
   }
 
   // Normalize \(...\) delimiters to $...$ before processing
@@ -84,7 +101,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
 
   // If no unescaped $ remains, just restore and return plain text
   if (!processed.includes('$')) {
-    return <span className={className}>{normalizedText.replace(/\\\$/g, '$')}</span>
+    return <span className={className}>{formatInlineMarkers(normalizedText.replace(/\\\$/g, '$'))}</span>
   }
 
   // Split on LaTeX delimiters: $$...$$ (display) and $...$ (inline)
@@ -138,11 +155,12 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
       {parts.map((part, i) => {
         if (part.type === 'text') {
           const restored = part.content.replace(/\u0000DOLLAR\u0000/g, '$')
-          // If text contains HTML tags, render as HTML
-          if (/<[a-z][\s\S]*>/i.test(restored)) {
+          // If text contains HTML tags (other than the <u> marker, which
+          // formatInlineMarkers renders safely), render as HTML
+          if (/<[a-z][\s\S]*>/i.test(restored.replace(/<u>[\s\S]+?<\/u>/g, ''))) {
             return <span key={i} dangerouslySetInnerHTML={{ __html: restored }} />
           }
-          return <span key={i}>{restored}</span>
+          return <span key={i}>{formatInlineMarkers(restored)}</span>
         }
         try {
           return (

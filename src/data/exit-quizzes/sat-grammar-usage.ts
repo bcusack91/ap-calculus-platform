@@ -207,9 +207,9 @@ const questionPool: QuestionTemplate[] = [
       const { options, correctIndex } = makeOptions('they encounter', ['it encounters', 'one encounters', 'he or she encounters'])
       return {
         id: this.id, category: this.category,
-        question: `Medical researchers at Johns Hopkins University are studying how first-year residents cope with the emotional demands of clinical rotations. The study found that when new doctors _______ difficult patient outcomes for the first time, having an experienced mentor significantly reduces the likelihood of burnout.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        question: `Medical researchers at Johns Hopkins University are studying how first-year residents cope with the emotional demands of clinical rotations. The study found that when _______ difficult patient outcomes for the first time, having an experienced mentor significantly reduces the likelihood of burnout.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
         options, correctIndex,
-        explanation: `The antecedent is "new doctors" (plural), so the plural pronoun "they" is correct. "They encounter" maintains agreement with the plural subject.`
+        explanation: `The antecedent is "first-year residents" (plural), so the plural pronoun "they" with the plural verb "encounter" is correct: "when they encounter difficult patient outcomes."`
       }
     }
   },

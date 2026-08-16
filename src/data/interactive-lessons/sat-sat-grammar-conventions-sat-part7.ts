@@ -75,13 +75,13 @@ When you see an underlined portion on the SAT, run through these checks:
       exercise: {
         questions: [
           {
-            question: 'The team of researchers **have** published their findings in a prestigious journal. \nWhich correction, if any, should be made?',
+            question: 'The team of researchers <u>have</u> published their findings in a prestigious journal. \nWhich correction, if any, should be made?',
             options: ['Change "have" to "has"', 'Change "their" to "its"', 'Both A and B', 'No change needed'],
             correctAnswer: 2,
             explanation: '"Team" is singular: "The team…has published its findings." Both the verb and the pronoun should be singular to match the collective noun.'
           },
           {
-            question: '**Analyzing the data carefully,** several unexpected trends were discovered by the researchers. \nWhat error does this sentence contain?',
+            question: '<u>Analyzing the data carefully,</u> several unexpected trends were discovered by the researchers. \nWhat error does this sentence contain?',
             options: ['Comma splice', 'Dangling modifier', 'Verb tense error', 'Faulty comparison'],
             correctAnswer: 1,
             explanation: '"Analyzing the data carefully" modifies the researchers, but "trends" is the subject. Corrected: "Analyzing the data carefully, the researchers discovered several unexpected trends."'
@@ -149,13 +149,13 @@ Identify the grammar error type in each sentence. Type one of: "subject-verb agr
       exercise: {
         questions: [
           {
-            question: 'The professor insists that every student **submits** their final paper on time. \nWhich correction(s) should be made?',
+            question: 'The professor insists that every student <u>submits</u> their final paper on time. \nWhich correction(s) should be made?',
             options: ['Change "submits" to "submit" only', 'Change "their" to "his or her" only', 'Change "submits" to "submit" AND "their" to "his or her"', 'No change needed'],
             correctAnswer: 2,
             explanation: 'After "insists that," use the subjunctive: "submit" (not "submits"). Also, "every student" is singular, so "his or her" is correct (SAT standard).'
           },
           {
-            question: 'The company not only increased employee salaries **but also was providing** better health benefits. \nWhich revision fixes the error?',
+            question: 'The company not only increased employee salaries <u>but also was providing</u> better health benefits. \nWhich revision fixes the error?',
             options: ['but also providing', 'but also provided', 'but it also will provide', 'No change needed'],
             correctAnswer: 1,
             explanation: '"Not only increased…but also ___" — the verb forms must be parallel. "Increased" and "provided" are both simple past.'
