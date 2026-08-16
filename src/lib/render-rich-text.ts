@@ -122,10 +122,14 @@ function looksLikeCurrencyProse(span: string): boolean {
   if (!/^[\d.,]/.test(span) || /[\\=^_{}<>]/.test(span)) return false
   // Currency/prose when EITHER:
   //  (a) there's a word after the number — "$5 to $10", "$2 and a notebook" — or
-  //  (b) it's a bare numeric run containing a comma — the "$3, $7, and $12" list
-  //      case, whose captured span (e.g. "3, ") has no trailing word.
-  // Real math like $3x+2=11$, $1 < x+2 < 6$, $5x$, $2 + 3$, $100$ still renders.
-  return /\s[a-z]/.test(span) || (/^[\d.,\s]+$/.test(span) && span.includes(','))
+  //  (b) it's a bare numeric run ENDING with a comma — the "$3, $7, and $12"
+  //      list case, whose captured span sits between one amount and the next
+  //      `$`, so it always terminates at a comma (e.g. "3, ").
+  // A complete numeric LIST ending in a digit — "$6, 17, 25, 6, 6, 9$" from
+  // mode/median data-set questions — is genuine math and must render (that
+  // shape can't come from currency pairing, whose spans stop at the comma
+  // before the next amount). Real math like $3x+2=11$, $5x$, $100$ renders too.
+  return /\s[a-z]/.test(span) || (/^[\d.,\s]+$/.test(span) && /,\s*$/.test(span))
 }
 
 export function renderRichText(text: string): string {
