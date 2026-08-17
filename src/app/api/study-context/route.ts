@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { getActiveStudyContext, listStudyContexts, validateContext } from '@/lib/study-context'
+import { getActiveStudyContext, isCourseContext, listStudyContexts, validateContext } from '@/lib/study-context'
+import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
 
 /**
  * GET  /api/study-context — the user's active study mode + every mode they can
@@ -40,5 +41,38 @@ export async function PUT(req: NextRequest) {
     return NextResponse.json({ error: 'You do not have access to that study mode.' }, { status: 403 })
   }
   await prisma.user.update({ where: { id: userId }, data: { studyContext: context } })
+
+  // Switching INTO a course mode brings already-earned cards along: re-run the
+  // unlock check for every topic of that course the student has an exit-quiz
+  // attempt on (idempotent; the helper re-verifies lesson-done + quiz-done and
+  // writes into the now-active mode). Without this, a student who finished
+  // "Sentence Structure" in Personal mode and THEN created their SAT Prep mode
+  // found it inexplicably empty. Best-effort — a failure must not block the
+  // switch.
+  if (isCourseContext(context)) {
+    try {
+      const courseSlug = context.slice('course:'.length)
+      const attempts = await prisma.exitQuizAttempt.findMany({
+        where: { userId },
+        select: { topicSlug: true },
+        distinct: ['topicSlug'],
+        take: 100,
+      })
+      const slugs = attempts.map((a) => a.topicSlug)
+      if (slugs.length > 0) {
+        const courseTopics = await prisma.topic.findMany({
+          where: { slug: { in: slugs }, category: { course: { slug: courseSlug } } },
+          select: { slug: true },
+          take: 30,
+        })
+        for (const t of courseTopics) {
+          await maybeUnlockFlashcards(userId, t.slug)
+        }
+      }
+    } catch (backfillError) {
+      console.error('course-mode unlock backfill failed (non-fatal):', backfillError)
+    }
+  }
+
   return NextResponse.json({ active: context })
 }
