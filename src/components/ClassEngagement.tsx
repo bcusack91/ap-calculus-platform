@@ -15,6 +15,7 @@ import { Fragment, useCallback, useEffect, useState } from 'react'
 interface StudentRow { userId: string; name: string; totalSeconds: number; completedLessons: number; flaggedLessons: number }
 interface TopicRow { title: string; course: string | null; status: string; seconds: number; lastAccessed: string | null; flagged: boolean }
 interface SessionRow { id: string; mode: string; status: string; startedAt: string; endedAt: string | null; attendees: { name: string; minutes: number }[] }
+interface FlashcardRow { userId: string; name: string; days: number[]; activeDays: number; totalReviews: number }
 
 function fmtMinutes(seconds: number): string {
   const m = Math.round(seconds / 60)
@@ -25,6 +26,8 @@ function fmtMinutes(seconds: number): string {
 export default function ClassEngagement({ classroomId }: { classroomId: string }) {
   const [students, setStudents] = useState<StudentRow[] | null>(null)
   const [sessions, setSessions] = useState<SessionRow[]>([])
+  const [flashcards, setFlashcards] = useState<FlashcardRow[]>([])
+  const [flashcardDayKeys, setFlashcardDayKeys] = useState<string[]>([])
   const [expanded, setExpanded] = useState<string | null>(null)
   const [detail, setDetail] = useState<{ userId: string; topics: TopicRow[] } | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -37,6 +40,8 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
         if (!r.ok) throw new Error(d.error || 'Could not load engagement data')
         setStudents(d.students)
         setSessions(d.sessions ?? [])
+        setFlashcards(d.flashcards ?? [])
+        setFlashcardDayKeys(d.flashcardDayKeys ?? [])
         if (d.detail) setDetail(d.detail)
         setError(null)
       })
@@ -132,6 +137,69 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
                   )}
                 </Fragment>
               ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">🎴 Daily flashcards</h2>
+        <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+          Days each student reviewed flashcards over the last 7 days (any deck). Goal:{' '}
+          <span className="font-medium text-green-600 dark:text-green-400">5+ days a week</span>. A filled dot = at least one
+          review that day; the number under each dot is cards reviewed.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-200 text-left text-xs uppercase text-gray-500 dark:border-gray-700 dark:text-gray-400">
+                <th className="py-2 pr-4">Student</th>
+                {flashcardDayKeys.map(k => (
+                  <th key={k} className="py-2 pr-2 text-center font-medium">
+                    {new Date(`${k}T12:00:00Z`).toLocaleDateString(undefined, { weekday: 'short' })}
+                  </th>
+                ))}
+                <th className="py-2 pr-4 text-center">Days</th>
+                <th className="py-2 text-center">Cards</th>
+              </tr>
+            </thead>
+            <tbody>
+              {flashcards.map(row => (
+                <tr key={row.userId} className="border-b border-gray-100 dark:border-gray-700/50">
+                  <td className="py-2 pr-4 font-medium text-gray-900 dark:text-white">{row.name}</td>
+                  {row.days.map((n, i) => (
+                    <td key={i} className="py-2 pr-2 text-center">
+                      <span
+                        className={`mx-auto flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-semibold ${
+                          n > 0
+                            ? 'bg-green-500 text-white'
+                            : 'bg-gray-100 text-gray-400 dark:bg-gray-700 dark:text-gray-500'
+                        }`}
+                        title={n > 0 ? `${n} card${n === 1 ? '' : 's'} reviewed` : 'No reviews'}
+                      >
+                        {n > 0 ? (n > 99 ? '99' : n) : '·'}
+                      </span>
+                    </td>
+                  ))}
+                  <td className="py-2 pr-4 text-center">
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
+                        row.activeDays >= 5
+                          ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                          : row.activeDays >= 3
+                            ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                            : 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400'
+                      }`}
+                    >
+                      {row.activeDays}/7
+                    </span>
+                  </td>
+                  <td className="py-2 text-center text-gray-600 dark:text-gray-300">{row.totalReviews}</td>
+                </tr>
+              ))}
+              {flashcards.length === 0 && (
+                <tr><td colSpan={10} className="py-4 text-sm text-gray-400">No students yet.</td></tr>
+              )}
             </tbody>
           </table>
         </div>

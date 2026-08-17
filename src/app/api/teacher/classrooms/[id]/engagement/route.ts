@@ -36,7 +36,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
 
   const detailUserId = req.nextUrl.searchParams.get('student')
 
-  const [progressRows, sessions] = await Promise.all([
+  const [progressRows, sessions, flashcardDays] = await Promise.all([
     userIds.length === 0 ? [] : prisma.topicProgress.findMany({
       where: { userId: { in: userIds } },
       select: {
@@ -52,6 +52,12 @@ export async function GET(req: NextRequest, { params }: Ctx) {
         id: true, mode: true, status: true, startedAt: true, endedAt: true,
         attendance: { select: { userId: true, joinedAt: true, lastSeenAt: true } },
       },
+    }),
+    // Daily flashcard habit — last 7 UTC days per student (owner: SAT students
+    // should be doing their flashcards 5-7 days a week).
+    userIds.length === 0 ? [] : prisma.flashcardDailyActivity.findMany({
+      where: { userId: { in: userIds }, day: { gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } },
+      select: { userId: true, day: true, reviews: true },
     }),
   ])
 
@@ -99,10 +105,33 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     }
   }
 
+  // Build per-student last-7-days flashcard grid (UTC days, oldest first).
+  const dayKeys: string[] = []
+  for (let i = 6; i >= 0; i--) {
+    dayKeys.push(new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString().slice(0, 10))
+  }
+  const reviewsByUserDay = new Map<string, number>()
+  for (const r of flashcardDays) {
+    reviewsByUserDay.set(`${r.userId}|${r.day.toISOString().slice(0, 10)}`, r.reviews)
+  }
+  const flashcards = members.map(m => {
+    const days = dayKeys.map(k => reviewsByUserDay.get(`${m.userId}|${k}`) ?? 0)
+    const activeDays = days.filter(n => n > 0).length
+    return {
+      userId: m.userId,
+      name: nameOf.get(m.userId) ?? 'Student',
+      days,
+      activeDays,
+      totalReviews: days.reduce((a, b) => a + b, 0),
+    }
+  }).sort((a, b) => a.name.localeCompare(b.name))
+
   return NextResponse.json({
     clickThroughThresholdSeconds: CLICK_THROUGH_SECONDS,
     students,
     detail,
+    flashcards,
+    flashcardDayKeys: dayKeys,
     sessions: sessions.map(s => ({
       id: s.id,
       mode: s.mode,

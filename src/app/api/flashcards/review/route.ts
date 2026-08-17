@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { randomUUID } from 'node:crypto'
 import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
@@ -99,6 +100,17 @@ export async function POST(req: NextRequest) {
         reviewCount: reviewCount + 1
       }
     })
+
+    // Best-effort daily-habit rollup: one row per user per UTC day, powering
+    // the teacher's "did they do their flashcards this week" view.
+    try {
+      await prisma.$executeRaw`
+        INSERT INTO "FlashcardDailyActivity" ("id", "userId", "day", "reviews")
+        VALUES (${randomUUID()}, ${session.user.id}, CURRENT_DATE, 1)
+        ON CONFLICT ("userId", "day") DO UPDATE SET "reviews" = "FlashcardDailyActivity"."reviews" + 1`
+    } catch (rollupError) {
+      console.error('flashcard daily rollup failed (non-fatal):', rollupError)
+    }
 
     // Best-effort assignment auto-completion: topic-based FLASHCARD_REVIEW
     // assignments (no teacher flashcardSetId) are studied on this surface,

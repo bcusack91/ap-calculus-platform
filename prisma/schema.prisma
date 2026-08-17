@@ -31,6 +31,7 @@ model User {
   accounts               Account[]
   diagnosticTests        DiagnosticTest[]
   flashcardProgress      FlashcardProgress[]
+  flashcardDailyActivity FlashcardDailyActivity[]
   learningPath           LearningPath?
   sessions               Session[]
   topicProgress          TopicProgress[]
@@ -496,6 +497,20 @@ model DailyChallengeResult {
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, day])
+}
+
+// Per-day flashcard review rollup — powers the teacher's daily-habit view
+// ("did each student do their flashcards 5-7 days this week?"). One row per
+// user per UTC day, incremented best-effort on every card review.
+model FlashcardDailyActivity {
+  id      String   @id @default(cuid())
+  userId  String
+  day     DateTime @db.Date
+  reviews Int      @default(0)
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, day])
+  @@index([userId, day])
 }
 
 model DailyStreak {
