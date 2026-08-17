@@ -234,12 +234,17 @@ export default function FlashcardReviewPage() {
           <>
             {/* Regular Flashcard */}
             <div className="mb-8">
+              {/* Both faces sit in the SAME grid cell (not absolute), so the
+                  container's height is always the TALLER face — a long answer
+                  pushes everything below it (hint, rating buttons) further
+                  down instead of overflowing a fixed 350px box and painting
+                  over the Again/Hard/Good/Easy buttons. */}
               <div
                 onClick={() => !isFlipped && setIsFlipped(true)}
-                className={`relative min-h-[350px] cursor-pointer perspective-1000 ${!isFlipped ? 'hover:scale-105' : ''} transition-transform duration-200`}
+                className={`cursor-pointer perspective-1000 ${!isFlipped ? 'hover:scale-105' : ''} transition-transform duration-200`}
               >
                 <div
-                  className={`relative w-full min-h-[350px] transition-all duration-500 preserve-3d`}
+                  className={`grid w-full transition-all duration-500 preserve-3d`}
                   style={{
                     transformStyle: 'preserve-3d',
                     transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)',
@@ -247,12 +252,12 @@ export default function FlashcardReviewPage() {
                 >
                   {/* Front */}
                   <div
-                    className={`absolute w-full backface-hidden ${
-                      isFlipped ? 'opacity-0' : 'opacity-100'
+                    className={`col-start-1 row-start-1 w-full backface-hidden ${
+                      isFlipped ? 'pointer-events-none opacity-0' : 'opacity-100'
                     }`}
                     style={{ backfaceVisibility: 'hidden' }}
                   >
-                    <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[350px] flex flex-col justify-center">
+                    <div className="border-2 border-accent-muted rounded-xl p-10 bg-gradient-to-br from-accent-subtle to-blue-50 min-h-[350px] h-full flex flex-col justify-center">
                       <div className="text-sm text-accent-dark font-semibold mb-4">QUESTION</div>
                       <div className="text-xl prose prose-purple max-w-none text-gray-900">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
@@ -267,12 +272,12 @@ export default function FlashcardReviewPage() {
 
               {/* Back */}
               <div
-                className={`absolute w-full backface-hidden ${
-                  isFlipped ? 'opacity-100' : 'opacity-0'
+                className={`col-start-1 row-start-1 w-full backface-hidden ${
+                  isFlipped ? 'opacity-100' : 'pointer-events-none opacity-0'
                 }`}
                 style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
               >
-                <div className="border-2 border-green-300 rounded-xl p-10 bg-gradient-to-br from-green-50 to-emerald-50 min-h-[350px] flex flex-col justify-center">
+                <div className="border-2 border-green-300 rounded-xl p-10 bg-gradient-to-br from-green-50 to-emerald-50 min-h-[350px] h-full flex flex-col justify-center">
                   <div className="text-sm text-green-900 font-semibold mb-4">ANSWER</div>
                   <div className="text-xl prose prose-green max-w-none text-gray-900">
                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
