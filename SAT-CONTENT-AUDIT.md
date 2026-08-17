@@ -1,5 +1,16 @@
 # SAT Content Congruence Audit — 2026-08-17
 
+> **STATUS: REMEDIATED (same day).** All findings below were fixed and
+> deployed. Probability/statistics banks + 6 lesson parts rewritten to
+> words-from-tables form; z-scores/E(X)/SD-formula/empirical-rule/logs
+> replaced with margin-of-error, study-design, and conceptual-SD items;
+> complex numbers KEPT but labeled "(Beyond the SAT)" (owner can retire
+> later); math categories renamed to digital-SAT domains; legacy reading
+> bank redirected to the modern passage-based rw-bank; 21 definitional
+> stems converted to application form; DB content/flashcards/examples
+> cleaned; SAT decks regenerated. Rerun scan: residue = deliberate
+> complex-numbers vertical + audit tool's own comments.
+
 Owner-requested audit: find content that isn't on the digital SAT or isn't
 presented the way the SAT presents it. Read-only findings; no fixes applied.
 Scan tooling: `scripts/audit-sat-congruence.ts` (rerunnable).

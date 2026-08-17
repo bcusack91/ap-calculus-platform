@@ -4,32 +4,34 @@ export const satProbSolvDataPart6Data = {
     {
       id: 'psd6-intro',
       type: 'text' as const,
-      content: `# Probability & Counting
+      content: `# Probability & Predictions
 
 **Part 6 of 7 — SAT Probability Essentials**
 
+The digital SAT keeps probability concrete: counts, tables, and proportions,
+always in plain words. You will never see formal notation like P(A|B) or
+union/intersection symbols on the test.
+
 ### Basic Probability
-$$P(\\text{event}) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$$
+$$\\text{Probability} = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$$
 
-### Complement Rule
-$$P(\\text{not A}) = 1 - P(A)$$
+### "NOT" Questions
+The probability something does NOT happen is 1 minus the probability it does —
+or just count the non-favorable outcomes directly.
 
-Often easier: "What's the probability of getting AT LEAST one?" = 1 − P(none).
+**Example:** 4 red, 6 blue, 5 green marbles. P(not red) — count the 11
+non-red marbles: $\\frac{11}{15}$.
 
-### "Or" vs. "And"
-- **P(A or B)** = P(A) + P(B) − P(A and B)
-- **P(A and B)** for independent events = P(A) × P(B)
+### The Three SAT Probability Setups
+1. **From a table**: "If a student is selected at random from those who…"
+2. **From counts**: "A bag holds 3 red and 5 blue marbles…"
+3. **From a survey**: "Based on the results, what proportion…"
 
-### SAT Probability Questions — Common Types
-1. **From a table**: "A randomly selected student from the table above..."
-2. **Cards/marbles**: "If 3 red and 5 blue marbles..."
-3. **Surveys**: "Based on the survey results, what proportion..."
+### Predicting a Count ("how many would you expect")
+$$\\text{Expected count} = \\text{Total} \\times \\text{proportion}$$
 
-### Expected Value
-If the SAT asks what value you'd "expect":
-$$\\text{Expected} = \\text{Total} \\times P(\\text{event})$$
-
-Example: 200 people surveyed, 35% prefer A → Expected = 200 × 0.35 = 70
+Example: 200 people surveyed, 35% prefer A → expect $200 \\times 0.35 = 70$
+of the next 200 to prefer A.
 
 ### Relative Frequency
 Just another word for proportion:
@@ -46,68 +48,72 @@ $$\\text{Relative frequency of A} = \\frac{\\text{count of A}}{\\text{total coun
         '2/3'
       ],
       correctAnswer: 1,
-      explanation: 'P(red) = 4/15. P(not red) = 1 − 4/15 = 11/15. Alternatively: non-red marbles = 6 + 5 = 11, so P(not red) = 11/15.'
+      explanation: 'Count the non-red marbles directly: 6 + 5 = 11 of the 15 marbles, so P(not red) = 11/15. (Same as 1 − 4/15.)'
     },
     {
       id: 'psd6-text2',
       type: 'text' as const,
-      content: `## Deep Dive: Probability Strategies
+      content: `## Deep Dive: Table Probability — the SAT's Favorite Question
 
-### Worked Example 1: "At Least One" with Complement
+### Worked Example 1: One Cell Over the Grand Total
 
-| Step | Work |
-|---|---|
-| **Problem** | "Roll a die twice. What is P(at least one 6)?" |
-| **Complement** | P(no sixes) $= \\frac{5}{6} \\times \\frac{5}{6} = \\frac{25}{36}$ |
-| **Answer** | P(at least one 6) $= 1 - \\frac{25}{36} = \\frac{11}{36}$ |
+| | Passed | Did Not Pass | Total |
+|---|---|---|---|
+| Attended review | 32 | 8 | 40 |
+| Skipped review | 18 | 22 | 40 |
+| Total | 50 | 30 | 80 |
 
-### Worked Example 2: Expected Value from a Survey
+**"If a student is selected at random from all 80, what is the probability
+the student attended the review AND passed?"**
 
-| Step | Work |
-|---|---|
-| **Problem** | "In a sample, 42% prefer Brand A. If 500 people are surveyed from the same population, how many would you expect to prefer Brand A?" |
-| **Expected** | $500 \\times 0.42 = 210$ people |
+One cell over the grand total: $\\frac{32}{80} = \\frac{2}{5}$.
 
-### Probability Rules Summary
+### Worked Example 2: The "From" Rule (conditional, in words)
 
-| Rule | Formula | When to Use |
-|---|---|---|
-| Complement | $P(\\text{not } A) = 1 - P(A)$ | "At least one", "none" |
-| Or (general) | $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ | Either event |
-| Or (mutually exclusive) | $P(A \\cup B) = P(A) + P(B)$ | Events can't overlap |
-| And (independent) | $P(A \\cap B) = P(A) \\times P(B)$ | "Both", "all" |
-| And (dependent) | $P(A \\cap B) = P(A) \\times P(B|A)$ | Without replacement |
+**"If a student is selected at random from those who SKIPPED the review,
+what is the probability the student passed?"**
 
-### SAT Probability from Tables
+"From those who skipped" restricts you to that row: $\\frac{18}{40} = \\frac{9}{20}$.
 
-The SAT usually gives you a two-way table and asks:
-1. **Simple probability**: one cell ÷ grand total
-2. **Conditional**: one cell ÷ row/column total
-3. **"At least"**: use complement (1 − P(none))`
+**The word after "from" names your denominator.** This is exactly how the
+SAT asks conditional probability — no notation, just words.
+
+### Worked Example 3: Predicting a Count
+
+**"In a random sample, 42% prefer Brand A. If 500 people are surveyed from
+the same population, how many would you expect to prefer Brand A?"**
+
+$500 \\times 0.42 = 210$ people.
+
+### SAT Probability from Tables — the Full Playbook
+1. **No restriction** ("from all participants"): cell ÷ grand total
+2. **Restricted group** ("from the seniors" / "from those who said yes"):
+   cell ÷ that row or column total
+3. **"NOT"**: count the other cells, or use 1 minus`
     },
     {
       id: 'psd6-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Advanced Probability Problems** 🎯',
+      content: '**Table Probability Problems** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A class has 12 boys and 18 girls. Two students are picked randomly without replacement. What is P(both are girls)?',
-            options: ['$\\frac{18 \\times 17}{30 \\times 29} = \\frac{306}{870}$', '$\\frac{18}{30} \\times \\frac{18}{30}$', '$\\frac{18}{30} \\times \\frac{17}{30}$', '$\\frac{12 \\times 18}{30 \\times 29}$'],
+            question: 'A survey of 60 students: 25 juniors (15 have jobs, 10 do not) and 35 seniors (21 have jobs, 14 do not). If a student is selected at random from the seniors, what is the probability the student has a job?',
+            options: ['$\\frac{3}{5}$', '$\\frac{21}{60}$', '$\\frac{21}{36}$', '$\\frac{36}{60}$'],
             correctAnswer: 0,
-            explanation: 'Without replacement: first girl $= 18/30$, second girl $= 17/29$ (one fewer girl, one fewer total). P(both girls) $= \\frac{18}{30} \\times \\frac{17}{29} = \\frac{306}{870} \\approx 0.352$.'
+            explanation: '"From the seniors" makes 35 the denominator: $\\frac{21}{35} = \\frac{3}{5}$.'
           },
           {
-            question: 'Events A and B are independent. P(A) = 0.3, P(B) = 0.5. What is P(A or B)?',
-            options: ['$0.65$', '$0.80$', '$0.15$', '$0.50$'],
+            question: 'Using the same survey, if a student is selected at random from ALL 60 students, what is the probability the student is a junior who has a job?',
+            options: ['$\\frac{1}{4}$', '$\\frac{15}{25}$', '$\\frac{3}{5}$', '$\\frac{15}{36}$'],
             correctAnswer: 0,
-            explanation: 'P(A or B) $= P(A) + P(B) - P(A \\text{ and } B) = 0.3 + 0.5 - (0.3)(0.5) = 0.8 - 0.15 = 0.65$.'
+            explanation: 'One cell (15 juniors with jobs) over the grand total (60): $\\frac{15}{60} = \\frac{1}{4}$.'
           },
           {
-            question: 'In a survey, 70% drink coffee and 40% drink tea. 25% drink both. What percent drink neither?',
+            question: 'In a survey, 70% of respondents drink coffee, 40% drink tea, and 25% drink both. What percent drink neither coffee nor tea?',
             options: ['$15\\%$', '$10\\%$', '$25\\%$', '$30\\%$'],
             correctAnswer: 0,
-            explanation: 'P(coffee or tea) $= 0.70 + 0.40 - 0.25 = 0.85$. P(neither) $= 1 - 0.85 = 0.15 = 15\\%$.'
+            explanation: 'Coffee or tea (or both): 70 + 40 counts the 25% both-drinkers twice, so 70 + 40 − 25 = 85%. Neither: 100 − 85 = 15%.'
           }
         ]
       }
@@ -115,19 +121,19 @@ The SAT usually gives you a two-way table and asks:
     {
       id: 'psd6-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Probability Rule Identification** — Match the scenario to the correct approach.',
+      content: '**Pick the Right Denominator** — Match each question to the correct setup.',
       exercise: {
         dropdowns: [
-          '"P(at least one head in 3 flips)" → [1 − P(no heads)|P(H) × 3|P(H) + P(H) + P(H)|3/6]',
-          '"P(red OR blue marble)" from a bag → [P(R) + P(B)|P(R) × P(B)|1 − P(green)|P(R) + P(B) − P(R and B)]',
-          'Two dice, P(both show 6) → [P(6) × P(6)|(1/6) + (1/6)|1 − P(not 6)|2/12]',
-          'Drawing 2 cards without replacement, P(both aces) → [(4/52)(3/51)|(4/52)(4/52)|(4/52)(4/51)|8/52]'
+          '"Selected at random from all students in the table" → [Cell ÷ grand total|Cell ÷ row total|Row total ÷ column total|Always 1/2]',
+          '"Selected at random from those who answered Yes" → [Cell ÷ Yes-column total|Cell ÷ grand total|Yes total ÷ grand total|Cell ÷ No-column total]',
+          '"What is the probability the spinner does NOT land on red?" → [Non-red sections ÷ all sections|Red sections ÷ all sections|1 ÷ red sections|Red ÷ non-red]',
+          '"58% of a sample supports the plan. How many of 300 residents would you expect to support it?" → [300 × 0.58|300 ÷ 0.58|0.58 ÷ 300|300 − 58]'
         ],
-        correctAnswers: ['1 − P(no heads)', 'P(R) + P(B)', 'P(6) × P(6)', '(4/52)(3/51)'],
-        hint1: '"At least one" → complement is easiest.',
-        hint2: 'Red and blue are mutually exclusive (can\'t be both) → just add.',
-        hint3: 'Dice rolls are independent → multiply.',
-        explanation: 'At least one → complement: 1 − $(1/2)^{3}$ = 7/8. Mutually exclusive colors → add: P(R) + P(B). Independent dice → multiply: $(1/6)^{2}$. Without replacement → second draw changes: (4/52)(3/51).'
+        correctAnswers: ['Cell ÷ grand total', 'Cell ÷ Yes-column total', 'Non-red sections ÷ all sections', '300 × 0.58'],
+        hint1: 'No restriction → the whole table is your world.',
+        hint2: '"From those who answered Yes" → only the Yes column exists now.',
+        hint3: '"NOT" → count the other outcomes. Expected count → total × proportion.',
+        explanation: 'Unrestricted → grand total. "From [group]" → that group\'s total. NOT → count the complement. "How many would you expect" → multiply the total by the proportion.'
       }
     },
     {
@@ -135,15 +141,17 @@ The SAT usually gives you a two-way table and asks:
       type: 'text' as const,
       content: `## Part 6 Summary: Probability
 
-| Rule | Formula | Key Word |
+| Question type | Setup | Key words |
 |---|---|---|
-| Basic | Favorable ÷ Total | "probability of" |
-| Complement | $1 - P(A)$ | "at least one", "not" |
-| Or (exclusive) | $P(A) + P(B)$ | Can't happen together |
-| Or (overlap) | $P(A) + P(B) - P(A \\cap B)$ | Can happen together |
-| And (independent) | $P(A) \\times P(B)$ | With replacement, separate trials |
-| And (dependent) | $P(A) \\times P(B|A)$ | Without replacement |
-| Expected value | Total $\\times$ P(event) | "How many would you expect" |
+| Basic | Favorable ÷ total | "probability of" |
+| NOT | Count the other outcomes (or 1 minus) | "not", "does not" |
+| Table, unrestricted | Cell ÷ grand total | "from all…" |
+| Table, restricted | Cell ÷ row or column total | "from those who…" |
+| Compare groups | Compute each group's rate | "more likely" |
+| Predict a count | Total × proportion | "how many would you expect" |
+
+- The word **"from"** names your denominator — that's the whole skill
+- The SAT never uses P(A|B) or ∪/∩ symbols — everything is words and tables
 
 *Next: Comprehensive review and mixed practice →*`
     }

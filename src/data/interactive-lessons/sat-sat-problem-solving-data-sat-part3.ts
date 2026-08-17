@@ -27,17 +27,17 @@ These organize data by two categories. Example:
 
 ### Marginal vs. Conditional
 - **Marginal**: P(Female) = 280/500 — uses the grand total
-- **Conditional**: P(Female | Sophomore) = 150/250 — uses a column/row total
+- **"From" questions**: selected from the sophomores, P(female) = 150/250 — the named group's total is the denominator
 
 ### Association vs. Independence
 Two variables are **independent** if knowing one doesn't change the probability of the other.
-- If P(Female) = P(Female | Sophomore), gender and class year are independent
+- If the female rate among sophomores equals the female rate overall, the data show no associatiot
 - If those probabilities differ, there's an association`
     },
     {
       id: 'psd3-q1',
       type: 'quiz' as const,
-      question: 'Using the table: 120 male freshmen, 100 male sophomores, 130 female freshmen, 150 female sophomores (500 total). What is P(Freshman | Female)?',
+      question: 'Using the table: 120 male freshmen, 100 male sophomores, 130 female freshmen, 150 female sophomores (500 total). If a student is selected at random from the females, what is the probability the student is a freshman?',
       options: [
         '120/500',
         '130/500',
@@ -45,7 +45,7 @@ Two variables are **independent** if knowing one doesn't change the probability 
         '250/500'
       ],
       correctAnswer: 2,
-      explanation: '"Given Female" means restrict to the Female row (total 280). Female freshmen = 130. So P(Freshman | Female) = 130/280 = 13/28.'
+      explanation: '"From the females" restricts you to the Female row (total 280). Female freshmen = 130, so 130/280 = 13/28.'
     },
     {
       id: 'psd3-text2',
@@ -73,8 +73,8 @@ Two variables are **independent** if knowing one doesn't change the probability 
 | Step | Work |
 |---|---|
 | **Question** | "Is having benefits independent of employment type?" |
-| **P(Benefits)** | $90/200 = 0.45$ |
-| **P(Benefits | Full-time)** | $75/120 = 0.625$ |
+| **Probability a random employee gets benefits** | $90/200 = 0.45$ |
+| **…selected from the full-time employees** | $75/120 = 0.625$ |
 | **Compare** | $0.45 \\neq 0.625$ → NOT independent |
 | **Conclusion** | Full-time employees are more likely to have benefits → there IS an association. |
 
@@ -90,7 +90,7 @@ Two variables are **independent** if knowing one doesn't change the probability 
 ### SAT Trap: Joint vs. Conditional
 
 - **Joint**: P(male AND freshman) $= 120/500$ (out of everyone)
-- **Conditional**: P(freshman | male) $= 120/220$ (out of males only)`
+- **"From" questions**: selected from the males, P(freshman) $= 120/220$ (males only)`
     },
     {
       id: 'psd3-quiz2',
@@ -99,16 +99,16 @@ Two variables are **independent** if knowing one doesn't change the probability 
       exercise: {
         questions: [
           {
-            question: 'From the table: 75 full-time with benefits, 45 full-time without, 15 part-time with, 65 part-time without. What is P(Part-time | No Benefits)?',
+            question: 'From the table: 75 full-time with benefits, 45 full-time without, 15 part-time with, 65 part-time without. If an employee is selected at random from those WITHOUT benefits, what is the probability the employee is part-time?',
             options: ['$65/110$', '$65/200$', '$65/80$', '$110/200$'],
             correctAnswer: 0,
-            explanation: '"Given No Benefits" restricts to the 110 without benefits. Part-time without benefits $= 65$. P(Part-time | No Benefits) $= 65/110$.'
+            explanation: '"From those without benefits" restricts to the 110 without benefits. Part-time among them $= 65$, so $65/110$.'
           },
           {
-            question: 'In a survey, P(Female) = 0.55 and P(Female | Voted Yes) = 0.55. What can we conclude?',
-            options: ['Gender and voting are independent', 'More females voted Yes', 'Gender and voting are associated', 'We need more data'],
+            question: 'In a survey, 55% of ALL respondents are female, and 55% of those who voted Yes are female. What do the data suggest?',
+            options: ['No association between gender and voting Yes', 'More females voted Yes', 'Gender and voting are strongly associated', 'We need more data'],
             correctAnswer: 0,
-            explanation: 'If P(Female) = P(Female | Voted Yes), knowing someone voted Yes doesn\'t change the probability of being female. The variables are independent.'
+            explanation: 'The female rate among Yes-voters equals the female rate overall — knowing someone voted Yes tells you nothing about gender, so the data suggest no association.'
           },
           {
             question: 'A table shows 30 out of 50 seniors passed and 40 out of 100 juniors passed. Which class had a higher pass rate?',
@@ -127,7 +127,7 @@ Two variables are **independent** if knowing one doesn't change the probability 
         dropdowns: [
           '"What fraction of all students are male freshmen?" → [Grand total|Male total|Freshman total|Male freshman count]',
           '"Among females, what fraction are sophomores?" → [Female total|Grand total|Sophomore total|Female sophomore count]',
-          'P(Male | Sophomore) → [Sophomore total|Male total|Grand total|Male sophomore count]',
+          'Selected from the sophomores, P(male) → [Sophomore total|Male total|Grand total|Male sophomore count]',
           '"What percent of the survey respondents chose Option A?" → [Grand total|Option A count|Other option totals|Number of questions]'
         ],
         correctAnswers: ['Grand total', 'Female total', 'Sophomore total', 'Grand total'],
@@ -147,7 +147,7 @@ Two variables are **independent** if knowing one doesn't change the probability 
 | Marginal probability | Uses the grand total as denominator |
 | Conditional probability | Restricts to a row or column total |
 | Joint probability | One specific cell ÷ grand total |
-| Independence test | P(A) $=$ P(A | B)? If yes → independent |
+| Association check | Compare each group's rate — equal rates → no association |
 | Filling in tables | Rows and columns must sum to their totals |
 
 ### SAT Strategy

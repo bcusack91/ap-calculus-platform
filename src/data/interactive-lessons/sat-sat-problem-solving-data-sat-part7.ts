@@ -14,7 +14,7 @@ export const satProbSolvDataPart7Data = {
 ✓ Two-way tables and conditional probability
 ✓ Mean, median, standard deviation, and outliers
 ✓ Scatterplots, line of best fit, and residuals
-✓ Probability, expected value, and counting
+✓ Probability from tables and predicting counts
 
 ### SAT Strategy for This Section
 1. **Read the question last** — scan the table/graph first to understand the data
@@ -44,7 +44,7 @@ export const satProbSolvDataPart7Data = {
     {
       id: 'psd7-q2',
       type: 'quiz' as const,
-      question: 'In a two-way table, 60 out of 200 surveyed prefer Brand A. Of those 60, 45 are female. What is P(Female | Brand A)?',
+      question: 'In a survey, 60 out of 200 people prefer Brand A. Of those 60, 45 are female. If a person is selected at random from those who prefer Brand A, what is the probability the person is female?',
       options: [
         '45/200',
         '60/200',
@@ -52,7 +52,7 @@ export const satProbSolvDataPart7Data = {
         '45/140'
       ],
       correctAnswer: 2,
-      explanation: '"Given Brand A" restricts to the 60 who prefer Brand A. Of those, 45 are female. P(Female | Brand A) = 45/60 = 3/4 = 75%.'
+      explanation: '"From those who prefer Brand A" restricts to the 60 A-preferrers. Of those, 45 are female: 45/60 = 3/4 = 75%.'
     },
     {
       id: 'psd7-text2',
@@ -72,8 +72,8 @@ export const satProbSolvDataPart7Data = {
 
 | Step | Work |
 |---|---|
-| **Problem** | "150 students surveyed: 60 prefer A, 50 prefer B, 40 prefer C. Of the A-preferrers, 40 are juniors. What is P(Junior | prefers A)?" |
-| **Restrict** | Given "prefers A" → denominator $= 60$ |
+| **Problem** | "150 students surveyed: 60 prefer A, 50 prefer B, 40 prefer C. Of the A-preferrers, 40 are juniors. Selected at random from the A-preferrers, what is the probability of a junior?" |
+| **Restrict** | "From the A-preferrers" → denominator $= 60$ |
 | **Answer** | $\\frac{40}{60} = \\frac{2}{3}$ |
 
 ### SAT Problem Solving Cheat Sheet
@@ -132,14 +132,14 @@ export const satProbSolvDataPart7Data = {
         dropdowns: [
           'Ratio 3:7, total 50. Smaller group = [15|21|30|35]',
           '25% increase then 20% decrease. Net multiplier = [1.00|0.95|1.05|1.45]',
-          'P(A) = 0.4, P(B) = 0.3, independent. P(A and B) = [0.12|0.70|0.10|0.07]',
+          'A table: 24 of 60 juniors and 30 of 40 seniors have jobs. Selected at random from seniors, P(has job) = [0.75|0.40|0.54|0.30]',
           'Mean = 70, every value +5. New mean = [75|70|65|350]'
         ],
-        correctAnswers: ['15', '1.00', '0.12', '75'],
+        correctAnswers: ['15', '1.00', '0.75', '75'],
         hint1: 'Smaller group = 3 out of 3+7 = 10 parts.',
         hint2: '1.25 × 0.80 = 1.00 — back to original!',
-        hint3: 'Independent: P(A and B) = P(A) × P(B).',
-        explanation: '3/10 × 50 = 15. 1.25 × 0.80 = 1.00 (no net change). Independent: 0.4 × 0.3 = 0.12. Adding 5 to all values adds 5 to the mean: 75.'
+        hint3: '"From seniors" restricts the denominator to the 40 seniors: 30/40.',
+        explanation: '3/10 × 50 = 15. 1.25 × 0.80 = 1.00 (no net change). From seniors: 30/40 = 0.75. Adding 5 to all values adds 5 to the mean: 75.'
       }
     },
     {
@@ -154,7 +154,7 @@ export const satProbSolvDataPart7Data = {
 | 3 | Two-Way Tables | Marginal vs. conditional vs. joint probability |
 | 4 | Statistics | Mean/median/SD, outlier effects, skewness |
 | 5 | Scatterplots | Slope in context, residuals, $r$ and $r^2$ |
-| 6 | Probability | Complement, OR/AND rules, expected value |
+| 6 | Probability | Tables, "from" rule, NOT questions, predicting counts |
 | 7 | Review | Decision framework, time management, traps |
 
 ### Top Strategies

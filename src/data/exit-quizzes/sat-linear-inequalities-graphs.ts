@@ -165,8 +165,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Systems of Inequalities',
     difficulty: 'easy',
     generate() {
-      const correct = 'Test the point in each inequality; it must satisfy ALL of them'
-      return { id: this.id, category: this.category, question: 'How do you verify a point is in the solution set of a system of inequalities?', ...makeStringOptions(correct, ['Substitute into just one inequality', 'Check if the point is on any boundary', 'Plot it and estimate visually']), explanation: 'A point must satisfy every inequality in the system to be in the solution region.' }
+      const correct = 'Yes — it satisfies both inequalities'
+      return { id: this.id, category: this.category, question: 'Is the point $(2, 3)$ in the solution set of the system $y > x$ and $y < 2x + 1$?', ...makeStringOptions(correct, ['No — it fails $y > x$', 'No — it fails $y < 2x + 1$', 'Only if the boundaries are included']), explanation: 'Check BOTH: $3 > 2$ ✓ and $3 < 5$ ✓ — the point satisfies every inequality, so it is in the solution set.' }
     }
   },
   {

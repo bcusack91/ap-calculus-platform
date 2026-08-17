@@ -212,8 +212,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = 'A z-score tells how many standard deviations a value is from the mean'
-      return { id: this.id, category: this.category, question: 'What does a z-score of $2.0$ indicate?', ...makeStringOptions(correct, ['The value is twice the mean', 'The value equals 2', 'The data has 2 modes']), explanation: '$z = \\frac{x - \\text{mean}}{SD}$. A z-score of 2.0 means the value is 2 standard deviations above the mean.' }
+      const correct = 'Class A — its scores are more spread out from the mean'
+      return { id: this.id, category: this.category, question: 'Two classes took the same test and had the same mean score. Class A\'s scores ranged from 55 to 98; Class B\'s ranged from 74 to 82. Which class has the larger standard deviation?', ...makeStringOptions(correct, ['Class B — its range is smaller', 'Both are the same because the means are equal', 'It cannot be determined without the scores']), explanation: 'Standard deviation measures spread around the mean. A wider spread of scores (55–98 vs 74–82) means a larger standard deviation.' }
     }
   },
   {
@@ -221,10 +221,9 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const mean = randInt(60, 80); const sd = randInt(5, 10); const x = mean + sd * 2
-      const z = 2
-      const { options, correctIndex } = makeOptions(z, 1)
-      return { id: this.id, category: this.category, question: `Mean $= ${mean}$, SD $= ${sd}$. Find the z-score for $x = ${x}$.`, options, correctIndex, explanation: `$z = \\frac{${x} - ${mean}}{${sd}} = \\frac{${x - mean}}{${sd}} = ${z}$.` }
+      const mean = randInt(60, 80); const add = randInt(3, 8)
+      const { options, correctIndex } = makeOptions(mean + add, 3)
+      return { id: this.id, category: this.category, question: `A data set has mean $${mean}$. If every value in the data set is increased by $${add}$, what is the new mean?`, options, correctIndex, explanation: `Adding a constant to every value shifts the mean by that constant: $${mean} + ${add} = ${mean + add}$. (The standard deviation does not change.)` }
     }
   },
   {
@@ -232,8 +231,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Standard Deviation',
     difficulty: 'medium',
     generate() {
-      const correct = '68% within 1 SD, 95% within 2 SDs, 99.7% within 3 SDs'
-      return { id: this.id, category: this.category, question: 'State the empirical rule (68-95-99.7 rule) for normal distributions.', ...makeStringOptions(correct, ['50-75-100 rule', '70-90-100 rule', '60-80-95 rule']), explanation: 'The empirical rule: about 68% of data lies within 1 SD of the mean, 95% within 2 SDs, and 99.7% within 3 SDs.' }
+      const correct = 'The standard deviation decreases — values cluster closer to the mean'
+      return { id: this.id, category: this.category, question: 'A data set is $10, 20, 30, 40, 50$. Each value is replaced so the set becomes $28, 29, 30, 31, 32$ (same mean). What happens to the standard deviation?', ...makeStringOptions(correct, ['It increases', 'It stays the same because the mean is unchanged', 'It cannot be compared without computing it']), explanation: 'The empirical rule: about 68% of data lies within 1 SD of the mean, 95% within 2 SDs, and 99.7% within 3 SDs.' }
     }
   },
   {
@@ -244,7 +243,7 @@ const questionPool: QuestionTemplate[] = [
       let fav = 0; let total = 0
       do { fav = randInt(2, 10); total = fav + randInt(5, 20) } while (fav === total - fav)
       const correct = `$\\frac{${fav}}{${total}}$`
-      return { id: this.id, category: this.category, question: `A bag has $${fav}$ red and $${total - fav}$ blue marbles. $P(\\text{red}) = $ ?`, ...makeStringOptions(correct, [`$\\frac{${total - fav}}{${total}}$`, `$\\frac{${fav}}{${fav}}$`, `$\\frac{1}{${total}}$`]), explanation: `$P(\\text{red}) = \\frac{\\text{favorable}}{\\text{total}} = \\frac{${fav}}{${total}}$.` }
+      return { id: this.id, category: this.category, question: `A bag has $${fav}$ red and $${total - fav}$ blue marbles. If one marble is drawn at random, what is the probability it is red?`, ...makeStringOptions(correct, [`$\\frac{${total - fav}}{${total}}$`, `$\\frac{${fav}}{${fav}}$`, `$\\frac{1}{${total}}$`]), explanation: `$P(\\text{red}) = \\frac{\\text{favorable}}{\\text{total}} = \\frac{${fav}}{${total}}$.` }
     }
   },
   {
@@ -252,11 +251,13 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
     difficulty: 'hard',
     generate() {
-      const pA = randInt(10, 40); const pB = randInt(10, 40)
-      const pBoth = randInt(5, Math.min(pA, pB))
-      const pUnion = pA + pB - pBoth
-      const { options, correctIndex } = makeOptions(pUnion, 10)
-      return { id: this.id, category: this.category, question: `$P(A) = ${pA}\\%$, $P(B) = ${pB}\\%$, $P(A \\text{ and } B) = ${pBoth}\\%$. Find $P(A \\text{ or } B)$ (as %).`, options, correctIndex, explanation: `$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = ${pA} + ${pB} - ${pBoth} = ${pUnion}\\%$.` }
+      // Overlap reasoning in words (was a P(A∪B) formula item — congruence
+      // audit 2026-08-17: the SAT never uses set notation).
+      const french = randInt(30, 45); const spanish = randInt(25, 40)
+      const both = randInt(8, Math.min(french, spanish) - 5)
+      const either = french + spanish - both
+      const { options, correctIndex } = makeOptions(either, 10)
+      return { id: this.id, category: this.category, question: `In a class of 100 students, ${french} take French, ${spanish} take Spanish, and ${both} take both languages. How many students take French or Spanish (or both)?`, options, correctIndex, explanation: `Adding ${french} + ${spanish} counts the ${both} both-takers twice, so subtract once: ${french} + ${spanish} - ${both} = ${either}.` }
     }
   },
   {
@@ -275,8 +276,10 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
     difficulty: 'easy',
     generate() {
-      const correct = 'Multiply individual probabilities (for independent events)'
-      return { id: this.id, category: this.category, question: 'How do you find $P(A \\text{ and } B)$ for two independent events?', ...makeStringOptions(correct, ['Add the probabilities', 'Subtract P(B) from P(A)', 'Divide P(A) by P(B)']), explanation: 'For independent events: $P(A \\cap B) = P(A) \\times P(B)$.' }
+      // Replaced independence-formula item per 2026-08-17 congruence audit —
+      // the SAT asks conditional/joint questions in words from tables.
+      const correct = 'Divide club-member seniors by the total number of seniors'
+      return { id: this.id, category: this.category, question: 'A two-way table shows class year (junior/senior) versus club membership. To find the probability that a randomly selected SENIOR is a club member, you should:', ...makeStringOptions(correct, ['Divide club-member seniors by the total of ALL students', 'Add the senior total and the club total', 'Divide the club total by the junior total']), explanation: 'The condition "a senior is selected" restricts you to the senior row: club-member seniors over total seniors.' }
     }
   },
   {
@@ -286,7 +289,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const p = [2, 4][randInt(0, 1)]
       const correct = '$\\frac{5}{6}$'
-      return { id: this.id, category: this.category, question: `$P(\\text{rolling a } ${p} \\text{ on a die}) = \\frac{1}{6}$. What is $P(\\text{NOT rolling a } ${p})$?`, ...makeStringOptions(correct, ['$\\frac{1}{6}$', `$\\frac{${p}}{6}$`, '$\\frac{1}{2}$']), explanation: `$P(\\text{not } A) = 1 - P(A) = 1 - \\frac{1}{6} = \\frac{5}{6}$.` }
+      return { id: this.id, category: this.category, question: `A fair six-sided die is rolled once. What is the probability that the result is NOT a ${p}?`, ...makeStringOptions(correct, ['$\\frac{1}{6}$', `$\\frac{${p}}{6}$`, '$\\frac{1}{2}$']), explanation: `Five of the six equally likely outcomes are something other than ${p}: $\\frac{5}{6}$ (the same as $1 - \\frac{1}{6}$).` }
     }
   },
   {
@@ -319,8 +322,10 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
     difficulty: 'medium',
     generate() {
-      const correct = 'Expected value = the sum of (outcome $\\times$ probability) over all outcomes'
-      return { id: this.id, category: this.category, question: 'How do you calculate expected value?', ...makeStringOptions(correct, ['Take the mode of probabilities', 'Add all outcomes together', 'Multiply the largest outcome by its probability']), explanation: '$E(X) = \\sum x \\cdot P(x)$ — the weighted average of all possible outcomes.' }
+      // Replaced expected-value item (not on the SAT) with margin of error
+      // (which is) per 2026-08-17 congruence audit.
+      const correct = 'An interval of plausible values for the true population percentage'
+      return { id: this.id, category: this.category, question: 'A poll based on a random sample reports 54% support with a margin of error of 3 percentage points. The margin of error describes:', ...makeStringOptions(correct, ['The percentage of people who answered incorrectly', 'Proof that support is exactly 54%', 'The percentage of the population that was not surveyed']), explanation: 'Margin of error gives the plausible range for the population value — here, roughly 51% to 57%.' }
     }
   },
   {
@@ -412,7 +417,7 @@ const questionPool: QuestionTemplate[] = [
         total = a + b + c + d
       } while (!distinctVals([a / total, (a + c) / total, a / (a + b), a / (a + c)]))
       const correct = `$\\frac{${a}}{${total}}$`
-      return { id: this.id, category: this.category, question: `What is $P(\\text{Group A and Yes})$?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group A | ${a} | ${b} |\n| Group B | ${c} | ${d} |`, ...makeStringOptions(correct, [`$\\frac{${a + c}}{${total}}$`, `$\\frac{${a}}{${a + b}}$`, `$\\frac{${a}}{${a + c}}$`]), explanation: `Joint probability: $${a}$ out of total $${total}$ = $\\frac{${a}}{${total}}$.` }
+      return { id: this.id, category: this.category, question: `If one person is selected at random from everyone in the table, what is the probability the person is in Group A AND said Yes?\n\n|  | Yes | No |\n| --- | --- | --- |\n| Group A | ${a} | ${b} |\n| Group B | ${c} | ${d} |`, ...makeStringOptions(correct, [`$\\frac{${a + c}}{${total}}$`, `$\\frac{${a}}{${a + b}}$`, `$\\frac{${a}}{${a + c}}$`]), explanation: `Joint probability: $${a}$ out of total $${total}$ = $\\frac{${a}}{${total}}$.` }
     }
   },
   {
@@ -424,7 +429,7 @@ const questionPool: QuestionTemplate[] = [
       do { yes = randInt(30, 60); no = randInt(20, 50); extra = randInt(10, 30) } while (!distinctVals([yes / (yes + no), no / (yes + no), yes / (yes + no + extra), 0.5]))
       const rowTotal = yes + no
       const correct = `$\\frac{${yes}}{${rowTotal}}$`
-      return { id: this.id, category: this.category, question: `In a row: Yes $= ${yes}$, No $= ${no}$. Find the conditional probability $P(\\text{Yes} \\mid \\text{this row})$.`, ...makeStringOptions(correct, [`$\\frac{${no}}{${rowTotal}}$`, `$\\frac{${yes}}{${rowTotal + extra}}$`, `$\\frac{1}{2}$`]), explanation: `Conditional $P = \\frac{${yes}}{\\text{row total } ${rowTotal}} = \\frac{${yes}}{${rowTotal}}$.` }
+      return { id: this.id, category: this.category, question: `One row of a survey table shows ${yes} people answered Yes and ${no} answered No. If a person is selected at random from THIS row, what is the probability the person answered Yes?`, ...makeStringOptions(correct, [`$\\frac{${no}}{${rowTotal}}$`, `$\\frac{${yes}}{${rowTotal + extra}}$`, `$\\frac{1}{2}$`]), explanation: `Conditional $P = \\frac{${yes}}{\\text{row total } ${rowTotal}} = \\frac{${yes}}{${rowTotal}}$.` }
     }
   },
   {
@@ -444,8 +449,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Two-way Tables',
     difficulty: 'hard',
     generate() {
-      const correct = 'Compare conditional probabilities across rows/columns — if equal, variables are independent'
-      return { id: this.id, category: this.category, question: 'How do you determine if two variables in a two-way table are independent?', ...makeStringOptions(correct, ['Check if the total is even', 'See if all cells are equal', 'Add row and column totals']), explanation: 'If $P(A \\mid B) = P(A)$, the variables are independent. Compare conditional probabilities across groups.' }
+      const correct = 'No — both groups ordered coffee at the same 50% rate'
+      return { id: this.id, category: this.category, question: 'A table shows 30 of 60 morning customers and 45 of 90 evening customers ordered coffee. Do the data suggest an association between time of day and ordering coffee?', ...makeStringOptions(correct, ['Yes — more evening customers ordered coffee', 'Yes — the evening total is larger', 'Cannot be determined from a table']), explanation: 'Compare the RATES: morning 30/60 = 50%, evening 45/90 = 50%. Equal rates suggest NO association — raw counts alone mislead.' }
     }
   },
   {
@@ -458,7 +463,7 @@ const questionPool: QuestionTemplate[] = [
       const totalYes = m_y + f_y
       const grandTotal = m_y + m_n + f_y + f_n
       const correct = `$\\frac{${totalYes}}{${grandTotal}}$`
-      return { id: this.id, category: this.category, question: `Males: Yes $= ${m_y}$, No $= ${m_n}$. Females: Yes $= ${f_y}$, No $= ${f_n}$. $P(\\text{Yes})$ overall $=$ ?`, ...makeStringOptions(correct, [`$\\frac{${m_y}}{${grandTotal}}$`, `$\\frac{${f_y}}{${grandTotal}}$`, `$\\frac{${m_y + m_n}}{${grandTotal}}$`]), explanation: `$P(\\text{Yes}) = \\frac{\\text{total Yes}}{\\text{grand total}} = \\frac{${totalYes}}{${grandTotal}}$.` }
+      return { id: this.id, category: this.category, question: `In a survey, males answered Yes ${m_y} times and No ${m_n} times; females answered Yes ${f_y} times and No ${f_n} times. If one respondent is selected at random, what is the probability the respondent answered Yes?`, ...makeStringOptions(correct, [`$\\frac{${m_y}}{${grandTotal}}$`, `$\\frac{${f_y}}{${grandTotal}}$`, `$\\frac{${m_y + m_n}}{${grandTotal}}$`]), explanation: `$P(\\text{Yes}) = \\frac{\\text{total Yes}}{\\text{grand total}} = \\frac{${totalYes}}{${grandTotal}}$.` }
     }
   },
   {
@@ -466,8 +471,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Two-way Tables',
     difficulty: 'easy',
     generate() {
-      const correct = 'The relative frequency of each cell compared to its row or column total'
-      return { id: this.id, category: this.category, question: 'What is a relative frequency in a two-way table?', ...makeStringOptions(correct, ['The largest number in the table', 'The sum of all cells', 'The difference between rows']), explanation: 'Relative frequency = cell count / total (row, column, or grand total), expressed as a fraction or percentage.' }
+      const correct = '$\\frac{18}{120} = 15\\%$'
+      return { id: this.id, category: this.category, question: 'In a survey table, 18 of the 120 respondents are seniors who bike to school. What is the relative frequency of senior bikers among ALL respondents?', ...makeStringOptions(correct, ['$\\frac{18}{120} = 15\\%$ of the senior row only', '$18$', '$\\frac{120}{18}$']), explanation: 'Relative frequency among ALL respondents = cell over grand total: $\\frac{18}{120} = 15\\%$.' }
     }
   },
   {
@@ -481,7 +486,7 @@ const questionPool: QuestionTemplate[] = [
       const pAgivenRow2 = Math.round(c / rowB * 100)
       const isAssoc = Math.abs(pAgivenRow1 - pAgivenRow2) > 10
       const correct = isAssoc ? 'Yes, conditional probabilities differ significantly' : 'Possibly not — conditional probabilities are similar'
-      return { id: this.id, category: this.category, question: `Row 1: $${a}, ${b}$. Row 2: $${c}, ${d}$. $P(\\text{col 1} \\mid \\text{row 1}) = ${pAgivenRow1}\\%$, $P(\\text{col 1} \\mid \\text{row 2}) = ${pAgivenRow2}\\%$. Is there an association?`, ...makeStringOptions(correct, ['No difference at all', 'Impossible to compare', 'Only with a chi-square test']), explanation: `A difference of $${Math.abs(pAgivenRow1 - pAgivenRow2)}$ percentage points ${isAssoc ? 'suggests' : 'may not strongly suggest'} an association.` }
+      return { id: this.id, category: this.category, question: `In Row 1, ${pAgivenRow1}% of entries fall in Column 1; in Row 2, ${pAgivenRow2}% do. Do the data suggest an association between row and column?`, ...makeStringOptions(correct, ['No difference at all', 'Impossible to compare', 'Only with a chi-square test']), explanation: `A difference of $${Math.abs(pAgivenRow1 - pAgivenRow2)}$ percentage points ${isAssoc ? 'suggests' : 'may not strongly suggest'} an association.` }
     }
   },
   {

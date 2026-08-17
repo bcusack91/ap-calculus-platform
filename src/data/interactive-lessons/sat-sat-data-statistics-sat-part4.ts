@@ -58,8 +58,8 @@ In this example they happen to give the same answer because both totals are 70, 
 | Question | Type | Calculation |
 |----------|------|-------------|
 | P(sports AND club) | Joint | $30/120 = 25\\%$ |
-| P(club \| sports) | Conditional | $30/55 ≈ 54.5\\%$ |
-| P(sports \| club) | Conditional | $30/80 = 37.5\\%$ |`
+| Selected from sports players: in the club? | "From" the sports group | $30/55 ≈ 54.5\\%$ |
+| Selected from club members: plays sports? | "From" the club group | $30/80 = 37.5\\%$ |`
     },
     {
       id: 'ds4-quiz1',
@@ -93,7 +93,7 @@ In this example they happen to give the same answer because both totals are 70, 
       type: 'text' as const,
       content: `### Independence in Two-Way Tables
 
-Two events $A$ and $B$ are **independent** if $P(A|B) = P(A)$.
+Two variables show **no association** when each group has the SAME rate — e.g., juniors and seniors choosing pizza at equal percentages. The SAT asks this as "do the data support an association?", always comparing group rates in words.
 
 From the pet table: $P(\\text{cat}) = 70/150 ≈ 46.7\\%$. But $P(\\text{cat | male}) = 30/80 = 37.5\\%$. Since $37.5\\% \\neq 46.7\\%$, gender and pet preference are **not independent**.
 
@@ -135,10 +135,10 @@ Convert a two-way table to relative frequencies (divide everything by grand tota
             explanation: 'Non-athletes: $65$ total. In club: $50$. $50/65 ≈ 76.9\\%$.'
           },
           {
-            question: 'Event A and B are independent. $P(A) = 0.4$ and $P(B) = 0.5$. What is $P(A \\text{ and } B)$?',
-            options: ['$0.20$', '$0.90$', '$0.45$', '$0.10$'],
+            question: 'A table shows 40 of 100 surveyed teens and 20 of 50 surveyed adults own a bike. Do the data suggest an association between age group and bike ownership?',
+            options: ['No — both groups own bikes at the same 40% rate', 'Yes — teens are twice as likely to own bikes', 'Yes — more teens than adults own bikes', 'Cannot be determined from a table'],
             correctAnswer: 0,
-            explanation: 'Independent → $P(A \\text{ and } B) = P(A) \\times P(B) = 0.4 \\times 0.5 = 0.20$.'
+            explanation: 'Compare RATES, not counts: teens 40/100 = 40%, adults 20/50 = 40%. Equal rates → the data do not suggest an association.'
           }
         ]
       }
@@ -152,13 +152,13 @@ Convert a two-way table to relative frequencies (divide everything by grand tota
           { label: '"What percentage of all respondents prefer dogs?"', options: ['Grand total', 'Dog column total', 'Row total', 'Cannot determine'] },
           { label: '"Of those who prefer cats, what fraction are female?"', options: ['Cat column total', 'Grand total', 'Female row total', 'Dog column total'] },
           { label: '"What proportion of females prefer dogs?"', options: ['Female row total', 'Grand total', 'Dog column total', 'Male row total'] },
-          { label: '"Is there an association between gender and pet preference?"', options: ['Compare conditional probabilities', 'Look at grand total only', 'Check if totals are equal', 'Compare row totals'] }
+          { label: '"Is there an association between gender and pet preference?"', options: ['Compare each group\'s preference rate', 'Look at grand total only', 'Check if totals are equal', 'Compare row totals'] }
         ],
-        correctAnswers: ['Grand total', 'Cat column total', 'Female row total', 'Compare conditional probabilities'],
+        correctAnswers: ['Grand total', 'Cat column total', 'Female row total', 'Compare each group\'s preference rate'],
         hint1: '"Of ALL respondents" → grand total.',
         hint2: '"Of those who prefer cats" tells you the group to restrict to → cat column total.',
-        hint3: 'To check for association, see if $P(A|B) = P(A)$. If not, there\'s an association.',
-        explanation: '"All respondents" → grand total. "Of cat owners" → cat total. "Of females" → female total. Association → compare conditional to marginal probabilities.'
+        hint3: 'To check for association, compare each group\'s rate — different rates suggest an association.',
+        explanation: '"All respondents" → grand total. "Of cat owners" → cat total. "Of females" → female total. Association → compare each group\'s rate.'
       }
     },
     {
@@ -168,15 +168,15 @@ Convert a two-way table to relative frequencies (divide everything by grand tota
 
 | Question Type | Denominator | Example |
 |--------------|-------------|---------|
-| "Of all..." | Grand total | $P(\\text{male and dog}) = 50/150$ |
-| "Of [group]..." | Group total | $P(\\text{cat} | \\text{male}) = 30/80$ |
-| Joint probability | Grand total | $P(A \\cap B)$ |
-| Conditional probability | Condition total | $P(A|B) = P(A \\cap B) / P(B)$ |
+| "Of all..." | Grand total | male-and-dog cell over $150$ |
+| "Of [group]..." | Group total | cats among males: $30/80$ |
+| "…AND…" (no restriction) | Grand total | one cell over everyone |
+| "…from those who…" | That group's total | the SAT's conditional wording |
 
 | Skill | How-to |
 |-------|--------|
 | Fill in table | Use row/column totals to find missing cells |
-| Check independence | Compare $P(A|B)$ to $P(A)$ — if equal, independent |
+| Check for association | Compare each group's rate — equal rates → no association |
 | Convert to relative freq. | Divide each cell by grand total |
 
 - The SAT's #1 trap in two-way tables is using the **wrong denominator**

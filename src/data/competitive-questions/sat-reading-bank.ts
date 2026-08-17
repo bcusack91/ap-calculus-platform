@@ -1,5 +1,7 @@
 // SAT Reading question bank for competitive mode
 
+import { getSatRwQuestions } from './sat-rw-bank'
+
 export interface SatReadingQuestion {
   id: number
   question: string
@@ -547,6 +549,18 @@ const allQuestions: SatReadingQuestion[] = [
 ]
 
 export function getSatReadingQuestions(count: number = 10): SatReadingQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
+  // Congruence audit 2026-08-17: this legacy bank's standalone synonym and
+  // reading-strategy questions are old-paper-SAT style. The legacy 'sat-reading'
+  // slug now serves the modern passage-based, College-Board-skill-tagged bank
+  // (sat-rw-bank) so every surface gets digital-SAT-style questions. The old
+  // allQuestions above are retained for reference but no longer served.
+  void allQuestions
+  return getSatRwQuestions(count).map((q) => ({
+    id: q.id,
+    question: q.question,
+    options: q.options,
+    correctAnswer: q.correctAnswer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+  }))
 }

@@ -540,25 +540,24 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
     difficulty: 'hard',
     generate() {
-      // Two independent events: "shows k or less" has probability k/6
-      const p1Num = randInt(2, 5)
-      let p2Num = randInt(2, 5)
-      while (p1Num === 2 && p2Num === 2) p2Num = randInt(3, 5)
-      const p1Den = 6
-      const p2Den = 6
-      const prodNum = p1Num * p2Num
-      const prodDen = p1Den * p2Den
-      const correct = `$\\frac{${prodNum}}{${prodDen}}$`
+      // Conditional reasoning from a two-way table, asked in words (the SAT's
+      // form) — replaced an independent-events product question per the
+      // 2026-08-17 congruence audit (SAT-CONTENT-AUDIT.md).
+      const a = randInt(12, 24)
+      const b = randInt(6, 18)
+      const c = randInt(8, 16)
+      const d = randInt(12, 24)
+      const correct = `$\\frac{${a}}{${a + b}}$`
       const { options, correctIndex } = makeStringOptions(correct, [
-        `$\\frac{${p1Num + p2Num}}{${p1Den}}$`,
-        `$\\frac{${p1Num}}{${prodDen}}$`,
-        `$\\frac{${prodNum}}{${p1Den}}$`
+        `$\\frac{${a}}{${a + b + c + d}}$`,
+        `$\\frac{${a + c}}{${a + b + c + d}}$`,
+        `$\\frac{${b}}{${a + b}}$`
       ])
       return {
         id: this.id, category: this.category,
-        question: `Two dice are rolled. $P(\\text{first shows ${p1Num} or less}) = \\frac{${p1Num}}{${p1Den}}$; $P(\\text{second shows ${p2Num} or less}) = \\frac{${p2Num}}{${p2Den}}$. Find $P(\\text{both})$.`,
+        question: `|  | Passed | Did Not Pass |\n|---|---|---|\n| Attended review | ${a} | ${b} |\n| Skipped review | ${c} | ${d} |\n\nIf a student is selected at random from those who attended the review session, what is the probability the student passed?`,
         options, correctIndex,
-        explanation: `Independent events: $P(A \\cap B) = \\frac{${p1Num}}{${p1Den}} \\times \\frac{${p2Num}}{${p2Den}} = \\frac{${prodNum}}{${prodDen}}$.`
+        explanation: `Restrict to the "attended review" row: ${a} passed out of ${a + b} attendees, so $\\frac{${a}}{${a + b}}$.`
       }
     }
   },
@@ -812,18 +811,23 @@ const questionPool: QuestionTemplate[] = [
     category: 'Review',
     difficulty: 'hard',
     generate() {
-      const n = 5
-      const vals = Array.from({ length: n }, () => randInt(10, 40))
-      const mean = vals.reduce((s, v) => s + v, 0) / n
-      const sqDiffs = vals.map(v => (v - mean) ** 2)
-      const variance = sqDiffs.reduce((s, v) => s + v, 0) / n
-      const sd = Math.round(Math.sqrt(variance) * 10) / 10
-      const { options, correctIndex } = makeOptions(Math.round(sd), 3)
+      // Conceptual SD comparison — the SAT never asks students to COMPUTE a
+      // standard deviation (replaced a formula-computation item per the
+      // 2026-08-17 congruence audit).
+      const center = randInt(20, 30)
+      const tight = [center - 1, center, center, center + 1, center]
+      const spread = [center - 12, center - 5, center, center + 6, center + 11]
+      const correct = 'Data Set B — its values are farther from the mean'
+      const { options, correctIndex } = makeStringOptions(correct, [
+        'Data Set A — its values are closer together',
+        'Both have the same standard deviation',
+        'It cannot be determined without a calculator'
+      ])
       return {
         id: this.id, category: this.category,
-        question: `Data: $${vals.join(', ')}$. Mean $\\approx ${Math.round(mean * 10) / 10}$. The standard deviation is closest to:`,
+        question: `Data Set A: $${tight.join(', ')}$\nData Set B: $${spread.join(', ')}$\n\nBoth data sets have a mean of about ${center}. Which statement correctly compares their standard deviations?`,
         options, correctIndex,
-        explanation: `$\\sigma = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n}} \\approx ${sd}$.`
+        explanation: `Standard deviation measures spread around the mean. Set B's values are much more spread out, so Set B has the larger standard deviation — no computation needed.`
       }
     }
   },

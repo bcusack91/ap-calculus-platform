@@ -6,35 +6,30 @@ export const satDataStatsPart5Data = {
       type: 'text' as const,
       content: `# Data Analysis & Statistics
 
-**Part 5 of 7 — Probability**
+**Part 5 of 7 — Probability, the SAT Way**
 
-### Basic Probability
+The digital SAT tests probability as **relative frequency** — a count divided
+by a total, almost always read from a table or described in words. You will
+NOT see formal notation like P(A|B) or unions/intersections on the test.
 
-$$P(A) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$$
+### Probability as a fraction
+
+$$\\text{Probability} = \\frac{\\text{number of favorable outcomes}}{\\text{total number of outcomes}}$$
 
 Always between 0 (impossible) and 1 (certain).
 
-### Complement
+### "NOT" questions (complements)
 
-$$P(\\text{not } A) = 1 - P(A)$$
+The probability an event does NOT happen is 1 minus the probability it does.
 
-### "AND" (Intersection)
+**Example:** If the probability a customer orders coffee is $\\frac{7}{20}$,
+the probability a customer does NOT order coffee is $1 - \\frac{7}{20} = \\frac{13}{20}$.
 
-If events are **independent**: $P(A \\text{ and } B) = P(A) \\times P(B)$
+### The SAT's favorite setup: "selected at random from…"
 
-**Example:** Coin flip AND die roll: $P(\\text{heads and 6}) = (1/2)(1/6) = 1/12$
-
-### "OR" (Union)
-
-$$P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)$$
-
-If events are **mutually exclusive** (can't happen together): $P(A \\text{ or } B) = P(A) + P(B)$
-
-### Conditional Probability
-
-$$P(A | B) = \\frac{P(A \\text{ and } B)}{P(B)}$$
-
-"Probability of A given B" — restrict your attention to only the B outcomes.`
+Most SAT probability questions give you a **two-way table** and ask about a
+person "selected at random" — sometimes from everyone, sometimes from just
+one row or column. The entire skill is choosing the right denominator.`
     },
     {
       id: 'ds5-quiz1',
@@ -43,22 +38,22 @@ $$P(A | B) = \\frac{P(A \\text{ and } B)}{P(B)}$$
       exercise: {
         questions: [
           {
-            question: 'A bag has 5 red, 3 blue, and 2 green marbles. What is the probability of drawing blue OR green?',
+            question: 'A bag has 5 red, 3 blue, and 2 green marbles. One marble is drawn at random. What is the probability it is blue or green?',
             options: ['$1/2$', '$3/10$', '$2/10$', '$5/10$'],
             correctAnswer: 0,
-            explanation: 'Blue or green (mutually exclusive): $3/10 + 2/10 = 5/10 = 1/2$.'
+            explanation: 'Blue and green together: $3 + 2 = 5$ marbles out of 10, so $\\frac{5}{10} = \\frac{1}{2}$.'
           },
           {
-            question: 'Two dice are rolled. What is the probability both show 6?',
-            options: ['$1/36$', '$1/6$', '$1/12$', '$2/36$'],
+            question: 'A survey found 12 of 40 students bike to school. If a student is selected at random, what is the probability the student bikes?',
+            options: ['$3/10$', '$12/28$', '$1/12$', '$7/10$'],
             correctAnswer: 0,
-            explanation: 'Independent events: $P = (1/6)(1/6) = 1/36$.'
+            explanation: '$\\frac{12}{40} = \\frac{3}{10}$ — favorable over total.'
           },
           {
-            question: 'The probability it rains tomorrow is $0.3$. Using the complement, the probability it does NOT rain is:',
+            question: 'The probability it rains tomorrow is $0.3$. What is the probability it does NOT rain?',
             options: ['$0.7$', '$0.3$', '$1.3$', '$-0.3$'],
             correctAnswer: 0,
-            explanation: '$P(\\text{no rain}) = 1 - P(\\text{rain}) = 1 - 0.3 = 0.7$.'
+            explanation: 'The two possibilities sum to 1: $1 - 0.3 = 0.7$.'
           }
         ]
       }
@@ -66,60 +61,62 @@ $$P(A | B) = \\frac{P(A \\text{ and } B)}{P(B)}$$
     {
       id: 'ds5-text2',
       type: 'text' as const,
-      content: `### Worked Example 1 — "At Least One" with Complement
+      content: `### Worked Example 1 — Selected From Everyone
 
-**A coin is flipped 3 times. What is the probability of getting at least one head?**
+**The table shows 200 students by grade and lunch choice.**
 
-| Approach | Work |
-|----------|------|
-| Direct | Count all cases with ≥ 1 head... tedious |
-| Complement | $P(\\text{at least 1 head}) = 1 - P(\\text{no heads})$ |
-| Calculate | $P(\\text{all tails}) = (1/2)^3 = 1/8$ |
-| Answer | $1 - 1/8 = 7/8$ |
+| | Pizza | Salad | Total |
+|---|---|---|---|
+| Juniors | 60 | 30 | 90 |
+| Seniors | 70 | 40 | 110 |
+| Total | 130 | 70 | 200 |
 
-**Rule:** "At least one" = $1$ − P(none). Always use the complement!
+**If a student is selected at random, what is the probability the student is
+a junior who chose pizza?**
 
-### Worked Example 2 — "OR" with Overlap
+One cell over the grand total: $\\frac{60}{200} = \\frac{3}{10}$.
 
-**In a class of 30: 18 play soccer, 12 play basketball, 5 play both. What is P(soccer OR basketball)?**
+### Worked Example 2 — Selected From One Group (the key SAT move)
 
-| Step | Work |
-|------|------|
-| Formula | $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ |
-| Substitute | $\\frac{18}{30} + \\frac{12}{30} - \\frac{5}{30} = \\frac{25}{30}$ |
-| Simplify | $5/6$ |
+**If a student is selected at random from those who chose salad, what is the
+probability the student is a senior?**
 
-### Worked Example 3 — Conditional from a Table
+The words "from those who chose salad" shrink your world to the Salad
+column: $\\frac{40}{70} = \\frac{4}{7}$.
 
-**200 students surveyed: 80 passed math, 60 passed science, 40 passed both.**
+**Rule:** the group named after "from" becomes your denominator. This is how
+the SAT asks conditional probability — in words, never with notation.
 
-$P(\\text{science} | \\text{math}) = \\frac{P(\\text{both})}{P(\\text{math})} = \\frac{40/200}{80/200} = \\frac{40}{80} = \\frac{1}{2}$
+### Worked Example 3 — Comparing Groups
 
-Of students who passed math, half also passed science.`
+**Which group was more likely to choose pizza?**
+
+Juniors: $\\frac{60}{90} \\approx 67\\%$. Seniors: $\\frac{70}{110} \\approx 64\\%$.
+Juniors were slightly more likely. Compare each group's RATE, never the raw counts.`
     },
     {
       id: 'ds5-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Advanced Probability** 🎯',
+      content: '**Table Probability** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A die is rolled twice. What is the probability of getting at least one 6?',
-            options: ['$11/36$', '$1/36$', '$1/6$', '$2/6$'],
+            question: 'A table shows 50 employees: 20 work remote (12 satisfied, 8 not) and 30 work on-site (18 satisfied, 12 not). If an employee is selected at random from the remote workers, what is the probability the employee is satisfied?',
+            options: ['$3/5$', '$12/50$', '$12/30$', '$2/5$'],
             correctAnswer: 0,
-            explanation: 'Complement: $P(\\text{no 6}) = (5/6)^2 = 25/36$. $P(\\text{at least one 6}) = 1 - 25/36 = 11/36$.'
+            explanation: '"From the remote workers" makes 20 the denominator: $\\frac{12}{20} = \\frac{3}{5}$.'
           },
           {
-            question: 'P(A) = 0.6, P(B) = 0.3, and A and B are independent. What is P(A or B)?',
-            options: ['$0.72$', '$0.90$', '$0.18$', '$0.30$'],
+            question: 'Using the same table, if an employee is selected at random from ALL 50, what is the probability the employee works on-site AND is satisfied?',
+            options: ['$9/25$', '$18/30$', '$3/5$', '$18/20$'],
             correctAnswer: 0,
-            explanation: '$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0.6 + 0.3 - (0.6)(0.3) = 0.9 - 0.18 = 0.72$.'
+            explanation: 'One cell (18) over the grand total (50): $\\frac{18}{50} = \\frac{9}{25}$.'
           },
           {
-            question: 'A bag has 4 red and 6 blue marbles. Two are drawn without replacement. What is P(both red)?',
-            options: ['$2/15$', '$4/25$', '$16/100$', '$2/10$'],
+            question: 'A jar holds 4 red and 6 blue marbles. Which change would make drawing red MORE likely than drawing blue?',
+            options: ['Adding 5 red marbles', 'Adding 2 red marbles', 'Removing 2 red marbles', 'Adding 3 blue marbles'],
             correctAnswer: 0,
-            explanation: 'First draw: $4/10$. Second draw (without replacement): $3/9$. $P = (4/10)(3/9) = 12/90 = 2/15$.'
+            explanation: 'Adding 5 red gives 9 red vs 6 blue — red is now more likely. Adding only 2 red gives 6 vs 6 (equal).'
           }
         ]
       }
@@ -127,19 +124,19 @@ Of students who passed math, half also passed science.`
     {
       id: 'ds5-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Probability Setup** 🔍\n\nChoose the correct formula or approach for each problem.',
+      content: '**Choose the Right Denominator** 🔍\n\nFor each question about a school survey table, pick the correct denominator.',
       exercise: {
         dropdowns: [
-          { label: '"At least one head in 5 coin flips"', options: ['1 − P(all tails)', 'P(1 head) + P(2 heads) + ...', 'P(head) × 5', '1/5'] },
-          { label: '"Probability of drawing a king OR a heart"', options: ['P(K) + P(H) − P(K and H)', 'P(K) + P(H)', 'P(K) × P(H)', '1 − P(K) − P(H)'] },
-          { label: '"Two dice rolled, P(both show even)"', options: ['P(even) × P(even)', 'P(even) + P(even)', '1 − P(both odd)', 'P(even) / P(even)'] },
-          { label: '"Probability of rain on Monday given it rained Sunday"', options: ['Conditional: P(Mon|Sun)', 'P(Mon) × P(Sun)', 'P(Mon) + P(Sun)', '1 − P(Mon)'] }
+          { label: '"Selected at random from all students surveyed"', options: ['The grand total', 'The row total', 'The column total', 'One cell'] },
+          { label: '"Selected at random from the sophomores"', options: ['The sophomore row total', 'The grand total', 'The largest cell', 'The senior row total'] },
+          { label: '"Selected at random from those who answered Yes"', options: ['The Yes column total', 'The grand total', 'The No column total', 'One cell'] },
+          { label: '"Probability the student is a junior AND answered No"', options: ['The grand total (with the junior-No cell on top)', 'The junior row total', 'The No column total', 'Cannot be found from a table'] }
         ],
-        correctAnswers: ['1 − P(all tails)', 'P(K) + P(H) − P(K and H)', 'P(even) × P(even)', 'Conditional: P(Mon|Sun)'],
-        hint1: '"At least one" → always use complement.',
-        hint2: 'King OR heart → these overlap (king of hearts), so subtract the intersection.',
-        hint3: 'Two independent dice → multiply. "Given that" → conditional probability.',
-        explanation: '"At least one" = 1 − P(none). "Or" with overlap → add − intersection. Independent events → multiply. "Given" = conditional.'
+        correctAnswers: ['The grand total', 'The sophomore row total', 'The Yes column total', 'The grand total (with the junior-No cell on top)'],
+        hint1: 'No restriction mentioned → whole table.',
+        hint2: '"From the sophomores" → only that row exists now.',
+        hint3: '"From those who answered Yes" → only that column. "A and B" from everyone → cell over grand total.',
+        explanation: 'The phrase after "from" names your denominator group. "A and B" questions with no restriction use one cell over the grand total.'
       }
     },
     {
@@ -147,18 +144,17 @@ Of students who passed math, half also passed science.`
       type: 'text' as const,
       content: `### Key Takeaways — Part 5
 
-| Rule | Formula | When to Use |
+| Question wording | Denominator | Numerator |
 |------|---------|-------------|
-| Basic probability | $P(A) = \\text{favorable} / \\text{total}$ | Always |
-| Complement | $P(\\text{not } A) = 1 - P(A)$ | "At least one," "none" |
-| AND (independent) | $P(A) \\times P(B)$ | Events don't affect each other |
-| OR | $P(A) + P(B) - P(A \\cap B)$ | "Either... or..." |
-| Conditional | $P(A|B) = P(A \\cap B) / P(B)$ | "Given that..." |
-| Without replacement | Adjust denominator after each draw | Drawing from a bag/deck |
+| "…selected from ALL participants" | Grand total | The cell(s) asked about |
+| "…selected from [one group]" | That group's row/column total | The cell asked about |
+| "…is in group A AND said Yes" | Grand total | The single A-Yes cell |
+| "…does NOT…" | Same as the positive version | Total minus the positive count |
+| "Which group was MORE likely…" | Each group separately | Compare the two rates |
 
-- "At least one" → use complement (much faster)
-- With replacement: probabilities stay the same. Without: they change
-- On the SAT, conditional probability often comes from two-way tables`
+- The SAT asks probability **in words from tables** — no P(A|B), no union/intersection symbols
+- The word "from" is the whole game: it names your denominator
+- Compare groups by their rates (fractions), never raw counts`
     }
   ]
 };

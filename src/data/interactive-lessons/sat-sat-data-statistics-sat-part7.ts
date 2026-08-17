@@ -55,8 +55,8 @@ export const satDataStatsPart7Data = {
 | Question | Answer |
 |----------|--------|
 | P(pass) | $35/50 = 70\\%$ |
-| P(pass \| male) | $15/20 = 75\\%$ |
-| P(male \| pass) | $15/35 ≈ 42.9\\%$ |
+| Selected from the males: passed? | $15/20 = 75\\%$ |
+| Selected from those who passed: male? | $15/35 ≈ 42.9\\%$ |
 | Are gender & passing independent? | $P(\\text{pass}) = 70\\% \\neq P(\\text{pass}|\\text{male}) = 75\\%$ → NOT independent |`
     },
     {
@@ -98,10 +98,10 @@ export const satDataStatsPart7Data = {
 | SD | Spread from mean; add → same; multiply → changes |
 | Slope | Predicted $\\Delta y$ per unit $\\Delta x$ |
 | Residual | Actual − Predicted |
-| Complement | $P(\\text{not A}) = 1 - P(A)$ |
-| OR (with overlap) | $P(A) + P(B) - P(A \\cap B)$ |
-| AND (independent) | $P(A) \\times P(B)$ |
-| Conditional | $P(A|B) = P(A \\cap B) / P(B)$ |
+| "NOT" questions | 1 minus the probability (or count the other outcomes) |
+| Table, unrestricted | One cell over the grand total |
+| Table, "from those who…" | Cell over that row/column total |
+| Compare groups | Compare each group's rate |
 | Causation | Only from randomized experiments |
 | Generalization | Only from random sampling |
 
@@ -111,7 +111,7 @@ export const satDataStatsPart7Data = {
 |---------|-----|
 | Using wrong denominator in two-way table | Re-read "of [group]" to find denominator |
 | Saying correlation = causation | Use "associated with" unless random assignment |
-| Forgetting to subtract overlap in P(A or B) | Always check: can A and B happen together? |
+| Using the grand total when the question says "from those who…" | The word after "from" names your denominator |
 | Confusing "all values" with "the mean" | Adding 10 to every value ≠ adding 10 to just the mean |
 | Ignoring "without replacement" | After removing one item, total decreases by 1 |`
     },

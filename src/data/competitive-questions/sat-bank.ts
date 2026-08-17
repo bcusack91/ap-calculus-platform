@@ -286,7 +286,7 @@ export const SAT_SECTIONS: SatSection[] = [
     domains: [
       {
         slug: 'sat-math-algebra',
-        title: 'Heart of Algebra',
+        title: 'Algebra',
         emoji: '📊',
         skills: [
           challenge('sat-linear-equations-inequalities', 'Linear Equations and Inequalities',
@@ -318,7 +318,7 @@ export const SAT_SECTIONS: SatSection[] = [
       },
       {
         slug: 'sat-math-advanced',
-        title: 'Passport to Advanced Math',
+        title: 'Advanced Math',
         emoji: '🧮',
         skills: [
           challenge('sat-quadratic-equations', 'Quadratic Equations',
@@ -337,7 +337,7 @@ export const SAT_SECTIONS: SatSection[] = [
       },
       {
         slug: 'sat-math-geometry',
-        title: 'Additional Topics in Math',
+        title: 'Geometry and Trigonometry',
         emoji: '📏',
         skills: [
           challenge('sat-geometry-basics', 'Geometry Basics',
