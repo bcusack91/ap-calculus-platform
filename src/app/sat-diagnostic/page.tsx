@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { generateDiagnosticTest, rebuildRecommendedTopics } from '@/data/sat-practice/diagnostic-generator'
+import { generateHardModule, HARD_MODULE_CATEGORY, HARD_MODULE_COUNT } from '@/data/sat-practice/hard-modules'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
@@ -49,6 +50,13 @@ export default function SATDiagnosticPage() {
     { id: string; category: string; results: Record<string, unknown>; weakAreas?: string; strengths?: string; createdAt: string }[]
   >([])
   const [viewingHistory, setViewingHistory] = useState(false)
+  // Hard track: the 700-800 path. Unlocked by one exceptional diagnostic;
+  // after two in a row the regular diagnostic retires for this student.
+  const [hardTrack, setHardTrack] = useState<{
+    unlocked: boolean; graduated: boolean; consecutiveStrong: number
+    completedModules: number; nextModule: number | null
+  } | null>(null)
+  const [hardModuleNumber, setHardModuleNumber] = useState<number | null>(null)
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   // Reconstruct full DiagnosticResults from a stored history entry
@@ -98,7 +106,7 @@ export default function SATDiagnosticPage() {
     if (status === 'authenticated') {
       fetch('/api/sat-diagnostic/history')
         .then(r => (r.ok ? r.json() : { attempts: [] }))
-        .then(data => setHistory(data.attempts ?? []))
+        .then(data => { setHistory(data.attempts ?? []); setHardTrack(data.hardTrack ?? null) })
         .catch(() => {})
     }
   }, [status])
@@ -115,8 +123,8 @@ export default function SATDiagnosticPage() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            category: 'sat-full-diagnostic',
-            classDiagnosticId: assignedId || undefined,
+            category: hardModuleNumber ? `${HARD_MODULE_CATEGORY}-${hardModuleNumber}` : 'sat-full-diagnostic',
+            classDiagnosticId: hardModuleNumber ? undefined : (assignedId || undefined),
             results: JSON.stringify({
               review: testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
               totalCorrect: diagnosticResults.totalCorrect,
@@ -156,7 +164,7 @@ export default function SATDiagnosticPage() {
         // Silent fail
       }
     },
-    [challengeToken, testData, assignedId],
+    [challengeToken, testData, assignedId, hardModuleNumber],
   )
 
   if (status === 'loading') {
@@ -177,6 +185,17 @@ export default function SATDiagnosticPage() {
       // Load test data asynchronously — the teacher's frozen assigned test
       // when ?assigned= is present, a fresh generated one otherwise.
       const loadTest = async (): Promise<DiagnosticTestData> => {
+        // Hard track: a 20-question all-hard-tier module instead of the
+        // 30-question mid-level screen.
+        if (hardModuleNumber) {
+          const mod = await generateHardModule(hardModuleNumber)
+          return {
+            questions: mod.questions,
+            domains: [],
+            totalQuestions: mod.totalQuestions,
+            timeLimitMinutes: mod.timeLimitMinutes,
+          }
+        }
         if (assignedId) {
           const r = await fetch(`/api/class-diagnostics/${assignedId}`, { cache: 'no-store' })
           if (r.ok) return (await r.json()).diagnostic.testData as DiagnosticTestData
@@ -442,11 +461,47 @@ export default function SATDiagnosticPage() {
               </li>
             </ul>
 
+            {/* Hard track: once a student proves the top band, the mid-level
+                screen stops telling them anything useful. */}
+            {hardTrack?.unlocked && hardTrack.nextModule !== null && (
+              <div className="mb-4 rounded-xl border-2 border-purple-300 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20">
+                <div className="mb-1 flex items-center gap-2">
+                  <span className="rounded-full bg-purple-600 px-2 py-0.5 text-[10px] font-bold text-white">700-800 TRACK</span>
+                  <span className="text-xs text-purple-700 dark:text-purple-300">
+                    Module {hardTrack.nextModule} of {HARD_MODULE_COUNT}
+                    {hardTrack.completedModules > 0 && ` · ${hardTrack.completedModules} done`}
+                  </span>
+                </div>
+                <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+                  {hardTrack.graduated
+                    ? 'You have scored in the top band twice in a row, so the standard diagnostic is retired for you — it can no longer tell you anything you do not already know. These modules are 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier.'
+                    : 'Your last diagnostic scored in the top band. This module is 20 questions (10 Reading & Writing, 10 Math) drawn entirely from the hardest tier — the multi-step modeling, rate chains, and precision-of-language items that separate 700 from 800.'}
+                </p>
+                <button
+                  onClick={() => { setHardModuleNumber(hardTrack.nextModule); setPhase('testing') }}
+                  className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+                >
+                  Start Hard Module {hardTrack.nextModule}
+                </button>
+              </div>
+            )}
+            {hardTrack?.graduated && hardTrack.nextModule === null && (
+              <div className="mb-4 rounded-xl border-2 border-purple-300 bg-purple-50 p-4 text-sm text-gray-700 dark:border-purple-700 dark:bg-purple-900/20 dark:text-gray-300">
+                You have completed all {HARD_MODULE_COUNT} hard modules. Full-length adaptive practice tests are the next step — they route you to the harder Module 2 when you earn it.
+              </div>
+            )}
+
             <button
-              onClick={() => setPhase('testing')}
-              className="w-full rounded-xl bg-gradient-to-r from-green-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+              onClick={() => { setHardModuleNumber(null); setPhase('testing') }}
+              className={`w-full rounded-xl px-6 py-3 font-semibold shadow-lg transition hover:shadow-xl ${
+                hardTrack?.graduated
+                  ? 'border border-gray-300 bg-white text-gray-600 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300'
+                  : 'bg-gradient-to-r from-green-600 to-teal-600 text-white'
+              }`}
             >
-              {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
+              {hardTrack?.graduated
+                ? 'Take the standard diagnostic anyway'
+                : lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
             </button>
             <a href="/sat-score-predictor" className="mt-3 block text-center text-sm font-medium text-green-700 transition hover:underline dark:text-green-300">Prefer a quick estimate? Open the SAT Score Predictor</a>
             <a href="/sat-daily-question" className="mt-1 block text-center text-sm font-medium text-green-700 transition hover:underline dark:text-green-300">Need a warm-up first? Try today&apos;s SAT question</a>
