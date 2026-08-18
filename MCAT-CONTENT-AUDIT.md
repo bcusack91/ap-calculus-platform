@@ -1,5 +1,16 @@
 # MCAT Content Congruence Audit — 2026-08-17
 
+> **STATUS: REMEDIATED (same day, commits 100684ca + follow-ups).**
+> F1: exit quizzes now merge the authored competitive bank (181 → ~2,400
+> questions; subtopic-tag exact tier + aliases; pull() stem-dedupe).
+> F2: 11 duplicate cards deleted, 5 re-homed, 5 survey replacements.
+> F3: CARS 12 → 16 passages (+24 questions, keys position-distributed,
+> needsReview pending adversarial pass). F5: 20 "refers to:" stems →
+> "best describes", LDA + derivative items fixed. PLUS (owner follow-up):
+> first 24 cloze-deletion cards seeded ({{c1::}} format, UI pre-existing)
+> and deck expanded 880 → 1,322 cards via aligned quiz pools (TARGET=15).
+> MCAT slide decks regenerated. F4 (boilerplate textContent) remains open.
+
 Owner-requested audit (companion to SAT-CONTENT-AUDIT.md): are questions
 MCAT-style, do flashcards align with their topics, does everything render?
 Read-only findings; no fixes applied. Scan tooling:

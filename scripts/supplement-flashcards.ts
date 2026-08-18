@@ -12,8 +12,9 @@ import { config } from 'dotenv'
 config({ path: process.env.PROD ? '.env' : '.env.local', override: true })
 import { PrismaClient } from '@prisma/client'
 
-const TARGET = 8
-const THIN = 3
+const TARGET = Number(process.env.TARGET ?? 8)
+const THIN = Number(process.env.THIN ?? 3)
+const COURSE = process.env.COURSE // limit to one course's topics
 const DRY = !!process.env.DRY_RUN
 
 function tokens(s: string): Set<string> {
@@ -25,7 +26,7 @@ async function main() {
   const { generateExitQuiz } = await import('../src/data/exit-quizzes')
   const only = process.argv[2]
   const topics = await prisma.topic.findMany({
-    where: only ? { slug: only } : {},
+    where: only ? { slug: only } : COURSE ? { category: { course: { slug: COURSE } } } : {},
     select: {
       id: true, slug: true, title: true, textContent: true,
       flashcards: { select: { front: true } },
@@ -64,10 +65,11 @@ async function main() {
 
     // 2. Exit-quiz pool (topic-aligned bank)
     try {
-      const qs = await generateExitQuiz(t.slug, 12, undefined, 12345)
+      const qs = await generateExitQuiz(t.slug, 24, undefined, 12345)
       let used = 0
+      const quizCap = Number(process.env.QUIZ_CAP ?? 5)
       for (const q of qs) {
-        if (used >= 5) break
+        if (used >= quizCap) break
         if (typeof q.correctIndex !== 'number' || !q.options?.[q.correctIndex]) continue
         push(q.question, `**${q.options[q.correctIndex]}**\n\n${q.explanation ?? ''}`)
         used++
