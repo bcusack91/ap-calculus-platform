@@ -360,7 +360,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'The author credits the trustee model with capturing "something the delegate misses," yet warns that it hands the representative "the oldest excuse of every despot." That is balanced appreciation plus wariness (B). A ignores the "grave" embarrassment the author names. C overstates—the author sees genuine value, not pure despotism. D contradicts the insistence that the two models are "rivals," not interchangeable.',
+          'The author credits the trustee model with capturing "something the delegate misses," yet warns that it hands the representative "the oldest excuse of every despot." That is balanced appreciation plus wariness. Unreserved endorsement ignores the "grave" embarrassment the author names. Complete rejection as inherently despotic overstates—the author sees genuine value, not pure despotism. Indifference contradicts the insistence that the two models are "rivals," not interchangeable.',
         skill: 'tone-attitude',
         needsReview: false,
       },
@@ -374,7 +374,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 2,
         explanation:
-          'The trustee’s embarrassment is that licensing a representative to "override the people’s expressed wishes in the name of their true interests" gives "the oldest excuse of every despot," who claims "to know the people’s good better than they do." B matches precisely. A is the delegate model. C and D depict caution or abstention, not the paternalistic overriding the author flags.',
+          'The trustee’s embarrassment is that licensing a representative to "override the people’s expressed wishes in the name of their true interests" gives "the oldest excuse of every despot," who claims "to know the people’s good better than they do." The legislator who overrides clear wishes while insisting she knows her constituents’ true interests matches precisely. The legislator who polls her district and follows the majority is the delegate model. The legislator who resigns and the one who abstains depict caution or withdrawal, not the paternalistic overriding the author flags.',
         skill: 'application',
         needsReview: false,
       },
@@ -388,7 +388,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'The author calls the discontent "not a sign that something has gone wrong" but a necessary argument "that must never be allowed to end," because resolving it would forfeit "accountability on one side, deliberation on the other." B captures the productive, value-preserving disagreement. A and D treat the tension as a defect or failure, which the author explicitly denies. C calls it meaningless, but the author calls it "necessary."',
+          'The author calls the discontent "not a sign that something has gone wrong" but a necessary argument "that must never be allowed to end," because resolving it would forfeit "accountability on one side, deliberation on the other." The answer describing a productive disagreement whose persistence preserves competing values captures this. Calling the tension a flaw that better design will silence, or evidence that representative government has failed, treats it as a defect the author explicitly denies. Calling it a meaningless quarrel collides with the author’s own word, "necessary."',
         skill: 'meaning-in-context',
         needsReview: false,
       },
@@ -413,7 +413,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'The author rejects both extremes and lands on a "more measured position": the self "may be partly constructed and still be real," "neither the sovereign agent of folk psychology nor the pure illusion of the debunkers." C states this. A is the debunkers’ view the author shows to be self-undermining. B is the folk view the author critiques. D conflates the self with the impulses it interprets, which is the deflationist position, not the author’s conclusion.',
+          'The author rejects both extremes and lands on a "more measured position": the self "may be partly constructed and still be real," "neither the sovereign agent of folk psychology nor the pure illusion of the debunkers." The answer calling the self partly constructed yet genuinely real states this. The answer calling it a complete illusion that reasoning dissolves is the debunkers’ view the author shows to be self-undermining. The answer calling it the sovereign, fully reliable author of our conduct is the folk view the author critiques. The answer identifying the self with the underlying stream of impulses conflates the self with what it interprets, which is the deflationist position, not the author’s conclusion.',
         skill: 'main-idea',
         needsReview: false,
       },
@@ -427,7 +427,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 3,
         explanation:
-          'The observation launches "the suspicion" that the explainer and the explained "are the same party," so explanations may be "a story assembled to make the action ours" rather than a discovery. B states this introductory function. A overstates—the author later rejects the "entirely a fiction" conclusion. C invents a claim about prediction’s primacy not made. D ("random") is never argued; the issue is rationalization, not randomness.',
+          'The observation launches "the suspicion" that the explainer and the explained "are the same party," so explanations may be "a story assembled to make the action ours" rather than a discovery. The answer about introducing the suspicion that self-explanations are after-the-fact constructions states this function. The answer that the observation proves the self entirely a fiction overstates—the author later rejects that conclusion. The answer making prediction the only legitimate self-knowledge invents a claim of primacy never made. The answer about behavior being fundamentally random is never argued; the issue is rationalization, not randomness.',
         skill: 'paragraph-function',
         needsReview: false,
       },
@@ -441,7 +441,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 2,
         explanation:
-          'The author argues the claim "that the self is a fiction is itself the product of a self engaged in reasoning," so if all such reasoning is "mere after-the-fact storytelling," the skeptic’s argument "is just another story… he saws through the branch on which his own conclusion sits." B captures this self-refutation. A invokes experiments the passage never cites. C reverses the charge—the author thinks the deflationist overreaches, not underestimates. D names a different objection not in the text.',
+          'The author argues the claim "that the self is a fiction is itself the product of a self engaged in reasoning," so if all such reasoning is "mere after-the-fact storytelling," the skeptic’s argument "is just another story… he saws through the branch on which his own conclusion sits." The answer turning the storytelling claim back on the deflationist’s own argument captures this self-refutation. The answer about experiments failing to replicate invokes evidence the passage never cites. The answer that the view underestimates how often people rationalize reverses the charge—the author thinks the deflationist overreaches. The answer about an unaccepted definition of the self names a different objection not in the text.',
         skill: 'inference',
         needsReview: false,
       },
@@ -455,7 +455,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'The analogy says the narrative self "may be partly constructed and still be real, in the way that a nation is constructed and still real, exerting genuine force on those who live inside it." The shared feature is being constructed yet consequential (A). B inverts the point—the comparison establishes reality, not illusion. C reads "nation" too literally. D introduces a ranking of collective over individual that the analogy never asserts.',
+          'The analogy says the narrative self "may be partly constructed and still be real, in the way that a nation is constructed and still real, exerting genuine force on those who live inside it." The shared feature is being constructed yet consequential. The answer calling nations and selves alike illusions inverts the point—the comparison establishes reality, not illusion. The answer about the self being governed by political institutions reads "nation" too literally. The answer ranking collective identities above individual ones introduces a comparison the analogy never asserts.',
         skill: 'application',
         needsReview: false,
       },
@@ -469,7 +469,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'The author grants the view "obvious power" and says it "should not be dismissed," then argues that "pressed to its limit it curdles into something self-undermining." That is respect followed by a measured rejection of its overreach (B). A ignores the explicit refusal to dismiss it. C is wrong—the author’s conclusion is the "more measured position," not the deflationist one. D contradicts the careful engagement throughout.',
+          'The author grants the view "obvious power" and says it "should not be dismissed," then argues that "pressed to its limit it curdles into something self-undermining." That is respect followed by a measured rejection of its overreach. Calling the author wholly dismissive from the outset ignores his explicit refusal to dismiss the view. Calling him fully persuaded is wrong—his conclusion is the "more measured position," not the deflationist one. Calling him uninterested contradicts the careful engagement throughout.',
         skill: 'tone-attitude',
         needsReview: false,
       },
@@ -483,7 +483,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 3,
         explanation:
-          'The surrounding sentence explains that "a story we tell about ourselves can become, by the telling, a commitment that shapes what we do next." The reversal—we author the story, then it authors us—means the narrative feeds back to shape behavior (B). A misreads "author us" as external authorship. C overgeneralizes into a claim the author does not make. D contradicts the closing image of a self "never being finished."',
+          'The surrounding sentence explains that "a story we tell about ourselves can become, by the telling, a commitment that shapes what we do next." The reversal—we author the story, then it authors us—means the narrative feeds back to shape behavior, which is what the answer about a self-story becoming a commitment says. The answer about narratives written by external authorities misreads "author us" as authorship by someone else. The answer that fiction and reality can never be distinguished overgeneralizes into a claim the author does not make. The answer calling the self finished and unchangeable contradicts the closing image of a self "never being finished."',
         skill: 'meaning-in-context',
         needsReview: false,
       },
@@ -508,7 +508,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 2,
         explanation:
-          'The author rejects the "strong thesis" (language imprisons thought) and the "flat denial" (language has no influence), defending instead that language "does not determine what we can think but does nudge what we tend to think." C states this. A is the strong thesis the author calls false. B is the flat denial the author also rejects. D follows from the strong thesis, which the author refutes by noting "we translate, imperfectly but really."',
+          'The author rejects the "strong thesis" (language imprisons thought) and the "flat denial" (language has no influence), defending instead that language "does not determine what we can think but does nudge what we tend to think." The answer denying determination while affirming habitual inclination states this. The answer that language determines the boundaries of thought is the strong thesis the author calls false. The answer that language has no measurable effect and should be ignored is the flat denial the author also rejects. The answer calling translation fundamentally impossible follows from the strong thesis, which the author refutes by noting "we translate, imperfectly but really."',
         skill: 'main-idea',
         needsReview: false,
       },
@@ -522,7 +522,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'The author reasons that "if language truly imprisoned thought, translation would be impossible and learning a second tongue would amount to acquiring a second mind," but "neither is the case." The possibility of translation and language-learning is the disproof (B). A and C make claims about vocabulary and ancestry the passage never asserts. D is the flat-denial position, which the author also rejects—not the basis for refuting the strong thesis.',
+          'The author reasons that "if language truly imprisoned thought, translation would be impossible and learning a second tongue would amount to acquiring a second mind," but "neither is the case." The possibility of translation and language-learning is the disproof. The answers about shared vocabulary and a common linguistic ancestor make claims the passage never asserts. The answer that grammar has no effect on habitual thought is the flat-denial position, which the author also rejects—not the basis for refuting the strong thesis.',
         skill: 'inference',
         needsReview: false,
       },
@@ -536,7 +536,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 3,
         explanation:
-          'The paragraph states the two theses "invite opposite errors": the strong thesis "tempts us to exoticize," the flat denial "to the opposite condescension," and "both errors flatter the theorist." Its purpose is to show each extreme leads to a distinct mistake (A), motivating the middle position. B and C contradict the author. D inverts the conclusion, which is to attend more carefully to particular languages, not to stop.',
+          'The paragraph states the two theses "invite opposite errors": the strong thesis "tempts us to exoticize," the flat denial "to the opposite condescension," and "both errors flatter the theorist." Its purpose is to show that each extreme leads to a distinct mistake, motivating the middle position. Vindicating the strong thesis and declaring translation always perfectly accurate both contradict the author. Recommending that linguists stop studying unfamiliar languages inverts the conclusion, which is to attend more carefully to particular tongues, not to stop.',
         skill: 'paragraph-function',
         needsReview: false,
       },
@@ -550,7 +550,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 1,
         explanation:
-          'The author answers that "the difficulty of disentangling language from culture is a difficulty in our methods, not a discovery about the world," and that treating "unmeasurability as nonexistence would retire half the questions worth asking." B states this. A is the skeptics’ inference the author rejects. C overstates—the author never ranks subtle above obvious. D is the very stance the author opposes.',
+          'The author answers that "the difficulty of disentangling language from culture is a difficulty in our methods, not a discovery about the world," and that treating "unmeasurability as nonexistence would retire half the questions worth asking." The answer treating the difficulty as a limit of method states this. The answer inferring absence from a cause being hard to isolate is the skeptics’ inference the author rejects. The answer ranking subtle effects above obvious ones overstates—the author never makes that comparison. The answer restricting study to precisely measurable effects is the very stance the author opposes.',
         skill: 'inference',
         needsReview: false,
       },
@@ -564,7 +564,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 0,
         explanation:
-          'The author offers exactly this case as an illustration of nudging: a grammar that obliges marking of evidence "makes the question of evidence harder to ignore." If such speakers are "no quicker" to question unsupported claims, the predicted nudge fails to appear, weakening the thesis (B). A reverses the effect. C is wrong—the strong thesis predicts determination, not a measurable nudge, and the finding does not support it. D is wrong because the finding bears squarely on the nudging claim.',
+          'The author offers exactly this case as an illustration of nudging: a grammar that obliges marking of evidence "makes the question of evidence harder to ignore." If such speakers are "no quicker" to question unsupported claims, the predicted nudge fails to appear, so the nudging thesis is weakened. The strengthening answer reverses the effect. The answer that the finding confirms the strong "imprisonment" thesis is wrong—that thesis predicts determination, not a measurable nudge, and a null result does not support it. The answer that the finding has no bearing on the passage is wrong, because it bears squarely on the nudging claim.',
         skill: 'strengthen-weaken',
         needsReview: false,
       },
@@ -578,7 +578,7 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
         ],
         correctAnswer: 2,
         explanation:
-          'The footpath "does not wall off the rest of the meadow, but it makes one route so much easier than the others that most travelers… will take it." The image expresses ease-without-prohibition (B). A is the prison metaphor the author rejects. C and D restate the flat denial; but the author insists the path is followed "most of the time," i.e., language does influence habitual thought.',
+          'The footpath "does not wall off the rest of the meadow, but it makes one route so much easier than the others that most travelers… will take it." The image expresses ease-without-prohibition, which the answer about making one route far easier without forbidding the alternatives states. The answer about walling off regions of thought speakers can never reach is the prison metaphor the author rejects. The answers denying any influence and calling language a transparent window restate the flat denial; but the author insists the path is followed "most of the time," i.e., language does influence habitual thought.',
         skill: 'meaning-in-context',
         needsReview: false,
       },
@@ -610,7 +610,7 @@ What would reform look like? Not abolition — the defenders are right about sur
           'matter at the start of a career but not at its end',
         ],
         correctAnswer: 1,
-        explanation: 'The reform proposed is "to restore the credential to its proxy status: to multiply the routes by which craft can become visible." Abolition (A) is explicitly rejected ("Not abolition"); (B) is the defenders\' overreach; (D) contradicts the lapsed-paperwork example.',
+        explanation: 'The reform proposed is "to restore the credential to its proxy status: to multiply the routes by which craft can become visible." The abolition answer is explicitly rejected ("Not abolition"); calling credentials the only reliable protection against quackery is the defenders\' overreach; saying they matter at a career\'s start but not its end contradicts the lapsed-paperwork example.',
         skill: 'main-idea',
       },
       {
@@ -622,7 +622,7 @@ What would reform look like? Not abolition — the defenders are right about sur
           'concede a genuine success of credentialism before limiting its scope',
         ],
         correctAnswer: 3,
-        explanation: 'It appears in the defenders\' favor — "The history is on their side more than critics like to admit" — before the author narrows what the defense licenses. (A), (C), and (D) each reverse the passage.',
+        explanation: 'It appears in the defenders\' favor — "The history is on their side more than critics like to admit" — before the author narrows what the defense licenses. The readings that guild motives always corrupt licensing, that patent medicine was harmless, and that surgery should be deregulated each reverse the passage.',
         skill: 'function',
       },
       {
@@ -646,7 +646,7 @@ What would reform look like? Not abolition — the defenders are right about sur
           'Apprenticeships were historically restricted to guild members\' relatives',
         ],
         correctAnswer: 2,
-        explanation: 'The proposal depends on alternative routes making craft visible and breaking the monopoly; if institutions ignore those routes, the reform fails in practice. (B) supports the author; (C) is minor; (D) complicates the apprenticeship aside but not the proposal itself.',
+        explanation: 'The proposal depends on alternative routes making craft visible and breaking the monopoly; if institutions ignore those routes, the reform fails in practice. That some credentialed practitioners are incompetent supports the author; licensing fees funding continuing education is minor; the restriction of apprenticeships to guild members\' relatives complicates the apprenticeship aside but not the proposal itself.',
         skill: 'strengthen-weaken',
       },
       {
@@ -670,7 +670,7 @@ What would reform look like? Not abolition — the defenders are right about sur
           'incompetent grooming poses catastrophic, hard-to-judge risks to consumers',
         ],
         correctAnswer: 3,
-        explanation: 'The author\'s test for justified gates: catastrophic stakes plus consumers who cannot judge. Incumbent support (A) might signal protectionism but is not the author\'s threshold question; (C) and (D) are secondary.',
+        explanation: 'The author\'s test for justified gates: catastrophic stakes plus consumers who cannot judge. Incumbent groomers\' support might signal protectionism but is not the author\'s threshold question; the program\'s affordability and other states\' practice are secondary.',
         skill: 'application',
       },
     ],
@@ -700,7 +700,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
           'The railway gauge and QWERTY keyboard were deliberate frauds imposed on the public',
         ],
         correctAnswer: 0,
-        explanation: 'The closing paragraph gives the thesis: treat standards as "provisional infrastructure" with escape hatches. (A) is refuted by the gauge case (the better system lost); (B) is rejected via Baltimore; (D) misreads inheritance as fraud.',
+        explanation: 'The closing paragraph gives the thesis: treat standards as "provisional infrastructure" with escape hatches. The claim that network effects ensure the best standard prevails is refuted by the gauge case (the better system lost); the counsel to delay until the best option is identified is rejected via Baltimore; calling the gauge and QWERTY deliberate frauds misreads inheritance as fraud.',
         skill: 'main-idea',
       },
       {
@@ -712,7 +712,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
           'demonstrate that neighboring cities rarely cooperate',
         ],
         correctAnswer: 2,
-        explanation: 'Baltimore is the counterweight: "delay has its own casualties." It is the OPPOSITE of a lock-in case (C) — it is the no-standard case; (A) and (D) generalize beyond the passage.',
+        explanation: 'Baltimore is the counterweight: "delay has its own casualties." It is the OPPOSITE of a lock-in case like the railway gauge — it is the no-standard case; the federal-regulation and cities-rarely-cooperate readings generalize beyond the passage.',
         skill: 'function',
       },
       {
@@ -736,7 +736,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
           'Industries that built adapter mechanisms into early standards later migrated to superior technologies at far lower cost',
         ],
         correctAnswer: 3,
-        explanation: 'The recommendation is escape hatches/adapters as provisional infrastructure; evidence that they enable cheap migration directly supports it. (B)-(D) are neutral details.',
+        explanation: 'The recommendation is escape hatches/adapters as provisional infrastructure; evidence that they enable cheap migration directly supports it. The findings about engineers on committees, QWERTY\'s learnability, and container lengths are neutral details.',
         skill: 'strengthen-weaken',
       },
       {
@@ -760,7 +760,7 @@ What the dilemma teaches is not a rule but a discipline: to treat every standard
           'Copy the existing automotive connector because it is already widespread',
         ],
         correctAnswer: 1,
-        explanation: 'Standardize now (avoiding Baltimores) while building the escape hatch (avoiding gauge-style lock-in) — exactly "provisional infrastructure." (A) repeats the delay error; (C) is the no-treaty world; (D) is inheritance of a first draft without a hatch.',
+        explanation: 'Standardize now (avoiding Baltimores) while building the escape hatch (avoiding gauge-style lock-in) — exactly "provisional infrastructure." Delaying until the objectively best connector is proven repeats the delay error; letting each manufacturer stay proprietary is the no-treaty world; copying the widespread automotive connector is inheritance of a first draft without a hatch.',
         skill: 'application',
       },
     ],
