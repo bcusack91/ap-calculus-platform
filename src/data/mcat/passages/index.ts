@@ -6,11 +6,34 @@ import type { MCATPassage, MCATDiscreteQuestion, MCATSection } from '../types'
 import { buildDiscretesPassage } from './discretes-helper'
 import { CARS_HUMANITIES_PASSAGES } from './cars-humanities'
 import { CARS_SOCIAL_SCIENCE_PASSAGES } from './cars-social-science'
+import { CARS_PHILOSOPHY_PASSAGES } from './cars-philosophy'
+import { CARS_ETHICS_PASSAGES } from './cars-ethics'
+import { CARS_LITERATURE_PASSAGES } from './cars-literature'
+import { CARS_ARTS_PASSAGES } from './cars-arts'
+import { CARS_HISTORY_PASSAGES } from './cars-history'
+import { CARS_SOCIAL_THEORY_PASSAGES } from './cars-social-theory'
+import { CARS_POLITICS_PASSAGES } from './cars-politics'
+import { CARS_ECONOMICS_PASSAGES } from './cars-economics'
+import { CARS_CULTURE_PASSAGES } from './cars-culture'
+import { CARS_LANGUAGE_ED_PASSAGES } from './cars-language-education'
 import { CHEM_PHYS_PASSAGES, CHEM_PHYS_DISCRETES } from './chem-phys'
 import { BIO_BIOCHEM_PASSAGES, BIO_BIOCHEM_DISCRETES } from './bio-biochem'
 import { PSYCH_SOC_PASSAGES, PSYCH_SOC_DISCRETES } from './psych-soc'
 
-export const CARS_PASSAGES: MCATPassage[] = [...CARS_HUMANITIES_PASSAGES, ...CARS_SOCIAL_SCIENCE_PASSAGES]
+export const CARS_PASSAGES: MCATPassage[] = [
+  ...CARS_HUMANITIES_PASSAGES,
+  ...CARS_SOCIAL_SCIENCE_PASSAGES,
+  ...CARS_PHILOSOPHY_PASSAGES,
+  ...CARS_ETHICS_PASSAGES,
+  ...CARS_LITERATURE_PASSAGES,
+  ...CARS_ARTS_PASSAGES,
+  ...CARS_HISTORY_PASSAGES,
+  ...CARS_SOCIAL_THEORY_PASSAGES,
+  ...CARS_POLITICS_PASSAGES,
+  ...CARS_ECONOMICS_PASSAGES,
+  ...CARS_CULTURE_PASSAGES,
+  ...CARS_LANGUAGE_ED_PASSAGES,
+]
 
 export const SECTION_PASSAGES: Record<Exclude<MCATSection, 'cars'>, MCATPassage[]> = {
   'chem-phys': CHEM_PHYS_PASSAGES,

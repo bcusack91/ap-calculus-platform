@@ -9,9 +9,32 @@ import { plainTextPreview } from '@/lib/render-rich-text'
 // client page — only the CARS passages it actually renders.
 import { CARS_HUMANITIES_PASSAGES } from '@/data/mcat/passages/cars-humanities'
 import { CARS_SOCIAL_SCIENCE_PASSAGES } from '@/data/mcat/passages/cars-social-science'
+import { CARS_PHILOSOPHY_PASSAGES } from '@/data/mcat/passages/cars-philosophy'
+import { CARS_ETHICS_PASSAGES } from '@/data/mcat/passages/cars-ethics'
+import { CARS_LITERATURE_PASSAGES } from '@/data/mcat/passages/cars-literature'
+import { CARS_ARTS_PASSAGES } from '@/data/mcat/passages/cars-arts'
+import { CARS_HISTORY_PASSAGES } from '@/data/mcat/passages/cars-history'
+import { CARS_SOCIAL_THEORY_PASSAGES } from '@/data/mcat/passages/cars-social-theory'
+import { CARS_POLITICS_PASSAGES } from '@/data/mcat/passages/cars-politics'
+import { CARS_ECONOMICS_PASSAGES } from '@/data/mcat/passages/cars-economics'
+import { CARS_CULTURE_PASSAGES } from '@/data/mcat/passages/cars-culture'
+import { CARS_LANGUAGE_ED_PASSAGES } from '@/data/mcat/passages/cars-language-education'
 import { countQuestions, type MCATPassage } from '@/data/mcat/types'
 
-const CARS_PASSAGES: MCATPassage[] = [...CARS_HUMANITIES_PASSAGES, ...CARS_SOCIAL_SCIENCE_PASSAGES]
+const CARS_PASSAGES: MCATPassage[] = [
+  ...CARS_HUMANITIES_PASSAGES,
+  ...CARS_SOCIAL_SCIENCE_PASSAGES,
+  ...CARS_PHILOSOPHY_PASSAGES,
+  ...CARS_ETHICS_PASSAGES,
+  ...CARS_LITERATURE_PASSAGES,
+  ...CARS_ARTS_PASSAGES,
+  ...CARS_HISTORY_PASSAGES,
+  ...CARS_SOCIAL_THEORY_PASSAGES,
+  ...CARS_POLITICS_PASSAGES,
+  ...CARS_ECONOMICS_PASSAGES,
+  ...CARS_CULTURE_PASSAGES,
+  ...CARS_LANGUAGE_ED_PASSAGES,
+]
 
 export default function MCATCarsPage() {
   // null = library grid; array = practice runner for that selection
