@@ -17,10 +17,16 @@ export interface ClozeData {
  * - {{c1::answer}}
  * - {{answer}}
  * - _______ _______ (blank spaces)
+ *
+ * The capture allows ONE level of nested braces so LaTeX survives inside a
+ * deletion: `{{c1::10^{-19}}}` and `{{c1::\frac{1}{2}CV^2}}` both parse. The
+ * original `[^}]+` capture could not contain a brace at all, which either
+ * dropped the card back to a plain flip card or — worse — mis-terminated and
+ * leaked a stray `}` into the rendered KaTeX (two authoring passes hit this).
  */
 export function detectCloze(text: string): ClozeData {
   // Check for {{c1::answer}} or {{answer}} format
-  const clozeRegex = /\{\{(?:c\d+::)?([^}]+)\}\}/g
+  const clozeRegex = /\{\{(?:c\d+::)?((?:[^{}]|\{[^{}]*\})+)\}\}/g
   const hasClozeMarkers = clozeRegex.test(text)
   
   // Check for "Fill in the blank" with underscores
@@ -35,7 +41,7 @@ export function detectCloze(text: string): ClozeData {
   
   if (hasClozeMarkers) {
     // Reset regex lastIndex
-    const regex = /\{\{(?:c\d+::)?([^}]+)\}\}/g
+    const regex = /\{\{(?:c\d+::)?((?:[^{}]|\{[^{}]*\})+)\}\}/g
     let lastIndex = 0
     let match
     
