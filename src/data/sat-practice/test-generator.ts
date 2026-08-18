@@ -23,6 +23,22 @@ import { generateGridInProblems, type GridInProblem } from '../sat-grid-in'
 
 export type SATSectionType = 'reading-writing' | 'math'
 
+/** Tier a module's items are drawn at. */
+export type ModuleDifficulty = 'easy' | 'medium' | 'hard'
+
+/**
+ * Digital-SAT adaptive routing. On the real exam, Module 1 performance decides
+ * whether Module 2 is the harder or easier form, and the form you earn caps
+ * the score you can reach — which is precisely what matters in the 700-800
+ * band. ~70% correct on Module 1 is the commonly cited routing threshold.
+ */
+export const MODULE_2_ROUTING_THRESHOLD = 0.7
+
+export function module2Tier(correct: number, total: number): ModuleDifficulty {
+  if (total <= 0) return 'medium'
+  return correct / total >= MODULE_2_ROUTING_THRESHOLD ? 'hard' : 'easy'
+}
+
 export interface SATTestQuestion extends ExitQuizQuestion {
   section: SATSectionType
   sourceSlug: string // which quiz pool generated the question
@@ -49,6 +65,11 @@ export interface SATTestSection {
   name: string
   section: SATSectionType
   moduleNum: number
+  /**
+   * Which adaptive form this module was built at. Module 1 is always mixed
+   * (undefined); Module 2 is set once Module 1 has been scored.
+   */
+  tier?: ModuleDifficulty
   questionCount: number
   timeLimitSeconds: number
   questions: SATTestQuestion[]
@@ -129,13 +150,17 @@ async function generateSectionQuestions(
   count: number,
   section: SATSectionType,
   usedQuestionTexts?: Set<string>,
+  difficulty?: ModuleDifficulty,
 ): Promise<SATTestQuestion[]> {
-  const questionsPerSlug = Math.ceil(count / slugs.length)
+  // Over-draw per slug when a tier is requested: the tiered generator falls
+  // back across tiers when a pool is thin, so asking for more improves the
+  // odds that the requested tier actually dominates the module.
+  const questionsPerSlug = Math.ceil(count / slugs.length) * (difficulty ? 2 : 1)
   const pool: SATTestQuestion[] = []
 
   for (const slug of slugs) {
     try {
-      const questions = await generateExitQuiz(slug, questionsPerSlug)
+      const questions = await generateExitQuiz(slug, questionsPerSlug, difficulty)
       for (const q of questions) {
         // Static pools (all R&W) can serve the same item to both modules of a
         // test — skip anything an earlier module already used.
@@ -151,8 +176,13 @@ async function generateSectionQuestions(
     }
   }
 
-  // Shuffle, take exactly count, and record what this module consumed
-  const picked = shuffle(pool).slice(0, count)
+  // Shuffle, then (when a tier was requested) put exact-tier matches first so
+  // the module is as hard/easy as asked even if some pools had to fall back.
+  const shuffled = shuffle(pool)
+  const ordered = difficulty
+    ? [...shuffled.filter((q) => q.difficulty === difficulty), ...shuffled.filter((q) => q.difficulty !== difficulty)]
+    : shuffled
+  const picked = ordered.slice(0, count)
   if (usedQuestionTexts) for (const q of picked) usedQuestionTexts.add(q.question)
   return picked
 }
@@ -194,6 +224,7 @@ async function generateRWQuestions(
   count: number,
   passageCount: number,
   dedupe?: { usedQuestionTexts: Set<string>; usedPassageIds: Set<string> },
+  difficulty?: ModuleDifficulty,
 ): Promise<SATTestQuestion[]> {
   const rwSlugs = [...RW_READING_SLUGS, ...RW_WRITING_SLUGS]
 
@@ -208,7 +239,7 @@ async function generateRWQuestions(
   // Get remaining from exit quiz pools
   const remaining = count - passageQs.length
   const poolQs = remaining > 0
-    ? await generateSectionQuestions(rwSlugs, remaining, 'reading-writing', dedupe?.usedQuestionTexts)
+    ? await generateSectionQuestions(rwSlugs, remaining, 'reading-writing', dedupe?.usedQuestionTexts, difficulty)
     : []
 
   return shuffle([...passageQs, ...poolQs]).slice(0, count)
@@ -248,8 +279,9 @@ async function generateMathModule(
   mcqCount: number,
   gridInCount: number,
   usedQuestionTexts?: Set<string>,
+  difficulty?: ModuleDifficulty,
 ): Promise<SATTestQuestion[]> {
-  const mcq = await generateSectionQuestions(MATH_SLUGS, mcqCount, 'math', usedQuestionTexts)
+  const mcq = await generateSectionQuestions(MATH_SLUGS, mcqCount, 'math', usedQuestionTexts, difficulty)
   const gridIns = gridInsToTestQuestions(generateGridInProblems(gridInCount))
   return [...mcq, ...gridIns]
 }
@@ -419,6 +451,32 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
     totalQuestions: sections.reduce((s, sec) => s + sec.questionCount, 0),
     totalTimeSeconds: sections.reduce((s, sec) => s + sec.timeLimitSeconds, 0),
   }
+}
+
+/**
+ * Rebuild a Module 2 section at the tier the student earned in Module 1.
+ *
+ * The real digital SAT decides Module 2's form from Module 1 performance, and
+ * that decision sets the reachable score ceiling — a student who never earns
+ * the hard form cannot practice the items that separate 700 from 800. The
+ * runner calls this after scoring a Module 1 section and swaps the result in.
+ *
+ * Question texts already used earlier in the test are excluded so the
+ * regenerated module never repeats an item the student has seen.
+ */
+export async function regenerateModule2(
+  section: SATTestSection,
+  tier: ModuleDifficulty,
+  usedQuestionTexts: Set<string>,
+): Promise<SATTestSection> {
+  const dedupe = { usedQuestionTexts, usedPassageIds: new Set<string>() }
+  const questions = section.section === 'reading-writing'
+    ? await generateRWQuestions(section.questionCount, 8, dedupe, tier)
+    : await generateMathModule(16, 6, usedQuestionTexts, tier)
+  // If a tier is too thin to fill the module, keep the original rather than
+  // serving a short section.
+  if (questions.length < section.questionCount) return { ...section, tier }
+  return { ...section, tier, questions }
 }
 
 /**

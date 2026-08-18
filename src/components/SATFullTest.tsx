@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-generator'
+import { module2Tier, regenerateModule2 } from '@/data/sat-practice/test-generator'
 import { gradeGridIn } from '@/data/sat-grid-in'
 
 /* ------------------------------------------------------------------ */
@@ -33,6 +34,8 @@ type TestPhase = 'intro' | 'testing' | 'section-break' | 'review' | 'results'
 interface SectionResult {
   sectionId: string
   sectionName: string
+  /** Adaptive form this module was served at (Module 2 only). */
+  tier?: 'easy' | 'medium' | 'hard'
   correct: number
   total: number
   scaledScore: number
@@ -84,7 +87,10 @@ function formatTime(seconds: number): string {
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
-export default function SATFullTestComponent({ test, onComplete, onCancel }: SATFullTestProps) {
+export default function SATFullTestComponent({ test: initialTest, onComplete, onCancel }: SATFullTestProps) {
+  // Local copy: finishing a Module 1 swaps in an adaptively-regenerated
+  // Module 2, mirroring the digital SAT's routing.
+  const [test, setTest] = useState(initialTest)
   const [phase, setPhase] = useState<TestPhase>('intro')
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -295,6 +301,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
 
       return {
         sectionId: section.id,
+        tier: section.tier,
         sectionName: section.name,
         correct,
         total: section.questionCount,
@@ -313,6 +320,31 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
     const result = computeSectionResult(currentSectionIndex)
     const updatedCompleted = [...completedSections, result]
     setCompletedSections(updatedCompleted)
+
+    // ADAPTIVE ROUTING: a finished Module 1 decides the form of the Module 2
+    // in the same subject, exactly as the digital SAT does. Fire-and-forget so
+    // the break screen appears immediately; the swap lands before the student
+    // starts the next module.
+    const justFinished = test.sections[currentSectionIndex]
+    if (justFinished?.moduleNum === 1) {
+      const nextIdx = test.sections.findIndex(
+        (sec) => sec.section === justFinished.section && sec.moduleNum === 2,
+      )
+      if (nextIdx >= 0) {
+        const tier = module2Tier(result.correct, result.total)
+        const used = new Set<string>()
+        for (const sec of test.sections) for (const q of sec.questions) used.add(q.question)
+        regenerateModule2(test.sections[nextIdx], tier, used)
+          .then((rebuilt) => {
+            setTest((prev) => {
+              const sections = [...prev.sections]
+              sections[nextIdx] = rebuilt
+              return { ...prev, sections }
+            })
+          })
+          .catch(() => { /* keep the pre-built module on failure */ })
+      }
+    }
 
     // Check if there are more sections
     if (currentSectionIndex < test.sections.length - 1) {
@@ -1072,8 +1104,24 @@ function SATResultsView({
               return (
                 <div key={sec.sectionId} className="rounded-xl bg-gray-50 p-4 dark:bg-gray-700/50">
                   <div className="mb-2 flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-900 dark:text-white">
+                    <span className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white">
                       {sec.sectionName}
+                      {sec.tier === 'hard' && (
+                        <span
+                          className="rounded-full bg-purple-100 px-2 py-0.5 text-[10px] font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-300"
+                          title="Your Module 1 score earned the harder second module, just like the real adaptive SAT. The top of the score range is only reachable from this form."
+                        >
+                          HARDER FORM EARNED
+                        </span>
+                      )}
+                      {sec.tier === 'easy' && (
+                        <span
+                          className="rounded-full bg-gray-200 px-2 py-0.5 text-[10px] font-semibold text-gray-600 dark:bg-gray-600 dark:text-gray-300"
+                          title="Module 1 routed you to the standard second module. On the real SAT this form caps the reachable score — raising Module 1 accuracy is what unlocks the higher range."
+                        >
+                          STANDARD FORM
+                        </span>
+                      )}
                     </span>
                     <span className="text-sm text-gray-600 dark:text-gray-400">
                       {sec.correct}/{sec.total} ({pct}%)
