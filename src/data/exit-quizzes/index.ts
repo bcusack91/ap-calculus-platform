@@ -1122,6 +1122,8 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10, di
   } else {
     questions = mod.generateExitQuiz(count, topicSlug, difficulty)
   }
+  questions = await blendHardTier(topicSlug, questions, count, difficulty, seed)
+
   return questions.map((q) => ({
     ...q,
     id: stableQuestionId(
@@ -1131,4 +1133,64 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10, di
       typeof q.correctIndex === 'number' ? q.correctIndex : 0,
     ),
   }))
+}
+
+/** Share of a MIXED-difficulty quiz drawn from the 700-800 tier. */
+const HARD_TIER_MIX_SHARE = 0.25
+
+/**
+ * Blend 700-800 tier items into a generated quiz.
+ *
+ * - difficulty 'hard'  -> fill from the hard tier first, top up from the bank.
+ *   This is what the adaptive Module 2 and tiered practice request, so a
+ *   student who earns the hard form actually meets hard items.
+ * - no difficulty      -> ~25 percent hard tier, so ordinary practice still
+ *   exposes top-end reasoning instead of capping at mid-level recall.
+ * - 'easy' / 'medium'  -> untouched.
+ *
+ * Deterministic under a seed: the seeded-regrade path must be able to
+ * reproduce the exact quiz it graded.
+ */
+async function blendHardTier(
+  topicSlug: string,
+  generated: ExitQuizQuestion[],
+  count: number,
+  difficulty: ExitQuizDifficulty | undefined,
+  seed?: number,
+): Promise<ExitQuizQuestion[]> {
+  if (difficulty === 'easy' || difficulty === 'medium') return generated
+  // Lazy-loaded: the tier file is ~700KB and must never land in the initial
+  // bundle (the whole reason the banks below use dynamic imports too).
+  let tier: ExitQuizQuestion[]
+  try {
+    const mod = await import('./sat-hard-tier')
+    tier = mod.hardTierFor(topicSlug)
+  } catch {
+    return generated
+  }
+  if (tier.length === 0) return generated
+
+  const rng = typeof seed === 'number' && Number.isFinite(seed) ? mulberry32(seed ^ 0x5a7) : Math.random
+  const shuffled = [...tier]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+
+  const want = difficulty === 'hard'
+    ? Math.min(count, shuffled.length)
+    : Math.min(Math.round(count * HARD_TIER_MIX_SHARE), shuffled.length)
+  if (want <= 0) return generated
+
+  const picked = shuffled.slice(0, want)
+  const pickedStems = new Set(picked.map((q) => q.question.trim().toLowerCase()))
+  const rest = generated.filter((q) => !pickedStems.has(q.question.trim().toLowerCase()))
+  const merged = [...picked, ...rest].slice(0, Math.max(count, picked.length))
+
+  // Interleave so hard items are not all clustered at the front.
+  for (let i = merged.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[merged[i], merged[j]] = [merged[j], merged[i]]
+  }
+  return merged
 }
