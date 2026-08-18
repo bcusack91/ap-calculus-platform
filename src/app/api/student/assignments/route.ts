@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { assignmentTopics, clearedTopics } from '@/lib/assignment-autocomplete'
 
 export const dynamic = 'force-dynamic'
 
@@ -55,6 +56,24 @@ export async function GET() {
       orderBy: [{ dueDate: 'asc' }, { createdAt: 'desc' }],
     })
 
+    // Per-topic progress for MULTI-TOPIC assignments, so the student can see
+    // which of the assigned subtopics are done and jump to the next one. A
+    // single link to assignment.topicSlug stranded them on the first topic.
+    const multiSlugs = [
+      ...new Set(
+        assignments.flatMap((a) => (assignmentTopics(a).length > 1 ? assignmentTopics(a) : [])),
+      ),
+    ]
+    const [clearedSet, topicTitles] = await Promise.all([
+      multiSlugs.length > 0
+        ? clearedTopics(session.user.id, multiSlugs, 0.8)
+        : Promise.resolve(new Set<string>()),
+      multiSlugs.length > 0
+        ? prisma.topic.findMany({ where: { slug: { in: multiSlugs } }, select: { slug: true, title: true } })
+        : Promise.resolve([] as { slug: string; title: string }[]),
+    ])
+    const titleOf = new Map(topicTitles.map((t) => [t.slug, t.title]))
+
     // Shape the response
     const shaped = assignments.map((a) => {
       const submission = a.submissions[0] || null
@@ -67,6 +86,13 @@ export async function GET() {
         type: a.type,
         topicSlug: a.topicSlug,
         topicSlugs: a.topicSlugs,
+        topics: assignmentTopics(a).length > 1
+          ? assignmentTopics(a).map((slug) => ({
+              slug,
+              title: titleOf.get(slug) ?? slug.replace(/-/g, ' '),
+              done: clearedSet.has(slug),
+            }))
+          : null,
         flashcardSetId: a.flashcardSetId,
         dueDate: a.dueDate,
         maxAttempts: a.maxAttempts,

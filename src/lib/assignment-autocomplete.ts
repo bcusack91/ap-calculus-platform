@@ -120,6 +120,49 @@ async function matchingAssignments(userId: string, topicSlug: string, types: Ass
   return assignments.filter((a) => slugMatches(a, topicSlug))
 }
 
+/** Every topic an assignment covers (single + multi), deduped. */
+export function assignmentTopics(a: { topicSlug: string | null; topicSlugs: unknown }): string[] {
+  const many = Array.isArray(a.topicSlugs) ? (a.topicSlugs as unknown[]) : []
+  const all = [a.topicSlug, ...many].filter((x): x is string => typeof x === 'string' && x.length > 0)
+  return [...new Set(all)]
+}
+
+const DEFAULT_CLEAR_FRACTION = 0.8
+
+/**
+ * Which of these topics the student has already cleared, by the same rule the
+ * class plan and retake gates use: entrance-quiz mastery, or a best exit-quiz
+ * score at or above the bar.
+ */
+export async function clearedTopics(
+  userId: string,
+  slugs: string[],
+  requiredFraction: number,
+): Promise<Set<string>> {
+  if (slugs.length === 0) return new Set()
+  const [topics, exits] = await Promise.all([
+    prisma.topic.findMany({ where: { slug: { in: slugs } }, select: { id: true, slug: true } }),
+    prisma.exitQuizAttempt.findMany({
+      where: { userId, topicSlug: { in: slugs } },
+      select: { topicSlug: true, score: true, totalQuestions: true },
+    }),
+  ])
+  const slugById = new Map(topics.map((t) => [t.id, t.slug]))
+  const progress = topics.length === 0 ? [] : await prisma.topicProgress.findMany({
+    where: { userId, topicId: { in: topics.map((t) => t.id) } },
+    select: { topicId: true, masteryLevel: true },
+  })
+  const cleared = new Set<string>()
+  for (const p of progress) {
+    const slug = slugById.get(p.topicId)
+    if (slug && p.masteryLevel >= 1) cleared.add(slug)
+  }
+  for (const e of exits) {
+    if (e.totalQuestions > 0 && e.score / e.totalQuestions >= requiredFraction) cleared.add(e.topicSlug)
+  }
+  return cleared
+}
+
 /**
  * Record a COMPLETED submission (score 0–1, server-computed by the caller)
  * for every matching assignment. Best score wins; attempts increment up to
@@ -137,7 +180,22 @@ export async function recordAssignmentCompletion(params: {
     const assignments = await matchingAssignments(userId, topicSlug, types)
     for (const a of assignments) {
       const required = typeof a.requiredScore === 'number' ? a.requiredScore : null
-      const completesNow = required === null || score >= required
+      let completesNow = required === null || score >= required
+
+      // MULTI-TOPIC assignments only complete when EVERY assigned topic is
+      // cleared. Previously finishing any one of them flipped the whole
+      // assignment to COMPLETED, so a student assigned five subtopics did one
+      // and was told they were done — and the card then offered "Review",
+      // sending them back to the topic they had already finished.
+      const topics = assignmentTopics(a)
+      if (completesNow && topics.length > 1) {
+        const bar = required ?? DEFAULT_CLEAR_FRACTION
+        const cleared = await clearedTopics(userId, topics, bar)
+        // The topic that triggered this call counts even if its progress row
+        // has not settled yet.
+        if (score >= bar) cleared.add(topicSlug)
+        completesNow = topics.every((t) => cleared.has(t))
+      }
       const id = randomUUID()
       // Atomic upsert: GREATEST keeps best-score-wins under concurrent submits,
       // attempts counts TRUE retakes (not clamped — teachers should see volume),

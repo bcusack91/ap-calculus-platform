@@ -20,6 +20,8 @@ interface AssignmentItem {
   maxAttempts: number
   requiredScore: number | null
   createdAt: string
+  /** Present only for multi-topic assignments: every assigned topic + its status. */
+  topics: { slug: string; title: string; done: boolean }[] | null
   classroom: { id: string; name: string; teacher: string }
   submission: {
     id: string | null
@@ -62,7 +64,10 @@ const STATUS_STYLES: Record<string, { bg: string; text: string; label: string }>
 type FilterStatus = 'all' | 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE'
 
 function getActionUrl(a: AssignmentItem): string {
-  const slug = a.topicSlug
+  // Multi-topic assignments must advance: send the student to the first topic
+  // they have NOT cleared, not always to the first topic in the list.
+  const nextUnfinished = a.topics?.find((t) => !t.done)?.slug
+  const slug = nextUnfinished ?? a.topicSlug ?? a.topics?.[0]?.slug ?? null
   switch (a.type) {
     case 'INTERACTIVE_LESSON':
       return slug ? `/topics/${slug}/interactive` : '/topics'
@@ -90,6 +95,12 @@ function getActionUrl(a: AssignmentItem): string {
 }
 
 function getActionLabel(a: AssignmentItem): string {
+  if (a.topics && a.topics.length > 1) {
+    const done = a.topics.filter((t) => t.done).length
+    if (done === 0) return 'Start'
+    if (done < a.topics.length) return `Continue (${done}/${a.topics.length})`
+    return 'Review'
+  }
   if (a.submission.status === 'COMPLETED') return 'Review'
   if (a.submission.status === 'IN_PROGRESS') return 'Continue'
   return 'Start'
@@ -350,6 +361,43 @@ export default function StudentAssignmentsPage() {
                           </Link>
                         </div>
                       </div>
+
+                      {/* Multi-topic assignments list every assigned topic with
+                          its own status and link. Without this the student was
+                          stranded on whichever topic the single link pointed at. */}
+                      {a.topics && a.topics.length > 1 && (
+                        <div className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-3 dark:border-gray-700 dark:bg-gray-700/40">
+                          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                            {a.topics.filter(t => t.done).length} of {a.topics.length} topics complete
+                          </p>
+                          <ul className="space-y-1.5">
+                            {a.topics.map(t => (
+                              <li key={t.slug} className="flex items-center justify-between gap-3">
+                                <span className="flex min-w-0 items-center gap-2">
+                                  <span
+                                    className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold ${
+                                      t.done
+                                        ? 'bg-green-500 text-white'
+                                        : 'bg-gray-200 text-gray-500 dark:bg-gray-600 dark:text-gray-300'
+                                    }`}
+                                  >
+                                    {t.done ? '✓' : ''}
+                                  </span>
+                                  <span className={`truncate text-sm ${t.done ? 'text-gray-500 line-through dark:text-gray-400' : 'text-gray-800 dark:text-gray-200'}`}>
+                                    {t.title}
+                                  </span>
+                                </span>
+                                <Link
+                                  href={a.type === 'QUIZ' ? `/topics/${t.slug}` : `/topics/${t.slug}/interactive`}
+                                  className="shrink-0 rounded-lg px-2.5 py-1 text-xs font-semibold text-accent transition hover:bg-accent-subtle dark:hover:bg-gray-600"
+                                >
+                                  {t.done ? 'Review' : 'Start'}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   )
                 })
