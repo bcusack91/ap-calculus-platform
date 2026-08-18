@@ -3,6 +3,7 @@
  * Covers: functional groups, stereochemistry, SN1/SN2/E1/E2, carbonyl chemistry, spectroscopy
  */
 
+import { authoredFor } from './mcat-authored-pool'
 import type { MCATQuizQuestion } from './mcat-general-chemistry'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
@@ -209,11 +210,15 @@ const ORGANIC_SUBTOPICS = new Set([
   'mcat-organic-chemistry-spectroscopy-mcat',
 ])
 
+// Deep pool: local questions + the authored competitive bank for this area
+// (audit F1 — exit quizzes were ~18 questions; the bank holds 30-40 per subtopic).
+const fullPool = [...questionPool, ...authoredFor(['mcat-organic-chemistry-', 'mcat-lab-separations-'])]
+
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const filteredPool = ORGANIC_SUBTOPICS.has(topicSlug ?? '')
-    ? questionPool.filter((q) => q.subtopicSlug === topicSlug)
-    : questionPool
-  const sourcePool = filteredPool.length > 0 ? filteredPool : questionPool
+    ? fullPool.filter((q) => q.subtopicSlug === topicSlug)
+    : fullPool
+  const sourcePool = filteredPool.length > 0 ? filteredPool : fullPool
   const shuffled = [...sourcePool].sort(() => Math.random() - 0.5)
 
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({

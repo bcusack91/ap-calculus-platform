@@ -2,6 +2,7 @@
  * MCAT Genetics & Evolution Exit Quiz
  */
 
+import { authoredFor } from './mcat-authored-pool'
 import { mcatSubtopicPool } from './mcat-subtopic-pool'
 import type { MCATQuizQuestion } from './mcat-general-chemistry'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
@@ -51,8 +52,12 @@ const questionPool: MCATQuizQuestion[] = [
   },
 ]
 
+// Deep pool: local questions + the authored competitive bank for this area
+// (audit F1). Authored items carry subtopic tags the selector prefers.
+const fullPool = [...questionPool, ...authoredFor(['mcat-genetics-'])]
+
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
-  const source = topicSlug ? mcatSubtopicPool(questionPool, 'genetics', topicSlug) : questionPool
+  const source = topicSlug ? mcatSubtopicPool(fullPool, 'genetics', topicSlug) : fullPool
   const shuffled = [...source].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({
     id: `genetics-evolution-${i}`,

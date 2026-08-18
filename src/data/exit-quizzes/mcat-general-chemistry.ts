@@ -3,6 +3,7 @@
  * Covers: atomic structure, bonding, acids/bases, kinetics, thermodynamics, electrochemistry
  */
 
+import { authoredFor } from './mcat-authored-pool'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
 export interface MCATQuizQuestion {
@@ -217,11 +218,15 @@ const GEN_CHEM_SUBTOPICS = new Set([
   'mcat-general-chemistry-acid-base-equilibrium-mcat',
 ])
 
+// Deep pool: local questions + the authored competitive bank for this area
+// (audit F1 — exit quizzes were ~18 questions; the bank holds 30-40 per subtopic).
+const fullPool = [...questionPool, ...authoredFor(['mcat-general-chemistry-'])]
+
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const filteredPool = GEN_CHEM_SUBTOPICS.has(topicSlug ?? '')
-    ? questionPool.filter((q) => q.subtopicSlug === topicSlug)
-    : questionPool
-  const sourcePool = filteredPool.length > 0 ? filteredPool : questionPool
+    ? fullPool.filter((q) => q.subtopicSlug === topicSlug)
+    : fullPool
+  const sourcePool = filteredPool.length > 0 ? filteredPool : fullPool
   const shuffled = [...sourcePool].sort(() => Math.random() - 0.5)
 
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({

@@ -3,6 +3,7 @@
  * Covers: kinematics, Newton's laws, work/energy, momentum, fluids, waves
  */
 
+import { authoredFor } from './mcat-authored-pool'
 import type { MCATQuizQuestion } from './mcat-general-chemistry'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
@@ -153,19 +154,15 @@ const questionPool: MCATQuizQuestion[] = [
   },
 ]
 
-const PHYSICS_MECH_SUBTOPICS = new Set([
-  'mcat-physics-mechanics-kinematics-mcat',
-  'mcat-physics-mechanics-forces-newton-laws-mcat',
-  'mcat-physics-mechanics-work-energy-power-mcat',
-  'mcat-physics-mechanics-momentum-collisions-mcat',
-  'mcat-physics-mechanics-fluids-waves-mcat',
-])
+// Deep pool: local questions + the authored competitive bank for this area
+// (audit F1 — exit quizzes were ~18 questions; the bank holds 30-40 per subtopic).
+const fullPool = [...questionPool, ...authoredFor(['mcat-physics-mechanics-'])]
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
-  const filteredPool = PHYSICS_MECH_SUBTOPICS.has(topicSlug ?? '')
-    ? questionPool.filter((q) => q.subtopicSlug === topicSlug)
-    : questionPool
-  const sourcePool = filteredPool.length > 0 ? filteredPool : questionPool
+  const filteredPool = topicSlug
+    ? fullPool.filter((q) => q.subtopicSlug === topicSlug)
+    : fullPool
+  const sourcePool = filteredPool.length > 0 ? filteredPool : fullPool
   const shuffled = [...sourcePool].sort(() => Math.random() - 0.5)
 
   return shuffled.slice(0, Math.min(count, shuffled.length)).map((q, i) => ({

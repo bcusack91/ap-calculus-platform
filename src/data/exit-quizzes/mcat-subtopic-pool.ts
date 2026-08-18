@@ -16,6 +16,8 @@ interface AreaQuestion {
   question: string
   options: string[]
   explanation: string
+  /** Authored questions carry an exact curriculum subtopic tag. */
+  subtopicSlug?: string
 }
 
 const MIN_MATCHED = 3
@@ -28,9 +30,14 @@ export function mcatSubtopicPool<T extends AreaQuestion>(
   // Tiered: STRONG = keyword-table classification or a question/explanation
   // mention; WEAK = only the options mention it (distractors name wrong-topic
   // concepts by design, so these are top-up only).
-  const strong: T[] = []
+  // Tier 0: exact subtopic tags (the authored bank) — trust these outright.
+  const exact = pool.filter((q) => q.subtopicSlug === topicSlug)
+  if (exact.length >= MIN_MATCHED) return exact
+
+  const strong: T[] = [...exact]
   const weak: T[] = []
   for (const q of pool) {
+    if (q.subtopicSlug === topicSlug) continue // already in strong
     if (
       matchSubtopic(domainId, q.question, q.options, q.explanation)?.slug === topicSlug ||
       textMatchesSlug(`${q.question} ${q.explanation}`, topicSlug)

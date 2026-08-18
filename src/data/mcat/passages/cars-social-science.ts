@@ -585,4 +585,184 @@ export const CARS_SOCIAL_SCIENCE_PASSAGES: MCATPassage[] = [
     ],
     needsReview: false,
   },
+  {
+    id: 'cars-ss-07',
+    section: 'cars',
+    discipline: 'sociology of expertise',
+    title: 'The Credential and the Craft',
+    needsReview: true,
+    passageText: `A curious inversion has overtaken the way modern societies certify competence. The credential — degree, license, board certification — began as a proxy: an efficient signal that its holder had probably acquired a craft too complex for outsiders to assess directly. Proxies are useful precisely because they are cheap to check. But a proxy that becomes cheap enough to check eventually becomes the thing employers, patients, and courts actually consult, and at that point a slow substitution begins: the signal stops standing for the craft and starts standing in for it.
+
+The substitution is visible at both ends of working life. At entry, occupations that once trained novices through apprenticeship — journalism, software, midwifery — now filter them through classroom credentials whose content practitioners routinely describe as remote from the work. At the far end, the veteran whose skill everyone acknowledges but whose paperwork has lapsed becomes, overnight, officially incompetent. Neither case involves any change in what anyone can do. What changed is which fact about a person the institution is able to see.
+
+Defenders of credentialism answer that the alternative is worse: without standardized gates, hiring collapses into nepotism and quackery flourishes. The history is on their side more than critics like to admit. The licensing of physicians, whatever its guild motives, coincided with the disappearance of a genuinely lethal trade in patent medicine. A society that cannot check craft directly must check something, and a flawed public standard beats a private handshake.
+
+But this defense, sound as far as it goes, licenses far less than the current regime. It justifies gates where incompetence is catastrophic and consumers cannot judge — surgery, structural engineering. It does not justify the creep of licensure into occupations — hair braiding, interior design, flower arranging in at least one American state — where the catastrophic case is absent and the consumer is a perfectly competent judge. There the gate does not protect the public from the incompetent; it protects incumbents from competition, and it taxes precisely those entrants least able to pay: the talented poor, for whom the apprenticeship route was the historical door into the middle class.
+
+What would reform look like? Not abolition — the defenders are right about surgeons. The reform is to restore the credential to its proxy status: to multiply the routes by which craft can become visible, so that no single gate monopolizes recognition. Portfolios, examinations open to the self-taught, provisional practice under supervision — each makes the signal answerable again to the thing it signals. A credential that fears such competition has confessed what it actually certifies.`,
+    questions: [
+      {
+        question: 'The passage\'s central argument is that credentials:',
+        options: [
+          'should be abolished because they no longer measure competence',
+          'are the only reliable protection against quackery',
+          'should be returned to their role as one signal of competence among several, rather than its sole gatekeeper',
+          'matter at the start of a career but not at its end',
+        ],
+        correctAnswer: 2,
+        explanation: 'The reform proposed is "to restore the credential to its proxy status: to multiply the routes by which craft can become visible." Abolition (A) is explicitly rejected ("Not abolition"); (B) is the defenders\' overreach; (D) contradicts the lapsed-paperwork example.',
+        skill: 'main-idea',
+      },
+      {
+        question: 'The author cites the licensing of physicians primarily to:',
+        options: [
+          'show that guild motives always corrupt licensing',
+          'concede a genuine success of credentialism before limiting its scope',
+          'prove that patent medicine was harmless',
+          'argue that surgery should be deregulated',
+        ],
+        correctAnswer: 1,
+        explanation: 'It appears in the defenders\' favor — "The history is on their side more than critics like to admit" — before the author narrows what the defense licenses. (A), (C), and (D) each reverse the passage.',
+        skill: 'function',
+      },
+      {
+        question: 'It can be inferred that the author regards the licensing of hair braiding as:',
+        options: [
+          'justified by the catastrophic risk of incompetent braiding',
+          'a helpful signal in a market consumers cannot judge',
+          'an unfortunate but necessary cost of public safety',
+          'protection of incumbents rather than of consumers',
+        ],
+        correctAnswer: 3,
+        explanation: 'Hair braiding heads the list of occupations where "the gate does not protect the public from the incompetent; it protects incumbents from competition." The other options apply the surgeon-case logic the author explicitly withholds from such occupations.',
+        skill: 'inference',
+      },
+      {
+        question: 'Which of the following, if true, would most WEAKEN the author\'s reform proposal?',
+        options: [
+          'In fields that adopted portfolio and examination routes, employers ignored them and continued hiring only by degree',
+          'Some credentialed practitioners are incompetent',
+          'Licensing fees fund continuing education programs',
+          'Apprenticeships were historically restricted to guild members\' relatives',
+        ],
+        correctAnswer: 0,
+        explanation: 'The proposal depends on alternative routes making craft visible and breaking the monopoly; if institutions ignore those routes, the reform fails in practice. (B) supports the author; (C) is minor; (D) complicates the apprenticeship aside but not the proposal itself.',
+        skill: 'strengthen-weaken',
+      },
+      {
+        question: 'The sentence "A credential that fears such competition has confessed what it actually certifies" most nearly means that:',
+        options: [
+          'credentials should be kept secret from competitors',
+          'certification exams are too easy to pass',
+          'resisting alternative routes reveals that the credential protects position rather than verifies skill',
+          'fear is a poor qualification for professional work',
+        ],
+        correctAnswer: 2,
+        explanation: 'If the credential truly certified craft, other ways of demonstrating craft would not threaten it; fearing them "confesses" it certifies incumbency. The other readings are literalisms.',
+        skill: 'meaning-in-context',
+      },
+      {
+        question: 'A state legislature is debating whether to require a two-year certificate for app-based dog groomers. Based on the passage, the author would most likely ask FIRST whether:',
+        options: [
+          'incumbent groomers support the requirement',
+          'incompetent grooming poses catastrophic, hard-to-judge risks to consumers',
+          'the certificate program is affordable',
+          'other states have adopted similar requirements',
+        ],
+        correctAnswer: 1,
+        explanation: 'The author\'s test for justified gates: catastrophic stakes plus consumers who cannot judge. Incumbent support (A) might signal protectionism but is not the author\'s threshold question; (C) and (D) are secondary.',
+        skill: 'application',
+      },
+    ],
+  },
+  {
+    id: 'cars-ss-08',
+    section: 'cars',
+    discipline: 'economic history',
+    title: 'The Tyranny of the Standard Gauge',
+    needsReview: true,
+    passageText: `Standardization is the great invisible achievement of industrial civilization. That any bolt fits any matching nut, that a shipping container lifts from a Shanghai crane onto a Rotterdam truck, that this page renders on a thousand different screens — each is a quiet treaty among strangers, and the treaties compound: every standard makes the next one cheaper to adopt. Economists celebrate these "network effects" and they are right to. I want to dwell instead on what the celebration omits: a standard is also a decision about whose way of doing things becomes everyone\'s, taken at a moment when no one can foresee what it will cost to have decided.
+
+The railway gauge is the canonical case. The width between British rails — famously traceable to the axle of the horse cart — was not the best of the candidate gauges; engineers at the time argued that a broader gauge ran faster and steadier, and the Great Western Railway proved them right for decades. It lost anyway. Once enough track existed, the cost of incompatibility exceeded the benefit of superiority, and the better system was torn up mile by mile. The economists\' term is "lock-in," and the term\'s blandness conceals its meaning: a network can permanently entrench its own first draft.
+
+Notice when the entrenchment happens: early, when adoption is scattered and the eventual scale is invisible. The QWERTY keyboard was arranged, in part, around the mechanical constraints of nineteenth-century typebars; the constraint vanished, the arrangement did not. No one chose QWERTY for the billions who now type on glass; the billions inherited a solution to a problem they have never had. This is the temporal asymmetry at the heart of standardization: the deciders are few and early, the bound are many and late, and the two groups never meet.
+
+It is tempting to conclude that we should therefore standardize late and lightly. But delay has its own casualties. Fire hoses in neighboring American cities once had incompatible couplings; when Baltimore burned in 1904, engines from Washington and Philadelphia stood by uselessly while their threads failed to mate with Baltimore\'s hydrants. Waiting for the best standard can mean burning while the committees deliberate. The dilemma is genuine: standardize early and you may entrench a first draft forever; standardize late and the interregnum exacts its price in Baltimores.
+
+What the dilemma teaches is not a rule but a discipline: to treat every standard as provisional infrastructure — to build, where cost allows, the adapters, the gauge-changing axles, the escape hatches that keep a treaty from becoming a prison. The standards that age best are the ones written by authors who assumed they would someday be wrong.`,
+    questions: [
+      {
+        question: 'Which of the following best states the main idea of the passage?',
+        options: [
+          'Network effects ensure that the best technical standard eventually prevails',
+          'Standardization should be delayed until the best option is identified',
+          'Standardization delivers enormous benefits but entrenches early choices, so standards should be designed with their own revision in mind',
+          'The railway gauge and QWERTY keyboard were deliberate frauds imposed on the public',
+        ],
+        correctAnswer: 2,
+        explanation: 'The closing paragraph gives the thesis: treat standards as "provisional infrastructure" with escape hatches. (A) is refuted by the gauge case (the better system lost); (B) is rejected via Baltimore; (D) misreads inheritance as fraud.',
+        skill: 'main-idea',
+      },
+      {
+        question: 'The author includes the 1904 Baltimore fire in order to:',
+        options: [
+          'prove that fire safety requires federal regulation',
+          'show the cost of failing to standardize, complicating the case against early standardization',
+          'illustrate another case of lock-in like the railway gauge',
+          'demonstrate that neighboring cities rarely cooperate',
+        ],
+        correctAnswer: 1,
+        explanation: 'Baltimore is the counterweight: "delay has its own casualties." It is the OPPOSITE of a lock-in case (C) — it is the no-standard case; (A) and (D) generalize beyond the passage.',
+        skill: 'function',
+      },
+      {
+        question: 'The passage suggests that the "temporal asymmetry" of standardization refers to the fact that:',
+        options: [
+          'older standards are always technically inferior to newer ones',
+          'standards decay over time unless renewed',
+          'early adopters pay more than late adopters',
+          'those who set a standard are few and act early, while those bound by it are many and come later',
+        ],
+        correctAnswer: 3,
+        explanation: 'Stated nearly verbatim: "the deciders are few and early, the bound are many and late, and the two groups never meet." The other options describe different (unclaimed) asymmetries.',
+        skill: 'inference',
+      },
+      {
+        question: 'Which of the following, if true, would most STRENGTHEN the author\'s closing recommendation?',
+        options: [
+          'Industries that built adapter mechanisms into early standards later migrated to superior technologies at far lower cost',
+          'Most standards committees include engineers',
+          'The QWERTY layout can be learned in a week',
+          'Shipping containers come in two standard lengths',
+        ],
+        correctAnswer: 0,
+        explanation: 'The recommendation is escape hatches/adapters as provisional infrastructure; evidence that they enable cheap migration directly supports it. (B)-(D) are neutral details.',
+        skill: 'strengthen-weaken',
+      },
+      {
+        question: 'The author\'s attitude toward the economists\' celebration of network effects is best described as:',
+        options: [
+          'wholesale rejection of the economic analysis',
+          'amused indifference',
+          'agreement with the celebration, paired with insistence on what it leaves out',
+          'envy of the economists\' influence',
+        ],
+        correctAnswer: 2,
+        explanation: '"They are right to. I want to dwell instead on what the celebration omits" — endorsement plus supplement. Not rejection, indifference, or envy.',
+        skill: 'tone',
+      },
+      {
+        question: 'A consortium is defining the charging connector for a new class of electric aircraft, expecting mass adoption within twenty years. Which proposal is most consistent with the passage\'s final recommendation?',
+        options: [
+          'Delay any standard until the objectively best connector is proven',
+          'Adopt a workable connector now, but require every port to accept a standardized adapter module that can host future connector designs',
+          'Let each manufacturer use a proprietary connector indefinitely',
+          'Copy the existing automotive connector because it is already widespread',
+        ],
+        correctAnswer: 1,
+        explanation: 'Standardize now (avoiding Baltimores) while building the escape hatch (avoiding gauge-style lock-in) — exactly "provisional infrastructure." (A) repeats the delay error; (C) is the no-treaty world; (D) is inheritance of a first draft without a hatch.',
+        skill: 'application',
+      },
+    ],
+  },
 ]

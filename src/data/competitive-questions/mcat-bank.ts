@@ -406,7 +406,17 @@ function pull(areaSlugOrKey: string, count: number, subtopicSlug?: string): Mcat
     }
   }
 
-  return [...fromQuiz, ...fromAuthored]
+  // De-duplicate by stem: the exit-quiz banks now merge the authored
+  // competitive questions into their pools (audit F1), so the same question
+  // can arrive via both sources here. Quiz-sourced entries come first, so
+  // authored duplicates are the ones dropped.
+  const seen = new Set<string>()
+  return [...fromQuiz, ...fromAuthored].filter((q) => {
+    const key = q.question.trim().toLowerCase()
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
 }
 
 /**

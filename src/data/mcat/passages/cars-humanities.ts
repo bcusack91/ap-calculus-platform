@@ -655,4 +655,188 @@ None of this requires us to despise the immediate. The instantly delightful is a
       },
     ],
   },
+  {
+    id: 'cars-hum-07',
+    section: 'cars',
+    discipline: 'translation theory',
+    title: 'The Translator\'s Fidelity',
+    needsReview: true,
+    passageText: `Every translator lives under an accusation that predates any particular offense: traduttore, traditore — translator, traitor. The epigram assumes that a text possesses a single, stable meaning that the translator either delivers intact or betrays. I want to suggest that this picture of fidelity is not merely too strict; it is incoherent, and its incoherence has consequences for how we read anything at all.
+
+Consider what "delivering the text intact" would require. A poem's meaning does not float free of its sounds, its meter, the histories its words drag behind them. The German word Heimat is not "homeland" plus some removable aura; the aura is the meaning, accreted through decades of longing, propaganda, and return. A translator who renders Heimat as "homeland" has not preserved a core and lost a decoration. She has substituted one word's history for another's. There is no kernel that survives the exchange untouched.
+
+The traditional response is to grade translations by their losses: this one sacrifices rhyme for sense, that one sense for rhyme. The metaphor of loss presumes an original plenitude the translation can only diminish. But readers of the original are not in possession of this plenitude either. The native reader of the sixteenth century read with assumptions no modern reader shares; the poem has been "translated" by time for its own countrymen. If loss disqualifies, every reading is disqualified.
+
+I propose a different standard. A translation is faithful not when it replicates the original — it cannot — but when it stands in the same relation to its readers that the original stood in to its first readers: provoking where it provoked, consoling where it consoled. Call this functional fidelity. It licenses departures that lexical fidelity forbids. To make a joke land in Warsaw, you may need different furniture than the joke owned in Lisbon.
+
+The objection writes itself: functional fidelity licenses anything; the translator becomes an author with an alibi. The objection would be fatal if effects could be produced at will from any material. They cannot. The translator who seeks the original's effect is constrained at every phrase by the original's structure of effects — a far more demanding master than the dictionary. The libertine translator fails not by being unfaithful but by being lazy: producing the easy effect rather than the earned one.
+
+What follows for readers is uncomfortable. If translation is impossible in the strict sense and yet translations plainly succeed — we weep at Tolstoy without Russian — then meaning must be sturdier and more portable than the betrayal epigram assumes, and also less proprietary. The text was never a vault. It was always a score, awaiting performance.`,
+    questions: [
+      {
+        question: 'The central argument of the passage is that:',
+        options: [
+          'translation is impossible and should be abandoned as a literary practice',
+          'translators deserve recognition as original authors of the works they translate',
+          'faithful translation should be judged by the effect on readers rather than by word-for-word correspondence',
+          'older texts cannot be understood by modern readers in any language',
+        ],
+        correctAnswer: 2,
+        explanation: 'The author explicitly replaces lexical fidelity with "functional fidelity" — standing in the same relation to readers as the original did. The passage denies strict replication is possible but insists translations "plainly succeed," so abandonment (A) contradicts it; authorship (B) is raised as an objection and answered; (D) overstates the time-translation point.',
+        skill: 'main-idea',
+      },
+      {
+        question: 'The author mentions the word Heimat primarily in order to:',
+        options: [
+          'prove that German is more difficult to translate than other languages',
+          'show that a word\'s historical associations are inseparable from its meaning',
+          'argue that translators should leave certain words untranslated',
+          'illustrate a successful translation choice',
+        ],
+        correctAnswer: 1,
+        explanation: 'Heimat illustrates that "the aura is the meaning" — there is no removable kernel. Nothing in the passage ranks languages by difficulty (A), recommends leaving words untranslated (C), or presents the rendering as a success (D).',
+        skill: 'function',
+      },
+      {
+        question: 'Based on the passage, the author would most likely describe the "traduttore, traditore" epigram as:',
+        options: [
+          'an accurate description of most published translations',
+          'unfair to traitors rather than to translators',
+          'true of poetry but false of prose',
+          'resting on a mistaken picture of meaning as a stable possession',
+        ],
+        correctAnswer: 3,
+        explanation: 'The author calls the fidelity picture the epigram assumes "incoherent" — meaning is not a vault to be delivered intact. The author never assesses most translations as betrayals (A); (B) is wordplay the passage does not make; the poetry/prose split (C) never appears.',
+        skill: 'inference',
+      },
+      {
+        question: 'Which finding, if true, would most WEAKEN the author\'s defense of functional fidelity against the "alibi" objection?',
+        options: [
+          'Translators freely inventing content routinely produce the same effects on readers as painstaking translators',
+          'Some jokes cannot be made funny in any other language',
+          'Most readers cannot compare a translation with its original',
+          'Dictionaries disagree about the meanings of common words',
+        ],
+        correctAnswer: 0,
+        explanation: 'The defense is that effects CANNOT be produced at will from any material — the original\'s structure constrains the translator. If invention worked just as well, that constraint (and the defense) collapses. (B) supports the author\'s picture of difficulty; (C) and (D) are irrelevant to the constraint claim.',
+        skill: 'strengthen-weaken',
+      },
+      {
+        question: 'The author\'s claim that a text "was always a score, awaiting performance" most nearly means that:',
+        options: [
+          'texts should be set to music to be fully appreciated',
+          'the original manuscript is more valuable than any copy',
+          'a text\'s meaning is realized anew in each act of reading or translating',
+          'performance of a text requires formal training',
+        ],
+        correctAnswer: 2,
+        explanation: 'The score/vault contrast closes the argument that meaning is portable and non-proprietary — realized in performance (reading, translating) rather than stored. The musical reading (A) is literalism; (B) and (D) reverse or invent claims.',
+        skill: 'meaning-in-context',
+      },
+      {
+        question: 'Suppose a director stages a nineteenth-century play in modern dress so that its satire of social climbing lands on a contemporary audience. The author would most likely regard this as:',
+        options: [
+          'a betrayal of the playwright\'s explicit intentions',
+          'an instance of functional fidelity, provided the new staging earns the original\'s effects',
+          'acceptable only if the original staging is also performed',
+          'evidence that the play has no stable meaning worth preserving',
+        ],
+        correctAnswer: 1,
+        explanation: 'Modern dress to preserve the satire\'s bite parallels changing the joke\'s "furniture" so it lands — legitimate if the effect is earned, not easy. (A) applies the lexical-fidelity standard the author rejects; (C) is a compromise the passage never requires; (D) mistakes anti-essentialism for nihilism the author disclaims.',
+        skill: 'application',
+      },
+    ],
+  },
+  {
+    id: 'cars-hum-08',
+    section: 'cars',
+    discipline: 'architecture criticism',
+    title: 'Against the Honest Ruin',
+    needsReview: true,
+    passageText: `When a historic building is restored, an orthodoxy now governs the work: every new stone must announce itself. Repairs are made in frankly modern materials, joints are left visible, missing figures are replaced by blank volumes. The doctrine is called honesty, and its rationale seems unimpeachable — the visitor must never be deceived into taking the new for the old. I want to argue that this honesty is itself a deception, and a condescending one.
+
+The doctrine descends from Ruskin's fury at Victorian restorers who scraped medieval churches down to a guess and called the guess authentic. His fury was earned. But notice what the modern orthodoxy has kept and what it has discarded. It kept the horror of deception; it discarded Ruskin's actual reverence, which was for the building as a living whole — the "golden stain of time" on a surface worked by human hands. The honest-repair doctrine reveres something else: the legibility of the intervention. The building becomes a document about its own restoration, a lecture delivered in limestone and titanium.
+
+Consider what a cathedral was for. Its makers did not intend an archive of construction phases; they intended a space that overwhelmed distinction-making altogether. Medieval builders themselves repaired in the style of the whole without agonizing — a fourteenth-century mason completing a twelfth-century arcade matched it as best he could, and no one has ever called those masons liars. The seamless repair honors the building\'s purpose; the legible repair honors the restorer\'s scruples. One of these is about the cathedral. The other is about us.
+
+The standard defense is that the visitor has a right not to be misled. But misled about what? The visitor who cannot distinguish the 1950s vaulting from the 1250s vaulting has not been deceived about the experience the building exists to give; she has received that experience. The deception the doctrine prevents is one only specialists could suffer, and specialists have archives, drawings, and dated invoices — they are the last people who need the wall itself to confess.
+
+I concede one strong case to the orthodoxy: where the record is genuinely uncertain, invention passed off as knowledge corrupts both the building and the discipline. Where we do not know what stood, the blank volume tells the truth. But this concession defines a boundary, not a rule. Most restoration does not operate at the edge of knowledge; it replaces the documented with the documented.
+
+The honest ruin, then, is a genre error. It mistakes buildings for texts and visitors for readers, when a building is nearer to a piece of music, and a restoration nearer to a performance. We do not demand that an orchestra play a damaged score with the gaps left audible.`,
+    questions: [
+      {
+        question: 'The author\'s central claim is that the "honest repair" doctrine:',
+        options: [
+          'should be applied more strictly to medieval churches',
+          'was invented by Ruskin and faithfully preserves his values',
+          'serves the restorer\'s self-regard at the expense of the building\'s purpose',
+          'is justified because visitors have a right to accurate information',
+        ],
+        correctAnswer: 2,
+        explanation: 'The passage\'s pivot: "One of these is about the cathedral. The other is about us." (B) reverses the argument — the doctrine kept Ruskin\'s horror of deception but discarded his reverence; (D) is the defense the author rebuts; (A) contradicts the thesis.',
+        skill: 'main-idea',
+      },
+      {
+        question: 'The author refers to the fourteenth-century mason in order to:',
+        options: [
+          'prove that medieval construction techniques were superior to modern ones',
+          'show that matching the existing style was historically normal and never counted as deception',
+          'establish that all restoration before Ruskin was fraudulent',
+          'demonstrate that repairs were once cheaper than they are today',
+        ],
+        correctAnswer: 1,
+        explanation: 'The mason "matched it as best he could, and no one has ever called those masons liars" — seamless repair has an honorable pedigree. Craft superiority (A), universal fraud (C), and cost (D) never appear.',
+        skill: 'function',
+      },
+      {
+        question: 'It can be inferred that the author believes the harm prevented by legible repairs is:',
+        options: [
+          'the primary danger facing historic architecture today',
+          'greatest for ordinary visitors encountering a building for the first time',
+          'impossible to define with any precision',
+          'suffered, if at all, only by specialists who already have better sources',
+        ],
+        correctAnswer: 3,
+        explanation: 'The author says the prevented deception "is one only specialists could suffer, and specialists have archives... they are the last people who need the wall itself to confess." (B) inverts this; (A) and (C) overstate or dodge the point.',
+        skill: 'inference',
+      },
+      {
+        question: 'Which of the following, if true, would most STRENGTHEN the author\'s argument?',
+        options: [
+          'Surveys show visitors report deeper engagement in seamlessly restored interiors than in ones with visibly modern repairs',
+          'Titanium repairs last longer than stone repairs',
+          'Ruskin privately admired several seamless Victorian restorations',
+          'Most modern restorers are trained as historians rather than craftsmen',
+        ],
+        correctAnswer: 0,
+        explanation: 'The author claims seamless repair delivers "the experience the building exists to give"; visitor-engagement evidence directly supports that. Durability (B) is off-topic; (C) is biographical trivia; (D) could cut either way.',
+        skill: 'strengthen-weaken',
+      },
+      {
+        question: 'The author\'s attitude toward the orthodoxy\'s treatment of genuinely uncertain reconstructions is best described as:',
+        options: [
+          'unqualified rejection',
+          'ironic mockery',
+          'agreement within a limited boundary',
+          'reluctant indifference',
+        ],
+        correctAnswer: 2,
+        explanation: '"I concede one strong case... Where we do not know what stood, the blank volume tells the truth" — a bounded concession ("a boundary, not a rule"). Not rejection, mockery, or indifference.',
+        skill: 'tone',
+      },
+      {
+        question: 'A museum conservator repairs a torn Renaissance tapestry by reweaving the missing section from surviving full-scale drawings of the original design, matching the old dyes so closely that the repair is invisible except under ultraviolet light. Based on the passage, the author would most likely judge this repair:',
+        options: [
+          'illegitimate, because visitors cannot detect the intervention',
+          'legitimate, because the missing section was documented rather than invented',
+          'legitimate only if a visible border marks the rewoven area',
+          'illegitimate, because textiles differ fundamentally from buildings',
+        ],
+        correctAnswer: 1,
+        explanation: 'The author\'s boundary: invention passed off as knowledge is the corruption; replacing "the documented with the documented" is the normal, legitimate case. (A) and (C) apply the doctrine the author rejects; (D) contradicts the passage\'s willingness to reason across art forms (music, texts, buildings).',
+        skill: 'application',
+      },
+    ],
+  },
 ]
