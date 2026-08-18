@@ -33,7 +33,9 @@ function validateText(text: string): string | null {
   const opens = (text.match(/\{\{/g) ?? []).length
   const closes = (text.match(/\}\}/g) ?? []).length
   if (opens !== closes) return 'unbalanced cloze braces'
-  if (opens > 0 && !/\{\{(c\d+::)?[^{}]+\}\}/.test(text)) return 'malformed cloze'
+  // Same capture as the runtime parser (src/lib/cloze-utils.ts): one level of
+  // nested braces so LaTeX survives inside a deletion.
+  if (opens > 0 && !/\{\{(?:c\d+::)?(?:[^{}]|\{[^{}]*\})+\}\}/.test(text)) return 'malformed cloze'
   return null
 }
 
