@@ -1064,6 +1064,171 @@
   "back": "Fluid intelligence (novel problem solving, processing speed) peaks in early adulthood then declines; crystallized intelligence (vocabulary, accumulated knowledge) keeps rising into later life before a late, gradual decline."
  },
  {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "A diagnosis of schizophrenia requires continuous signs of disturbance persisting for at least {{c1::six months}}, including at least one month of active-phase symptoms.",
+  "back": "Shorter durations get different labels: brief psychotic disorder (under one month) and schizophreniform disorder (one to six months). Duration alone can change the diagnosis in a passage."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "A major depressive episode requires symptoms to be present nearly every day for at least {{c1::two weeks}}.",
+  "back": "This minimum duration separates a diagnosable episode from normal transient sadness or grief reactions. MCAT questions frequently hinge on duration criteria."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Anorexia nervosa requires significantly {{c1::low body weight}}, whereas people with bulimia nervosa are typically of normal weight or overweight.",
+  "back": "Both can involve binge-purge behavior and intense fear of weight gain, so body weight is the cleanest discriminator. Anorexia also carries the highest mortality rate of any psychological disorder, largely from medical complications and suicide."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Both PTSD and chronic major depression are associated with reduced volume of the {{c1::hippocampus}}.",
+  "back": "Prolonged stress and elevated cortisol are thought to damage hippocampal neurons, impairing memory and feedback inhibition of the stress axis. This is a favorite MCAT link between psychology and neurobiology."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Cluster {{c1::B}} personality disorders are described as dramatic, emotional, or erratic, and include antisocial, borderline, histrionic, and narcissistic personality disorders.",
+  "back": "Key exemplars: antisocial involves disregard for others' rights (requires age 18 and prior conduct disorder); borderline involves unstable relationships, self-image, and affect with fear of abandonment; histrionic is attention-seeking; narcissistic involves grandiosity and lack of empathy."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Generalized anxiety disorder involves excessive, difficult-to-control worry about multiple areas of life occurring more days than not for at least {{c1::six months}}.",
+  "back": "The worry is free-floating rather than tied to one trigger, and is accompanied by restlessness, fatigue, poor concentration, irritability, muscle tension, or sleep disturbance. Contrast with panic disorder's discrete, intense attacks."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "How does a manic episode differ from a hypomanic episode?",
+  "back": "Mania lasts at least one week (or requires hospitalization) and causes marked impairment, psychosis, or hospitalization. Hypomania lasts at least four days, involves a noticeable change in functioning, but does not cause marked impairment or psychotic features. Severity and impairment, not symptom type, separate them."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "How does OCD differ from obsessive-compulsive personality disorder (OCPD)?",
+  "back": "OCD involves ego-dystonic obsessions and compulsions: the person finds them distressing and unwanted. OCPD is a pervasive, ego-syntonic personality style of perfectionism, orderliness, and control that the person sees as correct and desirable, with no true obsessions or compulsions."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "How is schizoaffective disorder distinguished from schizophrenia with mood symptoms?",
+  "back": "Schizoaffective disorder requires a major mood episode (depressive or manic) concurrent with schizophrenia symptoms, plus at least two weeks of delusions or hallucinations WITHOUT a mood episode. In schizophrenia, mood symptoms, if present, are brief relative to the psychotic illness."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "In OCD, what is the difference between obsessions and compulsions?",
+  "back": "Obsessions are intrusive, unwanted, anxiety-producing thoughts, urges, or images. Compulsions are repetitive behaviors or mental acts performed to reduce that anxiety or prevent a feared event. The compulsion is negatively reinforced because it temporarily relieves the obsession-driven anxiety, maintaining the cycle."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Name the major dissociative disorders and their defining features.",
+  "back": "Dissociative identity disorder: two or more distinct personality states with gaps in memory. Dissociative amnesia: inability to recall important autobiographical information, sometimes with fugue (sudden travel or wandering). Depersonalization/derealization disorder: feeling detached from one's self or surroundings while reality testing stays intact."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Negative and cognitive symptoms of schizophrenia are associated with reduced dopamine activity in the {{c1::mesocortical}} pathway to the prefrontal cortex.",
+  "back": "This explains why dopamine-blocking drugs improve positive symptoms but do little for negative symptoms: the two symptom classes involve opposite dopamine abnormalities in different pathways."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "PTSD is diagnosed only when symptoms persist for more than {{c1::one month}} after trauma; a similar shorter-lasting presentation is called acute stress disorder.",
+  "back": "Acute stress disorder covers the window from three days to one month post-trauma. The symptom picture is similar; timing distinguishes the diagnoses."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "SSRIs treat depression and anxiety by blocking presynaptic reuptake of {{c1::serotonin}}, increasing its availability in the synaptic cleft.",
+  "back": "Selective serotonin reuptake inhibitors (fluoxetine, sertraline) are first-line for depression, GAD, OCD, panic disorder, and PTSD. The therapeutic delay of several weeks suggests downstream receptor and neuroplastic changes, not just raised transmitter levels, drive improvement."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Systematic desensitization treats phobias by pairing relaxation with gradual exposure to feared stimuli, a counterconditioning technique grounded in {{c1::classical conditioning}}.",
+  "back": "The feared stimulus, originally a conditioned stimulus for fear, becomes associated with a relaxation response incompatible with anxiety. This directly links treatment mechanisms to learning theory, a common MCAT crossover."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "The dopamine hypothesis attributes the positive symptoms of schizophrenia to excess dopamine activity in the {{c1::mesolimbic}} pathway.",
+  "back": "Excess dopamine signaling in this pathway is linked to hallucinations and delusions, which is why D2-blocking antipsychotics reduce positive symptoms. Amphetamines, which boost dopamine, can mimic psychosis, supporting the hypothesis."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Typical antipsychotic drugs reduce positive symptoms of schizophrenia primarily by blocking {{c1::D2 dopamine}} receptors.",
+  "back": "Their efficacy is a key line of evidence for the dopamine hypothesis. Blocking dopamine in other pathways causes side effects such as movement disorders (nigrostriatal pathway), which is why receptor location matters."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What are the four symptom clusters of PTSD?",
+  "back": "1) Intrusion or re-experiencing (flashbacks, nightmares), 2) avoidance of trauma reminders, 3) negative alterations in cognition and mood, and 4) alterations in arousal and reactivity (hypervigilance, exaggerated startle, sleep disturbance), all following exposure to actual or threatened death, serious injury, or violence."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What are the positive symptoms of schizophrenia?",
+  "back": "Behaviors or experiences added to normal functioning: hallucinations (most often auditory), delusions, disorganized speech, and grossly disorganized or catatonic behavior. They are called positive because they represent an excess or distortion, not a loss, of normal function."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What are the two core diagnostic domains of autism spectrum disorder?",
+  "back": "1) Persistent deficits in social communication and social interaction (reciprocity, nonverbal communication, relationships), and 2) restricted, repetitive patterns of behavior, interests, or activities (stereotyped movements, insistence on sameness, intense fixated interests, sensory abnormalities), with onset in early development."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What are the two core symptom domains of ADHD, and when must symptoms appear?",
+  "back": "Inattention (careless mistakes, distractibility, poor follow-through) and hyperactivity-impulsivity (fidgeting, interrupting, difficulty waiting). Several symptoms must be present before age 12 and occur in two or more settings. Stimulants that increase dopamine and norepinephrine signaling are first-line pharmacotherapy."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What are the two core symptoms of major depressive disorder, at least one of which must be present?",
+  "back": "Depressed mood and anhedonia (loss of interest or pleasure). At least one must be present, along with other symptoms (sleep, appetite, energy, concentration, guilt, psychomotor changes, suicidal ideation), causing significant impairment. This matters because MCAT passages often list symptoms and ask which diagnosis fits."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What defines panic disorder beyond simply having panic attacks?",
+  "back": "Recurrent unexpected panic attacks plus at least one month of persistent worry about future attacks or maladaptive behavior change (such as avoiding situations) because of them. Panic attacks alone can occur in many disorders; the anticipatory anxiety and behavior change make it panic disorder."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What distinguishes bipolar I disorder from bipolar II disorder?",
+  "back": "Bipolar I requires at least one full manic episode (depression is common but not required for diagnosis). Bipolar II requires at least one hypomanic episode plus at least one major depressive episode, with no history of full mania. The presence of true mania is the deciding factor."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What does the monoamine hypothesis of depression propose?",
+  "back": "That depression results from deficient levels of monoamine neurotransmitters, especially serotonin, norepinephrine, and dopamine, in synapses. It explains why antidepressants that increase monoamine availability (SSRIs, SNRIs, MAOIs) relieve symptoms, though the weeks-long delay in clinical effect shows the full story is more complex."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What is a specific phobia, and what is the most effective treatment approach?",
+  "back": "An intense, irrational fear of a specific object or situation that is actively avoided and is out of proportion to actual danger. Exposure-based therapies (including systematic desensitization and flooding) are most effective; they extinguish the conditioned fear response through repeated safe contact with the stimulus."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What is conversion disorder (functional neurological symptom disorder)?",
+  "back": "One or more symptoms of altered voluntary motor or sensory function (such as paralysis, blindness, or seizures) that are incompatible with recognized neurological disease. Symptoms often follow psychological stress and are not intentionally produced, distinguishing it from factitious disorder and malingering."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What is cyclothymic disorder?",
+  "back": "A chronic mood disorder with numerous periods of hypomanic symptoms and depressive symptoms lasting at least two years, where symptoms never meet full criteria for a hypomanic or major depressive episode. Think of it as a milder, chronic version of bipolar disorder."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What is persistent depressive disorder (dysthymia)?",
+  "back": "Depressed mood on more days than not for at least two years in adults, with additional depressive symptoms that never remit for more than two months at a time. It is less acute than a major depressive episode but chronic; duration is the key diagnostic feature."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What is the core fear in social anxiety disorder?",
+  "back": "Fear of social or performance situations in which the person may be scrutinized and negatively evaluated by others, leading to avoidance or intense distress. It differs from specific phobia in that the feared stimulus is social judgment rather than a particular object or situation."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "What is the core mechanism of cognitive behavioral therapy (CBT)?",
+  "back": "CBT identifies and restructures maladaptive automatic thoughts and beliefs while changing the behaviors that maintain them, on the premise that cognition, emotion, and behavior are interconnected. It is evidence-based first-line treatment for depression and anxiety disorders, often equal or superior to medication for lasting effects."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Which personality disorders make up Cluster A, and what is their shared theme?",
+  "back": "Paranoid, schizoid, and schizotypal personality disorders. The shared theme is odd or eccentric behavior: pervasive distrust (paranoid), detachment from social relationships (schizoid), and eccentric beliefs or perceptual distortions with social discomfort (schizotypal). Genetically, Cluster A shows links to schizophrenia."
+ },
+ {
+  "topicSlug": "mcat-psychology-behavior-disorders-mcat",
+  "front": "Why are panic attacks frequently mistaken for heart attacks?",
+  "back": "They produce intense sympathetic nervous system activation: palpitations, chest pain, shortness of breath, sweating, trembling, dizziness, and a sense of impending doom, peaking within minutes. Recognizing this autonomic surge helps link the disorder to fight-or-flight physiology on the MCAT."
+ },
+ {
   "topicSlug": "mcat-psychology-behavior-learning-memory-mcat",
   "front": "{{c1::Anterograde}} amnesia blocks forming new memories after the injury; {{c2::retrograde}} amnesia erases memories from before it, sparing the oldest.",
   "back": "Ribot's law: retrograde loss is temporally graded because remote memories have undergone systems consolidation away from the hippocampus. Patient H.M. showed dense anterograde amnesia with limited retrograde loss and fully intact procedural learning."
