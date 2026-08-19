@@ -378,6 +378,72 @@ interface InteractiveLessonRendererProps {
 
 type LessonPart = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 
+/**
+ * Fallback entrance quiz assembled from the lesson's OWN multiple-choice
+ * sections, for topics with no authored quiz in the entrance-quiz registry.
+ * Mirrors the authored 2-questions-per-part format the mastery logic expects
+ * (first and last of each part's pool, so both ends of the part are probed).
+ * Parts with no multiple-choice questions can't be tested out of and are
+ * omitted from the quiz. Returns null when the lesson has too few questions
+ * for a meaningful test-out, in which case no quiz is offered.
+ */
+function buildFallbackEntranceQuiz(
+  topicSlug: string,
+  parts: PreloadedLessonPart[],
+): { questions: EntranceQuizQuestion[]; parts: { partNumber: number; partTitle: string }[] } | null {
+  type RawQuestion = {
+    question?: string
+    options?: string[]
+    correctAnswer?: number
+    correctIndex?: number
+    explanation?: string
+  }
+  const questions: EntranceQuizQuestion[] = []
+  const partMeta: { partNumber: number; partTitle: string }[] = []
+  for (const [i, part] of parts.entries()) {
+    const partNumber = i + 1
+    const partTitle = part.title || `Part ${partNumber}`
+    const pool: RawQuestion[] = []
+    const consider = (q: RawQuestion) => {
+      const correct = q.correctIndex ?? q.correctAnswer
+      if (
+        typeof q.question === 'string' && q.question.trim() &&
+        Array.isArray(q.options) && q.options.length >= 2 &&
+        typeof correct === 'number' && correct >= 0 && correct < q.options.length
+      ) {
+        pool.push(q)
+      }
+    }
+    for (const section of part.data?.sections ?? []) {
+      const s = section as { type?: string; exercise?: { questions?: RawQuestion[] } } & RawQuestion
+      // Two authoring shapes exist: 'multiple-choice' sections nest questions
+      // under exercise.questions; 'mcq' sections (Physics C and others) ARE a
+      // single question themselves.
+      if (s.type === 'multiple-choice' && Array.isArray(s.exercise?.questions)) {
+        for (const q of s.exercise.questions) consider(q)
+      } else if (s.type === 'mcq') {
+        consider(s)
+      }
+    }
+    if (pool.length === 0) continue
+    const picks = pool.length <= 2 ? pool : [pool[0], pool[pool.length - 1]]
+    partMeta.push({ partNumber, partTitle })
+    for (const [j, q] of picks.entries()) {
+      questions.push({
+        id: `${topicSlug}-ent-p${partNumber}-${j + 1}`,
+        question: q.question as string,
+        options: q.options as string[],
+        correctIndex: (q.correctIndex ?? q.correctAnswer) as number,
+        explanation: q.explanation ?? '',
+        partNumber,
+        partTitle,
+      })
+    }
+  }
+  if (questions.length < 3) return null
+  return { questions, parts: partMeta }
+}
+
 function calculatePartMastery(lessonPart: number, completedSectionsCount: number, totalSections: number, totalParts: number) {
   const safeSections = Math.max(totalSections, 1)
   const progressInPart = completedSectionsCount / safeSections
@@ -484,8 +550,16 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }>({ totalAttempts: 0, hasPassed: false, lastScore: null, mustRedoUnit: false })
   const topicHasExitQuiz = hasExitQuiz(topicSlug)
 
-  // Entrance quiz state (topic-level, e.g. moles-molar-mass)
-  const topicHasEntranceQuiz = hasEntranceQuiz(topicSlug)
+  // Entrance quiz state (topic-level, e.g. moles-molar-mass). When no authored
+  // entrance quiz exists (roughly half the interactive library — all of
+  // Physics C, most elementary math, aliased MCAT subtopics — had no registry
+  // entry, so those lessons never offered the test-out screen), fall back to a
+  // quiz assembled from the lesson's OWN multiple-choice checks.
+  const fallbackEntranceQuiz = useMemo(
+    () => buildFallbackEntranceQuiz(topicSlug, preloadedParts),
+    [topicSlug, preloadedParts],
+  )
+  const topicHasEntranceQuiz = hasEntranceQuiz(topicSlug) || fallbackEntranceQuiz !== null
   const [entranceQuizPhase, setEntranceQuizPhase] = useState<'choice' | 'quiz' | null>(null)
   const [entranceQuizQuestions, setEntranceQuizQuestions] = useState<EntranceQuizQuestion[]>([])
   const [entranceQuizParts, setEntranceQuizParts] = useState<{ partNumber: number; partTitle: string }[]>([])
@@ -1005,10 +1079,11 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     // and can click the button again to retake
   }
 
-  // Entrance quiz: load questions when user chooses to take it
+  // Entrance quiz: load questions when user chooses to take it. Authored
+  // quizzes win; otherwise use the quiz built from the lesson's own questions.
   const handleStartEntranceQuiz = useCallback(async () => {
     setEntranceQuizLoading(true)
-    const data = await loadEntranceQuiz(topicSlug)
+    const data = (await loadEntranceQuiz(topicSlug)) ?? fallbackEntranceQuiz
     if (data) {
       setEntranceQuizQuestions(data.questions)
       setEntranceQuizParts(data.parts)
@@ -1018,7 +1093,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       setEntranceQuizPhase(null)
     }
     setEntranceQuizLoading(false)
-  }, [topicSlug])
+  }, [topicSlug, fallbackEntranceQuiz])
 
   // Entrance quiz completion: skip mastered parts, credit them
   const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
