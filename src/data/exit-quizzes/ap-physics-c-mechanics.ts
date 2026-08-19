@@ -1913,7 +1913,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   // ─── physics-c-2d-kinematics top-up ───
   {
     question: 'A projectile launched at $45°$ with initial speed $v_0$ has horizontal range:',
-    options: ['$v_0^2/g$', '$v_0^2/(2g)$', '$2v_0^2/g$', '$v_0^2 \\sin(2\\theta)/g = v_0^2/g$'],
+    options: ['$v_0^2/g$', '$v_0^2/(2g)$', '$2v_0^2/g$', '$v_0^2\\sqrt{2}/(2g)$'],
     correctAnswer: 0,
     explanation: 'Range $R = v_0^2 \\sin(2\\theta)/g$; at $\\theta = 45°$, $\\sin 90° = 1$, so $R = v_0^2/g$.',
     difficulty: 'medium', domain: 'kinematics', topicSlug: 'physics-c-2d-kinematics', formSet: 'both',

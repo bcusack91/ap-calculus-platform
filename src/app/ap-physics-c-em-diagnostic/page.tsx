@@ -14,6 +14,7 @@ import {
   type APPhysicsCEMResults,
 } from '@/data/ap-physics-c-em-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import { MathText } from '@/components/MathText'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
@@ -165,7 +166,9 @@ export default function APPhysicsCEMDiagnosticPage() {
           </div>
           <div className="mb-4"><span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">{testData.domains.find(d => d.id === q.domain)?.name ?? q.domain}</span></div>
           <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question}</p>
+            {/* Question text can carry $…$ LaTeX — render through the shared
+                MathText pipeline (same one the post-test review already uses). */}
+            <MathText text={q.question} className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
             <div className="space-y-2">
               {q.options.map((opt, i) => {
                 const isSelected = answers[currentIndex] === i
@@ -175,7 +178,7 @@ export default function APPhysicsCEMDiagnosticPage() {
                     className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${isSelected ? 'border-amber-500 bg-amber-50 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-500' : 'border-gray-200 text-gray-700 hover:border-amber-300 hover:bg-amber-50/50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-amber-500'}`}>
                     <div className="flex items-center justify-between gap-3">
                       <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
-                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><MathText inline text={opt} />
                       </span>
                       <span
                         role="button"

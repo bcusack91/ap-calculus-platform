@@ -108,7 +108,18 @@ export function generateAPPhysics2DiagnosticTest(form: number): APPhysics2Diagno
   for (const domain of AP_PHYSICS2_DOMAINS) {
     const pool = apPhysics2QuestionPool.filter(q => q.domain === domain.id)
     const shuffled = seededShuffle(pool, rng)
-    const selected = shuffled.slice(0, domain.questionTarget)
+    // The pool deliberately holds near-duplicate variants of some stems (for
+    // cross-form variety), so select with distinct stems — otherwise a form
+    // can ask the same question twice.
+    const seenStems = new Set<string>()
+    const selected: typeof shuffled = []
+    for (const q of shuffled) {
+      const stem = q.question.trim().toLowerCase()
+      if (seenStems.has(stem)) continue
+      seenStems.add(stem)
+      selected.push(q)
+      if (selected.length === domain.questionTarget) break
+    }
 
     for (const q of selected) {
       questions.push({
