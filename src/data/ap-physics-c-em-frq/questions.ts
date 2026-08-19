@@ -754,8 +754,8 @@ const shortFRQs: PhysicsCEMFRQ[] = [
           },
           {
             points: 1,
-            description: 'Correct numerical answers: $I_{1}$ = 2 A, $I_{2}$ = 0 A, $I_{3}$ = 2 A (or consistent with their sign conventions)',
-            keywords: ['I₁ = 2', 'I₂ = 0', 'I₃ = 2', 'amperes']
+            description: 'Correct numerical answers: $I_{1}$ = 1.8 A, $I_{2}$ = 0.2 A, $I_{3}$ = 1.6 A (or consistent with their sign conventions)',
+            keywords: ['1.8', '0.2', '1.6', 'amperes']
           }
         ],
         sampleAnswer:

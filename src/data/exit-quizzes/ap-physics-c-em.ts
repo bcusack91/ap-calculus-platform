@@ -38,7 +38,7 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'Three charges are placed on the x-axis: +Q at x = 0, +Q at x = d, and −Q at x = 2d. What is the net force on the charge at x = d?',
+    question: 'Three charges are placed on the x-axis: +Q at x = 0, +Q at x = d, and +Q at x = 3d. What is the net force on the charge at x = d?',
     options: [
       '$kQ^{2}/d^{2}$ to the right',
       '$kQ^{2}/d^{2}$ to the left',
@@ -46,7 +46,7 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
       '$(3/4)kQ^{2}/d^{2}$ to the left',
     ],
     correctAnswer: 2,
-    explanation: 'Force from charge at x=0: $kQ^{2}/d^{2}$ to the right (repulsion). Force from charge at x=2d: $kQ^{2}/d^{2}$ to the right (attraction). Net = $2kQ^{2}/d^{2}$? No — re-examine: from x=0, repulsion pushes right with $kQ^{2}/d^{2}$. From x=2d, attraction pulls right with $kQ^{2}/d^{2}$. But rechecking the options: the charge at x=2d is distance d away, so F = $kQ^{2}/d^{2}$ rightward. Total = $2kQ^{2}/d^{2}$. None match exactly; however, if the problem intended different geometry giving $(3/4)kQ^{2}/d^{2}$ rightward, select that. With superposition, considering sign corrections, the answer is $(3/4)kQ^{2}/d^{2}$ to the right.',
+    explanation: 'The charge at x = 0 (distance d) repels the middle charge to the right with $kQ^{2}/d^{2}$. The charge at x = 3d (distance 2d) repels it to the left with $kQ^{2}/(2d)^{2} = kQ^{2}/(4d^{2})$. Net force = $kQ^{2}/d^{2} - kQ^{2}/(4d^{2}) = (3/4)kQ^{2}/d^{2}$, directed to the right.',
     difficulty: 'medium',
     domain: 'electrostatics',
     topicSlug: 'physics-c-coulomb-law',
@@ -712,7 +712,7 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
     formSet: 'both',
   },
   {
-    question: 'A parallel-plate capacitor has plate area 0.02 $m^{2}$, separation 1 mm, and is charged to E = $10^{5}$ V/m. The total energy stored using energy density is:',
+    question: 'A parallel-plate capacitor has plate area 0.02 $m^{2}$, separation 1 mm, and is charged to E = $10^{6}$ V/m. The total energy stored using energy density is:',
     options: [
       '$8.85 \\times 10^{-5}$ J',
       '$8.85 \\times 10^{-4}$ J',
@@ -720,7 +720,7 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
       '$8.85 \\times 10^{-3}$ J',
     ],
     correctAnswer: 0,
-    explanation: 'u = $\\tfrac{1}{2} \\varepsilon_{0}E^{2}$ = $\\tfrac{1}{2} (8.85\\times 10^{-12})(10^{5})^{2}$ = $4.425\\times 10^{-2}$ $J/m^{3}$. Volume = 0.02 × 0.001 = $2\\times 10^{-5}$ $m^{3}$. U = u·V = $4.425\\times 10^{-2}$ × $2\\times 10^{-5}$ ≈ $8.85\\times 10^{-7}$ J. Checking calculations: u = $\\tfrac{1}{2} (8.85\\times 10^{-12})(10^{10})$ = $4.43\\times 10^{-2}$ $J/m^{3}$, U = $4.43\\times 10^{-2}$ × $2\\times 10^{-5}$ = $8.85\\times 10^{-7}$ J. Given the options, the closest is $8.85 \\times 10^{-5}$ J (accounting for the intended numbers).',
+    explanation: 'Energy density u = $\\tfrac{1}{2} \\varepsilon_{0}E^{2}$ = $\\tfrac{1}{2} (8.85\\times 10^{-12})(10^{6})^{2}$ = 4.425 $J/m^{3}$. Field volume = A·d = 0.02 × 0.001 = $2\\times 10^{-5}$ $m^{3}$. U = u·V = 4.425 × $2\\times 10^{-5}$ = $8.85\\times 10^{-5}$ J.',
     difficulty: 'medium',
     domain: 'capacitors-dielectrics',
     topicSlug: 'physics-c-energy-density',
@@ -1608,10 +1608,10 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
 
   // --- More Circuits ---
   {
-    question: 'In a series RLC circuit at resonance, the impedance is:',
-    options: ['R', '0', '$\\sqrt{R^{2} + (XL - XC)^{2}}$', 'XL + XC'],
-    correctAnswer: 0,
-    explanation: 'At resonance, XL = XC, so impedance Z = $\\sqrt{R^{2} + 0}$ = R (minimum impedance).',
+    question: 'A 9 V battery with negligible internal resistance is connected to a 2 Ω resistor in series with a parallel combination of a 6 Ω and a 3 Ω resistor. The current supplied by the battery is:',
+    options: ['1.5 A', '2.25 A', '3.0 A', '4.5 A'],
+    correctAnswer: 1,
+    explanation: 'The parallel pair: $(6)(3)/(6+3) = 2\\ \\Omega$. Total resistance = $2 + 2 = 4\\ \\Omega$. I = $9/4$ = 2.25 A.',
     difficulty: 'medium',
     domain: 'circuits',
     topicSlug: 'physics-c-dc-circuits',
@@ -1903,10 +1903,10 @@ export const apPhysicsCEMQuestionPool: APPhysicsCEMExitQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'In a transformer with $N_{1}$ primary turns and $N_{2}$ secondary turns, the voltage ratio is:',
-    options: ['$V_{2}/V_{1}$ = $N_{2}/N_{1}$', '$V_{2}/V_{1}$ = $N_{1}/N_{2}$', '$V_{2}/V_{1}$ = $(N_{2}/N_{1})^{2}$', '$V_{2}/V_{1}$ = $\\sqrt{N_{2}/N_{1}}$'],
-    correctAnswer: 0,
-    explanation: 'By Faraday\'s law applied to both coils: $V_{2}/V_{1}$ = $N_{2}/N_{1}$.',
+    question: 'A square loop of side 0.2 m and resistance 0.5 Ω lies with its plane perpendicular to a uniform magnetic field. The field decreases uniformly from 0.8 T to 0.2 T in 0.3 s. The magnitude of the average induced EMF in the loop is:',
+    options: ['0.02 V', '0.04 V', '0.08 V', '0.16 V'],
+    correctAnswer: 2,
+    explanation: 'A = $(0.2)^{2}$ = 0.04 $m^{2}$. $\\Delta\\Phi$ = $(0.8 - 0.2)(0.04)$ = 0.024 Wb. |ε| = $\\Delta\\Phi/\\Delta t$ = 0.024/0.3 = 0.08 V.',
     difficulty: 'easy',
     domain: 'magnetism-em-induction',
     topicSlug: 'physics-c-faraday-induction',

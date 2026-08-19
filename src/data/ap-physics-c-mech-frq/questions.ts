@@ -443,14 +443,14 @@ const longFRQs: PhysicsCMechFRQ[] = [
     ]
   },
 
-  // ── LONG 5: Oscillations + Springs ──
+  // ── LONG 5: Oscillations + Rotation (physical pendulum) ──
   {
     id: 'mech-long-5',
     type: 'long',
     unit: 6,
-    title: 'Damped Oscillation and Energy Decay',
+    title: 'Physical Pendulum: SHM, Energy, and Angular Momentum',
     prompt:
-      'A block of mass m = 0.80 kg is attached to a spring (k = 50 N/m) on a horizontal surface. The block experiences a velocity-dependent damping force F_d = −bv, where b = 0.40 kg/s. The block is displaced $A_{0}$ = 0.20 m from equilibrium and released from rest.',
+      'A uniform rod of mass M = 1.2 kg and length L = 0.90 m is free to rotate about a frictionless horizontal axle through one end. The rotational inertia of a uniform rod about its end is I = (1/3)ML^2. Use g = 9.8 m/s^2.',
     totalPoints: 10,
     timeRecommendation: 25,
     calculatorAllowed: true,
@@ -458,85 +458,94 @@ const longFRQs: PhysicsCMechFRQ[] = [
       {
         label: '(a)',
         prompt:
-          'Write the differential equation of motion for the damped oscillator. Identify whether the system is underdamped, critically damped, or overdamped. Show your comparison.',
-        maxPoints: 4,
-        rubric: [
-          {
-            points: 1,
-            description: 'Net force: F = −kx − bv → $m(d^{2}x/dt^{2})$ + b(dx/dt) + kx = 0',
-            keywords: ['d²x/dt²', 'dx/dt', 'differential equation', 'damped']
-          },
-          {
-            points: 1,
-            description: 'Standard form: $d^{2}x/dt^{2}$ + (b/m)(dx/dt) + (k/m)x = 0',
-            keywords: ['standard form', 'b/m', 'k/m', 'second order']
-          },
-          {
-            points: 1,
-            description: 'Calculate γ = b/(2m) and $\\omega_{0}$ = $\\sqrt{k/m}$',
-            keywords: ['γ', 'ω₀', 'b/(2m)', '√(k/m)', 'damping coefficient']
-          },
-          {
-            points: 1,
-            description: 'Compare γ < $\\omega_{0}$ to classify as underdamped',
-            keywords: ['underdamped', 'γ < ω₀', 'oscillatory']
-          }
-        ],
-        sampleAnswer:
-          'Equation of motion:\n$m(d^{2}x/dt^{2})$ + b(dx/dt) + kx = 0\n$0.80(d^{2}x/dt^{2})$ + 0.40(dx/dt) + 50x = 0\n\nDividing by m:\n$d^{2}x/dt^{2}$ + 0.50(dx/dt) + 62.5x = 0\n\nγ = b/(2m) = 0.40/(2 × 0.80) = 0.25 $s^{-1}$\n$\\omega_{0}$ = $\\sqrt{k/m}$ = $\\sqrt{50/0.80}$ = $\\sqrt{62.5}$ ≈ 7.91 rad/s\n\nSince γ = 0.25 ≪ $\\omega_{0}$ = 7.91, the system is underdamped (γ < $\\omega_{0}$). The block oscillates with decreasing amplitude.'
-      },
-      {
-        label: '(b)',
-        prompt:
-          'Write the general solution x(t) for the underdamped case. Determine all coefficients using the initial conditions x(0) = $A_{0}$ and v(0) = 0.',
+          'The rod hangs vertically and is displaced by a small angle θ from equilibrium. Starting from the rotational form of Newton\'s second law, derive the differential equation of motion and show that the motion is simple harmonic for small angles.',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'General solution: x(t) = $A_{0}e^{-\\gamma t}\\cos (\\omega d\\cdot t + \\varphi )$ with ωd = $\\sqrt{\\omega_{0}^{2} - \\gamma^{2}}$',
-            keywords: ['e^(−γt)', 'cos', 'ωd', 'general solution', 'damped frequency']
+            description: 'Torque about the pivot: τ = −Mg(L/2)sinθ (weight acts at the center of mass)',
+            keywords: ['torque', 'Mg(L/2)', 'sinθ', 'center of mass']
           },
           {
             points: 1,
-            description: 'Calculate ωd = $\\sqrt{\\omega_{0}^{2} - \\gamma^{2}}$ numerically',
-            keywords: ['ωd', 'damped angular frequency', '√(ω₀² − γ²)']
+            description: 'Apply τ = Iα with I = (1/3)ML²: $(1/3)ML^{2}(d^{2}\\theta/dt^{2})$ = −Mg(L/2)sinθ',
+            keywords: ['Iα', '(1/3)ML²', 'd²θ/dt²']
           },
           {
             points: 1,
-            description: 'Apply initial conditions to find φ = 0 (or use equivalent form) and verify amplitude',
-            keywords: ['φ', 'initial conditions', 'x(0) = A₀', 'v(0) = 0']
+            description: 'Small-angle approximation sinθ ≈ θ gives $d^{2}\\theta/dt^{2}$ = −(3g/2L)θ — SHM with $\\omega^{2}$ = 3g/2L',
+            keywords: ['small angle', 'sinθ ≈ θ', '3g/2L', 'simple harmonic']
           }
         ],
         sampleAnswer:
-          'General solution: x(t) = $Ce^{-\\gamma t}\\cos (\\omega d\\cdot t + \\varphi )$\n\nωd = $\\sqrt{\\omega_{0}^{2} - \\gamma^{2}}$ = $\\sqrt{62.5 - 0.0625}$ = $\\sqrt{62.4375}$ ≈ 7.902 rad/s\n\nIC 1: x(0) = $A_{0}$ → C cos φ = 0.20\nIC 2: v(0) = 0 → dx/dt|$ {}_{0}$ = −γC cos φ − ωd C sin φ = 0\n\nFrom IC 2: −γ cos φ = ωd sin φ → tan φ = −γ/ωd = −0.25/7.902 ≈ −0.0316\nφ ≈ −0.0316 rad (very small, nearly zero)\n\nC = $A_{0}/\\cos$ φ ≈ 0.200 m\n\nx(t) ≈ 0.200 $e^{-0.25t}$ cos(7.902t − 0.032) m'
+          'Torque about the pivot from gravity (acting at the center of mass, L/2 from the axle): τ = −Mg(L/2)sinθ.\n\nRotational second law: Iα = τ with I = (1/3)ML²:\n$(1/3)ML^{2}(d^{2}\\theta/dt^{2})$ = −Mg(L/2)sinθ\n\nFor small angles sinθ ≈ θ:\n$d^{2}\\theta/dt^{2}$ = −(3g/2L)θ\n\nThis has the SHM form $d^{2}\\theta/dt^{2}$ = −$\\omega^{2}\\theta$ with $\\omega^{2}$ = 3g/(2L), so the motion is simple harmonic.'
+      },
+      {
+        label: '(b)',
+        prompt: 'Determine the period of small oscillations of the rod.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'T = 2π/ω = $2\\pi\\sqrt{2L/(3g)}$',
+            keywords: ['T = 2π/ω', '√(2L/3g)', 'period']
+          },
+          {
+            points: 1,
+            description: 'Numeric: T = 2π√(1.8/29.4) ≈ 1.55 s',
+            keywords: ['1.55', 's']
+          }
+        ],
+        sampleAnswer:
+          'T = 2π/ω = $2\\pi\\sqrt{2L/(3g)}$ = 2π√(2 × 0.90 / (3 × 9.8)) = 2π√(0.0612) ≈ 2π(0.247) ≈ 1.55 s.'
       },
       {
         label: '(c)',
         prompt:
-          'Derive an expression for the total mechanical energy E(t) of the system as a function of time. Determine the time at which the energy has decreased to 1/e of its initial value.',
+          'The rod is now held horizontal and released from rest. Using energy methods, determine the angular speed of the rod as it swings through the vertical position. (The small-angle approximation does not apply here.)',
         maxPoints: 3,
         rubric: [
           {
             points: 1,
-            description: 'E(t) ≈ $\\tfrac{1}{2} kA_{0}^{2}e^{-2\\gamma t}$ using the slowly varying amplitude approximation',
-            keywords: ['E(t)', '½kA²', 'e^(−2γt)', 'energy decay']
+            description: 'Center of mass falls Δh = L/2, so ΔU = Mg(L/2)',
+            keywords: ['L/2', 'Mg(L/2)', 'center of mass drop']
           },
           {
             points: 1,
-            description: '$E_{0}$ = $\\tfrac{1}{2} kA_{0}^{2}$ = ½(50)(0.04) = 1.0 J',
-            keywords: ['E₀', '1.0 J', 'initial energy']
+            description: 'Energy conservation: Mg(L/2) = $(1/2)I\\omega^{2}$ with I = (1/3)ML²',
+            keywords: ['conservation', '(1/2)Iω²']
           },
           {
             points: 1,
-            description: 'Set $e^{-2\\gamma t}$ = 1/e → t = 1/(2γ) = 2.0 s',
-            keywords: ['1/e', 't =', '1/(2γ)', 'time constant']
+            description: 'ω = $\\sqrt{3g/L}$ = √(29.4/0.90) ≈ 5.72 rad/s',
+            keywords: ['√(3g/L)', '5.72', 'rad/s']
           }
         ],
         sampleAnswer:
-          'The amplitude decays as A(t) = $A_{0}e^{-\\gamma t}$. The total mechanical energy (when averaged over one cycle):\n\nE(t) = $\\tfrac{1}{2} kA(t)^{2}$ = $\\tfrac{1}{2} kA_{0}^{2}e^{-2\\gamma t}$\n\n$E_{0}$ = $\\tfrac{1}{2} (50)(0.20^{2})$ = 1.0 J\n\nFor E = $E_{0}/e$:\n$e^{-2\\gamma t}$ = $e^{-1}$\n−2γt = −1\nt = 1/(2γ) = 1/(2 × 0.25) = 2.0 s\n\nThe energy decays to 1/e of its initial value at t = 2.0 s.'
+          'The center of mass falls Δh = L/2 = 0.45 m.\n\nMg(L/2) = $(1/2)I\\omega^{2}$ = $(1/2)(1/3)ML^{2}\\omega^{2}$\n\nSolving: $\\omega$ = $\\sqrt{3g/L}$ = √(3 × 9.8 / 0.90) = √32.7 ≈ 5.72 rad/s.\n\n(Check: ΔU = 1.2 × 9.8 × 0.45 = 5.29 J; (1/2)(0.324)(5.72²) ≈ 5.30 J ✓)'
+      },
+      {
+        label: '(d)',
+        prompt: 'Determine the magnitude of the rod\'s angular momentum about the axle as it passes through the vertical position.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'L = Iω with I = (1/3)ML² = 0.324 kg·m²',
+            keywords: ['L = Iω', '0.324']
+          },
+          {
+            points: 1,
+            description: 'L = 0.324 × 5.72 ≈ 1.85 kg·m²/s',
+            keywords: ['1.85', 'kg·m²/s']
+          }
+        ],
+        sampleAnswer:
+          'I = (1/3)ML² = (1/3)(1.2)(0.90²) = 0.324 kg·m².\n\nL = Iω = 0.324 × 5.72 ≈ 1.85 kg·m²/s, directed along the axle by the right-hand rule.'
       }
     ]
-  }
+  },
+
 ]
 
 // ─────────────────────────────────────────────
@@ -644,12 +653,12 @@ const shortFRQs: PhysicsCMechFRQ[] = [
           },
           {
             points: 1,
-            description: 'Numerical answer: F ≈ 69.7 N',
-            keywords: ['69', '70', 'N', 'newtons', 'numerical']
+            description: 'Numerical answer: F ≈ 89 N',
+            keywords: ['89', 'N', 'newtons', 'numerical']
           }
         ],
         sampleAnswer:
-          'F = mg(sin θ + $\\mu_{s}$ cos θ)/(cos θ − $\\mu_{s}$ sin θ)\n\nsin 37° ≈ 0.6018, cos 37° ≈ 0.7986\n\nNumerator: 5.0(9.8)(0.6018 + 0.45 × 0.7986) = 49(0.6018 + 0.3594) = 49(0.9612) = 47.10\nDenominator: 0.7986 − 0.45(0.6018) = 0.7986 − 0.2708 = 0.5278\n\nF = 47.10/0.5278 ≈ 89.2 N\n\nWait — let me recompute carefully:\nF = mg(sin θ + $\\mu_{s}$ cos θ)/(cos θ − $\\mu_{s}$ sin θ)\n= 5.0(9.8)(0.6018 + 0.45 × 0.7986)/(0.7986 − 0.45 × 0.6018)\n= 49(0.9612)/(0.5278)\n= 47.10/0.5278\n≈ 89.2 N'
+          'F = mg(sin θ + $\\mu_{s}$ cos θ)/(cos θ − $\\mu_{s}$ sin θ)\n\nsin 37° ≈ 0.6018, cos 37° ≈ 0.7986\n\nNumerator: 5.0(9.8)(0.6018 + 0.45 × 0.7986) = 49(0.6018 + 0.3594) = 49(0.9612) = 47.10\nDenominator: 0.7986 − 0.45(0.6018) = 0.7986 − 0.2708 = 0.5278\n\nF = 47.10/0.5278 ≈ 89.2 N'
       }
     ]
   },
